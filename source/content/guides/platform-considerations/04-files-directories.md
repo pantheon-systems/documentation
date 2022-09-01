@@ -11,23 +11,19 @@ permalink: docs/guides/platform-considerations/files-directories
 anchorid: files-directories
 ---
 
-
-
-
-
-
+This section provides information on files, including uploads and exports, and directories on the Pantheon platform.
 
 ## Batch Uploads
 
 The [max execution time](/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce) can encounter this limit.
 
-In this or similar instances, consider performing larger operations locally, then importing the code, files, and database back up to the platform.
+In this or similar instances, consider performing larger operations locally, then importing the code, files, and database to the Pantheon platform.
 
 ## Batched Data Export to File
 
-In Test and Live environments on plans with multiple application containers, it is difficult to batch export data to a file. Many contrib plugins and modules are not designed to support multiple application containers. It might be possible to get data export working, but that may require additional effort and custom code.
+It is difficult to batch export data to a file in Test and Live environments on plans with multiple application containers. Many contrib plugins and modules are not designed to support multiple application containers. It might be possible to get data export working, but that may require additional effort and custom code.
 
-Often, modules and plugins do this type of batch export by continuously appending data to the same file in each request in the batch process. With multiple application containers, the result is that several containers will attempt to add data to the same file at once, while simultaneously syncing their own version of the updated file to other appservers and receiving updates from other application containers. The exported data will likely be incomplete.
+Modules and plugins often do this type of batch export by continuously appending data to the same file in each request in the batch process. With multiple application containers, the result is that several containers will attempt to add data to the same file at once, while simultaneously syncing their own version of the updated file to other appservers and receiving updates from other application containers. The exported data will likely be incomplete.
 
 A non-batched export of a dataset small enough to complete within the set timeout for web requests will likely work.
 
@@ -39,28 +35,29 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Alternative Approaches
 
-Running the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
+You can run the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. Refer to [Timeouts on Pantheon](/timeouts) for more information. You won't need to batch your export, which allows it to run to completion on a single application container.
 
-Often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
+The best solution is often to implement data exports as a web service, incrementally exchanging the data with the target system.
 
 ## Highly Populated Directories
 
-If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files in a single directory, and performance drops off suddenly at over 100,000 files.
+You might need to refactor your file structure if you have individual directories with tens of thousands of files (for example, an image repository) to see good performance on Pantheon.
 
-Drupal itself is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
+The danger zone begins at around 50,000 files in a single directory, and performance drops off suddenly at over 100,000 files.
 
-Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories.
+Drupal is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
 
+Refer to the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories.
 
 ## Large Code Repository
 
-When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs. 
+A code repo larger than 2GB increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs. 
 
-If your repository has grown over 2GB and is causing problems (such as errors when cloning), consider [pruning and optimizing the repo](/reducing-large-repos).
+[Pruning and optimizing your repo](/reducing-large-repos) can be useful if your repository has grown to over 2GB and is causing problems (such as errors when cloning).
 
 ## Large Files
 
-Due to the configuration of the [Pantheon Filesystem](/files), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
+The [Pantheon Filesystem](/files) and file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
 | File Size     | Platform Compatibility               | Notes                               |
 |:--------------|--------------------------------------|-------------------------------------|
@@ -73,9 +70,9 @@ If you are distributing large binaries or hosting big media files, we recommend 
 - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs).
 - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
 
-Be aware, even when using an external CDN to host files, you cannot upload files over 100MB through the CMS. Upload these files directly to the CDN (here's Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html)).
+You cannot upload files over 100MB through the CMS even when using an external CDN to host files. You can upload these files directly to the CDN. Refer to Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html) for more information.
 
-See our documentation for [Drupal](/drupal-s3) and [WordPress](/wordpress-s3) for more information about integrating S3 with your Pantheon site.
+You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/wordpress-s3) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
 
@@ -87,20 +84,36 @@ Large backups take longer, use more resources, and have a higher likelihood of f
 
 ## Rename/Move Files or Directories
 
-### Files
-
-Like file directories, files on Pantheon cannot be renamed or moved. Our SFTP mode doesn’t support the `mv` command, which is what most apps use when renaming or moving files. The workaround is to delete the old file and upload the new file.
-
 ### Directories
 
-File directories on Pantheon's file serving infrastructure cannot be moved or renamed. The workaround is to create a new directory, move all the files from inside the old directory into the new one, and delete the old directory.
+File directories on Pantheon's file serving infrastructure cannot be moved or renamed. The workaround is to:
+
+1. Create a new directory, and then move all the files from inside the old directory into the new directory.
+
+1. Delete the old directory.
+
+### Files
+
+Files on Pantheon cannot be renamed or moved, similar to file directories. Our SFTP mode doesn’t support the `mv` command, which is what most apps use when renaming or moving files. The workaround is to:
+
+1. Delete the old file(s).
+
+1. Upload the newly renamed file to the desired directory, or upload a file with same name to a different directory.
 
 ## Static Files
 
-Pantheon strips cookies for files with common static file extensions. See [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) doc for more information.
+Pantheon strips cookies for files with common static file extensions. Refer [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) documentation for more information.
 
 ## Write Access on Environments
 
-For Dev environments in SFTP mode, the entire codebase is writable. However the platform is designed to keep only the codebase under version control.  This means that the only writable paths are `sites/default/files` for Drupal sites and `wp-content/uploads` for WordPress sites.
+The entire codebase is writable in Dev environments in SFTP mode. However the platform is designed to keep only the codebase under version control. This means that the only writable paths are `sites/default/files` for Drupal sites and `wp-content/uploads` for WordPress sites.
 
-Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+You must add a symlink to modules/plugins that require the ability to write to the codebase (and assume write access). This allows the module/plugin to instead write to the file system. Refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+
+## More Resources
+
+- [Site Level Roles and Permissions](/change-management#site-level-roles-and-permissions)
+
+- [Symlinks and Assumed Write Access](/symlinks-assumed-write-access)
+
+- [Temporary File Management](/tmp)
