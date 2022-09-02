@@ -1,7 +1,7 @@
 ---
 title: Platform Considerations
 subtitle: Media and Email
-description: Learn more about Pantheon platform media and email support.
+description: Learn more about media and email support on the Pantheon platform.
 categories: [platform]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
@@ -38,7 +38,7 @@ $databases['default']['default']['charset'] = 'utf8mb4';
 $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 ```
 
-Existing sites that already have an active database:
+For existing sites that already have an active database:
 
 1. Install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. 
 

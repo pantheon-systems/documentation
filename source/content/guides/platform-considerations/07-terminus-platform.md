@@ -1,7 +1,7 @@
 ---
 title: Platform Considerations
 subtitle: Terminus Platform Support
-description: Learn more about Pantheon platform Terminus support.
+description: Learn more about Terminus support on the Pantheon platform. 
 categories: [platform]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]

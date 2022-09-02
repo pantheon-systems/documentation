@@ -1,7 +1,7 @@
 ---
 title: Platform Considerations
 subtitle: PHP Platform Support
-description: Learn more about Pantheon platform PHP support.
+description: Learn more about PHP support on the Pantheon platform.
 categories: [platform]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
