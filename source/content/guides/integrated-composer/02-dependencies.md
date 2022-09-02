@@ -27,6 +27,10 @@ You should use the `require-dev` section for dependencies that are not a part of
 
 Third-party dependencies, such as modules / plugins and themes, are added to the project via `composer.json`. The `composer.lock` file keeps track of the exact version of dependency. [Composer `installer-paths`](https://getcomposer.org/doc/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.md#how-do-i-install-a-package-to-a-custom-path-for-my-framework-) are used to ensure the dependencies are downloaded into the appropriate directory.
 
+### Selecting Dependencies Locally
+
+When running `composer install` on a local clone of your Pantheon site's repository, you may use the `--no-dev` option to install the dependencies that will be installed on the Pantheon test and live environments. Omit this option to install the dependencies that will be installed on dev and multidev environments on Pantheon. The `--no-dev` option has no effect on what is written to the `composer.lock` file, and therefore does not change the behavior of your site on Pantheon. This option is only relevant to local testing.
+
 ## Add a Dependency to an Individual Site
 
 1. [Clone the Git repository](/guides/git/git-config#clone-your-site-codebase) from the Pantheon site's dashboard.
