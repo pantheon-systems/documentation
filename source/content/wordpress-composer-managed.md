@@ -1,12 +1,10 @@
 ---
 title: WordPress with Composer on Pantheon
-subtitle: Create a Composer-managed WordPress Site with Bedrock
-description: Learn more about Bedrock and Composer-managed WordPress sites.
+description: Create a Composer-managed WordPress Site with Bedrock.
 cms: "WordPress"
 categories: [develop]
 tags: [wordpress]
 contributors: [whitneymeredith, jspellman814, jazzsequence]
-layout: guide
 ---
 
 <Alert title="Early Access" type="info" icon="leaf">
