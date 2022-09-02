@@ -1,7 +1,7 @@
 ---
 title: Platform Considerations
 subtitle: Platform and Site Information
-description: Learn about platform and site specific configuration and support.
+description: Learn about platform and site-specific configuration and support.
 categories: [platform]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]

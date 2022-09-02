@@ -11,7 +11,7 @@ permalink: docs/guides/platform-considerations
 anchorid: platform-considerations
 ---
 
-This guide features common platform considerations specific to Pantheon's distributed nature. We update the content here frequently with platform improvements and limitations.
+This guide features common platform considerations specific to Pantheon's distributed nature. We update this content frequently with platform improvements and limitations.
 
 ## Browser Support for Pantheon's Dashboard
 
