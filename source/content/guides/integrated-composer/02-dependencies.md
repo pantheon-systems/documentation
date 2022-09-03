@@ -19,7 +19,7 @@ It's important to understand how `require` and `require dev` are used on the Pan
 
 ### Composer `require` Section
 
-You should use the `require` section of your `composer.json` file for dependencies your web project needs, even dependencies only used on non-Live environments. Drupal modules / themes and WordPress plugins / themes should always be in the `require` section, not the `require-dev` section. Dependencies in the `require` section are pushed to all Pantheon environments.
+Drupal modules / themes and WordPress plugins / themes should always be in the `require` section, not the `require-dev` section. Dependencies in the `require` section are pushed to all Pantheon environments.
 
 ### Composer `require dev` Section
 
