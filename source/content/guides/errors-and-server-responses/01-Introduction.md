@@ -19,6 +19,6 @@ If you feel that you reached one of these messages in error, [contact support](/
 
 ## Error Messages
 
-Review the [4xx errors page](/guides/error-server-responses/4xx-errors) for 400 level error explanations and the [5xx errors page](/guides/error-server-responses/5xx-errors) for 500 level error explanations.
+Review the [4xx errors page](/guides/errors-and-server-responses/4xx-errors) for 400 level error explanations and the [5xx errors page](/guides/errors-and-server-responses/5xx-errors) for 500 level error explanations.
 
 
