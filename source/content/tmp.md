@@ -121,7 +121,7 @@ The default temporary path (`$_SERVER['HOME'] . '/tmp'`) is not synchronized acr
 
 It's not common for a plugin, module, or theme to use the temporary path in a way that results in such errors. We suggest reporting the issue to the author and replacing the conflicting plugin, module, or theme whenever possible until a fix is released.
 
-Be aware that temporary files are not cleaned up automatically in the following configuration, which can result in [highly populated directories](/platform-considerations/#highly-populated-directories).
+Be aware that temporary files are not cleaned up automatically in the following configuration, which can result in [highly populated directories](/guides/platform-considerations/files-directories/#highly-populated-directories).
 
 ### Persistent Temporary Path Workaround
 

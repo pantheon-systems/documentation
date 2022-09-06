@@ -116,7 +116,7 @@ During the Migration project kick-off, the team will review which of the followi
 1. Pantheon may not be able to migrate functionality if the site relies on resources that are not available on the platform, such as:
    - Issues that arise as a result of:
 
-     - [Pantheon platform considerations](/platform-considerations)
+     - [Pantheon platform considerations](/guides/platform-considerations)
 
      - Plugins or Modules that have been identified as [problematic](/modules-plugins-known-issues/)
 

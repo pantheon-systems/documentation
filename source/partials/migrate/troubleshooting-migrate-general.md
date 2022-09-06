@@ -2,7 +2,7 @@ This section provides information on causes and solutions to error messages that
 
 First troubleshooting steps:
 
-1. Review [Pantheon Platform Considerations](/platform-considerations) if your code, database, and files have completed migrating, but your site is not working as you'd expect. For example, if your site uses [PHP short tags](/platform-considerations/#php-short-tags), you'll need to convert them to standard PHP tags.
+1. Review [Pantheon Platform Considerations](/guides/platform-considerations) if your code, database, and files have completed migrating, but your site is not working as you'd expect. For example, if your site uses [PHP short tags](/guides/platform-considerations/php-platform#php-short-tags), you'll need to convert them to standard PHP tags.
 
 1. Check the [log files](/logs) to help identify and fix errors. The core is upgraded as part of the migration, so you may have additional work to complete the upgrade.
 
