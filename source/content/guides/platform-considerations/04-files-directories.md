@@ -15,7 +15,7 @@ This section provides information on files, including uploads and exports, and d
 
 ## Batch Uploads
 
-The [max execution time](/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce) can encounter this limit.
+The [max execution time](/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce), can encounter this limit.
 
 In this or similar instances, consider performing larger operations locally, then importing the code, files, and database to the Pantheon platform.
 
@@ -35,7 +35,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Alternative Approaches
 
-You can run the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. Refer to [Timeouts on Pantheon](/timeouts) for more information. You won't need to batch your export, which allows it to run to completion on a single application container.
+You can run the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron, which will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. Refer to [Timeouts on Pantheon](/timeouts) for more information. You won't need to batch your export, which allows it to run to completion on a single application container.
 
 The best solution is often to implement data exports as a web service, incrementally exchanging the data with the target system.
 
@@ -102,7 +102,7 @@ Files on Pantheon cannot be renamed or moved, similar to file directories. Our S
 
 ## Static Files
 
-Pantheon strips cookies for files with common static file extensions. Refer [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) documentation for more information.
+Pantheon strips cookies for files with common static file extensions. See [File Suffixes and Cookies](/caching-advanced-topics#file-suffixes-and-cookies) in our [Caching: Advanced Topics](/caching-advanced-topics) documentation for more information.
 
 ## Write Access on Environments
 
