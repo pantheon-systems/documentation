@@ -79,7 +79,12 @@ Agencies that frequently deploy sites using a common set of themes and plugins s
 
 ## See Also
 
+<<<<<<< HEAD
 - [Platform Considerations](/platform-considerations)
 - [Errors and Server Responses](/guides/errors-and-server-responses)
+=======
+- [Platform Considerations](/guides/platform-considerations)
+- [Errors and Server Responses](/errors-and-server-responses)
+>>>>>>> 8a8833b49e5091bd4925de72e1e9876b30a84c03
 - [Modules and Plugins With Known Issues](/modules-plugins-known-issues)
 - [Database Connection Errors](/database-connection-errors)

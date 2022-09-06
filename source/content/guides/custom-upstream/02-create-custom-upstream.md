@@ -260,7 +260,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
   ![Organization Dashboard](../../../images/dashboard/organizations.png)
 
-1. Select **Debug** > click the **Upstreams** tab.
+1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
 1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
 
@@ -309,7 +309,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
   ![Organization Dashboard](../../../images/dashboard/organizations.png)
 
-1. Select **Debug** > click the **Upstreams** tab.
+1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
 1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
 
@@ -404,43 +404,18 @@ The default connection mode for new sites created from a Custom Upstream is Git 
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 
-1. Access the **Organization Dashboard** from your Admin dashboard.
+1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" )** tab within the Pantheon Dashboard and select your organization.
 
-1. Select **Debug** > click the **Upstreams** tab.
+1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
-1. Enter the following:
+1. Click **Settings** next to the existing upstream requiring an update.
 
-    - Upstream Name
+    - Enter a username and a password or token if prompted to authenticate your repository (this only applies to privately hosted repositories). Access tokens must be alpha-numeric and cannot contain symbols.
 
-    - Description (optional)
-
-    - URL of Logo (optional)
-
-    - URL of Upstream Repository
-
-    - Repository Authentication
-
-      - This is only required if the repository is hosted privately. Enter username and a password or token. Access tokens must be alpha-numeric and cannot contain symbols.
-
-    - Repository Branch
-
-    - Visibility
-
-      - Private: Only allow members of your organization to use this upstream.
-
-      - Public: Allow this upstream to be used by any Pantheon user.
-
-    - Initial Connection Mode
-
-      - Select if **Git** or **SFTP** mode should be enabled by default > click **Update**. New sites created from this Custom Upstream will use this connection mode by default going forward.
-
-    - Framework
-
-    - Internal Notes (optional)
+1. Select if **Git** or **SFTP** mode should be enabled by default and then click **Update**. New sites created from this Custom Upstream will use this connection mode by default going forward.
 
   ![Modify initial connection mode](../../../images/dashboard/initial-connection-mode.png)
 
-1. Click **Submit**.
 
 ## More Resources
 

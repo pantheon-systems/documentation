@@ -538,7 +538,7 @@
         - text: 'Pantheon YAML Configuration Files'
           url: '/pantheon-yml'
         - text: 'Platform Considerations'
-          url: '/platform-considerations'
+          url: '/guides/platform-considerations'
         - text: 'Pantheon Plugins'
           url: '/guides/wordpress-pantheon/plugins'
         - text: 'Private Paths for Files and Code'
