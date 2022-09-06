@@ -23,12 +23,12 @@ The Pantheon Dashboard supports the following browsers to maintain platform secu
 | **Versions Supported** | Evergreen Browsers - Last 4     | Current + Last Year |
 +------------------------+---------------------------------+---------------------+
 
-Visit <https://www.whatsmybrowser.org/> to confirm which browser version you are using and compare your browser's version with the latest available:
+Visit <https://www.whatsmybrowser.org> to confirm which browser version you are using and compare your browser's version with the latest available:
 
   - [Chrome](https://en.wikipedia.org/wiki/Google_Chrome_version_history#Anchor_to_the_latest_release.)
+  - [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history)
   - [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases)
   - [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility)
-  - [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history)
   - [Safari](https://en.wikipedia.org/wiki/Safari_version_history#Version_compatibility)
 
 
