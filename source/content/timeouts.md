@@ -80,6 +80,6 @@ Agencies that frequently deploy sites using a common set of themes and plugins s
 ## See Also
 
 - [Platform Considerations](/platform-considerations)
-- [Errors and Server Responses](/errors-and-server-responses)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
 - [Modules and Plugins With Known Issues](/modules-plugins-known-issues)
 - [Database Connection Errors](/database-connection-errors)

@@ -38,7 +38,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 
 ## Debug
 - [PHP Errors and Exceptions](/guides/php/php-errors)
-- [Errors and Server Responses](/errors-and-server-responses)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
 
 ## Support
 - [Getting Support](/guides/support)
