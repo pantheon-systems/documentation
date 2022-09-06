@@ -410,7 +410,7 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
 1. Click **Settings** next to the existing upstream requiring an update.
 
-  - Enter a username and a password or token if prompted to authenticate your repository (this only applies to privately hosted repositories). Access tokens must be alpha-numeric and cannot contain symbols.
+    - Enter a username and a password or token if prompted to authenticate your repository (this only applies to privately hosted repositories). Access tokens must be alpha-numeric and cannot contain symbols.
 
 1. Select if **Git** or **SFTP** mode should be enabled by default and then click **Update**. New sites created from this Custom Upstream will use this connection mode by default going forward.
 
