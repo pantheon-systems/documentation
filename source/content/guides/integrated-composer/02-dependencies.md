@@ -19,15 +19,17 @@ It's important to understand how `require` and `require dev` are used on the Pan
 
 ### Composer `require` Section
 
-You should use the `require` section of your `composer.json` file for dependencies your web project needs, even dependencies only used on non-Live environments. Drupal modules / themes and WordPress plugins / themes should always be in the `require` section, not the `require-dev` section. All dependencies in the `require` section are pushed to Pantheon Dev and Multidev environments, but not to Test and Live environments.
-
-You do not need to pass the `--no-dev` option to prevent dependencies from being pushed to your Test and Live environments. This option is passed automatically for Drupal modules / themes and WordPress plugins / themes in the `require` section.
+Drupal modules / themes and WordPress plugins / themes should always be in the `require` section, not the `require-dev` section. Dependencies in the `require` section are pushed to all Pantheon environments.
 
 ### Composer `require dev` Section
 
 You should use the `require-dev` section for dependencies that are not a part of the web application but are necessary to build or test your project. Some examples are `php_codesniffer` and `phpunit`. Dev dependencies are deployed to Pantheon Dev and Multidev environments, but not to Test and Live environments.
 
 Third-party dependencies, such as modules / plugins and themes, are added to the project via `composer.json`. The `composer.lock` file keeps track of the exact version of dependency. [Composer `installer-paths`](https://getcomposer.org/doc/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.md#how-do-i-install-a-package-to-a-custom-path-for-my-framework-) are used to ensure the dependencies are downloaded into the appropriate directory.
+
+### Select Dependencies Locally
+
+When running `composer install` on a local clone of your Pantheon site's repository, you can use the `--no-dev` option to install the dependencies that will be installed on the Pantheon Test and Live environments. Do not include this option to install the dependencies that will be installed on Dev and Multidev environments on Pantheon. The `--no-dev` option has no effect on what is written to the `composer.lock` file, and therefore does not change the behavior of your site on Pantheon. This option is only relevant to local testing.
 
 ## Add a Dependency to an Individual Site
 
