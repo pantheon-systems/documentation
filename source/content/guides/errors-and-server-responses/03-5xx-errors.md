@@ -7,7 +7,7 @@ categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/error-server-responses/5xx-errors
+permalink: docs/guides/errors-and-server-responses/5xx-errors
 anchorid: 5xx-errors
 ---
 

@@ -233,7 +233,7 @@ Large backups take longer, use more resources, and have a higher likelihood of f
 
 ## Maintenance Mode
 
-Pantheon may send a [generic Maintenance Mode message](/guides/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
+Pantheon may send a [generic Maintenance Mode message](/guides/errors-and-server-responses/5xx-errors) during platform problems; this message cannot be customized.
 
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 

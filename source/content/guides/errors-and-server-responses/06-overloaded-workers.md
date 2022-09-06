@@ -7,7 +7,7 @@ categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/error-server-responses/overloaded-workers
+permalink: docs/guides/errors-and-server-responses/overloaded-workers
 anchorid: overloaded-workers
 ---
 

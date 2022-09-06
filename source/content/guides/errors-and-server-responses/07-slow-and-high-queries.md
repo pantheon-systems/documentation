@@ -7,7 +7,7 @@ categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/error-server-responses/slow-and-high-queries
+permalink: docs/guides/errors-and-server-responses/slow-and-high-queries
 anchorid: slow-and-high-queries
 ---
 

@@ -7,7 +7,7 @@ categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/error-server-responses/retries-server-containers
+permalink: docs/guides/errors-and-server-responses/retries-server-containers
 anchorid: retries-server-containers
 ---
 

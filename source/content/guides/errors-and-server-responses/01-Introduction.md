@@ -7,8 +7,8 @@ categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/error-server-responses
-anchorid: error-server-responses
+permalink: docs/guides/errors-and-server-responses
+anchorid: errors-and-server-responses
 ---
 
 Error messages in the cloud are served when Pantheon is unable to fulfill a request. These messages cannot be customized for a particular site because of the low-level nature of these errors, and the fact that changes are system-wide, not site specific.
