@@ -39,7 +39,7 @@ Pantheon does not offer support for Composer GUIs or any conflicts that might be
 
 ### On what environments does the require-dev section of composer.json get loaded?
 
-On the dev and multidev environments. Every time Integrated Composer does a build, it creates a dev artifact and live artifact. When you deploy from dev to test, Integrated Composer deploys the live artifact rather than the dev artifact.
+The `require-dev` section of the `composer.json` file is loaded on the Dev and Multidev environments. Every time Integrated Composer does a build, it creates a Dev artifact and a Live artifact. When you deploy from Dev to Test, Integrated Composer deploys the Live artifact rather than the Dev artifact.
 
 ### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
 
