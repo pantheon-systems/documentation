@@ -1,7 +1,7 @@
 ---
 title: Errors and Server Responses
 subtitle: Introduction
-description: Detailed information on your Pantheon site's server responses and error messages.
+description: Learn more about errors and server responses on Pantheon.
 tags: [services]
 categories: [platform]
 contributors: [whitneymeredith]
@@ -11,9 +11,9 @@ permalink: docs/guides/errors-and-server-responses
 anchorid: errors-and-server-responses
 ---
 
-Error messages in the cloud are served when Pantheon is unable to fulfill a request. These messages cannot be customized for a particular site because of the low-level nature of these errors, and the fact that changes are system-wide, not site specific.
+Pantheon serves error messages when a request cannot be fulfilled. These error messages cannot be customized for a particular site because of the low-level nature of these errors, and the fact that changes are system-wide, not site specific.
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.
+There are some extreme circumstances in which these error messages can be inadvertently triggered by your site code without an actual cloud server error. You should monitor plugins or modules that integrate with external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal, to learn to distinguish actual errors from false alarms.
 
 [Contact support](/guides/support/contact-support/) if you think that you reached one of these messages in error, and be sure to provide the full URL and the circumstances which led to the error.
 
