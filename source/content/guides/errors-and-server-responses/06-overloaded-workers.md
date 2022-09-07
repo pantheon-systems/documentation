@@ -1,7 +1,7 @@
 ---
 title: Errors and Server Responses
 subtitle: Overloaded Workers
-description: Learn how to resolve overloaded workers on Pantheon.
+description: Learn more about overloaded workers on Pantheon.
 tags: [services]
 categories: [platform]
 contributors: [whitneymeredith]
@@ -24,29 +24,29 @@ It's possible that pages will timeout before they are picked up by the back-end 
 
 ### Fix Errors
 
-There is a performance penalty as your resources are used to log errors to your disk if your site is throwing a lot of warnings or notices. This can slow down your site by performing database write operations. The solution is not to disable logging but to fix the errors.
+Your site's performance will deteriorate as it uses its resources to log errors to your disk if your site is throwing a lot of warnings or notices. This can slow down your site by performing database write operations. The solution is not to disable logging but to fix the errors.
 
 Even with logging disabled, these errors will still be written to the server PHP error logs, which means you should be resolve the errors as soon as possible.
 
 ### Optimize the Site
 
-Long running processes can also lead to backend resources being maxed out on your site, including:
+Long running processes can max out backend resources on your site, including:
 
 - Batch jobs
 - Background tasks
-- Heavy operations cron jobs
+- Heavy operation cron jobs
 
-[Use New Relic&reg; Performance Monitoring](/guides/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Use [New Relic&reg; Performance Monitoring](/guides/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 ### Upgrade Your Plan
 
-Consider [upgrading your plan](https://www.pantheon.io/pricing) for more resources after the all the errors have been resolved and the views, batches, and tasks have been optimized. Select the most appropriate plan for the resource usage of your site.
+Consider [upgrading your plan](https://www.pantheon.io/pricing) for more resources after all the errors have been resolved and the views, batches, and tasks have been optimized. Select the most appropriate plan for the resource usage of your site.
 
 ### Unexpected Timeouts
 
-There's no accounting for buggy code. Bugs ranging from Drupal running cron on every page load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files can cause sufficiently slow page load times to trigger timeouts.
+Buggy code can cause wide-ranging issues. Bugs ranging from Drupal running cron on every page load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files can cause slow page load times that trigger timeouts.
 
-Debugging with New Relic&reg; Performance Monitoring or looking at your php slow logs can be informative if you are seeing timeouts in unexpected places.
+Debugging with [New Relic&reg; Performance Monitoring](/guides/new-relic) or looking at your [php slow logs](/guides/php/php-slow-log) can help you determine why timeouts are occurring in unexpected places.
 
 ## More Resources
 

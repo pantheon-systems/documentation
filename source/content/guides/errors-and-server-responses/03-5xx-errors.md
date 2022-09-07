@@ -17,13 +17,13 @@ This section provides information on how to interpret 5xx errors.
 
 > Upstream sent too big header while reading response header from upstream.
 
-This error will occur when the payload or size of the request being sent is greater than the `fastcgi_buffer_size`. Check to see if you are making heavy requests with a number of assets or data being passed if this happens again. 
+This error occurs when the payload or size of the request sent is greater than the `fastcgi_buffer_size`. Check to see if you are making heavy requests with a number of assets or data being passed if this happens again. 
 
-Remove additional images to reduce the size of the payload being sent to the buffer for nginx to process. This will allow you to post the request. 
+Remove additional images to reduce the size of the payload sent to the buffer for nginx to process. This will allow you to post the request. 
 
 ### 502 Timeout/Segfault Error
 
-This issue can happen with HTTP Basic Auth and Drupal’s AJAX when an AJAX request doesn't send the authentication.
+This error can happen with HTTP Basic Auth and Drupal’s AJAX when an AJAX request doesn't send the authentication.
 
 Complete the steps below to resolve this:
 
@@ -57,7 +57,7 @@ This error message will be accompanied by a `503 First Byte Timeout` page title.
 
 The new Pantheon Global Edge size limit for cookies, sent in the request `"Cookie: .."` header, is 10KB. If more than 10KB are sent, all cookies are dropped and the request is processed as if no cookies were sent. The header `"X-Cookies-Dropped: 1"` is added to truncated requests and responses. You can ignore this scenario in your PHP code or handle it by displaying a custom error page.
 
-This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (for example, `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For more information, refer to [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9/#troubleshoot-503-response-header-overflow).
+This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (for example, `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. Refer to [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9/#troubleshoot-503-response-header-overflow) for more information.
 
 You can reduce the number of set-cookie headers in the response to resolve this error if you receive a 503 error and your cookie size is smaller than 10KB.
 
@@ -65,7 +65,7 @@ You can reduce the number of set-cookie headers in the response to resolve this 
 
 > The web site you were looking for is currently undergoing maintenance.
 
-This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be unavailable.
+This is  **not**  a web application (WordPress or Drupal) maintenance mode error. This is a manually toggled emergency message reserved for unusual circumstances when a site is known to be unavailable.
 
 ### Pantheon 503 Database not Responding
 
@@ -75,7 +75,7 @@ This error indicates that the MySQL database is not responding. It's possible th
 
 ### Error 503 Service Unavailable
 
-This error generally occurs when a request timeouts. This can indicate a performance issue with the site if your pages take longer to load than the threshold. Learn more about [Timeouts on Pantheon](/timeouts).
+This error generally occurs when a request times out. This can indicate a performance issue with the site if your pages take longer to load than the threshold. Learn more about [Timeouts on Pantheon](/timeouts).
 
 This can be a misleading message if you're using AJAX when HTTP Basic Auth is enabled (the security username/password). The best workaround is to disable the security option for the environment for testing.
 
@@ -97,17 +97,15 @@ This error can be caused by sustained spikes in traffic (often caused by search 
 
 > The application did not respond in time.
 
-There are two possible causes for this error. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes too long to respond. The other option is that there was an application problem, resulting in php-fpm or MySQL timing out. Refer to [Timeouts on Pantheon](/timeouts) for more information.
+There are two possible causes for this error. Pantheon's routing and caching layer can only sustain open HTTP requests for a set time period. You may encounter this message if your application takes too long to respond. The other option is that there was an application problem, resulting in php-fpm or MySQL timing out. Refer to [Timeouts on Pantheon](/timeouts) for more information.
 
-Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
-
-There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
+Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. However, there are ways to solve the problem. There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause. Refer to [Timeouts on Pantheon](/timeouts) for troubleshooting tips, and consider using [New Relic](/guides/new-relic) to monitor and improve your site performance.
 
 ### Error 561 No site Detected
 
 > No site detected. Make sure your code is pulled into this environment. 
 
-This typically occurs when a site has been created, but no CMS has been installed. You will also see this instead of a `403 Directory listing denied` error, if you have no index file.
+This error typically occurs when a site has been created, but no CMS has been installed. You will also see this error instead of a `403 Directory listing denied` error, if you have no index file.
 
 ## More Resources
 

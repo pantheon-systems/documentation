@@ -15,7 +15,7 @@ This section provides information on how to interpret 4xx errors.
 
 ### Pantheon 401 Unauthorized
 
-This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/guides/secure-development/security-tool). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.
+This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/guides/secure-development/security-tool). This is usually not a platform failure as environment access can be set from the Dashboard Security tab.
 
 In some circumstances, a 401 error can be triggered inadvertently if a site environment is locked, and a user passes the HTTP auth but the site sends a 401 HTTP status code. 
 
@@ -31,9 +31,9 @@ Pantheon also prevents public access via the web server to private files, `.htac
 
 ### Pantheon 404 Unknown Site
 
-> The hostname ... is unknown. 
+> The hostname ... is unknown. Please double-check that you have the right URL. If so, make sure it matches your Dashboard's custom domain settings.
 
-Please double-check that this is the right URL. If so, make sure it matches your Dashboard's custom domain settings." This typically is shown when there is an internal routing problem or a site environment does not exist.
+This error typically is shown when there is an internal routing problem or a site environment does not exist.
 
 ### Error 404 Not Found
 

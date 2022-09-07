@@ -15,9 +15,9 @@ This section provides information on how to use external web service calls on Pa
 
 ## External Web Service Calls
 
-It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third-party APIs or services. These will halt the execution of your application until a response is received due to the synchronous nature of PHP. A slow response from the external service can lead to a [timeout](/timeouts) on Pantheon.
+It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls to third-party APIs or services. These calls halt the execution of your application until a response is received due to the synchronous nature of PHP. A slow response from the external service can lead to a [timeout](/timeouts) on Pantheon.
 
-Even the most reliable web services occasionally experience slowness. Your site might also experience network disruptions, which also can slow down external calls. These are are just two reasons why you should set a relatively low timeout threshold for the external call if yous use extensions (plugins or modules) and custom code. The external web service will fail and move on to the next stage in the process if it doesn't respond within a few seconds.
+Even the most reliable web services occasionally experience slowness. Your site might also experience network disruptions, which can also slow down external calls. These are are just two reasons why you should set a relatively low timeout threshold for the external call if you use extensions (plugins or modules) and custom code. The external web service will fail and move on to the next stage in the process if it doesn't respond within a few seconds.
 
 ### Examples: Set a Timeout on an External Request
 
