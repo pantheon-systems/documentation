@@ -16,7 +16,7 @@ reviewed: "2022-08-11"
 
 ## Create the CMS Backend
 
-You can create a Fron-End Site by configuring your Dashboard Upstream or by using a Pantheon starter kit. Choose either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
+You can create a Front-End Site by configuring your Dashboard upstream or by using a Pantheon starter kit. Choose either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
 
 * [Drupal and Next.js](https://github.com/pantheon-systems/decoupled-drupal-recommended) - This configuration supports server-side rendering. 
 * [WordPress and Gatsby](https://github.com/pantheon-systems/decoupled-wordpress-recommended) - This configuration supports static site generation. 
@@ -24,7 +24,7 @@ You can create a Fron-End Site by configuring your Dashboard Upstream or by usin
 
 ## Backend Installation and Configuration
 
-You can choose from the following approaches to configure your backend:
+Choose from the following approaches to configure your backend:
 
 * Build Tools:
   * Use this option if testing is important to your team's workflow. With Build Tools you will not have to manually push changes to your code repository.
@@ -38,20 +38,18 @@ You can choose from the following approaches to configure your backend:
 <Tab title="Drupal Backend" id="drupal-install" active={true}>
 
 #### Dashboard Upstream Install
-You can install the Drupal backend by using the Dashboartd Upstream
 
-Create from Decoupled Drupal Composer Managed upstream:
+You can install the Drupal backend by using the Dashboard upstream.
 
-Via the Pantheon Dashboard at this link:
+Navigate to the Pantheon Dashboard to create a site from the [Decoupled Drupal Composer Managed upstream](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) 
 
-Decoupled Drupal Composer Managed
-Or Alternatively using Terminus:
+Alternatively, you can use Terminus. Enter the following command to create a site with the Decoupled Drupal Composer Managed upstream.
 
 ```
   terminus site:create my-new-site "Describe Site" empty --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
 ```
-  * Replace '{My Team Name}' with your team name - for example `My Agency`. This input can also be omitted.
-`c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer Managed.
+  * Replace `{My Team Name}` with your team name, for example `My Agency`. This can also be omitted.
+  * Note that `c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer Managed.
 
 
 #### Installing Using Build Tools
