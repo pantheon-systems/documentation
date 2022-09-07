@@ -16,7 +16,7 @@ reviewed: "2022-08-11"
 
 ## Create the CMS Backend
 
-You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
+You can create a Fron-End Site by configuring your Dashboard Upstream or by using a Pantheon starter kit. Choose either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
 
 * [Drupal and Next.js](https://github.com/pantheon-systems/decoupled-drupal-recommended) - This configuration supports server-side rendering. 
 * [WordPress and Gatsby](https://github.com/pantheon-systems/decoupled-wordpress-recommended) - This configuration supports static site generation. 
@@ -24,14 +24,13 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
 ## Backend Installation and Configuration
 
-### Choosing an Approach
+You can choose from the following approaches to configure your backend:
 
-* Use Build Tools:
-  * If testing is important to your team's workflow. With Build Tools you will not haveto manually push changes to your code repository.
+* Build Tools:
+  * Use this option if testing is important to your team's workflow. With Build Tools you will not have to manually push changes to your code repository.
 
-
-* Use Dashboard Upstream : 
-  *  If you perfer a more streamlined configuration. 
+* Dashboard Upstream: 
+  *  Use this option if you prefer a more streamlined configuration. 
 
 
 <TabList>
