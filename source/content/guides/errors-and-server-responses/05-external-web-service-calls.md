@@ -13,12 +13,11 @@ anchorid: external-web-service-calls
 
 This section provides information on how to use external web service calls on Pantheon.
 
-
 ## External Web Service Calls
 
-It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third-party APIs or services. Given the synchronous nature of PHP, these will halt the execution of your application until a response is received. Obviously, a slow response from the external service could lead to a [timeout](/timeouts) on Pantheon.
+It is not uncommon for API or web-service integration extensions (plugins or modules) to make calls out to third-party APIs or services. These will halt the execution of your application until a response is received due to the synchronous nature of PHP. A slow response from the external service can lead to a [timeout](/timeouts) on Pantheon.
 
-Even the most reliable web services will occasionally experience slowness, and it is also inevitable that there are network disruptions which could slow down external calls. That's why extensions (plugins or modules) and custom code should set a relatively low timeout threshold for the external call itself. If the external web service doesn't respond in a few seconds, it should fail gracefully and move on.
+Even the most reliable web services occasionally experience slowness. Your site might also experience network disruptions, which also can slow down external calls. These are are just two reasons why you should set a relatively low timeout threshold for the external call if yous use extensions (plugins or modules) and custom code. The external web service will fail and move on to the next stage in the process if it doesn't respond within a few seconds.
 
 ### Examples: Set a timeout on an external request
 
@@ -53,6 +52,13 @@ Even the most reliable web services will occasionally experience slowness, and i
        curl_setopt( $handle, CURLOPT_TIMEOUT, 10 );
    }
    ```
+   ```
 
-If you encounter frequent problems with external web services, evaluate the code making the call, and the service provider itself.
+Evaluate the code making the call and the service provider if you encounter frequent problems with external web services.
+
+## More Resources
+
+- [External Libraries on Pantheon](/external-libraries)
+
+- [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 
