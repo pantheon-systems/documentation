@@ -49,6 +49,18 @@ When running `composer install` on a local clone of your Pantheon site's reposit
 
 1. Commit `composer.json` and `composer.lock` and push the changes.
 
+   ```bash{promptUser: user}
+    git add composer.json composer.lock
+   ```
+
+   ```bash{promptUser: user}
+    git commit -m "added composer.json and composer.lock"
+   ```
+
+   ```bash{promptUser: user}
+    git push
+   ```
+
    - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. You can now deploy the changes from the updated Dev environment to the Test and Live environments.
 
 1. Complete the steps to [commit Dev changes to Test and Live](/pantheon-workflow#combine-code-from-dev-and-content-from-live-in-test) through your Pantheon dashboard or with [Terminus env:deploy](/terminus/commands/env-deploy).
