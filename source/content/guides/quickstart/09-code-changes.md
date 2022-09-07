@@ -1,0 +1,54 @@
+---
+title: Quick Start
+subtitle: Make Code Changes
+description: Learn how to make code changes using SFTP
+quickstart: true
+anchorid: onserver-dev-part2
+generator: pagination
+layout: guide
+categories: [get-started]
+tags: [code, dashboard, iterate, sftp]
+type: guide
+pagination:
+  provider: data.quickstartpages
+use:
+  - quickstartpages
+permalink: docs/guides/quickstart/code-changes/
+nexturl: guides/quickstart/next-steps/
+nextpage: Next Steps
+previousurl: guides/quickstart/ui-changes/
+previouspage: On-Server Dev, Part 1
+editpath: quickstart/09-code-changes.md
+image: launchGuide-twitterLarge
+---
+
+Finally, we’re going to edit code directly. We’ll commit our edits to <Icon icon={"wrench"} text={"Dev"}/>, review in <Icon icon={"equalizer"} text={"Test"}/>, and deploy to <Icon icon={"cardio"} text={"Live"}/>. Let’s get started!
+
+<Alert title={"Note"} type={"info"}>
+  To perform this task, you need a basic understanding of CSS, and have an SFTP client installed.
+</Alert>
+
+If you haven’t added a new theme to your site, return to the [previous lesson](/guides/quickstart/onserver-dev-part1) and do so.
+
+1.  Go to your **Site Dashboard** > > <Icon icon={"wrench"} text={"Dev"}/> tab > <Icon icon={"embed-close"} text={"Code"}/>. Confirm your Connection Mode is set to **SFTP**.
+
+2.  Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
+
+3.  Click **Open SFTP Client**, and enter your User Dashboard password when prompted.
+
+    If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
+
+4.  Now open the `code` folder in your SFTP client, and navigate to the theme you installed previously.
+
+5.  Make a significant change to your theme’s CSS; something you’ll easily spot when you look at the site.
+
+6.  Return to the <Icon icon={"wrench"} text={"Dev"}/> tab of your Site Dashboard. The files you just changed will be highlighted in yellow.
+
+    <Alert title={"Note"} type={"info"}>
+      Click the highlighted file changes in the Dev environment, and you can
+      view the specific diff.
+    </Alert>
+
+7.  Add a commit message, then click **Commit** to add these files to your Dev environment.
+
+8.  Deploy your changes to the <Icon icon={"equalizer"} text={"Test"}/> environment and review them. When you’re satisfied, deploy to the <Icon icon={"cardio"} text={"Live"}/> environment.
