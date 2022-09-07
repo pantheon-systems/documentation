@@ -15,7 +15,7 @@ This section provides information on how to resolve overloaded workers on Panthe
 
 ## Overloaded Workers
 
-If your PHP workers are overloaded, it's possible that pages will timeout before they are ever even picked up by the back-end. This can happen if you are suddenly hit with a flood of un-cachable/authenticated traffic.
+It's possible that pages will timeout before they are picked up by the back-end if your PHP workers are overloaded. This can happen if you are suddenly hit with a flood of un-cachable or authenticated traffic.
 
 ```php
 2014/05/15 08:57:21 [error] 31914#0: *13543 connect() to unix:/srv/bindings/0181b7c2caqe34534qw34533453e69cd027b13556df00/run/php-fpm.sock failed (11: Resource temporarily unavailable) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /index.php?q=user HTTP/1.0", upstream: "fastcgi://unix:/srv/bindings/0181b7c2caqe34534qw34533453e69cd027b13556df00/run/php-fpm.sock:", host: "dev-example.gotpantheon.com"
@@ -24,22 +24,38 @@ If your PHP workers are overloaded, it's possible that pages will timeout before
 
 ### Fix Errors
 
-If your site is throwing a lot of warnings or notices, there is a performance penalty — resources are used to log errors to disk, and these can slow down your site by performing database write operations. In this case the solution is not to disable logging but to fix the errors.
+There is a performance penalty as your resources are used to log errors to your disk if your site is throwing a lot of warnings or notices. This can slow down your site by performing database write operations. The solution is not to disable logging but to fix the errors.
 
-Even with logging disabled, these errors will still be written to the server PHP error logs, so they should be addressed as soon as possible.
+Even with logging disabled, these errors will still be written to the server PHP error logs, which means you should be resolve the errors as soon as possible.
 
 ### Optimize the Site
 
-Long running processes like batch jobs, background tasks, and heavy operations cron jobs can also lead to backend resources being maxed out on your site. [Use New Relic&reg; Performance Monitoring](/guides/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
+Long running processes can also lead to backend resources being maxed out on your site, including:
 
+- Batch jobs
+- Background tasks
+- Heavy operations cron jobs
+
+[Use New Relic&reg; Performance Monitoring](/guides/new-relic) to identify performance bottlenecks, fix errors, and make changes to enhance performance.
 
 ### Upgrade Your Plan
 
-If the all the errors have been resolved and the views, batches and tasks have been optimized, the next step is to look into [upgrading your plan](https://www.pantheon.io/pricing) for more resources. The recommendation here is to select the most appropriate plan for the resource usage of your site.
-
+Consider [upgrading your plan](https://www.pantheon.io/pricing) for more resources after the all the errors have been resolved and the views, batches, and tasks have been optimized. Select the most appropriate plan for the resource usage of your site.
 
 ### Unexpected Timeouts
 
-There's no accounting for buggy code. We've seen bugs ranging from Drupal running cron on every page load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files cause sufficiently slow page load times to trigger timeouts.
+There's no accounting for buggy code. Bugs ranging from Drupal running cron on every page load, to the Drupal module `advanced_help` spidering the entire code tree looking for help files can cause sufficiently slow page load times to trigger timeouts.
 
-If you are seeing timeouts in unexpected places, debugging with New Relic&reg; Performance Monitoring or looking at your php slow logs can be informative.
+Debugging with New Relic&reg; Performance Monitoring or looking at your php slow logs can be informative if you are seeing timeouts in unexpected places.
+
+## More Resources
+
+- [PHP Slow Log and FPM Error Log](/guides/php/php-slow-log)
+
+- [Timeouts on Pantheon](/timeouts)
+
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+
+- [Cron for Drupal](/drupal-cron)
+
+- [Cron for WordPress](/wordpress-cron)

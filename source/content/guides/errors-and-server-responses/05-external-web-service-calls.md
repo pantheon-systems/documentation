@@ -19,7 +19,7 @@ It is not uncommon for API or web-service integration extensions (plugins or mod
 
 Even the most reliable web services occasionally experience slowness. Your site might also experience network disruptions, which also can slow down external calls. These are are just two reasons why you should set a relatively low timeout threshold for the external call if yous use extensions (plugins or modules) and custom code. The external web service will fail and move on to the next stage in the process if it doesn't respond within a few seconds.
 
-### Examples: Set a timeout on an external request
+### Examples: Set a Timeout on an External Request
 
 - Set a 10 second timeout on a generic PHP curl request:
 
@@ -61,4 +61,3 @@ Evaluate the code making the call and the service provider if you encounter freq
 - [External Libraries on Pantheon](/external-libraries)
 
 - [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
-
