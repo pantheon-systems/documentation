@@ -14,7 +14,7 @@ pagination:
 use:
   - quickstartpages
 permalink: docs/guides/quickstart/connection-modes/
-nexturl: guides/quickstart/onserver-dev-part1/
+nexturl: guides/quickstart/ui-changes/
 nextpage: On-Server Dev, Part 1
 previousurl: guides/quickstart/clone-live-to-dev/
 previouspage: Clone Live to Dev
@@ -24,22 +24,19 @@ image: launchGuide-twitterLarge
 
 In this lesson, we’ll learn how to connect to your Dev environment and change code.
 
-1. Navigate to the <Icon icon={"wrench"} text={"Dev"}/> environment in your Site Dashboard, and click <Icon icon={"embed-close"} text={"Code"}/>.
+To select your connection mode:
 
-   <Alert title={"Note"} type={"info"}>
-     Dev is the only environment on Pantheon where you can add or change code,
-     so it’s the only place you can access and change your Connection Mode.
-   </Alert>
+1. Go to your **Site Dashboard** > <Icon icon={"wrench"} text={"Dev"}/> tab > <Icon icon={"embed-close"} text={"Code"}/>.
 
-   On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you can connect and work via [SFTP](/sftp):
+On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you can connect and work via [SFTP](/sftp). Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
 
-   ![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
+![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
 
 ## Git Connection Mode
 
 You can develop locally with Git Connection Mode. Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who prefers local development, it's an efficient way to interact with our platform: develop locally, commit, and push code to your Dev environment.
 
-For more information, please see our [Local Development](/local-development) documentation.
+For more information, see [Local Development](/local-development) and [Git on Pantheon](/guides/git).
 
 ## SFTP Connection Mode
 

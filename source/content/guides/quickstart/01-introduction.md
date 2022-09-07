@@ -41,4 +41,4 @@ Are you an agency? Do you build sites for others? If so, check **Are you an agen
 
 </Alert>
 
-You should now have a Pantheon User Account. When you're ready, you may continue to the next lesson.
+You should now have a Pantheon User Account. When you're ready, continue to the next lesson.

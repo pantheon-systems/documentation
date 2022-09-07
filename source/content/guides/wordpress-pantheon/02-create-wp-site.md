@@ -32,7 +32,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
     ![Alt text describing the image](../../../images/choose-your-cms.png)
 
-1. Wait for your site to finish deploying (this can take a couple of minutes) and then visit your Pantheon [Site Dashboard](/guides/quickstart/site-dashboard/).
+1. Wait for your site to finish deploying (this can take a couple of minutes) and then visit your Pantheon [Site Dashboard](/guides/quickstart/workflow/).
 
     ![Alt text describing the image](../../../images/new-site-deployment.png)
 

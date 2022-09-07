@@ -1,7 +1,7 @@
 ---
 title: Quick Start
-subtitle: User Dashboard
-description: In part two of our Quick Start guide, learn about the Pantheon User Dashboard
+subtitle: Personal Workspace
+description: In part two of our Quick Start guide, learn about the Pantheon Personal Workspace
 anchorid: user-dashboard
 layout: guide
 categories: [get-started]
@@ -18,44 +18,60 @@ editpath: quickstart/02-user-dashboard.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’re going to explore the User Dashboard.
+Let's start by exploring the Personal Workspace - this is what you see after you log in.
 
-**Watch the video:**
+## Home Page
 
-<Youtube src="U7iaX-vwPrc" title="User Dashboard Overview" />
+Your Home page contains the following information:
 
-<Accordion title="User Dashboard Glossary (Optional)" id="user-dashboard-tour" icon="lightbulb">
+* Workspace type
+* Sites
+* Account tier
+* Sandbox sites used 
 
-- <Icon icon={"more-windows"} text={"Sites:"}/> Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
+![A screenshot of the new Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
 
-  - <Icon icon={"plus"} text={"Create New Site:"}/> Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
+## Tabs
 
-  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).
+The navigation bar on the left contains several additional tabs to help you manage your sites:
 
-- <Icon icon={"group"} text={"Organizations:"}/> If you belong to an organization, you’ll see it listed here. Click it to link to the organization's dashboard.
+- **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
-- <Icon icon={"flag"} text={"Support:"}/> View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
+  - **Create New Site** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
 
-- <Icon icon={"cogwheel"} text={"Account:"}/> Update and manage your personal account information. Use the options in the left-hand navigation menu:
+  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, see [Migrate Your Sites to Pantheon on our Get Started](/get-started) page.
+
+- **Team:** If you belong to an organization, you’ll see it listed here. Click it to link to the organization's dashboard.
+
+- **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
+  
+- **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
+
+- **Custom Upstreams:** Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
+
+- **Settings:** Use the **Settings** tab to modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
+
+## Account Settings
+
+Click your user icon in the upper right corner to update and manage your personal account information. Use these options in the left-hand navigation menu:
 
   - **Profile:** Update your user profile information, or connect your Google account to Pantheon.
 
-  - **Change Password:** Change your account password.
+  - **Account and Security:** Change your account email password.
 
-  - **Login Destination:** Change your Login Destination.
+  - **Notifications:** Select the notifications you wish to receive.
 
   - **SSH Keys:** Add and manage your SSH keys.
 
   - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus) or the [Pantheon Migration plugin](/guides/guided/.
 
-  - **Billing:** View and update your billing information for sites you own.
+  - **Preferences:** To use the old dashboard, flip the toggle to **Off**.
 
-  - **Delete Account:** Delete your Pantheon account. This is useful for consolidating multiple accounts under a single user account.
 
-</Accordion>
+<Alert title="Note" type="info" >
 
-Note:
+<Partial file="dashboard-login-session-length.md" />
 
-- <Partial file="dashboard-login-session-length.md" />
+</Alert>
 
 You should now be familiar with the Pantheon User Dashboard. When you’re ready, you may continue to the next lesson.

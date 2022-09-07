@@ -15,7 +15,7 @@ pagination:
 use:
   - quickstartpages
 permalink: docs/guides/quickstart/next-steps/
-previousurl: guides/quickstart/onserver-dev-part2
+previousurl: guides/quickstart/code-changes
 previouspage: On-Server Dev, Part 2
 editpath: quickstart/10-next-steps.md
 image: launchGuide-twitterLarge
