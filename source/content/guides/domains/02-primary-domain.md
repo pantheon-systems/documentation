@@ -22,11 +22,11 @@ Redirecting all traffic to a primary domain is a best practice for SEO since it 
 
 Choose a primary domain from the dropdown at the bottom of **Domains / HTTPS**:
 
-![Set the primary domain in the Site Dashboard](../images/dashboard/choose-primary-domain.png)
+![Set the primary domain in the Site Dashboard](../../../images/dashboard/choose-primary-domain.png)
 
 <Alert title="Note" type="info">
 
-Redirects cannot be managed via `.htaccess`, which is ignored on our platform. For details, see [Configure Redirects](/guides/redirect/#php-vs-htaccess).
+Redirects cannot be managed via `.htaccess`, which is ignored on our platform. For details, refer to [Configure Redirects](/guides/redirect/#php-vs-htaccess).
 
 </Alert>
 
