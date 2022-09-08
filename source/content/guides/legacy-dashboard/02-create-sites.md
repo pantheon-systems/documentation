@@ -24,7 +24,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
   <Alert title="Note" type="info">
 
-  The site name will be prefixed to all [Platform URLs](/domains/#platform-domains), which are automatically configured as subdomains of `pantheonsite.io`.
+  The site name will be prefixed to all [Platform URLs](/guides/domains), which are automatically configured as subdomains of `pantheonsite.io`.
 
   This name cannot be changed once set.
 
@@ -54,7 +54,7 @@ Sandbox sites are useful for trying out the Pantheon platform, creating sandboxe
 | Application Containers                     | 1                       | 
 | PHP Workers                                | 4                       |         
 | PHP Memory Limit                           | 256MB             |                              |Storage                                     | 20 GB    |
-| Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."  />  | 0                                         | 
+| Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/docs/guides/domains'>Domains and Redirects</a>."  />  | 0                                         | 
 | Free and managed HTTPS <Popover   content = "For details, see <a href='/guides/global-cdn/https/'>HTTPS on Pantheon's Global CDN</a>."  />   | <span  style= " color:green " > ✔ </span> |  
 | New Relic <Popover   content = "For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."  />  | <span  style= " color:green " > ✔ </span> |
 | Object Cache <Popover   content = "For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  /> | <span  style= " color:green " > ✔ </span> | 
@@ -72,7 +72,7 @@ No. Site names and Platform URLs are permanent and cannot be changed. As a worka
 
 ### What if my site name is already taken?
 
-Site names must be unique across all Pantheon sites, including [frozen](/guides/platform-considerations/platform-site-info/#inactive-site-freezing) sites. Choose another site name, and remember that the name you choose in the Pantheon Dashboard is only visible to the public in your [platform domain](/domains/#platform-domains).
+Site names must be unique across all Pantheon sites, including [frozen](/guides/platform-considerations/platform-site-info/#inactive-site-freezing) sites. Choose another site name, and remember that the name you choose in the Pantheon Dashboard is only visible to the public in your [platform domain](/guides/domains).
 
 ## Next Steps
 

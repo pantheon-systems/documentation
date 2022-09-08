@@ -58,7 +58,7 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
 ?&gt;
 ```
 
-The example above replaces three URLs when cloning to the test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/domains/#custom-domains) `example.com` when cloning to the live environment.
+The example above replaces three URLs when cloning to the test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/guides/domains) `example.com` when cloning to the live environment.
 
 You can find this example and many others in the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repo.
 

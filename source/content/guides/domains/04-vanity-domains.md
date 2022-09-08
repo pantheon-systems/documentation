@@ -1,10 +1,17 @@
 ---
-title: Vanity Domains
+title: Platform and Custom Domains
+subtitle: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
 categories: [develop]
 tags: [collaborate, dns, agencies]
-reviewed: "2020-10-08"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/domains/vanity-domains
+anchorid: vanity-domains
 ---
+
+This section provides information on to set up a vanity domain.
 
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default Platform domain (`pantheonsite.io`).
 

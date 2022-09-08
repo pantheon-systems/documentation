@@ -7,7 +7,7 @@ tags: [dns]
 contributors: [alexfornuto]
 ---
 
-**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
+**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/guides/domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
 
 ![DNS Recommendations](../images/dashboard/domain-added.png)
 
@@ -202,5 +202,5 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 ## See Also
 
  - [Launch Essentials](/guides/launch)
- - [Platform and Custom Domains](/domains)
+ - [Platform and Custom Domains](/guides/domains)
  - [Configure Redirects](/guides/redirect)

@@ -102,7 +102,7 @@ You will not be able to pre-provision HTTPS to prevent service interruption if y
 
 ## More Resources
 
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 
 - [Test a Domain Not Resolved to Pantheon](/guides/launch/advanced-curls/#test-a-domain-not-resolved-to-pantheon)
 

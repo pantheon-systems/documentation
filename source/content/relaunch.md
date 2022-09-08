@@ -114,7 +114,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. Repeat steps 2-6 above for each affected domain. Note `www.example.com` and `example.com` are different domains.
 
-1. In the new Site Dashboard, [standardize traffic for the primary domain](/domains/#redirect-to-https-and-the-primary-domain).
+1. In the new Site Dashboard, [standardize traffic for the primary domain](/guides/domains).
 
 1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
 

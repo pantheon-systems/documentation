@@ -51,7 +51,7 @@ Note: The key file upload tool currently only accepts 2048-bit RSA keys. AGCDN c
 
 ### Add the Domain
 
-Next, [add the domain to your environment](/domains#add-a-custom-domain).
+Next, [add the domain to your environment](/guides/domains).
 
   If you are presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
 

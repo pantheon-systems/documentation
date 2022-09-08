@@ -37,7 +37,7 @@ All links from the video are provided below.
  - [Webpagetest.org](https://www.webpagetest.org)
  - [SiteSpeed](https://www.sitespeed.io/)
  - [Launch Essentials](/guides/launch)
- - [Domains and DNS](/domains)
+ - [Domains and DNS](/guides/domains)
  - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
  - [Pantheon's Global CDN](/guides/global-cdn)
  - [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)

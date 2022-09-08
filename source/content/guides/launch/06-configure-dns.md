@@ -42,7 +42,7 @@ You can validate that HTTPS configuration for the domain is ready on Pantheon by
 
 ## Configure DNS
 
-The instructions in this section cover the common `example.com` and `www.example.com` domain configuration. Refer to [Platform and Custom Domains](/domains/#custom-domains) for other domain configurations.
+The instructions in this section cover the common `example.com` and `www.example.com` domain configuration. Refer to [Platform and Custom Domains](/guides/domains) for other domain configurations.
 
 <Partial file="configure-dns.md" />
 
@@ -66,5 +66,5 @@ Click [here](/dns/#frequently-asked-questions) to learn more about DNS settings.
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 

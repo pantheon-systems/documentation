@@ -136,7 +136,7 @@ You can also integrate with external Solr search indexes with services like [Ope
 - [Hot Fixes](/hotfixes)
 - [What is the "pantheon_api.module"](/modules#pantheon-module-drupal-7)
 - [Email on Pantheon](/email)
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port)
 - [LDAP and LDAPS](/ldap-and-ldaps)
 - [Secure Integration](/guides/secure-development/secure-integration)

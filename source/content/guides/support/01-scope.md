@@ -128,7 +128,7 @@ Diamond Accounts are intended to help developers succeed on Pantheon, not to pro
 
 The Pantheon Professional Services (PS) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. The PS team can provide more information on, and assist with:
 
-- [Additional Domains](/domains)
+- [Additional Domains](/guides/domains)
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 - [Custom SSL Certificate](/custom-certificates)
 - [Decoupled CMS](/guides/decoupled-sites)
