@@ -1,7 +1,7 @@
 ---
 title: WordPress Site Networks
 subtitle: Configure
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Learn how to configure your WordPress Site Networks.
 layout: guide
 type: guide
 cms: "WordPress"

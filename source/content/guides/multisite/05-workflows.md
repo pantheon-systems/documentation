@@ -1,7 +1,7 @@
 ---
 title: WordPress Site Networks
 subtitle: Workflows
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Learn more about WordPress Site Networks workflows.
 multisite: true
 anchorid: media
 generator: pagination
@@ -92,7 +92,7 @@ Running into “Error: Site Not Found”? See [Troubleshoot](/guides/multisite/d
 Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.
 </Alert>
 
-## Refresh data from Live
+## Refresh Data from Live
 Refreshing data in Test or Dev from Live is simply a matter of reversing the steps you took to initially create the Live environment when you have a production environment. 
 
 1. Clone the content from Live into Dev:
@@ -109,9 +109,9 @@ Refreshing data in Test or Dev from Live is simply a matter of reversing the ste
 
 1. Flush the cache for the entire Dev environment:
 
-```bash
-terminus env:cc <site>.dev
-```
+    ```bash
+    terminus env:cc <site>.dev
+    ```
 
 You can now develop against production data.
 

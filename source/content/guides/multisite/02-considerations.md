@@ -1,8 +1,7 @@
 ---
 title: WordPress Site Networks
 subtitle: Considerations
-description: Overview of WordPress multisite support on the Pantheon Platform.
-anchorid: considerations
+description: Review important WordPress Site Networks considerations.
 layout: guide
 type: guide
 cms: "WordPress"

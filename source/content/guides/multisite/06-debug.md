@@ -1,7 +1,7 @@
 ---
 title: WordPress Site Networks
 subtitle: Troubleshoot
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Review common WordPress Site Networks troubleshooting scenarios.
 multisite: true
 anchorid: debug
 generator: pagination
@@ -16,7 +16,7 @@ image: multisite
 getfeedbackform: default
 ---
 
-This section provides information on common troubleshooting scenarios.
+This section provides information on common WordPress Site Networks troubleshooting scenarios.
 
 ## WP-CLI Tips and Tricks
 

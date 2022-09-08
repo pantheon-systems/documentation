@@ -1,7 +1,7 @@
 ---
 title: WordPress Site Networks
 subtitle: Multisite Governance
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Learn more about governance with WordPress Site Networks.
 layout: guide
 type: guide
 cms: "WordPress"
