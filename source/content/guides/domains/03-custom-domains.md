@@ -30,7 +30,7 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 
 <Alert title="Note" type="info">
 
-Add all domains (`example.com` and `www.example.com` are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch). Automatic resolution of domains and wildcards are not supported.
+Add all domains (`example.com` and `www.example.com` are different domains) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch). Automatic resolution of domains and wildcards are not supported.
 
 Note that each custom domain is counted regardless of the environment to which it's added.
 
@@ -46,15 +46,15 @@ Note that each custom domain is counted regardless of the environment to which i
 
 1. If no domains have been added yet, enter a domain and click **Connect Domain**:
 
-  ![Adding a first domain to the Site Dashboard](../images/dashboard/add-first-domain.png)
+  ![Adding a first domain to the Site Dashboard](../../../images/dashboard/add-first-domain.png)
 
   If one (or more) domains have already been added, click **Connect Domain**:
 
-  ![Adding an additional domain to the Site Dashboard](../images/dashboard/add-additional-domains.png)
+  ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/add-additional-domains.png)
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**:
 
-  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../images/dashboard/verify-domain-ownership.png)
+  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/verify-domain-ownership.png)
 
   It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
 
@@ -64,7 +64,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
 1. After you add your domain, you'll be automatically taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
-   ![Custom domain Details page](../images/dashboard/details-page.png)
+   ![Custom domain Details page](../../../images/dashboard/details-page.png)
 
   If you instead see:
 
