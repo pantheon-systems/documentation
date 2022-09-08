@@ -12,7 +12,7 @@ editpath: multisite/03-config.md
 image: multisite
 ---
 
-This doc is intended for customers who have had a WordPress Site Network created for them by a Pantheon employee. If you do not have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. After you visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
+This section is intended for customers who have had a WordPress Site Network created for them by a Pantheon employee. If you do not have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. After you visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
 
 <Alert title="Note" type="info">
 
@@ -22,7 +22,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 ## Install the WordPress Site Network
 
-Using [Terminus](/terminus) to install a WordPress Site Network is recommended.
+We recommend using [Terminus](/terminus) to install a WordPress Site Network.
 
 1. Install the most recent release of Terminus:
 
@@ -124,9 +124,9 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
   }
   ```
 
-If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
-  
-You may notice that the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, you should conditionally define the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
+    If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
+      
+    You may notice that the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, you should conditionally define the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment after you edit.
 
@@ -169,3 +169,11 @@ After these steps are complete, both sites on the WordPress Site Network should 
 </Accordion>
 
 Explore the WordPress Network Dashboard to become familiar with the variety of additional settings. You can review the options that are available for each site you create, manage users across WordPress Multisite, and learn about the network settings. After you explore the WordPress Network Dashboard, learn how to use the WordPress Site Network with the Pantheon Workflow.
+
+## More Resources
+
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)]
+
+- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)

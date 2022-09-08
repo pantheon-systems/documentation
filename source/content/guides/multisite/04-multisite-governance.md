@@ -12,6 +12,8 @@ editpath: multisite/04-multisite-governance.md
 image: multisite
 ---
 
+This section provides information on Multisite governance on Pantheon.
+
 ## Multisite on Pantheon
 
 There are two primary layers involved in the governance system when you own a multisite on Pantheon.
@@ -81,3 +83,9 @@ A multisite setup can be more efficient for teams as long as roles and responsib
 - Manages content and plugin settings for an individual multisite
 
 ![Multisite Governance Example](../../../images/multisite-governance-example2.png)
+
+## More Resources
+
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
+
+- [Working in the WordPress Dashboard](/cms-admin#wordpress-dashboard)

@@ -20,7 +20,7 @@ previousurl: guides/multisite/workflows/
 editpath: multisite/05-workflows.md
 image: multisite
 ---
-Now that you're up and running with a WordPress Site Network on Pantheon, there are some important fundamentals to know.
+This section provides information on important Multisite fundamentals.
 
 ## Create Test and Live Environments from Dev
 After you've configured a WordPress Site Network in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
@@ -30,9 +30,9 @@ After you've configured a WordPress Site Network in the Dev environment, you'll 
 
   This takes a few moments.
 
-3. Now click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`. At this point, it will show a database connection error.
+3. Click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`. At this point, it will show a database connection error.
 
-4. From the command line, perform a `wp search-replace` on the Test environment's database via Terminus:
+4. Navigate to the command line, and perform a `wp search-replace` on the Test environment's database via Terminus:
 
     ```bash
     terminus remote:wp <site>.test -- search-replace <dev-domain> <test-domain> --url=<dev-domain> --network
@@ -45,7 +45,7 @@ After you've configured a WordPress Site Network in the Dev environment, you'll 
 To better understand what's going on, let's dive into `wp search-replace` with greater detail.
 
 ## Deploy Across Environments
-For better or for worse, WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
+WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
 
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
 
@@ -93,27 +93,27 @@ Because the WordPress object cache stores its data as key => value pairs and Wor
 </Alert>
 
 ## Refresh data from Live
-Once you have a production environment, refreshing data in Test or Dev from Live is simply a matter of reversing the steps you took to initially create the Live environment.
+Refreshing data in Test or Dev from Live is simply a matter of reversing the steps you took to initially create the Live environment when you have a production environment. 
 
-First, clone the content from Live into Dev:
+1. Clone the content from Live into Dev:
 
-```bash
-terminus env:clone-content <site>.live dev
-```
+    ```bash
+    terminus env:clone-content <site>.live dev
+    ```
 
-Once the clone process is complete, you'll need to run `wp search-replace` to update all domain configuration references:
+1. Run `wp search-replace` to update all domain configuration references:
 
-```bash
-terminus remote:wp <site>.<env> -- search-replace <live-domain> <dev-domain> --network --url=<live-domain>
-```
+    ```bash
+    terminus remote:wp <site>.<env> -- search-replace <live-domain> <dev-domain> --network --url=<live-domain>
+    ```
 
-Lastly, flush the cache for the entire Dev environment:
+1. Flush the cache for the entire Dev environment:
 
 ```bash
 terminus env:cc <site>.dev
 ```
 
-Behold: you can now develop against production data.
+You can now develop against production data.
 
 ## Work with Large Databases
 If you have a really large database (gigabytes and gigabytes) or dozens upon dozens of tables, you may notice that `wp search-replace` can take a really long time — or even time out.
@@ -154,3 +154,11 @@ Ultimately, the key idea is to only perform a search and replace where you absol
 In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Site Network on Pantheon. Check out the [Launch Essentials Guide](/guides/launch) when you're ready to push your site live — launching a WordPress Site Network isn't much different than launching a standard WordPress site.
 
 Continue to the next page for some tips on how to manage networks and debug common issues.
+
+## More Resources
+
+- [Content Staging in WordPress](/content-staging#content-staging-in-wordpress)
+
+- [Database Workflow Tool](/database-workflow)
+
+- [Developer Workflow](/overview/workflows)
