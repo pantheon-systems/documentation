@@ -7,7 +7,7 @@ tags: [support]
 
 This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.
 
-Review [Platform Considerations](https://pantheon.io/docs/platform-considerations) for more technical information. 
+Review [Platform Considerations](/guides/platform-considerations) for more technical information. 
 
 ## Getting Started
 

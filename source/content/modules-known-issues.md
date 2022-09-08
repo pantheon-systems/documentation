@@ -27,7 +27,7 @@ ___
 
 <ReviewDate date="2020-02-10" />
 
-**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. Refer to the [Platform Considerations](/platform-considerations/#nginx.conf) documentation and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182) for more information.
+**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. Refer to the [Platform Considerations](/guides/platform-considerations/platform-site-info/#nginx.conf) documentation and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182) for more information.
 ___
 
 ## [Apache Solr Multilingual](https://www.drupal.org/project/apachesolr_multilingual)
@@ -336,7 +336,7 @@ ___
 
 **Issue 1:** When the module is configured to take over the public file system, Drupal's CSS/JS aggregation will not work unless you also upload Drupal Core and contrib modules to S3. See [Drupal Issue 2511090](https://www.drupal.org/project/s3fs/issues/2511090) for more information.
 
-**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [Platform upload limitations](/platform-considerations#large-files).
+**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [Platform upload limitations](/guides/platform-considerations/files-directories#large-files).
 
 ___
 

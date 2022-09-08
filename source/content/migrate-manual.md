@@ -28,7 +28,7 @@ The steps outlined below do not work for Composer-based sites. If you have need 
 
 To ensure a successful migration, complete the following tasks on the source site before you start:
 
-- Read [Platform Considerations](/platform-considerations)
+- Read [Platform Considerations](/guides/platform-considerations)
 - Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 - Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/guides/php/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/guides/php/php-versions#configure-php-version).

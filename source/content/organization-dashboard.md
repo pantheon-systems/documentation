@@ -73,7 +73,7 @@ This filter shows which sites have core updates available, which ones are up to 
 
 ### Status
 
-This filter shows any sites that are [frozen](/platform-considerations/#inactive-site-freezing), or awaiting upgrade to the [Global CDN](/guides/global-cdn).
+This filter shows any sites that are [frozen](/guides/platform-considerations/platform-site-info#inactive-site-freezing), or awaiting upgrade to the [Global CDN](/guides/global-cdn).
 
 ### User in Charge
 

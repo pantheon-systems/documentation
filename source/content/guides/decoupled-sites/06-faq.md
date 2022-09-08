@@ -1,7 +1,7 @@
 ---
 title: Pantheon Front-End Sites
 subtitle: Frequently Asked Questions
-description: Learn about frequently asked questions for Pantheon's decoupled architecture using Front-End Sites
+description: Learn about frequently asked questions for Pantheon's decoupled architecture using Front-End Sites.
 categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, joa-pan]
@@ -19,7 +19,7 @@ reviewed: "2022-08-11"
 
 ### Can I use any CMS with Pantheon architecture for Front-End Sites?
 
-WordPress and Drupal are currently the only CMSs supported on Pantheon Decoupled. 
+WordPress and Drupal are currently the only CMSs supported by Pantheon Decoupled. 
 
 
 ### What dependency versions are supported with Front-End Sites?
@@ -74,4 +74,3 @@ Users must have permissions to enable decoupled for GitHub organization accounts
 <Accordion title="You must remove a VCS user record to uninstall a Front-End Site  " id="uninstalling" icon="info-sign">
 Uninstalling a Pantheon Front-End Site using GitHub settings requires manual removal of a VCS user record.
 </Accordion>
-

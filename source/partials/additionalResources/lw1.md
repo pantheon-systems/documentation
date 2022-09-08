@@ -20,7 +20,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - [Pantheon Status](https://status.pantheon.io/)
 - Case study: [The ACLU Rises to Every Occasion with a Website that Doesn’t Fail](https://pantheon.io/resources/aclu-rises-every-occasion-website-doesnt-fail-drupal-case-study)
 - Case study: [API Management Company Apigee Creates True Multitenancy with Pantheon](https://pantheon.io/resources/api-management-company-apigee-creates-true-multitenancy-drupal-case-study)
-- Doc: [Platform Considerations](/platform-considerations)
+- Doc: [Platform Considerations](/guides/platform-considerations)
 - Doc: [Pantheon YAML Configuration Files](/pantheon-yml)
 
 ### Keep Learning After Today
