@@ -32,12 +32,9 @@ Ready to learn more? Here are just some of the things you can do with Pantheon:
 - Take your site live! To do so, refer to [Launch Essentials](/guides/launch).
 - Migrate your existing site using a variety of scenarios. Refer to [Migrate Sites to Pantheon](/guides/guided/) on our [Get Started](/get-started) page.
 
-<Callout
-  title={"Are you an agency?"}
-  link={"https://pantheon.io/solutions/web-agency-success-tools?docs"}
->
+<Enablement title="Are you an agency?" link="https://pantheon.io/solutions/web-agency-success-tools?docs" >
 
 Accelerate your journey to workflow nirvana with help from the experts at
 Pantheon. Check out our [WebOps training program](https://pantheon.io/solutions/web-agency-success-tools?docs).
 
-</Callout>
+</Enablement>

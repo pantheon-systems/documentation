@@ -24,7 +24,7 @@ image: launchGuide-twitterLarge
 
 Finally, we’re going to edit code directly. We’ll commit our edits to <Icon icon={"wrench"} text={"Dev"}/>, review in <Icon icon={"equalizer"} text={"Test"}/>, and deploy to <Icon icon={"cardio"} text={"Live"}/>. Let’s get started!
 
-<Alert title={"Note"} type={"info"}>
+ <Alert title="Note"  type="info" >
   To perform this task, you need a basic understanding of CSS, and you must have an SFTP client installed.
 </Alert>
 
@@ -44,7 +44,7 @@ If you haven’t added a new theme to your site, return to the [previous lesson]
 
 1. Return to the **Dev** tab of your Site Dashboard. The files you just changed will be highlighted in yellow.
 
-    <Alert title={"Note"} type={"info"}>
+    <Alert title="Note"  type="info" >
       Click the highlighted file changes in the Dev environment to
       view the specific diff.
     </Alert>

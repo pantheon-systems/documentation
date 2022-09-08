@@ -43,7 +43,7 @@ You can develop directly on our servers with SFTP Connection Mode. It’s partic
 
 Code changes made in SFTP Connection Mode are still committed into a Git repository. This makes working with other developers easy and ensures _all_ changes are tracked in version control. Whether you’re a novice or seasoned developer, our SFTP Connection Mode is handy and safe to use.
 
-<Alert title={"Note"} type={"info"}>
+<Alert title="Note"  type="info" >
 
     It’s common to switch back and forth between SFTP and Git Connection Mode,
     depending on the task. For example, WordPress and Drupal Core updates are
