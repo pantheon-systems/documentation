@@ -23,13 +23,13 @@ To create your site:
 
    <Alert title="Note" type="info">
 
-   If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Navigate to your User Dashboard by selecting your name in the menu bar, then **My Dashboard**.
+   If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Go to your Personal Workspace by selecting your name in the menu bar, then **Personal Workspace**.
 
    </Alert>
 
-1. Select <Icon icon="plus" text="Create New Site"/>. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
+1. Select <Icon icon="plus" text="Create New Site"/>. 
 
-1. Select **Continue** to choose from the available site frameworks.
+1. Select WordPress, Drupal with Composer, or Drupal 7, depending upon the framework you wish to use.
 
    <Alert title="Note" type="info">
 
@@ -37,7 +37,7 @@ To create your site:
 
    </Alert>
 
-1. For the purpose of this guide, deploy WordPress, Durpal with Composer, or Drupal 7, by clicking the appropriate button. 
+1. 
 
 1. Enter the name for this site, and if you're part of an agency, associate this site with your organization.
 
@@ -47,8 +47,7 @@ To create your site:
 
      ![Site Dashboard in the Dev tab shows the Visit Development Site button](../../../images/dashboard/site-dashboard-dev.png)
 
-
-1. Access your new site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/> and follow the prompts to complete the installation of your site.
+1. Access your new site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/>, and follow the prompts to complete the installation of your site.
 
    <Alert title="Note" type="info">
 
@@ -56,4 +55,4 @@ To create your site:
 
    </Alert>
 
-Congratulations! You just installed a new site on Pantheon. When you're ready, continue to the next lesson.
+Congratulations! You just installed a new site on Pantheon. 

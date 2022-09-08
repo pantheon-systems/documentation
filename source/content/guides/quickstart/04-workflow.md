@@ -9,6 +9,7 @@ layout: guide
 categories: [get-started]
 tags: [dashboard, site, workflow]
 type: guide
+showtoc: true
 pagination:
   provider: data.quickstartpages
 use:
@@ -24,7 +25,7 @@ image: launchGuide-twitterLarge
 
 Next, we'll learn about the Dev, Test, Live workflow.
 
-Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
+Every Pantheon site comes with three separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
 
 <Alert title="Note" type="info">
 
@@ -32,13 +33,13 @@ Agencies have access to additional development environments under the <Icon icon
 
 </Alert>
 
-If you aren’t already on a Site Dashboard, go to the Sites tab and click on the name of the site you want to work with.
+If you aren’t already on a Site Dashboard, go to **Personal Workspace** > **Sites** tab, and select the site you want to work with.
 
 ## <span class="glyphicons glyphicons-wrench"></span> Dev
 
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
-Within the safety of this isolated environment, you can edit code and make updates to your site. In fact, all development on your Pantheon sites starts here.
+Within the safety of this isolated environment, you can edit code and make updates to your site. All development on your Pantheon sites starts here.
 
 ## <span class="glyphicons glyphicons-equalizer"></span> Test
 
@@ -50,11 +51,7 @@ To use the Test environment for this purpose, you first push new code “up” f
 
 ## <span class="glyphicons glyphicons-cardio"> </span> Live
 
-This environment is for your live site, where content creators actively post and upload media files.
-
-After passing review, you push your new code “up” from the Test environment to this Live environment.
-
-For more details, see [The Site Dashboard](/sites), or the condensed glossary below.
+This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. For more details, see [The Site Dashboard](/sites), or the condensed glossary below.
 
 The following links are located within your Dev, Test, and Live environment tabs:
 
@@ -68,7 +65,7 @@ The following links are located within your Dev, Test, and Live environment tabs
 
 - **Status:** Check this page on a regular basis (especially before you go live the first time) to catch common problems and follow best-practice recommendations for site configuration.
 
-- **Database / Files** Workflow tools are provided to clone your database and files between environments with the click of a button.
+- **Database / Files:** Workflow tools are provided to clone your database and files between environments with the click of a button.
 
   - **Clone:** Clone the database and/or files from one environment to another.
 
@@ -84,7 +81,7 @@ The following links are located within your Dev, Test, and Live environment tabs
 
 - **Backup:** Create a backup of the environment.
 
-  - **Backup Log:** View existing backups of the environment. Click the <Icon icon={"download-alt"} text={"download"}/> icon to download individual archives within a backup.
+  - **Backup Log:** View existing backups of the environment. Click the <Icon icon={"download-alt"} text={"Download"}/> icon to download individual archives within a backup.
 
   - **Backup Schedule:** Schedule daily or weekly automatic backups of the environment. (This feature is only available on paid plans.)
 

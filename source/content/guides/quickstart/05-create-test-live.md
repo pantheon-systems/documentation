@@ -7,6 +7,7 @@ layout: guide
 categories: [get-started]
 tags: [dashboard, iterate, launch, workflow]
 type: guide
+showtoc: true
 permalink: docs/guides/quickstart/create-test-live/
 editpath: quickstart/05-create-test-live.md
 image: launchGuide-twitterLarge
@@ -22,7 +23,7 @@ If you haven’t completed the installation of your Dev site, return to [Create 
 
 ## Create Test Environment
 
-1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Click **Initialize Test Environment** to create one.
+1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. Click **Initialize Test Environment** to create one.
 
   This takes a few moments.
 
@@ -30,8 +31,8 @@ If you haven’t completed the installation of your Dev site, return to [Create 
 
 ## Create Live Environment
 
-1. Go back to your Site Dashboard, and click the <Icon icon="cardio" text="Live"/> tab. Here you’ll have access to your Live environment, but it hasn’t been created yet. Click **Initialize Live Environment** to create the environment.
+1. Go back to your Site Dashboard, and click the <Icon icon="cardio" text="Live"/> tab. Here you’ll have access to your Live environment, though it hasn’t been created yet. Click **Initialize Live Environment** to create the environment.
 
-1. Once the environment is initialized, click **Workflows** <Icon icon="chevron-down" /> (in the header area, on the right). In the dropdown you’ll find your active workflow as well as the workflows we’ve completed to this point.
+1. Once the environment is initialized, click **Workflows** (in the header area, on the right). In the dropdown you’ll find your active workflow as well as the workflows we’ve completed to this point.
 
 Congratulations! You now have three copies of your site running in three separate environments: Dev, Test, and Live.

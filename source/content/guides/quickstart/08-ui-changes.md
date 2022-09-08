@@ -1,33 +1,34 @@
 ---
 title: Quick Start
-subtitle: On-Server Dev, Part 1
+subtitle: Make User Interface Changes
 description: In part eight of our Quick Start guide, learn make UI changes on your site.
 anchorid: ui-changes
 layout: guide
 categories: [get-started]
 tags: [dashboard, iterate, site, workflow]
 type: guide
+showtoc: true
 permalink: docs/guides/quickstart/ui-changes/
 editpath: quickstart/08-ui-changes.md
 image: launchGuide-twitterLarge
 ---
 
-Now we’re going to work directly on the server to make changes to our site.
+Now we’re going to work directly on the server to make changes to our site's user interface (UI).
 
 
 ## Make the Change in Dev
 
-1. Go to your **Site Dashboard** > <Icon icon="wrench" text="Dev"/> tab > <Icon icon="embed-close" text="Code"/>. Confirm your Connection Mode is set to **SFTP**.
+1. Go to **Site Dashboard** > **Dev** tab > **Code**. Confirm your Connection Mode is set to **SFTP**.
 
 1. Log in to your Dev site by clicking the <Icon icon="new-window-alt" text="Site Admin"/> button.
 
 1. Install a _new_ theme (i.e., do not activate/enable a theme that came pre-packaged with your site).
 
-If you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
+   If you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
 
 1. Activate/enable the new theme you just installed in Step 3. Now view your site to confirm the theme change.
 
-1. Return to your **Site Dashboard** > <Icon icon="wrench" text="Dev"/> tab. The files you just added are highlighted.
+1. Return to **Site Dashboard** > **Dev** tab. The files you just added are highlighted.
 
   <Alert title="Note" type="info">
 
@@ -47,7 +48,7 @@ If you need help with this step, see the [WordPress Codex](https://codex.wordpre
 
 ## Review the Change in Test
 
-1. Go to your **Site Dashboard** > <Icon icon="equalizer" text="Test" /> tab > <Icon icon="refresh" text="Deploys" />. As you can see, 1 commit is ready to deploy from the Dev environment.
+1. Go to your **Site Dashboard** > **Test** tab > **Deploys**. As you can see, 1 commit is ready to deploy from the Dev environment.
 
 1. Check the **Pull files and the database from the Live environment** box.
 
@@ -81,16 +82,16 @@ If you need help with this step, see the [WordPress Codex](https://codex.wordpre
 
 1. When the deployment finishes, click <Icon icon="new-window-alt" text="Site Admin"/> to go to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
 
-1. Activate/enable your theme. Again, if you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
+1. Activate/enable your theme. If you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
 
 1. Review your Test site. 
 
 ## Deploy to Live
 
-1. Does everything look correct? If yes, go back to your **Site Dashboard** > <Icon icon="cardio" text="Live"/> tab > <Icon icon="refresh" text="Deploys"/>.
+1. Does everything look correct? If yes, go to **Site Dashboard** > **Live** tab > **Deploys**.
 
 1. Add a Deploy Log Message (optional), then click **Deploy Code from Test to Live Environment**.
 
-1. Activate/enable your theme. Again, if you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
+1. Activate/enable your theme. If you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
 
-Congratulations! You just performed on-server development. You made changes on your Dev site, reviewed them on your Test site, then deployed them to Live.
+Congratulations! You just performed on-server development to make changes to your UI. You made changes on your Dev site, reviewed them on your Test site, then deployed them to Live.

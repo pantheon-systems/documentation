@@ -9,6 +9,7 @@ layout: guide
 categories: [get-started]
 tags: [dashboard, iterate, launch, webops, workflow]
 type: guide
+showtoc: true
 pagination:
   provider: data.quickstartpages
 use:
@@ -35,7 +36,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 1. Now let’s create a new Drupal article or WordPress post! If you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article. When finished, visit the front page of your site and confirm that you can see the new content.
 
-## Pull the Content Down to Dev
+## Pull the Content Down to Dev (Clone Live to Dev)
 
 1. Go back to your **Site Dashboard**, click the <Icon icon="wrench" text="Dev"/> tab, and open your Dev site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/>.
 

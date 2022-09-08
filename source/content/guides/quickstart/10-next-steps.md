@@ -29,7 +29,8 @@ But this is just the tip of the iceberg. Ready to learn more? Here are just some
 - Set up a [Local Development](/local-development) environment.
 - If you’re on a team, start using [Multidev environments](/guides/multidev).
 - Install [Terminus](/terminus), and start interacting with Pantheon from the command line.
-- Take your site live! Just follow this [Launch Essentials](/guides/launch).
+- Take your site live! To do so, see [Launch Essentials](/guides/launch).
+- Migrate your existing site using a variety of scenarios. See "Migrate Your Sites to Pantheon" on our [Get Started](/get-started) 
 
 <Callout
   title={"Are you an agency?"}

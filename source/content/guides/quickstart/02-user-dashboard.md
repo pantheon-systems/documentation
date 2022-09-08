@@ -7,6 +7,7 @@ layout: guide
 categories: [get-started]
 tags: [dashboard]
 type: guide
+showtoc: true
 quickstart: true
 generator: pagination
 permalink: docs/guides/quickstart/user-dashboard/
@@ -18,7 +19,7 @@ editpath: quickstart/02-user-dashboard.md
 image: launchGuide-twitterLarge
 ---
 
-Let's start by exploring the Personal Workspace - this is what you see after you log in.
+Let's start by exploring the Personal Workspace , which is what you see after you log in.
 
 ## Home Page
 
@@ -37,9 +38,9 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
-  - **Create New Site** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
+  - **Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
 
-  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, see [Migrate Your Sites to Pantheon on our Get Started](/get-started) page.
+  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, see "Migrate Your Sites to Pantheon" on our [Get Started](/get-started) page.
 
 - **Team:** If you belong to an organization, you’ll see it listed here. Click it to link to the organization's dashboard.
 
@@ -49,11 +50,11 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Custom Upstreams:** Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
-- **Settings:** Use the **Settings** tab to modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
+- **Settings:** Modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
 
 ## Account Settings
 
-Click your user icon in the upper right corner to update and manage your personal account information. Use these options in the left-hand navigation menu:
+Click your user icon in the upper right corner to update and manage your personal account information. 
 
   - **Profile:** Update your user profile information, or connect your Google account to Pantheon.
 
@@ -63,7 +64,7 @@ Click your user icon in the upper right corner to update and manage your persona
 
   - **SSH Keys:** Add and manage your SSH keys.
 
-  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus) or the [Pantheon Migration plugin](/guides/guided/.
+  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus).
 
   - **Preferences:** To use the old dashboard, flip the toggle to **Off**.
 
@@ -74,4 +75,3 @@ Click your user icon in the upper right corner to update and manage your persona
 
 </Alert>
 
-You should now be familiar with the Pantheon User Dashboard. When you’re ready, you may continue to the next lesson.
