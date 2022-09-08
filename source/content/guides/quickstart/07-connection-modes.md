@@ -45,10 +45,10 @@ Code changes made in SFTP Connection Mode are still committed into a Git reposit
 
 <Alert title="Note"  type="info" >
 
-    It’s common to switch back and forth between SFTP and Git Connection Mode,
-    depending on the task. For example, WordPress and Drupal Core updates are
-    managed by Pantheon, and they must be applied in Git Connection Mode.
-    Plugin/module updates made in the UI must be applied in SFTP Connection
-    Mode.
+It’s common to switch back and forth between SFTP and Git Connection Mode,
+depending on the task. For example, WordPress and Drupal Core updates are
+managed by Pantheon, and they must be applied in Git Connection Mode.
+Plugin/module updates made in the UI must be applied in SFTP Connection
+Mode.
 
 </Alert>
