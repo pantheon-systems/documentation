@@ -38,27 +38,19 @@ When running `composer install` on a local clone of your Pantheon site's reposit
 1. Run `composer install`:
 
    ```bash{promptUser: user}
-    composer install
+   composer install
    ```
 
 1. Add a new dependency locally:
 
    ```bash{promptUser: user}
-    composer require drupal/pkg-name
+   composer require drupal/pkg-name
    ```
 
 1. Commit `composer.json` and `composer.lock` and push the changes.
 
    ```bash{promptUser: user}
-    git add composer.json composer.lock
-   ```
-
-   ```bash{promptUser: user}
-    git commit -m "added composer.json and composer.lock"
-   ```
-
-   ```bash{promptUser: user}
-    git push
+   git add composer.json composer.lock && git commit -m "added composer.json and composer.lock" && git push
    ```
 
    - Pantheon will run Composer, build artifacts, and deploy the changes to your Dev or Multidev environment. You can now deploy the changes from the updated Dev environment to the Test and Live environments.
@@ -73,14 +65,14 @@ You can remove site dependencies if they are no longer needed. You should use ca
 
 1. Ensure that all modules in the package have been uninstalled. You can uninstall modules in the Drupal admin dashboard, or from the command line with Terminus:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus drush site.live -- pm:uninstall module1 module2
    ```
 
 1. Remove the dependency locally:
 
    ```bash{promptUser: user}
-    composer remove drupal/pkg-name
+   composer remove drupal/pkg-name
    ```
 
 1. Commit `composer.json` and `composer.lock` and push the changes.
