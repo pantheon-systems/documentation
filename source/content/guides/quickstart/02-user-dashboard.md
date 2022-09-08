@@ -1,7 +1,7 @@
 ---
 title: Quick Start
 subtitle: Personal Workspace
-description: In part two of our Quick Start guide, learn about the Pantheon Personal Workspace
+description: In part two of our Quick Start guide, learn about the Pantheon Personal Workspace.
 anchorid: user-dashboard
 layout: guide
 categories: [get-started]
@@ -38,14 +38,14 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
-  - **Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
+  - **Create New Site:** Start the process of creating a new site on Pantheon. New sites will appear under the Sites tab.
 
-  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, see "Migrate Your Sites to Pantheon" on our [Get Started](/get-started) page.
+  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, refer to [Migrate Sites to Pantheon](/guides/guided/) on our [Get Started](/get-started) page.
 
-- **Team:** If you belong to an organization, you’ll see it listed here. Click it to link to the organization's dashboard.
+- **Team:** If you belong to an organization, you’ll see it listed here. Click the organization name view the organization's dashboard.
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
-  
+
 - **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
 - **Custom Upstreams:** Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
@@ -66,7 +66,7 @@ Click your user icon in the upper right corner to update and manage your persona
 
   - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus).
 
-  - **Preferences:** To use the old dashboard, flip the toggle to **Off**.
+  - **Preferences:** Flip the toggle to **Off** to use the old dashboard. 
 
 
 <Alert title="Note" type="info" >
@@ -74,4 +74,3 @@ Click your user icon in the upper right corner to update and manage your persona
 <Partial file="dashboard-login-session-length.md" />
 
 </Alert>
-

@@ -24,13 +24,13 @@ getfeedbackform: default
 
 Congratulations! You created and made code changes to your Pantheon site. You should now feel comfortable with the best-practice development workflow that serves as the foundation of our platform.
 
-But this is just the tip of the iceberg. Ready to learn more? Here are just some of the things you can do with Pantheon:
+Ready to learn more? Here are just some of the things you can do with Pantheon:
 
 - Set up a [Local Development](/local-development) environment.
 - If you’re on a team, start using [Multidev environments](/guides/multidev).
 - Install [Terminus](/terminus), and start interacting with Pantheon from the command line.
-- Take your site live! To do so, see [Launch Essentials](/guides/launch).
-- Migrate your existing site using a variety of scenarios. See "Migrate Your Sites to Pantheon" on our [Get Started](/get-started) 
+- Take your site live! To do so, refer to [Launch Essentials](/guides/launch).
+- Migrate your existing site using a variety of scenarios. Refer to [Migrate Sites to Pantheon](/guides/guided/) on our [Get Started](/get-started) page.
 
 <Callout
   title={"Are you an agency?"}

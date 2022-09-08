@@ -23,7 +23,7 @@ To create your site:
 
    <Alert title="Note" type="info">
 
-   If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Go to your Personal Workspace by selecting your name in the menu bar, then **Personal Workspace**.
+   If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Go to your Personal Workspace by selecting your name in the menu bar, then select **Personal Workspace**.
 
    </Alert>
 
@@ -37,13 +37,11 @@ To create your site:
 
    </Alert>
 
-1. 
-
 1. Enter the name for this site, and if you're part of an agency, associate this site with your organization.
 
    It can take several minutes to create a new site on Pantheon. This is because of all the processes running behind the scenes. Our platform first creates fresh containers, just for your site. We then install PHP, NginX, and MariaDB. Finally we pull the latest version of your content management system (CMS) from either our upstream repository or your Private Upstream.
 
-1. When the process is complete, click **Visit your Pantheon Site Dashboard**.  Your **Site Dashboard** looks like this:
+1. Click **Visit your Pantheon Site Dashboard** when the process is complete. Your **Site Dashboard** looks like this:
 
      ![Site Dashboard in the Dev tab shows the Visit Development Site button](../../../images/dashboard/site-dashboard-dev.png)
 
@@ -55,4 +53,4 @@ To create your site:
 
    </Alert>
 
-Congratulations! You just installed a new site on Pantheon. 
+Congratulations! You just installed a new site on Pantheon.

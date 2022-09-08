@@ -34,13 +34,13 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
       created when you installed your Dev site for the first time.
     </Alert>
 
-1. Now let’s create a new Drupal article or WordPress post! If you need help with this step, see the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article. When finished, visit the front page of your site and confirm that you can see the new content.
+1. Create a new Drupal article or WordPress post. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article. When finished, visit the front page of your site and confirm that you can see the new content.
 
 ## Pull the Content Down to Dev (Clone Live to Dev)
 
 1. Go back to your **Site Dashboard**, click the <Icon icon="wrench" text="Dev"/> tab, and open your Dev site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/>.
 
-    Notice that the content you just created on your Live site doesn’t appear here on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
+    Notice that the content you just created on your Live site doesn’t appear on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
 
     It’s important to develop on a recent copy of your site with the newest content, so let’s clone your Live site—with its new content—to your Dev environment.
 
@@ -55,9 +55,9 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
     </Accordion>
 
-1. On the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, click <Icon icon="server" text="Database / Files"/>.
+1. Navigate to your Site Dashboard, select the <Icon icon="wrench" text="Dev"/> tab, and then click <Icon icon="server" text="Database / Files"/>.
 
-1. To clone the database and files from the Live site, select **Live** from the **From this Environment** list.
+1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site. 
 
     <Alert type="danger" title="Warning">
 
@@ -69,6 +69,6 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 1. Click **Clone the Database & files from Live into the Development Environment**.
 
-1. When this is complete, click <Icon icon="new-window-alt" text="Visit Development Site"/> to confirm that the content you created on your Live site now appears on your Dev site.
+1. Click <Icon icon="new-window-alt" text="Visit Development Site"/> when this is complete to confirm that the content you created on your Live site now appears on your Dev site.
 
 Nice work! You added a page to your Live site, then cloned this environment "down" to Dev. Your Dev environment is a safe place for editing code, and now it's up-to-date with your latest content.

@@ -29,14 +29,13 @@ On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you 
 
 ![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
 
-To select your connection mode, go to your **Site Dashboard** > <Icon icon={"wrench"} text={"Dev"}/> tab > <Icon icon={"embed-close"} text={"Code"}/>.
-
+Navigate to your **Site Dashboard**, select the  <Icon icon={"wrench"} text={"Dev"}/>, and then select <Icon icon={"embed-close"} text={"Code"}/>.
 
 ## Git Connection Mode
 
 You can develop locally with Git Connection Mode. Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who prefers local development, it's an efficient way to interact with our platform: develop locally, commit, and push code to your Dev environment.
 
-For more information, see [Local Development](/local-development) and [Git on Pantheon](/guides/git).
+For more information, refer to [Local Development](/local-development) and [Git on Pantheon](/guides/git).
 
 ## SFTP Connection Mode
 
@@ -45,6 +44,7 @@ You can develop directly on our servers with SFTP Connection Mode. It’s partic
 Code changes made in SFTP Connection Mode are still committed into a Git repository. This makes working with other developers easy and ensures _all_ changes are tracked in version control. Whether you’re a novice or seasoned developer, our SFTP Connection Mode is handy and safe to use.
 
 <Alert title={"Note"} type={"info"}>
+
     It’s common to switch back and forth between SFTP and Git Connection Mode,
     depending on the task. For example, WordPress and Drupal Core updates are
     managed by Pantheon, and they must be applied in Git Connection Mode.

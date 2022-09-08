@@ -33,7 +33,7 @@ Agencies have access to additional development environments under the <Icon icon
 
 </Alert>
 
-If you aren’t already on a Site Dashboard, go to **Personal Workspace** > **Sites** tab, and select the site you want to work with.
+If you aren’t already on a Site Dashboard, go to **Personal Workspace**, select the **Sites** tab, and then select the site you want to work with.
 
 ## <span class="glyphicons glyphicons-wrench"></span> Dev
 
@@ -51,13 +51,13 @@ To use the Test environment for this purpose, you first push new code “up” f
 
 ## <span class="glyphicons glyphicons-cardio"> </span> Live
 
-This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. For more details, see [The Site Dashboard](/sites), or the condensed glossary below.
+This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. For more details, refer to [The Site Dashboard](/sites), or the condensed glossary below.
 
 The following links are located within your Dev, Test, and Live environment tabs:
 
 - **Code:** Switch between SFTP Connection Mode and Git Connection Mode. Obtain SFTP Connection Info, and commit changes to your Dev environment. (This link is only accessible within your Dev environment.)
 
-- **Commit Log:** See a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
+- **Commit Log:** Review a list of all code changes by viewing the commits. Click an individual commit to see the log message and list of changes.
 
 - **Deploys:** View a deploy log for the environment. (This link is only accessible within your Test and Live environments.)
 
@@ -88,4 +88,3 @@ The following links are located within your Dev, Test, and Live environment tabs
 - **Security:** Set a password for accessing this environment.
 
 - **New Relic:** Use this server-side performance monitoring tool to identify bottlenecks and optimize your site.
-
