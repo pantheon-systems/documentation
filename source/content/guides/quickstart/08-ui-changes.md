@@ -2,7 +2,7 @@
 title: Quick Start
 subtitle: On-Server Dev, Part 1
 description: In part eight of our Quick Start guide, learn make UI changes on your site.
-anchorid: onserver-dev-part1
+anchorid: ui-changes
 layout: guide
 categories: [get-started]
 tags: [dashboard, iterate, site, workflow]

@@ -3,7 +3,7 @@ title: Quick Start
 subtitle: Make Code Changes
 description: Learn how to make code changes using SFTP
 quickstart: true
-anchorid: onserver-dev-part2
+anchorid: code-changes
 generator: pagination
 layout: guide
 categories: [get-started]
@@ -28,7 +28,7 @@ Finally, we’re going to edit code directly. We’ll commit our edits to <Icon 
   To perform this task, you need a basic understanding of CSS, and have an SFTP client installed.
 </Alert>
 
-If you haven’t added a new theme to your site, return to the [previous lesson](/guides/quickstart/onserver-dev-part1) and do so.
+If you haven’t added a new theme to your site, return to the [previous lesson](/guides/quickstart/ui-changes) and do so.
 
 1.  Go to your **Site Dashboard** > > <Icon icon={"wrench"} text={"Dev"}/> tab > <Icon icon={"embed-close"} text={"Code"}/>. Confirm your Connection Mode is set to **SFTP**.
 
