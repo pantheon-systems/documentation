@@ -77,9 +77,9 @@ If you receive a `The application did not respond in time` error when trying to 
 
 Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/guides/custom-upstream).
 
-## See Also
+## More Resources
 
-- [Platform Considerations](/guides/platform-considerations)
-- [Errors and Server Responses](/errors-and-server-responses)
+- [Platform Considerations](/platform-considerations)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
 - [Modules and Plugins With Known Issues](/modules-plugins-known-issues)
 - [Database Connection Errors](/database-connection-errors)
