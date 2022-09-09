@@ -52,7 +52,6 @@ Even the most reliable web services occasionally experience slowness. Your site 
        curl_setopt( $handle, CURLOPT_TIMEOUT, 10 );
    }
    ```
-   ```
 
 Evaluate the code making the call and the service provider if you encounter frequent problems with external web services.
 

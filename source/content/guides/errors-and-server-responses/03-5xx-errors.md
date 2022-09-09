@@ -65,7 +65,7 @@ You can reduce the number of set-cookie headers in the response to resolve this 
 
 > The web site you were looking for is currently undergoing maintenance.
 
-This is  **not**  a web application (WordPress or Drupal) maintenance mode error. This is a manually toggled emergency message reserved for unusual circumstances when a site is known to be unavailable.
+This is **not** a web application (WordPress or Drupal) maintenance mode error. This is a manually toggled emergency message reserved for unusual circumstances when a site is known to be unavailable.
 
 ### Pantheon 503 Database not Responding
 
