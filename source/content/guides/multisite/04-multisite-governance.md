@@ -1,7 +1,7 @@
 ---
 title: WordPress Site Networks
 subtitle: Multisite Governance
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Learn more about governance with WordPress Site Networks.
 layout: guide
 type: guide
 cms: "WordPress"
@@ -11,6 +11,8 @@ permalink: docs/guides/multisite/multisite-governance/
 editpath: multisite/04-multisite-governance.md
 image: multisite
 ---
+
+This section provides information on Multisite governance on Pantheon.
 
 ## Multisite on Pantheon
 
@@ -81,3 +83,9 @@ A multisite setup can be more efficient for teams as long as roles and responsib
 - Manages content and plugin settings for an individual multisite
 
 ![Multisite Governance Example](../../../images/multisite-governance-example2.png)
+
+## More Resources
+
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
+
+- [Working in the WordPress Dashboard](/cms-admin#wordpress-dashboard)
