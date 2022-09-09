@@ -16,9 +16,9 @@ This section provides information on how to add a custom domain to the Pantheon 
 
 ## Custom Domains
 
-Pantheon provides the values for your DNS records that are assigned with your DNS service provider when adding a [custom domain](/guides/domains) to your site:
+Pantheon provides the values for your DNS records that are assigned with your DNS service provider when adding a custom domain to your site:
 
-![DNS Recommendations](../images/dashboard/domain-added.png)
+![DNS Recommendations](../../../images/dashboard/domain-added.png)
 
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 
