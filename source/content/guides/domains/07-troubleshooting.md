@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains
+title: Domains on Pantheon
 subtitle: Troubleshoot Domains
 description: Review common troubleshooting scenarios for domains.
 categories: [develop]
@@ -55,3 +55,11 @@ Configure your DNS to accept an entirely lowercase domain to avoid this issue.
 You can modify your local `hosts` file to validate domain-specific settings before DNS is in place.
 
 <Partial file="_hosts-file.md" />
+
+## More Resources
+
+- [Modules and Plugins with Known Issues](https://pantheon.io/docs/modules-plugins-known-issues)
+
+- [Debug Caching Issues](/debug-cache)
+
+- [Modify the Local Hosts File](/hosts-file)

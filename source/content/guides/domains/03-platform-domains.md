@@ -18,10 +18,10 @@ This section provides information Pantheon platform domains.
 
 Pantheon issues platform domains for all environments. Each environment (Dev, Test, Live, and each Multidev) is accessible via the platform domain, and matches the following patterns:
 
-- dev-site-name.pantheonsite.io
-- test-site-name.pantheonsite.io
-- live-site-name.pantheonsite.io
-- multidev-env-site-name.pantheonsite.io
+- `dev-site-name.pantheonsite.io`
+- `test-site-name.pantheonsite.io`
+- `live-site-name.pantheonsite.io`
+- `multidev-env-site-name.pantheonsite.io`
 
 All platform domains are available over HTTPS. Redirecting to HTTPS during development and testing is a recommended best practice to ensure you are ready to go live with HTTPS. Refer to [Redirect to HTTPS](/guides/redirect/#redirect-to-https) for more information.
 

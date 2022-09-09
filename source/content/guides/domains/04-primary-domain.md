@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains
+title: Domains on Pantheon
 subtitle: Primary Domains
 description: Learn more about choosing your primary domain.
 categories: [go-live]
@@ -48,4 +48,8 @@ If your site configuration prevents you from setting the primary domain from the
 
 </Accordion>
 
-Refer to [Configure Redirects](/guides/redirect) for more redirect scenarios.
+## More Resources
+
+- [Configure Redirects](/guides/redirect)
+
+- [Redirect to HTTPS](/guides/redirect/https/)

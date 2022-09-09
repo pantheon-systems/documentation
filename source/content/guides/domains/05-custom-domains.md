@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains
+title: Domains on Pantheon
 subtitle: Custom Domains
 description: Learn how to add a custom domain.
 categories: [go-live]
@@ -46,9 +46,9 @@ Note that each custom domain is counted regardless of the environment to which i
 
 1. Log in as an [Admin, Team Member, or Privileged User](/change-management#roles-and-permissions).
 
-1. From the Site Dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
+1. Navigate to the Site Dashboard for the environment you want the domain to point to (usually Live), and then click the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
-1. If no domains have been added yet, enter a domain and click **Connect Domain**:
+1. Enter a domain and click **Connect Domain**:
 
   ![Adding a first domain to the Site Dashboard](../../../images/dashboard/add-first-domain.png)
 
@@ -56,7 +56,11 @@ Note that each custom domain is counted regardless of the environment to which i
 
   ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/add-additional-domains.png)
 
-1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**:
+1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. 
+
+1. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
+
+1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**:
 
   ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/verify-domain-ownership.png)
 
@@ -66,7 +70,7 @@ Note that each custom domain is counted regardless of the environment to which i
     - The TXT record's Host value doesn't have a trailing `.`.
     - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
 
-1. After you add your domain, you'll be automatically taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
+    You'll automatically be taken to the domain's **Details** page where you will see both the current DNS records detected (the **Detected Values**), as well as the values to be added at your DNS host (**Required Values**):
 
    ![Custom domain Details page](../../../images/dashboard/details-page.png)
 
@@ -76,6 +80,12 @@ Note that each custom domain is counted regardless of the environment to which i
 
   Wait a minute, then refresh the page.
 
-1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/guides/domains/dns).
+1. Add the values to your DNS management service. Refer to [Introduction to Domain Name Services](/guides/domains/dns) for more details.
 
    - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
+
+## More Resources
+
+- [DNS](/guides/domains/dns)
+
+- [Redirect to HTTPS](/guides/redirect/https/)

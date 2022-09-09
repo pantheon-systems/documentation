@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains
+title: Domains on Pantheon
 subtitle: Domain Name System
 description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
 use: [docs_tags]
@@ -79,19 +79,19 @@ The service that publishes your domain's DNS records
 | `TXT`    | These are generic records, used by many services for different things. |
 | `NS`     | Specifies where the authoritative name servers for this domain are. |
 
-## DNS propagation
+## DNS Propagation
 
 Every DNS record has a **Time To Live** (**TTL**) value, which specifies how long any DNS server should hold that record, before dropping it and asking for a new version from its upstream DNS provider. TTLs are usually set in seconds with a few common ones being `86400` (24 hours),  `43200` (12 hours), `3600` (1 hour), and `500` (5 minutes).
 
 **DNS Propagation** is the time it takes for changes made to DNS records to be reflected across DNS servers globally. A lower TTL value means faster propagation, but it's important to note that it is not a 1:1 ratio. Between your [authoritative name server](#where-are-my-dns-records-hosted) and the DNS servers of any particular ISP could be any number of intermediate DNS servers. Each server in that chain will wait for the records it holds to expire before requesting new ones. Because of this, it can take *several times longer* than your record's TTL value to see changes reflected for everyone.
 
-### DNS Migration Prep
+### DNS Migration Preparation
 
-When you're planning a site migration, follow these simple steps to help minimize DNS-related downtime:
+Follow these simple steps to help minimize DNS-related downtime when you're planning a site migration:
 
 1. Lower the TTL values as low as allowed (usually `500`) several days in advance at your DNS service manager. That way when the values are changed, new records are propagated faster.
 
-2. Use `dig` to confirm the new TTL values have propagated to your ISP's DNS servers:
+1. Use `dig` to confirm the new TTL values have propagated to your ISP's DNS servers:
 
     ```bash{outputLines:2}
     dig +nocmd +noall +answer pantheon.io
@@ -100,7 +100,7 @@ When you're planning a site migration, follow these simple steps to help minimiz
 
     In the example above, the TTL of the A record for`pantheon.io` is 60 seconds.
 
-3. Once the migration is complete, raise the TTL values back to `3600` (24 hours) to improve stability in case of a DNS service outage.
+1. Raise the TTL values back to `3600` (24 hours) after the migration is complete to improve stability in case of a DNS service outage.
 
 ## Frequently Asked Questions
 

@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains
+title: Domains on Pantheon
 subtitle: Introduction
 description: Learn more about platform, custom, and vanity domains on Pantheon.
 categories: [go-live]

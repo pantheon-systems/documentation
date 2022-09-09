@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains
+title: Domains on Pantheon
 subtitle: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
 categories: [develop]
@@ -25,7 +25,9 @@ If a subdomain of your primary site is configured, a newly created site named "s
 
 ## Request the Vanity Domain
 
-From your Organization Dashboard, go to Dashboard and [open a support ticket](/guides/support/contact-support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
+1. Navigate to your Organization Dashboard, and select the Dashboard to [open a support ticket](/guides/support/contact-support) with "Request for custom Vanity domain" as the subject. 
+
+1. Provide the Vanity domain required on the site, such as `sites.example.com`.
 
 <Alert title="Note" type="info">
 
@@ -49,7 +51,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Usin
 >
 > `*.sites.example.com` **AAAA** `2620:12a:8001::X`
 
-See [Introduction to Domain Name Services](/guides/domains/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
+Refer [Introduction to Domain Name Services](/guides/domains/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
 <Alert type="info" title="Note">
 
@@ -85,7 +87,7 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 ## Security Considerations
 
-If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.com`), you should be aware of some security considerations:
+If you run sites on subdomains of your primary site (for example, `sites.awesomeagency.com`), you should be aware of some security considerations:
 
 <Partial file="vanity-https.md" />
 
@@ -95,7 +97,7 @@ If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.c
 
 ## Robots.txt with Custom Vanity Domains
 
-For SEO and to prevent duplicate content, the `robots.txt` file attached to the custom vanity domain will contain the following by default:
+The `robots.txt` file attached to the custom vanity domain will contain the following by default for SEO and to prevent duplicate content:
 
 ```http:title=robots.txt
 # https://live-sitename.agencyname.com/robots.txt
@@ -103,4 +105,10 @@ User-agent: *
 Disallow: /
 ```
 
-To present an alternate `robots.txt` file from within the source code, [add a custom domain](/guides/launch/domains) to the site's Dashboard and create the appropriate DNS record.
+You can [add a custom domain](/guides/launch/domains) to the site's Dashboard and create the appropriate DNS record to present an alternate `robots.txt` file from within the source code.
+
+## More Resources
+
+- [DNS](/guides/domains/dns)
+
+- [Bots and Indexing on Pantheon](/bots-and-indexing)
