@@ -16,6 +16,10 @@ This section provides information on how to add a custom domain to the Pantheon 
 
 ## Custom Domains
 
+Pantheon provides the values for your DNS records that are assigned with your DNS service provider when adding a [custom domain](/guides/domains) to your site:
+
+![DNS Recommendations](../images/dashboard/domain-added.png)
+
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
@@ -72,6 +76,6 @@ Note that each custom domain is counted regardless of the environment to which i
 
   Wait a minute, then refresh the page.
 
-1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns).
+1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/guides/domains/dns).
 
    - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.

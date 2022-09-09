@@ -1,17 +1,18 @@
 ---
-title: Introduction to the Domain Name System
+title: Platform and Custom Domains
+subtitle: Domain Name System
 description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
 use: [docs_tags]
 categories: [go-live]
 tags: [dns]
 contributors: [alexfornuto]
+layout: guide
+showtoc: true
+permalink: docs/guides/domains/dns
+anchorid: dns
 ---
 
-**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/guides/domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
-
-![DNS Recommendations](../images/dashboard/domain-added.png)
-
-While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.
+Pantheon does not offer DNS management services. However, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.
 
 ## DNS Provider Instructions
 
@@ -175,7 +176,7 @@ An `A` record points a domain name to an IPv4 address. A `CNAME` record points a
 
 Pantheon provides `A` and `AAAA` values:
 
-![DNS Values provided by the Pantheon Site Dashboard](../images/dashboard/dns-values.png)
+![DNS Values provided by the Pantheon Site Dashboard](../../../images/dashboard/dns-values.png)
 
 <Accordion title="Learn More" id="example-panel" icon="education">
 
@@ -199,8 +200,8 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
 <Partial file="_hosts-file.md" />
 
-## See Also
+## More Resources
 
- - [Launch Essentials](/guides/launch)
- - [Platform and Custom Domains](/guides/domains)
- - [Configure Redirects](/guides/redirect)
+- [Launch Essentials](/guides/launch)
+- [Platform and Custom Domains](/guides/domains)
+- [Configure Redirects](/guides/redirect)

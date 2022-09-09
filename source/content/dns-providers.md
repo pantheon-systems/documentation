@@ -20,5 +20,5 @@ If your DNS provider is not on the list below, consult the [Configure DNS](/guid
 
 ## See Also
 
-- [DNS](/dns)
+- [DNS](/guides/domains/dns)
 - [Platform and Custom Domains](/guides/domains)

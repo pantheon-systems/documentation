@@ -56,7 +56,7 @@ You can run diagnostics at [Let's Debug](https://letsdebug.net/) if you are havi
   
 </Accordion>
 
-Click [here](/dns/#frequently-asked-questions) to learn more about DNS settings.
+Click [here](/guides/domains/dns/#frequently-asked-questions) to learn more about DNS settings.
 
 <Partial file="enable-https.md" />
 

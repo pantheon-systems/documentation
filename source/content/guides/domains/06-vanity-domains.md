@@ -49,7 +49,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Usin
 >
 > `*.sites.example.com` **AAAA** `2620:12a:8001::X`
 
-See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
+See [Introduction to Domain Name Services](/guides/domains/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
 <Alert type="info" title="Note">
 

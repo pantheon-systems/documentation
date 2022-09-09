@@ -40,7 +40,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
     - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
 
-1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/dns) provider. If you see:
+1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/guides/domains/dns) provider. If you see:
 
   > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
 

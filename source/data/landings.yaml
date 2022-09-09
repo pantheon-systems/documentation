@@ -443,7 +443,7 @@
         - title: 'Configure DNS'
           links:
             - text: 'Introduction to the Domain Name System'
-              url: '/dns'
+              url: '/guides/domains/dns'
             - text: 'Platform and Custom Domains'
               url: '/guides/domains'
             - text: 'Modify the Local Hosts File'
