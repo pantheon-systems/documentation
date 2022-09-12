@@ -493,7 +493,7 @@
         - text: 'Email on Pantheon'
           url: '/email'
         - text: 'Errors and Server Responses'
-          url: '/errors-and-server-responses'
+          url: '/guides/errors-and-server-responses'
         - text: 'External Libraries on Pantheon'
           url: '/external-libraries'
         - text: 'Frequently Asked Questions'

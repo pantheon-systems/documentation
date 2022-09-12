@@ -207,11 +207,10 @@ After enabling Redis, there are cache tables in the database that are no longer 
    terminus connection:set $SITE.dev git
    terminus redis:enable $SITE
    composer require drupal/redis
-   git commit --am "Add drupal/redis dependency"
-   git push origin master
+   git add . && git commit -m "Add drupal/redis dependency" && git push origin master
    ```
 
-1. Enable the new Redis module and export configuration: 
+1. Enable the new Redis module and export configuration:
 
    ```shell{promptUser: user}
    terminus connection:set $SITE.dev sftp
@@ -361,7 +360,7 @@ Run the following code to access your Hit/Miss ratio:
 
 ### Continuous Stats Mode
 
-Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients. 
+Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients.
 
 Run the command below in your local terminal to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
 
@@ -379,11 +378,11 @@ keys       mem      clients blocked requests            connections
 508        3.40M    51      0       497038 (+88396)     257
 ```
 
-You can also use the `i` (interval) option in this mode to change the frequency at which new lines are printed. 
+You can also use the `i` (interval) option in this mode to change the frequency at which new lines are printed.
 
 ### Big Keys Mode
 
-Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset. 
+Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset.
 
 Run the command below in your local terminal to access stat mode. Substitute `<redis-cli connection info>` with your Redis connection string.
 
@@ -417,6 +416,12 @@ Biggest   hash found 'myobject' has 3 fields
 
 ## Troubleshooting
 
+### Redis Busy Error for Drupal Users
+
+Redis busy errors are caused by large amounts of cached data. Setting the Minimum cache lifetime prevents `flushVolatile` from being called, which only happens when cron runs, and results in the Redis busy error. Drupal instructs Redis to dump cached items that are `CACHE_TEMPORARY` (versus `PERM` or a specified time) when cron runs, which causes the busy error on large cache sets. Review [Drupal's documentation](https://www.drupal.org/project/redis/issues/2538902) for more information.
+
+Refer to the [Minimum Cache Lifetime](https://pantheon.io/docs/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](https://pantheon.io/docs/drupal-cache) documentation for more information about this setting.
+
 ### Cannot Activate the Redis Plugin for WordPress
 
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
@@ -430,7 +435,6 @@ RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bi
 ```
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
-
 
 ### No Keys Found
 
@@ -512,9 +516,9 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 ### Out of Memory Errors
 
-You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an [eviction policy](https://docs.redis.com/latest/rs/concepts/memory-performance/#eviction-policies). Without an eviction policy, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit. 
+You can use the `info memory` option to view your site's memory metrics. Object Cache will always use more memory than declared in `maxmemory`. Out of Memory errors can be avoided by configuring a max memory limit **and** an [eviction policy](https://docs.redis.com/latest/rs/concepts/memory-performance/#eviction-policies). Without an eviction policy, the server will not evict any keys, which prevents any writes until memory is freed. With an eviction policy in place, the server will evict keys when memory usage reaches the `maxmemory` limit.
 
-Run the following command to access your site's memory usage metrics: 
+Run the following command to access your site's memory usage metrics:
 
   ```bash
     redis> info memory

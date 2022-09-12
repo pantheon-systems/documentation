@@ -94,7 +94,7 @@ If you experience any issues, like missing static assets, a [backup](/guides/env
 
 ## Maintenance Mode
 
-Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
+Pantheon may send a [generic Maintenance Mode message](/guides/errors-and-server-responses) during platform problems; this message cannot be customized.
 
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 

@@ -1,8 +1,7 @@
 ---
 title: WordPress Site Networks
 subtitle: Considerations
-description: Overview of WordPress multisite support on the Pantheon Platform.
-anchorid: considerations
+description: Review important WordPress Site Networks considerations.
 layout: guide
 type: guide
 cms: "WordPress"
@@ -30,14 +29,14 @@ Before you start using WordPress Site Networks, keep these key details in mind:
 * [Users are shared](#users-are-shared).
 * [Themes and plugins are shared](#themes-and-plugins-are-shared).
 
-Let's review each point in depth.
+This section provides important information to review if you are considering a WordPress Site Network.
 
 ## The Decision is Permanent
 
 The choice between running classic single-site WordPress or a WordPress Site Network is permanent. Once you perform the initial configuration (which is relatively straightforward to do), it's technically challenging to switch back to single-site, and not supported on Pantheon.
 
 ## Choose Between Subdirectories and Subdomains
-When configuring a WordPress Site Network, you'll need to choose between using subdirectories or subdomains.
+You must choose between using subdirectories or subdomains when configuring a WordPress Site Network. 
 
 Given two new sites with slugs <Popover title="Slugs" content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
@@ -65,3 +64,9 @@ Note the difference between enabling and activating. Themes can be enabled for a
 Super users can also choose to activate plugins across the entire network; however, site administrators cannot override that activation. Plugins active across the entire network are stored within the `wp-content/plugins` and/or `wp-content/mu-plugins` directories and are **not** displayed within an individual site's plugins list. For more details, see [Multisite Network Administration: Plugins (WordPress Codex)](https://codex.wordpress.org/Multisite_Network_Administration#Plugins).
 
 Now that you understand all of the important aspects to running a Site Network, the next section will take you through the full process of configuring one.
+
+## More Resources
+
+- [WordPress Known Issues](/wordpress-known-issues)
+
+- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)

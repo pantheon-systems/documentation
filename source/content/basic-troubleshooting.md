@@ -151,7 +151,7 @@ $config['system.logging']['error_level'] = 'verbose';
 
 ## Additional Resources
 
-- [Errors and Server Responses](/errors-and-server-responses)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
 - [PHP Errors and Exceptions](/guides/php/php-errors)
 - [Database Connection Errors](/database-connection-errors)
 - [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)

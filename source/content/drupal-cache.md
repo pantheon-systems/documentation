@@ -61,7 +61,9 @@ Unless needed for development, you should always enable "Cache pages for anonym
 
 ![Drupal 7 minimum cache lifetime](../images/d7-min-cache-lifetime.png)
 
-Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
+Minimum caching lifetime forces cached content to continue to exist before it can be flushed. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
+
+Redis busy errors are caused by large amounts of cached data. Setting the Minimum cache lifetime prevents `flushVolatile` from being called, which only happens when cron runs, and results in the Redis busy error. Drupal instructs Redis to dump cached items that are `CACHE_TEMPORARY` (versus `PERM` or a specified time) when cron runs, which causes the busy error on large cache sets. Review [Drupal's documentation](https://www.drupal.org/project/redis/issues/2538902) for more information.
 
 ### Expiration of Cached Pages
  ![Drupal 7 expiration of cached pages](../images/exp-cached-pages.png)<br />
