@@ -15,7 +15,7 @@ This section provides information on how to use database credentials for Object 
 
 You should never copy and paste credentials from your Dashboard into any of your site's code.
 
-Database credentials, [Object Cache](/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
+Database credentials, [Object Cache](/guides/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
 ```php
 <?php var_dump($_ENV); ?>
@@ -54,7 +54,7 @@ extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, in Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/guides/object-cache/enable-object-cache) in `settings.php`. For example, in Drupal 7:
 
 ```php
 // All Pantheon Environments.
@@ -64,7 +64,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
   // All $conf variables and Redis configuration go after extract()
 
-  // If using Redis add appropriate settings per /docs/object-cache/
+  // If using Redis add appropriate settings per /docs/guides/object-cache/
 
   // Add other $conf variables, for example for Fast 404 pages
 

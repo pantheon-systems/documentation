@@ -21,7 +21,7 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 - Drupal Module: [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 - WordPress Plugin: [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 - Blog post: [Caching: Advanced Topics](/caching-advanced-topics)
-- Doc: [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
+- Doc: [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
 - Doc: [New Relic&reg; Performance Monitoring](/guides/new-relic)
 - Blog post: [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 - Blog post: [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)

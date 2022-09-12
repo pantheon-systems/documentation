@@ -82,4 +82,4 @@ public function clean_term_cache( $term_ids, $taxonomy )
 
 - [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
-- [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
+- [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
