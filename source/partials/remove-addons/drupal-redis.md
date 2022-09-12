@@ -6,4 +6,4 @@
 
 1. Navigate to <span class="glyphicons glyphicons-cogwheel"></span> Settings > **Add Ons** and click **Remove** for Redis.
 
-1. From the Site Dashboard, click <span class="glyphicons glyphicons-cleaning"></span>.
+1. From the Site Dashboard, click <span class="glyphicons glyphicons-cleaning"></span> Clear Caches.
