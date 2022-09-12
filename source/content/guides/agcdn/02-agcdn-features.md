@@ -65,6 +65,8 @@ Sending location information to your application is much faster than fetching it
 
 Edge Logs show every request to your website and records cached and uncached content. Server logs can only record requests that couldn't be fulfilled from a CDN's cache. Full CDN Edge Logs replace these with logs to provide a complete picture of your traffic.
 
+You must have your own server to offload complete CDN Edge logs. Review [recommended third-party services](https://docs.fastly.com/en/guides/integrations#_logging-endpoints) that support Fastly logging to find the best solution for your setup. 
+
 ## Edge Redirects
 
 Reduce requests to your CMS by moving page redirects to the edge. AGCDN can combine redirect behavior using Headers (Cookies, Responses, etc.). AGCDN provides redirects for:
