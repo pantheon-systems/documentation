@@ -416,6 +416,12 @@ Biggest   hash found 'myobject' has 3 fields
 
 ## Troubleshooting
 
+### Redis Busy Error for Drupal Users
+
+Redis busy errors are caused by large amounts of cached data. Setting the Minimum cache lifetime prevents `flushVolatile` from being called, which only happens when cron runs, and results in the Redis busy error. Drupal instructs Redis to dump cached items that are `CACHE_TEMPORARY` (versus `PERM` or a specified time) when cron runs, which causes the busy error on large cache sets. Review [Drupal's documentation](https://www.drupal.org/project/redis/issues/2538902) for more information.
+
+Refer to the [Minimum Cache Lifetime](https://pantheon.io/docs/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](https://pantheon.io/docs/drupal-cache) documentation for more information about this setting.
+
 ### Cannot Activate the Redis Plugin for WordPress
 
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
