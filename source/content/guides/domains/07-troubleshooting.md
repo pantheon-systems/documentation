@@ -22,13 +22,12 @@ All redirect logic should include the `php_sapi_name() != "cli"` conditional sta
 [error]
 ```
 
-### Infinite Redirect Loops
 
 #### HTTP_X_FORWARDED_PROTO
 
 Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file.
 
-Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](#redirect-to-https-and-the-primary-domain) and for your specific use case.
+Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](/guides/domains/primary-domain#redirect-to-https) and for your specific use case.
 
 #### Modules and Plugins
 
