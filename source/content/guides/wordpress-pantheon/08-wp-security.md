@@ -135,4 +135,8 @@ This type of attack uses a trusted user's account to fool your website into acce
 
 WordPress has a built-in function to help stop CSRF attacks called a "nonce,” or "number used once.” The number is an identifier attached to a specific user and session and can be changed at any interval you decide. Any information that looks like it comes from the user, but doesn't include the nonce, will be rejected.  
     
-For detailed information on how to generate and use nonces, consult this guide from[CSS-Tricks](https://css-tricks.com/wordpress-front-end-security-csrf-and-nonces/).
+For detailed information on how to generate and use nonces, see the following WordPress documentation:
+
+* [Nonces](https://developer.wordpress.org/plugins/security/nonces/)
+
+* [Using Nonces](https://developer.wordpress.org/themes/theme-security/using-nonces/)

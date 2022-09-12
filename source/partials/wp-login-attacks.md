@@ -4,7 +4,7 @@ There are a few recommended actions you can take to protect yourself against log
 
 ### Change the Admin Account Name
 
-Change your admin account name. Many attacks assume the default name, “admin.”
+Change your admin account name. Many attacks assume the default name, “admin.”  The easiest way to do this is to create a new user with administrator rights, log in with the new username, then delete the admin user.
 
 ### Change the wp-login.php Path
 
