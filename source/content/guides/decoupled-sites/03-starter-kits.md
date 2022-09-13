@@ -131,7 +131,7 @@ Other possible values include:
 
 If you are using GitHub Actions, your token should have the "workflow" scope.
 
-For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the Build Tools [documentation](/guides/build-tools/). 
+For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the Build Tools [documentation](/guides/build-tools/). For a list of all available Build Tools command options, see the [Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/3.x/README.md#buildprojectcreate).
 
 #### Using a GitHub Organization
 
