@@ -2,6 +2,10 @@ Similar to [XML-RPC](#avoid-xml-rpc-attacks), the `wp-login.php` path can be sub
 
 There are a few recommended actions you can take to protect yourself against login abuse.
 
+### Change the Admin Account Name
+
+We strongly recommend that you change your admin account name. Many attacks assume the default name, “admin.”  The easiest way to do this is to create a new user with administrator rights, log in with the new username, then delete the admin user.
+
 ### Change the wp-login.php Path
 
 Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/) to change the login path from `wp-login.php` to any path you choose, such as `/login` or `/admin`. Then [redirect](/guides/redirect/advanced#redirect-one-path-to-another) all traffic from `wp-login.php` to the homepage or to another page like a `404`.
@@ -12,9 +16,7 @@ WordPress suggests password complexity guidelines when you create a user and pas
 
 ### Disable "Anyone Can Register"
 
-Some attackers or lost visitors might try to create an account via the login page.
-
-To turn off the feature, navigate to the **Settings** tab in WordPress admin and uncheck **Anyone can register** on the **Membership** line.
+Some attackers or lost visitors might try to create an account via the login page. To disable this, navigate to the **Settings** tab in WordPress admin and uncheck **Anyone can register** on the **Membership** line.
 
 ### Add Multi-factor Authentication (MFA)
 

@@ -16,7 +16,7 @@ reviewed: "2022-08-11"
 
 ## Create the CMS Backend
 
-You can create a decoupled site using a Pantheon starter kit. Choose from either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
+You can create a Front-End Site by using a Pantheon starter kit. Choose either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
 
 * [Drupal and Next.js](https://github.com/pantheon-systems/decoupled-drupal-recommended) - This configuration supports server-side rendering. 
 * [WordPress and Gatsby](https://github.com/pantheon-systems/decoupled-wordpress-recommended) - This configuration supports static site generation. 
@@ -24,27 +24,52 @@ You can create a decoupled site using a Pantheon starter kit. Choose from either
 
 ## Backend Installation and Configuration
 
+Choose from the following approaches to configure your backend:
+
+* Build Tools:
+  * Use this option if testing is important to your team's workflow. You will not have to manually push changes to your Pantheon code repository.
+
+* Dashboard Upstream: 
+  *  Use this option if you prefer a more streamlined configuration. 
+
+
 <TabList>
 
 <Tab title="Drupal Backend" id="drupal-install" active={true}>
+
+#### Dashboard Upstream Install
+
+You can install the Drupal backend by using the Dashboard upstream.
+
+Navigate to the Pantheon Dashboard to create a site from the [Decoupled Drupal Composer Managed upstream](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) 
+
+Alternatively, you can use Terminus. Enter the following command to create a site with the Decoupled Drupal Composer Managed upstream.
+
+```
+  terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
+```
+  * Replace `{My Team Name}` with your team name, for example `My Agency`. This can also be omitted.
+  * Note that `c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer Managed.
+
+
+#### Installing Using Build Tools
 
 - Run `terminus build:project:create`:
 
   ```
   terminus build:project:create \
-    --team='{My Team Name}' \
-    --template-repository="git@github.com:pantheon-systems/decoupled-drupal-recommended.git" pantheon-systems/decoupled-drupal-recommended \
-    --ci-template='git@github.com:pantheon-systems/advanced-ci-templates' \
-    --visibility private {PROJECT_NAME} \
-    --stability=dev \
-    --profile="pantheon_decoupled_profile"
+  --team='{My Team Name}' \
+  --template-repository="git@github.com:pantheon-upstreams/decoupled-drupal-composer-managed.git" pantheon-upstreams/decoupled-drupal-composer-managed \
+  --visibility private {PROJECT_NAME} \
+  --profile="pantheon_decoupled_profile" \
+  --stability=dev
   ```
 
   * Replace `{PROJECT_NAME}` with your project name, for example `decoupled-drupal`.
 
   * Replace `'{My Team Name}'` with your team name, for example `My Agency`. This can also be omitted.
 
-This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon and a CircleCI project created for automated deployments.
+This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon, and a CircleCI project created for automated deployments.
 
  </Tab>
 
@@ -106,7 +131,7 @@ Other possible values include:
 
 If you are using GitHub Actions, your token should have the "workflow" scope.
 
-For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the Build Tools [documentation](/guides/build-tools/). 
+For more information, refer to the [Available Services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) section or the Build Tools [documentation](/guides/build-tools/). For a list of all available Build Tools command options, see the [Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/3.x/README.md#buildprojectcreate).
 
 #### Using a GitHub Organization
 
