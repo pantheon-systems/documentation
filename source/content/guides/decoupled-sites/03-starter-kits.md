@@ -27,7 +27,7 @@ You can create a Front-End Site by using a Pantheon starter kit. Choose either a
 Choose from the following approaches to configure your backend:
 
 * Build Tools:
-  * Use this option if testing is important to your team's workflow. With Build Tools you will not have to manually push changes to your code repository.
+  * Use this option if testing is important to your team's workflow. You will not have to manually push changes to your Pantheon code repository.
 
 * Dashboard Upstream: 
   *  Use this option if you prefer a more streamlined configuration. 
@@ -46,7 +46,7 @@ Navigate to the Pantheon Dashboard to create a site from the [Decoupled Drupal C
 Alternatively, you can use Terminus. Enter the following command to create a site with the Decoupled Drupal Composer Managed upstream.
 
 ```
-  terminus site:create my-new-site "Describe Site" empty --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
+  terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
 ```
   * Replace `{My Team Name}` with your team name, for example `My Agency`. This can also be omitted.
   * Note that `c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer Managed.
