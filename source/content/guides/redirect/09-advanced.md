@@ -18,7 +18,7 @@ Redirect logic should be added to `wp-config.php` for [WordPress](/guides/php/wp
 
 <Alert type="danger" title="Warning">
 
-With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/guides/redirect#update-or-remove-primary-domain) the Primary Domain).
+With a Primary Domain set at the platform level, all other domains (except the [platform domain](/guides/domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/guides/redirect#update-or-remove-primary-domain) the Primary Domain).
 
 </Alert>
 
@@ -150,7 +150,7 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 
 <Alert type="info" title="Note">
 
-If you've configured your [primary domain at the platform level](/guides/redirect#set-the-primary-domain) and can [add these subdomains](/domains#custom-domains) to the same environment, redirection will happen automatically.
+If you've configured your [primary domain at the platform level](/guides/redirect#set-the-primary-domain) and can [add these subdomains](/guides/domains) to the same environment, redirection will happen automatically.
 
 </Alert>
 

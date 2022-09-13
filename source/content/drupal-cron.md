@@ -110,7 +110,7 @@ The most common causes are:
 
 - Missing `sites/default/settings.php`
 - [PHP fatal errors](/guides/php/php-errors)
-- [Invalid redirection logic in settings.php](/domains/#redirect-to-https-and-the-primary-domain)
+- [Invalid redirection logic in settings.php](/guides/domains)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
 ### Can I trigger  cron externally on a locked site?

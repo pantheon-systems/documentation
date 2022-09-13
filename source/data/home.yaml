@@ -73,7 +73,7 @@
       - text: 'Pantheon Solr Search for Drupal 9'
         url: '/guides/solr-drupal/solr-drupal-9'
       - text: 'Domains and Redirects'
-        url: '/domains/'
+        url: '/guides/domains/'
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
   three-column-links:
@@ -92,7 +92,7 @@
       - text: 'Identify and Kill MySQL Queries'
         url: '/guides/mariadb-mysql/kill-mysql-queries'
       - text: 'Domains and Redirects'
-        url: '/domains/'
+        url: '/guides/domains'
       - text: 'Configuring settings.php'
         url: '/guides/php/settings-php'
       - text: 'Generating and Adding SSH Keys'

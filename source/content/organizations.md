@@ -77,7 +77,7 @@ User roles at the organization level determine their level of access to sites su
 
 ### Vanity Domains
 
-Organizations can run site environments using their own custom Vanity domains, like `sites.myorganization.com`, instead of using `pantheonsite.io`. [Learn more about Vanity domains](/vanity-domains).
+Organizations can run site environments using their own custom Vanity domains, like `sites.myorganization.com`, instead of using `pantheonsite.io`. [Learn more about Vanity domains](/guides/domains/vanity-domains).
 
 ### Email-Based Registration
 

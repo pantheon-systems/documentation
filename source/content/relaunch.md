@@ -114,7 +114,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. Repeat steps 2-6 above for each affected domain. Note `www.example.com` and `example.com` are different domains.
 
-1. In the new Site Dashboard, [standardize traffic for the primary domain](/domains/#redirect-to-https-and-the-primary-domain).
+1. In the new Site Dashboard, [standardize traffic for the primary domain](/guides/domains).
 
 1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
 
@@ -130,7 +130,7 @@ This procedure temporarily uses the existing HTTPS certificate until the new one
 
 ### Will my site experience downtime?
 
-If you follow the process outlined above, downtime will be minimal and depends on the [TTL](/dns#dns-terminology) configuration.
+If you follow the process outlined above, downtime will be minimal and depends on the [TTL](/guides/domains/dns#dns-terminology) configuration.
 
 Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus) to run the two commands in immediate succession.
 

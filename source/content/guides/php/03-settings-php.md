@@ -30,7 +30,7 @@ Review the following articles for techniques and configurations for your `settin
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) (including domain_access)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 - [Configure Redirects](/guides/redirect)
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
 
@@ -129,11 +129,11 @@ Yes, but only if at least one other file (for example, `settings.php`) is presen
 
 There are three possibilities depending on your use case: 
 
-- For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). Refer to our [Redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
+- For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). Refer to our [Redirects](/guides/domains) guide for examples.
 
   <Alert title="Note" type="info">
   
-  `$_SERVER` is not generally available from the command line so [logic should check for that when used](/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/server_name-and-server_port).
+  `$_SERVER` is not generally available from the command line so [logic should check for that when used](/guides/domains), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/server_name-and-server_port).
   
   </Alert>
 

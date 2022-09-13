@@ -58,7 +58,7 @@ Human readable, such as "Your Awesome Site", entered during site creation and di
 
 <dd>
 
-Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/domains/#platform-domains).
+Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/guides/domains).
 
 </dd>
 

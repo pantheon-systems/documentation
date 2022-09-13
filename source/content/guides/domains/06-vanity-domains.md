@@ -1,10 +1,17 @@
 ---
-title: Vanity Domains
+title: Domains on Pantheon
+subtitle: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
 categories: [develop]
 tags: [collaborate, dns, agencies]
-reviewed: "2020-10-08"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/domains/vanity-domains
+anchorid: vanity-domains
 ---
+
+This section provides information on to set up a vanity domain.
 
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default Platform domain (`pantheonsite.io`).
 
@@ -18,7 +25,9 @@ If a subdomain of your primary site is configured, a newly created site named "s
 
 ## Request the Vanity Domain
 
-From your Organization Dashboard, go to Dashboard and [open a support ticket](/guides/support/contact-support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
+1. Navigate to your Organization Dashboard, and select the Dashboard to [open a support ticket](/guides/support/contact-support) with "Request for custom Vanity domain" as the subject. 
+
+1. Provide the Vanity domain required on the site, such as `sites.example.com`.
 
 <Alert title="Note" type="info">
 
@@ -28,7 +37,7 @@ We recommend using a separate domain from your production site. This prevents an
 
 ### AGCDN Vanity Domains
 
-You must provide a custom certificate if you want to use a vanity domain on your [Advanced Global CDN](guides/professional-services#advanced-global-cdn) site.
+You must provide a custom certificate if you want to use a vanity domain on your [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) site.
 
 Our [Custom Certificate](/custom-certificates#add-a-custom-certificate) service is only available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. 
 
@@ -42,7 +51,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Usin
 >
 > `*.sites.example.com` **AAAA** `2620:12a:8001::X`
 
-See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
+Refer [Introduction to Domain Name Services](/guides/domains/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
 <Alert type="info" title="Note">
 
@@ -64,13 +73,13 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
+![Incorrect vanity domain A record required DNS value](../../../images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
+![Correct vanity domain A record required DNS value](../../../images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 
@@ -78,7 +87,7 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 ## Security Considerations
 
-If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.com`), you should be aware of some security considerations:
+If you run sites on subdomains of your primary site (for example, `sites.awesomeagency.com`), you should be aware of some security considerations:
 
 <Partial file="vanity-https.md" />
 
@@ -88,7 +97,7 @@ If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.c
 
 ## Robots.txt with Custom Vanity Domains
 
-For SEO and to prevent duplicate content, the `robots.txt` file attached to the custom vanity domain will contain the following by default:
+The `robots.txt` file attached to the custom vanity domain will contain the following by default for SEO and to prevent duplicate content:
 
 ```http:title=robots.txt
 # https://live-sitename.agencyname.com/robots.txt
@@ -96,4 +105,10 @@ User-agent: *
 Disallow: /
 ```
 
-To present an alternate `robots.txt` file from within the source code, [add a custom domain](/guides/launch/domains) to the site's Dashboard and create the appropriate DNS record.
+You can [add a custom domain](/guides/launch/domains) to the site's Dashboard and create the appropriate DNS record to present an alternate `robots.txt` file from within the source code.
+
+## More Resources
+
+- [DNS](/guides/domains/dns)
+
+- [Bots and Indexing on Pantheon](/bots-and-indexing)
