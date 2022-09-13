@@ -39,7 +39,7 @@ You don't need to install anything locally to use Redis on Pantheon. However, if
    4) "pantheon-rediscache_menu:menu_item:b38e608d4f709b7c1fcb6ac5f6dd2ab72a9a034"
   ```
 
-  If Redis is configured properly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](#troubleshooting) section below.
+  If Redis is configured correctly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](/guides/object-cache/troubleshoot-object-cache) page of this guide.
 
 1. Pass the `exists` command to check if a specific key exists. For example:
 
@@ -55,7 +55,7 @@ You don't need to install anything locally to use Redis on Pantheon. However, if
 
 ### Find a Specific Key
 
-If you need to find a specific key, you can use search patterns that contain globs. For example:
+You can use search patterns that contain globs if you need to find a specific key. For example:
 
 ```bash
 redis> KEYS *a*
@@ -86,7 +86,7 @@ When [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any opera
 
 ### Check the Number of Keys in Cache
 
-To check the number of keys in the cache, you can use the `DBSIZE` command. The following is sample output:
+You can use the `DBSIZE` command to check the number of keys in the cache. The following is sample output:
 
 ```bash
 redis> DBSIZE
@@ -95,7 +95,7 @@ redis> DBSIZE
 
 ### View Service Configuration Details
 
-To check the cache memory, you can use the `config get *memory*` command. The following is sample output:
+You can use the `config get *memory*` command to check the cache memory. The following is sample output:
 
 ```bash
 redis> config get *memory*
@@ -105,7 +105,7 @@ maxmemory
 
 ### Hit/Miss Ratio
 
-You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency since most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
+You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency because most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
 
 Run the following code to access your Hit/Miss ratio:
 
@@ -171,3 +171,9 @@ Biggest   hash found 'myobject' has 3 fields
 1 hashs with 3 fields (00.20% of keys, avg size 3.00)
 0 zsets with 0 members (00.00% of keys, avg size 0.00)
 ```
+
+
+## More Resources
+
+- [Using WP-CLI On The Pantheon Platform](/wp-cli)
+- [Terminal Manual Command Reference](/terminus/commands)

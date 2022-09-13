@@ -17,15 +17,15 @@ This section provides information on how to enable Object Cache.
 
 <Tab title="WordPress" id="wp-install" active={true}>
 
-1. Enable Object Cache from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Object Cache server to come online.
+1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, and then select **Add**. It might take a couple minutes for the Object Cache server to come online.
 
-1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/terminus), [set the connection mode to SFTP](/sftp) then run:
+1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. You can also install the plugin via [Terminus](/terminus) if you [set the connection mode to SFTP](/sftp) and then run:
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis
   ```
 
-  For site networks, you will need to specify the site URL by adding that to the command:
+  You must specify the site URL by adding that to the command if you use site networks: 
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
@@ -41,13 +41,13 @@ This section provides information on how to enable Object Cache.
   }
   ```
 
-  This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using SFTP or Git, commit the new file to the Dev environment.
+  This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Use SFTP or Git to commit the new file to the Dev environment.
 
-1. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
+1. Navigate to the Dev environment's WordPress Dashboard, and verify the installation by selecting **Drop-ins** from the Plugins section:
 
   ![The object-cache Drop-In Plugin](../../../images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
-  When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
+  You can upgrade by the normal Plugin update mechanism in WordPress or via Terminus when a new version of the WP Redis plugin is released:
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin update wp-redis
@@ -119,7 +119,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 </Alert>
 
-1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, and then select **Add** to enable the Redis cache server. It might take a couple minutes for the Redis server to come online.
 
 1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
@@ -156,13 +156,13 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 1. Enable the module via `/admin/modules`, if you haven't already done so, using Terminus.
 
-1. Verify Redis is enabled by going to the dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
+1. Navigate to the dashboard and click **Connection Info** to verify that Redis is enabled. If you see the Redis cache connection string, Redis is enabled.
 
 1. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
 
 <Accordion title="Database Cleanup (optional)" id="database-cleanup-d7" icon="lightbulb">
 
-After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting and backing up the database.
+After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
 
 1. [Connect directly to MySQL](/guides/mariadb-mysql/mysql-access) and run the command below to view the cache:
 
@@ -237,3 +237,8 @@ After enabling Redis, there are cache tables in the database that are no longer 
 </Tab>
 
 </TabList>
+
+## More Resources
+
+- [Caching in Drupal Views](/drupal-caching-views)
+- [Frontend Performance Caching](/guides/frontend-performance/caching)

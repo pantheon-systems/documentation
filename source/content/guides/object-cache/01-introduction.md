@@ -11,7 +11,7 @@ permalink: docs/guides/object-cache
 anchorid: object-cache
 ---
 
-Pantheon's [<dfn id="objectcache">Object Cache (formerly Redis)</dfn>](/guides/object-cache) is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
+Pantheon's Object Cache (formerly Redis) is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ## Benefits of Object Cache
 
