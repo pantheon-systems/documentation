@@ -17,11 +17,11 @@ This section provides solutions to common troubleshooting scenarios for Object C
 
 Redis busy errors are caused by large amounts of cached data. Setting the Minimum cache lifetime prevents `flushVolatile` from being called, which only happens when cron runs, and results in the Redis busy error. Drupal instructs Redis to dump cached items that are `CACHE_TEMPORARY` (versus `PERM` or a specified time) when cron runs, which causes the busy error on large cache sets. Review [Drupal's documentation](https://www.drupal.org/project/redis/issues/2538902) for more information.
 
-Refer to the [Minimum Cache Lifetime](https://pantheon.io/docs/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](https://pantheon.io/docs/drupal-cache) documentation for more information about this setting.
+Refer to the [Minimum Cache Lifetime](/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](/drupal-cache) documentation for more information about this setting.
 
 ### Cannot Activate the Redis Plugin for WordPress
 
-WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
+WP Redis is a drop-in plugin that should only be loaded using the installation methods in [Enable Object Cache](/guides/object-cache/enable-object-cache). No activation is required.
 
 ### RedisException: Redis server went away
 
@@ -79,7 +79,7 @@ Fatal error: Class 'Redis_CacheCompressed' not found in
 
 It is possible that your `.gitignore` file is not up to date with the most recent version of your CMS. To resolve this, ensure you do not have any pending core updates.
 
-The best and easiest way to update your core is by using Pantheon administration Dashboard. See [WordPress and Drupal Core Updates](/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
+The best and easiest way to update your core is by using Pantheon administration Dashboard. Refer to [WordPress and Drupal Core Updates](/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
 
 ### Fatal Error: require\_once()
 
@@ -99,11 +99,11 @@ Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:
 You have requested a non-existent service "cache.backend.redis".
 ```
 
-Install and enable the module to resolve.
+Install and enable the module to resolve this issue.
 
 ### Heavy Redis Transactions Tracing Back to a Specific Plugin (WordPress)
 
-A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group in your theme's `function.php` file, or an [MU-plugin](/mu-plugin):
+A page load with 2,000 Redis calls can be 2 full seconds of Object Cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group in your theme's `function.php` file, or an [MU-plugin](/mu-plugin):
 
 ```php
 wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
@@ -127,3 +127,9 @@ Run the following command to access your site's memory usage metrics:
     used_memory_peak:1008128
     used_memory_peak_human:984.50K
   ```
+
+## More Resources
+
+- [Basic Troubleshooting](/basic-troubleshooting)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+- [site.env](/terminus/examples#siteenv)
