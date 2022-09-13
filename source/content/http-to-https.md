@@ -17,7 +17,7 @@ The following describes how to switch WordPress and Drupal sites over from HTTP 
 Be sure that you have:
 
 - A [Paid Pantheon plan](/guides/launch/plans)
-- A [Custom Domain](/domains#custom-domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/domains#primary-domain), with DNS properly configured.
+- A [Custom Domain](/guides/domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/guides/domains), with DNS properly configured.
 - HTTPS provisioned, indicated by the following notice:
 
   <Alert title="HTTPS" type="dash-success">
@@ -145,4 +145,4 @@ If your site configuration prevents you from setting the primary domain from the
 
 </Accordion>
 
-Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains#-see-more-redirect-scenarios).
+Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/guides/domains).

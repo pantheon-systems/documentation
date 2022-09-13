@@ -10,7 +10,7 @@ You can create a new Site from the new Dashboard homepage by clicking **+ Create
 
   <Alert title="Note" type="info">
 
-  The site name will be prefixed to all [Platform URLs](/domains/#platform-domains), which are automatically configured as subdomains of `pantheonsite.io`.
+  The site name will be prefixed to all [Platform URLs](/guides/domains), which are automatically configured as subdomains of `pantheonsite.io`.
 
   This name cannot be changed once set.
 

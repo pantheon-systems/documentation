@@ -51,7 +51,7 @@ Note: The key file upload tool currently only accepts 2048-bit RSA keys. AGCDN c
 
 ### Add the Domain
 
-Next, [add the domain to your environment](/domains#add-a-custom-domain).
+Next, [add the domain to your environment](/guides/domains).
 
   If you are presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
 
@@ -137,7 +137,7 @@ A record: `23.185.0.X`
 AAAA record 1:  `2620:12a:8000::X`
 AAAA record 2:  `2620:12a:8001::X`
 
-**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
+**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/guides/domains/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
 ### What if my DNS manager doesn't support CAA DNS records?
 
@@ -158,4 +158,4 @@ To take your site live by moving custom domains from one Site Dashboard to anoth
 - [Pantheon Global CDN](/guides/global-cdn)
 - [Advanced Global CDN](/guides/professional-services#advanced-global-cdn)
 - [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
-- [Introduction to Domain Name Services](/dns)
+- [Introduction to Domain Name Services](/guides/domains/dns)

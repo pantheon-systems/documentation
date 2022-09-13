@@ -40,7 +40,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
     - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
 
-1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/dns) provider. If you see:
+1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/guides/domains/dns) provider. If you see:
 
   > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
 
@@ -102,7 +102,7 @@ You will not be able to pre-provision HTTPS to prevent service interruption if y
 
 ## More Resources
 
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 
 - [Test a Domain Not Resolved to Pantheon](/guides/launch/advanced-curls/#test-a-domain-not-resolved-to-pantheon)
 

@@ -43,6 +43,6 @@ When using multiple snippets, be sure to step through the logic. This is particu
 
 - [Configuring Settings.php](/guides/php/settings-php)
 - [Configuring wp-config.php](/guides/php/wp-config-php)
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 - [Launch Essentials](/guides/launch)
 - [Relaunch Existing Pantheon Site](/relaunch)

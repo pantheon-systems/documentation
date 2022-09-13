@@ -28,7 +28,7 @@ HSTS instructs browsers to only connect via HTTPS and helps protect websites aga
 
 ## More Resources
 
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 

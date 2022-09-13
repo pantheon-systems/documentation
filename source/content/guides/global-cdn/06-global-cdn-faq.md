@@ -30,7 +30,7 @@ No, the www-redirector service is part of the legacy infrastructure. You can cho
 
 ### Are vanity domains supported?
 
-You can upgrade a site to Global CDN that is using [vanity domains](/vanity-domains), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
+You can upgrade a site to Global CDN that is using [vanity domains](/guides/domains/vanity-domains), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
 
 ### Is the CDN configurable?
 

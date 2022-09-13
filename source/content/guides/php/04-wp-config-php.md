@@ -64,7 +64,7 @@ Do not edit the `wp-config-pantheon.php` file. It includes database and environm
 
 There are two options for writing logic based on Pantheon server environment:
 
-- Check if `$_ENV['PANTHEON_ENVIRONMENT']` exists for web only actions, such as [redirects](/domains#primary-domain). If it exists, it will contain a string with the current environment (Dev, Test, or Live):
+- Check if `$_ENV['PANTHEON_ENVIRONMENT']` exists for web only actions, such as [redirects](/guides/domains). If it exists, it will contain a string with the current environment (Dev, Test, or Live):
 
  ```php:title=wp-config.php
  // Pantheon - web only.
