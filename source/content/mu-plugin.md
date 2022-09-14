@@ -102,7 +102,6 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
     if ( preg_match( $regex_json_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
       // Re-use the rest_post_dispatch filter in the Pantheon page cache plugin.
       add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-      filter_rest_post_dispatch_send_cache_control( $response, $server );
       break;
     }
   }
@@ -149,7 +148,7 @@ Set `Cache-Control: max-age=0` by hooking into `send_headers`. This will overrid
 foreach ($regex_path_patterns as $regex_path_pattern) {
   if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
     add_action( 'send_headers', 'add_header_nocache', 15 );
-
+    
     // No need to continue the loop once there's a match.
     break;
   }
@@ -339,13 +338,14 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
   if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
     // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
     add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-    // Re-define the send_header value with any custom Cache-Control header
-    function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-      $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-      return $response;
-    }
     break;
   }
+}
+
+ // Re-define the send_header value with any custom Cache-Control header
+function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+  $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+  return $response;
 }
 ```
 
