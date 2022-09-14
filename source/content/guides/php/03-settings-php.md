@@ -245,7 +245,7 @@ You can technically use database prefixes, but Pantheon will not support databas
 
 Drupal 7 doesn't ship with a `settings.php` in place. As the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. The `settings.php` area of the report should change to green after you have created a `settings.php` file.
 
-Drupal 7 sites that plan to use [Drush](/drush) should have a `settings.php` file.
+Drupal 7 sites that plan to use [Drush](/guides/drush) should have a `settings.php` file.
 
 ### Can I edit settings.pantheon.php?
 

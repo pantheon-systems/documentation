@@ -100,7 +100,7 @@
       - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
         url: '/object-cache/'
       - text: 'Drupal Drush Command-Line Utility'
-        url: '/drush/'
+        url: '/guides/drush/'
   changelog-preview:
     title: 'Changelog'
     url: '/changelog'

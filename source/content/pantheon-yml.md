@@ -210,7 +210,7 @@ Add `drush_version` to the top level of the `pantheon.yml` file to configure the
 drush_version: 8
 ```
 
-For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/drush-versions).
+For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/guides/drush/drush-versions).
 
 ### Filemount Path
 

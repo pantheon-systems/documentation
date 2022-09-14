@@ -113,7 +113,7 @@ This will not work for Multisite installations, and can result in data loss on s
 
 <Tab title="Drupal" id="tab-2-id">
 
-  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/drush/#add-custom-drush-commands).
+  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/guides/drush/drush-commands#add-custom-drush-commands).
 
 </Tab>
 

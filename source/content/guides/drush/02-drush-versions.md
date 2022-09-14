@@ -1,11 +1,17 @@
 ---
-title: Managing Drush Versions on Pantheon
+title: Drupal Drush Command-Line Utility on Pantheon
+subtitle: Manage Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
 cms: "Drupal"
 categories: [develop]
 tags: [drush, updates]
-reviewed: "2022-02-15"
+layout: guide
+showtoc: true
+permalink: docs/guides/drush/drush-versions
+anchorid: drush-versions
 ---
+
+This section provides information on Drush versions and site-local usage.
 
 By default, Pantheon runs Drush 8 on newly created Drupal 7 sites, and Drush 10 on newly created Drupal 9 sites.
 
@@ -87,10 +93,10 @@ Drupal sites created on Pantheon in late 2015 or earlier that do not have `drush
 
 Configure a newer version of Drush as [documented above](#configure-drush-version) to resolve.
 
-## See Also
+## More Resources
 
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
 - [Expand Your Use of Drush on Pantheon with More Commands (Blog)](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands)
-- [Drupal Drush Command-Line Utility](/drush/)
+- [Drupal Drush Command-Line Utility](/guides/drush/)
 - [The `pantheon.yml` Configuration File](/pantheon-yml)
