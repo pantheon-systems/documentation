@@ -8,7 +8,7 @@ tags: [plugins]
 reviewed: "2020-08-12"
 ---
 
-For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) Plugin](https://codex.wordpress.org/Must_Use_Plugins).
+For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins).
 
 MU-plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
@@ -188,7 +188,7 @@ add_filter( 'wp_headers', 'dynamic_cors_headers' );
 
 ### Custom Cookies
 
-Setting custom cookies can also be done from a MU-plugin like in the following example. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
+Setting custom cookies can also be done from an MU-plugin like in the following example. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
 
 ```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
@@ -305,7 +305,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 
 ### WP-CFM Compatibility
 
-[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/guides/multidev) environments, but a Must Use plugin needs to be configured:
+[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/guides/multidev) environments, but a Must-Use plugin needs to be configured:
 
 ```php
 add_filter( 'wpcfm_multi_env', function( $pantheon_envs ) {
