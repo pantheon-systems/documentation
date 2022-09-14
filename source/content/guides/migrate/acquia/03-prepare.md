@@ -20,7 +20,7 @@ reviewed: "2021-06-15"
 
 10. Adjust any special Acquia configurations related to `env` to ensure compatibility with Pantheon's platform. 
 
-11. Uninstall any Acquia Search modules and the default Drupal core Search module (if still enabled for your site) by navigating to `admin/modules/uninstall` if you plan on using [Pantheon Search](https://pantheon.io/docs/solr).
+11. Uninstall any Acquia Search modules and the default Drupal core Search module (if still enabled for your site) by navigating to `admin/modules/uninstall` if you plan on using [Pantheon Search](/solr).
 
 <Alert title="Note" type="info">
 

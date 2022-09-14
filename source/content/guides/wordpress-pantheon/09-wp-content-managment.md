@@ -20,7 +20,7 @@ Review our [Content Staging](/content-staging) doc to learn how to successfully 
 
 ## WordPress Configuration Management (WP-CFM)
 
-The [WP-CFM plugin](https://pantheon.io/docs/wp-cfm) provides an elegant mechanism for enabling developers to practice configuration management in code. The plugin exports WordPress site configuration from the SQL database's wp_options table to a .json file stored in private/config. After deploying the file to a new environment for the same site, it can then import the configuration from the .json file into the second wp_options table.
+The [WP-CFM plugin](/wp-cfm) provides an elegant mechanism for enabling developers to practice configuration management in code. The plugin exports WordPress site configuration from the SQL database's wp_options table to a .json file stored in private/config. After deploying the file to a new environment for the same site, it can then import the configuration from the .json file into the second wp_options table.
 
 ## Cron for WordPress
 

@@ -868,17 +868,17 @@ ___
 
 <ReviewDate date="2022-07-18" />
 
-**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](https://pantheon.io/docs/backups/) for more information.
+**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/backups/) for more information.
 
-**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by: 
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by:
 
-- Running the bash script in your local system 
+- Running the bash script in your local system
 
 - Using an external server
 
 - Using a service that runs cron jobs for you
 
-Refer to the [Access Backups](https://pantheon.io/docs/backups#access-backups) documentation for more details.
+Refer to the [Access Backups](/backups#access-backups) documentation for more details.
 
 ___
 
@@ -906,7 +906,7 @@ ___
  ln -s ./uploads/webp-express ./webp-express
 ```
 
-Refer to the documentation on [Using Extensions That Assume Write Access](https://pantheon.io/docs/symlinks-assumed-write-access) for more information.
+Refer to the documentation on [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
 **Issue 2:** Broken WebP images are served from the wrong directory.
 

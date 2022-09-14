@@ -1,4 +1,4 @@
-1. Log in with [Terminus](/terminus) and [find the site UUID](https://pantheon.io/docs/terminus/commands/site-list):
+1. Log in with [Terminus](/terminus) and [find the site UUID](/terminus/commands/site-list):
 
    ```shell{promptUser: user}
    terminus auth:login --email <email>

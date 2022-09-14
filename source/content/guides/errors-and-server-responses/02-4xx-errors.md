@@ -45,6 +45,6 @@ More specifically, this error occurs when the client (via web browser) successfu
 
 ## More Resources
 
-- [Unlock a Site's Environment](https://pantheon.io/docs/security#unlock-a-sites-environment)
+- [Unlock a Site's Environment](/security#unlock-a-sites-environment)
 
 - [Modify the Local Hosts File](/hosts-file)

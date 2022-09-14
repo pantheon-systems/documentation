@@ -128,7 +128,7 @@ Run the command below in your terminal:
 
 ## Migrate Existing Site Repositories to Pantheon
 
- The Pantheon Dashboard provides a guided path for migrating existing sites to the platform. Follow the steps in the [Migrate Existing Sites](https://pantheon.io/docs/migrate#migrate-existing-sites) document.
+ The Pantheon Dashboard provides a guided path for migrating existing sites to the platform. Follow the steps in the [Migrate Existing Sites](/migrate#migrate-existing-sites) document.
 
 ## Developing in Sync
 

@@ -25,7 +25,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
-Keep a good thing going! Learn more about Terminus in our on-demand [Command Line Interface with Terminus](https://pantheon.io/docs/guides/edt/terminus-cli/) video. Or, choose one of our other [Getting Started Workshops](https://pantheon.io/workshops).
+Keep a good thing going! Learn more about Terminus in our on-demand [Command Line Interface with Terminus](/guides/edt/terminus-cli/) video. Or, choose one of our other [Getting Started Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 

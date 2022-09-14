@@ -13,7 +13,7 @@ anchorid: wordpress-composer-managed
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-The WordPress Composer Managed upstream is available for [Early Access](https://pantheon.io/docs/oss-support-levels#early-access) participants. Features for WordPress Composer Managed are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+The WordPress Composer Managed upstream is available for [Early Access](/oss-support-levels#early-access) participants. Features for WordPress Composer Managed are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 </Alert>
 
@@ -31,7 +31,7 @@ WordPress does not natively support [Composer](https://getcomposer.org/), howeve
 
 There are two ways you can spin up a site using the WordPress Composer Managed upstream:
 
-- Running the following terminus command: 
+- Running the following terminus command:
 
     ```bash
     terminus site:create --org ORG --region REGION -- <site_name> <label> "WordPress (Composer Managed)"

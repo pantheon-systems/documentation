@@ -29,7 +29,7 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
-Speed ahead to the next class! Check out the video for [Going Live Best Practices](https://pantheon.io/docs/guides/edt/going-live/). You can also pick one of our other [Workshops](https://pantheon.io/workshops).
+Speed ahead to the next class! Check out the video for [Going Live Best Practices](/guides/edt/going-live/). You can also pick one of our other [Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 
