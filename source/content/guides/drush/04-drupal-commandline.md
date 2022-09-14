@@ -170,7 +170,7 @@ You may want to remove these modules after you launch your site, or use more adv
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
-  ![The webprofiler toolbar](../../images/drupal8-commandline--webprofiler.png)
+  ![The webprofiler toolbar](../../../images/drupal8-commandline--webprofiler.png)
 
 1. Export the configuration in the Dev environment:
 
