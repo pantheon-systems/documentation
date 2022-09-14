@@ -107,7 +107,7 @@ The site repository allows separation between common code across all sites, trac
 
 Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner. Digital agencies that serve clients and resellers of Pantheon are qualified to join the Partner program.
 
-## Custom Upstreams for Corporate and Higher Education Customers 
+## Custom Upstreams for Corporate and Higher Education Customers
 
 Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
@@ -135,7 +135,6 @@ Here are definitions for commonly used terms:
 
 - **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, similar to your site's codebase on Pantheon.
 
-
 ## More Resources
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
@@ -145,4 +144,3 @@ Here are definitions for commonly used terms:
 - [WordPress and Drupal Core Updates](/core-updates)
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
-
