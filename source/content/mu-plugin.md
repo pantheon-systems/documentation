@@ -12,107 +12,107 @@ For actions or filters you want to run even when a theme's `functions.php` isn't
 
 MU-plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
-MU-plugins are loaded by PHP in alphabetical order, before normal plugins. This means API hooks added in an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
+MU-plugins are loaded by PHP in alphabetical order, before normal plugins. This means API hooks added to an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Why use MU-Plugins?
 
-While you can add code in the `wp-config.php` file for site-wide behavior, actions and filters shouldn't be added here.
+Although you can add code in the `wp-config.php` file for site-wide behavior, actions and filters should not be added to this file.
 
-If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the `add_action()` and `add_filter()` functions won't be defined yet.
+If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will throw a fatal PHP error because the `add_action()` and `add_filter()` functions are not yet defined.
 
-If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has already been loaded and the actions / filters won't be applied, or would be applied last.
+If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has loaded, and the actions and filters will not be applied, or will be applied last.
 
 ## Create Your MU-Plugin
 
 1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
 
-1. Provide the plugin details for its name, description, etc.:
+1. Provide the plugin details for its name, description, URI, and other descriptors:
 
-  ```php
-  <?php
-  /*
-    Plugin Name: Custom Actions and Filters
-    Plugin URI: https://plugin-site.example.com
-    Description: Boilerplate MU-plugin for custom actions and filters to run for a site instead of setting in WP-config.php
-    Version: 0.1
-    Author: Pantheon
-    Author URI: https://yoursite.example.com
-  */
-  ```
+	  ```php
+	  <?php
+	  /*
+	    Plugin Name: Custom Actions and Filters
+	    Plugin URI: https://plugin-site.example.com
+	    Description: Boilerplate MU-plugin for custom actions and filters to run for a site instead of setting in WP-config.php
+	    Version: 0.1
+	    Author: Pantheon
+	    Author URI: https://yoursite.example.com
+	  */
+	  ```
 
-1. Add the custom functions along with the filters or action that you want to run. Use the following script as a starting point for making your own plugin:
+1. Add the custom functions and the filters or action that you want to run. Use the following script as a starting point for creating your own plugin:
 
-  ```php
-  <?php
-  /*
-    Plugin Name: Custom Actions and Filters
-    Plugin URI: https://plugin-site.example.com
-    Description: Boilerplate MU-plugin for custom actions and filters to run for a site instead of setting in WP-config.php
-    Version: 0.1
-    Author: Pantheon
-    Author URI: https://yoursite.example.com
-  */
+	  ```php
+	  <?php
+	  /*
+	    Plugin Name: Custom Actions and Filters
+	    Plugin URI: https://plugin-site.example.com
+	    Description: Boilerplate MU-plugin for custom actions and filters to run for a site instead of setting in WP-config.php
+	    Version: 0.1
+	    Author: Pantheon
+	    Author URI: https://yoursite.example.com
+	  */
 
-  if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-    // Actions or Filters that will only run in Pantheon.
-  };
+	  if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+	    // Actions or Filters that will only run in Pantheon.
+	  };
 
-  if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) && php_sapi_name() != 'cli' ) {
-    // Add your actions or filters that you want to exclude during WP CLI execution here.
-  }
+	  if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) && php_sapi_name() != 'cli' ) {
+	    // Add your actions or filters that you want to exclude during WP CLI execution here.
+	  }
 
-  /*
-   * Set $regex_path_patterns accordingly.
-   *
-   * We don't set this variable for you, so you must define it
-   * yourself per your specific use case before the following conditional.
-   *
-   * For example, to exclude pages in the /news/ and /about/ path from cache, set:
-   *
-   *   $regex_path_patterns = array(
-   *     '#^/news/?#',
-   *     '#^/about/?#',
-   *   );
-   */
+	  /*
+	   * Set $regex_path_patterns accordingly.
+	   *
+	   * We don't set this variable for you, so you must define it
+	   * yourself per your specific use case before the following conditional.
+	   *
+	   * For example, to exclude pages in the /news/ and /about/ path from cache, set:
+	   *
+	   *   $regex_path_patterns = array(
+	   *     '#^/news/?#',
+	   *     '#^/about/?#',
+	   *   );
+	   */
 
-  // Loop through the patterns.
-  foreach ( $regex_path_patterns as $regex_path_pattern ) {
-    if ( preg_match( $regex_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
-      add_action( 'send_headers', 'add_header_nocache', 15 );
+	  // Loop through the patterns.
+	  foreach ( $regex_path_patterns as $regex_path_pattern ) {
+	    if ( preg_match( $regex_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
+	      add_action( 'send_headers', 'add_header_nocache', 15 );
 
-      // No need to continue the loop once there's a match.
-      break;
-    }
-  }
+	      // No need to continue the loop once there's a match.
+	      break;
+	    }
+	  }
 
-  function add_header_nocache() {
-    header('Cache-Control: no-cache, must-revalidate, max-age=0');
-  }
+	  function add_header_nocache() {
+	    header('Cache-Control: no-cache, must-revalidate, max-age=0');
+	  }
 
-  /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
+	  /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
 
-  // wp-json paths or any custom endpoints
+	  // wp-json paths or any custom endpoints
 
-  $regex_json_path_patterns = array(
-      '#^/wp-json/wp/v2/users?#',
-      '#^/wp-json/?#'
-    );
+	  $regex_json_path_patterns = array(
+	      '#^/wp-json/wp/v2/users?#',
+	      '#^/wp-json/?#'
+	    );
 
-  foreach ( $regex_json_path_patterns as $regex_json_path_pattern ) {
-    if ( preg_match( $regex_json_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
-      // Re-use the rest_post_dispatch filter in the Pantheon page cache plugin.
-      add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-      break;
-    }
-  }
+	  foreach ( $regex_json_path_patterns as $regex_json_path_pattern ) {
+	    if ( preg_match( $regex_json_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
+	      // Re-use the rest_post_dispatch filter in the Pantheon page cache plugin.
+	      add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+	      break;
+	    }
+	  }
 
-  // Re-define the send_header value with any custom Cache-Control header.
-  function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-    $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-    return $response;
-  }
-  // End of File
-  ```
+	  // Re-define the send_header value with any custom Cache-Control header.
+	  function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+	    $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+	    return $response;
+	  }
+	  // End of File
+	  ```
 
 ### Use wp_get_environment_type for Environment-specific Actions
 
@@ -351,7 +351,7 @@ function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
 
 ## See Also
 
-This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
+This page introduces the concept of using an MU-plugin for applying actions or filters for a site. For site-specific or environment-specific context, see the following pages:
 
 - [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
