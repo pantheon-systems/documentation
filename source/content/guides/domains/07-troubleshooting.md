@@ -57,7 +57,7 @@ You can modify your local `hosts` file to validate domain-specific settings befo
 
 ## More Resources
 
-- [Modules and Plugins with Known Issues](https://pantheon.io/docs/modules-plugins-known-issues)
+- [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 
 - [Debug Caching Issues](/debug-cache)
 

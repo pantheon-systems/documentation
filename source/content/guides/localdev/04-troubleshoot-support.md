@@ -30,7 +30,7 @@ Review the [support ticket best practices](/guides/support/support-ticket/) befo
 
 ## Provide Feedback or Feature Requests
 
-Please provide feedback by submitting an issue to the [GitHub repository](https://github.com/pantheon-systems/localdev-issues/issues) or by joining the [Pantheon community](https://pantheon.io/docs/pantheon-community#joining-the-community).
+Please provide feedback by submitting an issue to the [GitHub repository](https://github.com/pantheon-systems/localdev-issues/issues) or by joining the [Pantheon community](/pantheon-community#joining-the-community).
 
 ## Troubleshooting
 

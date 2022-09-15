@@ -32,7 +32,7 @@ The sections below will show you the basics for collaborating with others if you
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-  ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
+    ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
 1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**:
 
@@ -68,7 +68,7 @@ Follow the steps below to configure your GitHub repository.
 
 1. Enter the **Repository name** (the examples on this page use d7-ci).
 
-1. Select the **Public** radio button.
+1. Select **Public**.
 
 1. Keep **Initialize this repository with a README** unchecked if you want the option to add code to your repository. 
 
@@ -109,7 +109,7 @@ You can also add another push URL for origin by adding a push URL within `.git/c
     url = git@github.com:systemseed/example.git
   ```
 
-  Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community).
+  Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Thanks to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community).
 
 ### Push the Pantheon Site's Codebase to GitHub
 
@@ -128,120 +128,120 @@ Run the command below in your terminal:
 
 ## Migrate Existing Site Repositories to Pantheon
 
- The Pantheon Dashboard provides a guided path for migrating existing sites to the platform. Follow the steps in the [Migrate Existing Sites](https://pantheon.io/docs/migrate#migrate-existing-sites) document.
+ The Pantheon Dashboard provides a guided path for migrating existing sites to the platform. Follow the steps in the [Migrate Existing Sites](/get-started) document.
 
 ## Developing in Sync
 
 You must create the `settings.php` file to develop in sync.
 
-1. `cd` into `sites/default` and create the file:
+1. Change directory into `sites/default` and create the file:
 
-  ```bash{promptUser: user}
-  cd sites/default
-  touch settings.php
-  ```
+    ```bash{promptUser: user}
+    cd sites/default
+    touch settings.php
+    ```
 
 1. Add the file to version control and push to both remotes:
 
-  ```bash{outputLines: 2-9, 12-18, 20-22}
-  git status
-  On branch master
-  Your branch is up-to-date with 'github/master'.
-  Untracked files:
-    (use "git add <file>..." to include in what will be committed)
-
-    settings.php
-
-    nothing added to commit but untracked files present (use "git add" to track)
-    git add .
+    ```bash{outputLines: 2-9, 12-18, 20-22}
     git status
     On branch master
     Your branch is up-to-date with 'github/master'.
-    Changes to be committed:
-    (use "git reset HEAD <file>..." to unstage)
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
 
-    new file:   settings.php
+      settings.php
 
-    git commit -m “Create settings.php”
-    master b802550] Create settings.php
-    1 file changed, 577 insertions(+)
-    create mode 100644 sites/default/settings.php
-    ```
+      nothing added to commit but untracked files present (use "git add" to track)
+      git add .
+      git status
+      On branch master
+      Your branch is up-to-date with 'github/master'.
+      Changes to be committed:
+      (use "git reset HEAD <file>..." to unstage)
+
+      new file:   settings.php
+
+      git commit -m “Create settings.php”
+      master b802550] Create settings.php
+      1 file changed, 577 insertions(+)
+      create mode 100644 sites/default/settings.php
+      ```
 
 1. Push the change to GitHub and Pantheon:
 
-    ```bash{outputLines: 2-8}
-    git push github master
-    Counting objects: 4, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (4/4), 384 bytes | 0 bytes/s, done.
-    Total 4 (delta 2), reused 0 (delta 0)
-    To git@github.com:pantheon-learning/d7-ci.git
-      fe267cb..b802550  master -> master
-    ```
+      ```bash{outputLines: 2-8}
+      git push github master
+      Counting objects: 4, done.
+      Delta compression using up to 4 threads.
+      Compressing objects: 100% (4/4), done.
+      Writing objects: 100% (4/4), 384 bytes | 0 bytes/s, done.
+      Total 4 (delta 2), reused 0 (delta 0)
+      To git@github.com:pantheon-learning/d7-ci.git
+        fe267cb..b802550  master -> master
+      ```
 
-    ```bash{outputLines: 2-17}
-    git push origin master
-    Counting objects: 4, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (4/4), 384 bytes | 0 bytes/s, done.
-    Total 4 (delta 2), reused 0 (delta 0)
-    remote:
-    remote: PANTHEON NOTICE:
-    remote:
-    remote: Environment 'dev' (branch: master) is currently in SFTP mode.
-    remote: It cannot receive git pushes until you disable this via the Pantheon dashboard.
-    remote: If you are trying to push changes to a different branch or environment, try:
-    remote:     git push origin [branch-name]
-    remote:
-    To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
-    ! [remote rejected] master -> master (pre-receive hook declined)
-    error: failed to push some refs to 'ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git'
-    ```
+      ```bash{outputLines: 2-17}
+      git push origin master
+      Counting objects: 4, done.
+      Delta compression using up to 4 threads.
+      Compressing objects: 100% (4/4), done.
+      Writing objects: 100% (4/4), 384 bytes | 0 bytes/s, done.
+      Total 4 (delta 2), reused 0 (delta 0)
+      remote:
+      remote: PANTHEON NOTICE:
+      remote:
+      remote: Environment 'dev' (branch: master) is currently in SFTP mode.
+      remote: It cannot receive git pushes until you disable this via the Pantheon dashboard.
+      remote: If you are trying to push changes to a different branch or environment, try:
+      remote:     git push origin [branch-name]
+      remote:
+      To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
+      ! [remote rejected] master -> master (pre-receive hook declined)
+      error: failed to push some refs to 'ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git'
+      ```
 
-    This push to Pantheon failed, because the Development environment was in SFTP mode.
+      This push to Pantheon failed, because the Development environment was in SFTP mode.
 
-    ![Connection Mode set to SFTP](../../../images/dashboard/connection-mode-sftp.png)
+      ![Connection Mode set to SFTP](../../../images/dashboard/connection-mode-sftp.png)
 
 1. Set the **Development Mode** to **Git** by clicking on the toggle, or enter the code below in the command line:
 
-    ```bash{promptUser: user}
-    terminus connection:set <site>.<env> git
-    ```
+      ```bash{promptUser: user}
+      terminus connection:set <site>.<env> git
+      ```
 
-    ![Connection Mode set to Git](../../../images/dashboard/connection-mode-git.png)
+      ![Connection Mode set to Git](../../../images/dashboard/connection-mode-git.png)
 
 1. Push to Pantheon:
 
-    ```bash{outputLines: 2-8}
-    git push origin master
-    Counting objects: 4, done.
-    Delta compression using up to 4 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (4/4), 384 bytes | 0 bytes/s, done.
-    Total 4 (delta 2), reused 0 (delta 0)
-    To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
-      fe267cb..b802550  master -> master
-    ```
+      ```bash{outputLines: 2-8}
+      git push origin master
+      Counting objects: 4, done.
+      Delta compression using up to 4 threads.
+      Compressing objects: 100% (4/4), done.
+      Writing objects: 100% (4/4), 384 bytes | 0 bytes/s, done.
+      Total 4 (delta 2), reused 0 (delta 0)
+      To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
+        fe267cb..b802550  master -> master
+      ```
 
-    ![Commit deployed to Pantheon Dashboard](../../../images/dashboard/commit-deployed-pantheon-dashboard.png)
+      ![Commit deployed to Pantheon Dashboard](../../../images/dashboard/commit-deployed-pantheon-dashboard.png)
 
-    The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
+      The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
 
-    We recommend renaming the remote repository to something more specific than `origin`, such as `pantheon`. 
+      We recommend renaming the remote repository to something more specific than `origin`, such as `pantheon`. 
 
 1. Rename the remote repository:
 
-    ```bash{outputLines: 3-8}
-    git remote rename origin pantheon
-    git remote -v
-    github  git@github.com:pantheon-learning/d7-ci.git (fetch)
-    github  git@github.com:pantheon-learning/d7-ci.git (push)
-    pantheon  ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git (fetch)
-    pantheon  ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git (push)
-    ```
+      ```bash{outputLines: 3-8}
+      git remote rename origin pantheon
+      git remote -v
+      github  git@github.com:pantheon-learning/d7-ci.git (fetch)
+      github  git@github.com:pantheon-learning/d7-ci.git (push)
+      pantheon  ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git (fetch)
+      pantheon  ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git (push)
+      ```
 
 ## Feature Branching
 
@@ -339,13 +339,13 @@ You must create the `settings.php` file to develop in sync.
 
 1. Pull from github master > push to pantheon master:
 
-  ```bash{promptUser: user}
-  git checkout master
-  git pull github master
-  git push pantheon master
-  ```
+    ```bash{promptUser: user}
+    git checkout master
+    git pull github master
+    git push pantheon master
+    ```
 
- ![Merged PR commit in the Pantheon dashboard](../../../images/dashboard/merged-pull-request-1-dashboard.png)
+   ![Merged PR commit in the Pantheon dashboard](../../../images/dashboard/merged-pull-request-1-dashboard.png)
 
 ## Optional Tools to Optimize Workflows
 
