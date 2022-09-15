@@ -1,7 +1,11 @@
 <Alert title="Note" type="info" >
 
 If you are moving a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site, use one of the following guides instead:
+<<<<<<< HEAD
 - Your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer) or  [Importing Drush Site Archives with Terminus](/guides/drush/drush-import)
+=======
+- Your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer) or [Importing Drush Site Archives with Terminus](/drush-import)
+>>>>>>> a45429f41f1ef16952eb8ca43a06677a18782865
 
 - Your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 

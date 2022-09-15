@@ -98,9 +98,9 @@ To perform a manual update procedure, take the following steps:
 
 Of course, doing manual updates can be a chore, especially if you're managing more than one site. Most organizations that do this use [Custom Upstreams](/guides/custom-upstream) that include favored plugins, custom plugins, a base theme, etc. This allows you to update the shared codebase and then all of the sites that are based on that Upstream will receive updates automatically.
 
-While Custom Upstreams will help, adding automation and scripting will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and produce a report indicating that the site has updates that are ready to go. 
+While Custom Upstreams will help, adding automation and scripting will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and produce a report indicating that the site has updates that are ready to go.
 
-Our [Terminus command line tool]( /terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](https://pantheon.io/docs/wp-cli/) and add in our [Quicksilver hooks](https://pantheon.io/docs/quicksilver/) to trigger testing, and you're on your way. 
+Our [Terminus command line tool]( /terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](/wp-cli/) and add in our [Quicksilver hooks](/quicksilver/) to trigger testing, and you're on your way.
 
 [Pixotech has a nice writeup](http://www.pixotech.com/automating-pluginmodule-updates-on-pantheon/) on their process that does this, and our own Andrew Taylor has a [fantastic script for doing all of this plus visual regression testing](https://pantheon.io/blog/automating-security-updates-scalewpio) on Pantheon.
 

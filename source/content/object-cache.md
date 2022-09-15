@@ -313,7 +313,7 @@ englash english
 
 ### Clear Cache in Pantheon Dashboard
 
-You can clear the Object Cache through the [Pantheon Dashboard](https://pantheon.io/docs/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated. 
+You can clear the Object Cache through the [Pantheon Dashboard](/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated.
 
 Alternatively, you can use the `flushall` command to clear all keys from the cache.
 
@@ -420,7 +420,7 @@ Biggest   hash found 'myobject' has 3 fields
 
 Redis busy errors are caused by large amounts of cached data. Setting the Minimum cache lifetime prevents `flushVolatile` from being called, which only happens when cron runs, and results in the Redis busy error. Drupal instructs Redis to dump cached items that are `CACHE_TEMPORARY` (versus `PERM` or a specified time) when cron runs, which causes the busy error on large cache sets. Review [Drupal's documentation](https://www.drupal.org/project/redis/issues/2538902) for more information.
 
-Refer to the [Minimum Cache Lifetime](https://pantheon.io/docs/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](https://pantheon.io/docs/drupal-cache) documentation for more information about this setting.
+Refer to the [Minimum Cache Lifetime](/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](/drupal-cache) documentation for more information about this setting.
 
 ### Cannot Activate the Redis Plugin for WordPress
 

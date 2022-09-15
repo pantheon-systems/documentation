@@ -3,7 +3,7 @@
 
 <Tab title="WordPress" id="tab-1-id" active={true}>
 
-<Partial file="migrate/migrate-wordpress.md" />
+<Partial file="migrate/migrate-wp.md" />
 
 </Tab>
 

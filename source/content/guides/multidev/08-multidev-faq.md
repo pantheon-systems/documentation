@@ -97,7 +97,7 @@ If the organization changes to a plan that doesn't feature Multidev, you will st
 
 ## How long will the Multidev stay active?
 
-Multidev environments spin down after approximately 60 minutes of idle time. Refer to the [Idle Containers](https://pantheon.io/docs/application-containers#idle-containers) documentation for more information.
+Multidev environments spin down after approximately 60 minutes of idle time. Refer to the [Idle Containers](/application-containers#idle-containers) documentation for more information.
 
 ## Creating a Multidev Failed - Specified Key Was Too Long
 
