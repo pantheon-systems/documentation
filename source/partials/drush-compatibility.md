@@ -25,7 +25,7 @@ When running Drush locally, we highly recommend running Drush version 8.3.2 or h
 | 9      | 5.6+     | May 2020  | ❌      |Compatible, not supported |<span style="color:red">❌ </span>|
 | 8     | 5.4.5+     | Nov. 2022| <span style="color:green">✔</span>    |Supported, not recommended|<span style="color:red">❌ </span>|
 | 7      | 5.3.0+     | July 2017| Compatible, not supported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span>|
-| 6      | 5.3.0+     | Dec.<br> 2015| Compatible, not supported    |<span style="color:red">❌ </span> |<span style="color:red">❌ </span>|
+| 6      | 5.3.0+     | Dec. 2015| Compatible, not supported    |<span style="color:red">❌ </span> |<span style="color:red">❌ </span>|
 | 5     | 5.2.0+    | May 2015 | Compatible, not supported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span> |
 
 *Drush 11 is not available through `pantheon.yml`. Drush 11 can only be used through a [site-local installation](#site-local-drush-usage).
