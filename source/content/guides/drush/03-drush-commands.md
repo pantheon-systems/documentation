@@ -15,7 +15,7 @@ This section provides information on useful Drush commands to help you manage yo
 
 ## Execute a Drush Command on a Pantheon Site Environment
 
-Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:  
+You can execute a command on any remote site listed when you see the target site in the list of site aliases. Refer to [Drush Aliases](/guides/drush/drush-aliases) for more information. The syntax is:
 
 ```bash{promptUser: user}
 drush @pantheon.SITENAME.ENV COMMAND
@@ -23,7 +23,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 <Alert title="Warning" type="danger">
 
-**Do not use Drush to update Drupal core on Pantheon**. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see [Core Updates](/core-updates).
+**Do not use Drush to update Drupal core on Pantheon**. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. Refer to [Core Updates](/core-updates) for more information.
 
 </Alert>
 
@@ -35,9 +35,9 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 </Alert>
 
-Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus).
+Drupal's list of PHP classes and files can become corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus).
 
-**Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
+**Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so create a [backup](/backups) first.  
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- rr
@@ -70,18 +70,18 @@ terminus drush <site>.<env> -- core-cli
 
 ## Drush Commands That Alter Site Code
 
-Commands that alter site code, such as pm-download (dl), will only work on a Dev environment that has been set to [SFTP mode](/sftp) from the Pantheon Dashboard.
+Commands that alter site code, such as `pm-download (dl)`, will only work on a Dev environment that has been set to [SFTP mode](/sftp) on the Pantheon Dashboard.
 
 ## Add Custom Drush Commands
 
-While we have the full spectrum of Drush core already available for your use, you may want to add a command that you regularly use; for instance, [Drush Search and Replace (sar)](https://www.drupal.org/project/sar).
+Drush core commands are available for your use, but you can also add a command that you regularly use, for example, [Drush Search and Replace (sar)](https://www.drupal.org/project/sar).
 
-1. Put the site in Git mode.
+1. Verify that Dev environment has been set Git mode.
 1. Clone locally.
 1. Create a `drush` folder in the Drupal root.
 1. Add the `sar` Drush command to the Drush folder.
 1. Commit `drush/sar`.
-1. Push your code up to Pantheon.
+1. Push your code to Pantheon.
 1. Clear your Drush cache on each environment. Example:
 
   ```bash{promptUser: user}
