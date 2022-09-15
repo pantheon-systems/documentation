@@ -1,11 +1,3 @@
-- id: carolynshannon
-  name: Carolyn Shannon
-  bio: Sr. Manager of Education Services, Pantheon
-  avatar: //avatars.githubusercontent.com/u/55147679
-  github: //github.com/carolyn-shannon
-  drupal: //www.drupal.org/u/chicagomom
-  twitter: //twitter.com/chicagomom
-  linkedin: //www.linkedin.com/in/carolynshannon/
 - id: edwardangert
   name: Edward Angert
   twitter: https://twitter.com/edwardangert
@@ -372,6 +364,14 @@
   github: //github.com/eeeschwartz/
   linkedin: //www.linkedin.com/in/eeeschwartz
   bio: Civic developer, human centered!
+- id: carolynshannon
+  name: Carolyn Shannon
+  bio: Community contributor
+  avatar: //avatars.githubusercontent.com/u/55147679
+  github: //github.com/carolyn-shannon
+  drupal: //www.drupal.org/u/chicagomom
+  twitter: //twitter.com/chicagomom
+  linkedin: //www.linkedin.com/in/carolynshannon/
 - id: cobypear
   name: Coby Sher
   avatar: //avatars.githubusercontent.com/cobypear
