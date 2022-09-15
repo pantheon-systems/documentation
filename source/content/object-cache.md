@@ -311,11 +311,9 @@ $15
 englash english
 ```
 
-### Clear Cache in Pantheon Dashboard
+### Clear Cache with Terminus
 
-You can clear the Object Cache through the [Pantheon Dashboard](/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated.
-
-Alternatively, you can use the `flushall` command to clear all keys from the cache.
+You can use the `flushall` command to clear all keys from the cache.
 
 ```bash
 redis> flushall
