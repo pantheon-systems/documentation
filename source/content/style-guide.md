@@ -23,7 +23,7 @@ Some General Rules:
 - Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
 - [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
 - Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
-- Use [Inclusive Language](https://pantheon.io/docs/inclusive-language), avoid colloquialisms and hyperbole.
+- Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
 - Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
 
 

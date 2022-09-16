@@ -41,7 +41,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep t
 
 - The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
-- Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, you should prepend the paths in this document with "web" as needed.
+- Source site may or may not be using a [nested docroot](/nested-docroot). If using it, you should prepend the paths in this document with "web" as needed.
 
 <Alert title="Note" type="info">
 

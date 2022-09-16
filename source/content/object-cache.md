@@ -255,6 +255,18 @@ After enabling Redis, there are cache tables in the database that are no longer 
 
 </TabList>
 
+## Clearing Cached Data
+
+When clearing the application cache, whether via the Dashboard, Terminus, or the CMS itself, the Redis cache will be cleared as well. The Redis cache will only be cleared if the appropriate module or plugin is active and the CMS application is functioning.
+
+#### Drupal
+Drupal will delete and regenerate cached entries during a cache rebuild or cache clear. The cache clear operation also writes a new set of keys in Redis to store when the last delete took place. Any keys created before this time will no longer be returned as valid cache entries. You may use Redis to store more permanent data in this case using custom programming without it being automatically cleared, unless it is in one of the existing caches that Drupal is managing.
+
+#### WordPress
+When [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
+
+See the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup method if necessary.
+
 ## Use the Redis Command-Line Client
 
 You don't need to install anything locally to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis on your machine.
@@ -268,20 +280,17 @@ You don't need to install anything locally to use Redis on Pantheon. However, if
 1. Use the Redis Connection Info from the Dashboard to verify that Redis is working. Execute the following command after you log in:
 
   ```bash
-  redis> keys *
+  redis> DBSIZE
   ```
 
   The command should return the existing Redis keys. Example:
 
   ```bash
-  redis> keys *
-   1) "pantheon-rediscache_menu:links:management:tree-data:en:27cbcc1096e9daf2c319c2c"
-   2) "pantheon-rediscache:features_module_info"
-   3) "pantheon-rediscache_bootstrap:bootstrap_modules"
-   4) "pantheon-rediscache_menu:menu_item:b38e608d4f709b7c1fcb6ac5f6dd2ab72a9a034"
+  redis> DBSIZE
+  (integer) 23
   ```
 
-  If Redis is configured properly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](#troubleshooting) section below.
+  If Redis is configured correctly, it should output the number of keys in the selected database. If it returns  `0 `, there is no data.
 
 1. Pass the `exists` command to check if a specific key exists. For example:
 
@@ -311,20 +320,16 @@ $15
 englash english
 ```
 
-### Clear Cache in Pantheon Dashboard
+### Clear All Keys
 
-You can clear the Object Cache through the [Pantheon Dashboard](https://pantheon.io/docs/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated. 
+You can use the `flushall` command to clear all keys from the cache. 
 
-Alternatively, you can use the `flushall` command to clear all keys from the cache.
+**Note:** If the [CMS cache clearing](#clearing-cached-data) is functioning as expected this is generally not necessary. Be aware that in Drupal it is possible that custom programming may rely on values stored here that are not meant to be temporary.
 
 ```bash
 redis> flushall
 OK
 ```
-
-### Clear Cache with WP Redis
-
-When [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin or the Pantheon dashboard.
 
 ### Check the Number of Keys in Cache
 
@@ -420,7 +425,7 @@ Biggest   hash found 'myobject' has 3 fields
 
 Redis busy errors are caused by large amounts of cached data. Setting the Minimum cache lifetime prevents `flushVolatile` from being called, which only happens when cron runs, and results in the Redis busy error. Drupal instructs Redis to dump cached items that are `CACHE_TEMPORARY` (versus `PERM` or a specified time) when cron runs, which causes the busy error on large cache sets. Review [Drupal's documentation](https://www.drupal.org/project/redis/issues/2538902) for more information.
 
-Refer to the [Minimum Cache Lifetime](https://pantheon.io/docs/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](https://pantheon.io/docs/drupal-cache) documentation for more information about this setting.
+Refer to the [Minimum Cache Lifetime](/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](/drupal-cache) documentation for more information about this setting.
 
 ### Cannot Activate the Redis Plugin for WordPress
 
