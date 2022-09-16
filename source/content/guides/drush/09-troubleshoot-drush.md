@@ -15,7 +15,7 @@ This section provides solutions to common Drush troubleshooting scenarios.
 
 ### Reading the Pantheon Environment from Drush
 
-Since Drush does not run using the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, refer to our documentation on [using the `$_SERVER` superglobal in custom code](/guides/environment-configuration/read-environment-config/#using-_server).
+Drush does not run using the web server. This makes reliance on the `$_SERVER` superglobal problematic as some of the contents of that array will be missing, for example `['PANTHEON_ENVIRONMENT']`. Drush commands and policy files must reference `$_ENV` when reading Pantheon environment information. Refer to our documentation on [using the `$_SERVER` superglobal in custom code](/guides/environment-configuration/read-environment-config/#using-_server) for more information.
 
 ### Terminus Drush Silent Failure
 
@@ -26,7 +26,7 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
-Newer versions of Drush fail with a message `[warning] Drush command terminated abnormally.`. For example: 
+Newer versions of Drush fail with the message `[warning] Drush command terminated abnormally.`. For example: 
 
 ```bash
 [warning] Drush command terminated abnormally.
@@ -54,7 +54,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
 
 ### Drush Commands on Remote Aliases Not Working from Inside Local Drupal Install
 
-Some Drush 5 commands need to be executed from outside the context of a local Drupal installation, due to a [known issue with Drush 5](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context looks like the following:
+Some Drush 5 commands must be executed from outside the context of a local Drupal installation, due to a [known issue with Drush 5](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context looks like the following:
 
 ```bash{outputLines:2-8}
 drush @pantheon.SITENAME.ENV status
@@ -105,13 +105,16 @@ drush @pantheon.SITENAME.ENV status
 
 ### Drush Error: "Unknown option: --db-url"
 
+This error only affects Drupal 7 sites running a Drush version below Drush 8, and 
+looks similar to the example below:
+
 ```bash{outputLines:2-3}
 drush @pantheon.SITENAME.ENV cc all
 Unknown option: --db-url. See `drush help cache-clear` for available [error]
 options. To suppress this error, add the option --strict=0.
 ```
 
-To resolve this error, follow the suggestion and add the option `--strict=0`:
+Follow the suggestion and add the option `--strict=0` to resolve this error: 
 
 ```bash{outputLines:2-3}
 drush @pantheon.SITENAME.ENV cc all --strict=0
@@ -119,25 +122,25 @@ drush @pantheon.SITENAME.ENV cc all --strict=0
 /srv/bindings/BINDINGID/code#ENV-SITENAME.pantheonsite.io
 ```
 
-This only affects Drupal 7 sites running a Drush version below Drush 8
-
 ### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
+
+This error looks similar to the example below.
 
 ```none
 Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
 
-To resolve, add a default or empty `sites/default/settings.php` to your site's code.
+You can add a default or empty `sites/default/settings.php` to your site's code to resolve this error.
 
 ### Unable to Connect to MySQL Server
 
-Sometimes, you may encounter the following error when running Drush MySQL commands:
+You might encounter the following error when running Drush MySQL commands:
 
 ```none
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
 ```
 
-This can happen when an inactive site has spun down. To resolve this error, wake environments by loading the home page or with the following [Terminus](/terminus) command:
+This error response happens when an inactive site has spun down. Wake environments by loading the home page or with the following [Terminus](/terminus) command to resolve this error:
 
 ```bash{promptUser: user}
 terminus env:wake SITENAME.ENV
@@ -145,7 +148,7 @@ terminus env:wake SITENAME.ENV
 
 ### Unable to Connect to drush.in Hostnames (DNS)
 
-Some ISPs have issues resolving a drush.in hostname; if you're having trouble connecting to a drush.in hostname, you can use the `dig` command to investigate further.
+Some ISPs have issues resolving a `drush.in hostname;`. You can use the `dig` command to investigate if you're experiencing trouble connecting to a `drush.in hostname`.
 
 ```bash{outputLines:2-19}
 dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
@@ -169,7 +172,7 @@ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; MSG SIZE rcvd: 78
 ```
 
-As you can see in the output above, the status REFUSED suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
+In the example above, the REFUSED status suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
 
 ```bash{outputLines:2-26}
 dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
@@ -202,7 +205,7 @@ appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in. 599 IN A 67.207.1
 
 In this example, Google's DNS is able to properly resolve the drush.in hostname.
 
-You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) instead of the default provided by your ISP to properly resolve the hostnames.
+You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) instead of the default provided by your ISP to correctly resolve the host names.
 
 ### Timeouts When Using Long-Running Migrate or Other Drush Commands
 
@@ -216,11 +219,11 @@ drush migrate-import migration --feedback="1000 lines processed"
 
 ### Drush error: Failed opening required .../vendor/bin/includes/preflight.inc
 
+This error indicates that the vendor directory contains Drush binaries that should be removed. Remove any Drush files from `vendor/bin` and `vendor/drush` using `git rm`.
+
 ```none
 Fatal error: require(): Failed opening required '/srv/bindings/.../code/vendor/bin/includes/preflight.inc' (include_path='.:/usr/share/pear:/usr/share/php') in /srv/bindings/.../vendor/bin/drush.php on line 11
 ```
-
-This indicates that the vendor directory contains Drush binaries that should be removed. Remove any Drush files from `vendor/bin` and `vendor/drush` using `git rm`.
 
 ## More Resources
 
