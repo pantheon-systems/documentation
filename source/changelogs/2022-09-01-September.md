@@ -17,7 +17,7 @@ PHP 8.1 is now recommended for Drupal sites [version 2.4.3](https://proxysql.com
 
 ### WordPress 6.0.2
 
-[WordPress 6.0.2](https://wordpress.org/news/2022/08/wordpress-6-0-2-security-and-maintenance-release/) is currently available on the Pantheon platform. This release features nearly a thousand enhancements and bug fixes. This release features 12 bug fixes on Core, 5 bug fixes for the Block Editor, and 3 security fixes. Because this is a security release, it is recommended that you update your sites immediately. The next major release will be version 6.1 which is planned for late 2022.
+[WordPress 6.0.2](https://wordpress.org/news/2022/08/wordpress-6-0-2-security-and-maintenance-release/) is currently available on the Pantheon platform. This release features nearly a thousand enhancements and bug fixes. Because this is a security release, it is recommended that you update your sites immediately. The next major release will be version 6.1 which is planned for late 2022.
 
 
 ### WordPress Composer Managed Upstream in Early Access
