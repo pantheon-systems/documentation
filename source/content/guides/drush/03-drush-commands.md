@@ -1,6 +1,6 @@
 ---
 title: Drupal Drush Command-Line Utility on Pantheon
-subtitle: Use Drush Commands
+subtitle: Drush Commands
 description: Learn how to use Drush commands on your Pantheon site.
 cms: "Drupal"
 categories: [get-started]

@@ -1,6 +1,6 @@
 ---
 title: Drupal Drush Command-Line Utility on Pantheon
-subtitle: Use Drush Aliases
+subtitle: Drush Aliases
 description: Learn how to use Drush aliases.
 cms: "Drupal"
 categories: [get-started]
@@ -15,19 +15,23 @@ This section provides information on how to use Drush aliases.
 
 ## Download Drush Aliases Locally
 
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/terminus) to download your Drush aliases.
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. 
 
-Authenticate Terminus with [machine tokens](/machine-tokens) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
+1. Use [Terminus](/terminus) to download your Drush aliases.
 
-```bash{promptUser: user}
-terminus aliases
-```
+1. Authenticate Terminus with [machine tokens](/machine-tokens) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
-This command will write both Drush 8 and Drush 9 aliases into the directory `$HOME/.drush` for your sites that you are a direct member of. To create aliases for all sites that you can use, including sites that you have access to via team membership, run:
+  ```bash{promptUser: user}
+  terminus aliases
+  ```
 
-```bash{promptUser: user}
-terminus aliases --all
-```
+  This command will write both Drush 8 and Drush 9 aliases into the directory `$HOME/.drush` for your sites that you are a direct member of. 
+
+1. Run the command below to create aliases for all sites that you can use, including sites that you have access to via team membership: 
+
+  ```bash{promptUser: user}
+  terminus aliases --all
+  ```
 
 If you add a site to your account, you will have to download a new copy of your Drush aliases. You do not need to update your Drush aliases when you add new Mulitdev environments to your sites.
 
@@ -53,7 +57,7 @@ $aliases['example.*'] = array(
 );
 ```
 
-Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sites/pantheon`. The site name is used to generate the filename, e.g. `example.site.yml`. The contents of a Drush 9 alias file looks something like the following example:
+Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sites/pantheon`. The site name is used to generate the filename, e.g. `example.site.yml`. The contents of a Drush 9 alias file looks something like the example below:
 
 ```yaml
 '*':
@@ -69,17 +73,23 @@ Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sit
 
 <Alert type="info" title="Note">
 
-You must be a [site team member](/team-management/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
+You must be a [site team member](/team-management/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators cannot see all associated sites within their alias file, but can see sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
 
 </Alert>
 
 Note that these are both "wildcard" aliases. The same wildcard alias is used for every environment available for a given site. The variable `${env-name}` is replaced with the appropriate environment name when used.
 
-Pantheon also uses "policy files" to validate aliases before they are used. The policy files are written by the `terminus aliases` command; the Drush 8 policy file is written to `$HOME/.drush/pantheon/drush8/pantheon_policy.drush.inc`, and the Drush 9 policy file is written to `$HOME/.drush/pantheon/Commands/PantheonAliasPolicyCommands.php`. These files should not be deleted.
+### Policy Files
+
+Pantheon uses policy files to validate aliases before they are used. Policy files are written by the `terminus aliases` command. 
+
+- The Drush 8 policy file is written to `$HOME/.drush/pantheon/drush8/pantheon_policy.drush.inc`. Do not delete this file.
+
+- The Drush 9 policy file is written to `$HOME/.drush/pantheon/Commands/PantheonAliasPolicyCommands.php`. Do not delete this file.
 
 ### List Available Site Aliases
 
-Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
+Verify that the site aliases are available by listing every site alias known to Drush after the Pantheon Drush aliases have been copied.
 
 ```bash{promptUser: user}
 drush sa
@@ -87,22 +97,24 @@ drush sa
 
 ## Drush Alias Strict Control
 
-Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory. You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
+You can create strict control policies for your Drush aliases.
 
-If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download with Terminus. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option.
+1. Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory. You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
-To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site:
+  If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download with Terminus. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option.
 
-```php:title=policy.drush.inc
-function policy_drush_sitealias_alter(&$alias_record) {
-  // Provide the correct 'uri' for a specific site
-  if ($alias_record['#name'] == 'pantheon.SITENAME.live') {
-    $alias_record['uri'] = 'example.com';
-  }:title=settings.php
-}
-```
+1. Use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site to avoid editing the generated Pantheon aliases file every time it is downloaded:
 
-Replace `SITENAME` with your Pantheon site name, and `example.com` with the correct URI for that site.
+  ```php:title=policy.drush.inc
+  function policy_drush_sitealias_alter(&$alias_record) {
+    // Provide the correct 'uri' for a specific site
+    if ($alias_record['#name'] == 'pantheon.SITENAME.live') {
+      $alias_record['uri'] = 'example.com';
+    }:title=settings.php
+  }
+  ```
+
+1. Replace `SITENAME` with your Pantheon site name, and `example.com` with the correct URI for that site.
 
 ## More Resources
 
