@@ -69,20 +69,30 @@ $15
 englash english
 ```
 
-### Clear Cache in Pantheon Dashboard
+## Clearing Cached Data
 
-You can clear the Object Cache through the [Pantheon Dashboard](https://pantheon.io/docs/clear-caches#pantheon-dashboard). Clearing the Object Cache this way sets all keys to expire, or clear, when initiated. 
+You can clear the application cache via the Dashboard, Terminus, or the CMS, and it will also clear the Redis cache. However, the Redis cache will only be cleared if the appropriate module or plugin is active and the CMS application is functioning.
 
-Alternatively, you can use the `flushall` command to clear all keys from the cache.
+#### Drupal
+
+Drupal deletes and regenerates cached entries during a cache rebuild or cache clear. The cache clear operation also writes a new set of keys in Redis to store when the last delete took place. Any keys created before this time will no longer be returned as valid cache entries. You can use Redis to store more permanent data in this case using custom programming without it being automatically cleared, unless it is in one of the existing caches that Drupal manages.
+
+#### WordPress
+
+Any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache if [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
+
+Refer to the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup method if necessary.
+
+### Clear All Keys
+
+You can use the `flushall` command to clear all keys from the cache. 
+
+**Note:** If the [CMS cache clearing](#clearing-cached-data) is functioning as expected this is generally not necessary. Be aware that in Drupal it is possible that custom programming may rely on values stored here that are not meant to be temporary.
 
 ```bash
 redis> flushall
 OK
 ```
-
-### Clear Cache with WP Redis
-
-When [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin or the Pantheon dashboard.
 
 ### Check the Number of Keys in Cache
 
