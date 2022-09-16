@@ -21,10 +21,14 @@ You can, however, use Terminus as follows:
 echo 'SELECT * FROM users WHERE uid=1;' | terminus drush SITENAME.ENV sql:cli
 ```
 
-Note that certain characters such as `;` cannot be used in the query. If you use an illegal character, you will get an error message "Command not supported as typed."
+Note that certain characters such as `;` cannot be used in the query. You will get an error message if you use an illegal character:
+
+> Command not supported as typed.
 
 Note that the trailing `;` in the SQL query is optional in this context.
 
 ## More Resources
 
 - [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql/mysql-workbench)
+- [Database Connection Errors](/database-connection-errors)
+- [Database Workflow Tool](/database-workflow)
