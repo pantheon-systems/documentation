@@ -4,7 +4,7 @@ subtitle: Site Creation
 description: Configure the frontend and create a site.
 categories: [platform]
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan, joa-pan, backlineint, cobypear, hckia]
+contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true
@@ -29,6 +29,8 @@ You should have the **Decoupled** tab enabled in your dashboard after onboarding
 * (Optional) If using a preconfigured starter kit template, you will use one of the following combinations:
 
     * Drupal 9 and Next.js
+    
+    * WordPress and Next.js
 
     * WordPress and Gatsby
 
@@ -142,6 +144,30 @@ You are directed to a new page with the site name, deployment, and build informa
 #### Site Creation with Drupal and Next.js Starter Kit Template Configuration
 
 1. After clicking the **Drupal and Next.js** option, select a repo listed under **Choose your Git provider**. Click **Continue**.
+
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. 
+
+1. Select the desired **Drupal** CMS backend from the dropdown menu.
+
+1. Select the site environment from which to source the content.
+
+1. (Optional) Set the Environment Variables in the Advanced Setting section. If you do not configure the Advanced Settings with the stater kit, the build will complete. You need to specify environment variables to configure a Decoupled Site (CMS) preview.
+
+1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information/ status. Now, you can view the build log by clicking **Build Details**.
+
+1. Click **View Site** after the build completes to launch your frontend site. You can select **Make this a private repository** to provide greater security for your Git repository.
+
+
+### Create a Site with WordPress and Next.js
+
+#### Prerequisites
+
+* You are using a Git repository and the repository is already connected.
+* You are using WordPress as your CMS. You have installed and configured your Drupal site using the starter kit configuration.
+
+#### Site Creation with WordPress and Next.js Starter Kit Template Configuration
+
+1. After clicking the **WordPress and Next.js** option, select a repo listed under **Choose your Git provider**. Click **Continue**.
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. 
 
