@@ -13,7 +13,10 @@ anchorid: drush-versions
 
 This section provides information on Drush versions and site-local usage.
 
-Pantheon runs Drush 8 on newly created Drupal 7 sites, and Drush 10 on newly created Drupal 9 sites by default.
+Pantheon runs Drush versions based on your Drupal version:
+
+- **Drupal 9**: Drush 10 (for newly created sites)
+- **Drupal 7**: Drush 8 (for newly created sites)
 
 ## Available Drush Versions
 
@@ -23,7 +26,7 @@ We recommend managing your site through Composer. Visit the [Build Tools Workflo
 
 ## Verify Current Drush Version
 
-You can use [Terminus](/terminus/) to verify the current version of Drush running on Pantheon:
+You can use [Terminus](/terminus/) to verify the current version of Drush running on your Pantheon site:
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- status | grep "Drush version"
@@ -35,15 +38,15 @@ terminus drush <site>.<env> -- status | grep "Drush version"
 
 ## Configure Drush Version
 
-Refer to [Available Drush Versions](#available-drush-versions) and the [requirements below](#compatibility-and-requirements) before you modify a site's Drush version, as not all versions of Drush are compatible with all versions of Drupal.
+1. Refer to [Available Drush Versions](#available-drush-versions) and the [requirements below](#compatibility-and-requirements) before you modify a site's Drush version. Remember that not all versions of Drush are compatible with all versions of Drupal.
 
-Change a site's Drush version via the [`pantheon.yml` file](/pantheon-yml/):
+1. Change your site's Drush version via the [`pantheon.yml` file](/pantheon-yml/):
 
-```yaml:title=pantheon.yml
-api_version: 1
+    ```yaml:title=pantheon.yml
+    api_version: 1
 
-drush_version: 8
-```
+    drush_version: 8
+    ```
 
 Now your site’s Drush version is managed via `pantheon.yml`. This allows Drush to be version controlled and deployed along with the rest of your code.
 
@@ -55,9 +58,9 @@ Create the `pantheon.yml` file if it does not already exist. If a `pantheon.upst
 
 ## Troubleshoot Your Drush Version
 
-Sometimes, even after updating the Drush version in `pantheon.yml`, the correct version of Drush is not called.
+Occasionally, the correct version of Drush is not called even after updating the Drush version in `pantheon.yml`. 
 
-The Pantheon platform always prefers the site-local Drush or other local settings over the setting in `pantheon.yml`. 
+The Pantheon platform always prefers the site-local Drush or other local settings over the setting in the `pantheon.yml` file.
 
 1. Check for an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory. 
 
@@ -75,7 +78,7 @@ Refer to [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon
 
 #### Permissions
 
-Site-local Drush requires executable permissions. Follow the steps below if you encounter "permission denied" errors when running Drush commands.
+Site-local Drush requires executable permissions. Follow the steps below if you encounter `permission denied` errors when running Drush commands.
 
 1. Adjust permissions on the Drush executable:
 
@@ -100,5 +103,4 @@ Configure a newer version of Drush as [documented above](#configure-drush-versio
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
 - [Expand Your Use of Drush on Pantheon with More Commands (Blog)](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands)
-- [Drupal Drush Command-Line Utility](/guides/drush/)
 - [The `pantheon.yml` Configuration File](/pantheon-yml)

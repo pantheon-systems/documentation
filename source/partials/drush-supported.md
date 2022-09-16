@@ -1,1 +1,5 @@
-Pantheon currently supports Drush versions 8, 10, and 11.
+Pantheon currently supports the following Drush versions:
+
+- Drush 11
+- Drush 10
+- Drush 8

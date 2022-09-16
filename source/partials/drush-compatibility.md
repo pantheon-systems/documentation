@@ -1,5 +1,5 @@
 
-Drush only supports one install method; it requires that your Drupal site be built with Composer and that Drush be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
+Drush only supports one install method. Your Drupal site is required to be built with Composer and your Drush must be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
 
 * [Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher.
 Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure-drush-version) displayed above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 9 or higher, [Composer](/guides/composer/), and PHP 7.1 or higher.
@@ -12,7 +12,7 @@ Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure
 
 <Alert title="Note" type="info">
 
-When running Drush locally, we highly recommend running Drush version 8.3.2 or higher.
+We highly recommend running Drush version 8.3.2 or higher when running Drush locally.
 
 </Alert>
 

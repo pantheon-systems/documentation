@@ -229,3 +229,4 @@ Fatal error: require(): Failed opening required '/srv/bindings/.../code/vendor/b
 
 - [Timeouts](/timeouts)
 - [Domains on Pantheon Guide](/guides/domains/dns)
+- [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql/mysql-workbench)
