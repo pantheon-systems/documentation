@@ -4,7 +4,7 @@ subtitle: Use the Redis Command Line
 description: Use the Redis Command Line to manage Object Cache.
 categories: [performance]
 tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/redis-command-line
@@ -53,7 +53,7 @@ You don't need to install anything locally to use Redis on Pantheon. However, if
   redis>
   ```
 
-### Find a Specific Key
+## Find a Specific Key
 
 You can use search patterns that contain globs if you need to find a specific key. For example:
 

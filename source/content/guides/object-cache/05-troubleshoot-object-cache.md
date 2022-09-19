@@ -4,7 +4,7 @@ subtitle: Troubleshoot
 description: Review solutions to common troubleshooting scenarios for Object Cache.
 categories: [performance]
 tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/troubleshoot-object-cache

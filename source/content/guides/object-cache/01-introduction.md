@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
 categories: [performance]
 tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/object-cache

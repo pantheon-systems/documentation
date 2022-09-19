@@ -4,7 +4,7 @@ subtitle: FAQs
 description: Get answers to your Object Cache questions.
 categories: [performance]
 tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/faq-object-cache
