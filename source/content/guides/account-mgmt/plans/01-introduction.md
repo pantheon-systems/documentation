@@ -6,9 +6,9 @@ categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/account-mgmt/plans
+permalink: docs/guides/account-mgmt/plans
 anchorid: plans
-editpath: docs/account-mgmt/plans/01-introduction.md
+editpath: docs/guides/account-mgmt/plans/01-introduction.md
 reviewed: "2022-09-19"
 ---
 
