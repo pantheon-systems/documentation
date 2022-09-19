@@ -39,15 +39,11 @@ You should have the **Decoupled** tab enabled in your dashboard after onboarding
 
 ### Compatibility
 
-You can create an application from scratch by importing a repository or you can use the Pantheon starter kit templates to develop a decoupled site. Use the starter kits to create: 
-
-* A server-side rendered applications with Next.js and Drupal
-
-* A static site generated site with Gatsby and WordPress
+You can create an application from scratch by importing a repository or you can use the Pantheon starter kit templates to develop a decoupled site. 
 
 You can also create a site without a CMS. Create a site from scratch by importing the repository and using Next.js or Gatsby as the static site generator.
 
-The versions that are supported are as follows:
+The versions that are supported include:
 
 |  Tooling   |      Version    |
 |  :---:     |       :---:     |
@@ -83,11 +79,17 @@ You need to configure your frontend to point to the backend. If your Pantheon ba
 1. Specify the permission configurations and click **Install**. Your GitHub repository is now connected and you can continue with decoupled site creation on the Pantheon dashboard. 
 
 
-### Create a Site by Importing a Repository
+### Create a Site 
+
+<TabList>
+
+<Tab title="No Starter Kit" id="import-create-site" active={true}>
+
+#### Create a Site by Importing a Repository
 
 Connect to your Git provider and select an existing repository.
 
-#### Prerequisites 
+##### Prerequisites 
 
 * You are using a Git repository.
 
@@ -99,9 +101,9 @@ Connect to your Git provider and select an existing repository.
     * `yarn.lock`
 
 
-#### Site Creation without a Starter Kit 
+##### Site Creation without a Starter Kit 
 
-Create a site with out configuring the backend and link to a frontend framework. To connect your GitHub repository, click **Import Repository** on the _What kind of site are you creating?_ page.
+Create a site without configuring the backend and link to a frontend framework. To connect your GitHub repository, click **Import Repository** on the _What kind of site are you creating?_ page.
 
 1. If you have not already connected your GitHub account, follow the steps in the Connect your Account section. Otherwise, if your GitHub account is already connected you can proceed to the next step and select your Git provider.
 
@@ -133,10 +135,13 @@ Create a site with out configuring the backend and link to a frontend framework.
 
 You are directed to a new page with the site name, deployment, and build information/ status. You will receive a message that you decoupled site has successfully been added to Pantheon. You can view the build log by clicking **Build Details**.
 
+</Tab>
 
-### Create a Site with Drupal and Next.js
+<Tab title="Drupal and Next.js Starter Kit" id="drupal-next-create-site" active={true}>
 
-#### Prerequisites
+#### Create a Site with Drupal and Next.js
+
+##### Prerequisites
 
 * You are using a Git repository and the repository is already connected.
 * You are using Drupal as your CMS. You have installed and configured your Drupal site using the starter kit configuration.
@@ -157,40 +162,46 @@ You are directed to a new page with the site name, deployment, and build informa
 
 1. Click **View Site** after the build completes to launch your frontend site. You can select **Make this a private repository** to provide greater security for your Git repository.
 
+</Tab>
 
-### Create a Site with WordPress and Next.js
+<Tab title="WordPress and Next.js Starter Kit" id="wordpress-next-create-site" active={true}>
 
-#### Prerequisites
+#### Create a Site with WordPress and Next.js
+
+##### Prerequisites
 
 * You are using a Git repository and the repository is already connected.
-* You are using WordPress as your CMS. You have installed and configured your Drupal site using the starter kit configuration.
+* You are using WordPress as your CMS. You have installed and configured your WordPress site using the starter kit configuration.
 
-#### Site Creation with WordPress and Next.js Starter Kit Template Configuration
+##### Site Creation with WordPress and Next.js Starter Kit Template Configuration
 
 1. After clicking the **WordPress and Next.js** option, select a repo listed under **Choose your Git provider**. Click **Continue**.
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. 
 
-1. Select the desired **Drupal** CMS backend from the dropdown menu.
+1. Select the desired **WordPress** CMS backend from the dropdown menu.
 
 1. Select the site environment from which to source the content.
 
-1. (Optional) Set the Environment Variables in the Advanced Setting section. If you do not configure the Advanced Settings with the stater kit, the build will complete. You need to specify environment variables to configure a Decoupled Site (CMS) preview.
+1. (Optional) Set the Environment Variables in the Advanced Setting section. If you do not configure the Advanced Settings with the stater kit, the build will complete.
 
 1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information/ status. Now, you can view the build log by clicking **Build Details**.
 
 1. Click **View Site** after the build completes to launch your frontend site. You can select **Make this a private repository** to provide greater security for your Git repository.
 
+</Tab>
 
-### Create a Site with WordPress and Gatsby
+<Tab title="WordPress and Gatsby Starter Kit" id="wordpress-next-create-site" active={true}>
 
-#### Prerequisites
+#### Create a Site with WordPress and Gatsby
+
+##### Prerequisites
 
 * You are using a Git repository and you have connected your GitHub account. 
 
 * You are using WordPress as your CMS. You have installed your WordPress site using the Decoupled WordPress Recommended Project configuration, which has the `wp-graphql` plugin enabled.
 
-#### Site Creation with WordPress and Gatsby Starter Kit Template Connfiguration
+##### Site Creation with WordPress and Gatsby Starter Kit Template Connfiguration
 
 1. Click the **Gatsby + WordPress** template and select a Git provider listed under **Choose your Git provider**. Click **Continue**.
 
@@ -203,3 +214,6 @@ You are directed to a new page with the site name, deployment, and build informa
 1. Optionally, you can set the Environment Variables in the **Advanced Setting** section.
 
 1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information and status. Now, you can view the build log by clicking **Build Details**.
+
+</Tab>
+</TabList>
