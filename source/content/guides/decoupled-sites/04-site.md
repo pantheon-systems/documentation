@@ -11,7 +11,7 @@ showtoc: true
 anchorid: site
 permalink: docs/guides/decoupled-sites/site/
 editpath: decoupled-sites/04-site.md
-reviewed: "2022-08-11"
+reviewed: "2022-09-19"
 ---
 
 ## Before You Begin
@@ -83,7 +83,7 @@ You need to configure your frontend to point to the backend. If your Pantheon ba
 
 <TabList>
 
-<Tab title="No Starter Kit" id="import-create-site" active={true}>
+<Tab title="Without a Starter Kit" id="import-create-site" active={true}>
 
 #### Create a Site by Importing a Repository
 
@@ -201,7 +201,7 @@ You are directed to a new page with the site name, deployment, and build informa
 
 * You are using WordPress as your CMS. You have installed your WordPress site using the Decoupled WordPress Recommended Project configuration, which has the `wp-graphql` plugin enabled.
 
-##### Site Creation with WordPress and Gatsby Starter Kit Template Connfiguration
+##### Site Creation with WordPress and Gatsby Starter Kit Template Configuration
 
 1. Click the **Gatsby + WordPress** template and select a Git provider listed under **Choose your Git provider**. Click **Continue**.
 
