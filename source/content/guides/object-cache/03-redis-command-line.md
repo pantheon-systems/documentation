@@ -69,7 +69,7 @@ $15
 englash english
 ```
 
-## Clearing Cached Data
+## Clear Cached Data
 
 You can clear the application cache via the Dashboard, Terminus, or the CMS, and it will also clear the Redis cache. However, the Redis cache will only be cleared if the appropriate module or plugin is active and the CMS application is functioning.
 

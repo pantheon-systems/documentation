@@ -84,7 +84,7 @@ sftp>
 
 ### Why Won't My Site Work After Importing a Database Backup?
 
-When you replace the database with one that doesn't match the Object Cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the Object Cache from the command line](/guides/object-cache/redis-command-line#clear-cache-in-pantheon-dashboard).
+When you replace the database with one that doesn't match the Object Cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the Object Cache from the command line](/guides/object-cache/redis-command-line#clear-cached-data).
 
 ## More Resources
 
