@@ -31,7 +31,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 Autopilot can report failures via email or [Quicksilver hooks](/quicksilver#hooks) immediately, and send a weekly email report summarizing all Autopilot activity.
 
-![Autopilot overview page shows a site with a failed test](../../../images/autopilot/autopilot-overview-failed-vrt.png)
+![Autopilot overview page shows a site with a failed test](../../../images/autopilot/autopilot-sites-overview.png)
 
 If an error is detected during an update attempt, the **Autopilot Status** shows **Needs Attention** with two options to **Review Test Results** or to **View Update Details**.
 
