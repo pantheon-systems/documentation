@@ -11,15 +11,16 @@ showtoc: true
 anchorid: starter-kits
 permalink: docs/guides/decoupled-sites/starter-kits/
 editpath: decoupled-sites/03-starter-kits.md
-reviewed: "2022-08-11"
+reviewed: "2022-09-19"
 ---
 
 ## Create the CMS Backend
 
 You can create a Front-End Site by using a Pantheon starter kit. Choose either a WordPress or Drupal CMS and connect it to the frontend application to create a site. The following configurations exist for the starter kit templates:
 
-* [Drupal and Next.js](https://github.com/pantheon-systems/decoupled-drupal-recommended) - This configuration supports server-side rendering. 
-* [WordPress and Gatsby](https://github.com/pantheon-systems/decoupled-wordpress-recommended) - This configuration supports static site generation. 
+* Drupal and Next.js
+* WordPress and Next.js
+* WordPress and Gatsby
 
 
 ## Backend Installation and Configuration
