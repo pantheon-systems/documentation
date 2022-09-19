@@ -20,7 +20,7 @@ We highly recommend running Drush version 8.3.2 or higher when running Drush loc
 | Drush Version  | PHP Version | End of Life     | Drupal 7| Drupal 8 | Drupal 9
 | ------------- |-------------|-------------|-------------   |------------- |-------------  |
 | 11*      | 7.4+     | TBD      |  <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:green">✔</span>  |
-| 10      | 7.1+     | Jan. 2022| ❌      |Compatible, unsupported | Compatible,unsupported| 
+| 10      | 7.1+ | Jan. 2022| ❌ |Compatible, unsupported | Compatible, unsupported| 
 | 9      | 5.6+     | May 2020  | ❌      |Compatible, unsupported |<span style="color:red">❌ </span>|
 | 8     | 5.4.5+     | Nov. 2022| <span style="color:green">✔</span>    |Supported, not recommended|<span style="color:red">❌ </span>|
 | 7      | 5.3.0+     | July 2017| Compatible, unsupported    |<span style="color:red">❌ </span>  |<span style="color:red">❌ </span>|

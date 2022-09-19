@@ -46,7 +46,7 @@ Terminus provides advanced interaction with the platform and allows us to run Dr
   terminus site:list
   ```
 
-If your Pantheon site is on the list, installation and authentication were successful!
+Your installation and authentication were successful if your Pantheon site is on the list.
 
 ## Create Your Site and Initialize Environments
 
@@ -62,7 +62,9 @@ The next few sections use the example variables `my-d9-site` and `"My D9 Site"` 
   terminus site:create my-d9-site "My D9 Site" "drupal-composer-managed"
   ```
 
-  If you would like to associate this site with an Organization, you can add the `--org` option to the command above and pass the Organization name, label, or ID. Use the `site:org:add` command to associate an existing site with an Organization. 
+  - You can add the `--org` option to the command above and pass the Organization name, label, or ID if you want to associate this site with an Organization.
+  
+  - Use the `site:org:add` command to associate an existing site with an Organization.
 
 1. Open your new Site Dashboard in a browser:
 
@@ -70,15 +72,15 @@ The next few sections use the example variables `my-d9-site` and `"My D9 Site"` 
   terminus dashboard:view my-d9-site
   ```
 
-  Keep this window open while you continue reading so you can see the changes you are making in Terminus almost immediately in your Site Dashboard.
+  Keep this window open while you continue reading so you can see the changes you are making in Terminus appear almost immediately in your Site Dashboard.
 
 1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 9 on the Dev environment:
 
   ```bash{promptUser: user}
   terminus drush my-d9-site.dev -- site-install -y
   ```
-  
-  If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](/ssh-keys#control-path-error).
+
+  - You may need to [update your SSH configuration](/ssh-keys#control-path-error) if you get the error message `ControlPath too long`.
 
 1. Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
 
@@ -115,9 +117,10 @@ You can now replace `my-d9-site` in every command, so that you don't have to typ
   ```bash{promptUser: user}
   echo $TERMINUS_SITE
   ```
-  You can now copy and paste the remainder of these commands without replacing the site name, as they use the `$TERMINUS_SITE` variable.
 
-1. Run the code below to get the connection information for the Dev environment:
+  You can now copy and paste the remainder of these commands without replacing the site name because they use the `$TERMINUS_SITE` variable.
+
+1. Run the command below to get the connection information for the Dev environment:
 
   ```bash{promptUser: user}
   terminus connection:info $TERMINUS_SITE.dev
@@ -139,7 +142,7 @@ You can also manage all modules with [Composer](/guides/composer), or with Panth
 
 We recommend that you download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel).
 
-You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live environments. For this exercise on a Sandbox site, you can have the modules installed in all three environments.
+You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live environments. You can have the modules installed in all three environments for this exercise on a Sandbox site.
 
 1. Download and install the latest stable release of the `devel` package from [drupal.org](https://www.drupal.org/) via Composer:
 
@@ -299,7 +302,7 @@ Follow the steps below for a demonstration of the typical workflow on Pantheon.
 
 ## The Power of Terminus and Drush
 
-If you're a developer who lives in the command line, you now see the power of Terminus and Drush. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like Drush (and WP-CLI for WordPress) give you the power to manage the inner workings of your Drupal-powered site. Now, you're ready to take the sandbox site you've setup and explore on your own to see what else is possible.
+Terminus provides the power to manage most aspects of your Pantheon sites, while tools like Drush (and WP-CLI for WordPress) give you the power to manage the inner workings of your Drupal-powered site. Now, you're ready to take the sandbox site you've setup and explore on your own to see what else is possible.
 
 ## More Resources
 
