@@ -143,3 +143,100 @@ If you would like the repo created to be under a GitHub organization instead of 
 For information on additional options, refer to the [Command Options](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options) section of the build tools documentation.
 
 For information on additional options, refer to the [Command Options](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options) section or see our Build Tools [documentation](/guides/build-tools/).
+
+
+## Frontend Starter Configurations
+
+<TabList>
+<Tab title="Drupal and Next.js Starter" id="nextdrupal-front-install" active={true}>
+
+The `next-drupal-starter` is designed as a starting point for a Next.js site that consumes data from a Drupal backend - specifically a Drupal backend
+configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
+
+The starter has a dependency on the `@pantheon-systems/drupal-kit`.
+
+
+### Creating A New Project with the Drupal and Next.js Starter Template
+
+There are two methods for creating a new project based on the `next-drupal-starter`:
+
+1. Clone the starter repository
+1. Use `create-next-app`
+
+To clone the starter directly from GitHub, visit the repository link https://github.com/pantheon-systems/next-drupal-starter and click
+**Code** to open the clone dropdown and select your preferred method.
+
+To create a new project using `create-next-app`, enter the following command:
+
+```bash
+npx create-next-app -e https://github.com/pantheon-systems/next-drupal-starter --use-npm
+```
+
+The command `create-next-app` uses the `yarn` package manager by default. Omit the `--use-npm` flag to use `yarn`, or keep it to use `npm`.
+
+</Tab>
+ 
+<Tab title="WordPress and Next.js Starter" id="nextwordpress-front-install" active={true}>
+
+The `next-wordpress-starter` is designed as a starting point to for a Next.js site that consumes data from a WordPress backend - specifically a WordPress
+backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
+
+The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
+ 
+## Creating A New Project with the WordPress and Next.js Starter Template
+
+There are two methods that can be used to create a new project based on the `next-wordpress-starter`:
+
+1. Clone the starter repository directly
+1. Use `create-next-app`
+
+To clone the starter directly from GitHub, visit the repository link https://github.com/pantheon-systems/next-wordpress-starter and click **Code** to open the clone dropdown and select your preferred method.
+
+To create a new project using `create-next-app`, enter the following command:
+
+```bash
+npx create-next-app -e https://github.com/pantheon-systems/next-wordpress-starter --use-npm
+```
+
+The `create-next-app` command uses the `yarn` package manager by default. Omit the `--use-npm` flag to use `yarn`, or keep it to use `npm`.
+
+</Tab>
+ 
+<Tab title="WordPress and Gatsby Starter" id="gatsbywordpress-front-install" active={true}>
+ 
+The `gatsby-wordpress-starter` is designed as a starting point for a Gatsby site that consumes data from a WordPress backend - specifically a WordPress
+backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
+
+The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
+
+
+### Creating A New Project with the WordPress and Gatsby Starter Template
+
+There are two methods that can be used to creating a new project with the `gatsby-wordpress-starter`:`
+
+1. Clone the starter repository 
+2. Use the `gatsby-cli`
+
+To clone the starter directly from GitHub, visit the repository https://github.com/pantheon-systems/gatsby-wordpress-starter and click
+**Code** to open the clone dropdown and select your preferred method.
+
+To create a new project using the `gatsby-wordpress-starter` as a template, [use the `gatsby new` command](https://www.gatsbyjs.com/docs/reference/gatsby-cli/#creating-a-site-from-a-starter).
+
+```shell
+# if gatsby-cli is installed locally...
+gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
+# or use npx
+npx gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
+```
+
+If you have a package manager preference, you must set it in the `gatsby-cli` options before initiating your new project.
+
+```shell
+# set your preferred package manager with the following command
+# for npm
+gatsby options set pm npm
+# for yarn
+gatsby options set pm yarn
+```
+</Tab>
+</TabList>
