@@ -13,9 +13,9 @@
   linkedin: //www.linkedin.com/in/michellecolon
 - id: 
   name: Joanie Edwards
-  avatar: //github.com/.png?size=460
+  avatar: //github.com/joa-pan.png?size=460
   bio: Senior Technical Writer, Pantheon
-  github: //github.com/
+  github: //github.com/joa-pan
   drupal: https://www.drupal.org/u/_joan
 - id: wordsmither
   name: Jennifer Hoffman
@@ -356,6 +356,11 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
   bio: Customer Onboarding Manager, Pantheon
   github: //github.com/peter-pantheon
+- id: jms-pantheon
+  name: Jordan Schulz
+  avatar: //github.com/jms-pantheon.png?size=460
+  bio: Customer Success Engineer, Pantheon
+  github: //github.com/jms-pantheon
 - id: eeeschwartz
   name: Erik Schwartz
   url: //erikschwartz.net

@@ -94,7 +94,7 @@ redis> flushall
 OK
 ```
 
-### Check the Number of Keys in Cache
+## Check the Number of Keys in Cache
 
 You can use the `DBSIZE` command to check the number of keys in the cache. The following is sample output:
 
@@ -103,7 +103,7 @@ redis> DBSIZE
 :0
 ```
 
-### View Service Configuration Details
+## View Service Configuration Details
 
 You can use the `config get *memory*` command to check the cache memory. The following is sample output:
 
@@ -113,7 +113,7 @@ maxmemory
 52428800
 ```
 
-### Hit/Miss Ratio
+## Hit/Miss Ratio
 
 You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency because most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
 
@@ -126,7 +126,7 @@ Run the following code to access your Hit/Miss ratio:
   keyspace_misses:15
   ```
 
-### Continuous Stats Mode
+## Continuous Stats Mode
 
 Continuous Stats Mode uses the `--stat` option to monitor Object Cache instances in real time. In this mode, a new line of information with differences between old data points and new data points is printed every second by default. This allows you to view memory usage and connected clients.
 
@@ -148,7 +148,7 @@ keys       mem      clients blocked requests            connections
 
 You can also use the `i` (interval) option in this mode to change the frequency at which new lines are printed.
 
-### Big Keys Mode
+## Big Keys Mode
 
 Object Cache works as a key space analyzer when using the `--bigkeys` option. It scans the dataset for big keys, but also provides information about the data types within the dataset.
 
