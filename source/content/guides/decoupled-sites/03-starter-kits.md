@@ -26,11 +26,11 @@ You can create a Front-End Site by using a Pantheon starter kit. Choose either a
 
 Choose from the following approaches to configure your backend:
 
+* Dashboard Upstream: 
+  *  Use this option if you prefer a more streamlined configuration; this is the Pantheon recommended option.
+  
 * Build Tools:
   * Use this option if testing is important to your team's workflow. You will not have to manually push changes to your Pantheon code repository.
-
-* Dashboard Upstream: 
-  *  Use this option if you prefer a more streamlined configuration. 
 
 
 <TabList>
@@ -39,7 +39,7 @@ Choose from the following approaches to configure your backend:
 
 #### Dashboard Upstream Install
 
-You can install the Drupal backend by using the Dashboard upstream.
+Install the Drupal backend by using the Dashboard upstream.
 
 Navigate to the Pantheon Dashboard to create a site from the [Decoupled Drupal Composer Managed upstream](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) 
 
@@ -71,25 +71,23 @@ Alternatively, you can use Terminus. Enter the following command to create a sit
 
 This action will result in a GitHub repository created for this new codebase under the authenticated user's namespace (unless the `--org` option is used), a site created on Pantheon, and a CircleCI project created for automated deployments.
 
- </Tab>
+</Tab>
 
 <Tab title="WordPress Backend" id="wordpress-install">
-
-- Run `terminus build:project:create`:
+ 
+Create a [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) upstream using the Pantheon Dashboard.
+ 
+Alternatively, you can run `terminus build:project:create`:
 
   ```
-  terminus build:project:create \
-    --team='{My Team Name}' \
-    --template-repository="git@github.com:pantheon-systems/decoupled-wordpress-recommended.git" \
-    pantheon-systems/decoupled-wordpress-recommended \
-    --ci-template='git@github.com:pantheon-systems/advanced-ci-templates' \
-    --visibility private {PROJECT_NAME} \
-    --stability=dev
+    terminus site:create my-new-site "Describe Site" --org='My Team Name' c9f5e5c0-248f-4205-b63a-d2729572dd1f
   ```
 
   * Replace `{PROJECT_NAME}` with a Project name for example `decoupled-wordpress`.
 
   * Replace `{My Team Name}` with your team name - for example `My Agency`. This can also be omitted.
+
+  * The `upstream_id` for Decoupled WordPress Composer Managed is`c9f5e5c0-248f-4205-b63a-d2729572dd1f`.
 
 This will result in a GitHub repository created for this new codebase, a site created on Pantheon and a CircleCI project created for automated deployments.
 
