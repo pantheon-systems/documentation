@@ -13,13 +13,13 @@ anchorid: drush
 
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities to administer and maintain your site.
 
-Drush commands require a `settings.php` file, and it's a best practice to have one.  Drupal 7 sites do not contain a `settings.php` file. However, you can copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/guides/git/git-config) for Drush to work on older Drupal versions. Refer to [Configuring Settings.php](/guides/php/settings-php) more information.
+Drush commands require a `settings.php` file. However, Drupal 7 sites do not contain a `settings.php` file. You can copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/guides/git/git-config) for Drush to work on older Drupal versions. Refer to [Configuring Settings.php](/guides/php/settings-php) more information.
 
 ## Terminus Drush and Local Drush
 
 Refer to Drush's [install documentation](https://docs.drush.org/en/8.x/install/) for information on installing Drush locally.
 
-Drush developers should also install and use [Terminus](/terminus), a command-line interface that allows you to control your Pantheon account and sites. Terminus allows you to script almost every action you can complete in the Dashboard. It can also make remote Drush calls on your environments without having Drush installed locally. This eliminates incompatibility issues between local and remote installation versions of Drush.
+Drush developers should also install and use [Terminus](/terminus), a command-line interface for controlling your Pantheon account and sites. Terminus allows you to script almost every action that you can complete in the Dashboard. It can also make remote Drush calls on your environments without having Drush installed locally. This eliminates incompatibility issues between local and remote installation versions of Drush.
 
 Terminus automatically uses the version of Drush it finds in `vendor/bin/drush` when running Drush commands on the platform if you have a [Composer-based site](/guides/composer).
 

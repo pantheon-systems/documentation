@@ -38,9 +38,9 @@ terminus drush <site>.<env> -- status | grep "Drush version"
 
 ## Configure Drush Version
 
-1. Refer to [Available Drush Versions](#available-drush-versions) and the [requirements below](#compatibility-and-requirements) before you modify a site's Drush version. Remember that not all versions of Drush are compatible with all versions of Drupal.
+1. Refer to [Available Drush Versions](#available-drush-versions) and [Drush requirements](#compatibility-and-requirements) before you modify a site's Drush version. Remember that not all versions of Drush are compatible with all versions of Drupal.
 
-1. Change your site's Drush version via the [`pantheon.yml` file](/pantheon-yml/):
+1. Change your site's Drush version in the [`pantheon.yml` file](/pantheon-yml/):
 
     ```yaml:title=pantheon.yml
     api_version: 1
@@ -50,7 +50,8 @@ terminus drush <site>.<env> -- status | grep "Drush version"
 
 Now your site’s Drush version is managed via `pantheon.yml`. This allows Drush to be version controlled and deployed along with the rest of your code.
 
-<Alert title="Note" type="info">
+
+<Alert title="Note"  type="info" >
 
 Create the `pantheon.yml` file if it does not already exist. If a `pantheon.upstream.yml` file exists, do not edit it. It is used by the upstream updates repository and will cause a [merge conflict if modified](/core-updates#error-updating-conflict-modifydelete-pantheonupstreamyml-deleted-in-head-and-modified-in-upstreammaster-version-upstreammaster-of-pantheonupstreamyml-left-in-tree).
 
@@ -92,7 +93,7 @@ Site-local Drush requires executable permissions. Follow the steps below if you 
 
 Drupal sites created on Pantheon in late 2015 or earlier that do not have `drush_version` defined in `pantheon.yml` may default to Drush 5. In this case, you may see the following error:
 
-```none
+```bash
 {{Uncaught Error: Call to undefined function mysql_connect() in /etc/drush/drush-5-extensions/pantheon.drush.inc:127
 ```
 
