@@ -223,9 +223,10 @@ To clone the starter directly from GitHub, visit the repository https://github.c
 To create a new project using the `gatsby-wordpress-starter` as a template, [use the `gatsby new` command](https://www.gatsbyjs.com/docs/reference/gatsby-cli/#creating-a-site-from-a-starter).
 
 ```shell
-# if gatsby-cli is installed locally...
+# If gatsby-cli is installed locally
 gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
-# or use npx
+ 
+# If you are using npx
 npx gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
 ```
 
