@@ -148,7 +148,7 @@ For information on additional options, refer to the [Command Options](https://gi
 ## Frontend Starter Configurations
 
 <TabList>
-<Tab title="Drupal and Next.js Starter" id="nextdrupal-front-install" active={true}>
+<Tab title="Drupal & Next.js" id="nextdrupal-front-install" active={true}>
 
 The `next-drupal-starter` is designed as a starting point for a Next.js site that consumes data from a Drupal backend - specifically a Drupal backend
 configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
@@ -176,7 +176,7 @@ The command `create-next-app` uses the `yarn` package manager by default. Omit t
 
 </Tab>
  
-<Tab title="WordPress and Next.js Starter" id="nextwordpress-front-install" active={true}>
+<Tab title="WordPress & Next.js" id="nextwordpress-front-install" active={true}>
 
 The `next-wordpress-starter` is designed as a starting point to for a Next.js site that consumes data from a WordPress backend - specifically a WordPress
 backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
@@ -202,7 +202,7 @@ The `create-next-app` command uses the `yarn` package manager by default. Omit t
 
 </Tab>
  
-<Tab title="WordPress and Gatsby Starter" id="gatsbywordpress-front-install" active={true}>
+<Tab title="WordPress & Gatsby" id="gatsbywordpress-front-install" active={true}>
  
 The `gatsby-wordpress-starter` is designed as a starting point for a Gatsby site that consumes data from a WordPress backend - specifically a WordPress
 backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
@@ -212,7 +212,7 @@ The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
 
 ### Creating A New Project with the WordPress and Gatsby Starter Template
 
-There are two methods that can be used to create a new project with the `gatsby-wordpress-starter`:`
+There are two methods that can be used to create a new project with the `gatsby-wordpress-starter`:
 
 * Clone the starter repository 
 * Use the `gatsby-cli`
