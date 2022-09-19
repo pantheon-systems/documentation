@@ -232,11 +232,10 @@ npx gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/g
 If you have a package manager preference, you must set it in the `gatsby-cli` options before initiating your new project.
 
 ```shell
-# set your preferred package manager with the following command
-# for npm
+# Set your preferred package manager for npm
 gatsby options set pm npm
 
-# for yarn
+# Set your preferred package manager for yarn
 gatsby options set pm yarn
 ```
 </Tab>
