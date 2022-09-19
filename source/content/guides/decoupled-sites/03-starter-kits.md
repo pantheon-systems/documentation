@@ -158,10 +158,10 @@ The starter has a dependency on the `@pantheon-systems/drupal-kit`.
 
 ### Creating A New Project with the Drupal and Next.js Starter Template
 
-There are two methods for creating a new project based on the `next-drupal-starter`:
+There are two methods that can be used to create a new project based on the `next-drupal-starter`:
 
-1. Clone the starter repository
-1. Use `create-next-app`
+* Clone the starter repository
+* Use `create-next-app`
 
 To clone the starter directly from GitHub, visit the repository link https://github.com/pantheon-systems/next-drupal-starter and click
 **Code** to open the clone dropdown and select your preferred method.
@@ -183,12 +183,12 @@ backend configured with the `pantheon-decoupled` and `wp-graphql` plugins instal
 
 The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
  
-## Creating A New Project with the WordPress and Next.js Starter Template
+### Creating A New Project with the WordPress and Next.js Starter Template
 
 There are two methods that can be used to create a new project based on the `next-wordpress-starter`:
 
-1. Clone the starter repository directly
-1. Use `create-next-app`
+* Clone the starter repository
+* Use `create-next-app`
 
 To clone the starter directly from GitHub, visit the repository link https://github.com/pantheon-systems/next-wordpress-starter and click **Code** to open the clone dropdown and select your preferred method.
 
@@ -212,10 +212,10 @@ The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
 
 ### Creating A New Project with the WordPress and Gatsby Starter Template
 
-There are two methods that can be used to creating a new project with the `gatsby-wordpress-starter`:`
+There are two methods that can be used to create a new project with the `gatsby-wordpress-starter`:`
 
-1. Clone the starter repository 
-2. Use the `gatsby-cli`
+* Clone the starter repository 
+* Use the `gatsby-cli`
 
 To clone the starter directly from GitHub, visit the repository https://github.com/pantheon-systems/gatsby-wordpress-starter and click
 **Code** to open the clone dropdown and select your preferred method.
@@ -235,6 +235,7 @@ If you have a package manager preference, you must set it in the `gatsby-cli` op
 # set your preferred package manager with the following command
 # for npm
 gatsby options set pm npm
+
 # for yarn
 gatsby options set pm yarn
 ```
