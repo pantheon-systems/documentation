@@ -155,7 +155,6 @@ configured with the [`pantheon_decoupled` module](https://www.drupal.org/project
 
 The starter has a dependency on the `@pantheon-systems/drupal-kit`.
 
-
 ### Creating A New Project with the Drupal and Next.js Starter Template
 
 There are two methods that can be used to create a new project based on the `next-drupal-starter`:
@@ -173,8 +172,8 @@ npx create-next-app -e https://github.com/pantheon-systems/next-drupal-starter -
 ```
 
 The command `create-next-app` uses the `yarn` package manager by default. Omit the `--use-npm` flag to use `yarn`, or keep it to use `npm`.
-
 </Tab>
+
 
 <Tab title="WordPress & Next.js" id="nextwordpress-front-install" active={true}>
 
@@ -199,16 +198,15 @@ npx create-next-app -e https://github.com/pantheon-systems/next-wordpress-starte
 ```
 
 The `create-next-app` command uses the `yarn` package manager by default. Omit the `--use-npm` flag to use `yarn`, or keep it to use `npm`.
-
 </Tab>
  
-<Tab title="WordPress & Gatsby" id="wordpressgatsby-front-install" active={true}>
- 
+
+<Tab title="WordPress & Gatsby" id="wordpressgatsby-front-install" active={true}> 
+
 The `gatsby-wordpress-starter` is designed as a starting point for a Gatsby site that consumes data from a WordPress backend - specifically a WordPress
 backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
 
 The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
-
 
 ### Creating A New Project with the WordPress and Gatsby Starter Template
 
