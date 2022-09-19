@@ -134,4 +134,3 @@ Run the following command to access your site's memory usage metrics:
 
 - [Basic Troubleshooting](/basic-troubleshooting)
 - [PHP Errors and Exceptions](/guides/php/php-errors)
-- [site.env](/terminus/examples#siteenv)

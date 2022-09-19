@@ -6,7 +6,6 @@ categories: [performance]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, whitneymeredith]
 layout: guide
-showtoc: true
 permalink: docs/guides/object-cache/remove-object-cache
 anchorid: remove-object-cache
 ---

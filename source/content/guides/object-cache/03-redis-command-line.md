@@ -181,9 +181,3 @@ Biggest   hash found 'myobject' has 3 fields
 1 hashs with 3 fields (00.20% of keys, avg size 3.00)
 0 zsets with 0 members (00.00% of keys, avg size 0.00)
 ```
-
-
-## More Resources
-
-- [Using WP-CLI On The Pantheon Platform](/wp-cli)
-- [Terminal Manual Command Reference](/terminus/commands)
