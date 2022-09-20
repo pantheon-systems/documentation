@@ -6,54 +6,65 @@ categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
+showtoc: true
 permalink: docs/guides/account-mgmt/plans/pricing
 anchorid: pricing
 editpath: docs/guides/account-mgmt/plans/05-pricing.md
 reviewed: "2022-09-19"
 ---
 
-Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading this section.
+The following tables provide both the list and preferred pricing for Pantheon Plans.
 
-## Organizations
+<dl>
 
-Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev environments, and support to provide administrators with the tools needed to effectively manage a large number of sites. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+<dt ignored>List Price</dt>
 
-Your Organization Dashboard allows you to manage your:
-- Sites
-- Organization Team
-- Organization Settings
-- And Support, across all of your sites
+<dd>
 
+Set price for new sites created after November 15, 2018 that aren’t purchased via a qualified agency partner.
 
-Refer to [Organizations](/organizations) for details. 
+</dd>
 
-## Roles
+<dt ignored>Preferred Price</dt>
 
-Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
+<dd>
 
-Refer to [Change Management](/change-management) for more details.
+Preferred pricing is available via qualified [Agency Partners](https://pantheon.io/plans/partner-program?docs). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information about pricing, or use the [Partner Agency Directory](https://directory.pantheon.io/agencies?docs) to find an agency.
 
-## Dashboards
+</dd>
 
-The [User Dashboard](/user-dashboard) provides access to all of your sites and account information. This is the page you'll land on when you first log in.
+</dl>
+| Plan                 | Preferred Price | List Price  |
+| -------------------- | --------------- | ----------- |
+| Basic                | $35             | $50         |
+| Performance (Small)  | $125            | $175        |
+| Performance (Medium) | $225            | $300        |
+| Performance (Large)  | $450            | $600        |
+| Performance (XL)     | $750            | $1,000      |
 
-The [Organization Dashboard](/organization-dashboard) is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+## Annual Billing
 
-Each site on the User and Organization Dashboards opens a [Site Dashboard](/site-plan) where you manage [sites](/site-plan/), [metrics](/metrics/) and [billing](/site-billing/). The Site Dashboard provides the most options and is the most flexible of your spaces on Pantheon. 
+Pantheon offers [annual billing plans at lower rates](/annual-billing), giving up to two month's worth of savings.
 
-## Pricing
+| Plan                 | Preferred Annual Price | Annual Savings  |
+| -------------------- | ---------------------- | --------------- |
+| Basic                | $350                   | $70             |
+| Performance (Small)  | $1375                  | $125            |
+| Performance (Medium) | $2475                  | $225            |
+| Performance (Large)  | $4950                  | $450            |
+| Performance (XL)     | $8250                  | $750            |
 
-Refer to our [Pantheon Pricing Comparison](https://pantheon.io/pricing-comparison) for more information.
+Note:
+Plan prices are not shown in the Site Dashboard, and you will not be prompted to enter billing information as described below.
 
-## Billing
+If the site is associated with an Enterprise Flagship organization, additional Performance plans not shown in the Site Dashboard are available to purchase.
 
-Billing can be managed in one of two places:
+[Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
 
-- For specific sites, billing is managed via the [Site Dashboard](/site-billing).
-- For the entire account, billing is managed via the [User Dashboard](/account-billing)
+## Tax Exempt Status Pricing
 
-Billing can be done monthly or annually.
+To make it easy for our team to confirm your tax-exempt status and have it reflected on your bill quickly, [contact Support](/guides/support/contact-support/) and provide the following information in the [chat](/guides/support/contact-support/#real-time-chat-support) or [support ticket](/guides/support/contact-support/#ticket-support):
 
-- [Monthly billing](/guides/new-dashboard/workspace-billing/subscriptions) is the default option.
-  
-- [Annual billing](/annual-billing) is available to all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost. Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
+- An attached copy of the organization's [tax exemption determination letter](https://www.irs.gov/charities-non-profits/exempt-organizations-affirmation-letters)
+- Email address of Site Owner
+- [Dashboard](/sites) URL of affected sites

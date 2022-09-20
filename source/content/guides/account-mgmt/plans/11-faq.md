@@ -6,54 +6,31 @@ categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
+showtoc: true
 permalink: docs/guides/account-mgmt/plans/faq
 anchorid: faq
 editpath: docs/guides/account-mgmt/plans/11-faq.md
 reviewed: "2022-09-19"
 ---
 
-Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading this section.
+### Can I host more than one site on an individual plan?
 
-## Organizations
+No. Each online site plan is tied to a single install of the CMS.
 
-Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev environments, and support to provide administrators with the tools needed to effectively manage a large number of sites. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+### Does Pantheon offer discounting for buying sites in bulk?
 
-Your Organization Dashboard allows you to manage your:
-- Sites
-- Organization Team
-- Organization Settings
-- And Support, across all of your sites
+Yes. If you are interested in bulk pricing, [Contact our sales team](https://pantheon.io/contact-us?docsplanFAQ) or your dedicated account manager to discuss.
 
+### What if my site's metrics exceed the limit of the Performance Extra Large Plan?
 
-Refer to [Organizations](/organizations) for details. 
+The Performance Extra Large Plan allows for 300,000 monthly visits and 1.5 million monthly page views. High traffic sites should be moved to an Elite plan. To learn about moving to an [Elite Plan](https://pantheon.io/plans/elite?docsplanFAQ), please [contact us](https://pantheon.io/contact-us?docsplanFAQ).
 
-## Roles
+If you exceed the Performance Extra Large plan limits of 300,000 monthly visits or 1.5 million page views, your site will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via the Dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
 
-Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
+| Payment Type      | Price            |
+|:----------------- |:---------------- |
+| List Monthly      |  $1,500          |
+| List Annual       |  $16,500         |
 
-Refer to [Change Management](/change-management) for more details.
+Note that the annual plan prices are listed as annual cost.
 
-## Dashboards
-
-The [User Dashboard](/user-dashboard) provides access to all of your sites and account information. This is the page you'll land on when you first log in.
-
-The [Organization Dashboard](/organization-dashboard) is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
-
-Each site on the User and Organization Dashboards opens a [Site Dashboard](/site-plan) where you manage [sites](/site-plan/), [metrics](/metrics/) and [billing](/site-billing/). The Site Dashboard provides the most options and is the most flexible of your spaces on Pantheon. 
-
-## Pricing
-
-Refer to our [Pantheon Pricing Comparison](https://pantheon.io/pricing-comparison) for more information.
-
-## Billing
-
-Billing can be managed in one of two places:
-
-- For specific sites, billing is managed via the [Site Dashboard](/site-billing).
-- For the entire account, billing is managed via the [User Dashboard](/account-billing)
-
-Billing can be done monthly or annually.
-
-- [Monthly billing](/guides/new-dashboard/workspace-billing/subscriptions) is the default option.
-  
-- [Annual billing](/annual-billing) is available to all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost. Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.

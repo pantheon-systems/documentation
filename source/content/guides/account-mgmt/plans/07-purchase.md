@@ -6,54 +6,96 @@ categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
+showtoc: true
 permalink: docs/guides/account-mgmt/plans/purchase
 anchorid: purchase
 editpath: docs/guides/account-mgmt/plans/07-purchase.md
 reviewed: "2022-09-19"
 ---
 
-Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading this section.
+This section covers purchasing a new plan. Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
 
-## Organizations
+<Alert title="Note" type="info">
 
-Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev environments, and support to provide administrators with the tools needed to effectively manage a large number of sites. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing) for more information.
 
-Your Organization Dashboard allows you to manage your:
-- Sites
-- Organization Team
-- Organization Settings
-- And Support, across all of your sites
+</Alert>
 
+## Select Plan
 
-Refer to [Organizations](/organizations) for details. 
+1. Go to the Site Dashboard.
 
-## Roles
+1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
 
-Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
+1. Click **Select** to switch plans:
 
-Refer to [Change Management](/change-management) for more details.
+ ![Select a different plan](../images/dashboard/select-plan.png)
 
-## Dashboards
+## Enter Billing Information
 
-The [User Dashboard](/user-dashboard) provides access to all of your sites and account information. This is the page you'll land on when you first log in.
+Site ownership is designated to the user account entering billing information.
 
-The [Organization Dashboard](/organization-dashboard) is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+<TabList>
 
-Each site on the User and Organization Dashboards opens a [Site Dashboard](/site-plan) where you manage [sites](/site-plan/), [metrics](/metrics/) and [billing](/site-billing/). The Site Dashboard provides the most options and is the most flexible of your spaces on Pantheon. 
+<Tab title="Add New Card" id="add-cc-id" active={true}>
 
-## Pricing
+If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
 
-Refer to our [Pantheon Pricing Comparison](https://pantheon.io/pricing-comparison) for more information.
+1. Click the **<span class="glyphicon glyphicon-plus"></span> Add New Card** link.
 
-## Billing
+1. Enter the email address you would like invoices sent to.
 
-Billing can be managed in one of two places:
+1. Enter your credit card information and click **Add Card**.
 
-- For specific sites, billing is managed via the [Site Dashboard](/site-billing).
-- For the entire account, billing is managed via the [User Dashboard](/account-billing)
+1. Make sure the desired card is selected and click **Continue**.
 
-Billing can be done monthly or annually.
+</Tab>
 
-- [Monthly billing](/guides/new-dashboard/workspace-billing/subscriptions) is the default option.
-  
-- [Annual billing](/annual-billing) is available to all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost. Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
+<Tab title="Select Existing Card" id="existing-cc-id">
+
+To associate an existing card from your account as the payment method for this site:
+
+1. Select the desired card.
+
+1. Click **Continue**.
+
+</Tab>
+
+<Tab title="Send a Request" id="request-payment-id">
+
+<Partial file="transfer-ownership-billing-intro.md" />
+<Partial file="transfer-ownership-billing-steps.md" />
+
+</Tab>
+
+</TabList>
+
+## Confirm Your Purchase
+
+1. Make sure the **Plan** details are correct.
+
+1. Verify the card shown in **Billing** details.
+
+1. Click the **Submit** button.
+
+The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
+
+Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
+
+Add-ons
+- [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
+ - [Object Cache](/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+
+Pantheon also offers [New Relic&reg; Performance Monitoring](/guides/new-relic) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+
+## Enable Add-ons
+
+From the Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
+
+You can access New Relic&reg; Performance Monitoring directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
+
+### Add-ons and the Basic Plan
+
+Pantheon Search and Object Cache are available to Sandbox plans for testings, and to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
+
+For more information about the Basic plan, see [Manage Plans in the Site Dashboard](/site-plan/#basic-plan), or see our [Site Plan FAQ](/site-plans-faq#plan-resources) to learn more about plan resources.
