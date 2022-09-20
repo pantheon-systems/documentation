@@ -1,59 +1,58 @@
 ---
 title: Plans
-subtitle: Introduction
-description: Learn about Pantheon's site plans.
+subtitle: Plan Resources
+description: Learn about the resources provided with each of Pantheon's site plans.
 categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
+showtoc: true
 permalink: docs/guides/account-mgmt/plans/resources
 anchorid: resources
 editpath: docs/guides/account-mgmt/plans/03-resources.md
 reviewed: "2022-09-19"
 ---
 
-Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading this section.
+The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
 
-## Organizations
+## Current Plan Resources
 
-Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev environments, and support to provide administrators with the tools needed to effectively manage a large number of sites. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+|                                                                                                                                                | Basic                                     | Performance Small                         | Performance Medium                        | Performance Large                         | Performance Extra Large                   | Elite                                     |
+|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|-------------------------------------------|
+| Application Containers                                                                                                                         | 1                                         | 1                                         | 2                                         | 3                                         | 4                                         | 4+                                        |
+| PHP Workers                                                                                                                                    | 4                                         | 8                                         | 16                                        | 24                                        | 32                                        | Managed<br />Scaling                      |
+| PHP Memory Limit                                                                                                                               | 256MB                                     | 256MB                                     | 512MB                                     | 512MB                                     | 512MB                                     | 512MB                                     |
+| Storage                                                                                                                                        | 20GB                                      | 30GB                                      | 50GB                                      | 100GB                                     | 200GB                                     | 200GB+                                    |
+| Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/docs/guides/domains/'>Domains and Redirects</a>."  />  | 5                                         | 10                                        | 15                                        | 35                                        | 70                                        | 270                                       |
+| Free and managed HTTPS <Popover   content = "For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."  />                  | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| New Relic <Popover   content = "For details, see <a href='/guides/new-relic/'>New Relic APM Pro</a>."  />                                        | ❌                                         | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Object Cache <Popover   content = "For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  />     | ❌                                         | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Pantheon Search (Solr) <Popover   content = "For details, see <a href='/docs/solr/'>Pantheon Search (formerly Pantheon Solr)</a>."  />                                            | ❌                                         | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
 
-Your Organization Dashboard allows you to manage your:
-- Sites
-- Organization Team
-- Organization Settings
-- And Support, across all of your sites
+<Alert title="Note" type="info">
+
+If the number of custom domains on a site exceeds that allowed by the new site plan, the site will be migrated to the next largest site plan that matches the number of custom domains used.
+
+</Alert>
+
+## Legacy Platform Resources
+
+<Alert title="Legacy Site Plans Only" type="info">
+
+This section reflects resources for legacy site plans. Sites that have been upgraded or launched to our new plans should refer to [the previous section](#current-plan-resources) for current information.
+
+</Alert>
 
 
-Refer to [Organizations](/organizations) for details. 
-
-## Roles
-
-Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
-
-Refer to [Change Management](/change-management) for more details.
-
-## Dashboards
-
-The [User Dashboard](/user-dashboard) provides access to all of your sites and account information. This is the page you'll land on when you first log in.
-
-The [Organization Dashboard](/organization-dashboard) is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
-
-Each site on the User and Organization Dashboards opens a [Site Dashboard](/site-plan) where you manage [sites](/site-plan/), [metrics](/metrics/) and [billing](/site-billing/). The Site Dashboard provides the most options and is the most flexible of your spaces on Pantheon. 
-
-## Pricing
-
-Refer to our [Pantheon Pricing Comparison](https://pantheon.io/pricing-comparison) for more information.
-
-## Billing
-
-Billing can be managed in one of two places:
-
-- For specific sites, billing is managed via the [Site Dashboard](/site-billing).
-- For the entire account, billing is managed via the [User Dashboard](/account-billing)
-
-Billing can be done monthly or annually.
-
-- [Monthly billing](/guides/new-dashboard/workspace-billing/subscriptions) is the default option.
-  
-- [Annual billing](/annual-billing) is available to all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost. Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
+|                                | Personal                                               | Professional                                           | Business                                               | Elite                                                  |
+|--------------------------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
+| Application Containers         | 1                                                      | 1                                                      | 2                                                      | 4+                                                     |
+| PHP Concurrency                | 4                                                      | 8                                                      | 8                                                      | 8                                                      |
+| PHP Memory Limit               | 256MB                                                  | 256MB                                                  | 512MB                                                  | 512MB <Popover   content = "Up to 1024MB is available for certain Elite plans.[Learn more about Pantheon Elite Plans](https://pantheon.io/pantheon-elite-plans) and contact Sales for information about plans with custom resources." />                                                                                       |
+| MySQL Buffer Pool              | 128MB                                                  | 512MB           | 1024MB                                                 | 2014MB+                                                |
+| Storage                        | 5GB                                                    | 20GB                                                   | 30GB                                                   | 100GB+                                                 |
+| Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/guides/domains'>Domains and Redirects</a>." /> | 5                                                      | 25                                                     | 100                                                    | 200                                                    |
+| Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." />        | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span>| <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| New Relic <Popover content="For details, see <a href='/guides/new-relic/'>New Relic APM Pro</a>." />                     | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Object Cache  <Popover content="For details, see <a href='/docs/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>." />                 |                                                        | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
+| Multidev <Popover content="All sites associated with an organization have access to <a href='/docs/multidev/>Multidev</a> regardless of plan." />                      |                                                        |                                                        |<span  style= " color:green " > ✔ </span> | <span  style= " color:green " > ✔ </span> |
