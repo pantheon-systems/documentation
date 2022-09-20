@@ -4,7 +4,7 @@ subtitle: Confirm Experience Protection
 description: Provide an uninterrupted experience for your users.
 categories: [performance]
 tags: [cache, cdn]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/experience-protection
