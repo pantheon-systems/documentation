@@ -6,7 +6,6 @@ cms: "Drupal"
 categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
-showtoc: true
 permalink: docs/guides/drush/drush-sql-queries
 anchorid: drush-sql-queries
 ---
