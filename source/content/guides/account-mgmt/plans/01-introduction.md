@@ -23,4 +23,4 @@ reviewed: "2022-09-19"
     <dd>The maximum amount of memory a single PHP process can use. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.</dd>
     <dt>MySQL Buffer Pool</dt>
     <dd>The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.</dd>
-<dl>
+</dl>
