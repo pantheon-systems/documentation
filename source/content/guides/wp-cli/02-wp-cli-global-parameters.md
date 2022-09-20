@@ -1,5 +1,5 @@
 ---
-title: WP-CLI On The Pantheon Platform
+title: WP-CLI on the Pantheon Platform
 subtitle: WP-CLI Global Parameters
 description: Review important WP-CLI global parameters.
 cms: "WordPress"
