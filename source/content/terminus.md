@@ -32,7 +32,7 @@ Use Terminus to perform these and [other operations](/terminus/commands/):
 - Clone one environment to another
 - Check for and apply upstream updates
 - Deploy code from one environment to another
-- Run [Drush](/drush/) and [WP-CLI](/wp-cli/) commands
+- Run [Drush](/drush/) and [WP-CLI](/guides/wp-cli/) commands
 
 ## Contribute
 

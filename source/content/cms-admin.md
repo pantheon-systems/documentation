@@ -31,7 +31,7 @@ Operations that require write access to the codebase must be executed while the 
 - Activating a new theme in the site admin,
 - Uploading a new module or plugin using an SFTP client,
 - Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <Popover content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/drush/'>Drupal Drush Command-Line Utility</a>." />
-- Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <Popover content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>." />
+- Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <Popover content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/guides/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>." />
 
 ## WordPress Dashboard
 
@@ -93,7 +93,7 @@ export SITE=yoursitename
 
 1. [Commit](#commit-sftp-changes) the code change. If you're working in a Multidev environment, [merge](/guides/multidev#merge-code) the change to Dev at this point.
 
-1. Use [WP-CLI](/wp-cli) through Terminus to remove the necessary tables from the Live environment's database while skipping file deletion. Replace `<plugin-name>` in the example below:
+1. Use [WP-CLI](/guides/wp-cli) through Terminus to remove the necessary tables from the Live environment's database while skipping file deletion. Replace `<plugin-name>` in the example below:
 
   ```bash{promptUser: user}
   terminus wp $SITE.live -- plugin uninstall <plugin-name> --skip-delete
