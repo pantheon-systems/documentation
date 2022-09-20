@@ -33,7 +33,7 @@ Downloading the Pantheon aliases to your local Drush aliases file allows you to 
   terminus aliases --all
   ```
 
-If you add a site to your account, you will have to download a new copy of your Drush aliases. You do not need to update your Drush aliases when you add new Mulitdev environments to your sites.
+You must download a new copy of your Drush aliases if you add a site to your account. You do not need to update your Drush aliases when you add new Mulitdev environments to your sites.
 
 <Alert type="info" title="Note">
 
@@ -43,7 +43,7 @@ You must use Drush 8.3.0 or 9.6.0 or later to use Drush aliases directly. Earlie
 
 ### Structure of Site Aliases
 
-The form Pantheon Drush aliases take depends on the version of Drush being used. Drush 8 aliases are all written to a single file, `$HOME/.drush/pantheon.aliases.drushrc.php`. A single alias record looks something like the example below:
+The form Pantheon Drush aliases take depends on the version of Drush you use. Drush 8 aliases are all written to a single file, `$HOME/.drush/pantheon.aliases.drushrc.php`. A single alias record looks something like the example below:
 
 ```php:title=pantheon.aliases.drushrc.php
 $aliases['example.*'] = array(
@@ -99,9 +99,9 @@ drush sa
 
 You can create strict control policies for your Drush aliases.
 
-1. Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory. You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
+1. Create a file called `policy.drush.inc`, and place it in the `.drush` folder of your home directory. You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
-  If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download with Terminus. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option.
+  Pantheon will select an arbitrary domain to include in the alias file that you download with Terminus if your live site is associated with multiple domains. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option.
 
 1. Use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site to avoid editing the generated Pantheon aliases file every time it is downloaded:
 
