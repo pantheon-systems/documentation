@@ -60,7 +60,7 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 
 ### Basic Plan
 
-[New Relic](/guides/new-relic), [Object Cache](/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[New Relic](/guides/new-relic), [Object Cache](/guides/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 For Object Cache and Pantheon Search (Solr), the following code changes are required before the feature can be safely disabled:
 

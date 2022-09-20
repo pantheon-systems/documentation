@@ -149,4 +149,4 @@ By using these methods and files to find your PHP errors and performance issues,
 
 - [PHP Errors and Exceptions](/guides/php/php-errors)
 
-- [Object Cache](/object-cache)
+- [Object Cache](/guides/object-cache)

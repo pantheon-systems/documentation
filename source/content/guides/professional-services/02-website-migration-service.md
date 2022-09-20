@@ -67,7 +67,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
   - Disable unnecessary or unsupported modules and plugins
 
 - Pantheon Plugin/Module installation
-  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, [Redis Object Cache](/object-cache), and/or [Pantheon Search](/solr), as needed
+  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, [Redis Object Cache](/guides/object-cache), and/or [Pantheon Search](/solr), as needed
 
 - Plugin & theme workarounds
   - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
