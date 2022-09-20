@@ -21,6 +21,7 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
     <dt>Professional Workspace</dt>
     <dd>Professional workspaces bring together users, sites, Custom Upstreams, Multidev, and support to provide administrators with the tools needed to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.</dd>
 </dl>
+<<<<<<< HEAD
 
 ## Create a Workspace
 
@@ -52,3 +53,5 @@ You can enter terms and conditions that are displayed to Workspace members.
 
 
 ## Delete a Workspace
+=======
+>>>>>>> 6e9973e0869b297451ae0d82c141250c589d183a
