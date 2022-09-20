@@ -26,7 +26,7 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
-Newer versions of Drush fail with the message `[warning] Drush command terminated abnormally.`. For example: 
+Newer versions of Drush fail with the message: `[warning] Drush command terminated abnormally.` For example: 
 
 ```bash
 [warning] Drush command terminated abnormally.
@@ -67,7 +67,7 @@ drush @pantheon.SITENAME.ENV status
  configuration php
 ```
 
-To make your Drush 5 commands work on Pantheon aliases, change your directory to a context outside of a working local Drupal installation:
+Change your directory to a context outside of a working local Drupal installation to make your Drush 5 commands work on Pantheon aliases:
 
 ```bash{outputLines:2, 5, 6-31}
 pwd
@@ -172,7 +172,7 @@ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; MSG SIZE rcvd: 78
 ```
 
-In the example above, the REFUSED status suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
+In the example above, the REFUSED status suggests an incorrect resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
 
 ```bash{outputLines:2-26}
 dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
@@ -203,13 +203,13 @@ appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in. 599 IN A 67.207.1
 ;; MSG SIZE rcvd: 622
 ```
 
-In this example, Google's DNS is able to properly resolve the drush.in hostname.
+In this example, Google's DNS is able to correctly resolve the `drush.in` hostname.
 
 You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) instead of the default provided by your ISP to correctly resolve the host names.
 
 ### Timeouts When Using Long-Running Migrate or Other Drush Commands
 
-Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Pantheon's timeouts for SSH based commands are outlined in our [documentation on timeouts](/timeouts). To avoid a timeout related to a lack of output, be sure your commands return output to the terminal session in under 10 minutes.
+Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Pantheon's timeouts for SSH based commands are outlined in our [documentation on timeouts](/timeouts). Confirm that your commands return output to the terminal session in under 10 minutes to avoid a timeout related to a lack of output.
 
 For example, using the `--feedback` flag:
 

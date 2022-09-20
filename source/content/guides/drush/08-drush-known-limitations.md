@@ -15,14 +15,14 @@ This section provides an overview of known Drush limitations on Pantheon.
 
 ## Crontab
 
-Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
+Currently, there is no way to manage Crontab on Pantheon. You can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register) if you need a way to set up your own Cron interval.
 
 ## Unsupported Commands
 
 The following Drush commands are not supported and will not work on Pantheon sites:
 - `sql-sync-pipe`. Use `sql-sync` instead.
-- `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) Refer to [Drush SQL Queries](/guides/drush/drush-sql-queries)
-- `sql-sync` cannot currently be executed on the live environment with more than 1 application container due to Pantheon's highly available architecture. We recommend you use Terminus or `sql-sync` a Multidev, Dev or Test environment which only has 1 application container.
+- `sql-cli` (`sqlc`) and `sql-query` (`sqlq`). Refer to [Drush SQL Queries](/guides/drush/drush-sql-queries)
+- `sql-sync` cannot currently be executed on the Live environment with more than 1 application container due to Pantheon's highly available architecture. We recommend you use Terminus or `sql-sync` on a Multidev, Dev or Test environment which only has 1 application container.
 - `['uri']` may cause Drush to fail if the array key has a different domain than what is expected by Drupal, resulting in the following error:
 
  ```bash
@@ -30,7 +30,7 @@ The following Drush commands are not supported and will not work on Pantheon sit
  Drush command terminated abnormally due to an unrecoverable error.       [error]
  ```
 
- To resolve this error, conditionally set `$uri` based on the environment in `drushrc.php`, such as:
+ Conditionally set `$uri` based on the environment in `drushrc.php` to resolve this error, such as:
 
  ```php
    if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&

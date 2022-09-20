@@ -21,7 +21,7 @@ You can, however, use Terminus as follows:
 echo 'SELECT * FROM users WHERE uid=1;' | terminus drush SITENAME.ENV sql:cli
 ```
 
-Note that certain characters such as `;` cannot be used in the query. You will get an error message if you use an illegal character:
+Note that certain characters such as `;` cannot be used in the query. You will receive an error message if you use an illegal character:
 
 > Command not supported as typed.
 
