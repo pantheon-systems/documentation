@@ -31,9 +31,9 @@ The following error occurs when Redis has not been enabled within the Site Dashb
 RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
 ```
 
-Enable Redis via the Pantheon Site Dashboard:
+To resolve, enable Redis via the Pantheon Site Dashboard:
 
-Navigate to **Settings**, click **Add Ons**, click **Add**, and then click **Redis**. It may take a few minutes to provision the service.
+- Navigate to **Settings**, click **Add Ons**, click **Add**, and then click **Redis**. It may take a few minutes to provision the service.
 
 ### No Keys Found
 
@@ -68,7 +68,7 @@ This conditional will be true for both web visits and Drush calls. All Redis cac
 
 However, all redirection logic should remain nested in `isset($_ENV['PANTHEON_ENVIRONMENT'])` conditionals, as you only want redirections to occur on web visits, not on any Drush invocations.
 
-In other words, don’t mix your application configuration and redirection logic together. You can have multiple logic blocks in your `settings.php` and it will fix these problems and will be easier for yourself and others to read and maintain.
+In other words, don’t mix your application configuration and redirection logic together. You can have multiple logic blocks in your `settings.php`, and it will fix these problems and be easier for yourself and others to read and maintain.
 
 ### Cache Directory Is Not Found
 
@@ -81,7 +81,7 @@ Fatal error: Class 'Redis_CacheCompressed' not found in
 
 It is possible that your `.gitignore` file is not up to date with the most recent version of your CMS. To resolve this, ensure you do not have any pending core updates.
 
-The best and easiest way to update your core is by using Pantheon administration Dashboard. Refer to [WordPress and Drupal Core Updates](/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
+The best and easiest way to update your core is by using the Pantheon administration Dashboard. Refer to [WordPress and Drupal Core Updates](/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
 
 ### Fatal Error: require\_once()
 

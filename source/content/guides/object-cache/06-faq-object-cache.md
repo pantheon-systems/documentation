@@ -13,7 +13,7 @@ anchorid: faq-object-cache
 
 This section provides answers to frequently asked Object Cache questions.
 
-### How much Object cache is available for each plan level?
+### How much Object Cache is available for each plan level?
 
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
@@ -82,7 +82,7 @@ sftp> ls -la logs/
 sftp>
 ```
 
-### Why Won't My Site Work After Importing a Database Backup?
+### Why won't my site work after importing a database backup?
 
 When you replace the database with one that doesn't match the Object Cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the Object Cache from the command line](/guides/object-cache/redis-command-line#clear-cached-data).
 

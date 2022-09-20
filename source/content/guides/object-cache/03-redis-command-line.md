@@ -79,15 +79,15 @@ Drupal deletes and regenerates cached entries during a cache rebuild or cache cl
 
 #### WordPress
 
-Any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache if [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
+If [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
 
 Refer to the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup method if necessary.
 
 ### Clear All Keys
 
-You can use the `flushall` command to clear all keys from the cache. 
+Use the `flushall` command to clear all keys from the cache. 
 
-**Note:** If the [CMS cache clearing](#clearing-cached-data) is functioning as expected this is generally not necessary. Be aware that in Drupal it is possible that custom programming may rely on values stored here that are not meant to be temporary.
+**Note:** If the [CMS cache clearing](#clearing-cached-data) is functioning as expected, this is generally not necessary. Be aware that in Drupal, it is possible that custom programming may rely on values stored here that are not meant to be temporary.
 
 ```bash
 redis> flushall
@@ -96,7 +96,7 @@ OK
 
 ## Check the Number of Keys in Cache
 
-You can use the `DBSIZE` command to check the number of keys in the cache. The following is sample output:
+Use the `DBSIZE` command to check the number of keys in the cache. The following is sample output:
 
 ```bash
 redis> DBSIZE
@@ -105,7 +105,7 @@ redis> DBSIZE
 
 ## View Service Configuration Details
 
-You can use the `config get *memory*` command to check the cache memory. The following is sample output:
+Use the `config get *memory*` command to check the cache memory. The following is sample output:
 
 ```bash
 redis> config get *memory*
@@ -115,7 +115,7 @@ maxmemory
 
 ## Hit/Miss Ratio
 
-You can use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency because most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of project when you can only guess which data you should cache.
+Use the `info stats` option to view the Hit/Miss ratio. The Hit/Miss ratio describes cache efficiency and provides relevant information about your approach. A low cache hit ratio results in larger latency, because most of the requests are fetching data from the disk. In this instance, you should reconsider the data you have stored and increase the size of the Redis cache to improve your sites’s performance. A low cache hit is usually the result of premature optimization in the early stages of a project when you can only guess which data you should cache.
 
 Run the following code to access your Hit/Miss ratio:
 

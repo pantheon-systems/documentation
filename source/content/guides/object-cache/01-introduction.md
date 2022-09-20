@@ -25,7 +25,7 @@ Object Cache provides an alternative caching backend that resides in memory rath
 
 ## Object Cache Requirements
 
-All plans except for the Basic plan can use Object Cache. Sandbox site plans can enable and use Object Cache for development purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
+All plans, except for the Basic plan, can use Object Cache. Sandbox site plans can enable and use Object Cache for development purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
 
 | Plans         | Object Cache Support <Popover content="Available across all environments, including Multidevs."/> |
 | ------------- | -------------------------------------- |

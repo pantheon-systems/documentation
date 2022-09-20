@@ -16,15 +16,15 @@ This section provides information on how to enable Object Cache.
 
 <Tab title="WordPress" id="wp-install" active={true}>
 
-1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, and then select **Add**. It might take a couple minutes for the Object Cache server to come online.
+1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, then select **Add**. It might take a couple of minutes for the Object Cache server to come online.
 
-1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. You can also install the plugin via [Terminus](/terminus) if you [set the connection mode to SFTP](/sftp) and then run:
+1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. You can also install the plugin via [Terminus](/terminus) if you [set the connection mode to SFTP](/sftp) and run:
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis
   ```
 
-  You must specify the site URL by adding that to the command if you use site networks: 
+  If you use site networks, you must add the site URL by adding to the command: 
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
@@ -118,7 +118,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 </Alert>
 
-1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, and then select **Add** to enable the Redis cache server. It might take a couple minutes for the Redis server to come online.
+1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, then select **Add** to enable the Redis cache server. It might take a couple of minutes for the Redis server to come online.
 
 1. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
