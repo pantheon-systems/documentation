@@ -27,15 +27,11 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
 - Verify that you are using Drush 11 if you have a Composer-managed Drupal 9 site.Note that only Composer-managed sites are supported.
 
-   <Alert title="Note"  type="info" >
+   -  Use one of the following guides if you are migrating a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site:
 
-   If you are migrating a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site, use one of the following guides instead:
+      - Your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
 
-   - Your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
-
-   - Your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
-
-   </Alert>
+      - Your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
 
 - Verify that you have Drush access on your existing Drupal site.
 
