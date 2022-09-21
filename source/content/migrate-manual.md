@@ -383,7 +383,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   while [ 1 ]
   do
-  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/
   if [ "$?" = "0" ] ; then
   echo "rsync completed normally"
   exit
