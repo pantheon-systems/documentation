@@ -1387,3 +1387,21 @@
           url: '/overview/accounts'
         - text: 'Support'
           url: '/overview/support'
+- title: 'Account Management at Pantheon'
+  subtitle: 'Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading these guides.'
+  path: 'account-mgmt'
+  guides:
+    - title: ''
+      type: 'normal'
+      links:
+        - text: 'Accounts'
+          url: '/guides/account-mgmt/account'
+        - text: 'Plans and Pricing'
+          url: '/guides/account-mgmt/plans'
+        - text: 'Workspaces, Sites, and Teams'
+          url: '/guides/account-mgmt/workspace-sites-teams'
+        - text: 'Billing'
+          url: '/guides/account-mgmt/billing'
+        - text: 'Site Portfolio Report'
+          url: '/guides/site-portfolio-report'
+
