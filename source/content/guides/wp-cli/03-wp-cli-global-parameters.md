@@ -34,7 +34,7 @@ Review the [global parameters](https://make.wordpress.org/cli/handbook/config/) 
 
 - `--url=<url>` - Identify the request as from given URL. This argument is how the target site is specified in WordPress Site Networks. 
 
-* `--user=<id|login|email>` - Run the command as a particular user. WP-CLI commands are executed anonymously by default.
+- `--user=<id|login|email>` - Run the command as a particular user. WP-CLI commands are executed anonymously by default.
 
 Each of these global parameters define the **context** under which the command is run. This provides important pre-condition statements to WordPress about how to understand the request.
 
