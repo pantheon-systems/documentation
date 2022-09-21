@@ -15,7 +15,7 @@ This section provides information on WP-CLI global parameters that you should be
 
 <Alert title="Exports" type="export">
 
-This doc demonstrates [Terminus](/terminus) commands which require site and environment values. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment, so that the example commands will work in your local terminal:
+This doc demonstrates [Terminus](/terminus) commands which require site and environment values. Before you begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment, so that the example commands will work in your local terminal:
 
 ```bash{promptUser: user}
 export site=yoursitename
