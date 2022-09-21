@@ -13,15 +13,17 @@ anchorid: wp-cli-troubleshoot
 
 This section provides solutions for common WP-CLI troubleshooting scenarios.
 
-### Terminus WP-CLI Silent Failure
+## Terminus WP-CLI Silent Failure
 
-The following silent failure occurs when executing `terminus remote:wp` commands on environments that use redirect logic without checking to see if WordPress is running via the command line:
+The silent failure shown below occurs when executing `terminus remote:wp` commands on environments that use redirect logic without checking to see if WordPress is running via the command line:
 
 ```bash
 [notice] Command: $site.$env -- 'wp <command>' [Exit: 0]
 ```
 
-Redirects kill the PHP process before WP-CLI is executed. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `wp-config.php`:
+Redirects kill the PHP process before WP-CLI is executed.
+
+Add `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `wp-config.php` to resolve this error:
 
 ```php:title=wp-config.php
 // Require HTTPS, www.
@@ -38,3 +40,22 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   }
 }
 ```
+
+## Request to a Remote API Does Not Return Expected Response
+
+The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
+
+If the API expects `&` as an argument separator but receives `&amp;` (for example, when using `http_build_query`), you can override the default `arg_separator.output` value by adding the following line to `wp-config.php`:
+
+```php:title=wp-config.php
+ini_set('arg_separator.output', '&');
+```
+
+## Actions and Filters in `wp-config.php`
+
+Actions or filters that require CLI tools like WP-CLI might fail from `wp-config.php`, because the functions required are not yet accessible. Put these directives in an [MU Plugin](/mu-plugin) to resolve this issue.
+
+## More Resources
+
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)
+- [WordPress and PHP Sessions](/guides/php/wordpress-sessions)
