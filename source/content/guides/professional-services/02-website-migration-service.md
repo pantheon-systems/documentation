@@ -18,7 +18,7 @@ The Managed Migration Service offered by [Pantheon Professional Services](/guide
 
 The goal of the Migrations Team is to migrate your site to the Pantheon WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration.
 
-For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/guides/guided/.
+For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/guides/guided).
 
 If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager with any questions or concerns.
 
