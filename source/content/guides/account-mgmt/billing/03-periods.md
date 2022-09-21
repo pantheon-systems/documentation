@@ -6,54 +6,103 @@ categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
+showtoc: true
 permalink: docs/guides/account-mgmt/billing/periods
 anchorid: periods
 editpath: docs/guides/account-mgmt/billing/03-periods.md
 reviewed: "2022-09-19"
 ---
 
-Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading this section.
 
-## Organizations
+Pantheon offers both Monthly and Annual Billing.
 
-Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev environments, and support to provide administrators with the tools needed to effectively manage a large number of sites. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+Pantheon now offers annual billing plans for all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost.
 
-Your Organization Dashboard allows you to manage your:
-- Sites
-- Organization Team
-- Organization Settings
-- And Support, across all of your sites
+For standard billing information, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 
+## Annual Billing Savings
 
-Refer to [Organizations](/organizations) for details. 
+The table below shows how much sites can save by switching to annual billing. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service.
 
-## Roles
+<dl>
 
-Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
+<dt>List Price</dt>
 
-Refer to [Change Management](/change-management) for more details.
+<dd>
 
-## Dashboards
+Set price for new sites that aren't purchased via a qualified agency partner.
 
-The [User Dashboard](/user-dashboard) provides access to all of your sites and account information. This is the page you'll land on when you first log in.
+</dd>
 
-The [Organization Dashboard](/organization-dashboard) is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
+<dt>Preferred Price</dt>
 
-Each site on the User and Organization Dashboards opens a [Site Dashboard](/site-plan) where you manage [sites](/site-plan/), [metrics](/metrics/) and [billing](/site-billing/). The Site Dashboard provides the most options and is the most flexible of your spaces on Pantheon. 
+<dd>
 
-## Pricing
+[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](https://pantheon.io/partner-program).
 
-Refer to our [Pantheon Pricing Comparison](https://pantheon.io/pricing-comparison) for more information.
+</dd>
 
-## Billing
+</dl>
 
-Billing can be managed in one of two places:
+<TabList>
 
-- For specific sites, billing is managed via the [Site Dashboard](/site-billing).
-- For the entire account, billing is managed via the [User Dashboard](/account-billing)
+<Tab title="List Price" id="tab-1-anchor" active={true}>
 
-Billing can be done monthly or annually.
+|                    | Basic         | Performance Small | Performance Medium | Performance Large | Performance XL       |
+|:------------------ |:------------- |:----------------- |:------------------ |:----------------- |:-------------------- |
+| Monthly Price      | $50           | $175              | $300               | $600              | $1,000               |
+| Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
+| **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
-- [Monthly billing](/guides/new-dashboard/workspace-billing/subscriptions) is the default option.
-  
-- [Annual billing](/annual-billing) is available to all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost. Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
+</Tab>
+
+<Tab title="Preferred Price" id="tab-2-id" active={true}>
+
+|                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
+|:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
+| Monthly Price      | $35     | $125              | $225               | $450              | $750            |
+| Annual Price       | $350    | $1,375            | $2,475             | $4,950            | $8,250          |
+| **Annual Savings** | **$70** | **$125**          | **$225**           | **$450**          | **$750**        |
+
+</Tab>
+
+</TabList>
+
+## Change Billing Cadence
+
+### Considerations
+
+Before switching to annual billing, consider:
+
+ - Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
+ - Sites on annual billing plans that upgrade will be invoiced immediately, and the site will be upgraded immediately.
+ - While all site plan downgrades will be effective immediately, no partial refunds will be issued.
+ - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
+ - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
+ - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes.
+   - To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/guides/legacy-dashboard/add-client-site).
+
+1. From the Site Dashboard, click on your site plan, or the billing tab:
+
+    ![Click on site plan](../images/dashboard/change-plan.png)
+
+2. If you're keeping the same plan size and only switching to annual billing, select your current plan:
+
+    ![Select new site plan](../images/dashboard/select-plan.png)
+
+3. Switch the slider to **Pay Annually**:
+
+    ![Select annual billing](../images/dashboard/select-annual-billing.png)
+
+4. Enter or confirm your billing information, then click **Continue**.
+
+    ![Choose the card to bill](../images/dashboard/choose-card.png)
+
+5. Confirm the purchase, then click on **Place your order**.
+
+    ![Confirm your purchase](../images/dashboard/confirm-purchase.png)
+
+6. You'll be returned to the dashboard with a confirmation of your site plan change:
+
+    ![Site Plan Flag](../images/dashboard/plan-updated-flag.png)
+
