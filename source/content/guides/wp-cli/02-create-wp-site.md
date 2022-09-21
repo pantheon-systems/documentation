@@ -137,6 +137,6 @@ Terminus provides the power to manage most aspects of your Pantheon sites, while
 
 ## More Resources
 
- - [Use the Pantheon Workflow](/pantheon-workflow)
- - [WordPress Configuration Management (WP-CFM)](/wp-cfm)
- - [The Terminus Manual](/terminus)
+- [Use the Pantheon Workflow](/pantheon-workflow)
+- [WordPress Configuration Management (WP-CFM)](/wp-cfm)
+- [The Terminus Manual](/terminus)
