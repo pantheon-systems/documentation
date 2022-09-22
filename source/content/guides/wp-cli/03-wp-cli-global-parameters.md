@@ -15,7 +15,7 @@ This section provides information on WP-CLI global parameters that you should be
 
 <Alert title="Exports" type="export">
 
-This doc demonstrates [Terminus](/terminus) commands which require site and environment values. Before you begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment, so that the example commands will work in your local terminal:
+The steps below use [Terminus](/terminus) commands that require site and environment values. Before you begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment. This allows the example commands to work in your local terminal:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -32,37 +32,37 @@ Review the [global parameters](https://make.wordpress.org/cli/handbook/config/) 
 
 - `--path=<path>` - Specify the path to WordPress. WP-CLI will look upward from its current directory to attempt to find WordPress if this parameter isn't provided.
 
-- `--url=<url>` - Identify the request as from given URL. This argument is how the target site is specified in WordPress Site Networks. 
+- `--url=<url>` - Identify the request from a given URL. This argument specifies the target site in WordPress Site Networks. 
 
 - `--user=<id|login|email>` - Run the command as a particular user. WP-CLI commands are executed anonymously by default.
 
 Each of these global parameters define the **context** under which the command is run. This provides important pre-condition statements to WordPress about how to understand the request.
 
-Run the command below to learn more:
+1. Run the command below to learn more:
 
-```bash{outputLines:2-7}
-terminus wp $site.$env -- option get home
-  [2015-11-25 02:42:12] [info] Running wp option get home  on pantheon-demo
-      cmd: 'option get home'
-      flags: ''
-      site: 'pantheon-demo'
-      env: 'dev'
-  https://pantheon-demo.pantheonsite.io
-```
+  ```bash{outputLines:2-7}
+  terminus wp $site.$env -- option get home
+    [2015-11-25 02:42:12] [info] Running wp option get home  on pantheon-demo
+        cmd: 'option get home'
+        flags: ''
+        site: 'pantheon-demo'
+        env: 'dev'
+    https://pantheon-demo.pantheonsite.io
+  ```
 
-Review the information below to understand the output.
+1. Review the information below to understand the output.
 
-- `terminus wp` tells Terminus you want to execute a WP-CLI command.
+  - `terminus wp` tells Terminus you want to execute a WP-CLI command.
 
-- `option get` is the command itself ([docs](https://developer.wordpress.org/cli/commands/option/get/)). 
+  - `option get` is the command itself ([docs](https://developer.wordpress.org/cli/commands/option/get/)). 
 
-- `home` is the key for the option you're requesting.
+  - `home` is the key for the option you're requesting.
 
-- `$site` and `$env` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
+  - `$site` and `$env` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
 
-The first part of the output is Terminus telling you which command it's running, and where. The last line, `https://pantheon-demo.pantheonsite.io`, is the response of `wp option get`.
+  - The first part of the output is Terminus telling you which command it's running, and where. The last line, `https://pantheon-demo.pantheonsite.io`, is the response of `wp option get`.
 
-Here are a [few of the many commands](https://developer.wordpress.org/cli/commands/) you may find helpful in your journeys:
+Here are [more commands](https://developer.wordpress.org/cli/commands/) you may find helpful:
 
 - `wp search-replace` - Search for and replace specific strings in the database. Commonly used to correct references to [platform domains](/database-workflow/#troubleshooting). Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([developer docs](https://developer.wordpress.org/cli/commands/search-replace)).
 
