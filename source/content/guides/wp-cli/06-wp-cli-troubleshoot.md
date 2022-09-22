@@ -11,11 +11,11 @@ permalink: docs/guides/wp-cli/wp-cli-troubleshoot
 anchorid: wp-cli-troubleshoot
 ---
 
-This section provides solutions for common WP-CLI troubleshooting scenarios.
+This section provides solutions to common WP-CLI troubleshooting scenarios.
 
 ## Terminus WP-CLI Silent Failure
 
-The silent failure shown below occurs when executing `terminus remote:wp` commands on environments that use redirect logic without checking to see if WordPress is running via the command line:
+The silent failure shown below occurs when executing `terminus remote:wp` commands on environments that use redirect logic without checking to confirm that WordPress is running via the command line:
 
 ```bash
 [notice] Command: $site.$env -- 'wp <command>' [Exit: 0]

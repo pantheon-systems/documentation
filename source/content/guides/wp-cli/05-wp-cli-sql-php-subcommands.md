@@ -34,7 +34,7 @@ var_dump($_ENV);
 
 WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://make.wordpress.org/cli/handbook/commands-cookbook/#anatomy-of-a-command) to solve problems with WP-CLI.
 
-Keep in mind that WP-CLI commands are subject to platform PHP memory limits, which are optimized for serving webpages and not necessarily for running development tools. We recommend that you run Composer commands, such as `wp package install`, on your local machine or on a CI service.
+WP-CLI commands are subject to platform PHP memory limits, which are optimized for serving webpages and not necessarily for running development tools. We recommend that you run Composer commands, such as `wp package install`, on your local machine or on a CI service.
 
 ## More Resources
 
