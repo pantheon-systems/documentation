@@ -266,7 +266,7 @@ We can add multiple plugins to the function as well:
 wp_cache_add_non_persistent_groups( array( 'my_plugin_group', 'woocommerce' ) );
 ```
 
-To verify, you can use the [Redis CLI](/object-cache#use-the-redis-command-line-client) to flush all keys and see that the related objects are no longer added to the cache:
+To verify, you can use the [Redis CLI](/guides/object-cache/redis-command-line) to flush all keys and see that the related objects are no longer added to the cache:
 
 ```sql
 > KEYS *woocommerce:*

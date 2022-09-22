@@ -67,7 +67,7 @@ Use your site's [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log) to troubl
 
 Most website frameworks like Drupal and WordPress use the database to cache internal application objects which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Because the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
 
-[Object Cache](/object-cache) provides an alternative caching backend. It takes caching work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers looking to manage queues, or do custom caching of their own.
+[Object Cache](/guides/object-cache) provides an alternative caching backend. It takes caching work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers looking to manage queues, or do custom caching of their own.
 
 ### Consider MySQL Replication (WordPress)
 

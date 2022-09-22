@@ -83,7 +83,7 @@ provides support for SAML Authentication. The plugin comes bundled with the OneL
 
 ## WP Redis
 
-[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
+[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
 
 ## WP Solr
 

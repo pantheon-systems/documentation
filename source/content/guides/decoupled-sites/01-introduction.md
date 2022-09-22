@@ -76,8 +76,9 @@ Server-side Rendering is a content rendering method in which each web page is se
 With a Pantheon Front-End Site you can create sites from server-side rendering (SSR) or a static site generator (SSG). The following options exist for site creation using the Pantheon Front-End Site Early Access offering:
 
 * **Import Repository**: Connect your Git provider and select an existing repository. The CMS is optional for this configuration. Limited support is provided for this configuration.
-* **Gatsby and WordPress**: Create a decoupled site using a base Gatsby.js frontend template with WordPress as the CMS. This configuration uses static site generation.
-* **Next.js and Drupal**: Create a decoupled site using a base Next.js frontend template with Drupal as the CMS. This configuration uses the static site rendering method.
+* **Gatsby and WordPress**: Create a decoupled site using a base Gatsby.js frontend template with WordPress as the CMS. 
+* **Next.js and Drupal**: Create a decoupled site using a base Next.js frontend template with Drupal as the CMS. 
+* **Next.js and WordPress**: Create a decoupled site using a base Next.js frontend template with WordPress as the CMS. 
 
 Currently, Pantheon Front-End Sites do not support SSR using Gatsby. Support for SSG with Next.js is available.
 

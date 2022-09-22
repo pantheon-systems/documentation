@@ -31,7 +31,7 @@ All links from the video are provided below.
 **Resource Links From Video**
 
  - [Caching: Advanced Topics](/caching-advanced-topics)
- - [Redis docs](/object-cache)
+ - [Redis docs](/guides/object-cache)
  - [New Relic docs](/guides/new-relic)
  - [Troubleshooting WordPress with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
  - [Uptime monitoring with Synthetics](/guides/new-relic)

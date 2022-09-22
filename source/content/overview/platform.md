@@ -25,7 +25,7 @@ Our Runtime Matrix executes the code for your website. Over a million Linux cont
 
 - [MariaDB](/database-workflow): a horizontally scalable database grid—running the latest MariaDB, that’s similar to the Runtime Matrix in design. The database layer provides redundancy and scalability by supporting a robust replication topology, managed automatically. 
 
-- [Object Cache](/object-cache): Pantheon bundles Object Cache (formerly Redis) as a core service on the platform. Object Cache is a second-generation, in-memory, key-value store with support for structured data. It can accelerate your site’s internal operations through application object caching. This can significantly accelerate dynamic page generation and the logged-in user experience. 
+- [Object Cache](/guides/object-cache): Pantheon bundles Object Cache (formerly Redis) as a core service on the platform. Object Cache is a second-generation, in-memory, key-value store with support for structured data. It can accelerate your site’s internal operations through application object caching. This can significantly accelerate dynamic page generation and the logged-in user experience. 
 
 - [Apache Solr](/solr): Pantheon Search is built into our platform using Apache Solr and delivered as a service. We manage the Solr servers, the 100% solid state drives that store all indexes, and we optimize all aspects of the search stack so you can focus your time on optimizing results pages and filters. 
 
