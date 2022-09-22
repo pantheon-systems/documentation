@@ -23,7 +23,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has many free 
     terminus wp $TERMINUS_SITE.dev -- plugin install contact-form-7 --activate
     ```
 
-    You can open the Site Dashboard open to see that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, or continue to use the command line as the example below.
+    You can open the Site Dashboard to see that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, or continue to use the command line as the example below.
 
     ![Pantheon Site Dashboard: Install CF7](../../../images/wordpress-commandline-install-cf7.png)
 
@@ -91,7 +91,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has many free 
     terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
     ```
 
-Manually applying configuration changes is a simple and short task fo this example. You're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
+Manually applying configuration changes is a simple task for this example because you're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
 
 ## Install WordPress Themes
 
@@ -127,7 +127,7 @@ The [WordPress theme repository](https://wordpress.org/themes/) has many free an
 
     Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
 
-1. Apply configuration changes, such as activating the child theme, then make sure everything looks good on the Dev environment's site URL.
+1. Apply configuration changes, such as activating the child theme, then make sure everything is correct on the Dev environment's site URL.
 
 1. Commit your changes to the Dev environment:
 
@@ -147,7 +147,7 @@ The [WordPress theme repository](https://wordpress.org/themes/) has many free an
     terminus env:clear-cache <site>.live
     ```
 
-    Apply configuration changes and make sure everything looks good on the Test environment's site URL.
+1. Apply configuration changes and make sure everything is correct on the Test environment's site URL.
 
 1. Deploy code to Live, then apply configuration changes:
 
