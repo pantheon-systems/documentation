@@ -13,7 +13,7 @@ reviewed: "2022-09-01"
 
 ### PHP 8.1
 
-PHP 8.1 is now recommended for Drupal sites version 9.3.0 and higher, which use  [version 2.4.3](https://proxysql.com/blog/releasing-proxysql-v2-4-3/) and higher. PHP 8.1 was updated on the platform and rolled out to sites.  This update resolves an issue that existed between ProxySQL and PHP 8.1.  Pantheon [recommends PHP 8.1 for Drupal sites](https://pantheon.io/docs/php-versions).
+PHP 8.1 is now recommended for Drupal sites using ProxySql [version 2.4.3](https://proxysql.com/blog/releasing-proxysql-v2-4-3/) and higher. PHP 8.1 was updated on the platform and rolled out to Drupal sites version 9.3.0 and higher. This update resolves an issue that existed between ProxySQL and PHP 8.1.  Pantheon [recommends PHP 8.1 for Drupal sites](https://pantheon.io/docs/php-versions).
 
 ### WordPress 6.0.2
 
