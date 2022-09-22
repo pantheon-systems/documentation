@@ -13,7 +13,14 @@ editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
 ---
 
-Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it tries to apply updates.
+Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it applies updates to your Dev, Test or Live environment.
+
+## Understanding Test Results
+
+To review your test results, go to your Autopilot overview page.  Here you can see what sites passed testing and are up to date, as well as sites that need your manual review. 
+
+![Autopilot overview page shows the testing status of all sites](../../../images/autopilot/autopilot-sites-overview.png)
+
 
 ## Successful Tests
 
@@ -31,11 +38,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 Autopilot can report failures via email or [Quicksilver hooks](/quicksilver#hooks) immediately, and send a weekly email report summarizing all Autopilot activity.
 
-![Autopilot overview page shows a site with a failed test](../../../images/autopilot/autopilot-overview-failed-vrt.png)
-
 If an error is detected during an update attempt, the **Autopilot Status** shows **Needs Attention** with two options to **Review Test Results** or to **View Update Details**.
-
-![Autopilot Status shows a Needs Attention notice and prompt to Review Test Results](../../../images/autopilot/autopilot-status-failed-screenshots.png)
 
 1. Click **View Update Details** for details:
 
