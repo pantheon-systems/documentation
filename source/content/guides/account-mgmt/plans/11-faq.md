@@ -1,7 +1,12 @@
 ---
 title: Plans
+<<<<<<< HEAD
 subtitle: FAQ
 description: Commonly asked questions about plans.
+=======
+subtitle: Plan Resources
+description: Review the resources each plan offers.
+>>>>>>> c5902dd75dfa0a6370f2f58142dd9c8240433f72
 categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]

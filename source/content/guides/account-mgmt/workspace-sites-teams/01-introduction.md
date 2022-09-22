@@ -27,9 +27,13 @@ Within each workspace, they build their team.
 | Writing Sites   | Widget Sites    | Random Sites    |
 +========+========+========+========+========+========+
 | Jane Doe        | John Smith      | Jane Doe        |
+<<<<<<< HEAD
 |                 |                 |                 |
 | John Smith      | Andy White      | Dolores Orange  |
 |                 |                 |                 |
+=======
+| John Smith      | Andy White      | Dolores Orange  |
+>>>>>>> c5902dd75dfa0a6370f2f58142dd9c8240433f72
 | Joe Intern      |                 |                 |
 +--------+--------+--------+--------+--------+--------+
 
