@@ -13,18 +13,15 @@ editpath: docs/guides/account-mgmt/account/03-workspace.md
 reviewed: "2022-09-19"
 ---
 
-Let's start by exploring the Personal Workspace , which is what you see after you log in.
-
-## Home Page
-
-Your Home page contains the following information:
-
-* Workspace type
-* Sites
-* Account tier
-* Sandbox sites used 
+Once you create an account and sign in, you are taking to your home page, known as your Personal Workspace.  Here you can view key information at a glance, including the sites you have access to, your plan tier, and more.
 
 ![A screenshot of the new Dashboard homepage with Workspace Overview](../../../../images//dashboard/new-dashboard/workspace-overview.png)
+
+<Alert title="Note" type="info" >
+
+Currently, you cannot edit or manage account tiers using the Workspace.
+
+</Alert>
 
 ## Tabs
 
@@ -45,23 +42,6 @@ The navigation bar on the left contains several additional tabs to help you mana
 - **Custom Upstreams:** Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
 - **Settings:** Modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
-
-## Account Settings
-
-Click your user icon in the upper right corner to update and manage your personal account information. 
-
-  - **Profile:** Update your user profile information, or connect your Google account to Pantheon.
-
-  - **Account and Security:** Change your account email password.
-
-  - **Notifications:** Select the notifications you wish to receive.
-
-  - **SSH Keys:** Add and manage your SSH keys.
-
-  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus).
-
-  - **Preferences:** Flip the toggle to **Off** to use the old dashboard. 
-
 
 <Alert title="Note" type="info" >
 

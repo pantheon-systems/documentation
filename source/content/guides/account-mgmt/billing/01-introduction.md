@@ -20,3 +20,12 @@ The permission to update credit cards and view history is granted only to the ro
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
 </Alert>
+
+
+## Tax Exempt Status Billing
+
+To make it easy for our team to confirm your tax-exempt status and have it reflected on your bill quickly, [contact Support](/guides/support/contact-support/) and provide the following information in the [chat](/guides/support/contact-support/#real-time-chat-support) or [support ticket](/guides/support/contact-support/#ticket-support):
+
+- An attached copy of the organization's [tax exemption determination letter](https://www.irs.gov/charities-non-profits/exempt-organizations-affirmation-letters)
+- Email address of Site Owner
+- [Dashboard](/sites) URL of affected sites

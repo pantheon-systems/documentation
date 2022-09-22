@@ -27,7 +27,9 @@ Within each workspace, they build their team.
 | Writing Sites   | Widget Sites    | Random Sites    |
 +========+========+========+========+========+========+
 | Jane Doe        | John Smith      | Jane Doe        |
+|                 |                 |                 |
 | John Smith      | Andy White      | Dolores Orange  |
+|                 |                 |                 |
 | Joe Intern      |                 |                 |
 +--------+--------+--------+--------+--------+--------+
 
@@ -37,8 +39,11 @@ Within each workspace, they build their team.
 | Writing Sites   | Widget Sites    | Random Sites    |
 +========+========+========+========+========+========+
 | Jane Doe        | John Smith      | Jane Doe        |
+|                 |                 |                 |
 | John Smith      | Andy White      | Dolores Orange  |
+|                 |                 |                 |
 | Joe Intern      |                 |                 |
++--------+--------+--------+--------+--------+--------+
 +--------+--------+--------+--------+--------+--------+
 | Site 1 | Site 2 | Site A | Site B | Site Z | Site Y |
 +--------+--------+        |        +--------+--------+
@@ -56,9 +61,9 @@ Finally, because sites in the Random workspace are so, well, random, they've als
 +--------+--------+--------+--------+--------+--------+
 | Site 1 | Site 2 | Site A | Site B | Site Z | Site Y |
 +--------+--------+        |        +--------+--------+
-| Site 3 | Site 4 |        |        | Site X |        |
-|        |        |        |        |--------+--------+
-|        |        |        |        | Ed Kay |        |
+| Site 3 | Site 4 |        |        | Site X          |
+|        |        |        |        |                 |
+|        |        |        |        | Ed Kay          |
 +--------+--------+--------+--------+--------+--------+
 
 So now, when the individual team members log on, they will see the sites and workspaces made available to them.  In our example, this is what they would see:

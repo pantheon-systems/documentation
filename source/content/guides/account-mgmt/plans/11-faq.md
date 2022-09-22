@@ -1,7 +1,7 @@
 ---
 title: Plans
-subtitle: Plan Resources
-description: Review the resources each plan offers.
+subtitle: FAQ
+description: Commonly asked questions about plans.
 categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
@@ -25,12 +25,5 @@ Yes. If you are interested in bulk pricing, [Contact our sales team](https://pan
 
 The Performance Extra Large Plan allows for 300,000 monthly visits and 1.5 million monthly page views. High traffic sites should be moved to an Elite plan. To learn about moving to an [Elite Plan](https://pantheon.io/plans/elite?docsplanFAQ), please [contact us](https://pantheon.io/contact-us?docsplanFAQ).
 
-If you exceed the Performance Extra Large plan limits of 300,000 monthly visits or 1.5 million page views, your site will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via the Dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
-
-| Payment Type      | Price            |
-|:----------------- |:---------------- |
-| List Monthly      |  $1,500          |
-| List Annual       |  $16,500         |
-
-Note that the annual plan prices are listed as annual cost.
+If you exceed the Performance Extra Large plan limits of 300,000 monthly visits or 1.5 million page views, your site will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via the Dashboard, but can be applied by our Support team. See [Pricing](docs/guides/account-mgmt/plans/pricing) for details.
 

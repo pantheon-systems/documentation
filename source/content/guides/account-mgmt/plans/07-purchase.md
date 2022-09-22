@@ -29,8 +29,6 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 
 1. Click **Select** to switch plans:
 
- ![Select a different plan](../../../../images/dashboard/select-plan.png)
-
 ## Enter Billing Information
 
 Site ownership is designated to the user account entering billing information.

@@ -13,6 +13,13 @@ editpath: docs/guides/account-mgmt/plans/09-manage.md
 reviewed: "2022-09-19"
 ---
 
+<Alert title="Note" type="info" >
+
+Elite sites cannot manage plans from the Site Dashboard. Contact our sales team or reach out to your dedicated Client Sales Executive for details.
+
+</Alert>
+
+
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
 <Alert title="Note" type="info">
@@ -59,10 +66,6 @@ For Object Cache and Pantheon Search (Solr), the following code changes are requ
 
 </TabList>
 
-### Elite Plan
-
-Elite sites cannot manage plans from the Site Dashboard. [Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
-
 ## Upgrades
 
 Site plan upgrades will change your site's resources and access to features immediately. The associated card will be charged a prorated amount for the remainder of the current billing period.
@@ -96,36 +99,36 @@ To change your plan:
 
 <Tab title="Edu Sites" id="edu" active={true}>
 
-    1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click **Upgrade** next to the site's name:
+1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click **Upgrade** next to the site's name:
 
-    ![Upgrade plan button shown on Sandbox sites](../../../../images/dashboard/eduplus-upgrade-plan.png)
+![Upgrade plan button shown on Sandbox sites](../../../../images/dashboard/eduplus-upgrade-plan.png)
 
-    Otherwise, click the current plan tag next to the site's name:
+Otherwise, click the current plan tag next to the site's name:
 
-    ![Screenshot of a site Dashboard on a Performance Medium plan](../../../../images/dashboard/eduplus-change-plan.png)
+![Screenshot of a site Dashboard on a Performance Medium plan](../../../../images/dashboard/eduplus-change-plan.png)
 
-    1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
+1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
 
-    ![Screenshot of the plan options for a site](../../../../images/dashboard/select-plan.png)
+![Screenshot of the plan options for a site](../../../../images/dashboard/select-plan.png)
 
-    1. Review the new plan on the **Confirm Purchase** page, and click **Place Your Order**.
+1. Review the new plan on the **Confirm Purchase** page, and click **Place Your Order**.
 
-    Because billing is handled by the organization, the plan change is immediate, and you'll be returned to the Site Dashboard.
+Because billing is handled by the organization, the plan change is immediate, and you'll be returned to the Site Dashboard.
 
-        - If the site plan isn't shown on the Dashboard immediately, refresh the page or click the **Workflows** button for status.
+    - If the site plan isn't shown on the Dashboard immediately, refresh the page or click the **Workflows** button for status.
 
 </Tab>
 
 
 <Tab title="All Other Sites" id="other">
 
-    1. Go to the Site Dashboard.
+1. Go to the Site Dashboard.
 
-    1. For Sandbox sites, click **Upgrade** next to the site's name:
-    ![Upgrade plan button shown on Sandbox sites](../../../../images/dashboard/upgrade-plan.png)
+1. For Sandbox sites, click **Upgrade** next to the site's name:
+![Upgrade plan button shown on Sandbox sites](../../../../images/dashboard/upgrade-plan.png)
 
-    Otherwise, click the current plan tag next to the site's name:
-    ![Change current plan for paid sites](../../../../images/dashboard/change-plan.png)
+Otherwise, click the current plan tag next to the site's name:
+![Change current plan for paid sites](../../../../images/dashboard/change-plan.png)
 
 </Tab>
 
@@ -147,17 +150,11 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 1. Go to the Site Dashboard.
 
-1. Select the current plan:
+1. Select the current plan (to the right of the site name).
 
- ![Change current plan for paid sites](../../../../images/dashboard/change-plan.png)
+1. Click the **Downgrade to free** link to cancel the current plan.
 
-1. Click the **Downgrade to free** link to cancel the current plan:
-
- ![Downgrade to free by cancelling current plan](../../../../images/dashboard/cancel-plan.png)
-
-1. Check **Yes, cancel my plan** then click **Continue**:
-
- ![Confirm plan cancellation](../../../../images/dashboard/confirm-cancellation.png)
+1. Check **Yes, cancel my plan** then click **Continue**.
 
 1. Make sure the change details are correct, then click **Submit**.
 

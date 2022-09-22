@@ -13,7 +13,7 @@ editpath: docs/guides/account-mgmt/account/07-delete.md
 reviewed: "2022-09-19"
 ---
 
-Follow the steps below to completely delete your site(s).
+Follow the steps below in to completely delete your site(s).
 
 ## 1. Backup and Export
 
@@ -33,7 +33,7 @@ The next step is to delete the associated credit cards. For more information, se
 
 ## 4. Delete Your Account
 
-From your Account Dashboard, select **Account**, and click **Delete Account**. Click the red **Delete Account** button, and enter the verification text to confirm.
+Go to your **Personal Settings**, select **Profile**, and click the **Delete Account** button. Enter the verification text to confirm.
 
 ## Frequently Asked Questions
 

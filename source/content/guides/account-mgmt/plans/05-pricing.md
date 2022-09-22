@@ -15,56 +15,54 @@ reviewed: "2022-09-19"
 
 The following tables provide both the list and preferred pricing for Pantheon Plans.
 
-<dl>
 
-<dt ignored>List Price</dt>
 
-<dd>
+<TabList>
 
-Set price for new sites created after November 15, 2018 that aren’t purchased via a qualified agency partner.
+<Tab title="List Price" id="tab-1-anchor" active={true}>
 
-</dd>
+The List Price is the set price for new sites created after November 15, 2018 that aren’t purchased via a qualified agency partner.
 
-<dt ignored>Preferred Price</dt>
+|                    | Basic         | Performance Small | Performance Medium | Performance Large | Performance XL       |
+|:------------------ |:------------- |:----------------- |:------------------ |:----------------- |:-------------------- |
+| Monthly Price      | $50           | $175              | $300               | $600              | $1,000               |
+| Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
+| **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
-<dd>
+</Tab>
 
-Preferred pricing is available via qualified [Agency Partners](https://pantheon.io/plans/partner-program?docs). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information about pricing, or use the [Partner Agency Directory](https://directory.pantheon.io/agencies?docs) to find an agency.
+<Tab title="Preferred Price" id="tab-2-id">
 
-</dd>
+[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](https://pantheon.io/partner-program).
 
-</dl>
-| Plan                 | Preferred Price | List Price  |
-| -------------------- | --------------- | ----------- |
-| Basic                | $35             | $50         |
-| Performance (Small)  | $125            | $175        |
-| Performance (Medium) | $225            | $300        |
-| Performance (Large)  | $450            | $600        |
-| Performance (XL)     | $750            | $1,000      |
 
-## Annual Billing
+|                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
+|:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
+| Monthly Price      | $35     | $125              | $225               | $450              | $750            |
+| Annual Price       | $350    | $1,375            | $2,475             | $4,950            | $8,250          |
+| **Annual Savings** | **$70** | **$125**          | **$225**           | **$450**          | **$750**        |
 
-Pantheon offers [annual billing plans at lower rates](/annual-billing), giving up to two month's worth of savings.
+</Tab>
 
-| Plan                 | Preferred Annual Price | Annual Savings  |
-| -------------------- | ---------------------- | --------------- |
-| Basic                | $350                   | $70             |
-| Performance (Small)  | $1375                  | $125            |
-| Performance (Medium) | $2475                  | $225            |
-| Performance (Large)  | $4950                  | $450            |
-| Performance (XL)     | $8250                  | $750            |
+<Tab title="2X Large" id="2x">
 
-Note:
-Plan prices are not shown in the Site Dashboard, and you will not be prompted to enter billing information as described below.
+The 2X Large plan is not available for purchase via the Dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
+
+| Payment Type      | Price            |
+|:----------------- |:---------------- |
+| List Monthly      |  $1,500          |
+| List Annual       |  $16,500         |
+
+</Tab>
+
+</TabList>
+
+<Alert title="Note" type="info" >
 
 If the site is associated with an Enterprise Flagship organization, additional Performance plans not shown in the Site Dashboard are available to purchase.
 
 [Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
 
-## Tax Exempt Status Pricing
+</Alert>
 
-To make it easy for our team to confirm your tax-exempt status and have it reflected on your bill quickly, [contact Support](/guides/support/contact-support/) and provide the following information in the [chat](/guides/support/contact-support/#real-time-chat-support) or [support ticket](/guides/support/contact-support/#ticket-support):
 
-- An attached copy of the organization's [tax exemption determination letter](https://www.irs.gov/charities-non-profits/exempt-organizations-affirmation-letters)
-- Email address of Site Owner
-- [Dashboard](/sites) URL of affected sites
