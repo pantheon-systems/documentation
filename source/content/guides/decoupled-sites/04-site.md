@@ -43,7 +43,7 @@ You should have the **Decoupled** tab enabled in your Sites dashboard after onbo
 
 You can create an application from scratch by importing a repository or you can use the Pantheon starter kit templates to develop a decoupled site. The starter kit will create a repository on GitHub for you.
 
-You can also create a site without a CMS. Create a site from scratch by importing the repository and using Next.js or Gatsby as the static site generator, or use a 3rd-party API.
+You can also create a site without a CMS. Create a site from scratch by importing the repository and using Next.js or Gatsby as the static site generator and optionally use a 3rd-party API.
 
 The versions that are supported include:
 
@@ -124,7 +124,7 @@ Create a site without configuring the backend and link to a frontend framework. 
 
 1. (Optional) Link your CMS.
 
-    > **NOTE**: If you are using a back-end CMS on Pantheon, you can link your CMS and the site environment from which to source content. However, this is optional and more applicable when using the Decoupled starter kit templates.
+    > **NOTE**: If you are using a back-end CMS on Pantheon, you can link your CMS and the site environment from which to source content. However, this is optional and more applicable when using the Decoupled starter kit templates to set up an integration with previewing from within the CMS. Any existing configured API endpoint or external CMS does not require linking here.
 
 1. Ensure **Make this a private repository** is selected.
 
