@@ -27,13 +27,9 @@ Within each workspace, they build their team.
 | Writing Sites   | Widget Sites    | Random Sites    |
 +========+========+========+========+========+========+
 | Jane Doe        | John Smith      | Jane Doe        |
-<<<<<<< HEAD
 |                 |                 |                 |
 | John Smith      | Andy White      | Dolores Orange  |
 |                 |                 |                 |
-=======
-| John Smith      | Andy White      | Dolores Orange  |
->>>>>>> c5902dd75dfa0a6370f2f58142dd9c8240433f72
 | Joe Intern      |                 |                 |
 +--------+--------+--------+--------+--------+--------+
 
@@ -48,7 +44,6 @@ Within each workspace, they build their team.
 |                 |                 |                 |
 | Joe Intern      |                 |                 |
 +--------+--------+--------+--------+--------+--------+
-+--------+--------+--------+--------+--------+--------+
 | Site 1 | Site 2 | Site A | Site B | Site Z | Site Y |
 +--------+--------+        |        +--------+--------+
 | Site 3 | Site 4 |        |        | Site X          |
@@ -60,7 +55,9 @@ Finally, because sites in the Random workspace are so, well, random, they've als
 | Writing Sites   | Widget Sites    | Random Sites    |
 +========+========+========+========+========+========+
 | Jane Doe        | John Smith      | Jane Doe        |
+|                 |                 |                 |
 | John Smith      | Andy White      | Dolores Orange  |
+|                 |                 |                 |
 | Joe Intern      |                 |                 |
 +--------+--------+--------+--------+--------+--------+
 | Site 1 | Site 2 | Site A | Site B | Site Z | Site Y |
