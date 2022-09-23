@@ -1,12 +1,24 @@
-You can create a new Site from the new Dashboard homepage by clicking **+ Create New Site**, or from the **Sites** tab. 
+You can create a new Site from your homepage by clicking **+ Create New Site**, or from the **Sites** tab. 
 
-1. Click **Create New Site**. You will be directed to the Legacy Dashboard for Site creation. 
+1. Log in to your Pantheon account. 
 
-1. Choose what type of CMS Site you want to create and you will be brought to the **Create Your Pantheon Site** page:
+   <Alert title="Note" type="info">
 
-  ![Create Your Pantheon Site page](../images/dashboard/create-pantheon-site.png)
+   If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Go to your Personal Workspace by selecting your name in the menu bar, then select **Personal Workspace**.
 
-1. Name the site.
+   </Alert>
+
+1. Select <Icon icon="plus" text="Create New Site"/>. 
+
+1. Select WordPress, Drupal with Composer, or Drupal 7, depending upon the framework you wish to use.
+
+   <Alert title="Note" type="info">
+
+   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/guides/custom-upstream), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+
+   </Alert>
+
+1. Enter the name and select a region for this site.
 
   <Alert title="Note" type="info">
 
@@ -16,10 +28,8 @@ You can create a new Site from the new Dashboard homepage by clicking **+ Create
 
   </Alert>
 
-1. Optionally, if you have access to [organizations](/guides/legacy-dashboard/org-dashboard/#new-sites), choose an organization to affiliate the site with.
+1. If this site is to be part of a Professional Workspace, select a Workspace from **Choose an Organization for the Site**.
 
-1. Choose a [Region](/regions) for the Site.
+   It can take several minutes to create a new site on Pantheon. 
 
-1. Click **Continue** and wait while the platform provisions the site with the start state you selected > Click **Visit your Pantheon Site Dashboard** once complete.
-
-For more information on Site creation, refer to the [Creating Sites](/guides/legacy-dashboard/create-sites) documentation. 
+1. Click **Visit your Pantheon Site Dashboard** when the process is complete. 

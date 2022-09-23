@@ -27,17 +27,7 @@ Follow the steps below to transfer ownership and billing of an existing site to 
 
 Follow the steps below to transfer ownership and billing of a new site to an Agency.
 
-1. Click the **Billing** tab in the Pantheon Site Dashboard.
-
-1. Click **View All Plans** > click **Select** for the plan you want.
-
-1. Click **Pay Annually** or **Pay Monthly** to set the billing frequency > click **Continue**.
-
-1. Click **Transfer Site** > enter the email address associated with the account to which you want to transfer site ownership.
-
-1. Click **Send Request**. 
-
-    The recipient will need to confirm the transfer.
+<Partial file="transfer-ownership-billing-steps.md" />
 
 ## Send an Invitation to Pay to Share Preferred Pricing
 

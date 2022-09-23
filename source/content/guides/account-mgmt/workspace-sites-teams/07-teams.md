@@ -12,17 +12,17 @@ editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
 reviewed: "2022-09-19"
 ---
 
-
+Teams allow you to define the users who will have access to a workspace or site. Team members added to a workspace will have access to all sites in that workspace, whereas team members added to a site can only access that site.
 
 ## Roles and Permissions
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
+In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
 If you are an administrator for a Pantheon organization, [contact support](/guides/support/contact-support/) to have the User in Charge changed.
 
-### Workspace Level 
+### Workspace Level Permissions
 
 
 | Permissions                                             | Administrator                       | Team Member                         | Developer                          | Unprivileged <Popover title="Unprivileged" content="Enterprise and EDU+ organizations only" /> |
@@ -43,7 +43,7 @@ If you are an administrator for a Pantheon organization, [contact support](/guid
 | Manage a site's plan                                    | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
 | Create or manage Custom Upstreams                          | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
 
-### Site Level 
+### Site Level Permissions
 
 | Permissions                                       | Org Admin / Owner <Popover title="Owner" content="Partner organizations only" /> | Team Member | Developer <Popover content="Enterprise organizations only" /> |
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |:----------------------------------- |
@@ -93,57 +93,78 @@ Manage team members and assign [roles and permissions](/change-management#roles-
 
 ## Manage Workspace Teams
 
-### Add User
+### Add a User
 
-1. Navigate to the Organization dashboard > click **Add User** in the **People** tab.
+1. Go to the Workspace, select the **Team** tab, and click **Add User**.
 
-1. Enter the email address of the new user > select a role > click **Add user**.
+1. Click **Invite Team Member**.
 
- ![The Organization dashboard, site tab](../../../../images/dashboard/organization-dashboard-sites.png)
+1. Enter the email address of the new user, select a role, then click **Send Invite**.
 
 An email confirmation is sent to the user. Users with an existing Pantheon account are immediately added to the Organization. Users without existing accounts must first click the confirmation link in the email to create their account.
 
 To create a new user with an unprivileged role, create the user first, then change the role as detailed below.
 
 
-### Change User's Role
+### Change a User's Role
 
-1. Navigate to the Organization dashboard > select the user's name in the **People** tab. 
+1. Go to the Workspace and select the **Team** tab.
 
-1. Click **Operations**, and choose **Change Role**.
+1. Find a select the team member(s) whose role you wish to change.
 
-1. Select the new role from the drop-down > click **Set User Role**.
+1. Click **Actions**, and choose **Change Role**.
+
+1. Select the new role, then click **Save Changes**.
+
+### Remove a Team Member from a Workspace
+
+1. Go to the Workspace and select the **Team** tab.
+
+1. Find and select the team member(s) you wish to remove.
+
+1. Select **Actions**, then **Remove**.
+
+1. Select **Yes, I am sure I want to remove this person**, then click **Yes, Remove**.
+
+
 
 ## Manage Site Teams
 
 ### Add Team Member to Site
 
-1. Click **Team** in the Site Dashboard.
+1. Open the Site Dashboard for the site.
+   
+1. Click **Team**.
 
-1. Enter the user's email address > select a role > click **Add Team Member**.
+1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only, then click **Add to Team**
 
-
-### Add Supporting Organization to Site
+### Add a Supporting Organization to Site
 
 Organization Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/organizations#organization-site-association).
 
+1. Open the Site Dashboard for the site.
+
 1. Click **Team** in the Site Dashboard.
 
-1. Click **Add a Supporting Organization** > enter the organization's name in the search box > click **Search**.
+1. Click **Add a Supporting Organization**, enter the Workspace's name in the search box, and click **Search**.  The Workspace name must match exactly.
 
 1. Select a role > click **Add**.
 
 All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
 
-
-### Change User's Role
-
-### Remove Person from Site
+### Remove Team Member from Site
 
 <Alert title="Note" type="info">
-All users can be removed except the site owner.
+
+All users can be removed except the site owner. Also, when you delete a user from a site, they lose the ability to perform any operations on that site.
+
 </Alert>
 
-In the Team modal in the Site Dashboard, click the X next to the user you want to delete.
+To remove a team member from a site:
 
-When you delete a user from a site, they lose the ability to perform any operations on that site.
+1. Open the Site Dashboard for the site.
+
+1. Click **Team**.
+   
+1. Select the '**x**' for each team member you wish to remove.
+
