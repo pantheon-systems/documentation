@@ -24,5 +24,5 @@ Terminus will use the version of WP-CLI that it finds in `vendor/wp-cli` when ru
 ## More Resources
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
-- [Drush on Pantheon Guide](/guides/drush
+- [Drush on Pantheon Guide](/guides/drush)
 - [Secure Development on Pantheon](/guides/secure-development)
