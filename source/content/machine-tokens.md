@@ -17,7 +17,7 @@ Machine tokens:
 
 ## Create a Machine Token
 
-1. For [Legacy Dashboard](https://pantheon.io/docs/guides/legacy-dashboard) users: from your User Dashboard, click **Account**, and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
+1. For [Legacy Dashboard](/guides/legacy-dashboard) users: from your User Dashboard, click **Account**, and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
 
 <Partial file="machine-tokens-new-dash.md" />
 
