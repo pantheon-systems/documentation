@@ -173,7 +173,7 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 
 ### Upgrading PHP Version May Require Upgrading Drush Versions
 
-Upgrade your current version of Drush if you see errors on the Pantheon Dashboard when trying to auto-run `update.php`. Refer to [Manage Drush Versions on Pantheon](/drush-versions/#configure-drush-version) for more information.
+Upgrade your current version of Drush if you see errors on the Pantheon Dashboard when trying to auto-run `update.php`. Refer to [Manage Drush Versions on Pantheon](/guides/drush/drush-versions/#configure-drush-version) for more information.
 
 ## More Resources
 

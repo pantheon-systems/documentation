@@ -41,7 +41,7 @@ Autopilot only supports Drush 8 for all sites up to Drupal 9.
 
 All Drupal 9 sites that use Integrated Composer are compatible with Autopilot.
 
-Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/drush-versions) for more information.
+Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/guides/drush/drush-versions) for more information.
 
 ## Does Autopilot support Terminus actions?
 

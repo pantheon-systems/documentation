@@ -50,7 +50,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Alternative Approaches
 
-Running the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
+Running the export from the command line using tools like [Terminus](/terminus), [Drush](/guides/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
 
 Often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
 
