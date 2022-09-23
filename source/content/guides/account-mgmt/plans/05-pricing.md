@@ -6,7 +6,6 @@ categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
-showtoc: true
 permalink: docs/guides/account-mgmt/plans/pricing
 anchorid: pricing
 editpath: docs/guides/account-mgmt/plans/05-pricing.md
