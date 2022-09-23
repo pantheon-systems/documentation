@@ -165,7 +165,6 @@
               url: '/guides/drush/drush-versions'
             - text: 'Drupal Drush Command-Line Utility'
               url: '/guides/drush'
-              url: '/guides/drush'
         - title: 'WP-CLI'
           links:
             - text: 'WordPress Configuration Management (WP-CFM)'
