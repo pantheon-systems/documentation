@@ -16,7 +16,7 @@ There are several things you can do to prepare your site and your team for Autop
 
 ## Confirm Compatibility
 
-Make sure that your current site configuration is [compatible with Autopilot](/guides/autopilot#autopilot-site-compatibility).
+Make sure that your current site configuration is [compatible with Autopilot](/guides/definitely-a-broken-link).
 
 ## Pre-define Your URLs for Virtual Regression Testing
 
