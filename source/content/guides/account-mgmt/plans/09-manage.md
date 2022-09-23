@@ -66,19 +66,19 @@ For Object Cache and Pantheon Search (Solr), the following code changes are requ
 
 </TabList>
 
-## Upgrades
+### Upgrades
 
 Site plan upgrades will change your site's resources and access to features immediately. The associated card will be charged a prorated amount for the remainder of the current billing period.
 
 If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Organization for assistance in order to retain your special pricing rate.
 
-## Downgrades
+### Downgrades
 
 Site plan downgrades will change your site's resources and access to features immediately. Beginning on the next billing cycle, the associated card will be charged for the new site plan. No prorated refunds or credits will be issued for site downgrades.
 
 If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
 
-### Downgrade to Sandbox
+## Downgrade Your Plan to Sandbox
 
 To downgrade to Sandbox, see [Cancel Current Plan](/guides/legacy-dashboard/site-plan#cancel-current-plan). Note: [Custom domains](/guides/domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
@@ -101,21 +101,15 @@ To change your plan:
 
 1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click **Upgrade** next to the site's name:
 
-![Upgrade plan button shown on Sandbox sites](../../../../images/dashboard/eduplus-upgrade-plan.png)
-
 Otherwise, click the current plan tag next to the site's name:
 
-![Screenshot of a site Dashboard on a Performance Medium plan](../../../../images/dashboard/eduplus-change-plan.png)
-
 1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
-
-![Screenshot of the plan options for a site](../../../../images/dashboard/select-plan.png)
 
 1. Review the new plan on the **Confirm Purchase** page, and click **Place Your Order**.
 
 Because billing is handled by the organization, the plan change is immediate, and you'll be returned to the Site Dashboard.
 
-    - If the site plan isn't shown on the Dashboard immediately, refresh the page or click the **Workflows** button for status.
+If the site plan isn't shown on the Dashboard immediately, refresh the page or click the **Workflows** button for status.
 
 </Tab>
 
@@ -125,16 +119,14 @@ Because billing is handled by the organization, the plan change is immediate, an
 1. Go to the Site Dashboard.
 
 1. For Sandbox sites, click **Upgrade** next to the site's name:
-![Upgrade plan button shown on Sandbox sites](../../../../images/dashboard/upgrade-plan.png)
 
 Otherwise, click the current plan tag next to the site's name:
-![Change current plan for paid sites](../../../../images/dashboard/change-plan.png)
 
 </Tab>
 
 </TabList>
 
-## Cancel Plan
+## Cancel Your Plan
 
 <Alert title="Warning" type="danger">
 

@@ -66,84 +66,59 @@ Deleting a card profile from your account will also delete its associated billin
 
 </Alert>
 
-1. For each site associated with the credit card, go to the Site Dashboard and click on the **Billing** tab, then update the payment method shown in [your credit cards](/guides/legacy-dashboard/site-billing#your-credit-cards). Each site on a paid plan must be associated with a card.
-1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
-1. Once the card reports **This card is not paying for any sites.**, click **Delete Card**.
-1. Check the box next to **Yes, delete my card.** and click **Delete Card**.
+1. Go to your personal workspace.
+
+1. Select **Settings**, then **Payment Methods**.
+
+1. Click **View Details** for the payment method you wish to edit.
+
+1. Click **Actions**, then **Delete**.
+
+1. Select **Yes, I want to delete it**, then click **Delete**.
+
 
 ### View History
 
-## Site Specific Payment Methods
+1. Go to your personal workspace.
 
-### Add
+1. Select **Settings**, then **Payment Methods**.
+
+1. Click **View Details** for the payment method whose history you wish to view.
+
+   The history will show the last 100 transactions.
+
+
+## Site-Specific Payment Methods
+
+Site specific payment methods can only be used on the site on which they are defined.
+
+### Add a Site-Specific Payment Method
 
 If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. For all plans, use the steps in this section to add a new credit card profile in the **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** section of your User Dashboard.
 
-1. If the site:
-    - Is currently in Sandbox mode:
-        1. Click **Add Card**.
-        1. Click **+ Add New Card**.
-    - Already has a card associated with it:
-        - Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+To add a payment method to a site:
 
-1. Find the existing card under **Billing Information** and click **Change** next to it, then click **Add New Card**.
+1. Open the Site Dashboard for the site.
 
-1. Enter your credit card information and click **Add Card**.
+1. Go to the **Billing** tab and click **Add Card**.
 
-1. To add the card to the site, select the new card and click **Update Credit Card**.
-    - Skip this step to store the card without adding it to the site.
+   - If you already have payment methods defined in your Personal Workspace, they will appear here.  To use one, select it and click **Update Credit Card**.
 
-Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
+   - If you don’t wish to use a card listed here, click **Add New Card**, add the information, click **Add Card**, then click **Update Credit Card**.
 
-
-### Associate Payment Method with Site
-
-### Bill This Site to a New Card
+### Change the Card Used to Bill This Site
 
 Select the card you want the site to use as the new payment method _after_ it has been added as described in the [previous section](#add-new-credit-card).
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+1. Open the Site Dashboard for the site.
 
-1. Find the existing card under BILLING INFORMATION and click **Change** next to it.
+1. Go to the **Billing** tab and click **Remove Card**.
 
-1. Select the new card and click **Update Credit Card**.
+1. Click **Add Card**, and follow the steps in the [previous section](#add-new-credit-card) to bill this site to a different card.
 
- You should get a message saying "Your billing information has been updated!"
+### Delete a Site-Specific Payment Method
 
-<Partial file="replace-credit-card.md" />
+1. Open the Site Dashboard for the site.
 
-To bill this site to a card:
-
-A credit card can only be removed from a site when that site is set to [bill another card](#bill-this-site-to-a-new-card) or when the site is [downgraded to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
-
-After downgrading from a paid plan to Sandbox, remove the card as a payment method for the site:
-
-1. Go to the Site Dashboard and click the **Billing** tab.
-1. Find your card under BILLING INFORMATION and click **Remove Card**.
-
- You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."
-
-To stop billing to this card:
-
-A credit card can only be removed from a site when that site is set to [bill another card](#bill-this-site-to-a-new-card) or when the site is [downgraded to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
-
-After downgrading from a paid plan to Sandbox, remove the card as a payment method for the site:
-
-1. Go to the Site Dashboard and click the **Billing** tab.
-1. Find your card under BILLING INFORMATION and click **Remove Card**.
-
- You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."
-
-
-### Update
-
-### Delete
-
-### View History
-
-1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
-1. Click **View History** for the credit card profile in question.
-
-The credit card history will show the last 100 transactions.
+1. Go to the **Billing** tab and click **Remove Card**.

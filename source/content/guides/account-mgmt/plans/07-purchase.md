@@ -21,54 +21,17 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 
 </Alert>
 
-## Select Plan
+## Purchase a Plan
+
+To purchase a plan for a site:
 
 1. Go to the Site Dashboard.
 
 1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
 
-1. Click **Select** to switch plans:
+1. Click **Select** for the plan you wish to purchase.
 
-## Enter Billing Information
-
-Site ownership is designated to the user account entering billing information.
-
-<TabList>
-
-<Tab title="Add New Card" id="add-cc-id" active={true}>
-
-If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
-
-1. Click the **<span class="glyphicon glyphicon-plus"></span> Add New Card** link.
-
-1. Enter the email address you would like invoices sent to.
-
-1. Enter your credit card information and click **Add Card**.
-
-1. Make sure the desired card is selected and click **Continue**.
-
-</Tab>
-
-<Tab title="Select Existing Card" id="existing-cc-id">
-
-To associate an existing card from your account as the payment method for this site:
-
-1. Select the desired card.
-
-1. Click **Continue**.
-
-</Tab>
-
-<Tab title="Send a Request" id="request-payment-id">
-
-<Partial file="transfer-ownership-billing-intro.md" />
-<Partial file="transfer-ownership-billing-steps.md" />
-
-</Tab>
-
-</TabList>
-
-## Confirm Your Purchase
+1. Enter your billing information. Site ownership is designated to the user account entering billing information.
 
 1. Make sure the **Plan** details are correct.
 
@@ -80,15 +43,22 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
-Add-ons
+## Add-ons
+
+You can enable the following add-ons:
+
 - [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
  - [Object Cache](/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 Pantheon also offers [New Relic&reg; Performance Monitoring](/guides/new-relic) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
-## Enable Add-ons
+To enable or disable add-ons:
 
-From the Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
+1. Go to the Site Dashboard.
+
+1. Click **Settings**, then **Add Ons** You will see all the available add-ons for your site.
+
+2. Click **Add** or **Remove** for each add-on you wish to enable or disable.
 
 You can access New Relic&reg; Performance Monitoring directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
 

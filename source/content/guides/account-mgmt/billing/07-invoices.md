@@ -13,13 +13,10 @@ editpath: docs/guides/account-mgmt/billing/07-invoices.md
 reviewed: "2022-09-19"
 ---
 
-<Partial file="view-invoices.md" />
+To view your invoices:
 
-## Personal Workspace
+1. Go to your personal workspace.
 
-You can manage all the invoices in your workspace. Click **Invoices** to view the following information:
-
-* Invoice date
-* Invoice number
-* Payment method
-* Payment amount
+1. Click **Settings**, then click **Invoices**.
+   
+Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list.
