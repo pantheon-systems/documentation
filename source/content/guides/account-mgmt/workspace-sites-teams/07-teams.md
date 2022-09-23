@@ -6,6 +6,7 @@ categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
+showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 anchorid: teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
@@ -116,7 +117,7 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 1. Select the new role, then click **Save Changes**.
 
-### Remove a Team Member from a Workspace
+### Remove a User from a Workspace
 
 1. Go to the Workspace and select the **Team** tab.
 
@@ -130,7 +131,7 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 ## Manage Site Teams
 
-### Add Team Member to Site
+### Add a Team Member to Site
 
 1. Open the Site Dashboard for the site.
    
@@ -152,7 +153,7 @@ Organization Administrators, Users in Charge, or Site Owners can add a [Supporti
 
 All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
 
-### Remove Team Member from Site
+### Remove a Team Member from Site
 
 <Alert title="Note" type="info">
 

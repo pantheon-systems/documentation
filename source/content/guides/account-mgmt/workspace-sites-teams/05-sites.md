@@ -15,7 +15,7 @@ reviewed: "2022-09-19"
 
 This guide is specific to sites management, not developing and launching sites.
 
-## Creating Sites
+## Create a Site
 
 <Alert title="Note" type="info" >
 
@@ -27,7 +27,7 @@ Be sure to set up workspaces before creating sites.
 
 For more information on site creation, see [Creating Sites](/docs/guides/legacy-dashboard/create-sites)
 
-## Using the Sites Tab
+## The Sites Tab
 
 The Sites tab shows all sites this workspace has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
 
@@ -39,7 +39,7 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 If you did not select a workspace when creating the site, you can add it to a workspace later. See [Add Supporting Organization to Site](/docs/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
 
-### Tagging Sites
+### Tag Sites
 
 Tags are an easy way to add data to your sites to help you manage them. 
 
@@ -59,7 +59,7 @@ To remove tags from a site:
 
 1. Select the tags you wish to remove, then click **Remove Tags**.
 
-### Exporting a List of Sites
+### Export a List of Sites
 
 You can export a list of sites to CSV.  Data in the CSV file includes Site Name, date created, owner, upstream, plan and status.
 
@@ -69,7 +69,7 @@ To export a list of files:
 
 1.Click **More Actions**, then **Export as CSV**.  A file is generated and downloaded to your browser’s download location.
 
-### Changing Site Ownership
+### Change Site Ownership
 
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
@@ -101,7 +101,7 @@ To change the owner of a paid site (e.g. Basic, or Performance):
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 
 
-## Deleting Sites
+## Delete Sites
 
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
