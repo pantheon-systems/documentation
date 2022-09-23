@@ -897,6 +897,21 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 
 </Accordion>
 
+---
+
+## Redirects
+
+<i class="fa fa-bolt-lightning"></i> This is Pantheon Docs Team-specific.
+
+When you're moving a doc or heading to a new location, include a redirect request with a table in this format in the comments.
+
+| Redirect from                  | to                                   |
+|--------------------------------|--------------------------------------|
+| docs/drush                     | docs/guides/drush                    |
+| docs/drush-versions            | docs/guides/drush/drush-versions     |
+| docs/drush-import              | docs/guides/drush/drush-import       |
+| docs/guides/drupal-commandline | docs/guides/drush/drupal-commandline |
+
 ___
 
 ## Reusable Content
