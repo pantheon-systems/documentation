@@ -20,8 +20,13 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 ### Resources From This Workshop
 
 - Companion Guide: [Terminus Manual](/terminus)
+<<<<<<< HEAD
 - Guide: [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wp-cli)
 - Guide: [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drupal-commandline)
+=======
+- Guide: [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wordpress-commandline)
+- Guide: [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline)
+>>>>>>> a436228a0ea08cc4bc46070f2e19749dc130038f
 
 ### Keep Learning After Today
 

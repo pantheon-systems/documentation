@@ -98,7 +98,11 @@ Start with the [basic command structure described above](#command-structure). Th
 
 ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
 
+<<<<<<< HEAD
 For more information, see [Drupal Drush Command-Line Utility](/drush) and [Using WP-CLI On The Pantheon Platform](/guides/wp-cli).
+=======
+For more information, see [Drupal Drush Command-Line Utility](/guides/drush) and [Using WP-CLI On The Pantheon Platform](/wp-cli).
+>>>>>>> a436228a0ea08cc4bc46070f2e19749dc130038f
 
 ## Applying Updates
 
@@ -147,7 +151,11 @@ terminus upstream:updates:apply my-site
 
 ### Module, Theme, and Plugin Updates
 
+<<<<<<< HEAD
 Apply updates to all contributed modules, themes, and plugins via Terminus by setting the environment's connection mode to SFTP and invoking [Drush](/drush) (Drupal) or [WP-CLI](/guides/wp-cli) (WordPress) update commands. You can then use Terminus to commit updates to a development environment on Pantheon.
+=======
+Apply updates to all contributed modules, themes, and plugins via Terminus by setting the environment's connection mode to SFTP and invoking [Drush](/guides/drush) (Drupal) or [WP-CLI](/wp-cli) (WordPress) update commands. You can then use Terminus to commit updates to a development environment on Pantheon.
+>>>>>>> a436228a0ea08cc4bc46070f2e19749dc130038f
 
 <TabList>
 

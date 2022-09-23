@@ -73,7 +73,7 @@ reviewed: "2021-03-31"
   terminus drush $D8_SITE.dev pm:projectinfo -- --fields=name,version --format=table
   ```
 
-  The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/drush-versions) before you continue.
+  The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/guides/drush/drush-versions) before you continue.
 
 1. Use Composer on your D9 site to add these there:
 
