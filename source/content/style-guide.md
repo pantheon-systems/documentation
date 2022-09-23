@@ -839,6 +839,8 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 
 Use ✓ to indicate yes and `❌` to indicate no.
 
+Visit the [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables) for help with creating nice-looking and well-formatted tables.
+
 <Accordion title="Advanced Tables">
 
 Standard markdown tables don't allow for cells to span multiple rows or columns, but by using the [gatsby-remark-grid-tables](https://www.gatsbyjs.org/packages/gatsby-remark-grid-tables/) plugin, we can overcome this limitation:
