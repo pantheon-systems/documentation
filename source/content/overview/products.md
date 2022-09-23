@@ -127,7 +127,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Quicksilver Webhooks"} link={"/docs/quicksilver#hooks"}>
+  <Product title={"Quicksilver Webhooks"} link={"/docs/guides/quicksilver/hooks"}>
 
   Use our [Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) for a generic Webhook implementation.
 

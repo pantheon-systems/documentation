@@ -1,13 +1,18 @@
 ---
-title: Integrate Trello on Pantheon with Quicksilver Hooks
+title: Automate and Integrate your WebOps Workflow with Quicksilver
+subtitle: Integrate Trello on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Trello with your dev workflow on Pantheon.
 categories: [integrate]
 tags: [collaborate, quicksilver, webops, workflow]
-type: guide
-permalink: docs/guides/:basename
-date: 5/4/2017
 contributors: [scottmassey]
+layout: guide
+showtoc: true
+permalink: docs/guides/quicksilver/trello
+anchorid: trello
 ---
+
+This section provides information on how to integrate Trello with Pantheon using Quicksilver.
+
 [Trello](https://trello.com) is a simple yet powerful project management tool which helps teams to collaborate on projects in an agile framework. Trello lends itself to not only web projects, but also helps businesses keep [other](https://trello.com/inspiration) internal tasks and objectives organized.
 
 In this guide, we'll use a Trello instance with a site on Pantheon. When changes are pushed to Pantheon that reference a Trello card's unique ID, the commit message will appear in the card.
@@ -24,7 +29,7 @@ Start by creating a new machine user in your Trello instance. This user is refer
 
 1. If you haven't done so already, create a team. Login to your Trello instance and click <i class="fa fa-plus"></i>, found in the upper panel, then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create**:
 
-    ![Create a team](../../images/integrations/trello/new-team.png)
+    ![Create a team](../../../images/integrations/trello/new-team.png)
 
     If you already have a team, select it from your dashboard.
 
@@ -34,15 +39,15 @@ Start by creating a new machine user in your Trello instance. This user is refer
 
   We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. The email needs to be an account you have access to:
 
-    ![Create an automation user](../../images/integrations/trello/add-member.png)
+    ![Create an automation user](../../../images/integrations/trello/add-member.png)
 
 4. Login as the new "Automation User" and make sure you're a team member on the relevant board:
 
-    ![Add a team](../../images/integrations/trello/team-board.png)
+    ![Add a team](../../../images/integrations/trello/team-board.png)
 
 5. Copy the machine user's API key from [here](https://trello.com/app-key), then click the link to manually generate a Token:
 
-    ![Copy developer api key](../../images/integrations/trello/developer-keys.png)
+    ![Copy developer api key](../../../images/integrations/trello/developer-keys.png)
 
     Save your key and token, to be used in the next section.
 
@@ -81,7 +86,7 @@ When it comes to keeping production keys secure, the best solution is to use a k
 </Alert>
 
 ## Configure Quicksilver Integration
-Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Trello to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration script for Trello to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
 
@@ -131,7 +136,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 1. Create a test issue in an existing or new Trello project. Copy the issue ID, which is located in the Trello card's URL:
 
-    ![Trello card ID](../../images/integrations/trello/card-id.png)
+    ![Trello card ID](../../../images/integrations/trello/card-id.png)
 
     <Alert title="Note" type="info">
 
@@ -145,7 +150,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 3. Return to the issue in Trello to see a message from our machine user:
 
-    ![Trello card](../../images/integrations/trello/trello-card.png)
+    ![Trello card](../../../images/integrations/trello/trello-card.png)
 
 ## Conclusion
 In this guide, we covered a simple integration between Trello and Pantheon. There are other ways to connect your Trello with your development workflow on Pantheon if you also use an external repository such as [GitHub](http://help.trello.com/article/1065-using-the-github-power-up). This integrations work in the opposite direction, allowing you to attach pull requests, issues, and commits directly to your Trello cards, from the Trello dashboard. Using and extending integrations like these will provide clarity into work being performed by you and your team, while speeding up the development process.

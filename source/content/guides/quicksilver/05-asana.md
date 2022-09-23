@@ -1,13 +1,17 @@
 ---
-title: Integrating Asana with Pantheon using Quicksilver Hooks
+title: Automate and Integrate your WebOps Workflow with Quicksilver
+subtitle: Integrate Asana with Pantheon using Quicksilver Hooks
 description: Learn how to integrate Asana project management application with the Pantheon.
 categories: [integrate]
 tags: [collaborate, continuous-integration, iterate, quicksilver, workflow]
-type: guide
-permalink: docs/guides/:basename
-date: 5/4/2017
 contributors: [scottmassey]
+layout: guide
+showtoc: true
+permalink: docs/guides/quicksilver/asana
+anchorid: asana
 ---
+
+This section provides information on how to integrate Asana with Pantheon using Quicksilver.
 
 [Asana](https://asana.com) is a flexible project management tool which helps teams to collaborate on projects in either an waterfall or kanban framework. It allows for projects to be spun up and managed quickly and easily, and has an extremely well designed user interface.
 
@@ -31,28 +35,28 @@ Start by creating a new machine user in Asana. This user is referred to as a "ma
 
 1. Select **<span class="asana">+</span>** from the left hand menu, next to existing team members:
 
-   ![Add a user](../../images/integrations/asana/new-user.png)
+   ![Add a user](../../../images/integrations/asana/new-user.png)
 
 2. Enter a name and email address for the machine user, which acts as the intermediary between Asana and the Pantheon Site Dashboard. Then click **Send Invite**.
 
   We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. The email needs to be an account you have access to:
 
-   ![Create an automation user](../../images/integrations/asana/new-user-add.png)
+   ![Create an automation user](../../../images/integrations/asana/new-user-add.png)
 
 3. Check the address used in the last step for an email from Asana. Click the **Accept Invite** button and follow prompts to set the machine user's password. You should be logged in as the machine user.
 
 4. Click on your profile in the top right, and select **My Profile Settings**:
 
-    ![My profile settings](../../images/integrations/asana/my-profile-settings.png)
+    ![My profile settings](../../../images/integrations/asana/my-profile-settings.png)
 
 
 5. Select **Apps**, then **Manage Developer Apps**:
 
-    ![Apps](../../images/integrations/asana/apps.png)
+    ![Apps](../../../images/integrations/asana/apps.png)
 
 6. Scroll down to **Personal Access Tokens**, then click **+ Create New Personal Access Token**:
 
-    ![Create a token](../../images/integrations/asana/access-token.png)
+    ![Create a token](../../../images/integrations/asana/access-token.png)
 
 6. Give the token a name which denotes it's purpose and save the string generated for the next steps.
 
@@ -89,7 +93,7 @@ When it comes to keeping production keys secure, the best solution is to use a k
 </Alert>
 
 ## Configure Quicksilver Integration
-Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Asana to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration script for Asana to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
 
@@ -139,7 +143,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 1. Grab the ID for a task you're working on, which is last part of the open task's URL:
 
-    ![Asana task ID](../../images/integrations/asana/task-id.png)
+    ![Asana task ID](../../../images/integrations/asana/task-id.png)
 
 3. Push a code change to Pantheon containing the Asana task ID in the commit message in brackets (e.g., [398734709134915]). This workflow will trigger `asana_integration.php` script, which will search commits for possible task IDs and comment in Asana when found.
 
@@ -147,7 +151,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
 4. Return to the issue in Asana to see a message from our machine user:
 
-    ![Asana message](../../images/integrations/asana/asana-task.png)
+    ![Asana message](../../../images/integrations/asana/asana-task.png)
 
 ## Conclusion
 In this guide, we covered a simple integration between Asana and Pantheon. Feel free to expand our example. Additionally, if you use [GitHub](https://github.com) with Asana, you can further integrate with [Unito](https://unito.io/asana-sync/), a free integration service. This should reduce a few steps in the development process for your team by letting the robots handle the communication.

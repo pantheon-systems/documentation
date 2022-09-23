@@ -1,13 +1,18 @@
 ---
-title: Integrate Jira on Pantheon with Quicksilver Hooks
+title: Automate and Integrate your WebOps Workflow with Quicksilver
+subtitle: Integrate Jira on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Atlassian's issue tracking service, Jira, with the Pantheon Site Dashboard.
 layout: doc
 categories: [integrate]
 tags: [collaborate, quicksilver, webops, workflow]
-permalink: docs/guides/:basename
-date: 5/4/2017
 contributors: [scottmassey]
+layout: guide
+showtoc: true
+permalink: docs/guides/quicksilver/jira
+anchorid: jira
 ---
+
+This section provides information on how to integrate Jira with Pantheon using Quicksilver.
 
 Atlassian's [Jira](https://www.atlassian.com/software/jira) issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a [larger suite of tools](https://www.atlassian.com/legal/privacy-policy/product-family). Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
 
@@ -45,7 +50,7 @@ Start by creating a new machine user in your Atlassian Cloud instance. This user
 
   We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Automation`. The email needs to be an account you have access to:
 
-    ![Create an automation user](../../images/integrations/jira-new-user.png)
+    ![Create an automation user](../../../images/integrations/jira-new-user.png)
 
 4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine user's password.
 
@@ -89,7 +94,7 @@ When it comes to keeping production keys secure, the best solution is to use a k
 </Alert>
 
 ## Configure Quicksilver Integration
-Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Jira to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration script for Jira to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 In the commands below, replace `<site>` with your Pantheon site name.
 
@@ -151,7 +156,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 4. Return to the issue in Jira to see a message from our machine user:
 
-    ![Jira issue](../../images/integrations/jira_log.png)
+    ![Jira issue](../../../images/integrations/jira_log.png)
 
 ## Conclusion
 In this guide, we covered a simple integration between Jira and Pantheon. There are other ways to connect your Jira with your development workflow on Pantheon if you also use and external repository such as Atlassian's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.
