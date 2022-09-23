@@ -6,7 +6,6 @@ categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
-showtoc: true
 permalink: docs/guides/account-mgmt/account/workspace
 anchorid: workspace
 editpath: docs/guides/account-mgmt/account/03-workspace.md
