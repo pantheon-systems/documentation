@@ -164,20 +164,14 @@
             - text: 'Managing Drush Versions on Pantheon'
               url: '/guides/drush/drush-versions'
             - text: 'Drupal Drush Command-Line Utility'
-<<<<<<< HEAD
-              url: '/drush'
-=======
+              url: '/guides/drush'
               url: '/guides/drush'
         - title: 'WP-CLI'
           links:
-            - text: 'WP-CLI'
-              url: '/videos/wp-cli'
-              icon: 'fa fa-video-camera'
             - text: 'WordPress Configuration Management (WP-CFM)'
               url: '/wp-cfm'
             - text: 'Using WP-CLI On The Pantheon Platform'
-              url: '/wp-cli'
->>>>>>> a436228a0ea08cc4bc46070f2e19749dc130038f
+              url: '/guides/wp-cli'
     - title: 'Git'
       subtitle: 'Push code changes to the platform using Git mode.'
       subtopic-lists:
