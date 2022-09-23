@@ -30,7 +30,7 @@ function downloadTerminus($installdir, $package)
             ]
     ];
     $context  = stream_context_create($opts);
-    $release = file_get_contents("https://api.github.com/repos/pantheon-systems/" . $package . "/releases/tags/2.6.4", false, $context);
+    $release = file_get_contents("https://api.github.com/repos/pantheon-systems/" . $package . "/releases/tags/3.0.8", false, $context);
     $release = json_decode($release);
     $version  = $release->tag_name;
     $url      = $release->assets[0]->browser_download_url;
