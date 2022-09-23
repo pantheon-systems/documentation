@@ -1,6 +1,12 @@
-1. Click the **Billing** tab in the Pantheon Site Dashboard.
+1. Open the Site Dashboard for the site.
 
+<<<<<<< HEAD
 1. Click **Transfer Site** and enter the email address associated with the account to which you want to transfer site ownership.
+=======
+1. Select the **Billing** tab.
+
+1. Click **Transfer Site** and  enter the email address associated with the account to which you want to transfer site ownership.
+>>>>>>> updates workspaces, sites, teams
 
 1. Click **Send Request**. 
 
