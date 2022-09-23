@@ -2,7 +2,6 @@
 title: Automate and Integrate your WebOps Workflow with Quicksilver
 subtitle: Integrate Jira on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Atlassian's issue tracking service, Jira, with the Pantheon Site Dashboard.
-layout: doc
 categories: [integrate]
 tags: [collaborate, quicksilver, webops, workflow]
 contributors: [scottmassey]
