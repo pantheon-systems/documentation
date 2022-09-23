@@ -17,7 +17,9 @@ Machine tokens:
 
 ## Create a Machine Token
 
-1. From your User Dashboard, click **Account**, and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
+1. For [Legacy Dashboard](/guides/legacy-dashboard) users: from your User Dashboard, click **Account**, and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
+
+<Partial file="machine-tokens-new-dash.md" />
 
 1. Click **Create Token**.
 
@@ -57,7 +59,9 @@ terminus auth:login --email <email@example.com>
 
 For security purposes, we recommend removing tokens from your account when they are no longer used.
 
-1. From your User Dashboard, click **Account**, and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
+1. For [Legacy Dashboard](/guides/legacy-dashboard) users: from your User Dashboard, click **Account**, and select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/).
+
+<Partial file="machine-tokens-new-dash.md" />
 
 1. Locate the token you want to delete, and click **Revoke Token**.
 
