@@ -29,14 +29,34 @@ Payment for a site can't be split among payment methods - payment can only come 
 
 ## Personal Payment Methods
 
-### Add 
+Personal payment methods - that can be used on all sites you own - are managed via your [Personal Workspace](/docs/guides/account-mgmt/account/workspace).
+
+### Add Personal Payment Method
+
+To add a payment method:
+
+1. Go to your personal workspace.
+
+1. Select **Settings**, then **Payment Methods**.
+
+1. Click **+ Add Payment Method**. 
+
+1. Enter the card information, then click **Add New Card**.
 
 
-### Update
+### Update Personal Payment Method
 
-<Partial file="replace-credit-card.md" />
+1. Go to your personal workspace.
 
-### Delete
+1. Select **Settings**, then **Payment Methods**.
+
+1. Click **View Details** for the payment method you wish to edit.
+
+1. Click **Actions**, then **Edit**.
+
+1. Update the card information, then click **Save New Changes**.
+
+### Delete Personal Payment Method
 
 All sites must be disassociated from the card before it can be deleted.
 

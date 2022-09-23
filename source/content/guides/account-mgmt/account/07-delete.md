@@ -13,11 +13,7 @@ editpath: docs/guides/account-mgmt/account/07-delete.md
 reviewed: "2022-09-19"
 ---
 
-<<<<<<< HEAD
 Follow the steps below in to completely delete your site(s).
-=======
-Follow the steps below to completely delete your site(s).
->>>>>>> c5902dd75dfa0a6370f2f58142dd9c8240433f72
 
 ## 1. Backup and Export
 
