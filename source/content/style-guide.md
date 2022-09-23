@@ -903,9 +903,9 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 
 ## Redirects
 
-<i class="fa fa-bolt-lightning"></i> This is Pantheon Docs Team-specific.
+<i class='fa-solid fa-bolt-lightning'></i>This is Pantheon Docs Team-specific.
 
-When you're moving a doc or heading to a new location, include a redirect request with a table in this format in the comments.
+When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
 
 | Redirect from                  | to                                   |
 |--------------------------------|--------------------------------------|
