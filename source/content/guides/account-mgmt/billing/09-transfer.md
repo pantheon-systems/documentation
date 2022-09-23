@@ -6,7 +6,6 @@ categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
-showtoc: true
 permalink: docs/guides/account-mgmt/billing/transfer
 anchorid: transfer
 editpath: docs/guides/account-mgmt/billing/09-transfer.md
@@ -22,4 +21,7 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 </Alert>
 
 <Partial file="transfer-ownership-billing-intro.md" />
+
+To transfer ownership and billing:
+
 <Partial file="transfer-ownership-billing-steps.md" />

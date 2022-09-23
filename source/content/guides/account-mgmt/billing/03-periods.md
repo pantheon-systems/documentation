@@ -6,7 +6,6 @@ categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
-showtoc: true
 permalink: docs/guides/account-mgmt/billing/periods
 anchorid: periods
 editpath: docs/guides/account-mgmt/billing/03-periods.md
@@ -17,10 +16,6 @@ reviewed: "2022-09-19"
 Pantheon offers both Monthly and Annual Billing.
 
 Moving to Annual Billing can result in significant savings. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service. See [Pricing](docs/guides/account-mgmt/plans/pricing) for pricing and savings details.
-
-## Change Billing Cadence
-
-### Considerations
 
 Before changing your billing period from monthly to annual, or vice-versa, consider the following:
 

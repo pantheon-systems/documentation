@@ -6,7 +6,6 @@ categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
-showtoc: true
 permalink: docs/guides/account-mgmt/billing/invoices
 anchorid: invoices
 editpath: docs/guides/account-mgmt/billing/07-invoices.md

@@ -6,7 +6,6 @@ categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
-showtoc: true
 permalink: docs/guides/account-mgmt/plans/resources
 anchorid: resources
 editpath: docs/guides/account-mgmt/plans/03-resources.md
