@@ -154,9 +154,7 @@ mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 
 <Tab title="WordPress" id="wptab">
 
-Install and use the following WordPress plugin:
-
-- [WP Cerber Security](https://wordpress.org/plugins/wp-cerber/)
+You can review a [list of plugins on wordpress.org](https://wordpress.org/plugins/) to find the right plugin for your setup. Consult [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) before you install a new plugin.
 
 </Tab>
 
