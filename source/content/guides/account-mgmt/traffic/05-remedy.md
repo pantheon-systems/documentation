@@ -7,9 +7,9 @@ tags: [plans]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/account-mgmt/traffic
-anchorid: traffic
-editpath: docs/guides/account-mgmt/traffic/01-introduction.md
+permalink: docs/guides/account-mgmt/traffic/remedy
+anchorid: remedy
+editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
 ---
 [Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/guides/legacy-dashboard/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
