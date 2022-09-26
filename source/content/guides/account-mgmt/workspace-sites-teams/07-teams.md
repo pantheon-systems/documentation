@@ -92,9 +92,13 @@ By default, all users are assigned the Administrator role after the Workspace is
 
 Manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
 
-## Manage Workspace Teams
+## Manage Teams
 
 ### Add a User
+
+<TabList>
+
+<Tab title="To a Workspace" id="addwsp" active={true}>
 
 1. Go to the Workspace, select the **Team** tab, and click **Add User**.
 
@@ -105,6 +109,19 @@ Manage team members and assign [roles and permissions](/change-management#roles-
 An email confirmation is sent to the user. Users with an existing Pantheon account are immediately added to the Organization. Users without existing accounts must first click the confirmation link in the email to create their account.
 
 To create a new user with an unprivileged role, create the user first, then change the role as detailed below.
+</Tab>
+
+<Tab title="To a Site" id="addsite">
+
+1. Open the Site Dashboard for the site.
+   
+1. Click **Team**.
+
+1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only, then click **Add to Team**
+
+</Tab>
+
+</TabList>
 
 
 ### Change a User's Role
@@ -117,7 +134,21 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 1. Select the new role, then click **Save Changes**.
 
-### Remove a User from a Workspace
+### Remove a User
+
+When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.
+
+After a user leaves, we recommend you:
+
+- Delete or block the user's account in [Drupal](https://www.drupal.org/node/627158) or [WordPress](https://codex.wordpress.org/Users_Users_SubPanel).
+- Remove the user from the team and/or organization in the Pantheon Dashboard.
+- Change any shared account passwords the user may have had access to.
+- Review the Git history in the commit log to see if the site team member made code changes after leaving. See recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://wordpress.org/support/article/faq-my-site-was-hacked/).
+
+
+<TabList>
+
+<Tab title="From a Workspace" id="remws" active={true}>
 
 1. Go to the Workspace and select the **Team** tab.
 
@@ -127,33 +158,9 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 1. Select **Yes, I am sure I want to remove this person**, then click **Yes, Remove**.
 
+</Tab>
 
-
-## Manage Site Teams
-
-### Add a Team Member to Site
-
-1. Open the Site Dashboard for the site.
-   
-1. Click **Team**.
-
-1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only, then click **Add to Team**
-
-### Add a Supporting Organization to Site
-
-Organization Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/organizations#organization-site-association).
-
-1. Open the Site Dashboard for the site.
-
-1. Click **Team** in the Site Dashboard.
-
-1. Click **Add a Supporting Organization**, enter the Workspace's name in the search box, and click **Search**.  The Workspace name must match exactly.
-
-1. Select a role > click **Add**.
-
-All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
-
-### Remove a Team Member from Site
+<Tab title="From a Site" id="remsite">
 
 <Alert title="Note" type="info">
 
@@ -169,3 +176,22 @@ To remove a team member from a site:
    
 1. Select the '**x**' for each team member you wish to remove.
 
+</Tab>
+
+</TabList>
+
+## Add a Supporting Organization to Site
+
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
+
+Organization Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/organizations#organization-site-association).
+
+1. Open the Site Dashboard for the site.
+
+1. Click **Team** in the Site Dashboard.
+
+1. Click **Add a Supporting Organization**, enter the Workspace's name in the search box, and click **Search**.  The Workspace name must match exactly.
+
+1. Select a role > click **Add**.
+
+All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
