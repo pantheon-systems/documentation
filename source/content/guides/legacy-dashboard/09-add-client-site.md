@@ -70,10 +70,10 @@ If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides
 
 1. Enter your credit card information and click **Add Card**.
 
-1. To add the card to the site, select the new card and click **Update Credit Card**.
+1. Select the new card and click **Update Credit Card** to add the card to the site. 
     - Skip this step to store the card without adding it to the site.
 
-Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
+Set the card as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card) after you add it.
 
 ### Bill This Site to a New Card
 
