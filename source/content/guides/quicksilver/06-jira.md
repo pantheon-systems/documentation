@@ -11,11 +11,12 @@ permalink: docs/guides/quicksilver/jira
 anchorid: jira
 ---
 
-This section provides information on how to integrate Jira with Pantheon using Quicksilver.
+This section provides information on how to use Quicksilver to integrate Jira with Pantheon.
 
 Atlassian's [Jira](https://www.atlassian.com/software/jira) issue tracking is one of the most common applications used to manage projects for application development teams. It is part of a [larger suite of tools](https://www.atlassian.com/legal/privacy-policy/product-family). Jira is extremely customizable, through manual configuration or the use of installable plugins. It allows for integration with tools in the Atlassian suite as well as other common development tools.
 
-In this guide, we'll connect a Jira instance to a site on Pantheon. When changes are pushed to Pantheon that reference a Jira issue ID, the commit message will appear in the Jira issue's activity log.
+The sections below provide steps on how to connect a Jira instance to a website project on Pantheon. You can push changes that include the Jira issue ID to Pantheon, and the commit message will appear on the Jira issue's activity log.
+
 ## Before You Begin
 Be sure that you:
 
@@ -26,7 +27,7 @@ Be sure that you:
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
   ```
 
-- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus:
+- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard**, select **Account**, select **Machine Tokens**, then authenticate Terminus:
 
   ```bash
   terminus auth:login --machine-token=‹machine-token›
@@ -39,7 +40,7 @@ Be sure that you:
   ```
 
 ## Create a Machine User in Atlassian
-Start by creating a new machine user in your Atlassian Cloud instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
+Create a new machine user in your Atlassian Cloud instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
 1. [Sign up for an Atlassian Cloud account](https://www.atlassian.com/software/jira/try) if you do not have one already.
 
@@ -54,13 +55,13 @@ Start by creating a new machine user in your Atlassian Cloud instance. This user
 4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine user's password.
 
 ## Securely Store User Credentials on Pantheon
-Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/guides/secure-development/private-paths#private-path-for-files) of Pantheon's filesystem.
+You must provide Pantheon with the credentials for your new machine user. These credentials are securely stored in the [private path](/guides/secure-development/private-paths#private-path-for-files) of Pantheon's filesystem.
 
 We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
 In the commands below, replace `<site>` with your site name, `<example>` with your Atlassian project name, `<user>` with your machine account username in Jira, and `<password>` with its password.
 
-1. First, let's check for existing secrets using Terminus:
+1. Check for existing secrets using Terminus:
 
         terminus secrets:list <site>.dev
 
@@ -93,11 +94,11 @@ When it comes to keeping production keys secure, the best solution is to use a k
 </Alert>
 
 ## Configure Quicksilver Integration
-Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration script for Jira to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration script for Jira to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 In the commands below, replace `<site>` with your Pantheon site name.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
+1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and navigate to the project's root directory:
 
         `terminus connection:info <site>.dev --fields='Git Command' --format=string`
         cd <site>
@@ -157,5 +158,12 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     ![Jira issue](../../../images/integrations/jira_log.png)
 
-## Conclusion
-In this guide, we covered a simple integration between Jira and Pantheon. There are other ways to connect your Jira with your development workflow on Pantheon if you also use and external repository such as Atlassian's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.
+## External Repositories
+
+You can also connect your Jira and Pantheon-integrated site to an external repository such as Atlassian's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.
+
+## More Resources
+
+- [Pantheon YAML Configuration Files](/pantheon-yml)
+- [Lockr](/guides/lockr)
+- [Private Paths for Files and Code](/guides/secure-development/private-paths)
