@@ -6,7 +6,7 @@ categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
-showtoc: yes
+showtoc: true
 permalink: docs/guides/account-mgmt/traffic
 anchorid: traffic
 editpath: docs/guides/account-mgmt/traffic/01-introduction.md
