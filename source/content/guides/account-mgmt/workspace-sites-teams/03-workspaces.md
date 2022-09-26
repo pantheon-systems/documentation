@@ -17,7 +17,7 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 <dl>
     <dt>Personal Workspace</dt>
-    <dd>The personal workspace displays tools for the sites to which you have access, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/docs/guides/account-mgmt/account) guide.</dd>
+    <dd>The personal workspace displays tools for the sites to which you have access, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.</dd>
     <dt>Professional Workspace</dt>
     <dd>Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.</dd>
 </dl>
@@ -99,7 +99,7 @@ Workspaces cannot be deleted.
 
 ### How do we add new sites to a Professional Workspace?
 
-See [Sites](/docs/guides/account-mgmt/workspace-sites-teams/sites) for more information.
+See [Sites](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
 
 ### Why do login attempts fail for all users across my Workspace simultaneously?
 

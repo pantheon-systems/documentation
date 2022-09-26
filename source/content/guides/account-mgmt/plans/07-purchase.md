@@ -43,7 +43,7 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
-## Add-ons
+## Enable Add-ons
 
 You can enable the following add-ons:
 

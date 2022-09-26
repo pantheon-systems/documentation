@@ -96,7 +96,7 @@ To change your plan:
 
 1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click **Upgrade** next to the site's name:
 
-Otherwise, click the current plan tag next to the site's name:
+   Otherwise, click the current plan tag next to the site's name:
 
 1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
 
