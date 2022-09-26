@@ -27,7 +27,6 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) provides a lis
 
     ![Pantheon Site Dashboard: Install CF7](../../../images/wordpress-commandline-install-cf7.png)
 
-
 1. Review the file changes:
 
     ```bash
@@ -91,7 +90,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) provides a lis
     terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
     ```
 
-Manually applying configuration changes is a simple task for this example because you're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
+    Manually applying configuration changes is a simple task for this example because you're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
 
 ## Install WordPress Themes
 
