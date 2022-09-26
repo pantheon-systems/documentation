@@ -20,7 +20,10 @@ We recommend setting the `web_docroot` to `true` to create a dedicated directory
 
 <Alert type="info" title="Note">
 
-If your site uses a [nested docroot](/nested-docroot), the script paths in your `pantheon.yml` file should not include the `web/` path prefix. Scripts in your `pantheon.yml` file should match the following path examples: `private/scripts/new_relic_deploy.php` or `private/scripts/slack_deploy_notification.php`
+If your site uses a [nested docroot](/nested-docroot), the script paths in your `pantheon.yml` file should not include the `web/` path prefix. Scripts in your `pantheon.yml` file should match one of the following path examples:
+
+- `private/scripts/new_relic_deploy.php`
+- `private/scripts/slack_deploy_notification.php`
 
 </Alert>
 
@@ -32,11 +35,11 @@ You can use Terminus to install Quicksilver Composer scripts if you have a Compo
 
 Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
 
-You can also use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values securely. When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
+You can also use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values securely. Note that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path when storing keys for Quicksilver scripts in the private files path.
 
 1. Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
 
-  This will allow you to write and remove key values. The code example below shows you how to write a value to a key:
+  This allows you to write and remove key values. The code example below shows you how to write a value to a key:
 
   ```bash
   terminus secrets:set site.env key value
@@ -62,7 +65,7 @@ The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksil
 
 ### Drush Revert Features
 
-The [Pantheon Drush Revert Features repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_revert_features) provides information on using Drush to commands to revert specific features.
+The [Pantheon Drush Revert Features repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_revert_features) provides information on using Drush commands to revert specific features.
 
 ### Enable Development Modules
 
@@ -78,7 +81,7 @@ Use the [Pantheon WP-CFM Import repository](https://github.com/pantheon-systems/
 
 <Alert title="Note" type="info">
 
-WP-CFM should only be used to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
+You should only use WP-CFM to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
 
 </Alert>
 
@@ -105,3 +108,10 @@ Use the [Pantheon URL Checker repository](https://github.com/pantheon-systems/qu
 ### Webhooks
 
 Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to post workflow data to an external URL for a generic Webhook implementation.
+
+## More Resources
+
+- [Lockr](/guides/lockr)
+- [Private Paths for Files and Code](/guides/secure-development/private-paths)
+- [WordPress Configuration Management (WP-CFM)](/wp-cfm)
+- [Drush on Pantheon](/guides/drush)
