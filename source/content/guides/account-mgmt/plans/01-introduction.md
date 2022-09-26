@@ -17,10 +17,10 @@ Before reading on, we recommend you familiarize yourself with the following term
 
 ## Terminology
 
-- <dfn id="appcon">Application Containers</dfn>: Each [application container](/application-containers) is a separate deployment of your site's code. All Dev and Test environments for Personal and Performance sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
+- Application Containers : Each [application container](/application-containers) is a separate deployment of your site's code. All Dev and Test environments for Personal and Performance sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
 
-- <dfn id="phpcon">PHP Concurrency</dfn>: The amount of simultaneous processes PHP can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance.
+- PHP Concurrency: The amount of simultaneous processes PHP can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance.
 
-- <dfn id="phpmem">PHP Memory Limit (Application Memory Limit)</dfn>: The maximum amount of memory a single PHP process can use. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
+- PHP Memory Limit (Application Memory Limit): The maximum amount of memory a single PHP process can use. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
 
-- <dfn id="bufferpool">MySQL Buffer Pool</dfn>: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.
+- MySQL Buffer Pool: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.

@@ -63,11 +63,11 @@ To remove tags from a site:
 
 You can export a list of sites to CSV.  Data in the CSV file includes Site Name, date created, owner, upstream, plan and status.
 
-To export a list of files:
+To export a list of sites:
 
 1. On the **Sites** tab, find and select the files you wish to include in the list, or select the checkbox at the top of the list to select all sites.
 
-1.Click **More Actions**, then **Export as CSV**.  A file is generated and downloaded to your browser’s download location.
+1. Click **More Actions**, then **Export as CSV**.  A file is generated and downloaded to your browser’s download location.
 
 ### Change Site Ownership
 
@@ -86,7 +86,7 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 
 <TabList>
 
-<Tab title="Paid Sites" id="paid">
+<Tab title="Paid Sites" id="paid" active={true}>
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
@@ -102,7 +102,7 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 
 </Tab>
 
-<Tab title="Sandbox Sites" id="sandbox" active={true}>
+<Tab title="Sandbox Sites" id="sandbox">
 
 <Partial file="transfer-ownership-billing-intro.md" />
 <Partial file="transfer-ownership-billing-steps.md" />
