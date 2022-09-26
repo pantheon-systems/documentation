@@ -22,9 +22,9 @@ Did you know Pantheon offers savings for sites purchased with annual billing pla
 
 ## Access Site Billing
 
-1. From the User Dashboard, click on the site you want to access billing for.
+1. Navigate to the User Dashboard, click the site for which you want to access billing.
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+1. Navigate to the Site Dashboard and click the **Billing** tab.
 
 <Alert title="Note" type="info">
 
