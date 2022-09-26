@@ -37,4 +37,9 @@ Variables are made available through the `$_POST` global variable, and the `$_EN
 |`vrt_result_url`|Page URL associated with an Autopilot VRT result|`autopilot_vrt`|[Autopilot](/guides/autopilot) is only available in the new Pantheon Dashboard|
 |`updates_info`|List of the plugins/modules/themes that were updated prior to the VRT|`autopilot_vrt`|Returns JSON data structure|
 
-For examples on how to use these variables, see the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository.
+Refer to the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for examples on how to use these variables.
+
+## More Resources
+
+- [Pantheon YAML Configuration Files](/pantheon-yml)
+- [Autopilot](/guides/autopilot)
