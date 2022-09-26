@@ -13,18 +13,13 @@ editpath: docs/guides/account-mgmt/plans/09-manage.md
 reviewed: "2022-09-19"
 ---
 
-<Alert title="Note" type="info" >
+<Alert title="Notes" type="info" >
 
-Elite sites cannot manage plans from the Site Dashboard. Contact our sales team or reach out to your dedicated Client Sales Executive for details.
+- Elite sites cannot manage plans from the Site Dashboard. Contact our sales team or reach out to your dedicated Client Sales Executive for details.
 
-</Alert>
+- The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. Pantheon for EDU+ allows Organization Administrators to manage site plans for sites within their organization. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
-
-The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
-
-<Alert title="Note" type="info">
-
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
+- If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
 </Alert>
 

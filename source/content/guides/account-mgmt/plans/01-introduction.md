@@ -17,7 +17,7 @@ Before reading on, we recommend you familiarize yourself with the following term
 
 ## Terminology
 
-- <dfn id="appcon">Application Containers</dfn>: Each [application container](/docs/application-containers) is a separate deployment of your site's code. All Dev and Test environments for Personal and Performance sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
+- <dfn id="appcon">Application Containers</dfn>: Each [application container](/application-containers) is a separate deployment of your site's code. All Dev and Test environments for Personal and Performance sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
 
 - <dfn id="phpcon">PHP Concurrency</dfn>: The amount of simultaneous processes PHP can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance.
 
