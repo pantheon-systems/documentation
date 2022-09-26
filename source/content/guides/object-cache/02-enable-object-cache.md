@@ -135,7 +135,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
   ```php:title=settings.php
   // All Pantheon Environments.
-  if (defined('PANTHEON_ENVIRONMENT')) {
+  if (!empty($_ENV['CACHE_HOST'])) {
     // Use Redis for caching.
     $conf['redis_client_interface'] = 'PhpRedis';
     // Point Drupal to the location of the Redis plugin.
@@ -206,7 +206,7 @@ After enabling Redis, there are cache tables in the database that are no longer 
    ```php:title=sites/default/settings.php
    // Configure Redis
 
-   if (defined('PANTHEON_ENVIRONMENT')) {
+   if (!empty($_ENV['CACHE_HOST'])) {
      // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
      $settings['container_yamls'][] = 'modules/redis/example.services.yml';
 
