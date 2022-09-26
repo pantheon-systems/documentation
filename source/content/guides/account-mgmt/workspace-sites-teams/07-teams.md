@@ -62,25 +62,25 @@ If you are an administrator for a Pantheon organization, [contact support](/guid
 | Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 
-### FAQ
+## FAQ
 
 ### Can I Restrict Access to a Specific Site with the Developer Role?
 
 Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner Organizations cannot specify which members have access to specific sites.
 
-#### Which role should I assign a user to give them the lowest level of access?
+### Which role should I assign a user to give them the lowest level of access?
 
 At the site level, the Developer role has the least amount of permissions and can create sites, view the Organization Dashboard, and deploy to the Development and Multidev environments. At the organization level, the Unprivileged role has the least amount of permissions and can only create sites.
 
-#### Which environments can a user with the Developer role deploy to?
+### Which environments can a user with the Developer role deploy to?
 
 The Developer role can only deploy to Development and Multidev environments. If a user needs to deploy to Live, you can promote a Developer to Team Member for a single site by adding the user to the site's team.
 
-#### Who can add users to Organizations?
+### Who can add users to Organizations?
 
 Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
 
-#### How do I recover an account after a site owner leaves?
+### How do I recover an account after a site owner leaves?
 
 See the steps in our [Site Access](/site-access) doc for recovery instructions.
 

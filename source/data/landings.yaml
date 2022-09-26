@@ -1402,6 +1402,8 @@
           url: '/guides/account-mgmt/workspace-sites-teams'
         - text: 'Billing'
           url: '/guides/account-mgmt/billing'
+        - text: 'Traffic and Overages'
+          url: '/guides/account-mgmt/traffic'
         - text: 'Site Portfolio Report'
           url: '/guides/site-portfolio-report'
   topics-groups:
@@ -1449,3 +1451,24 @@
           url: '/guides/account-mgmt/billing/transfer'
         - text: 'Troubleshooting'
           url: '/guides/account-mgmt/billing/troubleshooting'
+    - title: 'Traffic and Overages'
+      subtitle: ''
+      links:
+        - text: 'Overview'
+          url: '/guides/account-mgmt/traffic'
+        - text: 'Measuring Traffic'
+          url: '/guides/account-mgmt/traffic/measure'
+        - text: 'Investigate and Remedy Traffic Events'
+          url: '/guides/account-mgmt/traffic/remedy'
+        - text: 'FAQ'
+          url: '/guides/account-mgmt/traffic/faq'
+    - title: 'Site Portfolio Report'
+      subtitle: ''
+      links:
+        - text: 'Overview'
+          url: '/guides/site-portfolio-report'
+        - text: 'Using the Report'
+          url: 'guides/site-portfolio-report/interacting'
+        - text: 'FAQ'
+          url: 'docs/guides/site-portfolio-report/faq'
+
