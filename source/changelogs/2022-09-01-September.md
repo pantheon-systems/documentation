@@ -13,7 +13,7 @@ reviewed: "2022-09-01"
 
 ### PHP 8.1
 
-PHP 8.1 is now [recommended](https://pantheon.io/docs/php-versions) for Drupal sites version [9.3.0](https://www.drupal.org/docs/system-requirements/php-requirements#versions)and higher. An underlying bug with ProxySQL was fixed in [version 2.4.3](https://proxysql.com/blog/releasing-proxysql-v2-4-3/) and PHP 8.1 was updated on the platform to incoporate this fix.
+PHP 8.1 is now [recommended](https://pantheon.io/docs/php-versions) for Drupal sites version [9.3.0](https://www.drupal.org/docs/system-requirements/php-requirements#versions) and higher. An underlying bug with ProxySQL was fixed in [version 2.4.3](https://proxysql.com/blog/releasing-proxysql-v2-4-3/) and PHP 8.1 was updated on the platform to incoporate this fix.
 
 ### WordPress 6.0.2
 
