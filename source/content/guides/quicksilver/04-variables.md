@@ -1,6 +1,6 @@
 ---
 title: Automate and Integrate your WebOps Workflow with Quicksilver
-subtitle: Variables
+subtitle: Quicksilver Variables
 description: Learn how to use variables with Quicksilver.
 categories: [automate]
 tags: [quicksilver, webops, workflow]
