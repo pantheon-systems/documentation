@@ -20,7 +20,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 - [Migrate Sites to Pantheon](/guides/guided/
 - [rsync and SFTP](/rsync-and-sftp)
 - [Configuring settings.php](/guides/php/settings-php) or [Configuring wp-config.php](/guides/php/wp-config-php)
-- [Drupal Drush Command-Line Utility](/drush)
+- [Drupal Drush Command-Line Utility](/guides/drush)
 - [Cron for WordPress](/wordpress-cron) or [Cron for Drupal](/drupal-cron)
 
 ## Launch

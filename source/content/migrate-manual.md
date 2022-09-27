@@ -435,4 +435,4 @@ In this case, you will want to remove `ff = only` from your `.gitconfig` file an
 
 - [Troubleshooting](/guides/guided/troubleshooting) tips
 
-- [Importing Drush Site Archives with Terminus](/drush-import)
+- [Importing Drush Site Archives with Terminus](/guides/drush/drush-import)

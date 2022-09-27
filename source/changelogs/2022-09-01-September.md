@@ -13,7 +13,7 @@ reviewed: "2022-09-01"
 
 ### PHP 8.1
 
-PHP 8.1 is now recommended for Drupal sites [version 2.4.3](https://proxysql.com/blog/releasing-proxysql-v2-4-3/) and higher. PHP 8.1 was updated on the platform and rolled out to sites.  This update resolves an issue that existed between ProxySQL and PHP 8.1.  Pantheon [recommends PHP 8.1 for Drupal sites](https://pantheon.io/docs/php-versions).
+PHP 8.1 is now [recommended](https://pantheon.io/docs/php-versions) for Drupal sites version [9.3.0](https://www.drupal.org/docs/system-requirements/php-requirements#versions) and higher. An underlying bug with ProxySQL was fixed in [version 2.4.3](https://proxysql.com/blog/releasing-proxysql-v2-4-3/) and PHP 8.1 was updated on the platform to incorporate this fix.
 
 ### WordPress 6.0.2
 
@@ -27,9 +27,9 @@ The Pantheon-maintained WordPress Composer Managed upstream is available for [Ea
 
 ## Documentation
 
-[Advanced Global CDN](/guides/agcdn - AGCDN is now in General Availability and allows for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation.
+[Advanced Global CDN](/guides/agcdn) - AGCDN is now in General Availability and allows for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation.
 
-[Create a Composer-managed WordPress Site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed - WordPress does not natively support [Composer](https://getcomposer.org/), however, [Bedrock](https://roots.io/bedrock/) is a WordPress-specific framework for using Composer on WordPress sites. You can create a site based on the Pantheon-maintained [WordPress Composer Managed](https://github.com/pantheon-upstreams/wordpress-composer-managed) upstream. Bedrock installs WordPress as a required package so updates can be managed by Composer. The WordPress Composer Managed upstream is available for [Early Access](https://pantheon.io/docs/oss-support-levels#early-access) participants. Learn more about [Bedrock and Composer-managed WordPress sites](/guides/wordpress-composer/wordpress-composer-managed#more-resources).
+[Create a Composer-managed WordPress Site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed) - WordPress does not natively support [Composer](https://getcomposer.org/), however, [Bedrock](https://roots.io/bedrock/) is a WordPress-specific framework for using Composer on WordPress sites. You can create a site based on the Pantheon-maintained [WordPress Composer Managed](https://github.com/pantheon-upstreams/wordpress-composer-managed) upstream. Bedrock installs WordPress as a required package so updates can be managed by Composer. The WordPress Composer Managed upstream is available for [Early Access](https://pantheon.io/docs/oss-support-levels#early-access) participants. Learn more about [Bedrock and Composer-managed WordPress sites](/guides/wordpress-composer/wordpress-composer-managed#more-resources).
 
 [Environment Configuration](/guides/environment-configuration) - Learn about [environment configurations](/guides/environment-configuration#code-and-configuration-in-separate-environments) on Pantheon in our new accessible guide. Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting your Live site. Additional development environments are available with [Multidev](/guides/multidev). Refer to the [Pantheon WebOps Workflow](/pantheon-workflow) documentation for more details.
 

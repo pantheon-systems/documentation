@@ -69,10 +69,10 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
    ```yaml:title=pantheon.yml
    api_version: 1
 
-   php_version: 8.0
+   php_version: 8.1
    ```
 
-   - You do not need to specify the PHP version's exact point release (for example, `8.0.19`), as these are managed by the platform and deployed automatically.
+   - You do not need to specify the PHP version's exact point release (for example, `8.1.10`), as these are managed by the platform and deployed automatically.
 
 1. Navigate to your SFTP client and refresh the `/code` directory to verify that the `pantheon.yml` file has been created and contains the changed version.
 
@@ -109,10 +109,10 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
    ```yaml:title=pantheon.yml
    api_version: 1
 
-   php_version: 8.0
+   php_version: 8.1
    ```
 
-   - You do not need to specify the PHP version's exact point release (for example, `8.0.19`), as these are managed by the platform and deployed automatically.
+   - You do not need to specify the PHP version's exact point release (for example, `8.1.10`), as these are managed by the platform and deployed automatically.
 
 1. Add and commit the changes and push them to your site.
 
@@ -173,7 +173,7 @@ We recommend working with theme, module, or plugin maintainers to resolve any is
 
 ### Upgrading PHP Version May Require Upgrading Drush Versions
 
-Upgrade your current version of Drush if you see errors on the Pantheon Dashboard when trying to auto-run `update.php`. Refer to [Manage Drush Versions on Pantheon](/drush-versions/#configure-drush-version) for more information.
+Upgrade your current version of Drush if you see errors on the Pantheon Dashboard when trying to auto-run `update.php`. Refer to [Manage Drush Versions on Pantheon](/guides/drush/drush-versions/#configure-drush-version) for more information.
 
 ## More Resources
 

@@ -21,7 +21,7 @@ Pantheon supports the following PHP versions:
 
 ## Drush Compatibility
 
-Refer to [Managing Drush Versions on Pantheon](/drush-versions) for detailed compatibility information.
+Refer to [Managing Drush Versions on Pantheon](/guides/drush/drush-versions) for detailed compatibility information.
 
 ## Terminus Compatibility
 
