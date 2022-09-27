@@ -93,7 +93,7 @@ Connect to your Git provider and select an existing repository.
 
 ##### Prerequisites 
 
-* You have an existing GitHub repository with a Next.js or Gatsby front-end, or your own experimental framework
+* You have an existing GitHub repository with a Next.js or Gatsby front-end, or your own experimental framework.
 
 * The repository should not be empty.
 
@@ -118,9 +118,8 @@ Create a site without configuring the backend and link to a frontend framework. 
 
 1. Add to the General Info section.
 
-    * Specify the Site Name: The site name is the title of your site. You can edit the site name in **Settings** after creation. 
-    * Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator. 
-        If you are testing out a static React.js application, you may try selecting Gatsby. If the application is using the Node runtime then you will want to select Next.js as the framework. Please note we will not be able to provide support for frameworks outside of Next.js or Gatsby.
+    * Specify the site name. The site name is the title of your site. You can edit the site name in **Settings** after creation. 
+    * Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator. If you are testing out a static React.js application, you can try select Gatsby. If the application is using the Node runtime then you can select Next.js as the framework. Please note we currently do not provide support for frameworks outside of Next.js or Gatsby.
 
 1. (Optional) Link your CMS.
 
