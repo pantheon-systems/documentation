@@ -72,15 +72,15 @@ Investigate calls to `admin-ajax.php` by looking at what script is calling the p
 
 In this first image, in the *Initiator* column, we see that these calls are being initiated from `load-scripts.php`. If you click the initiator reference link, you'll see the JavaScript code that is calling it:
 
-![Chrome Developer Tools shows results filtered for admin-ajax.php](../images/browser-dev-tools/devtools-network-admin-ajax.png)
+![Chrome Developer Tools shows results filtered for admin-ajax.php](../../../../images/browser-dev-tools/devtools-network-admin-ajax.png)
 
 Return to the **Network** tab and click `admin-ajax.php` to see *Headers*. These will include the payload of what was sent to `admin-ajax`, such as the post data and the action or hook to be run in the WordPress backend:
 
-![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-headers-admin-ajax.png)
+![Chrome Developer Tools shows Headers tab and Form Data](../../../../images/browser-dev-tools/devtools-network-headers-admin-ajax.png)
 
 Click the Preview tab for the response, which is a list of images if available. The following screenshot shows that, for this specific call, the media window widget was opening to populate a list of images that could be added to the body of a post:
 
-![Chrome Developer Tools shows Headers tab and Form Data](../images/browser-dev-tools/devtools-network-preview-admin-ajax.png)
+![Chrome Developer Tools shows Headers tab and Form Data](../../../../images/browser-dev-tools/devtools-network-preview-admin-ajax.png)
 
 ## DoS Attack Mitigation
 
