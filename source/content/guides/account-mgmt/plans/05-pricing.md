@@ -12,7 +12,7 @@ editpath: docs/guides/account-mgmt/plans/05-pricing.md
 reviewed: "2022-09-19"
 ---
 
-The following tables provide both the list and preferred pricing for Pantheon Plans.
+The following tables provide both the list and preferred pricing for Pantheon Plans, as well as the savings you can achieve using Annual pricing.
 
 
 

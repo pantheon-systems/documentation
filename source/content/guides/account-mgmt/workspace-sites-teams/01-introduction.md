@@ -71,10 +71,10 @@ So now, when the individual team members log on, they will see the sites and wor
 
 | Team Member | Workspaces | Sites |
 |---|---|---|
-| Jane Doe |Writing Sites, Random Sites|Site 1, Site 2, Site 3, Site 4, Site Z, Site Y, Site X, Site W|
+| Jane Doe |Writing Sites, Random Sites|Site 1, Site 2, Site 3, Site 4, Site Z, Site Y, Site X|
 | John Smith |Writing Sites, Widget Sites|Site 1, Site 2, Site 3, Site 4, Site A, Site B|
 | Joe Intern |Writing Sites|Site 1, Site 2, Site 3, Site 4|
-| Dolores Orange |Random Sites|Site Z, Site Y, Site X, Site W|
+| Dolores Orange |Random Sites|Site Z, Site Y, Site X|
 | Ed Kay |None|Site X|
 
 Read on to better understand the specifics of setting up your workspaces, teams, and sites.

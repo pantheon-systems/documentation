@@ -1,7 +1,7 @@
 ---
 title: Workspaces, Sites and Teams
 subtitle: Teams
-description: Learn how Workspaces, Sites and Teams work together to help you manage your sites.
+description: Learn how to use teams for change management.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
@@ -19,7 +19,7 @@ Teams allow you to define the users who will have access to a workspace or site.
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
+In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations, the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
 If you are an administrator for a Pantheon organization, [contact support](/guides/support/contact-support/) to have the User in Charge changed.
 
@@ -70,7 +70,7 @@ Only sites owned by Enterprise and EDU+ can assign the developer role to specifi
 
 ### Which role should I assign a user to give them the lowest level of access?
 
-At the site level, the Developer role has the least amount of permissions and can create sites, view the Organization Dashboard, and deploy to the Development and Multidev environments. At the organization level, the Unprivileged role has the least amount of permissions and can only create sites.
+At the site level, the Developer role has the least amount of permissions and can create sites, view the Organization Dashboard, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Unprivileged role has the least amount of permissions and can only create sites.
 
 ### Which environments can a user with the Developer role deploy to?
 
@@ -78,19 +78,11 @@ The Developer role can only deploy to Development and Multidev environments. If 
 
 ### Who can add users to Organizations?
 
-Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
+Enterprise Administrators can add site Team Members or Supporting Organizations to sites owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
 
 ### How do I recover an account after a site owner leaves?
 
 See the steps in our [Site Access](/site-access) doc for recovery instructions.
-
-### Where can I learn more about these roles?
-
-See [Role-Based Permissions & Change Management](/change-management) for details.
-Workspace Teams
-By default, all users are assigned the Administrator role after the Workspace is created.
-
-Manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
 
 ## Manage Teams
 
@@ -106,9 +98,6 @@ Manage team members and assign [roles and permissions](/change-management#roles-
 
 1. Enter the email address of the new user, select a role, then click **Send Invite**.
 
-An email confirmation is sent to the user. Users with an existing Pantheon account are immediately added to the Organization. Users without existing accounts must first click the confirmation link in the email to create their account.
-
-To create a new user with an unprivileged role, create the user first, then change the role as detailed below.
 </Tab>
 
 <Tab title="To a Site" id="addsite">
@@ -117,18 +106,20 @@ To create a new user with an unprivileged role, create the user first, then chan
    
 1. Click **Team**.
 
-1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only, then click **Add to Team**
+1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**
 
 </Tab>
 
 </TabList>
+
+An email confirmation is sent to the user. Users with an existing Pantheon account are immediately added to the Organization. Users without existing accounts must first click the confirmation link in the email to create their account.
 
 
 ### Change a User's Role
 
 1. Go to the Workspace and select the **Team** tab.
 
-1. Find a select the team member(s) whose role you wish to change.
+1. Find and select the team member(s) whose role you wish to change.
 
 1. Click **Actions**, and choose **Change Role**.
 
@@ -136,15 +127,13 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 ### Remove a User
 
-When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.
+<Alert title="Note" type="info">
 
-After a user leaves, we recommend you:
+All users can be removed except the site owner. 
 
-- Delete or block the user's account in [Drupal](https://www.drupal.org/node/627158) or [WordPress](https://codex.wordpress.org/Users_Users_SubPanel).
-- Remove the user from the team and/or organization in the Pantheon Dashboard.
-- Change any shared account passwords the user may have had access to.
-- Review the Git history in the commit log to see if the site team member made code changes after leaving. See recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://wordpress.org/support/article/faq-my-site-was-hacked/).
+</Alert>
 
+To remove a user: 
 
 <TabList>
 
@@ -162,12 +151,6 @@ After a user leaves, we recommend you:
 
 <Tab title="From a Site" id="remsite">
 
-<Alert title="Note" type="info">
-
-All users can be removed except the site owner. Also, when you delete a user from a site, they lose the ability to perform any operations on that site.
-
-</Alert>
-
 To remove a team member from a site:
 
 1. Open the Site Dashboard for the site.
@@ -179,6 +162,15 @@ To remove a team member from a site:
 </Tab>
 
 </TabList>
+
+When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.
+
+After a user leaves, in addition to the steps above, we recommend you:
+
+- Delete or block the user's account in [Drupal](https://www.drupal.org/node/627158) or [WordPress](https://codex.wordpress.org/Users_Users_SubPanel).
+- Change any shared account passwords the user may have had access to.
+- Review the Git history in the commit log to see if the site team member made code changes after leaving. See recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://wordpress.org/support/article/faq-my-site-was-hacked/).
+
 
 ## Add a Supporting Organization to Site
 

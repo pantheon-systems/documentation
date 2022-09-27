@@ -13,7 +13,7 @@ editpath: docs/guides/account-mgmt/account/07-delete.md
 reviewed: "2022-09-19"
 ---
 
-Follow the steps below in to completely delete your site(s).
+Follow the steps below in to completely delete your account.
 
 ## 1. Backup and Export
 
@@ -38,7 +38,7 @@ Go to your **Personal Settings**, select **Profile**, and click the **Delete Acc
 ## Frequently Asked Questions
 
 ### Why is my site still accessible after it's been deleted?
-Your site may still be accessible for a temporary period of time because the platform does not clear cache upon site deletion. To avoid this behavior, clear cache before deleting the site.
+Your site may still be accessible for a short period of time because the platform does not clear cache upon site deletion. To avoid this behavior, clear cache before deleting the site.
 
 ### Can I come back to the platform later?
 
