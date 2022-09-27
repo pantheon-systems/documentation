@@ -14,7 +14,7 @@ This section provides solutions to common Quicksilver troubleshooting scenarios.
 
 ## Debugging via Terminus
 
-Use the following [Terminus](/terminus) commands for debugging Quicksilver.
+Use the [Terminus](/terminus) commands in the sections below for debugging Quicksilver.
 
 ### Stream New Workflows to the Console
 
