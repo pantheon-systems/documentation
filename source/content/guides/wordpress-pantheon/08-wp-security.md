@@ -100,7 +100,7 @@ Of course, doing manual updates can be a chore, especially if you're managing mo
 
 While Custom Upstreams will help, adding automation and scripting will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and produce a report indicating that the site has updates that are ready to go.
 
-Our [Terminus command line tool]( /terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](/wp-cli/) and add in our [Quicksilver hooks](/quicksilver/) to trigger testing, and you're on your way.
+Our [Terminus command line tool]( /terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](/guides/wp-cli) and add in our [Quicksilver hooks](/quicksilver/) to trigger testing, and you're on your way.
 
 [Pixotech has a nice writeup](http://www.pixotech.com/automating-pluginmodule-updates-on-pantheon/) on their process that does this, and our own Andrew Taylor has a [fantastic script for doing all of this plus visual regression testing](https://pantheon.io/blog/automating-security-updates-scalewpio) on Pantheon.
 
