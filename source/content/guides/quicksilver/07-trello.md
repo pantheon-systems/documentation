@@ -13,27 +13,30 @@ anchorid: trello
 
 This section provides information on how to integrate Trello with Pantheon using Quicksilver.
 
-[Trello](https://trello.com) is a simple yet powerful project management tool which helps teams to collaborate on projects in an agile framework. Trello lends itself to not only web projects, but also helps businesses keep [other](https://trello.com/inspiration) internal tasks and objectives organized.
+[Trello](https://trello.com) is a project management tool which helps teams to collaborate on projects in an agile framework.
 
-In this guide, we'll use a Trello instance with a site on Pantheon. When changes are pushed to Pantheon that reference a Trello card's unique ID, the commit message will appear in the card.
+The sections below provide steps on how to use Quicksilver to connect your Trello instance to a website project on Pantheon. You can push changes that include a Trello card's unique ID to Pantheon, and the commit message will appear in the card.
 
 ## Before You Begin
+
 Be sure that you:
 
 - Have a Drupal or WordPress site on Pantheon
 - Install [Terminus](/terminus/install#install-terminus)
-- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus
+- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) in the **User Dashboard**, select **Account**, select **Machine Tokens**, then authenticate Terminus
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
-## Create a Machine User in Trello
-Start by creating a new machine user in your Trello instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
-1. If you haven't done so already, create a team. Login to your Trello instance and click <i class="fa fa-plus"></i>, found in the upper panel, then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create**:
+## Create a Machine User in Trello
+
+Create a new machine user in your Trello instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
+
+1. Login to your Trello instance and click <i class="fa fa-plus"></i>, found in the upper panel, then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create** to create a team if you haven't done so already.
 
     ![Create a team](../../../images/integrations/trello/new-team.png)
 
     If you already have a team, select it from your dashboard.
 
-2. Under **Add Members**, select **Add by name or email**.
+2. Click **Add Members**, and then select **Add by name or email**.
 
 3. Enter a name and email address for the machine user, which acts as the intermediary between Trello and the Pantheon Site Dashboard.
 
@@ -49,14 +52,15 @@ Start by creating a new machine user in your Trello instance. This user is refer
 
     ![Copy developer api key](../../../images/integrations/trello/developer-keys.png)
 
-    Save your key and token, to be used in the next section.
+1. Save your key and token for use in the next section.
 
 ## Securely Store User Credentials on Pantheon
-Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/guides/secure-development/private-paths#private-path-for-files) of Pantheon's filesystem.
+
+You must provide Pantheon with the credentials for our new machine user. These credentials are securely stored in the [private path](/guides/secure-development/private-paths#private-path-for-files) of Pantheon's filesystem.
 
 We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
-1. First, let's check for existing secrets using Terminus (replace `<site>` with your site name):
+1. Check for existing secrets using Terminus (replace `<site>` with your site name):
 
         SITE=<site>
         terminus secrets:list $SITE.dev
@@ -86,18 +90,19 @@ When it comes to keeping production keys secure, the best solution is to use a k
 </Alert>
 
 ## Configure Quicksilver Integration
-Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration script for Trello to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory:
+You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration script for Trello to the [private path](/guides/secure-development/private-paths#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+
+1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and navigate to the project's root directory:
 
         `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
         cd $SITE
 
-2. Set the connection mode to Git:
+1. Set the connection mode to Git:
 
         terminus connection:set $SITE.dev git
 
-3. Create a copy of [Pantheon's `trello_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/trello_integration) in the project's private path:
+1. Create a copy of [Pantheon's `trello_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/trello_integration) in the project's private path:
 
     ``` bash
     mkdir private
@@ -105,9 +110,9 @@ Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration
     curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/trello_integration/trello_integration.php --output ./private/scripts/trello_integration.php
     ```
 
-4. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
+1. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
-5. Paste the following workflow into your `pantheon.yml` file to hook into the platform upon code being pushed to fire off the Trello integration script:
+1. Paste the following workflow into your `pantheon.yml` file to hook into the platform upon code being pushed to fire off the Trello integration script:
 
         #always include the api version
         api_version: 1
@@ -125,7 +130,7 @@ Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration
 
     </Alert>
 
-6. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
+1. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
         git add .
         git commit -m "Create private/scripts/trello_integration.php and configure platform hooks"
@@ -152,5 +157,13 @@ Next we'll add Pantheon's example [Quicksilver](/guides/quicksilver) integration
 
     ![Trello card](../../../images/integrations/trello/trello-card.png)
 
-## Conclusion
-In this guide, we covered a simple integration between Trello and Pantheon. There are other ways to connect your Trello with your development workflow on Pantheon if you also use an external repository such as [GitHub](http://help.trello.com/article/1065-using-the-github-power-up). This integrations work in the opposite direction, allowing you to attach pull requests, issues, and commits directly to your Trello cards, from the Trello dashboard. Using and extending integrations like these will provide clarity into work being performed by you and your team, while speeding up the development process.
+## External Repositories
+
+You can also connect your Trello and Pantheon-integrated site to an external repository such as [GitHub](http://help.trello.com/article/1065-using-the-github-power-up). This integration allows you to attach pull requests, issues, and commits directly to your Trello cards from within the Trello dashboard.
+
+## More Resources
+
+- [Git on Pantheon](/guides/git)
+- [Pantheon YAML Configuration Files](/pantheon-yml)
+- [Lockr](/guides/lockr)
+- [Private Paths for Files and Code](/guides/secure-development/private-paths)

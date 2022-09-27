@@ -75,3 +75,4 @@ Quicksilver hooks are not detected due to timing issues with Multidev creation f
 - [The pantheon.yml Configuration File](/pantheon-yml)
 - [Quicksilver Examples Repository](https://github.com/pantheon-systems/quicksilver-examples/)
 - [Autopilot](/guides/autopilot)
+- [Multidev](/guides/multidev)
