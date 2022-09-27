@@ -22,8 +22,15 @@ The sections below provide steps on how to use Quicksilver to connect your Trell
 Be sure that you:
 
 - Have a Drupal or WordPress site on Pantheon
+
 - Install [Terminus](/terminus/install#install-terminus)
-- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) in the **User Dashboard**, select **Account**, select **Machine Tokens**, then authenticate Terminus
+
+- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
+
+  ```bash
+    terminus auth:login --machine-token=‹machine-token›
+    ```
+
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
 
 ## Create a Machine User in Trello
@@ -36,19 +43,19 @@ Create a new machine user in your Trello instance. This user is referred to as a
 
     If you already have a team, select it from your dashboard.
 
-2. Click **Add Members**, and then select **Add by name or email**.
+1. Click **Add Members**, and then select **Add by name or email**.
 
-3. Enter a name and email address for the machine user, which acts as the intermediary between Trello and the Pantheon Site Dashboard.
+1. Enter a name and email address for the machine user, which acts as the intermediary between Trello and the Pantheon Site Dashboard.
 
   We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. The email needs to be an account you have access to:
 
     ![Create an automation user](../../../images/integrations/trello/add-member.png)
 
-4. Login as the new "Automation User" and make sure you're a team member on the relevant board:
+1. Login as the new "Automation User" and make sure you're a team member on the relevant board:
 
     ![Add a team](../../../images/integrations/trello/team-board.png)
 
-5. Copy the machine user's API key from [here](https://trello.com/app-key), then click the link to manually generate a Token:
+1. Copy the machine user's API key from [here](https://trello.com/app-key), then click the link to manually generate a Token:
 
     ![Copy developer api key](../../../images/integrations/trello/developer-keys.png)
 
@@ -75,11 +82,11 @@ We use the filesystem private path in this section because we don't want to trac
 
   Otherwise, continue to the next step.
 
-2. Use Terminus to store the Automation User's API key in the the private `secrets.json` file (replace `<API key>`):
+1. Use Terminus to store the Automation User's API key in the the private `secrets.json` file (replace `<API key>`):
 
         terminus secrets:set $SITE.dev trello_key '<API key>'
 
-3. Use Terminus to store the Automation User's token in the the private `secrets.json` file (replace `<Token>`):
+1. Use Terminus to store the Automation User's token in the the private `secrets.json` file (replace `<Token>`):
 
         terminus secrets:set $SITE.dev trello_token '<Token>'
 
@@ -149,11 +156,11 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
     </Alert>
 
-2. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., [4K2zqr1A]). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
+1. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., [4K2zqr1A]). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
 
         git commit -m "[4K2zqr1A]: Require wp-redis as dropin via Composer"
 
-3. Return to the issue in Trello to see a message from our machine user:
+1. Return to the issue in Trello to see a message from our machine user:
 
     ![Trello card](../../../images/integrations/trello/trello-card.png)
 

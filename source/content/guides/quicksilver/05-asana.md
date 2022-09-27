@@ -22,12 +22,16 @@ The sections below provide steps on how to use Quicksilver to connect your Asana
 Be sure that you:
 
 - Have a Drupal or WordPress site on Pantheon
+
 - Install [Terminus](/terminus):
 
         curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) in the **User Dashboard**, select **Account** >, select **Machine Tokens**, then authenticate Terminus:
+- [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
 
-        terminus auth:login --machine-token=‹machine-token›
+        ```bash
+  terminus auth:login --machine-token=‹machine-token›
+  ```
+
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
 
         curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
