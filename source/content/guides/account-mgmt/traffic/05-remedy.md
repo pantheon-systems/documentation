@@ -1,6 +1,6 @@
 ---
 title: Traffic
-subtitle: Investigate and Remedy Traffic Events
+subtitle: Troubleshooting Traffic Events
 description: Determine and address the causes of unexpected traffic.
 categories: [account-mgmt]
 tags: [plans]
@@ -12,7 +12,8 @@ anchorid: remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
 ---
-[Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/guides/legacy-dashboard/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
+
+This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
 
 ## Review the NGINX Access Log
 
@@ -44,16 +45,13 @@ In addition to your other WordPress security practices, take steps to block brut
 
 Pantheon does not count static assets against your traffic limit. However, if the CMS cannot find a favicon in the defined path, it will attempt to generate one through PHP on each request. Asset generation requests such as these are counted as traffic. In addition, since Pantheon locks down all directories except the file upload directories (`wp-contents/upload` on WordPress, or `sites/default/files` on Drupal), the CMS can’t save the file back to the path it’s generating.
 
-This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal it shows up as a system path.
+This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal it shows up as a system path.  To resolve this issue, add and commit a static `favicon.ico` into the path that is being requested
 
 |  **CMS**  |           **Path**          |
 |:---------:|:---------------------------:|
 | WordPress | `/favicon.ico`              |
 | Drupal    | `/system/files/favicon.ico` |
 
-**Cause**: Usually the issue originates when adding a custom favicon through the active theme for the site through some kind of upload form, and then the icon is deleted or unavailable, which causes the CMS to look for an alternative favicon.
-
-**Solution**: Add and commit a static `favicon.ico` into the path that is being requested.
 
 ## WordPress: admin-ajax.php Generates Pages Served
 

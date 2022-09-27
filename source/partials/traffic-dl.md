@@ -48,8 +48,7 @@ A visit counts if it is one of the following:
 
 - Not a known bot
 
-- Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response that originates from PHP
-  - Or returns a [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) of 303, 304, or 305.
+- Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response that originates from PHP, or returns a [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) of 303, 304, or 305.
 
 - Additionally, if that visit is from a unique IP and user agent combination for the day, then that counts as a unique visitor that day as well.
 
