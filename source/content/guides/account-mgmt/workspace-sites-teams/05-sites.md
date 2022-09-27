@@ -25,9 +25,8 @@ Be sure to set up workspaces before creating sites.
 
 <Partial file="create-new-site-new-dash.md" />
 
-For more information on site creation, see [Creating Sites](/guides/legacy-dashboard/create-sites)
 
-## The Sites Tab
+## Manage Sites
 
 The Sites tab shows all sites this workspace has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
 
@@ -49,7 +48,7 @@ To add tags to a site:
 
 1. Select **Tags**, then select **Add Tags**.
 
-1. Enter the tags you wish to associate to this site, separated by commas, and click Add Tags.
+1. Enter the tags you wish to associate to this site, separated by commas, and click **Add Tags**.
 
 To remove tags from a site:
 
@@ -92,7 +91,7 @@ To change the owner of a paid site (e.g. Basic, or Performance):
 
 1. Open the Site Dashboard for the site.
 
-1. Select **Settings**, the **Invite a business owner to pay for this site**.
+1. Select **Settings**, then **Invite a business owner to pay for this site**.
 
 1. Enter the email address for the new site owner.
 
@@ -105,11 +104,15 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 <Tab title="Sandbox Sites" id="sandbox">
 
 <Partial file="transfer-ownership-billing-intro.md" />
+
+To transfer ownership for a site:
+
 <Partial file="transfer-ownership-billing-steps.md" />
 
 </Tab>
 
 <Tab title="Partner Organizations" id="partner">
+
 When a developer creates a site in a partner organization, they automatically become the "Site Owner/User in Charge" until the business owner starts paying for the site and becomes the owner. Organization admins cannot delete users from an organization until the listed owner no longer owns any sites in the organization.
 
 The user account in question must [transfer ownership to another person in the organization](/change-management/#change-site-owner). Partner organization admins cannot change ownership of sites. If the organization is using SAML for single-sign on, you should be able to log-in as the user and make the necessary changes. Partners without SAML will need to [contact support](/guides/support/contact-support/) to request ownership change, which may take 24-48 hours. As a workaround, admins can download a backup of the site, import it as a new site, move the domain name from the original site to the imported site, and delete the original site(s).

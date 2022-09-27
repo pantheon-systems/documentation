@@ -94,8 +94,11 @@ Site specific payment methods can only be used on the site on which they are def
 
 ### Add a Site-Specific Payment Method
 
-If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. For all plans, use the steps in this section to add a new credit card profile in the **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** section of your User Dashboard.
+<Alert title="Note" type="info" >
 
+If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. 
+
+</Alert>
 
 To add a payment method to a site:
 
@@ -109,7 +112,7 @@ To add a payment method to a site:
 
 ### Change the Card Used to Bill This Site
 
-Select the card you want the site to use as the new payment method _after_ it has been added as described in the [previous section](#add-new-credit-card).
+To change the card used to bill a site:
 
 1. Open the Site Dashboard for the site.
 
@@ -118,6 +121,8 @@ Select the card you want the site to use as the new payment method _after_ it ha
 1. Click **Add Card**, and follow the steps in the [previous section](#add-new-credit-card) to bill this site to a different card.
 
 ### Delete a Site-Specific Payment Method
+
+To delete a payment method:
 
 1. Open the Site Dashboard for the site.
 

@@ -2,12 +2,6 @@ You can create a new Site from your homepage by clicking **+ Create New Site**, 
 
 1. Log in to your Pantheon account. 
 
-   <Alert title="Note" type="info">
-
-   If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Go to your Personal Workspace by selecting your name in the menu bar, then select **Personal Workspace**.
-
-   </Alert>
-
 1. Select <Icon icon="plus" text="Create New Site"/>. 
 
 1. Select WordPress, Drupal with Composer, or Drupal 7, depending upon the framework you wish to use.
@@ -30,6 +24,6 @@ You can create a new Site from your homepage by clicking **+ Create New Site**, 
 
 1. If this site is to be part of a Professional Workspace, select a Workspace from **Choose an Organization for the Site**.
 
-   It can take several minutes to create a new site on Pantheon. 
+1. Click **Continue**. It can take several minutes to create a new site on Pantheon. 
 
 1. Click **Visit your Pantheon Site Dashboard** when the process is complete. 

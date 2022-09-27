@@ -13,19 +13,15 @@ reviewed: "2022-09-19"
 ---
 
 
-Pantheon offers both Monthly and Annual Billing.
-
-Moving to Annual Billing can result in significant savings. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service. See [Pricing](/guides/account-mgmt/plans/pricing) for pricing and savings details.
+Pantheon offers both Monthly and Annual Billing. Moving to Annual Billing can result in significant savings. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service. See [Pricing](/guides/account-mgmt/plans/pricing) for pricing and savings details.
 
 Before changing your billing period from monthly to annual, or vice-versa, consider the following:
 
  - Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
  - Sites on annual billing plans that upgrade will be invoiced immediately, and the site will be upgraded immediately.
- - While all site plan downgrades will be effective immediately, no partial refunds will be issued.
  - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
  - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
- - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes.
-   - To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/guides/legacy-dashboard/add-client-site).
+ - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes. To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/guides/legacy-dashboard/add-client-site).
 
 To change your billing cadence.
 
@@ -39,5 +35,4 @@ To change your billing cadence.
 
 5. Confirm the purchase, then click **Place your order**.
 
-6. You'll be returned to the dashboard with a confirmation of your site plan change:
-
+6. You'll be returned to the dashboard with a confirmation of your site plan change.
