@@ -179,7 +179,7 @@ Unable to connect to host codeserver.dev.<xxx>.drush.in, or the request timed ou
 Be sure that the address is correct and that you have the necessary privileges, or try increasing the connection timeout (currently 10 seconds).
 ```
 
-Replace `SITE_UUID` with your site's [UUID](/sites/#site-uuid) and run the following to obtain the returned IP address:
+Replace `SITE_UUID` with your site's [site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) and run the following to obtain the returned IP address:
 
 ```bash{promptUser: user}
 dig codeserver.dev.<SITE_UUID>.drush.in

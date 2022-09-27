@@ -25,7 +25,7 @@ This document refers to the Legacy Dashboard. Visit the [New Pantheon Dashboard 
 
 ### New Sites
 
-While creating a new site, the **Organization Affiliation** field that lists the organizations to which a user belongs, is displayed to any user in your [organization](/organizations). New sites that are affiliated with an organization are automatically added to your Organization Dashboard, and the user who creates the site is designated as the owner.
+While creating a new site, the **Organization Affiliation** field that lists the organizations to which a user belongs, is displayed to any user in your [organization](/guides/account-mgmt/workspace-sites-teams/workspaces). New sites that are affiliated with an organization are automatically added to your Organization Dashboard, and the user who creates the site is designated as the owner.
 
 ### Existing Sites
 
@@ -58,7 +58,7 @@ At the Sites tab, the left panel contains groups of filters for limiting the sit
 
 ### Site Plan
 
-This lets you filter sites by their [site plan](/site-plan).
+This lets you filter sites by their [site plan](/guides/account-mgmt/plans).
 
 ### Tags
 
@@ -86,7 +86,7 @@ This filter shows any sites that are [frozen](/guides/platform-considerations/pl
 
 ### User in Charge
 
-Filters sites by the [user in charge](/change-management/#roles-and-permissions).
+Filters sites by the [user in charge](/guides/account-mgmt/workspace-sites-teams/teams).
 
 ## Add Users to Your Organization
 

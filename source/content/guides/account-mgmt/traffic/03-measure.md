@@ -27,11 +27,11 @@ Site traffic consists of two components: **Site Visits** and **Pages Served**. T
 
 ## How does traffic affect performance?
 
-Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/site-plans-faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences, or if you expect a heavier load of traffic, you may need to increase the plan size so that you can continue to expect a site that runs smoothly.
+Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/guides/account-mgmt/plans/resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences, or if you expect a heavier load of traffic, you may need to increase the plan size so that you can continue to expect a site that runs smoothly.
 
 ## Traffic Incidents
 
-Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) for suggestions on how to identify traffic issues and implement a solution.
+See [Troubleshooting Traffic](/guides/account-mgmt/traffic/remedy) for suggestions on how to identify traffic issues and implement a solution.
 
 If there are specific cases that create traffic spikes or events for your site, we encourage you to [contact Pantheon support](/guides/support/contact-support) for more tailored tools to support those issues unique to your site.
 
@@ -49,10 +49,5 @@ Certain activities are generally excluded from the calculation of visits and pag
 
 ## More Resources
 
-- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
-- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
-- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
-- [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
-- [Site Plans FAQs](/site-plans-faq)
-- [Traffic Overages and the Site Plan](/overages-site-plan)
+- [Account Management](/guides/account-mgmt)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site

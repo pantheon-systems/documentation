@@ -23,7 +23,7 @@ In addition to defense in depth, this feature can be used to enforce role-based 
 
 ## How to Enable SRA on Your Site
 
-Secure Runtime Access is available to [contract](https://pantheon.io/plans/pricing?docs) customers with an [Organization](/organizations) dashboard. [Contact Sales](https://pantheon.io/contact-us?docs) to request that SRA be enabled for your site.
+Secure Runtime Access is available to [contract](https://pantheon.io/plans/pricing?docs) customers with an [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces). [Contact Sales](https://pantheon.io/contact-us?docs) to request that SRA be enabled for your site.
 
 ## How to Access Runtime Services When SRA Is Enabled
 

@@ -39,7 +39,7 @@ Restore a manual or automatic backup (Code, Database, and Files) by clicking the
 
 <Alert title="Note" type="info">
 
-For development environments (Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (Test and Live). For details, refer to [The Site Dashboard](/sites/#code).
+For development environments (Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (Test and Live). For details, refer to [The Site Dashboard](/guides/new-dashboard/sites).
 
 </Alert>
 

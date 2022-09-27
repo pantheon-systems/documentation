@@ -46,7 +46,7 @@ Pantheon customers don't need to worry about these systems, as the platform is b
 
 Basic Sites do not have overage protection. If a Basic Site exceeds the 25,000 visit cap in any given month, the site plan will be automatically upgraded to the [Performance plan](https://pantheon.io/plans/performance-pricing) whose visit limit accommodates the site's traffic.
 
-For more information, see [Traffic Limits and Overages](/traffic-limits).
+For more information, see [Traffic Limits and Overages](/guides/account-mgmt/traffic).
 
 ### Performance Plans
 

@@ -17,7 +17,7 @@ reviewed: "2022-09-19"
 
 - Elite sites cannot manage plans from the Site Dashboard. Contact our sales team or reach out to your dedicated Client Sales Executive for details.
 
-- The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. Pantheon for EDU+ allows Organization Administrators to manage site plans for sites within their organization. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
+- The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. Pantheon for EDU+ allows Organization Administrators to manage site plans for sites within their organization. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change. For details, see [Teams](/guides/account-mgmt/workspace-sites-teams/teams).
 
 - If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
@@ -96,7 +96,7 @@ To change your plan:
 
 <Tab title="Edu Sites" id="edu" active={true}>
 
-1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
+1. As an [organization administrator](/guides/account-mgmt/workspace-sites-teams/teams), from the Site Dashboard, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
 
 1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
 
@@ -139,4 +139,4 @@ Before making any changes, please review [Before You Make Changes](#before-you-m
 
 1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card).
 
-Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).
+Optionally, you can remove the Sandbox site after downgrading. For details, see [Delete a Site](/guides/account-mgmt/workspace-sites-teams/sites#delete-sites).

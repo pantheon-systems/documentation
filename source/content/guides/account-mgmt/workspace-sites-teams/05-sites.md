@@ -38,6 +38,19 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 If you did not select a workspace when creating the site, you can add it to a workspace later. See [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
 
+## Retrieve the Site UUID
+
+Every entity (user, organization, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
+
+```none
+de305d54-75b4-431b-adb2-eb6b9e546014
+```
+
+You can also use [Terminus](/terminus) to find the UUID of your organizations:
+
+```bash{promptUser: user}
+terminus site:list
+```
 ### Tag Sites
 
 Tags are an easy way to add data to your sites to help you manage them. 
@@ -72,7 +85,7 @@ To export a list of sites:
 
 The person who creates the site owns it until someone else starts paying for it. The user or Enterprise Organization who pays for the site is the owner thereafter.
 
-The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Teams](/guides/account-mgmt/workspace-sites-teams/teams).
 
 There can only be one site owner.
 
@@ -115,7 +128,7 @@ To transfer ownership for a site:
 
 When a developer creates a site in a partner organization, they automatically become the "Site Owner/User in Charge" until the business owner starts paying for the site and becomes the owner. Organization admins cannot delete users from an organization until the listed owner no longer owns any sites in the organization.
 
-The user account in question must [transfer ownership to another person in the organization](/change-management/#change-site-owner). Partner organization admins cannot change ownership of sites. If the organization is using SAML for single-sign on, you should be able to log-in as the user and make the necessary changes. Partners without SAML will need to [contact support](/guides/support/contact-support/) to request ownership change, which may take 24-48 hours. As a workaround, admins can download a backup of the site, import it as a new site, move the domain name from the original site to the imported site, and delete the original site(s).
+The user account in question must [transfer ownership to another person in the organization](/guides/account-mgmt/billing/transfer). Partner organization admins cannot change ownership of sites. If the organization is using SAML for single-sign on, you should be able to log-in as the user and make the necessary changes. Partners without SAML will need to [contact support](/guides/support/contact-support/) to request ownership change, which may take 24-48 hours. As a workaround, admins can download a backup of the site, import it as a new site, move the domain name from the original site to the imported site, and delete the original site(s).
 
 For all sites, we recommend instructing users to change their passwords regularly, using two-factor authentication, restricting access with Change Management, and carefully planning who will create client sites in the organization.
 
@@ -128,7 +141,7 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
-Only the site's "User in Charge" or "Owner" can delete a site. See [Roles and Permissions](/change-management#roles-and-permissions) for more information.
+Only the site's "User in Charge" or "Owner" can delete a site. See [Teams](/guides/account-mgmt/workspace-sites-teams/teams) for more information.
 
 <Alert title="Warning" type="danger">
 

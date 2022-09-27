@@ -26,7 +26,7 @@ terminus site:upstream:set $SITE $UPSTREAM
  [error]  You do not have permission to change the upstream of this site.
 ```
 
-Confirm that the user you are authenticated as has the correct [Site-level permissions](/change-management#site-level-roles-and-permissions).
+Confirm that the user you are authenticated as has the correct [Site-level permissions](/guides/account-mgmt/workspace-sites-teams/teams).
 
 To check the currently authenticated user:
 

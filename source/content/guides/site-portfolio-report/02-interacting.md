@@ -82,8 +82,8 @@ You can click the Download CSV button under the All Active Sites in Portfolio br
 
 ## More Resources
 
-- [Traffic Limits and Overages](/traffic-limits)
+- [Traffic Limits and Overages](/guides/account-mgmt/traffic)
 
-- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
+- [Troubleshooting Traffic](/guides/account-mgmt/traffic/remedy)
 
 - [Metrics in the Site Dashboard](/metrics)

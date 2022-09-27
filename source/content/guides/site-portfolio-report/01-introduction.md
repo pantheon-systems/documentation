@@ -39,7 +39,7 @@ The Site Portfolio Report provides a snapshot of your portfolio through three ch
 
 Automatic upgrades happen when your sites exceed the traffic limits of the plan you selected in your contract. Pantheon will upgrade your plan to cover the increased traffic from your users.
 
-Read [Traffic Limits and Overages](/traffic-limits) for more information on how Pantheon applies site traffic measurements to sites.
+Read [Traffic Limits and Overages](/guides/account-mgmt/traffic) for more information on how Pantheon applies site traffic measurements to sites.
 
 ### New Sites that Exceeded the Contract
 
@@ -55,18 +55,6 @@ This table shows any sites that were deactivated during the time between the pre
 
 ## More Resources
 
-- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
-
-- [Site Owner FAQ](/site-owner-faq)
-
-- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
-
-- [Site Plans FAQs](/site-plans-faq)
-
-- [Traffic Limits and Overages](/traffic-limits)
-
-- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
-
-- [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
-
+- [Account Management](/guides/account-mgmt)
+  
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic

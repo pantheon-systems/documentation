@@ -88,5 +88,5 @@ When you replace the database with one that doesn't match the Object Cache, it c
 
 ## More Resources
 
-- [Plan Resources](/site-plans-faq#plan-resources)
+- [Plan Resources](/guides/account-mgmt/plans/resources)
 - [Platform Considerations](/guides/platform-considerations)

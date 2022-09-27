@@ -72,7 +72,7 @@ terminus org:list
 
 ## Switch Between Workspaces
 
-If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on different projects.
+If you're a member of multiple [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces), you can stay logged in, and switch between Workspaces to work on different projects.
 
 To switch between workspaces, click your gravatar in the upper left to switch between Workspaces:
 
@@ -110,7 +110,7 @@ Only organizational team members and administrators of a Supporting Organization
 
 ### Why can't my Agency Organization own a site?
 
-Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in our [Organizations](/organizations/#organization-site-association) doc.
+Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. See [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces) for more information.
 
 ### Can I add my own Agency as a Supporting Organization to a client's site?
 

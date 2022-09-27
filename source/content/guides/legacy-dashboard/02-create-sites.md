@@ -62,7 +62,7 @@ Sandbox sites are useful for trying out the Pantheon platform, creating sandboxe
 
 ## Your Pantheon Account
 
-Your account is your own individual account, and every account can manage multiple projects or sites at a time. Pantheon doesn't recommend sharing your account with other people. If you're collaborating on a project or handing over ownership to a client, use our [team management](/team-management) and [ownership transfer](/site-owner-faq/#billing-tasks) tools.
+Your account is your own individual account, and every account can manage multiple projects or sites at a time. Pantheon doesn't recommend sharing your account with other people. If you're collaborating on a project or handing over ownership to a client, use our [team management](/guides/account-mgmt/workspace-sites-teams/teams) and [ownership](/guides/account-mgmt/billing/transfer) tools.
 
 ## Frequently Asked Questions (FAQs)
 

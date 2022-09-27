@@ -245,7 +245,7 @@ You must create the `settings.php` file to develop in sync.
 
 ## Feature Branching
 
- Working with teams on GitHub requires a branching strategy. You must add your colleagues to the site you're developing, both on [GitHub](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and on [Pantheon](/team-management).
+ Working with teams on GitHub requires a branching strategy. You must add your colleagues to the site you're developing, both on [GitHub](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and on [Pantheon](/guides/account-mgmt/workspace-sites-teams/teams).
 
  Locally, your codebase is in sync with both repositories. 
 

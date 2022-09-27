@@ -16,7 +16,7 @@ editpath: legacy-dashboard/09-add-client-site.md
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/annual-billing) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Plan Pricing](/guides/account-mgmt/plans/pricing) for more information.
 
 </Alert>
 
@@ -134,7 +134,4 @@ If you are the billing contact for an online site plan, check your spam folder, 
 
 ## More Resources
 
-- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
-- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
-- [Traffic Limits and Overages](/traffic-limits)
-- [Site Plans FAQs](/site-plans-faq)
+- [Account Management](/guides/account-mgmt)
