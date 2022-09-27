@@ -25,7 +25,7 @@ Be sure to set up workspaces before creating sites.
 
 <Partial file="create-new-site-new-dash.md" />
 
-For more information on site creation, see [Creating Sites](/docs/guides/legacy-dashboard/create-sites)
+For more information on site creation, see [Creating Sites](/guides/legacy-dashboard/create-sites)
 
 ## The Sites Tab
 
@@ -37,7 +37,7 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. See [Add Supporting Organization to Site](/docs/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. See [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
 
 ### Tag Sites
 

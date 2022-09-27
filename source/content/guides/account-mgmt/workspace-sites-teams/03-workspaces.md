@@ -24,17 +24,17 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 ## Professional Workspace features
 
-- [Multidev](/docs/guides/multidev)
+- [Multidev](/guides/multidev)
 
-- [Change Management](/docs/guides/account-mgmt/workspace-sites-teams/teams)
+- [Change Management](/guides/account-mgmt/workspace-sites-teams/teams)
 
-- [Vanity Domains](/docs/guides/domains/vanity-domains)
+- [Vanity Domains](/guides/domains/vanity-domains)
 
 - Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your organization.
 
 - [Email Notifications](#platform-email-notifications)
 
-- [Single Sign-On](/docs/sso-organizations)
+- [Single Sign-On](/sso-organizations)
 
 
 ## Create a Workspace
