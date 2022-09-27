@@ -29,7 +29,7 @@ Payment for a site can't be split among payment methods - payment can only come 
 
 ## Personal Payment Methods
 
-Personal payment methods - that can be used on all sites you own - are managed via your [Personal Workspace](/docs/guides/account-mgmt/account/workspace).
+Personal payment methods - that can be used on all sites you own - are managed via your [Personal Workspace](/guides/account-mgmt/account/workspace).
 
 ### Add Personal Payment Method
 
