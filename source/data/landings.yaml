@@ -1459,7 +1459,7 @@
         - text: 'Overview'
           url: '/guides/site-portfolio-report'
         - text: 'Using the Report'
-          url: 'guides/site-portfolio-report/interacting'
+          url: '/guides/site-portfolio-report/interacting'
         - text: 'FAQ'
-          url: 'docs/guides/site-portfolio-report/faq'
+          url: '/guides/site-portfolio-report/faq'
 
