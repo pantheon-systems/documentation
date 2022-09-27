@@ -36,7 +36,7 @@ You should have the **Decoupled** tab enabled in your Sites dashboard after onbo
 
     * WordPress and Gatsby
 
-    > **NOTE**: Other configurations are not currently supported but you are welcome to try them
+    > **NOTE**: Other configurations are not currently supported.
 
 
 ### Compatibility
