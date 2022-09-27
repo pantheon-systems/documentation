@@ -16,7 +16,7 @@ Review the resources in this section to learn how to develop your WordPress Pant
 
 ## Create a WordPress Site from the Command Line with Terminus and WP-CLI
 
-View our [WordPress Command Line](/guides/wordpress-commandline) guide for steps to create and develop your WordPress site using your command line interface and WP-CLI. 
+View our [WordPress Command Line](/guides/wp-cli) guide for steps to create and develop your WordPress site using your command line interface and WP-CLI. 
 
 ## Run WordPress as a Backend API
 
