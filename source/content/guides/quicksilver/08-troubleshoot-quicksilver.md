@@ -18,7 +18,7 @@ Use the following [Terminus](/terminus) commands for debugging Quicksilver.
 
 ### Stream New Workflows to the Console
 
-Follow the WebOps activity of your site with `terminus workflow:watch <site>`.
+Run `terminus workflow:watch <site>` to follow the WebOps activity of your site.
 
 ### Explore Previous Workflows
 
@@ -33,11 +33,19 @@ List and show previous workflows and their corresponding Quicksilver operations 
 
 ### MultiDev Creation Hook Does Not Run When Expected
 
-Quicksilver hooks for the `create_cloud_development_environment` workflow will not be detected when creating a Multidev environment if the `pantheon.yml` file **does not** exist on the Dev environment. As a workaround, commit the `pantheon.yml` file on Dev before creating a Multidev environment.
+Quicksilver hooks for the `create_cloud_development_environment` workflow will not be detected when creating a Multidev environment if the `pantheon.yml` file **does not** exist on the Dev environment. As a workaround:
+
+1. Commit the `pantheon.yml` file on Dev.
+
+1. Create your Multidev environment after the commit is pushed.
 
 ### Deploying Configuration Changes or Quicksilver Hooks to Multidev
 
-If a `pantheon.yml` file **does not** exist on the Dev environment, configuration changes will not be detected when creating a Multidev environment. As a workaround, make some modification the `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
+Configuration changes are not be detected when creating a Multidev environment if a `pantheon.yml` file **does not** exist on the Dev environment. As a workaround:
+
+1. Make some modification the `pantheon.yml` file.
+
+1. Re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
 ```none
 remote:
@@ -52,10 +60,18 @@ remote:
 
 ### Autopilot VRT Hook Does Not Run When Expected
 
-For some [Autopilot](/guides/autopilot) users, Quicksilver hooks are not detected due to timing issues with Multidev creation. If your Quicksilver `autopilot_vrt` scripts are not running, first make sure that your scripts are defined in the Dev environment, and then try deleting your `Autopilot` Multidev from the dashboard. Be sure to also delete the `Autopilot` branch, and then create the `Autopilot` Multidev again in the Dashboard. Once you do this, your scripts should start running after the visual regression tests complete.
+Quicksilver hooks are not detected due to timing issues with Multidev creation for some [Autopilot](/guides/autopilot) users. If your Quicksilver `autopilot_vrt` scripts are not running:
 
+1. Verify that your scripts are defined in the Dev environment.
+
+1. Delete your `Autopilot` Multidev from the Dashboard. 
+
+1. Delete the `Autopilot` branch of the Multidev.
+
+1. Create the `Autopilot` Multidev again in the Dashboard. Your scripts should start running after the visual regression tests complete.
 
 ## More Resources
 
 - [The pantheon.yml Configuration File](/pantheon-yml)
 - [Quicksilver Examples Repository](https://github.com/pantheon-systems/quicksilver-examples/)
+- [Autopilot](/guides/autopilot)
