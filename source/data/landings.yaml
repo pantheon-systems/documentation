@@ -1287,7 +1287,7 @@
           url: '/overview/support'
 - title: 'Account Management at Pantheon'
   subtitle: 'Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading these guides.'
-  path: 'guides/account-mgmt'
+  path: 'manage'
   guides:
     - title: ''
       type: 'normal'

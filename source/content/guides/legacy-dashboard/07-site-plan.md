@@ -214,4 +214,4 @@ Optionally, you can remove the Sandbox site after downgrading. For details, see 
 
 ## More Resources
 
-- [Account Management](/guides/account-mgmt)
+- [Account Management](/manage)

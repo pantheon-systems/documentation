@@ -49,5 +49,5 @@ Certain activities are generally excluded from the calculation of visits and pag
 
 ## More Resources
 
-- [Account Management](/guides/account-mgmt)
+- [Account Management](/manage)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site
