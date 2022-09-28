@@ -888,7 +888,7 @@
         - text: 'Use Pantheon Localdev to Develop Sites Locally'
           url: '/guides/localdev'
         - text: 'Managing Site Plan Changes and Chargeback for EDU+ Sites'
-          url: '/managing-edu-plus'
+          url: '/guides/account-mgmt/plans/manage'
         - text: 'Managing Sites and Teams with the Pantheon Organization Dashboard'
           url: '/organization-dashboard'
         - text: 'Pantheon Organizations FAQs'
