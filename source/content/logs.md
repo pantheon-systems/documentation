@@ -163,9 +163,9 @@ The script provides several modifiable variables described in its comments:
 
 1. Download logs by executing the script from within the `site-logs` directory:
 
-```bash{promptUser:user}
-bash collect-logs.sh
-```
+  ```bash{promptUser:user}
+  bash collect-logs.sh
+  ```
 
 1. Open the `site-logs` directory to access the logs.
   
