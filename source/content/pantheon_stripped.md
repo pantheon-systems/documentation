@@ -104,4 +104,4 @@ Adjust the regex as required to match your link's parameters.
 
 ### Why doesn't Google Analytics match Pantheon's traffic metrics?
 
-Google Analytics focuses on measuring visits while our request log more comprehensively measures traffic. For more details, see the [Traffic Limits and Overages](/traffic-limits#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) doc.
+Google Analytics focuses on measuring visits while our request log more comprehensively measures traffic. For more details, see [Traffic Limits and Overages](/guides/account-mgmt/traffic).

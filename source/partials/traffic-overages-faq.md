@@ -10,7 +10,7 @@ Your [Pantheon Site Dashboard](/metrics) includes site traffic, measured against
 
 You can [upgrade your plan](/site-plan) in the Site Dashboard at any time. Pantheon understands traffic levels may vary by season or event for some of our customers, but if you're experiencing sustained traffic that's higher than your plan limit, you can update your plan yourself.
 
-We encourage all customers to take advantage of [Overage Protection](/traffic-limits#overage-protection), which prevents one-time traffic spikes from causing billing issues.
+We encourage all customers to take advantage of [Traffic Limits and Overages](/guides/account-mgmt/traffic), which prevents one-time traffic spikes from causing billing issues.
 
 ### What about legitimate traffic spikes?
 
