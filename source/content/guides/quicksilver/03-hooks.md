@@ -5,7 +5,6 @@ description: Learn how to use Quicksilver hooks to improve your workflow.
 categories: [automate]
 tags: [quicksilver, webops, workflow]
 layout: guide
-showtoc: true
 permalink: docs/guides/quicksilver/hooks
 anchorid: hooks
 ---
@@ -27,8 +26,7 @@ You can hook into the following workflows:
 | `autopilot_vrt`                          | Autopilot Visual Regression test                                             | "Autopilot" Multidev                            | `after` stage valid, `before` stage invalid                                           |
 | `clear_cache`                       | Clear CMS and Edge Cache                                 |             |                |
 | `clone_database`                               | Clone database between environments                                         | target (to_env)                    |                                             |
-| `create_cloud_`
-`development_environment`
+| `create_cloud_development_environment`
 | Create Multidev environment                                             | Multidev               | `after` stage valid, `before` stage invalid
 | `deploy`                            | Deploy code to Test or Live | target            |                                             |
 | `deploy_product` | Create site                                         | Dev                   | `after` stage valid, `before` stage invalid |
