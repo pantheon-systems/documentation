@@ -915,7 +915,7 @@ When you're moving a doc or heading to a new location, include a formatted table
 | docs/guides/drupal-commandline | docs/guides/drush/drupal-commandline |
 
 
-<hr className="source-code" /> <br/>
+**Source Code**
 
 ````markdown
 | Redirect from                 | to                                  |
