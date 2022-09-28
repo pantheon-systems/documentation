@@ -29,7 +29,7 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 
 ### Disable Addons When Downgrading to Basic Plan
 
-[Object Cache](/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[Object Cache](/guides/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 To remove these addons:
 
