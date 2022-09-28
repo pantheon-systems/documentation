@@ -351,7 +351,7 @@ ___
 
 1. Disable Static CSS file generation in the Divi theme.
 
-1. Disable Dynamic CSS at Divi: select Theme Options, select General, select Performance, and then click to disable Dynamic CSS.
+1. Select Theme Options, select General, select Performance, and then select to disable Dynamic CSS. 
 
 1. Consider disabling other Dynamic settings if possible.
 
