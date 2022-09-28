@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 anchorid: apply-updates
 permalink: docs/guides/autopilot/apply-updates/
-editpath: autopilot/04-apply-updates.md
+editpath: autopilot/05-apply-updates.md
 reviewed: "2021-08-09"
 ---
 
