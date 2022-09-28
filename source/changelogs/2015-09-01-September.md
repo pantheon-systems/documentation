@@ -18,7 +18,7 @@ If you’re a member of an Organization or Agency, you can now set your default 
 
 ## Documentation
 ### New Articles/Guides
-[Access Management for Site Owners and Administrators](/access-management)  
+[Teams](/guides/account-mgmt/workspace-sites-teams/teams)  
 
 [Identify and Kill Queries with MySQL Command-Line Tool](/guides/mariadb-mysql/kill-mysql-queries)
 
