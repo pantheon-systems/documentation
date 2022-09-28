@@ -347,11 +347,11 @@ ___
 
 **Solution:** The resolution is to access the Divi Theme Options located under the Advanced section in Builder and disable Static CSS File Generation:
 
-1. Navigate to Divi Theme Options, select Builder, and then select Advanced.
+1. Navigate to **Divi Theme Options**, select **Builder**, and then select **Advanced**.
 
 1. Disable Static CSS file generation in the Divi theme.
 
-1. Select Theme Options, select General, select Performance, and then select to disable Dynamic CSS. 
+1. Select **Theme Options**, select **General**, select **Performance**, and then select to disable Dynamic CSS. 
 
 1. Consider disabling other Dynamic settings if possible.
 
