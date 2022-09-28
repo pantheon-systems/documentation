@@ -334,32 +334,34 @@ ___
 
 ## Divi WordPress Theme & Visual Page Builder
 
-<ReviewDate date="2020-10-09" />
+<ReviewDate date="2022-09-28" />
 
-**Issue 1:** [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
+**Issue:** Divi WordPress Theme & Visual Page Builder may produce the error below when attempting to edit pages. This is caused by the page builder attempting to write to three different nested folders in the web root. This issue is also expressed when the WordPress admin dashboard becomes slow when editing posts using Divi.
 
-```php
+```bash
 .../data/Utils.php:758  ET_Core_Data_Utils::WPFS():
 [ERROR]: Unable to write to filesystem. Please ensure that the web server process has write access to the WordPress directory.
 ```
 
-**Solution 1:**  The most reliable solution is to access the Divi Theme Options > Builder > Advanced section and disable Static CSS File Generation.
+**Explanation of why these issues occur:** The dynamic features in Divi, along with other settings stored in `et-cache`, can create excessive rewrites to the file system. Under high traffic uncached requests, this can saturate the file system, and degrade the performance of the site. The effect this creates is compounded when [WordPress' `FS_METHOD`](https://developer.wordpress.org/reference/functions/get_filesystem_method/) is not set to direct. Elegant themes provide these configurations in an attempt to enhance the experience of their Product, however these options are redundant and detrimental in certain environments.
 
-**Solution 2:**
+**Solution:** The resolution is to access the Divi Theme Options located under the Advanced section in Builder and disable Static CSS File Generation:
+
+1. Navigate to Divi Theme Options, select Builder, and then select Advanced.
 
 1. Disable Static CSS file generation in the Divi theme.
 
-1. Disable Dynamic CSS at **Divi** > **Theme Options** > **General** > **Performance** and click to disable Dynamic CSS.
+1. Disable Dynamic CSS at Divi: select Theme Options, select General, select Performance, and then click to disable Dynamic CSS.
 
-1. Create a [symlink](/plugins-known-issues#assumed-write-access) in `wp-content/et-cache`.
+1. Consider disabling other Dynamic settings if possible.
 
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+1. Verify that a symlink exists for `wp-content/et-cache`.
 
-1. Purge the contents of `et-cache` but not the `et-cache` file itself.
+1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-pantheon/plugins#pantheon-must-use-plugin).
 
-**Issue 2:** The WordPress admin dashboard becomes slow when editing posts using Divi.
+1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` file itself. You can do this by accessing the site's files via [SFTP](/sftp).
 
-**Solution:**  When the `wp-content/uploads/et-cache` directory gets too full, it tends to slow down. Large lists of files will slow down the admin area even when Static CSS file generation is disabled. Clear the cache by accessing the site's files [via SFTP](/sftp#sftp-connection-information). Empty the contents inside the  `files/et-cache` folder, but do not remove the folder. Some files will be regenerated within the `files/et-cache` folder; this is expected behavior. Over time the files can grow too large, especially if Static CSS generation is still enabled, and you may need to repeat the steps to empty the folder.
+**I am still having issues:** Please [contact support](/guides/support/contact-support/) if you have completed the resolution steps above and you are still having issues.
 ___
 
 ## Elementor
