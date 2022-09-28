@@ -27,7 +27,7 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 - [Vanity Domains](/guides/domains/vanity-domains)
 
-- Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your organization.
+- Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your workspace.
 
 - [Email Notifications](#platform-email-notifications)
 
@@ -38,7 +38,7 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 The following process will create a Silver workspace. For additional collaboration tools such as Multidev and visual regression testing, upgrade to a Gold workspace.  [Contact our team](https://pantheon.io/contact-sales) for more information
 
-If you are creating the Workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the Workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
+If you are creating the workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
 
 You can create as many workspaces as necessary for your organization. 
 
@@ -52,7 +52,7 @@ To create a Professional Workspace:
 
 ## Retrieve the Workspace UUID
 
-Every entity (user, organization, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
+Every entity (user, workspace, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
 
 ```none
 de305d54-75b4-431b-adb2-eb6b9e546014
@@ -72,21 +72,21 @@ terminus org:list
 
 ## Switch Between Workspaces
 
-If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on different projects.
+If you're a member of multiple [workspaces](/organizations), you can stay logged in, and switch between workspaces to work on different projects.
 
-To switch between workspaces, click your gravatar in the upper left to switch between Workspaces:
+To switch between workspaces, click your gravatar in the upper left to switch between workspaces:
 
 ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
 
 ## Customize a Workspace
 
-You can customize the following for a Workspace
+You can customize the following for a workspace
 
-- The name and icon of the organization workspace.
+- The name and icon of the workspace.
   
-- Payment and terms of service information for Sites built in your Workspace.
+- Payment and terms of service information for Sites built in your workspace.
 
-To customize a Professional Workspace, go to the Workspace you wish to customize, then click the **Settings** tab.
+To customize a Professional Workspace, go to the workspace you wish to customize, then click the **Settings** tab.
 
 ## Delete a Workspace
 
@@ -98,7 +98,7 @@ Workspaces cannot be deleted.
 
 See [Sites](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
 
-### Why do login attempts fail for all users across my Workspace simultaneously?
+### Why do login attempts fail for all users across my workspace simultaneously?
 
 Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logins in and out successfully 3 times.
 
@@ -108,9 +108,9 @@ As a workaround, we recommend following development best practice workflows by [
 
 Only organizational team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
-### Why can't my Agency Organization own a site?
+### Why can't my Agency workspace own a site?
 
-Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in our [Organizations](/organizations/#organization-site-association) doc.
+Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
 
 ### Can I add my own Agency as a Supporting Organization to a client's site?
 
