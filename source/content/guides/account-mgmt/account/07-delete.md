@@ -4,7 +4,7 @@ subtitle: Delete Your Account
 description: Delete your account.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
-contributors: [wordsmither]
+contributors: []
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/account/delete

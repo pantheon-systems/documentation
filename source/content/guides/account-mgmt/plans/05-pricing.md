@@ -4,7 +4,7 @@ subtitle: Pricing
 description: Review our pricing options.
 categories: [account-mgmt]
 tags: [plans]
-contributors: [wordsmither]
+contributors: []
 layout: guide
 permalink: docs/guides/account-mgmt/plans/pricing
 anchorid: pricing

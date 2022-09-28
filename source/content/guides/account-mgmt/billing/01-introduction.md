@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Add a new credit card, remove the current card or transfer billing to a new site owner.
 categories: [account-mgmt]
 tags: [billing]
-contributors: [wordsmither]
+contributors: []
 layout: guide
 permalink: docs/guides/account-mgmt/billing
 anchorid: billing
