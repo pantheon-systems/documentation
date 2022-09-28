@@ -4,4 +4,4 @@ A transfer of ownership is the most common way non-agency developers and Registe
 
 Single-site businesses can also use this method when site ownership needs to be transferred to someone else within the company. The invitation will guide the recipient through adding their payment method to the site for the designated plan.
 
-We recommend communicating with the business owner well in advance of sending a transfer request. It's a good idea to have them notify you once they've upgraded so you can continue the going live procedure. Feel free to share the [Site Owner FAQ](/site-owner-faq) guide with them.
+We recommend communicating with the business owner well in advance of sending a transfer request. It's a good idea to have them notify you once they've upgraded so you can continue the going live procedure. Feel free to share the [Account Management](/manage) guide with them.
