@@ -4,7 +4,7 @@ subtitle: Troubleshooting Traffic Events
 description: Determine and address the causes of unexpected traffic.
 categories: [account-mgmt]
 tags: [plans]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/remedy

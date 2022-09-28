@@ -4,7 +4,7 @@ subtitle: Transfer Ownership and Billing
 description: Learn how to change who is responsible for managing billing.
 categories: [account-mgmt]
 tags: [billing]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/transfer

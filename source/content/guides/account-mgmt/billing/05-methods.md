@@ -4,7 +4,7 @@ subtitle: Payment Methods
 description: Learn how to manage the credit cards used to pay for your account.
 categories: [account-mgmt]
 tags: [billing]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/methods

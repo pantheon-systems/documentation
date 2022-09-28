@@ -4,7 +4,7 @@ subtitle: Sites
 description: Learn how to manage your sites.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/sites

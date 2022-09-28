@@ -4,7 +4,7 @@ subtitle: Invoices and Subscription
 description: Manage and view invoices and subscriptions.
 categories: [account-mgmt]
 tags: [billing]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/invoices

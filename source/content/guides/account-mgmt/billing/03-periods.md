@@ -4,7 +4,7 @@ subtitle: Billing Periods
 description: Learn about the billing periods available, and how to manage a subscription.
 categories: [account-mgmt]
 tags: [billing]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/account-mgmt/billing/periods
 anchorid: periods
