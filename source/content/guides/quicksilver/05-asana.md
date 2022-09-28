@@ -1,5 +1,5 @@
 ---
-title: Automate and Integrate your WebOps Workflow with Quicksilver
+title: Quicksilver on Pantheon
 subtitle: Integrate Asana with Pantheon using Quicksilver Hooks
 description: Learn how to integrate Asana with Pantheon.
 categories: [integrate]

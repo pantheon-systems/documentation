@@ -1,5 +1,5 @@
 ---
-title: Automate and Integrate your WebOps Workflow with Quicksilver
+title: Quicksilver on Pantheon
 subtitle: Troubleshoot
 description: Review solutions to common Quicksilver troubleshooting scenarios.
 categories: [automate]

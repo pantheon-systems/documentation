@@ -1,7 +1,7 @@
 ---
-title: Automate and Integrate your WebOps Workflow with Quicksilver
+title: Quicksilver on Pantheon
 subtitle: Introduction
-description: Learn how to use Quicksilver to automate your WebOps workflow.
+description: Learn how to automate and integrate your WebOps workflow with Quicksilver.
 categories: [automate]
 tags: [quicksilver, webops, workflow]
 layout: guide

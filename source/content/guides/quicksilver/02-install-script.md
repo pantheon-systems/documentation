@@ -1,5 +1,5 @@
 ---
-title: Automate and Integrate your WebOps Workflow with Quicksilver
+title: Quicksilver on Pantheon
 subtitle: Install Scripts
 description: Learn how to install scripts with Quicksilver.
 categories: [automate]

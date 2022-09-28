@@ -1,5 +1,5 @@
 ---
-title: Automate and Integrate your WebOps Workflow with Quicksilver
+title: Quicksilver on Pantheon
 subtitle: Integrate Jira on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Jira with the Pantheon Site Dashboard.
 categories: [integrate]

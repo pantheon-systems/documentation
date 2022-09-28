@@ -1,5 +1,5 @@
 ---
-title: Automate and Integrate your WebOps Workflow with Quicksilver
+title: Quicksilver on Pantheon
 subtitle: Quicksilver Hooks
 description: Learn how to use Quicksilver hooks to improve your workflow.
 categories: [automate]
