@@ -17,7 +17,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 | **newrelic.log**          |                       | New Relic log; check if an environment is not logging.  |
 | **nginx-access.log**      | Up to 60 days of logs | Web server access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/nginx-access-log). |
 | **nginx-error.log**       | 1MB of log data       | Web server error log.                                   |
-| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress).  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
+| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress)."/>  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
 | **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/guides/php/php-slow-log) |
 | **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
 | **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
@@ -163,9 +163,9 @@ The script provides several modifiable variables described in its comments:
 
 1. Download logs by executing the script from within the `site-logs` directory:
 
-```bash{promptUser:user}
-bash collect-logs.sh
-```
+  ```bash{promptUser:user}
+  bash collect-logs.sh
+  ```
 
 1. Open the `site-logs` directory to access the logs.
   
