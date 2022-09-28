@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Learn about Pantheon's site plans.
 categories: [account-mgmt]
 tags: [plans]
-contributors: [wordsmither]
+contributors: []
 layout: guide
 permalink: docs/guides/account-mgmt/plans
 anchorid: plans

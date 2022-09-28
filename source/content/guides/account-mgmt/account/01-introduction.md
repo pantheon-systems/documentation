@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Manage your account.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
-contributors: [wordsmither]
+contributors: []
 layout: guide
 permalink: docs/guides/account-mgmt/account
 anchorid: account

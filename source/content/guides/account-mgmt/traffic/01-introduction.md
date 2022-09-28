@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Learn about and understand traffic overages.
 categories: [account-mgmt]
 tags: [plans]
-contributors: [wordsmither]
+contributors: []
 layout: guide
 permalink: docs/guides/account-mgmt/traffic
 anchorid: traffic

@@ -4,7 +4,7 @@ subtitle: Workspace
 description: Learn how to use your account workspace.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
-contributors: [wordsmither]
+contributors: []
 layout: guide
 permalink: docs/guides/account-mgmt/account/workspace
 anchorid: workspace
