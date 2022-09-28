@@ -4,7 +4,7 @@ subtitle: Recover Account
 description: Recover your account when someone leaves.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/account/recover

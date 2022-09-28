@@ -4,7 +4,7 @@ subtitle: Teams
 description: Learn how to use teams for change management.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams

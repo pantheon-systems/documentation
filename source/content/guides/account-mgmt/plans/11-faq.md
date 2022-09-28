@@ -4,7 +4,7 @@ subtitle: FAQ
 description: Commonly asked questions about plans.
 categories: [account-mgmt]
 tags: [plans]
-contributors: []
+contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/faq
