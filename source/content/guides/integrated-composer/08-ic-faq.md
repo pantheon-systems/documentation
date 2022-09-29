@@ -57,6 +57,10 @@ All modules will be overwritten by Integrated Composer if you don't add the exce
 
 </Alert>
 
+### Can I hotfix an Integrated Composer site?
+
+No. Integrated Composer is not compatible with the [hotfix](/hotfixes) workflow.
+
 ### What features are planned for Integrated Composer on Pantheon?
 
 Pantheon's developers are working hard to make the Integrated Composer experience on Pantheon better.

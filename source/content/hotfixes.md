@@ -10,6 +10,8 @@ For Experts only. You should not need to attempt this if you use [Multidev](/gui
 
 We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user, and should be avoided whenever possible.
 
+Note that [Integrated Composer](/guides/integrated-composer) is not compatible with the hotfix workflow.
+
 </Alert>
 
 
@@ -17,10 +19,11 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 
 - A working knowledge of Git tools.
 - An up-to-date clone of your Pantheon Git repository.
+- A site that does not use Integrated Composer.
 
 ## Get into the Right Tag
 
-1. From within your Git clone, get a quick list of the existing Git tags:
+1. Navigate to your Git clone and run the command below to get a list of the existing Git tags:
 
    ```bash{outputLines: 2-7}
    git tag
