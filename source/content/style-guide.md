@@ -869,7 +869,7 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 |                 | error        |             |              |  **✓**                 |
 +-----------------+--------------+-------------+--------------+------------------------+
 
-<hr className="source-code" /> <br/>
+**Source Code**
 
 ````markdown
 +-----------------+--------------+-------------+--------------+------------------------+
@@ -914,6 +914,17 @@ When you're moving a doc or heading to a new location, include a formatted table
 | docs/drush-import              | docs/guides/drush/drush-import       |
 | docs/guides/drupal-commandline | docs/guides/drush/drupal-commandline |
 
+
+**Source Code**
+
+````markdown
+| Redirect from                 | to                                 |
+|-------------------------------|-------------------------------------|
+| docs/drush                    | docs/guides/drush                   |
+| docs/drush-versions           | docs/guides/drush/drush-versions    |
+| docs/drush-import             | docs/guides/drush/drush-import      |
+| docs/guides/drupal-commandline| docs/guides/drush/drupal-commandline|
+````
 ___
 
 ## Reusable Content
