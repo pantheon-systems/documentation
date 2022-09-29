@@ -90,11 +90,11 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
 
  ```json:title=composer.json
-   "scripts": {
-      "post-update-cmd": [
+"scripts": {
+    "post-update-cmd": [
         "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ],
-      "post-install-cmd": [
+    "post-install-cmd": [
         "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ]
 },
