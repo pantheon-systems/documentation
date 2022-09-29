@@ -150,11 +150,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
     ![Trello card ID](../../../images/integrations/trello/card-id.png)
 
-    <Alert title="Note" type="info">
-
 1. Optional: Run `terminus workflow:watch $SITE` in a separate Teriminal window to see the process unfold in real time.
-
-    </Alert>
 
 1. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., [4K2zqr1A]). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
 
