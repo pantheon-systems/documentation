@@ -359,7 +359,7 @@ ___
 
 1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-pantheon/plugins#pantheon-must-use-plugin).
 
-1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` file itself. You can do this by accessing the site's files via [SFTP](/sftp).
+1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` folder itself. You can do this by accessing the site's files via [SFTP](/sftp).
 
 **I am still having issues:** Please [contact support](/guides/support/contact-support/) if you have completed the resolution steps above and you are still having issues.
 ___
