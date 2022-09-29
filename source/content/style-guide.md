@@ -918,7 +918,7 @@ When you're moving a doc or heading to a new location, include a formatted table
 **Source Code**
 
 ````markdown
-| Redirect from                 | to                                  |
+| Redirect from                 | to                                 |
 |-------------------------------|-------------------------------------|
 | docs/drush                    | docs/guides/drush                   |
 | docs/drush-versions           | docs/guides/drush/drush-versions    |
