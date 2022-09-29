@@ -10,15 +10,15 @@ permalink: docs/guides/quicksilver/troubleshoot-quicksilver
 anchorid: troubleshoot-quicksilver
 ---
 
-This section provides solutions to common Quicksilver troubleshooting scenarios.
+This section provides solutions to common Quicksilver debugging and troubleshooting scenarios.
 
 ## Debugging via Terminus
 
-Use the [Terminus](/terminus) commands in the sections below for debugging Quicksilver.
+Use the [Terminus](/terminus) commands in the sections below to debug Quicksilver.
 
 ### Stream New Workflows to the Console
 
-Run `terminus workflow:watch <site>` to follow the WebOps activity of your site.
+Run `terminus workflow:watch <site>` to follow your site's WebOps activity.
 
 ### Explore Previous Workflows
 
