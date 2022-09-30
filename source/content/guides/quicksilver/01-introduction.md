@@ -5,12 +5,11 @@ description: Learn how to automate and integrate your WebOps workflow with Quick
 categories: [automate]
 tags: [quicksilver, webops, workflow]
 layout: guide
-showtoc: true
 permalink: docs/guides/quicksilver
 anchorid: quicksilver
 ---
 
-Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow. There is a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/) that you can contribute to. You can also find examples to enable additional functionality, including:
+Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow. There is a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/) available for review and contributions. Several scripts enable additional functionality, including:
 
 - Chat-ops
 - Database sanitization

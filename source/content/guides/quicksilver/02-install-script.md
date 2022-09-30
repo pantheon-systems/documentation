@@ -10,7 +10,7 @@ permalink: docs/guides/quicksilver/install-script
 anchorid: install-script
 ---
 
-This section provides information on script type an location, as well as how to install specific scripts.
+This section provides information on script type and location, as well as how to install specific scripts.
 
 ## Script Type and Location
 

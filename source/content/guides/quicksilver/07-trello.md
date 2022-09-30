@@ -37,7 +37,7 @@ Be sure that you:
 
 Create a new machine user in your Trello instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
-1. Login to your Trello instance and click <i class="fa fa-plus"></i>, found in the upper panel, then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create** to create a team if you haven't done so already.
+1. Login to your Trello instance, click <i class="fa fa-plus"></i> in the upper panel, and then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create** to create a team if you haven't done so already.
 
     ![Create a team](../../../images/integrations/trello/new-team.png)
 
@@ -125,7 +125,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
-1. Paste the following workflow into your `pantheon.yml` file to hook into the platform upon code being pushed to fire off the Trello integration script:
+1. Paste the following workflow into your `pantheon.yml` file to hook into the platform when code is pushed to trigger the Trello integration script:
 
         #always include the api version
         api_version: 1
@@ -156,11 +156,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
     ![Trello card ID](../../../images/integrations/trello/card-id.png)
 
-    <Alert title="Note" type="info">
-
-    In a separate teriminal window, run `terminus workflow:watch $SITE` to see the process unfold in real time (optional).
-
-    </Alert>
+1. Optional: Run `terminus workflow:watch $SITE` in a separate Teriminal window to see the process unfold in real time.
 
 1. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., [4K2zqr1A]). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
 

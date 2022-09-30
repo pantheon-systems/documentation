@@ -5,7 +5,6 @@ description: Learn how to use variables with Quicksilver.
 categories: [automate]
 tags: [quicksilver, webops, workflow]
 layout: guide
-showtoc: true
 permalink: docs/guides/quicksilver/variables
 anchorid: variables
 ---

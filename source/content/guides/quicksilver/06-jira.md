@@ -47,7 +47,7 @@ Create a new machine user in your Atlassian Cloud instance. This user is referre
 
 1. [Sign up for an Atlassian Cloud account](https://www.atlassian.com/software/jira/try) if you do not have one already.
 
-1. Login to your Atlassian Cloud instance and click <i class="fa fa-gear"></i>, found in the upper panel, then select **User management**.
+1. Login to your Atlassian Cloud instance, click <i class="fa fa-gear"></i> in the upper panel, and then select **User management**.
 
 1. Enter a name and email address for the machine user, which acts as the intermediary between Jira and the Pantheon Site Dashboard. Then click **Create users**.
 
@@ -127,7 +127,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 1. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
-1. Paste the following workflow into your `pantheon.yml` file to hook into the platform upon code being pushed to fire off the Jira integration script:
+1. Paste the following workflow into your `pantheon.yml` file to hook into the platform when code is pushed to trigger the Jira integration script:
 
         #always include the api version
         api_version: 1
@@ -154,9 +154,9 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 ## Test Jira Integration on Pantheon
 
-1. Create a test issue in an existing or new Jira project. Take note of the issue ID.
+1. Create a test issue in an existing or new Jira project and take note of the issue ID.
 
-1. Optional: In a separate terminal window, run `terminus workflow:watch` to see the next process unfold in real time.
+1. Optional: Run `terminus workflow:watch` in a separate terminal window to see the next process unfold in real time.
 
 1. Push a code change that contains the Jira issue ID in the commit message. This workflow will trigger `jira_integration.php` script, which will search commits for possible issue IDs and comment in Jira when found.
 

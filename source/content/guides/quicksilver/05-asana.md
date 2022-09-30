@@ -13,7 +13,7 @@ anchorid: asana
 
 This section provides information on how to use Quicksilver to integrate Asana with Pantheon.
 
-[Asana](https://asana.com) is a flexible project management tool that helps teams collaborate on projects in either an waterfall or kanban framework. You can spin up and manage projects quickly and easily with the Asana user interface.
+[Asana](https://asana.com) is a flexible project management tool that helps teams collaborate on projects. You can spin up and manage projects quickly and easily with the Asana user interface.
 
 The sections below provide steps on how to use Quicksilver to connect your Asana to a website project on Pantheon. You can push changes that include the Asana task's unique ID to Pantheon, and the commit message will appear within the task.
 
@@ -73,9 +73,10 @@ Create a new machine user in Asana. This user is referred to as a "machine user"
 1. Give the token a name which denotes it's purpose and save the string generated for the next steps.
 
 ## Securely Store User Credentials on Pantheon
+
 You must provide Pantheon with the credentials for our new machine user. The credentials are securely stored in the [private path](/guides/secure-development/private-paths/#private-path-for-files) of Pantheon's filesystem.
 
-We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
+We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with Git.
 
 In the commands below, replace `<site>` with your site name, `<user>` with your Asana machine account username, and `<password>` with its password.
 
@@ -137,7 +138,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
-1. Add the following workflow into your `pantheon.yml` file to hook into the platform upon code being pushed to fire off the Asana integration script:
+1. Add the following workflow into your `pantheon.yml` file to hook into the platform when code is pushed to trigger the Asana integration script:
 
    ```
    #always include the api version
@@ -184,7 +185,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 ## GitHub and Asana
 
-You can further integrate with [Unito](https://unito.io/asana-sync/), a free integration service, if you use GitHub. This can reduce a few steps in the development process for your team by letting the robots handle the communication.
+You can further integrate with [Unito](https://unito.io/asana-sync/), a free integration service, if you use GitHub. This can reduce a few steps in the development process for your team.
 
 ## More Resources
 
