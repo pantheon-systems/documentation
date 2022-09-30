@@ -28,8 +28,8 @@ Be sure that you:
 - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
 
   ```bash
-    terminus auth:login --machine-token=‹machine-token›
-    ```
+  terminus auth:login --machine-token=‹machine-token›
+  ```
 
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
 
@@ -69,16 +69,20 @@ We use the filesystem private path in this section because we don't want to trac
 
 1. Check for existing secrets using Terminus (replace `<site>` with your site name):
 
-        SITE=<site>
-        terminus secrets:list $SITE.dev
+   ```
+   SITE=<site>
+   terminus secrets:list $SITE.dev
+   ```
 
   If no existing keys are found, execute the following to create a new `secrets.json` file and upload it to Pantheon:
 
-        $ echo '{}' > secrets.json
-        $ `terminus connection:info $SITE.dev --field=sftp_command`
-        sftp> put ./files/private secrets.json
-        sftp> bye
-        $ rm secrets.json
+   ```
+   $ echo '{}' > secrets.json
+   $ `terminus connection:info $SITE.dev --field=sftp_command`
+   sftp> put ./files/private secrets.json
+   sftp> bye
+   $ rm secrets.json
+   ```
 
   Otherwise, continue to the next step.
 
@@ -102,8 +106,10 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and navigate to the project's root directory:
 
-        `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
-        cd $SITE
+   ```
+   terminus connection:info $SITE.dev --fields='Git Command' --format=string`
+   cd $SITE
+   ```
 
 1. Set the connection mode to Git:
 

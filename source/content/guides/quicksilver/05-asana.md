@@ -25,16 +25,21 @@ Be sure that you:
 
 - Install [Terminus](/terminus):
 
-        curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+  ```
+  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+  ```
+
 - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
 
-        ```bash
+  ```bash
   terminus auth:login --machine-token=‹machine-token›
   ```
 
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
 
-        curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
+  ```
+  curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
+
 
 ## Create a Machine User in Asana
 
@@ -46,7 +51,7 @@ Create a new machine user in Asana. This user is referred to as a "machine user"
 
 1. Enter a name and email address for the machine user, which acts as the intermediary between Asana and the Pantheon Site Dashboard. Then click **Send Invite**.
 
-  We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. The email needs to be an account you have access to:
+  We suggest naming machine users relative to their function; in this example we name our new user `Automation User`. The email needs to be an account you have access to:
 
    ![Create an automation user](../../../images/integrations/asana/new-user-add.png)
 
@@ -76,22 +81,28 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 
 1. Check for existing secrets using Terminus:
 
-        SITE=<site_name>
-        terminus secrets:list $SITE.dev
+   ```
+   SITE=<site_name>
+   terminus secrets:list $SITE.dev
+   ```
 
   If no existing keys are found, execute the following to create a new `secrets.json` file and upload it to Pantheon:
 
-        $ echo '{}' > secrets.json
-        $ `terminus connection:info $SITE.dev --field=sftp_command`
-        sftp> put ./files/private secrets.json
-        sftp> bye
-        $ rm secrets.json
+   ```
+   $ echo '{}' > secrets.json
+   $ `terminus connection:info $SITE.dev --field=sftp_command`
+   sftp> put ./files/private secrets.json
+   sftp> bye
+   $ rm secrets.json
+   ```
 
   Otherwise, continue to the next step.
 
 1. Write the machine user's token to the private `secrets.json` file:
 
-        terminus secrets:set $SITE.dev asana_access_token '<API token>'
+   ```
+   terminus secrets:set $SITE.dev asana_access_token '<API token>'
+   ```
 
 <Alert title="Note" type="info">
 
@@ -105,34 +116,40 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and then navigate to the project's root directory:
 
-        `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
-        cd $SITE
+   ```
+   terminus connection:info $SITE.dev --fields='Git Command' --format=string`
+   cd $SITE
+   ```
 
 1. Set the connection mode to Git:
 
-        terminus connection:set $SITE.dev git
+   ```
+   terminus connection:set $SITE.dev git
+   ```
 
 1. Create a copy of [Pantheon's `asana_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/asana_integration) in the project's private path:
 
-    ``` bash
-    mkdir private
-    mkdir private/scripts
-    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/asana_integration/asana_integration.php --output ./private/scripts/asana_integration.php
-    ```
+   ``` bash
+   mkdir private
+   mkdir private/scripts
+   curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/asana_integration/asana_integration.php --output ./private/scripts/asana_integration.php
+   ```
 
 1. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
 1. Add the following workflow into your `pantheon.yml` file to hook into the platform upon code being pushed to fire off the Asana integration script:
 
-        #always include the api version
-        api_version: 1
+   ```
+   #always include the api version
+   api_version: 1
 
-        workflows:
-          sync_code:
-            after:
-              - type: webphp
-                description: Asana Integration
-                script: private/scripts/asana_integration.php
+   workflows:
+     sync_code:
+       after:
+         - type: webphp
+           description: Asana Integration
+           script: private/scripts/asana_integration.php
+   ```
 
     <Alert title="Note" type="info">
 
@@ -142,9 +159,11 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
-        git add .
-        git commit -m "Create private/scripts/asana_integration.php and configure platform hooks"
-        git push origin master
+   ```
+   git add .
+   git commit -m "Create private/scripts/asana_integration.php and configure platform hooks"
+   git push origin master
+   ```
 
 
 ## Test Asana Integration on Pantheon
@@ -155,7 +174,9 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Push a code change to Pantheon containing the Asana task ID in the commit message in brackets (e.g., [398734709134915]). This workflow will trigger `asana_integration.php` script, which will search commits for possible task IDs and comment in Asana when found.
 
-        git commit -m "[398734709134915] Adding changes as per latest revision"
+   ```
+   git commit -m "[398734709134915] Adding changes as per latest revision"
+   ```
 
 1. Return to the issue in Asana to see a message from our machine user:
 

@@ -67,15 +67,18 @@ In the commands below, replace `<site>` with your site name, `<example>` with yo
 
 1. Check for existing secrets using Terminus:
 
-        terminus secrets:list <site>.dev
+   ```
+   terminus secrets:list <site>.dev
+   ```
 
   If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon:
 
-        $ echo '{}' > secrets.json
-        $ `terminus connection:info <site>.dev --field=sftp_command`
-        sftp> put ./files/private secrets.json
-        sftp> bye
-        $ rm secrets.json
+   ```
+   $ echo '{}' > secrets.json
+   $ `terminus connection:info <site>.dev --field=sftp_command`
+   sftp> put ./files/private secrets.json
+   sftp> bye
+   $ rm secrets.json
 
   Otherwise, continue to the next step.
 
@@ -105,8 +108,10 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and navigate to the project's root directory:
 
-        `terminus connection:info <site>.dev --fields='Git Command' --format=string`
-        cd <site>
+   ```
+   `terminus connection:info <site>.dev --fields='Git Command' --format=string`
+   cd <site>
+   ```
 
 1. Set the connection mode to Git:
 
