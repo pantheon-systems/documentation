@@ -40,6 +40,9 @@ workflows:
                 paths:
                   - ./
                   - ./public
+            - run:
+                name: Comment with preview link
+                command: npm run ../tests/lighthouse/createPullRequestComment.js
       - test-links:
           requires:
             - pfe/gatsby-build-and-deploy
