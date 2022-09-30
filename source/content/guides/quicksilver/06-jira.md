@@ -109,7 +109,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and navigate to the project's root directory:
 
    ```
-   `terminus connection:info <site>.dev --fields='Git Command' --format=string`
+   terminus connection:info <site>.dev --fields='Git Command' --format=string`
    cd <site>
    ```
 
