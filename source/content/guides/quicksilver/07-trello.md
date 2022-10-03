@@ -27,7 +27,7 @@ Be sure that you:
 
 - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus auth:login --machine-token=‹machine-token›
   ```
 
@@ -69,14 +69,14 @@ We use the filesystem private path in this section because we don't want to trac
 
 1. Check for existing secrets using Terminus (replace `<site>` with your site name):
 
-   ```
+   ```bash{promptUser: user}
    SITE=<site>
    terminus secrets:list $SITE.dev
    ```
 
   If no existing keys are found, execute the following to create a new `secrets.json` file and upload it to Pantheon:
 
-   ```
+   ```none
    $ echo '{}' > secrets.json
    $ `terminus connection:info $SITE.dev --field=sftp_command`
    sftp> put ./files/private secrets.json
@@ -88,11 +88,15 @@ We use the filesystem private path in this section because we don't want to trac
 
 1. Use Terminus to store the Automation User's API key in the the private `secrets.json` file (replace `<API key>`):
 
-        terminus secrets:set $SITE.dev trello_key '<API key>'
+   ```bash{promptUser: user}
+   terminus secrets:set $SITE.dev trello_key '<API key>'
+   ```
 
 1. Use Terminus to store the Automation User's token in the the private `secrets.json` file (replace `<Token>`):
 
-        terminus secrets:set $SITE.dev trello_token '<Token>'
+   ```bash{promptUser: user}
+   terminus secrets:set $SITE.dev trello_token '<Token>'
+   ```
 
 <Alert title="Note" type="info">
 
@@ -106,36 +110,40 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and navigate to the project's root directory:
 
-   ```
+   ```bash{promptUser: user}
    terminus connection:info $SITE.dev --fields='Git Command' --format=string`
    cd $SITE
    ```
 
 1. Set the connection mode to Git:
 
-        terminus connection:set $SITE.dev git
+   ```bash{promptUser: user}
+   terminus connection:set $SITE.dev git
+   ```
 
 1. Create a copy of [Pantheon's `trello_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/trello_integration) in the project's private path:
 
-    ``` bash
-    mkdir private
-    mkdir private/scripts
-    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/trello_integration/trello_integration.php --output ./private/scripts/trello_integration.php
-    ```
+   ```bash{promptUser: user}
+   mkdir private
+   mkdir private/scripts
+   curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/trello_integration/trello_integration.php --output ./private/scripts/trello_integration.php
+   ```
 
 1. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
 1. Paste the following workflow into your `pantheon.yml` file to hook into the platform when code is pushed to trigger the Trello integration script:
 
-        #always include the api version
-        api_version: 1
+   ```yaml:title=pantheon.yml
+   #always include the api version
+   api_version: 1
 
-        workflows:
-          sync_code:
-            after:
-              - type: webphp
-                description: Trello Integration
-                script: private/scripts/trello_integration.php
+   workflows:
+     sync_code:
+       after:
+         - type: webphp
+           description: Trello Integration
+           script: private/scripts/trello_integration.php
+   ```
 
     <Alert title="Note" type="info">
 
@@ -145,10 +153,11 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
-        git add .
-        git commit -m "Create private/scripts/trello_integration.php and configure platform hooks"
-        git push origin master
-
+   ```bash{promptUser: user}
+   git add .
+   git commit -m "Create private/scripts/trello_integration.php and configure platform hooks"
+   git push origin master
+   ```
 
 ## Test Trello Integration on Pantheon
 
@@ -156,11 +165,13 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
     ![Trello card ID](../../../images/integrations/trello/card-id.png)
 
-1. Optional: Run `terminus workflow:watch $SITE` in a separate Teriminal window to see the process unfold in real time.
+1. Optional: Run `terminus workflow:watch $SITE` in a separate Terminal window to see the process unfold in real time.
 
-1. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., [4K2zqr1A]). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
+1. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., `[4K2zqr1A]`). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
 
-        git commit -m "[4K2zqr1A]: Require wp-redis as dropin via Composer"
+   ```bash{promptUser: user}
+   git commit -m "[4K2zqr1A]: Require wp-redis as dropin via Composer"
+   ```
 
 1. Return to the issue in Trello to see a message from our machine user:
 

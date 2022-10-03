@@ -25,19 +25,19 @@ Be sure that you:
 
 - Install [Terminus](/terminus):
 
-  ```bash
+  ```bash{promptUser: user}
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
   ```
 
 - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus auth:login --machine-token=‹machine-token›
   ```
 
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
 
-  ```bash
+  ```bash{promptUser: user}
   curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
   ```
 
@@ -67,32 +67,39 @@ In the commands below, replace `<site>` with your site name, `<example>` with yo
 
 1. Check for existing secrets using Terminus:
 
-   ```
+   ```bash{promptUser: user}
    terminus secrets:list <site>.dev
    ```
 
   If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon:
 
-   ```
+   ```none
    $ echo '{}' > secrets.json
    $ `terminus connection:info <site>.dev --field=sftp_command`
    sftp> put ./files/private secrets.json
    sftp> bye
    $ rm secrets.json
+   ```
 
   Otherwise, continue to the next step.
 
 1. Use Terminus to write your Jira URL value in the private `secrets.json` file:
 
-        terminus secrets:set <site>.dev jira_url 'https://<example>.atlassian.net'
+   ```bash{promptUser: user}
+   terminus secrets:set <site>.dev jira_url 'https://<example>.atlassian.net'
+   ```
 
 1. Write the machine username to the private `secrets.json` file:
 
-        terminus secrets:set <site>.dev jira_user <user>
+   ```bash{promptUser: user}
+   terminus secrets:set <site>.dev jira_user <user>
+   ```
 
 1. Add the machine user's password to the private `secrets.json` file:
 
-        terminus secrets:set <site>.dev jira_pass <password>
+   ```bash{promptUser: user}
+   terminus secrets:set <site>.dev jira_pass <password>
+   ```
 
 <Alert title="Note" type="info">
 
@@ -108,36 +115,40 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and navigate to the project's root directory:
 
-   ```
+   ```bash{promptUser: user}
    terminus connection:info <site>.dev --fields='Git Command' --format=string`
    cd <site>
    ```
 
 1. Set the connection mode to Git:
 
-        terminus connection:set <site>.dev git
+   ```bash{promptUser: user}
+   terminus connection:set <site>.dev git
+   ```
 
 1. Create a copy of [Pantheon's `jira_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/jira_integration) in the project's private path:
 
-    ``` bash
-    mkdir private
-    mkdir private/scripts
-    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/jira_integration/jira_integration.php --output ./private/scripts/jira_integration.php
-    ```
+   ```bash{promptUser: user}
+   mkdir private
+   mkdir private/scripts
+   curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/jira_integration/jira_integration.php --output ./private/scripts/jira_integration.php
+   ```
 
 1. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
 
 1. Paste the following workflow into your `pantheon.yml` file to hook into the platform when code is pushed to trigger the Jira integration script:
 
-        #always include the api version
-        api_version: 1
+   ```yaml:title=pantheon.yml
+   #always include the api version
+   api_version: 1
 
-        workflows:
-          sync_code:
-            after:
-              - type: webphp
-                description: Jira Integration
-                script: private/scripts/jira_integration.php
+   workflows:
+     sync_code:
+       after:
+         - type: webphp
+           description: Jira Integration
+           script: private/scripts/jira_integration.php
+   ```
 
     <Alert title="Note" type="info">
 
@@ -147,10 +158,11 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 1. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
-        git add .
-        git commit -m "Create private/jira_integration.php and configure platform hooks"
-        git push origin master
-
+   ```bash{promptUser: user}
+   git add .
+   git commit -m "Create private/jira_integration.php and configure platform hooks"
+   git push origin master
+   ```
 
 ## Test Jira Integration on Pantheon
 
@@ -162,7 +174,9 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     You can also reference multiple issue IDs in a single commit:
 
-        git commit -m "WEB-113: This commit also fixes WEB-29 and WEB-3"
+      ```bash{promptUser: user}
+      git commit -m "WEB-113: This commit also fixes WEB-29 and WEB-3"
+      ```
 
 1. Return to the issue in Jira to see a message from our machine user:
 

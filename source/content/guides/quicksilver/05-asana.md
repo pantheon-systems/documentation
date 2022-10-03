@@ -25,27 +25,27 @@ Be sure that you:
 
 - Install [Terminus](/terminus):
 
-  ```
+  ```bash{promptUser: user}
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
   ```
 
 - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
 
-  ```bash
+  ```bash{promptUser: user}
   terminus auth:login --machine-token=‹machine-token›
   ```
 
 - Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
 
-  ```
+  ```bash{promptUser: user}
   curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
-
+  ```
 
 ## Create a Machine User in Asana
 
 Create a new machine user in Asana. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
-1. Select **<span class="asana">+</span>** from the menu on the left, next to existing team members:
+1. Select **<span class="glyphicon glyphicon-plus-sign"></span>** from the menu on the left, next to existing team members:
 
    ![Add a user](../../../images/integrations/asana/new-user.png)
 
@@ -59,16 +59,15 @@ Create a new machine user in Asana. This user is referred to as a "machine user"
 
 1. Click on your profile in the top right, and select **My Profile Settings**:
 
-    ![My profile settings](../../../images/integrations/asana/my-profile-settings.png)
-
+   ![My profile settings](../../../images/integrations/asana/my-profile-settings.png)
 
 1. Select **Apps**, then select **Manage Developer Apps**:
 
-    ![Apps](../../../images/integrations/asana/apps.png)
+   ![Apps](../../../images/integrations/asana/apps.png)
 
 1. Scroll down to **Personal Access Tokens**, then click **+ Create New Personal Access Token**:
 
-    ![Create a token](../../../images/integrations/asana/access-token.png)
+   ![Create a token](../../../images/integrations/asana/access-token.png)
 
 1. Give the token a name which denotes it's purpose and save the string generated for the next steps.
 
@@ -82,14 +81,14 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 
 1. Check for existing secrets using Terminus:
 
-   ```
+   ```bash{promptUser: user}
    SITE=<site_name>
    terminus secrets:list $SITE.dev
    ```
 
   If no existing keys are found, execute the following to create a new `secrets.json` file and upload it to Pantheon:
 
-   ```
+   ```none
    $ echo '{}' > secrets.json
    $ `terminus connection:info $SITE.dev --field=sftp_command`
    sftp> put ./files/private secrets.json
@@ -101,7 +100,7 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 
 1. Write the machine user's token to the private `secrets.json` file:
 
-   ```
+   ```bash{promptUser: user}
    terminus secrets:set $SITE.dev asana_access_token '<API token>'
    ```
 
@@ -117,20 +116,20 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. [Clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) if you haven't done so already, and then navigate to the project's root directory:
 
-   ```
+   ```bash{promptUser: user}
    terminus connection:info $SITE.dev --fields='Git Command' --format=string`
    cd $SITE
    ```
 
 1. Set the connection mode to Git:
 
-   ```
+   ```bash{promptUser: user}
    terminus connection:set $SITE.dev git
    ```
 
 1. Create a copy of [Pantheon's `asana_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/asana_integration) in the project's private path:
 
-   ``` bash
+   ```bash{promptUser: user}
    mkdir private
    mkdir private/scripts
    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/asana_integration/asana_integration.php --output ./private/scripts/asana_integration.php
@@ -140,7 +139,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Add the following workflow into your `pantheon.yml` file to hook into the platform when code is pushed to trigger the Asana integration script:
 
-   ```
+   ```yaml:title=pantheon.yml
    #always include the api version
    api_version: 1
 
@@ -160,12 +159,11 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. [Commit and push](/guides/git/git-config#push-changes-to-pantheon) changes to the Dev environment:
 
-   ```
+   ```bash{promptUser: user}
    git add .
    git commit -m "Create private/scripts/asana_integration.php and configure platform hooks"
    git push origin master
    ```
-
 
 ## Test Asana Integration on Pantheon
 
@@ -175,7 +173,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Push a code change to Pantheon containing the Asana task ID in the commit message in brackets (e.g., [398734709134915]). This workflow will trigger `asana_integration.php` script, which will search commits for possible task IDs and comment in Asana when found.
 
-   ```
+   ```bash{promptUser: user}
    git commit -m "[398734709134915] Adding changes as per latest revision"
    ```
 
@@ -185,7 +183,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 ## GitHub and Asana
 
-You can further integrate with [Unito](https://unito.io/asana-sync/), a free integration service, if you use GitHub. This can reduce a few steps in the development process for your team.
+If you use GitHub, you can further integrate with [Unito](https://unito.io/asana-sync/), a free integration service. This can reduce a few steps in the development process for your team.
 
 ## More Resources
 

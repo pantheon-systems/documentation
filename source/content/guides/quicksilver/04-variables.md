@@ -13,11 +13,10 @@ This section provides information on Quicksilver variables.
 
 Variables are made available through the `$_POST` global variable, and the `$_ENV` and `$_SERVER` objects. These variables include the following:
 
-
-|Variable Name|Description|Hooks Available|Notes|
-|--|--|--|--|
-|`trace_id`|The unique ID of the workflow|All| |
-|`site_id`|UUID of the site instance|All| |
+| Variable Name | Description                   | Hooks Available | Notes |
+|---------------|-------------------------------|-----------------|-------|
+| `trace_id`    | The unique ID of the workflow | All             |       |
+| `site_id`     | UUID of the site instance     | All             |       |
 |`environment`|Environment name that the workflow is running on|All|Matches the `PANTHEON_ENVIRONMENT` environment variable
 |`stage`|`before` or `after` indicator for when the workflow is running|All|| |
 |`qs_description`|Description of the workflow as defined in `pantheon.yml`|All| |

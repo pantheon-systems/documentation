@@ -47,16 +47,16 @@ Configuration changes are not be detected when creating a Multidev environment i
 
 1. Re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
-```none
-remote:
-remote: PANTHEON NOTICE:
-remote:
-remote: Changes to `pantheon.yml` detected.
-remote:
-remote: Successfully applied `pantheon.yml` to the 'new-feature' environment.
-remote:
-remote:
-```
+   ```none
+   remote:
+   remote: PANTHEON NOTICE:
+   remote:
+   remote: Changes to `pantheon.yml` detected.
+   remote:
+   remote: Successfully applied `pantheon.yml` to the 'new-feature' environment.
+   remote:
+   remote:
+   ```
 
 ### Autopilot VRT Hook Does Not Run When Expected
 
@@ -64,7 +64,7 @@ Quicksilver hooks are not detected due to timing issues with Multidev creation f
 
 1. Verify that your scripts are defined in the Dev environment.
 
-1. Delete your `Autopilot` Multidev from the Dashboard. 
+1. Delete your `Autopilot` Multidev from the Dashboard.
 
 1. Delete the `Autopilot` branch of the Multidev.
 
