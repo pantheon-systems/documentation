@@ -16,9 +16,9 @@ This section provides information on script type and location, as well as how to
 
 Quicksilver currently supports `webphp` scripting, which runs a PHP script through the same runtime environment as the website. PHP scripts are subject to the same limits as any code on the platform, such as [timeouts](/timeouts). PHP scripts cannot be batched, and run continuously and sequentially. Each command executes after the previous command has finished or timed out.
 
-We recommend setting the `web_docroot` to `true` to create a dedicated directory in the docroot (for example, `private/scripts`). This tracks files by instructing Quicksilver to look for the files inside the `web` folder. If your site uses this [nested docroot](/nested-docroot) setting, the scripts directory must be located in the `web` subdirectory of your site's code repository (for example, `web/private/scripts`). 
+We recommend setting the `web_docroot` to `true` to create a dedicated directory in the docroot (for example, `private/scripts`). This tracks files by instructing Quicksilver to look for the files inside the `web` folder. If your site uses this [nested docroot](/nested-docroot) setting, the scripts directory must be located in the `web` subdirectory of your site's code repository (for example, `web/private/scripts`).
 
-<Alert type="info" title="Note">
+<Alert type="info" title="Nested Docroots">
 
 If your site uses a [nested docroot](/nested-docroot), the script paths in your `pantheon.yml` file should not include the `web/` path prefix. Scripts in your `pantheon.yml` file should match one of the following path examples:
 
@@ -37,19 +37,19 @@ Your script may require tokens, passwords, or other information that should be p
 
 You can also use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values securely. Note that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path when storing keys for Quicksilver scripts in the private files path.
 
-1. Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
+Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
 
-  This allows you to write and remove key values. The code example below shows you how to write a value to a key:
+This allows you to write and remove key values. The code example below shows you how to write a value to a key:
 
-  ```bash
-  terminus secrets:set site.env key value
-  ```
+```bash{promptUser: user}
+terminus secrets:set site.env key value
+```
 
 ### Clear Cloudflare Cache
 
-Use the [Pantheon Cloudflare Cache repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) to clear your Cloudflare cache. 
+Use the [Pantheon Cloudflare Cache repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/cloudflare_cache) to clear your Cloudflare cache.
 
-<Alert title="Note"  type="info" >
+<Alert title="Note" type="info" >
 
 Always clear your CDN cache using the `after` timing option to avoid requests re-caching stale content. Caches should generally be cleared "bottom up".
 
@@ -61,7 +61,7 @@ Use the [Pantheon Quicksilver Debugging repository](https://github.com/pantheon-
 
 ### Drush CMI
 
-The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_config_import) provides steps on how to integrate Drush commands into your Quicksilver operations. This allows you to import configuration changes from `.yml` files. 
+The [Pantheon Drush CMI repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/drush_config_import) provides steps on how to integrate Drush commands into your Quicksilver operations. This allows you to import configuration changes from `.yml` files.
 
 ### Drush Revert Features
 
@@ -81,13 +81,13 @@ Use the [Pantheon WP-CFM Import repository](https://github.com/pantheon-systems/
 
 <Alert title="Note" type="info">
 
-You should only use WP-CFM to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
+Only use WP-CFM to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
 
 </Alert>
 
 ### New Relic Custom Apdex T Values Multidev Environments
 
-Use the [Pantheon New Relic Apdex T Values repository](https://github.com/pantheon-quicksilver/new-relic-apdex-t) to set custom T values for Multidev environments. Each environment will use the default values of 0.5 and 7 for your server and browser, respectively, if you don't set a custom value. 
+Use the [Pantheon New Relic Apdex T Values repository](https://github.com/pantheon-quicksilver/new-relic-apdex-t) to set custom T values for Multidev environments. Each environment will use the default values of 0.5 and 7 for your server and browser, respectively, if you don't set a custom value.
 
 ### New Relic Deploy Markers
 
