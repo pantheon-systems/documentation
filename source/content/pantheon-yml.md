@@ -240,11 +240,11 @@ Complete the following before deploying `filemount` (**required**):
 
 Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a team member. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
 
-For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
+For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/guides/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
 
 ## Custom Upstream Configurations
 
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/guides/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/guides/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/guides/quicksilver/hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
@@ -301,5 +301,5 @@ Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](
 
 ## See Also
 
-* [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver)
+* [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver)
 * [Upgrade PHP Versions](/guides/php/php-versions)

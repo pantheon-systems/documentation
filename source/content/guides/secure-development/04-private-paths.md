@@ -36,7 +36,7 @@ If you have not already created these directories, you will need to do that firs
 
 ## Private Path for Code
 
-Follow the steps below to store data that should be version controlled, such as [Quicksilver](/quicksilver) scripts.
+Follow the steps below to store data that should be version controlled, such as [Quicksilver](/guides/quicksilver) scripts.
 
 <TabList>
 

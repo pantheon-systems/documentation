@@ -70,7 +70,7 @@ Drupal now includes Composer usage within Drupal Core itself. For details, see [
 You can [extend Terminus and add new commands](/terminus/plugins) by installing or creating third-party plugins. For a complete list of supported plugins, see our [Plugin Directory](/terminus/plugins/directory). Two favorites are [Filer](https://github.com/terminus-plugin-project/terminus-filer-plugin), which assists with opening Pantheon sites in many popular SFTP GUI clients, and [Pancakes](https://github.com/derimagia/terminus-pancakes), which open any Pantheon site database using a SQL GUI client. These two plugins eliminate logging into the Pantheon dashboard and copying/pasting credentials into your client.
 
 ### Quicksilver
-Quicksilver Platform Hooks allow you to automate actions in response to activity on the Dashboard. You can hook into various workflows and execute PHP scripts before or after the workflow's been triggered. For details, see [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver).
+Quicksilver Platform Hooks allow you to automate actions in response to activity on the Dashboard. You can hook into various workflows and execute PHP scripts before or after the workflow's been triggered. For details, see [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver).
 
 ### Pantheon Configuration File
 Use the `pantheon.yml` file to set up platform hooks and advanced site configurations such as PHP version, [nested docroot](/nested-docroot) and more. For details, see [The pantheon.yml Configuration File](/pantheon-yml).

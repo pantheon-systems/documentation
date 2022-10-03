@@ -14,7 +14,7 @@ searchboost: 50
 
 The [pantheon.yml](/pantheon-yml) file provides a way to configure platform options for any project. This file is version controlled and can be configured differently for each environment.
 
-Configurable items include: PHP version, Drush version, protected paths, nested docroot, and [Quicksilver](/quicksilver) platform hooks.
+Configurable items include: PHP version, Drush version, protected paths, nested docroot, and [Quicksilver](/guides/quicksilver) platform hooks.
 
 Items such as Nginx configuration or Varnish settings are not editable.
 
