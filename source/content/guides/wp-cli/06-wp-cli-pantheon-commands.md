@@ -24,7 +24,7 @@ To enable maintenance mode while serving cached pages to visitors, use the comma
 The Mode options are: 
 * `disabled` -- Disables maintenance mode and return to normal operation
 * `anonymous` -- Serves cached pages to visitors and bots
-* `everone` -- Serves cached pages to all visitors _except_ administrators
+* `everyone` -- Serves cached pages to all visitors _except_ administrators
 
 ## More Resources
 
