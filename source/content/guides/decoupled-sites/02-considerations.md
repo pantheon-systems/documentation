@@ -66,3 +66,24 @@ To create and configure a new decoupled project using a Front-End Site starter k
 * Create [GitHub Personal Access Tokens](https://github.com/settings/tokens).
 
 * Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens).
+
+
+## Pantheon Product and Features Considerations
+
+Patheon Front-end Sites do not work with all products and feautures on our platform.  Pantheon Front-end Sites are not compatible with the following Pantheon products:
+
+* Autopilot
+* AGCN
+* Terminus
+
+
+
+It won't work with the following Pantheon Features:
+Self-service domain management
+Active Purging
+Role Based Access Control
+Supporting Orgs
+Multizone Failover
+New Relic 
+Log forwarding
+Redis
