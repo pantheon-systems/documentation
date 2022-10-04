@@ -27,6 +27,6 @@ The Mode options are:
 * `everyone` -- Serves cached pages to all visitors _except_ administrators
 
 ## More Resources
-
+- [WP-CLI on the Pantheon Platform](/guides/wp-cli)
 - [WordPress with Composer on Pantheon](/guides/wordpress-composer)
 
