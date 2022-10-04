@@ -70,7 +70,7 @@ To create and configure a new decoupled project using a Front-End Site starter k
 
 ## Pantheon Product and Features Considerations
 
-Patheon Front-End Sites will not work with all products and feautures on our platform.  
+Front-End Sites will not work with all products and feautures on our platform.  
 
 Pantheon Front-End Sites are not compatible with the following Pantheon products:
 
