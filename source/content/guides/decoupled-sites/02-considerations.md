@@ -70,20 +70,20 @@ To create and configure a new decoupled project using a Front-End Site starter k
 
 ## Pantheon Product and Features Considerations
 
-Patheon Front-end Sites do not work with all products and feautures on our platform.  Pantheon Front-end Sites are not compatible with the following Pantheon products:
+Patheon Front-End Sites will not work with all products and feautures on our platform.  
 
-* Autopilot
-* AGCN
-* Terminus
+Pantheon Front-End Sites are not compatible with the following Pantheon products:
 
+* [Autopilot](https://pantheon.io/autopilot)
+* [AGCDN](https://pantheon.io/product/advanced-global-cdn)
 
+The following features are currently not supported with Pantheon Front-End Sites:
 
-It won't work with the following Pantheon Features:
-Self-service domain management
-Active Purging
-Role Based Access Control
-Supporting Orgs
-Multizone Failover
-New Relic 
-Log forwarding
-Redis
+* Self-service domain management
+* Active Purging
+* Role Based Access Control (RBAC)
+* Supporting Orgs
+* Multizone Failover
+* New Relic 
+* Log forwarding
+* Object Cache (Redis)
