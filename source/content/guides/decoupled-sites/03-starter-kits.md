@@ -76,7 +76,7 @@ This action will result in a GitHub repository created for this new codebase und
 
 <Tab title="WordPress Backend" id="wordpress-install">
  
-Create a [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) upstream using the Pantheon Dashboard.
+Create a [Decoupled WordPress Composer Managed upstream](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) using the Pantheon Dashboard.
  
 Alternatively, you can run `terminus build:project:create`:
 

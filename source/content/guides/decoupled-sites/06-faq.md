@@ -31,6 +31,26 @@ Pantheon Front-End Sites currently supports:
 * Drupal 9
 * WordPress 5.9
 
+### What Pantheon products and features are currently not supported with Front-End Sites?
+
+Front-End Sites will not work with all products and feautures on our platform.  
+
+Pantheon Front-End Sites are currently not compatible with the following Pantheon products:
+
+* [Autopilot](https://pantheon.io/autopilot)
+* [AGCDN](https://pantheon.io/product/advanced-global-cdn)
+
+The following features are currently not supported with Pantheon Front-End Sites:
+
+* Self-service domain management
+* Active Purging
+* Role Based Access Control (RBAC)
+* Supporting Orgs
+* Multizone Failover
+* New Relic 
+* Log forwarding
+* Object Cache (Redis)
+
 
 ### Is Decoupled Site Preview available for all instances on Front-End Sites?
 
