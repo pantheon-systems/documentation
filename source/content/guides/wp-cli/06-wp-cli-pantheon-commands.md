@@ -20,7 +20,7 @@ For installation instructions, view the Must-Use plugin README.
 
 ## Control cache with WP-CLI
 
-To enable maintenance mode while serving cached pages to visitors, use the command `pantheon cache set-maintenance-mode {MODE}`
+To enable maintenance mode while serving cached pages to visitors, use the command `wp pantheon cache set-maintenance-mode {MODE}`
 The Mode options are: 
 * `disabled` -- Disables maintenance mode and return to normal operation
 * `anonymous` -- Serves cached pages to visitors and bots
