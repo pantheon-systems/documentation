@@ -11,12 +11,12 @@ permalink: docs/guides/wp-cli/wp-cli-pantheon-commands
 anchorid: wp-cli-pantheon-commands
 ---
 
-This section provides information on how to run Pantheon specific commands on WP-CLi.
+This section provides information on how to run Pantheon specific commands on WP-CLI.
 
 ## Control cache with WP-CLI
 
-### Maintenance Mode 
-To enable maintenance mode while serving cached pages to visitors, use the command `pantheon cache set-maintenance-mode {MODE}`
+### Maintenance Mode
+To enable maintenance mode while serving cached pages to visitors, use the command `wp pantheon cache set-maintenance-mode {MODE}`
 The Mode options are: 
 * `disabled` -- Disables maintenance mode and return to normal operation
 * `anonymous` -- Serves cached pages to visitors and bots
@@ -34,10 +34,7 @@ Pantheon provides for PHP Session control via the [WP Native PHP Sessions](https
 
 This plugin provides two terminus commands: `pantheon session list` and `pantheon session delete`, to list and delete active sessions respectively.
 
-## 
-
-
 ## More Resources
-
+- [WP-CLI on the Pantheon Platform](/guides/wp-cli)
 - [WordPress with Composer on Pantheon](/guides/wordpress-composer)
 
