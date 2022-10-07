@@ -76,9 +76,9 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 
 The second level repository is a Custom Upstream. This is where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
-The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or another Git repository host. The Custom Upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
+The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/), or [GitLab](https://gitlab.com/). The Custom Upstream repository is connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
 
-To create a Custom Upstream from another host like GitLab, [contact support](/guides/support).
+To create a Custom Upstream from another Git hosting provider (like Azure DevOps or a self-hosted Bitbucket server), [contact support](/guides/support).
 
 </div>
 </div>
@@ -129,7 +129,7 @@ Here are definitions for commonly used terms:
 
 - **Repository**: A collection of files packaged in a single directory under version control.
 
-- **Remote Repository**: A central version control location, such as a repository residing on GitHub or Bitbucket.
+- **Remote Repository**: A central version control location, such as a repository residing on GitHub, Bitbucket, or GitLab.
 
 - **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
 
