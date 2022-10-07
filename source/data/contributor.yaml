@@ -448,6 +448,11 @@
   url: //digisavvy.com
   avatar: //digisavvy.com/wp-content/uploads/2016/04/f0Bk6gJ9-150x150.jpg
   bio: Co-Founder of Digisavvy
+- id: ryanwagner
+  name: Ryan Wagner
+  bio: Software Engineer, Pantheon
+  github: //github.com/rwagner00
+  avatar: //avatars.githubusercontent.com/u/1789035
 - id: rachelwhitton
   name: Rachel Whitton
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
