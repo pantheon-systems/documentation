@@ -18,7 +18,7 @@ Once you create an account and sign in, you are taken to your home page, known a
 
 <Alert title="Note" type="info" >
 
-Currently, you cannot edit or manage account tiers using the workspace. For more information, [Contact Sales](https://pantheon.io/contact-us)
+Currently, you cannot edit or manage account tiers using the workspace. For more information, [contact Sales](https://pantheon.io/contact-us)
 
 </Alert>
 
@@ -42,7 +42,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Settings:** Modify the workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
 
-* Not available in Personal Workspaces.
+\* Not available in Personal Workspaces.
 
 <Alert title="Note" type="info" >
 

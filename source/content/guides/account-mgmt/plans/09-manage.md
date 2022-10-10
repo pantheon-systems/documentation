@@ -19,7 +19,7 @@ reviewed: "2022-09-19"
 
 - The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. Pantheon for EDU+ allows Organization Administrators to manage site plans for sites within their organization. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
-- If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
+- If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
 
 </Alert>
 
@@ -79,7 +79,7 @@ Downgrading to a Sandbox site will disable automatic backups. You will still be 
 
 ## Downgrade Your Plan to Sandbox
 
-To downgrade to Sandbox, see [Cancel Current Plan](/guides/legacy-dashboard/site-plan#cancel-current-plan).  
+To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/manage#downgrade-your-plan-to-sandbox).  
 
 ## Change Your Plan
 
@@ -137,6 +137,6 @@ Before making any changes, please review [Before You Make Changes](#before-you-m
 
 1. Make sure the change details are correct, then click **Submit**.
 
-1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card).
+1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/account-mgmt/billing/methods#delete-a-site-specific-payment-method).
 
 Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).

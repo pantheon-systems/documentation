@@ -28,7 +28,7 @@ Be sure to set up workspaces before creating sites.
 
 ## Manage Sites
 
-The Sites tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
+The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
 
 Agency workspaces will show "Site Owners" instead of "Users in Charge"
 
@@ -78,7 +78,7 @@ There can only be one site owner.
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
 
 
 </Alert>
@@ -134,7 +134,7 @@ Only the site's "User in Charge" or "Owner" can delete a site. See [Roles and Pe
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/legacy-dashboard/site-plan) for more information.
+**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/account-mgmt/plans/manage) for more information.
 
 **After you delete a site that had a live domain or subdomain**: Update the DNS records so that they don't continue to point to the deleted site.
 

@@ -13,6 +13,6 @@ reviewed: "2022-09-19"
 ---
 
 
-The number of unique visits displayed in [Pantheon’s Site Dashboard](/guides/legacy-dashboard/metrics) determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.
+The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.
 
 <Partial file="traffic-limits-overages.md" />

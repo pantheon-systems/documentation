@@ -1,4 +1,4 @@
-You can create a new Site from your homepage by clicking **+ Create New Site**, or from the **Sites** tab. 
+You can create a new site from your homepage by clicking **+ Create New Site**, or from the **Sites** tab. 
 
 1. Log in to your Pantheon account. 
 
