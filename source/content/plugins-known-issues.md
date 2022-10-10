@@ -98,6 +98,8 @@ Plugins and themes with issues resolved (at least partially) by this include the
 - Docker
 - Kubernetes
 
+There is no solution for the compatibility issues with this plugin.
+
 ## All-in-One WP Migration
 
 <ReviewDate date="2020-11-30" />
