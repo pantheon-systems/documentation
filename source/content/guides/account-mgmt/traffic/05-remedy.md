@@ -47,8 +47,8 @@ Pantheon does not count static assets against your traffic limit. However, if th
 
 This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal it shows up as a system path.  To resolve this issue, add and commit a static `favicon.ico` into the path that is being requested
 
-|  **CMS**  |           **Path**          |
-|:---------:|:---------------------------:|
+| CMS       | Path**                      |
+|-----------|-----------------------------|
 | WordPress | `/favicon.ico`              |
 | Drupal    | `/system/files/favicon.ico` |
 
@@ -167,7 +167,7 @@ Install and use the following WordPress plugin:
 
 ### Block User Agents in Drupal or WordPress
 
-Browsers include a self-identifying User-Agent HTTP header called a user agent (UA) string, with each request they make to the server. Similar to the IP blocking methods listed above, you can also target specific unwanted UAs that you may want to block.
+Browsers include a self-identifying User-Agent HTTP header (called a user agent (UA) string) with each request they make to the server. Similar to the IP blocking methods listed above, you can also target specific unwanted UAs that you may want to block.
 
 While the CMS will block the listed UAs from accessing the content directly, blocked UAs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
 
