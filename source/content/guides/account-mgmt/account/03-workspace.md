@@ -18,11 +18,7 @@ Once you create an account and sign in, you are taken to your home page, known a
 
 <Alert title="Note" type="info" >
 
-<<<<<<< HEAD
-Currently, you cannot edit or manage account tiers using the workspace. For more information, [contact Sales](https://pantheon.io/contact-us)
-=======
-Currently, you cannot edit or manage account tiers using the workspace. For more information, [Contact Sales](https://pantheon.io/contact-us)
->>>>>>> ebb527b34a4c3cb1e673ef914f8d3044be49a724
+You cannot edit or manage account tiers using the workspace. For more information, [contact Sales](https://pantheon.io/contact-us)
 
 </Alert>
 

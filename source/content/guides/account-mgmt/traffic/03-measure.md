@@ -25,7 +25,7 @@ Site traffic consists of two components: **Site Visits** and **Pages Served**. T
 
 <Partial file="traffic-dl.md" />
 
-## How does traffic affect performance?
+## How Does Traffic Affect Performance?
 
 Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/site-plans-faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences, or if you expect a heavier load of traffic, you may need to increase the plan size so that you can continue to expect a site that runs smoothly.
 
@@ -37,9 +37,7 @@ If there are specific cases that create traffic spikes or events for your site, 
 
 <Partial file="traffic-limits-overages.md" />
 
-## Frequently Asked Questions
-
-
+## FAQ
 
 ### What traffic is excluded from Pantheon's metrics?
 

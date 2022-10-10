@@ -19,11 +19,7 @@ Follow the steps below in to completely delete your account.
 
 The first thing to do is to backup and export your site(s). Yes, you are leaving the platform, but you should always have a backup of your work just in case you need it in the future.
 
-<<<<<<< HEAD
 If you need to make a backup of an existing environment, see [Create a Backup](/backups#create-a-backup).
-=======
-If you need to make a backup of an existing environment, see [Backup Creations](/backups).
->>>>>>> ebb527b34a4c3cb1e673ef914f8d3044be49a724
 
 For more information about exporting a backup of an environment, see [Restoring a Backup](/guides/environment-configuration/restore-environment-backup).
 

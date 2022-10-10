@@ -79,11 +79,7 @@ Downgrading to a Sandbox site will disable automatic backups. You will still be 
 
 ## Downgrade Your Plan to Sandbox
 
-<<<<<<< HEAD
 To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/manage#downgrade-your-plan-to-sandbox).  
-=======
-To downgrade to Sandbox, see [Cancel Current Plan](/guides/legacy-dashboard/site-plan#cancel-current-plan).  
->>>>>>> ebb527b34a4c3cb1e673ef914f8d3044be49a724
 
 ## Change Your Plan
 
@@ -141,10 +137,6 @@ Before making any changes, please review [Before You Make Changes](#before-you-m
 
 1. Make sure the change details are correct, then click **Submit**.
 
-<<<<<<< HEAD
 1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/account-mgmt/billing/methods#delete-a-site-specific-payment-method).
-=======
-1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card).
->>>>>>> ebb527b34a4c3cb1e673ef914f8d3044be49a724
 
 Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).

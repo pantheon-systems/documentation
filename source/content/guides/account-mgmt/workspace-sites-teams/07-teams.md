@@ -62,27 +62,6 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 
-## FAQ
-
-### Can I Restrict Access to a Specific Site with the Developer Role?
-
-Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner workspaces cannot specify which members have access to specific sites.
-
-### Which role should I assign a user to give them the lowest level of access?
-
-At the site level, the Developer role has the least amount of permissions and can create sites, view the Workspace Dashboard, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Unprivileged role has the least amount of permissions and can only create sites.
-
-### Which environments can a user with the Developer role deploy to?
-
-The Developer role can only deploy to Development and Multidev environments. If a user needs to deploy to Live, you can promote a Developer to Team Member for a single site by adding the user to the site's team.
-
-### Who can add users to workspaces?
-
-Enterprise Administrators can add site Team Members or Supporting Organizations to sites owned by the workspace, with the Developer or workspace Team Member roles. Partner workspaces can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
-
-### How do I recover an account after a site owner leaves?
-
-See the steps in our [Site Access](/site-access) doc for recovery instructions.
 
 ## Manage Teams
 
@@ -184,6 +163,28 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. Click **Add a Supporting Organization**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
-1. Select a role > click **Add**.
+1. Select a role, then click **Add**.
 
 All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
+
+## FAQ
+
+### Can I restrict access to a specific site with the Developer role?
+
+Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner workspaces cannot specify which members have access to specific sites.
+
+### Which role should I assign a user to give them the lowest level of access?
+
+At the site level, the Developer role has the least amount of permissions and can create sites, view the Workspace Dashboard, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Unprivileged role has the least amount of permissions and can only create sites.
+
+### Which environments can a user with the Developer role deploy to?
+
+The Developer role can only deploy to Development and Multidev environments. If a user needs to deploy to Live, you can promote a Developer to Team Member for a single site by adding the user to the site's team.
+
+### Who can add users to workspaces?
+
+Enterprise Administrators can add site Team Members or Supporting Organizations to sites owned by the workspace, with the Developer or workspace Team Member roles. Partner workspaces can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
+
+### How do I recover an account after a site owner leaves?
+
+See the steps in our [Site Access](/site-access) doc for recovery instructions.
