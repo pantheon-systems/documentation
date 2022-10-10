@@ -38,9 +38,15 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 The following process will create a Silver workspace. For additional collaboration tools such as Multidev and visual regression testing, upgrade to a Gold workspace.  [Contact our team](https://pantheon.io/contact-sales) for more information
 
+<<<<<<< HEAD
 If you are creating the workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace. If the workspace is not for an agency, you will be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace.
 
 You can create as many workspaces as necessary. 
+=======
+If you are creating the workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
+
+You can create as many workspaces as necessary for your workspace. 
+>>>>>>> ebb527b34a4c3cb1e673ef914f8d3044be49a724
 
 To create a Professional Workspace:
 

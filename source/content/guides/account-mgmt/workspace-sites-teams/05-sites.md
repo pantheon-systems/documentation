@@ -78,7 +78,11 @@ There can only be one site owner.
 
 <Alert title="Note" type="info">
 
+<<<<<<< HEAD
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
+=======
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
+>>>>>>> ebb527b34a4c3cb1e673ef914f8d3044be49a724
 
 
 </Alert>
@@ -134,7 +138,11 @@ Only the site's "User in Charge" or "Owner" can delete a site. See [Roles and Pe
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
+<<<<<<< HEAD
 **Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/account-mgmt/plans/manage) for more information.
+=======
+**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/legacy-dashboard/site-plan) for more information.
+>>>>>>> ebb527b34a4c3cb1e673ef914f8d3044be49a724
 
 **After you delete a site that had a live domain or subdomain**: Update the DNS records so that they don't continue to point to the deleted site.
 
