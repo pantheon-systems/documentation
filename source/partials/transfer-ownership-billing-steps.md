@@ -6,4 +6,4 @@
 
     The recipient will need to confirm the transfer.
 
-Resellers and Enterprise organizations must contact their Account Manager or create a Support ticket to request a transfer of ownership.
+Resellers and Enterprise workspaces must contact their Account Manager or create a Support ticket to request a transfer of ownership.

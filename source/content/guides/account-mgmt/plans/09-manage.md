@@ -15,7 +15,7 @@ reviewed: "2022-09-19"
 
 <Alert title="Notes" type="info" >
 
-- Elite sites cannot manage plans from the Site Dashboard. Contact our sales team or reach out to your dedicated Client Sales Executive for details.
+- Elite sites cannot manage plans from the Site Dashboard. [Contact Sales](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
 
 - The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. Pantheon for EDU+ allows Organization Administrators to manage site plans for sites within their organization. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 

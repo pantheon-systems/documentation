@@ -15,7 +15,7 @@ reviewed: "2022-09-19"
 
 Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
-- **Personal Workspace**: The personal workspace displays tools for the sites to which you have access, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
+- **Personal Workspace**: The personal workspace displays tools for the sites you own or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
 
 - **Professional Workspace**: Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
 
@@ -40,7 +40,7 @@ The following process will create a Silver workspace. For additional collaborati
 
 If you are creating the workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
 
-You can create as many workspaces as necessary for your organization. 
+You can create as many workspaces as necessary for your workspace. 
 
 To create a Professional Workspace:
 
@@ -58,7 +58,7 @@ Every entity (user, workspace, product and site) is assigned a UUID which is int
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 
-You can also use [Terminus](/terminus) to find the UUID of your organizations:
+You can also use [Terminus](/terminus) to find the UUID of your workspaces:
 
 ```bash{promptUser: user}
 terminus org:list
@@ -106,25 +106,25 @@ As a workaround, we recommend following development best practice workflows by [
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
 
-Only organizational team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
+Only workspace team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
 ### Why can't my Agency workspace own a site?
 
-Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
+Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
 
 ### Can I add my own Agency as a Supporting Organization to a client's site?
 
-No. Only the owner of the site can add an agency as a Supporting Organization. This action grants all members of the organization access to the site. You should ask site owners to add your agency as a Supporting Organization if you are providing services to the site.
+No. Only the owner of the site can add an agency as a Supporting Organization. This action grants all members of the workspace access to the site. You should ask site owners to add your agency as a Supporting Organization if you are providing services to the site.
 
 ### What privileges and roles are granted when adding a Supporting Organization?
 
-All organization members have access to the site, with permissions determined by their roles at the organization level.
+All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
 
-### Can the site owner override privileges and access for organizational team members of a Supporting Organization?
+### Can the site owner override privileges and access for team members of a Supporting Organization?
 
-Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designated on the Site Team modal will override any roles assigned within the organization.
+Yes, but only for sites owned by Enterprise or EDU+ workspaces. Roles designated on the Site Team modal will override any roles assigned within the workspace.
 
-### As an Agency, how many sandbox sites do members of an organization receive?
+### As an Agency, how many sandbox sites do members of a workspace receive?
 
-Each member of an organization can create up to 10 Sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional Sandbox slots.
+Each member of an workspace can create up to 10 Sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional Sandbox slots.
 
