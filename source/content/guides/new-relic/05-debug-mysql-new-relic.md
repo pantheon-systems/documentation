@@ -59,7 +59,7 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
 1. Follow the steps in the [MySQL Access](/guides/mariadb-mysql/mysql-access#frequently-asked-questions) doc to connect to MySQL via SFTP through your terminal or an FTP program that supports the SFTP protocol.
 
-1. [Download database log files](/logs#database-log-files) and review the `mysql-slow-query.log` file.
+1. [Download database log files](/guides/logs/download-logs#database-log-files) and review the `mysql-slow-query.log` file.
 
 1. Search for the query within the log. If it isn't there, download and unzip any applicable archived slow logs (for example, `mysqld-slow-query.log-20160606`) and search there. The archived slow logs are created by date and time, so look for the one that corresponds with the trace you are working with.
 

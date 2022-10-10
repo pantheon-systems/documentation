@@ -181,7 +181,7 @@ Upgrade your current version of Drush if you see errors on the Pantheon Dashboar
 
 - [WordPress PHP Requirements](https://wordpress.org/about/requirements/)
 
-- [Log Files on Pantheon](/logs)
+- [Log Files on Pantheon](/guides/logs)
 
 - [The pantheon.yml Configuration File](/pantheon-yml)
 

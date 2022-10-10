@@ -67,7 +67,7 @@ We don't recommend turning off New Relic&reg; for any one environment, as it mak
 
 New Relic&reg; Performance Monitoring logs are available at `/logs/newrelic.log`. The New Relic&reg; provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic&reg;'s left-side menu.
 
-Refer to [Log Files on Pantheon](/logs) for more information on accessing your logs.
+Refer to [Log Files on Pantheon](/guides/logs) for more information on accessing your logs.
 
 ## More Resources
 

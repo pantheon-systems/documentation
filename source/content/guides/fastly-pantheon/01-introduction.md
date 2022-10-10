@@ -61,6 +61,6 @@ You should consult the [Edge Integrations Guide](/guides/edge-integrations/) and
 
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert team can provide.
 
-- [Log Files on Pantheon](/logs)
+- [Log Files on Pantheon](/guides/logs)
 
 - [Fastly](https://explore.fastly.com)

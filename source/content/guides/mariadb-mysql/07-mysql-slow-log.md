@@ -230,7 +230,7 @@ Refer to [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/gui
 
 ## More Resources
 
-- [Log Files on Pantheon](/logs)
+- [Log Files on Pantheon](/guides/logs)
 
 - [Identify and Kill Queries with MySQL Command-Line Tool](/guides/mariadb-mysql/kill-mysql-queries)
 

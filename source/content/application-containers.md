@@ -70,7 +70,7 @@ For plans starting at Performance Medium and higher, all Test and Live environme
 
 ### Expected Behavior
 
-Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/logs#automate-downloading-logs).
+Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/guides/logs/automate-log-downloads).
 
 ### Failover Application Containers
 

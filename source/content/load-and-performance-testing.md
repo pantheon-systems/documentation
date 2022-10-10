@@ -65,7 +65,7 @@ We do not recommend load testing on the Live environment if the site has already
 
 </Alert>
 
-Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/logs). Make note of any errors and warnings that pop up during the test so that you can fix them.
+Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/guides/logs). Make note of any errors and warnings that pop up during the test so that you can fix them.
 
 Once the test is running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
 

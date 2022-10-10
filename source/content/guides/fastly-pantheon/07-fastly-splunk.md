@@ -35,15 +35,15 @@ Follow the steps below to use Splunk with your Fastly and Pantheon with AGCDN ac
 
 Note that this method does not require a Fastly account or use of Pantheon's AGCDN. You can automate the process of accessing and maintaining your logs by creating a script. Follow the steps below to access and upload your Pantheon logs to Splunk.
 
-1. Complete the steps to [create a script](/logs#create-a-script).
+1. Complete the steps to [create a script](/guides/logs/automate-log-downloads#create-a-script).
 
-1. Complete the steps to [collect your logs](/logs#collect-logs).
+1. Complete the steps to [collect your logs](/guides/logs/automate-log-downloads#collect-logs).
 
 1. [Upload your logs to Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.6/Data/Uploaddata) for processing.
 
 ## More Resources
 
-- [Pantheon Logs](/logs#available-logs)
+- [Pantheon Logs](/guides/logs#available-logs)
 
 - [New Relic](/guides/new-relic)
 

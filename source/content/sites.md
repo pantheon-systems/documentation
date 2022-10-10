@@ -115,7 +115,7 @@ All fatal PHP errors are shown on this tab. If any are found, recommendations ar
 
 <Alert title="Note" type="info">
 
-This is not intended to replace reviewing your error logs. Learn more about [accessing all your server logs](/logs).
+This is not intended to replace reviewing your error logs. Learn more about [accessing all your server logs](/guides/logs).
 
 </Alert>
 

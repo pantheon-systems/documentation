@@ -21,7 +21,7 @@ You can test how stale cache is served by comparing the header results of a page
 
 You can check your NGINX or Fastly logs for any traffic anomalies or overages when you know what your site's cache currently looks like.
 
-[NGINX logs](/logs#available-logs) track all requests made to WordPress or Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](/nginx-access-log) to produce a compiled report on the most common requests, such as: 404s, user agents, etc.
+[NGINX logs](/guides/logs#available-logs) track all requests made to WordPress or Drupal, but do not include any requests that were served from the edge cache. You can use [GoAccess](/guides/logs/nginx-access-log) to produce a compiled report on the most common requests, such as: 404s, user agents, etc.
 
 [Fastly log](https://docs.fastly.com/en/guides/integrations#_logging-endpoints) extracts can be requested from your Customer Success Engineer. Standard analytics include all pages requested, but will not include service calls and other traffic that does not load the tracking script.
 
@@ -58,7 +58,7 @@ Learn more about the exceptions to page caching rules in [Caching: Advanced Topi
 
 - [Fastly on Pantheon](/guides/fastly-pantheon) 
 
-- [Log Files to Pantheon](/logs)
+- [Log Files to Pantheon](/guides/logs)
 
 - [Clearing Caches for Drupal and WordPress](/clear-caches)
 
