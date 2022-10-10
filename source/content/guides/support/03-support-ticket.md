@@ -10,7 +10,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/support-ticket/
 editpath: support/03-support-ticket.md
-reviewed: "2020-12-10"
+reviewed: "2022-10-10"
 ---
 
 In this section, we go over best practices when writing a support ticket, which helps us resolve your issue faster.
