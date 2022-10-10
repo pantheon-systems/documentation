@@ -88,6 +88,16 @@ Plugins and themes with issues resolved (at least partially) by this include the
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 - [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 
+## AdThrive Ads
+
+<ReviewDate date="2022-10-10" />
+
+[AdThrive Ads](https://wordpress.org/support/plugin/adthrive-ads/) is an ad provider for bloggers. AdThrive Ads is not compatible with the Pantheon platform because the plugin assumes write access and is also incompatible with:
+
+- Git deployments
+- Docker
+- Kubernetes
+
 ## All-in-One WP Migration
 
 <ReviewDate date="2020-11-30" />
