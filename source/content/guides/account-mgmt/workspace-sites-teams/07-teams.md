@@ -19,14 +19,14 @@ Teams allow you to define the users who will have access to a workspace or site.
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations, the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
+In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU workspaces where members are allowed to spin up new Sandbox sites at will. However, in these workspaces, the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the workspace, only workspace admins are allowed to change service levels.
 
-If you are an administrator for a Pantheon organization, [contact support](/guides/support/contact-support/) to have the User in Charge changed.
+If you are an administrator for a Pantheon workspace, [contact support](/guides/support/contact-support/) to have the User in Charge changed.
 
 ### Workspace Level Permissions
 
 
-| Permissions                                             | Administrator                       | Team Member                         | Developer                          | Unprivileged <Popover title="Unprivileged" content="Enterprise and EDU+ organizations only" /> |
+| Permissions                                             | Administrator                       | Team Member                         | Developer                          | Unprivileged <Popover title="Unprivileged" content="Enterprise and EDU+ workspaces only" /> |
 |:------------------------------------------------------- |:----------------------------------- |:----------------------------------- |:-----------------------------------|:-----------------------------------|
 | Create sites within an org                              | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Work in Dev environments                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
@@ -46,7 +46,7 @@ If you are an administrator for a Pantheon organization, [contact support](/guid
 
 ### Site Level Permissions
 
-| Permissions                                       | Org Admin / Owner <Popover title="Owner" content="Partner organizations only" /> | Team Member | Developer <Popover content="Enterprise organizations only" /> |
+| Permissions                                       | Org Admin / Owner <Popover title="Owner" content="Partner workspaces only" /> | Team Member | Developer <Popover content="Enterprise workspace only" /> |
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |:----------------------------------- |
 | Access the site Dashboard                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
 | Work in Dev environments                          | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
@@ -66,7 +66,7 @@ If you are an administrator for a Pantheon organization, [contact support](/guid
 
 ### Can I Restrict Access to a Specific Site with the Developer Role?
 
-Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner Organizations cannot specify which members have access to specific sites.
+Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner workspaces cannot specify which members have access to specific sites.
 
 ### Which role should I assign a user to give them the lowest level of access?
 
@@ -78,7 +78,7 @@ The Developer role can only deploy to Development and Multidev environments. If 
 
 ### Who can add users to workspaces?
 
-Enterprise Administrators can add site Team Members or Supporting Organizations to sites owned by the workspace, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
+Enterprise Administrators can add site Team Members or Supporting Organizations to sites owned by the workspace, with the Developer or workspace Team Member roles. Partner workspaces can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
 
 ### How do I recover an account after a site owner leaves?
 
@@ -176,7 +176,7 @@ After a user leaves, in addition to the steps above, we recommend you:
 
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
 
-Organization Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/organizations#organization-site-association).
+Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/organizations#organization-site-association).
 
 1. Open the Site Dashboard for the site.
 
