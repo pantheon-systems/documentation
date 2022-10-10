@@ -8,7 +8,8 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version           | Release Date       | EOL Date          |
 | ----------------- | ------------------ | ----------------- |
-| 3.0.8             | August 22, 2022    |                   |
+| 3.0.9             | October 06, 2022   |                   |
+| 3.0.8             | August 22, 2022    | October 06, 2023  |
 | 3.0.7             | March 29, 2022     | August 22, 2023   |
 | 3.0.6             | February 18, 2022  | March 29, 2023    |
 | 3.0.5             | February 08, 2022  | February 18, 2023 |
@@ -32,9 +33,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 2.6.0             | June 04, 2021     | August 04, 2022   |
 | 2.5.0             | January 20, 2021  | June 04, 2022     |
 | 2.4.1             | September 08, 2020| January 20, 2022  |
-| 2.4.0             | June 20, 2020     | September 08, 2021|
-| 2.3.0             | January 11, 2020  | June 20, 2021     |
-| 2.2.0  or earlier | September 26, 2019| January 11, 2021  |
+| 2.4.0 or earlier  | June 20, 2020     | September 08, 2021|
 </Tab>
 
 </TabList>
