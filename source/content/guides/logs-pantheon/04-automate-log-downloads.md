@@ -11,9 +11,7 @@ permalink: docs/guides/logs-pantheon/automate-log-downloads
 anchorid: automate-log-downloads
 ---
 
-## Automate Downloading Logs
-
-Automate the process of accessing and maintaining these logs with a script.
+This section provides information on how to automate the process of accessing and maintaining your logs with a script.
 
 ### Create a Script
 
@@ -24,13 +22,21 @@ Automate the process of accessing and maintaining these logs with a script.
     cd $HOME/site-logs
     ```
 
-1. Choose your preferred method from the following tabs > Click the **Download** button to download the script. 
+1. Choose your preferred method from the Rsync version and SFTP version tabs at the end of this section, and then click the **Download** button to download the script. 
 
-1. Move the downloaded script to the `site-logs` directory you created > Use your favorite text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
+1. Move the downloaded script to the `site-logs` directory you created.
+
+1. Use your preferred text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
 
   - Please note that the resulting log file might be large.
 
 The script provides several modifiable variables described in its comments:
+
+<Alert title="Note"  type="info" >
+
+Read to the comments in the scripts carefully to ensure that you modify variables correctly.
+
+</Alert>
 
   <TabList>
 
@@ -58,12 +64,21 @@ The script provides several modifiable variables described in its comments:
 
 ### Collect Logs
 
-1. Download logs by executing the script from within the `site-logs` directory:
+You can collect your logs after you have successfully created your script.
+
+1. Navigate to the `site-logs` directory and then execute the script below to download the logs.
 
   ```bash{promptUser:user}
   bash collect-logs.sh
   ```
 
 1. Open the `site-logs` directory to access the logs.
-  
-  - More than one directory is generated for sites that use multiple application containers.
+
+  - More than one directory is generated for sites that use multiple [application containers](/application-containers).
+
+## More Resources
+
+- [Fastly on Pantheon](/guides/fastly-pantheon)
+- [Develop on Pantheon Directly with SFTP Mode](/sftp)
+- [Using Git with SFTP & WordPress](/guides/wordpress-git/)
+- [Terminus Manual](/terminus)
