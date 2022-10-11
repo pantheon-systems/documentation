@@ -78,6 +78,7 @@ The directory structure will resemble:
     └──nginx
         └──nginx-access.log
         └──nginx-error.log
+        └──error.log
 ```
 
 ### Database Log Files
