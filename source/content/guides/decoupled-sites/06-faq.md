@@ -31,26 +31,6 @@ Pantheon Front-End Sites currently supports:
 * Drupal 9
 * WordPress 5.9
 
-### What Pantheon products and features are currently not supported with Front-End Sites?
-
-Front-End Sites will not work with all products and feautures on our platform.  
-
-Pantheon Front-End Sites are currently not compatible with the following Pantheon products:
-
-* [Autopilot](https://pantheon.io/autopilot)
-* [AGCDN](https://pantheon.io/product/advanced-global-cdn)
-
-The following features are currently not supported with Pantheon Front-End Sites:
-
-* Self-service domain management
-* Active Purging
-* Role Based Access Control (RBAC)
-* Supporting Orgs
-* Multizone Failover
-* New Relic 
-* Log forwarding
-* Object Cache (Redis)
-
 
 ### Is Decoupled Site Preview available for all instances on Front-End Sites?
 
@@ -59,7 +39,7 @@ Decoupled Site Preview is only available for sites using Drupal as the CMS.
 
 ## Known Issues
 
-<Accordion title="Builds are only available for Gatsby and Next.js " id="terms-decoupled" icon="info-sign">
+<Accordion title="Builds are only available for Gatsby and Next.js" id="terms-decoupled" icon="info-sign">
 Builds will only complete for repositories that are detected as Gatsby or Next.js repositories. Builds for all other frameworks will fail.
 </Accordion>
 
@@ -91,6 +71,6 @@ Select files, such as `.dockerignore` and `.gcloudignore` files can cause build 
 Users must have permissions to enable decoupled for GitHub organization accounts. The user should be the Owner of the account. GitHub organization owners can allow other users to manage the Pantheon GitHub application on their behalf. 
 </Accordion>
 
-<Accordion title="You must remove a VCS user record to uninstall a Front-End Site  " id="uninstalling" icon="info-sign">
+<Accordion title="You must remove a VCS user record to uninstall a Front-End Site" id="uninstalling" icon="info-sign">
 Uninstalling a Pantheon Front-End Site using GitHub settings requires manual removal of a VCS user record.
 </Accordion>
