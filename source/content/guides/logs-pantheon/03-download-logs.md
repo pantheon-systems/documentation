@@ -11,40 +11,46 @@ permalink: docs/guides/logs-pantheon/download-logs
 anchorid: download-logs
 ---
 
+This section provides information on how to download application and database log files.
+
 ### Application Log Files
 
-1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
+Follow the steps below to download your application log files.
+
+1. Navigate to the Site Dashboard and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 
 1. Open a terminal window and paste the SFTP connection command.
 
-1. Run the following SFTP command in terminal:
+1. Run the following SFTP command in the terminal:
 
    ```none
    get -r logs
    ```
 
-You now have a local copy of the logs directory.
+    You now have a local copy of the logs directory.
 
-The directory structure will resemble:
+    The directory structure will resemble:
 
-```none
-├── logs
-    └──php
-        └──newrelic.log
-        └──php-error.log
-        └──php-fpm-error.log
-        └──php-slow.log
-    └──nginx
-        └──nginx-access.log
-        └──nginx-error.log
-        └──error.log
-```
+    ```none
+    ├── logs
+        └──php
+            └──newrelic.log
+            └──php-error.log
+            └──php-fpm-error.log
+            └──php-slow.log
+        └──nginx
+            └──nginx-access.log
+            └──nginx-error.log
+            └──error.log
+    ```
 
 ### Database Log Files
 
-1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
+Follow the steps below to download your database log files.
+
+1. Navigate to the Site Dashboard and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 
@@ -68,10 +74,15 @@ The directory structure will resemble:
  get -r logs
  ```
 
-You now have a local copy of the logs directory, which contains the following:
+    You now have a local copy of the logs directory, which contains the following:
 
-```none
-├── logs
-    └──mysqld-slow-query.log
-    └──mysqld.log
-```
+    ```none
+    ├── logs
+        └──mysqld-slow-query.log
+        └──mysqld.log
+    ```
+
+## More Resources
+
+- [Develop on Pantheon Directly with SFTP Mode](/sftp)
+- [Using Git with SFTP & WordPress](/guides/wordpress-git/)
