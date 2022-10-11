@@ -130,21 +130,9 @@ You may also clone, import, export, and wipe the database and files per environm
 
 The [database clone operation](/database-workflow#cloning-the-database) excludes some tables by default. The excluded tables are:
 
-* `cache`
-* `cache_block`
-* `cache_bootstrap`
-* `cache_field`
-* `cache_filter`
-* `cache_form`
-* `cache_image`
-* `cache_menu`
-* `cache_page`
-* `cache_path`
-* `cache_update`
-* `cache_views`
-* `cache_views_data`
 * `accesslog`
 * `watchdog`
+* any table that starts with `cache`
 
 You can clone databases from one environment to another at any point. It does not need to only be within the deployment process.
 
