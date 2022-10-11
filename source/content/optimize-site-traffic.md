@@ -11,7 +11,7 @@ reviewed: "2022-08-09"
 
 ## Review the NGINX Access Log
 
-To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/guides/logs/nginx-access-logs). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
+To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/guides/logs-pantheon/nginx-access-logs). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
 
 ## WordPress Best Practices
 

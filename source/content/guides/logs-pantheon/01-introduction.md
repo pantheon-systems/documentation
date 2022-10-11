@@ -1,0 +1,46 @@
+---
+title: Log Files on Pantheon
+subtitle: Introduction
+description: Review available logs on Pantheon.
+categories: [performance]
+tags: [logs, measure]
+contributors: [whitneymeredith]
+layout: guide
+permalink: docs/guides/logs-pantheon
+anchorid: logs-pantheon
+---
+
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic&reg; Performance Monitoring](/guides/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
+
+The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
+
+## Available Logs
+
+| Log                   | Retention Policy           | Comments                                                |
+|:--------------------- |:--------------------- |:------------------------------------------------------- |
+| **newrelic.log**          |                       | New Relic log; check if an environment is not logging.  |
+| **nginx-access.log**      | Up to 60 days of logs | Web server access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/guides/logs/nginx-access-logs). |
+| **nginx-error.log**       | 1MB of log data       | Web server error log.                                   |
+| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress)."/>  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
+| **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/guides/php/php-slow-log) |
+| **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
+| **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
+| **mysql-bin.0001**        |                       | MySQL [binary logs](https://dev.mysql.com/doc/internals/en/binary-log-overview.html). Located in the database's `data/` directory. |
+
+Rotated log files are archived within the `/logs` directory on application containers and database servers.
+
+You may find that this directory contains sub-directories for services like Nginx and PHP (e.g. `/logs/nginx/nginx-access.log-20160617.gz` or `/logs/php/php-error.log-20160617.gz`) or log files directly in `logs` (e.g. `/logs/mysqld-slow-query.log-20160606`).
+
+<Alert title="Note" type="info">
+
+When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific. Consider [automating the collection](#automate-downloading-logs) of logs regularly to maintain historical log data.
+
+</Alert>
+
+## More Resources
+
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [PHP Slow Log](/guides/php/php-slow-log)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+- [Bots and Indexing](/bots-and-indexing)
+- [New Relic&reg; Performance Monitoring](/guides/new-relic)

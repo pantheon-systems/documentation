@@ -39,4 +39,4 @@ Use Terminus to inspect the site's logs;
 terminus drush $SITE.composerify -- wd-show
 ```
 
-Refer to our [logs collection](/guides/logs) documentation for more information.
+Refer to our [logs collection](/guides/logs-pantheon) documentation for more information.

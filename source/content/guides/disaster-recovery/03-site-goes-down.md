@@ -104,7 +104,7 @@ Key tools that you can use for ongoing diagnosis of issues include:
 
 * New Relic gives you real-time insight into application performance, and the slowest transactions are profiled with full stack traces that can isolate specific code, query, or external services bottlenecks.The New Relic Application Performance Monitor (APM) can be used to track current-state performance and dig into transaction traces to isolate bottlenecks and break points. Refer to the [New Relic](/guides/new-relic) documentation for more information.
 
-* MySQL, PHP, and Nginx logs provide forensic data for incident review. Refer to [Log Files on Pantheon](/guides/logs)
+* MySQL, PHP, and Nginx logs provide forensic data for incident review. Refer to [Log Files on Pantheon](/guides/logs-pantheon)
 
 * ACDN logs can be piped directly into customer-managed log management applications. Setup by Professional Services is required.
 
