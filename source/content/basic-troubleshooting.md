@@ -57,7 +57,7 @@ Site problems may feel random, but they’re all triggered by _something_. Was t
 
 We recommend rolling back either the code or database versus a full restore in most cases. You can do this using [Terminus](/terminus/commands/backup-restore).
 
-If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your [nginx access logs](/guides/logs/nginx-access-log).
+If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your [nginx access logs](/guides/logs/nginx-access-logs).
 
 ### Narrow down the cause
 

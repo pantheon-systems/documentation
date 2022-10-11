@@ -776,7 +776,7 @@
         - text: 'Metrics in the Site Dashboard'
           url: '/metrics'
         - text: 'Parsing nginx Access Logs with GoAccess'
-          url: '/guides/logs/nginx-access-log'
+          url: '/guides/logs/nginx-access-logs'
         - text: 'PHP Slow Log'
           url: '/guides/php/php-slow-log'
     - title: 'Launch-Checks and Site Status Reports'
