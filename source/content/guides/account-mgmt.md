@@ -5,6 +5,7 @@ type: guide
 categories: [automate]
 tags: [continuous-integration, iterate, site, webops]
 permalink: docs/guides/account-mgmt
+contributors: [someoneelse]
 ---
 
 placeholder
