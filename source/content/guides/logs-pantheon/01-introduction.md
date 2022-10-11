@@ -19,7 +19,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 | Log                   | Retention Policy           | Comments                                                |
 |:--------------------- |:--------------------- |:------------------------------------------------------- |
 | **newrelic.log**          |                       | New Relic log; check if an environment is not logging.  |
-| **nginx-access.log**      | Up to 60 days of logs | Web server access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/guides/logs/nginx-access-logs). |
+| **nginx-access.log**      | Up to 60 days of logs | Web server access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/guides/logs-pantheon/nginx-access-logs). |
 | **nginx-error.log**       | 1MB of log data       | Web server error log.                                   |
 | **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress)."/>  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
 | **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/guides/php/php-slow-log) |
