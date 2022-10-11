@@ -1,7 +1,7 @@
 ---
 title: Log Files on Pantheon
 subtitle: Introduction
-description: Review available logs on Pantheon.
+description: Use available logs on Pantheon to track and view your site's activity.
 categories: [performance]
 tags: [logs, measure]
 contributors: [whitneymeredith]
