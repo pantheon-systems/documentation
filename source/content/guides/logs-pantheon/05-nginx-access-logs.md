@@ -1,7 +1,7 @@
 ---
 title: Log Files on Pantheon
 subtitle: Parse Nginx Access Logs with GoAccess
-description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
+description: Learn how to parse the nginx-access.log file with GoAccess.
 categories: [performance]
 tags: [logs, measure]
 contributors: [albertcausing, sarahg]
@@ -11,6 +11,8 @@ permalink: docs/guides/logs-pantheon/nginx-access-logs
 anchorid: nginx-access-logs
 ---
 
+This section provides information on how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
+
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
 <Alert title="Note" type="info">
@@ -19,39 +21,45 @@ Requests served by the [Pantheon Global CDN](/guides/global-cdn) will not hit th
 
 </Alert>
 
-[GoAccess](https://goaccess.io/) is a free, open source utility that creates reports by parsing `nginx-access.log` files. Use it to quickly identify the most used browsers and operating systems, visitor IPs, or most frequent 404s — all from the command line.
+[GoAccess](https://goaccess.io/) is a free, open source utility that creates reports by parsing `nginx-access.log` files. You can use it to identify the most used browsers and operating systems, visitor IPs, or most frequent 404s — all from the command line.
 
 ## Before You Begin
 
 Be sure that you have:
 
-* [Terminus](/terminus)
-* [GoAccess](https://goaccess.io/download)
-  * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
-  * **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+- [Terminus](/terminus)
+- [GoAccess](https://goaccess.io/download)
+  - **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
+  - **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
-This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.5 ([release notes](https://goaccess.io/release-notes)).
+The process below conforms to the latest stable release of GoAccess as of this document creation, which is version 1.5 ([release notes](https://goaccess.io/release-notes)).
 
 ## Edit GoAccess Configuration
 
-To parse your `nginx-access.log` files with GoAccess, you'll need to configure GoAccess to read Pantheon's log formats.
+You must configure GoAccess to read Pantheon's log formats to parse your `nginx-access.log` files with GoAccess.
 
 1. Use the command `goaccess --dcf` to check where your configuration file is located.
-2. Copy this configuration file to your home directory. For example, if you installed GoAccess with Homebrew, your command might look like this: `cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc`
-3. Add the following lines to the configuration file:
 
-```none:title=.goaccessrc
-time-format %H:%M:%S
-date-format %d/%b/%Y
-log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
-```
+1. Copy this configuration file to your home directory. For example, if you installed GoAccess with Homebrew, your command might look like this: `cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc`
 
-Note that when providing configuration from your home directory, the file needs to be named `.goaccessrc`. If you're storing this file elsewhere, it should be named `goaccess.conf`. [Read more about the configuration file](https://goaccess.io/faq#configuration).
+1. Add the following lines to the configuration file:
+
+  ```none:title=.goaccessrc
+  time-format %H:%M:%S
+  date-format %d/%b/%Y
+  log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
+  ```
+1. Name the file appropriately:
+
+  - The file must be named `.goaccessrc` if you are providing the configuration from your home directory.
+
+  - If you're storing the file somewhere other than your home directory, it must be named `goaccess.conf`. [Read more about the configuration file](https://goaccess.io/faq#configuration).
 
 ## Create a report
 
 1. [Download your nginx log files](/guides/logs-pantheon/download-logs) from Pantheon via SFTP.
-1. From the directory containing your `nginx-access.log` file, run GoAccess:
+
+1. Navigate to the directory containing your `nginx-access.log` file, and then run GoAccess:
 
   ```bash{promptUser: user}
   goaccess nginx-access.log
@@ -65,7 +73,7 @@ Note that when providing configuration from your home directory, the file needs 
   goaccess nginx-access.log > report.html
   ```
 
-1. View the report in your browser by opening `report.html`. For MacOS:
+1. Access the report in your browser by opening `report.html`. For MacOS:
 
   ```bash{promptUser: user}
   open report.html
@@ -81,7 +89,7 @@ Note that when providing configuration from your home directory, the file needs 
 
 In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess versions 1.3 and earlier, `goaccess.conf` is not found by the binary.
 
-To resolve, [update your local packages](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages), or to update the GoAccess package specifically:
+To resolve this issue, [update your local packages](https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages), or you can update the GoAccess package specifically:
 
 ```bash{promptUser: user}
 brew upgrade goaccess
@@ -103,23 +111,23 @@ brew upgrade goaccess
 
 ## Alternatives to GoAccess
 
-You can navigate the `nginx-access.log` file using the CLI, without GoAccess. The following commands are a great starting point for navigatiing the `nginx-access.log` file:
+You can navigate the `nginx-access.log` file using the CLI without GoAccess. The following commands are a starting point for navigating the `nginx-access.log` file:
 
-* Locate the most frequent client IP addresses
+- Locate the most frequent client IP addresses
 
   ```cat nginx-access.log | awk -F '\"' '{ print $8 }' | awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | head -n 25```
 
-* Locate the most frequent URLs
+- Locate the most frequent URLs
 
   ```cat nginx-access.log | awk -F '\"' '{print $2}' | sort | uniq -c | sort -nr | head```
 
-* Identify the most frequent User Agents
+- Identify the most frequent User Agents
 
   ```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
 
 
 ## More Resources
 
-* [Log Files on Pantheon](/guides/logs-pantheon)
-* [Bots and Indexing](/bots-and-indexing)
-* [Traffic Limits and Overages](/traffic-limits)
+- [Bots and Indexing](/bots-and-indexing)
+- [Traffic Limits and Overages](/traffic-limits)
+- [Application Containers](/application-containers)
