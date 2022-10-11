@@ -25,7 +25,7 @@ Logs are stored within application containers that house your site's codebase an
     | `appserver`  | `dev`, `test`, `live`, `<multidev-env>` | ex. `c5c75825-5cd4-418e-8cb0-fb9aa1a7f671`, as found in `https://dashboard.pantheon.io/sites/<site-uuid>` |
     | `dbserver`   |                                         |                                                                                                           |
 
-1. Run the command below, replacing <env> and <site-uuid> with the correct connection information listed in the dashboard.
+1. Run the command below, replacing `env` and `site-uuid` with the correct connection information listed in the dashboard.
 
     ```bash{promptUser: user}
     <env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in
@@ -37,13 +37,13 @@ You can also view the code log for each environment using Terminus.
 
 1. Navigate to Terminus and authenticate your account with [machine tokens](/machine-tokens) or your Pantheon Dashboard credentials. For example:
 
-    Replace MACHINE TOKEN and EMAIL with your machine token and email address.
+    Replace `MACHINE TOKEN` and `EMAIL` with your machine token and email address.
 
     ```bash{promptUser: user}
     terminus auth:login --machine-token MACHINE-TOKEN --email EMAIL
     ```
 
-1. Run the command below, replacing <site> and <env> with your site's name and the correct environment.
+1. Run the command below, replacing `site` and `env` with your site's name and the correct environment.
 
     ```bash{promptUser: user}
     env:code-log <site>.<env> 
