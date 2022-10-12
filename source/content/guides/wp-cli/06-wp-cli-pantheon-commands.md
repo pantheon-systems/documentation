@@ -23,10 +23,12 @@ The Mode options are:
 * `everyone` -- Serves cached pages to all visitors _except_ administrators
 
 ### Cache Purge
-To purge some or all of the cache, the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) module provides several commands.
-* `wp pantheon cache purge-all` -- Purges the entire page cache
-* `wp pantheon cache purge-key {KEY1,KEY2...}` -- Purges one or more surrogate keys from cache.
-* `wp pantheon cache purge-path {PATH1,PATH2...}` -- Purges one or more paths from cache
+
+To purge some or all of the cache, the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) module provides several commands:
+
+* `wp pantheon cache purge-all`: Purge the entire page cache.
+* `wp pantheon cache purge-key {KEY1,KEY2...}`: Purge one or more surrogate keys from cache.
+* `wp pantheon cache purge-path {PATH1,PATH2...}`: Purge one or more paths from cache.
 
 ## Interact with sessions via the WP-CLI
 
