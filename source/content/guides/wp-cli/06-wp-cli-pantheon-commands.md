@@ -11,7 +11,7 @@ permalink: docs/guides/wp-cli/wp-cli-pantheon-commands
 anchorid: wp-cli-pantheon-commands
 ---
 
-This section provides information on how to run Pantheon specific commands on WP-CLI.
+This section provides information on how to run Pantheon-specific commands on WP-CLI.
 
 ## Control cache with WP-CLI
 
