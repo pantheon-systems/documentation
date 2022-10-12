@@ -11,6 +11,8 @@ permalink: docs/guides/logs-pantheon/faq-logs
 anchorid: faq-logs
 ---
 
+This section provides answers to frequently asked log questions.
+
 ### How can I parse my Nginx access logs?
 
 Refer to [Parsing nginx Access Logs with GoAccess](/guides/logs-pantheon/nginx-access-logs) for details.
@@ -55,16 +57,16 @@ By default, the WordPress debug log path is set to `/wp-content/` and is not wri
 
 ### How can I access the Drupal event log?
 
-By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
+Drupal logs events using the Database Logging module (dblog) by default. PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
-- Visit `/admin/reports/dblog` once you've logged in as administrator.
-- Using [Terminus](/terminus):
+- Visit `/admin/reports/dblog` after you've logged in as administrator.
+- Use [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus drush <site>.<env> -- watchdog-show
  ```
 
-- Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
+- Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until interrupted (Control+C).
 
  ```bash{promptUser: user}
  terminus drush <site>.<env> -- watchdog-show --tail
@@ -72,23 +74,34 @@ By default, Drupal logs events using the Database Logging module (dblog). PHP fa
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
-We do not recommend disabling dblog. Best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.
+We do not recommend disabling dblog. The best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.
+
+Refer to [PHP Errors and Exceptions](/guides/php/php-errors) for more information.
 
 ### How do I access logs in environments with multiple containers?
 
-Live environments for Basic and Performance sites on paid plans have one main and one failover container that can contain logs. Performance Medium plans and above have more than one container in the Live *and* Test environments. In order to download the logs from each application container, use the [shell script](#automate-downloading-logs) above.
+You can use the [shell script](/guides/logs-pantheon/automate-log-downloads#create-a-script) to download the logs from each [application container](/application-containers). Application container numbers by plan are listed below:
+
+Basic and Performance sites on paid plans:
+
+   - Live environment: 1 main container and 1 failover container with logs
+
+Performance Medium plans and above:
+
+   - Live environment: multiple containers with logs
+   - Test environment: multiple containers with logs
 
 ### Can I `tail` server logs?
 
-Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
+Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) and then review the logs with any tool on your workstation.
 
 You can also create the `logwatcher.sh` script below, which uses [Terminus](/terminus) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
 
-1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
+1. Create a `logs` directory in the local Git repository for each log you want to watch if you're working on multiple projects locally. 
 
 1. Add `logs/*` to the project's [`.gitignore` file](/guides/git/faq-git#can-i-use-gitignore-on-pantheon).
 
-1. In your project's `logs` directory, create `logwatcher.sh`:
+1. Navigate to your project's `logs` directory and create `logwatcher.sh`:
 
   ```bash:title=logwatcher.sh
   #!/bin/bash
@@ -124,3 +137,11 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
    ```
 
    Stop the process with **CTRL-C**.
+
+
+## More Resources
+
+- [PHP on Pantheon](/guides/php)
+- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
+- [Terminus Manual](/terminus)
+- [Drupal Drush Command-Line Utility on Pantheon](/guides/drush)
