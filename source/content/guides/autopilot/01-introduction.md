@@ -73,13 +73,10 @@ Agency users can navigate to the Agency Workspace to see sites that have been gr
 Agency users can only access Autopilot through the Agency Workspace.
 
 ## More Resources
-<<<<<<< HEAD
-=======
 
 - [Autopilot Pre-Configuration Checklist](/guides/autopilot/autopilot-preconfiguration/)
 
 - [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
->>>>>>> main
 
 - [Autopilot Product Page](https://pantheon.io/autopilot?docs)
 
