@@ -82,14 +82,14 @@ Refer to [PHP Errors and Exceptions](/guides/php/php-errors) for more informatio
 
 You can use the [shell script](/guides/logs-pantheon/automate-log-downloads#create-a-script) to download the logs from each [application container](/application-containers). Application container numbers by plan are listed below:
 
-Basic and Performance sites on paid plans:
+**Basic and Performance sites on paid plans:**
 
-   - Live environment: 1 main container and 1 failover container with logs
+   - **Live environment:** 1 main container and 1 failover container with logs
 
-Performance Medium plans and above:
+**Performance Medium plans and above:**
 
-   - Live environment: multiple containers with logs
-   - Test environment: multiple containers with logs
+   - **Live environment:** multiple containers with logs
+   - **Test environment:** multiple containers with logs
 
 ### Can I `tail` server logs?
 
