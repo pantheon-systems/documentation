@@ -13,7 +13,6 @@ anchorid: domains-faq
 
 This section provides answers to frequently asked questions about domains and DNS on Pantheon.
 
-
 ### Where are my DNS records hosted?
 
 DNS Records are hosted by an **authoritative name server**. This may or may not also be the **registrar** who you purchased the domain name from. You can use the command line tool **dig** to look up the `NS` record for a domain to find the name server:
@@ -111,12 +110,9 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 <Partial file="_hosts-file.md" />
 
 ## More Resources
-<<<<<<< HEAD:source/content/dns.md
-=======
 
 - [Troubleshoot Domains](/guides/domains/troubleshooting)
 
 - [Modify the Local Hosts File](/hosts-file)
->>>>>>> main:source/content/guides/domains/08-domains-faq.md
 
 - [Relaunch Existing Pantheon Site](/relaunch)
