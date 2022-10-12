@@ -113,12 +113,7 @@ Pantheon offers recommended decoupled starter kit templates that are preconfigur
 
 * A development environment that supports communication between backend and frontend services.
 
-<<<<<<< HEAD
-
-## More Resources 
-=======
-## See Also
->>>>>>> main
+## More Resources
 
 - [Introducing Front-End Sites](https://pantheon.io/blog/introducing-front-end-sites-pantheon-dashboard)
 
