@@ -273,6 +273,10 @@ For [security reasons](https://dev.mysql.com/doc/refman/8.0/en/load-data-local-s
 MariaDB [pantheon]> LOAD DATA LOCAL INFILE 'mydata.csv' INTO TABLE `pantheon`.`mytable` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';
 ```
 
+## MySQL Max Connections
+
+<Partial file="sql/sql-max-connections.md" />
+
 ## nginx.conf
 
 Pantheon does not currently support modifying the `nginx.conf` per site, as we run a highly tuned universal configuration file. All of the containers run a standard profile, and we have opted to keep this configuration to keep the `nginx.conf` lean.
