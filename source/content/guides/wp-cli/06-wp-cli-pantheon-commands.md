@@ -9,6 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/wp-cli-pantheon-commands
 anchorid: wp-cli-pantheon-commands
+reviewed: "2022-10-06"
 ---
 
 This section provides information on how to run Pantheon-specific commands on WP-CLI.
