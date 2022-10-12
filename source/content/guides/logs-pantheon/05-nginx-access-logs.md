@@ -99,7 +99,7 @@ brew upgrade goaccess
 
 1. Copy the general log retrieval script from [Automate Downloading Logs](/guides/logs-pantheon/automate-log-downloads), and use this to download logs from all application containers on the desired environment.
 
-2. Add the following to either `collect-logs.sh` or a separate file:
+1. Add the following to either `collect-logs.sh` or a separate file:
 
   ```bash
   # Unpack archived log files (optional).
