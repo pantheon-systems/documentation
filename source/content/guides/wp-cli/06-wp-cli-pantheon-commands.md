@@ -37,6 +37,7 @@ Pantheon provides for PHP Session control via the [WP Native PHP Sessions](https
 This plugin provides two terminus commands: `pantheon session list` and `pantheon session delete`, to list and delete active sessions respectively.
 
 ## More Resources
+
 - [WP-CLI on the Pantheon Platform](/guides/wp-cli)
 - [WordPress with Composer on Pantheon](/guides/wordpress-composer)
 
