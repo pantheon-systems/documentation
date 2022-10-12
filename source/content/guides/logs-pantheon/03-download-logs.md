@@ -17,7 +17,7 @@ This section provides information on how to download application and database lo
 
 Follow the steps below to download your application log files.
 
-1. Navigate to the Site Dashboard and open the desired environment (Multidev, Dev, Test, or Live).
+1. Navigate to the **Site Dashboard** and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 
@@ -31,7 +31,7 @@ Follow the steps below to download your application log files.
 
     You now have a local copy of the logs directory.
 
-    The directory structure will resemble:
+    The directory structure will resemble the example below:
 
     ```none
     ├── logs
@@ -50,7 +50,7 @@ Follow the steps below to download your application log files.
 
 Follow the steps below to download your database log files.
 
-1. Navigate to the Site Dashboard and open the desired environment (Multidev, Dev, Test, or Live).
+1. Navigate to the **Site Dashboard** and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 
@@ -68,7 +68,7 @@ Follow the steps below to download your database log files.
  sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
  ```
 
-1. Run the following SFTP command in terminal:
+1. Run the following SFTP command:
 
  ```none
  get -r logs
