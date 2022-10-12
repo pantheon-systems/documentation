@@ -234,9 +234,4 @@ Refer to [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/gui
 
 - [Identify and Kill Queries with MySQL Command-Line Tool](/guides/mariadb-mysql/kill-mysql-queries)
 
-<<<<<<< HEAD:source/content/mysql-slow-log.md
-## More Resources
-- [Identify and Kill Queries with MySQL Command-Line Tool](/kill-mysql-queries)
-=======
 - [MySQL Troubleshooting with New Relic Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
->>>>>>> main:source/content/guides/mariadb-mysql/07-mysql-slow-log.md
