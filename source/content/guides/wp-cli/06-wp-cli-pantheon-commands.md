@@ -34,7 +34,7 @@ To purge some or all of the cache, the [Pantheon Advanced Page Cache](https://wo
 
 Pantheon provides for PHP Session control via the [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin.
 
-This plugin provides two terminus commands: `pantheon session list` and `pantheon session delete`, to list and delete active sessions respectively.
+This plugin provides two Terminus commands: `pantheon session list` and `pantheon session delete`, to list and delete active sessions respectively.
 
 ## More Resources
 
