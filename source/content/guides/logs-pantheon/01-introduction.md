@@ -1,7 +1,7 @@
 ---
 title: Log Files on Pantheon
 subtitle: Introduction
-description: Use available logs on Pantheon to track and view your site's activity.
+description: Use logs on Pantheon to help find, debug, and isolate potential problems.
 categories: [performance]
 tags: [logs, measure]
 contributors: [whitneymeredith]
@@ -10,17 +10,17 @@ permalink: docs/guides/logs-pantheon
 anchorid: logs-pantheon
 ---
 
-Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has individual log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. You can use [New Relic&reg; Performance Monitoring](/guides/new-relic) in conjunction with logs to help diagnose and fix errors and performance bottlenecks.
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has individual log files, which can be obtained via SFTP. Application-level logs can be accessed directly through Drupal. You can use [New Relic&reg; Performance Monitoring](/guides/new-relic) in conjunction with logs to help diagnose and fix errors and performance bottlenecks.
 
-The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
+The server timezone and log timestamps are in UTC (Coordinated Universal Time).
 
 <Alert title="Note" type="info">
 
-Log files are destroyed when appservers are migrated as part of regular platform maintenance because these files are appserver-specific. Consider [automating the collection](/guides/logs-pantheon/automate-log-downloads) of logs regularly to maintain historical log data.
+Log files are destroyed during appserver migration (a standard part of regular platform maintenance). Log deletion occurs because the log files are appserver-specific. Consider [automating the collection](/guides/logs-pantheon/automate-log-downloads) of logs regularly to maintain historical log data.
 
 </Alert>
 
-[Fastly on Pantheon](/guides/fastly-pantheon) can help you if you are looking for log or media storage integration solutions. 
+[Fastly on Pantheon](/guides/fastly-pantheon) provides additional features if you are looking for log or media storage integration solutions. 
 
 ## Available Logs
 
@@ -37,11 +37,11 @@ Log files are destroyed when appservers are migrated as part of regular platform
 
 ## /logs Directory
 
-Rotated log files are archived within the `/logs` directory on application containers and database servers. You may find that this directory contains sub-directories for services like Nginx and PHP or it may log files directly in `/logs` For example: 
+Rotated log files are archived within the `/logs` directory on [application containers](/application-containers) and database servers. The directory might contain sub-directories for services like Nginx and PHP, or it may log files directly in `/logs` For example: 
 
 - Subdirectories: `/logs/nginx/nginx-access.log-20160617.gz` or `/logs/php/php-error.log-20160617.gz`
 
-- Directly within the `/logs` directory: `/logs/mysqld-slow-query.log-20160606`).
+- Directly within the `/logs` directory: `/logs/mysqld-slow-query.log-20160606`
 
 ## More Resources
 
