@@ -254,16 +254,16 @@ Improve performance on longer trips to and from the browser for instances you wa
 
 ### Upgrade Your Site's PHP
 
-[Upgrade your site's PHP version](/php-versions) to improve the security, performance, and supportability of your site.
+[Upgrade your site's PHP version](/guides/php/php-versions) to improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
 ### Enable Object Caching
 
-Sites loading a lot of content can benefit from Object Caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](/object-cache).
+Sites loading a lot of content can benefit from Object Caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](/guides/object-cache).
 
 ### Enable OPcache
 
 [OPcache](https://www.php.net/manual/en/book.opcache.php) is a caching engine built into PHP. OPcache can improve PHP performance by storing precompiled script bytecode in shared memory. OPcache improves speed in modern PHP applications and is always enabled on Pantheon; however, many users disable the feature for security reasons when working in shared hosting environments.
 
- OPcache is a transparent resource, and for most, simply turning it on will improve your site's performance. [Object caching](/object-cache) is another back-end optimization resource that can greatly improve the performance of your site. 
+ OPcache is a transparent resource, and for most, simply turning it on will improve your site's performance. [Object caching](/guides/object-cache) is another back-end optimization resource that can greatly improve the performance of your site. 

@@ -36,7 +36,7 @@ If you have not already created these directories, you will need to do that firs
 
 ## Private Path for Code
 
-Follow the steps below to store data that should be version controlled, such as [Quicksilver](/quicksilver) scripts.
+Follow the steps below to store data that should be version controlled, such as [Quicksilver](/guides/quicksilver) scripts.
 
 <TabList>
 
@@ -94,7 +94,7 @@ The Drupal example above reads the key from the private file `stripe_live.json` 
 
 ### Plugins That Manage Private Paths
 
-WordPress does not have a core feature to configure a private path folder for file uploads. There are several plugins on [WordPress.org](https://wordpress.org/) and projects on [Drupal.org](https://www.drupal.org/) that help protect direct access to files in the files area. However, these plugins commonly require an Apache HTTP server *.htaccess* (`mod_rewrite`) rule. Our NGINX servers [do not support *.htaccess* rules](/platform-considerations/#htaccess).
+WordPress does not have a core feature to configure a private path folder for file uploads. There are several plugins on [WordPress.org](https://wordpress.org/) and projects on [Drupal.org](https://www.drupal.org/) that help protect direct access to files in the files area. However, these plugins commonly require an Apache HTTP server *.htaccess* (`mod_rewrite`) rule. Our NGINX servers [do not support *.htaccess* rules](/guides/platform-considerations/platform-site-info/#htaccess).
 
 Site developers can author their own custom solution to:
 

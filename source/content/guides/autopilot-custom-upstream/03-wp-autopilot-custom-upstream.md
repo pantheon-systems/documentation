@@ -22,7 +22,7 @@ The simplest way to start your Custom Upstream journey is to create a new, vanil
 
 1. Name the site in a way that identifies it as the Custom Upstream, for example “Sites Upstream”.
 
-1. [Create a new WordPress site](/create-sites#create-a-site) and generate two or three pages of content.
+1. [Create a new WordPress site](/guides/legacy-dashboard/create-sites#create-a-site) and generate two or three pages of content.
 
 1. [Activate Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) and select all three scopes – upstream, plugins, and themes under **What Should Autopilot Update?** 
 
@@ -54,7 +54,7 @@ Autopilot will merge code into the master branch on your Pantheon repository whe
 
 ### Push Updates with Quicksilver sync_code
 
-You can use the [sync_code Quicksilver hook](/quicksilver#hooks) to push updates to your remote repository.
+You can use the [sync_code Quicksilver hook](/guides/quicksilver/hooks) to push updates to your remote repository.
 
 This workflow ensures all developer work on your Custom Upstream remote repository is reflected in real-time on the Pantheon site. Autopilot continuously branches off an updated master branch. Code is pushed back to your Custom Upstream remote repository whenever Autopilot runs and merges code into the master.
 
@@ -64,11 +64,11 @@ Any new sites you create from your Custom Upstream will have up-to-date code as 
 
 You can manually pull in code from the Pantheon repository and push to your remote repository.
 
-This method works in much the same way as the [sync_code Quicksilver hook](/quicksilver#hooks) option, but relies on you to remember to pull code from your Pantheon repository and push it to your remote repository every time you make a change.
+This method works in much the same way as the [sync_code Quicksilver hook](/guides/quicksilver/hooks) option, but relies on you to remember to pull code from your Pantheon repository and push it to your remote repository every time you make a change.
 
 ## More Resources
 
-- [Automate and Integrate your WebOps Workflow with Quicksilver](/quicksilver)
+- [Automate and Integrate your WebOps Workflow with Quicksilver](/guides/quicksilver)
 
 - [WordPress and Drupal Core Updates](/core-updates)
 

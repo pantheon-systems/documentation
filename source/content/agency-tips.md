@@ -21,18 +21,18 @@ Partner Agencies are added to the [Agency Partner Directory](https://directory.p
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
 ## Extend Preferred Pricing to Your Clients
-[Qualified agencies](https://pantheon.io/plans/partner-program?docs) have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
+[Qualified agencies](https://pantheon.io/plans/partner-program?docs) have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/guides/legacy-dashboard/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
 
 ## Training Resources for New Team Members
 Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
 
-- [Pantheon platform consideration](/platform-considerations)
+- [Pantheon platform consideration](/guides/platform-considerations)
 - [Advanced caching](/caching-advanced-topics)
 - [Symlinks and Assumed Write Access](/symlinks-assumed-write-access)
 - [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 - [Pantheon FAQs](/faq)
 - [Pricing comparison](https://pantheon.io/plans/pricing-comparison)
-- [Add a Client to Your Agency](/add-client-site) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
+- [Add a Client to Your Agency](/guides/legacy-dashboard/add-client-site) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
 
 ## Be a Community Member
 The Pantheon [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/) are great places to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
@@ -44,14 +44,14 @@ Follow our [Launch Essentials](/guides/launch) guide to automatically provision 
 All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Object Cache
-All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
+All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
 
 ## WordPress
 
 The following tools are specifically for WordPress.
 
 ### PHP Sessions
-In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). For details, see [WordPress and PHP Sessions](/wordpress-sessions).
+In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). For details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions).
 
 ### WordPress Multisite
 Running a WordPress Site Network requires a special configuration that is only available to contract customers. These sites can only be created by Pantheon employees. For details, see [WordPress Site Networks](/guides/multisite).
@@ -70,7 +70,7 @@ Drupal now includes Composer usage within Drupal Core itself. For details, see [
 You can [extend Terminus and add new commands](/terminus/plugins) by installing or creating third-party plugins. For a complete list of supported plugins, see our [Plugin Directory](/terminus/plugins/directory). Two favorites are [Filer](https://github.com/terminus-plugin-project/terminus-filer-plugin), which assists with opening Pantheon sites in many popular SFTP GUI clients, and [Pancakes](https://github.com/derimagia/terminus-pancakes), which open any Pantheon site database using a SQL GUI client. These two plugins eliminate logging into the Pantheon dashboard and copying/pasting credentials into your client.
 
 ### Quicksilver
-Quicksilver Platform Hooks allow you to automate actions in response to activity on the Dashboard. You can hook into various workflows and execute PHP scripts before or after the workflow's been triggered. For details, see [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver).
+Quicksilver Platform Hooks allow you to automate actions in response to activity on the Dashboard. You can hook into various workflows and execute PHP scripts before or after the workflow's been triggered. For details, see [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver).
 
 ### Pantheon Configuration File
 Use the `pantheon.yml` file to set up platform hooks and advanced site configurations such as PHP version, [nested docroot](/nested-docroot) and more. For details, see [The pantheon.yml Configuration File](/pantheon-yml).

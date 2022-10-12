@@ -27,7 +27,7 @@ The Team tab allows you to change the site owner; add supporting agencies; and a
 
 ### Add-Ons
 
-Pantheon offers several add-ons to help you build dynamic sites. These include [Pantheon Search](/solr) and [Object Cache](/object-cache).
+Pantheon offers several add-ons to help you build dynamic sites. These include [Pantheon Search](/solr) and [Object Cache](/guides/object-cache).
 
 ### Delete Site
 
@@ -51,11 +51,11 @@ To find your site's upstream, click **Settings**, then **About Site**.
 
 ### PHP Version
 
-The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. For more information, see [Upgrading PHP Versions](/php-versions).
+The site default PHP version is applied to every environment unless a PHP version is explicitly selected for each environment. For more information, see [Upgrading PHP Versions](/guides/php/php-versions).
 
 ## Billing
 
-Here you can select or change your plan and payment method. For more information, see [Manage Plans in the Site Dashboard](/site-plan).
+Here you can select or change your plan and payment method. For more information, see [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan).
 
 ## Support
 
@@ -65,7 +65,7 @@ If you need assistance, our expert Customer Support team is here to help make bu
 
 ### Connection Info
 
-Here you can find the [SSH clone URL](/guides/git/git-config), [Database Connection Information](/mysql-access), and [SFTP](/sftp) connection information.
+Here you can find the [SSH clone URL](/guides/git/git-config), [Database Connection Information](/guides/mariadb-mysql/mysql-access), and [SFTP](/sftp) connection information.
 
 ### Code
 
@@ -80,7 +80,7 @@ Learn how to use the [Pantheon workflow](/pantheon-workflow) to manage your site
 
 ### Metrics
 
-Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment, the **<span class="glyphicons glyphicons-charts"></span> Metrics** tab provides insight into your site's traffic. Learn more in our guide on [Metrics in the Site Dashboard](/metrics).
+Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment, the **<span class="glyphicons glyphicons-charts"></span> Metrics** tab provides insight into your site's traffic. Learn more in our guide on [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics).
 
 ![Site Metrics](../images/dashboard/metrics-graphs.png "Screenshot showing the Metrics tab of a Live site.")
 
@@ -111,7 +111,7 @@ Learn more about the [Pantheon Workflow](/pantheon-workflow).
 
 ### Errors
 
-All fatal PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/php-errors).
+All fatal PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/guides/php/php-errors).
 
 <Alert title="Note" type="info">
 

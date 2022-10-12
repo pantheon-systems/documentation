@@ -52,7 +52,7 @@ Publishing workflow plugins like [PublishPress](https://wordpress.org/plugins/pu
 
 The above options might not work for you if you are dealing with a complex use case where data is changing regularly in the live environment while content is being created in the stage environment.
 
-In this case, you might need to script your own solution. You can [access your database](/mysql-access) and set up a way to export only the new data from one environment and add it to the live database. This is a fairly complex task that might change regularly, depending on your use case.
+In this case, you might need to script your own solution. You can [access your database](/guides/mariadb-mysql/mysql-access) and set up a way to export only the new data from one environment and add it to the live database. This is a fairly complex task that might change regularly, depending on your use case.
 
 There are plugins that can help with these cases. The [WPMerge.io](https://wpmerge.io/) plugin records changes as they happen and then sends them to your production. This workflow doesn’t check for conflicts, which can cause staged changes to overwrite live changes if changes were made in the both staging and live environments.
 

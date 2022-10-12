@@ -50,7 +50,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Alternative Approaches
 
-Running the export from the command line using tools like [Terminus](/terminus), [Drush](/drush), [WP-CLI](/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
+Running the export from the command line using tools like [Terminus](/terminus), [Drush](/guides/drush), [WP-CLI](/guides/wp-cli) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
 
 Often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
 
@@ -93,7 +93,7 @@ Pantheon does not currently support LESS or Sass/Compass CSS preprocessor langua
 
 MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping).
 
-MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Events](https://dev.mysql.com/doc/refman/8.0/en/events-overview.html) are also not supported. As an alternative, you may consider Cron for [WordPress](https://pantheon.io/docs/wordpress-cron) or [Drupal](https://pantheon.io/docs/drupal-cron). 
+MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Events](https://dev.mysql.com/doc/refman/8.0/en/events-overview.html) are also not supported. As an alternative, you may consider Cron for [WordPress](/wordpress-cron) or [Drupal](/drupal-cron).
 
 ## Drupal 7 and Ampersands
 
@@ -233,7 +233,7 @@ Large backups take longer, use more resources, and have a higher likelihood of f
 
 ## Maintenance Mode
 
-Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
+Pantheon may send a [generic Maintenance Mode message](/guides/errors-and-server-responses/5xx-errors) during platform problems; this message cannot be customized.
 
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 
@@ -267,7 +267,7 @@ We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-dru
 
 ## MySQL LOAD DATA LOCAL INFILE
 
-For [security reasons](https://dev.mysql.com/doc/refman/8.0/en/load-data-local-security.html), Pantheon does not support executing MySQL `LOAD DATA LOCAL INFILE` statements from your PHP application. As a workaround, developers can [connect directly to MySQL](/mysql-access) and load files from their local machine:
+For [security reasons](https://dev.mysql.com/doc/refman/8.0/en/load-data-local-security.html), Pantheon does not support executing MySQL `LOAD DATA LOCAL INFILE` statements from your PHP application. As a workaround, developers can [connect directly to MySQL](/guides/mariadb-mysql/mysql-access) and load files from their local machine:
 
 ```bash{promptUser: user}
 MariaDB [pantheon]> LOAD DATA LOCAL INFILE 'mydata.csv' INTO TABLE `pantheon`.`mytable` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';
@@ -308,7 +308,7 @@ Pantheon does not currently support directly connecting to Oracle databases. Cus
 
 ## Pantheon URL Search Engine Indexing
 
-This can occur if hardcoded links are found in the HTML source of your pages. To correct this, WordPress sites should run a [search and replace using WP-CLI](/wp-cli) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli/) blog post to exchange the platform domains with your custom domain, and then [add a redirect to the primary domain](/guides/launch/redirects).
+This can occur if hardcoded links are found in the HTML source of your pages. To correct this, WordPress sites should run a [search and replace using WP-CLI](/guides/wp-cli) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli/) blog post to exchange the platform domains with your custom domain, and then [add a redirect to the primary domain](/guides/launch/redirects).
 
 ## PHP Configuration
 
@@ -332,7 +332,7 @@ You'll need the plugin if you are seeing errors like this:
 Warning: session_start(): user session functions not defined
 ```
 
-[More information on sessions](/wordpress-sessions).
+[More information on sessions](/guides/php/wordpress-sessions).
 
 ## PHP Short Tags
 

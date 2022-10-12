@@ -21,7 +21,7 @@ Failure to run the most up-to-date version of core based on upstreams maintained
 
 ### Use the Pantheon Workflow
 
-Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments, and fully test core updates. Checkout [our guide](/guides/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
+Create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow) to push up to your Test and Live environments, and fully test core updates. Checkout [our guide](/guides/drush/drupal-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
 ### Sample a Few Sites
 

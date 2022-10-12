@@ -102,7 +102,7 @@ Launch Check displays database stats, including:
 - Tables using InnoDB storage engine (suggests a query to run if not)
 
     InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
-    To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/myisam-to-innodb).
+    To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb).
 
 - [Transients](https://developer.wordpress.org/apis/handbook/transients/) and expired transients which are cached data temporarily stored in the `wp_options` table. 
 
@@ -124,7 +124,7 @@ This check will display a list of exploited patterns in code, the file name that
 
 This tells you if Object Caching and Redis are enabled.
 
-If you receive an error message similar to the example below, you'll need to move `object-cache.php` from the `plugin` directory to the `wp-content` directory. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
+If you receive an error message similar to the example below, you'll need to move `object-cache.php` from the `plugin` directory to the `wp-content` directory. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
     
 `Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php`
     

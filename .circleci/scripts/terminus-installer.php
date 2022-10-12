@@ -30,7 +30,7 @@ function downloadTerminus($installdir, $package)
             ]
     ];
     $context  = stream_context_create($opts);
-    $release = file_get_contents("https://api.github.com/repos/pantheon-systems/" . $package . "/releases/tags/2.6.4", false, $context);
+    $release = file_get_contents("https://api.github.com/repos/pantheon-systems/" . $package . "/releases/tags/3.0.8", false, $context);
     $release = json_decode($release);
     $version  = $release->tag_name;
     $url      = $release->assets[0]->browser_download_url;
@@ -40,6 +40,10 @@ function downloadTerminus($installdir, $package)
     echo("Moving to " . $installdir . "...\n");
     exec("sudo chmod ugo+rwx /tmp/");
     exec("sudo chmod ugo+rwx /usr/local/bin/");
+    exec("sudo mkdir -p /root/.npm/_cacache/tmp");
+    exec("sudo chmod -R ugo+rwx /root/.npm/_cacache/tmp/");
+// test remove   exec("sudo mkdir -p /usr/local/lib/node_modules/broken-link-checker");
+//    exec("sudo chmod -R ugo+rwx /usr/local/lib/node_modules/broken-link-checker");
     if(!rename("/tmp/" . $package . ".phar", $installdir . "/" . $package)){
         echo("\n" . $installdir . " requires admin rights to write to...\n");
         exec("sudo mv /tmp/" . $package . ".phar " . $installdir . "/" . $package);

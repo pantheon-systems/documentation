@@ -28,10 +28,10 @@ The steps outlined below do not work for Composer-based sites. If you have need 
 
 To ensure a successful migration, complete the following tasks on the source site before you start:
 
-- Read [Platform Considerations](/platform-considerations)
+- Read [Platform Considerations](/guides/platform-considerations)
 - Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
-- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/php-versions/#configure-php-version).
+- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/guides/php/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/guides/php/php-versions#configure-php-version).
 - Clear all caches
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/ssh-keys)
@@ -383,7 +383,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   while [ 1 ]
   do
-  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/
   if [ "$?" = "0" ] ; then
   echo "rsync completed normally"
   exit
@@ -435,4 +435,4 @@ In this case, you will want to remove `ff = only` from your `.gitconfig` file an
 
 - [Troubleshooting](/guides/guided/troubleshooting) tips
 
-- [Importing Drush Site Archives with Terminus](/drush-import)
+- [Importing Drush Site Archives with Terminus](/guides/drush/drush-import)

@@ -29,7 +29,7 @@ If your website is running slow and you receive the following message in the dat
 
 Check the size of your autoloaded data:
 
-1. Log in to your [MySQL client](/mysql-access).
+1. Log in to your [MySQL client](/guides/mariadb-mysql/mysql-access).
 
 1. Select your database (by default `pantheon`) and then click the `SQL` tab.
 
@@ -84,7 +84,7 @@ Run the following code to clean up your transient data:
 
  ### Avoid Using Transient Data
 
- You can use Pantheon's [Object Cache](/object-cache) to minimize the use of transient data inside the `wp_options` table.
+ You can use Pantheon's [Object Cache](/guides/object-cache) to minimize the use of transient data inside the `wp_options` table.
 
  ### Use Pantheon's Professional Services
 

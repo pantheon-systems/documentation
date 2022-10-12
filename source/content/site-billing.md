@@ -81,7 +81,7 @@ Select the card you want the site to use as the new payment method _after_ it ha
 
 ### Do Not Bill This Site to a Card
 
-A credit card can only be removed from a site when that site is set to [bill another card](#bill-this-site-to-a-new-card) or when the site is [downgraded to Sandbox](/site-plan/#cancel-current-plan).
+A credit card can only be removed from a site when that site is set to [bill another card](#bill-this-site-to-a-new-card) or when the site is [downgraded to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
 
 After downgrading from a paid plan to Sandbox, remove the card as a payment method for the site:
 
@@ -126,7 +126,7 @@ If you are the billing contact for an online site plan, check your spam folder, 
 
 ## More Resources
 
-- [Account Billing in the User Dashboard](/account-billing)
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
 - [Traffic Limits and Overages](/traffic-limits)
 - [Site Plans FAQs](/site-plans-faq)

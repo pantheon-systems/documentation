@@ -18,9 +18,9 @@ This section provides information on how to [create your Live environment](/guid
 
 1. Learn how to use your [User Dashboard](/guides/quickstart/user-dashboard/).
 
-1. Learn how to use your [Site Dashboard](/guides/quickstart/site-dashboard/).
+1. Learn how to use your [Site Dashboard](/guides/quickstart/workflow/).
 
-1. Learn how to [Create Test and Live](/guides/quickstart/site-dashboard/) environments.
+1. Learn how to [Create Test and Live](/guides/quickstart/workflow/) environments.
 
 
 ## More Resources

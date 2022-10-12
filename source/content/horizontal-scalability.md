@@ -27,7 +27,7 @@ Pantheon eliminates these risks entirely by running sites on a web-scale infrast
 
 ## Container Architecture
 
-Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Object Cache](/object-cache) and/or [Pantheon Search](/solr).
+Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Object Cache](/guides/object-cache) and/or [Pantheon Search](/solr).
 
 For more information on containers, see [All About Application Containers](/application-containers).
 
@@ -35,7 +35,7 @@ For more information on containers, see [All About Application Containers](/appl
 
 Add containers by upgrading the site's plan within the Site Dashboard to a Performance Medium plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
 
-For more information about your plan changes, see [Manage Plans in the Site Dashboard](/site-plan/#upgrades).
+For more information about your plan changes, see [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan/#upgrades).
 ## Handle Traffic Spikes
 
 When preparing for traffic spikes manually (not on Pantheon), you need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs).

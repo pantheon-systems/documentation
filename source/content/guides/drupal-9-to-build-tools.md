@@ -244,7 +244,7 @@ Update your `settings.php` file with a trusted host setting, if you receive the 
 The provided host name is not valid for this server
 ```
 
-Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
 ### Working With Dependency Versions
 

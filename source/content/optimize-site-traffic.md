@@ -7,7 +7,7 @@ contributors: [edwardangert]
 reviewed: "2022-08-09"
 ---
 
-[Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
+[Traffic Limits and Overages](/traffic-limits) explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/guides/legacy-dashboard/metrics). This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
 
 ## Review the NGINX Access Log
 
@@ -154,9 +154,7 @@ mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 
 <Tab title="WordPress" id="wptab">
 
-Install and use the following WordPress plugin:
-
-- [WP Cerber Security](https://wordpress.org/plugins/wp-cerber/)
+You can review a [list of plugins on wordpress.org](https://wordpress.org/plugins/) to find the right plugin for your setup. Consult [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) before you install a new plugin.
 
 </Tab>
 

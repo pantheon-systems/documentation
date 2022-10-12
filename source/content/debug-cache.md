@@ -138,4 +138,4 @@ via: 1.1 varnish
 
 Once you've found the source of the session, you'll want to remove or deactivate whatever sets it. Storing data about an anonymous visitor can be handled more efficiently in the user's browser; a cache-varying cookie or utilizing [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) is likely a better choice.
 
-For more information, see [WordPress and PHP Sessions](/wordpress-sessions#varnish-or-caching-is-not-working-when-a-plugin-or-theme-that-uses-_sessions-is-enabled).
+For more information, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions#varnish-or-caching-is-not-working-when-a-plugin-or-theme-that-uses-_sessions-is-enabled).

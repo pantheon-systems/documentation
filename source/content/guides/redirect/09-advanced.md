@@ -14,11 +14,11 @@ anchorid: advanced
 
 Basic domain and HTTPS redirection can be handled by the [Primary Domain](/guides/redirect#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
 
-Redirect logic should be added to `wp-config.php` for [WordPress](/wp-config-php) sites, and `settings.php` for [Drupal](/settings-php) sites.
+Redirect logic should be added to `wp-config.php` for [WordPress](/guides/php/wp-config-php) sites, and `settings.php` for [Drupal](/guides/php/settings-php) sites.
 
 <Alert type="danger" title="Warning">
 
-With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/guides/redirect#update-or-remove-primary-domain) the Primary Domain).
+With a Primary Domain set at the platform level, all other domains (except the [platform domain](/guides/domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/guides/redirect#update-or-remove-primary-domain) the Primary Domain).
 
 </Alert>
 
@@ -150,7 +150,7 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 
 <Alert type="info" title="Note">
 
-If you've configured your [primary domain at the platform level](/guides/redirect#set-the-primary-domain) and can [add these subdomains](/domains#custom-domains) to the same environment, redirection will happen automatically.
+If you've configured your [primary domain at the platform level](/guides/redirect#set-the-primary-domain) and can [add these subdomains](/guides/domains) to the same environment, redirection will happen automatically.
 
 </Alert>
 
@@ -253,7 +253,7 @@ Alternatively, you can remove the file entirely from the old location. In this c
 
 Pantheon uses nginx for HTTP/HTTPS instead of Apache. You can recreate Apache `mod_redirects` and `mod_rewrites` on the Pantheon platform using the code in the [Pantheon htacess Rewrites](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) repository.
 
-The file must be included at the very beginning of your Drupal `settings.php` or Wordpress `wp-config.php` file. The code will perform rewrites and redirects prior to full Wordpress or Drupal bootstrap.
+The file must be included at the very beginning of your Drupal `settings.php` or WordPress `wp-config.php` file. The code will perform rewrites and redirects prior to full WordPress or Drupal bootstrap.
 
 ## Restrict Access to Paths Based on IP
 

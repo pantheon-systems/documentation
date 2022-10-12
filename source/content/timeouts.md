@@ -51,7 +51,7 @@ If the request passes through port `80` and `443` it will timeout at 59 seconds.
 
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/terminus). Most slow cron executions are due to PHP errors or a slow external service. Best practice is to identify and fix the root cause. Check [log files](/logs) and review [PHP errors and exceptions](/php-errors) for clues.
+Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/terminus). Most slow cron executions are due to PHP errors or a slow external service. Best practice is to identify and fix the root cause. Check [log files](/logs) and review [PHP errors and exceptions](/guides/php/php-errors) for clues.
 
 ### What if I run into a timeout when using the Drupal Migrate UI?
 
@@ -79,7 +79,7 @@ Agencies that frequently deploy sites using a common set of themes and plugins s
 
 ## More Resources
 
-- [Platform Considerations](/platform-considerations)
-- [Errors and Server Responses](/errors-and-server-responses)
+- [Platform Considerations](/guides/platform-considerations)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
 - [Modules and Plugins With Known Issues](/modules-plugins-known-issues)
 - [Database Connection Errors](/database-connection-errors)

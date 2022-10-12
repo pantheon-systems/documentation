@@ -67,10 +67,10 @@ Yes. For example, multiple devices on the same home network visiting your site w
 
 ### Can I check metrics from the command line with Terminus?
 
-Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/terminus/install) or update to the [current release](/terminus/updates#updates) for access to the `metrics` command.
+Yes! Access to metrics via the Terminus [`env:metrics`](/terminus/commands/env-metrics) command. [Install Terminus](/terminus/install) or update to the [current release](/terminus/updates#updates) for access to the `env:metrics` command.
 
 ## More Resources
 
 - [Traffic Limits and Overages](/traffic-limits)
-- [Manage Plans in the Site Dashboard](/site-plan)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
 - [Site Plans FAQs](/site-plans-faq)

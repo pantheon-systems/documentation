@@ -51,11 +51,6 @@ The benefits of Rate Limiting include:
 
 - **Custom Responses** - Select from actions that allow you to block requests or log them, and configure custom responses for your policy.
 
-<Alert title="Note"  type="info" >
-
-This feature is currently in Early Access. Reach out to your account manager for more information.
-
-</Alert>
 
 ## More Resources
 

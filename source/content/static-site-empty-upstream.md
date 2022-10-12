@@ -23,7 +23,7 @@ Commonly, an empty Upstream is used as part of a [Build Tools](/guides/build-too
 
 <Youtube src="PTVqXxwOJ4Q" title="Pantheon Static Site and Empty Upstreams" />
 
-There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/create-sites) and via [Terminus](/terminus).
+There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) and via [Terminus](/terminus).
 
 - Via the Pantheon Dashboard:
 

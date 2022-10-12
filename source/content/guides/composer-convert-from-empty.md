@@ -39,9 +39,9 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep t
 
 - This guide is written for users with access to Pantheon's [Multidev](/guides/multidev) feature. Pantheon support is not available to users who avoid the Multidev steps.
 
-- The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+- The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
-- Source site may or may not be using a [nested docroot](https://pantheon.io/docs/nested-docroot). If using it, you should prepend the paths in this document with "web" as needed.
+- Source site may or may not be using a [nested docroot](/nested-docroot). If using it, you should prepend the paths in this document with "web" as needed.
 
 <Alert title="Note" type="info">
 
@@ -61,7 +61,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep t
 
 #### Provided host name not valid
 
-If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
 ## Change Upstreams
 

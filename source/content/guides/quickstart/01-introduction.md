@@ -26,7 +26,7 @@ Welcome! This guide is designed to get you started on Pantheon.
   Pantheon's Developer Advocacy team.
 </Callout>
 
-In this guide, you'll learn how to:
+In this guide, you will:
 
 - Create a Sandbox site on Pantheon
 - Deploy Drupal or WordPress to the site
@@ -41,4 +41,4 @@ Are you an agency? Do you build sites for others? If so, check **Are you an agen
 
 </Alert>
 
-You should now have a Pantheon User Account. When you're ready, you may continue to the next lesson.
+You should now have a Pantheon User Account. When you're ready, continue to the next lesson.

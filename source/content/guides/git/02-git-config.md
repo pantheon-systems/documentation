@@ -16,7 +16,7 @@ This section provides steps for installing and configuring Git to work with your
 
 Confirm that you have:
 
-- [Created a site](/create-sites) on Pantheon
+- [Created a site](/guides/legacy-dashboard/create-sites) on Pantheon
 - Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account
 
 ## Install Git

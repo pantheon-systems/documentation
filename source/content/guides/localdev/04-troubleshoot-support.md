@@ -30,7 +30,7 @@ Review the [support ticket best practices](/guides/support/support-ticket/) befo
 
 ## Provide Feedback or Feature Requests
 
-Please provide feedback by submitting an issue to the [GitHub repository](https://github.com/pantheon-systems/localdev-issues/issues) or by joining the [Pantheon community](https://pantheon.io/docs/pantheon-community#joining-the-community).
+Please provide feedback by submitting an issue to the [GitHub repository](https://github.com/pantheon-systems/localdev-issues/issues) or by joining the [Pantheon community](/pantheon-community#joining-the-community).
 
 ## Troubleshooting
 
@@ -59,7 +59,7 @@ Checking db pull for expected tables...
 Database pull failed...
 ```
 
-See step 9 of [Create a Site](/create-sites#create-a-site).
+See step 9 of [Create a Site](/guides/legacy-dashboard/create-sites#create-a-site).
 
 ### Log out and Reset to Defaults
 
@@ -83,7 +83,7 @@ At this time, WordPress Site Network (also known as WordPress Multisite) is supp
 
 ### How do you configure PHP versions for sites in the Localdev environment?
 
-Localdev will [respect the changes made to your local `pantheon.yml`](/php-versions#configure-php-version) file.
+Localdev will [respect the changes made to your local `pantheon.yml`](/guides/php/php-versions#configure-php-version) file.
 
 A forced rebuild is required for changes in `pantheon.yml` to take effect:
 

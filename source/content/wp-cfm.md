@@ -104,7 +104,7 @@ To create a bundle:
 
 ## Automatically Import WP-CFM Configuration Settings into a Cloned Database
 
-You can automatically import your WP-CFM configuration settings into a cloned database if you are using Quicksilver. See [Import WP-CFM Configuration Settings into a Cloned Database](/quicksilver#import-wp-cfm-configuration-settings-into-a-cloned-database) for more details.
+You can automatically import your WP-CFM configuration settings into a cloned database if you are using Quicksilver. Consult the [Quicksilver guide](/guides/quicksilver) for more details.
 
 ## Deploy Configuration: Pull
 
@@ -175,7 +175,7 @@ Yes. For the Multidev to appear as a config option, you will need hook into the 
 
 ### What's not tracked?
 
-Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/wp-config-php/#frequently-asked-questions).
+Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/guides/php/wp-config-php/#frequently-asked-questions).
 
 ### Why aren't my site navigation menus tracked?
 

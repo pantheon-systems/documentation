@@ -8,7 +8,7 @@ This article covers the most common causes for performance problems, demonstrate
 
 ## PHP Errors Slow Execution
 
-An often ignored cause of bad performance is [PHP errors within site code](/php-errors), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
+An often ignored cause of bad performance is [PHP errors within site code](/guides/php/php-errors), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
 
 Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
 
@@ -66,7 +66,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.
 
-One of the services Pantheon offers is an [Object Cache backend](/object-cache), which is a key-value store and is optimized for this type of work.​
+One of the services Pantheon offers is an [Object Cache backend](/guides/object-cache), which is a key-value store and is optimized for this type of work.​
 
 ### WordPress Caching Note
 There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
@@ -80,14 +80,14 @@ There are a large number of caches involved in every single request, including:
 
 - [Pantheon Global CDN](/guides/global-cdn/global-cdn-caching) - Spread out across multiple servers, and the cache is not shared between servers.
 - [APCu](/apcu) - PHP has its own user-level cache, which is not shared between application containers.
-- [Drupal](https://drupal.org/node/326504) and [Redis](/object-cache) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
+- [Drupal](https://drupal.org/node/326504) and [Redis](/guides/object-cache) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
 Of course, too much site traffic can be a problem if you just don't have enough resources.
 
 If your site is already optimized to the best of your knowledge, including eliminating PHP errors, leveraging caching like Redis and caching things like blocks and views, and your database response time is responding quickly to a reasonable amount of queries, then you might be a victim of your own success.
 
-If you've reached this point, it's probably time to consider [upgrading your site's plan](/site-plan). We have a number of self-service options for scaling to your needs, but if you've already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
+If you've reached this point, it's probably time to consider [upgrading your site's plan](/guides/legacy-dashboard/site-plan). We have a number of self-service options for scaling to your needs, but if you've already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
 
 ## Running Cron Over Web Traffic
 
@@ -110,8 +110,8 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 
 - Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
 - Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/) or [XHProf](http://php.net/manual/en/book.xhprof.php)) or to help refactor code that could be leaking memory
-- Enabling [Redis](/object-cache) could boost site performance by providing an in-memory backend caching
-- [Update PHP version](/php-versions)
+- Enabling [Redis](/guides/object-cache) could boost site performance by providing an in-memory backend caching
+- [Update PHP version](/guides/php/php-versions)
 - In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
 
 Please note that memory issues caused by custom code fall outside our [scope of support](/guides/support).

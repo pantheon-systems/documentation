@@ -16,7 +16,7 @@ Before you can migrate a WordPress Site Network, you must be a contract customer
 
 * [Download](https://git-scm.com/downloads) and install [Git](/guides/git/git-config)
 * [Rsync or SFTP Client](/rsync-and-sftp)
-* [MySQL Client](/mysql-access)
+* [MySQL Client](/guides/mariadb-mysql/mysql-access)
 
 ## Import the Codebase
 **Codebase** - all executable code, including core, plugins, themes, and libraries; stored in the `~/code` directory.
@@ -107,7 +107,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
 
 **Files** - Any content uploaded through the WordPress Dashboard. These files should be exclusively stored within `wp-content/uploads`, which is a symlink to the `~/files` directory.
 
-This directory is a shared filesystem and is stored separately from the site's codebase. If your WordPress Site Network stores uploads in another directory, you must reconcile the archive as part of the import process. For information on highly populated directories, see [Platform Considerations](/platform-considerations/#highly-populated-directories).
+This directory is a shared filesystem and is stored separately from the site's codebase. If your WordPress Site Network stores uploads in another directory, you must reconcile the archive as part of the import process. For information on highly populated directories, see [Platform Considerations](/guides/platform-considerations/files-directories#highly-populated-directories).
 
 File archives can be imported via the Site Dashboard on **Workflow** > **Import**; however, the archive must be within the size limits for the upload method in use (100MB for file uploads, 500MB for URL uploads).
 
@@ -192,6 +192,6 @@ When you re-import the database with current content (prior to going live on Pan
 
 ## More Resources
 
-* [Migrate Sites to Pantheon](/guides/guided/
+* [Migrate Sites to Pantheon](/guides/guided/)
 * [Guided WordPress Migrations (video)](/videos/migrate-wordpress)
 * [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check)

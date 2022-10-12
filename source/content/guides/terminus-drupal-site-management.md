@@ -96,7 +96,7 @@ Now that the site is created, the next step is to run a Drush install command to
   
   If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](/ssh-keys#control-path-error).
 
-  If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/settings-php) file.
+  If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/guides/php/settings-php) file.
 
 1. Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
 
@@ -221,10 +221,10 @@ terminus env:list <site>
 You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. 
 
 ##  Next Steps
-- Learn more about [Drush](/drush).
+- Learn more about [Drush](/guides/drush).
 
 - After you've mastered Terminus, take it a step further with [Continuous Integration](/continuous-integration).
 
 ## More Resources
 
-- [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drupal-commandline)
+- [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline)

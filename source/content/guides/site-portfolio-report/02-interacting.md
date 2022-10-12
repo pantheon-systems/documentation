@@ -66,7 +66,7 @@ You can increase the number of rows shown in each of the three Breakdown tables.
 
 ## Navigate to the Organization Dashboard from the Site Portfolio Report
 
-Click the link under the Customer Organization heading at the top of the report to access your [Organization Dashboard](/organization-dashboard).
+Click the link under the Customer Organization heading at the top of the report to access your [Organization Dashboard](/guides/legacy-dashboard/org-dashboard).
 
 ## Collapse the Breakdown Tables
 

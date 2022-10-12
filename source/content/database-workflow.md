@@ -4,7 +4,7 @@ description: Learn about the database that runs in your Pantheon Drupal or WordP
 categories: [platform]
 tags: [dashboard, database, workflow]
 ---
-The Pantheon platform provides each site environment with a dedicated MySQL container running [MariaDB](https://en.wikipedia.org/wiki/MariaDB) that can be maintained remotely or locally. For a comprehensive list of MySQL settings, [access your database](/mysql-access/#database-connection-information) and use the [SHOW VARIABLES](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) statement.
+The Pantheon platform provides each site environment with a dedicated MySQL container running [MariaDB](https://en.wikipedia.org/wiki/MariaDB) that can be maintained remotely or locally. For a comprehensive list of MySQL settings, [access your database](/guides/mariadb-mysql/mysql-access/#database-connection-information) and use the [SHOW VARIABLES](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) statement.
 
 Using the tools in the Database / Files tab, you can overwrite the databases on your site's Dev or Test environment with the database on your Live environment, allowing you to pull content from Live in to other environments.
 ![Workflow Tool](../images/dashboard/interface-workflow-tool.png)
@@ -20,7 +20,7 @@ You can use any number of MySQL clients such as [MySQL Workbench](https://dev.my
 and [manage configurations](/pantheon-workflow/#configuration-management) as needed.
 
 ## Cloning the Database
-Cloning relies on mysqldump, which needs a point-in-time snapshot. We recommend using the `--single-transaction` flag, which will use transactions to get a point-in-time snapshot without locking the DB. However, only the InnoDB database engine supports transactions. On MyISAM, the table needs to be locked. On small DBs this is not an issue, but could be for larger DBs. We also use the `--quick option`, which reduces the time it would take for large tables. For more information, see [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb) and [Run MySQL Dump Without Locking Tables](https://stackoverflow.com/questions/104612/run-mysqldump-without-locking-tables).
+Cloning relies on mysqldump, which needs a point-in-time snapshot. We recommend using the `--single-transaction` flag, which will use transactions to get a point-in-time snapshot without locking the DB. However, only the InnoDB database engine supports transactions. On MyISAM, the table needs to be locked. On small DBs this is not an issue, but could be for larger DBs. We also use the `--quick option`, which reduces the time it would take for large tables. For more information, see [Converting MySQL Tables From MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb) and [Run MySQL Dump Without Locking Tables](https://stackoverflow.com/questions/104612/run-mysqldump-without-locking-tables).
 
 ## Wipe Database and Files
 Use this tool if you need to completely wipe your database and files for a single environment. Wiping completely resets the database and files, and you will lose all content for that specific environment. For example, if you wipe the Dev environment, Test and Live are not affected. You will then need to import the database and files from a backup, clone them from another environment, or re-install Drupal or WordPress for that environment.
@@ -72,6 +72,6 @@ Host *.drush.in
 
 ## More Resources
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
-- [MySQL Slow Log](/mysql-slow-log)
-- [Converting MySQL Tables from MyISAM to InnoDB](/myisam-to-innodb)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [Converting MySQL Tables from MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb)
 - [Database Connection Errors](/database-connection-errors)

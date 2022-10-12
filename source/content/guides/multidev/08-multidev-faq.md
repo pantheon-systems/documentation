@@ -85,7 +85,7 @@ At this time, Multidev on Pantheon will only work with the Pantheon hosted code 
 
 ## Is there a public API available for post-commit hooks or other integrations with external project management systems?
 
-No, but developers can use [Quicksilver hooks](/quicksilver#hooks) to integrate Multidev creation and other workflows with external services.
+No, but developers can use [Quicksilver hooks](/guides/quicksilver/hooks) to integrate Multidev creation and other workflows with external services.
 
 ## Can I backup and restore a branch environment?
 
@@ -97,11 +97,11 @@ If the organization changes to a plan that doesn't feature Multidev, you will st
 
 ## How long will the Multidev stay active?
 
-Multidev environments spin down after approximately 60 minutes of idle time. Refer to the [Idle Containers](https://pantheon.io/docs/application-containers#idle-containers) documentation for more information.
+Multidev environments spin down after approximately 60 minutes of idle time. Refer to the [Idle Containers](/application-containers#idle-containers) documentation for more information.
 
 ## Creating a Multidev Failed - Specified Key Was Too Long
 
-Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb).
+Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/guides/mariadb-mysql/myisam-to-innodb).
 
 ## More Resources
 

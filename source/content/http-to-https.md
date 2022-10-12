@@ -17,7 +17,7 @@ The following describes how to switch WordPress and Drupal sites over from HTTP 
 Be sure that you have:
 
 - A [Paid Pantheon plan](/guides/launch/plans)
-- A [Custom Domain](/domains#custom-domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/domains#primary-domain), with DNS properly configured.
+- A [Custom Domain](/guides/domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/guides/domains), with DNS properly configured.
 - HTTPS provisioned, indicated by the following notice:
 
   <Alert title="HTTPS" type="dash-success">
@@ -113,7 +113,7 @@ This will not work for Multisite installations, and can result in data loss on s
 
 <Tab title="Drupal" id="tab-2-id">
 
-  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/drush/#add-custom-drush-commands).
+  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/guides/drush/drush-commands#add-custom-drush-commands).
 
 </Tab>
 
@@ -121,7 +121,7 @@ This will not work for Multisite installations, and can result in data loss on s
 
 ## Clear Caches
 
-Clear Drupal and WordPress object caches in the [database and/or in Object Cache](/object-cache#clear-cache) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
+Clear Drupal and WordPress object caches in the [database and/or in Object Cache](/guides/object-cache/redis-command-line#clear-cache) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
 At this point, all visitors to the site should be able to securely access all pages over HTTPS with no browser warnings.
 
@@ -145,4 +145,4 @@ If your site configuration prevents you from setting the primary domain from the
 
 </Accordion>
 
-Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains#-see-more-redirect-scenarios).
+Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/guides/domains).

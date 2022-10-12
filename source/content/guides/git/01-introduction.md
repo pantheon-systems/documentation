@@ -15,7 +15,7 @@ anchorid: git
 
 Pantheon provides industry standard version control with [Git](https://git-scm.com/). Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably. We also give you the power of feature branching through [Multidev](/guides/multidev).
 
-Git is an open source version control system. It’s fast, secure, and reliable, and supports both simple versioning or complex, distributed, non-linear workflows for hundreds of contributors.
+<dfn id="git">Git</dfn> is an open source version control system. It’s fast, secure, and reliable, and supports both simple versioning or complex, distributed, non-linear workflows for hundreds of contributors.
 
 Every Pantheon website comes with a preconfigured container that stores your Git repository so your code and history are always available.
 

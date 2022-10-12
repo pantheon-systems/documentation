@@ -123,7 +123,7 @@ Pantheon provides default `.gitignore` files in the base of each site's code rep
 
 ## Optimize Performance
 
-There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/php-slow-log).
+There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/guides/php/php-slow-log).
 
 Learn how to use [bots and indexing](/bots-and-indexing) in a way that does not negatively impact performance. 
 
@@ -136,7 +136,7 @@ You can also integrate with external Solr search indexes with services like [Ope
 - [Hot Fixes](/hotfixes)
 - [What is the "pantheon_api.module"](/modules#pantheon-module-drupal-7)
 - [Email on Pantheon](/email)
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port)
 - [LDAP and LDAPS](/ldap-and-ldaps)
 - [Secure Integration](/guides/secure-development/secure-integration)

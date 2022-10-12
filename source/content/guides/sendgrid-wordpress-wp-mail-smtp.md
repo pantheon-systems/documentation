@@ -30,7 +30,7 @@ This guide assumes a pre-existing configuration of:
 
 ## Install the WP Mail SMTP Plugin
 
-There are several ways to install and manage WordPress plugins on Pantheon. This guide will cover installation from the WordPress Admin Dashboard, and from the command line using [Terminus](/terminus) and [WP-CLI](/wp-cli).
+There are several ways to install and manage WordPress plugins on Pantheon. This guide will cover installation from the WordPress Admin Dashboard, and from the command line using [Terminus](/terminus) and [WP-CLI](/guides/wp-cli).
 
 Each method requires first setting your working environment (Dev or a Multidev environment) to [SFTP mode](/sftp#sftp-mode).
 

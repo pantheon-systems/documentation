@@ -25,7 +25,7 @@ If so, you consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus needs to be authenticated in order to execute most commands. Before running any script you must ensure Terminus is authenticated with a [machine token](/terminus/install#machine-token) that has the proper permissions
+Terminus must be authenticated before you can execute most commands. Before running any script you must ensure Terminus is authenticated with a [machine token](/terminus/install#machine-token) that has the proper permissions
 
 ## Example Repositories
 
@@ -109,7 +109,7 @@ while read -r PANTHEON_SITE_NAME; do
 	# Check if the site is frozen
 	IS_FROZEN="$(terminus site:info $PANTHEON_SITE_NAME --field=frozen)"
 	# If the site is frozen
-    if [[ "true" == "${IS_FROZEN}" ]]
+    if [[ "1" == "${IS_FROZEN}" ]]
     then
 		# The PHP version is unknown
 		PHP_VERSION='FROZEN'

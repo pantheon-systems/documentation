@@ -62,7 +62,7 @@ For installation details, see [Configuring Environment Indicators](/guides/envir
 
 ## [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)
 
-[WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)resolves errors with code (themes, modules or plugins) that rely on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/wordpress-sessions/#troubleshooting-session-errors).
+[WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)resolves errors with code (themes, modules or plugins) that rely on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions/#troubleshooting-session-errors).
 
 ### Troubleshooting WP Native PHP Sessions
 
@@ -83,7 +83,7 @@ provides support for SAML Authentication. The plugin comes bundled with the OneL
 
 ## WP Redis
 
-[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
+[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
 
 ## WP Solr
 

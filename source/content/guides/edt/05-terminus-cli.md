@@ -34,8 +34,8 @@ All links from the video are provided below.
  - [Terminus Manual: Install](/terminus/install)
  - [Terminus Manual: Example Usage](/terminus/examples)
  - [Terminus Manual: Command Reference](/terminus/commands)
- - [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wordpress-commandline)
- - [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drupal-commandline)
+ - [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wp-cli)
+ - [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline)
 
 **CHALLENGE:**
 

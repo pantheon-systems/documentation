@@ -16,15 +16,13 @@ This section provides information on editing an existing Custom Upstream.
 
 Follow the steps below if you want to change the name or description of your Custom Upstream.
 
-1. Access the **Organization Dashboard** from your Admin dashboard.
+1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
 
-1. Select **Debug** > click the **<span class="upstreams-regular"></span> Upstreams** tab.
+1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
-1. Click **Edit** next to the existing upstream requiring an update.
+1. Click **Settings** next to the existing upstream requiring an update.
 
-1. Make desired changes > click **Submit**.
-
-1. Update any sites with the upstream so they receive the new authentication.
+1. Make desired changes > click **Update**.
 
 ## Change Custom Upstream Repository URL or Password
 

@@ -30,7 +30,7 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 - [WebPageTest](https://www.webpagetest.org)
 - [SiteSpeed](https://www.sitespeed.io/)
 - Guide: [Pantheon Launch Essentials](/going-live)
-- Doc: [Platform and Custom Domains](/domains)
+- Doc: [Platform and Custom Domains](/guides/domains)
 - Doc: [Manage Plans in the Site Dashboard](/select-plan)
 - Doc: [Pantheon Global CDN](/guides/global-cdn)
 - Doc: [HTTPS on Pantheon's Global CDN](/free-https)

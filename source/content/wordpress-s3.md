@@ -8,7 +8,7 @@ contributors: [sarahg]
 date: 7/7/2021
 ---
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations/#highly-populated-directories) or [serving large files](/platform-considerations/#large-files).
+Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/guides/platform-considerations/files-directories#highly-populated-directories) or [serving large files](/guides/platform-considerations/files-directories#large-files).
 
 ## Before You Begin
 
@@ -60,7 +60,7 @@ If you do not have an existing bucket for your site, create one:
 
 You will need to install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
 
-WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/wp-cli) for setup and migration.
+WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
 
 ### Install and Deploy S3 Uploads
 

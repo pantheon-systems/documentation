@@ -58,7 +58,7 @@ Human readable, such as "Your Awesome Site", entered during site creation and di
 
 <dd>
 
-Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/domains/#platform-domains).
+Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/guides/domains).
 
 </dd>
 
@@ -78,6 +78,18 @@ You can also find your site's machine name using the Terminus command `site:info
 
 </Accordion>
 
+### Automatic Site and Environment Detection
+
+Terminus automatically detects the site and environment if a `<site>.<env>` parameter is not provided to a command that requests one. Terminus detects and operates from the local copy and current branch of the Pantheon site checked out at the current working directory. 
+
+```bash
+git clone ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git mysite
+cd mysite
+terminus env:info
+```
+
+The example above is equivalent to `terminus env:info mysite.dev`.
+
 ### Drush and WP-CLI
 
 Pantheon supports running [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
@@ -86,7 +98,7 @@ Start with the [basic command structure described above](#command-structure). Th
 
 ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
 
-For more information, see [Drupal Drush Command-Line Utility](/drush) and [Using WP-CLI On The Pantheon Platform](/wp-cli).
+For more information, see [Drupal Drush Command-Line Utility](/guides/drush) and [Using WP-CLI On The Pantheon Platform](/guides/wp-cli).
 
 ## Applying Updates
 
@@ -135,7 +147,7 @@ terminus upstream:updates:apply my-site
 
 ### Module, Theme, and Plugin Updates
 
-Apply updates to all contributed modules, themes, and plugins via Terminus by setting the environment's connection mode to SFTP and invoking [Drush](/drush) (Drupal) or [WP-CLI](/wp-cli) (WordPress) update commands. You can then use Terminus to commit updates to a development environment on Pantheon.
+Apply updates to all contributed modules, themes, and plugins via Terminus by setting the environment's connection mode to SFTP and invoking [Drush](/guides/drush) (Drupal) or [WP-CLI](/guides/wp-cli) (WordPress) update commands. You can then use Terminus to commit updates to a development environment on Pantheon.
 
 <TabList>
 

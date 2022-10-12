@@ -15,7 +15,7 @@ This section provides information on how to use database credentials for Object 
 
 You should never copy and paste credentials from your Dashboard into any of your site's code.
 
-Database credentials, [Object Cache](/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
+Database credentials, [Object Cache](/guides/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
 ```php
 <?php var_dump($_ENV); ?>
@@ -41,7 +41,7 @@ The code you need to load this configuration and boot your app should already be
 
 <Alert title="Warning" type="danger">
 
-Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/settings-php) for details.
+Unless you're implementing Domain Access, using something other than the standard bootstrap process, or performing Drupal core development, you won't need to manually read the environment configuration. See [configuring settings.php](/guides/php/settings-php) for details.
 
 </Alert>
 
@@ -54,7 +54,7 @@ extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/object-cache#enable-object-cache) in `settings.php`. For example, in Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/guides/object-cache/enable-object-cache) in `settings.php`. For example, in Drupal 7:
 
 ```php
 // All Pantheon Environments.
@@ -64,7 +64,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
   extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
   // All $conf variables and Redis configuration go after extract()
 
-  // If using Redis add appropriate settings per /docs/object-cache/
+  // If using Redis add appropriate settings per /docs/guides/object-cache/
 
   // Add other $conf variables, for example for Fast 404 pages
 
@@ -85,7 +85,7 @@ Adding this snippet may cause the Status tab to show that Fast 404 pages are not
 
 Pantheon's default `wp-config.php` includes code to read from the `$_ENV` superglobal so no additional configuration should be required.
 
-Refer to [configuring wp-config.php](/wp-config-php) for more information.
+Refer to [configuring wp-config.php](/guides/php/wp-config-php) for more information.
 
 ## Hard-coded Directory References and $_ENV\['HOME']
 
@@ -97,7 +97,7 @@ $_ENV['HOME']
 
 ### Using $_SERVER
 
-When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (for example, [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains#primary-domain).
+When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (for example, [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/guides/domains).
 
 For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/server_name-and-server_port).
 

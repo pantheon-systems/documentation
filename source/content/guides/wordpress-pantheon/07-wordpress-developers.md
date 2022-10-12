@@ -16,7 +16,7 @@ Review the resources in this section to learn how to develop your WordPress Pant
 
 ## Create a WordPress Site from the Command Line with Terminus and WP-CLI
 
-View our [WordPress Command Line](/guides/wordpress-commandline) guide for steps to create and develop your WordPress site using your command line interface and WP-CLI. 
+View our [WordPress Command Line](/guides/wp-cli) guide for steps to create and develop your WordPress site using your command line interface and WP-CLI. 
 
 ## Run WordPress as a Backend API
 
@@ -48,11 +48,11 @@ Review our [Managing Custom Code for WordPress with Plugins](/wordpress-custom-c
 
 ## AWS S3 Setup for WordPress
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations#highly-populated-directories) or serving [large files](/platform-considerations#large-files).
+Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/guides/platform-considerations/files-directories#highly-populated-directories) or serving [large files](/guides/platform-considerations/files-directories#large-files).
 
 ## WordPress and PHP Sessions
 
-WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7) by design. Every "user state" is managed via cookies. However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the WordPress Native PHP Sessions plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin. Review our [WordPress and PHP Sessions](/wordpress-sessions) doc for more information about working with PHP Sessions in WordPress.
+WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-does-wordpress-handle-sessions-and-session-variables/?replies=7) by design. Every "user state" is managed via cookies. However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` superglobal. On Pantheon, support for sessions requires the WordPress Native PHP Sessions plugin which we maintain. Sites that need to utilize PHP Sessions should install this plugin. Review [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information about working with PHP Sessions in WordPress.
 
 ## Configure PhpStorm to Create WordPress Plugins on Pantheon
 

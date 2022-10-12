@@ -13,7 +13,7 @@ This article covers some best practices and recommendations for building a Drupa
 
 ## Initial Site Setup
 
-After you've [created your site on Pantheon](/create-sites), you'll need to set up your local environment.
+After you've [created your site on Pantheon](/guides/legacy-dashboard/create-sites), you'll need to set up your local environment.
 
 ### Clone the Code Repository
 
@@ -45,7 +45,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 1. Choose the Drupal major version.
 
-1. Configure the correct version of PHP by going to **Preferences**  > **Languages & Frameworks** > [**PHP**](https://www.jetbrains.com/help/phpstorm/php.html), and choose PHP Language Level 5.3.
+1. Configure the correct version of PHP by going to **Preferences**  > **Languages & Frameworks** > [**PHP**](https://www.jetbrains.com/help/phpstorm/php.html), and choose PHP Language Level with the appropriate version of PHP (e.g. 8.0).
 
 ### Drush Support
 

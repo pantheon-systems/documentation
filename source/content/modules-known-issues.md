@@ -27,7 +27,7 @@ ___
 
 <ReviewDate date="2020-02-10" />
 
-**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. Refer to the [Platform Considerations](/platform-considerations/#nginx.conf) documentation and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182) for more information.
+**Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. Refer to the [Platform Considerations](/guides/platform-considerations/platform-site-info/#nginx.conf) documentation and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182) for more information.
 ___
 
 ## [Apache Solr Multilingual](https://www.drupal.org/project/apachesolr_multilingual)
@@ -132,7 +132,7 @@ ___
 
 This plugin is [deprecated](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
 
-**Issue**: The `wikimedia/composer-merge-plugin` package plugin automatically runs `composer update` during `composer install`, causing conflicts with Pantheon's Integrated Composer framework. 
+**Issue**: The `wikimedia/composer-merge-plugin` package plugin automatically runs `composer update` during `composer install`, causing conflicts with Pantheon's Integrated Composer framework.
 
 **Solution**: Sites managing dependencies for a custom project should move to the recommended [path repository method](https://www.drupal.org/docs/develop/using-composer/managing-dependencies-for-a-custom-project).
 ___
@@ -153,7 +153,7 @@ ___
 
 `RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
 
-**Solution:** The [Persistent Temporary Path Workaround](https://pantheon.io/docs/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
+**Solution:** The [Persistent Temporary Path Workaround](/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
 
 We recommend following the issue on [Drupal](https://www.drupal.org/project/feeds/issues/2912130) and requesting that the module maintainer fix the module.
 
@@ -188,7 +188,7 @@ ___
 
 **Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 
-1. [Enable the Object Cache](/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
+1. [Enable the Object Cache](/guides/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
 1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```php:title=imce.page.inc
@@ -276,7 +276,7 @@ ___
 
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site's cache after importing the data.
 
- Additionally, Pathologic can cause the change of base URLs in a domain access configuration based on the value of `$options['url']` in the site Drush config. This is set to the first domain listed on an environment by default on Pantheon, which can result in unexpected root domains being written to the cache. Refer to [our Drush documentation](/drush/#known-limitations) for more information about overriding this value.
+ Additionally, Pathologic can cause the change of base URLs in a domain access configuration based on the value of `$options['url']` in the site Drush config. This is set to the first domain listed on an environment by default on Pantheon, which can result in unexpected root domains being written to the cache. Refer to [our Drush documentation](/guides/drush/drush-known-limitations) for more information about overriding this value.
 
 ## [Persistent Login](https://www.drupal.org/project/persistent_login)
 
@@ -336,7 +336,7 @@ ___
 
 **Issue 1:** When the module is configured to take over the public file system, Drupal's CSS/JS aggregation will not work unless you also upload Drupal Core and contrib modules to S3. See [Drupal Issue 2511090](https://www.drupal.org/project/s3fs/issues/2511090) for more information.
 
-**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [Platform upload limitations](/platform-considerations#large-files).
+**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [Platform upload limitations](/guides/platform-considerations/files-directories#large-files).
 
 ___
 

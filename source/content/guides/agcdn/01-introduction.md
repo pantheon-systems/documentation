@@ -1,7 +1,7 @@
 ---
 title: Advanced Global CDN
 subtitle: Introduction
-description: AGCDN enables Edge configuration tools for advanced site management, enhanced security, and a customizable WAF.
+description: AGCDN enables Edge configuration tools for advanced site management,  enhanced security, and much more.
 categories: [develop]
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]

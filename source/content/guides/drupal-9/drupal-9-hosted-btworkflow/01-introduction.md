@@ -27,7 +27,7 @@ This guide will show you how to migrate a site that meets the following criteria
 
 <Partial file="drupal-9/upgrade-site-requirements-from-drupal-recommended.md" />
 
-- You are able to [create a new Drupal 9 site using Terminus Build Tools](https://pantheon.io/docs/guides/build-tools/create-project/#create-a-build-tools-project)
+- You are able to [create a new Drupal 9 site using Terminus Build Tools](/guides/build-tools/create-project/#create-a-build-tools-project)
 
 ## More Resources
 

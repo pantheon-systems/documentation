@@ -65,4 +65,5 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 ```
 
 ## More Resources
-- [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections)
+
+- [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections)

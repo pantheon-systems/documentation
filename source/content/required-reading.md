@@ -13,14 +13,14 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 - [Quick Start](/guides/quickstart)
 - [Using the Pantheon Workflow](/pantheon-workflow)
 - [All About Application Containers](/application-containers)
-- [Platform Considerations](/platform-considerations)
+- [Platform Considerations](/guides/platform-considerations)
 - [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
 
 ## Build
 - [Migrate Sites to Pantheon](/guides/guided/
 - [rsync and SFTP](/rsync-and-sftp)
-- [Configuring settings.php](/settings-php) or [Configuring wp-config.php](/wp-config-php)
-- [Drupal Drush Command-Line Utility](/drush)
+- [Configuring settings.php](/guides/php/settings-php) or [Configuring wp-config.php](/guides/php/wp-config-php)
+- [Drupal Drush Command-Line Utility](/guides/drush)
 - [Cron for WordPress](/wordpress-cron) or [Cron for Drupal](/drupal-cron)
 
 ## Launch
@@ -31,14 +31,14 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 - [New Relic&reg; Performance Monitoring](/guides/new-relic)
 - [Applying Upstream Updates](/core-updates)
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
-- [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
+- [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/sso)
 - [Backup Creation](/backups)
 
 ## Debug
-- [PHP Errors and Exceptions](/php-errors)
-- [Errors and Server Responses](/errors-and-server-responses)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
 
 ## Support
 - [Getting Support](/guides/support)

@@ -18,7 +18,7 @@ The Managed Migration Service offered by [Pantheon Professional Services](/guide
 
 The goal of the Migrations Team is to migrate your site to the Pantheon WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration.
 
-For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/guides/guided/.
+For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/guides/guided).
 
 If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager with any questions or concerns.
 
@@ -67,7 +67,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
   - Disable unnecessary or unsupported modules and plugins
 
 - Pantheon Plugin/Module installation
-  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, [Redis Object Cache](/object-cache), and/or [Pantheon Search](/solr), as needed
+  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, [Redis Object Cache](/guides/object-cache), and/or [Pantheon Search](/solr), as needed
 
 - Plugin & theme workarounds
   - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
@@ -116,7 +116,7 @@ During the Migration project kick-off, the team will review which of the followi
 1. Pantheon may not be able to migrate functionality if the site relies on resources that are not available on the platform, such as:
    - Issues that arise as a result of:
 
-     - [Pantheon platform considerations](/platform-considerations)
+     - [Pantheon platform considerations](/guides/platform-considerations)
 
      - Plugins or Modules that have been identified as [problematic](/modules-plugins-known-issues/)
 

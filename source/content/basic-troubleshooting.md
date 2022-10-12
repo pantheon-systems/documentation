@@ -34,7 +34,7 @@ PHP errors coming from Drupal or WordPress code tend to not be specific to Panth
 
 Odds are, someone else has run into the same problem and reported it in forums on [wordpress.org](https://wordpress.org/support/forums/) or the issue queues on [Drupal.org](https://www.drupal.org/project/issues), and it’s possible that someone has posted a solution or workaround.
 
-To learn more about PHP errors, see our [PHP Errors and Exceptions](/php-errors) documentation.
+To learn more about PHP errors, see our [PHP Errors and Exceptions](/guides/php/php-errors) documentation.
 
 ### Update the problem theme, module, or plugin
 
@@ -45,7 +45,7 @@ If you’ve narrowed the problem down to a specific module or plugin and you’r
 Sometimes your CMS may encounter issues due to cached data that ends up in an odd state.
 
 - [Clear your site cache](/clear-caches) using the Pantheon Dashboard, or with [Terminus](/terminus/commands/env-clear-cache).
-- Clear all keys from the Object Cache using the [Redis CLI](/object-cache#use-the-redis-command-line-client).
+- Clear all keys from the Object Cache using the [Redis CLI](/guides/object-cache/redis-command-line).
 - Review the caching logic for your CMS version. [Drupal 9](/drupal-9-cache), for example, has some specific caching features that may be a factor.
 - For issues confined to a specific page or display element, review the specific [caching logic](/cache-control) for your site or page.
 - If the Pantheon Advanced Page Cache [plugin](/wordpress-cache-plugin) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) is installed to take advantage of the granular cache clearing capabilities of the Global CDN, review these settings as well.
@@ -108,7 +108,7 @@ For conflicts introduced by other code merges (like from Multidev environments),
 
 ## White Screen of Death (WSOD)
 
-The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs). See [PHP Errors and Exceptions](/php-errors) for more information on the type of errors you may find.
+The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs). See [PHP Errors and Exceptions](/guides/php/php-errors) for more information on the type of errors you may find.
 
 ## WordPress
 
@@ -151,8 +151,8 @@ $config['system.logging']['error_level'] = 'verbose';
 
 ## Additional Resources
 
-- [Errors and Server Responses](/errors-and-server-responses)
-- [PHP Errors and Exceptions](/php-errors)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
 - [Database Connection Errors](/database-connection-errors)
-- [MySQL Slow Log](/mysql-slow-log)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)

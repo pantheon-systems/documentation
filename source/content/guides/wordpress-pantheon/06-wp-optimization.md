@@ -20,7 +20,7 @@ Using [New Relic](/guides/new-relic) makes it easy for you to monitor your site'
 
 ## Quicksilver
 
-[Quicksilver](/quicksilver) hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow.
+[Quicksilver](/guides/quicksilver) hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow.
 
 ## Optimization Tips
 
@@ -32,11 +32,11 @@ This section provides optional steps to improve your site's speed.
 
 1. Update your PHP version
 
-    - Keep your [PHP version](/php-versions#all-php-versions) up-to-date to reduce CPU load.
+    - Keep your [PHP version](/guides/php/php-versions#all-php-versions) up-to-date to reduce CPU load.
 
 1. Use persistent Object Cache
 
-    - Reduce the load on your database and CPU overhead with [Object Cache](/object-cache) (included in all [Pantheon accounts](/site-plans-faq#plan-resources) above Basic).
+    - Reduce the load on your database and CPU overhead with [Object Cache](/guides/object-cache) (included in all [Pantheon accounts](/site-plans-faq#plan-resources) above Basic).
 
 1. Implement reverse proxy page cache
 

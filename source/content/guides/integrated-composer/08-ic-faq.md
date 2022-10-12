@@ -37,6 +37,10 @@ Try [composer-lock-diff](https://github.com/davidrjonas/composer-lock-diff) to s
 
 Pantheon does not offer support for Composer GUIs or any conflicts that might be caused by one.
 
+### On what environments does the require-dev section of composer.json get loaded?
+
+The `require-dev` section of the `composer.json` file is loaded on the Dev and Multidev environments. Every time Integrated Composer does a build, it creates a Dev artifact and a Live artifact. When you deploy from Dev to Test, Integrated Composer deploys the Live artifact rather than the Dev artifact.
+
 ### Why are contrib modules placed in /modules/composer instead of /modules/contrib?
 
 Contrib modules added by Integrated Composer from the now deprecated [Drupal Project](https://github.com/pantheon-upstreams/drupal-project/blob/master/composer.json#L29) upstream are placed in the `/modules/composer` directory in case a site already has non-Composer-managed modules in the standard `/modules/contrib` directory. If your site does not fall into this category, it is safe to rename the `composer` directory back to the standard `contrib` and alter the installer path to match.
@@ -52,6 +56,10 @@ We recommend upgrading to the [Drupal Composer Managed Project](https://github.c
 All modules will be overwritten by Integrated Composer if you don't add the exception code above. Don't manually add modules with the `.gitignore` exception if they are included in your `composer.json` file, as this can create a conflict that causes Integrated Composer to fail.
 
 </Alert>
+
+### Can I hotfix an Integrated Composer site?
+
+No. Integrated Composer is not compatible with the [hotfix](/hotfixes) workflow.
 
 ### What features are planned for Integrated Composer on Pantheon?
 

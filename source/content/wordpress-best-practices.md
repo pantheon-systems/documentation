@@ -15,7 +15,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Do not modify core WordPress files as it can cause unintended consequences, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts). If you need to modify any WP functionality, do it as a custom or [Must Use](/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/).
 
-* Use [Redis](/object-cache). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to cache a lot of database queries in WordPress.
+* Use [Redis](/guides/object-cache). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to cache a lot of database queries in WordPress.
 
 * Use [wp-cfm](/wp-cfm). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 
@@ -158,7 +158,7 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 ## Security Headers
 
-Pantheon's Nginx configuration [cannot be modified](/platform-considerations#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
+Pantheon's Nginx configuration [cannot be modified](/guides/platform-considerations/platform-site-info#htaccess) to add security headers, and many solutions (including plugins) written about security headers for WordPress involve modifying the `.htaccess` file for Apache-based platforms.
 
 There are plugins for WordPress that do not require `.htaccess` to set security headers, but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
 

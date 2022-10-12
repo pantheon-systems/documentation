@@ -11,7 +11,7 @@ permalink: docs/guides/multidev
 anchorid: multidev
 ---
 
-Multidevs are development environments for teams. A Multidev environment allows a developer to fork the entire stack (code and content), work independently, and then merge the code changes back into the main `master` site. Each forked branch has its own separate development environment, including database and files. Each branch environment can be independently set to use either SFTP or Git mode for code changes.
+<dfn id="multidev">Multidevs</dfn> are development environments for teams. A Multidev environment allows a developer to fork the entire stack (code and content), work independently, and then merge the code changes back into the main `master` site. Each forked branch has its own separate development environment, including database and files. Each branch environment can be independently set to use either SFTP or Git mode for code changes.
 
 Each site has a limit of 10 Multidev environments. Elite sites can request additional Multidev environments [from support](/guides/support/contact-support/) as needed.
 
@@ -25,13 +25,19 @@ Multidev is available for the following accounts:
 
 - Agency partners
 
-<Alert title="Note"  type="info" >
-
-Site admins of an organization with Multidev can invite independent contractors or set an agency as a supporting organization. The Pantheon system will automatically choose the highest account tier among the group. This logic makes Multidev features, including the ability to create Multidev environments, available to the supporting organization or the site team members on the associated sites.   
-
-</Alert>
-
 ![Dev Test and Live icon](../../../images/multidev-flow.png)
+
+### Multidev Access for Team Members and Supporting Agencies
+
+Site admins of an organization with Multidev can invite independent contractors or assign an agency as a supporting organization to a site.
+
+The Pantheon platform will automatically choose the highest account tier among the group for the site.
+
+If a supporting organization or individual contributor has an account tier lower than the site owner's tier, their Multidev access will be the same as the site owner's tier.
+
+This logic makes Multidev features, including the ability to create Multidev environments, available to the supporting organization or the site team members on the associated sites.
+
+The assigned team members will be able to create new and manage existing Multidevs for sites within the organization as long as that organization is a Gold account or higher. This does not affect their account access for other sites or within other organizations.
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 

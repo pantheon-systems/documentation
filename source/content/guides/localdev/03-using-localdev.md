@@ -68,7 +68,8 @@ You can use the **<i className="fa fa-wrench"></i> Develop** tab for the followi
 
 - View your local site files from **Open Finder**.
 
-- SSH into the local site container to run [Composer](/guides/composer) [Drush](/drush), [WP-CLI](/wp-cli), or [Terminus](/terminus) commands from **Launch Terminal**. Note that this will connect into the container shell, not the terminal environment for your local computer.
+- SSH into the local site container to run [Composer](/guides/composer) [Drush](/guides/drush), [WP-CLI](/guides/wp-cli), or [Terminus](/terminus) commands from **Launch Terminal**. Note that this will connect into the container shell, not the terminal environment for your local computer.
+
 
 - View the database container information and access [phpMyAdmin](https://www.phpmyadmin.net/) if enabled from the [Config](#Config) tab.
 
@@ -119,7 +120,7 @@ Follow the steps below to initialize tools:
     - [phpMyAdmin](https://www.phpmyadmin.net/)
     - [MailHog](https://github.com/mailhog/MailHog)
     - [CDN](/guides/global-cdn) for emulation to test cookies
-    - [Solr](/solr) or [Redis](/object-cache) for the local site
+    - [Solr](/solr) or [Redis](/guides/object-cache) for the local site
 
 ### Advanced
 
