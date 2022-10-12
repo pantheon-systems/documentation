@@ -12,13 +12,13 @@ anchorid: access-logs
 
 This section provides information on how to use SFTP to access your logs on Pantheon.
 
-Logs are stored within application containers that house your site's codebase and files.
+Logs are stored within [application containers](/application-containers) that house your site's codebase and files.
 
 1. Navigate to your **User Dashboard** and enter your Pantheon Dashboard credentials when prompted.
 
-    - You must [add an SSH key](/ssh-keys) within your User Dashboard if you want to enable passwordless access and avoid authentication prompts.
+    - You must [add an SSH key](/ssh-keys) within your User Dashboard if you want to enable password-less access and avoid authentication prompts.
 
-1. Click **Connection Info** in the User Dashboard. You can study the information listed to understand the pattern used for the hostnames:
+1. Click **Connection Info** in the User Dashboard. You can review the connection information to gain an understanding of the pattern used for the hostnames:
 
     | Type         | Env                                     | Site UUID                                                                                                 |
     |:------------ |:--------------------------------------- |:--------------------------------------------------------------------------------------------------------- |
