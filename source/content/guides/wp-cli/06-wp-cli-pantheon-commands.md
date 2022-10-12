@@ -28,16 +28,16 @@ To enable Maintenance Mode while serving cached pages to visitors, use the comma
 For example, to disable Maintenance Mode:
 
 ```bash{promptUser: user}
-terminus wp pantheon cache set-maintenance-mode everyone
+terminus wp -- $SITE.$ENV pantheon cache set-maintenance-mode everyone
 ```
 
 ### Cache Purge
 
 To purge some or all of the cache, the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) module provides several commands:
 
-- Purge the entire page cache: `terminus wp pantheon cache purge-all`
-- Purge one or more surrogate keys from cache: `terminus wp pantheon cache purge-key {KEY1,KEY2...}`
-- Purge one or more paths from cache: `terminus wp pantheon cache purge-path {PATH1,PATH2...}`
+- Purge the entire page cache: `terminus wp -- $SITE.$ENV pantheon cache purge-all`
+- Purge one or more surrogate keys from cache: `terminus wp -- $SITE.$ENV pantheon cache purge-key {KEY1,KEY2...}`
+- Purge one or more paths from cache: `terminus wp -- $SITE.$ENV pantheon cache purge-path {PATH1,PATH2...}`
 
 ## Interact With Sessions Via The WP-CLI
 
