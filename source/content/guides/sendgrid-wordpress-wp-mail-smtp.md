@@ -101,7 +101,7 @@ export env=dev #Or a multidev name
 
 Congratulations, you've configured WP Mail SMTP for SendGrid!
 
-## See Also
+## More Resources
 
 - [WP Mail SMTP Documentation](https://wpmailsmtp.com/docs/)  
 - [SendGrid Documentation](https://sendgrid.com/docs/)

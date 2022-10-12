@@ -40,6 +40,6 @@ Pantheon support is not available to users who avoid the Multidev steps.
 
 <Partial file="drupal-9/upgrade-site-requirements-new.md" />
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)

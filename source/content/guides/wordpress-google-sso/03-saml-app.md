@@ -113,6 +113,6 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
 
   ![A warning modal saying You'll need to upload Google IDP data on your app to complete SAML configuration process](../../../images/guides/wordpress-google-sso/google-idp-data.png)
 
-## See Also
+## More Resources
 
 - [GSuite Admin Help - Set up your own custom SAML application](https://support.google.com/a/answer/6087519)

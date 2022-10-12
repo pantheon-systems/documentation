@@ -349,7 +349,7 @@ function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
 }
 ```
 
-## See Also
+## More Resources
 
 This page introduces the concept of using an MU-plugin for applying actions or filters for a site. For site-specific or environment-specific context, see the following pages:
 

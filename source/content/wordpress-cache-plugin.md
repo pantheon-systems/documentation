@@ -78,7 +78,7 @@ This function flushes the cache for an individual term or terms which are passed
 public function clean_term_cache( $term_ids, $taxonomy )
 ```
 
-## See Also
+## More Resources
 
 - [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)

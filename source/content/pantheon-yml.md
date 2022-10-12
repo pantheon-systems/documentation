@@ -299,7 +299,7 @@ Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](
 
 1. Deploy the changes to production using the dashboard deploy or `terminus env:deploy`.
 
-## See Also
+## More Resources
 
 * [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver)
 * [Upgrade PHP Versions](/guides/php/php-versions)

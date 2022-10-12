@@ -56,7 +56,7 @@ Here is an example of an error returned for a workspace that requires multi-fact
 
 ![GraphQL Error Example](../images/graphql-error-example.png)
 
-## See Also
+## More Resources
 
 - [Local Development](/local-development)
 - [Pantheon Professional Services](/guides/professional-services)

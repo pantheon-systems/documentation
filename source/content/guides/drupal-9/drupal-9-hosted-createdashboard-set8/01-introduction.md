@@ -23,6 +23,6 @@ This guide will show you how to migrate a site that meets the following criteria
 
 <Partial file="drupal-9/commit-history.md" />
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)

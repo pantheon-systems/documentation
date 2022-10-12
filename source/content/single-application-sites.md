@@ -16,6 +16,6 @@ While we can't give specific recommendations for your sites, we can give general
 - Domain access on a single site install. For a Drupal site, try the [Subfolders Domain (sub domains)](https://www.drupal.org/project/subfolders_domain) module but there is no guarantee it will work.
 - [Organic Groups](https://www.drupal.org/project/og)  
 
-## See Also
+## More Resources
 [Why Drupal Multisite Is Not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade)  
 [Drupal Multisite: Much Ado About Drupal Multisite](https://pantheon.io/blog/drupal-multisite-much-ado-about-drupal-multisite)  

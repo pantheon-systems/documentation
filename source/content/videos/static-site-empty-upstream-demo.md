@@ -27,5 +27,5 @@ Commit Files Using Git - 05:12
 Add Static Landing Page to an Existing WordPress or Drupal site - 06:14  
 Add Static Files to Create a Path - 06:29  
 
-## See Also
+## More Resources
 - [Static Sites and Empty Upstreams](/static-site-empty-upstream)

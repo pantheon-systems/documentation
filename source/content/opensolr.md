@@ -102,7 +102,7 @@ If you'd like to create custom configurations or manually edit your index, synon
 
 ![Opensolr configuration file editor page](../images/opensolr-config-files-editor.jpg)
 
-## See Also
+## More Resources
 
 - [Drupal ApacheSolr Module](https://drupal.org/project/apachesolr) 
 - [WPSolr Integration](https://opensolr.com/faq/view/wpsolr)
