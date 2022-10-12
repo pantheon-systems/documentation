@@ -65,6 +65,10 @@ mysql -u pantheon --skip-binary-as-hex -p02f7b34a02…
 
 For more information on this behavior change, refer to the [MySQL 8.0 Reference Manual](https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html#option_mysql_binary-as-hex).
 
+### What is the database's maximum connections?
+
+<Partial file="sql/sql-max-connections.md" />
+
 ## More Resources
 
 - [Accessing MariaDB and MySQL Databases](/guides/mariadb-mysql/mysql-access)
