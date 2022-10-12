@@ -143,7 +143,7 @@ The VCL cookie pattern is a platform wide setting and cannot be overridden on an
 
 For custom code, you should leverage the built-in authentication methods, PHP sessions, and the existing set of cache-cookies for dynamic page responses. For pages that should be cached, but vary by cookie, the cookie name prefix `STYXKEY_` is your key. Refer to the code example in the [Cache-Varying Cookies](#cache-varying-cookies) section, for more information on properly caching. 
 
-## See Also
+## More Resources
 
 * [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Bypassing Cache with HTTP Headers](/cache-control)

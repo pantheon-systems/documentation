@@ -351,5 +351,5 @@ lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/i
 
 Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the current directory.
 
-## See Also
+## More Resources
 For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).

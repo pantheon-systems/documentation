@@ -40,6 +40,6 @@ If you modified upstream files, the `-Xtheirs` flag will drop your changes. You 
 
 You will be in the Drupal with Composer upstream after you apply the upstream updates.
 
-## See Also
+## More Resources
 
 - [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts)

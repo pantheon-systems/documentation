@@ -166,7 +166,7 @@ Vary: Accept-Encoding, Cookie
 
 The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching).
 
-## See Also
+## More Resources
 * [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Working with Cookies on Pantheon](/cookies)
 * [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)

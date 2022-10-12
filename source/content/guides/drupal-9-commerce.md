@@ -121,6 +121,6 @@ The Build Tools Plugin command you used earlier automatically installed Drupal's
 
 What you do next is up to you and your needs. Consider reading our [Composer Fundamentals and Workflows](/guides/composer) doc for more information.
 
-## See Also
+## More Resources
 
 - [Drupal Commerce](https://drupalcommerce.org/)

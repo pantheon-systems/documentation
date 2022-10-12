@@ -94,7 +94,7 @@ Check that the files are correct before going forward to ensure no bugs are intr
 
 You will be in the Drupal with Composer upstream after you apply the upstream updates.
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)
 - [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts)

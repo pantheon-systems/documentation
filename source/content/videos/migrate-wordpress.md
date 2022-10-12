@@ -21,6 +21,6 @@ It takes a few minutes as it migrates code, database, and files. But then it’s
 
 We give you a guided path for most sites. If you can’t get your site on the platform, let us know so we can help you.
 
-## See Also
+## More Resources
 
 - [The Quickstart Guide to Migrating a WordPress Site](https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site)

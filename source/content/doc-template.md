@@ -89,7 +89,7 @@ Images of terminal output is frowned upon. When small changes are required to co
  - Avoid colloquialisms and personal opinions, feelings, or anecdotes.
  - Only assume as much knowledge from the reader as specified in [Before You Begin](#before-you-begin). Otherwise explain everything.
 
-## See Also
+## More Resources
 If you can, end your doc with links to external resources that can be used to improve the reader's comprehension, or to guides on logical next steps in a common development workflow.
 
  - [An internal guide with a relative link](/get-started)  

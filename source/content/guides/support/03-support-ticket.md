@@ -10,7 +10,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/support-ticket/
 editpath: support/03-support-ticket.md
-reviewed: "2020-12-10"
+reviewed: "2022-10-10"
 ---
 
 In this section, we go over best practices when writing a support ticket, which helps us resolve your issue faster.
@@ -22,7 +22,7 @@ In this section, we go over best practices when writing a support ticket, which 
 
 If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the Support tab.
 
-Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
+Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](/guides/support/support-ticket/#organization-dashboard-support-tab).
 
 ### Organization Dashboard Support Tab
 

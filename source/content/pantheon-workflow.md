@@ -162,7 +162,7 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
-## See Also
+## More Resources
  - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
  - [Your Site Code on Pantheon](/code)
  - [Pantheon Filesystem](/files)

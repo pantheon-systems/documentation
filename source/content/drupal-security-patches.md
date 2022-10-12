@@ -133,6 +133,6 @@ done
 
 ```
 
-## See Also
+## More Resources
 
 - [Drupal Security Advisory](https://www.drupal.org/security)

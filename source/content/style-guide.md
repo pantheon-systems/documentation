@@ -981,7 +981,7 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, are UR
 
 ___
 
-## See Also
+## More Resources
 
 This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
 
@@ -995,7 +995,7 @@ This is the optimal place to provide links to external resources on the subject,
 <hr className="source-code" /> <br/>
 
 ```markdown
-## See Also
+## More Resources
 
 - [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)

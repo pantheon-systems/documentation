@@ -141,6 +141,6 @@ The following procedure guides you on how to retrieve load test information from
 After launch, you can establish a baseline that `X` response time will let you handle `Y` traffic. If `X` degrades in Dev/Test, that will impact how much traffic Live can handle.
 
 
-## See Also
+## More Resources
 
 * [Load Testing Drupal and WordPress with BlazeMeter](/guides/load-testing-with-blazemeter)

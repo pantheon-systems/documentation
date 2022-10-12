@@ -3,6 +3,8 @@ title: Account Billing in the User Dashboard
 description: View billing history (invoices and transactions) or edit credit card profiles to manage billing for sites in bulk within the Billing tab of the Account tool in the User Dashboard.
 categories: [platform]
 tags: [billing, dashboard]
+permalink: docs/account-billing
+anchorid: account-billing
 ---
 
 ## Access Account Billing

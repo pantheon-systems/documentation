@@ -95,5 +95,5 @@ Cleanup on the `cache_form` table runs on cron. If the table continues to grow t
 mysql> TRUNCATE TABLE cache_form;
 ```
 
-## See Also
+## More Resources
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)

@@ -52,7 +52,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 Clear cache after deploying this code change. All cached IP:PORT references will be wiped out, and repopulated with the correct base URL in the future.
 
 
-## See Also
+## More Resources
 
 [Private Paths](/guides/secure-development/private-paths)
 
