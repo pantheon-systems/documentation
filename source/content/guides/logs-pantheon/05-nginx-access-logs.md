@@ -43,7 +43,7 @@ You must configure GoAccess to read Pantheon's log formats to parse your `nginx-
 1. Copy the configuration file to your home directory. For example, if you installed GoAccess with Homebrew, your command might look like this:
 
   ```bash{promptUser: user}
-    cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc
+  cp /opt/homebrew/Cellar/goaccess/1.5.4/etc/goaccess/goaccess.conf ~/.goaccessrc
   ```
 
 1. Add the following lines to the configuration file:
