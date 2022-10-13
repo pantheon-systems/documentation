@@ -11,11 +11,11 @@ permalink: docs/guides/logs-pantheon/faq-logs
 anchorid: faq-logs
 ---
 
-This section provides answers to frequently asked log questions.
+This section provides answers to frequently asked questions about log files.
 
 ### How can I parse my Nginx access logs?
 
-Refer to [Parsing nginx Access Logs with GoAccess](/guides/logs-pantheon/nginx-access-logs) for details.
+Refer to [Parsing nginx Access Logs with GoAccess](/guides/logs-pantheon/nginx-access-logs) for more information.
 
 ### What is the first line in nginx-access.log?
 
@@ -29,15 +29,15 @@ The client IP for the following example is `122.248.101.126`:
 
 ### Can I log to the system logger and access syslog?
 
-No, syslog is not available. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them. You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
+No, syslog is unavailable. Technically, you can log Drupal events using the syslog module, but you won't be able to read or access them. You can use the [error_log](https://secure.php.net/manual/en/function.error-log.php) function to log to the php-error.log, which is accessible in the logs directory.
 
 ### Can I access Apache Solr logs?
 
-No, access to Apache Solr logs is not available. For more information on debugging Solr, refer to the documentation on [Pantheon Search](/solr).
+No, access to Apache Solr logs is unavailable. Refer to the documentation on [Pantheon Search](/solr) for more information on debugging Solr.
 
 ### Can I download Varnish logs?
 
-No, Varnish logs are not available for download.
+No, Varnish logs are unavailable for download.
 
 ### How do I enable error logging for WordPress?
 
@@ -45,7 +45,7 @@ No, Varnish logs are not available for download.
 
 The steps in this section enable debug logging. Debug logging increases resource overhead and presents a security risk. It is not recommended for production environments.
 
-To minimize risk exposure, especially in a Live environment, disable debug logging when you are done.
+Disable debug logging when you are done to minimize risk exposure, especially in a Live environment.
 
 </Alert>
 
@@ -57,7 +57,7 @@ By default, the WordPress debug log path is set to `/wp-content/` and is not wri
 
 ### How can I access the Drupal event log?
 
-Drupal logs events using the Database Logging module (dblog) by default. PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
+Drupal logs events with the Database Logging module (dblog) by default. PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
 - Visit `/admin/reports/dblog` after you've logged in as administrator.
 - Use [Terminus](/terminus):
@@ -74,7 +74,7 @@ Drupal logs events using the Database Logging module (dblog) by default. PHP fat
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
-We do not recommend disabling dblog. The best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.
+We do not recommend disabling dblog. The best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. This will make your faster site.
 
 Refer to [PHP Errors and Exceptions](/guides/php/php-errors) for more information.
 
@@ -120,9 +120,9 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 
 1. Update the variables:
 
-    - `LOGPATH` points to the `logs` directory in your project,
-    - `SITE` should match your [site name](/terminus/examples/#siteenv),
-    - `ENV` is the environment you want to watch logs from
+    - `LOGPATH` points to the `logs` directory in your project
+    - `SITE` should match your [site name](/terminus/examples/#siteenv)
+    - `ENV` is the environment in which you want to watch logs
 
 1. Make the script executable:
 
@@ -130,7 +130,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
    chmod +x ~/projects/mysite/logs/logwatcher.sh
    ```
 
-1. Use `watch` (available on macOS via Homebrew), to keep an updated view of the logs:
+1. Use `watch` (available on macOS via Homebrew) to keep an updated view of the logs:
 
    ```bash{promptUser: user}
    watch -n2 ~/projects/mysite/logs/logwatcher.sh
