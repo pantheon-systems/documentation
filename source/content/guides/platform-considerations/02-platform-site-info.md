@@ -15,8 +15,6 @@ This section provides information on Pantheon platform support for domain maskin
 
 ## Compute Optimized Environments (COE)
 
-<ReviewDate date="2022-10-13" />
-
 Compute Optimized Environments (COE) improves CPU performance over the previous infrastructure by up to 40%. COE includes changes to the runtime operating system, file structure, and binary content of Pantheon’s Site Environments. While these changes are transparent to most sites on the platform, there is the potential for custom code to interact with these components in a way that may need to be adjusted or optimized.
 
 ### Home Directory
