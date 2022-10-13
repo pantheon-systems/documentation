@@ -15,7 +15,7 @@ This section provides information on how to automate the process of accessing an
 
 ### Create a Script
 
-1. Open your local terminal to create and access a new local directory:
+1. Run the command below to create and access a new local directory:
 
     ```bash{promptUser: user}
     mkdir $HOME/site-logs
@@ -30,10 +30,9 @@ This section provides information on how to automate the process of accessing an
 
   - Please note that the resulting log file might be large.
 
-The script provides several modifiable variables described in its comments:
-
 <Alert title="Note"  type="info" >
 
+The script provides several modifiable variables described in the comments.
 Read to the comments in the scripts carefully to ensure that you modify variables correctly.
 
 </Alert>
@@ -64,7 +63,7 @@ Read to the comments in the scripts carefully to ensure that you modify variable
 
 ### Collect Logs
 
-You can collect your logs after you have successfully created your script.
+You can collect your logs after you [create your script](/guides/logs-pantheon/automate-log-downloads#create-a-script).
 
 1. Navigate to the `site-logs` directory and then execute the script below to download the logs.
 
@@ -74,7 +73,7 @@ You can collect your logs after you have successfully created your script.
 
 1. Open the `site-logs` directory to access the logs.
 
-  - More than one directory is generated for sites that use multiple [application containers](/application-containers).
+  - More than one directory is generated for sites that use [multiple application containers](/application-containers#multiple-application-containers).
 
 ## More Resources
 
