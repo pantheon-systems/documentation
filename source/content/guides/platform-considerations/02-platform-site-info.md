@@ -13,6 +13,33 @@ anchorid: platform-site-info
 
 This section provides information on Pantheon platform support for domain masking, htaccess, and many other configuration and site support considerations.
 
+## Compute Optimized Environments (COE)
+
+<ReviewDate date="2022-10-13" />
+
+Compute Optimized Environments (COE) improves CPU performance over the previous infrastructure by up to 40%. COE includes changes to the runtime operating system, file structure, and binary content of Pantheon’s Site Environments. While these changes are transparent to most sites on the platform, there is the potential for custom code to interact with these components in a way that may need to be adjusted or optimized.
+
+### Home Directory
+
+The site environment home directory is in the root `/`.
+
+Pantheon provides backward compatibility for site code that references the previous home directory by adding a symlink `/srv/bindings/[UUID]` to `/`.
+
+External scripts that reference `/srv/bindings/[UUID]` should check that the path exists. If the prior home directory does not exist, then your scripts should write to the new home directory location.
+
+Note that within the home directory, only the following are writable:
+
+- `/code`
+- `/files`
+- `/tmp`
+
+The environment variable `[HOME]` (`$_ENV[‘HOME’]`) is the recommended way to target this location within your code. Refer to [Hard-coded Directory References and $_ENV'HOME'](/read-environment-config#hard-coded-directory-references-and-_envhome) for more information.
+
+## Logs Directory
+
+Your log output is under `/logs/php` or `/logs/nginx`, depending on your setup.
+
+Refer to [Automate Log Downloads](/logs#automate-downloading-logs) for more information about accessing your logs.
 
 ## CORS
 
