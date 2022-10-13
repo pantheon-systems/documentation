@@ -33,7 +33,7 @@ Note that within the home directory, only the following are writable:
 - `/files`
 - `/tmp`
 
-The environment variable `[HOME]` (`$_ENV[‘HOME’]`) is the recommended way to target this location within your code. Refer to [Hard-coded Directory References and $_ENV'HOME'](/read-environment-config#hard-coded-directory-references-and-_envhome) for more information.
+The environment variable `[HOME]` (`$_ENV[‘HOME’]`) is the recommended way to target this location within your code. Refer to [Hard-coded Directory References and $_ENV'HOME'](/read-environment-config) for more information.
 
 ## Logs Directory
 
