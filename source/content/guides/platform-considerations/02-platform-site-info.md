@@ -33,7 +33,7 @@ Note that within the home directory, only the following are writable:
 - `/files`
 - `/tmp`
 
-The environment variable `[HOME]` (`$_ENV[‘HOME’]`) is the recommended way to target this location within your code. Refer to [Hard-coded Directory References and $_ENV'HOME'](/read-environment-config) for more information.
+The environment variable `[HOME]` (`$_ENV[‘HOME’]`) is the recommended way to target this location within your code. Refer to [Hard-coded Directory References and $_ENV'HOME'](/guides/environment-configuration/read-environment-config#hard-coded-directory-references-and-_envhome) for more information.
 
 ## Logs Directory
 
@@ -117,7 +117,7 @@ You can easily reactivate a site:
 
 1. Click **Unfreeze site**. The site will be ready for development again within a few minutes. 
 
-If you experience any issues, like missing static assets, a [backup](/guides/environment-configuration/restore-environment-backup#restore-an-environment-from-its-own-backup) of the site is available and can be restored via the Site Dashboard. Please note that only files that have been committed will be available after unfreezing.
+If you experience any issues, like missing static assets, a [backup](/guides/environment-configuration/restore-environment-backup) of the site is available and can be restored via the Site Dashboard. Please note that only files that have been committed will be available after unfreezing.
 
 ## Maintenance Mode
 
