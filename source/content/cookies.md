@@ -9,9 +9,13 @@ This page covers working with basic cookies on Pantheon. If you want to create s
 
 ## Disable Caching for Specific Pages
 
-You can use regular expressions to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from the cache. If the request matches, bypass caching by setting the `NO_CACHE` cookie in the response.
+You can use regular expressions to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from the cache. 
 
-For example, the following code example sets `NO_CACHE` for all pages in the `/news/` directory:
+1. Navigate to your `settings.php` file for Drupal or `wp-config.php` file for WordPress.
+
+1. Add the code below to make the request bypass caching by setting `NO_CACHE` cookie in the response if it matches. In the example below, the code sets `NO_CACHE` for all pages in the `/news/` directory:
+
+    - **To restrict the cookie to the specific directory, ensure the `friendly_path` variable is set correctly.**
 
 ```php
 /*
@@ -31,14 +35,11 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 }
 ```
 
-**To restrict the cookie to the specific directory, ensure the `friendly_path` variable is corrrectly set.**
-
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/cache-control) to bypass the cache on Pantheon.
 
 ## Disable Page Caching in The Dev Environment
 
-In Dev and Multidev environments, 
-you will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
+In Dev and Multidev environments, you will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
 
 If you need to work around your CMS to bypass caching for pages in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
@@ -57,7 +58,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 ## Cache-Varying Cookies
 
-Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's Edge, the cookie name must follow the naming rules below:
+Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that the cookie name must follow the naming rules below for the response to be cached by Pantheon's Edge:
 
 - Must begin with the 7 capital letters `STYXKEY`
 - Must have one or more of the following:
@@ -66,50 +67,46 @@ Respond to a request with cached content depending on the presence and value of 
 	- numbers `0-9`
 	- underscore `_`
 	- hyphen `-`
-  
+
 If you prefer a regular expression, the name must match the following format: `STYXKEY[a-zA-Z0-9_-]+`. Test your cookie with [Regex 101.](https://regex101.com/) 
 
-First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
+1. Check to see if the cookie is set within the incoming request:
 
-<Alert title="Note" type="info">
+    - **Set:** If the value is already set, **do not** set the cookie again in the response. Pantheon cannot cache a response that contains a `Set-Cookie:` header.
 
-If the value has already been set, do not set the cookie again in the response. Pantheon cannot cache a response that contains a `Set-Cookie:` header.
+    - **Not set:** If the value is not set, respond with `setcookie()` to serve cached content for subsequent requests within the defined cookie lifetime. The following code example can be used for either WordPress or Drupal:
 
-</Alert>
+    ```php
+    $bar = 'Around here, football is the winter sport of choice!';
+    if (isset($_COOKIE['STYXKEY_gorp'])) {
 
-If the value is **not** set, respond with `setcookie()` to serve cached content for subsequent requests within the defined cookie lifetime.
+      $foo = $_COOKIE['STYXKEY_gorp'];
+      // Generate varied content based on cookie value
+      // Do NOT set cookies here; Set-Cookie headers do not allow the response to be cached
+      if ($foo == 'ca') {
+        str_replace('football', 'hockey', $bar);
+      }
 
-The following code example can be used for either WordPress or Drupal:
+    }
+    else{
+      /**
+      * Set local vars passed to setcookie()
+      * Example:
+      * @code
+      * $name = 'STYXKEY_gorp';
+      * $value = 'bar';
+      * $expire = time()+600;
+      * $path = '/foo';
+      * $domain =  $_SERVER['HTTP_HOST'];
+      * $secure = true;
+      * $httponly = true;
+      * @endcode
+      **/
+      setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
+    }
+    ```
 
-```php
-$bar = 'Around here, football is the winter sport of choice!';
-if (isset($_COOKIE['STYXKEY_gorp'])) {
-
-  $foo = $_COOKIE['STYXKEY_gorp'];
-  // Generate varied content based on cookie value
-  // Do NOT set cookies here; Set-Cookie headers do not allow the response to be cached
-  if ($foo == 'ca') {
-    str_replace('football', 'hockey', $bar);
-  }
-
-}
-else{
-  /**
-  * Set local vars passed to setcookie()
-  * Example:
-  * @code
-  * $name = 'STYXKEY_gorp';
-  * $value = 'bar';
-  * $expire = time()+600;
-  * $path = '/foo';
-  * $domain =  $_SERVER['HTTP_HOST'];
-  * $secure = true;
-  * $httponly = true;
-  * @endcode
-  **/
-  setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
-}
-```
+1. Use the stored value to generate varied content as appropriate for your use case and implementation.
 
 ## Setting Cookies for Platform Domains
 
