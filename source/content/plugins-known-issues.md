@@ -161,20 +161,15 @@ ___
 
 <ReviewDate date="2020-02-10" />
 
-**Issue 1:** [Autoptimize](https://wordpress.org/plugins/autoptimize/) assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+**Issue 1:** [Autoptimize](https://wordpress.org/plugins/autoptimize/) assumes write access to the site's codebase within the `wp-content/cache` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
-**Solution:** Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
+**Solution:** Create a symlink for `wp-content/cache` to the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`): 
 
-```php:title=wp-config.php
-/** Changes location where Autoptimize stores optimized files */
-define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
+```bash
+ln -s uploads/cache  wp-content/cache
 ```
 
-Be sure to add this configuration _above_ the comment to stop editing:
-
-![Example of Autoptimize configuration above the stop editing comment](../images/autoptimize-config.png)
-
-For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
+Then use SFTP the create the `wp-content/uploads/cache` directory on Pantheon.
 
 **Issue 2:** Autoptimize attempts to generate the file `wp-content/autoptimize_404_handler.php` upon activation, and if not present will throw a php warning.
 
