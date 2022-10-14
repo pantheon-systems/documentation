@@ -50,7 +50,7 @@ WordPress stores full URLs in the database. These URLs can be links within the p
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
 
 ```bash
-terminus remote:wp <site>.<env> -- search-replace <old-domain> <new-domain> --network --url=<old-domain>
+terminus remote:wp <site>.<env> -- search-replace "<old-domain>" "<new-domain>" --network --url=<old-domain>
 ```
 
 In this example:
