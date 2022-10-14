@@ -55,9 +55,9 @@ You must configure GoAccess to read Pantheon's log formats to parse your `nginx-
   ```
 1. Name the file appropriately:
 
-  - The file must be named `.goaccessrc` if you are providing the configuration file from your home directory.
+    - The file must be named `.goaccessrc` if you are providing the configuration file from your home directory.
 
-  - If you're storing the file somewhere other than your home directory, it must be named `goaccess.conf`. [Read more about the configuration file](https://goaccess.io/faq#configuration).
+    - If you're storing the file somewhere other than your home directory, it must be named `goaccess.conf`. [Read more about the configuration file](https://goaccess.io/faq#configuration).
 
 ## Create a report
 

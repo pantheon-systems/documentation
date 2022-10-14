@@ -28,7 +28,7 @@ This section provides information on how to automate the process of accessing an
 
 1. Use your preferred text editor to edit `collect-logs.sh` and replace the `xxxxxxx` with the appropriate site UUID and environment.
 
-  - Please note that the resulting log file might be large.
+    - Please note that the resulting log file might be large.
 
 <Alert title="Note"  type="info" >
 
@@ -73,7 +73,7 @@ You can collect your logs after you [create your script](/guides/logs-pantheon/a
 
 1. Open the `site-logs` directory to access the logs.
 
-  - More than one directory is generated for sites that use [multiple application containers](/application-containers#multiple-application-containers).
+    - More than one directory is generated for sites that use [multiple application containers](/application-containers#multiple-application-containers).
 
 ## More Resources
 
