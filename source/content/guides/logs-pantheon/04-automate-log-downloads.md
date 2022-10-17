@@ -33,7 +33,7 @@ This section provides information on how to automate the process of accessing an
 <Alert title="Note"  type="info" >
 
 The script provides several modifiable variables described in the comments.
-Read to the comments in the scripts carefully to ensure that you modify variables correctly.
+Read the comments in the scripts carefully to ensure that you modify variables correctly.
 
 </Alert>
 

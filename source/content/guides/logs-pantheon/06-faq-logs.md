@@ -74,7 +74,7 @@ Drupal logs events with the Database Logging module (dblog) by default. PHP fata
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
-We do not recommend disabling dblog. The best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. This will make your faster site.
+We do not recommend disabling dblog. The best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. This will make your site faster.
 
 Refer to [PHP Errors and Exceptions](/guides/php/php-errors) for more information.
 
