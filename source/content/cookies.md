@@ -13,9 +13,9 @@ You can use regular expressions to determine if the current request (`$_SERVER['
 
 1. Navigate to your `settings.php` file for Drupal or `wp-config.php` file for WordPress.
 
-1. Add the code below to make the request bypass caching by setting `NO_CACHE` cookie in the response if it matches. In the example below, the code sets `NO_CACHE` for all pages in the `/news/` directory:
+1. Add the code below to make the request bypass caching by setting `NO_CACHE` cookie in the response if it matches. In the example below, the code sets `NO_CACHE` for all pages in the `/news/` directory.
 
-    - **To restrict the cookie to the specific directory, ensure the `friendly_path` variable is set correctly.**
+    - **Verify that the `friendly_path` variable is set correctly to restrict the cookie to a specific directory.**
 
 ```php
 /*
@@ -35,13 +35,18 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 }
 ```
 
-As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/cache-control) to bypass the cache on Pantheon.
+You can [modify the `Cache-Control` header](/cache-control) to bypass the cache on Pantheon as an alternative to setting a `NO_CACHE` cookie within the response.
 
 ## Disable Page Caching in The Dev Environment
 
-In Dev and Multidev environments, you will not cache page asset files like CSS, JavaScript or images, and you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
+You do not cache page asset files like CSS, JavaScript, or images in Dev and Multidev environments. This means that you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
 
-If you need to work around your CMS to bypass caching for pages in the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
+If you need to work around your CMS to bypass caching for pages in the Dev environment, follow the steps below.
+
+
+1. Navigate your `settings.php` file for Drupal or your `wp-config.php` file for WordPress.
+
+1. Add the code below to the file.
 
 ```php
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
@@ -58,7 +63,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 ## Cache-Varying Cookies
 
-Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that the cookie name must follow the naming rules below for the response to be cached by Pantheon's Edge:
+You can respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that the cookie name must follow the naming rules below for the response to be cached by Pantheon's Edge:
 
 - Must begin with the 7 capital letters `STYXKEY`
 - Must have one or more of the following:
@@ -116,7 +121,7 @@ Setting cookies for the `pantheonsite.io` bare domain is not supported, as this 
 
 The Pantheon Edge size limit for cookies is 10KB. Cookies larger than this size are dropped, and the request is not completely processed. The header `X-Cookies-Dropped: 1` is added to the request and response, indicating that the action has been truncated.
 
-Knowing this, you can choose to configure your code to listen for this header and respond, with a custom error page for example.
+You can choose to configure your code to listen for this header and respond with a custom error page (for example).
 
 Note that too many `set-cookie` headers in the response can also create issues.
 
@@ -136,13 +141,13 @@ The best way to use cookies on Pantheon is to have the cookie name match the `ST
 
 ### A plugin/module is using `cookie_name`, can I request it be added to the [Cache-Busting Cookies List](/cookies/#cache-busting-cookies)?
 
-The VCL cookie pattern is a platform wide setting and cannot be overridden on an individual site basis. Pantheon maintains the list of cache-busting cookies. On very rare occasions, Pantheon can modify the list if there are new use cases for login or authorization that are common and affect many users. 
+The VCL cookie pattern is a platform-wide setting and cannot be overridden on an individual site basis. Pantheon maintains the list of cache-busting cookies. On very rare occasions, Pantheon can modify the list if there are new use cases for login or authorization that are common and affect many users. 
 
-For custom code, you should leverage the built-in authentication methods, PHP sessions, and the existing set of cache-cookies for dynamic page responses. For pages that should be cached, but vary by cookie, the cookie name prefix `STYXKEY_` is your key. Refer to the code example in the [Cache-Varying Cookies](#cache-varying-cookies) section, for more information on properly caching. 
+For custom code, you should leverage the built-in authentication methods, PHP sessions, and the existing set of cache-cookies for dynamic page responses. For pages that should be cached, but vary by cookie, the cookie name prefix `STYXKEY_` is your key. Refer to the code example in the [Cache-Varying Cookies](#cache-varying-cookies) section, for more information on caching correctly.
 
 ## More Resources
 
-* [Clearing Caches for Drupal and WordPress](/clear-caches)
-* [Bypassing Cache with HTTP Headers](/cache-control)
-* [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
-* [Caching: Advanced Topics](/caching-advanced-topics)
+- [Clearing Caches for Drupal and WordPress](/clear-caches)
+- [Bypassing Cache with HTTP Headers](/cache-control)
+- [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
+- [Caching: Advanced Topics](/caching-advanced-topics)
