@@ -1,7 +1,7 @@
 ---
 title: Domains on Pantheon
 subtitle: Modify the Local Hosts File
-description: How to find and modify a local hosts file.
+description: Use your local hosts file to test domain-specific settings and DNS records.
 categories: [go-live]
 tags: [cli, dns, local]
 contributors: [alexfornuto]
