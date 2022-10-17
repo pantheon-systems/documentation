@@ -113,6 +113,6 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
 - [Troubleshoot Domains](/guides/domains/troubleshooting)
 
-- [Modify the Local Hosts File](/hosts-file)
+- [Modify the Local Hosts File](/guides/domains/hosts-file)
 
 - [Relaunch Existing Pantheon Site](/relaunch)

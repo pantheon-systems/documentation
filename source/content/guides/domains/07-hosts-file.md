@@ -1,10 +1,14 @@
 ---
-title: Modify the Local Hosts File
+title: Domains on Pantheon
+subtitle: Modify the Local Hosts File
 description: How to find and modify a local hosts file.
 categories: [go-live]
 tags: [cli, dns, local]
 contributors: [alexfornuto]
-reviewed: "2020-11-16"
+layout: guide
+showtoc: true
+permalink: docs/guides/domains/hosts-file
+anchorid: hosts-file
 ---
 
 The `hosts` file exists on all major operating systems. It's a list of IP addresses and domains that takes precedence over DNS assigned values. You can modify your `hosts` file to test domain-specific settings leading up to a migration, before DNS records have been updated, or to help with [local development](/local-development).
