@@ -11,7 +11,11 @@ permalink: docs/guides/domains/hosts-file
 anchorid: hosts-file
 ---
 
-The `hosts` file exists on all major operating systems. It's a list of IP addresses and domains that takes precedence over DNS assigned values. You can modify your `hosts` file to test domain-specific settings leading up to a migration, before DNS records have been updated, or to help with [local development](/local-development).
+The `hosts` file exists on all major operating systems. The `hosts` file provides a list of IP addresses and domains that take precedence over DNS assigned values. You can modify your `hosts` file for the following purposes:
+
+- Test domain-specific settings leading up to a migration
+- Test DNS records before updates
+- Help with [local development](/local-development)
 
 <Partial file="_hosts-file.md" />
 
