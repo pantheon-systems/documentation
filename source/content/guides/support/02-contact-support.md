@@ -65,6 +65,6 @@ Some in-browser ad or tracking blockers can interfere with the **Launch Chat** b
 
 ## Premium Technical Support and On-Call Services
 
-Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. 
+Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the **Support** tab. 
 
 Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.

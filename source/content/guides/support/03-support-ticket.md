@@ -22,7 +22,7 @@ In this section, we go over best practices when writing a support ticket, which 
 
 If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the Support tab.
 
-Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](/guides/support/support-ticket/#organization-dashboard-support-tab).
+Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. 
 
 ### Organization Dashboard Support Tab
 
