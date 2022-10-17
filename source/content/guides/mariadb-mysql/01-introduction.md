@@ -29,7 +29,7 @@ MariaDB provides a full database solution, including:
 
 ## More Resources
 
-- [Database Workflow Tool](/database-workflow)
+- [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool)
 
-- [Database Connection Errors](/database-connection-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
 

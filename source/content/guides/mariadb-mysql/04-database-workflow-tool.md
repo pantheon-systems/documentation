@@ -1,13 +1,18 @@
 ---
-title: Database Workflow Tool
+title: MariaDB and MySQL on Pantheon
+subtitle: Database Workflow Tool
 description: Learn about the database that runs in your Pantheon Drupal or WordPress site.
 categories: [platform]
 tags: [dashboard, database, workflow]
+layout: guide
+showtoc: true
+permalink: docs/guides/mariadb-mysql/database-workflow-tool
+anchorid: database-workflow-tool
 ---
 The Pantheon platform provides each site environment with a dedicated MySQL container running [MariaDB](https://en.wikipedia.org/wiki/MariaDB) that can be maintained remotely or locally. For a comprehensive list of MySQL settings, [access your database](/guides/mariadb-mysql/mysql-access/#database-connection-information) and use the [SHOW VARIABLES](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) statement.
 
 Using the tools in the Database / Files tab, you can overwrite the databases on your site's Dev or Test environment with the database on your Live environment, allowing you to pull content from Live in to other environments.
-![Workflow Tool](../images/dashboard/interface-workflow-tool.png)
+![Workflow Tool](../../../images/dashboard/interface-workflow-tool.png)
 
 <Alert title="Warning" type="danger">
 
@@ -74,4 +79,4 @@ Host *.drush.in
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 - [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
 - [Converting MySQL Tables from MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb)
-- [Database Connection Errors](/database-connection-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)

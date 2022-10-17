@@ -29,5 +29,5 @@ Note that the trailing `;` in the SQL query is optional in this context.
 ## More Resources
 
 - [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql/mysql-workbench)
-- [Database Connection Errors](/database-connection-errors)
-- [Database Workflow Tool](/database-workflow)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
+- [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool)
