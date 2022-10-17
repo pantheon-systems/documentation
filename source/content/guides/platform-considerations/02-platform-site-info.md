@@ -37,7 +37,7 @@ The environment variable `[HOME]` (`$_ENV[‘HOME’]`) is the recommended way t
 
 Your log output is under `/logs/php` or `/logs/nginx`, depending on your setup.
 
-Refer to [Automate Log Downloads](/logs#automate-downloading-logs) for more information about accessing your logs.
+Refer to [Automate Log Downloads](/guides/logs-pantheon/automate-log-downloads) for more information about accessing your logs.
 
 ## CORS
 
