@@ -2,7 +2,7 @@
 title: Manage Teams & Organizations
 description: Create a team or configure an organization.
 videoid: yym44euvwr
-permalink: docs/manage/
+permalink: docs/guides/account-mgmt
 bullet1: Sites
 bullet2: People
 bullet3: Upstreams
