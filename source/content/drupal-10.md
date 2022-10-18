@@ -35,7 +35,7 @@ This process requires that you are on PHP 8.1.  To upgrade:
    git commit -am "PHP 8.1"; git push;
    ```
 
-## Update to Drupal 10
+## Create the Site
 
 To create a new Drupal 10 site, run the following commands:
 
