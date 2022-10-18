@@ -1,4 +1,4 @@
-1. Click the **Billing** tab in the Pantheon Site Dashboard.
+1. Open the Site Dashboard for the site.
 
 1. Click **Transfer Site** and enter the email address associated with the account to which you want to transfer site ownership.
 
@@ -6,4 +6,4 @@
 
     The recipient will need to confirm the transfer.
 
-Resellers and Enterprise organizations must contact their Account Manager or create a Support ticket to request a transfer of ownership.
+Resellers and Enterprise workspaces must contact their Account Manager or create a Support ticket to request a transfer of ownership.

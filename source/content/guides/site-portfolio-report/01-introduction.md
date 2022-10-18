@@ -55,18 +55,6 @@ This table shows any sites that were deactivated during the time between the pre
 
 ## More Resources
 
-- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
-
-- [Site Owner FAQ](/site-owner-faq)
-
-- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
-
-- [Site Plans FAQs](/site-plans-faq)
-
-- [Traffic Limits and Overages](/traffic-limits)
-
-- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
-
-- [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
-
+- [Account Management](/manage)
+  
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic

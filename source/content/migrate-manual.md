@@ -70,7 +70,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. Name your site and select an [Organization](/organizations) (optional), then click **Create Site**:
 
-   ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
+   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/migrate-step3.png)
 
 1. Click the link to manually migrate your site then select **Yes** to confirm:
 

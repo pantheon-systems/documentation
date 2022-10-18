@@ -13,7 +13,7 @@ anchorid: new-dashboard
 editpath: new-dashboard/05-support.md
 ---
 
-Support features can be accessed in a centralized location, where you can open tickets, chat with engineers or other Pantheon users, for a unified Support experience. 
+Support features can be accessed in a centralized location, where you can open tickets, chat with engineers or other Pantheon users, for a unified Support experience. If you click **Contact Us** in the **Support** tab, you are directed to the Support page that includes specialized support options that can be tailored to the unique needs of your Workspace. 
 
 Support helps resolve issues, restore operations quickly, and accelerate the path to resolution while identifying the root cause to minimize future recurrences of problems.
 
@@ -79,7 +79,7 @@ You can search the tickets you have created by Subject line. You can view your S
 
 ## Feedback
 
-Our support and engineering teams work together to develop a holistic understanding of your experience as a customer.
+Our support and engineering teams work together to develop a holistic understanding of your experience as a customeer.
 
 Our Support team works with Customer Success Engineers to effectively turn customer feedback into product improvements. This line of communication allows us to hone in on fixes that can impact your experience on the Pantheon platform
 

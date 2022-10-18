@@ -7,6 +7,7 @@ tags: [dashboard, dns, https, redirects]
 searchboost: 150
 contributors: [whitneymeredith]
 layout: guide
+showtoc: true
 permalink: docs/guides/domains
 anchorid: domains
 ---

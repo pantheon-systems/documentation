@@ -47,7 +47,7 @@ WordPress users should also run a [search and replace](/wordpress-broken-links/#
 
 </Tab>
 
-<Tab title="Drupal" id="drupalredirects">
+<Tab title="Drupal 7" id="d7redirects">
 
 Add the following to the end of your `settings.php` file (replace `www.example.com`):
 
