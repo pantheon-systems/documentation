@@ -1,5 +1,5 @@
 ---
-title: Workspaces, Sites and Teams
+title: Workspaces, Sites, and Teams
 subtitle: Professional Workspaces
 description: Learn how to manage and use workspaces.
 categories: [account-mgmt]
@@ -19,7 +19,7 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 - **Professional Workspace**: Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
 
-## Professional Workspace features
+## Professional Workspace Features
 
 - [Multidev](/guides/multidev)
 
@@ -33,26 +33,30 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 - [Single Sign-On](/sso-organizations)
 
+## Professional Workspace Tiers
 
-## Create a Workspace
+Professional workspaces come in three tiers:
 
-The following process will create a Silver workspace. For additional collaboration tools such as Multidev and visual regression testing, upgrade to a Gold workspace.  [Contact our team](https://pantheon.io/contact-sales) for more information
+- **Silver Workspace:** You will automatically be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace. If the workspace is not for an agency, 
 
-If you are creating the workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace. If the workspace is not for an agency, you will be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace.
+- **Gold Workspace:** [Gold Tier](https://pantheon.io/plans/pricing) workspaces provide additional collaboration tools such as Multidev and visual regression testing. [Contact our Sales team](https://pantheon.io/contact-sales) for more information if you are interested in upgrading to a Gold workspace.
 
-You can create as many workspaces as necessary. 
+- **Partner Trial Tier Workspace:** You will only be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency.
 
-To create a Professional Workspace:
+
+## Create a Professional Workspace
+
+You can create as many workspaces as necessary. The following process will create a Silver Tier Professional workspace.
 
 1. Select your gravatar in the upper left corner, then select **Create New Workspace**.
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
-1. You now have the option to invite team members.  You can skip this step by clicking **Continue**.
+1. Invite team members or skip this step by clicking **Continue**.
 
 ## Retrieve the Workspace UUID
 
-Every entity (user, workspace, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
+Every entity (user, workspace, product, and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
 
 ```none
 de305d54-75b4-431b-adb2-eb6b9e546014
@@ -80,10 +84,10 @@ To switch between workspaces, click your gravatar in the upper left to switch be
 
 ## Customize a Workspace
 
-You can customize the following for a workspace
+You can customize the following for a workspace:
 
 - The name and icon of the workspace.
-  
+
 - Payment and terms of service information for Sites built in your workspace.
 
 To customize a Professional Workspace, go to the workspace you wish to customize, then click the **Settings** tab.
@@ -96,17 +100,17 @@ Workspaces cannot be deleted.
 
 ### How do we add new sites to a Professional Workspace?
 
-See [Sites](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
+Refer to [Sites](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
 
 ### Why do login attempts fail for all users across my workspace simultaneously?
 
-Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logins in and out successfully 3 times.
+Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logs in and out successfully 3 times.
 
 As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for password-less access](/ssh-keys).
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
 
-Only workspace team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
+Only workspace team members and administrators of a Supporting Organization with Multidev can use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, will not be able to commit code to them.
 
 ### Why can't my Agency workspace own a site?
 
@@ -127,4 +131,3 @@ Yes, but only for sites owned by Enterprise or EDU+ workspaces. Roles designated
 ### As an Agency, how many sandbox sites do members of a workspace receive?
 
 Each member of an workspace can create up to 10 Sandbox sites. When the limit of 10 is reached, take a site live or delete unused sites to free up additional Sandbox slots.
-

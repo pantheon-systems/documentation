@@ -1,6 +1,6 @@
 ---
-title: Workspaces, Sites and Teams
-subtitle: Sites
+title: Workspaces, Sites, and Teams
+subtitle: Sites Management
 description: Learn how to manage your sites.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
@@ -36,15 +36,15 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. See [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
 
 ### Tag Sites
 
-Tags are an easy way to add data to your sites to help you manage them. 
+Tags are an easy way to add data to your sites to help you manage them.
 
 To add tags to a site:
 
-1. On the **Sites** tab, select one or more sites.
+1. Click the **Sites** tab and select one or more sites.
 
 1. Select **Tags**, then select **Add Tags**.
 
@@ -52,7 +52,7 @@ To add tags to a site:
 
 To remove tags from a site:
 
-1. On the **Sites** tab, select one or more sites.
+1. Click the **Sites** tab and select one or more sites.
 
 1. Select **Tags**, then select **Remove Tags**.
 
@@ -64,17 +64,16 @@ You can export a list of sites to CSV.  Data in the CSV file includes Site Name,
 
 To export a list of sites:
 
-1. On the **Sites** tab, find and select the files you wish to include in the list, or select the checkbox at the top of the list to select all sites.
+1. Click the **Sites** tab, and then find and select the files you want to include in the list, or select the checkbox at the top of the list to select all sites.
 
 1. Click **More Actions**, then **Export as CSV**.  A file is generated and downloaded to your browser’s download location.
 
 ### Change Site Ownership
 
-The person who creates the site owns it until someone else starts paying for it. The user or Enterprise who pays for the site is the owner thereafter.
+The person who creates the site owns it until someone else starts paying for it. The user or Enterprise who pays for the site is the owner thereafter. There can only be one site owner.
 
-The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Workspace Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Workspace Administrator**. Other roles do not have access to change the site plan as described on this page. Refer to [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions) for more information.
 
-There can only be one site owner.
 
 <Alert title="Note" type="info">
 
@@ -95,7 +94,7 @@ To change the owner of a paid site (e.g. Basic, or Performance):
 
 1. Enter the email address for the new site owner.
 
-   Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site and will receive future invoices.
+   When the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site and will receive future invoices.
 
 Enterprise workspaces can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 
@@ -128,15 +127,15 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
-Only the site's "User in Charge" or "Owner" can delete a site. See [Roles and Permissions](/change-management#roles-and-permissions) for more information.
+Only the site's "User in Charge" or "Owner" can delete a site. Refer to [Roles and Permissions](/change-management#roles-and-permissions) for more information.
 
 <Alert title="Warning" type="danger">
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/account-mgmt/plans/manage) for more information.
+**Before you delete a site**: Downgrade the site plan to Sandbox. Refer to [Manage Site Plans](/guides/account-mgmt/plans/manage) for more information.
 
-**After you delete a site that had a live domain or subdomain**: Update the DNS records so that they don't continue to point to the deleted site.
+**After you delete a site that had a live domain or subdomain**: Update the DNS records to avoid pointing to the deleted site.
 
 </Alert>
 
@@ -145,7 +144,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Open the Site Dashboard for the site.
 
-1. Select **Settings** > **Delete Site**.
+1. Select **Settings**, and then select **Delete Site**.
 
 1. Click the **Delete Site** button.
 
@@ -159,7 +158,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Select the checkbox next to the site(s) you want to delete.
 
-1. Click **More Actions**, then **Delete Site**.
+1. Click **More Actions**, then select **Delete Site**.
 
 1. Type **Delete**.
 
