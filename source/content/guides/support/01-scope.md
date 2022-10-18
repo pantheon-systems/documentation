@@ -12,6 +12,8 @@ editpath: support/01-scope.md
 reviewed: "2022-01-20"
 ---
 
+![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
+
 ## Support Features and Response Times
 
 Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.

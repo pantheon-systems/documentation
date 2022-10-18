@@ -8,7 +8,7 @@ Single sign-on (SSO) allows users to authenticate against your Identity Provider
 
 Once enabled, SAML applies to an entire email domain and is not available on a per-site, per-environment, or per-user basis.
 
-SAML SSO is included for customers with Diamond Accounts and is available for most [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
+SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/organizations). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
 
 ## User Experience
 

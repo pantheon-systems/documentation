@@ -1,7 +1,7 @@
 ### The Email Address is Known
 1. Go to the [**Password Reset page**](https://dashboard.pantheon.io/reset-password).
-1. Enter the previous owner's email address, and click **Request reset link**.
-1. Work with your email administrator so you can use the reset link to gain access.
+1. Enter the previous owner's email address, and click **Request reset link**.  An email with a reset link will be sent to this address.
+1. Work with your email administrator to get the reset link.
 1. After you sign in, update the email address to an existing employee.
 
 ### The Email Address is Unknown

@@ -37,7 +37,7 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 - **SOC 2 compliance:** Global CDN protects against DDoS attacks that target network layers (layer 3/4) or application layers (layer 7). DDoS attacks vary in method, but all have the same goal of interfering with content on your site.
 
-- **Origin shields:** Global CDN uses origin shields to protect sites from traffic overloads while maintaining high availability and redundancy in your setup. Origin shields also help reduce the risk of DDoS attacks. See [Troubleshooting Traffic](/guides/account-mgmt/traffic/remedy) for more information.
+- **Origin shields:** Global CDN uses origin shields to protect sites from traffic overloads while maintaining high availability and redundancy in your setup. Origin shields also help reduce the risk of DDoS attacks. Refer to [DDoS Attack Mitigation](/optimize-site-traffic#dos-attack-mitigation) for more information.
 
 - **Eliminate cache sharding:** Global CDN's cache strategy eliminates cache sharding, in which the same content is cached in separate edge cache instances. This results in higher cache hit rates.
 
@@ -55,7 +55,7 @@ Many users see multi-second speedups in Visual Progress <Popover title="Visual P
 
 - [Debug Common Cache Busters](/guides/frontend-performance/caching#troubleshoot-caching-issues)
 
-- [Traffic Limits and Overages](/guides/account-mgmt/traffic)
+- [Traffic Limits and Overages](/traffic-limits)
 
 - [Fastly on Pantheon](/guides/fastly-pantheon) 
 

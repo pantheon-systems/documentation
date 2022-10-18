@@ -25,11 +25,11 @@ For more information about exporting a backup of an environment, see [Restoring 
 
 ## 2. Delete Each of Your Sites
 
-Once you have backed-up your data and are ready to delete your sites, see [Delete a Site](/guides/account-mgmt/workspace-sites-teams/sites#delete-sites). It is a simple one-click operation, but it is **_permanent_**. Don't worry; You will be prompted to confirm before the deletion occurs.
+Once you have backed-up your data and are ready to delete your sites, see [Deleting a Site](/delete-site). It is a simple one-click operation, but it is **_permanent_**. Don't worry; You will be prompted to confirm before the deletion occurs.
 
 ## 3. Delete Your Credit Cards
 
-The next step is to delete the associated credit cards. For more information, see [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing#delete-card).
+The next step is to delete the associated credit cards. For more information, see [Payment Methods](/guides/account-mgmt/billing/methods).
 
 ## 4. Delete Your Account
 

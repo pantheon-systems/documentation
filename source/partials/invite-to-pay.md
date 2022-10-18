@@ -1,5 +1,5 @@
-
-1. Open the Site Dashboard and click the **Billing** tab.
+1. Navigate to the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard > select the site from the [Sites list](/organizations/#sites).
+1. Click the site's name to open the Site Dashboard > click the **Billing** tab.
 
 1. Click **View All Plans** > click **Select** for the plan you want.
 

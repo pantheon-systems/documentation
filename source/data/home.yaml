@@ -33,10 +33,10 @@
       icon: 'icon-performance.svg'
       url: '/performance/'
       secondary: true
-    - title: 'ACCOUNT MANAGEMENT'
+    - title: 'MANAGE TEAMS & ORGANIZATIONS'
       summary: 'Add team members, restrict access, and manage projects in bulk using cloud-based development tools.'
       icon: 'icon-manage.svg'
-      url: '/guides/account-mgmt/'
+      url: '/manage/'
       secondary: true
     - title: 'TROUBLESHOOT'
       summary: 'Understand known issues with plugins or modules and expose problems in log files.'

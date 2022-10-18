@@ -760,7 +760,7 @@ ___
 
 <ReviewDate date="2021-10-20" />
 
-**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/guides/account-mgmt/traffic) with Pantheon.
+**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
 
 **Solution:** Consider using [New Relic](/guides/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
 
@@ -1363,7 +1363,7 @@ ___
 
 **Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](/guides/legacy-dashboard/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/guides/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
 
-**Solution:** See the doc on how to [Troubleshooting Traffic](/guides/account-mgmt/traffic/remedy) for alternative methods.
+**Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/optimize-site-traffic) for alternative methods.
 
 ___
 

@@ -36,7 +36,7 @@ Each method requires first setting your working environment (Dev or a Multidev e
 
 ### Install from the WordPress Admin Dashboard
 
-1. From the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites), navigate to the Dev (or Multidev) environment, and click on the **Site Admin** button. Log in to your WordPress Admin Dashboard.
+1. From the [Site Dashboard](/sites), navigate to the Dev (or Multidev) environment, and click on the **Site Admin** button. Log in to your WordPress Admin Dashboard.
 
 1. Select **Plugins**, then **Add New**
 

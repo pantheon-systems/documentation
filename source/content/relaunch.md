@@ -15,7 +15,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
 ## Prepare for Relaunch
 
-1. Log in to the new Pantheon Site Dashboard as an [Admin, Team Member, or Privileged User](/guides/account-mgmt/workspace-sites-teams/teams).
+1. Log in to the new Pantheon Site Dashboard as an [Admin, Team Member, or Privileged User](/change-management#roles-and-permissions).
 
 1. Open a new tab for the old Pantheon Site Dashboard.
 

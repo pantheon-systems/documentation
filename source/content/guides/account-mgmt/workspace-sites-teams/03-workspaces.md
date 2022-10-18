@@ -15,7 +15,7 @@ reviewed: "2022-09-19"
 
 Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
-- **Personal Workspace**: The personal workspace displays tools for the sites to which you have access, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
+- **Personal Workspace**: The personal workspace displays tools for the sites you own or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
 
 - **Professional Workspace**: Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
 

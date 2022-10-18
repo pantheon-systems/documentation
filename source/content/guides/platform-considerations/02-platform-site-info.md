@@ -202,6 +202,6 @@ Xdebug is not available on the platform. Local development tools such as [Lando]
 
 - [Frequently Asked Questions](/faq)
 
-- [Plans FAQ](/guides/account-mgmt/plans)
+- [Site Plans FAQs](/site-plans-faq)
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)

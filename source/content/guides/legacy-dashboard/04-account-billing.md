@@ -75,4 +75,4 @@ Deleting a card profile from your account will also delete its associated billin
 
 ## More Resources
 
-- [Account Management](/guides/account-mgmt)
+- [Account Management](/manage)

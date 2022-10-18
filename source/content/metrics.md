@@ -51,7 +51,7 @@ There are some inherent limitations with using an analytics suite (e.g., Google 
 
 ### How does Pantheon handle overages?
 
-All non-Basic plans come with free overage protection. Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see [Traffic Limits and Overages](/guides/account-mgmt/traffic).
+All non-Basic plans come with free overage protection. Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see [Traffic Limits and Overages](/traffic-limits).
 
 ### What about bots?
 
@@ -71,6 +71,6 @@ Yes! Access to metrics via the Terminus [`env:metrics`](/terminus/commands/env-m
 
 ## More Resources
 
-- [Traffic Limits and Overages](/guides/account-mgmt/traffic)
+- [Traffic Limits and Overages](/traffic-limits)
 - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
-- [Plans FAQ](/guides/account-mgmt/plans)
+- [Site Plans FAQs](/site-plans-faq)

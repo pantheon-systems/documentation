@@ -31,7 +31,7 @@ If you are creating the Workspace for a web agency, you will be assigned a [Part
 
 ### Switch Between Workspaces
 
-If you're a member of multiple [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces), you can stay logged in, and switch between Workspaces to work on personal projects or to work between Workspaces.
+If you're a member of multiple [Organizations](/organizations), you can stay logged in, and switch between Workspaces to work on personal projects or to work between Organizations.
 
 Click the Organization’s name and icon in the upper left to switch between Workspaces:
 
@@ -47,7 +47,7 @@ Click a table heading to sort the table by that heading.
 
 By default, all users are assigned the Administrator role after the Workspace is created.
 
-Manage team members and assign [roles and permissions](/guides/account-mgmt/workspace-sites-teams/teams) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
+Manage team members and assign [roles and permissions](/change-management#roles-and-permissions) in the dashboard. If you're working with a [Partner Agency](https://pantheon.io/plans/partner-program?docs), add them as a Supporting Organization.
 
 ## Autopilot
 

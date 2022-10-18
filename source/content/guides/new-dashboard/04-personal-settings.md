@@ -19,7 +19,7 @@ The Personal Settings of your profile help you control several key aspects of th
 
 ## Profile
 
-Update your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
+Update your name, email address, password, country and region, or [delete your account](/delete-account).
 
 ### Account and Security
 

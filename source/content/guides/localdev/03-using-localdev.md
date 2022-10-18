@@ -64,7 +64,7 @@ You can use the **<i className="fa fa-wrench"></i> Develop** tab for the followi
 
 - View the local site from **Open Browser**.
 
-- View the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites) on Pantheon from **Open Dashboard**.
+- View the [Site Dashboard](/sites) on Pantheon from **Open Dashboard**.
 
 - View your local site files from **Open Finder**.
 

@@ -82,7 +82,7 @@ const Footer = ({ data }) => {
                           </Link>
                         </li>
                         <li className="leaf menu-mlid-1149">
-                          <Link to="/guides/account-mgmt">
+                          <Link to="/manage/">
                             Manage Teams & Organizations
                           </Link>
                         </li>

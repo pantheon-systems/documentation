@@ -210,7 +210,7 @@ ControlMaster auto
 ControlPath ~/.ssh/control-%r
 ```
 
-If this doesn't fix the issue, try creating an entry in your SSH configuration for your site specifically by its hostname. Don't use the `ControlMaster` option, instead use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid):
+If this doesn't fix the issue, try creating an entry in your SSH configuration for your site specifically by its hostname. Don't use the `ControlMaster` option, instead use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site's UUID](/sites/#site-uuid):
 
 ```none:title=ssh_config
 Host *.SITE_UUID.drush.in

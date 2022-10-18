@@ -17,7 +17,7 @@ This section covers purchasing a new plan.
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing? See [Plan Pricing](/guides/account-mgmt/plans/pricing) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing) for more information.
 
 </Alert>
 

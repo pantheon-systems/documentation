@@ -22,7 +22,7 @@ Add your payment method to upgrade and pay for the site now:
 
 1. Click the **Select** button under the [plan you choose](https://pantheon.io/pricing/).
 
-1. Continue to the **Choose Billing** step, and then select the billing frequency: [**Pay Annually**](/guides/account-mgmt/plans/pricing) or **Pay Monthly**.
+1. Continue to the **Choose Billing** step, and then select the billing frequency: [**Pay Annually**](/annual-billing) or **Pay Monthly**.
 
    - If you've chosen a **Performance Plan**, choose the size and click **Continue**.
 
