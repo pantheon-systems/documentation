@@ -38,6 +38,6 @@ Confirm that you meet the following requirements before continuing:
 
 - You have a brand new Drupal Pantheon site to host your project.
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)

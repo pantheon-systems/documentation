@@ -65,7 +65,7 @@ We do not recommend load testing on the Live environment if the site has already
 
 </Alert>
 
-Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/logs). Make note of any errors and warnings that pop up during the test so that you can fix them.
+Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/guides/logs-pantheon). Make note of any errors and warnings that pop up during the test so that you can fix them.
 
 Once the test is running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
 
@@ -141,6 +141,6 @@ The following procedure guides you on how to retrieve load test information from
 After launch, you can establish a baseline that `X` response time will let you handle `Y` traffic. If `X` degrades in Dev/Test, that will impact how much traffic Live can handle.
 
 
-## See Also
+## More Resources
 
 * [Load Testing Drupal and WordPress with BlazeMeter](/guides/load-testing-with-blazemeter)

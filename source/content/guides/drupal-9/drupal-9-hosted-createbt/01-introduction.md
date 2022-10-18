@@ -34,7 +34,7 @@ Before you continue, confirm that your site meets the following criteria:
 
 1. Build artifacts are pushed to your Pantheon repository.
 
-## See Also
+## More Resources
 
 - [Integrated Composer Overview](/guides/integrated-composer)
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)

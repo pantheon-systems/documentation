@@ -16,7 +16,7 @@ The number of unique visits displayed in [Pantheon’s Site Dashboard](/guides/l
 
 <Partial file="traffic-overages-faq.md" />
 
-## See Also
+## More Resources
 
 - [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)
 - [Investigate and Remedy Traffic Events](/optimize-site-traffic)

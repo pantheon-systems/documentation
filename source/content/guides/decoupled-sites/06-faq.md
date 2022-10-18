@@ -59,6 +59,10 @@ Decoupled Site Preview is only available for sites using Drupal as the CMS.
 
 ## Known Issues
 
+<Accordion title="A repository can only be associated with one Front-End Site" id="repo-site" icon="info-sign">
+A repository can only be associated with one decoupled Front-End Site at a time. You will receive an error message if you attempt to connect a repository to two or more sites.
+</Accordion>
+
 <Accordion title="Builds are only available for Gatsby and Next.js " id="terms-decoupled" icon="info-sign">
 Builds will only complete for repositories that are detected as Gatsby or Next.js repositories. Builds for all other frameworks will fail.
 </Accordion>

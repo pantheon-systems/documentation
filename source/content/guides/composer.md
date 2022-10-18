@@ -74,7 +74,7 @@ If you're not ready to go all in with a Composer workflow and you want to see ho
 
 <Partial file="notes/partial-composer-adoption-warning.md" />
 
-## See Also
+## More Resources
 
 - [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)
 
