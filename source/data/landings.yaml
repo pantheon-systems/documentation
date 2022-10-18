@@ -229,7 +229,7 @@
             - text: 'Install Cygwin on Windows'
               url: '/cygwin-windows'
             - text: 'Modify the Local Hosts File'
-              url: '/hosts-file'
+              url: '/guides/domains/hosts-file'
             - text: 'Accessing MySQL Databases'
               url: '/guides/mariadb-mysql/mysql-access'
             - text: 'Configuring PhpStorm to create WordPress Plugins on Pantheon'
@@ -444,7 +444,7 @@
             - text: 'Platform and Custom Domains'
               url: '/guides/domains'
             - text: 'Modify the Local Hosts File'
-              url: '/hosts-file'
+              url: '/guides/domains/hosts-file'
             - text: "HTTPS on Pantheon's Global CDN"
               url: '/guides/global-cdn/https'
             - text: 'Relaunch Existing Pantheon Site'

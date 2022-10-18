@@ -61,6 +61,6 @@ You can modify your local `hosts` file to validate domain-specific settings befo
 
 - [Debug Caching Issues](/debug-cache)
 
-- [Modify the Local Hosts File](/hosts-file)
+- [Modify the Local Hosts File](/guides/domains/hosts-file)
 
 - [Domains FAQs](/guides/domains/domains-faq)
