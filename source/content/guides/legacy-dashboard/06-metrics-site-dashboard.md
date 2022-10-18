@@ -77,8 +77,4 @@ Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/t
 
 ## More Resources
 
-<<<<<<< HEAD
 - [Account Management](/guides/account-mgmt)
-=======
-- [Account Management](/manage)
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

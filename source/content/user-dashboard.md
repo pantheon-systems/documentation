@@ -44,8 +44,4 @@ This is where you can update and manage your personal account details. Use the o
 To associate an image with your Pantheon account, you'll need to [create a Gravatar](https://en.gravatar.com/) for the email address you use with your Pantheon account. If you already have a Gravatar set up for another email address, update your Gravatar profile to add the email address you use on Pantheon. For help, visit the [Gravatar Support](https://gravatar.com/support/) page.
 
 ## See Also
-<<<<<<< HEAD
 - [Account Management](/guides/account-mgmt)
-=======
-- [Account Management](/manage)
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

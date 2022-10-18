@@ -59,8 +59,4 @@ For information on Site Dashboard, visit our [Site Dashboard](/guides/quickstart
 ## More Resources
 
 - [User Dashboard Quick Start](/guides/quickstart/user-dashboard/)
-<<<<<<< HEAD
 - [Account Management](/guides/account-mgmt)
-=======
-- [Account Management](/manage)
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
