@@ -1,5 +1,5 @@
 ---
-title: Your Account
+title: Manage Your Account
 subtitle: Workspace
 description: Learn how to use your account workspace.
 categories: [account-mgmt]
@@ -12,13 +12,13 @@ editpath: docs/guides/account-mgmt/account/03-workspace.md
 reviewed: "2022-09-19"
 ---
 
-Once you create an account and sign in, you are taken to your home page, known as your Personal Workspace.  Here you can view key information at a glance, including the sites you own or are a team member of, your plan tier, and more.
+After you create an account and sign in, you are taken to your home page, known as your Personal Workspace.  Here you can view key information at a glance, including the sites you own or are a team member of, your plan tier, and more.
 
 ![A screenshot of the new Dashboard homepage with Workspace Overview](../../../../images/dashboard/new-dashboard/workspace-overview.png)
 
 <Alert title="Note" type="info" >
 
-You cannot edit or manage account tiers using the workspace. For more information, [contact Sales](https://pantheon.io/contact-us)
+You cannot edit or manage account tiers using the workspace. For more information, [contact Sales](https://pantheon.io/contact-us).
 
 </Alert>
 
