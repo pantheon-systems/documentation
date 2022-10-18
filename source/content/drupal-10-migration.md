@@ -1,5 +1,6 @@
 ---
 title: Drupal 10 Migration Guide
+description: Drupal 10 is coming soon!
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
