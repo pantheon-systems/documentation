@@ -34,7 +34,7 @@ The ticket support feature is available to certain Account packages and account 
 
 1. Click **Open Ticket**
 
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are accessible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
 
 ## Real Time Chat Support
 
@@ -42,7 +42,7 @@ Start a chat with our Support Team to ask questions or request assistance on iss
 
 To receive the highest level of support available to your site or organization, remember to access the chat from the Organization Dashboard if available.
 
-1. From your Site or User Dashboard, click **Support**.
+1. Navigate to your Site or User Dashboard and click **Support**.
 
 1. Click **Launch Chat**, then click **New Conversation**.
 
@@ -65,6 +65,6 @@ Some in-browser ad or tracking blockers can interfere with the **Launch Chat** b
 
 ## Premium Technical Support and On-Call Services
 
-Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. 
+Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in the **Support** tab of your Workspace.
 
 Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.

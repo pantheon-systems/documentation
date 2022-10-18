@@ -18,7 +18,7 @@ editpath: disaster-recovery/03-site-goes-down.md
 
 In all cases, the first step is to file an emergency downtime on-call ticket. Even if you escalate the incident to your Account Manager or Customer Success Manager, the support engineers will be the ones diagnosing the cause of downtime and working to get your site back up, and a ticket is the fastest way to get them up to speed and engaged.
 
-These tickets can be filed from the Site or Organizational Dashboard. To create a ticket, navigate to the Support tab in the Dashboard and click **Trigger Pantheon On-Call** in the Escalate with Pantheon On-Call box. Note that these tickets should only be reserved for downtime or significant functional failures on the Live environment.
+These tickets can be filed from the Site or Organizational Dashboard. To create a ticket, go to the **Support** tab in the Dashboard and click **Trigger Pantheon On-Call** in the Escalate with Pantheon On-Call box. Note that these tickets should only be reserved for downtime or significant functional failures on the Live environment.
 
 In cases where the dashboard is inaccessible, a ticket can be filed using a telephone ticketing service, accessible at **1(866)415-7624**. Note that this is strictly for filing a ticket, and you will not reach a support engineer by using this method.
 
