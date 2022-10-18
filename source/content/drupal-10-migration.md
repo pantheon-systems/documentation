@@ -41,7 +41,6 @@ This process requires that you are on PHP 8.1.  To upgrade:
 To update from Drupal 9 to Drupal 10, run the following commands:
 
 ```bash{promptUser: user}
-git commit -am "PHP 8.1"; git push;
 composer config minimum-stability beta
 git commit -am "composer config minimum-stability beta"
 composer config platform.php 8.1
