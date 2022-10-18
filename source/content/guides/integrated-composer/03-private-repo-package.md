@@ -48,11 +48,10 @@ For this procedure, a GitHub token will be added to your code repository. It all
     ],
     ```
 
-1. Run the command below to require the package and specify the branch, prefixed with `dev-`
-   ```json:title=composer.json
-    "require": {
-        "mycompany/my-private-repo": "dev-branch-name"
-    },
+1. Run the command below to require the package and specify the branch, prefixed with `dev-`:
+   
+   ```bash{promptUser: user
+   composer require mycompany/my-private-repo:dev-branch-name
    ```
 
 1. Run the `composer update` command to install the new package.
