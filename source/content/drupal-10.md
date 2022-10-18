@@ -19,6 +19,10 @@ These instructions were developed using beta versions of Drupal 10, and are for 
 
 This process requires that you are on PHP 8.1.  To upgrade:
 
+1. Create a new Drupal site using the "Drupal with Composer" CMS/Start State.
+
+1. Clone the site locally with Git.
+
 1. Add the following line to `pantheon.yml`:
 
    ```yaml:title=pantheon.yml
