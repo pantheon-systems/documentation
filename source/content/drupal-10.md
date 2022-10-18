@@ -1,5 +1,5 @@
 ---
-title: Drupal 10 Migration Guide
+title: Create a Drupal 10 Site
 description: Drupal 10 is coming soon!
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
@@ -7,7 +7,7 @@ contributors: [wordsmither]
 reviewed: "2022-10-18"
 ---
 
-Drupal 10 is coming in December 2022!  However, we've been busy testing it on the Pantheon platform, and have developed a process for updating to Drupal 10 from a Drupal 9 site.
+Drupal 10 is coming in December 2022!  However, we've been busy testing it on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.
 
 <Alert title="Warning" type="danger" >
 
@@ -15,11 +15,6 @@ These instructions were developed using beta versions of Drupal 10, and are for 
 
 </Alert>
 
-These instructions only work for Drupal 9 sites with Integrated Composer.
-
-* If you are on a previous version of Drupal, see the [Drupal 9 Migration Guides](/drupal-9-migration).
-* To learn more about Integrated Composer, see the [Integrated Composer Guide](/guides/integrated-composer).
-  
 ## Before You Begin
 
 This process requires that you are on PHP 8.1.  To upgrade:
@@ -38,7 +33,7 @@ This process requires that you are on PHP 8.1.  To upgrade:
 
 ## Update to Drupal 10
 
-To update from Drupal 9 to Drupal 10, run the following commands:
+To create a new Drupal 10 site, run the following commands:
 
 ```bash{promptUser: user}
 composer config minimum-stability beta
