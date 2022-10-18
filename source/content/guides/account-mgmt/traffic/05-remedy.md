@@ -17,11 +17,7 @@ This doc introduces some of the methods Pantheon offers to help troubleshoot tra
 
 ## Review the NGINX Access Log
 
-<<<<<<< HEAD
 To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/guides/logs-pantheon/nginx-access-logs). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
-=======
-To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/nginx-access-log). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ## WordPress Best Practices
 
@@ -51,13 +47,8 @@ Pantheon does not count static assets against your traffic limit. However, if th
 
 This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal it shows up as a system path.  To resolve this issue, add and commit a static `favicon.ico` into the path that is being requested
 
-<<<<<<< HEAD
 |  **CMS**  |           **Path**          |
 |:---------:|:---------------------------:|
-=======
-| CMS       | Path**                      |
-|-----------|-----------------------------|
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 | WordPress | `/favicon.ico`              |
 | Drupal    | `/system/files/favicon.ico` |
 
@@ -166,13 +157,7 @@ mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 
 <Tab title="WordPress" id="wptab">
 
-<<<<<<< HEAD
 You can review a [list of plugins on wordpress.org](https://wordpress.org/plugins/) to find the right plugin for your setup. Consult [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) before you install a new plugin.
-=======
-Install and use the following WordPress plugin:
-
-- [WP Cerber Security](https://wordpress.org/plugins/wp-cerber/)
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 </Tab>
 
@@ -180,11 +165,7 @@ Install and use the following WordPress plugin:
 
 ### Block User Agents in Drupal or WordPress
 
-<<<<<<< HEAD
 Browsers include a self-identifying User-Agent HTTP header called a user agent (UA) string, with each request they make to the server. Similar to the IP blocking methods listed above, you can also target specific unwanted UAs that you may want to block.
-=======
-Browsers include a self-identifying User-Agent HTTP header (called a user agent (UA) string) with each request they make to the server. Similar to the IP blocking methods listed above, you can also target specific unwanted UAs that you may want to block.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 While the CMS will block the listed UAs from accessing the content directly, blocked UAs may still be able to access content served by CDN-level cached responses. If you require CDN-level blocking for your site, check out Pantheon's [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) or consider adding a service like [Cloudflare](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn).
 

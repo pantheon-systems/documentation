@@ -68,11 +68,7 @@ Subscriptions can be sorted by the following information:
 
 ### Account Subscription
 
-<<<<<<< HEAD
-The account tier and cost is displayed on the Subscriptions page. You can also view updates to the Personal Workspace account tier. You cannot edit or manage account tiers with Workspace Billing. 
-=======
 The account tier and cost is displayed on the Subscriptions page. You can also view updates to the Personal Workspace account tier. You cannot edit or manage account tiers using the workspace. 
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ### Site Subscriptions
 

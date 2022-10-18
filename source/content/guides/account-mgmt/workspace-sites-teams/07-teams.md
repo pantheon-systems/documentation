@@ -19,24 +19,14 @@ Teams allow you to define the users who will have access to a workspace or site.
 
 These tables detail the actions each role can execute on each Dashboard.
 
-<<<<<<< HEAD
-In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations, the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
-
-If you are an administrator for a Pantheon organization, [contact support](/guides/support/contact-support/) to have the User in Charge changed.
-=======
 In some Workspaces, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU workspaces where members are allowed to spin up new Sandbox sites at will. However, in these workspaces, the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the workspace, only workspace admins are allowed to change service levels.
 
 If you are an administrator for a Pantheon workspace, [contact support](/guides/support/contact-support/) to have the User in Charge changed.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ### Workspace Level Permissions
 
 
-<<<<<<< HEAD
-| Permissions                                             | Administrator                       | Team Member                         | Developer                          | Unprivileged <Popover title="Unprivileged" content="Enterprise and EDU+ organizations only" /> |
-=======
 | Permissions                                             | Administrator                       | Team Member                         | Developer                          | Unprivileged <Popover title="Unprivileged" content="Enterprise and EDU+ workspaces only" /> |
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 |:------------------------------------------------------- |:----------------------------------- |:----------------------------------- |:-----------------------------------|:-----------------------------------|
 | Create sites within an org                              | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Work in Dev environments                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
@@ -44,15 +34,9 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Create new Multidev environments                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Create or view support tickets                                    | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Access and manage [Autopilot](/guides/autopilot)        | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
-<<<<<<< HEAD
-| Access the [Workspace](/guides/new-dashboard/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> <Popover title="Workspace Unprivileged" content="Users with an Unprivileged role will see the Workspace's name, but will not be able to access it." />|
-| Access the org Dashboard                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
-| Change site upstream <Popover title="Permissions Note" content="The site and the upstream must both belong to the same organization." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
-=======
 | Access the [workspace](/guides/new-dashboard/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> <Popover title="Workspace Unprivileged" content="Users with an Unprivileged role will see the workspace's name, but will not be able to access it." />|
 | Access the org Dashboard                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
 | Change site upstream <Popover title="Permissions Note" content="The site and the upstream must both belong to the same workspace." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 | Deploy to Test and Live                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
 | Invite new team members                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
 | Manage user roles                                       | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
@@ -62,58 +46,22 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 
 ### Site Level Permissions
 
-<<<<<<< HEAD
-| Permissions                                       | Org Admin / Owner <Popover title="Owner" content="Partner organizations only" /> | Team Member | Developer <Popover content="Enterprise organizations only" /> |
-=======
 | Permissions                                       | Org Admin / Owner <Popover title="Owner" content="Partner workspaces only" /> | Team Member | Developer <Popover content="Enterprise workspace only" /> |
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 |:------------------------------------------------- |:----------------------------------- |:----------------------------------- |:----------------------------------- |
 | Access the site Dashboard                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
 | Work in Dev environments                          | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
 | Change site upstream                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
-<<<<<<< HEAD
-| Deploy from Custom Upstreams <Popover title="Custom Upstream availability" content="Applies only when an organization has Custom Upstreams enabled, and has already created one." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span>  | <span style="color:green">✔</span>  |
-=======
 | Deploy from Custom Upstreams <Popover title="Custom Upstream availability" content="Applies only when a workspace has Custom Upstreams enabled, and has already created one." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span>  | <span style="color:green">✔</span>  |
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 | Add/Manage Custom Domains           | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Deploy to Test and Live                           | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Upload files to Test and Live                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
 | Clear cache on Test and Live                      | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Manage user roles                                 | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Delete sites or remove users from a site          | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-<<<<<<< HEAD
-| Add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-
-## FAQ
-
-### Can I Restrict Access to a Specific Site with the Developer Role?
-
-Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner Organizations cannot specify which members have access to specific sites.
-
-### Which role should I assign a user to give them the lowest level of access?
-
-At the site level, the Developer role has the least amount of permissions and can create sites, view the Organization Dashboard, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Unprivileged role has the least amount of permissions and can only create sites.
-
-### Which environments can a user with the Developer role deploy to?
-
-The Developer role can only deploy to Development and Multidev environments. If a user needs to deploy to Live, you can promote a Developer to Team Member for a single site by adding the user to the site's team.
-
-### Who can add users to Organizations?
-
-Enterprise Administrators can add site Team Members or Supporting Organizations to sites owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
-
-### How do I recover an account after a site owner leaves?
-
-See the steps in [Recover An Account](/guides/account-mgmt/account/recover) for recovery instructions.
-=======
 | Add a [Supporting Organization](/organizations#organization-site-association)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ## Manage Teams
 
@@ -123,11 +71,7 @@ See the steps in [Recover An Account](/guides/account-mgmt/account/recover) for 
 
 <Tab title="To a Workspace" id="addwsp" active={true}>
 
-<<<<<<< HEAD
-1. Go to the Workspace, select the **Team** tab, and click **Add User**.
-=======
 1. Go to the workspace, select the **Team** tab, and click **Add User**.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 1. Click **Invite Team Member**.
 
@@ -147,20 +91,12 @@ See the steps in [Recover An Account](/guides/account-mgmt/account/recover) for 
 
 </TabList>
 
-<<<<<<< HEAD
-An email confirmation is sent to the user. Users with an existing Pantheon account are immediately added to the Organization. Users without existing accounts must first click the confirmation link in the email to create their account.
-=======
 An email confirmation is sent to the user. Users with an existing Pantheon account are immediately added to the workspace. Users without existing accounts must first click the confirmation link in the email to create their account.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 
 ### Change a User's Role
 
-<<<<<<< HEAD
-1. Go to the Workspace and select the **Team** tab.
-=======
 1. Go to the workspace and select the **Team** tab.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 1. Find and select the team member(s) whose role you wish to change.
 
@@ -182,11 +118,7 @@ To remove a user:
 
 <Tab title="From a Workspace" id="remws" active={true}>
 
-<<<<<<< HEAD
-1. Go to the Workspace and select the **Team** tab.
-=======
 1. Go to the workspace and select the **Team** tab.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 1. Find and select the team member(s) you wish to remove.
 
@@ -223,23 +155,12 @@ After a user leaves, in addition to the steps above, we recommend you:
 
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
 
-<<<<<<< HEAD
-Organization Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace).
-=======
 Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/organizations#organization-site-association).
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 1. Open the Site Dashboard for the site.
 
 1. Click **Team** in the Site Dashboard.
 
-<<<<<<< HEAD
-1. Click **Add a Supporting Organization**, enter the Workspace's name in the search box, and click **Search**.  The Workspace name must match exactly.
-
-1. Select a role > click **Add**.
-
-All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
-=======
 1. Click **Add a Supporting Organization**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
 1. Select a role, then click **Add**.
@@ -267,4 +188,3 @@ Enterprise Administrators can add site Team Members or Supporting Organizations 
 ### How do I recover an account after a site owner leaves?
 
 See the steps in our [Site Access](/site-access) doc for recovery instructions.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

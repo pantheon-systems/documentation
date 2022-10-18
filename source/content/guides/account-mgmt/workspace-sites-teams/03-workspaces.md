@@ -15,11 +15,7 @@ reviewed: "2022-09-19"
 
 Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
-<<<<<<< HEAD
 - **Personal Workspace**: The personal workspace displays tools for the sites to which you have access, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
-=======
-- **Personal Workspace**: The personal workspace displays tools for the sites you own or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 - **Professional Workspace**: Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
 
@@ -31,11 +27,7 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 - [Vanity Domains](/guides/domains/vanity-domains)
 
-<<<<<<< HEAD
-- Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your organization.
-=======
 - Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your workspace.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 - [Email Notifications](#platform-email-notifications)
 
@@ -46,15 +38,9 @@ Workspaces are a home base for your WebOps.  There are two types of workspaces:
 
 The following process will create a Silver workspace. For additional collaboration tools such as Multidev and visual regression testing, upgrade to a Gold workspace.  [Contact our team](https://pantheon.io/contact-sales) for more information
 
-<<<<<<< HEAD
-If you are creating the Workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program). If the Workspace is not for an agency, you will be assigned a [Silver Tier Workspace](https://pantheon.io/plans/pricing).
-
-You can create as many workspaces as necessary for your organization. 
-=======
 If you are creating the workspace for a web agency, you will be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace. If the workspace is not for an agency, you will be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace.
 
 You can create as many workspaces as necessary. 
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 To create a Professional Workspace:
 
@@ -66,21 +52,13 @@ To create a Professional Workspace:
 
 ## Retrieve the Workspace UUID
 
-<<<<<<< HEAD
-Every entity (user, organization, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
-=======
 Every entity (user, workspace, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ```none
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 
-<<<<<<< HEAD
-You can also use [Terminus](/terminus) to find the UUID of your organizations:
-=======
 You can also use [Terminus](/terminus) to find the UUID of your workspaces:
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ```bash{promptUser: user}
 terminus org:list
@@ -94,29 +72,14 @@ terminus org:list
 
 ## Switch Between Workspaces
 
-<<<<<<< HEAD
-If you're a member of multiple [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces), you can stay logged in, and switch between Workspaces to work on different projects.
-
-To switch between workspaces, click your gravatar in the upper left to switch between Workspaces:
-=======
 If you're a member of multiple [workspaces](/organizations), you can stay logged in, and switch between workspaces to work on different projects.
 
 To switch between workspaces, click your gravatar in the upper left to switch between workspaces:
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
 
 ## Customize a Workspace
 
-<<<<<<< HEAD
-You can customize the following for a Workspace
-
-- The name and icon of the organization workspace.
-  
-- Payment and terms of service information for Sites built in your Workspace.
-
-To customize a Professional Workspace, go to the Workspace you wish to customize, then click the **Settings** tab.
-=======
 You can customize the following for a workspace
 
 - The name and icon of the workspace.
@@ -124,7 +87,6 @@ You can customize the following for a workspace
 - Payment and terms of service information for Sites built in your workspace.
 
 To customize a Professional Workspace, go to the workspace you wish to customize, then click the **Settings** tab.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ## Delete a Workspace
 
@@ -136,11 +98,7 @@ Workspaces cannot be deleted.
 
 See [Sites](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
 
-<<<<<<< HEAD
-### Why do login attempts fail for all users across my Workspace simultaneously?
-=======
 ### Why do login attempts fail for all users across my workspace simultaneously?
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logins in and out successfully 3 times.
 
@@ -148,29 +106,6 @@ As a workaround, we recommend following development best practice workflows by [
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
 
-<<<<<<< HEAD
-Only organizational team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
-
-### Why can't my Agency Organization own a site?
-
-Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. See [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces) for more information.
-
-### Can I add my own Agency as a Supporting Organization to a client's site?
-
-No. Only the owner of the site can add an agency as a Supporting Organization. This action grants all members of the organization access to the site. You should ask site owners to add your agency as a Supporting Organization if you are providing services to the site.
-
-### What privileges and roles are granted when adding a Supporting Organization?
-
-All organization members have access to the site, with permissions determined by their roles at the organization level.
-
-### Can the site owner override privileges and access for organizational team members of a Supporting Organization?
-
-Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designated on the Site Team modal will override any roles assigned within the organization.
-
-### As an Agency, how many sandbox sites do members of an organization receive?
-
-Each member of an organization can create up to 10 Sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional Sandbox slots.
-=======
 Only workspace team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
 ### Why can't my Agency workspace own a site?
@@ -192,5 +127,4 @@ Yes, but only for sites owned by Enterprise or EDU+ workspaces. Roles designated
 ### As an Agency, how many sandbox sites do members of a workspace receive?
 
 Each member of an workspace can create up to 10 Sandbox sites. When the limit of 10 is reached, take a site live or delete unused sites to free up additional Sandbox slots.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 

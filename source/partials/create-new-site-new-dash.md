@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-You can create a new Site from your homepage by clicking **+ Create New Site**, or from the **Sites** tab. 
-=======
 You can create a new site from your homepage by clicking **+ Create New Site**, or from the **Sites** tab. 
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 1. Log in to your Pantheon account. 
 
@@ -12,11 +8,7 @@ You can create a new site from your homepage by clicking **+ Create New Site**, 
 
    <Alert title="Note" type="info">
 
-<<<<<<< HEAD
-   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/guides/custom-upstream), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
-=======
    Eligible workspaces can add their own sites to this list! We call these [Custom Upstreams](/guides/custom-upstream), and they function as common start states. Workspaces use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
    </Alert>
 
@@ -30,11 +22,7 @@ You can create a new site from your homepage by clicking **+ Create New Site**, 
 
   </Alert>
 
-<<<<<<< HEAD
-1. If this site is to be part of a Professional Workspace, select a Workspace from **Choose an Organization for the Site**.
-=======
 1. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 1. Click **Continue**. It can take several minutes to create a new site on Pantheon. 
 

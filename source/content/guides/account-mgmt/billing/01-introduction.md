@@ -18,11 +18,7 @@ The permission to update credit cards and view history is granted only to the ro
 
 <Alert title="Note" type="info">
 
-<<<<<<< HEAD
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
-=======
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 </Alert>
 
@@ -33,8 +29,4 @@ To make it easy for our team to confirm your tax-exempt status and have it refle
 
 - An attached copy of the organization's [tax exemption determination letter](https://www.irs.gov/charities-non-profits/exempt-organizations-affirmation-letters)
 - Email address of Site Owner
-<<<<<<< HEAD
 - [Dashboard](/guides/account-mgmt/workspace-sites-teams/sites) URL of affected sites
-=======
-- [Dashboard](/sites) URL of affected sites
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

@@ -67,7 +67,6 @@ Finally, because sites in the Random workspace are so, well, random, they've als
 |        |        |        |        | Ed Kay          |
 +--------+--------+--------+--------+--------+--------+
 
-<<<<<<< HEAD
 So now, when the individual team members log on, they will see the sites and workspaces made available to them.  In our example, this is what they would see:
 
 | Team Member | Workspaces | Sites |
@@ -77,18 +76,5 @@ So now, when the individual team members log on, they will see the sites and wor
 | Joe Intern |Writing Sites|Site 1, Site 2, Site 3, Site 4|
 | Dolores Orange |Random Sites|Site Z, Site Y, Site X|
 | Ed Kay |None|Site X|
-=======
-So now, when the individual team members log on, they will see the workspaces made available to them.  In our example, this is what they would see:
-
-| Team Member | Workspaces |
-|---|---|
-| Jane Doe |Writing Sites, Random Sites|
-| John Smith |Writing Sites, Widget Sites|
-| Joe Intern |Writing Sites|
-| Dolores Orange |Random Sites|
-| Ed Kay |Random Sites|
-
-Once they select a workspace, they will then see the sites they have access to in that workspace, as well as any sites they have created.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 Read on to better understand the specifics of setting up your workspaces, teams, and sites.

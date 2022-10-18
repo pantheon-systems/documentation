@@ -19,29 +19,17 @@ Follow the steps below in to completely delete your account.
 
 The first thing to do is to backup and export your site(s). Yes, you are leaving the platform, but you should always have a backup of your work just in case you need it in the future.
 
-<<<<<<< HEAD
-If you need to make a backup of an existing environment, see [Backup Creations](/backups).
-=======
 If you need to make a backup of an existing environment, see [Create a Backup](/backups#create-a-backup).
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 For more information about exporting a backup of an environment, see [Restoring a Backup](/guides/environment-configuration/restore-environment-backup).
 
 ## 2. Delete Each of Your Sites
 
-<<<<<<< HEAD
 Once you have backed-up your data and are ready to delete your sites, see [Delete a Site](/guides/account-mgmt/workspace-sites-teams/sites#delete-sites). It is a simple one-click operation, but it is **_permanent_**. Don't worry; You will be prompted to confirm before the deletion occurs.
 
 ## 3. Delete Your Credit Cards
 
 The next step is to delete the associated credit cards. For more information, see [Account Billing in the User Dashboard](/guides/legacy-dashboard/account-billing#delete-card).
-=======
-Once you have backed-up your data and are ready to delete your sites, see [Deleting a Site](/delete-site). It is a simple one-click operation, but it is **_permanent_**. Don't worry; You will be prompted to confirm before the deletion occurs.
-
-## 3. Delete Your Credit Cards
-
-The next step is to delete the associated credit cards. For more information, see [Payment Methods](/guides/account-mgmt/billing/methods).
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ## 4. Delete Your Account
 

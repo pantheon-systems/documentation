@@ -15,19 +15,11 @@ reviewed: "2022-09-19"
 
 <Alert title="Notes" type="info" >
 
-<<<<<<< HEAD
-- Elite sites cannot manage plans from the Site Dashboard. Contact our sales team or reach out to your dedicated Client Sales Executive for details.
-
-- The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. Pantheon for EDU+ allows Organization Administrators to manage site plans for sites within their organization. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change. For details, see [Teams](/guides/account-mgmt/workspace-sites-teams/teams).
-
-- If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
-=======
 - Elite sites cannot manage plans from the Site Dashboard. [Contact Sales](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
 
 - The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. Pantheon for EDU+ allows Organization Administrators to manage site plans for sites within their organization. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
 - If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 </Alert>
 
@@ -37,11 +29,7 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 
 ### Disable Addons When Downgrading to Basic Plan
 
-<<<<<<< HEAD
-[Object Cache](/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
-=======
 [Object Cache](/guides/object-cache) (formerly Redis), and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 To remove these addons:
 
@@ -91,11 +79,7 @@ Downgrading to a Sandbox site will disable automatic backups. You will still be 
 
 ## Downgrade Your Plan to Sandbox
 
-<<<<<<< HEAD
-To downgrade to Sandbox, see [Cancel Current Plan](/guides/legacy-dashboard/site-plan#cancel-current-plan).  
-=======
 To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/manage#downgrade-your-plan-to-sandbox).  
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ## Change Your Plan
 
@@ -112,11 +96,7 @@ To change your plan:
 
 <Tab title="Edu Sites" id="edu" active={true}>
 
-<<<<<<< HEAD
 1. As an [organization administrator](/guides/account-mgmt/workspace-sites-teams/teams), from the Site Dashboard, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
-=======
-1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
 
@@ -157,12 +137,6 @@ Before making any changes, please review [Before You Make Changes](#before-you-m
 
 1. Make sure the change details are correct, then click **Submit**.
 
-<<<<<<< HEAD
-1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card).
-
-Optionally, you can remove the Sandbox site after downgrading. For details, see [Delete a Site](/guides/account-mgmt/workspace-sites-teams/sites#delete-sites).
-=======
 1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/account-mgmt/billing/methods#delete-a-site-specific-payment-method).
 
 Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

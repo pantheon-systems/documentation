@@ -17,11 +17,7 @@ This section covers purchasing a new plan.
 
 <Alert title="Note" type="info">
 
-<<<<<<< HEAD
 Did you know Pantheon offers savings for sites purchased with annual billing? See [Plan Pricing](/guides/account-mgmt/plans/pricing) for more information.
-=======
-Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing) for more information.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 </Alert>
 
@@ -52,11 +48,7 @@ Invoices and transaction history related to this change can be found in **<span 
 You can enable the following add-ons:
 
 - [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
-<<<<<<< HEAD
- - [Object Cache](/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
-=======
  - [Object Cache](/guides/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
->>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 To enable or disable add-ons:
 
