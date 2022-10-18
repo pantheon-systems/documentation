@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.0.8"
+        "version": "3.0.9"
     },
     "commands": [
         {
@@ -124,7 +124,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -229,7 +229,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -341,7 +341,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -462,7 +462,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -592,7 +592,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -709,7 +709,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -806,7 +806,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -931,7 +931,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1035,7 +1035,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1159,7 +1159,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1291,7 +1291,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1416,7 +1416,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1551,7 +1551,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1702,7 +1702,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1844,7 +1844,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -1968,7 +1968,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2100,7 +2100,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2232,7 +2232,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2343,7 +2343,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2460,7 +2460,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2571,7 +2571,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2702,7 +2702,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2834,7 +2834,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -2965,7 +2965,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3076,7 +3076,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3181,7 +3181,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3293,7 +3293,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3398,7 +3398,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3549,7 +3549,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3680,7 +3680,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3803,7 +3803,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -3948,7 +3948,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4079,7 +4079,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4210,7 +4210,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4342,7 +4342,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4496,7 +4496,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4611,7 +4611,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4715,7 +4715,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4819,7 +4819,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -4950,7 +4950,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5056,7 +5056,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5186,7 +5186,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5291,7 +5291,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5403,7 +5403,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5514,7 +5514,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5626,7 +5626,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5749,7 +5749,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5854,7 +5854,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -5969,7 +5969,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6084,7 +6084,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6188,7 +6188,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6306,7 +6306,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6437,7 +6437,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6542,7 +6542,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6639,7 +6639,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6765,7 +6765,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -6897,7 +6897,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7012,7 +7012,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7144,7 +7144,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7259,7 +7259,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7374,7 +7374,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7478,7 +7478,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7582,7 +7582,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7713,7 +7713,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7837,7 +7837,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -7956,7 +7956,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8088,7 +8088,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8202,7 +8202,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8321,7 +8321,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8483,7 +8483,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8595,7 +8595,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8757,7 +8757,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8868,7 +8868,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -8980,7 +8980,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9106,7 +9106,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9212,7 +9212,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9343,7 +9343,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9475,7 +9475,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9586,7 +9586,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9690,7 +9690,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9794,7 +9794,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -9916,7 +9916,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10038,7 +10038,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10135,7 +10135,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10258,7 +10258,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10364,7 +10364,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10487,7 +10487,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10576,7 +10576,7 @@
                         "accept_value": true,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Namme of the project to be created (vendor\/project-name).",
+                        "description": "Name of the project to be created (vendor\/project-name).",
                         "default": ""
                     },
                     "help": {
@@ -10603,7 +10603,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10710,7 +10710,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10836,7 +10836,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -10932,7 +10932,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11030,7 +11030,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11166,7 +11166,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11277,7 +11277,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11385,7 +11385,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11517,7 +11517,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11628,7 +11628,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11765,7 +11765,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -11869,7 +11869,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12000,7 +12000,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12186,7 +12186,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12317,7 +12317,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12428,7 +12428,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12560,7 +12560,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12672,7 +12672,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12791,7 +12791,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -12922,7 +12922,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13034,7 +13034,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13152,7 +13152,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13259,7 +13259,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13370,7 +13370,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13474,7 +13474,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13578,7 +13578,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13682,7 +13682,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13806,7 +13806,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -13911,7 +13911,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14029,7 +14029,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14168,7 +14168,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14287,7 +14287,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14418,7 +14418,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14581,7 +14581,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14705,7 +14705,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14836,7 +14836,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -14940,7 +14940,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -15054,7 +15054,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -15195,7 +15195,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -15336,7 +15336,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -15468,7 +15468,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {
@@ -15581,7 +15581,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug",
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
                         "default": false
                     },
                     "version": {

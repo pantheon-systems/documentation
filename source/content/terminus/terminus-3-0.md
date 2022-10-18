@@ -46,7 +46,7 @@ The following commands are new to Terminus as of version 3.0:
 
 - Support for EOL versions of PHP have been removed from Terminus 3. PHP 7.4 or later is required.
 
-## See Also
+## More Resources
 
 - [The Terminus Manual](/terminus)
 - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

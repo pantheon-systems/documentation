@@ -84,7 +84,7 @@ This section is optional, and is only intended for customers who would like to c
 
 1. Complete the configuration steps in WordPress Site Networks Guide to [install](/guides/multisite/config/#install-the-wordpress-site-network) and [configure](/guides/multisite/config/#configure-the-wordpress-site-network) the WordPress Site Network created for you in step 2.
 
-## See Also
+## More Resources
 
 - [Getting Started with Git](/guides/git/git-config)
 

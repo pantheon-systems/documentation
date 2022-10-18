@@ -3,6 +3,8 @@ title: Frequently Asked Questions
 description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
 categories: [platform]
 tags: [support]
+permalink: docs/faq
+anchorid: faq
 ---
 
 This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.

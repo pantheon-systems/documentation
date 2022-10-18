@@ -43,7 +43,7 @@ Module specific services should be defined in a separate `.yml` file, located in
 
 </Alert>
 
-## See Also
+## More Resources
 
 View the following [Drupal.org](https://drupal.org) resources for more information:
 

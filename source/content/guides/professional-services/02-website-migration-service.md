@@ -188,7 +188,7 @@ These used to be called Custom Application Services (CAS) hours.
 
 1. Perform DNS cutover within the timeline specified in the migrations agreement
 
-## See Also
+## More Resources
 
 - [Migrate Sites to Pantheon](/guides/guided/ and [Manually Migrate Sites to Pantheon](/migrate-manual) to see what it takes to migrate a site yourself
 - [Migrate to Pantheon: WordPress Site Networks](/migrate-wordpress-site-networks)

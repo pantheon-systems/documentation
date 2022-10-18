@@ -107,7 +107,7 @@ From here, you can update the existing demo content, or delete it and create new
 - Visit the [Launch Checks](/guides/launch/launch-check) guide to review key checks to perform before going live.
 - If utilizing the Object Cache, follow our guide on [enabling Object Caching for WordPress](/guides/object-cache/enable-object-cache).
 
-## See Also
+## More Resources
 
 - [Introduction to Custom Upstreams](/guides/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams.
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert teams can provide.

@@ -131,7 +131,7 @@ Learn how to use [bots and indexing](/bots-and-indexing) in a way that does not 
 
 You can also integrate with external Solr search indexes with services like [OpenSolr](/opensolr).
 
-## See Also
+## More Resources
 
 - [Hot Fixes](/hotfixes)
 - [What is the "pantheon_api.module"](/modules#pantheon-module-drupal-7)

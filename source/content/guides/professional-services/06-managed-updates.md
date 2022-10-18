@@ -60,7 +60,7 @@ Managed Updates for Portfolio Upstreams provides provides core, plugin, and modu
 | Custom VRT                                    | VRT for authenticated pages or custom DOM elements.                                    | ❌                                   | ❌                       | <Check/>                |
 
 
-## See Also
+## More Resources
 - [Serving Sites from the Web Subdirectory](/nested-docroot)
 - [Custom Upstreams](/guides/custom-upstream)
 - [Professional Services](/guides/professional-services)

@@ -26,7 +26,7 @@ Now we’ll create a pantheon.yml file for the Multidev branch, set the PHP vers
 
 The Multidev environment should be thoroughly tested to make sure there are no issues with PHP7 and the codebase.
 
-It's also a good idea to check the [PHP error logs](/logs) to see if any issues are reported.
+It's also a good idea to check the [PHP error logs](/guides/logs-pantheon) to see if any issues are reported.
 
 When the site has been tested to your satisfaction, the Multidev environment can be merged into Dev and eventually deployed into Test and Live.
 

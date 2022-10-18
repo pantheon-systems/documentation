@@ -5,6 +5,7 @@ cms: "Drupal"
 categories: [automate]
 tags: [cron]
 reviewed: "2020-06-30"
+permalink: docs/drupal-cron
 ---
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 

@@ -31,6 +31,6 @@ This upgrade will not maintain your site’s commit history.
 - Drupal 9 sites created on the platform prior to May 2022 use the [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
 - We now recommend using the [Drupal 9 Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) upstream.
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)

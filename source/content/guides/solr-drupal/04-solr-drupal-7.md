@@ -220,7 +220,7 @@ The following code changes are required before Solr can be safely uninstalled an
 
 <Partial file="remove-addons/d7-solr.md" />
 
-## See Also
+## More Resources
 
 - [Apache Solr on Pantheon](/solr)
 - [Using OpenSolr with Pantheon](/opensolr)
