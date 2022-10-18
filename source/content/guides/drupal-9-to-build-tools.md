@@ -250,6 +250,6 @@ Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-settin
 
 <Partial file="composer-updating.md" />
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/composer)

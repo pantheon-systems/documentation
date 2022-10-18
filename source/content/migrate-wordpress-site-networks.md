@@ -190,7 +190,7 @@ Visit the Development environment and confirm your site was imported correctly!
 
 When you re-import the database with current content (prior to going live on Pantheon) you will need to run `wp search-replace` again.
 
-## See Also
+## More Resources
 
 * [Migrate Sites to Pantheon](/guides/guided/)
 * [Guided WordPress Migrations (video)](/videos/migrate-wordpress)

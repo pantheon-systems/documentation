@@ -32,7 +32,7 @@ Be sure you have:
 - Git client for tracking code changes
 - SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
 - [Terminus](/terminus)
-- [Drush](/drush) (optional)
+- [Drush](/guides/drush) (optional)
 
 ### Export Variables
 

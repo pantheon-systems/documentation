@@ -3,6 +3,7 @@ title: Debugging Slow Performance
 description: Identify common problems with Drupal or WordPress performance speeds and deploy solutions.
 categories: [performance]
 tags: [cache, code, logs, measure]
+permalink: docs/debug-slow-performance
 ---
 This article covers the most common causes for performance problems, demonstrates how to diagnose bottlenecks, and provides actionable solutions for developers.
 
@@ -35,7 +36,7 @@ As an example, if your slowest database operation is an INSERT to watchdog, then
 
 ![Example of INSERT consuming execution time](../images/example-insert-consuming-execution-time.png)
 
-Learn more about [Log Files on Pantheon](/logs).
+Learn more about [Log Files on Pantheon](/guides/logs-pantheon).
 
 ## Too Many Database Queries
 The next performance killer is an excessive number of database queries per request. You can see that in the [New Relic&reg; Performance Monitoring dashboard](/guides/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.

@@ -50,7 +50,7 @@ WordPress stores full URLs in the database. These URLs can be links within the p
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
 
 ```bash
-terminus remote:wp <site>.<env> -- search-replace <old-domain> <new-domain> --network --url=<old-domain>
+terminus remote:wp <site>.<env> -- search-replace "<old-domain>" "<new-domain>" --network --url=<old-domain>
 ```
 
 In this example:
@@ -60,7 +60,7 @@ In this example:
 - `--network` tells WP-CLI to perform the procedure on all Site Network tables. Its default behavior is to limit search and replace to the current site.
 - `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
-See the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
+Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
 
 Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
 
@@ -114,6 +114,8 @@ Refreshing data in Test or Dev from Live is simply a matter of reversing the ste
     ```
 
 You can now develop against production data.
+
+Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](https://pantheon.io/docs/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
 
 ## Work with Large Databases
 If you have a really large database (gigabytes and gigabytes) or dozens upon dozens of tables, you may notice that `wp search-replace` can take a really long time — or even time out.

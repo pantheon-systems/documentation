@@ -5,7 +5,7 @@ categories: [troubleshoot]
 tags: [code, database, files]
 ---
 
-There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
+There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you get database connection errors like the following:
 
 ![Can't connect to local MySQL server through socket](../images/mysql-connection-error.png)
 
@@ -23,17 +23,17 @@ Pantheon provides Pressflow core as the underlying basis for all Drupal sites. T
 
 However, if you overwrite the Pressflow core — most commonly by unpacking a tarball from drupal.org "over" your Git checkout and then pushing the change, or updating core via Drush — your site loses the ability to read the environmental configuration.
 
-To see if this is the case, examine your `includes/bootstrap.inc` file, and verify that you see code in the `drupal_settings_initialize()` function which loads data from `$_SERVER['PRESSFLOW_SETTINGS']`.
+To determine whether this is the case, examine your `includes/bootstrap.inc` file, and verify that you there is code in the `drupal_settings_initialize()` function which loads data from `$_SERVER['PRESSFLOW_SETTINGS']`.
 
-If you don't see that, look in to recent changes and revert or remove whatever overwrote your core.
+If there is not, go into your recent changes and revert or remove whatever overwrote your core.
 
 ### WordPress Core
 
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, refer to [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 ## Drupal Non-Standard Bootstraps
 
-Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
+Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking whether a user has access.
 
 However, because the Pantheon environment data is not loaded at this time, any bootstrap to the database level will fail since there is no valid connection information. In this case, include a snippet in your `settings.php` before the module's include call.
 
@@ -64,5 +64,6 @@ This error shouldn’t cause any issues for your site:
 Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pantheon.semaphore' doesn't exist' in /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc:2171 Stack trace: #0 /srv/bindings/7xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(2171): PDOStatement->execute(Array) #1 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(683): DatabaseStatementBase->execute(Array, Array) #2 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/database/database.inc(2350): DatabaseConnection->query('SELECT expire, ...', Array, Array) #3 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/lock.inc(167): db_query('SELECT expire, ...', Array) #4 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/lock.inc(146): lock_may_be_available('schema:runtime:...') #5 /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc(433): ...
 ```
 
-## See Also
+## More Resources
+
 - [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections)

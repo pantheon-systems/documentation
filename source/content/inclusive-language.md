@@ -137,7 +137,7 @@ Because language constantly evolves, we welcome and encourage additions and alte
 
 Our [guide on contributing to Pantheon documentation](/contribute) can help you get started.
 
-## See Also
+## More Resources
 
 - [Pantheon Style Guide](/style-guide)  
 - [Diversity, Equity, and Inclusion at Pantheon](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon)

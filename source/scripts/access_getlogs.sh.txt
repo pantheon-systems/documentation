@@ -1,6 +1,6 @@
 #!/bin/bash
 
-type goaccess >/dev/null 2>&1 || { echo >&2 "GoAccess is not installed. Aborting. \n[+]https://pantheon.io/docs/nginx-access-log/ \n[+] https://goaccess.io/download"; exit 1; }
+type goaccess >/dev/null 2>&1 || { echo >&2 "GoAccess is not installed. Aborting. \n[+]https://pantheon.io/docs/guides/logs-pantheon/nginx-access-logs/ \n[+] https://goaccess.io/download"; exit 1; }
 
 
 for i in "$@"

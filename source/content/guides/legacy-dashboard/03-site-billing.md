@@ -132,4 +132,8 @@ If you are the billing contact for an online site plan, check your spam folder, 
 
 ## More Resources
 
+<<<<<<< HEAD
 - [Account Management](/guides/account-mgmt)
+=======
+- [Account Management](/manage)
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

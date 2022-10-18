@@ -26,7 +26,7 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title={"Quicksilver"} link={"/docs/quicksilver"}>
+  <Product title={"Quicksilver"} link={"/docs/guides/quicksilver"}>
 
   Quicksilver can automate your Pantheon WebOps workflow.
 
@@ -74,7 +74,7 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
 <ProductGroup>
 
-  <Product title={"Asana"} link={"/docs/guides/asana/"}>
+  <Product title={"Asana"} link={"/docs/guides/quicksilver/asana/"}>
 
   [Asana](https://asana.com/) manages team projects and individual tasks..
 
@@ -86,7 +86,7 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title={"Trello"} link={"/docs/guides/trello/"}>
+  <Product title={"Trello"} link={"/docs/guides/quicksilver/trello/"}>
 
   [Trello](https://trello.com/) helps teams to collaborate on projects in an agile framework.
 

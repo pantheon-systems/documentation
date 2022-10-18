@@ -70,7 +70,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 1. Name your site and select an [Organization](/guides/account-mgmt/workspace-sites-teams/workspaces) (optional), then click **Create Site**:
 
-   ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
+   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/migrate-step3.png)
 
 1. Click the link to manually migrate your site then select **Yes** to confirm:
 
@@ -435,4 +435,4 @@ In this case, you will want to remove `ff = only` from your `.gitconfig` file an
 
 - [Troubleshooting](/guides/guided/troubleshooting) tips
 
-- [Importing Drush Site Archives with Terminus](/drush-import)
+- [Importing Drush Site Archives with Terminus](/guides/drush/drush-import)

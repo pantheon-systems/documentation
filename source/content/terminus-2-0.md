@@ -140,7 +140,7 @@ The changes to these commands' behavior may affect existing integrations. For a 
  - `site:team:list`
    - Now emits a new field showing which team member is the owner of the site.
 
-## See Also
+## More Resources
 
  - [The Terminus Manual](/terminus)
  - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

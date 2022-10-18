@@ -47,7 +47,7 @@ Raw data is not currently available.
 
 ### Why doesn't Pantheon's traffic match my analytics?
 
-There are some inherent limitations with using an analytics suite (e.g., Google Analytics) when measuring site traffic. For details, see [Traffic Limits and Overages](/traffic-limits#why-doesnt-pantheons-traffic-match-my-analytics).
+There are some inherent limitations with using an analytics suite (e.g., Google Analytics) when measuring site traffic. See [Traffic Limits and Overages](/guides/account-mgmt/traffic).
 
 ### How does Pantheon handle overages?
 
@@ -55,21 +55,21 @@ All non-Basic plans come with free overage protection. Where there is a pattern 
 
 ### What about bots?
 
-Pantheon-identified bots are excluded from the Visits and Pages Served Metrics. See [Traffic Limits](/traffic-limits#traffic-metrics) for more information.
+Pantheon-identified bots are excluded from the Visits and Pages Served Metrics. See [Traffic Limits and Overages](/guides/account-mgmt/traffic) for more information.
 
 ### What about redirects?
 
-Only requests with a 200-level status count as pages served, so 301 redirects will not be included in metrics. See [Traffic Limits](/traffic-limits#traffic-metrics) for more information.
+Only requests with a 200-level status count as pages served, so 301 redirects will not be included in metrics. See [Traffic Limits and Overages](/guides/account-mgmt/traffic) for more information.
 
 ### Are multiple user agents on the same originating IP address counted separately?
 
-Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor. See [Traffic Limits](/traffic-limits#traffic-metrics) for more information.
+Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor. See [Traffic Limits and Overages](/guides/account-mgmt/traffic) for more information.
 
 ### Can I check metrics from the command line with Terminus?
 
 Yes! Access to metrics via the Terminus [`env:metrics`](/terminus/commands/env-metrics) command. [Install Terminus](/terminus/install) or update to the [current release](/terminus/updates#updates) for access to the `env:metrics` command.
 
-## See Also
+## More Resources
 
 - [Traffic Limits and Overages](/guides/account-mgmt/traffic)
 - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)

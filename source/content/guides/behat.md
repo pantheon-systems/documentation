@@ -118,7 +118,7 @@ If you find you are repeating the same things over and over, such as logging int
 - [Behat WordPress Extension](https://wordhat.info/)
 - [Behat Drupal Extension](https://www.drupal.org/project/drupalextension)
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)
 - [Behat.org](http://behat.org)

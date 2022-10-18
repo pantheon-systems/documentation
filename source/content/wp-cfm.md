@@ -104,7 +104,7 @@ To create a bundle:
 
 ## Automatically Import WP-CFM Configuration Settings into a Cloned Database
 
-You can automatically import your WP-CFM configuration settings into a cloned database if you are using Quicksilver. See [Import WP-CFM Configuration Settings into a Cloned Database](/quicksilver#import-wp-cfm-configuration-settings-into-a-cloned-database) for more details.
+You can automatically import your WP-CFM configuration settings into a cloned database if you are using Quicksilver. Consult the [Quicksilver guide](/guides/quicksilver) for more details.
 
 ## Deploy Configuration: Pull
 

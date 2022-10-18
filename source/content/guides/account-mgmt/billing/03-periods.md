@@ -21,7 +21,11 @@ Before changing your billing period from monthly to annual, or vice-versa, consi
  - Sites on annual billing plans that upgrade will be invoiced immediately, and the site will be upgraded immediately.
  - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
  - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
+<<<<<<< HEAD
  - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes. To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/guides/legacy-dashboard/add-client-site).
+=======
+ - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes. To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/guides/account-mgmt/workspace-sites-teams/sites#create-a-site).
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 To change your billing cadence.
 

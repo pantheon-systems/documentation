@@ -12,13 +12,21 @@ editpath: docs/guides/account-mgmt/account/03-workspace.md
 reviewed: "2022-09-19"
 ---
 
+<<<<<<< HEAD
 Once you create an account and sign in, you are taken to your home page, known as your Personal Workspace.  Here you can view key information at a glance, including the sites you have access to, your plan tier, and more.
+=======
+Once you create an account and sign in, you are taken to your home page, known as your Personal Workspace.  Here you can view key information at a glance, including the sites you own or are a team member of, your plan tier, and more.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 ![A screenshot of the new Dashboard homepage with Workspace Overview](../../../../images/dashboard/new-dashboard/workspace-overview.png)
 
 <Alert title="Note" type="info" >
 
+<<<<<<< HEAD
 Currently, you cannot edit or manage account tiers using the Workspace.
+=======
+You cannot edit or manage account tiers using the workspace. For more information, [contact Sales](https://pantheon.io/contact-us)
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 </Alert>
 
@@ -32,6 +40,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
   - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, refer to [Migrate Sites to Pantheon](/guides/guided/) on our [Get Started](/get-started) page.
 
+<<<<<<< HEAD
 - **Team:** Create a new Workspace.
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
@@ -41,6 +50,19 @@ The navigation bar on the left contains several additional tabs to help you mana
 - **Custom Upstreams:** Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
 - **Settings:** Modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
+=======
+- **Team*:** Create a new workspace.
+
+- **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
+
+- **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
+
+- **Custom Upstreams*:** Create a new workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
+
+- **Settings:** Modify the workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
+
+\* Not available in Personal Workspaces.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 <Alert title="Note" type="info" >
 

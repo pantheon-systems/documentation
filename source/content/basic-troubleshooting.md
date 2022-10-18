@@ -57,7 +57,7 @@ Site problems may feel random, but they’re all triggered by _something_. Was t
 
 We recommend rolling back either the code or database versus a full restore in most cases. You can do this using [Terminus](/terminus/commands/backup-restore).
 
-If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your [nginx access logs](/nginx-access-log).
+If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your [nginx access logs](/guides/logs-pantheon/nginx-access-logs).
 
 ### Narrow down the cause
 
@@ -73,7 +73,7 @@ Continue doing this until the problem no longer comes up.
 More complex issues with code may necessitate using debugging tools beyond your server or application logs.
 
 - Recreate the issue locally.
-- For WordPress, [enable WP_DEBUG & WP_DEBUG_LOG](/logs#how-do-i-enable-error-logging-for-wordpress) in wp-config.php. Then use the debug.log file to find warnings and errors.
+- For WordPress, [enable WP_DEBUG & WP_DEBUG_LOG](/guides/logs-pantheon/faq-logs#how-do-i-enable-error-logging-for-wordpress) in wp-config.php. Then use the debug.log file to find warnings and errors.
 - Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/lando-wordpress) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
 
 ## Pantheon Dashboard
@@ -108,7 +108,7 @@ For conflicts introduced by other code merges (like from Multidev environments),
 
 ## White Screen of Death (WSOD)
 
-The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs). See [PHP Errors and Exceptions](/guides/php/php-errors) for more information on the type of errors you may find.
+The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/guides/logs-pantheon). See [PHP Errors and Exceptions](/guides/php/php-errors) for more information on the type of errors you may find.
 
 ## WordPress
 

@@ -11,7 +11,7 @@ Managing configuration is an extremely important part of any team website projec
 
 Pantheon supports the [Drupal 9 Configuration Management system](https://www.drupal.org/documentation/administer/config). Each Pantheon Drupal site defaults configuration into the `/config` directory.
 
-You can export your configuration into that directory directly using Drush's `config-export` command or indirectly using Drupal's UI to download the configuration, and then use SFTP/Git to place the configuration in `config` or `sites/default/config`. For more information, check out the [Managing Content, Configuration, and Code Across Environments](/guides/drupal-commandline#managing-content-configuration-and-code-across-environments) section of [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drupal-commandline).
+You can export your configuration into that directory directly using Drush's `config-export` command or indirectly using Drupal's UI to download the configuration, and then use SFTP/Git to place the configuration in `config` or `sites/default/config`. For more information, check out the [Managing Content, Configuration, and Code Across Environments](/guides/drush/drupal-commandline#managing-content-configuration-and-code-across-environments) section of [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline).
 
 <Accordion title="Watch: Configuration Management in Drupal" id="d8-config-video" icon="facetime-video">
 

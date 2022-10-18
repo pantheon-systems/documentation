@@ -12,13 +12,13 @@ The emails listed below are received by all users, regardless of their assigned 
 
 - **Site deleted:** a site admin-generated notification sent to all site team members when a site is deleted.
 
-- **Organization invite:** a user-generated invitation to join an organization /workspace team. The invited user is not required to have an account yet.
+- **Workspace invite:** a user-generated invitation to join a workspace. The invited user is not required to have an account yet.
 
 The emails listed below are only received by users who have been assigned to the site admin role.
 
-- **Site plan level change:** a Pantheon-generated notification sent to all site admins and organization / workspace admins when a site's plan is upgraded or downgraded.
+- **Site plan level change:** a Pantheon-generated notification sent to all site admins and workspace admins when a site's plan is upgraded or downgraded.
 
-- **Site added as supporting organization / workspace:** a Pantheon-generated notification sent to all organization / workspace admins when a site is added to an organization / workspace as a supporting organization / workspace.
+- **Site added as supporting organization:** a Pantheon-generated notification sent to all workspace admins when a site is added to an workspace as a supporting organization.
 
 ### Autopilot Email Notifications
 

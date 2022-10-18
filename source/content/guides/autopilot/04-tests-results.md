@@ -36,7 +36,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 
 ## Failing Tests
 
-Autopilot can report failures via email or [Quicksilver hooks](/quicksilver#hooks) immediately, and send a weekly email report summarizing all Autopilot activity.
+Autopilot can report failures via email or [Quicksilver hooks](/guides/quicksilver/hooks) immediately, and send a weekly email report summarizing all Autopilot activity.
 
 If an error is detected during an update attempt, the **Autopilot Status** shows **Needs Attention** with two options to **Review Test Results** or to **View Update Details**.
 

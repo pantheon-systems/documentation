@@ -28,9 +28,15 @@ Be sure to set up workspaces before creating sites.
 
 ## Manage Sites
 
+<<<<<<< HEAD
 The Sites tab shows all sites this workspace has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
 
 Agency organizations will show "Site Owners" instead of "Users in Charge"
+=======
+The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
+
+Agency workspaces will show "Site Owners" instead of "Users in Charge"
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/guides/platform-considerations/platform-site-info#inactive-site-freezing).
 
@@ -38,6 +44,7 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 If you did not select a workspace when creating the site, you can add it to a workspace later. See [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
 
+<<<<<<< HEAD
 ## Retrieve the Site UUID
 
 Every entity (user, organization, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
@@ -51,6 +58,8 @@ You can also use [Terminus](/terminus) to find the UUID of your organizations:
 ```bash{promptUser: user}
 terminus site:list
 ```
+=======
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 ### Tag Sites
 
 Tags are an easy way to add data to your sites to help you manage them. 
@@ -83,15 +92,25 @@ To export a list of sites:
 
 ### Change Site Ownership
 
+<<<<<<< HEAD
 The person who creates the site owns it until someone else starts paying for it. The user or Enterprise Organization who pays for the site is the owner thereafter.
 
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Teams](/guides/account-mgmt/workspace-sites-teams/teams).
+=======
+The person who creates the site owns it until someone else starts paying for it. The user or Enterprise who pays for the site is the owner thereafter.
+
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Workspace Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 There can only be one site owner.
 
 <Alert title="Note" type="info">
 
+<<<<<<< HEAD
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
+=======
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 
 </Alert>
@@ -110,7 +129,11 @@ To change the owner of a paid site (e.g. Basic, or Performance):
 
    Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site and will receive future invoices.
 
+<<<<<<< HEAD
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
+=======
+Enterprise workspaces can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 </Tab>
 
@@ -124,6 +147,7 @@ To transfer ownership for a site:
 
 </Tab>
 
+<<<<<<< HEAD
 <Tab title="Partner Organizations" id="partner">
 
 When a developer creates a site in a partner organization, they automatically become the "Site Owner/User in Charge" until the business owner starts paying for the site and becomes the owner. Organization admins cannot delete users from an organization until the listed owner no longer owns any sites in the organization.
@@ -131,6 +155,15 @@ When a developer creates a site in a partner organization, they automatically be
 The user account in question must [transfer ownership to another person in the organization](/guides/account-mgmt/billing/transfer). Partner organization admins cannot change ownership of sites. If the organization is using SAML for single-sign on, you should be able to log-in as the user and make the necessary changes. Partners without SAML will need to [contact support](/guides/support/contact-support/) to request ownership change, which may take 24-48 hours. As a workaround, admins can download a backup of the site, import it as a new site, move the domain name from the original site to the imported site, and delete the original site(s).
 
 For all sites, we recommend instructing users to change their passwords regularly, using two-factor authentication, restricting access with Change Management, and carefully planning who will create client sites in the organization.
+=======
+<Tab title="Partner Workspaces" id="partner">
+
+When a developer creates a site in a partner workspace, they automatically become the "Site Owner/User in Charge" until the business owner starts paying for the site and becomes the owner. Workspace admins cannot delete users from a workspace until the listed owner no longer owns any sites in the workspace.
+
+The user account in question must [transfer ownership to another person in the workspace](/change-management/#change-site-owner). Partner workspace admins cannot change ownership of sites. If the workspace is using SAML for single-sign on, you should be able to log-in as the user and make the necessary changes. Partners without SAML will need to [contact support](/guides/support/contact-support/) to request ownership change, which may take 24-48 hours. As a workaround, admins can download a backup of the site, import it as a new site, move the domain name from the original site to the imported site, and delete the original site(s).
+
+For all sites, we recommend instructing users to change their passwords regularly, using two-factor authentication, restricting access with Change Management, and carefully planning who will create client sites in the workspace.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 </Tab>
 
@@ -141,13 +174,21 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
+<<<<<<< HEAD
 Only the site's "User in Charge" or "Owner" can delete a site. See [Teams](/guides/account-mgmt/workspace-sites-teams/teams) for more information.
+=======
+Only the site's "User in Charge" or "Owner" can delete a site. See [Roles and Permissions](/change-management#roles-and-permissions) for more information.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 <Alert title="Warning" type="danger">
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
+<<<<<<< HEAD
 **Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/legacy-dashboard/site-plan) for more information.
+=======
+**Before you delete a site**: Downgrade the site plan to Sandbox. See [Manage Site Plans](/guides/account-mgmt/plans/manage) for more information.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 **After you delete a site that had a live domain or subdomain**: Update the DNS records so that they don't continue to point to the deleted site.
 

@@ -31,6 +31,26 @@ Pantheon Front-End Sites currently supports:
 * Drupal 9
 * WordPress 5.9
 
+### What Pantheon products and features are currently not supported with Front-End Sites?
+
+Front-End Sites will not work with all products and feautures on our platform.  
+
+Pantheon Front-End Sites are currently not compatible with the following Pantheon products:
+
+* [Autopilot](https://pantheon.io/autopilot)
+* [AGCDN](https://pantheon.io/product/advanced-global-cdn)
+
+The following features are currently not supported with Pantheon Front-End Sites:
+
+* Self-service domain management
+* Active Purging
+* Role Based Access Control (RBAC)
+* Supporting Orgs
+* Multizone Failover
+* New Relic 
+* Log forwarding
+* Object Cache (Redis)
+
 
 ### Is Decoupled Site Preview available for all instances on Front-End Sites?
 
@@ -38,6 +58,10 @@ Decoupled Site Preview is only available for sites using Drupal as the CMS.
 
 
 ## Known Issues
+
+<Accordion title="A repository can only be associated with one Front-End Site" id="repo-site" icon="info-sign">
+A repository can only be associated with one decoupled Front-End Site at a time. You will receive an error message if you attempt to connect a repository to two or more sites.
+</Accordion>
 
 <Accordion title="Builds are only available for Gatsby and Next.js " id="terms-decoupled" icon="info-sign">
 Builds will only complete for repositories that are detected as Gatsby or Next.js repositories. Builds for all other frameworks will fail.

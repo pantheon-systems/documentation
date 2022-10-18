@@ -16,4 +16,8 @@ If you login via social login (Connect with Google) or Single-Sign On (SSO) and 
 
 </Alert>
 
+<<<<<<< HEAD
 Larger agencies with multiple developers using password authentication to login may see access issues across the organization. We strongly recommend using SSH keys to avoid potential authentication failures. See [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces) more information.
+=======
+Larger agencies with multiple developers using password authentication to login may see access issues across the workspace. We strongly recommend using SSH keys to avoid potential authentication failures. Refer to [Pantheon Workspaces FAQs](/organization-faq#why-do-login-attempts-fail-for-all-users-across-my-organization-simultaneously?) more information.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

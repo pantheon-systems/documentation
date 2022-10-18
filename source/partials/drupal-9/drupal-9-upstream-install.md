@@ -2,7 +2,7 @@
 
    - Enter a name for the site.
 
-   - Choose an Organization if applicable.
+   - Choose an workspace if applicable.
 
    - Choose a region for the site. Click **Continue**.
 

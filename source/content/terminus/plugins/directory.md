@@ -64,7 +64,7 @@ Open Pantheon Site Databases in your favorite SQL Client.
 
   <Card title={"Quicksilver"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-quicksilver-plugin"}>
 
-Install [Quicksilver](/quicksilver) webhooks from the [Quicksilver examples](https://github.com/pantheon-systems/quicksilver-examples), or a personal collection.
+Install [Quicksilver](/guides/quicksilver) webhooks from the [Quicksilver examples](https://github.com/pantheon-systems/quicksilver-examples), or a personal collection.
 
   </Card>
 

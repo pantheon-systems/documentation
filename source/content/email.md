@@ -156,6 +156,6 @@ To stop `autodiscover.xml` requests that can cause 404 errors, you can configure
 
 Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
 
-## See Also
+## More Resources
 
 - [Resetting Passwords](/resetting-passwords)  

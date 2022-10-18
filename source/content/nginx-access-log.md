@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Parsing Nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
@@ -118,3 +119,5 @@ You can navigate the `nginx-access.log` file using the CLI, without GoAccess. Th
 * [Log Files on Pantheon](/logs)
 * [Bots and Indexing](/bots-and-indexing)
 * [Traffic Limits and Overages](/guides/account-mgmt/traffic)
+=======
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7

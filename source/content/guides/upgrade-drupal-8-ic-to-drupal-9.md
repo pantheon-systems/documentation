@@ -76,6 +76,6 @@ Confirm the site requirements in the sections below before upgrading to Drupal 9
 
 <Partial file="composer-updating.md" />
 
-## See Also
+## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)

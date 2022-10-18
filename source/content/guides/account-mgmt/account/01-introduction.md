@@ -12,7 +12,11 @@ editpath: docs/guides/account-mgmt/account/01-introduction.md
 reviewed: "2022-09-19"
 ---
 
+<<<<<<< HEAD
 When starting with Pantheon, the first thing you do is create an account.  This account then lets you purchase plans, manage your organization, and pay your bills.
+=======
+When starting with Pantheon, the first thing you do is create an account.  This account then lets you purchase plans, manage your workspaces, and pay your bills.
+>>>>>>> 59932ef6499548bef1d203b3498cd4f595289dc7
 
 To create an account, [sign up now for free](https://pantheon.io/register?docs).
 

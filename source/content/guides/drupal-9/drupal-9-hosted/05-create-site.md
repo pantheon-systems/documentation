@@ -17,7 +17,7 @@ reviewed: "2021-03-31"
 
    - Enter a name for the site.
 
-   - Choose an Organization if applicable.
+   - Choose a workspace if applicable.
 
    - Choose a region for the site. Click **Continue**.
 

@@ -14,7 +14,7 @@ searchboost: 50
 
 The [pantheon.yml](/pantheon-yml) file provides a way to configure platform options for any project. This file is version controlled and can be configured differently for each environment.
 
-Configurable items include: PHP version, Drush version, protected paths, nested docroot, and [Quicksilver](/quicksilver) platform hooks.
+Configurable items include: PHP version, Drush version, protected paths, nested docroot, and [Quicksilver](/guides/quicksilver) platform hooks.
 
 Items such as Nginx configuration or Varnish settings are not editable.
 
@@ -26,7 +26,7 @@ Now we’ll create a pantheon.yml file for the Multidev branch, set the PHP vers
 
 The Multidev environment should be thoroughly tested to make sure there are no issues with PHP7 and the codebase.
 
-It's also a good idea to check the [PHP error logs](/logs) to see if any issues are reported.
+It's also a good idea to check the [PHP error logs](/guides/logs-pantheon) to see if any issues are reported.
 
 When the site has been tested to your satisfaction, the Multidev environment can be merged into Dev and eventually deployed into Test and Live.
 
