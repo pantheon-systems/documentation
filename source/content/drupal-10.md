@@ -7,7 +7,7 @@ contributors: [wordsmither]
 reviewed: "2022-10-18"
 ---
 
-Drupal 10 is coming in December 2022!  However, we've been busy testing it on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.
+Drupal 10 is coming in December 2022! We've been busy conducting early testing on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.
 
 <Alert title="Warning" type="danger" >
 
@@ -19,9 +19,9 @@ These instructions were developed using beta versions of Drupal 10, and are for 
 
 This process requires that you are on PHP 8.1.  To upgrade:
 
-1. Create a new Drupal site using the "Drupal with Composer" CMS/Start State.
+1. Create a new Drupal site using the ["Drupal with Composer" CMS/Start State](/guides/quickstart/create-new-site/).
 
-1. Clone the site locally with Git.
+1. [Clone the site](/guides/git/git-config#clone-your-site-codebase) locally with Git.
 
 1. Add the following line to `pantheon.yml`:
 
@@ -35,7 +35,7 @@ This process requires that you are on PHP 8.1.  To upgrade:
    git commit -am "PHP 8.1"; git push;
    ```
 
-## Create the Site
+## Create a Drupal 10 Site
 
 To create a new Drupal 10 site, run the following commands:
 
