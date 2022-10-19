@@ -17,7 +17,7 @@ This doc introduces some of the methods Pantheon offers to help troubleshoot tra
 
 ## Review the NGINX Access Log
 
-To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/nginx-access-log). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
+To get the most information about your site's traffic, review the `nginx-access.log` with [GoAccess](/guides/logs-pantheon/nginx-access-logs). While it may be a somewhat technical process, it provides the most direct information to help identify potential traffic issues.
 
 ## WordPress Best Practices
 
