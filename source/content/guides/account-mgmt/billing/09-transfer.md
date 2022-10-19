@@ -17,7 +17,7 @@ The permission to transfer ownership or update payment method is granted only to
 
 ## Transfer Ownership
 
-See [Change Site Ownership](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership) for instructions.
+Refer to [Change Site Ownership](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership) for instructions.
 
 ## Accept an Invitation to Pay
 
@@ -29,7 +29,7 @@ If you already have a Pantheon, log in to that account before you begin. If you'
 
 </Alert>
 
-1. In the email, click **Make Payment**.  
+1. Open the email and click **Make Payment**.
 
 1. Select an existing card if one is on file, or add a new card to use as payment for the site.
 

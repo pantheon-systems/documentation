@@ -1,7 +1,7 @@
 ---
 title: Billing
 subtitle: Introduction
-description: Add a new credit card, remove the current card or transfer billing to a new site owner.
+description: Add a new credit card, remove the current card, or transfer billing to a new site owner.
 categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
@@ -12,13 +12,13 @@ editpath: docs/guides/account-mgmt/billing/01-introduction.md
 reviewed: "2022-09-19"
 ---
 
-This guide covers billing periods, payment methods, managing invoices and more.
+This guide covers billing periods, payment methods, managing invoices, and more.
 
-The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to billing as described on this page.
+The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to the billing information described on this page.
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
+If you need to assume site and billing ownership, the current Site Owner must [transfer ownership to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
 
 </Alert>
 
