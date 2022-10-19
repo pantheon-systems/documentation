@@ -1,6 +1,6 @@
 ---
 title: Pantheon Site Portfolio Report
-subtitle: Using the Site Portfolio Report
+subtitle: Interact with the Site Portfolio Report
 description: Learn how to interact with the Site Portfolio Report.
 categories: [billing]
 tags: [billing]
@@ -62,7 +62,7 @@ Enter the site name you want to search for in the **Search by site name** box lo
 
 You can increase the number of rows shown in each of the three Breakdown tables.
 
-1. Click the **Show rows per page** drop-down menu and select the number of rows you want to view.
+Click the **Show rows per page** drop-down menu and select the number of rows you want to view.
 
 ## Navigate to the Organization Dashboard from the Site Portfolio Report
 
@@ -72,7 +72,7 @@ Click the link under the Customer Organization heading at the top of the report 
 
 You can collapse and re-expand the each of the Breakdown tables.
 
-1. Click the arrow located next to the site count of any of the Breakdown tables to collapse (or re-expand) the view.
+Click the arrow located next to the site count of any of the Breakdown tables to collapse (or re-expand) the view.
 
 ## Download CSV 
 
