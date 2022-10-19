@@ -10,7 +10,9 @@ permalink: docs/guides/mariadb-mysql/database-connection-errors
 anchorid: database-connection errors
 ---
 
-There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you get database connection errors like the following:
+This section provides information on database connection errors.
+
+There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you get database connection errors like the one below:
 
 ![Can't connect to local MySQL server through socket](../../../images/mysql-connection-error.png)
 
@@ -18,27 +20,30 @@ There is an issue connecting to the Pantheon database if your site suddenly reve
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
 
-There are two common causes: overwriting core or using non-standard bootstraps.
+There are two common causes for this issue: 
+
+- Overwriting core
+- Using non-standard bootstraps
 
 ## Overwriting Core
 
 ### Drupal Pressflow Core
 
-Pantheon provides Pressflow core as the underlying basis for all Drupal sites. This is important for performance reasons, but also to take advantage of the ability to load configuration out of the server environment. You can run Drupal on Pantheon with no `settings.php` file, though there are still plenty of great uses for this file.
+Pantheon provides Pressflow core as the underlying basis for all Drupal sites. This is important for performance reasons, but also to load configuration out of the server environment. You can run Drupal on Pantheon with no `settings.php` file, though there are still plenty of great uses for this file.
 
-However, if you overwrite the Pressflow core — most commonly by unpacking a tarball from drupal.org "over" your Git checkout and then pushing the change, or updating core via Drush — your site loses the ability to read the environmental configuration.
+You can overwrite the Pressflow core by unpacking a tarball from drupal.org "over" your Git checkout and then pushing the change, or by updating core via Drush. However, your site will be unable to read the environmental configuration.
 
-To determine whether this is the case, examine your `includes/bootstrap.inc` file, and verify that you there is code in the `drupal_settings_initialize()` function which loads data from `$_SERVER['PRESSFLOW_SETTINGS']`.
+ Examine your `includes/bootstrap.inc` file to determine whether this is the case. Verify that you there is code in the `drupal_settings_initialize()` function which loads data from `$_SERVER['PRESSFLOW_SETTINGS']`.
 
-If there is not, go into your recent changes and revert or remove whatever overwrote your core.
+If no code is present in the function, go to your recent changes and revert or remove whatever overwrote your core.
 
 ### WordPress Core
 
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, refer to [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. Refer to [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates) for more information.
 
 ## Drupal Non-Standard Bootstraps
 
-Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking whether a user has access.
+Some modules, like the **domain.module**, change Drupal's standard bootstrap process. These modules typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal. This allows the module to perform some higher level functions like checking whether a user has access.
 
 However, because the Pantheon environment data is not loaded at this time, any bootstrap to the database level will fail since there is no valid connection information. In this case, include a snippet in your `settings.php` before the module's include call.
 
@@ -52,15 +57,15 @@ However, because the Pantheon environment data is not loaded at this time, any b
 
 <Alert title="Warning" type="danger">
 
-If you use any other advanced `settings.php` tricks (e.g. enabling Object Cache), you will need to do this <em>before</em> the snippet in D7 to ensure you have a consistent `$conf` array.
+If you use any other advanced `settings.php` tricks (e.g. enabling Object Cache), you will need to do this *before* the snippet in D7 to ensure you have a consistent `$conf` array.
 
 </Alert>
 
 ## Base Table or View Not Found
 
-This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G. The result is the "semaphore does not exist" error.
+This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may only be at the table letter G. The result is the "semaphore does not exist" error.
 
-Once the process is complete, Drupal will be able to bootstrap correctly. In other words: no need to worry! Just wait for the process to complete and the error will disappear. If the site is locked down from web visitors, there may still be a backend process such as our healthcheck process pinging the database trying to obtain a lock via the semaphore table.
+Drupal will be able to bootstrap correctly when the process is complete. Wait for the process to complete and the error will disappear. If the site is locked down from web visitors, there may still be a backend process such as our healthcheck process pinging the database trying to obtain a lock via the semaphore table.
 
 This error shouldn’t cause any issues for your site:
 
