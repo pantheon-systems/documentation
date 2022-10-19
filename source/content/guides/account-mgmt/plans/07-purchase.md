@@ -17,7 +17,7 @@ This section covers purchasing a new plan.
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing) for more information.
+Pantheon offers savings for sites purchased with annual billing. Refer to [Pantheon Annual Billing](/annual-billing) for more information.
 
 </Alert>
 
@@ -54,10 +54,10 @@ To enable or disable add-ons:
 
 1. Go to the Site Dashboard.
 
-1. Click **Settings**, then **Add Ons** You will see all the available add-ons for your site.
+1. Click **Settings**, and then click **Add Ons**. You will see all the available add-ons for your site.
 
 2. Click **Add** or **Remove** for each add-on you wish to enable or disable.
 
 ### Add-ons and the Basic Plan
 
-Pantheon Search and Object Cache are available to Sandbox plans for testings, and to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
+Pantheon Search and Object Cache are available to Sandbox plans for testing. Pantheon Search and Object Cache are available to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
