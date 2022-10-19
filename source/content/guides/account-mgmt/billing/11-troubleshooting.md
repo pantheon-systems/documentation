@@ -1,7 +1,7 @@
 ---
 title: Billing
 subtitle: Troubleshooting
-description: Learn how to troubleshoot issues with payments.
+description: Learn how to troubleshoot payment issues.
 categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]

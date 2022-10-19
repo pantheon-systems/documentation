@@ -13,7 +13,7 @@ editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
 ---
 
-This doc introduces some of the methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
+This section introduces methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.
 
 ## Review the NGINX Access Log
 
@@ -21,7 +21,7 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 ## WordPress Best Practices
 
-Consult our doc for a list of [WordPress best practices](/wordpress-best-practices), and how to [avoid XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks) in particular.
+Consult [WordPress best practices](/wordpress-best-practices) for a list of best practices you can implement. Pay particular attention to [avoiding XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks).
 
 In addition to your other WordPress security practices, take steps to block brute force attacks that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 
@@ -59,9 +59,9 @@ Plugins can utilize an Ajax API to make calls to custom functions and filters in
 
 There are a number of uses for `admin-ajax.php`, and each instance of high usage should be inspected to determine if it is causing an unexpected number of pages served. Some use cases include:
 
-- fetching the stored counts for when content is shared on social networks;
-- checking if a page or post is currently being worked on (locked);
-- adding media to a post during the editing process, such as when using Gutenberg widgets.
+- Fetching the stored counts for when content is shared on social networks
+- Checking if a page or post is currently being worked on (locked)
+- Adding media to a post during the editing process, such as when using Gutenberg widgets
 
 Investigate calls to `admin-ajax.php` by looking at what script is calling the path, and what the payload is through browser developer tools. Access developer tools, filter for `admin-ajax`, then refresh the page:
 
@@ -157,9 +157,7 @@ mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 
 <Tab title="WordPress" id="wptab">
 
-Install and use the following WordPress plugin:
-
-- [WP Cerber Security](https://wordpress.org/plugins/wp-cerber/)
+You can review a [list of plugins on wordpress.org](https://wordpress.org/plugins/) to find the right plugin for your setup. Consult [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) before you install a new plugin.
 
 </Tab>
 

@@ -1,6 +1,6 @@
 ---
 title: Billing
-subtitle: Invoices and Subscription
+subtitle: Invoices and Subscriptions
 description: Manage and view invoices and subscriptions.
 categories: [account-mgmt]
 tags: [billing]
@@ -22,7 +22,7 @@ To view your invoices:
 1. Go to your personal workspace.
 
 1. Click **Settings**, then click **Invoices**.
-   
+
 Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list.
 
 ### Invoice Details
@@ -68,7 +68,7 @@ Subscriptions can be sorted by the following information:
 
 ### Account Subscription
 
-The account tier and cost is displayed on the Subscriptions page. You can also view updates to the Personal Workspace account tier. You cannot edit or manage account tiers using the workspace. 
+The account tier and cost is displayed on the Subscriptions page. You can also view updates to the Personal Workspace account tier. You cannot edit or manage account tiers within the workspace. 
 
 ### Site Subscriptions
 

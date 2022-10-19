@@ -1,7 +1,7 @@
 ---
-title: Workspaces, Sites and Teams
+title: Workspaces, Sites, and Teams
 subtitle: Introduction
-description: Learn how Workspaces, Sites and Teams work together to help you manage your sites.
+description: Learn how Workspaces, Sites, and Teams work together to help you manage your sites.
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
@@ -12,7 +12,7 @@ editpath: docs/guides/account-mgmt/workspace-sites-teams/01-introduction.md
 reviewed: "2022-09-19"
 ---
 
-Workspaces, Teams, and Sites work together to help you organize and manage your sites.  To understand how these three tools work together, lets look at a sample setup.
+Workspaces, Sites, and Teams work together to help you organize and manage your sites.  To understand how these three tools work together, lets look at a sample setup.
 
 Our company, Writing Widgets, decides to set up three workspaces:
 
@@ -77,6 +77,6 @@ So now, when the individual team members log on, they will see the workspaces ma
 | Dolores Orange |Random Sites|
 | Ed Kay |Random Sites|
 
-Once they select a workspace, they will then see the sites they have access to in that workspace, as well as any sites they have created.
+When they select a workspace, they will then see the sites they have access to in that workspace, as well as any sites they have created.
 
-Read on to better understand the specifics of setting up your workspaces, teams, and sites.
+Read on to better understand the specifics of setting up your workspaces, sites, and teams.

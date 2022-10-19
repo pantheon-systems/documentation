@@ -14,8 +14,6 @@ reviewed: "2022-09-19"
 
 The following tables provide both the list and preferred pricing for Pantheon Plans, as well as the savings you can achieve using Annual pricing.
 
-
-
 <TabList>
 
 <Tab title="List Price" id="tab-1-anchor" active={true}>

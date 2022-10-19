@@ -41,7 +41,11 @@ If there are specific cases that create traffic spikes or events for your site, 
 
 ### What traffic is excluded from Pantheon's metrics?
 
-Certain activities are generally excluded from the calculation of visits and pages served on a case-by-case basis at Pantheon’s discretion, and subject to Pantheon’s [Acceptable Usage Policy](https://legal.pantheon.io) (AUP). Customers may request that Pantheon consider excluding traffic sources by [contacting support](/guides/support/contact-support) if they experience particular issues with configuring their site for any of the following: Static Assets; 404 and other Client Errors; Bots and Crawlers.
+Certain activities are generally excluded from the calculation of visits and pages served on a case-by-case basis at Pantheon’s discretion, and subject to Pantheon’s [Acceptable Usage Policy](https://legal.pantheon.io) (AUP). Customers may request that Pantheon consider excluding traffic sources by [contacting support](/guides/support/contact-support) if they experience particular issues with configuring their site for any of the following:
+
+- Static Assets
+- 404 and other Client Errors
+- Bots and Crawlers
 
 <Partial file="traffic-overages-faq.md" />
 

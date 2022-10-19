@@ -1,5 +1,5 @@
 ---
-title: Workspaces, Sites and Teams
+title: Workspaces, Sites, and Teams
 subtitle: Teams
 description: Learn how to use teams for change management.
 categories: [account-mgmt]
@@ -98,7 +98,7 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 1. Go to the workspace and select the **Team** tab.
 
-1. Find and select the team member(s) whose role you wish to change.
+1. Find and select the team member(s) whose role you want to change.
 
 1. Click **Actions**, and choose **Change Role**.
 
@@ -148,7 +148,7 @@ After a user leaves, in addition to the steps above, we recommend you:
 
 - Delete or block the user's account in [Drupal](https://www.drupal.org/node/627158) or [WordPress](https://codex.wordpress.org/Users_Users_SubPanel).
 - Change any shared account passwords the user may have had access to.
-- Review the Git history in the commit log to see if the site team member made code changes after leaving. See recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://wordpress.org/support/article/faq-my-site-was-hacked/).
+- Review the Git history in the commit log to see if the site team member made code changes after leaving. Refer to recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://wordpress.org/support/article/faq-my-site-was-hacked/).
 
 
 ## Add a Supporting Organization to Site
@@ -163,9 +163,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. Click **Add a Supporting Organization**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
-1. Select a role, then click **Add**.
-
-All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
+1. Select a role, then click **Add**. All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
 
 ## FAQ
 
@@ -187,4 +185,4 @@ Enterprise Administrators can add site Team Members or Supporting Organizations 
 
 ### How do I recover an account after a site owner leaves?
 
-See the steps in our [Site Access](/site-access) doc for recovery instructions.
+Refer to the steps in our [Site Access](/site-access) doc for recovery instructions.
