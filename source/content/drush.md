@@ -142,6 +142,22 @@ Note that certain characters such as `;` cannot be used in the query. If you use
 
 Note that the trailing `;` in the SQL query is optional in this context.
 
+## Run PHP Commands Using Drush on Pantheon
+
+On Drupal 7, using Drush 8.4 or lower, you can use the `drush sql-cli` command to enter a PHP shell. To do so via Terminus:
+
+```bash{promptUser: user}
+terminus drush SITENAME.ENV -- core-cli
+```
+
+On this or any later versions of Drush, you must use the `drush php-eval` command as follows:
+
+```bash{promptUser: user}
+terminus drush SITENAME.ENV -- php-eval 'print "Example.";'
+```
+
+For further documentation on the `php-eval` command, see the [official Drush Documentation](https://www.drush.org/latest/commands/php_eval/)
+
 ## Filter Drush Responses
 
 Use the `--filter` command to extract relevant information from `terminus drush` responses.
@@ -161,7 +177,7 @@ terminus drush mysite.env -- core:requirements --filter='title=php'
 To extract just the `Summary` field without any of the table formatting, add `--field=Summary` to the end of the command, and the result would be a simple string:
 
 ```bash{outputLines:2}
-terminus drush <site>.<env> -- core-cli
+terminus drush mysite.env -- core:requirements --filter='title=php' --field=Summary
 7.3.14 (<a href="/admin/reports/status/php">more information</a>)
 ```
 
