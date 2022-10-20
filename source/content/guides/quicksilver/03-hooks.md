@@ -40,5 +40,5 @@ Note that the `sync_code` hook runs after the build finishes and the artifacts h
 ## More Resources
 
 - [Integrated Composer](/guides/integrated-composer)
-- [Database Clone](/database-workflow#cloning-the-database)
+- [Database Clone](/guides/mariadb-mysql/database-workflow-tool#cloning-the-database)
 - [Pantheon YAML Configuration Files](/pantheon-yml)

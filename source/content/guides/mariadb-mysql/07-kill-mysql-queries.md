@@ -77,7 +77,7 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 
 - [Access MySQL Databases](/guides/mariadb-mysql/mysql-access)
 
-- [Database Connection Errors](/database-connection-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
 
 - [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
 

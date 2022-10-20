@@ -25,6 +25,6 @@ Review the [4xx errors page](/guides/errors-and-server-responses/4xx-errors) for
 
 - [PHP Errors and Exceptions](/guides/php/php-errors)
 
-- [Database Connection Errors](/database-connection-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
 
 - [Timeouts on Pantheon](/timeouts)

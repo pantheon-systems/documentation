@@ -171,7 +171,7 @@ terminus env:wake <site>.<env>
 
 ### Can't Connect to Local MySQL Server Through Socket
 
-Refer to [Database Connection Errors](/database-connection-errors) to troubleshoot connection errors such as the following:
+Refer to [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors) to troubleshoot connection errors such as the following:
 
 ```bash
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).

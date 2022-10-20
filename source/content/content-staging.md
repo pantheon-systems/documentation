@@ -24,7 +24,7 @@ This solution requires low-level effort, but can be risky. Keep in mind that a c
 
 1. Work with your team to find a way to stop all changes from occurring on the site (this can be done by verbally asking people to not make updates or by revoking access). 
 
-1. [Clone](/database-workflow#cloning-the-database) the staging environment to the live environment after the content is fully staged and approved.
+1. [Clone](/guides/mariadb-mysql/database-workflow-tool#cloning-the-database) the staging environment to the live environment after the content is fully staged and approved.
 
 ### Staging Content with WP-CFM
 

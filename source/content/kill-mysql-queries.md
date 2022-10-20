@@ -62,7 +62,7 @@ Typical WordPress sites are limited to the capacity of a single database to serv
 ## More Resources
 
 - [Access MySQL Databases](/mysql-access)
-- [Database Connection Errors](/database-connection-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
 - [MySQL Slow Log](/mysql-slow-log)
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 - [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb)
