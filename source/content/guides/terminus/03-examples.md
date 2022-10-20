@@ -34,7 +34,7 @@ terminus list
 
 Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
 
-![terminus env:clear-cache your-awesome-site.live](../../images/terminus-example-cc.png)
+![terminus env:clear-cache your-awesome-site.live](../../../images/terminus-example-cc.png)
 
 <Accordion title="Learn More" id="identify-site" icon="lightbulb">
 
@@ -68,7 +68,7 @@ Machine readable, such as "dev", "test", "live", or "bug123", which refers to th
 
 You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/sites/#site-uuid). For example:
 
-![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](../../images/terminus-examples-field-name.png)
+![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](../../../images/terminus-examples-field-name.png)
 
 </Accordion>
 
@@ -90,7 +90,7 @@ Pantheon supports running [Drush (Drupal)](https://drushcommands.com/) and [WP-C
 
 Start with the [basic command structure described above](#command-structure). The commands to invoke Drush and WP-CLI are `remote:drush` and `remote:wp`, respectively. Include `--` followed by the Drush or WP-CLI command and all arguments. For example:
 
-![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
+![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../../images/terminus-wp-cli-example.png)
 
 For more information, see [Drupal Drush Command-Line Utility](/guides/drush) and [Using WP-CLI On The Pantheon Platform](/guides/wp-cli).
 

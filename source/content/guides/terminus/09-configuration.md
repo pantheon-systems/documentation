@@ -18,7 +18,7 @@ Any command variable normally passed in the form of `--option=VALUE` is configur
 
 You can see all the available options for a given command (e.g., available `--fields` or `--format` options) by running it with the `--help` option in your terminal:
 
-![Terminus Help Command Example](../../images/terminus-help-example.png)
+![Terminus Help Command Example](../../../images/terminus-help-example.png)
 
 ### Example
 
