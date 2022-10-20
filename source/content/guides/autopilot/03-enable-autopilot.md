@@ -25,7 +25,7 @@ Autopilot can be enabled for individual sites within each eligible Workspace.
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
-1. View the list of sites for which Autopilot is available in the **All Sites** column of the **Sites** table.
+1. View the list of sites for which Autopilot is available in the **Site** column of the **Autopilot Sites** table.
 
 1. Click **Activate** in the row of the desired site.
 
@@ -33,7 +33,11 @@ Autopilot can be enabled for individual sites within each eligible Workspace.
 
 ### Bulk Enablement
 
+Autopilot can also be enabled in bulk. In the **Other Sites** table, you have the ability to select up too 100 sites to activate at once.
 
+Select the sites you wish to activate and click the **Activate Autopilot** button.
+
+   ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
 
 ## Autopilot Setup Wizard   
 
