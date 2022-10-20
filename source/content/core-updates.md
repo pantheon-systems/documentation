@@ -393,11 +393,12 @@ This issue happens when you attempt to update very outdated core files from the 
 
 1. Modify `.gitignore` and remove the `#` before the `pantheon.upstream.yml` line to instruct Git to ignore the file again
 
-### Unable to Update Older Drupal versions (e.g. 7.68) Using One-click Update
+### Unable to Update Older Drupal Versions Using One-click Update
 
-Older Drupal versions can have a significant version gap that causes the workflow to fail.
+Older Drupal versions (for example, 7.68) can have a significant version gap that causes the workflow to fail.
 
 Sample error:
+
 `Requested database version 10.4 is not compatible with your framework and version: Drupal 7.67`
 
 **Solution**
@@ -406,7 +407,7 @@ You must update the core versions from the upstream version. However, older vers
 
 1. Clone the repository locally.
 
-1. Pull one version increment at a time can be safe. Normally, you can pull up to the latest version, but this can have larger conflicts due to version differences. 
+1. Pull one version increment at a time to be safe. Normally, you can pull up to the latest version, but this can have larger conflicts due to version differences. 
 
   `git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.69`
 
@@ -418,10 +419,10 @@ You must update the core versions from the upstream version. However, older vers
 
 1. Commit and push to the Pantheon repository.
 
-1. Run database updates to Dev environment:
+1. Run database updates to the Dev environment:
 
   `terminus drush <site>.dev updb`
 
-1. Deploy to Test and Live and then run the database for each environment.
+1. Deploy to Test and Live, and then run the database for each environment.
 
 1. Increment the version of the upstream and repeat step two. Repeat these steps until you reach the latest version of the site.
