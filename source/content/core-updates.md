@@ -407,13 +407,17 @@ You must update the core versions from the upstream version. However, older vers
 
 1. Clone the repository locally.
 
-1. Pull one version increment at a time to be safe. Normally, you can pull up to the latest version, but this can have larger conflicts due to version differences. 
+1. Pull one version increment at a time to be safe. Normally, you can pull up to the latest version, but this can have larger conflicts due to version differences.
 
-  `git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.69`
+  ```bash{promptUser: user}
+  git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.69
+  ```
 
   You can also try updating starting at Drupal v7.84:
 
-  `git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.84`
+  ```bash{promptUser: user}
+  git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.84
+  ```
 
 1. Fix any conflicts.
 
@@ -421,7 +425,9 @@ You must update the core versions from the upstream version. However, older vers
 
 1. Run database updates to the Dev environment:
 
-  `terminus drush <site>.dev updb`
+  ```bash{promptUser: user}
+  terminus drush <site>.dev updb
+  ```
 
 1. Deploy to Test and Live, and then run the database for each environment.
 
