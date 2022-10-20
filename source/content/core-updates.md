@@ -393,35 +393,35 @@ This issue happens when you attempt to update very outdated core files from the 
 
 1. Modify `.gitignore` and remove the `#` before the `pantheon.upstream.yml` line to instruct Git to ignore the file again
 
+### Unable to Update Older Drupal versions (e.g. 7.68) Using One-click Update
 
-
-### Unable to update older Drupal versions (e.g. 7.68) using one-click update
-
-Older versions can have a huge version gap causing the workflow to fail.
+Older Drupal versions can have a significant version gap that causes the workflow to fail.
 
 Sample error:
 `Requested database version 10.4 is not compatible with your framework and version: Drupal 7.67`
 
-#### Solution
+**Solution**
 
-You will need to update the core versions from the upstream version. But older versions of the site may not be able to directly. So the safest route is to update it one by one.
-
-#### How to
+You must update the core versions from the upstream version. However, older versions of the site may not be able to update from the upstream version directly. The safest method is to update your sites one by one. Follow the steps below to complete this process.
 
 1. Clone the repository locally.
 
-1. Normally, you can pull up to the latest version, but this can have larger conflicts due to version differences. So pulling one version increment at a time can be the safe route.
-`git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.69`
-You can also try updating starting at drupal v7.84.
-`git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.84`
+1. Pull one version increment at a time can be safe. Normally, you can pull up to the latest version, but this can have larger conflicts due to version differences. 
 
-1. Then fix potential conflicts.
+  `git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.69`
 
-1. Don’t forget to commit and push to the Pantheon repository.
+  You can also try updating starting at Drupal v7.84:
 
-1. Run database updates to dev environment.
-`terminus drush <site>.dev updb`
+  `git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git 7.84`
 
-1. Deploy to Test Live and run the database for each environment.
+1. Fix any conflicts.
 
-1. Increment the version of the upstream and repeat step 2. Repeat these steps until you reach the latest version of the site.
+1. Commit and push to the Pantheon repository.
+
+1. Run database updates to Dev environment:
+
+  `terminus drush <site>.dev updb`
+
+1. Deploy to Test and Live and then run the database for each environment.
+
+1. Increment the version of the upstream and repeat step two. Repeat these steps until you reach the latest version of the site.
