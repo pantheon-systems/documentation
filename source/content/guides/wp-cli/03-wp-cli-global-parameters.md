@@ -64,7 +64,7 @@ Each of these global parameters define the **context** under which the command i
 
 Here are [more commands](https://developer.wordpress.org/cli/commands/) you may find helpful:
 
-- `wp search-replace` - Search for and replace specific strings in the database. Commonly used to correct references to [platform domains](/database-workflow/#troubleshooting). Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([developer docs](https://developer.wordpress.org/cli/commands/search-replace)).
+- `wp search-replace` - Search for and replace specific strings in the database. Commonly used to correct references to [platform domains](/guides/mariadb-mysql/database-workflow-tool#troubleshooting). Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([developer docs](https://developer.wordpress.org/cli/commands/search-replace)).
 
 - `wp media regenerate` - Regenerate image thumbnails for one or more attachments ([developer docs](https://developer.wordpress.org/cli/commands/media/regenerate/)).
 

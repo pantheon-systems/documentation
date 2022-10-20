@@ -23,7 +23,7 @@ Each container includes its own Nginx, [APCu cache](/apcu), and PHP worker agent
 
 Our Runtime Matrix executes the code for your website. Over a million Linux containers running PHP and NGINX are distributed across a big grid of powerful dedicated machines. These containers are provisioned and managed by our software without any need for manual configuration. Runtime containers "share nothing", but they have connections to services such as:
 
-- [MariaDB](/database-workflow): a horizontally scalable database grid—running the latest MariaDB, that’s similar to the Runtime Matrix in design. The database layer provides redundancy and scalability by supporting a robust replication topology, managed automatically. 
+- [MariaDB](/guides/mariadb-mysql/database-workflow-tool): a horizontally scalable database grid—running the latest MariaDB, that’s similar to the Runtime Matrix in design. The database layer provides redundancy and scalability by supporting a robust replication topology, managed automatically. 
 
 - [Object Cache](/guides/object-cache): Pantheon bundles Object Cache (formerly Redis) as a core service on the platform. Object Cache is a second-generation, in-memory, key-value store with support for structured data. It can accelerate your site’s internal operations through application object caching. This can significantly accelerate dynamic page generation and the logged-in user experience. 
 

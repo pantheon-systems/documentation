@@ -71,7 +71,7 @@ If a bad commit has been deployed to your Pantheon site, you can roll back the c
 
 #### Database/filesystem issues
 
-The **Database/files** tools on the Site Dashboard can be used to clone either the files or database from a different environment (Test to Live, for example). Refer to the [Database Workflow](/database-workflow) documentation for more information. 
+The **Database/files** tools on the Site Dashboard can be used to clone either the files or database from a different environment (Test to Live, for example). Refer to the [Database Workflow](/guides/mariadb-mysql/database-workflow-tool) documentation for more information. 
 
 #### Restoring a database from a backup
 
@@ -79,4 +79,4 @@ The database can be restored from a selected backup via Terminus. The Dashboard 
  
 #### Restoring a database from an external dump
 
-The database can be restored from an external dump using the **Database/files** tools on the Site Dashboard. An archive file can be uploaded, or a MySQL archive accessed on a remote location. Refer to the [Database Workflow](/database-workflow) docuemntation for more information. 
+The database can be restored from an external dump using the **Database/files** tools on the Site Dashboard. An archive file can be uploaded, or a MySQL archive accessed on a remote location. Refer to the [Database Workflow](/guides/mariadb-mysql/database-workflow-tool) documentation for more information. 

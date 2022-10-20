@@ -128,7 +128,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 You may also clone, import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 
-The [database clone operation](/database-workflow#cloning-the-database) excludes some tables by default. The excluded tables are:
+The [database clone operation](/guides/mariadb-mysql/database-workflow-tool#cloning-the-database) excludes some tables by default. The excluded tables are:
 
 * `accesslog`
 * `watchdog`
