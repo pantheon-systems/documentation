@@ -61,5 +61,3 @@ If the site is associated with an Enterprise Flagship organization, additional P
 [Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
 
 </Alert>
-
-

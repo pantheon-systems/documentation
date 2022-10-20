@@ -13,7 +13,7 @@ editpath: docs/guides/account-mgmt/plans/07-purchase.md
 reviewed: "2022-09-19"
 ---
 
-This section covers purchasing a new plan. 
+This section covers purchasing a new plan.
 
 <Alert title="Note" type="info">
 

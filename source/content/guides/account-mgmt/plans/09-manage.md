@@ -27,11 +27,11 @@ reviewed: "2022-09-19"
 
 Consider the following changes to feature access _before_ upgrading or downgrading the site's plan. Certain scenarios require code changes in order to safely change the site plan.
 
-### Disable Addons When Downgrading to Basic Plan
+### Disable Add-ons When Downgrading to Basic Plan
 
 [Object Cache](/guides/object-cache) (formerly Redis) and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
-To remove these addons:
+To remove these add-ons:
 
 <TabList>
 
@@ -109,7 +109,6 @@ Because billing is handled by the organization, the plan change is immediate, an
 If the site plan isn't shown on the Dashboard immediately, refresh the page or click the **Workflows** button for status.
 
 </Tab>
-
 
 <Tab title="All Other Sites" id="other">
 
