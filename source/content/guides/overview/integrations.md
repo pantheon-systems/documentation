@@ -5,6 +5,7 @@ categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/guides/overview/integrations
+editpath: docs/guides/overview/integrations.md/
 ---
 
 Extend the capabilities of Pantheon with integrations.
@@ -16,7 +17,6 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 </Alert>
 
 ## Site Management
-
 
 <ProductGroup>
 
@@ -92,7 +92,6 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-
 </ProductGroup>
 
 ## Security and Authentication
@@ -142,4 +141,3 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
   </Product>
 
 </ProductGroup>
-

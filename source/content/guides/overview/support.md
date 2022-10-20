@@ -5,6 +5,7 @@ categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/guides/overview/support
+editpath: docs/guides/overview/support.md/
 ---
 
 Pantheon offers multiple options to help you in building the best sites possible.
@@ -41,6 +42,4 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-
 </ProductGroup>
-

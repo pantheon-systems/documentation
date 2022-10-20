@@ -5,16 +5,16 @@ categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/guides/overview/workflows
+editpath: docs/guides/overview/workflows.md/
 ---
 
-The goal of the Developer workflow is to protect your live site as much as possible. The main process of the Pantheon Developer workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. 
+The goal of the Developer workflow is to protect your live site as much as possible. The main process of the Pantheon Developer workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
 
 One of the core concepts at the heart of the Pantheon WebOps workflow is the distinction between **code** and **content**.
 
 - **Code** refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
 
 - **Content** refers to your site's files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/default/files` for Drupal.
-
 
 ## The Workflow
 

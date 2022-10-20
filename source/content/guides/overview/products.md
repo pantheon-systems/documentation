@@ -5,6 +5,7 @@ categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/guides/overview/products
+editpath: docs/guides/overview/products.md/
 ---
 
 Pantheon offers a wide array of products and features to simplify building and managing your sites.
@@ -99,7 +100,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"Personalization"} link={"/docs/guides/edge-integrations/"}>
 
-  Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal. 
+  Edge Integrations is a Software Development Kit (SDK) that allows users to personalize WordPress and Drupal.
 
   </Product>
 
@@ -123,7 +124,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/docs/guides/autopilot"}>
 
-  Automate finding, testing, and applying WordPress and Drupal updates. 
+  Automate finding, testing, and applying WordPress and Drupal updates.
 
   </Product>
 
