@@ -1,9 +1,14 @@
 ---
-title: Supported Terminus Versions
+title: Terminus Guide
+subtitle: Supported Terminus
 description: Learn which versions of Terminus are currently supported.
 categories: [platform]
 tags: [libraries, updates]
 contributors: [wordsmither]
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/supported-terminus
+anchorid: supported-terminus
 ---
 
 <Partial file="terminus-guide/eol.md" />

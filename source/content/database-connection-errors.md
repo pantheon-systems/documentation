@@ -29,7 +29,7 @@ If there is not, go into your recent changes and revert or remove whatever overw
 
 ### WordPress Core
 
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, refer to [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/guides/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, refer to [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 ## Drupal Non-Standard Bootstraps
 

@@ -1,17 +1,13 @@
 ---
-title: Terminus Manual
+title: Terminus Guide
 subtitle: Scripting Terminus
 description: Automate your workflow with Terminus.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 categories: [automate]
 tags: [cli, local, terminus, workflow]
-nexturl: terminus/plugins/
-previousurl: terminus/commands/
-permalink: docs/terminus/:basename
-image: terminus-thumbLarge
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/scripting
+anchorid: scripting
 ---
 
 While Terminus makes it easy to directly interact with Pantheon from your command line, its real value is in scripting. By adding Terminus to your automated tasks, you can truly make Pantheon a part of your standardized workflow.
@@ -25,7 +21,7 @@ If so, you consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus must be authenticated before you can execute most commands. Before running any script you must ensure Terminus is authenticated with a [machine token](/terminus/install#machine-token) that has the proper permissions
+Terminus must be authenticated before you can execute most commands. Before running any script you must ensure Terminus is authenticated with a [machine token](/guides/terminus/install#machine-token) that has the proper permissions
 
 ## Example Repositories
 

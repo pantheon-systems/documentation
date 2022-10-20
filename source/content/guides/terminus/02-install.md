@@ -1,15 +1,13 @@
 ---
-title: Terminus Manual
+title: Terminus Guide
 subtitle: Install
 description: Learn how to install Terminus to your local computer.
-layout: terminuspage
 categories: [develop]
 tags: [cli, local, terminus, workflow]
+layout: guide
 showtoc: true
-permalink: docs/terminus/:basename
-previousurl: terminus/
-nexturl: terminus/examples/
-image: terminus-thumbLarge
+permalink: docs/guides/terminus/install
+anchorid: install
 reviewed: "2022-03-25"
 ---
 

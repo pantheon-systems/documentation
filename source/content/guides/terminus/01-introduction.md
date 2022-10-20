@@ -1,19 +1,18 @@
 ---
-title:  Terminus Manual
+title: Terminus Guide
 subtitle: Get Started
-terminuspage: true
 description: Manual for the Terminus command line interface for advanced interaction with the Pantheon platform.
-type: terminuspage
-layout: terminuspage
 categories: [develop]
 tags: [cli, drush, terminus, workflow, wp-cli]
-permalink: docs/:basename
-nexturl: terminus/install/
-image: terminus-thumbLarge
-reviewed: "2020-02-05"
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus
+anchorid: terminus
+reviewed: "2022-10-20"
 ---
 
-The <dfn id="terminus">Terminus</dfn> command line interface provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
+The Terminus command line interface provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
 Install Terminus on macOS or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). 
 
@@ -25,7 +24,7 @@ Increase your developers' confidence on Terminus and generate ideas for writing 
 
 ## Usage
 
-Use Terminus to perform these and [other operations](/terminus/commands/):
+Use Terminus to perform these and [other operations](/guides/terminus/commands/):
 
 - Create a new site
 - Create and delete Multidev environments
@@ -39,7 +38,7 @@ Use Terminus to perform these and [other operations](/terminus/commands/):
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, you will need to update your plugin for Terminus 2. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. See [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
+If you are a plugin author, you will need to update your plugin for Terminus 2. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. See [what's new in Terminus 3.x](/guides/terminus/terminus-3-0) to learn more.
 
 </Alert>
 

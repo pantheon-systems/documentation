@@ -1,14 +1,19 @@
 ---
-title: Terminus 2.0
+title: Terminus Guide
+subtitle: Terminus 2.0
 description: Learn what's new with the Terminus 2.0 release.
 contributors: [alexfornuto]
 categories: [platform]
 tags: [cli, drush, local, wp-cli, terminus]
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/terminus-2-0
+anchorid: terminus-2-0
 ---
 
 <Alert title="Note" type="info" >
 
-Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/terminus/terminus-3-0) page as well.
+Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/guides/terminus/terminus-3-0) page as well.
 
 </Alert>
 
@@ -106,7 +111,7 @@ The following commands are new to Terminus as of version 2.0:
 
 ## Additional Changes
 
-The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [Terminus changelog](/terminus/updates/#changelog).
+The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [Terminus changelog](/guides/terminus/updates/#changelog).
 
  - `env:clone-content`
    - Now checks its target environment for initialization and will emit an error instead of showing an error after the operation fails.
@@ -142,5 +147,5 @@ The changes to these commands' behavior may affect existing integrations. For a 
 
 ## More Resources
 
- - [The Terminus Manual](/terminus)
+ - [Terminus Guide](/guides/terminus)
  - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

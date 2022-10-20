@@ -1,17 +1,13 @@
 ---
-title: Terminus Manual
+title: Terminus Guide
 subtitle: Command Reference
 description: Look up Terminus commands.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-nexturl: terminus/scripting/
-previousurl: terminus/examples/
-permalink: docs/terminus/:basename
-image: terminus-thumbLarge
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/commands
+anchorid: commands
 ---
 
 <Alert title="Note" type="info">

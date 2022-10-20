@@ -1,24 +1,20 @@
 ---
-title: Terminus Manual
+title: Terminus Guides
 subtitle: Extend with Plugins
 description: Use plugins to extend what you can do with Terminus.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 categories: [develop]
 tags: [cli, local, plugins, terminus, reference]
-nexturl: terminus/plugins/directory/
-previousurl: terminus/scripting/
-permalink: docs/terminus/:basename
-image: terminus-thumbLarge
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/plugins
+anchorid: plugins
 ---
 
 Extend the functionality of Terminus and add commands by installing third-party plugins.
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, ensure your your plugin is updated for Terminus 2.0. See [Terminus 2.0](/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/terminus/terminus-3-0).
+If you are a plugin author, ensure your your plugin is updated for Terminus 2.0. See [Terminus 2.0](/guides/terminus/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/guides/terminus/terminus-3-0).
 
 </Alert>
 

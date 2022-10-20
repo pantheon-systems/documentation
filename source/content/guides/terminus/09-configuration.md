@@ -1,17 +1,13 @@
 ---
-title: Terminus Manual
+title: Terminus Guide
 subtitle: Configuration File
 description: Learn how to configure your local Terminus configuration file.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 categories: [develop]
 tags: [cli, local, terminus, workflow]
-nexturl: terminus/updates/
-previousurl: terminus/plugins/create/
-permalink: docs/terminus/:basename
-image: terminus-thumbLarge
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/configuration
+anchorid: configuration
 ---
 
 If you find yourself passing the same options to Terminus repeatedly, consider creating a configuration file to provide default values for common options. The Terminus configuration file lives at `$HOME/.terminus/config.yml`.

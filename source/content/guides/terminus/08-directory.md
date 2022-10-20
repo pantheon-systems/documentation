@@ -1,17 +1,13 @@
 ---
-title: Terminus Manual
+title: Terminus Guide
 subtitle: Plugin Directory
 description: A non-exclusive directory of plugins to extend the features of Terminus.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 categories: [develop]
 tags: [cli, local, plugins, terminus, workflow]
-nexturl: terminus/plugins/create/
-previousurl: terminus/plugins/
-permalink: docs/terminus/plugins/:basename
-image: terminus-thumbLarge
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/directory
+anchorid: directory
 ---
 
 Extend the functionality of Terminus and add commands by installing <a href="https://github.com/terminus-plugin-project">third party plugins</a> or <a href="https://pantheon.io/docs/terminus/plugins/create">create your own</a>.

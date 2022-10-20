@@ -1,18 +1,20 @@
 ---
-title: Terminus 3.0
+title: Terminus Guide
 subtitle: Terminus 3.0
 description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [greg-1-anderson]
 categories: [platform]
 tags: [cli, drush, local, wp-cli, terminus]
-permalink: docs/terminus/:basename
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/terminus-3-0
+anchorid: terminus-3-0
 reviewed: "2021-12-10"
 ---
 
 <Alert title="Note" type="info" >
 
-If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/terminus) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
+If you're not already familiar with Terminus, we suggest you read the [Terminus Guide](/guides/terminus) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
 
 </Alert>
 
@@ -48,5 +50,5 @@ The following commands are new to Terminus as of version 3.0:
 
 ## More Resources
 
-- [The Terminus Manual](/terminus)
+- [Terminus Guide](/guides/terminus)
 - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

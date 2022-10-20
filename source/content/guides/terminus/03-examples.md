@@ -1,19 +1,13 @@
 ---
-title: Terminus Manual
+title: Terminus Guide
 subtitle: Example Usage
 description: Review examples of Terminus commands most frequently used by power users.
-terminusexample: true
-terminuspage: true
-showtoc: true
-type: terminuspage
-layout: terminuspage
 categories: [develop]
 tags: [cli, local, terminus, updates, workflow]
-nexturl: terminus/commands/
-previousurl: terminus/install/
-permalink: docs/terminus/:basename
-image: terminus-thumbLarge
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/examples
+anchorid: examples
 ---
 
 ## Command Structure
@@ -205,7 +199,7 @@ terminus env:commit my-site.dev --message="Update all plugins and themes"
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend it's functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. For instructions on how to install Terminus plugins, see [Extend with Plugins](/terminus/plugins).
+Terminus supports third-party plugins that extend it's functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. For instructions on how to install Terminus plugins, see [Extend with Plugins](/guides/terminus/plugins).
 
 Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 

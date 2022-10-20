@@ -91,7 +91,7 @@ SSO allows users to authenticate against your Identity Provider (IdP) when loggi
 
 ### Tagging
 
-Sites in an organization can have one or multiple tags, to easily identify and/or group them. Tagging can be done from the Organization Sites dashboard or through [Terminus](/terminus):
+Sites in an organization can have one or multiple tags, to easily identify and/or group them. Tagging can be done from the Organization Sites dashboard or through [Terminus](/guides/terminus):
 
 ![Sorting sites by tag](../images/dashboard/sorted-by-tag.png)
 
@@ -103,7 +103,7 @@ Every entity (user, organization, product and site) is assigned a UUID which is 
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 
-You can also use [Terminus](/terminus) to find the UUID of your organizations:
+You can also use [Terminus](/guides/terminus) to find the UUID of your organizations:
 
 ```bash{promptUser: user}
 terminus org:list

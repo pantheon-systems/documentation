@@ -1,19 +1,13 @@
 ---
-title: Terminus Manual
+title: Terminus Guide
 subtitle: Create Plugins
 description: Learn how to create your own Terminus plugin.
-terminuspage: true
-terminuscreate: true
-showtoc: true
-type: terminuspage
-layout: terminuspage
 categories: [develop]
 tags: [cli, local, plugins, terminus, workflow]
-nexturl: terminus/configuration/
-previousurl: terminus/plugins/directory/
-permalink: docs/terminus/plugins/:basename
-image: terminus-thumbLarge
-searchboost: 100
+layout: guide
+showtoc: true
+permalink: docs/guides/terminus/create
+anchorid: create
 ---
 
 Add new commands to Terminus by creating a plugin. The following explains how to create our [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) to demonstrate how to add new commands.
