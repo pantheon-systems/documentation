@@ -4,7 +4,7 @@ description: Learn about the components of the Pantheon platform.
 categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/platform
+permalink: docs/guides/overview/platform
 ---
 
 Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.

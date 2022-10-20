@@ -4,7 +4,7 @@ description:
 categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/support
+permalink: docs/guides/overview/support
 ---
 
 Pantheon offers multiple options to help you in building the best sites possible.

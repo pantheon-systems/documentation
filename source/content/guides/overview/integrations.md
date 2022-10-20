@@ -4,7 +4,7 @@ description: Products and services that can be integrated with the Pantheon plat
 categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/integrations
+permalink: docs/guides/overview/integrations
 ---
 
 Extend the capabilities of Pantheon with integrations.
