@@ -31,6 +31,10 @@ Autopilot can be enabled for individual sites within each eligible Workspace.
 
    During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
 
+### Bulk Enablement
+
+
+
 ## Autopilot Setup Wizard   
 
 The Autopilot setup wizard automatically displays after you activate Autopilot for a site. You must complete all items in the Configuration, Schedule, and Visual Review steps. 
