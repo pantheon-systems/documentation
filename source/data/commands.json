@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.0.9"
+        "version": "3.1.0"
     },
     "commands": [
         {
@@ -4460,7 +4460,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: Period (datetime), Visits (visits), Pages Served (pages_served)",
+                        "description": "Available fields: Period (datetime), Visits (visits), Pages Served (pages_served), Cache Hits (cache_hits), Cache Misses (cache_misses), Cache Hit Ratio (cache_hit_ratio)",
                         "default": ""
                     },
                     "field": {
