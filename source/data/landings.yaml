@@ -581,7 +581,7 @@
             - text: 'PHP'
               url: '/guides/php'
             - text: 'Terminus'
-              url: '/guides/supported-terminus'
+              url: '/guides/terminus/supported-terminus'
 - title: 'Automate & Integrate'
   subtitle: ''
   path: 'automate'

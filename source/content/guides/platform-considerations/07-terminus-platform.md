@@ -31,8 +31,6 @@ You might encounter the following error when a site is created and then quickly 
 
 ## More Resources
 
-- [Terminus and PHP Version Compatibility](/supported-terminus#php-version-compatibility-matrix)
-
 - [Terminus Command Reference](/guides/terminus/commands)
 
 - [Git on Pantheon Guide](/guides/git)
