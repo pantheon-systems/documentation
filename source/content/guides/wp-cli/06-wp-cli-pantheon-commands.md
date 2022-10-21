@@ -75,6 +75,8 @@ This plugin provides two Terminus commands: `pantheon session list` and `pantheo
 terminus wp -- $SITE.$ENV pantheon session list
 ```
 
+Refer to [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information on Sessions scalability and troubleshooting.
+
 ## More Resources
 
 - [WP-CLI on the Pantheon Platform](/guides/wp-cli)
