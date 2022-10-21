@@ -51,7 +51,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
 The following configuration will redirect requests for `subdomain.example.com` to `https://example.com/subdirectory/`.
 
-1. [Remove the primary domain](/guides/redirect#update-or-remove-primary-domain) from the environment.
+1. [Remove the primary domain](/guides/redirect/primary-domain#update-or-remove-primary-domain) from the environment.
 
 1. Run the following code:
 
