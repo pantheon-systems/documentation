@@ -180,6 +180,6 @@ It might be necessary to reset the site's upstream via [Terminus](/terminus/exam
 
 ## More Resources
 
-- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
+- [Clear Upstream Cache](/terminus/commands/terminus/commands/site-upstream-clear-cache)
 
 - [Test Custom Upstream Changes](/guides/custom-upstream/test-custom-upstream)

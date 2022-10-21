@@ -160,7 +160,7 @@ Updates will become available to sites downstream as one-click updates within an
 
 - [WordPress and Drupal Core Updates](/core-updates)
 
-- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
+- [Clear Upstream Cache](/terminus/commands/terminus/commands/site-upstream-clear-cache)
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
 

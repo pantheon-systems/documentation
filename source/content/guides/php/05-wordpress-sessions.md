@@ -81,21 +81,21 @@ Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-nat
  ```bash{promptUser: user}
  terminus env:commit --message "Adding php native sessions plugin" -- <site>.<env>
  ```
- ([More options for this command](/terminus/commands/env-commit))
+ ([More options for this command](/terminus/commands/terminus/commands/env-commit))
  
 1. Merge your changes into Dev if you are working on a Multidev: 
 
  ```bash{promptUser: user}
  terminus multidev:merge-to-dev -- <site>.<multidev>
  ```
- ([More options for this command](/terminus/commands/multidev-merge-to-dev))
+ ([More options for this command](/terminus/commands/terminus/commands/multidev-merge-to-dev))
 
 1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
 
  ```bash{promptUser: user}
  terminus env:deploy <site>.test --sync-content --updatedb --note="Install WordPress Native PHP Sessions plugin"
  ```
- ([More options for this command](/terminus/commands/env-deploy))
+ ([More options for this command](/terminus/commands/terminus/commandsenv-deploy))
 
 1. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
@@ -108,7 +108,7 @@ Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-nat
  ```bash{promptUser: user}
  terminus env:deploy <site>.live --note="Install WordPress Native PHP Sessions plugin"
  ```
- ([More options for this command](/terminus/commands/env-deploy))
+ ([More options for this command](/terminus/commands/terminus/commands/env-deploy))
 
 1. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
@@ -132,7 +132,7 @@ curl -Is https://www.getpantheon.com | grep PHPSESS|wc -l
 
 You should substitute your site URL in the example, and the desired output is "0" (zero).
 
-If your site is overaggressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
+If your site is over aggressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
 
 ## More Resources
 
