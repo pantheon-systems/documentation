@@ -58,7 +58,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 
 ### Command Line
-If you're working from a terminal prompt or looking to automate parts of your workflow, use [Terminus](/guides/terminus) to clear caches from the command line:
+If you're working from a terminal prompt or looking to automate parts of your workflow, use [Terminus](/terminus) to clear caches from the command line:
 
 ```bash
 terminus env:clear-cache site.env
@@ -69,7 +69,7 @@ Replace `site` and `env` with your site name and the correct environment.
 ## Troubleshooting
 
 ### Clear Cache Fails in Dashboard or Terminus
-If you see a notification on the Dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the Dashboard notification may not help much to debug, running the same command via [Terminus](/guides/terminus) will likely provide actionable information.
+If you see a notification on the Dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the Dashboard notification may not help much to debug, running the same command via [Terminus](/terminus) will likely provide actionable information.
 
 Some good troubleshooting first steps include:
 

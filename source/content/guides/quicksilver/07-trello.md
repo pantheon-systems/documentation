@@ -23,7 +23,7 @@ Be sure that you:
 
 - Have a Drupal or WordPress site on Pantheon
 
-- Install [Terminus](/guides/terminus/install#install-terminus)
+- Install [Terminus](/terminus/install#install-terminus)
 
 - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create): Navigate to the **User Dashboard**, select **Account**, select **Machine Tokens**, and then authenticate Terminus:
 

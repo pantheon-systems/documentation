@@ -67,7 +67,7 @@
     title: 'Popular Documentation'
     links:
       - text: 'Terminus Guide'
-        url: '/guides/terminus/'
+        url: '/terminus/'
       - text: 'Upgrade to Drupal 9'
         url: '/drupal-9-migration/'
       - text: 'Pantheon Solr Search for Drupal 9'
@@ -80,7 +80,7 @@
     title: 'Popular Documentation'
     links:
       - text: 'Terminus Guide'
-        url: '/guides/terminus/'
+        url: '/terminus/'
       - text: 'Upgrade to Drupal 9'
         url: '/drupal-9-migration/'
       - text: 'Pantheon Solr Search for Drupal 9'

@@ -26,7 +26,7 @@ We recommend managing your site through Composer. Visit the [Build Tools Workflo
 
 ## Verify Current Drush Version
 
-You can use [Terminus](/guides/terminus/) to verify the current version of Drush running on your Pantheon site:
+You can use [Terminus](/terminus/) to verify the current version of Drush running on your Pantheon site:
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- status | grep "Drush version"

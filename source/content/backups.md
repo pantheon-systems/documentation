@@ -17,7 +17,7 @@ We strongly urge you to back up your site regularly.
 
 <Alert title="Exports" type="export">
 
-This doc offers [Terminus](/guides/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+This doc offers [Terminus](/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -40,7 +40,7 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 
 ![Create site backup Pantheon Dashboard](../images/dashboard/manual-site-backup.png)
 
-If you prefer the command line, you can use [Terminus](/guides/terminus) to create backups:
+If you prefer the command line, you can use [Terminus](/terminus) to create backups:
 
 ```bash{promptUser: user}
 terminus backup:create $site.$env --element=<element> --keep-for=<days>
@@ -82,7 +82,7 @@ Some older versions of Google Chrome can cause database backups to be downloaded
 
 ### Via the Command Line
 
-If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`Wget`](https://www.gnu.org/software/wget/) or [Terminus](/guides/terminus).
+If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`Wget`](https://www.gnu.org/software/wget/) or [Terminus](/terminus).
 
 #### Unix/MacOS
 
@@ -183,7 +183,7 @@ In comparison, Pantheon’s backup mechanism:
 - Creates distinct archives (code, database, files)
 - Secures access to archives through Pantheon authentication (no anonymous users can access)
 
-Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/guides/terminus).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
+Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/terminus).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
 
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>

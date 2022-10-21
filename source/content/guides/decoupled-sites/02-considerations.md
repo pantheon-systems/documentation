@@ -34,7 +34,7 @@ The following components are needed to configure your backend, especially if usi
 * The following tools are included in the [Lando VM](https://docs.lando.dev/getting-started/installation.html), but can be useful to have installed for use without Lando:
      * [PHP](https://www.php.net/) - An open-source, server-side programming language that can be used to create websites, applications, and more. It is a widely-used language that can be embedded in HTML. Install using Homebrew on Mac to not conflict with the PHP version that comes with your operating system.
      * [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
-     * [Terminus](/guides/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for a Front-End Site.
+     * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for a Front-End Site.
 
 ### Frontend Requirements
 
@@ -50,7 +50,7 @@ To create and configure a new decoupled project using a Front-End Site starter k
 * Install [Composer](https://getcomposer.org/download/) globally.
   * Composer is required for the CMS backends.
 
-* Install [Terminus](/guides/terminus/install) version 3.0.0 or higher.
+* Install [Terminus](/terminus/install) version 3.0.0 or higher.
     * You can also install the following plugins to improve your experience:
        * `terminus self:plugin:install terminus-build-tools-plugin`
        * `terminus self:plugin:install terminus-power-tools`

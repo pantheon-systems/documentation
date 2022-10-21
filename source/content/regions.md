@@ -40,7 +40,7 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 
 ### Create a New Site in a Specific Region using Terminus
 
-1. Install and authenticate [Terminus](/guides/terminus). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/guides/terminus/updates).
+1. Install and authenticate [Terminus](/terminus). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/terminus/updates).
 
 1. Use Terminus to create a new site associated with your organization and include the `--region` option.
 

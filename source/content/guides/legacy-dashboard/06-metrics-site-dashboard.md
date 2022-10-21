@@ -14,7 +14,7 @@ editpath: legacy-dashboard/06-metrics-site-dashboard.md
 
 Access Metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/guides/quickstart/create-test-live). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.
 
-To access metrics for another environment, use the [Terminus](/guides/terminus) `metrics` command:
+To access metrics for another environment, use the [Terminus](/terminus) `metrics` command:
 
 ```bash{promptUser: user}
 terminus metrics <site>.<env>
@@ -73,7 +73,7 @@ Yes. For example, multiple devices on the same home network visiting your site w
 
 ### Can I check metrics from the command line with Terminus?
 
-Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/guides/terminus/install) or update to the [current release](/guides/terminus/updates#updates) for access to the `metrics` command.
+Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/terminus/install) or update to the [current release](/terminus/updates#updates) for access to the `metrics` command.
 
 ## More Resources
 

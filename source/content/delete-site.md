@@ -46,7 +46,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ## Delete a Site with Terminus
 
-Run the following [Terminus](/guides/terminus) command:
+Run the following [Terminus](/terminus) command:
 
 ```bash{promptUser: user}
 terminus site:delete <site>

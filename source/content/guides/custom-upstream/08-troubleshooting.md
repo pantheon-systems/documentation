@@ -176,10 +176,10 @@ Click **Check now** in the Site Dashboard if you know your site's Custom Upstrea
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it might take up to a minute before updates appear on the dashboard.
 
-It might be necessary to reset the site's upstream via [Terminus](/guides/terminus/examples/#switch-upstreams) if updates are still not showing on the site. Please note that only the Site Owner or owning Organization Administrators can change a site's upstream.
+It might be necessary to reset the site's upstream via [Terminus](/terminus/examples/#switch-upstreams) if updates are still not showing on the site. Please note that only the Site Owner or owning Organization Administrators can change a site's upstream.
 
 ## More Resources
 
-- [Clear Upstream Cache](/guides/terminus/commands/site-upstream-clear-cache)
+- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
 - [Test Custom Upstream Changes](/guides/custom-upstream/test-custom-upstream)

@@ -8,7 +8,7 @@ tags: [cli, local, plugins, terminus, workflow]
 type: terminuspage
 layout: terminuspage
 showtoc: true
-permalink: docs/guides/terminus/directory
+permalink: docs/terminus/directory
 anchorid: directory
 ---
 

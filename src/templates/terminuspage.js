@@ -54,54 +54,54 @@ const shortcodes = {
 const items = [
   {
     id: "docs-terminus",
-    link: "/guides/terminus",
+    link: "/terminus",
     title: "Get Started",
   },
   {
     id: "docs-terminus-install",
-    link: "/guides/terminus/install",
+    link: "/terminus/install",
     title: "Install",
   },
   {
     id: "docs-terminus-examples",
-    link: "/guides/terminus/examples",
+    link: "/terminus/examples",
     title: "Example Usage",
   },
   {
     id: "docs-terminus-commands",
-    link: "/guides/terminus/commands",
+    link: "/terminus/commands",
     title: "Commands",
   },
   {
     id: "docs-terminus-scripting",
-    link: "/guides/terminus/scripting",
+    link: "/terminus/scripting",
     title: "Scripting",
   },
   {
     id: "docs-terminus-plugins",
-    link: "/guides/terminus/plugins",
+    link: "/terminus/plugins",
     title: "Extend with Plugins",
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/guides/terminus/directory",
+        link: "/terminus/directory",
         title: "Directory",
       },
       {
         id: "docs-terminus-create",
-        link: "/guides/terminus/create",
+        link: "/terminus/create",
         title: "Create Plugins",
       },
     ],
   },
   {
     id: "docs-terminus-configuration",
-    link: "/guides/terminus/configuration",
+    link: "/terminus/configuration",
     title: "Configuration File",
   },
   {
     id: "docs-terminus-updates",
-    link: "/guides/terminus/updates",
+    link: "/terminus/updates",
     title: "Version Updates",
   },
 ]
@@ -138,11 +138,11 @@ class TerminusTemplate extends React.Component {
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const ifCommandsDate =
-      node.fields.slug == "/guides/terminus/commands"
+      node.fields.slug == "/terminus/commands"
         ? this.props.data.terminusReleasesJson.published_at
         : node.frontmatter.reviewed
     const ifCommandsISO =
-      node.fields.slug == "/guides/terminus/commands"
+      node.fields.slug == "/terminus/commands"
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
 

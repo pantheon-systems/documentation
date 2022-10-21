@@ -9,7 +9,7 @@ tags: [cli, local, terminus, workflow]
 type: terminuspage
 layout: terminuspage
 showtoc: true
-permalink: docs/guides/terminus/install
+permalink: docs/terminus/install
 anchorid: install
 reviewed: "2022-03-25"
 ---

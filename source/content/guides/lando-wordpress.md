@@ -133,7 +133,7 @@ Using Lando with Pantheon provides a few key advantages:
 
 - It closely mimics Pantheon’s tech stacks and environments for your local environment, getting you as close to a one-to-one development setup as possible.
 
-- The recipe also installs [Terminus](/guides/terminus) (if you don’t already have it installed), Pantheon’s powerful web server management CLI.
+- The recipe also installs [Terminus](/terminus) (if you don’t already have it installed), Pantheon’s powerful web server management CLI.
 
 - And if that wasn’t enough, you can push and pull changes directly into Lando from any of your Pantheon environments.
 

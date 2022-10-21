@@ -53,7 +53,7 @@ Refer to the documentation or issue queue of your software to learn more about h
 
 #### Open Sequel Ace Database Connection
 
-Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Ace via [Terminus](/guides/terminus) and [Drush](/guides/drush):
+Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Ace via [Terminus](/terminus) and [Drush](/guides/drush):
 
 ```bash:title=establish-db-connection.sh
 #!/bin/bash

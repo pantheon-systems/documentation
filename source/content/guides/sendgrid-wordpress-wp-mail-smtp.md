@@ -30,7 +30,7 @@ This guide assumes a pre-existing configuration of:
 
 ## Install the WP Mail SMTP Plugin
 
-There are several ways to install and manage WordPress plugins on Pantheon. This guide will cover installation from the WordPress Admin Dashboard, and from the command line using [Terminus](/guides/terminus) and [WP-CLI](/guides/wp-cli).
+There are several ways to install and manage WordPress plugins on Pantheon. This guide will cover installation from the WordPress Admin Dashboard, and from the command line using [Terminus](/terminus) and [WP-CLI](/guides/wp-cli).
 
 Each method requires first setting your working environment (Dev or a Multidev environment) to [SFTP mode](/sftp#sftp-mode).
 
@@ -54,7 +54,7 @@ WP Mail SMTP is now installed! You can now continue to [Configure WP Mail SMTP f
 
 <Alert title="Exports" type="export">
 
-When using [Terminus](/guides/terminus), we suggest defining the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
+When using [Terminus](/terminus), we suggest defining the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
 
 ```bash{promptuser: user}
 export site=yoursitename

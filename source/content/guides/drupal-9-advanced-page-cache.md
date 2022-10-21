@@ -20,7 +20,7 @@ To take finer grain control of how Drupal handles its cache data on both the Glo
 
 Before starting this guide, you should:
 
-- Install and authenticate [Terminus](/guides/terminus)
+- Install and authenticate [Terminus](/terminus)
 - Have an open sandbox slot on your Pantheon account. To follow along with this guide it is best to use the Dev environment of a newly created Drupal 9 site. You could use a pre-existing Drupal 9 site, but some of the details would change.
 - So that you can easily copy and paste the example commands in this guide, define your site name with a local environment variable. Replace `cache-tags-demo` with a unique site name:
 

@@ -56,7 +56,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/guides/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/guides/multidev):
+This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/guides/multidev):
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -65,7 +65,7 @@ export ENV=dev
 
 </Alert>
 
-1. Install [Composer](https://getcomposer.org) and [Drush](https://docs.drush.org/en/7.x/install/), then install and authenticate [Terminus](/guides/terminus/install).
+1. Install [Composer](https://getcomposer.org) and [Drush](https://docs.drush.org/en/7.x/install/), then install and authenticate [Terminus](/terminus/install).
 
 1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. If you're using Multidev, checkout that branch:
 
@@ -156,7 +156,7 @@ Then commit and push the symlink to Pantheon.
 
 ### SendGrid SMTP Integration
 
-1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/guides/terminus):
+1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/terminus):
 
      ```bash
      terminus drush <site>.<env> -- en smtp -y

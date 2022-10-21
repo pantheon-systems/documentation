@@ -20,7 +20,7 @@ Review the [documentation provided with the community distribution](https://www.
 
 ## Create a Site Based on an Empty Upstream
 
-There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) and via [Terminus](/guides/terminus).
+There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) and via [Terminus](/terminus).
 
 - Via the Pantheon Dashboard:
 

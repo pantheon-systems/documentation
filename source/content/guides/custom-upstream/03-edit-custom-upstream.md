@@ -26,13 +26,13 @@ Follow the steps below if you want to change the name or description of your Cus
 
 ## Change Custom Upstream Repository URL or Password
 
-You cannot modify the repository details on an existing Custom Upstream. we recommend creating a new Custom Upstream if there is a new URL or password you need to use. You will need to switch each site to the new upstream individually with [Terminus](/guides/terminus):
+You cannot modify the repository details on an existing Custom Upstream. we recommend creating a new Custom Upstream if there is a new URL or password you need to use. You will need to switch each site to the new upstream individually with [Terminus](/terminus):
 
 ```bash{promptUser: user}
 terminus site:upstream:set my-site "My New Custom Upstream"
 ```
 
-You must be a site owner to switch a site's upstream. You will need to merge changes as a one-click update after a site's upstream has been changed. Review [Example Usage](/guides/terminus/examples/#switch-upstreams) for more details.
+You must be a site owner to switch a site's upstream. You will need to merge changes as a one-click update after a site's upstream has been changed. Review [Example Usage](/terminus/examples/#switch-upstreams) for more details.
 
 You can safely delete the old Custom Upstream after all sites have been updated to track the new Custom Upstream. Review [Delete a Custom Upstream](/guides/custom-upstream/delete-custom-upstream) for more information.
 

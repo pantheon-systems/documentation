@@ -8,7 +8,7 @@ tags: [cli, local, plugins, terminus, reference]
 type: terminuspage
 layout: terminuspage
 showtoc: true
-permalink: docs/guides/terminus/plugins
+permalink: docs/terminus/plugins
 anchorid: plugins
 ---
 
@@ -16,7 +16,7 @@ Extend the functionality of Terminus and add commands by installing third-party 
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, ensure your your plugin is updated for Terminus 2.0. See [Terminus 2.0](/guides/terminus/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/guides/terminus/terminus-3-0).
+If you are a plugin author, ensure your your plugin is updated for Terminus 2.0. See [Terminus 2.0](/terminus/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/terminus/terminus-3-0).
 
 </Alert>
 
@@ -60,7 +60,7 @@ composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminu
 
 Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (`$HOME/.terminus/plugins`). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On GitHub you can find it by clicking **<span class="glyphicons glyphicon-save"></span> Code** on the repository home page:
 
-![Click Code and copy the repository URL](../../../images/github/github-code-clone-ssh.png "GitHub clone URL")
+![Click Code and copy the repository URL](../../images/github/github-code-clone-ssh.png "GitHub clone URL")
 
 Then in a terminal window on your computer, use the following commands:
 

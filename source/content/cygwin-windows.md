@@ -8,7 +8,7 @@ reviewed: "2020-02-05"
 
 <Alert title="Warning" type="danger" >
 
-This guide is unmaintained. For Windows 10 users, we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to create a Linux environment on Windows. Once you've installed the Subsystem, follow the instructions in the [Terminus Guide](/guides/terminus/install/).
+This guide is unmaintained. For Windows 10 users, we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to create a Linux environment on Windows. Once you've installed the Subsystem, follow the instructions in the [Terminus Guide](/terminus/install/).
 
 </Alert>
 

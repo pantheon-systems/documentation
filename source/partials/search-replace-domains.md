@@ -21,7 +21,7 @@ Another popular search-replace plugin is [Better Search Replace](https://wordpre
 
 <Tab title="Terminus" id="terminus-replace-anchor">
 
-Using [Terminus](/guides/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
+Using [Terminus](/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
 
 ```bash{promptUser: user}
 terminus remote:wp $site.$env -- search-replace "://live-example.pantheonsite.io" "://test.example.com" --all-tables --verbose --dry-run

@@ -8,7 +8,7 @@ tags: [reference, cli, local, terminus, workflow]
 layout: guide
 type: terminuspage
 layout: terminuspage
-permalink: docs/guides/terminus/commands
+permalink: docs/terminus/commands
 anchorid: commands
 ---
 

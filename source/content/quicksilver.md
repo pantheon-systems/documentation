@@ -192,7 +192,7 @@ For examples on how to use these variables, see the [Quicksilver Examples](https
 
 ## Debugging via Terminus
 
-Use the following [Terminus](/guides/terminus) commands for debugging Quicksilver.
+Use the following [Terminus](/terminus) commands for debugging Quicksilver.
 
 ### Stream New Workflows to the Console
 

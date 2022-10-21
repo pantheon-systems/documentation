@@ -10,7 +10,7 @@ contributors: [whitneymeredith]
 type: terminuspage
 layout: terminuspage
 showtoc: true
-permalink: docs/guides/terminus
+permalink: docs/terminus
 anchorid: terminus
 reviewed: "2022-10-20"
 ---
@@ -27,7 +27,7 @@ Increase your developers' confidence on Terminus and generate ideas for writing 
 
 ## Usage
 
-Use Terminus to perform these and [other operations](/guides/terminus/commands/):
+Use Terminus to perform these and [other operations](/terminus/commands/):
 
 - Create a new site
 - Create and delete Multidev environments
@@ -41,7 +41,7 @@ Use Terminus to perform these and [other operations](/guides/terminus/commands/)
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, you will need to update your plugin for Terminus 2. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. See [what's new in Terminus 3.x](/guides/terminus/terminus-3-0) to learn more.
+If you are a plugin author, you will need to update your plugin for Terminus 2. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. See [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
 
 </Alert>
 

@@ -18,7 +18,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. At 
 
 Pantheon containers spin down (sleep) after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
 
-Attempts to remotely access services (such as MySQL or SFTP connections) will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/guides/terminus) command:
+Attempts to remotely access services (such as MySQL or SFTP connections) will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/terminus) command:
 
 ```bash{promptUser: user}
 terminus env:wake <site>.<env>

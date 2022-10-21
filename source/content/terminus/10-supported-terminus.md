@@ -8,7 +8,7 @@ contributors: [wordsmither]
 type: terminuspage
 layout: terminuspage
 showtoc: true
-permalink: docs/guides/terminus/supported-terminus
+permalink: docs/terminus/supported-terminus
 anchorid: supported-terminus
 ---
 

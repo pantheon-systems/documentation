@@ -33,7 +33,7 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/guid
 
 ## Install and Configure Plugin
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard, or with [Terminus](/guides/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard, or with [Terminus](/terminus):
 
  ```bash
  terminus connection:set <site>.<env> sftp

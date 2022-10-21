@@ -72,7 +72,7 @@ Follow the steps below when you are ready to make your environment public again.
 
 ## Scripting Site Locking Operations
 
-Your site can also be locked and unlocked using [Terminus](/guides/terminus).
+Your site can also be locked and unlocked using [Terminus](/terminus).
 
 1. Run the command below to lock a site:
 
@@ -121,7 +121,7 @@ Sites that have the environment locked on Pantheon in addition to enabling the m
 
 1. Lock the environment on Pantheon after you've disabled the module.
 
-Alternatively, you can resolve 403 errors by using [Terminus](/guides/terminus) to disable the module:
+Alternatively, you can resolve 403 errors by using [Terminus](/terminus) to disable the module:
 
 For Drupal 7, run the command below:
 

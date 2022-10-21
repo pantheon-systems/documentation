@@ -59,7 +59,7 @@ Several jobs are automatically configured during the installation of WordPress. 
 
 ### WP-Cron From the CLI
 
-Use [Terminus](/guides/terminus) to see job details in WP-Cron. Terminus, through WP-CLI, provides details, such as:
+Use [Terminus](/terminus) to see job details in WP-Cron. Terminus, through WP-CLI, provides details, such as:
 
 - What is scheduled to run
 - What will run next
@@ -94,7 +94,7 @@ If this is a WordPress Site Network or has WordPress cron overridden, the result
 Success: WP-Cron spawning is working as expected.
 ```
 
-You can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/guides/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is as follows:
+You can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is as follows:
 
 ```bash{promptUser: user}
 terminus wp <SITE_NAME>.<ENV_NAME> -- cron <your wp-cron command and switches here>

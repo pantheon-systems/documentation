@@ -93,7 +93,7 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 ## Run Site Audit Manually
 
-You can execute a full report encoded in JSON format to your terminal using [Terminus](/guides/terminus):
+You can execute a full report encoded in JSON format to your terminal using [Terminus](/terminus):
 
  ```json
  {promptUser: user}
@@ -131,7 +131,7 @@ Drupal 7 — permanently opt out of the PageCompression check in the Cache repor
 
  ### Site Audit Isn't Running on My Site
 
- If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/guides/terminus) command to execute Site Audit directly on your Pantheon site:
+ If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/terminus) command to execute Site Audit directly on your Pantheon site:
 
  ```bash{promptUser: user}
  terminus drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon --strict=0

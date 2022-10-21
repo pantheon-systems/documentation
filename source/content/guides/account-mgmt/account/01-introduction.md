@@ -38,6 +38,6 @@ Click your user icon in the upper right corner to update and manage your persona
 
   - **SSH Keys:** Add and manage your SSH keys.
 
-  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/guides/terminus).
+  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus).
 
   - **Preferences:** Slide the toggle to **Off** to use the old dashboard. 

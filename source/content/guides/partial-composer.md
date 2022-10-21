@@ -17,7 +17,7 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 
 <Partial file="notes/partial-composer-adoption-warning.md" />
 
-- Set the site's connection mode to Git within the Site Dashboard or via [Terminus](/guides/terminus):
+- Set the site's connection mode to Git within the Site Dashboard or via [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus connection:set <site>.<env> git

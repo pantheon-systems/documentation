@@ -141,7 +141,7 @@ Alternately, consider restoring only the code and database from backups, and mov
 
 ### Restore Large Site with Terminus and Rsync
 
-You can use [Terminus](/guides/terminus) to restore all or part of a site from the command line. This is useful if you need to only restore one part of the site (code, database, files), or want to script a restoration process.
+You can use [Terminus](/terminus) to restore all or part of a site from the command line. This is useful if you need to only restore one part of the site (code, database, files), or want to script a restoration process.
 
 <Alert title ="Variables" type="export">
 

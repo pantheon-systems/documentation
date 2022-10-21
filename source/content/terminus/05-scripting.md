@@ -8,7 +8,7 @@ tags: [cli, local, terminus, workflow]
 type: terminuspage
 layout: terminuspage
 showtoc: true
-permalink: docs/guides/terminus/scripting
+permalink: docs/terminus/scripting
 anchorid: scripting
 ---
 
@@ -23,7 +23,7 @@ If so, you consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus must be authenticated before you can execute most commands. Before running any script you must ensure Terminus is authenticated with a [machine token](/guides/terminus/install#machine-token) that has the proper permissions
+Terminus must be authenticated before you can execute most commands. Before running any script you must ensure Terminus is authenticated with a [machine token](/terminus/install#machine-token) that has the proper permissions
 
 ## Example Repositories
 

@@ -55,54 +55,54 @@ const shortcodes = {
 const items = [
   {
     id: "docs-terminus",
-    link: "/guides/terminus",
+    link: "/terminus",
     title: "Get Started",
   },
   {
     id: "docs-terminus-install",
-    link: "/guides/terminus/install",
+    link: "/terminus/install",
     title: "Install",
   },
   {
     id: "docs-terminus-examples",
-    link: "/guides/terminus/examples",
+    link: "/terminus/examples",
     title: "Example Usage",
   },
   {
     id: "docs-terminus-commands",
-    link: "/guides/terminus/commands",
+    link: "/terminus/commands",
     title: "Commands",
   },
   {
     id: "docs-terminus-scripting",
-    link: "/guides/terminus/scripting",
+    link: "/terminus/scripting",
     title: "Scripting",
   },
   {
     id: "docs-terminus-plugins",
-    link: "/guides/terminus/plugins",
+    link: "/terminus/plugins",
     title: "Extend with Plugins",
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/guides/terminus/directory",
+        link: "/terminus/directory",
         title: "Directory",
       },
       {
         id: "docs-terminus-create",
-        link: "/guides/terminus/create",
+        link: "/terminus/create",
         title: "Create Plugins",
       },
     ],
   },
   {
     id: "docs-terminus-configuration",
-    link: "/guides/terminus/configuration",
+    link: "/terminus/configuration",
     title: "Configuration File",
   },
   {
     id: "docs-terminus-updates",
-    link: "/guides/terminus/updates",
+    link: "/terminus/updates",
     title: "Version Updates",
   },
 ]
@@ -181,7 +181,7 @@ class CommandsTemplate extends React.Component {
               <Navbar
                 title={`Terminus Command Reference`}
                 items={items}
-                activePage="/guides/terminus/commands"
+                activePage="/terminus/commands"
                 className="manual-guide-toc"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
@@ -235,7 +235,7 @@ class CommandsTemplate extends React.Component {
                     </table>
 
                     <Partial file={`terminus/${slug}.md`} />
-                    <Link to="/guides/terminus/commands">Back to all commands</Link>
+                    <Link to="/terminus/commands">Back to all commands</Link>
                   </div>
                 </div>
               </div>

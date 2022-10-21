@@ -62,7 +62,7 @@ Every entity (user, workspace, product, and site) is assigned a UUID which is in
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 
-You can also use [Terminus](/guides/terminus) to find the UUID of your workspaces:
+You can also use [Terminus](/terminus) to find the UUID of your workspaces:
 
 ```bash{promptUser: user}
 terminus org:list

@@ -14,7 +14,7 @@ A file that may look like a normal JPG or PDF file may actually be malware that 
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/guides/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 ```bash
 export site=yoursitename
@@ -35,7 +35,7 @@ As of this doc's last update, there are no actively maintained ClamAV plugins fo
 
 This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/project/clamav).
 
-1. Download and enable the module in the Drupal admin panel, or via [Terminus](/guides/terminus):
+1. Download and enable the module in the Drupal admin panel, or via [Terminus](/terminus):
 
    ```bash
    terminus drush $site.$env -- dl clamav

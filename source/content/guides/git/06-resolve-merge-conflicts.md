@@ -66,7 +66,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 ### Find a Site's Upstream URL
 
-Run the following command in [Terminus](/guides/terminus) to retrieve your Upstream URL:
+Run the following command in [Terminus](/terminus) to retrieve your Upstream URL:
 
 ```bash{promptUser: user}
 terminus site:info <site> --field=upstream

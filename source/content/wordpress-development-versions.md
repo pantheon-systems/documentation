@@ -16,7 +16,7 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core within WordPress Dashboard
 
-1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/sftp) or with [Terminus](/guides/terminus):
+1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/sftp) or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
@@ -41,7 +41,7 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core Manually with Git
 
-1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/guides/terminus):
+1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> git
@@ -85,4 +85,4 @@ Create the Multidev from within the Site Dashboard by selecting **Multidev** > *
 
 ### Database Update Required
 
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus $site.$env 'wp core update-db'](/guides/terminus).
+WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus $site.$env 'wp core update-db'](/terminus).

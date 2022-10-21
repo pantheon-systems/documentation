@@ -31,7 +31,7 @@ Be sure you have:
   - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
 - SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
-- [Terminus](/guides/terminus)
+- [Terminus](/terminus)
 - [Drush](/guides/drush) (optional)
 
 ### Export Variables

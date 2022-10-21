@@ -34,7 +34,7 @@ WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
 
 ## More Resources
 
-- [Clear Upstream Cache](/guides/terminus/commands/site-upstream-clear-cache)
+- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
 - [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)
 

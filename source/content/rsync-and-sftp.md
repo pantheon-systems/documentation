@@ -176,4 +176,4 @@ Now you can use `rmdir` over SFTP to remove the empty directory itself.
 
 ## Known Issues
 
-If you're uploading many files, and your Live environment has [multiple application containers](/application-containers/#multiple-application-containers), upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or [Terminus](/guides/terminus) to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.
+If you're uploading many files, and your Live environment has [multiple application containers](/application-containers/#multiple-application-containers), upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or [Terminus](/terminus) to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.

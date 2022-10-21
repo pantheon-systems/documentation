@@ -9,7 +9,7 @@ tags: [cli, local, plugins, terminus, workflow]
 type: terminuspage
 layout: terminuspage
 showtoc: true
-permalink: docs/guides/terminus/create
+permalink: docs/terminus/create
 anchorid: create
 ---
 

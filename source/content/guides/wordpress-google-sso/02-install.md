@@ -21,7 +21,7 @@ If your site has [Multidev](/guides/multidev) enabled, we suggest working in a n
 
 <Alert title="Environment Variables" type="export">
 
-If you're using [Terminus](/guides/terminus), set the `$env` variable to your multidev environment, or dev if not:
+If you're using [Terminus](/terminus), set the `$env` variable to your multidev environment, or dev if not:
 
 ```bash{promptUser: user}
 export env=multidevname # or dev

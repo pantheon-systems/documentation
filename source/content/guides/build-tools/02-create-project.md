@@ -35,7 +35,7 @@ Ensure you have the latest versions of Terminus and the Terminus Build Tools plu
     Composer version 2.1.8 2021-09-15 13:55:14
     ```
 
-1. Install the most recent release of [Terminus](/guides/terminus/).
+1. Install the most recent release of [Terminus](/terminus/).
    - Verify your installation with `terminus --version`:
 
     ```bash{outputLines: 2}
