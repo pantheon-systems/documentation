@@ -5,7 +5,8 @@ description: Stay up to date on the latest Terminus version.
 terminuspage: true
 categories: [develop]
 tags: [cli, local, plugins, terminus, updates, workflow]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/updates
 anchorid: updates

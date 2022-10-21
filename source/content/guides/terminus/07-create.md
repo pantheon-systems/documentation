@@ -6,7 +6,8 @@ terminuspage: true
 terminuscreate: true
 categories: [develop]
 tags: [cli, local, plugins, terminus, workflow]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/create
 anchorid: create

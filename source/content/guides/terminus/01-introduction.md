@@ -2,10 +2,13 @@
 title: Terminus Guide
 subtitle: Get Started
 description: Manual for the Terminus command line interface for advanced interaction with the Pantheon platform.
+terminusexample: true
+terminuspage: true
 categories: [develop]
 tags: [cli, drush, terminus, workflow, wp-cli]
 contributors: [whitneymeredith]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus
 anchorid: terminus

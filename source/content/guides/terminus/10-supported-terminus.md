@@ -5,7 +5,8 @@ description: Learn which versions of Terminus are currently supported.
 categories: [platform]
 tags: [libraries, updates]
 contributors: [wordsmither]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/supported-terminus
 anchorid: supported-terminus

@@ -5,7 +5,8 @@ description: Learn how to configure your local Terminus configuration file.
 terminuspage: true
 categories: [develop]
 tags: [cli, local, terminus, workflow]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/configuration
 anchorid: configuration

@@ -5,7 +5,8 @@ description: Automate your workflow with Terminus.
 terminuspage: true
 categories: [automate]
 tags: [cli, local, terminus, workflow]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/scripting
 anchorid: scripting

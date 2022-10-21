@@ -5,7 +5,8 @@ description: A non-exclusive directory of plugins to extend the features of Term
 terminuspage: true
 categories: [develop]
 tags: [cli, local, plugins, terminus, workflow]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/directory
 anchorid: directory

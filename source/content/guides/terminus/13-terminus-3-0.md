@@ -5,7 +5,8 @@ description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [greg-1-anderson]
 categories: [platform]
 tags: [cli, drush, local, wp-cli, terminus]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/terminus-3-0
 anchorid: terminus-3-0

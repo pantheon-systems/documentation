@@ -5,7 +5,8 @@ description: Use plugins to extend what you can do with Terminus.
 terminuspage: true
 categories: [develop]
 tags: [cli, local, plugins, terminus, reference]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/plugins
 anchorid: plugins

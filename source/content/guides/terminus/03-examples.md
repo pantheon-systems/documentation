@@ -6,7 +6,8 @@ terminusexample: true
 terminuspage: true
 categories: [develop]
 tags: [cli, local, terminus, updates, workflow]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/examples
 anchorid: examples

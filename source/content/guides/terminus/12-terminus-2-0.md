@@ -5,7 +5,8 @@ description: Learn what's new with the Terminus 2.0 release.
 contributors: [alexfornuto]
 categories: [platform]
 tags: [cli, drush, local, wp-cli, terminus]
-layout: guide
+type: terminuspage
+layout: terminuspage
 showtoc: true
 permalink: docs/guides/terminus/terminus-2-0
 anchorid: terminus-2-0

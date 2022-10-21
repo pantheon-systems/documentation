@@ -6,7 +6,8 @@ terminuspage: true
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 layout: guide
-showtoc: true
+type: terminuspage
+layout: terminuspage
 permalink: docs/guides/terminus/commands
 anchorid: commands
 ---
