@@ -2,6 +2,7 @@
 title: Terminus Guide
 subtitle: Command Reference
 description: Look up Terminus commands.
+terminuspage: true
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 layout: guide

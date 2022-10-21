@@ -2,6 +2,7 @@
 title: Terminus Guide
 subtitle: Scripting Terminus
 description: Automate your workflow with Terminus.
+terminuspage: true
 categories: [automate]
 tags: [cli, local, terminus, workflow]
 layout: guide

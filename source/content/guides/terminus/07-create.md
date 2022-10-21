@@ -2,6 +2,8 @@
 title: Terminus Guide
 subtitle: Create Plugins
 description: Learn how to create your own Terminus plugin.
+terminuspage: true
+terminuscreate: true
 categories: [develop]
 tags: [cli, local, plugins, terminus, workflow]
 layout: guide

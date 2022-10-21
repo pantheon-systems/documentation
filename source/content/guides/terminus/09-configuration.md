@@ -2,6 +2,7 @@
 title: Terminus Guide
 subtitle: Configuration File
 description: Learn how to configure your local Terminus configuration file.
+terminuspage: true
 categories: [develop]
 tags: [cli, local, terminus, workflow]
 layout: guide

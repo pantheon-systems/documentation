@@ -2,6 +2,7 @@
 title: Terminus Guide
 subtitle: Version Updates
 description: Stay up to date on the latest Terminus version.
+terminuspage: true
 categories: [develop]
 tags: [cli, local, plugins, terminus, updates, workflow]
 layout: guide

@@ -2,6 +2,8 @@
 title: Terminus Guide
 subtitle: Example Usage
 description: Review examples of Terminus commands most frequently used by power users.
+terminusexample: true
+terminuspage: true
 categories: [develop]
 tags: [cli, local, terminus, updates, workflow]
 layout: guide
