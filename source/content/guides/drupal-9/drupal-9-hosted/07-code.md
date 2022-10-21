@@ -96,7 +96,10 @@ reviewed: "2021-03-31"
     ```bash{promptUser: user}
     terminus site:clone $D8_SITE.live $D9_SITE.dev --no-code --no-destination-backup --no-source-backup
     ```
-
+     <Alert="info" title="Note">
+     The Site Clone plugin must be installed to use the `terminus site:clone` command. Visit <https://github.com/pantheon-systems/terminus-site-clone-plugin> for details on installing the Site Clone plugin.
+    </Alert>
+  
 1. Push the D9 codebase from your local machine up to Pantheon:
 
     ```bash{promptUser: user}
