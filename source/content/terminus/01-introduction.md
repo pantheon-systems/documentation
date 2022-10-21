@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
-subtitle: Get Started
-description: Manual for the Terminus command line interface for advanced interaction with the Pantheon platform.
+subtitle: Introduction
+description: Learn about the Terminus command line interface for advanced interaction with the Pantheon platform.
 terminusexample: true
 terminuspage: true
 categories: [develop]

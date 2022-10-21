@@ -56,7 +56,7 @@ const items = [
   {
     id: "docs-terminus",
     link: "/terminus",
-    title: "Get Started",
+    title: "Introduction",
   },
   {
     id: "docs-terminus-install",
@@ -95,15 +95,29 @@ const items = [
       },
     ],
   },
+  
   {
-    id: "docs-terminus-configuration",
-    link: "/terminus/configuration",
-    title: "Configuration File",
+    id: "docs-terminus-supported-terminus",
+    link: "/terminus/supported-terminus",
+    title: "Supported Terminus",
   },
+
   {
     id: "docs-terminus-updates",
     link: "/terminus/updates",
     title: "Version Updates",
+  },
+
+  {
+    id: "docs-terminus-2-0",
+    link: "/terminus/terminus-2-0",
+    title: "Terminus 2.0",
+  },
+
+  {
+    id: "docs-terminus-3-0",
+    link: "/terminus/terminus-3-0",
+    title: "Terminus 3.0",
   },
 ]
 
