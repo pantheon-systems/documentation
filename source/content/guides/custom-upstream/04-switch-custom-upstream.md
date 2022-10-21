@@ -36,4 +36,4 @@ Review the [Terminus Switch Upstream example](/terminus/examples#switch-upstream
 
 ## More Resources
 
-- [Terminus Set Upstream Steps](/terminus/commands/site-upstream-set#terminus-error-permission-to-change-the-upstream-of-this-site) 
+- [Terminus Set Upstream Steps](/terminus/commands/terminus/commands/site-upstream-set#terminus-error-permission-to-change-the-upstream-of-this-site) 

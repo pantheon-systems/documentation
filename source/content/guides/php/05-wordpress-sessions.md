@@ -95,7 +95,7 @@ Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-nat
  ```bash{promptUser: user}
  terminus env:deploy <site>.test --sync-content --updatedb --note="Install WordPress Native PHP Sessions plugin"
  ```
- ([More options for this command](/terminus/commands/terminus/commandsenv-deploy))
+ ([More options for this command](/terminus/commands/terminus/commands/env-deploy))
 
 1. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 

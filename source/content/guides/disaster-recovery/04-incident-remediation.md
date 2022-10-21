@@ -63,7 +63,7 @@ As part of the Managed Updates deployment process, a Multidev will be cloned fro
 
 #### Codebase is unrecoverable
 
-The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](/terminus/commands/backup-restore) documentation for more information. 
+The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](/terminus/commands/terminus/commands/backup-restore) documentation for more information. 
 
 #### Reverting a bad commit to Pantheon
 
