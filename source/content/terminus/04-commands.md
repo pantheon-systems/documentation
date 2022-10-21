@@ -5,7 +5,6 @@ description: Look up Terminus commands.
 terminuspage: true
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-layout: guide
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/commands
