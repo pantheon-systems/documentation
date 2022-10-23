@@ -54,6 +54,11 @@ If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data i
     ```sql
     update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
     ```
+    Or this run this SQL query
+    
+    ```sql
+    UPDATE wp_options SET `autoload` = 'no' WHERE `option_name` = 'example_option_name';
+    ```
 
  <Alert title="Note"  type="info" >
 
