@@ -12,43 +12,47 @@ permalink: docs/terminus/scripting
 anchorid: scripting
 ---
 
-While Terminus makes it easy to directly interact with Pantheon from your command line, its real value is in scripting. By adding Terminus to your automated tasks, you can truly make Pantheon a part of your standardized workflow.
+This section provides information on how to automate your workflow with Terminus scripting.
+
+Terminus makes it easy to directly interact with Pantheon from your command line, and provides additional value with scripting abilities. You can make Pantheon a part of your standardized workflow by adding Terminus to your automated tasks.
 
 Consider the repetitive tasks you perform using the Pantheon Dashboard:
 
 - Can those tasks be executed by Terminus commands?
 - Can the values required by the commands be derived programmatically?
 
-If so, you consider how you can turn the task into a script.
+If so, consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus must be authenticated before you can execute most commands. Before running any script you must ensure Terminus is authenticated with a [machine token](/terminus/install#machine-token) that has the proper permissions
+Terminus must be authenticated before you can execute most commands. You must ensure Terminus is authenticated with a [machine token](/terminus/install#machine-token) that has the correct permissions before running a script.
 
 ## Example Repositories
 
-- The [Pantheon Example Terminus Auto Update Script](https://github.com/pantheon-systems/example-terminus-auto-update-script) demonstrates how you can use Terminus to automate plugin and theme updating for multiple sites.
+- The [Pantheon Example Terminus Auto Update Script](https://github.com/pantheon-systems/example-terminus-auto-update-script) demonstrates how you can use Terminus to automate plugin and theme updates for multiple sites.
 
-- The [Example WordPress Composer](https://github.com/pantheon-systems/example-wordpress-composer) repository (used by our [Build Tools](/guides/build-tools) guide) uses Terminus to [deploy staged changes](https://github.com/pantheon-systems/example-wordpress-composer/blob/46ff34e2b9f421a1c0eae72ade80376e8dd42f31/.circleci/deploy-to-pantheon.sh) to multidev environments.
+- The [Example WordPress Composer](https://github.com/pantheon-systems/example-wordpress-composer) repository (used by our [Build Tools](/guides/build-tools) guide) uses Terminus to [deploy staged changes](https://github.com/pantheon-systems/example-wordpress-composer/blob/46ff34e2b9f421a1c0eae72ade80376e8dd42f31/.circleci/deploy-to-pantheon.sh) to Multidev environments.
 
 ## Bash Variables
 
-One of the ways Terminus can be used in scripting is the generation of variables. In the example below, we use the output of `terminus multidev:list` to create an environment variable with all our multidev environments:
+One of the ways Terminus can be used in scripting is the generation of variables. In the example below, we use the output of `terminus multidev:list` to create an environment variable with all Multidev environments:
 
 ```bash
 PANTHEON_MULTIDEV_LIST="$(terminus multidev:list -n ${TERMINUS_SITE} --format=list --field=Name)"
 ```
 
-This example assumes the variable `TERMINUS_SITE` is already set. Now you can iterate through `$PANTHEON_MULTIDEV_LIST` using something like a `while read` loop to perform tasks on each multidev environment.
+This example assumes the variable `TERMINUS_SITE` is already set. Now you can iterate through `$PANTHEON_MULTIDEV_LIST` using something like a `while read` loop to perform tasks on each Multidev environment.
 
 ## Interactive Prompts
-Keep in mind that any commands which normally require interaction from the user will need to be bypassed with the appropriate flag. For most Terminus commands, the flags `-y` or `--yes` will bypass requests to confirm actions.
+
+Commands that normally require user interaction must be bypassed with the appropriate flag. For most Terminus commands, the flags `-y` or `--yes` will bypass requests to confirm actions.
 
 ## Example Bash Scripts
 
 ### Take a backup of the live environment of all sites in an organization
 
-Here's a more complete example. This script goes through every site in an organization, skips any that are frozen, and takes a backup of the Live environment:
+The script in this example goes through every site in an organization, skips any sites that are frozen, and creates a backup of the Live environment. This script requires that you set the variable `ORG_UUID` within the script itself. You can find the UUID using `terminus org:list`.
+
 
 ```bash
 #!/bin/bash
@@ -80,11 +84,11 @@ while read -r PANTHEON_SITE_NAME; do
 done <<< "$PANTHEON_SITES"
 ```
 
-This script requires that you set the variable `ORG_UUID` within the script itself. You can find the UUID using `terminus org:list`.
-
 ### Save the PHP version of the live environment of all sites in an organization to a CSV file
 
-Just like the example above, this example saves the output various Terminus commands to variables for reuse.
+This example saves the output of various Terminus commands to variables for reuse, similar to the example above. 
+
+This script requires that you set the variable `PANTHEON_ORG` within the script itself. This can be either the organization name or UUID, both of which can be found using `terminus org:list`. Optionally, you can also update the name and path of the CSV file if you prefer something other than `pantheon-site-php-versions.csv`.
 
 ```bash
 #!/bin/bash
@@ -125,4 +129,8 @@ done <<< "$PANTHEON_SITES"
 echo "Site PHP information has been saved to $CSV_FILE"
 ```
 
-This script requires that you set the variable `PANTHEON_ORG` within the script itself. This can be either the organization name or UUID, both of which can be found using `terminus org:list`. Optionally, you can also update the name and path of the CSV file if you prefer something other than `pantheon-site-php-versions.csv`.
+## More Resources
+
+- [Install Quicksilver Scripts](/guides/quicksilver/install-script)
+- [Cron for WordPress](/wordpress-cron)
+- [Cron for Drupal](/drupal-cron)
