@@ -55,7 +55,7 @@ const items = [
   {
     id: "docs-terminus",
     link: "/terminus",
-    title: "Get Started",
+    title: "Introduction",
   },
   {
     id: "docs-terminus-install",
