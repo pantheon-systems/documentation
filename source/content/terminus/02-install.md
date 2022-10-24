@@ -14,18 +14,31 @@ anchorid: install
 reviewed: "2022-03-25"
 ---
 
-Terminus is available for macOS and Linux.
+This section provides information on how to install and authenticate Terminus.
 
-Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then install Terminus in the Linux shell.
+Terminus is available for macOS and Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then install Terminus in the Linux shell.
 
-Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/ssh-keys/) to your account before you continue.
+Some Terminus commands use SSH authentication. You may want to consider [generating and adding SSH keys](/ssh-keys/) to your account before you continue.
 
 ## Requirements
+
+### Package Manager
+
+- [apt](https://ubuntu.com/server/docs/package-management) for Ubuntu/WinWSL-Ubuntu
+- [Homebrew](https://brew.sh/) for Mac
+
+### Required Packages
 
 - PHP Version 7.4 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
 - [PHP-CLI](http://www.php-cli.com/)
 - [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 - [Composer](https://getcomposer.org/download/)
+- [Git](https://help.github.com/articles/set-up-git/) (May be needed for the plugin manager component)
+
+### Recommended Packages
+
+- [Drush](http://docs.drush.org/en/master/install/) (Useful to run incompatible-with-Terminus Drush commands)
+- [WP-CLI](http://wp-cli.org/) (Useful to run incompatible-with-Terminus WP-CLI commands)
 
 ## Install Terminus
 
@@ -33,17 +46,17 @@ There are several ways to install Terminus, depending on your use case:
 
 - For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus-phar).
 - If you are using a Mac, you can [install using homebrew](#homebrew-installation).
-- If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
+- If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the Git repository.
 
 ### Standalone Terminus PHAR
 
 The following commands will:
 
-- create a `terminus` folder in your home directory (`~/`),
-- get the latest release tag of Terminus,
-- download and save the release as `~/terminus/terminus`,
-- make the file executable,
-- add a symlink to your local `bin` directory for the Terminus executable.
+- Create a `terminus` folder in your home directory (`~/`)
+- Get the latest release tag of Terminus
+- Download and save the release as `~/terminus/terminus`
+- Make the file executable
+- Add a symlink to your local `bin` directory for the Terminus executable
 
     ```bash{promptUser: user}
   mkdir -p ~/terminus && cd ~/terminus
@@ -55,7 +68,9 @@ The following commands will:
 
 ### Homebrew Installation
 
-The Terminus application is published to [Homebrew](https://brew.sh/); to install, run:
+The Terminus application is published to [Homebrew](https://brew.sh/). 
+
+Run the command below to install:
 
 ```bash
 brew install pantheon-systems/external/terminus
@@ -65,7 +80,7 @@ brew install pantheon-systems/external/terminus
 
 ### Machine Token
 
-You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens/).
+You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. Refer to [Machine Tokens](/machine-tokens/) for more information.
 
 1. Navigate to the **User Dashboard**, select **Account**, and then select  **Machine Tokens** to [create your machine token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
@@ -83,5 +98,9 @@ You must log in with a machine token after the installation completes. A machine
 
 ### SSH Authentication
 
-Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
+Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. Refer to [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
+## More Resources
+
+- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [PHP on Pantheon](/guides/php)

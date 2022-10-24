@@ -15,9 +15,7 @@ anchorid: terminus
 reviewed: "2022-10-20"
 ---
 
-The Terminus command line interface provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
-
-Install Terminus on macOS or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). 
+Terminus is a command line interface that provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, as well as scripting and much more.
 
 <Enablement title="Command Line Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -52,3 +50,9 @@ Terminus is open source! View the project on [GitHub](https://github.com/pantheo
 Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus's GitHub page](https://github.com/pantheon-systems/terminus/issues/new).
 
 Need help with Terminus? [Contact Support](https://dashboard.pantheon.io/#support/support/all).
+
+## More Resources
+
+- [Quicksilver on Pantheon](/quicksilver)
+- [WP-CLI on the Pantheon Platform](/guides/wp-cli)
+- [Drupal Drush Command-Line Utility on Pantheon](/guides/drush)

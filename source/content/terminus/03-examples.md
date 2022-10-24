@@ -13,7 +13,12 @@ permalink: docs/terminus/examples
 anchorid: examples
 ---
 
+This section provides information on Terminus command structure.
+
+
 ## Command Structure
+
+### Basic Format
 
 The basic format of a Terminus command is:
 
@@ -21,11 +26,15 @@ The basic format of a Terminus command is:
 terminus command:subcommand <site>.<env>
 ```
 
+### More Information Command
+
 For more information on any command you can run:
 
 ```bash{promptUser: user}
 terminus command:subcommand -h
 ```
+
+### List of Commands
 
 Or for a list of all available commands:
 
@@ -95,52 +104,56 @@ Start with the [basic command structure described above](#command-structure). Th
 
 ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
 
-For more information, see [Drupal Drush Command-Line Utility](/guides/drush) and [Using WP-CLI On The Pantheon Platform](/guides/wp-cli).
+Refer to [Drupal Drush Command-Line Utility](/guides/drush) and [Using WP-CLI On The Pantheon Platform](/guides/wp-cli) for more information.
 
-## Applying Updates
+## Apply Updates
 
-Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
+You can quickly apply updates from the command line with Terminus, including updates to:
+
+- Core
+- Contributed modules
+- Themes
+- Plugins
 
 ### Upstream Updates (Core)
 
-Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress) and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
+Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress) and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied after they have been merged into the upstream and become available for a site.
 
 <Alert title={"Note"} type={"info"}>
 
-For instructions on how to resolve merge conflicts, see [Upstream
-Updates](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
+Refer to [Upstream Updates](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) for instructions on how to resolve merge conflicts.
 
 </Alert>
 
-List available upstream updates:
+1. List available upstream updates:
 
-```bash{promptUser: user}
-terminus upstream:updates:list my-site
-```
+  ```bash{promptUser: user}
+  terminus upstream:updates:list my-site
+  ```
 
-If the environment's connection mode is currently set to SFTP with uncommitted work you want to keep, commit now before proceeding:
+  If the environment's connection mode is currently set to SFTP with uncommitted work you want to keep, commit before proceeding:
 
-```bash{promptUser: user}
-terminus env:commit my-site.dev --message="My code changes"
-```
+  ```bash{promptUser: user}
+  terminus env:commit my-site.dev --message="My code changes"
+  ```
 
-<Alert title={"Warning"} type={"danger"}>
+  <Alert title={"Warning"} type={"danger"}>
 
-The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
+  The following command will permanently delete all uncommitted SFTP changes. If you want to keep SFTP changes, commit your work before proceeding.
 
-</Alert>
+  </Alert>
 
-Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:
+1. Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:
 
-```bash{promptUser: user}
-terminus connection:set my-site.dev git
-```
+  ```bash{promptUser: user}
+  terminus connection:set my-site.dev git
+  ```
 
-Apply available upstream updates for WordPress and Drupal core from the command line with Terminus:
+1. Apply available upstream updates for WordPress and Drupal core from the command line with Terminus:
 
-```bash{promptUser: user}
-terminus upstream:updates:apply my-site
-```
+  ```bash{promptUser: user}
+  terminus upstream:updates:apply my-site
+  ```
 
 ### Module, Theme, and Plugin Updates
 
@@ -150,51 +163,51 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 <Tab title="Drupal" id="drupaltab" active={true}>
 
-First, set the Dev environment's connection mode to SFTP:
+1. Set the Dev environment's connection mode to SFTP:
 
-```bash{promptUser: user}
-terminus connection:set my-site.dev sftp
-```
+  ```bash{promptUser: user}
+  terminus connection:set my-site.dev sftp
+  ```
 
-Apply updates to all contrib projects:
+1. Apply updates to all contrib projects:
 
-```bash{promptUser: user}
-terminus drush my-site.dev -- pm-updatecode --no-core
-```
+  ```bash{promptUser: user}
+  terminus drush my-site.dev -- pm-updatecode --no-core
+  ```
 
-Commit contrib updates to the Dev environment:
+1. Commit contrib updates to the Dev environment:
 
-```bash{promptUser: user}
-terminus env:commit my-site.dev --message="Update all contrib projects"
-```
+  ```bash{promptUser: user}
+  terminus env:commit my-site.dev --message="Update all contrib projects"
+  ```
 
 </Tab>
 
 <Tab title="WordPress" id="wptab">
 
-First, set the Dev environment's connection mode to SFTP:
+1. Set the Dev environment's connection mode to SFTP:
 
-```bash{promptUser: user}
-terminus connection:set my-site.dev sftp
-```
+  ```bash{promptUser: user}
+  terminus connection:set my-site.dev sftp
+  ```
 
-Apply updates to all plugins:
+1. Apply updates to all plugins:
 
-```bash{promptUser: user}
-terminus wp my-site.dev -- plugin update --all
-```
+  ```bash{promptUser: user}
+  terminus wp my-site.dev -- plugin update --all
+  ```
 
-Apply updates to all themes:
+1. Apply updates to all themes:
 
-```bash{promptUser: user}
-terminus wp my-site.dev -- theme update --all
-```
+  ```bash{promptUser: user}
+  terminus wp my-site.dev -- theme update --all
+  ```
 
-Commit plugin and theme updates to the Dev environment:
+1. Commit plugin and theme updates to the Dev environment:
 
-```bash{promptUser: user}
-terminus env:commit my-site.dev --message="Update all plugins and themes"
-```
+  ```bash{promptUser: user}
+  terminus env:commit my-site.dev --message="Update all plugins and themes"
+  ```
 
 </Tab>
 
@@ -202,69 +215,70 @@ terminus env:commit my-site.dev --message="Update all plugins and themes"
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend it's functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. For instructions on how to install Terminus plugins, see [Extend with Plugins](/terminus/plugins).
+Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. Refer to [Extend with Plugins](/terminus/plugins) for instructions on how to install Terminus plugins.
 
-Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
+1. Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 
-```bash{promptUser: user}
-terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb --dry-run
-```
+  ```bash{promptUser: user}
+  terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb --dry-run
+  ```
 
-The output should be similar to this:
+  The output should be similar to this:
 
-```bash
-[notice] Found 3 sites.
-[notice] Fetching the list of available updates for each site...
-[notice] 3 sites need updates.
-[warning] Cannot apply updates to novasoft-drupal because the dev environment is not in git mode.
-[DRY RUN] Applying 2 updates to jessiem-drupal7
-[DRY RUN] Applying 10 updates to superb-central
-```
+  ```bash
+  [notice] Found 3 sites.
+  [notice] Fetching the list of available updates for each site...
+  [notice] 3 sites need updates.
+  [warning] Cannot apply updates to novasoft-drupal because the dev environment is not in git mode.
+  [DRY RUN] Applying 2 updates to jessiem-drupal7
+  [DRY RUN] Applying 10 updates to superb-central
+  ```
 
-Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:
+1. Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:
 
-<Alert title={"Warning"} type={"danger"}>
+  <Alert title={"Warning"} type={"danger"}>
 
-The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
+  The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
 
-</Alert>
+  </Alert>
 
-```bash{promptUser: user}
-terminus connection:set my-site.dev git
-```
+  ```bash{promptUser: user}
+  terminus connection:set my-site.dev git
+  ```
 
-Review output then apply the mass update by removing the `--dry-run` option:
+1. Review output then apply the mass update by removing the `--dry-run` option:
 
-```bash{promptUser: user}
-terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb
-```
+  ```bash{promptUser: user}
+  terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb
+  ```
 
-## Deploying Code
+## Deploy Code
 
-When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:
+When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live.
 
-```bash{promptUser: user}
-terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates"
-```
+1. Run the command below to deploy the code:
 
-Ensure you clear the site after each deployment:
+  ```bash{promptUser: user}
+  terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates"
+  ```
 
-```bash{promptUser: user}
-terminus env:clear-cache <site>.test
-```
+1. Ensure you clear the site after each deployment:
 
-After testing changes, use Terminus to deploy code from Test up to Live:
+  ```bash{promptUser: user}
+  terminus env:clear-cache <site>.test
+  ```
 
-```bash{promptUser: user}
-terminus env:deploy my-site.live --note="Deploy core and contrib updates" 
-```
+1. Test the changes, and then use Terminus to deploy code from Test up to Live:
 
-Ensure you clear the site after each deployment:
+  ```bash{promptUser: user}
+  terminus env:deploy my-site.live --note="Deploy core and contrib updates" 
+  ```
 
-```bash{promptUser: user}
-terminus env:clear-cache <site>.live
-```
+1. Ensure you clear the site after each deployment:
 
+  ```bash{promptUser: user}
+  terminus env:clear-cache <site>.live
+  ```
 
 ## Reset Dev Environment to Live
 
@@ -278,59 +292,63 @@ There are a few scenarios where it may be useful to reset your Dev environment (
 
 - The Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
 
-Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):
+Follow the steps below to reset Dev to Live.
 
-```bash{promptUser: user}
-terminus connection:info awesome-site.dev --fields='Git Command' --format=string
-```
+1. Clone the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):
 
-Then automate the procedure for resetting Dev to Live by downloading the following bash script:
+  ```bash{promptUser: user}
+  terminus connection:info awesome-site.dev --fields='Git Command' --format=string
+  ```
 
-<Download file="reset-dev-to-live.sh" />
+1. Automate the procedure for resetting Dev to Live by downloading the following bash script:
 
-GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/reset-dev-to-live.sh.txt bash GITHUB-EMBED
+  <Download file="reset-dev-to-live.sh" />
 
-Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
+  GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/reset-dev-to-live.sh.txt bash GITHUB-EMBED
 
-```bash{promptUser: user}
-sh /PATH/TO/SCRIPT/reset-dev-to-live.sh
-```
+1. Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
 
-The Site Dashboard will open once the reset procedure has completed.
+  ```bash{promptUser: user}
+  sh /PATH/TO/SCRIPT/reset-dev-to-live.sh
+  ```
+
+The Site Dashboard will open when the reset procedure completes.
 
 ## Switch Upstreams
 
-Every site has an upstream assigned in order to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
+Every site has an assigned upstream to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
 - Convert existing sites from a default framework to a [Custom Upstream](/guides/custom-upstream).
-- Convert existing sites from one Custom Upstream to another, for reasons like:
+- Convert existing sites from one Custom Upstream to another, for reasons such as:
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.
 - Set an empty upstream to disable one-click updates for sites managed by Composer.
 
-To see all available upstreams, run:
+1. Run the command below to see all available upstreams:
 
-```bash{promptUser: user}
-terminus upstream:list
-```
+  ```bash{promptUser: user}
+  terminus upstream:list
+  ```
 
-If your organization has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
+  If your organization has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
 
-```bash{promptUser: user}
-terminus site:upstream:set my-site "My Custom Upstream"
-```
+  ```bash{promptUser: user}
+  terminus site:upstream:set my-site "My Custom Upstream"
+  ```
 
-You can use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above.
+1. Use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above.
 
-As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
+  As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
 
-<Alert title={"Note"} type={"info"}>
+  <Alert title={"Note"} type={"info"}>
 
-To set an empty upstream for Composer-managed sites, see [Serving Sites from the Web Subdirectory](/nested-docroot/).
+  To set an empty upstream for Composer-managed sites, refer to [Serving Sites from the Web Subdirectory](/nested-docroot/).
 
-</Alert>
+  </Alert>
 
-After setting the upstream, you must bring in the new codebase by applying updates to the site. For details on how to apply updates, see the [example usage above](#applying-updates).
+1. Apply updates to the site to bring in the new codebase after setting the upstream. Refer to the [example usage above](#applying-updates) for details on how to apply updates.
+
+## Troubleshoot Upstreams
 
 ### Terminus Error: Permission to change the upstream of this site
 
@@ -348,3 +366,8 @@ To check the currently authenticated user:
 ```bash{promptUser: user}
 terminus auth:whoami
 ```
+
+## More Resources
+
+- [WordPress and Drupal Core Updates](/core-updates)
+- [Custom Upstreams](/guides/custom-upstream)
