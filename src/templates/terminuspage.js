@@ -100,9 +100,24 @@ const items = [
     title: "Configuration File",
   },
   {
+    id: "docs-terminus-supported-terminus",
+    link: "/terminus/supported-terminus",
+    title: "Supported Terminus",
+  },
+  {
     id: "docs-terminus-updates",
     link: "/terminus/updates",
     title: "Version Updates",
+  },
+  {
+    id: "docs-terminus-terminus-2-0",
+    link: "/terminus/terminus-2-0",
+    title: "Terminus 2.0",
+  },
+  {
+    id: "docs-terminus-terminus-3-0",
+    link: "/terminus/terminus-3-0",
+    title: "Terminus 3.0",
   },
 ]
 
