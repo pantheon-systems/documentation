@@ -11,10 +11,28 @@ permalink: docs/terminus/commands
 anchorid: commands
 ---
 
+This section provides a comprehensive list of Terminus commands.
+
 <Alert title="Note" type="info">
 
-If you would like additional information for a given command (e.g., available `--format` options) run the command with the `--help` flag in your terminal.
+If you would like additional information for a given command (for example, available `--format` options) run the command with the `--help` flag in your terminal.
 
 </Alert>
 
+## Command Structure
+
+### Basic Format
+
+The basic format of a Terminus command is:
+
+```bash{promptUser: user}
+terminus command:subcommand <site>.<env>
+```
+
 <Commands />
+
+## More Resources
+
+- [Drush Aliases](/guides/drush/drush-aliases)
+- [Backups Tool](/backups)
+- [Domains on Pantheon](/guides/domains)

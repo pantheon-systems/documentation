@@ -13,7 +13,7 @@ permalink: docs/terminus/examples
 anchorid: examples
 ---
 
-This section provides information on Terminus command structure.
+This section provides information on Terminus command structure and command examples.
 
 
 ## Command Structure
@@ -28,7 +28,7 @@ terminus command:subcommand <site>.<env>
 
 ### More Information Command
 
-For more information on any command you can run:
+For more information on any command, you can run:
 
 ```bash{promptUser: user}
 terminus command:subcommand -h
