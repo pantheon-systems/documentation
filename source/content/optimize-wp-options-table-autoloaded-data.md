@@ -51,7 +51,7 @@ If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data i
 
  1. Select and run *one* of the SQL queries below if you want to turn off autoload for an item:
 
-   **Option 1**
+   **Option 1:**
 
     ```sql
     update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
