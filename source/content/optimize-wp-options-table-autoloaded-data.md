@@ -11,11 +11,11 @@ contributors: [carlalberto, whitneymeredith]
 
 The `wp_options` table stores several types of data for your site, including:
 
-- settings for your plugins, widgets, and themes
-- temporarily cached data
-- site URL and home URL
-- category settings
-- autoloaded data
+- Settings for your plugins, widgets, and themes
+- Temporarily cached data
+- Site URL and home URL
+- Category settings
+- Autoloaded data
 
 <Alert title="Note" type="info" >
 
@@ -49,20 +49,22 @@ If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data i
     SELECT option_name, length(option_value) FROM wp_options WHERE autoload='yes' ORDER BY length(option_value) DESC LIMIT 20;
     ```
 
- 1. Run the following code if you want to turn off autoload for an item:
+ 1. Select and run *one* of the SQL queries below if you want to turn off autoload for an item:
+
+   **Option 1**
 
     ```sql
     update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
     ```
-    Or this run this SQL query
-    
+    **Option 2:**
+
     ```sql
     UPDATE wp_options SET `autoload` = 'no' WHERE `option_name` = 'example_option_name';
     ```
 
  <Alert title="Note"  type="info" >
 
- You must specify `no` in the third parameter or it will automatically default to `yes`.
+ You must specify `no` in the third parameter or the command will automatically default to `yes`.
 
  </Alert>
 
