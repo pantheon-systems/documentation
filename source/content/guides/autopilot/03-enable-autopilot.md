@@ -15,7 +15,7 @@ reviewed: "2022-04-05"
 
 ## Enable Autopilot
 
-Autopilot can be enabled for individual sites within each eligible Workspace.
+Autopilot can be enabled for individual sites, or in bulk, within each eligible Workspace.
 
 1. [Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
 
@@ -25,19 +25,29 @@ Autopilot can be enabled for individual sites within each eligible Workspace.
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
-1. View the list of sites for which Autopilot is available in the **Site** column of the **Autopilot Sites** table.
+1. Under **Autopilot Sites**, click the link under **READY TO DEPLOY**
 
-1. Click **Activate** in the row of the desired site.
+   ![Autopilot Sites link for Ready to Deploy](../../../images/autopilot/ready-to-deploy.png)
 
-   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
+1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table. 
 
-### Bulk Enablement
+   To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
+   
+   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)   
 
-Autopilot can also be enabled in bulk. In the **Other Sites** table, you have the ability to select up too 100 sites to activate at once.
-
-Select the sites you wish to activate and click the **Activate Autopilot** button.
+   To enable sites in bulk, select the sites you wish to activate, and click the **Activate Autopilot** button. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
 
    ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
+
+1. Select the deployment destination: Dev, Test, or Live.
+
+   <Alert title="Note"  type="info" >
+
+   Autopilot will pre-select a few pages for visual regression testing and will set the frequency to weekly by default.
+   
+   </Alert>
+      
+   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
 
 ## Autopilot Setup Wizard   
 
