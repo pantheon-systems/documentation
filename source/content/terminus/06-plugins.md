@@ -46,7 +46,7 @@ terminus self:plugin:install pantheon-systems/terminus-plugin-example
     curl https://github.com/pantheon-systems/terminus-plugin-example/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
     ```
 
-    <Accordion title="Composer and Git - Explore Advanced Installation Methods (Optional)" id="advance-installs" icon="lightbulb">
+<Accordion title="Composer and Git - Explore Advanced Installation Methods (Optional)" id="advance-installs" icon="lightbulb">
 
 #### Install via Composer
 
