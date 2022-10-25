@@ -12,9 +12,9 @@ permalink: docs/terminus/directory
 anchorid: directory
 ---
 
-Extend the functionality of Terminus and add commands by installing <a href="https://github.com/terminus-plugin-project">third party plugins</a> or <a href="https://pantheon.io/docs/terminus/plugins/create">create your own</a>.
+You can extend Terminus functionality and add commands by installing <a href="https://github.com/terminus-plugin-project">third-party plugins</a> or <a href="https://pantheon.io/docs/terminus/plugins/create">by creating your own plugins</a>.
 
-The following plugins are just a few of the most popular available for Terminus 1.x:
+The following plugins are just a small sample of the most popular plugins available for Terminus 1.x:
 
 <CardGroup>
 

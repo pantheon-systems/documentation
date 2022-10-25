@@ -13,154 +13,151 @@ permalink: docs/terminus/create
 anchorid: create
 ---
 
-Add new commands to Terminus by creating a plugin. The following explains how to create our [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) to demonstrate how to add new commands.
+This section provides information on how to create Terminus plugins.
+
+Creating a plugin allows you to add custom commands to Terminus.
+
+The sections below provide instructions on how to create Pantheon's [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) and add new commands.
 
 ## Create the Example Plugin using Terminus 3
 
-This example provides a walkthrough of creating a Terminus plugin.
+Terminus 3 has a plugin manager that includes a command for scaffolding a new, empty plugin.
 
-### 1. Create Plugin
+1. Run the command below to create a new plugin:
 
-Terminus 3 has a plugin manager that includes a command for scaffolding a new, empty plugin:
+  ```bash
+  terminus self:plugin:create hello-world --project-name=terminus-plugin-project/hello-world
+  ```
 
-```bash
-terminus self:plugin:create hello-world --project-name=terminus-plugin-project/hello-world
-```
+  This commands creates a directory called `hello-world` and populates it with an example plugin template, renamed to match the provided project name. The project name is only required if you plan to publish and distribute your plugin (e.g. on Packagist).
 
-This will create a directory `hello-world` and populate it with an example plugin template, renamed to match the provided project name. The project name is onlyrequired if you plan to publish and distribute your plugin (e.g. on Packagist).
+  The `self:plugin:create` command also installs your new plugin so that you can start using it immediately.
 
-The `self:plugin:create` command also installs your new plugin so that you can start using it immediately.
+1. Review the two files in the example plugin's `Commands` directory, each of which contains an example command.
 
-### 2. Add Commands
+1. Open the `src/Commands/HelloCommand.php` file, and modify the output as shown below:
 
-The example plugin comes with two files in the `Commands` directory, each of which contains an example command.
+  ```php
+  namespace Pantheon\TerminusHello\Commands;
 
-Open up the `src/Commands/HelloCommand.php` file, and modify the output as shown below:
+  use Pantheon\Terminus\Commands\TerminusCommand;
 
-```php
-namespace Pantheon\TerminusHello\Commands;
+  class HelloCommand extends TerminusCommand
+  {
+      /**
+       * Print the classic message to the log.
+       *
+       * @command hello
+       * @param string $name Who to say "hello" to.
+       * @option $first This is the first time we've said hello.
+       */
+      public function sayHello($name = 'World', $options = ['first' => false])
+      {
+          $this->log()->notice("Hello, {user}! THIS IS MY MODIFICATION TO THE PLUGIN.", ['user' => $name]);
+          if ($options['first']) {
+              $this->log()->notice("Pleased to meet you.");
+          }
+      }
+  }
 
-use Pantheon\Terminus\Commands\TerminusCommand;
+  ```
 
-class HelloCommand extends TerminusCommand
-{
-    /**
-     * Print the classic message to the log.
-     *
-     * @command hello
-     * @param string $name Who to say "hello" to.
-     * @option $first This is the first time we've said hello.
-     */
-    public function sayHello($name = 'World', $options = ['first' => false])
-    {
-        $this->log()->notice("Hello, {user}! THIS IS MY MODIFICATION TO THE PLUGIN.", ['user' => $name]);
-        if ($options['first']) {
-            $this->log()->notice("Pleased to meet you.");
-        }
-    }
-}
+  The command should now be recognized and loaded by Terminus:
 
-```
+  ```bash
+  terminus hello
+  ```
 
-The command should now be recognized and loaded by Terminus:
+  The provided example command should display the following when run:
 
-```bash
-terminus hello
-```
+  ```bash
+  [notice] Hello, World! THIS IS MY MODIFICATION TO THE PLUGIN.
+  ```
 
-The provided example command should display the following when run:
-
-```bash
-[notice] Hello, World! THIS IS MY MODIFICATION TO THE PLUGIN.
-```
-Modify the `@command` line to change the name of your command. You may rename the source file the command is in as well, as long as it ends in `Command.php`.
+1. Modify the `@command` line to change the name of your command. You can rename the source file in which the command is stored, as long as it ends in `Command.php`.
 
 ## Create the Example Plugin using Terminus 2
 
 This example provides the structural requirements for plugins to be recognized and loaded by Terminus.
 
-### 1. Create Plugin Directory
-
-A plugin is a specific set of files bundled together in a directory. The first step in creating a new plugin is to create that directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must live within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
-
-Create a directory for your new plugin (e.g. `hello-world`):
+1. Create a directory for your new plugin (e.g. `hello-world`):
 
 ```bash
 mkdir $HOME/.terminus/plugins/hello-world
 ```
 
-### 2. Create composer.json
+  A plugin is a specific set of files bundled together in a directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must be stored within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
 
-In order for Terminus to recognize the directory as a plugin, the directory must contain a valid `composer.json` file. Download the following file and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`):
+1. Download the composer.json file below and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`). Your plugin directory must contain a valid `composer.json` file for Terminus to recognize the directory as a plugin. 
 
-<Download file="composer.json" />
+  <Download file="composer.json" /> 
 
-```json
-{
-  "name": "my-username/terminus-hello-world",
-  "description": "An Hello, World Terminus command",
-  "type": "terminus-plugin",
-  "extra": {
-    "terminus": {
-      "compatible-version": "^3"
+  ```json
+  {
+    "name": "my-username/terminus-hello-world",
+    "description": "An Hello, World Terminus command",
+    "type": "terminus-plugin",
+    "extra": {
+      "terminus": {
+        "compatible-version": "^3"
+      }
     }
   }
-}
-```
+  ```
 
-<Alert title={"Note"} type={"info"}>
+  <Alert title={"Note"} type={"info"}>
 
-The `name` attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist).
+  The `name` attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist).
 
-</Alert>
+  </Alert>
 
-### 3. Add Commands
+1. Create a <code>src</code> directory within your plugin directory to add commands:
 
-Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
+  ```bash
+  mkdir $HOME/.terminus/plugins/hello-world/src
+  ```
 
-Create a <code>src</code> directory within your plugin directory:
+1. Download the following file and move it to your plugin's `src` directory (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
 
-```bash
-mkdir $HOME/.terminus/plugins/hello-world/src
-```
+  <Download file="HelloCommand.php" />
 
-Download the following file and move it to your plugin's `src` directory (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
+  Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
-<Download file="HelloCommand.php" />
+  ```php
+  use Pantheon\Terminus\Commands\TerminusCommand;
 
-```php
-use Pantheon\Terminus\Commands\TerminusCommand;
+  class HelloCommand extends TerminusCommand
+  {
+      /**
+       * Print the classic message to the log.
+       *
+       * @command hello
+       */
+      public function sayHello()
+      {
+          $this->log()->notice("Hello, World!");
+      }
+  }
 
-class HelloCommand extends TerminusCommand
-{
-    /**
-     * Print the classic message to the log.
-     *
-     * @command hello
-     */
-    public function sayHello()
-    {
-        $this->log()->notice("Hello, World!");
-    }
-}
+  ```
 
-```
+  You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that its name is `hello`.
 
-You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that its name is `hello`.
+  The command should now be recognized and loaded by Terminus:
 
-The command should now be recognized and loaded by Terminus:
+  ```bash
+  terminus hello
+  ```
 
-```bash
-terminus hello
-```
+  The provided example command should display the following when run:
 
-The provided example command should display the following when run:
+  ```bash
+  [notice] Hello, World!
+  ```
 
-```bash
-[notice] Hello, World!
-```
+### Debug
 
-## Debug
+If Terminus had trouble loading your plugin then there should be a debug notice logged. You may also be able to get more info by looking in your PHP error logs.
 
 Run the command with the verbose option if it does not work as expected:
 
@@ -168,78 +165,73 @@ Run the command with the verbose option if it does not work as expected:
 terminus hello -vvv
 ```
 
-If Terminus had trouble loading your plugin then there should be a debug notice logged. You may also be able to get more info by looking in your PHP error logs.
-
 ## Distribute Plugin
 
 While the plugin you’ve created is good enough for local development, if you create something that you’re proud of, share it with the world! There are a few more things you’ll need to do to make your plugin distributable:
 
-### Vendor Name
 
-Add a vendor name to the plugin name within `composer.json` so that your plugin may be distinguished from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. For a plugin distributed by Pantheon (GitHub organization: `pantheon-systems`) we would change the name field to:
+1. Add a vendor name to the plugin name within `composer.json` so that your plugin may be distinguished from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. For a plugin distributed by Pantheon (GitHub organization: `pantheon-systems`) we would change the name field to:
 
-```json
-{
-  "name": "pantheon-systems\terminus-hello-world"
-}
-```
+  ```json
+  {
+    "name": "pantheon-systems\terminus-hello-world"
+  }
+  ```
 
-### PSR-4 Namespacing
+1. Add a PSR-4 compatible namespace to your plugin command class name to avoid conflict with internal or third-party commands. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):
 
-Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):
+  ```bash
+  namespace Pantheon\TerminusHelloWorld\Commands;
+  ```
 
-```bash
-namespace Pantheon\TerminusHelloWorld\Commands;
-```
+  The `Commands` part of the namespace is not strictly necessary but it can help keep things organized if you need to add supporting classes to your plugin.
 
-The `Commands` part of the namespace is not strictly necessary but it can help keep things organized if you need to add supporting classes to your plugin.
+1. Make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
 
-You will also need to make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
+1. Update the `composer.json` file with an autoload section to indicate how to load your namespace. Your composer file should now look like:
 
-Update the `composer.json` file with an autoload section to indicate how to load your namespace. Your composer file should now look like:
-
-```json
-{
-  "name": "my-username/terminus-hello-world",
-  "description": "An Hello, World Terminus command",
-  "type": "terminus-plugin",
-  "autoload": {
-    "psr-4": { "Pantheon\\TerminusHello\\": "src" }
-  },
-  "extra": {
-    "terminus": {
-      "compatible-version": "^1"
+  ```json
+  {
+    "name": "my-username/terminus-hello-world",
+    "description": "An Hello, World Terminus command",
+    "type": "terminus-plugin",
+    "autoload": {
+      "psr-4": { "Pantheon\\TerminusHello\\": "src" }
+    },
+    "extra": {
+      "terminus": {
+        "compatible-version": "^1"
+      }
     }
   }
-}
-```
+  ```
 
-Remember to change `my-username` and `Pantheon` in the above to your vendor name.
+1. Change `my-username` and `Pantheon` in the above to your vendor name.
 
-### External Dependencies
+1. Update the `composer.json` file with a `require` section that lists all of the external projects you need, along with their version constraints. 
 
-Starting with Terminus version 1.1.0, it is possible for plugins to depend on external libraries. This is done by adding your plugin requirements to the `require` section of your `composer.json` file, as usual. You should also update your plugin's Terminus `compatible-version` entry to `^1.1`, so that older versions of Terminus will not attempt to use it. If your plugin can still function without its external classes, then you may keep the `compatible-version` at `^1`.
+  Starting with Terminus version 1.1.0, it is possible for plugins to depend on external libraries. This is done by adding your plugin requirements to the `require` section of your `composer.json` file, as usual. You should also update your plugin's Terminus `compatible-version` entry to `^1.1`, so that older versions of Terminus will not attempt to use it. If your plugin can still function without its external classes, then you may keep the `compatible-version` at `^1`.
 
-Update the `composer.json` file with a `require` section that lists all of the external projects you need, along with their version constraints. Your composer file should now look like this:
+  Your composer file should now look like this:
 
-```json
-{
-  "name": "my-username/terminus-hello-world",
-  "description": "A Hello, World Terminus command",
-  "type": "terminus-plugin",
-  "autoload": {
-    "psr-4": { "Pantheon\\TerminusHello\\": "src" }
-  },
-  "require": {
-    "organization/project-name": "^1"
-  },
-  "extra": {
-    "terminus": {
-      "compatible-version": "^1.1"
+  ```json
+  {
+    "name": "my-username/terminus-hello-world",
+    "description": "A Hello, World Terminus command",
+    "type": "terminus-plugin",
+    "autoload": {
+      "psr-4": { "Pantheon\\TerminusHello\\": "src" }
+    },
+    "require": {
+      "organization/project-name": "^1"
+    },
+    "extra": {
+      "terminus": {
+        "compatible-version": "^1.1"
+      }
     }
   }
-}
-```
+  ```
 
 <Alert title={"Note"} type={"info"}>
 
@@ -304,19 +296,19 @@ The instructions in this section demonstrate how to set up simple functional tes
     }
     ```
 
-2.  Install the PHP Code Sniffer:
+1.  Install the PHP Code Sniffer:
 
         composer install
 
-3.  Check the coding standards of your plugin for PSR-2 compliance:
+1.  Check the coding standards of your plugin for PSR-2 compliance:
 
         composer cs
 
-4.  `cbf` can fix most PRS-2 compliance errors in your plugin:
+1.  `cbf` can fix most PRS-2 compliance errors in your plugin:
 
         composer cbf
 
-5.  Because of the additional files created by these tests, we **strongly** recommend adding the following lines to the `.gitignore`file:
+1. Adding the following lines to the `.gitignore`file is **strongly** recommended because of the additional files created by these tests.
 
     ```bash
     vendor
@@ -326,7 +318,7 @@ The instructions in this section demonstrate how to set up simple functional tes
     share
     ```
 
-6.  Define some Bats tests to run. Create a folder named `tests`, and create a file named `confirm-install.bats`. Put the contents below in your Bats test file:
+1.  Define some Bats tests to run. Create a folder named `tests`, and create a file named `confirm-install.bats`. Put the contents below in your Bats test file:
 
     ```bash
     #!/usr/bin/env bats
@@ -348,9 +340,9 @@ The instructions in this section demonstrate how to set up simple functional tes
     }
     ```
 
-    Replace `MY:PLUGIN-COMMAND` with the name of one of your plugin's commands, and replace `SOME OUTPUT FROM MY PLUGIN HELP` in the test.
+1. Replace `MY:PLUGIN-COMMAND` with the name of one of your plugin's commands, and replace `SOME OUTPUT FROM MY PLUGIN HELP` in the test.
 
-7.  Run your test:
+1.  Run your test:
 
     ```bash
      composer test
@@ -393,7 +385,7 @@ At this point, it would be a good idea to [configure your project tests to run a
 
    Using another testing service can also be done by adapting the contents above; most popular services should be fairly easy to set up.
 
-2. In the Circle CI settings, set up the following environment variables:
+1. Open the Circle CI settings to set up the following environment variables:
 
    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
    - `TERMINUS_TOKEN`: A [Pantheon machine token](/machine-tokens) that has access to the test site.
