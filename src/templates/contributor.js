@@ -89,6 +89,19 @@ class ContributorTemplate extends React.Component {
                           )
                         }
                       } else {
+                        if (/^\/overview\/.*$/.test(node.fields.slug)) {
+                        const result = /^(\/overview\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.fields.slug)
+                        // Use printedOverview to avoid showing the same guide twice.
+                        if (printedOverview.indexOf(result[1]) === -1) {
+                          printedOverview.push(result[1])
+                          return (
+                            <li key={node.id}>
+                              <Link to={`${result[1]}`}>
+                                {node.frontmatter.title}
+                              </Link>
+                            </li>
+                          )
+                        }
                         return (
                           <li key={node.id}>
                             <Link to={`/${node.fields.slug}`}>
