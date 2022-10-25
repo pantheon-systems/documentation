@@ -61,7 +61,7 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 ### Can I disable New Relic&reg; for a specific environment?
 
-We don't recommend turning off New Relic&reg; for any one environment, as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic&reg; Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/guides/php/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+We don't recommend turning off New Relic&reg; for any one environment, as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic&reg; Browser agent](/guides/new-relic/troubleshoot-new-relic#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/guides/php/wp-config-php#environment-specific-configuration).
 
 ### Can I use the New Relic&reg; One Logs feature?
 
