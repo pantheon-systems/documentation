@@ -200,7 +200,7 @@ class TerminusTemplate extends React.Component {
                   </article>
                   {node.frontmatter.showtoc && (
                     <div
-                      className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
+                      className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top margin-top:10px"
                       role="complementary"
                     >
                       <TOC title="Contents" />
