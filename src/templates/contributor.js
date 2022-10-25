@@ -109,7 +109,7 @@ class ContributorTemplate extends React.Component {
                             </Link>
                           </li>
                         )
-                      }
+                      }}
                     })}
                   </ul>
                 </div>
