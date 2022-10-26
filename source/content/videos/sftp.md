@@ -16,7 +16,7 @@ Pantheon allows you to quickly and easily write code or add modules and plugins 
 
 All the code on your Pantheon site is stored in a repository, which is a remote canonical storehouse of code along with its history of changes.
 
-You make changes to your code in 1 of 2 ways. You can use Git, the repository’s native language, via the command line. Or as we’re discussing today, on-server development with SFTP.
+You make changes to your code in 1 of 2 ways. You can use Git, the repository’s built-in language, via the command line. Or as we’re discussing today, on-server development with SFTP.
 
 SFTP mode works by basically making your Dev environment temporarily writable, and aware of any changes you make. These changes are eventually pulled to Test and Live via version control.
 

@@ -8,7 +8,7 @@ contributors: [ataylorme, rachelwhitton]
 
 DeployBot is a continuous integration service with a friendly user interface. Instead of managing options with `yml` files, DeployBot offers an easy web GUI. For sites that already use external Git hosting, DeployBot can be integrated into your workflow to test and deploy sites that require additional build steps.
 
-Continuous integration solutions make sure that each step in your deployment process gets executed with machine precision. Avoiding human error, especially in a repeatable process such as manage dependencies or compiling JavaScript and CSS files, helps free up resources while preserving the sanity of developers.
+Continuous integration solutions make sure that each step in your deployment process gets executed with machine precision. Avoiding human error, especially in a repeatable process such as manage dependencies or compiling JavaScript and CSS files, helps free up resources.
 
 ## Before You Begin
 - If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
