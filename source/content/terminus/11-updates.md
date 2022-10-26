@@ -16,13 +16,13 @@ anchorid: updates
 
 ## Update Standalone Terminus
 
-If you used the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation, update to the newest version with:
+You can update the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation to the newest version with command below:
 
 ```bash{promptUser: user}
 terminus self:update
 ```
 
-Note that the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/terminus/commands/terminus/commands/self-update) to see the available options.
+Note that the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/terminus/commands/terminus/commands/self-update) for available options.
 
 ## Update Terminus Installer PHAR
 
@@ -46,9 +46,6 @@ Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test 
 
 </Alert>
 
-### PHP Version Compatibility Matrix
-
-<Partial file="terminus-guide/php.md" />
 
 ## Troubleshooting
 
@@ -67,10 +64,6 @@ php installer.phar install
 ### Self:update not defined
 
 The `self:update` command is only available for standalone Terminus installed using the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar). If `self:update` returns a not defined error, use the [Terminus Installer PHAR](#update-terminus-installer-phar) update instructions above.
-
-## EOL Timeline
-
-<Partial file="terminus-guide/eol.md" />
 
 ## Changelog
 
