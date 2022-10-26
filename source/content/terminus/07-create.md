@@ -80,9 +80,9 @@ This example provides the structural requirements for plugins to be recognized a
 
 1. Create a directory for your new plugin (e.g. `hello-world`):
 
-```bash
-mkdir $HOME/.terminus/plugins/hello-world
-```
+    ```bash
+    mkdir $HOME/.terminus/plugins/hello-world
+    ```
 
     A plugin is a specific set of files bundled together in a directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must be stored within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
 
