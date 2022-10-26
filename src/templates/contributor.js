@@ -37,6 +37,7 @@ class ContributorTemplate extends React.Component {
     const docs =
       this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
     let printedGuides = []
+    let printedOverview = []
     return (
       <Layout>
         <SEO title={contributor.name} />
