@@ -39,7 +39,7 @@ As an example, if your slowest database operation is an INSERT to watchdog, then
 Learn more about [Log Files on Pantheon](/guides/logs-pantheon).
 
 ## Too Many Database Queries
-The next performance killer is an excessive number of database queries per request. You can see that in the [New Relic&reg; Performance Monitoring dashboard](/guides/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
+The next cause of poor performance is an excessive number of database queries per request. You can see that in the [New Relic&reg; Performance Monitoring dashboard](/guides/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
 
 ![New Relic map tab](../images/new-relic-map.png)<br />
 
@@ -105,7 +105,7 @@ Calling external services during regular requests can be a performance problem. 
 Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation here is to avoid making external calls during regular requests as much as possible. As an alternative, you can make these calls via cron and store them in the database. The data can be refreshed with the desired frequency. The advantage is that even if the external service is slow or goes down your site won't be affected.
 
 ## Memory Errors
-An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](https://pantheon.io/plans/pricing-comparison), so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
+An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](https://pantheon.io/plans/pricing-comparison), so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will cancel the process, resulting in a failed request from the user's perspective.
 
 Debugging memory issues can be challenging. Here are some things to consider when addressing memory issues:
 

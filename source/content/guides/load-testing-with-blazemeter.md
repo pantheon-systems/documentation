@@ -19,7 +19,7 @@ Load testing can expose slow page loads, heavy transactions, PHP errors, and dat
 
 ## The Importance of Identifying Performance Hits
 
-The days of simple static HTML sites are fading, and for Drupal and WordPress sites any page load can quickly become frustrating. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds on to the end user experience, but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and performance killers.
+The days of simple static HTML sites are fading, and for Drupal and WordPress sites any page load can quickly become frustrating. Slow database queries, poorly configured (or nonexistent) caching, asset-heavy front end layers, long running transactions: individually these performance hits may only add a few hundred milliseconds on to the end user experience, but in aggregate they can weigh down performance or cause timeouts. Running a load test will help you identify potential pain points and causes of performance issues.
 
 Important note about Drupal: While we recommend keeping Drupal’s Watchdog enabled to log important events, if your site is throwing errors, the database for your application will quickly grow and eventually stretch its limits. At the extreme end, this can slow down the application and even cause the site to timeout and crash. Even a single error or warning logged will slow down performance, so be sure to regularly review the DBlog and fix any errors. For more information on how to identify these errors, see [Log Files on Pantheon](/guides/logs-pantheon).
 

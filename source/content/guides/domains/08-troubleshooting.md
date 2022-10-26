@@ -15,7 +15,7 @@ This section provides information on common domain troubleshooting scenarios.
 
 ### Failed cache clears, search and replace, or Drush and WP-CLI operations
 
-All redirect logic should include the `php_sapi_name() != "cli"` conditional statement to see if WordPress or Drupal is running via the command line. Drush and WP-CLI are used by the platform for operations like cache clearing and search and replace, so it is important to only redirect web requests, otherwise the redirect will kill the PHP process before Drush or WP-CLI is executed, resulting in a silent failure:
+All redirect logic should include the `php_sapi_name() != "cli"` conditional statement to see if WordPress or Drupal is running via the command line. Drush and WP-CLI are used by the platform for operations like cache clearing and search and replace, so it is important to only redirect web requests, otherwise the redirect will cancel the PHP process before Drush or WP-CLI is executed, resulting in a silent failure:
 
 ```bash
 [notice] Command: site.env -- 'drush <command>' [Exit: 1]
