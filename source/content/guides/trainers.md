@@ -21,7 +21,7 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
  3. [Please contact us](https://pantheon.io/trainers) and let us know you want to use the platform as a trainer. This will ensure you have full access to all the available tools as they are developed and maintain access to enough free sandboxes for your students. We can also help guide you through the processes to ensure you have the best experience and find success.
 
- 4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency). This Agency organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/organizations).
+ 4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency). This Agency organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/guides/account-mgmt/workspace-sites-teams/workspaces).
 
     <Alert title="Note" type="info">
 
@@ -55,4 +55,4 @@ Otherwise, please ask each student to [create their own Pantheon account](https:
 
  - [Quick Start Guide](/guides/quickstart)
  - [Going live](/guides/launch)
- - [How to delete account](/delete-account)
+ - [How to delete account](/guides/account-mgmt/account/delete)

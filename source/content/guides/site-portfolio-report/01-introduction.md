@@ -39,7 +39,7 @@ The Site Portfolio Report provides a snapshot of your portfolio through three ch
 
 Automatic upgrades happen when your sites exceed the traffic limits of the plan you selected in your contract. Pantheon will upgrade your plan to cover the increased traffic from your users.
 
-Read [Traffic Limits and Overages](/traffic-limits) for more information on how Pantheon applies site traffic measurements to sites.
+Read [Traffic Limits and Overages](/guides/account-mgmt/traffic) for more information on how Pantheon applies site traffic measurements to sites.
 
 ### New Sites that Exceeded the Contract
 

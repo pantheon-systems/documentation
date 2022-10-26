@@ -29,4 +29,4 @@ To make it easy for our team to confirm your tax-exempt status and have it refle
 
 - An attached copy of the organization's [tax exemption determination letter](https://www.irs.gov/charities-non-profits/exempt-organizations-affirmation-letters)
 - Email address of Site Owner
-- [Dashboard](/sites) URL of affected sites
+- [Dashboard](/guides/account-mgmt/workspace-sites-teams/sites) URL of affected sites

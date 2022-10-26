@@ -100,4 +100,4 @@ Contact your Pantheon account manager or [submit a support ticket](/guides/suppo
 
 - [Pantheon Support Guide](/guides/support/)
 
-- [New Site Owner FAQs](/site-owner-faq)
+- [New Site Owner FAQs](/guides/account-mgmt)

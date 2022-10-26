@@ -34,7 +34,7 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 
 ## Create a New Site in a New Region
 
-[Create a new Site](/sites) from the Dashboard and select the Region:
+[Create a new Site](/guides/account-mgmt/workspace-sites-teams/sites) from the Dashboard and select the Region:
 
 ![Select a Region from the Create Your Pantheon Site screen](../images/dashboard/create-pantheon-site.png)
 

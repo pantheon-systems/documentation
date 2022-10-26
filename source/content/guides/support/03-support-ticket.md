@@ -20,7 +20,7 @@ In this section, we go over best practices when writing a support ticket, which 
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the Support tab.
+If you are a member of an [Organization](/guides/account-mgmt/workspace-sites-teams/workspaces), use the Organization's Dashboard to visit the Support tab.
 
 Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](/guides/support/support-ticket/#organization-dashboard-support-tab).
 

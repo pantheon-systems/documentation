@@ -90,7 +90,7 @@ To manually create an SSH tunnel within your Pantheon Site Dashboard:
 
   ![Connection info](../../../images/dashboard/connection-info.png)
 
-1. Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
+1. Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis) found in the Dashboard URL within the following command:
 
     ```bash{promptUser: user}
     ssh -f -N -L LOCAL_PORT:localhost:SERVER_PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
@@ -157,7 +157,7 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
   redis-cli -h HOSTNAME -p PORT -a PASSWORD
   ```
 
-1. Use the port value from the above one-line connection string, the desired environment (Dev, Test, or Live), and the [site UUID](/sites/#site-uuid) found in the Dashboard URL within the following command:
+1. Use the port value from the above one-line connection string, the desired environment (Dev, Test, or Live), and the [site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis) found in the Dashboard URL within the following command:
 
   ```bash{promptUser: user}
   ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in

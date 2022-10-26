@@ -25,7 +25,7 @@ Refer to [Restoring a Backup](/guides/environment-configuration/restore-environm
 
 ## 2. Delete Each of Your Sites
 
-Refer to [Deleting a Site](/delete-site) after you have backed-up your data and are ready to delete your sites. Site deletion is a simple one-click operation, but it is **_permanent_**. Don't worry; you will be prompted to confirm before the deletion occurs.
+Refer to [Deleting a Site](/guides/account-mgmt/workspace-sites-teams/sites#delete-sites) after you have backed-up your data and are ready to delete your sites. Site deletion is a simple one-click operation, but it is **_permanent_**. Don't worry; you will be prompted to confirm before the deletion occurs.
 
 ## 3. Delete Your Credit Cards
 
