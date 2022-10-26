@@ -56,6 +56,16 @@ Select the **Sites** tab in the left-navigation menu to search for a Site, migra
 
 Your user icon, or Gravatar <i className="fa fa-user-circle"></i>, gives you quick access to your User Settings and information about who you're logged in as.
 
+### Welcome Screen
+
+When you log in for the first time, there will be a welcome screen where you can choose to:
+
+- Create a new site
+- Migrate an existing site
+- Set up your team
+
+![A screenshot of the welcome screen for the New Dashboard](../../../images/dashboard/new-dashboard/welcome-screen.png)
+
 ### Home
 
 On the homepage, you have access to an overview of the Workspace that provides the following information:
@@ -69,7 +79,7 @@ On the homepage, you have access to an overview of the Workspace that provides t
 * Account tier
 * Sandbox sites used 
 
-![A screenshot of the new Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
+![A screenshot of the New Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
 
 </Tab>
 
