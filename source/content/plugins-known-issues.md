@@ -1227,10 +1227,18 @@ ___
 
 **Solution 1:**
 
-1. In SFTP mode, install the WP Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
-1. Additionally, install the helper plugin [WP Rocket | Disable Page Caching](https://docs.wp-rocket.me/article/61-disable-page-caching) to the dev environment by uploading via SFTP or from the WP dashboard.
+1. Set your development to SFTP mode.
+
+1. Install the WP Rocket plugin to the Dev environment by uploading via SFTP or from the WP dashboard.
+
+1. Install the helper plugin [WP Rocket | Disable Page Caching](https://docs.wp-rocket.me/article/61-disable-page-caching) to the Dev environment by uploading via SFTP or from the WP dashboard.
+
 1. Activate both plugins from the dashboard.
-1. If your environment is in SFTP mode, WP Rocket will automatically make two changes. Make sure to commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
+
+  WP Rocket will automatically make two changes as long as your environment is in SFTP mode. 
+
+1. Commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
+
     1. In `wp-config.php` it will add the following definition, enabling its advanced caching capabilities.
 
         ```php:title=wp-config.php
@@ -1249,21 +1257,23 @@ define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/up
 define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants. You still need to create a symlink for the other paths (see [Create symlinks](#assumed-write-access)).
+**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants. You must 
 
-After symlinking, make sure to manually create these folders in _ALL_ environments.
+1. [Create symlinks](#assumed-write-access) for the other paths.
 
-```none
-files/cache/wp-rocket
-files/cache/busting
-```
+1. Make sure to manually create the folders below in _ALL_ environments.
 
-or
+  ```none
+  files/cache/wp-rocket
+  files/cache/busting
+  ```
 
-```none
-code/wp-content/uploads/cache/wp-rocket
-code/wp-content/uploads/cache/busting
-```
+  or
+
+  ```none
+  code/wp-content/uploads/cache/wp-rocket
+  code/wp-content/uploads/cache/busting
+  ```
 
 **Solution 2c:** If you are running a version below 3.2, your only option is to upgrade the plugin to a newer version.
 
