@@ -21,7 +21,7 @@ The silent failure shown below occurs when executing `terminus remote:wp` comman
 [notice] Command: $site.$env -- 'wp <command>' [Exit: 0]
 ```
 
-Redirects kill the PHP process before WP-CLI is executed.
+Redirects cancel the PHP process before WP-CLI is executed.
 
 Add `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `wp-config.php` to resolve this error:
 

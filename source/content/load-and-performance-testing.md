@@ -12,7 +12,7 @@ Pantheon does not recommend that you perform your own load and performance testi
 
 </Alert>
 
-Load and performance tests can help expose and identify potential performance killers. These tests provide insight for how a site will perform during peak traffic spikes.
+Load and performance tests can help expose and identify causes of poor performance. These tests provide insight for how a site will perform during peak traffic spikes.
 
 ## Load vs Performance Testing
 
