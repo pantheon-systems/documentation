@@ -25,10 +25,6 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
-1. Under **Autopilot Sites**, click the link under **READY TO DEPLOY**
-
-   ![Autopilot Sites link for Ready to Deploy](../../../images/autopilot/ready-to-deploy.png)
-
 1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table. 
 
    To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
@@ -51,7 +47,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 ## Autopilot Setup Wizard   
 
-The Autopilot setup wizard automatically displays after you activate Autopilot for a site. You must complete all items in the Configuration, Schedule, and Visual Review steps. 
+The Autopilot setup wizard automatically displays after you click **Customize** when you activate Autopilot for a single site. You must complete all items in the Configuration, Schedule, and Visual Review steps. 
 
 ### Configuration
 
