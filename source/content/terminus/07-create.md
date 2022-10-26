@@ -15,11 +15,9 @@ anchorid: create
 
 This section provides information on how to create Terminus plugins.
 
-Creating a plugin allows you to add custom commands to Terminus.
+Creating a plugin allows you to add custom commands to Terminus. The sections below provide instructions on how to create Pantheon's [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) and add new commands.
 
-The sections below provide instructions on how to create Pantheon's [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) and add new commands.
-
-## Create the Example Plugin using Terminus 3
+## Create the Example Plugin with Terminus 3
 
 Terminus 3 has a plugin manager that includes a command for scaffolding a new, empty plugin.
 
@@ -76,7 +74,7 @@ Terminus 3 has a plugin manager that includes a command for scaffolding a new, e
 
 1. Modify the `@command` line to change the name of your command. You can rename the source file in which the command is stored, as long as it ends in `Command.php`.
 
-## Create the Example Plugin using Terminus 2
+## Create the Example Plugin with Terminus 2
 
 This example provides the structural requirements for plugins to be recognized and loaded by Terminus.
 
@@ -86,7 +84,7 @@ This example provides the structural requirements for plugins to be recognized a
 mkdir $HOME/.terminus/plugins/hello-world
 ```
 
-  A plugin is a specific set of files bundled together in a directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must be stored within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
+    A plugin is a specific set of files bundled together in a directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must be stored within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
 
 1. Download the composer.json file below and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`). Your plugin directory must contain a valid `composer.json` file for Terminus to recognize the directory as a plugin. 
 
@@ -157,7 +155,7 @@ mkdir $HOME/.terminus/plugins/hello-world
 
 ### Debug
 
-If Terminus had trouble loading your plugin then there should be a debug notice logged. You may also be able to get more info by looking in your PHP error logs.
+A debug notice is logged if Terminus has trouble loading your plugin. You can also get more information by looking in your PHP error logs.
 
 Run the command with the verbose option if it does not work as expected:
 
@@ -167,10 +165,9 @@ terminus hello -vvv
 
 ## Distribute Plugin
 
-While the plugin you’ve created is good enough for local development, if you create something that you’re proud of, share it with the world! There are a few more things you’ll need to do to make your plugin distributable:
+You must complete the steps below if you want to share your plugin with others.
 
-
-1. Add a vendor name to the plugin name within `composer.json` so that your plugin may be distinguished from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. For a plugin distributed by Pantheon (GitHub organization: `pantheon-systems`) we would change the name field to:
+1. Add a vendor name to the plugin name within the `composer.json` file. This makes your plugin distinguishable from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. For a plugin distributed by Pantheon (GitHub organization: `pantheon-systems`) we would change the name field to:
 
   ```json
   {
@@ -188,7 +185,8 @@ While the plugin you’ve created is good enough for local development, if you c
 
 1. Make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
 
-1. Update the `composer.json` file with an autoload section to indicate how to load your namespace. Your composer file should now look like:
+1. Update the `composer.json` file with an autoload section to indicate how to load your namespace. Change `my-username` and `Pantheon` in the example to your vendor name.
+Your composer file should now look like:
 
   ```json
   {
@@ -206,7 +204,6 @@ While the plugin you’ve created is good enough for local development, if you c
   }
   ```
 
-1. Change `my-username` and `Pantheon` in the above to your vendor name.
 
 1. Update the `composer.json` file with a `require` section that lists all of the external projects you need, along with their version constraints. 
 
@@ -241,27 +238,30 @@ In order to avoid conflicts between the dependencies of different plugins, Termi
 
 ## Coding Standards
 
-While not strictly necessary, if you plan to distribute your plugin, and especially if you plan to add an open source licence and encourage contributions, it may be a good idea to adopt the Terminus core standards. Some basics to follow are:
+Pantheon recommends adopting Terminus core standards if you plan to distribute your plugin and/or add it to an open source license and encourage contributions. Some basics principle to follow are:
 
-- Ensure for compatibility with PHP 5.5, 5.6 and 7.
-- Follow [PSR-2 code style](http://www.php-fig.org/psr/psr-2/).
-
-More information on Terminus standards can be found at:
+- Ensure compatibility with PHP 5.5, 5.6 and 7
+- Follow [PSR-2 code style](http://www.php-fig.org/psr/psr-2/)
+- Review more Terminus standards at:
 [https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md)
 
 ## Plugin Versioning
 
 We recommend following [semantic versioning](http://semver.org/) when versioning your plugins, just as Terminus does.
 
-If your plugin has a minimum required version of Terminus, you can specify that in the `compatible-version` section of `composer.json`. You can use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md). If you do change `compatible-version`, please make sure that your constraint expression does not accidentally include the next major version of Terminus. In other words, `>=1.3 <2.0.0` is fine but `>=1.3` is not.
+You can specify that in the `compatible-version` section of your `composer.json` file if your plugin has a minimum required version of Terminus.
+
+1. Use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md). 
+
+1. Make sure that your constraint expression does not accidentally include the next major version of Terminus if you change `compatible-version`. For example, `>=1.3 <2.0.0` is fine, but `>=1.3` is not.
 
 ## Testing Plugins
 
-Adding automated testing is an important step to take before distributing plugins. Automated tests give prospective new users the assurance that the plugin works, and provides a basis for evaluating changes to the plugin.
+Adding automated testing is an important step before distributing plugins. Automated tests give prospective new users the assurance that the plugin works, and provides a basis for evaluating changes to the plugin.
 
 The instructions in this section demonstrate how to set up simple functional tests for Terminus plugins using Bats, the [Bash Automated Testing System](https://github.com/sstephenson/bats). Bats allows tests to be written with simple Bash statements.
 
-1.  Copy the `require-dev` and `scripts` sections from the composer.json file below into the `composer.json` of your Terminus plugin:
+1.  Copy the `require-dev` and `scripts` sections from the `composer.json` file below into the `composer.json` of your Terminus plugin:
 
     ```json
     {
@@ -308,7 +308,7 @@ The instructions in this section demonstrate how to set up simple functional tes
 
         composer cbf
 
-1. Adding the following lines to the `.gitignore`file is **strongly** recommended because of the additional files created by these tests.
+1. Add the following lines to the `.gitignore`file. This is **strongly** recommended because of the additional files created by these tests.
 
     ```bash
     vendor
@@ -318,7 +318,7 @@ The instructions in this section demonstrate how to set up simple functional tes
     share
     ```
 
-1.  Define some Bats tests to run. Create a folder named `tests`, and create a file named `confirm-install.bats`. Put the contents below in your Bats test file:
+1.  Define some Bats tests to run. Create a folder named `tests`, and create a file named `confirm-install.bats`. Place the content below in your Bats test file:
 
     ```bash
     #!/usr/bin/env bats
@@ -348,11 +348,11 @@ The instructions in this section demonstrate how to set up simple functional tes
      composer test
     ```
 
-To add more tests, create more files with `.bats` extensions, and populate them with `@test` blocks as shown above. Tests consist of simple bash expressions; any command that returns a non-zero result code signifies failure. See the [documentation on writing BATS tests](https://github.com/sstephenson/bats#writing-tests) for more information.
+To add more tests, create more files with `.bats` extensions, and populate them with `@test` blocks as shown above. Tests consist of simple bash expressions; any command that returns a non-zero result code signifies failure. Refer the [documentation on writing BATS tests](https://github.com/sstephenson/bats#writing-tests) for more information.
 
 ### Automating Tests
 
-At this point, it would be a good idea to [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You'll need to keep a Sandbox site online to run the tests against.
+You can [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You'll need to keep a Sandbox site online to run the tests against.
 
 1. Copy the contents below into a file named `circle.yml` in your plugin project:
 
@@ -392,11 +392,19 @@ At this point, it would be a good idea to [configure your project tests to run a
 
 3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/) (leave the "Hostname" field empty).
 
-At this point, your tests should run successfully on Circle CI. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's README.md file to show off your passing build status.
+  Your tests should run successfully on Circle CI.
+
+1. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's README.md file to show off your passing build status.
+
+A more complete version of the plugin created above can be found at:
+[https://github.com/pantheon-systems/terminus-plugin-example](https://github.com/pantheon-systems/terminus-plugin-example)
+
+
+## Plugin Commands
+
+There is currently no published Plugin API documentation. The best way to learn how to write commands is to look through the internal commands in the Terminus source code: [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus)
 
 ## More Resources
 
-There is no published Plugin API documentation yet, so the best way to learn how to write commands is to look through the internal commands in the Terminus source code: [https://github.com/pantheon-systems/terminus](https://github.com/pantheon-systems/terminus)
-
-A slightly more complete version of the plugin created in this guide can be found at:
-[https://github.com/pantheon-systems/terminus-plugin-example](https://github.com/pantheon-systems/terminus-plugin-example)
+- [Extend Terminus with Plugins](/terminus/plugins)
+- [Terminus Command Reference](/terminus/commands)
