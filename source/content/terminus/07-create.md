@@ -185,8 +185,7 @@ You must complete the steps below if you want to share your plugin with others.
 
 1. Make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
 
-1. Update the `composer.json` file with an autoload section to indicate how to load your namespace. Change `my-username` and `Pantheon` in the example to your vendor name.
-Your composer file should now look like:
+1. Update the `composer.json` file with an autoload section to indicate how to load your namespace. Change `my-username` and `Pantheon` in the example to your vendor name. Your composer file should now look like:
 
   ```json
   {
@@ -232,7 +231,7 @@ Your composer file should now look like:
 
 <Alert title={"Note"} type={"info"}>
 
-In order to avoid conflicts between the dependencies of different plugins, Terminus 1 and 2 do not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor. Terminus 3 does not have this restriction.
+To avoid conflicts between the dependencies of different plugins, Terminus 1 and 2 do not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor. Terminus 3 does not have this restriction.
 
 </Alert>
 
