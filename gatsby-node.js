@@ -280,6 +280,10 @@ exports.createPages = ({ graphql, actions }) => {
             previous,
             next
           },
+          actions: {
+            const: createRedirect = actions,
+            createRedirect({ fromPath: '/guides/acct-mgmt', toPath: '/manage', isPermanent: true })
+          }
         })
       } else {
         const template = calculateTemplate(guide.node, "doc")

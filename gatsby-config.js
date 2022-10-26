@@ -200,6 +200,7 @@ module.exports = {
       resolve: 'gatsby-plugin-sitemap',
     },
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-meta-redirect`, // make sure to put last in the array - redirects from meta https://www.gatsbyjs.com/plugins/gatsby-plugin-meta-redirect/
   ],
 }
 
