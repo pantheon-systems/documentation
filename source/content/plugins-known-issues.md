@@ -363,7 +363,7 @@ ___
 
 1. Disable Static CSS file generation in the Divi theme.
 
-1. Select **Theme Options**, select **General**, select **Performance**, and then select to disable Dynamic CSS. 
+1. Select **Theme Options**, select **General**, select **Performance**, and then select to disable Dynamic CSS.
 
 1. Consider disabling other Dynamic settings if possible.
 
@@ -380,19 +380,19 @@ ___
 
 <ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another.
 
-**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work. 
+**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work.
 
 For example: my.example.com
 
-Find or replace must handle `test.example.com` -> `my.example.com` and 
+Find or replace must handle `test.example.com` -> `my.example.com` and
 `my.example.com` -> `test.example.com`.
 
 Note that if you are using a `/` ending slash on a new site’s URL, ensure you add a `/` on old site’s URL as well.
 
 **Solution 2:** Use the search and replace feature in Elementor to enter the following:
- 
+
 `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
@@ -555,7 +555,7 @@ ___
 
 **Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
-**Solution:** 
+**Solution:**
 
 <Partial file="jetpack-enable-xmlrpc.md" />
 
@@ -1008,7 +1008,7 @@ export ENV=dev
    ```bash{promptUser: user}
    cd /my-site
    ```
-   
+
 1. Create the following symlinks:
 
   <Alert title="Note"  type="info" >
@@ -1018,7 +1018,7 @@ export ENV=dev
   </Alert>
 
   ```bash{promptUser: user}
-  
+
   ln -s ../../files/private/wflogs ./wp-content/wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
@@ -1221,39 +1221,37 @@ ___
 
 ## WP Rocket
 
-<ReviewDate date="2020-10-19" />
+<ReviewDate date="2022-10-25" />
 
-**Issue:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create the `advanced-cache.php` file.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s html caching feature conflicts with [Pantheon's page caching](https://pantheon.io/docs/guides/frontend-performance/caching#page-caching). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
 
-**Solution:**
+**Solution 1:**
 
 1. In SFTP mode, install the WP Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
-1. Activate the plugin from the dashboard.
-1. Disable WP Rocket caching by finding the `WP_CACHE` value defined by WP-Rocket in `wp-config.php`, and setting it to false:
+1. Additionally, install the helper plugin [WP Rocket | Disable Page Caching](https://docs.wp-rocket.me/article/61-disable-page-caching) to the dev environment by uploading via SFTP or from the WP dashboard.
+1. Activate both plugins from the dashboard.
+1. If your environment is in SFTP mode, WP Rocket will automatically make two changes. Make sure to commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
+    1. In `wp-config.php` it will add the following definition, enabling its advanced caching capabilities.
 
-   ```php:title=wp-config.php
-   define('WP_CACHE', false);
-   ```
+        ```php:title=wp-config.php
+        define('WP_CACHE', true); // Added by WP Rocket
+        ```
 
-1. **Optional on writable environments:** The WP Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
+    1. It will create the drop-in file `wp-content/advanced-cache.php`.
 
 **Issue 2:** WP Rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
-**Solution 1:** WP Rocket version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
+**Solution 2a:** If you are running version 3.5 and higher, you can set a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
 
 ```php:title=wp-config.php
-define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket-config/' );
+define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket/config/' );
+define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket/cache/' );
+define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-```php:title=wp-config.php
-define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/new-path/cache/' );
-```
+**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants. You still need to create a symlink for the other paths (see [Create symlinks](#assumed-write-access)).
 
-Version 3.2 through 3.4 allows setting only the cache path, and still requires a symlink for the other paths (see below).
-
-**Solution 2:** [Create symlinks](#assumed-write-access) as noted above.
-
-After symlinking, make sure to manually create these folders in *ALL* environments.
+After symlinking, make sure to manually create these folders in _ALL_ environments.
 
 ```none
 files/cache/wp-rocket
@@ -1266,6 +1264,8 @@ or
 code/wp-content/uploads/cache/wp-rocket
 code/wp-content/uploads/cache/busting
 ```
+
+**Solution 2c:** If you are running a version below 3.2, your only option is to upgrade the plugin to a newer version.
 
 ___
 
