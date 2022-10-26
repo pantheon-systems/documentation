@@ -312,7 +312,7 @@ Under **Post-build Actions** is another button labelled **Add post-build action*
 
 - **Status backref**: "Backref to the build"
 
-Finally, hit **Save** to complete the configuration of your Jenkins build process.
+Finally, press **Save** to complete the configuration of your Jenkins build process.
 
 Now on your local computer, create a new branch and makes a change to it. When you commit and push to GitHub, a build should initiate. You should see the results of the test, which link to the Jenkins job:
 

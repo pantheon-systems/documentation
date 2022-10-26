@@ -16,7 +16,7 @@ Variables that are converted to `PANTHEON_STRIPPED` cannot be read with PHP, and
 
 ![pantheon_stripped](../images/pantheon_stripped.png)
 
-This is typically caused by PHP in your site’s code reading in `PANTHEON_STRIPPED` as part of the url that it sees, and then using that in a page response in such a way that shows up in a customer browser, it will then be dutifully reported to Google. Pantheon makes every effort to prevent this, but it is not possible to predict all possible PHP behavior. In most cases, it's safe to simply ignore `PANTHEON_STRIPPED` in your traffic results, as usually customers will have hit the site with a valid parameter first, and the `PANTHEON_STRIPPED` values are duplicate "self-referrals".
+This is typically caused by PHP in your site’s code reading in `PANTHEON_STRIPPED` as part of the url that it sees, and then using that in a page response in such a way that shows up in a customer browser, it will then be dutifully reported to Google. Pantheon makes every effort to prevent this, but it is not possible to predict all possible PHP behavior. In most cases, it's safe to simply ignore `PANTHEON_STRIPPED` in your traffic results, as usually customers will have visited the site with a valid parameter first, and the `PANTHEON_STRIPPED` values are duplicate "self-referrals".
 
 You may also experience unexpected behavior when you overload Google's `utm_` parameter namespace. The URL parameters that Google Analytics uses are specific to their platform and are not intended to be extended by site developers. Using it as a general tracking parameter with patterns like `utm_mytrackingparameter` is discouraged. Please refer to Google Analytics [URL Builder](https://support.google.com/analytics/answer/1033867) for a list of the valid `utm_` parameters.
 
@@ -92,7 +92,7 @@ curl -i "https://live-mysite.pantheon.io/landing_page.html?utm_source=test-sourc
 
 ### What if I have a link in the wild that’s not in its final, non-redirectable form?
 
-To resolve these links before they hit the application, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
+To resolve these links before they visit the application, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
 
 ```php:title=settings.php%20or%20wp-config.php
 // Remove query strings and tracking parameters from URLs

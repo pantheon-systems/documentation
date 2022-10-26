@@ -184,7 +184,7 @@ ___
 
 ## [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
 
-**Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
+**Issue**: Operations on directories containing an inordinate amount of files will likely meet the load balancer timeout threshold (30 seconds).
 
 **Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 

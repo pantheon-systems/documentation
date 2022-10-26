@@ -142,7 +142,7 @@ Sending code to Pantheon is a two-step process with Git. First, you need to comm
 
     </Alert>
 
-    If you don't specify a message through the command line, Git will open your default text editor and prompt you to create one. If you exit without providing a commit message, Git will abort the commit. You will see something similar to the example below if the commit worked:
+    If you don't specify a message through the command line, Git will open your default text editor and prompt you to create one. If you exit without providing a commit message, Git will end the commit. You will see something similar to the example below if the commit worked:
 
     ```git
     [master d2fce4ea] Add a great new plugin to increase awesomesauce level of my WordPress site.

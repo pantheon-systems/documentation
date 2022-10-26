@@ -76,7 +76,7 @@ If your source site is on Pantheon and has your domain name pointing to it, you 
 
 ### Timeouts or Max Memory Errors
 
-Migrations of particularly large sites to updated Drupal versions can sometimes hit the limits of memory allocated to sites on Pantheon. When possible, large site upgrade migrations should be performed locally, where the full system resources can be allocated to the task.
+Migrations of particularly large sites to updated Drupal versions can sometimes meet the limits of memory allocated to sites on Pantheon. When possible, large site upgrade migrations should be performed locally, where the full system resources can be allocated to the task.
 
 ## More Resources
 

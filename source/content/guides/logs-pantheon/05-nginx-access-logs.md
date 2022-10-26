@@ -69,7 +69,7 @@ You must configure GoAccess to read Pantheon's log formats to parse your `nginx-
   goaccess nginx-access.log
   ```
 
-  You can use the arrow keys on your keyboard to scroll down to view more of the report, or hit `q` to exit.
+  You can use the arrow keys on your keyboard to scroll down to view more of the report, or press `q` to exit.
 
   Alternatively, you can run the command below to generate an HTML report:
 

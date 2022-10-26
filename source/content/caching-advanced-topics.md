@@ -96,7 +96,7 @@ A site may need to deliver different content to different users without them log
 
 ### Device Detection
 
-We do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. This will cause issues scaling requests within your site in case of any load or traffic spikes, as it requires at least the initial hit to make it to the backend before anonymous traffic can be cached by the Global CDN. If you receive more uncached visitors than your Nginx and PHP processes, it can result in timeouts and server errors.
+We do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. This will cause issues scaling requests within your site in case of any load or traffic spikes, as it requires at least the initial load to make it to the backend before anonymous traffic can be cached by the Global CDN. If you receive more uncached visitors than your Nginx and PHP processes, it can result in timeouts and server errors.
 
 #### Best Practice Recommendations
 

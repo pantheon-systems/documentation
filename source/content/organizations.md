@@ -29,7 +29,7 @@ Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pan
 Access the [Organization Dashboard](/guides/legacy-dashboard/org-dashboard) in the following ways:
 
 - From the User Dashboard, click the **Organizations** tab, then click the name of the Organization.
-- From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click the Organization name.
+- From any Dashboard location, press the "s" keyboard shortcut to toggle a list of sites and organizations, and click the Organization name.
 
 All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and Resellers have a Partner Program tab.
 

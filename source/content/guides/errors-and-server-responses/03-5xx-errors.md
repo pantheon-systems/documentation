@@ -37,7 +37,7 @@ However, if it is possible to ensure your headers are always passed for JS files
 
 > There was an error connecting to the PHP backend.
 
-Nginx (the web server) reports this problem if the php-fpm process hangs or cannot start.
+Nginx (the web server) reports this problem if the php-fpm process stops or cannot start.
 
 ### Pantheon 502 Routing Failure
 

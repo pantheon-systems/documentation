@@ -74,7 +74,7 @@ For an anticipated increase in traffic, open a [Support ticket](/guides/support/
 
 - **Where is the traffic concentration?**
 
-  Describe if the additional traffic will hit all at once at a specific hour of the day, or be spread throughout business hours, etc. The more descriptive, the easier to determine how to increase resources.
+  Describe if the additional traffic will come all at once at a specific hour of the day, or be spread throughout business hours, etc. The more descriptive, the easier to determine how to increase resources.
 
 Generally speaking, it is no longer necessary to increase application containers when there is a large increase in mostly anonymous traffic. This is best determined using the information above. We derive the number of *requests per minute* as the basis for the number of servers.
 

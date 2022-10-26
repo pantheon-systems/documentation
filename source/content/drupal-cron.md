@@ -71,7 +71,7 @@ There are several workarounds. Most work by keeping the site awake, then using a
 
   By having Pingdom visit the site once a minute like a visitor, the site stays active and the Cron module has an opportunity to act every minute (if it needs to). This combination is not officially supported by Pantheon, but has worked for some of our customers.
 
-- A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to hit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron) or [Ultimate Cron](https://www.drupal.org/project/ultimate_cron) to schedule different cron tasks at different frequencies though.
+- A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to visit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron) or [Ultimate Cron](https://www.drupal.org/project/ultimate_cron) to schedule different cron tasks at different frequencies though.
 
   One advantage of this approach is that your site may already have a New Relic instance associated with it, saving you from having to setup another third-party service.
 

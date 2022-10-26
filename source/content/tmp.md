@@ -127,7 +127,7 @@ Be aware that temporary files are not cleaned up automatically in the following 
 
 <Alert title="Warning" type="danger">
 
-In general, there's no need for temporary files to persist across application containers. Using a different plugin or module is preferred to taking the performance hit caused by the workaround below.
+In general, there's no need for temporary files to persist across application containers. Using a different plugin or module is preferred to taking the performance lag caused by the workaround below.
 
 </Alert>
 

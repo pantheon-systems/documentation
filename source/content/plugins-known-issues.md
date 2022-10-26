@@ -940,7 +940,7 @@ ___
 
 <ReviewDate date="2018-01-10" />
 
-**Issue:** For the [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin, the "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
+**Issue:** For the [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin, the "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can exceed this limit.
 
 **Solution 1:** The suggested workaround is to clone the site locally, import the items, then sync the database back up to the platform.
 

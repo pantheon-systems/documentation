@@ -35,7 +35,7 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 
 ### Varnish or Caching Is Not Working When a Plugin or Theme That Uses `$_SESSIONS` Is Enabled
 
-Due to how caching and sessions work, sessions must be uncached to work correctly, and it is impossible to use cached content when there are sessions in place. It is best to use a cookie-based solution to avoid a performance hit from uncached session pages.
+Due to how caching and sessions work, sessions must be uncached to work correctly, and it is impossible to use cached content when there are sessions in place. It is best to use a cookie-based solution to avoid a performance lag from uncached session pages.
 
 Evidence of this issue can be detected by inspecting the header. The session cookie is always set on every page load:
 
