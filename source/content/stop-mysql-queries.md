@@ -1,11 +1,11 @@
 ---
-title: Identify and Kill Queries with MySQL Command-Line Tool
-description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site in a few commands.
+title: Identify and Stop Queries with MySQL Command-Line Tool
+description: Learn how to identify and stop long-running MySQL queries on your WordPress or Drupal site in a few commands.
 categories: [troubleshoot]
 tags: [cli, database]
 reviewed: "2020-10-28"
 ---
-Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL database](/mysql-access).
+Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To stop these queries, you'll need to [access the environment's MySQL database](/mysql-access).
 
 <Enablement title="Ramp up website performance" link="/docs/workshops?c=lw4">
 
@@ -21,20 +21,20 @@ After successfully creating a local MySQL connection to the site's database, run
 mysql> show processlist;
 ```
 
-Review the `Time` field to identify the longest running query and run the following command to kill it. In the example below, replace `<thread_id>` with the ID of the query you want to terminate:
+Review the `Time` field to identify the longest running query and run the following command to stop it. In the example below, replace `<thread_id>` with the ID of the query you want to terminate:
 
 ```sql
 mysql> kill <thread_id>;
 ```
 
-## Kill All Queries
+## Stop All Queries
 
 If a large number of bad requests are blocking valid queries, you can clear them out without having to run `kill` on every individual thread.
 
 Execute the following to generate `kill` commands from the `PROCESSLIST` table:
 
 ```sql
-mysql> SELECT GROUP_CONCAT(CONCAT('KILL ',id,';') SEPARATOR ' ') 'Paste the following query to kill all processes' FROM information_schema.processlist WHERE user<>'system user'\G
+mysql> SELECT GROUP_CONCAT(CONCAT('KILL ',id,';') SEPARATOR ' ') 'Paste the following query to stop all processes' FROM information_schema.processlist WHERE user<>'system user'\G
 ```
 
 Copy the provided query in the output and run as instructed.

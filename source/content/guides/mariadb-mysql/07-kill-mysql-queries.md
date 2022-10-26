@@ -1,19 +1,19 @@
 ---
 title: MariaDB and MySQL on Pantheon
-subtitle: Identify and Kill Queries with MySQL Command-Line Tool
-description: Learn how to identify and kill long-running MySQL queries on your site.
+subtitle: Identify and Stop Queries with MySQL Command-Line Tool
+description: Learn how to identify and stop long-running MySQL queries on your site.
 categories: [troubleshoot]
 tags: [cli, database]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/mariadb-mysql/kill-mysql-queries
-anchorid: kill-mysql-queries
+permalink: docs/guides/mariadb-mysql/stop-mysql-queries
+anchorid: stop-mysql-queries
 ---
 
-This section provides information on how to identify and kill queries with MySQL Command-Line Tool.
+This section provides information on how to identify and stop queries with MySQL Command-Line Tool.
 
-Long-running MySQL queries prevent other transactions from accessing the necessary tables to execute a request, leaving your users on hold. You can [access the environment's MySQL database](/guides/mariadb-mysql/mysql-access) to kill these queries.
+Long-running MySQL queries prevent other transactions from accessing the necessary tables to execute a request, leaving your users on hold. You can [access the environment's MySQL database](/guides/mariadb-mysql/mysql-access) to stop these queries.
 
 <Enablement title="Ramp up website performance" link="/docs/workshops?c=lw4">
 
@@ -33,13 +33,13 @@ Make your site faster. Check out our free on-demand training, where you'll learn
 
 1. Review the `Time` field to identify the longest running query.
 
-1. Run the following command to kill the query. In the example below, replace `<thread_id>` with the ID of the query you want to terminate:
+1. Run the following command to stop the query. In the example below, replace `<thread_id>` with the ID of the query you want to terminate:
 
     ```sql
     mysql> kill <thread_id>;
     ```
 
-## Kill All Queries
+## Stop All Queries
 
 You can clear out a large number of bad requests without having to run `kill` on each individual thread if they are blocking valid queries.
 
@@ -48,7 +48,7 @@ You can clear out a large number of bad requests without having to run `kill` on
 1. Execute the following to generate `kill` commands:
 
     ```sql
-    mysql> SELECT GROUP_CONCAT(CONCAT('KILL ',id,';') SEPARATOR ' ') 'Paste the following query to kill all processes' FROM information_schema.processlist WHERE user<>'system user'\G
+    mysql> SELECT GROUP_CONCAT(CONCAT('KILL ',id,';') SEPARATOR ' ') 'Paste the following query to stop all processes' FROM information_schema.processlist WHERE user<>'system user'\G
     ```
 
 1. Copy the provided query in the output and run as instructed.

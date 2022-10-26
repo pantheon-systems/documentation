@@ -46,7 +46,7 @@ Social sharing links are often good candidates here and are freely available in 
 
 ### Send Only as Many Pixels as Needed
 
-Images might be expected to grow and shrink by large amounts according to device and browser size, but it's overkill to use a 4000x4000 pixel image within an element that will never render larger than 200x200 pixels.
+Images might be expected to grow and shrink by large amounts according to device and browser size, but it's excessive to use a 4000x4000 pixel image within an element that will never render larger than 200x200 pixels.
 
 One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that the older `<img>` tag did not. Drupal 9 and WordPress core support this tag by default. Drupal 7 support has been backported to the [Picture](https://www.drupal.org/project/picture) module.
 
