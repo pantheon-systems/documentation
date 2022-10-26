@@ -76,7 +76,7 @@ terminus org:list
 
 ## Switch Between Workspaces
 
-If you're a member of multiple [workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces), you can stay logged in, and switch between workspaces to work on different projects.
+If you're a member of multiple workspaces, you can stay logged in, and switch between workspaces to work on different projects.
 
 To switch between workspaces, click your gravatar in the upper left to switch between workspaces:
 
@@ -100,7 +100,7 @@ Workspaces cannot be deleted.
 
 ### How do we add new sites to a Professional Workspace?
 
-Refer to [Sites](/guides/account-mgmt/workspace-sites-teams/guides/account-mgmt/workspace-sites-teams/sites) for more information.
+Refer to [Sites](/guides/account-mgmt/workspace-sites-teams/) for more information.
 
 ### Why do login attempts fail for all users across my workspace simultaneously?
 

@@ -58,7 +58,7 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Clear cache on Test and Live                      | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Manage user roles                                 | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Delete sites or remove users from a site          | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Add a [Supporting Organization](/organizations#organization-site-association)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 
@@ -155,7 +155,7 @@ After a user leaves, in addition to the steps above, we recommend you:
 
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
 
-Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/organizations#organization-site-association).
+Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace).
 
 1. Open the Site Dashboard for the site.
 
