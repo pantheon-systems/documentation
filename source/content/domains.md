@@ -58,7 +58,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
 <Partial file="secure-only-tlds.md" />
 
-1. Log in as an [Admin, Team Member, or Privileged User](/change-management#roles-and-permissions).
+1. Log in as an [Admin, Team Member, or Privileged User](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
 1. From the Site Dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 

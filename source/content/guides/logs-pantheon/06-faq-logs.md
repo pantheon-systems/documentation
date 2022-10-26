@@ -142,6 +142,6 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
 ## More Resources
 
 - [PHP on Pantheon](/guides/php)
-- [Investigate and Remedy Traffic Events](/optimize-site-traffic)
+- [Investigate and Remedy Traffic Events](/guides/account-mgmt/traffic/remedy)
 - [Terminus Manual](/terminus)
 - [Drupal Drush Command-Line Utility on Pantheon](/guides/drush)

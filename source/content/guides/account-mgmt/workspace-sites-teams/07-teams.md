@@ -185,4 +185,4 @@ Enterprise Administrators can add site Team Members or Supporting Organizations 
 
 ### How do I recover an account after a site owner leaves?
 
-Refer to the steps in our [Site Access](/site-access) doc for recovery instructions.
+Refer to the steps in our [Site Access](/guides/account-mgmt/account/recover) doc for recovery instructions.

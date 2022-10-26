@@ -112,7 +112,7 @@ You must add a symlink to modules/plugins that require the ability to write to t
 
 ## More Resources
 
-- [Site Level Roles and Permissions](/change-management#site-level-roles-and-permissions)
+- [Site Level Roles and Permissions](/guides/account-mgmt/workspace-sites-teams/teams#site-level-roles-and-permissions)
 
 - [Symlinks and Assumed Write Access](/symlinks-assumed-write-access)
 

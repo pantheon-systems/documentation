@@ -79,7 +79,7 @@ An empty Upstream, behind the scenes, is essentially an empty Drupal environment
 
 ### Does traffic count the same way?
 
-Yes, traffic will be counted the same way. Refer to our [Traffic Metrics](/traffic-limits) documentation for more information.
+Yes, traffic will be counted the same way. Refer to our [Traffic Metrics](/guides/account-mgmt/traffic) documentation for more information.
 
 ### Can I use this process to host statically generated JAMStack sites?
 

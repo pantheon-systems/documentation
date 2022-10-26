@@ -51,7 +51,7 @@ To use the Test environment for this purpose, you first push new code “up” f
 
 ## <span class="glyphicons glyphicons-cardio"> </span> Live
 
-This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. For more details, refer to [The Site Dashboard](/sites), or the condensed glossary below.
+This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. For more details, refer to [The Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites), or the condensed glossary below.
 
 The following links are located within your Dev, Test, and Live environment tabs:
 

@@ -78,6 +78,6 @@ There are a number of terms used throughout the Multidev workflow that will be u
 
 ## More Resources
 
-- [Pantheon Site Dashboard](/sites)
+- [Pantheon Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites)
 
 - [Use the Pantheon WebOps Workflow](/pantheon-workflow)
