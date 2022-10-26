@@ -73,4 +73,4 @@ Yes! Access to metrics via the Terminus [`env:metrics`](/terminus/commands/env-m
 
 - [Traffic Limits and Overages](/guides/account-mgmt/traffic)
 - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
-- [Site Plans FAQs](/guides/account-mgmt/planss-faq)
+- [Site Plans FAQs](/guides/account-mgmt/plans-faq)

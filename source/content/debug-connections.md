@@ -26,7 +26,7 @@ Replace `site` and `env` with your site name and the correct environment
 
 ### Resolve DNS Issues
 
-Some ISPs have issues resolving a `drush.in` hostname. Troubleshoot connection errors using the following `dig` command,  replacing `<xxx>` with your [site’s UUID](/sites/#site-uuid):
+Some ISPs have issues resolving a `drush.in` hostname. Troubleshoot connection errors using the following `dig` command,  replacing `<xxx>` with your [site’s UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis):
 
 ```bash{promptUser: user}
 dig codeserver.dev.<xxx>.drush.in +short

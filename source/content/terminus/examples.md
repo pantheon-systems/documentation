@@ -72,7 +72,7 @@ Machine readable, such as "dev", "test", "live", or "bug123", which refers to th
 
 </dl>
 
-You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/sites/#site-uuid). For example:
+You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis). For example:
 
 ![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](../../images/terminus-examples-field-name.png)
 

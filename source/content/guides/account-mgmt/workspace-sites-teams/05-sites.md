@@ -182,3 +182,17 @@ You can see a list of all your sites by running `terminus site:list`.
 ### Delete a Multidev Environment
 
 Refer to the [Delete a Branch Environment](/guides/multidev/delete-multidev) section of our Multidev guide for more information.
+
+## Retrieve the Site UUID
+
+Every entity (user, workspace, product, and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
+
+```none
+de305d54-75b4-431b-adb2-eb6b9e546014
+```
+
+You can also use [Terminus](/terminus) to find the UUID of your workspaces:
+
+```bash{promptUser: user}
+terminus site:list
+```
