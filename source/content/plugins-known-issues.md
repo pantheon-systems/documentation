@@ -1223,11 +1223,11 @@ ___
 
 <ReviewDate date="2022-10-25" />
 
-**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s html caching feature conflicts with [Pantheon's page caching](https://pantheon.io/docs/guides/frontend-performance/caching#page-caching). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](https://pantheon.io/docs/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
 
 **Solution 1:**
 
-1. Set your development to SFTP mode.
+1. Set your development mode to SFTP.
 
 1. Install the WP Rocket plugin to the Dev environment by uploading via SFTP or from the WP dashboard.
 
@@ -1239,13 +1239,15 @@ ___
 
 1. Commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
 
-    1. In `wp-config.php` it will add the following definition, enabling its advanced caching capabilities.
+    - The following definition will be added in `wp-config.php`. This enables advanced caching capabilities.
 
         ```php:title=wp-config.php
         define('WP_CACHE', true); // Added by WP Rocket
         ```
 
-    1. It will create the drop-in file `wp-content/advanced-cache.php`.
+    - The `wp-content/advanced-cache.php` drop-in file will be created.
+
+
 
 **Issue 2:** WP Rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
@@ -1257,7 +1259,7 @@ define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/up
 define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants. You must 
+**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants.
 
 1. [Create symlinks](#assumed-write-access) for the other paths.
 
