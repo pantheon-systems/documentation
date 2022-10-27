@@ -1358,8 +1358,6 @@
           url: '/guides/site-portfolio-report/interacting'
         - text: 'FAQ'
           url: '/guides/site-portfolio-report/faq'
-        - text: 'Create a Composer-managed WordPress Site with Bedrock'
-          url: '/guides/wordpress-composer/pre-ga/wordpress-composer-managed'
 - title: 'Account Management at Pantheon'
   subtitle: 'Learn how to set up your teams, use your dashboards, and how billing works. You should be able to comfortably develop an organization plan and administer your Pantheon platform after reading these guides.'
   path: 'guides/account-mgmt'
@@ -1447,5 +1445,9 @@
 - title: 'WordPress On Pantheon - Pre-GA'
   subtitle: 'Pantheon makes some WordPress features available to a limited audience for testing. Some Support exclusions will apply.'
   path: 'guides/wordpress-composer/pre-ga'
+  guides:
+    - title: ''
+      type: 'normal'
+      links:
         - text: 'Create a Composer-managed WordPress Site with Bedrock'
-          url: '/guides/wordpress-composer/pre-ga/pre-ga/wordpress-composer-managed'
+          url: '/guides/wordpress-composer/pre-ga/wordpress-composer-managed'

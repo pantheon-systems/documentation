@@ -8,7 +8,7 @@ contributors: [whitneymeredith, jspellman814, jazzsequence]
 layout: guide
 type: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/pre-ga/pre-ga/wordpress-composer-managed
+permalink: docs/guides/wordpress-composer/pre-ga/wordpress-composer-managed
 anchorid: wordpress-composer-managed
 ---
 
