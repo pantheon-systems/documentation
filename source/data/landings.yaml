@@ -1447,4 +1447,5 @@
 - title: 'WordPress On Pantheon - Pre-GA'
   subtitle: 'Pantheon makes some WordPress features available to a limited audience for testing. Some Support exclusions will apply.'
   path: 'guides/wordpress-composer/pre-ga'
-  
+        - text: 'Create a Composer-managed WordPress Site with Bedrock'
+          url: '/guides/wordpress-composer/pre-ga/pre-ga/wordpress-composer-managed'

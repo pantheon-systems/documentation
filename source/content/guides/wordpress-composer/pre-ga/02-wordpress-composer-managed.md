@@ -8,7 +8,7 @@ contributors: [whitneymeredith, jspellman814, jazzsequence]
 layout: guide
 type: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/pre-ga/wordpress-composer-managed
+permalink: docs/guides/wordpress-composer/pre-ga/pre-ga/wordpress-composer-managed
 anchorid: wordpress-composer-managed
 ---
 
@@ -40,7 +40,7 @@ There are two ways you can spin up a site using the WordPress Composer Managed u
 
 - Using this [site create link](https://dashboard.pantheon.io/sites/create?upstream_id=90a683cd-4e03-4832-9b49-be97ab2a0be4).
 
-The site you create will be based on the Pantheon-maintained [WordPress Composer Managed](https://github.com/pantheon-upstreams/wordpress-composer-managed) upstream. Once this install completes, visit the Dev environment and follow the prompts to complete the CMS installation.
+The site you create will be based on the Pantheon-maintained [WordPress Composer Managed](https://github.com/pantheon-upstreams/pre-ga/wordpress-composer-managed) upstream. Once this install completes, visit the Dev environment and follow the prompts to complete the CMS installation.
 
 Review the sections below for important information about your site, including an explanation of the directory structure and essential configuration actions.
 
@@ -102,7 +102,7 @@ composer upstream-require wpackagist-plugin/advanced-custom-fields
 
 ## Report an Issue
 
-Create an [issue in the GitHub repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
+Create an [issue in the GitHub repo](https://github.com/pantheon-systems/pre-ga/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
 
 Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program.
 
