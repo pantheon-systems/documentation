@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Supported Terminus
+subtitle: Supported Terminus and PHP Versions
 description: Learn which versions of Terminus are currently supported.
 categories: [platform]
 tags: [libraries, updates]

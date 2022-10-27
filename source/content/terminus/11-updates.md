@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Version Updates
+subtitle: Update Terminus
 description: Stay up to date on the latest Terminus version.
 terminuspage: true
 categories: [develop]

@@ -102,12 +102,12 @@ const items = [
   {
     id: "docs-terminus-supported-terminus",
     link: "/terminus/supported-terminus",
-    title: "Supported Terminus",
+    title: "Supported Terminus and PHP Versions",
   },
   {
     id: "docs-terminus-updates",
     link: "/terminus/updates",
-    title: "Version Updates",
+    title: "Update Terminus",
   },
   {
     id: "docs-terminus-terminus-2-0",
