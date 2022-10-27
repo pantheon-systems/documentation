@@ -1,5 +1,5 @@
 ---
-title: Manage Your Account
+title: "Manage Your Account"
 subtitle: Workspace
 description: Learn how to use your account workspace.
 categories: [account-mgmt]

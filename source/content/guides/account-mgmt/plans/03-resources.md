@@ -1,5 +1,5 @@
 ---
-title: Plans
+title: "Plans"
 subtitle: Plan Resources
 description: Learn about the resources provided with each of Pantheon's site plans.
 categories: [account-mgmt]

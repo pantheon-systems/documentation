@@ -1,5 +1,5 @@
 ---
-title: Traffic
+title: "Traffic"
 subtitle: Measuring Traffic
 description: Learn how Pantheon measures traffic.
 categories: [account-mgmt]

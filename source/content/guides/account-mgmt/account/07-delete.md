@@ -1,5 +1,5 @@
 ---
-title: Manage Your Account
+title: "Manage Your Account"
 subtitle: Delete Your Account
 description: Learn how to completely delete your account.
 categories: [account-mgmt]

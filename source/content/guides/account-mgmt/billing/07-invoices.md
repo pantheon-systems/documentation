@@ -1,5 +1,5 @@
 ---
-title: Billing
+title: "Billing"
 subtitle: Invoices and Subscriptions
 description: Manage and view invoices and subscriptions.
 categories: [account-mgmt]

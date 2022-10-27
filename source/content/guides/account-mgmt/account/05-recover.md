@@ -1,5 +1,5 @@
 ---
-title: Manage Your Account
+title: "Manage Your Account"
 subtitle: Recover Account
 description: Recover your account when someone leaves.
 categories: [account-mgmt]
