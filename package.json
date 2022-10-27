@@ -19,6 +19,7 @@
     "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
     "gatsby": "^3.9.1",
+    "gatsby-cli": "^4.24.0",
     "gatsby-image": "^3.9.0",
     "gatsby-plugin-feed": "^3.9.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
