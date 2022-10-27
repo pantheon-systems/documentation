@@ -1358,4 +1358,12 @@
           url: '/guides/site-portfolio-report/interacting'
         - text: 'FAQ'
           url: '/guides/site-portfolio-report/faq'
-
+- title: 'WordPress On Pantheon - Pre-GA'
+  subtitle: 'Pantheon makes some WordPress features available to a limited audience for testing. Some Support exclusions will apply.'
+  path: 'guides/wordpress-composer/pre-ga'
+  guides:
+    - title: ''
+      type: 'normal'
+      links:
+        - text: 'Create a Composer-managed WordPress Site with Bedrock'
+          url: '/guides/wordpress-composer/pre-ga/wordpress-composer-managed'

@@ -6,8 +6,9 @@ categories: [develop]
 tags: [wordpress]
 contributors: [whitneymeredith, jspellman814, jazzsequence]
 layout: guide
+type: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/wordpress-composer-managed
+permalink: docs/guides/wordpress-composer/pre-ga/wordpress-composer-managed
 anchorid: wordpress-composer-managed
 ---
 
@@ -31,9 +32,9 @@ WordPress does not natively support [Composer](https://getcomposer.org/), howeve
 
 There are two ways you can spin up a site using the WordPress Composer Managed upstream:
 
-- Running the following terminus command:
+- Running the following Terminus command:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus site:create --org ORG --region REGION -- <site_name> <label> "WordPress (Composer Managed)"
     ```
 
@@ -76,7 +77,7 @@ You can install packages from Packagist or WPackagist without any additional con
 
 Some WordPress developers push their packages to Packagist in addition to the WordPress plugin and theme repositories. In this way, it may be beneficial to pull those packages directly from Packagist to get the latest code directly from the source.
 
-```
+```bash{promptUser: user}
 composer upstream-require yoast/wordpress-seo
 ```
 
@@ -84,13 +85,13 @@ Packages that are flagged as `wordpress-plugin`, `wordpress-theme` or `wordpress
 
 #### Requiring a package from WPackagist
 
-For all other plugins and themes that are not managed on Packagist, you can use `composer upstream-require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
+For all other plugins and themes that are not managed on Packagist, you can use `composer upstream-require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name:
 
-```
+```bash{promptUser: user}
 composer upstream-require wpackagist-theme/twentytwentytwo
 ```
 
-```
+```bash{promptUser: user}
 composer upstream-require wpackagist-plugin/advanced-custom-fields
 ```
 
@@ -101,7 +102,7 @@ composer upstream-require wpackagist-plugin/advanced-custom-fields
 
 ## Report an Issue
 
-Create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream. 
+Create an [issue in the GitHub repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
 
 Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program.
 
@@ -110,3 +111,5 @@ Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/a
 - [Bedrock Documentation](https://roots.io/bedrock/)
 
 - [Install and Configure Lando for WordPress](/guides/lando-wordpress)
+
+- [Back to the Pantheon WordPress Composer Guide](/guides/wordpress-composer)
