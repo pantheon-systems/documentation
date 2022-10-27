@@ -40,7 +40,7 @@ This is where you can update and manage your personal account details. Use the o
 - Add and manage [SSH keys](/ssh-keys)
 - View billing details
 - Add [machine tokens](/machine-tokens)
-- [Delete your account](/delete-account)
+- [Delete your account](/guides/account-mgmt/account/delete)
 
 ### Pantheon User Account Login Session Length
 

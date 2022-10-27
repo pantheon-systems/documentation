@@ -16,7 +16,7 @@ editpath: legacy-dashboard/09-add-client-site.md
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/annual-billing) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/guides/account-mgmt/plans/pricing) for more information.
 
 </Alert>
 

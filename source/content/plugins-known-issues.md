@@ -363,7 +363,7 @@ ___
 
 1. Disable Static CSS file generation in the Divi theme.
 
-1. Select **Theme Options**, select **General**, select **Performance**, and then select to disable Dynamic CSS. 
+1. Select **Theme Options**, select **General**, select **Performance**, and then select to disable Dynamic CSS.
 
 1. Consider disabling other Dynamic settings if possible.
 
@@ -380,19 +380,19 @@ ___
 
 <ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another.
 
-**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work. 
+**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work.
 
 For example: my.example.com
 
-Find or replace must handle `test.example.com` -> `my.example.com` and 
+Find or replace must handle `test.example.com` -> `my.example.com` and
 `my.example.com` -> `test.example.com`.
 
 Note that if you are using a `/` ending slash on a new site’s URL, ensure you add a `/` on old site’s URL as well.
 
 **Solution 2:** Use the search and replace feature in Elementor to enter the following:
- 
+
 `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
@@ -555,7 +555,7 @@ ___
 
 **Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
-**Solution:** 
+**Solution:**
 
 <Partial file="jetpack-enable-xmlrpc.md" />
 
@@ -760,7 +760,7 @@ ___
 
 <ReviewDate date="2021-10-20" />
 
-**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
+**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/guides/account-mgmt/traffic) with Pantheon.
 
 **Solution:** Consider using [New Relic](/guides/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
 
@@ -1008,7 +1008,7 @@ export ENV=dev
    ```bash{promptUser: user}
    cd /my-site
    ```
-   
+
 1. Create the following symlinks:
 
   <Alert title="Note"  type="info" >
@@ -1018,7 +1018,7 @@ export ENV=dev
   </Alert>
 
   ```bash{promptUser: user}
-  
+
   ln -s ../../files/private/wflogs ./wp-content/wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
@@ -1221,51 +1221,63 @@ ___
 
 ## WP Rocket
 
-<ReviewDate date="2020-10-19" />
+<ReviewDate date="2022-10-25" />
 
-**Issue:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create the `advanced-cache.php` file.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](https://pantheon.io/docs/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
 
-**Solution:**
+**Solution 1:**
 
-1. In SFTP mode, install the WP Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
-1. Activate the plugin from the dashboard.
-1. Disable WP Rocket caching by finding the `WP_CACHE` value defined by WP-Rocket in `wp-config.php`, and setting it to false:
+1. Set your development mode to SFTP.
 
-   ```php:title=wp-config.php
-   define('WP_CACHE', false);
-   ```
+1. Install the WP Rocket plugin to the Dev environment by uploading via SFTP or from the WP dashboard.
 
-1. **Optional on writable environments:** The WP Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
+1. Install the helper plugin [WP Rocket | Disable Page Caching](https://docs.wp-rocket.me/article/61-disable-page-caching) to the Dev environment by uploading via SFTP or from the WP dashboard.
+
+1. Activate both plugins from the dashboard.
+
+  WP Rocket will automatically make two changes as long as your environment is in SFTP mode. 
+
+1. Commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
+
+    - The following definition will be added in `wp-config.php`. This enables advanced caching capabilities.
+
+        ```php:title=wp-config.php
+        define('WP_CACHE', true); // Added by WP Rocket
+        ```
+
+    - The `wp-content/advanced-cache.php` drop-in file will be created.
+
+
 
 **Issue 2:** WP Rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
-**Solution 1:** WP Rocket version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
+**Solution 2a:** If you are running version 3.5 and higher, you can set a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
 
 ```php:title=wp-config.php
-define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket-config/' );
+define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket/config/' );
+define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket/cache/' );
+define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-```php:title=wp-config.php
-define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/new-path/cache/' );
-```
+**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants.
 
-Version 3.2 through 3.4 allows setting only the cache path, and still requires a symlink for the other paths (see below).
+1. [Create symlinks](#assumed-write-access) for the other paths.
 
-**Solution 2:** [Create symlinks](#assumed-write-access) as noted above.
+1. Make sure to manually create the folders below in _ALL_ environments.
 
-After symlinking, make sure to manually create these folders in *ALL* environments.
+  ```none
+  files/cache/wp-rocket
+  files/cache/busting
+  ```
 
-```none
-files/cache/wp-rocket
-files/cache/busting
-```
+  or
 
-or
+  ```none
+  code/wp-content/uploads/cache/wp-rocket
+  code/wp-content/uploads/cache/busting
+  ```
 
-```none
-code/wp-content/uploads/cache/wp-rocket
-code/wp-content/uploads/cache/busting
-```
+**Solution 2c:** If you are running a version below 3.2, your only option is to upgrade the plugin to a newer version.
 
 ___
 
@@ -1363,7 +1375,7 @@ ___
 
 **Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](/guides/legacy-dashboard/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/guides/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
 
-**Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/optimize-site-traffic) for alternative methods.
+**Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/guides/account-mgmt/traffic/remedy) for alternative methods.
 
 ___
 

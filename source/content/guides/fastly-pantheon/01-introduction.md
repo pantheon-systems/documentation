@@ -47,7 +47,7 @@ You can refer to the following docs for common caching issues:
 
 - [Caching: Advanced Topics](/caching-advanced-topics)
 - [Debug Common Cache Busters](/guides/frontend-performance/caching#troubleshoot-caching-issues)
-- [Traffic Limits and Overages](/traffic-limits)
+- [Traffic Limits and Overages](/guides/account-mgmt/traffic)
 
 You should consult the [Edge Integrations Guide](/guides/edge-integrations/) and complete the appropriate configuration for your WordPress or Drupal site if you plan on using content personalization in addition to Fastly.
 

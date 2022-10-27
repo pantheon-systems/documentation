@@ -73,7 +73,7 @@ Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sit
 
 <Alert type="info" title="Note">
 
-You must be a [site team member](/team-management/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators cannot see all associated sites within their alias file, but can see sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
+You must be a [site team member](/guides/account-mgmt/workspace-sites-teams/teams/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators cannot see all associated sites within their alias file, but can see sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
 
 </Alert>
 

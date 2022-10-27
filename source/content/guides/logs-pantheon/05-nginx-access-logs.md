@@ -135,5 +135,5 @@ You can navigate the `nginx-access.log` file using the CLI without GoAccess. The
 ## More Resources
 
 - [Bots and Indexing](/bots-and-indexing)
-- [Traffic Limits and Overages](/traffic-limits)
+- [Traffic Limits and Overages](/guides/account-mgmt/traffic)
 - [Application Containers](/application-containers)

@@ -53,7 +53,7 @@ Downgrading to a Sandbox site will disable automatic backups. You will still be 
 
 ## Roles & Permissions
 
-The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/guides/account-mgmt/workspace-sites-teams/teams/#site-level-roles-and-permissions).
 
 <Alert title="Note" type="info">
 
@@ -117,7 +117,7 @@ This section covers purchasing a new plan. Review the [previous section](#basic-
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/guides/account-mgmt/plans/pricing) for more information.
 
 </Alert>
 
@@ -210,7 +210,7 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 1. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card).
 
-Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).
+Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/guides/account-mgmt/workspace-sites-teams/sites#delete-sites).
 
 ## More Resources
 
