@@ -1,5 +1,5 @@
 ---
-title: Manage Your Account
+title: "Manage Your Account"
 subtitle: Introduction
 description: Learn how to create, delete, and recover your account.
 categories: [account-mgmt]

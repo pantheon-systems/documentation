@@ -1,5 +1,5 @@
 ---
-title: Plans
+title: "Plans"
 subtitle: Purchase Plans and Addons
 description: Learn how to purchase plans and addons.
 categories: [account-mgmt]

@@ -1,7 +1,7 @@
 ---
-title: Workspaces, Sites, and Teams
+title: "Workspaces, Sites, and Teams"
 subtitle: Introduction
-description: Learn how Workspaces, Sites, and Teams work together to help you manage your sites.
+description: "Learn how Workspaces, Sites, and Teams work together to help you manage your sites."
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]

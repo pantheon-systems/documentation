@@ -99,5 +99,3 @@ Contact your Pantheon account manager or [submit a support ticket](/guides/suppo
 ## More Resources
 
 - [Pantheon Support Guide](/guides/support/)
-
-- [New Site Owner FAQs](/guides/account-mgmt)
