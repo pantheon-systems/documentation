@@ -1,5 +1,5 @@
 ---
-title: Plans
+title: "Plans"
 subtitle: Introduction
 description: Learn about Pantheon's site plans.
 categories: [account-mgmt]

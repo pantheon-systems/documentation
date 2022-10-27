@@ -1,5 +1,5 @@
 ---
-title: Plans
+title: "Plans"
 subtitle: Manage Your Plans
 description: Upgrade a free site to a paid plan or downgrade a site's current plan within the Site Dashboard.
 categories: [account-mgmt]

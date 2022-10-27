@@ -1,5 +1,5 @@
 ---
-title: Plans
+title: "Plans"
 subtitle: FAQ
 description: Commonly asked questions about plans.
 categories: [account-mgmt]

@@ -1,5 +1,5 @@
 ---
-title: Plans
+title: "Plans"
 subtitle: Pricing
 description: Review our pricing options.
 categories: [account-mgmt]

@@ -1,7 +1,7 @@
 ---
-title: Workspaces, Sites, and Teams
+title: "Workspaces, Sites, and Teams"
 subtitle: Professional Workspaces
-description: Learn how to manage and use workspaces.
+description: "Learn how to manage and use workspaces."
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]

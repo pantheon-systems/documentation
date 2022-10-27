@@ -1,7 +1,7 @@
 ---
-title: Workspaces, Sites, and Teams
+title: "Workspaces, Sites, and Teams"
 subtitle: Teams
-description: Learn how to use teams for change management.
+description: "Learn how to use teams for change management."
 categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
