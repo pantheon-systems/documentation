@@ -12,9 +12,11 @@ permalink: docs/terminus/terminus-2-0
 anchorid: terminus-2-0
 ---
 
+This section provides information about Terminus 2.0. 
+
 <Alert title="Note" type="info" >
 
-Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/terminus/terminus-3-0) page as well.
+Terminus 3.0 is the most recent release. Please read the [Terminus 3.0](/terminus/terminus-3-0) page as well.
 
 </Alert>
 

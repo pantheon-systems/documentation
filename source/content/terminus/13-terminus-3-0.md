@@ -13,9 +13,11 @@ anchorid: terminus-3-0
 reviewed: "2021-12-10"
 ---
 
+This section provides information about Terminus 3.0.
+
 <Alert title="Note" type="info" >
 
-If you're not already familiar with Terminus, we suggest you read the [Terminus Guide](/terminus) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
+If you're not already familiar with Terminus, we suggest you read the [Terminus Guide](/terminus) instead. This section is specifically geared at existing Terminus users who need to update existing implementations.
 
 </Alert>
 
