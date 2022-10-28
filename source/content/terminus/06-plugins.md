@@ -1,6 +1,6 @@
 ---
 title: Terminus Guides
-subtitle: Extend with Plugins
+subtitle: Extend Terminus with Plugins
 description: Use plugins to extend what you can do with Terminus.
 terminuspage: true
 categories: [develop]
@@ -12,11 +12,11 @@ permalink: docs/terminus/plugins
 anchorid: plugins
 ---
 
-This section provides information on how to extend Terminus functionality and add commands by installing third-party plugins.
+This section provides information on how to extend Terminus functionality and add commands through third-party plugins.
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, ensure your your plugin is updated for Terminus 2.0. See [Terminus 2.0](/terminus/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/terminus/terminus-3-0).
+You must update your plugin for Terminus 2.0. if you are a plugin author. Refer to [Terminus 2.0](/terminus/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/terminus/terminus-3-0).
 
 </Alert>
 
@@ -26,7 +26,7 @@ The plugin installation process differs depending on your Terminus version. Plea
 
 ### Terminus 3
 
-Terminus 3 ships with the plugin manager. You can use a Terminus command like the example below to install a plugin:
+Terminus 3 ships with a plugin manager. You can use a Terminus command like the example below to install a plugin:
 
 ```bash
 terminus self:plugin:install pantheon-systems/terminus-plugin-example
@@ -82,7 +82,7 @@ The plugin update process differs depending on your Terminus version. Please ref
 
 ### Terminus 3
 
-Terminus 3 ships with the plugin manager. You can use a Terminus command like the example below to update a plugin:
+Terminus 3 ships with a plugin manager. You can use a Terminus command like the example below to update a plugin:
 
 ```bash
 terminus self:plugin:update pantheon-systems/terminus-plugin-example
@@ -100,7 +100,7 @@ The process to uninstall a plugin differs depending on your Terminus version. Pl
 
 ### Terminus 3
 
-Terminus 3 ships with the plugin manager. You can use a Terminus command like the example below to uninstall a plugin:
+Terminus 3 ships with a plugin manager. You can use a Terminus command like the example below to uninstall a plugin:
 
 ```bash
 terminus self:plugin:uninstall pantheon-systems/terminus-plugin-example

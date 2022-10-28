@@ -86,7 +86,7 @@ This example provides the structural requirements for plugins to be recognized a
 
     A plugin is a specific set of files bundled together in a directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must be stored within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
 
-1. Download the composer.json file below and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`). Your plugin directory must contain a valid `composer.json` file for Terminus to recognize the directory as a plugin. 
+1. Download the `composer.json` file below and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`). Your plugin directory must contain a valid `composer.json` file for Terminus to recognize the directory as a plugin. 
 
   <Download file="composer.json" /> 
 
@@ -109,7 +109,7 @@ This example provides the structural requirements for plugins to be recognized a
 
   </Alert>
 
-1. Create a <code>src</code> directory within your plugin directory to add commands:
+1. Create a `src` directory within your plugin directory to add commands:
 
   ```bash
   mkdir $HOME/.terminus/plugins/hello-world/src
@@ -167,7 +167,7 @@ terminus hello -vvv
 
 You must complete the steps below if you want to share your plugin with others.
 
-1. Add a vendor name to the plugin name within the `composer.json` file. This makes your plugin distinguishable from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. For a plugin distributed by Pantheon (GitHub organization: `pantheon-systems`) we would change the name field to:
+1. Add a vendor name to the plugin name within the `composer.json` file. This makes your plugin distinguishable from other plugins that might share the same name. Most people use their GitHub user or organization name for the vendor. The name field for a plugin distributed by Pantheon (GitHub organization: `pantheon-systems`) would be:
 
   ```json
   {
@@ -175,7 +175,7 @@ You must complete the steps below if you want to share your plugin with others.
   }
   ```
 
-1. Add a PSR-4 compatible namespace to your plugin command class name to avoid conflict with internal or third-party commands. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):
+1. Add a PSR-4 compatible namespace to your plugin command class name to avoid conflict with internal or third-party commands. This should contain your vendor name and the plugin name. Add a `namespace` declaration to the top of your php file (e.g. `\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
 
   ```bash
   namespace Pantheon\TerminusHelloWorld\Commands;
@@ -229,7 +229,7 @@ You must complete the steps below if you want to share your plugin with others.
   }
   ```
 
-<Alert title={"Note"} type={"info"}>
+<Alert title="Note"  type="info" >
 
 To avoid conflicts between the dependencies of different plugins, Terminus 1 and 2 do not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor. Terminus 3 does not have this restriction.
 
@@ -237,7 +237,7 @@ To avoid conflicts between the dependencies of different plugins, Terminus 1 and
 
 ## Coding Standards
 
-Pantheon recommends adopting Terminus core standards if you plan to distribute your plugin and/or add it to an open source license and encourage contributions. Some basics principle to follow are:
+Pantheon recommends adopting Terminus core standards if you plan to distribute your plugin and/or add it to an open source license and encourage contributions. Some basic principles to follow are:
 
 - Ensure compatibility with PHP 5.5, 5.6 and 7
 - Follow [PSR-2 code style](http://www.php-fig.org/psr/psr-2/)
@@ -248,9 +248,9 @@ Pantheon recommends adopting Terminus core standards if you plan to distribute y
 
 We recommend following [semantic versioning](http://semver.org/) when versioning your plugins, just as Terminus does.
 
-You can specify that in the `compatible-version` section of your `composer.json` file if your plugin has a minimum required version of Terminus.
+You can specify this in the `compatible-version` section of your `composer.json` file if your plugin has a minimum required version of Terminus.
 
-1. Use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md). 
+1. Use the [standard composer version constraints syntax](https://getcomposer.org/doc/articles/versions.md).
 
 1. Make sure that your constraint expression does not accidentally include the next major version of Terminus if you change `compatible-version`. For example, `>=1.3 <2.0.0` is fine, but `>=1.3` is not.
 
@@ -347,7 +347,7 @@ The instructions in this section demonstrate how to set up simple functional tes
      composer test
     ```
 
-To add more tests, create more files with `.bats` extensions, and populate them with `@test` blocks as shown above. Tests consist of simple bash expressions; any command that returns a non-zero result code signifies failure. Refer the [documentation on writing BATS tests](https://github.com/sstephenson/bats#writing-tests) for more information.
+You can create more files with `.bats` extensions to add more tests. You must populate these files with `@test` blocks as shown above. Tests consist of simple bash expressions; any command that returns a non-zero result code signifies failure. Refer the [documentation on writing BATS tests](https://github.com/sstephenson/bats#writing-tests) for more information.
 
 ### Automating Tests
 
@@ -393,7 +393,7 @@ You can [configure your project tests to run automatically on Circle CI](https:/
 
   Your tests should run successfully on Circle CI.
 
-1. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's README.md file to show off your passing build status.
+1. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's `README.md` file to show off your passing build status.
 
 A more complete version of the plugin created above can be found at:
 [https://github.com/pantheon-systems/terminus-plugin-example](https://github.com/pantheon-systems/terminus-plugin-example)
