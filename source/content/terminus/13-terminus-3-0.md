@@ -54,4 +54,5 @@ The following commands are new to Terminus as of version 3.0:
 ## More Resources
 
 - [Terminus Guide](/terminus)
+- [Terminus PHP Compatibility](/terminus/supported-terminus#php-version-compatibility-matrix)
 - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

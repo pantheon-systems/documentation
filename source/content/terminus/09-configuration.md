@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Configuration File
+subtitle: Terminus Configuration File
 description: Learn how to configure your local Terminus configuration file.
 terminuspage: true
 categories: [develop]
@@ -18,9 +18,9 @@ You can create a configuration file to provide default values for common options
 
 ## Available Configurations
 
-Any command variable normally passed in the form of `--option=VALUE` is configurable. Values stored will be available regardless of which alias you use to run the command. Default values stored this way are overridden by those supplied on the command line.
+Any command variable normally passed in the form of `--option=VALUE` is configurable. Stored values are available regardless of which alias you use to run the command. Default values stored this way are overridden by those supplied on the command line.
 
-You can see all the available options for a given command (e.g., available `--fields` or `--format` options) by running it with the `--help` option in your terminal:
+Run the `--help` option in your terminal for a list of available options for a given command (e.g., available `--fields` or `--format` options):
 
 ![Terminus Help Command Example](../../images/terminus-help-example.png)
 
@@ -45,7 +45,7 @@ The example above does three things:
 
 - Terminus warns you when running commands in an environment set to Git mode, unaware if the command affects the codebase or not.
 
-- When the command `terminus auth:login` is run, it automatically provides the correct email address. This is useful if you find yourself logging in to multiple accounts frequently, and want to use your regular account by default.
+- The `terminus auth:login` command automatically provides the correct email address when it runs. This is useful if you find yourself logging in to multiple accounts frequently, and want to use your regular account by default.
 
   ```none
   [warning] This environment is in read-only Git mode. If you want to make changes to the codebase of this site (e.g. updating modules or plugins), you will need to toggle into read/write SFTP mode first.
@@ -53,7 +53,7 @@ The example above does three things:
 
   Defining `TERMINUS_HIDE_GIT_MODE_WARNING` disables that message, which is useful for those using Terminus for frequent changes to files, not code. <Popover content="See <a href='/pantheon-workflow'>Use the Pantheon WebOps Workflow</a> for more information on Code versus Content."/>
 
-- The Terminus Plugin [Pancakes](https://github.com/terminus-plugin-project/terminus-pancakes-plugin) lets you open your Pantheon site database with a SQL GUI client. Rather than define the app every time, this configuration will always use Sequel Ace, unless otherwise specified.
+- The Terminus Plugin [Pancakes](https://github.com/terminus-plugin-project/terminus-pancakes-plugin) lets you open your Pantheon site database with a SQL GUI client. Rather than define the app every time. This configuration always uses Sequel Ace unless otherwise specified.
 
 ## More Resources
 

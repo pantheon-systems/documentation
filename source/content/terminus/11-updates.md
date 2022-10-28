@@ -16,7 +16,7 @@ anchorid: updates
 
 ## Update Standalone Terminus
 
-You can update the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation to the newest version with command below:
+You can update the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation to the newest version with the command below:
 
 ```bash{promptUser: user}
 terminus self:update
@@ -32,13 +32,13 @@ You can update the Composer-managed version of Terminus that was installed with 
 
 1. Run the following command:
 
-```bash{promptUser: user}
-curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
-```
+    ```bash{promptUser: user}
+    curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
+    ```
 
 ### Update Terminus Homebrew Installation
 
-You can update to the newest version of the [Homebrew installation](/terminus/install#homebrew-installation) installation by running the command below:
+You can update to the newest version of the [Homebrew installation](/terminus/install#homebrew-installation) by running the command below:
 
 ```bash{promptUser: user}
 brew upgrade pantheon-systems/external/terminus
@@ -55,15 +55,19 @@ Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test 
 
 ### Nothing to install or update
 
-For Composer-managed Terminus installations, if the update command above returns an output that indicates no updates were found, delete the existing Terminus version (e.g. `$HOME/terminus`) and re-run the following install command:
+For Composer-managed Terminus installations, if the update command above returns an output that indicates no updates were found:
 
-```bash{promptUser: user}
-rm -rf $HOME/terminus
-mkdir $HOME/terminus
-cd $HOME/terminus
-curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-php installer.phar install
-```
+1. Delete the existing Terminus version (e.g. `$HOME/terminus`).
+
+1. Re-run the following install command:
+
+    ```bash{promptUser: user}
+    rm -rf $HOME/terminus
+    mkdir $HOME/terminus
+    cd $HOME/terminus
+    curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
+    php installer.phar install
+    ```
 
 ### Self:update not defined
 
