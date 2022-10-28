@@ -35,21 +35,21 @@ Terminus must be authenticated before you can execute most commands. You must en
 
 ## Bash Variables
 
-One of the ways Terminus can be used in scripting is the generation of variables. In the example below, we use the output of `terminus multidev:list` to create an environment variable with all Multidev environments:
+Terminus can generate variables for scripting. In the example below, `terminus multidev:list` is used to create an environment variable with all Multidev environments:
 
 ```bash
 PANTHEON_MULTIDEV_LIST="$(terminus multidev:list -n ${TERMINUS_SITE} --format=list --field=Name)"
 ```
 
-This example assumes the variable `TERMINUS_SITE` is already set. Now you can iterate through `$PANTHEON_MULTIDEV_LIST` using something like a `while read` loop to perform tasks on each Multidev environment.
+This example assumes the variable `TERMINUS_SITE` is already set. You can iterate through `$PANTHEON_MULTIDEV_LIST` using a `while read` loop to perform tasks on each Multidev environment.
 
 ## Interactive Prompts
 
-Commands that normally require user interaction must be bypassed with the appropriate flag. For most Terminus commands, the flags `-y` or `--yes` will bypass requests to confirm actions.
+Commands that normally require user interaction must be bypassed with the appropriate flag. The flags `-y` or `--yes` will bypass requests to confirm actions for most Terminus commands.
 
 ## Example Bash Scripts
 
-### Take a backup of the live environment of all sites in an organization
+### Take a backup of the Live environment of all sites in an organization
 
 The script in this example goes through every site in an organization, skips any sites that are frozen, and creates a backup of the Live environment. This script requires that you set the variable `ORG_UUID` within the script itself. You can find the UUID using `terminus org:list`.
 
@@ -84,7 +84,7 @@ while read -r PANTHEON_SITE_NAME; do
 done <<< "$PANTHEON_SITES"
 ```
 
-### Save the PHP version of the live environment of all sites in an organization to a CSV file
+### Save the PHP version of the Live environment of all sites in an organization to a CSV file
 
 This example saves the output of various Terminus commands to variables for reuse, similar to the example above. 
 

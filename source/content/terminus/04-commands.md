@@ -15,7 +15,7 @@ This section provides a comprehensive list of Terminus commands.
 
 <Alert title="Note" type="info">
 
-If you would like additional information for a given command (for example, available `--format` options) run the command with the `--help` flag in your terminal.
+If you would like additional information for a specific Terminus command (for example, available `--format` options) run the command with the `--help` flag in your terminal.
 
 </Alert>
 
