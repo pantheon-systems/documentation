@@ -186,6 +186,31 @@ Unable to negotiate with 203.0.113.123 port 2222: no matching host key type foun
        PubkeyAcceptedAlgorithms +ssh-rsa
    ```
 
+### MacOS Ventura unable to connect SSH-keys
+
+[MacOS Ventura](https://www.apple.com/newsroom/2022/10/macos-ventura-is-now-available/) was just released last Oct 24, 2022.
+
+There are some customers that reported that their SSH suddenly cannot connect and is returning `no matching host key type found. Their offer: ssh-rsa` error or something similar.
+
+**Solution**: Until the key type is updated on the Pantheon platform, add `ssh-rsa` to the accepted algorithms in `~/.ssh/config`:
+
+   1. Look for `~/.ssh/config` file. If none present, create it using `touch`:
+   
+   ```bash{promptUser: winshell}
+   cd ~/.ssh/
+   touch config
+   ```
+
+   2. Copy/paste the following into config:
+
+   ```none:title=~/.ssh/config
+   Host *.drush.in
+       # The settings on the next two lines are temporary until Pantheon updates the available key types.
+       # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
+       HostkeyAlgorithms +ssh-rsa
+       PubkeyAcceptedAlgorithms +ssh-rsa
+   ```
+
 ### Control Path Error
 
 You may receive the following error:
