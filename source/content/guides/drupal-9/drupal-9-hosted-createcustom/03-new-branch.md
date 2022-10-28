@@ -5,7 +5,7 @@ description:
 cms: "Drupal 9"
 categories: [develop]
 tags: [code, launch, migrate, site, updates]
-contributors: [wordsmither]
+contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
 permalink: docs/guides/drupal-9-hosted-createcustom/new-branch
 anchorid: new-branch
