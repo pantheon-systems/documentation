@@ -16,11 +16,11 @@ reviewed: "2022-03-25"
 
 This section provides information on how to install and authenticate Terminus.
 
-Terminus is available for macOS and Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then install Terminus in the Linux shell.
+Terminus is available for macOS and Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), and then install Terminus in the Linux shell.
 
 Some Terminus commands use SSH authentication. You may want to consider [generating and adding SSH keys](/ssh-keys/) to your account before you continue.
 
-## Requirements
+## Terminus Requirements
 
 ### Package Manager
 
@@ -44,13 +44,13 @@ Some Terminus commands use SSH authentication. You may want to consider [generat
 
 There are several ways to install Terminus, depending on your use case:
 
-- For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus-phar).
-- If you are using a Mac, you can [install using homebrew](#homebrew-installation).
-- If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the Git repository.
+- Self-contained Terminus executable:[install terminus.phar](#standalone-terminus-phar)
+- Mac:[install using homebrew](#homebrew-installation)
+- Contribute to the Terminus project: [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the Git repository
 
 ### Standalone Terminus PHAR
 
-The following commands will:
+The commands below will:
 
 - Create a `terminus` folder in your home directory (`~/`)
 - Get the latest release tag of Terminus
@@ -68,9 +68,9 @@ The following commands will:
 
 ### Homebrew Installation
 
-The Terminus application is published to [Homebrew](https://brew.sh/). 
+The Terminus application is published to [Homebrew](https://brew.sh/).
 
-Run the command below to install:
+Run the command below to install Terminus:
 
 ```bash
 brew install pantheon-systems/external/terminus
@@ -82,7 +82,7 @@ brew install pantheon-systems/external/terminus
 
 You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. Refer to [Machine Tokens](/machine-tokens/) for more information.
 
-1. Navigate to the **User Dashboard**, select **Account**, and then select  **Machine Tokens** to [create your machine token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
+1. Navigate to the **User Dashboard**, select **Account**, and then select **Machine Tokens** to [create your machine token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
 1. Use your machine token to authenticate into Terminus, replacing <email@example.com> and <machine_token>:
 
@@ -90,7 +90,7 @@ You must log in with a machine token after the installation completes. A machine
   terminus auth:login --email=<email@example.com> --machine-token=<machine_token>
   ```
 
-    - Machine tokens are keyed to the email address associated with your Pantheon user account. After a token has been used to authenticate Terminus, future sessions are authenticated with your email address:
+    - Machine tokens are keyed to the email address associated with your Pantheon user account. Future sessions are authenticated with your email address after a token has been used to authenticate Terminus:
 
   ```bash{promptUser: user}
   terminus auth:login --email <email@example.com>

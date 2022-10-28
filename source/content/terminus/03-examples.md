@@ -15,7 +15,6 @@ anchorid: examples
 
 This section provides information on Terminus command structure and command examples.
 
-
 ## Command Structure
 
 ### Basic Format
@@ -28,7 +27,7 @@ terminus command:subcommand <site>.<env>
 
 ### More Information Command
 
-For more information on any command, you can run:
+You can run more information on any command:
 
 ```bash{promptUser: user}
 terminus command:subcommand -h
@@ -36,7 +35,7 @@ terminus command:subcommand -h
 
 ### List of Commands
 
-Or for a list of all available commands:
+You can get a list of all available commands:
 
 ```bash{promptUser: user}
 terminus list
@@ -44,39 +43,20 @@ terminus list
 
 ### site.env
 
-Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
+Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, and should not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
 
 ![terminus env:clear-cache your-awesome-site.live](../../images/terminus-example-cc.png)
 
 <Accordion title="Learn More" id="identify-site" icon="lightbulb">
 
-<dl>
+**Site Label**
+Human readable, such as `Your Awesome Site`, entered during site creation and displayed in the Site Dashboard.
 
-<dt>Site Label</dt>
+**Site Name**
+Machine readable, such as `your-awesome-site`, either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/guides/domains).
 
-<dd>
-
-Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.
-
-</dd>
-
-<dt>Site Name</dt>
-
-<dd>
-
-Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/guides/domains).
-
-</dd>
-
-<dt>Environment Name</dt>
-
-<dd>
-
-Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.
-
-</dd>
-
-</dl>
+**Environment Name**
+Machine readable, such as `dev`, `test`, `live`, or `bug123`, which refers to the target site environment on Pantheon.
 
 You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/guides/account-mgmt/workspace-sites-teams/workspaces#retrieve-the-workspace-uuid). For example:
 
@@ -86,7 +66,7 @@ You can also find your site's machine name using the Terminus command `site:info
 
 ### Automatic Site and Environment Detection
 
-Terminus automatically detects the site and environment if a `<site>.<env>` parameter is not provided to a command that requests one. Terminus detects and operates from the local copy and current branch of the Pantheon site checked out at the current working directory. 
+Terminus automatically detects the site and environment if a `<site>.<env>` parameter is not provided to a command that requests one. Terminus detects and operates from the local copy and current branch of the Pantheon site checked out at the current working directory.
 
 ```bash
 git clone ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git mysite
@@ -98,13 +78,19 @@ The example above is equivalent to `terminus env:info mysite.dev`.
 
 ### Drush and WP-CLI
 
-Pantheon supports running [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
+Pantheon supports [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
 
-Start with the [basic command structure described above](#command-structure). The commands to invoke Drush and WP-CLI are `remote:drush` and `remote:wp`, respectively. Include `--` followed by the Drush or WP-CLI command and all arguments. For example:
+1. Use the [basic command structure described above](#command-structure). 
 
-![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
+  The commands to invoke Drush and WP-CLI are:
+   - `remote:drush`
+   - `remote:wp`
 
-Refer to [Drupal Drush Command-Line Utility](/guides/drush) and [Using WP-CLI On The Pantheon Platform](/guides/wp-cli) for more information.
+1. Include `--` followed by the Drush or WP-CLI command and all arguments. For example:
+
+  ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
+
+Refer to [Drupal Drush Command-Line Utility](/guides/drush) and [Use WP-CLI On The Pantheon Platform](/guides/wp-cli) for more information.
 
 ## Apply Updates
 
@@ -119,7 +105,7 @@ You can quickly apply updates from the command line with Terminus, including upd
 
 Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress) and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied after they have been merged into the upstream and become available for a site.
 
-<Alert title={"Note"} type={"info"}>
+<Alert title="Note"  type="info" >
 
 Refer to [Upstream Updates](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) for instructions on how to resolve merge conflicts.
 
@@ -137,13 +123,13 @@ Refer to [Upstream Updates](/core-updates#apply-upstream-updates-manually-from-t
   terminus env:commit my-site.dev --message="My code changes"
   ```
 
-  <Alert title={"Warning"} type={"danger"}>
+  <Alert title="Warning" type="danger" >
 
-  The following command will permanently delete all uncommitted SFTP changes. If you want to keep SFTP changes, commit your work before proceeding.
+  The following command will permanently delete all uncommitted SFTP changes. Commit your work before proceeding if you want to keep SFTP changes.
 
   </Alert>
 
-1. Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:
+1. Set the environment's connection mode to Git to pull updates into the site from Pantheon's upstream:
 
   ```bash{promptUser: user}
   terminus connection:set my-site.dev git
@@ -215,7 +201,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. Refer to [Extend with Plugins](/terminus/plugins) for instructions on how to install Terminus plugins.
+Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to [Extend with Plugins](/terminus/plugins) for instructions on how to install Terminus plugins.
 
 1. Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 
@@ -236,9 +222,9 @@ Terminus supports third-party plugins that extend functionality by adding new co
 
 1. Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:
 
-  <Alert title={"Warning"} type={"danger"}>
+  <Alert title="Warning" type="danger" >
 
-  The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
+  The following command will permanently delete all uncommitted SFTP changes. Commit your work before continuing if you want to keep SFTP changes.
 
   </Alert>
 
@@ -246,7 +232,7 @@ Terminus supports third-party plugins that extend functionality by adding new co
   terminus connection:set my-site.dev git
   ```
 
-1. Review output then apply the mass update by removing the `--dry-run` option:
+1. Review the output and then apply the mass update by removing the `--dry-run` option:
 
   ```bash{promptUser: user}
   terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb
@@ -254,7 +240,7 @@ Terminus supports third-party plugins that extend functionality by adding new co
 
 ## Deploy Code
 
-When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live.
+You can use Terminus to test a new set of changes. Deploy code from development environments up to the Test environment while pulling the database and files down from Live.
 
 1. Run the command below to deploy the code:
 
@@ -262,7 +248,7 @@ When you're ready to test a new set of changes, use Terminus to deploy code from
   terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates"
   ```
 
-1. Ensure you clear the site after each deployment:
+1. Clear the site after each deployment:
 
   ```bash{promptUser: user}
   terminus env:clear-cache <site>.test
@@ -274,7 +260,7 @@ When you're ready to test a new set of changes, use Terminus to deploy code from
   terminus env:deploy my-site.live --note="Deploy core and contrib updates" 
   ```
 
-1. Ensure you clear the site after each deployment:
+1. Clear the site after each deployment:
 
   ```bash{promptUser: user}
   terminus env:clear-cache <site>.live
@@ -282,19 +268,19 @@ When you're ready to test a new set of changes, use Terminus to deploy code from
 
 ## Reset Dev Environment to Live
 
-There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live:
+There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to your Live state:
 
-- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/guides/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
+- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/guides/multidev) environment,you can unblock deploys by resetting the Dev environment to reflect the Live environment state.
 
-- Code changes have been force-pushed or incorrectly merged into the Dev environment creating a large or complex Git history that you wish to undo.
+- Code changes were force-pushed or incorrectly merged into the Dev environment creating a large or complex Git history that you wish to undo.
 
-- The state of the Dev environment is stale or otherwise massively out of date with the Live environment with many unneeded changes you wish to abandon.
+- The state of the Dev environment is stale or out of date with the Live environment with many unneeded changes you want to abandon.
 
 - The Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
 
 Follow the steps below to reset Dev to Live.
 
-1. Clone the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):
+1. Clone the site's codebase to your local machine if you have not done so already (replace `awesome-site` with your site name):
 
   ```bash{promptUser: user}
   terminus connection:info awesome-site.dev --fields='Git Command' --format=string
@@ -340,28 +326,28 @@ Every site has an assigned upstream to deliver [one-click updates](/core-updates
 
   As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
 
-  <Alert title={"Note"} type={"info"}>
+  <Alert title="Note"  type="info" >
 
-  To set an empty upstream for Composer-managed sites, refer to [Serving Sites from the Web Subdirectory](/nested-docroot/).
+  Refer to [Serving Sites from the Web Subdirectory](/nested-docroot/) to set an empty upstream for Composer-managed sites.
 
   </Alert>
 
-1. Apply updates to the site to bring in the new codebase after setting the upstream. Refer to the [example usage above](#applying-updates) for details on how to apply updates.
+1. Apply updates to the site to bring in the new codebase after setting the upstream. Refer to the [example usage above](#applying-updates) for information on how to apply updates.
 
 ## Troubleshoot Upstreams
 
 ### Terminus Error: Permission to change the upstream of this site
 
-If you encounter an error when setting a site's upstream:
+If you encounter this error when setting a site's upstream:
 
 ```bash{outputLines: 2}
 terminus site:upstream:set $SITE $UPSTREAM
  [error]  You do not have permission to change the upstream of this site.
 ```
 
-Confirm that the user you are authenticated as has the correct [site-level permissions](/guides/account-mgmt/workspace-sites-teams/teams#site-level-permissions).
+1. Confirm that the authenticated user account has the correct [site-level permissions](/guides/account-mgmt/workspace-sites-teams/teams#site-level-permissions).
 
-To check the currently authenticated user:
+1. Check the currently authenticated user:
 
 ```bash{promptUser: user}
 terminus auth:whoami

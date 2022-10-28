@@ -17,15 +17,9 @@ reviewed: "2022-10-20"
 
 Terminus is a command line interface that provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, as well as scripting and much more.
 
-<Enablement title="Command Line Training" link="https://pantheon.io/learn-pantheon?docs">
+## Terminus Features
 
-Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers on-demand training to help development teams master the platform and improve internal WebOps.
-
-</Enablement>
-
-## Usage
-
-Use Terminus to perform these and [other operations](/terminus/commands/):
+Terminus is a powerful tool that allows you:
 
 - Create a new site
 - Create and delete Multidev environments
@@ -33,21 +27,22 @@ Use Terminus to perform these and [other operations](/terminus/commands/):
 - Check for and apply upstream updates
 - Deploy code from one environment to another
 - Run [Drush](/guides/drush/) and [WP-CLI](/guides/wp-cli/) commands
+- Perform [other operations](/terminus/commands/)
 
 
-## Contribute
+## Contribute to Terminus
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, you will need to update your plugin for Terminus 2. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. See [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
+You must update your plugin for Terminus 2 if you are a plugin author. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. Refer to [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
 
 </Alert>
 
-Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
+Terminus is open source. You can view the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
 
 ## Support
 
-Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus's GitHub page](https://github.com/pantheon-systems/terminus/issues/new).
+Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). You can create an issue on [Terminus's GitHub page](https://github.com/pantheon-systems/terminus/issues/new) if you don't see your bug or feedback listed. 
 
 Need help with Terminus? [Contact Support](https://dashboard.pantheon.io/#support/support/all).
 
