@@ -69,8 +69,8 @@ const items = [
     title: "Example Usage",
   },
   {
-    id: "docs-terminus-commands",
-    link: "/terminus/commands",
+    id: "docs-guides-terminus-commands",
+    link: "/guides/terminus/commands",
     title: "Commands",
   },
   {
@@ -181,7 +181,7 @@ class CommandsTemplate extends React.Component {
               <Navbar
                 title={`Terminus Command Reference`}
                 items={items}
-                activePage="/terminus/commands"
+                activePage="/guides/terminus/commands"
                 className="manual-guide-toc"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
