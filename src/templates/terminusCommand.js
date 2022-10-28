@@ -235,7 +235,7 @@ class CommandsTemplate extends React.Component {
                     </table>
 
                     <Partial file={`terminus/${slug}.md`} />
-                    <Link to="/terminus/commands">Back to all commands</Link>
+                    <Link to="/guides/terminus/commands">Back to all commands</Link>
                   </div>
                 </div>
               </div>

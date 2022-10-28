@@ -138,11 +138,11 @@ class TerminusTemplate extends React.Component {
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const ifCommandsDate =
-      node.fields.slug == "/terminus/commands"
+      node.fields.slug == "/guides/terminus/commands"
         ? this.props.data.terminusReleasesJson.published_at
         : node.frontmatter.reviewed
     const ifCommandsISO =
-      node.fields.slug == "/terminus/commands"
+      node.fields.slug == "/guides/terminus/commands"
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
 
