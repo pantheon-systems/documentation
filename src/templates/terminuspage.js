@@ -68,8 +68,8 @@ const items = [
     title: "Example Usage",
   },
   {
-    id: "docs-terminus-commands",
-    link: "/terminus/commands",
+    id: "docs-guides-terminus-commands",
+    link: "/guides/terminus/commands",
     title: "Commands",
   },
   {
