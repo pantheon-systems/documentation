@@ -200,7 +200,7 @@ Some users have reported that their SSH suddenly fails to connect and returns th
 
 1. Locate the `~/.ssh/config` file. If the file does not exist, create it using `touch`:
 
-   ```bash{promptUser: winshell}
+   ```bash{promptUser: user}
    cd ~/.ssh/
    touch config
    ```
