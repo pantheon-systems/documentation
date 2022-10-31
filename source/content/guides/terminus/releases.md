@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Command Reference
+subtitle: Releases
 description: Look up Terminus commands.
 layout: guide
 categories: [develop]
@@ -9,6 +9,11 @@ permalink: docs/guides/terminus
 anchorid: terminus
 ---
 
-Test commands.
+Test releases.
 
-<Commands />
+<TerminusVersion text="Update to the Current Release" />
+
+## Changelog
+
+<Releases />
+
