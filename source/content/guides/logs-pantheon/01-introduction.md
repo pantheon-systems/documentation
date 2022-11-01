@@ -26,7 +26,7 @@ Log files are destroyed during appserver migration (a standard part of regular p
 
 | Log                   | Retention Policy           | Comments                                                |
 |:--------------------- |:--------------------- |:------------------------------------------------------- |
-| **error.log**.        |                       | A legacy file that usually advises about an nginx upgrade or modifying server modules.|
+| **error.log**         |                       | A legacy file that usually advises about an nginx upgrade or modifying server modules.|
 | **newrelic.log**          |                       | New Relic log; check if an environment is not logging.  |
 | **nginx-access.log**      | Up to 60 days of logs | Web server access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/guides/logs-pantheon/nginx-access-logs). |
 | **nginx-error.log**       | 1MB of log data       | Web server error log.                                   |
