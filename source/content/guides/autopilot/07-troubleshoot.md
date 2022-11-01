@@ -362,7 +362,7 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 
 There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
 
-Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for unexpected output or errors. Alternatively you can use the command `$SITE.autopilot` for the Autopilot environment
+Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for an unexpected output or errors. Alternatively, you can use the command `$SITE.autopilot` for the Autopilot environment.
   
 ### Solution
   
