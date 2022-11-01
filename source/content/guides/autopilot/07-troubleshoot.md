@@ -9,8 +9,8 @@ layout: guide
 showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
-editpath: autopilot/05-troubleshoot.md
-reviewed: "2022-04-21"
+editpath: autopilot/07-troubleshoot.md
+reviewed: "2022-11-01"
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
@@ -354,16 +354,6 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 
 </Accordion>
 
-## More Resources
-
-- [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
-
-- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
-
-- [Autopilot FAQs](/guides/autopilot/autopilot-faq)
-
-- [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
-
 ## CLI Tool Failed
 
 <Accordion title="We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected." id="failed-cli-tool" icon="info-sign">
@@ -407,3 +397,14 @@ An issue with Autopilot occurred because the WordPress Dev, Test, or Live databa
 Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
   
 </Accordion>
+
+## More Resources
+
+- [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
+
+- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
+
+- [Autopilot FAQs](/guides/autopilot/autopilot-faq)
+
+- [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
+
