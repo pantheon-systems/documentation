@@ -18,7 +18,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 #### <a name="20221018" class="release-update"></a>Replace mu-plugin with a format consistent with pantheon-systems/pantheon-mu-plugin
 
-This commit aligns the mu-plugin format to [our standalone repository](https://github.com/pantheon-systems/pantheon-mu-plugin), and will allow for the mu-plugin to receive updates from that repo whenever an updated version of WordPress is released. If you'd like to suggest changes to our mu-plugin, create an issue or open a PR [here](https://github.com/pantheon-systems/pantheon-mu-plugin). 
+This commit aligns the mu-plugin format to [our standalone repository](https://github.com/pantheon-systems/pantheon-mu-plugin), and will allow for the mu-plugin to receive updates from that repo whenever an updated version of WordPress is released. If you'd like to suggest changes to our mu-plugin, create an issue or open a PR [in `pantheon-mu-plugin` issues](https://github.com/pantheon-systems/pantheon-mu-plugin/issues). 
 
 The commit also adds a standardized mu-plugin `loader.php` file that additional mu-plugins can be added to manually if more are necessary to include in our default upstreams in the future.
 
