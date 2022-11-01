@@ -34,20 +34,6 @@ Terminus 3 ships with the plugin manager. This means that to install a plugin yo
 terminus self:plugin:install pantheon-systems/terminus-plugin-example
 ```
 
-### Terminus 2
-
-Add plugins within the `$HOME/.terminus/plugins` directory on your local workstation. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist:
-
-```bash{promptUser: user}
-mkdir -p $HOME/.terminus/plugins
-```
-
-Download a zip archive of the plugin's most recent release, then install it by unpacking the archive within `$HOME/.terminus/plugins`:
-
-```bash{promptUser: user}
-curl https://github.com/pantheon-systems/terminus-plugin-example/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
-```
-
 <Accordion title="Composer and Git - Explore Advanced Installation Methods (Optional)" id="advance-installs" icon="lightbulb">
 
 #### Install via Composer
@@ -84,10 +70,6 @@ Terminus 3 ships with the plugin manager. This means that to update a plugin you
 terminus self:plugin:update pantheon-systems/terminus-plugin-example
 ```
 
-### Terminus 2
-
-Delete the plugin from the `$HOME/.terminus/plugins` directory. Download the latest version of the plugin and move the plugin directory into the `$HOME/.terminus/plugins` directory.
-
 ## Uninstall Plugins
 
 Depending on your Terminus version, the plugin uninstallation process is different. Please refer to the appropriate section below.
@@ -99,7 +81,3 @@ Terminus 3 ships with the plugin manager. This means that to uninstall a plugin 
 ```bash
 terminus self:plugin:uninstall pantheon-systems/terminus-plugin-example
 ```
-
-### Terminus 2
-
-Delete the plugin from the `$HOME/.terminus/plugins` directory.

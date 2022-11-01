@@ -78,91 +78,6 @@ The provided example command should display the following when run:
 ```
 Modify the `@command` line to change the name of your command. You may rename the source file the command is in as well, as long as it ends in `Command.php`.
 
-## Create the Example Plugin using Terminus 2
-
-This example provides the structural requirements for plugins to be recognized and loaded by Terminus.
-
-### 1. Create Plugin Directory
-
-A plugin is a specific set of files bundled together in a directory. The first step in creating a new plugin is to create that directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must live within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
-
-Create a directory for your new plugin (e.g. `hello-world`):
-
-```bash
-mkdir $HOME/.terminus/plugins/hello-world
-```
-
-### 2. Create composer.json
-
-In order for Terminus to recognize the directory as a plugin, the directory must contain a valid `composer.json` file. Download the following file and move it to your plugin's root directory (e.g. `$HOME/.terminus/plugins/hello-world`):
-
-<Download file="composer.json" />
-
-```json
-{
-  "name": "my-username/terminus-hello-world",
-  "description": "An Hello, World Terminus command",
-  "type": "terminus-plugin",
-  "extra": {
-    "terminus": {
-      "compatible-version": "^3"
-    }
-  }
-}
-```
-
-<Alert title={"Note"} type={"info"}>
-
-The `name` attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist).
-
-</Alert>
-
-### 3. Add Commands
-
-Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
-
-Create a <code>src</code> directory within your plugin directory:
-
-```bash
-mkdir $HOME/.terminus/plugins/hello-world/src
-```
-
-Download the following file and move it to your plugin's `src` directory (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
-
-<Download file="HelloCommand.php" />
-
-```php
-use Pantheon\Terminus\Commands\TerminusCommand;
-
-class HelloCommand extends TerminusCommand
-{
-    /**
-     * Print the classic message to the log.
-     *
-     * @command hello
-     */
-    public function sayHello()
-    {
-        $this->log()->notice("Hello, World!");
-    }
-}
-
-```
-
-You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that its name is `hello`.
-
-The command should now be recognized and loaded by Terminus:
-
-```bash
-terminus hello
-```
-
-The provided example command should display the following when run:
-
-```bash
-[notice] Hello, World!
-```
-
 ## Debug
 
 Run the command with the verbose option if it does not work as expected:
@@ -252,7 +167,7 @@ In order to avoid conflicts between the dependencies of different plugins, Termi
 
 ## Coding Standards
 
-While not strictly necessary, if you plan to distribute your plugin, and especially if you plan to add an open source licence and encourage contributions, it may be a good idea to adopt the Terminus core standards. Some basics to follow are:
+While not strictly necessary, if you plan to distribute your plugin, and especially if you plan to add an open source license and encourage contributions, it may be a good idea to adopt the Terminus core standards. Some basics to follow are:
 
 - Ensure for compatibility with PHP 5.5, 5.6 and 7.
 - Follow [PSR-2 code style](http://www.php-fig.org/psr/psr-2/).
