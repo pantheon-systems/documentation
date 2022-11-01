@@ -76,7 +76,7 @@ This action will result in a GitHub repository created for this new codebase und
 
 <Tab title="WordPress Backend" id="wordpress-install">
  
-Create a [Decoupled WordPress Composer Managed upstream](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) using the Pantheon Dashboard.
+Create a [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) upstream using the Pantheon Dashboard.
  
 Alternatively, you can run `terminus build:project:create`:
 
@@ -148,7 +148,7 @@ For information on additional options, refer to the [Command Options](https://gi
 ## Frontend Starter Configurations
 
 <TabList>
-<Tab title="Drupal & Next.js" id="nextdrupal-front-install" active={true}>
+<Tab title="Drupal + Next.js" id="nextdrupal-front-install" active={true}>
 
 The `next-drupal-starter` is designed as a starting point for a Next.js site that consumes data from a Drupal backend - specifically a Drupal backend
 configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
@@ -175,7 +175,7 @@ The command `create-next-app` uses the `yarn` package manager by default. Omit t
 </Tab>
 
 
-<Tab title="WordPress & Next.js" id="nextwordpress-front-install" active={true}>
+<Tab title="WP + Next.js" id="nextwordpress-front-install" active={true}>
 
 The `next-wordpress-starter` is designed as a starting point to for a Next.js site that consumes data from a WordPress backend - specifically a WordPress
 backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
@@ -201,7 +201,7 @@ The `create-next-app` command uses the `yarn` package manager by default. Omit t
 </Tab>
  
 
-<Tab title="WordPress & Gatsby" id="wordpressgatsby-front-install" active={true}> 
+<Tab title="WP + Gatsby" id="wpsgatsby-front-install" active={true}> 
 
 The `gatsby-wordpress-starter` is designed as a starting point for a Gatsby site that consumes data from a WordPress backend - specifically a WordPress
 backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
