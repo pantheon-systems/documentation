@@ -9,8 +9,8 @@ layout: guide
 showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
-editpath: autopilot/05-troubleshoot.md
-reviewed: "2022-03-30"
+editpath: autopilot/07-troubleshoot.md
+reviewed: "2022-11-01"
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
@@ -354,6 +354,50 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 
 </Accordion>
 
+## CLI Tool Failed
+
+<Accordion title="We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected." id="failed-cli-tool" icon="info-sign">
+
+### Diagnosis
+
+There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
+
+Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for an unexpected output or errors. Alternatively, you can use the command `$SITE.autopilot` for the Autopilot environment.
+  
+### Solution
+  
+After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Quicksilver is Unavailable
+
+<Accordion title="We could not execute some Quicksilver scripts on this site." id="no-quicksilver" icon="info-sign">
+
+### Issue
+
+Quicksilver scripts failed to execute on the site. 
+  
+### Solution
+  
+Contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Database Could Not Be Updated
+
+<Accordion title="We ran into an issue with Autopilot because the database could not be updated." id="no-database-updates" icon="info-sign">
+
+### Issue
+
+An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated. 
+  
+### Solution
+  
+Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
+  
+</Accordion>
+
 ## More Resources
 
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
@@ -363,3 +407,4 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
+
