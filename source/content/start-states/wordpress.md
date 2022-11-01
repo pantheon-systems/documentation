@@ -14,6 +14,16 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
+### 2022-11-01
+
+#### <a name="20221018" class="release-update"></a>Replace mu-plugin with a format consistent with pantheon-systems/pantheon-mu-plugin
+
+This commit aligns the mu-plugin format to [our standalone repository](https://github.com/pantheon-systems/pantheon-mu-plugin), and will allow for the mu-plugin to receive updates from that repo whenever an updated version of WordPress is released. If you'd like to suggest changes to our mu-plugin, create an issue or open a PR [here](https://github.com/pantheon-systems/pantheon-mu-plugin). 
+
+The commit also adds a standardized mu-plugin `loader.php` file that additional mu-plugins can be added to manually if more are necessary to include in our default upstreams in the future.
+
+## Previous Releases
+
 ### 2022-08-30
 
 #### <a name="20220818" class="release-update"></a>Ensure REST API responses are not cached for authenticated users
@@ -25,8 +35,6 @@ REST API responses were being cached for logged-in users, which was causing issu
 When the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin is active, WordPress sites on Pantheon have two distinct but similarly-named WP-CLI commands: `wp pantheon cache` (which is provided by Pantheon Advanced Page Cache) and `wp pantheon-cache` (which is provided by the Pantheon mu-plugin. This leads to confusion about which Pantheon cache WP-CLI command to use or which subcommands are available for which parent commands.
 
 This change aims to help eliminate this confusion by deprecating `wp pantheon-cache` and moving the `set-maintenance-mode` subcommand under `pantheon cache`. When the `pantheon-cache` command is run, a deprecation notice will be displayed with the updated command and the function will be executed. A deprecation notice has also been added to the text that displays when a user runs `wp pantheon-cache set-maintenance-mode --help`. The `pantheon-cache` command will be removed and display an error when run in a future release, and fully removed entirely in a release following that.
-
-## Previous Releases
 
 ### 2022-07-12
 
