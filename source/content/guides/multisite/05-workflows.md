@@ -139,7 +139,7 @@ In a stock WordPress install (e.g. no custom plugins), there are a few key place
 Try running `wp search-replace` against this limited subset of data:
 
 ```bash
-terminus remote:wp <site>.<env> -- search-replace <old-domain> <new-domain> wp_blogs wp_site $(terminus remote:wp <site>.<env> -- db tables "wp_*options" --network | paste -s -d ' ' -) --url=<old-domain>
+terminus remote:wp <site>.<env> -- search-replace <old-domain> <new-domain> wp_blogs wp_site $(terminus remote:wp <site>.<env> -- db tables "wp_*options" --network --url=<old-domain> | paste -s -d ' ' -) --url=<old-domain>
 ```
 
 In this example:

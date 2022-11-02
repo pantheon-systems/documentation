@@ -43,7 +43,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
   Leave the default location of `~/.ssh/id_rsa` as is, unless you have reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
 
 1. Set a passphrase for better security.
-  
+
    We recommend using a passphrase, but it can conflict with some tools.
 
 1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created. 
@@ -61,16 +61,16 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
    ```
 
 1. Start the SSH agent.
-   
+
    * For Linux and Mac users, run `eval` to start the agent. The `Agent pid` output confirms it's started:
 
       ```bash{outputLines: 2}
       eval `ssh-agent`
       Agent pid 86810
       ```
-   
+
    * For Windows users, run `start-ssh-agent`. The output confirms the agent has started. Enter the passphrase, if it was previously set.
-   
+
       ```bash{promptUser: user}
       start-ssh-agent
       ```
@@ -85,7 +85,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
       Identity added: /c/Users/[user]/.ssh/id_rsa ([user@machine_name])
       ```
 
-1. For Linux and Mac users, add the newly created key to the ssh-agent:
+1. Add the newly created key to the ssh-agent if you are using Linux or Mac:
 
    ```bash{promptUser: user}
    ssh-add ~/.ssh/id_rsa
@@ -178,6 +178,35 @@ Unable to negotiate with 203.0.113.123 port 2222: no matching host key type foun
    
    2. Copy/paste the following into config:
    
+   ```none:title=~/.ssh/config
+   Host *.drush.in
+       # The settings on the next two lines are temporary until Pantheon updates the available key types.
+       # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
+       HostkeyAlgorithms +ssh-rsa
+       PubkeyAcceptedAlgorithms +ssh-rsa
+   ```
+
+### MacOS Ventura unable to connect SSH-keys
+
+[MacOS Ventura](https://www.apple.com/newsroom/2022/10/macos-ventura-is-now-available/) was released on October 24, 2022.
+
+Some users have reported that their SSH suddenly fails to connect and returns the error below or a similar error.
+
+```bash
+ no matching host key type found. Their offer: ssh-rsa
+ ```
+
+**Solution**: You must add `ssh-rsa` to the accepted algorithms in the `~/.ssh/config` file as a workaround until the key type is updated on the Pantheon platform:
+
+1. Locate the `~/.ssh/config` file. If the file does not exist, create it using `touch`:
+
+   ```bash{promptUser: user}
+   cd ~/.ssh/
+   touch config
+   ```
+
+1. Add the code below to the `~/.ssh/config` file:
+
    ```none:title=~/.ssh/config
    Host *.drush.in
        # The settings on the next two lines are temporary until Pantheon updates the available key types.

@@ -1,3 +1,10 @@
+---
+contenttype: partial
+newcms: [wordpress]
+product: []
+integration: []
+reviewed: ""
+---
 
 WordPress sites with custom domains configured on multiple environments may see references to the wrong platform domain after cloning the database from one environment to another.
 

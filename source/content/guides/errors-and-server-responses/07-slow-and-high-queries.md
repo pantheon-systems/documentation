@@ -3,12 +3,16 @@ title: Errors and Server Responses
 subtitle: Slow Queries and High Query Volumes
 description: Learn how to resolve slow queries and high query volumes.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/slow-and-high-queries
 anchorid: slow-and-high-queries
+contenttype: guide
+newcms: [drupal, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 This section provides information on how to resolve slow queries and high query volumes.

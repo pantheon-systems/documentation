@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: [wordpress]
+product: []
+integration: []
+reviewed: ""
+---
+
 ## WordPress Issues
 
 ### CDN Blocking POST requests

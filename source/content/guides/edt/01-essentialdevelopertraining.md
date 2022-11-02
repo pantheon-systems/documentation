@@ -3,7 +3,6 @@ title: Essential Developer Training
 subtitle: Introduction
 description: This Self Serve Essential Developer Training guide is designed to help any Pantheon user quickly master workflow and tooling
 layout: guide
-categories: [get-started]
 tags: [cli, continuous-integration, terminus, webops, workflow]
 type: guide
 anchorid: edt
@@ -14,6 +13,12 @@ nextpage: Architecture
 editpath: edt/01-edt.md
 completiontime: 2 hours
 image: launchGuide-twitterLarge
+contenttype: guide
+categories: []
+newcms: [drupal, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 Welcome! This is a guide version of our on-demand [Essential Developer Workshops](https://pantheon.io/workshops?docs).
