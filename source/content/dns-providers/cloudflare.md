@@ -29,13 +29,13 @@ Be sure that you have a:
 
 Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a planned launch can prevent a gap in SSL service immediately after updating DNS on launch date.
 
-1. Click on **DNS** from the Cloudflare menu bar.
+1. Click **DNS** on the Cloudflare menu bar.
 
 1. Click **+ Add record** and then select **TXT** from the **Type** drop-down menu.
 
 1. Enter the `TXT Name/Host` in the **Name** field and the `TXT Value` in the **Content** field.
 
-  You can find both values in the Pantheon Site Dashboard in the Live environment under **Domains/HTTPS** for that domain.
+  You can find both values in the the Live environment of your Pantheon Site Dashboard under **Domains/HTTPS** for that domain.
 
 1. Select your desired Time to Live (TTL) and then click **Save**.
 
