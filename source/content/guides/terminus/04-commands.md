@@ -5,8 +5,8 @@ description: Look up Terminus commands.
 layout: guide
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus
-anchorid: terminus
+permalink: docs/guides/terminus/commands
+anchorid: commands
 ---
 
 This section provides a comprehensive list of Terminus commands.
