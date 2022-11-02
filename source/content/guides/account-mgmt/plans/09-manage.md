@@ -142,3 +142,9 @@ Before making any changes, please review [Before You Make Changes](#before-you-m
 1. Remove the existing card as a payment method for the site. Refer to [Billing in the Site Dashboard](/guides/account-mgmt/billing/methods#delete-a-site-specific-payment-method) for more information.
 
 Optionally, you can remove the Sandbox site after downgrading. Refer to [Deleting a Site on Pantheon](/guides/account-mgmt/workspace-sites-teams/sites#delete-sites) for more information.
+
+<Alert title="Note" type="info" >
+
+No prorated refunds or credits will be issued for site downgrades.
+
+</Alert>
