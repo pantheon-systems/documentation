@@ -5,13 +5,17 @@ description: Use plugins to extend what you can do with Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [cli, local, plugins, terminus, reference]
 nexturl: terminus/plugins/directory/
 previousurl: terminus/scripting/
 permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 searchboost: 100
+contenttype: api
+newcms: []
+audience: [development]
+product: [terminus]
+integration: []
 ---
 
 Extend the functionality of Terminus and add commands by installing third-party plugins.

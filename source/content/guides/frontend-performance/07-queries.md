@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Queries and Databases
 description: Optimizing queries and databases.
 anchorid: queries
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,11 @@ permalink: docs/guides/frontend-performance/queries
 editpath: frontend-performance/07-queries.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: guide
+newcms: [drupal, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 This page provides information on optimizing queries, query caching (when you should, and shouldn't use it), and database optimization techniques.

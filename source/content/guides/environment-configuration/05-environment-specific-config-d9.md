@@ -3,13 +3,17 @@ title: Environment Configuration
 subtitle: Environment-Specific Configurations for Drupal 9
 description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal 9's configuration override system.
 cms: "Drupal 9"
-categories: [develop]
 tags: [workflow]
 contributors: [peter-pantheon, rachelwhitton]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config-d9
 anchorid: environment-specific-config-d9
+contenttype: guide
+newcms: [drupal9]
+audience: [development]
+product: []
+integration: []
 ---
 
 This section provides information on how to manage verbose debugging options and system performance settings for individual environments.

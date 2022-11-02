@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: [terminus]
+integration: []
+reviewed: ""
+---
+
 Available region codes:
 
 | Name           | Code |
