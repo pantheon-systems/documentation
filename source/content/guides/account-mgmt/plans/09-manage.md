@@ -79,7 +79,7 @@ Downgrading to a Sandbox site will disable automatic backups. You will still be 
 
 ## Downgrade Your Plan to Sandbox
 
-To downgrade to Sandbox, refer to [Cancel Current Plan](/guides/account-mgmt/plans/manage#downgrade-your-plan-to-sandbox).
+To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/manage#cancel-your-plan).
 
 ## Change Your Plan
 
