@@ -3,11 +3,16 @@ title: On-Server Development
 description: Develop on Pantheon directly via SFTP.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename
-categories: [develop]
 tags: [files, sftp, code]
 searchboost: 50
 layout: video
 type: video
+newtype: doc
+categories: [sftp]
+newcms: []
+audience: [development]
+product: []
+integration: []
 ---
 
 <Youtube src="ktesh9SiHfc" title="On Server Development" />
