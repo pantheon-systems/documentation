@@ -1,7 +1,7 @@
 ---
 title: Create a WordPress MU-Plugin for Actions and Filters
 description: Learn to make a boilerplate MU-plugin for actions and filters.
-contributors: [alexfornuto, eabquina, carlalberto]
+contributors: [alexfornuto, eabquina, carl-alberto]
 cms: "WordPress"
 categories: [develop]
 tags: [plugins]

@@ -4,7 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 cms: "WordPress"
 categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 reviewed: "2022-03-24"
 
 ---
