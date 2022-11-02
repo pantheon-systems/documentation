@@ -7,7 +7,7 @@ reviewed: "2020-06-30"
 permalink: docs/drupal-cron
 newtype: doc
 categories: [automate]
-newcms: [drupal, drupal7, drupal9]
+newcms: [drupal]
 audience: [development]
 product: [localdev, newrelic, terminus]
 integration: [pingdom]
