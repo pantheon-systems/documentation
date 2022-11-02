@@ -26,4 +26,4 @@ Terminus 1.x and 0.x are EOL.
 ## More Resources
 
 - [PHP on Pantheon](/guides/php)
-- [Update Terminus](/terminus/updates)
+- [Update Terminus](/guides/terminus/updates)

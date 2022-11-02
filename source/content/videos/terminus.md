@@ -12,7 +12,7 @@ searchboost: 50
 
 <Youtube src="njN2-z2pDFI" title="Command Line Interface" />
 
-You can interact with Pantheon using our command line interface—[Terminus](/terminus). In doing so, you can work faster and more efficiently, automate repetitive tasks, and access additional functionality.
+You can interact with Pantheon using our command line interface—[Terminus](/guides/terminus). In doing so, you can work faster and more efficiently, automate repetitive tasks, and access additional functionality.
 
 Use Terminus to interact with the Pantheon dashboard. For example, clear caches by running `terminus env:clear-cache`, which is the clear cache command, followed by the site name and environment, which in this case is robots.dev.
 
@@ -34,6 +34,6 @@ Terminus can help you access extra data and functionality that isn’t available
 
 In this example, I am switching the connection mode from SFTP to Git. And now I’m running a backup from the dashboard.
 
-You can also add commands to Terminus by [installing plugins](/terminus/plugins). [Official Pantheon plugins](/terminus/plugins/directory) can be downloaded from our website or you can [write your own](/terminus/plugins/create).
+You can also add commands to Terminus by [installing plugins](/guides/terminus/plugins). [Official Pantheon plugins](/guides/terminus/plugins/directory) can be downloaded from our website or you can [write your own](/guides/terminus/plugins/create).
 
 That was a quick introduction to our command line tool, Terminus. Use it to script repetitive tasks or just use it to develop faster without touching your mouse.

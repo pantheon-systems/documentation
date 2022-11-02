@@ -10,7 +10,7 @@ permalink: docs/guides/terminus/directory
 anchorid: directory
 ---
 
-You can extend Terminus functionality and add commands by installing [third-party plugins](https://github.com/terminus-plugin-project) or by [creating your own plugins](https://pantheon.io/docs/terminus/plugins/create).
+You can extend Terminus functionality and add commands by installing [third-party plugins](https://github.com/terminus-plugin-project) or by [creating your own plugins](/guides/terminus/create).
 
 The list below provides a small sample of popular plugins available for Terminus 1.x:
 

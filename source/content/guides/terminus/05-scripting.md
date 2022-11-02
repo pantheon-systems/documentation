@@ -23,7 +23,7 @@ If so, consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus must be authenticated before you can execute most commands. You must ensure Terminus is authenticated with a [machine token](/terminus/install#machine-token) that has the correct permissions before running a script.
+Terminus must be authenticated before you can execute most commands. You must ensure Terminus is authenticated with a [machine token](/guides/terminus/install#machine-token) that has the correct permissions before running a script.
 
 ## Example Repositories
 

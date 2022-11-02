@@ -12,12 +12,6 @@ anchorid: plugins
 
 This section provides information on how to extend Terminus functionality and add commands through third-party plugins.
 
-<Alert title="Note" type="info">
-
-You must update your plugin for Terminus 2.0. if you are a plugin author. Refer to [Terminus 2.0](/terminus/terminus-2-0) to compare the differences. Plugins that are advertised to work on Terminus 2.0 may also be used on [Terminus 3.0](/terminus/terminus-3-0).
-
-</Alert>
-
 ## Install Plugins
 
 The plugin installation process differs depending on your Terminus version. Please refer to the appropriate section below.

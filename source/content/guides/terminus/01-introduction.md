@@ -23,14 +23,14 @@ Terminus is a powerful tool that allows you:
 - Check for and apply upstream updates
 - Deploy code from one environment to another
 - Run [Drush](/guides/drush/) and [WP-CLI](/guides/wp-cli/) commands
-- Perform [other operations](/terminus/commands/)
+- Perform [other operations](/guides/terminus/commands/)
 
 
 ## Contribute to Terminus
 
 <Alert title="Note" type="info">
 
-You must update your plugin for Terminus 2 if you are a plugin author. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. Refer to [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
+You must update your plugin for Terminus 2 if you are a plugin author. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. Refer to [what's new in Terminus 3.x](/guides/terminus/terminus-3-0) to learn more.
 
 </Alert>
 

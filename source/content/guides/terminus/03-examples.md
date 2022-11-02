@@ -198,7 +198,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to [Extend with Plugins](/terminus/plugins) for instructions on how to install Terminus plugins.
+Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to [Extend with Plugins](/guides/terminus/plugins) for instructions on how to install Terminus plugins.
 
 1. Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 

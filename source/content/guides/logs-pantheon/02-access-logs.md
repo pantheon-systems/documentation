@@ -53,4 +53,4 @@ You can also view the code log for each environment using Terminus.
 
 - [Develop on Pantheon Directly with SFTP Mode](/sftp)
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)
-- [Terminus Manual](/terminus)
+- [Terminus Guide](/guides/terminus)
