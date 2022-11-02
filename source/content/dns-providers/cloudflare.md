@@ -20,37 +20,46 @@ Be sure that you have a:
 ## Locate Pantheon's DNS Values
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio" /> Live) then click **<span class="glyphicons glyphicons-global" /> Domains / HTTPS**.
-2. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
-3. Login to your [Cloudflare account](https://www.cloudflare.com/a/login) in a new tab before you continue.
 
-## Pre-Provisioning SSL Certificate on Cloudflare (optional)
+1. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
 
-Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a planned launch can prevent a gap in SSL service immediately after updating DNS on launch date. 
+1. Login to your [Cloudflare account](https://www.cloudflare.com/a/login) in a new tab before you continue.
+
+## Pre-Provision SSL Certificate on Cloudflare (optional)
+
+Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a planned launch can prevent a gap in SSL service immediately after updating DNS on launch date.
 
 1. Click on **DNS** from the Cloudflare menu bar.
-Click **+ Add record**.
-Select **TXT** from the **Type** drop-down menu.
-Enter the `TXT Name/Host` in the **Name** field and the `TXT Value` in the **Content** field. These values are provided in the Pantheon site dashboard in the live environment under Domains/HTTPS for that domain.
-Select a desired Time to Live (TTL).
-Click on **Save**.
-Repeat for all domains (www and non-www).
 
-To complete the pre-provisioning of the SSL certificates, first verify domain ownership from the Pantheon site dashboard.
-Log in to the Pantheon site dashboard.
-Navigate to **Domains/HTTPS** in the live environment. 
-Click the **details** button by the domain.
-Click the **Verify Ownership** button.
-Repeat for all domains.
+1. Click **+ Add record** and then select **TXT** from the **Type** drop-down menu.
 
-Once domain ownership is verified, the process to provision certificates will begain and is indicated by the following notice:
+1. Enter the `TXT Name/Host` in the **Name** field and the `TXT Value` in the **Content** field.
 
-HTTPS
- Your DNS configuration is correct, and certificate provisioning is queued to start for this domain.
+  You can find both values in the Pantheon Site Dashboard in the Live environment under **Domains/HTTPS** for that domain.
 
-Both the bare domain and the www domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
+1. Select your desired Time to Live (TTL) and then click **Save**.
 
-HTTPS
- Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
+1. Log in to the Pantheon Site Dashboard.
+
+1. Navigate to the Live environment and click **Domains/HTTPS**.
+
+1. Click the **details** button next to the domain and then click the **Verify Ownership** button.
+
+  The process to provision certificates will begin after domain ownership is verified, and you will receive the following notice:
+
+  ```
+  HTTPS
+  Your DNS configuration is correct, and certificate provisioning is queued to start for this domain.
+  ```
+
+  Both the bare domain and the www domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
+
+  ```
+  HTTPS
+  Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
+  ```
+
+1. Repeat the steps above for all domains (www and non-www).
 
 
 ## Configure DNS Records on Cloudflare
@@ -60,7 +69,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 ![Example DNS only](../../images/cloudflare-dns-only.png)
 
-1. Click on **DNS** from the Cloudflare menu bar.
+1. Click **DNS** on the Cloudflare menu bar.
 1. Click **+ Add record**.
 1. Select **A** from the **Type** drop-down menu.
 1. Enter `www` in the **Name** field and paste the IP address value provided by Pantheon (e.g. `23.185.0.2`) in the **IPv4** field.
@@ -105,7 +114,7 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS certificates for a domain.
 
-1. Click on **DNS** from the Cloudflare menu bar.
+1. Click **DNS** on the Cloudflare menu bar.
 1. Click **+ Add record**.
 1. Select **CAA** from the **Type** drop-down menu.
 1. Enter the bare domain (`example.com`) in the **Name** field.
