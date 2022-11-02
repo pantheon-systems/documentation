@@ -9,8 +9,8 @@ newtype: doc
 categories: [automate]
 newcms: [drupal, drupal7, drupal9]
 audience: [development]
-product: []
-integration: []
+product: [localdev, newrelic, terminus]
+integration: [pingdom]
 ---
 
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
