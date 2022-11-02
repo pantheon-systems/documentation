@@ -44,7 +44,7 @@ Most plugins are published online as a Git repository. You can install the plugi
 
 1. Click **<span class="glyphicons glyphicon-save"></span> Code** on the repository home page:
 
-    ![Click Code and copy the repository URL](../../images/github/github-code-clone-ssh.png "GitHub clone URL")
+    ![Click Code and copy the repository URL](../../../images/github/github-code-clone-ssh.png "GitHub clone URL")
 
 1. Open a terminal window on your computer and run the following commands:
 
