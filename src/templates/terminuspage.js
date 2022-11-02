@@ -84,12 +84,12 @@ const items = [
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/terminus/plugins/directory",
+        link: "/terminus/directory",
         title: "Directory",
       },
       {
         id: "docs-terminus-create",
-        link: "/terminus/plugins/create",
+        link: "/terminus/create",
         title: "Create Plugins",
       },
     ],

@@ -20,7 +20,7 @@ You can update the [standalone Terminus PHAR](/guides/terminus/install#standalon
 terminus self:update
 ```
 
-Note that the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/guides/terminus/commands/terminus/commands/self-update) for available options.
+Note that the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/guides/terminus/commands/self-update) for available options.
 
 ## Update Terminus Installer PHAR
 

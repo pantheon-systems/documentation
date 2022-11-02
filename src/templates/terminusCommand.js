@@ -55,7 +55,7 @@ const shortcodes = {
 const items = [
   {
     id: "docs-terminus",
-    link: "/terminus",
+    link: "/guides/terminus",
     title: "Get Started",
   },
   {
@@ -85,7 +85,7 @@ const items = [
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/terminus/plugins/directory",
+        link: "/terminus/directory",
         title: "Directory",
       },
       {
@@ -178,19 +178,16 @@ class CommandsTemplate extends React.Component {
         <div className="">
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
-              <Navbar
-                title={`Terminus Command Reference`}
-                items={items}
-                activePage="/guides/terminus/commands"
-                className="manual-guide-toc"
-              />
+      
+              
+     
               <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <div
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
                   >
                     <HeaderBody
-                      title="Terminus Command Reference"
+                      title=""
                       subtitle={`terminus ${command.name}`}
                       description=""
                       slug={slug}
