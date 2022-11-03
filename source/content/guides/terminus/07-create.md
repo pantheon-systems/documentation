@@ -402,5 +402,5 @@ There is currently no published Plugin API documentation. The best way to learn 
 
 ## More Resources
 
-- [Extend Terminus with Plugins](/terminus/plugins)
-- [Terminus Command Reference](/terminus/commands)
+- [Extend Terminus with Plugins](/guides/terminus/plugins)
+- [Terminus Command Reference](/guides/terminus/commands)
