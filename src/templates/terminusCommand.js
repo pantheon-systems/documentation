@@ -177,7 +177,7 @@ class CommandsTemplate extends React.Component {
         />
         <div className="">
           <div className="container-fluid">
-            <div className="row col-md-10 guide-nav manual-guide-toc-well margin-left:100px">
+            <div className="row col-md-10 guide-nav manual-guide-toc-well margin-left:500px">
       
               
      
