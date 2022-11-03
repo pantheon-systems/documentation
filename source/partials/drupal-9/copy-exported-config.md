@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: []
+integration: []
+reviewed: ""
+---
+
 <TabList>
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>

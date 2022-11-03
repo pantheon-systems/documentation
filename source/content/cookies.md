@@ -1,8 +1,15 @@
 ---
 title: Working with Cookies on Pantheon
 description: Tips and tricks for working with cookies on your Pantheon Drupal and WordPress sites.
-categories: [performance]
-tags: [cache, code, cookies]
+tags: []
+contenttype: doc
+categories: [cookies]
+newcms: [drupal,wordpress]
+audience: []
+product: []
+integration: []
+contributors:
+reviewed:
 ---
 
 This page covers working with basic cookies on Pantheon. If you want to create session based cookies to bypass caching, refer to the documentation on [Using Your Own Session-Syle Cookies](/caching-advanced-topics/#using-your-own-session-style-cookies)

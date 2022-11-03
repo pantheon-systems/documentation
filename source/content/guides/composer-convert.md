@@ -1,6 +1,18 @@
 ---
 title: Convert a Standard Drupal 8 Site to a Composer Managed Site
 description: Upgrade a standard Drupal 8 site, by converting it to a Composer-managed Drupal 8 site on the new Integrated Composer framework. 
+tags: []
+contenttype:
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
+contributors:
+reviewed:
+---
+title: Convert a Standard Drupal 8 Site to a Composer Managed Site
+description: Upgrade a standard Drupal 8 site, by converting it to a Composer-managed Drupal 8 site on the new Integrated Composer framework. 
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"

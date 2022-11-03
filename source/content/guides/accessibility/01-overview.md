@@ -1,5 +1,17 @@
 ---
 title: Accessibility Guide
+subtitles: Overview
+description: How to extend your site's reach with accessibility planning, fixes, and reporting.
+contenttype: 
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
+contributors: [carolyn-shannon, wordsmither]
+reviewed: "2020-08-26"
+---
+title: Accessibility Guide
 subtitle: Overview
 description: How to extend your site's reach with accessibility planning, fixes, and reporting.
 categories: [optimize]
@@ -12,6 +24,7 @@ permalink: docs/guides/accessibility
 anchorid: accessibility
 editpath: accessibility/01-overview.md
 ---
+
 
 <p><dfn id="acc">Web accessibility</dfn> refers to building websites, tools, and technologies that are designed and developed to allow people with disabilities to use them.</p>
 

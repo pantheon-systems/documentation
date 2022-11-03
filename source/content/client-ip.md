@@ -1,8 +1,14 @@
 ---
 title: Getting the Client IP Address
 description: Getting the client IP address to set up geolocation capabilities on your Pantheon site.
-categories: [develop]
-tags: [cdn]
+tags: []
+contenttype: doc
+categories: []
+newcms: []
+audience: []
+product: [cdn]
+integration: []
+contributors:
 reviewed: "2020-03-09"
 ---
 

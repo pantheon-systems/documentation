@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: []
+integration: []
+reviewed: ""
+---
+
 ## Website Performance with Varnish, Redis, and New Relic Performance Monitoring
 
 In this workshop, we’ll learn about Varnish and our Redis object cache, and see how to use New Relic Performance Monitoring for monitoring performance and getting alerts when things are going slower than usual.

@@ -1,5 +1,17 @@
 ---
 title: Easy DNS Domain Configuration
+description: 
+tags: []
+contenttype: doc
+categories: []
+newcms: []
+audience: []
+product: [cdn]
+integration: []
+contributors:
+reviewed:
+---
+title: Easy DNS Domain Configuration
 provider: Easy DNS
 dnsprovider: true
 description: Learn how to point your Easy DNS domain to a Pantheon site.

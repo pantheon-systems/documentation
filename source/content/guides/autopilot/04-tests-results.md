@@ -2,6 +2,19 @@
 title: Pantheon Autopilot
 subtitle: Tests and Results
 description: Autopilot visual regression testing (VRT) results and how to deal with failing tests.
+tags: []
+contenttype:
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
+contributors:
+reviewed:
+---
+title: Pantheon Autopilot
+subtitle: Tests and Results
+description: Autopilot visual regression testing (VRT) results and how to deal with failing tests.
 categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide

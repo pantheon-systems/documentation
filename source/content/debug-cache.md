@@ -1,8 +1,13 @@
 ---
 title: Debug Caching Issues
 description: Learn how to identify and resolve caching issues affecting your Pantheon sites.
-categories: [performance]
-tags: [cache, cdn, cookies]
+tags: []
+contenttype: doc
+categories: [cookies]
+newcms: []
+audience: []
+product: [cdn]
+integration: []
 contributors: [rachelwhitton, sarahg]
 reviewed: "2020-12-15"
 ---
