@@ -1,6 +1,6 @@
 - id: edwardangert
   name: Edward Angert
-  twitter: https://twitter.com/edwardangert
+  twitter: //twitter.com/edwardangert
   bio: Manager of Technical Documentation, Pantheon
   github: //github.com/edwardangert
   avatar: //avatars2.githubusercontent.com/u/17991901
@@ -11,12 +11,12 @@
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
-- id: 
+- id: joa-pan
   name: Joanie Edwards
-  avatar: //github.com/joa-pan.png?size=460
   bio: Senior Technical Writer, Pantheon
   github: //github.com/joa-pan
-  drupal: https://www.drupal.org/u/_joan
+  avatar: //github.com/joa-pan.png?size=460
+  drupal: //www.drupal.org/u/_joan
 - id: wordsmither
   name: Jennifer Hoffman
   avatar: //github.com/wordsmither.png?size=460
@@ -30,24 +30,24 @@
   github: //github.com/whitneymeredith
 - id: eabquina
   name: Eladio Abquina
-  bio: Manager of Implementation Services, Pantheon
-  twitter: https://twitter.com/eabquina
-  github: //github.com/eabquina
   avatar: //pbs.twimg.com/profile_images/1290706689/SAMPLE2_400x400.jpg
+  bio: Manager of Implementation Services, Pantheon
+  twitter: //twitter.com/eabquina
+  github: //github.com/eabquina
   linkedin: //ph.linkedin.com/in/eabquina
 - id: carl-alberto
   name: Carl Alberto
+  twitter: //twitter.com/carlalbertodev
   bio: WordPress Solutions Architect, Pantheon
   github: //github.com/carl-alberto
+  avatar: //github.com/carl-alberto.png?size=460
   linkedin: //www.linkedin.com/in/carlalberto/
   wordpress: //profiles.wordpress.org/carl-alberto/
-  twitter: //twitter.com/carlalbertodev
-  avatar: //github.com/carl-alberto.png?size=460
 - id: suzannealdrich
   name: Suzanne Aldrich
-  url: https://suzanne.link
+  url: //suzanne.link
   avatar: //s.gravatar.com/avatar/cca6b0cbfbc6ed1804e381d66d012f02?s=300
-  twitter: https://twitter.com/SuzanneAldrich
+  twitter: //twitter.com/SuzanneAldrich
   github: //github.com/suzannealdrich
   linkedin: //www.linkedin.com/in/suzannealdrich
   drupal: //www.drupal.org/u/suzanne.aldrich
