@@ -145,6 +145,6 @@ Optionally, you can remove the Sandbox site after downgrading. Refer to [Deletin
 
 <Alert title="Note" type="info" >
 
-No prorated refunds or credits will be issued for site downgrades.
+For any site plan downgrades, no refunds or prorated credits will be issued as per our [Terms of Service](https://pantheon.pactsafe.io/legal.html#tos).
 
 </Alert>
