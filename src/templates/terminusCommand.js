@@ -178,10 +178,13 @@ class CommandsTemplate extends React.Component {
         <div className="">
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
-      
-              
-     
-              <div id="doc" className="terminus col-md-9 guide-doc-body margin-left:500px">
+            <Navbar
+              title={}
+              items={}
+              activePage=""
+              className=""
+              />
+              <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <div
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
