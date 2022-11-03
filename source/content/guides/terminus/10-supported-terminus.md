@@ -3,7 +3,6 @@ title: Terminus Guide
 subtitle: Supported Terminus and PHP Versions
 description: Learn which versions of Terminus and PHP are currently supported.
 layout: guide
-showtoc: true
 contributors: [wordsmither]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]

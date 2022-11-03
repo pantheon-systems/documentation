@@ -1,9 +1,8 @@
 ---
 title: Terminus Guide
-subtitle: Extend with Terminus
+subtitle: Terminus Plugins
 description: Use plugins to extend what you can do with Terminus.
 layout: guide
-showtoc: true
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/terminus/plugins

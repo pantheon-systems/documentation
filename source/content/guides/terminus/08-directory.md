@@ -3,7 +3,6 @@ title: Terminus Guide
 subtitle: Plugin Directory
 description: A non-exclusive directory of plugins to extend the features of Terminus.
 layout: guide
-showtoc: true
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/terminus/directory
