@@ -2,11 +2,15 @@
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 cms: "WordPress"
-categories: [troubleshoot]
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
 reviewed: "2022-03-24"
-
+newtype: doc
+categories: [help]
+newcms: [wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).

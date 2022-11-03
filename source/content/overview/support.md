@@ -1,10 +1,15 @@
 ---
 title: Support and Training
 description: 
-categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/support
+newtype: doc
+categories: [overview]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 Pantheon offers multiple options to help you in building the best sites possible.

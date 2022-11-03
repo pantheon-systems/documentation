@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: []
+integration: []
+reviewed: "2022-11-03"
+---
+
 1. Modify your site's `pantheon.yml` file to [allow access](/pantheon-yml#protected-web-paths-override) to the `xmlrpc.php` path:
 
   ```yml:title=pantheon.yml
