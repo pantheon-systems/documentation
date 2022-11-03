@@ -179,10 +179,7 @@ class CommandsTemplate extends React.Component {
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
             <Navbar
-              title={}
-              items={}
-              activePage=""
-              className=""
+              className="manual-guide-toc"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
