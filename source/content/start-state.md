@@ -1,9 +1,14 @@
 ---
 title: Choosing Your Start State
 description: See available options for starting new Drupal or WordPress sites and site import considerations.
-categories: [get-started]
 tags: [upstreams, site]
 reviewed: "2021-04-23"
+newtype: doc
+categories: [create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 Select the site's framework during the [site creation process](/guides/legacy-dashboard/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal 9, and Drupal 7.

@@ -1,9 +1,8 @@
 ---
 title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Introduction
-description: 
+description:
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,11 @@ permalink: docs/guides/drupal-9-hosted
 anchorid: drupal-9-hosted
 editpath: drupal-9/drupal-9-hosted/01-introduction.md
 reviewed: "2021-03-31"
+contenttype: guide
+newcms: [drupal9]
+audience: [development]
+product: []
+integration: []
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Drush Commands
 description: Learn how to use Drush commands on your Pantheon site.
 cms: "Drupal"
-categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-commands
 anchorid: drush-commands
+contenttype: guide
+newcms: [drupal]
+audience: [development]
+product: []
+integration: []
+
 ---
 
 This section provides information on useful Drush commands to help you manage your site on Pantheon.
