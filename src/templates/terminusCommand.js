@@ -181,7 +181,7 @@ class CommandsTemplate extends React.Component {
       
               
      
-              <div id="doc" className="terminus col-md-9 guide-doc-body">
+              <div id="doc" className="terminus col-md-9 guide-doc-body" style="margin-left:100px;">
                 <div className="row guide-content-well">
                   <div
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
