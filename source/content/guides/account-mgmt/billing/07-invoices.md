@@ -39,6 +39,12 @@ The details in the invoice include:
 
 You can download the invoice as a PDF or CSV file. You can also print the PDF or import the CSV into a spreadsheet program.
 
+<Alert title="Note" type="info" >
+
+Only the Site Owner can download invoices.  If this site is a part of a contract organization, reach out to the organization for assistance.  Sites that are part of a contract organization show the organization as the User in Charge on the **Workspace** tab.
+
+</Alert>
+
 If your billing country is in the European Union (EU), your invoices may also include the value-added tax (VAT) ID.
 These invoices comply with the EU requirements of the VAT Directive (Article 226, Council Directive 2006/112/EC) and are valid for your local tax authorities. 
 
