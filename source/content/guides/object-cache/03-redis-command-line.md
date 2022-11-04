@@ -26,20 +26,17 @@ You don't need to install anything locally to use Redis on Pantheon. However, if
 1. Use the Redis Connection Info from the Dashboard to verify that Redis is working. Execute the following command after you log in:
 
   ```bash
-  redis> keys *
+  redis> DBSIZE
   ```
 
   The command should return the existing Redis keys. Example:
 
   ```bash
-  redis> keys *
-   1) "pantheon-rediscache_menu:links:management:tree-data:en:27cbcc1096e9daf2c319c2c"
-   2) "pantheon-rediscache:features_module_info"
-   3) "pantheon-rediscache_bootstrap:bootstrap_modules"
-   4) "pantheon-rediscache_menu:menu_item:b38e608d4f709b7c1fcb6ac5f6dd2ab72a9a034"
+  redis> DBSIZE
+  (integer) 23
   ```
 
-  If Redis is configured correctly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](/guides/object-cache/troubleshoot-object-cache) page of this guide.
+  If Redis is configured correctly, it should output the number of keys in the selected database. If it returns `0` , there is no data.
 
 1. Pass the `exists` command to check if a specific key exists. For example:
 

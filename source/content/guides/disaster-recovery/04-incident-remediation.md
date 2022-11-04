@@ -14,7 +14,6 @@ anchorid: disaster-recovery
 editpath: disaster-recovery/04-incident-remediation.md
 ---
 
-
 Bringing a site back from downtime and remediating the cause of downtime to ensure that the site stays up post-recovery is a multistep process. Once you have engaged with support and determined the cause of the issue, the recovery process may include the steps below, although the precise playbook will depend on the nature of the issues and the configuration of the site. 
 
 ## External threats
@@ -49,7 +48,6 @@ Customer playbook should include:
 
 - _If using Redis_: Test application for ability to handle a mass Redis cache rebuild.
 - _If using Solr_: Consult with your Pantheon CSM to determine an appropriate monitoring and recovery strategy.
-
 
 ## Remediating Application Issues
 

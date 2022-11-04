@@ -2,9 +2,14 @@
 title: Inclusive Language at Pantheon and in the Pantheon Community
 description: Elevate the way we communicate and support community and contributors in using more inclusive language.
 contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac]
-categories: [about]
 tags: [collaborate]
 reviewed: "2020-11-01"
+newtype: doc
+categories: [overview, help]
+newcms: [drupal7, drupal8, drupal9, drupal10, drupal, wordpress, decoupled]
+audience: [agency, business, development, marketing, sysadmin]
+product: []
+integration: []
 ---
 
 This guide is intended to elevate the way we communicate at Pantheon, and to support our community and contributors in using more inclusive language. It will help ensure everyone feels included and welcome by the language we use and the examples we share.

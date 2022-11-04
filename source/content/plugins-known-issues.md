@@ -2,11 +2,15 @@
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 cms: "WordPress"
-categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
+newtype: doc
+categories: [help]
+newcms: [wordpress]
+audience: [development]
+product: []
+integration: []
 reviewed: "2022-03-24"
-
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -21,9 +25,9 @@ If your work is already updated but still listed here, let us know so we can rem
 
 Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
 
-Refer to documentaton on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
+Refer to documentation on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
-The solution to these issues is usually to create a symboloic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+The solution to these issues is usually to create a symbolic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
 The following is a list of plugins that assume write access, and the specific file or folder that needs to be symlinked to resolve:
 
