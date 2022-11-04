@@ -1,7 +1,6 @@
 ---
 title: Exporting Sites from GoDaddy with cPanel
 description: Learn how to migrate Drupal or WordPress sites to Pantheon from hosts that block cPanel exports.
-categories: [get-started]
 tags: [migrate]
 newtype: doc
 categories: [migrate, database, backup]
