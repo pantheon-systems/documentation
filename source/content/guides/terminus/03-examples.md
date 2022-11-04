@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
-subtitle: Example Usage
-description: Review examples of Terminus commands most frequently used by power users.
+subtitle: Get Started
+description: Learn how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus.
 layout: guide
 showtoc: true
 categories: [develop]
@@ -10,7 +10,7 @@ permalink: docs/guides/terminus/examples
 anchorid: examples
 ---
 
-This section provides information on Terminus command structure and command examples.
+This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
 
 ## Command Structure
 

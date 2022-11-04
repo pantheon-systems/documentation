@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
-subtitle: Terminus Plugins
-description: Use plugins to extend what you can do with Terminus.
+subtitle: Install Plugins
+description: Install plugins with Terminus.
 layout: guide
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
@@ -9,7 +9,7 @@ permalink: docs/guides/terminus/plugins
 anchorid: plugins
 ---
 
-This section provides information on how to extend Terminus functionality and add commands through third-party plugins.
+This section provides information on how to download plugins with Terminus, and how to add new commands through third-party plugins.
 
 ## Install Plugins
 
