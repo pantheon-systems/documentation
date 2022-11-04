@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: []
+integration: []
+reviewed: "2022-11-04"
+---
+
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
 1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility.
