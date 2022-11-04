@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Update Terminus
+subtitle: Current Terminus Release and Changelog
 description: Stay up to date on the latest Terminus version.
 layout: guide
 showtoc: true

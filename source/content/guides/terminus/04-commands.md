@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Command Reference
+subtitle: Command Directory
 description: Look up Terminus commands.
 layout: guide
 categories: [develop]
