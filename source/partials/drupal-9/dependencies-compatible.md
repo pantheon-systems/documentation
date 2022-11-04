@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: [drupal, drupal8, drupal9]
+product: []
+integration: []
+reviewed: "2022-11-04"
+---
+
 You must confirm that your site is Drupal 9 compatible before you change the Drupal core version to Drupal 9.
  
 Review the steps below to confirm Drupal 9 compatibility for your site's components.
