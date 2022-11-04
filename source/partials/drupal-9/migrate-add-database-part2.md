@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: []
+integration: []
+reviewed: "2022-11-04"
+---
+
 1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
 
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.

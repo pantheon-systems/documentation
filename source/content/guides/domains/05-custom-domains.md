@@ -2,7 +2,6 @@
 title: Domains on Pantheon
 subtitle: Custom Domains
 description: Learn how to add a custom domain.
-categories: [go-live]
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
 contributors: [whitneymeredith]
@@ -10,6 +9,11 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/custom-domains
 anchorid: custom-domains
+contenttype: guide
+newcms: []
+audience: [agency, development]
+product: [dashboard]
+integration: []
 ---
 
 This section provides information on how to add a custom domain to the Pantheon platform.
