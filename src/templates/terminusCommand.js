@@ -180,7 +180,6 @@ class CommandsTemplate extends React.Component {
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
             <Navbar
               className="manual-guide-toc"
-              background-color="#ffffff"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
