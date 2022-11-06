@@ -1,12 +1,11 @@
 ---
 title: Basic Troubleshooting
 description: Common first-step practices to troubleshoot misbehaving sites.
-tags: []
 contenttype: doc
-categories: []
+categories: [cache, cookies, deploy, domains, help]
 newcms: [wordpress,drupal]
-audience: []
-product: []
+audience: [development, sysadmin]
+product: [cdn, dashboard]
 integration: []
 contributors: [alexfornuto, eabquina, carlalberto]
 reviewed: "2020-08-26"
