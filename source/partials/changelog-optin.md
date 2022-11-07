@@ -1,9 +1,10 @@
 ---
 contenttype: partial
+categories: [help]
 newcms: []
 product: []
 integration: []
-reviewed: ""
+reviewed: "2022-11-07"
 ---
 
 <Callout title="Subscribe Now" link="https://learn.pantheon.io/Changelog-Opt-In.html">
