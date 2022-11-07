@@ -1,6 +1,7 @@
 ---
 contenttype: partial
-newcms: []
+categories: [config, updates]
+newcms: [drupal7]
 product: []
 integration: []
 reviewed: ""
