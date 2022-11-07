@@ -1,9 +1,10 @@
 ---
 contenttype: partial
-newcms: []
-product: []
+categories: [measure, optimize]
+newcms: [drupal, wordpress]
+product: [newrelic]
 integration: []
-reviewed: ""
+reviewed: "2022-11-07"
 ---
 
 ## Website Performance with Varnish, Redis, and New Relic Performance Monitoring
