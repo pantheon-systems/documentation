@@ -12,6 +12,7 @@ anchorid: contrib-custom
 editpath: drupal-9/drupal-9-unhosted/07-contrib-custom.md
 reviewed: "2021-05-13"
 contenttype: guide
+categories: []
 newcms: [drupal9]
 audience: [development]
 product: []

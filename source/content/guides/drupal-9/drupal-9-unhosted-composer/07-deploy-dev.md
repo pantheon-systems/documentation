@@ -11,6 +11,7 @@ anchorid: deploy-dev
 editpath: drupal-9/drupal-9-unhosted-composer/07-deploy-dev.md
 reviewed: "2021-05-09"
 contenttype: guide
+categories: []
 newcms: [drupal9]
 audience: [development]
 product: []

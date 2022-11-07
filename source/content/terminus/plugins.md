@@ -12,6 +12,7 @@ permalink: docs/terminus/:basename
 image: terminus-thumbLarge
 searchboost: 100
 contenttype: api
+categories: [develop]
 newcms: []
 audience: [development]
 product: [terminus]
