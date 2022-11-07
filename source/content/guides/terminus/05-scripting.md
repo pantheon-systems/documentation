@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
 subtitle: Scripting with Terminus
-description: Automate your workflow with Terminus.
+description: Automate your workflow with scripting via Terminus.
 layout: guide
 showtoc: true
 categories: [develop]
@@ -23,7 +23,7 @@ If so, consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus must be authenticated before you can execute most commands. You must ensure Terminus is authenticated with a [machine token](/guides/terminus/install#machine-token) that has the correct permissions before running a script.
+Terminus must be authenticated before you can execute most commands. You must authenticate Terminus with a [machine token](/guides/terminus/install#machine-token) that has the correct permissions before running a script.
 
 ## Example Repositories
 
@@ -84,7 +84,7 @@ done <<< "$PANTHEON_SITES"
 
 ### Save the PHP version of the Live environment of all sites in an organization to a CSV file
 
-This example saves the output of various Terminus commands to variables for reuse, similar to the example above. 
+This example saves the output of various Terminus commands to variables for reuse, similar to the example above.
 
 This script requires that you set the variable `PANTHEON_ORG` within the script itself. This can be either the organization name or UUID, both of which can be found using `terminus org:list`. Optionally, you can also update the name and path of the CSV file if you prefer something other than `pantheon-site-php-versions.csv`.
 

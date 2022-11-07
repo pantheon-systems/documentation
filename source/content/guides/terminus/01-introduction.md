@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
 subtitle: Introduction
-description: Learn about the Terminus command line interface for advanced interaction with the Pantheon platform.
+description: Learn about Terminus, the command line interface for advanced interaction with the Pantheon platform.
 layout: guide
 showtoc: true
 contributors: [whitneymeredith]
@@ -15,7 +15,7 @@ Terminus is a command line interface that provides advanced interaction with Pan
 
 ## Terminus Features
 
-Terminus is a powerful tool that allows you:
+Terminus is a powerful tool that allows you to:
 
 - Create a new site
 - Create and delete Multidev environments
@@ -38,9 +38,9 @@ Terminus is open source. You can view the project on [GitHub](https://github.com
 
 ## Support
 
-Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). You can create an issue on [Terminus's GitHub page](https://github.com/pantheon-systems/terminus/issues/new) if you don't see your bug or feedback listed. 
+Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). You can create an issue on [Terminus's GitHub page](https://github.com/pantheon-systems/terminus/issues/new) if you don't see your bug or feedback listed.
 
-Need help with Terminus? [Contact Support](https://dashboard.pantheon.io/#support/support/all).
+[Contact Support](https://dashboard.pantheon.io/#support/support/all) if you have questions or need help with Terminus.
 
 ## More Resources
 

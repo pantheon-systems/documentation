@@ -11,7 +11,7 @@ permalink: docs/guides/terminus/terminus-3-0
 anchorid: terminus-3-0
 ---
 
-This section provides information about Terminus 3.0. Terminus 3 is the most recent major version of Terminus and is recommended in place of Terminus 2.0.
+This section provides information about Terminus 3.0. Terminus 3.0 is the most recent major version of Terminus and is recommended in place of Terminus 2.0.
 
 <Alert title="Note" type="info" >
 

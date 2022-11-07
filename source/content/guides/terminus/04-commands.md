@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
 subtitle: Command Directory
-description: Look up Terminus commands.
+description: Review a complete list of Terminus commands.
 layout: guide
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
@@ -26,5 +26,7 @@ The basic format of a Terminus command is:
 ```bash{promptUser: user}
 terminus command:subcommand <site>.<env>
 ```
+
+Read below for a complete list of Terminus commands, or use the search box to look up a specific command.
 
 <Commands />

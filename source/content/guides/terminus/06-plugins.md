@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
 subtitle: Install Plugins
-description: Install plugins with Terminus.
+description: Learn how to install plugins with Terminus.
 layout: guide
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
@@ -9,13 +9,11 @@ permalink: docs/guides/terminus/plugins
 anchorid: plugins
 ---
 
-This section provides information on how to download plugins with Terminus, and how to add new commands through third-party plugins.
+This section provides information on how to install plugins with Terminus, and how to add new commands through third-party plugins.
 
 ## Install Plugins
 
-The plugin installation process differs depending on your Terminus version. Please refer to the appropriate section below.
-
-### Terminus 3
+The plugin installation process differs depending on your setup. Please refer to the appropriate section below.
 
 Terminus 3 ships with a plugin manager. You can use a Terminus command like the example below to install a plugin:
 
@@ -55,10 +53,6 @@ Most plugins are published online as a Git repository. You can install the plugi
 
 ## Update Plugins
 
-The plugin update process differs depending on your Terminus version. Please refer to the appropriate section below.
-
-### Terminus 3
-
 Terminus 3 ships with a plugin manager. You can use a Terminus command like the example below to update a plugin:
 
 ```bash
@@ -66,10 +60,6 @@ terminus self:plugin:update pantheon-systems/terminus-plugin-example
 ```
 
 ## Uninstall Plugins
-
-The process to uninstall a plugin differs depending on your Terminus version. Please refer to the appropriate section below.
-
-### Terminus 3
 
 Terminus 3 ships with a plugin manager. You can use a Terminus command like the example below to uninstall a plugin:
 

@@ -12,7 +12,7 @@ anchorid: examples
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
 
-## Command Structure
+## Understand Commands
 
 ### Basic Format
 
@@ -24,7 +24,7 @@ terminus command:subcommand <site>.<env>
 
 ### More Information Command
 
-You can run more information on any command:
+You can find more information on any command:
 
 ```bash{promptUser: user}
 terminus command:subcommand -h
@@ -77,7 +77,7 @@ The example above is equivalent to `terminus env:info mysite.dev`.
 
 Pantheon supports [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
 
-1. Use the [basic command structure described above](#command-structure). 
+1. Use the [basic command structure described above](#command-structure).
 
   The commands to invoke Drush and WP-CLI are:
    - `remote:drush`
@@ -198,7 +198,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to [Extend with Plugins](/guides/terminus/plugins) for instructions on how to install Terminus plugins.
+Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to the [Plugins](/guides/terminus/plugins) section for instructions on how to install Terminus plugins.
 
 1. Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 
@@ -237,7 +237,7 @@ Terminus supports third-party plugins that extend functionality by adding new co
 
 ## Deploy Code
 
-You can use Terminus to test a new set of changes. Deploy code from development environments up to the Test environment while pulling the database and files down from Live.
+You can use Terminus to test a new set of changes by deploying code from development environments up to the Test environment while pulling the database and files down from Live.
 
 1. Run the command below to deploy the code:
 
@@ -289,7 +289,7 @@ Follow the steps below to reset Dev to Live.
 
   GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/scripts/reset-dev-to-live.sh.txt bash GITHUB-EMBED
 
-1. Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
+1. Execute the script from the command line within the root directory of your site's codebase:
 
   ```bash{promptUser: user}
   sh /PATH/TO/SCRIPT/reset-dev-to-live.sh
@@ -299,7 +299,7 @@ The Site Dashboard will open when the reset procedure completes.
 
 ## Switch Upstreams
 
-Every site has an assigned upstream to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
+Every site has an assigned upstream to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site-level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
 - Convert existing sites from a default framework to a [Custom Upstream](/guides/custom-upstream).
 - Convert existing sites from one Custom Upstream to another, for reasons such as:

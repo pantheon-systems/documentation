@@ -14,7 +14,7 @@ This section provides information on how to install and authenticate Terminus.
 
 Terminus is available for macOS and Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), and then install Terminus in the Linux shell.
 
-Some Terminus commands use SSH authentication. You may want to consider [generating and adding SSH keys](/ssh-keys/) to your account before you continue.
+Some Terminus commands use SSH authentication. You may want to [generate and add SSH keys](/ssh-keys/) to your account before you continue.
 
 ## Terminus Requirements
 
@@ -29,19 +29,19 @@ Some Terminus commands use SSH authentication. You may want to consider [generat
 - [PHP-CLI](http://www.php-cli.com/)
 - [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 - [Composer](https://getcomposer.org/download/)
-- [Git](https://help.github.com/articles/set-up-git/) (May be needed for the plugin manager component)
+- [Git](https://help.github.com/articles/set-up-git/). This may be needed for the plugin manager component.
 
 ### Recommended Packages
 
-- [Drush](http://docs.drush.org/en/master/install/) (Useful to run incompatible-with-Terminus Drush commands)
-- [WP-CLI](http://wp-cli.org/) (Useful to run incompatible-with-Terminus WP-CLI commands)
+- [Drush](http://docs.drush.org/en/master/install/). This is useful if you need to run Drush commands that are incompatible with Terminus.
+- [WP-CLI](http://wp-cli.org/). This is useful if you need to run WP-CLI commands that are incompatible with Terminus.
 
 ## Install Terminus
 
 There are several ways to install Terminus, depending on your use case:
 
 - Self-contained Terminus executable:[install terminus.phar](#standalone-terminus-phar)
-- Mac:[install using homebrew](#homebrew-installation)
+- Mac:[install using Homebrew](#homebrew-installation)
 - Contribute to the Terminus project: [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the Git repository
 
 ### Standalone Terminus PHAR

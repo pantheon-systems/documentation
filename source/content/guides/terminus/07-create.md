@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
 subtitle: Create Terminus Plugins
-description: Learn how to create your own Terminus plugin.
+description: Learn how to create your own Terminus plugins.
 layout: guide
 showtoc: true
 categories: [develop]
@@ -172,15 +172,15 @@ You must complete the steps below if you want to share your plugin with others.
   }
   ```
 
-1. Add a PSR-4 compatible namespace to your plugin command class name to avoid conflict with internal or third-party commands. This should contain your vendor name and the plugin name. Add a `namespace` declaration to the top of your php file (e.g. `\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
+1. Add a PSR-4 compatible namespace to your plugin command class name to avoid conflict with internal or third-party commands. This should contain your vendor name and the plugin name. Add a `namespace` declaration to the top of your PHP file (e.g. `\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
 
   ```bash
   namespace Pantheon\TerminusHelloWorld\Commands;
   ```
 
-  The `Commands` part of the namespace is not strictly necessary but it can help keep things organized if you need to add supporting classes to your plugin.
+  The `Commands` part of the namespace is not necessary but it can help keep things organized if you need to add supporting classes to your plugin.
 
-1. Make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
+1. Make sure your `src` directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can organize them into command groups by adding another layer to the namespace and directory structure.
 
 1. Update the `composer.json` file with an autoload section to indicate how to load your namespace. Change `my-username` and `Pantheon` in the example to your vendor name. Your composer file should now look like:
 
@@ -228,7 +228,7 @@ You must complete the steps below if you want to share your plugin with others.
 
 <Alert title="Note"  type="info" >
 
-To avoid conflicts between the dependencies of different plugins, Terminus 1 and 2 do not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor. Terminus 3 does not have this restriction.
+Terminus 1 and 2 do not load a plugin's external libraries until immediately before one of its commands is executed to avoid conflicts between the dependencies of different plugins. That means that you cannot use any external classes in your plugin's constructor. Terminus 3 does not have this restriction.
 
 </Alert>
 
@@ -251,9 +251,9 @@ You can specify this in the `compatible-version` section of your `composer.json`
 
 1. Make sure that your constraint expression does not accidentally include the next major version of Terminus if you change `compatible-version`. For example, `>=1.3 <2.0.0` is fine, but `>=1.3` is not.
 
-## Testing Plugins
+## Test Plugins
 
-Adding automated testing is an important step before distributing plugins. Automated tests give prospective new users the assurance that the plugin works, and provides a basis for evaluating changes to the plugin.
+Automated plugin testing is an important step to complete before you distribute your plugins. Automated tests give prospective new users the assurance that the plugin works, and provides a basis for evaluating changes to the plugin.
 
 The instructions in this section demonstrate how to set up simple functional tests for Terminus plugins using Bats, the [Bash Automated Testing System](https://github.com/sstephenson/bats). Bats allows tests to be written with simple Bash statements.
 
@@ -294,29 +294,35 @@ The instructions in this section demonstrate how to set up simple functional tes
 
 1.  Install the PHP Code Sniffer:
 
-        composer install
+    ```bash{promptUser: user}
+          composer install
+    ```
 
 1.  Check the coding standards of your plugin for PSR-2 compliance:
 
+      ```bash{promptUser: user}
         composer cs
+      ```
 
-1.  `cbf` can fix most PRS-2 compliance errors in your plugin:
+1.  Use `cbf` to fix (most) PRS-2 compliance errors in your plugin:
 
+      ```bash{promptUser: user}
         composer cbf
+      ```
 
 1. Add the following lines to the `.gitignore`file. This is **strongly** recommended because of the additional files created by these tests.
 
-    ```bash
-    vendor
-    bats
-    bin
-    libexec
-    share
+    ```bash{promptUser: user}
+      vendor
+      bats
+      bin
+      libexec
+      share
     ```
 
-1.  Define some Bats tests to run. Create a folder named `tests`, and create a file named `confirm-install.bats`. Place the content below in your Bats test file:
+1.  Define your Bats tests. Create a folder named `tests`, and create a file named `confirm-install.bats`. Place the content below in your Bats test file:
 
-    ```bash
+    ``````bash{promptUser: user}
     #!/usr/bin/env bats
 
     #
@@ -340,19 +346,19 @@ The instructions in this section demonstrate how to set up simple functional tes
 
 1.  Run your test:
 
-    ```bash
+    ```bash{promptUser: user}
      composer test
     ```
 
-You can create more files with `.bats` extensions to add more tests. You must populate these files with `@test` blocks as shown above. Tests consist of simple bash expressions; any command that returns a non-zero result code signifies failure. Refer the [documentation on writing BATS tests](https://github.com/sstephenson/bats#writing-tests) for more information.
+You can create more files with `.bats` extensions to add more tests. You must populate these files with `@test` blocks as shown above. Tests consist of simple bash expressions. A command that returns a non-zero result code signifies failure. Refer the [documentation on writing BATS tests](https://github.com/sstephenson/bats#writing-tests) for more information.
 
-### Automating Tests
+### Automate Tests
 
-You can [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You'll need to keep a Sandbox site online to run the tests against.
+You can [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You must keep a Sandbox site online to run the tests against.
 
 1. Copy the contents below into a file named `circle.yml` in your plugin project:
 
-   ```bash
+   ```bash{promptUser: user}
    #
    # Test the Terminus Composer Plugin
    #
@@ -379,22 +385,21 @@ You can [configure your project tests to run automatically on Circle CI](https:/
        - composer test
    ```
 
-   Using another testing service can also be done by adapting the contents above; most popular services should be fairly easy to set up.
+   You can use another testing service by adapting the contents above. Most popular services should be easy to set up.
 
 1. Open the Circle CI settings to set up the following environment variables:
 
    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
    - `TERMINUS_TOKEN`: A [Pantheon machine token](/machine-tokens) that has access to the test site.
 
-3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/) (leave the "Hostname" field empty).
+3. Create an ssh key pair, [add the public key to your account on Pantheon](/ssh-keys), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/). Leave the `Hostname` field empty.
 
   Your tests should run successfully on Circle CI.
 
-1. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's `README.md` file to show off your passing build status.
+1. Add an [embeddable status badge](https://circleci.com/docs/1.0/status-badges/) to the top of your plugin's `README.md` file to show your passing build status.
 
 A more complete version of the plugin created above can be found at:
 [https://github.com/pantheon-systems/terminus-plugin-example](https://github.com/pantheon-systems/terminus-plugin-example)
-
 
 ## Plugin Commands
 
