@@ -102,16 +102,19 @@ class ContributorTemplate extends React.Component {
                               </Link>
                             </li>
                           )
-                        }
-                        return (
+                        } }
+                       else {
+                          return (
                           <li key={node.id}>
                             <Link to={`/${node.fields.slug}`}>
                               {node.frontmatter.title}
                             </Link>
                           </li>
-                        )
-                      }}
-                    })}
+                          )
+                        }
+                      }
+                      })
+                    }
                   </ul>
                 </div>
               </div>

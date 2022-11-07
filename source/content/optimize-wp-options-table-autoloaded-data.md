@@ -4,7 +4,7 @@ description: Learn how to check and configure the autoloaded data in your wp_opt
 cms: "WordPress"
 categories: [performance]
 tags: [cache]
-contributors: [carlalberto, whitneymeredith]
+contributors: [carl-alberto, whitneymeredith]
 ---
 
 ## wp_options Table

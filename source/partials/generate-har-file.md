@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: []
+integration: []
+reviewed: "2022-11-03"
+---
+
 ## HAR (HTTP Archive format)
 
 A HAR file is a JSON file that you generate to track all logs of a web browser's interaction with a website. It is used to troubleshoot performance and page rendering issues such as slow page loads, timeouts, incorrect page formats, and missing information.

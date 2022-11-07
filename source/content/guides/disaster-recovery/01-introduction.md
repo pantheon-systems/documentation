@@ -4,7 +4,6 @@ subtitle: Introduction
 description: Address emergency downtime situations on the Pantheon platform
 generator: pagination
 layout: guide
-categories: [platform]
 tags: [webops]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
@@ -12,8 +11,13 @@ type: guide
 permalink: docs/guides/disaster-recovery
 anchorid: disaster-recovery
 editpath: disaster-recovery/01-introduction.md
+contenttype: guide
+categories: [help, overview]
+newcms: [drupal, wordpress]
+audience: [agency, development]
+product: []
+integration: []
 ---
-
 
 This guide is focused on the immediate actions a Pantheon customer should take in the event of a catastrophic site failure. In all cases, the first step should be to file an emergency downtime on-call ticket; this will immediately escalate the incident and ensure the fastest and most effective service. 
 

@@ -3,7 +3,6 @@ title: Migrate a Drupal 9 Site from Another Platform
 subtitle: Add Contrib and Custom Code
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-unhosted/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-unhosted/07-contrib-custom.md
 reviewed: "2021-05-13"
+contenttype: guide
+categories: []
+newcms: [drupal9]
+audience: [development]
+product: []
+integration: []
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.

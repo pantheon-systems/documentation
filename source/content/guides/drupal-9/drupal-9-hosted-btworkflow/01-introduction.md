@@ -3,7 +3,6 @@ title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build To
 subtitle: Introduction
 description: Learn how to migrate a Drupal 8 Site to Drupal 9
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted-btworkflow
 anchorid: drupal-9-hosted-btworkflow
 editpath: drupal-9/drupal-9-hosted-btworkflow/01-introduction.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [development]
+newcms: [drupal8, drupal9]
+audience: [agency, development]
+product: [dashboard, terminus]
+integration: []
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

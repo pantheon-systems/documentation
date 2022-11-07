@@ -12,6 +12,7 @@ editpath: frontend-performance/07-queries.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: guide
+categories: []
 newcms: [drupal, wordpress]
 audience: [development]
 product: []

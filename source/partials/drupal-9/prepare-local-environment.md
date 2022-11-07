@@ -1,3 +1,11 @@
+---
+contenttype: partial
+newcms: []
+product: [terminus]
+integration: []
+reviewed: "2022-11-04"
+---
+
 1. Review our documentation on [Git](/guides/git/git-config), [Composer](/guides/composer), and [Terminus](/terminus), and and install and configure them on your local computer. Pantheon requires Composer 2 at minimum.
 
    - Mac users can use [Homebrew](https://brew.sh/) to install Git, Composer, and PHP, along with their required dependencies. Note that Terminus 3 should be used for PHP versions 8.0 and up. Restart the shell or terminal environment after entering the following command:
