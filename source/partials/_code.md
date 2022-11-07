@@ -1,9 +1,10 @@
 ---
 contenttype: partial
-newcms: []
+categories: [config, git]
+newcms: [drupal7, wordpress]
 product: []
 integration: []
-reviewed: ""
+reviewed: "2022-11-01"
 ---
 
 The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
