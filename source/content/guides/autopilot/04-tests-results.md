@@ -2,20 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Tests and Results
 description: Autopilot visual regression testing (VRT) results and how to deal with failing tests.
-tags: []
-contenttype:
-categories: []
-newcms: []
-audience: []
-product: []
-integration: []
-contributors:
-reviewed:
----
-title: Pantheon Autopilot
-subtitle: Tests and Results
-description: Autopilot visual regression testing (VRT) results and how to deal with failing tests.
-categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
@@ -24,6 +10,14 @@ anchorid: tests-results
 permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
+contenttype: guide
+categories: [deploy, test, update]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: [quicksilver]
+---
+
 ---
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it applies updates to your Dev, Test or Live environment.
