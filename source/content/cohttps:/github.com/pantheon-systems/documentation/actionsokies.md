@@ -7,7 +7,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: []
 integration: []
-contributors: 
+contributors: []
 reviewed:"2022-11-04"
 ---
 
