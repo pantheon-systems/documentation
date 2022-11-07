@@ -7,7 +7,7 @@ contenttype: doc
 categories: [cache, cookies, deploy, domains, help]
 newcms: [wordpress,drupal]
 audience: [development, sysadmin]
-product: [cdn, dashboard]
+product: [cdn]
 integration: []
 ---
 
