@@ -48,7 +48,6 @@ Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test 
 
 </Alert>
 
-
 ## Troubleshooting
 
 ### Nothing to install or update
@@ -57,7 +56,7 @@ For Composer-managed Terminus installations, if the update command above returns
 
 1. Delete the existing Terminus version (e.g. `$HOME/terminus`).
 
-1. Re-run the following install command:
+1. Re-run the install command:
 
     ```bash{promptUser: user}
     rm -rf $HOME/terminus

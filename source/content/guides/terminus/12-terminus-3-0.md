@@ -15,7 +15,7 @@ This section provides information about Terminus 3.0. Terminus 3.0 is the most r
 
 <Alert title="Note" type="info" >
 
-If you're not already familiar with Terminus, we suggest you read from the beginning of the [Terminus Guide](/guides/terminus). This section is specifically geared at existing Terminus users who need to update existing implementations.
+We suggest you read from the beginning of the [Terminus Guide](/guides/terminus) if you're not already familiar with Terminus. This section is specifically geared at existing Terminus users who need to update existing implementations.
 
 </Alert>
 
@@ -40,4 +40,3 @@ The following commands are new to Terminus as of version 3.0:
 - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)
 - [Terminus Guide](/guides/terminus)
 - [Terminus PHP Compatibility](/guides/terminus/supported-terminus#php-version-compatibility-matrix)
-- [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

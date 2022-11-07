@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide
 subtitle: Plugin Directory
-description: A non-exclusive directory of plugins to extend the features of Terminus.
+description: A non-exclusive directory of plugins to extend Terminus features.
 layout: guide
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
@@ -65,7 +65,7 @@ Install [Quicksilver](/guides/quicksilver) webhooks from the [Quicksilver exampl
 
   <Card title={"Rsync"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-rsync-plugin"}>
 
-Quickly copy files to and from a Pantheon site.
+Copy files to and from a Pantheon site.
 
   </Card>
 
