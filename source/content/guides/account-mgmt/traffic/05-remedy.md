@@ -2,7 +2,6 @@
 title: "Traffic"
 subtitle: Troubleshooting Traffic Events
 description: Determine and address the causes of unexpected traffic.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/traffic/remedy
 anchorid: remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [plans]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 This section introduces methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.

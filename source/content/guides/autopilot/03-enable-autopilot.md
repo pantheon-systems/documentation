@@ -2,7 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Autopilot Setup and Configuration
 description: Enable and configure Autopilot visual regression testing (VRT) for your WordPress or Drupal site.
-categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
@@ -11,6 +10,12 @@ anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
 reviewed: "2022-04-05"
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 ## Enable Autopilot

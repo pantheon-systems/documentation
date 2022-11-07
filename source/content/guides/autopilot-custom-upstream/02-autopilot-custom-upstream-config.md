@@ -2,13 +2,18 @@
 title: Autopilot for Custom Upstreams
 subtitle: Configure a Custom Upstream for Autopilot
 description: Learn how to configure your Custom Upstream to use Autopilot.
-categories: [develop]
 tags: [autopilot, upstreams]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/autopilot-custom-upstream-config
 anchorid: autopilot-custom-upstream-config
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 There are three use cases for combining Autopilot and Custom Upstreams on the Pantheon platform.

@@ -2,7 +2,6 @@
 title: "Plans"
 subtitle: Pricing
 description: Review our pricing options.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -10,6 +9,12 @@ permalink: docs/guides/account-mgmt/plans/pricing
 anchorid: pricing
 editpath: docs/guides/account-mgmt/plans/05-pricing.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [plans]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 The following tables provide both the list and preferred pricing for Pantheon Plans, as well as the savings you can achieve using Annual pricing.

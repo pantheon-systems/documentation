@@ -1,8 +1,7 @@
 ---
-title: "Workspaces, Sites, and Teams"
+title: Workspaces, Sites, and Teams
 subtitle: Sites Management
-description: "Learn how to manage your sites."
-categories: [account-mgmt]
+description: Learn how to manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
 anchorid: sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [accounts]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 This guide is specific to sites management, not developing and launching sites.

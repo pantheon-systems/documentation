@@ -9,6 +9,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/wp-autopilot-custom-upstream
 anchorid: wp-autopilot-custom-upstream
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 This section provides information and steps to set up your WordPress site to run [Autopilot](/guides/autopilot). This allows you to perform VRT on individual sites while ensuring that your [Custom Upstream](/guides/custom-upstream) codebase remains updated and authoritative.

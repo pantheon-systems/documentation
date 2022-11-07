@@ -2,7 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Autopilot FAQs
 description: Get answers to your Autopilot questions.
-categories: [automate]
 tags: [autopilot, webops]
 type: guide
 layout: guide
@@ -10,6 +9,12 @@ showtoc: true
 anchorid: autopilot-faq
 permalink: docs/guides/autopilot/autopilot-faq/
 reviewed: "2022-06-14"
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 This section provides answers to frequently asked questions about Autopilot.
