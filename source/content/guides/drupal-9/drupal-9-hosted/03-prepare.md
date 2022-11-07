@@ -11,6 +11,7 @@ anchorid: prepare
 editpath: hosted/03-prepare.md
 reviewed: "2021-03-31"
 contenttype: guide
+categories: []
 newcms: [drupal9]
 audience: [development]
 product: []
