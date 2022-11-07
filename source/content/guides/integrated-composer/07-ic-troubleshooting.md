@@ -208,6 +208,50 @@ A workaround for this issue is to reconfigure the patch to exclude the binary co
 
 <Partial file="configure-wp-site-networks-with-integrated-composer.md" />
 
+### GrumPHP using Lando or other localdev commands breaks Integrated Composer
+
+GrumPHP is a code quality tool that installs into Git hooks via a Composer plugin. The hook runs whatever tasks you specify in your `grumphp.yml` file, including unit tests, code sniffing, etc. and allows or prevents a commit as needed.
+
+You can use both GrumPHP and a containerized local dev environment (such as Lando or Docksal). However, if you choose to run GrumPHP within that environment by changing the command triggered by GrumPHP on commit in your `grumphp.yml` file shown in the example below, you may encounter a problem.
+
+  ```bash{promptUser: user}
+    grumphp:
+    git_hook_variables:
+      EXEC_GRUMPHP_COMMAND: 'lando php'
+  ```
+
+The problem is that GrumPHP runs in Integrated Composer, which will cause the entire build to fail. Composer installs GrumPHP, then Integrated Composer tries to make a commit, GrumPHP tries to run Lando PHP and then fails because Lando doesn't exist in Pantheon's build environment.
+
+**Solution**
+
+The solution is to set `EXEC_GRUMPHP_COMMAND` to run a script that tests for the needed dependencies and only runs the GrumPHP tasks if all dependencies are found. For example:
+
+```bash{promptUser: user}
+  grumphp:
+  git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: '.scripts/grumphp.sh' # YOUR SCRIPT NAME HERE
+  ```
+
+Lando Example:
+
+  ```bash{promptUser: user}
+  #!/bin/sh
+  if command -v lando &> /dev/null
+  then
+    lando php "$@"
+  fi
+  ```
+
+The test in the script can be whatever is needed in your particular case. The example below tests for the existence of the `PANTHEON_ENVIRONMENT` env var (credit @joestewart):
+
+```bash{promptUser: user}
+#!/bin/sh
+if [ -z "$PANTHEON_ENVIRONMENT" ]  &> /dev/null
+then
+  php "$@"
+fi
+```
+
 ## More Resources
 
 - [Integrated Composer FAQ](/guides/integrated-composer/ic-faq)
