@@ -59,7 +59,7 @@ class ReviewReport extends React.Component {
           return (
             <Layout>
               <h1>All Files</h1>
-                <div className="table-responsive">
+                <div>
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
                       <tr>
