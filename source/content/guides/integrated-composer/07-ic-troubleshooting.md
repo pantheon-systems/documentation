@@ -208,19 +208,19 @@ A workaround for this issue is to reconfigure the patch to exclude the binary co
 
 <Partial file="configure-wp-site-networks-with-integrated-composer.md" />
 
-### GrumPHP using Lando or other localdev commands breaks Integrated Composer
+### GrumPHP using Lando or other local development commands breaks Integrated Composer
 
-GrumPHP is a code quality tool that installs into Git hooks via a Composer plugin. The hook runs whatever tasks you specify in your `grumphp.yml` file, including unit tests, code sniffing, etc. and allows or prevents a commit as needed.
+[GrumPHP](https://github.com/phpro/grumphp) is a code quality tool that installs into Git hooks via a Composer plugin. The hook runs whatever tasks you specify in your `grumphp.yml` file, including unit tests, code sniffing, etc., and allows or prevents a commit as needed.
 
-You can use both GrumPHP and a containerized local dev environment (such as Lando or Docksal). However, if you choose to run GrumPHP within that environment by changing the command triggered by GrumPHP on commit in your `grumphp.yml` file shown in the example below, you may encounter a problem.
+You can use both GrumPHP and a containerized local dev environment (such as Lando or Docksal). However, if you choose to run GrumPHP within that environment by changing the command triggered by GrumPHP on commit in your `grumphp.yml` file shown in the example below, you may encounter a build fail.
 
   ```bash{promptUser: user}
     grumphp:
-    git_hook_variables:
+     git_hook_variables:
       EXEC_GRUMPHP_COMMAND: 'lando php'
   ```
 
-The problem is that GrumPHP runs in Integrated Composer, which will cause the entire build to fail. Composer installs GrumPHP, then Integrated Composer tries to make a commit, GrumPHP tries to run Lando PHP and then fails because Lando doesn't exist in Pantheon's build environment.
+The build fails because GrumPHP runs in Integrated Composer. Composer installs GrumPHP, then Integrated Composer tries to make a commit, GrumPHP tries to run Lando (or another containerized local dev environment) PHP and then fails because Lando doesn't exist in Pantheon's build environment.
 
 **Solution**
 
@@ -228,7 +228,7 @@ The solution is to set `EXEC_GRUMPHP_COMMAND` to run a script that tests for the
 
 ```bash{promptUser: user}
   grumphp:
-  git_hook_variables:
+   git_hook_variables:
     EXEC_GRUMPHP_COMMAND: '.scripts/grumphp.sh' # YOUR SCRIPT NAME HERE
   ```
 
