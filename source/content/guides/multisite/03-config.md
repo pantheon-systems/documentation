@@ -174,6 +174,6 @@ Explore the WordPress Network Dashboard to become familiar with the variety of a
 
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)]
 
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
 
 - [WordPress with Composer on Pantheon](/guides/wordpress-composer)

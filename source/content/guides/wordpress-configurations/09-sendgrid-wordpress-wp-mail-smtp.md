@@ -1,12 +1,14 @@
 ---
-title: Use WP Mail SMTP to Send Email with Sendgrid
+title: WordPress Configurations Guide
+subtitle: Use WP Mail SMTP to Send Email with Sendgrid
 description: This popular WordPress plugin is easy to configure for use with SendGrid.
 contributors: [alexfornuto]
 categories: [integrate]
 tags: [email, plugins]
 cms: "WordPress"
 reviewed: "2020-11-02"
-permalink: docs/guides/:basename
+permalink: docs/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp
+anchorid: sendgrid-wordpress-wp-mail-smtp
 ---
 
 [SendGrid](https://sendgrid.com/) is a popular email service, but its [WordPress plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) has been deprecated as of July 13, 2021.

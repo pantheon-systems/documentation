@@ -1,10 +1,13 @@
 ---
-title: Enabling Solr for WordPress
+title: WordPress Configurations Guide
+subtitle: Enabling Solr for WordPress
 description: Detailed information on using Apache Solr with WordPress.
 cms: "WordPress"
 categories: [integrate]
 tags: [solr, plugins]
 contributors: [cityofoaksdesign]
+permalink: docs/guides/wordpress-configurations/wordpress-solr
+anchorid: wordpress-solr
 ---
 
 [Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. <Partial file="solr-version.md" />

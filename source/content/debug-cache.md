@@ -12,7 +12,7 @@ reviewed: "2020-12-15"
 First, verify caching configuration to ensure anonymous caching is enabled. Then test to determine if CDN caching is working on your site:
 
 - To enable anonymous caching within Drupal, see [Drupal Performance and Caching Settings](/drupal-cache).
-- WordPress sites on Pantheon have anonymous caching enabled by default. See [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin) for details.
+- WordPress sites on Pantheon have anonymous caching enabled by default. See [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin) for details.
 - See [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching) for steps to test.
 
 If you see `Age: 0` after multiple requests, your site is not caching properly.

@@ -1,9 +1,12 @@
 ---
-title: WordPress Configuration Management (WP-CFM)
+title: WordPress Configurations Guide
+subtitle: WordPress Configuration Management (WP-CFM)
 description: Learn how to install and use the WordPress Configuration Management plugin on your Pantheon WordPress site.
 cms: "WordPress"
 categories: [develop]
 tags: [workflow, plugins]
+permalink: docs/guides/wordpress-configurations/wp-cfm
+anchorid: wp-cfm
 ---
 
 Version-controlling site configuration within the codebase is a best practice. Since WordPress site configuration is stored in the database alongside content, developer workflows must account for migrating configuration from development and testing environments into production without affecting the content.
@@ -171,7 +174,7 @@ If you want to track configurations in more tables, you must do so using the `wp
 
 ### Will WP-CFM work with Multidev?
 
-Yes. For the Multidev to appear as a config option, you will need hook into the plugin's [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_multi_env) and [`wpcfm_current_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_current_env) functions in a Must Use Plugin like the example in [Create a WordPress MU-Plugin for Actions and Filters](/mu-plugin/#wp-cfm-compatibility).
+Yes. For the Multidev to appear as a config option, you will need hook into the plugin's [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_multi_env) and [`wpcfm_current_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_current_env) functions in a Must Use Plugin like the example in [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin/#wp-cfm-compatibility).
 
 ### What's not tracked?
 

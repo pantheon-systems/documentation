@@ -53,7 +53,7 @@ ini_set('arg_separator.output', '&');
 
 ## Actions and Filters in `wp-config.php`
 
-Actions or filters that require CLI tools like WP-CLI might fail from `wp-config.php`, because the functions required are not yet accessible. Put these directives in an [MU Plugin](/mu-plugin) to resolve this issue.
+Actions or filters that require CLI tools like WP-CLI might fail from `wp-config.php`, because the functions required are not yet accessible. Put these directives in an [MU Plugin](/guides/wordpress-configurations/mu-plugin) to resolve this issue.
 
 ## More Resources
 

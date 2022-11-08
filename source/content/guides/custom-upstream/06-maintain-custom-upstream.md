@@ -30,7 +30,7 @@ if ( file_exists( dirname( __FILE__ ) . '/guides/redirect.php' ) && isset( $_ENV
 
 Remember that this file is not included in the Custom Upstream and must exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/guides/php/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
-WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
+WordPress sites can also store redirects in an [MU-Plugin](/guides/wordpress-configurations/mu-plugin).
 
 ## More Resources
 

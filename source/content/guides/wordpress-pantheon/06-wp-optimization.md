@@ -48,4 +48,4 @@ This section provides optional steps to improve your site's speed.
 
 1. Create a dedicated search index
 
-    - An external dedicated index provides more features and responsiveness than the WordPress default Search function. Refer to [Enabling Solr for WordPress](/wordpress-solr) for more details.
+    - An external dedicated index provides more features and responsiveness than the WordPress default Search function. Refer to [Enabling Solr for WordPress](/guides/wordpress-configurations/wordpress-solr) for more details.

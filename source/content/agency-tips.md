@@ -41,7 +41,7 @@ The Pantheon [Community Forums](https://discuss.pantheon.io/) and [Slack Workspa
 Follow our [Launch Essentials](/guides/launch) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 
 ## Pantheon Search
-All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
+All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/guides/wordpress-configurations/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Object Cache
 All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).

@@ -1,10 +1,13 @@
 ---
-title: Managing Custom Code for WordPress with Plugins
+title: WordPress Configurations Guide
+subtitle: Managing Custom Code for WordPress with Plugins
 description: Learn how to manage custom plugins or themes for WordPress sites using GitHub Updater or WP Pusher.
 cms: "WordPress"
 categories: [develop]
 tags: [workflow, code]
 contributors: [afragen, petersuhm]
+permalink: docs/guides/wordpress-configurations/wordpress-custom-code
+anchorid: wordpress-custom-code
 ---
 Extending WordPress with custom code is a common part of the development lifecycle. In order to optimize workflows, it's essential that extensions are maintained independently from your sites and projects so that custom code is easily reused. You'll also want to separate function from design, so that changes persist when swapping themes. This means no more dropping code into the current theme's `functions.php` file and no more pasting snippets when you want to reuse code in another project.
 
