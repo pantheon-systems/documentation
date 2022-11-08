@@ -2,9 +2,14 @@
 title: Drupal Security Patches
 description: How to manually patch Drupal 7 and 8 with security patches, ahead of the upstream updates.
 cms: "Drupal"
-categories: [develop]
 tags: [security, updates]
 contributors: [alexfornuto, ari]
+newtype: doc
+categories: [optimize]
+newcms: [drupal, drupal7, drupal8]
+audience: [development]
+product: []
+integration: []
 ---
 
 When Drupal releases critical security releases, Pantheon takes immediate steps to patch our Drupal upstreams. These updates may not always be accessible for users who:
