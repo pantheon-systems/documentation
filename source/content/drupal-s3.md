@@ -5,7 +5,13 @@ cms: "Drupal"
 categories: [integrate]
 tags: [files]
 contributors: [peter-pantheon, alexfornuto]
-date: 9/1/2016
+reviewed: "2016-09-01"
+newtype: doc
+categories: [create, config]
+newcms: [drupal, drupal7]
+audience: [development]
+product: []
+integration: [aws]
 ---
 
 Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with Drupal sites running on Pantheon.
