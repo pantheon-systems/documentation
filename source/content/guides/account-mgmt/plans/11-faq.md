@@ -2,7 +2,6 @@
 title: "Plans"
 subtitle: FAQ
 description: Commonly asked questions about plans.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/plans/faq
 anchorid: faq
 editpath: docs/guides/account-mgmt/plans/11-faq.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [plans]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 ### Can I host more than one site on an individual plan?

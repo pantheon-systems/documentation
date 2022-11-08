@@ -2,7 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Autopilot Pre-Configuration Checklist
 description: Get a head start on your Autopilot journey.
-categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
@@ -10,6 +9,12 @@ contributors: [whitneymeredith]
 showtoc: true
 anchorid: autopilot-preconfiguration
 permalink: docs/guides/autopilot/autopilot-preconfiguration/
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 There are several things you can do to prepare your site and your team for Autopilot before it is enabled.

@@ -2,7 +2,6 @@
 title: "Traffic"
 subtitle: FAQ
 description: Frequently asked questions regarding traffic and overages.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/traffic/faq
 anchorid: faq
 editpath: docs/guides/account-mgmt/traffic/07-faq.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [plans]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 ### Why doesn't Pantheon's traffic metrics match my other analytics?

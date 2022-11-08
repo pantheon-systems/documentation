@@ -2,7 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Apply Updates
 description: Learn how to apply Autopilot updates.
-categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
@@ -11,6 +10,12 @@ anchorid: apply-updates
 permalink: docs/guides/autopilot/apply-updates/
 editpath: autopilot/05-apply-updates.md
 reviewed: "2021-08-09"
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it tries to apply updates.

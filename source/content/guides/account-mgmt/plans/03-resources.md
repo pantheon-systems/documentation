@@ -2,7 +2,6 @@
 title: "Plans"
 subtitle: Plan Resources
 description: Learn about the resources provided with each of Pantheon's site plans.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -10,6 +9,12 @@ permalink: docs/guides/account-mgmt/plans/resources
 anchorid: resources
 editpath: docs/guides/account-mgmt/plans/03-resources.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [plans]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.

@@ -2,13 +2,18 @@
 title: Advanced Global CDN
 subtitle: AGCDN Features
 description: Learn more about AGCDN features.
-categories: [develop]
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-features
 anchorid: agcdn-features
+contenttype: guide
+categories: [optimize]
+newcms: []
+audience: [development]
+product: []
+integration: []
 ---
 
 This section provides detailed information on AGCDN features.
