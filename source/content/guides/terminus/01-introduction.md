@@ -44,6 +44,6 @@ Community submitted bugs and feature requests can be found [in the Terminus GitH
 
 ## More Resources
 
-- [Quicksilver on Pantheon](/quicksilver)
+- [Quicksilver on Pantheon](/guides/quicksilver)
 - [WP-CLI on the Pantheon Platform](/guides/wp-cli)
 - [Drupal Drush Command-Line Utility on Pantheon](/guides/drush)

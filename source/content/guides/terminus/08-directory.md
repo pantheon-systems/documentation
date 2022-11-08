@@ -89,8 +89,7 @@ Display the status of all available Pantheon site environments.
 
 </CardGroup>
 
-
 ## More Resources
 
-- [Quicksilver on Pantheon](/quicksilver)
+- [Quicksilver on Pantheon](/guides/quicksilver)
 - [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql)
