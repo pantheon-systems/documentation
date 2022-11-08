@@ -2,9 +2,14 @@
 title: Managing Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
 cms: "Drupal"
-categories: [develop]
 tags: [drush, updates]
 reviewed: "2022-02-15"
+newtype: doc
+categories: [config]
+newcms: [drupal, drupal7, drupal8, drupal9, drupal10]
+audience: [development]
+product: []
+integration: []
 ---
 
 By default, Pantheon runs Drush 8 on newly created Drupal 7 sites, and Drush 10 on newly created Drupal 9 sites.
