@@ -2,9 +2,14 @@
 title: Major Version Drupal Upgrades
 description: Instructions on how to upgrade your Pantheon site to the next major version of Drupal.
 cms: "Drupal"
-categories: [get-started]
 tags: [migrate, workflow]
 reviewed: "2020-07-21"
+newtype: doc
+categories: [config]
+newcms: [drupal, drupal8, drupal9]
+audience: [agency, development]
+product: []
+integration: []
 ---
 
 <Alert title="Deprecated" type="info" icon="drupal">
@@ -22,7 +27,9 @@ To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
 <Alert title="Warning" type="danger">
+
 If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.
+
 </Alert>
 
 ## About Drupal 9
