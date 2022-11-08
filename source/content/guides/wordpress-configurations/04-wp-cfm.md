@@ -9,9 +9,11 @@ permalink: docs/guides/wordpress-configurations/wp-cfm
 anchorid: wp-cfm
 ---
 
-Version-controlling site configuration within the codebase is a best practice. Since WordPress site configuration is stored in the database alongside content, developer workflows must account for migrating configuration from development and testing environments into production without affecting the content.
+This section provides information on how to install and configure the WordPress Configuration Management (WP-CFM) plugin on your Pantheon WordPress site.
 
-The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an elegant mechanism for enabling developers to practice configuration management in code. The plugin exports WordPress site configuration from the SQL database's `wp_options` table to a `.json` file stored in `private/config`. After deploying the file to a new environment for the same site, it can then import the configuration from the `.json` file into the second `wp_options` table.
+Version-controlling site configuration within the codebase is a best practice. Developer workflows must account for migrating configuration from development and testing environments into production without affecting the content because WordPress site configuration is stored in the database alongside content.
+
+The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an simple mechanism to allow developers to practice configuration management in code. The plugin exports WordPress site configuration from the SQL database's `wp_options` table to a `.json` file stored in `private/config`. You must deploy the file to a new environment for the same site before you can import the configuration from the `.json` file into the second `wp_options` table.
 
 <Alert title="Note" type="info">
 
