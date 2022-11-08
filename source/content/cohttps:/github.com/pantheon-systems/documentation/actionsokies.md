@@ -1,11 +1,17 @@
 ---
 title: Working with Cookies on Pantheon
 description: Tips and tricks for working with cookies on your Pantheon Drupal and WordPress sites.
-categories: [performance]
-tags: [cache, code, cookies]
+contenttype: doc
+categories: [cache, cookies]
+newcms: [drupal, wordpress]
+audience: [development]
+product: []
+integration: []
+contributors: []
+reviewed:"2022-11-04"
 ---
 
-This page covers working with basic cookies on Pantheon. If you want to create session based cookies to bypass caching, refer to the documentation on [Using Your Own Session-Syle Cookies](/caching-advanced-topics/#using-your-own-session-style-cookies)
+This page covers working with basic cookies on Pantheon. If you want to create session based cookies to bypass caching, refer to the documentation on [Using Your Own Session-Syle Cookies](/caching-advanced-topics/#using-your-own-session-style-cookies).
 
 ## Disable Caching for Specific Pages
 
@@ -42,7 +48,6 @@ You can [modify the `Cache-Control` header](/cache-control) to bypass the cache 
 You do not cache page asset files like CSS, JavaScript, or images in Dev and Multidev environments. This means that you don't need to clear the cache to view changes. However, the platform will respect the CMS page caching settings (which is often important for development work). If you want to see changes to your development work on anonymous pages, the best approach is to reduce the cache lifetime in your CMS to the value `0`.
 
 If you need to work around your CMS to bypass caching for pages in the Dev environment, follow the steps below.
-
 
 1. Navigate your `settings.php` file for Drupal or your `wp-config.php` file for WordPress.
 

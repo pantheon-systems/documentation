@@ -7,9 +7,16 @@ tags: [upstreams, workflow, webops]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/test-custom-upstream
+contributors: []
+reviewed: ""
 anchorid: test-custom-upstream
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal7, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
-
 
 Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend using the workflow example below to  test and update core.
 

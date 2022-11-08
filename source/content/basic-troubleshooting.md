@@ -1,9 +1,14 @@
 ---
 title: Basic Troubleshooting
 description: Common first-step practices to troubleshoot misbehaving sites.
-categories: [wordpress, drupal]
-contributors: [alexfornuto, eabquina, carl-alberto]
+contributors: [alexfornuto, eabquina, carlalberto]
 reviewed: "2020-08-26"
+contenttype: doc
+categories: [cache, cookies, deploy, domains, help]
+newcms: [wordpress,drupal]
+audience: [development, sysadmin]
+product: [cdn]
+integration: []
 ---
 
 This page is a collection of common troubleshooting tactics, curated from our Customer Success Engineers and the Pantheon community. These procedures can help you solve issues your site may have, or rule out potential causes.
