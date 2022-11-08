@@ -1,6 +1,6 @@
 ---
 title: WordPress Configurations Guide
-subtitle: Pantheon WordPress Plugins
+subtitle: Pantheon-maintained WordPress Plugins
 description: Plugins for WordPress on Pantheon.
 categories: [wordpress]
 tags: [wordpress, webops]
@@ -12,41 +12,20 @@ permalink: docs/guides/wordpress-configurations/plugins
 anchorid: plugins
 ---
 
-Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these plugins, find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/).
+Pantheon maintains multiple plugins to facilitate workflow within WordPress. You can find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/) for real-time discussion of these plugins.
 
 <Alert title="Note" type="info">
 
-Drupal users, see [Pantheon Modules](/modules) for details on Drupal modules developed and maintained for the Pantheon workflow.
+Drupal users, refer to [Pantheon Modules](/modules) for details on Drupal modules developed and maintained for the Pantheon workflow.
 
 </Alert>
 
-## WordPress Pantheon Cache
-
-Pantheon maintains an optimized version of WordPress that includes [WordPress Pantheon Cache](/guides/wordpress-configurations/wordpress-cache-plugin) plugin to control cache expiration. 
 
 ## Pantheon Must-Use Plugin
 
-[Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon) is vital to the operation of your site on the platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
+[Pantheon Must-Use Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) is vital to the operation of your site on the Pantheon platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
 
-The functionality of this plugin is broken into two parts: Updates and Page Cache.
-
-### Pantheon Updates
-
-The [Pantheon Updates](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon/pantheon-updates.php) plugin disables automatic updates of all plugins, themes, and WordPress core on Pantheon's Test and Live environments. We do this because it is unsafe to apply updates to production environments directly without first verifying updates on a development environment.
-
-The Test and Live environment codebases also cannot be written to, preventing automatic updates from downloading files from WordPress.org. Any plugin or theme updates must be performed in a development environment then committed and deployed to the Test and Live environments. WordPress core updates must be applied to a development environment via our Git-based [upstream core updates feature](/core-updates).
-
-Check out the WordPress Dashboard section of [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin#wordpress-dashboard) for more information on managing plugins and themes across multiple environments.
-
-### Pantheon Page Cache
-
-The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon/pantheon-page-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
-
-1. Navigate to your WordPress dashboard > click **Settings** > **Pantheon Page Cache**.
-
-1. Click **Clear Cache** to clear the cache for the entire site (this does not clear Varnish or Redis).
-
-1. Set **Default Time to Live (TTL)** to 600 seconds (optional).
+Refer to [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin) for information on how to create a custom MU-Plugin.
 
 ## Pantheon Advanced Page Cache
 
@@ -58,11 +37,11 @@ The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/def
 
 ![Pantheon HUD](../../../images/pantheon-hud.png)
 
-For installation details, see [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator).
+Refer to [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator) for installation details.
 
 ## [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)
 
-[WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)resolves errors with code (themes, modules or plugins) that rely on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions/#troubleshooting-session-errors).
+[WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions)resolves errors with code (themes, modules or plugins) that rely on PHP's default session manager. Refer to[WordPress and PHP Sessions](/guides/php/wordpress-sessions/#troubleshooting-session-errors) for more information.
 
 ### Troubleshooting WP Native PHP Sessions
 
@@ -79,12 +58,12 @@ For example, create an mu-plugin called `00.php` and add a line in it to include
 ## WP SAML Auth
 
 [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/)
-provides support for SAML Authentication. The plugin comes bundled with the OneLogin SAML library and [SimpleSAMLphp](https://simplesamlphp.org/). For an example use case, see [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso)
+provides support for SAML Authentication. The plugin comes bundled with the OneLogin SAML library and [SimpleSAMLphp](https://simplesamlphp.org/). Refer to [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso) for an example use case.
 
 ## WP Redis
 
-[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
+[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. Refer to [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache) for more information.
 
 ## WP Solr
 
-[WP Solr](https://wordpress.org/plugins/solr-power/) enables the Pantheon Search (Solr) search engine for your WordPress website. For more information, see [Enabling Pantheon Search for WordPress](/guides/wordpress-configurations/wordpress-solr).
+[WP Solr](https://wordpress.org/plugins/solr-power/) enables the Pantheon Search (Solr) search engine for your WordPress website. Refer to [Enabling Pantheon Search for WordPress](/guides/wordpress-configurations/wordpress-solr) for more information.
