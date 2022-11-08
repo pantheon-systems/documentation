@@ -68,8 +68,8 @@ const items = [
     title: "Example Usage",
   },
   {
-    id: "docs-terminus-commands",
-    link: "/terminus/commands",
+    id: "docs-guides-terminus-commands",
+    link: "/guides/terminus/commands",
     title: "Commands",
   },
   {
@@ -84,12 +84,12 @@ const items = [
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/terminus/plugins/directory",
+        link: "/terminus/directory",
         title: "Directory",
       },
       {
         id: "docs-terminus-create",
-        link: "/terminus/plugins/create",
+        link: "/terminus/create",
         title: "Create Plugins",
       },
     ],
@@ -138,11 +138,11 @@ class TerminusTemplate extends React.Component {
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const ifCommandsDate =
-      node.fields.slug == "/terminus/commands"
+      node.fields.slug == "/guides/terminus/commands"
         ? this.props.data.terminusReleasesJson.published_at
         : node.frontmatter.reviewed
     const ifCommandsISO =
-      node.fields.slug == "/terminus/commands"
+      node.fields.slug == "/guides/terminus/commands"
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
 
