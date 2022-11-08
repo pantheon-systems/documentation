@@ -45,7 +45,7 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 <dd>
 
-An important performance benchmark is the number of requests that can be served from the Global CDN. Serving requests from cache rather than by the CMS gives visitors a faster response and removes load from the site's server resources. A cached request is served from the nearest edge endpoint without any delay, while a request to the CMS must be individually processed and loaded. The higher the Cache Hit Ratio the better. Learn about how to enable and improve caching in the [Pantheon Global CDN](/guides/global-cdn) guide.
+An important performance benchmark is the number of requests that can be served from the Global CDN. Serving requests from cache rather than by the CMS allows visitors to experience a faster response and removes load from the site's server resources. A cached request is served from the nearest edge endpoint without any delay, while a request to the CMS must be individually processed and loaded. A high cache hit ratio greatly improves the browsing experience and site performance. Learn how to enable and improve caching with the [Pantheon Global CDN](/guides/global-cdn) guide.
 
 </dd>
 
