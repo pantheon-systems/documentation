@@ -1,12 +1,3 @@
----
-contenttype: partial
-categories: [git, config]
-newcms: []
-product: []
-integration: []
-reviewed: "2022-11-07"
----
-
 <TabList>
 
 <Tab title="With Nested Docroot" id="code-docroot" active={true}>

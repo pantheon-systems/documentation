@@ -1,12 +1,3 @@
----
-contenttype: partial
-categories: [config, updates]
-newcms: [drupal7]
-product: []
-integration: []
-reviewed: ""
----
-
 1. Initialize composer to create a `composer.json` file with the Drupal 7 package repository:
 
   ```bash{promptUser: user}
