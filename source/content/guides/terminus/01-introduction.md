@@ -9,8 +9,10 @@ type: terminuspage
 contributors: [whitneymeredith]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus
+permalink: guides/terminus
 anchorid: terminus
+image: terminus-thumbLarge
+reviewed: "2020-02-05"
 ---
 
 Terminus is a command line interface that provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, as well as scripting and much more.
@@ -26,7 +28,6 @@ Terminus is a powerful tool that allows you to:
 - Deploy code from one environment to another
 - Run [Drush](/guides/drush/) and [WP-CLI](/guides/wp-cli/) commands
 - Perform [other operations](/guides/terminus/commands/)
-
 
 ## Contribute to Terminus
 
