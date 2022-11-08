@@ -10,8 +10,8 @@ newcms: [wordpress]
 audience: [development]
 product: []
 integration: []
-permalink: docs/guides/wordpress-configurations/wordpress-cache-plugins
-anchorid: wordpress-cache-plugins
+permalink: docs/guides/wordpress-configurations/wordpress-cache-plugin
+anchorid: wordpress-cache-plugin
 ---
 
 Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages will expire from the Varnish Edge Cache after 10 minutes (600 seconds). The plugin sets a default HTTP header: `Cache-Control: public, max-age=600`
@@ -38,7 +38,7 @@ A simple notice will be displayed to users who request a page that is not alread
 
 1. Click **Save Changes**.
 
-![WordPress Pantheon Cache Plugin settings](../images/WordPress_Pantheon-Cache-Settings.png)
+![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
 
 ## Programmatically Using Pantheon Cache Functions
 

@@ -7,8 +7,8 @@ cms: "WordPress"
 categories: [develop]
 tags: [plugins]
 reviewed: "2020-08-12"
-permalink: docs/guides/wordpress-configurations
-anchorid: wordpress-configurations
+permalink: docs/guides/wordpress-configurations/mu-plugin
+anchorid: mu-plugin
 ---
 
 For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins).

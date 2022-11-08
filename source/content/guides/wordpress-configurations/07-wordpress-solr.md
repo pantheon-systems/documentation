@@ -24,7 +24,7 @@ Before you can start using Solr on WordPress, you need to add the Index Server t
 
 From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**:
 
-![Enable Solr from The Site Dashboard](../images/dashboard/settings-addons-solr.png)
+![Enable Solr from The Site Dashboard](../../../images/dashboard/settings-addons-solr.png)
 
 This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
 
@@ -82,11 +82,11 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/guid
 
 1. In **Appearance** > **Widgets**, add the Solr Search Widget in your desired widget position.
 
-  ![Solr Widget](../images/add-solr-widget.png)
+  ![Solr Widget](../../../images/add-solr-widget.png)
 
 1. In **Solr Power** > **Facet Options** tab, check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)** eg. `primary`.
 
-  ![Solr Settings](../images/solr-widget-settings.png)
+  ![Solr Settings](../../../images/solr-widget-settings.png)
 
    The **Div ID** is where the search results will appear. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
 
