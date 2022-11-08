@@ -33,6 +33,8 @@ class ReviewReport extends React.Component {
                     product
                     integration
                     newcms
+                    description
+                    permalink
                   }
                   fileInfo {
                     childMdx {
@@ -65,6 +67,7 @@ class ReviewReport extends React.Component {
                       <tr>
                         <th>Title</th>
                         <th>Subtitle</th>
+                        <th>Description</th>
                         <th>CMS</th>
                         <th>New CMS</th>
                         <th>Categories</th>
@@ -88,6 +91,7 @@ class ReviewReport extends React.Component {
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.cms ? page.node.frontmatter.subtitle : null}</td>
+                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.description : null}</td>
                               <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
                               <td>
                                 {page.node.frontmatter.product
