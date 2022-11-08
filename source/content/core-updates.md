@@ -40,7 +40,7 @@ Apply one-click updates to individual sites repositories using the Site Dashboar
 
   ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
-1. Commit and deploy and SFTP changes and then set the site's connection mode to **Git**.
+1. Commit and deploy any SFTP changes and then set the site's connection mode to **Git**.
 
 1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
