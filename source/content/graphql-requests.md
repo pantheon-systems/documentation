@@ -5,6 +5,12 @@ categories: [develop]
 tags: [local, workflow]
 contributors: [whitneymeredith]
 reviewed: "2022-03-22"
+newtype: doc
+categories: [api]
+newcms: []
+audience: [agency, development]
+product: []
+integration: []
 ---
 
 [GraphQL](https://graphql.org/) is an API query language that uses a server-side runtime for executing queries. A GraphQL service is created when you define types and fields for those types, and then provide functions for each field on each type. GraphQL is not tied to a specific database or storage engine, but is instead backed by your existing code and data.
