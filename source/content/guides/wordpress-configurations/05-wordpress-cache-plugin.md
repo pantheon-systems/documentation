@@ -30,13 +30,11 @@ To clear the cache automatically:
 
 Refer to the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) and follow the instructions.
 
-## Increase the Default Time to Live Value
+## Pantheon Page Cache Plugin Configuration
+
+### Increase the Default Time to Live Value
 
 You can increase to default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
-
-You can also enable maintenance mode for others while working on your site.
-
-## Pantheon Page Cache Plugin Configuration
 
 1. Log in to your WordPress site as an administrator.
 
@@ -44,19 +42,34 @@ You can also enable maintenance mode for others while working on your site.
 
 1. Click **Pantheon Cache**. You'll end up at: `/wp-admin/options-general.php?page=pantheon-cache`
 
-1. Modify the **Default Cache Time**. You'll want to strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 30 minutes (1800 seconds) or 1 hour (3600 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+1. Modify the **Default Cache Time**. 
 
-1. Modify the **Maintenance Mode**.
-A simple notice will be displayed to users who request a page that is not already cached.
-`Briefly unavailable for scheduled maintenance. Check back in a minute.`
+    You should strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 30 minutes (1800 seconds) or 1 hour (3600 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
 
 1. Click **Save Changes**.
 
 ![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
 
+### Maintenance Mode
+
+You can enable maintenance mode for others while working on your site.
+
+1. Log in to your WordPress site as an administrator.
+
+1. Click **Settings**.
+
+1. Click **Pantheon Cache**. You'll end up at: `/wp-admin/options-general.php?page=pantheon-cache`
+
+1. Modify the **Maintenance Mode**.
+
+    A simple notice displays to users who request a page that is not already cached.
+    `Briefly unavailable for scheduled maintenance. Check back in a minute.`
+
+1. Click **Save Changes**.
+
 ## Use Pantheon Cache Functions Programmatically
 
-Within the `pantheon-cache.php` file that houses the Pantheon Cache plugin code, there are three functions that are useful to developers. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/). Currently, the [limit on the number of paths](https://github.com/pantheon-systems/WordPress/issues/24) that can be cleared in a single call is 10.
+There are three functions that are useful to developers within the `pantheon-cache.php` file that houses the Pantheon Cache plugin code. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/). Currently, the [limit on the number of paths](https://github.com/pantheon-systems/WordPress/issues/24) that can be cleared in a single call is 10.
 
 ### flush_site
 
@@ -73,7 +86,7 @@ public function flush_site()
 
 ### clean_post_cache
 
-This function flushes the cache for an individual post, which is identified by the `$post_id`. The optional `$include_homepage` argument can also be passed, but if not the default value is "true".
+This function flushes the cache for an individual post, which is identified by the `$post_id`. The optional `$include_homepage` argument can also be passed. The default value is `true` if nothing is set.
 
 ```php
 /**
