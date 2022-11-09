@@ -5,7 +5,7 @@ cms: "Drupal"
 tags: [drush]
 reviewed: "2022-04-19"
 newtype: doc
-categories: [config]
+categories: [config, optimize]
 newcms: [drupal, drupal7, drupal9]
 audience: [development]
 product: []
