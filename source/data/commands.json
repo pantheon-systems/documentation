@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.1.0"
+        "version": "3.1.1"
     },
     "commands": [
         {
@@ -9540,7 +9540,7 @@
             "name": "plan:set",
             "description": "Changes a site plan.",
             "usage": [
-                "plan:set <site_id> <plan_id>",
+                "plan:set <site_id> <plan_sku>",
                 "plan:set <site> <plan> Updates <site>'s plan to <plan>."
             ],
             "help": "Changes a site plan.",
@@ -9553,11 +9553,11 @@
                         "description": "Site name",
                         "default": null
                     },
-                    "plan_id": {
-                        "name": "plan_id",
+                    "plan_sku": {
+                        "name": "plan_sku",
                         "is_required": true,
                         "is_array": false,
-                        "description": "The SKU or UUID of the plan to set",
+                        "description": "The SKU of the plan to set",
                         "default": null
                     }
                 },
