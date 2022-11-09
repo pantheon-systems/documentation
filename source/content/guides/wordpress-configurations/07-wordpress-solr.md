@@ -1,7 +1,7 @@
 ---
 title: WordPress Configurations Guide
-subtitle: Enabling Solr for WordPress
-description: Detailed information on using Apache Solr with WordPress.
+subtitle: Enable Solr for WordPress
+description: Learn how to use Apache Solr with WordPress.
 cms: "WordPress"
 categories: [integrate]
 tags: [solr, plugins]
@@ -9,6 +9,8 @@ contributors: [cityofoaksdesign]
 permalink: docs/guides/wordpress-configurations/wordpress-solr
 anchorid: wordpress-solr
 ---
+
+This section provides information on how to use Apache Solr with your WordPress Pantheon site.
 
 [Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. <Partial file="solr-version.md" />
 
@@ -20,23 +22,23 @@ Learn how to configure Solr with help from our experts. Pantheon delivers on-dem
 
 ## Enable Solr from the Site Dashboard
 
-Before you can start using Solr on WordPress, you need to add the Index Server to your site:
+You must add the Index Server to your site before you can use Solr on WordPress:
 
-From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**:
+Navigate to your Dashboard, select **Settings**, then select **Add Ons**, and then select **Apache Solr Index Server: Add**:
 
 ![Enable Solr from The Site Dashboard](../../../images/dashboard/settings-addons-solr.png)
 
-This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
+This provisions Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
 
 ## Solr Search for WordPress
 
-Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/).  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.
+Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/). This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.
 
-This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/guides/php/php-versions) for more information on switching PHP versions.
+This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](/guides/php/php-versions) for more information on switching PHP versions.
 
-## Install and Configure Plugin
+## Install and Configure the Solr Search for WordPress Plugin
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard, or with [Terminus](/guides/terminus):
+1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/sftp) for via the Pantheon Dashboard, or with [Terminus](/guides/terminus):
 
  ```bash
  terminus connection:set <site>.<env> sftp
@@ -54,9 +56,11 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/guid
  terminus wp <site>.<env> -- plugin install --activate --network solr-power
  ```
 
-1. From the WordPress Dashboard, navigate to **Solr Power** (previously under **Settings**). You should see your site's Solr Server details within the **Info** tab.
+1. Open your WordPress Dashboard, navigate to **Solr Power** (previously under **Settings**), and then select the **Info** tab to see your site's Solr Server details.
 
-1. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
+1. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr. 
+
+1. Click **Save Changes** after making modifications.
 
    <Alert title="Note" type="info">
 
@@ -70,7 +74,7 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/guid
  terminus wp <site>.<env> -- solr index
  ```
 
- For WP Site Networks, you will need to index all your subsites individually:
+ For WP Site Networks, you must index all your subsites individually:
 
  ```bash
  terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
@@ -80,21 +84,21 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/guid
 
 ## Set up Front-end AJAX Search Bar
 
-1. In **Appearance** > **Widgets**, add the Solr Search Widget in your desired widget position.
+1. Open **Appearance**, select **Widgets**, and then add the Solr Search Widget in your desired widget position.
 
   ![Solr Widget](../../../images/add-solr-widget.png)
 
-1. In **Solr Power** > **Facet Options** tab, check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)** eg. `primary`.
+1. Open **Solr Power**, select the **Facet Options** tab, and then check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)**, such as `primary`.
 
   ![Solr Settings](../../../images/solr-widget-settings.png)
 
-   The **Div ID** is where the search results will appear. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
+   The **Div ID** is where the search results appear. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
 
 1. Check your desired Facets and save your settings, then test the search functionality before committing the changes.
 
 ### Optimize Index
 
-For details, see the [Optimize command](https://solarium.readthedocs.io/en/stable/queries/update-query/building-an-update-query/optimize-command/) document.
+Refer to the [Optimize command](https://solarium.readthedocs.io/en/stable/queries/update-query/building-an-update-query/optimize-command/) document for more information about how you can optimize your index.
 
 ### Schema.xml
 
@@ -104,9 +108,13 @@ Custom `schema.xml` files exist outside of version control, and must be uploaded
 
 </Alert>
 
-Upon activation of the plugin on the Dev or Multidev environment, a default [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document is automatically sent to the Solr server. The `schema.xml` file is submitted automatically when deploying the plugin to another environment on Pantheon.
+A default [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/master/schema.xml) document is automatically sent to the Solr server when you activate the plugin on the Dev or Multidev environment. The `schema.xml` file is submitted automatically when you deploy the plugin to another environment on Pantheon.
 
-You can set a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. Then, from the plugin's **Actions** tab, look for **Repost schema.xml** and click on **Execute**.
+You can set a custom `schema.xml`:
+
+1. Upload your custom `schema.xml` to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. 
+
+1. Navigate to the plugin's **Actions** tab, select **Repost schema.xml**, and click **Execute**.
 
 ## Known Issues/Limitations
 
@@ -125,3 +133,8 @@ Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to wo
 The following code changes are required before Solr can be safely uninstalled and disabled:
 
 <Partial file="remove-addons/wp-solr.md" />
+
+## More Resources
+
+- [Pantheon Search (formerly Pantheon Solr)](/solr)
+- [Apache Solr for Drupal](/guides/solr-drupal/solr-drupal-9)
