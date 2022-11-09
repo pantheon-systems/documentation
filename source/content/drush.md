@@ -2,10 +2,16 @@
 title: Drupal Drush Command-Line Utility
 description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
 cms: "Drupal"
-categories: [develop]
 tags: [drush]
 reviewed: "2022-04-19"
+newtype: doc
+categories: [config]
+newcms: [drupal, drupal7, drupal9]
+audience: [development]
+product: []
+integration: []
 ---
+
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
 Drush commands require a `settings.php` file, and it's a best practice to have one.  Drupal 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/guides/git/git-config) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/guides/php/settings-php).
@@ -192,11 +198,18 @@ Commands that alter site code, such as pm-download (dl), will only work on a Dev
 While we have the full spectrum of Drush core already available for your use, you may want to add a command that you regularly use; for instance, [Drush Search and Replace (sar)](https://www.drupal.org/project/sar).
 
 1. Put the site in Git mode.
+
 1. Clone locally.
+
 1. Create a `drush` folder in the Drupal root.
-1. Add the `sar` Drush command to the Drush folder.
+
+1. Add the `sar` Drush command to the Drush 
+folder.
+
 1. Commit `drush/sar`.
+
 1. Push your code up to Pantheon.
+
 1. Clear your Drush cache on each environment. Example:
 
   ```bash{promptUser: user}
