@@ -2,7 +2,6 @@
 title: Optimize Your Site for Accessibility
 subtitle: Getting Started
 description: How to integrate accessibility into new site builds, and audit existing sites.
-categories: [optimize]
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
 reviewed: "2022-06-01"
@@ -11,6 +10,12 @@ showtoc: true
 permalink: docs/guides/accessibility/get-started
 anchorid: accessibility/get-started
 editpath: accessibility/02-get-started.md
+contenttype: guide
+categories: [optimize]
+newcms: [drupal, drupal7, drupal8, drupal9, drupal10, wordpress]
+audience: [agency, business, development]
+product: []
+integration: []
 ---
 
 Making your site accessible doesn't just happen - you have to lay the groundwork and constantly assess your site.
@@ -44,7 +49,7 @@ To optimize an existing site for accessibility:
    There are a number of tools available to help create an inventory and assessment of the conformance of your existing site pages to WCAG guidelines. The [Web Accessibility Initiative](https://www.w3.org/WAI/test-evaluate/preliminary/) has a number of resources to help with this process.
 
 
-2. Prioritize the changes you will make to maximize impact.
+1. Prioritize the changes you will make to maximize impact.
 
    Factors to consider when prioritizing fixes include:
    - Impact on users with disabilities: how much does the issue impact users?  Will they be unable to perform key tasks? 
@@ -52,7 +57,7 @@ To optimize an existing site for accessibility:
    - Ease and speed of repair: is the fix easy, or will it require significant time and resources?
    - Repeating issues: Issues that turn up repeatedly can indicate issues with the underlying architecture, such as common code or templates. Fixing these underlying issues can significantly improve your test results.
 
-3. Determine how you will test changes.
+1. Determine how you will test changes.
 
    Here are some testing options:
    - Choose an automated testing tool. Refer to the [Tools](/guides/accessibility/resources) section of this guide for suggestions.
