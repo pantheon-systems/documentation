@@ -232,7 +232,7 @@ The solution is to set `EXEC_GRUMPHP_COMMAND` to run a script that tests for the
     EXEC_GRUMPHP_COMMAND: '.scripts/grumphp.sh' # YOUR SCRIPT NAME HERE
   ```
 
-Lando Example:
+Lando script example:
 
   ```bash{promptUser: user}
   #!/bin/sh
