@@ -242,7 +242,7 @@ Lando script example:
   fi
   ```
 
-The test in the script can be whatever is needed in your particular case. The example below tests for the existence of the `PANTHEON_ENVIRONMENT` env var (credit @joestewart):
+The test in the script can be whatever is needed in your particular case. The example below tests for the existence of the `PANTHEON_ENVIRONMENT` env var:
 
 ```bash{promptUser: user}
 #!/bin/sh
