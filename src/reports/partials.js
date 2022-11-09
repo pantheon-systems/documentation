@@ -8,33 +8,20 @@ class ReviewReport extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            categorizedDocs: allMdx(
-              filter: {
-                frontmatter: { 
-                  title: { ne: "" }
-                }
-                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
-              }
-              sort: {fields: fileInfo___relativePath, order: ASC}
-            ) {
+            categorizedDocs: allMdx(filter: {frontmatter: {contenttype: {eq: "partial"}}} sort: {fields: fileInfo___relativePath, order: ASC}) {
               edges {
                 node {
                   id
+                  excerpt
                   frontmatter {
-                    title
                     categories
-                    cms
                     reviewed
                     tags
                     type
-                    permalink
-                    subtitle
                     contenttype
                     product
                     integration
                     newcms
-                    description
-                    permalink
                   }
                   fileInfo {
                     childMdx {
@@ -60,23 +47,19 @@ class ReviewReport extends React.Component {
 
           return (
             <Layout>
-              <h1>All Files</h1>
+              <h1>Partials</h1>
                 <div>
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th>Title</th>
-                        <th>Subtitle</th>
-                        <th>Description</th>
-                        <th>CMS</th>
+                        <th>Path</th>
                         <th>New CMS</th>
                         <th>Categories</th>
                         <th>Tags</th>
-                        <th>Type</th>
                         <th>Product</th>
                         <th>Integration</th>
-                        <th>Review Date</th>
-                        <th>Path</th>
+                        <th>Reviewed</th>
+                        <th>Excerpt</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -85,14 +68,7 @@ class ReviewReport extends React.Component {
                         .map((page, i) => {
                           return (
                             <tr key={i}>
-                              <td>
-                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
-                                {page.node.frontmatter.title}{" "}
-                                </Link>
-                              </td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.subtitle : null}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.description : null}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
+                              <td>{page.node.fileInfo.childMdx.fileInfo.relativePath}</td>
                               <td>
                                 {page.node.frontmatter.newcms
                                   ? page.node.frontmatter.newcms.map((newcms, i) => {
@@ -126,7 +102,6 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.contenttype}</td>
                               <td>
                                 {page.node.frontmatter.product
                                   ? page.node.frontmatter.product.map((product, i) => {
@@ -150,7 +125,7 @@ class ReviewReport extends React.Component {
                                   : null}
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.fileInfo.childMdx.fileInfo.relativePath}</td>
+                              <td>{page.node.excerpt}</td>
                             </tr>
                           )
                         })}
