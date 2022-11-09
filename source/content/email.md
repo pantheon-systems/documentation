@@ -4,6 +4,12 @@ description: Detailed information on configuring a third-party outgoing email se
 categories: [platform]
 tags: [email]
 reviewed: "2022-08-03"
+newtype: doc
+categories: [config, api]
+newcms: [drupal, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 ## Incoming Email
@@ -72,7 +78,9 @@ Once you have chosen your SMTP provider, install and configure WordPress's [WP M
 This is a common error with the SMTP Authentication Support module. It can be fixed in a few steps:
 
 1. Copy the file from `.../files/mailsystem/filename.inc`
+
 1. Place in a custom module's includes dir and .info file using `files[] = includes/filename.inc`.
+
 1. Remove the original file from the `{registry}` table:
 
   ```sql
@@ -85,7 +93,7 @@ This is a common error with the SMTP Authentication Support module. It can be fi
   terminus drush <site>.<env> -- cc all
   ```
 
-See [available patch](https://drupal.org/node/1369736#comment-5644064).
+[Available patch here](https://drupal.org/node/1369736#comment-5644064).
 
 ### Unable to Send Mail with Amazon SES
 
