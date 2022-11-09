@@ -1,8 +1,7 @@
 ---
 title: Optimize Your Site for Accessibility
 subtitle: Resources
-description: Tools and techniques to improve your website's accessibility
-categories: [optimize]
+description: Tools and techniques to improve your website's accessibility.
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
 reviewed: "2022-06-01"
@@ -11,6 +10,12 @@ showtoc: true
 permalink: docs/guides/accessibility/resources
 anchorid: accessibility/resources
 editpath: accessibility/07-resources.md
+contenttype: guide
+categories: [optimize, help]
+newcms: [drupal, drupal7, drupal8, drupal9, drupal10, wordpress]
+audience: [agency, business, development]
+product: []
+integration: []
 ---
 
 This section is intended to serve as a quick reference and an expanded resource for accessibility tools and resources. 
