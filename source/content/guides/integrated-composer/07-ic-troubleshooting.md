@@ -248,7 +248,7 @@ The test in the script can be whatever is needed in your particular case. The ex
 #!/bin/sh
 if [ -z "$PANTHEON_ENVIRONMENT" ]  &> /dev/null
 then
-  php "$@"
+  lando php "$@"
 fi
 ```
 
