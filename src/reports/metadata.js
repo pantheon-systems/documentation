@@ -94,11 +94,11 @@ class ReviewReport extends React.Component {
                               <td>{page.node.frontmatter.cms ? page.node.frontmatter.description : null}</td>
                               <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
                               <td>
-                                {page.node.frontmatter.product
-                                  ? page.node.frontmatter.product.map((product, i) => {
+                                {page.node.frontmatter.newcms
+                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
                                       return (
                                         <span key={i}>
-                                          {(i ? ", " : "") + product}
+                                          {(i ? ", " : "") + newcms}
                                         </span>
                                       )
                                     })
@@ -138,7 +138,17 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.integration : null}</td>
+                              <td>
+                                {page.node.frontmatter.integration
+                                  ? page.node.frontmatter.integration.map((integration, i) => {
+                                      return (
+                                        <span key={i}>
+                                          {(i ? ", " : "") + integration}
+                                        </span>
+                                      )
+                                    })
+                                  : null}
+                              </td>
                               <td>{page.node.frontmatter.reviewed}</td>
                               <td>{page.node.fileInfo.childMdx.fileInfo.relativePath}</td>
                             </tr>
