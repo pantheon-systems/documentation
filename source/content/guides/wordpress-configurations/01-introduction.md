@@ -1,7 +1,7 @@
 ---
 title: WordPress Configurations Guide
 subtitle: Introduction
-description: Plugins for WordPress on Pantheon.
+description: Learn about available WordPress plugin configurations on the Pantheon platform.
 categories: [wordpress]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
