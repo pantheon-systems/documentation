@@ -1,13 +1,12 @@
 ---
 title: All About Application Containers
 description: Information on Pantheon's container-based, grid-model infrastructure.
-categories: [platform]
 tags: [webops]
 reviewed: "2020-04-24"
 newtype: doc
-categories: []
-newcms: [wordpress]
-audience: []
+categories: [overview]
+newcms: []
+audience: [development, sysadmin]
 product: []
 integration: []
 ---

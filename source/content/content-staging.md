@@ -1,13 +1,12 @@
 ---
 title: Content Staging
 description: Learn how to successfully stage and move content between environments in your WordPress or Drupal site.
-categories: [webops]
 contributors: [jrastaban, whitneymeredith]
 tags: [content, workflow, webops]
 newtype: doc
 categories: []
 newcms: [wordpress, drupal]
-audience: []
+audience: [development]
 product: []
 integration: []
 ---

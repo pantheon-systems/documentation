@@ -1,14 +1,13 @@
 ---
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
-categories: [go-live]
 tags: [cdn, https, professional-services]
 reviewed: "2021-10-23"
 newtype: doc
 categories: []
 newcms: []
-audience: []
-product: []
+audience: [development]
+product: [cdn]
 integration: []
 ---
 

@@ -2,11 +2,10 @@
 title: Backups Tool
 description: Learn how to back up your Drupal or WordPress site on Pantheon.
 tags: [backups, security]
-categories: [develop]
 newtype: doc
-categories: []
+categories: [backup]
 newcms: [drupal, wordpress]
-audience: []
+audience: [development]
 product: []
 integration: []
 ---

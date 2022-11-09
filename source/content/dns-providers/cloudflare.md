@@ -3,14 +3,13 @@ title: Cloudflare Domain Configuration
 provider: Cloudflare
 dnsprovider: true
 description: Learn how to point your domain to a Pantheon site using Cloudflare
-categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/cloudflare.md/
 newtype: doc
-categories: []
+categories: [domains]
 newcms: [wordpress, drupal]
-audience: []
+audience: [development]
 product: []
 integration: []
 ---

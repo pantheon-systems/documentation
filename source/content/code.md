@@ -1,12 +1,11 @@
 ---
 title: Your Site Code on Pantheon
 description: Learn how to work with your site's code on the Pantheon Dashboard.
-categories: [develop]
 tags: [code, dashboard, files, git]
 newtype: doc
 categories: []
 newcms: [drupal, wordpress]
-audience: []
+audience: [development]
 product: []
 integration: []
 ---

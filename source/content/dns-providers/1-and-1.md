@@ -3,14 +3,13 @@ title: 1&1 Domain Configuration
 provider: 1&1
 dnsprovider: true
 description: Learn how to point your 1&1 domain to a Pantheon site.
-categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/1-and-1.md/
 newtype: doc
-categories: []
+categories: [domains]
 newcms: []
-audience: []
+audience: [development]
 product: []
 integration: []
 ---

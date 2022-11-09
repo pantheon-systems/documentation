@@ -1,12 +1,11 @@
 ---
 title: Debugging Connectivity Issues
 description: Learn how to test and resolve connectivity issues affecting your Pantheon sites.
-categories: [troubleshoot]
 tags: [cli, ssh]
 newtype: doc
-categories: []
+categories: [help]
 newcms: []
-audience: []
+audience: [development]
 product: []
 integration: []
 ---

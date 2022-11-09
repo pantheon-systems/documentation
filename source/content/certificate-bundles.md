@@ -1,14 +1,13 @@
 ---
 title: Pantheon Certificate Bundles
 description: Published Certificate bundles from Pantheon
-categories: [develop]
 tags: [security]
 contributors: [clintonPantheon]
 reviewed: "2021-10-21"
 newtype: doc
 categories: []
 newcms: []
-audience: []
+audience: [development]
 product: []
 integration: []
 ---
