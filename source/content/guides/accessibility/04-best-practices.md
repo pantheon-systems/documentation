@@ -2,7 +2,6 @@
 title: Optimize Your Site for Accessibility
 subtitle: Best Practices
 description: Best practices when building an accessible site.
-categories: [optimize]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
@@ -11,6 +10,12 @@ showtoc: true
 permalink: docs/guides/accessibility/best-practices
 anchorid: accessibility/best-practices
 editpath: accessibility/04-best-practices.md
+contenttype: guide
+categories: [optimize]
+newcms: [drupal, drupal7, drupal8, drupal9, drupal10, wordpress]
+audience: [agency, business, development]
+product: []
+integration: []
 ---
 
 This section provides an overview of accessibility best practices.
@@ -75,7 +80,6 @@ However, GIFs and animated emojis are generally not impacted by reduced motion m
 - Use the media queries, and for reduced motion, substitute a still image for those who prefer reduced motion. 
 
 - Use a button to control the animation. Chris Coyier has a good write-up on [progressive enhancement for accessible GIFs](https://css-tricks.com/gifs-and-prefers-reduced-motion/) using the `<picture>` element for React.
-
 
 ## Color and Contrast
 
