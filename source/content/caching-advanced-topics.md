@@ -1,9 +1,14 @@
 ---
 title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
-categories: [performance]
 tags: [cache, cookies, security, webops]
 reviewed: "2022-03-25"
+newtype: doc
+categories: [cache]
+newcms: [drupal7, drupal9, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 ## Allow a User to Bypass the Cache
 

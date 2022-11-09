@@ -1,9 +1,14 @@
 ---
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
-categories: [go-live]
 tags: [cdn, https, professional-services]
 reviewed: "2021-10-23"
+newtype: doc
+categories: []
+newcms: []
+audience: [development]
+product: [cdn]
+integration: []
 ---
 
 This article provides an overview of the steps to set up and work with manually managed, custom certificates through Pantheon's Global CDN and Advanced Global CDN, available through Pantheon's Custom Certificates concierge service.

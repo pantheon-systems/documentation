@@ -1,10 +1,15 @@
 ---
 title: Pantheon Agency Tips
 description: Tips for agencies working on Pantheon.
-categories: [manage]
 tags: [agencies, organizations, collaborate]
 contributors: [davidneedham]
 searchboost: 90
+newtype: doc
+categories: []
+newcms: []
+audience: [agency]
+product: []
+integration: []
 ---
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please use the **Contribute** link at the top of this article.
 

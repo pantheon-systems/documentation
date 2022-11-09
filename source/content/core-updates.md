@@ -1,9 +1,14 @@
 ---
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
-categories: [manage]
 tags: [dashboard, git, terminus, updates]
 reviewed: "2021-04-15"
+newtype: doc
+categories: [update]
+newcms: [drupal7, drupal8, drupal9, wordpress]
+audience: [development]
+product: [terminus, dashboard]
+integration: []
 ---
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
@@ -40,7 +45,7 @@ Apply one-click updates to individual sites repositories using the Site Dashboar
 
   ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
-1. Commit and deploy and SFTP changes and then set the site's connection mode to **Git**.
+1. Commit and deploy any SFTP changes and then set the site's connection mode to **Git**.
 
 1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
