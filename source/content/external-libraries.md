@@ -1,9 +1,14 @@
 ---
 title: External Libraries on Pantheon
 description: Learn to incorporate external libraries on the Pantheon Website Management Platform.
-categories: [platform]
 tags: [code, libraries, modules, plugins]
 reviewed: "2020-07-27"
+newtype: doc
+categories: [config]
+newcms: [drupal, drupal7, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 There are some scenarios when an external library is required. The Pantheon platform includes a number of PHP extensions and common libraries that are available for use.
