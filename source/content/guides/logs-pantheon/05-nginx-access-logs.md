@@ -122,6 +122,10 @@ You can navigate the `nginx-access.log` file using the CLI without GoAccess. The
 - Locate the most frequent client IP addresses:
 
   ```cat nginx-access.log | awk -F '\"' '{ print $8 }' | awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | head -n 25```
+  
+- Locate the most frequent client IP addresses based on request path: 
+
+ ```cat nginx-access.log | awk -F '\"' '{ print $2,$8 }'| awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | grep "/example.php"```
 
 - Locate the most frequent URLs:
 
@@ -130,6 +134,10 @@ You can navigate the `nginx-access.log` file using the CLI without GoAccess. The
 - Identify the most frequent User Agents:
 
   ```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
+  
+- Locate the most frequent user agents based on request path: 
+
+ ```cat nginx-access.log | awk -F '\"' '{ print $2,$6 }'| awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | grep "/example.php"```
 
 
 ## More Resources
