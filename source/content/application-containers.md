@@ -1,9 +1,14 @@
 ---
 title: All About Application Containers
 description: Information on Pantheon's container-based, grid-model infrastructure.
-categories: [platform]
 tags: [webops]
 reviewed: "2020-04-24"
+newtype: doc
+categories: [overview]
+newcms: []
+audience: [development, sysadmin]
+product: []
+integration: []
 ---
 
 Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the [Runtime Matrix](https://pantheon.io/features/elastic-hosting), a distributed grid of over a million Linux containers running PHP and NGINX that allow us to provision and scale application containers for your site.

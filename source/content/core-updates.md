@@ -1,9 +1,14 @@
 ---
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
-categories: [manage]
 tags: [dashboard, git, terminus, updates]
 reviewed: "2021-04-15"
+newtype: doc
+categories: [update]
+newcms: [drupal7, drupal8, drupal9, wordpress]
+audience: [development]
+product: [terminus, dashboard]
+integration: []
 ---
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.

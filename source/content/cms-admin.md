@@ -2,9 +2,14 @@
 title: Working in the WordPress Dashboard and Drupal Admin Interface
 description: Learn how to build sites using the WordPress and Drupal admin interfaces in SFTP mode on Pantheon.
 searchboost: 150
-categories: [develop]
 tags: [site, sftp, dashboard]
 reviewed: "2020-06-24"
+newtype: doc
+categories: [sftp]
+newcms: [wordpress, drupal]
+audience: [development]
+product: [dashboard]
+integration: []
 ---
 Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/guides/git/git-config) or working in the WordPress or Drupal admin interface in [SFTP](/sftp) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/guides/multidev)) in **SFTP** mode.
 
