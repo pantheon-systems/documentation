@@ -4,6 +4,12 @@ description: Advanced details about Pantheon's edge caching layer, cookies, and 
 categories: [performance]
 tags: [cache, cookies, security, webops]
 reviewed: "2022-03-25"
+newtype: doc
+categories: []
+newcms: [drupal7, drupal9, wordpress]
+audience: []
+product: []
+integration: []
 ---
 ## Allow a User to Bypass the Cache
 

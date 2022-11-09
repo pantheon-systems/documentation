@@ -4,6 +4,12 @@ description: Learn how to protect your site against malicious files with malware
 cms: "Drupal"
 categories: [develop]
 tags: [modules, security, files]
+newtype: doc
+categories: []
+newcms: [drupal7, drupal8]
+audience: []
+product: []
+integration: []
 ---
 
 **ClamAV** is an open source antivirus engine for detecting trojans, viruses, malware & other malicious threats. It supports multiple file formats, file and archive unpacking, and multiple signature languages.

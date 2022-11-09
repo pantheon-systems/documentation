@@ -3,6 +3,12 @@ title: Optimization for Pantheon and the Cloud
 description: Learn how to optimize your Drupal or WordPress site to efficiently function on Pantheon's cloud.
 categories: [performance]
 tags: [cache, cdn]
+newtype: doc
+categories: []
+newcms: [drupal, wordpress]
+audience: []
+product: []
+integration: []
 ---
 
 Pantheon as a platform attempts to balance the tradeoff between high performance and high availability. It is important to reduce single points of failure and ensure scalability, but this effort can introduce complexity and latency vs. a “one box” architecture.

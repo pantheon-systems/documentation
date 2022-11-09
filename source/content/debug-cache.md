@@ -5,6 +5,12 @@ categories: [performance]
 tags: [cache, cdn, cookies]
 contributors: [rachelwhitton, sarahg]
 reviewed: "2020-12-15"
+newtype: doc
+categories: []
+newcms: [drupal, wordpress]
+audience: []
+product: []
+integration: []
 ---
 
 ## Before You Begin

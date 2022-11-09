@@ -4,6 +4,12 @@ description: Detailed information on applying and debugging upstream updates fro
 categories: [manage]
 tags: [dashboard, git, terminus, updates]
 reviewed: "2021-04-15"
+newtype: doc
+categories: []
+newcms: [drupal7, drupal8, drupal9, wordpress]
+audience: []
+product: []
+integration: []
 ---
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.

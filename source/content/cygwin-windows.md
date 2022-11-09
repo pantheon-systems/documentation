@@ -4,6 +4,12 @@ description: Learn how to install and configure Cygwin on Windows computers for 
 categories: [develop]
 tags: [local, ssh]
 reviewed: "2020-02-05"
+newtype: doc
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 
 <Alert title="Warning" type="danger" >

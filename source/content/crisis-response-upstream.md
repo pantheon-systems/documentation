@@ -6,6 +6,12 @@ categories: [develop]
 tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
 reviewed: "2020-04-02"
+newtype: doc
+categories: []
+newcms: [wordpress]
+audience: []
+product: []
+integration: []
 ---
 
 ## Overview

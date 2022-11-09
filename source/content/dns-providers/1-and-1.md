@@ -7,6 +7,12 @@ categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/1-and-1.md/
+newtype: doc
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 <Alert title="Warning" type="danger">
 

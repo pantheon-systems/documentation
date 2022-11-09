@@ -8,6 +8,12 @@ categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/bluehost.md/
+newtype: doc
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 ## Before You Begin
 Be sure that you have a:

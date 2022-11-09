@@ -4,6 +4,12 @@ description: Learn how to successfully stage and move content between environmen
 categories: [webops]
 contributors: [jrastaban, whitneymeredith]
 tags: [content, workflow, webops]
+newtype: doc
+categories: []
+newcms: [wordpress, drupal]
+audience: []
+product: []
+integration: []
 ---
 
 Content staging workflow between test and live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment (check out [WebOps workflow](/pantheon-workflow#content) for an explanation of why we do this). 

@@ -5,6 +5,12 @@ categories: [develop]
 tags: [security]
 contributors: [clintonPantheon]
 reviewed: "2021-10-21"
+newtype: doc
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 
 This page lists certificates published by Pantheon. These certificates can be used to integrate tooling with Pantheon.

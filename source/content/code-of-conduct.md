@@ -5,6 +5,12 @@ contributors: [joshkoenig, rachelwhitton]
 date: 9/27/2016
 categories: [about]
 tags: [collaborate]
+newtype: doc
+categories: []
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 
 ## Our Pledge

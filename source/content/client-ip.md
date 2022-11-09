@@ -4,6 +4,12 @@ description: Getting the client IP address to set up geolocation capabilities on
 categories: [develop]
 tags: [cdn]
 reviewed: "2020-03-09"
+newtype: doc
+categories: []
+newcms: [drupal]
+audience: []
+product: []
+integration: []
 ---
 
 <Alert title="Warning" type="danger">

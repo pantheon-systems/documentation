@@ -4,6 +4,12 @@ description: Understand APCu and its uses within the Pantheon WebOps workflow.
 categories: [platform]
 tags: [cache, workflow]
 reviewed: "2020-10-08"
+newtype: doc
+categories: []
+newcms: [drupal, wordpress]
+audience: []
+product: []
+integration: []
 ---
 
 **APCu** is a user-accessible PHP cache. Pantheon provides APCu by default across all plans, but the size of the APCu memory cache ([apc.shm_size](https://www.php.net/manual/en/apcu.configuration.php#ini.apcu.shm-size)) varies depending on the service level. See the [Application Containers overview](/application-containers) to learn more about APCu on Pantheon's container architecture.
