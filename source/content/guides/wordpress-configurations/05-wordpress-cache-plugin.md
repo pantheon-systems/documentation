@@ -1,6 +1,6 @@
 ---
 title: WordPress Configurations Guide
-subtitle: WordPress Pantheon Cache Plugin Configuration
+subtitle: Pantheon WordPress Cache Plugin Configuration
 description: Optimize WordPress and Varnish caching to maximize your site's performance.
 cms: "WordPress"
 tags: [cache, plugins]
@@ -14,11 +14,25 @@ permalink: docs/guides/wordpress-configurations/wordpress-cache-plugin
 anchorid: wordpress-cache-plugin
 ---
 
-Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages will expire from the Varnish Edge Cache after 10 minutes (600 seconds). The plugin sets a default HTTP header: `Cache-Control: public, max-age=600`
+This section provides information on Pantheon's WordPress plugin.
 
-You can clear the site cache using the Clear Cache button. If you want to automatically clear cached pages when content is updated, refer to the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache).
+Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages expire from the Varnish Edge Cache after 10 minutes (600 seconds). The plugin sets a default HTTP header: `Cache-Control: public, max-age=600`
 
-To increase the chances that a visitor will request a cached page, you can increase the default time to live value, which will reduce page load times.
+## Clear Site Cache
+
+You can clear the site cache manually or automatically. 
+
+To clear the cache manually:
+
+Click the Clear Cache button.
+
+To clear the cache automatically:
+
+Refer to the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) and follow the instructions.
+
+## Increase the Default Time to Live Value
+
+You can increase to default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
 
 You can also enable maintenance mode for others while working on your site.
 
@@ -40,7 +54,7 @@ A simple notice will be displayed to users who request a page that is not alread
 
 ![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
 
-## Programmatically Using Pantheon Cache Functions
+## Use Pantheon Cache Functions Programmatically
 
 Within the `pantheon-cache.php` file that houses the Pantheon Cache plugin code, there are three functions that are useful to developers. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/). Currently, the [limit on the number of paths](https://github.com/pantheon-systems/WordPress/issues/24) that can be cleared in a single call is 10.
 
