@@ -48,6 +48,16 @@ const shortcodes = {
   Check,
 }
 
+exports.createPages = async ({ graphql, actions }) => {
+	const { createRedirect } = actions;
+		
+	createRedirect({
+    fromPath: `/docs/terminus`,
+    toPath: `/docs/guides/terminus`,
+  });
+}
+
+
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
