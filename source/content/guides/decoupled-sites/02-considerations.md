@@ -53,7 +53,6 @@ To create and configure a new decoupled project using a Front-End Site starter k
 * Install [Terminus](/guides/terminus/install) version 3.0.0 or higher.
     * You can also install the following plugins to improve your experience:
        * `terminus self:plugin:install terminus-build-tools-plugin`
-       * `terminus self:plugin:install terminus-power-tools`
        * `terminus self:plugin:install terminus-secrets-plugin`
        * Reload the terminus plugins: `terminus self:plugin:reload`
        * Clear cache for composer: `composer clear-cache`
