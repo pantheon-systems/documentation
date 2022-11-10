@@ -18,12 +18,6 @@ Cron is generally used for running scheduled backups, monitoring disk space, del
 
 Pantheon Cron runs WordPress cron jobs as an hourly task or on demand through Terminus. This is in contrast to WP-Cron which executes jobs when a site is loaded by a visitor. Running cron on the platform provides a more reliable schedule and ensures visitors are not interrupted by a script triggered by WordPress cron.
 
-Pantheon uses the following WP-CLI command to trigger cron on the platform:
-
-```bash{promptUser: user}
-wp cron event run --due-now
-```
-
 ## WP-Cron Overview
 
 WP-Cron is a WordPress feature that executes jobs when the page is loaded. Jobs are executed before site content is served to the site visitor. Plugins and themes can add jobs to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.
@@ -190,7 +184,3 @@ You might run into problems with WP-Cron if your WordPress-powered site is high 
 Both of these issues are addressed within WP-Cron's internal [locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) doc.
 
 Pantheon Cron limits the occurrences of the above issues.
-
-### What is the maximum execution time of cron?
-
-The maximum execution time of cron is 180 seconds (3 minutes).
