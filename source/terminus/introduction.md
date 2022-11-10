@@ -6,6 +6,7 @@ layout: guide
 showtoc: true
 terminuspage: true
 type: terminuspage
+contributors: [whitneymeredith]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus
