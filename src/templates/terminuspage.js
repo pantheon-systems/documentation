@@ -116,6 +116,9 @@ const items = [
   },
 ]
 
+items[0] = "docs-guides-terminus","/docs/guides/terminus","Introduction";
+
+
 class TerminusTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
