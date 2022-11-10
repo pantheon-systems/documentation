@@ -61,7 +61,7 @@ You must configure GoAccess to read Pantheon's log formats to parse your `nginx-
 
 ## Create a report
 
-1. [Download your nginx log files](/guides/logs-pantheon/access-logs) from Pantheon via SFTP.
+1. [Download your nginx log files](/guides/logs-pantheon/download-logs) from Pantheon via SFTP.
 
 1. Navigate to the directory containing your `nginx-access.log` file, and then run GoAccess:
 
