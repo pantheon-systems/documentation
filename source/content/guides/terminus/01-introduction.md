@@ -5,6 +5,8 @@ description: Learn about Terminus, the command line interface for advanced inter
 layout: guide
 showtoc: true
 terminuspage: true
+type: terminuspage
+layout: terminuspage
 contributors: [whitneymeredith]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
