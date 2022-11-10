@@ -4,6 +4,9 @@ subtitle: Introduction
 description: Learn about Terminus, the command line interface for advanced interaction with the Pantheon platform.
 layout: guide
 showtoc: true
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 contributors: [whitneymeredith]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
