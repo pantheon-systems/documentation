@@ -34,7 +34,7 @@ Navigate to the Site Dashboard and click **Settings**, and then click **PHP vers
 
 <Alert title="Note" type="info">
 
-Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. Refer to [Deploying Configuration Changes to Multidev](/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
+Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. Refer to [Why can’t I update the PHP version on my Multidev?](/pantheon-yml/#why-cant-i-update-the-php-version-on-my-multidev) for more information.
 
 </Alert>
 
