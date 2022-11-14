@@ -11,6 +11,12 @@ permalink: docs/guides/account-mgmt/billing/methods
 anchorid: methods
 editpath: docs/guides/account-mgmt/billing/05-methods.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [billing]
+newcms: [drupal, wordpress]
+audience: [agency, business]
+product: [dashboard]
+integration: []
 ---
 
 You can set up payment methods that you use for all sites you own, or site-specific payment methods.
