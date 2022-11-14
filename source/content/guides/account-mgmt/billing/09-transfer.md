@@ -11,6 +11,12 @@ permalink: docs/guides/account-mgmt/billing/transfer
 anchorid: transfer
 editpath: docs/guides/account-mgmt/billing/09-transfer.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [billing]
+newcms: [drupal, wordpress]
+audience: [agency, business]
+product: [dashboard]
+integration: []
 ---
 
 The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to billing as described on this page.
