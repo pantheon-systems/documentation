@@ -1,2 +1,8 @@
 
-window.location.href='/guides/terminus';
+const items = [
+    {
+      id: "docs-terminus",
+      link: "/guides/terminus",
+      title: "Introduction",
+    },
+]

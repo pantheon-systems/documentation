@@ -4,11 +4,10 @@ subtitle: Redirect
 description: This page has moved.
 categories: []
 tags: []
-permalink: docs/terminus
 reviewed: "2022-11-14"
-terminusRedirect: true
 ---
 
-The Terminus documentation has moved!
+<head>
 
-Update your bookmarks to [https://pantheon.io/docs/guides/terminus](/guides/terminus).
+<meta http-equiv = "refresh" content = "0; url = https://pantheon.io/docs/guides/terminus" />
+</head>
