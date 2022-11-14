@@ -2,7 +2,6 @@
 title: "Billing"
 subtitle: Billing Periods
 description: Learn about the billing periods available, and how to manage a subscription.
-categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
@@ -10,6 +9,12 @@ permalink: docs/guides/account-mgmt/billing/periods
 anchorid: periods
 editpath: docs/guides/account-mgmt/billing/03-periods.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [billing]
+newcms: [drupal, wordpress]
+audience: [agency, business]
+product: [dashboard]
+integration: []
 ---
 
 Pantheon offers both Monthly and Annual Billing. Moving to Annual Billing can result in significant savings. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service. Refer to [Pricing](/guides/account-mgmt/plans/pricing) for information on costs and savings.
