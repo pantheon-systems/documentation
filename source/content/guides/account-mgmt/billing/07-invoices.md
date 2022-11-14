@@ -2,7 +2,6 @@
 title: "Billing"
 subtitle: Invoices and Subscriptions
 description: Manage and view invoices and subscriptions.
-categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
@@ -85,4 +84,3 @@ The account tier and cost is displayed on the Subscriptions page. You can also v
 ### Site Subscriptions
 
 By default, sites are listed by name. You can sort according to your preference. For more information on a site in your Personal Workspace, you can click the site name in the Site Subscriptions table or click the **Sites** tab. Additionally, you can filter sites by site plan or payment method.
-
