@@ -117,6 +117,7 @@ items[0] = [
   },
  ]
 
+items.path = "/guides/terminus/"
 
 class TerminusTemplate extends React.Component {
   componentDidMount() {

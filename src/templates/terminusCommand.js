@@ -118,6 +118,9 @@ items[0] = [
  },
 ]
 
+items.path = "/guides/terminus/"
+
+
 class CommandsTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
