@@ -326,7 +326,14 @@ exports.createPages = ({ graphql, actions }) => {
     })
     terminusCommands.path ="/guides/terminus/commands/";
 
-
+    exports.createPages = async ({ graphql, actions }) => {
+      const { createRedirect } = actions;
+  
+      createRedirect({
+        fromPath: `/terminus`,
+        toPath: `/guides/terminus`,
+      });
+    }
     // Create changelog pagination.
     const postsPerPage = 6
     const numPages = Math.ceil(changelogs.length / postsPerPage)
