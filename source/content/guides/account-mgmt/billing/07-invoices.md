@@ -11,6 +11,12 @@ permalink: docs/guides/account-mgmt/billing/invoices
 anchorid: invoices
 editpath: docs/guides/account-mgmt/billing/07-invoices.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [accounts, billing]
+newcms: [drupal, wordpress]
+audience: [agency, business]
+product: [dashboard]
+integration: []
 ---
 
 Learn how to view and manage your invoices and subscriptions.
