@@ -2,7 +2,6 @@
 title: "Manage Your Account"
 subtitle: Delete Your Account
 description: Learn how to completely delete your account.
-categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/account/delete
 anchorid: delete
 editpath: docs/guides/account-mgmt/account/07-delete.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [accounts, backup]
+newcms: [drupal, wordpress]
+audience: [agency, business]
+product: []
+integration: []
 ---
 
 Follow the steps below to completely delete your account.
