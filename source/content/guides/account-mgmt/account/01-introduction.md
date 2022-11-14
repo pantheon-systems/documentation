@@ -2,7 +2,6 @@
 title: "Manage Your Account"
 subtitle: Introduction
 description: Learn how to create, delete, and recover your account.
-categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
@@ -10,6 +9,12 @@ permalink: docs/guides/account-mgmt/account
 anchorid: account
 editpath: docs/guides/account-mgmt/account/01-introduction.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [overview, create]
+newcms: [drupal, wordpress]
+audience: [business, marketing]
+product: []
+integration: []
 ---
 
 The first thing you need to do when starting with Pantheon is create an account. A Pantheon account lets you:
