@@ -1,16 +1,11 @@
 ---
 title: The Old Terminus Manual
 subtitle: Redirect
-terminuspage: true
 description: This page has moved.
-type: terminuspage
-layout: terminuspage
 categories: []
 tags: []
-permalink: docs/:basename
-nexturl: guides/terminus/install/
-image: terminus-thumbLarge
-reviewed: "2020-02-05"
+permalink: docs/terminus
+reviewed: "2022-11-14"
 ---
 
 The Terminus documentation has moved!

@@ -9,7 +9,7 @@ type: terminuspage
 contributors: [whitneymeredith]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: guides/terminus
+permalink: docs/guides/terminus
 anchorid: terminus
 image: terminus-thumbLarge
 reviewed: "2020-02-05"
