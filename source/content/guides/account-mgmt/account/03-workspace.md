@@ -2,7 +2,6 @@
 title: "Manage Your Account"
 subtitle: Workspace
 description: Learn how to use your account workspace.
-categories: [account-mgmt]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
@@ -10,6 +9,12 @@ permalink: docs/guides/account-mgmt/account/workspace
 anchorid: workspace
 editpath: docs/guides/account-mgmt/account/03-workspace.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [overview, dashboard]
+newcms: [drupal, wordpress]
+audience: [agency, business, development]
+product: [dashboard]
+integration: []
 ---
 
 After you create an account and sign in, you are taken to your home page, known as your Personal Workspace.  Here you can view key information at a glance, including the sites you own or are a team member of, your plan tier, and more.
