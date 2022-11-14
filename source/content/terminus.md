@@ -6,6 +6,7 @@ categories: []
 tags: []
 permalink: docs/terminus
 reviewed: "2022-11-14"
+terminusRedirect: true
 ---
 
 The Terminus documentation has moved!
