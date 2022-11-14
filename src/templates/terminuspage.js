@@ -48,14 +48,6 @@ const shortcodes = {
   Check,
 }
 
-exports.createPages = async ({ graphql, actions }) => {
-	const { createRedirect } = actions;
-		
-	createRedirect({
-    fromPath: `/docs/terminus`,
-    toPath: `/docs/guides/terminus`,
-  });
-}
 
 
 // @TODO relocate this list
@@ -114,9 +106,13 @@ const items = [
     link: "/guides/terminus/updates",
     title: "Version Updates",
   },
-]
 
+]
 items[0] = "docs-guides-terminus","/docs/guides/terminus","Introduction";
+
+
+
+
 
 
 class TerminusTemplate extends React.Component {

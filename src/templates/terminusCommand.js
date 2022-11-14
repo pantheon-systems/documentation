@@ -50,6 +50,8 @@ const shortcodes = {
   Partial,
 }
 
+
+
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
@@ -107,6 +109,8 @@ const items = [
     title: "Version Updates",
   },
 ]
+
+items[0] = "docs-guides-terminus","/docs/guides/terminus","Introduction";
 
 class CommandsTemplate extends React.Component {
   componentDidMount() {
