@@ -110,7 +110,13 @@ const items = [
   },
 ]
 
-items[0] = "docs-guides-terminus","/docs/guides/terminus","Introduction";
+items[0] = [
+ {
+  id: "docs-guides-terminus",
+  link: "/guides/terminus",
+  title: "Introduction",
+ },
+]
 
 class CommandsTemplate extends React.Component {
   componentDidMount() {
