@@ -56,7 +56,7 @@ const shortcodes = {
 const items = [
   {
     id: "docs-terminus",
-    link: "/docs/guides/terminus",
+    link: "/terminus",
     title: "Get Started",
   },
   {
