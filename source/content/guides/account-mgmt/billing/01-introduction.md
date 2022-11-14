@@ -2,7 +2,6 @@
 title: "Billing"
 subtitle: Introduction
 description: Add a new credit card, remove the current card, or transfer billing to a new site owner.
-categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
@@ -10,6 +9,12 @@ permalink: docs/guides/account-mgmt/billing
 anchorid: billing
 editpath: docs/guides/account-mgmt/billing/01-introduction.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [billing]
+newcms: [drupal, wordpress]
+audience: [agency, business]
+product: [dashboard]
+integration: []
 ---
 
 This guide covers billing periods, payment methods, managing invoices, and more.
@@ -21,7 +26,6 @@ The permission to update credit cards and view history is granted only to the ro
 If you need to assume site and billing ownership, the current Site Owner must [transfer ownership to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
 
 </Alert>
-
 
 ## Tax Exempt Status Billing
 
