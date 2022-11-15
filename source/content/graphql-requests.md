@@ -1,7 +1,6 @@
 ---
 title: GraphQL Requests
 description: Learn about GraphQL best practices and troubleshooting tips.
-categories: [develop]
 tags: [local, workflow]
 contributors: [whitneymeredith]
 reviewed: "2022-03-22"
