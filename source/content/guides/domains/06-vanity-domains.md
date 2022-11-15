@@ -2,13 +2,18 @@
 title: Domains on Pantheon
 subtitle: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
-categories: [develop]
 tags: [collaborate, dns, agencies]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/vanity-domains
 anchorid: vanity-domains
+contenttype: guide
+categories: [domains]
+newcms: []
+audience: [development, sysadmin]
+product: [dashboard]
+integration: []
 ---
 
 This section provides information on to set up a vanity domain.

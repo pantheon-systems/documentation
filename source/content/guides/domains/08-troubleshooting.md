@@ -2,13 +2,18 @@
 title: Domains on Pantheon
 subtitle: Troubleshoot Domains
 description: Review common troubleshooting scenarios for domains.
-categories: [develop]
 tags: [collaborate, dns, agencies]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/troubleshooting
 anchorid: troubleshooting
+contenttype: guide
+categories: [domains]
+newcms: []
+audience: [development]
+product: []
+integration: []
 ---
 
 This section provides information on common domain troubleshooting scenarios.

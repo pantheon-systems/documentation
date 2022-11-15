@@ -4,7 +4,6 @@ subtitle: Incident Remediation
 description: Bring a site back from downtime and implement post-recovery actions
 generator: pagination
 layout: guide
-categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
@@ -12,6 +11,12 @@ type: guide
 permalink: docs/guides/disaster-recovery/incident-remediation
 anchorid: disaster-recovery
 editpath: disaster-recovery/04-incident-remediation.md
+contenttype: guide
+categories: [cache]
+newcms: []
+audience: [development, sysadmin]
+product: [cdn]
+integration: []
 ---
 
 Bringing a site back from downtime and remediating the cause of downtime to ensure that the site stays up post-recovery is a multistep process. Once you have engaged with support and determined the cause of the issue, the recovery process may include the steps below, although the precise playbook will depend on the nature of the issues and the configuration of the site. 
