@@ -6,7 +6,7 @@ contributors: [whitneymeredith]
 reviewed: "2022-03-22"
 newtype: doc
 categories: [api]
-newcms: []
+newcms: [drupal, wordpress]
 audience: [agency, development]
 product: []
 integration: []
