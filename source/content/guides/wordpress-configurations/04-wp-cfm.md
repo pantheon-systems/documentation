@@ -43,7 +43,7 @@ The steps below can be done using the Pantheon and WordPress Dashboards or via t
     terminus env:commit <site>.<env> --message="Install wp-cfm plugin"
     ```
 
-1. Deploy this commit to the Test and Live environments using the Pantheon Dashboard or with Terminus, and clear the cache:
+1. Deploy the commit to the Test and Live environments using the Pantheon Dashboard or with Terminus, and clear the cache for both environments:
 
     ```bash{outputLines: 1}
     # Deploy to Test
@@ -115,7 +115,7 @@ You can automatically import your WP-CFM configuration settings into a cloned da
 
 ### Dev to Test
 
-Deploy the `.json` file from Dev to Test.
+Deploy the `.json` file from Dev to Test:
 
 1. Check **Pull files and the database from the Live environment?** and then click **Deploy Code from Development to Test Environment** if deploying via the Pantheon Dashboard or include `--sync-content` if deploying with Terminus:
 
@@ -166,7 +166,7 @@ Deploy the `.json` file from Dev to Test.
 `wp_options` is the only table that is automatically tracked by the plugin. This table is populated by the following sources:
 
 - Default settings (`/wp-admin/options-general.php`)
-- Theme option pages: This includes customizer options stored in the row `theme_mods_yourthemename`
+- Theme option pages: This includes customized options stored in the row `theme_mods_yourthemename`
 - Settings and option pages for plugins (e.g. `/wp-admin/options-general.php?page=sendgrid-settings`)
 
 You can review values on the [All Settings Screen](https://codex.wordpress.org/Option_Reference#All_Settings_Screen) (`/wp-admin/options.php`).
@@ -177,7 +177,7 @@ If you want to track configurations in more tables, you must use the `wpcfm_conf
 
 ### Will WP-CFM work with Multidev?
 
-Yes. For the Multidev to appear as a config option, you will need hook into the plugin's [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_multi_env) and [`wpcfm_current_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_current_env) functions in a Must Use Plugin like the example in [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin/#wp-cfm-compatibility).
+Yes. For the Multidev to appear as a config option, you must hook into the plugin's [`wpcfm_multi_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_multi_env) and [`wpcfm_current_env`](https://github.com/forumone/wp-cfm/wiki/Filters-Reference#wpcfm_current_env) functions in a Must Use Plugin like the example in [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin/#wp-cfm-compatibility).
 
 ### What's not tracked?
 

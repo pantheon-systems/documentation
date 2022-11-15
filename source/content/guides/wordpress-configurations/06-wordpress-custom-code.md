@@ -12,7 +12,7 @@ anchorid: wordpress-custom-code
 
 This section provides information on how to manage custom plugins and themes on your WordPress Pantheon site.
 
-Extending WordPress with custom code is a common part of the development lifecycle. It's essential that extensions are maintained independently from your sites and projects to optimize workflows and allow custom code to be reused easily. You should also separate function from design to allow changes to persist when you swap themes. This method allows you to avoid dropping code into the current theme's `functions.php` file and pasting snippets when you want to reuse code in another project.
+Extending WordPress with custom code is a common part of the development lifecycle. It's essential that extensions are maintained independently from your sites and projects to optimize workflows and to allow custom code to be reused easily. You should also separate function from design to allow changes to persist when you swap themes. This method allows you to avoid dropping code into the current theme's `functions.php` file and pasting snippets when you want to reuse code in another project.
 
 You can manage custom code separate from your projects within site-specific [plugins](https://codex.wordpress.org/Writing_a_Plugin). This allows you to scope out an update strategy to distribute changes easily. [GitHub Updater](https://github.com/afragen/github-updater) or [WP Pusher](https://wppusher.com/) are good options for this workflow.
 
@@ -80,7 +80,7 @@ Notifications within the WordPress dashboard will now include updates to your cu
 
 [WP Pusher](https://wppusher.com/) provides a similar method to GitHub Updater for managing your custom code, but with some key differences. WP Pusher is free for open source code hosted in public repositories. Supporting private repositories requires you to purchase a license. Currently, update notifications are not displayed within the WordPress dashboard, but you can configure the plugin to automatically install updates on Pantheon following a push to the remote repository (e.g. GitHub, Bitbucket, or GitLab). There are no declarations required within your plugin or theme. This means that modifications to existing custom extensions are not required.
 
-1. [Download WP Pusher](https://wppusher.com/). WP Pusher is free for open source code hosted in public repositories.
+1. [Download WP Pusher](https://wppusher.com/).
 
 1. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/guides/terminus):
 
@@ -104,7 +104,7 @@ You may encounter WordPress database errors referencing the `wp_wppusher_package
 [28-Mar-2016 17:57:58 UTC] WordPress database error Table 'pantheon.wp_wppusher_packages' doesn't exist for query SELECT * FROM wp_wppusher_packages WHERE type = 1 made by require_once('wp-admin/admin.php'), do_action('admin_init'), call_user_func_array, Pusher\Pusher->registerPluginActionLinks, Pusher\Storage\PluginRepository->allPusherPlugins
 ```
 
-These errors occur when the expected WP Pusher database table does not exist on the environment. Deactivating and re-activating the plugin on Test and Live should resolve this error.
+These errors occur when the expected WP Pusher database table does not exist on the environment. Deactivate and the re-activate the plugin on Test and Live to resolve this error.
 
 ## More Resources
 

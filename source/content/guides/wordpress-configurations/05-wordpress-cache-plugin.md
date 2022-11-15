@@ -34,7 +34,7 @@ Refer to the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/panthe
 
 ### Increase the Default Time to Live Value
 
-You can increase to default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
+You can increase he default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
 
 1. Log in to your WordPress site as an administrator.
 
@@ -42,7 +42,7 @@ You can increase to default time to live value to improve the chances that a vis
 
 1. Click **Pantheon Cache**. You'll end up at: `/wp-admin/options-general.php?page=pantheon-cache`
 
-1. Modify the **Default Cache Time**. 
+1. Modify the **Default Cache Time**.
 
     You should strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 30 minutes (1800 seconds) or 1 hour (3600 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
 
@@ -86,7 +86,7 @@ public function flush_site()
 
 ### clean_post_cache
 
-This function flushes the cache for an individual post, which is identified by the `$post_id`. The optional `$include_homepage` argument can also be passed. The default value is `true` if nothing is set.
+This function flushes the cache for an individual post, which is identified by the `$post_id`. The optional `$include_homepage` argument can also be passed. The default value is `true` if no value is set.
 
 ```php
 /**

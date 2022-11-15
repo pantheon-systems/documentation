@@ -1,7 +1,7 @@
 ---
 title: WordPress Configurations Guide
 subtitle: Enable Solr for WordPress
-description: Learn how to use Apache Solr with WordPress.
+description: Learn how to use Apache Solr with WordPress on Pantheon.
 cms: "WordPress"
 categories: [integrate]
 tags: [solr, plugins]
@@ -24,7 +24,9 @@ Learn how to configure Solr with help from our experts. Pantheon delivers on-dem
 
 You must add the Index Server to your site before you can use Solr on WordPress:
 
-Navigate to your Dashboard, select **Settings**, then select **Add Ons**, and then select **Apache Solr Index Server: Add**:
+1. Navigate to your Dashboard and select **Settings**.
+
+1. Select **Add Ons**, and then select **Apache Solr Index Server: Add**:
 
 ![Enable Solr from The Site Dashboard](../../../images/dashboard/settings-addons-solr.png)
 
@@ -38,7 +40,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 ## Install and Configure the Solr Search for WordPress Plugin
 
-1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/sftp) for via the Pantheon Dashboard, or with [Terminus](/guides/terminus):
+1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/sftp) via the Pantheon Dashboard, or with [Terminus](/guides/terminus):
 
  ```bash
  terminus connection:set <site>.<env> sftp
@@ -58,7 +60,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 1. Open your WordPress Dashboard, navigate to **Solr Power** (previously under **Settings**), and then select the **Info** tab to see your site's Solr Server details.
 
-1. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr. 
+1. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr.
 
 1. Click **Save Changes** after making modifications.
 
@@ -68,7 +70,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
    </Alert>
 
-1. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Start Index** next to **Index Searchable Post Types**, or via Terminus:
+1. Index all publicly queryable post types: navigate to the **Actions** tab and click **Start Index** next to **Index Searchable Post Types**, or via Terminus:
 
  ```bash
  terminus wp <site>.<env> -- solr index
