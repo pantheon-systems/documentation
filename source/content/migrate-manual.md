@@ -401,9 +401,9 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 You should now have all three of the major components of your site imported into Pantheon.
 
-1. Clear your caches on the the Pantheon Dashboard.
+1. Clear your caches on the Pantheon Dashboard.
 
-1. Confirm that everything looks good.
+1. Confirm that everything looks and behaves as expected.
 
 1. Run the [terminus site:import:complete <site_name>](/guides/terminus/commands/import-complete) command to complete the import process.
 
