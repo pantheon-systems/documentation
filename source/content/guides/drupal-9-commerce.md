@@ -3,11 +3,16 @@ title: Drupal Commerce on Drupal 9
 description: Use Composer to Install Drupal Commerce with Drupal 9, on Pantheon
 contributors: [alexfornuto, stevector]
 cms: "Drupal 9"
-categories: [integrate]
 tags: [upstreams, site]
 type: guide
 permalink: docs/guides/:basename
 multidev: true
+contenttype: guide
+categories: [git]
+newcms: [drupal]
+audience: [development]
+product: []
+integration: [modules]
 ---
 
 This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a:

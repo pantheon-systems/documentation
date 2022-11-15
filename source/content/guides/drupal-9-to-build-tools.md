@@ -4,9 +4,14 @@ description: Migrate a Drupal 9 site created via Pantheon Dashboard (or Terminus
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
-categories: [develop]
 tags: [composer, site, workflow]
 reviewed: "2022-03-10"
+contenttype: guide
+categories: [migrate]
+newcms: [drupal]
+audience: [development]
+product: [dashboard, terminus]
+integration: [composer]
 ---
 
 This guide shows you how to migrate a Composer-based Drupal site (site created via Pantheon dashboard or Terminus) to a Build Tools-based site.

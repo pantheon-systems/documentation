@@ -3,7 +3,6 @@ title: Migrate a Site That Was Created with Build Tools to Drupal 9
 subtitle: Introduction
 description: Learn how to migrate a Drupal 8 Site to Drupal 9
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-createbt
 anchorid: drupal-9-hosted-createbt
 editpath: drupal-9/drupal-9-hosted-createbt/01-introduction.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate]
+newcms: [drupal]
+audience: [development]
+product: [integrated-composer]
+integration: []
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

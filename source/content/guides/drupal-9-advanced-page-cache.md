@@ -2,10 +2,15 @@
 title: Setting and Clearing Custom Cache Tags in Drupal 9
 description: Learn how to use Views Cache Tags module along with custom code to control Pantheon Advanced Page Cache.
 tags: [moreguides]
-categories: [caching]
 type: guide
 permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham]
+contenttype: guide
+categories: [cache]
+newcms: [drupal]
+audience: [development]
+product: [terminus]
+integration: [modules]
 ---
 
 [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/9.0) and the [Pantheon Global CDN](/guides/global-cdn).

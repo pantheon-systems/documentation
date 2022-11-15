@@ -10,7 +10,7 @@ showtoc: true
 permalink: docs/guides/domains/custom-domains
 anchorid: custom-domains
 contenttype: guide
-categories: []
+categories: [domains]
 newcms: []
 audience: [agency, development]
 product: [dashboard]
