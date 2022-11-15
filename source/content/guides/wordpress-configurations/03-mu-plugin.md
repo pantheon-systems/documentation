@@ -1,7 +1,7 @@
 ---
 title: WordPress Configurations Guide
 subtitle: Create a WordPress MU-Plugin for Actions and Filters
-description: Learn to make a boilerplate MU-plugin for actions and filters.
+description: Learn how to make your own MU-plugin for actions and filters.
 contributors: [alexfornuto, eabquina, carl-alberto]
 cms: "WordPress"
 categories: [develop]
@@ -15,19 +15,19 @@ You can create a [Must-Use (**MU**) plugin](https://codex.wordpress.org/Must_Use
 
 MU-plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
-MU-plugins are loaded by PHP in alphabetical order, before normal plugins. This means API hooks added to an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
+PHP loads MU-plugins in alphabetical order, before normal plugins. This means API hooks added to an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Why use MU-Plugins?
 
 Although you can add code in the `wp-config.php` file for site-wide behavior, actions and filters should not be added to this file. Your WordPress site will throw a fatal PHP error because the `add_action()` and `add_filter()` functions are not yet defined if actions and filters are added above the `require_once ABSPATH . 'wp-settings.php';` statement.
 
-If actions and filters are added below the `require_once ABSPATH . 'wp-settings.php';` statement, the actions and filters will not be applied, or will be applied last when the entirety of WordPress has loaded.
+If actions and filters are added below the `require_once ABSPATH . 'wp-settings.php';` statement, the actions and filters will not be applied, or will be applied last when the entirety of the WordPress site has loaded.
 
 ## Create Your MU-Plugin
 
-1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
+1. Create a PHP file (for example: `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
 
-1. Provide the plugin details for its name, description, URI, and other descriptors:
+1. Provide details for the plugin, such as name, description, URI, and other descriptors:
 
 	  ```php
 	  <?php
@@ -41,7 +41,7 @@ If actions and filters are added below the `require_once ABSPATH . 'wp-settings.
 	  */
 	  ```
 
-1. Add the custom functions and the filters or action that you want to run. Use the following script as a starting point for creating your own plugin:
+1. Add the custom functions and the filters or actions that you want to run. Use the following script as a starting point for creating your own plugin:
 
 	  ```php
 	  <?php
@@ -119,7 +119,7 @@ If actions and filters are added below the `require_once ABSPATH . 'wp-settings.
 
 <Partial file="wp_get_environment_type.md" />
 
-An MU-plugin can be instructed to run or perform environment-specific actions. Use `wp_get_environment_type` to look up the current environment in a platform-neutral way.
+You can instruct an MU-plugin to run or perform environment-specific actions. Use `wp_get_environment_type` to look up the current environment in a platform-neutral way.
 
 ## Example Code Snippets
 
@@ -189,7 +189,7 @@ add_filter( 'wp_headers', 'dynamic_cors_headers' );
 
 ### Custom Cookies
 
-Setting custom cookies can also be done from an MU-plugin like in the following example. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
+You can aslo set custom cookies in an MU-plugin like the example below. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
 
 ```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
@@ -242,13 +242,13 @@ add_filter( 'login_message', function() {
 });
 ```
 
-Please note that overwriting `login_message` changes the text displayed on all login pages, regardless of domain used to access them.
+Please note that overwriting `login_message` changes the text displayed on all login pages, regardless of the domain used to access the pages.
 
 ### Exclude Plugins from Redis Cache
 
 A page load with 2,000 Redis calls can be two full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group.
 
-For example, let's say you have a custom plugin that sets the cache with:
+For example, if you have a custom plugin that sets the cache with:
 
 ```php
 wp_cache_set( 'cache_key', 'cache_data', 'my_plugin_group' );
