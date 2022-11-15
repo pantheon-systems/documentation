@@ -37,7 +37,7 @@ You can potentially address request timeouts for administrative operations by op
 
 ## Admin Workarounds
 
-[Terminus](/terminus) is a reliable workaround for many administrative bottlenecks,including:
+[Terminus](/guides/terminus) is a reliable workaround for many administrative bottlenecks,including:
 
 - Slow queries
 - High query volumes

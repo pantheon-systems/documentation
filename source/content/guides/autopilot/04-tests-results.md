@@ -11,13 +11,11 @@ permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
 contenttype: guide
-categories: [deploy, test, update]
+categories: [automate]
 newcms: []
 audience: [development]
 product: [autopilot]
-integration: [quicksilver]
----
-
+integration: []
 ---
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it applies updates to your Dev, Test or Live environment.

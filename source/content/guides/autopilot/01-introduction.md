@@ -2,7 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Introduction
 description: Visual regression testing (VRT) for your WordPress or Drupal site.
-categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 contributors: [nathantyler, alexfornuto, edwardangert]
 productpage: https://pantheon.io/autopilot?docs
@@ -13,6 +12,12 @@ anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
 reviewed: "2022-05-17"
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 [Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.

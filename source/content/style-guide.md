@@ -112,7 +112,7 @@ If a page is specifically written for a single CMS or CMS version, it's tagged a
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus) .
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Guide](/guides/terminus) .
 
 <Example>
 
@@ -123,7 +123,7 @@ Be sure that you have:
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
 - A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/terminus) installed on your local computer.
+- [Terminus](/guides/terminus) installed on your local computer.
 
 <hr className="source-code" /> <br/>
 
@@ -135,7 +135,7 @@ Be sure that you have:
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
 - A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/terminus) installed on your local computer.
+- [Terminus](/guides/terminus) installed on your local computer.
 ```
 
 </Example>
@@ -497,7 +497,7 @@ When writing multi-step processes, repeated variables and constants should be de
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/guides/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -511,7 +511,7 @@ export env=dev
 ````markdown
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/guides/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 ```bash{promptUser: user}
 export site=yoursitename

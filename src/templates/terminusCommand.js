@@ -1,3 +1,4 @@
+
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -55,54 +56,54 @@ const shortcodes = {
 const items = [
   {
     id: "docs-terminus",
-    link: "/terminus",
+    link: "/docs/guides/terminus",
     title: "Get Started",
   },
   {
     id: "docs-terminus-install",
-    link: "/terminus/install",
+    link: "/guides/terminus/install",
     title: "Install",
   },
   {
     id: "docs-terminus-examples",
-    link: "/terminus/examples",
+    link: "/guides/terminus/examples",
     title: "Example Usage",
   },
   {
-    id: "docs-terminus-commands",
-    link: "/terminus/commands",
+    id: "docs-guides-terminus-commands",
+    link: "/guides/terminus/commands",
     title: "Commands",
   },
   {
     id: "docs-terminus-scripting",
-    link: "/terminus/scripting",
+    link: "/guides/terminus/scripting",
     title: "Scripting",
   },
   {
     id: "docs-terminus-plugins",
-    link: "/terminus/plugins",
+    link: "/guides/terminus/plugins",
     title: "Extend with Plugins",
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/terminus/plugins/directory",
+        link: "/guides/terminus/directory",
         title: "Directory",
       },
       {
         id: "docs-terminus-create",
-        link: "/terminus/plugins/create",
+        link: "/guides/terminus/create",
         title: "Create Plugins",
       },
     ],
   },
   {
     id: "docs-terminus-configuration",
-    link: "/terminus/configuration",
+    link: "/guides/terminus/configuration",
     title: "Configuration File",
   },
   {
     id: "docs-terminus-updates",
-    link: "/terminus/updates",
+    link: "/guides/terminus/updates",
     title: "Version Updates",
   },
 ]
@@ -178,11 +179,8 @@ class CommandsTemplate extends React.Component {
         <div className="">
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
-              <Navbar
-                title={`Terminus Command Reference`}
-                items={items}
-                activePage="/terminus/commands"
-                className="manual-guide-toc"
+            <Navbar
+              className="manual-guide-toc"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
@@ -190,7 +188,7 @@ class CommandsTemplate extends React.Component {
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
                   >
                     <HeaderBody
-                      title="Terminus Command Reference"
+                      title=""
                       subtitle={`terminus ${command.name}`}
                       description=""
                       slug={slug}
@@ -235,7 +233,7 @@ class CommandsTemplate extends React.Component {
                     </table>
 
                     <Partial file={`terminus/${slug}.md`} />
-                    <Link to="/terminus/commands">Back to all commands</Link>
+                    <Link to="/guides/terminus/commands">Back to all commands</Link>
                   </div>
                 </div>
               </div>

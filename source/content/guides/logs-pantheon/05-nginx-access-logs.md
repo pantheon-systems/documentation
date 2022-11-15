@@ -27,7 +27,7 @@ Requests served by the [Pantheon Global CDN](/guides/global-cdn) will not hit th
 
 Be sure that you have:
 
-- [Terminus](/terminus)
+- [Terminus](/guides/terminus)
 - [GoAccess](https://goaccess.io/download)
   - **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   - **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
@@ -61,7 +61,7 @@ You must configure GoAccess to read Pantheon's log formats to parse your `nginx-
 
 ## Create a report
 
-1. [Download your nginx log files](/guides/logs-pantheon/download-logs) from Pantheon via SFTP.
+1. [Download your nginx log files](/guides/logs-pantheon/access-logs) from Pantheon via SFTP.
 
 1. Navigate to the directory containing your `nginx-access.log` file, and then run GoAccess:
 
@@ -122,6 +122,10 @@ You can navigate the `nginx-access.log` file using the CLI without GoAccess. The
 - Locate the most frequent client IP addresses:
 
   ```cat nginx-access.log | awk -F '\"' '{ print $8 }' | awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | head -n 25```
+  
+- Locate the most frequent client IP addresses based on request path: 
+
+ ```cat nginx-access.log | awk -F '\"' '{ print $2,$8 }'| awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | grep "/example.php"```
 
 - Locate the most frequent URLs:
 
@@ -130,6 +134,10 @@ You can navigate the `nginx-access.log` file using the CLI without GoAccess. The
 - Identify the most frequent User Agents:
 
   ```cat nginx-access.log | awk -F '\"' '{print $6}' | sort | uniq -c | sort -nr | head```
+  
+- Locate the most frequent user agents based on request path: 
+
+ ```cat nginx-access.log | awk -F '\"' '{ print $2,$6 }'| awk -F ',' '{print $1}' | sort | uniq -c | sort -frn | grep "/example.php"```
 
 
 ## More Resources

@@ -23,7 +23,7 @@ wkhtmltopdf is located in your application container at `/srv/bin/wkhtmltopdf`. 
 
 <Tab title="Drupal 7" id="d7-example" active={true}>
 
-Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
+Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/guides/terminus/):
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- en print --y

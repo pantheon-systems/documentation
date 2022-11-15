@@ -1,8 +1,7 @@
 ---
-title: "Workspaces, Sites, and Teams"
+title: Workspaces, Sites, and Teams
 subtitle: Sites Management
-description: "Learn how to manage your sites."
-categories: [account-mgmt]
+description: Learn how to manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
 anchorid: sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [accounts]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 This guide is specific to sites management, not developing and launching sites.
@@ -213,7 +218,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ### Delete a Site with Terminus
 
-Run the following [Terminus](/terminus) command, replacing `<site>` with your site's name:
+Run the following [Terminus](/guides/terminus) command, replacing `<site>` with your site's name:
 
 ```bash{promptUser: user}
 terminus site:delete <site>
@@ -238,7 +243,7 @@ Every entity (user, workspace, product, and site) is assigned a UUID which is in
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 
-You can also use [Terminus](/terminus) to find the UUID of your workspaces:
+You can also use [Terminus](/guides/terminus) to find the UUID of your workspaces:
 
 ```bash{promptUser: user}
 terminus site:list

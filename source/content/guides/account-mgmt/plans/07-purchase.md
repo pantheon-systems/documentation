@@ -2,7 +2,6 @@
 title: "Plans"
 subtitle: Purchase Plans and Addons
 description: Learn how to purchase plans and addons.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/plans/purchase
 anchorid: purchase
 editpath: docs/guides/account-mgmt/plans/07-purchase.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [plans]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 This section covers purchasing a new plan. 

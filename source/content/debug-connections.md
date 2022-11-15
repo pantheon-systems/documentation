@@ -1,8 +1,13 @@
 ---
 title: Debugging Connectivity Issues
 description: Learn how to test and resolve connectivity issues affecting your Pantheon sites.
-categories: [troubleshoot]
 tags: [cli, ssh]
+newtype: doc
+categories: [help]
+newcms: []
+audience: [development]
+product: []
+integration: []
 ---
 
 ## Connectivity Error Message
@@ -16,7 +21,7 @@ Error:  Could not connect to server''
 Debugging connectivity issues
 ```
 
-Services such as MySQL and SFTP are running; however, the local client is unable to connect due to an idled container or DNS issues. Before further troubleshooting, wake the environment by loading the home page or via the following [Terminus](/terminus) command:
+Services such as MySQL and SFTP are running; however, the local client is unable to connect due to an idled container or DNS issues. Before further troubleshooting, wake the environment by loading the home page or via the following [Terminus](/guides/terminus) command:
 
 ```bash{promptUser: user}
 terminus env:wake site.env

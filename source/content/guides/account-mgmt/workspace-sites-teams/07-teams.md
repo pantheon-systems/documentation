@@ -1,8 +1,7 @@
 ---
-title: "Workspaces, Sites, and Teams"
+title: Workspaces, Sites, and Teams
 subtitle: Teams
-description: "Learn how to use teams for change management."
-categories: [account-mgmt]
+description: Learn how to use teams for change management.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 anchorid: teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [accounts]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 Teams allow you to define the users who will have access to a workspace or site. Team members added to a workspace will have access to all sites in that workspace, whereas team members added to a site can only access that site.

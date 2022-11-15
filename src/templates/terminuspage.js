@@ -59,49 +59,49 @@ const items = [
   },
   {
     id: "docs-terminus-install",
-    link: "/terminus/install",
+    link: "/guides/terminus/install",
     title: "Install",
   },
   {
     id: "docs-terminus-examples",
-    link: "/terminus/examples",
+    link: "/guides/terminus/examples",
     title: "Example Usage",
   },
   {
-    id: "docs-terminus-commands",
-    link: "/terminus/commands",
+    id: "docs-guides-terminus-commands",
+    link: "/guides/terminus/commands",
     title: "Commands",
   },
   {
     id: "docs-terminus-scripting",
-    link: "/terminus/scripting",
+    link: "/guides/terminus/scripting",
     title: "Scripting",
   },
   {
     id: "docs-terminus-plugins",
-    link: "/terminus/plugins",
+    link: "/guides/terminus/plugins",
     title: "Extend with Plugins",
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/terminus/plugins/directory",
+        link: "/guides/terminus/directory",
         title: "Directory",
       },
       {
         id: "docs-terminus-create",
-        link: "/terminus/plugins/create",
+        link: "/guides/terminus/create",
         title: "Create Plugins",
       },
     ],
   },
   {
     id: "docs-terminus-configuration",
-    link: "/terminus/configuration",
+    link: "/guides/terminus/configuration",
     title: "Configuration File",
   },
   {
     id: "docs-terminus-updates",
-    link: "/terminus/updates",
+    link: "/guides/terminus/updates",
     title: "Version Updates",
   },
 ]
@@ -138,11 +138,11 @@ class TerminusTemplate extends React.Component {
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const ifCommandsDate =
-      node.fields.slug == "/terminus/commands"
+      node.fields.slug == "/guides/terminus/commands"
         ? this.props.data.terminusReleasesJson.published_at
         : node.frontmatter.reviewed
     const ifCommandsISO =
-      node.fields.slug == "/terminus/commands"
+      node.fields.slug == "/guides/terminus/commands"
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
 

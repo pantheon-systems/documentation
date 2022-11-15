@@ -2,7 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Deactivate Autopilot
 description: Learn how to deactivate Autopilot for an individual site.
-categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
@@ -10,6 +9,12 @@ contributors: [whitneymeredith]
 showtoc: true
 anchorid: autopilot-deactivate
 permalink: docs/guides/autopilot/autopilot-deactivate
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 This section provides information on how to deactivate Autopilot for an individual site. Autopilot can be deactivated from the Autopilot Index page or the Autopilot Site Configuration page.

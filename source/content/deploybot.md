@@ -1,9 +1,14 @@
 ---
 title:  Deploy to Pantheon from an External Repository using DeployBot
 description: Learn how to set up and use DeployBot to deploy from repositories hosted with a third party provider, like GitHub, to Pantheon.
-categories: [automate]
 tags: [git, workflow]
 contributors: [ataylorme, rachelwhitton]
+newtype: doc
+categories: [automate]
+newcms: []
+audience: [development]
+product: []
+integration: []
 ---
 
 DeployBot is a continuous integration service with a friendly user interface. Instead of managing options with `yml` files, DeployBot offers an easy web GUI. For sites that already use external Git hosting, DeployBot can be integrated into your workflow to test and deploy sites that require additional build steps.
@@ -22,7 +27,7 @@ Continuous integration solutions make sure that each step in your deployment pro
 ### Considerations
 There are a few known limitations to consider before proceeding:
 
-- DeployBot does not support installing third party software on server environments at this time. This limits the amount of automation you can achieve with regards to Pantheon's workflow. Being unable to install [Terminus](/terminus), for example, means you can't automatically commit changes from DeployBot after a deployment. You also won't be able to manage Multidev environments automatically when working on feature branches.
+- DeployBot does not support installing third party software on server environments at this time. This limits the amount of automation you can achieve with regards to Pantheon's workflow. Being unable to install [Terminus](/guides/terminus), for example, means you can't automatically commit changes from DeployBot after a deployment. You also won't be able to manage Multidev environments automatically when working on feature branches.
 - The example workflow may result in committing compiled asset files or code on Pantheon that you might not commit in the source repositories on hosts such as GitHub. The primary use case for this example is to keep a lean repo with fewer source files in GitHub and use DeployBot to compile and ship to Pantheon.
 
 ### Example Workflow

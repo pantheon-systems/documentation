@@ -2,15 +2,20 @@
 title: Working in the WordPress Dashboard and Drupal Admin Interface
 description: Learn how to build sites using the WordPress and Drupal admin interfaces in SFTP mode on Pantheon.
 searchboost: 150
-categories: [develop]
 tags: [site, sftp, dashboard]
 reviewed: "2020-06-24"
+newtype: doc
+categories: [sftp]
+newcms: [wordpress, drupal]
+audience: [development]
+product: [dashboard]
+integration: []
 ---
 Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/guides/git/git-config) or working in the WordPress or Drupal admin interface in [SFTP](/sftp) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/guides/multidev)) in **SFTP** mode.
 
 <Alert title="Exports" type="export">
 
-This doc offers [Terminus](/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+This doc offers [Terminus](/guides/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -30,8 +35,8 @@ Operations that require write access to the codebase must be executed while the 
 
 - Activating a new theme in the site admin,
 - Uploading a new module or plugin using an SFTP client,
-- Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <Popover content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/guides/drush/'>Drupal Drush Command-Line Utility</a>." />
-- Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <Popover content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/guides/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>." />
+- Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <Popover content="Run Drush commands with <a href='/docs/guides/terminus/'>Terminus</a>. For details, see <a href='/docs/guides/drush/'>Drupal Drush Command-Line Utility</a>." />
+- Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <Popover content="Run WP-CLI commands with <a href='/docs/guides/terminus/'>Terminus</a>. For details, see <a href='/docs/guides/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>." />
 
 ## WordPress Dashboard
 
@@ -39,7 +44,7 @@ WordPress' admin interface has built in tools to manage plugins and themes, allo
 
 <Alert title="Warning" type="danger">
 
-Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
+Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/guides/terminus). For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 </Alert>
 
@@ -75,7 +80,7 @@ Unused plugins should be removed from the Live environment. Deactivated and un-u
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+This process uses [Terminus](/guides/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -109,7 +114,7 @@ Drupal also allows you to install modules or themes [using its administrative in
 
 <Alert title="Warning" type="danger">
 
-Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
+Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/guides/terminus). For additional details, see [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates).
 
 </Alert>
 
@@ -139,13 +144,13 @@ You should *never* have to enter credentials into the Drupal Admin interface. Vi
 
 ## Command Line Tools
 
-Perhaps the most powerful way to leverage the capabilities of on-server development is to use command line tools such as WP-CLI and Drush, which can be executed on Pantheon via [Terminus](/terminus).
+Perhaps the most powerful way to leverage the capabilities of on-server development is to use command line tools such as WP-CLI and Drush, which can be executed on Pantheon via [Terminus](/guides/terminus).
 
 ### Install & Authenticate Terminus
 
 In order to run WP-CLI or Drush commands on Pantheon's development environments, you'll need use our very own command line tool, Terminus:
 
-1. Install [Terminus](/terminus):
+1. Install [Terminus](/guides/terminus):
 
   ```bash{promptUser: user}
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install

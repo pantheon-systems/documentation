@@ -2,13 +2,18 @@
 title: Advanced Global CDN
 subtitle: FAQs
 description: Get answers to your AGCDN questions.
-categories: [develop]
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-faq
 anchorid: agcdn-faq
+contenttype: guide
+categories: [optimize]
+newcms: []
+audience: [development]
+product: []
+integration: []
 ---
 
 This section provides answers to frequently asked AGCDN questions.

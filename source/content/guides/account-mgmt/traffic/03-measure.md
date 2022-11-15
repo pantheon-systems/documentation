@@ -2,7 +2,6 @@
 title: "Traffic"
 subtitle: Measuring Traffic
 description: Learn how Pantheon measures traffic.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/traffic/measure
 anchorid: measure
 editpath: docs/guides/account-mgmt/traffic/03-measure.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [plans]
+newcms: []
+audience: [sysadmin]
+product: []
+integration: []
 ---
 
 The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.

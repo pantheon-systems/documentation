@@ -2,13 +2,18 @@
 title: Autopilot for Custom Upstreams
 subtitle: Introduction
 description: Learn more using Autopilot with your Custom Upstream.
-categories: [develop]
 tags: [autopilot, upstreams]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream
 anchorid: autopilot-custom-upstream
+contenttype: guide
+categories: [automate]
+newcms: []
+audience: [development]
+product: [autopilot]
+integration: []
 ---
 
 Combining [Autopilot](/guides/autopilot) with [Custom Upstreams](/guides/custom-upstream) is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see [Get Autopilot](#get-autopilot) and [Autopilot Site Compatibility](#autopilot-site-compatibility) for details) to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites.
