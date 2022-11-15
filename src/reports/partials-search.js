@@ -150,14 +150,15 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {categorizedPages
-/*                        .filter(page => {
+                      /*
+                        .filter(page => {
                           return page.node.frontmatter.newcms
                             ? page.node.frontmatter.newcms.filter(
                               newcms => newcms.indexOf(searchnewCms) >= 0
                               ).length
                             : page
                         })
-*/
+                        */
                         .map((page, i) => {
                           return (
                             <tr key={i}>
