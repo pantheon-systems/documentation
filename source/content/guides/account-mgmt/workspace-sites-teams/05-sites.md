@@ -95,7 +95,7 @@ To change the owner of a paid site (e.g. Basic, or Performance):
 
 1. Open the Site Dashboard for the site.
 
-1. Select **Settings**, then **Invite a business owner to pay for this site**.
+1. Select **Billing**, then **Invite a business owner to pay for this site**.
 
 1. Enter the email address for the new site owner.
 
