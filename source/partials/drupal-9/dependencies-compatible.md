@@ -1,8 +1,10 @@
 ---
 contenttype: partial
+categories: [--]
 newcms: [drupal, drupal8, drupal9]
-product: []
-integration: []
+product: [--]
+integration: [--]
+tags: [--]
 reviewed: "2022-11-04"
 ---
 

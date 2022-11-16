@@ -1,8 +1,10 @@
 ---
 contenttype: partial
+categories: [--]
 newcms: [--]
 product: [--]
 integration: [--]
+tags: [--]
 reviewed: "2022-11-03"
 ---
 
