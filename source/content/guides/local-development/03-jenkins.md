@@ -1,7 +1,7 @@
 ---
 title: Local Development on Pantheon
-subtitle: Automatically Test and Deploy GitHub Changes to Pantheon from an Existing Jenkins Server
-description: Configure an existing Jenkins server to automatically test and deploy code changes to Pantheon when pushed to GitHub.
+subtitle: Automatically Test and Deploy to Pantheon with Jenkins
+description: Configure an existing Jenkins server to test and deploy code changes to Pantheon automatically when pushed to GitHub.
 categories: [automate]
 tags: [collaborate, continuous-integration, git, iterate]
 date: 6/20/2017
@@ -11,7 +11,11 @@ permalink: docs/guides/local-development/jenkins
 anchorid: jenkins
 ---
 
+This section provides information on how to configure your Jenkins server to test and deploy code changes to Pantheon automatically.
+
 [Jenkins](https://jenkins.io) is an open source Continuous Integration (CI) server which can be used to build, test, and deploy code on any Drupal and WordPress website on Pantheon. Unlike hosted services such as [CircleCI](https://circleci.com/), it is a Java application installed and run on a server, and requires regular upkeep and maintenance. However, it is very customizable and can even run non-CI related tasks, such as calling periodic cron jobs.
+
+You can use Terminus for scripting many operations. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on master and the content from Live, then run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
 
 In this guide, we'll configure your existing Jenkins server to automatically test and deploy Drupal 8 to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins will run tests against both the pull request and Pantheon's master branch and display the results.
 

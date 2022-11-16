@@ -15,9 +15,12 @@ showtoc: true
 permalink: docs/guides/local-development/continuous-integration
 anchorid: continuous-integration
 ---
-[<dfn id="ci">Continuous Integration</dfn>](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/guides/support/contact-support/).
 
-See our [Build Tools](/guides/build-tools) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
+This section provides information on how to use Terminus and Drupal SimpleTest to run automated integration tests.
+
+[Continuous Integration](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/guides/support/contact-support/).
+
+Refer to our [Build Tools](/guides/build-tools) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
 
 ## Terminus Command-Line Interface
 
@@ -28,21 +31,20 @@ See our [Build Tools](/guides/build-tools) guide for a more detailed look at a w
 - Content cloning
 - Code pushes
 
-You can use Terminus for scripting many operations. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on master and the content from Live, then run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
 
 ## Drupal SimpleTest
 
 [SimpleTest](https://drupal.org/project/simpletest) is a testing framework based on the [SimpleTest PHP library](https://github.com/simpletest/simpletest) that is included with Drupal core. If you are creating a custom web application, you should consider including SimpleTests of your module functionality.
 
-[SiteTest](https://www.drupal.org/project/site_test) is a contrib module for Drupal 7 designed to allow running tests directly against your sites code instead of a base Drupal clone of your site.  This module is recommended for use of SimpleTest on Pantheon.
+[SiteTest](https://www.drupal.org/project/site_test) is a contrib module for Drupal 7 designed to allow running tests directly against your sites code instead of a base Drupal clone of your site. This module is recommended for use of SimpleTest on Pantheon.
 
 <Alert title="Note" type="info">
 
-The drush test-run command was dropped in Drush 7 and 8. See [this GitHub issue](https://github.com/drush-ops/drush/issues/1362) for more details.
+The Drush test-run command was dropped in Drush 7 and 8. Refer to [this GitHub issue](https://github.com/drush-ops/drush/issues/1362) for more details.
 
 </Alert>
 
-To run tests on Pantheon:
+## Run Tests on Pantheon
 
 1. Enable `site_test`:
 
@@ -52,13 +54,13 @@ To run tests on Pantheon:
 
   This command will also enable `simpletest` as a dependency of `site_test`.
 
-1. Clear the cache immediately before running tests to avoid strange failures:
+1. Clear the cache immediately before running tests to avoid failures:
 
    ```bash{promptUser: user}
    terminus drush $SITE_NAME.$ENV_NAME -- cc all
    ```
 
-  This step should be repeated each time tests are to be run moving forward.
+  This step should be repeated each time you run tests.
 
 1. Get the absolute path before you can run the script:
 
@@ -68,14 +70,14 @@ To run tests on Pantheon:
 
   In the command above, you may need to strip out warnings by ending the command with `2>/dev/null`.
 
-The full command will look something like this:
+  The full command will look something like this:
 
-```bash{promptUser: user}
-export TERMINUS_HIDE_UPDATE_MESSAGE=1
-terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
-```
+  ```bash{promptUser: user}
+  export TERMINUS_HIDE_UPDATE_MESSAGE=1
+  terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
+  ```
 
-In the above command the `--url` option is required to be passed as multidevs do not respond to `localhost`.
+  In the above command the `--url` option is required to be passed as Multidevs do not respond to `localhost`.
 
 A full CircleCI command might look similar to this:
 
@@ -117,7 +119,7 @@ At this time, Pantheon does not provide or support:
 - Shell access
 - [PHPUnit](https://github.com/sebastianbergmann/phpunit/) Unit Testing PHP Framework: You can still write tests and include them in your code, but you'll need to run them on a CI server, not Pantheon.
 
-## Read More
+## More Resources
 
 - [Build Tools](/guides/build-tools)
 - [Localdev](/guides/localdev)
