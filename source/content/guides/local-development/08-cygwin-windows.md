@@ -1,14 +1,19 @@
 ---
-title: Install Cygwin on Windows
+title: Local Development on Pantheon
+subtitle: Install Cygwin on Windows
 description: Learn how to install and configure Cygwin on Windows computers for Pantheon sites.
 tags: [local, ssh]
 reviewed: "2020-02-05"
-newtype: doc
+newtype: guide
 categories: []
 newcms: []
 audience: [development]
 product: []
 integration: []
+layout: guide
+showtoc: true
+permalink: docs/guides/local-development/cygwin-windows
+anchorid: cygwin-windows
 ---
 
 <Alert title="Warning" type="danger" >
@@ -29,6 +34,6 @@ If you do not have access to a Mac or Linux environment, you can install [Cygwin
 
 1. Search for each package, open the appropriate category (Net or PHP), and click **Skip** next to each package to select it for installation. Required packages: `curl`, `openssh`, `openssl` (Net), `php`, `php-curl`, `php-json`, `php-phar` (PHP)
 
-  ![Select openSSL package](../images/cygwin-select-packages.png)
+  ![Select openSSL package](../../../images/cygwin-select-packages.png)
 
 1. Complete the set up. Repeat this process when updating Cygwin or adding more packages.

@@ -1,9 +1,14 @@
 ---
-title: Configuring PhpStorm to create WordPress Plugins on Pantheon
+title: Local Development on Pantheon
+subtitle: Configuring PhpStorm to create WordPress Plugins on Pantheon
 description: Configure a local environment for building a WordPress plugin or theme using JetBrains PhpStorm.
 cms: "WordPress"
 categories: [develop]
 tags: [plugins]
+layout: guide
+showtoc: true
+permalink: docs/guides/local-development/wordpress-phpstorm
+anchorid: wordpress-phpstorm
 ---
 ## Overview
 
@@ -28,7 +33,7 @@ Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection
 5. Specify or browse to the file path to save your project's files. This is where PhpStorm will store its "working files", and should be separate from your WordPress directory.
 6. Specify or browse to the root directory for your local WordPress site, and click **Create**:
 
-    ![Configuring wp-cli path for PhpStorm](../images/phpstorm-new-project-wordpress-plugin-screen.png)
+    ![Configuring wp-cli path for PhpStorm](../../../images/phpstorm-new-project-wordpress-plugin-screen.png)
 
 There will not be any files open within your project once you complete these steps. You will find a PHP file in the project's root, which contains the standard plugin header for WordPress.
 
@@ -46,7 +51,7 @@ Once you have installed WP-CLI on your local machine you can configure PhpStorm 
 2. In the Tools Section click [Command Line Tool Support](https://www.jetbrains.com/help/phpstorm/command-line-tool-support.html) then click the click **+** icon to add an entry.
 3. Choose the tool **WP-CLI**, and click **OK**.
 4. Select **Executable Available** and enter the file path to your local `wp` directory.
- ![Configuring wp-cli path for PhpStorm](../images/path-to-wp-phpstorm.png)
+ ![Configuring wp-cli path for PhpStorm](../../../images/path-to-wp-phpstorm.png)
 5. Click **OK** to save the changes.
 
 ## Configure Your Pantheon Development Environment
@@ -56,7 +61,7 @@ Once you have installed WP-CLI on your local machine you can configure PhpStorm 
 3. Click **+** to [add a web server](https://www.jetbrains.com/help/phpstorm/add-server-dialog.html).
 4. Enter your Pantheon site name, followed by a dash and the environment.
 5. Select **SFTP** for type and click **OK**.
-![Add web server PhpStorm](../images/add-web-server-phpstorm.png)
+![Add web server PhpStorm](../../../images/add-web-server-phpstorm.png)
 
 ### Connection Tab
 
@@ -69,7 +74,7 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 1. Auth Type: Select Password and specify password, or key pair and select your private SSH key.
 1. Root Path: Click the **Autodetect** button and the Root Path should be automatically populated:
 
-    ![Add web server PhpStorm](../images/phpstorm-deployment-connection-tab.png)
+    ![Add web server PhpStorm](../../../images/phpstorm-deployment-connection-tab.png)
 
     <Alert title="Warning" type="danger">
 
@@ -78,7 +83,7 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 
 1. Click the **Test SFTP Connection...** button and make sure the connection is successful before moving forward.  Click **OK**.
 
-    ![Add web server PhpStorm](../images/phpstorm-deployment-connection-test-sftp-success.png)
+    ![Add web server PhpStorm](../../../images/phpstorm-deployment-connection-test-sftp-success.png)
 
 ### Mappings Tab
 

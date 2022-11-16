@@ -1,12 +1,15 @@
 ---
-title: Install and Configure Lando for WordPress
+title: Local Development on Pantheon
+subtitle: Install and Configure Lando for WordPress
 description: Install and Configure Lando for local development of WordPress sites.
 contributors: [digisavvy]
 categories: [develop]
 tags: [code, iterate, lando, local, webops]
 featuredcontributor: true
-type: guide
-permalink: docs/guides/:basename
+layout: guide
+showtoc: true
+permalink: docs/guides/local-development/lando-wordpress
+anchorid: lando-wordpress
 ---
 
 This guide will help you get up and running with [Lando](https://lando.dev/), an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
@@ -35,7 +38,7 @@ Installing Lando is straight forward. Be sure to check its [system requirements]
 
 2. Click to open the installer package. The installer has a few pre-flight checks it runs before getting started.
 
-  ![Image of the Lando installer](../../images/guides/lando-wordpress/lando-installer.png)
+  ![Image of the Lando installer](../../../images/guides/lando-wordpress/lando-installer.png)
 
 Once you finish following any system prompts, the Lando installation script will work its magic and install itself on your computer.
 
@@ -79,7 +82,7 @@ Note that you can follow these same basic steps with an existing Pantheon Drupal
 
 1. Next, you’ll choose WordPress as your starting recipe.
 
-  ![Choose your Lando recipe to spin up a new website.](../../images/guides/lando-wordpress/lando-choose-recipe.png)
+  ![Choose your Lando recipe to spin up a new website.](../../../images/guides/lando-wordpress/lando-choose-recipe.png)
 
 1. For your webroot, you may press enter and Lando will spin up the site from your current directory.
 
@@ -95,7 +98,7 @@ Note that you can follow these same basic steps with an existing Pantheon Drupal
 
   This starts your Lando app and gives you some basic information like your Appserver URLs to access the site in your local browser of choice:
 
-  ![alt text](../../images/guides/lando-wordpress/lando-start.png)
+  ![alt text](../../../images/guides/lando-wordpress/lando-start.png)
 
 1. Download the WordPress Core:
 

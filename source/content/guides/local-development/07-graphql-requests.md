@@ -1,10 +1,16 @@
 ---
-title: GraphQL Requests
+title: Local Development on Pantheon
+subtitle: Local Development on Pantheon
+subtitle: GraphQL Requests
 description: Learn about GraphQL best practices and troubleshooting tips.
 categories: [develop]
 tags: [local, workflow]
 contributors: [whitneymeredith]
 reviewed: "2022-03-22"
+layout: guide
+showtoc: true
+permalink: docs/guides/local-development/graphql-requests
+anchorid: graphql-requests
 ---
 
 [GraphQL](https://graphql.org/) is an API query language that uses a server-side runtime for executing queries. A GraphQL service is created when you define types and fields for those types, and then provide functions for each field on each type. GraphQL is not tied to a specific database or storage engine, but is instead backed by your existing code and data.
@@ -40,11 +46,11 @@ Note that GraphQL does not use HTTP status codes in the same way that REST-based
 
 In this image, for example, it is not immediately obvious that one of these queries failed, as every request returned a 200 status code:
 
-![GraphQL 200 Status Codes](../images/graphql-200-status.png)
+![GraphQL 200 Status Codes](../../../images/graphql-200-status.png)
 
 However, if you inspect each of the requests, you will see one of them contains an errors key in the response:
 
-![GraphQL Errors Key](../images/graphql-errors-key.png)
+![GraphQL Errors Key](../../../images/graphql-errors-key.png)
 
 This is the only identifiable symptom in DevTools when an operation has failed. For better network insights on GraphQL requests, you can install the [GraphQL Network Inspector Chrome extension](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB).
 
@@ -54,7 +60,7 @@ Each request can result in one or more errors. This means that the error key in 
 
 Here is an example of an error returned for a workspace that requires multi-factor authentication to be enabled:
 
-![GraphQL Error Example](../images/graphql-error-example.png)
+![GraphQL Error Example](../../../images/graphql-error-example.png)
 
 ## More Resources
 

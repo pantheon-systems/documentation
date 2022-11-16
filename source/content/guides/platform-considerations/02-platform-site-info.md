@@ -196,7 +196,7 @@ WordPress users can correct this by:
 
 ## Xdebug Support
 
-Xdebug is not available on the platform. Local development tools such as [Lando](/guides/lando-wordpress) provide Xdebug and can synchronize your local workstation with the Pantheon Cloud. Debugging on the Pantheon Cloud is done using [New Relic&reg; Performance Monitoring](/guides/new-relic).
+Xdebug is not available on the platform. Local development tools such as [Lando](/guides/local-development/lando-wordpress) provide Xdebug and can synchronize your local workstation with the Pantheon Cloud. Debugging on the Pantheon Cloud is done using [New Relic&reg; Performance Monitoring](/guides/new-relic).
 
 ## More Resources
 

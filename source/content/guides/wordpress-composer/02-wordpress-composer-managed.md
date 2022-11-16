@@ -109,4 +109,4 @@ Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/a
 
 - [Bedrock Documentation](https://roots.io/bedrock/)
 
-- [Install and Configure Lando for WordPress](/guides/lando-wordpress)
+- [Install and Configure Lando for WordPress](/guides/local-development/lando-wordpress)
