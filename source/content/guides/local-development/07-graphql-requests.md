@@ -1,6 +1,5 @@
 ---
 title: Local Development on Pantheon
-subtitle: Local Development on Pantheon
 subtitle: GraphQL Requests
 description: Learn about GraphQL best practices and troubleshooting tips.
 categories: [develop]
