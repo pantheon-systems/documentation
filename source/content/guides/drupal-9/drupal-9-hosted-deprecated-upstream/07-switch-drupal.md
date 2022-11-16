@@ -11,10 +11,10 @@ anchorid: switch-drupal
 editpath: drupal-9/drupal-9-hosted-deprecated-upstream/07-switch-drupal.md
 reviewed: "2021-03-31"
 contenttype: guide
-categories: [overview, migrate, update]
+categories: [migrate, update]
 newcms: [drupal9, drupal]
 audience: [development]
-product: [terminus]
+product: [composer, terminus]
 integration: []
 ---
 
