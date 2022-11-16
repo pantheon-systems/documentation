@@ -20,7 +20,7 @@ The `hosts` file exists on all major operating systems. The `hosts` file provide
 
 - Test domain-specific settings leading up to a migration
 - Test DNS records before updates
-- Help with [local development](/local-development)
+- Help with [local development](/guides/local-development)
 
 <Partial file="_hosts-file.md" />
 

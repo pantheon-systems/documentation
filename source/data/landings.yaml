@@ -221,7 +221,7 @@
             - text: 'Configuring JetBrains PhpStorm IDE with Drupal on Pantheon'
               url: '/drupal-phpstorm'
             - text: 'Local Development'
-              url: '/local-development'
+              url: '/guides/local-development'
         - title: ''
           links:
             - text: 'Install Cygwin on Windows'

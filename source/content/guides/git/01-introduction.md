@@ -21,7 +21,7 @@ Every Pantheon website comes with a preconfigured container that stores your Git
 
 ## Git Workflow
 
-Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. It's a good way to streamline your website operations if you like to [develop locally](/local-development). You can develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. It's a good way to streamline your website operations if you like to [develop locally](/guides/local-development). You can develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 You can use the connection information in your dashboard and copy it into your terminal to clone the repository to your local environment. This also syncs your local with the remote version of the code. All changes you make are periodically committed locally and pushed to the remote.
 

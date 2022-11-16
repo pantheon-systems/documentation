@@ -52,7 +52,7 @@ Disabling OPcache has a sever impact on performance, so care should be taken not
 
 You can also search for deprecated constructors using the PHP linter on the command line. You must have PHP 7.0 to be installed locally to follow the steps below.
 
-1. Create a local copy of your site as described in [Local Development](/local-development).
+1. Create a local copy of your site as described in [Local Development](/guides/local-development).
 
 1. Run the command below:
 

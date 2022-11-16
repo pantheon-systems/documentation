@@ -40,7 +40,7 @@ Review our [Environment Specific Configuration for WordPress Sites](/guides/envi
 
 ## Local Development
 
-Read our [Local Development](/local-development) doc to learn about developing locally, including the ability to perform critical development tasks, such as editing files and code, and pushing changes to Pantheon right from your desktop.
+Read our [Local Development](/guides/local-development) doc to learn about developing locally, including the ability to perform critical development tasks, such as editing files and code, and pushing changes to Pantheon right from your desktop.
 
 ## Manage Custom Code in WordPress with Plugins
 
