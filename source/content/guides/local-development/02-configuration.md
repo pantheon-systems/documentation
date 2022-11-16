@@ -26,7 +26,7 @@ export ENV=dev
 
 ## Clear Site Environment Cache
 
-To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
+Clear the target site environment's cache to save time.  This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
 ```bash{promptUser: user}
 terminus env:clear-cache $SITE.$ENV
@@ -34,20 +34,20 @@ terminus env:clear-cache $SITE.$ENV
 
 ## Get the Code
 
-The first step is to get a `git clone` of your code from Pantheon on your local computer.
+Follow the steps below to get your code from Pantheon on your local computer.
 
-1. Log in to Pantheon > Open the Site Dashboard.
+1. Log in to Pantheon and navigate to the Site Dashboard.
 
-1. Locate the `git clone` command at the top of the development panel > Copy and paste it into your terminal. 
+1. Locate the `git clone` command at the top of the development panel and copy and paste it into your terminal.
 
  It will look similar to this:
 
     ![Example of Git Clone repo for command line: `git clone ssh://codeserver.dev.0e1f236a-ec36-4143-a900-73a92a344`](../../../images/dashboard/git-string.png)
 
-1. Go to where you want the code to reside in your local environment. 
+1. Go to where you want the code to reside in your local environment.
 
- Git will create a directory as part of the clone, so you don't need to create one. 
- 
+    Git will create a directory as part of the clone, so you don't need to create one.
+
 1. Run the command you copied in step 2:
 
     ```bash{promptUser: user}
@@ -77,7 +77,7 @@ The first step is to get a `git clone` of your code from Pantheon on your local 
 
 ## Get the Files
 
-For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsync-and-sftp).
+Refer to [SFTP and rsync on Pantheon](/rsync-and-sftp) for an overview of ways to transfer files.
 
 ### Via Terminus
 
@@ -97,9 +97,9 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsy
 
 ### Via SFTP CLI
 
-SFTP is slower, but easier for some to use:
+SFTP is slower method, but easier for some to use:
 
-1. Click **Connection Info** to get your SFTP login credentials. 
+1. Click **Connection Info** to get your SFTP login credentials.
 
  You will see your connection credentials and a link to connect directly with your preferred client.
 
@@ -136,7 +136,7 @@ SFTP is slower, but easier for some to use:
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
   ```
 
-1. Open your Pantheon Dashboard and select **Database / Files** > **Import** to upload and import the file.
+1. Open your Pantheon Dashboard and select **Database / Files**, then select **Import** to upload and import the file.
 
 ### Send the Files
 
@@ -169,7 +169,7 @@ You can also transfer a single file or a single directory at a time instead of t
 
 ## Local Configuration Files
 
-You'll need to configure database credentials matching your local database to develop locally. Do not manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`), as this could commit changes to version control and trigger a connection error on Dev when pushing to Pantheon.
+You must configure database credentials matching your local database to develop locally. Do not manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`), as this could commit changes to version control and trigger a connection error on Dev when pushing to Pantheon.
 
 We recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by Git, it won't be found on Pantheon but it will be applied when you run the site locally.
 
@@ -193,7 +193,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 1. Create the local settings file and add it to `.gitignore`.
 
-1. Change to the site's directory and create the file. 
+1. Change to the site's directory and create the file.
 
 1. Change the first command in this example to fit the site's directory structure:
 
@@ -208,7 +208,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
    sites/*/settings.local.php
    ```
 
-Note that Drupal 7 users need to add a reference to the local file from within `settings.php`:
+Note that Drupal 7 users must add a reference to the local file from within `settings.php`:
 
 ```php:title=sites/default/settings.php
 /**

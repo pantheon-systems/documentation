@@ -21,13 +21,6 @@ Pantheon provides several options for on-server development, however, local deve
 - [Drush](/guides/drush) (optional)
 - [WP-CLI] (/guides/wp-cli)
 
-
-## Support
-
-Pantheon cannot troubleshoot or [support local development](/guides/support/#local-development) solutions, but we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/guides/multidev).
-
-If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
-
 ## Before You Begin
 
 There are three parts to any dynamic website:
@@ -50,3 +43,9 @@ Be sure you have:
 - [Terminus](/guides/terminus)
 - [Drush](/guides/drush) (optional)
 - [WP-CLI] (/guides/wp-cli)
+
+## Support
+
+Pantheon cannot troubleshoot or [support local development](/guides/support/#local-development) solutions, but we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/guides/multidev).
+
+If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
