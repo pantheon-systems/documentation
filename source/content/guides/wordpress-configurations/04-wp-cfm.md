@@ -117,7 +117,7 @@ You can automatically import your WP-CFM configuration settings into a cloned da
 
 Deploy the `.json` file from Dev to Test:
 
-1. Check **Pull files and the database from the Live environment?** and then click **Deploy Code from Development to Test Environment** if deploying via the Pantheon Dashboard or include `--sync-content` if deploying with Terminus:
+1. Check **Pull files and the database from the Live environment?**, then click **Deploy Code from Development to Test Environment** if deploying via the Pantheon Dashboard or include `--sync-content` if deploying with Terminus:
 
     ```bash{promptUser: user}
     terminus env:deploy <site>.test --sync-content --updatedb --note="Deploy code for <bundle_name> configuration"

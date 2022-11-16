@@ -12,7 +12,9 @@ anchorid: wordpress-solr
 
 This section provides information on how to use Apache Solr with your WordPress Pantheon site.
 
-[Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. <Partial file="solr-version.md" />
+[Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. 
+
+<Partial file="solr-version.md" />
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -90,7 +92,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
   ![Solr Widget](../../../images/add-solr-widget.png)
 
-1. Open **Solr Power**, select the **Facet Options** tab, and then check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)**, such as `primary`.
+1. Open **Solr Power**, select the **Facet Options** tab, check **AJAX Facet Search Support**, and enter the Div ID in **AJAX Div ID (displays search results)**, such as `primary`.
 
   ![Solr Settings](../../../images/solr-widget-settings.png)
 

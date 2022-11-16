@@ -92,7 +92,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
    mv S3-Uploads-2.0.0/ S3-Uploads
    ```
 
-1. Create and/or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
+1. Create and/or copy your **Access Key ID** key and **Secret Access Key** from the **My security credentials** section of your AWS account to a text editor on your local computer.
 
    <Alert title="Note" type="info">
 

@@ -22,13 +22,9 @@ Pantheon maintains an [optimized version of WordPress](https://github.com/panthe
 
 You can clear the site cache manually or automatically. 
 
-To clear the cache manually:
+- To clear the cache manually, click the **Clear Cache** button.
 
-Click the Clear Cache button.
-
-To clear the cache automatically:
-
-Refer to the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) and follow the instructions.
+- To clear the cache automatically, refer to the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) and follow the instructions.
 
 ## Pantheon Page Cache Plugin Configuration
 
