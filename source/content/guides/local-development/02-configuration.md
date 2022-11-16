@@ -8,8 +8,8 @@ reviewed: "2022-03-10"
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/local-development
-anchorid: local-development
+permalink: docs/guides/local-development/configuration
+anchorid: configuration
 ---
 
 This section provides information on how to configure your machine for successful local development with Pantheon.
