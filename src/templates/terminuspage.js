@@ -48,13 +48,15 @@ const shortcodes = {
   Check,
 }
 
+
+
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
 const items = [
   {
     id: "docs-terminus",
-    link: "/terminus",
+    link: "/guides/terminus",
     title: "Get Started",
   },
   {
@@ -104,7 +106,18 @@ const items = [
     link: "/guides/terminus/updates",
     title: "Version Updates",
   },
+
 ]
+
+items[0] = [
+  {
+   id: "docs-guides-terminus",
+   link: "/guides/terminus",
+   title: "Introduction",
+  },
+ ]
+
+items.path = "/guides/terminus/"
 
 class TerminusTemplate extends React.Component {
   componentDidMount() {

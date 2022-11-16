@@ -324,6 +324,8 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
     })
+    terminusCommands.path ="/guides/terminus/commands/";
+
 
     // Create changelog pagination.
     const postsPerPage = 6
