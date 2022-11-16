@@ -421,7 +421,7 @@
             - text: 'Platform and Custom Domains'
               url: '/guides/domains'
             - text: 'Modify the Local Hosts File'
-              url: '/hosts-file'
+              url: '/guides/domains/hosts-file'
             - text: "HTTPS on Pantheon's Global CDN"
               url: '/guides/global-cdn/https'
             - text: 'Relaunch Existing Pantheon Site'
@@ -619,7 +619,7 @@
           url: '/guides/drupal-9-commerce'
           icons: 'fa fa-book'
         - text: 'Automatically Test and Deploy GitHub Changes to Pantheon from an Existing Jenkins Server'
-          url: '/guides/jenkins'
+          url: '/guides/local-development/jenkins'
           icons: 'fa fa-book'
         - text: 'Using Lockr to Secure and Manage API and Encryption Keys'
           url: '/guides/lockr'
