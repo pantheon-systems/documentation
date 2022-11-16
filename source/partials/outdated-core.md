@@ -1,8 +1,10 @@
 ---
 contenttype: partial
+categories: [--]
 newcms: [wordpress]
-product: []
-integration: []
+product: [--]
+integration: [--]
+tags: [--]
 reviewed: ""
 ---
 
