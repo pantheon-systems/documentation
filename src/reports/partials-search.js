@@ -87,7 +87,7 @@ class ReviewReport extends React.Component {
                               className="form-control"
                               placeholder="Filter"
                               onChange={x => setSearchCategories(x.target.value)}
-                              value={searchnewCms}
+                              value={searchCategories}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
