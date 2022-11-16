@@ -15,7 +15,7 @@ contenttype: guide
 categories: [migrate, update]
 newcms: [drupal9, drupal]
 audience: [development]
-product: [terminus]
+product: [terminus, composer]
 integration: []
 ---
 
