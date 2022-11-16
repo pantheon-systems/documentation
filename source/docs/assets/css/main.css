@@ -3375,7 +3375,7 @@ ul.manual-guide-toc > li > a:hover {
   border-left: 5px solid #909090;
   margin-left: 15px;
   padding: 10px 20px;
-  margin-right: -18px;
+  margin-right: -10px;
 }
 div.manual-guide-toc.active-trail li > a:hover {
   cursor: default !important;;
