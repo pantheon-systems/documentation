@@ -955,6 +955,8 @@ After you create the file, include it in the doc:
 
 </Example>
 
+To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
+
 ___
 
 ## Tooltips
