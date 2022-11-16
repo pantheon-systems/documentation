@@ -150,7 +150,6 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {categorizedPages
-                      /*
                         .filter(page => {
                           return page.node.frontmatter.newcms
                             ? page.node.frontmatter.newcms.filter(
@@ -158,7 +157,6 @@ class ReviewReport extends React.Component {
                               ).length
                             : page
                         })
-                        */
                         .map((page, i) => {
                           return (
                             <tr key={i}>
