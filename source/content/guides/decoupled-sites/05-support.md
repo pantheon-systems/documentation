@@ -2,7 +2,6 @@
 title: Pantheon Front-End Sites
 subtitle: Support
 description: Information on what supported is available for a Pantheon Front-End Site.
-categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [ joa-pan, joa-pan]
 type: guide
@@ -12,6 +11,12 @@ anchorid: support
 permalink: docs/guides/decoupled-sites/support/
 editpath: decoupled-sites/05-support.md
 reviewed: "2022-08-11"
+contenttype: guide
+categories: [create]
+newcms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
 ---
 
 ## Scope of Support

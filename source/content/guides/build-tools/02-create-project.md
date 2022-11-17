@@ -2,7 +2,6 @@
 title: Build Tools
 subtitle: Create a New Project
 description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
-categories: [develop]
 tags: [composer, terminus, webops, workflow]
 buildtools: true
 anchorid: create-project
@@ -11,6 +10,12 @@ permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 reviewed: "2021-12-28"
+contenttype: guide
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, a Continuous Integration service, and a Pantheon site.
