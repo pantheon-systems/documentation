@@ -8,7 +8,7 @@ permalink: docs/:basename
 editpath: dns-providers/dyn.md/
 newtype: doc
 categories: [domains, launch]
-newcms: []]
+newcms: []
 audience: []
 product: []
 integration: []
