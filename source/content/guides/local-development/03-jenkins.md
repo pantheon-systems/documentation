@@ -4,7 +4,6 @@ subtitle: Automatically Test and Deploy to Pantheon with Jenkins
 description: Configure an existing Jenkins server to test and deploy code changes to Pantheon automatically when pushed to GitHub.
 categories: [automate]
 tags: [collaborate, continuous-integration, git, iterate]
-date: 6/20/2017
 layout: guide
 showtoc: true
 permalink: docs/guides/local-development/jenkins
@@ -13,20 +12,18 @@ anchorid: jenkins
 
 This section provides information on how to configure your Jenkins server to test and deploy code changes to Pantheon automatically.
 
-[Jenkins](https://jenkins.io) is an open source Continuous Integration (CI) server which can be used to build, test, and deploy code on any Drupal and WordPress website on Pantheon. Unlike hosted services such as [CircleCI](https://circleci.com/), it is a Java application installed and run on a server, and requires regular upkeep and maintenance. However, it is very customizable and can even run non-CI related tasks, such as calling periodic cron jobs.
+[Jenkins](https://jenkins.io) is an open source Continuous Integration (CI) server that can be used to build, test, and deploy code on any Drupal and WordPress website on Pantheon. Unlike hosted services such as [CircleCI](https://circleci.com/), it is a Java application installed and run on a server, and requires regular upkeep and maintenance. Jenkins is customizable and can run non-CI related tasks, such as calling periodic cron jobs.
 
-You can use Terminus for scripting many operations. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on master and the content from Live, then run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
+You can use Terminus and Jenkins to script much of your development work. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on your master branch and the content from Live. This process can even run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
 
-In this guide, we'll configure your existing Jenkins server to automatically test and deploy Drupal 8 to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins will run tests against both the pull request and Pantheon's master branch and display the results.
-
-While this guide demonstrates Continuous Integration for Drupal 8 sites, the same workflow can be applied to WordPress with a few modifications:
+The sections below show you how to configure your existing Jenkins server to automatically test and deploy Drupal 8 to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins runs tests against both the pull request and Pantheon's master branch and displays the results. The same workflow can be applied to WordPress with a few modifications:
 
 <Accordion id="wordpress-mods" title="WordPress Modifications" icon="wrench">
 
 WordPress users can make use of this guide with a few modifications:
 
 - Install [WP-CLI](https://wp-cli.org/) on the Jenkins instance instead of Drush.
-- Create the local copy of the new site from [https://github.com/pantheon-systems/example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer). 
+- Create a local copy of the new site from [https://github.com/pantheon-systems/example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer). 
 - Specify WordPress when creating the Pantheon site: `terminus site:create $SITE "My Site" "WordPress"`
 - Use WP-CLI commands for any build steps.
 
@@ -34,27 +31,27 @@ WordPress users can make use of this guide with a few modifications:
 
 ## Before You Begin
 
-You will need:
+Be sure that you have:
 
 - Root access to a server running Jenkins.
-- Install the following applications, both locally and on the Jenkins server. Verify the default Jenkins user has the ability to run them on the Jenkins server from the command line.
+- Installed the following applications, both locally and on the Jenkins server. Verify the default Jenkins user has the ability to run these applications on the Jenkins server from the command line.
   - [Git](https://git-scm.com/)
   - [Composer](https://getcomposer.org/)
   - [Drush](http://docs.drush.org/en/8.x/install-alternative)
   - [Terminus](https://github.com/pantheon-systems/terminus#installing-with-composer)
   - [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
-    Verify you can run Terminus, Drush and Composer commands as the Jenkins user. Note that Terminus and Drush will need to be accessible from standard `PATH` directories.
-- Be sure the default Jenkins user has a [private key](https://stackoverflow.com/questions/37331571/how-to-setup-ssh-keys-for-jenkins-to-publish-via-ssh) in its `$HOME/.ssh` directory, and a user with the matching public key installed on Pantheon. Clone a Pantheon site to the Jenkins user's home directory to test.
-- The Jenkins user's git user name and email mail should be set in **Manage Jenkins**, **Configure System**
-- In the Jenkins user's $HOME/.ssh/config (if this file doesn't exist, create it), add these two lines:
+    - Verify you can run Terminus, Drush and Composer commands as the Jenkins user. Note that Terminus and Drush will need to be accessible from standard `PATH` directories.
+- Confirmed that the default Jenkins user has a [private key](https://stackoverflow.com/questions/37331571/how-to-setup-ssh-keys-for-jenkins-to-publish-via-ssh) in its `$HOME/.ssh` directory, and a user with the matching public key installed on Pantheon. Clone a Pantheon site to the Jenkins user's home directory to test.
+- Set the Jenkins user's Git user name and email in **Manage Jenkins**, **Configure System**
+- Added the lines below in the Jenkins user's `$HOME/.ssh/config` (if this file doesn't exist, you must create it).
 
   ```http
     Host *
         StrictHostKeyChecking no
   ```
 
-- The following Jenkins plugins should be enabled:
+- Enabled the following Jenkins plugins:
   - [Git](https://plugins.jenkins.io/github/)
   - [GitHub](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin)
   - [GitHub Pull Request Builder](https://plugins.jenkins.io/ghprb/)
@@ -62,7 +59,7 @@ You will need:
   - [Conditional Build Step](https://plugins.jenkins.io/conditional-buildstep/)
   - [Run Condition](https://plugins.jenkins.io/run-condition/)
   - [Rebuild](https://plugins.jenkins.io/rebuild/)
-- We recommended using matrix-based security when using Jenkins. Anonymous users should have read access to Jenkins projects.
+- Matrix-based security (recommended when using Jenkins). Anonymous users should have read access to Jenkins projects.
 - Ability to create a Drupal site on Pantheon, with [Multidev](/guides/multidev) enabled.
 - A [GitHub](https://github.com) account.
 
@@ -70,11 +67,11 @@ You will need:
 
 ### Local Project Instantiation
 
-1. From your local terminal, use Composer to make a new local project based on our example, which contains Drupal 8, Behat, and other configuration settings:
+1. Open your local terminal and use Composer to make a new local project based on the example, which contains Drupal 8, Behat, and other configuration settings:
 
   <Alert title="Note" type="info">
 
-  In this example our project is call called `my-site`, so we begin by setting a local environment variable to this value. Adjust this any other variables to match your site settings.
+  In this example, the project is called `my-site`. Begin by setting a local environment variable to this value. Adjust this and other variables to match your site settings.
 
   </Alert>
 
@@ -85,7 +82,7 @@ You will need:
   composer prepare-for-pantheon
   ```
 
-1. Initialize a local Git repository within your project.
+1. Initialize a local Git repository within your project:
 
   ```bash{promptUser: user}
   git init
@@ -95,24 +92,24 @@ You will need:
 
 ### Create and configure a GitHub Repository
 
-1. From the GitHub dashboard, [create a new repository](https://github.com/new), without creating a `README` or `.gitignore` file.
+1. Navigate to the GitHub dashboard, and [create a new repository](https://github.com/new) without creating a `README` or `.gitignore` file.
 
     ![New empty repository](../../../images/integrations/new_repo.png)
 
-1. From your local command line, connect your local project to this repository as `origin`, and push the code to the master branch. Remember to replace the URL path:
+1. Open your local command line and connect your local project to this repository as `origin`, and then push the code to the master branch. Remember to replace the URL path:
 
   ```bash{promptUser: user}
   git remote add origin git@github.com:YOUR-ORG/YOUR-PROJECT.git
   git push -u origin master
   ```
 
-At this point, you should be able to create a local branch, commit a change, and push to GitHub. On GitHub, you should then be able to open a pull request successfully.
+You should now be able to create a local branch, commit a change, and push to GitHub. You should also be able to open a pull request on GitHub successfully.
 
 ### Create a Pantheon Site
 
-Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite the default install with the code from our GitHub repository. In the commands below, replace the value for `--org=` with your organization's name.
+You must create a site on Pantheon for the part of the process. The example in this section uses a Drupal 9 site on Pantheon with Terminus. You must overwrite the default install with the code from your GitHub repository after you create the site. Replace the value for `--org=` with your organization's name in the commands below.
 
-1. From your local terminal, use terminus to create a site on Pantheon:
+1. Use Terminus to create a site on Pantheon:
 
   ```bash{promptUser: user}
   terminus site:create $SITE "My Site" "Drupal 9" --org="My Team"
@@ -139,23 +136,25 @@ Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite th
   terminus env:view $SITE.dev
   ```
 
-  Now the master branch of GitHub, your local, and Pantheon are in sync.
+Now the master branch of GitHub, your local, and Pantheon are in sync.
 
 ## Configure Jenkins
 
 ### GitHub/Jenkins Integration
 
-1. From the main Jenkins menu on the left side, select **Credentials**, then **System**. Click on **Global credentials**, then **Add Credentials**. Here we will add our GitHub and Terminus tokens.
+1. Open the main Jenkins menu on the left side, select **Credentials**, select **System**, select **Global credentials**, and then select **Add Credentials** to add your GitHub and Terminus tokens.
 
     ![Credentials Page](../../../images/integrations/credentials.png)
 
-2. In a new browser tab, go to your GitHub account. Go to [Settings](https://github.com/settings/profile). Under **Developer Settings** click on **Personal access tokens**  and generate a new token. This should have all **repo**  and **admin:repo-hook** options:
+1. Open a new browser tab and go to your GitHub account. 
+
+1. Go to [Settings](https://github.com/settings/profile) in GitHub, select **Developer Settings**, select **Personal access tokens**, and generate a new token. This should have all **repo** and **admin:repo-hook** options:
 
     ![GitHub token permissions](../../../images/integrations/jenkins-gh-token-access.png)
 
-    Copy the generated token. Be careful, as you will not be able to view it again.
+1. Copy the generated token. You will not be able to view the token again.
 
-3. Back in Jenkins, create your new credential with the following options:
+1. Navigate back in Jenkins and create your new credential with the following options:
 
     - **Kind**: Secret Text
     - **Scope**: Global
@@ -165,7 +164,7 @@ Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite th
 
     Press OK to add the new credential to the system.
 
-4. Create another credential for a Terminus Token, using  either an existing token or [create a new token](/machine-tokens) from your Jenkins user dashboard:
+1. Create another credential for a Terminus Token, using either an existing token or [a new token](/machine-tokens) from your Jenkins user dashboard:
 
     - **Kind**: Secret Text
     - **Scope**: Global
@@ -173,7 +172,7 @@ Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite th
     - **ID**: blank
     - **Description**: Terminus
 
-    After saving both, your credentials will be accessible for secure use.
+1. Save both credentials. Your credentials will be accessible for secure use.
 
     ![Credentials Page](../../../images/integrations/2_credentials.png)
 
@@ -181,29 +180,29 @@ Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite th
     Keep your Terminus token handy, you'll need to enter it again later.
     </Alert>
 
-5. Return to the main Jenkins dashboard and select **Manage Jenkins**, then **Configure System**.
+1. Return to the main Jenkins dashboard, select **Manage Jenkins**, and then select **Configure System**.
 
-6. Scroll to the **GitHub Servers** section  and click on **Add GitHub Server**.
+1. Scroll to the **GitHub Servers** section and click **Add GitHub Server**.
 
-7. Leave the **API URL** as `https://api.github.com`. For **Credentials**, click the drown-down menu and select your GitHub credentials.
+1. Leave the **API URL** as `https://api.github.com`, click the **Credentials** drop-down menu, and then select your GitHub credentials.
 
-8. Click **Test Connection** and you should see the GitHub username which created the token.
+1. Click **Test Connection** and you should see the GitHub username which created the token.
 
-9. Click **Save**.
+1. Click **Save**.
 
 ### Create the Jenkins Project
 
-1. Log into the Jenkins dashboard as an admin user. Click on **New Item**.
+1. Log into the Jenkins dashboard as an admin user and click **New Item**.
 
     ![Jenkins dashboard](../../../images/integrations/jenkins_dash.png)
 
-2. Give the project a name with no spaces. Select **Freestyle Project** and click **OK** to save.
+1. Give the project a name with no spaces, select **Freestyle Project**, and click **OK** to save.
 
     ![New Jenkins project](../../../images/integrations/new_job.png)
 
-3. The next page lets you configure options for this project. In the **General** tab, select "GitHub project" and enter the repository URL (e.g. `https://github.com/YOUR-ORG/YOUR-PROJECT`).
+1. Click the **General** tab, select "GitHub project" and enter the repository URL (e.g. `https://github.com/YOUR-ORG/YOUR-PROJECT`).
 
-4. In the **Source Code Management** tab select **Git**, then **Advanced**. Add the following information:
+1. Click the **Source Code Management** tab, select **Git**, select **Advanced**, and then add the following information:
 
     - **Repository URL**: The path to the .git file of your repository, e.g. `https://github.com/YOUR-ORG/YOUR-PROJECT.git`
     - **Name**: `origin`
@@ -213,19 +212,19 @@ Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite th
 
     ![SCM view](../../../images/integrations/scm_settings.png)
 
-5. We want code changes to trigger our build (as opposed to setting up a periodic build, for example). Under **Build Triggers**, Check the box labelled, "GitHub hook trigger for GITScm polling".
+1. Click  **Build Triggers** and check the box labelled "GitHub hook trigger for GITScm polling". This allows code changes to trigger your build (as opposed to setting up a periodic build, for example).
 
-6. Under **Build Environment**, check the box labelled "Inject environment variables to the build process."
+1. Click **Build Environment** and check the box labelled "Inject environment variables to the build process."
 
-7. In the **Properties File Path** field, enter the path to your Jenkins environment variables file. On Debian-based systems, it's usually `/var/lib/jenkins/envVars.properties`. If it doesn't already exist, create an empty file.
+1. Enter the path to your Jenkins environment variables file in the **Properties File Path** field. On Debian-based systems, this is usually `/var/lib/jenkins/envVars.properties`. If it doesn't already exist, create an empty file.
 
-8. In the **Properties Content** field, add the following variable one per line, with no quotation marks:
+1. Add the variable below, one per line, with no quotation marks in the **Properties Content** field:
 
     - **SITE_ID=**your-site-name
 
     ![Env vars view](../../../images/integrations/env_vars.png)
 
-9. Check "Use secret text(s) or file(s)" option. A new button called **Bindings** will appear. add a secret text binding. Name it **TERMINUS_TOKEN** and select the Terminus secret text credential from the dropdown:
+1. Check the "Use secret text(s) or file(s)" option, click **Bindings**, add a secret text binding named **TERMINUS_TOKEN**, and select the Terminus secret text credential from the drop-down:
 
     ![Bindings](../../../images/integrations/jenkins-binding.png)
 
@@ -233,9 +232,9 @@ Now we will spin up a Drupal 9 site on Pantheon with Terminus, then overwrite th
 
 Under the **Build** tab is a button labeled **Add build step**. These tasks will execute in sequence, and the job will quit if any fail. Add these in separate build steps, selecting **Execute shell** for all but steps 1 and 6.
 
-1. Set build status to "pending" on GitHub commit
+1. Set build status to "pending" on GitHub commit.
 
-1. Jenkins logs into Pantheon:
+1. Add Jenkins logs into Pantheon:
 
   ```bash
   #!/bin/bash
@@ -243,7 +242,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
   terminus auth:login --machine-token=${TERMINUS_TOKEN}
   ```
 
-1. Verifies the dev site is awake and in git mode. Note that these are separate build steps:
+1. Verify the Dev site is awake and in Git mode. Note that these are separate build steps:
 
   ```bash
   echo "Waking Dev environment."
@@ -255,7 +254,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
   terminus connection:set ${SITE_ID}.dev git
   ```
 
-1. Jenkins creates a Multidev and pushes the new code to this environment
+1. Set Jenkins to create a Multidev and pushe the new code to this environment:
 
   ```bash
   echo "Creating multidev"
@@ -269,14 +268,14 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
   terminus drush ${SITE_ID}.ci-${BUILD_ID} cr
   ```
 
-1. Then the test suite we include with the example is run.
+1. Test that the suite included with the example runs:
 
   ```bash
   echo "Running behat"
   TERMINUS_ENV=ci-$BUILD_ID TERMINUS_SITE=$SITE_ID $WORKSPACE/tests/scripts/run-behat
   ```
 
-1. Add one **Conditional step (single)** build task, to merge the code from the Pantheon Multidev to the pantheon/master, i.e. your dev site on Pantheon. This will only happen when changing the master branch.
+1. Add one **Conditional step (single)** build task to merge the code from the Pantheon Multidev to the pantheon/master, i.e. your Dev site on Pantheon. This will only happen when changing the master branch.
 
    - Under **Run?** select **Regular expression match**.
 
@@ -296,7 +295,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
     Your conditional step should look like this:
     ![Conditional Step](../../../images/integrations/jenkins-conditional.png)
 
-7. Finally, a cleanup task:
+1. Create a cleanup task:
 
     ```bash
     echo "Cleaning up multidev & branches"
@@ -307,28 +306,34 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
 
 ### Add Post-build Actions
 
-Under **Post-build Actions** is another button labelled **Add post-build action**. Click on it and select the option "Set GitHub commit status (universal)". In the fields that appear, choose the following options:
+1. Select **Post-build Actions**, click the **Add post-build action** button, and select the option "Set GitHub commit status (universal)". In the fields that appear, choose the following options:
 
-- **Commit SHA**: "Latest build revision".
+  - **Commit SHA**: "Latest build revision".
 
-- **Repositories**: "Any defined in job repository".
+  - **Repositories**: "Any defined in job repository".
 
-- **Commit context**: "From GitHub property with fallback to job name".
+  - **Commit context**: "From GitHub property with fallback to job name".
 
-- **Status Result**: "One of default messages and statuses".
+  - **Status Result**: "One of default messages and statuses".
 
-- **Status backref**: "Backref to the build"
+  - **Status backref**: "Backref to the build"
 
-Finally, hit **Save** to complete the configuration of your Jenkins build process.
+1. Click **Save** to complete the configuration of your Jenkins build process.
 
-Now on your local computer, create a new branch and makes a change to it. When you commit and push to GitHub, a build should initiate. You should see the results of the test, which link to the Jenkins job:
+1. Create a new branch on your local computer and make a change to it. 
 
-![Passing Github test](../../../images/integrations/test_pass.png)
+1. Commit and push to GitHub to initiate a build. You should see the results of the test, which link to the Jenkins job:
 
-If a test fails, you can see the details by clicking the job, then "Console Output"
+  ![Passing Github test](../../../images/integrations/test_pass.png)
 
-![Job Details](../../../images/integrations/job_details.png)
+  Click the job, then select "Console Output" if a test fails to see the details.
 
-## Conclusion
+  ![Job Details](../../../images/integrations/job_details.png)
 
-If you usually use only the Pantheon repository, be sure to now push to your new origin repo on GitHub. You can still add the Pantheon repo as a remote to take advantage of Multidev and work on your own environment. As you add new features, continue to add new tests.
+
+If you usually use only the Pantheon repository, be sure to push to your new origin repo on GitHub. You can still add the Pantheon repo as a remote to take advantage of Multidev and work on your own environment. Continue to add new tests as you add new features.
+
+## More Resources
+
+- [Cron for WordPress](/wordpress-cron)
+- [Cron for Drupal](/drupal-cron)
