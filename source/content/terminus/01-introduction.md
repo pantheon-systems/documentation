@@ -2,7 +2,7 @@
 title: Terminus Guide
 subtitle: Introduction
 description: Learn about Terminus, the command line interface for advanced interaction with the Pantheon platform.
-layout: guide
+layout: terminuspage
 showtoc: true
 terminuspage: true
 type: guide
