@@ -5,6 +5,12 @@ cms: "Drupal"
 categories: [performance]
 tags: [cdn, cache]
 searchboost: 50
+newtype: doc
+categories: [cache, config]
+newcms: [drupal]
+audience: [development]
+product: [cdn]
+integration: [cloudfront]
 ---
 
 Pantheon's [Global CDN](/guides/global-cdn) makes it unnecessary to add a third party CDN, such as CloudFront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
@@ -24,7 +30,7 @@ The first step in setting up CloudFront on your Drupal site is to create a new C
 
 <Alert title="Note" type="info">
 
-A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
+A CloudFront distribution is not a Drupal distribution. A CloudFront distribution simply refers to a controller that will be configured to deliver your assets to your website.
 
 </Alert>
 

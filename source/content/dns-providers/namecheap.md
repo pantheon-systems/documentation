@@ -7,6 +7,12 @@ categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/namecheap.md/
+newtype: doc
+categories: [domains]
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 ## Before You Begin
 Ensure you have the following:

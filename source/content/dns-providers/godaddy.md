@@ -7,6 +7,12 @@ categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/godaddy.md/
+newtype: doc
+categories: [domains]
+newcms: []
+audience: []
+product: []
+integration: [godaddy]
 ---
 ## Before You Begin
 Be sure that you have a:

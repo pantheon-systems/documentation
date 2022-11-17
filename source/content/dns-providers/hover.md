@@ -8,6 +8,12 @@ tags: [dns]
 draft: true
 permalink: docs/:basename
 editpath: dns-providers/hover.md/
+newtype: doc
+categories: [domains]
+newcms: []
+audience: []
+product: []
+integration: [cloudflare, hover]
 ---
 ## Before You Begin
 Be sure that you have a:
