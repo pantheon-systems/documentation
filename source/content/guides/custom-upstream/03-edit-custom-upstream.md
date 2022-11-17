@@ -8,6 +8,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/edit-custom-upstream
 anchorid: edit-custom-upstream
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstream]
+integration: []
 ---
 
 This section provides information on editing an existing Custom Upstream.

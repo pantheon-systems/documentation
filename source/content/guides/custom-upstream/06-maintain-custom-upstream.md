@@ -8,6 +8,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/maintain-custom-upstream
 anchorid: maintain-custom-upstream
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstream]
+integration: []
 ---
 
 This section provides information to help you manage and maintain your Custom Upstream.

@@ -12,6 +12,12 @@ anchorid: starter-kits
 permalink: docs/guides/decoupled-sites/starter-kits/
 editpath: decoupled-sites/03-starter-kits.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [create]
+newcms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
 ---
 
 ## Create the CMS Backend

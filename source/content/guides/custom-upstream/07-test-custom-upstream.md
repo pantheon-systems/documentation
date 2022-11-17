@@ -11,9 +11,9 @@ reviewed: ""
 anchorid: test-custom-upstream
 contenttype: guide
 categories: [git, test, updates]
-newcms: [drupal7, wordpress]
+newcms: [drupal, wordpress]
 audience: [development]
-product: []
+product: [custom-upstream]
 integration: []
 ---
 

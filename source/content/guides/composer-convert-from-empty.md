@@ -4,10 +4,15 @@ description: Upgrade a Drupal 8 site using an empty upstream by converting it to
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
-categories: [develop]
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak, kporras07]
 reviewed: "2022-02-21"
+newtype: doc
+categories: [update]
+newcms: [drupal8]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Use this guide to convert an empty upstream Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `empty` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.

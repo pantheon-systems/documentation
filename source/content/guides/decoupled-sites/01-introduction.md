@@ -12,6 +12,12 @@ anchorid: introduction
 permalink: docs/guides/decoupled-sites/
 editpath: decoupled-sites/01-introduction.md
 reviewed: "2022-08-11"
+contenttype: guide
+categories: [create]
+newcms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
 ---
 
 <Alert title="Early Access" type="info" icon="leaf">

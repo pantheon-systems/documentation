@@ -8,6 +8,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/create-custom-upstream
 anchorid: create-custom-upstream
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstream]
+integration: []
 ---
 
 Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Organization members will be able to create new sites from a set common codebase after an Organization Administrator creates a Custom Upstream. The Custom Upstream must be created within each Organization’s Dashboard if you want to use a specific Custom Upstream for multiple Organizations. 

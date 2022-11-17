@@ -12,6 +12,12 @@ anchorid: considerations
 permalink: docs/guides/decoupled-sites/considerations/
 editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"
+contenttype: guide
+categories: [create]
+newcms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
 ---
 
 Ensure your system has the correct components to deploy a Pantheon Front-End Site.

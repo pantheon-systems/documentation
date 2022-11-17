@@ -8,6 +8,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/troubleshooting
 anchorid: troubleshooting
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstream]
+integration: []
 ---
 
 This section provides troubleshooting solutions for Custom Upstreams.
