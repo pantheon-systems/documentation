@@ -3,10 +3,15 @@ title: DreamHost Domain Configuration
 provider: DreamHost
 dnsprovider: true
 description: Learn how to point your DreamHost domain to a Pantheon site.
-categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/dreamhost.md/
+newtype: doc
+categories: [domains]
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 ## Before You Begin
 Be sure that you have a:
