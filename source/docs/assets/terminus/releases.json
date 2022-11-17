@@ -817,7 +817,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/pantheon-systems/terminus/tarball/1.0.0-beta.1",
     "zipball_url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/1.0.0-beta.1",
-    "body": "### Changed\n- Moved to Symfony Console\n- Updated command structure. Please see [https://pantheon.io/docs/guides/terminus/commands/compare](https://pantheon.io/docs/guides/terminus/commands/compare) for updates.\n\n_Terminus version v1.0 and later introduces a new command line and argument structure that is incompatible with any custom scripts that use 0.x Terminus or older plugins that you may be using.\nPlease consider the impact to your automation scripts and plugins before upgrading to Terminus v1.0._\n"
+    "body": "### Changed\n- Moved to Symfony Console\n- Updated command structure. Please see [https://pantheon.io/docs/terminus/commands/compare](https://pantheon.io/docs/terminus/commands/compare) for updates.\n\n_Terminus version v1.0 and later introduces a new command line and argument structure that is incompatible with any custom scripts that use 0.x Terminus or older plugins that you may be using.\nPlease consider the impact to your automation scripts and plugins before upgrading to Terminus v1.0._\n"
   },
   {
     "url": "https://api.github.com/repos/pantheon-systems/terminus/releases/4908925",
@@ -925,7 +925,7 @@
     ],
     "tarball_url": "https://api.github.com/repos/pantheon-systems/terminus/tarball/0.13.6",
     "zipball_url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/0.13.6",
-    "body": "### Changed\n\nUsers are notified of impending Terminus release via update notification with the following message:\n\n**NOTICE:**\nTerminus version v1.0 and later introduces a new command line and argument structure that is incompatible with any custom scripts that use terminus or older plugins that you may be using.\n\n**PLEASE CONSIDER THE IMPACT TO YOUR AUTOMATION SCRIPTS AND PLUGIN DEPENDENCIES BEFORE UPGRADING TO TERMINUS v1.0**\n\nTerminus users will benefit from the new simplified and consistent command structure in v1.0 We have prepared an upgrade guide to assist you in learning the differences and improvements:\nhttps://pantheon.io/docs/guides/terminus/commands/compare/\n"
+    "body": "### Changed\n\nUsers are notified of impending Terminus release via update notification with the following message:\n\n**NOTICE:**\nTerminus version v1.0 and later introduces a new command line and argument structure that is incompatible with any custom scripts that use terminus or older plugins that you may be using.\n\n**PLEASE CONSIDER THE IMPACT TO YOUR AUTOMATION SCRIPTS AND PLUGIN DEPENDENCIES BEFORE UPGRADING TO TERMINUS v1.0**\n\nTerminus users will benefit from the new simplified and consistent command structure in v1.0 We have prepared an upgrade guide to assist you in learning the differences and improvements:\nhttps://pantheon.io/docs/terminus/commands/compare/\n"
   },
   {
     "url": "https://api.github.com/repos/pantheon-systems/terminus/releases/4594988",

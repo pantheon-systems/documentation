@@ -47,7 +47,7 @@ const Commands = ({ data }) => {
                 return (
                   <tr key={i}>
                     <td>
-                      <Link className="command-name" to={`/guides/terminus/commands/${command.name.replace(slugRegExp, "-")}`}>{command.name}</Link>
+                      <Link className="command-name" to={`/terminus/commands/${command.name.replace(slugRegExp, "-")}`}>{command.name}</Link>
                       <br />
                       <small>{command.description}</small>
                     </td>
