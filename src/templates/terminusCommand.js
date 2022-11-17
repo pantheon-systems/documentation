@@ -59,55 +59,67 @@ const items = [
   {
     id: "docs-terminus",
     link: "/terminus",
-    title: "Get Started",
+    title: "Introduction",
   },
   {
     id: "docs-terminus-install",
     link: "/terminus/install",
-    title: "Install",
+    title: "Install Terminus",
   },
   {
     id: "docs-terminus-examples",
     link: "/terminus/examples",
-    title: "Example Usage",
+    title: "Get Started",
   },
   {
-    id: "docs-guides-terminus-commands",
+    id: "docs-terminus-commands",
     link: "/terminus/commands",
-    title: "Commands",
+    title: "Command Directory",
   },
   {
     id: "docs-terminus-scripting",
     link: "/terminus/scripting",
-    title: "Scripting",
+    title: "Scripting with Terminus",
   },
   {
     id: "docs-terminus-plugins",
     link: "/terminus/plugins",
-    title: "Extend with Plugins",
-    items: [
-      {
-        id: "docs-terminus-directory",
-        link: "/terminus/directory",
-        title: "Directory",
-      },
-      {
-        id: "docs-terminus-create",
-        link: "/terminus/create",
-        title: "Create Plugins",
-      },
-    ],
+    title: "Install Plugins",
+  },
+  {
+    id: "docs-terminus-directory",
+    link: "/terminus/directory",
+    title: "Plugin Directory",
+  },
+  {
+    id: "docs-terminus-create",
+    link: "/terminus/create",
+    title: "Create Terminus Plugins",
   },
   {
     id: "docs-terminus-configuration",
     link: "/terminus/configuration",
-    title: "Configuration File",
+    title: "Terminus Configuration File",
   },
+
+  {
+    id: "docs-supported-terminus",
+    link: "/terminus/supported-terminus",
+    title: "Supported Terminus and PHP Versions",
+  },
+
   {
     id: "docs-terminus-updates",
     link: "/terminus/updates",
-    title: "Version Updates",
+    title: "Current Terminus Release and Changelog",
   },
+
+  {
+    id: "docs-terminus-terminus-3-0",
+    link: "/terminus/terminus-3-0",
+    title: "Terminus 3",
+  },
+
 ]
 
 class CommandsTemplate extends React.Component {

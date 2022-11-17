@@ -121,7 +121,7 @@
   path: 'develop'
   video_id: 'v7qe2_OZ95k'
   cta:
-    title: 'Terminus Manual'
+    title: 'Terminus Guide'
     type: 'reference'
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
     url: '/terminus'
