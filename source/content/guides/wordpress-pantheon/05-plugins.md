@@ -22,7 +22,7 @@ Drupal users, see [Pantheon Modules](/modules) for details on Drupal modules dev
 
 ## WordPress Pantheon Cache
 
-Pantheon maintains an optimized version of WordPress that includes [WordPress Pantheon Cache](/wordpress-cache-plugin) plugin to control cache expiration. 
+Pantheon maintains an optimized version of WordPress that includes [WordPress Pantheon Cache](/guides/wordpress-configurations/wordpress-cache-plugin) plugin to control cache expiration. 
 
 ## Pantheon Must-Use Plugin
 
@@ -72,7 +72,7 @@ If you see an error similar to the following in the error logs:
 Fatal error: session_start(): Failed to initialize storage module: user (path: ) in …/code/wp-content/plugins/plugin-that-uses-sessions/example.php on line 2
 ```
 
-The cause is likely a plugin in the [mu-plugins](/mu-plugin) directory that is instantiating a session prior to this plugin loading. To fix, deactivate the WP Native PHP Sessions plugin and instead load it via an mu-plugin that loads first.
+The cause is likely a plugin in the [mu-plugins](/guides/wordpress-configurations/mu-plugin) directory that is instantiating a session prior to this plugin loading. To fix, deactivate the WP Native PHP Sessions plugin and instead load it via an mu-plugin that loads first.
 
 For example, create an mu-plugin called `00.php` and add a line in it to include the `wp-native-php-sessions/pantheon-sessions.php` file.
 
@@ -87,4 +87,4 @@ provides support for SAML Authentication. The plugin comes bundled with the OneL
 
 ## WP Solr
 
-[WP Solr](https://wordpress.org/plugins/solr-power/) enables the Pantheon Search (Solr) search engine for your WordPress website. For more information, see [Enabling Pantheon Search for WordPress](/wordpress-solr).
+[WP Solr](https://wordpress.org/plugins/solr-power/) enables the Pantheon Search (Solr) search engine for your WordPress website. For more information, see [Enabling Pantheon Search for WordPress](/guides/wordpress-configurations/wordpress-solr).

@@ -28,7 +28,7 @@ Consider how you would like to manage configuration, which refers to anything in
 - Widget placement
 - Menus, etc.
 
-You can repeat configuration steps manually, but that can be error prone and time consuming, especially during a launch. No fun. We recommend using WP-CFM to handle site configuration. For details, see [WordPress Configuration Management (WP-CFM)](/wp-cfm).
+You can repeat configuration steps manually, but that can be error prone and time consuming, especially during a launch. No fun. We recommend using WP-CFM to handle site configuration. For details, see [WordPress Configuration Management (WP-CFM)](/guides/wordpress-configurations/wp-cfm).
 
 ## Conclusion
 
