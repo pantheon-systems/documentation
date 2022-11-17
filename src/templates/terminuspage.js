@@ -49,7 +49,6 @@ const shortcodes = {
 }
 
 
-
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
@@ -70,7 +69,7 @@ const items = [
     title: "Example Usage",
   },
   {
-    id: "docs-guides-terminus-commands",
+    id: "docs-terminus-commands",
     link: "/terminus/commands",
     title: "Commands",
   },
@@ -108,14 +107,6 @@ const items = [
   },
 
 ]
-
-items[0] = [
-  {
-   id: "docs-guides-terminus",
-   link: "/terminus",
-   title: "Introduction",
-  },
- ]
 
 items.path = "/terminus/"
 

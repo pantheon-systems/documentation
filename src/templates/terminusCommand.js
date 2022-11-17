@@ -182,6 +182,9 @@ class CommandsTemplate extends React.Component {
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
             <Navbar
+              title={`Terminus Command Reference`}
+              items={items}
+              activePage="/terminus/commands"
               className="manual-guide-toc"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
@@ -190,7 +193,7 @@ class CommandsTemplate extends React.Component {
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
                   >
                     <HeaderBody
-                      title=""
+                      title="Terminus Command Reference"
                       subtitle={`terminus ${command.name}`}
                       description=""
                       slug={slug}
