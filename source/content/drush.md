@@ -18,7 +18,7 @@ Drush-savvy developers should also install and utilize [Terminus](/terminus), a 
 
 If you have a [Composer-based site](/guides/composer), Terminus will use the version of Drush it finds in `vendor/bin/drush` when running Drush commands on the platform.
 
-You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/terminus-drupal-site-management). For example, you can run `terminus drush <site>.<env> -- cc drush` instead of `drush @pantheon.SITENAME.dev cc drush`.
+You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management). For example, you can run `terminus drush <site>.<env> -- cc drush` instead of `drush @pantheon.SITENAME.dev cc drush`.
 
 ## Drush Versions
 
