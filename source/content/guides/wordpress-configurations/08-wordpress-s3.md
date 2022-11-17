@@ -21,28 +21,13 @@ Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) a site.
 - A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
-<<<<<<< HEAD:source/content/wordpress-s3.md
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
-=======
-- [Terminus](/guides/terminus) installed on your local computer.
-- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-
-  <Alert title="Note" type="info">
-
-  You must enter credit card information when you create an AWS account. This is required, but you will not be charged unless you exceed the usage limits of their free tier.
-
-  </Alert>
->>>>>>> main:source/content/guides/wordpress-configurations/08-wordpress-s3.md
 
 
 <Alert title="Exports" type="export">
 
-<<<<<<< HEAD:source/content/wordpress-s3.md
 This process uses [Terminus](/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
-=======
-This process uses [Terminus](/guides/terminus) commands. Before you begin, set the variable `$site` in your terminal session to match your site name:
->>>>>>> main:source/content/guides/wordpress-configurations/08-wordpress-s3.md
 
 ```bash{promptUser: user}
 export site=yoursitename

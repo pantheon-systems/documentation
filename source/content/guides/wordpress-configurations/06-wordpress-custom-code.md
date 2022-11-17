@@ -82,15 +82,7 @@ Notifications within the WordPress dashboard will now include updates to your cu
 
 1. [Download WP Pusher](https://wppusher.com/).
 
-<<<<<<< HEAD:source/content/wordpress-custom-code.md
 1. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/terminus): `terminus connection:set <site>.<env> sftp`
-=======
-1. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/guides/terminus):
-
-  ```bash{promptUser: user}
-  terminus connection:set <site>.<env> sftp
-  ```
->>>>>>> main:source/content/guides/wordpress-configurations/06-wordpress-custom-code.md
 
 1. Install the plugin by uploading the archive within the WordPress Dashboard on the Dev environment (`/wp-admin/plugin-install.php?tab=upload`).
 
