@@ -2,7 +2,6 @@
 title: Delete a Custom Upstream
 subtitle: Delete a Custom Upstream
 description: Learn how to delete a Custom Upstream.
-categories: [develop]
 tags: [upstreams, workflow, webops]
 layout: guide
 showtoc: true
