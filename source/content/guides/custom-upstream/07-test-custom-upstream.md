@@ -2,12 +2,19 @@
 title: Test Custom Upstream Changes
 subtitle: Test Custom Upstream Changes Before Release
 description: Create a test version of your Custom Upstream to review changes.
-categories: [develop]
 tags: [upstreams, workflow, webops]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/test-custom-upstream
+contributors: []
+reviewed: ""
 anchorid: test-custom-upstream
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal7, wordpress]
+audience: [development]
+product: []
+integration: []
 ---
 
 

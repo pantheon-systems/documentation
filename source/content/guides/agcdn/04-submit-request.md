@@ -2,13 +2,19 @@
 title: Advanced Global CDN
 subtitle: Submit a Request
 description: Learn how to submit a configuration or support request.
-categories: [develop]
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
+reviewed: "2022-11-01" 
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/submit-request
 anchorid: submit-request
+contenttype: guide
+categories: [optimize, cookies, help]
+newcms: []
+audience: [development]
+product: [cdn]
+integration: []
 ---
 
 This section provides information on how to submit a configuration or support request for your AGCDN account.
