@@ -12,23 +12,17 @@ permalink: docs/guides/local-development/lando-wordpress
 anchorid: lando-wordpress
 ---
 
-This guide will help you get up and running with [Lando](https://lando.dev/), an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
+This section provides information on how to use Lando with WordPress sites on Pantheon.
 
-<Enablement title="Try Localdev" link="https://pantheon.io/localdev?docs">
-
-Pantheon has been building our own local development tool! Localdev is built using Lando, has a friendly GUI, and is great for WordPress and Drupal sites. Click above to try it out, or check out the [docs](/guides/localdev).
-
-</Enablement>
-
+[Lando](https://lando.dev/) is an Open Source development tool for developers who prefer a customizable local server environment configuration that can be tracked in source-control repositories.
 
 ## Before You Begin
 
 Be sure that you have:
 
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- Having a working knowledge of local server environments is helpful but not entirely necessary.
-- While you’re at it, be sure to check out [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
-- Please note that [Pantheon's Support Team](/guides/support) doesn't provide support for Lando.
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) a site.
+- A working knowledge of local server environments is helpful but not entirely necessary.
+- Reviewed [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
 
 Installing Lando is straight forward. Be sure to check its [system requirements](https://docs.devwithlando.io/installation/system-requirements.html) to ensure you can proceed. Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
 
@@ -226,3 +220,8 @@ Lando also runs a search and replace on the database **siteurl** and **sitename*
   ```
 
   </Alert>
+
+## Support
+
+Please note that [Pantheon's Support Team](/guides/support) doesn't provide support for Lando.
+Visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support) if you encounter any issues.
