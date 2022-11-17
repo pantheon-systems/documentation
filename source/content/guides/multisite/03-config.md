@@ -22,7 +22,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 ## Install the WordPress Site Network
 
-We recommend using [Terminus](/guides/terminus) to install a WordPress Site Network.
+We recommend using [Terminus](/terminus) to install a WordPress Site Network.
 
 1. Install the most recent release of Terminus:
 

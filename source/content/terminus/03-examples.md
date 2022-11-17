@@ -2,11 +2,12 @@
 title: Terminus Guide
 subtitle: Get Started
 description: Learn how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus.
-layout: guide
-showtoc: true
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/examples
+permalink: docs/terminus/examples
 anchorid: examples
 ---
 
@@ -198,7 +199,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to the [Plugins](/guides/terminus/plugins) section for instructions on how to install Terminus plugins.
+Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to the [Plugins](/terminus/plugins) section for instructions on how to install Terminus plugins.
 
 1. Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 

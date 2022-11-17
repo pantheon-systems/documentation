@@ -30,10 +30,10 @@ All links from the video are provided below.
 
 **Resource Links From Video**
 
- - [Terminus Guide](/guides/terminus)
- - [Terminus Guide: Install](/guides/terminus/install)
- - [Terminus Guide: Example Usage](/guides/terminus/examples)
- - [Terminus Guide: Command Reference](/guides/terminus/commands)
+ - [Terminus Guide](/terminus)
+ - [Terminus Guide: Install](/terminus/install)
+ - [Terminus Guide: Example Usage](/terminus/examples)
+ - [Terminus Guide: Command Reference](/terminus/commands)
  - [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wp-cli)
  - [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline)
 

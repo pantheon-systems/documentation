@@ -12,7 +12,7 @@ permalink: docs/guides/drush/drupal-commandline
 anchorid: drupal-commandline
 ---
 
-[Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. [Terminus](/guides/terminus) allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.
+[Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. [Terminus](/terminus) allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.
 
 This section walks you through using Drush and Terminus in the command line to create a new Drupal site and move configurations between Pantheon environments.
 
@@ -28,9 +28,9 @@ Be sure that you:
 
 ## Install and Authenticate Terminus
 
-Terminus provides advanced interaction with the platform and allows us to run Drush commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. Refer to the [Terminus Guide](/guides/terminus) for more information.
+Terminus provides advanced interaction with the platform and allows us to run Drush commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. Refer to the [Terminus Guide](/terminus) for more information.
 
-1. [Install Terminus](/guides/terminus/install#install-terminus).
+1. [Install Terminus](/terminus/install#install-terminus).
 
 1. Navigate to the Pantheon dashboard, click **User Dashboard**, select **Account**, and then select **Machine Tokens** to [generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
@@ -308,4 +308,4 @@ Terminus provides the power to manage most aspects of your Pantheon sites, while
 
 - [Use the Pantheon Workflow](/pantheon-workflow)
 - [Configuration Workflow for Drupal 9 Sites](/drupal-9-configuration-management)
-- [Terminus Guide](/guides/terminus)
+- [Terminus Guide](/terminus)

@@ -50,7 +50,7 @@ For more details on separating custom code, see this related [blog post](https:/
 
   As an alternative to adding declarations within the headers of plugins and themes, you can use the [GitHub Updater Additions](https://github.com/afragen/github-updater-additions) plugin, which will add the appropriate data via hooks in GitHub Updater.
 
-1. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/guides/terminus):
+1. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/terminus):
 
   ```bash{promptUser: user}
   terminus connection:set <site>.<env> sftp
@@ -76,7 +76,7 @@ Notifications within the WordPress dashboard will now include updates to your cu
 
 1. [Download WP Pusher](https://wppusher.com/). WP Pusher is free for open source code hosted in public repositories.
 
-1. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/guides/terminus): `terminus connection:set <site>.<env> sftp`
+1. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/terminus): `terminus connection:set <site>.<env> sftp`
 
 1. Install the plugin by uploading the archive within the WordPress Dashboard on the Dev environment (`/wp-admin/plugin-install.php?tab=upload`).
 

@@ -39,7 +39,7 @@ If no code is present in the function, go to your recent changes and revert or r
 
 ### WordPress Core
 
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/guides/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. Refer to [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates) for more information.
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. Refer to [Scope of Support](/guides/support) and [WordPress and Drupal Core Updates](/core-updates) for more information.
 
 ## Drupal Non-Standard Bootstraps
 

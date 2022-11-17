@@ -2,11 +2,13 @@
 title: Terminus Guide
 subtitle: Supported Terminus and PHP Versions
 description: Learn which versions of Terminus and PHP are currently supported.
-layout: guide
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 contributors: [wordsmither]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/supported-terminus
+permalink: docs/terminus/supported-terminus
 anchorid: supported-terminus
 ---
 
@@ -25,4 +27,4 @@ Terminus 1.x and 0.x are EOL.
 ## More Resources
 
 - [PHP on Pantheon](/guides/php)
-- [Update Terminus](/guides/terminus/updates)
+- [Update Terminus](/terminus/updates)

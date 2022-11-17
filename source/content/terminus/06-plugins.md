@@ -2,10 +2,12 @@
 title: Terminus Guide
 subtitle: Install Plugins
 description: Learn how to install plugins with Terminus.
-layout: guide
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/plugins
+permalink: docs/terminus/plugins
 anchorid: plugins
 ---
 

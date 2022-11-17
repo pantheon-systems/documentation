@@ -24,7 +24,7 @@ The following instructions enable Twig debugging and set development-friendly pe
 ## Enable Twig Debugging on Dev & Multidevs
 Pantheon handles the inclusion of service configuration files. The [default file provided](https://github.com/pantheon-systems/drupal-composer-managed/tree/default/web/sites/default) has everything you need, so enabling Twig debugging is simple:
 
-1. Clone the site's codebase using the [Git command string provided on the Site Dashboard](/guides/git/git-config#clone-your-site-codebase) or via [Terminus](/guides/terminus) if you haven't done so already. 
+1. Clone the site's codebase using the [Git command string provided on the Site Dashboard](/guides/git/git-config#clone-your-site-codebase) or via [Terminus](/terminus) if you haven't done so already. 
 
  ```bash{promptUser: user}
  terminus connection:info <site>.dev --fields='Git Command' --format=string
@@ -43,7 +43,7 @@ Pantheon handles the inclusion of service configuration files. The [default file
  git push -u origin master
  ```
 
-1. Clear caches on Dev within the Site Dashboard or via [Terminus](/guides/terminus):
+1. Clear caches on Dev within the Site Dashboard or via [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus env:clear-cache <site>.<env>
@@ -153,7 +153,7 @@ This issue can be caused by a number of scenarios related to cache tags, such as
     git push
     ```
 
-1. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/guides/terminus):
+1. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/terminus):
 
    ```bash{promptUser: user}
    terminus drush <site>.<env> -- config-get system.performance --include-overridden

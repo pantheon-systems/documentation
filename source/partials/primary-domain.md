@@ -14,7 +14,7 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 ### Set a Primary Domain with Terminus
 
-1. Install or upgrade to the [latest version of Terminus](/guides/terminus/install).
+1. Install or upgrade to the [latest version of Terminus](/terminus/install).
 
 1. Use Terminus to add the primary domain. In this example, replace:
 

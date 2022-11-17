@@ -2,11 +2,12 @@
 title: Terminus Guide
 subtitle: Create Terminus Plugins
 description: Learn how to create your own Terminus plugins.
-layout: guide
-showtoc: true
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/create
+permalink: docs/terminus/create
 anchorid: create
 ---
 
@@ -407,5 +408,5 @@ There is currently no published Plugin API documentation. The best way to learn 
 
 ## More Resources
 
-- [Extend Terminus with Plugins](/guides/terminus/plugins)
-- [Terminus Command Reference](/guides/terminus/commands)
+- [Extend Terminus with Plugins](/terminus/plugins)
+- [Terminus Command Reference](/terminus/commands)

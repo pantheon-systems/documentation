@@ -83,7 +83,7 @@ This can be a misleading message if you're using AJAX when HTTP Basic Auth is e
 
 > The web page you were looking for could not be delivered. 
 
-A common cause for this error is an [idle container](/application-containers#idle-containers) that has spun down due to inactivity. Wake the environment by loading the home page in your browser or using the [`terminus env:wake` command](/guides/terminus/commands/env-wake).
+A common cause for this error is an [idle container](/application-containers#idle-containers) that has spun down due to inactivity. Wake the environment by loading the home page in your browser or using the [`terminus env:wake` command](/terminus/commands/env-wake).
 
 > No php workers are available to handle the request.
 

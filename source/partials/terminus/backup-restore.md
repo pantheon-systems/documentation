@@ -2,7 +2,7 @@
 ## Example
 
 The `--file` flag for this command only accepts as a value a Pantheon environment backup on the platform, not a local backup file.
-Use [terminus backup:list](/guides/terminus/commands/backup-list) to identify available backups:
+Use [terminus backup:list](/terminus/commands/backup-list) to identify available backups:
 
 ```bash{outputLines: 2-13}
 terminus backup:list anita-drupal.live

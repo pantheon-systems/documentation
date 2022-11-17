@@ -80,4 +80,4 @@ You can collect your logs after you [create your script](/guides/logs-pantheon/a
 - [Fastly on Pantheon](/guides/fastly-pantheon)
 - [Develop on Pantheon Directly with SFTP Mode](/sftp)
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)
-- [Terminus Manual](/guides/terminus)
+- [Terminus Manual](/terminus)

@@ -9,7 +9,7 @@ reviewed: "2021-08-09"
 
 ## Overview 
 
-This video demonstrates how to create a blank site using static files. This can be accomplished through the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) as well as through [Terminus](/guides/terminus).
+This video demonstrates how to create a blank site using static files. This can be accomplished through the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) as well as through [Terminus](/terminus).
 
 <Youtube src="PTVqXxwOJ4Q" title="Pantheon Static Site and Empty Upstreams" /><br/>
 

@@ -20,7 +20,7 @@ Switching the upstream of an existing site is risky. It is safer to create a new
 
 ## Switch Your Custom Upstream
 
-Review the [Terminus Switch Upstream example](/guides/terminus/examples#switch-upstreams) before following the steps below to switch your Custom Upstream.
+Review the [Terminus Switch Upstream example](/terminus/examples#switch-upstreams) before following the steps below to switch your Custom Upstream.
 
 1. Run the command below to locate your Custom Upstream's machine name, replacing `$org` with your organization name.
     
@@ -36,4 +36,4 @@ Review the [Terminus Switch Upstream example](/guides/terminus/examples#switch-u
 
 ## More Resources
 
-- [Terminus Set Upstream Steps](/guides/terminus/commands/site-upstream-set#terminus-error-permission-to-change-the-upstream-of-this-site) 
+- [Terminus Set Upstream Steps](/terminus/commands/site-upstream-set#terminus-error-permission-to-change-the-upstream-of-this-site) 

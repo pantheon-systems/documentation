@@ -16,4 +16,4 @@ Pantheon offers a number of [ways to connect to your site](/guides/quickstart/co
 
 Localdev allows you [use an integrated development environment (**IDE**)](/guides/localdev/using-localdev#use-a-local-ide-to-develop-your-pantheon-site) to edit files, code, and push changes to Pantheon right from your desktop. Use Localdev if you want to avoid the command line, or to develop sites with a fully functional local preview.
 
-For users looking to be more hands on and willing to use the terminal, try [Terminus](/guides/terminus) and [Lando](https://docs.devwithlando.io/started.html). The [Local Development](/local-development) doc can help you get started.
+For users looking to be more hands on and willing to use the terminal, try [Terminus](/terminus) and [Lando](https://docs.devwithlando.io/started.html). The [Local Development](/local-development) doc can help you get started.

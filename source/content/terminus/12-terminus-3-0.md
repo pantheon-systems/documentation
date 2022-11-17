@@ -2,12 +2,13 @@
 title: Terminus Guide
 subtitle: Terminus 3
 description: Learn what's new with the latest Terminus major version upgrade.
-layout: guide
-showtoc: true
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 contributors: [greg-1-anderson]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/terminus-3-0
+permalink: docs/terminus/terminus-3-0
 anchorid: terminus-3-0
 ---
 
@@ -15,7 +16,7 @@ This section provides information about Terminus 3.0. Terminus 3.0 is the most r
 
 <Alert title="Note" type="info" >
 
-We suggest you read from the beginning of the [Terminus Guide](/guides/terminus) if you're not already familiar with Terminus. This section is specifically geared at existing Terminus users who need to update existing implementations.
+We suggest you read from the beginning of the [Terminus Guide](/terminus) if you're not already familiar with Terminus. This section is specifically geared at existing Terminus users who need to update existing implementations.
 
 </Alert>
 
@@ -38,5 +39,5 @@ The following commands are new to Terminus as of version 3.0:
 ## More Resources
 
 - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)
-- [Terminus Guide](/guides/terminus)
-- [Terminus PHP Compatibility](/guides/terminus/supported-terminus#php-version-compatibility-matrix)
+- [Terminus Guide](/terminus)
+- [Terminus PHP Compatibility](/terminus/supported-terminus#php-version-compatibility-matrix)

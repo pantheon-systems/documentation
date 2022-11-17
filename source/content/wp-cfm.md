@@ -18,7 +18,7 @@ WP-CFM should only be used to write changes to code in Dev and Multidev environm
 
 ## Install and Deploy WP-CFM
 
-Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/guides/terminus):
+Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/terminus):
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
 

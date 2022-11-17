@@ -13,7 +13,7 @@ anchorid: new-relic-quicksilver
 
 New Relic&reg; Performance Monitoring is a powerful tool for monitoring the performance of a WordPress or Drupal site. It provides insight into how efficiently a website is using resources, and where improvements can be made in the application. Pantheon offers New Relic&reg; Pro within the Site Dashboard on all sites (excluding Basic) for free.
 
-In this guide, we'll automatically label code changes to your site in New Relic&reg;'s Deployment page using Pantheon's [Quicksilver hooks](/guides/quicksilver/hooks) and [Terminus](/guides/terminus). This creates a traceable connection between performance changes and code deployments, allowing developers to determine whether a code change positively or negatively impacted performance.
+In this guide, we'll automatically label code changes to your site in New Relic&reg;'s Deployment page using Pantheon's [Quicksilver hooks](/guides/quicksilver/hooks) and [Terminus](/terminus). This creates a traceable connection between performance changes and code deployments, allowing developers to determine whether a code change positively or negatively impacted performance.
 
 ## Configure Quicksilver Hook to Record Deployments
 
@@ -23,7 +23,7 @@ In this guide, we'll automatically label code changes to your site in New Relic&
 
     <Alert title="Variables" type="export">
 
-    This process uses [Terminus](/guides/terminus) commands that require your site name. Before you begin, set the variable `$site` in your terminal session to match your site name:
+    This process uses [Terminus](/terminus) commands that require your site name. Before you begin, set the variable `$site` in your terminal session to match your site name:
 
     ```bash{promptUser: user}
     export site=yoursitename

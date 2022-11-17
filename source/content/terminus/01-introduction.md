@@ -2,14 +2,13 @@
 title: Terminus Guide
 subtitle: Introduction
 description: Learn about Terminus, the command line interface for advanced interaction with the Pantheon platform.
-layout: terminuspage
-showtoc: true
 terminuspage: true
-type: guide
+type: terminuspage
+layout: terminuspage
 contributors: [whitneymeredith]
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus
+permalink: docs/terminus
 anchorid: terminus
 image: terminus-thumbLarge
 reviewed: "2020-02-05"
@@ -27,13 +26,13 @@ Terminus is a powerful tool that allows you to:
 - Check for and apply upstream updates
 - Deploy code from one environment to another
 - Run [Drush](/guides/drush/) and [WP-CLI](/guides/wp-cli/) commands
-- Perform [other operations](/guides/terminus/commands/)
+- Perform [other operations](/terminus/commands/)
 
 ## Contribute to Terminus
 
 <Alert title="Note" type="info">
 
-You must update your plugin for Terminus 2 if you are a plugin author. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. Refer to [what's new in Terminus 3.x](/guides/terminus/terminus-3-0) to learn more.
+You must update your plugin for Terminus 2 if you are a plugin author. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. Refer to [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
 
 </Alert>
 

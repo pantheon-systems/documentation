@@ -58,7 +58,7 @@ When you are ready to make your environment public again, click **Security** on 
 This will clear the credentials you entered and make the web accessible resources available without a basic authentication prompt.
 
 ## Scripting Site Locking Operations
-Your site may also be locked and unlocked using [Terminus](/guides/terminus).
+Your site may also be locked and unlocked using [Terminus](/terminus).
 
 To lock a site:
 
@@ -94,7 +94,7 @@ The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic
 
 Sites that have the environment locked on Pantheon in addition to enabling the module will experience 403 errors. You can resolve these errors by unlocking the environment in the Site Dashboard, clearing cache, then disabling the module in Drupal's admin interface. Once you've disabled the module you can safely lock the environment on Pantheon.
 
-Alternatively, you can resolve 403 errors by using [Terminus](/guides/terminus) to disable the module:
+Alternatively, you can resolve 403 errors by using [Terminus](/terminus) to disable the module:
 
 For Drupal 7, run:
 
