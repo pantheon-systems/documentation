@@ -2,7 +2,6 @@
 title: Switch Your Custom Upstream
 subtitle: Switch Your Custom Upstream
 description: Learn how to switch your Custom Upstream. 
-categories: [develop]
 tags: [upstreams, workflow, webops]
 layout: guide
 showtoc: true

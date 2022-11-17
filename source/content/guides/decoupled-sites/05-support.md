@@ -2,7 +2,6 @@
 title: Pantheon Front-End Sites
 subtitle: Support
 description: Information on what supported is available for a Pantheon Front-End Site.
-categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [ joa-pan, joa-pan]
 type: guide

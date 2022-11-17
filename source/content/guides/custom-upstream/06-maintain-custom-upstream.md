@@ -2,7 +2,6 @@
 title: Best Practices for Maintaining Custom Upstreams
 subtitle: Custom Upstream Best Practices
 description: Detailed information on how to maintain Custom Upstreams.
-categories: [develop]
 tags: [git, upstreams, workflow]
 layout: guide
 showtoc: true

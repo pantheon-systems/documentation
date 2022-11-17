@@ -2,7 +2,6 @@
 title: Introduction to Custom Upstreams
 subtitle: Introduction
 description: Learn how to use Custom Upstreams to free up developer time.
-categories: [get-started]
 tags: [collaborate, launch, upstreams, webops, workflow]
 layout: guide
 showtoc: true

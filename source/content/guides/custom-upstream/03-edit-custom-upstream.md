@@ -2,7 +2,6 @@
 title: Edit an Existing Custom Upstream
 subtitle: Edit an Existing Custom Upstream
 description: Learn how to edit your Custom Upstream settings.
-categories: [develop]
 tags: [upstreams, workflow, webops]
 layout: guide
 showtoc: true

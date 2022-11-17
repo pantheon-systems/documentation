@@ -2,7 +2,6 @@
 title: Pantheon Front-End Sites
 subtitle: Site Creation
 description: Configure the frontend and create a site.
-categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide

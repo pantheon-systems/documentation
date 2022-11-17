@@ -2,7 +2,6 @@
 title: Troubleshooting Custom Upstreams
 subtitle: Troubleshoot a Custom Upstream
 description: Learn more about troubleshooting your Custom Upstream.
-categories: [develop]
 tags: [git, upstreams, workflow]
 layout: guide
 showtoc: true

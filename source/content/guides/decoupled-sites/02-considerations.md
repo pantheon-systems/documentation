@@ -2,7 +2,6 @@
 title: Pantheon Front-End Sites
 subtitle: Considerations
 description: Components needed to get started with a Front-End Site.
-categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, joa-pan, backlineint, cobypear, hckia]
 type: guide
