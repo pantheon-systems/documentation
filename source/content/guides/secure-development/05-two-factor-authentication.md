@@ -80,7 +80,7 @@ Duo configuration settings and keys are stored in the database. To avoid setting
 
 - Synchronize and import your database
 
-- Use a tool like [WP-CFM](/wp-cfm)
+- Use a tool like [WP-CFM](/guides/wordpress-configurations/wp-cfm)
 
 - Keep the new application page from the Duo Admin panel open, and reenter the values for each environment
 

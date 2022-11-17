@@ -2,7 +2,6 @@
 title: Build Tools
 subtitle: Merge Your Work
 description: In step seven of the Build Tools guide, learn how to merge your branches into the master branch.
-categories: [develop]
 tags: [git, iterate, webops, workflow]
 buildtools: true
 anchorid: merge
@@ -10,6 +9,12 @@ type: guide
 permalink: docs/guides/build-tools/merge/
 editpath: build-tools/07-merge.md
 image: buildToolsGuide-thumb
+contenttype: guide
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 This lesson demonstrates the final process of the Pull Request workflow, merging. After completing an internal peer review process for a given Pull Request, work is considered ready for production and accepted into the master branch.
 

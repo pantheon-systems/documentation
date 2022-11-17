@@ -2,7 +2,6 @@
 title: Pantheon Front-End Sites
 subtitle: Site Creation
 description: Configure the frontend and create a site.
-categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
@@ -12,6 +11,12 @@ anchorid: site
 permalink: docs/guides/decoupled-sites/site/
 editpath: decoupled-sites/04-site.md
 reviewed: "2022-09-19"
+contenttype: guide
+categories: [create]
+newcms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
 ---
 
 ## Before You Begin

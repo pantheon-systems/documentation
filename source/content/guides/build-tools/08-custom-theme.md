@@ -3,7 +3,6 @@ title: Build Tools
 subtitle: Create a Custom Theme
 description: In step eight of the Build Tools guide, learn how to create a custom theme as part of the build tooks workflow.
 cms: "Drupal"
-categories: [develop]
 tags: [themes, workflow]
 buildtools: true
 anchorid: custom-theme
@@ -11,6 +10,12 @@ type: guide
 permalink: docs/guides/build-tools/custom-theme/
 editpath: build-tools/08-custom-theme.md
 image: buildToolsGuide-thumb
+contenttype: guide
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik) theme using the [Terminus Drupal Console plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin). 
 

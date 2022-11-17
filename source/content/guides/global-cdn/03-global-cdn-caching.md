@@ -43,7 +43,7 @@ Review detailed instructions on how to configure and optimize caching:
 
 - [Drupal's Performance Settings](/drupal-cache) 
 
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin).
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin).
 
 ## Troubleshoot Cache Hits
 
@@ -53,7 +53,7 @@ The most common issue with effectively using edge and CDN caching is troubleshoo
 
 Follow the steps below if you have checked your HTTP headers and found that caching is not working:
 
-1. Verify that you have configured [Drupal's performance settings](/drupal-cache) or the [WordPress Pantheon Cache Plugin](/wordpress-cache-plugin) correctly. 
+1. Verify that you have configured [Drupal's performance settings](/drupal-cache) or the [WordPress Pantheon Cache Plugin](/guides/wordpress-configurations/wordpress-cache-plugin) correctly. 
 
 1. Go back and check the HTTP headers to verify that caching working correctly after your configuration changes.
 

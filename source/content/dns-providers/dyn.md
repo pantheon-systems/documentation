@@ -3,10 +3,15 @@ title: Dyn Domain Configuration
 provider: Dyn
 dnsprovider: true
 description: Learn how to point your Dyn domain to a Pantheon site.
-categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/dyn.md/
+newtype: doc
+categories: [domains, launch]
+newcms: []
+audience: []
+product: []
+integration: []
 ---
 ## Before You Begin
 Be sure that you have a:

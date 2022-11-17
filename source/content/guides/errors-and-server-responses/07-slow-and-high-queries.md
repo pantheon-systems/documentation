@@ -58,6 +58,6 @@ Refer to [Debugging Performance Bottlenecks](/debug-slow-performance) for detail
 
 - [Drupal Performance and Caching Settings](/drupal-cache)
 
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
 
 - [Optimize Your wp-options Table and Autoloaded Data](/optimize-wp-options-table-autoloaded-data)

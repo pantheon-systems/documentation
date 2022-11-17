@@ -3,7 +3,6 @@ title: Build Tools
 subtitle: Update Your Project
 description: In step nine of the Build Tools guide, learn how to update your site as part of the continuous integration process.
 cms: "Drupal"
-categories: [develop]
 tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
 anchorid: update
@@ -11,6 +10,12 @@ type: guide
 permalink: docs/guides/build-tools/update/
 image: buildToolsGuide-thumb
 getfeedbackform: default
+contenttype: guide
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.

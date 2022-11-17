@@ -1,8 +1,13 @@
 ---
 title: Drupal 9 Migration Guides
-categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 reviewed: "2021-05-13"
+newtype: doc
+categories: [create, plan]
+newcms: [drupal9]
+audience: [development]
+product: []
+integration: []
 ---
 
 Drupal 9 includes many of the familiar features and layout introduced in Drupal 8, and removes deprecated code to help improve future Drupal development.

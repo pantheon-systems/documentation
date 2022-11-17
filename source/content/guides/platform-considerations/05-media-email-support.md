@@ -19,7 +19,7 @@ Pantheon has a cloud-based infrastructure, which means that we cannot ensure the
 
 All sites have access to a local Postfix service for testing and development, however we recommend using an external SMTP gateway (for example SendGrid) in production to ensure that your email is delivered.
 
-Refer to the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) documentation for suggestions or more information.
+Refer to the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp) documentation for suggestions or more information.
 
 ## ffmpeg Transcoding Support
 

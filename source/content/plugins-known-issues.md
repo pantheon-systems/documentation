@@ -373,7 +373,7 @@ ___
 
 1. Verify that a symlink exists for `wp-content/et-cache`.
 
-1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-pantheon/plugins#pantheon-must-use-plugin).
+1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-configurations/plugins#pantheon-must-use-plugin).
 
 1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` folder itself. You can do this by accessing the site's files via [SFTP](/sftp).
 

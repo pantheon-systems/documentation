@@ -2,12 +2,17 @@
 title: Switch Your Custom Upstream
 subtitle: Switch Your Custom Upstream
 description: Learn how to switch your Custom Upstream. 
-categories: [develop]
 tags: [upstreams, workflow, webops]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/switch-custom-upstream
 anchorid: switch-custom-upstream
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstream]
+integration: []
 ---
 
 This section provides steps to switch an existing site's Custom Upstream to a different Custom Upstream.
