@@ -132,7 +132,7 @@ This procedure temporarily uses the existing HTTPS certificate until the new one
 
 If you follow the process outlined above, downtime will be minimal and depends on the [TTL](/guides/domains/dns#dns-terminology) configuration.
 
-Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/guides/terminus) to run the two commands in immediate succession.
+Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus) to run the two commands in immediate succession.
 
 To minimize the chance to HTTPS certificate errors, set the TTL as low as possible (most DNS providers set a lower limit of 300 seconds, or 5 minutes). Having a long TTL on the changing DNS records increases the chance of HTTPS Certificate errors during the transition.
 

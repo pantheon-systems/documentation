@@ -19,7 +19,7 @@ Drush commands require a `settings.php` file. However, Drupal 7 sites do not con
 
 Refer to Drush's [install documentation](https://docs.drush.org/en/8.x/install/) for information on installing Drush locally.
 
-Drush developers should also install and use [Terminus](/guides/terminus), a command-line interface for controlling your Pantheon account and sites. Terminus allows you to script almost every action that you can complete in the Dashboard. It can also make remote Drush calls on your environments without having Drush installed locally. This eliminates incompatibility issues between local and remote installation versions of Drush.
+Drush developers should also install and use [Terminus](/terminus), a command-line interface for controlling your Pantheon account and sites. Terminus allows you to script almost every action that you can complete in the Dashboard. It can also make remote Drush calls on your environments without having Drush installed locally. This eliminates incompatibility issues between local and remote installation versions of Drush.
 
 Terminus automatically uses the version of Drush it finds in `vendor/bin/drush` when running Drush commands on the platform if you have a [Composer-based site](/guides/composer).
 
@@ -32,6 +32,6 @@ You can view the most recent Drush release and changelogs in the [Drush reposito
 ## More Resources
 
 - [Drush Introduction Video](/videos/drush)
-- [The Terminus Manual](/guides/terminus)
+- [The Terminus Manual](/terminus)
 - [Drupal 9](/drupal-9)
 - [WP-CLI on Pantheon](/guides/wp-cli)

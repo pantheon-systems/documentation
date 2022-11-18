@@ -42,7 +42,7 @@ For existing sites that already have an active database:
 
 1. Install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. 
 
-1. Clear Drush cache using [Terminus](/guides/terminus) after you've installed the command in `/sites/all/drush`. This allows the new command to run.
+1. Clear Drush cache using [Terminus](/terminus) after you've installed the command in `/sites/all/drush`. This allows the new command to run.
 
     ```bash{promptUser: user}
     terminus drush <site>.<env> -- cc drush

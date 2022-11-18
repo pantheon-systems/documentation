@@ -2,11 +2,12 @@
 title: Terminus Guide
 subtitle: Scripting with Terminus
 description: Automate your workflow with scripting via Terminus.
-layout: guide
-showtoc: true
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/scripting
+permalink: docs/terminus/scripting
 anchorid: scripting
 ---
 
@@ -23,7 +24,7 @@ If so, consider how you can turn the task into a script.
 
 ## Authentication
 
-Terminus must be authenticated before you can execute most commands. You must authenticate Terminus with a [machine token](/guides/terminus/install#machine-token) that has the correct permissions before running a script.
+Terminus must be authenticated before you can execute most commands. You must authenticate Terminus with a [machine token](/terminus/install#machine-token) that has the correct permissions before running a script.
 
 ## Example Repositories
 

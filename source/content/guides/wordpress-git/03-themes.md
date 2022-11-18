@@ -123,7 +123,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
  ### WP-CLI & Terminus
 
- You can do the exact same process from the command line using [Terminus](/guides/terminus), the Pantheon CLI. Install Terminus, then run a WP-CLI command against the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment to create the child theme scaffold for you automatically. That's right, go from all the steps above to a one-liner to kick things into warp speed:
+ You can do the exact same process from the command line using [Terminus](/terminus), the Pantheon CLI. Install Terminus, then run a WP-CLI command against the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment to create the child theme scaffold for you automatically. That's right, go from all the steps above to a one-liner to kick things into warp speed:
 
  ```bash{promptUser: user}
  terminus wp <site>.<env> -- scaffold child-theme bento-child --parent_theme=bento

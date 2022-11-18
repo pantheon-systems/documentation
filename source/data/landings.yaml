@@ -121,10 +121,10 @@
   path: 'develop'
   video_id: 'v7qe2_OZ95k'
   cta:
-    title: 'Terminus Manual'
+    title: 'Terminus Guide'
     type: 'reference'
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
-    url: '/guides/terminus'
+    url: '/terminus'
   cta_alt:
     type: 'Essential Developer Training'
     title: 'Command Line Interface with Terminus'
@@ -151,7 +151,7 @@
             - text: 'WordPress and Drupal Core Updates'
               url: '/core-updates'
             - text: 'Terminus Guide'
-              url: '/guides/terminus'
+              url: '/terminus'
         - title: 'Drush'
           links:
             - text: 'Drush'
@@ -558,7 +558,7 @@
             - text: 'PHP'
               url: '/guides/php'
             - text: 'Terminus'
-              url: '/guides/terminus/supported-terminus'
+              url: '/terminus/supported-terminus'
 - title: 'Automate & Integrate'
   subtitle: ''
   path: 'automate'
@@ -698,7 +698,7 @@
             - text: 'WordPress and Drupal Core Updates'
               url: '/core-updates'
             - text: 'Terminus Guide'
-              url: '/guides/terminus'
+              url: '/terminus'
         - title: 'Drush'
           links:
             - text: 'Drush'
@@ -899,7 +899,7 @@
           url: '/guides/frontend-performance'
         - text: 'Terminus Manual'
           image: 'terminus-thumbLarge.png'
-          url: '/guides/terminus'
+          url: '/terminus'
         - text: 'GitHub Pull Request Workflow'
           image: 'buildToolsGuide-thumb.png'
           url: '/guides/build-tools'

@@ -48,76 +48,75 @@ const shortcodes = {
   Check,
 }
 
-
-
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
 const items = [
   {
     id: "docs-terminus",
-    link: "/guides/terminus",
-    title: "Get Started",
+    link: "/terminus",
+    title: "Introduction",
   },
   {
     id: "docs-terminus-install",
-    link: "/guides/terminus/install",
-    title: "Install",
+    link: "/terminus/install",
+    title: "Install Terminus",
   },
   {
     id: "docs-terminus-examples",
-    link: "/guides/terminus/examples",
-    title: "Example Usage",
+    link: "/terminus/examples",
+    title: "Get Started",
   },
   {
-    id: "docs-guides-terminus-commands",
-    link: "/guides/terminus/commands",
-    title: "Commands",
+    id: "docs-terminus-commands",
+    link: "/terminus/commands",
+    title: "Command Directory",
   },
   {
     id: "docs-terminus-scripting",
-    link: "/guides/terminus/scripting",
-    title: "Scripting",
+    link: "/terminus/scripting",
+    title: "Scripting with Terminus",
   },
   {
     id: "docs-terminus-plugins",
-    link: "/guides/terminus/plugins",
-    title: "Extend with Plugins",
-    items: [
-      {
-        id: "docs-terminus-directory",
-        link: "/guides/terminus/directory",
-        title: "Directory",
-      },
-      {
-        id: "docs-terminus-create",
-        link: "/guides/terminus/create",
-        title: "Create Plugins",
-      },
-    ],
+    link: "/terminus/plugins",
+    title: "Install Plugins",
+  },
+  {
+    id: "docs-terminus-directory",
+    link: "/terminus/directory",
+    title: "Plugin Directory",
+  },
+  {
+    id: "docs-terminus-create",
+    link: "/terminus/create",
+    title: "Create Terminus Plugins",
   },
   {
     id: "docs-terminus-configuration",
-    link: "/guides/terminus/configuration",
-    title: "Configuration File",
+    link: "/terminus/configuration",
+    title: "Terminus Configuration File",
   },
+
+  {
+    id: "docs-supported-terminus",
+    link: "/terminus/supported-terminus",
+    title: "Supported Terminus and PHP Versions",
+  },
+
   {
     id: "docs-terminus-updates",
-    link: "/guides/terminus/updates",
-    title: "Version Updates",
+    link: "/terminus/updates",
+    title: "Current Terminus Release and Changelog",
+  },
+
+  {
+    id: "docs-terminus-terminus-3-0",
+    link: "/terminus/terminus-3-0",
+    title: "Terminus 3",
   },
 
 ]
-
-items[0] = [
-  {
-   id: "docs-guides-terminus",
-   link: "/guides/terminus",
-   title: "Introduction",
-  },
- ]
-
-items.path = "/guides/terminus/"
 
 class TerminusTemplate extends React.Component {
   componentDidMount() {
@@ -151,11 +150,11 @@ class TerminusTemplate extends React.Component {
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const ifCommandsDate =
-      node.fields.slug == "/guides/terminus/commands"
+      node.fields.slug == "/terminus/commands"
         ? this.props.data.terminusReleasesJson.published_at
         : node.frontmatter.reviewed
     const ifCommandsISO =
-      node.fields.slug == "/guides/terminus/commands"
+      node.fields.slug == "/terminus/commands"
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
 

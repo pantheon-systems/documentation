@@ -46,7 +46,7 @@ Follow the procedure to [create a custom upstream](/guides/custom-upstream/creat
 
 - Your Custom Upstream repository connected to Pantheon
 
-- [Terminus](/guides/terminus)
+- [Terminus](/terminus)
 
 ## Create a Test Site on Pantheon
 
@@ -96,7 +96,7 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
   </TabList>
 
-2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/guides/terminus). Replace `<site>` with your site name:
+2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
 
     ```bash
     terminus connection:info <site>.dev --field=git_url
@@ -161,13 +161,13 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
   The example command above assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
 
-Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/guides/terminus) and the [Mass Update](/guides/terminus/examples/#mass-update) plugin. Review the [WordPress and Drupal Core Updates](/core-updates) documentation for more details.
+Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/terminus) and the [Mass Update](/terminus/examples/#mass-update) plugin. Review the [WordPress and Drupal Core Updates](/core-updates) documentation for more details.
 
 ## More Resources
 
 - [WordPress and Drupal Core Updates](/core-updates)
 
-- [Clear Upstream Cache](/guides/terminus/commands/site-upstream-clear-cache)
+- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
 

@@ -79,7 +79,7 @@ You can use the [Really Simple SSL](https://wordpress.org/plugins/really-simple-
 
 #### Via WP-CLI
 
-If you'd rather not add another plugin to the site you can use [Terminus](/guides/terminus) to run `wp search-replace` to converts URLs from HTTP to HTTPS:
+If you'd rather not add another plugin to the site you can use [Terminus](/terminus) to run `wp search-replace` to converts URLs from HTTP to HTTPS:
 
 ```bash{promptUser: user}
 terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'https://www.example.com' --all-tables --verbose

@@ -49,7 +49,7 @@ You’ll see these in reference documentation, so it’s important to keep them 
 
 <Alert title="Environment Variables" type="export">
 
-This guide provides instructions using both the WordPress admin dashboard and [Terminus](/guides/terminus). In order to make the Terminus instructions easier to use, you can set local environment variables to match those used in our code snippets.
+This guide provides instructions using both the WordPress admin dashboard and [Terminus](/terminus). In order to make the Terminus instructions easier to use, you can set local environment variables to match those used in our code snippets.
 
 To begin, let's set the `$site` variable to match your Pantheon Site name:
 

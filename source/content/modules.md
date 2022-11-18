@@ -56,6 +56,6 @@ The API module is not needed for Drupal 9.
 
 <Alert title="Note" type="info">
 
-It is not necessary to use the API module directly. Use [Terminus](/guides/terminus) to interact with your Pantheon site programmatically.
+It is not necessary to use the API module directly. Use [Terminus](/terminus) to interact with your Pantheon site programmatically.
 
 </Alert>

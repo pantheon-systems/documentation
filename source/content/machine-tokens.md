@@ -6,7 +6,7 @@ tags: [sso, security, terminus]
 reviewed: "2020-12-09"
 ---
 
-Machine tokens are used to uniquely identify your machine and securely authenticate via [Terminus](/guides/terminus).
+Machine tokens are used to uniquely identify your machine and securely authenticate via [Terminus](/terminus).
 
 Machine tokens:  
 

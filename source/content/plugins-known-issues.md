@@ -986,7 +986,7 @@ ___
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/guides/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
 
 ```bash{promptUser: user}
 export SITE=yoursitename

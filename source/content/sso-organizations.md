@@ -19,7 +19,7 @@ SAML SSO is included for customers with Diamond Accounts and is available for mo
 - After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
 ## Terminus Authentication
-Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/guides/terminus) by using [machine tokens](/machine-tokens).
+Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus) by using [machine tokens](/machine-tokens).
 
 ## Managing Users
 

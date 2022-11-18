@@ -67,7 +67,7 @@ Scanning multiple or all environments exhausts your daily API request quota fast
 
 ## Run Launch Check Manually
 
-You can manually perform a site audit with WP Launch Check from the command line using [Terminus](/guides/terminus).
+You can manually perform a site audit with WP Launch Check from the command line using [Terminus](/terminus).
 
 1. Run the following command:
 

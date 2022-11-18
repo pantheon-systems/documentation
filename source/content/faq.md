@@ -46,7 +46,7 @@ Only WordPress and Drupal applications are officially supported, but the PHP run
 
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
-Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/guides/terminus), [drush](/guides/drush), [WP-CLI](/faq#does-pantheon-support-wp-cli%3F)), and SFTP files.
+Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/terminus), [drush](/guides/drush), [WP-CLI](/faq#does-pantheon-support-wp-cli%3F)), and SFTP files.
 
 ### How does Pantheon work with DNS?
 
@@ -91,11 +91,11 @@ Yes, Pantheon supports the following use cases of [WordPress Site Networks](/gui
 
 ### Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated with `@alias` files. For more details, refer to [Drupal Drush Command-Line Utility](/guides/drush). You can invoke Drush commands on Pantheon sites using [Terminus](/guides/terminus), the Pantheon CLI.
+Yes. Pantheon comes with Drush pre-integrated with `@alias` files. For more details, refer to [Drupal Drush Command-Line Utility](/guides/drush). You can invoke Drush commands on Pantheon sites using [Terminus](/terminus), the Pantheon CLI.
 
 ### Does Pantheon support WP-CLI?
 
-Yes. You can invoke WP-CLI commands on Pantheon sites using [Terminus](/guides/terminus), the Pantheon CLI.
+Yes. You can invoke WP-CLI commands on Pantheon sites using [Terminus](/terminus), the Pantheon CLI.
 
 ### Does Pantheon support local development?
 

@@ -139,7 +139,7 @@ const Header = ({ data, page }) => (
                     </Link>
                   </li>
                   <li>
-                    <Link id="terminus" to="/guides/terminus">
+                    <Link id="terminus" to="/terminus">
                       Terminus Guide
                     </Link>
                   </li>

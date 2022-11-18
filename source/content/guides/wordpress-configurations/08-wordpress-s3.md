@@ -21,19 +21,13 @@ Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) a site.
 - A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
-- [Terminus](/guides/terminus) installed on your local computer.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-
-  <Alert title="Note" type="info">
-
-  You must enter credit card information when you create an AWS account. This is required, but you will not be charged unless you exceed the usage limits of their free tier.
-
-  </Alert>
+- [Terminus](/terminus) installed on your local computer.
 
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/guides/terminus) commands. Before you begin, set the variable `$site` in your terminal session to match your site name:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -68,7 +62,7 @@ If you do not have an existing bucket for your site, create one:
 
 You must install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://wordpress.org/plugins/amazon-s3-and-cloudfront/).
 
-WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/guides/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
+WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
 
 ### Install and Deploy S3 Uploads
 

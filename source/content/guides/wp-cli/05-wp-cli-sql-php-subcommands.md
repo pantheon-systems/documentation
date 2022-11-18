@@ -15,7 +15,7 @@ This section provides information on how to run SQL queries, PHP code, and subco
 
 ## Run SQL Queries Using WP-CLI on Pantheon
 
-Use `echo` to pipe (or redirect) a SQL query through WP-CLI via [Terminus](/guides/terminus):
+Use `echo` to pipe (or redirect) a SQL query through WP-CLI via [Terminus](/terminus):
 
 ```bash{promptUser: user}
 echo "SELECT * FROM wp_users WHERE ID=1;" | terminus wp $site.$env -- db query

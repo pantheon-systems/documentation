@@ -39,4 +39,4 @@ terminus upstream:updates:apply --updatedb --accept-upstream -- <site>.<env>
 
 - [WordPress and Drupal Core Updates](/core-updates)
 
-- [Upstream Updates with Terminus](/guides/terminus/commands/upstream-updates-apply)
+- [Upstream Updates with Terminus](/terminus/commands/upstream-updates-apply)

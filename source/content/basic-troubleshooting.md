@@ -49,7 +49,7 @@ If you’ve narrowed the problem down to a specific module or plugin and you’r
 
 Sometimes your CMS may encounter issues due to cached data that ends up in an odd state.
 
-- [Clear your site cache](/clear-caches) using the Pantheon Dashboard, or with [Terminus](/guides/terminus/commands/env-clear-cache).
+- [Clear your site cache](/clear-caches) using the Pantheon Dashboard, or with [Terminus](/terminus/commands/env-clear-cache).
 - Clear all keys from the Object Cache using the [Redis CLI](/guides/object-cache/redis-command-line).
 - Review the caching logic for your CMS version. [Drupal 9](/drupal-9-cache), for example, has some specific caching features that may be a factor.
 - For issues confined to a specific page or display element, review the specific [caching logic](/cache-control) for your site or page.
@@ -60,7 +60,7 @@ Sometimes your CMS may encounter issues due to cached data that ends up in an od
 
 Site problems may feel random, but they’re all triggered by _something_. Was there a recent code change? A plugin update? A configuration edit? Rolling things back can be a good first step to troubleshoot, even if it seems unlikely to be related.
 
-We recommend rolling back either the code or database versus a full restore in most cases. You can do this using [Terminus](/guides/terminus/commands/backup-restore).
+We recommend rolling back either the code or database versus a full restore in most cases. You can do this using [Terminus](/terminus/commands/backup-restore).
 
 If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your [nginx access logs](/guides/logs-pantheon/nginx-access-logs).
 

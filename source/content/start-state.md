@@ -64,7 +64,7 @@ Use the following direct links to create a new site on Pantheon from a public di
 
 ## Product UUID
 
-There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/guides/terminus) command:
+There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/terminus) command:
 
 ```bash{promptUser: user}
 terminus upstream:list --all
@@ -72,7 +72,7 @@ terminus upstream:list --all
 
 ## Create Sites with Terminus
 
-Create new sites with [Terminus, the Pantheon CLI](/guides/terminus). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream:
+Create new sites with [Terminus, the Pantheon CLI](/terminus). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream:
 
 ```bash{outputLines: 2-4}
 terminus site:create my-new-panopoly-site "My New Panopoly Site" "Panopoly"

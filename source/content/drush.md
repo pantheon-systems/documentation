@@ -14,7 +14,7 @@ Drush commands require a `settings.php` file, and it's a best practice to have o
 
 Refer to Drush's [install documentation](https://docs.drush.org/en/8.x/install/) for details on installing Drush locally.
 
-Drush-savvy developers should also install and utilize [Terminus](/guides/terminus), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
+Drush-savvy developers should also install and utilize [Terminus](/terminus), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
 If you have a [Composer-based site](/guides/composer), Terminus will use the version of Drush it finds in `vendor/bin/drush` when running Drush commands on the platform.
 
@@ -26,7 +26,7 @@ For details on managing remote and local Drush versions, see [Managing Drush Ver
 
 ## Download Drush Aliases Locally
 
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/guides/terminus) to download your Drush aliases.
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/terminus) to download your Drush aliases.
 
 Authenticate Terminus with [machine tokens](/machine-tokens) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
@@ -80,7 +80,7 @@ Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sit
 
 <Alert type="info" title="Note">
 
-You must be a [site team member](/guides/account-mgmt/workspace-sites-teams/teams) of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/guides/terminus) for sites in which you are not a direct site team member.
+You must be a [site team member](/guides/account-mgmt/workspace-sites-teams/teams) of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
 
 </Alert>
 
@@ -118,7 +118,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 </Alert>
 
-Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/guides/terminus).
+Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus).
 
 **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
 
@@ -350,7 +350,7 @@ Sometimes, you may encounter the following error when running Drush MySQL comman
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
 ```
 
-This can happen when an inactive site has spun down. To resolve this error, wake environments by loading the home page or with the following [Terminus](/guides/terminus) command:
+This can happen when an inactive site has spun down. To resolve this error, wake environments by loading the home page or with the following [Terminus](/terminus) command:
 
 ```bash{promptUser: user}
 terminus env:wake SITENAME.ENV

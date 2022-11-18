@@ -173,7 +173,7 @@ You can revert a past commit that has been pushed to your Test or Live environme
 
 ## Reset Dev Environment to Live
 
-You can reset your Dev environment history to match the current state of your Live environment using [Terminus](/guides/terminus). The method in this section is destructive and should be used with caution. It does not clone the Live environment's database or files down to Dev. However, it does reset the Dev environment's codebase. 
+You can reset your Dev environment history to match the current state of your Live environment using [Terminus](/terminus). The method in this section is destructive and should be used with caution. It does not clone the Live environment's database or files down to Dev. However, it does reset the Dev environment's codebase. 
 
 1. Identify the most recent commit deployed to Live.
 

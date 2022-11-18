@@ -27,4 +27,4 @@ Your content will be cloned into the environment you selected in step 1.
 
 ## More Resources
 
-- [Terminus Commands: terminus env:clone-content](/guides/terminus/commands/env-clone-content)
+- [Terminus Commands: terminus env:clone-content](/terminus/commands/env-clone-content)
