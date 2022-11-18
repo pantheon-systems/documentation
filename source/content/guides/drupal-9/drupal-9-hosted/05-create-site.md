@@ -3,7 +3,6 @@ title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Create the Drupal 9 Site
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
