@@ -15,8 +15,8 @@ contenttype: guide
 categories: [migrate]
 newcms: [drupal]
 audience: [develpment]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Provided Host Name Not Valid

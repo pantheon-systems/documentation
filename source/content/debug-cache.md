@@ -9,7 +9,7 @@ categories: [cache, cookies]
 newcms: [wordpress, drupal]
 audience: [development]
 product: [cdn]
-integration: []
+integration: [--]
 ---
 
 ## Before You Begin

@@ -9,9 +9,9 @@ permalink: docs/:basename
 editpath: dns-providers/fasthosts.md/
 newtype: doc
 categories: [domains]
-newcms: []
-audience: []
-product: []
+newcms: [--]
+audience: [--]
+product: [--]
 integration: [cloudfare]
 ---
 ## Before You Begin

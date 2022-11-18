@@ -11,11 +11,11 @@ anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-createempty-md/17-troubleshooting.md
 reviewed: "2021-03-31"
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal9]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Permission denied (publickey)

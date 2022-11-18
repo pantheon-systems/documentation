@@ -9,7 +9,7 @@ categories: [help]
 newcms: [drupal, drupal7, drupal8, drupal9, wordpress]
 audience: [agency, development]
 product: [cdn, localdev, search, siteportfolio, terminus]
-integration: []
+integration: [--]
 ---
 
 This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.

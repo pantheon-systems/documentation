@@ -8,7 +8,7 @@ categories: [optimize]
 newcms: [drupal9]
 audience: [agency, development]
 product: [cdn]
-integration: []
+integration: [--]
 ---
 
 To maximize your site’s performance on Pantheon and to take advantage of our Global CDN, you'll need to configure your site's performance settings.

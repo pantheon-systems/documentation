@@ -8,7 +8,7 @@ categories: [automate]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: []
+integration: [--]
 ---
 [<dfn id="ci">Continuous Integration</dfn>](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/guides/support/contact-support/).
 

@@ -7,8 +7,8 @@ newtype: doc
 categories: [optimize]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 This article covers the most common causes for performance problems, demonstrates how to diagnose bottlenecks, and provides actionable solutions for developers.
 

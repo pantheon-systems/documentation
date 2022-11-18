@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [plans]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section introduces methods Pantheon offers to help troubleshoot traffic incidents and optimize traffic efficiency.

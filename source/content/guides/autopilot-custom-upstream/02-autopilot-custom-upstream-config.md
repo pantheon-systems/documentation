@@ -10,10 +10,10 @@ permalink: docs/guides/autopilot-custom-upstream/autopilot-custom-upstream-confi
 anchorid: autopilot-custom-upstream-config
 contenttype: guide
 categories: [automate]
-newcms: []
+newcms: [--]
 audience: [development]
 product: [autopilot]
-integration: []
+integration: [--]
 ---
 
 There are three use cases for combining Autopilot and Custom Upstreams on the Pantheon platform.

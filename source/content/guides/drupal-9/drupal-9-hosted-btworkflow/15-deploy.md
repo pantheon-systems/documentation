@@ -12,11 +12,11 @@ anchorid: deploy
 editpath: drupal-9/drupal-9-hosted-btworkflow/15-deploy.md
 reviewed: "2021-03-31"
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal9]
 audience: [development]
 product: [dashboard, terminus]
-integration: []
+integration: [--]
 ---
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, or with Terminus using the following command:

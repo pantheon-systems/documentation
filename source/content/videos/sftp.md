@@ -9,10 +9,10 @@ layout: video
 type: video
 newtype: doc
 categories: [sftp]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 <Youtube src="ktesh9SiHfc" title="On Server Development" />

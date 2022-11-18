@@ -7,7 +7,7 @@ categories: [cache, optimize]
 newcms: [drupal, drupal9, drupal7]
 audience: [development]
 product: [cdn]
-integration: []
+integration: [--]
 ---
 To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/guides/global-cdn/global-cdn-caching), you'll need to configure your site's performance settings.
 

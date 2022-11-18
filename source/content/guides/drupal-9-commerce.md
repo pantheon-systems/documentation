@@ -11,7 +11,7 @@ contenttype: guide
 categories: [git]
 newcms: [drupal]
 audience: [development]
-product: []
+product: [--]
 integration: [modules]
 ---
 

@@ -6,8 +6,8 @@ newtype: doc
 categories: [migrate, database, backup]
 newcms: [drupal, wordpress]
 audience: [agency, development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 There are some hosting providers that block complete site exports from cPanel, making it difficult to migrate the site elsewhere. The following steps will walk you through how to export sites with limited cPanel access, such as GoDaddy.

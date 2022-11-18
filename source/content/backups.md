@@ -6,8 +6,8 @@ newtype: doc
 categories: [backup]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 The Backups tab is where you manage all the details for your site's backup. Each backup contains three components: code, database, and files.

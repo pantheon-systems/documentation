@@ -5,10 +5,10 @@ contributors: [alexfornuto]
 tags: [collaborate]
 newtype: doc
 categories: [create]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This self-referencing document can be used as a starting point to write your own new doc for Pantheon. Start with an overview of the topic, which may include a summary of what will be accomplished after following the instructions.

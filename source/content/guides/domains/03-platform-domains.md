@@ -11,10 +11,10 @@ permalink: docs/guides/domains/platform-domains
 anchorid: platform-domains
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development, sysadmin]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 
 This section provides information Pantheon platform domains.

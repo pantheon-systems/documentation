@@ -10,10 +10,10 @@ permalink: docs/guides/domains/vanity-domains
 anchorid: vanity-domains
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development, sysadmin]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 
 This section provides information on to set up a vanity domain.

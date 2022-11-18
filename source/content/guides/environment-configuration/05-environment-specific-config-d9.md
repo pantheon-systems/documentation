@@ -10,11 +10,11 @@ showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config-d9
 anchorid: environment-specific-config-d9
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal9]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to manage verbose debugging options and system performance settings for individual environments.

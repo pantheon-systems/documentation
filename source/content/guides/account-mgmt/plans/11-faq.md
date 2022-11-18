@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/plans/11-faq.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [plans]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ### Can I host more than one site on an individual plan?

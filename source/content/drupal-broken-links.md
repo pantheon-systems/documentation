@@ -6,8 +6,8 @@ newtype: doc
 categories: [update, domain, launch]
 newcms: [drupal, drupal7]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Update Links Referencing IP:Port

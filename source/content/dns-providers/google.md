@@ -8,9 +8,9 @@ permalink: docs/:basename
 editpath: dns-providers/google.md/
 newtype: doc
 categories: [domains]
-newcms: []
-audience: []
-product: []
+newcms: [--]
+audience: [--]
+product: [--]
 integration: [google]
 ---
 ## Before You Begin

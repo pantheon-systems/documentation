@@ -10,10 +10,10 @@ permalink: docs/guides/domains/troubleshooting
 anchorid: troubleshooting
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section provides information on common domain troubleshooting scenarios.

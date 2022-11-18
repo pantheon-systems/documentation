@@ -16,7 +16,7 @@ categories: [migrate]
 newcms: [drupal]
 audience: [development]
 product: [terminus]
-integration: []
+integration: [--]
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.

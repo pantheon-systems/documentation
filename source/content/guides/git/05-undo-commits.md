@@ -8,11 +8,11 @@ showtoc: true
 permalink: docs/guides/git/undo-commits
 anchorid: undo-commits
 contenttype: guide
-categories: []
-newcms: []
+categories: [--]
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Git makes it easy to reverse commits pushed to the Pantheon Dev environment.

@@ -11,11 +11,11 @@ anchorid: prepare
 editpath: hosted/03-prepare.md
 reviewed: "2021-03-31"
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal9]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 <Partial file="drupal-9/prepare-local-environment-no-clone-new.md" />

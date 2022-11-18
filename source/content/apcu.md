@@ -7,8 +7,8 @@ newtype: doc
 categories: [cache]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 **APCu** is a user-accessible PHP cache. Pantheon provides APCu by default across all plans, but the size of the APCu memory cache ([apc.shm_size](https://www.php.net/manual/en/apcu.configuration.php#ini.apcu.shm-size)) varies depending on the service level. See the [Application Containers overview](/application-containers) to learn more about APCu on Pantheon's container architecture.

@@ -8,9 +8,9 @@ permalink: docs/:basename
 editpath: dns-providers/gandi.md/
 newtype: doc
 categories: [domains]
-newcms: []
-audience: []
-product: []
+newcms: [--]
+audience: [--]
+product: [--]
 integration: [gandi]
 ---
 ## Before You Begin

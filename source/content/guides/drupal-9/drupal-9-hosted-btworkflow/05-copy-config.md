@@ -15,7 +15,7 @@ categories: [migrate, git]
 newcms: [drupal]
 audience: [development]
 product: [terminus]
-integration: []
+integration: [--]
 ---
 
 Copy any existing configuration from the source site and update the source path as needed to match your configuration folder:

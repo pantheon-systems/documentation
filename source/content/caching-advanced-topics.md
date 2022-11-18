@@ -7,8 +7,8 @@ newtype: doc
 categories: [cache]
 newcms: [drupal7, drupal9, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 ## Allow a User to Bypass the Cache
 
