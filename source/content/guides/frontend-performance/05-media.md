@@ -64,6 +64,8 @@ Use this new [HTML Tag](https://www.w3schools.com/tags/tag_picture.asp) to defin
 
 Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option to do so.
 
-The Pantheon Global CDN does not offer image optimization as a feature, but sites that rely on a third-party CDN service provider might have the option of smushing at the CDN level.
+The Pantheon Global CDN is limited to IO Starter. Sites that rely on a third-party CDN service provider might have the option of smushing at the CDN level for image optimization.
 
 For images that are a part of your theme or module/plugin, you can smush them before committing them to Git with an application like [ImageOptim](https://imageoptim.com/mac).
+
+Refer to [AGCDN with WAF/IO Features](/guides/agcdn/agcdn-wafio) if you are interested in advanced image optimization on the Pantheon platform.
