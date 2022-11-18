@@ -12,7 +12,7 @@ categories: [git, test, updates]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
-integration: []
+integration: [--]
 ---
 
 This section provides steps to switch an existing site's Custom Upstream to a different Custom Upstream.

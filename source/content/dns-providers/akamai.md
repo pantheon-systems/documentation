@@ -9,10 +9,10 @@ permalink: docs/:basename
 editpath: dns-providers/akamai.md/
 newtype: doc
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 ## Before You Begin
 Be sure that you have a:

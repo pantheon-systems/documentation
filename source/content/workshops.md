@@ -5,10 +5,10 @@ contributors: [davidneedham]
 layout: resource
 newtype: doc
 categories: [help]
-newcms: []
-audience: []
-product: []
-integration: []
+newcms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 ---
 
 <ResourceSelector />

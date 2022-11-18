@@ -16,7 +16,7 @@ categories: [migrate]
 newcms: [drupal]
 audience: [development]
 product: [integrated-composer]
-integration: []
+integration: [--]
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

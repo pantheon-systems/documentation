@@ -11,10 +11,10 @@ permalink: docs/guides/domains/primary-domain
 anchorid: primary-domain
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development, sysadmin]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 
 This section provides information on how to choose and configure your primary domain.

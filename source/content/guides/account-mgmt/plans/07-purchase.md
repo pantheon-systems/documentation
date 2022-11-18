@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/plans/07-purchase.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [plans]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section covers purchasing a new plan. 

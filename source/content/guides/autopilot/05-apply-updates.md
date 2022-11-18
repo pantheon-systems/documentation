@@ -12,10 +12,10 @@ editpath: autopilot/05-apply-updates.md
 reviewed: "2021-08-09"
 contenttype: guide
 categories: [automate]
-newcms: []
+newcms: [--]
 audience: [development]
 product: [autopilot]
-integration: []
+integration: [--]
 ---
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it tries to apply updates.

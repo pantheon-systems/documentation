@@ -8,9 +8,9 @@ permalink: docs/:basename
 editpath: dns-providers/godaddy.md/
 newtype: doc
 categories: [domains]
-newcms: []
-audience: []
-product: []
+newcms: [--]
+audience: [--]
+product: [--]
 integration: [godaddy]
 ---
 ## Before You Begin

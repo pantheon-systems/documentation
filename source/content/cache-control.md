@@ -6,8 +6,8 @@ newtype: doc
 categories: [cache]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Exclude Specific Pages from Caching

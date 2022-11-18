@@ -9,10 +9,10 @@ permalink: docs/:basename
 editpath: dns-providers/microsoft.md/
 newtype: doc
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Before You Begin

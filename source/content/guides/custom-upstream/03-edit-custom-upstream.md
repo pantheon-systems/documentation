@@ -12,7 +12,7 @@ categories: [git, test, updates]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
-integration: []
+integration: [--]
 ---
 
 This section provides information on editing an existing Custom Upstream.

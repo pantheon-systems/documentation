@@ -4,11 +4,11 @@ description: Learn how to install and configure Cygwin on Windows computers for 
 tags: [local, ssh]
 reviewed: "2020-02-05"
 newtype: doc
-categories: []
-newcms: []
+categories: [--]
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 <Alert title="Warning" type="danger" >

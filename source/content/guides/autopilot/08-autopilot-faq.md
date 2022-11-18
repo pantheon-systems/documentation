@@ -11,10 +11,10 @@ permalink: docs/guides/autopilot/autopilot-faq/
 reviewed: "2022-06-14"
 contenttype: guide
 categories: [automate]
-newcms: []
+newcms: [--]
 audience: [development]
 product: [autopilot]
-integration: []
+integration: [--]
 ---
 
 This section provides answers to frequently asked questions about Autopilot.

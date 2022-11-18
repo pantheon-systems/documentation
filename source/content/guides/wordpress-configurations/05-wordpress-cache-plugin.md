@@ -8,8 +8,8 @@ newtype: doc
 categories: [optimize]
 newcms: [wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 permalink: docs/guides/wordpress-configurations/wordpress-cache-plugin
 anchorid: wordpress-cache-plugin
 ---

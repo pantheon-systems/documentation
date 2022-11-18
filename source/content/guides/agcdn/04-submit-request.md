@@ -11,10 +11,10 @@ permalink: docs/guides/agcdn/submit-request
 anchorid: submit-request
 contenttype: guide
 categories: [optimize, cookies, help]
-newcms: []
+newcms: [--]
 audience: [development]
 product: [cdn]
-integration: []
+integration: [--]
 ---
 
 This section provides information on how to submit a configuration or support request for your AGCDN account.

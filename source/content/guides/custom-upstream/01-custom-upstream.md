@@ -12,7 +12,7 @@ categories: [git, test, updates]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
-integration: []
+integration: [--]
 ---
 
 <Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />

@@ -12,10 +12,10 @@ editpath: autopilot/02-enable-autopilot.md
 reviewed: "2022-04-05"
 contenttype: guide
 categories: [automate]
-newcms: []
+newcms: [--]
 audience: [development]
 product: [autopilot]
-integration: []
+integration: [--]
 ---
 
 ## Enable Autopilot

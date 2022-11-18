@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [accounts]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This guide is specific to sites management, not developing and launching sites.

@@ -8,7 +8,7 @@ categories: [cache, cookies, deploy, domains, help]
 newcms: [wordpress,drupal]
 audience: [development, sysadmin]
 product: [cdn]
-integration: []
+integration: [--]
 ---
 
 This page is a collection of common troubleshooting tactics, curated from our Customer Success Engineers and the Pantheon community. These procedures can help you solve issues your site may have, or rule out potential causes.

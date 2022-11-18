@@ -5,10 +5,10 @@ tags: [dns]
 reviewed: "2020-04-16"
 newtype: doc
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Pantheon provides DNS host-specific instructions on how to connect your domain from your DNS provider to Pantheon.

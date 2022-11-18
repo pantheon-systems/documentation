@@ -10,10 +10,10 @@ permalink: docs/guides/domains/domains-faq
 anchorid: domains-faq
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development, sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section provides answers to frequently asked questions about domains and DNS on Pantheon.

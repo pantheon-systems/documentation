@@ -8,10 +8,10 @@ permalink: docs/:basename
 editpath: dns-providers/1-and-1.md/
 newtype: doc
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 <Alert title="Warning" type="danger">
 

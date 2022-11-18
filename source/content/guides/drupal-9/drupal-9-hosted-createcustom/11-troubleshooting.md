@@ -12,11 +12,11 @@ anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-createcustom/13-troubleshooting.md
 reviewed: "2021-03-31"
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal9]
 audience: [agency, development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Working With Dependency Versions

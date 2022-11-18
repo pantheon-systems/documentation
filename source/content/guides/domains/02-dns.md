@@ -11,10 +11,10 @@ permalink: docs/guides/domains/dns
 anchorid: dns
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development, sysadmin]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 
 Pantheon does not offer DNS management services. However, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.

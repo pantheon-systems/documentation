@@ -9,7 +9,7 @@ categories: [sftp]
 newcms: [wordpress, drupal]
 audience: [development]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/guides/git/git-config) or working in the WordPress or Drupal admin interface in [SFTP](/sftp) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/guides/multidev)) in **SFTP** mode.
 

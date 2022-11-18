@@ -7,8 +7,8 @@ newtype: doc
 categories: [create]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Select the site's framework during the [site creation process](/guides/legacy-dashboard/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal 9, and Drupal 7.
