@@ -33,8 +33,8 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table. 
 
    To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
-   
-   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)   
+
+   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)
 
    To enable sites in bulk, select the sites you wish to activate, and click the **Activate Autopilot** button. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
 
@@ -45,14 +45,14 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
    <Alert title="Note"  type="info" >
 
    Autopilot will pre-select a few pages for visual regression testing and will set the frequency to weekly by default.
-   
+
    </Alert>
-      
+
    During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
 
-## Autopilot Setup Wizard   
+## Autopilot Setup Wizard
 
-The Autopilot setup wizard automatically displays after you click **Customize** when you activate Autopilot for a single site. You must complete all items in the Configuration, Schedule, and Visual Review steps. 
+The Autopilot setup wizard automatically displays after you click **Customize** when you activate Autopilot for a single site. You must complete all items in the Configuration, Schedule, and Visual Review steps.
 
 ### Configuration
 
@@ -190,9 +190,38 @@ You can add any CSS selectors that you want to exclude from the visual regressio
 
 1. Click **Save**.
 
-## Configure Autopilot for Premium and Paid Plugins and Modules
+## Configure Autopilot for Premium and Paid Plugins
 
-Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
+Autopilot supports the use of premium and paid WordPress plugins. It is important to note that premium and paid plugin configuration varies case-by-case depending on how individual plugins handle their licensing.
+
+Before you begin:
+
+1. Review the [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) document.
+
+1. Ensure that the plugins or themes are compatible with Pantheon. Plugins and themes will not work on Pantheon if they:
+
+      - Require Apache
+      - Require customized `.htaccess` files
+      - Require modifications to Nginx configuration files
+      - Require PostgreSQL or other non-MySQL compatible databases
+
+1. Review the [Install Plugins section](/guides/wordpress-git/plugins/) of the [Using Git with SFTP and WordPress](/guides/wordpress-git/) guide to ensure that you install your plugins correctly.
+
+### General Paid and Premium Plugin Autopilot Configuration
+
+In general, if the paid or premium plugin's license is active on your Dev environment before the Autopilot environment is created/converged, it should be active on your Autopilot environment at update time.
+
+### License Activation Required on Individual Environments
+
+Some premium and paid plugins require the license to be explicitly activated on each environment, for example, if you are registering the site for a per-domain license.
+
+1. Ensure that the plugin updates work with WP-CLI (99% plugins work with WP-CLI).
+
+1. Ensure that the license is active on your Dev environment.
+
+1. Activate the license on your Autopilot environment. **Do not** remove the license on the Dev environment.
+
+1. Provide Autopilot with access if the plugin requires it (this varies by plugin) and/or configure the plugin as needed.
 
 ## Enable Autopilot Email Notifications
 
