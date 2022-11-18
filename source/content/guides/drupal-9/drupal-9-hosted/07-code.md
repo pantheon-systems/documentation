@@ -3,7 +3,6 @@ title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Migrate the Code
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted/code
 anchorid: code
 editpath: hosted/07-code.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate]
+newcms: [drupal9]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 1. From the local Drupal 9 site's directory, use Terminus to retrieve the D8 site's Git URL:

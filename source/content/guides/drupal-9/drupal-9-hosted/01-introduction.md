@@ -14,8 +14,8 @@ contenttype: guide
 categories: [overview, migrate]
 newcms: [drupal8, drupal9]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:
