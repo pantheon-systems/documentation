@@ -14,37 +14,7 @@ anchorid: configuration
 
 This section provides information on how to configure your machine for successful local development with Pantheon.
 
-<<<<<<< HEAD:source/content/guides/local-development/02-configuration.md
 ## Export Variables
-=======
-Pantheon cannot troubleshoot or [support local development](/guides/support/#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/guides/multidev).
-
-If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
-
-## Before You Begin
-
-There are three parts to any dynamic website:
-
-1. **Code**: The application, modules or plugins, and themes.
-
-1. **Database**: The content.
-
-1. **Files**: User uploaded or application generated.
-
-You will need to transfer each file from Pantheon to your local environment.
-
-Be sure you have:
-
-- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) are compatible.
-  - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
-  - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
-- Git client for tracking code changes
-- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
-- [Terminus](/terminus)
-- [Drush](/guides/drush) (optional)
-
-### Export Variables
->>>>>>> b42e6bbd18d31bc25d55e58639303e4e95764bad:source/content/local-development.md
 
 <Partial file="export-alias.md" />
 
