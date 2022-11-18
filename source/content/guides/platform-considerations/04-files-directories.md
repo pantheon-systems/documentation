@@ -35,7 +35,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Alternative Approaches
 
-You can run the export from the command line using tools like [Terminus](/guides/terminus), [Drush](/guides/drush), [WP-CLI](/guides/wp-cli) and cron, which will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. Refer to [Timeouts on Pantheon](/timeouts) for more information. You won't need to batch your export, which allows it to run to completion on a single application container.
+You can run the export from the command line using tools like [Terminus](/terminus), [Drush](/guides/drush), [WP-CLI](/guides/wp-cli) and cron, which will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. Refer to [Timeouts on Pantheon](/timeouts) for more information. You won't need to batch your export, which allows it to run to completion on a single application container.
 
 The best solution is often to implement data exports as a web service, incrementally exchanging the data with the target system.
 
@@ -72,7 +72,7 @@ If you are distributing large binaries or hosting big media files, we recommend 
 
 You cannot upload files over 100MB through the CMS even when using an external CDN to host files. You can upload these files directly to the CDN. Refer to Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html) for more information.
 
-You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/wordpress-s3) for more information about integrating S3 with your Pantheon site.
+You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/guides/wordpress-configurations/wordpress-s3) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
 

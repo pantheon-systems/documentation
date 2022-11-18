@@ -46,7 +46,7 @@ First, determine if your MySQL client supports TLS.
 
 Set up your SSH tunnel in Terminus:
 
-1. Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/guides/terminus):
+1. Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/terminus):
 
   ```bash:title=sql-tls.sh
   terminus-sql-cli() {

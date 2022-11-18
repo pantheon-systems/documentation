@@ -29,7 +29,7 @@ This is especially useful for third party dependencies, such as those installed 
 
 ## Disable One-click Updates
 
-If you wish to stop using one-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/guides/terminus):
+If you wish to stop using one-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
 
 <TabList>
 
@@ -55,7 +55,7 @@ terminus site:upstream:set <site> empty-wordpress
 
 Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
 
-1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/guides/terminus):
+1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> git

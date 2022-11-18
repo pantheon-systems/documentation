@@ -104,7 +104,7 @@ If you're having problems cloning your Git repository, verify your SSH key in yo
 
 This occurs when you have multiple SSH keys. For more information, see [Permission Denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
-1. Use [Terminus](/guides/terminus) to identify the Git host:
+1. Use [Terminus](/terminus) to identify the Git host:
 
   ```bash{promptUser: user}
   terminus connection:info <site>.dev --fields=git_host

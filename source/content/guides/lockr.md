@@ -19,7 +19,7 @@ Lockr provides a simple-to-use developer interface with a managed scalable cloud
 
 ## Install Lockr via the Lockr Terminus Plugin
 
-[The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/guides/terminus) command. To enable the Terminus plugin, complete the following steps in your local environment:
+[The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/terminus) command. To enable the Terminus plugin, complete the following steps in your local environment:
 
 1. Clone [the Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) into the `~/terminus/plugins` directory on your local environment.
 
@@ -46,13 +46,13 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
 
 If you do need to upload module files directly to the server, be sure to use SFTP and not FTP.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/guides/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
  ```
 
-1. Install and activate the [Lockr](https://wordpress.org/plugins/lockr) plugin from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lockr`) or with [Terminus](/guides/terminus):
+1. Install and activate the [Lockr](https://wordpress.org/plugins/lockr) plugin from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lockr`) or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus wp <site>.<env> -- plugin install lockr --activate
@@ -66,7 +66,7 @@ If you do need to upload module files directly to the server, be sure to use SFT
 
 1. Create keys within **Lockr** > **Add Keys** and manage existing keys within **Lockr** > **All Keys**.
 
-1. Visit the [Lockr patch library](https://github.com/lockr/lockr-patches/tree/wp) for the latest patches to your favorite plugins or apply patches with [Terminus](/guides/terminus):
+1. Visit the [Lockr patch library](https://github.com/lockr/lockr-patches/tree/wp) for the latest patches to your favorite plugins or apply patches with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus wp <site>.<env> -- lockr lockdown
@@ -124,7 +124,7 @@ You can enable the module by navigating to `/admin/modules`, checking the box ne
 
 Lockr is also available for Drupal 7. Refer to the project's [GitHub page](https://github.com/lockr/lockr-patches/tree/drupal7) for a list of modules that can be automatically patched.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/guides/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp

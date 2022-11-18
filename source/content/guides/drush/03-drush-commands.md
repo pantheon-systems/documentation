@@ -41,7 +41,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 </Alert>
 
-Drupal's list of PHP classes and files can become corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/guides/terminus).
+Drupal's list of PHP classes and files can become corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus).
 
 **Do not attempt to install the module on your site.** This command is provided as-is and without warranty. You must create a [backup](/backups) before continuing.
 

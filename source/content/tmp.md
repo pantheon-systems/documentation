@@ -7,7 +7,7 @@ tags: [cli, code, files]
 
 <Alert title="Exports" type="export">
 
-This doc uses [Terminus](/guides/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
+This doc uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
 
 ```bash
 export env=dev
@@ -57,7 +57,7 @@ Correct an unsupported temporary path set by a plugin or theme in `wp-config.php
   }
   ```
 
-1. Verify the setting by using [Terminus](/guides/terminus) to run `wp config get`:
+1. Verify the setting by using [Terminus](/terminus) to run `wp config get`:
 
   ```bash{promptUser: user}
   terminus wp $site.$env -- config get SOME_TMP_SETTING
@@ -81,7 +81,7 @@ Correct an unsupported temporary path set by a module or theme using `$conf` ove
   }
   ```
 
-1. Verify the setting by using [Terminus](/guides/terminus) to run `drush variable-get`:
+1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
 
   ```bash
   terminus drush $site.$env -- variable-get some_tmp_setting
@@ -147,7 +147,7 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
 
     - The `private` and `tmp` directories do not exist by default. you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-1. Verify the setting by using [Terminus](/guides/terminus) to run `wp config get`:
+1. Verify the setting by using [Terminus](/terminus) to run `wp config get`:
 
     ```bash
     terminus wp $site.$env -- config get SOME_TMP_SETTING
@@ -173,7 +173,7 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
 
     - The `private` and `tmp` directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-1. Verify the setting by using [Terminus](/guides/terminus) to run `drush variable-get`:
+1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
 
     ```bash{promptUser: user}
     terminus drush $site.$env -- variable-get some_tmp_setting

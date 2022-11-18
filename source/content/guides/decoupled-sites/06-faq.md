@@ -2,7 +2,6 @@
 title: Pantheon Front-End Sites
 subtitle: Frequently Asked Questions
 description: Learn about frequently asked questions for Pantheon's decoupled architecture using Front-End Sites.
-categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, joa-pan]
 type: guide
@@ -12,6 +11,12 @@ anchorid: faq
 permalink: docs/guides/decoupled-sites/faq/
 editpath: decoupled-sites/06-faq.md
 reviewed: "2022-08-11"
+contenttype: guide
+categories: [create]
+newcms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
 ---
 
 

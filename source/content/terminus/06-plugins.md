@@ -2,10 +2,12 @@
 title: Terminus Guide
 subtitle: Install Plugins
 description: Learn how to install plugins with Terminus.
-layout: guide
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/plugins
+permalink: docs/terminus/plugins
 anchorid: plugins
 ---
 
@@ -41,7 +43,7 @@ Most plugins are published online as a Git repository. You can install the plugi
 
 1. Click **<span class="glyphicons glyphicon-save"></span> Code** on the repository home page:
 
-    ![Click Code and copy the repository URL](../../../images/github/github-code-clone-ssh.png "GitHub clone URL")
+    ![Click Code and copy the repository URL](../../images/github/github-code-clone-ssh.png "GitHub clone URL")
 
 1. Open a terminal window on your computer and run the following commands:
 

@@ -44,7 +44,7 @@ Read our [Local Development](/guides/local-development) doc to learn about devel
 
 ## Manage Custom Code in WordPress with Plugins
 
-Review our [Managing Custom Code for WordPress with Plugins](/wordpress-custom-code) doc to learn how to manage custom plugins or themes for WordPress sites using GitHub Updater or WP Pusher.
+Review our [Managing Custom Code for WordPress with Plugins](/guides/wordpress-configurations/wordpress-custom-code) doc to learn how to manage custom plugins or themes for WordPress sites using GitHub Updater or WP Pusher.
 
 ## AWS S3 Setup for WordPress
 

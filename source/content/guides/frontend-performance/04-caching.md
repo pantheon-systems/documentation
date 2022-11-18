@@ -222,7 +222,7 @@ Working across many environments presents opportunities for configuration change
 
 <Tab title="WordPress" id="wp-config-get" active={true}>
 
-The [Pantheon Page Cache plugin](/wordpress-cache-plugin) is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
+The [Pantheon Page Cache plugin](/guides/wordpress-configurations/wordpress-cache-plugin) is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
 1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
 

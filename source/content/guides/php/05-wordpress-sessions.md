@@ -64,7 +64,7 @@ Alternatively, you can inspect the headers using `curl -sI example.com` after ea
 
 Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin if `$_SESSIONs` are necessary for your application:
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/guides/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
@@ -81,21 +81,21 @@ Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-nat
  ```bash{promptUser: user}
  terminus env:commit --message "Adding php native sessions plugin" -- <site>.<env>
  ```
- ([More options for this command](/guides/terminus/commands/env-commit))
+ ([More options for this command](/terminus/commands/env-commit))
  
 1. Merge your changes into Dev if you are working on a Multidev: 
 
  ```bash{promptUser: user}
  terminus multidev:merge-to-dev -- <site>.<multidev>
  ```
- ([More options for this command](/guides/terminus/commands/multidev-merge-to-dev))
+ ([More options for this command](/terminus/commands/multidev-merge-to-dev))
 
 1. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
 
  ```bash{promptUser: user}
  terminus env:deploy <site>.test --sync-content --updatedb --note="Install WordPress Native PHP Sessions plugin"
  ```
- ([More options for this command](/guides/terminus/commands/env-deploy))
+ ([More options for this command](/terminus/commands/env-deploy))
 
 1. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
@@ -108,7 +108,7 @@ Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-nat
  ```bash{promptUser: user}
  terminus env:deploy <site>.live --note="Install WordPress Native PHP Sessions plugin"
  ```
- ([More options for this command](/guides/terminus/commands/env-deploy))
+ ([More options for this command](/terminus/commands/env-deploy))
 
 1. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 

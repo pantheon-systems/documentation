@@ -38,5 +38,5 @@ All plans, except for the Basic plan, can use Object Cache. Sandbox site plans c
 
 - [Site Plans FAQs](/guides/account-mgmt/plans/faq)
 - [Drupal Performance and Caching Settings](/drupal-cache)
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
 - [Debug Caching Issues](/debug-cache)

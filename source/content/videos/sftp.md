@@ -33,7 +33,7 @@ So let’s look at the site. I’ll see the change in the date formatting that I
 
 While I’m doing on-server development, I can get some other work done, such as updating a module or plugin to the dashboard user interface. Since this plugin update is basically just a code change, of course I’m going to go back to dashboard and commit it.
 
-For those of us who like to use command line tools, if I have [Terminus](/guides/terminus) installed, I can use Drush or WP-CLI to download modules to the Dev environment. In this case, I’ll run the command that downloads and activates the WordPress plugin for [Optimizely](https://wordpress.org/plugins/optimizely/). As with the first 2 examples, nothing lasts forever unless it’s stored in the Git repository. So I’ll add a message and commit it.
+For those of us who like to use command line tools, if I have [Terminus](/terminus) installed, I can use Drush or WP-CLI to download modules to the Dev environment. In this case, I’ll run the command that downloads and activates the WordPress plugin for [Optimizely](https://wordpress.org/plugins/optimizely/). As with the first 2 examples, nothing lasts forever unless it’s stored in the Git repository. So I’ll add a message and commit it.
 
 While I’m doing on-server development, the Dev environment is writable, but it’s also blocking anyone from pushing to it via Git, so I switch it back to Git mode on the dashboard.
 

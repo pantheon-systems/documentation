@@ -51,7 +51,7 @@ Follow the steps below to keep your `phpinfo` file secure.
 
 ## Terminus
 
-You can use [Terminus](/guides/terminus) to check your `phpinfo` values as an alternative to exposing information on a web-accessible URL:
+You can use [Terminus](/terminus) to check your `phpinfo` values as an alternative to exposing information on a web-accessible URL:
 
 ```bash{promptUser: user}
 terminus remote:drush <SITE>.<ENV> -- ev "print(phpinfo())"

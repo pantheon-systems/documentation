@@ -64,11 +64,11 @@ foreach ($regex_path_patterns as $regex_path_pattern) {
 
 <Tab title="WordPress" id="wp">
 
-Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/wordpress-cache-plugin) plugin for all matching requests:
+Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/guides/wordpress-configurations/wordpress-cache-plugin) plugin for all matching requests:
 
 <Alert title="Note" type="info">
 
-Place this code in an [MU Plugin](/mu-plugin) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+Place this code in an [MU Plugin](/guides/wordpress-configurations/mu-plugin) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
 
 </Alert>
 

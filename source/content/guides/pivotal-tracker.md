@@ -18,7 +18,7 @@ Be sure to:
 
 - Have an active pivotal tracker account
 - Have a Drupal or WordPress site on Pantheon, with a local clone of the repository.
-- Locally install [Terminus](/guides/terminus):
+- Locally install [Terminus](/terminus):
 
   ```bash{promptUser: user}
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install

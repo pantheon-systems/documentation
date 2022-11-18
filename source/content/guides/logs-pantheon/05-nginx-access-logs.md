@@ -27,7 +27,7 @@ Requests served by the [Pantheon Global CDN](/guides/global-cdn) will not hit th
 
 Be sure that you have:
 
-- [Terminus](/guides/terminus)
+- [Terminus](/terminus)
 - [GoAccess](https://goaccess.io/download)
   - **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   - **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)

@@ -2,10 +2,12 @@
 title: Terminus Guide
 subtitle: Terminus Configuration File
 description: Learn how to configure your local Terminus configuration file.
-layout: guide
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/configuration
+permalink: docs/terminus/configuration
 anchorid: configuration
 ---
 
@@ -19,7 +21,7 @@ Any command variable normally passed in the form of `--option=VALUE` is configur
 
 Run the `--help` option in your terminal for a list of available options for a given command (e.g., available `--fields` or `--format` options):
 
-![Terminus Help Command Example](../../../images/terminus-help-example.png)
+![Terminus Help Command Example](../../images/terminus-help-example.png)
 
 ### Example
 

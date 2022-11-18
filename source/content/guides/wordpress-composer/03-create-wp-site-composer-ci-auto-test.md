@@ -135,7 +135,7 @@ Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org
 
 - `.ci/test/behat/initialize` deletes any existing WordPress user from Behat testing and creates a backup of the environment to be tested.
 
-- `.ci/test/behat/run` sets the `BEHAT_PARAMS` environment variable with dynamic information necessary for Behat and configures it to use [WP-CLI](https://wp-cli.org/) via [Terminus](/guides/terminus). This script also creates the necessary WordPress user, starts headless Chrome, and runs Behat.
+- `.ci/test/behat/run` sets the `BEHAT_PARAMS` environment variable with dynamic information necessary for Behat and configures it to use [WP-CLI](https://wp-cli.org/) via [Terminus](/terminus). This script also creates the necessary WordPress user, starts headless Chrome, and runs Behat.
 
 - `.ci/test/behat/cleanup` restores the previously made database backup, deletes the WordPress user created for Behat testing, and saves screenshots taken by Behat.
 

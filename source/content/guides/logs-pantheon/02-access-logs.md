@@ -101,4 +101,4 @@ Follow the steps below to download your database log files.
 
 - [Develop on Pantheon Directly with SFTP Mode](/sftp)
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)
-- [Terminus Guide](/guides/terminus)
+- [Terminus Guide](/terminus)

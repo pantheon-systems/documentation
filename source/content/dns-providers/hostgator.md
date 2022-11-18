@@ -4,10 +4,15 @@ provider: HostGator
 dnsprovider: true
 description: Learn how to point your HostGator domain to a Pantheon site.
 draft: true
-categories: [go-live]
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/hostgator.md/
+newtype: doc
+categories: [domains]
+newcms: []
+audience: []
+product: []
+integration: [cloudflare, hostgator]
 ---
 ## Before You Begin
 Be sure that you have a:

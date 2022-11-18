@@ -140,7 +140,7 @@ You might encounter the following error when running Drush MySQL commands:
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
 ```
 
-This error response happens when an inactive site has spun down. Wake environments by loading the home page or with the following [Terminus](/guides/terminus) command to resolve this error:
+This error response happens when an inactive site has spun down. Wake environments by loading the home page or with the following [Terminus](/terminus) command to resolve this error:
 
 ```bash{promptUser: user}
 terminus env:wake SITENAME.ENV

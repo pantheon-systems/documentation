@@ -113,5 +113,5 @@ Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-s
 
 - [Lockr](/guides/lockr)
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)
-- [WordPress Configuration Management (WP-CFM)](/wp-cfm)
+- [WordPress Configuration Management (WP-CFM)](/guides/wordpress-configurations/wp-cfm)
 - [Drush on Pantheon](/guides/drush)

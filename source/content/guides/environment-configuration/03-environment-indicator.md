@@ -17,7 +17,7 @@ We recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheo
 
 <Alert title="Exports" type="export">
 
-This doc uses [Terminus](/guides/terminus) example commands with common variable names for the site and environment names. Before you begin these steps, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
+This doc uses [Terminus](/terminus) example commands with common variable names for the site and environment names. Before you begin these steps, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or Multidev) environment:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -30,7 +30,7 @@ export env=dev #or Multidev name
 
 The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue](https://github.com/pantheon-systems/pantheon-hud/issues) with questions, feature requests, or bug reports.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/guides/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set $site.$env sftp
@@ -90,7 +90,7 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 
 The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/guides/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set $site.$env sftp

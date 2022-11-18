@@ -405,7 +405,7 @@ You should now have all three of the major components of your site imported into
 
 1. Confirm that everything looks and behaves as expected.
 
-1. Run the [terminus site:import:complete <site_name>](/guides/terminus/commands/import-complete) command to complete the import process.
+1. Run the [terminus site:import:complete <site_name>](/terminus/commands/import-complete) command to complete the import process.
 
 ## Troubleshooting
 
