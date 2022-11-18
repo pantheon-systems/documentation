@@ -12,7 +12,7 @@ permalink: docs/guides/local-development
 anchorid: local-development
 ---
 
-Pantheon provides several options for on-server development, however, local development has a number of advantages, especially if continuous Internet access is a concern. Pantheon provides powerful local development tools, including [Terminus](/guides/terminus) and [Multidev](/guides/multidev). Pantheon's platform can also be integrated with:
+Pantheon provides several options for on-server development, however, local development has a number of advantages, especially if continuous Internet access is a concern. Pantheon provides powerful local development tools, including [Terminus](/terminus) and [Multidev](/guides/multidev). Pantheon's platform can also be integrated with:
 
 - Lando
 - Jenkins
@@ -40,7 +40,7 @@ Be sure you have:
 - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
 - SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
-- [Terminus](/guides/terminus)
+- [Terminus](/terminus)
 - [Drush](/guides/drush) (optional)
 - [WP-CLI](/guides/wp-cli)
 
@@ -50,6 +50,6 @@ Pantheon cannot troubleshoot or [support local development](/guides/support/#loc
 
 ## More Resources
 
-- [Terminus](/guides/terminus)
+- [Terminus](/terminus)
 - [Drush on Pantheon](/guides/drush)
 - [WP-CLI on Pantheon](/guides/wp-cli)
