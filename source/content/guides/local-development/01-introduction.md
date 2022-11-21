@@ -42,7 +42,7 @@ Be sure you have:
 - SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
 - [Terminus](/terminus)
 - [Drush](/guides/drush) (optional)
-- [WP-CLI](/guides/wp-cli)
+- [WP-CLI on Pantheon](/guides/wp-cli)
 
 ## Support
 
