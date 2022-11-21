@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
-import newGitHubIssueUrl from "new-github-issue-url"
 
 class ReviewReport extends React.Component {
   render() {
@@ -16,13 +15,13 @@ class ReviewReport extends React.Component {
                   excerpt
                   frontmatter {
                     categories
+                    contenttype
+                    integration
+                    newcms
+                    product
                     reviewed
                     tags
                     type
-                    contenttype
-                    product
-                    integration
-                    newcms
                   }
                   fileInfo {
                     childMdx {
@@ -48,7 +47,6 @@ class ReviewReport extends React.Component {
           const [searchProduct, setSearchProduct] = useState("")
           const [searchIntegration, setSearchIntegration] = useState("")
 
-
           const categorizedPages = data.categorizedDocs.edges
 
           return (
@@ -66,14 +64,14 @@ class ReviewReport extends React.Component {
                               id="command-search-newcms"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={i => setSearchnewCms(i.target.value)}
+                              onChange={a => setSearchnewCms(a.target.value)}
                               value={searchnewCms}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={i => setSearchnewCms("")}
+                              onClick={a => setSearchnewCms("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -86,14 +84,14 @@ class ReviewReport extends React.Component {
                               id="command-search-categories"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={x => setSearchCategories(x.target.value)}
+                              onChange={b => setSearchCategories(b.target.value)}
                               value={searchCategories}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={x => setSearchCategories("")}
+                              onClick={b => setSearchCategories("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -106,14 +104,14 @@ class ReviewReport extends React.Component {
                               id="command-search-tags"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={z => setSearchTags(z.target.value)}
+                              onChange={c => setSearchTags(c.target.value)}
                               value={searchTags}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={z => setSearchTags("")}
+                              onClick={c => setSearchTags("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -126,14 +124,14 @@ class ReviewReport extends React.Component {
                               id="command-search-product"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={g => setSearchProduct(g.target.value)}
+                              onChange={d => setSearchProduct(d.target.value)}
                               value={searchProduct}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={g => setSearchProduct("")}
+                              onClick={d => setSearchProduct("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -146,14 +144,14 @@ class ReviewReport extends React.Component {
                               id="command-search-integration"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={h => setSearchIntegration(h.target.value)}
+                              onChange={e => setSearchIntegration(e.target.value)}
                               value={searchIntegration}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={h => setSearchIntegration("")}
+                              onClick={e => setSearchIntegration("")}
                             >
                               <span className="fa fa-times" />
                             </div>
