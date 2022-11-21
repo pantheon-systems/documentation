@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [accounts]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Teams allow you to define the users who will have access to a workspace or site. Team members added to a workspace will have access to all sites in that workspace, whereas team members added to a site can only access that site.

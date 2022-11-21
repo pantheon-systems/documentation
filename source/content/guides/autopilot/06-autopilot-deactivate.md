@@ -11,10 +11,10 @@ anchorid: autopilot-deactivate
 permalink: docs/guides/autopilot/autopilot-deactivate
 contenttype: guide
 categories: [automate]
-newcms: []
+newcms: [--]
 audience: [development]
 product: [autopilot]
-integration: []
+integration: [--]
 ---
 
 This section provides information on how to deactivate Autopilot for an individual site. Autopilot can be deactivated from the Autopilot Index page or the Autopilot Site Configuration page.

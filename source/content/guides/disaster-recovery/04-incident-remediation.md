@@ -13,10 +13,10 @@ anchorid: disaster-recovery
 editpath: disaster-recovery/04-incident-remediation.md
 contenttype: guide
 categories: [cache]
-newcms: []
+newcms: [--]
 audience: [development, sysadmin]
 product: [cdn]
-integration: []
+integration: [--]
 ---
 
 Bringing a site back from downtime and remediating the cause of downtime to ensure that the site stays up post-recovery is a multistep process. Once you have engaged with support and determined the cause of the issue, the recovery process may include the steps below, although the precise playbook will depend on the nature of the issues and the configuration of the site. 

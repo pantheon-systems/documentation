@@ -10,10 +10,10 @@ permalink: docs/guides/domains/hosts-file
 anchorid: hosts-file
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 The `hosts` file exists on all major operating systems. The `hosts` file provides a list of IP addresses and domains that take precedence over DNS assigned values. You can modify your `hosts` file for the following purposes:

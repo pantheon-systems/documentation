@@ -9,9 +9,9 @@ permalink: docs/:basename
 editpath: dns-providers/name-com.md/
 newtype: doc
 categories: [domains]
-newcms: []
-audience: []
-product: []
+newcms: [--]
+audience: [--]
+product: [--]
 integration: [cloudflare]
 ---
 ## Before You Begin

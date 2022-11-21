@@ -16,7 +16,7 @@ categories: [migrate, git]
 newcms: [drupal]
 audience: [development]
 product: [terminus]
-integration: []
+integration: [--]
 ---
 
 ## Before You Begin

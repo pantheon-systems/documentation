@@ -6,8 +6,8 @@ newtype: doc
 categories: [create, plan]
 newcms: [drupal9]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Drupal 9 includes many of the familiar features and layout introduced in Drupal 8, and removes deprecated code to help improve future Drupal development.

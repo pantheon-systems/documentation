@@ -14,8 +14,8 @@ contenttype: guide
 categories: [migrate]
 newcms: [drupal]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 <Partial file="drupal-9/migrate-add-files-part1.md" />

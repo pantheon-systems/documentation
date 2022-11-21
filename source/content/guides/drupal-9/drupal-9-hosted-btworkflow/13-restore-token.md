@@ -15,7 +15,7 @@ categories: [migrate, sftp]
 newcms: [drupal]
 audience: [development]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 
 1. Connect to your site using SFTP command or credentials from your dashboard to restore the backup of the `tokens.json` file:

@@ -9,9 +9,9 @@ permalink: docs/:basename
 editpath: dns-providers/hostgator.md/
 newtype: doc
 categories: [domains]
-newcms: []
-audience: []
-product: []
+newcms: [--]
+audience: [--]
+product: [--]
 integration: [cloudflare, hostgator]
 ---
 ## Before You Begin

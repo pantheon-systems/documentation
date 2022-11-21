@@ -10,8 +10,8 @@ contenttype: guide
 categories: [optimize]
 newcms: [drupal8]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.

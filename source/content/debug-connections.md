@@ -4,10 +4,10 @@ description: Learn how to test and resolve connectivity issues affecting your Pa
 tags: [cli, ssh]
 newtype: doc
 categories: [help]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Connectivity Error Message

@@ -8,7 +8,7 @@ categories: [overview]
 newcms: [drupal, drupal7, wordpress]
 audience: [agency, development]
 product: [search]
-integration: []
+integration: [--]
 ---
 
 ## Overview

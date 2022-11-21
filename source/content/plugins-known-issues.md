@@ -8,8 +8,8 @@ newtype: doc
 categories: [help]
 newcms: [wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 reviewed: "2022-03-24"
 ---
 

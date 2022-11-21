@@ -12,10 +12,10 @@ editpath: autopilot/07-troubleshoot.md
 reviewed: "2022-11-01"
 contenttype: guide
 categories: [automate]
-newcms: []
+newcms: [--]
 audience: [development]
 product: [autopilot]
-integration: []
+integration: [--]
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.

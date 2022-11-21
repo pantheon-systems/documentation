@@ -8,8 +8,8 @@ newtype: doc
 categories: [overview, help]
 newcms: [drupal7, drupal8, drupal9, drupal10, drupal, wordpress, decoupled]
 audience: [agency, business, development, marketing, sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This guide is intended to elevate the way we communicate at Pantheon, and to support our community and contributors in using more inclusive language. It will help ensure everyone feels included and welcome by the language we use and the examples we share.

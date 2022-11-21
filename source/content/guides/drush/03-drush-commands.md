@@ -9,11 +9,11 @@ showtoc: true
 permalink: docs/guides/drush/drush-commands
 anchorid: drush-commands
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 
 ---
 

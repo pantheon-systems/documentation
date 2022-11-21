@@ -11,11 +11,11 @@ anchorid: drupal-9-hosted
 editpath: drupal-9/drupal-9-hosted/01-introduction.md
 reviewed: "2021-03-31"
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal9]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

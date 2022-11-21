@@ -11,10 +11,10 @@ permalink: docs/guides/domains/custom-domains
 anchorid: custom-domains
 contenttype: guide
 categories: [domains]
-newcms: []
+newcms: [--]
 audience: [agency, development]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 
 This section provides information on how to add a custom domain to the Pantheon platform.

@@ -15,8 +15,8 @@ contenttype: guide
 categories: [help, overview]
 newcms: [drupal, wordpress]
 audience: [agency, development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This guide is focused on the immediate actions a Pantheon customer should take in the event of a catastrophic site failure. In all cases, the first step should be to file an emergency downtime on-call ticket; this will immediately escalate the incident and ensure the fastest and most effective service. 

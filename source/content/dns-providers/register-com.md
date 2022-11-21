@@ -9,10 +9,10 @@ permalink: docs/:basename
 editpath: dns-providers/register-com.md/
 newtype: doc
 categories: [domains]
-newcms: []
-audience: []
-product: []
-integration: []
+newcms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 ---
 ## Before You Begin
 Be sure that you have a:

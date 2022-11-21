@@ -8,7 +8,7 @@ categories: [update]
 newcms: [drupal7, drupal8, drupal9, wordpress]
 audience: [development]
 product: [terminus, dashboard]
-integration: []
+integration: [--]
 ---
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.

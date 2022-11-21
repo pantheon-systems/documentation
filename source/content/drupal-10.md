@@ -9,7 +9,7 @@ categories: [create, plan]
 newcms: [drupal10]
 audience: [development]
 product: [composer]
-integration: []
+integration: [--]
 ---
 
 Drupal 10 is coming in December 2022! We've been busy conducting early testing on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.

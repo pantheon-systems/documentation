@@ -12,10 +12,10 @@ anchorid: accessibility
 editpath: accessibility/01-overview.md
 contenttype: guide
 categories: [optimize]
-newcms: []
-audience: []
-product: []
-integration: []
+newcms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 ---
 ## Before You Begin
 Be sure that you have a:

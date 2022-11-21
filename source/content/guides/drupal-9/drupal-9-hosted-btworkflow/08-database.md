@@ -15,7 +15,7 @@ categories: [migrate, database]
 newcms: [drupal]
 audience: [development]
 product: [terminus]
-integration: []
+integration: [--]
 ---
 
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.

@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [accounts]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Workspaces are a home base for your WebOps.  There are two types of workspaces:

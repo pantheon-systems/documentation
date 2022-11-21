@@ -12,7 +12,7 @@ categories: [create]
 newcms: [drupal]
 audience: [development]
 product: [dashboard, terminus]
-integration: []
+integration: [--]
 ---
 
 Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch. 

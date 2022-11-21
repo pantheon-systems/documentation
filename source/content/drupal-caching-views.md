@@ -6,8 +6,8 @@ newtype: doc
 categories: [cache, measure, optimize]
 newcms: [drupal]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 While configuring [Drupal's performance and caching settings](/drupal-cache) and using [Redis as a Drupal caching backend](/guides/object-cache) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 

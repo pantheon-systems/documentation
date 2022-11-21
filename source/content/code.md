@@ -3,11 +3,11 @@ title: Your Site Code on Pantheon
 description: Learn how to work with your site's code on the Pantheon Dashboard.
 tags: [code, dashboard, files, git]
 newtype: doc
-categories: []
+categories: [--]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
 

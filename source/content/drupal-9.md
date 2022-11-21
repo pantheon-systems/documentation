@@ -9,7 +9,7 @@ categories: [create, plan, config]
 newcms: [drupal9]
 audience: [development]
 product: [integrated-composer]
-integration: []
+integration: [--]
 ---
 
 Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/drupal-9-migration).

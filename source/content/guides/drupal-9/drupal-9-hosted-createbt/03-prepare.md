@@ -16,7 +16,7 @@ categories: [migrate, git]
 newcms: [drupal]
 audience: [development]
 product: [dashboard]
-integration: []
+integration: [--]
 ---
 
 ## Prepare the Local Environment

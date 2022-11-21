@@ -10,10 +10,10 @@ permalink: docs/guides/agcdn/agcdn-wafio
 anchorid: agcdn-wafio
 contenttype: guide
 categories: [optimize]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section provides detailed information on AGCDN with WAF and IO features. AGCDN with WAF/IO includes all [AGCDN features](/guides/agcdn/agcdn-features) and the additional features below.
