@@ -23,32 +23,29 @@ Be sure that you have:
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) a site.
 - A working knowledge of local server environments is helpful but not entirely necessary.
 - Reviewed [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
-
-Installing Lando is straight forward. Be sure to check its [system requirements](https://docs.devwithlando.io/installation/system-requirements.html) to ensure you can proceed. Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
+- Ensure you meet Lando's [system requirements](https://docs.devwithlando.io/installation/system-requirements.html). Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
 
 ## Download and Install Lando
 
 1. Download the appropriate [Lando release](https://github.com/lando/lando/releases) for your Operating System.
 
-2. Click to open the installer package. The installer has a few pre-flight checks it runs before getting started.
+1. Click to open the installer package. The installer has a few pre-flight checks it runs before it starts.
 
   ![Image of the Lando installer](../../../images/guides/lando-wordpress/lando-installer.png)
 
-Once you finish following any system prompts, the Lando installation script will work its magic and install itself on your computer.
+1. Follow the system prompts to install Lando.
 
 ## Getting Started
 
-You’ll manage your Lando instances via the command-line. A short list of useful Lando commands can be found [here](https://docs.devwithlando.io/cli/usage.html). If you ever need a refresher, simply pull up your terminal and type:
+You must manage your Lando instances via the command-line. The Lando command is installed globally so you can run it from anywhere within your terminal. A short list of useful Lando commands can be found [here](https://docs.devwithlando.io/cli/usage.html). You can also run the command below for a list of useful Lando commands:
 
 ```bash
 lando --help
 ```
 
-The Lando command is installed globally so you can run it from anywhere within your terminal.
-
 <Alert type="info" title="Note">
 
-It’s always a good idea to keep your project's site files and folders organized. Keep your website projects in separate folders from one another.
+We recommend that you keep your project's site files and folders organized. Keep your website projects in separate folders from one another.
 
 </Alert>
 
