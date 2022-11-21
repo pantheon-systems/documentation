@@ -84,6 +84,10 @@ Autopilot only checks for changes and updates to modules, themes, and core. You 
 
 Yes. Depending on your [Account](/guides/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
 
+## Is Autopilot compatible with premium and paid WordPress plugins?
+
+Yes, Autopilot is compatible with premium and paid WordPress plugins. Refer to [Configure Autopilot for Premium and Paid Plugins](/guides/autopilot/enable-autopilot/#configure-autopilot-for-premium-and-paid-plugins) for more information.
+
 ## More Resources
 
 - [Apply Autopilot Updates](/guides/autopilot/apply-updates)
