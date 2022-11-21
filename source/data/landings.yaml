@@ -1449,7 +1449,7 @@
     - title: 'Site Owners'
       subtitle: ''
       links:
-        - text: 'Remove a site owner or team member'
+        - text: 'Add and remove site team members'
           url: '/guides/account-mgmt/workspace-sites-teams/teams#remove-a-user'
         - text: 'Account billing in the user dashboard: update or change billing'
           url: '/guides/account-mgmt/billing'
