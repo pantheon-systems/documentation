@@ -82,7 +82,7 @@ Phrases like "one throat to choke" can be replaced with "one hand to shake" or "
 #### Examples & Alternatives
 
 - Avoid using "slave" in any context. Use a more accurate term, such as "worker," "replica", or "secondary," depending on your needs.
-- Related, avoid the word "master". "Primary", "original" or "controller" are possible alternatives.
+- Related, avoid the word "master". "Primary", "original", "main" or "controller" are possible alternatives.
 - "Grandfathered in" is a term rooted in [racist voter suppression](https://history.howstuffworks.com/american-civil-war/grandfathered-in.htm). Try "exempt from" or "legacy" instead.
 - Many terms appropriate and disrespect Native and Indigenous traditions. Rather than "have a pow-wow", try "have a quick chat." "Spirit animals" can be replaced with "mascot". "Hold down the fort," "on the warpath," and "circle the wagons" also have roots in the violent history of US colonization and should be avoided. ([Learn more](https://www.ictinc.ca/blog/culturally-offensive-phrases-you-should-use-at).)
 
