@@ -3,13 +3,18 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Create a Drupal Site From the Command Line Using Terminus and Drush
 description: Learn how to manage configuration between Pantheon environments using the command line.
 cms: "Drupal"
-categories: [get-started]
 tags: [terminus, site, cli]
 contributors: [stevector, whitneymeredith]
 type: guide
 showtoc: true
 permalink: docs/guides/drush/drupal-commandline
 anchorid: drupal-commandline
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 [Drush](https://github.com/drush-ops/drush) is a tool for working with Drupal from the command line. [Terminus](/terminus) allows you to use the command line to do everything you can do in Pantheon's browser-based dashboard. You can also run Drush commands directly from Terminus, making it a single solution for command line development on Pantheon.
