@@ -30,7 +30,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
   ```bash{promptUser: user}
   git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git master
   # resolve conflicts
-  git push origin main
+  git push origin master
   ```
 
 </Tab>
@@ -40,7 +40,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
   ```bash{promptUser: user}
   git pull -Xtheirs https://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
-  git push origin main
+  git push origin master
   ```
 
 </Tab>
@@ -50,7 +50,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
   ```bash{promptUser: user}
   git pull -Xtheirs https://github.com/pantheon-systems/wordpress-network.git master
   # resolve conflicts
-  git push origin main
+  git push origin master
   ```
 
 </Tab>
