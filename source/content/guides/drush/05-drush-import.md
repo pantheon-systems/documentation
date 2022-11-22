@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Import Drush Site Archives with Terminus
 description: Import a Drupal Drush site archive using Terminus, the Pantheon CLI tool.
 cms: "Drupal"
-categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-import
 anchorid: drush-import
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 This section provides information on how to import Drush site archives with Terminus.

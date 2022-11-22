@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Drush Aliases
 description: Learn how to use Drush aliases.
 cms: "Drupal"
-categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-aliases
 anchorid: drush-aliases
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 This section provides information on how to use Drush aliases.

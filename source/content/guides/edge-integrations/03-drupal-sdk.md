@@ -2,7 +2,6 @@
 title: Edge Integrations
 subtitle: Drupal SDK
 description: Install, configure, and use Edge Integrations with Drupal.
-categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, enotick]
 type: guide
@@ -11,6 +10,12 @@ showtoc: true
 anchorid: drupal-sdk
 permalink: docs/guides/edge-integrations/drupal-sdk/
 editpath: edge-integrations/03-drupal-sdk.md
+contenttype: guide
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 reviewed: "2021-03-23"
 ---
 

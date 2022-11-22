@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Introduction
 description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
 cms: "Drupal"
-categories: [develop]
 tags: [drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush
 anchorid: drush
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities to administer and maintain your site.

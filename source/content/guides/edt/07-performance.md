@@ -4,7 +4,6 @@ subtitle: Performance
 anchorid: performance
 edt: true
 layout: guide
-categories: [performance]
 tags: [cache, cdn]
 type: guide
 generator: pagination
@@ -18,6 +17,12 @@ nextpage: Going Live
 previousurl: guides/edt/external-integrations/
 previouspage: External Integrations
 editpath: edt/07-performance.md
+contenttype: guide
+categories: [help]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 image: launchGuide-twitterLarge
 ---
 

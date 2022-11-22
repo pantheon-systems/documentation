@@ -3,13 +3,18 @@ title: Migrate a Drupal 9 Site from Another Platform
 subtitle: Prepare Your Site for Migration
 description: Get your local environment and the existing site ready.
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-9-unhosted/prepare
 anchorid: prepare
 editpath: drupal-9/drupal-9-unhosted/03-prepare.md
+contenttype: guide
+categories: [migrate]
+newcms: [drupal9]
+audience: [development]
+product: [--]
+integration: [--]
 reviewed: "2021-05-13"
 ---
 
