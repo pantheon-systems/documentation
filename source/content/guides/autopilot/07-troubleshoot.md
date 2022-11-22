@@ -166,8 +166,9 @@ This error message most likely results from a merge conflict when applying upstr
 
 Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the documentation on [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
-If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
-](/guides/integrated-composer/ic-troubleshooting) and [Adding Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams).
+If the error is displayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates](/guides/integrated-composer/ic-troubleshooting) and [Adding Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams).
+
+This error can also display if some of the updates failed testing. This results in partial updates, in which the updates that passed testing are applied, while the updates that failed testing are not applied. Refer to the [Failing Tests](/guides/autopilot/tests-results/#failing-tests) section for more information on how to resolve failed tests.
 
 </Accordion>
 
