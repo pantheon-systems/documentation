@@ -13,7 +13,7 @@ SAML SSO is included for customers with Diamond Accounts and is available for mo
 
 ## How it Works
 
-The SSO user experience for members and external members is outlined in the sections below.
+The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** they use to access their Pantheon Dashboard.
 
 ### Members of an SSO Organization
 
@@ -31,7 +31,7 @@ An external member is anyone in the organization using an email address on a dif
 
 - User submits the Pantheon login form with their email address.
 
-- The user is authenticated and taken to their Pantheon Dashboard.
+- User is authenticated and taken to their Pantheon Dashboard.
 
 
 ## Terminus Authentication
