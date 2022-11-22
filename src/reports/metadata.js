@@ -90,8 +90,8 @@ class ReviewReport extends React.Component {
                                 {page.node.frontmatter.title}{" "}
                                 </Link>
                               </td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.subtitle : null}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.description : null}</td>
+                              <td>{page.node.frontmatter.subtitle}</td>
+                              <td>{page.node.frontmatter.description}</td>
                               <td>
                                 {page.node.frontmatter.newcms
                                   ? page.node.frontmatter.newcms.map((newcms, i) => {
