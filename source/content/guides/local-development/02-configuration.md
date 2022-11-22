@@ -1,6 +1,6 @@
 ---
 title: Local Development on Pantheon
-subtitle: Configure your local development setup.
+subtitle: Local Development Configuration
 description: Configure your machine for local development with Pantheon.
 categories: [develop]
 tags: [git, lando, local, sftp, workflow]

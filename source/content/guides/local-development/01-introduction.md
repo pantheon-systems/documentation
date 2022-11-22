@@ -18,8 +18,8 @@ Pantheon provides several options for on-server development, however, local deve
 - Jenkins
 - JetBrains PhpStorm for WordPress
 - JetBrains PhpStorm for Drupal
-- [Drush](/guides/drush) (optional)
-- [WP-CLI] (/guides/wp-cli)
+- [Drush](/guides/drush)
+- [WP-CLI](/guides/wp-cli)
 
 ## Before You Begin
 
@@ -41,8 +41,8 @@ Be sure you have:
 - Git client for tracking code changes
 - SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
 - [Terminus](/terminus)
-- [Drush](/guides/drush) (optional)
-- [WP-CLI on Pantheon](/guides/wp-cli)
+- [Drush](/guides/drush) (recommended)
+- [WP-CLI on Pantheon](/guides/wp-cli) (recommended)
 
 ## Support
 

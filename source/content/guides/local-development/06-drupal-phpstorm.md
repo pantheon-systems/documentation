@@ -1,6 +1,6 @@
 ---
 title: Local Development on Pantheon
-subtitle: Configure JetBrains PhpStorm IDE with Drupal on Pantheon
+subtitle: Configure PhpStorm for Drupal
 description: Configure your local environment to build a Drupal module using JetBrains PhpStorm.
 cms: "Drupal"
 categories: [develop]
