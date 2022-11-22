@@ -1,3 +1,12 @@
+---
+contenttype: partial
+categories: [cli]
+newcms: [drupal]
+product: [--]
+integration: [drush]
+tags: [--]
+reviewed: ""
+---
 
 Drush only supports one install method. Your Drupal site is required to be built with Composer and your Drush must be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
 
