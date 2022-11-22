@@ -3,7 +3,6 @@ title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Add Contrib and Custom Code
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-unhosted-composer/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-unhosted-composer/05-contrib-custom.md
 reviewed: "2021-05-09"
+contenttype: guide
+categories: [migrate, config]
+newcms: [drupal9]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
