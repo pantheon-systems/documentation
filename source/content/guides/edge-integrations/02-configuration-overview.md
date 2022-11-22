@@ -10,11 +10,6 @@ showtoc: true
 anchorid: configuration-overview
 permalink: docs/guides/edge-integrations/configuration-overview/
 editpath: edge-integrations/02-configuration-overview.md
-contenttype: guide
-newcms: [--]
-audience: [--]
-product: [--]
-integration: [--]
 reviewed: "2022-03-23"
 contenttype: guide
 categories: [--]
