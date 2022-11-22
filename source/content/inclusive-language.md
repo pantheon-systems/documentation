@@ -1,7 +1,7 @@
 ---
 title: Inclusive Language at Pantheon and in the Pantheon Community
 description: Elevate the way we communicate and support community and contributors in using more inclusive language.
-contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac]
+contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac, cdrmarks]
 tags: [collaborate]
 reviewed: "2020-11-01"
 newtype: doc
