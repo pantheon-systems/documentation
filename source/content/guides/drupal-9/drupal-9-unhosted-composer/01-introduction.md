@@ -3,7 +3,6 @@ title: Migrate a Composer-Managed Drupal 9 Site from Another Platform
 subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform to Drupal 9
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-unhosted-composer
 anchorid: drupal-9-unhosted-composer
 editpath: drupal-9/drupal-9-unhosted-composer/01-introduction.md
 reviewed: "2021-05-09"
+contenttype: guide
+categories: [overview, migrate]
+newcms: [drupal9]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This guide will show you how to migrate a Composer site currently hosted outside of Pantheon to Drupal 9.
