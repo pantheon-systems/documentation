@@ -11,7 +11,6 @@ permalink: docs/guides/edt/
 nexturl: guides/edt/introduction-and-architecture/
 nextpage: Architecture
 editpath: edt/01-edt.md
-contenttype: guide
 completiontime: 2 hours
 image: launchGuide-twitterLarge
 contenttype: guide
