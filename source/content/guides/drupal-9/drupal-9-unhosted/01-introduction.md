@@ -11,7 +11,6 @@ permalink: docs/guides/drupal-9-unhosted
 anchorid: drupal-9-unhosted
 editpath: drupal-9/drupal-9-unhosted/01-introduction.md
 contenttype: guide
-categories: [migrate]
 newcms: [drupal9]
 audience: [development]
 product: [--]
