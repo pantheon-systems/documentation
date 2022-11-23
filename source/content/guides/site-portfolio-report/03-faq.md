@@ -45,19 +45,19 @@ The total amount owed can be viewed on the invoice linked at the top of the Site
 
 ## How Can I Access the Site Portfolio Report?
 
-Your Site Portfolio Report will be emailed to the team member designated to handle the billing of the account. Simply click the link provided in the email to view the report. The team member handling billing must have Admin privileges to access the Site Portfolio link. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the team member cannot access the link.
+Your Site Portfolio Report will be emailed to the team member designated to handle the billing of the account. Simply click the link provided in the email to view the report. The team member handling billing must have Admin privileges to access the Site Portfolio link or the Enterprise Billing Center. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the team member cannot access the link or Enterprise Billing Center.
 
 ## Who Has Access to the Site Portfolio Report?
 
-The Site Portfolio Report is emailed to the Site Owner of the account or a team member designated to handle the billing of the account. No other users will receive the email. The Site Portfolio Report can be downloaded by Admin-level users and shared as needed. Alternatively, the Site Owner can change the privileges of users who need access to the report to Admin. 
+The Site Portfolio Report is emailed to the Site Owner of the account or a team member designated to handle the billing of the account. No other users will receive the email. The Site Portfolio Report can be downloaded by Admin-level users and shared as needed from the email link or from the Enterprise Billing Center. Alternatively, the Site Owner can change the privileges of users who need access to the report to Admin.
 
 ## Can I Share the Site Portfolio Report?
 
-Yes. Any team member with Admin privileges within the Organization can download and share the report. 
+Yes. Any team member with Admin privileges within the Organization can download and share the report.
 
-## Can I Change Who Receives the Site Portfolio Report?
+## Can I Change Who Receives the Email for the Site Portfolio Report?
 
-Yes. The Site Portfolio Report is emailed to a team member designated to handle the billing of the account. The current Site Owner must [transfer ownership directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site) if another teammate needs to assume site and billing ownership. Only Admin-level users can access the link to the Site Portfolio Report.
+Yes. The Site Portfolio Report is emailed to a team member designated to handle the billing of the account. The current Site Owner must [transfer ownership directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site) if another teammate needs to assume site and billing ownership. Only Admin-level users can access the email link to the Site Portfolio Report and the Enterprise Billing Center within the dashboard.
 
 ## Can my invoice be blank at any given time frame?
 
@@ -89,11 +89,11 @@ Not determined means that the site owner was not specified in the workspace.
 
 ## What Should I Do if the Link to the Site Portfolio Report is Broken?
 
-Contact your Pantheon account manager or [submit a support ticket](/guides/support/support-ticket/#organization-dashboard-support-tab) if the link to your Site Portfolio Report is broken.
+Contact your Pantheon account manager or [submit a support ticket](/guides/support/support-ticket/#organization-dashboard-support-tab) if the link to view your Site Portfolio Report is broken.
 
 ## Who Do I Contact for Support?
 
-Contact your Pantheon account manager or [submit a support ticket](/guides/support/support-ticket/#organization-dashboard-support-tab) if the link to your Site Portfolio Report is broken.
+Contact your Pantheon account manager or [submit a support ticket](/guides/support/support-ticket/#organization-dashboard-support-tab) if the link to view your Site Portfolio Report is broken.
 
 
 ## More Resources

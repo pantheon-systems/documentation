@@ -11,9 +11,9 @@ permalink: docs/guides/site-portfolio-report
 anchorid: site-portfolio-report
 ---
 
-The Site Portfolio Report provides supplemental information to help you understand and audit the charges in your invoice. Pantheon’s invoice notification generates and emails the Site Portfolio Report along with a link to the online invoice for contract customers with an active contract. 
+The Site Portfolio Report provides supplemental information to help you understand and audit the charges in your invoice. Pantheon’s invoice notification generates and emails the Site Portfolio Report along with a link to the online invoice for contract customers with an active contract. The report can also be accessed in the Enterprise Billing Center within the Pantheon dashboard.
 
-The team member designated to handle the billing of the account must have Admin privileges to access the Site Portfolio Report from the link within the invoice. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the the team member cannot access the link. Invoicing and Site Portfolio Report links are received by email through:
+The team member designated to handle the billing of the account must have Admin privileges to access the Site Portfolio Report from the link within the invoice and within the Enterprise Billing Center within the Pantheon dashboard. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the the team member cannot access the link or dashboard. Invoicing and Site Portfolio Report links are received by email through:
 
 - Routine periodic invoicing (yearly or as per contract terms)
 
