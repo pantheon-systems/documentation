@@ -3,7 +3,6 @@ title: Migrate a Drupal 8 Site to Drupal 9
 subtitle: Create the Drupal 9 Site
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted/create-site
 anchorid: create-site
 editpath: hosted/05-create-site.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [create, migrate]
+newcms: [drupal9]
+audience: [development]
+product: [dashboard, composer]
+integration: [--]
 ---
 
 1. Create a new Drupal 9 Integrated Composer site from the Upstream using the: [Create Your Pantheon Site](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) page. On the this page:

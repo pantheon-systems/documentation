@@ -10,13 +10,13 @@ showtoc: true
 permalink: docs/guides/drupal-9-unhosted
 anchorid: drupal-9-unhosted
 editpath: drupal-9/drupal-9-unhosted/01-introduction.md
+reviewed: "2021-05-13"
 contenttype: guide
-categories: [migrate]
+categories: [migrate, overview]
 newcms: [drupal9]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2021-05-13"
 ---
 
 This guide will show you how to migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon's platform.
