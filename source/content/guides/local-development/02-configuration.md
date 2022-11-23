@@ -14,27 +14,50 @@ anchorid: configuration
 
 This section provides information on how to configure your machine for successful local development with Pantheon.
 
-## Export Variables
+## Before You Begin
 
-<Partial file="export-alias.md" />
+This section uses several commands that use the temporary command line alias, `$SITE`, to make entering command examples easier. Export your variables and clear your sit environment cache before you begin to configure your local development setup. 
 
-Export the environment as a variable as well:
+1. Set the temporary variable `$SITE` in your terminal session to match the name of your site. Replace `anita-drupal` in this example:
+
+  ```bash{promptUser:user}
+  export SITE=anita-drupal && echo "New alias set as $SITE"
+  ```
+
+  <Accordion title="How to Use Terminus to Find the Site Name" id="site-name" icon="info-sign">
+
+  Use `terminus site:list` for a list of sites you have access to:
+
+  ```bash{outputLines:2-8}
+  terminus site:list
+  --------------------------- --------------------- ------------- ----------------------------------- -------------------- --------------------- ------------- ------------
+  Name                        ID                    Plan          Framework          Region           Owner                Created               Memberships   Is Frozen?
+  --------------------------- --------------------- ------------- ------------------- ---------------- -------------------- --------------------- ------------- ------------
+  //highlight-start
+  anita-drupal                abdc80ce-286c-1234-   Sandbox       drupal8             Canada           3374708c-987e-1234   2020-12-15 19:40:42   d3ecc20c-395a false
+  //highlight-end
+  anita-wordpres              abdc9954-fab2-1234-   Sandbox       wordpress           United States    c96ddb25-336a-1234   2020-09-02 07:18:51   d3ecc20c-395a false
+  ```
+
+  The site name is listed under `Name`. In this example, the site name is `anita-drupal`.
+
+  </Accordion>
+
+1. Export the environment as a variable:
 
 ```bash{promptUser:user}
 export ENV=dev
 ```
 
-## Clear Site Environment Cache
+1. Run the command below to clear the target site environment's cache to save time. This can also be done from the Pantheon Dashboard or from the application itself.
 
-Clear the target site environment's cache to save time.  This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
-
-```bash{promptUser: user}
-terminus env:clear-cache $SITE.$ENV
-```
+  ```bash{promptUser: user}
+  terminus env:clear-cache $SITE.$ENV
+  ```
 
 ## Get the Code
 
-Follow the steps below to get your code from Pantheon on your local computer.
+Follow the steps below to get a clone of your Pantheon code on your local computer.
 
 1. Log in to Pantheon and navigate to the Site Dashboard.
 
@@ -54,7 +77,7 @@ Follow the steps below to get your code from Pantheon on your local computer.
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
     ```
 
-    If everything worked correctly, you will see Git fetching the data:
+    Git will fetch the data if everything worked correctly:
 
     ```none
     Cloning into 'anita-wordpress'...
@@ -69,7 +92,7 @@ Follow the steps below to get your code from Pantheon on your local computer.
     Resolving deltas: 100% (12802/12802), done.
     ```
 
-    If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+    Check your [SSH key](/ssh-keys) setup if you run into permission problems. Check your network to see if you have a current version of Git if the clone starts but can't complete.
 
 ## Get the Database
 

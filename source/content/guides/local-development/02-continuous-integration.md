@@ -1,6 +1,6 @@
 ---
 title: Local Development on Pantheon
-subtitle: Continuous Integration Solutions on Pantheon
+subtitle: Continuous Integration Solutions
 description: Run automated unit and integration tests with Terminus and Drupal SimpleTest.
 tags: [continuous-integration, workflow]
 contributors: [ccjjmartin]
