@@ -192,11 +192,16 @@ You can also transfer a single file or a single directory at a time instead of t
 
 ## Local Configuration Files
 
-You must configure database credentials matching your local database to develop locally. Do not manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`), as this could commit changes to version control and trigger a connection error on Dev when pushing to Pantheon.
+You must configure database credentials that match your local database to develop locally. Do not manually change these details in your primary configuration file (`settings.php` or `wp-config.php`), as this could commit changes to version control and trigger a connection error on Dev when pushing to Pantheon.
 
-We recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by Git, it won't be found on Pantheon but it will be applied when you run the site locally.
+Use a local configuration file:
 
-Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L18) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
+- Drush: `settings.local.php`
+- WordPress: `wp-config-local.php`
+
+Your local configuration file must be excluded from version control and included by `settings.php` or `wp-config.php` when found. Your local configuration file won't be found on Pantheon because Git ignores the local configuration file, however it will be applied when you run the site locally.
+
+Pantheon's upstreams detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L18) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
 This file is ignored by the `.gitignore` file in [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Simply create the file on your local computer, and manage configurations accordingly.
 
@@ -242,3 +247,9 @@ if (file_exists($local_settings)) {
   include $local_settings;
 }
 ```
+
+## More Resources
+
+- [Configure Your Drupal Settings.php File](/guides/php/settings-php)
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)
+- [Git on Pantheon](/guides/git)
