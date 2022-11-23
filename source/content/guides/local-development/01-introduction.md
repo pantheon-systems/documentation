@@ -35,18 +35,31 @@ You will need to transfer each file from Pantheon to your local environment.
 
 Be sure you have:
 
-- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) are compatible.
--  A configuration solution that supports a minimum of PHP 5.3 and MySQL. Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different 
-- Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
+- A local stack capable of running Drupal or WordPress, such as:
+    - [Lando](https://github.com/lando/lando)
+    - [MAMP](https://www.mamp.info/en/)
+    - [WAMP](http://www.wampserver.com/)
+    - [XAMPP](https://www.apachefriends.org/index.html)
+
+-  A configuration solution that supports a minimum of PHP 5.3 and MySQL. Pantheon uses a [particular architecture to maximize performance and availability](/application-containers)
+
+- Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions)
+
 - Git client for tracking code changes
+
 - SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
+
 - [Terminus](/terminus)
+
+- [Multidev](/guides/multidev) is recommended for large teams
+
 - [Drush](/guides/drush) (recommended)
+
 - [WP-CLI on Pantheon](/guides/wp-cli) (recommended)
 
 ## Support
 
-Pantheon cannot troubleshoot or [support local development](/guides/support/#local-development) solutions, but we can provide some suggestions and known working solutions. [Multidev](/guides/multidev) is recommended for larger teams.
+Pantheon does offer [support for local development](/guides/support/#local-development) solutions or troubleshooting. This guide provides some suggestions and known working solutions.
 
 ## More Resources
 
