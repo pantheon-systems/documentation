@@ -10,10 +10,10 @@ permalink: docs/guides/agcdn/agcdn-faq
 anchorid: agcdn-faq
 contenttype: guide
 categories: [optimize]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section provides answers to frequently asked AGCDN questions.

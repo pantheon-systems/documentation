@@ -43,7 +43,7 @@ You can adjust the length of time before the site's cached content is considered
 
 - [Drupal](/drupal-cache#drupal-8-performance-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
 
-- [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
+- [WordPress](/guides/wordpress-configurations/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
 
 ### Session-Style Cookies or `NO_CACHE` Cookies 
 

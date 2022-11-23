@@ -6,10 +6,10 @@ contributors: [wordsmither]
 permalink: docs/overview/support
 newtype: doc
 categories: [overview]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Pantheon offers multiple options to help you in building the best sites possible.

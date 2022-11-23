@@ -10,10 +10,10 @@ permalink: docs/guides/agcdn/agcdn-features
 anchorid: agcdn-features
 contenttype: guide
 categories: [optimize]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section provides detailed information on AGCDN features.

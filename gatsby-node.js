@@ -316,7 +316,7 @@ exports.createPages = ({ graphql, actions }) => {
       const slugRegExp = /:/g
       const slug = command.name.replace(slugRegExp, "-")
       createPage({
-        path: `/guides/terminus/commands/${slug}`,
+        path: `terminus/commands/${slug}`,
         component: path.resolve(`./src/templates/terminusCommand.js`),
         context: {
           slug: slug,

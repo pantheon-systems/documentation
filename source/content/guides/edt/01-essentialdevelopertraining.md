@@ -14,11 +14,12 @@ editpath: edt/01-edt.md
 completiontime: 2 hours
 image: launchGuide-twitterLarge
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
+
 ---
 
 Welcome! This is a guide version of our on-demand [Essential Developer Workshops](https://pantheon.io/workshops?docs).

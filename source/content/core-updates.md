@@ -8,7 +8,7 @@ categories: [update]
 newcms: [drupal7, drupal8, drupal9, wordpress]
 audience: [development]
 product: [terminus, dashboard]
-integration: []
+integration: [--]
 ---
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
@@ -37,7 +37,7 @@ Drupal 8 sites managing core with Composer are not compatible with Pantheon's On
 
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream), become available downstream as a one-click update.
 
-Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/guides/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
+Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
 
 ## Apply Upstream Updates via the Site Dashboard
 
@@ -65,7 +65,7 @@ If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull 
 
 ## Apply Upstream Updates via Terminus
 
-If you prefer using the command line, you can apply updates with [Terminus](/guides/terminus).
+If you prefer using the command line, you can apply updates with [Terminus](/terminus).
 
 ### Update a Specific Site
 
@@ -344,7 +344,7 @@ If you know your site's Custom Upstream has updated code, but it's not visible o
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 
-If updates are still not showing on the site, it may be necessary to re-set the site's upstream via [Terminus](/guides/terminus/examples/#switch-upstreams).
+If updates are still not showing on the site, it may be necessary to re-set the site's upstream via [Terminus](/terminus/examples/#switch-upstreams).
 
 ### 503 Errors When Running Update.php and Installing Modules
 

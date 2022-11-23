@@ -182,7 +182,7 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 
 #### apachesolr.module
 
-If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/guides/terminus):
+If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/terminus):
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- vget apachesolr_service_class

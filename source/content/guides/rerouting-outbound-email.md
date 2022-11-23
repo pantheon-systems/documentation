@@ -130,7 +130,7 @@ git push origin master
 ```
 
 Push the code to Test and Live and enable the module in all environments.
-You can do this through the Site Dashboard and the Drupal Admin UI, or by using [Terminus](/guides/terminus) and Drush:
+You can do this through the Site Dashboard and the Drupal Admin UI, or by using [Terminus](/terminus) and Drush:
 
 ```bash{promptUser: user}
 terminus auth:login

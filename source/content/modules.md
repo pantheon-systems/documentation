@@ -11,7 +11,7 @@ Pantheon maintains several modules to extend and integrate Drupal on our platfor
 
 <Alert title="Note" type="info">
 
-WordPress users should review [Pantheon Plugins](/guides/wordpress-pantheon/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
+WordPress users should review [Pantheon Plugins](/guides/wordpress-configurations/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
 
 </Alert>
 
@@ -56,6 +56,6 @@ The API module is not needed for Drupal 9.
 
 <Alert title="Note" type="info">
 
-It is not necessary to use the API module directly. Use [Terminus](/guides/terminus) to interact with your Pantheon site programmatically.
+It is not necessary to use the API module directly. Use [Terminus](/terminus) to interact with your Pantheon site programmatically.
 
 </Alert>

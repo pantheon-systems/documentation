@@ -2,7 +2,6 @@
 title: Domains on Pantheon
 subtitle: Primary Domains
 description: Learn more about choosing your primary domain.
-categories: [go-live]
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
 contributors: [whitneymeredith]
@@ -10,6 +9,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/primary-domain
 anchorid: primary-domain
+contenttype: guide
+categories: [domains]
+newcms: [--]
+audience: [development, sysadmin]
+product: [dashboard]
+integration: [--]
 ---
 
 This section provides information on how to choose and configure your primary domain.

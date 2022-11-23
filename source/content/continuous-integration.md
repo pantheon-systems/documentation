@@ -8,7 +8,7 @@ categories: [automate]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
-integration: []
+integration: [--]
 ---
 [<dfn id="ci">Continuous Integration</dfn>](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/guides/support/contact-support/).
 
@@ -16,7 +16,7 @@ See our [Build Tools](/guides/build-tools) guide for a more detailed look at a w
 
 ## Terminus Command-Line Interface
 
-[Terminus](/guides/terminus) is a Symfony/Console-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
+[Terminus](/terminus) is a Symfony/Console-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
 
 - Site creation
 - [Multidev environment](/guides/multidev) creation and removal

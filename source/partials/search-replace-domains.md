@@ -1,8 +1,10 @@
 ---
 contenttype: partial
+categories: [--]
 newcms: [wordpress]
-product: []
-integration: []
+product: [--]
+integration: [--]
+tags: [--]
 reviewed: ""
 ---
 
@@ -28,7 +30,7 @@ Another popular search-replace plugin is [Better Search Replace](https://wordpre
 
 <Tab title="Terminus" id="terminus-replace-anchor">
 
-You can use [Terminus](/guides/terminus) to run an additional `wp search-replace` command on the target environment after cloning. 
+You can use [Terminus](/terminus) to run an additional `wp search-replace` command on the target environment after cloning. 
 
 Set or replace the variables `$site` and `$env` with your site name and the correct environment:
 

@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Drush Aliases
 description: Learn how to use Drush aliases.
 cms: "Drupal"
-categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-aliases
 anchorid: drush-aliases
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 This section provides information on how to use Drush aliases.
@@ -17,7 +22,7 @@ This section provides information on how to use Drush aliases.
 
 Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. 
 
-1. Use [Terminus](/guides/terminus) to download your Drush aliases.
+1. Use [Terminus](/terminus) to download your Drush aliases.
 
 1. Authenticate Terminus with [machine tokens](/machine-tokens) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
@@ -73,7 +78,7 @@ Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sit
 
 <Alert type="info" title="Note">
 
-You must be a [site team member](/guides/account-mgmt/workspace-sites-teams/teams/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators cannot see all associated sites within their alias file, but can see sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/guides/terminus) for sites in which you are not a direct site team member.
+You must be a [site team member](/guides/account-mgmt/workspace-sites-teams/teams/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators cannot see all associated sites within their alias file, but can see sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
 
 </Alert>
 
@@ -118,5 +123,5 @@ You can create strict control policies for your Drush aliases.
 
 ## More Resources
 
-- [Terminus Guide](/guides/terminus)
+- [Terminus Guide](/terminus)
 - [Pantheon YAML Configuration Files](/pantheon-yml)

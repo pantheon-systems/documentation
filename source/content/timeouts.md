@@ -8,7 +8,7 @@ reviewed: "2020-03-18"
 
 Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. 
 
-When troubleshooting timeout errors, first verify that the timeout is not caused by [idle application containers](/application-containers#idle-containers). Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/guides/terminus). 
+When troubleshooting timeout errors, first verify that the timeout is not caused by [idle application containers](/application-containers#idle-containers). Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus). 
 
 ## User-Configurable Timeouts
 
@@ -51,11 +51,11 @@ If the request passes through port `80` and `443` it will timeout at 59 seconds.
 
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/guides/terminus). Most slow cron executions are due to PHP errors or a slow external service. Best practice is to identify and fix the root cause. Check [log files](/guides/logs-pantheon) and review [PHP errors and exceptions](/guides/php/php-errors) for clues.
+Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/terminus). Most slow cron executions are due to PHP errors or a slow external service. Best practice is to identify and fix the root cause. Check [log files](/guides/logs-pantheon) and review [PHP errors and exceptions](/guides/php/php-errors) for clues.
 
 ### What if I run into a timeout when using the Drupal Migrate UI?
 
-As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/guides/terminus).
+As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/terminus).
 
 If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 

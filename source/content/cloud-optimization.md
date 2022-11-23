@@ -7,7 +7,7 @@ categories: [cache]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [cdn]
-integration: []
+integration: [--]
 ---
 
 Pantheon as a platform attempts to balance the tradeoff between high performance and high availability. It is important to reduce single points of failure and ensure scalability, but this effort can introduce complexity and latency vs. a “one box” architecture.

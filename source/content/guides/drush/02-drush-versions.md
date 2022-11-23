@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Manage Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
 cms: "Drupal"
-categories: [develop]
 tags: [drush, updates]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-versions
 anchorid: drush-versions
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 This section provides information on Drush versions and site-local usage.
@@ -26,7 +31,7 @@ We recommend managing your site through Composer. Visit the [Build Tools Workflo
 
 ## Verify Current Drush Version
 
-You can use [Terminus](/guides/terminus/) to verify the current version of Drush running on your Pantheon site:
+You can use [Terminus](/terminus/) to verify the current version of Drush running on your Pantheon site:
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- status | grep "Drush version"

@@ -2,11 +2,12 @@
 title: Terminus Guide
 subtitle: Get Started
 description: Learn how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus.
-layout: guide
-showtoc: true
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/examples
+permalink: docs/terminus/examples
 anchorid: examples
 ---
 
@@ -42,7 +43,7 @@ terminus list
 
 Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, and should not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
 
-![terminus env:clear-cache your-awesome-site.live](../../../images/terminus-example-cc.png)
+![terminus env:clear-cache your-awesome-site.live](../../images/terminus-example-cc.png)
 
 <Accordion title="Learn More" id="identify-site" icon="lightbulb">
 
@@ -57,7 +58,7 @@ Machine readable, such as `dev`, `test`, `live`, or `bug123`, which refers to th
 
 You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/guides/account-mgmt/workspace-sites-teams/workspaces#retrieve-the-workspace-uuid). For example:
 
-![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](../../../images/terminus-examples-field-name.png)
+![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](../../images/terminus-examples-field-name.png)
 
 </Accordion>
 
@@ -85,7 +86,7 @@ Pantheon supports [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (Word
 
 1. Include `--` followed by the Drush or WP-CLI command and all arguments. For example:
 
-  ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../../images/terminus-wp-cli-example.png)
+  ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
 
 Refer to [Drupal Drush Command-Line Utility](/guides/drush) and [Use WP-CLI On The Pantheon Platform](/guides/wp-cli) for more information.
 
@@ -198,7 +199,7 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to the [Plugins](/guides/terminus/plugins) section for instructions on how to install Terminus plugins.
+Terminus supports third-party plugins that extend functionality by adding new commands. The following example demonstrates the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to apply upstream updates (core updates) in bulk. Refer to the [Plugins](/terminus/plugins) section for instructions on how to install Terminus plugins.
 
 1. Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 

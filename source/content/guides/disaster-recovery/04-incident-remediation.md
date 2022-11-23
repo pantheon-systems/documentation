@@ -4,7 +4,6 @@ subtitle: Incident Remediation
 description: Bring a site back from downtime and implement post-recovery actions
 generator: pagination
 layout: guide
-categories: [platform]
 tags: [dashboard, webops, workflow]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
@@ -12,6 +11,12 @@ type: guide
 permalink: docs/guides/disaster-recovery/incident-remediation
 anchorid: disaster-recovery
 editpath: disaster-recovery/04-incident-remediation.md
+contenttype: guide
+categories: [cache]
+newcms: [--]
+audience: [development, sysadmin]
+product: [cdn]
+integration: [--]
 ---
 
 Bringing a site back from downtime and remediating the cause of downtime to ensure that the site stays up post-recovery is a multistep process. Once you have engaged with support and determined the cause of the issue, the recovery process may include the steps below, although the precise playbook will depend on the nature of the issues and the configuration of the site. 
@@ -61,7 +66,7 @@ As part of the Managed Updates deployment process, a Multidev will be cloned fro
 
 #### Codebase is unrecoverable
 
-The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](/guides/terminus/commands/backup-restore) documentation for more information. 
+The codebase can be restored from a selected backup via Terminus - the Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](/terminus/commands/backup-restore) documentation for more information. 
 
 #### Reverting a bad commit to Pantheon
 
@@ -73,7 +78,7 @@ The **Database/files** tools on the Site Dashboard can be used to clone either t
 
 #### Restoring a database from a backup
 
-The database can be restored from a selected backup via Terminus. The Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](/guides/terminus/commands/backup-restore) documentation for more information. 
+The database can be restored from a selected backup via Terminus. The Dashboard **Restore** tools restore all aspects of the site, and cannot be used to restore selectively. Refer to the [Backup Restore](/terminus/commands/backup-restore) documentation for more information. 
  
 #### Restoring a database from an external dump
 

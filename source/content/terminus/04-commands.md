@@ -2,10 +2,12 @@
 title: Terminus Guide
 subtitle: Command Directory
 description: Review a complete list of Terminus commands.
-layout: guide
+terminuspage: true
+type: terminuspage
+layout: terminuspage
 categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/terminus/commands
+permalink: docs/terminus/commands
 anchorid: commands
 ---
 

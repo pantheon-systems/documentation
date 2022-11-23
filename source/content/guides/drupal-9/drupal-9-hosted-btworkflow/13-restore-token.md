@@ -3,7 +3,6 @@ title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build To
 subtitle: Restore the tokens.json File
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted-btworkflow/restore-token
 anchorid: restore-token
 editpath: drupal-9/drupal-9-hosted-btworkflow/13-restore-token.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate, sftp]
+newcms: [drupal]
+audience: [development]
+product: [dashboard]
+integration: [--]
 ---
 
 1. Connect to your site using SFTP command or credentials from your dashboard to restore the backup of the `tokens.json` file:

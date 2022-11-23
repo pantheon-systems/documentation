@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Troubleshoot Drush
 description: Review solutions to common Drush troubleshooting scenarios.
 cms: "Drupal"
-categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/troubleshoot-drush
 anchorid: troubleshoot-drush
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 This section provides solutions to common Drush troubleshooting scenarios.
@@ -140,7 +145,7 @@ You might encounter the following error when running Drush MySQL commands:
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
 ```
 
-This error response happens when an inactive site has spun down. Wake environments by loading the home page or with the following [Terminus](/guides/terminus) command to resolve this error:
+This error response happens when an inactive site has spun down. Wake environments by loading the home page or with the following [Terminus](/terminus) command to resolve this error:
 
 ```bash{promptUser: user}
 terminus env:wake SITENAME.ENV

@@ -30,13 +30,13 @@ Please keep in mind that your site password is stored in a database, so whatever
 
 ### Option B: Use Terminus Drush to set a password
 
-If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/guides/terminus) command for generating one-time login links:
+If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/terminus) command for generating one-time login links:
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- user-login
 ```
 
-Or you can reset any user's password from the command line by running the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/) via [Terminus](/guides/terminus):
+Or you can reset any user's password from the command line by running the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/) via [Terminus](/terminus):
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0rD'
@@ -60,7 +60,7 @@ You will receive an email that contains a link you can use one time to reset you
 
 ### Option B: Use Terminus WP-CLI to set a password
 
-You can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/) via [Terminus](/guides/terminus):
+You can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/) via [Terminus](/terminus):
 
 ```bash{promptUser: user}
 terminus wp <site>.<env> -- user update you@example.com --user_pass=NEWPASSWORD

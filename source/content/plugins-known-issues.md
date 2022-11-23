@@ -8,8 +8,8 @@ newtype: doc
 categories: [help]
 newcms: [wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 reviewed: "2022-03-24"
 ---
 
@@ -373,7 +373,7 @@ ___
 
 1. Verify that a symlink exists for `wp-content/et-cache`.
 
-1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-pantheon/plugins#pantheon-must-use-plugin).
+1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-configurations/plugins#pantheon-must-use-plugin).
 
 1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` folder itself. You can do this by accessing the site's files via [SFTP](/sftp).
 
@@ -986,7 +986,7 @@ ___
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/guides/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
 
 ```bash{promptUser: user}
 export SITE=yoursitename

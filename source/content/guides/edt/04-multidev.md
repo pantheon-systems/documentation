@@ -4,7 +4,6 @@ subtitle: Multidev
 anchorid: multidev
 edt: true
 layout: guide
-categories: [develop]
 tags: [git, iterate, multidev, webops, workflow]
 type: guide
 generator: pagination
@@ -18,6 +17,12 @@ nextpage: Command Line Interface
 previousurl: guides/edt/developer-workflow/
 previouspage: Developer Workflow
 editpath: edt/04-multidev.md
+contenttype: guide
+categories: [help]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 image: launchGuide-twitterLarge
 ---
 

@@ -11,10 +11,10 @@ editpath: docs/guides/account-mgmt/workspace-sites-teams/01-introduction.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [accounts]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Workspaces, Sites, and Teams work together to help you organize and manage your sites.  To understand how these three tools work together, lets look at a sample setup.

@@ -1,32 +1,33 @@
 ---
-title: Create a WordPress MU-Plugin for Actions and Filters
-description: Learn to make a boilerplate MU-plugin for actions and filters.
+title: WordPress Configurations Guide
+subtitle: Create a WordPress MU-Plugin for Actions and Filters
+description: Learn how to make your own MU-plugin for actions and filters.
 contributors: [alexfornuto, eabquina, carl-alberto]
 cms: "WordPress"
 categories: [develop]
 tags: [plugins]
 reviewed: "2020-08-12"
+permalink: docs/guides/wordpress-configurations/mu-plugin
+anchorid: mu-plugin
 ---
 
-For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins).
+You can create a [Must-Use (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins) for actions or filters on your Pantheon WordPress site. Actions and filters you create can run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress.
 
 MU-plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
-MU-plugins are loaded by PHP in alphabetical order, before normal plugins. This means API hooks added to an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
+PHP loads MU-plugins in alphabetical order, before normal plugins. This means API hooks added to an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Why use MU-Plugins?
 
-Although you can add code in the `wp-config.php` file for site-wide behavior, actions and filters should not be added to this file.
+Although you can add code in the `wp-config.php` file for site-wide behavior, actions and filters should not be added to this file. Your WordPress site will throw a fatal PHP error because the `add_action()` and `add_filter()` functions are not yet defined if actions and filters are added above the `require_once ABSPATH . 'wp-settings.php';` statement.
 
-If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will throw a fatal PHP error because the `add_action()` and `add_filter()` functions are not yet defined.
-
-If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has loaded, and the actions and filters will not be applied, or will be applied last.
+If actions and filters are added below the `require_once ABSPATH . 'wp-settings.php';` statement, the actions and filters will not be applied, or will be applied last when the entirety of the WordPress site has loaded.
 
 ## Create Your MU-Plugin
 
-1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
+1. Create a PHP file (for example: `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
 
-1. Provide the plugin details for its name, description, URI, and other descriptors:
+1. Provide details for the plugin, such as name, description, URI, and other descriptors:
 
 	  ```php
 	  <?php
@@ -40,7 +41,7 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
 	  */
 	  ```
 
-1. Add the custom functions and the filters or action that you want to run. Use the following script as a starting point for creating your own plugin:
+1. Add the custom functions and the filters or actions that you want to run. Use the following script as a starting point for creating your own plugin:
 
 	  ```php
 	  <?php
@@ -118,7 +119,7 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
 
 <Partial file="wp_get_environment_type.md" />
 
-An MU-plugin can be instructed to run or perform environment-specific actions. Use `wp_get_environment_type` to look up the current environment in a platform-neutral way.
+You can instruct an MU-plugin to run or perform environment-specific actions. Use `wp_get_environment_type` to look up the current environment in a platform-neutral way.
 
 ## Example Code Snippets
 
@@ -148,7 +149,7 @@ Set `Cache-Control: max-age=0` by hooking into `send_headers`. This will overrid
 foreach ($regex_path_patterns as $regex_path_pattern) {
   if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
     add_action( 'send_headers', 'add_header_nocache', 15 );
-    
+
     // No need to continue the loop once there's a match.
     break;
   }
@@ -160,7 +161,7 @@ function add_header_nocache() {
 
 ### Cross-Origin Resource Sharing (CORS)
 
-The following code sample adds the correct header and enables requests from specific URLs for sites that need to provide services with Cross-Origin Resource Sharing (CORS): 
+The following code sample adds the correct header and enables requests from specific URLs for sites that need to provide services with Cross-Origin Resource Sharing (CORS):
 
 ```php
 function dynamic_cors_headers( $headers ) {
@@ -188,7 +189,7 @@ add_filter( 'wp_headers', 'dynamic_cors_headers' );
 
 ### Custom Cookies
 
-Setting custom cookies can also be done from an MU-plugin like in the following example. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
+You can aslo set custom cookies in an MU-plugin like the example below. Refer to [Working with Cookies on Pantheon](/cookies) for more cookie manipulation examples.
 
 ```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
@@ -241,13 +242,13 @@ add_filter( 'login_message', function() {
 });
 ```
 
-Please note that overwriting `login_message` changes the text displayed on all login pages, regardless of domain used to access them.
+Please note that overwriting `login_message` changes the text displayed on all login pages, regardless of the domain used to access the pages.
 
 ### Exclude Plugins from Redis Cache
 
 A page load with 2,000 Redis calls can be two full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group.
 
-For example, let's say you have a custom plugin that sets the cache with:
+For example, if you have a custom plugin that sets the cache with:
 
 ```php
 wp_cache_set( 'cache_key', 'cache_data', 'my_plugin_group' );
@@ -281,7 +282,7 @@ To verify, you can use the [Redis CLI](/guides/object-cache/redis-command-line) 
 (empty list or set)
 ```
 
-For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor).
+Refer to [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor) for more information.
 
 ### Redirects
 
@@ -305,7 +306,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 
 ### WP-CFM Compatibility
 
-[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/guides/multidev) environments, but a Must-Use plugin needs to be configured:
+[WP-CFM](https://wordpress.org/plugins/wp-cfm/) can work with [Multidev](/guides/multidev) environments, but a Must-Use plugin must be configured:
 
 ```php
 add_filter( 'wpcfm_multi_env', function( $pantheon_envs ) {
@@ -322,7 +323,7 @@ add_filter( 'wpcfm_current_env', function( $pantheon_env ) {
 
 ### WP REST API (`wp-json`) Endpoints Cache
 
-For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
+For WP REST API endpoints, you can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
 
 ```php
 /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
@@ -350,8 +351,6 @@ function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
 ```
 
 ## More Resources
-
-This page introduces the concept of using an MU-plugin for applying actions or filters for a site. For site-specific or environment-specific context, see the following pages:
 
 - [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)

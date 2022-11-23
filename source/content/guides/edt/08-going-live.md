@@ -4,7 +4,6 @@ subtitle: Going Live
 anchorid: going-live
 edt: true
 layout: guide
-categories: [go-live]
 tags: [dns, launch]
 type: guide
 survey: true
@@ -17,6 +16,12 @@ permalink: docs/guides/edt/going-live/
 previousurl: guides/edt/performance/
 previouspage: Performance
 editpath: edt/08-going-live.md
+contenttype: guide
+categories: [help]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 image: launchGuide-twitterLarge
 getfeedbackform: default
 ---

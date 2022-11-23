@@ -2,9 +2,14 @@
 title: Configuration Workflow for Drupal 9 Sites
 description: Commit your Drupal configuration to version control.
 cms: "Drupal"
-categories: [develop]
 tags: [drush, workflow, webops]
 reviewed: "2020-10-21"
+newtype: doc
+categories: [create, plan, config]
+newcms: [drupal9]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Managing configuration is an extremely important part of any team website project, but in many cases, this area of the project does not receive as much attention as it deserves. The tools for Drupal 7 do not provide complete coverage of all configuration settings, leading to inconsistencies in configuration handling and inconvenient workarounds. This has led to configuration management becoming a real thorn in the side for many projects.

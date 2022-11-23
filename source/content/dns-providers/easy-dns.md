@@ -1,13 +1,21 @@
 ---
-title: Easy DNS Domain Configuration
-provider: Easy DNS
-dnsprovider: true
-description: Learn how to point your Easy DNS domain to a Pantheon site.
-categories: [go-live]
-tags: [dns]
-draft: true
-permalink: docs/:basename
-editpath: dns-providers/easy-dns.md/
+ttitle: Accessibility Guide
+subtitle: Overview
+description: How to extend your site's reach with accessibility planning, fixes, and reporting.
+tags: [accessibility, workflow, SEO]
+contributors: [carolyn-shannon, wordsmither]
+reviewed: "2022-06-01"
+layout: guide
+showtoc: true
+permalink: docs/guides/accessibility
+anchorid: accessibility
+editpath: accessibility/01-overview.md
+contenttype: guide
+categories: [optimize]
+newcms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 ---
 ## Before You Begin
 Be sure that you have a:

@@ -15,7 +15,7 @@ This section provides information on WP-CLI global parameters that you should be
 
 <Alert title="Exports" type="export">
 
-The steps below use [Terminus](/guides/terminus) commands that require site and environment values. Before you begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment. This allows the example commands to work in your local terminal:
+The steps below use [Terminus](/terminus) commands that require site and environment values. Before you begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment. This allows the example commands to work in your local terminal:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -73,5 +73,5 @@ Here are [more commands](https://developer.wordpress.org/cli/commands/) you may 
 ## More Resources
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
-- [Terminus Guide](/guides/terminus)
+- [Terminus Guide](/terminus)
 - [WordPress Dashboard](/cms-admin#wordpress-dashboard)

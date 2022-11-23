@@ -2,12 +2,17 @@
 title: Create a Drupal 9 Site Using a Drupal Distribution
 description: Learn how to create a site using a Drupal 9 distribution.
 cms: "Drupal"
-categories: [get-started]
 tags: [site]
 type: guide
 permalink: docs/guides/drupal-9-from-dist
 contributors: [wordsmither]
 date: 07/06/2022
+contenttype: guide
+categories: [create]
+newcms: [drupal]
+audience: [development]
+product: [dashboard, terminus]
+integration: [--]
 ---
 
 Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch. 
@@ -20,7 +25,7 @@ Review the [documentation provided with the community distribution](https://www.
 
 ## Create a Site Based on an Empty Upstream
 
-There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) and via [Terminus](/guides/terminus).
+There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) and via [Terminus](/terminus).
 
 - Via the Pantheon Dashboard:
 

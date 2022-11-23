@@ -9,11 +9,11 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/slow-and-high-queries
 anchorid: slow-and-high-queries
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to resolve slow queries and high query volumes.
@@ -37,7 +37,7 @@ You can potentially address request timeouts for administrative operations by op
 
 ## Admin Workarounds
 
-[Terminus](/guides/terminus) is a reliable workaround for many administrative bottlenecks,including:
+[Terminus](/terminus) is a reliable workaround for many administrative bottlenecks,including:
 
 - Slow queries
 - High query volumes
@@ -58,6 +58,6 @@ Refer to [Debugging Performance Bottlenecks](/debug-slow-performance) for detail
 
 - [Drupal Performance and Caching Settings](/drupal-cache)
 
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
 
 - [Optimize Your wp-options Table and Autoloaded Data](/optimize-wp-options-table-autoloaded-data)

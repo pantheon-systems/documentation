@@ -12,11 +12,11 @@ editpath: frontend-performance/07-queries.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: guide
-categories: []
+categories: [--]
 newcms: [drupal, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This page provides information on optimizing queries, query caching (when you should, and shouldn't use it), and database optimization techniques.

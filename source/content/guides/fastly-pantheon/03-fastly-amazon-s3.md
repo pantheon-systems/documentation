@@ -33,7 +33,7 @@ Follow the steps below to use Amazon S3 with your Fastly account on Pantheon.
 
 ## More Resources
 
-- [AWS S3 Setup for WordPress](/wordpress-s3)
+- [AWS S3 Setup for WordPress](/guides/wordpress-configurations/wordpress-s3)
 
 - [AWS S3 Setup for Drupal](/drupal-s3)
 

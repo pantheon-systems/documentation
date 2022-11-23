@@ -25,7 +25,7 @@ Refer to [Managing Drush Versions on Pantheon](/guides/drush/drush-versions) for
 
 ## Terminus Compatibility
 
-Refer to [Version Updates](/guides/terminus/updates#php-version-compatibility-matrix) for detailed compatibility information.
+Refer to [Version Updates](/terminus/updates#php-version-compatibility-matrix) for detailed compatibility information.
 
 ## More Resources
 

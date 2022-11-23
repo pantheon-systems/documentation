@@ -19,7 +19,7 @@ type: video
 
 Drush can be installed locally in various ways. You can find [instructions](https://drushcommands.com/drush-8x/core/site-install/) at drush.org. Just be sure to use the version that corresponds to your Drupal installation and operating system.
 
-If you install Pantheon’s command line tool, [Terminus](/guides/terminus/install), you can run Drush commands from your local environment, as well as Pantheon-specific commands. I’ll be using Terminus in this video.
+If you install Pantheon’s command line tool, [Terminus](/terminus/install), you can run Drush commands from your local environment, as well as Pantheon-specific commands. I’ll be using Terminus in this video.
 
 If you don’t already have a local environment configured, try installing [Kalabox](http://www.kalabox.io/). It comes pre-installed with Terminus and Drush.
 

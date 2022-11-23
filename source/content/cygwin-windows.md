@@ -4,16 +4,16 @@ description: Learn how to install and configure Cygwin on Windows computers for 
 tags: [local, ssh]
 reviewed: "2020-02-05"
 newtype: doc
-categories: []
-newcms: []
+categories: [--]
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 <Alert title="Warning" type="danger" >
 
-This guide is unmaintained. For Windows 10 users, we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to create a Linux environment on Windows. Once you've installed the Subsystem, follow the instructions in the [Terminus Guide](/guides/terminus/install/).
+This guide is unmaintained. For Windows 10 users, we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to create a Linux environment on Windows. Once you've installed the Subsystem, follow the instructions in the [Terminus Guide](/terminus/install/).
 
 </Alert>
 

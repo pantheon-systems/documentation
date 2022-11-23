@@ -103,7 +103,7 @@ We recommend that you do not access an S3 bucket using your AWS root user creden
 
 You will need to install the appropriate Drupal module(s) and the AWS SDK library.
 
-The following instructions use Drupal 7 and [Terminus](/guides/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
+The following instructions use Drupal 7 and [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
 These steps require Drush 8, which is run by default on Pantheon for newly created Drupal sites. Sites created prior to November 4, 2015 run 5.x by default.
 
@@ -111,7 +111,7 @@ Before you begin:
 
 - [Set your site’s Drush version](/guides/drush/drush-versions/#configure-drush-version) to Drush 8 if needed.
 - Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
-- Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/guides/terminus):
+- Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp

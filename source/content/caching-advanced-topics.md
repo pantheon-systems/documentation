@@ -7,8 +7,8 @@ newtype: doc
 categories: [cache]
 newcms: [drupal7, drupal9, wordpress]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 ## Allow a User to Bypass the Cache
 
@@ -55,7 +55,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
-[Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
+[Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn/global-cdn-caching#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
 ## Using Your Own Session-Style Cookies
 

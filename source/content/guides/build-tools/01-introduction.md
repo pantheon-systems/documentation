@@ -2,7 +2,6 @@
 title: Build Tools
 subtitle: Introduction
 description: A starter kit for teams that are looking to make the leap to more advanced workflows.
-categories: [develop]
 tags: [collaborate, composer, continuous-integration, webops, workflow]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton, fatimask, dgorton]
 type: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/build-tools/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
 reviewed: "2022-04-19"
+contenttype: guide
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## What Is Build Tools?

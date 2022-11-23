@@ -3,13 +3,18 @@ title: Domains on Pantheon
 subtitle: Domain Name System
 description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
 use: [docs_tags]
-categories: [go-live]
 tags: [dns]
 contributors: [alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/dns
 anchorid: dns
+contenttype: guide
+categories: [domains]
+newcms: [--]
+audience: [development, sysadmin]
+product: [dashboard]
+integration: [--]
 ---
 
 Pantheon does not offer DNS management services. However, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.

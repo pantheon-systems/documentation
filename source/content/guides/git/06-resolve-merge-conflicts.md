@@ -66,7 +66,7 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 ### Find a Site's Upstream URL
 
-Run the following command in [Terminus](/guides/terminus) to retrieve your Upstream URL:
+Run the following command in [Terminus](/terminus) to retrieve your Upstream URL:
 
 ```bash{promptUser: user}
 terminus site:info <site> --field=upstream
@@ -140,7 +140,7 @@ Follow the steps below to resolve this scenario.
 
   ![An example of Visual Studio Code highlighting a merge conflict](../../../images/vscode-merge-conflict.png)
 
-1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates. 
+1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates.
 
 1. Remove all the delineator notes from the file.
 
@@ -150,6 +150,22 @@ Follow the steps below to resolve this scenario.
   git add wp-admin/about.php
   git commit -m "Merge conflict resolution"
   git push origin master
+  ```
+
+### Resolve Conflicts on Drupal Composer-Managed Sites
+
+A content conflict shows in the content-hash section of your `composer.lock` file. This type of merge conflict happens when two developers install or remove the package(s) in different branches. The branches cannot be merged because the `composer.lock` file has two different content-hash values.
+
+1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit-id>` at the bottom, with `=======` delineating the two versions.
+
+1. Edit the conflict by choosing one of the two content-hash values, or by editing a version containing both updates.
+
+1. Remove all the delineator notes from the file.
+
+1. Run the command below:
+
+  ```bash{promptUser: user}
+    $ composer update --lock
   ```
 
 ### Resolve Conflicts from Multidevs

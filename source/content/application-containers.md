@@ -5,10 +5,10 @@ tags: [webops]
 reviewed: "2020-04-24"
 newtype: doc
 categories: [overview]
-newcms: []
+newcms: [--]
 audience: [development, sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the [Runtime Matrix](https://pantheon.io/features/elastic-hosting), a distributed grid of over a million Linux containers running PHP and NGINX that allow us to provision and scale application containers for your site.
@@ -23,7 +23,7 @@ Every environment for your site (Dev, Test, Live) runs on its own container. At 
 
 Pantheon containers spin down (sleep) after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
 
-Attempts to remotely access services (such as MySQL or SFTP connections) will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/guides/terminus) command:
+Attempts to remotely access services (such as MySQL or SFTP connections) will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/terminus) command:
 
 ```bash{promptUser: user}
 terminus env:wake <site>.<env>

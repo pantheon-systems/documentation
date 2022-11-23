@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [accounts]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 This guide is specific to sites management, not developing and launching sites.
@@ -95,7 +95,7 @@ To change the owner of a paid site (e.g. Basic, or Performance):
 
 1. Open the Site Dashboard for the site.
 
-1. Select **Settings**, then **Invite a business owner to pay for this site**.
+1. Select **Billing**, then **Invite a business owner to pay for this site**.
 
 1. Enter the email address for the new site owner.
 
@@ -218,7 +218,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ### Delete a Site with Terminus
 
-Run the following [Terminus](/guides/terminus) command, replacing `<site>` with your site's name:
+Run the following [Terminus](/terminus) command, replacing `<site>` with your site's name:
 
 ```bash{promptUser: user}
 terminus site:delete <site>
@@ -243,7 +243,7 @@ Every entity (user, workspace, product, and site) is assigned a UUID which is in
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 
-You can also use [Terminus](/guides/terminus) to find the UUID of your workspaces:
+You can also use [Terminus](/terminus) to find the UUID of your workspaces:
 
 ```bash{promptUser: user}
 terminus site:list

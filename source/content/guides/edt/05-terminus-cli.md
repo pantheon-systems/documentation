@@ -4,7 +4,6 @@ subtitle: Command Line Interface
 anchorid: command-line-interface
 edt: true
 layout: guide
-categories: [develop]
 tags: [cli, drush, terminus, wp-cli, workflow]
 type: guide
 generator: pagination
@@ -18,6 +17,12 @@ nextpage: External Integrations
 previousurl: guides/edt/multidev/
 previouspage: Multidev
 editpath: edt/05-terminus-cli.md
+contenttype: guide
+categories: [help]
+newcms: [--]
+audience: [development]
+product: [terminus]
+integration: [--]
 image: launchGuide-twitterLarge
 ---
 
@@ -30,10 +35,10 @@ All links from the video are provided below.
 
 **Resource Links From Video**
 
- - [Terminus Guide](/guides/terminus)
- - [Terminus Guide: Install](/guides/terminus/install)
- - [Terminus Guide: Example Usage](/guides/terminus/examples)
- - [Terminus Guide: Command Reference](/guides/terminus/commands)
+ - [Terminus Guide](/terminus)
+ - [Terminus Guide: Install](/terminus/install)
+ - [Terminus Guide: Example Usage](/terminus/examples)
+ - [Terminus Guide: Command Reference](/terminus/commands)
  - [Create a WordPress Site From the Command Line Using Terminus and WP-CLI](/guides/wp-cli)
  - [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline)
 

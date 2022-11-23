@@ -10,7 +10,7 @@ contributors: [erikmathy]
 
 ---
 ## Create Sites Faster and More Efficiently
-The latest version of Pantheon's CLI, [Terminus](/guides/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
+The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
 <Alert title="Note"  type="info" >
 
@@ -20,7 +20,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 ## Installing Terminus
 
-1. [Install Terminus](/guides/terminus/install).
+1. [Install Terminus](/terminus/install).
 
 1. Check the status to make sure it works. Depending on your OS, the output may vary, but here's a sample:
 
@@ -29,7 +29,7 @@ terminus auth:login --email=<email> --machine-token=<machine_token>
  [notice] Logging in via machine token.
 ```
 
-You've installed Terminus and logged into your Pantheon account. For a full list of commands, [refer to this page](/guides/terminus/commands).
+You've installed Terminus and logged into your Pantheon account. For a full list of commands, [refer to this page](/terminus/commands).
 
 ## Using Terminus
 

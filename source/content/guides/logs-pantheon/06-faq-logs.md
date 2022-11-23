@@ -60,7 +60,7 @@ By default, the WordPress debug log path is set to `/wp-content/` and is not wri
 Drupal logs events with the Database Logging module (dblog) by default. PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
 - Visit `/admin/reports/dblog` after you've logged in as administrator.
-- Use [Terminus](/guides/terminus):
+- Use [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus drush <site>.<env> -- watchdog-show
@@ -95,7 +95,7 @@ You can use the [shell script](/guides/logs-pantheon/automate-log-downloads#crea
 
 Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) and then review the logs with any tool on your workstation.
 
-You can also create the `logwatcher.sh` script below, which uses [Terminus](/guides/terminus) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
+You can also create the `logwatcher.sh` script below, which uses [Terminus](/terminus) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
 
 1. Create a `logs` directory in the local Git repository for each log you want to watch if you're working on multiple projects locally. 
 
@@ -121,7 +121,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/gui
 1. Update the variables:
 
     - `LOGPATH` points to the `logs` directory in your project
-    - `SITE` should match your [site name](/guides/terminus/examples/#siteenv)
+    - `SITE` should match your [site name](/terminus/examples/#siteenv)
     - `ENV` is the environment in which you want to watch logs
 
 1. Make the script executable:
@@ -143,5 +143,5 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/gui
 
 - [PHP on Pantheon](/guides/php)
 - [Investigate and Remedy Traffic Events](/guides/account-mgmt/traffic/remedy)
-- [Terminus Manual](/guides/terminus)
+- [Terminus Manual](/terminus)
 - [Drupal Drush Command-Line Utility on Pantheon](/guides/drush)

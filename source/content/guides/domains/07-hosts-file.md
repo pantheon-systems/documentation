@@ -2,13 +2,18 @@
 title: Domains on Pantheon
 subtitle: Modify the Local Hosts File
 description: Use your local hosts file to test domain-specific settings and DNS records.
-categories: [go-live]
 tags: [cli, dns, local]
 contributors: [alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/hosts-file
 anchorid: hosts-file
+contenttype: guide
+categories: [domains]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 The `hosts` file exists on all major operating systems. The `hosts` file provides a list of IP addresses and domains that take precedence over DNS assigned values. You can modify your `hosts` file for the following purposes:

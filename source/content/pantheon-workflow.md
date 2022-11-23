@@ -53,7 +53,7 @@ When you're ready to test a new set of changes, deploy your code from Dev to Tes
 
 <Alert title="Note" type="info">
 
-While you are able to update the Dev environment via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/guides/terminus).
+While you are able to update the Dev environment via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/terminus).
 
 </Alert>
 

@@ -11,10 +11,10 @@ editpath: docs/guides/account-mgmt/traffic/01-introduction.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [plans]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.

@@ -2,12 +2,17 @@
 title: Best Practices for Maintaining Custom Upstreams
 subtitle: Custom Upstream Best Practices
 description: Detailed information on how to maintain Custom Upstreams.
-categories: [develop]
 tags: [git, upstreams, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/maintain-custom-upstream
 anchorid: maintain-custom-upstream
+contenttype: guide
+categories: [git, test, updates]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstream]
+integration: [--]
 ---
 
 This section provides information to help you manage and maintain your Custom Upstream.
@@ -30,11 +35,11 @@ if ( file_exists( dirname( __FILE__ ) . '/guides/redirect.php' ) && isset( $_ENV
 
 Remember that this file is not included in the Custom Upstream and must exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/guides/php/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
-WordPress sites can also store redirects in an [MU-Plugin](/mu-plugin).
+WordPress sites can also store redirects in an [MU-Plugin](/guides/wordpress-configurations/mu-plugin).
 
 ## More Resources
 
-- [Clear Upstream Cache](/guides/terminus/commands/site-upstream-clear-cache)
+- [Clear Upstream Cache](/terminus/commands/site-upstream-clear-cache)
 
 - [Troubleshoot a Custom Upstream](/guides/custom-upstream/troubleshooting)
 

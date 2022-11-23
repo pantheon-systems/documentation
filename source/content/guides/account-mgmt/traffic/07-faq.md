@@ -12,10 +12,10 @@ editpath: docs/guides/account-mgmt/traffic/07-faq.md
 reviewed: "2022-09-19"
 contenttype: guide
 categories: [plans]
-newcms: []
+newcms: [--]
 audience: [sysadmin]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ### Why doesn't Pantheon's traffic metrics match my other analytics?

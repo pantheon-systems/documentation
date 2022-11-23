@@ -4,10 +4,10 @@ description: Learn how to test and resolve connectivity issues affecting your Pa
 tags: [cli, ssh]
 newtype: doc
 categories: [help]
-newcms: []
+newcms: [--]
 audience: [development]
-product: []
-integration: []
+product: [--]
+integration: [--]
 ---
 
 ## Connectivity Error Message
@@ -21,7 +21,7 @@ Error:  Could not connect to server''
 Debugging connectivity issues
 ```
 
-Services such as MySQL and SFTP are running; however, the local client is unable to connect due to an idled container or DNS issues. Before further troubleshooting, wake the environment by loading the home page or via the following [Terminus](/guides/terminus) command:
+Services such as MySQL and SFTP are running; however, the local client is unable to connect due to an idled container or DNS issues. Before further troubleshooting, wake the environment by loading the home page or via the following [Terminus](/terminus) command:
 
 ```bash{promptUser: user}
 terminus env:wake site.env

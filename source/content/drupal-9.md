@@ -1,11 +1,15 @@
 ---
 title: Drupal 9
 description: Get started with Drupal 9 on the Pantheon WebOps Platform.
-categories: [get-started]
 tags: [site]
-cms: drupal-9
 contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-02-08"
+newtype: doc
+categories: [create, plan, config]
+newcms: [drupal9]
+audience: [development]
+product: [integrated-composer]
+integration: [--]
 ---
 
 Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8 sites](/drupal-9-migration).

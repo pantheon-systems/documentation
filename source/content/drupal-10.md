@@ -1,10 +1,15 @@
 ---
 title: Create a Drupal 10 Site
 description: Drupal 10 is coming soon!
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-10-18"
+newtype: doc
+categories: [create, plan]
+newcms: [drupal10]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 Drupal 10 is coming in December 2022! We've been busy conducting early testing on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.

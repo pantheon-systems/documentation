@@ -3,7 +3,6 @@ title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build To
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-btworkflow/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-btworkflow/17-troubleshooting.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate]
+newcms: [drupal]
+audience: [develpment]
+product: [--]
+integration: [--]
 ---
 
 ## Provided Host Name Not Valid
