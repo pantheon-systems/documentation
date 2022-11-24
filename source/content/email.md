@@ -8,7 +8,7 @@ reviewed: "2022-08-03"
 
 ## Incoming Email
 
-Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](https://gsuite.google.com/index.html).
+Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as Gmail from [Google Workspace](https://workspace.google.com/).
 
 ## Outgoing Email
 
