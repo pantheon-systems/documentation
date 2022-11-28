@@ -6,19 +6,13 @@ categories: [platform]
 tags: [cli, drush, local, wp-cli, terminus]
 ---
 
-<Alert title="Note" type="info" >
+<Alert title="Warning" type="danger" >
 
-Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/terminus/terminus-3-0) page as well.
+Terminus 3.0 has been released; we suggest you read the [Terminus 3.0](/terminus/terminus-3-0) page instead.
 
 </Alert>
 
 Terminus 2.0 is the first major version release of Terminus in over two years. Following [Semantic Versioning](https://semver.org/) standards, this means there are updates in 2.0 that are incompatible with previous implementations. Before upgrading to Terminus 2.0, you should be aware of what changes could require updates to your scripting and implementation.
-
-<Alert title="Warning" type="danger">
-
-**Do not** upgrade production environments to Terminus 2.x without first testing in development and/or continuous integration environments.
-
-</Alert>
 
 ## Updated Commands
 

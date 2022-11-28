@@ -13,7 +13,7 @@ anchorid: directory
 
 You can extend Terminus functionality and add commands by installing [third-party plugins](https://github.com/terminus-plugin-project) or by [creating your own plugins](/terminus/create).
 
-The list below provides a small sample of popular plugins available for Terminus 1.x:
+The list below provides a small sample of popular plugins available for Terminus:
 
 <CardGroup>
 
