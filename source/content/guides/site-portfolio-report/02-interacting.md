@@ -21,17 +21,17 @@ You can access the Site Portfolio report in the Enterprise Billing Center within
 
 1. Click **Settings** and then click **Billing**.
 
-    Note that the Enterprise Billing Center page displays differently for different account types.
+    Note that the Enterprise Billing Center page displays differently for different account types:
 
-    1. Click **Download CSV** next to the desired invoice period under **Portfolio Report**.
+    - Click **Download CSV** next to the desired invoice period under **Portfolio Report**.
 
         ![Dashboard Site Portfolio Display Example 1](../../../images/site-portfolio-report-dashboard-portfolio-report-section.png)
 
-        **OR**
+    **OR**
 
         If you do not have a Portfolio Report section on your Enterprise Billing Center:
 
-    1. Click the **View** button next to desired invoice period to view the report in the dashboard or click **Download CSV** to download a CSV version of the report.
+    - Click the **View** button next to desired invoice period to view the report in the dashboard or click **Download CSV** to download a CSV version of the report.
 
         ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
 
