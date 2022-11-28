@@ -11,7 +11,7 @@ SAML applies to an entire email domain when enabled and is not available on a pe
 
 SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
 
-## How it Works
+## How It Works
 
 The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** they use to access their Pantheon Dashboard.
 
