@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [update]
+newcms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Ensure Dependencies are Drupal 9 Compatible
 
  Make sure all the components of your site are Drupal 9 compatible before you change the Drupal core version to Drupal 9. Review the steps in [Upgrading a Drupal 8 site to Drupal 9](https://www.drupal.org/docs/upgrading-drupal/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/upgrading-a-drupal-8-site) for details, and use [Upgrade Status](https://www.drupal.org/project/upgrade_status) to check the compatibility of all contributed modules and themes.

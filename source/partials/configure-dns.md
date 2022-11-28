@@ -1,3 +1,12 @@
+---
+contenttype: partial
+categories: [domains]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
 
 The <span class="glyphicons glyphicons-alert text-warning"></span> icon within the Domains / HTTPS page indicates that the domain has not been correctly routed to Pantheon. Complete the steps below before you provision your HTTPS.
 

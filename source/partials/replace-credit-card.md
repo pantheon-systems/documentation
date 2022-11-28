@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [billing]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 The **Replace Card** button allows you to change the credit card to which a site is being billed, or to update an existing card's billing or expiration information.
 
 1. From the User Dashboard, click the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab and select **Billing** from the left side.

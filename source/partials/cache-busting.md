@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [cache]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [cookies]
+reviewed: ""
+---
+
 The code block below shows the **Cache-Busting Cookie Patterns** section of Pantheon's Varnish configuration (`.vcl`) file for your reference. Advanced Drupal and WordPress developers should reference this code if they have any questions regarding what cookie patterns the Global CDN will not cache:
 
 ```none

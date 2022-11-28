@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [--]
+newcms: [wordpress]
+product: [integrated-composer]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### Potential WordPress Multisite with Composer Subdirectory Solution
 
 We support WordPress Multisites with subdirectories. However, if you are working with a Composer-based Multisite ​setup, your sub sites might produce redirect errors. Your reference URLs might be incorrect if your WordPress core file path looks like this: `/code/web/wp`.
