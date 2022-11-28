@@ -3,13 +3,18 @@ title: Integrated Composer
 subtitle: Integrated Composer FAQ
 description: Get answers to your Integrated Composer questions.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-faq
 anchorid: ic-faq
+contenttype: guide
+categories: [overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides answers to frequently asked Integrated Composer questions.

@@ -8,8 +8,8 @@ showtoc: true
 permalink: docs/guides/git/undo-commits
 anchorid: undo-commits
 contenttype: guide
-categories: [--]
-newcms: [--]
+categories: [git]
+newcms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

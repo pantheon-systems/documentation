@@ -1,11 +1,16 @@
 ---
 title: Automatically Test and Deploy GitHub Changes to Pantheon from an Existing Jenkins Server
 description: Configure an existing Jenkins server to automatically test and deploy code changes to Pantheon when pushed to GitHub.
-categories: [automate]
 tags: [collaborate, continuous-integration, git, iterate]
 type: guide
 permalink: docs/guides/:basename
 date: 6/20/2017
+contenttype: guide
+categories: [automate, overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 [Jenkins](https://jenkins.io) is an open source Continuous Integration (CI) server which can be used to build, test, and deploy code on any Drupal and WordPress website on Pantheon. Unlike hosted services such as [CircleCI](https://circleci.com/), it is a Java application installed and run on a server, and requires regular upkeep and maintenance. However, it is very customizable and can even run non-CI related tasks, such as calling periodic cron jobs.

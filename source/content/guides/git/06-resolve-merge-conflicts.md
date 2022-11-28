@@ -2,13 +2,17 @@
 title: Resolve Git Merge Conflicts
 subtitle: Resolve Merge Conflicts
 description: Learn how to resolve conflicts in your site code base. 
-categories: [troubleshoot]
 tags: [git, local, webops]
 contributors: [alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/resolve-merge-conflicts
 anchorid: resolve-merge-conflicts
+categories: [git]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [git]
 ---
 
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.

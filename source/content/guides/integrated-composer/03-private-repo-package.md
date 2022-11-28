@@ -3,13 +3,18 @@ title: Integrated Composer
 subtitle: Add a Package from a Private Repository
 description: Learn how to add a package from a private repository.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/private-repo-package
 anchorid: private-repo-package
+contenttype: guide
+categories: [overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides information on how to add a package from a private repository using Integrated Composer.
