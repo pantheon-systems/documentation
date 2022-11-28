@@ -4,7 +4,7 @@ Click the links below to display complete PHP information for each version, incl
 | ------------------------------------------------ | :---------: | :---------: |
 | [8.1](https://v81-php-info.pantheonsite.io/)\*   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.0](https://v80-php-info.pantheonsite.io/)\* | <span style="color:green">✔</span>         | <span style="color:green">✔</span>          |
-| [7.4](https://v74-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | <span style="color:green">✔</span>          |
+| [7.4](https://v74-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌          |
 | [7.3](https://v73-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 | [7.2](https://v72-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 | [7.1](https://v71-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>          | ❌           |
