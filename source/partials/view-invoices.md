@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [billing]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 1. Navigate to the User Dashboard, click the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab and select **Billing**.
 
     - Sites are listed below the card to which they are assigned.

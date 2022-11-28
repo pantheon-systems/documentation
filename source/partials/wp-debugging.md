@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [php]
+newcms: [wordpress]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ```php:title=wp-config.php
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {

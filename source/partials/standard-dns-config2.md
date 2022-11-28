@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [domains]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <Accordion title="Standard DNS Configurations" id="dns-config2" icon="info-sign">
 
  Standard DNS configurations utilize the following for both the bare domain (`example.com`) and any subdomains (like `www`):

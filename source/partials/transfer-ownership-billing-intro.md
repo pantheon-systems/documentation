@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [billing]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 This process will transfer ownership of the site immediately. The account paying for the site is automatically assigned the **Site Owner** role and will receive future invoices and billing notifications. Agencies maintain access by being associated as a Supporting Organization.
 
 A transfer of ownership is the most common way non-agency developers and Registered Agencies (i.e., non-Partner Agencies) deliver completed sites to their clients. If you are a Partner Agency looking to ensure that your client receives [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), you should [send an invitation to your client to pay for the site](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
