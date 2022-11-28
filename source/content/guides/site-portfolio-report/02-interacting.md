@@ -15,7 +15,7 @@ This section provides information on how you can access and interact with the Si
 
 ## Access the Site Portfolio Report in the Dashboard
 
-You can access the Site Portfolio report in the Enterprise Billing Center within the dashboard. You must have administrative privileges of the workspace to view the Site Portfolio Report. Note that access may vary depending on how your organization has configured [Roles and Permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
+You can access the Site Portfolio Report in the Enterprise Billing Center within the dashboard. You must have Admin privileges of the workspace to view the Site Portfolio Report. Note that access may vary depending on how your organization has configured [roles and permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
 1. Navigate to the dashboard.
 
@@ -29,9 +29,9 @@ You can access the Site Portfolio report in the Enterprise Billing Center within
 
     **OR**
 
-        If you do not have a Portfolio Report section on your Enterprise Billing Center:
+    If you do not have a Portfolio Report section on your Enterprise Billing Center:
 
-    - Click the **View** button next to desired invoice period to view the report in the dashboard or click **Download CSV** to download a CSV version of the report.
+    - Click the **View** link next to desired invoice period to view the report in the dashboard or click **Download CSV** to download a CSV version of the report.
 
         ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
 

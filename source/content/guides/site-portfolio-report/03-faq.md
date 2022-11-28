@@ -45,7 +45,7 @@ The total amount owed can be viewed on the invoice linked at the top of the Site
 
 ## How Can I Access the Site Portfolio Report?
 
-Your Site Portfolio Report will be emailed to the team member designated to handle the billing of the account. Simply click the link provided in the email to view the report. The team member handling billing must have Admin privileges to access the Site Portfolio link or the Enterprise Billing Center. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the team member cannot access the link or Enterprise Billing Center.
+Pantheon’s invoice notification generates and emails the Site Portfolio Report along with a link to the online invoice for contract customers with an active contract. Simply click the link provided in the email to view the report. You can also [access the report in the Enterprise Billing Center](/guides/site-portfolio-report/interacting#access-the-site-portfolio-report-in-the-dashboard) within the dashboard. You must have Admin privileges to access the Site Portfolio link or the Enterprise Billing Center. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the team member cannot access the link or Enterprise Billing Center.
 
 ## Who Has Access to the Site Portfolio Report?
 
