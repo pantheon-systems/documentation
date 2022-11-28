@@ -90,14 +90,13 @@ The Build Tools plugin will prompt you to create access tokens for the services 
   
   - `Pipelines` (edit variables)
 
-Optionally, you can generate your tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN`, `CIRCLE_TOKEN`, `GITLAB_TOKEN`, `BITBUCKET_USER`, and `BITBUCKET_PASS` depending on what services are you using:
+Optionally, you can generate your tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN`, `CIRCLE_TOKEN`, `GITLAB_TOKEN` and `BITBUCKET_TOKEN`, depending on what services are you using:
 
 ```bash{promptUser: user}
 export GITHUB_TOKEN=yourGitHubToken
 export CIRCLE_TOKEN=yourCircleCIToken
 export GITLAB_TOKEN=yourGitlabToken
-export BITBUCKET_USER=yourBitbucketUserName
-export BITBUCKET_PASS=yourBitbucketUserPassword
+export BITBUCKET_TOKEN=yourBitbucketToken
 ```
 
 Navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app) if you need to replace a token.
