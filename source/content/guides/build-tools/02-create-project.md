@@ -96,7 +96,8 @@ Optionally, you can generate your tokens ahead of time and manually export them 
 export GITHUB_TOKEN=yourGitHubToken
 export CIRCLE_TOKEN=yourCircleCIToken
 export GITLAB_TOKEN=yourGitlabToken
-export BITBUCKET_TOKEN=yourBitbucketToken
+export BITBUCKET_USER=yourBitbucketUserName
+export BITBUCKET_PASS=yourBitbucketUserPassword
 ```
 
 Navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app) if you need to replace a token.
