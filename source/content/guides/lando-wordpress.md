@@ -2,11 +2,16 @@
 title: Install and Configure Lando for WordPress
 description: Install and Configure Lando for local development of WordPress sites.
 contributors: [digisavvy]
-categories: [develop]
 tags: [code, iterate, lando, local, webops]
 featuredcontributor: true
 type: guide
 permalink: docs/guides/:basename
+contenttype: guide
+categories: [automate, overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: []
+integration: [lando]
 ---
 
 This guide will help you get up and running with [Lando](https://lando.dev/), an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
