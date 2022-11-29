@@ -11,7 +11,6 @@ audience: [development]
 product: []
 integration: []
 layout: guide
-showtoc: true
 permalink: docs/guides/local-development/cygwin-windows
 anchorid: cygwin-windows
 ---
@@ -26,7 +25,7 @@ The content in this section is unmaintained. We recommend that you use [Windows 
 
 You can install [Cygwin](https://cygwin.com/) if you do not have access to a Mac or Linux environment. This allows you to perform tasks typically not possible in Windows, such as:
 
-* [Terminus](https://github.com/pantheon-systems/cli) installation and use
+- [Terminus](https://github.com/pantheon-systems/cli) installation and use on Pantheon
 
 ## Install Cygwin
 
@@ -34,17 +33,17 @@ You can install [Cygwin](https://cygwin.com/) if you do not have access to a Mac
 
 1. Click **Next** through the defaults and select **mirror** for downloading packages.
 
-1. Search for each package, open the appropriate category (Net or PHP), and click **Skip** next to each package to select it for installation. Required packages: 
+1. Search for each package, open the appropriate category (Net or PHP), and click **Skip** next to each package to select it for installation. Required packages are: 
 
-  - `curl`
-  - `openssh`
-  - `openssl` (Net)
-  - `php`
-  - `php-curl`
-  - `php-json`
-  - `php-phar` (PHP)
+    - `curl`
+    - `openssh`
+    - `openssl` (Net)
+    - `php`
+    - `php-curl`
+    - `php-json`
+    - `php-phar` (PHP)
 
-  ![Select openSSL package](../../../images/cygwin-select-packages.png)
+    ![Select openSSL package](../../../images/cygwin-select-packages.png)
 
 1. Complete the set up. Repeat this process when you update Cygwin or add more packages.
 
@@ -54,3 +53,4 @@ You can now use [Terminus](/terminus) commands, scripts, and plugins to maintain
 
 - [Install Terminus](/terminus/install)
 - [Git on Pantheon](/guides/git)
+- [PHP on Pantheon](/guides/php)

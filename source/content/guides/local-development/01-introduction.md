@@ -61,8 +61,15 @@ Be sure you have:
 
 Pantheon does offer [support for local development](/guides/support/#local-development) solutions or troubleshooting. This guide provides some suggestions and known working solutions.
 
-## More Resources
+## Pantheon Developer Resources
 
+Review the resources below for additional developer tools and knowledge specific to Pantheon.
+
+- [Secure Development on Pantheon](/guides/secure-development)
+- [PHP on Pantheon](/guides/php)
+- [WP-CLI on the Pantheon Platform](/guides/wp-cli)
+- [Drupal Drush Command-Line Utility on Pantheon](/guides/drush)
+- [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql)
+- [Multidev](/guides/multidev)
 - [Terminus](/terminus)
-- [Drush on Pantheon](/guides/drush)
-- [WP-CLI on Pantheon](/guides/wp-cli)
+- [Pantheon YAML Configuration Files](/pantheon-yml)

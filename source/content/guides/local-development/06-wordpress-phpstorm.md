@@ -1,7 +1,7 @@
 ---
 title: Local Development on Pantheon
 subtitle: Configure PhpStorm for WordPress
-description: Configure your local environment to build a WordPress plugin or theme using JetBrains PhpStorm.
+description: Configure your local environment to build a WordPress plugin or theme with JetBrains PhpStorm.
 cms: "WordPress"
 categories: [develop]
 tags: [plugins]
@@ -37,13 +37,13 @@ Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection
 
 1. Select **WordPress Plugin** as the project type on the left sidebar.
 
-1. Specify or browse to the file path to save your project's files. This is where PhpStorm will store its "working files", and should be separate from your WordPress directory.
+1. Specify or browse to the file path to save your project's files. This is where PhpStorm will store working files, and should be separate from your WordPress directory.
 
 1. Specify or browse to the root directory for your local WordPress site, and click **Create**:
 
     ![Configuring wp-cli path for PhpStorm](../../../images/phpstorm-new-project-wordpress-plugin-screen.png)
 
-There will be no open files in your project after you complete these steps. You will find a PHP file in the project's root, which contains the standard plugin header for WordPress.
+There will be no open files in your project after you complete these steps. You can find a PHP file in the project's root with the standard plugin header for WordPress.
 
 ## Configure WP-CLI (Optional)
 
@@ -99,16 +99,18 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 
     <Alert title="Warning" type="danger">
 
-    PhpStorm does not allow the Root Path to be left blank. Because the Pantheon platform sometimes migrates sites across app servers without warning, you will need to update the root path any time the binding path changes for your Dev environment.
+    PhpStorm does not allow the Root Path to be left blank. Because the Pantheon platform sometimes migrates sites across app servers without warning, you must update the root path any time the binding path changes for your Dev environment.
     </Alert>
 
-1. Click the **Test SFTP Connection...** button and make sure the connection is successful before moving forward. Click **OK**.
+1. Click the **Test SFTP Connection...** button and make sure the connection is successful. 
+
+1. Click **OK**.
 
     ![Add web server PhpStorm](../../../images/phpstorm-deployment-connection-test-sftp-success.png)
 
 ### Mappings Tab
 
-Populate the file paths within the Mappings tab to allow correspondence between project folders:
+You must populate the file paths within the Mappings tab to allow correspondence between project folders:
 
 1. **Local path:** This field is automatically populated and requires no edits.
 
@@ -124,9 +126,10 @@ Populate the file paths within the Mappings tab to allow correspondence between 
 
 1. Select **Deployment**, and then select **Automatic Upload**.
 
-You are now ready to edit your code. Any files you change and save locally will be automatically uploaded to your Pantheon development environment.
+You are now ready to edit your code. Any files you change and save locally will be automatically uploaded to your Pantheon Dev environment.
 
 ## More Resources
 
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)
 - [PHP on Pantheon](/guides/php)
 - [SFTP Mode](/sftp#sftp-mode)

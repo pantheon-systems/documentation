@@ -1,7 +1,7 @@
 ---
 title: Local Development on Pantheon
 subtitle: Configure PhpStorm for Drupal
-description: Configure your local environment to build a Drupal module using JetBrains PhpStorm.
+description: Configure your local environment to build a Drupal module with JetBrains PhpStorm.
 cms: "Drupal"
 categories: [develop]
 tags: [local]
@@ -21,11 +21,11 @@ Refer to [Drupal Development Using PhpStorm](https://confluence.jetbrains.com/di
 
 [Create your site on Pantheon](/guides/legacy-dashboard/create-sites) if you haven't already, and then set up your local environment.
 
-### Clone the Code Repository
+## Clone the Code Repository
 
 Make sure your Dev environment is in Git mode, then [clone your Git repository](/guides/git/git-config) to your local workstation.
 
-### Create a New PhpStorm Project
+## Create a New PhpStorm Project
 
 1. Open PhpStorm and create a new project from existing files.
 
@@ -109,3 +109,4 @@ Files you change and save locally will now be automatically uploaded to Pantheon
 
 - [Drush on Pantheon](/guides/drush)
 - [Using Drupal with Pantheon](/develop-drupal)
+- [Configure Your Drupal Settings.php File](/guides/php/settings-php)

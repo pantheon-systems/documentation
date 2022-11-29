@@ -1,29 +1,28 @@
 ---
 title: Local Development on Pantheon
 subtitle: Install and Configure Lando for WordPress
-description: Install and Configure Lando for local development of WordPress sites.
+description: Install and Configure Lando for WordPress local development.
 contributors: [digisavvy]
 categories: [develop]
 tags: [code, iterate, lando, local, webops]
-featuredcontributor: true
 layout: guide
 showtoc: true
 permalink: docs/guides/local-development/lando-wordpress
 anchorid: lando-wordpress
 ---
 
-This section provides information on how to use Lando with WordPress sites on Pantheon.
+This section provides information on how to use Lando for local development with WordPress sites on Pantheon.
 
-[Lando](https://lando.dev/) is an Open Source development tool for developers who prefer a customizable local server environment configuration that can be tracked in source-control repositories.
+[Lando](https://lando.dev/) is an Open Source development tool for customizable local server environment configurations that can be tracked in source-control repositories.
 
 ## Before You Begin
 
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) a site.
-- A working knowledge of local server environments is helpful but not entirely necessary.
-- Reviewed [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
-- Ensure you meet Lando's [system requirements](https://docs.devwithlando.io/installation/system-requirements.html). Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
+- A working knowledge of local server environments.
+- Reviewed the [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and the [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
+- Verified that your meet Lando's [system requirements](https://docs.devwithlando.io/installation/system-requirements.html). Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
 
 ## Download and Install Lando
 
@@ -37,27 +36,25 @@ Be sure that you have:
 
 ## Get Started
 
-You must manage your Lando instances via the command-line. The Lando command is installed globally so you can run it from anywhere within your terminal. A short list of useful Lando commands can be found [here](https://docs.devwithlando.io/cli/usage.html). You can also run the command below for a list of useful Lando commands:
+You must manage your Lando instances via the command-line. The Lando command is installed globally. You can run it from anywhere within your terminal. 
 
-```bash
-lando --help
-```
+1. Review the short list of useful Lando commands [here](https://docs.devwithlando.io/cli/usage.html) or run the command below for a list of useful Lando commands:
 
-<Alert type="info" title="Note">
+  ```bash
+  lando --help
+  ```
 
-We recommend that you keep your project's site files and folders organized. Keep your website projects in separate folders from one another.
+1. Keep your project's site files and folders organized by placing your website projects in separate folders from one another.
 
-</Alert>
-
-Create a separate folder to hold your Lando-powered installations rather than mixing with installs managed by other server environments.
+1. Create a separate folder to hold your Lando-powered installations rather than mixing with installs managed by other server environments.
 
 ## Install WordPress Locally
 
 This example shows you how to install and spin up a fresh WordPress site locally, without Pantheon integration.
 
-Note that you can follow these same basic steps with an existing Pantheon Drupal site, just replace the starting recipe.
+Note that you can follow these same basic steps with an existing Pantheon Drupal site by replacing the starting recipe.
 
-1. Open your terminal and go to the directory where you plan to run your Lando WP site:
+1. Open your terminal and go to the directory where you plan to run your Lando WP site. Replace `my-wp-site` with the name of your site.
 
   ```bash
   cd ~/projects/my-wp-site
@@ -77,9 +74,7 @@ Note that you can follow these same basic steps with an existing Pantheon Drupal
 
 1. Press enter and Lando will spin up the site for your webroot from your current directory.
 
-1. Enter the name of the site. Use something you’ll remember.
-
-  Your local site has been created but you're not done. Continue with the steps below to start the Lando app, download WordPress, and then install WordPress. 
+1. Enter the name of the site to create your local site. Use something you’ll remember. 
 
 1. Start Lando:
 
@@ -101,27 +96,25 @@ Note that you can follow these same basic steps with an existing Pantheon Drupal
 
   <Alert type="info" title="Note">
 
-  To use WP-CLI commands in Lando: prefix your `wp` command with `lando`.
+  Prefix your `wp` command with `lando` to use WP-CLI commands in Lando.
 
   </Alert>
 
-1. Create your WP configuration file. You can actually do this from the command-line. However, this example uses the browser.
+1. Create your WP configuration file. You can also do this in the command line.
 
-1. Open your browser and enter the URL given to you above: `http://yourappname.lndo.site`. You’ll notice WordPress’s _Famous Five Minute install_ screen.
+1. Open your browser and enter the URL provided when you started Lando. You’ll notice WordPress’s _Famous Five Minute install_ screen.
 
 1. Click next after choosing your preferred language, and then click let’s go on the following screen.
 
 1. Enter your credentials and complete the installation process. In Lando, for a WordPress installation without Pantheon, the Database, Username, and Password are all `wordpress` and Database Host is `database` (all values are case-sensitive).
 
-Congrats! You now have Lando installed with WordPress!
-
 <Alert type="info" title="Note">
 
-You can find your site’s login details simply by typing `lando info` in your terminal.
+You can find your site’s login details by typing `lando info` in your terminal.
 
 </Alert>
 
-### Install WordPress with the Pantheon Recipe
+## WordPress with the Pantheon Recipe
 
 Using Lando with Pantheon provides a few key advantages:
 
@@ -133,14 +126,15 @@ Using Lando with Pantheon provides a few key advantages:
 
 ### WordPress Pantheon Requirements
 
-To use this Lando recipe you must have:
+Verify that you have:
 
-- An account with Pantheon, which you can [register](https://pantheon.io/register) for free
+- An account with Pantheon, which you can [register](https://pantheon.io/register) for free.
 
-- A Pantheon hosted site ready to go. You can either use an existing Pantheon site or [spin up a new one](/guides/quickstart/create-new-site)
+- A Pantheon hosted site ready to go. You can either use an existing Pantheon site or [spin up a new one](/guides/quickstart/create-new-site).
 
-- A unique Pantheon [machine token](/machine-tokens)
+- A unique Pantheon [machine token](/machine-tokens).
 
+### Install WordPress with the Pantheon Recipe
 
 1. Open the directory of the WordPress site created in the section above, and stop the Lando instance (if it is running):
 
@@ -158,7 +152,7 @@ To use this Lando recipe you must have:
 
   The only difference between this and `lando init` is that defining the source as Pantheon allows you to skip some prompts.
 
-1. Paste a Pantheon machine token you created for Lando when prompted. Note that most Terminal emulators use **CTRL/Command + V** to paste, and you will not see any characters added, `*` or otherwise.
+1. Paste the Pantheon machine token you created for Lando when prompted. Note that most Terminal emulators use **CTRL/Command + V** to paste, and you will not see any characters added, `*` or otherwise.
 
 1. Choose the Pantheon site you want to pull from to create your local site.
 
@@ -176,21 +170,25 @@ To use this Lando recipe you must have:
 
 You can get your local site URL when you start your site and access it from your browser. You can also pull your code, media files, and your database from the site’s Pantheon environment.
 
-### Push and Pull Your Changes
+## Push and Pull Your Changes
+
+### Push Local Changes to Pantheon
 
 One of the benefits of using Lando with the Pantheon recipe is the ability to _push_ your changes from your local site to your various Pantheon environments (including Live and Multidev instances).
 
-Enter `lando push` to initiate a push from your local environment.
+1. Make changes to your local site.
 
-Enter `lando pull`to perform a pull.
+1. Enter `lando push` to initiate a push from your local environment.
 
-Lando will prompt you for the environments you want to pull or push your codebase, files, and database from or to.
+1. Complete the Lando prompts to select the environments you want to push your codebase, files, and database changes to.
 
 <Alert type="info" title="Note">
 
 Your **database** refers to your app's database. Your **code** refers to your app’s codebase, and includes any files that you would track within your site’s source control repository. Your **media** refers to assets and files stored within the `/uploads` folder. In general, it’s a good idea to NOT include your media files in your repository as your repo’s size can get out of hand quickly.
 
 </Alert>
+
+### Pull Changes from Pantheon to Your Local
 
 1. Open your terminal.
 
@@ -200,17 +198,15 @@ Your **database** refers to your app's database. Your **code** refers to your ap
   lando pull
   ```
 
-1. Select the desired environment when prompted. This example uses **dev** but it’s important to note you *can* pull your files from any Pantheon environment, including Multidev environments.
+1. Select the environment you want to pull from when prompted. You can pull from any Pantheon environment, including Multidev environments.
 
-1. Select the desired environment to pull the database from when prompted. This example uses **dev**.
 
-1. Select **dev** for files when prompted.
 
-Lando also runs a search and replace on the database **siteurl** and **sitename** table fields and replaces Pantheon’s values with your local values.
+  Lando runs a search and replace on the database **siteurl** and **sitename** table fields and replaces Pantheon’s values with your local values.
 
   <Alert type="info" title="Note">
 
-  Sometimes, it’s a good idea to do your own search and replace on your local site after a pull has finished. Also, it can be a good idea to run a search replace on a site on Pantheon you pushed to. Here’s how you can do both!
+  You can run your own search and replace on your local site after a pull has finished. You can also run a search replace on a site on Pantheon you pushed to. Here’s how you can do both:
 
   ```bash
   lando wp search-replace 'yourpantheondevurl.com' 'yourlocalapp.lndo.site'
@@ -233,4 +229,5 @@ Visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubles
 
 - [WP-CLI on Pantheon](/guides/wp-cli)
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)
 - [Pantheon WebOps Workflow](/pantheon-workflow)

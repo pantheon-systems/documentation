@@ -45,7 +45,7 @@ Names should be in PascalCase, and should be descriptive of the operation’s us
 
 Note that GraphQL does not use HTTP status codes in the same way that REST-based APIs do. GraphQL responses return a 200 status code if the request was completed, and 5xx status code if it was not completed. If the requesting client was able to reach the gateway and the gateway responded, the response will contain a 200 status code regardless of the content of the response. As a result, failed queries and mutations take additional work to identify in DevTools.
 
-1. Review queries carefully. In the example below, it is not immediately obvious that one of these queries failed, as every request returned a 200 status code:
+1. Review queries carefully. In the example below, it is not obvious that one of these queries failed, as every request returned a 200 status code:
 
     ![GraphQL 200 Status Codes](../../../images/graphql-200-status.png)
 
@@ -65,5 +65,5 @@ The example below shows an error returned for a workspace that requires multi-fa
 
 ## More Resources
 
-- [Local Development](/guides/local-development)
+- [Developing on Pantheon Directly with SFTP Mode](/sftp)
 - [Pantheon Professional Services](/guides/professional-services)
