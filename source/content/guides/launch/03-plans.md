@@ -4,10 +4,15 @@ subtitle: Select Your Site Plan
 description: Select the right site plan to cover your needs.
 layout: guide
 showtoc: true
-categories: [go-live]
 tags: [agencies, billing, launch, webops]
 anchorid: plans
 permalink: docs/guides/launch/plans/
+contenttype: guide
+categories: [billing, plans, accounts]
+newcms: [wordpress, drupal]
+audience: [agency, business]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
