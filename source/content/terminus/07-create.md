@@ -125,7 +125,7 @@ Some of the following instructions may break your plugin temporarily. We recomme
 
 Pantheon recommends adopting Terminus core standards if you plan to distribute your plugin and/or add it to an open source license and encourage contributions. Some basic principles to follow are:
 
-- Ensure compatibility with PHP >=7.8 and 8
+- Ensure compatibility with PHP >=7.4 and 8
 - Follow [PSR-2 code style](http://www.php-fig.org/psr/psr-2/)
 - Review more Terminus standards at:
 [https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md](https://github.com/pantheon-systems/terminus/blob/master/CONTRIBUTING.md)
