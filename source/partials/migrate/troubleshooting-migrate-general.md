@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 This section provides information on causes and solutions to error messages that display in the Site Dashboard if a migration fails to complete.
 
 First troubleshooting steps:

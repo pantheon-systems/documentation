@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 To move **modules**, use the following commands:
 
 <TabList>

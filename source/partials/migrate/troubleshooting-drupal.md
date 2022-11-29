@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Drupal Issues
 
 ### Multiple site directories found within the import archive

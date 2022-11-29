@@ -1,6 +1,6 @@
 ---
 contenttype: partial
-categories: [--]
+categories: [create]
 newcms: [--]
 product: [terminus]
 integration: [--]

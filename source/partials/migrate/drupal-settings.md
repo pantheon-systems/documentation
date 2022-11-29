@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Your existing site may have customizations to `settings.php` or other configuration files.
 
 1. Copy the existing `settings.php` to the Pantheon site and remove the `$databases` array if it exists.

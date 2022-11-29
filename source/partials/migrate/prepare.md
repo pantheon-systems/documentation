@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Complete the following tasks on the source site to ensure a successful migration. 
 
 1. Read [Platform Considerations](/guides/platform-considerations).

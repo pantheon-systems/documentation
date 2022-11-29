@@ -1,3 +1,12 @@
+---
+contenttype: partial
+categories: [overview]
+newcms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
 
 ## Login Duration
 

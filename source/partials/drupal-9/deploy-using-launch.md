@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 You should now have the three major components (contrib and custom code, database, and files) of your site imported to your Pantheon account. 
 
 1. Clear your caches in the [Pantheon Dashboard](/clear-caches#pantheon-dashboard) or with Terminus by running the following command:

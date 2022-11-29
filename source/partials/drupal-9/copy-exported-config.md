@@ -1,10 +1,11 @@
 ---
 contenttype: partial
-categories: [git, config]
-newcms: []
-product: []
-integration: []
-reviewed: "2022-11-07"
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
 ---
 
 <TabList>

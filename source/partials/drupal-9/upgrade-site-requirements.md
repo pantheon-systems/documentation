@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Confirm that your site meets the following requirements before you continue:
 
 - Ensure your site has the [Pantheon drops-8 repo](https://github.com/pantheon-systems/drops-8) in its upstream.
