@@ -1,7 +1,7 @@
 ---
 title: Local Development on Pantheon
 subtitle: Introduction
-description: Learn more about working locally on your Pantheon Drupal or WordPress site.
+description: Learn more about working locally on your Pantheon site.
 categories: [develop]
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
@@ -31,7 +31,7 @@ There are three parts to any dynamic website:
 
 1. **Files**: User uploaded or application generated.
 
-You will need to transfer each file from Pantheon to your local environment.
+You must transfer each file from Pantheon to your local environment.
 
 Be sure you have:
 
@@ -41,13 +41,13 @@ Be sure you have:
     - [WAMP](http://www.wampserver.com/)
     - [XAMPP](https://www.apachefriends.org/index.html)
 
--  A configuration solution that supports a minimum of PHP 5.3 and MySQL. Pantheon uses a [particular architecture to maximize performance and availability](/application-containers)
+-  A configuration solution that supports a minimum of PHP 5.3 and MySQL. Pantheon uses a [particular architecture to maximize performance and availability](/application-containers).
 
-- Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions)
+- Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
 
 - Git client for tracking code changes
 
-- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
+- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files or Rsync.
 
 - [Terminus](/terminus)
 

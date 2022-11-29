@@ -27,7 +27,7 @@
     terminus backup:get $SITE.$ENV --element=db
     ```
 
-1. Import the archive into your local MySQL database using the following command:
+1. Run the command below to import the archive into your local MySQL database:
 
     ```bash{promptUser: user}
     gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME

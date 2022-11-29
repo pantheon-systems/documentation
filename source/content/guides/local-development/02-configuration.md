@@ -12,13 +12,13 @@ permalink: docs/guides/local-development/configuration
 anchorid: configuration
 ---
 
-This section provides information on how to configure your machine for successful local development with Pantheon.
+This section provides information on how to configure your machine for successful local development with your Pantheon site.
 
 ## Before You Begin
 
-This section uses several commands that use the temporary command line alias, `$SITE`, to make entering command examples easier. Export your variables and clear your sit environment cache before you begin to configure your local development setup. 
+This section uses several commands that use the temporary command line alias, `$SITE`, to make entering command examples easier. Export your variables and clear your site environment cache before you configure your local development setup. 
 
-1. Set the temporary variable `$SITE` in your terminal session to match the name of your site. Replace `anita-drupal` in this example:
+1. Set the temporary variable `$SITE` in your terminal session to match the name of your site. Replace `anita-drupal` with your site's name in this example:
 
   ```bash{promptUser:user}
   export SITE=anita-drupal && echo "New alias set as $SITE"
@@ -45,17 +45,17 @@ This section uses several commands that use the temporary command line alias, `$
 
 1. Export the environment as a variable:
 
-```bash{promptUser:user}
-export ENV=dev
-```
+  ```bash{promptUser:user}
+  export ENV=dev
+  ```
 
-1. Run the command below to clear the target site environment's cache to save time. This can also be done from the Pantheon Dashboard or from the application itself.
+1. Run the command below to clear the target site environment's cache. This can also be done from the Pantheon Dashboard or from the application itself.
 
   ```bash{promptUser: user}
   terminus env:clear-cache $SITE.$ENV
   ```
 
-## Get the Code
+## Transfer Your Code
 
 Follow the steps below to get a clone of your Pantheon code on your local computer.
 
@@ -71,7 +71,7 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
 
     Git will create a directory as part of the clone, so you don't need to create one.
 
-1. Run the command you copied in step 2:
+1. Run the clone command you copied:
 
     ```bash{promptUser: user}
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -92,26 +92,25 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
     Resolving deltas: 100% (12802/12802), done.
     ```
 
-    Check your [SSH key](/ssh-keys) setup if you run into permission problems. Check your network to see if you have a current version of Git if the clone starts but can't complete.
+    - Check your [SSH key](/ssh-keys) setup if you run into permission problems. 
+    - Check your network to see if you have a current version of Git if the clone starts but can't complete.
 
-## Get the Database
+## Transfer Your Database
 
 <Partial file="export-database.md" />
 
-## Get the Files
+## Transfer Your Files
 
-Refer to [SFTP and rsync on Pantheon](/rsync-and-sftp) for an overview of ways to transfer files.
+Refer to [SFTP and Rsync on Pantheon](/rsync-and-sftp) for an overview of ways to transfer files.
 
 ### Via Terminus
 
-1. Run the following Terminus commands:
+1. Run the Terminus commands below to create and get a backup of the site's files:
 
   ```bash{promptUser: user}
   terminus backup:create $SITE.$ENV --element=files
   terminus backup:get $SITE.$ENV --element=files
   ```
-
- This will create and get a backup of the site's files.
 
 1. Move the resulting backup to the correct directory on your local file system:
 
@@ -120,7 +119,7 @@ Refer to [SFTP and rsync on Pantheon](/rsync-and-sftp) for an overview of ways t
 
 ### Via SFTP CLI
 
-SFTP is slower method, but easier for some to use:
+SFTP is a slower method, but easier for some to use:
 
 1. Click **Connection Info** to get your SFTP login credentials.
 
@@ -153,7 +152,7 @@ SFTP is slower method, but easier for some to use:
 
 ### Send the Database
 
-1. Create an archive using the MySQL utility mysqldump:
+1. Create an archive using the MySQL utility `mysqldump`:
 
   ```bash{promptUser: user}
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME | gzip > database.sql.gz
