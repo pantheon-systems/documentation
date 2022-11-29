@@ -3,11 +3,16 @@ title: Launch Essentials
 subtitle: Pre-launch Configuration
 description: Complete important configuration before launching your site.
 layout: guide
-categories: [go-live]
 tags: [backup, launch, webops]
 showtoc: true 
 permalink: docs/guides/launch/launch-check/
 anchorid: launch-check
+contenttype: guide
+categories: [config, cache, test, launch]
+newcms: [wordpress, drupal]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to enable backups, test your email plugin or module, review status reports, and test your cache.
