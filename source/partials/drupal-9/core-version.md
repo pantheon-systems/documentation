@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Run the code below to set the Drupal core version to Drupal 9:
 
   ```bash{promptUser: user}

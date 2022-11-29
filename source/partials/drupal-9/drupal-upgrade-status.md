@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [--]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 This section is optional, but recommended.
 
 Before you attempt to upgrade to Drupal 9, confirm that the site is ready with the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal module.

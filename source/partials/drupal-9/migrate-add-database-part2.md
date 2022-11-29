@@ -1,7 +1,7 @@
 ---
 contenttype: partial
-categories: [--]
-newcms: [--]
+categories: [upgrade]
+newcms: [drupal9]
 product: [--]
 integration: [--]
 tags: [--]

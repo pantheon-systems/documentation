@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [wordpress]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 
 The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 

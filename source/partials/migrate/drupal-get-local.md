@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 1. Navigate to the Site Dashboard and click the **<span class="fa fa-wrench"></span> Dev** environment.
 
 1. Set the site's **Development Mode** to Git:

@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## General FAQ
 
 ### Why doesn't my site archive import correctly from Dropbox?

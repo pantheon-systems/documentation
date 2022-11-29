@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
 
 1. <Partial file="export-alias.md" />

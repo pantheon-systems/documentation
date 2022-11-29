@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Drupal FAQ
 
 ### How should I migrate a site with a custom Drupal-based upstream?

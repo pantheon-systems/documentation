@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [migrate]
+newcms: [wordpress, drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 
 <TabList>
 
