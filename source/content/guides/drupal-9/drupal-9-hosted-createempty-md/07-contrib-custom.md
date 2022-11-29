@@ -12,6 +12,12 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [overview, migrate]
+newcms: [drupal9]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.

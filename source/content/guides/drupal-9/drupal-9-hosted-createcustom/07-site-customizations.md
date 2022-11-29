@@ -11,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-createcustom/site-customizations
 anchorid: site-customizations
 editpath: drupal-9/drupal-9-hosted-createcustom/07-site-customizations.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate, git]
+newcms: [drupal]
+audience: [development]
+product: [dashboard, custom-upstreams]
+integration: [--]
 ---
 
 Go through the following steps for each child site you wish to test, or that has site-specific code. Examples of site-specific code are site-specific redirects and custom modules only present on a specific site.

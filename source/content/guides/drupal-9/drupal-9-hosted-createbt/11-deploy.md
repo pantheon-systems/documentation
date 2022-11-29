@@ -11,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-createbt/deploy
 anchorid: deploy
 editpath: drupal-9/drupal-9-hosted-createbt/11-deploy.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate, git]
+newcms: [drupal]
+audience: [development]
+product: [dashboard]
+integration: [--]
 ---
 
 <Partial file="drupal-9/deploy-live.md" />

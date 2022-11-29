@@ -11,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/change-upstream
 anchorid: change-upstream
 editpath: drupal-9/drupal-9-hosted-createempty-md/11-change-upstream.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [overview, migrate]
+newcms: [drupal9]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 
 Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
