@@ -101,7 +101,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 - PHPStorm with [WordPress](/guides/local-development/wordpress-phpstorm) and [Drupal](/guides/local-development/drupal-phpstorm)
 - [WinSCP](/winscp)
-- [Visual Studio Code](/visual-studio-code)
+- [Visual Studio Code](/guides/local-development/visual-studio-code)
 
 ## Troubleshooting
 

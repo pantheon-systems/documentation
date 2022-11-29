@@ -47,7 +47,7 @@ Be sure you have:
 
 - Git client for tracking code changes
 
-- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files or Rsync.
+- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/guides/local-development/visual-studio-code), for transferring files or Rsync.
 
 - [Terminus](/terminus)
 
@@ -73,3 +73,4 @@ Review the resources below for additional developer tools and knowledge specific
 - [Multidev](/guides/multidev)
 - [Terminus](/terminus)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
+- [Git on Pantheon](/guides/git)

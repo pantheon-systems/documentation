@@ -53,7 +53,7 @@ Make sure that you have a:
 
 Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/ssh-keys). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon account password to sign in, when prompted.
 
-Visit our guide to [Configure Visual Studio Code](/visual-studio-code) to edit and sync code from within the text editor.
+Visit our guide to [Configure Visual Studio Code](/guides/local-development/visual-studio-code) to edit and sync code from within the text editor.
 
 ## Cloud Development Environment
 
