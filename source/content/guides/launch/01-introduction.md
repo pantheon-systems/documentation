@@ -26,7 +26,7 @@ Optimize your dev team and streamline WebOps workflows. Pantheon delivers on-dem
 
 This guide will show you how to create, configure, and launch your site on the Pantheon platform. You should also refer to the [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check) or [Drupal Launch Check](/drupal-launch-check/) depending on your CMS, to ensure that your site performs as expected for your users.
 
-## Essential Steps in this Guide
+## Essential Steps in This Guide
 
 - [Create the Live environment](/guides/quickstart/create-test-live/)
 
