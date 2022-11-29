@@ -3,7 +3,6 @@ title: Migrate a Custom Upstream to Drupal 9
 subtitle: Introduction
 description: Learn how to migrate a Custom Upstream to Drupal 9
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted-createcustom
 anchorid: drupal-9-v8
 editpath: drupal-9/drupal-9-hosted-createcustom/01-introduction.md
 reviewed: "2022-08-18"
+contenttype: guide
+categories: [migrate, git]
+newcms: [drupal]
+audience: [development]
+product: [dashboard, custom-upstreams]
+integration: [--]
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

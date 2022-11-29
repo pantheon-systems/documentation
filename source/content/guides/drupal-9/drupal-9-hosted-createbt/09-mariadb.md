@@ -3,7 +3,6 @@ title: Migrate a Site That Was Created with Build Tools to Drupal 9
 subtitle: Confirm the MariaDB Version and Updates
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted-createbt/mariadb
 anchorid: mariadb
 editpath: drupal-9-v8/09-mariadb.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate, git, update]
+newcms: [drupal]
+audience: [development]
+product: [dashboard]
+integration: [mariadb]
 ---
 
 Validate your database version with `terminus drush`:

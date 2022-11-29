@@ -3,7 +3,6 @@ title: Migrate a Custom Upstream to Drupal 9
 subtitle: Create a New Branch with Integrated Composer Code
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted-createcustom/new-branch
 anchorid: new-branch
 editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
 reviewed: "2022-06-09"
+contenttype: guide
+categories: [overview, migrate]
+newcms: [drupal9]
+audience: [agency, development]
+product: [terminus, custom-upstreams]
+integration: [--]
 ---
 
 The first step in the migration process is to create a new branch with Integrated Composer.

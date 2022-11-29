@@ -3,7 +3,6 @@ title: Migrate a Custom Upstream to Drupal 9
 subtitle: Deploy to Dev
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/drupal-9-hosted-createcustom/deploy-dev
 anchorid: deploy-dev
 editpath: drupal-9/drupal-9-hosted-createcustom/09-deploy-dev.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [migrate, git]
+newcms: [drupal]
+audience: [development]
+product: [dashboard, custom-upstreams]
+integration: [--]
 ---
 
 Merge the code and files from the Multidev environment to the Dev environment.

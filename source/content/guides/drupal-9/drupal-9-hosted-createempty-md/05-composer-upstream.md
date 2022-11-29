@@ -3,7 +3,6 @@ title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/composer-upstream
 anchorid: composer-upstream
 editpath: drupal-9/drupal-9-hosted-createempty-md/05-composer-upstream.md
 reviewed: "2021-03-31"
+contenttype: guide
+categories: [overview, migrate]
+newcms: [drupal9]
+audience: [agency, development]
+product: [custom-upstreams]
+integration: [--]
 ---
 
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back.
