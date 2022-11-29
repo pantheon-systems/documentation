@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [--]
+newcms: [--]
+product: [search]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 1. Disable the [Apache Solr Search](https://www.drupal.org/project/apachesolr),[Search API Solr Search](https://www.drupal.org/project/search_api_solr), and the [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) modules.
 
 1. Delete all schema configurations from `settings.php`.

@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [php]
+newcms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 | PHP Version | Terminus 3.x | Terminus 2.x |
 | ----------- | :-----------: | :-----------: |
 | 8.2 | ❌          | ❌          |

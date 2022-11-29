@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [cache]
+newcms: [drupal]
+product: [--]
+integration: [module]
+tags: [--]
+reviewed: ""
+---
+
 1. Disable the [Redis Object Cache](https://www.drupal.org/project/redis) module.
 
 1. Delete the Redis configuration from `settings.php`.
