@@ -3,7 +3,6 @@ title: Migrate a Custom Upstream to Drupal 9
 subtitle: Deploy to Dev
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide

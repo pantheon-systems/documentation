@@ -3,7 +3,6 @@ title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Add Contrib and Custom Code
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
