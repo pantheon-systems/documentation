@@ -2,13 +2,18 @@
 title: Pantheon Global CDN
 subtitle: Test Global CDN Caching
 description: Detailed information on how to determine if CDN caching is working on your site.
-categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/test-global-cdn-caching
 anchorid: test-global-cdn-caching
+contenttype: guide
+categories: [cache, optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 This section provides steps on how to test your Global CDN caching.

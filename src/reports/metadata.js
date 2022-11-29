@@ -60,8 +60,9 @@ class ReviewReport extends React.Component {
 
           return (
             <Layout>
+              <div style={{ padding: "20px" }}>
               <h1>All Files</h1>
-                <div>
+
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
                       <tr>
@@ -69,7 +70,6 @@ class ReviewReport extends React.Component {
                         <th>Subtitle</th>
                         <th>Description</th>
                         <th>CMS</th>
-                        <th>New CMS</th>
                         <th>Categories</th>
                         <th>Tags</th>
                         <th>Type</th>
@@ -90,9 +90,8 @@ class ReviewReport extends React.Component {
                                 {page.node.frontmatter.title}{" "}
                                 </Link>
                               </td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.subtitle : null}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.description : null}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
+                              <td>{page.node.frontmatter.subtitle}</td>
+                              <td>{page.node.frontmatter.description}</td>
                               <td>
                                 {page.node.frontmatter.newcms
                                   ? page.node.frontmatter.newcms.map((newcms, i) => {

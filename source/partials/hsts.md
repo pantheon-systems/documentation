@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [authentication]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <Alert title="Note" type="info">
 
 Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.

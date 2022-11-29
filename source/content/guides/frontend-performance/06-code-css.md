@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Code and CSS
 description: Optimizing code and CSS.
 anchorid: code
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/frontend-performance/code-css
 editpath: frontend-performance/06-code-css.md
 image: CDN-speedTest-docs-guide
 reviewed: "2022-02-09"
+contenttype: guide
+categories: [optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page provides information on optimizing code and CSS.

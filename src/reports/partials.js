@@ -47,13 +47,13 @@ class ReviewReport extends React.Component {
 
           return (
             <Layout>
+              <div style={{ padding: "20px" }}>
               <h1>Partials</h1>
-                <div>
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
                       <tr>
                         <th>Path</th>
-                        <th>New CMS</th>
+                        <th>CMS</th>
                         <th>Categories</th>
                         <th>Tags</th>
                         <th>Product</th>

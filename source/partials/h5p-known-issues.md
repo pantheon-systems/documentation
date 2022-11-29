@@ -1,3 +1,12 @@
+---
+contenttype: partial
+categories: [--]
+newcms: [--]
+product: [--]
+integration: [plugins, modules]
+tags: [--]
+reviewed: ""
+---
 
 <ReviewDate date="2019-11-05" />
 

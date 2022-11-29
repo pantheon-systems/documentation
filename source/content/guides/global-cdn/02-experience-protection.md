@@ -2,13 +2,18 @@
 title: Pantheon Global CDN
 subtitle: Confirm Experience Protection
 description: Provide an uninterrupted experience for your users.
-categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/experience-protection
 anchorid: experience-protection
+contenttype: guide
+categories: [cache, optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 Experience Protection provides a seamless, uninterrupted experience for your users. Global CDN will serve a cached version of your page instead of displaying an error if the server is not responding and can't serve a new copy of the page. Global CDN will display the cached version even if it is _stale cache_ (expired). 

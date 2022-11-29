@@ -4,7 +4,6 @@ subtitle: Command Line Interface
 anchorid: command-line-interface
 edt: true
 layout: guide
-categories: [develop]
 tags: [cli, drush, terminus, wp-cli, workflow]
 type: guide
 generator: pagination
@@ -18,6 +17,12 @@ nextpage: External Integrations
 previousurl: guides/edt/multidev/
 previouspage: Multidev
 editpath: edt/05-terminus-cli.md
+contenttype: guide
+categories: [help]
+newcms: [--]
+audience: [development]
+product: [terminus]
+integration: [--]
 image: launchGuide-twitterLarge
 ---
 

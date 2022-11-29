@@ -11,8 +11,8 @@ anchorid: drupal-9-hosted
 editpath: drupal-9/drupal-9-hosted/01-introduction.md
 reviewed: "2021-03-31"
 contenttype: guide
-categories: [--]
-newcms: [drupal9]
+categories: [overview, migrate]
+newcms: [drupal8, drupal9]
 audience: [development]
 product: [--]
 integration: [--]

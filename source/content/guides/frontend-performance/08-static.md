@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Static Sites and Pages
 description: Static sites and static page generation, including AMP.
 anchorid: static
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/frontend-performance/static
 editpath: frontend-performance/08-static.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: guide
+categories: [optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This pages provides information on static sites and static page generation, including AMP.

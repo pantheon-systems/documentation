@@ -8,20 +8,31 @@ class ReviewReport extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            categorizedDocs: allMdx(filter: {frontmatter: {contenttype: {eq: "partial"}}} sort: {fields: fileInfo___relativePath, order: ASC}) {
+            categorizedDocs: allMdx(
+              filter: {
+                frontmatter: { 
+                  contenttype: {ne: "partial"}
+                  title: { ne: "" }
+                }
+                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
+              }
+              sort: {fields: fileInfo___relativePath, order: ASC}
+            ) {
               edges {
                 node {
                   id
-                  excerpt
                   frontmatter {
                     categories
                     contenttype
+                    description
                     integration
                     newcms
+                    permalink
                     product
+                    subtitle
                     reviewed
                     tags
-                    type
+                    title
                   }
                   fileInfo {
                     childMdx {
@@ -41,6 +52,7 @@ class ReviewReport extends React.Component {
           }
         `}
         render={data => {
+          const [searchTitle, setSearchTitle] = useState("")
           const [searchnewCms, setSearchnewCms] = useState("")
           const [searchCategories, setSearchCategories] = useState("")
           const [searchTags, setSearchTags] = useState("")
@@ -52,11 +64,33 @@ class ReviewReport extends React.Component {
           return (
             <Layout>
               <div style={{ padding: "20px" }}>
-              <h1>Partials</h1>
+              <h1>All Files</h1>
+
                   <table className="table table-commands table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th>Path</th>
+                        <th>Title
+                          <div className="input-group">
+                            <input
+                              type="text"
+                              id="command-search-title"
+                              className="form-control"
+                              placeholder="Filter"
+                              onChange={z => setSearchTitle(z.target.value)}
+                              value={searchTitle}
+                            />
+                            <div
+                              style={{ background: "#fff; cursor:pointer" }}
+                              className="input-group-addon"
+                              id="clear-filter"
+                              onClick={a => setSearchTitle("")}
+                            >
+                              <span className="fa fa-times" />
+                            </div>
+                          </div>
+                        </th>
+                        <th>Subtitle</th>
+                        <th>Description</th>
                         <th>CMS
                           <div className="input-group">
                             <input
@@ -157,12 +191,21 @@ class ReviewReport extends React.Component {
                             </div>
                           </div>
                         </th>
-                        <th>Reviewed</th>
-                        <th>Excerpt</th>
+                        <th>Review Date</th>
+                        <th>Type</th>
+                        <th>URL</th>
+                        <th>File Path</th>
                       </tr>
                     </thead>
                     <tbody>
                       {categorizedPages
+                        .filter(page => {
+                          return (
+                            page.node.frontmatter.title
+                              .toLowerCase()
+                              .indexOf(searchTitle.toLowerCase()) >= 0
+                          )
+                        })
                         .filter(page => {
                           return page.node.frontmatter.newcms
                             ? page.node.frontmatter.newcms.filter(
@@ -201,7 +244,13 @@ class ReviewReport extends React.Component {
                         .map((page, i) => {
                           return (
                             <tr key={i}>
-                              <td>{page.node.fileInfo.childMdx.fileInfo.relativePath}</td>
+                              <td>
+                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
+                                {page.node.frontmatter.title}{" "}
+                                </Link>
+                              </td>
+                              <td>{page.node.frontmatter.subtitle}</td>
+                              <td>{page.node.frontmatter.description}</td>
                               <td>
                                 {page.node.frontmatter.newcms
                                   ? page.node.frontmatter.newcms.map((newcms, i) => {
@@ -258,7 +307,13 @@ class ReviewReport extends React.Component {
                                   : null}
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.excerpt}</td>
+                              <td>{page.node.frontmatter.contenttype}</td>
+                              <td>
+                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
+                                {page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}{" "}
+                                </Link>
+                              </td>
+                              <td>{page.node.fileInfo.childMdx.fileInfo.relativePath}</td>
                             </tr>
                           )
                         })}

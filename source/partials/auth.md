@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [sftp]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Authenticating
 
 ### SSH Keys

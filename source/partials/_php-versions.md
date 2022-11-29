@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [--]
+newcms: [--]
+product: [--]
+integration: [php]
+tags: [versions]
+reviewed: ""
+---
+
 Click the links below to display complete PHP information for each version, including details of supported PHP extensions.
 
 | Version                                          | Available   | Recommended |

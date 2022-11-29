@@ -3,7 +3,6 @@ title: Migrate a Composer Managed Drupal 9 Site from Another Platform
 subtitle: Prepare
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-unhosted-composer/prepare
 anchorid: prepare
 editpath: drupal-9/drupal-9-unhosted-composer/03-prepare.md
 reviewed: "2021-05-09"
+contenttype: guide
+categories: [migrate, create]
+newcms: [drupal9]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon.
@@ -30,4 +35,4 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 ### Retrieve a Local Copy of the Pantheon Site's Code
 
-<Partial file="migrate/drupal-get-local.md" />
+<Partial file="migrate/d8composer-d8composer-requirements.md" />

@@ -3,12 +3,17 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Troubleshoot Drush
 description: Review solutions to common Drush troubleshooting scenarios.
 cms: "Drupal"
-categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/troubleshoot-drush
 anchorid: troubleshoot-drush
+contenttype: guide
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 This section provides solutions to common Drush troubleshooting scenarios.

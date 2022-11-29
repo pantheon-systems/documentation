@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [billing]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 1. Navigate to the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard > select the site from the [Sites list](/organizations/#sites).
 1. Click the site's name to open the Site Dashboard > click the **Billing** tab.
 

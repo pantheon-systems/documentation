@@ -2,13 +2,17 @@
 title: Git FAQs
 subtitle: FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
-categories: [develop]
 tags: [git, iterate, local, workflow]
 contributors: [mrfelton, alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/faq-git
 anchorid: faq-git
+categories: [git]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [git]
 ---
 
 This section answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts)

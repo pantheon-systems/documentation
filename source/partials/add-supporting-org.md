@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [organizations]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <Alert title="Note" type="info">
 
 Because Supporting Organizations have full access to a site, only the site owner can perform this action.

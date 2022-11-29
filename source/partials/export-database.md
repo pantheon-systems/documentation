@@ -1,3 +1,13 @@
+---
+contenttype: partial
+categories: [create]
+newcms: [--]
+product: [local]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### Via Dashboard
 
 1. Navigate to the Site Dashboard.
