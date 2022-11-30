@@ -5,7 +5,7 @@ cms: "WordPress"
 tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
 reviewed: "2020-04-02"
-newtype: doc
+contenttype: [doc]
 categories: [--]
 newcms: [wordpress]
 audience: [development]

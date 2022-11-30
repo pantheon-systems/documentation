@@ -9,7 +9,7 @@ contributors: [whitneymeredith]
 showtoc: true
 anchorid: autopilot-preconfiguration
 permalink: docs/guides/autopilot/autopilot-preconfiguration/
-contenttype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [--]
 audience: [development]

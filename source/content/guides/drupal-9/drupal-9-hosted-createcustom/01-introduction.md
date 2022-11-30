@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-createcustom
 anchorid: drupal-9-v8
 editpath: drupal-9/drupal-9-hosted-createcustom/01-introduction.md
 reviewed: "2022-08-18"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git]
 newcms: [drupal]
 audience: [development]

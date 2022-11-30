@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/dns
 anchorid: dns
-contenttype: guide
+contenttype: [guide]
 categories: [domains]
 newcms: [--]
 audience: [development, sysadmin]

@@ -3,7 +3,7 @@ title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platfo
 subtitle: Prepare
 description: Learn how to prepare your site for migration.
 cms: "Drupal 8"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

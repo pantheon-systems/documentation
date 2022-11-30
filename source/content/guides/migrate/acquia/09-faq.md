@@ -2,7 +2,7 @@
 title: Migrate a Site From Acquia to Pantheon Using Guided Migration
 subtitle: FAQ
 description: Frequently asked questions about migration.
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

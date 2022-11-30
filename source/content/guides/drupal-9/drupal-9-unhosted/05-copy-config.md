@@ -9,7 +9,7 @@ layout: guide
 permalink: docs/guides/drupal-9-unhosted/copy-config
 anchorid: copy-config
 editpath: drupal-9/drupal-9-unhosted/05-copy-config.md
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

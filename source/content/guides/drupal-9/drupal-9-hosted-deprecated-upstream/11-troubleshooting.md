@@ -11,7 +11,7 @@ showtoc: true
 permalink: docs/guides/drupal-9-hosted-deprecated-upstream/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-deprecated-upstream/11-troubleshooting.md
-contenttype: guide
+contenttype: [guide]
 categories: [help, migrate]
 newcms: [drupal9, drupal]
 audience: [development]

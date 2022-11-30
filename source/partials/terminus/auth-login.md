@@ -1,5 +1,5 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [overview]
 newcms: [--]
 product: [terminus]

@@ -4,7 +4,7 @@ description: Frequently asked questions about Drupal or WordPress sites on Panth
 tags: [support]
 permalink: docs/faq
 anchorid: faq
-newtype: doc
+contenttype: [doc]
 categories: [help]
 newcms: [drupal, drupal7, drupal8, drupal9, wordpress]
 audience: [agency, development]

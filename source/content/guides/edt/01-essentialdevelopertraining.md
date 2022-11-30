@@ -13,7 +13,7 @@ nextpage: Architecture
 editpath: edt/01-edt.md
 completiontime: 2 hours
 image: launchGuide-twitterLarge
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -7,7 +7,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/maintain-custom-upstream
 anchorid: maintain-custom-upstream
-contenttype: guide
+contenttype: [guide]
 categories: [git, test, updates]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -3,7 +3,7 @@ title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platfo
 subtitle: Deploy to Dev
 description: Learn how to deploy your site to your Dev environment.
 cms: "Drupal 8"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

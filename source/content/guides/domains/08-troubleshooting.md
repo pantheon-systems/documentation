@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/troubleshooting
 anchorid: troubleshooting
-contenttype: guide
+contenttype: [guide]
 categories: [domains]
 newcms: [--]
 audience: [development]

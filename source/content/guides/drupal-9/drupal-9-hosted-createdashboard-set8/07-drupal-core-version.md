@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-createdashboard-set8/drupal-core-version
 anchorid: drupal-core-version
 editpath: drupal-9-hosted-createdashboard-set8/07-drupal-core-version.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git]
 newcms: [drupal9]
 audience: [development]

@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config-d9
 anchorid: environment-specific-config-d9
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [drupal9]
 audience: [development]

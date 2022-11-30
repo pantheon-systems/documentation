@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/vanity-domains
 anchorid: vanity-domains
-contenttype: guide
+contenttype: [guide]
 categories: [domains]
 newcms: [--]
 audience: [development, sysadmin]

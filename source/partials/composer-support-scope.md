@@ -1,5 +1,5 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [help]
 newcms: [drupal8, wordpress]
 product: [--]

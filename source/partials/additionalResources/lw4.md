@@ -1,5 +1,5 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [help]
 newcms: [--]
 product: [--]
@@ -9,7 +9,7 @@ reviewed: ""
 ---
 
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [measure, optimize]
 newcms: [drupal, wordpress]
 product: [newrelic]

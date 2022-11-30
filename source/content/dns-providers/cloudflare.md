@@ -6,7 +6,7 @@ description: Learn how to point your domain to a Pantheon site using Cloudflare
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/cloudflare.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [wordpress, drupal]
 audience: [development]

@@ -6,7 +6,7 @@ permalink: docs/guides/:basename
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2022-08-18"
-contenttype: guide
+contenttype: [guide]
 categories: [optimize]
 newcms: [drupal8]
 audience: [development]

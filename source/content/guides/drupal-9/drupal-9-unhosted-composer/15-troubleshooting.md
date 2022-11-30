@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-unhosted-composer/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-unhosted-composer/15-troubleshooting.md
 reviewed: "2021-05-09"
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [drupal9]
 audience: [development]

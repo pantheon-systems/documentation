@@ -3,7 +3,7 @@ title: Debugging Slow Performance
 description: Identify common problems with Drupal or WordPress performance speeds and deploy solutions.
 tags: [cache, code, logs, measure]
 permalink: docs/debug-slow-performance
-newtype: doc
+contenttype: [doc]
 categories: [optimize]
 newcms: [drupal, wordpress]
 audience: [development]

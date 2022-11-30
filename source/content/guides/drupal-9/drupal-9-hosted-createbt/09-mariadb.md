@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-createbt/mariadb
 anchorid: mariadb
 editpath: drupal-9-v8/09-mariadb.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git, update]
 newcms: [drupal]
 audience: [development]

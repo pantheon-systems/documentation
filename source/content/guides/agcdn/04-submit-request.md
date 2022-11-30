@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/submit-request
 anchorid: submit-request
-contenttype: guide
+contenttype: [guide]
 categories: [optimize, cookies, help]
 newcms: [--]
 audience: [development]

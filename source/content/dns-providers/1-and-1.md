@@ -6,7 +6,7 @@ description: Learn how to point your 1&1 domain to a Pantheon site.
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/1-and-1.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [--]
 audience: [development]

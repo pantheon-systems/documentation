@@ -2,7 +2,7 @@
 title: Bots and Indexing on Pantheon
 description: Information on managing bots and indexing while avoiding performance degradation on your Pantheon WordPress or Drupal site.
 tags: [measure, traffic]
-newtype: doc
+contenttype: [doc]
 categories: [optimize]
 newcms: [wordpress, drupal]
 audience: [development]

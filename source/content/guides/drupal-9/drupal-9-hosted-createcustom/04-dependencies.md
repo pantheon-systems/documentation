@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-hosted-createcustom/dependencies
 anchorid: dependencies
 editpath: drupal-9/drupal-9-hosted-createcustom/04-dependencies.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git]
 newcms: [drupal]
 audience: [development]

@@ -3,7 +3,7 @@ title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platfo
 subtitle: Add Contrib and Custom Code
 description: Learn how to add Contrib and custom code.
 cms: "Drupal 8"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

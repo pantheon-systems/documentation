@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-deprecated-upstream/new-updates
 anchorid: new-updates
 editpath: drupal-9/drupal-9-hosted-deprecated-upstream/09-new-updates.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [update]
 newcms: [drupal9, drupal]
 audience: [development]

@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/domains-faq
 anchorid: domains-faq
-contenttype: guide
+contenttype: [guide]
 categories: [domains]
 newcms: [--]
 audience: [development, sysadmin]

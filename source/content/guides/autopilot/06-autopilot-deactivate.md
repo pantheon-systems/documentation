@@ -9,7 +9,7 @@ contributors: [whitneymeredith]
 showtoc: true
 anchorid: autopilot-deactivate
 permalink: docs/guides/autopilot/autopilot-deactivate
-contenttype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [--]
 audience: [development]

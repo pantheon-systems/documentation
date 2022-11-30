@@ -10,7 +10,7 @@ showtoc: true
 anchorid: analytics
 permalink: docs/guides/edge-integrations/analytics/
 editpath: edge-integrations/05-analytics.md
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [drupal, wordpress]
 audience: [development]

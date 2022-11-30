@@ -3,7 +3,7 @@ title:  Deploy to Pantheon from an External Repository using DeployBot
 description: Learn how to set up and use DeployBot to deploy from repositories hosted with a third party provider, like GitHub, to Pantheon.
 tags: [git, workflow]
 contributors: [ataylorme, rachelwhitton]
-newtype: doc
+contenttype: [doc]
 categories: [automate]
 newcms: [--]
 audience: [development]

@@ -2,7 +2,7 @@
 title: Clearing Caches for Drupal and WordPress
 description: Learn how to clear cache for Drupal and WordPress sites on Pantheon's Global CDN.
 tags: [cache, cdn]
-newtype: doc
+contenttype: [doc]
 categories: [--]
 newcms: [drupal7, wordpress]
 audience: [development]

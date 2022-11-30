@@ -10,7 +10,7 @@ showtoc: true
 permalink: docs/guides/drupal-9-unhosted/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-unhosted/15-troubleshooting.md
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

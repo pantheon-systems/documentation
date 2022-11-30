@@ -11,7 +11,7 @@ anchorid: support
 permalink: docs/guides/decoupled-sites/support/
 editpath: decoupled-sites/05-support.md
 reviewed: "2022-08-11"
-contenttype: guide
+contenttype: [guide]
 categories: [create]
 newcms: [decoupled]
 audience: [development]

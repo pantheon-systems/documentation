@@ -5,7 +5,7 @@ cms: "Drupal"
 tags: [cron]
 reviewed: "2020-06-30"
 permalink: docs/drupal-cron
-newtype: doc
+contenttype: [doc]
 categories: [automate]
 newcms: [drupal]
 audience: [development]

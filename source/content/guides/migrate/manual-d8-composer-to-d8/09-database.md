@@ -3,7 +3,7 @@ title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platfo
 subtitle: Add Your Database
 description: Learn how to add your database.
 cms: "Drupal 8"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

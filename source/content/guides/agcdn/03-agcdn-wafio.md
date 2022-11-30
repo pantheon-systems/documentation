@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-wafio
 anchorid: agcdn-wafio
-contenttype: guide
+contenttype: [guide]
 categories: [optimize]
 newcms: [--]
 audience: [development]

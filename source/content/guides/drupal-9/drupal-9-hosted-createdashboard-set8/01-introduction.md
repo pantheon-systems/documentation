@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-createdashboard-set8
 anchorid: drupal-9-hosted-createdashboard-set8
 editpath: drupal-9-hosted-createdashboard-set8/01-introduction.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git]
 newcms: [drupal9]
 audience: [development]

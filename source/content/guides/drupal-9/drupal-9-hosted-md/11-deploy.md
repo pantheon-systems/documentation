@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-md/deploy
 anchorid: deploy
 editpath: drupal-9/drupal-9-hosted-md/11-deploy.md
 reviewed: "2022-05-03"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal8, drupal9, drupal]
 audience: [development]

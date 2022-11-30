@@ -9,7 +9,7 @@ layout: guide
 permalink: docs/guides/drupal-9-unhosted/deploy-dev
 anchorid: deploy-dev
 editpath: drupal-9/drupal-9-unhosted/07-deploy-dev.md
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

@@ -4,7 +4,7 @@ description: Tips for agencies working on Pantheon.
 tags: [agencies, organizations, collaborate]
 contributors: [davidneedham]
 searchboost: 90
-newtype: doc
+contenttype: [doc]
 categories: [--]
 newcms: [--]
 audience: [agency]

@@ -10,7 +10,7 @@ permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 reviewed: "2021-12-28"
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [--]
 audience: [development]
