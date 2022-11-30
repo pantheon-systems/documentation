@@ -12,9 +12,9 @@ anchorid: access-logs
 
 This section provides information on how to use SFTP to access your logs on Pantheon.
 
-Logs are stored within [application containers](/application-containers) that house your site's codebase and files, as well as in the database containers.
+Logs are stored within [application containers](/application-containers) and database containers. Application containers house your site's codebase and files.
 
-To see the SFTP connection information, click **Connection Info** in the Site Dashboard for the environment you want to access. You can review the connection information to gain an understanding of the pattern used for the hostnames: `<env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in`
+Click **Connection Info** in the Site Dashboard of the desired environment to get your SFTP connection information. You can review the connection information to gain an understanding of the pattern used for the hostnames: `<env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in`
 
     | Type         | Env                                     | Site UUID                                                                                                 |
     |:------------ |:--------------------------------------- |:--------------------------------------------------------------------------------------------------------- |
