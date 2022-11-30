@@ -91,6 +91,14 @@ Session cookie lifetime and session garbage collection can be overridden in your
 
 Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal 9](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
 
+#### WordPress
+
+The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin automatically sets the session lifetime `0`, which is until the browser is closed. You can override this setting with the `pantheon_session_expiration` filter before the plugin loads.
+
+Session data is removed from the database by PHP's garbage collection when it has not been used in the time set in `gc_maxlifetime`, which is set to `200,000` seconds by default.
+
+Refer to [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information about WordPress and PHP Sessions on Pantheon.
+
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon recommends doing this on the client side using browser detection, orientation, or features like aspect ratio using HTML5, CSS3, and JavaScript. Advanced developers can also use STYXKEY.
