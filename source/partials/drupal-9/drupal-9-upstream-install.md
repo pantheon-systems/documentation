@@ -1,5 +1,5 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [--]
 newcms: [drupal9]
 product: [integrated-composer]

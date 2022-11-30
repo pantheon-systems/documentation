@@ -6,7 +6,7 @@ tags: [code, iterate, lando, local, webops]
 featuredcontributor: true
 type: guide
 permalink: docs/guides/:basename
-contenttype: guide
+contenttype: [guide]
 categories: [automate, overview]
 newcms: [drupal, wordpress]
 audience: [development]

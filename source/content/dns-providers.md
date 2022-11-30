@@ -3,7 +3,7 @@ title: DNS Host-specific DNS Instructions
 description: A list of docs to help you connect your Pantheon site to your domain
 tags: [dns]
 reviewed: "2020-04-16"
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [--]
 audience: [development]

@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/prepare
 anchorid: prepare
 editpath: drupal-9/drupal-9-hosted-createempty-md/03-prepare.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [overview, migrate]
 newcms: [drupal9]
 audience: [agency, development]

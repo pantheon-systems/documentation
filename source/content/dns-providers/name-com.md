@@ -7,7 +7,7 @@ tags: [dns]
 draft: true
 permalink: docs/:basename
 editpath: dns-providers/name-com.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [--]
 audience: [--]

@@ -11,7 +11,7 @@ showtoc: true
 permalink: docs/guides/drupal-9-hosted-createdashboard-set8/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9-hosted-createdashboard-set8/13-troubleshooting.md
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git]
 newcms: [drupal9]
 audience: [development]

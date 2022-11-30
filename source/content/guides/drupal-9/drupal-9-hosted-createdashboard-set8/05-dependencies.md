@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-createdashboard-set8/dependencies
 anchorid: dependencies
 editpath: drupal-9-hosted-createdashboard-set8/05-dependencies.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git]
 newcms: [drupal9]
 audience: [development]

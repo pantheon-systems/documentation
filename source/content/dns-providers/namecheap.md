@@ -6,7 +6,7 @@ description: Learn how to point your Namecheap domain to a Pantheon site.
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/namecheap.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [--]
 audience: [--]

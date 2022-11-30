@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-hosted-createbt/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-createbt/13-troubleshooting.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [drupal9]
 audience: [development]

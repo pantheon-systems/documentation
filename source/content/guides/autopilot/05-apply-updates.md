@@ -10,7 +10,7 @@ anchorid: apply-updates
 permalink: docs/guides/autopilot/apply-updates/
 editpath: autopilot/05-apply-updates.md
 reviewed: "2021-08-09"
-contenttype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [--]
 audience: [development]

@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-hosted-createcustom/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-hosted-createcustom/05-contrib-custom.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, git]
 newcms: [drupal]
 audience: [development]

@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-hosted-createempty-md/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [overview, migrate]
 newcms: [drupal9]
 audience: [agency, development]

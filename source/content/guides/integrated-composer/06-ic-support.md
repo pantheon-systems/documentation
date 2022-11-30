@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-support
 anchorid: ic-support
-contenttype: guide
+contenttype: [guide]
 categories: [overview]
 newcms: [drupal, wordpress]
 audience: [development]

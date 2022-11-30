@@ -4,7 +4,7 @@ description: Instructions for setting up Amazon CloudFront CDN on your Drupal si
 cms: "Drupal"
 tags: [cdn, cache]
 searchboost: 50
-newtype: doc
+contenttype: [doc]
 categories: [cache, config]
 newcms: [drupal]
 audience: [development]

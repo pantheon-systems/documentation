@@ -7,7 +7,7 @@ tags: [upstreams, site]
 type: guide
 permalink: docs/guides/:basename
 multidev: true
-contenttype: guide
+contenttype: [guide]
 categories: [git]
 newcms: [drupal]
 audience: [development]

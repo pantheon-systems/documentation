@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-md/core-updates
 anchorid: core-updates
 editpath: drupal-9/drupal-9-hosted-md/09-core-updates.md
 reviewed: "2022-05-03"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, config]
 newcms: [drupal8, drupal9, drupal]
 audience: [development]

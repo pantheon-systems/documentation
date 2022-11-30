@@ -9,7 +9,7 @@ layout: guide
 permalink: docs/guides/drupal-9-unhosted/add-database
 anchorid: add-database
 editpath: drupal-9/drupal-9-unhosted/09-database.md
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

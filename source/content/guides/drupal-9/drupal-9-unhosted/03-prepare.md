@@ -9,7 +9,7 @@ layout: guide
 permalink: docs/guides/drupal-9-unhosted/prepare
 anchorid: prepare
 editpath: drupal-9/drupal-9-unhosted/03-prepare.md
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

@@ -4,7 +4,7 @@ description: Get started with Drupal 9 on the Pantheon WebOps Platform.
 tags: [site]
 contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-02-08"
-newtype: doc
+contenttype: [doc]
 categories: [create, plan, config]
 newcms: [drupal9]
 audience: [development]

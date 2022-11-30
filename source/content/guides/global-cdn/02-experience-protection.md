@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/experience-protection
 anchorid: experience-protection
-contenttype: guide
+contenttype: [guide]
 categories: [cache, optimize]
 newcms: [drupal, wordpress]
 audience: [development]

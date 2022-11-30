@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-createcustom/new-branch
 anchorid: new-branch
 editpath: drupal-9/drupal-9-hosted-createcustom/03-new-branch.md
 reviewed: "2022-06-09"
-contenttype: guide
+contenttype: [guide]
 categories: [overview, migrate]
 newcms: [drupal9]
 audience: [agency, development]

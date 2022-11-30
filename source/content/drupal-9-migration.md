@@ -2,7 +2,7 @@
 title: Drupal 9 Migration Guides
 tags: [code, launch, migrate, site, updates, composer]
 reviewed: "2021-05-13"
-newtype: doc
+contenttype: [doc]
 categories: [create, plan]
 newcms: [drupal9]
 audience: [development]

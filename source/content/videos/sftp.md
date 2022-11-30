@@ -7,7 +7,7 @@ tags: [files, sftp, code]
 searchboost: 50
 layout: video
 type: video
-newtype: doc
+contenttype: [doc]
 categories: [sftp]
 newcms: [--]
 audience: [development]

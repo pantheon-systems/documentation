@@ -3,7 +3,7 @@ title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 tags: [cache, cookies, security, webops]
 reviewed: "2022-03-25"
-newtype: doc
+contenttype: [doc]
 categories: [cache]
 newcms: [drupal7, drupal9, wordpress]
 audience: [development]

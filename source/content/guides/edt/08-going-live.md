@@ -16,7 +16,7 @@ permalink: docs/guides/edt/going-live/
 previousurl: guides/edt/performance/
 previouspage: Performance
 editpath: edt/08-going-live.md
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [--]
 audience: [development]

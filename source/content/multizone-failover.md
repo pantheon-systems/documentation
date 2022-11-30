@@ -3,7 +3,7 @@ title: Site Multizone Failover
 description: Learn how mission-critical websites can stay online in the event of a total zone failure
 tags: [backup, professional-services, site, webops]
 reviewed: "2020-02-26"
-newtype: doc
+contenttype: [doc]
 categories: [overview]
 newcms: [drupal, drupal7, wordpress]
 audience: [agency, development]

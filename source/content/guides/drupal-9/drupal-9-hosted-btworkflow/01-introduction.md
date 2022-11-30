@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-btworkflow
 anchorid: drupal-9-hosted-btworkflow
 editpath: drupal-9/drupal-9-hosted-btworkflow/01-introduction.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [development]
 newcms: [drupal8, drupal9]
 audience: [agency, development]

@@ -10,7 +10,7 @@ showtoc: true
 anchorid: edge-integrations
 permalink: docs/guides/edge-integrations/
 editpath: edge-integrations/01-introduction.md
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [drupal, wordpress]
 audience: [development]

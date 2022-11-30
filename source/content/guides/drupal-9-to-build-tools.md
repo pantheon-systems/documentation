@@ -6,7 +6,7 @@ permalink: docs/guides/:basename
 cms: "Drupal"
 tags: [composer, site, workflow]
 reviewed: "2022-03-10"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

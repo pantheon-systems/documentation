@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/custom-domains
 anchorid: custom-domains
-contenttype: guide
+contenttype: [guide]
 categories: [domains]
 newcms: [--]
 audience: [agency, development]

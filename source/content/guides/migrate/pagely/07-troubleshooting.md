@@ -2,7 +2,7 @@
 title: Migrate a Site From Pagely to Pantheon Using Guided Migration
 subtitle: Troubleshooting
 description: Resolve issues that may occur during migration.
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [wordpress]
 audience: [development]
