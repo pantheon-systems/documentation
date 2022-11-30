@@ -93,9 +93,11 @@ Session cookie lifetime and session garbage collection can be configured as `ses
 
 #### WordPress
 
-When using the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin") plugin, the session lifetime is set to 0, which is until the browser is closed. This may be overridden with the "pantheon_session_expiration" filter prior to the plugin being loaded.
+The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin automatically sets the session lifetime `0`, which is until the browser is closed. You can override this setting with the `pantheon_session_expiration` filter before the plugin loads.
 
-Session data will be removed from the database by PHP's garbage collection when it has not been used in the time set in `gc_maxlifetime` which is set to 200,000 seconds by default.
+Session data is removed from the database by PHP's garbage collection when it has not been used in the time set in `gc_maxlifetime`, which is set to `200,000` seconds by default.
+
+Refer to [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information about WordPress and PHP Sessions on Pantheon.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
