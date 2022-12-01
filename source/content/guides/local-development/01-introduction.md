@@ -12,7 +12,9 @@ permalink: docs/guides/local-development
 anchorid: local-development
 ---
 
-Pantheon provides several options for on-server development, however, local development has a number of advantages, especially if continuous Internet access is a concern. Pantheon provides powerful local development tools, including [Terminus](/terminus) and [Multidev](/guides/multidev). Pantheon's platform can also be integrated with:
+Pantheon's [Localdev](/guides/localdev/troubleshoot-support) has been deprecated. However, there are many local development options for the Pantheon platform available for use on Pantheon. This guide provides an overview of several popular local development tools to help you get started.
+
+Pantheon provides several options for on-server development, however, local development has a number of advantages, especially if continuous internet access is a concern. Pantheon provides powerful local development tools, including [Terminus](/terminus) and [Multidev](/guides/multidev). Pantheon's platform can also be integrated with:
 
 - Lando
 - Jenkins

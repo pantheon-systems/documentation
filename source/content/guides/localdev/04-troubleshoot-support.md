@@ -1,7 +1,7 @@
 ---
 title: Pantheon Localdev
-subtitle: Support & Troubleshooting
-description: Best practices for troubleshooting, getting support, and reporting bugs or feature requests.
+subtitle: Troubleshooting
+description: Solutions for common troubleshooting scenarios.
 categories: [develop]
 tags: [localdev, local, workflow]
 contributors: [edwardangert, alexfornuto]
@@ -12,27 +12,11 @@ anchorid: localdev/troubleshoot-support
 editpath: localdev/04-troubleshoot-support.md
 ---
 
-## Contact Support
-
-Review the [support ticket best practices](/guides/support/support-ticket/) before contacting Support. This helps our team assist you in resolving the issue, and can help report any potential issues in Localdev itself.
-
-1. Navigate to the **Settings** menu and confirm that *Usage and Crash Data* is set to **Allow reports**. This allows the application to automatically submit crash data to Pantheon Support.
-
-   - Application reports are collected and stored locally in `~/.pantheonlocaldev`.
-
-1. Reproduce the error and note the steps taken.
-
-   - If the error is inconsistent, make note of this as well. Multiple reports of an inconsistent error help our team troubleshoot.
-
-1. Report the error:
-
-   - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/guides/support/contact-support/#real-time-chat-support) and include the steps you took to reproduce the error.
-
-## Provide Feedback or Feature Requests
-
-Please provide feedback by submitting an issue to the [GitHub repository](https://github.com/pantheon-systems/localdev-issues/issues) or by joining the [Pantheon community](/pantheon-community#joining-the-community).
+Localdev has been deprecated. However, there are many local development options for the Pantheon platform in the [Local Development on Pantheon](/guides/local-development) guide.
 
 ## Troubleshooting
+
+This section provides solutions to common troubleshooting scenarios. Note that Localdev has been deprecated. We recommend that you use [other local development tools]((/guides/local-development)) to maintain your site.
 
 ### Clone Failed Due To Modified .gitignore
 
@@ -45,8 +29,6 @@ File exists\n","label":"myawesomesite","timestamp":"2020-11-25T16:40:12.057Z"}
 ```
 
 The content of `wp-contents/uploads` should be symlinked to files, in keeping with the [code moves up, content moves down](/pantheon-workflow#code-moves-up-content-moves-down) best practice of the Pantheon WebOps workflow.
-
-You can [contact support](#contact-support) for help moving your files out of the codebase.
 
 ### Clone of a New Site Failed
 
@@ -100,4 +82,3 @@ No, new Multidev environments must still be created from the Site Dashboard or [
 ### Can I setup Localdev with a Mac that has an M1 chip?
 
 Yes, Macs with the M1 chip are supported.
-

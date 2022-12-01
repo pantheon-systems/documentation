@@ -319,7 +319,7 @@
         - text: 'Environment-Specific Configuration for WordPress Sites'
           url: '/guides/environment-configuration/environment-specific-config'
         - text: 'Use Pantheon Localdev to Develop Sites Locally'
-          url: '/guides/localdev'
+          url: '/guides/localdev/troubleshoot-support'
         - text: 'Best Practices for Maintaining Custom Upstreams'
           url: '/guides/custom-upstream/maintain-custom-upstream'
         - text: 'Multidev FAQ'
