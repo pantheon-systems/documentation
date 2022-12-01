@@ -2,12 +2,17 @@
 title: Legacy Dashboard
 subtitle: Billing in the User Dashboard
 description: View billing history (invoices and transactions) or edit credit card profiles to manage billing for sites in bulk within the Billing tab of the Account tool in the User Dashboard.
-categories: [platform]
 tags: [billing, dashboard]
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/account-billing
 anchorid: account-billing
 editpath: legacy-dashboard/04-account-billing.md
+contenttype: [guide]
+categories: [billing, accounts, dashboard]
+newcms: [wordpress, drupal]
+audience: [agency, business]
+product: [dashboard]
+integration: [--]
 ---
 
 ## Access Account Billing
