@@ -10,10 +10,6 @@ newcms: [wordpress]
 audience: [development]
 product: [--]
 integration: [plugins]
-newcms: [wordpress]
-audience: [development]
-product: [--]
-integration: [--]
 permalink: docs/guides/wordpress-configurations/wordpress-cache-plugin
 anchorid: wordpress-cache-plugin
 ---
