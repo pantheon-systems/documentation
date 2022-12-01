@@ -53,13 +53,13 @@ While Drupal and WordPress both generate their own `robots.txt` file by default,
 User-agent: *
 Disallow: /
 
-User-agent: dotbot
-User-agent: PetalBot
-User-agent: PowerMapper
 User-agent: RavenCrawler
 User-agent: rogerbot
+User-agent: dotbot
 User-agent: SemrushBot
-User-agent: SemrushBot-SA
+User-agent: SiteAuditBot
+User-agent: SplitSignalBot
+User-agent: PowerMapper
 User-agent: Swiftbot
 Allow: /
 ```
