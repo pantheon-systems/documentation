@@ -27,17 +27,15 @@ You can create a Front-End Site by using a Pantheon starter kit. Choose either a
 * WordPress and Next.js
 * WordPress and Gatsby
 
-
 ## Backend Installation and Configuration
 
 Choose from the following approaches to configure your backend:
 
-* Dashboard Upstream: 
-  *  Use this option if you prefer a more streamlined configuration; this is the Pantheon recommended option.
-  
-* Build Tools:
-  * Use this option if testing is important to your team's workflow. You will not have to manually push changes to your Pantheon code repository.
+* Dashboard Upstream:
+  * If you prefer a more streamlined configuration; this is the Pantheon recommended option.
 
+* Build Tools:
+  * If testing is important to your team's workflow. You will not have to manually push changes to your Pantheon code repository.
 
 <TabList>
 
@@ -45,7 +43,7 @@ Choose from the following approaches to configure your backend:
 
 #### Dashboard Upstream Install
 
-Install the Drupal backend by using the Dashboard upstream.
+Install the Drupal backend using the Dashboard upstream.
 
 Navigate to the Pantheon Dashboard to create a site from the [Decoupled Drupal Composer Managed upstream](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) 
 
@@ -54,15 +52,15 @@ Alternatively, you can use Terminus. Enter the following command to create a sit
 ```bash{promptUser: user}
 terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
 ```
+
   * Replace `{My Team Name}` with your team name, for example `My Agency`. This can also be omitted.
   * Note that `c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer Managed.
 
-
-#### Installing Using Build Tools
+#### Install Using Build Tools
 
 - Run `terminus build:project:create`:
 
-```bash{promptUser: user}
+  ```bash{outputLines:2-6}
   terminus build:project:create \
   --team='{My Team Name}' \
   --template-repository="git@github.com:pantheon-upstreams/decoupled-drupal-composer-managed.git" pantheon-upstreams/decoupled-drupal-composer-managed \
@@ -80,9 +78,9 @@ This action will result in a GitHub repository created for this new codebase und
 </Tab>
 
 <Tab title="WordPress Backend" id="wordpress-install">
- 
+
 Create a [Decoupled WordPress Composer-Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) upstream using the Pantheon Dashboard.
- 
+
 Alternatively, you can run `terminus build:project:create`:
 
   ```bash{promptUser: user}
@@ -99,7 +97,6 @@ This will result in a GitHub repository created for this new codebase, a site cr
 
 </Tab>
 </TabList>
-
 
 ### Additional Configuration Options
 
@@ -149,7 +146,6 @@ For information on additional options, refer to the [Command Options](https://gi
 
 For information on additional options, refer to the [Command Options](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options) section or see our Build Tools [documentation](/guides/build-tools/).
 
-
 ## Frontend Starter Configurations
 
 <TabList>
@@ -167,8 +163,7 @@ There are two methods that can be used to create a new project based on the `nex
 * Clone the starter repository
 * Use `create-next-app`
 
-To clone the starter directly from GitHub, visit the repository link https://github.com/pantheon-systems/next-drupal-starter and click
-**Code** to open the clone dropdown and select your preferred method.
+To clone the starter directly from GitHub, visit the repository link https://github.com/pantheon-systems/next-drupal-starter and click **Code** to open the clone dropdown and select your preferred method.
 
 To create a new project using `create-next-app`, enter the following command:
 
@@ -179,14 +174,13 @@ npx create-next-app -e https://github.com/pantheon-systems/next-drupal-starter -
 The command `create-next-app` uses the `yarn` package manager by default. Omit the `--use-npm` flag to use `yarn`, or keep it to use `npm`.
 </Tab>
 
-
 <Tab title="WP + Next.js" id="nextwordpress-front-install" active={true}>
 
 The `next-wordpress-starter` is designed as a starting point to for a Next.js site that consumes data from a WordPress backend - specifically a WordPress
 backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
 
 The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
- 
+
 ### Creating A New Project with the WordPress and Next.js Starter Template
 
 There are two methods that can be used to create a new project based on the `next-wordpress-starter`:
@@ -204,9 +198,8 @@ npx create-next-app -e https://github.com/pantheon-systems/next-wordpress-starte
 
 The `create-next-app` command uses the `yarn` package manager by default. Omit the `--use-npm` flag to use `yarn`, or keep it to use `npm`.
 </Tab>
- 
 
-<Tab title="WP + Gatsby" id="wpsgatsby-front-install" active={true}> 
+<Tab title="WP + Gatsby" id="wpsgatsby-front-install" active={true}>
 
 The `gatsby-wordpress-starter` is designed as a starting point for a Gatsby site that consumes data from a WordPress backend - specifically a WordPress
 backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
@@ -217,7 +210,7 @@ The starter has a dependency on the `@pantheon-systems/wordpress-kit`.
 
 There are two methods that can be used to create a new project with the `gatsby-wordpress-starter`:
 
-* Clone the starter repository 
+* Clone the starter repository
 * Use the `gatsby-cli`
 
 To clone the starter directly from GitHub, visit the repository https://github.com/pantheon-systems/gatsby-wordpress-starter and click
@@ -230,6 +223,7 @@ To create a new project using the `gatsby-wordpress-starter` as a template, [use
    ```bash{promptUser: user}
    gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
    ```
+
 - If you are using npx:
 
   ```bash{promptUser: user}
@@ -245,5 +239,7 @@ gatsby options set pm npm
 # Set your preferred package manager for yarn
 gatsby options set pm yarn
 ```
+
 </Tab>
+
 </TabList>
