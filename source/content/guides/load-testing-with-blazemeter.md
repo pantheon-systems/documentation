@@ -12,6 +12,12 @@ type: guide
 permalink: docs/guides/:basename
 contributors: [jessifischer]
 date: 3/15/2022
+contenttype: [doc]
+categories: [measure]
+newcms: [wordpress, drupal]
+audience: [agency, development]
+product: [newrelic]
+integration: [--]
 ---
 
 <Alert title="Warning" type="danger" >
