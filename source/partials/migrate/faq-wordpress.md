@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+newcms: [--]
+product: [--]
+integration: [wordpress]
+tags: [--]
+reviewed: ""
+---
+
 ## WordPress FAQ
 
 ### Does the WordPress migration cause downtime?

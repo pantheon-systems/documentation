@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [help]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Going Live Best Practices
 
 Launching a website on Pantheon is easy! In this workshop, observe best practices from our Developer Advocates that ensure you’re prepared for success during your new website launch.

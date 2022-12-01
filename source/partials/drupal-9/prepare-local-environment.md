@@ -1,7 +1,7 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [--]
-newcms: [--]
+newcms: [drupal9]
 product: [terminus]
 integration: [--]
 tags: [--]

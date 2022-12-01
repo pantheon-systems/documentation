@@ -13,7 +13,7 @@ nextpage: Developer Workflow
 previousurl: guides/edt/
 previouspage: Introduction
 editpath: edt/02-introduction-and-architecture.md
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [--]
 audience: [development]

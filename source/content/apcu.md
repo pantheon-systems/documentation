@@ -3,7 +3,7 @@ title: APCu Cache Basics
 description: Understand APCu and its uses within the Pantheon WebOps workflow.
 tags: [cache, workflow]
 reviewed: "2020-10-08"
-newtype: doc
+contenttype: [doc]
 categories: [cache]
 newcms: [drupal, wordpress]
 audience: [development]

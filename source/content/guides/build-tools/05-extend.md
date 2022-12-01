@@ -10,7 +10,7 @@ type: guide
 permalink: docs/guides/build-tools/extend/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [--]
 audience: [development]

@@ -4,7 +4,7 @@ description: Start with Composer basics then explore suggested WebOps workflows 
 type: guide
 permalink: docs/guides/:basename
 tags: [composer, workflow, updates, webops]
-newtype: doc
+contenttype: [guide]
 categories: [update]
 newcms: [wordpress, drupal]
 audience: [development]

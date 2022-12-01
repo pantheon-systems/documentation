@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [help]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Getting Started with Pantheon
 
 This workshop provides an overview of how to get started with Pantheon's development environments, collaborative tools, and automated Git-based workflows. (8 minutes)

@@ -4,7 +4,7 @@ description: Pantheon is dedicated to a positive and harassment-free community e
 contributors: [joshkoenig, rachelwhitton]
 date: 9/27/2016
 tags: [collaborate]
-newtype: doc
+contenttype: [doc]
 categories: [help]
 newcms: [--]
 audience: [--]

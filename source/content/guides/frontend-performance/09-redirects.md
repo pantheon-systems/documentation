@@ -11,7 +11,7 @@ permalink: docs/guides/frontend-performance/redirects
 editpath: frontend-performance/09-redirects.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
-contenttype: guide
+contenttype: [guide]
 categories: [optimize]
 newcms: [drupal, wordpress]
 audience: [development]

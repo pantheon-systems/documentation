@@ -2,7 +2,12 @@
 title: MariaDB and MySQL on Pantheon
 subtitle: Use MySQL Workbench to Access a Database
 description: Use MySQL Workbench to create, execute, and optimize SQL queries.
-categories: [manage]
+contenttype: [guide]
+categories: [database]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [database, local]
 contributors: [whitneymeredith]
 layout: guide

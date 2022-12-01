@@ -6,7 +6,12 @@ pagerduty: true
 anchorid: schedule
 generator: pagination
 layout: guide
-categories: [performance]
+contenttype: [guide]
+categories: [optimize]
+newcms: [--]
+audience: [development]
+product: [newrelic]
+integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 pagination:

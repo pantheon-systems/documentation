@@ -1,5 +1,5 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [domains]
 newcms: [--]
 product: [--]

@@ -2,7 +2,12 @@
 title: Platform Considerations
 subtitle: PHP Platform Support
 description: Learn more about PHP support on the Pantheon platform.
-categories: [platform]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 layout: guide

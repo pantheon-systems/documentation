@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### General Scenarios
 
 - You want to debug a failed migration.

@@ -8,7 +8,10 @@ class ReviewReport extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            categorizedDocs: allMdx(filter: {frontmatter: {contenttype: {eq: "partial"}}} sort: {fields: fileInfo___relativePath, order: ASC}) {
+            categorizedDocs: allMdx(
+              filter: {fileAbsolutePath: {regex: "/partials/"}}
+              sort: {fields: fileInfo___relativePath, order: ASC}
+            ) {
               edges {
                 node {
                   id
@@ -24,12 +27,8 @@ class ReviewReport extends React.Component {
                     newcms
                   }
                   fileInfo {
-                    childMdx {
-                      fileInfo {
-                        name
-                        relativePath
-                      }
-                    }
+                    id
+                    relativePath
                   }
                   fields {
                     slug
@@ -68,7 +67,7 @@ class ReviewReport extends React.Component {
                         .map((page, i) => {
                           return (
                             <tr key={i}>
-                              <td>{page.node.fileInfo.childMdx.fileInfo.relativePath}</td>
+                              <td>{page.node.fileInfo.relativePath}</td>
                               <td>
                                 {page.node.frontmatter.newcms
                                   ? page.node.frontmatter.newcms.map((newcms, i) => {

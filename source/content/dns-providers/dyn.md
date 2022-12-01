@@ -6,7 +6,7 @@ description: Learn how to point your Dyn domain to a Pantheon site.
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/dyn.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains, launch]
 newcms: [--]
 audience: [--]

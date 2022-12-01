@@ -9,7 +9,7 @@ permalink: docs/guides/account-mgmt/workspace-sites-teams
 anchorid: workspace-sites-teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/01-introduction.md
 reviewed: "2022-09-19"
-contenttype: guide
+contenttype: [guide]
 categories: [accounts]
 newcms: [--]
 audience: [sysadmin]

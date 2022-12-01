@@ -7,7 +7,7 @@ tags: [dns]
 reviewed: "2021-01-26"
 permalink: docs/:basename
 editpath: dns-providers/network-solutions.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [--]
 audience: [--]

@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-unhosted-composer/contrib-custom
 anchorid: contrib-custom
 editpath: drupal-9/drupal-9-unhosted-composer/05-contrib-custom.md
 reviewed: "2021-05-09"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, config]
 newcms: [drupal9]
 audience: [development]

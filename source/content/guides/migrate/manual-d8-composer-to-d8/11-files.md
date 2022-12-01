@@ -3,7 +3,12 @@ title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platfo
 subtitle: Upload Your Files
 description: Learn how to upload your files.
 cms: "Drupal 8"
-categories: [develop]
+contenttype: [guide]
+categories: [migrate]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide

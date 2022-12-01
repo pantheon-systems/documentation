@@ -58,6 +58,7 @@ class ReviewReport extends React.Component {
           const [searchTags, setSearchTags] = useState("")
           const [searchProduct, setSearchProduct] = useState("")
           const [searchIntegration, setSearchIntegration] = useState("")
+          const [searchContentType, setSearchContentType] = useState("")
 
           const categorizedPages = data.categorizedDocs.edges
 
@@ -192,7 +193,26 @@ class ReviewReport extends React.Component {
                           </div>
                         </th>
                         <th>Review Date</th>
-                        <th>Type</th>
+                        <th>Content Type
+                          <div className="input-group">
+                            <input
+                              type="text"
+                              id="command-search-contenttype"
+                              className="form-control"
+                              placeholder="Filter"
+                              onChange={y => setSearchContentType(y.target.value)}
+                              value={searchContentType}
+                            />
+                            <div
+                              style={{ background: "#fff; cursor:pointer" }}
+                              className="input-group-addon"
+                              id="clear-filter"
+                              onClick={y => setSearchContentType("")}
+                            >
+                              <span className="fa fa-times" />
+                            </div>
+                          </div>
+                        </th>
                         <th>URL</th>
                         <th>File Path</th>
                       </tr>
@@ -238,6 +258,13 @@ class ReviewReport extends React.Component {
                           return page.node.frontmatter.integration
                             ? page.node.frontmatter.integration.filter(
                               integration => integration.indexOf(searchIntegration) >= 0
+                              ).length
+                            : page
+                        })
+                        .filter(page => {
+                          return page.node.frontmatter.contenttype
+                            ? page.node.frontmatter.contenttype.filter(
+                              contenttype => contenttype.indexOf(searchContentType) >= 0
                               ).length
                             : page
                         })

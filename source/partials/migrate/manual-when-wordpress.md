@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+newcms: [wordpress]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### WordPress-Specific Scenarios
 
 - You are using [WordPress Site Networks](/migrate-wordpress-site-networks).

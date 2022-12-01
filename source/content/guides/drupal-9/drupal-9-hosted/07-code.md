@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted/code
 anchorid: code
 editpath: hosted/07-code.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

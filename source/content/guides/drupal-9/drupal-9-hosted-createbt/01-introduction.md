@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-hosted-createbt
 anchorid: drupal-9-hosted-createbt
 editpath: drupal-9/drupal-9-hosted-createbt/01-introduction.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

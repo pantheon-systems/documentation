@@ -11,7 +11,7 @@ permalink: docs/guides/frontend-performance/static
 editpath: frontend-performance/08-static.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
-contenttype: guide
+contenttype: [guide]
 categories: [optimize]
 newcms: [drupal, wordpress]
 audience: [development]

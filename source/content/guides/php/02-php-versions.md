@@ -3,7 +3,12 @@ title: PHP on Pantheon
 subtitle: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 tags: [libraries, updates]
-categories: [platform]
+contenttype: [guide]
+categories: [php]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true

@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-hosted-md/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-9/drupal-9-hosted-md/13-troubleshooting.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, help]
 newcms: [drupal8, drupal9, drupal]
 audience: [development]

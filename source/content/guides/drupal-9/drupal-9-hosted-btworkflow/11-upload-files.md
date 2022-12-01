@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-btworkflow/upload-files
 anchorid: upload-files
 editpath: drupal-9/drupal-9-hosted-btworkflow/11-upload-files.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

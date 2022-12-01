@@ -157,64 +157,6 @@ You can still access the sites if you have active sites and no keys remaining. M
 
 <Partial file="host-keys.md" />
 
-### Connections Fail With: no matching host key type found. Their offer: ssh-rsa
-
-[OpenSSH 8.8](https://www.openssh.com/txt/release-8.8) disables RSA signatures like the key type Pantheon uses.
-
-While we are working to remedy this on the platform, OpenSSH 8.8 will return this error for CLI commands:
-
-```shell
-Unable to negotiate with 203.0.113.123 port 2222: no matching host key type found. Their offer: ssh-rsa
-```
-
-**Solution**: Until the key type is updated on the Pantheon platform, add `ssh-rsa` to the accepted algorithms in `~/.ssh/config`:
-
-   1. Look for `$HOME/.ssh/config file`. If none present, create it using `type`:
-   
-   ```bash{promptUser: winshell}
-   cd %HOMEPATH%/.ssh
-   type nul > config
-   ```
-   
-   2. Copy/paste the following into config:
-   
-   ```none:title=~/.ssh/config
-   Host *.drush.in
-       # The settings on the next two lines are temporary until Pantheon updates the available key types.
-       # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
-       HostkeyAlgorithms +ssh-rsa
-       PubkeyAcceptedAlgorithms +ssh-rsa
-   ```
-
-### MacOS Ventura unable to connect SSH-keys
-
-[MacOS Ventura](https://www.apple.com/newsroom/2022/10/macos-ventura-is-now-available/) was released on October 24, 2022.
-
-Some users have reported that their SSH suddenly fails to connect and returns the error below or a similar error.
-
-```bash
- no matching host key type found. Their offer: ssh-rsa
- ```
-
-**Solution**: You must add `ssh-rsa` to the accepted algorithms in the `~/.ssh/config` file as a workaround until the key type is updated on the Pantheon platform:
-
-1. Locate the `~/.ssh/config` file. If the file does not exist, create it using `touch`:
-
-   ```bash{promptUser: user}
-   cd ~/.ssh/
-   touch config
-   ```
-
-1. Add the code below to the `~/.ssh/config` file:
-
-   ```none:title=~/.ssh/config
-   Host *.drush.in
-       # The settings on the next two lines are temporary until Pantheon updates the available key types.
-       # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
-       HostkeyAlgorithms +ssh-rsa
-       PubkeyAcceptedAlgorithms +ssh-rsa
-   ```
-
 ### Control Path Error
 
 You may receive the following error:

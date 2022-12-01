@@ -4,7 +4,7 @@ description:
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/support
-newtype: doc
+contenttype: [guide]
 categories: [overview]
 newcms: [--]
 audience: [sysadmin]

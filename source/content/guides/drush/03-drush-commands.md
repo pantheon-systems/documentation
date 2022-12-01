@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-commands
 anchorid: drush-commands
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [drupal]
 audience: [development]

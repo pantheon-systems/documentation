@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [update]
+newcms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Additional Resources
 
 The `self:update` command is only available for standalone Terminus versions installed using the [terminus.phar](/terminus/install#standalone-terminus-phar).

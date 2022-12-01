@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
 We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory that shouldn't be overwritten, as well as platform-specific customizations.

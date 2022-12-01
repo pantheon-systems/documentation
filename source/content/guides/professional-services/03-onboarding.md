@@ -2,7 +2,12 @@
 title: Pantheon Professional Services
 subtitle: Onboarding Services
 description: Pantheon Onboarding Services include Secure Integration, SSO, pre-launch load tests, and more to help you realize WebOps value, fast.
-categories: [get-started]
+contenttype: [guide]
+categories: [help]
+newcms: [--]
+audience: [development, sysadmin]
+product: [--]
+integration: [--]
 tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
 reviewed: "2021-04-01"
 layout: guide

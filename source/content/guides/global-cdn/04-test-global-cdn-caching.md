@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/test-global-cdn-caching
 anchorid: test-global-cdn-caching
-contenttype: guide
+contenttype: [guide]
 categories: [cache, optimize]
 newcms: [drupal, wordpress]
 audience: [development]

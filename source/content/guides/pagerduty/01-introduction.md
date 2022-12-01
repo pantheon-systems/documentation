@@ -3,7 +3,12 @@ title: Incident Management
 subtitle: Introduction
 description: Configure uptime monitors with New Relic&reg; to automatically open an incident in PagerDuty and notify whoever's on-call, following a set escalation path.
 layout: guide
-categories: [performance]
+contenttype: [guide]
+categories: [optimize]
+newcms: [--]
+audience: [development]
+product: [newrelic]
+integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 anchorid: introduction

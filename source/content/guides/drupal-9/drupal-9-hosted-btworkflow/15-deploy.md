@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-9-hosted-btworkflow/deploy
 anchorid: deploy
 editpath: drupal-9/drupal-9-hosted-btworkflow/15-deploy.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [drupal9]
 audience: [development]

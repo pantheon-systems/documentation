@@ -6,7 +6,7 @@ description: Learn how to point your DNS Made Easy domain to a Pantheon site.
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/dns-made-easy.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [--]
 audience: [--]

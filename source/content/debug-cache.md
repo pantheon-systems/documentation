@@ -4,7 +4,7 @@ description: Learn how to identify and resolve caching issues affecting your Pan
 tags: [cdn]
 contributors: [rachelwhitton, sarahg]
 reviewed: "2020-12-15"
-contenttype: doc
+contenttype: [doc]
 categories: [cache, cookies]
 newcms: [wordpress, drupal]
 audience: [development]

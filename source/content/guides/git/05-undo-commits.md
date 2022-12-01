@@ -7,7 +7,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/git/undo-commits
 anchorid: undo-commits
-contenttype: guide
+contenttype: [guide]
 categories: [git]
 newcms: [drupal, wordpress]
 audience: [development]

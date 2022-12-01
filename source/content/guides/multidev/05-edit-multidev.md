@@ -2,7 +2,12 @@
 title: Multidev
 subtitle: Make Edits and Merge Code in Your Multidev
 description: Learn how to make edits and merge code in your Multidev.
-categories: [develop]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [multidev]
+integration: [--]
 tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide

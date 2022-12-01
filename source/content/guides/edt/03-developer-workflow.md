@@ -17,7 +17,7 @@ nextpage: Multidev
 previousurl: guides/edt/introduction-and-architecture/
 previouspage: Architecture
 editpath: edt/03-developer-workflow.md
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [--]
 audience: [development]

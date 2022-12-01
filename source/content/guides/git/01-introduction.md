@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/git
 anchorid: git
-contenttype: guide
+contenttype: [guide]
 categories: [git]
 newcms: [drupal, wordpress]
 audience: [development]
