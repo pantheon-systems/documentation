@@ -23,7 +23,7 @@ Pantheon provides several options for on-server development, however, local deve
 
 ## Before You Begin
 
-- You must transfer each file from Pantheon to your local environment. There are three parts to any dynamic website:
+- You must transfer each file from Pantheon to your local environment. There are three parts to any dynamic website that contain important files:
 
     1. **Code**: The application, modules or plugins, and themes.
 
