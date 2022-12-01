@@ -54,13 +54,13 @@ Replace `$SITE_NAME` and `$ENV_NAME` in the examples below with the your site an
    terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
    ```
 
-  This command also enables `simpletest` as a dependency of `site_test`.
+    This command also enables `simpletest` as a dependency of `site_test`.
 
 1. Clear the cache immediately before running tests to avoid failures. Repeat this step each time you run tests.
 
-   ```bash{promptUser: user}
-   terminus drush $SITE_NAME.$ENV_NAME -- cc all
-   ```
+    ```bash{promptUser: user}
+    terminus drush $SITE_NAME.$ENV_NAME -- cc all
+    ```
 
 
 1. Get the absolute path before you run the script. You may need to strip out warnings by ending the command with `2>/dev/null`.
@@ -69,7 +69,7 @@ Replace `$SITE_NAME` and `$ENV_NAME` in the examples below with the your site an
    terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT"
    ```
 
-  The full command will look something like this:
+  The full command should look similar to this:
 
   ```bash{promptUser: user}
   export TERMINUS_HIDE_UPDATE_MESSAGE=1

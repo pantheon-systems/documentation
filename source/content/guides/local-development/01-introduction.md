@@ -1,7 +1,7 @@
 ---
 title: Local Development on Pantheon
 subtitle: Introduction
-description: Learn more about working locally on your Pantheon site.
+description: Learn more about developing your Pantheon site locally.
 categories: [develop]
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
@@ -23,39 +23,35 @@ Pantheon provides several options for on-server development, however, local deve
 
 ## Before You Begin
 
-There are three parts to any dynamic website:
+- You must transfer each file from Pantheon to your local environment. There are three parts to any dynamic website:
 
-1. **Code**: The application, modules or plugins, and themes.
+    1. **Code**: The application, modules or plugins, and themes.
 
-1. **Database**: The content.
+    1. **Database**: The content.
 
-1. **Files**: User uploaded or application generated.
+    1. **Files**: User uploaded or application generated.
 
-You must transfer each file from Pantheon to your local environment.
-
-Be sure you have:
-
-- A local stack capable of running Drupal or WordPress, such as:
+- Ensure that your local stack is capable of running Drupal or WordPress, such as:
     - [Lando](https://github.com/lando/lando)
     - [MAMP](https://www.mamp.info/en/)
     - [WAMP](http://www.wampserver.com/)
     - [XAMPP](https://www.apachefriends.org/index.html)
 
--  A configuration solution that supports a minimum of PHP 5.3 and MySQL. Pantheon uses a [particular architecture to maximize performance and availability](/application-containers).
+-  Confirm that your configuration solution supports a minimum of PHP 5.3 and MySQL. Pantheon uses a [particular architecture to maximize performance and availability](/application-containers).
 
-- Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
+- Verify that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
 
-- Git client for tracking code changes
+- Install a Git client for tracking code changes.
 
-- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/guides/local-development/visual-studio-code), for transferring files or Rsync.
+- Install an SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/guides/local-development/visual-studio-code), for transferring files or Rsync.
 
-- [Terminus](/terminus)
+- Install [Terminus](/terminus).
 
-- [Multidev](/guides/multidev) is recommended for large teams
+- Review [Multidev](/guides/multidev) documentation. Multidev is recommended for large teams.
 
-- [Drush](/guides/drush) (recommended)
+- Install [Drush](/guides/drush) (recommended for Drupal sites).
 
-- [WP-CLI on Pantheon](/guides/wp-cli) (recommended)
+- Install [WP-CLI](/guides/wp-cli) (recommended for WordPress sites).
 
 ## Support
 
@@ -74,3 +70,4 @@ Review the resources below for additional developer tools and knowledge specific
 - [Terminus](/terminus)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 - [Git on Pantheon](/guides/git)
+- [Developing on Pantheon Directly with SFTP Mode](/sftp)

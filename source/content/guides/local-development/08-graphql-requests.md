@@ -16,6 +16,8 @@ This section provides information on how to use GraphQL on the Pantheon platform
 
 [GraphQL](https://graphql.org/) is an API query language that uses a server-side runtime to execute queries. A GraphQL service is created when you define types and fields for those types, and then provide functions for each field on each type. GraphQL is not tied to a specific database or storage engine, but is instead backed by your existing code and data.
 
+GraphQL can be deployed within an integrated development environment (IDE) known as GraphiQL. You can build GraphQL requests to pull data from multiple data sources in a single API call as an alternative to REST.
+
 [Apollo Client](https://www.apollographql.com/docs/react/) is a Javascript management library that is frequently used with GraphQL. You can manage local and remote data when using Apollo Client with GraphQL. Management features include:
 
 - Fetch

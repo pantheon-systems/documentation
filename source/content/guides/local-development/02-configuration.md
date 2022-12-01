@@ -16,6 +16,8 @@ This section provides information on how to configure your machine for successfu
 
 ## Before You Begin
 
+### Export Your Variables
+
 This section uses several commands that use the temporary command line alias, `$SITE`, to make entering command examples easier. Export your variables and clear your site environment cache before you configure your local development setup. 
 
 1. Set the temporary variable `$SITE` in your terminal session to match the name of your site. Replace `anita-drupal` with your site's name in this example:
@@ -63,13 +65,13 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
 
 1. Locate the `git clone` command at the top of the development panel and copy and paste it into your terminal.
 
- It will look similar to this:
+ It should look similar to this:
 
     ![Example of Git Clone repo for command line: `git clone ssh://codeserver.dev.0e1f236a-ec36-4143-a900-73a92a344`](../../../images/dashboard/git-string.png)
 
 1. Go to where you want the code to reside in your local environment.
 
-    Git will create a directory as part of the clone, so you don't need to create one.
+    Git automatically creates a directory as part of the clone.
 
 1. Run the clone command you copied:
 
@@ -77,7 +79,7 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
     ```
 
-    Git will fetch the data if everything worked correctly:
+    Git fetches the data if everything worked correctly:
 
     ```none
     Cloning into 'anita-wordpress'...
@@ -93,7 +95,7 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
     ```
 
     - Check your [SSH key](/ssh-keys) setup if you run into permission problems. 
-    - Check your network to see if you have a current version of Git if the clone starts but can't complete.
+    - Check your network to confirm that you have a current version of Git if the clone starts but can't complete.
 
 ## Transfer Your Database
 

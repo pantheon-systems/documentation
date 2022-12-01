@@ -43,13 +43,13 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 1. Ensure that PhpStorm uses [Drupal settings](https://www.jetbrains.com/help/phpstorm/drupal.html): go to **Preferences**, select **Languages & Frameworks**, and then select **PHP**.
 
-1. Expand the Drupal drop-down menu.
+1. Expand the **Drupal** drop-down menu.
 
 1. Enable Drupal integration and select the Drupal installation path.
 
 1. Set up PHP/Include Paths.
 
-1. Choose the Drupal major version.
+1. Select the Drupal major version.
 
 1. Configure the correct version of PHP: go to **Preferences**, select **Languages & Frameworks**, select [**PHP**](https://www.jetbrains.com/help/phpstorm/php.html), and choose PHP Language Level with the appropriate version of PHP (e.g. 8.0).
 
@@ -65,15 +65,15 @@ We recommend [enabling Drush support](https://confluence.jetbrains.com/display/P
 
 ## Configure On-Server Development
 
-1. Put your [Dev environment into SFTP mode](/sftp), and click **Connection Info** to see the connection settings.
+1. Put your [Dev environment into SFTP mode](/sftp) and then click **Connection Info** to see the connection settings.
 
-1. Open PhpStorm, go to Build, select Execution, and then select Deployment.
+1. Open PhpStorm, select **Build**, select **Execution**, and then select **Deployment**.
 
-1. Click **plus** for the [add server dialog](https://www.jetbrains.com/help/phpstorm/add-server-dialog.html), and choose SFTP.
+1. Click **plus** for the [add server dialog](https://www.jetbrains.com/help/phpstorm/add-server-dialog.html), and select **SFTP**.
 
   ![PhpStorm on-server development settings](../../../images/phpstorm-onserversettings.png)
 
-1. Enter the Pantheon site name followed by a dash and the environment. For example, `anita-drupal-dev`
+1. Enter the Pantheon site name followed by a dash and the environment. For example: `anita-drupal-dev`
 
 ### Connection Tab
 

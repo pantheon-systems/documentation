@@ -310,15 +310,15 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks exec
 
 1. Select **Post-build Actions**, click the **Add post-build action** button, and select the option **Set GitHub commit status (universal)**, and then choose the following options:
 
-  - **Commit SHA**: Latest build revision.
+    - **Commit SHA**: Latest build revision.
 
-  - **Repositories**: Any defined in job repository.
+    - **Repositories**: Any defined in job repository.
 
-  - **Commit context**: From GitHub property with fallback to job name.
+    - **Commit context**: From GitHub property with fallback to job name.
 
-  - **Status Result**: One of default messages and statuses.
+    - **Status Result**: One of default messages and statuses.
 
-  - **Status backref**: Backref to the build
+    - **Status backref**: Backref to the build
 
 1. Click **Save** to complete the Jenkins build process configuration.
 

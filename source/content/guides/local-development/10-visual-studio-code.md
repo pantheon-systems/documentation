@@ -12,7 +12,7 @@ permalink: docs/guides/local-development/visual-studio-code
 anchorid: visual-studio-code
 ---
 
-This section information on how to develop your Pantheon site locally with Visual Studio Code.
+This section provides information on how to develop your Pantheon site locally with Visual Studio Code.
 
 [Visual Studio Code](https://code.visualstudio.com/), or **VS Code**, is an open-source code editor that runs on Windows, Linux, and Mac OS.
 
@@ -22,7 +22,7 @@ You can set up a Pantheon site in VS Code and push local changes to your Pantheo
 
 1. [Create a site](/guides/legacy-dashboard/create-sites) on Pantheon, or browse to the Dev environment Dashboard of an existing site.
 
-1. Use [SFTP](/rsync-and-sftp#sftp), [rsync](/rsync-and-sftp#rsync) or [Git](/guides/git/git-config#clone-your-site-codebase) to clone your site files on the Dev environment down to your local machine.
+1. Use [Git](/guides/git/git-config#clone-your-site-codebase), [SFTP](/rsync-and-sftp#sftp), or[rsync](/rsync-and-sftp#rsync) to clone your site files on the Dev environment down to your local machine.
 
   If you intend to upload code changes via SFTP, place your site code in a subdirectory called `code` (for example, `~/sites/mysite/code`). This aligns with the file structure on the platform when using [SFTP mode](/sftp).
 
@@ -137,7 +137,7 @@ The SFTP extension for VS Code allows developers to upload code to the Pantheon 
 
   <Alert title="Warning" type="danger">
 
-  If, while using an RSA key, you get the error `Error while signing data with privateKey: error:06000066:public key routines:OPENSSL_internal:DECODE_ERROR`, you must convert your key to PEM format:
+  If you use an RSA key and get the following error, you must convert your key to PEM format: `Error while signing data with privateKey: error:06000066:public key routines:OPENSSL_internal:DECODE_ERROR`
 
   ```bash
   ssh-keygen -p -m PEM -f ~/.ssh/id_rsa

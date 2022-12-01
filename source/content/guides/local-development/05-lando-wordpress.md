@@ -1,7 +1,7 @@
 ---
 title: Local Development on Pantheon
 subtitle: Install and Configure Lando for WordPress
-description: Install and Configure Lando for WordPress local development.
+description: Install and configure Lando for WordPress local development.
 contributors: [digisavvy]
 categories: [develop]
 tags: [code, iterate, lando, local, webops]
@@ -28,7 +28,7 @@ Be sure that you have:
 
 1. Download the appropriate [Lando release](https://github.com/lando/lando/releases) for your Operating System.
 
-1. Click to open the installer package. The installer has a few pre-flight checks it runs before it starts.
+1. Open the installer package. The installer has a few pre-flight checks it runs before it starts.
 
   ![Image of the Lando installer](../../../images/guides/lando-wordpress/lando-installer.png)
 
@@ -188,7 +188,7 @@ Your **database** refers to your app's database. Your **code** refers to your ap
 
 </Alert>
 
-### Pull Changes from Pantheon to Your Local
+### Pull Changes from Pantheon to Your Local Environment
 
 1. Open your terminal.
 
@@ -223,7 +223,7 @@ Your **database** refers to your app's database. Your **code** refers to your ap
 ## Support
 
 Please note that [Pantheon's Support Team](/guides/support) doesn't provide support for Lando.
-Visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support) if you encounter any issues.
+Visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support) if you encounter issues.
 
 ## More Resources
 

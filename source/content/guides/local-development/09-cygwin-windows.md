@@ -23,9 +23,7 @@ The content in this section is unmaintained. We recommend that you use [Windows 
 
 </Alert>
 
-You can install [Cygwin](https://cygwin.com/) if you do not have access to a Mac or Linux environment. This allows you to perform tasks typically not possible in Windows, such as:
-
-- [Terminus](https://github.com/pantheon-systems/cli) installation and use on Pantheon
+You can install [Cygwin](https://cygwin.com/) if you do not have access to a Mac or Linux environment. This allows you to perform tasks typically not possible in Windows, such as installing [Terminus](https://github.com/pantheon-systems/cli).
 
 ## Install Cygwin
 
