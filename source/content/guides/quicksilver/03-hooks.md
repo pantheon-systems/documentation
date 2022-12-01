@@ -2,7 +2,12 @@
 title: Quicksilver on Pantheon
 subtitle: Quicksilver Hooks
 description: Learn how to use Quicksilver hooks to improve your workflow.
+contenttype: [guide]
 categories: [automate]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [quicksilver]
 tags: [quicksilver, webops, workflow]
 layout: guide
 permalink: docs/guides/quicksilver/hooks
