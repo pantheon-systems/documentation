@@ -195,13 +195,13 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal sites.
 
-### Composer
+### Composer settings.php File
 
-Configuration of the `setting.php` is not needed if you are using Composer. 
+Configuration of the `setting.php` file is not needed if you are using Composer. 
 
-### Non-Composer
+### Non-Composer settings.php File
 
-Non-Composer implementations must add the following lines to `settings.php` to allow the Drupal module to locate SimpleSAMLphp:
+Non-Composer implementations must add the following lines to the `settings.php` file to allow the Drupal module to locate SimpleSAMLphp:
 
 **Drupal 7 Example**
 
