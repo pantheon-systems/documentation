@@ -3,7 +3,12 @@ title: Secure Development on Pantheon
 subtitle: Secure Runtime Access
 description: Limit access to your site's database for additional defense against traffic-based attacks and unauthorized access.
 tags: [security]
-categories: [develop]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 contributors: [edwardangert]
 searchboost: 150
 layout: guide

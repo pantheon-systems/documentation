@@ -2,7 +2,12 @@
 title: Get Support
 subtitle: Frequently Asked Questions
 cms: "Drupal"
-categories: [develop]
+contenttype: [guide]
+categories: [help]
+newcms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
 anchorid: support-faq
