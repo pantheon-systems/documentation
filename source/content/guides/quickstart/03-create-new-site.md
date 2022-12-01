@@ -5,7 +5,12 @@ description: In part three of our Quick Start guide, learn how to create your ne
 anchorid: create-new-site
 generator: pagination
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, users, workflow]
 type: guide
 permalink: docs/guides/quickstart/create-new-site/

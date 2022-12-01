@@ -7,7 +7,7 @@ cms: "Drupal"
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak, kporras07]
 reviewed: "2022-02-21"
-contenttype: [guide]
+contenttype: [doc]
 categories: [update]
 newcms: [drupal8]
 audience: [development]

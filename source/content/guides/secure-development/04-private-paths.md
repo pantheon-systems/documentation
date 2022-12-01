@@ -3,7 +3,12 @@ title: Secure Development on Pantheon
 subtitle: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 tags: [infrastructure, security]
-categories: [platform,develop]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true

@@ -4,7 +4,12 @@ description: Switch to the new Pantheon upstream to take advantage of the new st
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
-categories: [develop]
+contenttype: [doc]
+categories: [migrate]
+newcms: [drupal9]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [composer, site, workflow]
 contributors: [kporras07, jspellman814]
 reviewed: "2022-04-22"

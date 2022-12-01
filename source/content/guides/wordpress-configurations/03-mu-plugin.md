@@ -4,7 +4,12 @@ subtitle: Create a WordPress MU-Plugin for Actions and Filters
 description: Learn how to make your own MU-plugin for actions and filters.
 contributors: [alexfornuto, eabquina, carl-alberto]
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [config]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [plugins]
 tags: [plugins]
 reviewed: "2020-08-12"
 permalink: docs/guides/wordpress-configurations/mu-plugin

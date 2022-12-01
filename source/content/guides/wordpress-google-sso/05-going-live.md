@@ -4,7 +4,12 @@ subtitle: Going Live
 description: Merge your new SAML configuration to your live environment, and update the appropriate values
 contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
-categories: [integrate]
+contenttype: [guide]
+categories: [siteauth]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [plugins]
 tags: [sso, saml, users, security, launch]
 reviewed: "2020-02-19"
 layout: guide

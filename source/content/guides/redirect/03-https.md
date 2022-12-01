@@ -2,7 +2,12 @@
 title: Redirects Guide
 subtitle: Redirect to HTTPS
 description: Learn how to redirect HTTPS sites.
-categories: [go-live]
+contenttype: [guide]
+categories: [domains]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dns, https, redirects]
 layout: guide
 contributors: [wordsmither]

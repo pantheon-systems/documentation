@@ -5,7 +5,7 @@ type: guide
 tags: [continuous-integration, iterate, site, webops]
 permalink: docs/guides/:basename
 contributors: [ataylorme]
-contenttype: [guide]
+contenttype: [doc]
 categories: [automate]
 newcms: [drupal, wordpress]
 audience: [development]

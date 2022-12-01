@@ -2,7 +2,12 @@
 title: Secure Development on Pantheon
 subtitle: Lock Environments with the Dashboard Security Tool
 description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal or WordPress site development.
-categories: [develop]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, security, users]
 contributors: [whitneymeredith]
 layout: guide
