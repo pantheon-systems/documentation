@@ -2,7 +2,12 @@
 title: The New Pantheon Dashboard
 subtitle: Dashboard Sites
 description: Search Sites in the Dashboard
-categories: [platform]
+contenttype: [guide]
+categories: [dashboard]
+newcms: [--]
+audience: [development, marketing, sysadmin, agency, business]
+product: [dashboard]
+integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [joa-pan, michellecolon-pantheon]
 reviewed: "2022-07-20"
