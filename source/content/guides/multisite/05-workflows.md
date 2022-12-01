@@ -2,18 +2,17 @@
 title: WordPress Site Networks
 subtitle: Workflows
 description: Learn more about WordPress Site Networks workflows.
-multisite: true
 anchorid: media
-generator: pagination
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [create]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite, workflow]
-pagination:
-    provider: data.multisitepages
-use:
-    - multisitepages
 permalink: docs/guides/multisite/workflows/
 nexturl: guides/multisite/debug/
 previousurl: guides/multisite/workflows/
