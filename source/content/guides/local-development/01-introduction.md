@@ -18,8 +18,8 @@ Pantheon provides several options for on-server development, however, local deve
 - Jenkins
 - JetBrains PhpStorm for WordPress
 - JetBrains PhpStorm for Drupal
-- [Drush](/guides/drush)
-- [WP-CLI](/guides/wp-cli)
+- [Drush]
+- [WP-CLI]
 
 ## Before You Begin
 
