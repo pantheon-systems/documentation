@@ -7,7 +7,7 @@ type: guide
 permalink: docs/guides/drupal-9-from-dist
 contributors: [wordsmither]
 date: 07/06/2022
-contenttype: [guide]
+contenttype: [doc]
 categories: [create]
 newcms: [drupal]
 audience: [development]

@@ -5,7 +5,12 @@ description: Optimize WordPress and Varnish caching to maximize your site's perf
 cms: "WordPress"
 tags: [cache, plugins]
 contenttype: [guide]
-categories: [optimize]
+contenttype: [guide]
+categories: [config]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [plugins]
 newcms: [wordpress]
 audience: [development]
 product: [--]

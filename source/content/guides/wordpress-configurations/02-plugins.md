@@ -2,7 +2,12 @@
 title: WordPress Configurations Guide
 subtitle: Pantheon-maintained WordPress Plugins
 description: Pantheon plugins for WordPress.
-categories: [wordpress]
+contenttype: [guide]
+categories: [config]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"

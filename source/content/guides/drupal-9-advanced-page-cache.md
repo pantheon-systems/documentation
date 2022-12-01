@@ -5,7 +5,7 @@ tags: [moreguides]
 type: guide
 permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham]
-contenttype: [guide]
+contenttype: [doc]
 categories: [cache]
 newcms: [drupal]
 audience: [development]
