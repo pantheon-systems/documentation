@@ -2,7 +2,12 @@
 title: Object Cache (formerly Redis)
 subtitle: FAQs
 description: Get answers to your Object Cache questions.
-categories: [performance]
+contenttype: [guide]
+categories: [cache]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide

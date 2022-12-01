@@ -2,7 +2,12 @@
 title: Platform Considerations
 subtitle: Introduction
 description: Learn more about Pantheon platform considerations for your Drupal or WordPress sites.
-categories: [platform]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 layout: guide
