@@ -2,7 +2,6 @@
 title: Pantheon Localdev
 subtitle: Introduction
 description: Localdev makes it easy to develop your sites locally with the Pantheon workflow.
-categories: [develop]
 tags: [localdev, local, workflow]
 contributors: [edwardangert, alexfornuto]
 reviewed: "2020-12-04"
