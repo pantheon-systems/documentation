@@ -37,9 +37,9 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
 
 ## Upload the Static Site to Pantheon
 
-Now that you have static files and an empty Upstream that is ready to host them, add files to the Pantheon Site using [SFTP](/sftp) or [Git](/guides/git/git-config).
+Now that you have static files and an empty Upstream that is ready to host them, add files to the Pantheon Site using [SFTP](/guides/sftp) or [Git](/guides/git/git-config).
 
-Once the files have been added to the Site, [commit the code](/sftp#committing-sftp-changes), and deploy the changes through Test to Live.
+Once the files have been added to the Site, [commit the code](/guides/sftp/sftp-development), and deploy the changes through Test to Live.
 
 ## Frequently Asked Questions
 

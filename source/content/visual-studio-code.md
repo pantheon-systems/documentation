@@ -16,7 +16,7 @@ This doc covers setting up a Pantheon site in VS Code and using the SFTP extensi
 1. [Create a site](/guides/legacy-dashboard/create-sites) on Pantheon, or browse to the Dev environment Dashboard of an existing site.
 1. Use [SFTP](/rsync-and-sftp#sftp), [rsync](/rsync-and-sftp#rsync) or [Git](/guides/git/git-config#clone-your-site-codebase) to clone your site files on the Dev environment down to your local machine.
 
-  If you intend to upload code changes via SFTP, place your site code in a subdirectory called "code" (e.g, `~/sites/mysite/code`). This aligns with the file structure on the platform when using [SFTP mode](/sftp).
+  If you intend to upload code changes via SFTP, place your site code in a subdirectory called "code" (e.g, `~/sites/mysite/code`). This aligns with the file structure on the platform when using [SFTP mode](/guides/sftp).
 
 1. Download and install [VS Code](https://code.visualstudio.com/).
 
@@ -72,7 +72,7 @@ Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integra
 ### Upload your changes with SFTP
 The SFTP extension for VS Code allows developers to upload code to the Pantheon Dev or Multidev environment directly from VS Code, as well as download files from the Pantheon servers.
 
-Make sure your site is in [SFTP mode](/sftp#sftp-mode) before uploading code via SFTP.
+Make sure your site is in [SFTP mode](/guides/sftp#sftp-mode) before uploading code via SFTP.
 
 1. Install the VS Code [SFTP Extension](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp).
 1. Open the VS Code command palette (**Ctrl/Command** + **Shift** + **P**) and run `SFTP: config` to open the SFTP config file.
@@ -105,7 +105,7 @@ Make sure your site is in [SFTP mode](/sftp#sftp-mode) before uploading code via
   }
   ```
 
-  If you aren't using a key, you'll be prompted to enter a password when using SFTP. See [Dashboard Credentials](/sftp#dashboard-credentials) for more information.
+  If you aren't using a key, you'll be prompted to enter a password when using SFTP. See [Dashboard Credentials](/guides/sftp) for more information.
 
   <Alert title="Warning" type="danger">
 

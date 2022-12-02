@@ -375,7 +375,7 @@ ___
 
 1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-configurations/plugins#pantheon-must-use-plugin).
 
-1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` folder itself. You can do this by accessing the site's files via [SFTP](/sftp).
+1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` folder itself. You can do this by accessing the site's files via [SFTP](/guides/sftp).
 
 **I am still having issues:** Please [contact support](/guides/support/contact-support/) if you have completed the resolution steps above and you are still having issues.
 ___
@@ -596,7 +596,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 
-**Solution:** Make sure you are in [SFTP mode](/sftp/#sftp-mode) instead of Git mode.
+**Solution:** Make sure you are in [SFTP mode](/guides/sftp/sftp-development) instead of Git mode.
 
 ___
 

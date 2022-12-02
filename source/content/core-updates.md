@@ -139,7 +139,7 @@ If this procedure fails with the message `Already up to date.` refer to [this tr
 
 #### Overwrite WordPress Core Via SFTP
 
-In the case where you're unable to use Git, you can use [SFTP](/sftp) to overwrite core files.
+In the case where you're unable to use Git, you can use [SFTP](/guides/sftp) to overwrite core files.
 
 1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
 

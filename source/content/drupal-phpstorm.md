@@ -59,7 +59,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 ## Configure On-Server Development
 
-1. Put your [Dev environment into SFTP mode](/sftp), and click **Connection Info** to see the connection settings.
+1. Put your [Dev environment into SFTP mode](/guides/sftp/sftp-development), and click **Connection Info** to see the connection settings.
 
 1. Within PhpStorm, go to Build, Execution, Deployment > Deployment.
 

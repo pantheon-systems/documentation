@@ -17,7 +17,7 @@ If you do not already have one, [create a new WordPress site](/guides/quickstart
 
 ## Clone the Code Repository
 
-Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection-information) or clone your site codebase with [Git](/guides/git/git-config#clone-your-site-codebase).
+Copy your site code to your local workstation using [SFTP](/guides/sftp/sftp-connection-info) or clone your site codebase with [Git](/guides/git/git-config#clone-your-site-codebase).
 
 ## Create a PhpStorm Project
 
@@ -51,7 +51,7 @@ Once you have installed WP-CLI on your local machine you can configure PhpStorm 
 
 ## Configure Your Pantheon Development Environment
 
-1. Put your [Dev environment into SFTP mode](/sftp#sftp-mode), and click **Connection Info** to see the connection settings.
+1. Put your [Dev environment into SFTP mode](/guides/sftp/sftp-development), and click **Connection Info** to see the connection settings.
 2. With your PhpStorm project opened, go to the **Tools Menu** > **Deployment** and click the **Configuration...** option.
 3. Click **+** to [add a web server](https://www.jetbrains.com/help/phpstorm/add-server-dialog.html).
 4. Enter your Pantheon site name, followed by a dash and the environment.
@@ -60,7 +60,7 @@ Once you have installed WP-CLI on your local machine you can configure PhpStorm 
 
 ### Connection Tab
 
-Use your site's [SFTP connection information](/sftp#sftp-connection-information) to configure the Connection tab:
+Use your site's [SFTP connection information](/guides/sftp/sftp-connection-info) to configure the Connection tab:
 
 1. Type: `SFTP`
 1. SFTP Host: `appserver.dev.<Site UUID>.drush.in`

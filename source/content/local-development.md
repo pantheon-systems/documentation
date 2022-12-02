@@ -172,7 +172,7 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 
 Send files using SFTP:
 
-1. [Copy the SFTP CLI command](/sftp#sftp-connection-information).
+1. [Copy the SFTP CLI command](/guides/sftp/sftp-connection-info).
 
 1. Use the terminal to navigate to the correct directory on your local file system:
 

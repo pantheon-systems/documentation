@@ -196,7 +196,7 @@
             - text: 'Working in the WordPress Dashboard and Drupal Admin Interface'
               url: '/cms-admin'
             - text: 'Developing on Pantheon Directly with SFTP Mode'
-              url: '/sftp'
+              url: '/guides/sftp'
         - title: 'Managing Files'
           links:
             - text: 'On-Server Development'

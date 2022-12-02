@@ -37,6 +37,6 @@ Within this workflow, there are several ways you can manage and develop your sit
 - Support large teams using [Multidev](/guides/multidev).
 - Migrate your site [from a competitor](/get-started).
 - [Use the command line](/terminus) to manage and create sites.
-- Develop using either [Git](/guides/git) or [SFTP](/sftp).
+- Develop using either [Git](/guides/git) or [SFTP](/guides/sftp).
 
 There are even more tools and options available to you.  Refer to [Develop](/develop) for more information.

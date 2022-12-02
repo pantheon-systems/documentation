@@ -76,5 +76,5 @@ Site names must be unique across all Pantheon sites, including [frozen](/guides/
 
 ## Next Steps
 
- - [Developing Directly with SFTP](/sftp)
+ - [Developing Directly with SFTP](/guides/sftp)
  - [Starting with Git](/guides/git/git-config)

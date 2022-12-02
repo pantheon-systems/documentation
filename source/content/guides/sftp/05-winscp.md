@@ -1,14 +1,19 @@
 ---
-title: Using WinSCP on Pantheon
+title: SFTP on Pantheon
+subtitle: Using WinSCP on Pantheon
 description: Detailed information about the Pantheon SFTP connection WinSCP SFTP client.
 categories: [develop]
 tags: [files, sftp]
+layout: guide
+showtoc: true
+permalink: docs/guides/sftp/winscp
+anchorid: winscp
 ---
 [WinSCP](https://winscp.net/eng/index.php) is an open source graphical SFTP client for Windows that also supports the Legacy SCP protocol.
 
 ## Getting Started
 
-Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, see the documentation on [how to find the SFTP credentials](/sftp#sftp-connection-information) for your site.
+Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, see the documentation on [how to find the SFTP credentials](/guides/sftp/sftp-connection-info) for your site.
 
 ## Download WinSCP
 

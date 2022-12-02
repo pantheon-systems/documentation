@@ -26,7 +26,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
    ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
-1. [Commit any staged changes](/sftp#committing-sftp-changes) that have not been committed before you continue if the site is in [SFTP mode](/sftp).
+1. [Commit any staged changes](/guides/sftp/sftp-development) that have not been committed before you continue if the site is in [SFTP mode](/guides/sftp).
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 

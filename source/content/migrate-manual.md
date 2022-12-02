@@ -116,7 +116,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 1. Click **Open SFTP Client** to open your default local SFTP client, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Do not overwrite WordPress or Drupal core files on your Pantheon site. Upload your existing site's themes as well as plugins or modules to their locations within the root directory (`code` or `wp-content`, as shown below).
 

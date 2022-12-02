@@ -24,7 +24,7 @@ There are two mechanisms for transferring files: SFTP and rsync.
 
 There are a number of GUI SFTP clients available, such as [WinSCP](https://winscp.net/eng/index.php) and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
 
-[Connection information](/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
+[Connection information](/guides/sftp/sftp-connection-info) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory.
 
