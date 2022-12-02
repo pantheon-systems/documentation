@@ -2,13 +2,18 @@
 title: Pantheon Localdev
 subtitle: Changelog and Beta Versions
 description: Find the latest updates to Localdev.
-categories: [develop]
 tags: [localdev, local, workflow]
 reviewed: "2022-04-19"
 layout: guide
 permalink: docs/guides/localdev/changelog
 anchorid: localdev/changelog
 editpath: localdev/05-changelog.md
+contenttype: [guide]
+categories: [overview]
+newcms: [wordpress, drupal]
+audience: [agency, business, development]
+product: [localdev]
+integration: [--]
 ---
 
 ## Changelog
