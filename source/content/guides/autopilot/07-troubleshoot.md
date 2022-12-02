@@ -406,11 +406,11 @@ Update the database on the target environment, and then retry Autopilot. You wil
 
 ## Upstreams Could Not Be Merged
 
-<Accordion title="Autopilot was unable to apply upstream updates because the upstreams could not be merged." id="upstream-no-common-ancestor" icon="info-sign">
+<Accordion title="We could not apply upstream updates because the upstreams could not be merged." id="upstream-no-common-ancestor" icon="info-sign">
 
 ### Issue
 
-Distinct from a merge conflict, this is encountered when there is no shared git history between the site's commits and the upstreams commits. This is most often encountered if the site's upstream has been changed, or if a different git history has been force-pushed for the site's code repository.
+Distinct from a merge conflict, this is encountered when there is no shared git history between the site's commits and the upstream's commits. This is most often encountered if the site's upstream has been changed, or if a different git history has been force-pushed for the site's code repository.
 
 ### Solution
 
