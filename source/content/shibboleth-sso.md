@@ -212,7 +212,13 @@ $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesam
 
 ### Drupal 10
 
-Drupal 10/Symfony 6 is incompatible with the recommended site-level SSO solution for Pantheon Drupal sites outlined in this document. However, the 4.x branch (Dev version) of the Drupal module can use the dev-master version of the SimpleSAMLphp library to achieve Drupal 10 compatibility.
+Drupal 10 includes Symfony 6. The SimpleSAMLphp library is not currently compatible with Symfony 6 unless you use the dev-master branch. There is a new `simplesamlphp_auth branch (4.x)` that you can use if you require a Drupal 10 compatibility workaround. Note that this workaround requires you to use dev versions at your own risk.
+
+You must require the Drupal module like this:
+
+```bash{promptUser: user}
+composer require drupal/simplesamlphp_auth:"^4"
+```
 
 ## WordPress Multisite Issues
 
