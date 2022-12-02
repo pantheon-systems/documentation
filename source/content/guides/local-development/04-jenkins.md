@@ -41,10 +41,15 @@ Be sure that you have:
   - [Terminus](https://github.com/pantheon-systems/terminus#installing-with-composer)
   - [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
-    - Verify you can run Terminus, Drush, and Composer commands as the Jenkins user. Note that Terminus and Drush must be accessible from standard `PATH` directories.
+  <Alert title="Note" type="info" >
+  
+  Verify you can run Terminus, Drush, and Composer commands as the Jenkins user. Terminus and Drush must be accessible from standard `PATH` directories.
+
+  </Alert>
+
 - Confirmed that the default Jenkins user has a [private key](https://stackoverflow.com/questions/37331571/how-to-setup-ssh-keys-for-jenkins-to-publish-via-ssh) in its `$HOME/.ssh` directory, and a user with the matching public key installed on Pantheon. Clone a Pantheon site to the Jenkins user's home directory to test.
 - Set the Jenkins user's Git user name and email in **Manage Jenkins**, **Configure System**
-- Added the lines below in the Jenkins user's `$HOME/.ssh/config` (if this file doesn't exist, you must create it).
+- Added the lines below in the Jenkins user's `$HOME/.ssh/config` (if this file doesn't exist, you must create it):
 
   ```http
     Host *
@@ -96,7 +101,7 @@ Be sure that you have:
 
     ![New empty repository](../../../images/integrations/new_repo.png)
 
-1. Open your local command line and connect your local project to this repository as `origin`, and then push the code to the master branch. Remember to replace the URL path:
+1. Open your local command line and connect your local project to this repository as `origin`, then push the code to the master branch. Remember to replace the URL path:
 
   ```bash{promptUser: user}
   git remote add origin git@github.com:YOUR-ORG/YOUR-PROJECT.git
@@ -142,7 +147,7 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
 
 ### GitHub and Jenkins Integration
 
-1. Open the main Jenkins menu on the left side, select **Credentials**, select **System**, select **Global credentials**, and then select **Add Credentials** to add your GitHub and Terminus tokens.
+1. Open the main Jenkins menu on the left side, select **Credentials**, select **System**, select **Global credentials**, then select **Add Credentials** to add your GitHub and Terminus tokens.
 
     ![Credentials Page](../../../images/integrations/credentials.png)
 
@@ -162,7 +167,7 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
     - **ID**: blank
     - **Description**: GitHub
 
-1. Click OK to add the new credential to the system.
+1. Click **OK** to add the new credential to the system.
 
 1. Create another credential for a Terminus Token, using either an existing token or [a new token](/machine-tokens) from your Jenkins user dashboard:
 
@@ -177,14 +182,14 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
     ![Credentials Page](../../../images/integrations/2_credentials.png)
 
     <Alert title="Note" type="info">
-    Keep your Terminus token handy, you'll need to enter it again later.
+    Keep your Terminus token handy; you'll need to enter it again later.
     </Alert>
 
-1. Return to the main Jenkins dashboard, select **Manage Jenkins**, and then select **Configure System**.
+1. Return to the main Jenkins dashboard, select **Manage Jenkins**, then select **Configure System**.
 
 1. Scroll to the **GitHub Servers** section and click **Add GitHub Server**.
 
-1. Leave the **API URL** as `https://api.github.com`, click the **Credentials** drop-down menu, and then select your GitHub credentials.
+1. Leave the **API URL** as `https://api.github.com`, click the **Credentials** drop-down menu, then select your GitHub credentials.
 
 1. Click **Test Connection** to view the GitHub username that created the token.
 
@@ -200,9 +205,9 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
 
     ![New Jenkins project](../../../images/integrations/new_job.png)
 
-1. Click the **General** tab, select "GitHub project" and enter the repository URL (for example, `https://github.com/YOUR-ORG/YOUR-PROJECT`).
+1. Click the **General** tab, select **GitHub project** and enter the repository URL (for example, `https://github.com/YOUR-ORG/YOUR-PROJECT`).
 
-1. Click the **Source Code Management** tab, select **Git**, select **Advanced**, and then add the following information:
+1. Click the **Source Code Management** tab, select **Git**, select **Advanced**, then add the following information:
 
     - **Repository URL**: The path to the .git file of your repository, e.g. `https://github.com/YOUR-ORG/YOUR-PROJECT.git`
     - **Name**: `origin`
@@ -242,7 +247,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks exec
   terminus auth:login --machine-token=${TERMINUS_TOKEN}
   ```
 
-1. Verify the Dev environment is awake: and in Git mode.
+1. Verify the Dev environment is awake and in Git mode.
 
   ```bash
   echo "Waking Dev environment."
@@ -308,7 +313,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks exec
 
 ### Add Post-build Actions
 
-1. Select **Post-build Actions**, click the **Add post-build action** button, and select the option **Set GitHub commit status (universal)**, and then choose the following options:
+1. Select **Post-build Actions**, click the **Add post-build action** button, select the option **Set GitHub commit status (universal)**, then choose the following options:
 
     - **Commit SHA**: Latest build revision.
 

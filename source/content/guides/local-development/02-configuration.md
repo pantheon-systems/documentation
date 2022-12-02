@@ -200,15 +200,15 @@ Use a local configuration file:
 - Drush: `settings.local.php`
 - WordPress: `wp-config-local.php`
 
-Your local configuration file must be excluded from version control and included by `settings.php` or `wp-config.php` when found. Your local configuration file won't be found on Pantheon because Git ignores the local configuration file, however it will be applied when you run the site locally.
+Your local configuration file must be excluded from version control and included by `settings.php` or `wp-config.php` when found. Your local configuration file won't be found on Pantheon because Git ignores the local configuration file, but it will be applied when you run the site locally.
 
 Pantheon's upstreams detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/default/wp-config.php#L18) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
-This file is ignored by the `.gitignore` file in [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Simply create the file on your local computer, and manage configurations accordingly.
+This file is ignored by the `.gitignore` file in [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Create the file on your local computer, and manage configurations accordingly.
 
 ### WordPress wp-config-local.php
 
-Pantheon sites that install WordPress 5.5 include a `wp-config-local-sample.php` file. Older sites can copy [wp-config-local-sample.php file on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-local-sample.php) to the same directory as the site's `wp-config.php`, or create one in that location as shown here.
+Pantheon sites that install WordPress 5.5 include a `wp-config-local-sample.php` file. Older sites can copy the [wp-config-local-sample.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-local-sample.php) file on GitHub to the same directory as the site's `wp-config.php`, or create one in that location as shown here.
 
 The following can be used as a starting point for `wp-config-local.php`. Replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key/1.1/salt/)).
 
@@ -237,7 +237,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
    sites/*/settings.local.php
    ```
 
-Note that Drupal 7 users must add a reference to the local file from within `settings.php`:
+Drupal 7 users must add a reference to the local file from within `settings.php`:
 
 ```php:title=sites/default/settings.php
 /**

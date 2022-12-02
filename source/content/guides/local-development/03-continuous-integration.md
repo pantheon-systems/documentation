@@ -62,7 +62,6 @@ Replace `$SITE_NAME` and `$ENV_NAME` in the examples below with the your site an
     terminus drush $SITE_NAME.$ENV_NAME -- cc all
     ```
 
-
 1. Get the absolute path before you run the script. You may need to strip out warnings by ending the command with `2>/dev/null`.
 
    ```bash{promptUser: user}

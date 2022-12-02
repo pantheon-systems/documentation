@@ -133,7 +133,7 @@ The SFTP extension for VS Code allows developers to upload code to the Pantheon 
   }
   ```
 
-  If you aren't using a key, you'll be prompted to enter a password when using SFTP. Refer[Dashboard Credentials](/sftp#dashboard-credentials) for more information.
+  If you aren't using a key, you'll be prompted to enter a password when using SFTP. See [Dashboard Credentials](/sftp#dashboard-credentials) for more information.
 
   <Alert title="Warning" type="danger">
 
