@@ -22,8 +22,6 @@ In some cases, working via Git may not be the best option. You may not like loca
 
 SFTP mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP mode first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
-
-
 ## SFTP Clients
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
@@ -31,4 +29,3 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 - PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
 - [WinSCP](/guides/sftp/winscp)
 - [Visual Studio Code](/visual-studio-code)
-

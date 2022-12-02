@@ -1,8 +1,13 @@
 ---
-title: rsync and SFTP
+title: SFTP on Pantheon
+subtitle: rsync and SFTP
 description: Transfer large files using an SFTP client or rsync using Drupal or WordPress for Pantheon.
 categories: [develop]
 tags: [files, sftp, rsync]
+layout: guide
+showtoc: true
+permalink: docs/guides/sftp/rsync-and-sftp
+anchorid: rsync-and-sftp
 ---
 If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use an SFTP client or rsync to transfer.
 
