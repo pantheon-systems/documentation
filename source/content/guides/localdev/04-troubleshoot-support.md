@@ -8,8 +8,7 @@ contributors: [edwardangert, alexfornuto]
 reviewed: "2020-12-04"
 layout: guide
 permalink: docs/guides/localdev/troubleshoot-support
-anchorid: localdev/troubleshoot-support
-editpath: localdev/04-troubleshoot-support.md
+anchorid: troubleshoot-support
 ---
 
 Localdev has been deprecated. However, there are many local development options for the Pantheon platform in the [Local Development on Pantheon](/guides/local-development) guide.
@@ -35,7 +34,7 @@ The content of `wp-contents/uploads` should be symlinked to files, in keeping wi
 If you attempt to initialize a site within Localdev before you've completed the CMS install on Pantheon, it will fail when attempting to pull the (non-existent) database from the platform. The logs under **show detail (beta)** will show:
 
 ```docker
-Pulling your database... This miiiiight take a minute
+Pulling your database... This might take a minute
  [notice] Command: anita-wordpress.dev -- wp db export [Exit: 0]
 Checking db pull for expected tables...
 Database pull failed...
@@ -82,3 +81,7 @@ No, new Multidev environments must still be created from the Site Dashboard or [
 ### Can I setup Localdev with a Mac that has an M1 chip?
 
 Yes, Macs with the M1 chip are supported.
+
+## More Resources
+
+- [Local Development on Pantheon](/guides/local-development)
