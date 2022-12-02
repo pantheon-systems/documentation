@@ -11,7 +11,7 @@ permalink: docs/guides/localdev
 anchorid: localdev
 editpath: localdev/01-introduction.md
 contenttype: [guide]
-categories: [overview, ]
+categories: [overview]
 newcms: [wordpress, drupal]
 audience: [agency, development]
 product: [localdev]
