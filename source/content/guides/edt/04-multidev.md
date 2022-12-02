@@ -17,7 +17,7 @@ nextpage: Command Line Interface
 previousurl: guides/edt/developer-workflow/
 previouspage: Developer Workflow
 editpath: edt/04-multidev.md
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [--]
 audience: [development]

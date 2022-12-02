@@ -4,7 +4,7 @@ description: Learn how to build sites using the WordPress and Drupal admin inter
 searchboost: 150
 tags: [site, sftp, dashboard]
 reviewed: "2020-06-24"
-newtype: doc
+contenttype: [doc]
 categories: [sftp]
 newcms: [wordpress, drupal]
 audience: [development]

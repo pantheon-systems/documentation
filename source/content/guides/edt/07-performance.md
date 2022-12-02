@@ -17,7 +17,7 @@ nextpage: Going Live
 previousurl: guides/edt/external-integrations/
 previouspage: External Integrations
 editpath: edt/07-performance.md
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [--]
 audience: [development]

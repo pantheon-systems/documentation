@@ -10,7 +10,7 @@ showtoc: true
 permalink: docs/guides/accessibility
 anchorid: accessibility
 editpath: accessibility/01-overview.md
-contenttype: guide
+contenttype: [guide]
 categories: [optimize]
 newcms: [--]
 audience: [--]

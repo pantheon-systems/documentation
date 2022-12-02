@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted/create-site
 anchorid: create-site
 editpath: hosted/05-create-site.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [create, migrate]
 newcms: [drupal9]
 audience: [development]

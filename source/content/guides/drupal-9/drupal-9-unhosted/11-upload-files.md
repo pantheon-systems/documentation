@@ -9,7 +9,7 @@ layout: guide
 permalink: docs/guides/drupal-9-unhosted/upload-files
 anchorid: upload-files
 editpath: drupal-9/drupal-9-unhosted/11-upload-files.md
-contenttype: guide
+contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

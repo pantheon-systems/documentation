@@ -2,7 +2,7 @@
 title: Optimization for Pantheon and the Cloud
 description: Learn how to optimize your Drupal or WordPress site to efficiently function on Pantheon's cloud.
 tags: [cache, cdn]
-newtype: doc
+contenttype: [doc]
 categories: [cache]
 newcms: [drupal, wordpress]
 audience: [development]

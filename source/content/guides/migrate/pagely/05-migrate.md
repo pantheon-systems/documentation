@@ -2,7 +2,12 @@
 title: Migrate a Site From Pagely to Pantheon Using Guided Migration
 subtitle: Migrate
 description: Learn how to use the Pagely migration path.
-categories: [develop]
+contenttype: [guide]
+categories: [migrate]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

@@ -2,7 +2,12 @@
 title: PHP on Pantheon
 subtitle: PHP Slow Log and FPM Error Log
 description: Improve site stability using PHP Slow Log and PHP FPM Error Log to identify serious performance issues.
-categories: [performance]
+contenttype: [guide]
+categories: [php]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [cli, logs, sftp]
 layout: guide
 showtoc: true

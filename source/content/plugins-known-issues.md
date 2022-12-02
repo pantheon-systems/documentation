@@ -4,7 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
-newtype: doc
+contenttype: [doc]
 categories: [help]
 newcms: [wordpress]
 audience: [development]

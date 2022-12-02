@@ -7,7 +7,7 @@ draft: true
 tags: [dns]
 permalink: docs/:basename
 editpath: dns-providers/akamai.md/
-newtype: doc
+contenttype: [doc]
 categories: [domains]
 newcms: [--]
 audience: [development]

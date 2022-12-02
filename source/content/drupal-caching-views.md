@@ -2,7 +2,7 @@
 title: Caching in Drupal Views
 description: Configure your Drupal site's performance and caching settings to make significant improvements.
 tags: [site, database]
-newtype: doc
+contenttype: [doc]
 categories: [cache, measure, optimize]
 newcms: [drupal]
 audience: [development]

@@ -1,5 +1,5 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [migrate]
 newcms: [--]
 product: [integrated-composer]

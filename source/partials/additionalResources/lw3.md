@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [help]
+newcms: [--]
+product: [--]
+integration: [quicksilver]
+tags: [--]
+reviewed: ""
+---
+
 ## Automate and Integrate with Quicksilver
 
 This workshop offers an introduction to Quicksilver: Pantheon's tool for integrating and automating with anything.

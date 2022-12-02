@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-btworkflow/database
 anchorid: database
 editpath: drupal-9/drupal-9-hosted-btworkflow/08-database.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, database]
 newcms: [drupal]
 audience: [development]

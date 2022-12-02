@@ -7,11 +7,11 @@ permalink: docs/guides/:basename
 contributors: [jessifischer]
 date: "2022-03-15"
 contenttype: [doc]
-categories: [measure]
+categories: [measure, test]
 newcms: [wordpress, drupal]
 audience: [agency, development]
 product: [newrelic]
-integration: [--]
+integration: [blazemeter]
 ---
 
 <Alert title="Warning" type="danger" >

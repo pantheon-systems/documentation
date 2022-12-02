@@ -5,7 +5,7 @@ tags: [collaborate, continuous-integration, git, iterate]
 type: guide
 permalink: docs/guides/:basename
 date: 6/20/2017
-contenttype: guide
+contenttype: [doc]
 categories: [automate, overview]
 newcms: [drupal, wordpress]
 audience: [development]

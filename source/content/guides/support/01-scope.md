@@ -2,7 +2,12 @@
 title: Get Support
 subtitle: Scope of Support
 description: Learn how to access Pantheon's expert team and what your Account tier includes.
-categories: [develop]
+contenttype: [guide]
+categories: [help]
+newcms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [collaborate, composer, continuous-integration, webops, workflow]
 type: guide
 showtoc: true

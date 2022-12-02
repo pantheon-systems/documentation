@@ -9,7 +9,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/drush/drupal-commandline
 anchorid: drupal-commandline
-contenttype: guide
+contenttype: [guide]
 categories: [cli]
 newcms: [drupal]
 audience: [development]

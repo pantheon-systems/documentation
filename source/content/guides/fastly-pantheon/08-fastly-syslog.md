@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-syslog
 anchorid: fastly-syslog
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [--]
 audience: [development]

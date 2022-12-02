@@ -2,7 +2,12 @@
 title: Platform Considerations
 subtitle: Platform and Site Information
 description: Learn about platform and site-specific configuration and support.
-categories: [platform]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 layout: guide

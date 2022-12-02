@@ -4,7 +4,7 @@ description: Drupal 10 is coming soon!
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-10-18"
-newtype: doc
+contenttype: [doc]
 categories: [create, plan]
 newcms: [drupal10]
 audience: [development]

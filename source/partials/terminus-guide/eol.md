@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [cli]
+newcms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. Refer to the documentation on [Semantic Versioning](https://semver.org/) for more information on versioning.
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We recommend you update Terminus far in advance of the EOL schedule, so that regressions in new versions can be reported and patched in time.

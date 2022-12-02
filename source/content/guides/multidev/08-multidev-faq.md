@@ -2,7 +2,12 @@
 title: Multidev
 subtitle: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
-categories: [develop]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [multidev]
+integration: [--]
 tags: [collaborate, workflow, webops, multidev]
 contributors: [whitneymeredith]
 layout: guide

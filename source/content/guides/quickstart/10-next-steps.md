@@ -7,7 +7,12 @@ anchorid: next-steps
 generator: pagination
 survey: true
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [launch, webops, workflow]
 type: guide
 pagination:

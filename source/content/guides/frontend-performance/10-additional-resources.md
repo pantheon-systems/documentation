@@ -10,7 +10,7 @@ permalink: docs/guides/frontend-performance/additional-resources
 editpath: frontend-performance/10-metrics.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
-contenttype: guide
+contenttype: [guide]
 categories: [optimize]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -9,7 +9,7 @@ showtoc: true
 anchorid: autopilot-faq
 permalink: docs/guides/autopilot/autopilot-faq/
 reviewed: "2022-06-14"
-contenttype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [--]
 audience: [development]

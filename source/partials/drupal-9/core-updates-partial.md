@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 One-click core updates can be made through the Dashboard:
 
 1. Navigate to **<span class="fa fa-code"></span> Code** in the **<span class="fa fa-wrench"></span> Dev** tab of your Site Dashboard.

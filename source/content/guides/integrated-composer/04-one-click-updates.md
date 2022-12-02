@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/one-click-updates
 anchorid: one-click-updates
-contenttype: guide
+contenttype: [guide]
 categories: [overview]
 newcms: [drupal, wordpress]
 audience: [development]

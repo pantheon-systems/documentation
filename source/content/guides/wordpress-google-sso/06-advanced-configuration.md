@@ -4,7 +4,12 @@ subtitle: Advanced Configuration
 description: Additional filtering can be achieved in your theme or a must-use plugin
 contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
-categories: [integrate]
+contenttype: [guide]
+categories: [siteauth]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [plugins]
 tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide

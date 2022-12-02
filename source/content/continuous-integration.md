@@ -3,7 +3,7 @@ title: Continuous Integration Solutions on Pantheon
 description: Run automated unit and integration tests with Terminus and Drupal SimpleTest.
 tags: [continuous-integration, workflow]
 contributors: [ccjjmartin]
-newtype: doc
+contenttype: [doc]
 categories: [automate]
 newcms: [drupal, wordpress]
 audience: [development]

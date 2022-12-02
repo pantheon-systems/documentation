@@ -2,7 +2,12 @@
 title: Log Files on Pantheon
 subtitle: Automate Log Downloads
 description: Learn how to automate your log downloads.
-categories: [logs]
+contenttype: [guide]
+categories: [optimize]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [logs, measure]
 contributors: [whitneymeredith]
 layout: guide

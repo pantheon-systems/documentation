@@ -3,7 +3,6 @@ title: Migrate a Site That Was Created with Build Tools to Drupal 9
 subtitle: Upgrade Site Components Locally
 description: 
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-createbt/upgrade
 anchorid: upgrade
 editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
 reviewed: "2021-03-31"
+contenttype: [guide]
+categories: [migrate, git, update]
+newcms: [drupal]
+audience: [development]
+product: [dashboard]
+integration: [--]
 ---
 
 1. Use Composer to declare version requirements:

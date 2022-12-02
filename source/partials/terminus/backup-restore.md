@@ -1,3 +1,12 @@
+---
+contenttype: [partial]
+categories: [backup]
+newcms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
 
 ## Example
 

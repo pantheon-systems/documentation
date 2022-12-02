@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ```bash{promptUser:user}
 git status # Ensure working tree is clean
 git show master:sites/default/settings.php > web/sites/default/original-settings.php

@@ -2,7 +2,12 @@
 title: Platform Considerations
 subtitle: Platform Files and Directories
 description: Learn more about file and directory considerations on the Pantheon platform.
-categories: [platform]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 layout: guide

@@ -17,7 +17,7 @@ nextpage: External Integrations
 previousurl: guides/edt/multidev/
 previouspage: Multidev
 editpath: edt/05-terminus-cli.md
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [--]
 audience: [development]

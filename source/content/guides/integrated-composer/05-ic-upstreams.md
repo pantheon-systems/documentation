@@ -9,7 +9,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
 anchorid: ic-upstreams
-contenttype: guide
+contenttype: [guide]
 categories: [overview]
 newcms: [drupal, wordpress]
 audience: [development]

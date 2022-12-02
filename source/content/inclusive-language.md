@@ -4,7 +4,7 @@ description: Elevate the way we communicate and support community and contributo
 contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac, cdrmarks]
 tags: [collaborate]
 reviewed: "2020-11-01"
-newtype: doc
+contenttype: [doc]
 categories: [overview, help]
 newcms: [drupal7, drupal8, drupal9, drupal10, drupal, wordpress, decoupled]
 audience: [agency, business, development, marketing, sysadmin]

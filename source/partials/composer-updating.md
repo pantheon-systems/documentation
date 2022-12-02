@@ -1,5 +1,5 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [migrate]
 newcms: [drupal9, drupal8]
 product: [--]

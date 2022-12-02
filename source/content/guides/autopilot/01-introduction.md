@@ -12,7 +12,7 @@ anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
 reviewed: "2022-05-17"
-contenttype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [--]
 audience: [development]

@@ -4,7 +4,7 @@ description: Commit your Drupal configuration to version control.
 cms: "Drupal"
 tags: [drush, workflow, webops]
 reviewed: "2020-10-21"
-newtype: doc
+contenttype: [doc]
 categories: [create, plan, config]
 newcms: [drupal9]
 audience: [development]

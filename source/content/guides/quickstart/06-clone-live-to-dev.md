@@ -6,7 +6,12 @@ quickstart: true
 anchorid: clone-live-to-dev
 generator: pagination
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, iterate, launch, webops, workflow]
 type: guide
 showtoc: true

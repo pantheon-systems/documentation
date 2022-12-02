@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-unhosted-composer/files
 anchorid: files
 editpath: drupal-9/drupal-9-unhosted-composer/11-files.md
 reviewed: "2021-05-09"
-contenttype: guide
+contenttype: [guide]
 categories: [database]
 newcms: [drupal9]
 audience: [development]

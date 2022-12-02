@@ -2,7 +2,12 @@
 title: Pantheon Site Portfolio Report
 subtitle: Interact with the Site Portfolio Report
 description: Learn how to interact with the Site Portfolio Report.
+contenttype: [guide]
 categories: [billing]
+newcms: [--]
+audience: [business]
+product: [siteportfolio]
+integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
 layout: guide

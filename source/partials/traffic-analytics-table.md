@@ -1,14 +1,14 @@
 ---
-contenttype: partial
+contenttype: [partial]
 categories: [--]
 newcms: [--]
 product: [--]
 integration: [--]
 tags: [--]
 reviewed: ""
----|                                                 | Counts as Traffic | Counts for Analytics |
+---
 
-
+|                                                 | Counts as Traffic | Counts for Analytics |
 |:------------------------------------------------|:-----------------:|:--------------------:|
 | **API Request**                                 |        Yes        |          No          |
 | **Automated traffic from bots or load testing** |        Yes        |       Sometimes      |

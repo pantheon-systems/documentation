@@ -11,7 +11,7 @@ anchorid: considerations
 permalink: docs/guides/decoupled-sites/considerations/
 editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"
-contenttype: guide
+contenttype: [guide]
 categories: [create]
 newcms: [decoupled]
 audience: [development]

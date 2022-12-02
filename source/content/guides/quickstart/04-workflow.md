@@ -6,7 +6,12 @@ quickstart: true
 anchorid: site-dashboard
 generator: pagination
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, site, workflow]
 type: guide
 showtoc: true

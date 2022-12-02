@@ -5,7 +5,12 @@ description: Learn more about governance with WordPress Site Networks.
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [create]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/multisite-governance/
 editpath: multisite/04-multisite-governance.md

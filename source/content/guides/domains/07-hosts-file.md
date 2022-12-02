@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/hosts-file
 anchorid: hosts-file
-contenttype: guide
+contenttype: [guide]
 categories: [domains]
 newcms: [--]
 audience: [development]

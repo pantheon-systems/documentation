@@ -10,7 +10,7 @@ anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/07-troubleshoot.md
 reviewed: "2022-11-01"
-contenttype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [--]
 audience: [development]

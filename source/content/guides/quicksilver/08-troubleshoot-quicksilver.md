@@ -2,7 +2,12 @@
 title: Quicksilver on Pantheon
 subtitle: Troubleshoot
 description: Review solutions to common Quicksilver troubleshooting scenarios.
+contenttype: [guide]
 categories: [automate]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [quicksilver]
 tags: [quicksilver, webops, workflow]
 layout: guide
 showtoc: true

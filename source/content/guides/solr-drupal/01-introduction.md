@@ -3,7 +3,12 @@ title: Pantheon Solr Search for Drupal
 subtitle: Introduction
 description: Using Pantheon Solr Search with Drupal
 cms: "Drupal 9"
-categories: [integrate]
+contenttype: [guide]
+categories: [config]
+newcms: [drupal]
+audience: [development]
+product: [search]
+integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon]
 reviewed: "2021-08-05"

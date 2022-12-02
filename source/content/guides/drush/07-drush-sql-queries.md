@@ -7,7 +7,7 @@ tags: [migrate, terminus, drush]
 layout: guide
 permalink: docs/guides/drush/drush-sql-queries
 anchorid: drush-sql-queries
-contenttype: guide
+contenttype: [guide]
 categories: [cli]
 newcms: [drupal]
 audience: [development]

@@ -4,7 +4,7 @@ description: Published Certificate bundles from Pantheon
 tags: [security]
 contributors: [clintonPantheon]
 reviewed: "2021-10-21"
-newtype: doc
+contenttype: [doc]
 categories: [--]
 newcms: [--]
 audience: [development]

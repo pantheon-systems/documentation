@@ -11,7 +11,7 @@ type: guide
 permalink: docs/guides/disaster-recovery
 anchorid: disaster-recovery
 editpath: disaster-recovery/01-introduction.md
-contenttype: guide
+contenttype: [guide]
 categories: [help, overview]
 newcms: [drupal, wordpress]
 audience: [agency, development]

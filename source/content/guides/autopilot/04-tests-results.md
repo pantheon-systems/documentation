@@ -10,7 +10,7 @@ anchorid: tests-results
 permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
-contenttype: guide
+contenttype: [guide]
 categories: [deploy, test, update]
 newcms: [--]
 audience: [development]
