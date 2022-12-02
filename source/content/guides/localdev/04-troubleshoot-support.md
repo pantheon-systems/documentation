@@ -2,7 +2,6 @@
 title: Pantheon Localdev
 subtitle: Support & Troubleshooting
 description: Best practices for troubleshooting, getting support, and reporting bugs or feature requests.
-categories: [develop]
 tags: [localdev, local, workflow]
 contributors: [edwardangert, alexfornuto]
 reviewed: "2020-12-04"
@@ -10,6 +9,12 @@ layout: guide
 permalink: docs/guides/localdev/troubleshoot-support
 anchorid: localdev/troubleshoot-support
 editpath: localdev/04-troubleshoot-support.md
+contenttype: [guide]
+categories: [help]
+newcms: [wordpress, drupal]
+audience: [agency, development]
+product: [localdev]
+integration: [--]
 ---
 
 ## Contact Support
