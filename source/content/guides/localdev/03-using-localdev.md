@@ -2,7 +2,6 @@
 title: Pantheon Localdev
 subtitle: Using Localdev
 description: Learn how to use Localdev.
-categories: [develop]
 tags: [localdev, local, workflow]
 contributors: [edwardangert, alexfornuto]
 reviewed: "2020-12-04"
@@ -10,6 +9,12 @@ layout: guide
 permalink: docs/guides/localdev/using-localdev
 anchorid: localdev/using-localdev
 editpath: localdev/03-using-localdev.md
+contenttype: [guide]
+categories: [config, git]
+newcms: [wordpress, drupal]
+audience: [agency, development]
+product: [localdev, dashboard]
+integration: [--]
 ---
 
 The Localdev Main user interface display is divided into three areas.
