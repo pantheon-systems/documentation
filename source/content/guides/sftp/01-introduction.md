@@ -29,6 +29,6 @@ SFTP mode allows you to develop directly on Pantheon. If you want to use the Wor
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
 - PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
-- [WinSCP](/winscp)
+- [WinSCP](/guides/sftp/winscp)
 - [Visual Studio Code](/visual-studio-code)
 

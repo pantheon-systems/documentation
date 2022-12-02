@@ -205,9 +205,9 @@
             - text: 'Pantheon Filesystem'
               url: '/files'
             - text: 'rsync and SFTP'
-              url: '/rsync-and-sftp'
+              url: '/guides/sftp/rsync-and-sftp'
             - text: 'Using WinSCP on Pantheon'
-              url: '/winscp'
+              url: '/guides/sftp/winscp'
     - title: 'Local Development'
       subtitle: 'Sync your code, database, and files for local development.'
       subtopic-lists:

@@ -15,7 +15,7 @@ Before you can migrate a WordPress Site Network, you must be a contract customer
 ## Requirements
 
 * [Download](https://git-scm.com/downloads) and install [Git](/guides/git/git-config)
-* [Rsync or SFTP Client](/rsync-and-sftp)
+* [Rsync or SFTP Client](/guides/sftp/rsync-and-sftp)
 * [MySQL Client](/guides/mariadb-mysql/mysql-access)
 
 ## Import the Codebase
