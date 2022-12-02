@@ -21,7 +21,7 @@ Keep in mind:
 - Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.
 - You won't be able to save anything that's been excluded from version control via `.gitignore`.
 
-</Alert>
+
 
 ## SFTP Mode
 
