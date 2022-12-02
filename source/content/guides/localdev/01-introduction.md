@@ -15,7 +15,7 @@ categories: [overview]
 newcms: [wordpress, drupal]
 audience: [agency, development]
 product: [localdev]
-integration: [--]
+integration: [lando]
 ---
 
 Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives macOS users a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/pantheon-workflow).

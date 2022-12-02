@@ -2,7 +2,6 @@
 title: Pantheon Localdev
 subtitle: Install & Configure
 description: Download, install, and configure Localdev on your workstation.
-categories: [develop]
 tags: [localdev, local, workflow]
 contributors: [edwardangert, alexfornuto]
 reviewed: "2020-12-04"
@@ -10,6 +9,12 @@ layout: guide
 permalink: docs/guides/localdev/install-configure
 anchorid: localdev/install-configure
 editpath: localdev/02-install-configure.md
+contenttype: [guide]
+categories: [config, git]
+newcms: [wordpress, drupal]
+audience: [agency, development]
+product: [localdev]
+integration: [--]
 ---
 
 This section provides information on how to install Localdev on your machine.
