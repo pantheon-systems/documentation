@@ -72,7 +72,7 @@ Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integra
 ### Upload your changes with SFTP
 The SFTP extension for VS Code allows developers to upload code to the Pantheon Dev or Multidev environment directly from VS Code, as well as download files from the Pantheon servers.
 
-Make sure your site is in [SFTP mode](/guides/sftp#sftp-mode) before uploading code via SFTP.
+Make sure your site is in [SFTP mode](/guides/sftp) before uploading code via SFTP.
 
 1. Install the VS Code [SFTP Extension](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp).
 1. Open the VS Code command palette (**Ctrl/Command** + **Shift** + **P**) and run `SFTP: config` to open the SFTP config file.
@@ -122,7 +122,7 @@ Make sure your site is in [SFTP mode](/guides/sftp#sftp-mode) before uploading c
   </Alert>
 
 1. With `uploadOnSave` set to `true`, the next time you save changes to a file it will automatically be pushed to Pantheon.
-1. [Commit your files to Git using the Pantheon Dashboard](/sftp#committing-sftp-changes).
+1. [Commit your files to Git using the Pantheon Dashboard](/guides/sftp/sftp-development).
 
 ## CMS-specific Extensions
 
