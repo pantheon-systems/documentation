@@ -57,7 +57,7 @@ Pantheon provides several options for on-server development, however, local deve
 
 ## Support
 
-Pantheon does offer [support for local development](/guides/support/#local-development) solutions or troubleshooting. This guide provides some suggestions and known working solutions.
+Pantheon does not offer [support for local development](/guides/support/#local-development) solutions or troubleshooting. This guide provides some suggestions and known working solutions.
 
 ## Pantheon Developer Resources
 

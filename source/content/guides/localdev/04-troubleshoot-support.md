@@ -4,7 +4,6 @@ subtitle: Troubleshooting
 description: Solutions for common troubleshooting scenarios.
 categories: [develop]
 tags: [localdev, local, workflow]
-contributors: [edwardangert, alexfornuto]
 reviewed: "2020-12-04"
 layout: guide
 permalink: docs/guides/localdev/troubleshoot-support
@@ -15,7 +14,7 @@ Localdev has been deprecated. However, there are many local development options 
 
 ## Troubleshooting
 
-This section provides solutions to common troubleshooting scenarios. Note that Localdev has been deprecated. We recommend that you use [other local development tools]((/guides/local-development)) to maintain your site.
+This section provides solutions to common troubleshooting scenarios. Note that Localdev has been deprecated. We recommend that you use [other local development tools](/guides/local-development) to maintain your site.
 
 ### Clone Failed Due To Modified .gitignore
 

@@ -50,7 +50,7 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 1. Navigate to the Dev environment, then click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
-1. [Clone the site locally](/guides/local-development#get-the-code) and run `composer install`.
+1. [Clone the site locally](/guides/local-development/configuration) and run `composer install`.
 
 
 ## More Resources
