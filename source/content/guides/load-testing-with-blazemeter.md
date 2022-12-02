@@ -5,7 +5,7 @@ tags: [launch, measure, newrelic]
 type: guide
 permalink: docs/guides/:basename
 contributors: [jessifischer]
-date: 3/15/2022
+date: "2022-03-15"
 contenttype: [doc]
 categories: [measure]
 newcms: [wordpress, drupal]
