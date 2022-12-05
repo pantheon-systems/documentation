@@ -2,7 +2,12 @@
 title: Testing WordPress Core Development Versions
 description: Learn how to test WordPress core updates using nightly builds of the current release or bleeding edge.
 cms: "WordPress"
-categories: [develop]
+contenttype: [doc]
+categories: [update]
+newcms: [wordpress]
+audience: [--]
+product: [--]
+integration: [--]
 tags: [workflow, updates]
 ---
 
