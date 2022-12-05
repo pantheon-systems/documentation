@@ -1,7 +1,6 @@
 ---
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your site.
-categories: [troubleshoot]
 tags: [cron, drush, ssh, solr, terminus]
 reviewed: "2020-03-18"
 contenttype: [doc]
