@@ -195,18 +195,30 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal sites.
 
-<Alert title="Note" type="info">
+### Composer settings.php File
 
-If you are using Composer, configuration of the `setting.php` is not needed. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+Configuration of the `setting.php` file is not needed if you are using Composer. 
 
-**Drupal 7**
+### Non-Composer settings.php File
+
+Non-Composer implementations must add the following lines to the `settings.php` file to allow the Drupal module to locate SimpleSAMLphp:
+
+**Drupal 7 Example**
 
 ```php:title=settings.php
 # Provide universal absolute path to the installation.
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
 
-</Alert>
+### Drupal 10
+
+Drupal 10 includes Symfony 6. The SimpleSAMLphp library is not currently compatible with Symfony 6 unless you use the dev-master branch. There is a new `simplesamlphp_auth branch (4.x)` that you can use if you require a Drupal 10 compatibility workaround. Note that this workaround requires you to use dev versions at your own risk.
+
+You must require the Drupal module like this:
+
+```bash{promptUser: user}
+composer require drupal/simplesamlphp_auth:"^4"
+```
 
 ## WordPress Multisite Issues
 
