@@ -70,3 +70,8 @@ There is also a one-click option to connect with a GUI client. The main director
 
 
 <Partial file="auth.md" />
+
+## More Resources
+
+- [Creating and Revoking Machine Tokens](/machine-tokens)
+- [Single Sign-On for Pantheon Organizations](/sso-organizations)
