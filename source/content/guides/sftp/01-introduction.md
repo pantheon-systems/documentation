@@ -2,9 +2,14 @@
 title: SFTP on Pantheon
 subtitle: Introduction
 description: Learn how to use SFTP Mode for direct develop on Pantheon, and how to use SFTP connection information to upload files to your environments.
-categories: [develop]
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+contenttype: [guide]
+categories: [sftp]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [dashboard]
+integration: [--]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true

@@ -2,9 +2,13 @@
 title: SFTP on Pantheon
 subtitle: Troubleshooting SFTP
 description: Get solutions to common SFTP troubleshooting scenarios.
-categories: [develop]
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+categories: [sftp]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [dashboard]
+integration: [--]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true

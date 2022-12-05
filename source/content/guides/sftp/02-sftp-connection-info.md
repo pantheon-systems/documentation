@@ -2,9 +2,13 @@
 title: SFTP on Pantheon
 subtitle: SFTP Connection Info and Authentication
 description: Learn about SFTP Connection Info and how to authenticate your SFTP.
-categories: [develop]
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+categories: [sftp]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [dashboard]
+integration: [--]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
