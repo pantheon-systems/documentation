@@ -52,13 +52,13 @@ class ReviewReport extends React.Component {
                     <thead>
                       <tr>
                         <th>Path</th>
-                        <th>CMS</th>
                         <th>Categories</th>
-                        <th>Tags</th>
+                        <th>CMS</th>
                         <th>Product</th>
                         <th>Integration</th>
-                        <th>Reviewed</th>
+                        <th>Tags</th>
                         <th>Excerpt</th>
+                        <th>Reviewed</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -68,17 +68,6 @@ class ReviewReport extends React.Component {
                           return (
                             <tr key={i}>
                               <td>{page.node.fileInfo.relativePath}</td>
-                              <td>
-                                {page.node.frontmatter.newcms
-                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
-                                      return (
-                                        <span key={i}>
-                                          {(i ? ", " : "") + newcms}
-                                        </span>
-                                      )
-                                    })
-                                  : null}
-                              </td>
                               <td>
                                 {page.node.frontmatter.categories
                                   ? page.node.frontmatter.categories.map((categories, i) => {
@@ -91,11 +80,11 @@ class ReviewReport extends React.Component {
                                   : null}
                               </td>
                               <td>
-                                {page.node.frontmatter.tags
-                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                {page.node.frontmatter.newcms
+                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
                                       return (
                                         <span key={i}>
-                                          {(i ? ", " : "") + tag}
+                                          {(i ? ", " : "") + newcms}
                                         </span>
                                       )
                                     })
@@ -123,8 +112,19 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.reviewed}</td>
+                              <td>
+                                {page.node.frontmatter.tags
+                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                      return (
+                                        <span key={i}>
+                                          {(i ? ", " : "") + tag}
+                                        </span>
+                                      )
+                                    })
+                                  : null}
+                              </td>
                               <td>{page.node.excerpt}</td>
+                              <td>{page.node.frontmatter.reviewed}</td>
                             </tr>
                           )
                         })}

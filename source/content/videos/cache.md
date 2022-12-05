@@ -3,11 +3,16 @@ title: Caching
 description: Understand frontend and backend caching on our platform.
 contributors:  [dwayne]
 permalink:  docs/videos/cache
-categories: [performance]
 tags: [cache]
 layout: video
 searchboost: 50
 type: video
+contenttype: [doc]
+categories: [cache, optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [redis]
 ---
 
 <Youtube src="ecjZhtu41hs" title="Caching" />

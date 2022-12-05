@@ -92,21 +92,21 @@ class ReviewReport extends React.Component {
                         </th>
                         <th>Subtitle</th>
                         <th>Description</th>
-                        <th>CMS
+                        <th>Content Type
                           <div className="input-group">
                             <input
                               type="text"
-                              id="command-search-newcms"
+                              id="command-search-contenttype"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={a => setSearchnewCms(a.target.value)}
-                              value={searchnewCms}
+                              onChange={y => setSearchContentType(y.target.value)}
+                              value={searchContentType}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={a => setSearchnewCms("")}
+                              onClick={y => setSearchContentType("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -132,21 +132,21 @@ class ReviewReport extends React.Component {
                             </div>
                           </div>
                         </th>
-                        <th>Tags
+                        <th>CMS
                           <div className="input-group">
                             <input
                               type="text"
-                              id="command-search-tags"
+                              id="command-search-newcms"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={c => setSearchTags(c.target.value)}
-                              value={searchTags}
+                              onChange={a => setSearchnewCms(a.target.value)}
+                              value={searchnewCms}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={c => setSearchTags("")}
+                              onClick={a => setSearchnewCms("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -192,27 +192,27 @@ class ReviewReport extends React.Component {
                             </div>
                           </div>
                         </th>
-                        <th>Review Date</th>
-                        <th>Content Type
+                        <th>Tags
                           <div className="input-group">
                             <input
                               type="text"
-                              id="command-search-contenttype"
+                              id="command-search-tags"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={y => setSearchContentType(y.target.value)}
-                              value={searchContentType}
+                              onChange={c => setSearchTags(c.target.value)}
+                              value={searchTags}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={y => setSearchContentType("")}
+                              onClick={c => setSearchTags("")}
                             >
                               <span className="fa fa-times" />
                             </div>
                           </div>
                         </th>
+                        <th>Review Date</th>
                         <th>URL</th>
                         <th>File Path</th>
                       </tr>
@@ -278,17 +278,7 @@ class ReviewReport extends React.Component {
                               </td>
                               <td>{page.node.frontmatter.subtitle}</td>
                               <td>{page.node.frontmatter.description}</td>
-                              <td>
-                                {page.node.frontmatter.newcms
-                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
-                                      return (
-                                        <span key={i}>
-                                          {(i ? ", " : "") + newcms}
-                                        </span>
-                                      )
-                                    })
-                                  : null}
-                              </td>
+                              <td>{page.node.frontmatter.contenttype}</td>
                               <td>
                                 {page.node.frontmatter.categories
                                   ? page.node.frontmatter.categories.map((categories, i) => {
@@ -301,11 +291,11 @@ class ReviewReport extends React.Component {
                                   : null}
                               </td>
                               <td>
-                                {page.node.frontmatter.tags
-                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                {page.node.frontmatter.newcms
+                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
                                       return (
                                         <span key={i}>
-                                          {(i ? ", " : "") + tag}
+                                          {(i ? ", " : "") + newcms}
                                         </span>
                                       )
                                     })
@@ -333,8 +323,18 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
+                              <td>
+                                {page.node.frontmatter.tags
+                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                      return (
+                                        <span key={i}>
+                                          {(i ? ", " : "") + tag}
+                                        </span>
+                                      )
+                                    })
+                                  : null}
+                              </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.frontmatter.contenttype}</td>
                               <td>
                                 <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
                                 {page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}{" "}

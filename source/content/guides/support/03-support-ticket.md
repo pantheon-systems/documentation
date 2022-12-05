@@ -2,7 +2,12 @@
 title: Get Support
 subtitle: Support Ticket Best Practices
 description: Open and write a support ticket using best practices.
-categories: [develop]
+contenttype: [guide]
+categories: [help]
+newcms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [composer, terminus, webops, workflow]
 buildtools: true
 anchorid: support-ticket

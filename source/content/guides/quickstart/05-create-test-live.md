@@ -4,7 +4,12 @@ subtitle: Create Test & Live Environments
 description: In part five of our Quick Start guide, learn how to create your Test and Live environments.
 anchorid: create-test-live
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, iterate, launch, workflow]
 type: guide
 showtoc: true

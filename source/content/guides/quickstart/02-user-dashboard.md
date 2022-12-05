@@ -4,7 +4,12 @@ subtitle: Personal Workspace
 description: In part two of our Quick Start guide, learn about the Pantheon Personal Workspace.
 anchorid: user-dashboard
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard]
 type: guide
 showtoc: true

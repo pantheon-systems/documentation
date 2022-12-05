@@ -6,7 +6,12 @@ quickstart: true
 anchorid: connection-modes
 generator: pagination
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, dashboard, git, sftp, workflow]
 type: guide
 showtoc: true

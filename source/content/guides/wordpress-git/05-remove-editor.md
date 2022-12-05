@@ -5,7 +5,12 @@ description: Beginners guide on how to use the WordPress Dashboard, an SFTP clie
 anchorid: remove-editor
 layout: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [git]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/remove-editor/

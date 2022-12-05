@@ -4,7 +4,12 @@ subtitle: Add Git-Based Version Control to Your SFTP Workflow
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 layout: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [git]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, sftp, workflow]
 type: guide
 contributors: [scottmassey, rachelwhitton]

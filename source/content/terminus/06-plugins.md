@@ -5,7 +5,12 @@ description: Learn how to install plugins with Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/plugins
 anchorid: plugins
