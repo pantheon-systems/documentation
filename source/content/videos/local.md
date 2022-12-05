@@ -3,11 +3,16 @@ title: Local Development
 description: Sync your code, database, and files for local development.
 contributors:  [dwayne]
 permalink:  docs/videos/:basename
-categories: [develop]
 tags: [git, lando, local, sftp, workflow]
 layout: video
 searchboost: 50
 type: video
+contenttype: [doc]
+categories: [create, git, sftp]
+newcms: [drupal, wordpress]
+audience: [develoment]
+product: [terminus]
+integration: [lando]
 ---
 
 <Youtube src="z01vIuB3kRg" title="Local Development" />

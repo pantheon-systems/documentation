@@ -5,10 +5,15 @@ description: Stay up to date on the latest Terminus version.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/updates
 anchorid: updates
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 <TerminusVersion text="Update to the Current Release" />

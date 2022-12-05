@@ -2,6 +2,15 @@
 title: SFTP on Pantheon
 subtitle: Using WinSCP on Pantheon
 description: Detailed information about the Pantheon SFTP connection WinSCP SFTP client.
+<<<<<<< HEAD:source/content/guides/sftp/05-winscp.md
+=======
+contenttype: [doc]
+categories: [sftp]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [winscp]
+>>>>>>> main:source/content/winscp.md
 tags: [files, sftp]
 categories: [sftp]
 newcms: [drupal, wordpress]

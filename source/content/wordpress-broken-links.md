@@ -2,7 +2,12 @@
 title: Fix Broken Links in WordPress
 description: Learn how to update broken links on your Pantheon WordPress site so that the URL references the correct file path and domain name.
 cms: "WordPress"
-categories: [troubleshoot]
+contenttype: [doc]
+categories: [manage]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, migrate, plugins]
 ---
 ## Update Links Referencing IP:Port

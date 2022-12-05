@@ -6,10 +6,15 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contributors: [wordsmither]
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/supported-terminus
 anchorid: supported-terminus
+contenttype: [guide]
+categories: [git]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 <Partial file="terminus-guide/eol.md" />
