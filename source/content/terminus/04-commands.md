@@ -5,10 +5,15 @@ description: Review a complete list of Terminus commands.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/commands
 anchorid: commands
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 This section provides a comprehensive list of Terminus commands.

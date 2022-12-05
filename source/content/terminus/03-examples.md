@@ -5,10 +5,15 @@ description: Learn how to apply updates, deploy code, switch upstreams, and inst
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/examples
 anchorid: examples
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.

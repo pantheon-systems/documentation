@@ -5,10 +5,15 @@ description: Learn how to create your own Terminus plugins.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/create
 anchorid: create
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 This section provides information on how to create Terminus plugins.

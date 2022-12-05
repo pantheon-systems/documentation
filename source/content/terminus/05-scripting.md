@@ -5,10 +5,15 @@ description: Automate your workflow with scripting via Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/scripting
 anchorid: scripting
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 This section provides information on how to automate your workflow with Terminus scripting.

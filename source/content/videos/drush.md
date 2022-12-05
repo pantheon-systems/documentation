@@ -5,10 +5,15 @@ contributors:  [scottmassey]
 permalink:  docs/videos/:basename
 layout: video
 cms: "Drupal"
-categories: [develop]
 tags: [drush, cli]
 searchboost: 50
 type: video
+contenttype: [doc]
+categories: [cli]
+newcms: [drupal]
+audience: [development]
+product: [terminus]
+integration: [drush]
 ---
 
 <Youtube src="wAL4LQwy8Ow" title="Drush" />

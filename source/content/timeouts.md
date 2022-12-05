@@ -4,6 +4,12 @@ description: Detailed information about timeout errors on your site.
 categories: [troubleshoot]
 tags: [cron, drush, ssh, solr, terminus]
 reviewed: "2020-03-18"
+contenttype: [doc]
+categories: [config]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [solr, cron]
 ---
 
 Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. 
