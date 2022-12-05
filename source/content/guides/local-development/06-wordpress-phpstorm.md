@@ -39,7 +39,7 @@ Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection
 
 1. Specify or browse to the file path to save your project's files. This is where PhpStorm will store working files, and should be separate from your WordPress directory.
 
-1. Specify or browse to the root directory for your local WordPress site, and click **Create**:
+1. Specify or browse to the root directory for your local WordPress site, and click **Create**.
 
     ![Configuring wp-cli path for PhpStorm](../../../images/phpstorm-new-project-wordpress-plugin-screen.png)
 

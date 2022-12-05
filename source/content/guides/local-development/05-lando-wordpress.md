@@ -22,7 +22,7 @@ Be sure that you have:
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) a site.
 - A working knowledge of local server environments.
 - Reviewed the [Lando getting started guide](https://docs.lando.dev/contrib/contrib-intro.html) and the [Lando CLI usage](https://docs.lando.dev/basics/usage.html).
-- Verified that your meet Lando's [system requirements](https://docs.devwithlando.io/installation/system-requirements.html). Note that Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
+- Verified that your meet Lando's [system requirements](https://docs.devwithlando.io/installation/system-requirements.html). Lando does not currently provide a Graphical User Interface (**GUI**). Everything is managed from the command line.
 
 ## Download and Install Lando
 
@@ -52,7 +52,7 @@ You must manage your Lando instances via the command-line. The Lando command is 
 
 This example shows you how to install and spin up a fresh WordPress site locally, without Pantheon integration.
 
-Note that you can follow these same basic steps with an existing Pantheon Drupal site by replacing the starting recipe.
+You can follow these same basic steps with an existing Pantheon Drupal site by replacing the starting recipe.
 
 1. Open your terminal and go to the directory where you plan to run your Lando WP site. Replace `my-wp-site` with the name of your site.
 
@@ -104,7 +104,7 @@ Note that you can follow these same basic steps with an existing Pantheon Drupal
 
 1. Open your browser and enter the URL provided when you started Lando. You’ll notice WordPress’s _Famous Five Minute install_ screen.
 
-1. Click next after choosing your preferred language, and then click let’s go on the following screen.
+1. Click **Next** after choosing your preferred language, and then click let’s go on the following screen.
 
 1. Enter your credentials and complete the installation process. In Lando, for a WordPress installation without Pantheon, the Database, Username, and Password are all `wordpress` and Database Host is `database` (all values are case-sensitive).
 
@@ -152,7 +152,7 @@ Verify that you have:
 
   The only difference between this and `lando init` is that defining the source as Pantheon allows you to skip some prompts.
 
-1. Paste the Pantheon machine token you created for Lando when prompted. Note that most Terminal emulators use **CTRL/Command + V** to paste, and you will not see any characters added, `*` or otherwise.
+1. Paste the Pantheon machine token you created for Lando when prompted. Most Terminal emulators use **CTRL/Command + V** to paste, and you will not see any characters added, `*` or otherwise.
 
 1. Choose the Pantheon site you want to pull from to create your local site.
 
@@ -222,7 +222,7 @@ Your **database** refers to your app's database. Your **code** refers to your ap
 
 ## Support
 
-Please note that [Pantheon's Support Team](/guides/support) doesn't provide support for Lando.
+[Pantheon's Support Team](/guides/support) doesn't provide support for Lando.
 Visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support) if you encounter issues.
 
 ## More Resources
