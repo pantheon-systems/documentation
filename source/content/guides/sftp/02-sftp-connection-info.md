@@ -74,7 +74,7 @@ You can use SFTP to upload files in your site's files directory in the Test and 
 
 1. Navigate to the Site Dashboard.
 
-1. Select the Test or Live environment and click Connection Info.
+1. Select the **Test** or **Live** environment and click **Connection Info**.
 
 1. Click the **Open in SFTP client** link under **Client**. You may need to copy your Host and Port information to connect to your client if you have not already configured the connection.
 

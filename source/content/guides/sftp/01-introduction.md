@@ -41,7 +41,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 ### SFTP for File Uploads
 
-You can also use your SFTP client to upload files to your Pantheon site. Refer to [SFTP Connection Info and Authentication](/guides/sftp/sftp-connection-info) for information on how to access your SFTP Connection Info.
+You can use your SFTP client to upload files to your Pantheon site. This also allows you upload files directly to your Test or Live environments. Refer to [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info#sftp-file-uploads-to-test-and-live-environments) for more information.
 
 ## More Resources
 
