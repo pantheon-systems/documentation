@@ -28,6 +28,14 @@ Pantheon does not support manually editing and updating the Varnish Configuratio
 
 </Alert>
 
+## Disable Caching for WordPress Sites in a Dev Environment
+
+Follow the steps below to disable caching for WordPress sites in a Dev environment. Refer to [Review Response Caching](/guides/frontend-performance/caching#review-response-caching) in our [Frontend Performance guide](/guides/frontend-performance) for more information about caching on the Pantheon platform.
+
+1. Open the **WordPress** dashboard, click **Settings**, and then click **Pantheon Page Cache**.
+
+1. Set `max-age` (Time to Live) to `0`.
+
 ## Ignoring GET Parameters
 
 For the purpose of optimizing cache hits for identical content, the Global CDN ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application container. The double-underscore prefix for parameter keys and cookie names is a standard convention used by frontend code to indicate a value that can be safely ignored on the back-end.
