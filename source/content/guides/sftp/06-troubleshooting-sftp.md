@@ -16,6 +16,8 @@ permalink: docs/guides/sftp/troubleshooting-sftp
 anchorid: troubleshooting-sftp
 ---
 
+This section provides solutions to common troubleshooting scenarios.
+
 ### I can't connect via SFTP to the site
 
 Make sure your site has not [spun down after being idle](/application-containers/#idle-containers). Visit the site in your web browser and let it fully load then try connecting again.
@@ -28,7 +30,7 @@ A simple way to test for outbound network restrictions is to load a special web 
 
 If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/port-2222) instead.
 
-If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/guides/sftp/sftp-connection-info), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
+If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related. Be sure to double-check or re-enter your [SFTP settings](/guides/sftp/sftp-connection-info), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
 
 ### I registered my Pantheon account via Google. How do I connect to SFTP?
 
@@ -128,3 +130,9 @@ source:         APNIC
 ```
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
+
+## More Resources
+
+- [Domain Name System](/guides/domains/dns)
+- [Port 2222 Blocked Workaround](/port-2222)
+- [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port)
