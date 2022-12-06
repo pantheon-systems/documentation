@@ -28,6 +28,12 @@ Pantheon does not support manually editing and updating the Varnish Configuratio
 
 </Alert>
 
+## Disable Caching for WordPress Sites in a Dev Environment
+
+The way to disable caching for WordPress sites in a Dev environment is to set the cache-control default TTL value to 0 in the Pantheon Advanced Cache plugin configuration.
+
+![pantheon-page-cache-ttl](https://user-images.githubusercontent.com/105305538/205915641-1cfa8db4-f260-4859-9a71-bf48895d8cbe.png)
+
 ## Ignoring GET Parameters
 
 For the purpose of optimizing cache hits for identical content, the Global CDN ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application container. The double-underscore prefix for parameter keys and cookie names is a standard convention used by frontend code to indicate a value that can be safely ignored on the back-end.
