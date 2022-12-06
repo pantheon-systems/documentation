@@ -19,7 +19,7 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 
 <Alert title="Notes" type="info">
 
- - This document covers copying [files](/files), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
+ - This section covers copying [files](/files), excluding database files. You cannot directly access the database files. Refer to [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
 
  - You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 
@@ -27,80 +27,78 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 
 There are two mechanisms for transferring files: SFTP and rsync.
 
-<Partial file="auth.md" />
-
 ## SFTP
 
-There are a number of GUI SFTP clients available, such as [WinSCP](https://winscp.net/eng/index.php) and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
+There are a number of GUI SFTP clients available, such as [WinSCP](https://winscp.net/eng/index.php) and [Cyberduck](https://cyberduck.io/). Be sure to limit the number of simultaneous connections to one in your SFTP client. 
 
-[Connection information](/guides/sftp/sftp-connection-info) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
+1. Navigate to your Site dashboard.
 
-Here's an example of using a command-line SFTP client to connect to a site environment's file directory.
+1. Click **Connection Info** to see your credentials. 
 
-<Alert title="Note" type="info">
+1. Connect to your SFTP client. The example belows uses a command-line SFTP client to connect to a site environment's file directory.
 
-You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+    <Alert title="Note" type="info">
 
-</Alert>
+    You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
 
-```bash{outputLines: 2,4-5,7-9}
-export ENV=[env]
-# Usually dev, test, or live
-export SITE=[uuid]
-# Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
+    </Alert>
 
-sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
-Connected to appserver.$ENV.$SITE.drush.in
-sftp> cd files
-sftp> put [your file or files]
-```
+    ```bash{outputLines: 2,4-5,7-9}
+    export ENV=[env]
+    # Usually dev, test, or live
+    export SITE=[uuid]
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
+
+    sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
+    Connected to appserver.$ENV.$SITE.drush.in
+    sftp> cd files
+    sftp> put [your file or files]
+    ```
 
 ## rsync
 
-rsync is available, but it is a more advanced tool that requires experience with the command line. You can also use the [Terminus rsync plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a shortcut to rsync files to your Pantheon sites.
+rsync is an advanced tool that requires experience with the command line. You can also use the [Terminus rsync plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a shortcut to rsync files to your Pantheon sites. rsync is highly customizable. Refer to [rsync documentation](https://linux.die.net/man/1/rsync) to learn more.
 
 <Alert title="Note" type="info">
 
-Either the source or the destination must be a local file or directory; both cannot be remote. You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+Regardless of framework, WordPress or Drupal, your files must be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot).
 
 </Alert>
 
-```bash{outputLines:2,4-6,8-9,11-20}
-export ENV=[env]
-# Usually dev, test, or live
-export SITE=[uuid]
-# Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
+### Transfer Files with rsync
 
-# To Upload/Import
-rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' . --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+1. Ensure that source or the destination is a local file or directory. **The source and destination cannot both be remote.**
 
-# To Download
-rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
+1. Replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) before you run the code below to connect. The values are case sensitive and should be lower case (for example, dev, test, live).
+
+    ```bash{outputLines:2,4-6,8-9,11-20}
+    export ENV=[env]
+    # Usually dev, test, or live
+    export SITE=[uuid]
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
+
+    # To Upload/Import
+    rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' . --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+
+    # To Download
+    rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
 
 
-# -r: Recurse into subdirectories
-# -v: Verbose output
-# -l: copies symlinks as symlinks
-# -L: transforms symlinks into files.
-# -z: Compress during transfer
-# --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
-# Other rsync flags may or may not be supported
-# (-a, -p, -o, -g, -D, etc are not).
-```
-
-rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync) to learn more.
-
-<Alert title="Note" type="info">
-
-Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot).
-
-</Alert>
+    # -r: Recurse into subdirectories
+    # -v: Verbose output
+    # -l: copies symlinks as symlinks
+    # -L: transforms symlinks into files.
+    # -z: Compress during transfer
+    # --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
+    # Other rsync flags may or may not be supported
+    # (-a, -p, -o, -g, -D, etc are not).
+    ```
 
 ## Examples
 
 <Alert title="Exports" type="export">
 
-The examples below use the variables `$ENV` and `$SITE`. You can replace these variables with your site UUID and environment, or set them before you begin:
+The examples below use the variables `$ENV` and `$SITE`. You must replace these variables with your site UUID and environment, or set them before you begin:
 
 ```bash{promptUser: user}
 export ENV=dev
@@ -185,4 +183,14 @@ Now you can use `rmdir` over SFTP to remove the empty directory itself.
 
 ## Known Issues
 
-If you're uploading many files, and your Live environment has [multiple application containers](/application-containers/#multiple-application-containers), upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or [Terminus](/terminus) to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.
+Uploading a large amount of files into a multi-container Live environment may fail silently.Follow the steps below if you're uploading many files, and your Live environment has [multiple application containers](/application-containers/#multiple-application-containers).
+
+1. Upload to an environment other than Live (for example, Dev).
+
+1. Use the clone operation in the Dashboard or [Terminus](/terminus) to move the files to Live.
+
+## More Resources
+
+- [SFTP Connection Info and Authentication](/guides/sftp/sftp-connection-info)
+- [Pantheon Filesystem](/files)
+- [Environment Configuration on Pantheon](/guides/environment-configuration)

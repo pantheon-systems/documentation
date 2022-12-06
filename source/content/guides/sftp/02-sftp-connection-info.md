@@ -78,6 +78,7 @@ You can use SFTP to upload files in your site's files directory in the Test and 
 
 1. Click the **Open in SFTP client** link under **Client**. You may need to copy your Host and Port information to connect to your client if you have not already configured the connection.
 
+Refer to [rsync and SFTP](/guides/sftp/rsync-and-sftp) if you need to transfer large files to your environments.
 
 <Partial file="auth.md" />
 
