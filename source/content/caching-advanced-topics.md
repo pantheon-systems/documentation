@@ -30,9 +30,11 @@ Pantheon does not support manually editing and updating the Varnish Configuratio
 
 ## Disable Caching for WordPress Sites in a Dev Environment
 
-The way to disable caching for WordPress sites in a Dev environment is to set the cache-control default TTL value to 0 in the Pantheon Advanced Cache plugin configuration.
+Follow the steps below to disable caching for WordPress sites in a Dev environment. Refer to [Review Response Caching](/guides/frontend-performance/caching#review-response-caching) in our [Frontend Performance guide](/guides/frontend-performance) for more information about caching on the Pantheon platform.
 
-![pantheon-page-cache-ttl](https://user-images.githubusercontent.com/105305538/205915641-1cfa8db4-f260-4859-9a71-bf48895d8cbe.png)
+1. Open the **WordPress** dashboard, click **Settings**, and then click **Pantheon Page Cache**.
+
+1. Set `max-age` (Time to Live) to `0`.
 
 ## Ignoring GET Parameters
 
