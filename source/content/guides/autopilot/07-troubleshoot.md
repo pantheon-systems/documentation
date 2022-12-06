@@ -410,13 +410,13 @@ Update the database on the target environment, and then retry Autopilot. You wil
 
 ### Issue
 
-Distinct from a merge conflict, this is encountered when there is no shared git history between the site's commits and the upstream's commits. This is most often encountered if the site's upstream has been changed, or if a different git history has been force-pushed for the site's code repository.
+This error is distinct from a merge conflict, and is encountered when there is no shared Git history between the site's commits and the upstream's commits. This error is most often encountered when the site's upstream has been changed, or when a different Git history has been force-pushed for the site's code repository.
 
 ### Solution
 
 Update the site's code or the upstream so that the site and upstream share a common history.
 
-If you do not want Autopilot to maintain upstream updates (including core updates), you can also disable upstream updates, and Autopilot will continue to update plugins, themes, and modules.
+You can also disable upstream updates if you do not want Autopilot to maintain upstream updates, including core updates. Autopilot will continue to update plugins, themes, and modules.
 
 </Accordion>
 
