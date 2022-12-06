@@ -1,7 +1,7 @@
 ---
 title: SFTP on Pantheon
-subtitle: Using WinSCP on Pantheon
-description: Detailed information about the Pantheon SFTP connection WinSCP SFTP client.
+subtitle: Use WinSCP on Pantheon
+description: Learn how to use Pantheon's SFTP connection mode with WinSCP SFTP client.
 tags: [files, sftp]
 categories: [sftp]
 newcms: [drupal, wordpress]
@@ -13,24 +13,27 @@ showtoc: true
 permalink: docs/guides/sftp/winscp
 anchorid: winscp
 ---
+
+This section provides information on how to use WinSCP with Pantheon.
+
 [WinSCP](https://winscp.net/eng/index.php) is an open source graphical SFTP client for Windows that also supports the Legacy SCP protocol.
 
-## Getting Started
+## Before You Begin
 
-Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, see the documentation on [how to find the SFTP credentials](/guides/sftp/sftp-connection-info) for your site.
+- Make sure you have the Pantheon SFTP connection information for your site ready. Refer to the documentation on [how to find the SFTP credentials](/guides/sftp/sftp-connection-info) for your site if you need to locate the connection information.
 
-## Download WinSCP
+- [Download and install WinSCP](https://winscp.net/eng/docs/installation#download) if you haven't already.
 
-If you do not have WinSCP installed, [download and install the latest version](https://winscp.net/eng/docs/installation#download).
+## Connect Your WinSCP Client to Pantheon
 
-## Start the WinSCP Client
+1. Start the WinSCP application and enter the connection information. Be sure to take note of the port as Pantheon uses a **non-standard port** for SFTP.
 
-Start the WinSCP application and enter the connection information. Be sure to take note of the port as Pantheon uses a **non-standard port** for SFTP.
+1. Click **Yes** to accept the server's host RSA2 Key Fingerprint for the current session and store it in the cache. This allows you to connect to the server and manage your files for the current session.
 
-## Add the RSA2 Key Fingerprint
+    - You are directed automatically to the root directory of your appserver when logged in. The left side displays your local computer, and the right displays your site's appserver.
 
-Click **Yes** to accept the server's host key for the current session so it is stored in cache. This allows you to connect to the server and manage your files for the current session.
+1. Navigate to the `code` directory to access the Drupal or WordPress root and manage your files.
 
-## Manage Files
+## More Resources
 
-Once you are logged in, you are directed to the root directory of your appserver. On the left side you will see your local computer, and on the right you will see your site's appserver. To get to the Drupal or WordPress root, navigate to the `code` directory and manage your files.
+- [Install Cygwin on Windows](/cygwin-windows)

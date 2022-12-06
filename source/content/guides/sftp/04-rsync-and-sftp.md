@@ -187,10 +187,11 @@ Uploading a large amount of files into a multi-container Live environment may fa
 
 1. Upload to an environment other than Live (for example, Dev).
 
-1. Use the clone operation in the Dashboard or [Terminus](/terminus) to move the files to Live.
+1. Use the clone operation in the Dashboard or [Terminus](/terminus/commands/local-clone) to move the files to Live.
 
 ## More Resources
 
 - [SFTP Connection Info and Authentication](/guides/sftp/sftp-connection-info)
 - [Pantheon Filesystem](/files)
+- [Platform Files and Directories](/guides/platform-considerations/files-directories)
 - [Environment Configuration on Pantheon](/guides/environment-configuration)
