@@ -68,6 +68,16 @@ There is also a one-click option to connect with a GUI client. The main director
 
 ![Cyberduck Example](../../../images/cyberduck-example.png)
 
+## SFTP File Uploads to Test and Live Environments
+
+You can use SFTP to upload files in your site's files directory in the Test and Live environments. Note SFTP Mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
+
+1. Navigate to the Site Dashboard.
+
+1. Select the Test or Live environment and click Connection Info.
+
+1. Click the **Open in SFTP client** link under **Client**. You may need to copy your Host and Port information to connect to your client if you have not already configured the connection.
+
 
 <Partial file="auth.md" />
 
