@@ -2,7 +2,6 @@
 title: The Pantheon Community
 description: Share best practices with other experienced and active users of Pantheon's platform.
 contributors: [tessak22]
-categories: [get-started]
 tags: [collaborate, support]
 contenttype: [doc]
 categories: [overview, help]
