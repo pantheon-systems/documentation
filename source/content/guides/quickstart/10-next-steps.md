@@ -31,7 +31,7 @@ Congratulations! You created and made code changes to your Pantheon site. You sh
 
 Ready to learn more? Here are just some of the things you can do with Pantheon:
 
-- Set up a [Local Development](/local-development) environment.
+- Set up a [Local Development](/guides/local-development) environment.
 - If you’re on a team, start using [Multidev environments](/guides/multidev).
 - Install [Terminus](/terminus), and start interacting with Pantheon from the command line.
 - Take your site live! To do so, refer to [Launch Essentials](/guides/launch).

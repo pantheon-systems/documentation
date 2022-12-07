@@ -44,7 +44,7 @@ Provide a name and email with which your commits will be associated before you c
 
     - The `--global` option sets these values for all projects you manage with Git.
 
-1. Run the command below to set a default editor for commit messages. Replace `nano` with your preferred text editor or IDE. For example, `atom` or `code` (for [Visual Studio Code](/visual-studio-code)).
+1. Run the command below to set a default editor for commit messages. Replace `nano` with your preferred text editor or IDE. For example, `atom` or `code` (for [Visual Studio Code](/guides/local-development/visual-studio-code)).
 
     ```bash{promptUser: user}
     git config --global core.editor nano

@@ -228,7 +228,7 @@ You just created a brand new Drupal site on Pantheon! You added modules, committ
 ##  Next Steps
 - Learn more about [Drush](/guides/drush).
 
-- After you've mastered Terminus, take it a step further with [Continuous Integration](/continuous-integration).
+- After you've mastered Terminus, take it a step further with [Continuous Integration](/guides/local-development/continuous-integration).
 
 ## More Resources
 
