@@ -26,9 +26,9 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../../images/integrations/newrelic/activate-new-relic.png)
 
-1. Visit your site in the browser a couple of times to generate data in New Relic&reg;.
+1. Visit your site in the browser and make some un-cached requests to generate data in New Relic&reg;.
 
-1. Allow a few minutes to pass and then navigate to the **New Relic** tab on your Dashboard and click **Go to New Relic**.
+1. Information will be available in New Relic a few minutes after you visit your site.
 
 ## Configure New Relic&reg; Performance Monitoring Access
 
@@ -43,13 +43,6 @@ New Relic&reg; is automatically enabled for all application containers added to 
 1. Clicking on your site name will allow you to access the data for your site:
 
   ![SCreenshot of the New Relic APM data for a Pantheon site.](../../../images/integrations/newrelic/new-relic-summary.png)
-
-
-<Alert title="Note" type="info">
-
-After New Relic is configured, information will be available a few minutes after the site starts serving un-cached requests.
-
-</Alert>
 
 ### Who is the New Relic&reg; account associated with?
 
