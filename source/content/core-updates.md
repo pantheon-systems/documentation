@@ -13,9 +13,13 @@ integration: [--]
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
 
-## Drupal 9
+## Drupal 9+
 
-Drupal 9 sites on Pantheon use [Integrated Composer](/guides/integrated-composer) to allow one-click core updates through the Dashboard.
+As of Drupal 9, Pantheon supports managing Drupal depedencies via [Integrated Composer](/guides/integrated-composer) 
+to allow one-click core updates through the Dashboard. Site maintainers can combine these one-click updates
+with our Autopilot service to automate site module updates.
+
+[[ Link to autopilot ]]
 
 To check for available updates:
 
