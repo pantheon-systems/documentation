@@ -9,6 +9,8 @@ newcms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed:
+	- Tom Stovall <tom.stovall@pantheon.io> 2022-DEC-7
 ---
 
 Content staging workflow between Test and Live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment (check out [WebOps workflow](/pantheon-workflow#content) for an explanation of why we do this). 
