@@ -13,9 +13,14 @@ showtoc: true
 permalink: docs/guides/sftp/rsync-and-sftp
 anchorid: rsync-and-sftp
 ---
-If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use an SFTP client or rsync to transfer.
 
-This allows you to transfer unlimited data "server-to-server", which is much faster than transferring from your workstation. Files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
+This section provides information on how to use your SFTP client or rsync to transfer large files.
+
+## File Size Limits
+
+You can't use your Pantheon Dashboard to import files over 500 MB. You must use an SFTP client or rsync to transfer files larger than 500 MB to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress).
+
+An SFTP client or rsync allows you to transfer unlimited data server-to-server, which is faster than transferring from your workstation. Files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
 <Alert title="Notes" type="info">
 
@@ -29,17 +34,17 @@ There are two mechanisms for transferring files: SFTP and rsync.
 
 ## SFTP
 
-There are a number of GUI SFTP clients available, such as [WinSCP](https://winscp.net/eng/index.php) and [Cyberduck](https://cyberduck.io/). Be sure to limit the number of simultaneous connections to one in your SFTP client. 
+There are a number of GUI SFTP clients available, such as [WinSCP](https://winscp.net/eng/index.php) and [Cyberduck](https://cyberduck.io/). Do not use simultaneous connections.
 
 1. Navigate to your Site dashboard.
 
-1. Click **Connection Info** to see your credentials. 
+1. Click **Connection Info** to access your credentials. 
 
 1. Connect to your SFTP client. The example belows uses a command-line SFTP client to connect to a site environment's file directory.
 
     <Alert title="Note" type="info">
 
-    You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+    You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and must be lower case (e.g., dev, test, live).
 
     </Alert>
 
@@ -61,7 +66,7 @@ rsync is an advanced tool that requires experience with the command line. You ca
 
 <Alert title="Note" type="info">
 
-Regardless of framework, WordPress or Drupal, your files must be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot).
+Regardless of your framework (WordPress or Drupal(), your files must be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot).
 
 </Alert>
 
@@ -69,7 +74,7 @@ Regardless of framework, WordPress or Drupal, your files must be in the `/files`
 
 1. Ensure that source or the destination is a local file or directory. **The source and destination cannot both be remote.**
 
-1. Replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) before you run the code below to connect. The values are case sensitive and should be lower case (for example, dev, test, live).
+1. Replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) before you run the code below to connect. The values are case sensitive and must be lower case (for example, dev, test, live).
 
     ```bash{outputLines:2,4-6,8-9,11-20}
     export ENV=[env]
