@@ -2,7 +2,7 @@
 title: Working with Cookies on Pantheon
 description: Tips and tricks for working with cookies on your Pantheon Drupal and WordPress sites.
 contributors: [--]
-reviewed: "2022-11-04"
+reviewed: "2022-12-07"
 contenttype: [doc]
 categories: [cache, cookies]
 newcms: [drupal, wordpress]
