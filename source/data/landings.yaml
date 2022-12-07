@@ -848,7 +848,7 @@
         - text: 'Securely Working with phpinfo'
           url: '/guides/secure-development/phpinfo'
         - text: 'Port 2222 Blocked Workaround'
-          url: '/port-2222'
+          url: '/guides/sftp/port-2222'
         - text: 'Timeouts on Pantheon'
           url: '/timeouts'
         - text: 'Temporary File Management'
