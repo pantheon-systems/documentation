@@ -28,7 +28,7 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
 1. Visit your site in the browser and make some un-cached requests to generate data in New Relic&reg;.
 
-1. Information will be available in New Relic a few minutes after you visit your site.
+1. Information will be available in New Relic a few minutes after you complete the step above.
 
 ## Configure New Relic&reg; Performance Monitoring Access
 
