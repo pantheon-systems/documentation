@@ -1,6 +1,6 @@
 ---
 title: SFTP on Pantheon
-subtitle: SFTP Connection Info and Authentication
+subtitle: SFTP Access and Authentication
 description: Learn how to access your SFTP Connection Info, and how to authenticate your SFTP.
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
@@ -16,7 +16,7 @@ permalink: docs/guides/sftp/sftp-connection-info
 anchorid: sftp-connection-info
 ---
 
-This section provides information on how to access your SFTP Connection Info in your dashboard, and how to authenticate your SFTP.
+This section provides information on how to access your SFTP Connection Info in your dashboard, and how to authenticate your SFTP client.
 
 ## SFTP Connection Info
 
@@ -26,9 +26,9 @@ This section provides information on how to access your SFTP Connection Info in 
 
  ![SFTP Connection Data](../../../images/dashboard/sftp-connection-info.png)
 
-The connection information may be different from what you're used to. The information is based on your unique "Site ID". This is the long string at the end of your Dashboard URL.
+The connection information may be different from what you've used in the past. The information is based on your unique Site ID. This is the long string at the end of your Dashboard URL.
 
-Your connection data is as follows:
+Example Connection Info:
 
 **host:** `appserver.dev.site-id.drush.in`
 
@@ -38,19 +38,21 @@ Your connection data is as follows:
 
 <Alert title="Note" type="info">
 
-When you set up your SFTP client, remember to specify the SFTP protocol and connect to your environment using port 2222.
+Remember to specify the SFTP protocol and connect to your environment using port `2222` when you set up your SFTP client.
 
 </Alert>
 
 ## Connect to an Environment Over SFTP
 
-You can connect to an environment over SFTP using the terminal. The command is easily accessible from the Connect with SFTP widget.
+You can connect to an environment over SFTP with your terminal. The command to do this can be copied from the Connect with SFTP widget.
 
-1. Ensure that you have configured your preferred editor, including folder for your site, and an SFTP extension if necessary.
+1. Ensure that you have configured your preferred editor, including a folder for your site, and an SFTP extension if necessary.
 
-1. Run `SFTP: config` or a similar command depending on your editor in your terminal.
+1. Run `SFTP: config` or a similar command depending on your editor.
 
 1. Open the config file and update it with your Pantheon SFTP credentials.
+
+    Example credentials:
 
     ```bash{promptUser: user}
     name: Anita Server Name
@@ -64,13 +66,13 @@ You can connect to an environment over SFTP using the terminal. The command is e
 
 1. Verify that the `remotePath` value is set to `/code/` and that `uploadOnSave` is set to `true`. Saved changes will now be pushed automatically to Pantheon.
 
-There is also a one-click option to connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Cyberduck on MacOS :
+There is also a one-click option to connect with a GUI client. The main directory listing includes Pantheon, logs, environment data, and configuration. Your website is in the `code` directory. For instance, in Cyberduck on MacOS :
 
 ![Cyberduck Example](../../../images/cyberduck-example.png)
 
 ## SFTP File Uploads to Test and Live Environments
 
-You can use SFTP to upload files in your site's files directory in the Test and Live environments. Note SFTP Mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
+You can use SFTP to upload files to your site's files directory in the Test and Live environments. Note SFTP Mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
 
 1. Navigate to the Site Dashboard.
 
