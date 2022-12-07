@@ -228,4 +228,4 @@ Do NOT push/pull code between Lando and Pantheon directly. All code should be pu
 
 ## More Resources
 
-- [Install and Configure Lando for WordPress](/guides/lando-wordpress)
+- [Install and Configure Lando for WordPress](/guides/local-development/lando-wordpress)

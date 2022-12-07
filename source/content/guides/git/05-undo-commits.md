@@ -28,7 +28,7 @@ The dashboard cannot pull in upstream updates if you run the `git revert` comman
 
 You must have the items listed below completed before you begin the steps in this doc.
 
-- Set up a [local development environment](/local-development) with [Git version control](/guides/git/git-config).
+- Set up a [local development environment](/guides/local-development) with [Git version control](/guides/git/git-config).
 
 - Have a working [clone](/guides/git/git-config#clone-your-site-codebase) as a backup
 

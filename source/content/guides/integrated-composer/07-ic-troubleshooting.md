@@ -120,7 +120,7 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 
 Merge the changes manually:
 
-1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
+1. Create a [local Git clone](/guides/local-development#get-the-code) of the Pantheon site repository.
 
 1. Merge in the upstream changes:
 
