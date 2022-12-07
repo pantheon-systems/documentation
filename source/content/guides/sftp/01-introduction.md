@@ -17,9 +17,8 @@ permalink: docs/guides/sftp
 anchorid: sftp
 ---
 
-SFTP mode allows you to develop directly on Pantheon. This is an advantage in cases in which working with Git is not the best option for you or your team. SFTP mode is especially useful when:
+Pantheon provides two development modes: [Git mode](/guides/git) and SFTP mode. SFTP mode allows you to develop directly on Pantheon. This is an advantage in cases in which working with Git and/or local development is not the best option for you or your team. SFTP mode is especially useful when:
 
-- local development is not the optimal solution for your setup
 - a remote collaborator (or client) needs to see changes immediately
 - a platform-specific problem requires debugging
 
@@ -35,7 +34,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers on-d
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides on how to use some popular developer tools with Pantheon:
 
-- PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
+- PHPStorm with [WordPress](/guides/local-development/wordpress-phpstorm) and [Drupal](/guides/local-development/drupal-phpstorm)
 - [WinSCP](/guides/sftp/winscp)
 - [Visual Studio Code](/visual-studio-code)
 
