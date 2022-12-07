@@ -36,7 +36,7 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
   ![Screenshot showing the newly activated New Relic.](../../../images/integrations/newrelic/new-relic-activated.png)
 
-1. Select your site from the center column, or access it via **APM & services** in the menu on the left:
+1. Select your site from the center column, or access it via **APM & services** in the menu on the far left:
 
   ![Screenshot showing the New Relic landing page.](../../../images/integrations/newrelic/new-relic-get-started.png)
 
