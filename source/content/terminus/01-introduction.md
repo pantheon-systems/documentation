@@ -6,7 +6,12 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contributors: [whitneymeredith]
-categories: [develop]
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus
 anchorid: terminus
