@@ -2,7 +2,7 @@
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
 tags: [dashboard, git, terminus, updates]
-reviewed: "2021-04-15"
+reviewed: "2022-12-07"
 contenttype: [doc]
 categories: [update]
 newcms: [drupal7, drupal8, drupal9, wordpress]
@@ -15,8 +15,11 @@ This doc includes instructions to make core updates to WordPress and Drupal site
 
 ## Drupal 9+
 
-As of Drupal 9, Pantheon supports managing Drupal depedencies via [Integrated Composer](/guides/integrated-composer) 
-to allow one-click core updates through the Dashboard. Site maintainers can combine these one-click updates
+As of Drupal 9, Drupal only supports managing depedencies via composer. 
+You can do that without checking in the vendor directory 
+by using Pantheon's [Integrated Composer](/guides/integrated-composer) 
+to allow one-click core updates through the Dashboard. 
+Site maintainers can combine these one-click updates
 with our Autopilot service to automate site module updates.
 
 [[ Link to autopilot ]]
