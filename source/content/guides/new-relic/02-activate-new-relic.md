@@ -42,8 +42,6 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
 1. Clicking on your site name will allow you to access the data for your site:
 
-  ![Screenshot of the New Relic APM dashboard.](../../../images/integrations/newrelic/new-relic-apm-dash.png)
-
   ![SCreenshot of the New Relic APM data for a Pantheon site.](../../../images/integrations/newrelic/new-relic-summary.png)
 
 
