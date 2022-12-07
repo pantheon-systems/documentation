@@ -7,7 +7,7 @@ categories: [deploy]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]
-integration: [ssh]
+integration: [--]
 ---
 
 If your site dashboard displays the following **Deployment Infrastructure Upgrade** notice, we recommend waiting to make code changes until maintenance completes:
