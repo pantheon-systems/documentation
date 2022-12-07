@@ -45,7 +45,7 @@ Pantheon provides several options for on-server development, however, local deve
 
 - Install a Git client for tracking code changes.
 
-- Install an SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/guides/local-development/visual-studio-code), for transferring files or Rsync.
+- Install an SFTP client or IDE, such as [WinSCP](/guides/sftp/winscp) or [Visual Studio Code](/guides/local-development/visual-studio-code), for transferring files or Rsync.
 
 - Install [Terminus](/terminus).
 
