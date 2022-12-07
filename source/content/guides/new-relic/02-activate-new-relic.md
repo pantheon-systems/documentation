@@ -9,7 +9,7 @@ audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, jspellman814]
 layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/activate-new-relic
@@ -36,15 +36,22 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
   ![Screenshot showing the newly activated New Relic.](../../../images/integrations/newrelic/new-relic-activated.png)
 
-1. Ignore the **Get started** button, and select **APM** from the menu at the top:
+1. Select your site from the center column, or access it via **APM & services** in the menu on the left:
 
   ![Screenshot showing the New Relic landing page.](../../../images/integrations/newrelic/new-relic-get-started.png)
 
-1. Agree to the New Relic&reg; Terms of Service to access the data for your site:
+1. Clicking on your site name will allow you to access the data for your site:
 
   ![Screenshot of the New Relic APM dashboard.](../../../images/integrations/newrelic/new-relic-apm-dash.png)
 
   ![SCreenshot of the New Relic APM data for a Pantheon site.](../../../images/integrations/newrelic/new-relic-summary.png)
+
+
+<Alert title="Note" type="info">
+
+After New Relic is configured, information will be available a few minutes after the site starts serving un-cached requests.
+
+</Alert>
 
 ### Who is the New Relic&reg; account associated with?
 
