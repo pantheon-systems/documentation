@@ -1,7 +1,6 @@
 ---
 title: Deployment Infrastructure Upgrade
 description: Details on the current infrastructure upgrade.
-categories: [platform]
 tags: [dashboard, updates]
 contenttype: [doc]
 categories: [deploy]
