@@ -22,7 +22,7 @@ You can set up a Pantheon site in VS Code and push local changes to your Pantheo
 
 1. [Create a site](/guides/legacy-dashboard/create-sites) on Pantheon, or browse to the Dev environment Dashboard of an existing site.
 
-1. Use [Git](/guides/git/git-config#clone-your-site-codebase), [SFTP](/rsync-and-sftp#sftp), or[rsync](/rsync-and-sftp#rsync) to clone your site files on the Dev environment down to your local machine.
+1. Use [Git](/guides/git/git-config#clone-your-site-codebase), [SFTP](/guides/sftp/rsync-and-sftp), or[rsync](/guides/sftp/rsync-and-sftp) to clone your site files on the Dev environment down to your local machine.
 
   If you intend to upload code changes via SFTP, place your site code in a subdirectory called `code` (for example, `~/sites/mysite/code`). This aligns with the file structure on the platform when using [SFTP mode](/sftp).
 
