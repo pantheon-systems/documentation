@@ -3,7 +3,6 @@ title: Errors and Server Responses
 subtitle: 4xx Level Errors
 description: Get explanations for 400-level error messages.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
