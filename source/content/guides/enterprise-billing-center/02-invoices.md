@@ -23,9 +23,41 @@ You must have Admin privileges of the workspace to view invoices. Note that acce
 
 1. Click the invoice number you want to review.
 
-    ![Dashboard Site Portfolio Display Example 1](../../../images/site-portfolio-report-dashboard-portfolio-report-section.png)
+    ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
 
-1. Search and filter the invoice as needed.
+## Filter the Invoice
+
+You can filter the filter the invoice by specific information.
+
+Click the **Filter by** drop-down menus to sort by:
+
+- Specific Owner
+
+- All Owners
+
+- Previous Site Plan
+
+- Current Site Plan
+
+You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by:
+
+- Site Name
+
+- Site Owner
+
+- Previous Site Plan
+
+- Current Site Plan
+
+- Previous Invoice Date
+
+- Current Invoice Date
+
+## Search the Invoice
+
+You can search the invoice by a specific name, key word, or ID.
+
+Enter the specific information you want to search for in the **search box**.
 
 ## More Resources
 
