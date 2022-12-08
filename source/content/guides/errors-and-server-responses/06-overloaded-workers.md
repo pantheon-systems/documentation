@@ -3,7 +3,6 @@ title: Errors and Server Responses
 subtitle: Overloaded Workers
 description: Learn more about overloaded workers on Pantheon.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
