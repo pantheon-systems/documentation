@@ -1,12 +1,11 @@
 ---
 title: Pantheon Open Source Software Support Levels
 description: Learn about Pantheon support levels for open source software
-categories: [get-started, oss]
 tags: [collaborate]
 contributors: [greg-1-anderson, kporras07]
 reviewed: "2022-03-02"
 contenttype: [doc]
-categories: [plan, create]
+categories: [create, plan]
 newcms: [--]
 audience: [development]
 product: [--]
