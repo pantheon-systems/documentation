@@ -7,7 +7,7 @@ tags: [billing]
 layout: guide
 contributors: [whitneymeredith]
 showtoc: true
-permalink: docs/guides/site-portfolio-report/faq
+permalink: docs/guides/enterprise-billing-center/site-portfolio-report/faq
 anchorid: faq
 ---
 
@@ -45,7 +45,7 @@ The total amount owed can be viewed on the invoice linked at the top of the Site
 
 ## How Can I Access the Site Portfolio Report?
 
-Pantheon’s invoice notification generates and emails the Site Portfolio Report along with a link to the online invoice for contract customers with an active contract. Simply click the link provided in the email to view the report. You can also [access the report in the Enterprise Billing Center](/guides/site-portfolio-report/interacting#access-the-site-portfolio-report-in-the-dashboard) within the dashboard. You must have Admin privileges to access the Site Portfolio link or the Enterprise Billing Center. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the team member cannot access the link or Enterprise Billing Center.
+Pantheon’s invoice notification generates and emails the Site Portfolio Report along with a link to the online invoice for contract customers with an active contract. Simply click the link provided in the email to view the report. You can also [access the report in the Enterprise Billing Center](/guides/enterprise-billing-center/site-portfolio-report/interacting#access-the-site-portfolio-report-in-the-dashboard) within the dashboard. You must have Admin privileges to access the Site Portfolio link or the Enterprise Billing Center. The Site Owner can change the user's privileges to Admin or download the Site Portfolio Report and share it if the team member cannot access the link or Enterprise Billing Center.
 
 ## Who Has Access to the Site Portfolio Report?
 

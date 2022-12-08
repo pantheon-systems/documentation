@@ -7,7 +7,7 @@ tags: [billing]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/site-portfolio-report/interacting
+permalink: docs/guides/enterprise-billing-center/site-portfolio-report/interacting
 anchorid: interacting
 ---
 
