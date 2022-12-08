@@ -3,7 +3,6 @@ title: Errors and Server Responses
 subtitle: Retries Across Application Server Containers (High Availability)
 description: Learn more about application server containers on Pantheon.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
