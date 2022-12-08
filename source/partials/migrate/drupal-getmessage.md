@@ -1,6 +1,6 @@
 ---
-contenttype: partial
-categories: [--]
+contenttype: [partial]
+categories: [migrate]
 newcms: [drupal]
 product: [--]
 integration: [--]

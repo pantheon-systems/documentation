@@ -4,7 +4,7 @@ description: Getting the client IP address to set up geolocation capabilities on
 tags: [cdn]
 contributors: [--]
 reviewed: "2020-03-09"
-contenttype: doc
+contenttype: [doc]
 categories: [plan, optimize]
 newcms: [drupal]
 audience: [development]

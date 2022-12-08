@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-btworkflow/backup-token
 anchorid: backup-token
 editpath: drupal-9/drupal-9-hosted-btworkflow/09-backup-token.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, sftp]
 newcms: [drupal]
 audience: [development]

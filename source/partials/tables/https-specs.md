@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [cert]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 |                                                                       | Global CDN with Let's Encrypt   | Global CDN with a Custom Certificate  |
 |:--------------------------------------------------------------------- |:------------------------------- |:------------------------------------- |
 | **Certificate Type**                                                  | Issued by Let's Encrypt         | Bring your own                        |

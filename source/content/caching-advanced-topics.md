@@ -3,7 +3,7 @@ title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 tags: [cache, cookies, security, webops]
 reviewed: "2022-03-25"
-newtype: doc
+contenttype: [doc]
 categories: [cache]
 newcms: [drupal7, drupal9, wordpress]
 audience: [development]
@@ -27,6 +27,14 @@ This allows users to immediately see comments or changes they've made, even if t
 Pantheon does not support manually editing and updating the Varnish Configuration Language (VCL). We use a standard VCL for all sites on the platform. Requests for changes/updates to the standard VCL are accepted for consideration, but we do not guarantee change requests will be implemented.
 
 </Alert>
+
+## Disable Caching for WordPress Sites in a Dev Environment
+
+Follow the steps below to disable caching for WordPress sites in a Dev environment. Refer to [Review Response Caching](/guides/frontend-performance/caching#review-response-caching) in our [Frontend Performance guide](/guides/frontend-performance) for more information about caching on the Pantheon platform.
+
+1. Open the **WordPress** dashboard, click **Settings**, and then click **Pantheon Page Cache**.
+
+1. Set `max-age` (Time to Live) to `0`.
 
 ## Ignoring GET Parameters
 
@@ -90,6 +98,14 @@ Session cookie lifetime and session garbage collection can be overridden in your
 #### Drupal 9
 
 Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal 9](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
+
+#### WordPress
+
+The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin automatically sets the session lifetime `0`, which is until the browser is closed. You can override this setting with the `pantheon_session_expiration` filter before the plugin loads.
+
+Session data is removed from the database by PHP's garbage collection when it has not been used in the time set in `gc_maxlifetime`, which is set to `200,000` seconds by default.
+
+Refer to [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information about WordPress and PHP Sessions on Pantheon.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 

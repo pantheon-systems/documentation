@@ -2,7 +2,12 @@
 title: Manage Some Dependencies with Composer
 description: Get your feet wet with Composer on WordPress or Drupal 7 before going all in.
 contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
-categories: [develop]
+contenttype: [doc]
+categories: [--]
+newcms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 tags: [composer, workflow, updates]
 type: guide
 permalink: docs/guides/:basename

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Confirm that your site meets the following requirements before you continue:
 
 - Ensure your site has the [Pantheon `drupal-composer-managed` repository](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream.

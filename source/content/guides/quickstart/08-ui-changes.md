@@ -4,7 +4,12 @@ subtitle: Make User Interface Changes
 description: In part eight of our Quick Start guide, learn to make UI changes on your site.
 anchorid: ui-changes
 layout: guide
-categories: [get-started]
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, iterate, site, workflow]
 type: guide
 showtoc: true

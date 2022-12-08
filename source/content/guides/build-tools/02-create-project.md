@@ -10,7 +10,7 @@ permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 reviewed: "2021-12-28"
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [--]
 audience: [development]
@@ -75,28 +75,36 @@ The Build Tools plugin will prompt you to create access tokens for the services 
 - [Gitlab](https://gitlab.com/-/profile/personal_access_tokens): The Gitlab token requires the following scopes:
 
   - `api`
-  
+
   - `read_repository`
-  
-  - `write_repository` 
+
+  - `write_repository`
 
 - [Bitbucket](https://bitbucket.org/account/settings/app-passwords/): A Bitbucket app password requires the following scopes: 
 
   - `Projects` (read)
-  
+
   - `Repositories` (read and write)
-  
+
   - `Pull Requests` (read and write)
-  
+
   - `Pipelines` (edit variables)
 
-Optionally, you can generate your tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN`, `CIRCLE_TOKEN`, `GITLAB_TOKEN` and `BITBUCKET_TOKEN`, depending on what services are you using:
+Optionally, you can generate your tokens ahead of time and manually export them to the local variables. Note that Bitbucket requires a user name and password instead of a token. Review the local variable export examples below:
+
+- `GITHUB_TOKEN`
+- `CIRCLE_TOKEN`
+- `GITLAB_TOKEN`
+- `BITBUCKET_USER` and `BITBUCKET_PASS`
+
+The examples below vary depending on what services you use. Replace `exampleToken` (or `exampleUserName` and `exampleUserPassword` if you use Bitbucket) with your token or Bitbucket user name and password.
 
 ```bash{promptUser: user}
-export GITHUB_TOKEN=yourGitHubToken
-export CIRCLE_TOKEN=yourCircleCIToken
-export GITLAB_TOKEN=yourGitlabToken
-export BITBUCKET_TOKEN=yourBitbucketToken
+export GITHUB_TOKEN=exampleToken
+export CIRCLE_TOKEN=exampleToken
+export GITLAB_TOKEN=exampleToken
+export BITBUCKET_USER=exampleUserName
+export BITBUCKET_PASS=exampleUserPassword
 ```
 
 Navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app) if you need to replace a token.

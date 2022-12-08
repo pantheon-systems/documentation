@@ -3,13 +3,18 @@ title: Integrated Composer
 subtitle: Use Upstream with Integrated Composer
 description: Learn how to use Upstream with Integrated Composer.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
 anchorid: ic-upstreams
+contenttype: [guide]
+categories: [overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides information on how to use Upstream with Integrated Composer, including steps to add dependencies to your Upstream.

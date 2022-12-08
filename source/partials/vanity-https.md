@@ -1,3 +1,12 @@
+---
+contenttype: [partial]
+categories: [siteauth]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
 
 <Alert title="Note"  type="info" >
 

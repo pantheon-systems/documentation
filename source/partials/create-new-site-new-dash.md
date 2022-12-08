@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [create]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 You can create a new site from your homepage by clicking **+ Create New Site**, or from the **Sites** tab. 
 
 1. Log in to your Pantheon account. 

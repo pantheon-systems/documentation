@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [--]
+newcms: [drupal9]
+product: [integrated-composer]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 1. Use this link to create a new Drupal 9 Integrated Composer site from the Upstream: [https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03). On the **Create Your Pantheon Site** page:
 
    - Enter a name for the site.
@@ -12,6 +22,6 @@
 
 1. Still in the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
-1. Return to the Dev tab, set the site's Development Mode to Git, and [clone the site locally](/local-development#get-the-code).
+1. Return to the Dev tab, set the site's Development Mode to Git, and [clone the site locally](/guides/local-development#get-the-code).
 
 1. In your local terminal, from the project root directory, run `composer install`.

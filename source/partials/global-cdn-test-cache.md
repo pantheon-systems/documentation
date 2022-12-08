@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [cache]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <TabList>
 
 <Tab title="Via Command Line" id="cli" active={true}>

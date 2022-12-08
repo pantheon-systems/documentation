@@ -10,7 +10,7 @@ editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb
 contributors: [szipfel]
 reviewed: "2020-05-08"
-contenttype: guide
+contenttype: [guide]
 categories: [--]
 newcms: [--]
 audience: [development]

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [config]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Note that modifying the `hosts` file usually requires administrative privileges from the OS.
 
 The location of the `hosts` file varies depending on your operating system:

@@ -8,28 +8,27 @@ class ReviewReport extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            categorizedDocs: allMdx(filter: {frontmatter: {contenttype: {eq: "partial"}}} sort: {fields: fileInfo___relativePath, order: ASC}) {
+            categorizedDocs: allMdx(
+              filter: {fileAbsolutePath: {regex: "/partials/"}}
+              sort: {fields: fileInfo___relativePath, order: ASC}
+            ) {
               edges {
                 node {
                   id
                   excerpt
                   frontmatter {
                     categories
-                    contenttype
-                    integration
-                    newcms
-                    product
                     reviewed
                     tags
                     type
+                    contenttype
+                    product
+                    integration
+                    newcms
                   }
                   fileInfo {
-                    childMdx {
-                      fileInfo {
-                        name
-                        relativePath
-                      }
-                    }
+                    id
+                    relativePath
                   }
                   fields {
                     slug
@@ -57,26 +56,6 @@ class ReviewReport extends React.Component {
                     <thead>
                       <tr>
                         <th>Path</th>
-                        <th>CMS
-                          <div className="input-group">
-                            <input
-                              type="text"
-                              id="command-search-newcms"
-                              className="form-control"
-                              placeholder="Filter"
-                              onChange={a => setSearchnewCms(a.target.value)}
-                              value={searchnewCms}
-                            />
-                            <div
-                              style={{ background: "#fff; cursor:pointer" }}
-                              className="input-group-addon"
-                              id="clear-filter"
-                              onClick={a => setSearchnewCms("")}
-                            >
-                              <span className="fa fa-times" />
-                            </div>
-                          </div>
-                        </th>
                         <th>Categories
                           <div className="input-group">
                             <input
@@ -97,21 +76,21 @@ class ReviewReport extends React.Component {
                             </div>
                           </div>
                         </th>
-                        <th>Tags
+                        <th>CMS
                           <div className="input-group">
                             <input
                               type="text"
-                              id="command-search-tags"
+                              id="command-search-newcms"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={c => setSearchTags(c.target.value)}
-                              value={searchTags}
+                              onChange={a => setSearchnewCms(a.target.value)}
+                              value={searchnewCms}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={c => setSearchTags("")}
+                              onClick={a => setSearchnewCms("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -157,8 +136,28 @@ class ReviewReport extends React.Component {
                             </div>
                           </div>
                         </th>
-                        <th>Reviewed</th>
+                        <th>Tags
+                          <div className="input-group">
+                            <input
+                              type="text"
+                              id="command-search-tags"
+                              className="form-control"
+                              placeholder="Filter"
+                              onChange={c => setSearchTags(c.target.value)}
+                              value={searchTags}
+                            />
+                            <div
+                              style={{ background: "#fff; cursor:pointer" }}
+                              className="input-group-addon"
+                              id="clear-filter"
+                              onClick={c => setSearchTags("")}
+                            >
+                              <span className="fa fa-times" />
+                            </div>
+                          </div>
+                        </th>
                         <th>Excerpt</th>
+                        <th>Reviewed</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -201,18 +200,7 @@ class ReviewReport extends React.Component {
                         .map((page, i) => {
                           return (
                             <tr key={i}>
-                              <td>{page.node.fileInfo.childMdx.fileInfo.relativePath}</td>
-                              <td>
-                                {page.node.frontmatter.newcms
-                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
-                                      return (
-                                        <span key={i}>
-                                          {(i ? ", " : "") + newcms}
-                                        </span>
-                                      )
-                                    })
-                                  : null}
-                              </td>
+                              <td>{page.node.fileInfo.relativePath}</td>
                               <td>
                                 {page.node.frontmatter.categories
                                   ? page.node.frontmatter.categories.map((categories, i) => {
@@ -225,11 +213,11 @@ class ReviewReport extends React.Component {
                                   : null}
                               </td>
                               <td>
-                                {page.node.frontmatter.tags
-                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                {page.node.frontmatter.newcms
+                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
                                       return (
                                         <span key={i}>
-                                          {(i ? ", " : "") + tag}
+                                          {(i ? ", " : "") + newcms}
                                         </span>
                                       )
                                     })
@@ -257,8 +245,19 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.reviewed}</td>
+                              <td>
+                                {page.node.frontmatter.tags
+                                  ? page.node.frontmatter.tags.map((tag, i) => {
+                                      return (
+                                        <span key={i}>
+                                          {(i ? ", " : "") + tag}
+                                        </span>
+                                      )
+                                    })
+                                  : null}
+                              </td>
                               <td>{page.node.excerpt}</td>
+                              <td>{page.node.frontmatter.reviewed}</td>
                             </tr>
                           )
                         })}

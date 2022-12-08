@@ -3,13 +3,18 @@ title: Integrated Composer
 subtitle: Apply One-click Updates
 description: Learn how to apply One-click updates with Integrated Composer.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/one-click-updates
 anchorid: one-click-updates
+contenttype: [guide]
+categories: [overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides information on how to apply One-click updates with Integrated Composer. 

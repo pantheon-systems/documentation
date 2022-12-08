@@ -2,7 +2,12 @@
 title: WordPress with Composer on Pantheon
 subtitle: Create a Composer-managed WordPress Site with Bedrock
 description: Learn more about Bedrock and Composer-managed WordPress sites.
-categories: [develop]
+contenttype: [guide]
+categories: [--]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith, jspellman814, jazzsequence]
 layout: guide
@@ -109,4 +114,4 @@ Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/a
 
 - [Bedrock Documentation](https://roots.io/bedrock/)
 
-- [Install and Configure Lando for WordPress](/guides/lando-wordpress)
+- [Install and Configure Lando for WordPress](/guides/local-development/lando-wordpress)

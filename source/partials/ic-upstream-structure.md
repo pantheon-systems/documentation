@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [--]
+newcms: [--]
+product: [integrated-composer]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 The upstream has the following directory structure:
 
 ```none:title=code/

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Follow the steps below if you want to move modules and themes to your new site.
 
 1. Navigate to the Pantheon site directory.

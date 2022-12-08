@@ -3,7 +3,7 @@ title: Drupal 9 Performance and Global CDN Caching Settings
 description: Optimize Drupal 9 and Global CDN caching to maximize your Pantheon site's performance.
 cms: "Drupal"
 tags: [cache]
-newtype: doc
+contenttype: [doc]
 categories: [optimize]
 newcms: [drupal9]
 audience: [agency, development]

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [config]
+newcms: [wordpress, drupal7]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <TabList>
 
 <Tab title="WordPress" id="wpredirects" active={true}>

@@ -5,7 +5,12 @@ description: Learn how to configure your WordPress Site Networks.
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [create]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/config/
 editpath: multisite/03-config.md

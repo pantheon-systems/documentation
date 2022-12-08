@@ -3,7 +3,7 @@ title: Basic Troubleshooting
 description: Common first-step practices to troubleshoot misbehaving sites.
 contributors: [alexfornuto, eabquina, carlalberto]
 reviewed: "2020-08-26"
-contenttype: doc
+contenttype: [doc]
 categories: [cache, cookies, deploy, domains, help]
 newcms: [wordpress,drupal]
 audience: [development, sysadmin]
@@ -79,7 +79,7 @@ More complex issues with code may necessitate using debugging tools beyond your 
 
 - Recreate the issue locally.
 - For WordPress, [enable WP_DEBUG & WP_DEBUG_LOG](/guides/logs-pantheon/faq-logs#how-do-i-enable-error-logging-for-wordpress) in wp-config.php. Then use the debug.log file to find warnings and errors.
-- Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/lando-wordpress) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
+- Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/local-development/lando-wordpress) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
 
 ## Pantheon Dashboard
 

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [help]
+newcms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Command Line Interface with Terminus 
 
 This workshop provides an introduction to Terminus: Pantheon's command line interface.

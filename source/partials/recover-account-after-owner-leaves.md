@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [accounts]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### The Email Address is Known
 1. Go to the [**Password Reset page**](https://dashboard.pantheon.io/reset-password).
 1. Enter the previous owner's email address, and click **Request reset link**.  An email with a reset link will be sent to this address.

@@ -5,14 +5,13 @@ description: Review important WordPress Site Networks considerations.
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [create]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
-multisite: true
-generator: pagination
-pagination:
-    provider: data.multisitepages
-use:
-    - multisitepages
 permalink: docs/guides/multisite/considerations/
 nexturl: guides/multisite/config/
 previousurl: guides/multisite/

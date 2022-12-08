@@ -1,9 +1,9 @@
 ---
-contenttype: partial
-categories: [--]
-newcms: [--]
+contenttype: [partial]
+categories: [config]
+newcms: [wordpress]
 product: [--]
-integration: [--]
+integration: [integration]
 tags: [--]
 reviewed: "2022-11-03"
 ---

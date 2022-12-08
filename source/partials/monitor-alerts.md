@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [optimize]
+newcms: [--]
+product: [--]
+integration: [pingdom, newrelic]
+tags: [--]
+reviewed: ""
+---
+
 ## False Alarms
 
 Availability monitoring services (for example, Pingdom and New Relic&reg; Synthetics) function by periodically reaching out to sites to gauge availability. Some failures in availability do not require action and can be considered false alarms, such as failures due to internet routing or idle containers.

@@ -2,13 +2,17 @@
 title: WordPress Site Networks
 subtitle: Troubleshoot
 description: Review common WordPress Site Networks troubleshooting scenarios.
-multisite: true
 anchorid: debug
 generator: pagination
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [troubleshoot]
+contenttype: [guide]
+categories: [create]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/debug/
 editpath: multisite/06-debug.md

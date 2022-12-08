@@ -2,7 +2,12 @@
 title: Redirects Guide
 subtitle: Mobile Redirection with Cloudflare
 description: Learn how to use Cloudflare to set up mobile redirection on your Drupal or WordPress site.
-categories: [go-live]
+contenttype: [guide]
+categories: [domains]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dns, https, redirects]
 layout: guide
 contributors: [wordsmither]

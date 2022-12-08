@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted-btworkflow/restore-token
 anchorid: restore-token
 editpath: drupal-9/drupal-9-hosted-btworkflow/13-restore-token.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, sftp]
 newcms: [drupal]
 audience: [development]

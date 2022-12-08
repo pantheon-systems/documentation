@@ -4,7 +4,12 @@ subtitle: Add Git-Based Version Control to Your SFTP Workflow
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 layout: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [git]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, sftp, workflow]
 type: guide
 contributors: [scottmassey, rachelwhitton]
@@ -53,7 +58,7 @@ Make sure that you have a:
 
 Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/ssh-keys). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon account password to sign in, when prompted.
 
-Visit our guide to [Configure Visual Studio Code](/visual-studio-code) to edit and sync code from within the text editor.
+Visit our guide to [Configure Visual Studio Code](/guides/local-development/visual-studio-code) to edit and sync code from within the text editor.
 
 ## Cloud Development Environment
 

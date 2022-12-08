@@ -3,7 +3,12 @@ title: PHP on Pantheon
 subtitle: Configure Your wp-config.php File
 description: Adjust and customize your WordPress configuration file on Pantheon.
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [php]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wp-config]
 contributors: [masonjames]
 layout: guide
@@ -90,7 +95,7 @@ There are two options for writing logic based on Pantheon server environment:
 
 ### Local Database Development Configuration in wp-config-local.php
 
-The Pantheon WordPress upstream includes a sample configuration file for [local development](/local-development).
+The Pantheon WordPress upstream includes a sample configuration file for [local development](/guides/local-development).
 
 Make a copy of the `wp-config-local-sample.php` file called `wp-config-local.php` if you are developing locally and need to configure WordPress for your desktop environment. This file is listed in the `.gitignore` file and will not be tracked by version control by default.
 

@@ -2,7 +2,12 @@
 title: Secure Development on Pantheon
 subtitle: Secure Connections to Pantheon Services via TLS or SSH Tunnels
 description: Detailed information on securely connecting to your database and caching service using SSH tunnels.
-categories: [develop]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [database, local, ssh, redis, webops]
 contributors: [bwood]
 layout: guide

@@ -6,7 +6,12 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contributors: [whitneymeredith]
-categories: [develop]
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus
 anchorid: terminus
@@ -32,7 +37,7 @@ Terminus is a powerful tool that allows you to:
 
 <Alert title="Note" type="info">
 
-You must update your plugin for Terminus 2 if you are a plugin author. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3. Refer to [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
+You must update your plugin to Terminus 3 if you are a plugin author. Plugins that are advertised to work with Terminus 2 will also work with Terminus 3 unless there is a dependency conflict. Refer to [what's new in Terminus 3.x](/terminus/terminus-3-0) to learn more.
 
 </Alert>
 

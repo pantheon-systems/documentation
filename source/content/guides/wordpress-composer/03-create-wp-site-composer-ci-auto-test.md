@@ -2,7 +2,12 @@
 title: Create a CI, Composer-managed WordPress Site 
 subtitle: Create a CI, Composer-managed WordPress Site
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
-categories: [develop]
+contenttype: [guide]
+categories: [--]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith]
 layout: guide
@@ -18,8 +23,6 @@ This section provides steps to create a new Pantheon WordPress site that will us
 - [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
     - You must use the [Build Tools 3.x release](https://github.com/pantheon-systems/terminus-build-tools-plugin/tree/3.x) if you are using **Terminus 3**.
-
-    - You must use the [Build Tools 2.x release](https://github.com/pantheon-systems/terminus-build-tools-plugin/tree/2.x) if you are using **Terminus 2**.
 
 - [PHP version](/guides/php/php-versions#verify-current-php-versions) 7.2 or greater
 
@@ -225,4 +228,4 @@ Do NOT push/pull code between Lando and Pantheon directly. All code should be pu
 
 ## More Resources
 
-- [Install and Configure Lando for WordPress](/guides/lando-wordpress)
+- [Install and Configure Lando for WordPress](/guides/local-development/lando-wordpress)

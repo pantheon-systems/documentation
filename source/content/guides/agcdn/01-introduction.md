@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/agcdn
 anchorid: agcdn
-contenttype: guide
+contenttype: [guide]
 categories: [optimize]
 newcms: [--]
 audience: [development]

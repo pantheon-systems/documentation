@@ -1,8 +1,18 @@
 ---
 title: Pantheon Site Portfolio Report
+<<<<<<< HEAD:source/content/guides/enterprise-billing-center/site-portfolio-report/03-interacting.md
 subtitle: Access the Site Portfolio Report
 description: Learn how to access and interact with the Site Portfolio Report.
+=======
+subtitle: Interact with the Site Portfolio Report
+description: Learn how to interact with the Site Portfolio Report.
+contenttype: [guide]
+>>>>>>> main:source/content/guides/site-portfolio-report/02-interacting.md
 categories: [billing]
+newcms: [--]
+audience: [business]
+product: [siteportfolio]
+integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
 layout: guide

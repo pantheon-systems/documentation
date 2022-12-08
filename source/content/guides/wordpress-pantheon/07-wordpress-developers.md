@@ -2,7 +2,12 @@
 title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress on Pantheon for Developers
 description: Develop efficiently with WordPress on Pantheon.
-categories: [wordpress]
+contenttype: [guide]
+categories: [create]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-05"
@@ -40,7 +45,7 @@ Review our [Environment Specific Configuration for WordPress Sites](/guides/envi
 
 ## Local Development
 
-Read our [Local Development](/local-development) doc to learn about developing locally, including the ability to perform critical development tasks, such as editing files and code, and pushing changes to Pantheon right from your desktop.
+Read our [Local Development](/guides/local-development) doc to learn about developing locally, including the ability to perform critical development tasks, such as editing files and code, and pushing changes to Pantheon right from your desktop.
 
 ## Manage Custom Code in WordPress with Plugins
 
@@ -56,4 +61,4 @@ WordPress Core [does not use sessions](https://wordpress.org/support/topic/how-d
 
 ## Configure PhpStorm to Create WordPress Plugins on Pantheon
 
-Review our [Configuring PhpStorm to Create WordPress Plugins on Pantheon](/wordpress-phpstorm) doc to learn about [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/), a commercial PHP IDE that can be configured to work with WordPress sites, allowing users to easily build and maintain custom plugins. This doc will set you up with a local environment in PhpStorm to create your custom plugins and themes.
+Review our [Configuring PhpStorm to Create WordPress Plugins on Pantheon](/guides/local-development/wordpress-phpstorm) doc to learn about [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/), a commercial PHP IDE that can be configured to work with WordPress sites, allowing users to easily build and maintain custom plugins. This doc will set you up with a local environment in PhpStorm to create your custom plugins and themes.

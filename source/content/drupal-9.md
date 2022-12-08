@@ -4,7 +4,7 @@ description: Get started with Drupal 9 on the Pantheon WebOps Platform.
 tags: [site]
 contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-02-08"
-newtype: doc
+contenttype: [doc]
 categories: [create, plan, config]
 newcms: [drupal9]
 audience: [development]
@@ -82,7 +82,7 @@ See the appropriate [Drupal 9 Migration Guide](/drupal-9-migration) for help tro
 
 ### Can I Use Lando or Localdev for Drupal 9?
 
-Local development options for Drupal 9 are currently being implemented into [Localdev](/guides/localdev).
+Local development options for Drupal 9 are currently being implemented into [Localdev](/guides/localdev/troubleshoot-support).
 
 Some users have reported success using [Lando](https://docs.lando.dev/basics/) with Drupal 9, but it relies on a workaround and requires extra configuration. Check the status of the [Lando repo's issue](https://github.com/lando/lando/issues/2831#issuecomment-771833900) before you continue.
 

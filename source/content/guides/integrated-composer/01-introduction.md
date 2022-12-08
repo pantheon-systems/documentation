@@ -3,13 +3,18 @@ title: Integrated Composer
 subtitle: Introduction
 description: Learn how to use Integrated Composer.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer
 anchorid: integrated-composer
+contenttype: [guide]
+categories: [overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 Integrated Composer is a Pantheon platform feature that extends Composer <Popover content="A widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site." /> functionality to WordPress and Drupal's core files, and treats them as a managed dependency. Integrated Composer enables one-click updates from the Dashboard for upstream updates and Composer dependencies on your Composer-managed Pantheon site.
@@ -45,7 +50,7 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 1. Navigate to the Dev environment, then click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
-1. [Clone the site locally](/local-development#get-the-code) and run `composer install`.
+1. [Clone the site locally](/guides/local-development/configuration) and run `composer install`.
 
 
 ## More Resources

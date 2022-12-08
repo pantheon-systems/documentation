@@ -1,6 +1,6 @@
 ---
-contenttype: partial
-categories: [--]
+contenttype: [partial]
+categories: [help]
 newcms: [wordpress]
 product: [--]
 integration: [--]

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [database]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 To find the maximum connections available to the site’s database, connect to the site’s database and run:
 
 ```sql{promptUser: sql}

@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/autopilot-custom-upstream-config
 anchorid: autopilot-custom-upstream-config
-contenttype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [--]
 audience: [development]

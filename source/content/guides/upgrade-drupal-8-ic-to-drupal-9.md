@@ -4,7 +4,12 @@ description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to Drupal 
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
-categories: [develop]
+contenttype: [doc]
+categories: [upgrade]
+newcms: [drupal9]
+audience: [development]
+product: [integrated-composer]
+integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2022-02-25"

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [domains]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <Accordion title="Google Top Level Domains and HSTS" id="google-tlds" icon="wrench">
 
 In September 2017, Google [announced](https://security.googleblog.com/2017/09/broadening-hsts-to-secure-more-of-web.html) that is was planning to make [HSTS](/pantheon-yml/#enforce-https-+-hsts) preloading mandatory for the Top-Level Domains (**TLD**s) available exclusively through [Google Registry](https://www.registry.google/#!). That means that, moving forward, some TLDs will automatically redirect to HTTPS, and will be unable to load insecure sites or site pages. When selecting a domain to use as a custom or vanity domain, it's important to note the 45 TLDs that are subject to mandatory HSTS preloading:

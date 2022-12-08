@@ -4,7 +4,7 @@ description: Frequently asked questions about Drupal or WordPress sites on Panth
 tags: [support]
 permalink: docs/faq
 anchorid: faq
-newtype: doc
+contenttype: [doc]
 categories: [help]
 newcms: [drupal, drupal7, drupal8, drupal9, wordpress]
 audience: [agency, development]
@@ -99,7 +99,7 @@ Yes. You can invoke WP-CLI commands on Pantheon sites using [Terminus](/terminus
 
 ### Does Pantheon support local development?
 
-Yes. [Local development](/local-development) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
+Yes. [Local development](/guides/local-development) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
 
 ### How does cron work with Drupal on Pantheon?
 

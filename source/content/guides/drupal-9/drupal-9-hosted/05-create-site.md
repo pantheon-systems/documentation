@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-9-hosted/create-site
 anchorid: create-site
 editpath: hosted/05-create-site.md
 reviewed: "2021-03-31"
-contenttype: guide
+contenttype: [guide]
 categories: [create, migrate]
 newcms: [drupal9]
 audience: [development]
@@ -32,7 +32,7 @@ integration: [--]
 
 1. In the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
-1. Return to the Dev tab, set the site's **Development Mode** to Git, and [clone the site locally](/local-development#get-the-code).
+1. Return to the Dev tab, set the site's **Development Mode** to Git, and [clone the site locally](/guides/local-development/configuration).
 
 1. In your local terminal, from the project root directory, run `composer install`.
 

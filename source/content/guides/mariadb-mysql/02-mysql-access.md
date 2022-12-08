@@ -2,7 +2,12 @@
 title: MariaDB and MySQL on Pantheon
 subtitle: Access MariaDB and MySQL Databases
 description: Configure your MariaDB or MySQL database connections on Pantheon.
-categories: [develop]
+contenttype: [guide]
+categories: [database]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [database, local, ssh]
 contributors: [whitneymeredith]
 layout: guide

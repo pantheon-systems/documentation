@@ -2,13 +2,18 @@
 title: Pantheon Global CDN
 subtitle: Configure DNS and Provision HTTPS
 description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt.
-categories: [go-live]
 tags: [cdn, dns, https, security]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/https
 anchorid: https
+contenttype: [guide]
+categories: [cache, optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 Pantheon's [Global CDN](/guides/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform. Your [HTTPS](/guides/global-cdn/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).

@@ -44,7 +44,7 @@ Even the most reliable web services occasionally experience slowness. Your site 
        $r['timeout'] = 10;
        return $r;
    }
-​
+
    add_action( 'http_api_curl', 'pantheon_http_api_curl', 100, 1 );
    function pantheon_http_api_curl( $handle )
    {

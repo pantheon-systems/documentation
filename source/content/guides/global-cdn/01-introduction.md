@@ -2,13 +2,18 @@
 title: Pantheon Global CDN
 subtitle: Introduction
 description: Improve site performance and security with Pantheon's Global CDN.
-categories: [performance]
 tags: [cache, cdn, launch, security]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn
 anchorid: global-cdn
+contenttype: [guide]
+categories: [cache, optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous site pages. By serving data from cache servers all over the world, website visitors receive a response without having to wait. 

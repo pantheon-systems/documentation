@@ -2,7 +2,12 @@
 title: Object Cache (formerly Redis)
 subtitle: Enable Object Cache
 description: Learn how to enable Object Cache on your site.
-categories: [performance]
+contenttype: [guide]
+categories: [cache]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide

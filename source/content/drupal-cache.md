@@ -2,7 +2,7 @@
 title: Drupal Performance and Caching Settings
 description: Optimize Drupal and Global CDN caching to maximize your site's performance.
 tags: [caching, cdn]
-newtype: doc
+contenttype: [doc]
 categories: [cache, optimize]
 newcms: [drupal, drupal9, drupal7]
 audience: [development]

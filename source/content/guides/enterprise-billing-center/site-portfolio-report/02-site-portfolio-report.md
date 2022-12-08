@@ -2,7 +2,12 @@
 title: Pantheon Site Portfolio Report
 subtitle: Introduction
 description: Learn more about the information provided in the Site Portfolio Report.
+contenttype: [guide]
 categories: [billing]
+newcms: [--]
+audience: [business]
+product: [siteportfolio]
+integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
 layout: guide

@@ -5,7 +5,7 @@ tags: [billing, organizations]
 contributors: [edwardangert]
 searchboost: 150
 reviewed: "2020-03-24"
-newtype: doc
+contenttype: [doc]
 categories: [billing, plans]
 newcms: [--]
 audience: [sysadmin]

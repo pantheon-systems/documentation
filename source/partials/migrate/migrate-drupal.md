@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+newcms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 The recommended way to migrate Drupal sites from another host is to use `drush ard` (Drush 8 or earlier) to create an archive that can be easily imported.
 
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.

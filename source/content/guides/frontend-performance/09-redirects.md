@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Redirects
 description: Avoiding unnecessary redirects to optimize site performance.
 anchorid: redirects
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/frontend-performance/redirects
 editpath: frontend-performance/09-redirects.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: [guide]
+categories: [optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## Avoid Redirects

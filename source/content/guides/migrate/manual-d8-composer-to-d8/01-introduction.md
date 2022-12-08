@@ -3,7 +3,12 @@ title: Migrate a Composer-Managed Drupal 8 Site from Another Platform
 subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform.
 cms: "Drupal 8"
-categories: [develop]
+contenttype: [guide]
+categories: [migrate]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide

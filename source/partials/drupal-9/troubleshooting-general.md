@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [upgrade]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Pantheon Launch Check Status Error: services.yml does not exist
 
 After you set up Drupal 9, the following error might be displayed in the **Best practices** section of the Pantheon Launch Check:

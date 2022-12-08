@@ -3,13 +3,18 @@ title: Integrated Composer
 subtitle: Troubleshoot Integrated Composer
 description: Learn how to troubleshoot Integrated Composer issues.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
 reviewed: "2022-04-28"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
 anchorid: ic-troubleshooting
+contenttype: [guide]
+categories: [overview]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides information on troubleshooting common Integrated Composer errors and issues.
@@ -115,7 +120,7 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 
 Merge the changes manually:
 
-1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
+1. Create a [local Git clone](/guides/local-development#get-the-code) of the Pantheon site repository.
 
 1. Merge in the upstream changes:
 

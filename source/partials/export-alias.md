@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [localdev]
+newcms: [drupal9]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Set the temporary variable `$SITE` in your terminal session to match the name of your site.
 
 This doc uses several commands that use the temporary command line alias, `$SITE`, to make entering command examples easier. Refer to the steps further in this doc to see which sites should be aliased (it may be more than one), then replace `anita-drupal` in this example:

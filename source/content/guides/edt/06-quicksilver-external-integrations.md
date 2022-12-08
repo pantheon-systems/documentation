@@ -17,7 +17,7 @@ nextpage: Performance
 previousurl: guides/edt/terminus-cli/
 previouspage: Command Line Interface
 editpath: edt/06-quicksilver-external-integrations.md
-contenttype: guide
+contenttype: [guide]
 categories: [help]
 newcms: [--]
 audience: [development]

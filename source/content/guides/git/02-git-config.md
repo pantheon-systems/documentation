@@ -2,12 +2,16 @@
 title: Configure Git
 subtitle: Install and Configure Git
 description: Use Git version control to deploy code to your Drupal or WordPress site's development environment.
-categories: [develop]
 tags: [code, git, local, webops, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/git-config
 anchorid: git-config
+categories: [git]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [git]
 ---
 
 This section provides steps for installing and configuring Git to work with your Pantheon account.
@@ -40,7 +44,7 @@ Provide a name and email with which your commits will be associated before you c
 
     - The `--global` option sets these values for all projects you manage with Git.
 
-1. Run the command below to set a default editor for commit messages. Replace `nano` with your preferred text editor or IDE. For example, `atom` or `code` (for [Visual Studio Code](/visual-studio-code)).
+1. Run the command below to set a default editor for commit messages. Replace `nano` with your preferred text editor or IDE. For example, `atom` or `code` (for [Visual Studio Code](/guides/local-development/visual-studio-code)).
 
     ```bash{promptUser: user}
     git config --global core.editor nano

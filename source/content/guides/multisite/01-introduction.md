@@ -5,16 +5,15 @@ description: Deploy a WordPress multisite on the Pantheon Platform.
 layout: guide
 type: guide
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [create]
+newcms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
 contributors: [danielbachhuber, whitneymeredith]
 anchorid: multisite
-multisite: true
-generator: pagination
-pagination:
-    provider: data.multisitepages
-use:
-    - multisitepages
 permalink: docs/guides/multisite/
 nexturl: guides/multisite/considerations/
 editpath: multisite/01-introduction.md

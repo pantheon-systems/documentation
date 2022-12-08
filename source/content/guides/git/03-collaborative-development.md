@@ -2,13 +2,17 @@
 title: Collaborative Development Using GitHub and Pantheon
 subtitle: Collaborative Development with an External Repository
 description: Use GitHub to collaborate with the team members on your Pantheon site.
-categories: [develop]
 tags: [collaborate, git, local, webops, workflow]
 contributors: [bmackinney, jessifischer, mrfelton]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/collaborative-development
 anchorid: collaborative-development
+categories: [git]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [git]
 ---
 
 Pantheon provides Git repositories for all sites on the platform. However, some teams might need an external repository hosted by a provider, like GitHub or Bitbucket, to function as the canonical version of the site's codebase. This section shows you how to use Pantheon with an external repository. The example below uses a GitHub account. However, the steps should be similar for any provider.

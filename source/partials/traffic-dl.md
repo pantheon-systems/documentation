@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [--]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 The number of unique visits displayed in Pantheon’s Site Dashboard represents the traffic measurement Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes the number of pages served, to help evaluate trends, and project future traffic. Traffic information is refreshed daily.
 
 The data comes directly from our Global CDN, which tracks _all_ requests for resources on Pantheon. However, many known bots and crawlers do not count towards site traffic limits, nor do we meter requests for static assets (images, PDFs, CSS, JS, etc.).

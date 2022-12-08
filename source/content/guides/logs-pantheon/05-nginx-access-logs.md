@@ -2,7 +2,12 @@
 title: Log Files on Pantheon
 subtitle: Parse Nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess.
-categories: [performance]
+contenttype: [guide]
+categories: [optimize]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [logs, measure]
 contributors: [albertcausing, sarahg]
 layout: guide

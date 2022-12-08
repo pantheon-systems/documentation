@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+newcms: [--]
+product: [integrated-composer]
+integration: [composer]
+tags: [--]
+reviewed: ""
+---
+
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
 To minimize issues, these steps make the codebase changes in a new branch:

@@ -2,7 +2,12 @@
 title: MariaDB and MySQL on Pantheon
 subtitle: Database Connection Errors
 description: Drupal Pressflow core, WordPress core, and the causes and solutions for database connection errors.
-categories: [troubleshoot]
+contenttype: [guide]
+categories: [database]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, database, files]
 layout: guide
 showtoc: true

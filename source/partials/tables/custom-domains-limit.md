@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [domains]
+newcms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 A paid plan is required to connect custom domains to your site, up to the following limits:
 
 |       | Custom Domain Limit (per site) | Free and Managed HTTPS                         |
