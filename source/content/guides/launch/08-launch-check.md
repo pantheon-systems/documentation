@@ -7,7 +7,7 @@ tags: [backup, launch, webops]
 showtoc: true 
 permalink: docs/guides/launch/launch-check/
 anchorid: launch-check
-contenttype: guide
+contenttype: [guide]
 categories: [config, cache, test, launch]
 newcms: [wordpress, drupal]
 audience: [agency, development]

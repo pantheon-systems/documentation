@@ -7,7 +7,7 @@ showtoc: true
 tags: [dns, https, launch, webops]
 permalink: docs/guides/launch/domains/
 anchorid: domains
-contenttype: guide
+contenttype: [guide]
 categories: [domains, launch]
 newcms: [wordpress, drupal]
 audience: [agency, development]

@@ -7,7 +7,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/launch/configure-dns/
 anchorid: configure-dns
-contenttype: guide
+contenttype: [guide]
 categories: [config, launch]
 newcms: [wordpress, drupal]
 audience: [agency, development]
