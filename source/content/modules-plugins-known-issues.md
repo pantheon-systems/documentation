@@ -1,10 +1,15 @@
 ---
 title: Modules and Plugins with Known Issues
 description: A list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
-categories: [troubleshoot]
 tags: [modules, plugins, site]
 contributors: [alexfornuto]
 reviewed: "2020-01-08"
+contenttype: [doc]
+categories: [plan, help]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Pantheon is a high-performance [WebOps](/pantheon-workflow) platform. Not all modules and plugins are optimized to work on such a platform. Many are built around the traditional LAMP or LEMP stack architecture.

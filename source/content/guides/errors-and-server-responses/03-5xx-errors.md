@@ -9,6 +9,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/5xx-errors
 anchorid: 5xx-errors
+contenttype: [guide]
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to interpret 5xx errors.

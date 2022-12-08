@@ -3,12 +3,17 @@ title: Errors and Server Responses
 subtitle: Introduction
 description: Learn more about errors and server responses on Pantheon.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses
 anchorid: errors-and-server-responses
+contenttype: [guide]
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Pantheon serves error messages when a request cannot be fulfilled. These error messages cannot be customized for a particular site because of the low-level nature of these errors, and the fact that changes are system-wide, not site specific.

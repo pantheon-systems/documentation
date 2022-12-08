@@ -1,9 +1,13 @@
 ---
 title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
-cms: "Drupal"
-categories: [troubleshoot]
 tags: [modules]
+contenttype: [doc]
+categories: [plan, help]
+newcms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/guides/support/contact-support/).

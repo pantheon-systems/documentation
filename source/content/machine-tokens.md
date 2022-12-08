@@ -1,9 +1,14 @@
 ---
 title: Creating and Revoking Machine Tokens
 description: Learn how to create a machine token in order to use Terminus on your Drupal or WordPress site.
-categories: [integrate]
 tags: [sso, security, terminus]
 reviewed: "2020-12-09"
+contenttype: [doc]
+categories: [siteauth]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Machine tokens are used to uniquely identify your machine and securely authenticate via [Terminus](/terminus).

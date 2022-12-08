@@ -2,13 +2,18 @@
 title: Fastly on Pantheon
 subtitle: Integrate Your Fastly Account on Pantheon with Datadog
 description: Learn how to use Datadog with your Fastly account on Pantheon.
-categories: [develop]
 tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-datadog
 anchorid: fastly-datadog
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [fastly]
 ---
 
 This section provides information on integrating your Fastly account on Pantheon with [Datadog](https://www.datadoghq.com/).

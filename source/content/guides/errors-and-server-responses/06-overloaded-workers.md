@@ -9,6 +9,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/overloaded-workers
 anchorid: overloaded-workers
+contenttype: [guide]
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to resolve overloaded workers on Pantheon.

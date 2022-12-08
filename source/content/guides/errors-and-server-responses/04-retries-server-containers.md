@@ -9,6 +9,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/retries-server-containers
 anchorid: retries-server-containers
+contenttype: [guide]
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to resolve Pantheon server container errors.

@@ -1,10 +1,15 @@
 ---
 title: Products and Features
 description: Learn about the components of the Pantheon platform.
-categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/products
+contenttype: [guide]
+categories: [overview]
+newcms: [--]
+audience: [sysadmin]
+product: [--]
+integration: [--]
 ---
 
 Pantheon offers a wide array of products and features to simplify building and managing your sites.
