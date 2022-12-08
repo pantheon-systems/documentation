@@ -7,7 +7,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/launch/redirects
 anchorid: launch-redirects
-contenttype: guide
+contenttype: [guide]
 categories: [domains, launch]
 newcms: [wordpress, drupal]
 audience: [agency, development]

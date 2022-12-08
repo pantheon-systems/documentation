@@ -7,7 +7,7 @@ showtoc: true
 tags: [launch, webops]
 permalink: docs/guides/launch/next-steps/
 anchorid: next-steps
-contenttype: guide
+contenttype: [guide]
 categories: [overview, test, launch]
 newcms: [wordpress, drupal]
 audience: [agency, development]

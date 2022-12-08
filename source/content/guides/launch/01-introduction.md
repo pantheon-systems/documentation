@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 anchorid: launch
 permalink: docs/guides/launch/
-contenttype: guide
+contenttype: [guide]
 categories: [overview, launch, domains]
 newcms: [wordpress, drupal]
 audience: [agency, development]

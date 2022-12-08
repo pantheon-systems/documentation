@@ -8,7 +8,7 @@ tags: [backup, launch, webops]
 contributors: [whitneymeredith]
 permalink: docs/guides/launch/advanced-curls/
 anchorid: advanced-curls
-contenttype: guide
+contenttype: [guide]
 categories: [migrate, launch, domains]
 newcms: [wordpress, drupal]
 audience: [development]
