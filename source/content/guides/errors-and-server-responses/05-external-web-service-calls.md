@@ -3,7 +3,6 @@ title: Errors and Server Responses
 subtitle: External Web Service Calls
 description: Learn more about using external web service calls on Pantheon.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
