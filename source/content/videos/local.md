@@ -3,18 +3,23 @@ title: Local Development
 description: Sync your code, database, and files for local development.
 contributors:  [dwayne]
 permalink:  docs/videos/:basename
-categories: [develop]
 tags: [git, lando, local, sftp, workflow]
 layout: video
 searchboost: 50
 type: video
+contenttype: [doc]
+categories: [create, git, sftp]
+newcms: [drupal, wordpress]
+audience: [develoment]
+product: [terminus]
+integration: [lando]
 ---
 
 <Youtube src="z01vIuB3kRg" title="Local Development" />
 
 <Partial file="deprecate-kalabox.md" />
 
-Pantheon [encourages on-server development](/guides/support/#local-development). However, many developers prefer the speed and convenience of [local development](/local-development) where sites run in virtual machines and don’t require Internet access.
+Pantheon [encourages on-server development](/guides/support/#local-development). However, many developers prefer the speed and convenience of [local development](/guides/local-development) where sites run in virtual machines and don’t require Internet access.
 
 ### Sync from Pantheon to local
 

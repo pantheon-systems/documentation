@@ -5,10 +5,15 @@ description: Learn how to configure your local Terminus configuration file.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/configuration
 anchorid: configuration
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 This section provides information on how to configure your local Terminus configuration file.

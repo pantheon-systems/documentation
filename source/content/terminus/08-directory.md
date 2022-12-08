@@ -5,10 +5,15 @@ description: A non-exclusive directory of plugins to extend Terminus features.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/directory
 anchorid: directory
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 You can extend Terminus functionality and add commands by installing [third-party plugins](https://github.com/terminus-plugin-project) or by [creating your own plugins](/terminus/create).

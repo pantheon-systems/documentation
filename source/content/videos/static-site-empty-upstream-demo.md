@@ -2,9 +2,14 @@
 title: Create a Static Site Using an Empty Upstream
 description: Learn how to create a static site using empty upstreams on the Pantheon Platform.
 contributors: [michellecolon-pantheon, kyletaylored]
-categories: [platform]
 tags: [https, launch, code, workflow]
 reviewed: "2021-08-09"
+contenttype: [doc]
+categories: [create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstreams, terminus]
+integration: [--]
 ---
 
 ## Overview 

@@ -23,7 +23,7 @@ integration: [--]
 
 1. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
-1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/local-development#get-the-code).
+1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of the site's Dashboard, set the **Development Mode** to **Git**, and [clone the site locally](/guides/local-development/configuration).
 
 1. Change into the `$SITE` directory, then create a new branch based on the default:
 

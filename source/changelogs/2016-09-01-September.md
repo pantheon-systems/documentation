@@ -26,4 +26,4 @@ If you haven’t updated in a while, check out the [Terminus Changelog](https://
 ## Documentation
 
 ### New Articles/Guides
-[Developing Locally with Kalabox](/guides/lando-wordpress)
+[Developing Locally with Kalabox](/guides/local-development/lando-wordpress)

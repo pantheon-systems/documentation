@@ -47,4 +47,4 @@ More specifically, this error occurs when the client (via web browser) successfu
 
 - [Unlock a Site's Environment](/security#unlock-a-sites-environment)
 
-- [Modify the Local Hosts File](/hosts-file)
+- [Modify the Local Hosts File](/guides/domains/hosts-file)

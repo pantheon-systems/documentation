@@ -32,7 +32,7 @@ integration: [--]
 
 1. In the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
-1. Return to the Dev tab, set the site's **Development Mode** to Git, and [clone the site locally](/local-development#get-the-code).
+1. Return to the Dev tab, set the site's **Development Mode** to Git, and [clone the site locally](/guides/local-development/configuration).
 
 1. In your local terminal, from the project root directory, run `composer install`.
 

@@ -6,10 +6,15 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contributors: [greg-1-anderson]
-categories: [develop]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/terminus-3-0
 anchorid: terminus-3-0
+contenttype: [guide]
+categories: [cli, create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 This section provides information about Terminus 3.0. Terminus 3.0 is the most recent major version of Terminus and is recommended in place of Terminus 2.0.
