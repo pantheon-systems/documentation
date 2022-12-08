@@ -8,6 +8,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2022-12-07"
 ---
 Pantheon standardizes on [Coordinated Universal Time (UTC)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), the primary time standard by which the world regulates clocks and time. This includes all servers, PHP, and MySQL, and cannot be changed.
 
