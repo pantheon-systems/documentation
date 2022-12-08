@@ -1,6 +1,6 @@
 ---
-title: Pantheon Site Portfolio Report
-subtitle: Introduction
+title: Enterprise Billing Center
+subtitle: Site Portfolio Report Overview
 description: Learn more about the information provided in the Site Portfolio Report.
 contenttype: [guide]
 categories: [billing]

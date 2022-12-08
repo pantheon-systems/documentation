@@ -1,7 +1,7 @@
 ---
-title: Pantheon Site Portfolio Report
+title: Enterprise Billing Center
 subtitle: FAQs
-description: Learn more about your Site Portfolio Report.
+description: Get answers to your Enterprise Billing Center questions.
 contenttype: [guide]
 categories: [billing]
 newcms: [--]
@@ -12,11 +12,11 @@ tags: [billing]
 layout: guide
 contributors: [whitneymeredith]
 showtoc: true
-permalink: docs/guides/enterprise-billing-center/site-portfolio-report/faq
+permalink: docs/guides/enterprise-billing-center/faq
 anchorid: faq
 ---
 
-This section provides answers to frequently asked questions.
+This section provides answers to frequently asked questions about the Site Portfolio Report.
 
 ## When are Site Portfolio Reports Sent?
 

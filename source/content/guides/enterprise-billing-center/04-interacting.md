@@ -1,5 +1,5 @@
 ---
-title: Pantheon Site Portfolio Report
+title: Enterprise Billing Center
 subtitle: Access the Site Portfolio Report
 description: Learn how to access and interact with the Site Portfolio Report.
 categories: [billing]
@@ -11,7 +11,7 @@ tags: [billing]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/enterprise-billing-center/site-portfolio-report/interacting
+permalink: docs/guides/enterprise-billing-center/interacting
 anchorid: interacting
 ---
 
