@@ -1,6 +1,6 @@
 ---
 title: Enterprise Billing Center
-subtitle: Invoices
+subtitle: Access Invoices
 description: Learn how to access your invoices.
 categories: [billing]
 tags: [billing]
