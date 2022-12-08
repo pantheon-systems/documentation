@@ -113,7 +113,7 @@ Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation 
 ## Memory Errors
 An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](https://pantheon.io/plans/pricing-comparison), so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will cancel the process, resulting in a failed request from the user's perspective.
 
-In general, Drupal's Queue Workers should be used for any process involving large numbers of nodes
+In general, Drupal's Queue Workers should be used for any process involving large numbers of nodes and use the [Queue UI](https://www.drupal.org/project/queue_ui) module to monitor queue operations.
 
 Debugging memory issues can be challenging. Here are some things to consider when addressing memory issues:
 
