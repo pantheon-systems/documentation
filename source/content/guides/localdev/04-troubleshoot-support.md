@@ -1,18 +1,11 @@
 ---
 title: Pantheon Localdev
-<<<<<<< HEAD
 subtitle: Support & Troubleshooting
 description: Best practices for troubleshooting, getting support, and reporting bugs or feature requests.
-=======
-subtitle: Troubleshooting
-description: Solutions for common troubleshooting scenarios.
-categories: [develop]
->>>>>>> f8cb01aeee42426255a254767426760590f26b9f
 tags: [localdev, local, workflow]
 reviewed: "2020-12-04"
 layout: guide
 permalink: docs/guides/localdev/troubleshoot-support
-<<<<<<< HEAD
 anchorid: localdev/troubleshoot-support
 editpath: localdev/04-troubleshoot-support.md
 contenttype: [guide]
@@ -21,9 +14,6 @@ newcms: [wordpress, drupal]
 audience: [agency, development]
 product: [localdev]
 integration: [--]
-=======
-anchorid: troubleshoot-support
->>>>>>> f8cb01aeee42426255a254767426760590f26b9f
 ---
 
 Localdev has been deprecated. However, there are many local development options for the Pantheon platform in the [Local Development on Pantheon](/guides/local-development) guide.
