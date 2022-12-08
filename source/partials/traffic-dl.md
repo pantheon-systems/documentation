@@ -48,19 +48,6 @@ For both metrics, the platform counts based on the total volume of requests, whi
 
 As shown here, visits and visitors have different meanings. If two visitors go to the site, and one opens another page but the other leaves, that would be tracked as two visitors and three pages served. If one of those visitors returns again the next day, it would be counted as two visitors, three visits, and four pages served.
 
-
-<dl>
-
-<dt>Cache Hit Ratio</dt>
-
-<dd>
-
-An important performance benchmark is the number of requests that can be served from the Global CDN. Serving requests from cache rather than by the CMS allows visitors to experience a faster response and removes load from the site's server resources. A cached request is served from the nearest edge endpoint without any delay, while a request to the CMS must be individually processed and loaded. A high cache hit ratio greatly improves the browsing experience and site performance. Learn how to enable and improve caching with the [Pantheon Global CDN](/guides/global-cdn) guide.
-
-</dd>
-
-</dl>
-
 ## How Do You Know if a Visit Counts?
 
 ### Counted Visits
