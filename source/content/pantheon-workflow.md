@@ -101,6 +101,10 @@ After testing your changes in the Test environment you can move them to the Live
 
 Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions. 
 
+## Upload Content and Files to Test and Live Environments
+
+You can upload files directly to your Test and Live environments through an SFTP connection. Refer to [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info#sftp-file-uploads-to-test-and-live-environments) for more information.
+
 ## Configuration Management
 
 Dealing with changes to your site's configuration, stored in the database, can be a challenge. Moving the database up from Dev to Test and Live typically won't work, because it will overwrite content in Live. While you can make manual configuration changes on each environment, **it's a best practice to manage configuration in code**.
