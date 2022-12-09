@@ -33,7 +33,7 @@ Pantheon Front-End Sites currently supports:
 
 * Gatsby v4 
 * Next.js v12
-* Drupal 9
+* Drupal 9+
 * WordPress 5.9
 
 
