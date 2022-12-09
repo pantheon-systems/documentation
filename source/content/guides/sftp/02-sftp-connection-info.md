@@ -1,7 +1,7 @@
 ---
 title: SFTP on Pantheon
 subtitle: SFTP Access and Authentication
-description: Learn how to access your SFTP Connection Info, and how to authenticate your SFTP.
+description: Access your SFTP Connection Info and authenticate your SFTP client.
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
 categories: [sftp]
@@ -16,7 +16,7 @@ permalink: docs/guides/sftp/sftp-connection-info
 anchorid: sftp-connection-info
 ---
 
-This section provides information on how to access your SFTP Connection Info in your dashboard, and how to authenticate your SFTP client.
+This section provides information on how to access the SFTP Connection Info in your dashboard, and how to authenticate your SFTP client.
 
 ## SFTP Connection Info
 
@@ -26,7 +26,7 @@ This section provides information on how to access your SFTP Connection Info in 
 
  ![SFTP Connection Data](../../../images/dashboard/sftp-connection-info.png)
 
-The connection information may be different from what you've used in the past. The information is based on your unique Site ID. This is the long string at the end of your Dashboard URL.
+The connection information may differ from what you've used in the past. The information is based on your unique Site ID (the long string at the end of your Dashboard URL).
 
 Example Connection Info:
 
@@ -44,7 +44,7 @@ Remember to specify the SFTP protocol and connect to your environment using port
 
 ## Connect to an Environment Over SFTP
 
-You can connect to an environment over SFTP with your terminal. The command to do this can be copied from the Connect with SFTP widget.
+You can connect to an environment over SFTP with your terminal. The command to do this can be copied from the **Connect with SFTP** widget.
 
 1. Ensure that you have configured your preferred editor, including a folder for your site, and an SFTP extension if necessary.
 
@@ -72,7 +72,7 @@ There is also a one-click option to connect with a GUI client. The main director
 
 ## SFTP File Uploads to Test and Live Environments
 
-You can use SFTP to upload files to your site's files directory in the Test and Live environments. Note SFTP Mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
+You can use SFTP to upload files to your site's files directory in the Test and Live environments. Note SFTP mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
 
 1. Navigate to the Site Dashboard.
 
@@ -80,7 +80,7 @@ You can use SFTP to upload files to your site's files directory in the Test and 
 
 1. Click the **Open in SFTP client** link under **Client**. You may need to copy your Host and Port information to connect to your client if you have not already configured the connection.
 
-Refer to [rsync and SFTP](/guides/sftp/rsync-and-sftp) if you need to transfer large files to your environments.
+Refer to [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp) if you need to transfer large files to your environments.
 
 <Partial file="auth.md" />
 

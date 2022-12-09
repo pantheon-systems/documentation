@@ -20,9 +20,9 @@ This section provides information on how to commit or discard and abandon change
 
 ## SFTP Mode
 
-You can switch between SFTP and Git modes in Dev environment. This prevents you from accidentally overwriting changes from a different source. 
+You can switch between SFTP and Git modes in your Dev environment. This prevents you from accidentally overwriting changes from a different source. 
 
-SFTP mode has a comment box above the commit log. The Dashboard automatically tracks your pending changes as you make changes to the codebase. You can then commit your changes to version control when you are happy with the results without having to ever use Git directly.
+SFTP mode has a comment box above the commit log. The Dashboard automatically tracks your pending changes as you make updates to the codebase. You can then commit your changes to version control when you are happy with the results without having to use Git directly.
 
 ### Enable SFTP Mode
 
@@ -34,10 +34,10 @@ SFTP mode has a comment box above the commit log. The Dashboard automatically tr
 
 ## SFTP Changes
 
-You cannot use Git to push changes remotely with SFTP mode enabled. You must commit your changes in the comment box located above the commit log to push them to Test/Live. **Commit early and commit often**. Keep in mind:
+You cannot use Git to push changes remotely with SFTP mode enabled. You must commit your changes in the comment box located above the commit log to push changes to the Test and Live environments. **Commit early and commit often**. Keep in mind:
 
-- SFTP changes to code that have not been committed *are not saved in backups and are not included in deployments* as they are not part of your code repository.
-- Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.
+- SFTP changes to code that have not been committed *are not saved in backups, and are not included in deployments* as these updates are not part of your code repository.
+- Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. Commit your updates before toggling the connection mode if you want to keep work your work.
 - Containers are migrated as a regular part of maintenance. This can delete uncommitted changes.
 - You won't be able to save anything that's been excluded from version control via `.gitignore`.
 
@@ -53,7 +53,7 @@ You cannot use Git to push changes remotely with SFTP mode enabled. You must com
 
 1. Click **Commit** when your message is ready.
 
-    - Large sets of code changes taking longer than two minutes to commit may timeout and fail to commit. To resolve this, temporarily remove some of your code changes (new modules or plugins), and then try again.
+    - Large sets of code changes that take longer than two minutes to commit may timeout and fail. To resolve this, temporarily remove some of your code changes (new modules or plugins), and then try again.
 
 <Alert title="Note" type="info">
 
@@ -63,7 +63,7 @@ Your Dashboard tracks all changes made within your codebase. File change notific
 
 ## Discard and Abandon SFTP Changes
 
-You can discard and abandon SFTP changes that you don't want to commit. This is a useful action when you have several changes you want to undo and you don't want to manually revert all the changes.
+You can discard and abandon SFTP changes that you don't want to commit. This is a useful action when you have several changes you want to undo and you don't want to manually revert the changes.
 
 1. Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed.
 
