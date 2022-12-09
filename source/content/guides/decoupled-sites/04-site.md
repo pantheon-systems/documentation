@@ -29,7 +29,7 @@ You should have the **Decoupled** tab enabled in your dashboard after onboarding
 
 * You will use Next.js or Gatsby as the frontend framework.
 
-* (Optional) You are using Drupal 9+ or WordPress for the CMS.
+* (Optional) You are using Drupal 9 or higher, or WordPress for the CMS.
 
 * (Optional) If using a preconfigured starter kit template, you will use one of the following combinations:
 
