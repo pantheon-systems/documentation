@@ -1,6 +1,6 @@
 ---
-title: Create a Drupal 10 Site
-description: Drupal 10 is coming soon!
+title: Drupal 10
+description: Your hub for all things Drupal 10.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-10-18"
@@ -12,7 +12,23 @@ product: [composer]
 integration: [--]
 ---
 
-Drupal 10 is coming in December 2022! We've been busy conducting early testing on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.
+Drupal 10 is coming in December 2022! This page will be updated frequently with the latest information and instructions for Drupal 10 on Pantheon.,
+
+## Current Status of Drupal 10 at Pantheon
+
+| Scenario | Status | Documentation |
+|---|---|---|
+| Create a Drupal 10 site on Pantheon | Available | [Create a Drupal 10 Site](/drupal-10#create-a-drupal-10-site)|
+| Upgrade a Drupal 9 site to Drupal 10 manually | Available | [Upgrade from Drupal 9 to Drupal 10](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10) |
+| Keep Drupal 9 site when Drupal 10 is released | Available | |
+| Create Drupal 10 site from Pantheon Dashboard | Planned availability January 2023 | |
+| Upgrade a Drupal 9 site to Drupal 10 using the [Terminus Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) | Early Access | Use the following command: `terminus conversion:upgrade-d10` |
+| Upgrade a Drupal 9 site to Drupal 10 via dashboard | Not Available or Planned | |
+
+
+## Create a Drupal 10 Site
+
+We've been busy conducting early testing on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.
 
 <Alert title="Warning" type="danger" >
 
@@ -20,7 +36,7 @@ These instructions were developed using beta versions of Drupal 10, and are for 
 
 </Alert>
 
-## Before You Begin
+### Before You Begin
 
 This process requires that you are on PHP 8.1.  To upgrade:
 
@@ -40,7 +56,7 @@ This process requires that you are on PHP 8.1.  To upgrade:
    git commit -am "PHP 8.1"; git push;
    ```
 
-## Create a Drupal 10 Site
+### Create the Site
 
 To create a new Drupal 10 site, run the following commands:
 
@@ -58,3 +74,33 @@ composer require --no-update drupal/core-recommended:^10
 composer update
 git commit -am "Update to Drupal 10"
 ```
+
+## Upgrade a Drupal 9 Site to Drupal 10
+
+To upgrade from version 9 to 10:
+
+1. Run [Drupal's Upgrade Status](https://www.drupal.org/project/upgrade_status).
+
+1. Use [Composer to update](/guides/upgrade-drupal-8-ic-to-drupal-9#set-drupal-core-version) to Drupal 10.  See the [Drupal release-specific documentation](https://www.drupal.org/project/drupal/releases) for more details.
+
+## FAQ
+
+### When Drupal 10 is released, which version will appear in the dashboard?
+
+Drupal 9 will still be the version used when creating a Drupal Composer Managed Site until mid-January. Customers may upgrade new sites to Drupal 10 by [following these instructions](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10).
+
+### When Drupal 10 is released, will my Drupal 9 site be forced to use Drupal 10?
+
+No, Drupal 9 sites can continue to use Drupal 9 and receive Drupal 9 updates.
+
+### How do I upgrade my existing site from Drupal 9 to Drupal 10?
+
+See [Upgrade from Drupal 9 to Drupal 10](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10).
+
+### When will official Drupal 10 support start?
+
+When Drupal 10 is officially released (expected December 14, 2022).
+
+### Where do I go with questions?
+
+Ask questions in our Slack [#drupal channel](https://pantheon-community.slack.com/archives/CTA1621KK).

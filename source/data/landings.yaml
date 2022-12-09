@@ -1115,10 +1115,10 @@
   path: 'develop-drupal'
   video_id: 'PsYTvhGhmYo'
   cta:
-    title: 'Drupal 9'
+    title: 'Drupal 10'
     type: 'Guide'
-    subtitle: 'Get started with Drupal 9 on the Pantheon WebOps Platform.'
-    url: '/drupal-9/'
+    subtitle: 'Learn about Drupal 10 the Pantheon WebOps Platform.'
+    url: '/drupal-10'
   cta_alt:
     type: 'Reference'
     title: 'Supported Drupal Versions'
