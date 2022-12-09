@@ -43,6 +43,14 @@ If you receive the error that you have conflicts while updating core, the fastes
 
   </Tab>
 
+  <Tab title="Drupal 10" id="d10">
+
+  ```git
+  git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+  ```
+
+  </Tab>
+
   </TabList>
 
 2. Pull down changes from the appropriate upstream and attempt to resolve automatically:
@@ -63,6 +71,15 @@ If you receive the error that you have conflicts while updating core, the fastes
   ```git
   git fetch pantheon-drops-7
   git merge pantheon-drops-7/master -Xtheirs
+  ```
+
+  </Tab>
+
+  <Tab title="Drupal 10" id="d10">
+
+  ```git
+  git fetch pantheon-drupal-10
+  git merge pantheon-drupal-10/master
   ```
 
   </Tab>
@@ -97,6 +114,14 @@ You must manually resolve the conflict using the command line and a text editor 
 
   </Tab>
 
+  <Tab title="Drupal 10" id="d10">
+
+  ```git
+  git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+  ```
+
+  </Tab>
+
   </TabList>
 
 2. Pull down changes from the appropriate upstream:
@@ -118,6 +143,15 @@ You must manually resolve the conflict using the command line and a text editor 
    git fetch pantheon-drops-7
    git merge pantheon-drops-7/master
    ```
+
+  </Tab>
+
+  <Tab title="Drupal 10" id="d10">
+
+  ```git
+  git fetch pantheon-drupal-10
+  git merge pantheon-drupal-10/master
+  ```
 
   </Tab>
 

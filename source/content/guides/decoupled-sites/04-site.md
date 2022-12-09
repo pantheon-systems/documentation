@@ -29,11 +29,11 @@ You should have the **Decoupled** tab enabled in your dashboard after onboarding
 
 * You will use Next.js or Gatsby as the frontend framework.
 
-* (Optional) You are using Drupal 9 or WordPress for the CMS.
+* (Optional) You are using Drupal 9+ or WordPress for the CMS.
 
 * (Optional) If using a preconfigured starter kit template, you will use one of the following combinations:
 
-    * Drupal 9 and Next.js
+    * Drupal 10 and Next.js
     
     * WordPress and Next.js
 
@@ -68,7 +68,7 @@ Front-End Site is available in the New Dashboard, after it is enabled during the
 
 1. Click the **Decoupled** tab, then click **+Create New Site**.
 
-Under the Decoupled Site section on the Site Creation page, click the option that best suits your needs. Ensure you are using compatible versions for the associated tooling before you proceed (e.g. Drupal 9, Next.js v12, etc.).
+Under the Decoupled Site section on the Site Creation page, click the option that best suits your needs. Ensure you are using compatible versions for the associated tooling before you proceed (e.g. Drupal 10, Next.js v12, etc.).
  
 
 ### Connect your Account
