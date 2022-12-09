@@ -48,6 +48,12 @@ Our [Custom Certificate](/custom-certificates#add-a-custom-certificate) service 
 
 ## Create Wildcard DNS Records
 
+<Alert title="Warning" type="danger" >
+
+Using wildcard DNS settings is not considered best practice on a cloud-hosted platform such as Pantheon.  It is more secure to create explicit records for each subdomain you require.  [Learn more about preventing DNS hijacking](/guides/domains/domain-hijacking).
+
+</Alert>
+
 At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Using the example domain `sites.example.com`, the record would need to be created as follows. Replace `X` with a `1`, `2`, `3`, or `4`:
 
 > `*.sites.example.com` **A** `23.185.0.X`

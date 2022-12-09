@@ -217,3 +217,5 @@ source:         APNIC
 ```
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
+
+[Learn more about preventing DNS hijacking](/guides/domains/domain-hijacking).
