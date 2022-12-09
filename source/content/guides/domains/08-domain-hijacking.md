@@ -16,8 +16,9 @@ product: [--]
 integration: [--]
 ---
 
-Domain Name Server (DNS) hijacking is a type of DNS attack in which bad actors search for available subdomains online, and then redirect them to malicious sites. 
+This section provides information on how to prevent domain hijacking.
 
+Domain Name Server (DNS) hijacking is a type of DNS attack in which bad actors search for available subdomains online, and then redirect them to malicious sites.
 
 ## How to Avoid DNS Hijacking
 
@@ -27,7 +28,7 @@ Before removing unused subdomains, be sure to remove/delete the corresponding A 
 
 ### Don't Use Wildcard DNS Configuration
 
-Using wildcard DNS settings not considered best practice on a cloud-hosted platform such as Pantheon.
+Using wildcard DNS settings not considered best practice on a cloud-hosted platform such as Pantheon. Note that the `pantheon.yml` configuration file does not allow wildcards on [protected web paths](/pantheon-yml#considerations).
 
 ### Secure the DNS Configuration
 
@@ -39,5 +40,9 @@ For example, regularly audit your DNS records and periodically make sure that yo
 
 ## What To Do If You've Been Hijacked.
 
-Email abuse@pantheon.io, or open a chat or ticket, to report a subdomain takeover attack.
+Email abuse@pantheon.io, or open a chat or [ticket](/guides/support/support-ticket/), to report a subdomain takeover attack.
 
+## More Resources
+
+- [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts)
+- [Secure Development on Pantheon](/guides/secure-development)
