@@ -13,6 +13,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
 integration: [--]
+reviewed: "2022-12-09"
 ---
 
 This section provides steps to delete a Custom Upstream. A Custom Upstream cannot be deleted if there are sites using it.
