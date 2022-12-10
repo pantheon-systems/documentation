@@ -13,6 +13,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
 integration: [--]
+reviewed: "2022-12-09"
 ---
 
 This section provides steps to switch an existing site's Custom Upstream to a different Custom Upstream.
