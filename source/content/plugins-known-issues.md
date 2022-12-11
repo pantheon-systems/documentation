@@ -46,6 +46,9 @@ The following is a list of plugins that assume write access, and the specific fi
 |                                                                                               | wp-content/et-cache                                   | Remember to repeat this process for each environment,                                            |
 | [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including Multidevs.                                                                             |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+|                                                                                               | wp-content/cache                                      | Remember to repeat this process for each environment,                                            |
+| [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/)                   |                                                       | including Multidevs.                                                                             |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 |                                                                                               |                                                       | You can override this path on the plugin configuration page                                      |
 | [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)                             | wp-content/gallery                                    | (`/wp-admin/admin.php?page=ngg_other_options`) to use                                            |
 |                                                                                               |                                                       | wp-content/uploads/gallery/ instead of creating a symlink.                                       |
@@ -445,11 +448,22 @@ ___
 
 ## Fast Velocity Minify
 
-<ReviewDate date="2019-10-12" />
+<ReviewDate date="2022-12-12" />
 
 **Issue:** When using the [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/), the Site suddenly shows a white screen of death.
 
-**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/guides/object-cache/redis-command-line#clear-cache).
+**Solution:** The default cache path for this plugin is wp-content/cache as of version [3.2.2](https://github.com/peixotorms/fast-velocity-minify/commit/c267c0bddfd9aaac9bf2015ad34b7ddd75b0c88d). 
+
+Create a symlink for `wp-content/cache` in the wp-content directory and then run the following line of code:
+
+```
+ ln -s ./uploads/cache ./cache
+```
+
+Refer to the documentation on [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+
+Prior version has an option in the Fast Velocity Minify's Settings tab for the **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/guides/object-cache/redis-command-line#clear-cache). 
+
 
 ___
 
