@@ -1,6 +1,6 @@
 ---
 title: Pantheon Filesystem
-subtitle: Files
+subtitle: Introduction
 description: Detailed information on how to access and optimize the Pantheon filesystem.
 contenttype: [guide]
 contributors: [whitneymeredith]
@@ -13,7 +13,7 @@ product: [--]
 integration: [--]
 tags: [code, files]
 reviewed: "2021-07-14"
-permalink: docs/guides/filesystem/files
+permalink: docs/guides/filesystem/
 anchorid: files
 ---
 

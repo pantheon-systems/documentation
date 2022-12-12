@@ -16,7 +16,7 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 
 <Alert title="Notes" type="info">
 
- - This document covers copying [files](/guides/filesystem/files), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
+ - This document covers copying [files](/guides/filesystem), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
 
  - You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 

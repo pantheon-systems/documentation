@@ -114,7 +114,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Valhalla"} link={"/docs/guides/filesystem/files"}>
+  <Product title={"Valhalla"} link={"/docs/guides/filesystem/"}>
 
   Valhalla creates a symbolic link (symlink), to the files directory in the appropriate location of your docroot.
 

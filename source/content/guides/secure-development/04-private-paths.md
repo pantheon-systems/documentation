@@ -117,7 +117,7 @@ Site developers can author their own custom solution to:
 
 ### Known Limitations of File Names and Permissions
 
-Please see [Pantheon Filesystem](/guides/filesystem/files) for more information.
+Please refer to [Pantheon Filesystem](/guides/filesystem) for more information.
 
 ### Additional Drupal Configuration
 
@@ -198,4 +198,4 @@ We do not encourage developers to save credit card information on the platform, 
 
 - [Protected Web Paths](/pantheon-yml#protected-web-paths)
 
-- [Pantheon Filesystem](/guides/filesystem/files)
+- [Pantheon Filesystem](/guides/filesystem)
