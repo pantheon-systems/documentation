@@ -1,8 +1,13 @@
 ---
 title: Single Sign-On for Pantheon Organizations
 description: Detailed information to enable SAML single sign-on for your organization.
-categories: [manage]
 tags: [security, organizations]
+contenttype: [doc]
+categories: [user-authentication, config]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [saml, sso, azure]
 ---
 
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. Refer to [SSO and Identity Federation on Pantheon](/sso) for more information.
@@ -80,7 +85,6 @@ Azure configuration requires several modifications from the general instructions
     - **Reply URL text box:** `https://pantheon.auth0.com/login/callback?connection=<orgname>-SSO`
 
     - **Single sign-on URL:** `Leave Blank`
-
 
 ## Enable SAML on Pantheon
 

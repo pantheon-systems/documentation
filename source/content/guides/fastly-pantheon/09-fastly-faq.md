@@ -2,13 +2,18 @@
 title: Fastly on Pantheon
 subtitle: Fastly on Pantheon FAQs
 description: Get answers to your Fastly on Pantheon questions. 
-categories: [develop]
 tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-faq
 anchorid: fastly-faq
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [fastly]
 ---
 
 This section provides answers to frequently asked questions about using Fastly on the Pantheon platform.

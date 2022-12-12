@@ -3,7 +3,6 @@ title: Migrate a Drupal 8 Site with Multidev to Drupal 9 Using Multidev
 subtitle: Introduction
 description: Learn how to migrate a site to Drupal 9 using Multidev
 cms: "Drupal 9"
-categories: [develop]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/drupal-9-hosted-md
 anchorid: drupal-9-hosted-md
 editpath: drupal-9/drupal-9-hosted-md/01-introduction.md
 reviewed: "2021-03-31"
+contenttype: [guide]
+categories: [migrate]
+newcms: [drupal8, drupal9, drupal]
+audience: [development]
+product: [composer, terminus]
+integration: [--]
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to Drupal 9:

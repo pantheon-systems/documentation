@@ -1,10 +1,16 @@
 ---
 title: Pantheon Search (formerly Pantheon Solr)
 description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
-categories: [integrate]
 tags: [solr,search]
 reviewed: "2021-08-05"
+contenttype: [doc]
+categories: [domains, overview]
+newcms: [drupal, wordpress]
+audience: [agency, development]
+product: [search]
+integration: [--]
 ---
+
 Pantheon Search (formerly Pantheon Solr) is a system for indexing and searching site content. Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Pantheon Search.
 
 <Partial file="solr-version.md" />

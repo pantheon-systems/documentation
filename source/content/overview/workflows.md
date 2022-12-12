@@ -1,10 +1,15 @@
 ---
 title: Developer Workflow
 description: 
-categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/workflows
+contenttype: [doc]
+categories: [overview]
+newcms: [drupal, wordpress]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 ---
 
 The goal of the Developer workflow is to protect your live site as much as possible. The main process of the Pantheon Developer workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. 

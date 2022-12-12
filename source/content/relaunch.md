@@ -4,7 +4,7 @@ description: Take a new site live by moving custom domains from one Site Dashboa
 tags: [dns, https, launch, migrate]
 reviewed: "2020-09-08"
 contenttype: [doc]
-categories: [create, config, deploy]
+categories: [create, config, deploy, launch, migrate, domains]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

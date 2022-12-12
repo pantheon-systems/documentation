@@ -2,7 +2,12 @@
 title: Optimize Your Site for Accessibility
 subtitle: Pantheon Tools
 description: Tools and techniques to improve your website's accessibility.
-categories: [optimize]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [marketing, development]
+product: [--]
+integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"

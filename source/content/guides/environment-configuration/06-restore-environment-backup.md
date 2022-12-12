@@ -2,13 +2,18 @@
 title: Environment Configuration
 subtitle: Restoring an Environment from a Backup
 description: Detailed information on how to safely restore a Drupal or WordPress site backup to any environment.
-categories: [troubleshoot]
 tags: [backup, dashboard, git, webops, workflow]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/restore-environment-backup
 anchorid: restore-environment-backup
+contenttype: [guide]
+categories: [--]
+newcms: [drupal9]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to restore each environment to a backup version.

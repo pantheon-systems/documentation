@@ -3,6 +3,12 @@ title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [alexfornuto, rachelwhitton, carolynshannon]
 reviewed: "2021-02-26"
+contenttype: [doc]
+categories: [overview, help]
+newcms: [drupal, wordpress]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 ---
 <!-- markdownlint-disable -->
 

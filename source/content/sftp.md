@@ -1,9 +1,14 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
 description: Detailed information on how to use SFTP Mode to directly develop your Drupal or WordPress site on Pantheon.
-categories: [develop]
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+contenttype: [doc]
+categories: [sftp, user-authentication, help]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
@@ -217,3 +222,5 @@ source:         APNIC
 ```
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
+
+[Learn more about preventing DNS hijacking](/guides/domains/domain-hijacking).
