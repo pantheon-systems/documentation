@@ -1,9 +1,14 @@
 ---
 title: SERVER_NAME and SERVER_PORT on Pantheon
 description: Learn how to work around SERVER_NAME and SERVER_PORT variables in your Pantheon Website Management Platform environment configuration.
-categories: [platform]
 tags: [site]
 reviewed: "2021-07-19"
+contenttype: [doc]
+categories: [config]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs, either to "call itself" or to create URLs that are passed to third parties and expect to be routed back. This doesn't work well on Pantheon because the environmental data will be for ephemeral container data.
@@ -43,7 +48,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-## Please Also Refer To
+## More Resources
 
 - [Advanced Redirects and Restrictions](/guides/redirect/advanced)
 - [Configuring Settings.php](/guides/php/settings-php)
