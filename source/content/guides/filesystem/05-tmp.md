@@ -1,5 +1,6 @@
 ---
-title: Temporary File Management
+title: Pantheon Filesystem
+subtitle: Temporary File Management
 description: Understand Pantheon's default temporary path and learn how to debug .tmp file errors.
 tags: [cli, code, files]
 contenttype: [doc]
@@ -8,6 +9,11 @@ newcms: [drupal, wordpress]
 audience: [develoment]
 product: [terminus]
 integration: [--]
+contributors: [whitneymeredith]
+layout: guide
+showtoc: true
+permalink: docs/guides/filesystem/tmp
+anchorid: tmp
 ---
 
 <Alert title="Exports" type="export">
@@ -126,7 +132,7 @@ The default temporary path (`$_SERVER['HOME'] . '/tmp'`) is not synchronized acr
 
 It's not common for a plugin, module, or theme to use the temporary path in a way that results in such errors. We suggest reporting the issue to the author and replacing the conflicting plugin, module, or theme whenever possible until a fix is released.
 
-Be aware that temporary files are not cleaned up automatically in the following configuration, which can result in [highly populated directories](/guides/platform-considerations/files-directories/#highly-populated-directories).
+Be aware that temporary files are not cleaned up automatically in the following configuration, which can result in [highly populated directories](/guides/filesystem/large-files).
 
 ### Persistent Temporary Path Workaround
 

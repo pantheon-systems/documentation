@@ -57,5 +57,5 @@ reviewed: ""
 
 **Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory: `sites/default/files/private`.
 
-**Solution:** All files must be moved into `/wp-content/uploads`. For more details, see [Files](/files) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).
+**Solution:** All files must be moved into `/wp-content/uploads`. For more details, see [Files](/guides/filesystem/files) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).
 
