@@ -104,9 +104,9 @@ This can be useful when you have many changes you wish to undo or if it would ot
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
-- PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
+- PHPStorm with [WordPress](/guides/local-development/wordpress-phpstorm) and [Drupal](/guides/local-development/drupal-phpstorm)
 - [WinSCP](/winscp)
-- [Visual Studio Code](/visual-studio-code)
+- [Visual Studio Code](/guides/local-development/visual-studio-code)
 
 ## Troubleshooting
 
@@ -222,3 +222,5 @@ source:         APNIC
 ```
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
+
+[Learn more about preventing DNS hijacking](/guides/domains/domain-hijacking).

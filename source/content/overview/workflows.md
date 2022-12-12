@@ -1,14 +1,13 @@
 ---
 title: Developer Workflow
 description: 
-categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/workflows
 contenttype: [doc]
 categories: [overview]
 newcms: [drupal, wordpress]
-audience: [agency, business, development, marketing]
+audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 ---

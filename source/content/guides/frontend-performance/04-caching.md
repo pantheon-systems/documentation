@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Caching
 description: Caching strategies for improved performance.
 anchorid: caching
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: [guide]
+categories: [cache, optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page includes information on how to improve optimization with caching.

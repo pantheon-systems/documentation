@@ -3,12 +3,17 @@ title: Errors and Server Responses
 subtitle: 4xx Level Errors
 description: Get explanations for 400-level error messages.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/4xx-errors
 anchorid: 4xx-errors
+contenttype: [guide]
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to interpret 4xx errors.
@@ -47,4 +52,4 @@ More specifically, this error occurs when the client (via web browser) successfu
 
 - [Unlock a Site's Environment](/security#unlock-a-sites-environment)
 
-- [Modify the Local Hosts File](/hosts-file)
+- [Modify the Local Hosts File](/guides/domains/hosts-file)

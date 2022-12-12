@@ -16,11 +16,13 @@ product: [--]
 integration: [--]
 ---
 
+This section provides information on how to modify your local `hosts` file.
+
 The `hosts` file exists on all major operating systems. The `hosts` file provides a list of IP addresses and domains that take precedence over DNS assigned values. You can modify your `hosts` file for the following purposes:
 
 - Test domain-specific settings leading up to a migration
 - Test DNS records before updates
-- Help with [local development](/local-development)
+- Help with [local development](/guides/local-development)
 
 <Partial file="_hosts-file.md" />
 

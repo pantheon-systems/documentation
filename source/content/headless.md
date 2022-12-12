@@ -1,9 +1,14 @@
 ---
 title: Running WordPress and Drupal as a Backend API
 description: Learn about headless development models for decoupled architecture on Pantheon.
-categories: [develop]
 tags: [modules, plugins]
 contributors: [eabquina, rachelwhitton]
+contenttype: [doc]
+categories: [api]
+newcms: [drupal, wordpress]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 Pantheon supports running WordPress and Drupal as an API (Application Programming Interface) for the backend of headless sites, which enables the CMS to interact with external frontend applications over HTTP requests.
 

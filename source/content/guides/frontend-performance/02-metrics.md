@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Performance Metrics
 description: Overview of how and what to measure when optimizing your site for performance.
 anchorid: metrics
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,12 @@ permalink: docs/guides/frontend-performance/metrics
 editpath: frontend-performance/02-metrics.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: [guide]
+categories: [measure, optimize]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 There are many different ways to measure page speed and performance. This guide will help you tune your site for the metrics in Google's [Core Web Vitals](https://web.dev/vitals/#core-web-vitals), which focus on three aspects of the user experience—loading, interactivity, and visual stability.

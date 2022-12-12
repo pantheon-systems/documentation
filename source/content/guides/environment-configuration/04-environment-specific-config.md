@@ -3,7 +3,6 @@ title: Environment Configuration
 subtitle: Environment-Specific Configuration for WordPress Sites
 description: Learn how to turn WordPress site plugins on and off based on the environment they are running on.
 cms: "WordPress"
-categories: [develop]
 tags: [workflow]
 reviewed: "2020-08-11"
 contributors: [whitneymeredith]
@@ -11,6 +10,12 @@ layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config
 anchorid: environment-specific-config
+contenttype: [guide]
+categories: [config]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to turn WordPress Site plugins on and off for each environment.

@@ -3,12 +3,17 @@ title: Errors and Server Responses
 subtitle: External Web Service Calls
 description: Learn more about using external web service calls on Pantheon.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/external-web-service-calls
 anchorid: external-web-service-calls
+contenttype: [guide]
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to use external web service calls on Pantheon.
@@ -44,7 +49,7 @@ Even the most reliable web services occasionally experience slowness. Your site 
        $r['timeout'] = 10;
        return $r;
    }
-​
+
    add_action( 'http_api_curl', 'pantheon_http_api_curl', 100, 1 );
    function pantheon_http_api_curl( $handle )
    {
