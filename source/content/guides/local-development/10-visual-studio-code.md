@@ -2,7 +2,12 @@
 title: Local Development on Pantheon
 subtitle: Configuring Visual Studio Code for Pantheon
 description: Develop your Pantheon site locally using Visual Studio Code to edit and sync code.
-categories: [develop]
+contenttype: [guide]
+categories: [automate]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: []
 tags: [code, collaborate, git, local, sftp]
 contributors: [sarahg, alexfornuto]
 reviewed: "2019-10-16"

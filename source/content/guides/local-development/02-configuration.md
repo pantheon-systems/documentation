@@ -2,7 +2,12 @@
 title: Local Development on Pantheon
 subtitle: Local Development Configuration
 description: Configure your machine for local development with Pantheon.
-categories: [develop]
+contenttype: [guide]
+categories: [automate]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: []
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 contributors: [whitneymeredith]
