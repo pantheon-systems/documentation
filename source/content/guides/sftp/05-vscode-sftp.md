@@ -1,7 +1,7 @@
 ---
 title: SFTP on Pantheon
 subtitle: Visual Studio Code SFTP Extension
-description: Learn how to upload changes with Visual Studio Code's SFTP extension.
+description: Learn how to upload local changes with Visual Studio Code's SFTP extension.
 tags: [files, sftp, rsync]
 categories: [sftp]
 newcms: [drupal, wordpress]
@@ -30,9 +30,9 @@ This section provides information on how to upload local changes in Visual Studi
 
 ### Upload your Changes with SFTP
 
-The SFTP extension for VS Code allows developers to upload code to the Pantheon Dev or Multidev environment directly from VS Code, as well as download files from the Pantheon servers.
+The SFTP extension for VS Code allows you to upload code to the Pantheon Dev or Multidev environment directly from VS Code, as well as download files from the Pantheon servers to your local machine.
 
-1. Make sure your site is in [SFTP mode](/sftp#sftp-mode) before uploading code via SFTP.
+1. Verify that your site is in [SFTP mode](/sftp#sftp-mode) before uploading code via SFTP.
 
 1. Install the VS Code [SFTP Extension](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp).
 
@@ -51,7 +51,7 @@ The SFTP extension for VS Code allows developers to upload code to the Pantheon 
   }
   ```
 
-1. Include the path to your [SSH Key](/ssh-keys) if you have one added to your Pantheon account:
+1. Include the path to your [SSH Key](/ssh-keys) if you have one added to your Pantheon account. If you aren't using a key, you'll be prompted to enter a password when using SFTP. Refer [Dashboard Credentials](/sftp#dashboard-credentials) for more information.
 
   ```json:title=sftp.json
   {
@@ -67,11 +67,13 @@ The SFTP extension for VS Code allows developers to upload code to the Pantheon 
   }
   ```
 
-  If you aren't using a key, you'll be prompted to enter a password when using SFTP. See [Dashboard Credentials](/sftp#dashboard-credentials) for more information.
-
   <Alert title="Warning" type="danger">
 
-  You must convert your key to PEM format: `Error while signing data with privateKey: error:06000066:public key routines:OPENSSL_internal:DECODE_ERROR` if you use an RSA key and get the following error:
+  You must convert your key to PEM format if you use an RSA key and get the following error:
+
+  `Error while signing data with privateKey: error:06000066:public key routines:OPENSSL_internal:DECODE_ERROR`
+
+  Run the code below to convert your key:
 
   ```bash
   ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
