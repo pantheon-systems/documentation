@@ -2,9 +2,14 @@
 title: Use an Empty Upstream to Host a Static Site on Pantheon
 description: How to create a static site using an empty Upstream on Pantheon.
 contributors: [michellecolon-pantheon, kyletaylored]
-categories: [get-started]
 tags: [upstreams, site]
 reviewed: "2021-08-12"
+contenttype: [doc]
+categories: [create]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstreams]
+integration: [upstreams]
 ---
 
 Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.

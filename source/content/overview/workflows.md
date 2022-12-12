@@ -4,10 +4,10 @@ description:
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/workflows
-contenttype: [guide]
+contenttype: [doc]
 categories: [overview]
-newcms: [--]
-audience: [sysadmin]
+newcms: [drupal, wordpress]
+audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 ---
