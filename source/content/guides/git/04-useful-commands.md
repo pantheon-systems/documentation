@@ -8,6 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/git/useful-commands
 anchorid: useful-commands
+contenttype: [guide]
 categories: [git]
 newcms: [drupal, wordpress]
 audience: [development]

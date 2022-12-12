@@ -2,7 +2,12 @@
 title: Accessibility Guide
 subtitle: Overview
 description: How to extend your site's reach with accessibility planning, fixes, and reporting.
-categories: [optimize]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [marketing, development]
+product: [--]
+integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"

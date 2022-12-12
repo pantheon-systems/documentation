@@ -2,7 +2,6 @@
 title: "Billing"
 subtitle: Troubleshooting
 description: Learn how to troubleshoot payment issues.
-categories: [account-mgmt]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,12 @@ permalink: docs/guides/account-mgmt/billing/troubleshooting
 anchorid: troubleshooting
 editpath: docs/guides/account-mgmt/billing/11-troubleshooting.md
 reviewed: "2022-09-19"
+contenttype: [guide]
+categories: [billing]
+newcms: [--]
+audience: [business]
+product: [--]
+integration: [--]
 ---
 
 ## Declined Payment Methods

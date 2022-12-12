@@ -8,6 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/git/resolve-merge-conflicts
 anchorid: resolve-merge-conflicts
+contenttype: [guide]
 categories: [git]
 newcms: [drupal, wordpress]
 audience: [development]

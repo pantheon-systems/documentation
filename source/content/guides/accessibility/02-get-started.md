@@ -2,7 +2,12 @@
 title: Optimize Your Site for Accessibility
 subtitle: Getting Started
 description: How to integrate accessibility into new site builds, and audit existing sites.
-categories: [optimize]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [marketing, development]
+product: [--]
+integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
 reviewed: "2022-06-01"

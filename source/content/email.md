@@ -1,7 +1,12 @@
 ---
 title: CMS Email Service on Pantheon
 description: Detailed information on configuring a third-party outgoing email service for your Pantheon Drupal or WordPress site.
-categories: [platform]
+contenttype: [doc]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [email]
 reviewed: "2022-08-03"
 ---
