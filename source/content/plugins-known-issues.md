@@ -450,9 +450,9 @@ ___
 
 <ReviewDate date="2022-12-12" />
 
-**Issue:** When using the [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/), the Site suddenly shows a white screen of death.
+**Issue:** When using the [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/), the Site suddenly shows a white screen of death in git mode or in test/live environment because of the default cache location wp-content/cache is not writable in Pantheon.
 
-**Solution:** The default cache path for this plugin is wp-content/cache as of version [3.2.2](https://github.com/peixotorms/fast-velocity-minify/commit/c267c0bddfd9aaac9bf2015ad34b7ddd75b0c88d). 
+**Solution 1:** The default cache path for this plugin is wp-content/cache as of version [3.2.2](https://github.com/peixotorms/fast-velocity-minify/commit/c267c0bddfd9aaac9bf2015ad34b7ddd75b0c88d). 
 
 Create a symlink for `wp-content/cache` in the wp-content directory and then run the following line of code:
 
@@ -464,6 +464,13 @@ Refer to the documentation on [Using Extensions That Assume Write Access](/symli
 
 Prior version has an option in the Fast Velocity Minify's Settings tab for the **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/guides/object-cache/redis-command-line#clear-cache). 
 
+**Solution 2:** As of version 3.3.3, the `FVM_CACHE_DIR` & `FVM_CACHE_URL` variables are now available to override the cache location to address this [bug](https://github.com/peixotorms/fast-velocity-minify/issues/7). You can add the example configuration in the `wp-config.php` file to :
+
+
+```
+define( 'FVM_CACHE_DIR', '/code/wp-content/uploads' );
+define( 'FVM_CACHE_URL', WP_SITEURL . '/code/wp-content/uploads' );
+```
 
 ___
 
