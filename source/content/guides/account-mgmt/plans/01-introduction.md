@@ -2,7 +2,6 @@
 title: "Plans"
 subtitle: Introduction
 description: Learn about Pantheon's site plans.
-categories: [account-mgmt]
 tags: [plans]
 contributors: [wordsmither]
 layout: guide
@@ -10,6 +9,12 @@ permalink: docs/guides/account-mgmt/plans
 anchorid: plans
 editpath: docs/guides/account-mgmt/plans/01-introduction.md
 reviewed: "2022-09-19"
+contenttype: [guide]
+categories: [plans]
+newcms: [--]
+audience: [sysadmin]
+product: [--]
+integration: [--]
 ---
 Pantheon offers a variety of plans to suit your needs. This section will cover pricing, how to purchase plans, and how to manage your plan.
 

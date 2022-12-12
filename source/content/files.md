@@ -1,7 +1,12 @@
 ---
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
-categories: [platform]
+contenttype: [doc]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, files]
 reviewed: "2021-07-14"
 ---

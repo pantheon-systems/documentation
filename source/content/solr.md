@@ -3,6 +3,7 @@ title: Pantheon Search (formerly Pantheon Solr)
 description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
 tags: [solr,search]
 reviewed: "2021-08-05"
+contenttype: [doc]
 categories: [domains, overview]
 newcms: [drupal, wordpress]
 audience: [agency, development]

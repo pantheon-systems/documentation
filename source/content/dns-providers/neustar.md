@@ -3,7 +3,12 @@ title: Neustar UltraDNS Domain Configuration
 provider: Neustar UltraDNS
 dnsprovider: true
 description: Learn how to point your Neustar UltraDNS domain to a Pantheon site.
-categories: [go-live]
+contenttype: [doc]
+categories: [dns]
+newcms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 tags: [dns]
 draft: true
 permalink: docs/:basename

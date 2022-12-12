@@ -2,7 +2,12 @@
 title: Optimize Your Site for Accessibility
 subtitle: Best Practices
 description: Best practices when building an accessible site.
-categories: [optimize]
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [marketing, development]
+product: [--]
+integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
