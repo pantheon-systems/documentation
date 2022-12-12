@@ -3,7 +3,12 @@ title: Local Development on Pantheon
 subtitle: Install and Configure Lando for WordPress
 description: Install and configure Lando for WordPress local development.
 contributors: [digisavvy]
-categories: [develop]
+contenttype: [guide]
+categories: [automate]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: []
 tags: [code, iterate, lando, local, webops]
 layout: guide
 showtoc: true
