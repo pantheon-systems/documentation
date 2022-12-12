@@ -2,13 +2,18 @@
 title: Fastly on Pantheon
 subtitle: Integrate Your Fastly Account on Pantheon with Splunk
 description: Learn how to use Splunk with your Fastly account on Pantheon.
-categories: [develop]
 tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-splunk
 anchorid: fastly-splunk
+contenttype: [guide]
+categories: [--]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [fastly]
 ---
 
 This section provides steps on how to use [Splunk](https://www.splunk.com/) as a logging endpoint with your Pantheon account. You can do this either through a Fastly account connected to Pantheon, or by manually uploading your Pantheon logs to Splunk.

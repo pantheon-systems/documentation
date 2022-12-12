@@ -2,7 +2,6 @@
 title: Legacy Dashboard
 subtitle: Metrics in the Site Dashboard
 description: Measure your site's traffic with the Metrics tool, found in the Live environment of the Site Dashboard.
-categories: [platform]
 tags: [billing, dashboard, measure, traffic]
 layout: guide
 showtoc: true
@@ -10,6 +9,12 @@ reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/metrics
 anchorid: metrics
 editpath: legacy-dashboard/06-metrics-site-dashboard.md
+contenttype: [guide]
+categories: [measure, dashboard]
+newcms: [wordpress, drupal]
+audience: [agency, business]
+product: [dashboard]
+integration: [--]
 ---
 
 Access Metrics through the Live tab of the Site Dashboard once a [Live environment has been initialized](/guides/quickstart/create-test-live). The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. The Site Dashboard also includes other information you may use to project future traffic, including number of pages served.

@@ -2,12 +2,17 @@
 title: Launch Essentials
 subtitle: Configure DNS and Provision HTTPS
 description: Configure your DNS records and provision HTTPS.
-categories: [go-live]
 tags: [dns, https, launch, webops]
 layout: guide
 showtoc: true
 permalink: docs/guides/launch/configure-dns/
 anchorid: configure-dns
+contenttype: [guide]
+categories: [config, launch]
+newcms: [wordpress, drupal]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to configure DNS and provision [free, automated HTTPS](/guides/global-cdn/https) on Pantheon.

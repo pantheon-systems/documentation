@@ -2,13 +2,18 @@
 title: Environment Configuration
 subtitle: Reading Pantheon Environment Configuration
 description: Learn about the separation of configuration and code within Pantheon's runtime container environment.
-categories: [platform]
 tags: [code, database, files, redis]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/read-environment-config
 anchorid: read-environment-config
+contenttype: [guide]
+categories: [config]
+newcms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to use database credentials for Object Cache (Redis) authentication.

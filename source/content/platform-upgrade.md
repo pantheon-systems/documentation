@@ -1,9 +1,15 @@
 ---
 title: Deployment Infrastructure Upgrade
 description: Details on the current infrastructure upgrade.
-categories: [platform]
 tags: [dashboard, updates]
+contenttype: [doc]
+categories: [deploy]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
+
 If your site dashboard displays the following **Deployment Infrastructure Upgrade** notice, we recommend waiting to make code changes until maintenance completes:
 
 ![deployment infrastructure upgrade](../images/upgrade-notice.png)

@@ -1,10 +1,15 @@
 ---
 title: Serving Sites from the Web Subdirectory
 description: Learn how to create and use a nested docroot to serve your Pantheon site.
-categories: [platform]
 tags: [code, site, terminus, workflow]
 contributors:
  - ataylorme
+contenttype: [doc]
+categories: [git, dashboard]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (for example `code/web`).

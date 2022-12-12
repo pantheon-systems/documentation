@@ -2,12 +2,17 @@
 title: Pantheon WordPress Upstream
 description: Release notes and customizations to the Pantheon WordPress Upstream
 cms: "wordpress"
-categories: [platform]
 tags: [code, site, upstreams]
 showtoc: true
 permalink: docs/start-states/wordpress
 editpath: start-states/wordpress.md/
 reviewed: "2022-06-01"
+contenttype: [doc]
+categories: [overview]
+newcms: [wordpress]
+audience: [agency, business, development]
+product: [custom-upstream]
+integration: [--]
 ---
 
 For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-systems/WordPress) follows [WordPress core](https://wordpress.org/news/category/releases/) one-to-one. This document is intended to provide further context to platform-specific changes in Pantheon's WordPress upstream.

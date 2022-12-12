@@ -3,12 +3,17 @@ title: Errors and Server Responses
 subtitle: 5xx Level Errors
 description: Get explanations for 500-level error messages.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/5xx-errors
 anchorid: 5xx-errors
+contenttype: [guide]
+categories: [--]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to interpret 5xx errors.

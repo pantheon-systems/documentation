@@ -188,6 +188,8 @@ After enabling Redis, there are cache tables in the database that are no longer 
 
 <Tab title="Drupal 9 / Composer-managed" id="d9-install">
 
+1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, then select **Add** to enable the Redis cache server. It might take a couple of minutes for the Redis server to come online.
+
 1. Clone the code repository and run the following from the project root:
 
    ```shell{promptUser: user}

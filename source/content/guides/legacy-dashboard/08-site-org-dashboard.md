@@ -2,7 +2,6 @@
 title: Legacy Dashboard
 subtitle: Managing Sites and Teams with the Pantheon Organization Dashboard
 description: Detailed information on how to add users and sites to your organization.
-categories: [platform]
 tags: [agencies, collaborate, dashboard, organizations, teams]
 contributors: [whitneymeredith]
 layout: guide
@@ -11,6 +10,12 @@ reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/org-dashboard
 anchorid: org-dashboard
 editpath: legacy-dashboard/08-site-org-dashboard.md
+contenttype: [guide]
+categories: [organizations, dashboard]
+newcms: [wordpress, drupal]
+audience: [agency, business]
+product: [dashboard]
+integration: [--]
 ---
 
 The Organization Dashboard is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
