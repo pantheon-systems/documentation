@@ -1,7 +1,7 @@
 ---
 title: SFTP on Pantheon
 subtitle: Large File Transfers with rsync and SFTP
-description: Transfer large files using an SFTP client or rsync using Drupal or WordPress for Pantheon.
+description: Transfer large files using an SFTP client or rsync.
 tags: [files, sftp, rsync]
 categories: [sftp]
 newcms: [drupal, wordpress]
@@ -18,7 +18,10 @@ This section provides information on how to use your SFTP client or rsync to tra
 
 ## File Size Limits
 
-You can't use your Pantheon Dashboard to import files over 500 MB. You must use an SFTP client or rsync to transfer files larger than 500 MB to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress).
+You can't use your Pantheon Dashboard to import files over 500 MB. You must use an SFTP client or rsync to transfer files larger than 500 MB to your `/files` directory.
+
+- **Drupal:** (`sites/default/files`
+- **WordPress:** `wp-content/uploads`
 
 An SFTP client or rsync allows you to transfer unlimited data server-to-server, which is faster than transferring from your workstation. Files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
@@ -44,7 +47,7 @@ There are a number of GUI SFTP clients available, such as [WinSCP](https://winsc
 
     <Alert title="Note" type="info">
 
-    You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and must be lower case (e.g., dev, test, live).
+    You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and must be lower case (for example, dev, test, live).
 
     </Alert>
 
@@ -66,7 +69,7 @@ rsync is an advanced tool that requires experience with the command line. You ca
 
 <Alert title="Note" type="info">
 
-Regardless of your framework (WordPress or Drupal(), your files must be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot).
+Your files must be in the `/files` directory for both Drupal and WordPress sites. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (for example, `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot).
 
 </Alert>
 
@@ -89,15 +92,15 @@ Regardless of your framework (WordPress or Drupal(), your files must be in the `
     rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
 
 
-    # -r: Recurse into subdirectories
-    # -v: Verbose output
-    # -l: copies symlinks as symlinks
-    # -L: transforms symlinks into files.
-    # -z: Compress during transfer
-    # --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
-    # Other rsync flags may or may not be supported
-    # (-a, -p, -o, -g, -D, etc are not).
-    ```
+        # -r: Recurse into subdirectories
+        # -v: Verbose output
+        # -l: copies symlinks as symlinks
+        # -L: transforms symlinks into files.
+        # -z: Compress during transfer
+        # --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
+        # Other rsync flags may or may not be supported
+        # (-a, -p, -o, -g, -D, etc are not).
+        ```
 
 ## Examples
 
@@ -150,7 +153,7 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE
 
 ### Upload a Directory to Pantheon
 
-If you need to upload the file directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the command below. If you are migrating a site or otherwise overwriting an existing site, remove `--ignore-existing` before running the command.
+If you need to upload the file directory from a local installation called *Foo* in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the command below. If you are migrating a site or otherwise overwriting an existing site, remove `--ignore-existing` before running the command.
 
 <Alert title="Warning" type="danger">
 
@@ -165,7 +168,7 @@ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
 ### Upload a Single File to Pantheon
 
-This example shows how to upload the logo.png file into a Pantheon site's theme folder.
+This example shows how to upload the `logo.png` file into a Pantheon site's theme folder.
 
 ```bash{promptUser: user}
 rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
@@ -173,9 +176,9 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/Foo/site
 
 ### Empty a Folder Recursively Using rsync
 
-Since the `rm -r` command is not available over SFTP on Pantheon, an alternative way to recursively empty a folder is to use the rsync `--delete` flag. This example shows how to empty the remote folder `files/remote_folder_to_empty` (change this to match the remote directory you want to empty).
+The `rm -r` command is not available over SFTP on Pantheon. An alternative way to recursively empty a folder is to use the rsync `--delete` flag. This example shows how to empty the remote folder `files/remote_folder_to_empty` (change this to match the remote directory you want to empty).
 
-On your local machine, you must first create an empty folder with `mkdir empty_folder`. The folder can be named anything, as long as it's empty.
+Create an empty folder with `mkdir empty_folder` on your local machine. The folder can be named anything, as long as it's empty.
 
 ```bash{outputLines:3}
 export ENV=env # Replace with the site environment, usually dev, test, or live
@@ -188,7 +191,7 @@ Now you can use `rmdir` over SFTP to remove the empty directory itself.
 
 ## Known Issues
 
-Uploading a large amount of files into a multi-container Live environment may fail silently.Follow the steps below if you're uploading many files, and your Live environment has [multiple application containers](/application-containers/#multiple-application-containers).
+Uploading a large number of files into a multi-container Live environment may fail silently. Follow the steps below if you're uploading many files, and your Live environment has [multiple application containers](/application-containers/#multiple-application-containers).
 
 1. Upload to an environment other than Live (for example, Dev).
 
