@@ -1,15 +1,15 @@
 ---
-title: Migrate a Site That Was Created with Build Tools to Drupal 9
+title: Migrate a Site That Was Created with Build Tools to Drupal:latest
 subtitle: Upgrade Site Components Locally
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-9-hosted-createbt/upgrade
 anchorid: upgrade
-editpath: drupal-9/drupal-9-hosted-createbt/05-upgrade.md
+editpath: drupal-latest/drupal-latest-hosted-createbt/05-upgrade.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git, update]

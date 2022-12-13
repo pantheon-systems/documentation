@@ -2,12 +2,11 @@
 title: Test Custom Upstream Changes
 subtitle: Test Custom Upstream Changes Before Release
 description: Create a test version of your Custom Upstream to review changes.
-tags: [upstreams, workflow, webops]
+tags: [upstreams, workflow, webops, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/test-custom-upstream
 contributors: [--]
-reviewed: ""
 anchorid: test-custom-upstream
 contenttype: [guide]
 categories: [git, test, updates]

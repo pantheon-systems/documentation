@@ -1,8 +1,8 @@
 ---
-title: Migrate a Custom Upstream to Drupal 9
+title: Migrate a Custom Upstream to Drupal:latest
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide

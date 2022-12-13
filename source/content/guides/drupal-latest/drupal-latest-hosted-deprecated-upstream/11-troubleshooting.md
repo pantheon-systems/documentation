@@ -1,19 +1,19 @@
 ---
-title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal 9
+title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal:latest
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-deprecated-upstream/troubleshooting
+permalink: docs/guides/drupal-latest-hosted-deprecated-upstream/troubleshooting
 anchorid: troubleshooting
-editpath: drupal-9/drupal-9-hosted-deprecated-upstream/11-troubleshooting.md
+editpath: drupal-latest/drupal-latest-hosted-deprecated-upstream/11-troubleshooting.md
 contenttype: [guide]
 categories: [help, migrate]
-newcms: [drupal9, drupal]
+newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: []
 integration: []

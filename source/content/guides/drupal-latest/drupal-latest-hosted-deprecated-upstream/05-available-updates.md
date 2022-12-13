@@ -1,18 +1,18 @@
 ---
-title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal 9
+title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal:latest
 subtitle: Apply All Available Upstream Updates
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-deprecated-upstream/available-updates
+permalink: docs/guides/drupal-latest-hosted-deprecated-upstream/available-updates
 anchorid: available-updates
-editpath: drupal-9/drupal-9-hosted-deprecated-upstream/05-available-updates.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-deprecated-upstream/05-available-updates.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [update]
-newcms: [drupal9, drupal]
+newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [terminus, dashboard]
 integration: []

@@ -2,15 +2,15 @@
 title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-createempty-md/composer-upstream
+permalink: docs/guides/drupal-latest-hosted-createempty-md/composer-upstream
 anchorid: composer-upstream
-editpath: drupal-9/drupal-9-hosted-createempty-md/05-composer-upstream.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-createempty-md/05-composer-upstream.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
 newcms: [drupal9]
@@ -44,7 +44,7 @@ To minimize issues, make the codebase changes in a new branch:
 
 Set the Drupal core version to ensure the site remains on Drupal 8, for now:
 
-<Partial file="drupal-9/core-version-remain-on-d8.md" />
+<Partial file="drupal-latest/core-version-remain-on-d8.md" />
 
 ## Add Upgrade Status Module
 

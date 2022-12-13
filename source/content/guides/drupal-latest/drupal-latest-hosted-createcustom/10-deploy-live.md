@@ -1,21 +1,21 @@
 ---
-title: Migrate a Custom Upstream to Drupal 9
+title: Migrate a Custom Upstream to Drupal:latest
 subtitle: Deploy to Live
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-createcustom/deploy-live
+permalink: docs/guides/drupal-latest-hosted-createcustom/deploy-live
 anchorid: deploy-live
-editpath: drupal-9/drupal-9-hosted-createcustom/10-deploy-live.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-createcustom/10-deploy-live.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [development]
 product: [ddashboard, custom-upstreams]
 integration: [--]
 ---
 
-<Partial file="drupal-9/deploy-live.md" />
+<Partial file="drupal-latest/deploy-live.md" />

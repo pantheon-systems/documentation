@@ -1,19 +1,19 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal:latest
 subtitle: Prepare
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-createdashboard-set8/prepare
+permalink: docs/guides/drupal-latest-hosted-createdashboard-set8/prepare
 anchorid: prepare
-editpath: drupal-9-hosted-createdashboard-set8/03-prepare.md
-reviewed: "2021-03-31"
+editpath: drupal-latest-hosted-createdashboard-set8/03-prepare.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal9]
+newcms: [drupal9, drupal8, drupal, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [--]
@@ -60,7 +60,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
+<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
 
 ### Apply All Available Upstream Updates
 

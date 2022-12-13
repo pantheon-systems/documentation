@@ -1,15 +1,15 @@
 ---
-title: Migrate a Site That Was Created with Build Tools to Drupal 9
+title: Migrate a Site That Was Created with Build Tools to Drupal:latest
 subtitle: Prepare
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-latest-hosted-createbt/prepare
 anchorid: prepare
-editpath: drupal-9/drupal-latest-hosted-createbt/03-prepare.md
+editpath: drupal-latest/drupal-latest-hosted-createbt/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]

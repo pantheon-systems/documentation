@@ -1,26 +1,26 @@
 ---
-title: Migrate a Drupal 9 Site from Another Platform
+title: Migrate a Drupal:latest Site from Another Platform
 subtitle: Prepare Your Site for Migration
 description: Get your local environment and the existing site ready.
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-unhosted/prepare
+permalink: docs/guides/drupal-latest-unhosted/prepare
 anchorid: prepare
-editpath: drupal-9/drupal-9-unhosted/03-prepare.md
+editpath: drupal-latest/drupal-latest-unhosted/03-prepare.md
 contenttype: [guide]
 categories: [migrate]
-newcms: [drupal9]
+newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2021-05-13"
+reviewed: "2022-12-13"
 ---
 
 It's important to prepare your site before you begin the migration process. Complete the steps outlined below to ensure that your site is prepared for migration to Pantheon's platform.
 
-1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
+1. <Partial file="drupal-latest/prepare-local-environment-no-clone-no-alias.md" />
 
 1. Get a local copy of both your new Pantheon site and your existing codebase.
 
