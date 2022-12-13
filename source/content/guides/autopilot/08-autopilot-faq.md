@@ -52,6 +52,14 @@ Autopilot does not use Drush when updating an Integrated Composer site; you can 
 
 Not yet.
 
+## Where do my updates go if I select the Do Not Deploy destination option?
+
+Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location. Refer to [Update Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information.
+
+## Can I stop updates at the Multidev?
+
+Yes. You must select the Do Not Deploy option under Destination & Frequency. This stops updates at the Autopilot Multidev. Your updates will be tested but not deployed to any environment if you select this option. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
+
 ## Does Autopilot automatically deploy changes to the Live environment?
 
 You can specify the environments to which Autopilot deploys. See the [configuration options](/guides/autopilot/enable-autopilot).

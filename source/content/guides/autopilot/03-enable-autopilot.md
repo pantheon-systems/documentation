@@ -30,7 +30,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
-1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table. 
+1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table.
 
    To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
 
@@ -40,7 +40,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
    ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
 
-1. Select the deployment destination: Dev, Test, or Live.
+1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />.
 
    <Alert title="Note"  type="info" >
 
@@ -58,7 +58,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 1. Use the **On**/**Off** toggles to choose which features and elements should be tracked or excluded from updates.
 
-   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes). 
+   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes).
 
 1. Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
 
@@ -73,6 +73,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
     - Dev
     - Test
     - Live
+    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -120,7 +121,13 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 ### Update Destination & Frequency
 
-You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. 
+You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Deployment options are:
+
+- Dev
+- Test
+- Live
+- Do Not Deploy
+   - Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
 
 Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
 
@@ -132,6 +139,7 @@ Some selection options are grayed out for customers with Gold plans. Only custom
     - Dev
     - Test
     - Live
+    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
