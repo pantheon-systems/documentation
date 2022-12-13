@@ -26,49 +26,25 @@ Drupal 10 is coming in December 2022! This page will be updated frequently with 
 
 ## Update a Drupal 9 Site to Drupal 10
 
-To update from version 9 to 10:
+1. If you are not already using PHP 8.1, go to your dashboard and see if the update is available.  If it is, install the update to PHP 8.1.  
 
-1. If you are not already using PHP 8.1, go to your dashboard and install the update to PHP 8.1.
+   If you don't see the update, see [Upgrade PHP Versions](https://pantheon.io/docs/guides/php/php-versions) for instructions on updating your PHP version.
 
 1. Run [Drupal's Upgrade Status](https://www.drupal.org/project/upgrade_status).
 
 1. Use [Composer to update](/guides/upgrade-drupal-8-ic-to-drupal-9#set-drupal-core-version) to Drupal 10.  See the [Drupal release-specific documentation](https://www.drupal.org/project/drupal/releases) for more details.
 
-
-
 ## Create a Drupal 10 Site
-
-<Alert title="Note" type="info" >
-
-These instructions were developed using release candidate versions of Drupal 10.  This page will be updated as production versions become available.
-
-</Alert>
-
-### Before You Begin
 
 1. Create a new Drupal site using the ["Drupal with Composer" CMS/Start State](/guides/quickstart/create-new-site/).
 
 1. [Clone the site](/guides/git/git-config#clone-your-site-codebase) locally with Git.
 
-1. Add the following line to `pantheon.yml`:
-
-   ```yaml:title=pantheon.yml
-   php_version: 8.1
-   ```
-
-1. Commit and push the change:
-
-   ```bash{promptUser: user}
-   git commit -am "PHP 8.1"; git push;
-   ```
-
-### Create the Site
-
-To create a new Drupal 10 site, run the following commands:
+1. Run the following commands:
 
 ```bash{promptUser: user}
-composer config minimum-stability beta
-git commit -am "composer config minimum-stability beta"
+composer config minimum-stability rc
+git commit -am "composer config minimum-stability rc"
 composer config platform.php 8.1
 git commit -am "composer config platform.php 8.1"
 composer config allow-plugins.phpstan/extension-installer true
