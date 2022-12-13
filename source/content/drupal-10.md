@@ -42,20 +42,20 @@ Drupal 10 is coming in December 2022! This page will be updated frequently with 
 
 1. Run the following commands:
 
-```bash{promptUser: user}
-composer config minimum-stability rc
-git commit -am "composer config minimum-stability rc"
-composer config platform.php 8.1
-git commit -am "composer config platform.php 8.1"
-composer config allow-plugins.phpstan/extension-installer true
-git commit -am "composer config allow-plugins.phpstan/extension-installer true"
-composer require --no-update --dev drupal/core-dev:^10
-composer require --no-update drupal/core-composer-scaffold:^10
-composer require --no-update pantheon-systems/drupal-integrations:^10
-composer require --no-update drupal/core-recommended:^10
-composer update
-git commit -am "Update to Drupal 10"
-```
+   ```bash{promptUser: user}
+   composer config minimum-stability rc
+   git commit -am "composer config minimum-stability rc"
+   composer config platform.php 8.1
+   git commit -am "composer config platform.php 8.1"
+   composer config allow-plugins.phpstan/extension-installer true
+   git commit -am "composer config allow-plugins.phpstan/extension-installer true"
+   composer require --no-update --dev drupal/core-dev:^10
+   composer require --no-update drupal/core-composer-scaffold:^10
+   composer require --no-update pantheon-systems/drupal-integrations:^10
+   composer require --no-update drupal/core-recommended:^10
+   composer update
+   git commit -am "Update to Drupal 10"
+   ```
 
 ## FAQ
 
