@@ -1,7 +1,7 @@
 ---
 title: Pantheon Filesystem
 subtitle: Batch Files
-description: Detailed information on how to access and optimize the Pantheon filesystem.
+description: Learn how to upload and export batch files.
 contenttype: [guide]
 contributors: [whitneymeredith]
 layout: guide
