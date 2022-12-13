@@ -1,18 +1,18 @@
 ---
-title: Migrate a Composer Managed Drupal 9 Site from Another Platform
+title: Migrate a Composer Managed Drupal:latest Site from Another Platform
 subtitle: Add Your Database
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates, composer]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-unhosted-composer/database
+permalink: docs/guides/drupal-latest-unhosted-composer/database
 anchorid: database
-editpath: drupal-9/drupal-9-unhosted-composer/09-database.md
-reviewed: "2021-05-09"
+editpath: drupal-latest/drupal-latest-unhosted-composer/09-database.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [database]
-newcms: [drupal9]
+newcms: [drupal9, drupal8, drupal, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

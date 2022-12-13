@@ -1,19 +1,19 @@
 ---
-title: Migrate a Composer Managed Drupal 9 Site from Another Platform
+title: Migrate a Composer Managed Drupal:latest Site from Another Platform
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates, composer]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-unhosted-composer/contrib-custom
+permalink: docs/guides/drupal-latest-unhosted-composer/contrib-custom
 anchorid: contrib-custom
-editpath: drupal-9/drupal-9-unhosted-composer/05-contrib-custom.md
-reviewed: "2021-05-09"
+editpath: drupal-latest/drupal-latest-unhosted-composer/05-contrib-custom.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, config]
-newcms: [drupal9]
+newcms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [composer]
 integration: [--]
