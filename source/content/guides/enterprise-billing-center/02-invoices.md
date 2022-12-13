@@ -27,37 +27,15 @@ You must have Admin privileges of the workspace to view invoices. Note that acce
 
 ## Filter the Invoice
 
-You can filter the filter the invoice by specific information.
+You can filter the filter the invoice by Year.
 
-Click the **Filter by** drop-down menus to sort by:
-
-- Specific Owner
-
-- All Owners
-
-- Previous Site Plan
-
-- Current Site Plan
-
-You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by:
-
-- Site Name
-
-- Site Owner
-
-- Previous Site Plan
-
-- Current Site Plan
-
-- Previous Invoice Date
-
-- Current Invoice Date
+Click the **Filter by** drop-down menus to sort by Year.
 
 ## Search the Invoice
 
-You can search the invoice by a specific name, key word, or ID.
+You can search the invoice by invoice number.
 
-Enter the specific information you want to search for in the **search box**.
+Enter the invoice number you want to search for in the **search box**.
 
 ## More Resources
 
