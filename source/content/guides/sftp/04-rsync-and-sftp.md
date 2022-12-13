@@ -20,7 +20,7 @@ This section provides information on how to use your SFTP client or rsync to tra
 
 You can't use your Pantheon Dashboard to import files over 500 MB. You must use an SFTP client or rsync to transfer files larger than 500 MB to your `/files` directory.
 
-- **Drupal:** (`sites/default/files`
+- **Drupal:** `sites/default/files`
 - **WordPress:** `wp-content/uploads`
 
 An SFTP client or rsync allows you to transfer unlimited data server-to-server, which is faster than transferring from your workstation. Files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
@@ -153,7 +153,7 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE
 
 ### Upload a Directory to Pantheon
 
-If you need to upload the file directory from a local installation called *Foo* in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the command below. If you are migrating a site or otherwise overwriting an existing site, remove `--ignore-existing` before running the command.
+If you need to upload the file directory from a local installation called *Foo* in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the command below. If you are migrating a site or otherwise overwriting an existing site, remove `--ignore-existing` before running the command from the code example below.
 
 <Alert title="Warning" type="danger">
 
