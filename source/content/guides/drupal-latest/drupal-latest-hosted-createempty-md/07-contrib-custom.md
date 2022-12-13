@@ -3,17 +3,17 @@ title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
 subtitle: Add Contrib and Custom Code
 description: 
 cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-createempty-md/contrib-custom
+permalink: docs/guides/drupal-latest-hosted-createempty-md/contrib-custom
 anchorid: contrib-custom
-editpath: drupal-9/drupal-9-hosted-createempty-md/07-contrib-custom.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-createempty-md/07-contrib-custom.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, druapl10]
 audience: [agency, development]
 product: [--]
 integration: [--]
@@ -81,8 +81,8 @@ Next, manually copy custom code from the existing site repository to the Compose
 
 ### Modules and Themes
 
-<Partial file="drupal-9/custom-modules-themes.md" />
+<Partial file="drupal-latest/custom-modules-themes.md" />
 
 ### settings.php
 
-<Partial file="drupal-9/custom-settings.md" />
+<Partial file="drupal-latest/custom-settings.md" />

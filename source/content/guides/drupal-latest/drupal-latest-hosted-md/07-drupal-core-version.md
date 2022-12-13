@@ -1,18 +1,18 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal 9 Using Multidev
+title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
 subtitle: Set Drupal Core Version
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-md/drupal-core-version
+permalink: docs/guides/drupal-latest-hosted-md/drupal-core-version
 anchorid: drupal-core-version
-editpath: drupal-9/drupal-9-hosted-md/07-drupal-core-version.md
-reviewed: "2022-05-03"
+editpath: drupal-latest/drupal-latest-hosted-md/07-drupal-core-version.md
+reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate]
-newcms: [drupal8, drupal9, drupal]
+newcms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [composer]
 integration: [--]
@@ -20,4 +20,4 @@ integration: [--]
 
 Change your core version to Drupal 9 now that you've confirmed that your core dependencies are Drupal 9 compatible.
 
-<Partial file="drupal-9/core-version.md" />
+<Partial file="drupal-latest/core-version.md" />

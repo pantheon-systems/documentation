@@ -2,7 +2,7 @@
 title: Edit an Existing Custom Upstream
 subtitle: Edit an Existing Custom Upstream
 description: Learn how to edit your Custom Upstream settings.
-tags: [upstreams, workflow, webops]
+tags: [upstreams, workflow, webops, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/edit-custom-upstream
@@ -13,7 +13,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
 integration: [--]
-reviewed: "2022-12-09"
+reviewed: "2022-12-13"
 ---
 
 This section provides information on editing an existing Custom Upstream.

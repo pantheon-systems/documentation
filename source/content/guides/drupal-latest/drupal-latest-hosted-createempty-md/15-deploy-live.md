@@ -1,20 +1,20 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
 subtitle: Deploy Live
 description: 
-tags: [code, launch, migrate, site, updates]
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-createempty-md/deploy-live
+permalink: docs/guides/drupal-latest-hosted-createempty-md/deploy-live
 anchorid: deploy-live
-editpath: drupal-9/drupal-9-hosted-createempty-md/15-deploy-live.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-createempty-md/15-deploy-live.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]
 integration: [--]
 ---
 
-<Partial file="drupal-9/deploy-live.md" />
+<Partial file="drupal-latest/deploy-live.md" />

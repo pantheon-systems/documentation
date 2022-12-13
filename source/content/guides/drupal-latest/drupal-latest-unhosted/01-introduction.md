@@ -1,33 +1,33 @@
 ---
-title: Migrate a Drupal 9 Site from Another Platform
+title: Migrate a Drupal:latest Site from Another Platform
 subtitle: Introduction
-description: "Migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon"
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+description: "Migrate an existing non-Pantheon hosted Drupal:latest site to Pantheon"
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-unhosted
-anchorid: drupal-9-unhosted
-editpath: drupal-9/drupal-9-unhosted/01-introduction.md
-reviewed: "2021-05-13"
+permalink: docs/guides/drupal-latest-unhosted
+anchorid: drupal-latest-unhosted
+editpath: drupal-latest/drupal-latest-unhosted/01-introduction.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, overview]
-newcms: [drupal9]
+newcms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [--]
 integration: [--]
 ---
 
-This guide will show you how to migrate an existing non-Pantheon hosted Drupal 9 site to Pantheon's platform.
+This guide will show you how to migrate an existing non-Pantheon hosted Drupal:latest site to Pantheon's platform.
 
 | <i class="fa fa-cloud"></i><br/> Current Host | <i class="fa fa-wrench"></i><br/> How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | <i class="fa fa-exclamation-circle"></i><br/> Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                   Elsewhere                   |                                                                        n/a                                                                         |                                                                                             --                                                                                             |
 
-<Partial file="drupal-9/see-landing.md" />
+<Partial file="drupal-latest/see-landing.md" />
 
-<Partial file="drupal-9/commit-history.md" />
+<Partial file="drupal-latest/commit-history.md" />
 
 ## Requirements
 

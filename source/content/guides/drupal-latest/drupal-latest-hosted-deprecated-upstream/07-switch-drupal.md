@@ -1,18 +1,18 @@
 ---
-title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal 9
+title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal:latest
 subtitle: Switch to Drupal with Composer Upstream
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-deprecated-upstream/switch-drupal
+permalink: docs/guides/drupal-latest-hosted-deprecated-upstream/switch-drupal
 anchorid: switch-drupal
-editpath: drupal-9/drupal-9-hosted-deprecated-upstream/07-switch-drupal.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-deprecated-upstream/07-switch-drupal.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, update]
-newcms: [drupal9, drupal]
+newcms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [composer, terminus]
 integration: []

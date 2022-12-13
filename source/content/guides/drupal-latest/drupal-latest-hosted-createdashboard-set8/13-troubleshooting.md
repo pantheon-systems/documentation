@@ -1,19 +1,19 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal:latest
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates, composer]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
-reviewed: "2021-03-31"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-createdashboard-set8/troubleshooting
+permalink: docs/guides/drupal-latest-hosted-createdashboard-set8/troubleshooting
 anchorid: troubleshooting
-editpath: drupal-9-hosted-createdashboard-set8/13-troubleshooting.md
+editpath: drupal-latest-hosted-createdashboard-set8/13-troubleshooting.md
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [--]
@@ -27,6 +27,6 @@ When setting the Drupal core version, use the command `composer update` instead 
 
 <Partial file="composer-updating.md" />
 
-<Partial file="drupal-9/troubleshooting-drush.md" />
+<Partial file="drupal-latest/troubleshooting-drush.md" />
 
-<Partial file="drupal-9/troubleshooting-general.md" />
+<Partial file="drupal-latest/troubleshooting-general.md" />

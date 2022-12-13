@@ -1,18 +1,18 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
 subtitle: Change Upstreams
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-createempty-md/change-upstream
+permalink: docs/guides/drupal-latest-hosted-createempty-md/change-upstream
 anchorid: change-upstream
-editpath: drupal-9/drupal-9-hosted-createempty-md/11-change-upstream.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-createempty-md/11-change-upstream.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]
 integration: [--]

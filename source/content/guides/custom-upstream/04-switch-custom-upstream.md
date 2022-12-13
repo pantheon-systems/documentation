@@ -2,7 +2,7 @@
 title: Switch Your Custom Upstream
 subtitle: Switch Your Custom Upstream
 description: Learn how to switch your Custom Upstream. 
-tags: [upstreams, workflow, webops]
+tags: [upstreams, workflow, webops, D8, D9, D10 ]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/switch-custom-upstream
@@ -13,7 +13,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
 integration: [--]
-reviewed: "2022-12-09"
+reviewed: "2022-12-13"
 ---
 
 This section provides steps to switch an existing site's Custom Upstream to a different Custom Upstream.

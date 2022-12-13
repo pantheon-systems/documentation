@@ -1,18 +1,18 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-createempty-md/troubleshooting
+permalink: docs/guides/drupal-latest-hosted-createempty-md/troubleshooting
 anchorid: troubleshooting
-editpath: drupal-9/drupal-9-hosted-createempty-md/17-troubleshooting.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-createempty-md/17-troubleshooting.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [--]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

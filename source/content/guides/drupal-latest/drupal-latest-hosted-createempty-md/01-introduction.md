@@ -1,32 +1,32 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to Drupal 9
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
 subtitle: Introduction
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-createempty-md
-anchorid: drupal-9-hosted-createempty-md
-editpath: drupal-9/drupal-9-hosted-createempty-md/01-introduction.md
-reviewed: "2021-03-31"
+permalink: docs/guides/drupal-latest-hosted-createempty-md
+anchorid: drupal-latest-hosted-createempty-md
+editpath: drupal-latest/drupal-latest-hosted-createempty-md/01-introduction.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]
 integration: [--]
 ---
 
-This guide will show you how to migrate a site that meets the following criteria to Drupal 9:
+This guide will show you how to migrate a site that meets the following criteria to Drupal:latest:
 
 | <i class="fa fa-cloud"></i><br/> Current Host | <i class="fa fa-wrench"></i><br/> How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | <i class="fa fa-exclamation-circle"></i><br/> Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                   Pantheon                    |                                                                   Empty Upstream                                                                   |                                                                                          Multidev                                                                                          |
 
-<Partial file="drupal-9/see-landing.md" />
+<Partial file="drupal-latest/see-landing.md" />
 
-<Partial file="drupal-9/commit-history.md" />
+<Partial file="drupal-latest/commit-history.md" />
 
 ## Requirements
 

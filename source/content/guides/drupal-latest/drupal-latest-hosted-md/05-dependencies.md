@@ -1,21 +1,21 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal 9 Using Multidev
-subtitle: Ensure Dependencies are Drupal 9 Compatible
+title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
+subtitle: Ensure Dependencies are Drupal:latest Compatible
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-md/dependencies
+permalink: docs/guides/drupal-latest-hosted-md/dependencies
 anchorid: dependencies
-editpath: drupal-9/drupal-9-hosted-md/05-dependencies.md
-reviewed: "2022-05-03"
+editpath: drupal-latest/drupal-latest-hosted-md/05-dependencies.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate]
-newcms: [drupal8, drupal9, drupal]
+newcms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [composer]
 integration: [--]
 ---
 
-<Partial file="drupal-9/dependencies-compatible.md" />
+<Partial file="drupal-latest/dependencies-compatible.md" />

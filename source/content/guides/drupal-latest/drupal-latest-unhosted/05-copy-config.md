@@ -1,14 +1,14 @@
 ---
-title: Migrate a Drupal 9 Site from Another Platform
+title: Migrate a Drupal:latest Site from Another Platform
 subtitle: Copy Existing Configuration
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-unhosted/copy-config
+permalink: docs/guides/drupal-latest-unhosted/copy-config
 anchorid: copy-config
-editpath: drupal-9/drupal-9-unhosted/05-copy-config.md
+editpath: drupal-latest/drupal-latest-unhosted/05-copy-config.md
 contenttype: [guide]
 categories: [migrate]
 newcms: [drupal9]

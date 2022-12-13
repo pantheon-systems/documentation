@@ -2,7 +2,7 @@
 title: Introduction to Custom Upstreams
 subtitle: Introduction
 description: Learn how to use Custom Upstreams to free up developer time.
-tags: [collaborate, launch, upstreams, webops, workflow]
+tags: [collaborate, launch, upstreams, webops, workflow, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream
@@ -13,7 +13,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
 integration: [--]
-reviewed: "2022-12-09"
+reviewed: "2022-12-13"
 ---
 
 <Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />

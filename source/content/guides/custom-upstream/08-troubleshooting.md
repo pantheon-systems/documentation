@@ -2,7 +2,7 @@
 title: Troubleshooting Custom Upstreams
 subtitle: Troubleshoot a Custom Upstream
 description: Learn more about troubleshooting your Custom Upstream.
-tags: [git, upstreams, workflow]
+tags: [git, upstreams, workflow, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/troubleshooting
@@ -13,7 +13,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]
 integration: [--]
-reviewed: "2022-12-09"
+reviewed: "2022-12-12"
 ---
 
 This section provides troubleshooting solutions for Custom Upstreams.

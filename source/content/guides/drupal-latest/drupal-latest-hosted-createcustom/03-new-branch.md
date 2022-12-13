@@ -12,7 +12,7 @@ editpath: drupal-latest/drupal-latest-hosted-createcustom/03-new-branch.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal9, drupal10]
+newcms: [drupal9, drupal10, drupal8, drupal]
 audience: [agency, development]
 product: [terminus, custom-upstreams]
 integration: [--]

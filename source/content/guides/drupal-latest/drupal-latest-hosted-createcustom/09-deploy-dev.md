@@ -1,18 +1,18 @@
 ---
-title: Migrate a Custom Upstream to Drupal 9
+title: Migrate a Custom Upstream to Drupal:latest
 subtitle: Deploy to Dev
 description: 
-cms: "Drupal 9"
-tags: [code, launch, migrate, site, updates]
+cms: "Drupal:latest"
+tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-createcustom/deploy-dev
+permalink: docs/guides/drupal-latest-hosted-createcustom/deploy-dev
 anchorid: deploy-dev
-editpath: drupal-9/drupal-9-hosted-createcustom/09-deploy-dev.md
-reviewed: "2021-03-31"
+editpath: drupal-latest/drupal-latest-hosted-createcustom/09-deploy-dev.md
+reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

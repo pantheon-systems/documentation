@@ -1,28 +1,28 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal 9 Using Multidev
+title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
 subtitle: Deploy
 description: 
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-md/deploy
+permalink: docs/guides/drupal-latest-hosted-md/deploy
 anchorid: deploy
-editpath: drupal-9/drupal-9-hosted-md/11-deploy.md
-reviewed: "2022-05-03"
+editpath: drupal-latest/drupal-latest-hosted-md/11-deploy.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate]
-newcms: [drupal8, drupal9, drupal]
+newcms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [--]
 integration: [build-tools]
 ---
 
-<Partial file="drupal-9/deploy-live.md" />
+<Partial file="drupal-latest/deploy-live.md" />
 
 ## Next Steps
 
 Do you need a Build Tools workflow? (*if you are not sure what this is, answer "No"*)
 
-- Yes: Continue with [Migrate a Site That Needs a Build Tools Workflow to Drupal 9](/guides/drupal-9-hosted-btworkflow)
+- Yes: Continue with [Migrate a Site That Needs a Build Tools Workflow to Drupal:latest](/guides/drupal-latest-hosted-btworkflow)
 - No: No additional work required.
