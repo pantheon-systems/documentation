@@ -21,9 +21,9 @@ This section provides information on how to upload and export batch files.
 
 ## Batch Uploads
 
-The [max execution time](/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce), can encounter this limit.
+The [max execution time](/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. You may encounter this limit during batch uploads of products with [WooCommerce](https://wordpress.org/plugins/woocommerce) or a similar application.
 
-In this or similar instances, consider performing larger operations locally, then importing the code, files, and database to the Pantheon platform.
+Consider performing larger operations locally if you encounter this limit. Then import the code, files, and database to the Pantheon platform.
 
 ## Batched Data Export to File
 
@@ -35,12 +35,18 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Potential Workarounds
 
-1. Have each request in the data export write to its own `tmp` file, then concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround](/guides/filesystem/tmp/#persistent-temporary-path-workaround) is in place.
+1. Configure each request in the data export write to its own `tmp` file, then concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround](/guides/filesystem/tmp/#persistent-temporary-path-workaround) is in place.
 
-1. Do small batches and add enough time between each request in the batch process to allow the updated file to be synced between all application containers.
+1. Export small batches and add enough time between each request in the batch process to allow the updated file sync between all application containers.
 
 ### Alternative Approaches
 
+The best solution is often to implement data exports as a web service, incrementally exchanging the data with the target system.
+
 You can run the export from the command line using tools like [Terminus](/terminus), [Drush](/guides/drush), [WP-CLI](/guides/wp-cli) and cron, which will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. Refer to [Timeouts on Pantheon](/timeouts) for more information. You won't need to batch your export, which allows it to run to completion on a single application container.
 
-The best solution is often to implement data exports as a web service, incrementally exchanging the data with the target system.
+## More Resources
+
+- [All About Application Containers](/application-containers)
+- [Cron for WordPress](/wordpress-cron)
+- [Cron for Drupal](/drupal-cron)
