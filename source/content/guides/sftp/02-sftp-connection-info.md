@@ -22,7 +22,7 @@ This section provides information on how to access the SFTP Connection Info in y
 
 1. Navigate to your Site dashboard.
 
-1. Click **Connect with SFTP**. You will see your connection credentials and a button to connect directly with your preferred client.
+1. Click **Connect with SFTP**. Your connection credentials will be displayed along with a button to connect directly with your preferred client.
 
  ![SFTP Connection Data](../../../images/dashboard/sftp-connection-info.png)
 
@@ -72,7 +72,7 @@ There is also a one-click option to connect with a GUI client. The main director
 
 ## SFTP File Uploads to Test and Live Environments
 
-You can use SFTP to upload files to your site's files directory in the Test and Live environments. Note SFTP mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
+You can use SFTP to upload files to your site's files directory in the Test and Live environments. Note that SFTP mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
 
 1. Navigate to the Site Dashboard.
 
