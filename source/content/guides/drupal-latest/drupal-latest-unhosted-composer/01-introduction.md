@@ -1,18 +1,18 @@
 ---
-title: Migrate a Composer-Managed Drupal 9 Site from Another Platform
+title: Migrate a Composer-Managed Drupal:latest Site from Another Platform
 subtitle: Introduction
-description: Learn how to migrate a site that's hosted on another platform to Drupal 9
+description: Learn how to migrate a site that's hosted on another platform to Drupal:latest
 cms: "Drupal:latest"
-tags: [code, launch, migrate, site, updates, composer]
+tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-unhosted-composer
-anchorid: drupal-9-unhosted-composer
-editpath: drupal-9/drupal-9-unhosted-composer/01-introduction.md
-reviewed: "2021-05-09"
+permalink: docs/guides/drupal-latest-unhosted-composer
+anchorid: drupal-latest-unhosted-composer
+editpath: drupal-latest/drupal-latest-unhosted-composer/01-introduction.md
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal9]
+newcms: [drupal9, drupal8, druoal10, drupal]
 audience: [development]
 product: [--]
 integration: [--]
