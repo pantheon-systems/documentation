@@ -36,7 +36,7 @@ SFTP development provides advantages when working with Git and/or local developm
 
 SFTP mode works with all standards-compliant SFTP clients, including many GUI tools and IDEs. We have specific guides on how to use some popular developer tools with Pantheon:
 
-- PHPStorm with [WordPress](/guides/local-development/wordpress-phpstorm) and [Drupal](/guides/local-development/drupal-phpstorm)
+- [PHPStorm with WordPress](/guides/local-development/wordpress-phpstorm) and [Drupal](/guides/local-development/drupal-phpstorm)
 - [WinSCP](/guides/sftp/winscp)
 - [Visual Studio Code](/guides/sftp/vscode-sftp)
 
