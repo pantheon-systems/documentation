@@ -38,8 +38,6 @@ To update from version 9 to 10:
 
 ## Create a Drupal 10 Site
 
-We've been busy conducting early testing on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.
-
 <Alert title="Note" type="info" >
 
 These instructions were developed using release candidate versions of Drupal 10.  This page will be updated as production versions become available.
