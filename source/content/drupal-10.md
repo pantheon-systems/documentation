@@ -24,19 +24,29 @@ Drupal 10 is coming in December 2022! This page will be updated frequently with 
 | Upgrade a Drupal 9 site to Drupal 10 using the [Terminus Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) | Early Access | Use the following command: `terminus conversion:upgrade-d10` |
 
 
+## Update a Drupal 9 Site to Drupal 10
+
+To update from version 9 to 10:
+
+1. If you are not already using PHP 8.1, go to your dashboard and install the update to PHP 8.1.
+
+1. Run [Drupal's Upgrade Status](https://www.drupal.org/project/upgrade_status).
+
+1. Use [Composer to update](/guides/upgrade-drupal-8-ic-to-drupal-9#set-drupal-core-version) to Drupal 10.  See the [Drupal release-specific documentation](https://www.drupal.org/project/drupal/releases) for more details.
+
+
+
 ## Create a Drupal 10 Site
 
 We've been busy conducting early testing on the Pantheon platform, and have developed a process for creating a new Drupal 10 site on our platform.
 
-<Alert title="Warning" type="danger" >
+<Alert title="Note" type="info" >
 
-These instructions were developed using beta versions of Drupal 10, and are for educational purposes only.  This page will be updated as production versions become available.
+These instructions were developed using release candidate versions of Drupal 10.  This page will be updated as production versions become available.
 
 </Alert>
 
 ### Before You Begin
-
-This process requires that you are on PHP 8.1.  To upgrade:
 
 1. Create a new Drupal site using the ["Drupal with Composer" CMS/Start State](/guides/quickstart/create-new-site/).
 
@@ -72,14 +82,6 @@ composer require --no-update drupal/core-recommended:^10
 composer update
 git commit -am "Update to Drupal 10"
 ```
-
-## Upgrade a Drupal 9 Site to Drupal 10
-
-To upgrade from version 9 to 10:
-
-1. Run [Drupal's Upgrade Status](https://www.drupal.org/project/upgrade_status).
-
-1. Use [Composer to update](/guides/upgrade-drupal-8-ic-to-drupal-9#set-drupal-core-version) to Drupal 10.  See the [Drupal release-specific documentation](https://www.drupal.org/project/drupal/releases) for more details.
 
 ## FAQ
 
