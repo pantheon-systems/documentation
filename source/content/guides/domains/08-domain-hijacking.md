@@ -24,7 +24,7 @@ Domain Name Server (DNS) hijacking is a type of DNS attack in which bad actors s
 
 ### Clear DNS Records Before Removing Unused Subdomains
 
-When removing unused sites be sure to delete the corresponding A or CNAME records with your DNS provider.
+When removing unused sites, delete the corresponding A or CNAME records with your DNS provider.
 
 ### Don't Use Wildcard DNS Configuration
 
