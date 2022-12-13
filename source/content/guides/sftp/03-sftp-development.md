@@ -22,7 +22,7 @@ This section provides information on how to commit or discard and abandon change
 
 You can switch between SFTP and Git modes in your Dev environment. This prevents you from accidentally overwriting changes from a different source. 
 
-SFTP mode has a comment box above the commit log. The Dashboard automatically tracks your pending changes as you make updates to the codebase. You can then commit your changes to version control when you are happy with the results without having to use Git directly.
+SFTP mode has a comment box above the commit log. The Dashboard automatically tracks your pending changes as you make updates to the codebase. You can then commit your changes to version control- without having to use Git directly- when you are happy with the results.
 
 ### Enable SFTP Mode
 
@@ -37,13 +37,13 @@ SFTP mode has a comment box above the commit log. The Dashboard automatically tr
 You cannot use Git to push changes remotely with SFTP mode enabled. You must commit your changes in the comment box located above the commit log to push changes to the Test and Live environments. **Commit early and commit often**. Keep in mind:
 
 - SFTP changes to code that have not been committed *are not saved in backups, and are not included in deployments* as these updates are not part of your code repository.
-- Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. Commit your updates before toggling the connection mode if you want to keep work your work.
+- Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. Commit your updates before toggling the connection mode if you want to keep your work.
 - Containers are migrated as a regular part of maintenance. This can delete uncommitted changes.
 - You won't be able to save anything that's been excluded from version control via `.gitignore`.
 
 ### Commit SFTP Changes
 
-1. Make a change to your code. You will see a message on the Dashboard, below the comment box, letting you know you have uncommitted changes.
+1. Make a change to your code. There will be a message on the Dashboard, below the comment box, letting you know you have uncommitted changes.
 
 1. Click the notification message to expand the listing of pending changes.
 
