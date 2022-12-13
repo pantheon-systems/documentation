@@ -17,6 +17,8 @@ permalink: docs/guides/filesystem/batch-files
 anchorid: batch-files
 ---
 
+This section provides information on how to upload and export batch files.
+
 ## Batch Uploads
 
 The [max execution time](/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce), can encounter this limit.
