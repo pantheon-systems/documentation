@@ -40,7 +40,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
    ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
 
-1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](docs/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
+1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](https://pantheon.io/docs/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
 
    <Alert title="Note"  type="info" >
 
@@ -73,7 +73,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
     - Dev
     - Test
     - Live
-    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](docs/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
+    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](https://pantheon.io/docs/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -139,7 +139,7 @@ Some selection options are grayed out for customers with Gold plans. Only custom
     - Dev
     - Test
     - Live
-    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](docs/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
+    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to [Update Destination & Frequency](https://pantheon.io/docs/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information." />
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
