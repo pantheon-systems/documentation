@@ -18,7 +18,7 @@ integration: [drush]
 
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities to administer and maintain your site.
 
-Drush commands require a `settings.php` file. However, Drupal 7 sites do not contain a `settings.php` file. You can copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/guides/git/git-config) for Drush to work on older Drupal versions. Refer to [Configuring Settings.php](/guides/php/settings-php) more information.
+Drush commands require a `settings.php` file. However, Drupal 7 sites do not contain a `settings.php` file. You can copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/guides/sftp) or [Git](/guides/git/git-config) for Drush to work on older Drupal versions. Refer to [Configuring Settings.php](/guides/php/settings-php) more information.
 
 ## Terminus Drush and Local Drush
 

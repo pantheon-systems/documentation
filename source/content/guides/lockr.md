@@ -52,7 +52,7 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
 
 If you do need to upload module files directly to the server, be sure to use SFTP and not FTP.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
@@ -130,7 +130,7 @@ You can enable the module by navigating to `/admin/modules`, checking the box ne
 
 Lockr is also available for Drupal 7. Refer to the project's [GitHub page](https://github.com/lockr/lockr-patches/tree/drupal7) for a list of modules that can be automatically patched.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp

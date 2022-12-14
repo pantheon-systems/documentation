@@ -78,7 +78,7 @@ Do not edit the `pantheon_apachesolr` module within your Drupal site installatio
 
 ### How do I install a theme or plugin that keeps timing out?
 
-If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/rsync-and-sftp).
+If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/guides/sftp/rsync-and-sftp).
 
 Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/guides/custom-upstream).
 

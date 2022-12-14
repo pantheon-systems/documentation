@@ -20,7 +20,7 @@ Before you can migrate a WordPress Site Network, you must be a contract customer
 ## Requirements
 
 * [Download](https://git-scm.com/downloads) and install [Git](/guides/git/git-config)
-* [Rsync or SFTP Client](/rsync-and-sftp)
+* [Rsync or SFTP Client](/guides/sftp/rsync-and-sftp)
 * [MySQL Client](/guides/mariadb-mysql/mysql-access)
 
 ## Import the Codebase
@@ -143,7 +143,7 @@ done
 
 This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
 
-If you are unfamiliar or uncomfortable with bash and rsync, an [FTP client that supports SFTP](/sftp/#sftp-clients), such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/wp-content/uploads/`. You can now start your file upload.
+If you are unfamiliar or uncomfortable with bash and rsync, an [FTP client that supports SFTP](/guides/sftp), such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/wp-content/uploads/`. You can now start your file upload.
 
 ## Database
 

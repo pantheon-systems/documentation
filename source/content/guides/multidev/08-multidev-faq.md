@@ -112,6 +112,6 @@ Users encounter this error with sites that use the MyISAM engine with a varchar 
 
 - [Multidev Guide](/guides/multidev)
 
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
 
 - [Git on Pantheon](/guides/git)

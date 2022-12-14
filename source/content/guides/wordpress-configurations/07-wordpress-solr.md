@@ -47,7 +47,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 ## Install and Configure the Solr Search for WordPress Plugin
 
-1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/sftp) via the Pantheon Dashboard, or with [Terminus](/terminus):
+1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/guides/sftp) via the Pantheon Dashboard, or with [Terminus](/terminus):
 
  ```bash
  terminus connection:set <site>.<env> sftp

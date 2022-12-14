@@ -83,7 +83,7 @@ terminus drush <site>.<env> -- core-cli
 
 ## Drush Commands That Alter Site Code
 
-You must set your Dev environment to [SFTP mode](/sftp) in the Pantheon Dashboard to use commands that alter site code, such as `pm-download (dl)`.
+You must set your Dev environment to [SFTP mode](/guides/sftp) in the Pantheon Dashboard to use commands that alter site code, such as `pm-download (dl)`.
 
 ## Add Custom Drush Commands
 
@@ -105,5 +105,5 @@ You should place Drush commands in `drush/Commands` if using Drupal 9.
 
 ## More Resources
 
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
 - [Drupal 9](/drupal-9)

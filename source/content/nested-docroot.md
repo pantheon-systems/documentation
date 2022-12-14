@@ -182,7 +182,3 @@ For example, if your `pantheon.yml` has a script location definition of `private
 ### Can I specify a subdirectory other than web?
 
 The directory name is not configurable, but you can [create a symlink](/symlinks-assumed-write-access#create-a-symbolic-link) from some other directory to `web`.
-
-### Can I use Localdev for local development of nested docroot sites?
-
-Yes, Pantheon's [Localdev](/guides/localdev/troubleshoot-support) pulls configuration information from your site's [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) and [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) files.

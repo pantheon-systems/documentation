@@ -36,7 +36,7 @@ export env=multidevname # or dev
 
 ## Set the Connection Mode
 
-This guide assumes you're working on Pantheon, as opposed to a local development environment. To that end, make sure the connection mode for your working environment is set to **SFTP**. You can do this [from the Pantheon Site Dashboard](/sftp#sftp-mode), or with Terminus:
+This guide assumes you're working on Pantheon, as opposed to a local development environment. To that end, make sure the connection mode for your working environment is set to **SFTP**. You can do this [from the Pantheon Site Dashboard](/guides/sftp), or with Terminus:
 
 ```bash{promptUser: user}
 terminus connection:set $site.$env sftp
@@ -54,7 +54,7 @@ terminus wp $site.$env -- plugin install --activate wp-saml-auth
 
 <Alert type="info" title="Pro Tip">
 
-Good developers commit after every set of like changes. Commit your changes to version control [from the Pantheon Site Dashboard](/sftp#committing-sftp-changes), or with Terminus:
+Good developers commit after every set of like changes. Commit your changes to version control [from the Pantheon Site Dashboard](/guides/sftp/sftp-development), or with Terminus:
 
 ```bash{promptUser: user}
 terminus env:commit --message "installed WP SAML Auth plugin" $site.$env

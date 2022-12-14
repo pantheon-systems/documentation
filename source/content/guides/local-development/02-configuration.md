@@ -108,7 +108,7 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
 
 ## Transfer Your Files
 
-Refer to [SFTP and Rsync on Pantheon](/rsync-and-sftp) for an overview of ways to transfer files.
+Refer to [SFTP and Rsync on Pantheon](/guides/sftp/rsync-and-sftp) for an overview of ways to transfer files.
 
 ### Via Terminus
 

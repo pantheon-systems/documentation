@@ -39,6 +39,6 @@ Follow the steps below to send data to your SFTP sever from your Fastly account 
 
 - [Fastly](https://explore.fastly.com)
 
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
 
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)

@@ -18,7 +18,7 @@ reviewed: ""
 
    After you click Continue, it will take several minutes for the platform to set everything up.
 
-1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/sftp#sftp-mode).
+1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/guides/sftp).
 
 1. Still in the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 
