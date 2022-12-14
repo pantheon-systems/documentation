@@ -1,14 +1,14 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
 subtitle: Copy Existing Configuration
 description: 
-cms: "Drupal 9"
+cms: "drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-btworkflow/copy-config
+permalink: docs/guides/drupal-latest-hosted-btworkflow/copy-config
 anchorid: copy-config
-editpath: drupal-9/drupal-9-hosted-btworkflow/05-copy-config.md
+editpath: drupal-latest/drupal-latest-hosted-btworkflow/05-copy-config.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]

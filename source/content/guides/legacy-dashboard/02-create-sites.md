@@ -5,7 +5,7 @@ description: Create a new Drupal or WordPress site on Pantheon.
 tags: [site, dashboard]
 layout: guide
 showtoc: true
-reviewed: "2022-08-20"
+reviewed: "2022-12-13"
 permalink: docs/guides/legacy-dashboard/create-sites
 anchorid: create-sites
 editpath: legacy-dashboard/02-create-sites.md
@@ -39,7 +39,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Choose a [Region](/regions) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 
-1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, Drupal 9, or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
+1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, drupal:latest, or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
 
    Wait while the platform provisions the site with the start state you selected.
 

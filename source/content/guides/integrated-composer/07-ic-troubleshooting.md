@@ -4,7 +4,7 @@ subtitle: Troubleshoot Integrated Composer
 description: Learn how to troubleshoot Integrated Composer issues.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
@@ -21,7 +21,7 @@ This section provides information on troubleshooting common Integrated Composer 
 
 ## Troubleshooting Code Syncs, Upstream Updates, and Redirect Errors
 
-### Site-local Drush Is Required for Drupal 9 Sites
+### Site-local Drush Is Required for drupal:latest Sites
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 

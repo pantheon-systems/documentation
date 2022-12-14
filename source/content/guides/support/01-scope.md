@@ -14,7 +14,7 @@ showtoc: true
 anchorid: support
 permalink: docs/guides/support/
 editpath: support/01-scope.md
-reviewed: "2022-01-20"
+reviewed: "2022-12-13"
 ---
 
 ![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
@@ -87,7 +87,7 @@ We are unable to debug issues with the content or structure of the Custom Upstre
 
 ### Public Distributions
 
-If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 9, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
+If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, drupal:latest, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
 
 ### Security
 

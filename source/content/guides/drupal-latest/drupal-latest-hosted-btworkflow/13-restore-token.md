@@ -1,14 +1,14 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
 subtitle: Restore the tokens.json File
 description: 
-cms: "Drupal 9"
+cms: "drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-btworkflow/restore-token
+permalink: docs/guides/drupal-latest-hosted-btworkflow/restore-token
 anchorid: restore-token
-editpath: drupal-9/drupal-9-hosted-btworkflow/13-restore-token.md
+editpath: drupal-latest/drupal-latest-hosted-btworkflow/13-restore-token.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, sftp]

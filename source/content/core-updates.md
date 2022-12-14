@@ -1,7 +1,7 @@
 ---
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
-tags: [dashboard, git, terminus, updates]
+tags: [dashboard, git, terminus, updates, D8, D9, D10]
 reviewed: "2022-12-07"
 contenttype: [doc]
 categories: [update]
@@ -13,9 +13,9 @@ integration: [--]
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
 
-## Drupal 9+
+## drupal:latest
 
-As of Drupal 9, Drupal only supports managing depedencies via composer. 
+As of Drupal 8.8, Drupal only supports managing depedencies via composer. 
 You can do that without checking in the vendor directory 
 by using Pantheon's [Integrated Composer](/guides/integrated-composer) 
 to allow one-click core updates through the Dashboard. 
@@ -38,7 +38,7 @@ Drupal 8 sites managing core with Composer are not compatible with Pantheon's On
 
 - [Convert the site to Integrated Composer](/guides/composer-convert)
 
-- [Update to Drupal 9](/drupal-9-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
+- [Update to Drupal:latest](/drupal-latest-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
 
 ## Non-Composer-Managed WordPress and Drupal 7 Sites
 
@@ -108,7 +108,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 <TabList>
 
-<Tab title="Drupal 9" id="d9" active={true}>
+<Tab title="drupal:latest" id="d9" active={true}>
 
 ```bash{promptUser: user}
 git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed main
@@ -204,10 +204,10 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="Drupal 9" id="d9-1conflict">
+  <Tab title="drupal:latest" id="d9-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drupal-9 https://github.com/pantheon-systems/drupal-composer-managed
+  git remote add pantheon-drupal-latest https://github.com/pantheon-systems/drupal-composer-managed
   ```
 
   </Tab>
@@ -245,11 +245,11 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="Drupal 9" id="d9-2conflict">
+  <Tab title="drupal:latest" id="d9-2conflict">
 
   ```bash{promptUser: user}
-  git fetch pantheon-drupal-9
-  git rebase pantheon-drupal-9/master
+  git fetch pantheon-drupal-latest
+  git rebase pantheon-drupal-latest/master
   ```
 
   </Tab>
@@ -381,7 +381,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  </Tab>
 
- <Tab title="Drupal 9" id="d9-2conflict-merge">
+ <Tab title="drupal:latest" id="d9-2conflict-merge">
 
   GITHUB-EMBED https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 

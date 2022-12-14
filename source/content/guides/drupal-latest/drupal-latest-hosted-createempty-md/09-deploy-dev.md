@@ -75,4 +75,4 @@ After you confirm that the site works in the Multidev, replace the `master` bran
    git push --force origin master
    ```
 
-Your site's Dev environment is now set up to use the Drupal 9 Integrated Composer upstream.
+Your site's Dev environment is now set up to use the drupal:latest Integrated Composer upstream.

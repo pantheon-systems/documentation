@@ -15,7 +15,7 @@ layout: guide
 permalink: docs/guides/manual-d8-composer-to-d8/deploy-live
 anchorid: deploy-live
 editpath: migrate/manual-d8-composer-to-d8/09-deploy-live.md
-reviewed: "2021-06-22"
+reviewed: "2022-12-13"
 ---
 
-<Partial file="drupal-9/deploy-using-launch.md" />
+<Partial file="drupal-latest/deploy-using-launch.md" />

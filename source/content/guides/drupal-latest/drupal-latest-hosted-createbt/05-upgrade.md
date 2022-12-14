@@ -7,7 +7,7 @@ tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-createbt/upgrade
+permalink: docs/guides/drupal-latest-hosted-createbt/upgrade
 anchorid: upgrade
 editpath: drupal-latest/drupal-latest-hosted-createbt/05-upgrade.md
 reviewed: "2022-12-12"
@@ -28,7 +28,7 @@ integration: [--]
       -W --no-update
    ```
 
-1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal 9 to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
+1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from drupal:latest to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
 
   The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`.
 
@@ -65,14 +65,14 @@ integration: [--]
    # Move the DOCUMENT_ROOT of your site to the */web* folder:
    web_docroot: true
    
-   # Drupal 9 requires PHP 7.3 or higher. If your code isn't ready for PHP 7.4 you may need to use 7.3 here:
+   # drupal:latest requires PHP 7.3 or higher. If your code isn't ready for PHP 7.4 you may need to use 7.3 here:
    php_version: 7.4
    
-   # Drupal 9 requires a higher version of the DB. It will take a few minutes to complete the upgrade to 10.4 once you push this file:
+   # drupal:latest requires a higher version of the DB. It will take a few minutes to complete the upgrade to 10.4 once you push this file:
    database:
      version: 10.4
    
-   # Drupal 9 prefers Drush 10. If you have written a lot of custom Drush commands you may need to go back to Drush 9 or 8:
+   # drupal:latest prefers Drush 10. If you have written a lot of custom Drush commands you may need to go back to Drush 9 or 8:
    drush_version: 10
    ```
 
@@ -110,11 +110,11 @@ integration: [--]
    terminus drush $SITE.$ENV uli admin
    ```
 
-Log in to the site as admin and  navigate to **Upgrade Status** under **Reports**. Modules displayed as incompatible in **Upgrade Status** will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If it's not possible to get your module to a Drupal 9 compatible status, then it should be removed.
+Log in to the site as admin and  navigate to **Upgrade Status** under **Reports**. Modules displayed as incompatible in **Upgrade Status** will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If it's not possible to get your module to a drupal:latest compatible status, then it should be removed.
 
 ## Upgrade MariaDB in All Environments
 
-<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
+<Partial file="drupal-latest/drupal-latest-mariadb-considerations.md" />
 
 Once you have confirmed that the MariaDB upgrade worked in the Multidev, merge your PR, or push your changes to your master branch in your git provider, to ensure the other components upgrade smoothly.
 

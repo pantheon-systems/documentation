@@ -1,14 +1,14 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
 subtitle: Add Database
 description: 
-cms: "Drupal 9"
+cms: "drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-btworkflow/database
+permalink: docs/guides/drupal-latest-hosted-btworkflow/database
 anchorid: database
-editpath: drupal-9/drupal-9-hosted-btworkflow/08-database.md
+editpath: drupal-latest/drupal-latest-hosted-btworkflow/08-database.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, database]
@@ -30,4 +30,4 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 Import the archive:
 
-<Partial file="drupal-9/migrate-add-database-part2.md" />
+<Partial file="drupal-latest/migrate-add-database-part2.md" />

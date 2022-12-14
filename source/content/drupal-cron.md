@@ -2,8 +2,8 @@
 title: Cron for Drupal
 description: Understanding how Pantheon cron execution and cron management works on your Drupal site.
 cms: "Drupal"
-tags: [cron]
-reviewed: "2020-06-30"
+tags: [cron, D8, D9, D10]
+reviewed: "2020-12-13"
 permalink: docs/drupal-cron
 contenttype: [doc]
 categories: [automate]
@@ -146,4 +146,4 @@ No. You can create a custom module that uses the [`hook_cron`](https://api.drupa
 
 - [Drupal.org Community Documentation - Set up Cron](https://www.drupal.org/docs/7/setting-up-cron/overview)
 - [Elysia Cron - extends Drupal standard Cron for Drupal 7](https://www.drupal.org/project/elysia_cron)
-- [Ultimate Cron - extends Drupal standard Cron for Drupal 7 and Drupal 9](https://www.drupal.org/project/ultimate_cron)
+- [Ultimate Cron - extends Drupal standard Cron for Drupal 7 and drupal:latest](https://www.drupal.org/project/ultimate_cron)

@@ -6,7 +6,7 @@ cms: "Drupal Latest"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-btworkflow/upload-files
+permalink: docs/guides/drupal-latest-hosted-btworkflow/upload-files
 anchorid: upload-files
 editpath: drupal-latest/drupal-latest-hosted-btworkflow/11-upload-files.md
 reviewed: "2022-12-12"

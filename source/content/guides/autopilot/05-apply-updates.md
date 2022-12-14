@@ -2,14 +2,14 @@
 title: Pantheon Autopilot
 subtitle: Apply Updates
 description: Learn how to apply Autopilot updates.
-tags: [iterate, autopilot, testing, webops]
+tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 type: guide
 layout: guide
 showtoc: true
 anchorid: apply-updates
 permalink: docs/guides/autopilot/apply-updates/
 editpath: autopilot/05-apply-updates.md
-reviewed: "2021-08-09"
+reviewed: "2022-12-14"
 contenttype: [guide]
 categories: [automate]
 newcms: [--]
@@ -41,9 +41,9 @@ You can also apply updates from the site list on the **<i className="fa fa-robot
 
 1. Track the update status from the site's Autopilot **Activity** page.
 
-### Autopilot and Drupal 9 with Integrated Composer
+### Autopilot and drupal:latest with Integrated Composer
 
-Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal 9](/drupal-9) Upstream with [Integrated Composer](/guides/integrated-composer).
+Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [drupal:latest](/drupal-latest) Upstream with [Integrated Composer](/guides/integrated-composer).
 
 ## More Resources
 

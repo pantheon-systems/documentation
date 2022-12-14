@@ -30,13 +30,13 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
 - Verify that you are using Drush 8 if you have a non-Composer managed Drupal 7 site. Note that Composer-managed sites are not supported.
 
-- Verify that you are using Drush 11 if you have a Composer-managed Drupal 9 site.Note that only Composer-managed sites are supported.
+- Verify that you are using Drush 11 if you have a Composer-managed drupal:latest site.Note that only Composer-managed sites are supported.
 
-   -  Use one of the following guides if you are migrating a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site:
+   -  Use one of the following guides if you are migrating a Drupal 7 or 8 site and want to upgrade to a drupal:latest site:
 
-      - Your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
+      - Your site is Composer-managed: [Migrate a Composer Managed drupal:latest Site from Another Platform](/guides/drupal-latest-unhosted-composer)
 
-      - Your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
+      - Your site is not Composer-managed: [Migrate a drupal:latest Site from Another Platform](/guides/drupal-latest-unhosted)
 
 - Verify that you have Drush access on your existing Drupal site.
 
@@ -89,7 +89,7 @@ Install [Terminus 3](/terminus/terminus-3-0).
 
 </Tab>
 
-<Tab title="Drupal 9 Composer-managed" id="d9">
+<Tab title="drupal:latest Composer-managed" id="d9">
 
 1. Install the [Terminus Conversion Tools](https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation) plugin. 
 

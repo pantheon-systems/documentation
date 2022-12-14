@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal:latest Site with Multidev to Drupal 9 Using Multidev
+title: Migrate a Drupal:latest Site with Multidev to drupal:latest Using Multidev
 subtitle: Configure Ongoing Core Update
 description: 
 cms: "Drupal:latest"

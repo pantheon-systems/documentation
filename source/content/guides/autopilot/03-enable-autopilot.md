@@ -2,14 +2,14 @@
 title: Pantheon Autopilot
 subtitle: Autopilot Setup and Configuration
 description: Enable and configure Autopilot visual regression testing (VRT) for your WordPress or Drupal site.
-tags: [iterate, autopilot, testing, webops]
+tags: [iterate, autopilot, testing, webops, D8, D9, D10 ]
 type: guide
 layout: guide
 showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2022-04-05"
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [automate]
 newcms: [--]
@@ -108,7 +108,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all drupal:latest sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 1. Click **Save** for each section of the configuration in which you make changes.
 

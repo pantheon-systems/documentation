@@ -21,7 +21,7 @@ integration: [--]
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon.
 
-## Create a New Drupal 9 Site
+## Create a New drupal:latest Site
 
 <Partial file="migrate/create-new-drupal-site.md" />
 

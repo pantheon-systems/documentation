@@ -18,6 +18,6 @@ product: [composer]
 integration: [--]
 ---
 
-Change your core version to Drupal 9 now that you've confirmed that your core dependencies are Drupal 9 compatible.
+Change your core version to drupal:latest now that you've confirmed that your core dependencies are drupal:latest compatible.
 
 <Partial file="drupal-latest/core-version.md" />

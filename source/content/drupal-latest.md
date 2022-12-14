@@ -6,7 +6,7 @@ contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-12-09"
 contenttype: [doc]
 categories: [create, plan, config]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [development]
 product: [integrated-composer]
 integration: [--]
@@ -66,7 +66,7 @@ After you upgrade to Drupal you may consider upgrading the authoring experience 
  - Easier build process for landing pages
  - Scalable performance
 
-You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal : An Opportunity](https://pantheon.io/blog/gutenberg-drupal-9).
+You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal : An Opportunity](https://pantheon.io/blog/gutenberg-drupal-latest).
 
 You can also read more about the installation process on [Drupal.org](https://www.drupal.org/docs/contributed-modules/gutenberg/installation-and-upgrades).
 
@@ -90,12 +90,12 @@ Manually update the [landofile](https://docs.lando.dev/config/lando.html#base-fi
 
   ```yml:title=lando.yml
   # Lando issue 2831 workaround for D9
-  framework: drupal9
+  framework: drupal8
   ```
 
-When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal9` for a Drupal site.
+When you create a project with Lando from the Pantheon recipe, the `framework` will default to `drupal8` for a Drupal site.
 
-If you created new project with Lando, change the value for `framework` to `drupal9`, then run `lando rebuild`.
+If you created new project with Lando, change the value for `framework` to `drupal8`, then run `lando rebuild`.
 
 ### Site-local Drush Is Required for Drupal Sites
 

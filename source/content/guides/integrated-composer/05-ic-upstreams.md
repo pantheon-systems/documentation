@@ -4,7 +4,7 @@ subtitle: Use Upstream with Integrated Composer
 description: Learn how to use Upstream with Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
@@ -77,6 +77,6 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
 
-- [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
+- [Migrate a Custom Upstream to drupal:latest](/guides/drupal-latest-hosted-createcustom)
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)

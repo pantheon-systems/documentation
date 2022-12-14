@@ -112,7 +112,7 @@ The content type for this content. Defaults to `doc`, overwritten for other cont
 
 <dd>
 
-If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, or `"Drupal 9"`.
+If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, or `"drupal:latest"`.
 
 </dd>
 

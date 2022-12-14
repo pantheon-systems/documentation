@@ -2,14 +2,14 @@
 title: Build Tools
 subtitle: Manage Configuration
 description: In step four of the Build Tools guide, learn how to manage your site configuration.
-tags: [workflow, composer, continuous-integration, webops, terminus]
+tags: [workflow, composer, continuous-integration, webops, terminus, D8, D9, D10]
 anchorid: configure
 type: guide
 permalink: docs/guides/build-tools/configure/
 editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb
 contributors: [szipfel]
-reviewed: "2020-05-08"
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [--]
 newcms: [--]
@@ -24,7 +24,7 @@ In this lesson, we'll use the Configuration Management system within the Drupal 
 
 #### Configuration Management
 
-While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal Admin interface](/drupal-9-configuration-management).
+While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/guides/build-tools/pr-workflow#create-a-pull-request), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal Admin interface](/drupal-latest-configuration-management).
 
 After making configuration changes in the Admin interface, settings are updated in the database. The Configuration Management system allows you to commit settings stored in the database to code so they can be easily tracked and applied to other environments.
 

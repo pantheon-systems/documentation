@@ -2,13 +2,13 @@
 title: Pantheon Autopilot
 subtitle: Autopilot FAQs
 description: Get answers to your Autopilot questions.
-tags: [autopilot, webops]
+tags: [autopilot, webops, D8, D9, D10]
 type: guide
 layout: guide
 showtoc: true
 anchorid: autopilot-faq
 permalink: docs/guides/autopilot/autopilot-faq/
-reviewed: "2022-06-14"
+reviewed: "2022-12-14"
 contenttype: [guide]
 categories: [automate]
 newcms: [--]
@@ -38,13 +38,13 @@ Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/gu
 ## What versions of Drush are supported by Autopilot?
 
 The version(s) of Drush that are supported by Autopilot for sites:
-- **Up to (not including) Drupal 9**: Drush 8
-- **Drupal 9 with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
-- **Drupal 9 without Integrated Composer**: Drush is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
+- **Up to (not including) drupal:latest**: Drush 8
+- **drupal:latest with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
+- **drupal:latest without Integrated Composer**: Drush is not supported. drupal:latest requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
 
-Autopilot only supports Drush 8 for all sites up to Drupal 9.
+Autopilot only supports Drush 8 for all sites up to drupal:latest.
 
-All Drupal 9 sites that use Integrated Composer are compatible with Autopilot.
+All drupal:latest sites that use Integrated Composer are compatible with Autopilot.
 
 Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/guides/drush/drush-versions) for more information.
 

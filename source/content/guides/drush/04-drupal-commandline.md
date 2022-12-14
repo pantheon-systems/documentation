@@ -79,7 +79,7 @@ The next few sections use the example variables `my-d9-site` and `"My D9 Site"` 
 
   Keep this window open while you continue reading so you can see the changes you are making in Terminus appear almost immediately in your Site Dashboard.
 
-1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 9 on the Dev environment:
+1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install drupal:latest on the Dev environment:
 
   ```bash{promptUser: user}
   terminus drush my-d9-site.dev -- site-install -y
@@ -312,5 +312,5 @@ Terminus provides the power to manage most aspects of your Pantheon sites, while
 ## More Resources
 
 - [Use the Pantheon Workflow](/pantheon-workflow)
-- [Configuration Workflow for Drupal 9 Sites](/drupal-9-configuration-management)
+- [Configuration Workflow for drupal:latest Sites](/drupal-latest-configuration-management)
 - [Terminus Guide](/terminus)

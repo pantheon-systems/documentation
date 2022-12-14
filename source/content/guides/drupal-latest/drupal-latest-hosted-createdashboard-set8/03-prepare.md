@@ -21,7 +21,7 @@ integration: [--]
 
 <Alert title="Note"  type="info" >
 
-Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to Drupal 9.
+Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to drupal:latest.
 
 </Alert>
 

@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Learn how to use Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer
@@ -21,17 +21,17 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ## Get Started With Integrated Composer
 
-### Drupal 9 with Integrated Composer
+### drupal:latest with Integrated Composer
 
-- Follow the [Drupal 9](/drupal-9) doc to create a new Drupal 9 site with Integrated Composer built in.
+- Follow the [drupal:latest](/drupal-latest) doc to create a new drupal:latest site with Integrated Composer built in.
 
-- To upgrade or migrate an existing site to Drupal 9 with Integrated Composer, visit the [Migrate to Drupal 9](/drupal-9-migration) guide.
+- To upgrade or migrate an existing site to drupal:latest with Integrated Composer, visit the [Migrate to drupal:latest](/drupal-latest-migration) guide.
 
 - To convert an existing Drupal 8 site to a Composer-managed site with Integrated Composer, visit the [Composer Convert](/guides/composer-convert) doc.
 
 <Alert title="Note"  type="info" >
 
-`drupal-composer-managed` is the recommended Composer-based Drupal 9 upstream. The Composer-based Drupal 9 upstreams below have been deprecated.
+`drupal-composer-managed` is the recommended Composer-based drupal:latest upstream. The Composer-based drupal:latest upstreams below have been deprecated.
 
 - `drupal-project`
 - `drupal-recommended`
@@ -57,4 +57,4 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 - [Supported Drupal Versions](/supported-drupal)
-- [Drupal 9](/drupal-9)
+- [drupal:latest](/drupal-latest)

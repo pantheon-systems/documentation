@@ -2,14 +2,14 @@
 title: Build Tools
 subtitle: Create a New Project
 description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
-tags: [composer, terminus, webops, workflow]
+tags: [composer, terminus, webops, workflow, D8, D9, D10]
 buildtools: true
 anchorid: create-project
 type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
-reviewed: "2021-12-28"
+reviewed: "2021-12-13"
 contenttype: [guide]
 categories: [--]
 newcms: [--]
@@ -121,7 +121,7 @@ Modify the commands in the following examples to match your project's needs.
   terminus build:project:create --git=github --team='My Agency Name' wp my-site
   ```
 
-- Start a GitHub project with Drupal 9:
+- Start a GitHub project with drupal:latest:
 
   ```bash{promptUser: user}
   terminus build:project:create --git=github --team='My Agency Name' d9 my-site
@@ -186,7 +186,7 @@ terminus auth:login --machine-token=<machine-token>
 
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
-- [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
+- [drupal:latest](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 
 </Accordion>
