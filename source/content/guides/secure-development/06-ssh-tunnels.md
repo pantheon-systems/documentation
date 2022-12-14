@@ -191,7 +191,7 @@ SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to 
 Fatal: Could not read from remote repository.
 ```
 
-Review [Port 2222 Blocked Workaround](/port-2222) for more information.
+Review [Port 2222 Blocked Workaround](/guides/sftp/port-2222) for more information.
 
 ## More Resources
 

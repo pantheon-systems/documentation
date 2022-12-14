@@ -84,7 +84,7 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
 
 1. Click **Open SFTP client**, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 

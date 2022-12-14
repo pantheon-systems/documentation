@@ -49,8 +49,8 @@ Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/80205
 
 ### Commit Code in Dev
 
-Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/guides/git/git-config).
-For more detailed information on developing directly in SFTP mode, please see the [guide](/sftp).
+Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/guides/sftp/sftp-development) or [Git](/guides/git/git-config).
+For more detailed information on developing directly in SFTP mode, please see the [guide](/guides/sftp).
 
 ### Combine Code from Dev and Content from Live in Test
 
@@ -105,6 +105,10 @@ After testing your changes in the Test environment you can move them to the Live
 ### Content Staging
 
 Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions. 
+
+## Upload Content and Files to Test and Live Environments
+
+You can upload files directly to your Test and Live environments through an SFTP connection. Refer to [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info#sftp-file-uploads-to-test-and-live-environments) for more information.
 
 ## Configuration Management
 

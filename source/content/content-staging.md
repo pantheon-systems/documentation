@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 ---
 
-Content staging workflow between test and live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment (check out [WebOps workflow](/pantheon-workflow#content) for an explanation of why we do this). 
+Content staging workflow between Test and Live environments can be difficult to manage without introducing conflicts. The default workflow is for content to be created, staged, and published in the live environment (check out [WebOps workflow](/pantheon-workflow#content) for an explanation of why we do this). 
 
 The default configuration doesn't work for some configurations. Review the sections below to find content staging solutions that match your current WordPress or Drupal configuration. Keep in mind that while these solutions have worked for others, they might not work for your specific configuration.
 
@@ -25,11 +25,11 @@ The core challenge that the solutions below try to deal with is keeping the stag
 
 This solution requires low-level effort, but can be risky. Keep in mind that a content freeze solution only works if no changes are made to the live environment while the new content is being staged. If changes are made, for instance a new post was created or someone added a comment, then those changes are lost. This method should only be used for the simplest of sites.
 
-1. Copy the live database into a staging environment. 
+1. Copy the Live database into a staging environment. 
 
 1. Work with your team to find a way to stop all changes from occurring on the site (this can be done by verbally asking people to not make updates or by revoking access). 
 
-1. [Clone](/guides/mariadb-mysql/database-workflow-tool#cloning-the-database) the staging environment to the live environment after the content is fully staged and approved.
+1. [Clone](/guides/mariadb-mysql/database-workflow-tool#cloning-the-database) the staging environment to the Live environment after the content is fully staged and approved.
 
 ### Staging Content with WP-CFM
 
@@ -80,6 +80,10 @@ Drupal also offers the [YAML Content](https://www.drupal.org/docs/contributed-mo
 ### Content Synchronization Module
 
 Drupal’s [Content Synchronization](https://www.drupal.org/project/content_sync) module allows you to synchronize content across multiple environments. You can export single content items or all content items from one environment to another.
+
+## Upload Content and Files to Test and Live Environments
+
+You can upload files directly to your Test and Live environments through an SFTP connection. Refer to [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info#sftp-file-uploads-to-test-and-live-environments) for more information.
 
 ## More Resources
 

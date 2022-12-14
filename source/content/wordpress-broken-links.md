@@ -24,7 +24,7 @@ You can install the plugin from your [WordPress dashboard](/cms-admin/#wordpress
 
 <Alert title="Note" type="info">
 
-Your site's Connection Mode must be [set to SFTP](/sftp#sftp-mode).
+Your site's Connection Mode must be [set to SFTP](/guides/sftp).
 
 </Alert>
 
