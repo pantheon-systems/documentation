@@ -115,5 +115,5 @@ At this time, Pantheon does not provide or support:
 ## Read More
 
 - [Build Tools](/guides/build-tools)
-- [Localdev](/guides/localdev/troubleshoot-support)
+- [Local Development](/guides/local-development)
 - [Pantheon Multidev](/guides/multidev)
