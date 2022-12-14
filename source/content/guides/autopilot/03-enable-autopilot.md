@@ -121,25 +121,9 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 ### Update Destination & Frequency
 
-You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Deployment options are:
+You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
 
-- Dev
-- Test
-- Live
-- Do Not Deploy
-   - Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
-
-Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
-
-![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot-sync-environment.png)
-
-
-1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
-
-    - Dev
-    - Test
-    - Live
-    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://pantheon.io/docs/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a> for more information." />
+![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-destination-frequency.png)
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -150,6 +134,14 @@ Some selection options are grayed out for customers with Gold plans. Only custom
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
    The **Sync Environment** feature syncs your Live environment to your Dev environment before Autopilot performs updates. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
+
+1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
+
+   - Dev
+   - Test
+   - Live
+   - Do Not Deploy
+      - Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
 
 1. Click **Save** to save the changes.
 
