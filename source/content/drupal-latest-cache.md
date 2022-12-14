@@ -1,14 +1,15 @@
 ---
-title: Drupal 9 Performance and Global CDN Caching Settings
-description: Optimize Drupal 9 and Global CDN caching to maximize your Pantheon site's performance.
+title: drupal:latest Performance and Global CDN Caching Settings
+description: Optimize drupal:latest and Global CDN caching to maximize your Pantheon site's performance.
 cms: "Drupal"
-tags: [cache]
+tags: [cache, D8, D9, D10]
 contenttype: [doc]
 categories: [optimize]
-newcms: [drupal9]
+newcms: [drupal, drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [cdn]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 To maximize your site’s performance on Pantheon and to take advantage of our Global CDN, you'll need to configure your site's performance settings.
@@ -19,7 +20,7 @@ Learn industry best practices for Drupal caching, how to take advantage of them 
 
 </Enablement>
 
-## Drupal 9 Performance 
+## drupal:latest Performance 
 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
@@ -27,9 +28,9 @@ Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ![caching settings](../images/drupal-8-performance-settings.png)
 
-In Drupal 9, anonymous page caching is enabled by default. There is no option to turn it on or off. To disable caching for development purposes, set the "Page cache maximum age" to **no caching**.
+In drupal:latest, anonymous page caching is enabled by default. There is no option to turn it on or off. To disable caching for development purposes, set the "Page cache maximum age" to **no caching**.
 
-Page cache maximum age sets the max-age value in the Cache-Control headers that are output by Drupal 9. The only value that will disable Drupal's caching is "no caching". For an in-depth explanation of the max-age header, see the [W3.org official documentation](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.3).
+Page cache maximum age sets the max-age value in the Cache-Control headers that are output by drupal:latest. The only value that will disable Drupal's caching is "no caching". For an in-depth explanation of the max-age header, see the [W3.org official documentation](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.3).
 
 ## Bandwidth Optimization
 
@@ -45,8 +46,8 @@ Some developers may wonder if HTTP/2 has replaced CSS and Javascript aggregation
 
 ### Other Caching Locations
 
-Other modules like `views.module`, which is now in Drupal 9's core, and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should consider implementing their cache settings to provide a good logged-in user experience.
+Other modules like `views.module`, which is now in drupal:latest's core, and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should consider implementing their cache settings to provide a good logged-in user experience.
 
 ## More Resources
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
-- [Drupal 9 Cache API Documentation](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x)
+- [drupal:latest Cache API Documentation](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x)

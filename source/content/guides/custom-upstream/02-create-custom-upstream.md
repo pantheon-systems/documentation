@@ -179,12 +179,12 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </Tab>
 
-    <Tab title="Drupal 10" id="d10">
+    <Tab title="Drupal:latest" id="dlatest">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+    git remote add pantheon-drupal-latest https://github.com/pantheon-upstreams/drupal-universal.git
     ```
-
+            [[ NOTE: This repo doesn't yet exist. I'm not sure what it will be called. ]]
     </Tab>
 
     <Tab title=" Drupal 7" id="d71">
@@ -212,14 +212,14 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </Tab>
 
-    <Tab title="Drupal 10" id="d10">
+    <Tab title="Drupal:latest" id="dlatest">
 
     1. Pull and commit the core files:
 
      ```bash{promptUser: user}
      git checkout -b master
-     git fetch pantheon-drupal-10 main
-     git merge pantheon-drupal-10/main
+     git fetch pantheon-drupal-latest main
+     git merge pantheon-drupal-latest/main
      git push origin master
      ```
 

@@ -1,6 +1,6 @@
 ---
-title: Upgrade Drupal 8 with Integrated Composer to Drupal 9
-description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to Drupal 9.
+title: Upgrade Drupal 8 with Integrated Composer to drupal:latest
+description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to drupal:latest.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
@@ -12,21 +12,21 @@ product: [integrated-composer]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
-reviewed: "2022-02-25"
+reviewed: "2022-12-13"
 ---
 
-This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to a Drupal 9 site using Integrated Composer.
+This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to a drupal:latest site using Integrated Composer.
 
-<Partial file="drupal-9/see-landing.md" />
+<Partial file="drupal-latest/see-landing.md" />
 
 
 ## Overview
 
-The goal of this upgrade is to set the Drupal core dependency to Drupal 9. This upgrade allows Composer to manage dependencies in the new site.
+The goal of this upgrade is to set the Drupal core dependency to drupal:latest. This upgrade allows Composer to manage dependencies in the new site.
 
 <Alert title="Note"  type="info" >
 
-Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to Drupal 9.
+Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to drupal:latest.
 
 </Alert>
 
@@ -34,7 +34,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream. 
 
-Confirm the site requirements in the sections below before upgrading to Drupal 9.
+Confirm the site requirements in the sections below before upgrading to drupal:latest.
 
 ### Verify the Repository
 
@@ -69,13 +69,13 @@ Confirm the site requirements in the sections below before upgrading to Drupal 9
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
+<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
 
 ### Apply All Available Upstream Updates
 
 <Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />
 
-<Partial file="drupal-8-to-drupal-9-upgrade.md" />
+<Partial file="drupal-8-to-drupal-latest-upgrade.md" />
 
 ## Troubleshooting
 

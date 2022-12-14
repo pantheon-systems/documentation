@@ -2,7 +2,7 @@
 title: Migrate a Drupal 8 Site to Drupal:
 subtitle: Migrate the Code
 description: 
-cms: "Drupal 9"
+cms: "drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither, stovak]
 layout: guide
@@ -90,11 +90,11 @@ integration: [--]
 
 1. Copy over any custom modules or themes from your D8 site:
 
-     <Partial file="drupal-9/custom-modules-themes-no-docroot.md" />
+     <Partial file="drupal-latest/custom-modules-themes-no-docroot.md" />
 
 1. Check `settings.php` for any customizations to copy over:
 
-     <Partial file="drupal-9/custom-settings-no-docroot.md" />
+     <Partial file="drupal-latest/custom-settings-no-docroot.md" />
 
 1. Copy your files and database from your D8 site to the drupal:latest site:
 

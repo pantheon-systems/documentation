@@ -14,7 +14,7 @@ layout: guide
 permalink: docs/guides/acquia/prepare
 anchorid: prepare
 editpath: migrate/acquia/03-prepare.md
-reviewed: "2021-06-15"
+reviewed: "2022-12-13"
 ---
 
 <Partial file="migrate/prepare.md" />

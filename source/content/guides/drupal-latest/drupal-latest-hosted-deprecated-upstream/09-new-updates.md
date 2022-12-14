@@ -26,4 +26,4 @@ Follow the steps below after you have completed switching your upstream.
 
 1. Click **Dev environment** > **Update** to apply available upstream updates.
 
-If the updates are not successful, refer to the [Troubleshooting](/guides/drupal-9-hosted-deprecated-upstream/troubleshooting) doc.
+If the updates are not successful, refer to the [Troubleshooting](/guides/drupal-latest-hosted-deprecated-upstream/troubleshooting) doc.

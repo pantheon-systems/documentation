@@ -1,10 +1,10 @@
 ---
-title: Create a Drupal 9 Site Using a Drupal Distribution
-description: Learn how to create a site using a Drupal 9 distribution.
+title: Create a Drupal:latest Site Using a Drupal Distribution
+description: Learn how to create a site using a Drupal distribution.
 cms: "Drupal"
-tags: [site]
+tags: [site, D8, D9, D10]
 type: guide
-permalink: docs/guides/drupal-9-from-dist
+permalink: docs/guides/drupal-latest-from-dist
 contributors: [wordsmither]
 date: 07/06/2022
 contenttype: [doc]
@@ -13,6 +13,7 @@ newcms: [drupal]
 audience: [development]
 product: [dashboard, terminus]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch. 
@@ -21,7 +22,7 @@ Review the [documentation provided with the community distribution](https://www.
 
 ## Prepare
 
-<Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
+<Partial file="drupal-latest/prepare-local-environment-no-clone-no-alias.md" />
 
 ## Create a Site Based on an Empty Upstream
 
@@ -206,6 +207,6 @@ include __DIR__ . "/settings.pantheon.php";
 
 - [Get Started](/get-started)
 
-- [Drupal 9 Migration Guides](/drupal-9-migration)
+- [drupal:latest Migration Guides](/drupal-latest-migration)
 
 - [Go Live](/go-live)

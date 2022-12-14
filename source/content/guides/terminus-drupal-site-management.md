@@ -12,9 +12,10 @@ tags: [terminus, drush]
 type: guide
 permalink: docs/guides/:basename
 contributors: [erikmathy]
-
+reviewed: "2022-12-13"
 ---
 ## Create Sites Faster and More Efficiently
+
 The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
 <Alert title="Note"  type="info" >
@@ -93,7 +94,7 @@ Follow the steps below to create a new site.
 
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
-1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 9 on the Dev environment:
+1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install drupal:latest on the Dev environment:
 
   ```bash{promptUser: user}
   terminus drush my-d9-site.dev -- site-install -y

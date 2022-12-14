@@ -18,7 +18,7 @@ product: [dashboard]
 integration: [--]
 ---
 
-<!-- belongs in source/partials/drupal-9/core-updates-partial.md, but it wasn't rendering. Edward 2022-05 -->
+<!-- belongs in source/partials/drupal-latest/core-updates-partial.md, but it wasn't rendering. Edward 2022-05 -->
 
 One-click core updates can be made through the Dashboard:
 

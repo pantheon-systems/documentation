@@ -21,7 +21,7 @@ integration: []
 
 This page provides steps on preparing your site for migration to [Drupal with Composer Upstream](/guides/integrated-composer).
 
-## Use Terminus to Confirm the Drupal 9 Upstream
+## Use Terminus to Confirm the drupal:latest Upstream
 
 Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 
@@ -53,4 +53,4 @@ Use these values to determine which upstream a site is using:
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
+<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />

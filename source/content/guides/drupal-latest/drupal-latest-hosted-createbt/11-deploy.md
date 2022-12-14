@@ -6,7 +6,7 @@ cms: "Drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
-permalink: docs/guides/drupal-9-hosted-createbt/deploy
+permalink: docs/guides/drupal-latest-hosted-createbt/deploy
 anchorid: deploy
 editpath: drupal-latest/drupal-latest-hosted-createbt/11-deploy.md
 reviewed: "2022-12-13"

@@ -1,8 +1,8 @@
 ---
-title: Drupal Commerce on Drupal 9
-description: Use Composer to Install Drupal Commerce with Drupal 9, on Pantheon
+title: Drupal Commerce on Drupal:latest
+description: Use Composer to Install Drupal Commerce with Drupal:latest, on Pantheon
 contributors: [alexfornuto, stevector]
-cms: "Drupal 9"
+cms: "Drupal:latest"
 tags: [upstreams, site]
 type: guide
 permalink: docs/guides/:basename
@@ -13,6 +13,7 @@ newcms: [drupal]
 audience: [development]
 product: [--]
 integration: [modules]
+reviewed: "2022-12-13"
 ---
 
 This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a:
@@ -23,11 +24,13 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 ## Before You Begin
 
-1. Make sure you have updated to [Drupal 9](/drupal-9#about-drupal-9)
+1. Make sure you have updated to [Drupal:latest](/drupal-latest#about-drupal-latest)
 
   <Alert title="Note"  type="info" >
 
   Drupal 8 reached end-of-life status in November 2021, and is no longer supported by Drupal. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29).
+
+  Drupal 10 was released in December of 2022. ead the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29). [[NOTE: Replace with link when available]]
 
   </Alert>
 
@@ -45,9 +48,9 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
     - `GITHUB_TOKEN` lets Terminus interact with your GitHub account to create the repository
     - `CIRCLE_TOKEN` is used to configure CircleCI to push to Pantheon any time a push is made to the GitHub repo
 
-## Create a New Drupal 9 Site
+## Create a New drupal:latest Site
 
-1. Use the Terminus Build Tools plugin to create a new Drupal 9 site from the Pantheon [Drupal Recommended](https://github.com/pantheon-systems/drupal-composer-managed) repository on GitHub:
+1. Use the Terminus Build Tools plugin to create a new drupal:latest site from the Pantheon [Drupal Recommended](https://github.com/pantheon-systems/drupal-composer-managed) repository on GitHub:
 
  ```bash{promptUser: user}
  terminus build:project:create d9 $SITENAME
@@ -81,7 +84,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 1. Run `git status` to see that the `composer.json` and `composer.lock` files have changed:
 
-  ![Git Status showing updated Composer files](../../images/guides/drupal-9-commerce/git-status.png)
+  ![Git Status showing updated Composer files](../../images/guides/drupal-latest-commerce/git-status.png)
 
 1. Commit the new files and then push them to GitHub:
 
@@ -96,7 +99,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
   You should now see your commit history. After CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
 
-  ![Build Assets on Dev](../../images/guides/drupal-9-commerce/build-assets.png)
+  ![Build Assets on Dev](../../images/guides/drupal-latest-commerce/build-assets.png)
 
 ## Reinstall Drupal
 
@@ -120,7 +123,7 @@ The Build Tools Plugin command you used earlier automatically installed Drupal's
 
 1. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a successful install:
 
-    ![Drupal Commerce in the Toolbar](../../images/guides/drupal-9-commerce/commerce-button.png)
+    ![Drupal Commerce in the Toolbar](../../images/guides/drupal-latest-commerce/commerce-button.png)
 
 ## Conclusion
 

@@ -16,7 +16,7 @@ showtoc: true
 permalink: docs/guides/manual-d8-composer-to-d8/troubleshooting
 anchorid: troubleshooting
 editpath: migrate/manual-d8-composer-to-d8/15-troubleshooting.md
-reviewed: "2021-06-22"
+reviewed: "2022-12-13"
 ---
 
 This sections provides common troubleshooting scenarios.
@@ -30,5 +30,5 @@ This sections provides common troubleshooting scenarios.
 
 <Partial file="migrate/drupal-rebuildcache.md" />
 
-<Partial file="drupal-9/troubleshooting-general.md" />
+<Partial file="drupal-latest/troubleshooting-general.md" />
 

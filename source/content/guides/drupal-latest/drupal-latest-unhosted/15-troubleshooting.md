@@ -19,7 +19,7 @@ integration: [--]
 reviewed: "2022-12-13"
 ---
 
-This section covers common troubleshooting scenarios when migrating a Drupal 9 site from another host to Pantheon's platform.
+This section covers common troubleshooting scenarios when migrating a drupal:latest site from another host to Pantheon's platform.
 
 ## Provided host name not valid
 

@@ -2,7 +2,7 @@
 title: Build Tools
 subtitle: Write a New Test
 description: In step six of the Build Tools guide, learn how to use the pre-configured site tests, or customize your own.
-tags: [continuous-integration, iterate, webops, workflow]
+tags: [continuous-integration, iterate, webops, workflow, D8, D9, D10]
 buildtools: true
 anchorid: behat
 type: guide
@@ -15,9 +15,10 @@ newcms: [--]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
-The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 9 uses [Behat](http://behat.org/en/latest/) and the WordPress example uses [WordHat](https://wordhat.info/).
+The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. drupal:latest uses [Behat](http://behat.org/en/latest/) and the WordPress example uses [WordHat](https://wordhat.info/).
 
 The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat/behat-pantheon.yml) file sets the path for a project's collection of Behat tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
 

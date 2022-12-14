@@ -1,15 +1,15 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal 9 + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal 9"
+cms: "drupal:latest"
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
-permalink: docs/guides/drupal-9-hosted-btworkflow/contrib-custom
+permalink: docs/guides/drupal-latest-hosted-btworkflow/contrib-custom
 anchorid: contrib-custom
-editpath: drupal-9/drupal-9-hosted-btworkflow/07-contrib-custom.md
+editpath: drupal-latest/drupal-latest-hosted-btworkflow/07-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate]
@@ -61,15 +61,15 @@ Manually copy custom code from the existing site repository to the Composer-mana
 
 ### Modules and Themes
 
-<Partial file="drupal-9/custom-modules-themes-no-docroot.md" />
+<Partial file="drupal-latest/custom-modules-themes-no-docroot.md" />
 
 ### settings.php
 
-<Partial file="drupal-9/custom-settings-no-docroot.md" />
+<Partial file="drupal-latest/custom-settings-no-docroot.md" />
 
 ## Additional Composer Configuration
 
-<Partial file="drupal-9/composer-config.md" />
+<Partial file="drupal-latest/composer-config.md" />
 
 ## Push to the External Repository Master Branch
 

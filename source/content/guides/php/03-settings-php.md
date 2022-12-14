@@ -15,15 +15,16 @@ layout: guide
 showtoc: true
 permalink: docs/guides/php/settings-php
 anchorid: settings-php
+reviewed: "2022-12-13"
 ---
 
 This section provides information on how to configure the `settings.php` file for a Drupal site. Refer to [Configure Your wp-config.php File](/guides/php/wp-config-php) if you have a WordPress site.
 
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
-## Drupal 9
+## drupal:latest
 
-Drupal 9 sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. Your site will stop working on Pantheon if the stock `settings.php` file is used in place of the bundled file. 
+drupal:latest sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. Your site will stop working on Pantheon if the stock `settings.php` file is used in place of the bundled file. 
 
 ## Drupal 7 and Earlier
 
@@ -47,11 +48,11 @@ Never place the database connection information for a Pantheon database within y
 
 </Alert>
 
-Use the Drupal 9 and Drupal 7 configuration snippets in the subsections below to specify a local configuration that will be ignored by Pantheon, such as database credentials.
+Use the drupal:latest and Drupal 7 configuration snippets in the subsections below to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
-### Drupal 9
+### drupal:latest
 
-1. Configure environment-specific settings within the `settings.local.php` file, which is ignored by Git in the Pantheon [Drupal 9 upstream](https://github.com/pantheon-systems/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
+1. Configure environment-specific settings within the `settings.local.php` file, which is ignored by Git in the Pantheon [drupal:latest upstream](https://github.com/pantheon-systems/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
   ```php
     /**
@@ -65,7 +66,7 @@ Use the Drupal 9 and Drupal 7 configuration snippets in the subsections below to
 
 1. Set the `HASH_SALT` value within `settings.local.php`. Refer to the Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
 
-    - Drupal 9 will not run locally without a hash salt. The hash salt you use does not have to be the same one set on the Pantheon platform. You can use any sufficiently long random string. Make sure to set one in `settings.local.php` :
+    - drupal:latest will not run locally without a hash salt. The hash salt you use does not have to be the same one set on the Pantheon platform. You can use any sufficiently long random string. Make sure to set one in `settings.local.php` :
 
     ```php:title=settings.local.php
     $settings['hash_salt'] = '$HASH_SALT';
@@ -83,7 +84,7 @@ You will see a warning within `/admin/reports/status` if the `trusted_host_patte
 
 <Alert title="Note" type="info">
 
-Don't use the code snippet if you're using the Drupal 9 redirects from our [Configure Redirects](/guides/redirect/#redirect-to-https-and-the-primary-domain) documentation as it conflicts with the other code.
+Don't use the code snippet if you're using the drupal:latest redirects from our [Configure Redirects](/guides/redirect/#redirect-to-https-and-the-primary-domain) documentation as it conflicts with the other code.
 
 </Alert>
 
@@ -232,7 +233,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I get a copy of a default.settings.php file?
 
-- **Drupal 9:** There is no `default.settings.php` file in the Drupal 9 repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php)
+- **drupal:latest:** There is no `default.settings.php` file in the drupal:latest repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php)
 
 - **Drupal 7:** [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 

@@ -2,7 +2,7 @@
 title: Pantheon Autopilot
 subtitle: Introduction
 description: Visual regression testing (VRT) for your WordPress or Drupal site.
-tags: [iterate, autopilot, testing, webops]
+tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 contributors: [nathantyler, alexfornuto, edwardangert]
 productpage: https://pantheon.io/autopilot?docs
 type: guide
@@ -11,7 +11,7 @@ showtoc: true
 anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
-reviewed: "2022-05-17"
+reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [automate]
 newcms: [--]
@@ -69,7 +69,7 @@ Your site must be on Pantheon and meet the criteria below to be eligible for Aut
 | Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
 -----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (with Integrated Composer or Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without WordPress Multisite Network = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
+| No =  <span style = "color:green" > ✔  </span > compatible | drupal:latest (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
                                                                                     
 ## Autopilot For Agencies
 

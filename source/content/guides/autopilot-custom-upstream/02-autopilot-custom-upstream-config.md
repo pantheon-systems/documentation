@@ -2,7 +2,7 @@
 title: Autopilot for Custom Upstreams
 subtitle: Configure a Custom Upstream for Autopilot
 description: Learn how to configure your Custom Upstream to use Autopilot.
-tags: [autopilot, upstreams]
+tags: [autopilot, upstreams, D8, D9, D10]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
@@ -14,6 +14,7 @@ newcms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 There are three use cases for combining Autopilot and Custom Upstreams on the Pantheon platform.
@@ -22,9 +23,9 @@ There are three use cases for combining Autopilot and Custom Upstreams on the Pa
 
 This use case is considered the standard use case for Autopilot. Autopilot always checks for an upstream in Pantheon’s upstream library or a Custom Upstream created by the user. Autopilot applies the updates from the upstream alongside other modules, plugins, and themes. This scenario makes the most sense if you are using your Custom Upstream as a boilerplate template.
 
-<Alert title="Note: Drupal 9 Users"  type="info" >
+<Alert title="Note: drupal:latest Users"  type="info" >
 
-Autopilot Enabled on Downstream Sites Only is the best option if you are using Drupal 9 with Integrated Composer. Updates cannot occur on both the upstream and the downstream or there will be continual conflicts due to technical configurations, including a single `composer.lock` file.
+Autopilot Enabled on Downstream Sites Only is the best option if you are using drupal:latest with Integrated Composer. Updates cannot occur on both the upstream and the downstream or there will be continual conflicts due to technical configurations, including a single `composer.lock` file.
 
 </Alert>
 

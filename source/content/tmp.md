@@ -98,7 +98,7 @@ Output of this command should look something like the following Plupload example
 
 </Tab>
 
-<Tab title="Drupal 9" id="d9tmppath">
+<Tab title="drupal:latest" id="d9tmppath">
 
 Correct an unsupported temporary path set by a module or theme using `$settings` override in `settings.php`. 
 
@@ -190,7 +190,7 @@ Output of this command should look something like the following Plupload example
 
 </Tab>
 
-<Tab title="Drupal 9" id="d9workaround">
+<Tab title="drupal:latest" id="d9workaround">
 
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$settings` override in `settings.php`. 
 

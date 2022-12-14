@@ -2,6 +2,7 @@
 title: Major Version Drupal Upgrades
 description: Instructions on how to upgrade your Pantheon site to the next major version of Drupal.
 cms: "Drupal"
+<<<<<<< HEAD
 contenttype: [doc]
 categories: [--]
 newcms: [--]
@@ -10,19 +11,24 @@ product: [--]
 integration: [--]
 tags: [migrate, workflow]
 reviewed: "2020-07-21"
+=======
+categories: [get-started]
+tags: [migrate, workflow, D8, D9, D10]
+reviewed: "2022-12-13"
+>>>>>>> d798fefbe (Deep breath… I think this is everything on the list.)
 ---
 
 <Alert title="Deprecated" type="info" icon="drupal">
 
 The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
 
-Visit the [Drupal 9 migration guide](/drupal-9-migration) to find the best path to Drupal 9 for your site.
+Visit the [drupal:latest migration guide](/drupal-latest-migration) to find the best path to drupal:latest for your site.
 
 </Alert>
 
 ## Overview
 
-To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 9, create a new Drupal 9 site and add content, files and modules from the old site into the new site.
+To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to drupal:latest, create a new drupal:latest site and add content, files and modules from the old site into the new site.
 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
@@ -30,13 +36,13 @@ Migrating to a new site on the platform will provide you with the QA and deploym
 If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.
 </Alert>
 
-## About Drupal 9
+## About drupal:latest
 
-Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with Drupal 9, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first.
+Since drupal:latest currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with drupal:latest, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first.
 
 ### Content and configuration
 
-Drupal 9 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 9 site](/drupal-9-configuration-management)).
+drupal:latest migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any drupal:latest site](/drupal-latest-configuration-management)).
 
 ### Customizing migrations
 
@@ -85,6 +91,6 @@ Migrations of particularly large sites to updated Drupal versions can sometimes 
 
 ## More Resources
 
-- [Drupal 9](/drupal-9)
+- [Drupal:latest](/drupal-latest)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)

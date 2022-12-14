@@ -16,12 +16,12 @@ integration: [composer]
 
 This guide shows you how to migrate a Composer-based Drupal site (site created via Pantheon dashboard or Terminus) to a Build Tools-based site.
 
-<Partial file="drupal-9/see-landing.md" />
+<Partial file="drupal-latest/see-landing.md" />
 
 
 ## Overview
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies. A Drupal 9 site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
+drupal:latest sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies. A drupal:latest site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
 
 The goals of this migration are to:
 
@@ -31,9 +31,9 @@ The goals of this migration are to:
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal-9/upgrade-site-requirements-from-drupal-recommended.md" />
+<Partial file="drupal-latest/upgrade-site-requirements-from-drupal-recommended.md" />
 
-- You are able to [create a new Drupal 9 site using Terminus Build Tools](/guides/build-tools/create-project/#create-a-build-tools-project)
+- You are able to [create a new drupal:latest site using Terminus Build Tools](/guides/build-tools/create-project/#create-a-build-tools-project)
 
 ## Before You Begin
 
@@ -45,9 +45,9 @@ The existing site's commit history will no longer exist after migrating to the n
 
 </Alert>
 
-## Create a New Terminus Build Tools Drupal 9 Site
+## Create a New Terminus Build Tools drupal:latest Site
 
-1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal 9 site:
+1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new drupal:latest site:
 
   ```bash{promptUser: user}
   terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site
@@ -57,7 +57,7 @@ The existing site's commit history will no longer exist after migrating to the n
 
 ## Prepare the Local Environment
 
-1. <Partial file="drupal-9/prepare-local-environment-no-clone-no-alias.md" />
+1. <Partial file="drupal-latest/prepare-local-environment-no-clone-no-alias.md" />
 
 1. Get a local copy of both your new site (from the external repository) and your existing site codebase.
 
@@ -193,9 +193,9 @@ Any additional Composer configuration that you have added to your site should be
 ## Add Your Database
 
 
-<Partial file="drupal-9/migrate-add-database-part1-sql.md" />
+<Partial file="drupal-latest/migrate-add-database-part1-sql.md" />
 
-<Partial file="drupal-9/migrate-add-database-part2.md" />
+<Partial file="drupal-latest/migrate-add-database-part2.md" />
 
 ## Back Up the tokens.json file
 

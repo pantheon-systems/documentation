@@ -1,7 +1,7 @@
 ---
 title: Continuous Integration Solutions on Pantheon
 description: Run automated unit and integration tests with Terminus and Drupal SimpleTest.
-tags: [continuous-integration, workflow]
+tags: [continuous-integration, workflow, D8, D9, D10]
 contributors: [ccjjmartin]
 contenttype: [doc]
 categories: [automate]
@@ -9,7 +9,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
-reviewed: "2022-12-07"
+reviewed: "2022-12-13"
 ---
 [<dfn id="ci">Continuous Integration</dfn>](https://pantheon.io/integrations/continuous-integration) (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/guides/support/contact-support/).
 
@@ -32,7 +32,7 @@ The best way to test your site on pantheon is using autopilot. Link to autopilot
 
 ## PHPUnit Testing
 
-As of Drupal 9 PHPUnit is the standard method of testing on Drupal sites. Link to PHPUnit Testing.
+As of drupal:latest PHPUnit is the standard method of testing on Drupal sites. Link to PHPUnit Testing.
 
 ## Integration Bot
 

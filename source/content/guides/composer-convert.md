@@ -5,7 +5,7 @@ type: guide
 permalink: docs/guides/:basename
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
-reviewed: "2022-08-18"
+reviewed: "2022-12-12"
 contenttype: [doc]
 categories: [optimize]
 newcms: [drupal8]
@@ -18,11 +18,11 @@ In this guide, we'll convert a standard Drupal 8 site to use Composer to manage 
 
 During this process, you will create a new branch based on the Git history of the new upstream.  You'll then re-add the contrib and custom code for your site to the new branch, and test it on a Multidev environment.  When everything is working correctly in the Multidev environment, you'll deploy the changes to the Dev environment by replacing your site's master branch with the new branch you've created.  Finally, after testing and confirming everything looks good, you'll use Terminus to switch the site over to the new upstream.
 
-<Partial file="drupal-9/see-landing.md" />
+<Partial file="drupal-latest/see-landing.md" />
 
 ## Overview
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
+drupal:latest sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
 The goals of this conversion are:
 
@@ -32,11 +32,11 @@ The goals of this conversion are:
 
 The `drupal-composer-managed` Integrated Composer upstream works with Drupal 8, and following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
 
-Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to Drupal 9.
+Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to drupal:latest.
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal-9/upgrade-site-requirements.md" />
+<Partial file="drupal-latest/upgrade-site-requirements.md" />
 
 ## Before You Begin
 
@@ -52,7 +52,7 @@ The steps in this process migrate a site, so the new site will no longer maintai
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
+<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
 
 ## Apply All Available Upstream Updates
 
@@ -68,13 +68,13 @@ If you receive the error message "The provided host name is not valid for this s
 
 ## Change Upstreams
 
-Your Pantheon site is now set up to use the Drupal 9 Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
+Your Pantheon site is now set up to use the drupal:latest Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
 terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to Drupal 9.
+Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to drupal:latest.
 
 ## Working With Dependency Versions
 

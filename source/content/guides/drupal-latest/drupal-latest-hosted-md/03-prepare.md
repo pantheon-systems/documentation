@@ -29,4 +29,4 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 ## Convert to Composer
 
-If your site is not currently Composer-managed, follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to Drupal 9.
+If your site is not currently Composer-managed, follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to drupal:latest.
