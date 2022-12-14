@@ -1,12 +1,12 @@
 ---
-title: Pantheon Localdev
-subtitle: Support & Troubleshooting
-description: Best practices for troubleshooting, getting support, and reporting bugs or feature requests.
+title: Pantheon Localdev - Deprecated
+subtitle: Localdev Support & Troubleshooting
+description: Support for Localdev
 tags: [localdev, local, workflow]
 reviewed: "2020-12-04"
 layout: guide
-permalink: docs/guides/localdev/troubleshoot-support
-anchorid: localdev/troubleshoot-support
+permalink: docs/guides/localdev
+anchorid: localdev
 editpath: localdev/04-troubleshoot-support.md
 contenttype: [guide]
 categories: [help]
