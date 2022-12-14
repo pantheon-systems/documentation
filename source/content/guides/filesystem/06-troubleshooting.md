@@ -23,17 +23,19 @@ This section provides solutions to common filesystem troubleshooting scenarios.
 
 The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress) uses the default Media Upload path (`wp-content/uploads`). You will get errors if you use any other path.
 
-### Simultaneous SFTP Connections
+### Simultaneous SFTP connections
 
-Pantheon does not support simultaneous SFTP connections. To avoid errors, set your SFTP client to use no more than 1 simultaneous connection.
+Pantheon does not support simultaneous SFTP connections. Set your SFTP client to use no more than 1 simultaneous connection to avoid errors.
 
 ### Unable to create directory `path-to-folder`. Is the parent directory writable by the server?
 
-Sites migrated from other hosts may have custom or absolute paths in the "Store Uploads in This Folder" configuration. This can be resolved by using the recommended configuration:
+Sites migrated from other hosts may have custom or absolute paths in the `Store Uploads in This Folder` configuration. This can be resolved by using the recommended configuration:
 
-1. In the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`)
-1. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
-1. Optional: Ensure there is no defined setting in `wp-config.php`, i.e., `define(‘UPLOADS’, ‘wp-content/myimages’);`.
+1. Navigate to the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`).
+
+1. Go to **Uploading Files > Store uploads in this folder** and update the field to contain only `wp-content/uploads`.
+
+1. Optional: Ensure that your `wp-config.php` file does not have a defined setting. For example,`define(‘UPLOADS’, ‘wp-content/myimages’);`.
 
 ### Known Limitations of File Names and Permissions
 
@@ -48,3 +50,9 @@ recommend changing to 600 or 660 instead of 770 in League\OAuth2\Server\CryptKey
 ```
 
 If you try to change the file permissions to `770` from `660` via SFTP, the change will fail silently. The platform will not update the file permissions and will not return an error.
+
+## More Resources
+
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)
+- [Configure Your Drupal Settings.php File](/guides/php/settings-php)
+- [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info)
