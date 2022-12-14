@@ -35,7 +35,7 @@ It is important to note that this directory is not part of the document root and
 
 You can connect directly to the filesystem.
 
-1. Copy your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [WinSCP](/winscp).
+1. Copy your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [WinSCP](/guides/sftp/winscp).
 
 1. Navigate to the `/files` directory within the SFTP client.
 
@@ -53,4 +53,4 @@ You may notice some files that you don't recognize when you are logged in to you
 
 - [Lock Environments with the Dashboard Security Tool](/guides/secure-development/security-tool)
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)
-- [SFTP on Pantheon](guide link here)
+- [SFTP on Pantheon](/guides/sftp)

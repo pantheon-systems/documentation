@@ -42,7 +42,7 @@ The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure is
 
 ### Large File Restrictions
 
-- **Files over 100MB** cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp).
+- **Files over 100MB** cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/guides/sftp/rsync-and-sftp).
 - **Files over 256MB** will fail no matter how they are uploaded.
 - **Files over 50MB** will experience noticeable degradation in performance.
 

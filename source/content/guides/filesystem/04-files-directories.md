@@ -18,8 +18,6 @@ anchorid: files-directories
 
 This section provides information on files, including uploads and exports, and directories on the Pantheon platform.
 
-
-
 ## Rename/Move Files or Directories
 
 ### Directories
