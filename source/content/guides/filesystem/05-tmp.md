@@ -124,6 +124,12 @@ You must correct an unsupported temporary path set by a module or theme using `$
   }
   ```
 
+1. Run `drush config:get` in [Terminus](/terminus) to verify the setting:
+
+  ```bash
+  terminus drush $site.$env -- config:get some_tmp_setting
+  ```
+
 </Tab>
 
 </TabList>
