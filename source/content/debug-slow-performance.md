@@ -128,7 +128,12 @@ Please note that memory issues caused by custom code fall outside our [scope of 
 ### Drupal
 Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler) module can help troubleshoot issues by logging peak memory usage.
 
+<<<<<<< HEAD
 GD Image library and UI modules such as Views UI, Feeds UI, etc are known causes for high memory usage. All versions of PHP on pantheon's platform support ImageMagick for offloading of resource-intensive image tasks and Redis for caching of data.
+=======
+GD Image library and UI modules such as Views UI, Feeds UI, etc are known causes for high memory usage. All versions of PHP on pantheon's platform
+support ImageMagick for offloading of resource-intensive image tasks and Redis for caching of data.
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 
 ### WordPress
 Refer to [Debugging in WordPress](https://codex.wordpress.org/Debugging_in_WordPress) from the WordPress.org Codex for information on debugging common issues.

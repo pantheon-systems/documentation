@@ -2,7 +2,11 @@
 title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
 subtitle: Set Drupal Core Version
 description: 
+<<<<<<< HEAD
 cms: "Drupal"
+=======
+cms: "Drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

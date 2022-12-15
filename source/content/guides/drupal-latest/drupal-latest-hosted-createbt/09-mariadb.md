@@ -2,7 +2,11 @@
 title: Migrate a Site That Was Created with Build Tools to Drupal:latest
 subtitle: Confirm the MariaDB Version and Updates
 description: 
+<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-createbt/09-mariadb.md
 cms: "Drupal"
+=======
+cms: "Drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-createbt/09-mariadb.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

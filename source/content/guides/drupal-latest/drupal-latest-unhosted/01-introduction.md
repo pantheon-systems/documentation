@@ -2,7 +2,11 @@
 title: Migrate a Drupal:latest Site from Another Platform
 subtitle: Introduction
 description: "Migrate an existing non-Pantheon hosted Drupal:latest site to Pantheon"
+<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-unhosted/01-introduction.md
 cms: "Drupal"
+=======
+cms: "Drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-unhosted/01-introduction.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

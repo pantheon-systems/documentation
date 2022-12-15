@@ -2,7 +2,11 @@
 title: Migrate a Drupal:latest Site from Another Platform
 subtitle: Deploy to Dev
 description: 
+<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-unhosted/08-deploy-dev.md
 cms: "Drupal"
+=======
+cms: "Drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-unhosted/08-deploy-dev.md
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

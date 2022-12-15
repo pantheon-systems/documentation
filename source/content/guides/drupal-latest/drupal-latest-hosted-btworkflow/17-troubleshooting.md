@@ -2,7 +2,11 @@
 title: Migrate a Site Created With the Pantheon Dashboard to DRUPAL:LATEST + Build Tools
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
+<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-btworkflow/17-troubleshooting.md
 cms: "Drupal"
+=======
+cms: "drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-btworkflow/17-troubleshooting.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

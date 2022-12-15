@@ -2,7 +2,11 @@
 title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
 subtitle: Restore the tokens.json File
 description: 
+<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-btworkflow/13-restore-token.md
 cms: "Drupal"
+=======
+cms: "drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-btworkflow/13-restore-token.md
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide

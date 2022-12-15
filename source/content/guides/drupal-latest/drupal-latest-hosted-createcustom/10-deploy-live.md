@@ -2,7 +2,11 @@
 title: Migrate a Custom Upstream to Drupal:latest
 subtitle: Deploy to Live
 description: 
+<<<<<<< HEAD
 cms: "Drupal"
+=======
+cms: "Drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

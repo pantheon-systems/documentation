@@ -1,7 +1,11 @@
 ---
 title: Basic Troubleshooting
 description: Common first-step practices to troubleshoot misbehaving sites.
+<<<<<<< HEAD
 contributors: [alexfornuto, eabquina, carlalberto]
+=======
+contributors: [alexfornuto, eabquina, carlalberto, D8, D9, D10]
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 reviewed: "2022-12-13"
 contenttype: [doc]
 categories: [cache, cookies, deploy, domains, help]

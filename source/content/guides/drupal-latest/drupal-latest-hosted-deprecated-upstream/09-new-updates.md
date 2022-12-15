@@ -2,7 +2,11 @@
 title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal:latest
 subtitle: Apply New Upstream Updates
 description: 
+<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-deprecated-upstream/09-new-updates.md
 cms: "Drupal"
+=======
+cms: "drupal:latest"
+>>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-deprecated-upstream/09-new-updates.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
