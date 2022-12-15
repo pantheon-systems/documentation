@@ -9,7 +9,6 @@ audience: [development, sysadmin]
 product: [--]
 integration: [--]
 tags: [composer, professional-services, updates, workflow]
-reviewed: "2021-04-01"
 layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/managed-updates
