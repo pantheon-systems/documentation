@@ -171,7 +171,7 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 
 #### Considerations - Drupal 9
 
-<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
+<Partial file="drupal/drupal-9-mariadb-considerations.md" />
 
 Confirm that the database upgrade completed successfully using the steps at the beginning of [Specify a Version of MariaDB](#specify-a-version-of-mariadb).
 

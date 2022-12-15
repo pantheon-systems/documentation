@@ -12,7 +12,7 @@ integration: [--]
 
 Manually migrate your site to Pantheon when any of the following apply:
 
-<Partial file="drupal-9/guide-note.md" />
+<Partial file="drupal/guide-note.md" />
 
 - **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 - **Large WordPress Site**: WordPress site exceeds 500MB.
@@ -291,7 +291,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 You can also use the Pantheon Dashboard to add your site's database.
 
-<Partial file="drupal-9/migrate-add-database-part2.md" />
+<Partial file="drupal/migrate-add-database-part2.md" />
 
 ## Upload Your Files
 
