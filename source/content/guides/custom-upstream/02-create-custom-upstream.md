@@ -184,7 +184,6 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
     ```bash{promptUser: user}
     git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-universal.git
     ```
-       <!--    [[ NOTE: This repo doesn't yet exist. I'm not sure what it will be called. ]] -->
     </Tab>
 
     <Tab title=" Drupal 7" id="d71">
