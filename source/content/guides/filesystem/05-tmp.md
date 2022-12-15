@@ -16,9 +16,11 @@ permalink: docs/guides/filesystem/tmp
 anchorid: tmp
 ---
 
+This section provides information on how to use and debug the default temporary path, `.tmp`.
+
 <Alert title="Exports" type="export">
 
-This doc uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
+This doc uses [Terminus](/terminus) commands. Before you begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
 
 ```bash
 export env=dev
@@ -28,7 +30,15 @@ export env=dev
 
 ## Default Temporary Path
 
-Pantheon configures an appropriate temporary path for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php#L67). Drupal 7 sites can achieve the same configuration by adding the following to `settings.php`:
+### WordPress
+
+You can get the Pantheon-configured temporary path for WordPress on the [Pantheon Systems WordPress Github](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php#L67).
+
+### Drupal
+
+We don't recommend changing the temporary settings path for Drupal 7. Changing the configuration allows temporary files to be shared across application containers, but causes a heavy performance penalty.
+
+Add the code below to your `settings.php` file to get the appropriate configuration for Drupal 7 sites.
 
 ```php
 /**
@@ -48,8 +58,6 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-**Note:** Changing the temporary settings path for Drupal 7 is not recommended. While the changes above would allow temporary files to be shared across application containers, it comes with a heavy performance penalty. 
-
 ## Fix Unsupported Temporary Path
 
 Errors caused by an unsupported temporary path typically surface as permission errors for `.tmp` files and can be replicated on any environment.
@@ -58,9 +66,9 @@ Errors caused by an unsupported temporary path typically surface as permission e
 
 <Tab title="WordPress" id="wptmppath" active={true}>
 
-Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. 
+You must correct an unsupported temporary path set by a plugin or theme in `wp-config.php`.
 
-1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
+1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option. For example:
 
   ```php
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -68,7 +76,7 @@ Correct an unsupported temporary path set by a plugin or theme in `wp-config.php
   }
   ```
 
-1. Verify the setting by using [Terminus](/terminus) to run `wp config get`:
+1. Run `wp config get`in [Terminus](/terminus) to verify the setting:
 
   ```bash{promptUser: user}
   terminus wp $site.$env -- config get SOME_TMP_SETTING
@@ -82,9 +90,9 @@ Output of this command should look something like the following Contact Form 7 e
 
 <Tab title="Drupal 7" id="d7tmppath">
 
-Correct an unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. 
+You must correct an unsupported temporary path set by a module or theme using `$conf` override in the `settings.php` file.
 
-1. Replace `some_tmp_setting` with the conflicting module or theme setting:
+1. Replace `some_tmp_setting` with the conflicting module or theme setting. For example:
 
   ```php
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -92,7 +100,7 @@ Correct an unsupported temporary path set by a module or theme using `$conf` ove
   }
   ```
 
-1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+1. Run `drush variable-get` in [Terminus](/terminus) to verify the setting:
 
   ```bash
   terminus drush $site.$env -- variable-get some_tmp_setting
@@ -106,7 +114,7 @@ Output of this command should look something like the following Plupload example
 
 <Tab title="Drupal 9" id="d9tmppath">
 
-Correct an unsupported temporary path set by a module or theme using `$settings` override in `settings.php`. 
+You must correct an unsupported temporary path set by a module or theme using `$settings` override in the `settings.php` file.
 
 1. Replace `file_temp_path` with the conflicting module or theme setting:
 
@@ -122,11 +130,11 @@ Correct an unsupported temporary path set by a module or theme using `$settings`
 
 ## Multiple Application Containers
 
-Errors caused by this scenario occur on production environments (Test or Live) and typically reference some `.tmp` file as not found and could not be copied. These errors cannot be replicated on development environments (Dev or Multidev) since those environments use a single application container.
+Errors caused by this scenario occur on production environments (Test or Live) and typically reference some `.tmp` file as not found and could not be copied. These errors cannot be replicated on development environments (Dev or Multidev) because those environments use a single application container.
 
-Sites on the Performance Medium plan and above have multiple [application containers](/application-containers). To help sites perform at scale, the platform routes requests across available application containers based on their load.
+Sites on the Performance Medium plan and above have multiple [application containers](/application-containers). The platform routes requests across available application containers based on their load to help sites perform at scale.
 
-The default temporary path (`$_SERVER['HOME'] . '/tmp'`) is not synchronized across application containers, so operations that expect this path to persist will fail.
+The default temporary path (`$_SERVER['HOME'] . '/tmp'`) is not synchronized across application containers which causes operations that expect this path to persist will fail.
 
 ### Considerations
 
@@ -138,7 +146,7 @@ Be aware that temporary files are not cleaned up automatically in the following 
 
 <Alert title="Warning" type="danger">
 
-In general, there's no need for temporary files to persist across application containers. Using a different plugin or module is preferred to taking the performance hit caused by the workaround below.
+There's generally no need for temporary files to persist across application containers. You can use a different plugin or module to avoid a performance hit that accompanies the workaround below.
 
 </Alert>
 
@@ -146,7 +154,9 @@ In general, there's no need for temporary files to persist across application co
 
 <Tab title="WordPress" id="wpworkaround" active={true}>
 
-Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in `wp-config.php`. 
+You must configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in the `wp-config.php` file.
+
+1. Verify that you have the `private` and `tmp` directories. These directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path because core treats the temporary path as non-web-accessible by default.
 
 1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
@@ -156,9 +166,7 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
     }
     ```
 
-    - The `private` and `tmp` directories do not exist by default. you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
-
-1. Verify the setting by using [Terminus](/terminus) to run `wp config get`:
+1. Run `wp config get` in [Terminus](/terminus) to verify the setting:
 
     ```bash
     terminus wp $site.$env -- config get SOME_TMP_SETTING
@@ -172,7 +180,9 @@ Output of this command should look something like the following Contact Form 7 e
 
 <Tab title="Drupal 7" id="d7workaround">
 
-Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$conf` override in `settings.php`. 
+You must configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using the `$conf` override in the `settings.php` file.
+
+1. Verify that you have the `private` and `tmp` directories. These directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path because core treats the temporary path as non-web-accessible by default.
 
 1. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
@@ -182,9 +192,7 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
     }
     ```
 
-    - The `private` and `tmp` directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
-
-1. Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
+1. Run `drush variable-get`in [Terminus](/terminus) to verify the setting:
 
     ```bash{promptUser: user}
     terminus drush $site.$env -- variable-get some_tmp_setting
@@ -198,7 +206,9 @@ Output of this command should look something like the following Plupload example
 
 <Tab title="Drupal 9" id="d9workaround">
 
-Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$settings` override in `settings.php`. 
+You must configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using the `$settings` override in the `settings.php` file.
+
+1. Verify that you have the `private` and `tmp` directories. These directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path because core treats the temporary path as non-web-accessible by default.
 
 1. Replace `file_temp_path` with the conflicting module or theme setting:
 
@@ -208,8 +218,12 @@ Configure a temporary path that uses a private subdirectory of Pantheon's networ
     }
     ```
 
-    - The `private` and `tmp` directories do not exist by default. You must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
-
 </Tab>
 
 </TabList>
+
+## More Resources
+
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)
+- [Configure Your Drupal Settings.php File](/guides/php/settings-php)
+- [SFTP Guide](/guides/sftp)
