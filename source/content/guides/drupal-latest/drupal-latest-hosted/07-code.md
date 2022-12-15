@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site to Drupal:
+title: Migrate a Drupal 8 Site to Drupal
 subtitle: Migrate the Code
 description: 
 cms: "drupal:latest"
