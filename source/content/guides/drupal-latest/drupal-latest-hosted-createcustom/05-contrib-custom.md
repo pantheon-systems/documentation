@@ -2,11 +2,7 @@
 title: Migrate a Custom Upstream to Drupal:latest
 subtitle: Add Contrib and Custom Code
 description: 
-<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-createcustom/05-contrib-custom.md
-cms: "Drupal"
-=======
 cms: "Drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-createcustom/05-contrib-custom.md
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide

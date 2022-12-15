@@ -2,11 +2,7 @@
 title: Migrate a Drupal 8 Site to drupal:latest
 subtitle: Deploy
 description: 
-<<<<<<< HEAD
-cms: "Drupal"
-=======
 cms: "drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither, stovak]
 layout: guide

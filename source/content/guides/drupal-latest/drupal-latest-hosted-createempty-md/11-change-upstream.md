@@ -2,11 +2,7 @@
 title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
 subtitle: Change Upstreams
 description: 
-<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-createempty-md/11-change-upstream.md
-cms: "Drupal"
-=======
 cms: "Drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-createempty-md/11-change-upstream.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

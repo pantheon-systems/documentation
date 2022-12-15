@@ -2,11 +2,7 @@
 title: Migrate a Drupal 8 Site to Drupal:
 subtitle: Migrate the Code
 description: 
-<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted/07-code.md
-cms: "Drupal"
-=======
 cms: "drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted/07-code.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither, stovak]
 layout: guide

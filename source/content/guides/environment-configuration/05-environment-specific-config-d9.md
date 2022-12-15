@@ -2,11 +2,7 @@
 title: Environment Configuration
 subtitle: Environment-Specific Configurations for drupal:latest
 description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and drupal:latest's configuration override system.
-<<<<<<< HEAD
-cms: "Drupal"
-=======
 cms: "drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 tags: [workflow, D8, D9, D10]
 contributors: [peter-pantheon, rachelwhitton]
 layout: guide

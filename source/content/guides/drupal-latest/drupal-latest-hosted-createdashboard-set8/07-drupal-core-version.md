@@ -2,11 +2,7 @@
 title: Migrate a Site Created With the Pantheon Dashboard to Drupal:latest
 subtitle: Set Drupal Core Version
 description: 
-<<<<<<< HEAD
-cms: "Drupal"
-=======
 cms: "Drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

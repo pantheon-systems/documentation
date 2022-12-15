@@ -2,11 +2,7 @@
 title: Migrate a Site Created With the Pantheon Dashboard to Drupal:latest
 subtitle: Introduction
 description: Learn how to migrate a Drupal 8 Site to Drupal:latest
-<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-createdashboard-set8/01-introduction.md
-cms: "Drupal"
-=======
 cms: "Drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-createdashboard-set8/01-introduction.md
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide

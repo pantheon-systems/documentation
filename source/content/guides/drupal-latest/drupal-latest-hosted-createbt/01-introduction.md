@@ -2,11 +2,7 @@
 title: Migrate a Site That Was Created with Build Tools to Drupal:latest
 subtitle: Introduction
 description: Learn how to migrate a Drupal 8 Site to Drupal:latest
-<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-createbt/01-introduction.md
-cms: "Drupal"
-=======
 cms: "Drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-createbt/01-introduction.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

@@ -2,11 +2,7 @@
 title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
 subtitle: Prepare
 description: 
-<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted-btworkflow/03-prepare.md
-cms: "Drupal"
-=======
 cms: "drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted-btworkflow/03-prepare.md
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide

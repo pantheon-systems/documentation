@@ -2,11 +2,7 @@
 title: Migrate a Drupal 8+ Site to Drupal:latest
 subtitle: Introduction
 description:
-<<<<<<< HEAD:source/content/guides/drupal-latest/drupal-latest-hosted/01-introduction.md
-cms: "Drupal"
-=======
 cms: "Drupal:latest"
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74:source/content/guides/drupal-latest/drupal-latest-hosted/01-introduction.md
 tags: [code, launch, migrate, site, updates, D8, D9, D10 ]
 contributors: [wordsmither]
 layout: guide

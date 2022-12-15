@@ -4,11 +4,7 @@ description: Optimize Drupal and Global CDN caching to maximize your site's perf
 tags: [caching, cdn, D8, D9, D10]
 contenttype: [doc]
 categories: [cache, optimize]
-<<<<<<< HEAD
-newcms: [drupal]
-=======
 newcms: [drupal, drupal9, drupal7, drupal8, drupal10]
->>>>>>> eec42263af4cf5e002bae842ccae64ea51704a74
 audience: [development]
 product: [cdn]
 integration: [--]
