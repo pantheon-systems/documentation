@@ -15,18 +15,11 @@ This doc includes instructions to make core updates to WordPress and Drupal site
 
 ## drupal:latest
 
-As of Drupal 8.8, Drupal only supports managing depedencies via composer. 
-You can do that without checking in the vendor directory 
-by using Pantheon's [Integrated Composer](/guides/integrated-composer) 
-to allow one-click core updates through the Dashboard. 
-Site maintainers can combine these one-click updates
-with our Autopilot service to automate site module updates.
-
-[[ Link to autopilot ]]
+As of Drupal 8.8, Drupal only supports managing depedencies via composer. You can do that without checking in the vendor directory by using Pantheon's [Integrated Composer](/guides/integrated-composer) to allow one-click core updates through the Dashboard. Site maintainers can combine these one-click updates with our [Autopilot](/guides/autopilot) service to automate site module updates.
 
 To check for available updates:
 
-1. Navigate to **Code** in the Dev tab of the site's Dashboard.
+1. Go to **Code** in the Dev tab of the site's Dashboard.
 
 1. Click **Check Now** and then click **Apply Updates** if updates are available.
 

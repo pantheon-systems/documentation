@@ -2,7 +2,7 @@
 title: Migrate a Drupal:latest Site with Multidev to drupal:latest Using Multidev
 subtitle: Configure Ongoing Core Update
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

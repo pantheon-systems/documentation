@@ -2,7 +2,7 @@
 title: Migrate a Site That Was Created with Build Tools to Drupal:latest
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

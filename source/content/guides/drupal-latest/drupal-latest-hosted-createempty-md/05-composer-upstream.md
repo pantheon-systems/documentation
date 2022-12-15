@@ -2,7 +2,7 @@
 title: Migrate a Site That Was Created With an Empty Upstream to drupal:latest
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

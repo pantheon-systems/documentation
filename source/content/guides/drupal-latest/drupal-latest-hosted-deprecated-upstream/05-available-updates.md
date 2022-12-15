@@ -2,7 +2,7 @@
 title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal:latest
 subtitle: Apply All Available Upstream Updates
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

@@ -2,7 +2,7 @@
 title: Drupal Commerce on Drupal:latest
 description: Use Composer to Install Drupal Commerce with Drupal:latest, on Pantheon
 contributors: [alexfornuto, stevector]
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [upstreams, site]
 type: guide
 permalink: docs/guides/:basename

@@ -2,7 +2,7 @@
 title: Migrate a Custom Upstream to Drupal:latest
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide

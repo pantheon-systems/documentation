@@ -2,7 +2,7 @@
 title: Migrate a Site That Was Created With an Empty Upstream to drupal:latest
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

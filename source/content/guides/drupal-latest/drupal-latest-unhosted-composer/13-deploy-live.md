@@ -2,7 +2,7 @@
 title: Migrate a Composer Managed Drupal:latest Site from Another Platform
 subtitle: Deploy
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

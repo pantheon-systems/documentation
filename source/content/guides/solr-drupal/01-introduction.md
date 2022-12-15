@@ -2,7 +2,7 @@
 title: Pantheon Solr Search for Drupal
 subtitle: Introduction
 description: Using Pantheon Solr Search with Drupal
-cms: "drupal:latest"
+cms: "Drupal"
 contenttype: [guide]
 categories: [config]
 newcms: [drupal]

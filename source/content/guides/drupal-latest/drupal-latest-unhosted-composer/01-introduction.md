@@ -2,7 +2,7 @@
 title: Migrate a Composer-Managed Drupal:latest Site from Another Platform
 subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform to Drupal:latest
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

@@ -2,7 +2,7 @@
 title: Migrate a Drupal:latest Site from Another Platform
 subtitle: Prepare Your Site for Migration
 description: Get your local environment and the existing site ready.
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

@@ -2,7 +2,7 @@
 title: Migrate a Site Created With the Pantheon Dashboard to Drupal:latest
 subtitle: Deploy
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
