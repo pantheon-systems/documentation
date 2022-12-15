@@ -17,24 +17,24 @@ permalink: docs/guides/filesystem/large-files
 anchorid: large-files
 ---
 
-This section provides information on highly populated directories and large files.
+This section provides information on highly populated directories and large file management.
 
 ## Highly Populated Directories
 
-You might notice a small decline in performance at around 50,000 files in a single directory, and significant performance drop at over 100,000 files.
+Highly populated directories can cause a small decline in performance at around 50,000 files in a single directory, and a significant performance drop at over 100,000 files.
 
-You might need to refactor your file structure if you have individual directories with tens of thousands of files (for example, an image repository) to see optimal performance on Pantheon.
+You can refactor your file structure if you have individual directories with tens of thousands of files (for example, an image repository) optimize site performance on Pantheon.
 
-Drupal is capable of managing uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single place. Refactoring an existing large-scale site with this issue is usually simply a matter of re-arranging the files and then updating the files table in Drupal.
+Drupal, for example, can manage uploaded content into different directories based on the date or user, which is preferable to dumping all uploads into a single directory. Refactoring an existing large-scale site with this issue is usually a matter of re-arranging the files and then updating the files table in Drupal.
 
-Refer to the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories.
+Refer to the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories in Drupal, or browse [WordPress plugins](https://wordpress.org/plugins/) for a solution.
 
 ## Large Code Repository
 
-A code repo larger than 2GB increases the possibility of Git errors when committing code on Pantheon. Review the options below to improve performance:
+A code repository larger than 2GB increases the possibility of Git errors when committing code on Pantheon. Review the options below to improve performance:
 
-- Keep multimedia assets out of the repo by moving them to a media file storage service, such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
-- [Prune and optimize your repo](/reducing-large-repos) if your repository has grown to over 2GB and is causing problems (such as errors when cloning).
+- Keep multimedia assets out of the repository by moving files to a media file storage service, such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
+- [Prune and optimize your repository](/reducing-large-repos) if it is over 2GB and is causing problems (such as errors when cloning).
 
 ## Large Files
 
@@ -42,9 +42,9 @@ The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure is
 
 ### Large File Restrictions
 
-- **Files over 100MB** cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/guides/sftp/rsync-and-sftp).
+- **Files over 50MB** can be uploaded with WordPress, Drupal, or SFTP. You will experience noticeable degradation in performance.
+- **Files over 100MB** cannot be uploaded through WordPress or Drupal. You must add files of this size by [SFTP or rsync](/guides/sftp/rsync-and-sftp).
 - **Files over 256MB** will fail no matter how they are uploaded.
-- **Files over 50MB** will experience noticeable degradation in performance.
 
 | File Size     | Platform Compatibility               | Notes                               |
 |:--------------|--------------------------------------|-------------------------------------|
