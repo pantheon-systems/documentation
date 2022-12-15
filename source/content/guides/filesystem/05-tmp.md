@@ -36,7 +36,7 @@ You can get the Pantheon-configured temporary path for WordPress on the [Pantheo
 
 ### Drupal
 
-We don't recommend changing the temporary settings path for Drupal 7. Changing the configuration allows temporary files to be shared across application containers, but causes a heavy performance penalty.
+We don't recommend changing the temporary settings path for Drupal 7. Changing the configuration allows temporary files to be shared across application containers, but heavily impacts performance.
 
 Add the code below to your `settings.php` file to get the appropriate configuration for Drupal 7 sites.
 
@@ -66,7 +66,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
 
 <Tab title="WordPress" id="wptmppath" active={true}>
 
-You must correct an unsupported temporary path set by a plugin or theme in `wp-config.php`.
+You must correct an unsupported temporary path set by a plugin or theme in the `wp-config.php` file.
 
 1. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option. For example:
 
@@ -82,7 +82,7 @@ You must correct an unsupported temporary path set by a plugin or theme in `wp-c
   terminus wp $site.$env -- config get SOME_TMP_SETTING
   ```
 
-Output of this command should look something like the following Contact Form 7 example:
+The output for this command should look similar to the following Contact Form 7 example:
 
 ![config get wpcf7 uploads tmp dir default](../../../images/wp-config-get-tmp-default.png)
 
@@ -106,7 +106,7 @@ You must correct an unsupported temporary path set by a module or theme using `$
   terminus drush $site.$env -- variable-get some_tmp_setting
   ```
 
-Output of this command should look something like the following Plupload example:
+The output for this command should look similar to the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](../../../images/d7-vget-tmp-default.png)
 
@@ -144,7 +144,7 @@ The default temporary path (`$_SERVER['HOME'] . '/tmp'`) is not synchronized acr
 
 ### Considerations
 
-It's not common for a plugin, module, or theme to use the temporary path in a way that results in such errors. We suggest reporting the issue to the author and replacing the conflicting plugin, module, or theme whenever possible until a fix is released.
+It's uncommon for a plugin, module, or theme to use the temporary path in a way that results in such errors. We suggest reporting the issue to the author and replacing the conflicting plugin, module, or theme whenever possible until a fix is released.
 
 Be aware that temporary files are not cleaned up automatically in the following configuration, which can result in [highly populated directories](/guides/filesystem/large-files).
 
@@ -178,7 +178,7 @@ You must configure a temporary path that uses a private subdirectory of Pantheon
     terminus wp $site.$env -- config get SOME_TMP_SETTING
     ```
 
-Output of this command should look something like the following Contact Form 7 example:
+The output for this command should look similar to the following Contact Form 7 example:
 
 ![config get wpcf7 uploads tmp dir filesystem](../../../images/wp-config-get-tmp-filesystem.png)
 
@@ -204,7 +204,7 @@ You must configure a temporary path that uses a private subdirectory of Pantheon
     terminus drush $site.$env -- variable-get some_tmp_setting
     ```
 
-Output of this command should look something like the following Plupload example:
+The output for this command should look similar to the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](../../../images/d7-vget-tmp-filesystem.png)
 
@@ -222,6 +222,12 @@ You must configure a temporary path that uses a private subdirectory of Pantheon
     if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       $settings['file_temp_path'] = 'sites/default/files/private/tmp';
     }
+    ```
+
+1. Run `drush config:get` in [Terminus](/terminus) to verify the setting:
+
+    ```bash
+    terminus drush $site.$env -- config:get some_tmp_setting
     ```
 
 </Tab>

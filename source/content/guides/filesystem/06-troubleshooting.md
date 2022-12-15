@@ -49,7 +49,7 @@ recommend changing to 600 or 660 instead of 770 in League\OAuth2\Server\CryptKey
 (line 59 of /code/vendor/league/oauth2-server/src/CryptKey.php)
 ```
 
-If you try to change the file permissions to `770` from `660` via SFTP, the change will fail silently. The platform will not update the file permissions and will not return an error.
+Changing the file permissions to `770` from `660` via SFTP will cause a silent fail. The platform will not update the file permissions and will not return an error.
 
 ## More Resources
 

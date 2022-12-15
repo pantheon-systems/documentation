@@ -47,7 +47,7 @@ Your entire codebase is writable in your Dev environment when you're in SFTP mod
 - Drupal: `sites/default/files`
 - WordPress: `wp-content/uploads`
 
-You must add a symlink to modules/plugins that require the ability to write to the codebase (and assume write access). This allows the module/plugin to write to the file system. Refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+You must add a symlink to modules or plugins that require the ability to assume write access and write to the codebase. This allows the module or plugin to write to the file system. Refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
 ## More Resources
 
