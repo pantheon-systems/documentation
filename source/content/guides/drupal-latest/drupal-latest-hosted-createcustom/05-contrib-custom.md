@@ -21,12 +21,6 @@ integration: [--]
 
 This section describes how to replicate your selection of contributed modules and themes, and any custom modules or themes your development team has created in your new project structure.
 
-<Accordion title="Optional Upstream Audit" id="optional-audit" icon="wrench">
-
-[[ Drops 8 is deprecated. Not sure what to do here. -t ]]
-
-</Accordion>
-
 ## Modules
 
 On the `composerify` branch, make a list of the modules that will need to be re-added:
