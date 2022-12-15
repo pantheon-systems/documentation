@@ -312,5 +312,5 @@ Terminus provides the power to manage most aspects of your Pantheon sites, while
 ## More Resources
 
 - [Use the Pantheon Workflow](/pantheon-workflow)
-- [Configuration Workflow for drupal:latest Sites](/drupal-latest-configuration-management)
+- [Configuration Workflow for drupal:latest Sites](/drupal-configuration-management)
 - [Terminus Guide](/terminus)

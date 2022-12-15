@@ -17,7 +17,7 @@ integration: [--]
 
 Use this guide to convert an empty upstream Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `empty` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
 
-<Partial file="drupal-latest/see-landing.md" />
+<Partial file="drupal/see-landing.md" />
 
 
 ## Overview
@@ -36,7 +36,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep t
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal-latest/upgrade-site-requirements-from-empty.md" />
+<Partial file="drupal/upgrade-site-requirements-from-empty.md" />
 
 - You have not set up Continuous Integration or you no longer need it.
 
@@ -56,7 +56,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep t
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
+<Partial file="drupal/prepare-local-environment-no-clone.md" />
 
 ## Add the Integrated Composer Upstream in a New Local Branch
 

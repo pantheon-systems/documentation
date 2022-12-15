@@ -61,7 +61,7 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
+<Partial file="drupal/prepare-local-environment-no-clone.md" />
 
 ## Apply All Available Upstream Updates
 

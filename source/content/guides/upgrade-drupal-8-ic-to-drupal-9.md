@@ -17,7 +17,7 @@ reviewed: "2022-12-13"
 
 This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to a drupal:latest site using Integrated Composer.
 
-<Partial file="drupal-latest/see-landing.md" />
+<Partial file="drupal/see-landing.md" />
 
 
 ## Overview
@@ -69,13 +69,13 @@ Confirm the site requirements in the sections below before upgrading to drupal:l
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
+<Partial file="drupal/prepare-local-environment-no-clone.md" />
 
 ### Apply All Available Upstream Updates
 
 <Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />
 
-<Partial file="drupal-8-to-drupal-latest-upgrade.md" />
+<Partial file="drupal-8-to-drupal-upgrade.md" />
 
 ## Troubleshooting
 

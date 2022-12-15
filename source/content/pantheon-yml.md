@@ -171,7 +171,7 @@ Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#
 
 #### Considerations - Drupal 9
 
-<Partial file="drupal/drupal-9-mariadb-considerations.md" />
+<Partial file="drupal/drupal-mariadb-considerations.md" />
 
 Confirm that the database upgrade completed successfully using the steps at the beginning of [Specify a Version of MariaDB](#specify-a-version-of-mariadb).
 
@@ -205,7 +205,7 @@ search:
 #### Considerations
 
 - The valid values for the versions are `3` and `8`.
-- Currently, Solr 8 is only supported for [Drupal 9](/guides/solr-drupal/solr-drupal-9) sites.
+- Currently, Solr 8 is only supported for [Drupal 9](/guides/solr-drupal/solr-drupal) sites.
 
 ### Drush Version
 

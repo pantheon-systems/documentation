@@ -44,7 +44,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
 Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
 
-<Partial file="drupal-9/core-version-remain-on-d8.md" />
+<Partial file="drupal/core-version-remain-on-d8.md" />
 
 ### Add Upgrade Status Module
 

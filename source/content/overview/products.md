@@ -24,7 +24,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Drupal Hosting"} link={"/docs/drupal-9"}>
+  <Product title={"Drupal Hosting"} link={"/docs/drupal"}>
 
   One-click core updates, no server management, and the highest performance possible for the latest versions of Drupal.
 

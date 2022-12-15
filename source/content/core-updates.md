@@ -38,7 +38,7 @@ Drupal 8 sites managing core with Composer are not compatible with Pantheon's On
 
 - [Convert the site to Integrated Composer](/guides/composer-convert)
 
-- [Update to Drupal:latest](/drupal-latest-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
+- [Update to Drupal:latest](/drupal-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
 
 ## Non-Composer-Managed WordPress and Drupal 7 Sites
 
@@ -207,7 +207,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="drupal:latest" id="d9-1conflict">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drupal-latest https://github.com/pantheon-systems/drupal-composer-managed
+  git remote add pantheon-drupal https://github.com/pantheon-systems/drupal-composer-managed
   ```
 
   </Tab>
@@ -248,8 +248,8 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="drupal:latest" id="d9-2conflict">
 
   ```bash{promptUser: user}
-  git fetch pantheon-drupal-latest
-  git rebase pantheon-drupal-latest/master
+  git fetch pantheon-drupal
+  git rebase pantheon-drupal/master
   ```
 
   </Tab>

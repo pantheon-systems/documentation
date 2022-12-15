@@ -14,7 +14,7 @@ contributors: [carolynshannon, joa-pan]
 reviewed: "2022-12-13"
 layout: guide
 showtoc: true
-permalink: docs/guides/solr-drupal/solr-drupal-latest
+permalink: docs/guides/solr-drupal/solr-drupal
 anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
@@ -48,7 +48,7 @@ Refer to the [Search API module processors documentation](https://www.drupal.org
 
 ### Drupal Site Setup
 
-Pantheon Search with Solr 8 can be used on drupal:latest sites. You can set up a [new drupal:latest site](/drupal-latest) or visit the [drupal:latest upgrade and migration](/drupal-latest-migration) guide to create a drupal:latest site.
+Pantheon Search with Solr 8 can be used on drupal:latest sites. You can set up a [new drupal:latest site](/drupal) or visit the [drupal:latest upgrade and migration](/drupal-migration) guide to create a drupal:latest site.
 
 ### Prepare the Local Environment
 

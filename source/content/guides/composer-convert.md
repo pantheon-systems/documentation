@@ -18,7 +18,7 @@ In this guide, we'll convert a standard Drupal 8 site to use Composer to manage 
 
 During this process, you will create a new branch based on the Git history of the new upstream.  You'll then re-add the contrib and custom code for your site to the new branch, and test it on a Multidev environment.  When everything is working correctly in the Multidev environment, you'll deploy the changes to the Dev environment by replacing your site's master branch with the new branch you've created.  Finally, after testing and confirming everything looks good, you'll use Terminus to switch the site over to the new upstream.
 
-<Partial file="drupal-latest/see-landing.md" />
+<Partial file="drupal/see-landing.md" />
 
 ## Overview
 
@@ -36,7 +36,7 @@ Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep 
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal-latest/upgrade-site-requirements.md" />
+<Partial file="drupal/upgrade-site-requirements.md" />
 
 ## Before You Begin
 
@@ -52,7 +52,7 @@ The steps in this process migrate a site, so the new site will no longer maintai
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
+<Partial file="drupal/prepare-local-environment-no-clone.md" />
 
 ## Apply All Available Upstream Updates
 

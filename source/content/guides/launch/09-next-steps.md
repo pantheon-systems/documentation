@@ -60,4 +60,4 @@ Review our [Secure Development on Pantheon](/guides/secure-development) guide fo
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
-- [Drupal 9 on Pantheon](/drupal-9)
+- [Drupal 9 on Pantheon](/drupal)

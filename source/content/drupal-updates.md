@@ -16,7 +16,7 @@ reviewed: "2020-07-21"
 
 The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
 
-Visit the [drupal:latest migration guide](/drupal-latest-migration) to find the best path to drupal:latest for your site.
+Visit the [drupal:latest migration guide](/drupal-migration) to find the best path to drupal:latest for your site.
 
 </Alert>
 
@@ -36,7 +36,7 @@ Since drupal:latest currently has the same end-user features as [Drupal 8.9](htt
 
 ### Content and configuration
 
-drupal:latest migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any drupal:latest site](/drupal-latest-configuration-management)).
+drupal:latest migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any drupal:latest site](/drupal-configuration-management)).
 
 ### Customizing migrations
 
@@ -85,6 +85,6 @@ Migrations of particularly large sites to updated Drupal versions can sometimes 
 
 ## More Resources
 
-- [Drupal:latest](/drupal-latest)
+- [Drupal:latest](/drupal)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)

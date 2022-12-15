@@ -30,5 +30,5 @@ This sections provides common troubleshooting scenarios.
 
 <Partial file="migrate/drupal-rebuildcache.md" />
 
-<Partial file="drupal-latest/troubleshooting-general.md" />
+<Partial file="drupal/troubleshooting-general.md" />
 

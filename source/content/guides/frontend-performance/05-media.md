@@ -35,7 +35,7 @@ WordPress 5.5 [lazy-loads images by default](https://make.wordpress.org/core/202
 
 ### Drupal
 
-In Drupal 9.1 lazy-loading images has been [added as default behavior](https://www.drupal.org/blog/drupal-9-1-0). For Drupal 7 and 8 sites, use the [Lazy Load module](https://www.drupal.org/project/lazy).
+In Drupal 9.1 lazy-loading images has been [added as default behavior](https://www.drupal.org/blog/drupal-1-0). For Drupal 7 and 8 sites, use the [Lazy Load module](https://www.drupal.org/project/lazy).
 
 ## Compress Images
 

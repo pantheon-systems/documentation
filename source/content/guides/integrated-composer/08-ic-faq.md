@@ -80,4 +80,4 @@ Features that are still in development:
 
 - [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting)
 
-- [Add Contrib and Custom Code in drupal:latest](/guides/drupal-latest-hosted-createcustom/contrib-custom)
+- [Add Contrib and Custom Code in drupal:latest](/guides/drupal-hosted-createcustom/contrib-custom)

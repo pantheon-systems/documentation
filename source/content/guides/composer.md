@@ -68,8 +68,8 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 
 Here are some ways to get started using Composer for your Pantheon sites:
 
-- Create a new [Drupal:latest with Integrated Composer](/drupal-latest) site.
-- [Migrate or upgrade](/drupal-latest-migration) an existing Drupal 8 or 9 site to drupal:latest with Integrated Composer.
+- Create a new [Drupal:latest with Integrated Composer](/drupal) site.
+- [Migrate or upgrade](/drupal-migration) an existing Drupal 8 or 9 site to drupal:latest with Integrated Composer.
 - [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
 - Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer-managed sites with continuous integration (CI) workflows.
 - Create a new [WordPress with Integrated Composer](/guides/integrated-composer) site.

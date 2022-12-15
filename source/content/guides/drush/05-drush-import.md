@@ -34,9 +34,9 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
    -  Use one of the following guides if you are migrating a Drupal 7 or 8 site and want to upgrade to a drupal:latest site:
 
-      - Your site is Composer-managed: [Migrate a Composer Managed drupal:latest Site from Another Platform](/guides/drupal-latest-unhosted-composer)
+      - Your site is Composer-managed: [Migrate a Composer Managed drupal:latest Site from Another Platform](/guides/drupal-unhosted-composer)
 
-      - Your site is not Composer-managed: [Migrate a drupal:latest Site from Another Platform](/guides/drupal-latest-unhosted)
+      - Your site is not Composer-managed: [Migrate a drupal:latest Site from Another Platform](/guides/drupal-unhosted)
 
 - Verify that you have Drush access on your existing Drupal site.
 

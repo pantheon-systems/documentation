@@ -55,7 +55,7 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title={"Drupal Commerce"} link={"/docs/guides/drupal-9-commerce"}>
+  <Product title={"Drupal Commerce"} link={"/docs/guides/drupal-commerce"}>
 
   [Drupal Commerce](https://drupalcommerce.org/) is an e-commerce implementation designed specifically for Drupal
 

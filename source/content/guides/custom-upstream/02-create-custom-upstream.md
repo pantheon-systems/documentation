@@ -182,7 +182,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
     <Tab title="Drupal:latest" id="dlatest">
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-latest https://github.com/pantheon-upstreams/drupal-universal.git
+    git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-universal.git
     ```
        <!--    [[ NOTE: This repo doesn't yet exist. I'm not sure what it will be called. ]] -->
     </Tab>
@@ -218,8 +218,8 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
      ```bash{promptUser: user}
      git checkout -b master
-     git fetch pantheon-drupal-latest main
-     git merge pantheon-drupal-latest/main
+     git fetch pantheon-drupal main
+     git merge pantheon-drupal/main
      git push origin master
      ```
 

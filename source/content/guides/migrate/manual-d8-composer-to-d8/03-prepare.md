@@ -29,11 +29,11 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 The previous step created a site using Drupal version 9. To remain on Drupal 8, set the core version as follows: 
 
-<Partial file="drupal-latest/core-version-remain-on-d8.md" />
+<Partial file="drupal/core-version-remain-on-d8.md" />
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-latest/prepare-local-environment-no-clone.md" />
+<Partial file="drupal/prepare-local-environment-no-clone.md" />
 
 ### Create a Local Copy of the Old Site's Code
 

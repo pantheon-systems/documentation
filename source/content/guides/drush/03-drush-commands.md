@@ -106,4 +106,4 @@ You should place Drush commands in `drush/Commands` if using Drupal 9.
 ## More Resources
 
 - [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
-- [Drupal 9](/drupal-9)
+- [Drupal 9](/drupal)

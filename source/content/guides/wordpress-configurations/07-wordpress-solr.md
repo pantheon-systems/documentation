@@ -147,4 +147,4 @@ The following code changes are required before Solr can be safely uninstalled an
 ## More Resources
 
 - [Pantheon Search (formerly Pantheon Solr)](/solr)
-- [Apache Solr for Drupal](/guides/solr-drupal/solr-drupal-latest)
+- [Apache Solr for Drupal](/guides/solr-drupal/solr-drupal)
