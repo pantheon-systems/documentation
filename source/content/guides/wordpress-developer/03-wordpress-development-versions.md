@@ -16,7 +16,9 @@ permalink: docs/guides/wordpress-developer/wordpress-development-versions
 anchorid: wordpress-development-versions
 ---
 
-Pantheon provides [one-click updates](/core-updates) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
+This section provides information on how to test WordPress core versions.
+
+Pantheon provides [one-click updates](/core-updates) for WordPress within the Site Dashboard for officially launched WordPress core versions. One-click updates for core versions are only available after the new version has been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
 
 <Alert title="Warning" type="danger">
 
@@ -26,7 +28,7 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core within WordPress Dashboard
 
-1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/guides/sftp) or with [Terminus](/terminus):
+1. Set the connection mode to SFTP within the [Pantheon Site Dashboard](/guides/sftp) or with [Terminus](/terminus) if you are working on a Multidev environment:
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
@@ -38,11 +40,12 @@ Development versions and beta releases are not supported and should not be run o
  terminus wp <site>.<env> -- plugin install wordpress-beta-tester --activate --yes
  ```
 
-1. Go to **Tools** > **WordPress Beta Tester** and select the update stream you want to use, then click **Save**:
-   - [Point release nightlies](https://wordpress.org/download/nightly/): This contains the work that is occurring on a branch in preparation for a x.x.x point release. This should also be fairly stable but will be available before the branch is ready for beta.
-   - [Bleeding edge nightlies](https://wordpress.org/download/beta) (Choose this option to test 4.5 beta releases): This is the bleeding edge development code which may be unstable at times.
+1. Go to **Tools**, select **WordPress Beta Tester**, select the update stream you want to use, and then click **Save**:
+   - [Point release nightlies](https://wordpress.org/download/nightly/): This contains the work that occurs on a branch in preparation for a x.x.x point release. This should be mostly stable but will be available before the branch is ready for beta.
+   - [Bleeding edge nightlies](https://wordpress.org/download/beta): Choose this option to test 4.5 beta releases with the bleeding edge development code which may be unstable at times.
 
-1. Go to **Dashboard** > **Updates** and click **Update Now**.
+1. Go to **Dashboard**, select **Updates**, and then click **Update Now**.
+
 1. Verify the WordPress version using `terminus wp <site>.<env> -- core version` or check the bottom of any WordPress Dashboard page:
 
   > You are using a development version (4.5-beta1-36808). Cool! Please stay updated.
@@ -51,13 +54,13 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core Manually with Git
 
-1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/terminus):
+1. Set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/terminus) if you are working on a Multidev environment.
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> git
  ```
 
-1. From within the [local clone of your site's code repository](/guides/git/git-config#clone-your-site-codebase):
+1. Open the [local clone of your site's code repository](/guides/git/git-config#clone-your-site-codebase):
 
  ```bash{promptUser: user}
  git checkout -b "wpcore"
@@ -68,13 +71,13 @@ Development versions and beta releases are not supported and should not be run o
 1. Determine which update stream you want to use:
 
     - [Point release nightlies](https://wordpress.org/download/beta-nightly/):
-     Run `git tag` to identify the latest development tag (currently 4.4.2), then merge:
+     Run `git tag` to identify the latest development tag (currently 4.4.2), and then merge:
 
      ```bash{promptUser: user}
      git merge --squash -s recursive -X theirs tags/4.4.2
      ```
 
-    - [Bleeding edge nightlies](https://wordpress.org/download/beta) (Choose this option to test 4.5 beta releases):
+    - [Bleeding edge nightlies](https://wordpress.org/download/beta): Choose this option to test 4.5 beta releases:
 
      ```bash{promptUser: user}
      git merge --squash -s recursive -X theirs WordPress/master
@@ -82,17 +85,22 @@ Development versions and beta releases are not supported and should not be run o
 
 1. Review `wp-config-sample.php` and edit `wp-config.php` with any additions you want to test.
 
-1. For sites with Multidev, you can push the local branch to Pantheon once you've staged and committed the changes:
+1. Push the local branch to Pantheon after you've staged and committed the changes if you are working on a Multidev environment:
 
  ```bash{promptUser: user}
  git commit -am "Update WordPress core to 4.4.2 development version"
  git push origin wpcore
  ```
 
-Create the Multidev from within the Site Dashboard by selecting **Multidev** > **Git Branches** > **Create Environment** next to the `wpcore` branch name.
+1. Optional. Select **Multidev**, select **Git Branches**, and then select **Create Environment** next to the `wpcore` branch name to create the Multidev from within the Site Dashboard.
 
 ## Troubleshooting
 
 ### Database Update Required
 
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus $site.$env 'wp core update-db'](/terminus).
+WordPress sometimes includes database schema changes in major releases. You might see a notification in the WordPress dashboard to update the database when you update WordPress to the latest version. Update as instructed or via [terminus $site.$env 'wp core update-db'](/terminus).
+
+## More Resources
+
+- [Configure Your wp-config.php File](/guides/php/wp-config-php)
+- [Apply One-click Updates](/guides/integrated-composer/one-click-updates)
