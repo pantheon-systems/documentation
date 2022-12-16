@@ -34,7 +34,7 @@ The following is a list of plugins that assume write access, and the specific fi
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                                            |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               | `PROTECTED_CONTENT_FOLDER` variable within the plugin assumes access to `PATH`                      |
+| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               | `PROTECTED_CONTENT_FOLDER` variable within the plugin assumes access to `PATH`                   |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 |                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files, and this plugin can cause                   |
 |                                                                                               |                                                       | your deployment workflows to break. You can download full backups                                |
@@ -57,6 +57,8 @@ The following is a list of plugins that assume write access, and the specific fi
 |                                                                                               |                                                       | optimization, can be used side-by-side.                                                          |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                      |                                                                                                  |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [Wordfence](https://wordpress.org/plugins/wordfence/)                                         | wp-content/wflogs                                     | Follow the steps outlined in the [Wordfence](#wordfence) section.                                |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)                           | wp-content/cache                                      | This plugin uses `is_dir` to verify the target directory, which will return                      |
 |                                                                                               |                                                       |false if the directory is a symlink. This causes a permissions error when                         |
@@ -1000,7 +1002,7 @@ ___
 
 ## Wordfence
 
-<ReviewDate date="2020-07-15" />
+<ReviewDate date="2022-12-16" />
 
 **Issue:** [Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuration and log files.
 
