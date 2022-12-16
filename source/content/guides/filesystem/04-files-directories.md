@@ -24,7 +24,7 @@ This section provides information on files and directories on the Pantheon platf
 
 You cannot rename or move file directories on Pantheon's file serving infrastructure. The workaround is to:
 
-1. Create a new directory, and then move all the files from inside the old directory into the new directory.
+1. Create a new directory, then move all the files from inside the old directory into the new directory.
 
 1. Delete the old directory.
 

@@ -25,13 +25,13 @@ The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress)
 
 ### Simultaneous SFTP connections
 
-Pantheon does not support simultaneous SFTP connections. Set your SFTP client to use no more than 1 simultaneous connection to avoid errors.
+Pantheon does not support simultaneous SFTP connections. Set your SFTP client to use no more than one simultaneous connection to avoid errors.
 
 ### Unable to create directory `path-to-folder`. Is the parent directory writable by the server?
 
 Sites migrated from other hosts may have custom or absolute paths in the `Store Uploads in This Folder` configuration. This can be resolved by using the recommended configuration:
 
-1. Navigate to the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`).
+1. Go to the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`).
 
 1. Go to **Uploading Files > Store uploads in this folder** and update the field to contain only `wp-content/uploads`.
 

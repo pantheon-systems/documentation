@@ -35,7 +35,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Potential Workarounds
 
-1. Configure each request in the data export write to its own `tmp` file, then concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround](/guides/filesystem/tmp/#persistent-temporary-path-workaround) is in place.
+1. Configure each request in the data export to write to its own `tmp` file, then concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround](/guides/filesystem/tmp/#persistent-temporary-path-workaround) is in place.
 
 1. Export small batches and add enough time between each request in the batch process to allow the updated file sync between all application containers.
 
