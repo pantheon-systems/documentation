@@ -5,6 +5,7 @@ description: Run automated unit and integration tests with Terminus and Drupal S
 tags: [continuous-integration, workflow]
 contributors: [ccjjmartin]
 newtype: guide
+contenttype: [guide]
 categories: [automate]
 newcms: [drupal, wordpress]
 audience: [development]

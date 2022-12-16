@@ -2,7 +2,12 @@
 title: Local Development on Pantheon
 subtitle: GraphQL Requests
 description: Learn about GraphQL best practices and troubleshooting tips.
-categories: [develop]
+contenttype: [guide]
+categories: [automate]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: []
 tags: [local, workflow]
 contributors: [whitneymeredith]
 reviewed: "2022-03-22"

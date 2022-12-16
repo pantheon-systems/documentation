@@ -28,7 +28,7 @@ We do not recommend directly restoring a Live environment from a backup. It is b
 
 If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/guides/git/undo-commits) **before** attempting a site restore.
 
-If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/guides/environment-configuration/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp).
+If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/guides/environment-configuration/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/guides/sftp/rsync-and-sftp).
 
 ## Before you Begin the Restore Process
 
@@ -142,7 +142,7 @@ These steps allow you to recreate any new content manually after the process is 
 
 Large sites that have more than 100GB files can take too long to restore and are likely to fail. We recommend the same steps as [restoring to the Live environment](#restore-the-live-environment) for a safer process.
 
-Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/rsync-and-sftp), as documented below:
+Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/guides/sftp/rsync-and-sftp), as documented below:
 
 ### Restore Large Site with Terminus and Rsync
 
@@ -189,7 +189,7 @@ export ENV=dev # or different environment name
   rsync -rvlz --progress -e'ssh -p 2222' ./ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
   ```
 
-Refer to [rsync and SFTP](/rsync-and-sftp/#rsync) for more information on constructing your rsync command.
+Refer to [rsync and SFTP](/guides/sftp/rsync-and-sftp/#rsync) for more information on constructing your rsync command.
 
 ## Frequently Asked Questions
 

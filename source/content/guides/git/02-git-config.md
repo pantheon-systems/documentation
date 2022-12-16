@@ -235,7 +235,7 @@ ssh: connect to host codeserver.dev.xxx.drush.in port 2222: Operation timed out
 fatal: Could not read from remote repository.
 ```
 
-To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/port-2222).
+To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/guides/sftp/port-2222).
 
 ## More Resources
 

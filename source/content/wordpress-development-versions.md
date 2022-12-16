@@ -21,7 +21,7 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core within WordPress Dashboard
 
-1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/sftp) or with [Terminus](/terminus):
+1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/guides/sftp) or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp

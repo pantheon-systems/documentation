@@ -82,7 +82,7 @@ Permissions should be managed in the Dev environment via SFTP exclusively, as [G
 
 ## Navigate the Code Tool
 
-You can set the site's connection mode to [git](/guides/git/git-config) or [SFTP](/sftp) and access [connection information](/sftp#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
+You can set the site's connection mode to [git](/guides/git/git-config) or [SFTP](/guides/sftp) and access [connection information](/guides/sftp/sftp-connection-info) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 ![Code Workflow Dev SFTP Commit](../images/dashboard/interface-dev-code-sftp-commit.png)
 
 You can also view the diff output for each individual file:
@@ -120,7 +120,7 @@ The Test and Live environments do not have write access to code outside of the d
 
 ## Develop
 
-Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/guides/environment-configuration/read-environment-config). Then, dive in to [developing directly with SFTP mode](/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
+Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/guides/environment-configuration/read-environment-config). Then, dive in to [developing directly with SFTP mode](/guides/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
 
 ### .gitignore
 

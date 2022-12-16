@@ -66,6 +66,12 @@ contributors: [alexfornuto, rachelwhitton]
 
 </Example>
 
+To see the values currently used in our documentation, [install our repository locally](https://github.com/pantheon-systems/documentation), then run one of the following reports:
+
+- Docs: [List of all docs and tags](http://localhost:8000/metadata); [Searchable list of all docs and tags](http://localhost:8000/metadata-search).
+
+- Partials: [List of all partials and tags](http://localhost:8000/partials); [Searchable list of all partials and tags](http://localhost:8000/partials-search).
+
 <Accordion title="Frontmatter Values" id="frontmatter-values" icon="list-alt">
 
 <dl>

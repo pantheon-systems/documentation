@@ -256,7 +256,7 @@ If you add a new node that used taxonomy term 1, you would want the listing page
 
 Follow the steps below to add a custom module that uses a hook to clear the cache tag for all taxonomy terms.
 
-1. Connect to your Dev environment via [SFTP](/sftp).
+1. Connect to your Dev environment via [SFTP](/guides/sftp).
 
 2. Open `code/modules` > create a new directory called `custom_cache_tags`.> ope your newly created folder:
 

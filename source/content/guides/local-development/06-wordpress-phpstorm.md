@@ -3,7 +3,12 @@ title: Local Development on Pantheon
 subtitle: Configure PhpStorm for WordPress
 description: Configure your local environment to build a WordPress plugin or theme with JetBrains PhpStorm.
 cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+categories: [automate]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: []
 tags: [plugins]
 layout: guide
 showtoc: true

@@ -31,7 +31,7 @@ At Pantheon, we believe in best practices for development, and that includes usi
 
 However, there's one thing we need to do first. Whenever you install a plugin or write custom code you'll have to commit your changes
 
-Pantheon has two ways to commit changes. [SFTP mode](/sftp), which looks at what files you uploaded and automatically tracks them to be committed, and [Git mode](/guides/git/git-config), which allows you to commit files directly with git. Git mode is great for working locally, and SFTP mode is great for working directly on Pantheon.
+Pantheon has two ways to commit changes. [SFTP mode](/guides/sftp), which looks at what files you uploaded and automatically tracks them to be committed, and [Git mode](/guides/git/git-config), which allows you to commit files directly with git. Git mode is great for working locally, and SFTP mode is great for working directly on Pantheon.
 
 Since we uploaded files through our WordPress site, and not through a terminal or code editor, let's use SFTP mode to commit these changes.
 

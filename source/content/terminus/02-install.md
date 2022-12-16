@@ -104,5 +104,5 @@ Commands that execute remote instructions to tools like Drush or WP-CLI require 
 
 ## More Resources
 
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
 - [PHP on Pantheon](/guides/php)

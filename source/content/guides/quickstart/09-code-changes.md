@@ -41,7 +41,7 @@ If you haven’t added a new theme to your site, return to the [previous lesson]
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
-1. Click **Open SFTP Client**, and enter your User Dashboard password when prompted. If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
+1. Click **Open SFTP Client**, and enter your User Dashboard password when prompted. If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Open the `code` folder in your SFTP client, and navigate to the theme you installed previously.
 

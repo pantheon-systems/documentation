@@ -2,7 +2,12 @@
 title: Local Development on Pantheon
 subtitle: Local Development Configuration
 description: Configure your machine for local development with Pantheon.
-categories: [develop]
+contenttype: [guide]
+categories: [automate]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: []
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 contributors: [whitneymeredith]
@@ -103,7 +108,7 @@ Follow the steps below to get a clone of your Pantheon code on your local comput
 
 ## Transfer Your Files
 
-Refer to [SFTP and Rsync on Pantheon](/rsync-and-sftp) for an overview of ways to transfer files.
+Refer to [SFTP and Rsync on Pantheon](/guides/sftp/rsync-and-sftp) for an overview of ways to transfer files.
 
 ### Via Terminus
 

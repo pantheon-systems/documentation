@@ -62,7 +62,7 @@ A code repo larger than 2GB increases the possibility of Git errors when committ
 
 ## Large Files
 
-The [Pantheon Filesystem](/files) and file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
+The [Pantheon Filesystem](/files) and file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/guides/sftp/rsync-and-sftp). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
 | File Size     | Platform Compatibility               | Notes                               |
 |:--------------|--------------------------------------|-------------------------------------|

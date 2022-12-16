@@ -22,7 +22,7 @@ This section provides steps on how to make edits, merge code in your Multidev en
 
 You can edit your code locally in one of two ways:
 
-- On-server development with [SFTP](/sftp) mode
+- On-server development with [SFTP](/guides/sftp) mode
 
 - [Git](/guides/git/git-config)
 
@@ -103,4 +103,4 @@ Branch names must be lowercase and no more than 11 characters. If you push a bra
 
 - [Your Site Code on Pantheon](/code)
 
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)

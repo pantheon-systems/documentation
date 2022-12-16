@@ -2,7 +2,12 @@
 title: Local Development on Pantheon
 subtitle: Automatically Test and Deploy to Pantheon with Jenkins
 description: Configure an existing Jenkins server to test and deploy code changes to Pantheon automatically when pushed to GitHub.
+contenttype: [guide]
 categories: [automate]
+newcms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: []
 tags: [collaborate, continuous-integration, git, iterate]
 layout: guide
 showtoc: true
