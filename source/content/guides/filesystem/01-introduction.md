@@ -22,6 +22,8 @@ Files are static content not stored in your database, and usually consist of ima
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore)
 
+## Files and Application Containers
+
 The Pantheon architecture relies on highly available [application containers](/application-containers) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
 Valhalla creates a symbolic link (**symlink**) to the `files` directory in the appropriate location of your docroot:
@@ -33,15 +35,15 @@ It is important to note that this directory is not part of the document root and
 
 ## Access via SFTP
 
-You can connect directly to the filesystem.
+You can connect directly to the filesystem with an SFTP client, such as [WinSCP](/guides/sftp/winscp).
 
-1. Copy your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [WinSCP](/guides/sftp/winscp).
+1. Copy your [connection information](/sftp#sftp-connection-information) into an SFTP client.
 
 1. Navigate to the `/files` directory within the SFTP client.
 
 ## Pantheon-Related Files
 
-You may notice some files that you don't recognize when you are logged in to your application container. Pantheon put these files there because they contain important information:
+Pantheon places the files below in your application container because they contain important information:
 
 **fusedav_version**: shows the version of fusedav being used.
 
