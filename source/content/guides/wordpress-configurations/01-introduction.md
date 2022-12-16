@@ -21,7 +21,7 @@ Pantheon provides extensive compatibility with WordPress plugins. This guide pro
 
 - WP-CFM
 - Apache Solr for WordPress
-- AWS S3 for WordPress
+- Custom code for plugins
 
 We recommend that you review the [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) document carefully before you download and configure plugins or themes for your WordPress site.
 
