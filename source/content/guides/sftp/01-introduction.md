@@ -47,5 +47,5 @@ You can use your SFTP client to transfer files to your Pantheon site. This also 
 ## More Resources
 
 - [Content Staging](/content-staging)
-- [Pantheon Filesystem](/files)
+- [Pantheon Filesystem](/guides/filesystem)
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)
