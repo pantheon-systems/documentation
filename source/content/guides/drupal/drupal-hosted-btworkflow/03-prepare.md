@@ -1,8 +1,8 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal + Build Tools
 subtitle: Prepare
 description: 
-cms: "drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide
@@ -23,9 +23,9 @@ integration: [--]
 
 Clone your existing site to your local environment following the `git clone` command from the dashboard.
 
-## Create a New Terminus Build Tools drupal:latest Site
+## Create a New Terminus Build Tools Drupal Site
 
-1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new drupal:latest site:
+1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal site:
 
   ```bash{promptUser: user}
   terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site

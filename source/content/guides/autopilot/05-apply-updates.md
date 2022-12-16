@@ -41,9 +41,9 @@ You can also apply updates from the site list on the **<i className="fa fa-robot
 
 1. Track the update status from the site's Autopilot **Activity** page.
 
-### Autopilot and drupal:latest with Integrated Composer
+### Autopilot and Drupal with Integrated Composer
 
-Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [drupal:latest](/drupal) Upstream with [Integrated Composer](/guides/integrated-composer).
+Autopilot can manage updates for Pantheon Sites using the Pantheon-supported [Drupal](/drupal) Upstream with [Integrated Composer](/guides/integrated-composer).
 
 ## More Resources
 

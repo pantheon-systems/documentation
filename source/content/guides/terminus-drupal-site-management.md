@@ -94,7 +94,7 @@ Follow the steps below to create a new site.
 
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
-1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install drupal:latest on the Dev environment:
+1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal on the Dev environment:
 
   ```bash{promptUser: user}
   terminus drush my-d9-site.dev -- site-install -y

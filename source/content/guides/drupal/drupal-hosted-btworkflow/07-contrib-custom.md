@@ -1,8 +1,8 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal + Build Tools
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide

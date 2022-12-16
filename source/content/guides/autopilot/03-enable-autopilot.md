@@ -108,7 +108,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all drupal:latest sites), Autopilot will show warnings in the sections where Composer manages updates.
+   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 1. Click **Save** for each section of the configuration in which you make changes.
 

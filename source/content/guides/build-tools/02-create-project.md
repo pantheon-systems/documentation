@@ -121,7 +121,7 @@ Modify the commands in the following examples to match your project's needs.
   terminus build:project:create --git=github --team='My Agency Name' wp my-site
   ```
 
-- Start a GitHub project with drupal:latest:
+- Start a GitHub project with Drupal:
 
   ```bash{promptUser: user}
   terminus build:project:create --git=github --team='My Agency Name' d9 my-site
@@ -186,7 +186,7 @@ terminus auth:login --machine-token=<machine-token>
 
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
-- [drupal:latest](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
+- [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 
 </Accordion>

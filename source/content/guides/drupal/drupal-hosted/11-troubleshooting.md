@@ -1,8 +1,8 @@
 ---
-title: Migrate a Drupal 8 Site to drupal:latest
+title: Migrate a Drupal 8 Site to Drupal (Latest)
 subtitle: Troubleshooting
 description: 
-cms: "drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

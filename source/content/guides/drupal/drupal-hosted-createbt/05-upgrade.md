@@ -1,8 +1,8 @@
 ---
-title: Migrate a Site That Was Created with Build Tools to Drupal:latest
+title: Migrate a Site That Was Created with Build Tools to Drupal
 subtitle: Upgrade Site Components Locally
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide
@@ -28,7 +28,7 @@ integration: [--]
       -W --no-update
    ```
 
-1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from drupal:latest to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
+1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal (Latest) to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
 
   The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`.
 
@@ -65,14 +65,14 @@ integration: [--]
    # Move the DOCUMENT_ROOT of your site to the */web* folder:
    web_docroot: true
    
-   # drupal:latest requires PHP 7.3 or higher. If your code isn't ready for PHP 7.4 you may need to use 7.3 here:
+   # The latest version of Drupal requires PHP 7.3 or higher. If your code isn't ready for PHP 7.4 you may need to use 7.3 here:
    php_version: 7.4
    
-   # drupal:latest requires a higher version of the DB. It will take a few minutes to complete the upgrade to 10.4 once you push this file:
+   # The latest version of Drupal requires a higher version of the DB. It will take a few minutes to complete the upgrade to 10.4 once you push this file:
    database:
      version: 10.4
    
-   # drupal:latest prefers Drush 10. If you have written a lot of custom Drush commands you may need to go back to Drush 9 or 8:
+   # The latest version of Drupal prefers Drush 10. If you have written a lot of custom Drush commands you may need to go back to Drush 9 or 8:
    drush_version: 10
    ```
 
@@ -110,7 +110,7 @@ integration: [--]
    terminus drush $SITE.$ENV uli admin
    ```
 
-Log in to the site as admin and  navigate to **Upgrade Status** under **Reports**. Modules displayed as incompatible in **Upgrade Status** will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If it's not possible to get your module to a drupal:latest compatible status, then it should be removed.
+Log in to the site as admin and  navigate to **Upgrade Status** under **Reports**. Modules displayed as incompatible in **Upgrade Status** will need to be updated in the next few steps. Take note of the versions **Upgrade Status** recommends. If it's not possible to get your module to a Drupal compatible status, then it should be removed.
 
 ## Upgrade MariaDB in All Environments
 

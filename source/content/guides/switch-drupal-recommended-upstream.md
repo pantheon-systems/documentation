@@ -1,5 +1,5 @@
 ---
-title: Switch from drupal:latest to Drupal Composer Managed Upstream
+title: Switch from Drupal to Drupal Composer Managed Upstream
 description: Switch to the new Pantheon upstream to take advantage of the new structure and future updates.
 type: guide
 permalink: docs/guides/:basename
@@ -15,13 +15,13 @@ contributors: [kporras07, jspellman814]
 reviewed: "2022-12-13"
 ---
 
-In this guide, we will convert an existing site from the drupal:latest (`drupal9`) upstream to the new Drupal Composer Managed (`drupal-composer-managed`) upstream.
+In this guide, we will convert an existing site from the Drupal (`drupal9`) upstream to the new Drupal Composer Managed (`drupal-composer-managed`) upstream.
 
 ## Overview
 
-drupal:latest sites created on the platform prior to November 30, 2021 use the [drupal:latest](https://github.com/pantheon-upstreams/drupal-project) upstream. drupal:latest sites created on the platform prior to May 4, 2021 use the [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
+Drupal sites created on the platform prior to November 30, 2021 use the [the latest Drupal](https://github.com/pantheon-upstreams/drupal-project) upstream. Drupal sites created on the platform prior to May 4, 2021 use the [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
 
-Based on community needs, we have released a new upstream. [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) is now the default drupal:latest upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
+Based on community needs, we have released a new upstream. [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) is now the default Drupal upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
 
 The goals of this conversion doc include the following:
 
@@ -33,9 +33,9 @@ The goals of this conversion doc include the following:
 
 You must confirm that your site meets the following requirement before you continue:
 
-- Ensure your site uses the [drupal:latest](https://github.com/pantheon-upstreams/drupal-project) or [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
+- Ensure your site uses the [Drupal Project](https://github.com/pantheon-upstreams/drupal-project) or [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
 
-### Use Terminus to Confirm the drupal:latest Upstream
+### Use Terminus to Confirm the Drupal Upstream
 
 Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 

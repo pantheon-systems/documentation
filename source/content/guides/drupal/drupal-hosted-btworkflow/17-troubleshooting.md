@@ -1,8 +1,8 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to DRUPAL:LATEST + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal + Build Tools
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

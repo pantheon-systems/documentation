@@ -21,7 +21,7 @@ This guide shows you how to migrate a Composer-based Drupal site (site created v
 
 ## Overview
 
-drupal:latest sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies. A drupal:latest site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
+Drupal sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies. A Drupal site with Build Tools also provides site dependency management, as well as an external repository and a Continuous Integration workflow setup.
 
 The goals of this migration are to:
 
@@ -33,7 +33,7 @@ The goals of this migration are to:
 
 <Partial file="drupal/upgrade-site-requirements-from-drupal-recommended.md" />
 
-- You are able to [create a new drupal:latest site using Terminus Build Tools](/guides/build-tools/create-project/#create-a-build-tools-project)
+- You are able to [create a new Drupal site using Terminus Build Tools](/guides/build-tools/create-project/#create-a-build-tools-project)
 
 ## Before You Begin
 
@@ -45,9 +45,9 @@ The existing site's commit history will no longer exist after migrating to the n
 
 </Alert>
 
-## Create a New Terminus Build Tools drupal:latest Site
+## Create a New Terminus Build Tools Drupal Site
 
-1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new drupal:latest site:
+1. Follow the [Terminus Build Tools Documentation](/guides/build-tools/create-project/#create-a-build-tools-project) to create a new Drupal site:
 
   ```bash{promptUser: user}
   terminus build:project:create --git=github --team='My Agency Name' d9 my-buildtools-site

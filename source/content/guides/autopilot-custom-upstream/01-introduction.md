@@ -51,12 +51,12 @@ Your site must be on Pantheon and meet the criteria below to be eligible for Aut
 | Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
 -----------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (with Integrated Composer or Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without WordPress Multisite Network = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | drupal:latest (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
+| No =  <span style = "color:green" > ✔  </span > compatible | Drupal (Latest) (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
 
 
-<Alert title="Note: drupal:latest Compatibility"  type="info" >
+<Alert title="Note: Drupal Compatibility"  type="info" >
 
-drupal:latest users should note that there are technical limitations when using Autopilot with Custom Upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-custom-upstream/autopilot-custom-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
+Drupal users should note that there are technical limitations when using Autopilot with Custom Upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-custom-upstream/autopilot-custom-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
 
 </Alert>
 

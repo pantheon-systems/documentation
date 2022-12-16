@@ -2,7 +2,7 @@
 title: Migrate a Drupal 8 Site to Drupal
 subtitle: Migrate the Code
 description: 
-cms: "drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither, stovak]
 layout: guide
@@ -18,7 +18,7 @@ product: [composer]
 integration: [--]
 ---
 
-1. From the local Drupal:latest site's directory, use Terminus to retrieve the D8 site's Git URL:
+1. From the local Drupal site's directory, use Terminus to retrieve the D8 site's Git URL:
 
     ```bash{promptUser: user}
     terminus connection:info $D8_SITE.dev --field=git_url
@@ -80,7 +80,7 @@ integration: [--]
 
     The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/guides/drush/drush-versions) before you continue.
 
-1. Use Composer on your Drupal:latest site to add these there:
+1. Use Composer on your Drupal (Latest) site to add these there:
 
     ```bash{promptUser: user}
     composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
@@ -96,7 +96,7 @@ integration: [--]
 
      <Partial file="drupal/custom-settings-no-docroot.md" />
 
-1. Copy your files and database from your D8 site to the drupal:latest site:
+1. Copy your files and database from your D8 site to the Drupal (Latest) site:
 
     ```bash{promptUser: user}
     terminus site:clone $D8_SITE.live $DRUPAL_SITE.dev --no-code --no-destination-backup --no-source-backup
@@ -107,7 +107,7 @@ integration: [--]
      
     </Alert>
   
-1. Push the Drupal:latest codebase from your local machine up to Pantheon:
+1. Push the Drupal (Latest) codebase from your local machine up to Pantheon:
 
     ```bash{promptUser: user}
     terminus connection:set $DRUPAL_SITE.dev git

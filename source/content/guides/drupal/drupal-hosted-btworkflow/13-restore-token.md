@@ -1,8 +1,8 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to drupal:latest + Build Tools
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal + Build Tools
 subtitle: Restore the tokens.json File
 description: 
-cms: "drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9]
 contributors: [wordsmither]
 layout: guide
