@@ -1129,7 +1129,7 @@
       subtitle: ''
       links:
         - text: 'Drupal 9'
-          url: '/drupal-9'
+          url: '/drupal'
         - text: 'Create a Drupal 9 Site Using a Drupal Distribution'
           url: '/guides/drupal-from-dist'
           icon: 'fa fa-book'

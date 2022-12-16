@@ -64,7 +64,7 @@ If the cache lifetime is set to something that doesn't make sense for your traff
 ### Drupal Note
 See our [guidelines on Drupal's performance settings](/drupal-cache) for more details.
 
-Other caching systems that aren't on by default that should be enabled include [Object Caching backend](/guides/object-cache) and [caching for view results](/docs/drupal-caching-views).
+Other caching systems that aren't on by default that should be enabled include [Object Caching backend](/guides/object-cache) and [caching for view results](/drupal-caching-views).
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
