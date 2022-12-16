@@ -37,7 +37,7 @@ Content refers to your site's files and the database. In this context, files are
 
 ![Dev Test and Live icon](../images/code-workflow.png)
 
-The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/files) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
+The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/guides/filesystem) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
 <Accordion title="Why does Pantheon do this?" id="why-tab" icon="question-sign">
 
@@ -174,4 +174,4 @@ MySQL imports tables sequentially, in alphabetical order from A to Z. If you acc
 ## More Resources
  - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
  - [Your Site Code on Pantheon](/code)
- - [Pantheon Filesystem](/files)
+ - [Pantheon Filesystem](/guides/filesystem/)
