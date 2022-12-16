@@ -13,7 +13,7 @@ editpath: drupal/drupal-hosted-createbt/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal, drupal8, drupal9, drupal10]
+newcms: [drupal]
 audience: [development]
 product: [dashboard]
 integration: [--]

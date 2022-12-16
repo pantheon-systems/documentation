@@ -1,5 +1,5 @@
 ---
-title: Configuration Workflow for drupal:latest Sites
+title: Configuration Workflow for Drupal Sites
 description: Commit your Drupal configuration to version control.
 cms: "Drupal"
 tags: [drush, workflow, webops]
@@ -14,7 +14,7 @@ integration: [--]
 
 Managing configuration is an extremely important part of any team website project, but in many cases, this area of the project does not receive as much attention as it deserves. The tools for Drupal 7 do not provide complete coverage of all configuration settings, leading to inconsistencies in configuration handling and inconvenient workarounds. This has led to configuration management becoming a real thorn in the side for many projects.
 
-Pantheon supports the [drupal:latest Configuration Management system](https://www.drupal.org/documentation/administer/config). Each Pantheon Drupal site defaults configuration into the `/config` directory.
+Pantheon supports the [Drupal Configuration Management system](https://www.drupal.org/documentation/administer/config). Each Pantheon Drupal site defaults configuration into the `/config` directory.
 
 You can export your configuration into that directory directly using Drush's `config-export` command or indirectly using Drupal's UI to download the configuration, and then use SFTP/Git to place the configuration in `config` or `sites/default/config`. For more information, check out the [Managing Content, Configuration, and Code Across Environments](/guides/drush/drupal-commandline#managing-content-configuration-and-code-across-environments) section of [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline).
 
@@ -80,9 +80,9 @@ terminus drush <site>.live -- config:import -y
 open https://live-mysite.pantheonsite.io
 ```
 
-## Configuration Tools for drupal:latest
+## Configuration Tools for Drupal
 
-With [Drupal latest](/drupal), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
+With [Drupal](/drupal), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
 
 ## Config Direct Save Module
 
@@ -116,7 +116,7 @@ Configuration files can contain sensitive information. Drupal takes some measure
 
 ### Before you Begin
 
-- Refer to [Serving Sites from the Web Subdirectory](/nested-docroot) to enable nested docroot on a new or existing drupal:latest site.
+- Refer to [Serving Sites from the Web Subdirectory](/nested-docroot) to enable nested docroot on a new or existing Drupal site.
 
 ### Configure and Relocate
 

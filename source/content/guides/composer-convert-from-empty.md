@@ -22,7 +22,7 @@ Use this guide to convert an empty upstream Drupal 8 site to use Composer to man
 
 ## Overview
 
-drupal:latest sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
+Drupal sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
 By converting an empty upstream Drupal 8 site to a Composer-managed site you will do the following:
 
@@ -32,7 +32,7 @@ By converting an empty upstream Drupal 8 site to a Composer-managed site you wil
 
 The `drupal-composer-managed` Integrated Composer upstream works with Drupal 8, and following the `drupal-composer-managed` upstream will help keep your site current with any general configuration changes recommended by Pantheon.
 
-Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep the site on Drupal 8 until you are ready to upgrade to drupal:latest.
+Add Drupal 8 core dependency instructions to `drupal/core-recommended` to keep the site on Drupal 8 until you are ready to upgrade to the latest version of Drupal.
 
 ## Will This Guide Work for Your Site?
 
@@ -70,13 +70,13 @@ If you receive the error message "The provided host name is not valid for this s
 
 ## Change Upstreams
 
-Your Pantheon site is now configured to use the drupal:latest Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
+Your Pantheon site is now configured to use the Drupal (Latest) Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
 terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to drupal:latest.
+Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to the latest version of Drupal.
 
 ## Working With Dependency Versions
 

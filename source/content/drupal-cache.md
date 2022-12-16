@@ -17,34 +17,34 @@ Learn industry best practices for Drupal caching, how to take advantage of them 
 
 </Enablement>
 
-## drupal:latest Performance Configuration
+## Drupal Performance Configuration
 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Caching
 
-![drupal:latest Caching options](../images/d9-cache-config.png)
+![Drupal Caching options](../images/d9-cache-config.png)
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance.
 
 On Pantheon, this value defaults to 15 minutes. This is done on the first cache-clear operation on the site; immediately after installing the site, you may see this set to `<no caching>`. In this case, press the "Clear all caches" button, or select the page cache maximum age from the available selections.
 
-Note that drupal:latest has no setting to configure the minimum cache lifetime.
+Note that Drupal has no setting to configure the minimum cache lifetime.
 
 ### Bandwidth Optimization
 
-![drupal:latest aggregate CSS and JS files](../images/d9-aggregate-css-js.png)
+![Drupal aggregate CSS and JS files](../images/d9-aggregate-css-js.png)
 
 <Partial file="aggregation.md" />
 
 ### Cache Tags
 
-drupal:latest uses the [cache metadata](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x) system introduced in Drupal 8 that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
+Drupal uses the [cache metadata](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x) system introduced in Drupal 8 that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
 
 This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal's cache metadata to communicate with the [Pantheon Global CDN](/guides/global-cdn). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
 
-For drupal:latest, install the Pantheon Advanced Page Cache module via [Composer](/guides/integrated-composer/dependencies), then enable it via the Drupal Admin:
+For Drupal, install the Pantheon Advanced Page Cache module via [Composer](/guides/integrated-composer/dependencies), then enable it via the Drupal Admin:
 
 ```bash{promptUser: user}
 composer require drupal/pantheon_advanced_page_cache

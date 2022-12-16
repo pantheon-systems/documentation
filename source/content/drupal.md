@@ -1,12 +1,12 @@
 ---
-title: "Drupal:latest"
+title: "Drupal"
 description: Get started with Drupal on the Pantheon WebOps Platform.
 tags: [site, D8, D9, D10]
 contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-12-09"
 contenttype: [doc]
 categories: [create, plan, config]
-newcms: [drupal, drupal8, drupal9, drupal10]
+newcms: [drupal]
 audience: [development]
 product: [integrated-composer]
 integration: [--]
@@ -20,7 +20,7 @@ Since Drupal itself is in active development and each new version brings a numbe
 
 Drupal includes many of the features and layout that Drupal users are familiar with, and it removes deprecated code to help improve future Drupal development.
 
-Drupal:latest updates Drupal’s underlying dependencies like [Symfony](https://symfony.com/) and [Twig](https://twig.symfony.com/), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal and beyond.
+The latest version of Drupal updates Drupal’s underlying dependencies like [Symfony](https://symfony.com/) and [Twig](https://twig.symfony.com/), removes several deprecated API functions in favor of better options, and allows everyone running Drupal 8.8+ an easy upgrade path to Drupal and beyond.
 
 ## Drupal With Integrated Composer
 

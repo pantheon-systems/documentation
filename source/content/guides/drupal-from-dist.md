@@ -1,5 +1,5 @@
 ---
-title: Create a Drupal:latest Site Using a Drupal Distribution
+title: Create a Drupal Site Using a Drupal Distribution
 description: Learn how to create a site using a Drupal distribution.
 cms: "Drupal"
 tags: [site, D8, D9, D10]
@@ -207,6 +207,6 @@ include __DIR__ . "/settings.pantheon.php";
 
 - [Get Started](/get-started)
 
-- [drupal:latest Migration Guides](/drupal-migration)
+- [Drupal Migration Guides](/drupal-migration)
 
 - [Go Live](/go-live)

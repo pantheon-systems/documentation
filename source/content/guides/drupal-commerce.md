@@ -1,8 +1,8 @@
 ---
-title: Drupal Commerce on Drupal:latest
-description: Use Composer to Install Drupal Commerce with Drupal:latest, on Pantheon
+title: Drupal Commerce on Drupal
+description: Use Composer to Install Drupal Commerce with Drupal, on Pantheon
 contributors: [alexfornuto, stevector]
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [upstreams, site]
 type: guide
 permalink: docs/guides/:basename
@@ -24,13 +24,13 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 ## Before You Begin
 
-1. Make sure you have updated to [Drupal:latest](/drupal#about-drupal)
+1. Make sure you have updated to [the latest version of Drupal](/drupal#about-drupal)
 
   <Alert title="Note"  type="info" >
 
   Drupal 8 reached end-of-life status in November 2021, and is no longer supported by Drupal. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29).
 
-  Drupal 10 was released in December of 2022. ead the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29). [[NOTE: Replace with link when available]]
+  Drupal 10 was released in December of 2022. Read the [official announcement on Drupal.org](https://www.drupal.org/blog/drupal-10-0-0). 
 
   </Alert>
 
@@ -48,9 +48,9 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
     - `GITHUB_TOKEN` lets Terminus interact with your GitHub account to create the repository
     - `CIRCLE_TOKEN` is used to configure CircleCI to push to Pantheon any time a push is made to the GitHub repo
 
-## Create a New drupal:latest Site
+## Create a New Drupal Site
 
-1. Use the Terminus Build Tools plugin to create a new drupal:latest site from the Pantheon [Drupal Recommended](https://github.com/pantheon-systems/drupal-composer-managed) repository on GitHub:
+1. Use the Terminus Build Tools plugin to create a new Drupal site from the Pantheon [Drupal Recommended](https://github.com/pantheon-systems/drupal-composer-managed) repository on GitHub:
 
  ```bash{promptUser: user}
  terminus build:project:create d9 $SITENAME

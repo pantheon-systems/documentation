@@ -12,7 +12,7 @@ editpath: drupal/drupal-hosted-createcustom/10-deploy-live.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal, drupal8, drupal9, drupal10]
+newcms: [drupal]
 audience: [development]
 product: [ddashboard, custom-upstreams]
 integration: [--]

@@ -59,9 +59,22 @@ Pantheon sets a cache lifetime of one year for static assets (e.g. CSS, JS, Imag
 
 For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure a new file name will be created automatically any time a site's cache is cleared:
 
-- **Drupal:** use the built-in option found in the Drupal dashboard at `/admin/config/development/performance`.
+<TabList>
 
-- **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
+<Tab title="Drupal" id="drupal" active={true}>
+
+Use the built-in option found in the Drupal dashboard at `/admin/config/development/performance`.
+
+</Tab>
+
+
+<Tab title="WordPress" id="wp">
+
+Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
+
+</Tab>
+
+</TabList>
 
 [Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn/global-cdn-caching#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
@@ -69,17 +82,25 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, the Global CDN will not try to respond to the request from its cache or store the response.
 
-### Drupal Sites
+<TabList>
+
+<Tab title="Drupal" id="drupal" active={true}>
 
 Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to name yours differently if you choose to use one. Generally, SESS followed by a few words will work.
 
 **Correct:** SESSmysessioncookie, SESShello123, SESSletsgo
 
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
+</Tab>
 
-### WordPress Sites
+
+<Tab title="WordPress" id="wp">
 
 WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin") plugin. It is designed to handle the naming properly.
+
+</Tab>
+
+</TabList>
 
 ### Session and Cookie Lifetime
 
@@ -91,21 +112,34 @@ Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes
 
 For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
 
-#### Drupal 7
+<TabList>
+
+<Tab title="Drupal (Latest)" id="drupal" active={true}>
+
+Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
+
+</Tab>
+
+
+<Tab title="Drupal 7" id="drupal7">
 
 Session cookie lifetime and session garbage collection can be overridden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
 
-#### drupal:latest
+</Tab>
 
-Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for drupal:latest](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
-
-#### WordPress
+<Tab title="WordPress" id="">
 
 The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin automatically sets the session lifetime `0`, which is until the browser is closed. You can override this setting with the `pantheon_session_expiration` filter before the plugin loads.
 
 Session data is removed from the database by PHP's garbage collection when it has not been used in the time set in `gc_maxlifetime`, which is set to `200,000` seconds by default.
 
 Refer to [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information about WordPress and PHP Sessions on Pantheon.
+
+
+</Tab>
+
+</TabList>
+
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
@@ -192,13 +226,23 @@ Pantheon strips cookies for any file ending with the following extensions, even 
 
 Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, the Global CDN will respect them. Depending on your use case, that may be the desired result.
 
-### Drupal Sites
+<TabList>
+
+<Tab title="Drupal" id="drupal" active={true}>
 
 Drupal’s `404_fast_*` configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
-### WordPress Sites
+</Tab>
+
+
+<Tab title="WordPress" id="wordpress">
 
 WordPress does not set cache headers by default, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
+
+</Tab>
+
+</TabList>
+
 
 ## Environment Access Locked
 

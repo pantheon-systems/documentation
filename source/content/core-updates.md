@@ -13,16 +13,9 @@ integration: [--]
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
 
-## drupal:latest
+## Drupal (Latest Version)
 
-As of Drupal 8.8, Drupal only supports managing depedencies via composer. 
-You can do that without checking in the vendor directory 
-by using Pantheon's [Integrated Composer](/guides/integrated-composer) 
-to allow one-click core updates through the Dashboard. 
-Site maintainers can combine these one-click updates
-with our Autopilot service to automate site module updates.
-
-[[ Link to autopilot ]]
+As of Drupal 8.8, Drupal only supports managing depedencies via composer. You can do that without checking in the vendor directory by using Pantheon's [Integrated Composer](/guides/integrated-composer) to allow one-click core updates through the Dashboard. Site maintainers can combine these one-click updates with our [Autopilot](/guides/autopilot) service to automate site module updates.
 
 To check for available updates:
 
@@ -38,7 +31,7 @@ Drupal 8 sites managing core with Composer are not compatible with Pantheon's On
 
 - [Convert the site to Integrated Composer](/guides/composer-convert)
 
-- [Update to Drupal:latest](/drupal-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
+- [Update to the latest version of Drupal](/drupal-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
 
 ## Non-Composer-Managed WordPress and Drupal 7 Sites
 
@@ -108,7 +101,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 <TabList>
 
-<Tab title="drupal:latest" id="d9" active={true}>
+<Tab title="Drupal (Latest)" id="d9" active={true}>
 
 ```bash{promptUser: user}
 git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed main
@@ -204,7 +197,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="drupal:latest" id="d9-1conflict">
+  <Tab title="Drupal (Latest)" id="d9-1conflict">
 
   ```bash{promptUser: user}
   git remote add pantheon-drupal https://github.com/pantheon-systems/drupal-composer-managed
@@ -245,7 +238,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="drupal:latest" id="d9-2conflict">
+  <Tab title="Drupal (Latest)" id="d9-2conflict">
 
   ```bash{promptUser: user}
   git fetch pantheon-drupal
@@ -381,7 +374,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  </Tab>
 
- <Tab title="drupal:latest" id="d9-2conflict-merge">
+ <Tab title="Drupal (Latest)" id="d9-2conflict-merge">
 
   GITHUB-EMBED https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 

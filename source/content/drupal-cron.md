@@ -146,4 +146,4 @@ No. You can create a custom module that uses the [`hook_cron`](https://api.drupa
 
 - [Drupal.org Community Documentation - Set up Cron](https://www.drupal.org/docs/7/setting-up-cron/overview)
 - [Elysia Cron - extends Drupal standard Cron for Drupal 7](https://www.drupal.org/project/elysia_cron)
-- [Ultimate Cron - extends Drupal standard Cron for Drupal 7 and drupal:latest](https://www.drupal.org/project/ultimate_cron)
+- [Ultimate Cron - extends Drupal standard Cron for Drupal 7 and Drupal (Latest)](https://www.drupal.org/project/ultimate_cron)

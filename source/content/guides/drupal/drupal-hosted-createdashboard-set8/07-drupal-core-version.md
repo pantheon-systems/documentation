@@ -12,7 +12,7 @@ editpath: drupal-hosted-createdashboard-set8/07-drupal-core-version.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal, drupal8, drupal9, drupal10]
+newcms: [drupal]
 audience: [development]
 product: [dashboard]
 integration: [--]

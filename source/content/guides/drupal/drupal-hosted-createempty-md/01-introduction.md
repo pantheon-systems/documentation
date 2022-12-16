@@ -12,7 +12,7 @@ editpath: drupal/drupal-hosted-createempty-md/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal, drupal8, drupal9, drupal10]
+newcms: [drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]

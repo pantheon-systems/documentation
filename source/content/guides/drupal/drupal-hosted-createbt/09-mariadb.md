@@ -12,7 +12,7 @@ editpath: drupal-v8/09-mariadb.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git, update]
-newcms: [drupal, drupal8, Drupal9, Drupal10]
+newcms: [drupal]
 audience: [development]
 product: [dashboard]
 integration: [mariadb]

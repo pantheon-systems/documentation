@@ -28,11 +28,11 @@ You can use Terminus for scripting many operations. For example, a post-commit h
 
 ## Autopilot Testing
 
-The best way to test your site on pantheon is using autopilot. Link to autopilot stuff.
+The best way to test your site on pantheon is using [Autopilot](/guides/autopilot).
 
 ## PHPUnit Testing
 
-As of drupal:latest PHPUnit is the standard method of testing on Drupal sites. Link to PHPUnit Testing.
+[PHPUnit](https://github.com/sebastianbergmann/phpunit/) is the standard method of testing on Drupal sites.
 
 ## Integration Bot
 

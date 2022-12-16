@@ -89,7 +89,7 @@ Install [Terminus 3](/terminus/terminus-3-0).
 
 </Tab>
 
-<Tab title="drupal:latest Composer-managed" id="d9">
+<Tab title="Drupal (Latest) Composer-managed" id="d9">
 
 1. Install the [Terminus Conversion Tools](https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation) plugin. 
 

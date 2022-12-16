@@ -16,13 +16,13 @@ reviewed: "2020-07-21"
 
 The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
 
-Visit the [drupal:latest migration guide](/drupal-migration) to find the best path to drupal:latest for your site.
+Visit the [Drupal Migration Guide](/drupal-migration) to find the best path to Drupal for your site.
 
 </Alert>
 
 ## Overview
 
-To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to drupal:latest, create a new drupal:latest site and add content, files and modules from the old site into the new site.
+To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to the latest version of Drupal, create a new Drupal site and add content, files and modules from the old site into the new site.
 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
@@ -30,13 +30,13 @@ Migrating to a new site on the platform will provide you with the QA and deploym
 If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.
 </Alert>
 
-## About drupal:latest
+## About Drupal (Latest)
 
-Since drupal:latest currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with drupal:latest, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first.
+Since the latest version of Drupal currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with the latest version of Drupal, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first. 
 
 ### Content and configuration
 
-drupal:latest migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any drupal:latest site](/drupal-configuration-management)).
+Drupal migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal site](/drupal-configuration-management)).
 
 ### Customizing migrations
 
@@ -85,6 +85,6 @@ Migrations of particularly large sites to updated Drupal versions can sometimes 
 
 ## More Resources
 
-- [Drupal:latest](/drupal)
+- [Drupal](/drupal)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)

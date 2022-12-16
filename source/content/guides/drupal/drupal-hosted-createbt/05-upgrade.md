@@ -13,7 +13,7 @@ editpath: drupal/drupal-hosted-createbt/05-upgrade.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git, update]
-newcms: [drupal, drupal8, drupal9, drupal10]
+newcms: [drupal]
 audience: [development]
 product: [dashboard]
 integration: [--]

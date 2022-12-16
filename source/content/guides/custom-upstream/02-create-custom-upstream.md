@@ -179,7 +179,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </Tab>
 
-    <Tab title="Drupal:latest" id="dlatest">
+    <Tab title="Drupal (Latest)" id="dlatest">
 
     ```bash{promptUser: user}
     git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-universal.git
@@ -211,7 +211,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </Tab>
 
-    <Tab title="Drupal:latest" id="dlatest">
+    <Tab title="Drupal (Latest)" id="dlatest">
 
     1. Pull and commit the core files:
 
