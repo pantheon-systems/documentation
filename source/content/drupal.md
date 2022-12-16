@@ -82,8 +82,6 @@ See the appropriate [Drupal Migration Guide](/drupal-migration) for help trouble
 
 ### Can I Use Lando or Localdev for Drupal ?
 
-Local development options for Drupal are currently being implemented into [Localdev](/guides/localdev/troubleshoot-support).
-
 Some users have reported success using [Lando](https://docs.lando.dev/basics/) with Drupal , but it relies on a workaround and requires extra configuration. Check the status of the [Lando repo's issue](https://github.com/lando/lando/issues/2831#issuecomment-771833900) before you continue.
 
 Manually update the [landofile](https://docs.lando.dev/config/lando.html#base-file) in the project folder, and set `drupal9` as the framework:
