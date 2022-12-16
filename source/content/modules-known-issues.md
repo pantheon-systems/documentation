@@ -157,7 +157,7 @@ ___
 
 `RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
 
-**Solution:** The [Persistent Temporary Path Workaround](/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
+**Solution:** The [Persistent Temporary Path Workaround](/guides/filesystem/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
 
 We recommend following the issue on [Drupal](https://www.drupal.org/project/feeds/issues/2912130) and requesting that the module maintainer fix the module.
 
@@ -291,7 +291,7 @@ ___
 
 ## Plupload
 
-**Issue**: [Plupload](https://www.drupal.org/project/plupload) requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
+**Issue**: [Plupload](https://www.drupal.org/project/plupload) requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](/guides/filesystem/tmp#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in `settings.php`. Example:
 
@@ -340,7 +340,7 @@ ___
 
 **Issue 1:** When the module is configured to take over the public file system, Drupal's CSS/JS aggregation will not work unless you also upload Drupal Core and contrib modules to S3. See [Drupal Issue 2511090](https://www.drupal.org/project/s3fs/issues/2511090) for more information.
 
-**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [Platform upload limitations](/guides/platform-considerations/files-directories#large-files).
+**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [upload limitations](/guides/filesystem/large-files).
 
 ___
 
