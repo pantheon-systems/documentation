@@ -1002,13 +1002,13 @@ ___
 
 <ReviewDate date="2020-07-15" />
 
-**Issue:** [Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuation and log files.
+**Issue:** [Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuration and log files.
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `SITE` and `ENV` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -1029,23 +1029,22 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Change to the `my-site` directory:
+1. Change to the site's `wp-content` directory:
 
    ```bash{promptUser: user}
-   cd /my-site
+   cd $SITE/wp-content
    ```
+
+1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
+
+  ```bash{promptUser: user}
+  rm wflogs
+  ```
 
 1. Create the following symlinks:
 
-  <Alert title="Note"  type="info" >
-
-  You must remove the `/wp-content/wflogs` directory, if it already exists, before you create the symlinks listed below.
-
-  </Alert>
-
   ```bash{promptUser: user}
-
-  ln -s ../../files/private/wflogs ./wp-content/wflogs
+  ln -s ../../files/private/wflogs ./wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
   ```
