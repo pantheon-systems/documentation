@@ -26,7 +26,7 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 ## WordPress Best Practices
 
-Consult [WordPress best practices](/wordpress-best-practices) for a list of best practices you can implement. Pay particular attention to [avoiding XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks).
+Consult [WordPress best practices](/guides/wordpress-developer/wordpress-best-practices) for a list of best practices you can implement. Pay particular attention to [avoiding XML-RPC attacks](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks).
 
 In addition to your other WordPress security practices, take steps to block brute force attacks that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 

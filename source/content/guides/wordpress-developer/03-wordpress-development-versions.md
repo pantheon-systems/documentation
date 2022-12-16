@@ -1,14 +1,19 @@
 ---
-title: Testing WordPress Core Development Versions
+title: WordPress Developer's Guide
+subtitle: Testing WordPress Core Development Versions
 description: Learn how to test WordPress core updates using nightly builds of the current release or bleeding edge.
 cms: "WordPress"
-contenttype: [doc]
+contenttype: [guide]
 categories: [update]
 newcms: [wordpress]
 audience: [--]
 product: [--]
 integration: [--]
 tags: [workflow, updates]
+layout: guide
+showtoc: true
+permalink: docs/guides/wordpress-developer/wordpress-development-versions
+anchorid: wordpress-development-versions
 ---
 
 Pantheon provides [one-click updates](/core-updates) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.

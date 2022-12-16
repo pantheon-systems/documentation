@@ -77,7 +77,7 @@ If you are distributing large binaries or hosting big media files, we recommend 
 
 You cannot upload files over 100MB through the CMS even when using an external CDN to host files. You can upload these files directly to the CDN. Refer to Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html) for more information.
 
-You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/guides/wordpress-configurations/wordpress-s3) for more information about integrating S3 with your Pantheon site.
+You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/guides/wordpress-developer/wordpress-s3) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
 

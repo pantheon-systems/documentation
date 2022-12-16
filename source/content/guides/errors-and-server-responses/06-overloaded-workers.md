@@ -63,4 +63,4 @@ Debugging with [New Relic&reg; Performance Monitoring](/guides/new-relic) or loo
 
 - [Cron for Drupal](/drupal-cron)
 
-- [Cron for WordPress](/wordpress-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron)

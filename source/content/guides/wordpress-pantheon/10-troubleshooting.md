@@ -21,7 +21,7 @@ The section provides resources for troubleshooting common scenarios in WordPress
 
 ## Fix Broken Links
 
-Review our [Fix Broken Links in WordPress](/wordpress-broken-links) doc to learn how to update broken links on your Pantheon WordPress site so that the URL references the correct file path and domain name.
+Review our [Fix Broken Links in WordPress](/guides/wordpress-developer/wordpress-broken-links) doc to learn how to update broken links on your Pantheon WordPress site so that the URL references the correct file path and domain name.
 
 ## Plugins and Themes with Known Issues
 

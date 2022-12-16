@@ -49,7 +49,7 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title={"AWS S3 Setup for WordPress"} link={"/docs/guides/wordpress-configurations/wordpress-s3"}>
+  <Product title={"AWS S3 Setup for WordPress"} link={"/docs/guides/wordpress-developer/wordpress-s3"}>
 
   Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution
 

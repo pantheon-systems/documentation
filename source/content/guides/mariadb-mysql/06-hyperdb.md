@@ -124,4 +124,4 @@ if ( ! empty( $_ENV['REPLICA_DB_HOST'] ) && ! is_admin() ) {
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
-- [WordPress Best Practices](/wordpress-best-practices)
+- [WordPress Best Practices](/guides/wordpress-developer/wordpress-best-practices)

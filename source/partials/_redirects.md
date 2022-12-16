@@ -53,7 +53,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 }
 ```
 
-WordPress users should also run a [search and replace](/wordpress-broken-links/#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) to update any references to the platform domain.
+WordPress users should also run a [search and replace](/guides/wordpress-developer/wordpress-broken-links/#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) to update any references to the platform domain.
 
 </Tab>
 
