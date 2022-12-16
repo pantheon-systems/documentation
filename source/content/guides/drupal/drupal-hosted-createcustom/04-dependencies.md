@@ -1,8 +1,8 @@
 ---
-title: Migrate a Custom Upstream to Drupal:latest
+title: Migrate a Custom Upstream to Drupal (Latest)
 subtitle: Add Dependencies
 description: 
-cms: "drupal:latest"
+cms: "v"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

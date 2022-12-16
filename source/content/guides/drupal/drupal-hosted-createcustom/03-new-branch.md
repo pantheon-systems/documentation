@@ -1,8 +1,8 @@
 ---
-title: Migrate a Custom Upstream to Drupal:latest
+title: Migrate a Custom Upstream to Drupal (Latest)
 subtitle: Create a New Branch with Integrated Composer Code
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide

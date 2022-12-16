@@ -1,5 +1,5 @@
 ---
-title: Migrate a Custom Upstream to Drupal:latest
+title: Migrate a Custom Upstream to Drupal (Latest)
 subtitle: Test Sites and Apply Customizations
 description: 
 cms: "Drupal:latest"

@@ -1,8 +1,8 @@
 ---
-title: Migrate a Custom Upstream to Drupal:latest
+title: Migrate a Custom Upstream to Drupal (Latest)
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
@@ -40,7 +40,7 @@ On the `composerify` branch, make a list of the modules that will need to be re-
     ```bash:title=audit_site_modules.sh
     #!/usr/bin/env bash
 
-    echo 'Updating site list now with site urls from the custom Drupal:latest Upstream.'
+    echo 'Updating site list now with site urls from the custom Drupal Upstream.'
     SITES=$(terminus site:list --upstream=a2457b48-2c68-4d01-b471-7ae1337c9320 --field=Name)
 
     for site in $SITES
