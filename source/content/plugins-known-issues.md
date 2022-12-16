@@ -1008,6 +1008,8 @@ ___
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 
+<Accordion title="Wordfence Assumed Write Access Solution" id="wordfence-assumed-write-access">
+
 <Alert title="Exports" type="export">
 
 This process uses [Terminus](/terminus) commands. Before we begin, set the variables `SITE` and `ENV` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
@@ -1121,83 +1123,87 @@ Complete this step in Dev, Test, and Live Environments.
 
 1. Navigate to the **Wordfence** plugin in the site's WordPress Admin and **Resume Installation** if prompted, or click **CLICK HERE TO CONFIGURE**. The plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete it after downloading.
 
+</Accordion>
+
 **Issue:** Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error connecting to the database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. This results in two problems:
 
 * __DIR__ is not providing the proper path for Wordfence
 * Wordfence cannot find your database credentials
 
-**Solution:** To address the first problem you can modify Wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP
-from:
+**Solution if DIR is not providing the proper path for Wordfence:** Modify Wordfence to use relative paths.
 
-```
-if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-    define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
-    include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
-to:
+1. Change the following code within `wordfence-waf.php` over SFTP from:
 
-```
-if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
- define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
- include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
+  ```php:title=wordfence-waf.php
+  if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+      define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
+      include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
-Next, add [Wordfence constants](https://www.wordfence.com/help/advanced/constants/) in between conditions in the `wordfence-waf.php` file. The file should resemble the following when complete:
+  To:
 
-```
-// Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
-// This file was the current value of auto_prepend_file during the Wordfence WAF installation
+  ```php:title=wordfence-waf.php
+  if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+   define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
+   include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
-if (file_exists('/includes/prepend.php')) {
-	include_once '/includes/prepend.php';
-}
+1. Add [Wordfence constants](https://www.wordfence.com/help/advanced/constants/) in between conditions in the `wordfence-waf.php` file. The file should resemble the following when complete:
 
-	define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
-	define('WFWAF_DB_USER', $_ENV['DB_USER']);
-	define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
-	define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
-	define('WFWAF_DB_CHARSET', 'utf8mb4');
-	define('WFWAF_DB_COLLATE', '');
-  // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
-	define('WFWAF_TABLE_PREFIX', 'wp_');
-
-if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
-	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
+  ```php:title=wordfence-waf.php
+  // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
+  // This file was the current value of auto_prepend_file during the Wordfence WAF installation
+  
+  if (file_exists('/includes/prepend.php')) {
+    include_once '/includes/prepend.php';
+  }
+  
+    define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
+    define('WFWAF_DB_USER', $_ENV['DB_USER']);
+    define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
+    define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
+    define('WFWAF_DB_CHARSET', 'utf8mb4');
+    define('WFWAF_DB_COLLATE', '');
+    // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
+    define('WFWAF_TABLE_PREFIX', 'wp_');
+  
+  if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+    define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
+    include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
 #### Further Considerations with Wordfence: Utilizing data storage over files
 
 If you experience degraded performance with Wordfence active, using [Wordfence's data storage option](https://www.wordfence.com/help/firewall/mysqli-storage-engine/) might be appropriate. Modify `wordfence-waf.php` to include the MySQLi storage engine constant. Combined with the constants previously mentioned, the plugin will write to your database instead of your file system. If you do this, we recommend wrapping the constants in a condition that checks `wp-config.php` for a conflicting constant. The end result of your modified `wordfence-waf.php` should resemble the following:
 
-```
+  ```php:title=wp-config.php
 <?php
 // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
 // This file was the current value of auto_prepend_file during the Wordfence WAF installation (Sun, 21 Nov 2021 23:40:56 +0000)
 
 if (file_exists('/includes/prepend.php')) {
-	include_once '/includes/prepend.php';
+  include_once '/includes/prepend.php';
 }
 
 if(! defined('WFWAF_STORAGE_ENGINE')) {
-	// define WF constants if not set in wp-config.php
-	define('WFWAF_STORAGE_ENGINE', 'mysqli');
-	define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
-	define('WFWAF_DB_USER', $_ENV['DB_USER']);
-	define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
-	define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
-	define('WFWAF_DB_CHARSET', 'utf8mb4');
-	define('WFWAF_DB_COLLATE', '');
+  // define WF constants if not set in wp-config.php
+  define('WFWAF_STORAGE_ENGINE', 'mysqli');
+  define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
+  define('WFWAF_DB_USER', $_ENV['DB_USER']);
+  define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
+  define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
+  define('WFWAF_DB_CHARSET', 'utf8mb4');
+  define('WFWAF_DB_COLLATE', '');
   // Note this table prefix should reflect your WordPress application's table prefix. Update accordingly.
-	define('WFWAF_TABLE_PREFIX', 'wp_');
+  define('WFWAF_TABLE_PREFIX', 'wp_');
 }
 
 if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');;
-	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');;
+  include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
 ```
 
 **Advantages:** Customers have reported improved file system performance, while not having to compromise on Wordfence's features.
@@ -1212,7 +1218,7 @@ ___
 
 ## WordPress Download Manager
 
-**Issue 1:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
+**Issue:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
 
 **Solution:** We recommend that you research an alternative download manager plugin that fits your needs.
 
