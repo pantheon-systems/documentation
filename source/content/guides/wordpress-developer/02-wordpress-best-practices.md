@@ -31,30 +31,28 @@ This section provides suggestions for best practices to develop and manage WordP
 
 - Use [Grunt](https://gruntjs.com) or [Gulp](https://github.com/gulpjs/gulp) to aggregate JS/CSS on your local development environment rather than relying on the server to do it for you. This helps speed up your workflow by minimizing redundant tasks.
 
-- When developing custom plugins or themes, it is best to abide by the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) for efficiency and ease of collaboration.
+- Follow the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) when developing custom plugins or themes for efficiency and ease of collaboration.
 
 ### Plugins
 
-- Add [Composer](/guides/composer) and pull your WordPress plugins from [wpackagist.org](https://wpackagist.org/). WordPress Packagist mirrors the WordPress.org plugin repository and adds a composer.json file so things play nice. It makes future debugging much simpler should you need to switch between multiple plugin or WordPress versions to see what caused something to break. While [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md), you will have to commit the dependencies that Composer downloads on Pantheon since running `composer install` on the environments is not supported (just as Git submodules are not supported).
+- Add [Composer](/guides/composer) and pull your WordPress plugins from [wpackagist.org](https://wpackagist.org/). WordPress Packagist mirrors the WordPress.org plugin repository and adds a composer.json file. It makes future debugging much simpler if you need to switch between multiple plugin or WordPress versions to see what caused something to break. While [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md), you will have to commit the dependencies that Composer downloads on Pantheon since running `composer install` on the environments is not supported (just as Git submodules are not supported).
 
-- If you have a custom plugin that retrieves a specific post (or posts), instead of using `wp_query()` to retrieve it, use the `get_post()` function. While wp_query has its uses, the [get_post](https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object, and does so very efficiently.
+- Use the `get_post()` function instead of using `wp_query()` if you have a custom plugin that retrieves a specific post (or posts). `wp_query` can be useful in some situations, however,the [get_post](https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object.
 
-- Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes they're dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. You'd be surprised how many uploads-type plugins rely on `.htaccess` files — avoid those as well.
-
+- Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes these files are dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. Many plugins for uploads rely on `.htaccess` files which should also be avoided.
 
 ### Themes
 
-- In your theme, use a simple PHP `include()` instead of WordPress's [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part). The overhead is heavy if your use case is simply adding in another sub-template file. For example:
+- Use a simple PHP `include()` instead of WordPress's [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part) in your theme. The overhead is heavy if your use case is simply adding in another sub-template file. For example:
 
   ```php
   <?php get_template_part('content', 'sidebar'); ?>
   <?php include('content-sidebar.php'); ?>
   ```
-  
+
 #### Manage License Keys for Themes or Plugins
 
-There are many plugins and themes in WordPress that require license keys. Since Dev and Multidev are the only writable environments in SFTP mode, it is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments. 
-
+There are many plugins and themes in WordPress that require license keys. It is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments because Dev and Multidev are the only writable environments in SFTP mode.
 
 ## Testing
 
@@ -64,16 +62,16 @@ There are many plugins and themes in WordPress that require license keys. Since 
 
 ## Live
 
-- We recommend using HTTPS. For more information, see [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
+- We recommend using HTTPS. Refer to [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https) more information.
 
-- Verify [Global CDN caching](/guides/global-cdn/test-global-cdn-caching) is working on your site.
+- Verify that [Global CDN caching](/guides/global-cdn/test-global-cdn-caching) is working on your site.
 
 - Follow our [Frontend Performance](/guides/frontend-performance) guide to tune your WordPress site.
 
 
 ## Disable Anonymous Access to WordPress Rest API
 
-The WordPress REST API is enabled for all users by default. To improve the security of a WordPress site, you can disable the WordPress REST API for anonymous requests, to avoid exposing admin users. This action improves site safety and reduces unexpected errors that can result in compromised WordPress core functionalities.
+The WordPress REST API is enabled for all users by default. You can disable the WordPress REST API for anonymous requests to improve security and avoid exposing admin users. This action improves site safety and reduces unexpected errors that can result in compromised WordPress core functionalities.
 
 The following function ensures that anonymous access to your site's REST API is disabled and that only authenticated requests will work. You can add this code sample to a theme's `functions.php` file or to a must-use plugin:
 
@@ -122,4 +120,10 @@ function additional_securityheaders( $headers ) {
 add_filter( 'wp_headers', 'additional_securityheaders' );
 ```
 
-**Note:** Because the headers are applied by PHP code when WordPress is invoked, they will not be added when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
+**Note:** The headers are applied by PHP code when WordPress is invoked. This means that headers will not be added when directly accessing assets like `https://example.com/wp-content/uploads/2020/01/sample.json`.
+
+## More Resources
+
+- [Secure Development on Pantheon](/guides/secure-development)
+- [Automate Testing with Behat](/guides/behat)
+- [Manage Custom Code for WordPress with Plugins](/guides/wordpress-configurations/wordpress-custom-code)
