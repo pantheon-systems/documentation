@@ -18,11 +18,16 @@ permalink: docs/guides/wordpress-developer/wordpress-cron
 anchorid: wordpress-cron
 ---
 
-## Cron Overview
+This section provides information on how to create and run Cron jobs.
 
-Cron is a standard utility in Unix and Linux systems that is used to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows for the execution of tasks at specified intervals ranging from once a minute to once a year.
+Cron is a standard feature in Unix and Linux systems to schedule commands for automatic execution at configured intervals. These scheduled commands or tasks are known as cron jobs. Cron scheduling allows tasks to be executed at specified intervals ranging from once a minute to once a year.
 
-Cron is generally used for running scheduled backups, monitoring disk space, deleting files that are no longer required, running system maintenance tasks, and much more.
+Cron is generally used to:
+
+- Run scheduled backups
+- Monitor disk space
+- Delete files that are no longer required
+- Run system maintenance tasks
 
 ## Pantheon Cron Overview
 
@@ -38,12 +43,12 @@ wp cron event run --due-now
 
 WP-Cron is a WordPress feature that executes jobs when the page is loaded. Jobs are executed before site content is served to the site visitor. Plugins and themes can add jobs to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.
 
-The WP-Cron feature is designed solely to handle WordPress routine jobs as part of a page load, allowing you to do the following:
+The WP-Cron feature is designed solely to handle WordPress routine jobs as part of a page load, allowing you to:
 
  - Check for new version of the WordPress core, themes, and plugins
  - Clean up spam
 
-## Understanding the Differences Between Pantheon Cron and WP-Cron
+## Understand the Differences Between Pantheon Cron and WP-Cron
 
 There are some major differences between Pantheon Cron and WP-Cron.
 
@@ -96,7 +101,7 @@ terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
 - Replace `<SITE_NAME>` with your site's name
 - Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name)
 
-If this is a WordPress site on the Pantheon upstream it will now be running on Pantheon Cron, and you should see:
+You will receive a response similar to the one below if this is a WordPress site on the Pantheon upstream now running on Pantheon Cron:
 
 ```bash
 Error: The DISABLE_WP_CRON constant is set to true. WP-Cron spawning is disabled.
@@ -104,23 +109,23 @@ Error: The DISABLE_WP_CRON constant is set to true. WP-Cron spawning is disabled
 
 This is not an error, but indicates that WordPress's internal cron scheduler has been deactivated and that the site will now rely on Pantheon Cron.
 
-If this is a WordPress Site Network or has WordPress cron overridden, the result should be:
+The result will look similar to the example below if this is a WordPress Site Network or has WordPress cron overridden:
 
 ```bash{promptUser: user}
 Success: WP-Cron spawning is working as expected.
 ```
 
-You can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is as follows:
+You can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). Use [Terminus](/terminus) when using WP-CLI to manage your Pantheon hosted WordPress site. The command format is:
 
 ```bash{promptUser: user}
 terminus wp <SITE_NAME>.<ENV_NAME> -- cron <your wp-cron command and switches here>
 ```
 
-All `terminus wp` commands require a site name and environment to operate. WordPress Site Networks will require an additional `--url=<url>` parameter to specify which subsite to run the command on.
+All `terminus wp` commands require a site name and environment to operate. WordPress Site Networks requires an additional `--url=<url>` parameter to specify which subsite to run the command on.
 
 <Alert title="Note" type="info">
 
-Terminus cannot execute cron jobs if you enable the Security setting on your Dashboard. You may see status report errors on the Dashboard as a result.
+Terminus cannot execute cron jobs if you enable the Security setting on your Dashboard. You may receive status report errors on the Dashboard as a result.
 
 </Alert>
 
@@ -128,7 +133,7 @@ Terminus cannot execute cron jobs if you enable the Security setting on your Das
 
 Pantheon's WordPress upstream disables WP-Cron by default in favor of Pantheon Cron.
 
-If you want to use WP-Cron instead, add the following code to your `wp-config.php` file to enable WP-Cron's internal processing.
+Add the code below to your `wp-config.php` file to enable WP-Cron's internal processing if you want to use WP-Cron:
 
 This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
 
@@ -138,7 +143,7 @@ define('DISABLE_WP_CRON', false);
 
 ### Plugins
 
-There are several plugins you can use if you want to keep an eye on WP-Cron but don't like the command line. [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/screenshots/ "WP Crontrol page on wordpress.org"), for example, will show you all of the events scheduled for your site. You can create, edit, run, or delete jobs immediately from within your WordPress admin dashboard. You can also hook new actions into schedules or move existing actions to new schedules from within the Tools section.
+There are several plugins you can use if you want to keep an eye on WP-Cron but don't like the command line. [WP Crontrol](https://wordpress.org/plugins/wp-crontrol/screenshots/ "WP Crontrol page on wordpress.org"), for example, shows all events scheduled for your site. You can create, edit, run, or delete jobs immediately from within your WordPress admin dashboard. You can also hook new actions into schedules or move existing actions to new schedules from within the Tools section.
 
 [WPX Cron Manager Lite](https://wordpress.org/plugins/wpx-cron-manager-light/ "WPX Cron Manager Lite") works similarly with a slightly different UI. This plugin requires you to do a one-time installation of the WPX framework, which you can do straight from the plugin manager page.
 
@@ -150,7 +155,7 @@ You can use external crons if you want more control over your site's cron jobs, 
 
 Pantheon's WordPress upstream disables WP-Cron by default.
 
-If you are on a Custom Upstream that does not have this setting, or the site is a WordPress Multisite, add the following code to your `wp-config.php` file to ensure WP-Cron is disabled. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
+Add the following code to your `wp-config.php` file to ensure WP-Cron is disabled if you are on a Custom Upstream that does not have this setting, or the site is a WordPress Multisite. This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', true);
@@ -158,19 +163,19 @@ define('DISABLE_WP_CRON', true);
 
 ### Free Services
 
-You will need a service that calls a URL at regular intervals after disabling WP-Cron, if you want more granular control over when Cron runs. The easiest way to do this is to set up an account with a free cron service:
+You must have a service that calls a URL at regular intervals after disabling WP-Cron, if you want more granular control over when Cron runs. The easiest way to do this is to set up an account with a free cron service:
 
 - [EasyCron](https://www.easycron.com/)
 - [Set Cron Job](https://www.setcronjob.com/)
 - [cron-job](https://cron-job.org/en/)
 
-Any of the above services will get the job done. Disabling WP-Cron turns off the automatic checking and calling of the `wp-cron.php` script. You will now have to call that URL yourself using one of the services above. Most services only require the following setup:
+Any of the above services will work. You can disable WP-Cron, but this also turns off automatic checks and calls to the `wp-cron.php` script. You must call that URL yourself using one of the services above. Most services only require the following setup:
 
 1. Set up an account.
 
 1. Set up a job that calls `https://exampledomain.tld/wp-cron.php?doing_wp_cron`.
 
-You might have the ability to set up multiple jobs at different times depending on the service you use. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. WP-Cron will take care of the rest. You will need to adjust your job if you create new schedules that need to run more frequently than every 15 minutes.
+You might have the ability to set up multiple jobs at different times depending on the service you use. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. You must adjust your job if you create new schedules that need to run more frequently than every 15 minutes.
 
 <Alert title="Note" type="info">
 
@@ -180,27 +185,33 @@ Do not add a value to the `doing_wp_cron` query variable. This variable must be 
 
 ### Using Your Own Server
 
-You can use the Cron service to make a call to the `wp-cron.php` script if you administer your own server. You will have to learn how to correctly set up a Cron job and use something like `wget` or `curl` to fetch a web page. Using your own server is not safer than using a web-based Cron service.
+You can use the Cron service to make a call to the `wp-cron.php` script if you administer your own server. You must learn how to correctly set up a Cron job and use `wget`, `curl`, or a similar command to fetch a web page. Using your own server is not safer than using a web-based Cron service.
 
 ## Troubleshooting
 
 ### Problems With Low Traffic Sites
 
-On WordPress Multisite installations that do not have Pantheon Cron, WP-Cron will skip jobs in WordPress sites with low traffic. This doesn't mean your page will be slow from previous jobs when someone eventually visits your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so that your site's performance is not adversely affected.
+WP-Cron will skip jobs in WordPress sites with low traffic on WordPress Multisite installations that do not have Pantheon Cron. This doesn't mean your page will be slow from previous jobs when someone eventually visits your site. Regardless of how many jobs WP-Cron has to execute, all jobs are run in the background so that your site's performance is not adversely affected.
 
-Low traffic WordPress sites on Pantheon are put to sleep after either one or twelve hours pass without site visitors (see [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in sleeping environments.
+Low traffic WordPress sites on Pantheon are put to sleep after either one or twelve hours pass without site visitors (refer to [idle containers](/application-containers#idle-containers) for more information). Pantheon Cron jobs do not run in sleeping environments.
 
 ### Problems With High Traffic Sites
 
 You might run into problems with WP-Cron if your WordPress-powered site is high traffic. The main issues that come up are **race conditions** and **long running processes**.
 
 - **Race condition**: When more than one user visits your site and triggers WP-Cron to execute the same job. WP-Cron works hard to eliminate race conditions, but they can still happen, especially on high traffic sites.
-- **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. If this is set to be longer than the window between jobs, then you can end up with more than one copy of `wp-cron.php` executing.
+- **Long running process**: Any task that takes longer than the standard 60 seconds to run. Developers can adjust how long a PHP task is allowed to run with the `set_time_limit()` function. You can end up with more than one copy of `wp-cron.php` executing if this is set to be longer than the window between jobs.
 
 Both of these issues are addressed within WP-Cron's internal [locking](https://core.trac.wordpress.org/browser/tags/4.1.1/src/wp-includes/cron.php#L231) doc.
 
-Pantheon Cron limits the occurrences of the above issues.
+Pantheon Cron limits the occurrences of the issues listed above.
 
 ### What is the maximum execution time of cron?
 
 The maximum execution time of cron is 180 seconds (3 minutes).
+
+## More Resources
+
+- [Run Cron Over Web Traffic](/debug-slow-performance#running-cron-over-web-traffic)
+- [Debugging Slow Performance](/debug-slow-performance)
+- [Cron for Drupal](/drupal-cron)
