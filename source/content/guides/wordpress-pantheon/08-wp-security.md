@@ -47,7 +47,7 @@ Pantheon provides additional security through the following features:
 
 ## Securing WordPress
 
-<Partial file="wp-login-attacks.md" />
+`wp-login.php` is the primary WordPress login path and is often subject to abuse by bots or other spammers. Refer to the [Avoid WordPress Login Attacks](/guides/wordpress-developer/wordpress-login-attacks) section of the [WordPress Developer's Guide](/guides/wordpress-developer) for information on steps you can take to help secure your site.
 
 ## Securely Updating WordPress
 
