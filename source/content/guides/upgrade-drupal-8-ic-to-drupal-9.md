@@ -1,6 +1,6 @@
 ---
-title: Upgrade Drupal 8 with Integrated Composer to Drupal (Latest)
-description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to Drupal (Latest).
+title: Upgrade Drupal 8 with Integrated Composer to the Latest Version of Drupal
+description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to the Latest Version of Drupal.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
@@ -15,18 +15,18 @@ contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2022-12-13"
 ---
 
-This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to a Drupal (Latest) site using Integrated Composer.
+This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to the latest version of Drupal using Integrated Composer.
 
 <Partial file="drupal/see-landing.md" />
 
 
 ## Overview
 
-The goal of this upgrade is to set the Drupal core dependency to Drupal (Latest). This upgrade allows Composer to manage dependencies in the new site.
+The goal of this upgrade is to set the Drupal core dependency to Drupal (Latest Version). This upgrade allows Composer to manage dependencies in the new site.
 
 <Alert title="Note"  type="info" >
 
-Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to Drupal (Latest).
+Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to the latest version of Drupal.
 
 </Alert>
 
@@ -34,7 +34,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream. 
 
-Confirm the site requirements in the sections below before upgrading to Drupal (Latest).
+Confirm the site requirements in the sections below before upgrading to Drupal (Latest Version).
 
 ### Verify the Repository
 

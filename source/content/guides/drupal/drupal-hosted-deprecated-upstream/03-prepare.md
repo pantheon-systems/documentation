@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal (Latest)
+title: Migrate a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal
 subtitle: Prepare
 description: 
 cms: "Drupal"
@@ -21,7 +21,7 @@ integration: []
 
 This page provides steps on preparing your site for migration to [Drupal with Composer Upstream](/guides/integrated-composer).
 
-## Use Terminus to Confirm the Drupal (Latest) Upstream
+## Use Terminus to Confirm the Drupal Upstream
 
 Run the command `terminus site:info $SITE` to display the site's basic information and properties.
 

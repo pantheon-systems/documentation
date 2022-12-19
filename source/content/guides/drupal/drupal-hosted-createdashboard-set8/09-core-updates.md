@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal (Latest)
+title: Migrate a Site Created With the Pantheon Dashboard to the Latest Version of Drupal
 subtitle: Configure Ongoing Core Updates
 description: 
 cms: "Drupal"

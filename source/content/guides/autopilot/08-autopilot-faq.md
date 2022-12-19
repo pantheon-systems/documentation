@@ -39,8 +39,8 @@ Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/gu
 
 The version(s) of Drush that are supported by Autopilot for sites:
 - **Up to (not including) the latest version of Drupal**: Drush 8
-- **Drupal (Latest) with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
-- **Drupal (Latest) without Integrated Composer**: Drush is not supported. Drupal (Latest) requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
+- **Drupal (Latest Version) with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
+- **Drupal (Latest Version) without Integrated Composer**: Drush is not supported. The Latest Version of Drupal requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
 
 Autopilot only supports Drush 8 for all sites up to the latest version of Drupal.
 

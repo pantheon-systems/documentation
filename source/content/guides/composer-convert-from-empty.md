@@ -70,7 +70,7 @@ If you receive the error message "The provided host name is not valid for this s
 
 ## Change Upstreams
 
-Your Pantheon site is now configured to use the Drupal (Latest) Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
+Your Pantheon site is now configured to use the latest version of Drupal Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
 terminus site:upstream:set $SITE drupal-composer-managed

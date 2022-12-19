@@ -1,5 +1,5 @@
 ---
-title: Migrate a Custom Upstream to Drupal (Latest)
+title: Migrate a Custom Upstream to the Latest Version of Drupal
 subtitle: Add Contrib and Custom Code
 description: 
 cms: "Drupal"

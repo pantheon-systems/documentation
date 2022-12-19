@@ -1,5 +1,5 @@
 ---
-title: Migrate a Custom Upstream to Drupal (Latest)
+title: Migrate a Custom Upstream to the Latest Version of Drupal
 subtitle: Introduction
 description: Learn how to migrate a Custom Upstream to the latest version of Drupal
 cms: "Drupal latest"

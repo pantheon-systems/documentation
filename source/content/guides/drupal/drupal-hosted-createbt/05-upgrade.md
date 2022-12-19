@@ -28,7 +28,7 @@ integration: [--]
       -W --no-update
    ```
 
-1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from Drupal (Latest) to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
+1. The `pantheon-systems/drupal-integrations` project now includes a patch that backports a bugfix from the latest version of Drupal to Drupal 8 to display the correct version of your MariaDB server. If this patch is not installed, then your database version will always be reported as `MySQL 5.5.30`.
 
   The `cweagans/composer-patches` Composer plugin will only install patches from dependencies if the `enable-patching` property is set to `true` in `composer.json`.
 

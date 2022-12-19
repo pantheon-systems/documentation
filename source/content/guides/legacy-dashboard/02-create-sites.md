@@ -39,7 +39,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Choose a [Region](/regions) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 
-1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, Drupal (Latest), or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
+1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, Drupal (Latest Version), or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
 
    Wait while the platform provisions the site with the start state you selected.
 

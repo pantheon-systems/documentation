@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal (Latest)
+title: Migrate a Site Created With the Pantheon Dashboard to the Latest Version of Drupal
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 cms: "Drupal"

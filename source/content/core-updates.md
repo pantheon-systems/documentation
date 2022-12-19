@@ -101,7 +101,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 <TabList>
 
-<Tab title="Drupal (Latest)" id="d9" active={true}>
+<Tab title="Drupal (Latest Version)" id="d9" active={true}>
 
 ```bash{promptUser: user}
 git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed main
@@ -189,15 +189,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   <TabList>
 
-  <Tab title="WordPress" id="wp-1conflict" active={true}>
-
-  ```bash{promptUser: user}
-  git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
-  ```
-
-  </Tab>
-
-  <Tab title="Drupal (Latest)" id="d9-1conflict">
+  <Tab title="Drupal (Latest Version)" id="d9-1conflict">
 
   ```bash{promptUser: user}
   git remote add pantheon-drupal https://github.com/pantheon-systems/drupal-composer-managed
@@ -209,6 +201,14 @@ This process lets you manually resolve the conflict using the command line and a
 
   ```bash{promptUser: user}
   git remote add pantheon-drops-7 https://github.com/pantheon-systems/drops-7.git
+  ```
+
+  </Tab>
+
+  <Tab title="WordPress" id="wp-1conflict" active={true}>
+
+  ```bash{promptUser: user}
+  git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
   ```
 
   </Tab>
@@ -229,16 +229,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   <TabList>
 
-  <Tab title="WordPress" id="wp-2conflict" active={true}>
-
-  ```bash{promptUser: user}
-  git fetch pantheon-wordpress
-  git rebase pantheon-wordpress/master
-  ```
-
-  </Tab>
-
-  <Tab title="Drupal (Latest)" id="d9-2conflict">
+  <Tab title="Drupal (Latest Version)" id="d9-2conflict">
 
   ```bash{promptUser: user}
   git fetch pantheon-drupal
@@ -252,6 +243,15 @@ This process lets you manually resolve the conflict using the command line and a
   ```bash{promptUser: user}
   git fetch pantheon-drops-7
   git rebase pantheon-drops-7/master
+  ```
+
+  </Tab>
+
+  <Tab title="WordPress" id="wp-2conflict" active={true}>
+
+  ```bash{promptUser: user}
+  git fetch pantheon-wordpress
+  git rebase pantheon-wordpress/master
   ```
 
   </Tab>
@@ -366,15 +366,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <TabList>
 
- <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
-
- GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
-
-  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.yml)
-
- </Tab>
-
- <Tab title="Drupal (Latest)" id="d9-2conflict-merge">
+ <Tab title="Drupal (Latest Version)" id="d9-2conflict-merge">
 
   GITHUB-EMBED https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 
@@ -390,7 +382,15 @@ This issue happens when you attempt to update very outdated core files from the 
 
  </Tab>
 
- </TabList>
+  <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
+
+ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+
+  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.yml)
+
+ </Tab>
+
+</TabList>
 
 1. Return to the Commit in dashboard, and note that `pantheon.upstream.yml` can now be committed
 

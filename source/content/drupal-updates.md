@@ -30,7 +30,7 @@ Migrating to a new site on the platform will provide you with the QA and deploym
 If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.
 </Alert>
 
-## About Drupal (Latest)
+## About the Latest Version of Drupal
 
 Since the latest version of Drupal currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with the latest version of Drupal, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first. 
 

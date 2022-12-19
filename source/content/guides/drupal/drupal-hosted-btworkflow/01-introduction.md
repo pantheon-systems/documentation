@@ -1,7 +1,7 @@
 ---
 title: Migrate a Site Created With the Pantheon Dashboard to Drupal + Build Tools
 subtitle: Introduction
-description: Learn how to migrate a Drupal 8 Site to Drupal (Latest)
+description: Learn how to migrate a Drupal 8 Site to the latest version of Drupal
 cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]

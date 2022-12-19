@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8+ Site to Drupal (Latest)
+title: Migrate a Drupal 8 Site to the Latest Version of Drupal
 subtitle: Introduction
 description:
 cms: "Drupal"

@@ -123,7 +123,7 @@ You must create a site on Pantheon for this part of the process. The example in 
 1. Use Terminus to create a site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create $SITE "My Site" "Drupal (Latest)" --org="My Team"
+  terminus site:create $SITE "My Site" "Drupal (Latest Version)" --org="My Team"
   terminus connection:set $SITE.dev git
   ```
 

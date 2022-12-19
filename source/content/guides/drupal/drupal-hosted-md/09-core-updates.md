@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal Multidev Site to Drupal (Latest) Using Multidev
+title: Migrate a Drupal Multidev Site to the Latest Version of Drupal Using Multidev
 subtitle: Configure Ongoing Core Update
 description: 
 cms: "Drupal"

@@ -80,7 +80,7 @@ integration: [--]
 
     The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/guides/drush/drush-versions) before you continue.
 
-1. Use Composer on your Drupal (Latest) site to add these there:
+1. Use Composer on your Drupal (Latest Version) site to add these there:
 
     ```bash{promptUser: user}
     composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
@@ -96,7 +96,7 @@ integration: [--]
 
      <Partial file="drupal/custom-settings-no-docroot.md" />
 
-1. Copy your files and database from your D8 site to the Drupal (Latest) site:
+1. Copy your files and database from your D8 site to the Drupal (Latest Version) site:
 
     ```bash{promptUser: user}
     terminus site:clone $D8_SITE.live $DRUPAL_SITE.dev --no-code --no-destination-backup --no-source-backup
@@ -107,7 +107,7 @@ integration: [--]
      
     </Alert>
   
-1. Push the Drupal (Latest) codebase from your local machine up to Pantheon:
+1. Push the Drupal (Latest Version) codebase from your local machine up to Pantheon:
 
     ```bash{promptUser: user}
     terminus connection:set $DRUPAL_SITE.dev git

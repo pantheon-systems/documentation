@@ -22,7 +22,7 @@ This section provides information on how to configure the `settings.php` file fo
 
 The Drupal system configuration in code is set in the `sites/default/settings.php` file.
 
-## Drupal (Latest)
+## Drupal (Latest Version)
 
 Drupal sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. Your site will stop working on Pantheon if the stock `settings.php` file is used in place of the bundled file. 
 
@@ -48,7 +48,7 @@ Never place the database connection information for a Pantheon database within y
 
 </Alert>
 
-Use the Drupal (Latest) and Drupal 7 configuration snippets in the subsections below to specify a local configuration that will be ignored by Pantheon, such as database credentials.
+Use the latest version of Drupal and Drupal 7 configuration snippets in the subsections below to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
 ### Drupal
 
@@ -233,7 +233,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I get a copy of a default.settings.php file?
 
-- **Drupal (Latest):** There is no `default.settings.php` file in the latest version of Drupal repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php)
+- **Drupal (Latest Version):** There is no `default.settings.php` file in the latest version of Drupal repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php)
 
 - **Drupal 7:** [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 

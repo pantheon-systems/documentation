@@ -69,7 +69,7 @@ If you're generating a block, this will expose the block to Drupal's built-in bl
 ### Drupal 7
 You can force caching for all your views using a module like [Views cache bully](https://drupal.org/project/views_cache_bully).
 
-### Drupal (Latest)
+### Drupal (Latest Version)
 You can replace the hard-coded cache tag with a form that allows developers to set different cache tags based on configuration of the view using a module like [Views Custom Cache Tags](https://www.drupal.org/docs/drupal-apis/cache-api/cache-tags).
 
 <Alert title="Note"  type="info" >

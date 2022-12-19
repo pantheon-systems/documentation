@@ -20,7 +20,7 @@ This section provides information on Drush versions and site-local usage.
 
 Pantheon runs Drush versions based on your Drupal version:
 
-- **Drupal (Latest)**: Drush 10 (for newly created sites)
+- **Drupal (Latest Version)**: Drush 10 (for newly created sites)
 - **Drupal 7**: Drush 8 (for newly created sites)
 
 ## Available Drush Versions

@@ -114,7 +114,7 @@ For additional details and examples on how to set cookie lifetimes and garbage c
 
 <TabList>
 
-<Tab title="Drupal (Latest)" id="drupal" active={true}>
+<Tab title="Drupal (Latest Version)" id="drupal" active={true}>
 
 Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
 

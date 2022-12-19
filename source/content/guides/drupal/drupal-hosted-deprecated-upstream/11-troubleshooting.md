@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created Using a Deprecated Upstream to Drupal (Latest)
+title: Migrate a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 cms: "Drupal"

@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 ---
 
-Select the site's framework during the [site creation process](/guides/legacy-dashboard/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal (Latest), and Drupal 7.
+Select the site's framework during the [site creation process](/guides/legacy-dashboard/create-sites). Pantheon Upstreams provide default installations of WordPress, Drupal (Latest Version), and Drupal 7.
 
 <Alert title="Note"  type="info" >
 
@@ -26,7 +26,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/), and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
-- [Drupal (Latest)](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" />
+- [Drupal (Latest Version)](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" />
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ### Empty Upstream

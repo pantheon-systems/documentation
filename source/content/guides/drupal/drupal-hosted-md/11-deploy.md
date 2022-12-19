@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal (Latest) Using Multidev
+title: Migrate a Drupal 8 Site with Multidev to the Latest Version of Drupal Using Multidev
 subtitle: Deploy
 description: 
 cms: "Drupal"
@@ -24,5 +24,5 @@ integration: [build-tools]
 
 Do you need a Build Tools workflow? (*if you are not sure what this is, answer "No"*)
 
-- Yes: Continue with [Migrate a Site That Needs a Build Tools Workflow to Drupal (Latest)](/guides/drupal-hosted-btworkflow)
+- Yes: Continue with [Migrate a Site That Needs a Build Tools Workflow to the Latest Version of Drupal](/guides/drupal-hosted-btworkflow)
 - No: No additional work required.

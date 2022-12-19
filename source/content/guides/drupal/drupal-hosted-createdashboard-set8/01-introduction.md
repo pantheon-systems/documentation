@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal (Latest)
+title: Migrate a Site Created With the Pantheon Dashboard to the Latest Version of Drupal
 subtitle: Introduction
 description: Learn how to migrate a Drupal 8 Site to the latest version of Drupal
 cms: "Drupal"

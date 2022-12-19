@@ -29,7 +29,7 @@ Composer encourages a mental model where code not written specifically for a giv
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides its own respective package repository so dependencies can be managed with Composer:
 
 - WordPress: <https://wpackagist.org>
-- Drupal (Latest): <https://packages.drupal.org/9>
+- Drupal (Latest Version): <https://packages.drupal.org/10>
 - Drupal 7: <https://packages.drupal.org/7>
 
 ## Managing Core as a Project Dependency
@@ -69,7 +69,7 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 Here are some ways to get started using Composer for your Pantheon sites:
 
 - Create a new [Drupal with Integrated Composer](/drupal) site.
-- [Migrate or upgrade](/drupal-migration) an existing Drupal 8 or 9 site to Drupal (Latest) with Integrated Composer.
+- [Migrate or upgrade](/drupal-migration) an existing Drupal 8 or 9 site to the latest version of Drupal with Integrated Composer.
 - [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
 - Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer-managed sites with continuous integration (CI) workflows.
 - Create a new [WordPress with Integrated Composer](/guides/integrated-composer) site.
