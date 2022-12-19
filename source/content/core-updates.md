@@ -382,7 +382,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  </Tab>
 
-  <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
+ <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
 
  GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
@@ -390,7 +390,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  </Tab>
 
-</TabList>
+ </TabList>
 
 1. Return to the Commit in dashboard, and note that `pantheon.upstream.yml` can now be committed
 
