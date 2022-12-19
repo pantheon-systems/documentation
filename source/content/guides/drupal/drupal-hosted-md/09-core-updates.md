@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal:latest Site with Multidev to drupal:latest Using Multidev
+title: Migrate a Drupal Multidev Site to Drupal (Latest) Using Multidev
 subtitle: Configure Ongoing Core Update
 description: 
 cms: "Drupal"
@@ -18,7 +18,7 @@ product: [composer, dashboard]
 integration: [--]
 ---
 
-Drupal:latest sites on Pantheon use [Integrated Composer](/guides/integrated-composer) to allow one-click core updates.
+Drupal sites on Pantheon use [Integrated Composer](/guides/integrated-composer) to allow one-click core updates.
 
 <!-- belongs in source/partials/drupal/core-updates-partial.md, but it wasn't rendering. Edward 2022-05 -->
 

@@ -1,6 +1,6 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
-subtitle: Ensure Dependencies are Drupal:latest Compatible
+title: Migrate a Drupal 8 Site with Multidev to Drupal (Latest) Using Multidev
+subtitle: Ensure Dependencies are Compatible
 description: 
 cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]

@@ -1,5 +1,5 @@
 ---
-title: Migrate a Composer Managed Drupal:latest Site from Another Platform
+title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Troubleshooting
 description:  Troubleshoot common issues when migrating.
 cms: "Drupal"

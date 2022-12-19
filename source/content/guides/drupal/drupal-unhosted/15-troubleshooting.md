@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal:latest Site from Another Platform
+title: Migrate a Drupal Site from Another Platform
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 cms: "Drupal"
@@ -19,7 +19,7 @@ integration: [--]
 reviewed: "2022-12-13"
 ---
 
-This section covers common troubleshooting scenarios when migrating a drupal:latest site from another host to Pantheon's platform.
+This section covers common troubleshooting scenarios when migrating a Drupal site from another host to Pantheon's platform.
 
 ## Provided host name not valid
 

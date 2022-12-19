@@ -1,5 +1,5 @@
 ---
-title: Migrate a Composer Managed Drupal:latest Site from Another Platform
+title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Prepare
 description: 
 cms: "Drupal"
@@ -21,7 +21,7 @@ integration: [--]
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon.
 
-## Create a New drupal:latest Site
+## Create a New Drupal Site
 
 <Partial file="migrate/create-new-drupal-site.md" />
 

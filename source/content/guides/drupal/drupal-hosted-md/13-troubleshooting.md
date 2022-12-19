@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
+title: Migrate a Drupal 8 Site with Multidev to Drupal (Latest) Using Multidev
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating
 cms: "Drupal"
@@ -19,7 +19,7 @@ product: [--]
 integration: [multidev, drush]
 ---
 
-This section covers common troubleshooting scenarios when migrating a Multidev site to Drupal:latest.
+This section covers common troubleshooting scenarios when migrating a Multidev site to the latest version of Drupal.
 
 ## Your requirements could not be resolved to an installable set of packages
 

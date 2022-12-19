@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal (Latest)
 subtitle: Deploy Live
 description: 
 tags: [code, launch, migrate, site, updates, D8, D9, D10]

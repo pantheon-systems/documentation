@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to drupal:latest
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal (Latest)
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description: 
 cms: "Drupal"
@@ -50,7 +50,7 @@ Set the Drupal core version to ensure the site remains on Drupal 8, for now:
 
 This step is optional. You can wait and add the Upgrade Status module to your site later.
 
-The Upgrade Status module will help to determine whether or not your site is ready to upgrade to drupal:latest.
+The Upgrade Status module will help to determine whether or not your site is ready to upgrade to the latest version of Drupal.
 
 Add the Upgrade Status module to your site with Composer:
 
@@ -60,7 +60,7 @@ Add the Upgrade Status module to your site with Composer:
   git commit -m "Add Upgrade Status module"
   ```
 
-When you are ready to begin upgrading your site to drupal:latest, you can enable this module and view the status report it provides to find out what needs to be done before upgrading.
+When you are ready to begin upgrading your site to the latest version of Drupal, you can enable this module and view the status report it provides to find out what needs to be done before upgrading.
 
 ## Copy Existing Configuration
 

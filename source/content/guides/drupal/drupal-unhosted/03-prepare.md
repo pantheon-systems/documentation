@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal:latest Site from Another Platform
+title: Migrate a Drupal Site from Another Platform
 subtitle: Prepare Your Site for Migration
 description: Get your local environment and the existing site ready.
 cms: "Drupal"

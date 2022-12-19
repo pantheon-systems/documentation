@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
+title: Migrate a Drupal 8 Site with Multidev to Drupal (Latest) Using Multidev
 subtitle: Prepare the Local Environment
 description: 
 cms: "Drupal"
@@ -29,4 +29,4 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 ## Convert to Composer
 
-If your site is not currently Composer-managed, follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to drupal:latest.
+If your site is not currently Composer-managed, follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for migration to the latest version of Drupal.

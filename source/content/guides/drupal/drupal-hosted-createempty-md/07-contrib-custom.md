@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to drupal:latest
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal (Latest)
 subtitle: Add Contrib and Custom Code
 description: 
 cms: "Drupal"

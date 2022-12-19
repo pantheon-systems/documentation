@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
+title: Migrate a Drupal 8 Site with Multidev to Drupal (Latest) Using Multidev
 subtitle: Set Drupal Core Version
 description: 
 cms: "Drupal"
@@ -18,6 +18,6 @@ product: [composer]
 integration: [--]
 ---
 
-Change your core version to drupal:latest now that you've confirmed that your core dependencies are drupal:latest compatible.
+Change your core version to the latest version of Drupal now that you've confirmed that your core dependencies are compatible.
 
 <Partial file="drupal/core-version.md" />

@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal (Latest)
 subtitle: Deploy to Dev
 description: 
 cms: "Drupal"
@@ -75,4 +75,4 @@ After you confirm that the site works in the Multidev, replace the `master` bran
    git push --force origin master
    ```
 
-Your site's Dev environment is now set up to use the drupal:latest Integrated Composer upstream.
+Your site's Dev environment is now set up to use the the latest version of Drupal Integrated Composer upstream.

@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal:latest Site from Another Platform
+title: Migrate a Drupal Site from Another Platform
 subtitle: Add Database
 description: 
 cms: "Drupal"
