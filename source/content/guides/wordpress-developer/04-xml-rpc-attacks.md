@@ -12,14 +12,13 @@ integration: [--]
 tags: [workflow, security, composer]
 reviewed: "2022-05-16"
 layout: guide
-showtoc: true
 permalink: docs/guides/wordpress-developer/xml-rpc-attacks
 anchorid: xml-rpc-attacks
 ---
 
 This section provides information on how to avoid XML-RPC attacks.
 
-The `/xmlrpc.php` script is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords, for example. This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/guides/logs-pantheon/nginx-access-logs), you might see something similar to the following:
+The `/xmlrpc.php` script is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords. You can surface this by reviewing your Live environment's `nginx-access.log`. The example below is from a site that uses [GoAccess](/guides/logs-pantheon/nginx-access-logs).
 
 ```none
 2 - Top requests (URLs)                                  Total: 366/254431
@@ -31,25 +30,25 @@ Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
 262    79 0.10%  993.71 KiB   2.32  s  10.14 mn  59.03  s /wp-login.php
 ```
 
-Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via external services.
+Pantheon recommends that you disable XML-RPC. The WordPress Rest API is a stronger and more secure method for interacting with WordPress via external services.
 
-Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 core release](/changelog/2020/07#wordpress-542). If your version of WordPress is older than this, you can block `xmlrpc.php` attacks by applying your [upstream updates](/core-updates).
+Pantheon blocked requests to `xmlrpc.php` by default in the [WordPress 5.4.2 core release](/changelog/2020/07#wordpress-542). You can block `xmlrpc.php` attacks by applying your [upstream updates](/core-updates) if your version of WordPress is older than 5.4.2.
 
 ### Enable XML-RPC via Pantheon.yml
 
 <Alert title="Note"  type="info" >
 
-XML-RPC is not recommended on the Pantheon platform. Pantheon does not support XML-RPC if it is enabled. 
+XML-RPC is not recommended on the Pantheon platform. Pantheon does not support XML-RPC if it is enabled.
 
 </Alert>
 
-You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](https://jetpack.com/) or the WordPress mobile app. 
+You can re-enable access to XML-RPC for tools and plugins that require it, such as [Jetpack](https://jetpack.com/) or the WordPress mobile app.
 
 <Partial file="jetpack-enable-xmlrpc.md" />
 
 ### Disable XML-RPC via a Custom Plugin
 
-This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom plugin. The result of creating and activating this plugin is that exploitable XMLRPC methods will no longer be available via POST requests.
+This method allows you to use a custom plugin to toggle between activated and deactivated states without deploying code. This plugin blocks exploitable XMLRPC methods previously available via POST requests.
 
 1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or target Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
@@ -74,7 +73,7 @@ This method has the advantage of being toggleable without deploying code, by act
   }, PHP_INT_MAX);
   ```
 
-	If your site uses a nested web root directory, you must include that directory in the path. For example, if your nested web root is `/wp`, use `/wp/xmlrpc.php` instead of `/xmlrpc.php` 
+	If your site uses a nested web root directory, you must include that directory in the path. For example, if your nested web root is `/wp`, use `/wp/xmlrpc.php` instead of `/xmlrpc.php`.
 
 1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
 
@@ -82,4 +81,10 @@ This method has the advantage of being toggleable without deploying code, by act
   terminus wp my-site.dev -- plugin activate disable-xmlrpc
   ```
 
-1. Commit your work, deploy code changes then activate the plugin on Test and Live environments.
+1. Commit your work, deploy code changes, and then activate the plugin on your Test and Live environments.
+
+## More Resources
+
+- [Pantheon YAML Configuration Files](/pantheon-yml)
+- [WP-CLI on the Pantheon Platform](/guides/wp-cli)
+- [Manage Custom Code for WordPress with Plugins](/guides/wordpress-configurations/wordpress-custom-code)
