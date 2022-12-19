@@ -1,8 +1,8 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal:latest
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal (Latest)
 subtitle: Prepare
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -21,7 +21,7 @@ integration: [--]
 
 <Alert title="Note"  type="info" >
 
-Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to drupal:latest.
+Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to the latest version of Drupal.
 
 </Alert>
 

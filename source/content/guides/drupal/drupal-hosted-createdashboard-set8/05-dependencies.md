@@ -1,8 +1,8 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal:latest
-subtitle: Ensure Dependencies are Drupal:latest Compatible
+title: Migrate a Site Created With the Pantheon Dashboard to Drupal (Latest)
+subtitle: Ensure Dependencies are Compatible
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

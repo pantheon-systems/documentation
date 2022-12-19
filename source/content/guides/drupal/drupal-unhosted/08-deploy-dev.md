@@ -2,7 +2,7 @@
 title: Migrate a Drupal:latest Site from Another Platform
 subtitle: Deploy to Dev
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

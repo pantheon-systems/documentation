@@ -2,7 +2,7 @@
 title: Migrate a Drupal 8 Site with Multidev to Drupal:latest Using Multidev
 subtitle: Prepare the Local Environment
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither]
 layout: guide

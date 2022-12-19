@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to Drupal:latest
+title: Migrate a Site That Was Created With an Empty Upstream to Drupal (Latest)
 subtitle: Introduction
 description: 
 cms: "Drupal latest"
@@ -18,7 +18,7 @@ product: [--]
 integration: [--]
 ---
 
-This guide will show you how to migrate a site that meets the following criteria to Drupal:latest:
+This guide will show you how to migrate a site that meets the following criteria to the latest version of Drupal:
 
 | <i class="fa fa-cloud"></i><br/> Current Host | <i class="fa fa-wrench"></i><br/> How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | <i class="fa fa-exclamation-circle"></i><br/> Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|

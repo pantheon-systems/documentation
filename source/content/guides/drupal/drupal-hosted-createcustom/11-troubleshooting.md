@@ -1,8 +1,8 @@
 ---
-title: Migrate a Custom Upstream to Drupal:latest
+title: Migrate a Custom Upstream to Drupal (Latest)
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

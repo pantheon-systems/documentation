@@ -2,7 +2,7 @@
 title: Migrate a Custom Upstream to Drupal (Latest)
 subtitle: Test Sites and Apply Customizations
 description: 
-cms: "Drupal:latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates, D8, D9, D10]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
