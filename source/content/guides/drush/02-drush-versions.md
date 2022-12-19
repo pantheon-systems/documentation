@@ -20,7 +20,7 @@ This section provides information on Drush versions and site-local usage.
 
 Pantheon runs Drush versions based on your Drupal version:
 
-- **drupal:latest**: Drush 10 (for newly created sites)
+- **Drupal (Latest)**: Drush 10 (for newly created sites)
 - **Drupal 7**: Drush 8 (for newly created sites)
 
 ## Available Drush Versions
@@ -76,7 +76,7 @@ Executing Drush on the platform via a `terminus drush` command will use the vers
 
 ### Site-local Drush Usage
 
-We recommend that you use drupal:latest with Drush 11 installed as a site-local Drush if you manage your site with Composer.
+We recommend that you use the latest version of Drupal with Drush 11 installed as a site-local Drush if you manage your site with Composer.
 
 Do not select any major version of Drush lower than `8.3.2`, `9.7.1`, or `10.2.0`.
 

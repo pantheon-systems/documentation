@@ -1,7 +1,7 @@
 ---
 title: Environment Configuration
-subtitle: Environment-Specific Configurations for drupal:latest
-description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and drupal:latest's configuration override system.
+subtitle: Environment-Specific Configurations for Drupal
+description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal's configuration override system.
 cms: "Drupal"
 tags: [workflow, D8, D9, D10]
 contributors: [peter-pantheon, rachelwhitton]
@@ -67,7 +67,7 @@ Pantheon handles the inclusion of service configuration files. The [default file
         <div class="section layout-container clearfix">
  ```
 
-Refer to [Creating a services.yml File for drupal:latest](/services-yml) for more information on Pantheon's service configuration files for Drupal. 
+Refer to [Creating a services.yml File for Drupal](/services-yml) for more information on Pantheon's service configuration files for Drupal. 
 
 ## Enable Cacheability Debugging on Dev and Multidevs
 
@@ -75,7 +75,7 @@ Refer to [Creating a services.yml File for drupal:latest](/services-yml) for mor
 
     - This service file is used to manage settings across Pantheon's development (Dev and Multidev) environments. Settings in this file are not applied to production (Test and Live) environments.
 
-1. Enable drupal:latest's [CacheableResponseInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableResponseInterface.php/function/CacheableResponseInterface%3A%3AaddCacheableDependency/9.0.x) to help debug your cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
+1. Enable Drupal's [CacheableResponseInterface](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableResponseInterface.php/function/CacheableResponseInterface%3A%3AaddCacheableDependency/9.0.x) to help debug your cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
 
     ```yaml
     parameter:
@@ -97,7 +97,7 @@ Refer to [Creating a services.yml File for drupal:latest](/services-yml) for mor
   X-Drupal-Cache-Tags: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.frontpage http_response node_list rendered
   ```
 
-Refer to [Creating a services.yml File for drupal:latest](/services-yml) for more information on Pantheon's service configuration files for Drupal.
+Refer to [Creating a services.yml File for Drupal](/services-yml) for more information on Pantheon's service configuration files for Drupal.
 
 ### Troubleshoot 503 Response: Header Overflow
 
@@ -174,9 +174,9 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
 | Settings File         | Inclusions |
 |:--------------------- |:---------- |
-| `settings.php`          | `services.yml` <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /> <br /> `settings.pantheon.php` <br /> `settings.local.php` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's drupal:latest upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
+| `settings.php`          | `services.yml` <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /> <br /> `settings.pantheon.php` <br /> `settings.local.php` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
 | `settings.pantheon.php` | `services.pantheon.preproduction.yml` <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /> <br /> `services.pantheon.production.yml` <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /> <br /> |
-| `settings.local.php` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's drupal:latest upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  `development.services.yml` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's drupal:latest upstream. It is not included by default on any Pantheon environment." /> |
+| `settings.local.php` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  `development.services.yml` <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal upstream. It is not included by default on any Pantheon environment." /> |
 
 
 ## More Resources

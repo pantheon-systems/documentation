@@ -49,7 +49,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 Confirm that your CMS is compatible before changing your PHP version. 
 
 - [WordPress requirements](https://wordpress.org/about/requirements/)
-- [drupal:latest PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
+- [Drupal (Latest) PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
 
 ## Configure Your PHP Version

@@ -29,11 +29,11 @@ To make Managed Updates available to customers of all sizes and needs, Pantheon 
 
 ### Premium
 
-Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled. Sites using Pantheon's Integrated Composer for drupal:latest are also supported.
+Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled. Sites using Pantheon's Integrated Composer for Drupal are also supported.
 
 ### Lite
 
-Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](/pantheon-workflow), or drupal:latest sites using a Composer-build workflow without continuous integration processes.
+Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](/pantheon-workflow), or Drupal sites using a Composer-build workflow without continuous integration processes.
 
 ### Portfolio Upstreams
 

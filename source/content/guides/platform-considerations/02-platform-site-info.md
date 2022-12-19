@@ -53,7 +53,7 @@ You must add the correct header to enable CORS services on your site. Review [ht
 
 WordPress users can enable CORS for selected domains in a [MU plugin](/guides/wordpress-configurations/mu-plugin#cross-origin-resource-sharing-cors). You can also use an Advanced Global CDN to [modify headers at the Edge](/guides/professional-services/advanced-global-cdn#modify-and-filter-headers-at-the-edge).
 
-drupal:latest users can update `sites/default/services.yml` to enable CORS.
+Drupal users can update `sites/default/services.yml` to enable CORS.
 
 Sample `services.yml` file:
 

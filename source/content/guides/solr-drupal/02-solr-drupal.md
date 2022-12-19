@@ -1,7 +1,7 @@
 ---
 title: Apache Solr for Drupal
-subtitle: Using Solr 8 on drupal:latest
-description: Information on using Pantheon Search with Solr 8 on drupal:latest
+subtitle: Using Solr 8 on Drupal
+description: Information on using Pantheon Search with Solr 8 on Drupal
 cms: "Drupal"
 contenttype: [guide]
 categories: [config]
@@ -19,7 +19,7 @@ anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 
-Pantheon Search with Solr 8 gives drupal:latest web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
+Pantheon Search with Solr 8 gives Drupal web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
 
 
 ## Solr 8 Features
@@ -48,7 +48,7 @@ Refer to the [Search API module processors documentation](https://www.drupal.org
 
 ### Drupal Site Setup
 
-Pantheon Search with Solr 8 can be used on drupal:latest sites. You can set up a [new drupal:latest site](/drupal) or visit the [drupal:latest upgrade and migration](/drupal-migration) guide to create a drupal:latest site.
+Pantheon Search with Solr 8 can be used on Drupal sites. You can set up a [new Drupal site](/drupal) or visit the [Drupal upgrade and migration](/drupal-migration) guide to create a Drupal site.
 
 ### Prepare the Local Environment
 
@@ -105,7 +105,7 @@ You must configure the `pantheon.yml` for the platform environment after you ena
 
 1. Specify the Solr version in the `pantheon.yml` before you install the Drupal search module to avoid incompatibilities.
 
-    - Currently, Solr 8 is supported for drupal:latest sites. Specify Solr 8 as the search version for drupal:latest sites by adding the following to `pantheon.yml`:
+    - Currently, Solr 8 is supported for Drupal sites. Specify Solr 8 as the search version for Drupal sites by adding the following to `pantheon.yml`:
 
       ```yml:title=pantheon.yml
       search:
@@ -119,7 +119,7 @@ For more information, refer to the documentation on [Specifying a Solr version](
 
 #### Verify `pantheon.yml` is Configured Correctly
 
-After you specify the Solr 8 version in the Dev environment of your drupal:latest site, verify that the environment is configured to use Solr 8.
+After you specify the Solr 8 version in the Dev environment of your Drupal site, verify that the environment is configured to use Solr 8.
 
 1. Navigate to **Reports > Status report**
 1. Click **More Info** to identify the PHP version. This will lead you to the PHP Info page.

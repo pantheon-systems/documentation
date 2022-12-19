@@ -77,6 +77,6 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
 
-- [Migrate a Custom Upstream to drupal:latest](/guides/drupal-hosted-createcustom)
+- [Migrate a Custom Upstream to image.png](/guides/drupal-hosted-createcustom)
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)

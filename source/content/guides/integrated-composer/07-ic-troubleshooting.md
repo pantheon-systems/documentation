@@ -21,7 +21,7 @@ This section provides information on troubleshooting common Integrated Composer 
 
 ## Troubleshooting Code Syncs, Upstream Updates, and Redirect Errors
 
-### Site-local Drush Is Required for drupal:latest Sites
+### Site-local Drush Is Required for image.png Sites
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 

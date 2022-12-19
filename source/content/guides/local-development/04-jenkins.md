@@ -118,12 +118,12 @@ You should now be able to create a local branch, commit a change, and push to Gi
 
 ### Create a Pantheon Site
 
-You must create a site on Pantheon for this part of the process. The example in this section uses a drupal:latest site on Pantheon with Terminus. You must overwrite the default install with the code from your GitHub repository after you create the site. Replace the value for `--org=` with your organization's name in the commands below.
+You must create a site on Pantheon for this part of the process. The example in this section uses the latest version of Drupal on Pantheon with Terminus. You must overwrite the default install with the code from your GitHub repository after you create the site. Replace the value for `--org=` with your organization's name in the commands below.
 
 1. Use Terminus to create a site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create $SITE "My Site" "drupal:latest" --org="My Team"
+  terminus site:create $SITE "My Site" "Drupal (Latest)" --org="My Team"
   terminus connection:set $SITE.dev git
   ```
 
