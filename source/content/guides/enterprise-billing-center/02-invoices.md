@@ -15,7 +15,7 @@ This section provides information on how you can access and interact with the in
 
 ## Access Your Invoices in the Dashboard
 
-You must have Admin privileges of the workspace to view invoices. Note that access may vary depending on how your organization has configured [roles and permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
+You must have Admin privileges for the workspace to view invoices. Note that access may vary depending on how your organization has configured [roles and permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
 1. Navigate to the dashboard.
 
@@ -31,9 +31,9 @@ You can filter the filter the invoice by Year.
 
 Click the **Filter by** drop-down menus to sort by Year.
 
-## Search the Invoice
+## Search for Invoices
 
-You can search the invoice by invoice number.
+You can search for invoices by invoice number.
 
 Enter the invoice number you want to search for in the **search box**.
 

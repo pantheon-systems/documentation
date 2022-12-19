@@ -61,7 +61,7 @@ Click the **Filter by** drop-down menus to sort by:
 
 - Current Site Plan
 
-You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by:
+You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by, which include:
 
 - Site Name
 

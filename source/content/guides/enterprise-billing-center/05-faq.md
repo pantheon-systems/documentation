@@ -22,7 +22,7 @@ This section provides answers to frequently asked questions about the Enterprise
 
 ### What is the Enterprise Billing Center (EBC)?
 
-The Enterprise Billing Center (EBC) is a part of Pantheon dashboard where contract customers can access their invoices (related to site plan changes) and Site Portfolio reports.
+The Enterprise Billing Center (EBC) is a part of the Pantheon dashboard where contract customers can access their invoices (related to site plan changes) and Site Portfolio reports.
 
 ### Do I have to request access to EBC?
 
