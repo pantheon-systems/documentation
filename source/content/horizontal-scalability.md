@@ -93,4 +93,4 @@ For more information, see [New Relic&reg; Performance Monitoring](/guides/new-re
 
 ## Managing Temporary Files
 
-The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/tmp).
+The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/guides/filesystem/tmp).
