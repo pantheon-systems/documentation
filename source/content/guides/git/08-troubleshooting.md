@@ -6,8 +6,8 @@ tags: [git, iterate, local, workflow]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/git/faq-git
-anchorid: faq-git
+permalink: docs/guides/git/troubleshooting
+anchorid: troubleshooting
 contenttype: [guide]
 categories: [git]
 newcms: [drupal, wordpress]
