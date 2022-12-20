@@ -61,9 +61,5 @@ This table shows any sites that were deactivated during the time between the pre
 ## More Resources
 
 - [Account Management](/manage)
-<<<<<<< HEAD:source/content/guides/site-portfolio-report/01-introduction.md
-  
+
 - [WordPress Best Practices](/guides/wordpress-developer/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic
-=======
-- [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic
->>>>>>> main:source/content/guides/enterprise-billing-center/03-site-portfolio-report.md
