@@ -105,14 +105,11 @@ It is important to note that this method is sensitive to call location. Most cus
 
 ## APM Availability Monitoring
 
-Availability monitoring from APM is heavily outdated, and will not work with the Pantheon platform. As an alternative, you can use the free New Relic&reg; Synthetic Lite service using the [steps provided above](#configure-ping-monitors-for-availability).
+Availability monitoring from APM is heavily outdated, and will not work with the Pantheon platform. You can use the free New Relic&reg; Synthetic Lite service as an alternative. Refer to [Configure Ping Monitors for Availability](/guides/new-relic/monitor-new-relic#configure-ping-monitors-for-availability) for more information.
 
 ## More Resources
 
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
-
 - [Troubleshooting WordPress Performance with New Relic&reg;](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
-
 - [New Relic&reg; Performance Monitoring and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-
 - [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)
