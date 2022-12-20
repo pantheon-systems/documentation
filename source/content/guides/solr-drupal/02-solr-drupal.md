@@ -1,7 +1,7 @@
 ---
 title: Apache Solr for Drupal
-subtitle: Using Solr 8 on Drupal
-description: Information on using Pantheon Search with Solr 8 on Drupal
+subtitle: Using Solr 8 on the Latest Version of Drupal
+description: Information on using Pantheon Search with Solr 8 on the latest version of Drupal
 cms: "Drupal"
 contenttype: [guide]
 categories: [config]
@@ -19,7 +19,7 @@ anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 
-Pantheon Search with Solr 8 gives Drupal web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
+Pantheon Search with Solr 8 gives the latest version of Drupal web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
 
 
 ## Solr 8 Features

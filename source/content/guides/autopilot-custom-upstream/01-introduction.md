@@ -46,13 +46,9 @@ Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sale
 
 ### Autopilot Site Compatibility
 
-Your site must be on Pantheon and meet the criteria below to be eligible for Autopilot. 
+<Partial file="autopilot/autopilot-compatibility.md" />
 
-| Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (with Integrated Composer or Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without WordPress Multisite Network = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | Drupal (Latest Version) (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
-
+## Custom Upstream
 
 <Alert title="Note: Drupal Compatibility"  type="info" >
 
@@ -60,7 +56,7 @@ Drupal users should note that there are technical limitations when using Autopil
 
 </Alert>
 
-## Custom Upstream
+
 
 Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects quickly.
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.

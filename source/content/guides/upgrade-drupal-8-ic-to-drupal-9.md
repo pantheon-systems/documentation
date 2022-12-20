@@ -34,7 +34,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream. 
 
-Confirm the site requirements in the sections below before upgrading to Drupal (Latest Version).
+Confirm the site requirements in the sections below before upgrading to the latest version of Drupal.
 
 ### Verify the Repository
 

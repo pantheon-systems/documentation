@@ -22,7 +22,7 @@ Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibili
 
 <Alert title="Note" type="info">
 
-Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) may cause incompatibilities with the platform (for example, the clear cache button, launch checks, cron, and more).
+Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed.git) may cause incompatibilities with the platform (for example, the clear cache button, launch checks, cron, and more).
 
 </Alert>
 
@@ -94,7 +94,7 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
   </Tab>
 
-  <Tab title="Drupal 10" id="d10">
+  <Tab title="Drupal (Latest)" id="d10">
 
   ```git
   git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
@@ -147,7 +147,7 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
   </Tab>
 
-  <Tab title="Drupal 10" id="d10">
+  <Tab title="Drupal (Latest)" id="d10">
 
   ```git
   git fetch pantheon-drupal-10

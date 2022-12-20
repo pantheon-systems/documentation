@@ -50,7 +50,7 @@ Never place the database connection information for a Pantheon database within y
 
 Use the latest version of Drupal and Drupal 7 configuration snippets in the subsections below to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
-### Drupal
+### Drupal (Latest Version)
 
 1. Configure environment-specific settings within the `settings.local.php` file, which is ignored by Git in the Pantheon [Drupal upstream](https://github.com/pantheon-systems/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 

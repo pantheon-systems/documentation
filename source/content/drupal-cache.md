@@ -17,7 +17,7 @@ Learn industry best practices for Drupal caching, how to take advantage of them 
 
 </Enablement>
 
-## Drupal Performance Configuration
+## Drupal (Latest Version) Performance Configuration
 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
@@ -40,11 +40,11 @@ Note that Drupal has no setting to configure the minimum cache lifetime.
 
 ### Cache Tags
 
-Drupal uses the [cache metadata](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x) system introduced in Drupal 8 that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
+Drupal uses the [cache metadata](https://api.drupal.org/api/drupal/core%21core.api.php/group/cache/9.0.x) system (introduced in Drupal 8) that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
 
 This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal's cache metadata to communicate with the [Pantheon Global CDN](/guides/global-cdn). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
 
-For Drupal, install the Pantheon Advanced Page Cache module via [Composer](/guides/integrated-composer/dependencies), then enable it via the Drupal Admin:
+For the latest version of Drupal, install the Pantheon Advanced Page Cache module via [Composer](/guides/integrated-composer/dependencies), then enable it via the Drupal Admin:
 
 ```bash{promptUser: user}
 composer require drupal/pantheon_advanced_page_cache

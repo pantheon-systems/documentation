@@ -215,9 +215,9 @@ Non-Composer implementations must add the following lines to the `settings.php` 
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
 
-### Drupal 10
+### Drupal (Latest)
 
-Drupal 10 includes Symfony 6. The SimpleSAMLphp library is not currently compatible with Symfony 6 unless you use the dev-master branch. There is a new `simplesamlphp_auth branch (4.x)` that you can use if you require a Drupal 10 compatibility workaround. Note that this workaround requires you to use dev versions at your own risk.
+The latest version of Drupal includes Symfony 6. The SimpleSAMLphp library is not currently compatible with Symfony 6 unless you use the dev-master branch. There is a new `simplesamlphp_auth branch (4.x)` that you can use if you require a compatibility workaround. Note that this workaround requires you to use dev versions at your own risk.
 
 You must require the Drupal module like this:
 

@@ -44,7 +44,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
   </Tab>
 
-  <Tab title="Drupal 10" id="d10">
+  <Tab title="Drupal (Latest)" id="d10">
 
   ```git
   git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
@@ -76,7 +76,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
   </Tab>
 
-  <Tab title="Drupal 10" id="d10">
+  <Tab title="Drupal (Latest)" id="d10">
 
   ```git
   git fetch pantheon-drupal-10
@@ -115,7 +115,7 @@ You must manually resolve the conflict using the command line and a text editor 
 
   </Tab>
 
-  <Tab title="Drupal 10" id="d10">
+  <Tab title="Drupal (Latest)" id="d10">
 
   ```git
   git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
@@ -147,7 +147,7 @@ You must manually resolve the conflict using the command line and a text editor 
 
   </Tab>
 
-  <Tab title="Drupal 10" id="d10">
+  <Tab title="Drupal (Latest)" id="d10">
 
   ```git
   git fetch pantheon-drupal-10

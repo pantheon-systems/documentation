@@ -222,7 +222,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
      git push origin master
      ```
 
-      - Drupal 10 on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
+      - The latest version of Drupal on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
 
     1. Change to the `composer.json` file in the `upstream-configuration` directory  and use `composer require` to add packages to the Upstream > set the `config version` to a number that makes sense for you:
 
@@ -300,7 +300,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 1. Paste your new GitHub access token.
 
-   - **Framework**: Drupal 7, Drupal 10, or WordPress
+   - **Framework**: Drupal 7, Drupal (Latest), or WordPress
 
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
@@ -345,7 +345,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
         1. Paste your new Bitbucket app password. The username field should already be populated based on the repository URL. 
 
-   - **Framework**: Drupal 7, Drupal 10, or WordPress
+   - **Framework**: Drupal 7, Drupal (Latest), or WordPress
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
 1. Click **Create**.
@@ -405,7 +405,7 @@ Common steps needed for most Git Providers are provided below.
 
 ### Initial Connection Mode
 
-The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 10 defaults to SFTP connection mode.
+The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. The latest version of Drupal defaults to SFTP connection mode.
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 

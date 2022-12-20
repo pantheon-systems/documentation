@@ -189,7 +189,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   <TabList>
 
-  <Tab title="Drupal (Latest Version)" id="d9-1conflict">
+  <Tab title="Drupal (Latest Version)" id="d9-1conflict" active={true}>
 
   ```bash{promptUser: user}
   git remote add pantheon-drupal https://github.com/pantheon-systems/drupal-composer-managed
@@ -205,7 +205,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="WordPress" id="wp-1conflict" active={true}>
+  <Tab title="WordPress" id="wp-1conflict">
 
   ```bash{promptUser: user}
   git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
@@ -229,7 +229,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   <TabList>
 
-  <Tab title="Drupal (Latest Version)" id="d9-2conflict">
+  <Tab title="Drupal (Latest Version)" id="d9-2conflict" active={true}>
 
   ```bash{promptUser: user}
   git fetch pantheon-drupal
@@ -247,7 +247,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </Tab>
 
-  <Tab title="WordPress" id="wp-2conflict" active={true}>
+  <Tab title="WordPress" id="wp-2conflict">
 
   ```bash{promptUser: user}
   git fetch pantheon-wordpress
@@ -366,7 +366,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <TabList>
 
- <Tab title="Drupal (Latest Version)" id="d9-2conflict-merge">
+ <Tab title="Drupal (Latest Version)" id="d9-2conflict-merge" active={true}>
 
   GITHUB-EMBED https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 
@@ -382,7 +382,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  </Tab>
 
- <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
+ <Tab title="WordPress" id="wp-2conflict-merge">
 
  GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 

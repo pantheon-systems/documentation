@@ -32,7 +32,7 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
 - Verify that you are using Drush 11 if you have a Composer-managed Drupal site. Note that only Composer-managed sites are supported.
 
-   -  Use one of the following guides if you are migrating a Drupal 7 or 8 site and want to upgrade to a Drupal (Latest Version) site:
+   -  Use one of the following guides if you are migrating a Drupal 7 or 8 site and want to upgrade to the latest version of Drupal:
 
       - Your site is Composer-managed: [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer)
 
@@ -62,7 +62,7 @@ Install [Terminus 3](/terminus/terminus-3-0).
 
 <TabList>
 
-<Tab title="Drupal 7 non-Composer" id="d7" active={true}>
+<Tab title="Drupal 7 Non-Composer" id="d7" active={true}>
 
 1. Authenticate into Pantheon with Terminus:
 
@@ -89,7 +89,7 @@ Install [Terminus 3](/terminus/terminus-3-0).
 
 </Tab>
 
-<Tab title="Drupal (Latest Version) Composer-managed" id="d9">
+<Tab title="Drupal (Latest Version) Composer" id="d9">
 
 1. Install the [Terminus Conversion Tools](https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation) plugin. 
 
