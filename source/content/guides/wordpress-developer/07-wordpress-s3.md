@@ -18,9 +18,9 @@ permalink: docs/guides/wordpress-developer/wordpress-s3
 anchorid: wordpress-s3
 ---
 
-This section provides information on how to integrate AWS S3 storage with your WordPress Pantheon site.
+This section provides information on how to integrate Amazon Web Services (AWS) S3 storage with your WordPress Pantheon site.
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distribution through the [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/guides/filesystem/large-files) or serving large files.
+AWS offers Simple Storage Service (S3) for scalable storage and content distribution that you can integrate with sites running on Pantheon. Pantheon already offers content distribution through our [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/guides/filesystem/large-files) or serving large files.
 
 ## Before You Begin
 
@@ -31,10 +31,9 @@ Be sure that you have:
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 
-
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+This process uses [Terminus](/terminus) commands. Set the variable `$site` in your terminal session to match your site name before you begin:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -45,17 +44,17 @@ export env=dev
 
 ## Configure S3 within the AWS Console
 
-You must configure the service within your [AWS Management Console](https://console.aws.amazon.com) before integrating S3 with your site.
+You must configure the service within your [AWS Management Console](https://console.aws.amazon.com) before integrating S3 with your Pantheon site.
 
 ### Create a New AWS S3 Bucket
 
-If you do not have an existing bucket for your site, create one:
+ Create a bucket if you do not already have one for your site.
 
 1. Open your [AWS Console](https://console.aws.amazon.com) and click **S3**.
 
 1. Click **Create Bucket**.
 
-1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3, and after you create a bucket, you cannot change its name. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket.
+1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You can not change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket.
 
 1. Select a region and click **Create**.
 
@@ -75,7 +74,7 @@ WP Offload Media requires a paid license but is configurable in the WordPress ad
 
 <Alert title="Note" type="info">
 
-This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214). If you need an alternative plugin with premium support and a multisite version, consider [WP Offload Media](#install-and-deploy-wp-offload-media).
+This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214). Consider [WP Offload Media](#install-and-deploy-wp-offload-media) if you need an alternative plugin with premium support and a multisite version.
 
 </Alert>
 
@@ -93,17 +92,17 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
    mv S3-Uploads-2.0.0/ S3-Uploads
    ```
 
-1. Create and/or copy your **Access Key ID** key and **Secret Access Key** from the **My security credentials** section of your AWS account to a text editor on your local computer.
+1. Create and/or copy your **Access Key ID** and **Secret Access Key** from the **My security credentials** section of your AWS account to a text editor on your local computer.
 
    <Alert title="Note" type="info">
 
-   As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.
+   Consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin as a standard security measure.
 
    </Alert>
 
 1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
-1. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
+1. Commit and push the new plugin and your `wp-config.php` file updates to the Dev environment, then switch to SFTP mode and activate the plugin:
 
     ```bash{promptUser: user}
     terminus wp $site.dev plugin activate S3-Uploads
@@ -139,7 +138,7 @@ Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blo
 
 ### Install and Deploy WP Offload Media
 
-Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offload-media/doc/quick-start-guide). No specialized configuration is required for this plugin to run on Pantheon.
+Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offload-media/doc/quick-start-guide) to install and deploy WP Offload Media. No specialized configuration is required for this plugin to run on Pantheon.
 
 
 ## More Resources
