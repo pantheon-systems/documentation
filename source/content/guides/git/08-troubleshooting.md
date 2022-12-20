@@ -26,7 +26,7 @@ We recommend that you use [git filter-repo](https://github.com/newren/git-filter
 
 <Alert type="danger" title="Caution">
 
-These instructions are advanced, and may not work in every case. You should only attempt to complete the steps below if you are an experienced Git user.
+The instructions for `git-filter-repo` are advanced, and may not work in every case. You should only attempt the steps to reduce repository size if you are an experienced Git user.
 
 </Alert>
 
