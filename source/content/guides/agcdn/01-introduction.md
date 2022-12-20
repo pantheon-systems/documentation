@@ -3,7 +3,7 @@ title: Advanced Global CDN
 subtitle: Introduction
 description: AGCDN enables Edge configuration tools for advanced site management,  enhanced security, and much more.
 tags: [professional-services, logs, cdn, security]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn
@@ -49,6 +49,7 @@ AGCDN provides many features:
 | [OSI Layer 3 and 4 DDoS Protection & Mitigation](/guides/agcdn/agcdn-features#osi-layer-3-and-4-ddos-protection-&-mitigation) | <span style="color:green">✔</span> |
 | [SOC 2 Type 2 Compliance](/guides/agcdn/agcdn-features#soc-2-type-2-compliance)        | <span style="color:green">✔</span> |
 | [IP Allowlisting and Blocklisting](/guides/agcdn/agcdn-features#ip-allowlisting-and-blocklisting)   | <span style="color:green">✔</span> |
+|[Security Starter](/guides/agcdn/agcdn-features#security-starter)| <span style="color:green">✔</span> |
 | [Token Authentication with JSON Web Token](/guides/agcdn/agcdn-features#token-authentication-with-json-web-token) | <span style="color:green">✔</span> |
 | [Custom Error and Maintenance Page Rules](/guides/agcdn/agcdn-features#custom-error-and-maintenance-page-rules)| <span style="color:green">✔</span> |
 | [Geolocation-based Actions](/guides/agcdn/agcdn-features#geolocation-based-actions) | <span style="color:green">✔</span>|
@@ -60,7 +61,6 @@ AGCDN provides many features:
 | [Enterprise Blue and Green Deployment Support](/guides/agcdn/agcdn-features#enterprise-blue-and-green-deployment-support)| <span style="color:green">✔</span> | 
 |[Custom Rules and Redirects](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |  <span style="color:green">✔</span> | 
 |[Tor Traffic Blocking](/guides/agcdn/agcdn-features#tor-traffic-blocking)| <span style="color:green">✔</span> |
-
 
 ### AGCDN with WAF/IO Features
 

@@ -3,7 +3,7 @@ title: Advanced Global CDN
 subtitle: AGCDN Features
 description: Learn more about AGCDN features.
 tags: [professional-services, logs, cdn, security]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-features
@@ -26,6 +26,20 @@ Advanced Global CDN provides DDoS protection and mitigation at the network (Laye
 
 SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> Type 2 compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
 
+## Security Starter
+
+Improve security and maintain compliance with Pantheon's Security Starter. This feature includes:
+
+- [IP allowlist/blocklist](/guides/agcdn/agcdn-features#ip-allowlisting-and-blocklisting)
+
+- [Layer 7](/guides/agcdn/agcdn-wafio#layer-7-and-enterprise-waf-rules)/Enterprise DDoS Protection & Mitigation
+
+- OWASP & WAF Rules for Drupal/WordPress
+
+- [Rate Limiting for Form & Login Pages](/guides/agcdn/agcdn-wafio#rate-limiting)
+
+- Geolocation-based Edge Control
+
 ## IP Allowlisting and Blocklisting
 
 Restrict access to properties using Access Control Lists (ACLs) that use IP addresses to either allow or deny access.
@@ -37,6 +51,8 @@ Restrict access to properties using Access Control Lists (ACLs) that use IP addr
 ## Tor Traffic Blocking
 
 Tor encrypts and routes user traffic through at least three Tor nodes to mask a user's starting IP address. AGCDN can block malicious Tor traffic.
+
+
 
 ## Custom Rules and Redirects
 
