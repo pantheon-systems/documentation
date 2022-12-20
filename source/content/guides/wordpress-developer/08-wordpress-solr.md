@@ -19,7 +19,7 @@ anchorid: wordpress-solr
 
 This section provides information on how to use Apache Solr with your WordPress Pantheon site.
 
-[Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. 
+[Apache Solr](/solr) is a system for indexing and searching site content. All plans except for Basic can use Pantheon Solr.
 
 <Partial file="solr-version.md" />
 
@@ -39,7 +39,7 @@ You must add the Index Server to your site before you can use Solr on WordPress:
 
 ![Enable Solr from The Site Dashboard](../../../images/dashboard/settings-addons-solr.png)
 
-This provisions Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
+This provisions Apache Solr containers for every environment of your site. You are now ready to integrate with WordPress.
 
 ## Solr Search for WordPress
 
@@ -103,9 +103,11 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
   ![Solr Settings](../../../images/solr-widget-settings.png)
 
-   The **Div ID** is where the search results appear. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
+   Search results appear under **Div ID**. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
 
-1. Check your desired Facets and save your settings, then test the search functionality before committing the changes.
+1. Check your desired Facets and save your settings.
+
+1. Test the search functionality before committing the changes.
 
 ### Optimize Index
 
@@ -123,7 +125,7 @@ A default [`schema.xml`](https://github.com/pantheon-systems/solr-power/blob/mas
 
 You can set a custom `schema.xml`:
 
-1. Upload your custom `schema.xml` to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. 
+1. Upload your custom `schema.xml` to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP.
 
 1. Navigate to the plugin's **Actions** tab, select **Repost schema.xml**, and click **Execute**.
 
@@ -133,7 +135,9 @@ This plugin is under active development on [GitHub](https://github.com/pantheon-
 
 ### Re-Indexing
 
-New, deleted, and modified posts and pages are automatically added to the Solr index. However, if you modify the indexing options within **Solr Power**, you must manually re-index the site on the **Actions** tab.
+New, deleted, and modified posts and pages are automatically added to the Solr index. However, you must re-index the site if you modify the indexing options within **Solr Power**.
+
+Navigate to the **Actions** tab an manually re-index the site.
 
 ### Enable Solr for AJAX and WordPress Dashboard
 
