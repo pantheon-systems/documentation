@@ -44,8 +44,6 @@ Example to remove one file:
 git filter-repo --path wp-content/themes/mytheme/assets/images/largefile.mp4 --invert-paths
 ```
 
-### Host Keys
-
 <Partial file="host-keys.md" />
 
 ### Checking Out Code using GUI Clients
