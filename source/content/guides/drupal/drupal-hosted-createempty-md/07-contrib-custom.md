@@ -3,7 +3,7 @@ title: Migrate a Site That Was Created With an Empty Upstream to the Latest Vers
 subtitle: Add Contrib and Custom Code
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true

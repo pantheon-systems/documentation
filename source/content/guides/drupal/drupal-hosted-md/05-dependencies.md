@@ -3,7 +3,7 @@ title: Migrate a Drupal 8 Site with Multidev to the Latest Version of Drupal Usi
 subtitle: Ensure Dependencies are Compatible
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-md/dependencies

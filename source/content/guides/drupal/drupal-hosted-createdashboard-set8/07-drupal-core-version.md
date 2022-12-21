@@ -3,7 +3,7 @@ title: Migrate a Site Created With the Pantheon Dashboard to the Latest Version 
 subtitle: Set Drupal Core Version
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-createdashboard-set8/drupal-core-version
@@ -12,7 +12,7 @@ editpath: drupal-hosted-createdashboard-set8/07-drupal-core-version.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [--]

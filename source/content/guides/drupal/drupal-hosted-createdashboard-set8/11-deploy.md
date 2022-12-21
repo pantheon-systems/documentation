@@ -3,7 +3,7 @@ title: Migrate a Site Created With the Pantheon Dashboard to the Latest Version 
 subtitle: Deploy
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-createdashboard-set8/deploy

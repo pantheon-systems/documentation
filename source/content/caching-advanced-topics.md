@@ -5,7 +5,7 @@ tags: [cache, cookies, security, webops, D8, D9, D10]
 reviewed: "2022-12-13"
 contenttype: [doc]
 categories: [cache]
-newcms: [drupal7, drupal9, wordpress, drupal8, drupal10]
+newcms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

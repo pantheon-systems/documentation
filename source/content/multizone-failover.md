@@ -5,7 +5,7 @@ tags: [backup, professional-services, site, webops]
 reviewed: "2020-02-26"
 contenttype: [doc]
 categories: [overview]
-newcms: [drupal, drupal7, wordpress]
+newcms: [drupal7, wordpress]
 audience: [agency, development]
 product: [search]
 integration: [--]

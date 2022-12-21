@@ -3,7 +3,7 @@ title: Migrate a Site That Was Created With an Empty Upstream to the Latest Vers
 subtitle: Introduction
 description: 
 cms: "Drupal latest"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-createempty-md
@@ -12,7 +12,7 @@ editpath: drupal/drupal-hosted-createempty-md/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [overview, migrate]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]
 integration: [--]

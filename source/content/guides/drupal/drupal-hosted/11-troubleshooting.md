@@ -3,7 +3,7 @@ title: Migrate a Drupal 8 Site to the Latest Version of Drupal
 subtitle: Troubleshooting
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true

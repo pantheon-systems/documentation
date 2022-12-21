@@ -3,7 +3,7 @@ title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Add Your Database
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
+tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-unhosted-composer/database

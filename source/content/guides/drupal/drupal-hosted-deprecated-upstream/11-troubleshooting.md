@@ -3,7 +3,7 @@ title: Migrate a Site That Was Created Using a Deprecated Upstream to the Latest
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-12-13"
 layout: guide

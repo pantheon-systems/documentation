@@ -12,7 +12,7 @@ editpath: drupal/drupal-hosted-createempty-md/17-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [--]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

@@ -13,7 +13,7 @@ editpath: drupal/drupal-hosted-createcustom/05-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

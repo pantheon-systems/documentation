@@ -9,7 +9,7 @@ featuredcontributor: true
 reviewed: "2022-02-04"
 contenttype: [doc]
 categories: [measure]
-newcms: [wordpress, drupal, drupal7]
+newcms: [wordpress, drupal7]
 audience: [agency, development]
 product: [terminus]
 integration: [lockr, drush]

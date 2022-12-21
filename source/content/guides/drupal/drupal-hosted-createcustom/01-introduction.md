@@ -3,7 +3,7 @@ title: Migrate a Custom Upstream to the Latest Version of Drupal
 subtitle: Introduction
 description: Learn how to migrate a Custom Upstream to the latest version of Drupal
 cms: "Drupal latest"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-createcustom
@@ -12,7 +12,7 @@ editpath: drupal/drupal-hosted-createcustom/01-introduction.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

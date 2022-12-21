@@ -3,7 +3,7 @@ title: Migrate a Custom Upstream to the Latest Version of Drupal
 subtitle: Deploy to Dev
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
 permalink: docs/guides/drupal-hosted-createcustom/deploy-dev
@@ -12,7 +12,7 @@ editpath: drupal/drupal-hosted-createcustom/09-deploy-dev.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

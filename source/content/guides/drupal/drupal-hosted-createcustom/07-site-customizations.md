@@ -3,7 +3,7 @@ title: Migrate a Custom Upstream to the Latest Version of Drupal
 subtitle: Test Sites and Apply Customizations
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
 permalink: docs/guides/drupal-hosted-createcustom/site-customizations
@@ -12,7 +12,7 @@ editpath: drupal/drupal-hosted-createcustom/07-site-customizations.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

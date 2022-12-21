@@ -6,7 +6,7 @@ permalink: docs/faq
 anchorid: faq
 contenttype: [doc]
 categories: [help]
-newcms: [drupal, drupal7, drupal8, drupal9, wordpress]
+newcms: [drupal, wordpress]
 audience: [agency, development]
 product: [cdn, localdev, search, siteportfolio, terminus]
 integration: [--]

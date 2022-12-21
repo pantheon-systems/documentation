@@ -3,7 +3,7 @@ title: Migrate a Site Created With the Pantheon Dashboard to Drupal + Build Tool
 subtitle: Prepare
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
@@ -13,7 +13,7 @@ editpath: drupal/drupal-hosted-btworkflow/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 categories: [migrate, git]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [terminus]
 integration: [--]

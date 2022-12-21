@@ -3,7 +3,7 @@ title: Migrate a Custom Upstream to the Latest Version of Drupal
 subtitle: Add Dependencies
 description: 
 cms: "v"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: false

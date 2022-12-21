@@ -12,7 +12,7 @@ anchorid: site-plan
 editpath: legacy-dashboard/07-site-plan.md
 contenttype: [guide]
 categories: [plans, dashboard]
-newcms: [wordpress, drupal, drupal7]
+newcms: [wordpress, drupal7]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]

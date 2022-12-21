@@ -3,7 +3,7 @@ title: Migrate a Site That Was Created with Build Tools to the Latest Version of
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
@@ -13,7 +13,7 @@ editpath: drupal/drupal-hosted-createbt/13-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [--]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

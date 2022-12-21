@@ -3,7 +3,7 @@ title: Migrate a Custom Upstream to the Latest Version of Drupal
 subtitle: Create a New Branch with Integrated Composer Code
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
 permalink: docs/guides/drupal-hosted-createcustom/new-branch

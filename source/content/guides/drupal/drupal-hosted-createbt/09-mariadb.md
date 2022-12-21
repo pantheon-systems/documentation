@@ -3,7 +3,7 @@ title: Migrate a Site That Was Created with Build Tools to Drupal
 subtitle: Confirm the MariaDB Version and Updates
 description: 
 cms: "Drupal"
-tags: [code, launch, migrate, site, updates, D8, D9, D10]
+tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-createbt/mariadb
@@ -12,7 +12,7 @@ editpath: drupal-v8/09-mariadb.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 categories: [migrate, git, update]
-newcms: [drupal]
+newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [mariadb]
