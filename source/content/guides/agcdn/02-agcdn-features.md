@@ -26,7 +26,7 @@ Advanced Global CDN provides DDoS protection and mitigation at the network (Laye
 
 SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> Type 2 compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
 
-## Security Starter
+## Security Starter (test)
 
 Improve security and maintain compliance with Pantheon's Security Starter. This feature includes:
 
