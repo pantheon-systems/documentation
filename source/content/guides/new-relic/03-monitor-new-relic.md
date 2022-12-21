@@ -40,6 +40,28 @@ For more information on using New Relic&reg;'s features, we encourage you to rev
 
 - [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
+## Configure Ping Monitors for Availability
+
+New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring feature sends a request to designated URLs from configured locations. Requests are sent at configured intervals and alerts are sent via email when a response fails.
+
+Pantheon can provide New Relic Ping monitoring for free as part of the service. However, more advanced monitoring, including full browser testing and scripted interactions, is only available to customers on an annual contract and requires an additional cost. Contact our [sales team](https://pantheon.io/contact-us) or your dedicated account manager for more information.
+
+Follow the steps below to configure the monitor service.
+
+1. Click **New Relic**, then go to New Relic from the target environment within the Site Dashboard on Pantheon.
+
+1. Select **Synthetics** from the menu bar at the top of the page.
+
+1. Click **Add new** in the **Monitors** tab (default) and enter the details for the URL you want to monitor.
+
+1. Select the locations you want to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance network mixups.
+
+1. Set the frequency for checks. We suggest five minutes.
+
+1. Provide an email address for notifications.
+
+1. Click **Create my monitor**.
+
 ## Focus on Authenticated Users Only
 
 It can be useful to exclude anonymous users who are using your site's page cache if your site consists of mostly authenticated traffic. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic&reg; on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.
