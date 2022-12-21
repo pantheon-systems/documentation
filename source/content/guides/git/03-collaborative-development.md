@@ -1,5 +1,5 @@
 ---
-title: Collaborative Development Using GitHub and Pantheon
+title: Git on Pantheon Guide
 subtitle: Collaborative Development with an External Repository
 description: Use GitHub to collaborate with the team members on your Pantheon site.
 tags: [collaborate, git, local, webops, workflow]

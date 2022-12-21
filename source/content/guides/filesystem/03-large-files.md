@@ -34,7 +34,7 @@ Refer to the [File (field) Paths](https://www.drupal.org/project/filefield_paths
 A code repository larger than 2GB increases the possibility of Git errors when committing code on Pantheon. Review the options below to improve performance:
 
 - Keep multimedia assets out of the repository by moving files to a media file storage service, such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
-- [Prune and optimize your repository](/reducing-large-repos) if it is over 2GB and is causing problems (such as errors when cloning).
+- [Reduce the size of your repository](/guides/git/troubleshooting#reduce-large-repositories) if it is over 2GB and is causing problems (such as errors when cloning).
 
 ## Large Files
 
