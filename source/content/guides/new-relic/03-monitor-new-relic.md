@@ -48,15 +48,15 @@ Pantheon can provide New Relic Ping monitoring for free as part of the service. 
 
 Follow the steps below to configure the monitor service.
 
-1. Click **New Relic** and then navigate to New Relic from the target environment within the Site Dashboard on Pantheon.
+1. Click **New Relic**, then go to New Relic from the target environment within the Site Dashboard on Pantheon.
 
 1. Select **Synthetics** from the menu bar at the top of the page.
 
-1. Click **Add new** in the **Monitors tab** (default) and enter the details for the URL you want to monitor.
+1. Click **Add new** in the **Monitors** tab (default) and enter the details for the URL you want to monitor.
 
 1. Select the locations you want to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance network mixups.
 
-1. Set the frequency for checks. We suggest 5 minutes.
+1. Set the frequency for checks. We suggest five minutes.
 
 1. Provide an email address for notifications.
 
