@@ -8,8 +8,6 @@ tags: [--]
 reviewed: ""
 ---
 
-### Authenticity & Fingerprint Prompts
-
 Your first connection to any remote server over an SSH connection (like Git or SFTP) will prompt you to confirm the host identity:
 
 ```none
