@@ -15,8 +15,12 @@ showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-broken-links
 anchorid: wordpress-broken-links
 ---
+
+This section provides information on how to correct broken links.
+
 ## Update Links Referencing IP:Port
-Whether by accident or by virtue of "web rot", links in your content may eventually stop working. This happens when links are placed into your site's code that use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
+
+Links in your content may eventually stop working by accident or by virtue of web rot. This happens when links placed in your site's code use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 
 ## Links constructed using SERVER_NAME or SERVER_PORT
 Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs. This doesn't work well on Pantheon because this environmental data will be for ephemeral container data, which can lead to broken links. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) and [WordPress Plugins and Themes with Known Issues](/plugins-known-issues).
