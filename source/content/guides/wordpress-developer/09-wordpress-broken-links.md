@@ -20,38 +20,46 @@ This section provides information on how to correct broken links.
 
 ## Update Links Referencing IP:Port
 
-Links in your content may eventually stop working by accident or by virtue of web rot. This happens when links placed in your site's code use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
+Links in your content may eventually stop working by accident or due to web rot. This happens when links placed in your site's code use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 
 ## Links constructed using SERVER_NAME or SERVER_PORT
-Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs. This doesn't work well on Pantheon because this environmental data will be for ephemeral container data, which can lead to broken links. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) and [WordPress Plugins and Themes with Known Issues](/plugins-known-issues).
+
+Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs. This doesn't work well on Pantheon because this environmental data is for temporary container data, which can lead to broken links. Refer to [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) and [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) for more information.
 
 ## There's a Plugin For That
-As with most common problems WordPress site owners face, there's a plugin to help. Actually, there are many. If you go to WordPress.org and search for [broken link](https://wordpress.org/plugins/search.php?q=broken+link), you'll find over 700 plugins to evaluate. The [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin is the most popular and is active on more than 400,000 WordPress sites.
 
-## Installation
-You can install the plugin from your [WordPress dashboard](/cms-admin/#wordpress-dashboard) by following these steps:
+There are a number of plugins that can help you fix and maintain your links. Visit WordPress.org and search for [broken link](https://wordpress.org/plugins/search.php?q=broken+link) for a comprehensive list of plugins. The [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin is the most popular and is active on more than 400,000 WordPress sites.
 
-<Alert title="Note" type="info">
+### Install Broken Link Checker
 
-Your site's Connection Mode must be [set to SFTP](/guides/sftp).
+You can install the [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin from your [WordPress dashboard](/cms-admin/#wordpress-dashboard) by following these steps:
 
-</Alert>
+1. Set your Connection Mode [SFTP](/guides/sftp).
 
 1. Click **Plugins**, then select **Add New**.
-2. Search for "Broken Link Checker".
-3. Click **Install Now**, then click **Activate**.
 
-## Using the Plugin
-Once you have the plugin installed and activated, you will see a new option within the Tools section of your WordPress dashboard. Notice that there are no reported broken links. Don't get too excited&mdash;you won't see any until WordPress runs it's next Cron job. In the background, WordPress will quietly check all your posts, comments, pages, etc., and look for broken URLs. Each URL is queued to be checked so that performance is not negatively affected. Check back later; if you have a lot of content, it will take a while to run.
+1. Search for "Broken Link Checker".
 
-Broken Link Checker won't keep you from creating bad links, it is simply a reporting tool. You can still do things that are a bad idea, like using the IP address for your site instead of its domain name, but this resource helps you clean things up. The best solution for linking to your own content is to use relative paths. Use `/my-cool-blog-post` instead of `https://example.com/my-cool-blog-post` and you never have to worry about portability. For everything else, there is Broken Link Checker.
+1. Click **Install Now**, then click **Activate**.
+
+#### Use the Plugin
+
+You will see a new option within the Tools section of your WordPress dashboard when the plugin is installed and activated. Notice that there are no reported broken links. This is normal as you won't see any broken links until WordPress runs it's next Cron job. WordPress checks all your posts, comments, pages, etc., in the background and look for broken URLs. Each URL is queued to be checked so that performance is not negatively affected.
+
+Broken Link Checker is a reporting tool and won't keep you from creating bad links. The best solution for linking to your own content is to use relative paths. Use `/my-cool-blog-post` instead of `https://example.com/my-cool-blog-post` to avoid portability problems.
 
 ## Update Environment URLs on Pantheon
-WordPress stores URLs in various places in the database; considering Pantheon's multi-environment workflow, this can cause unexpected behavior. However, we've integrated the WP-CLI's search & replace functionality into the workflow to assist in updating these URLs.
+
+WordPress stores URLs in various places in the database. This can cause unexpected behavior due to Pantheon's multi-environment workflow. WP-CLI's search & replace functionality is integrated into the workflow to assist in updating URLs.
 ![Dashboard DB URL converter](../../../images/dashboard/convert-urls.png)​
-[Pantheon's workflow](/pantheon-workflow) for WordPress includes an additional feature to update environment URLs automatically. Note that the defaults that are selected when performing a clone operation aren't overridable, as we update the URL to match whatever environment you're cloning to. We do offer the option to convert HTTP to HTTPS and vice versa; in the case you have HTTPS in one environment and not another.
+
+[Pantheon's workflow](/pantheon-workflow) for WordPress includes an additional feature to update environment URLs automatically. Note that you can't override the defaults that are selected when performing a clone operation when you update the URL to match whatever environment you're cloning to. You can convert HTTP to HTTPS and vice versa if this varies among your environments.
 
 ### Fix WordPress Content References to the Wrong Domain After Cloning
 
 <Partial file="search-replace-domains.md" />
 
+## More Resources
+
+- [Pantheon WebOps Workflow](/pantheon-workflow)
+- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
