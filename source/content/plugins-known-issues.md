@@ -1049,8 +1049,8 @@ export ENV=dev
 
   ```bash{promptUser: user}
   ln -s ../../files/private/wflogs ./wflogs
-  ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
-  ln -s ../files/private/.user.ini ./.user.ini
+  ln -s ../../files/private/wordfence-waf.php ./../wordfence-waf.php
+  ln -s ../../files/private/.user.ini ./../.user.ini
   ```
 
 1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
