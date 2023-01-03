@@ -1004,7 +1004,9 @@ ___
 
 <ReviewDate date="2022-12-16" />
 
-**Issue:** [Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuration and log files.
+**Issue 1:** Wordfence can't write configuration and log files to the codebase.
+
+[Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuration and log files.
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 
@@ -1125,12 +1127,14 @@ Complete this step in Dev, Test, and Live Environments.
 
 </Accordion>
 
-**Issue:** Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error connecting to the database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. This results in two problems:
+**Issue 2:** Error connecting to the database.
 
-* __DIR__ is not providing the proper path for Wordfence
-* Wordfence cannot find your database credentials
+Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error connecting to the database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. This results in two problems:
 
-**Solution if DIR is not providing the proper path for Wordfence:** Modify Wordfence to use relative paths.
+- `__DIR__` is not providing the proper path for Wordfence
+- Wordfence cannot find your database credentials
+
+**Solution if `__DIR__` is not providing the proper path for Wordfence:** Modify Wordfence to use relative paths.
 
 1. Change the following code within `wordfence-waf.php` over SFTP from:
 
@@ -1206,13 +1210,13 @@ if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
   include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
 ```
 
-**Advantages:** Customers have reported improved file system performance, while not having to compromise on Wordfence's features.
+**Advantages:** Customers have reported improved file system performance without having to compromise on Wordfence's features.
 
 **Disadvantages:** Due to the nature of the plugin, binary logs and insertion queries will increase. Performance gains in one area may be sacrificed in another.
 
 #### How do I confirm I am using data storage with Wordfence?
 
-You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is wp_) and queries will increase based on blocked traffic.
+You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
 
 ___
 
