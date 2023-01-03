@@ -30,7 +30,7 @@ Move blog-specific uploads directories located outside of `wp-content/uploads` i
 
 Import your existing code and commit history via Git. If you don’t have a Git version controlled codebase, the following will walk you through the initialization process.
 
-1. Navigate to your existing site's code directory in a local terminal. If your existing code is not version controlled with Git, run:
+1. Navigate to your existing site's code directory in a local terminal. Run the code below if your existing code is not version controlled with Git.
 
   ```bash{promptUser: user}
   git init
@@ -38,8 +38,8 @@ Import your existing code and commit history via Git. If you don’t have a Git 
   git commit -m "initial commit"
   ```
 
-1. From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/guides/git/git-config).
-1. Copy the SSH URL for the site repository, found in the [clone command](/guides/git/git-config#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
+1. Navigate to the Dev environment of the Site Dashboard and set the site's connection mode to [git](/guides/git/git-config).
+1. Copy the SSH URL for the site repository in the [clone command](/guides/git/git-config#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
   ```bash{promptUser: user}
   ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
@@ -130,7 +130,10 @@ fi
 
 while [ 1 ]
 do
-sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222'  $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/* --temp-dir=../tmp/  ./files/
+sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222'  $ENV.$SITE@appserver.$SITE.$ENV.drush.in:files/* --temp-dir=../tmp/  ./wp-content/uploads/
+
+/** wp-content/uploads is a symlink to the `~/files` directory. */
+
 if [ "$?" = "0" ] ; then
 echo "rsync completed normally"
 exit
@@ -161,13 +164,13 @@ A single `.sql` dump that contains the content and active state of the site's co
 
 If your `.sql` file is less than 500MB, you can use the Import tool in the <span class="glyphicons glyphicons-server" aria-hidden="true"></span> **Database/Files** section of the Site Dashboard to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
 
-1. From the Dev environment on the Site Dashboard, click **Connection Info** and copy the database connection string. It will look similar to this:
+1. Navigate to the Dev environment on the Site Dashboard, click **Connection Info**, and copy the database connection string. It will look similar to this:
 
   ```bash
   mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
   ```
 
-1. From your terminal, `cd` into the directory containing your `.sql` archive. Paste the connection string and append it with:
+1. Open your terminal and `cd` into the directory containing your `.sql` archive. Paste the connection string and append it with:
 `< database.sql`
 Your command will now look like:
 
@@ -175,7 +178,7 @@ Your command will now look like:
  mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
  ```
 
-1. After you run the command, the .sql file is imported into your Pantheon Dev database.
+1. Run the command to import the .sql file into your Pantheon Dev database.
 
 You should now have all three of the major components of your site imported into Pantheon.
 
