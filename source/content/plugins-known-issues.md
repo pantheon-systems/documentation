@@ -1475,6 +1475,7 @@ ___
 1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+
 ___
 
 ## YITH WooCommerce Request a Quote
@@ -1498,7 +1499,9 @@ if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
    }
 }
 ```
+
 ___
+
 ## Yoast SEO
 
 <ReviewDate date="2018-06-12" />
@@ -1508,6 +1511,7 @@ ___
 **Solution:** Only use the "PHP" redirect method.
 
 ___
+
 ## Yoast Indexables
 
 <ReviewDate date="2022-06-14" />
