@@ -119,11 +119,11 @@ File archives can be imported via the Site Dashboard on **Workflow** > **Import*
 
 ### rsync
 
-We recommend rsync for larger file transfers. If you have SSH access to the old host you can transfer files from the old environment directly to your new environment on Pantheon without downloading files locally. Otherwise, you can transfer them to Pantheon from your local computer.
+We recommend rsync for larger file transfers. If you have SSH access to the old host you can transfer files from the old environment directly to your new environment on Pantheon without downloading files locally. Otherwise, you can transfer them to Pantheon from your local computer. We've provided an optional script below as an example to help you get started.
 
-The below script is written to help run rsync while avoiding connectivity issues and requires familiarity with Bash, it is meant as an example and is not a requirement.
+The example script runs rsync while avoiding connectivity issues and requires familiarity with Bash. The script connects to your specified Pantheon site and environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
 
-Replace "dev" and "SITEID" below with your destination environment and site. Add this file at the root of a project with files stored in /wp-content/uploads
+Replace `dev` and `SITEID` below with your destination environment. Add this file at the root of a project with files stored in `/wp-content/uploads`
 
 ```bash:title=transfer-files.sh
 ENV='dev'
@@ -144,7 +144,6 @@ while [ 1 ]; do
 done
 ```
 
-This script connects to your specified Pantheon site and environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
 
 ### SFTP
 
