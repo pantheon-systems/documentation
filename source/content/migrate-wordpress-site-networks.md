@@ -152,7 +152,7 @@ This script connects to your Pantheon site's Dev environment and starts uploadin
 
 You can use an [FTP client that supports SFTP](/guides/sftp), such as FileZilla, if you are unfamiliar or uncomfortable with bash and rsync. 
 
-1. Find your Dev environment's SFTP connection info and connect with your SFTP client. 
+1. Find your Dev environment's [SFTP connection info](/guides/sftp/sftp-connection-info#sftp-connection-info) and connect with your SFTP client.
 
 1. Navigate to `~/code/wp-content/uploads/` and start your file upload.
 
