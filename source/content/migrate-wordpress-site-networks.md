@@ -116,7 +116,9 @@ This directory is a shared filesystem and is stored separately from the site's c
 
 File archives can be imported via the Site Dashboard on **Workflow** > **Import**; however, the archive must be within the size limits for the upload method in use (100MB for file uploads, 500MB for URL uploads).
 
-For larger file transfers, we recommend running rsync from the old environment directly to your new environment on Pantheon to forgo downloading all the files locally. However, if the files already exist on your local machine you can transfer them to Pantheon with this handy script and avoid connectivity issues:
+### rsync
+
+We recommend rsync for larger file transfers. You can transfer files from the old environment directly to your new environment on Pantheon without downloading files locally. However, if the files already exist on your local machine you can transfer them to Pantheon with the script below to avoid connectivity issues.
 
 ```bash:title=transfer-files.sh
 ENV='dev'
@@ -146,7 +148,13 @@ done
 
 This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
 
-If you are unfamiliar or uncomfortable with bash and rsync, an [FTP client that supports SFTP](/guides/sftp), such as FileZilla, is a good option. Find your Dev environment's SFTP connection info and connect with your SFTP client. Navigate to `~/code/wp-content/uploads/`. You can now start your file upload.
+### SFTP
+
+You can use an [FTP client that supports SFTP](/guides/sftp), such as FileZilla, if you are unfamiliar or uncomfortable with bash and rsync. 
+
+1. Find your Dev environment's SFTP connection info and connect with your SFTP client. 
+
+1. Navigate to `~/code/wp-content/uploads/` and start your file upload.
 
 ## Database
 
