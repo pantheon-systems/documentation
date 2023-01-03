@@ -134,7 +134,7 @@ while [ 1 ]
 do
 sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222'  $ENV.$SITE@appserver.$SITE.$ENV.drush.in:files/* --temp-dir=../tmp/  ./wp-content/uploads/
 
-/** 'wp-content/uploads' is a symlink to the `~/files` directory. */
+/** `~/wp-content/uploads` is a symlink to the `~/files` directory. */
 
 if [ "$?" = "0" ] ; then
 echo "rsync completed normally"
