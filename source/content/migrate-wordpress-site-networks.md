@@ -22,6 +22,7 @@ Before you can migrate a WordPress Site Network, you must be a contract customer
 * [Download](https://git-scm.com/downloads) and install [Git](/guides/git/git-config)
 * [Rsync or SFTP Client](/guides/sftp/rsync-and-sftp)
 * [MySQL Client](/guides/mariadb-mysql/mysql-access)
+* [SSH Keys](/ssh-keys) set up on your local computer and Pantheon account
 
 ## Import the Codebase
 **Codebase** - all executable code, including core, plugins, themes, and libraries; stored in the `~/code` directory.
@@ -118,39 +119,36 @@ File archives can be imported via the Site Dashboard on **Workflow** > **Import*
 
 ### rsync
 
-We recommend rsync for larger file transfers. You can transfer files from the old environment directly to your new environment on Pantheon without downloading files locally. However, if the files already exist on your local machine you can transfer them to Pantheon with the script below to avoid connectivity issues.
+We recommend rsync for larger file transfers. If you have SSH access to the old host you can transfer files from the old environment directly to your new environment on Pantheon without downloading files locally. Otherwise, you can transfer them to Pantheon from your local computer.
+
+The below script is written to help run rsync while avoiding connectivity issues and requires familiarity with Bash, it is meant as an example and is not a requirement.
+
+Replace "dev" and "SITEID" below with your destination environment and site. Add this file at the root of a project with files stored in /wp-content/uploads
 
 ```bash:title=transfer-files.sh
 ENV='dev'
 SITE='SITEID'
 
-read -sp "Your Pantheon Password: " PASSWORD
-if [[ -z "$PASSWORD" ]]; then
-echo "Woops, need password"
-exit
-fi
+while [ 1 ]; do
+  rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' wp-content/uploads/ --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
-while [ 1 ]
-do
-sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222'  $ENV.$SITE@appserver.$SITE.$ENV.drush.in:files/* --temp-dir=../tmp/  ./wp-content/uploads/
+  # /wp-content/uploads is a symlink to the /files directory on Pantheon.
 
-/** `~/wp-content/uploads` is a symlink to the `~/files` directory. */
-
-if [ "$?" = "0" ] ; then
-echo "rsync completed normally"
-exit
-else
-echo "Rsync failure. Backing off and retrying..."
-sleep 180
-fi
+  if [ "$?" = "0" ]; then
+    echo "rsync completed normally"
+    exit
+  else
+    echo "Rsync failure. Backing off and retrying..."
+    sleep 180
+  fi
 done
 ```
 
-This script connects to your Pantheon site's Dev environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
+This script connects to your specified Pantheon site and environment and starts uploading your files. If an error occurs during transfer, rather than stopping, it waits 180 seconds and picks up where it left off.
 
 ### SFTP
 
-You can use an [FTP client that supports SFTP](/guides/sftp), such as FileZilla, if you are unfamiliar or uncomfortable with bash and rsync. 
+You can use an [FTP client that supports SFTP](/guides/sftp), such as FileZilla, if you are unfamiliar or uncomfortable with bash and rsync.
 
 1. Find your Dev environment's [SFTP connection info](/guides/sftp/sftp-connection-info#sftp-connection-info) and connect with your SFTP client.
 
