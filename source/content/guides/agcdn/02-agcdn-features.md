@@ -26,7 +26,7 @@ Advanced Global CDN provides DDoS protection and mitigation at the network (Laye
 
 SOC 2<Popover title="SOC" content="System and Organization Controls (SOC) is a suite of audit reports defined by the American Institute of Certified Public Accountants (AICPA)." /> Type 2 compliance provides third-party assurance to our customers about the conformance of Pantheon’s information security system with industry standards. Our SOC 2 compliance covers the Security and Availability [Trust Services Criteria](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/trustdataintegritytaskforce.html).
 
-## Security Starter (test)
+## Security Starter
 
 Improve security and maintain compliance with Pantheon's Security Starter. This feature includes:
 
@@ -51,8 +51,6 @@ Restrict access to properties using Access Control Lists (ACLs) that use IP addr
 ## Tor Traffic Blocking
 
 Tor encrypts and routes user traffic through at least three Tor nodes to mask a user's starting IP address. AGCDN can block malicious Tor traffic.
-
-
 
 ## Custom Rules and Redirects
 
@@ -115,6 +113,3 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 - [Fastly on Pantheon](/guides/fastly-pantheon)
 
 - [How to Fight Cyberattacks Using Pantheon’s Advanced Global CDN](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn)
-
-
-

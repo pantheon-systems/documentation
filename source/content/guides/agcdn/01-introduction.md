@@ -73,7 +73,6 @@ AGCDN with WAF/IO includes everything in the table above with the following addi
 | [Rate Limiting (early access)](/guides/agcdn/agcdn-wafio#rate-limiting)   | <span style="color:green">✔</span> |
 | [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-features#advanced-bot-detection-and-mitigation-available-as-an-add-on) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> | 
 
-
 ## Is AGCDN Right For Me?
 
 AGCDN is a great option for many users. AGCDN is for you if you're looking for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation. 
