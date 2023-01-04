@@ -45,7 +45,8 @@ WP-Cron is a WordPress feature that executes jobs when the page is loaded. Jobs 
 
 The WP-Cron feature is designed solely to handle WordPress routine jobs as part of a page load, allowing you to:
 
- - Check for new version of the WordPress core, themes, and plugins
+ - Check for new versions of the WordPress core
+ - Check for themes and plugins updates
  - Clean up spam
 
 ## Understand the Differences Between Pantheon Cron and WP-Cron
@@ -64,7 +65,7 @@ Pantheon Cron will not execute jobs on inactive environments, including [sleepin
 
 ### WordPress Site Networks
 
-Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Site Networks use WP-Cron.
+Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Use WP-Cron if you have WordPress Site Network installations.
 
 ### Security
 
@@ -74,7 +75,7 @@ There is only one parameter you can pass that will affect the script, `doing_wp_
 
 ## Manage WP-Cron Internally
 
-WP-Cron comes preconfigured and ready to run, so you don't need to do anything to enable it on your WordPress sites.
+WP-Cron comes pre-configured and ready to run, so you don't need to do anything to enable it on your WordPress sites.
 
 Several jobs are automatically configured during the installation of WordPress. Use a few simple commands from the command line, or one of several plugins, to find the exact jobs that WP-Cron runs.
 
@@ -101,7 +102,7 @@ terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
 - Replace `<SITE_NAME>` with your site's name
 - Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name)
 
-You will receive a response similar to the one below if this is a WordPress site on the Pantheon upstream now running on Pantheon Cron:
+You will receive the status of WP-Cron's functionality. You will receive a response similar to the one below if this is a WordPress site on the Pantheon upstream now running on Pantheon Cron:
 
 ```bash
 Error: The DISABLE_WP_CRON constant is set to true. WP-Cron spawning is disabled.
