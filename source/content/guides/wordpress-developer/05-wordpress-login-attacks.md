@@ -35,11 +35,13 @@ We strongly recommend that you change your admin account name. Many attacks assu
 
 ### Change the wp-login.php Path
 
-Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/) to change the login path from `wp-login.php` to any path you choose, such as `/login` or `/admin`. Then [redirect](/guides/redirect/advanced#redirect-one-path-to-another) all traffic from `wp-login.php` to the homepage or to another page like a `404`.
+1. Use a plugin like [WPS Hide Login](https://wordpress.org/plugins/wps-hide-login/) to change the login path from `wp-login.php` to any path you choose, such as `/login` or `/admin`.
+
+1. [Redirect](/guides/redirect/advanced#redirect-one-path-to-another) all traffic from `wp-login.php` to the homepage or to another page like a `404`.
 
 ### Enforce Complex Passwords
 
-WordPress suggests password complexity guidelines when you create a user and password, but it does not enforce password rules. 
+WordPress suggests password complexity guidelines when you create a user and password, but it does not enforce password rules.
 
 1. Install a plugin like [Better Passwords](https://wordpress.org/plugins/better-passwords/).
 
@@ -55,7 +57,7 @@ Some attackers or lost visitors might try to create an account via the login pag
 
 ### Add Multi-factor Authentication (MFA)
 
-Two Factor Authentication (2FA) and Multi-factor Authentication (MFA) are added layers of protection to ensure the security of your accounts beyond a username and password. Multi-factor refers to the capability to have more than two factors of authentication (for example: password, SMS, and email verification). 
+Two Factor Authentication (2FA) and Multi-factor Authentication (MFA) are added layers of protection to ensure the security of your accounts beyond a username and password. Multi-factor refers to the capability to have more than two factors of authentication (for example: password, SMS, and email verification).
 
 Use one of the many [Two-Factor Authentication](https://wordpress.org/plugins/tags/two-factor-authentication/) plugins to protect logins to your WordPress site.
 
