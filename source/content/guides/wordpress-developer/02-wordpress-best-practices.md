@@ -1,7 +1,7 @@
 ---
 title: WordPress Developer's Guide
 subtitle: WordPress Best Practices
-description: A list of suggestions for developing WordPress sites on Pantheon.
+description: A list of best practices for developing WordPress sites on Pantheon.
 cms: "WordPress"
 contenttype: [guide]
 categories: [manage]
@@ -21,27 +21,27 @@ This section provides suggestions for best practices to develop and manage WordP
 
 ## Development
 
-- We recommend using an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Brackets](https://github.com/adobe/brackets/), or [Visual Studio Code](/guides/local-development/visual-studio-code).
+- Use an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Brackets](https://github.com/adobe/brackets/), or [Visual Studio Code](/guides/local-development/visual-studio-code).
 
 - Do not modify core WordPress files. Core file modification frequently causes unintended issues, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).  Create a custom or [Must Use](/guides/wordpress-configurations/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/) if you need to modify any WP functionality.
 
 - Use [Redis](/guides/object-cache). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Redis on Pantheon makes it easy to cache a large number database queries in WordPress.
 
-- Use [wp-cfm](/guides/wordpress-configurations/wp-cfm). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
+- Use [wp-cfm](/guides/wordpress-configurations/wp-cfm). wp-cfm lets you store settings from the `wp_options` table in Git and pull it into the database. This helps with the option-heavy nature of WordPress site configurations. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 
 - Use [Grunt](https://gruntjs.com) or [Gulp](https://github.com/gulpjs/gulp) to aggregate JS/CSS on your local development environment rather than relying on the server to do it for you. This helps speed up your workflow by minimizing redundant tasks.
 
 - Follow the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) when developing custom plugins or themes for efficiency and ease of collaboration.
 
-### Plugins
+## Plugins
 
-- Add [Composer](/guides/composer) and pull your WordPress plugins from [wpackagist.org](https://wpackagist.org/). WordPress Packagist mirrors the WordPress.org plugin repository and adds a composer.json file. It makes future debugging much simpler if you need to switch between multiple plugin or WordPress versions to see what caused something to break. While [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md), you will have to commit the dependencies that Composer downloads on Pantheon since running `composer install` on the environments is not supported (just as Git submodules are not supported).
+- Add [Composer](/guides/composer) and pull your WordPress plugins from [wpackagist.org](https://wpackagist.org/). WordPress Packagist mirrors the WordPress.org plugin repository and adds a `composer.json` file to your files. This makes future debugging simpler if you need to switch between multiple plugin or WordPress versions to see what caused something to break. Running `composer install` on the environments is not supported (just as Git submodules are not supported). You must commit the dependencies that Composer downloads on Pantheon to workaround this even though [committing Composer dependencies is generally not recommended](https://getcomposer.org/doc/faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md).
 
-- Use the `get_post()` function instead of using `wp_query()` if you have a custom plugin that retrieves a specific post (or posts). `wp_query` can be useful in some situations, however,the [get_post](https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object.
+- Use the `get_post()` function instead of using `wp_query()` if you have a custom plugin that retrieves a specific post (or posts). `wp_query` can be useful in some situations, however, the [get_post](https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object.
 
-- Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes these files are dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. Many plugins for uploads rely on `.htaccess` files which should also be avoided.
+- Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes these files are dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. Many plugins for uploads rely on [`.htaccess` files](/guides/redirect#htaccess) which Pantheon does not support.
 
-### Themes
+## Themes
 
 - Use a simple PHP `include()` instead of WordPress's [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part) in your theme. The overhead is heavy if your use case is simply adding in another sub-template file. For example:
 
@@ -50,9 +50,9 @@ This section provides suggestions for best practices to develop and manage WordP
   <?php include('content-sidebar.php'); ?>
   ```
 
-#### Manage License Keys for Themes or Plugins
+### Manage License Keys for Themes or Plugins
 
-There are many plugins and themes in WordPress that require license keys. It is best practice to associate the license key in a domain so you can easily update and deploy the updates to Test and Live environments because Dev and Multidev are the only writable environments in SFTP mode.
+There are many plugins and themes in WordPress that require license keys. It is best practice to associate the license key in a domain. You can easily update and deploy the updates to Test and Live environments because Dev and Multidev are the only writable environments in SFTP mode.
 
 ## Testing
 
@@ -62,12 +62,11 @@ There are many plugins and themes in WordPress that require license keys. It is 
 
 ## Live
 
-- We recommend using HTTPS. Refer to [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https) more information.
+- Use HTTPS. Refer to [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https) for more information.
 
-- Verify that [Global CDN caching](/guides/global-cdn/test-global-cdn-caching) is working on your site.
+- Verify that [Global CDN caching](/guides/global-cdn/test-global-cdn-caching) works on your site.
 
 - Follow our [Frontend Performance](/guides/frontend-performance) guide to tune your WordPress site.
-
 
 ## Disable Anonymous Access to WordPress Rest API
 
@@ -100,9 +99,9 @@ Pantheon's Nginx configuration [cannot be modified](/guides/platform-considerati
 
 There are plugins for WordPress that do not require `.htaccess` to set security headers, but header specifications may change more rapidly than the plugins can keep up with. In those cases, you may want to define the headers yourself.
 
-Adding code like the example below in a plugin (or [mu-plugin](/guides/wordpress-configurations/mu-plugin)) can help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. Do not add this to your theme's `functions.php` file, as it will not be executed for calls to the REST API.
+You can add code like the example below in a plugin (or [mu-plugin](/guides/wordpress-configurations/mu-plugin)) to help add security headers for WordPress sites on Pantheon, or any other Nginx-based platform. Do not add this to your theme's `functions.php` file, as it will not be executed for calls to the REST API.
 
-The code below is only an example to get you started. You'll need to modify it to match your needs, especially the Content Security Policy. Tools like [SecurityHeaders.com](https://securityheaders.com) can help to check your security headers, and link to additional information on how to improve your security header profile.
+The code below is only an example to get you started. You must modify the code to match your needs, especially the Content Security Policy. Tools like [SecurityHeaders.com](https://securityheaders.com) can help to check your security headers, and link to additional information on how to improve your security header profile.
 
 ```php
 function additional_securityheaders( $headers ) {
