@@ -60,8 +60,8 @@ Follow the steps below to create a new site.
 1. List the available Upstreams:
 
  ```bash{outputLines:2}
- terminus upstream:list | grep "Drupal 7" | grep "core"
- 21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                               drupal7                                         core     drupal
+ terminus upstream:list | grep "Drupal" | grep "core"
+ 21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal                               drupal7                                         core     drupal
  ```
 
    - If the Upstream ID in the output you receive is shorter than 36 characters (including hyphens), enlarge your terminal window and run the command again. Otherwise, you might encounter an error similar to:

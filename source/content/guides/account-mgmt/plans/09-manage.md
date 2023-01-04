@@ -52,7 +52,7 @@ To remove these addons:
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-id">
+<Tab title="Drupal" id="d7-id">
 
 #### Object Cache
 

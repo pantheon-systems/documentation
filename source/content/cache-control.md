@@ -24,7 +24,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7" active={true}>
+<Tab title="Drupal" id="d7" active={true}>
 
 Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 

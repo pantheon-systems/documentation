@@ -82,7 +82,7 @@ The standard protected web paths can be important to the security of your site. 
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
  
-* [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+* [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
 ### Enforce HTTPS + HSTS
@@ -167,7 +167,7 @@ This table shows the recommended MariaDB version for each CMS:
 | Drupal ≥ 9.0  | 10.4 or 10.6                |
 | WordPress     | 10.4 or 10.6                |
 
-Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
+Users of Drupal 6 sites should consider [upgrading to the latest version of Drupal](/drupal-updates) for better support.
 
 #### Considerations - Drupal 9
 

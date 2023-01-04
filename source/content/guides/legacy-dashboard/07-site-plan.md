@@ -90,7 +90,7 @@ For Object Cache and Pantheon Search (Solr), the following code changes are requ
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-id">
+<Tab title="Drupal" id="d7-id">
 
 #### Safely Remove Object Cache
 

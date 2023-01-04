@@ -83,7 +83,7 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 <TabList>
 
-<Tab title="Drupal 7" id="solr-d7" active={true}>
+<Tab title="Drupal" id="solr-d7" active={true}>
 
 #### ApacheSolr module
 

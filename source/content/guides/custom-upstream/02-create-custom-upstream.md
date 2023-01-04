@@ -391,7 +391,7 @@ Common steps needed for most Git Providers are provided below.
 
     - A name for the Custom Upstream
 
-    - The CMS within (WordPress, Drupal 7/10)
+    - The CMS within (WordPress, Drupal)
 
     - The `https` clone URL (ending in `.git`)
 
@@ -405,7 +405,7 @@ Common steps needed for most Git Providers are provided below.
 
 ### Initial Connection Mode
 
-The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. The latest version of Drupal defaults to SFTP connection mode.
+The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal. The latest version of Drupal defaults to SFTP connection mode.
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 

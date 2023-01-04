@@ -649,13 +649,13 @@ Code goes here.
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-example">
+<Tab title="Drupal" id="d7-example">
 
-Here's our Drupal 7 specific copy, and an example snippet:
+Here's our Drupal specific copy, and an example snippet:
 
 ```php
 /**
-  * Some Drupal 7 specific thing
+  * Some Drupal specific thing
   *
   */
 
@@ -686,13 +686,13 @@ Some code.
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-example">
+<Tab title="Drupal" id="d7-example">
 
-Here's our Drupal 7 specific copy, and an example snippet:
+Here's our Drupal specific copy, and an example snippet:
 
 ```php
 /**
-  * Some Drupal 7 specific thing
+  * Some Drupal specific thing
   *
   */
 
