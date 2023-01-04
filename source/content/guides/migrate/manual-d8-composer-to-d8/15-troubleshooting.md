@@ -1,8 +1,8 @@
 ---
-title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
+title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Troubleshooting
 description:  Learn how to troubleshoot common issues when migrating.
-cms: "Drupal 8"
+cms: "Drupal"
 contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]

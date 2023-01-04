@@ -1,6 +1,6 @@
 ---
-title: Migrate a Drupal 8 Site to Drupal
-subtitle: Migrate the Code
+title: Upgrade a Drupal Site to the Latest Version of Drupal
+subtitle: Upgrade the Code
 description: 
 cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
@@ -18,17 +18,17 @@ product: [composer]
 integration: [--]
 ---
 
-1. From the local Drupal site's directory, use Terminus to retrieve the Drupal 8 site's Git URL:
+1. From the local Drupal site's directory, use Terminus to retrieve the existing site's Git URL:
 
     ```bash{promptUser: user}
     terminus connection:info $D8_SITE.dev --field=git_url
     ```
 
-1. Add the Drupal 8 site as a remote repository called `existing-8`. Use the URL retrieved in the previous step:
+1. Add the existing site as a remote repository called `existing`. Use the URL retrieved in the previous step:
 
     ```bash{promptUser: user}
-    git remote add existing-8 ssh://codeserver.dev.xxxx@codeserver.dev.xxxx.drush.in:2222/~/repository.git
-    git fetch existing-8
+    git remote add existing ssh://codeserver.dev.xxxx@codeserver.dev.xxxx.drush.in:2222/~/repository.git
+    git fetch existing
     ```
 
 1. Copy over exported configuration from the original site. From your drupal site, run the following commands:
@@ -41,7 +41,7 @@ integration: [--]
     git diff existing-8/master:pantheon.yml pantheon.upstream.yml
     ```
 
-1. If you have customizations in your Drupal 8 site's `pantheon.yml` that you want to keep for Drupal (e.g., a Quicksilver script or site-specific protected web paths), copy `pantheon.yml` over:
+1. If you have customizations in your existing site's `pantheon.yml` that you want to keep for Drupal (e.g., a Quicksilver script or site-specific protected web paths), copy `pantheon.yml` over:
 
     ```bash{promptUser: user}
     git checkout existing-8/master -- pantheon.yml
@@ -72,7 +72,7 @@ integration: [--]
 
     </TabList>
 
-1. List contrib modules and themes on your Drupal 8 site:
+1. List contrib modules and themes on your existing site:
 
     ```bash{promptUser: user}
     terminus drush $D8_SITE.dev pm:projectinfo -- --fields=name,version --format=table
@@ -88,7 +88,7 @@ integration: [--]
     git commit -m "Add contrib projects."
     ```
 
-1. Copy over any custom modules or themes from your Drupal 8 site:
+1. Copy over any custom modules or themes from your existing site:
 
      <Partial file="drupal/custom-modules-themes-no-docroot.md" />
 
@@ -96,7 +96,7 @@ integration: [--]
 
      <Partial file="drupal/custom-settings-no-docroot.md" />
 
-1. Copy your files and database from your Drupal 8 site to the Drupal (Latest Version) site:
+1. Copy your files and database from your existing site to the new site:
 
     ```bash{promptUser: user}
     terminus site:clone $D8_SITE.live $DRUPAL_SITE.dev --no-code --no-destination-backup --no-source-backup

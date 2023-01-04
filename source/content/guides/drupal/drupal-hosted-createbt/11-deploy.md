@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with Build Tools to the Latest Version of Drupal
+title: Upgrade a Site That Was Created with Build Tools to the Latest Version of Drupal
 subtitle: Deploy
 description: 
 cms: "Drupal"

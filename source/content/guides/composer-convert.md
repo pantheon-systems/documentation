@@ -1,6 +1,6 @@
 ---
-title: Convert a Standard Drupal 8 Site to a Composer Managed Site
-description: Upgrade a standard Drupal 8 site, by converting it to a Composer-managed Drupal 8 site on the new Integrated Composer framework. 
+title: Convert a Standard Drupal Site to a Composer Managed Site
+description: Upgrade a standard Drupal site, by converting it to a Composer-managed Drupal site on the new Integrated Composer framework. 
 type: guide
 permalink: docs/guides/:basename
 tags: [composer, site, workflow]
@@ -14,7 +14,7 @@ product: [--]
 integration: [--]
 ---
 
-In this guide, we'll convert a standard Drupal 8 site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on Drupal 8.
+In this guide, we'll convert a standard Drupal site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on the current version of Drupal.
 
 During this process, you will create a new branch based on the Git history of the new upstream.  You'll then re-add the contrib and custom code for your site to the new branch, and test it on a Multidev environment.  When everything is working correctly in the Multidev environment, you'll deploy the changes to the Dev environment by replacing your site's master branch with the new branch you've created.  Finally, after testing and confirming everything looks good, you'll use Terminus to switch the site over to the new upstream.
 
@@ -26,13 +26,13 @@ Drupal sites on Pantheon have [Integrated Composer](/guides/integrated-composer)
 
 The goals of this conversion are:
 
-1. Remove dependencies that Composer will manage from the existing Drupal 8 site's Git repository, and have Composer manage those dependencies instead.
+1. Remove dependencies that Composer will manage from the existing Drupal site's Git repository, and have Composer manage those dependencies instead.
 
 1. Switch to the `drupal-composer-managed` Integrated Composer upstream.
 
-The `drupal-composer-managed` Integrated Composer upstream works with Drupal 8, and following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
+The `drupal-composer-managed` Integrated Composer upstream works with all versions of Drupal, and following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
 
-Add Drupal 8 core dependency instructions to `drupal/core-recommended`, to keep the site on Drupal 8 until you are ready to upgrade to the latest version of Drupal.
+Add Drupal core dependency instructions to `drupal/core-recommended`, to keep the site on the current version of Drupal until you are ready to upgrade to the latest version of Drupal.
 
 ## Will This Guide Work for Your Site?
 
@@ -74,7 +74,7 @@ Your Pantheon site is now set up to use the the latest version of Drupal Integra
 terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to the latest version of Drupal.
+Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on the current version of Drupal until you are ready to upgrade to the latest version.
 
 ## Working With Dependency Versions
 

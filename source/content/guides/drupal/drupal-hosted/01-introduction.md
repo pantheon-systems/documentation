@@ -1,5 +1,5 @@
 ---
-title: Migrate a Drupal 8 Site to the Latest Version of Drupal
+title: Upgrade a Drupal Site to the Latest Version of Drupal
 subtitle: Introduction
 description:
 cms: "Drupal"
@@ -26,7 +26,7 @@ This guide will show you how to migrate a site that meets the following criteria
 
 <Alert title="Note" type="info" >
 
-This guide is intended for those who do not have access to Multidev.  If you do have access, use [Migrate a Drupal 8 Site with Multidev to the latest version of Drupal Using Multidev](/guides/drupal-hosted) instead.
+This guide is intended for those who do not have access to Multidev.  If you do have access, use [Upgrade a Drupal Site with Multidev to the latest version of Drupal Using Multidev](/guides/drupal-hosted) instead.
 
 </Alert>
 

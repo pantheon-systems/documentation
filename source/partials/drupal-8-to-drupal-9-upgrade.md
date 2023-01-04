@@ -8,9 +8,9 @@ tags: [--]
 reviewed: ""
 ---
 
-## Ensure Dependencies are Drupal 9 Compatible
+## Ensure Dependencies are Compatible with the Latest Version of Drupal
 
- Make sure all the components of your site are Drupal 9 compatible before you change the Drupal core version to Drupal 9. Review the steps in [Upgrading a Drupal 8 site to Drupal 9](https://www.drupal.org/docs/upgrading-drupal/how-to-prepare-your-drupal-7-or-8-site-for-drupal-9/upgrading-a-drupal-8-site) for details, and use [Upgrade Status](https://www.drupal.org/project/upgrade_status) to check the compatibility of all contributed modules and themes.
+ Make sure all the components of your site are compatible with the latest version before you change the Drupal core version to it. Review the steps in [Upgrading Drupal](https://www.drupal.org/docs/upgrading-drupal) for details, and use [Upgrade Status](https://www.drupal.org/project/upgrade_status) to check the compatibility of all contributed modules and themes.
 
 ## Set Drupal Core Version
 

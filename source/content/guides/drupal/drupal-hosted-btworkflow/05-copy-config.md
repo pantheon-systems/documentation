@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to Drupal + Build Tools
+title: Upgrade a Drupal Site Created With the Pantheon Dashboard to the Latest Version of Drupal + Build Tools
 subtitle: Copy Existing Configuration
 description: 
 cms: "Drupal"

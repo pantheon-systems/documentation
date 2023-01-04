@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created with Build Tools to Drupal
+title: Upgrade a Site That Was Created with Build Tools to Drupal
 subtitle: Prepare
 description: 
 cms: "Drupal"

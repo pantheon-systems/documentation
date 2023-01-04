@@ -1,6 +1,6 @@
 ---
 title: Migrate a Composer-based Drupal Site to a Build Tools Site
-description: Migrate a Drupal 8.8+ site created via Pantheon Dashboard (or Terminus) to a Build Tools-based site.
+description: Migrate a Drupal site created via Pantheon Dashboard (or Terminus) to a Build Tools-based site.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"

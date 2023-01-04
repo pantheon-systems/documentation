@@ -1,6 +1,6 @@
 ---
-title: Upgrade Drupal 8 with Integrated Composer to the Latest Version of Drupal
-description: Upgrade Pantheon Drupal 8 Sites with Integrated Composer to the Latest Version of Drupal.
+title: Update a Drupal Site with Integrated Composer to the Latest Version of Drupal
+description: Upgrade Pantheon Drupal sites with Integrated Composer to the latest version of Drupal.
 type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
@@ -15,7 +15,7 @@ contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2022-12-13"
 ---
 
-This page shows how to upgrade an existing Pantheon-hosted Drupal 8 site using Integrated Composer to the latest version of Drupal using Integrated Composer.
+This page shows how to upgrade an existing Pantheon-hosted Drupal site using Integrated Composer to the latest version of Drupal using Integrated Composer.
 
 <Partial file="drupal/see-landing.md" />
 
@@ -32,7 +32,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ## Will This Guide Work for Your Site?
 
-You must be on Drupal 8 and using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream. 
+You must be on Drupal using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream. 
 
 Confirm the site requirements in the sections below before upgrading to the latest version of Drupal.
 

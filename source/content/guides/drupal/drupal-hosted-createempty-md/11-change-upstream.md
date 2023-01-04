@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
+title: Upgrade a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
 subtitle: Change Upstreams
 description: 
 cms: "Drupal"
@@ -24,4 +24,4 @@ Your Pantheon site is now set up to use the the latest version of Drupal Integra
 terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on Drupal 8 until you are ready to upgrade to the latest version of Drupal.
+Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on the current version until you are ready to upgrade to the latest version of Drupal.

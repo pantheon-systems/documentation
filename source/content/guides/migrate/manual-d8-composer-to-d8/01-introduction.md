@@ -1,8 +1,8 @@
 ---
-title: Migrate a Composer-Managed Drupal 8 Site from Another Platform
+title: Migrate a Composer-Managed Drupal Site from Another Platform
 subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform.
-cms: "Drupal 8"
+cms: "Drupal"
 contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
@@ -19,7 +19,7 @@ editpath: migrate/manual-d8-composer-to-d8/01-introduction.md
 reviewed: "2022-12-13"
 ---
 
-This guide will show you how to migrate a Drupal 8 Composer-managed site currently hosted outside of Pantheon to a image.png Composer-managed site on Pantheon. If you to want upgrade to the latest version of Drupal, use [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer)instead.
+This guide will show you how to migrate a Drupal Composer-managed site currently hosted outside of Pantheon to a image.png Composer-managed site on Pantheon. If you to want upgrade to the latest version of Drupal, use [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer)instead.
 
 <Partial file="drupal/commit-history.md" />
 

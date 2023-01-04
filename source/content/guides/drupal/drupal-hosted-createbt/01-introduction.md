@@ -1,7 +1,7 @@
 ---
-title: Migrate a Site That Was Created with Build Tools to the Latest Version of Drupal
+title: Upgrade a Site That Was Created with Build Tools to the Latest Version of Drupal
 subtitle: Introduction
-description: Learn how to migrate a Drupal 8 Site to the latest version of Drupal
+description: Learn how to update a Drupal site to the latest version of Drupal
 cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]

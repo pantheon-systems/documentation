@@ -1,5 +1,5 @@
 ---
-title: Migrate a Custom Upstream to the Latest Version of Drupal
+title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Create a New Branch with Integrated Composer Code
 description: 
 cms: "Drupal"
@@ -53,14 +53,14 @@ The first step in the migration process is to create a new branch with Integrate
    git commit -m "Add and commit Integrated Composer files"
    ```
 
-1. Navigate to `composer.json` in your text editor and change the `drupal/core-recommended` version to only Drupal 8:
+1. Navigate to `composer.json` in your text editor and change the `drupal/core-recommended` version to the version of Drupal you are currently on:
 
   ```json:title=upstream-configuration/composer.json
-  "drupal/core-recommended": "^10"
+  "drupal/core-recommended": "^9"
   ```
 
 1. Commit the change:
 
   ```bash{promptUser:user}
-  git commit -am "Setting Drupal core version to ^10"
+  git commit -am "Setting Drupal core version to ^9"
   ```

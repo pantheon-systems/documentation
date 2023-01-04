@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site Created With the Pantheon Dashboard to the Latest Version of Drupal
+title: Upgrade a Site Created With the Pantheon Dashboard to the Latest Version of Drupal
 subtitle: Deploy
 description: 
 cms: "Drupal"

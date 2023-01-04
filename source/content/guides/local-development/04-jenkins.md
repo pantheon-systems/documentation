@@ -22,7 +22,7 @@ This section provides information on how to configure your Jenkins server to tes
 
 You can use Terminus and Jenkins to script much of your development work. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on your master branch and the content from Live. This process can even run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
 
-The sections below show you how to configure your existing Jenkins server to automatically test and deploy Drupal 8 to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins runs tests against both the pull request and Pantheon's master branch and displays the results. The same workflow can be applied to WordPress with a few modifications:
+The sections below show you how to configure your existing Jenkins server to automatically test and deploy Drupal to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins runs tests against both the pull request and Pantheon's master branch and displays the results. The same workflow can be applied to WordPress with a few modifications:
 
 <Accordion id="wordpress-mods" title="WordPress Modifications" icon="wrench">
 
@@ -78,7 +78,7 @@ Be sure that you have:
 
 ### Local Project Instantiation
 
-1. Open your local terminal and use Composer to make a new local project based on the example, which contains Drupal 8, Behat, and other configuration settings:
+1. Open your local terminal and use Composer to make a new local project based on the example, which contains Drupal, Behat, and other configuration settings:
 
   <Alert title="Note" type="info">
 

@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
+title: Upgrade a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
 subtitle: Deploy to Dev
 description: 
 cms: "Drupal"

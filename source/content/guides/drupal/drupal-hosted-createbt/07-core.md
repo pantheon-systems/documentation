@@ -1,6 +1,6 @@
 ---
-title: Migrate a Site That Was Created with Build Tools to Drupal latest
-subtitle: Update Drupal Core Using Composer
+title: Upgrade a Site That Was Created with Build Tools to Drupal latest
+subtitle: Upgrade Drupal Core Using Composer
 description: 
 cms: "Drupal"
 tags: [code, launch, migrate, site, updates]

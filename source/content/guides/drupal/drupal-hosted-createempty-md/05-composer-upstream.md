@@ -1,5 +1,5 @@
 ---
-title: Migrate a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
+title: Upgrade a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description: 
 cms: "Drupal"
@@ -42,7 +42,7 @@ To minimize issues, make the codebase changes in a new branch:
 
 ## Set Drupal Core Version
 
-Set the Drupal core version to ensure the site remains on Drupal 8, for now:
+Set the Drupal core version to ensure the site remains on the current version of Drupal, for now:
 
 <Partial file="drupal/core-version-remain-on-d8.md" />
 

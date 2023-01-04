@@ -1,8 +1,8 @@
 ---
-title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
+title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Deploy
 description: Learn how to deploy your site.
-cms: "Drupal 8"
+cms: "Drupal"
 contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]

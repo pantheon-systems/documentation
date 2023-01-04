@@ -1,5 +1,5 @@
 ---
-title: Migrate a Custom Upstream to the Latest Version of Drupal
+title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Deploy to Live
 description: 
 cms: "Drupal"

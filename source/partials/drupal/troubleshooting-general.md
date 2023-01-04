@@ -10,7 +10,7 @@ reviewed: ""
 
 ## Pantheon Launch Check Status Error: services.yml does not exist
 
-After you set up Drupal 9, the following error might be displayed in the **Best practices** section of the Pantheon Launch Check:
+After you set up Drupal, the following error might be displayed in the **Best practices** section of the Pantheon Launch Check:
 
 > <span  style="color:red">x <strong>sites/default/services.yml:</strong></span> services.yml does not exist! Copy the default.service.yml to services.yml and refer to https://www.drupal.org/documentation/install/settings-file for details.
 ><br />
