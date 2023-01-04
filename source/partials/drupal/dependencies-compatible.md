@@ -18,7 +18,7 @@ Review the steps below to confirm compatibility for your site's components.
 
 1. Update to Drupal 8.x-3.15 or higher.
 
-1. Update all contributed projects and verify that they are Drupal 9 compatible.
+1. Update all contributed projects and verify that they are compatible with the latest version of Drupal.
 
 1. Update your custom code to make it compatible with the latest version of Drupal.
 

@@ -180,6 +180,6 @@ All environments will now show a color-coded environment indicator, as defined w
 
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-drupal)
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

@@ -294,7 +294,7 @@ You can use [Lockr](/guides/lockr) for maximum site security. Lockr provides a s
 
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal Sites](/guides/environment-configuration/environment-specific-config-drupal)
 
 - [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator)
 

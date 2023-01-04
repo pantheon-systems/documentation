@@ -101,7 +101,7 @@ Drush core commands are available for your use, but you can also add a command t
   drush @pantheon.SITENAME.dev cc drush
   ```
 
-You should place Drush commands in `drush/Commands` if using Drupal 9.
+You should place Drush commands in `drush/Commands` if using Drupal.
 
 ## More Resources
 

@@ -1,8 +1,8 @@
 ---
-title: Upgrade a Drupal Site with Multidev to Drupal 9 Using Multidev
+title: Upgrade a Drupal Site with Multidev to the Latest Version of Drupal Using Multidev
 subtitle: Introduction
-description: Learn how to migrate a site to Drupal 9 using Multidev
-cms: "Drupal 9"
+description: Learn how to migrate a site to the latest version of Drupal using Multidev
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -19,7 +19,7 @@ product: [composer, terminus]
 integration: [--]
 ---
 
-This guide will show you how to migrate a site that meets the following criteria to Drupal 9:
+This guide will show you how to migrate a site that meets the following criteria to the latest version of Drupal:
 
 | <i class="fa fa-cloud"></i><br/> Current Host | <i class="fa fa-wrench"></i><br/> How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | <i class="fa fa-exclamation-circle"></i><br/> Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
 |:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|

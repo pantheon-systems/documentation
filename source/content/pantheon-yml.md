@@ -169,7 +169,7 @@ This table shows the recommended MariaDB version for each CMS:
 
 Users of Drupal 6 sites should consider [upgrading to the latest version of Drupal](/drupal-updates) for better support.
 
-#### Considerations - Drupal 9
+#### Considerations - Drupal
 
 <Partial file="drupal/drupal-mariadb-considerations.md" />
 

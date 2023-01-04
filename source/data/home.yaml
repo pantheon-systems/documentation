@@ -68,9 +68,9 @@
     links:
       - text: 'Terminus Guide'
         url: '/terminus/'
-      - text: 'Upgrade to Drupal 9'
+      - text: 'Upgrade to the Latest Version of Drupal'
         url: '/drupal-migration'
-      - text: 'Pantheon Solr Search for Drupal 9'
+      - text: 'Pantheon Solr Search for Drupal'
         url: '/guides/solr-drupal/solr-drupal'
       - text: 'Domains and Redirects'
         url: '/guides/domains/'
@@ -81,9 +81,9 @@
     links:
       - text: 'Terminus Guide'
         url: '/terminus/'
-      - text: 'Upgrade to Drupal 9'
+      - text: 'Upgrade to the Latest Version of Drupal'
         url: '/drupal-migration'
-      - text: 'Pantheon Solr Search for Drupal 9'
+      - text: 'Pantheon Solr Search for Drupal'
         url: '/guides/solr-drupal/solr-drupal'
       - text: 'Launch Essentials'
         url: '/guides/launch/'

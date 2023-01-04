@@ -10,7 +10,7 @@ reviewed: ""
 
 This section is optional, but recommended.
 
-Before you attempt to upgrade to Drupal 9, confirm that the site is ready with the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal module.
+Before you attempt to upgrade to the latest version of Drupal, confirm that the site is ready with the [Upgrade Status](https://www.drupal.org/project/upgrade_status) Drupal module.
 
 Converting a Drupal site that is not managed by Composer (`drops-8`) to use [Integrated Composer](/guides/integrated-composer) is time-consuming. Upgrade Status helps find potential issues before you invest the time to convert the site.
 
