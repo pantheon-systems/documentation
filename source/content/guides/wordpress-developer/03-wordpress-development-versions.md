@@ -1,6 +1,6 @@
 ---
 title: WordPress Developer's Guide
-subtitle: Testing WordPress Core Development Versions
+subtitle: Test WordPress Core Development Versions
 description: Learn how to test WordPress core updates using nightly builds of the current release or bleeding edge.
 cms: "WordPress"
 contenttype: [guide]
@@ -28,7 +28,7 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core within WordPress Dashboard
 
-1. Set the connection mode to SFTP within the [Pantheon Site Dashboard](/guides/sftp) or with [Terminus](/terminus) if you are working on a Multidev environment:
+1. Set the [connection mode to **SFTP**](/guides/sftp) within the Pantheon Site Dashboard or with [Terminus](/terminus) if you are working on a Multidev environment:
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
@@ -40,21 +40,23 @@ Development versions and beta releases are not supported and should not be run o
  terminus wp <site>.<env> -- plugin install wordpress-beta-tester --activate --yes
  ```
 
-1. Go to **Tools**, select **WordPress Beta Tester**, select the update stream you want to use, and then click **Save**:
+1. Click **Tools**, select **WordPress Beta Tester**, and select the **update stream** you want to use:
    - [Point release nightlies](https://wordpress.org/download/nightly/): This contains the work that occurs on a branch in preparation for a x.x.x point release. This should be mostly stable but will be available before the branch is ready for beta.
    - [Bleeding edge nightlies](https://wordpress.org/download/beta): Choose this option to test 4.5 beta releases with the bleeding edge development code which may be unstable at times.
 
-1. Go to **Dashboard**, select **Updates**, and then click **Update Now**.
+1. Click **Save** to save your selection.
+
+1. Navigate to your **Dashboard**, select **Updates**, and then click **Update Now**.
 
 1. Verify the WordPress version using `terminus wp <site>.<env> -- core version` or check the bottom of any WordPress Dashboard page:
 
   > You are using a development version (4.5-beta1-36808). Cool! Please stay updated.
 
-1. Review configuration changes within the provided `wp-config-sample.php` file and add desired changes to `wp-config.php` for testing.
+1. Review configuration changes within the `wp-config-sample.php` file and add desired changes to `wp-config.php` for testing.
 
 ## Update Core Manually with Git
 
-1. Set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/terminus) if you are working on a Multidev environment.
+1. Set the [connection mode to **Git**](/guides/quickstart/connection-modes/#git-connection-mode) within the Pantheon Site Dashboard or with [Terminus](/terminus) if you are working on a Multidev environment.
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> git
