@@ -61,7 +61,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
  terminus wp <site>.<env> -- plugin install --activate solr-power
  ```
 
- Or for **WP Site Networks**:
+ Or for WP Site Networks:
 
  ```bash
  terminus wp <site>.<env> -- plugin install --activate --network solr-power
@@ -85,7 +85,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
  terminus wp <site>.<env> -- solr index
  ```
 
- For **WP Site Networks**, you must index all your subsites individually:
+ For WP Site Networks, you must index all your subsites individually:
 
  ```bash
  terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index

@@ -82,7 +82,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
   <Alert title="Warning" type="danger">
 
-  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform. Refer to the [Git guide](/guides/git/faq-git#does-pantheon-support-git-submodules) for more information.
+  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform. Refer to the [Git guide](/guides/git/faq-git) for more information.
 
   </Alert>
 
