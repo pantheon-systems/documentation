@@ -10,7 +10,6 @@ product: [--]
 integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
 type: guide
-showtoc: true
 permalink: docs/guides/support/curl
 anchorid: curl
 contributors: [whitneymeredith]
