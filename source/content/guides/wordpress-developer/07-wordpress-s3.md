@@ -82,7 +82,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
   <Alert title="Warning" type="danger">
 
-  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/guides/git/faq-git#does-pantheon-support-git-submodules)).
+  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform. Refer to the [Git guide](/guides/git/faq-git#does-pantheon-support-git-submodules) for more information.
 
   </Alert>
 
@@ -100,7 +100,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
    </Alert>
 
-1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
 1. Commit and push the new plugin and your `wp-config.php` file updates to the Dev environment, then switch to SFTP mode and activate the plugin:
 
@@ -139,7 +139,6 @@ Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blo
 ### Install and Deploy WP Offload Media
 
 Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offload-media/doc/quick-start-guide) to install and deploy WP Offload Media. No specialized configuration is required for this plugin to run on Pantheon.
-
 
 ## More Resources
 
