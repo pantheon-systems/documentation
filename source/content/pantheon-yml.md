@@ -195,7 +195,7 @@ For more information on how to diagnose tables and troubleshoot potential issues
 
 ### Specify a Solr Version
 
-Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal 9 sites:
+Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal sites:
 
 ```yaml:title=pantheon.yml
 search:
@@ -205,7 +205,7 @@ search:
 #### Considerations
 
 - The valid values for the versions are `3` and `8`.
-- Currently, Solr 8 is only supported for [Drupal 9](/guides/solr-drupal/solr-drupal) sites.
+- Currently, Solr 8 is only supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
 
 ### Drush Version
 

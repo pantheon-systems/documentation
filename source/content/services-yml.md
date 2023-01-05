@@ -30,7 +30,7 @@ The table below illustrates which services file is used in which Pantheon enviro
 
 ## Create and Modify services.yml
 
-1.  Make sure that you have updated your Drupal site to version 9.
+1.  Make sure that you have updated your Drupal site to version 9 or higher.
 
     <Alert title="Note"  type="info" >
 

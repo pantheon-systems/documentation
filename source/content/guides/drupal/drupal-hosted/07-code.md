@@ -31,7 +31,7 @@ integration: [--]
     git fetch existing
     ```
 
-1. Copy over exported configuration from the original site. From your drupal site, run the following commands:
+1. Copy over exported configuration from the original site. From your Drupal site, run the following commands:
 
      <Partial file="drupal/copy-exported-config.md" />
 
@@ -80,7 +80,7 @@ integration: [--]
 
     The command `pm:projectinfo` assumes Drush 8. If you encounter an issue with this command, [verify and configure the Drush version](/guides/drush/drush-versions) before you continue.
 
-1. Use Composer on your Drupal (Latest Version) site to add these there:
+1. Use Composer on your new site to add these there:
 
     ```bash{promptUser: user}
     composer require drupal/ctools:^3.4 drupal/redirect:^1.6 drupal/token:^1.7
@@ -107,7 +107,7 @@ integration: [--]
      
     </Alert>
   
-1. Push the Drupal (Latest Version) codebase from your local machine up to Pantheon:
+1. Push the new codebase from your local machine up to Pantheon:
 
     ```bash{promptUser: user}
     terminus connection:set $DRUPAL_SITE.dev git
