@@ -35,7 +35,7 @@ You must add the Index Server to your site before you can use Solr on WordPress:
 
 1. Navigate to your Dashboard and select **Settings**.
 
-1. Select **Add Ons**, and then select **Apache Solr Index Server: Add**:
+1. Select **Add Ons**, and then click the **Add** button under **Apache Solr Index Server**.
 
 ![Enable Solr from The Site Dashboard](../../../images/dashboard/settings-addons-solr.png)
 
@@ -61,7 +61,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
  terminus wp <site>.<env> -- plugin install --activate solr-power
  ```
 
- Or for WP Site Networks:
+ Or for **WP Site Networks**:
 
  ```bash
  terminus wp <site>.<env> -- plugin install --activate --network solr-power
@@ -79,13 +79,13 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
    </Alert>
 
-1. Index all publicly queryable post types: navigate to the **Actions** tab and click **Start Index** next to **Index Searchable Post Types**, or via Terminus:
+1. Navigate to the **Actions** tab and click **Start Index** next to **Index Searchable Post Types** to index all publicly queryable post types, or via Terminus:
 
  ```bash
  terminus wp <site>.<env> -- solr index
  ```
 
- For WP Site Networks, you must index all your subsites individually:
+ For **WP Site Networks**, you must index all your subsites individually:
 
  ```bash
  terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
