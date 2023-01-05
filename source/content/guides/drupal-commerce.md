@@ -30,8 +30,6 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
   Drupal 8 reached end-of-life status in November 2021, and is no longer supported by Drupal. Read the [official announcement on Drupal.org](https://www.drupal.org/psa-2021-06-29).
 
-  Drupal 10 was released in December of 2022. Read the [official announcement on Drupal.org](https://www.drupal.org/blog/drupal-10-0-0). 
-
   </Alert>
 
 1. Follow the [Before You Begin](/guides/build-tools/create-project/#prerequisites) section of the Build Tools guide to install Terminus and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use) and [CircleCI](https://circleci.com/account/api). Export the tokens to your current terminal session, as described below.

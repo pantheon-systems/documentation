@@ -144,9 +144,9 @@ You must enable cookies for WordPress users to log in to their admin interface. 
 define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 ```
 
-## Drupal 7
+## Drupal
 
-Are you a Drupal 7 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
+Are you a Drupal wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
 
 ### Displaying Error Messages
 

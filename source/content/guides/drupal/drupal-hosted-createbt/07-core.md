@@ -1,5 +1,5 @@
 ---
-title: Upgrade a Site That Was Created with Build Tools to Drupal latest
+title: Upgrade a Site That Was Created with Build Tools to the Latest Version of Drupal
 subtitle: Upgrade Drupal Core Using Composer
 description: 
 cms: "Drupal"

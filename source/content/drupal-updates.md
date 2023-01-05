@@ -85,6 +85,6 @@ Migrations of particularly large sites to updated Drupal versions can sometimes 
 
 ## More Resources
 
-- [Drupal](/drupal)
+- [Drupal on Pantheon](/drupal)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)

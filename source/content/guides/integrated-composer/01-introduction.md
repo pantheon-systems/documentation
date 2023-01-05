@@ -23,7 +23,7 @@ Integrated Composer is a Pantheon platform feature that extends Composer <Popove
 
 ### Drupal with Integrated Composer
 
-- Follow the [Drupal](/drupal) doc to create a new Drupal site with Integrated Composer built in.
+- Follow the [Drupal on Pantheon](/drupal) doc to create a new Drupal site with Integrated Composer built in.
 
 - To upgrade or migrate an existing site to Drupal with Integrated Composer, visit the [Migrate to Drupal](/drupal-migration) guide.
 

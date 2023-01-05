@@ -2,7 +2,7 @@
 title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Introduction
 description: Learn how to migrate a Custom Upstream to the latest version of Drupal
-cms: "Drupal latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

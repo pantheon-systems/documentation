@@ -81,5 +81,5 @@ Ask questions in our Slack [#drupal channel](https://pantheon-community.slack.co
 
 ## More Resources
 
-- [Drupal 9](/drupal)
+- [Drupal on Pantheon](/drupal)
 - [Using Drupal with Pantheon](/develop-drupal)

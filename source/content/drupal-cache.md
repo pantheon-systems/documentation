@@ -17,7 +17,7 @@ Learn industry best practices for Drupal caching, how to take advantage of them 
 
 </Enablement>
 
-## Drupal (Latest Version) Performance Configuration
+## Latest Version of Drupal
 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
@@ -51,7 +51,7 @@ composer require drupal/pantheon_advanced_page_cache
 git commit -am "add pantheon advanced page cache module" && git push origin master
 ```
 
-## Drupal Performance Configuration
+## Prior Versions of Drupal
 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 

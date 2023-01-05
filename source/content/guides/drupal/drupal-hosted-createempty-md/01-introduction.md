@@ -2,7 +2,7 @@
 title: Upgrade a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
 subtitle: Introduction
 description: 
-cms: "Drupal latest"
+cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
