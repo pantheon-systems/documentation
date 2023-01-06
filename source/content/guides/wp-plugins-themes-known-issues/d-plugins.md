@@ -1,7 +1,7 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
-subtitle: "D" Plugins
-description: A list of WordPress plugins beginning with "D" that are not supported and/or require workarounds.
+subtitle: D Plugins
+description: A list of WordPress plugins beginning with D that are not supported and/or require workarounds.
 cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]

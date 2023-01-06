@@ -1,7 +1,7 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
-subtitle: "C" Plugins
-description: A list of WordPress plugins beginning with "C" that are not supported and/or require workarounds.
+subtitle: C Plugins
+description: A list of WordPress plugins beginning with C that are not supported and/or require workarounds.
 cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]

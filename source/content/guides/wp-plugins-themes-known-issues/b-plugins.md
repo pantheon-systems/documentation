@@ -1,7 +1,7 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
-subtitle: "B" Plugins
-description: A list of WordPress plugins beginning with "B" that are not supported and/or require workarounds.
+subtitle: B Plugins
+description: A list of WordPress plugins beginning with B that are not supported and/or require workarounds.
 cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
