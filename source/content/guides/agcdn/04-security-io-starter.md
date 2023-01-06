@@ -16,11 +16,11 @@ product: [--]
 integration: [--]
 ---
 
-This section provides detailed information on AGCDN with WAF and IO features. AGCDN with WAF/IO includes all [AGCDN features](/guides/agcdn/agcdn-features) and the additional features below.
+This section provides information on Security Starter and IO Starter packages for AGCDN. Security Starter and IO Starter are 
 
 ## Security Starter
 
-Improve security and maintain compliance with Pantheon's Security Starter. This feature includes:
+Improve security and maintain compliance with Pantheon's Security Starter, which includes:
 
 - [IP allowlist/blocklist](/guides/agcdn/agcdn-features#ip-allowlisting-and-blocklisting)
 
@@ -32,5 +32,10 @@ Improve security and maintain compliance with Pantheon's Security Starter. This 
 
 - Geolocation-based Edge Control
 
-## IO (Image Optimization) Starter
+## IO Starter
 
+Speed up page load times with Image Optimization, which includes:
+
+- WebP image format
+
+- Auto Progressive JPEG
