@@ -93,14 +93,11 @@ You can also use Terminus and WP-CLI to:
 - Execute existing jobs
 - Manage WP-Cron related features
 
-Use the following command to test WP-Cron and ensure everything is working correctly:
+Use the command below to test WP-Cron and ensure everything is working correctly. Replace `<SITE_NAME>` with your site's name and replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name.
 
 ```bash{promptUser: user}
 terminus wp <SITE_NAME>.<ENV-NAME> -- cron test
 ```
-
-- Replace `<SITE_NAME>` with your site's name
-- Replace `<ENV_NAME>` with the desired environment ("dev", "test", "live", or the Multidev branch name)
 
 You will receive the status of WP-Cron's functionality. You will receive a response similar to the one below if this is a WordPress site on the Pantheon upstream now running on Pantheon Cron:
 
@@ -132,11 +129,11 @@ Terminus cannot execute cron jobs if you enable the Security setting on your Das
 
 ### Enable WP-Cron
 
-Pantheon's WordPress upstream disables WP-Cron by default in favor of Pantheon Cron.
+Pantheon's WordPress upstream disables WP-Cron by default in favor of Pantheon Cron. However, you can enable WP-Cron if you prefer to use it instead of Pantheon Cron.
 
-Add the code below to your `wp-config.php` file to enable WP-Cron's internal processing if you want to use WP-Cron:
+1. Locate the `require_once` expression that pulls in `wp-config-pantheon.php` in your `wp-config.php` file.
 
-This line must be above the `require_once` expression that pulls in `wp-config-pantheon.php`:
+1. Add the following code *above* the `require_once` expression to enable WP-Cron's internal processing:
 
 ```php:title=wp-config.php
 define('DISABLE_WP_CRON', false);
