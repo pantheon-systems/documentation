@@ -1023,7 +1023,7 @@ export ENV=dev
 
 </Alert>
 
-1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes) in the dashboard or via Terminus:
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.$ENV git
@@ -1097,7 +1097,7 @@ Complete this step in Dev, Test, and Live Environments.
   exit
   ```
 
-1. Set the environment connection mode to SFTP, then install and activate Wordfence. You can do both with Terminus:
+1. Set the environment [connection mode to SFTP](/cms-admin#sftp-mode), then install and activate Wordfence. You can do both with Terminus:
 
   ```bash{outputLines: 2,4-25}
   terminus connection:set $SITE.$ENV sftp
