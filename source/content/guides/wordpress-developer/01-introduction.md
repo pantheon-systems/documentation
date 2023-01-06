@@ -12,11 +12,12 @@ tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"
 layout: guide
+showtoc: true
 permalink: docs/guides/wordpress-developer
 anchorid: wordpress-developer
 ---
 
-Pantheon provides powerful on-server and [local development](/guides/local-development) tools, including [Terminus](/terminus) and [Multidev](/guides/multidev), as well as a wide-range of integrations, including WP-CLI and JetBrains PhpStorm for WordPress. This guide provides best practices to help you develop and maintain your WordPress site on Pantheon, including:
+Pantheon provides powerful on-server and [local development](/guides/local-development) tools for WordPress, including [Terminus](/terminus) and [Multidev](/guides/multidev), as well as a wide-range of integrations, including WP-CLI and JetBrains PhpStorm. This guide provides best practices to help you develop and maintain your WordPress site on Pantheon, including:
 
 - License key management for plugins or themes
 - WordPress Core Development Version Test

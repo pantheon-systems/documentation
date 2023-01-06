@@ -135,9 +135,9 @@ Pantheon's WordPress upstream disables WP-Cron by default in favor of Pantheon C
 
 1. Add the following code *above* the `require_once` expression to enable WP-Cron's internal processing:
 
-```php:title=wp-config.php
-define('DISABLE_WP_CRON', false);
-```
+    ```php:title=wp-config.php
+    define('DISABLE_WP_CRON', false);
+    ```
 
 ### Plugins
 

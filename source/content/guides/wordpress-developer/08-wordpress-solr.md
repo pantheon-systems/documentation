@@ -47,7 +47,7 @@ Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https:/
 
 This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](/guides/php/php-versions) for more information on switching PHP versions.
 
-## Install and Configure the Solr Search for WordPress Plugin
+### Install and Configure the Solr Search for WordPress Plugin
 
 1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/guides/sftp) via the Pantheon Dashboard, or with [Terminus](/terminus):
 
@@ -79,7 +79,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
    </Alert>
 
-1. Navigate to the **Actions** tab and click **Start Index** next to **Index Searchable Post Types** to index all publicly queryable post types, or via Terminus:
+1. Navigate to the **Actions** tab and click **Start Index** (next to **Index Searchable Post Types**) to index all publicly queryable post types, or via Terminus:
 
  ```bash
  terminus wp <site>.<env> -- solr index
@@ -93,7 +93,7 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 1. Deploy the plugin to the site's Test and Live environments after validation and testing.
 
-## Set up Front-end AJAX Search Bar
+### Set up Front-end AJAX Search Bar
 
 1. Open **Appearance**, select **Widgets**, and then add the Solr Search Widget in your desired widget position.
 
@@ -137,7 +137,7 @@ This plugin is under active development on [GitHub](https://github.com/pantheon-
 
 New, deleted, and modified posts and pages are automatically added to the Solr index. However, you must re-index the site if you modify the indexing options within **Solr Power**.
 
-Navigate to the **Actions** tab an manually re-index the site.
+Navigate to the **Actions** tab and manually re-index the site.
 
 ### Enable Solr for AJAX and WordPress Dashboard
 

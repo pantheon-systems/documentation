@@ -42,7 +42,7 @@ Development versions and beta releases are not supported and should not be run o
 
 1. Click **Tools**, select **WordPress Beta Tester**, and select the **update stream** you want to use:
    - [Point release nightlies](https://wordpress.org/download/nightly/): This contains the work that occurs on a branch in preparation for a x.x.x point release. This should be mostly stable but will be available before the branch is ready for beta.
-   - [Bleeding edge nightlies](https://wordpress.org/download/beta): Choose this option to test 4.5 beta releases with the bleeding edge development code which may be unstable at times.
+   - [Bleeding edge nightlies](https://wordpress.org/download/beta): Choose this option to test beta releases with the bleeding edge development code which may be unstable at times.
 
 1. Click **Save** to save your selection.
 
@@ -56,7 +56,7 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core Manually with Git
 
-1. Set the [connection mode to **Git**](/guides/quickstart/connection-modes/#git-connection-mode) within the Pantheon Site Dashboard or with [Terminus](/terminus) if you are working on a Multidev environment.
+1. Set the [connection mode to **Git**](/guides/quickstart/connection-modes/#git-connection-mode) within the Pantheon Site Dashboard, or with [Terminus](/terminus) if you are working on a Multidev environment.
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> git
@@ -73,13 +73,13 @@ Development versions and beta releases are not supported and should not be run o
 1. Determine which update stream you want to use:
 
     - [Point release nightlies](https://wordpress.org/download/beta-nightly/):
-     Run `git tag` to identify the latest development tag (currently 4.4.2), and then merge:
+     Run `git tag` to identify the latest development tag, and then merge:
 
      ```bash{promptUser: user}
      git merge --squash -s recursive -X theirs tags/4.4.2
      ```
 
-    - [Bleeding edge nightlies](https://wordpress.org/download/beta): Choose this option to test 4.5 beta releases:
+    - [Bleeding edge nightlies](https://wordpress.org/download/beta): Choose this option to test beta releases:
 
      ```bash{promptUser: user}
      git merge --squash -s recursive -X theirs WordPress/master
@@ -94,7 +94,7 @@ Development versions and beta releases are not supported and should not be run o
  git push origin wpcore
  ```
 
-1. Optional. Select **Multidev**, select **Git Branches**, and then select **Create Environment** next to the `wpcore` branch name to create the Multidev from within the Site Dashboard.
+1. Optional. Select **Multidev**, select **Git Branches**, then select **Create Environment** next to the `wpcore` branch name to create the Multidev from within the Site Dashboard.
 
 ## Troubleshooting
 
