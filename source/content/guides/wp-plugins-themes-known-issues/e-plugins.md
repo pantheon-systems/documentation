@@ -14,8 +14,8 @@ reviewed: "2022-03-24"
 contenttype: [guide]
 layout: guide
 showtoc: true
-permalink: docs/guides/wp-plugins-themes-known-issues/e
-anchorid: e
+permalink: docs/guides/wp-plugins-themes-known-issues/e-plugins
+anchorid: e-plugins
 ---
 
 

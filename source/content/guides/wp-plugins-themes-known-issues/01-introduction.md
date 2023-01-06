@@ -22,31 +22,31 @@ Proof of concept: An A to Z directory of plugins with known issues.
 
 <CardGroup>
 
-  <Card title={"A"} link={"/guides/wp-plugins-themes-known-issues/a"}>
+  <Card title={"A"} link={"/guides/wp-plugins-themes-known-issues/a-plugins"}>
 
 Plugins beginning with A with known issues.
 
   </Card>
 
-  <Card title={"B"} link={"/guides/wp-plugins-themes-known-issues/b"}>
+  <Card title={"B"} link={"/guides/wp-plugins-themes-known-issues/b-plugins"}>
 
 Plugins beginning with B with known issues.
 
   </Card>
 
-<Card title={"C"} link={"/guides/wp-plugins-themes-known-issues/c"}>
+<Card title={"C"} link={"/guides/wp-plugins-themes-known-issues/c-plugins"}>
 
 Plugins beginning with C with known issues.
 
   </Card>
 
-  <Card title={"D"} link={"/guides/wp-plugins-themes-known-issues/d"}>
+  <Card title={"D"} link={"/guides/wp-plugins-themes-known-issues/d-plugins"}>
 
 Plugins beginning with D with known issues.
 
   </Card>
 
-  <Card title={"E"} link={"/guides/wp-plugins-themes-known-issues/e"}>
+  <Card title={"E"} link={"/guides/wp-plugins-themes-known-issues/e-plugins"}>
 
 Plugins beginning with E with known issues.
 
