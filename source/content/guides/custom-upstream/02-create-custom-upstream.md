@@ -181,8 +181,14 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     <Tab title="Drupal (Latest Version)" id="dlatest">
 
+    <Alert title="Note" type="info" >
+    
+    This repository has not yet been released.  This page will be updated with the correct code when it is released.
+
+    </Alert>
+
     ```bash{promptUser: user}
-    git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-universal.git
+    git remote add pantheon-drupal https://github.com/pantheon-upstreams/---.git
     ```
     </Tab>
 
