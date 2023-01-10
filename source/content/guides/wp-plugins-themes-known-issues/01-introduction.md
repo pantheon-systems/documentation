@@ -1,5 +1,5 @@
 ---
-title: WordPress Plugins and Themes with Known Issues
+title: WordPress Plugins and Themes with Known Issues Directory
 subtitle: Introduction
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 cms: "WordPress"
@@ -18,13 +18,13 @@ permalink: docs/guides/wp-plugins-themes-known-issues
 anchorid: wp-plugins-themes-known-issues
 ---
 
-Proof of concept: An A to Z directory of plugins with known issues.
+Proof of concept: An A to Z directory of plugins and themes with known issues.
 
 <CardGroup>
 
   <Card title={"A Plugins"} link={"https://pantheon.io/docs/guides/wp-plugins-themes-known-issues/a-plugins"}>
 
-    Plugins beginning with A with known issues.
+   'A' plugins with known issues.
 
   </Card>
 
