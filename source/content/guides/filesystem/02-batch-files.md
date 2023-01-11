@@ -59,5 +59,5 @@ This allows you to export larger data sets because the command line processes ha
 ## More Resources
 
 - [All About Application Containers](/application-containers)
-- [Cron for WordPress](/wordpress-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron)
 - [Cron for Drupal](/drupal-cron)

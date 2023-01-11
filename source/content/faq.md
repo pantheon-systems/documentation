@@ -107,7 +107,7 @@ The platform will use Drush to run cron on an hourly basis automatically. More f
 
 ### How does cron work with WordPress on Pantheon?
 
-WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, refer to [Cron for WordPress](/wordpress-cron).
+WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, refer to [Cron for WordPress](/guides/wordpress-developer/wordpress-cron).
 
 ### Can I host a multilingual site?
 
@@ -141,7 +141,7 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 <Partial file="solr-version.md" />
 
-Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/guides/wordpress-configurations/wordpress-solr) and [Drupal 7](/guides/solr-drupal/solr-drupal-7).
+Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/guides/wordpress-developer/wordpress-solr) and [Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Support
 

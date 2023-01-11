@@ -347,5 +347,5 @@ Be sure to push to your new origin repo on GitHub if you usually use only the Pa
 
 ## More Resources
 
-- [Cron for WordPress](/wordpress-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron)
 - [Cron for Drupal](/drupal-cron)

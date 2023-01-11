@@ -101,7 +101,7 @@ Both Drupal and WordPress rely on running regular maintenance tasks via a cron s
 
 For Drupal sites, Pantheon executes the cron every hour via Drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/drupal-cron).
 
-This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/wordpress-cron).
+This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/guides/wordpress-developer/wordpress-cron).
 
 ## External Call Timeouts
 

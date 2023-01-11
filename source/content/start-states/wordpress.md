@@ -71,7 +71,7 @@ Pantheon will automatically resolve these conflicts when you click the `Apply Up
 
 #### <a name="20220426-3" class="release-update"></a>Re-enable WP-Cron for site networks
 
-Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. This change reenabled WP-Cron for WordPress Site Networks. You can read more about WP-Cron for WordPress Site Networks [here](/wordpress-cron#wordpress-site-networks).
+Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. This change reenabled WP-Cron for WordPress Site Networks. You can read more about WP-Cron for WordPress Site Networks [here](/guides/wordpress-developer/wordpress-cron#wordpress-site-networks).
 
 #### <a name="20220426-2" class="release-update"></a>Add documentation to readme outlining branches
 
@@ -85,16 +85,16 @@ When this constant is not set, WordPress writes and then deletes a temporary fil
 
 #### <a name="20220405-2" class="release-update"></a>Allow DISABLE_WP_CRON to be overridden
 
-Allowed customers to override DISABLE_WP_CRON by defining this constant in their wp-config.php before wp-config-pantheon.php is required. Read more about enabling WP-Cron [here](/wordpress-cron#enable-wp-cron).
+Allowed customers to override DISABLE_WP_CRON by defining this constant in their wp-config.php before wp-config-pantheon.php is required. Read more about enabling WP-Cron [here](/guides/wordpress-developer/wordpress-cron#enable-wp-cron).
 
 #### <a name="20220405-1" class="release-update"></a>Disable WP-Cron
 
-Disabled `wp-cron.php` from running on every page load and rely on Pantheon to run cron via WP-CLI. Read more about WP-Cron [here](/wordpress-cron).
+Disabled `wp-cron.php` from running on every page load and rely on Pantheon to run cron via WP-CLI. Read more about WP-Cron [here](/guides/wordpress-developer/wordpress-cron).
 
 ## Related Links
 
 - [Pantheon Start States](/start-states)
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
-- [WordPress Best Practices](/wordpress-best-practices)
+- [WordPress Best Practices](/guides/wordpress-developer/wordpress-best-practices)
 - [WordPress and Drupal Core Updates](/core-updates)
 - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)

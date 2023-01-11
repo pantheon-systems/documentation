@@ -77,4 +77,4 @@ Review the resources below for additional developer tools and knowledge specific
 - [Terminus](/terminus)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 - [Git on Pantheon](/guides/git)
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
