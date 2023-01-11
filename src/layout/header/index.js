@@ -2,6 +2,26 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 import AddSearch from "../../components/addSearch"
+import Loadable from 'react-loadable';
+
+import config from "../../../config.js";
+
+const isSearchEnabled = config.search && config.search.enabled ? true : false;
+
+let searchIndices = [];
+
+if (isSearchEnabled && config.search.indexName) {
+  searchIndices.push({
+    name: `${config.search.indexName}`,
+    title: `Results`,
+    hitComp: `PageHit`,
+  });
+}
+
+const LoadableComponent = Loadable({
+  loader: () => import('../../components/search/index'),
+  loading: 'Loading',
+});
 
 const Header = ({ data, page }) => (
   <>
@@ -153,6 +173,13 @@ const Header = ({ data, page }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
+
+              {isSearchEnabled ? (
+                <div className={'searchWrapper hiddenMobile navBarUL'}>
+                  <LoadableComponent collapse={true} indices={searchIndices} />
+                </div>
+              ) : null}
+              
               <form
                 id="searchform"
                 action="/docs/search"
