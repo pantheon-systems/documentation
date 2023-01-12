@@ -72,7 +72,7 @@ Now you're going to copy files and folders from the Pantheon GitHub repository f
 
 ## Update Composer Settings
 
-Add/modify the settings in `composer.json` as follows:
+Add/modify the settings in `composer.json` as follows, replacing the Drupal values with the latest version:
 
 1. Add the `upstream-configuration` path repository:
 
