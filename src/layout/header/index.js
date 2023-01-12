@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
-import AddSearch from "../../components/addSearch"
 import Loadable from 'react-loadable';
 
 import config from "../../../config.js";
@@ -173,32 +172,11 @@ const Header = ({ data, page }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
-
               {isSearchEnabled ? (
                 <div className={'searchWrapper hiddenMobile navBarUL'}>
                   <LoadableComponent collapse={true} indices={searchIndices} />
                 </div>
               ) : null}
-              
-              <form
-                id="searchform"
-                action="/docs/search"
-                role="search"
-                acceptCharset="UTF-8"
-                encType="application/x-www-form-urlencoded"
-                title="Search Pantheon Documentation form"
-              >
-                <input
-                  type="search"
-                  className="addsearch"
-                  placeholder="Search Pantheon Documentation"
-                  aria-label="Search through documentation"
-                />
-                { page == "default" ?
-                  <AddSearch />
-                  : null
-                }
-              </form>
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
                 aria-hidden="true"
