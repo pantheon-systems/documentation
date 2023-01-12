@@ -7,13 +7,12 @@ export default connectSearchBox(({ refine, ...rest }) => {
   };
 
   return (
-    <form className={'formElement'} onSubmit={preventSubmit}>
-      {/* <SearchIcon /> */}
+    <form className={'formElement'} onSubmit={preventSubmit} role="search">
       <input
-        className={'searchInput '}
-        type="text"
-        placeholder="Search"
-        aria-label="Search"
+        className={'searchInput'}
+        type="search"
+        placeholder="Search Pantheon Documentation"
+        aria-label="Search through documentation"
         onChange={(e) => refine(e.target.value)}
         {...rest}
       />

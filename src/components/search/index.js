@@ -9,10 +9,12 @@ import {
 import algoliasearch from 'algoliasearch/lite';
 import config from '../../../config';
 
+import { PoweredBy } from './styles';
 import Input from './input';
 import * as hitComps from './hitComps';
+import './style.css';
 
-const Root = () => <div></div>
+const Root = () => <div className='search-container-styles-root'></div>
 
 const Results = connectStateResults(
   ({ searching, searchState: state, searchResults: res }) => (searching && `Searching...`) || (res && res.nbHits === 0 && `No results for '${state.query}'`)
@@ -44,6 +46,8 @@ export default function SearchComponent({ indices, collapse, hitsAsGrid }) {
   useClickOutside(ref, () => setFocus(false));
   const displayResult = query.length > 0 && focus ? 'showResults' : 'hideResults';
 
+  const showStatus = query.length > 0 && focus
+
   return (
     <InstantSearch
       searchClient={searchClient}
@@ -53,7 +57,8 @@ export default function SearchComponent({ indices, collapse, hitsAsGrid }) {
     >
       <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
       <div
-        className={'hitWrapper ' + displayResult}
+        style={{ display: showStatus ? 'grid' : 'none' }}
+        className={'search-container-styles hitWrapper ' + displayResult}
         show={query.length > 0 && focus}
         asGrid={hitsAsGrid}
       >
@@ -61,11 +66,13 @@ export default function SearchComponent({ indices, collapse, hitsAsGrid }) {
           return (
             <Index key={name} indexName={name}>
               <Results />
-              <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
+              <div className="addsearch-container">
+                <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
+              </div>
             </Index>
           );
         })}
-        {/* <PoweredBy /> */}
+        <PoweredBy />
       </div>
       <Configure hitsPerPage={5} />
     </InstantSearch>
