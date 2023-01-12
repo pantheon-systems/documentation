@@ -7,9 +7,8 @@ export default connectSearchBox(({ refine, ...rest }) => {
   };
 
   return (
-    <form className={'formElement'} onSubmit={preventSubmit} role="search">
+    <form onSubmit={preventSubmit} role="search">
       <input
-        className={'searchInput'}
         type="search"
         placeholder="Search Pantheon Documentation"
         aria-label="Search through documentation"
