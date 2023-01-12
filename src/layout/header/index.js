@@ -173,9 +173,7 @@ const Header = ({ data, page }) => (
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
               {isSearchEnabled ? (
-                <div className={'searchWrapper hiddenMobile navBarUL'}>
-                  <LoadableComponent collapse={true} indices={searchIndices} />
-                </div>
+                  <LoadableComponent collapse="true" indices={searchIndices} />
               ) : null}
               <span
                 className="glyphicon glyphicon-search form-control-feedback"

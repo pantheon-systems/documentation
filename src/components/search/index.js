@@ -14,8 +14,6 @@ import Input from './input';
 import * as hitComps from './hitComps';
 import './style.css';
 
-const Root = () => <div className='search-container-styles-root'></div>
-
 const Results = connectStateResults(
   ({ searching, searchState: state, searchResults: res }) => (searching && `Searching...`) || (res && res.nbHits === 0 && `No results for '${state.query}'`)
 );
@@ -38,13 +36,13 @@ const searchClient = algoliasearch(
   config.search.algoliaSearchKey
 );
 
-export default function SearchComponent({ indices, collapse, hitsAsGrid }) {
+export default function SearchComponent({ indices, collapse }) {
   const ref = createRef();
   const [query, setQuery] = useState(``);
-  const [focus, setFocus] = useState(false);
+  const [focus, setFocus] = useState("false");
 
-  useClickOutside(ref, () => setFocus(false));
-  const displayResult = query.length > 0 && focus ? 'showResults' : 'hideResults';
+  useClickOutside(ref, () => setFocus("false"));
+  // const displayResult = query.length > 0 && focus ? 'showResults' : 'hideResults';
 
   const showStatus = query.length > 0 && focus
 
@@ -53,21 +51,20 @@ export default function SearchComponent({ indices, collapse, hitsAsGrid }) {
       searchClient={searchClient}
       indexName={indices[0].name}
       onSearchStateChange={({ query }) => setQuery(query)}
-      root={{ Root, props: { ref } }}
+      root={{ Root: <div className='search-container-styles-root'/>, props: { ref } }}
     >
-      <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
+      <Input onFocus={() => setFocus("true")} {...{ collapse, focus }} />
       <div
         style={{ display: showStatus ? 'grid' : 'none' }}
-        className={'search-container-styles hitWrapper ' + displayResult}
-        show={query.length > 0 && focus}
-        asGrid={hitsAsGrid}
+        className='search-container-styles'
+        show={query.length > 0 && focus ? 'true' : undefined}
       >
-        {indices.map(({ name, title, hitComp, type }) => {
+        {indices.map(({ name, hitComp }) => {
           return (
             <Index key={name} indexName={name}>
               <Results />
               <div className="addsearch-container">
-                <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
+                <Hits hitComponent={hitComps[hitComp](() => setFocus("false"))} />
               </div>
             </Index>
           );

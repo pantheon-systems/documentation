@@ -669,7 +669,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   }
 
   .navbar-collapse.in {
-    overflow-y: visible;
+    overflow-y: visible !important;
   }
   /* dropdown */
   .navbar-nav .dropdown .dropdown-menu li > a {
