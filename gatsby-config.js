@@ -1,6 +1,6 @@
 const dotenv = require("dotenv")
-const queries = require("./src/utils/algolia");
-const config = require("./config");
+const queries = require("./src/algolia/index");
+const config = require("./src/algolia/config");
 
 // load environment specific configurations.
 dotenv.config({

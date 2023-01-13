@@ -7,7 +7,7 @@ import {
   connectStateResults,
 } from 'react-instantsearch-dom';
 import algoliasearch from 'algoliasearch/lite';
-import config from '../../../config';
+import config from '../../algolia/config';
 
 import { PoweredBy } from './styles';
 import Input from './input';
