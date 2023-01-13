@@ -3,7 +3,7 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 import Loadable from 'react-loadable';
 
-import config from "../../../config.js";
+import config from "../../algolia/config";
 
 const isSearchEnabled = config.search && config.search.enabled ? true : false;
 
