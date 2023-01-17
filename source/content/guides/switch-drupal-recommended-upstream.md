@@ -19,7 +19,7 @@ In this guide, we will convert an existing site from the Drupal (`drupal9`) upst
 
 ## Overview
 
-Drupal sites created on the platform prior to November 30, 2021 use the [the latest Drupal](https://github.com/pantheon-upstreams/drupal-project) upstream. Drupal sites created on the platform prior to May 4, 2021 use the [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
+Drupal sites created on the platform prior to November 30, 2021 use [the latest Drupal](https://github.com/pantheon-upstreams/drupal-project) upstream. Drupal sites created on the platform prior to May 4, 2021 use the [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-recommended) upstream.
 
 Based on community needs, we have released a new upstream. [Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) is now the default Drupal upstream on the platform and users are encouraged to switch to it to take advantage of the improved structure and updates.
 

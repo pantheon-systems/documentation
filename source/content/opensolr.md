@@ -35,7 +35,7 @@ This doc covers Opensolr configuration for Drupal sites. For WordPress-Opensolr 
 This doc assumes that you have already enabled:
 
 - **Drupal 7** the [ApacheSolr](https://www.drupal.org/project/apachesolr) module
-- **Drupal (Latest)** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module using Composer (required by Search API Solr to manage dependencies). 
+- **Drupal (Latest Version)** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module using Composer (required by Search API Solr to manage dependencies). 
 
 ## Create a New Index
 
