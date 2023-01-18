@@ -173,7 +173,7 @@ Enter the following command, replacing `$ENV` with the environment:
 terminus drush $SITE.$ENV -- pm-enable search_api_pantheon search_api_pantheon_admin
 ```
 
-You might also want to enable the modules from the site’s Extend page located in `/admin/modules`.
+You can also want to enable the modules from the site’s Extend page located in `/admin/modules`.
 
 ## Configure Pantheon Search
 
