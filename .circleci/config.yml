@@ -8,6 +8,8 @@ workflows:
   build-preview-test-deploy:
     jobs:
       - pfe/gatsby-build-and-deploy:
+          environment:
+            NPM_CONFIG_LEGACY_PEER_DEPS: true
           use-yarn: false
           deployment-path: docs
           # https://circleci.com/docs/2.0/configuration-reference/#docker-executor
@@ -18,6 +20,10 @@ workflows:
           gatsby-cache-version: "v1.8.23"
           pre-steps:
             - checkout
+            - run: 
+                name: Adding legacy-peer-deps config for npm
+                command: echo 'export NPM_CONFIG_LEGACY_PEER_DEPS=true' >> "$BASH_ENV"
+            source "$BASH_ENV"
             - run:
                 name: Import Functions and Variables
                 command: .circleci/scripts/set-env.sh && source $BASH_ENV
