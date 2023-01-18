@@ -8,8 +8,6 @@ workflows:
   build-preview-test-deploy:
     jobs:
       - pfe/gatsby-build-and-deploy:
-          environment:
-            NPM_CONFIG_LEGACY_PEER_DEPS: true
           use-yarn: false
           deployment-path: docs
           # https://circleci.com/docs/2.0/configuration-reference/#docker-executor
