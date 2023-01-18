@@ -17,9 +17,11 @@ if (isSearchEnabled && config.search.indexName) {
   });
 }
 
+const Loading = () => <span>Loading</span>;
+
 const LoadableComponent = Loadable({
   loader: () => import('../../components/search/index'),
-  loading: 'Loading',
+  loading: Loading,
 });
 
 const Header = ({ data, page }) => (

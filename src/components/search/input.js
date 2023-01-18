@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connectSearchBox } from 'react-instantsearch-dom';
 
-export default connectSearchBox(({ refine, ...rest }) => {
+export default connectSearchBox(({ refine }) => {
   const preventSubmit = (e) => {
     e.preventDefault();
   };
@@ -13,7 +13,6 @@ export default connectSearchBox(({ refine, ...rest }) => {
         placeholder="Search Pantheon Documentation"
         aria-label="Search through documentation"
         onChange={(e) => refine(e.target.value)}
-        {...rest}
       />
     </form>
   );

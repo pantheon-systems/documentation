@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Highlight, Snippet } from 'react-instantsearch-dom';
 import { Link } from 'gatsby';
 
-export const PageHit = (clickHandler) => ({ hit }) => (
+const PageHit = ({ hit }) => (
   <div>
-    <Link to={hit.slug} onClick={clickHandler}>
+    <Link to={hit.slug} >
       <div>
         <Highlight attribute="title" hit={hit} tagName="mark" />
       </div>
@@ -12,3 +12,5 @@ export const PageHit = (clickHandler) => ({ hit }) => (
     <Snippet attribute="excerpt" hit={hit} tagName="mark" />
   </div>
 );
+
+export default PageHit;
