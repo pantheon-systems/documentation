@@ -8,10 +8,9 @@ import {
 } from 'react-instantsearch-dom';
 import algoliasearch from 'algoliasearch/lite';
 import config from '../../algolia/config';
-
 import { PoweredBy } from './styles';
 import Input from './input';
-import * as hitComps from './hitComps';
+import hitComps from './hitComps';
 import './style.css';
 
 const Results = connectStateResults(
@@ -36,13 +35,12 @@ const searchClient = algoliasearch(
   config.search.algoliaSearchKey
 );
 
-export default function SearchComponent({ indices, collapse }) {
+const SearchComponent = ({ indices, collapse }) => {
   const ref = createRef();
   const [query, setQuery] = useState(``);
   const [focus, setFocus] = useState("false");
 
   useClickOutside(ref, () => setFocus("false"));
-  // const displayResult = query.length > 0 && focus ? 'showResults' : 'hideResults';
 
   const showStatus = query.length > 0 && focus
 
@@ -64,7 +62,7 @@ export default function SearchComponent({ indices, collapse }) {
             <Index key={name} indexName={name}>
               <Results />
               <div className="addsearch-container">
-                <Hits hitComponent={hitComps[hitComp](() => setFocus("false"))} />
+                <Hits hitComponent={hitComps} />
               </div>
             </Index>
           );
@@ -75,3 +73,5 @@ export default function SearchComponent({ indices, collapse }) {
     </InstantSearch>
   );
 }
+
+export default SearchComponent;
