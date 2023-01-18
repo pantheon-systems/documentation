@@ -26,6 +26,7 @@ Proof of concept: An A to Z directory of plugins and themes with known issues.
 
    'A' plugins with known issues.
 
+
   </Card>
 
   <Card title={"B Plugins"} link={"https://pantheon.io/docs/guides/wp-plugins-themes-known-issues/b-plugins"}>
@@ -36,7 +37,7 @@ Proof of concept: An A to Z directory of plugins and themes with known issues.
 
   <Card title={"C Plugins"} link={"https://pantheon.io/docs/guides/wp-plugins-themes-known-issues/c-plugins"}>
 
-    Plugins beginning with C with known issues.
+    'C' plugins with known issues.
 
   </Card>
 
