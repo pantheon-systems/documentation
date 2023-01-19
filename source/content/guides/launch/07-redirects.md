@@ -23,7 +23,7 @@ Choose one of the following options to configure the primary domain.
 
 ### Update URL References (WordPress)
 
-WordPress site admins must ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
+WordPress site admins must ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/guides/wordpress-developer/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
 
 ### Configure a Long-Duration HSTS Header
 

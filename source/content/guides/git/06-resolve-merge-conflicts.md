@@ -1,5 +1,5 @@
 ---
-title: Resolve Git Merge Conflicts
+title: Git on Pantheon Guide
 subtitle: Resolve Merge Conflicts
 description: Learn how to resolve conflicts in your site code base. 
 tags: [git, local, webops]

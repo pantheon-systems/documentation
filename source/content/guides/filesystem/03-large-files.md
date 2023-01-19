@@ -34,7 +34,7 @@ Refer to the [File (field) Paths](https://www.drupal.org/project/filefield_paths
 A code repository larger than 2GB increases the possibility of Git errors when committing code on Pantheon. Review the options below to improve performance:
 
 - Keep multimedia assets out of the repository by moving files to a media file storage service, such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
-- [Prune and optimize your repository](/reducing-large-repos) if it is over 2GB and is causing problems (such as errors when cloning).
+- [Reduce the size of your repository](/guides/git/troubleshooting#reduce-large-repositories) if it is over 2GB and is causing problems (such as errors when cloning).
 
 ## Large Files
 
@@ -61,7 +61,7 @@ We recommend using a CDN like Amazon S3 as a cost-effective file serving solut
 
 You cannot upload files over 100MB through the CMS even when using an external CDN to host files. You can upload these files directly to the CDN. Refer to Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html) for more information.
 
-You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/guides/wordpress-configurations/wordpress-s3) for more information about integrating S3 with your Pantheon site.
+You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/guides/wordpress-developer/wordpress-s3) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
 

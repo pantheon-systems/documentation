@@ -29,7 +29,7 @@ Pantheon supports [running WordPress as an API](/headless) (Application Programm
 
 ## WordPress on Pantheon Developer Best Practices
 
-Review our [WordPress Best Practices](/wordpress-best-practices) doc for suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
+Review our [WordPress Best Practices](/guides/wordpress-developer/wordpress-best-practices) doc for suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
 
 ## WordPress Core Updates
 
@@ -37,7 +37,7 @@ Review our [WordPress Core Updates](/core-updates) doc for instructions on how t
 
 ## Testing WordPress Core Updates
 
-Review our [Testing WordPress Core Development Versions](/wordpress-development-versions) doc to test development versions of WordPress by pushing updates through the WordPress Dashboard or via Git.
+Review our [Testing WordPress Core Development Versions](/guides/wordpress-developer/wordpress-development-versions) doc to test development versions of WordPress by pushing updates through the WordPress Dashboard or via Git.
 
 ## Environment Specific Configuration for WordPress Sites
 

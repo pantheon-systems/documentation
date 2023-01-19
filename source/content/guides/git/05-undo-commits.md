@@ -1,5 +1,5 @@
 ---
-title: Undo Git Commits
+title: Git on Pantheon Guide
 subtitle: Undo Git Commits
 description: Learn how to revert a Git commit before and after pushing to Pantheon.
 tags: [cli, code, git, local, workflow]

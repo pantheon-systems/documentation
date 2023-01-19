@@ -1,5 +1,5 @@
 ---
-title: Git FAQs
+title: Git on Pantheon Guide
 subtitle: FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
 tags: [git, iterate, local, workflow]

@@ -27,7 +27,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 - [rsync and SFTP](/guides/sftp/rsync-and-sftp)
 - [Configuring settings.php](/guides/php/settings-php) or [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Drupal Drush Command-Line Utility](/guides/drush)
-- [Cron for WordPress](/wordpress-cron) or [Cron for Drupal](/drupal-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron) or [Cron for Drupal](/drupal-cron)
 
 ## Launch
 - [Launch Essentials](/guides/launch)

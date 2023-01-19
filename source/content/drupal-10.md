@@ -36,6 +36,12 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 ## Create a Drupal 10 Site
 
+<Alert title="Note" type="info" >
+
+This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) version 2.2.
+
+</Alert>
+
 1. Create a new Drupal site using the ["Drupal with Composer" CMS/Start State](/guides/quickstart/create-new-site/).
 
 1. [Clone the site](/guides/git/git-config#clone-your-site-codebase) locally with Git.

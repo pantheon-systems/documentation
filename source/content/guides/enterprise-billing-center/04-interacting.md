@@ -1,8 +1,7 @@
 ---
-title: Pantheon Site Portfolio Report
-subtitle: Interact with the Site Portfolio Report
-description: Learn how to interact with the Site Portfolio Report.
-contenttype: [guide]
+title: Enterprise Billing Center
+subtitle: Access Site Portfolio Reports
+description: Learn how to access and interact with the Site Portfolio Report.
 categories: [billing]
 newcms: [--]
 audience: [business]
@@ -12,11 +11,33 @@ tags: [billing]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/site-portfolio-report/interacting
+permalink: docs/guides/enterprise-billing-center/interacting
 anchorid: interacting
 ---
 
-This section provides information on how you can interact with the Site Portfolio Report.
+This section provides information on how you can access and interact with the Site Portfolio Report.
+
+## Access the Site Portfolio Report in the Dashboard
+
+You can access the Site Portfolio Report in the Enterprise Billing Center within the dashboard. You must have Admin privileges of the workspace to view the Site Portfolio Report. Note that access may vary depending on how your organization has configured [roles and permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
+
+1. Navigate to the dashboard.
+
+1. Click **Settings** and then click **Billing**.
+
+    Note that the Enterprise Billing Center page displays differently for different account types:
+
+    - Click **Download CSV** next to the desired invoice period under **Portfolio Report**.
+
+        ![Dashboard Site Portfolio Display Example 1](../../../images/site-portfolio-report-dashboard-portfolio-report-section.png)
+
+    **OR**
+
+    If you do not have a Portfolio Report section on your Enterprise Billing Center:
+
+    - Click the **View** link next to desired invoice period to view the report in the dashboard or click **Download CSV** to download a CSV version of the report.
+
+        ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
 
 ## View Additional Information in the Charts
 
@@ -40,7 +61,7 @@ Click the **Filter by** drop-down menus to sort by:
 
 - Current Site Plan
 
-You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by:
+You can also filter by several of the headings. Click the drop-down menu of the heading and select the option you want to filter by, which include:
 
 - Site Name
 
@@ -88,7 +109,5 @@ You can click the Download CSV button under the All Active Sites in Portfolio br
 ## More Resources
 
 - [Traffic Limits and Overages](/guides/account-mgmt/traffic)
-
 - [Investigate and Remedy Traffic Events](/guides/account-mgmt/traffic/remedy)
-
 - [Metrics in the Site Dashboard](/metrics)

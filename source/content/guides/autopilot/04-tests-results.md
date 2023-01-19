@@ -38,6 +38,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 - Dev environment only: A good choice for a site under continual active development
 - Test environment (after Dev): A good choice for a high traffic site that needs an extra level of manual quality assurance (QA) or automated CI
 - Live environment (after Dev and Test)
+- Do Not Deploy: This is a good option if you want to stop updates at the Multidev. Refer to [Update Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information.
 
 ## Failing Tests
 

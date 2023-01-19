@@ -107,7 +107,7 @@ The platform will use Drush to run cron on an hourly basis automatically. More f
 
 ### How does cron work with WordPress on Pantheon?
 
-WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, refer to [Cron for WordPress](/wordpress-cron).
+WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, refer to [Cron for WordPress](/guides/wordpress-developer/wordpress-cron).
 
 ### Can I host a multilingual site?
 
