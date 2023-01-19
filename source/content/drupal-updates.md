@@ -22,7 +22,7 @@ Visit the [Drupal Update and Migration Guide](/drupal-migration) to find the bes
 
 ## Overview
 
-To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal site that you want to upgrade to the latest version of Drupal, create a new Drupal site and add content, files and modules from the old site into the new site.
+To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to the latest version of Drupal, create a new Drupal site and add content, files and modules from the old site into the new site.
 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 

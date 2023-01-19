@@ -12,7 +12,7 @@ product: [integrated-composer]
 integration: [--]
 ---
 
-The latest version of Drupal is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8+ sites](/drupal-migration).
+Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8+ sites](/drupal-migration).  For information regarding Drupal 10, see [Drupal 10 on Pantheon](/drupal-10).
 
 Since Drupal itself is in active development and each new version brings a number of significant changes from previous versions, this doc outlines the biggest changes and answers frequently asked questions.
 

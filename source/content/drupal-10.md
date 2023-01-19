@@ -1,5 +1,5 @@
 ---
-title: Drupal 10
+title: Drupal 10 on Pantheon
 description: Your hub for all things Drupal 10.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]

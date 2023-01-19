@@ -51,7 +51,7 @@ Sites created from Pantheon's example repositories already include the appropria
 repositories": [
      {
        "type": "composer",
-       "url": "https://packages.drupal.org/10"
+       "url": "https://packages.drupal.org/8"
      }
    ],
 ```
