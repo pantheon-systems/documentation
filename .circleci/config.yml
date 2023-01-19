@@ -14,6 +14,8 @@ workflows:
           # https://github.com/pantheon-systems/frontend-orbs#parameters
           resource-class: large
           incremental-build: true
+          context:
+            - GCLOUD_SERVICE_KEY
           gcp-bucket: "static.pantheonfrontend.website"
           gatsby-cache-version: "v1.8.23"
           pre-steps:
@@ -34,6 +36,11 @@ workflows:
             - run:
                 name: Import External Data
                 command: .circleci/scripts/import-external-data.sh
+            - run:
+                name: GCP Credentials post-circle breach
+                command: |
+                  echo $GCLOUD_SERVICE_KEY > ~/.gsa.json
+                  echo 'export GCP_SA=~/.gsa.json' >> $BASH_ENV
           post-steps:
             - persist_to_workspace:
                 root: .
