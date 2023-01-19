@@ -12,6 +12,8 @@ You must confirm that your site is compatible with the latest version of Drupal 
  
 Review the steps below to confirm compatibility for your site's components.
 
+1. Update to the latest version of MariaDB in all environments.
+
 1. Use [Upgrade Status](https://www.drupal.org/project/upgrade_status) to check the compatibility of all contributed modules and themes.
 
 1. [Convert your site to Composer](/guides/composer-convert) if you plan to use the [Upgrade Status module](https://www.drupal.org/project/upgrade_status/) to assist in your upgrade.
