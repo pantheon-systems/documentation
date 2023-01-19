@@ -110,6 +110,60 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 1. Select the new role, then click **Save Changes**.
 
+### Export Users
+
+While you can view a workspace's users using the Dashboard, there may be times when you need to generate a list of users, or view a list of all users associated with the Workspace **and** all of its sites.
+
+To export a list of users:
+
+1. Go to the workspace and select the **Team** tab.
+
+1. In the upper right corner of the page, click **Export Members**.
+
+1. Select one of the following options:
+
+   - **All workspace and site members**: exports all workspace members, site-only collaborators, and supporting workspaces. 
+   - **Only workspace members**: exports only the members defined in this workspace.
+
+1. Click **Export CSV**.  The file will begin downloading in the background and you will receive an email when it is complete.
+    <Alert title="Warning" type="danger" >
+    
+    The link in the email is only good for 24 hours.  If you don't download the file in that time, you will need to request another export.
+    
+    </Alert>
+
+    - You can only download the file using the link in the email.
+    - Only the user who requested the file can download it - if you share this link with other users, they will not be able to download the report.
+
+The exported CSV file will contain the following information:
+
+- **isWorkspaceMember**: Indicates if the user is part of the workspace team.
+
+- **IsSiteMember**: Indicates if the user is part of a site's team. 
+
+- **SiteUID**: If **IsSiteMember** is true, contains the UID of the site the user is a team member of.
+
+- **Site Type**: Indicates if this is a CMS or Front-end site.
+
+- **Site Name**: Name of the site.
+
+- **First Name**: User's first name.
+
+- **Last Name**:  User's last name.
+
+- **Email Address**: User's email address.
+
+- **UserUID**: User's UID.
+
+- **Role**: If **SiteUID** is empty, contains the user's role in the workspace. If **SiteUID** is not empty, contains the user's role in the site.
+
+The following fields only appear if you select **All Workspace and site members** when creating the export:
+
+- **Supporting Workspace name**: The name of the supporting workspace (if applicable).
+
+- **Supporting Workspace UID**: The UID of the supporting workspace (if applicable). 
+
+
 ### Remove a User
 
 <Alert title="Note" type="info">
@@ -124,13 +178,19 @@ To remove a user:
 
 <Tab title="From a Workspace" id="remws" active={true}>
 
+Use this process if you want to remove a member from either a single workspace, or from a workspace and **all** it's associated sites.
+
 1. Go to the workspace and select the **Team** tab.
 
 1. Find and select the team member(s) you wish to remove.
 
 1. Select **Actions**, then **Remove**.
 
-1. Select **Yes, I am sure I want to remove this person**, then click **Yes, Remove**.
+1. Select one of the following options:
+   - **Workspace and all sites**: removes a member from all workspaces and associated sites. 
+   - **Workspace only**: removes a member from this workspace only. Associated sites will not be impacted. 
+
+1. Click **Yes, remove members**.
 
 </Tab>
 
