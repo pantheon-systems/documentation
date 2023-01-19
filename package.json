@@ -64,7 +64,6 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.38.3",
-    "react-loadable": "^5.5.0",
     "react-markdown": "^6.0.3",
     "remark-github-plugin": "^1.4.0",
     "remove": "^0.1.5",

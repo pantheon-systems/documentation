@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import { connectSearchBox } from 'react-instantsearch-dom';
 
-export default connectSearchBox(({ refine }) => {
+export default connectSearchBox(({ refine, ...rest }) => {
   const preventSubmit = (e) => {
     e.preventDefault();
   };

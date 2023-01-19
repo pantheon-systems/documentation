@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
+import SearchComponent from "../../components/search"
 import './style.css';
-import Loadable from 'react-loadable';
 
 import config from "../../algolia/config";
 
@@ -16,13 +16,6 @@ if (isSearchEnabled && config.search.indexName) {
     hitComp: `PageHit`,
   });
 }
-
-const Loading = () => <span>Loading</span>;
-
-const LoadableComponent = Loadable({
-  loader: () => import('../../components/search/index'),
-  loading: Loading,
-});
 
 const Header = ({ data, page }) => (
   <>
@@ -175,7 +168,7 @@ const Header = ({ data, page }) => (
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
               {isSearchEnabled ? (
-                  <LoadableComponent collapse="true" indices={searchIndices} />
+                  <SearchComponent collapse="true" indices={searchIndices} />
               ) : null}
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
