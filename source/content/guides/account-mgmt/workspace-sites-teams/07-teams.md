@@ -178,19 +178,13 @@ To remove a user:
 
 <Tab title="From a Workspace" id="remws" active={true}>
 
-Use this process if you want to remove a member from either a single workspace, or from a workspace and **all** it's associated sites.
-
 1. Go to the workspace and select the **Team** tab.
 
 1. Find and select the team member(s) you wish to remove.
 
 1. Select **Actions**, then **Remove**.
 
-1. Select one of the following options:
-   - **Workspace and all sites**: removes a member from all workspaces and associated sites. 
-   - **Workspace only**: removes a member from this workspace only. Associated sites will not be impacted. 
-
-1. Click **Yes, remove members**.
+1. Select **Yes, I am sure I want to remove this person**, then click **Yes, Remove**.
 
 </Tab>
 
