@@ -68,9 +68,9 @@ Read the comments in the scripts carefully to ensure that you modify variables c
   
 ## Parameterize the Script
 
-You may run the script with parameters for reusability.
+You can run the script with parameters for reusability.
 
-1. Edit the 'collect-logs-rsync.sh' (you may choose to disable the AGGREGATE_NGINX)
+1. Edit the 'collect-logs-rsync.sh' (you can choose to disable the AGGREGATE_NGINX):
   
   ```bash{promptUser:user}
   # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
@@ -84,13 +84,13 @@ You may run the script with parameters for reusability.
   AGGREGATE_NGINX=true
   ```
   
-1. Modify the script access level
+1. Modify the script access level:
   
   ```bash{promptUser:user}
   chmod 775 collect-logs-rsync.sh
   ```
   
-1. Run the script with parameters. Sample:
+1. Run the script with parameters. For example:
   
   ```bash{promptUser:user}
   # sample command for live
