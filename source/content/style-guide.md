@@ -16,6 +16,8 @@ All documentation repositories should adhere to a [style guide](https://en.wikip
 
 You can also reference the [Pantheon Documentation Template](/doc-template) to see the common structure of our docs, or copy it to begin a new content piece.
 
+Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines
+
 ## Content Types
 
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
@@ -120,6 +122,10 @@ If a page is specifically written for a single CMS or CMS version, it's tagged a
 
 </Accordion>
 
+## Headings Casing
+
+Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for headings listed in the TOC.
+
 ## Before You Begin
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
@@ -158,13 +164,13 @@ Be kind. If you're writing a guide that will use one or more example variables t
 
 ___
 
-## Typography
+## Markdown Standards
 
 All documentation uses MarkDown to render headings and typographic elements like bold and italic. Note that a newline is required between HTML elements and content, so the MarkDown renderer knows to format the content.
 
 ### Headings
 
-Give heading levels a meaningful hierarchy to ensure accessible navigation and structure. Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for headings listed in the TOC.
+Give heading levels a meaningful hierarchy to ensure accessible navigation and structure. 
 
 <Example>
 
