@@ -125,7 +125,8 @@ To export a list of users:
    - **All workspace and site members**: exports all workspace members, site-only collaborators, and supporting workspaces. 
    - **Only workspace members**: exports only the members defined in this workspace.
 
-1. Click **Export CSV**.  The download will start processing, and you will receive an email when it is complete.
+1. Click **Export CSV**.  We will generate your report, and you will receive an email when it is complete and ready for download.
+
     <Alert title="Warning" type="danger" >
     
     The link in the email is only good for 24 hours.  If you don't download the file in that time, you will need to request another export.
