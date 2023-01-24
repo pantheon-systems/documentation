@@ -18,115 +18,8 @@ You can also reference the [Pantheon Documentation Template](/doc-template) to s
 
 Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines
 
-## Content Types
 
-The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
-
-___
-
-## Voice, Style, and Flow
-
-Some General Rules:
-
-- Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
-- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
-- Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
-- Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
-- Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
-
-
-___
-
-## Frontmatter
-
-Meta data for a doc or guide is created in a section referred to as frontmatter. It lives at the very top of the file and is wrapped in three dashes.
-
-<Example>
-
-<h1 className="toc-ignore">Style Guide</h1>
-
-<p className="article-subhead">Formatting rules and guidelines for Pantheon&#039;s open-source documentation.
-</p>
-
-<p>
-<small>
-<i className="fa fa-users"></i> Contributors:                                                     <a href="/docs/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
-<a href="/docs/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
-</small>
-
-</p>
-
-<hr className="source-code" /> <br/>
-
-```html
----
-title: Style Guide
-description: Formatting rules and guidelines for Pantheon's open-source documentation.
-contributors: [alexfornuto, rachelwhitton]
----
-```
-
-</Example>
-
-To see the values currently used in our documentation, [install our repository locally](https://github.com/pantheon-systems/documentation), then run one of the following reports:
-
-- Docs: [List of all docs and tags](http://localhost:8000/metadata); [Searchable list of all docs and tags](http://localhost:8000/metadata-search).
-
-- Partials: [List of all partials and tags](http://localhost:8000/partials); [Searchable list of all partials and tags](http://localhost:8000/partials-search).
-
-<Accordion title="Frontmatter Values" id="frontmatter-values" icon="list-alt">
-
-<dl>
-
-<dt><code>title</code></dt>
-<dd>The title of the content.</dd>
-
-<dt><code>description</code></dt>
-<dd>A brief description displayed under the title.</dd>
-
-<dt><code>contributors</code></dt>
-<dd>
-
-An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
-
-</dd>
-
-<dt><code>reviewed</code></dt>
-<dd>The last date when the content was updated or reviewed for accuracy.</dd>
-
-<dt><code>tags</code></dt>
-<dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
-
-<dt><code>category</code></dt>
-<dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
-
-<dt><code>type</code></dt>
-<dd>
-
-The content type for this content. Defaults to `doc`, overwritten for other content types like `guide`, `video`, or `resource`.
-
-</dd>
-
-<dt><code>subtitle</code></dt>
-<dd>Used in multipage guides to define a title for that page of the guide.</dd>
-
-<dt><code>cms</code></dt>
-
-<dd>
-
-If a page is specifically written for a single CMS or CMS version, it's tagged as `"WordPress"`, `"Drupal"`, `"Drupal 7"`, or `"Drupal 9"`.
-
-</dd>
-
-</dl>
-
-</Accordion>
-
-## Headings Casing
-
-Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for headings listed in the TOC.
-
-## Before You Begin
+## Before You Begin Sections
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
@@ -162,163 +55,92 @@ Be sure that you have:
 
 Be kind. If you're writing a guide that will use one or more example variables the reader must replace when following along, you should walk them through exporting them to local environment variables. See the [Variables](#variables) section below for more details.
 
-___
+## Callouts
 
-## Markdown Standards
+There are several types of callouts commonly used in our docs:
 
-All documentation uses MarkDown to render headings and typographic elements like bold and italic. Note that a newline is required between HTML elements and content, so the MarkDown renderer knows to format the content.
-
-### Headings
-
-Give heading levels a meaningful hierarchy to ensure accessible navigation and structure. 
+### Notes
 
 <Example>
 
-<h1 class="toc-ignore">Page Title</h1>
+<Alert title="Note" type="info" >
 
-<h2 class="toc-ignore">Header</h2>
+Notes should identify important pieces of information the reader shouldn't miss.
 
-<h3 class="toc-ignore">Sub Header</h3>
-
-<h4 class="toc-ignore">Section not listed on TOC</h4>
-
-<hr className="source-code" /> <br/>
-
-```markdown
----
-title: Page Title
----
-
-## Header
-
-### Sub Header
-#### Section not listed on TOC
-```
-
-</Example>
-
-### Bold
-
-Bold is used for navigational elements within a given interface:
-
-<Example>
-
-Go to **Account** > **Security** > **Personal Access Tokens**.
-
-<hr className="source-code" /> <br/>
-
-```markdown
-Go to **Account** > **Security** > **Personal Access Tokens**.
-```
-
-</Example>
-
-### Italics
-
-<Example>
-
-Emphasis should *always* be stressed with italics, and *never* with bold.
-
-<hr className="source-code" /> <br/>
-
-```markdown
-Emphasis should *always* be stressed with italics, and *never* with bold.
-```
-
-</Example>
-
-### Definitions
-
-<Example>
-
-A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
-New terms should only be defined once throughout the docs, and then cross-referenced.
-Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
+</Alert>
 
 <hr className="source-code" /> <br/>
 
 ```html
-A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
-New terms should only be defined once throughout the doc, and then cross-referenced.
-Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
+<Alert title="Note"  type="info" >
+
+Notes should identify important pieces of information the reader shouldn't miss.
+
+</Alert>
 ```
 
 </Example>
 
-### Definition List
+### Warnings
 
 <Example>
 
-<dl>
-<dt>Term</dt>
-<dd>Definition.</dd>
-<dt>Another Term</dt>
-<dd>Description of the new term.</dd>
-</dl>
+<Alert title="Warning" type="danger" >
+
+Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
+
+</Alert>
 
 <hr className="source-code" /> <br/>
 
 ```html
-<dl>
+<Alert title="Warning" type="danger" >
 
-<dt>Term</dt>
+Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
 
-<dd>
-
-Definition.
-
-</dd>
-
-<dt>Another Term</dt>
-
-<dd>
-
-Description of the new term.
-
-</dd>
-
-</dl>
+</Alert>
 ```
 
 </Example>
 
-### Hyperlinks
+### Success
 
-Do not specify a target tab or window for external, or any other links, leaving the viewer the option to open in a new tab.
-
-#### Internal Links
-
-Use relative paths when linking to other pages of the docs site.
+Success callouts are used infrequently, usually in guides with specific end results expected. Use success callouts to differentiate between two binary results.
 
 <Example>
 
-[Quick Start](/guides/quickstart)
+<Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
+
+![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
+
+</Alert>
+
+<Alert title="Correct DNS Configuration" type="success" icon="check">
+
+![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
+
+</Alert>
 
 <hr className="source-code" /> <br/>
 
-```markdown
-[Quick Start](/guides/quickstart)
+```html
+<Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
+
+![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
+
+</Alert>
+
+<Alert title="Correct DNS Configuration" type="success" icon="check">
+
+![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
+
+</Alert>
+
 ```
 
 </Example>
 
-#### External Links
-
-<Example>
-
-[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
-
-<hr className="source-code" /> <br/>
-
-```markdown
-[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
-```
-
-</Example>
-
-___
-
-## Code
+## Code Samples
 
 ### Inline
 
@@ -470,289 +292,24 @@ Vary: Accept-Encoding, Cookie
 
 </Example>
 
-___
 
-## File Excerpts
+## Content Types
 
-File excerpts are [code blocks](#blocks) with a file name specified after the syntax as `:title=FILENAME`:
+The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
 
-<Example>
+## Dummy Text
 
-```git:title=.gitignore
-# WordPress #
-############
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-```
-
-
-<hr class="source-code" /> <br />
-
-````markdown
-```git:title=.gitignore
-# WordPress #
-############
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-```
-````
-
-</Example>
-
-___
-
-## Variables
-
-When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
-
-<Example>
-
-<Alert title="Exports" type="export">
-
-This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
-
-```bash{promptUser: user}
-export site=yoursitename
-export env=dev
-```
-
-</Alert>
-
-<hr className="source-code" /> <br/>
-
-````markdown
-<Alert title="Exports" type="export">
-
-This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
-
-```bash{promptUser: user}
-export site=yoursitename
-export env=dev
-```
-
-</Alert>
-````
-
-</Example>
-
-___
-
-## Callouts
-
-There are several types of callouts commonly used in our docs:
-
-### Notes
-
-<Example>
-
-<Alert title="Note" type="info" >
-
-Notes should identify important pieces of information the reader shouldn't miss.
-
-</Alert>
-
-<hr className="source-code" /> <br/>
-
-```html
-<Alert title="Note"  type="info" >
-
-Notes should identify important pieces of information the reader shouldn't miss.
-
-</Alert>
-```
-
-</Example>
-
-### Warnings
-
-<Example>
-
-<Alert title="Warning" type="danger" >
-
-Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
-
-</Alert>
-
-<hr className="source-code" /> <br/>
-
-```html
-<Alert title="Warning" type="danger" >
-
-Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
-
-</Alert>
-```
-
-</Example>
-
-### Success
-
-Success callouts are used infrequently, usually in guides with specific end results expected. Use success callouts to differentiate between two binary results.
-
-<Example>
-
-<Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
-
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
-
-</Alert>
-
-<Alert title="Correct DNS Configuration" type="success" icon="check">
-
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
-
-</Alert>
-
-<hr className="source-code" /> <br/>
-
-```html
-<Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
-
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
-
-</Alert>
-
-<Alert title="Correct DNS Configuration" type="success" icon="check">
-
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
-
-</Alert>
+Documentation IP set: specifically reserved for documentation (Reserved IP addresses ) 
 
 ```
-
-</Example>
-
-___
-
-## Tabs
-
-When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
-
-Note that `active={true}` is required for each first or default tab. Without it, the tabs will still load, but will appear broken until the reader clicks on a tab.
-
-<Example>
-
-<TabList>
-
-<Tab title="WordPress" id="wp-example" active={true}>
-
-Here's our WordPress specific copy, and an example snippet:
-
-```php
-/**
-  * Some WordPress specific thing
-  *
-  */
-
-Code goes here.
+203.0.113.0–203.0.113.255
 ```
 
-</Tab>
+Pantheon
 
-<Tab title="Drupal 7" id="d7-example">
+- Organization: Anita Agency
 
-Here's our Drupal 7 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 7 specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-</TabList>
-
-<hr className="source-code" /> <br/>
-
-````markdown
-<TabList>
-
-<Tab title="WordPress" id="wp-example" active={true}>
-
-Here's our WordPress specific copy, and an example snippet:
-
-```php
-/**
-  * Some WordPress specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-example">
-
-Here's our Drupal 7 specific copy, and an example snippet:
-
-```php
-/**
-  * Some Drupal 7 specific thing
-  *
-  */
-
-Some code.
-```
-
-</Tab>
-
-</TabList>
-````
-
-</Example>
-
-___
-
-## Screenshots
-
-Submit screenshots without additional markup. For example, don't use Skitch to add an arrow. This helps the Docs team make edits as needed later.
-
-Do not include any personal information like a name, email address, or UUID in the screenshot.
-
-### GUI
-
-Screenshots are used to reference GUI instructions:
-
-<Example>
-
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
-
-<hr className="source-code" /> <br/>
-
-```markdown
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
-```
-
-</Example>
-
-### Terminal
-
-Terminal screenshots should be described in the text as much as possible, and should only be used to demonstrate intended output:
-
-<Example>
-
-![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
-
-<hr className="source-code" /> <br/>
-
-```markdown
-![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
-```
-
-</Example>
-
-___
+- Site name: Anita Drupal
 
 ## Error Messages
 
@@ -791,7 +348,323 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 
 ___
 
-## Panels
+## File Excerpts
+
+File excerpts are [code blocks](#blocks) with a file name specified after the syntax as `:title=FILENAME`:
+
+<Example>
+
+```git:title=.gitignore
+# WordPress #
+############
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+```
+
+
+<hr class="source-code" /> <br />
+
+````markdown
+```git:title=.gitignore
+# WordPress #
+############
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+```
+````
+
+</Example>
+
+## Frontmatter
+
+Meta data for a doc or guide is created in a section referred to as frontmatter. It lives at the very top of the file and is wrapped in three dashes.
+
+<Example>
+
+<h1 className="toc-ignore">Style Guide</h1>
+
+<p className="article-subhead">Formatting rules and guidelines for Pantheon&#039;s open-source documentation.
+</p>
+
+<p>
+<small>
+<i className="fa fa-users"></i> Contributors:                                                     <a href="/docs/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
+<a href="/docs/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
+</small>
+
+</p>
+
+<hr className="source-code" /> <br/>
+
+```html
+---
+title: Style Guide
+description: Formatting rules and guidelines for Pantheon's open-source documentation.
+contributors: [alexfornuto, rachelwhitton]
+---
+```
+
+</Example>
+
+To see the values currently used in our documentation, [install our repository locally](https://github.com/pantheon-systems/documentation), then run one of the following reports:
+
+- Docs: [List of all docs and tags](http://localhost:8000/metadata); [Searchable list of all docs and tags](http://localhost:8000/metadata-search).
+
+- Partials: [List of all partials and tags](http://localhost:8000/partials); [Searchable list of all partials and tags](http://localhost:8000/partials-search).
+
+<Accordion title="Frontmatter Values" id="frontmatter-values" icon="list-alt">
+
+<dl>
+
+<dt><code>title</code></dt>
+<dd>The title of the content.</dd>
+
+<dt><code>description</code></dt>
+<dd>A brief description displayed under the title.</dd>
+
+<dt><code>contributors</code></dt>
+<dd>
+
+An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
+
+</dd>
+
+<dt><code>reviewed</code></dt>
+<dd>The last date when the content was updated or reviewed for accuracy.</dd>
+
+<dt><code>tags</code></dt>
+<dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
+
+<dt><code>category</code></dt>
+<dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
+
+<dt><code>contenttype</code></dt>
+<dd>
+
+The content type for this content. Defaults to `doc`.
+
+</dd>
+
+<dt><code>subtitle</code></dt>
+<dd>Used in multipage guides to define a title for that page of the guide.</dd>
+
+<dt><code>cms</code></dt>
+
+<dd>
+
+An array of values for each CMS and version to which the content applies
+
+</dd>
+
+</dl>
+
+</Accordion>
+
+## Icons
+
+```
+<Icon icon={"more-windows"} text={"Sites:"}/>
+```
+
+[Font Awesome Web Application Icons](https://www.w3schools.com/icons/fontawesome_icons_webapp.asp)
+
+## Markdown Standards
+
+All documentation uses MarkDown to render headings and typographic elements like bold and italic. Note that a newline is required between HTML elements and content, so the MarkDown renderer knows to format the content.
+
+### Headings
+
+Give heading levels a meaningful hierarchy to ensure accessible navigation and structure.
+
+<Example>
+
+<h1 class="toc-ignore">Page Title</h1>
+
+<h2 class="toc-ignore">Header</h2>
+
+<h3 class="toc-ignore">Sub Header</h3>
+
+<h4 class="toc-ignore">Section not listed on TOC</h4>
+
+<hr className="source-code" /> <br/>
+
+```markdown
+---
+title: Page Title
+---
+
+## Header
+
+### Sub Header
+#### Section not listed on TOC
+```
+
+</Example>
+
+### Bold
+
+Bold is used for navigational elements within a given interface:
+
+<Example>
+
+Go to **Account** > **Security** > **Personal Access Tokens**.
+
+<hr className="source-code" /> <br/>
+
+```markdown
+Go to **Account** > **Security** > **Personal Access Tokens**.
+```
+
+</Example>
+
+### Italics
+
+<Example>
+
+Emphasis should *always* be stressed with italics, and *never* with bold.
+
+<hr className="source-code" /> <br/>
+
+```markdown
+Emphasis should *always* be stressed with italics, and *never* with bold.
+```
+
+</Example>
+
+### Definitions
+
+<Example>
+
+A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
+New terms should only be defined once throughout the docs, and then cross-referenced.
+Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
+
+<hr className="source-code" /> <br/>
+
+```html
+A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
+New terms should only be defined once throughout the doc, and then cross-referenced.
+Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
+```
+
+</Example>
+
+### Definition List
+
+<Example>
+
+<dl>
+<dt>Term</dt>
+<dd>Definition.</dd>
+<dt>Another Term</dt>
+<dd>Description of the new term.</dd>
+</dl>
+
+<hr className="source-code" /> <br/>
+
+```html
+<dl>
+
+<dt>Term</dt>
+
+<dd>
+
+Definition.
+
+</dd>
+
+<dt>Another Term</dt>
+
+<dd>
+
+Description of the new term.
+
+</dd>
+
+</dl>
+```
+
+</Example>
+
+### Hyperlinks
+
+Do not specify a target tab or window for external, or any other links, leaving the viewer the option to open in a new tab.
+
+#### Internal Links
+
+Use relative paths when linking to other pages of the docs site.
+
+<Example>
+
+[Quick Start](/guides/quickstart)
+
+<hr className="source-code" /> <br/>
+
+```markdown
+[Quick Start](/guides/quickstart)
+```
+
+</Example>
+
+#### External Links
+
+<Example>
+
+[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
+
+<hr className="source-code" /> <br/>
+
+```markdown
+[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
+```
+
+</Example>
+
+### Line Breaks and Spaces
+
+  - Line breaks between components including between
+
+    - the YAML and the content
+
+    - headings and content
+
+    - list items (sometimes - check the preview to see if more space would help)
+
+- No trailing spaces.
+
+- Each MD file ends with a blank line
+
+- Spaces, not tabs! Each tab is two spaces or four sometimes
+
+## More Resources Section
+
+This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
+
+<Example>
+
+<h2 className="toc-ignore"> See Also</h2>
+
+- [An internal link](/guides)
+- [An external link](https://pantheon.io/blog/)
+
+<hr className="source-code" /> <br/>
+
+```markdown
+## More Resources
+
+- [An internal link](/guides)
+- [An external link](https://pantheon.io/blog/)
+```
+
+</Example>
+
+## Panels/Accordioms
 
 Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
@@ -819,7 +692,74 @@ This Panel contains additional context, or advanced instructions.
 
 </Example>
 
-___
+## Reusable Content
+
+Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
+
+Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
+
+<Alert title="Warning" type="danger" >
+
+Partial file names must not duplicate the names of files in the source/content directory.
+
+</Alert>
+
+Partials use all of the same Markdown, style, and HTML as needed and outlined on this page, but do not require frontmatter. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
+
+After you create the file, include it in the doc:
+
+<Example>
+
+<Partial file="partial-example.md" />
+
+<hr className="source-code" /> <br/>
+
+```markdown
+<Partial file="partial-example.md" />
+```
+
+</Example>
+
+To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
+
+
+## Screenshots
+
+Submit screenshots without additional markup. For example, don't use Skitch to add an arrow. This helps the Docs team make edits as needed later.
+
+Do not include any personal information like a name, email address, or UUID in the screenshot.
+
+### GUI
+
+Screenshots are used to reference GUI instructions:
+
+<Example>
+
+![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+
+<hr className="source-code" /> <br/>
+
+```markdown
+![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+```
+
+</Example>
+
+### Terminal
+
+Terminal screenshots should be described in the text as much as possible, and should only be used to demonstrate intended output:
+
+<Example>
+
+![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
+
+<hr className="source-code" /> <br/>
+
+```markdown
+![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
+```
+
+</Example>
 
 ## Tables
 
@@ -917,65 +857,87 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 
 </Accordion>
 
----
+## Tabs
 
-## Redirects
+When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
-This is Pantheon Docs Team-specific.
-
-When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
-
-| Redirect from                  | to                                   |
-|--------------------------------|--------------------------------------|
-| docs/drush                     | docs/guides/drush                    |
-| docs/drush-versions            | docs/guides/drush/drush-versions     |
-| docs/drush-import              | docs/guides/drush/drush-import       |
-| docs/guides/drupal-commandline | docs/guides/drush/drupal-commandline |
-
-
-**Source Code**
-
-````markdown
-| Redirect from                 | to                                 |
-|-------------------------------|-------------------------------------|
-| docs/drush                    | docs/guides/drush                   |
-| docs/drush-versions           | docs/guides/drush/drush-versions    |
-| docs/drush-import             | docs/guides/drush/drush-import      |
-| docs/guides/drupal-commandline| docs/guides/drush/drupal-commandline|
-````
-___
-
-## Reusable Content
-
-Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
-
-Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
-
-<Alert title="Warning" type="danger" >
-
-Partial file names must not duplicate the names of files in the source/content directory.
-
-</Alert>
-
-Partials use all of the same Markdown, style, and HTML as needed and outlined on this page, but do not require frontmatter. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
-
-After you create the file, include it in the doc:
+Note that `active={true}` is required for each first or default tab. Without it, the tabs will still load, but will appear broken until the reader clicks on a tab.
 
 <Example>
 
-<Partial file="partial-example.md" />
+<TabList>
+
+<Tab title="WordPress" id="wp-example" active={true}>
+
+Here's our WordPress specific copy, and an example snippet:
+
+```php
+/**
+  * Some WordPress specific thing
+  *
+  */
+
+Code goes here.
+```
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-example">
+
+Here's our Drupal 7 specific copy, and an example snippet:
+
+```php
+/**
+  * Some Drupal 7 specific thing
+  *
+  */
+
+Some code.
+```
+
+</Tab>
+
+</TabList>
 
 <hr className="source-code" /> <br/>
 
-```markdown
-<Partial file="partial-example.md" />
+````markdown
+<TabList>
+
+<Tab title="WordPress" id="wp-example" active={true}>
+
+Here's our WordPress specific copy, and an example snippet:
+
+```php
+/**
+  * Some WordPress specific thing
+  *
+  */
+
+Some code.
 ```
 
+</Tab>
+
+<Tab title="Drupal 7" id="d7-example">
+
+Here's our Drupal 7 specific copy, and an example snippet:
+
+```php
+/**
+  * Some Drupal 7 specific thing
+  *
+  */
+
+Some code.
+```
+
+</Tab>
+
+</TabList>
+````
+
 </Example>
-
-To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
-
-___
 
 ## Tooltips
 
@@ -999,26 +961,46 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, are UR
 
 </Example>
 
-___
+## Variables
 
-## More Resources
-
-This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
+When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
 
 <Example>
 
-<h2 className="toc-ignore"> See Also</h2>
+<Alert title="Exports" type="export">
 
-- [An internal link](/guides)
-- [An external link](https://pantheon.io/blog/)
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+
+```bash{promptUser: user}
+export site=yoursitename
+export env=dev
+```
+
+</Alert>
 
 <hr className="source-code" /> <br/>
 
-```markdown
-## More Resources
+````markdown
+<Alert title="Exports" type="export">
 
-- [An internal link](/guides)
-- [An external link](https://pantheon.io/blog/)
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+
+```bash{promptUser: user}
+export site=yoursitename
+export env=dev
 ```
 
+</Alert>
+````
+
 </Example>
+
+## Voice, Style, and Flow
+
+Some General Rules:
+
+- Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
+- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
+- Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
+- Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
+- Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
