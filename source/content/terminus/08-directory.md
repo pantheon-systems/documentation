@@ -22,6 +22,12 @@ The list below provides a small sample of popular plugins available for Terminus
 
 <CardGroup>
 
+<Card title={"Autopilot"} isOfficial author={"Tom Stovall"} authorLink={"https://github.com/pantheon-systems/terminus-autopilot-plugin#readme"}>
+
+Manage Autopilot from the command line with the Terminus Autopilot plugin.
+
+  </Card>
+
   <Card title={"Build Tools"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-build-tools-plugin"}>
 
 Create a [GitHub](https://github.com) PR Workflow to test Pantheon sites on [CircleCI](https://circleci.com/) (or other CI services).
