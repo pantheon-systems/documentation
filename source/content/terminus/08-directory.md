@@ -22,9 +22,9 @@ The list below provides a small sample of popular plugins available for Terminus
 
 <CardGroup>
 
-<Card title={"Autopilot"} isOfficial author={"Tom Stovall"} authorLink={"https://github.com/pantheon-systems/terminus-autopilot-plugin#readme"}>
+<Card title={"Autopilot"} isOfficial author={"Tom Stovall"} authorLink={"https://github.com/pantheon-systems/terminus-autopilot-plugin"}>
 
-Manage Autopilot functions from the command line with the Terminus Autopilot plugin.
+Manage [Autopilot](/guides/autopilot) functions from the command line with the Terminus Autopilot plugin.
 
   </Card>
 
