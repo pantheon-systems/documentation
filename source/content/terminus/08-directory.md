@@ -24,7 +24,7 @@ The list below provides a small sample of popular plugins available for Terminus
 
 <Card title={"Autopilot"} isOfficial author={"Tom Stovall"} authorLink={"https://github.com/pantheon-systems/terminus-autopilot-plugin#readme"}>
 
-Manage Autopilot from the command line with the Terminus Autopilot plugin.
+Manage Autopilot functions from the command line with the Terminus Autopilot plugin.
 
   </Card>
 
