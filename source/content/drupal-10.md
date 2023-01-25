@@ -34,6 +34,12 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 1. Use [Composer to update](/guides/upgrade-drupal-8-ic-to-drupal-9#set-drupal-core-version) to Drupal 10. Refer to the [Drupal release-specific documentation](https://www.drupal.org/project/drupal/releases) for more information.
 
+<Alert title="Note" type="info" >
+
+If you haven't done so, you will be prompted to add `phpstan/extension-installer` to your `allow-plugins` config item by composer.
+
+</Alert>
+
 ## Create a Drupal 10 Site
 
 <Alert title="Note" type="info" >
