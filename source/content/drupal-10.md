@@ -36,7 +36,7 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 <Alert title="Note" type="info" >
 
-If you haven't done so, you will be prompted to add `phpstan/extension-installer` to your `allow-plugins` config item by composer.
+Composer will prompt you to add `phpstan/extension-installer` to your `allow-plugins` config if you haven't done so already.
 
 </Alert>
 
