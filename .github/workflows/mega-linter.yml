@@ -7,7 +7,7 @@ on:
   # Trigger mega-linter at every push. Action will also be visible from Pull Requests to master
   push: # Comment this line to trigger action only on pull-requests (not recommended if you don't pay for GH Actions)
   pull_request:
-    branches: [master, main]
+    branches: [main]
 
 env: # Comment env block if you do not want to apply fixes
   # Apply linter fixes configuration
@@ -49,6 +49,8 @@ jobs:
           VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }} # Validates all source when push on main, else just the git diff with main. Set "true" if you always want to lint all sources
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # ADD YOUR CUSTOM ENV VARIABLES HERE TO OVERRIDE VALUES OF .mega-linter.yml AT THE ROOT OF YOUR REPOSITORY
+          PRINT_ALPACA: false # no alpaca
+          FILTER_REGEX_INCLUDE: (source/)
 
       # Upload Mega-Linter artifacts
       - name: Archive production artifacts
