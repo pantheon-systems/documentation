@@ -14,7 +14,7 @@ reviewed: "2022-03-24"
 contenttype: [guide]
 layout: guide
 showtoc: true
-permalink: docs/guides/wp-plugins-themes-known-issues/c-plugins
+permalink: docs/guides/wp-plugins-themes-known-issues/directory/c-plugins
 anchorid: c-plugins
 ---
 
