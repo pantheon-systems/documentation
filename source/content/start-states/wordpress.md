@@ -19,6 +19,12 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
+### 2023-01-17
+
+<a name="20230117" class="release-update"></a>Fixes a bug where a fatal error for an undefined variable was thrown on PHP 8+.
+
+A previous update that added a loader to pull in the pantheon-mu-plugin introduced an undefined variable which is a fatal error in PHP 8+. This update resolves the issue and fixes the mu-plugin loader. This may introduce merge conflicts if you have made changes to the `loader.php` file in your site repository.
+
 ### 2022-11-01
 
 #### <a name="20221018" class="release-update"></a>Replace mu-plugin with a format consistent with pantheon-systems/pantheon-mu-plugin
