@@ -1,7 +1,21 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
+import SearchComponent from "../../components/search"
 import './style.css';
-import AddSearch from "../../components/addSearch"
+
+import config from "../../algolia/config";
+
+const isSearchEnabled = config.search && config.search.enabled ? true : false;
+
+let searchIndices = [];
+
+if (isSearchEnabled && config.search.indexName) {
+  searchIndices.push({
+    name: `${config.search.indexName}`,
+    title: `Results`,
+    hitComp: `PageHit`,
+  });
+}
 
 const Header = ({ data, page }) => (
   <>
@@ -153,25 +167,9 @@ const Header = ({ data, page }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
-              <form
-                id="searchform"
-                action="/docs/search"
-                role="search"
-                acceptCharset="UTF-8"
-                encType="application/x-www-form-urlencoded"
-                title="Search Pantheon Documentation form"
-              >
-                <input
-                  type="search"
-                  className="addsearch"
-                  placeholder="Search Pantheon Documentation"
-                  aria-label="Search through documentation"
-                />
-                { page == "default" ?
-                  <AddSearch />
-                  : null
-                }
-              </form>
+              {isSearchEnabled ? (
+                  <SearchComponent collapse="true" indices={searchIndices} />
+              ) : null}
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
                 aria-hidden="true"

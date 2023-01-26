@@ -40,7 +40,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Open your terminal and enter the following command to generate a key:
 
    ```bash{promptUser: user}
-   ssh-keygen
+   ssh-keygen -t rsa
    ```
 
   This command works on Linux, MacOS, and Windows 10.
