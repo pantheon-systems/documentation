@@ -32,7 +32,7 @@ When working with a client who has ownership of their Pantheon site, either thro
 Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
 
 - [Pantheon platform consideration](/guides/platform-considerations)
-- [Advanced caching](/goofylink)
+- [Advanced caching](/caching-advanced-topics)
 - [Symlinks and Assumed Write Access](/symlinks-assumed-write-access)
 - [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 - [Pantheon FAQs](/faq)
