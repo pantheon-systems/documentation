@@ -6,8 +6,7 @@
         }
       ],
     "aliveStatusCodes": [
-        200,
-        403
+        200
     ],
     "retryOn429": true,
     "retryCount": 2
