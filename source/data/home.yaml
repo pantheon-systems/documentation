@@ -3,7 +3,7 @@
   call-to-action:
     title: 'Quick Start Guide'
     sub-title: 'New to the Pantheon platform? Check out our step-by-step guide to learn all the basics.'
-    url: '/guides/quickstart/'
+    url: '/guides/goofylink/'
     type: 'guide'
   topics:
     - title: 'Get Started'
