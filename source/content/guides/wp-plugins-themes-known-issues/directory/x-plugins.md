@@ -17,4 +17,4 @@ permalink: docs/guides/wp-plugins-themes-known-issues/directory/x-plugins
 anchorid: x-plugins
 ---
 
-There are no X plugins with known issues. Click **Report an issue with this doc** at the top of the page to submit a plugin you think should be added.
+There are no X plugins with known issues. Please [contact support](/guides/support/contact-support/) if you are aware of plugins that do not work as expected.
