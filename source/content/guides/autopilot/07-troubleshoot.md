@@ -352,11 +352,11 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 ### Diagnosis
 
-Site is running a framework that is not Drupal, Drupal 8, or WordPress. Currently, WordPess Multisite (`wordpress_network`) is not supported.
+Site is running a framework that is not Drupal or WordPress. Currently, WordPress Multisite (`wordpress_network`) is not supported.
 
 ### Solution
   
-Contact support for assistance if running a framework that is not Drupal, Drupal 8, or WordPress. Any other framework, including WordPress Multisite Network is not supported.
+Contact support for assistance if running a framework that is not Drupal or WordPress. Any other framework, including WordPress Multisite Network is not supported.
 
 </Accordion>
 

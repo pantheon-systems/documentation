@@ -31,4 +31,4 @@ Now we still need the files and database. On your site dashboard, select Databas
 
 ### Sync from local to Pantheon
 
-Use Git to add, commit, and push code changes up to Pantheon from your local development environment. Remember, you also need to sync the changes made to your database and media files. Since this can be tricky, we recommend using a configuration management solution, such as WP-CFM for WordPress or the Features module for Drupal 7. These tools help you push configuration separately, as part of your code base, without disturbing database content.
+Use Git to add, commit, and push code changes up to Pantheon from your local development environment. Remember, you also need to sync the changes made to your database and media files. Since this can be tricky, we recommend using a configuration management solution, such as WP-CFM for WordPress or the Features module for Drupal. These tools help you push configuration separately, as part of your code base, without disturbing database content.

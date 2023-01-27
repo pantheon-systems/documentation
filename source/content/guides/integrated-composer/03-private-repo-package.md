@@ -4,7 +4,7 @@ subtitle: Add a Package from a Private Repository
 description: Learn how to add a package from a private repository.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/private-repo-package

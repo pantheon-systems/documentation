@@ -54,4 +54,4 @@ Please reach out to our [Professional Services](https://pantheon.io/professional
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
 
-- [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)
+- [Convert a Standard Drupal Site to a Composer-Managed Site](/guides/composer-convert)

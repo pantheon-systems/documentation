@@ -38,7 +38,7 @@ If you wish to stop using one-click Dashboard updates on a particular site, and 
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7-set-upstream" active={true}>
+<Tab title="Drupal" id="d7-set-upstream" active={true}>
 
 ```bash
 terminus site:upstream:set <site> empty-7
@@ -89,7 +89,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7" active={true}>
+<Tab title="Drupal" id="d7" active={true}>
 
 The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 

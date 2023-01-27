@@ -120,7 +120,7 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
 ### Install a New Module
 
-The example steps below are for Drupal 7.
+The example steps below are for Drupal.
 
 1. Get the URL to the code you want to install from Drupal.org:
 
