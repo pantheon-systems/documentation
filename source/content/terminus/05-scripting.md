@@ -136,5 +136,5 @@ echo "Site PHP information has been saved to $CSV_FILE"
 ## More Resources
 
 - [Install Quicksilver Scripts](/guides/quicksilver/install-script)
-- [Cron for WordPress](/wordpress-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron)
 - [Cron for Drupal](/drupal-cron)

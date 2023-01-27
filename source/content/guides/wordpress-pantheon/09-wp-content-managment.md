@@ -29,7 +29,7 @@ The [WP-CFM plugin](/guides/wordpress-configurations/wp-cfm) provides an elegant
 
 ## Cron for WordPress
 
-Review our [Cron for WordPress](/wordpress-cron) doc to learn how to create and run jobs using Pantheon Cron or WordPress's WP-Cron feature on your Pantheon site.
+Review our [Cron for WordPress](/guides/wordpress-developer/wordpress-cron) doc to learn how to create and run jobs using Pantheon Cron or WordPress's WP-Cron feature on your Pantheon site.
 
 ## WordPress Multisite
 

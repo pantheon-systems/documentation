@@ -59,7 +59,19 @@ cd documentation
 We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
 
 1. Log in to GitHub and go to <https://github.com/settings/tokens>
-1. Click **Generate new token**
+1. Click **Generate new token**.
+1. Give the token a name, expiration, and description.
+1. Select your GitHub user as the resource owner.
+1. For repository access, select **Only select repositories** and select your fork of this repository.
+1. Under Repository permissions, choose **Access: Read-only** from the **Access** dropdown button.
+1. Click **Generate token**.
+
+#### GitHub Tokens (classic)
+
+Alternatively, if you'd rather create a classic-style token:
+
+1. Log in to GitHub and go to <https://github.com/settings/tokens>
+1. Click **Generate new token (classic)**
 1. Give the token a name and click the **public_repo** checkbox, then the **Generate Token** button at the bottom
 1. Copy the token to your clipboard
 1. In the root `documentation` directory, create a new file called `.env.development` and add (replacing `$TOKENHASH` ):
@@ -81,7 +93,7 @@ npm ci
 Still in the `documentation` directory:
 
 ```bash
-npm run develop
+npm start
 ```
 
 Use your local browser to navigate to `localhost:8000/`.

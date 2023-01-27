@@ -34,7 +34,7 @@ The following is a list of plugins that assume write access, and the specific fi
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                                            |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               | `PROTECTED_CONTENT_FOLDER` variable within the plugin assumes access to `PATH`                      |
+| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               | `PROTECTED_CONTENT_FOLDER` variable within the plugin assumes access to `PATH`                   |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 |                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files, and this plugin can cause                   |
 |                                                                                               |                                                       | your deployment workflows to break. You can download full backups                                |
@@ -57,6 +57,8 @@ The following is a list of plugins that assume write access, and the specific fi
 |                                                                                               |                                                       | optimization, can be used side-by-side.                                                          |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                      |                                                                                                  |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| [Wordfence](https://wordpress.org/plugins/wordfence/)                                         | wp-content/wflogs                                     | Follow the steps outlined in the [Wordfence](#wordfence) section.                                |
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)                           | wp-content/cache                                      | This plugin uses `is_dir` to verify the target directory, which will return                      |
 |                                                                                               |                                                       |false if the directory is a symlink. This causes a permissions error when                         |
@@ -580,7 +582,7 @@ ___
 
 <ReviewDate date="2022-03-09" />
 
-**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
+**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
 **Solution:**
 
@@ -1001,15 +1003,19 @@ ___
 
 ## Wordfence
 
-<ReviewDate date="2020-07-15" />
+<ReviewDate date="2022-12-16" />
 
-**Issue:** [Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuation and log files.
+**Issue 1:** Wordfence can't write configuration and log files to the codebase.
+
+[Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuration and log files.
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 
+<Accordion title="Wordfence Assumed Write Access Solution" id="wordfence-assumed-write-access">
+
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `SITE` and `ENV` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -1018,7 +1024,7 @@ export ENV=dev
 
 </Alert>
 
-1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes) in the dashboard or via Terminus:
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.$ENV git
@@ -1030,25 +1036,24 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Change to the `my-site` directory:
+1. Change to the site's `wp-content` directory:
 
    ```bash{promptUser: user}
-   cd /my-site
+   cd $SITE/wp-content
    ```
+
+1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
+
+  ```bash{promptUser: user}
+  rm wflogs
+  ```
 
 1. Create the following symlinks:
 
-  <Alert title="Note"  type="info" >
-
-  You must remove the `/wp-content/wflogs` directory, if it already exists, before you create the symlinks listed below.
-
-  </Alert>
-
   ```bash{promptUser: user}
-
-  ln -s ../../files/private/wflogs ./wp-content/wflogs
-  ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
-  ln -s ../files/private/.user.ini ./.user.ini
+  ln -s ../../files/private/wflogs ./wflogs
+  ln -s ../../files/private/wordfence-waf.php ./../wordfence-waf.php
+  ln -s ../../files/private/.user.ini ./../.user.ini
   ```
 
 1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
@@ -1093,7 +1098,7 @@ Complete this step in Dev, Test, and Live Environments.
   exit
   ```
 
-1. Set the environment connection mode to SFTP, then install and activate Wordfence. You can do both with Terminus:
+1. Set the environment [connection mode to SFTP](/cms-admin#sftp-mode), then install and activate Wordfence. You can do both with Terminus:
 
   ```bash{outputLines: 2,4-25}
   terminus connection:set $SITE.$ENV sftp
@@ -1121,98 +1126,104 @@ Complete this step in Dev, Test, and Live Environments.
 
 1. Navigate to the **Wordfence** plugin in the site's WordPress Admin and **Resume Installation** if prompted, or click **CLICK HERE TO CONFIGURE**. The plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete it after downloading.
 
-**Issue:** Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error connecting to the database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. This results in two problems:
+</Accordion>
 
-* __DIR__ is not providing the proper path for Wordfence
-* Wordfence cannot find your database credentials
+**Issue 2:** Error connecting to the database.
 
-**Solution:** To address the first problem you can modify Wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP
-from:
+Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error connecting to the database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. This results in two problems:
 
-```
-if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-    define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
-    include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
-to:
+- `__DIR__` is not providing the proper path for Wordfence
+- Wordfence cannot find your database credentials
 
-```
-if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
- define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
- include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
+**Solution if `__DIR__` is not providing the proper path for Wordfence:** Modify Wordfence to use relative paths.
 
-Next, add [Wordfence constants](https://www.wordfence.com/help/advanced/constants/) in between conditions in the `wordfence-waf.php` file. The file should resemble the following when complete:
+1. Change the following code within `wordfence-waf.php` over SFTP from:
 
-```
-// Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
-// This file was the current value of auto_prepend_file during the Wordfence WAF installation
+  ```php:title=wordfence-waf.php
+  if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+      define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
+      include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
-if (file_exists('/includes/prepend.php')) {
-	include_once '/includes/prepend.php';
-}
+  To:
 
-	define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
-	define('WFWAF_DB_USER', $_ENV['DB_USER']);
-	define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
-	define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
-	define('WFWAF_DB_CHARSET', 'utf8mb4');
-	define('WFWAF_DB_COLLATE', '');
-  // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
-	define('WFWAF_TABLE_PREFIX', 'wp_');
+  ```php:title=wordfence-waf.php
+  if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+   define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
+   include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
-if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
-	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
+1. Add [Wordfence constants](https://www.wordfence.com/help/advanced/constants/) in between conditions in the `wordfence-waf.php` file. The file should resemble the following when complete:
+
+  ```php:title=wordfence-waf.php
+  // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
+  // This file was the current value of auto_prepend_file during the Wordfence WAF installation
+  
+  if (file_exists('/includes/prepend.php')) {
+    include_once '/includes/prepend.php';
+  }
+  
+    define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
+    define('WFWAF_DB_USER', $_ENV['DB_USER']);
+    define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
+    define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
+    define('WFWAF_DB_CHARSET', 'utf8mb4');
+    define('WFWAF_DB_COLLATE', '');
+    // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
+    define('WFWAF_TABLE_PREFIX', 'wp_');
+  
+  if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+    define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
+    include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
 #### Further Considerations with Wordfence: Utilizing data storage over files
 
 If you experience degraded performance with Wordfence active, using [Wordfence's data storage option](https://www.wordfence.com/help/firewall/mysqli-storage-engine/) might be appropriate. Modify `wordfence-waf.php` to include the MySQLi storage engine constant. Combined with the constants previously mentioned, the plugin will write to your database instead of your file system. If you do this, we recommend wrapping the constants in a condition that checks `wp-config.php` for a conflicting constant. The end result of your modified `wordfence-waf.php` should resemble the following:
 
-```
+  ```php:title=wp-config.php
 <?php
 // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
 // This file was the current value of auto_prepend_file during the Wordfence WAF installation (Sun, 21 Nov 2021 23:40:56 +0000)
 
 if (file_exists('/includes/prepend.php')) {
-	include_once '/includes/prepend.php';
+  include_once '/includes/prepend.php';
 }
 
 if(! defined('WFWAF_STORAGE_ENGINE')) {
-	// define WF constants if not set in wp-config.php
-	define('WFWAF_STORAGE_ENGINE', 'mysqli');
-	define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
-	define('WFWAF_DB_USER', $_ENV['DB_USER']);
-	define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
-	define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
-	define('WFWAF_DB_CHARSET', 'utf8mb4');
-	define('WFWAF_DB_COLLATE', '');
+  // define WF constants if not set in wp-config.php
+  define('WFWAF_STORAGE_ENGINE', 'mysqli');
+  define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
+  define('WFWAF_DB_USER', $_ENV['DB_USER']);
+  define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
+  define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
+  define('WFWAF_DB_CHARSET', 'utf8mb4');
+  define('WFWAF_DB_COLLATE', '');
   // Note this table prefix should reflect your WordPress application's table prefix. Update accordingly.
-	define('WFWAF_TABLE_PREFIX', 'wp_');
+  define('WFWAF_TABLE_PREFIX', 'wp_');
 }
 
 if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');;
-	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');;
+  include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
 ```
 
-**Advantages:** Customers have reported improved file system performance, while not having to compromise on Wordfence's features.
+**Advantages:** Customers have reported improved file system performance without having to compromise on Wordfence's features.
 
 **Disadvantages:** Due to the nature of the plugin, binary logs and insertion queries will increase. Performance gains in one area may be sacrificed in another.
 
 #### How do I confirm I am using data storage with Wordfence?
 
-You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is wp_) and queries will increase based on blocked traffic.
+You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
 
 ___
 
 ## WordPress Download Manager
 
-**Issue 1:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
+**Issue:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
 
 **Solution:** We recommend that you research an alternative download manager plugin that fits your needs.
 
@@ -1469,6 +1480,7 @@ ___
 1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+
 ___
 
 ## YITH WooCommerce Request a Quote
@@ -1492,7 +1504,9 @@ if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
    }
 }
 ```
+
 ___
+
 ## Yoast SEO
 
 <ReviewDate date="2018-06-12" />
@@ -1502,6 +1516,7 @@ ___
 **Solution:** Only use the "PHP" redirect method.
 
 ___
+
 ## Yoast Indexables
 
 <ReviewDate date="2022-06-14" />
