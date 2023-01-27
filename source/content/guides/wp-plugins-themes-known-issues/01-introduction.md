@@ -17,14 +17,13 @@ permalink: docs/guides/wp-plugins-themes-known-issues
 anchorid: wp-plugins-themes-known-issues
 ---
 
-This guide provides important information WordPress plugins and themes. Specifically, this guide provides:
+This guide provides information on WordPress plugins and themes. Specifically, this guide provides:
 
 - Assumed write access information for WordPress plugins and themes
 - WordPress themes with known issues and recommended workarounds
 - An A to Z directory of WordPress plugins with known issues and recommended workarounds
 
-
-This guide includes WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
+Some WordPress plugins, themes, and functions may not function as expected on the Pantheon platform. This is not a comprehensive list (refer to [other issues](/guides/wp-plugins-themes-known-issuesother-issues), and we continually update this guide as problems are reported and/or solved. Please [contact support](/guides/support/contact-support/) if you are aware of any modules or plugins that do not work as expected.
 
 We do not prevent you from installing and using these plugins or themes. However, we cannot provide support for incompatible plugins and themes, or if they are used against the guidance provided here.
 
@@ -34,3 +33,7 @@ Please [reach out to us](https://github.com/pantheon-systems/documentation/issue
 
 If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-plugins-known-issues.md).
 
+## More Resources
+
+- [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
+- [WordPress Configurations Guide](/guides/wordpress-configurations)

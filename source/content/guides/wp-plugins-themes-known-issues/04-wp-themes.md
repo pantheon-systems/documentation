@@ -95,3 +95,9 @@ Plugins and themes will not work on Pantheon if they:
 - Require customized `.htaccess` files.
 - Need to modify Nginx configuration files.
 - Require PostgreSQL or other non-MySQL compatible databases.
+
+## More Resources
+
+- [htaccess](/guides/redirect#htaccess)
+- [Platform Considerations](/guides/platform-considerations)
+- [Troubleshooting WordPress on Pantheon](/guides/wordpress-pantheon/troubleshooting)

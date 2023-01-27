@@ -17,7 +17,7 @@ permalink: docs/guides/wp-plugins-themes-known-issues/assumed-write-access
 anchorid: assumed-write-access
 ---
 
-This section provides information on assumed write access.
+This section provides information on assumed write access for WordPress plugins and themes.
 
 Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
 
@@ -90,3 +90,8 @@ Plugins and themes with issues resolved (at least partially) by this include the
 - [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 - [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
+
+## More Resources
+
+- [Manage Custom Code for WordPress with Plugins](/guides/wordpress-configurations/wordpress-custom-code)
+- [WP-CLI on the Pantheon Platform](/guides/wp-cli)
