@@ -19,13 +19,16 @@ anchorid: wp-plugins-themes-known-issues
 
 This guide provides information on WordPress plugins and themes. Specifically, this guide provides:
 
-- Assumed write access information for WordPress plugins and themes
-- WordPress themes with known issues and recommended workarounds
-- An A to Z directory of WordPress plugins with known issues and recommended workarounds
+- [Assumed write access](/guides/wp-plugins-themes-known-issues/assumed-write-access) information for WordPress plugins and themes
+- [WordPress themes with known issues](/guides/wp-plugins-themes-known-issues/wp-themes) and recommended workarounds
+- An [A to Z directory of WordPress plugins with known issues](/guides/wp-plugins-themes-known-issues/wp-plugins-directory) and recommended workarounds
 
-Some WordPress plugins, themes, and functions may not function as expected on the Pantheon platform. This is not a comprehensive list (refer to [other issues](/guides/wp-plugins-themes-known-issuesother-issues), and we continually update this guide as problems are reported and/or solved. Please [contact support](/guides/support/contact-support/) if you are aware of any modules or plugins that do not work as expected.
+Some WordPress plugins, themes, and functions do not function as expected on the Pantheon platform. This list is not comprehensive (refer to [other issues](/guides/wp-plugins-themes-known-issuesother-issues), and we continually update this content as problems are reported and/or solved. Please [contact support](/guides/support/contact-support/) if you are aware of any modules or plugins that do not work as expected.
 
-We do not prevent you from installing and using these plugins or themes. However, we cannot provide support for incompatible plugins and themes, or if they are used against the guidance provided here.
+We do not prevent you from installing and using these plugins or themes. However, we cannot provide support for:
+
+- Incompatible plugins and themes
+- Plugins and themes used against the guidance provided in this guide
 
 ## Plugin and Theme Maintainers
 
