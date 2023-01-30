@@ -67,6 +67,7 @@ This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) 
    composer require --no-update drupal/core-recommended:^10
    composer update
    git commit -am "Update to Drupal 10"
+   git push origin master
    ```
 
 ## FAQ
