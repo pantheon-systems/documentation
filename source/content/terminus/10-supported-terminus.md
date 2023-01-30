@@ -21,7 +21,7 @@ integration: [--]
 
 <Alert title="Note" type="info" >
 
-Terminus 1.x and 0.x are EOL.
+Terminus 2.x, 1.x and 0.x are EOL.
 
 </Alert>
 
