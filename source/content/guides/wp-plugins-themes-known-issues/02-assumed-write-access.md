@@ -19,13 +19,13 @@ anchorid: assumed-write-access
 
 This section provides information on assumed write access for WordPress plugins and themes.
 
-Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
+Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard Linux, Apache, MySQL, and PHP (LAMP) and Linux, Nginx, MariaDB or MySQL, and PHP, Perl, or Python and (LEMP) stack server configuration, Pantheon and other specialized platforms do not allow write access to the entire filesystem. This can result in runtime errors when the software can't write to locations in the codebase in the Test and Live environments.
 
 Refer to documentation on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
-The solution to these issues is usually to create a symbolic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+The solution to assumed write access issues is usually to create a symbolic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). Refer to the documentation in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) to create a symlink and confirm that it works correctly.
 
-The following is a list of plugins that assume write access, and the specific file or folder that needs to be symlinked to resolve:
+The table below provides a list of plugins that assume write access, and the specific file or folder that must be symlinked:
 
 +-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
 | Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                                            |
@@ -67,7 +67,13 @@ The following is a list of plugins that assume write access, and the specific fi
 
 ### Define FS_METHOD
 
-By default, WordPress tests each directory before uploading a file by writing a small temporary file. Some plugins and themes may have issues on the Pantheon platform due to this write access test. You can avoid these issues (and skip the test of writing a small file) by defining the `FS_METHOD` as `direct` in the `wp-config.php` file above the line `/* That's all, stop editing! Happy Pressing. */`. To resolve the issue, configure the `wp-config.php` to resemble the following code sample:
+WordPress tests each directory before uploading a file by writing a small temporary file by default. Some plugins and themes may have issues on the Pantheon platform due to this write access test. You can avoid these issues (and skip the write test file) by defining the `FS_METHOD` as `direct`.
+
+1. Open your `wp-config.php` file.
+
+1. Locate the following line: `/* That's all, stop editing! Happy Pressing. */`. The `FS_METHOD` must be defined *above* this line.
+
+1. Configure the file to resemble the following code sample
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -75,9 +81,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-The successful write of the temporary file returns "direct". You can specify the `direct` file system method beforehand to allow operations to run slightly faster. Note that the `direct` specification forces the method to use direct file I/O requests from within PHP, which can open up security issues on poorly configured hosts.
+This configuration should successfully write the temporary file and return "direct". You can specify the `direct` file system method beforehand to allow operations to run slightly faster. Note that the `direct` specification forces the method to use direct file I/O requests from within PHP, which can open up security issues on poorly configured hosts.
 
-Plugins and themes with issues resolved (at least partially) by this include the following:
+Plugins and themes with issues resolved (at least partially) by this workaround include the following:
 
 - [AccessAlly WordPress LMS](https://accessally.com/)
 - [Blabber Theme](https://themeforest.net/item/blabber-allinone-elementor-blog-news-magazine-wordpress-theme/24305542/)
