@@ -5,6 +5,7 @@ import {
   Configure,
   connectStateResults,
 } from 'react-instantsearch-dom';
+import propTypes from "prop-types";
 import { PoweredBy } from './styles';
 import Input from './input';
 import hitComps from './hitComps';
@@ -56,9 +57,21 @@ const SearchComponent = ({ indices, collapse, isSearchPage }) => {
         })}
         <PoweredBy />
       </div>
-      <Configure hitsPerPage={5} />
+      <Configure hitsPerPage={10} />
     </div>
   );
 }
+
+SearchComponent.propTypes = {
+  indices: propTypes.arrayOf(
+    propTypes.shape({
+      name: propTypes.string.isRequired,
+      title: propTypes.string,
+      hitComp: propTypes.func.isRequired,
+    })
+  ),
+  collapse: propTypes.bool,
+  isSearchPage: propTypes.bool,
+};
 
 export default SearchComponent;
