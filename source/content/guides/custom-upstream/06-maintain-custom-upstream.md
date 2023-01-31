@@ -22,6 +22,32 @@ This section provides information to help you manage and maintain your Custom Up
 
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. Review the [Pantheon YAML Configuration Files](/pantheon-yml) documentation for details.
 
+## How to Add Dependencies to Your Upstream
+
+1. Clone the Git repository for your upstream.
+
+1. Run the `composer upstream-require` command for each dependency:
+
+    ```bash{promptUser: user}
+    composer upstream-require drupal/pkg-name [--no-update]
+    ```
+
+     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. This is useful if you don't want to pin versions for your dependencies. Do not include this option if you want to pin specific versions for your dependencies.
+
+1. Commit and push your changes.
+
+## How to Update Dependencies in Your Upstream
+
+You may have the need to pin specific (usually tested) versions of your dependencies in your upstream. This is normally done with the composer.lock file but including this file in the root of the upstream will cause tons of merge conflicts with your downstream sites. To solve this problem, you could use the `update-upstream-dependencies` composer command.
+
+This command will:
+
+1. Create or update a `upstream-configuration/composer.lock` file
+1. Create or update a `upstream-configuration/locked/composer.json` file with all of the packages from composer.lock and their pinned versions
+1. Update top-level `composer.json` repositories section for `upstream-configuration` to use `upstream-configuration/locked` instead of just `upstream-configuration` (if not done previously)
+
+This will allow you to make sure that you use tested versions for the packages in your upstream.
+
 ## Redirects
 
 We normally suggest [PHP redirects](/guides/redirect) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. You will lose any customizations to your PHP files every time you update your Custom Upstream. It will also be difficult to implement site-specific configurations added on these files.
