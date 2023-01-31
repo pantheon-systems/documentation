@@ -1,7 +1,12 @@
 import React from 'react';
 import { connectSearchBox } from 'react-instantsearch-dom';
 
-export default connectSearchBox(({ refine, ...rest }) => {
+export default connectSearchBox(({ refine, setQuery, currentRefinement, ...rest }) => {
+
+  if (setQuery) {
+    setQuery(currentRefinement)
+  }
+ 
   const preventSubmit = (e) => {
     e.preventDefault();
   };
