@@ -16,7 +16,7 @@ All documentation repositories should adhere to a [style guide](https://en.wikip
 
 You can also reference the [Pantheon Documentation Template](/doc-template) to see the common structure of our docs, or copy it to begin a new content piece.
 
-Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines
+Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines.
 
 
 ## Before You Begin Sections
@@ -295,11 +295,11 @@ Vary: Accept-Encoding, Cookie
 
 ## Content Types
 
-The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
+The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
 
 ## Dummy Text
 
-Documentation IP set: specifically reserved for documentation (Reserved IP addresses ) 
+Documentation IP set: specifically reserved for documentation (Reserved IP addresses):
 
 ```
 203.0.113.0–203.0.113.255
