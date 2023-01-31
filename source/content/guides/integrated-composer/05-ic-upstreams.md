@@ -53,6 +53,8 @@ This command will:
 
 This will allow you to make sure that you use specific versions for the packages in your upstream.
 
+Once you run this command (`composer update-upstream-dependencies`) in your custom upstream repository, commit the changes it did so that you can start using pinned versions in your downstream sites.
+
 ## More Resources
 
 - [Custom Upstreams](/guides/custom-upstream)
