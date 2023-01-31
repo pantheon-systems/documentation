@@ -5354,7 +5354,7 @@
         },
         {
             "name": "import:database",
-            "description": "Imports a database archive to the environment.",
+            "description": "Imports a database archive to the environment. This command drops the existing database and imports the target into a new database. Use this command with caution to avoid accidental database deletion.",
             "usage": [
                 "import:database <site>.<env> <url>",
                 "import:database <site>.<env> <archive_url> Imports the database archive at <archive_url> to <site>'s <env> environment.",
