@@ -47,12 +47,12 @@ Be sure that you have:
 
     ```bash{promptUser: user}
     web_environment:
-    - TERMINUS_MACHINE_TOKEN=abcdeyourtoken
+    - TERMINUS_MACHINE_TOKEN=insertyourtoken
     ```
 
 1. Copy the `example.pantheon.yaml` provider file to the `pantheon.yaml`.
 
-1. Update the site name and environment variable. In the example below, the project name is `de8` and the targeted environment is `live`. This example updates the local DDEV environment with database and content files backups from the Pantheon Live environment.
+1. Update the project name and environment variable. In the example below, the project name is `de8` and the targeted environment is `live`. This example updates the local DDEV environment with database and content file backups from the Pantheon Live environment.
 
     ```bash{promptUser: user}
     environment_variables:
