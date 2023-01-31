@@ -1,5 +1,5 @@
 ---
-title: Drupal 10
+title: Drupal 10 on Pantheon
 description: Your hub for all things Drupal 10.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
@@ -93,5 +93,5 @@ Ask questions in our Slack [#drupal channel](https://pantheon-community.slack.co
 
 ## More Resources
 
-- [Drupal 9](/drupal-9)
+- [Drupal on Pantheon](/drupal)
 - [Using Drupal with Pantheon](/develop-drupal)

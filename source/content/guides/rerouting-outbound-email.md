@@ -79,7 +79,7 @@ If you don’t have a `settings.php` file, copy the `default.settings.php` file.
 cp sites/default/default.settings.php sites/default/settings.php
 ```
 
-Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal 7:
+Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal:
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {

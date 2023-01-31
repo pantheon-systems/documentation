@@ -62,7 +62,7 @@ Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/termin
 
 As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/terminus).
 
-If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
+If you're migrating to a Drupal site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 
 ```php
 $conf['migrate_drush_path'] = $_ENV['HOME'] . '/bin/drush';

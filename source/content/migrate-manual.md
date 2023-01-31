@@ -12,7 +12,7 @@ integration: [--]
 
 Manually migrate your site to Pantheon when any of the following apply:
 
-<Partial file="drupal-9/guide-note.md" />
+<Partial file="drupal/guide-note.md" />
 
 - **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 - **Large WordPress Site**: WordPress site exceeds 500MB.
@@ -45,7 +45,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
 
 #### Local Drupal configurations
 
@@ -67,7 +67,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
 
-1. Enter your current website URL, choose your site type (Drupal 7, Drupal 9, or WordPress,), and click **Continue**:
+1. Enter your current website URL, choose your site type, and click **Continue**:
 
    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
 
@@ -139,7 +139,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   </Tab>
 
-  <Tab title="Drupal 7" id="d7-code">
+  <Tab title="Drupal" id="d7-code">
 
     Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
@@ -150,7 +150,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
     - `vendor`
     - `sites`, excluding `sites/default/files`.
 
-    Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+    Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal Project](https://www.drupal.org/node/2621480) for more details.
 
   <Alert title="Note" type="info" >
 
@@ -291,7 +291,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 You can also use the Pantheon Dashboard to add your site's database.
 
-<Partial file="drupal-9/migrate-add-database-part2.md" />
+<Partial file="drupal/migrate-add-database-part2.md" />
 
 ## Upload Your Files
 

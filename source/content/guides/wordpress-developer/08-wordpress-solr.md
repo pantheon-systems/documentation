@@ -15,6 +15,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-solr
 anchorid: wordpress-solr
+reviewed: "2022-12-13"
 ---
 
 This section provides information on how to use Apache Solr with your WordPress Pantheon site.
@@ -152,4 +153,4 @@ The following code changes are required before Solr can be safely uninstalled an
 ## More Resources
 
 - [Pantheon Search (formerly Pantheon Solr)](/solr)
-- [Apache Solr for Drupal](/guides/solr-drupal/solr-drupal-9)
+- [Apache Solr for Drupal](/guides/solr-drupal/solr-drupal)

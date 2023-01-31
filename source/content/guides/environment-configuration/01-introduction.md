@@ -31,7 +31,7 @@ This guide shows you how to:
 
 - Restore an environment
 
-- Configure WordPress-specific environments and Drupal 9-specific environments
+- Configure WordPress-specific environments and Drupal-specific environments
 
 ## More Resources
 

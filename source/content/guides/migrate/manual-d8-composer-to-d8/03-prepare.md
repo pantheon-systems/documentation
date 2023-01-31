@@ -1,8 +1,8 @@
 ---
-title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
+title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Prepare
 description: Learn how to prepare your site for migration.
-cms: "Drupal 8"
+cms: "Drupal"
 contenttype: [guide]
 categories: [migrate]
 newcms: [drupal]
@@ -16,7 +16,7 @@ showtoc: true
 permalink: docs/guides/manual-d8-composer-to-d8/prepare
 anchorid: prepare
 editpath: migrate/manual-d8-composer-to-d8/03-prepare.md
-reviewed: "2021-05-09"
+reviewed: "2022-12-13"
 ---
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon.
@@ -27,13 +27,13 @@ Complete all steps in this section to ensure that your site is ready to be migra
 
 ### Set Drupal Core Version
 
-The previous step created a site using Drupal version 9. To remain on Drupal 8, set the core version as follows: 
+The previous step created a site using the latest version of Drupal. To remain on the current version, set the core version as follows: 
 
-<Partial file="drupal-9/core-version-remain-on-d8.md" />
+<Partial file="drupal/core-version-remain-on-d8.md" />
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment-no-clone.md" />
+<Partial file="drupal/prepare-local-environment-no-clone.md" />
 
 ### Create a Local Copy of the Old Site's Code
 

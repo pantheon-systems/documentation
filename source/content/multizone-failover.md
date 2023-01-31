@@ -5,7 +5,7 @@ tags: [backup, professional-services, site, webops]
 reviewed: "2020-02-26"
 contenttype: [doc]
 categories: [overview]
-newcms: [drupal, drupal7, wordpress]
+newcms: [drupal7, wordpress]
 audience: [agency, development]
 product: [search]
 integration: [--]
@@ -83,7 +83,7 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 <TabList>
 
-<Tab title="Drupal 7" id="solr-d7" active={true}>
+<Tab title="Drupal" id="solr-d7" active={true}>
 
 #### ApacheSolr module
 

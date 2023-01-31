@@ -10,6 +10,7 @@ newcms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [composer]
+reviewed: "2022-12-12"
 ---
 
 [<dfn id="composer">Composer</dfn>](https://getcomposer.org/doc/01-basic-usage.md) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
@@ -28,7 +29,7 @@ Composer encourages a mental model where code not written specifically for a giv
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides its own respective package repository so dependencies can be managed with Composer:
 
 - WordPress: <https://wpackagist.org>
-- Drupal 9: <https://packages.drupal.org/9>
+- Drupal (Latest Version): <https://packages.drupal.org/10>
 - Drupal 7: <https://packages.drupal.org/7>
 
 ## Managing Core as a Project Dependency
@@ -67,9 +68,9 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 
 Here are some ways to get started using Composer for your Pantheon sites:
 
-- Create a new [Drupal 9 with Integrated Composer](/drupal-9) site.
-- [Migrate or upgrade](/drupal-9-migration) an existing Drupal 8 or 9 site to Drupal 9 with Integrated Composer.
-- [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
+- Create a new [Drupal with Integrated Composer](/drupal) site.
+- [Migrate or upgrade](/drupal-migration) an existing Drupal site to the latest version of Drupal with Integrated Composer.
+- [Convert a Standard Drupal Site to a Composer Managed Site](/guides/composer-convert).
 - Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer-managed sites with continuous integration (CI) workflows.
 - Create a new [WordPress with Integrated Composer](/guides/integrated-composer) site.
 
@@ -81,6 +82,6 @@ If you're not ready to go all in with a Composer workflow and you want to see ho
 
 ## More Resources
 
-- [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)
+- [Convert a Standard Drupal Site to a Composer-Managed Site](/guides/composer-convert)
 
 - [WordPress with Composer on Pantheon](/guides/wordpress-composer)

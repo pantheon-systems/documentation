@@ -14,6 +14,7 @@ newcms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 This sections provides information on dependency requirements and how to add or remove individual site dependencies.

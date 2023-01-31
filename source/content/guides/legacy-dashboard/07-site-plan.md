@@ -12,7 +12,7 @@ anchorid: site-plan
 editpath: legacy-dashboard/07-site-plan.md
 contenttype: [guide]
 categories: [plans, dashboard]
-newcms: [wordpress, drupal, drupal7]
+newcms: [wordpress, drupal7]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]
@@ -90,7 +90,7 @@ For Object Cache and Pantheon Search (Solr), the following code changes are requ
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-id">
+<Tab title="Drupal" id="d7-id">
 
 #### Safely Remove Object Cache
 
