@@ -27,6 +27,32 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 <Partial file="ic-upstream-structure.md" />
 
+### How to Add Dependencies to Your Upstream
+
+1. Clone the Git repository for your upstream.
+
+1. Run the `composer upstream-require` command for each dependency:
+
+    ```bash{promptUser: user}
+    composer upstream-require drupal/pkg-name [--no-update]
+    ```
+
+     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. This is useful if you don't want to pin versions for your dependencies. Do not include this option if you want to pin specific versions for your dependencies.
+
+1. Commit and push your changes.
+
+### How to Update Dependencies in Your Upstream
+
+You may have the need to pin specific versions of your dependencies in your upstream. This is normally done with the composer.lock file but including this file in the root of the upstream will cause merge conflicts with your downstream sites. To solve this problem, you could use the `update-upstream-dependencies` composer command.
+
+This command will:
+
+1. Create or update a `upstream-configuration/composer.lock` file.
+1. Create or update a `upstream-configuration/locked/composer.json` file with all of the packages from composer.lock and their pinned versions.
+1. Update top-level `composer.json` repositories section for `upstream-configuration` to use `upstream-configuration/locked` instead of just `upstream-configuration` (if not done previously).
+
+This will allow you to make sure that you use specific versions for the packages in your upstream.
+
 ## More Resources
 
 - [Custom Upstreams](/guides/custom-upstream)
