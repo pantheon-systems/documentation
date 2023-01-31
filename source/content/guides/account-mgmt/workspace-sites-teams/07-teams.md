@@ -125,16 +125,16 @@ To export a list of users:
    - **All workspace and site members**: exports all workspace members, site-only collaborators, and supporting workspaces. 
    - **Only workspace members**: exports only the members defined in this workspace.
 
-1. Click **Export CSV**.  We will generate your report, and you will receive an email when it is complete and ready for download.
+1. Click **Export CSV** to generate your report. You will receive an email when the report is complete and ready for download.
 
     <Alert title="Warning" type="danger" >
     
-    The link in the email is only good for 24 hours.  If you don't download the file in that time, you will need to request another export.
+    The link in the email is only good for 24 hours.  If you don't download the file within 24 hours, you must request another export.
     
     </Alert>
 
     - You can only download the file using the link in the email.
-    - Only the user who requested the file can download it - if you share this link with other users, they will not be able to download the report.
+    - Only the user who requested the file can download it. If you share this link with other users, they will not be able to download the report.
     - To share the report, download the file and share the file.
 
 The exported CSV file will contain the following information:
@@ -143,7 +143,7 @@ The exported CSV file will contain the following information:
 
 - **IsSiteMember**: Indicates if the user is part of a site's team. 
 
-- **SiteUID**: If **IsSiteMember** is true, contains the UID of the site the user is a team member of.
+- **SiteUID**: If **IsSiteMember** is set to true, the entry contains the UID of the site the user is a team member of.
 
 - **Site Type**: Indicates if this is a CMS or Front-end site.
 
@@ -151,13 +151,13 @@ The exported CSV file will contain the following information:
 
 - **First Name**: User's first name.
 
-- **Last Name**:  User's last name.
+- **Last Name**: User's last name.
 
 - **Email Address**: User's email address.
 
 - **UserUID**: User's UID.
 
-- **Role**: If **SiteUID** is empty, contains the user's role in the workspace. If **SiteUID** is not empty, contains the user's role in the site.
+- **Role**: If **SiteUID** is empty, the entry contains the user's role in the workspace. If **SiteUID** is not empty, the entry contains the user's role in the site.
 
 The following fields only appear if you select **All Workspace and site members** when creating the export:
 
