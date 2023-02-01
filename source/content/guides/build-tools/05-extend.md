@@ -11,7 +11,7 @@ permalink: docs/guides/build-tools/extend/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 contenttype: [guide]
-categories: [--]
+categories: [dependencies]
 newcms: [--]
 audience: [development]
 product: [--]

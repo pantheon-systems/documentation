@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [search]
 newcms: [--]
 product: [search]
 integration: [--]

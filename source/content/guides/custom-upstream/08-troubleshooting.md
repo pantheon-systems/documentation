@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/custom-upstream/troubleshooting
 anchorid: troubleshooting
 contenttype: [guide]
-categories: [git, test, updates]
+categories: [custom-upstreams]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]

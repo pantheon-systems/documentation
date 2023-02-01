@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [personalize]
 newcms: [--]
 product: [--]
 integration: [edge]

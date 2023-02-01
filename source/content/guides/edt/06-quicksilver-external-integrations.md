@@ -1,29 +1,16 @@
 ---
 title: Essential Developer Training
 subtitle: External Integrations
-anchorid: external-integrations
-edt: true
-layout: guide
-tags: [collaborate, continuous-integration, quicksilver, webops, workflow]
-type: guide
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
-permalink: docs/guides/edt/external-integrations/
-nexturl: guides/edt/performance/
-nextpage: Performance
-previousurl: guides/edt/terminus-cli/
-previouspage: Command Line Interface
-editpath: edt/06-quicksilver-external-integrations.md
 contenttype: [guide]
-categories: [help]
+categories: [automate]
 newcms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver]
-image: launchGuide-twitterLarge
+tags: [collaborate, continuous-integration, quicksilver, webops, workflow]
+permalink: docs/guides/edt/external-integrations/
+anchorid: external-integrations
+editpath: edt/06-quicksilver-external-integrations.md
 ---
 
 In this lesson, we’re going to explore External Integrations with Quicksilver.

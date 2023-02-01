@@ -11,7 +11,7 @@ anchorid: analytics
 permalink: docs/guides/edge-integrations/analytics/
 editpath: edge-integrations/05-analytics.md
 contenttype: [guide]
-categories: [--]
+categories: [personalization]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

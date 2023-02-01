@@ -3,7 +3,7 @@ title: Dyn Domain Configuration
 provider: Dyn
 dnsprovider: true
 description: Learn how to point your Dyn domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/dyn.md/
 contenttype: [doc]

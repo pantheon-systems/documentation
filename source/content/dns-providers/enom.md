@@ -3,7 +3,7 @@ title: Enom Domain Configuration
 provider: Enom
 dnsprovider: true
 description: Learn how to point your Enom domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/enom.md/
 contenttype: [doc]

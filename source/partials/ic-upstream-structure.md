@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [dependencies]
 newcms: [--]
 product: [integrated-composer]
 integration: [--]

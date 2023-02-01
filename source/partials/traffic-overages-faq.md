@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [traffic]
 newcms: [--]
 product: [--]
 integration: [--]

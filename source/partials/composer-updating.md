@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [migrate]
+categories: [dependencies]
 newcms: [drupal9, drupal8]
 product: [--]
 integration: [composer]

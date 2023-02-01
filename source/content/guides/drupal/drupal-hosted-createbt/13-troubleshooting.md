@@ -12,7 +12,7 @@ anchorid: troubleshooting
 editpath: drupal/drupal-hosted-createbt/13-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [--]
+categories: [update]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [--]

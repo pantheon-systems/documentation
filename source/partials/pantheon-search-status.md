@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [search]
 newcms: [drupal9]
 product: [--]
 integration: [--]

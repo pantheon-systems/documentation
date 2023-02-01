@@ -2,7 +2,7 @@
 title: "Traffic"
 subtitle: Introduction
 description: Learn about and understand traffic overages.
-tags: [plans]
+tags: [traffic]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/account-mgmt/traffic

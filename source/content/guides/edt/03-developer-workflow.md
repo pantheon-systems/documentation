@@ -1,29 +1,16 @@
 ---
 title: Essential Developer Training
 subtitle: Developer Workflow
-anchorid: developer-workflow
-edt: true
-layout: guide
-tags: [dashboard, git, sftp, webops, workflow]
-type: guide
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
-permalink: docs/guides/edt/developer-workflow/
-nexturl: guides/edt/multidev/
-nextpage: Multidev
-previousurl: guides/edt/introduction-and-architecture/
-previouspage: Architecture
-editpath: edt/03-developer-workflow.md
 contenttype: [guide]
-categories: [help]
+categories: [workflows]
 newcms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-image: launchGuide-twitterLarge
+tags: [dashboard, git, sftp, webops, workflow]
+permalink: docs/guides/edt/developer-workflow/
+anchorid: developer-workflow
+editpath: edt/03-developer-workflow.md
 ---
 
 In this lesson, we’re going to explore the Developer Workflow.

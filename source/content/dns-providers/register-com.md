@@ -3,7 +3,7 @@ title: Register.com Domain Configuration
 provider: Register.com
 dnsprovider: true
 description: Learn how to point your Register.com domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 draft: true
 permalink: docs/:basename
 editpath: dns-providers/register-com.md/

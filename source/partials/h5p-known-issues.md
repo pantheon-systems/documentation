@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [troubleshooting]
 newcms: [--]
 product: [--]
 integration: [plugins, modules]

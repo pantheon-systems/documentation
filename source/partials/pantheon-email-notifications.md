@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [email]
 newcms: [--]
 product: [--]
 integration: [--]

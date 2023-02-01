@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [dependencies]
 newcms: [drupal-wordpress]
 product: [--]
 integration: [composer]

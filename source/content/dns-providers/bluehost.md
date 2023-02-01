@@ -4,7 +4,7 @@ provider: Bluehost
 dnsprovider: true
 draft: true
 description: Learn how to point your Bluehost domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/bluehost.md/
 contenttype: [doc]

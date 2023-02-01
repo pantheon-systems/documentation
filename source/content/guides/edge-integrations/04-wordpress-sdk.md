@@ -11,7 +11,7 @@ anchorid: wordpress-sdk
 permalink: docs/guides/edge-integrations/wordpress-sdk/
 editpath: edge-integrations/04-wordpress-sdk.md
 contenttype: [guide]
-categories: [--]
+categories: [personalization]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

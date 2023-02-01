@@ -3,7 +3,7 @@ title: Fasthosts Domain Configuration
 provider: Fasthosts
 dnsprovider: true
 description: Learn how to point your Fasthosts domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 draft: true
 permalink: docs/:basename
 editpath: dns-providers/fasthosts.md/

@@ -12,7 +12,7 @@ anchorid: prepare
 editpath: drupal/drupal-unhosted-composer/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [migrate, create]
+categories: [migrate]
 newcms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]
 product: [composer]

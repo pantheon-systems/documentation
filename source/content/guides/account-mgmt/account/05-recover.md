@@ -3,7 +3,7 @@ title: "Manage Your Account"
 subtitle: Recover Account
 description: Recover your account when someone leaves.
 contenttype: [guide]
-categories: [billing]
+categories: [accounts]
 newcms: [--]
 audience: [business]
 product: [--]

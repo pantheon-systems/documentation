@@ -10,7 +10,7 @@ permalink: docs/guides/build-tools/tests/
 editpath: build-tools/06-tests.md
 image: buildToolsGuide-thumb
 contenttype: [guide]
-categories: [--]
+categories: [dependencies]
 newcms: [--]
 audience: [development]
 product: [--]

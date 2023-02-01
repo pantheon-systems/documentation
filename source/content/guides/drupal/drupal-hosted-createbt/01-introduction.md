@@ -12,7 +12,7 @@ anchorid: drupal-hosted-createbt
 editpath: drupal/drupal-hosted-createbt/01-introduction.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate]
+categories: [update]
 newcms: [drupal, drupal9, drupal10]
 audience: [development]
 product: [integrated-composer]

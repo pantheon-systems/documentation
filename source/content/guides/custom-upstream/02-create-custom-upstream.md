@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/custom-upstream/create-custom-upstream
 anchorid: create-custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
+categories: [custom-upstreams]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]

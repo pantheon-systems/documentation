@@ -11,7 +11,7 @@ editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 reviewed: "2021-12-13"
 contenttype: [guide]
-categories: [--]
+categories: [dependencies]
 newcms: [--]
 audience: [development]
 product: [--]

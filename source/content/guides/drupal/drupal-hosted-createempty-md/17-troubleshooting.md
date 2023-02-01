@@ -11,7 +11,7 @@ anchorid: troubleshooting
 editpath: drupal/drupal-hosted-createempty-md/17-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [--]
+categories: [update, troubleshooting]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [--]

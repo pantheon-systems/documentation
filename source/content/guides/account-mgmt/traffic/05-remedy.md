@@ -2,7 +2,7 @@
 title: "Traffic"
 subtitle: Troubleshooting Traffic Events
 description: Determine and address the causes of unexpected traffic.
-tags: [plans]
+tags: [traffic, plans]
 contributors: [wordsmither]
 layout: guide
 showtoc: true

@@ -2,7 +2,7 @@
 title: "Billing"
 subtitle: Troubleshooting
 description: Learn how to troubleshoot payment issues.
-tags: [billing]
+tags: [billing, troubleshooting]
 contributors: [wordsmither]
 layout: guide
 showtoc: true

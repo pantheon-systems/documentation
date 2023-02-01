@@ -2,7 +2,7 @@
 title: "Traffic"
 subtitle: FAQ
 description: Frequently asked questions regarding traffic and overages.
-tags: [plans]
+tags: [faq, traffic]
 contributors: [wordsmither]
 layout: guide
 showtoc: true

@@ -2,7 +2,7 @@
 title: "Traffic"
 subtitle: Measuring Traffic
 description: Learn how Pantheon measures traffic.
-tags: [plans]
+tags: [traffic]
 contributors: [wordsmither]
 layout: guide
 showtoc: true

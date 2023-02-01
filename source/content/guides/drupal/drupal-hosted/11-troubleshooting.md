@@ -12,7 +12,7 @@ anchorid: troubleshooting
 editpath: drupal/drupal-hosted/11-troubleshooting.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate, help]
+categories: [migrate, troubleshooting]
 newcms: [drupal9, drupal10]
 audience: [development]
 product: [--]

@@ -11,7 +11,7 @@ editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
 reviewed: "2022-04-19"
 contenttype: [guide]
-categories: [--]
+categories: [dependencies]
 newcms: [--]
 audience: [development]
 product: [--]

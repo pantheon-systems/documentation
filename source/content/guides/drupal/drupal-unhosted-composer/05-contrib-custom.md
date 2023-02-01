@@ -12,7 +12,7 @@ anchorid: contrib-custom
 editpath: drupal/drupal-unhosted-composer/05-contrib-custom.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [migrate, config]
+categories: [migrate]
 newcms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [composer]

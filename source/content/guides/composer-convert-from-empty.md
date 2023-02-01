@@ -8,7 +8,7 @@ tags: [composer, site, workflow, D8, D9, D10]
 contributors: [dustinleblanc, greg-1-anderson, stovak, kporras07]
 reviewed: "2022-12-13"
 contenttype: [doc]
-categories: [update]
+categories: [dependencies, update]
 newcms: [drupal8]
 audience: [development]
 product: [--]

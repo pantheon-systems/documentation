@@ -11,7 +11,7 @@ permalink: docs/guides/drupal-unhosted/troubleshooting
 anchorid: troubleshooting
 editpath: drupal/drupal-unhosted/15-troubleshooting.md
 contenttype: [guide]
-categories: [migrate]
+categories: [migrate, troubleshooting]
 newcms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]
 product: [--]

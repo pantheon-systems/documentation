@@ -11,7 +11,7 @@ anchorid: deploy
 editpath: drupal/drupal-hosted-md/11-deploy.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [migrate]
+categories: [update]
 newcms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [--]

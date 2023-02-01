@@ -11,7 +11,7 @@ anchorid: drupal-unhosted-composer
 editpath: drupal/drupal-unhosted-composer/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [overview, migrate]
+categories: [migrate]
 newcms: [drupal9, drupal8, druoal10, drupal]
 audience: [development]
 product: [--]

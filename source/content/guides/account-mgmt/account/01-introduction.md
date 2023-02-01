@@ -3,7 +3,7 @@ title: "Manage Your Account"
 subtitle: Introduction
 description: Learn how to create, delete, and recover your account.
 contenttype: [guide]
-categories: [billing]
+categories: [accounts]
 newcms: [--]
 audience: [business]
 product: [--]

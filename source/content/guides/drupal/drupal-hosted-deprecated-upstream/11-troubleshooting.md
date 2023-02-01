@@ -12,7 +12,7 @@ permalink: docs/guides/drupal-hosted-deprecated-upstream/troubleshooting
 anchorid: troubleshooting
 editpath: drupal/drupal-hosted-deprecated-upstream/11-troubleshooting.md
 contenttype: [guide]
-categories: [help, migrate]
+categories: [migrate, troubleshooting]
 newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: []

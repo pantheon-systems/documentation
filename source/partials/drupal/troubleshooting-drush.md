@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [upgrade]
+categories: [update]
 newcms: [drupal9]
 product: [--]
 integration: [drush]

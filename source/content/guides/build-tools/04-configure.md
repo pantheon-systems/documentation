@@ -11,7 +11,7 @@ image: buildToolsGuide-thumb
 contributors: [szipfel]
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [--]
+categories: [dependencies]
 newcms: [--]
 audience: [development]
 product: [--]

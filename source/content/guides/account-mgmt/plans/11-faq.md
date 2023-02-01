@@ -2,7 +2,7 @@
 title: "Plans"
 subtitle: FAQ
 description: Commonly asked questions about plans.
-tags: [plans]
+tags: [plans, faq]
 contributors: [wordsmither]
 layout: guide
 showtoc: true

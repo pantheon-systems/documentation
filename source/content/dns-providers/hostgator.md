@@ -4,7 +4,7 @@ provider: HostGator
 dnsprovider: true
 description: Learn how to point your HostGator domain to a Pantheon site.
 draft: true
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/hostgator.md/
 contenttype: [doc]
