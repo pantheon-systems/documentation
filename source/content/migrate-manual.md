@@ -232,7 +232,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   If you haven't already configured [SSH Keys](/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
 
-1. Review your current index using `git status`, then commit all changes:
+1. Review your current index using `git status`, then commit all changes. Refer to [Pantheon Core Files](/code#pantheon-core-files) and [Pantheon Git Repository](/code#pantheon-git-repository) for more information on core files and code structure.
 
   ```bash{promptUser: user}
   git add .
