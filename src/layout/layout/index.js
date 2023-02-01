@@ -18,7 +18,6 @@ const Layout = (props) => {
     <InstantSearch
       searchClient={searchClient}
       indexName={config.search.indexName}
-      onSearchStateChange={() => {}}
     >
       <div className="pantheon-docs">
         <Header page={pageType} />
