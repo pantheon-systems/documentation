@@ -37,8 +37,6 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
     composer upstream-require drupal/pkg-name [--no-update]
     ```
 
-     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here. This is useful if you don't want to pin versions for your dependencies. Do not include this option if you want to pin specific versions for your dependencies.
-
 1. Commit and push your changes.
 
 ### How to Update Dependencies in Your Upstream
