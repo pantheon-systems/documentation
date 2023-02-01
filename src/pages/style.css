@@ -28,7 +28,7 @@
     padding: 0;
   }
   
-  .ais-Hits-item {
+  .search-page-hits-container .ais-Hits-item {
     border-bottom: 2px solid #ECECEC;
     padding: 10px 30px 40px 30px;
   }

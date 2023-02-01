@@ -37,9 +37,11 @@ const SearchComponent = ({ indices, collapse, isSearchPage }) => {
 
   const showStatus = query.length > 0 && focus
 
+  const setQueryState = (value) => setQuery(value)
+
   return (
     <div>
-      <Input onFocus={() => setFocus("true")} {...{ collapse, focus }} setQuery={setQuery} />
+      <Input onFocus={() => setFocus("true")} {...{ collapse, focus }} setQuery={setQueryState} />
       <div
         style={{ display: showStatus && !isSearchPage ? 'grid' : 'none' }}
         className='search-container-styles'
@@ -65,12 +67,12 @@ const SearchComponent = ({ indices, collapse, isSearchPage }) => {
 SearchComponent.propTypes = {
   indices: propTypes.arrayOf(
     propTypes.shape({
-      name: propTypes.string.isRequired,
+      name: propTypes.string,
       title: propTypes.string,
-      hitComp: propTypes.func.isRequired,
+      hitComp: propTypes.string,
     })
   ),
-  collapse: propTypes.bool,
+  collapse: propTypes.string,
   isSearchPage: propTypes.bool,
 };
 
