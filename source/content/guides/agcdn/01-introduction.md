@@ -3,7 +3,7 @@ title: Advanced Global CDN
 subtitle: Introduction
 description: AGCDN enables Edge configuration tools for advanced site management,  enhanced security, and much more.
 tags: [professional-services, logs, cdn, security]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn
@@ -61,7 +61,6 @@ AGCDN provides many features:
 |[Custom Rules and Redirects](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |  <span style="color:green">✔</span> | 
 |[Tor Traffic Blocking](/guides/agcdn/agcdn-features#tor-traffic-blocking)| <span style="color:green">✔</span> |
 
-
 ### AGCDN with WAF/IO Features
 
 AGCDN with WAF/IO includes everything in the table above with the following additions:
@@ -72,7 +71,6 @@ AGCDN with WAF/IO includes everything in the table above with the following addi
 | [Efficient Image Optimization at the Edge](/guides/agcdn/agcdn-features#efficient-image-optimization-at-the-edge)  |  <span style="color:green">✔</span> |
 | [Rate Limiting (early access)](/guides/agcdn/agcdn-wafio#rate-limiting)   | <span style="color:green">✔</span> |
 | [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-features#advanced-bot-detection-and-mitigation-available-as-an-add-on) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> | 
-
 
 ## Is AGCDN Right For Me?
 

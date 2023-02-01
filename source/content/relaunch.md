@@ -4,11 +4,11 @@ description: Take a new site live by moving custom domains from one Site Dashboa
 tags: [dns, https, launch, migrate]
 reviewed: "2020-09-08"
 contenttype: [doc]
-categories: [launch, migrate, domains]
+categories: [create, config, deploy, launch, migrate, domains]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]
-integration: [--]
+integration: [quicksilver]
 ---
 Sites are considered to have launched on Pantheon after traffic is routed through a custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
 

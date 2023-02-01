@@ -3,7 +3,7 @@ title: Advanced Global CDN
 subtitle: AGCDN Features
 description: Learn more about AGCDN features.
 tags: [professional-services, logs, cdn, security]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-features
@@ -99,6 +99,3 @@ Support for blue/green deployment<Popover title="Blue/Green Deployment" content=
 - [Fastly on Pantheon](/guides/fastly-pantheon)
 
 - [How to Fight Cyberattacks Using Pantheon’s Advanced Global CDN](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn)
-
-
-
