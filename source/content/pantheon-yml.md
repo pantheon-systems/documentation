@@ -156,9 +156,9 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
    Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-This table shows the recommended MariaDB version for each CMS:
+This table shows the supported MariaDB version for each CMS:
 
-| CMS           | Recommended MariaDB Version |
+| CMS           | Supported MariaDB Version(s) |
 |---------------|-----------------------------|
 | Drupal < 7.76 | 10.3                        |
 | Drupal ≥ 7.76 | 10.4                        |
