@@ -82,7 +82,7 @@ The standard protected web paths can be important to the security of your site. 
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
  
-* [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+* [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
 ### Enforce HTTPS + HSTS
@@ -156,9 +156,9 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
    Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-This table shows the recommended MariaDB version for each CMS:
+This table shows the supported MariaDB version for each CMS:
 
-| CMS           | Recommended MariaDB Version |
+| CMS           | Supported MariaDB Version(s) |
 |---------------|-----------------------------|
 | Drupal < 7.76 | 10.3                        |
 | Drupal ≥ 7.76 | 10.4                        |
@@ -167,11 +167,11 @@ This table shows the recommended MariaDB version for each CMS:
 | Drupal ≥ 9.0  | 10.4 or 10.6                |
 | WordPress     | 10.4 or 10.6                |
 
-Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
+Users of Drupal 6 sites should consider [upgrading to the latest version of Drupal](/drupal-updates) for better support.
 
-#### Considerations - Drupal 9
+#### Considerations - Drupal
 
-<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
+<Partial file="drupal/drupal-mariadb-considerations.md" />
 
 Confirm that the database upgrade completed successfully using the steps at the beginning of [Specify a Version of MariaDB](#specify-a-version-of-mariadb).
 
@@ -195,7 +195,7 @@ For more information on how to diagnose tables and troubleshoot potential issues
 
 ### Specify a Solr Version
 
-Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal 9 sites:
+Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal sites:
 
 ```yaml:title=pantheon.yml
 search:
@@ -205,7 +205,7 @@ search:
 #### Considerations
 
 - The valid values for the versions are `3` and `8`.
-- Currently, Solr 8 is only supported for [Drupal 9](/guides/solr-drupal/solr-drupal-9) sites.
+- Currently, Solr 8 is only supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
 
 ### Drush Version
 

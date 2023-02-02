@@ -30,20 +30,4 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 3.0.3 or earlier  | December 17, 2021  | January  18, 2023 |
 </Tab>
 
-<Tab title="Terminus 2.x" id="terminus-version-2">
-
-| Version           | Release Date      | EOL Date          |
-| ----------------- | ----------------- | ----------------- |
-| 2.6.6             | February 07, 2022 | February 07, 2023 |
-| 2.6.5             | December 17, 2021 | February 07, 2023 |
-| 2.6.4             | December 06, 2021 | December 17, 2022 |
-| 2.6.3             | December 03, 2021 | December 08, 2022 |
-| 2.6.2             | October  18, 2021 | December 03, 2022 |
-| 2.6.1             | August 04, 2021   | October 18, 2022  |
-| 2.6.0             | June 04, 2021     | August 04, 2022   |
-| 2.5.0             | January 20, 2021  | June 04, 2022     |
-| 2.4.1             | September 08, 2020| January 20, 2022  |
-| 2.4.0 or earlier  | June 20, 2020     | September 08, 2021|
-</Tab>
-
 </TabList>

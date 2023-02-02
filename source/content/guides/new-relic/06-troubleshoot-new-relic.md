@@ -101,7 +101,7 @@ The code above should be added to `settings.php` for Drupal sites or `wp-config.
 
 To isolate the disabling of New Relic to only AMP pages, the example logic checks the current request for `?amp`. Adjust this example as needed based on your site's implementation of Google AMP and it's corresponding URL patterns.
 
-It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event, for instance.
+It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal, this can be done using an event subscriber that listens to the `kernel.request` event, for instance.
 
 ## APM Availability Monitoring
 

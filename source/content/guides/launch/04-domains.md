@@ -85,7 +85,7 @@ After you begin this process, you have:
 
 1. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
 
-1. Serve the file from your existing live site. Drupal 7 users can use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
+1. Serve the file from your existing live site. Drupal users can use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
 
     <Alert title="Note" type="info">
 

@@ -62,7 +62,7 @@ This error message will be accompanied by a `503 First Byte Timeout` page title.
 
 The new Pantheon Global Edge size limit for cookies, sent in the request `"Cookie: .."` header, is 10KB. If more than 10KB are sent, all cookies are dropped and the request is processed as if no cookies were sent. The header `"X-Cookies-Dropped: 1"` is added to truncated requests and responses. You can ignore this scenario in your PHP code or handle it by displaying a custom error page.
 
-This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (for example, `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. Refer to [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9/#troubleshoot-503-response-header-overflow) for more information.
+This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (for example, `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. Refer to [Environment-Specific Configurations for Drupal](/guides/environment-configuration/environment-specific-config-drupal/#troubleshoot-503-response-header-overflow) for more information.
 
 You can reduce the number of set-cookie headers in the response to resolve this error if you receive a 503 error and your cookie size is smaller than 10KB.
 

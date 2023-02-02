@@ -336,7 +336,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') && !i
 
 </Tab>
 
-<Tab title="Drupal 7" id="restrict-drupal-7">
+<Tab title="Drupal" id="restrict-drupal-7">
 
 The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `$trusted_ips` array:
 

@@ -141,6 +141,6 @@ You should avoid using [`update_option()`](https://codex.wordpress.org/Function_
 
 ## More Resources
 
-- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal Sites](/guides/environment-configuration/environment-specific-config-drupal)
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

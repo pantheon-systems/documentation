@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [launch, site, webops]
-reviewed: "2020-05-27"
+reviewed: "2022-12-13"
 ---
  Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
@@ -114,11 +114,11 @@ The Dashboard integration is intended to provide developers with the most action
 
 ### Can I opt out of a specific recommendation?
 
-If you want to permanently opt out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal 7.
+If you want to permanently opt out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal.
 
 #### Examples
 
-Drupal 7 — permanently opt out of the PageCompression check in the Cache report:
+Drupal — permanently opt out of the PageCompression check in the Cache report:
 
  ```php:title=settings.php
  $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;

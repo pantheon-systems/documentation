@@ -6,7 +6,7 @@ permalink: docs/faq
 anchorid: faq
 contenttype: [doc]
 categories: [help]
-newcms: [drupal, drupal7, drupal8, drupal9, wordpress]
+newcms: [drupal, wordpress]
 audience: [agency, development]
 product: [cdn, localdev, search, siteportfolio, terminus]
 integration: [--]
@@ -24,7 +24,7 @@ Yes. Thousands of live production sites run on Pantheon.
 
 ### What versions of Drupal does Pantheon support?
 
-Pantheon supports Drupal 7, 8, and 9 sites. As of February 2016, the Drupal community [no longer supports Drupal 6](https://www.drupal.org/drupal-6-eol). Drupal 6 sites will continue to run on Pantheon, but there will no longer be any updates to fix bugs or security issues.
+Pantheon supports Drupal 7+ sites. As of February 2016, the Drupal community [no longer supports Drupal 6](https://www.drupal.org/drupal-6-eol). Drupal 6 sites will continue to run on Pantheon, but there will no longer be any updates to fix bugs or security issues.
 
 ### What versions of WordPress does Pantheon support?
 
@@ -141,7 +141,7 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 <Partial file="solr-version.md" />
 
-Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/guides/wordpress-developer/wordpress-solr) and [Drupal 7](/guides/solr-drupal/solr-drupal-7).
+Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/guides/wordpress-configurations/wordpress-solr) and [Drupal](/guides/solr-drupal/solr-drupal-7).
 
 ## Support
 

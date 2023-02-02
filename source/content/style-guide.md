@@ -18,7 +18,6 @@ You can also reference the [Pantheon Documentation Template](/doc-template) to s
 
 Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines.
 
-
 ## Before You Begin Sections
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
@@ -507,12 +506,6 @@ title: Page Title
 
 </Example>
 
-### Bold
-
-Bold is used for navigational elements within a given interface:
-
-<Example>
-
 Go to **Account** > **Security** > **Personal Access Tokens**.
 
 <hr className="source-code" /> <br/>
@@ -555,16 +548,6 @@ Definitions and Definition Lists are automatically added to the [Glossary](/glos
 
 </Example>
 
-### Definition List
-
-<Example>
-
-<dl>
-<dt>Term</dt>
-<dd>Definition.</dd>
-<dt>Another Term</dt>
-<dd>Description of the new term.</dd>
-</dl>
 
 <hr className="source-code" /> <br/>
 

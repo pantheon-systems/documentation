@@ -6,7 +6,7 @@ tags: [collaborate]
 reviewed: "2020-11-01"
 contenttype: [doc]
 categories: [overview, help]
-newcms: [drupal7, drupal8, drupal9, drupal10, drupal, wordpress, decoupled]
+newcms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
