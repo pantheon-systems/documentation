@@ -3,8 +3,8 @@ title: Drupal Security Patches
 description: How to manually patch Drupal with security patches, ahead of the upstream updates.
 cms: "Drupal"
 contenttype: [doc]
-categories: [--]
-newcms: [--]
+categories: [security]
+newcms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

@@ -9,7 +9,7 @@ permalink: docs/guides/custom-upstream/test-custom-upstream
 contributors: [--]
 anchorid: test-custom-upstream
 contenttype: [guide]
-categories: [custom-upstreams]
+categories: [custom-upstream]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstream]

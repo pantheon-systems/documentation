@@ -4,7 +4,7 @@ subtitle: Securely Working with phpinfo
 description: Important security considerations when working with phpinfo on your Pantheon Drupal site.
 cms: "Drupal"
 contenttype: [guide]
-categories: [--]
+categories: [security]
 newcms: [--]
 audience: [development]
 product: [--]

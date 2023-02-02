@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [dependencies, custom-upstream]
 newcms: [drupal9]
 product: [integrated-composer]
 integration: [--]

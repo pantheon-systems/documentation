@@ -6,7 +6,7 @@ cms: "Drupal"
 tags: [cache, libraries, modules, site]
 reviewdate: "2022-04-01"
 contenttype: [doc]
-categories: [cache, plan]
+categories: [cache]
 newcms: [drupal]
 audience: [development]
 product: [--]

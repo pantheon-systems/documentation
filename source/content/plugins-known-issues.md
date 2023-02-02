@@ -5,7 +5,7 @@ cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 contenttype: [doc]
-categories: [help]
+categories: [issues]
 newcms: [wordpress]
 audience: [development]
 product: [--]

@@ -5,7 +5,7 @@ tags: [security]
 contributors: [clintonPantheon]
 reviewed: "2021-10-21"
 contenttype: [doc]
-categories: [--]
+categories: [security]
 newcms: [--]
 audience: [development]
 product: [--]

@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [track]
 newcms: [--]
 product: [--]
 integration: [--]

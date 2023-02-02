@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [--]
+categories: [issues, files]
 newcms: [drupal]
 product: [--]
 integration: [modules]

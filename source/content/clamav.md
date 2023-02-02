@@ -4,7 +4,7 @@ description: Learn how to protect your site against malicious files with malware
 cms: "Drupal"
 tags: [modules, security, files]
 contenttype: [doc]
-categories: [--]
+categories: [security]
 newcms: [drupal7, drupal8]
 audience: [development]
 product: [--]
