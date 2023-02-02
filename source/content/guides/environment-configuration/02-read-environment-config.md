@@ -171,13 +171,13 @@ It is not possible to set environment variables on Pantheon. However, there are 
 
 ### Terminus Secrets Plugin
 
-You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below with the third line modified for the key you are configuring.
+You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below. This example will help you get started, however, you must modify the third line for the key you want to configure. You can also modify the `secrets.json` file name, although we recommend you provide the file with a name you will recognize for secrets management.
 
 <TabList>
 
 <Tab title="WordPress" id="wp-example" active={true}>
 
-1. Modify and use the code example below to write secrets. 
+1. Modify and use the code example below to write secrets.
 
 ```bash
 $secrets_json_text = file_get_contents('/files/private/secrets.json');
@@ -203,7 +203,7 @@ $config['example_integration.settings']['apikey'] = $secrets_data['example_api_k
 
 ### Manual File Creation
 
-You can manually create and add files to the `/files/private` directory for scenarios that are not supported by the Terminus Secrets plugin. For example, when secrets in the Dev and Live environments are different. 
+You can manually create and add files to the `/files/private` directory for scenarios that are not supported by the Terminus Secrets plugin. For example, when secrets in the Dev and Live environments are different.
 
 1. Create your files manually in the `/files/private` directory for each case required, for example:
 
@@ -213,7 +213,7 @@ You can manually create and add files to the `/files/private` directory for scen
 
 1. Update your PHP file using the code examples below as a reference.
 
-    - Note that the code below uses SendGrid as an example. You will need to modify the code for the specific key you are configuring. 
+    - Note that the code below uses SendGrid as an example. You will need to modify the code for the specific key you are configuring.
 
 <TabList>
 
