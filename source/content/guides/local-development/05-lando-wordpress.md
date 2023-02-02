@@ -5,7 +5,7 @@ description: Install and configure Lando for WordPress local development.
 contributors: [digisavvy]
 contenttype: [guide]
 categories: [automate]
-newcms: [drupal, wordpress]
+newcms: [wordpress]
 audience: [development]
 product: [terminus]
 integration: []

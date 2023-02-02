@@ -48,7 +48,7 @@ Be sure that you have:
   - [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
   <Alert title="Note" type="info" >
-  
+
   Verify you can run Terminus, Drush, and Composer commands as the Jenkins user. Terminus and Drush must be accessible from standard `PATH` directories.
 
   </Alert>
