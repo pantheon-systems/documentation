@@ -8,7 +8,7 @@ generator: pagination
 layout: guide
 cms: "WordPress"
 contenttype: [guide]
-categories: [--]
+categories: [ecommerce]
 newcms: [wordpress]
 audience: [development]
 product: [--]

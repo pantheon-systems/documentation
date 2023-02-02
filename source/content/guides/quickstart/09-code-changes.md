@@ -2,10 +2,6 @@
 title: Quick Start
 subtitle: Make Code Changes
 description: In part nine of our Quick Start guide, learn how to make code changes using SFTP.
-quickstart: true
-anchorid: code-changes
-generator: pagination
-layout: guide
 contenttype: [guide]
 categories: [overview]
 newcms: [--]
@@ -13,18 +9,9 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, dashboard, iterate, sftp]
-type: guide
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/code-changes/
-nexturl: guides/quickstart/next-steps/
-nextpage: Next Steps
-previousurl: guides/quickstart/ui-changes/
-previouspage: On-Server Dev, Part 1
+anchorid: code-changes
 editpath: quickstart/09-code-changes.md
-image: launchGuide-twitterLarge
 ---
 
 Finally, we’re going to edit code directly. We’ll commit our edits to <Icon icon={"wrench"} text={"Dev"}/>, review in <Icon icon={"equalizer"} text={"Test"}/>, and deploy to <Icon icon={"cardio"} text={"Live"}/>. Let’s get started!

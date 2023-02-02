@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [upgrade]
+categories: [update, test]
 newcms: [--]
 product: [autopilot]
 integration: [--]

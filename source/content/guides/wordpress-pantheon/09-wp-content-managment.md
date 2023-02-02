@@ -3,7 +3,7 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress Content Management
 description: Learn how to manage your WordPress content efficiently.
 contenttype: [guide]
-categories: [create]
+categories: [cms]
 newcms: [wordpress]
 audience: [development]
 product: [--]

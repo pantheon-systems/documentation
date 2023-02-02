@@ -2,8 +2,6 @@
 title: Quick Start
 subtitle: Personal Workspace
 description: In part two of our Quick Start guide, learn about the Pantheon Personal Workspace.
-anchorid: user-dashboard
-layout: guide
 contenttype: [guide]
 categories: [overview]
 newcms: [--]
@@ -11,17 +9,10 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard]
-type: guide
 showtoc: true
-quickstart: true
-generator: pagination
 permalink: docs/guides/quickstart/user-dashboard/
-nexturl: guides/quickstart/create-new-site/
-nextpage: Create New Site
-previousurl: guides/quickstart/
-previouspage: Introduction
+anchorid: user-dashboard
 editpath: quickstart/02-user-dashboard.md
-image: launchGuide-twitterLarge
 ---
 
 Let's start by exploring the Personal Workspace , which is what you see after you log in.

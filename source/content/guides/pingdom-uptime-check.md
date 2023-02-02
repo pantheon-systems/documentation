@@ -2,7 +2,7 @@
 title: Pingdom Uptime Check
 description: How to create and configure a Pingdom Uptime check on a Pantheon site.
 contenttype: [doc]
-categories: [--]
+categories: [traffic]
 newcms: [--]
 audience: [development]
 product: [--]

@@ -2,10 +2,6 @@
 title: Quick Start
 subtitle: Connection Modes
 description: In part seven of our Quick Start guide, learn how Pantheon users take advantage of Git and SFTP mode to develop their sites.
-quickstart: true
-anchorid: connection-modes
-generator: pagination
-layout: guide
 contenttype: [guide]
 categories: [overview]
 newcms: [--]
@@ -13,19 +9,10 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, dashboard, git, sftp, workflow]
-type: guide
 showtoc: true
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/connection-modes/
-nexturl: guides/quickstart/ui-changes/
-nextpage: On-Server Dev, Part 1
-previousurl: guides/quickstart/clone-live-to-dev/
-previouspage: Clone Live to Dev
+anchorid: connection-modes
 editpath: quickstart/07-connection-modes.md
-image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’ll learn how to connect to your Dev environment and change code.
