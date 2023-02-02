@@ -19,9 +19,9 @@ The [latest version of Drupal](/drupal-migration) automatically includes [Integr
 
 ## Drupal 8 Composer-Managed Sites
 
-As of Drupal 8.8, you are required to use Composer to manage your dependencies if you want to use all contributed modules. Composer-managed sites are not compatible with Pantheon's One-click updates. However, you can easily meet Drupal's requirement and be compatible with Pantheon's platform by using [Integrated Composer](/guides/integrated-composer). You must do **one** of the following to be compatible with Pantheon's One-click updates and Drupal composer requirements:
+As of Drupal 8.8, you are required to use Composer to manage your dependencies if you want to use all contributed modules. Composer-managed sites are not compatible with Pantheon's One-click updates. However, you can easily meet Drupal's Composer requirement and be compatible with Pantheon's platform by using [Integrated Composer](/guides/integrated-composer). You must do **one** of the following to be compatible with Pantheon's One-click updates and Drupal Composer requirements:
 
-- [Convert the site to Integrated Composer](/guides/composer-convert)
+- [Convert the site to Integrated Composer](/guides/composer-convert).
 
 - Update core to use Composer exclusively. Refer to [Build Tools](/guides/build-tools/update) for instructions.
 
@@ -48,9 +48,9 @@ You can apply one-click updates to individual sites repositories through:
 
   ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
-1. Commit and deploy any SFTP changes and then set the site's connection mode to **Git**.
+1. Commit and deploy any SFTP changes and then set the site's **Connection Mode** to **Git**.
 
-    - You can't apply upstream updates when SFTP connection mode is enabled.
+    - You can't apply upstream updates when the Connection Mode is set to SFTP.
 
 1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
