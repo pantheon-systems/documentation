@@ -5,7 +5,7 @@ tags: [agencies, organizations, collaborate]
 contributors: [davidneedham]
 searchboost: 90
 contenttype: [doc]
-categories: [--]
+categories: [overview]
 newcms: [--]
 audience: [agency]
 product: [--]

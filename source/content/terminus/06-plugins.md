@@ -6,7 +6,7 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contenttype: [guide]
-categories: [cli, create]
+categories: [cli]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

@@ -4,7 +4,7 @@ subtitle: Avoid WordPress Login Attacks
 description: Learn how to avoid WordPress login attacks.
 cms: "WordPress"
 contenttype: [guide]
-categories: [manage]
+categories: [security]
 newcms: [wordpress]
 audience: [development]
 product: [--]

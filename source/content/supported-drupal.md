@@ -4,7 +4,7 @@ description: Learn which versions of Drupal are currently supported, as well as 
 tags: [libraries, updates]
 contributors: [wordsmither]
 contenttype: [doc]
-categories: [overview]
+categories: [cms]
 newcms: [drupal]
 audience: [development]
 product: [--]

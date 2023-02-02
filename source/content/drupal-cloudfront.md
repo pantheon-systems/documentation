@@ -5,7 +5,7 @@ cms: "Drupal"
 tags: [cdn, cache]
 searchboost: 50
 contenttype: [doc]
-categories: [cache, config]
+categories: [cache]
 newcms: [drupal]
 audience: [development]
 product: [cdn]

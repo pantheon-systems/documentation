@@ -4,7 +4,7 @@ description: Learn which versions of WordPress are currently supported, as well 
 tags: [libraries, updates]
 contributors: [wordsmither]
 contenttype: [doc]
-categories: [overview]
+categories: [cms]
 newcms: [wordpress]
 audience: [development]
 product: [--]

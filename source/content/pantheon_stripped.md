@@ -3,7 +3,7 @@ title: Considerations for Google Analytics and PANTHEON_STRIPPED
 description: Information on why PANTHEON_STRIPPED is placed in the utm_source URL parameter.
 tags: [cache, cdn, measure]
 contenttype: [doc]
-categories: [cache, measure]
+categories: [track]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [cdn]

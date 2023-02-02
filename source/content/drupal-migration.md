@@ -3,7 +3,7 @@ title: Drupal Upgrade and Migration Guides
 tags: [code, launch, migrate, site, updates, composer, D8, D9, D10]
 reviewed: "2022-12-13"
 contenttype: [doc]
-categories: [create, plan]
+categories: [migrate, update]
 newcms: [drupal]
 audience: [development]
 product: [--]

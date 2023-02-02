@@ -8,7 +8,7 @@ layout: video
 type: video
 searchboost: 50
 contenttype: [doc]
-categories: [create, cli]
+categories: [cli]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

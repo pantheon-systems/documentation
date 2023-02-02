@@ -3,7 +3,7 @@ title: Hotfixes
 description: Learn how to deploy and test hot fixes and preserve orphan commits on your Pantheon Drupal or WordPress site.
 tags: [code, collaborate, git, webops, workflow]
 contenttype: [doc]
-categories: [migrate, backup, help, git]
+categories: [git]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

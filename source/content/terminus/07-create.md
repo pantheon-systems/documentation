@@ -9,7 +9,7 @@ tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/create
 anchorid: create
 contenttype: [guide]
-categories: [cli, create]
+categories: [cli]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

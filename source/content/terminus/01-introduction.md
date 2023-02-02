@@ -7,7 +7,7 @@ type: terminuspage
 layout: terminuspage
 contributors: [whitneymeredith]
 contenttype: [guide]
-categories: [cli, create]
+categories: [cli]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

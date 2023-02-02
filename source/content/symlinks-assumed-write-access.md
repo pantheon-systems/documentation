@@ -4,7 +4,7 @@ description: Learn how to create symbolic links from the code directory to a fil
 tags: [cli, code, files]
 reviewed: "2021-09-13"
 contenttype: [doc]
-categories: [cli, test, update]
+categories: [files]
 newcms: [--]
 audience: [development]
 product: [terminus]

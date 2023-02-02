@@ -8,7 +8,7 @@ permalink: docs/start-states/wordpress
 editpath: start-states/wordpress.md/
 reviewed: "2022-06-01"
 contenttype: [doc]
-categories: [overview]
+categories: [custom-upstream]
 newcms: [wordpress]
 audience: [agency, business, development]
 product: [custom-upstream]

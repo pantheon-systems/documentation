@@ -4,7 +4,7 @@ subtitle: Fix Broken Links in WordPress
 description: Learn how to update broken links on your Pantheon WordPress site.
 cms: "WordPress"
 contenttype: [guide]
-categories: [manage]
+categories: [cms, troubleshoot]
 newcms: [wordpress]
 audience: [development]
 product: [--]

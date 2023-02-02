@@ -5,7 +5,7 @@ contributors: [michellecolon-pantheon, kyletaylored]
 tags: [upstreams, site]
 reviewed: "2021-08-12"
 contenttype: [doc]
-categories: [create]
+categories: [custom-upstream]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]

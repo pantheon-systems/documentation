@@ -4,7 +4,7 @@ subtitle: Test WordPress Core Development Versions
 description: Learn how to test WordPress core updates using nightly builds of the current release or bleeding edge.
 cms: "WordPress"
 contenttype: [guide]
-categories: [update]
+categories: [test, automate]
 newcms: [wordpress]
 audience: [--]
 product: [--]

@@ -8,7 +8,7 @@ layout: video
 searchboost: 50
 type: video
 contenttype: [doc]
-categories: [cache, optimize]
+categories: [cache]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

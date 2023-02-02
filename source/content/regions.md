@@ -5,7 +5,7 @@ tags: [launch, site]
 contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 contenttype: [doc]
-categories: [launch, migrate, domains]
+categories: [domains]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

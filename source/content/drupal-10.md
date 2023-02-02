@@ -5,7 +5,7 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-10-18"
 contenttype: [doc]
-categories: [create, plan]
+categories: [create, cms]
 newcms: [drupal10]
 audience: [development]
 product: [composer]

@@ -5,7 +5,7 @@ tags: [cdn]
 contributors: [--]
 reviewed: "2020-03-09"
 contenttype: [doc]
-categories: [plan, optimize]
+categories: [cache]
 newcms: [drupal]
 audience: [development]
 product: [cdn]

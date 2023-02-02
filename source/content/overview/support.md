@@ -5,7 +5,7 @@ tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/support
 contenttype: [guide]
-categories: [overview]
+categories: [help]
 newcms: [--]
 audience: [sysadmin]
 product: [--]
