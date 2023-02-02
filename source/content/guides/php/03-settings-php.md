@@ -5,6 +5,7 @@ description: Configure your Drupal database settings.
 contributors: [mmenavas, andrewmallis]
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [php]
 newcms: [drupal]
 audience: [development]

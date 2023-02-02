@@ -11,6 +11,7 @@ anchorid: teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [organizations]
 newcms: [--]
 audience: [sysadmin]

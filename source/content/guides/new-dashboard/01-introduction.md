@@ -3,6 +3,7 @@ title: The New Pantheon Dashboard
 subtitle: Introduction
 description: The new Pantheon Dashboard makes it easier to manage your WebOps from one Workspace fast.
 contenttype: [guide]
+innav: [true]
 categories: [dashboard]
 newcms: [--]
 audience: [development, marketing, sysadmin, agency, business]

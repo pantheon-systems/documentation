@@ -3,6 +3,7 @@ title: Pantheon Professional Services
 subtitle: Managed Updates
 description: Managed Updates offerings and requirements for Drupal compatibility
 contenttype: [guide]
+innav: [true]
 categories: [help]
 newcms: [--]
 audience: [development, sysadmin]

@@ -5,6 +5,7 @@ description: Learn how to make your own MU-plugin for actions and filters.
 contributors: [alexfornuto, eabquina, carl-alberto]
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [config]
 newcms: [wordpress]
 audience: [development]

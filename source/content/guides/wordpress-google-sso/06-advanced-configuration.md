@@ -5,6 +5,7 @@ description: Additional filtering can be achieved in your theme or a must-use pl
 contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [siteauth]
 newcms: [wordpress]
 audience: [development]

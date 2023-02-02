@@ -12,6 +12,7 @@ anchorid: troubleshooting
 editpath: drupal/drupal-unhosted-composer/15-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, troubleshooting]
 newcms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]

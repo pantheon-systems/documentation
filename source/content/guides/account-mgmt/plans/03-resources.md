@@ -10,6 +10,7 @@ anchorid: resources
 editpath: docs/guides/account-mgmt/plans/03-resources.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
 newcms: [--]
 audience: [sysadmin]

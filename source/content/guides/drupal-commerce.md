@@ -8,6 +8,7 @@ type: guide
 permalink: docs/guides/:basename
 multidev: true
 contenttype: [doc]
+innav: [true]
 categories: [git]
 newcms: [drupal]
 audience: [development]

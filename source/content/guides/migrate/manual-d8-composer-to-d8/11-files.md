@@ -4,6 +4,7 @@ subtitle: Upload Your Files
 description: Learn how to upload your files.
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

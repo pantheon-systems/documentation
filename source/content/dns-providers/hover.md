@@ -8,6 +8,7 @@ draft: true
 permalink: docs/:basename
 editpath: dns-providers/hover.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [--]

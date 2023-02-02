@@ -4,6 +4,7 @@ description: Understand how to generate SSH keys to configure Git, SFTP, or Drup
 tags: [security, dashboard, ssh]
 reviewed: "2022-03-04"
 contenttype: [doc]
+innav: [true]
 categories: [user-authentication, git, config]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -3,6 +3,7 @@ title: Quicksilver on Pantheon
 subtitle: Introduction
 description: Learn how to automate and integrate your WebOps workflow with Quicksilver.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
 newcms: [--]
 audience: [development]

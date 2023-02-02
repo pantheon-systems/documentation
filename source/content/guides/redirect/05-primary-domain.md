@@ -3,6 +3,7 @@ title: Redirects Guide
 subtitle: Set the Primary Domain
 description: Learn how to set the primary domain for your site.
 contenttype: [guide]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [development]

@@ -3,6 +3,7 @@ title: Horizontal Scalability
 description: Learn about scaling web applications and architecture of every Pantheon environment.
 tags: [billing, launch]
 contenttype: [doc]
+innav: [true]
 categories: [cache, optimize]
 newcms: [drupal, wordpress]
 audience: [agency, development]

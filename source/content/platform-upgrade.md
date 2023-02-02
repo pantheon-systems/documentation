@@ -3,6 +3,7 @@ title: Deployment Infrastructure Upgrade
 description: Details on the current infrastructure upgrade.
 tags: [dashboard, updates]
 contenttype: [doc]
+innav: [true]
 categories: [deploy]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -4,6 +4,7 @@ subtitle: Troubleshooting
 description: Get solutions to common filesystem troubleshooting scenarios.
 tags: [cli, code, files]
 contenttype: [doc]
+innav: [true]
 categories: [files, troubleshooting]
 newcms: [drupal, wordpress]
 audience: [develoment]

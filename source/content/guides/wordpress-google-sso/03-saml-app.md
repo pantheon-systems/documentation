@@ -5,6 +5,7 @@ description: Define a SAML app in the Google Admin dashboard to which you can co
 contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [siteauth]
 newcms: [wordpress]
 audience: [development]

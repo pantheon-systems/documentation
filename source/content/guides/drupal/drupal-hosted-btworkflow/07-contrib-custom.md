@@ -12,6 +12,7 @@ anchorid: contrib-custom
 editpath: drupal/drupal-hosted-btworkflow/07-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [update]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

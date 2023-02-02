@@ -4,6 +4,7 @@ subtitle: Introduction
 description: Administer and maintain your WordPress site on Pantheon with your command-line.
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [wordpress]
 audience: [development]

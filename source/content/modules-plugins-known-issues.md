@@ -5,6 +5,7 @@ tags: [modules, plugins, site]
 contributors: [alexfornuto]
 reviewed: "2020-01-08"
 contenttype: [doc]
+innav: [true]
 categories: [issues]
 newcms: [drupal, wordpress]
 audience: [development]

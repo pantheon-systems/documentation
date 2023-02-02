@@ -2,6 +2,7 @@
 title: Essential Developer Training
 subtitle: External Integrations
 contenttype: [guide]
+innav: [true]
 categories: [automate]
 newcms: [--]
 audience: [development]

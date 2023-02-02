@@ -4,6 +4,7 @@ description: Detailed information about timeout errors on your site.
 tags: [cron, drush, ssh, solr, terminus]
 reviewed: "2020-03-18"
 contenttype: [doc]
+innav: [true]
 categories: [config]
 newcms: [drupal, wordpress]
 audience: [development]

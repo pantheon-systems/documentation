@@ -4,6 +4,7 @@ description: Learn how to add a services.yml file for your Drupal site.
 cms: "Drupal"
 tags: [workflow]
 contenttype: [doc]
+innav: [true]
 categories: [config]
 newcms: [drupal, drupal9]
 audience: [development]

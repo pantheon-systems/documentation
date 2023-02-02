@@ -7,6 +7,7 @@ tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/gandi.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [--]

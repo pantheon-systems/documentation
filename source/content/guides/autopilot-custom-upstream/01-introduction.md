@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/autopilot-custom-upstream
 anchorid: autopilot-custom-upstream
 contenttype: [guide]
+innav: [true]
 categories: [automate]
 newcms: [--]
 audience: [development]

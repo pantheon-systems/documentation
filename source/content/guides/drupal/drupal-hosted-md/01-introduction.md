@@ -12,6 +12,7 @@ anchorid: drupal-hosted-md
 editpath: drupal/drupal-hosted-md/01-introduction.md
 reviewed: "2021-03-31"
 contenttype: [guide]
+innav: [true]
 categories: [update]
 newcms: [drupal8, drupal9, drupal]
 audience: [development]

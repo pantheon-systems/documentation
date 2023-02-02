@@ -3,6 +3,7 @@ title: WordPress with Composer on Pantheon
 subtitle: Create a Composer-managed WordPress Site with Bedrock
 description: Learn more about Bedrock and Composer-managed WordPress sites.
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [wordpress]
 audience: [development]

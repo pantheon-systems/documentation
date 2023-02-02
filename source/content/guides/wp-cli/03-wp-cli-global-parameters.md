@@ -4,6 +4,7 @@ subtitle: WP-CLI Global Parameters
 description: Review important WP-CLI global parameters.
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [wordpress]
 audience: [development]

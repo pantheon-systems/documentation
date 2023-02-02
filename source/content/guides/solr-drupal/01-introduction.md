@@ -4,6 +4,7 @@ subtitle: Introduction
 description: Using Pantheon Solr Search with Drupal
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [search]
 newcms: [drupal]
 audience: [development]

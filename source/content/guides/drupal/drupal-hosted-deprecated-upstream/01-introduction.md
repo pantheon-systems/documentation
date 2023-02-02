@@ -11,6 +11,7 @@ anchorid: drupal-hosted-deprecated-upstream
 editpath: drupal/drupal-hosted-deprecated-upstream/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [overview, migrate]
 newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]

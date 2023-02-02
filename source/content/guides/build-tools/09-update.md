@@ -11,6 +11,7 @@ permalink: docs/guides/build-tools/update/
 image: buildToolsGuide-thumb
 getfeedbackform: default
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [--]
 audience: [development]

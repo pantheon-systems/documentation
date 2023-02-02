@@ -6,6 +6,7 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -2,6 +2,7 @@
 title: Essential Developer Training
 subtitle: Going Live
 contenttype: [guide]
+innav: [true]
 categories: [launch]
 newcms: [--]
 audience: [development]

@@ -3,6 +3,7 @@ title: New Relic Performance Monitoring on Pantheon
 subtitle: New Relic Labeling with Quicksilver
 description: Automatically Label Code Changes in New Relic Performance Monitoring using Quicksilver Hooks.
 contenttype: [guide]
+innav: [true]
 categories: [track]
 newcms: [--]
 audience: [development, sysadmin]

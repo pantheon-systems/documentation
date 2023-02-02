@@ -8,6 +8,7 @@ layout: video
 type: video
 searchboost: 50
 contenttype: [doc]
+innav: [true]
 categories: [cli]
 newcms: [drupal, wordpress]
 audience: [development]

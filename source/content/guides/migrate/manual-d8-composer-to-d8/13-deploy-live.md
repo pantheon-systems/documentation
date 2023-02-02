@@ -4,6 +4,7 @@ subtitle: Deploy
 description: Learn how to deploy your site.
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

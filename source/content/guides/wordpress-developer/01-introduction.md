@@ -3,6 +3,7 @@ title: WordPress Developer's Guide
 subtitle: Introduction
 description: Learn about best practices and tools to develop your WordPress site on Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [cms]
 newcms: [wordpress]
 audience: [development]

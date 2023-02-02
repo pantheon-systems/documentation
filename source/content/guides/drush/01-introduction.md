@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/drush
 anchorid: drush
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [drupal]
 audience: [development]

@@ -10,6 +10,7 @@ showtoc: true
 permalink: docs/guides/integrated-composer/private-repo-package
 anchorid: private-repo-package
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [drupal, wordpress]
 audience: [development]

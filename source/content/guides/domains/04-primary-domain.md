@@ -10,6 +10,7 @@ showtoc: true
 permalink: docs/guides/domains/primary-domain
 anchorid: primary-domain
 contenttype: [guide]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [development, sysadmin]

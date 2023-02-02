@@ -10,6 +10,7 @@ showtoc: true
 permalink: docs/guides/drush/drupal-commandline
 anchorid: drupal-commandline
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [drupal]
 audience: [development]

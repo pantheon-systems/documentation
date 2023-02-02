@@ -2,6 +2,7 @@
 title: Essential Developer Training
 subtitle: Command Line Interface
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [--]
 audience: [development]

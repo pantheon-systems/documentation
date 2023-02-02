@@ -3,6 +3,7 @@ title: MariaDB and MySQL on Pantheon
 subtitle: Introduction
 description: Learn how to use MariaDB and MySQL on Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [database]
 newcms: [--]
 audience: [development]

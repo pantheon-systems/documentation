@@ -3,6 +3,7 @@ title: Migrate a Site From Platform.sh to Pantheon Using Guided Migration
 subtitle: Migrate
 description: Learn how to use the Platform.sh migration path.
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal, wordpress]
 audience: [development]

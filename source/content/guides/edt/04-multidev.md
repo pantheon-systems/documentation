@@ -2,6 +2,7 @@
 title: Essential Developer Training
 subtitle: Multidev
 contenttype: [guide]
+innav: [true]
 categories: [workflows]
 newcms: [--]
 audience: [development]

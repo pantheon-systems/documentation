@@ -3,6 +3,7 @@ title: Migrate a Site From WP Engine to Pantheon Using Guided Migration
 subtitle: Troubleshooting
 description: Resolve issues that may occur during migration.
 contenttype: [guide]
+innav: [true]
 categories: [migrate, troubleshooting]
 newcms: [wordpress]
 audience: [development]

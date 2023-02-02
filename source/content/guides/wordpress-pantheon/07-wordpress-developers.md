@@ -3,6 +3,7 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress on Pantheon for Developers
 description: Develop efficiently with WordPress on Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [cms]
 newcms: [wordpress]
 audience: [development]

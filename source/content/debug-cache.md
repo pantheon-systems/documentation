@@ -5,6 +5,7 @@ tags: [cdn]
 contributors: [rachelwhitton, sarahg]
 reviewed: "2022-12-07"
 contenttype: [doc]
+innav: [true]
 categories: [cache]
 newcms: [wordpress, drupal]
 audience: [development]

@@ -12,6 +12,7 @@ permalink: docs/guides/legacy-dashboard/add-client-site
 anchorid: add-client-site
 editpath: legacy-dashboard/09-add-client-site.md
 contenttype: [guide]
+innav: [true]
 categories: [organizations, billing, dashboard, help]
 newcms: [wordpress, drupal]
 audience: [agency, business]

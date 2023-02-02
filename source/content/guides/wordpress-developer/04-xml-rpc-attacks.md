@@ -4,6 +4,7 @@ subtitle: Avoid XML-RPC Attacks
 description: Learn how to avoid XML-RPC attacks.
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [security]
 newcms: [wordpress]
 audience: [development]

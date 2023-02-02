@@ -4,6 +4,7 @@ description: Advanced details about Pantheon's edge caching layer, cookies, and 
 tags: [cache, cookies, security, webops, D8, D9, D10]
 reviewed: "2022-12-13"
 contenttype: [doc]
+innav: [true]
 categories: [cache]
 newcms: [drupal]
 audience: [development]

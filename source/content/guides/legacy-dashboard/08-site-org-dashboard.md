@@ -11,6 +11,7 @@ permalink: docs/guides/legacy-dashboard/org-dashboard
 anchorid: org-dashboard
 editpath: legacy-dashboard/08-site-org-dashboard.md
 contenttype: [guide]
+innav: [true]
 categories: [organizations, dashboard]
 newcms: [wordpress, drupal]
 audience: [agency, business]

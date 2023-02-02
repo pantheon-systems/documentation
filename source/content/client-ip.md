@@ -5,6 +5,7 @@ tags: [cdn]
 contributors: [--]
 reviewed: "2020-03-09"
 contenttype: [doc]
+innav: [true]
 categories: [cache]
 newcms: [drupal]
 audience: [development]

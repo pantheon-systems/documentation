@@ -4,6 +4,7 @@ subtitle: Install and Configure DDEV for Drupal
 description: Install and configure DDEV for Drupal local development.
 contributors: [whitneymeredith]
 contenttype: [guide]
+innav: [true]
 categories: [automate]
 newcms: [drupal]
 audience: [development]

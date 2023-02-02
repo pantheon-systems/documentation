@@ -5,6 +5,7 @@ cms: "Drupal"
 tags: [drush, workflow, webops]
 reviewed: "2022-12-13"
 contenttype: [doc]
+innav: [true]
 categories: [config]
 newcms: [drupal9]
 audience: [development]

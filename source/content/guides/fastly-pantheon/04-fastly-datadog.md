@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-datadog
 anchorid: fastly-datadog
 contenttype: [guide]
+innav: [true]
 categories: [cache]
 newcms: [--]
 audience: [development]

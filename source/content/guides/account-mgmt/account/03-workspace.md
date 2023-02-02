@@ -3,6 +3,7 @@ title: "Manage Your Account"
 subtitle: Workspace
 description: Learn how to use your account workspace.
 contenttype: [guide]
+innav: [true]
 categories: [accounts]
 newcms: [--]
 audience: [business]

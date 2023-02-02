@@ -11,6 +11,7 @@ anchorid: deploy
 editpath: drupal/drupal-hosted-createbt/11-deploy.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

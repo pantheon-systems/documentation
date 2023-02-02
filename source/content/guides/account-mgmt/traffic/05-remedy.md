@@ -11,6 +11,7 @@ anchorid: remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
 newcms: [--]
 audience: [sysadmin]

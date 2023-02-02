@@ -12,6 +12,7 @@ permalink: docs/guides/disaster-recovery/incident-remediation
 anchorid: disaster-recovery
 editpath: disaster-recovery/04-incident-remediation.md
 contenttype: [guide]
+innav: [true]
 categories: [cache]
 newcms: [--]
 audience: [development, sysadmin]

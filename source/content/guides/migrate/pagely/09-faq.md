@@ -3,6 +3,7 @@ title: Migrate a Site From Pagely to Pantheon Using Guided Migration
 subtitle: FAQ
 description: Frequently asked questions about migration.
 contenttype: [guide]
+innav: [true]
 categories: [migrate, faq]
 newcms: [wordpress]
 audience: [development]

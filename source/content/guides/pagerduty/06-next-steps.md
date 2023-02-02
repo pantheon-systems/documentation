@@ -8,6 +8,7 @@ anchorid: next-steps
 generator: pagination
 layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [track]
 newcms: [--]
 audience: [development]

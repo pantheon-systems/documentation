@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/domains/vanity-domains
 anchorid: vanity-domains
 contenttype: [guide]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [development, sysadmin]

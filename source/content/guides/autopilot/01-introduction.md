@@ -13,6 +13,7 @@ permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [automate, test, update, faqs]
 newcms: [--]
 audience: [development]

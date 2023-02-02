@@ -11,6 +11,7 @@ anchorid: drupal-hosted-createdashboard-set8
 editpath: drupal-hosted-createdashboard-set8/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]

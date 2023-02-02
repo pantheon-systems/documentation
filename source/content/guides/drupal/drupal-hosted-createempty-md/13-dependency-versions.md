@@ -11,6 +11,7 @@ anchorid: dependency-versions
 editpath: drupal/drupal-hosted-createempty-md/13-dependency-versions.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [overview, migrate]
 newcms: [drupal8, drupal9, drupal10]
 audience: [agency, development]

@@ -11,6 +11,7 @@ anchorid: switch-drupal
 editpath: drupal/drupal-hosted-deprecated-upstream/07-switch-drupal.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, update]
 newcms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]

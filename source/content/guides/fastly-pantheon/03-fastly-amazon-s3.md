@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-amazon-s3
 anchorid: fastly-amazon-s3
 contenttype: [guide]
+innav: [true]
 categories: [cache]
 newcms: [--]
 audience: [development]

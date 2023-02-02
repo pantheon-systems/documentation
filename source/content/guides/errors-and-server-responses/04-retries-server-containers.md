@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/retries-server-containers
 anchorid: retries-server-containers
 contenttype: [guide]
+innav: [true]
 categories: [issues]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -11,6 +11,7 @@ anchorid: core
 editpath: drupal/drupal-hosted-createbt/07-core.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

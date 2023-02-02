@@ -4,6 +4,7 @@ description: Learn how to successfully stage and move content between environmen
 contributors: [jrastaban, whitneymeredith]
 tags: [content, workflow, webops]
 contenttype: [doc]
+innav: [true]
 categories: [workflows]
 newcms: [wordpress, drupal]
 audience: [development]

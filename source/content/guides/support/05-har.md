@@ -4,6 +4,7 @@ subtitle: Generate a HAR
 description: Learn how to generate a HAR file in the browser.
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [help]
 newcms: [--]
 audience: [agency, business, development, marketing, sysadmin]

@@ -10,6 +10,7 @@ permalink: docs/guides/drupal-unhosted/deploy-dev
 anchorid: deploy-dev
 editpath: drupal/drupal-unhosted/07-deploy-dev.md
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal9]
 audience: [development]

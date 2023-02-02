@@ -8,6 +8,7 @@ contributors: [cteitzel]
 featuredcontributor: true
 reviewed: "2022-02-04"
 contenttype: [doc]
+innav: [true]
 categories: [security]
 newcms: [wordpress, drupal7]
 audience: [agency, development]

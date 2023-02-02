@@ -3,6 +3,7 @@ title: The New Pantheon Dashboard
 subtitle: Dashboard Sites
 description: Search Sites in the Dashboard
 contenttype: [guide]
+innav: [true]
 categories: [dashboard]
 newcms: [--]
 audience: [development, marketing, sysadmin, agency, business]

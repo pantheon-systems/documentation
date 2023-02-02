@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/agcdn/agcdn-wafio
 anchorid: agcdn-wafio
 contenttype: [guide]
+innav: [true]
 categories: [optimize]
 newcms: [--]
 audience: [development]

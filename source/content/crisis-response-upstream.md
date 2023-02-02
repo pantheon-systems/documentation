@@ -6,6 +6,7 @@ tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
 reviewed: "2020-04-02"
 contenttype: [doc]
+innav: [true]
 categories: [custom-upstream]
 newcms: [wordpress]
 audience: [development]

@@ -3,6 +3,7 @@ title: Local Development on Pantheon
 subtitle: Introduction
 description: Learn more about developing your Pantheon site locally.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
 newcms: [drupal, wordpress]
 audience: [development]

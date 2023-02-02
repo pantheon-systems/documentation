@@ -3,6 +3,7 @@ title: Multidev
 subtitle: Delete Branch Environments and Branches
 description: Learn how to delete branch environments and branches in Multidev.
 contenttype: [guide]
+innav: [true]
 categories: [multidev]
 newcms: [--]
 audience: [development]

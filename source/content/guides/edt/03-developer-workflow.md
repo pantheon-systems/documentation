@@ -2,6 +2,7 @@
 title: Essential Developer Training
 subtitle: Developer Workflow
 contenttype: [guide]
+innav: [true]
 categories: [workflows]
 newcms: [--]
 audience: [development]

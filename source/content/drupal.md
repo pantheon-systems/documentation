@@ -5,6 +5,7 @@ tags: [site, D8, D9, D10]
 contributors: [populist, edwardangert, whitneymeredith]
 reviewed: "2022-12-09"
 contenttype: [doc]
+innav: [true]
 categories: [cms]
 newcms: [drupal]
 audience: [development]

@@ -7,6 +7,7 @@ layout: guide
 type: guide
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [cms, workflows]
 newcms: [wordpress]
 audience: [development]

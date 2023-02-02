@@ -12,6 +12,7 @@ editpath: frontend-performance/06-code-css.md
 image: CDN-speedTest-docs-guide
 reviewed: "2022-02-09"
 contenttype: [guide]
+innav: [true]
 categories: [optimize]
 newcms: [drupal, wordpress]
 audience: [development]

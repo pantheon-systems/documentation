@@ -10,6 +10,7 @@ permalink: docs/guides/legacy-dashboard/create-sites
 anchorid: create-sites
 editpath: legacy-dashboard/02-create-sites.md
 contenttype: [guide]
+innav: [true]
 categories: [create, dashboard, accounts]
 newcms: [wordpress, drupal]
 audience: [agency, development]

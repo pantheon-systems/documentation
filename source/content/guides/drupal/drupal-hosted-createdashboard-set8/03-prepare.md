@@ -12,6 +12,7 @@ anchorid: prepare
 editpath: drupal-hosted-createdashboard-set8/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal9, drupal8, drupal, drupal10]
 audience: [development]

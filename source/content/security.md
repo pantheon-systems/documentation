@@ -3,6 +3,7 @@ title: Lock Environments with the Dashboard Security Tool
 description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal or WordPress site development.
 tags: [dashboard, security, users]
 contenttype: [doc]
+innav: [true]
 categories: [user authentication]
 newcms: [--]
 audience: [development]

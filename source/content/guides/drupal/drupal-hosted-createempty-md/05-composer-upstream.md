@@ -12,6 +12,7 @@ anchorid: composer-upstream
 editpath: drupal/drupal-hosted-createempty-md/05-composer-upstream.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [overview, migrate]
 newcms: [drupal9]
 audience: [agency, development]

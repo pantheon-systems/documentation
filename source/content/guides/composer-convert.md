@@ -7,6 +7,7 @@ tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
 reviewed: "2022-12-12"
 contenttype: [doc]
+innav: [true]
 categories: [optimize]
 newcms: [drupal8]
 audience: [development]

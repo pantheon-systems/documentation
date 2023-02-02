@@ -3,6 +3,7 @@ title: AWS S3 Setup for Drupal
 description: Add the ability to integrate AWS S3 with a Drupal site on Pantheon
 cms: "Drupal"
 contenttype: [doc]
+innav: [true]
 categories: [manage]
 newcms: [drupal]
 audience: [development]

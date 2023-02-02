@@ -4,6 +4,7 @@ description: Learn how to manage advanced site configuration
 tags: [https, launch, code, workflow]
 reviewed: "2022-03-16"
 contenttype: [doc]
+innav: [true]
 categories: [config]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -5,6 +5,7 @@ tags: [support]
 permalink: docs/faq
 anchorid: faq
 contenttype: [doc]
+innav: [true]
 categories: [faq]
 newcms: [drupal, wordpress]
 audience: [agency, development]

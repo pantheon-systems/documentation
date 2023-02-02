@@ -4,6 +4,7 @@ description: Learn about headless development models for decoupled architecture 
 tags: [modules, plugins]
 contributors: [eabquina, rachelwhitton]
 contenttype: [doc]
+innav: [true]
 categories: [api]
 newcms: [drupal, wordpress]
 audience: [agency, development]

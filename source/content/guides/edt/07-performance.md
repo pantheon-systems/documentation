@@ -2,6 +2,7 @@
 title: Essential Developer Training
 subtitle: Performance
 contenttype: [guide]
+innav: [true]
 categories: [optimize]
 newcms: [--]
 audience: [development]

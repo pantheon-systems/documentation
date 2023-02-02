@@ -11,6 +11,7 @@ anchorid: restore-token
 editpath: drupal/drupal-hosted-btworkflow/13-restore-token.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, sftp]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

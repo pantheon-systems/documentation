@@ -6,6 +6,7 @@ tags: [cron, D8, D9, D10]
 reviewed: "2020-12-13"
 permalink: docs/drupal-cron
 contenttype: [doc]
+innav: [true]
 categories: [automate]
 newcms: [drupal]
 audience: [development]

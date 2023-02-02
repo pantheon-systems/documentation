@@ -6,6 +6,7 @@ tags: [continuous-integration, iterate, site, webops]
 permalink: docs/guides/:basename
 contributors: [ataylorme]
 contenttype: [doc]
+innav: [true]
 categories: [test, automate]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -4,6 +4,7 @@ description: Detailed information on using Pantheon Search with your Pantheon Dr
 tags: [solr,search]
 reviewed: "2021-08-05"
 contenttype: [doc]
+innav: [true]
 categories: [search]
 newcms: [drupal, wordpress]
 audience: [agency, development]

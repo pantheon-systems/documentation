@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/drush/troubleshoot-drush
 anchorid: troubleshoot-drush
 contenttype: [guide]
+innav: [true]
 categories: [cli, troubleshooting]
 newcms: [drupal]
 audience: [development]

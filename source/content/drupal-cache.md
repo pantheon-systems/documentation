@@ -3,6 +3,7 @@ title: Drupal Performance and Caching Settings
 description: Optimize Drupal and Global CDN caching to maximize your site's performance.
 tags: [caching, cdn, D8, D9, D10]
 contenttype: [doc]
+innav: [true]
 categories: [cache, optimize]
 newcms: [drupal]
 audience: [development]

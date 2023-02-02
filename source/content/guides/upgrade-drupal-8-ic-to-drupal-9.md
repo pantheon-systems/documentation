@@ -5,6 +5,7 @@ type: guide
 permalink: docs/guides/:basename
 cms: "Drupal"
 contenttype: [doc]
+innav: [true]
 categories: [update]
 newcms: [drupal9]
 audience: [development]

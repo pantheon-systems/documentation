@@ -4,6 +4,7 @@ subtitle: Troubleshoot WP-CLI
 description: Review solutions to common troubleshooting scenarios for WP-CLI.
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [cli, troubleshooting]
 newcms: [wordpress]
 audience: [development]

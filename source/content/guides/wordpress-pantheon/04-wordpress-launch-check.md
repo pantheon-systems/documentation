@@ -3,6 +3,7 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Launch Check - WordPress Performance and Configuration Analysis
 description: Learn more about the checks we automatically run on your Pantheon WordPress site. 
 contenttype: [guide]
+innav: [true]
 categories: [cms]
 newcms: [wordpress]
 audience: [development]

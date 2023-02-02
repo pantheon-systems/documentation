@@ -4,6 +4,7 @@ subtitle: WordPress and PHP Sessions
 description: Learn more about the behaviors of WordPress and PHP sessions.
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [php]
 newcms: [--]
 audience: [development]

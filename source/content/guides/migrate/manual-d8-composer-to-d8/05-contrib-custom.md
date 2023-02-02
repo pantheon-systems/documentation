@@ -4,6 +4,7 @@ subtitle: Add Contrib and Custom Code
 description: Learn how to add Contrib and custom code.
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

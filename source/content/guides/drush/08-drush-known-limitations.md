@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/drush/drush-known-limitations
 anchorid: drush-known-limitations
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [drupal]
 audience: [development]

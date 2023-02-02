@@ -4,6 +4,7 @@ subtitle: Add Your Database
 description: Learn how to add your database.
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

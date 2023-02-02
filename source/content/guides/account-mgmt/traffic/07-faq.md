@@ -11,6 +11,7 @@ anchorid: faq
 editpath: docs/guides/account-mgmt/traffic/07-faq.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
 newcms: [--]
 audience: [sysadmin]

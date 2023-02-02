@@ -9,6 +9,7 @@ layout: video
 type: video
 searchboost: 50
 contenttype: [doc]
+innav: [true]
 categories: [migrate]
 newcms: [wordpress]
 audience: [development]

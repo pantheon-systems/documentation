@@ -2,6 +2,7 @@
 title: Deliver Email Through Your Drupal Site on the Pantheon Platform
 description: Detailed information on using SendGrid to deliver email through your Drupal site.
 contenttype: [doc]
+innav: [true]
 categories: [email]
 newcms: [drupal]
 audience: [development]

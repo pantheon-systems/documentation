@@ -4,6 +4,7 @@ subtitle: WordPress Best Practices
 description: A list of best practices for developing WordPress sites on Pantheon.
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [cms]
 newcms: [wordpress]
 audience: [development]

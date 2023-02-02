@@ -6,6 +6,7 @@ anchorid: media
 layout: guide
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [git]
 newcms: [wordpress]
 audience: [development]

@@ -3,6 +3,7 @@ title: SSO and Identity Federation on Pantheon
 description: Use SSO to centrally manage user identities and provide seamless integration across multiple applications.
 tags: [security, sso, users]
 contenttype: [doc]
+innav: [true]
 categories: [siteauth]
 newcms: [drupal, wordpress]
 audience: [development]

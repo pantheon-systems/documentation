@@ -11,6 +11,7 @@ permalink: docs/guides/legacy-dashboard/site-plan
 anchorid: site-plan
 editpath: legacy-dashboard/07-site-plan.md
 contenttype: [guide]
+innav: [true]
 categories: [plans, dashboard]
 newcms: [wordpress, drupal7]
 audience: [agency, business]

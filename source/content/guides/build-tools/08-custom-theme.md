@@ -11,6 +11,7 @@ permalink: docs/guides/build-tools/custom-theme/
 editpath: build-tools/08-custom-theme.md
 image: buildToolsGuide-thumb
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [--]
 audience: [development]

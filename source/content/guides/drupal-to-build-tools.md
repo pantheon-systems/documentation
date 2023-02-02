@@ -7,6 +7,7 @@ cms: "Drupal"
 tags: [composer, site, workflow, D8, D9, D10]
 reviewed: "2022-12-12"
 contenttype: [doc]
+innav: [true]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

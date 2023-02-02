@@ -5,6 +5,7 @@ description: Special commands to interact with Pantheon via WP-CLI
 contributors: [ryanwagner]
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [wordpress]
 audience: [development]

@@ -3,6 +3,7 @@ title: Object Cache (formerly Redis)
 subtitle: Introduction
 description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
 contenttype: [guide]
+innav: [true]
 categories: [cache]
 newcms: [--]
 audience: [development]

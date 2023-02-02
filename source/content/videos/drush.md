@@ -9,6 +9,7 @@ tags: [drush, cli]
 searchboost: 50
 type: video
 contenttype: [doc]
+innav: [true]
 categories: [cli]
 newcms: [drupal]
 audience: [development]

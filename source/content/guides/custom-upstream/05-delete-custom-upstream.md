@@ -8,6 +8,7 @@ showtoc: true
 permalink: docs/guides/custom-upstream/delete-custom-upstream
 anchorid: delete-custom-upstream
 contenttype: [guide]
+innav: [true]
 categories: [custom-upstream]
 newcms: [drupal, wordpress]
 audience: [development]

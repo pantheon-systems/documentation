@@ -9,6 +9,7 @@ permalink: docs/guides/custom-upstream/test-custom-upstream
 contributors: [--]
 anchorid: test-custom-upstream
 contenttype: [guide]
+innav: [true]
 categories: [custom-upstream]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -10,6 +10,7 @@ tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/supported-terminus
 anchorid: supported-terminus
 contenttype: [guide]
+innav: [true]
 categories: [git]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -11,6 +11,7 @@ anchorid: copy-config
 editpath: drupal/drupal-hosted-btworkflow/05-copy-config.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

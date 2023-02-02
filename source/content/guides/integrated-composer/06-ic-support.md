@@ -11,6 +11,7 @@ showtoc: true
 permalink: docs/guides/integrated-composer/ic-support
 anchorid: ic-support
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [drupal, wordpress]
 audience: [development]

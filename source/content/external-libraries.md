@@ -2,6 +2,7 @@
 title: External Libraries on Pantheon
 description: Learn to incorporate external libraries on the Pantheon Website Management Platform.
 contenttype: [doc]
+innav: [true]
 categories: [overview]
 newcms: [--]
 audience: [development]

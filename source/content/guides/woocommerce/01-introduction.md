@@ -7,6 +7,7 @@ featuredcontributor: true
 layout: guide
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [ecommerce]
 newcms: [wordpress]
 audience: [development]

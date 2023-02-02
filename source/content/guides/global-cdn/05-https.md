@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/global-cdn/https
 anchorid: https
 contenttype: [guide]
+innav: [true]
 categories: [cache, optimize]
 newcms: [drupal, wordpress]
 audience: [development]

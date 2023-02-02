@@ -4,6 +4,7 @@ description: Share best practices with other experienced and active users of Pan
 contributors: [tessak22]
 tags: [collaborate, support]
 contenttype: [doc]
+innav: [true]
 categories: [help]
 newcms: [drupal, wordpress]
 audience: [development, agency, business, sysadmin, marketing]

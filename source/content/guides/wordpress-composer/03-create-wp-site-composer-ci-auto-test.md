@@ -3,6 +3,7 @@ title: Create a CI, Composer-managed WordPress Site
 subtitle: Create a CI, Composer-managed WordPress Site
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [wordpress]
 audience: [development]

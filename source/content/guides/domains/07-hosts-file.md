@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/domains/hosts-file
 anchorid: hosts-file
 contenttype: [guide]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [development]

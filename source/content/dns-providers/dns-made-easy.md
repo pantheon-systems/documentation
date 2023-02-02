@@ -7,6 +7,7 @@ tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/dns-made-easy.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [--]

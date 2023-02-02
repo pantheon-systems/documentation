@@ -10,6 +10,7 @@ permalink: docs/guides/legacy-dashboard/metrics
 anchorid: metrics
 editpath: legacy-dashboard/06-metrics-site-dashboard.md
 contenttype: [guide]
+innav: [true]
 categories: [track, dashboard]
 newcms: [wordpress, drupal]
 audience: [agency, business]

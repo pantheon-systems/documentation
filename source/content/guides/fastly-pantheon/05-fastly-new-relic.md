@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-new-relic
 anchorid: fastly-new-relic
 contenttype: [guide]
+innav: [true]
 categories: [cache]
 newcms: [--]
 audience: [development]

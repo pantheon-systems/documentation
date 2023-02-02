@@ -5,6 +5,7 @@ description: Merge your new SAML configuration to your live environment, and upd
 contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [siteauth]
 newcms: [wordpress]
 audience: [development]

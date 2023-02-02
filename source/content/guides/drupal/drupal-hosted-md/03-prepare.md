@@ -12,6 +12,7 @@ anchorid: prepare
 editpath: drupal/drupal-hosted-md/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [update]
 newcms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]

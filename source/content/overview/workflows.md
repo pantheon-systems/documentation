@@ -5,6 +5,7 @@ tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/workflows
 contenttype: [doc]
+innav: [true]
 categories: [overview, workflows]
 newcms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]

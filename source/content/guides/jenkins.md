@@ -6,6 +6,7 @@ type: guide
 permalink: docs/guides/:basename
 date: 6/20/2017
 contenttype: [doc]
+innav: [true]
 categories: [automate, overview]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -5,6 +5,7 @@ description: Install the WP SAML Auth plugin
 contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [siteauth]
 newcms: [wordpress]
 audience: [development]

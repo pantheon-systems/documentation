@@ -12,6 +12,7 @@ permalink: docs/guides/drupal-hosted-createdashboard-set8/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-hosted-createdashboard-set8/13-troubleshooting.md
 contenttype: [guide]
+innav: [true]
 categories: [migrate, troubleshooting]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

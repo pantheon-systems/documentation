@@ -11,6 +11,7 @@ anchorid: available-updates
 editpath: drupal/drupal-hosted-deprecated-upstream/05-available-updates.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [update]
 newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]

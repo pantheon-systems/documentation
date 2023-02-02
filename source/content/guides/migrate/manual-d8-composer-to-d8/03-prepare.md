@@ -4,6 +4,7 @@ subtitle: Prepare
 description: Learn how to prepare your site for migration.
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

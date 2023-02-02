@@ -3,6 +3,7 @@ title: Log Files on Pantheon
 subtitle: Frequently Asked Questions
 description: Get answers to your log questions.
 contenttype: [guide]
+innav: [true]
 categories: [logs, faq]
 newcms: [--]
 audience: [development]

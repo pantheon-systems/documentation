@@ -5,6 +5,7 @@ tags: [modules, solr]
 contributors: [carolynshannon]
 reviewed: "2019-11-06"
 contenttype: [doc]
+innav: [true]
 categories: [search]
 newcms: [drupal, wordpress]
 audience: [development]

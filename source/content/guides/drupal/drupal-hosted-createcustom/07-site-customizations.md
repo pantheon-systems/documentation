@@ -11,6 +11,7 @@ anchorid: site-customizations
 editpath: drupal/drupal-hosted-createcustom/07-site-customizations.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

@@ -5,6 +5,7 @@ tags: [code, site, terminus, workflow]
 contributors:
  - ataylorme
 contenttype: [doc]
+innav: [true]
 categories: [files]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -5,6 +5,7 @@ contributors: [michellecolon-pantheon, kyletaylored]
 tags: [https, launch, code, workflow]
 reviewed: "2021-08-09"
 contenttype: [doc]
+innav: [true]
 categories: [custom-upstream]
 newcms: [drupal, wordpress]
 audience: [development]

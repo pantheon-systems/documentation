@@ -12,6 +12,7 @@ anchorid: contrib-custom
 editpath: drupal/drupal-hosted-createempty-md/07-contrib-custom.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [overview, migrate]
 newcms: [drupal, drupal8, drupal9, druapl10]
 audience: [agency, development]

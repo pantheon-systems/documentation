@@ -4,6 +4,7 @@ subtitle: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 tags: [infrastructure, security]
 contenttype: [guide]
+innav: [true]
 categories: [security]
 newcms: [--]
 audience: [development]

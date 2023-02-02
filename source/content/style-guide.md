@@ -4,6 +4,7 @@ description: Formatting rules and guidelines for Pantheon's open-source document
 contributors: [alexfornuto, rachelwhitton, carolynshannon]
 reviewed: "2021-02-26"
 contenttype: [doc]
+innav: [true]
 categories: [help]
 newcms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]

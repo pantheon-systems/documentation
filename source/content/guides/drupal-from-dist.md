@@ -8,6 +8,7 @@ permalink: docs/guides/drupal-from-dist
 contributors: [wordsmither]
 date: 07/06/2022
 contenttype: [doc]
+innav: [true]
 categories: [create]
 newcms: [drupal]
 audience: [development]

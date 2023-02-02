@@ -8,6 +8,7 @@ searchboost: 50
 layout: video
 type: video
 contenttype: [doc]
+innav: [true]
 categories: [sftp]
 newcms: [--]
 audience: [development]

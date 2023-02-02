@@ -12,6 +12,7 @@ anchorid: prepare
 editpath: drupal/drupal-hosted-deprecated-upstream/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, update]
 newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]

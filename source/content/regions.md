@@ -5,6 +5,7 @@ tags: [launch, site]
 contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 contenttype: [doc]
+innav: [true]
 categories: [domains]
 newcms: [drupal, wordpress]
 audience: [development]

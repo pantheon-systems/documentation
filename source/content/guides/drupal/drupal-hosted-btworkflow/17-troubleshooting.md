@@ -12,6 +12,7 @@ anchorid: troubleshooting
 editpath: drupal/drupal-hosted-btworkflow/17-troubleshooting.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [update, troubleshooting]
 newcms: [drupal8, drupal9, drupal10, drupal]
 audience: [develpment]

@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/drush/drush-aliases
 anchorid: drush-aliases
 contenttype: [guide]
+innav: [true]
 categories: [cli]
 newcms: [drupal]
 audience: [development]

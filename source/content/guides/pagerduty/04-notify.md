@@ -5,6 +5,7 @@ description: Page four of our guide on Pagerduty integration with New Relic for 
 anchorid: notify
 layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [track]
 newcms: [--]
 audience: [development]

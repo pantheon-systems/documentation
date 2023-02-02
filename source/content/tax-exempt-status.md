@@ -6,6 +6,7 @@ contributors: [edwardangert]
 searchboost: 150
 reviewed: "2020-03-24"
 contenttype: [doc]
+innav: [true]
 categories: [billing, plans]
 newcms: [--]
 audience: [sysadmin]

@@ -4,6 +4,7 @@ provider: Neustar UltraDNS
 dnsprovider: true
 description: Learn how to point your Neustar UltraDNS domain to a Pantheon site.
 contenttype: [doc]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [--]

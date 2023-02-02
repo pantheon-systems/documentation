@@ -5,6 +5,7 @@ cms: "WordPress"
 tags: [cache]
 contributors: [carl-alberto, whitneymeredith]
 contenttype: [doc]
+innav: [true]
 categories: [optimize]
 newcms: [wordpress]
 audience: [development]

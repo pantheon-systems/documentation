@@ -10,6 +10,7 @@ showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
 anchorid: ic-upstreams
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [drupal, wordpress]
 audience: [development]

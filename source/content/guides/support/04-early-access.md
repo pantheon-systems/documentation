@@ -4,6 +4,7 @@ subtitle: Early Access Program
 description: 
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [help]
 newcms: [--]
 audience: [agency, business, development, marketing, sysadmin]

@@ -5,6 +5,7 @@ description: WP SAML Auth makes it possible to sign in to your WordPress site us
 contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [siteauth]
 newcms: [wordpress]
 audience: [development]

@@ -2,6 +2,7 @@
 title: Enterprise Billing Center
 subtitle: Access Site Portfolio Reports
 description: Learn how to access and interact with the Site Portfolio Report.
+innav: [true]
 categories: [billing]
 newcms: [--]
 audience: [business]

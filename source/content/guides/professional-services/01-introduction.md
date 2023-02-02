@@ -3,6 +3,7 @@ title: Pantheon Professional Services
 subtitle: Introduction
 description: Pantheon Professional Services include consulting, migrations, load testing, application performance and architecture, training, AGCDN, Managed Updates, and dedicated Customer Success Managers.
 contenttype: [guide]
+innav: [true]
 categories: [help]
 newcms: [--]
 audience: [development, sysadmin]

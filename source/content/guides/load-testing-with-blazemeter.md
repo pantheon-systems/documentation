@@ -7,6 +7,7 @@ permalink: docs/guides/:basename
 contributors: [jessifischer]
 date: "2022-03-15"
 contenttype: [doc]
+innav: [true]
 categories: [localdev]
 newcms: [wordpress, drupal]
 audience: [agency, development]

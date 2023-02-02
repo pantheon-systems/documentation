@@ -7,6 +7,7 @@ tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/1-and-1.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [development]

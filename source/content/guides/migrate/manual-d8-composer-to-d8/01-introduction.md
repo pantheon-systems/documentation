@@ -4,6 +4,7 @@ subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform.
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
 newcms: [drupal]
 audience: [development]

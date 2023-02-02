@@ -9,6 +9,7 @@ contributors: [whitneymeredith]
 permalink: docs/guides/launch/advanced-curls/
 anchorid: advanced-curls
 contenttype: [guide]
+innav: [true]
 categories: [migrate, launch, domains]
 newcms: [wordpress, drupal]
 audience: [development]

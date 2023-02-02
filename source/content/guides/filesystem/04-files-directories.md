@@ -3,6 +3,7 @@ title: Pantheon Filesystem
 subtitle: Files and Directories
 description: Learn more about file and directory considerations on the Pantheon platform.
 contenttype: [guide]
+innav: [true]
 categories: [files]
 newcms: [--]
 audience: [development]

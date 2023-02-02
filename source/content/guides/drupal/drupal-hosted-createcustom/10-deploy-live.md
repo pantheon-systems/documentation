@@ -11,6 +11,7 @@ anchorid: deploy-live
 editpath: drupal/drupal-hosted-createcustom/10-deploy-live.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

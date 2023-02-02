@@ -4,6 +4,7 @@ subtitle: SFTP Access and Authentication
 description: Access your SFTP Connection Info and authenticate your SFTP client.
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+innav: [true]
 categories: [sftp]
 newcms: [drupal, wordpress]
 audience: [development]

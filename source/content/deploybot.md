@@ -4,6 +4,7 @@ description: Learn how to set up and use DeployBot to deploy from repositories h
 tags: [git, workflow]
 contributors: [ataylorme, rachelwhitton]
 contenttype: [doc]
+innav: [true]
 categories: [automate]
 newcms: [--]
 audience: [development]

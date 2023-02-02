@@ -11,6 +11,7 @@ anchorid: mariadb
 editpath: drupal-v8/09-mariadb.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git, update]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

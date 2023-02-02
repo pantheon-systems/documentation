@@ -4,6 +4,7 @@ description: Common first-step practices to troubleshoot misbehaving sites.
 contributors: [alexfornuto, eabquina, carlalberto]
 reviewed: "2022-12-13"
 contenttype: [doc]
+innav: [true]
 categories: [cache, security, deploy, domains, troubleshooting]
 newcms: [wordpress, drupal]
 audience: [development, sysadmin]

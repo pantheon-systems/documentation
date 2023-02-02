@@ -4,6 +4,7 @@ description: Information on Pantheon's container-based, grid-model infrastructur
 tags: [webops]
 reviewed: "2020-04-24"
 contenttype: [doc]
+innav: [true]
 categories: [overview]
 newcms: [--]
 audience: [development, sysadmin]

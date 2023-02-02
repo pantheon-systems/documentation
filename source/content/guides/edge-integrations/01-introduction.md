@@ -11,6 +11,7 @@ anchorid: edge-integrations
 permalink: docs/guides/edge-integrations/
 editpath: edge-integrations/01-introduction.md
 contenttype: [guide]
+innav: [true]
 categories: [personalization]
 newcms: [drupal, wordpress]
 audience: [development]

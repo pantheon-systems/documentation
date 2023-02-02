@@ -10,6 +10,7 @@ showtoc: true
 permalink: docs/guides/integrated-composer/ic-faq
 anchorid: ic-faq
 contenttype: [guide]
+innav: [true]
 categories: [dependencies]
 newcms: [drupal, wordpress, faq]
 audience: [development]

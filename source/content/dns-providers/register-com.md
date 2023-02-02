@@ -8,6 +8,7 @@ draft: true
 permalink: docs/:basename
 editpath: dns-providers/register-com.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
 newcms: [--]
 audience: [--]

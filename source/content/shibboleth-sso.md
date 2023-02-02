@@ -4,6 +4,7 @@ description: Using SimpleSAMLphp to configure a single sign-on system for your D
 tags: [security, sso, users]
 contributors: [kyletaylored]
 contenttype: [doc]
+innav: [true]
 categories: [security]
 newcms: [drupal, wordpress]
 audience: [development]

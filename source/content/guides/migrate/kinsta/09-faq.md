@@ -3,6 +3,7 @@ title: Migrate a Site From Kinsta to Pantheon Using Guided Migration
 subtitle: FAQ
 description: Frequently asked questions about migration.
 contenttype: [guide]
+innav: [true]
 categories: [migrate, faq]
 newcms: [drupal, wordpress]
 audience: [development]

@@ -3,6 +3,7 @@ title: Quick Start
 subtitle: Clone Live to Dev
 description: In part six of our Quick Start guide, learn how to clone your content from Live to Dev.
 contenttype: [guide]
+innav: [true]
 categories: [overview]
 newcms: [--]
 audience: [development]

@@ -3,6 +3,7 @@ title: Get Support
 subtitle: Frequently Asked Questions
 cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [help]
 newcms: [--]
 audience: [agency, business, development, marketing, sysadmin]

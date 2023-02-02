@@ -3,6 +3,7 @@ title: Manage Some Dependencies with Composer
 description: Get your feet wet with Composer on WordPress or Drupal  before going all in.
 contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
 contenttype: [doc]
+innav: [true]
 categories: [dependencies]]
 newcms: [--]
 audience: [--]

@@ -5,6 +5,7 @@ contributors: [joshkoenig, rachelwhitton]
 date: 9/27/2016
 tags: [collaborate]
 contenttype: [doc]
+innav: [true]
 categories: [help]
 newcms: [--]
 audience: [--]

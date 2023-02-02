@@ -11,6 +11,7 @@ anchorid: deploy-dev
 editpath: drupal/drupal-hosted-createcustom/09-deploy-dev.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
 newcms: [drupal8, drupal9, drupal10]
 audience: [development]

@@ -7,6 +7,7 @@ anchorid: schedule
 generator: pagination
 layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [track]
 newcms: [--]
 audience: [development]

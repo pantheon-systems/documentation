@@ -10,6 +10,7 @@ permalink: docs/guides/legacy-dashboard/site-billing
 anchorid: site-billing
 editpath: legacy-dashboard/03-site-billing.md
 contenttype: [guide]
+innav: [true]
 categories: [billing, dashboard]
 newcms: [wordpress, drupal]
 audience: [agency, business]

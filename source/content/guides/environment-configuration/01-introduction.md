@@ -9,6 +9,7 @@ showtoc: true
 permalink: docs/guides/environment-configuration
 anchorid: environment-configuration
 contenttype: [guide]
+innav: [true]
 categories: [config]
 newcms: [--]
 audience: [development]

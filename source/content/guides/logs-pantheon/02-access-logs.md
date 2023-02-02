@@ -3,6 +3,7 @@ title: Log Files on Pantheon
 subtitle: Access Logs with SFTP
 description: Access your logs through SFTP on the Pantheon platform.
 contenttype: [guide]
+innav: [true]
 categories: [logs]
 newcms: [--]
 audience: [development]

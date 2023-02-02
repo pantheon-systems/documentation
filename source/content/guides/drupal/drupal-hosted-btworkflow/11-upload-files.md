@@ -11,6 +11,7 @@ anchorid: upload-files
 editpath: drupal/drupal-hosted-btworkflow/11-upload-files.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [update]
 newcms: [drupal, drupal9, drupal10]
 audience: [development]

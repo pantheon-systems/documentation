@@ -3,6 +3,7 @@ title: PHP on Pantheon
 subtitle: PHP Errors and Exceptions
 description: Detailed information about basic PHP errors on your Pantheon Drupal or WordPress site.
 contenttype: [guide]
+innav: [true]
 categories: [php]
 newcms: [--]
 audience: [development]

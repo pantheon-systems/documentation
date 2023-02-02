@@ -12,6 +12,7 @@ permalink: docs/guides/disaster-recovery/site-goes-down
 anchorid: disaster-recovery
 editpath: disaster-recovery/03-site-goes-down.md
 contenttype: [guide]
+innav: [true]
 categories: [help]
 newcms: [--]
 audience: [sysadmin]

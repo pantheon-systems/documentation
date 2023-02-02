@@ -2,6 +2,7 @@
 title: Essential Developer Training
 subtitle: Architecture
 contenttype: [guide]
+innav: [true]
 categories: [overview]
 newcms: [--]
 audience: [development]

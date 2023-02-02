@@ -4,6 +4,7 @@ subtitle: Introduction
 description: Configure uptime monitors with New Relic to automatically open an incident in PagerDuty and notify whoever's on-call, following a set escalation path.
 layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [track]
 newcms: [--]
 audience: [development]

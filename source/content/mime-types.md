@@ -3,6 +3,7 @@ title: MIME Types
 description: Learn how to add, change, and remove a file extension to a MIME type on Pantheon.
 tags: [services]
 contenttype: [doc]
+innav: [true]
 categories: [files]
 newcms: [drupal, wordpress]
 audience: [development]

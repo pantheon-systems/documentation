@@ -4,6 +4,7 @@ description: Learn how to separate the codebases to import individual Drupal sit
 cms: "Drupal"
 tags: [migrate, multisite, drush]
 contenttype: [doc]
+innav: [true]
 categories: [migrate, create]
 newcms: [drupal]
 audience: [development]

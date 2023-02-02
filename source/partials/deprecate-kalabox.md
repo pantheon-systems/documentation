@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: []
+categories: [localdev]
 newcms: [--]
 product: [localdev]
 integration: [kalabox, drush]

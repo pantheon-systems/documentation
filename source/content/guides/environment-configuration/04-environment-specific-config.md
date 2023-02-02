@@ -11,6 +11,7 @@ showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config
 anchorid: environment-specific-config
 contenttype: [guide]
+innav: [true]
 categories: [config]
 newcms: [--]
 audience: [development]

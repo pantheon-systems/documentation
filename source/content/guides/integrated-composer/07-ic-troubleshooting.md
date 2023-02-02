@@ -10,6 +10,7 @@ showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
 anchorid: ic-troubleshooting
 contenttype: [guide]
+innav: [true]
 categories: [dependencies, troubleshooting]
 newcms: [drupal, wordpress]
 audience: [development]

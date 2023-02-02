@@ -12,6 +12,7 @@ permalink: docs/guides/decoupled-sites/support/
 editpath: decoupled-sites/05-support.md
 reviewed: "2022-08-11"
 contenttype: [guide]
+innav: [true]
 categories: [create]
 newcms: [decoupled]
 audience: [development]

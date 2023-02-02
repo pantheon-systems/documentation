@@ -3,6 +3,7 @@ title: Quick Start
 subtitle: Make Code Changes
 description: In part nine of our Quick Start guide, learn how to make code changes using SFTP.
 contenttype: [guide]
+innav: [true]
 categories: [overview]
 newcms: [--]
 audience: [development]
