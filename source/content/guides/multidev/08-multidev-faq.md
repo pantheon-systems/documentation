@@ -3,7 +3,7 @@ title: Multidev
 subtitle: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
 contenttype: [guide]
-categories: [--]
+categories: [multidev]
 newcms: [--]
 audience: [development]
 product: [multidev]

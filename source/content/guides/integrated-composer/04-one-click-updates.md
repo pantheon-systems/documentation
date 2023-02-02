@@ -10,7 +10,7 @@ showtoc: true
 permalink: docs/guides/integrated-composer/one-click-updates
 anchorid: one-click-updates
 contenttype: [guide]
-categories: [overview]
+categories: [dependencies]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [composer]

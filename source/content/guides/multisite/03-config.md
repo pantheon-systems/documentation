@@ -6,7 +6,7 @@ layout: guide
 type: guide
 cms: "WordPress"
 contenttype: [guide]
-categories: [create]
+categories: [cms, config]
 newcms: [wordpress]
 audience: [development]
 product: [--]

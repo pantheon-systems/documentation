@@ -7,7 +7,7 @@ featuredcontributor: true
 type: guide
 permalink: docs/guides/:basename
 contenttype: [doc]
-categories: [automate, overview]
+categories: [localdev]
 newcms: [drupal, wordpress]
 audience: [development]
 product: []

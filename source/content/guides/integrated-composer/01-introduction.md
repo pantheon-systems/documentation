@@ -10,7 +10,7 @@ showtoc: true
 permalink: docs/guides/integrated-composer
 anchorid: integrated-composer
 contenttype: [guide]
-categories: [overview]
+categories: [dependencies]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [composer]

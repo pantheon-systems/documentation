@@ -4,7 +4,7 @@ subtitle: Troubleshooting
 description:  Learn how to troubleshoot common issues when migrating.
 cms: "Drupal"
 contenttype: [guide]
-categories: [migrate]
+categories: [migrate, troubleshooting]
 newcms: [drupal]
 audience: [development]
 product: [--]

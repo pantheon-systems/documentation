@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/overloaded-workers
 anchorid: overloaded-workers
 contenttype: [guide]
-categories: [--]
+categories: [issues]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

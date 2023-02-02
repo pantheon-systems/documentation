@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/fastly-pantheon
 anchorid: fastly-pantheon
 contenttype: [guide]
-categories: [--]
+categories: [cache]
 newcms: [--]
 audience: [development]
 product: [--]

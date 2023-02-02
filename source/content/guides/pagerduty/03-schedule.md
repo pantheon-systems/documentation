@@ -7,7 +7,7 @@ anchorid: schedule
 generator: pagination
 layout: guide
 contenttype: [guide]
-categories: [optimize]
+categories: [track]
 newcms: [--]
 audience: [development]
 product: [newrelic]

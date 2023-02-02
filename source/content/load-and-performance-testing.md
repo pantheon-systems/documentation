@@ -4,7 +4,7 @@ description: Learn how to monitor internal execution performance of your Pantheo
 tags: [measure, newrelic, professional-services]
 reviewed: "2022-03-15"
 contenttype: [doc]
-categories: [measure, optimize, test]
+categories: [track, optimize, test]
 newcms: [--]
 audience: [development]
 product: [--]

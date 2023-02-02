@@ -10,7 +10,7 @@ reviewed: ""
 
 ---
 contenttype: [partial]
-categories: [measure, optimize]
+categories: [track, optimize]
 newcms: [drupal, wordpress]
 product: [newrelic]
 integration: []

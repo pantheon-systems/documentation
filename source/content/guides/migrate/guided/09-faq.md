@@ -3,7 +3,7 @@ title: Migrate Sites to Pantheon Using Guided Migration
 subtitle: FAQ
 description: Frequently asked questions about migration.
 contenttype: [guide]
-categories: [migrate]
+categories: [migrate, faq]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

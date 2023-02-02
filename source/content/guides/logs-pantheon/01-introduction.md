@@ -3,7 +3,7 @@ title: Log Files on Pantheon
 subtitle: Introduction
 description: Use logs on Pantheon to help find, debug, and isolate potential problems.
 contenttype: [guide]
-categories: [optimize]
+categories: [logs]
 newcms: [--]
 audience: [development]
 product: [--]
