@@ -19,7 +19,7 @@ The [latest version of Drupal](/drupal-migration) automatically includes [Integr
 
 ## Drupal 8 Composer-Managed Sites
 
-As of Drupal 8.8, you are required to use Composer to manage your dependencies to use all available contributed modules. Composer-managed sites are not compatible with Pantheon's One-click updates. However, you can easily meet Drupal's requirement and be compatible with Pantheon's platform by using [Integrated Composer](/guides/integrated-composer). You must do **one** of the following to be compatible with One-click updates:
+As of Drupal 8.8, you are required to use Composer to manage your dependencies if you want to use all contributed modules. Composer-managed sites are not compatible with Pantheon's One-click updates. However, you can easily meet Drupal's requirement and be compatible with Pantheon's platform by using [Integrated Composer](/guides/integrated-composer). You must do **one** of the following to be compatible with Pantheon's One-click updates and Drupal composer requirements:
 
 - [Convert the site to Integrated Composer](/guides/composer-convert)
 
@@ -50,11 +50,11 @@ You can apply one-click updates to individual sites repositories through:
 
 1. Commit and deploy any SFTP changes and then set the site's connection mode to **Git**.
 
-  - You can't apply upstream updates when SFTP connection mode is enabled.
+    - You can't apply upstream updates when SFTP connection mode is enabled.
 
 1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
-  ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
+    ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
 
   <Alert title="Note"  type="info" >
 
@@ -168,40 +168,35 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 You can use [SFTP](/guides/sftp) to overwrite core files if you can't use Git.
 
-1. Confirm that the **Development Mode** is set to **SFTP**, and then delete the files and folders below:
+1. Confirm that the **Development Mode** is set to **SFTP**.
 
-  <Alert title="Warning" type="danger">
+1. Delete the files and folders below. ** Do NOT delete the `wp-config.php`file**.
 
-  Do not remove `wp-config.php`.
-
-  </Alert>
-
-  ```none
-  ├── README.md
-  ├── index.php
-  ├── license.txt
-  ├── readme.html
-  ├── wp-activate.php
-  ├── wp-blog-header.php
-  ├── wp-comments-post.php
-  ├── wp-config-sample.php
-  ├── wp-cron.php
-  ├── wp-links-opml.php
-  ├── wp-load.php
-  ├── wp-login.php
-  ├── wp-mail.php
-  ├── wp-settings.php
-  ├── wp-signup.php
-  ├── wp-trackback.php
-  ├── xmlrpc.php
-  ├── wp-admin
-  ├── wp-includes
-  ├── wp-content
-      └── index.php
-      └── mu-plugins
-          └── pantheon.php
-  ```
-
+    ```none
+      ├── README.md
+      ├── index.php
+      ├── license.txt
+      ├── readme.html
+      ├── wp-activate.php
+      ├── wp-blog-header.php
+      ├── wp-comments-post.php
+      ├── wp-config-sample.php
+      ├── wp-cron.php
+      ├── wp-links-opml.php
+      ├── wp-load.php
+      ├── wp-login.php
+      ├── wp-mail.php
+      ├── wp-settings.php
+      ├── wp-signup.php
+      ├── wp-trackback.php
+      ├── xmlrpc.php
+      ├── wp-admin
+      ├── wp-includes
+      ├── wp-content
+          └── index.php
+          └── mu-plugins
+              └── pantheon.php
+      ```
 
 1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress).
 
@@ -321,24 +316,24 @@ This process lets you manually resolve the conflict using the command line and a
 
   In this example, you would:
 
-  1. Open `wp-admin/about.php` in your preferred text editor.
+    1. Open `wp-admin/about.php` in your preferred text editor.
 
-  1. Look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
+    1. Look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
 
-  1. Delete the conflict markers and double-check the changes.
+    1. Delete the conflict markers and double-check the changes.
 
-  1. Run `git status` to see conflicting files in the current index again. Resolve the conflicts and then add them to your index and continue pulling in updates:
+    1. Run `git status` to see conflicting files in the current index again. Resolve the conflicts and then add them to your index and continue pulling in updates:
 
-  ```bash{promptUser: user}
-  git add .
-  git rebase --continue
-  ```
+    ```bash{promptUser: user}
+    git add .
+    git rebase --continue
+    ```
 
-1. Push updates to the Site Dashboard on Pantheon:
+    1. Push updates to the Site Dashboard on Pantheon:
 
-  ```bash{promptUser: user}
-  git push origin master
-  ```
+      ```bash{promptUser: user}
+      git push origin master
+      ```
 
 ## Core Release Updates
 
