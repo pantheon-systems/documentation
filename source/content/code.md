@@ -23,10 +23,10 @@ Pantheon adds core files to your code by default:
     - Refer to [Pantheon YAML Configuration Files](https://pantheon.io/docs/pantheon-yml) for more information.
 
 - `composer.lock`
-    - Pantheon runs composer install when a site is created. This generates a `composer.lock` file, and commits it back to the site’s code repository.
+    - Pantheon runs composer install when a site is created. This generates a `composer.lock` file, and commits it back to the site’s code repository. This writes all packages and their exact versions to the `composer.lock` file, locking the project to those specific versions. Anyone who sets up the project must use the exact dependency versions you locked in the file.
 
 - `.gitignore`
-    - Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
+    - Pantheon provides default `.gitignore` files in the base of each site's code repository. This file includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
 ### Drupal Code Structure
 
