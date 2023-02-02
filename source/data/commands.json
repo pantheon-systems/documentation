@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.1.2"
+        "version": "3.1.3-dev"
     },
     "commands": [
         {
@@ -2196,7 +2196,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: SFTP Command (sftp_command), SFTP Username (sftp_username), SFTP Host (sftp_host), SFTP Password (sftp_password), SFTP URL (sftp_url), Git Command (git_command), Git Username (git_username), Git Host (git_host), Git Port (git_port), Git URL (git_url), MySQL Command (mysql_command), MySQL Username (mysql_username), MySQL Host (mysql_host), MySQL Password (mysql_password), MySQL URL (mysql_url), MySQL Port (mysql_port), MySQL Database (mysql_database), Redis Command (redis_command), Redis Port (redis_port), Redis URL (redis_url), Redis Password (redis_password)",
+                        "description": "Available fields: SFTP Command (sftp_command), SFTP Username (sftp_username), SFTP Host (sftp_host), SFTP Password (sftp_password), SFTP Port (sftp_port), SFTP URL (sftp_url), Git Command (git_command), Git Username (git_username), Git Host (git_host), Git Port (git_port), Git URL (git_url), MySQL Command (mysql_command), MySQL Username (mysql_username), MySQL Host (mysql_host), MySQL Password (mysql_password), MySQL URL (mysql_url), MySQL Port (mysql_port), MySQL Database (mysql_database), Redis Command (redis_command), Redis Port (redis_port), Redis URL (redis_url), Redis Password (redis_password)",
                         "default": "*_command"
                     },
                     "field": {
