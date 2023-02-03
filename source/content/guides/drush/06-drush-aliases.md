@@ -106,7 +106,7 @@ drush sa
 
 ### Add Site Aliases Locations
 
-Drush does not read alias files from global locations. You must set the valid alias locations in your `drush.yml` file if you want to opt-in for this behavior. You can add locations in your configuration files. Files stored in one of the search path locations can be used to create aliases to local and remote Drupal installations. These aliases can be used in place of a site specification on the command line, and can also be used in arguments to certain commands such as:
+Drush does not read alias files from global locations. You can add alias locations in your `drush.yml` file. Files stored in one of the search path locations can be used to create aliases to local and remote Drupal installations. These aliases can be used in place of a site specification on the command line, and can also be used in arguments to certain commands such as:
 
 - `drush rsync`
 - `drush sql:sync`
