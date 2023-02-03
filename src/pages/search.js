@@ -9,12 +9,10 @@ import { Link } from 'gatsby';
 import propTypes from "prop-types";
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
-
 import "./style.css"
 
 const Hit = ({ hit }) => {
   const pantheonDocsUrl = "https://pantheon.io/docs";
-
   return (
     <div>
       <Link to={hit.slug} >
