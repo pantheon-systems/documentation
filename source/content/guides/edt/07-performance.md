@@ -1,29 +1,17 @@
 ---
 title: Essential Developer Training
 subtitle: Performance
-anchorid: performance
-edt: true
-layout: guide
-tags: [cache, cdn]
-type: guide
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
-permalink: docs/guides/edt/performance/
-nexturl: guides/edt/going-live/
-nextpage: Going Live
-previousurl: guides/edt/external-integrations/
-previouspage: External Integrations
-editpath: edt/07-performance.md
 contenttype: [guide]
-categories: [help]
-newcms: [--]
+innav: [true]
+categories: [optimize]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-image: launchGuide-twitterLarge
+tags: [cache, cdn]
+permalink: docs/guides/edt/performance/
+anchorid: performance
+editpath: edt/07-performance.md
 ---
 
 In this lesson, we’re going to explore how to get the best performance for your sites.

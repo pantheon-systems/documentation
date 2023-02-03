@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/agcdn
 anchorid: agcdn
 contenttype: [guide]
+innav: [true]
 categories: [optimize]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

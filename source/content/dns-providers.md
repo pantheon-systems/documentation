@@ -4,8 +4,9 @@ description: A list of docs to help you connect your Pantheon site to your domai
 tags: [dns]
 reviewed: "2020-04-16"
 contenttype: [doc]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

@@ -2,7 +2,6 @@
 title: Migrate a Drupal Site from Another Platform
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: contrib-custom
 editpath: drupal/drupal-unhosted/07-contrib-custom.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal9, drupal8, drupal10, drupal]
+cms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]
 product: [--]
 integration: [--]

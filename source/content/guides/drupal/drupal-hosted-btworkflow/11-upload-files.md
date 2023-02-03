@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site Created With the Pantheon Dashboard to the Latest Version of Drupal + Build Tools
 subtitle: Upload Files
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: upload-files
 editpath: drupal/drupal-hosted-btworkflow/11-upload-files.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate]
-newcms: [drupal, drupal9, drupal10]
+innav: [true]
+categories: [update]
+cms: [drupal, drupal9, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

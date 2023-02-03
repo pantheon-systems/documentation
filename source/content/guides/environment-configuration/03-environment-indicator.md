@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/environment-configuration/environment-indicator
 anchorid: environment-indicator
 contenttype: [guide]
+innav: [true]
 categories: [config]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

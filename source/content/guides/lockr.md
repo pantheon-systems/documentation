@@ -8,8 +8,9 @@ contributors: [cteitzel]
 featuredcontributor: true
 reviewed: "2022-02-04"
 contenttype: [doc]
-categories: [measure]
-newcms: [wordpress, drupal7]
+innav: [true]
+categories: [security]
+cms: [wordpress, drupal7]
 audience: [agency, development]
 product: [terminus]
 integration: [lockr, drush]

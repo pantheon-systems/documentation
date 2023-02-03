@@ -3,12 +3,12 @@ title: Migrate a Composer-based Drupal Site to a Build Tools Site
 description: Migrate a Drupal site created via Pantheon Dashboard (or Terminus) to a Build Tools-based site.
 type: guide
 permalink: docs/guides/:basename
-cms: "Drupal"
 tags: [composer, site, workflow, D8, D9, D10]
 reviewed: "2022-12-12"
 contenttype: [doc]
+innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [dashboard, terminus]
 integration: [composer]

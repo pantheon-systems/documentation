@@ -4,8 +4,9 @@ description: Identify common problems with Drupal or WordPress performance speed
 tags: [cache, code, logs, measure]
 permalink: docs/debug-slow-performance
 contenttype: [doc]
+innav: [true]
 categories: [optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

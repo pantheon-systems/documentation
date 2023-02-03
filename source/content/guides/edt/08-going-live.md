@@ -1,29 +1,17 @@
 ---
 title: Essential Developer Training
 subtitle: Going Live
-anchorid: going-live
-edt: true
-layout: guide
-tags: [dns, launch]
-type: guide
-survey: true
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
-permalink: docs/guides/edt/going-live/
-previousurl: guides/edt/performance/
-previouspage: Performance
-editpath: edt/08-going-live.md
 contenttype: [guide]
-categories: [help]
-newcms: [--]
+innav: [true]
+categories: [launch]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-image: launchGuide-twitterLarge
-getfeedbackform: default
+tags: [dns, launch]
+permalink: docs/guides/edt/going-live/
+anchorid: going-live
+editpath: edt/08-going-live.md
 ---
 
 In this lesson, we’re going to dive into launching your site on Pantheon.

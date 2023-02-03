@@ -3,8 +3,9 @@ title: Migrate Sites to Pantheon Using Guided Migration
 subtitle: Migrate
 description: Learn how to use the guided migration path.
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

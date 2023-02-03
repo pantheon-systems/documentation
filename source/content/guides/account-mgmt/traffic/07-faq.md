@@ -2,7 +2,7 @@
 title: "Traffic"
 subtitle: FAQ
 description: Frequently asked questions regarding traffic and overages.
-tags: [plans]
+tags: [faq, traffic]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
@@ -11,8 +11,9 @@ anchorid: faq
 editpath: docs/guides/account-mgmt/traffic/07-faq.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

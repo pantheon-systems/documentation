@@ -1,10 +1,10 @@
 ---
 title: Major Version Drupal Upgrades
 description: Instructions on how to upgrade your Pantheon site to the next major version of Drupal.
-cms: "Drupal"
 contenttype: [doc]
-categories: [--]
-newcms: [drupal]
+innav: [true]
+categories: [update]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

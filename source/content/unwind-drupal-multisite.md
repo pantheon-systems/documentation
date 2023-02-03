@@ -1,11 +1,11 @@
 ---
 title: Extracting Sites from a Drupal Multisite
 description: Learn how to separate the codebases to import individual Drupal sites to Pantheon.
-cms: "Drupal"
 tags: [migrate, multisite, drush]
 contenttype: [doc]
+innav: [true]
 categories: [migrate, create]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [multisite]

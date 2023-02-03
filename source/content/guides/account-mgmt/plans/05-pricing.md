@@ -10,8 +10,9 @@ anchorid: pricing
 editpath: docs/guides/account-mgmt/plans/05-pricing.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

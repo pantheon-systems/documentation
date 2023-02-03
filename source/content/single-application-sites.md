@@ -3,8 +3,9 @@ title: Managing Drupal and WordPress Subsites Under a Single Domain
 description: Best practices for having Drupal or WordPress subsites on one domain.
 tags: [multisite, redirects]
 contenttype: [doc]
-categories: [domains, overview]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [domains]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

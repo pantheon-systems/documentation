@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site to the Latest Version of Drupal
 subtitle: Deploy
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, stovak]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: deploy
 editpath: hosted/09-deploy.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, deploy]
-newcms: [drupal9, drupal10]
+cms: [drupal9, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

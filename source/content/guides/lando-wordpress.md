@@ -7,8 +7,9 @@ featuredcontributor: true
 type: guide
 permalink: docs/guides/:basename
 contenttype: [doc]
-categories: [automate, overview]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [localdev]
+cms: [drupal, wordpress]
 audience: [development]
 product: []
 integration: [lando]

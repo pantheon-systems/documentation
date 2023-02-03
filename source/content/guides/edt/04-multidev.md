@@ -1,29 +1,17 @@
 ---
 title: Essential Developer Training
 subtitle: Multidev
-anchorid: multidev
-edt: true
-layout: guide
-tags: [git, iterate, multidev, webops, workflow]
-type: guide
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
-permalink: docs/guides/edt/multidev/
-nexturl: guides/edt/terminus-cli/
-nextpage: Command Line Interface
-previousurl: guides/edt/developer-workflow/
-previouspage: Developer Workflow
-editpath: edt/04-multidev.md
 contenttype: [guide]
-categories: [help]
-newcms: [--]
+innav: [true]
+categories: [workflows]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-image: launchGuide-twitterLarge
+tags: [git, iterate, multidev, webops, workflow]
+permalink: docs/guides/edt/multidev/
+anchorid: multidev
+editpath: edt/04-multidev.md
 ---
 
 In this lesson, we’re going to explore Pantheon's Multidev.

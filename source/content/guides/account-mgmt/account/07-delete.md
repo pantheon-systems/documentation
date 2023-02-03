@@ -3,8 +3,9 @@ title: "Manage Your Account"
 subtitle: Delete Your Account
 description: Learn how to completely delete your account.
 contenttype: [guide]
-categories: [billing]
-newcms: [--]
+innav: [true]
+categories: [accounts]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

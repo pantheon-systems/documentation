@@ -5,8 +5,9 @@ type: guide
 permalink: docs/guides/:basename
 tags: [composer, workflow, updates, webops]
 contenttype: [doc]
+innav: [true]
 categories: [update]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [composer]

@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal
 subtitle: Prepare
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: prepare
 editpath: drupal/drupal-hosted-deprecated-upstream/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, update]
-newcms: [drupal9, drupal, drupal8, drupal10]
+cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [terminus, composer]
 integration: []

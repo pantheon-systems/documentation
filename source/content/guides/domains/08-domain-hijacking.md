@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/domains/domain-hijacking
 anchorid: domains-hijacking
 contenttype: [guide]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

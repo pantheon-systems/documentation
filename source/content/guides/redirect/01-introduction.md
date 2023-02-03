@@ -3,8 +3,9 @@ title: Redirects Guide
 subtitle: Introduction
 description: Learn how to redirect sites on Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

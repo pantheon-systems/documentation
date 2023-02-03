@@ -1,12 +1,12 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
-cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 contenttype: [doc]
-categories: [help]
-newcms: [wordpress]
+innav: [true]
+categories: [issues]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

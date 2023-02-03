@@ -2,7 +2,6 @@
 title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Deploy to Dev
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: deploy-dev
 editpath: drupal/drupal-hosted-createcustom/09-deploy-dev.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate, git]
-newcms: [drupal8, drupal9, drupal10]
+innav: [true]
+categories: [update, custom-upstreams]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

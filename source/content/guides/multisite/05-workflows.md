@@ -5,10 +5,10 @@ description: Learn more about WordPress Site Networks workflows.
 anchorid: media
 layout: guide
 type: guide
-cms: "WordPress"
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [true]
+categories: [cms, workflows]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

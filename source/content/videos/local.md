@@ -8,8 +8,9 @@ layout: video
 searchboost: 50
 type: video
 contenttype: [doc]
-categories: [create, git, sftp]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [localdev]
+cms: [drupal, wordpress]
 audience: [develoment]
 product: [terminus]
 integration: [lando]

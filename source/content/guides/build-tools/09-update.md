@@ -2,7 +2,6 @@
 title: Build Tools
 subtitle: Update Your Project
 description: In step nine of the Build Tools guide, learn how to update your site as part of the continuous integration process.
-cms: "Drupal"
 tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
 anchorid: update
@@ -11,8 +10,9 @@ permalink: docs/guides/build-tools/update/
 image: buildToolsGuide-thumb
 getfeedbackform: default
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [dependencies]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

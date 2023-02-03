@@ -2,7 +2,7 @@
 title: "Traffic"
 subtitle: Measuring Traffic
 description: Learn how Pantheon measures traffic.
-tags: [plans]
+tags: [traffic]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
@@ -11,8 +11,9 @@ anchorid: measure
 editpath: docs/guides/account-mgmt/traffic/03-measure.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

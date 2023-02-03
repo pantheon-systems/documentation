@@ -5,8 +5,9 @@ contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katie
 tags: [collaborate]
 reviewed: "2020-11-01"
 contenttype: [doc]
-categories: [overview, help]
-newcms: [--]
+innav: [true]
+categories: [overview]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]

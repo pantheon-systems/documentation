@@ -4,13 +4,13 @@ description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename
 layout: video
-cms: "Drupal"
 tags: [drush, cli]
 searchboost: 50
 type: video
 contenttype: [doc]
+innav: [true]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [drush]

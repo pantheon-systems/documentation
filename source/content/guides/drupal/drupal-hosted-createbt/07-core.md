@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created with Build Tools to the Latest Version of Drupal
 subtitle: Upgrade Drupal Core Using Composer
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: core
 editpath: drupal/drupal-hosted-createbt/07-core.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git]
-newcms: [drupal8, drupal9, drupal10]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [composer]

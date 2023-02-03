@@ -2,10 +2,10 @@
 title: Get Support
 subtitle: Generate a HAR
 description: Learn how to generate a HAR file in the browser.
-cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]

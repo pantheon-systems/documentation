@@ -2,7 +2,6 @@
 title: Migrate a Drupal Site from Another Platform
 subtitle: Introduction
 description: "Migrate an existing non-Pantheon hosted Drupal site to Pantheon"
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: drupal-unhosted
 editpath: drupal/drupal-unhosted/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, overview]
-newcms: [drupal9, drupal, drupal10, drupal8]
+cms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [--]
 integration: [--]

@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site Created With the Pantheon Dashboard to the Latest Version of Drupal + Build Tools
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: troubleshooting
 editpath: drupal/drupal-hosted-btworkflow/17-troubleshooting.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate]
-newcms: [drupal8, drupal9, drupal10, drupal]
+innav: [true]
+categories: [update, troubleshooting]
+cms: [drupal8, drupal9, drupal10, drupal]
 audience: [develpment]
 product: [--]
 integration: [--]

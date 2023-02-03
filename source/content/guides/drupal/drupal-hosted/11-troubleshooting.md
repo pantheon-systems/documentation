@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site to the Latest Version of Drupal
 subtitle: Troubleshooting
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: troubleshooting
 editpath: drupal/drupal-hosted/11-troubleshooting.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate, help]
-newcms: [drupal9, drupal10]
+innav: [true]
+categories: [migrate, troubleshooting]
+cms: [drupal9, drupal10]
 audience: [development]
 product: [--]
 integration: [drush]

@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
-categories: [--]
-newcms: [drupal9]
+categories: [config, migrate, update]
+cms: [drupal9]
 product: [terminus]
 integration: [--]
 tags: [--]

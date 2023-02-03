@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/environment-configuration/read-environment-config
 anchorid: read-environment-config
 contenttype: [guide]
+innav: [true]
 categories: [config]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

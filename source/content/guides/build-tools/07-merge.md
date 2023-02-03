@@ -10,8 +10,9 @@ permalink: docs/guides/build-tools/merge/
 editpath: build-tools/07-merge.md
 image: buildToolsGuide-thumb
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [dependencies]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

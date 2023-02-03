@@ -2,10 +2,10 @@
 title: WordPress Developer's Guide
 subtitle: Avoid XML-RPC Attacks
 description: Learn how to avoid XML-RPC attacks.
-cms: "WordPress"
 contenttype: [guide]
-categories: [manage]
-newcms: [wordpress]
+innav: [true]
+categories: [security]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

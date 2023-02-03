@@ -2,10 +2,10 @@
 title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Prepare
 description: Learn how to prepare your site for migration.
-cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

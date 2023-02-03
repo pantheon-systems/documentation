@@ -4,8 +4,9 @@ description: Detailed information on applying and debugging upstream updates fro
 tags: [dashboard, git, terminus, updates, D8, D9, D10]
 reviewed: "2022-12-07"
 contenttype: [doc]
+innav: [true]
 categories: [update]
-newcms: [drupal7, drupal8, drupal9, wordpress]
+cms: [drupal7, drupal8, drupal9, wordpress]
 audience: [development]
 product: [terminus, dashboard]
 integration: [--]

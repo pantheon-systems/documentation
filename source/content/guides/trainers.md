@@ -4,8 +4,9 @@ description: Best practices for training a group of students using Pantheon
 layout: doc
 permalink: docs/guides/:basename
 contenttype: [doc]
-categories: [--]
-newcms: [wordpress, drupal]
+innav: [true]
+categories: [overview]
+cms: [wordpress, drupal]
 audience: [agency]
 product: [--]
 integration: [--]

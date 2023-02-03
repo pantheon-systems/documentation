@@ -8,10 +8,11 @@ showtoc: true
 permalink: docs/guides/custom-upstream
 anchorid: custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
 reviewed: "2022-12-13"
 ---

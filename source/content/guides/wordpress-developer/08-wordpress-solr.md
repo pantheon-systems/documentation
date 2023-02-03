@@ -2,10 +2,10 @@
 title: WordPress Developer's Guide
 subtitle: Enable Solr for WordPress
 description: Learn how to use Apache Solr with WordPress on Pantheon.
-cms: "WordPress"
 contenttype: [guide]
-categories: [config]
-newcms: [wordpress]
+innav: [true]
+categories: [search]
+cms: [wordpress]
 audience: [development]
 product: [search]
 integration: [plugins]

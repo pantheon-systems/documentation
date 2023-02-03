@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created with Build Tools to Drupal
 subtitle: Confirm the MariaDB Version and Updates
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: mariadb
 editpath: drupal-v8/09-mariadb.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [migrate, git, update]
-newcms: [drupal8, drupal9, drupal10]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [mariadb]

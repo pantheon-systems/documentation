@@ -3,13 +3,14 @@ title: Hover Domain Configuration
 provider: Hover
 dnsprovider: true
 description: Learn how to point your Hover domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 draft: true
 permalink: docs/:basename
 editpath: dns-providers/hover.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [cloudflare, hover]
