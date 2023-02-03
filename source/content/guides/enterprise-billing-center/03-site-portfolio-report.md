@@ -5,7 +5,7 @@ description: Learn more about the information provided in the Site Portfolio Rep
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [siteportfolio]
 integration: [--]

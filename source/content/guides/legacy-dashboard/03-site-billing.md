@@ -12,7 +12,7 @@ editpath: legacy-dashboard/03-site-billing.md
 contenttype: [guide]
 innav: [true]
 categories: [billing, dashboard]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]

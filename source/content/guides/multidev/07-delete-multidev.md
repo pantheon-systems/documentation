@@ -5,7 +5,7 @@ description: Learn how to delete branch environments and branches in Multidev.
 contenttype: [guide]
 innav: [true]
 categories: [multidev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

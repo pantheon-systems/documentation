@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [overview, migrate]
-newcms: [drupal9]
+cms: [drupal9]
 audience: [agency, development]
 product: [custom-upstreams]
 integration: [--]

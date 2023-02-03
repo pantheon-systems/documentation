@@ -7,7 +7,7 @@ anchorid: faq
 contenttype: [doc]
 innav: [true]
 categories: [faq]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [agency, development]
 product: [cdn, localdev, search, siteportfolio, terminus]
 integration: [--]

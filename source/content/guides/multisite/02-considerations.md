@@ -4,11 +4,10 @@ subtitle: Considerations
 description: Review important WordPress Site Networks considerations.
 layout: guide
 type: guide
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

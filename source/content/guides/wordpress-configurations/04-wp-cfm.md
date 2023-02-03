@@ -2,11 +2,10 @@
 title: WordPress Configurations Guide
 subtitle: WordPress Configuration Management (WP-CFM)
 description: Learn how to install and use the WordPress Configuration Management plugin on your Pantheon WordPress site.
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [plugins]

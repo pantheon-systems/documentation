@@ -5,7 +5,7 @@ description: Learn about available WordPress plugin configurations on the Panthe
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

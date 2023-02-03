@@ -2,7 +2,6 @@
 title: Migrate a Drupal Site from Another Platform
 subtitle: Copy Existing Configuration
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,7 +11,7 @@ editpath: drupal/drupal-unhosted/05-copy-config.md
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [drupal9]
+cms: [drupal9]
 audience: [development]
 product: [--]
 integration: [--]

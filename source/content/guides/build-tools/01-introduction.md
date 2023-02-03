@@ -13,7 +13,7 @@ reviewed: "2022-04-19"
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

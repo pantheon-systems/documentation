@@ -5,7 +5,7 @@ description: Create a WordPress site on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

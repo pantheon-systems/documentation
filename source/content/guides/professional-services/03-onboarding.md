@@ -5,7 +5,7 @@ description: Pantheon Onboarding Services include Secure Integration, SSO, pre-l
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

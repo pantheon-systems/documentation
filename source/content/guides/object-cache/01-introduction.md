@@ -5,7 +5,7 @@ description: Understand how to use Object Cache as a drop-in caching mechanism f
 contenttype: [guide]
 innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

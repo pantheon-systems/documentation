@@ -13,7 +13,7 @@ reviewed: "2022-09-19"
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

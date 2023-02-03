@@ -14,7 +14,7 @@ editpath: legacy-dashboard/09-add-client-site.md
 contenttype: [guide]
 innav: [true]
 categories: [organizations, billing, dashboard, help]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]

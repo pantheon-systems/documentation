@@ -5,7 +5,7 @@ description: In the final section of our Quick Start guide, learn about common n
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

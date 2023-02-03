@@ -5,7 +5,7 @@ description: Learn more about Bedrock and Composer-managed WordPress sites.
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

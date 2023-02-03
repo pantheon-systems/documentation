@@ -7,7 +7,7 @@ reviewed: "2020-02-05"
 newtype: guide
 innav: [true]
 categories: [security]
-newcms: []
+cms: []
 audience: [development]
 product: []
 integration: []

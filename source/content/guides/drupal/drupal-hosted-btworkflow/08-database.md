@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site Created With the Pantheon Dashboard to the Latest Version of Drupal + Build Tools
 subtitle: Add Database
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -13,7 +12,7 @@ reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [true]
 categories: [migrate, database]
-newcms: [drupal8, drupal9, drupal10]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [terminus]
 integration: [--]

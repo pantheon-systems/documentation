@@ -10,7 +10,7 @@ editpath: dns-providers/register-com.md/
 contenttype: [doc]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

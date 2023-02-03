@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [email]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [--]
 tags: [--]

@@ -5,7 +5,7 @@ description: Develop your Pantheon site locally using Visual Studio Code to edit
 contenttype: [guide]
 innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []

@@ -12,7 +12,7 @@ editpath: legacy-dashboard/02-create-sites.md
 contenttype: [guide]
 innav: [true]
 categories: [create, dashboard, accounts]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [dashboard]
 integration: [--]

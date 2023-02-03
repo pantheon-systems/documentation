@@ -10,7 +10,7 @@ editpath: dns-providers/akamai.md/
 contenttype: [doc]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

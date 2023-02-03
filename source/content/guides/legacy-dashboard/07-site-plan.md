@@ -13,7 +13,7 @@ editpath: legacy-dashboard/07-site-plan.md
 contenttype: [guide]
 innav: [true]
 categories: [plans, dashboard]
-newcms: [wordpress, drupal7]
+cms: [wordpress, drupal7]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]

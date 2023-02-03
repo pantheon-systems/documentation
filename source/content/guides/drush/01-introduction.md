@@ -2,7 +2,6 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Introduction
 description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
-cms: "Drupal"
 tags: [drush]
 layout: guide
 showtoc: true
@@ -11,7 +10,7 @@ anchorid: drush
 contenttype: [guide]
 innav: [true]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]

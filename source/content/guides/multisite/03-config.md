@@ -4,11 +4,10 @@ subtitle: Configure
 description: Learn how to configure your WordPress Site Networks.
 layout: guide
 type: guide
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [cms, config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

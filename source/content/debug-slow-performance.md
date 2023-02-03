@@ -6,7 +6,7 @@ permalink: docs/debug-slow-performance
 contenttype: [doc]
 innav: [true]
 categories: [optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -11,7 +11,7 @@ anchorid: install
 contenttype: [guide]
 innav: [true]
 categories: [cli]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]

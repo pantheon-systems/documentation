@@ -5,7 +5,7 @@ description: Frequently asked questions about migration.
 contenttype: [guide]
 innav: [true]
 categories: [migrate, faq]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

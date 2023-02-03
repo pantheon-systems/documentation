@@ -2,13 +2,12 @@
 title: Pantheon Modules
 description: Details on specific Drupal modules developed and maintained for the Pantheon Website Management Platform workflow.
 contributors: [eabquina]
-cms: "Drupal"
 tags: [cache, libraries, modules, site]
 reviewdate: "2022-04-01"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

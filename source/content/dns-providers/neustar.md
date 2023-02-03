@@ -6,7 +6,7 @@ description: Learn how to point your Neustar UltraDNS domain to a Pantheon site.
 contenttype: [doc]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

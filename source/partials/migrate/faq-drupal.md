@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 product: [--]
 integration: [--]
 tags: [--]

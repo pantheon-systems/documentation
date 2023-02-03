@@ -5,7 +5,7 @@ description: In part six of our Quick Start guide, learn how to clone your conte
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

@@ -4,7 +4,7 @@ subtitle: Command Line Interface
 contenttype: [guide]
 innav: [true]
 categories: [cli]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [terminus]
 integration: [--]

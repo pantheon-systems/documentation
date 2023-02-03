@@ -5,7 +5,7 @@ description: Learn how to compare environments in Multidev.
 contenttype: [guide]
 innav: [true]
 categories: [multidev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

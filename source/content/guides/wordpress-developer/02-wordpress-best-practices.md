@@ -2,11 +2,10 @@
 title: WordPress Developer's Guide
 subtitle: WordPress Best Practices
 description: A list of best practices for developing WordPress sites on Pantheon.
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

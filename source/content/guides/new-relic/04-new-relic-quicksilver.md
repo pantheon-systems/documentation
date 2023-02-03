@@ -5,7 +5,7 @@ description: Automatically Label Code Changes in New Relic Performance Monitorin
 contenttype: [guide]
 innav: [true]
 categories: [track]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]

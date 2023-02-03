@@ -5,7 +5,7 @@ description: Learn how to use Integrated Composer with WordPress on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

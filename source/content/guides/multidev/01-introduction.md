@@ -5,7 +5,7 @@ description: Detailed information on using Pantheon's Multidev environment for y
 contenttype: [guide]
 innav: [true]
 categories: [multidev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

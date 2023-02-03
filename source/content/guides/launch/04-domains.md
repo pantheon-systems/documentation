@@ -10,7 +10,7 @@ anchorid: domains
 contenttype: [guide]
 innav: [true]
 categories: [domains, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]

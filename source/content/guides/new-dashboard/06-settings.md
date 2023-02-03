@@ -5,7 +5,7 @@ description: Manage site plans, view plan history, and change billing preference
 contenttype: [guide]
 innav: [true]
 categories: [dashboard]
-newcms: [--]
+cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]

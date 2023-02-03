@@ -10,7 +10,7 @@ anchorid: configure-dns
 contenttype: [guide]
 innav: [true]
 categories: [config, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]

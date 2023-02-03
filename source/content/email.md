@@ -4,7 +4,7 @@ description: Detailed information on configuring a third-party outgoing email se
 contenttype: [doc]
 innav: [true]
 categories: [email]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [dependencies]
-newcms: [--]
+cms: [--]
 product: [integrated-composer]
 integration: [--]
 tags: [--]

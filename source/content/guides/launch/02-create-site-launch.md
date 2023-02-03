@@ -11,7 +11,7 @@ anchorid: create-site-launch
 contenttype: [guide]
 innav: [true]
 categories: [create, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]

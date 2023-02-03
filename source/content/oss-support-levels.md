@@ -7,7 +7,7 @@ reviewed: "2022-03-02"
 contenttype: [doc]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

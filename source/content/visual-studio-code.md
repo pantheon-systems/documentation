@@ -4,7 +4,7 @@ description: Develop your Pantheon site locally using Visual Studio Code to edit
 contenttype: [doc]
 innav: [true]
 categories: [code]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [vscode]

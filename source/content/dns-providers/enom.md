@@ -9,7 +9,7 @@ editpath: dns-providers/enom.md/
 contenttype: [doc]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

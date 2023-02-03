@@ -5,7 +5,7 @@ description: In part eight of our Quick Start guide, learn to make UI changes on
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

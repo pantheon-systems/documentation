@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [personalize]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [edge]
 tags: [--]

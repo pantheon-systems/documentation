@@ -5,7 +5,7 @@ description: Learn how to automate your log downloads.
 contenttype: [guide]
 innav: [true]
 categories: [logs]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

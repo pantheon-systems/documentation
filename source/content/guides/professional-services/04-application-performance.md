@@ -5,7 +5,7 @@ description: Frontend and backend help with your WordPress and Drupal sites.
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

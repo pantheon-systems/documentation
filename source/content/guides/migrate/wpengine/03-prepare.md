@@ -5,7 +5,7 @@ description: Get your site ready for migration.
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

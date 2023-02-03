@@ -5,7 +5,7 @@ description: Learn how to create a WordPress Site that uses Composer, Continuous
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

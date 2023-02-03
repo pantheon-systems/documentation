@@ -5,7 +5,7 @@ description: Learn how New Relic Performance Monitoring can help you with your m
 contenttype: [guide]
 innav: [true]
 categories: [track]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]

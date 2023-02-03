@@ -5,7 +5,7 @@ description: Learn how to enable and use New Relic Performance Monitoring metric
 contenttype: [guide]
 innav: [true]
 categories: [track]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]

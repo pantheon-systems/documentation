@@ -5,7 +5,7 @@ description: Learn how to access Pantheon's expert team and what your Account ti
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]

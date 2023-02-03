@@ -6,7 +6,7 @@ reviewed: "2022-12-13"
 contenttype: [doc]
 innav: [true]
 categories: [create]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [search]
-newcms: [drupal9]
+cms: [drupal9]
 product: [--]
 integration: [--]
 tags: [--]

@@ -5,7 +5,7 @@ description: Review solutions to common troubleshooting scenarios for Object Cac
 contenttype: [guide]
 innav: [true]
 categories: [cache, troubleshooting]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

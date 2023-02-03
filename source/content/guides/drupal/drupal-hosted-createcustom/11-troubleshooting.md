@@ -2,7 +2,6 @@
 title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [update, custom-upstreams, troubleshooting]
-newcms: [drupal9, drupal, drupal8, drupal10]
+cms: [drupal9, drupal, drupal8, drupal10]
 audience: [agency, development]
 product: [--]
 integration: [--]

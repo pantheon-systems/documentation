@@ -5,7 +5,7 @@ description: Explore WordPress troubleshooting solutions.
 contenttype: [guide]
 innav: [true]
 categories: [cms, troubleshooting]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site with Multidev to the Latest Version of Drupal Using Multidev
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2021-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [migrate, troubleshooting]
-newcms: [drupal8, drupal9, drupal, drupal10]
+cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [--]
 integration: [multidev, drush]

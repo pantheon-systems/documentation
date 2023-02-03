@@ -5,11 +5,10 @@ description: This guide covers how to quickly spinup a new WooCommerce site on P
 contributors: [BFTrick]
 featuredcontributor: true
 layout: guide
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [ecommerce]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [woocommerce]

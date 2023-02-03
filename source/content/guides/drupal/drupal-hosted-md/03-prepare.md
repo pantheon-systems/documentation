@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site with Multidev to the Latest Version of Drupal Using Multidev
 subtitle: Prepare the Local Environment
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [update]
-newcms: [drupal8, drupal9, drupal, drupal10]
+cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [composer, terminus]
 integration: [--]

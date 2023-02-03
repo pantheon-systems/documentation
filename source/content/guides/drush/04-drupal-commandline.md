@@ -2,7 +2,6 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Create a Drupal Site From the Command Line Using Terminus and Drush
 description: Learn how to manage configuration between Pantheon environments using the command line.
-cms: "Drupal"
 tags: [terminus, site, cli]
 contributors: [stevector, whitneymeredith]
 type: guide
@@ -12,7 +11,7 @@ anchorid: drupal-commandline
 contenttype: [guide]
 innav: [true]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]

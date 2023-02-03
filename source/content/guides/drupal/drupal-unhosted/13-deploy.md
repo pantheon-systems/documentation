@@ -2,7 +2,6 @@
 title: Migrate a Drupal Site from Another Platform
 subtitle: Deploy
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,7 +11,7 @@ editpath: drupal/drupal-unhosted/11-deploy.md
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [drupal9, drupal, drupal8, drupal10]
+cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

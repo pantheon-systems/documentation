@@ -9,7 +9,7 @@ date: "2022-03-15"
 contenttype: [doc]
 innav: [true]
 categories: [localdev]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [newrelic]
 integration: [--]

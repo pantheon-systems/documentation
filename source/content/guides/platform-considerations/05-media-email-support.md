@@ -5,7 +5,7 @@ description: Learn more about media and email support on the Pantheon platform.
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

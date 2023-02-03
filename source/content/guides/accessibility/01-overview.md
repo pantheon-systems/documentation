@@ -5,7 +5,7 @@ description: How to extend your site's reach with accessibility planning, fixes,
 contenttype: [guide]
 innav: [true]
 categories: [create]
-newcms: [--]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]

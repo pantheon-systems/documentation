@@ -5,7 +5,7 @@ description: Managed Updates offerings and requirements for Drupal compatibility
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

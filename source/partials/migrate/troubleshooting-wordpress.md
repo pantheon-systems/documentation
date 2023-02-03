@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [troubleshooting, cmss]
-newcms: [wordpress]
+cms: [wordpress]
 product: [--]
 integration: [--]
 tags: [--]

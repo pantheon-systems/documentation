@@ -5,7 +5,7 @@ description: Learn how to use your account workspace.
 contenttype: [guide]
 innav: [true]
 categories: [accounts]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

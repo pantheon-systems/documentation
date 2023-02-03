@@ -7,7 +7,7 @@ searchboost: 150
 contenttype: [doc]
 innav: [true]
 categories: [domains]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

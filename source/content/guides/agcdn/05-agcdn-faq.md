@@ -11,7 +11,7 @@ anchorid: agcdn-faq
 contenttype: [guide]
 innav: [true]
 categories: [optimize]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

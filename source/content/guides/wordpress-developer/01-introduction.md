@@ -5,7 +5,7 @@ description: Learn about best practices and tools to develop your WordPress site
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

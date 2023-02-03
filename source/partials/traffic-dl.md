@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [traffic]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [--]
 tags: [--]

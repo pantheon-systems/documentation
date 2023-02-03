@@ -11,7 +11,7 @@ anchorid: restore-environment-backup
 contenttype: [guide]
 innav: [true]
 categories: [backup]
-newcms: [drupal9]
+cms: [drupal9]
 audience: [development]
 product: [--]
 integration: [--]

@@ -5,7 +5,7 @@ description: Set up two-factor authentication on your Pantheon Drupal or WordPre
 contenttype: [guide]
 innav: [true]
 categories: [security]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

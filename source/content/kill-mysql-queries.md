@@ -6,7 +6,7 @@ reviewed: "2020-10-28"
 contenttype: [doc]
 innav: [true]
 categories: [sql]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

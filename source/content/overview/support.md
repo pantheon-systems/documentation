@@ -7,7 +7,7 @@ permalink: docs/overview/support
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

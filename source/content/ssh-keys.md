@@ -6,7 +6,7 @@ reviewed: "2022-03-04"
 contenttype: [doc]
 innav: [true]
 categories: [security, git, config]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [ssh, drush, sftp]

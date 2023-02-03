@@ -5,7 +5,7 @@ description: Pantheon's Site Migration Service can help ensure a smooth migratio
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

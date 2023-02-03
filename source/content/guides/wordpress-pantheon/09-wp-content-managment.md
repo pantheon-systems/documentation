@@ -5,7 +5,7 @@ description: Learn how to manage your WordPress content efficiently.
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

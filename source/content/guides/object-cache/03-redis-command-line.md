@@ -5,7 +5,7 @@ description: Use the Redis Command Line to manage Object Cache.
 contenttype: [guide]
 innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

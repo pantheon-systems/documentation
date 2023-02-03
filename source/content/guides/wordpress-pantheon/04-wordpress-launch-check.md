@@ -5,7 +5,7 @@ description: Learn more about the checks we automatically run on your Pantheon W
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

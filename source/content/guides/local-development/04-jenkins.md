@@ -5,7 +5,7 @@ description: Configure an existing Jenkins server to test and deploy code change
 contenttype: [guide]
 innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []

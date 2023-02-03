@@ -7,7 +7,7 @@ layout: guide
 contenttype: [guide]
 innav: [true]
 categories: [track]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [newrelic]
 integration: [--]

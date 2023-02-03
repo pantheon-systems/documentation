@@ -11,7 +11,7 @@ permalink: docs/guides/launch/
 contenttype: [guide]
 innav: [true]
 categories: [overview, launch, domains]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]

@@ -6,7 +6,7 @@ layout: resource
 contenttype: [doc]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

@@ -5,7 +5,7 @@ description: A quick reference to answer some of the most frequently asked quest
 contenttype: [guide]
 innav: [true]
 categories: [multidev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

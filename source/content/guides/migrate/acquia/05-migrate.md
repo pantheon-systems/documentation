@@ -5,7 +5,7 @@ description: Learn how to use the Acquia migration path.
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

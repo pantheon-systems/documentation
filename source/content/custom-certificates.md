@@ -6,7 +6,7 @@ reviewed: "2022-12-07"
 contenttype: [doc]
 innav: [true]
 categories: [security]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [cdn]
 integration: [--]

@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 product: [--]
 integration: [drush]
 tags: [--]

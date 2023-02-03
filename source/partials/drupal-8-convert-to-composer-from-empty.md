@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [migrate]
-newcms: [--]
+cms: [--]
 product: [integrated-composer]
 integration: [composer]
 tags: [--]

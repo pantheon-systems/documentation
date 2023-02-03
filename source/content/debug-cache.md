@@ -7,7 +7,7 @@ reviewed: "2022-12-07"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [development]
 product: [cdn]
 integration: [--]

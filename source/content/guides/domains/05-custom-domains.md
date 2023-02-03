@@ -12,7 +12,7 @@ anchorid: custom-domains
 contenttype: [guide]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [agency, development]
 product: [dashboard]
 integration: [--]

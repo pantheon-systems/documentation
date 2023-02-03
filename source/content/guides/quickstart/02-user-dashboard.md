@@ -5,7 +5,7 @@ description: In part two of our Quick Start guide, learn about the Pantheon Pers
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

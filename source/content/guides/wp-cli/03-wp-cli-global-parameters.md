@@ -2,11 +2,10 @@
 title: WP-CLI on the Pantheon Platform
 subtitle: WP-CLI Global Parameters
 description: Review important WP-CLI global parameters.
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [cli]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

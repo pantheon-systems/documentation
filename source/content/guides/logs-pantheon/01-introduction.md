@@ -5,7 +5,7 @@ description: Use logs on Pantheon to help find, debug, and isolate potential pro
 contenttype: [guide]
 innav: [true]
 categories: [logs]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

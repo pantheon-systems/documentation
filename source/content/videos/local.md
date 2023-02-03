@@ -10,7 +10,7 @@ type: video
 contenttype: [doc]
 innav: [true]
 categories: [localdev]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [develoment]
 product: [terminus]
 integration: [lando]

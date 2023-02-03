@@ -5,7 +5,7 @@ description: In part nine of our Quick Start guide, learn how to make code chang
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

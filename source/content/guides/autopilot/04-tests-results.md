@@ -13,7 +13,7 @@ reviewed: "2021-08-09"
 contenttype: [guide]
 innav: [true]
 categories: [automate, test, update, faq]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [quicksilver]

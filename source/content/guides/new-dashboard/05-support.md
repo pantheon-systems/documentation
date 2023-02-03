@@ -5,7 +5,7 @@ description: A streamlined Support experience for your Workspace.
 contenttype: [guide]
 innav: [true]
 categories: [dashboard]
-newcms: [--]
+cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]

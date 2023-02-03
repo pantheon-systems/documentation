@@ -14,7 +14,7 @@ reviewed: "2020-10-10"
 contenttype: [guide]
 innav: [true]
 categories: [track]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

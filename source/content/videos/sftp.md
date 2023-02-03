@@ -10,7 +10,7 @@ type: video
 contenttype: [doc]
 innav: [true]
 categories: [sftp]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

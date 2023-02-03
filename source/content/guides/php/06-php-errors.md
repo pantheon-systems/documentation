@@ -5,7 +5,7 @@ description: Detailed information about basic PHP errors on your Pantheon Drupal
 contenttype: [guide]
 innav: [true]
 categories: [php]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

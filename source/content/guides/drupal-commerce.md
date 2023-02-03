@@ -2,7 +2,6 @@
 title: Drupal Commerce on Drupal
 description: Use Composer to Install Drupal Commerce with Drupal, on Pantheon
 contributors: [alexfornuto, stevector]
-cms: "Drupal"
 tags: [upstreams, site]
 type: guide
 permalink: docs/guides/:basename
@@ -10,7 +9,7 @@ multidev: true
 contenttype: [doc]
 innav: [true]
 categories: [git]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [modules]

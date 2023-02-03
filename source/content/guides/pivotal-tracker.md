@@ -4,7 +4,7 @@ description: Using Pivotal Tracker to track application development progress, us
 contenttype: [doc]
 innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [pivotal]

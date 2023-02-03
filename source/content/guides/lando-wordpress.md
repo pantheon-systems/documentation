@@ -9,7 +9,7 @@ permalink: docs/guides/:basename
 contenttype: [doc]
 innav: [true]
 categories: [localdev]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: []
 integration: [lando]

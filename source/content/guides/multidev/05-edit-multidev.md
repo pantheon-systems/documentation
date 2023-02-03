@@ -5,7 +5,7 @@ description: Learn how to make edits and merge code in your Multidev.
 contenttype: [guide]
 innav: [true]
 categories: [multidev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

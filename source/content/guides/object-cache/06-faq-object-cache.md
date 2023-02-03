@@ -5,7 +5,7 @@ description: Get answers to your Object Cache questions.
 contenttype: [guide]
 innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

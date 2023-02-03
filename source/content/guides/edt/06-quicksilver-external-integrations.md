@@ -4,7 +4,7 @@ subtitle: External Integrations
 contenttype: [guide]
 innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver]

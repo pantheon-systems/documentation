@@ -5,7 +5,7 @@ description: Learn how to manage the credit cards used to pay for your account.
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

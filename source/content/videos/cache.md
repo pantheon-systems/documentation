@@ -10,7 +10,7 @@ type: video
 contenttype: [doc]
 innav: [true]
 categories: [cache]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [redis]

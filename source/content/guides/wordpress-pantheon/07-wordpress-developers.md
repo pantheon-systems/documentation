@@ -5,7 +5,7 @@ description: Develop efficiently with WordPress on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

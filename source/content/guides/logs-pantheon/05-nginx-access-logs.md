@@ -5,7 +5,7 @@ description: Learn how to parse the nginx-access.log file with GoAccess.
 contenttype: [guide]
 innav: [true]
 categories: [logs]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

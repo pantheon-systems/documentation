@@ -5,7 +5,7 @@ description: Learn how to set the primary domain for your site.
 contenttype: [guide]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

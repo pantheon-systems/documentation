@@ -7,7 +7,7 @@ contributors:
 contenttype: [doc]
 innav: [true]
 categories: [files]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -5,7 +5,7 @@ description: Learn how to use Quicksilver hooks to improve your workflow.
 contenttype: [guide]
 innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver]

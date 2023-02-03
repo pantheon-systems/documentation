@@ -5,7 +5,7 @@ description: Pantheon Professional Services include consulting, migrations, load
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

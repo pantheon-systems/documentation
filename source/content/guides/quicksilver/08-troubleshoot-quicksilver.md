@@ -5,7 +5,7 @@ description: Review solutions to common Quicksilver troubleshooting scenarios.
 contenttype: [guide]
 innav: [true]
 categories: [automate, troubleshooting]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver]

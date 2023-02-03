@@ -6,7 +6,7 @@ permalink: docs/guides/:basename
 contenttype: [doc]
 innav: [true]
 categories: [overview]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency]
 product: [--]
 integration: [--]

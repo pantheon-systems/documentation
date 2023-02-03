@@ -5,7 +5,7 @@ description: Learn how to develop securely on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [security]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

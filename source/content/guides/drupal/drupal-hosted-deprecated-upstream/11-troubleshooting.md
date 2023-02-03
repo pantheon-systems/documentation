@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-12-13"
@@ -14,7 +13,7 @@ editpath: drupal/drupal-hosted-deprecated-upstream/11-troubleshooting.md
 contenttype: [guide]
 innav: [true]
 categories: [migrate, troubleshooting]
-newcms: [drupal9, drupal, drupal8, drupal10]
+cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: []
 integration: []

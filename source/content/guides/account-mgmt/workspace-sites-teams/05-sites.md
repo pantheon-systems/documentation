@@ -13,7 +13,7 @@ reviewed: "2022-09-19"
 contenttype: [guide]
 innav: [true]
 categories: [organizations]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

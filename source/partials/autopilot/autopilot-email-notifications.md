@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [update, test]
-newcms: [--]
+cms: [--]
 product: [autopilot]
 integration: [--]
 tags: [--]

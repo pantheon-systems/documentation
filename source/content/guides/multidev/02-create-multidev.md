@@ -5,7 +5,7 @@ description: Learn how to create a Multidev environment on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [multidev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

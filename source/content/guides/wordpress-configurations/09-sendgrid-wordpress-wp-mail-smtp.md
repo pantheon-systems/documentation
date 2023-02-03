@@ -6,12 +6,11 @@ contributors: [alexfornuto]
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [email]
 tags: [email, plugins]
-cms: "WordPress"
 reviewed: "2020-11-02"
 permalink: docs/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp
 anchorid: sendgrid-wordpress-wp-mail-smtp

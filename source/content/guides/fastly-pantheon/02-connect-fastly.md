@@ -11,7 +11,7 @@ anchorid: connect-fastly
 contenttype: [guide]
 innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [fastly]

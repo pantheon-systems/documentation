@@ -6,11 +6,10 @@ woocommerce: true
 anchorid: initialize-prod
 generator: pagination
 layout: guide
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [ecommerce]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [woocommerce]

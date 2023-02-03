@@ -5,7 +5,7 @@ description: This Self Serve Essential Developer Training guide is designed to h
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

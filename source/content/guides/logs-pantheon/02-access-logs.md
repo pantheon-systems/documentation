@@ -5,7 +5,7 @@ description: Access your logs through SFTP on the Pantheon platform.
 contenttype: [guide]
 innav: [true]
 categories: [logs]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

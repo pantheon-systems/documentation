@@ -6,7 +6,7 @@ reviewed: "2021-09-13"
 contenttype: [doc]
 innav: [true]
 categories: [files]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [terminus]
 integration: [--]

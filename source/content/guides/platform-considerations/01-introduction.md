@@ -5,7 +5,7 @@ description: Learn more about Pantheon platform considerations for your Drupal o
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

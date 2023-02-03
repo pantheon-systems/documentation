@@ -13,7 +13,7 @@ editpath: disaster-recovery/02-planning-ahead.md
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [cdn, newrelic]
 integration: [--]

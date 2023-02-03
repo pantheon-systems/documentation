@@ -5,7 +5,7 @@ description: Use integrated reporting services with New Relic Performance Monito
 contenttype: [guide]
 innav: [true]
 categories: [track, troubleshooting]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]

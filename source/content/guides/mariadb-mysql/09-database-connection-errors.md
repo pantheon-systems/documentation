@@ -5,7 +5,7 @@ description: Drupal Pressflow core, WordPress core, and the causes and solutions
 contenttype: [guide]
 innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

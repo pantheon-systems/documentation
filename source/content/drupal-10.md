@@ -7,7 +7,7 @@ reviewed: "2022-10-18"
 contenttype: [doc]
 innav: [true]
 categories: [create, cms]
-newcms: [drupal10]
+cms: [drupal10]
 audience: [development]
 product: [composer]
 integration: [--]

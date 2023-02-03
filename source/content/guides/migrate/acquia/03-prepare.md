@@ -5,7 +5,7 @@ description: Get your site ready for migration.
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

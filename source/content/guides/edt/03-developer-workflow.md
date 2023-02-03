@@ -4,7 +4,7 @@ subtitle: Developer Workflow
 contenttype: [guide]
 innav: [true]
 categories: [workflows]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

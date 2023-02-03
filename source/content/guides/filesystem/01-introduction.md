@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 innav: [true]
 categories: [files]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

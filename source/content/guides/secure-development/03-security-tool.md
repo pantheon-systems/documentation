@@ -5,7 +5,7 @@ description: Learn how to use the Security tool in the Site Dashboard to keep yo
 contenttype: [guide]
 innav: [true]
 categories: [security]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

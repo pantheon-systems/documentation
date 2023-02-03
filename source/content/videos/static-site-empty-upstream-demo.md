@@ -7,7 +7,7 @@ reviewed: "2021-08-09"
 contenttype: [doc]
 innav: [true]
 categories: [custom-upstreams]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams, terminus]
 integration: [--]

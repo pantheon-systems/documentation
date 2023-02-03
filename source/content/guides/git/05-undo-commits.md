@@ -10,7 +10,7 @@ anchorid: undo-commits
 contenttype: [guide]
 innav: [true]
 categories: [git]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

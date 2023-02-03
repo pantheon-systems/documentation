@@ -4,7 +4,7 @@ subtitle: Going Live
 contenttype: [guide]
 innav: [true]
 categories: [launch]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

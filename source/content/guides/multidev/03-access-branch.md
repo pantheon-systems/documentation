@@ -5,7 +5,7 @@ description: Learn how to access a Multidev branch environment.
 contenttype: [guide]
 innav: [true]
 categories: [multidev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

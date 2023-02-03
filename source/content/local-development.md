@@ -4,7 +4,7 @@ description: Suggestions and solutions for working locally on your Pantheon Drup
 contenttype: [doc]
 innav: [true]
 categories: [localdev]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

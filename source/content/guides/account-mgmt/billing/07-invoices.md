@@ -5,7 +5,7 @@ description: Manage and view invoices and subscriptions.
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

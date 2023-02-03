@@ -5,7 +5,7 @@ description: Learn more about the Enterprise Billing Center.
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [siteportfolio]
 integration: [--]

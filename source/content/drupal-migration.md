@@ -5,7 +5,7 @@ reviewed: "2022-12-13"
 contenttype: [doc]
 innav: [true]
 categories: [migrate, update]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

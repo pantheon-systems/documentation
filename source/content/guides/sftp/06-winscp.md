@@ -5,7 +5,7 @@ description: Learn how to use Pantheon's SFTP connection mode with WinSCP SFTP c
 tags: [files, sftp]
 innav: [true]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [winscp]

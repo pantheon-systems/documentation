@@ -11,7 +11,7 @@ editpath: localdev/04-troubleshoot-support.md
 contenttype: [guide]
 innav: [true]
 categories: [localdev]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [localdev]
 integration: [--]

@@ -5,7 +5,7 @@ description: Frequently asked questions about migration.
 contenttype: [guide]
 innav: [true]
 categories: [migrate, faq]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

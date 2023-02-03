@@ -5,7 +5,7 @@ description: Learn how to use New Relic to monitor and improve site performance.
 contenttype: [guide]
 innav: [true]
 categories: [track]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]

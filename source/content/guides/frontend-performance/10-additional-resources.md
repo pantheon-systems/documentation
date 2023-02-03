@@ -13,7 +13,7 @@ reviewed: "2020-10-10"
 contenttype: [guide]
 innav: [true]
 categories: [optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [modules, plugins]

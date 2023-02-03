@@ -7,7 +7,7 @@ searchboost: 90
 contenttype: [doc]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [agency]
 product: [--]
 integration: [--]

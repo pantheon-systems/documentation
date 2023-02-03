@@ -10,7 +10,7 @@ editpath: dns-providers/network-solutions.md/
 contenttype: [doc]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

@@ -5,7 +5,7 @@ description: Best practices when building an accessible site.
 contenttype: [guide]
 innav: [true]
 categories: [create]
-newcms: [--]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]

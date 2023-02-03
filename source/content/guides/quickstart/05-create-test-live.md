@@ -5,7 +5,7 @@ description: In part five of our Quick Start guide, learn how to create your Tes
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

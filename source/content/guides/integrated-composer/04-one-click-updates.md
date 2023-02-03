@@ -12,7 +12,7 @@ anchorid: one-click-updates
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]

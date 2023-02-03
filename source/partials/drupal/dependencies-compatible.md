@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [dependencies]
-newcms: [drupal, drupal8, drupal9]
+cms: [drupal, drupal8, drupal9]
 product: [--]
 integration: [--]
 tags: [--]

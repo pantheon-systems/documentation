@@ -2,7 +2,6 @@
 title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Create a New Branch with Integrated Composer Code
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
@@ -13,7 +12,7 @@ reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [true]
 categories: [update, custom-upstreams]
-newcms: [drupal9, drupal10, drupal8, drupal]
+cms: [drupal9, drupal10, drupal8, drupal]
 audience: [agency, development]
 product: [terminus, custom-upstreams]
 integration: [--]

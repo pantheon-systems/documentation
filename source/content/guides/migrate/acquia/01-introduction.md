@@ -5,7 +5,7 @@ description: Instructions for migrating your site using our guided migration pro
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

@@ -2,7 +2,6 @@
 title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [drupal9, drupal, drupal10, drupal8]
+cms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [composer]
 integration: [--]

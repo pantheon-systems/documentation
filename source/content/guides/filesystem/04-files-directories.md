@@ -5,7 +5,7 @@ description: Learn more about file and directory considerations on the Pantheon 
 contenttype: [guide]
 innav: [true]
 categories: [files]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

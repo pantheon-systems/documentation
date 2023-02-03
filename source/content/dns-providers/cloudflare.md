@@ -9,7 +9,7 @@ editpath: dns-providers/cloudflare.md/
 contenttype: [doc]
 innav: [true]
 categories: [domains]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [--]

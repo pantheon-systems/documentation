@@ -5,7 +5,7 @@ description: Keep your WordPress on Pantheon site secure.
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

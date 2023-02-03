@@ -1,13 +1,12 @@
 ---
 title: Configuration Workflow for Drupal Sites
 description: Commit your Drupal configuration to version control.
-cms: "Drupal"
 tags: [drush, workflow, webops]
 reviewed: "2022-12-13"
 contenttype: [doc]
 innav: [true]
 categories: [config]
-newcms: [drupal9]
+cms: [drupal9]
 audience: [development]
 product: [--]
 integration: [--]

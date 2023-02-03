@@ -5,7 +5,7 @@ description: Edge configuration tools that enable advanced site management, enha
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [cdn]
 integration: [--]

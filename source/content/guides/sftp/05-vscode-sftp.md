@@ -5,7 +5,7 @@ description: Learn how to upload local changes with Visual Studio Code's SFTP ex
 tags: [files, sftp, rsync]
 innav: [true]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]

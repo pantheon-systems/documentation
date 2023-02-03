@@ -5,7 +5,7 @@ description: Add a new credit card, remove the current card, or transfer billing
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

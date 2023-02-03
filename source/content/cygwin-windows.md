@@ -6,7 +6,7 @@ reviewed: "2020-02-05"
 contenttype: [doc]
 innav: [true]
 categories: [cli]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

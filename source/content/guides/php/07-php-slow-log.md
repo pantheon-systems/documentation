@@ -5,7 +5,7 @@ description: Improve site stability using PHP Slow Log and PHP FPM Error Log to 
 contenttype: [guide]
 innav: [true]
 categories: [php]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

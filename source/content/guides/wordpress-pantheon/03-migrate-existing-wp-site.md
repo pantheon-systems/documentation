@@ -5,7 +5,7 @@ description: Migrate an existing WordPress site to Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [cms]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

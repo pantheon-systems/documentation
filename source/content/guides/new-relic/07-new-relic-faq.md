@@ -5,7 +5,7 @@ description: Get answers to your New Relic questions.
 contenttype: [guide]
 innav: [true]
 categories: [track, faq]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]

@@ -13,7 +13,7 @@ reviewed: "2020-05-08"
 contenttype: [guide]
 innav: [true]
 categories: [git]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

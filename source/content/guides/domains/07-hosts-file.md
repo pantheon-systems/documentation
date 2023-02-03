@@ -11,7 +11,7 @@ anchorid: hosts-file
 contenttype: [guide]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

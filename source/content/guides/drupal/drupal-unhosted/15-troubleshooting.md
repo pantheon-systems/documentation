@@ -2,7 +2,6 @@
 title: Migrate a Drupal Site from Another Platform
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -13,7 +12,7 @@ editpath: drupal/drupal-unhosted/15-troubleshooting.md
 contenttype: [guide]
 innav: [true]
 categories: [migrate, troubleshooting]
-newcms: [drupal9, drupal8, drupal10, drupal]
+cms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]
 product: [--]
 integration: [--]

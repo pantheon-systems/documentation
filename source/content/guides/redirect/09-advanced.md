@@ -5,7 +5,7 @@ description: Configure custom redirect logic for specific scenarios.
 contenttype: [guide]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

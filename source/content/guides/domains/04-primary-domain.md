@@ -12,7 +12,7 @@ anchorid: primary-domain
 contenttype: [guide]
 innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [dashboard]
 integration: [--]

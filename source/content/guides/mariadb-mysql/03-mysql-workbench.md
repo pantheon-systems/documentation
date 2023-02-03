@@ -5,7 +5,7 @@ description: Use MySQL Workbench to create, execute, and optimize SQL queries.
 contenttype: [guide]
 innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

@@ -5,7 +5,7 @@ description: Pantheon plugins for WordPress.
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

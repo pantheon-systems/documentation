@@ -11,7 +11,7 @@ anchorid: retries-server-containers
 contenttype: [guide]
 innav: [true]
 categories: [issues]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -5,7 +5,7 @@ description: Transfer large files using an SFTP client or rsync.
 tags: [files, sftp, rsync]
 innav: [true]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]

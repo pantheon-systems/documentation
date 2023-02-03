@@ -5,7 +5,7 @@ description: Learn about GraphQL best practices and troubleshooting tips.
 contenttype: [guide]
 innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []

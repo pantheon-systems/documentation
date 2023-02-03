@@ -13,7 +13,7 @@ editpath: legacy-dashboard/01-introduction.md
 contenttype: [guide]
 innav: [true]
 categories: [overview, dashboard]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, business, marketing]
 product: [dashboard]
 integration: [--]

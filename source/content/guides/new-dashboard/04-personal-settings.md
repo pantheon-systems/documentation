@@ -5,7 +5,7 @@ description: Customize and manage your personal settings.
 contenttype: [guide]
 innav: [true]
 categories: [dashboard]
-newcms: [--]
+cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]

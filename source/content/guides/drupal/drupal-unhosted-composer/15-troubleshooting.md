@@ -2,7 +2,6 @@
 title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Troubleshooting
 description:  Troubleshoot common issues when migrating.
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [migrate, troubleshooting]
-newcms: [drupal9, drupal8, drupal10, drupal]
+cms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]
 product: [composer]
 integration: [drush]

@@ -8,7 +8,7 @@ date: 6/20/2017
 contenttype: [doc]
 innav: [true]
 categories: [automate, overview]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

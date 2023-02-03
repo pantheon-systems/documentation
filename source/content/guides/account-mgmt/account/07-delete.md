@@ -5,7 +5,7 @@ description: Learn how to completely delete your account.
 contenttype: [guide]
 innav: [true]
 categories: [accounts]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

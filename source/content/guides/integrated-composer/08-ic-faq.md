@@ -12,7 +12,7 @@ anchorid: ic-faq
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
-newcms: [drupal, wordpress, faq]
+cms: [drupal, wordpress, faq]
 audience: [development]
 product: [composer]
 integration: [--]

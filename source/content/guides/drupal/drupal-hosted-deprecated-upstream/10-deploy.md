@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal
 subtitle: Deploy
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -13,7 +12,7 @@ reviewed: "2021-03-31"
 contenttype: [guide]
 innav: [true]
 categories: [deploy]
-newcms: [drupal9, drupal, drupal8, drupal10]
+cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: []
 integration: []

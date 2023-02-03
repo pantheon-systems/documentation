@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [track, optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 product: [newrelic]
 integration: []
 reviewed: "2022-11-07"

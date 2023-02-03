@@ -5,7 +5,7 @@ description: Learn how to access your invoices.
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [siteportfolio]
 integration: [--]

@@ -12,7 +12,7 @@ anchorid: submit-request
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [cdn]
 integration: [--]

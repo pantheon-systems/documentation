@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created with Build Tools to Drupal
 subtitle: Prepare
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [true]
 categories: [migrate, git]
-newcms: [drupal8, drupal9, drupal10]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [--]

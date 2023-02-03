@@ -12,7 +12,7 @@ anchorid: ic-troubleshooting
 contenttype: [guide]
 innav: [true]
 categories: [dependencies, troubleshooting]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]

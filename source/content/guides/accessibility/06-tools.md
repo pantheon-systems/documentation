@@ -5,7 +5,7 @@ description: Tools and techniques to improve your website's accessibility.
 contenttype: [guide]
 innav: [true]
 categories: [create]
-newcms: [--]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]

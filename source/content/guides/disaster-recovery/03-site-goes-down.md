@@ -14,7 +14,7 @@ editpath: disaster-recovery/03-site-goes-down.md
 contenttype: [guide]
 innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

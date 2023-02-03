@@ -4,7 +4,7 @@ description: Gain valuable insight to your site's development and collaboration 
 contenttype: [doc]
 innav: [true]
 categories: [dashboard, workflows]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [dashboard]
 integration: [--]

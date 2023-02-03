@@ -11,7 +11,7 @@ anchorid: read-environment-config
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

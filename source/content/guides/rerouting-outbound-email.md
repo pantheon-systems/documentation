@@ -1,11 +1,10 @@
 ---
 title: Prevent Spamming During Drupal Debugging and Testing
 description: Set up the Drupal reroute_email module on your Pantheon Drupal site.
-cms: "Drupal"
 contenttype: [doc]
 innav: [true]
 categories: [email]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [email]

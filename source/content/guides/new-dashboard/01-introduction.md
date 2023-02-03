@@ -5,7 +5,7 @@ description: The new Pantheon Dashboard makes it easier to manage your WebOps fr
 contenttype: [guide]
 innav: [true]
 categories: [dashboard]
-newcms: [--]
+cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]

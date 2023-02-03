@@ -6,7 +6,7 @@ reviewed: "2021-08-05"
 contenttype: [doc]
 innav: [true]
 categories: [search]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [agency, development]
 product: [search]
 integration: [--]

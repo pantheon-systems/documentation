@@ -5,7 +5,7 @@ description: Use MySQL Slow Log to troubleshoot and identify serious performance
 contenttype: [guide]
 innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

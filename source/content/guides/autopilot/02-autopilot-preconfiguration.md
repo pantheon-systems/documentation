@@ -12,7 +12,7 @@ permalink: docs/guides/autopilot/autopilot-preconfiguration/
 contenttype: [guide]
 innav: [true]
 categories: [automate, test, update, faq]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

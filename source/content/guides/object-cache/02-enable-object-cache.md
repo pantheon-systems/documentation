@@ -5,7 +5,7 @@ description: Learn how to enable Object Cache on your site.
 contenttype: [guide]
 innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

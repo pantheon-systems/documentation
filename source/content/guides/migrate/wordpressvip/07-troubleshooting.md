@@ -5,7 +5,7 @@ description: Resolve issues that may occur during migration.
 contenttype: [guide]
 innav: [true]
 categories: [migrate, troubleshooting]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

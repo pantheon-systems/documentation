@@ -5,7 +5,7 @@ description: Learn how to integrate Jira with the Pantheon Site Dashboard.
 contenttype: [guide]
 innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver, jira]

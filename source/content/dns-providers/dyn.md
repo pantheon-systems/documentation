@@ -9,7 +9,7 @@ editpath: dns-providers/dyn.md/
 contenttype: [doc]
 innav: [true]
 categories: [domains, launch]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

@@ -11,7 +11,7 @@ anchorid: slow-and-high-queries
 contenttype: [guide]
 innav: [true]
 categories: [issues]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -1,11 +1,10 @@
 ---
 title: Launch Check - Drupal Performance and Configuration Analysis
 description: Detailed information on Launch Check, Pantheon's automated checks for Drupal performance and configuration
-cms: "Drupal"
 contenttype: [doc]
 innav: [true]
 categories: [launch]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

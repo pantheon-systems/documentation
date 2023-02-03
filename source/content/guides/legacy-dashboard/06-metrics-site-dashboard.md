@@ -12,7 +12,7 @@ editpath: legacy-dashboard/06-metrics-site-dashboard.md
 contenttype: [guide]
 innav: [true]
 categories: [track, dashboard]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]

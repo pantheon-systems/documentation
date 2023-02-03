@@ -2,7 +2,6 @@
 title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Add Dependencies
 description: 
-cms: "v"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [true]
 categories: [update, custom-upstreams]
-newcms: [ drupal ]
+cms: [ drupal ]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

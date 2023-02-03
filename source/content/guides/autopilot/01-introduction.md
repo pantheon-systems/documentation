@@ -15,7 +15,7 @@ reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [automate, test, update, faqs]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

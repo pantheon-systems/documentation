@@ -9,7 +9,7 @@ reviewed: "2022-12-12"
 contenttype: [doc]
 innav: [true]
 categories: [optimize]
-newcms: [drupal8]
+cms: [drupal8]
 audience: [development]
 product: [--]
 integration: [--]

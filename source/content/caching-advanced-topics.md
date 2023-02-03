@@ -6,7 +6,7 @@ reviewed: "2022-12-13"
 contenttype: [doc]
 innav: [true]
 categories: [cache]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

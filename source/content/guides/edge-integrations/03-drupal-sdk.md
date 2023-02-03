@@ -13,7 +13,7 @@ editpath: edge-integrations/03-drupal-sdk.md
 contenttype: [guide]
 innav: [true]
 categories: [personalization]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

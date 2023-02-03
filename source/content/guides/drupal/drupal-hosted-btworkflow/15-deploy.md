@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site Created With the Pantheon Dashboard to the Latest Version of Drupal + Build Tools
 subtitle: Deploy
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -14,7 +13,7 @@ reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [true]
 categories: [update]
-newcms: [drupal9, drupal10]
+cms: [drupal9, drupal10]
 audience: [development]
 product: [dashboard, terminus]
 integration: [--]

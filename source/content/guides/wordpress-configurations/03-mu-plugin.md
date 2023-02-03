@@ -3,11 +3,10 @@ title: WordPress Configurations Guide
 subtitle: Create a WordPress MU-Plugin for Actions and Filters
 description: Learn how to make your own MU-plugin for actions and filters.
 contributors: [alexfornuto, eabquina, carl-alberto]
-cms: "WordPress"
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [plugins]

@@ -6,7 +6,7 @@ reviewed: "2020-02-12"
 contenttype: [doc]
 innav: [true]
 categories: [launch, domains]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

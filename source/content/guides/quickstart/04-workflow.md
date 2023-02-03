@@ -5,7 +5,7 @@ description: In part four of our Quick Start guide, learn about the Dev/Test/Liv
 contenttype: [guide]
 innav: [true]
 categories: [overview, workflows]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

@@ -5,7 +5,7 @@ description: Get answers to your MariaDB and MySQL questions.
 contenttype: [guide]
 innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

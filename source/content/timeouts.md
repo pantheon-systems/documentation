@@ -6,7 +6,7 @@ reviewed: "2020-03-18"
 contenttype: [doc]
 innav: [true]
 categories: [config]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [solr, cron]

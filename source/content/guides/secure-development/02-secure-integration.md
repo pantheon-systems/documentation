@@ -5,7 +5,7 @@ description: Configuring your Drupal or WordPress site to use Secure Integration
 contenttype: [guide]
 innav: [true]
 categories: [security]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

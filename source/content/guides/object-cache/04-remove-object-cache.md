@@ -5,7 +5,7 @@ description: Learn how to safely remove Object Cache.
 contenttype: [guide]
 innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

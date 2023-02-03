@@ -7,7 +7,7 @@ reviewed: "2021-10-21"
 contenttype: [doc]
 innav: [true]
 categories: [security]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

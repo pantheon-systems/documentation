@@ -11,7 +11,7 @@ anchorid: environment-configuration
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

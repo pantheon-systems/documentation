@@ -2,7 +2,6 @@
 title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Upload Your Files
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -13,7 +12,7 @@ reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
 categories: [migrate]
-newcms: [drupal9]
+cms: [drupal9]
 audience: [development]
 product: [--]
 integration: [--]

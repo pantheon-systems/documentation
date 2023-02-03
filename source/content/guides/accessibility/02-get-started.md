@@ -5,7 +5,7 @@ description: How to integrate accessibility into new site builds, and audit exis
 contenttype: [guide]
 innav: [true]
 categories: [create]
-newcms: [--]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]

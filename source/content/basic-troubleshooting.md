@@ -6,7 +6,7 @@ reviewed: "2022-12-13"
 contenttype: [doc]
 innav: [true]
 categories: [cache, security, deploy, domains, troubleshooting]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [development, sysadmin]
 product: [cdn]
 integration: [--]

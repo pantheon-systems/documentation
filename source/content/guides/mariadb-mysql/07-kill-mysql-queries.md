@@ -5,7 +5,7 @@ description: Learn how to identify and kill long-running MySQL queries on your s
 contenttype: [guide]
 innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

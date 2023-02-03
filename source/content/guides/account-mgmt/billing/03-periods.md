@@ -5,7 +5,7 @@ description: Learn about the billing periods available, and how to manage a subs
 contenttype: [guide]
 innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

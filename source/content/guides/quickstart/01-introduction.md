@@ -5,7 +5,7 @@ description: The Quick Start guide is designed to get you started on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

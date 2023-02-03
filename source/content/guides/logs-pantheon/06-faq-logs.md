@@ -5,7 +5,7 @@ description: Get answers to your log questions.
 contenttype: [guide]
 innav: [true]
 categories: [logs, faq]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

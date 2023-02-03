@@ -6,7 +6,7 @@ reviewed: "2022-03-15"
 contenttype: [doc]
 innav: [true]
 categories: [track, optimize, test]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

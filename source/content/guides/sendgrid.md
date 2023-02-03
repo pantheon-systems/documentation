@@ -4,7 +4,7 @@ description: Detailed information on using SendGrid to deliver email through you
 contenttype: [doc]
 innav: [true]
 categories: [email]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [sendgrid, email]

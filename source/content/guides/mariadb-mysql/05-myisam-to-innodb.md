@@ -5,7 +5,7 @@ description: Improve the reliability and performance of your MySQL database by m
 contenttype: [guide]
 innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

@@ -7,7 +7,7 @@ permalink: docs/overview/workflows
 contenttype: [doc]
 innav: [true]
 categories: [overview, workflows]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]

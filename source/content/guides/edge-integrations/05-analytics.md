@@ -13,7 +13,7 @@ editpath: edge-integrations/05-analytics.md
 contenttype: [guide]
 innav: [true]
 categories: [personalization]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -6,7 +6,7 @@ reviewed: "2022-12-07"
 contenttype: [doc]
 innav: [true]
 categories: [update]
-newcms: [drupal7, drupal8, drupal9, wordpress]
+cms: [drupal7, drupal8, drupal9, wordpress]
 audience: [development]
 product: [terminus, dashboard]
 integration: [--]

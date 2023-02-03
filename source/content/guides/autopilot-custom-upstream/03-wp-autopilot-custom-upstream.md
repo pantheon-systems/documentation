@@ -11,7 +11,7 @@ anchorid: wp-autopilot-custom-upstream
 contenttype: [guide]
 innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

@@ -5,7 +5,7 @@ description: In part seven of our Quick Start guide, learn how Pantheon users ta
 contenttype: [guide]
 innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

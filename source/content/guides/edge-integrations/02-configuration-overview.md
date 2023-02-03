@@ -14,7 +14,7 @@ reviewed: "2022-03-23"
 contenttype: [guide]
 innav: [true]
 categories: [personalization]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

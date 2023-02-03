@@ -2,7 +2,6 @@
 title: Environment Configuration
 subtitle: Environment-Specific Configurations for Drupal
 description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal's configuration override system.
-cms: "Drupal"
 tags: [workflow, D8, D9, D10]
 contributors: [peter-pantheon, rachelwhitton]
 layout: guide
@@ -12,7 +11,7 @@ anchorid: environment-specific-config-drupal
 contenttype: [guide]
 innav: [true]
 categories: [config]
-newcms: [drupal9]
+cms: [drupal9]
 audience: [development]
 product: [--]
 integration: [--]

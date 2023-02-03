@@ -5,7 +5,7 @@ description: Learn more about using WordPress with Composer on Pantheon.
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

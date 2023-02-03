@@ -1,11 +1,10 @@
 ---
 title: WordPress Known Issues
 description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress sites.
-cms: "WordPress"
 contenttype: [doc]
 innav: [true]
 categories: [issues]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -2,11 +2,10 @@
 title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Troubleshooting
 description:  Learn how to troubleshoot common issues when migrating.
-cms: "Drupal"
 contenttype: [guide]
 innav: [true]
 categories: [migrate, troubleshooting]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
