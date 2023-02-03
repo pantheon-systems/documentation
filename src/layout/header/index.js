@@ -17,7 +17,7 @@ if (isSearchEnabled && config.search.indexName) {
   });
 }
 
-const isSearchPage = document.URL.includes("search");
+const isSearchPage = typeof document !== "undefined" && document.URL.includes("search");
 
 const Header = ({ data, page }) => (
   <>
