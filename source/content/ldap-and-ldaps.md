@@ -4,7 +4,7 @@ description: Detailed information on how to configure LDAP and LDAPS on your Pan
 tags: [code, modules, plugins, security]
 contenttype: [doc]
 innav: [true]
-categories: [user-authentication]
+categories: [security]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

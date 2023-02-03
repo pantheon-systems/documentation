@@ -10,10 +10,10 @@ contributors: [--]
 anchorid: test-custom-upstream
 contenttype: [guide]
 innav: [true]
-categories: [custom-upstream]
+categories: [custom-upstreams]
 newcms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
 reviewed: "2022-12-09"
 ---

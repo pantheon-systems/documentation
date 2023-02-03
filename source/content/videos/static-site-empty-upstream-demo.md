@@ -6,7 +6,7 @@ tags: [https, launch, code, workflow]
 reviewed: "2021-08-09"
 contenttype: [doc]
 innav: [true]
-categories: [custom-upstream]
+categories: [custom-upstreams]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams, terminus]

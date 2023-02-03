@@ -4,7 +4,7 @@ description: Add the ability to integrate AWS S3 with a Drupal site on Pantheon
 cms: "Drupal"
 contenttype: [doc]
 innav: [true]
-categories: [manage]
+categories: [manage, workflows]
 newcms: [drupal]
 audience: [development]
 product: [--]

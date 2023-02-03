@@ -7,7 +7,7 @@ contributors: [carolynshannon, kyletaylored]
 reviewed: "2020-04-02"
 contenttype: [doc]
 innav: [true]
-categories: [custom-upstream]
+categories: [custom-upstreams]
 newcms: [wordpress]
 audience: [development]
 product: [--]

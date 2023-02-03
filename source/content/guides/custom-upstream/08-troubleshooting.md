@@ -9,10 +9,10 @@ permalink: docs/guides/custom-upstream/troubleshooting
 anchorid: troubleshooting
 contenttype: [guide]
 innav: [true]
-categories: [custom-upstream]
+categories: [custom-upstreams]
 newcms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
 reviewed: "2022-12-12"
 ---

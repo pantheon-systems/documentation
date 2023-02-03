@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [siteauth]
+categories: [security]
 newcms: [--]
 product: [--]
 integration: [--]

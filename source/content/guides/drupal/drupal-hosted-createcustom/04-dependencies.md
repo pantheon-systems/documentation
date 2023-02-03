@@ -13,7 +13,7 @@ editpath: drupal/drupal-hosted-createcustom/04-dependencies.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [true]
-categories: [migrate, git]
+categories: [update, custom-upstreams]
 newcms: [ drupal ]
 audience: [development]
 product: [dashboard, custom-upstreams]

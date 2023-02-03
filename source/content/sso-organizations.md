@@ -4,7 +4,7 @@ description: Detailed information to enable SAML single sign-on for your organiz
 tags: [security, organizations]
 contenttype: [doc]
 innav: [true]
-categories: [user-authentication, config]
+categories: [security, config]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

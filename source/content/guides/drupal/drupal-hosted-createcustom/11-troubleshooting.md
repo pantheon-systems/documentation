@@ -13,7 +13,7 @@ editpath: drupal/drupal-hosted-createcustom/13-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
-categories: [update, troubleshooting]
+categories: [update, custom-upstreams, troubleshooting]
 newcms: [drupal9, drupal, drupal8, drupal10]
 audience: [agency, development]
 product: [--]

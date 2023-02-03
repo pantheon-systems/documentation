@@ -6,7 +6,7 @@ tags: [upstreams, site]
 reviewed: "2021-08-12"
 contenttype: [doc]
 innav: [true]
-categories: [custom-upstream]
+categories: [custom-upstreams]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]

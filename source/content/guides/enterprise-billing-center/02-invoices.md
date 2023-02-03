@@ -2,8 +2,13 @@
 title: Enterprise Billing Center
 subtitle: Access Invoices
 description: Learn how to access your invoices.
+contenttype: [guide]
 innav: [true]
 categories: [billing]
+newcms: [--]
+audience: [business]
+product: [siteportfolio]
+integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
 layout: guide

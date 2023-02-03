@@ -3,7 +3,7 @@ title: Integrate Pivotal Tracker Project Management Application with a site on P
 description: Using Pivotal Tracker to track application development progress, using Quicksilver webhooks.
 contenttype: [doc]
 innav: [true]
-categories: [manage]
+categories: [automate]
 newcms: [--]
 audience: [development]
 product: [--]

@@ -4,7 +4,7 @@ subtitle: Troubleshoot
 description: Review solutions to common troubleshooting scenarios for Object Cache.
 contenttype: [guide]
 innav: [true]
-categories: [cache, troubleshoot]
+categories: [cache, troubleshooting]
 newcms: [--]
 audience: [development]
 product: [--]

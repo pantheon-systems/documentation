@@ -5,7 +5,7 @@ tags: [sso, security, terminus]
 reviewed: "2020-12-09"
 contenttype: [doc]
 innav: [true]
-categories: [siteauth]
+categories: [security]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

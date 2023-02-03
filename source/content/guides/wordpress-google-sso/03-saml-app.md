@@ -6,7 +6,7 @@ contributors: [alexfornuto, danielbachhuber]
 cms: "WordPress"
 contenttype: [guide]
 innav: [true]
-categories: [siteauth]
+categories: [security]
 newcms: [wordpress]
 audience: [development]
 product: [--]

@@ -4,7 +4,7 @@ description: Use SSO to centrally manage user identities and provide seamless in
 tags: [security, sso, users]
 contenttype: [doc]
 innav: [true]
-categories: [siteauth]
+categories: [security]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

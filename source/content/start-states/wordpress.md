@@ -9,10 +9,10 @@ editpath: start-states/wordpress.md/
 reviewed: "2022-06-01"
 contenttype: [doc]
 innav: [true]
-categories: [custom-upstream]
+categories: [custom-upstreams]
 newcms: [wordpress]
 audience: [agency, business, development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
 ---
 

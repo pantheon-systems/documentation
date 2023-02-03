@@ -2,8 +2,13 @@
 title: Enterprise Billing Center
 subtitle: Introduction
 description: Learn more about the Enterprise Billing Center.
+contenttype: [guide]
 innav: [true]
 categories: [billing]
+newcms: [--]
+audience: [business]
+product: [siteportfolio]
+integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
 layout: guide

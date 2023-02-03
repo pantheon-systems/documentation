@@ -5,7 +5,7 @@ tags: [security, dashboard, ssh]
 reviewed: "2022-03-04"
 contenttype: [doc]
 innav: [true]
-categories: [user-authentication, git, config]
+categories: [security, git, config]
 newcms: [drupal, wordpress]
 audience: [development]
 product: [--]

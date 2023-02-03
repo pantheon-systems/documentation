@@ -1,6 +1,6 @@
 ---
 contenttype: [partial]
-categories: [custom-upstream]
+categories: [custom-upstreams]
 newcms: [--]
 product: [terminus]
 integration: [--]

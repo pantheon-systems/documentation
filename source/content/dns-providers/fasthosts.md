@@ -13,7 +13,7 @@ categories: [domains]
 newcms: [--]
 audience: [--]
 product: [--]
-integration: [cloudfare]
+integration: [cloudflare]
 ---
 ## Before You Begin
 Be sure that you have a:
