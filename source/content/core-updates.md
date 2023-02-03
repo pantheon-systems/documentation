@@ -37,18 +37,18 @@ As of Drupal 8.8, you are required to use Composer to manage your dependencies i
 
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream), become available downstream as a one-click update.
 
-You can apply one-click updates to individual sites repositories through:
+You can apply one-click updates to individual site repositories through:
 
 - Site Dashboard on Pantheon
 - [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
 
-## Apply Upstream Updates via the Site Dashboard
+## Apply Upstream Updates via the SitDashboard
 
-1. Navigate to the **Code** tab in the Site Dashboard on the Dev environment, and then click **Apply Updates**.
+1. Navigate to the **Code** tab in the Site Dashboard on the Dev environment, then click **Apply Updates**.
 
   ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
-1. Commit and deploy any SFTP changes and then set the site's **Connection Mode** to **Git**.
+1. Commit and deploy any SFTP changes, then set the site's **Connection Mode** to **Git**.
 
     - You can't apply upstream updates when the Connection Mode is set to SFTP.
 
@@ -341,7 +341,7 @@ Updates are available within 72 hours of upstream availability whenever a new Wo
 
 ## Suppress WordPress Admin Notice
 
-WordPress admin checks for new upstream updates by default, instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin, you will still see upstream updates in the Pantheon dashboard.
+WordPress admin checks for new upstream updates by default, instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin; you will still see upstream updates in the Pantheon dashboard.
 
 ```php:title=wp-config.php
 define( 'DISABLE_PANTHEON_UPDATE_NOTICES', true );
