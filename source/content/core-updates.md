@@ -329,7 +329,7 @@ This process lets you manually resolve the conflict using the command line and a
     git rebase --continue
     ```
 
-    1. Push updates to the Site Dashboard on Pantheon:
+    1. Push updates to the site Dashboard on Pantheon:
 
       ```bash{promptUser: user}
       git push origin master
