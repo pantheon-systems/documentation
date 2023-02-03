@@ -20,7 +20,7 @@ This section provides information on how to use Drush aliases.
 
 ## Download Drush Aliases Locally
 
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. 
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments.
 
 1. Use [Terminus](/terminus) to download your Drush aliases.
 
@@ -30,9 +30,9 @@ Downloading the Pantheon aliases to your local Drush aliases file allows you to 
   terminus aliases
   ```
 
-  This command will write both Drush 8 and Drush 9 aliases into the directory `$HOME/.drush` for your sites that you are a direct member of. 
+  This command will write both Drush 8 and Drush 9 aliases into the directory `$HOME/.drush` for your sites that you are a direct member of.
 
-1. Run the command below to create aliases for all sites that you can use, including sites that you have access to via team membership: 
+1. Run the command below to create aliases for all sites that you can use, including sites that you have access to via team membership:
 
   ```bash{promptUser: user}
   terminus aliases --all
@@ -92,13 +92,36 @@ Pantheon uses policy files to validate aliases before they are used. Policy file
 
 - The Drush 9 policy file is written to `$HOME/.drush/pantheon/Commands/PantheonAliasPolicyCommands.php`. Do not delete this file.
 
-### List Available Site Aliases
+## Manage Available Site Aliases
 
-Verify that the site aliases are available by listing every site alias known to Drush after the Pantheon Drush aliases have been copied.
+You can verify that your site aliases are available by listing every site alias known to Drush after the Pantheon Drush aliases have been copied. Note that Drush does not read alias files from global locations. You must [set valid alias locations](/guides/drush/drush-aliases#add-site-aliases-locations) in your `drush.yml` file if you want to opt-in for this behavior.
+
+### List Site Aliases
+
+Run the command below to view every site alias known to Drush:
 
 ```bash{promptUser: user}
 drush sa
 ```
+
+### Add Site Aliases Locations
+
+Drush does not read alias files from global locations. You must set the valid alias locations in your `drush.yml` file if you want to opt-in for this behavior. You can add locations in your configuration files. Files stored in one of the search path locations can be used to create aliases to local and remote Drupal installations. These aliases can be used in place of a site specification on the command line, and can also be used in arguments to certain commands such as:
+
+- `drush rsync`
+- `drush sql:sync`
+
+1. Navigate to your `~/.drush/drush.yml` configuration file.
+
+1. Add the new alias search path location. The example below re-adds the default user alias path from Drush 8.
+
+ ```yaml
+ drush:
+   paths:
+    alias-path:
+       - '${env.home}/.drush/site-aliases'
+      - /etc/drush
+ ```
 
 ## Drush Alias Strict Control
 
