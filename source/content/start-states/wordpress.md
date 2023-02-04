@@ -23,7 +23,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 <a name="20230203" class="release-update"></a>Remove line to contact support from wp-pantheon-config.php
 
-Pantheon Customer Support Engineer's are no longer needed to shuffle salt keys. Customers can visit https://api.wordpress.org/secret-key/1.1/salt/ to replace the values provided by the platform.
+Pantheon Customer Support Engineers are no longer needed to shuffle salt keys. Customers can visit https://api.wordpress.org/secret-key/1.1/salt/ to replace the values provided by the platform.
 
 ## Previous Releases
 
