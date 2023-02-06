@@ -114,7 +114,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   </Alert>
 
-### Using an SFTP Client
+### SFTP Client
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm that Development Mode is set to **SFTP**.
 
@@ -174,7 +174,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 1. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to version control. Write a commit message such as "Import existing codebase" then click **Commit**.
 
-### From the Command Line with Git
+### Git
 
 1. Navigate to your existing site's code directory in a local terminal. If your existing code is _not_ already version controlled with Git, create a repository and add an initial commit:
 
@@ -296,11 +296,17 @@ You can also use the Pantheon Dashboard to add your site's database.
 
 ## Upload Your Files
 
-**Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
+**Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes:
 
-You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
+- Uploaded images
+- Generated stylesheets
+- Aggregated scripts
 
-1. Export a `tar.gz` or `.zip` file of your files directory:
+Files are not under Git version control and are stored separately from the site's code. You must create and archive of your files and export it before you can upload it.
+
+### Export Your Files
+
+Export a `tar.gz` or `.zip` file of your files directory:
 
   <TabList>
 
@@ -328,7 +334,13 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   </TabList>
 
-1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+## Upload Your Files
+
+You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
+
+### Pantheon Dashboard
+
+1. Navigate to the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
 1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
 1. Click **Import** and add your archive accordingly (based on file size):
 
@@ -360,26 +372,30 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a helper when doing these operations, as the number of command line arguments and specifics of directory structure make it easy for human error to impact your operation.
 
-  To sync your current directory to Pantheon:
+  1. Sync your current directory to Pantheon:
 
-  ```bash{promptUser: user}
-  terminus rsync . my_site.dev:files
-  ```
+    ```bash{promptUser: user}
+    terminus rsync . my_site.dev:files
+    ```
 
-  When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
+  1. Refer to the [Transfer Files with rsync](/guides/sftp/rsync-and-sftp#transfer-files-with-rsync) for instructions.
 
-   
+  **Using rsync manually:**
+
+  The script below can help you avoid transfer interruptions due to connectivity issues. The script uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, the script waits 180 seconds and picks up where it left off:
+
+
   ```bash:title=migrate-rsync.sh
   #!/bin/bash
   # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
   SITE_UUID=xxxxxxx
-  
+
   ENV='dev'
   # The sshpass command is required.
   if ! [ -x "$(command -v sshpass)" ]; then
 	echo 'Error: The sshpass command was not found.' >&2
 	exit 1
-  fi 
+  fi
 
   read -sp "Your Pantheon Password: " PASSWORD
   if [[ -z "$PASSWORD" ]]; then
@@ -404,6 +420,15 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   </TabList>
 
+### SFTP
+
+Follow the [SFTP instructions](/guides/sftp/rsync-and-sftp#sftp) in the [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp) documentation.
+
+### rsync
+
+Follow the [Transfer Files with rsync](/guides/sftp/rsync-and-sftp#transfer-files-with-rsync) instructions in the [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp) documentation.
+
+## Final Migration Steps
 
 You should now have all three of the major components of your site imported into Pantheon.
 
