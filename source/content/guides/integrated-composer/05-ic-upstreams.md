@@ -72,6 +72,8 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 1. Commit and push your changes.
 
+<Partial file="build-deploy-terminology.md" />
+
 ## More Resources
 
 - [Custom Upstreams](/guides/custom-upstream)
