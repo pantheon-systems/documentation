@@ -4,7 +4,7 @@ description: Get your feet wet with Composer on WordPress or Drupal  before goin
 contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
 contenttype: [doc]
 innav: [true]
-categories: [dependencies]]
+categories: [dependencies]
 cms: [--]
 audience: [--]
 product: [--]
