@@ -256,7 +256,7 @@ Other plugins and modules provide SSO provider services with less configuration.
 
 <Alert title="Warning" type="danger" >
 
-Note that Pantheon does not officially endorse or provide support for any third-party plugins or modules.
+Pantheon does not officially endorse or provide support for any third-party plugins or modules.
 
 </Alert>
 
