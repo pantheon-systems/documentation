@@ -31,7 +31,13 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 1. Clone the Git repository for your upstream.
 
-1. Run the `composer upstream-require` command for each dependency:
+1. Require the upstream management package if you have not already:
+
+```
+composer require pantheon-systems/upstream-management
+```
+
+1. Run the `composer upstream:require` command for each dependency:
 
     ```bash{promptUser: user}
     composer upstream-require drupal/pkg-name [--no-update]
@@ -41,7 +47,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 ### How to Update Dependencies in Your Upstream
 
-You may have the need to pin specific versions of your dependencies in your upstream. This is normally done with the composer.lock file but including this file in the root of the upstream will cause merge conflicts with your downstream sites. To solve this problem, you could use the `update-upstream-dependencies` composer command.
+You may have the need to pin specific versions of your dependencies in your upstream. This is normally done with the composer.lock file but including this file in the root of the upstream will cause merge conflicts with your downstream sites. To solve this problem, you could use the `upstream:update-dependencies` composer command.
 
 This command will:
 
