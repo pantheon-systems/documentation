@@ -51,6 +51,7 @@ Each database server is in the cloud, which allows credentials to occasionally b
 
 There's a wide array of MySQL clients that you can use, including:
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+- [TablePlus](https://tableplus.com/)
 - [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/)
 - [Navicat](https://www.navicat.com/download)
 - [PHPMyAdmin](https://www.phpmyadmin.net/)
