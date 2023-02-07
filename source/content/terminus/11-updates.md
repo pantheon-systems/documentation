@@ -1,6 +1,6 @@
 ---
 title: Terminus Guide
-subtitle: Current Terminus Release and Changelog
+subtitle: Current Terminus Release, Changelog, and Updates
 description: Stay up to date on the latest Terminus version.
 terminuspage: true
 type: terminuspage
@@ -21,13 +21,17 @@ integration: [--]
 
 ## Update Standalone Terminus
 
-You can update the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation to the newest version with the command below:
+You can update the [standalone Terminus PHAR](/terminus/install#standalone-terminus-phar) installation to the newest version with the command below.
+
+<Alert title="Warning" type="danger" >
+
+the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/terminus/commands/self-update) for available options.
+
+</Alert>
 
 ```bash{promptUser: user}
 terminus self:update
 ```
-
-Note that the `self:update` command is only available for the standalone Terminus installation. Refer to the [command documentation](/terminus/commands/self-update) for available options.
 
 ## Update Terminus Installer PHAR
 
@@ -54,6 +58,10 @@ brew upgrade pantheon-systems/external/terminus
 Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test compatibility with existing configurations before upgrading to new major releases.
 
 </Alert>
+
+## Update Terminus with Plugin
+
+Use the [`self:plugin:update` command](/terminus/commands/self-plugin-update) if you use the Terminus plugin manager.
 
 ## Troubleshooting
 
