@@ -294,7 +294,7 @@ You can also use the Pantheon Dashboard to add your site's database.
 
 <Partial file="drupal/migrate-add-database-part2.md" />
 
-## Upload Your Files
+## Migrate Your Files
 
 **Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes:
 
@@ -334,97 +334,22 @@ Export a `tar.gz` or `.zip` file of your files directory:
 
   </TabList>
 
-## Upload Your Files
+### Upload Your Files
 
 You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
-### Pantheon Dashboard
+#### Pantheon Dashboard
 
-1. Navigate to the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
-1. Click **Import** and add your archive accordingly (based on file size):
+1. Navigate to the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
 
-  <TabList>
-
-  <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
-
-  If your archive is under 100MB, you can upload the file directly:
-
-   1. In the **Archive of site files** field, click **File**, then **Choose File**.
-
-   1. Select your local archive file, then press **Import**.
-
-  </Tab>
-
-  <Tab title="Up to 500MBs" id="500mbsfiles">
-
-  If your archive is less than 500MB, you can import it from URL:
-
-   1. In the **Archive of site files** field, click **URL**.
-
-   1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
-
-  </Tab>
-
-  <Tab title="Over 500MBs" id="500mbsplusfiles">
-
-  Rsync is an excellent method for transferring a large number of files. After performing an initial rsync, subsequent jobs will only transfer the latest changes. This can help minimize the amount of time a site is in an unpredictable state (or offline) during the final step of migration, as it allows you to bring over only new content rather than re-copying every single file.
-
-  We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a helper when doing these operations, as the number of command line arguments and specifics of directory structure make it easy for human error to impact your operation.
-
-  1. Sync your current directory to Pantheon:
-
-    ```bash{promptUser: user}
-    terminus rsync . my_site.dev:files
-    ```
-
-  1. Refer to the [Transfer Files with rsync](/guides/sftp/rsync-and-sftp#transfer-files-with-rsync) for instructions.
-
-  **Using rsync manually:**
-
-  The script below can help you avoid transfer interruptions due to connectivity issues. The script uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, the script waits 180 seconds and picks up where it left off:
+<Partial file="drupal/migrate-add-files-part3.md" />
 
 
-  ```bash:title=migrate-rsync.sh
-  #!/bin/bash
-  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
-  SITE_UUID=xxxxxxx
-
-  ENV='dev'
-  # The sshpass command is required.
-  if ! [ -x "$(command -v sshpass)" ]; then
-	echo 'Error: The sshpass command was not found.' >&2
-	exit 1
-  fi
-
-  read -sp "Your Pantheon Password: " PASSWORD
-  if [[ -z "$PASSWORD" ]]; then
-  echo "Whoops, need password"
-  exit
-  fi
-
-  while [ 1 ]
-  do
-  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/
-  if [ "$?" = "0" ] ; then
-  echo "rsync completed normally"
-  exit
-  else
-  echo "Rsync failure. Backing off and retrying..."
-  sleep 180
-  fi
-  done
-  ```
-
-  </Tab>
-
-  </TabList>
-
-### SFTP
+#### SFTP
 
 Follow the [SFTP instructions](/guides/sftp/rsync-and-sftp#sftp) in the [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp) documentation.
 
-### rsync
+#### rsync
 
 Follow the [Transfer Files with rsync](/guides/sftp/rsync-and-sftp#transfer-files-with-rsync) instructions in the [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp) documentation.
 
