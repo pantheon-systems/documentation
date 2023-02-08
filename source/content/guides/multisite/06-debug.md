@@ -26,7 +26,7 @@ This section provides information on common WordPress Multisite troubleshooting 
 
 ### Manage Multisites
 
-The `wp site *` class of WP-CLI commands ([full documentation](https://developer.wordpress.org/cli/commands/site/)) for managing the sites installed on your multisite. Here are some helpful ones:
+The `wp site *` class of WP-CLI commands ([full documentation](https://developer.wordpress.org/cli/commands/site/)) for managing the sites on your multisite installation. Here are some helpful ones:
 
 - `wp site create` - Create a new site on the multisite.
 - `wp site list` - See all available sites on the multisite.
