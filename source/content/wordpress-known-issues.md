@@ -48,7 +48,7 @@ For more information, refer to the [PHP Versions](/guides/php/php-versions) docu
 
 ## WordPress Multisite
 
-Pantheon supports designated use cases for [WordPress Multisite](/guides/multisite) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Multisite](/guides/multisite).
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
