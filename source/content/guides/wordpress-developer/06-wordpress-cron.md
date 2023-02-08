@@ -63,9 +63,9 @@ Pantheon Cron will not execute jobs on inactive environments, including [sleepin
 
 </Alert>
 
-### WordPress Multisites
+### WordPress Multisite
 
-Pantheon Cron does not support WordPress Multisite installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Use WP-Cron if you have WordPress Multisite installations.
+Pantheon Cron does not support WordPress Multisite installations, also known as WordPress Site Networks, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Use WP-Cron if you have WordPress Multisite installations.
 
 ### Security
 
