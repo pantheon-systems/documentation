@@ -475,7 +475,7 @@ An array of values for each CMS and version to which the content applies
 
 ## Markdown Standards
 
-All documentation uses MarkDown to render headings and typographic elements like bold and italic. Note that a newline is required between HTML elements and content, so the MarkDown renderer knows to format the content.
+All documentation uses Markdown to render headings and typographic elements like bold and italic. Note that a newline is required between HTML elements and content, so the Markdown renderer knows to format the content.
 
 ### Headings
 
@@ -505,6 +505,12 @@ title: Page Title
 ```
 
 </Example>
+
+### Bold
+
+Bold is used for navigational elements within a given interface:
+
+<Example>
 
 Go to **Account** > **Security** > **Personal Access Tokens**.
 
@@ -544,33 +550,6 @@ Definitions and Definition Lists are automatically added to the [Glossary](/glos
 A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
 New terms should only be defined once throughout the doc, and then cross-referenced.
 Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
-```
-
-</Example>
-
-
-<hr className="source-code" /> <br/>
-
-```html
-<dl>
-
-<dt>Term</dt>
-
-<dd>
-
-Definition.
-
-</dd>
-
-<dt>Another Term</dt>
-
-<dd>
-
-Description of the new term.
-
-</dd>
-
-</dl>
 ```
 
 </Example>
@@ -647,7 +626,7 @@ This is the optimal place to provide links to external resources on the subject,
 
 </Example>
 
-## Panels/Accordioms
+## Panels/Accordions
 
 Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
