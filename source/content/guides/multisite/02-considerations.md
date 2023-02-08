@@ -37,7 +37,7 @@ The choice between running classic single-site WordPress or a WordPress Multisit
 ## Choose Between Subdirectories and Subdomains
 You must choose between using subdirectories or subdomains when configuring a WordPress Multisite. 
 
-Given two new sites with slugs <Popover title="Slugs" content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisites, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs <Popover title="Slugs" content="Generally, <a class='external' href='https://wordpress.org/documentation/article/wordpress-glossary/#slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisites, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.
