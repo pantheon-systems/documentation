@@ -60,7 +60,7 @@ The following tools are specifically for WordPress.
 In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). For details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions).
 
 ### WordPress Multisite
-Running a WordPress Site Network requires a special configuration that is only available to contract customers. These sites can only be created by Pantheon employees. For details, see [WordPress Site Networks](/guides/multisite).
+Running a WordPress Multisite requires a special configuration that is only available to contract customers. These sites can only be created by Pantheon employees. For details, see [WordPress Multisite](/guides/multisite).
 
 ### Migration
 The guided migration process for WordPress is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate Sites to Pantheon](/guides/guided/).

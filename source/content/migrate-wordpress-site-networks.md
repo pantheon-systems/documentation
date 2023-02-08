@@ -1,7 +1,7 @@
 ---
-title: 'Migrate to Pantheon: WordPress Site Networks'
-description: Learn how to import a WordPress Site Network into Pantheon.
-tags: [migrate, site-networks]
+title: 'Migrate to Pantheon: WordPress Multisite'
+description: Learn how to import a WordPress Multisite into Pantheon.
+tags: [migrate, site-networks, multisite]
 contenttype: [doc]
 innav: [true]
 categories: [migrate]
@@ -13,7 +13,7 @@ integration: [--]
 
 <Alert title="Note" type="info">
 
-Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/guides/multisite) for you.
+Before you can migrate a WordPress Multisite, you must be a contract customer, and a Pantheon employee must create a [WordPress Multisite](/guides/multisite) for you.
 
 </Alert>
 
@@ -113,7 +113,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
 
 **Files** - Any content uploaded through the WordPress Dashboard. These files should be exclusively stored within `wp-content/uploads`, which is a symlink to the `~/files` directory.
 
-This directory is a shared filesystem and is stored separately from the site's codebase. If your WordPress Site Network stores uploads in another directory, you must reconcile the archive as part of the import process. For information on highly populated directories, refer to [Highly Populated Files and Directories](/guides/filesystem/large-files).
+This directory is a shared filesystem and is stored separately from the site's codebase. If your WordPress Multisite stores uploads in another directory, you must reconcile the archive as part of the import process. For information on highly populated directories, refer to [Highly Populated Files and Directories](/guides/filesystem/large-files).
 
 File archives can be imported via the Site Dashboard on **Workflow** > **Import**; however, the archive must be within the size limits for the upload method in use (100MB for file uploads, 500MB for URL uploads).
 

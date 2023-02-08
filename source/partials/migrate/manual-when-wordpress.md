@@ -10,7 +10,7 @@ reviewed: ""
 
 ### WordPress-Specific Scenarios
 
-- You are using [WordPress Site Networks](/migrate-wordpress-site-networks).
+- You are using [WordPress Multisite](/migrate-wordpress-site-networks).
 
 - Plugin install is unavailable.
 

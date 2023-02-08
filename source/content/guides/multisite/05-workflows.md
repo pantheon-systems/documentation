@@ -1,7 +1,7 @@
 ---
-title: WordPress Site Networks
+title: WordPress Multisite
 subtitle: Workflows
-description: Learn more about WordPress Site Networks workflows.
+description: Learn more about WordPress Multisite workflows.
 anchorid: media
 layout: guide
 type: guide
@@ -22,7 +22,7 @@ image: multisite
 This section provides information on important Multisite fundamentals.
 
 ## Create Test and Live Environments from Dev
-After you've configured a WordPress Site Network in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
+After you've configured a WordPress Multisite in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
 1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
 2. Click **Create Test Environment**.
@@ -147,12 +147,12 @@ In this example:
 2. `wp_blogs` and `wp_site` are appended to the list of tables we want to transform.
 3. `wp search-replace` is limited to the table list specified, instead of the full database.
 
-If the WordPress Site Network works as expected after you run `wp search-replace`, then you're good to go. If it doesn't quite work as expected, there may be some plugins storing URL data in other locations that you'll need to debug and further assess.
+If the WordPress Multisite works as expected after you run `wp search-replace`, then you're good to go. If it doesn't quite work as expected, there may be some plugins storing URL data in other locations that you'll need to debug and further assess.
 
 Ultimately, the key idea is to only perform a search and replace where you absolutely need it, instead of globally against the entire database.
 
 ## Go for Launch
-In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Site Network on Pantheon. Check out the [Launch Essentials Guide](/guides/launch) when you're ready to push your site live — launching a WordPress Site Network isn't much different than launching a standard WordPress site.
+In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Multisite on Pantheon. Check out the [Launch Essentials Guide](/guides/launch) when you're ready to push your site live — launching a WordPress Multisite isn't much different than launching a standard WordPress site.
 
 Continue to the next page for some tips on how to manage networks and debug common issues.
 

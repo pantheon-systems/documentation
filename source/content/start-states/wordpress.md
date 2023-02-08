@@ -75,9 +75,9 @@ Pantheon will automatically resolve these conflicts when you click the `Apply Up
 
 ### 2022-04-26
 
-#### <a name="20220426-3" class="release-update"></a>Re-enable WP-Cron for site networks
+#### <a name="20220426-3" class="release-update"></a>Re-enable WP-Cron for Multisites
 
-Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. This change reenabled WP-Cron for WordPress Site Networks. You can read more about WP-Cron for WordPress Site Networks [here](/guides/wordpress-developer/wordpress-cron#wordpress-site-networks).
+Pantheon Cron does not support WordPress Multisite installations, also known as WordPress Site Networks, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. This change reenabled WP-Cron for WordPress Multisite. You can read more about WP-Cron for WordPress Multisite [here](/guides/wordpress-developer/wordpress-cron#wordpress-site-networks).
 
 #### <a name="20220426-2" class="release-update"></a>Add documentation to readme outlining branches
 

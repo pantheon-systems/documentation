@@ -929,7 +929,7 @@ Tooltips are a great way to add additional information without cluttering up a s
 
 <Example>
 
-Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.
@@ -937,7 +937,7 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs 
 <hr className="source-code" /> <br/>
 
 ```markdown
-Given two new sites with slugs <Popover title="Slugs" content="Generally, are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs <Popover title="Slugs" content="Generally, are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.

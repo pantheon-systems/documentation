@@ -46,9 +46,9 @@ WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issue
 
 For more information, refer to the [PHP Versions](/guides/php/php-versions) documentation. 
 
-## Site Networks / Multisite
+## WordPress Multisite
 
-Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Multisite](/guides/multisite) created by WordPress' Multisite feature.
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
