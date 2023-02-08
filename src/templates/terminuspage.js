@@ -60,7 +60,7 @@ const items = [
   {
     id: "docs-terminus-install",
     link: "/terminus/install",
-    title: "Install Terminus",
+    title: "Install and Update Terminus",
   },
   {
     id: "docs-terminus-examples",
