@@ -10,8 +10,8 @@ reviewed: ""
 
 ### WordPress-Specific Scenarios
 
-- You are using [WordPress Multisite](/migrate-wordpress-site-networks).
+- You are using [WordPress Multisite](/migrate-wordpress-multisite).
 
 - Plugin install is unavailable.
 
-- You are migrating a site that is only on your local machine and not yet live. 
+- You are migrating a site that is only on your local machine and not yet live.

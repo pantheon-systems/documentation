@@ -1,7 +1,7 @@
 ---
 title: 'Migrate to Pantheon: WordPress Multisite'
 description: Learn how to import a WordPress Multisite into Pantheon.
-tags: [migrate, site-networks, multisite]
+tags: [migrate, multisite]
 contenttype: [doc]
 innav: [true]
 categories: [migrate]
