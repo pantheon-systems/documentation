@@ -66,7 +66,7 @@ While Localdev uses parts of Lando under the hood, they should be considered sep
 
 ### Can WordPress Multisites be developed through Localdev?
 
-At this time, WordPress Multisite is supported only for networks using subdirectories, not subdomains. See the [Choose Between Subdirectories and Subdomains](/guides/multisite/considerations/#choose-between-subdirectories-and-subdomains) section of our [WordPress Multisite](/guides/multisite) guide for more information.
+See the [Choose Between Subdirectories and Subdomains](/guides/multisite/considerations/#choose-between-subdirectories-and-subdomains) section of our [WordPress Multisite](/guides/multisite) guide for more information.
 
 ### How do you configure PHP versions for sites in the Localdev environment?
 
