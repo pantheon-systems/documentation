@@ -3,7 +3,7 @@ Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentati
 
 ## Status Update: 2023 - January/February
 
-Pantheon's Docs team has suspended publishing all updates to <pantheon.io/docs> following the [4 January CircleCI incident](https://circleci.com/blog/january-4-2023-security-alert/).
+Pantheon's Docs team has suspended publishing all updates to [pantheon.io/docs](https://pantheon.io/docs) following the [4 January CircleCI incident](https://circleci.com/blog/january-4-2023-security-alert/).
 
 We took the incident as an opportunity to revoke and rotate tokens and auths in a variety of places. Doing so showed us that the way that we were publishing changes to the site wasn't ideal and that the docs site is a perfect candidate for Pantheon's [Front-End Sites offering](https://pantheon.io/docs/guides/decoupled-sites/), currently in Early Access.
 
