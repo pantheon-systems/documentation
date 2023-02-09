@@ -151,6 +151,12 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
 If you're using Cloudflare's IP Geolocation feature, you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses.
 
+## Cache Invalidation Best Practices
+
+Cloudflare allows you to turn on caching. However, no cache invalidation hook is fired when you make content changes if you have Cloudflare caching turned on. This means that Cloudflare will be unaware of your changes and persist with stale cache.
+
+We suggest that you turn Cloudflare caching off until the `pantheon_advanced_page_cache` module/plugin is extended to send API calls to Cloudflare.
+
 ## Next Steps
 
 - [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
