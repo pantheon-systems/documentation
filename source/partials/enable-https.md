@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [authentication]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [--]
 tags: [--]

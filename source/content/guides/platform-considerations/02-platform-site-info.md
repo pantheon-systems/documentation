@@ -3,8 +3,9 @@ title: Platform Considerations
 subtitle: Platform and Site Information
 description: Learn about platform and site-specific configuration and support.
 contenttype: [guide]
+innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -14,6 +15,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/platform-site-info
 anchorid: platform-site-info
+reviewed: "2022-12-13"
 ---
 
 This section provides information on Pantheon platform support for domain masking, htaccess, and many other configuration and site support considerations.
@@ -52,7 +54,7 @@ You must add the correct header to enable CORS services on your site. Review [ht
 
 WordPress users can enable CORS for selected domains in a [MU plugin](/guides/wordpress-configurations/mu-plugin#cross-origin-resource-sharing-cors). You can also use an Advanced Global CDN to [modify headers at the Edge](/guides/professional-services/advanced-global-cdn#modify-and-filter-headers-at-the-edge).
 
-Drupal 9 users can update `sites/default/services.yml` to enable CORS.
+Drupal users can update `sites/default/services.yml` to enable CORS.
 
 Sample `services.yml` file:
 

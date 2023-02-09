@@ -3,8 +3,9 @@ title: Object Cache (formerly Redis)
 subtitle: Enable Object Cache
 description: Learn how to enable Object Cache on your site.
 contenttype: [guide]
+innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -13,6 +14,7 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 permalink: docs/guides/object-cache/enable-object-cache
 anchorid: enable-object-cache
+reviewed: "2022-12-13"
 ---
 
 This section provides information on how to enable Object Cache.

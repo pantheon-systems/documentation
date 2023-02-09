@@ -3,18 +3,19 @@ title: Pantheon Professional Services
 subtitle: Managed Updates
 description: Managed Updates offerings and requirements for Drupal compatibility
 contenttype: [guide]
+innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]
 tags: [composer, professional-services, updates, workflow]
-reviewed: "2021-04-01"
 layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/managed-updates
 anchorid: managed-updates
 editpath: professional-services/06-managed-updates.md
+reviewed: "2022-12-13"
 ---
 
 [Managed Updates](https://pantheon.io/professional-services/managed-updates?docs) is a service offered by our [Professional Services](/guides/professional-services) team. We help keep your site updated so you can focus on what's important. Learn more about Managed Updates in the [Managing Updates for WordPress and Drupal webinar](https://pantheon.io/resources/managed-updates-webinar?docs)
@@ -29,11 +30,11 @@ To make Managed Updates available to customers of all sizes and needs, Pantheon 
 
 ### Premium
 
-Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled. Sites using Pantheon's Integrated Composer for Drupal 9 are also supported.
+Managed Updates Premium is for standalone sites and includes support for custom workflows, testing, and CI/build processes. Premium also offers personalized update issue remediation, and email notifications when updates are scheduled. Sites using Pantheon's Integrated Composer for Drupal are also supported.
 
 ### Lite
 
-Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal 7 sites that use the standard [Pantheon WebOps workflow](/pantheon-workflow), or Drupal 9 sites using a Composer-build workflow without continuous integration processes.
+Managed Updates Lite is for standard sites on Pantheon, and offers basic CMS and plugin updates (with visual regression testing) on a customizable schedule. It's for WordPress or Drupal sites that use the standard [Pantheon WebOps workflow](/pantheon-workflow), or Drupal sites using a Composer-build workflow without continuous integration processes.
 
 ### Portfolio Upstreams
 

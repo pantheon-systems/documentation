@@ -1,17 +1,17 @@
 ---
 title: Pantheon WordPress Upstream
 description: Release notes and customizations to the Pantheon WordPress Upstream
-cms: "wordpress"
 tags: [code, site, upstreams]
 showtoc: true
 permalink: docs/start-states/wordpress
 editpath: start-states/wordpress.md/
 reviewed: "2022-06-01"
 contenttype: [doc]
-categories: [overview]
-newcms: [wordpress]
+innav: [true]
+categories: [custom-upstreams]
+cms: [wordpress]
 audience: [agency, business, development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
 ---
 

@@ -4,8 +4,9 @@ description: Measure your site's traffic with the Metrics tool, found in the Liv
 tags: [billing, dashboard, measure, traffic]
 reviewed: "2020-06-22"
 contenttype: [doc]
-categories: [measure]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [traffic]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

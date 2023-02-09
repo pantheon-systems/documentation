@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [optimize]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [pingdom, newrelic]
 tags: [--]

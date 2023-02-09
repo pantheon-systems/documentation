@@ -3,8 +3,9 @@ title: Optimize Your Site for Accessibility
 subtitle: Resources
 description: Tools and techniques to improve your website's accessibility
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [create]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]

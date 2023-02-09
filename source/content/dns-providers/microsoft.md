@@ -3,13 +3,14 @@ title: Microsoft Domain Configuration
 provider: Microsoft
 dnsprovider: true
 description: Learn how to point your Microsoft domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 draft: true
 permalink: docs/:basename
 editpath: dns-providers/microsoft.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

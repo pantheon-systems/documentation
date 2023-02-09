@@ -3,8 +3,9 @@ title: Your Site Code on Pantheon
 description: Learn how to work with your site's code on the Pantheon Dashboard.
 tags: [code, dashboard, files, git]
 contenttype: [doc]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [workflows]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -14,6 +15,19 @@ The Code tool within the Pantheon Dashboard on any environment allows you to int
 ## Pantheon Git Repository
 
 Your site's code repository includes your entire codebase, including core Drupal or WordPress, and any contributed modules, plugins, themes, installation profiles, libraries, etc. It does not include the `files/` directory (e.g. `sites/default/files` or `wp-content/uploads`) and should not contain any other static assets that you do not want tracked in version control.
+
+### Pantheon Core Files
+
+Pantheon adds core files to your code by default:
+
+- `pantheon.yml`
+    - Refer to [Pantheon YAML Configuration Files](https://pantheon.io/docs/pantheon-yml) for more information.
+
+- `composer.lock`
+    - Pantheon runs composer install when a site is created. This generates a `composer.lock` file, and commits it back to the site’s code repository. This writes all packages and their exact versions to the `composer.lock` file, locking the project to those specific versions. Anyone who sets up the project must use the exact dependency versions you locked in the file.
+
+- `.gitignore`
+    - Pantheon provides default `.gitignore` files in the base of each site's code repository. This file includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
 ### Drupal Code Structure
 
@@ -76,6 +90,10 @@ The `wp-content/uploads` directory is represented in your code repository as a s
 
 </Alert>
 
+### Upstream Code and Site Structure
+
+<Partial file="ic-upstream-structure.md" />
+
 ## Managing Permissions
 
 Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
@@ -121,10 +139,6 @@ The Test and Live environments do not have write access to code outside of the d
 ## Develop
 
 Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/guides/environment-configuration/read-environment-config). Then, dive in to [developing directly with SFTP mode](/guides/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
-
-### .gitignore
-
-Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
 ## Optimize Performance
 

@@ -10,8 +10,9 @@ showtoc: true
 anchorid: autopilot-deactivate
 permalink: docs/guides/autopilot/autopilot-deactivate
 contenttype: [guide]
-categories: [automate]
-newcms: [--]
+innav: [true]
+categories: [automate, test, update, faq]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

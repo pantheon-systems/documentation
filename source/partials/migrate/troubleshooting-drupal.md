@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 product: [--]
 integration: [--]
 tags: [--]
@@ -30,7 +30,7 @@ reviewed: ""
 
 **Cause:** The migration tool could not find the core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
 
-**Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive. Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:
+**Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive. Archives for Drupal sites should include `index.php` at the code root level, along with the following directories:
 
 ```none
 ├── includes

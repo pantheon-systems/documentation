@@ -11,8 +11,9 @@ anchorid: manage
 editpath: docs/guides/account-mgmt/plans/09-manage.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
@@ -52,7 +53,7 @@ To remove these addons:
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-id">
+<Tab title="Drupal" id="d7-id">
 
 #### Object Cache
 

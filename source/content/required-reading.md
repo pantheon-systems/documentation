@@ -3,8 +3,9 @@ title: 'Required Reading: Essential Pantheon Documentation'
 description: Recommended documentation to learn about Pantheon WebOps management platform's technologies.
 tags: [workflow]
 contenttype: [doc]
+innav: [true]
 categories: [overview]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]

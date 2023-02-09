@@ -2,18 +2,20 @@
 title: Autopilot for Custom Upstreams
 subtitle: Introduction
 description: Learn more using Autopilot with your Custom Upstream.
-tags: [autopilot, upstreams]
+tags: [autopilot, upstreams, D8, D9, D10]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream
 anchorid: autopilot-custom-upstream
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 Combining [Autopilot](/guides/autopilot) with [Custom Upstreams](/guides/custom-upstream) is an excellent way to reduce time spent on maintaining multiple sites. Pantheon allows eligible customers (see [Get Autopilot](#get-autopilot) and [Autopilot Site Compatibility](#autopilot-site-compatibility) for details) to use Autopilot and Custom Upstreams to automate routine maintenance for upstream and downstream sites.
@@ -45,21 +47,17 @@ Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sale
 
 ### Autopilot Site Compatibility
 
-Your site must be on Pantheon and meet the criteria below to be eligible for Autopilot. 
+<Partial file="autopilot/autopilot-compatibility.md" />
 
-| Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (with Integrated Composer or Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without WordPress Multisite Network = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
+## Custom Upstream
 
+<Alert title="Note: Drupal Compatibility"  type="info" >
 
-<Alert title="Note: Drupal 9 Compatibility"  type="info" >
-
-Drupal 9 users should note that there are technical limitations when using Autopilot with Custom Upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-custom-upstream/autopilot-custom-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
+Drupal users should note that there are technical limitations when using Autopilot with Custom Upstream. Review [Autopilot Enabled on Downstream Sites Only](/guides/autopilot-custom-upstream/autopilot-custom-upstream-config#autopilot-enabled-on-downstream-sites-only) for more details.
 
 </Alert>
 
-## Custom Upstream
+
 
 Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects quickly.
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.

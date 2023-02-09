@@ -3,8 +3,9 @@ title: Secure Development on Pantheon
 subtitle: Introduction
 description: Learn how to develop securely on Pantheon.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [security]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

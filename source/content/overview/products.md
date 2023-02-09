@@ -5,8 +5,9 @@ tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/products
 contenttype: [guide]
+innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
@@ -24,7 +25,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Drupal Hosting"} link={"/docs/drupal-9"}>
+  <Product title={"Drupal Hosting"} link={"/docs/drupal"}>
 
   One-click core updates, no server management, and the highest performance possible for the latest versions of Drupal.
 

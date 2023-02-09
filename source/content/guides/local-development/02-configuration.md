@@ -3,8 +3,9 @@ title: Local Development on Pantheon
 subtitle: Local Development Configuration
 description: Configure your machine for local development with Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []

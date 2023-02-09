@@ -4,8 +4,9 @@ description: Learn how mission-critical websites can stay online in the event of
 tags: [backup, professional-services, site, webops]
 reviewed: "2020-02-26"
 contenttype: [doc]
+innav: [true]
 categories: [overview]
-newcms: [drupal, drupal7, wordpress]
+cms: [drupal7, wordpress]
 audience: [agency, development]
 product: [search]
 integration: [--]
@@ -83,7 +84,7 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 <TabList>
 
-<Tab title="Drupal 7" id="solr-d7" active={true}>
+<Tab title="Drupal" id="solr-d7" active={true}>
 
 #### ApacheSolr module
 

@@ -2,7 +2,7 @@
 title: "Plans"
 subtitle: FAQ
 description: Commonly asked questions about plans.
-tags: [plans]
+tags: [plans, faq]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
@@ -11,8 +11,9 @@ anchorid: faq
 editpath: docs/guides/account-mgmt/plans/11-faq.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

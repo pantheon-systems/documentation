@@ -3,8 +3,9 @@ title: Single Sign-On for Pantheon Organizations
 description: Detailed information to enable SAML single sign-on for your organization.
 tags: [security, organizations]
 contenttype: [doc]
-categories: [user-authentication, config]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [security, config]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [saml, sso, azure]

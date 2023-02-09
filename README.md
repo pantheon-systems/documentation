@@ -1,7 +1,15 @@
 Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
 [![Actively Maintained](https://img.shields.io/badge/Pantheon-Actively_Maintained-yellow?logo=pantheon&color=FFDC28)](https://pantheon.io/docs/oss-support-levels#actively-maintained-support)
 
+## Status Update: 2023 - January/February
 
+Pantheon's Docs team has suspended publishing all updates to [pantheon.io/docs](https://pantheon.io/docs) following the [4 January CircleCI incident](https://circleci.com/blog/january-4-2023-security-alert/).
+
+We took the incident as an opportunity to revoke and rotate tokens and auths in a variety of places. Doing so showed us that the way that we were publishing changes to the site wasn't ideal and that the docs site is a perfect candidate for Pantheon's [Front-End Sites offering](https://pantheon.io/docs/guides/decoupled-sites/), currently in Early Access.
+
+We're looking forward to re-deploying on the Front-End architecture sometime in mid-February. Until then, changes that have been merged to `main` [since 4 January](https://github.com/pantheon-systems/documentation/pulls?q=is%3Apull+is%3Amerged+updated%3A%3E2023-01-04+sort%3Aupdated-desc+) are available in the [GitHub repository code](https://github.com/pantheon-systems/documentation) and can be built locally using the [steps below](#local-installation).
+
+We'll remove this notice and update the [Changelog below](#changelog) after we've migrated the site.
 
 Pantheon Documentation
 ======================
@@ -12,7 +20,7 @@ This repository contains the [Pantheon](https://pantheon.io) documentation as we
 
 ## Changelog
 
- - 8/5/19: We've relaunched the project using [Gatsby](https://www.gatsbyjs.org) for faster development, and _much_ faster page speed.
+ - 2019/08/05: We've relaunched the project using [Gatsby](https://www.gatsbyjs.org) for faster development, and _much_ faster page speed.
 
 ### Contributing
 Our docs are written in [Markdown](https://daringfireball.net/projects/markdown/), extended with [MDX](https://github.com/mdx-js/mdx) components. The pages live in `source/content`. Read [CONTRIBUTING](<CONTRIBUTING.md>) for more details on contributing documentation improvements.

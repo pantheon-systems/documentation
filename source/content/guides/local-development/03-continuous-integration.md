@@ -6,8 +6,9 @@ tags: [continuous-integration, workflow]
 contributors: [ccjjmartin]
 newtype: guide
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []
@@ -37,7 +38,7 @@ Refer to our [Build Tools](/guides/build-tools) guide for more information on th
 
 [SimpleTest](https://drupal.org/project/simpletest) is a testing framework based on the [SimpleTest PHP library](https://github.com/simpletest/simpletest) that is included with Drupal core. You should consider including SimpleTests of your module functionality if you are creating a custom web application.
 
-[SiteTest](https://www.drupal.org/project/site_test) is a contrib module for Drupal 7 that runs tests directly against your sites code instead of a base Drupal clone of your site. This module is recommended for use on SimpleTest on Pantheon.
+[SiteTest](https://www.drupal.org/project/site_test) is a contrib module for Drupal that runs tests directly against your sites code instead of a base Drupal clone of your site. This module is recommended for use on SimpleTest on Pantheon.
 
 <Alert title="Note" type="info">
 

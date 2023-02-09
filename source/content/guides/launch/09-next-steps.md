@@ -8,8 +8,9 @@ tags: [launch, webops]
 permalink: docs/guides/launch/next-steps/
 anchorid: next-steps
 contenttype: [guide]
+innav: [true]
 categories: [overview, test, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [newrelic]
 integration: [--]
@@ -60,4 +61,4 @@ Review our [Secure Development on Pantheon](/guides/secure-development) guide fo
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
-- [Drupal 9 on Pantheon](/drupal-9)
+- [Drupal on Pantheon](/drupal)

@@ -1,29 +1,17 @@
 ---
 title: Essential Developer Training
 subtitle: Command Line Interface
-anchorid: command-line-interface
-edt: true
-layout: guide
-tags: [cli, drush, terminus, wp-cli, workflow]
-type: guide
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
-permalink: docs/guides/edt/terminus-cli/
-nexturl: guides/edt/external-integrations/
-nextpage: External Integrations
-previousurl: guides/edt/multidev/
-previouspage: Multidev
-editpath: edt/05-terminus-cli.md
 contenttype: [guide]
-categories: [help]
-newcms: [--]
+innav: [true]
+categories: [cli]
+cms: [--]
 audience: [development]
 product: [terminus]
 integration: [--]
-image: launchGuide-twitterLarge
+tags: [cli, drush, terminus, wp-cli, workflow]
+permalink: docs/guides/edt/terminus-cli/
+anchorid: command-line-interface
+editpath: edt/05-terminus-cli.md
 ---
 
 In this lesson, we’re going to explore the Pantheon Command Line Interface, Terminus.

@@ -2,23 +2,17 @@
 title: Quick Start
 subtitle: Introduction
 description: The Quick Start guide is designed to get you started on Pantheon.
-layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [launch, sandbox, site, webops, workflow]
-type: guide
-anchorid: quickstart
-generator: pagination
 permalink: docs/guides/quickstart/
-nexturl: guides/quickstart/user-dashboard/
-nextpage: User Dashboard
+anchorid: quickstart
 editpath: quickstart/01-introduction.md
-completiontime: 1 hour
-image: launchGuide-twitterLarge
 ---
 
 Welcome! This guide is designed to get you started on Pantheon.

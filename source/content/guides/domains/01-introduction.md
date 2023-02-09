@@ -10,8 +10,9 @@ showtoc: true
 permalink: docs/guides/domains
 anchorid: domains
 contenttype: [guide]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [sysadmin, development]
 product: [dashboard]
 integration: [--]

@@ -3,8 +3,9 @@ title: Enterprise Billing Center
 subtitle: Site Portfolio Report Overview
 description: Learn more about the information provided in the Site Portfolio Report.
 contenttype: [guide]
+innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [siteportfolio]
 integration: [--]

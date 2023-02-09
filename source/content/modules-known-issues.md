@@ -3,8 +3,9 @@ title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
 tags: [modules]
 contenttype: [doc]
-categories: [plan, help]
-newcms: [drupal]
+innav: [true]
+categories: [issues]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
@@ -240,7 +241,7 @@ ___
 
 ## [LiveReload](https://www.drupal.org/project/livereload)
 
-**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7.
+**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal.
 
 ___
 
@@ -319,7 +320,7 @@ ___
 
 **Solution:** Add more domains to your Google reCAPTCHA configuration. Add `dev-<sitename>.pantheonsite.io` and `test-<sitename>.pantheonsite.io` to the site. This is set in [Google's reCAPTCHA admin panel](https://www.google.com/recaptcha/admin).
 
-**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
+**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
 
 ```php:title=settings.php
 // Deactivate reCAPTCHA not running on the live site.

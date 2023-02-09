@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [config]
-newcms: [wordpress, drupal7]
+cms: [wordpress, drupal7]
 product: [--]
 integration: [--]
 tags: [--]
@@ -57,7 +57,7 @@ WordPress users should also run a [search and replace](/guides/wordpress-develop
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7redirects">
+<Tab title="Drupal" id="d7redirects">
 
 Add the following to the end of your `settings.php` file (replace `www.example.com`):
 

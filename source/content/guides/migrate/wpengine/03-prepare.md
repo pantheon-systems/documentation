@@ -3,8 +3,9 @@ title: Migrate a Site From WP Engine to Pantheon Using Guided Migration
 subtitle: Prepare
 description: Get your site ready for migration.
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

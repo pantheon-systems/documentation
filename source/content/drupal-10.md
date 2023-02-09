@@ -1,12 +1,13 @@
 ---
-title: Drupal 10
+title: Drupal 10 on Pantheon
 description: Your hub for all things Drupal 10.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-10-18"
 contenttype: [doc]
-categories: [create, plan]
-newcms: [drupal10]
+innav: [true]
+categories: [create, cms]
+cms: [drupal10]
 audience: [development]
 product: [composer]
 integration: [--]
@@ -67,6 +68,7 @@ This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) 
    composer require --no-update drupal/core-recommended:^10
    composer update
    git commit -am "Update to Drupal 10"
+   git push origin master
    ```
 
 ## FAQ
@@ -93,5 +95,5 @@ Ask questions in our Slack [#drupal channel](https://pantheon-community.slack.co
 
 ## More Resources
 
-- [Drupal 9](/drupal-9)
+- [Drupal on Pantheon](/drupal)
 - [Using Drupal with Pantheon](/develop-drupal)

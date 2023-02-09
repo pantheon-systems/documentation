@@ -4,8 +4,9 @@ description: Best-practice HTTPS configurations for WordPress and Drupal to fix 
 tags: [https, launch, redirects, security]
 reviewed: "2020-02-12"
 contenttype: [doc]
+innav: [true]
 categories: [launch, domains]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -118,7 +119,7 @@ This will not work for Multisite installations, and can result in data loss on s
 
 <Tab title="Drupal" id="tab-2-id">
 
-  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/guides/drush/drush-commands#add-custom-drush-commands).
+  Drupal sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/guides/drush/drush-commands#add-custom-drush-commands).
 
 </Tab>
 

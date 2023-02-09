@@ -2,17 +2,19 @@
 title: Create a Custom Upstream
 subtitle: Create a Custom Upstream
 description: Connect a remote repository to your Pantheon account and use it as a starting point for new sites.
-tags: [upstreams, workflow, webops]
+tags: [upstreams, workflow, webops, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/create-custom-upstream
 anchorid: create-custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Organization members will be able to create new sites from a set common codebase after an Organization Administrator creates a Custom Upstream. The Custom Upstream must be created within each Organization’s Dashboard if you want to use a specific Custom Upstream for multiple Organizations. 
@@ -178,12 +180,17 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </Tab>
 
-    <Tab title="Drupal 9" id="d91">
+    <Tab title="Drupal (Latest Version)" id="dlatest">
+
+    <Alert title="Note" type="info" >
+    
+    This repository has not yet been released.  This page will be updated with the correct code when it is released.
+
+    </Alert>
 
     ```bash{promptUser: user}
-    git remote add pantheon-drupal-9 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+    git remote add pantheon-drupal https://github.com/pantheon-upstreams/---.git
     ```
-
     </Tab>
 
     <Tab title=" Drupal 7" id="d71">
@@ -211,18 +218,18 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     </Tab>
 
-    <Tab title="Drupal 9" id="d91">
+    <Tab title="Drupal (Latest Version)" id="dlatest">
 
     1. Pull and commit the core files:
 
      ```bash{promptUser: user}
      git checkout -b master
-     git fetch pantheon-drupal-9 main
-     git merge pantheon-drupal-9/main
+     git fetch pantheon-drupal main
+     git merge pantheon-drupal/main
      git push origin master
      ```
 
-      - Drupal 9 on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
+      - The latest version of Drupal on Pantheon includes [Integrated Composer](/guides/integrated-composer) to manage dependencies. This adds a separate `composer.json` file in the `upstream-configuration` directory.
 
     1. Change to the `composer.json` file in the `upstream-configuration` directory  and use `composer require` to add packages to the Upstream > set the `config version` to a number that makes sense for you:
 
@@ -300,7 +307,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 1. Paste your new GitHub access token.
 
-   - **Framework**: Drupal 7, Drupal 9, or WordPress
+   - **Framework**: Drupal 7, Drupal (Latest), or WordPress
 
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
@@ -345,7 +352,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
         1. Paste your new Bitbucket app password. The username field should already be populated based on the repository URL. 
 
-   - **Framework**: Drupal 7, Drupal 9, or WordPress
+   - **Framework**: Drupal 7, Drupal (Latest), or WordPress
    - **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
 1. Click **Create**.
@@ -391,7 +398,7 @@ Common steps needed for most Git Providers are provided below.
 
     - A name for the Custom Upstream
 
-    - The CMS within (WordPress, Drupal 7/9)
+    - The CMS within (WordPress, Drupal)
 
     - The `https` clone URL (ending in `.git`)
 
@@ -405,7 +412,7 @@ Common steps needed for most Git Providers are provided below.
 
 ### Initial Connection Mode
 
-The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 9 defaults to SFTP connection mode.
+The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal. The latest version of Drupal defaults to SFTP connection mode.
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 

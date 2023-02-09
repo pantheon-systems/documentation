@@ -4,8 +4,9 @@ description: Detailed information on how to use SFTP Mode to directly develop yo
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
 contenttype: [doc]
-categories: [sftp, user-authentication, help]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [sftp]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

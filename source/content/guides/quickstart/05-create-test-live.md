@@ -2,20 +2,18 @@
 title: Quick Start
 subtitle: Create Test & Live Environments
 description: In part five of our Quick Start guide, learn how to create your Test and Live environments.
-anchorid: create-test-live
-layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard, iterate, launch, workflow]
-type: guide
 showtoc: true
 permalink: docs/guides/quickstart/create-test-live/
+anchorid: create-test-live
 editpath: quickstart/05-create-test-live.md
-image: launchGuide-twitterLarge
 ---
 
 Now let's create our Test site and our Live site.

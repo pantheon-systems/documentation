@@ -3,8 +3,9 @@ title: WordPress Configurations Guide
 subtitle: Introduction
 description: Learn about available WordPress plugin configurations on the Pantheon platform.
 contenttype: [guide]
+innav: [true]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

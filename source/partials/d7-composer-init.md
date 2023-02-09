@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [config, updates]
-newcms: [drupal7]
+cms: [drupal7]
 product: []
 integration: []
 reviewed: "2022-11-07"

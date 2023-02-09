@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
-categories: [--]
-newcms: [--]
+categories: [dependencies]
+cms: [--]
 product: [terminus]
 integration: [drush]
 tags: [--]

@@ -2,8 +2,9 @@
 title: External Libraries on Pantheon
 description: Learn to incorporate external libraries on the Pantheon Website Management Platform.
 contenttype: [doc]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [overview]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -21,7 +22,7 @@ wkhtmltopdf is located in your application container at `/srv/bin/wkhtmltopdf`. 
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7-example" active={true}>
+<Tab title="Drupal" id="d7-example" active={true}>
 
 Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
 

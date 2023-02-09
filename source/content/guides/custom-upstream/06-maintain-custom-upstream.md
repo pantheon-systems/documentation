@@ -2,17 +2,19 @@
 title: Best Practices for Maintaining Custom Upstreams
 subtitle: Custom Upstream Best Practices
 description: Detailed information on how to maintain Custom Upstreams.
-tags: [git, upstreams, workflow]
+tags: [git, upstreams, workflow, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/maintain-custom-upstream
 anchorid: maintain-custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 This section provides information to help you manage and maintain your Custom Upstream.

@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/4xx-errors
 anchorid: 4xx-errors
 contenttype: [guide]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [issues]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

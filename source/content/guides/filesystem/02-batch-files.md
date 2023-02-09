@@ -6,8 +6,9 @@ contenttype: [guide]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [files]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

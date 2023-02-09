@@ -5,8 +5,9 @@ description: Learn how to use SFTP mode for direct develop on Pantheon, and how 
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
 contenttype: [guide]
+innav: [true]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]

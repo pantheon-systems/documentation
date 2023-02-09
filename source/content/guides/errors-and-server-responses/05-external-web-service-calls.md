@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/external-web-service-calls
 anchorid: external-web-service-calls
 contenttype: [guide]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [issues]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -33,7 +34,7 @@ Even the most reliable web services occasionally experience slowness. Your site 
    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
    ```
 
-- Set a 10 second timeout on an external request made with Drupal 7's `drupal_http_request` function:
+- Set a 10 second timeout on an external request made with Drupal's `drupal_http_request` function:
 
    ```php
    $options = array('timeout' => 10);

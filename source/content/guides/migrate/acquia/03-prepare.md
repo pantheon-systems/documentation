@@ -3,8 +3,9 @@ title: Migrate a Site From Acquia to Pantheon Using Guided Migration
 subtitle: Prepare
 description: Get your site ready for migration.
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
@@ -14,7 +15,7 @@ layout: guide
 permalink: docs/guides/acquia/prepare
 anchorid: prepare
 editpath: migrate/acquia/03-prepare.md
-reviewed: "2021-06-15"
+reviewed: "2022-12-13"
 ---
 
 <Partial file="migrate/prepare.md" />

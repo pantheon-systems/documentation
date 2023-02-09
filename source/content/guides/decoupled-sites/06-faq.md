@@ -12,8 +12,9 @@ permalink: docs/guides/decoupled-sites/faq/
 editpath: decoupled-sites/06-faq.md
 reviewed: "2022-08-11"
 contenttype: [guide]
+innav: [true]
 categories: [create]
-newcms: [decoupled]
+cms: [decoupled]
 audience: [development]
 product: [decoupled]
 integration: [--]
@@ -24,16 +25,16 @@ integration: [--]
 
 ### Can I use any CMS with Pantheon architecture for Front-End Sites?
 
-WordPress and Drupal are currently the only CMSs supported by Pantheon Decoupled. 
+WordPress and Drupal are currently the only CMSs supported by Pantheon Decoupled.
 
 
 ### What dependency versions are supported with Front-End Sites?
 
 Pantheon Front-End Sites currently supports:
 
-* Gatsby v4 
+* Gatsby v4
 * Next.js v12
-* Drupal 9
+* Drupal 9 or higher
 * WordPress 5.9
 
 
@@ -41,6 +42,9 @@ Pantheon Front-End Sites currently supports:
 
 Decoupled Site Preview is only available for sites using Drupal as the CMS.
 
+### Can I Use Cloudflare with Front-End Sites?
+
+Yes. You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service. You must follow the [Option 2](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn) instructions outlined in the [Cloudflare Domain Configuration](/cloudflare) documentation.
 
 ## Known Issues
 
