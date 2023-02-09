@@ -166,7 +166,6 @@ const plugins = [
             rel: "nofollow noopener external",
           },
         },
-        `gatsby-remark-heading-slug`,
       ],
     },
   },
