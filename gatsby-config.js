@@ -1,12 +1,8 @@
 const dotenv = require("dotenv")
 const queries = require("./src/algolia/index");
-const config = require("./src/algolia/config");
 
 // load environment specific configurations.
 dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -187,12 +183,12 @@ const plugins = [
   `gatsby-plugin-fontawesome-css`,
 ]
 
-if(config.search && config.search.enabled && config.search.algoliaAppId && config.search.algoliaAdminKey) {
+if(process.env.GATSBY_ALGOLIA_APP_ID && process.env.ALGOLIA_ADMIN_KEY) {
   plugins.push({
     resolve: `gatsby-plugin-algolia`, 
     options: {
-      appId: config.search.algoliaAppId, // algolia application id
-      apiKey: config.search.algoliaAdminKey, // algolia admin key
+      appId: process.env.GATSBY_ALGOLIA_APP_ID, // algolia application id
+      apiKey: process.env.ALGOLIA_ADMIN_KEY, // algolia admin key
       queries,
       chunkSize: 10000, // default: 1000
     }
