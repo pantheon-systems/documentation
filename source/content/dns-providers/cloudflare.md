@@ -155,7 +155,7 @@ If you're using Cloudflare's IP Geolocation feature, you will need to read the `
 
 Cloudflare allows you to turn on caching. However, no cache invalidation hook is fired when you make content changes if you have Cloudflare caching turned on. This means that Cloudflare will be unaware of your changes and persist with stale cache.
 
-We suggest that you turn Cloudflare caching off until the `pantheon_advanced_page_cache` module/plugin is extended to send API calls to Cloudflare.
+We suggest that you turn off Cloudflare caching until the `pantheon_advanced_page_cache` module/plugin is extended to send API calls to Cloudflare.
 
 ## Next Steps
 
