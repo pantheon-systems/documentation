@@ -21,11 +21,9 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ### 2023-TBD-TBD
 
-<a name="20230203" class="release-update"></a>
+<a name="20230203" class="release-update"></a>Removes contact support line.
 
-Remove the contact support line from the `wp-pantheon-config.php` file.
-
-Pantheon Customer Support Engineers are no longer needed to shuffle salt keys. You can visit https://api.wordpress.org/secret-key/1.1/salt/ to replace the values provided by the platform.
+Pantheon Customer Support Engineers are no longer needed to shuffle salt keys. You will no longer see the contact support line in the `wp-pantheon-config.php` file. You can visit https://api.wordpress.org/secret-key/1.1/salt/ to replace the values provided by the platform.
 
 ## Previous Releases
 
