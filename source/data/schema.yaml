@@ -118,7 +118,7 @@
     - true
     - false
 - tag: integration
-  description: 'The non-Pantheon owned product to which this content refers'
+  description: 'The non-Pantheon owned product to which this content refers.'
   type: 'list'
   required: 'no'
   multi: 'yes'
@@ -127,25 +127,25 @@
     - plugins # use for WordPress modules
     # values can contain the name of any product, typed as: full name, lowercase, replace spaces with dashes.  For example: cloudflare, build-tools
 - tag: nexturl
-  description: 'For guides, the URL for the Next button.  Use when the files are not labeled sequentially (01, 02)'
+  description: 'For guides, the URL for the Next button.  Use when the files are not labeled sequentially (01, 02).'
   type: 'string'
   required: 'no'
   multi: 'no'
   valid-values:
 - tag: permalink
-  description: 'For guides, the pretty URL.  Use when the files ARE labeled sequentially (01, 02)'
+  description: 'For guides, the pretty URL.  Use when the files ARE labeled sequentially (01, 02).'
   type: 'string'
   required: 'no'
   multi: 'no'
   valid-values:
 - tag: previousurl
-  description: 'For guides, the URL for the Previous button.  Use when the files are not labeled sequentially (01, 02)'
+  description: 'For guides, the URL for the Previous button.  Use when the files are not labeled sequentially (01, 02).'
   type: 'string'
   required: 'no'
   multi: 'no'
   valid-values:
 - tag: product
-  description: 'The Pantheon product to which this content refers'
+  description: 'The Pantheon product to which this content refers.'
   type: 'list'
   required: 'no'
   multi: 'yes'
@@ -167,7 +167,7 @@
     - siteportfolio
     - terminus
 - tag: provider
-  description: 'Used to populate the title in a link to a DNS doc page'
+  description: 'Used to populate the title in a link to a DNS doc page.'
   type: 'string'
   required: 'no'
   multi: 'no'
@@ -179,7 +179,7 @@
   multi: ''
   valid-values: YYYY-MM-DD
 - tag: showtoc
-  description: 'Indicates if the document will display a Table of Contents'
+  description: 'Indicates if the document will display a Table of Contents.'
   type: 'boolean'
   required: 'no'
   multi: 'no'
@@ -187,7 +187,7 @@
     - true
     - false
 - tag: sub-title
-  description: 'Used for guides, to provide a page level title (where as the title tag contains the guide title.)'
+  description: 'Used for guides, to provide a page level title (whereas the title tag contains the guide title).'
   type: 'string'
   required: 'no'
   multi: 'no'
@@ -199,7 +199,7 @@
   multi: 'yes'
   valid-values: 
 - tag: title
-  description: 'The title of the document'
+  description: 'The title of the document.'
   type: 'string'
   required: 'yes'
   multi: 'no'
