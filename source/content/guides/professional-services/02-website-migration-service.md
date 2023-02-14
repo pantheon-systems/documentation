@@ -2,7 +2,13 @@
 title: Pantheon Professional Services
 subtitle: Managed Migration Service
 description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites.
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [development, sysadmin]
+product: [--]
+integration: [--]
 tags: [professional-services, migration]
 reviewed: "2021-04-01"
 layout: guide
@@ -18,7 +24,7 @@ The Managed Migration Service offered by [Pantheon Professional Services](/guide
 
 The goal of the Migrations Team is to migrate your site to the Pantheon WebOps platform without any loss of functionality. This doc outlines how you can prepare the site and what you can expect from a Professional Services Migration.
 
-For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/migrate).
+For instructions on how to migrate a site yourself, see [Migrate Sites to Pantheon](/guides/guided).
 
 If you are currently working with Pantheon Professional Services Migrations, reach out to your Migration Engagement Manager with any questions or concerns.
 
@@ -67,7 +73,7 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
   - Disable unnecessary or unsupported modules and plugins
 
 - Pantheon Plugin/Module installation
-  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, [Redis Object Cache](/object-cache), and/or [Pantheon Search](/solr), as needed
+  - Installation of the Advanced Page Cache module/plugin, Native Sessions plugin, [Redis Object Cache](/guides/object-cache), and/or [Pantheon Search](/solr), as needed
 
 - Plugin & theme workarounds
   - [Implement solutions](#implement-solutions-to-known-existing-incompatibilities) to known existing incompatibilities (includes up to five hours' worth of work)
@@ -75,13 +81,13 @@ For all sites identified in the agreed on Project Requirements, the Migrations T
 ### Included Configuration Support
 
 -  SSL certificate pre-provisioning
-  - Ensure your site is configured for [HTTPS](/https) at launch or as soon as the domain certificates have been provisioned
+  - Ensure your site is configured for [HTTPS](/guides/global-cdn/https) at launch or as soon as the domain certificates have been provisioned
 
 - Email configuration
   - Set up external [email](/email) to work with the provider of your choice
 
 - Redirect handling
-  - Move [redirects](/redirects) from `htaccess` into `settings.php` or `wp-config`
+  - Move [redirects](/guides/redirect) from `htaccess` into `settings.php` or `wp-config`
 
 - Search configuration
   - Configure sites that use Acquia Search to use Pantheon Search instead. (Review our documentation on [known limitations](/solr#known-limitations-of-pantheons-solr-service) first.)
@@ -116,7 +122,7 @@ During the Migration project kick-off, the team will review which of the followi
 1. Pantheon may not be able to migrate functionality if the site relies on resources that are not available on the platform, such as:
    - Issues that arise as a result of:
 
-     - [Pantheon platform considerations](/platform-considerations)
+     - [Pantheon platform considerations](/guides/platform-considerations)
 
      - Plugins or Modules that have been identified as [problematic](/modules-plugins-known-issues/)
 
@@ -162,7 +168,7 @@ You may elect to purchase PS Hours (four hour minimum) for the Pantheon Migratio
 
 - Configuring or decommissioning S3 (existing S3 integrations are fine, this is just for changes to the file structures in the application)
 
-- Ensuring your applications are working with any required [Secure Integrations](/secure-integration)
+- Ensuring your applications are working with any required [Secure Integrations](//guides/secure-development/secure-integration)
 
 - Working on your custom or contrib modules and plugins to troubleshoot issues your team is unable to resolve
 
@@ -188,8 +194,8 @@ These used to be called Custom Application Services (CAS) hours.
 
 1. Perform DNS cutover within the timeline specified in the migrations agreement
 
-## See Also
+## More Resources
 
-- [Migrate Sites to Pantheon](/migrate) and [Manually Migrate Sites to Pantheon](/migrate-manual) to see what it takes to migrate a site yourself
+- [Migrate Sites to Pantheon](/guides/guided/ and [Manually Migrate Sites to Pantheon](/migrate-manual) to see what it takes to migrate a site yourself
 - [Migrate to Pantheon: WordPress Site Networks](/migrate-wordpress-site-networks)
 - [Video: Guided WordPress Migrations](/videos/migrate-wordpress)

@@ -2,14 +2,20 @@
 title: Create a Static Site Using an Empty Upstream
 description: Learn how to create a static site using empty upstreams on the Pantheon Platform.
 contributors: [michellecolon-pantheon, kyletaylored]
-categories: [platform]
 tags: [https, launch, code, workflow]
 reviewed: "2021-08-09"
+contenttype: [doc]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstreams, terminus]
+integration: [--]
 ---
 
 ## Overview 
 
-This video demonstrates how to create a blank site using static files. This can be accomplished through the [Pantheon Dashboard](/create-sites) as well as through [Terminus](/terminus).
+This video demonstrates how to create a blank site using static files. This can be accomplished through the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) as well as through [Terminus](/terminus).
 
 <Youtube src="PTVqXxwOJ4Q" title="Pantheon Static Site and Empty Upstreams" /><br/>
 
@@ -27,5 +33,5 @@ Commit Files Using Git - 05:12
 Add Static Landing Page to an Existing WordPress or Drupal site - 06:14  
 Add Static Files to Create a Path - 06:29  
 
-## See Also
+## More Resources
 - [Static Sites and Empty Upstreams](/static-site-empty-upstream)

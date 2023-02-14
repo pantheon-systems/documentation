@@ -1,8 +1,14 @@
 ---
 title: Lock Environments with the Dashboard Security Tool
 description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal or WordPress site development.
-categories: [develop]
 tags: [dashboard, security, users]
+contenttype: [doc]
+innav: [true]
+categories: [user authentication]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 There are occasions while you are working on your site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
@@ -41,7 +47,7 @@ To verify that everything is working correctly, visit the URL of the environment
 
 <Alert title="Note" type="info">
 
-While locked, environments will not be cached by the [Global CDN](/global-cdn).
+While locked, environments will not be cached by the [Global CDN](/guides/global-cdn).
 
 </Alert>
 
@@ -91,22 +97,8 @@ Sites that have the environment locked on Pantheon in addition to enabling the m
 
 Alternatively, you can resolve 403 errors by using [Terminus](/terminus) to disable the module:
 
-<TabList>
-
-<Tab title="Drupal 8" id="d8" active={true}>
-
-```bash
-terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
-```
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7">
+For Drupal 7, run:
 
 ```bash
 terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
 ```
-
-</Tab>
-
-</TabList>

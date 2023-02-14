@@ -1,9 +1,15 @@
 ---
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your site.
-categories: [troubleshoot]
 tags: [cron, drush, ssh, solr, terminus]
 reviewed: "2020-03-18"
+contenttype: [doc]
+innav: [true]
+categories: [config]
+cms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [solr, cron]
 ---
 
 Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. 
@@ -51,13 +57,13 @@ If the request passes through port `80` and `443` it will timeout at 59 seconds.
 
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/terminus). Most slow cron executions are due to PHP errors or a slow external service. Best practice is to identify and fix the root cause. Check [log files](/logs) and review [PHP errors and exceptions](/php-errors) for clues.
+Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/terminus). Most slow cron executions are due to PHP errors or a slow external service. Best practice is to identify and fix the root cause. Check [log files](/guides/logs-pantheon) and review [PHP errors and exceptions](/guides/php/php-errors) for clues.
 
 ### What if I run into a timeout when using the Drupal Migrate UI?
 
 As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/terminus).
 
-If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
+If you're migrating to a Drupal site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 
 ```php
 $conf['migrate_drush_path'] = $_ENV['HOME'] . '/bin/drush';
@@ -73,13 +79,13 @@ Do not edit the `pantheon_apachesolr` module within your Drupal site installatio
 
 ### How do I install a theme or plugin that keeps timing out?
 
-If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/rsync-and-sftp).
+If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/guides/sftp/rsync-and-sftp).
 
-Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/custom-upstream).
+Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/guides/custom-upstream).
 
-## See Also
+## More Resources
 
-- [Platform Considerations](/platform-considerations)
-- [Errors and Server Responses](/errors-and-server-responses)
+- [Platform Considerations](/guides/platform-considerations)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
 - [Modules and Plugins With Known Issues](/modules-plugins-known-issues)
-- [Database Connection Errors](/database-connection-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)

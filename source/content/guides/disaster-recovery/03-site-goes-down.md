@@ -4,7 +4,6 @@ subtitle: What to Do If Your Site Goes Down
 description: Working with Pantheon support during emergencies
 generator: pagination
 layout: guide
-categories: [platform]
 tags: [webops]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
@@ -12,6 +11,13 @@ type: guide
 permalink: docs/guides/disaster-recovery/site-goes-down
 anchorid: disaster-recovery
 editpath: disaster-recovery/03-site-goes-down.md
+contenttype: [guide]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [sysadmin]
+product: [--]
+integration: [--]
 ---
 
 ## Open an Emergency Downtime Ticket
@@ -102,9 +108,9 @@ Incident management is a collaboration between Pantheon Support and the customer
 
 Key tools that you can use for ongoing diagnosis of issues include:
 
-* New Relic gives you real-time insight into application performance, and the slowest transactions are profiled with full stack traces that can isolate specific code, query, or external services bottlenecks.The New Relic Application Performance Monitor (APM) can be used to track current-state performance and dig into transaction traces to isolate bottlenecks and break points. Refer to the [New Relic](https://pantheon.io/docs/new-relic) documentation for more information.
+* New Relic gives you real-time insight into application performance, and the slowest transactions are profiled with full stack traces that can isolate specific code, query, or external services bottlenecks.The New Relic Application Performance Monitor (APM) can be used to track current-state performance and dig into transaction traces to isolate bottlenecks and break points. Refer to the [New Relic](/guides/new-relic) documentation for more information.
 
-* MySQL, PHP, and Nginx logs provide forensic data for incident review. Refer to [Log Files on Pantheon](https://pantheon.io/docs/logs)
+* MySQL, PHP, and Nginx logs provide forensic data for incident review. Refer to [Log Files on Pantheon](/guides/logs-pantheon)
 
 * ACDN logs can be piped directly into customer-managed log management applications. Setup by Professional Services is required.
 

@@ -2,11 +2,17 @@
 title: Working in the WordPress Dashboard and Drupal Admin Interface
 description: Learn how to build sites using the WordPress and Drupal admin interfaces in SFTP mode on Pantheon.
 searchboost: 150
-categories: [develop]
 tags: [site, sftp, dashboard]
 reviewed: "2020-06-24"
+contenttype: [doc]
+innav: [true]
+categories: [cms]
+cms: [wordpress, drupal]
+audience: [development]
+product: [dashboard]
+integration: [--]
 ---
-Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/git) or working in the WordPress or Drupal admin interface in [SFTP](/sftp) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/multidev)) in **SFTP** mode.
+Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/guides/git/git-config) or working in the WordPress or Drupal admin interface in [SFTP](/guides/sftp) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/guides/multidev)) in **SFTP** mode.
 
 <Alert title="Exports" type="export">
 
@@ -30,8 +36,8 @@ Operations that require write access to the codebase must be executed while the 
 
 - Activating a new theme in the site admin,
 - Uploading a new module or plugin using an SFTP client,
-- Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <Popover content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/drush/'>Drupal Drush Command-Line Utility</a>." />
-- Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <Popover content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>." />
+- Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <Popover content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/guides/drush/'>Drupal Drush Command-Line Utility</a>." />
+- Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <Popover content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/guides/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>." />
 
 ## WordPress Dashboard
 
@@ -83,7 +89,7 @@ export SITE=yoursitename
 
 </Alert>
 
-1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/multidev) environment set to [SFTP mode](#sftp-mode).
+1. Confirm that you can safely remove the plugin by uninstalling it in Dev or a [Multidev](/guides/multidev) environment set to [SFTP mode](#sftp-mode).
 
   <Alert title="Note" type="info">
 
@@ -91,9 +97,9 @@ export SITE=yoursitename
 
   </Alert>
 
-1. [Commit](#commit-sftp-changes) the code change. If you're working in a Multidev environment, [merge](/multidev#merge-code) the change to Dev at this point.
+1. [Commit](#commit-sftp-changes) the code change. If you're working in a Multidev environment, [merge](/guides/multidev#merge-code) the change to Dev at this point.
 
-1. Use [WP-CLI](/wp-cli) through Terminus to remove the necessary tables from the Live environment's database while skipping file deletion. Replace `<plugin-name>` in the example below:
+1. Use [WP-CLI](/guides/wp-cli) through Terminus to remove the necessary tables from the Live environment's database while skipping file deletion. Replace `<plugin-name>` in the example below:
 
   ```bash{promptUser: user}
   terminus wp $SITE.live -- plugin uninstall <plugin-name> --skip-delete
@@ -115,25 +121,7 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
 ### Install a New Module
 
-<TabList>
-
-<Tab title="Drupal 8" id="d8-1" active={true}>
-
-1. Get the URL to the code you want to install from Drupal.org:
-
-  ![Drupal.org views module](../images/drupal-copy-module-link.png)
-
-  Make sure the module has a version marked `8.x-*` before installing it on a Drupal 8 site.
-
-1. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**. Sign in with your admin credentials.
-
-1. Under the **Manage** menu, click on **Extend**, then **+ Install new module**. Paste the URL from Step 1. You can also upload a `tarball` or `zip` file from your desktop:
-
-  ![Installing a module on Drupal 8](../images/drupal-8-install-module.png)
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-2">
+The example steps below are for Drupal.
 
 1. Get the URL to the code you want to install from Drupal.org:
 
@@ -144,10 +132,6 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 1. Paste the URL into Drupal's update manager. You can also upload a tarball or zip file from your desktop:
 
   ![Installing via update manager](../images/install-via-update-manager.png)
-
-</Tab>
-
-</TabList>
 
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live.
 

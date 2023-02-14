@@ -1,16 +1,26 @@
+---
+contenttype: [partial]
+categories: [traffic]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### Will Pantheon warn me if my site has an overage?
 
 Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. These adjustments will be communicated via email.
 
 ### Where can I manage my plan along with my site traffic?
 
-Your [Pantheon Site Dashboard](/metrics) includes site traffic, measured against your plan, and information on pages served and unique visits specifically. You can [upgrade your plan](/site-plan) from the Site Dashboard at any time.
+Your [Pantheon Site Dashboard](/metrics) includes site traffic, measured against your plan, and information on pages served and unique visits specifically. You can [upgrade your plan](/guides/account-mgmt/plans) from the Site Dashboard at any time.
 
 ### How can I change my Performance plan if I need to scale up to handle more traffic?
 
-You can [upgrade your plan](/site-plan) in the Site Dashboard at any time. Pantheon understands traffic levels may vary by season or event for some of our customers, but if you're experiencing sustained traffic that's higher than your plan limit, you can update your plan yourself.
+You can [upgrade your plan](/guides/account-mgmt/plans) in the Site Dashboard at any time. Pantheon understands traffic levels may vary by season or event for some of our customers, but if you're experiencing sustained traffic that's higher than your plan limit, you can update your plan yourself.
 
-We encourage all customers to take advantage of [Overage Protection](/traffic-limits#overage-protection), which prevents one-time traffic spikes from causing billing issues.
+We encourage all customers to take advantage of [Traffic Limits and Overages](/guides/account-mgmt/traffic), which prevents one-time traffic spikes from causing billing issues.
 
 ### What about legitimate traffic spikes?
 

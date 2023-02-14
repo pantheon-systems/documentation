@@ -1,8 +1,14 @@
 ---
 title: Bots and Indexing on Pantheon
 description: Information on managing bots and indexing while avoiding performance degradation on your Pantheon WordPress or Drupal site.
-categories: [platform]
 tags: [measure, traffic]
+contenttype: [doc]
+innav: [true]
+categories: [optimize]
+cms: [wordpress, drupal]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Bots are part of every public-facing website's lifecycle. We wouldn't be able to find a thing on the internet without them! Bots perform the hard work taken for granted when browsing the multitudes of indexed search results from any given search engine. In the wrong hands, bots can become nagging nuisances slowing down or even taking down your site.
@@ -27,7 +33,7 @@ unix:\xC8\xFB\x7F - - [11/Nov/2013:19:05:24 +0000] "POST /index.php?q=comment/re
 
 ### Bots Converging on Erroring Pages
 
-Some legitimate [bots/crawlers/proxies](https://useragent.openadmintools.com/) (such as BingBot or AdsBotGoogle) will identify themselves. Since search-indexing is desirable for most sites, tread carefully in order to avoid wreaking havoc on a site's SEO. That said, there may be instances in which crawlers/spiders converge on a page that is erroring out ( [502s](/errors-and-server-responses) in the example below). These repetitive requests can increase the pageload issues by putting more load on the server. Investigate these errors immediately. When the error has been fixed, the bots/crawlers will no longer be hung-up on the give path.
+Some legitimate [bots/crawlers/proxies](https://useragent.openadmintools.com/) (such as BingBot or AdsBotGoogle) will identify themselves. Since search-indexing is desirable for most sites, tread carefully in order to avoid wreaking havoc on a site's SEO. That said, there may be instances in which crawlers/spiders converge on a page that is erroring out ( [502s](/guides/errors-and-server-responses) in the example below). These repetitive requests can increase the pageload issues by putting more load on the server. Investigate these errors immediately. When the error has been fixed, the bots/crawlers will no longer be hung-up on the give path.
 
 ```none
 127.0.0.1 - - [26/Jul/2013:15:27:38 +0000] "GET /index.php?q=shop/kits/shebang-kit HTTP/1.0" 502 166 "-" "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)" 14.188 "157.56.93.49, 10.183.252.21, 127.0.0.1,127.0.0.1"
@@ -41,20 +47,20 @@ unix: - - [26/Jul/2013:15:26:37 +0000] "GET /index.php?q=gush/content/name-pimp-
 
 ## Indexing Your Pantheon Site
 
-It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/domains#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
+While Drupal and WordPress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work in Live environments of a paid site with a custom domain. It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/guides/domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/guides/domains/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```none:title=robots.txt
 # Pantheon's documentation on robots.txt: https://pantheon.io/docs/bots-and-indexing/
 User-agent: *
 Disallow: /
 
-User-agent: dotbot
-User-agent: PetalBot
-User-agent: PowerMapper
 User-agent: RavenCrawler
 User-agent: rogerbot
+User-agent: dotbot
 User-agent: SemrushBot
-User-agent: SemrushBot-SA
+User-agent: SiteAuditBot
+User-agent: SplitSignalBot
+User-agent: PowerMapper
 User-agent: Swiftbot
 Allow: /
 ```
@@ -63,7 +69,7 @@ Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP heade
 
 ### Indexing Before You Launch
 
-The `pantheonsite.io` domains are intended for development use and cannot be used for production. While Drupal and WordPress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
+The `pantheonsite.io` domains are intended for development use and cannot be used for production. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
 
 To support pre-launch SEO and site search testing, we allow the following bots access to platform domains:
 
@@ -169,7 +175,7 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Configure Redirects](/redirects).
+For more examples of redirecting via PHP, see [Configure Redirects](/guides/redirect).
 
 ### Incorrect robots.txt Output in WordPress
 

@@ -1,24 +1,17 @@
 ---
 title: Essential Developer Training
 subtitle: Developer Workflow
-anchorid: developer-workflow
-edt: true
-layout: guide
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [workflows]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, git, sftp, webops, workflow]
-type: guide
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
 permalink: docs/guides/edt/developer-workflow/
-nexturl: guides/edt/multidev/
-nextpage: Multidev
-previousurl: guides/edt/introduction-and-architecture/
-previouspage: Architecture
+anchorid: developer-workflow
 editpath: edt/03-developer-workflow.md
-image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’re going to explore the Developer Workflow.
@@ -32,7 +25,7 @@ All links from the video are provided below.
 
  - [Developer Workflow](/develop)
  - [Use the Pantheon Development Workflow](/pantheon-workflow)
- - [Pantheon Platform Considerations](/platform-considerations)
+ - [Pantheon Platform Considerations](/guides/platform-considerations)
  - [Pantheon YAML Configuration Files](/pantheon-yml)
  - [Composer Fundamentals and Workflows](/guides/composer)
  - [Quick Start guide](/guides/quickstart)

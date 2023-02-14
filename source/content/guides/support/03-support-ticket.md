@@ -2,7 +2,13 @@
 title: Get Support
 subtitle: Support Ticket Best Practices
 description: Open and write a support ticket using best practices.
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [composer, terminus, webops, workflow]
 buildtools: true
 anchorid: support-ticket
@@ -10,7 +16,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/support/support-ticket/
 editpath: support/03-support-ticket.md
-reviewed: "2020-12-10"
+reviewed: "2022-10-10"
 ---
 
 In this section, we go over best practices when writing a support ticket, which helps us resolve your issue faster.
@@ -20,9 +26,9 @@ In this section, we go over best practices when writing a support ticket, which 
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the Support tab.
+If you are a member of an [Organization](/guides/account-mgmt/workspace-sites-teams/workspaces), use the Organization's Dashboard to visit the Support tab.
 
-Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
+Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](/guides/support/support-ticket/#organization-dashboard-support-tab).
 
 ### Organization Dashboard Support Tab
 

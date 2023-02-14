@@ -2,18 +2,17 @@
 title: Quick Start
 subtitle: Introduction
 description: The Quick Start guide is designed to get you started on Pantheon.
-layout: guide
-categories: [get-started]
+contenttype: [guide]
+innav: [true]
+categories: [overview]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [launch, sandbox, site, webops, workflow]
-type: guide
-anchorid: quickstart
-generator: pagination
 permalink: docs/guides/quickstart/
-nexturl: guides/quickstart/user-dashboard/
-nextpage: User Dashboard
+anchorid: quickstart
 editpath: quickstart/01-introduction.md
-completiontime: 1 hour
-image: launchGuide-twitterLarge
 ---
 
 Welcome! This guide is designed to get you started on Pantheon.
@@ -26,7 +25,7 @@ Welcome! This guide is designed to get you started on Pantheon.
   Pantheon's Developer Advocacy team.
 </Callout>
 
-In this guide, you'll learn how to:
+In this guide, you will:
 
 - Create a Sandbox site on Pantheon
 - Deploy Drupal or WordPress to the site
@@ -41,4 +40,4 @@ Are you an agency? Do you build sites for others? If so, check **Are you an agen
 
 </Alert>
 
-You should now have a Pantheon User Account. When you're ready, you may continue to the next lesson.
+You should now have a Pantheon User Account. When you're ready, continue to the next lesson.

@@ -1,8 +1,14 @@
 ---
 title: SSO and Identity Federation on Pantheon
 description: Use SSO to centrally manage user identities and provide seamless integration across multiple applications.
-categories: [integrate]
 tags: [security, sso, users]
+contenttype: [doc]
+innav: [true]
+categories: [security]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [shibboleth, sso]
 ---
 Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions. Learn more about [Single Sign-On for Pantheon Organizations](/sso-organizations).
 
@@ -13,7 +19,7 @@ Use SSL certificates for encrypted secure communication with externally hosted s
 ## Two-Factor Authentication
 Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in.
 
-We strongly recommend using SAML, both for sites and the Dashboard. Learn more about [two-factor authentication](/guides/two-factor-authentication).
+We strongly recommend using SAML, both for sites and the Dashboard. Learn more about [two-factor authentication](/guides/secure-development/two-factor-authentication).
 
 ## LDAP and LDAPS (LDAP over SSL)
 
@@ -33,7 +39,7 @@ Also, Pantheon includes the [PECL OAuth](http://us.php.net/oauth) PHP extension.
 
 Pantheon is a cloud platform, so there are some considerations that you should be aware of.
 
-Pantheon provides a single shared unique IP address for sites using [Free and Automated HTTPS](/https).
+Pantheon provides a single shared unique IP address for sites using [Free and Automated HTTPS](/guides/global-cdn/https).
 
 Pantheon does not have a mechanism for providing a dedicated outbound IP address. This is important to know if you are using a firewall with IP-based rules.  
 

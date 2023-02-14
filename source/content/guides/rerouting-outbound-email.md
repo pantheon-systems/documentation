@@ -1,8 +1,13 @@
 ---
 title: Prevent Spamming During Drupal Debugging and Testing
 description: Set up the Drupal reroute_email module on your Pantheon Drupal site.
-cms: "Drupal"
-categories: [develop]
+contenttype: [doc]
+innav: [true]
+categories: [email]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [email]
 tags: [workflow, email]
 type: guide
 permalink: docs/guides/:basename
@@ -13,15 +18,15 @@ If your Drupal site sends outbound emails, you don't want to accidentally spam y
 
 If you don't manually change the settings stored in the database, you are at risk of accidentally spamming users during debugging or quality assurance testing.
 
-Reroute Email is easy to setup and the settings persist, even when moving the database between environments. You can install the reroute email and enable it in all environments, and configure it via the [`settings.php`](/settings-php) with [environmental variables](/read-environment-config) to ensure you don't spam users during debugging or testing.
+Reroute Email is easy to setup and the settings persist, even when moving the database between environments. You can install the reroute email and enable it in all environments, and configure it via the [`settings.php`](/guides/php/settings-php) with [environmental variables](/guides/environment-configuration/read-environment-config) to ensure you don't spam users during debugging or testing.
 
 You’ll be able to funnel all development and testing emails to a single inbox and will not have to log in to several email accounts to test your business expectations.
 
 ## Installation
 
-You can use [SFTP](/sftp) on Pantheon or the [Drupal UI](/cms-admin/#drupal-admin-interface) to install a module. Alternatively, you can use Git to keep automated backups running on Dev.
+You can use [SFTP](/guides/sftp) on Pantheon or the [Drupal UI](/cms-admin/#drupal-admin-interface) to install a module. Alternatively, you can use Git to keep automated backups running on Dev.
 
-For instance, you can use [a start state](/start-state/#import-an-existing-site) and perform a [git clone](/git) of the Pantheon site.
+For instance, you can use [a start state](/start-state/#import-an-existing-site) and perform a [git clone](/guides/git/git-config) of the Pantheon site.
 
 ```bash{promptUser: user}
 cd sites
@@ -74,11 +79,7 @@ If you don’t have a `settings.php` file, copy the `default.settings.php` file.
 cp sites/default/default.settings.php sites/default/settings.php
 ```
 
-Using your favorite editor or IDE, open the `settings.php`, and add the following code:
-
-<TabList>
-
-<Tab title="Drupal 7" id="d7">
+Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal:
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -101,35 +102,6 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
   $conf['reroute_email_enable_message'] = 1;
 }
 ```
-</Tab>
-  
-
-<Tab title="Drupal 8" id="d8"> 
-
-```php
-if (defined('PANTHEON_ENVIRONMENT')) {
-  if (PANTHEON_ENVIRONMENT == 'live') {
-    // Do not reroute email on Live.
-    $config['reroute_email.settings']['enable'] = FALSE;
-  }
-  else {
-    // Reroute email on all Pantheon environments but Live.
-    $config['reroute_email.settings']['enable'] = TRUE;
-    $config['reroute_email.settings']['address'] = 'tester+qa-' . PANTHEON_ENVIRONMENT . '@example.com';
-  }
-}
-
-if (!defined('PANTHEON_ENVIRONMENT')) {
-  // Reroute email when site is not on Pantheon (local install).
-  $config['reroute_email.settings']['enable'] = TRUE;
-  $config['reroute_email.settings']['address'] = 'tester+local-dev@example.com';
-}
-```
-  
-</Tab>
-
-</TabList>
-
   
 In order for the snippet to work as intended, the module must be enabled in all environments. The `PANTHEON_ENVIRONMENT` variable changes the reroute email settings based on environment. The configuration in `settings.php` overrides any settings in the Drupal Admin UI.  If your site isn't on Pantheon, look for available [Superglobals](https://secure.php.net/manual/en/language.variables.superglobals.php) to aid in your configuration.
 

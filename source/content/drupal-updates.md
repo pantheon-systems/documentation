@@ -1,8 +1,13 @@
 ---
 title: Major Version Drupal Upgrades
 description: Instructions on how to upgrade your Pantheon site to the next major version of Drupal.
-cms: "Drupal"
-categories: [get-started]
+contenttype: [doc]
+innav: [true]
+categories: [update]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [migrate, workflow]
 reviewed: "2020-07-21"
 ---
@@ -11,15 +16,13 @@ reviewed: "2020-07-21"
 
 The steps in this doc help bring your site to Drupal 8 which reached End of Life status in November, 2021.
 
-While the steps here work, Drupal 8 will not continue to receive security updates in the future.
-
-Visit the [Drupal 9 migration guide](/guides/drupal-9-migration) to find the best path to Drupal 9 for your site.
+Visit the [Drupal Update and Migration Guide](/drupal-migration) to find the best path to Drupal for your site.
 
 </Alert>
 
 ## Overview
 
-To upgrade Drupal to a new major version (e.g. version 7 to version 8) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site into the new site.
+To upgrade Drupal to a new major version (e.g. version 7 to version 9) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 7 site that you want to upgrade to the latest version of Drupal, create a new Drupal site and add content, files and modules from the old site into the new site.
 
 Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
@@ -27,22 +30,13 @@ Migrating to a new site on the platform will provide you with the QA and deploym
 If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.
 </Alert>
 
-## About Drupal 9
+## About the Latest Version of Drupal
 
-Since Drupal 9 currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with Drupal 9, we recommend that users upgrade their Drupal 7 sites to Drupal 8 first.
-
-## Upgrade to Drupal 8
-
-The details of executing an upgrade/migration to Drupal 8 have continued to shift since Drupal 8.0.0 was released. As such, this documentation will focus on the Pantheon-specific aspects. Read the [drupal.org documentation the migration process](https://www.drupal.org/docs/8/upgrade/brief-overview-and-history-of-automated-upgrading-to-drupal-8) before starting on your own migration on Pantheon. The basic steps you will follow to migrate to a Drupal 8 site on Pantheon are:
-
-1. Create a new Drupal 8 site on Pantheon from your User Dashboard.
-1. Add the 8.x version of your contrib modules. Some of these modules will have built-in migrating functionality that will help move their data from Drupal 7 to Drupal 8.
-1. Use the [Migrate](https://www.drupal.org/project/migrate) module to move over data and configuration from Drupal 7.
-1. Depending on the complexity of your site, you will likely want to review, revise, and rerun your migration.
+Since the latest version of Drupal currently has the same end-user features as [Drupal 8.9](https://www.drupal.org/project/drupal/releases/8.9.0), and because many contrib modules are not yet compatible with the latest version of Drupal, we recommend that users upgrade their Drupal sites to the latest version of Drupal first. 
 
 ### Content and configuration
 
-Drupal 9 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 9 site](/drupal-9-configuration-management)).
+Drupal migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal site](/drupal-configuration-management)).
 
 ### Customizing migrations
 
@@ -89,9 +83,8 @@ If your source site is on Pantheon and has your domain name pointing to it, you 
 
 Migrations of particularly large sites to updated Drupal versions can sometimes hit the limits of memory allocated to sites on Pantheon. When possible, large site upgrade migrations should be performed locally, where the full system resources can be allocated to the task.
 
-## See Also
+## More Resources
 
-- [Drupal 9](/drupal-9)
+- [Drupal on Pantheon](/drupal)
 - [Commonly implemented Migration methods](https://www.drupal.org/node/1132582)
 - [Performing Drupal Content Migrations on Pantheon](https://pantheon.io/blog/performing-drupal-content-migrations-pantheon)
-- [Drupal 8 File Migrations](https://pantheon.io/blog/drupal-8-file-migrations)

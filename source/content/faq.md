@@ -1,13 +1,21 @@
 ---
 title: Frequently Asked Questions
 description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
-categories: [platform]
 tags: [support]
+permalink: docs/faq
+anchorid: faq
+contenttype: [doc]
+innav: [true]
+categories: [faq]
+cms: [drupal, wordpress]
+audience: [agency, development]
+product: [cdn, localdev, search, siteportfolio, terminus]
+integration: [--]
 ---
 
 This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.
 
-Review [Platform Considerations](https://pantheon.io/docs/platform-considerations) for more technical information. 
+Review [Platform Considerations](/guides/platform-considerations) for more technical information. 
 
 ## Getting Started
 
@@ -17,7 +25,7 @@ Yes. Thousands of live production sites run on Pantheon.
 
 ### What versions of Drupal does Pantheon support?
 
-Pantheon supports Drupal 7, 8, and 9 sites. As of February 2016, the Drupal community [no longer supports Drupal 6](https://www.drupal.org/drupal-6-eol). Drupal 6 sites will continue to run on Pantheon, but there will no longer be any updates to fix bugs or security issues.
+Pantheon supports Drupal 7+ sites. As of February 2016, the Drupal community [no longer supports Drupal 6](https://www.drupal.org/drupal-6-eol). Drupal 6 sites will continue to run on Pantheon, but there will no longer be any updates to fix bugs or security issues.
 
 ### What versions of WordPress does Pantheon support?
 
@@ -29,7 +37,7 @@ You can develop new sites for free on Pantheon. Billing starts when you're ready
 
 ### Where are the Pantheon servers located?
 
-In addition to the United States data center, [new sites can be created](/regions) in Australia, Canada, and the European Union (EU). Pantheon's [Global CDN](/global-cdn) serves content from 70+ POPs (points of presence) distributed around the world.
+In addition to the United States data center, [new sites can be created](/regions) in Australia, Canada, and the European Union (EU). Pantheon's [Global CDN](/guides/global-cdn) serves content from 70+ POPs (points of presence) distributed around the world.
 
 ### Can I run other applications on Pantheon?
 
@@ -39,7 +47,7 @@ Only WordPress and Drupal applications are officially supported, but the PHP run
 
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
-Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/terminus), [drush](/drush), [WP-CLI](/faq#does-pantheon-support-wp-cli%3F)), and SFTP files.
+Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/terminus), [drush](/guides/drush), [WP-CLI](/faq#does-pantheon-support-wp-cli%3F)), and SFTP files.
 
 ### How does Pantheon work with DNS?
 
@@ -65,13 +73,13 @@ Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 ### Can I use my own Git repository (e.g GitHub)?
 
-Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/collaborative-development).
+Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools), or by syncing your code to [multiple remotes](/guides/git/collaborative-development).
 
-[Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/custom-upstream).
+[Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/guides/custom-upstream).
 
 ### Does Pantheon support Drupal Multisite?
 
-No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better solution called [Custom Upstreams](/custom-upstream). Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites of a multisite setup. The codebase also becomes [a single point of failure](https://pantheon.io/resources/drupal-multisite-vs-pantheon-upstreams).
+No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better solution called [Custom Upstreams](/guides/custom-upstream). Pantheon's architecture is designed to provide high performance and a rich feature set for individual Drupal sites. Individual sites can end up in states of configuration that make module or Drupal core updates impossible to do across all the sites of a multisite setup. The codebase also becomes [a single point of failure](https://pantheon.io/resources/drupal-multisite-vs-pantheon-upstreams).
 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
@@ -84,7 +92,7 @@ Yes, Pantheon supports the following use cases of [WordPress Site Networks](/gui
 
 ### Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated with `@alias` files. For more details, refer to [Drupal Drush Command-Line Utility](/drush). You can invoke Drush commands on Pantheon sites using [Terminus](/terminus), the Pantheon CLI.
+Yes. Pantheon comes with Drush pre-integrated with `@alias` files. For more details, refer to [Drupal Drush Command-Line Utility](/guides/drush). You can invoke Drush commands on Pantheon sites using [Terminus](/terminus), the Pantheon CLI.
 
 ### Does Pantheon support WP-CLI?
 
@@ -92,7 +100,7 @@ Yes. You can invoke WP-CLI commands on Pantheon sites using [Terminus](/terminus
 
 ### Does Pantheon support local development?
 
-Yes. [Local development](/local-development) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
+Yes. [Local development](/guides/local-development) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
 
 ### How does cron work with Drupal on Pantheon?
 
@@ -100,7 +108,7 @@ The platform will use Drush to run cron on an hourly basis automatically. More f
 
 ### How does cron work with WordPress on Pantheon?
 
-WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, refer to [Cron for WordPress](/wordpress-cron).
+WordPress runs its own internal cron-like system as visitors load your site. You can also use external services to schedule and create tasks. For more information, refer to [Cron for WordPress](/guides/wordpress-developer/wordpress-cron).
 
 ### Can I host a multilingual site?
 
@@ -134,7 +142,7 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 <Partial file="solr-version.md" />
 
-Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/wordpress-solr), [Drupal 7](/guides/solr-drupal/solr-drupal-7) and [Drupal 8](/guides/solr-drupal/solr-drupal-8).
+Refer to our documentation for details about configuring Pantheon Search (Solr) for [WordPress](/guides/wordpress-configurations/wordpress-solr) and [Drupal](/guides/solr-drupal/solr-drupal-7).
 
 ## Support
 

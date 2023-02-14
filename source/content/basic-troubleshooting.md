@@ -1,9 +1,15 @@
 ---
 title: Basic Troubleshooting
 description: Common first-step practices to troubleshoot misbehaving sites.
-categories: [wordpress, drupal]
 contributors: [alexfornuto, eabquina, carlalberto]
-reviewed: "2020-08-26"
+reviewed: "2022-12-13"
+contenttype: [doc]
+innav: [true]
+categories: [cache, security, deploy, domains, troubleshooting]
+cms: [wordpress, drupal]
+audience: [development, sysadmin]
+product: [cdn]
+integration: [--]
 ---
 
 This page is a collection of common troubleshooting tactics, curated from our Customer Success Engineers and the Pantheon community. These procedures can help you solve issues your site may have, or rule out potential causes.
@@ -34,7 +40,7 @@ PHP errors coming from Drupal or WordPress code tend to not be specific to Panth
 
 Odds are, someone else has run into the same problem and reported it in forums on [wordpress.org](https://wordpress.org/support/forums/) or the issue queues on [Drupal.org](https://www.drupal.org/project/issues), and it’s possible that someone has posted a solution or workaround.
 
-To learn more about PHP errors, see our [PHP Errors and Exceptions](/php-errors) documentation.
+To learn more about PHP errors, see our [PHP Errors and Exceptions](/guides/php/php-errors) documentation.
 
 ### Update the problem theme, module, or plugin
 
@@ -45,10 +51,10 @@ If you’ve narrowed the problem down to a specific module or plugin and you’r
 Sometimes your CMS may encounter issues due to cached data that ends up in an odd state.
 
 - [Clear your site cache](/clear-caches) using the Pantheon Dashboard, or with [Terminus](/terminus/commands/env-clear-cache).
-- Clear all keys from the Object Cache using the [Redis CLI](/object-cache#use-the-redis-command-line-client).
-- Review the caching logic for your CMS version. [Drupal 9](/drupal-9-cache), for example, has some specific caching features that may be a factor.
+- Clear all keys from the Object Cache using the [Redis CLI](/guides/object-cache/redis-command-line).
+- Review the caching logic for your CMS version. [Drupal](/drupal-cache), for example, has some specific caching features that may be a factor.
 - For issues confined to a specific page or display element, review the specific [caching logic](/cache-control) for your site or page.
-- If the Pantheon Advanced Page Cache [plugin](/wordpress-cache-plugin) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) is installed to take advantage of the granular cache clearing capabilities of the Global CDN, review these settings as well.
+- If the Pantheon Advanced Page Cache [plugin](/guides/wordpress-configurations/wordpress-cache-plugin) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) is installed to take advantage of the granular cache clearing capabilities of the Global CDN, review these settings as well.
 - Certain Drupal modules and WordPress plugins can conflict with Pantheon's granular cache clearing and header system. Review the [Modules](/modules-known-issues) and [Plugins](/plugins-known-issues) With Known Issues pages to identify potential conflicts.
 
 ### Investigate recent changes
@@ -57,7 +63,7 @@ Site problems may feel random, but they’re all triggered by _something_. Was t
 
 We recommend rolling back either the code or database versus a full restore in most cases. You can do this using [Terminus](/terminus/commands/backup-restore).
 
-If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your [nginx access logs](/nginx-access-log).
+If there haven’t been any code or config changes lately, an uptick in site traffic or the type of traffic you’re serving (e.g, uncached versus cached) may be the trigger. To see if this is the case, check your [nginx access logs](/guides/logs-pantheon/nginx-access-logs).
 
 ### Narrow down the cause
 
@@ -73,8 +79,8 @@ Continue doing this until the problem no longer comes up.
 More complex issues with code may necessitate using debugging tools beyond your server or application logs.
 
 - Recreate the issue locally.
-- For WordPress, [enable WP_DEBUG & WP_DEBUG_LOG](/logs#how-do-i-enable-error-logging-for-wordpress) in wp-config.php. Then use the debug.log file to find warnings and errors.
-- Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/lando-wordpress) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
+- For WordPress, [enable WP_DEBUG & WP_DEBUG_LOG](/guides/logs-pantheon/faq-logs#how-do-i-enable-error-logging-for-wordpress) in wp-config.php. Then use the debug.log file to find warnings and errors.
+- Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/local-development/lando-wordpress) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
 
 ## Pantheon Dashboard
 
@@ -86,7 +92,7 @@ If Pantheon is experiencing a platform issue that impacts sites, we post updates
 
 ### HTTPS Issues
 
-When resolving issues with Pantheon's [HTTPS](/https) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
+When resolving issues with Pantheon's [HTTPS](/guides/global-cdn/https) certificates, a good first step is to remove and re-add the domain, which will restart the certificate provisioning process.
 
 ### Code Changes
 
@@ -104,11 +110,11 @@ Check [Composer](/guides/composer) dependencies as well. When a Composer package
 
 See [Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) on our [WordPress and Drupal Core Updates](/core-updates) page for more information on core update conflicts. Note, deleted `README.txt` files can cause dashboard conflicts.
 
-For conflicts introduced by other code merges (like from Multidev environments), see [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts).
+For conflicts introduced by other code merges (like from Multidev environments), see [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts).
 
 ## White Screen of Death (WSOD)
 
-The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/logs). See [PHP Errors and Exceptions](/php-errors) for more information on the type of errors you may find.
+The **WSOD** is a frustrating issue on WordPress and Drupal sites, since it provides no useful information on the cause. The first place you should look for information is the [log files](/guides/logs-pantheon). See [PHP Errors and Exceptions](/guides/php/php-errors) for more information on the type of errors you may find.
 
 ## WordPress
 
@@ -139,24 +145,9 @@ You must enable cookies for WordPress users to log in to their admin interface. 
 define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 ```
 
-## Drupal 7
+## Drupal
 
-Are you a Drupal 7 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
-
-## Drupal 8
-
-### UnmetDependenciesException when installing Drupal 8
-
-Sometimes when installing Drupal 8, users may see the following error:
-
-![A screenshot of a common Drupal 8 installation error](../images/drupal-8-install-error.png)
-
-This is apparently caused by a dirty cookie cache in the web browser. Users have reported success by re-installing in private or incognito mode in their browser.
-
-See the [UnmetDependenciesException when installing Drupal 8](https://www.drupal.org/project/drupal/issues/2594351) issue for more information.
-
-Are you a Drupal 8 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md)
-
+Are you a Drupal wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
 
 ### Displaying Error Messages
 
@@ -166,8 +157,8 @@ $config['system.logging']['error_level'] = 'verbose';
 
 ## Additional Resources
 
-- [Errors and Server Responses](/errors-and-server-responses)
-- [PHP Errors and Exceptions](/php-errors)
-- [Database Connection Errors](/database-connection-errors)
-- [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
+- [Errors and Server Responses](/guides/errors-and-server-responses)
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)

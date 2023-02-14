@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+cms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 - Using Terminus (recommended):
 
      ```shell{promptUser:user}

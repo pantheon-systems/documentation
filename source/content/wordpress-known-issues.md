@@ -1,8 +1,13 @@
 ---
 title: WordPress Known Issues
 description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress sites.
-cms: "WordPress"
-categories: [troubleshoot]
+contenttype: [doc]
+innav: [true]
+categories: [issues]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code]
 ---
 This page tracks known issues and the recommended solution (if any) for running WordPress on the Pantheon website platform. Most sites work fine, but there are some common gotchas we are tracking and working to address.
@@ -15,7 +20,7 @@ If you are importing a site and the database has custom prefixes for your DB tab
  - Update user metadata with `update wp_usermeta set meta_key = replace(meta_key, 'oldprefix_', 'wp_');`, replacing `oldprefix` with the previously used prefix.
 
 <Alert title="Note" type="info">
-Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/docs/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
+Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/docs/guides/mariadb-mysql/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
 </Alert>
 
 ## Automatic Updates
@@ -33,13 +38,13 @@ If you see this error:
 Warning: session_start(): user session functions not defined
 ```
 
-It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more about [WordPress and PHP Sessions](/wordpress-sessions).
+It means you have some code (plugin or theme) that's using PHP Sessions, which require a plugin to work on Pantheon. Read more about [WordPress and PHP Sessions](/guides/php/wordpress-sessions).
 
 ### PHP Version Compatibility
 
 WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issues with PHP 8.1 are deprecation notices. A deprecation notice is not an error, but an indicator of the compatibility work that is needed before PHP 9 is released and notices become fatal errors. The PHP code will continue to work with the deprecation notices. 
 
-For more information, refer to the [PHP Versions](/php-versions) documentation. 
+For more information, refer to the [PHP Versions](/guides/php/php-versions) documentation. 
 
 ## Site Networks / Multisite
 

@@ -1,9 +1,15 @@
 ---
 title: DNS Host-specific DNS Instructions
 description: A list of docs to help you connect your Pantheon site to your domain
-categories: [go-live]
 tags: [dns]
 reviewed: "2020-04-16"
+contenttype: [doc]
+innav: [true]
+categories: [domains]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Pantheon provides DNS host-specific instructions on how to connect your domain from your DNS provider to Pantheon.
@@ -17,9 +23,8 @@ If your DNS provider is not on the list below, consult the [Configure DNS](/guid
 ## Next Steps
 
 - [Choose a Primary Domain for SEO](/guides/launch/redirects)
-- [Configure Redirects](/redirects)
 
-## See Also
+## More Resources
 
-- [DNS](/dns)
-- [Platform and Custom Domains](/domains)
+- [DNS](/guides/domains/dns)
+- [Platform and Custom Domains](/guides/domains)

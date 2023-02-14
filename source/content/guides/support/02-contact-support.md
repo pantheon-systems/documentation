@@ -2,7 +2,13 @@
 title: Get Support
 subtitle: Contact Support
 description: Learn about different channels of support.
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [collaborate, continuous-integration, git, webops, workflow]
 buildtools: true
 anchorid: contact-support
@@ -34,7 +40,7 @@ The ticket support feature is available to certain Account packages and account 
 
 1. Click **Open Ticket**
 
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/change-management#organizations-roles-and-permissions).
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
 
 ## Real Time Chat Support
 

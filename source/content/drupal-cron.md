@@ -1,11 +1,18 @@
 ---
 title: Cron for Drupal
 description: Understanding how Pantheon cron execution and cron management works on your Drupal site.
-cms: "Drupal"
+tags: [cron, D8, D9, D10]
+reviewed: "2020-12-13"
+permalink: docs/drupal-cron
+contenttype: [doc]
+innav: [true]
 categories: [automate]
-tags: [cron]
-reviewed: "2020-06-30"
+cms: [drupal]
+audience: [development]
+product: [localdev, newrelic, terminus]
+integration: [pingdom]
 ---
+
 Cron is a time-based task scheduler that can be configured to automatically execute tasks without any manual involvement beyond the initial configuration.
 
 Cron will always run unless all jobs are specifically set to 'Off' via Elysia or Ultimate Cron modules. Cron will also not run via Drush if a cron key is set with Elysia.
@@ -90,9 +97,9 @@ To disable Drupal's standard cron:
 
   ![The cron settings in the Drupal admin interface, set to run cron "never".](../images/run-cron-config.png)
 
-### Drupal 7 and Elysia Cron
+### Drupal and Elysia Cron
 
-Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron) contrib module to extend the standard cron can disable it globally in the module's settings:
+Drupal sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron) contrib module to extend the standard cron can disable it globally in the module's settings:
 
 ![Disable cron globally, including Elysia Cron and Drush invocations.](../images/disable_cron_elysia.png)
 
@@ -109,8 +116,8 @@ To disable triggering cron by page visits, adjust the value of **Run cron on vis
 The most common causes are:
 
 - Missing `sites/default/settings.php`
-- [PHP fatal errors](/php-errors)
-- [Invalid redirection logic in settings.php](/domains/#redirect-to-https-and-the-primary-domain)
+- [PHP fatal errors](/guides/php/php-errors)
+- [Invalid redirection logic in settings.php](/guides/domains)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
 ### Can I trigger  cron externally on a locked site?
@@ -138,5 +145,5 @@ No. You can create a custom module that uses the [`hook_cron`](https://api.drupa
 ## Resources
 
 - [Drupal.org Community Documentation - Set up Cron](https://www.drupal.org/docs/7/setting-up-cron/overview)
-- [Elysia Cron - extends Drupal standard Cron for Drupal 7](https://www.drupal.org/project/elysia_cron)
-- [Ultimate Cron - extends Drupal standard Cron for Drupal 7, Drupal 8, and Drupal 9](https://www.drupal.org/project/ultimate_cron)
+- [Elysia Cron - extends Drupal standard Cron for Drupal](https://www.drupal.org/project/elysia_cron)
+- [Ultimate Cron - extends Drupal standard Cron for Drupal](https://www.drupal.org/project/ultimate_cron)

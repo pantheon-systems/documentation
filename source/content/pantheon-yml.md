@@ -1,9 +1,15 @@
 ---
 title: Pantheon YAML Configuration Files
 description: Learn how to manage advanced site configuration
-categories: [platform]
 tags: [https, launch, code, workflow]
 reviewed: "2022-03-16"
+contenttype: [doc]
+innav: [true]
+categories: [config]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [quicksilver]
 ---
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
@@ -76,9 +82,8 @@ protected_web_paths_override: true
 The standard protected web paths can be important to the security of your site. If you override protection with this property, be sure to copy all of the standard protected web paths into your `pantheon.yml` file, and only remove those that you are certain are safe to expose.
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
-
-* [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
-* [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+ 
+* [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
 ### Enforce HTTPS + HSTS
@@ -121,7 +126,7 @@ php_version: 8.0
 
 #### Considerations
 
-- [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
+- [Upgrading PHP Versions](/guides/php/php-versions) may require you to resolve compatibility issues with your site's codebase.
 - From time to time, we will roll out a new default version of PHP, which will be available to apply as a one-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 - You'll always be able to test new default PHP version in Dev and Test before deploying Live.
 
@@ -133,7 +138,7 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
 1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. 
 
-1. Push the changes to a [Multidev](/multidev) and ensure that the site performs as expected.
+1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 
   Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
@@ -152,9 +157,9 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
    Keep in mind that some versions of Drupal and WordPress require a specific minimum or maximum version for compatibility.
 
-This table shows the recommended MariaDB version for each CMS:
+This table shows the supported MariaDB version for each CMS:
 
-| CMS           | Recommended MariaDB Version |
+| CMS           | Supported MariaDB Version(s) |
 |---------------|-----------------------------|
 | Drupal < 7.76 | 10.3                        |
 | Drupal ≥ 7.76 | 10.4                        |
@@ -163,11 +168,11 @@ This table shows the recommended MariaDB version for each CMS:
 | Drupal ≥ 9.0  | 10.4 or 10.6                |
 | WordPress     | 10.4 or 10.6                |
 
-Users of Drupal 6 sites should consider [upgrading to Drupal 7](/drupal-updates#upgrade-from-drupal-6-to-drupal-7) for better support.
+Users of Drupal 6 sites should consider [upgrading to the latest version of Drupal](/drupal-updates) for better support.
 
-#### Considerations - Drupal 9
+#### Considerations - Drupal
 
-<Partial file="drupal-9/drupal-9-mariadb-considerations.md" />
+<Partial file="drupal/drupal-mariadb-considerations.md" />
 
 Confirm that the database upgrade completed successfully using the steps at the beginning of [Specify a Version of MariaDB](#specify-a-version-of-mariadb).
 
@@ -191,7 +196,7 @@ For more information on how to diagnose tables and troubleshoot potential issues
 
 ### Specify a Solr Version
 
-Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal 9 sites:
+Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal sites:
 
 ```yaml:title=pantheon.yml
 search:
@@ -201,7 +206,7 @@ search:
 #### Considerations
 
 - The valid values for the versions are `3` and `8`.
-- Currently, Solr 8 is only supported for [Drupal 9](https://pantheon.io/docs/guides/solr-drupal/solr-drupal-9) sites.
+- Currently, Solr 8 is only supported for [Drupal 9 and higher](/guides/solr-drupal/solr-drupal) sites.
 
 ### Drush Version
 
@@ -211,11 +216,11 @@ Add `drush_version` to the top level of the `pantheon.yml` file to configure the
 drush_version: 8
 ```
 
-For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/drush-versions).
+For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/guides/drush/drush-versions).
 
 ### Filemount Path
 
-Pantheon provides a [cloud-based filesystem](/files) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `sites/default/files` (Drupal), `wp-content/uploads` (WordPress), or `app/uploads` (WordPress using Bedrock), but you can change the location with the `filemount` variable.
+Pantheon provides a [cloud-based filesystem](/guides/filesystem) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `sites/default/files` (Drupal), `wp-content/uploads` (WordPress), or `app/uploads` (WordPress using Bedrock), but you can change the location with the `filemount` variable.
 
 <Alert title="Warning" type="danger">
 
@@ -231,7 +236,7 @@ filemount: /files
 
 Complete the following before deploying `filemount` (**required**):
 
-1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://wordpress.org/support/article/editing-wp-config-php/#moving-uploads-folder) to use the new path
+1. Reconfigure [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after) or [WordPress](https://wordpress.org/support/article/editing-wp-config-php/#moving-uploads-folder) to use the new path
 
 1. Add path to the `.gitignore` file.
 
@@ -241,11 +246,11 @@ Complete the following before deploying `filemount` (**required**):
 
 Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a team member. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
 
-For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
+For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/guides/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
 
 ## Custom Upstream Configurations
 
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/guides/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/guides/quicksilver/hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
@@ -271,9 +276,15 @@ remote: Valid versions are: 1
 
 While our parser will reject a `pantheon.yml` that is invalid, it won't necessarily give you the exact reason the file is invalid. Syntax errors are the most common reason for an invalid `pantheon.yml` file.
 
-### Deploying Configuration Changes to Multidev
+### Why can’t I update the PHP version on my Multidev?
 
-Changes made to `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. As a workaround, make some modification to `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
+The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev: 
+
+1. Navigate to [your `pantheon.yml` file](#configure-your-php-version).
+
+1. Modify your `pantheon.yml` file and re-commit to the Multidev.
+
+    - It does not matter what change you make to the file. Any change- even a comment- will allow the Multidev to detect the configuration change. You will receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
 ```none
 remote:
@@ -288,9 +299,13 @@ remote:
 
 ### Deploying Hotfixes
 
-Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). As a workaround, make a modification to your `pantheon.yml` file in a development environment (for example add a code comment), then deploy up to production using the standard Pantheon workflow.
+Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). Git tags created manually and pushed on the platform do not invoke all the processes that an actual deployment does. Pantheon standard workflow is done via the dashboard deploy or `terminus env:deploy`. As a workaround for hotfixes:
 
-## See Also
+1. Modify your `pantheon.yml` file in a development environment (for example add a code comment).
 
-* [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver)
-* [Upgrade PHP Versions](/php-versions)
+1. Deploy the changes to production using the dashboard deploy or `terminus env:deploy`.
+
+## More Resources
+
+* [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver)
+* [Upgrade PHP Versions](/guides/php/php-versions)

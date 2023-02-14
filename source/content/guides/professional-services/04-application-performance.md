@@ -2,7 +2,13 @@
 title: Pantheon Professional Services
 subtitle: Application Performance and Architecture
 description: Frontend and backend help with your WordPress and Drupal sites.
-categories: [performance]
+contenttype: [guide]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [development, sysadmin]
+product: [--]
+integration: [--]
 tags: [cdn, security, professional-services]
 reviewed: "2022-04-06"
 layout: guide

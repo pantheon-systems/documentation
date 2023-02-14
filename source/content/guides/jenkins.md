@@ -1,18 +1,25 @@
 ---
 title: Automatically Test and Deploy GitHub Changes to Pantheon from an Existing Jenkins Server
 description: Configure an existing Jenkins server to automatically test and deploy code changes to Pantheon when pushed to GitHub.
-categories: [automate]
 tags: [collaborate, continuous-integration, git, iterate]
 type: guide
 permalink: docs/guides/:basename
 date: 6/20/2017
+contenttype: [doc]
+innav: [true]
+categories: [automate, overview]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
+reviewed: "2022-12-13"
 ---
 
 [Jenkins](https://jenkins.io) is an open source Continuous Integration (CI) server which can be used to build, test, and deploy code on any Drupal and WordPress website on Pantheon. Unlike hosted services such as [CircleCI](https://circleci.com/), it is a Java application installed and run on a server, and requires regular upkeep and maintenance. However, it is very customizable and can even run non-CI related tasks, such as calling periodic cron jobs.
 
-In this guide, we'll configure your existing Jenkins server to automatically test and deploy Drupal 8 to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins will run tests against both the pull request and Pantheon's master branch and display the results.
+In this guide, we'll configure your existing Jenkins server to automatically test and deploy Drupal to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins will run tests against both the pull request and Pantheon's master branch and display the results.
 
-While this guide demonstrates Continuous Integration for Drupal 8 sites, the same workflow can be applied to WordPress with a few modifications:
+While this guide demonstrates Continuous Integration for Drupal sites, the same workflow can be applied to WordPress with a few modifications:
 
 <Accordion id="wordpress-mods" title="WordPress Modifications" icon="wrench">
 
@@ -56,14 +63,14 @@ You will need:
   - [Run Condition](https://plugins.jenkins.io/run-condition/)
   - [Rebuild](https://plugins.jenkins.io/rebuild/)
 - We recommended using matrix-based security when using Jenkins. Anonymous users should have read access to Jenkins projects.
-- Ability to create a Drupal site on Pantheon, with [Multidev](/multidev) enabled.
+- Ability to create a Drupal site on Pantheon, with [Multidev](/guides/multidev) enabled.
 - A [GitHub](https://github.com) account.
 
 ## Create A New Site
 
 ### Local Project Instantiation
 
-1. From your local terminal, use Composer to make a new local project based on our example, which contains Drupal 8, Behat, and other configuration settings:
+1. From your local terminal, use Composer to make a new local project based on our example, which contains Drupal, Behat, and other configuration settings:
 
   <Alert title="Note" type="info">
 
@@ -103,12 +110,12 @@ At this point, you should be able to create a local branch, commit a change, and
 
 ### Create a Pantheon Site
 
-Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite the default install with the code from our GitHub repository. In the commands below, replace the value for `--org=` with your organization's name.
+Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the default install with the code from our GitHub repository. In the commands below, replace the value for `--org=` with your organization's name.
 
 1. From your local terminal, use terminus to create a site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create $SITE "My Site" "Drupal 8" --org="My Team"
+  terminus site:create $SITE "My Site" "Drupal" --org="My Team"
   terminus connection:set $SITE.dev git
   ```
 

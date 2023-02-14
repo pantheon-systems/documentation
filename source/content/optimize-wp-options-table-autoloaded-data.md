@@ -1,21 +1,26 @@
 ---
 title: Optimize Your wp-options Table and Autoloaded Data
 description: Learn how to check and configure the autoloaded data in your wp_options table.
-cms: "WordPress"
-categories: [performance]
 tags: [cache]
-contributors: [carlalberto, whitneymeredith]
+contributors: [carl-alberto, whitneymeredith]
+contenttype: [doc]
+innav: [true]
+categories: [optimize]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## wp_options Table
 
 The `wp_options` table stores several types of data for your site, including:
 
-- settings for your plugins, widgets, and themes
-- temporarily cached data
-- site URL and home URL
-- category settings
-- autoloaded data
+- Settings for your plugins, widgets, and themes
+- Temporarily cached data
+- Site URL and home URL
+- Category settings
+- Autoloaded data
 
 <Alert title="Note" type="info" >
 
@@ -29,7 +34,7 @@ If your website is running slow and you receive the following message in the dat
 
 Check the size of your autoloaded data:
 
-1. Log in to your [MySQL client](/mysql-access).
+1. Log in to your [MySQL client](/guides/mariadb-mysql/mysql-access).
 
 1. Select your database (by default `pantheon`) and then click the `SQL` tab.
 
@@ -49,15 +54,22 @@ If your autoloaded data is less than 1 MB, it is unlikely that autoloaded data i
     SELECT option_name, length(option_value) FROM wp_options WHERE autoload='yes' ORDER BY length(option_value) DESC LIMIT 20;
     ```
 
- 1. Run the following code if you want to turn off autoload for an item:
+ 1. Select and run *one* of the SQL queries below if you want to turn off autoload for an item:
+
+   **Option 1:**
 
     ```sql
     update_option( 'wp_option', 'value' ); to be update_option('wp_option', 'value', 'no');
     ```
+    **Option 2:**
+
+    ```sql
+    UPDATE wp_options SET `autoload` = 'no' WHERE `option_name` = 'example_option_name';
+    ```
 
  <Alert title="Note"  type="info" >
 
- You must specify `no` in the third parameter or it will automatically default to `yes`.
+ You must specify `no` in the third parameter or the command will automatically default to `yes`.
 
  </Alert>
 
@@ -67,7 +79,7 @@ We recommend minimizing your autoloaded data to increase to your site's performa
 
 ### Redirect Your Site with PHP
 
-Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/redirects#redirect-with-php).
+Redirect plugins are common culprits for causing increased autoloaded cache. You can clean up your excess autoloaded data by [redirecting your site configuration with PHP](/guides/redirect#redirect-with-php).
 
 ### Clean up Transient Data
 
@@ -84,7 +96,7 @@ Run the following code to clean up your transient data:
 
  ### Avoid Using Transient Data
 
- You can use Pantheon's [Object Cache](/object-cache) to minimize the use of transient data inside the `wp_options` table.
+ You can use Pantheon's [Object Cache](/guides/object-cache) to minimize the use of transient data inside the `wp_options` table.
 
  ### Use Pantheon's Professional Services
 

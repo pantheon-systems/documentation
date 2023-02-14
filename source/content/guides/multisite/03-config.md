@@ -1,18 +1,23 @@
 ---
 title: WordPress Site Networks
 subtitle: Configure
-description: Overview of WordPress multisite support on the Pantheon Platform.
+description: Learn how to configure your WordPress Site Networks.
 layout: guide
 type: guide
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [cms, config]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/config/
 editpath: multisite/03-config.md
 image: multisite
 ---
 
-This doc is intended for customers who have had a WordPress Site Network created for them by a Pantheon employee. If you do not have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. After you visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
+This section is intended for customers who have had a WordPress Site Network created for them by a Pantheon employee. If you do not have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. After you visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
 
 <Alert title="Note" type="info">
 
@@ -22,7 +27,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 ## Install the WordPress Site Network
 
-Using [Terminus](/terminus) to install a WordPress Site Network is recommended.
+We recommend using [Terminus](/terminus) to install a WordPress Site Network.
 
 1. Install the most recent release of Terminus:
 
@@ -79,7 +84,7 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
 
 1. Click **Open SFTP client**, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
@@ -106,7 +111,7 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
     switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
       case 'live':
         // Value should be the primary domain for the Site Network.
-        define( 'DOMAIN_CURRENT_SITE', 'live-<site>.pantheonsite.io' );
+        define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
         // Once you map a domain to Live, you can change DOMAIN_CURRENT_SITE
         // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
         break;
@@ -124,9 +129,9 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
   }
   ```
 
-If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
-  
-You may notice that the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, you should conditionally define the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
+    If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
+      
+    You may notice that the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, you should conditionally define the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment after you edit.
 
@@ -169,3 +174,11 @@ After these steps are complete, both sites on the WordPress Site Network should 
 </Accordion>
 
 Explore the WordPress Network Dashboard to become familiar with the variety of additional settings. You can review the options that are available for each site you create, manage users across WordPress Multisite, and learn about the network settings. After you explore the WordPress Network Dashboard, learn how to use the WordPress Site Network with the Pantheon Workflow.
+
+## More Resources
+
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
+
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)

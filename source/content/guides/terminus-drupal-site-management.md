@@ -1,15 +1,21 @@
 ---
 title: Using Terminus to Create and Update Drupal Sites on Pantheon
 description: Detailed information on creating and updating new Pantheon Drupal sites using Terminus and the command line.
-cms: "Drupal"
-categories: [get-started]
+contenttype: [doc]
+innav: [true]
+categories: [cli, create, update]
+cms: [drupal]
+audience: [development]
+product: [terminus]
+integration: [--]
 tags: [terminus, drush]
 type: guide
 permalink: docs/guides/:basename
 contributors: [erikmathy]
-
+reviewed: "2022-12-13"
 ---
 ## Create Sites Faster and More Efficiently
+
 The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
 <Alert title="Note"  type="info" >
@@ -54,8 +60,8 @@ Follow the steps below to create a new site.
 1. List the available Upstreams:
 
  ```bash{outputLines:2}
- terminus upstream:list | grep "Drupal 7" | grep "core"
- 21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                               drupal7                                         core     drupal
+ terminus upstream:list | grep "Drupal" | grep "core"
+ 21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal                               drupal7                                         core     drupal
  ```
 
    - If the Upstream ID in the output you receive is shorter than 36 characters (including hyphens), enlarge your terminal window and run the command again. Otherwise, you might encounter an error similar to:
@@ -88,19 +94,35 @@ Follow the steps below to create a new site.
 
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
-```bash{outputLines:2-7}
-terminus drush <site>.<env> -- site-install
-Running drush site-install  on terminus-cli-create-dev
-dev.a248f559-fab9-49cd-983c-f5@appserver.dev.a248f559-fab9-49cd-983c-f5c0d11a2464.drush.in's password:
-Could not find a Drupal settings.php file at ./sites/default/settings.php.
-You are about to create a sites/dev-terminus-cli-create.pantheon.io/files directory and create a sites/dev-terminus-cli-create.pantheon.io/settings.php file and DROP all tables in your 'pantheon' database. Do you want to continue? (y/n): y
-Starting Drupal installation. This takes a few seconds ...                  [ok]
-Installation complete.  User name: admin  User password: ********         [ok]
-```
+1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal on the Dev environment:
 
-If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/settings-php) file.
+  ```bash{promptUser: user}
+  terminus drush my-d9-site.dev -- site-install -y
+  ```
+  
+  If you get the error message `ControlPath too long`, you may need to [update your SSH configuration](/ssh-keys#control-path-error).
 
-You should now be able to open a web browser and see your brand new Drupal site! On Mac, try using the `open` command to see an environment in your default browser:
+  If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/guides/php/settings-php) file.
+
+1. Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
+
+   ```bash{promptUser: user}
+   terminus drush  my-d9-site.dev  -- user-login
+  ```
+
+1. Create the Test environment:
+
+  ```bash{promptUser: user}
+  terminus env:deploy my-d9-site.test
+  ```
+
+1. Create the Live environment:
+
+  ```bash{promptUser: user}
+  terminus env:deploy my-d9-site.live
+  ```
+
+You should now be able to open a web browser and see your brand new Drupal site. On Mac, try using the `open` command to see an environment in your default browser:
 
 ```bash{promptUser: user}
 open https://dev-terminus-cli-create.pantheon.io
@@ -205,6 +227,10 @@ terminus env:list <site>
 You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. 
 
 ##  Next Steps
-- Learn more about [Drush](/drush).
+- Learn more about [Drush](/guides/drush).
 
-- After you've mastered Terminus, take it a step further with [Continuous Integration](/continuous-integration).
+- After you've mastered Terminus, take it a step further with [Continuous Integration](/guides/local-development/continuous-integration).
+
+## More Resources
+
+- [Create a Drupal Site From the Command Line Using Terminus and Drush](/guides/drush/drupal-commandline)

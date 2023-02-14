@@ -2,8 +2,13 @@
 title: Apache Solr for Drupal
 subtitle: Using Solr on Drupal 7
 description: Detailed information on using Apache Solr with Drupal 7.
-cms: "Drupal 7"
-categories: [integrate]
+contenttype: [guide]
+innav: [true]
+categories: [search]
+cms: [drupal7]
+audience: [development]
+product: [search]
+integration: [--]
 tags: [solr, search, modules]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
@@ -67,20 +72,22 @@ The next step is to post the `schema.xml`, which describes Drupal fields to the 
 
 ![Solr configuration schema](../../../images/solr-config-schema.png)
 
-Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr). In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.
+1. Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr) > click **Post schema**.
 
-Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
+    - In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, 
 
-```php:title=settings.php
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
- // set schema for apachesolr OR set schema for search_api_solr (uncomment the line you need)
- // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
- // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/search_api_solr/solr-conf/solr-3.x/schema.xml';
- // or if you have a contrib folder for modules use
- // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/apachesolr/solr-conf/solr-3.x/schema.xml';
- // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/search_api_solr/solr-conf/solr-3.x/schema.xml';
-}
-```
+1. Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
+
+    ```php:title=settings.php
+    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    // set schema for apachesolr OR set schema for search_api_solr (uncomment the line you need)
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/apachesolr/solr-conf/solr-3.x/schema.xml';
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/search_api_solr/solr-conf/solr-3.x/schema.xml';
+    // or if you have a contrib folder for modules use
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/apachesolr/solr-conf/solr-3.x/schema.xml';
+    // $conf['pantheon_apachesolr_schema'] = 'sites/all/modules/contrib/search_api_solr/solr-conf/solr-3.x/schema.xml';
+    }
+    ```
 
 <Alert title="Note" type="info">
 
@@ -218,7 +225,7 @@ The following code changes are required before Solr can be safely uninstalled an
 
 <Partial file="remove-addons/d7-solr.md" />
 
-## See Also
+## More Resources
 
 - [Apache Solr on Pantheon](/solr)
 - [Using OpenSolr with Pantheon](/opensolr)

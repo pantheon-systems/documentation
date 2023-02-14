@@ -1,8 +1,7 @@
 ---
 title: Pantheon Autopilot
 subtitle: Troubleshoot Autopilot Error Messages
-description: "Diagnose and remedy some common Autopilot errors."
-categories: [automate]
+description: Diagnose and remedy some common Autopilot errors.
 tags: [autopilot, troubleshoot, webops]
 type: guide
 layout: guide
@@ -11,6 +10,13 @@ anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/06-troubleshoot.md
 reviewed: "2022-06-02"
+contenttype: [guide]
+innav: [true]
+categories: [automate, test, update, faq]
+cms: [--]
+audience: [development]
+product: [autopilot]
+integration: [--]
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
@@ -19,21 +25,21 @@ This page helps troubleshoot common issues that you may encounter when using Aut
 
 If you have already attempted to troubleshoot an error, or if you want to confirm that the error is consistent, try running Autopilot on the site again:
 
-1. Autopilot will not allow updates to be queued until all errors have been reviewed and acknowledged.
+1. Review and acknowledge any errors to allow Autopilot to queue updates.
 
-If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
+   If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
-1. From the **Sites** list on the Autopilot screen, click **Actions** on the line that corresponds with the site, then **Manage Autopilot Settings**.
+1. Click **Sites** > **Actions** > **Manage Autopilot Settings**.
 
-1. If there are new components that Autopilot should check for (like plugins, modules, or themes), on the **Autopilot Configuration** screen, click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components.
+1. Navigate to the **Autopilot Configuration** screen > click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
 
-1. To manually run Autopilot, click **Status** in Autopilot's side bar, then **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates**.
+1. Click **Status** in Autopilot's side bar > click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually.
 
 ### Re-run Autopilot If Tests Have Already Passed
 
-Manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence.
+You must manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence. To start an update manually:
 
-To manually start an update, click **Actions** in the site's row on the Autopilot screen, and click **Start Applying Updates**.
+Click **Actions** in the site's row on the Autopilot screen > click **Start Applying Updates**.
 
 ### Re-run Autopilot If Tests Were Approved After Dev Changes
 
@@ -77,9 +83,9 @@ An error occurred because your site is currently running an unsupported version 
   
 ### Diagnosis
 
-Autopilot only works on Drupal sites that are running Drush 8. Drush 5, 7, and 9 are not supported. Composer-managed sites should use Drush 10 and will not display the Drush version error.
+If your Drupal site is not managed with Composer, Autopilot only works on sites that are running Drush 8. Composer-managed sites may use any compatible Drush version and will not display the Drush version error.
 
-Currently, Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
+Autopilot only supports Integrated Composer; Build Tools sites cannot be updated.
 
 ### Solution
 
@@ -159,10 +165,11 @@ This error message most likely results from a merge conflict when applying upstr
 
 ### Solution
 
-Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) documentation.
+Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the documentation on [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
-If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
-](/guides/integrated-composer#troubleshooting-code-syncs-and-upstream-updates) and [Adding Dependencies to Your Upstream](/guides/integrated-composer#how-to-add-dependencies-to-your-upstream).
+If the error is displayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates](/guides/integrated-composer/ic-troubleshooting) and [Adding Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams).
+
+This error can also display if some of the updates failed testing. This results in partial updates, in which the updates that passed testing are applied, while the updates that failed testing are not applied. Refer to the [Failing Tests](/guides/autopilot/tests-results/#failing-tests) section for more information on how to resolve failed tests.
 
 </Accordion>
 
@@ -234,13 +241,23 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 
 <Accordion title="Could not create or reset the Autopilot Multidev due to an unexpected error." id="cannot-converge-multidev" icon="info-sign">
 
-### Diagnosis
+### CMS Error
 
+#### Diagnosis
 This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
-### Solution
-
+#### Solution
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
+
+### Composer Error
+
+#### Diagnosis
+The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer), 
+
+#### Solution
+Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
+
+You can also use [Composer 2](/guides/integrated-composer/ic-support) to test locally and identify issues by running `composer install` or `composer update`
 
 </Accordion>
 
@@ -280,11 +297,11 @@ Use the following steps:
 
 * For WordPress:
 
-`wp cache flush`
+  `wp cache flush`
 
 * Drupal:
 
-`drush cache-rebuild`
+  `drush cache-rebuild`
 
 </Accordion>
 
@@ -312,7 +329,7 @@ A CMS was not detected.
 
 ### Solution
 
-Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the [documentation](https://pantheon.io/docs/create-sites).
+Install Drupal or WordPress on this site, and run Autopilot again. For more information on creating a new Drupal or WordPress site on Pantheon, refer to the documentation on [Creating Sites](/guides/legacy-dashboard/create-sites).
 
 </Accordion>
 
@@ -336,10 +353,81 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 ### Diagnosis
 
-Site is running a framework that is not Drupal, Drupal 8, or WordPress. Currently, WordPess Multisite (`wordpress_network`) is not supported.
+Site is running a framework that is not Drupal or WordPress. Currently, WordPress Multisite (`wordpress_network`) is not supported.
 
 ### Solution
   
-Contact support for assistance if running a framework that is not Drupal, Drupal 8, or WordPress. Any other framework, including WordPress Multisite Network is not supported.
+Contact support for assistance if running a framework that is not Drupal or WordPress. Any other framework, including WordPress Multisite Network is not supported.
 
 </Accordion>
+
+## CLI Tool Failed
+
+<Accordion title="We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected." id="failed-cli-tool" icon="info-sign">
+
+### Diagnosis
+
+There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
+
+Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for an unexpected output or errors. Alternatively, you can use the command `$SITE.autopilot` for the Autopilot environment.
+  
+### Solution
+  
+After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Quicksilver is Unavailable
+
+<Accordion title="We could not execute some Quicksilver scripts on this site." id="no-quicksilver" icon="info-sign">
+
+### Issue
+
+Quicksilver scripts failed to execute on the site. 
+  
+### Solution
+  
+Contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Database Could Not Be Updated
+
+<Accordion title="We ran into an issue with Autopilot because the database could not be updated." id="no-database-updates" icon="info-sign">
+
+### Issue
+
+An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated. 
+  
+### Solution
+  
+Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
+  
+</Accordion>
+
+## Upstreams Could Not Be Merged
+
+<Accordion title="We could not apply upstream updates because the upstreams could not be merged." id="upstream-no-common-ancestor" icon="info-sign">
+
+### Issue
+
+This error is distinct from a merge conflict, and is encountered when there is no shared Git history between the site's commits and the upstream's commits. This error is most often encountered when the site's upstream has been changed, or when a different Git history has been force-pushed for the site's code repository.
+
+### Solution
+
+Update the site's code or the upstream so that the site and upstream share a common history.
+
+You can also disable upstream updates if you do not want Autopilot to maintain upstream updates, including core updates. Autopilot will continue to update plugins, themes, and modules.
+
+</Accordion>
+
+## More Resources
+
+- [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
+
+- [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
+
+- [Autopilot FAQs](/guides/autopilot/autopilot-faq)
+
+- [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
+

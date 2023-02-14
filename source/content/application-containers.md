@@ -1,9 +1,15 @@
 ---
 title: All About Application Containers
 description: Information on Pantheon's container-based, grid-model infrastructure.
-categories: [platform]
 tags: [webops]
 reviewed: "2020-04-24"
+contenttype: [doc]
+innav: [true]
+categories: [overview]
+cms: [--]
+audience: [development, sysadmin]
+product: [--]
+integration: [--]
 ---
 
 Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the [Runtime Matrix](https://pantheon.io/features/elastic-hosting), a distributed grid of over a million Linux containers running PHP and NGINX that allow us to provision and scale application containers for your site.
@@ -27,7 +33,7 @@ terminus env:wake <site>.<env>
 ## What's In an Application Container?
 
 - All containers are created equally; free accounts are not underpowered.
-- All environments contain a highly tuned PHP-FPM worker and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/phpinfo).
+- All environments contain a highly tuned PHP-FPM worker and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/guides/secure-development/phpinfo).
   - Packages:
     - LDAP
     - SOAP
@@ -45,8 +51,8 @@ terminus env:wake <site>.<env>
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB. This cannot be changed.
   - Maximum max\_file\_uploads is 20. This cannot be changed.
   - WordPress migrations via `wp-cli` may require [changing the WP_MAX_MEMORY_LIMIT constant](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php).
-  - Each PHP process can have either 256MB or 512MB of memory, [depending on the plan](/site-plans-faq/#plan-resources).
-- For a comprehensive list of MySQL settings, [access your database](/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
+  - Each PHP process can have either 256MB or 512MB of memory, [depending on the plan](/guides/account-mgmt/plans/resources).
+- For a comprehensive list of MySQL settings, [access your database](/guides/mariadb-mysql/mysql-access) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
 - Other than error reporting settings, the runtime configuration is the same across environments.
 - We do not support custom PEAR or PECL modules at this time, but we can work with you to make common sense libraries available globally.
 - Your containers can access an allowlisted set of [binary tools](/external-libraries) (e.g. wkhtmltopdf). Contact us if you have specific needs.
@@ -62,7 +68,7 @@ While these are related topics, they need to be evaluated separately for your pr
 
 Typically, the best practice is to optimize for performance first and then begin to look at handling scale. In most cases, if you are able to deliver an individual request quickly, handling more requests is primarily a matter of adding more containers up to the point where other bottlenecks (typically SQL queries) emerge. At that point, the next step really depends on your application.
 
-Because Pantheon does not restrict or limit Sandbox sites or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic&reg; Performance Monitoring](/new-relic) to give you insights about your site's performance.
+Because Pantheon does not restrict or limit Sandbox sites or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic&reg; Performance Monitoring](/guides/new-relic) to give you insights about your site's performance.
 
 ## Multiple Application Containers
 
@@ -70,7 +76,7 @@ For plans starting at Performance Medium and higher, all Test and Live environme
 
 ### Expected Behavior
 
-Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/logs#automate-downloading-logs).
+Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/guides/logs-pantheon/automate-log-downloads).
 
 ### Failover Application Containers
 

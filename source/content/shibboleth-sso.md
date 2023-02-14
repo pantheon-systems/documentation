@@ -1,14 +1,20 @@
 ---
 title: Using SimpleSAMLphp with Shibboleth SSO
 description: Using SimpleSAMLphp to configure a single sign-on system for your Drupal or WordPress site.
-categories: [integrate]
 tags: [security, sso, users]
 contributors: [kyletaylored]
+contenttype: [doc]
+innav: [true]
+categories: [security]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [SimpleSAMLphp]
 ---
 
 This doc covers the installation and configuration of [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. For a simpler SSO service provider solution, jump to [Alternatives](#alternatives).
 
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/latest/simplesamlphp-sp.html). This documentation contains only the necessary extra steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/stable/simplesamlphp-sp.html). This documentation contains only the necessary extra steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
 
 <Alert title="Note" type="info">
 
@@ -46,7 +52,7 @@ This is only for advanced users working on integrating a Shibboleth single sign-
   git commit -am "Adding SimpleSAML symlink"
   ```
 
-1. [Generate or install certs](https://simplesamlphp.org/docs/latest/simplesamlphp-sp#section_1_1) as needed, and add them to the repository in `private/simplesamlphp/cert`.
+1. [Generate or install certs](https://simplesamlphp.org/docs/stable/simplesamlphp-sp) as needed, and add them to the repository in `private/simplesamlphp/cert`.
 
 </Tab>
 
@@ -90,11 +96,11 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
 
  ```json:title=composer.json
-   "scripts": {
-      "post-update-cmd": [
+"scripts": {
+    "post-update-cmd": [
         "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ],
-      "post-install-cmd": [
+    "post-install-cmd": [
         "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ]
 },
@@ -104,7 +110,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 
 1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
-1. [Generate or install certificates](https://simplesamlphp.org/docs/latest/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
+1. [Generate or install certificates](https://simplesamlphp.org/docs/stable/simplesamlphp-sp) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 
 By the end of these steps, you should have a docroot structure similar to the output below:
 
@@ -193,35 +199,32 @@ You can now visit the subdirectory `/simplesaml` on your development site and co
 
 ## Drupal Configuration
 
-If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal 8 sites.
+If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal sites.
 
-<Alert title="Note" type="info">
+### Composer settings.php File
 
-If you are using Composer, configuration of the `setting.php` is not needed. For non-Composer implementations, you can add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
+Configuration of the `setting.php` file is not needed if you are using Composer. 
 
-<TabList>
+### Non-Composer settings.php File
 
-<Tab title="Drupal 7" id="drupal-7-settings">
+Non-Composer implementations must add the following lines to the `settings.php` file to allow the Drupal module to locate SimpleSAMLphp:
+
+**Drupal 7 Example**
 
 ```php:title=settings.php
 # Provide universal absolute path to the installation.
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
 ```
 
-</Tab>
+### Drupal (Latest)
 
-<Tab title="Drupal 8" id="drupal-8-settings" active={true}>
+Drupal 10 includes Symfony 6. The SimpleSAMLphp library is not currently compatible with Symfony 6 unless you use the dev-master branch. There is a new `simplesamlphp_auth branch (4.x)` that you can use if you require a compatibility workaround. Note that this workaround requires you to use dev versions at your own risk.
 
-```php:title=settings.php
-# Provide universal absolute path to the installation.
-$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp';
+You must require the Drupal module like this:
+
+```bash{promptUser: user}
+composer require drupal/simplesamlphp_auth:"^4"
 ```
-</Tab>
-
-</TabList>
-
-</Alert>
-
 
 ## WordPress Multisite Issues
 
@@ -243,7 +246,7 @@ There is a known issue with the Drupal 7 version of the SimpleSAMLphp Authentica
 
 ### SimpleSAMLphp Error: can't find metadata
 
-Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/1.17/simplesamlphp-sp).
+Generate the required identity provider connections files through the modules, or follow the steps in SimpleSAMLphp for [Adding IdPs to the SP](https://simplesamlphp.org/docs/stable/simplesamlphp-sp).
 
 The files must be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, if you are using Composer. This is similar to the config setup for Composer.
 
@@ -255,6 +258,6 @@ Other plugins and modules can provide SSO provider services with less configurat
 
 **Drupal:** The module [SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider](https://www.drupal.org/project/miniorange_saml) provides a simple drop-in alternative way to configure SAML with a variety of IdPs.
 
-The Support team has tested this module on Pantheon using Drupal 8 and Okta.
+The Support team has tested this module on Pantheon using Okta.
 
 **WordPress:** The WordPress version of [SAML SP Single Sign On – SSO login](https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/) works in exactly the same way as the Drupal module, but has not been tested by Pantheon Support.

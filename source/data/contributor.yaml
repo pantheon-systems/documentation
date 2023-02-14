@@ -1,30 +1,28 @@
-- id: carolynshannon
-  name: Carolyn Shannon
-  bio: Sr. Manager of Education Services, Pantheon
-  avatar: //avatars.githubusercontent.com/u/55147679
-  github: //github.com/carolyn-shannon
-  drupal: //www.drupal.org/u/chicagomom
-  twitter: //twitter.com/chicagomom
-  linkedin: //www.linkedin.com/in/carolynshannon/
 - id: edwardangert
   name: Edward Angert
-  twitter: https://twitter.com/edwardangert
+  twitter: //twitter.com/edwardangert
   bio: Manager of Technical Documentation, Pantheon
   github: //github.com/edwardangert
   avatar: //avatars2.githubusercontent.com/u/17991901
   linkedin: //www.linkedin.com/in/edward-angert/
-- id: joa-pan
-  name: Joanie Edwards
-  avatar: //github.com/joa-pan.png?size=460
-  bio: Senior Technical Writer, Pantheon
-  github: //github.com/joa-pan
-  drupal: https://www.drupal.org/u/_joan
 - id: michellecolon-pantheon
   name: Michelle Colón
   avatar: //github.com/michellecolon-pantheon.png?size=460
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
+- id: joa-pan
+  name: Joanie Edwards
+  bio: Senior Technical Writer, Pantheon
+  github: //github.com/joa-pan
+  avatar: //github.com/joa-pan.png?size=460
+  drupal: //www.drupal.org/u/_joan
+- id: wordsmither
+  name: Jennifer Hoffman
+  avatar: //github.com/wordsmither.png?size=460
+  bio: Senior Technical Writer, Pantheon
+  github: //github.com/wordsmither
+  linkedin: //www.linkedin.com/in/wordsmithwest/
 - id: whitneymeredith
   name: Whitney Meredith
   avatar: //github.com/whitneymeredith.png?size=460
@@ -32,21 +30,24 @@
   github: //github.com/whitneymeredith
 - id: eabquina
   name: Eladio Abquina
-  bio: Manager of Implementation Services, Pantheon
-  twitter: https://twitter.com/eabquina
-  github: //github.com/eabquina
   avatar: //pbs.twimg.com/profile_images/1290706689/SAMPLE2_400x400.jpg
+  bio: Manager of Implementation Services, Pantheon
+  twitter: //twitter.com/eabquina
+  github: //github.com/eabquina
   linkedin: //ph.linkedin.com/in/eabquina
-- id: carlalberto
+- id: carl-alberto
   name: Carl Alberto
+  twitter: //twitter.com/carlalbertodev
+  bio: WordPress Solutions Architect, Pantheon
   github: //github.com/carl-alberto
-  bio: Implementation Consultant, Pantheon
-  avatar: //avatars.githubusercontent.com/u/5098765
+  avatar: //github.com/carl-alberto.png?size=460
+  linkedin: //www.linkedin.com/in/carlalberto/
+  wordpress: //profiles.wordpress.org/carl-alberto/
 - id: suzannealdrich
   name: Suzanne Aldrich
-  url: https://suzanne.link
+  url: //suzanne.link
   avatar: //s.gravatar.com/avatar/cca6b0cbfbc6ed1804e381d66d012f02?s=300
-  twitter: https://twitter.com/SuzanneAldrich
+  twitter: //twitter.com/SuzanneAldrich
   github: //github.com/suzannealdrich
   linkedin: //www.linkedin.com/in/suzannealdrich
   drupal: //www.drupal.org/u/suzanne.aldrich
@@ -77,7 +78,7 @@
   avatar: //avatars.githubusercontent.com/u/38017436?v=4
 - id: albertcausing
   name: Albert Causing
-  bio: Support Team Lead, Pantheon
+  bio: Manager, CSE EMEA, Pantheon
   avatar: //avatars0.githubusercontent.com/u/17841145
   twitter: https://twitter.com/acausing
   drupal: https://www.drupal.org/u/acausing
@@ -156,6 +157,11 @@
   twitter: https://twitter.com/masonjames
   url: https://www.valet.io/
   bio: CEO | Founder of WP Valet
+- id: hckia
+  name: Cyrus Kia
+  avatar: //avatars.githubusercontent.com/u/7597686?v=4
+  github: //github.com/hckia
+  bio: Customer Success Engineer, Pantheon
 - id: fatimask
   name: Fatima Sarah Khalid
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/fatima.jpg
@@ -292,6 +298,11 @@
   twitter: https://twitter.com/davidneedham
   drupal: //www.drupal.org/u/davidneedham
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David%20Needham.png
+- id: backlineint
+  name: Brian Perry
+  avatar: //avatars.githubusercontent.com/u/889478?v=4
+  github: //github.com/backlineint
+  bio: Senior Software Engineer, Pantheon
 - id: stevector
   name: Steve Persch
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Steve%20Persch%20Headshot.jpg
@@ -345,6 +356,11 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
   bio: Customer Onboarding Manager, Pantheon
   github: //github.com/peter-pantheon
+- id: jms-pantheon
+  name: Jordan Schulz
+  avatar: //github.com/jms-pantheon.png?size=460
+  bio: Customer Success Engineer, Pantheon
+  github: //github.com/jms-pantheon
 - id: eeeschwartz
   name: Erik Schwartz
   url: //erikschwartz.net
@@ -353,6 +369,19 @@
   github: //github.com/eeeschwartz/
   linkedin: //www.linkedin.com/in/eeeschwartz
   bio: Civic developer, human centered!
+- id: carolynshannon
+  name: Carolyn Shannon
+  bio: Community contributor
+  avatar: //avatars.githubusercontent.com/u/55147679
+  github: //github.com/carolyn-shannon
+  drupal: //www.drupal.org/u/chicagomom
+  twitter: //twitter.com/chicagomom
+  linkedin: //www.linkedin.com/in/carolynshannon/
+- id: cobypear
+  name: Coby Sher
+  avatar: //avatars.githubusercontent.com/cobypear
+  github: //github.com/CobyPear
+  bio: Software Engineer, Pantheon
 - id: jspellman814
   name: John Spellman
   avatar: //github.com/jspellman814.png?size=460
@@ -419,6 +448,11 @@
   url: //digisavvy.com
   avatar: //digisavvy.com/wp-content/uploads/2016/04/f0Bk6gJ9-150x150.jpg
   bio: Co-Founder of Digisavvy
+- id: ryanwagner
+  name: Ryan Wagner
+  bio: Software Engineer, Pantheon
+  github: //github.com/rwagner00
+  avatar: //avatars.githubusercontent.com/u/1789035
 - id: rachelwhitton
   name: Rachel Whitton
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg

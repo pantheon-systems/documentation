@@ -2,14 +2,20 @@
 title: Get Support
 subtitle: Scope of Support
 description: Learn how to access Pantheon's expert team and what your Account tier includes.
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [collaborate, composer, continuous-integration, webops, workflow]
 type: guide
 showtoc: true
 anchorid: support
 permalink: docs/guides/support/
 editpath: support/01-scope.md
-reviewed: "2022-01-20"
+reviewed: "2022-12-13"
 ---
 
 ![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
@@ -68,19 +74,21 @@ Pantheon provides updates to the Upstream for the site, which only affect core f
 
 We can offer Diamond Account customers advice on best practices and debugging assistance, but our support team does not change customer code.
 
-### Outdated Core
+### Outdated CMS Core
 
-Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/maintain-custom-upstream) by the upstream maintainer each time the project releases a new version.
+<Partial file="outdated-core.md" />
+
+For CMS specific information, see either [Supported Drupal Versions](/supported-drupal) or [Supported WordPress Versions](/supported-wp)
 
 ### Custom Upstreams
 
 If you choose to use a Custom Upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
 
-We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [properly maintaining the Custom Upstream](/maintain-custom-upstream), and fixing any issues related to the upstream falls outside of the scope of support.
+We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [correctly maintaining the Custom Upstream](/guides/custom-upstream/maintain-custom-upstream), and fixing any issues related to the upstream falls outside of the scope of support.
 
 ### Public Distributions
 
-If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 9, Drupal 8, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
+If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal (Latest Version), Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
 
 ### Security
 
@@ -96,7 +104,7 @@ If your site is slow or modules aren't working, please see our [performance arti
 
 ### Intermittent Issues
 
-Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/errors-and-server-responses) in your Development environment. If you [contact support](/guides/support/contact-support/), include your findings and attach screenshots whenever possible.
+Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/guides/errors-and-server-responses) in your Development environment. If you [contact support](/guides/support/contact-support/), include your findings and attach screenshots whenever possible.
 
 ### Isolated Issues
 
@@ -126,10 +134,10 @@ Diamond Accounts are intended to help developers succeed on Pantheon, not to pro
 
 The Pantheon Professional Services (PS) team works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. The PS team can provide more information on, and assist with:
 
-- [Additional Domains](/domains)
+- [Additional Domains](/guides/domains)
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 - [Custom SSL Certificate](/custom-certificates)
-- [Decoupled CMS](/decoupled-sites)
+- [Decoupled CMS](/guides/decoupled-sites)
 - [Managed Updates](/guides/professional-services/managed-updates)
 - [Multizone Failover](/multizone-failover)
 - [Site Migrations](/guides/professional-services/website-migration-service)

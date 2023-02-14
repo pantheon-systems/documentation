@@ -2,7 +2,6 @@
 title: Edge Integrations
 subtitle: Introduction
 description: A modern approach to audience-based content personalization.
-categories: [develop]
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
@@ -11,6 +10,13 @@ showtoc: true
 anchorid: edge-integrations
 permalink: docs/guides/edge-integrations/
 editpath: edge-integrations/01-introduction.md
+contenttype: [guide]
+innav: [true]
+categories: [personalization]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 reviewed: "2022-03-23"
 ---
 
@@ -32,7 +38,7 @@ The benefits of Edge Integrations:
 	- You can improve productivity by using existing content, style guides, media, and CMS integrations. No need to manage assets in multiple places.
 
 - Performance-forward
-	- Improve credibility with a fast, seamless customer experience, and distribute personalized content across dozens of global and US points of presence.
+	- Improve credibility with a fast, seamless customer experience, and distribute personalized content across dozens of global and US CHI metro Points of Presence (POPs).
 
 - Cost-effective
 	- Increase business impact by instrumenting and measuring success with your current analytics products. No need for new segmentation tooling.

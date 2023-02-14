@@ -1,20 +1,20 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-categories: [develop]
+contenttype: [doc]
+innav: [true]
+categories: [localdev]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 ---
 
-<Alert title="Pantheon Localdev" type="success" icon="star">
-
-Pantheon's [Localdev](/guides/localdev) offers the best of developing locally, including the ability to perform critical development tasks, such as editing files and code, and pushing changes to Pantheon right from your desktop.
-
-</Alert>
-
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
-Pantheon cannot troubleshoot or [support local development](/guides/support/#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev).
+Pantheon cannot troubleshoot or [support local development](/guides/support/#local-development) solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/guides/multidev).
 
 If you encounter any issues, visit the [Lando GitHub repository](https://github.com/lando/lando#help-troubleshooting--support).
 
@@ -34,11 +34,11 @@ Be sure you have:
 
 - A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) are compatible.
   - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
-  - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/php-versions/#verify-current-php-versions).
+  - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
-- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
+- SFTP client or IDE, such as [WinSCP](/guides/sftp/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
 - [Terminus](/terminus)
-- [Drush](/drush) (optional)
+- [Drush](/guides/drush) (optional)
 
 ### Export Variables
 
@@ -99,44 +99,11 @@ The first step is to get a `git clone` of your code from Pantheon on your local 
 
 ## Get the Database
 
-### Via Dashboard
-
-1. Navigate to the Site Dashboard.
-
-1. Create an on-demand backup by selecting **Database / Files** > **Export** > **Export Database**.
-
-1. Download the scheduled or on-demand backup by selecting **Backups** > **Backup Log** > **Database download link**.
-
-1. Import the database into your local environment using your MySQL client:
-
-  ```bash{promptUser: user}
-  gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
-  ```
-
-  <Alert title="Note" type="info">
-
-  Replace `database.sql.gz` with the name of the database archive downloaded from Pantheon.
-
-  </Alert>
-
-### Via Terminus
-
-1. Create and get the database with Terminus commands:
-
-    ```bash{promptUser: user}
-    terminus backup:create $SITE.$ENV --element=db
-    terminus backup:get $SITE.$ENV --element=db
-    ```
-
-1. Import the archive into your local MySQL database using the following command:
-
-    ```bash{promptUser: user}
-    gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
-    ```
+<Partial file="export-database.md" />
 
 ## Get the Files
 
-For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsync-and-sftp).
+For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/guides/sftp/rsync-and-sftp).
 
 ### Via Terminus
 
@@ -175,7 +142,7 @@ SFTP is slower, but easier for some to use:
 
 ### Send the Code
 
-1. Test your changes, then [commit locally and push to Pantheon](/git/#push-changes-to-pantheon):
+1. Test your changes, then [commit locally and push to Pantheon](/guides/git/git-config#push-changes-to-pantheon):
 
   ```bash{promptUser: user}
   git commit -am "enter a summary of the changes"
@@ -211,7 +178,7 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 
 Send files using SFTP:
 
-1. [Copy the SFTP CLI command](/sftp#sftp-connection-information).
+1. [Copy the SFTP CLI command](/guides/sftp/sftp-connection-info).
 
 1. Use the terminal to navigate to the correct directory on your local file system:
 

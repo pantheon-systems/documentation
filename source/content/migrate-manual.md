@@ -1,11 +1,19 @@
 ---
 title: Manually Migrate Sites to Pantheon
 description: Learn how to manually migrate a Drupal or WordPress site to Pantheon
-categories: [get-started]
 tags: [code, dashboard, migrate, site]
+contenttype: [doc]
+innav: [true]
+categories: [migrate]
+cms: [drupal, wordpress]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 
 Manually migrate your site to Pantheon when any of the following apply:
+
+<Partial file="drupal/guide-note.md" />
 
 - **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 - **Large WordPress Site**: WordPress site exceeds 500MB.
@@ -15,7 +23,6 @@ Manually migrate your site to Pantheon when any of the following apply:
 - **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 - **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
-If none of the above apply to your project, use the [standard migration procedure](/migrate).
 
 <Alert title="Note for Composer-based Sites" type="info" >
 
@@ -27,10 +34,10 @@ The steps outlined below do not work for Composer-based sites. If you have need 
 
 To ensure a successful migration, complete the following tasks on the source site before you start:
 
-- Read [Platform Considerations](/platform-considerations)
+- Read [Platform Considerations](/guides/platform-considerations)
 - Upgrade to the latest version of WordPress or Drupal core
 - Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
-- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/php-versions/#configure-php-version).
+- Make sure your code is compatible with PHP 7.2 or greater. Review your [CMS's PHP version requirements](/guides/php/php-versions#cms-version-requirements). You may need to [adjust PHP versions](/guides/php/php-versions#configure-php-version).
 - Clear all caches
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/ssh-keys)
@@ -39,7 +46,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
 #### .gitignore
 
-Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/.gitignore), and [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised. Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/.gitignore).
 
 #### Local Drupal configurations
 
@@ -51,7 +58,7 @@ mv sites/default/{settings.php,settings.local.php}
 chmod u-w sites/default/{settings.local.php,.}
 ```
 
-Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+Sites running Drupal 7 must add a `settings.php` file that includes `settings.local.php` as this file is not bundled on Pantheon.
 
 </Accordion>
 
@@ -61,15 +68,15 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
 
-1. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, Drupal 9, or WordPress,), and click **Continue**:
+1. Enter your current website URL, choose your site type, and click **Continue**:
 
    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
-1. Name your site and select an [Organization](/organizations) (optional), then click **Create Site**:
+1. Name your site and select an [Organization](/guides/account-mgmt/workspace-sites-teams/workspaces) (optional), then click **Create Site**:
 
-   ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
+   ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/migrate-step3.png)
 
 1. Click the link to manually migrate your site then select **Yes** to confirm:
 
@@ -115,7 +122,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 1. Click **Open SFTP Client** to open your default local SFTP client, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Do not overwrite WordPress or Drupal core files on your Pantheon site. Upload your existing site's themes as well as plugins or modules to their locations within the root directory (`code` or `wp-content`, as shown below).
 
@@ -123,51 +130,43 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   <Tab title="WordPress" id="wp-code" active={true}>
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
+    Copy the following directories from your existing site to a matching directory in your new site's `code/wp-content` directory:
 
-   - `mu-plugins`
-   - `plugins`
-   - `themes`
+    - `mu-plugins`
+    - `plugins`
+    - `themes`
 
-  As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
-
-  </Tab>
-
-  <Tab title="Drupal 7" id="d7-code">
-
-  Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files` from your existing site to a matching directory in your new site's `code/sites`:
-
-   - `libraries`
-   - `modules`
-   - `profile`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
-
-  Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+    As well as any other folders under `wp-content` that are *not* `wp-content/uploads`.
 
   </Tab>
 
-  <Tab title="Drupal 8" id="d8-code">
+  <Tab title="Drupal" id="d7-code">
 
-  Copy the following directories from your existing site to a matching directory in your new site's `code/sites` directory:
+    Copy all files and folders inside the `code/sites` directory, *except* `code/sites/default/files`, from your existing site to a matching directory in your new site's `code/sites`:
 
-   - `libraries`
-   - `modules`
-   - `profile`
-   - `themes`
-   - `vendor`
-   - `sites`, excluding `sites/default/files`.
+    - `libraries`
+    - `modules`
+    - `profile`
+    - `themes`
+    - `vendor`
+    - `sites`, excluding `sites/default/files`.
 
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+    Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal Project](https://www.drupal.org/node/2621480) for more details.
 
-  </Tab>
+  <Alert title="Note" type="info" >
 
-  <Tab title="Drupal 9" id="d9-code">
+    You must prepare the directory and the database if you are using Multisite and want to migrate a sub-site.
 
-  Update the `.gitignore` file by adding all non-custom package entries and commit all files that are not ignored. If Composer modifies anything that is tracked   by Git, the Integrated Composer build process will abort and the deployment will fail.
+    1. Copy the base site to a new directory.
 
-  Refer to the "Base-Level Directories" section of [Drupal Directory Structure](https://www.drupal.org/docs/understanding-drupal/directory-structure) for more details.
+    1. Delete all sites, with the exception of:
+
+       - `sites/{sitename}`: the site you are migrating
+       - `sites/all`: contains all of your site's modules and themes
+
+    1. Rename `sites/{sitename}`  to `sites/default`.
+
+  </Alert>
 
   </Tab>
 
@@ -234,7 +233,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   If you haven't already configured [SSH Keys](/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
 
-1. Review your current index using `git status`, then commit all changes:
+1. Review your current index using `git status`, then commit all changes. Refer to [Pantheon Core Files](/code#pantheon-core-files) and [Pantheon Git Repository](/code#pantheon-git-repository) for more information on core files and code structure.
 
   ```bash{promptUser: user}
   git add .
@@ -273,7 +272,27 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ## Add Your Database
 
-<Partial file="migrate-add-database.md" />
+The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
+
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. For example:
+
+  ```bash
+  mysqldump db_name > backup-file.sql
+  ```
+
+1. Enter your username and password when prompted to authenticate the command.
+
+    - You might want to consider using a terminus credential fetch to avoid entering credentials for future automation steps.
+
+1. Run the command below to load the dump file back into the server:
+
+  ```bash
+  mysql db_name < backup-file.sql
+  ```
+
+You can also use the Pantheon Dashboard to add your site's database.
+
+<Partial file="drupal/migrate-add-database-part2.md" />
 
 ## Upload Your Files
 
@@ -349,9 +368,18 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
 
-  ```bash
+   
+  ```bash:title=migrate-rsync.sh
+  #!/bin/bash
+  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=xxxxxxx
+  
   ENV='dev'
-  SITE='SITEID'
+  # The sshpass command is required.
+  if ! [ -x "$(command -v sshpass)" ]; then
+	echo 'Error: The sshpass command was not found.' >&2
+	exit 1
+  fi 
 
   read -sp "Your Pantheon Password: " PASSWORD
   if [[ -z "$PASSWORD" ]]; then
@@ -361,7 +389,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   while [ 1 ]
   do
-  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/
   if [ "$?" = "0" ] ; then
   echo "rsync completed normally"
   exit
@@ -377,9 +405,13 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
   </TabList>
 
 
-You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**:
+You should now have all three of the major components of your site imported into Pantheon.
 
-![Finish Manual Migration](../images/successfully-migrated.png)
+1. Clear your caches on the Pantheon Dashboard.
+
+1. Confirm that everything looks and behaves as expected.
+
+1. Run the [terminus site:import:complete <site_name>](/terminus/commands/import-complete) command to complete the import process.
 
 ## Troubleshooting
 
@@ -407,6 +439,10 @@ ff = only
 
 In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
-## See Also
+## More Resources
 
-Check our standard migration procedure for related [Frequently Asked Questions](/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/migrate#troubleshooting) tips.
+- [Frequently Asked Questions](/guides/guided/faq)
+
+- [Troubleshooting](/guides/guided/troubleshooting) tips
+
+- [Importing Drush Site Archives with Terminus](/guides/drush/drush-import)

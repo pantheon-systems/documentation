@@ -1,7 +1,13 @@
 ---
 title: Deliver Email Through Your Drupal Site on the Pantheon Platform
 description: Detailed information on using SendGrid to deliver email through your Drupal site.
-categories: [integrate]
+contenttype: [doc]
+innav: [true]
+categories: [email]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [sendgrid, email]
 tags: [code, email, modules, plugins]
 type: guide
 permalink: docs/guides/:basename
@@ -39,53 +45,16 @@ A new Sendgrid account may need to wait 30 days before upgrading to a paid plan.
 
 ## Integrating Sendgrid With Drupal
 
-Follow the procedure outlined below for your CMS:
-
-<TabList>
-
-<Tab title="Drupal 8" id="tab-1-anchor" active={true}>
-
-When using SendGrid with Drupal 8, we recommend using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module.
-<Alert title="Warning" type="danger" >
-
-The SendGrid API Integration Module for Drupal 8 requires a Composer-managed workflow as described in our [Build Tools](/guides/build-tools) or the [Convert to Composer](/guides/composer-convert) guides. We cannot support non-Composer workflows using this module. For details, see [the module README](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
-
-</Alert>
-
-1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using Composer:
-
-  ```bash{promptUser: user}
-  composer require drupal/sendgrid_integration
-  ```
-
-1. Commit, push, and enable the new module. Replace `$SITE` and `$ENV` with the site and environment name:
-
-  ```bash{promptUser: user}
-  git add .
-  git commit -m "Install sendgrid_integration"
-  git push origin master #Or Multidev name
-  terminus drush $SITE.$ENV -- en sendgrid_integration -y
-  ```
-1. Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as an administrator. Paste your API Key and click **Save Configuration**.
-
-1. Navigate to `/admin/config/system/mailsystem` and select **SendGridMailSystem** from the dropdown menu to set the `MailSystemInterface` class.
-  
-1. You have the option to select the **Theme to render the emails** from the dropdown menu to change the theme. The **Current** theme is selected by default.
-
-Your Drupal application on Pantheon is now configured to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
-  
-</Tab>
-
-<Tab title="Drupal 7" id="tab-2-anchor">
+Follow the procedure outlined below for Drupal:
 
 ### Choosing an Integration Method
 
-Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SMTP.
+Two methods can be used to integrate SendGrid with your Drupal site: API or SMTP.
 
 #### Considerations
 
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/guides/composer). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/guides/composer). For Drupal we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
 
 <Accordion title="API Integration" id="d7-api" icon="wrench" active={true}>
 
@@ -93,7 +62,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/multidev):
+This process uses [Terminus](/terminus). Before we begin, set the variables `$SITE` and `$ENV` in your terminal session to match your site name and the Dev environment, or multidev name is using [Multidev](/guides/multidev):
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -104,7 +73,7 @@ export ENV=dev
 
 1. Install [Composer](https://getcomposer.org) and [Drush](https://docs.drush.org/en/7.x/install/), then install and authenticate [Terminus](/terminus/install).
 
-1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. If you're using Multidev, checkout that branch:
+1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. If you're using Multidev, checkout that branch:
 
   ```bash{promptUser: user}
   cd $SITE
@@ -224,10 +193,6 @@ Then commit and push the symlink to Pantheon.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the **Send Test E-mail** configuration field and click **Save configuration** to test.
 
-</Tab>
-
-</TabList>
-
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
 
@@ -239,7 +204,7 @@ You can explore the Statistics and Email Reports from within your site's account
 
 You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check SendGrid’s [Email Infrastructure Guide](https://sendgrid.com/resource/the-email-infrastructure-guide-build-it-or-buy-it) for advanced tips on how to create and publish DNS records for increased deliverability.
 
-## See Also
+## More Resources
 
-- [Use WP Mail SMTP to Send Email with Sendgrid](/guides/sendgrid-wordpress-wp-mail-smtp)
+- [Use WP Mail SMTP to Send Email with Sendgrid](/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp)
 - [Prevent Spamming During Drupal Debugging and Testing](/guides/rerouting-outbound-email)

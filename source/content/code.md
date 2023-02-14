@@ -1,14 +1,33 @@
 ---
 title: Your Site Code on Pantheon
 description: Learn how to work with your site's code on the Pantheon Dashboard.
-categories: [develop]
 tags: [code, dashboard, files, git]
+contenttype: [doc]
+innav: [true]
+categories: [workflows]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
 
 ## Pantheon Git Repository
 
 Your site's code repository includes your entire codebase, including core Drupal or WordPress, and any contributed modules, plugins, themes, installation profiles, libraries, etc. It does not include the `files/` directory (e.g. `sites/default/files` or `wp-content/uploads`) and should not contain any other static assets that you do not want tracked in version control.
+
+### Pantheon Core Files
+
+Pantheon adds core files to your code by default:
+
+- `pantheon.yml`
+    - Refer to [Pantheon YAML Configuration Files](https://pantheon.io/docs/pantheon-yml) for more information.
+
+- `composer.lock`
+    - Pantheon runs composer install when a site is created. This generates a `composer.lock` file, and commits it back to the site’s code repository. This writes all packages and their exact versions to the `composer.lock` file, locking the project to those specific versions. Anyone who sets up the project must use the exact dependency versions you locked in the file.
+
+- `.gitignore`
+    - Pantheon provides default `.gitignore` files in the base of each site's code repository. This file includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
 ### Drupal Code Structure
 
@@ -71,13 +90,17 @@ The `wp-content/uploads` directory is represented in your code repository as a s
 
 </Alert>
 
+### Upstream Code and Site Structure
+
+<Partial file="ic-upstream-structure.md" />
+
 ## Managing Permissions
 
 Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
 
 ## Navigate the Code Tool
 
-You can set the site's connection mode to [git](/git) or [SFTP](/sftp) and access [connection information](/sftp#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
+You can set the site's connection mode to [git](/guides/git/git-config) or [SFTP](/guides/sftp) and access [connection information](/guides/sftp/sftp-connection-info) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 ![Code Workflow Dev SFTP Commit](../images/dashboard/interface-dev-code-sftp-commit.png)
 
 You can also view the diff output for each individual file:
@@ -115,15 +138,11 @@ The Test and Live environments do not have write access to code outside of the d
 
 ## Develop
 
-Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/read-environment-config). Then, dive in to [developing directly with SFTP mode](/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
-
-### .gitignore
-
-Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
+Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/guides/environment-configuration/read-environment-config). Then, dive in to [developing directly with SFTP mode](/guides/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
 
 ## Optimize Performance
 
-There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/php-slow-log).
+There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/guides/php/php-slow-log).
 
 Learn how to use [bots and indexing](/bots-and-indexing) in a way that does not negatively impact performance. 
 
@@ -131,13 +150,13 @@ Learn how to use [bots and indexing](/bots-and-indexing) in a way that does not 
 
 You can also integrate with external Solr search indexes with services like [OpenSolr](/opensolr).
 
-## See Also
+## More Resources
 
 - [Hot Fixes](/hotfixes)
 - [What is the "pantheon_api.module"](/modules#pantheon-module-drupal-7)
 - [Email on Pantheon](/email)
-- [Platform and Custom Domains](/domains)
+- [Platform and Custom Domains](/guides/domains)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port)
 - [LDAP and LDAPS](/ldap-and-ldaps)
-- [Secure Integration](/secure-integration)
+- [Secure Integration](/guides/secure-development/secure-integration)
 - [SSO and Identity Federation on Pantheon](/sso)

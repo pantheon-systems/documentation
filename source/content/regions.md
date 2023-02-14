@@ -1,10 +1,16 @@
 ---
 title: Pantheon Global Regions and Data Residency
 description: Learn how to launch sites in Australia, Canada, or the European Union.
-categories: [get-started]
 tags: [launch, site]
 contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
+contenttype: [doc]
+innav: [true]
+categories: [domains]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## Use Cases
@@ -34,13 +40,13 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 
 ## Create a New Site in a New Region
 
-[Create a new Site](/sites) from the Dashboard and select the Region:
+[Create a new Site](/guides/account-mgmt/workspace-sites-teams/sites) from the Dashboard and select the Region:
 
 ![Select a Region from the Create Your Pantheon Site screen](../images/dashboard/create-pantheon-site.png)
 
 ### Create a New Site in a Specific Region using Terminus
 
-1. Install and authenticate [Terminus](/terminus). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/terminus/updates).
+1. Install and authenticate [Terminus](/terminus).
 
 1. Use Terminus to create a new site associated with your organization and include the `--region` option.
 

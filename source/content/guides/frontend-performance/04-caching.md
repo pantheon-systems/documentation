@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Caching
 description: Caching strategies for improved performance.
 anchorid: caching
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,13 @@ permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: [guide]
+innav: [true]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page includes information on how to improve optimization with caching.
@@ -222,7 +228,7 @@ Working across many environments presents opportunities for configuration change
 
 <Tab title="WordPress" id="wp-config-get" active={true}>
 
-The [Pantheon Page Cache plugin](/wordpress-cache-plugin) is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
+The [Pantheon Page Cache plugin](/guides/wordpress-configurations/wordpress-cache-plugin) is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
 1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
 
@@ -242,9 +248,7 @@ In Drupal it is very easy to turn off page caching and forget to turn it back on
 
 1. Review **Page cache maximum age**:
 
-  ![Drupal Performance settings](../../../images/guides/front-end-performance/d8-cache.png)
-
-The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
+  - The Drupal default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
 
 </Tab>
 
@@ -256,16 +260,16 @@ Improve performance on longer trips to and from the browser for instances you wa
 
 ### Upgrade Your Site's PHP
 
-[Upgrade your site's PHP version](/php-versions) to improve the security, performance, and supportability of your site.
+[Upgrade your site's PHP version](/guides/php/php-versions) to improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
 ### Enable Object Caching
 
-Sites loading a lot of content can benefit from Object Caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](/object-cache).
+Sites loading a lot of content can benefit from Object Caching (formerly Redis). For details, see our [Object Caching documentation for Drupal or WordPress](/guides/object-cache).
 
 ### Enable OPcache
 
 [OPcache](https://www.php.net/manual/en/book.opcache.php) is a caching engine built into PHP. OPcache can improve PHP performance by storing precompiled script bytecode in shared memory. OPcache improves speed in modern PHP applications and is always enabled on Pantheon; however, many users disable the feature for security reasons when working in shared hosting environments.
 
- OPcache is a transparent resource, and for most, simply turning it on will improve your site's performance. [Object caching](/object-cache) is another back-end optimization resource that can greatly improve the performance of your site. 
+ OPcache is a transparent resource, and for most, simply turning it on will improve your site's performance. [Object caching](/guides/object-cache) is another back-end optimization resource that can greatly improve the performance of your site. 

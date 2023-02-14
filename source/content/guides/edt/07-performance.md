@@ -1,24 +1,17 @@
 ---
 title: Essential Developer Training
 subtitle: Performance
-anchorid: performance
-edt: true
-layout: guide
-categories: [performance]
+contenttype: [guide]
+innav: [true]
+categories: [optimize]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [cache, cdn]
-type: guide
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
 permalink: docs/guides/edt/performance/
-nexturl: guides/edt/going-live/
-nextpage: Going Live
-previousurl: guides/edt/external-integrations/
-previouspage: External Integrations
+anchorid: performance
 editpath: edt/07-performance.md
-image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’re going to explore how to get the best performance for your sites.
@@ -31,11 +24,10 @@ All links from the video are provided below.
 **Resource Links From Video**
 
  - [Caching: Advanced Topics](/caching-advanced-topics)
- - [Redis docs](/object-cache)
- - [New Relic docs](/new-relic)
- - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
+ - [Redis docs](/guides/object-cache)
+ - [New Relic docs](/guides/new-relic)
  - [Troubleshooting WordPress with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
- - [Uptime monitoring with Synthetics](/new-relic/#configure-ping-monitors-for-availability)
+ - [Uptime monitoring with Synthetics](/guides/new-relic)
  - [Load and Performance Testing](/load-and-performance-testing)
 
 **CHALLENGE:**

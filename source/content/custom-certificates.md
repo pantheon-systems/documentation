@@ -1,9 +1,15 @@
 ---
 title: "Custom Certificates on Pantheon Advanced and Global CDN"
 description: For contract customers who require dedicated, custom TLS certificates.
-categories: [go-live]
 tags: [cdn, https, professional-services]
-reviewed: "2021-10-23"
+reviewed: "2022-12-07"
+contenttype: [doc]
+innav: [true]
+categories: [security]
+cms: [--]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 This article provides an overview of the steps to set up and work with manually managed, custom certificates through Pantheon's Global CDN and Advanced Global CDN, available through Pantheon's Custom Certificates concierge service.
@@ -42,7 +48,7 @@ Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-c
 1. Private Key
 
 Allow two business days for your Account Team to load the certificate. 
-Note: The key file upload tool currently only accepts 2048-bit RSA keys. 
+Note: The key file upload tool currently only accepts 2048-bit RSA keys. AGCDN custom certificates (and private keys) must be in `.PEM` format.
 
 </Tab>
 
@@ -51,7 +57,7 @@ Note: The key file upload tool currently only accepts 2048-bit RSA keys.
 
 ### Add the Domain
 
-Next, [add the domain to your environment](/domains#add-a-custom-domain).
+Next, [add the domain to your environment](/guides/domains).
 
   If you are presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
 
@@ -102,7 +108,7 @@ It may take up to two business days to process the request.
 
 ## Remove a Custom Certificate
 
-All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/https) Let's Encrypt to issue certificates. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
+All sites require an encryption certificate. To downgrade a site that uses a custom certificate, [modify the site's CAA records](/custom-certificates#disable-lets-encrypt-with-caa-records) to re-enable Pantheon’s [Global CDN](/guides/global-cdn/https) Let's Encrypt to issue certificates. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
 
 
 ## Frequently Asked Questions
@@ -113,7 +119,7 @@ You can use a single certificate to cover multiple domains spread across various
 
 ### What about sites purchased online?
 
-Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on [how to terminate TLS through a 3rd-party](/https/#can-i-bring-my-own-certificate).
+Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on [how to terminate TLS through a 3rd-party](/guides/global-cdn/https/#can-i-bring-my-own-certificate).
 
 ### Will custom certificates be self-serve?
 
@@ -137,7 +143,7 @@ A record: `23.185.0.X`
 AAAA record 1:  `2620:12a:8000::X`
 AAAA record 2:  `2620:12a:8001::X`
 
-**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
+**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/guides/domains/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
 ### What if my DNS manager doesn't support CAA DNS records?
 
@@ -155,7 +161,7 @@ To take your site live by moving custom domains from one Site Dashboard to anoth
 
 ## You May Also Refer To
 
-- [Pantheon Global CDN](/global-cdn)
+- [Pantheon Global CDN](/guides/global-cdn)
 - [Advanced Global CDN](/guides/professional-services#advanced-global-cdn)
-- [HTTPS on Pantheon's Global CDN](/https)
-- [Introduction to Domain Name Services](/dns)
+- [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
+- [Introduction to Domain Name Services](/guides/domains/dns)

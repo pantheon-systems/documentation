@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
 1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility.
@@ -32,7 +42,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    2. Select your local archive file > click **Import**.
 
-   ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
+     ![Import MySQL database from file](../../images/dashboard/import-mysql-file.png)
 
    **Note**: If you recently imported the database and need to re-import, refresh the page and use a new filename for the database file.
   
@@ -42,8 +52,10 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   If your archive is less than 500MB, import it from URL:
 
-   1. Navigate to the **MySQL database** field > click **URL**.
-
+   1. Navigate to the **MySQL database** field.
+   
+   1. Click **URL**.
+   
    1. Paste a publicly accessible URL for the `.sql.gz` file > click **Import**. 
 
    <Alert title="Note"  type="info" >
@@ -58,9 +70,15 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   <Tab title="Over 500MBs" id="500mbsplus">
 
-  The following instructions allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
+  The following instructions allow you to add database archives larger than 500MBs using the command line MySQL client. You can also use a GUI client like Sequel Ace or Navicat. For more information, see [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access).
 
-   1. Navigate to the Pantheon Site Dashboard > open the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment > click **Connection Info** > copy the Database connection string. 
+   1. Navigate to the Pantheon Site Dashboard.
+   
+   1. Open the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+   
+   1. Click **Connection Info**.
+   
+   1. Copy the Database connection string. 
    
     The Database connection string will look similar to this:
 
@@ -68,9 +86,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
       ```
 
-   2. `cd` into the directory containing your `.sql` file in your terminal.
+   5. `cd` into the directory containing your `.sql` file in your terminal.
    
-   1.  Paste the connection string and append it with: `< database.sql`. 
+   6.  Paste the connection string and append it with: `< database.sql`. 
    
     Your command will look like:
 
@@ -78,7 +96,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
       ```
 
-     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
+     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections).
 
     The `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment after you run the command.
 

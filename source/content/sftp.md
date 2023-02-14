@@ -1,9 +1,15 @@
 ---
 title: Developing on Pantheon Directly with SFTP Mode
 description: Detailed information on how to use SFTP Mode to directly develop your Drupal or WordPress site on Pantheon.
-categories: [develop]
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+contenttype: [doc]
+innav: [true]
+categories: [sftp]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
@@ -14,7 +20,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers on-d
 
 In some cases, working via Git may not be the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a platform-specific problem.
 
-SFTP mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP mode first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
+<dfn id="sftp">SFTP</dfn> mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP mode first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
 <Alert title="SFTP Mode Considerations" type="danger">
 
@@ -99,9 +105,9 @@ This can be useful when you have many changes you wish to undo or if it would ot
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
-- PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
-- [WinSCP](/winscp)
-- [Visual Studio Code](/visual-studio-code)
+- PHPStorm with [WordPress](/guides/local-development/wordpress-phpstorm) and [Drupal](/guides/local-development/drupal-phpstorm)
+- [WinSCP](/guides/sftp/winscp)
+- [Visual Studio Code](/guides/local-development/visual-studio-code)
 
 ## Troubleshooting
 
@@ -115,7 +121,7 @@ A simple way to test for outbound network restrictions is to load a special web 
 
 - [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
-If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/port-2222) instead.
+If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/guides/sftp/port-2222) instead.
 
 If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/sftp/#sftp-connection-information), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
 
@@ -179,7 +185,7 @@ Unable to connect to host codeserver.dev.<xxx>.drush.in, or the request timed ou
 Be sure that the address is correct and that you have the necessary privileges, or try increasing the connection timeout (currently 10 seconds).
 ```
 
-Replace `SITE_UUID` with your site's [UUID](/sites/#site-uuid) and run the following to obtain the returned IP address:
+Replace `SITE_UUID` with your site's [UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis) and run the following to obtain the returned IP address:
 
 ```bash{promptUser: user}
 dig codeserver.dev.<SITE_UUID>.drush.in
@@ -217,3 +223,5 @@ source:         APNIC
 ```
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
+
+[Learn more about preventing DNS hijacking](/guides/domains/domain-hijacking).

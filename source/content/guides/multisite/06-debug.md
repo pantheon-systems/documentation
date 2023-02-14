@@ -1,14 +1,18 @@
 ---
 title: WordPress Site Networks
 subtitle: Troubleshoot
-description: Overview of WordPress multisite support on the Pantheon Platform.
-multisite: true
+description: Review common WordPress Site Networks troubleshooting scenarios.
 anchorid: debug
 generator: pagination
 layout: guide
 type: guide
-cms: "WordPress"
-categories: [troubleshoot]
+contenttype: [guide]
+innav: [true]
+categories: [cms, troubleshooting]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/debug/
 editpath: multisite/06-debug.md
@@ -16,9 +20,11 @@ image: multisite
 getfeedbackform: default
 ---
 
+This section provides information on common WordPress Site Networks troubleshooting scenarios.
+
 ## WP-CLI Tips and Tricks
 
-### Managing Site Networks
+### Manage Site Networks
 
 The `wp site *` class of WP-CLI commands ([full documentation](https://developer.wordpress.org/cli/commands/site/)) for managing the sites installed on your network. Here are some helpful ones:
 
@@ -26,11 +32,11 @@ The `wp site *` class of WP-CLI commands ([full documentation](https://developer
 - `wp site list` - See all available sites on the network.
 - `wp site empty` - Clear a site of its posts and comments, while retaining options, users and other configuration details.
 
-### Updating the Database
+### Update the Database
 
 WordPress sometimes includes database schema changes in releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to run the database update process. Use `wp core update-db --network` ([full documentation](https://developer.wordpress.org/cli/commands/core/update-db/)) to run the database upgrade procedure across all sites on your Site Network.
 
-### Adding and removing super admins
+### Add and Remove Super Admins
 
 “Super admin” is a special designation for select users on a WordPress Site Network. While a user's role may vary between sites on the network, any user can be a super admin which gives them unrestricted access to every site on the network.
 
@@ -46,15 +52,23 @@ See the related section in [Basic Troubleshooting](/basic-troubleshooting#error-
 
 You may see this error when moving a WordPress Site Network database between environments. The most common cause is either using `wp search-replace` incorrectly (or having forgotten to use it at all).
 
-Because it's a confusing error, it's helpful to understand how it's caused. This error can be reproduced by:
+Because it's a confusing error, it's helpful to understand how it's caused. This error can be reproduced by following the steps below:
 
 
-1. Creating a new WordPress multisite instance with one site.
-2. Manually setting the domain value in the `wp_blogs` table to `mstest.org`.
-3. Manually editing the `DOMAIN_CURRENT_SITE` constant to `mstest.dev`.
+1. Create a new WordPress multisite instance with one site.
+2. Set the domain value in the `wp_blogs` table to `mstest.org` manually.
+3. Edit the `DOMAIN_CURRENT_SITE` constant to `mstest.dev` manually.
 
 When you visit `mstest.dev` in your browser, you'll see the “Error establishing database connection” message. Essentially, WordPress displays an error message because it couldn't find the requested site in the `wp_blogs` table.
 
 Check out the [open WordPress.org Trac ticket](https://core.trac.wordpress.org/ticket/41424) where this message is being discussed, and will hopefully be improved in the future.
 
 <Partial file="configure-wp-site-networks-with-integrated-composer.md" />
+
+## More Resources
+
+- [Troubleshooting WordPress](/guides/wordpress-pantheon/troubleshooting)
+
+- [WordPress Known Issues](/wordpress-known-issues)
+
+- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)

@@ -2,8 +2,6 @@
 title: Build Tools
 subtitle: Create a Custom Theme
 description: In step eight of the Build Tools guide, learn how to create a custom theme as part of the build tooks workflow.
-cms: "Drupal"
-categories: [develop]
 tags: [themes, workflow]
 buildtools: true
 anchorid: custom-theme
@@ -11,8 +9,15 @@ type: guide
 permalink: docs/guides/build-tools/custom-theme/
 editpath: build-tools/08-custom-theme.md
 image: buildToolsGuide-thumb
+contenttype: [guide]
+innav: [true]
+categories: [dependencies]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
-This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik) theme using the [Terminus Drupal Console plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin). For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming) on Drupal.org.
+This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik) theme using the [Terminus Drupal Console plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin). 
 
 1. Start by creating a new branch based off the tip of master, then push it up to GitHub:
 
@@ -24,7 +29,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 1. Export local environment variables to define your site name and Multidev environment to easily copy and paste example commands in the next sections (replace `pantheon-d8-composer-project`):
 
   ```bash
-  export SITE=pantheon-d8-composer-project
+  export SITE=pantheon-d7-composer-project
   export ENV=pr-custom-t
   ```
 

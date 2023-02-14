@@ -1,10 +1,16 @@
 ---
 title: Clearing Caches for Drupal and WordPress
 description: Learn how to clear cache for Drupal and WordPress sites on Pantheon's Global CDN.
-categories: [performance]
 tags: [cache, cdn]
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal7, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
-Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/global-cdn) service.
+Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/guides/global-cdn) service.
 
 ## Granular Cache Clearing
 Use the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) to automatically clear caches for related pages as content is updated. No configuration needed, simply install and enable to take advantage of the granular cache clearing capabilities of the Global CDN.
@@ -18,7 +24,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 - Site Admin
 - Command Line
 
-**Note:** To clear the Object cache, please see our [Object Cache](/object-cache#clear-cache) doc.
+**Note:** To clear the Object cache, please see our [Object Cache](/guides/object-cache/redis-command-line#clear-cache) doc.
 
 ### Pantheon Dashboard
 1. Navigate to the Site Dashboard and select the desired environment.
@@ -40,18 +46,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-2">
-
-1. Navigate to the Site Dashboard and select the desired environment.
-2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
-3. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
-
-  ![Drupal 8 Clear Caches](../images/d8-cc.png)
-
-</Tab>
-
-
-<Tab title="Drupal 7" id="d7-3">
+<Tab title="Drupal" id="d7-3">
 
 1. Navigate to the Site Dashboard and select the desired environment.
 2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
@@ -61,7 +56,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 4. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
 
-  ![Drupal 7 Clear Caches](../images/d7-cc.png)
+  ![Drupal Clear Caches](../images/d7-cc.png)
 
 </Tab>
 

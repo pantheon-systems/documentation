@@ -1,10 +1,16 @@
 ---
 title: Pantheon Open Source Software Support Levels
 description: Learn about Pantheon support levels for open source software
-categories: [get-started, oss]
 tags: [collaborate]
 contributors: [greg-1-anderson, kporras07]
 reviewed: "2022-03-02"
+contenttype: [doc]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 At Pantheon, we appreciate open source contributions. In an effort to effectively maintain our public repositories in [GitHub](https://github.com/orgs/pantheon-systems/repositories), we tag each Pantheon repository with a support level badge. The badge is typically displayed in the repository's `README.md`. 
@@ -21,8 +27,7 @@ A Limited Availability project allows Pantheon to closely monitor feature develo
 
 ## Early Access
 
-A product in Early Access denotes a new project or feature set that is in development and available for a limited audience. Some features are stable, but the product is only partially complete and development is still in progress. The source code is publicly available, but you will need an invitation to participate in the Early Access program and learn about any platform component changes. Support is provided and only available to customers officially enrolled in the Early Access program. For more information on support for Early Access projects, refer to our [documentation](/guides/support/early-access/)
-
+A product in Early Access denotes a new project or feature set that is in development and available for a limited audience. Some features are stable, but the product is only partially complete and development is still in progress. The source code is publicly available, but you will need an invitation to participate in the Early Access program and learn about any platform component changes. Support is provided and only available to customers officially enrolled in the Early Access program. For more information on support for Early Access projects, refer to our [documentation](/guides/support/early-access/). Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 ## Minimal Support
 
@@ -40,5 +45,5 @@ An unsupported repository is typically a project created only for internal use a
 
 A deprecated repository is a project that has been retired or replaced, and is no longer supported by Pantheon. Details about the repository can be found in the `README.md`. Additional information, such as suitable alternative projects or guidance on finding solutions, might be available in the [Community Slack](https://slackin.pantheon.io/). Using a project that has been deprecated is not encouraged.
 
-## See Also
+## More Resources
 - [Get Support](/guides/support/)

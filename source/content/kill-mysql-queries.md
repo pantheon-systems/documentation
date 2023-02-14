@@ -1,9 +1,15 @@
 ---
 title: Identify and Kill Queries with MySQL Command-Line Tool
 description: Learn how to identify and kill long-running MySQL queries on your WordPress or Drupal site in a few commands.
-categories: [troubleshoot]
 tags: [cli, database]
 reviewed: "2020-10-28"
+contenttype: [doc]
+innav: [true]
+categories: [sql]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL database](/mysql-access).
 
@@ -43,7 +49,7 @@ Copy the provided query in the output and run as instructed.
 
 ### Troubleshoot With New Relic&reg; Performance Monitoring
 
-To get a better view of what's happening with your queries, take a look at [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic). Using our integrated reporting services with New Relic&reg; Performance Monitoring, you can isolate MySQL performance issues on your Drupal or WordPress sites.
+To get a better view of what's happening with your queries, take a look at [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic). Using our integrated reporting services with New Relic&reg; Performance Monitoring, you can isolate MySQL performance issues on your Drupal or WordPress sites.
 
 ### Review Slow Query Logs
 
@@ -59,10 +65,10 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 
 Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. [MySQL replication](/hyperdb) rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.
 
-## See Also
+## More Resources
 
 - [Access MySQL Databases](/mysql-access)
-- [Database Connection Errors](/database-connection-errors)
+- [Database Connection Errors](/guides/mariadb-mysql/database-connection-errors)
 - [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/debug-mysql-new-relic)
+- [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
 - [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb)

@@ -37,6 +37,7 @@ class ContributorTemplate extends React.Component {
     const docs =
       this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
     let printedGuides = []
+    let printedOverview = []
     return (
       <Layout>
         <SEO title={contributor.name} />
@@ -89,15 +90,31 @@ class ContributorTemplate extends React.Component {
                           )
                         }
                       } else {
-                        return (
+                        if (/^\/overview\/.*$/.test(node.fields.slug)) {
+                        const result = /^(\/overview\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.fields.slug)
+                        // Use printedOverview to avoid showing the same guide twice.
+                        if (printedOverview.indexOf(result[1]) === -1) {
+                          printedOverview.push(result[1])
+                          return (
+                            <li key={node.id}>
+                              <Link to={`${result[1]}`}>
+                                {node.frontmatter.title}
+                              </Link>
+                            </li>
+                          )
+                        } }
+                       else {
+                          return (
                           <li key={node.id}>
                             <Link to={`/${node.fields.slug}`}>
                               {node.frontmatter.title}
                             </Link>
                           </li>
-                        )
+                          )
+                        }
                       }
-                    })}
+                      })
+                    }
                   </ul>
                 </div>
               </div>

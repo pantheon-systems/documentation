@@ -4,8 +4,13 @@ subtitle: Next Steps
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 anchorid: next-steps
 layout: guide
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [git]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/next-steps/
@@ -28,10 +33,10 @@ Consider how you would like to manage configuration, which refers to anything in
 - Widget placement
 - Menus, etc.
 
-You can repeat configuration steps manually, but that can be error prone and time consuming, especially during a launch. No fun. We recommend using WP-CFM to handle site configuration. For details, see [WordPress Configuration Management (WP-CFM)](/wp-cfm).
+You can repeat configuration steps manually, but that can be error prone and time consuming, especially during a launch. No fun. We recommend using WP-CFM to handle site configuration. For details, see [WordPress Configuration Management (WP-CFM)](/guides/wordpress-configurations/wp-cfm).
 
 ## Conclusion
 
 This covers the basics of using Git on Pantheon with WordPress. Regardless of whether you prefer an SFTP client, and IDE, or the command line, Pantheon believes that developers should be able to use the tools that let you work the fastest, without sacrificing quality or security.
 
-If you decide down the road that you would like to work locally and make commits using Git directly, you can read our [Starting With Git](/git) documentation.
+If you decide down the road that you would like to work locally and make commits using Git directly, you can read our [Starting With Git](/guides/git/git-config) documentation.

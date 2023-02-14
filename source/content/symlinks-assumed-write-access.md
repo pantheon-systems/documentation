@@ -1,9 +1,15 @@
 ---
 title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
-categories: [troubleshoot]
 tags: [cli, code, files]
 reviewed: "2021-09-13"
+contenttype: [doc]
+innav: [true]
+categories: [files]
+cms: [--]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon.
@@ -32,7 +38,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 </Alert>
 
-1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/git#install-git) and [clone the code](/git#clone-your-site-codebase) locally if you have not done so already.
+1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/guides/git/git-config#install-git) and [clone the code](/guides/git/git-config#clone-your-site-codebase) locally if you have not done so already.
 
 1. From your terminal, `cd` to the site code repository:
 
@@ -351,5 +357,5 @@ lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/i
 
 Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the current directory.
 
-## See Also
+## More Resources
 For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).

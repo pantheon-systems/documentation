@@ -1,9 +1,20 @@
-1. Disable the [Redis Object Cache](https://www.drupal.org/project/object-cache) module.
+---
+contenttype: [partial]
+categories: [cache]
+cms: [drupal]
+product: [--]
+integration: [module]
+tags: [--]
+reviewed: ""
+---
 
-1. Delete Redis configuration from `settings.php`.
+1. Disable the [Redis Object Cache](https://www.drupal.org/project/redis) module.
 
-1. Commit and deploy code changes to the Live environment.
+1. Delete the Redis configuration from `settings.php`.
 
-1. Go to <span class="glyphicons glyphicons-cogwheel"></span> Settings > **Add Ons** and click the **Remove** button for Redis.
+1. Commit and deploy these changes to the Live environment.
 
-1. From the Site Dashboard, click on <span class="glyphicons glyphicons-cleaning"></span>.
+1. Go to <span class="glyphicons glyphicons-cogwheel"></span> **Settings**, select **Add Ons**, then click **Remove** for Redis.
+
+1. Go to the Site Dashboard, and click <span class="glyphicons glyphicons-cleaning"></span> **Clear Caches**.
+

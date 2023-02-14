@@ -1,10 +1,15 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
-cms: "WordPress"
-categories: [troubleshoot]
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carlalberto]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
+contenttype: [doc]
+innav: [true]
+categories: [issues]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 reviewed: "2022-03-24"
 ---
 
@@ -20,46 +25,29 @@ If your work is already updated but still listed here, let us know so we can rem
 
 Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the codebase in Test and Live environments.
 
-Refer to documentaton on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
+Refer to documentation on [Using the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
-The solution to these issues is usually to create a symboloic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+The solution to these issues is usually to create a symbolic link (symlink) from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). The process for creating a symlink and verifying that the symlink is correct is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
 The following is a list of plugins that assume write access, and the specific file or folder that needs to be symlinked to resolve:
 
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                                            |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               | `PROTECTED_CONTENT_FOLDER` variable within the plugin assumes access to `PATH`                      |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-|                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files, and this plugin can cause                   |
-|                                                                                               |                                                       | your deployment workflows to break. You can download full backups                                |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)             +-------------------------------------------------------+  [from the Site Dashboard](/backups). See [below](#all-in-one-wp-migration)                      |
-|                                                                                               | wp-content/plugins/all-in-one-wp-migrations/storage   | for additional information.                                                                      |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                     | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions.                           |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-|                                                                                               | wp-content/et-cache                                   | Remember to repeat this process for each environment,                                            |
-| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including Multidevs.                                                                             |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-|                                                                                               |                                                       | You can override this path on the plugin configuration page                                      |
-| [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)                             | wp-content/gallery                                    | (`/wp-admin/admin.php?page=ngg_other_options`) to use                                            |
-|                                                                                               |                                                       | wp-content/uploads/gallery/ instead of creating a symlink.                                       |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [Nitropack](https://wordpress.org/plugins/nitropack/)                                         | wp-content/nitropack and `advanced.cache.php`         | Allows for the caching feature to be disabled so that other features, such as                    |
-|                                                                                               |                                                       | optimization, can be used side-by-side.                                                          |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                      |                                                                                                  |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)                           | wp-content/cache                                      | This plugin uses `is_dir` to verify the target directory, which will return                      |
-|                                                                                               |                                                       |false if the directory is a symlink. This causes a permissions error when                         |
-|                                                                                               |                                                       |  deleting cache files.                                                                           |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WP-Rocket](https://wp-rocket.me/)                                                            | wp-content/wp-rocket-config                                                                                                                              |
-|                                                                                               +----------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                                                                                               | wp-content/cache                                                                                                                                         |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WPML - The WordPress Multilingual Plugin](https://wpml.org/)                                 | wp-content/languages                                  | Alternate solutions are listed in the [WPML section](#wpml---the-wordpress-multilingual-plugin). |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Plugin | Assumed Write Path | Notes |
+| --- | --- | --- |
+| [AccessAlly WordPress LMS](https://accessally.com/) | wp-content/accessally-protected-content | PROTECTED\_CONTENT\_FOLDER variable within the plugin assumes access to PATH |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
+| | wp-content/plugins/all-in-one-wp-migrations/storage |
+| [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
+| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) | wp-content/et-cache | Remember to repeat this process for each environment, including Multidevs. |
+| [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/) | wp-content/cache | Remember to repeat this process for each environment, including Multidevs. |
+| [Hummingbird](https://wordpress.org/plugins/hummingbird-performance/)  | wp-content/wphb-logs | The /wphb-logs folder logs API calls |
+| [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/) | wp-content/gallery | You can override this path on the plugin configuration page (/wp-admin/admin.php?page=ngg\_other\_options) to use wp-content/uploads/gallery/ instead of creating a symlink. |
+| [Nitropack](https://wordpress.org/plugins/nitropack/) | wp-content/nitropack and advanced.cache.php | Allows for the caching feature to be disabled so that other features, such as optimization, can be used side-by-side. |
+| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache |
+| [Wordfence](https://wordpress.org/plugins/wordfence/) | wp-content/wflogs | Follow the steps outlined in the [Wordfence](/plugins-known-issues#wordfence) section. |
+| [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/) | wp-content/cache | This plugin uses is\_dir to verify the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files. |
+| [WP-Rocket](https://wp-rocket.me/) | wp-content/wp-rocket-config |
+| | wp-content/cache |
+| [WPML - The WordPress Multilingual Plugin](https://wpml.org/) | wp-content/languages | Alternate solutions are listed in the [WPML section](/plugins-known-issues#wpml---the-wordpress-multilingual-plugin). |
 
 ### Define FS_METHOD
 
@@ -86,6 +74,18 @@ Plugins and themes with issues resolved (at least partially) by this include the
 - [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 - [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
+
+## AdThrive Ads
+
+<ReviewDate date="2022-10-10" />
+
+[AdThrive Ads](https://wordpress.org/support/plugin/adthrive-ads/) is an ad provider for bloggers. AdThrive Ads is not compatible with the Pantheon platform because the plugin assumes write access and is also incompatible with:
+
+- Git deployments
+- Docker
+- Kubernetes
+
+There is no solution for the compatibility issues with this plugin.
 
 ## All-in-One WP Migration
 
@@ -173,7 +173,7 @@ failed to open stream: Permission denied in /code/wp-content/plugins/autoptimize
 ```
 
 **Solution:** Uncheck **Enable 404 fallbacks** in the Autoptimize settings page `wp-admin/options-general.php?page=autoptimize`.
-The Pantheon Platform does not provide support for custom HTTP server configurations, so file redirects will not work. More information can be found in the [redirect files](/advanced-redirects#redirect-files) section of [Advanced Redirects and Restrictions](/advanced-redirects).
+The Pantheon Platform does not provide support for custom HTTP server configurations, so file redirects will not work. More information can be found in the [redirect files](/guides/redirect/advanced#redirect-files) section of [Advanced Redirects and Restrictions](/guides/redirect/advanced).
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 **Solution:** This plugin only works in the `Coming Soon Mode` on Pantheon. You need to add content to the **Page Settings** > **Message**, so the Coming Soon page won't appear as a blank page.
 
-Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/security#customize-lock-page).
+Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/guides/secure-development/security-tool#customize-lock-page).
 
 ___
 
@@ -266,7 +266,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 
 `define( 'WPCF7_UPLOADS_TMP_DIR',  WP_CONTENT_DIR . '/uploads/wpcf7_uploads' );`
 
-Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/multidev) you are using.
+Please note that the temporary folder needs to reside in a folder that can be accessed by Dev, Test, Live, or whichever [Multidev](/guides/multidev) you are using.
 
 At this time, this setting alone does not resolve the issue. An issue has been submitted by the community and is being worked on [here](https://wordpress.org/support/topic/attached-files-are-not-sent-anymore/).
 
@@ -333,51 +333,53 @@ ___
 
 ## Divi WordPress Theme & Visual Page Builder
 
-<ReviewDate date="2020-10-09" />
+<ReviewDate date="2022-09-28" />
 
-**Issue 1:** [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
+**Issue:** Divi WordPress Theme & Visual Page Builder may produce the error below when attempting to edit pages. This is caused by the page builder attempting to write to three different nested folders in the web root. This issue is also expressed when the WordPress admin dashboard becomes slow when editing posts using Divi.
 
-```php
+```bash
 .../data/Utils.php:758  ET_Core_Data_Utils::WPFS():
 [ERROR]: Unable to write to filesystem. Please ensure that the web server process has write access to the WordPress directory.
 ```
 
-**Solution 1:**  The most reliable solution is to access the Divi Theme Options > Builder > Advanced section and disable Static CSS File Generation.
+**Explanation of why these issues occur:** The dynamic features in Divi, along with other settings stored in `et-cache`, can create excessive rewrites to the file system. Under high traffic uncached requests, this can saturate the file system, and degrade the performance of the site. The effect this creates is compounded when [WordPress' `FS_METHOD`](https://developer.wordpress.org/reference/functions/get_filesystem_method/) is not set to direct. Elegant themes provide these configurations in an attempt to enhance the experience of their Product, however these options are redundant and detrimental in certain environments.
 
-**Solution 2:**
+**Solution:** The resolution is to access the Divi Theme Options located under the Advanced section in Builder and disable Static CSS File Generation:
+
+1. Navigate to **Divi Theme Options**, select **Builder**, and then select **Advanced**.
 
 1. Disable Static CSS file generation in the Divi theme.
 
-1. Disable Dynamic CSS at **Divi** > **Theme Options** > **General** > **Performance** and click to disable Dynamic CSS.
+1. Select **Theme Options**, select **General**, select **Performance**, and then select to disable Dynamic CSS.
 
-1. Create a [symlink](/plugins-known-issues#assumed-write-access) in `wp-content/et-cache`.
+1. Consider disabling other Dynamic settings if possible.
 
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+1. Verify that a symlink exists for `wp-content/et-cache`.
 
-1. Purge the contents of `et-cache` but not the `et-cache` file itself.
+1. Define the `FS_METHOD` in the `wp-config` file if you are not using [Pantheon's mu-plugin](/guides/wordpress-configurations/plugins#pantheon-must-use-plugin).
 
-**Issue 2:** The WordPress admin dashboard becomes slow when editing posts using Divi.
+1. Purge the contents of `et-cache` manually but **do not** purge the `et-cache` folder itself. You can do this by accessing the site's files via [SFTP](/guides/sftp).
 
-**Solution:**  When the `wp-content/uploads/et-cache` directory gets too full, it tends to slow down. Large lists of files will slow down the admin area even when Static CSS file generation is disabled. Clear the cache by accessing the site's files [via SFTP](/sftp#sftp-connection-information). Empty the contents inside the  `files/et-cache` folder, but do not remove the folder. Some files will be regenerated within the `files/et-cache` folder; this is expected behavior. Over time the files can grow too large, especially if Static CSS generation is still enabled, and you may need to repeat the steps to empty the folder.
+**I am still having issues:** Please [contact support](/guides/support/contact-support/) if you have completed the resolution steps above and you are still having issues.
 ___
 
 ## Elementor
 
 <ReviewDate date="2022-03-30" />
 
-**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another. 
+**Issue:** [Elementor](https://wordpress.org/plugins/elementor/) uses the current full URI to link to styled assets, which are invalid when the code is pushed from one environment to another.
 
-**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work. 
+**Solution 1:** Use any find/replace option to update the paths in Elementor. Ensure you account for escaped JSON URLs for this solution to work.
 
 For example: my.example.com
 
-Find or replace must handle `test.example.com` -> `my.example.com` and 
+Find or replace must handle `test.example.com` -> `my.example.com` and
 `my.example.com` -> `test.example.com`.
 
 Note that if you are using a `/` ending slash on a new site’s URL, ensure you add a `/` on old site’s URL as well.
 
 **Solution 2:** Use the search and replace feature in Elementor to enter the following:
- 
+
 `/wp-admin/admin.php?page=elementor-tools#tab-replace_url`.
 
 ___
@@ -420,17 +422,36 @@ ___
 
 **Issue:** The [FacetWP](https://facetwp.com) plugin [conflicts with New Relic](https://facetwp.com/new-relic-compatibility/).
 
-**Solution:** [Disable New Relic](/new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
+**Solution:** [Disable New Relic](/guides/new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
 
 ___
 
 ## Fast Velocity Minify
 
-<ReviewDate date="2019-10-12" />
+<ReviewDate date="2022-12-12" />
 
-**Issue:** When using the [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/), the Site suddenly shows a white screen of death.
+**Issue:** Your site may suddenly display a white screen of death in Git mode or in the Test/Live environment when using the [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/) plugin. This occurs because the default cache location, `wp-content/cache`, is not writable in Pantheon.
 
-**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/object-cache#clear-cache).
+**Solution 1:** The default cache path for this plugin is `wp-content/cache` as of version [3.2.2](https://github.com/peixotorms/fast-velocity-minify/commit/c267c0bddfd9aaac9bf2015ad34b7ddd75b0c88d).
+
+1.Create a symlink for `wp-content/cache` in the `wp-content` directory. Refer to the documentation on [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+
+1. Run the following line of code:
+
+  ```
+  ln -s ./uploads/cache ./cache
+  ```
+
+1. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/guides/object-cache/redis-command-line#clear-cache). Earlier versions have this option in the Fast Velocity Minify's **Settings** tab for the **Cache Location**.
+
+**Solution 2:** The `FVM_CACHE_DIR` and `FVM_CACHE_URL` variables are available to override the cache location to address this [bug](https://github.com/peixotorms/fast-velocity-minify/issues/7) as of version 3.3.3.
+
+Add the example configuration in the `wp-config.php` file:
+
+```
+define( 'FVM_CACHE_DIR', '/code/wp-content/uploads' );
+define( 'FVM_CACHE_URL', WP_SITEURL . '/code/wp-content/uploads' );
+```
 
 ___
 
@@ -510,7 +531,7 @@ ___
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
 
 ___
 
@@ -528,13 +549,38 @@ ___
 
 **Solution:** Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
 
-**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/platform-considerations/#nginxconf) and code files on the Test and Live environments are not writable.
+**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/guides/platform-considerations/platform-site-info#nginxconf) and code files on the Test and Live environments are not writable.
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 
 ___
 
-## ManageWP Worker
+## Jetpack
+
+<ReviewDate date="2022-03-09" />
+
+**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
+
+**Solution:**
+
+<Partial file="jetpack-enable-xmlrpc.md" />
+
+<Alert title="Note"  type="info" >
+
+Pantheon does not support XML-RPC if it is enabled. You must resolve any issues you experience from enabling XMLPRC on your own.
+
+</Alert>
+
+___
+
+## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
+
+**Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
+
+**Solution:** If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode plugin.
+___
+
+## [ManageWP worker](https://wordpress.org/plugins/worker/)
 
 <ReviewDate date="2018-10-12" />
 
@@ -548,11 +594,11 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 
-**Solution:** Make sure you are in [SFTP mode](/sftp/#sftp-mode) instead of Git mode.
+**Solution:** Make sure you are in [SFTP mode](/guides/sftp/sftp-development) instead of Git mode.
 
 ___
 
@@ -566,7 +612,7 @@ ___
 
 <ReviewDate date="2019-05-08" />
 
-**Issue:** The [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/) plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
+**Issue:** The [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/) plugin sets up redundant configurations (`appname` and `framework`) with the [New Relic&reg; Performance Monitoring](/guides/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/guides/quicksilver).
 
 ___
 
@@ -612,7 +658,7 @@ ___
 
 <ReviewDate date="2020-12-10" />
 
-**Issue:** [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/) can have incompatible index values for `meta_key` on database tables when installed on a site imported from a host using [3-byte character sets](/migrate#maximum-index-size), resulting in the following error on import:
+**Issue:** [Posts 2 Posts](https://wordpress.org/plugins/posts-to-posts/) can have incompatible index values for `meta_key` on database tables when installed on a site imported from a host using [3-byte character sets](/guides/guided/troubleshooting#maximum-index-size), resulting in the following error on import:
 
 ```none
 Index column size too large. The maximum column size is 767 bytes
@@ -636,8 +682,8 @@ ___
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
 
-- [MySQL Slow Log](/mysql-slow-log)
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic Pro](/guides/new-relic/debug-mysql-new-relic)
 
 ___
 
@@ -657,7 +703,7 @@ ___
 
 **Issue 1:** When using the [Redirection](https://wordpress.org/plugins/redirection/) plugin, customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
-**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects) for more information.
+**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/guides/redirect) for more information.
 
 **Issue 2:** [Redirection](https://redirection.me/) prefers `$_SERVER['SERVER_NAME']` over `$_SERVER['HTTP_HOST']` for [URL and server](https://redirection.me/support/matching-redirects/) redirects. By default, `$_SERVER['SERVER_NAME']` returns Pantheon's internal server name and not the current hostname. As a result, Redirection's "URL and server"-based redirects never match.
 
@@ -720,9 +766,9 @@ ___
 
 <ReviewDate date="2021-10-20" />
 
-**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/traffic-limits) with Pantheon.
+**Issue:** [Site24x7](https://wordpress.org/plugins/site24x7-rum/) is an uptime monitor that pings a site to observe stability and various functions. Each time a site is pinged, Site24x7 uses a unique user agent string or various IP addresses, which may falsely inflate [traffic metrics](/guides/account-mgmt/traffic) with Pantheon.
 
-**Solution:** Consider using New Relic (/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
+**Solution:** Consider using [New Relic](/guides/new-relic) or Pingdom (/guides/pingdom-uptime-check) to monitor uptime. Pantheon maintains partnerships with these services and does not meter or bill requests from their user agents.
 
 ___
 
@@ -781,7 +827,7 @@ ___
 
 **Issue:** Sites running PHP version 5.3 produce a WSOD after activating the [TubePress Pro](https://tubepress.com/).
 
-**Solution:** [Upgrade your site's PHP version](/php-versions) to 5.5, 5.6, or 7.0.
+**Solution:** [Upgrade your site's PHP version](/guides/php/php-versions) to 5.5, 5.6, or 7.0.
 
 ___
 
@@ -803,7 +849,7 @@ ___
 
 **Solution:** Manually change `unloq_credentials` key in the`wp_options` table. Alternatively, you can re-create an application by resetting your plugin installation (deactivate, delete entries, etc.).
 
-For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/guides/two-factor-authentication/#single-site-tfa).
+For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/guides/secure-development/two-factor-authentication/#single-site-tfa).
 
 ___
 
@@ -838,6 +884,24 @@ Brizy:
 
 ___
 
+## Updraft / Updraft Plus Backup
+
+<ReviewDate date="2022-07-18" />
+
+**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/backups/) for more information.
+
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by:
+
+- Running the bash script in your local system
+
+- Using an external server
+
+- Using a service that runs cron jobs for you
+
+Refer to the [Access Backups](/backups#access-backups) documentation for more details.
+
+___
+
 ## Visual Composer: Website Builder
 
 <ReviewDate date="2018-08-27" />
@@ -862,7 +926,7 @@ ___
  ln -s ./uploads/webp-express ./webp-express
 ```
 
-Refer to the documentation on [Using Extensions That Assume Write Access](https://pantheon.io/docs/symlinks-assumed-write-access) for more information.
+Refer to the documentation on [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
 **Issue 2:** Broken WebP images are served from the wrong directory.
 
@@ -916,15 +980,19 @@ ___
 
 ## Wordfence
 
-<ReviewDate date="2020-07-15" />
+<ReviewDate date="2022-12-16" />
 
-**Issue:** [Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuation and log files.
+**Issue 1:** Wordfence can't write configuration and log files to the codebase.
+
+[Wordfence](https://wordpress.org/plugins/wordfence/) assumes write access to several files in the codebase to store configuration and log files.
 
 **Solution:** Prepare your environment before installing Wordfence with the proper symlinks and configuration files:
 
+<Accordion title="Wordfence Assumed Write Access Solution" id="wordfence-assumed-write-access">
+
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev (or [Multidev](/multidev)) environment:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variables `SITE` and `ENV` in your terminal session to match your site name and the Dev (or [Multidev](/guides/multidev)) environment:
 
 ```bash{promptUser: user}
 export SITE=yoursitename
@@ -933,27 +1001,39 @@ export ENV=dev
 
 </Alert>
 
-1. Set your Dev (or [Multidev](/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes):
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes) in the dashboard or via Terminus:
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.$ENV git
   ```
 
-1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/git#clone-your-site-codebase):
+1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/guides/git/git-config#clone-your-site-codebase):
 
   ```bash{promptUser: user}
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. From the codebase directory, create the following symlinks:
+1. Change to the site's `wp-content` directory:
+
+   ```bash{promptUser: user}
+   cd $SITE/wp-content
+   ```
+
+1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
-  ln -s ../../files/private/wflogs ./wp-content/wflogs
-  ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
-  ln -s ../files/private/.user.ini ./.user.ini
+  rm wflogs
   ```
 
-1. Open `pantheon.yml` and add a [protected web path](/private-paths) for `.user.ini`:
+1. Create the following symlinks:
+
+  ```bash{promptUser: user}
+  ln -s ../../files/private/wflogs ./wflogs
+  ln -s ../../files/private/wordfence-waf.php ./../wordfence-waf.php
+  ln -s ../../files/private/.user.ini ./../.user.ini
+  ```
+
+1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
 
   ```yml:title=pantheon.yml
   protected_web_paths:
@@ -995,7 +1075,7 @@ Complete this step in Dev, Test, and Live Environments.
   exit
   ```
 
-1. Set the environment connection mode to SFTP, then install and activate Wordfence. You can do both with Terminus:
+1. Set the environment [connection mode to SFTP](/cms-admin#sftp-mode), then install and activate Wordfence. You can do both with Terminus:
 
   ```bash{outputLines: 2,4-25}
   terminus connection:set $SITE.$ENV sftp
@@ -1023,98 +1103,104 @@ Complete this step in Dev, Test, and Live Environments.
 
 1. Navigate to the **Wordfence** plugin in the site's WordPress Admin and **Resume Installation** if prompted, or click **CLICK HERE TO CONFIGURE**. The plugin requires that you download `.user.ini` to continue. As this file is blank at this point, you can delete it after downloading.
 
-**Issue:** Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error connecting to the database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. This results in two problems:
+</Accordion>
 
-* __DIR__ is not providing the proper path for Wordfence
-* Wordfence cannot find your database credentials
+**Issue 2:** Error connecting to the database.
 
-**Solution:** To address the first problem you can modify Wordfence to use relative paths. Change the following code within `wordfence-waf.php` over SFTP
-from:
+Occassionally, when configuring the Web Application Firewall (WAF), it can result in an "Error connecting to the database" message, in which the Wordfence plugin generates a bad `wordfence-waf.php` file. This results in two problems:
 
-```
-if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-    define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
-    include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
-to:
+- `__DIR__` is not providing the proper path for Wordfence
+- Wordfence cannot find your database credentials
 
-```
-if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
- define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
- include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
+**Solution if `__DIR__` is not providing the proper path for Wordfence:** Modify Wordfence to use relative paths.
 
-Next, add [Wordfence constants](https://www.wordfence.com/help/advanced/constants/) in between conditions in the `wordfence-waf.php` file. The file should resemble the following when complete:
+1. Change the following code within `wordfence-waf.php` over SFTP from:
 
-```
-// Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
-// This file was the current value of auto_prepend_file during the Wordfence WAF installation
+  ```php:title=wordfence-waf.php
+  if (file_exists(__DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+      define("WFWAF_LOG_PATH", __DIR__.'/wp-content/wflogs/');
+      include_once __DIR__.'/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
-if (file_exists('/includes/prepend.php')) {
-	include_once '/includes/prepend.php';
-}
+  To:
 
-	define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
-	define('WFWAF_DB_USER', $_ENV['DB_USER']);
-	define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
-	define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
-	define('WFWAF_DB_CHARSET', 'utf8mb4');
-	define('WFWAF_DB_COLLATE', '');
-  // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
-	define('WFWAF_TABLE_PREFIX', 'wp_');
+  ```php:title=wordfence-waf.php
+  if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+   define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
+   include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
-if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
-	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
-}
-```
+1. Add [Wordfence constants](https://www.wordfence.com/help/advanced/constants/) in between conditions in the `wordfence-waf.php` file. The file should resemble the following when complete:
+
+  ```php:title=wordfence-waf.php
+  // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
+  // This file was the current value of auto_prepend_file during the Wordfence WAF installation
+  
+  if (file_exists('/includes/prepend.php')) {
+    include_once '/includes/prepend.php';
+  }
+  
+    define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
+    define('WFWAF_DB_USER', $_ENV['DB_USER']);
+    define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
+    define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
+    define('WFWAF_DB_CHARSET', 'utf8mb4');
+    define('WFWAF_DB_COLLATE', '');
+    // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
+    define('WFWAF_TABLE_PREFIX', 'wp_');
+  
+  if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
+    define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
+    include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  }
+  ```
 
 #### Further Considerations with Wordfence: Utilizing data storage over files
 
 If you experience degraded performance with Wordfence active, using [Wordfence's data storage option](https://www.wordfence.com/help/firewall/mysqli-storage-engine/) might be appropriate. Modify `wordfence-waf.php` to include the MySQLi storage engine constant. Combined with the constants previously mentioned, the plugin will write to your database instead of your file system. If you do this, we recommend wrapping the constants in a condition that checks `wp-config.php` for a conflicting constant. The end result of your modified `wordfence-waf.php` should resemble the following:
 
-```
+  ```php:title=wp-config.php
 <?php
 // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
 // This file was the current value of auto_prepend_file during the Wordfence WAF installation (Sun, 21 Nov 2021 23:40:56 +0000)
 
 if (file_exists('/includes/prepend.php')) {
-	include_once '/includes/prepend.php';
+  include_once '/includes/prepend.php';
 }
 
 if(! defined('WFWAF_STORAGE_ENGINE')) {
-	// define WF constants if not set in wp-config.php
-	define('WFWAF_STORAGE_ENGINE', 'mysqli');
-	define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
-	define('WFWAF_DB_USER', $_ENV['DB_USER']);
-	define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
-	define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
-	define('WFWAF_DB_CHARSET', 'utf8mb4');
-	define('WFWAF_DB_COLLATE', '');
+  // define WF constants if not set in wp-config.php
+  define('WFWAF_STORAGE_ENGINE', 'mysqli');
+  define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
+  define('WFWAF_DB_USER', $_ENV['DB_USER']);
+  define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
+  define('WFWAF_DB_HOST', $_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT']);
+  define('WFWAF_DB_CHARSET', 'utf8mb4');
+  define('WFWAF_DB_COLLATE', '');
   // Note this table prefix should reflect your WordPress application's table prefix. Update accordingly.
-	define('WFWAF_TABLE_PREFIX', 'wp_');
+  define('WFWAF_TABLE_PREFIX', 'wp_');
 }
 
 if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
-	define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');;
-	include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
+  define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');;
+  include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
 ```
 
-**Advantages:** Customers have reported improved file system performance, while not having to compromise on Wordfence's features.
+**Advantages:** Customers have reported improved file system performance without having to compromise on Wordfence's features.
 
 **Disadvantages:** Due to the nature of the plugin, binary logs and insertion queries will increase. Performance gains in one area may be sacrificed in another.
 
 #### How do I confirm I am using data storage with Wordfence?
 
-You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is wp_) and queries will increase based on blocked traffic.
+You can confirm usage by navigating to the Wordfence menu within your WordPress dashboard. Select **Tools**, on the the Tools page click the **Diagnostic** tab. In the **Diagnostic** tab, below the **Wordfence Firewal** section, search for the "Active Storage Engine". This query will display either "File System" or "MySQLi". For this instance, choose "MySQLi". An additional table will be added called `wp_wfwafconfig` (assuming your table prefix is `wp_`) and queries will increase based on blocked traffic.
 
 ___
 
 ## WordPress Download Manager
 
-**Issue 1:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
+**Issue:** The [WordPress Download Manager](https://www.wpdownloadmanager.com/) plugin `wpdm-cache` directory may grow excessively large with generated files.
 
 **Solution:** We recommend that you research an alternative download manager plugin that fits your needs.
 
@@ -1150,51 +1236,63 @@ ___
 
 ## WP Rocket
 
-<ReviewDate date="2020-10-19" />
+<ReviewDate date="2022-10-25" />
 
-**Issue:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/) conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side. Note that if not disabled, WP Rocket will auto-create the `advanced-cache.php` file.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](https://pantheon.io/docs/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
 
-**Solution:**
+**Solution 1:**
 
-1. In SFTP mode, install the WP Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
-1. Activate the plugin from the dashboard.
-1. Disable WP Rocket caching by finding the `WP_CACHE` value defined by WP-Rocket in `wp-config.php`, and setting it to false:
+1. Set your development mode to SFTP.
 
-   ```php:title=wp-config.php
-   define('WP_CACHE', false);
-   ```
+1. Install the WP Rocket plugin to the Dev environment by uploading via SFTP or from the WP dashboard.
 
-1. **Optional on writable environments:** The WP Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
+1. Install the helper plugin [WP Rocket | Disable Page Caching](https://docs.wp-rocket.me/article/61-disable-page-caching) to the Dev environment by uploading via SFTP or from the WP dashboard.
+
+1. Activate both plugins from the dashboard.
+
+  WP Rocket will automatically make two changes as long as your environment is in SFTP mode. 
+
+1. Commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
+
+    - The following definition will be added in `wp-config.php`. This enables advanced caching capabilities.
+
+        ```php:title=wp-config.php
+        define('WP_CACHE', true); // Added by WP Rocket
+        ```
+
+    - The `wp-content/advanced-cache.php` drop-in file will be created.
+
+
 
 **Issue 2:** WP Rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
-**Solution 1:** WP Rocket version 3.5 and higher allows setting a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
+**Solution 2a:** If you are running version 3.5 and higher, you can set a [custom cache folder and config path](https://docs.wp-rocket.me/article/1118-specify-a-custom-cache-folder):
 
 ```php:title=wp-config.php
-define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket-config/' );
+define( 'WP_ROCKET_CONFIG_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket/config/' );
+define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/wp-rocket/cache/' );
+define( 'WP_ROCKET_CACHE_ROOT_URL', WP_SITEURL . '/wp-content/uploads/wp-rocket/cache/' ); // Assumes you have WP_SITEURL defined earlier in the file.
 ```
 
-```php:title=wp-config.php
-define( 'WP_ROCKET_CACHE_ROOT_PATH', $_SERVER['DOCUMENT_ROOT'] . '/wp-content/uploads/new-path/cache/' );
-```
+**Solution 2b:** If you are runnning a version between 3.2 and 3.4, you can only set the cache path through constants.
 
-Version 3.2 through 3.4 allows setting only the cache path, and still requires a symlink for the other paths (see below).
+1. [Create symlinks](#assumed-write-access) for the other paths.
 
-**Solution 2:** [Create symlinks](#assumed-write-access) as noted above.
+1. Make sure to manually create the folders below in _ALL_ environments.
 
-After symlinking, make sure to manually create these folders in *ALL* environments.
+  ```none
+  files/cache/wp-rocket
+  files/cache/busting
+  ```
 
-```none
-files/cache/wp-rocket
-files/cache/busting
-```
+  or
 
-or
+  ```none
+  code/wp-content/uploads/cache/wp-rocket
+  code/wp-content/uploads/cache/busting
+  ```
 
-```none
-code/wp-content/uploads/cache/wp-rocket
-code/wp-content/uploads/cache/busting
-```
+**Solution 2c:** If you are running a version below 3.2, your only option is to upgrade the plugin to a newer version.
 
 ___
 
@@ -1290,9 +1388,9 @@ ___
 
 <ReviewDate date="2021-02-23" />
 
-**Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
+**Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](/guides/legacy-dashboard/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/guides/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
 
-**Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/optimize-site-traffic) for alternative methods.
+**Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/guides/account-mgmt/traffic/remedy) for alternative methods.
 
 ___
 
@@ -1312,7 +1410,7 @@ ___
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
-**Solution:** Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/security).
+**Solution:** Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/guides/secure-development/security-tool).
 
 ___
 
@@ -1359,6 +1457,7 @@ ___
 1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+
 ___
 
 ## YITH WooCommerce Request a Quote
@@ -1382,7 +1481,9 @@ if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
    }
 }
 ```
+
 ___
+
 ## Yoast SEO
 
 <ReviewDate date="2018-06-12" />
@@ -1390,6 +1491,23 @@ ___
 **Issue:** The redirects for the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin setting will detect two options for redirect methods, "PHP", and "Web Server". The Web Server option expects write access to the `nginx.conf` file, which is not writable on Pantheon.
 
 **Solution:** Only use the "PHP" redirect method.
+
+___
+
+## Yoast Indexables
+
+<ReviewDate date="2022-06-14" />
+
+**Issue:** [Yoast Indexables](https://yoast.com/innovations/indexables/) can cause performance issues on large sites. Sites with 100,000+ posts might find that indexing the table with `wp yoast index` will time out. Sites might also see slow load times in both the frontend and wp-admin areas due to queries on the `wp_yoast_indexables` table.
+
+**Solution:** [Disable saving data](https://developer.yoast.com/customization/yoast-seo/filters/filtering-yoast-seo-indexables/#disabling-indexables) to the `wp_yoast_indexables` table to improve wp-admin performance. However, if you have 1,000,000+ posts you might see extremely poor performance on the frontend with indexables disabled. Use the code below to disable data saving for Yoast indexables.
+
+```php:title=plugin.php
+/** Tell Yoast not to save indexable data to the wp_yoast_indexables table. */
+add_filter( 'Yoast\WP\SEO\should_index_indexables', '__return_false' );
+```
+
+Pantheon's [Professional Services](/guides/professional-services) team has tooling available to help index large sites. Reach out to your Customer Success Manager to get more information about tooling.
 
 ___
 

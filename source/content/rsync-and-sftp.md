@@ -1,16 +1,23 @@
 ---
 title: rsync and SFTP
 description: Transfer large files using an SFTP client or rsync using Drupal or WordPress for Pantheon.
-categories: [develop]
 tags: [files, sftp, rsync]
+contenttype: [doc]
+innav: [true]
+categories: [sftp]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [rsync, ssh]
 ---
+
 If you have more than 500 MB of content to be transferred to your `/files` directory (`sites/default/files` for Drupal and `wp-content/uploads` for WordPress), you won't be able to use your Pantheon Dashboard to import. Instead, you'll need to use an SFTP client or rsync to transfer.
 
 This allows you to transfer unlimited data "server-to-server", which is much faster than transferring from your workstation. Files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
 <Alert title="Notes" type="info">
 
- - This document covers copying [files](/files), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
+ - This document covers copying [files](/guides/filesystem), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
 
  - You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 
@@ -30,7 +37,7 @@ Here's an example of using a command-line SFTP client to connect to a site envir
 
 <Alert title="Note" type="info">
 
-You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
 
 </Alert>
 
@@ -52,7 +59,7 @@ rsync is available, but it is a more advanced tool that requires experience with
 
 <Alert title="Note" type="info">
 
-Either the source or the destination must be a local file or directory; both cannot be remote. You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+Either the source or the destination must be a local file or directory; both cannot be remote. You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
 
 </Alert>
 

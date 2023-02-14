@@ -3,8 +3,15 @@ title: Composer Fundamentals and WebOps Workflows
 description: Start with Composer basics then explore suggested WebOps workflows for WordPress and Drupal sites on Pantheon.
 type: guide
 permalink: docs/guides/:basename
-categories: [develop]
 tags: [composer, workflow, updates, webops]
+contenttype: [doc]
+innav: [true]
+categories: [update]
+cms: [wordpress, drupal]
+audience: [development]
+product: [--]
+integration: [composer]
+reviewed: "2022-12-12"
 ---
 
 [<dfn id="composer">Composer</dfn>](https://getcomposer.org/doc/01-basic-usage.md) is a widely-used PHP dependency and package manager that provides an alternative, more modern way to manage the external (non-core) code used by a WordPress or Drupal site.
@@ -16,31 +23,25 @@ At its primary level, Composer needs:
 
 Understanding how Composer can be used independent of Drupal or WordPress is a good place to learn more about the general concepts. For a summary of basic usage, see [Composer's own documentation](https://getcomposer.org/doc/01-basic-usage.md).
 
-<Enablement title="Automation Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
-
-Learn Composer concepts with help from our experts. Pantheon delivers on-demand training to help development teams navigate the platform and improve internal WebOps.
-
-</Enablement>
-
 ## Dependencies
 
-Composer encourages a mental model where code not written specifically for a given project is a dependency. Only files unique to the project are tracked as part of the project's main source repository, also referred to as the canonical site repository. Dependencies for WordPress and Drupal include core, plugins, contrib modules, themes, and libraries. A single dependency, such as a theme, is referred to as a package.
+Composer encourages a mental model where code not written specifically for a given project is a dependency. Only files unique to the project are tracked as part of the project's main source repository, also referred to as the canonical site repository. Dependencies for WordPress and Drupal include core, plugins, contrib modules, themes, and libraries. A single dependency, such as a theme, is referred to as a package. Review [Composer `require` and `require dev` Sections](/guides/integrated-composer/dependencies#composer-require-dev-and-require-sections) for more information on how these sections are on used on the Pantheon platform.
 
 Composer looks within [The PHP Package Repository](https://packagist.org/) for dependencies to install, which does not include Drupal or WordPress packages by default. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides its own respective package repository so dependencies can be managed with Composer:
 
 - WordPress: <https://wpackagist.org>
-- Drupal 8: <https://packages.drupal.org/8>
+- Drupal (Latest Version): <https://packages.drupal.org/10>
 - Drupal 7: <https://packages.drupal.org/7>
 
 ## Managing Core as a Project Dependency
 
-Sites managed with Composer should use the nested docroot feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
+Sites managed with Composer should use the [nested docroot](/nested-docroot) feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
 
 This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
 ## Pull Request Workflow
 
-In this WebOps workflow, a [Multidev](/multidev) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
+In this WebOps workflow, a [Multidev](/guides/multidev) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
 
 ![Multidev PR workflow](../../images/pr-workflow/github-circle-pantheon.png)
 
@@ -54,7 +55,7 @@ To maintain a Composer-based workflow with one-click updates through the Dashboa
 
 ## Custom Upstream Workflow
 
-Use [Integrated Composer](/guides/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/custom-upstream).
+Use [Integrated Composer](/guides/integrated-composer) to preserve the functionality of Pantheon's one-click updates from the Site Dashboard for Composer-managed sites created from a [Custom Upstream](/guides/custom-upstream).
 
 Updates made using Integrated Composer are only committed at the Custom Upstream level by a single repository maintainer. Updates then trickle down to sites created from the Custom Upstream as one-click updates in the Pantheon Site Dashboard. Custom Upstreams using Integrated Composer with dependencies in `upstream-configuration/composer.json` can have their own site-specific dependencies added in the top-level `composer.json` file. Custom Upstreams using Integrated Composer should avoid changing the top-level `composer.json` file after sites have been created from the Custom Upstream to avoid merge conflicts.
 
@@ -66,9 +67,13 @@ You can also prevent upstream updates by [setting an empty upstream](/guides/com
 
 ## Next Steps
 
-Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [upgrade to Drupal 9](/guides/drupal-9-migration).
+Here are some ways to get started using Composer for your Pantheon sites:
 
-If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert).
+- Create a new [Drupal with Integrated Composer](/drupal) site.
+- [Migrate or upgrade](/drupal-migration) an existing Drupal site to the latest version of Drupal with Integrated Composer.
+- [Convert a Standard Drupal Site to a Composer Managed Site](/guides/composer-convert).
+- Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer-managed sites with continuous integration (CI) workflows.
+- Create a new [WordPress with Integrated Composer](/guides/integrated-composer) site.
 
 ### Partial Adoption
 
@@ -76,6 +81,8 @@ If you're not ready to go all in with a Composer workflow and you want to see ho
 
 <Partial file="notes/partial-composer-adoption-warning.md" />
 
-## See Also
+## More Resources
 
-- [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)
+- [Convert a Standard Drupal Site to a Composer-Managed Site](/guides/composer-convert)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)

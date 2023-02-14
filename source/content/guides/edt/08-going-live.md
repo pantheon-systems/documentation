@@ -1,24 +1,17 @@
 ---
 title: Essential Developer Training
 subtitle: Going Live
-anchorid: going-live
-edt: true
-layout: guide
-categories: [go-live]
+contenttype: [guide]
+innav: [true]
+categories: [launch]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dns, launch]
-type: guide
-survey: true
-generator: pagination
-pagination:
-    provider: data.edtpages
-use:
-    - edtpages
 permalink: docs/guides/edt/going-live/
-previousurl: guides/edt/performance/
-previouspage: Performance
+anchorid: going-live
 editpath: edt/08-going-live.md
-image: launchGuide-twitterLarge
-getfeedbackform: default
 ---
 
 In this lesson, we’re going to dive into launching your site on Pantheon.
@@ -37,11 +30,11 @@ All links from the video are provided below.
  - [Webpagetest.org](https://www.webpagetest.org)
  - [SiteSpeed](https://www.sitespeed.io/)
  - [Launch Essentials](/guides/launch)
- - [Domains and DNS](/domains)
- - [Manage Plans in the Site Dashboard](/site-plan)
- - [Pantheon's Global CDN](/global-cdn)
- - [HTTPS on Pantheon's Global CDN](/https)
- - [Redirect to a Primary Domain](/redirects/#redirect-to-https)
+ - [Domains and DNS](/guides/domains)
+ - [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
+ - [Pantheon's Global CDN](/guides/global-cdn)
+ - [HTTPS on Pantheon's Global CDN](/guides/global-cdn/https)
+ - [Redirect to a Primary Domain](/guides/redirect/#redirect-to-https)
  - [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https-+-hsts)
 
 

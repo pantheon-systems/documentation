@@ -2,15 +2,21 @@
 title: Build Tools
 subtitle: Create a New Project
 description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
-categories: [develop]
-tags: [composer, terminus, webops, workflow]
+tags: [composer, terminus, webops, workflow, D8, D9, D10]
 buildtools: true
 anchorid: create-project
 type: guide
 permalink: docs/guides/build-tools/create-project/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
-reviewed: "2021-12-28"
+reviewed: "2021-12-13"
+contenttype: [guide]
+innav: [true]
+categories: [dependencies]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a Git repository, a Continuous Integration service, and a Pantheon site.
@@ -55,14 +61,54 @@ Ensure you have the latest versions of Terminus and the Terminus Build Tools plu
 
 ### Access Tokens (Optional)
 
-The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens) and [CircleCI](https://circleci.com/account/api), which are stored as environment variables. The GitHub token needs the **repo** (required), **delete-repo** (optional) and **workflow** (required if using Github Actions) scopes. Optionally, you may generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
+The Build Tools plugin will prompt you to create access tokens for the services you use as an alternative to a password. Access tokens are stored as environment variables. Access token requirements vary by service. Read below for specific access token requirements.
+
+- [GitHub](https://github.com/settings/tokens): The GitHub token checks for the following scopes:
+
+  - `repo` (required)
+  
+  - `delete-repo` (optional)
+  
+  - `workflow` (required if using Github Actions)
+
+- [CircleCI](https://circleci.com/account/api): No scopes are configurable for this token.
+
+- [Gitlab](https://gitlab.com/-/profile/personal_access_tokens): The Gitlab token requires the following scopes:
+
+  - `api`
+
+  - `read_repository`
+
+  - `write_repository`
+
+- [Bitbucket](https://bitbucket.org/account/settings/app-passwords/): A Bitbucket app password requires the following scopes: 
+
+  - `Projects` (read)
+
+  - `Repositories` (read and write)
+
+  - `Pull Requests` (read and write)
+
+  - `Pipelines` (edit variables)
+
+Optionally, you can generate your tokens ahead of time and manually export them to the local variables. Note that Bitbucket requires a user name and password instead of a token. Review the local variable export examples below:
+
+- `GITHUB_TOKEN`
+- `CIRCLE_TOKEN`
+- `GITLAB_TOKEN`
+- `BITBUCKET_USER` and `BITBUCKET_PASS`
+
+The examples below vary depending on what services you use. Replace `exampleToken` (or `exampleUserName` and `exampleUserPassword` if you use Bitbucket) with your token or Bitbucket user name and password.
 
 ```bash{promptUser: user}
-export GITHUB_TOKEN=yourGitHubToken
-export CIRCLE_TOKEN=yourCircleCIToken
+export GITHUB_TOKEN=exampleToken
+export CIRCLE_TOKEN=exampleToken
+export GITLAB_TOKEN=exampleToken
+export BITBUCKET_USER=exampleUserName
+export BITBUCKET_PASS=exampleUserPassword
 ```
 
-If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app).
+Navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app) if you need to replace a token.
 
 ## Create a Build Tools Project
 
@@ -76,16 +122,10 @@ Modify the commands in the following examples to match your project's needs.
   terminus build:project:create --git=github --team='My Agency Name' wp my-site
   ```
 
-- Start a GitHub project with Drupal 9:
+- Start a GitHub project with Drupal:
 
   ```bash{promptUser: user}
   terminus build:project:create --git=github --team='My Agency Name' d9 my-site
-  ```
-
-- Start a GitHub project with Drupal 8:
-
-  ```bash{promptUser: user}
-  terminus build:project:create --git=github --team='My Agency Name' d8 my-site
   ```
 
 The script will ask for additional information such as tokens/credentials for GitHub and the associated CI.
@@ -147,8 +187,7 @@ terminus auth:login --machine-token=<machine-token>
 
 Pantheon's Composer-based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
-- [Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
-- [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
+- [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed/issues)
 - [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 
 </Accordion>

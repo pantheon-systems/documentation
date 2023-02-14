@@ -6,7 +6,13 @@ pagerduty: true
 anchorid: schedule
 generator: pagination
 layout: guide
-categories: [performance]
+contenttype: [guide]
+innav: [true]
+categories: [track]
+cms: [--]
+audience: [development]
+product: [newrelic]
+integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 pagination:
@@ -86,3 +92,12 @@ When an incident is created, PagerDuty uses an escalation policy to determine wh
   ![Escalation Policy](../../../images/pagerduty/pg-escalation.png)
 
 4. Click **Save**.
+
+
+# More Resources
+
+- [Monitor and Improve Site Performance with New Relic&reg;](/guides/new-relic/monitor-new-relic)
+
+- [Integrate Your Fastly Account with New Relic&reg;](/guides/fastly-pantheon/fastly-new-relic)
+
+- [New Relic&reg; FAQ](/guides/new-relic/new-relic-faq)
