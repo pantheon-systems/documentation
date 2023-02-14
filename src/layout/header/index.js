@@ -17,6 +17,8 @@ if (isSearchEnabled && config.search.indexName) {
   });
 }
 
+const isSearchPage = typeof document !== "undefined" && document.URL.includes("search");
+
 const Header = ({ data, page }) => (
   <>
     <nav className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
@@ -168,7 +170,7 @@ const Header = ({ data, page }) => (
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
               {isSearchEnabled ? (
-                  <SearchComponent collapse="true" indices={searchIndices} />
+                  <SearchComponent collapse="true" indices={searchIndices} isSearchPage={isSearchPage} />
               ) : null}
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
