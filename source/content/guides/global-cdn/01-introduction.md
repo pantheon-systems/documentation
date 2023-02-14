@@ -47,7 +47,11 @@ Many users see multi-second speedups in Visual Progress <Popover title="Visual P
 
 ![Example before and after page load time](../../../images/global-cdn-time-to-load.png)
 
+<Alert title="Note"  type="info" >
 
+Pantheon partners with [Fastly](https://www.fastly.com/), if you prefer to use a CDN outside of the Pantheon platform. Fastly requires permissions to add domains to accounts, if it detects that a domain already exists.
+
+</Alert>
 
 ## More Resources
 
