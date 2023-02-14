@@ -12,10 +12,6 @@ Each major and minor version of Terminus is fully supported for one year from th
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We recommend you update Terminus far in advance of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 
-<TabList>
-
-<Tab title="Terminus 3.x " id="terminus-version-3" active={true}>
-
 | Version           | Release Date       | EOL Date          |
 | ----------------- | ------------------ | ----------------- |
 | 3.1.2             | January 3, 2023    |                   |
@@ -28,6 +24,3 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 3.0.5             | February 08, 2022  | February 18, 2023 |
 | 3.0.4             | January  18, 2022  | February 08, 2023 |
 | 3.0.3 or earlier  | December 17, 2021  | January  18, 2023 |
-</Tab>
-
-</TabList>
