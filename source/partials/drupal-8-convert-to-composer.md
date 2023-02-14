@@ -42,7 +42,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
 ### Set Drupal Core Version
 
-Set the Drupal core version, to ensure the site remains on the current version of Drupal for now:
+Set the Drupal core version, to ensure the site remains on the current version of Drupal for now (if your current version is not `^9`, replace that value with your current version.):
 
 <Partial file="drupal/core-version-remain-on-d8.md" />
 
