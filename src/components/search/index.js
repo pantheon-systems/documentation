@@ -1,13 +1,11 @@
 import React, { useState, useEffect, createRef } from 'react';
 import {
-  InstantSearch,
   Index,
   Hits,
   Configure,
   connectStateResults,
 } from 'react-instantsearch-dom';
-import algoliasearch from 'algoliasearch/lite';
-import config from '../../algolia/config';
+import propTypes from "prop-types";
 import { PoweredBy } from './styles';
 import Input from './input';
 import hitComps from './hitComps';
@@ -30,12 +28,7 @@ const useClickOutside = (ref, handler, events) => {
   });
 };
 
-const searchClient = algoliasearch(
-  config.search.algoliaAppId,
-  config.search.algoliaSearchKey
-);
-
-const SearchComponent = ({ indices, collapse }) => {
+const SearchComponent = ({ indices, collapse, isSearchPage }) => {
   const ref = createRef();
   const [query, setQuery] = useState(``);
   const [focus, setFocus] = useState("false");
@@ -44,16 +37,13 @@ const SearchComponent = ({ indices, collapse }) => {
 
   const showStatus = query.length > 0 && focus
 
+  const setQueryState = (value) => setQuery(value)
+
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName={indices[0].name}
-      onSearchStateChange={({ query }) => setQuery(query)}
-      root={{ Root: <div className='search-container-styles-root'/>, props: { ref } }}
-    >
-      <Input onFocus={() => setFocus("true")} {...{ collapse, focus }} />
+    <div>
+      <Input onFocus={() => setFocus("true")} {...{ collapse, focus }} setQuery={setQueryState} />
       <div
-        style={{ display: showStatus ? 'grid' : 'none' }}
+        style={{ display: showStatus && !isSearchPage ? 'grid' : 'none' }}
         className='search-container-styles'
         show={query.length > 0 && focus ? 'true' : undefined}
       >
@@ -69,9 +59,21 @@ const SearchComponent = ({ indices, collapse }) => {
         })}
         <PoweredBy />
       </div>
-      <Configure hitsPerPage={5} />
-    </InstantSearch>
+      <Configure hitsPerPage={10} />
+    </div>
   );
 }
+
+SearchComponent.propTypes = {
+  indices: propTypes.arrayOf(
+    propTypes.shape({
+      name: propTypes.string,
+      title: propTypes.string,
+      hitComp: propTypes.string,
+    })
+  ),
+  collapse: propTypes.string,
+  isSearchPage: propTypes.bool,
+};
 
 export default SearchComponent;
