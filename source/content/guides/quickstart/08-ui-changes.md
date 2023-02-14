@@ -31,7 +31,7 @@ Now we’re going to work directly on the server to make changes to our site's u
    - [WordPress instructions](https://wordpress.org/documentation/article/worik-with-themes/)
    - [Drupal instructions](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
 
-1. View your site to confirm the theme change.
+1. Visit your site to confirm the theme change.
 
 1. Return to **Site Dashboard** and select the **Dev** tab. The files you just added are highlighted.
 
