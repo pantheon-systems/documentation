@@ -3,8 +3,9 @@ title: Fix Broken Links in Drupal
 description: Learn how to update Drupal site links so the URL references the correct file path and domain name.
 tags: [code, launch]
 contenttype: [doc]
-categories: [update, domain, launch]
-newcms: [drupal, drupal7]
+innav: [true]
+categories: [troubleshooting]
+cms: [drupal, drupal7]
 audience: [development]
 product: [--]
 integration: [--]

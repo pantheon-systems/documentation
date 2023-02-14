@@ -3,8 +3,9 @@ title: Pantheon Professional Services
 subtitle: Managed Migration Service
 description: Pantheon's Site Migration Service can help ensure a smooth migration of your existing sites.
 contenttype: [guide]
+innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

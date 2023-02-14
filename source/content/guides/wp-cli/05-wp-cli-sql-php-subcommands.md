@@ -2,10 +2,10 @@
 title: WP-CLI on the Pantheon Platform
 subtitle: SQL Queries, PHP Code, and Subcommands with WP-CLI
 description: Learn how to run SQL queries, PHP code, and subcommands on WP-CLI.
-cms: "WordPress"
 contenttype: [guide]
+innav: [true]
 categories: [cli]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

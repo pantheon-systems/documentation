@@ -3,10 +3,10 @@ title: Switch from Drupal to Drupal Composer Managed Upstream
 description: Switch to the new Pantheon upstream to take advantage of the new structure and future updates.
 type: guide
 permalink: docs/guides/:basename
-cms: "Drupal"
 contenttype: [doc]
+innav: [true]
 categories: [migrate]
-newcms: [drupal9]
+cms: [drupal9]
 audience: [development]
 product: [--]
 integration: [--]

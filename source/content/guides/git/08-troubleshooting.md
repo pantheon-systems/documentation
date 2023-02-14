@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/git/troubleshooting
 anchorid: troubleshooting
 contenttype: [guide]
+innav: [true]
 categories: [git]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [git]

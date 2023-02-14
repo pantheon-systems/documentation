@@ -6,10 +6,10 @@ anchorid: debug
 generator: pagination
 layout: guide
 type: guide
-cms: "WordPress"
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [true]
+categories: [cms, troubleshooting]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

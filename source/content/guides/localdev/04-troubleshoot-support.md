@@ -9,8 +9,9 @@ permalink: docs/guides/localdev
 anchorid: localdev
 editpath: localdev/04-troubleshoot-support.md
 contenttype: [guide]
-categories: [help]
-newcms: [wordpress, drupal]
+innav: [true]
+categories: [localdev]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [localdev]
 integration: [--]

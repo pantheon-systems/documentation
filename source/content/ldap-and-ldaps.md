@@ -3,8 +3,9 @@ title: LDAP and LDAPS
 description: Detailed information on how to configure LDAP and LDAPS on your Pantheon Drupal or WordPress website.
 tags: [code, modules, plugins, security]
 contenttype: [doc]
-categories: [user-authentication]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [security]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

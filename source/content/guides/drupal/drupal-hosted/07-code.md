@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site to the Latest Version of Drupal
 subtitle: Upgrade the Code
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, stovak]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: code
 editpath: hosted/07-code.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate]
-newcms: [drupal9, drupal10]
+innav: [true]
+categories: [update]
+cms: [drupal9, drupal10]
 audience: [development]
 product: [composer]
 integration: [--]

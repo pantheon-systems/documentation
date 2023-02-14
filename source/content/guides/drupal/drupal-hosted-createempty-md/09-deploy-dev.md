@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
 subtitle: Deploy to Dev
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: deploy-dev
 editpath: drupal/drupal-hosted-createempty-md/09-deploy-dev.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [overview, migrate]
-newcms: [drupal8, drupal9, drupal10]
+cms: [drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]
 integration: [--]

@@ -9,8 +9,9 @@ tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/install
 anchorid: install
 contenttype: [guide]
-categories: [cli, create]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]

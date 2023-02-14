@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site with Multidev to the Latest Version of Drupal Using Multidev
 subtitle: Ensure Dependencies are Compatible
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: dependencies
 editpath: drupal/drupal-hosted-md/05-dependencies.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [migrate]
-newcms: [drupal8, drupal9, drupal, drupal10]
+innav: [true]
+categories: [update]
+cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [composer]
 integration: [--]

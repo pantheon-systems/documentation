@@ -2,7 +2,6 @@
 title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Add Your Database
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: database
 editpath: drupal/drupal-unhosted-composer/09-database.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [database]
-newcms: [drupal9, drupal8, drupal, drupal10]
+innav: [true]
+categories: [migrate]
+cms: [drupal9, drupal8, drupal, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

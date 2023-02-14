@@ -12,8 +12,9 @@ permalink: docs/guides/edge-integrations/configuration-overview/
 editpath: edge-integrations/02-configuration-overview.md
 reviewed: "2022-03-23"
 contenttype: [guide]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [personalization]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

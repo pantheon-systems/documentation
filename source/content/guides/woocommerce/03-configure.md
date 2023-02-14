@@ -6,10 +6,10 @@ woocommerce: true
 anchorid: configure
 generator: pagination
 layout: guide
-cms: "WordPress"
 contenttype: [guide]
-categories: [--]
-newcms: [wordpress]
+innav: [true]
+categories: [ecommerce]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [woocommerce]

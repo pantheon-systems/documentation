@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [domains]
-newcms: [wordpress]
+cms: [wordpress]
 product: [--]
 integration: [--]
 tags: [--]

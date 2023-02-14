@@ -2,7 +2,6 @@
 title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Test Sites and Apply Customizations
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: site-customizations
 editpath: drupal/drupal-hosted-createcustom/07-site-customizations.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [migrate, git]
-newcms: [drupal8, drupal9, drupal10]
+innav: [true]
+categories: [update, custom-upstreams]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

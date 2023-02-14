@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site to the Latest Version of Drupal
 subtitle: Prepare
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: prepare
 editpath: hosted/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [--]
-newcms: [drupal9, drupal10]
+innav: [true]
+categories: [update]
+cms: [drupal9, drupal10]
 audience: [development]
 product: [--]
 integration: [--]

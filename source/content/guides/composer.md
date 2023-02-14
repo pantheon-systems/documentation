@@ -5,8 +5,9 @@ type: guide
 permalink: docs/guides/:basename
 tags: [composer, workflow, updates, webops]
 contenttype: [doc]
+innav: [true]
 categories: [update]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [composer]
@@ -37,6 +38,8 @@ Composer looks within [The PHP Package Repository](https://packagist.org/) for d
 Sites managed with Composer should use the [nested docroot](/nested-docroot) feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
 
 This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+
+<Partial file="build-deploy-terminology.md" />
 
 ## Pull Request Workflow
 

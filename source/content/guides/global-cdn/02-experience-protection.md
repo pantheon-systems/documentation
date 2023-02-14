@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/global-cdn/experience-protection
 anchorid: experience-protection
 contenttype: [guide]
+innav: [true]
 categories: [cache, optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [cdn]
 integration: [--]

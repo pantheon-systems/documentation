@@ -10,8 +10,9 @@ showtoc: true
 permalink: docs/guides/integrated-composer
 anchorid: integrated-composer
 contenttype: [guide]
-categories: [overview]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [dependencies]
+cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
@@ -52,6 +53,7 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 1. [Clone the site locally](/guides/local-development/configuration) and run `composer install`.
 
+<Partial file="build-deploy-terminology.md" />
 
 ## More Resources
 

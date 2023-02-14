@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [config, git]
-newcms: [drupal7, wordpress]
+cms: [drupal7, wordpress]
 product: []
 integration: []
 reviewed: "2022-11-01"

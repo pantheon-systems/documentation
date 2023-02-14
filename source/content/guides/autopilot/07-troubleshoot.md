@@ -11,8 +11,9 @@ permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/07-troubleshoot.md
 reviewed: "2022-11-01"
 contenttype: [guide]
-categories: [automate]
-newcms: [--]
+innav: [true]
+categories: [automate, test, update, faq]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

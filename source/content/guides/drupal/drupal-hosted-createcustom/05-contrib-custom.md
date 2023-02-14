@@ -2,7 +2,6 @@
 title: Upgrade a Custom Upstream to the Latest Version of Drupal
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: contrib-custom
 editpath: drupal/drupal-hosted-createcustom/05-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate, git]
-newcms: [drupal8, drupal9, drupal10]
+innav: [true]
+categories: [update, custom-upstreams]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard, custom-upstreams]
 integration: [--]

@@ -4,8 +4,9 @@ subtitle: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 tags: [libraries, updates]
 contenttype: [guide]
+innav: [true]
 categories: [php]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

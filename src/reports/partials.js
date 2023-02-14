@@ -24,7 +24,7 @@ class ReviewReport extends React.Component {
                     contenttype
                     product
                     integration
-                    newcms
+                    cms
                   }
                   fileInfo {
                     id
@@ -80,11 +80,11 @@ class ReviewReport extends React.Component {
                                   : null}
                               </td>
                               <td>
-                                {page.node.frontmatter.newcms
-                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
+                                {page.node.frontmatter.cms
+                                  ? page.node.frontmatter.cms.map((cms, i) => {
                                       return (
                                         <span key={i}>
-                                          {(i ? ", " : "") + newcms}
+                                          {(i ? ", " : "") + cms}
                                         </span>
                                       )
                                     })

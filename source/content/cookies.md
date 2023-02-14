@@ -4,8 +4,9 @@ description: Tips and tricks for working with cookies on your Pantheon Drupal an
 contributors: [--]
 reviewed: "2022-12-07"
 contenttype: [doc]
-categories: [cache, cookies]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cache]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

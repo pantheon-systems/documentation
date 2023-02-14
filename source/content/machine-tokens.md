@@ -4,8 +4,9 @@ description: Learn how to create a machine token in order to use Terminus on you
 tags: [sso, security, terminus]
 reviewed: "2020-12-09"
 contenttype: [doc]
-categories: [siteauth]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [security]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

@@ -3,8 +3,9 @@ title: WordPress with Composer on Pantheon
 subtitle: Introduction
 description: Learn more about using WordPress with Composer on Pantheon.
 contenttype: [guide]
-categories: [--]
-newcms: [wordpress]
+innav: [true]
+categories: [dependencies]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

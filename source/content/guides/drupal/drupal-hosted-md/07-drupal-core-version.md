@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site with Multidev to the Latest Version of Drupal Using Multidev
 subtitle: Set Drupal Core Version
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: drupal-core-version
 editpath: drupal/drupal-hosted-md/07-drupal-core-version.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate]
-newcms: [drupal8, drupal9, drupal, drupal10]
+innav: [true]
+categories: [update]
+cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [composer]
 integration: [--]

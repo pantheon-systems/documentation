@@ -3,10 +3,10 @@ title: PHP on Pantheon
 subtitle: Configure Your Drupal Settings.php File
 description: Configure your Drupal database settings.
 contributors: [mmenavas, andrewmallis]
-cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [php]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

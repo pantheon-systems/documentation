@@ -12,8 +12,9 @@ permalink: docs/guides/decoupled-sites/site/
 editpath: decoupled-sites/04-site.md
 reviewed: "2022-12-12"
 contenttype: [guide]
+innav: [true]
 categories: [create]
-newcms: [decoupled]
+cms: [decoupled]
 audience: [development]
 product: [decoupled]
 integration: [--]

@@ -1,25 +1,19 @@
 ---
 title: Essential Developer Training
 subtitle: Architecture
-anchorid: architecture
-layout: guide
-tags: [cdn, workflow]
-edt: true
-type: guide
-generator: pagination
-permalink: docs/guides/edt/introduction-and-architecture/
-nexturl: guides/edt/developer-workflow/
-nextpage: Developer Workflow
-previousurl: guides/edt/
-previouspage: Introduction
-editpath: edt/02-introduction-and-architecture.md
 contenttype: [guide]
-categories: [help]
-newcms: [--]
+innav: [true]
+categories: [overview]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-image: launchGuide-twitterLarge
+tags: [cdn, workflow]
+edt: true
+type: guide
+permalink: docs/guides/edt/introduction-and-architecture/
+anchorid: architecture
+editpath: edt/02-introduction-and-architecture.md
 ---
 
 In this lesson, we’re going to explore Pantheon's Architecture.

@@ -2,7 +2,6 @@
 title: Migrate a Drupal Site from Another Platform
 subtitle: Add Database
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -10,8 +9,9 @@ permalink: docs/guides/drupal-unhosted/add-database
 anchorid: add-database
 editpath: drupal/drupal-unhosted/09-database.md
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal9, drupal, drupal10, drupal8]
+cms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [--]
 integration: [--]

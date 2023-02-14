@@ -6,8 +6,9 @@ type: guide
 permalink: docs/guides/:basename
 contributors: [stevector, dwayne, davidneedham, D8, D9, D10]
 contenttype: [doc]
+innav: [true]
 categories: [cache]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [modules]

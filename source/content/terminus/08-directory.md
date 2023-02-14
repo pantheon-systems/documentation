@@ -9,8 +9,9 @@ tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/directory
 anchorid: directory
 contenttype: [guide]
-categories: [cli, create]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
@@ -21,6 +22,12 @@ You can extend Terminus functionality and add commands by installing [third-part
 The list below provides a small sample of popular plugins available for Terminus:
 
 <CardGroup>
+
+<Card title={"Autopilot"} isOfficial author={"Tom Stovall"} authorLink={"https://github.com/stovak"} link={"https://github.com/pantheon-systems/terminus-autopilot-plugin"}>
+
+Manage [Autopilot](/guides/autopilot) functions from the command line with the Terminus Autopilot plugin.
+
+  </Card>
 
   <Card title={"Build Tools"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-build-tools-plugin"}>
 

@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/autopilot-custom-upstream-config
 anchorid: autopilot-custom-upstream-config
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site with Multidev to the Latest Version of Drupal Using Multidev
 subtitle: Introduction
 description: Learn how to migrate a site to the latest version of Drupal using Multidev
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: drupal-hosted-md
 editpath: drupal/drupal-hosted-md/01-introduction.md
 reviewed: "2021-03-31"
 contenttype: [guide]
-categories: [migrate]
-newcms: [drupal8, drupal9, drupal]
+innav: [true]
+categories: [update]
+cms: [drupal8, drupal9, drupal]
 audience: [development]
 product: [composer, terminus]
 integration: [--]

@@ -3,8 +3,9 @@ title: MariaDB and MySQL on Pantheon
 subtitle: Access MariaDB and MySQL Databases
 description: Configure your MariaDB or MySQL database connections on Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -50,6 +51,7 @@ Each database server is in the cloud, which allows credentials to occasionally b
 
 There's a wide array of MySQL clients that you can use, including:
 - [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+- [TablePlus](https://tableplus.com/)
 - [Sequel Ace (formerly Sequel Pro)](https://sequel-ace.com/)
 - [Navicat](https://www.navicat.com/download)
 - [PHPMyAdmin](https://www.phpmyadmin.net/)

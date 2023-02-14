@@ -2,7 +2,7 @@
 title: "Billing"
 subtitle: Troubleshooting
 description: Learn how to troubleshoot payment issues.
-tags: [billing]
+tags: [billing, troubleshooting]
 contributors: [wordsmither]
 layout: guide
 showtoc: true
@@ -11,8 +11,9 @@ anchorid: troubleshooting
 editpath: docs/guides/account-mgmt/billing/11-troubleshooting.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]

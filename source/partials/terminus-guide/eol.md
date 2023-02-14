@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [cli]
-newcms: [--]
+cms: [--]
 product: [terminus]
 integration: [--]
 tags: [--]
@@ -11,10 +11,6 @@ reviewed: ""
 Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. Refer to the documentation on [Semantic Versioning](https://semver.org/) for more information on versioning.
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We recommend you update Terminus far in advance of the EOL schedule, so that regressions in new versions can be reported and patched in time.
-
-<TabList>
-
-<Tab title="Terminus 3.x " id="terminus-version-3" active={true}>
 
 | Version           | Release Date       | EOL Date          |
 | ----------------- | ------------------ | ----------------- |
@@ -28,6 +24,3 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 3.0.5             | February 08, 2022  | February 18, 2023 |
 | 3.0.4             | January  18, 2022  | February 08, 2023 |
 | 3.0.3 or earlier  | December 17, 2021  | January  18, 2023 |
-</Tab>
-
-</TabList>

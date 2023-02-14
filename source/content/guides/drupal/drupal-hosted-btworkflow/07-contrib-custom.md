@@ -2,7 +2,6 @@
 title: Upgrade a Drupal Site Created With the Pantheon Dashboard to the Latest Version of Drupal + Build Tools
 subtitle: Add Contrib and Custom Code
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: contrib-custom
 editpath: drupal/drupal-hosted-btworkflow/07-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-categories: [migrate]
-newcms: [drupal8, drupal9, drupal10]
+innav: [true]
+categories: [update]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [terminus]
 integration: [--]

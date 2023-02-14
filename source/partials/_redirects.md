@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [config]
-newcms: [wordpress, drupal7]
+cms: [wordpress, drupal7]
 product: [--]
 integration: [--]
 tags: [--]

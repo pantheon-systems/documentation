@@ -3,8 +3,9 @@ title: New Relic Performance Monitoring on Pantheon
 subtitle: Troubleshoot New Relic
 description: Find troubleshooting solutions for your New Relic account.
 contenttype: [guide]
-categories: [measure]
-newcms: [--]
+innav: [true]
+categories: [track, troubleshooting]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]

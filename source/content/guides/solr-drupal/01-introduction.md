@@ -2,10 +2,10 @@
 title: Pantheon Solr Search for Drupal
 subtitle: Introduction
 description: Using Pantheon Solr Search with Drupal
-cms: "Drupal"
 contenttype: [guide]
-categories: [config]
-newcms: [drupal]
+innav: [true]
+categories: [search]
+cms: [drupal]
 audience: [development]
 product: [search]
 integration: [--]

@@ -3,8 +3,9 @@ title: Manually Migrate Sites to Pantheon
 description: Learn how to manually migrate a Drupal or WordPress site to Pantheon
 tags: [code, dashboard, migrate, site]
 contenttype: [doc]
-categories: [migrate, database, backup]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [migrate]
+cms: [drupal, wordpress]
 audience: [agency, development]
 product: [--]
 integration: [--]
@@ -113,7 +114,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   </Alert>
 
-### Using an SFTP Client
+### SFTP Client
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm that Development Mode is set to **SFTP**.
 
@@ -173,7 +174,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 1. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to version control. Write a commit message such as "Import existing codebase" then click **Commit**.
 
-### From the Command Line with Git
+### Git
 
 1. Navigate to your existing site's code directory in a local terminal. If your existing code is _not_ already version controlled with Git, create a repository and add an initial commit:
 
@@ -232,7 +233,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   If you haven't already configured [SSH Keys](/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
 
-1. Review your current index using `git status`, then commit all changes:
+1. Review your current index using `git status`, then commit all changes. Refer to [Pantheon Core Files](/code#pantheon-core-files) and [Pantheon Git Repository](/code#pantheon-git-repository) for more information on core files and code structure.
 
   ```bash{promptUser: user}
   git add .
@@ -293,13 +294,19 @@ You can also use the Pantheon Dashboard to add your site's database.
 
 <Partial file="drupal/migrate-add-database-part2.md" />
 
-## Upload Your Files
+## Migrate Your Files
 
-**Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
+**Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes:
 
-You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
+- Uploaded images
+- Generated stylesheets
+- Aggregated scripts
 
-1. Export a `tar.gz` or `.zip` file of your files directory:
+Files are not under Git version control and are stored separately from the site's code. You must create and archive of your files and export it before you can upload it.
+
+### Export Your Files
+
+Export a `tar.gz` or `.zip` file of your files directory:
 
   <TabList>
 
@@ -327,82 +334,26 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
   </TabList>
 
-1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
-1. Click **Import** and add your archive accordingly (based on file size):
+### Upload Your Files
 
-  <TabList>
+You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
-  <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
+#### Pantheon Dashboard
 
-  If your archive is under 100MB, you can upload the file directly:
+1. Navigate to the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
 
-   1. In the **Archive of site files** field, click **File**, then **Choose File**.
+<Partial file="drupal/migrate-add-files-part3.md" />
 
-   1. Select your local archive file, then press **Import**.
 
-  </Tab>
+#### SFTP
 
-  <Tab title="Up to 500MBs" id="500mbsfiles">
+Follow the [SFTP instructions](/guides/sftp/rsync-and-sftp#sftp) in the [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp) documentation.
 
-  If your archive is less than 500MB, you can import it from URL:
+#### rsync
 
-   1. In the **Archive of site files** field, click **URL**.
+Follow the [Transfer Files with rsync](/guides/sftp/rsync-and-sftp#transfer-files-with-rsync) instructions in the [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp) documentation.
 
-   1. Paste a publicly accessible URL for the archive, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
-
-  </Tab>
-
-  <Tab title="Over 500MBs" id="500mbsplusfiles">
-
-  Rsync is an excellent method for transferring a large number of files. After performing an initial rsync, subsequent jobs will only transfer the latest changes. This can help minimize the amount of time a site is in an unpredictable state (or offline) during the final step of migration, as it allows you to bring over only new content rather than re-copying every single file.
-
-  We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a helper when doing these operations, as the number of command line arguments and specifics of directory structure make it easy for human error to impact your operation.
-
-  To sync your current directory to Pantheon:
-
-  ```bash{promptUser: user}
-  terminus rsync . my_site.dev:files
-  ```
-
-  When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
-
-   
-  ```bash:title=migrate-rsync.sh
-  #!/bin/bash
-  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
-  SITE_UUID=xxxxxxx
-  
-  ENV='dev'
-  # The sshpass command is required.
-  if ! [ -x "$(command -v sshpass)" ]; then
-	echo 'Error: The sshpass command was not found.' >&2
-	exit 1
-  fi 
-
-  read -sp "Your Pantheon Password: " PASSWORD
-  if [[ -z "$PASSWORD" ]]; then
-  echo "Whoops, need password"
-  exit
-  fi
-
-  while [ 1 ]
-  do
-  sshpass -p "$PASSWORD" rsync --partial -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/* --temp-dir=../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/
-  if [ "$?" = "0" ] ; then
-  echo "rsync completed normally"
-  exit
-  else
-  echo "Rsync failure. Backing off and retrying..."
-  sleep 180
-  fi
-  done
-  ```
-
-  </Tab>
-
-  </TabList>
-
+## Final Migration Steps
 
 You should now have all three of the major components of your site imported into Pantheon.
 

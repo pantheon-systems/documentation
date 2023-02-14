@@ -11,8 +11,9 @@ anchorid: manage
 editpath: docs/guides/account-mgmt/plans/09-manage.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

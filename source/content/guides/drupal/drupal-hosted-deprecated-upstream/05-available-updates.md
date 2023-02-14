@@ -2,7 +2,6 @@
 title: Upgrade a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal
 subtitle: Apply All Available Upstream Updates
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -11,8 +10,9 @@ anchorid: available-updates
 editpath: drupal/drupal-hosted-deprecated-upstream/05-available-updates.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [update]
-newcms: [drupal9, drupal, drupal8, drupal10]
+cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [terminus, dashboard]
 integration: []

@@ -3,8 +3,9 @@ title: Local Development on Pantheon
 subtitle: Automatically Test and Deploy to Pantheon with Jenkins
 description: Configure an existing Jenkins server to test and deploy code changes to Pantheon automatically when pushed to GitHub.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []
@@ -48,7 +49,7 @@ Be sure that you have:
   - [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
   <Alert title="Note" type="info" >
-  
+
   Verify you can run Terminus, Drush, and Composer commands as the Jenkins user. Terminus and Drush must be accessible from standard `PATH` directories.
 
   </Alert>

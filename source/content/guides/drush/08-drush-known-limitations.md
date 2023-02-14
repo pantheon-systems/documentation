@@ -2,15 +2,15 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Drush Known Limitation with Pantheon
 description: Review known Drush limitations. 
-cms: "Drupal"
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-known-limitations
 anchorid: drush-known-limitations
 contenttype: [guide]
+innav: [true]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]

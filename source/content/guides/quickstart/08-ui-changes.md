@@ -2,20 +2,18 @@
 title: Quick Start
 subtitle: Make User Interface Changes
 description: In part eight of our Quick Start guide, learn to make UI changes on your site.
-anchorid: ui-changes
-layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard, iterate, site, workflow]
-type: guide
 showtoc: true
 permalink: docs/guides/quickstart/ui-changes/
+anchorid: ui-changes
 editpath: quickstart/08-ui-changes.md
-image: launchGuide-twitterLarge
 ---
 
 Now we’re going to work directly on the server to make changes to our site's user interface (UI).

@@ -10,8 +10,9 @@ anchorid: deploy-live
 editpath: drupal/drupal-hosted-createempty-md/15-deploy-live.md
 reviewed: "2022-12-13"
 contenttype: [guide]
+innav: [true]
 categories: [overview, migrate]
-newcms: [drupal8, drupal9, drupal10]
+cms: [drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]
 integration: [--]

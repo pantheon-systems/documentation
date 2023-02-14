@@ -8,8 +8,9 @@ showtoc: true
 permalink: docs/guides/launch/launch-check/
 anchorid: launch-check
 contenttype: [guide]
+innav: [true]
 categories: [config, cache, test, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]

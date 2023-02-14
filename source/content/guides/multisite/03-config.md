@@ -4,10 +4,10 @@ subtitle: Configure
 description: Learn how to configure your WordPress Site Networks.
 layout: guide
 type: guide
-cms: "WordPress"
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [true]
+categories: [cms, config]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -177,7 +177,7 @@ Explore the WordPress Network Dashboard to become familiar with the variety of a
 
 ## More Resources
 
-- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)]
+- [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
 - [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
 

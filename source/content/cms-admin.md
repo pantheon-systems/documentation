@@ -5,8 +5,9 @@ searchboost: 150
 tags: [site, sftp, dashboard]
 reviewed: "2020-06-24"
 contenttype: [doc]
-categories: [sftp]
-newcms: [wordpress, drupal]
+innav: [true]
+categories: [cms]
+cms: [wordpress, drupal]
 audience: [development]
 product: [dashboard]
 integration: [--]

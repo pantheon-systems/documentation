@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/domains/domains-faq
 anchorid: domains-faq
 contenttype: [guide]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

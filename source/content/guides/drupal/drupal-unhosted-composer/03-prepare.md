@@ -2,7 +2,6 @@
 title: Migrate a Composer Managed Drupal Site from Another Platform
 subtitle: Prepare
 description: 
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
@@ -12,8 +11,9 @@ anchorid: prepare
 editpath: drupal/drupal-unhosted-composer/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [migrate, create]
-newcms: [drupal9, drupal8, drupal10, drupal]
+innav: [true]
+categories: [migrate]
+cms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]
 product: [composer]
 integration: [--]

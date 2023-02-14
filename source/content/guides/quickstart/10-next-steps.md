@@ -2,29 +2,17 @@
 title: Quick Start
 subtitle: Next Steps
 description: In the final section of our Quick Start guide, learn about common next steps for new Pantheon users.
-quickstart: true
-anchorid: next-steps
-generator: pagination
-survey: true
-layout: guide
 contenttype: [guide]
+innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [launch, webops, workflow]
-type: guide
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/next-steps/
-previousurl: guides/quickstart/code-changes
-previouspage: On-Server Dev, Part 2
+anchorid: next-steps
 editpath: quickstart/10-next-steps.md
-image: launchGuide-twitterLarge
-getfeedbackform: default
 ---
 
 Congratulations! You created and made code changes to your Pantheon site. You should now feel comfortable with the best-practice development workflow that serves as the foundation of our platform.

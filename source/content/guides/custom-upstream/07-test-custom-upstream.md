@@ -9,10 +9,11 @@ permalink: docs/guides/custom-upstream/test-custom-upstream
 contributors: [--]
 anchorid: test-custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
 reviewed: "2022-12-09"
 ---

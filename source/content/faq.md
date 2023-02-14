@@ -5,8 +5,9 @@ tags: [support]
 permalink: docs/faq
 anchorid: faq
 contenttype: [doc]
-categories: [help]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [faq]
+cms: [drupal, wordpress]
 audience: [agency, development]
 product: [cdn, localdev, search, siteportfolio, terminus]
 integration: [--]

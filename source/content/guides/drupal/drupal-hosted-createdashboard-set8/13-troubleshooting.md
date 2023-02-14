@@ -2,7 +2,6 @@
 title: Upgrade a Site Created With the Pantheon Dashboard to the Latest Version of Drupal
 subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
-cms: "Drupal"
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2022-12-13"
@@ -12,8 +11,9 @@ permalink: docs/guides/drupal-hosted-createdashboard-set8/troubleshooting
 anchorid: troubleshooting
 editpath: drupal-hosted-createdashboard-set8/13-troubleshooting.md
 contenttype: [guide]
-categories: [migrate, git]
-newcms: [drupal8, drupal9, drupal10]
+innav: [true]
+categories: [migrate, troubleshooting]
+cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]
 integration: [--]

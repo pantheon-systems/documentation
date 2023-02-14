@@ -2,10 +2,10 @@
 title: Get Support
 subtitle: Early Access Program
 description: 
-cms: "Drupal"
 contenttype: [guide]
+innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]

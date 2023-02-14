@@ -3,8 +3,9 @@ title: Quicksilver on Pantheon
 subtitle: Quicksilver Variables
 description: Learn how to use variables with Quicksilver.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver]

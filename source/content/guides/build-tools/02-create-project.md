@@ -11,8 +11,9 @@ editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 reviewed: "2021-12-13"
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [dependencies]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

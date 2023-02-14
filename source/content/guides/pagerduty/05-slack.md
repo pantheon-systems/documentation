@@ -7,8 +7,9 @@ anchorid: slack
 generator: pagination
 layout: guide
 contenttype: [guide]
-categories: [optimize]
-newcms: [--]
+innav: [true]
+categories: [track]
+cms: [--]
 audience: [development]
 product: [newrelic]
 integration: [--]

@@ -11,8 +11,9 @@ permalink: docs/guides/frontend-performance
 editpath: frontend-performance/01-introduction.md
 image: CDN-speedTest-docs-guide
 contenttype: [guide]
+innav: [true]
 categories: [optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
