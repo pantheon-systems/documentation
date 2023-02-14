@@ -28,14 +28,23 @@ Improve security and maintain compliance with Pantheon's Security Starter, which
 
 - OWASP & WAF Rules for Drupal/WordPress
 
-- [Rate Limiting for Form & Login Pages](/guides/agcdn/agcdn-wafio#rate-limiting)
-
 - Geolocation-based Edge Control
 
 ## IO Starter
 
 Speed up page load times, improve your Google Lighthouse Scores, and rank higher in Google search results with Image Optimization Starter, which includes:
 
-- WebP image format
-
 - Auto Progressive JPEG
+
+- Input image support for WebP, GIF, JPEG, and PNG
+
+- Maximum input image file size of 50 Megabytes
+
+- Maximum input image dimension of 12,000 x 12,000 pixels
+
+- Output image formats include: WebP, GIF, JPEG, PNG, and MP4 
+
+- Maximum output image dimension of 8,192 x 8,192 pixels (8K Ultra HD)
+
+- Maximum number of frames an animated GIF can contain is 1,000
+
