@@ -43,7 +43,7 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
    - WordPress:
 
     ```bash{promptUser: user}
-    cd upstream-config 
+    cd upstream-config
     ```
 
 1. Run the `composer require` command for each dependency:
