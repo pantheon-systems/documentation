@@ -26,11 +26,12 @@ Now we’re going to work directly on the server to make changes to our site's u
 
 1. Log in to your Dev site by clicking the <Icon icon="new-window-alt" text="Site Admin"/> button.
 
-1. Install a _new_ theme (do not activate/enable a theme that came pre-packaged with your site).
+1. Install and activate a _new_ theme (do not activate/enable a theme that came pre-packaged with your site).
+   
+   - [WordPress instructions](https://wordpress.org/documentation/article/worik-with-themes/)
+   - [Drupal instructions](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
 
-   If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
-
-1. Activate/enable the new theme you installed. Now view your site to confirm the theme change.
+1. View your site to confirm the theme change.
 
 1. Return to **Site Dashboard** and select the **Dev** tab. The files you just added are highlighted.
 
