@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
-editpath: autopilot/03-enable-autopilot.md
+editpath: autopilot/02-enable-autopilot.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
@@ -21,36 +21,35 @@ integration: [--]
 
 ## Enable Autopilot
 
-Autopilot can be enabled for individual sites or in bulk within each eligible Workspace.
+Autopilot can be enabled for individual sites, or in bulk, within each eligible Workspace.
 
-During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
-
-1. [Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization:
+1. [Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
 
    ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
-1. If the site is in [SFTP mode](/guides/sftp) with staged changes that haven't been committed yet, [commit those changes](/guides/sftp#committing-sftp-changes).
+1. [Commit any staged changes](/guides/sftp/sftp-development) that have not been committed before you continue if the site is in [SFTP mode](/guides/sftp).
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
-1. Sites for which Autopilot is available are listed in the **Site** column of the **Compatible Sites** table.
+1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table.
 
-   - To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name:
+   To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
 
-     ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)
+   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)
 
-   - To enable sites in bulk, select the sites you wish to activate, and click the **Activate Autopilot** button. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
+   To enable sites in bulk, select the sites you wish to activate, and click the **Activate Autopilot** button. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
 
-     ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
+   ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
 
-1. Select the deployment destination:
+1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://pantheon.io/docs/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
-    - Dev
-    - Test
-    - Live
-    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a href='/docs/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
+   <Alert title="Note"  type="info" >
 
    Autopilot will pre-select a few pages for visual regression testing and will set the frequency to weekly by default.
+
+   </Alert>
+
+   During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
 
 ## Autopilot Setup Wizard
 
@@ -65,12 +64,12 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 1. Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
 
 1. Click **Continue**.
-
+  
    ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../../images/autopilot/autopilot-setup-configuration.png)
 
 ### Schedule
 
-1. Set the **Deployment Destination** to the desired environment:
+1. Set the **Deployment Destination** to the desired environment: 
 
     - Dev
     - Test
@@ -93,7 +92,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 ### Visual Review
 
-1. Add pages to track for visual regression testing.
+1. Add pages to track for visual regression testing. 
 
    Autopilot automatically suggests up to ten URL paths during setup:
 
@@ -123,7 +122,7 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 ### Update Destination & Frequency
 
-Determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
+You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
 
 ![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-destination-frequency.png)
 
@@ -238,3 +237,4 @@ Some premium and paid plugins require the license to be explicitly activated on 
 - [Autopilot for Custom Upstreams Guide](/guides/autopilot-custom-upstream)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
+
