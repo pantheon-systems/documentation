@@ -37,7 +37,7 @@ You can select the day you want your weekly backup to be created.
 
 1. Navigate to your site's dashboard.
 
-1. Click **Backups** and then click **Backups Schedule**.
+1. Click **Backups** and then click **Backup Schedule**.
 
 1. Select the day from the drop-down menu and then click **Update Weekly Backup Schedule**.
 
