@@ -41,7 +41,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 - [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/sso)
-- [Backup Creation](/backups)
+- [Backup Creation](/guides/backups)
 
 ## Debug
 - [PHP Errors and Exceptions](/guides/php/php-errors)

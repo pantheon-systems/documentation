@@ -37,7 +37,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Backups"} link={"/docs/backups"}>
+  <Product title={"Backups"} link={"/docs/guides/backups"}>
 
   Nightly automated backups of your site’s database, files, and code.
 

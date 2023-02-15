@@ -45,7 +45,7 @@ Once you're all done click **Commit**. When you've finished you should see your 
 
 ![Pantheon dashboard commit log](../../../images/guides/woocommerce/15-Pantheon-dashboard-commit-log.png)
 
-We've just made a ton of changes and, before we hand this off to someone to add content to the site, we should [make a backup](/backups) in case we need to restore to this starting state.
+We've just made a ton of changes and, before we hand this off to someone to add content to the site, we should [make a backup](/guides/backups) in case we need to restore to this starting state.
 
 With a free plan you can make as many manual backups as you like. If you upgrade to a paid plan you enable automatic backups. Let's create a manual backup.
 

@@ -55,7 +55,7 @@ For existing sites that already have an active database:
     terminus drush <site>.<env> -- cc drush
     ```
 
-1. Create a [backup](/backups) of the site database, then place the site in maintenance mode and run the following command:
+1. Create a [backup](/guides/backups) of the site database, then place the site in maintenance mode and run the following command:
 
     ```bash{promptUser: user}
     terminus drush <site>.<env> -- utf8mb4-convert-databases
