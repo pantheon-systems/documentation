@@ -8,8 +8,8 @@ layout: guide
 showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
-editpath: autopilot/07-troubleshoot.md
-reviewed: "2022-11-01"
+editpath: autopilot/06-troubleshoot.md
+reviewed: "2022-06-02"
 contenttype: [guide]
 innav: [true]
 categories: [automate, test, update, faq]
@@ -29,7 +29,7 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
    If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
-1. Click **Sites** > **Actions** >  **Manage Autopilot Settings**.
+1. Click **Sites** > **Actions** > **Manage Autopilot Settings**.
 
 1. Navigate to the **Autopilot Configuration** screen > click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
 
@@ -100,7 +100,7 @@ To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integ
 ### Issue
 
 * **WordPress**: This error message is displayed if a WordPress plugin or theme is not found after updates were attempted.
-
+  
 * **Drupal**: This error message is displayed if a Drupal module or theme update could not be applied.
 
 ### Diagnosis
@@ -244,21 +244,17 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 ### CMS Error
 
 #### Diagnosis
-
 This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
 #### Solution
-
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
 
 ### Composer Error
 
 #### Diagnosis
-
-The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer),
+The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer), 
 
 #### Solution
-
 Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
 
 You can also use [Composer 2](/guides/integrated-composer/ic-support) to test locally and identify issues by running `composer install` or `composer update`
@@ -291,7 +287,7 @@ If the issue is because of a PHP or CMS issue, resolve any issues causing `clear
 
 ### Diagnosis
 
-The most common reason for clone content to fail is that Drush/WP-CLI clear cache failed at the end of a workflow.
+The most common reason for clone content to fail is that drush/wr-cli clear cache failed at the end of a workflow.
 
 ### Solution
 
@@ -299,9 +295,13 @@ Ensure the commands work. You will not be able to see if the workflow failed, bu
 
 Use the following steps:
 
-* For WordPress: `wp cache flush`
+* For WordPress:
 
-* Drupal: `drush cache-rebuild`
+  `wp cache flush`
+
+* Drupal:
+
+  `drush cache-rebuild`
 
 </Accordion>
 
@@ -356,7 +356,7 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 Site is running a framework that is not Drupal or WordPress. Currently, WordPress Multisite (`wordpress_network`) is not supported.
 
 ### Solution
-
+  
 Contact support for assistance if running a framework that is not Drupal or WordPress. Any other framework, including WordPress Multisite Network is not supported.
 
 </Accordion>
@@ -370,11 +370,11 @@ Contact support for assistance if running a framework that is not Drupal or Word
 There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
 
 Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for an unexpected output or errors. Alternatively, you can use the command `$SITE.autopilot` for the Autopilot environment.
-
+  
 ### Solution
-
+  
 After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
-
+  
 </Accordion>
 
 ## Quicksilver is Unavailable
@@ -383,12 +383,12 @@ After diagnosing the problem, resolve the issue that is causing the error on the
 
 ### Issue
 
-Quicksilver scripts failed to execute on the site.
-
+Quicksilver scripts failed to execute on the site. 
+  
 ### Solution
-
+  
 Contact Support[/support] for assistance.
-
+  
 </Accordion>
 
 ## Database Could Not Be Updated
@@ -397,12 +397,12 @@ Contact Support[/support] for assistance.
 
 ### Issue
 
-An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated.
-
+An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated. 
+  
 ### Solution
-
+  
 Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
-
+  
 </Accordion>
 
 ## Upstreams Could Not Be Merged
@@ -430,3 +430,4 @@ You can also disable upstream updates if you do not want Autopilot to maintain u
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
+
