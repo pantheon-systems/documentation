@@ -31,24 +31,34 @@ export env=dev
 
 </Alert>
 
-## Create a Backup
+## Create a Backup in the Dashboard
 
-You can create a new backup and set the timing for how long the backup is kept. This should be set for every environment (Dev, Test, Live).
+You can create a new backup and set the timing for how long the backup is kept. You must set this for every environment (Dev, Test, Live).
 
-Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
+1. Navigate to your site's dashboard.
+
+1. Click **Backups** and then click **Create New Backup**. The status of the new backup is shown in the progress bar. The jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
 ![Backups tab](../images/dashboard/backup-tool.png)
 
 <Alert title="Warning" type="danger">
 
-Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.
+Run backups separately for each environment (Dev, Test, and Live). Changes will be lost and unrecoverable if you have changes in SFTP mode that you have not committed. All backups are based on the code currently in the Git log.
 
 </Alert>
 
 ![Create site backup Pantheon Dashboard](../images/dashboard/manual-site-backup.png)
 
-If you prefer the command line, you can use [Terminus](/terminus) to create backups:
+## Create a Backup in Terminus
+
+You can use [Terminus](/terminus) to create backups:
 
 ```bash{promptUser: user}
 terminus backup:create $site.$env --element=<element> --keep-for=<days>
 ```
+
+## More Resources
+
+- [terminus backup:create Command](/terminus/commands/backup-create)
+- [SFTP on Pantheon](/guides/sftp)
+- [Git on Pantheon](/guides/git)
