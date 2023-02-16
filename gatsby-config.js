@@ -13,7 +13,7 @@ const plugins = [
   { // Handles inserting the GTM js blob into the site
     resolve: `gatsby-plugin-google-tagmanager`,
     options: {
-      id: process.env.GTM_ID,
+      id: process.env.GTM_ID_NEW,
       includeInDevelopment: false,
       defaultDataLayer: { },
     }
@@ -21,8 +21,8 @@ const plugins = [
   { // Handles inserting the Segment js blob into the site
     resolve: "gatsby-plugin-segment-js",
     options: {
-      prodKey: process.env.SEGMENT_KEY_NEW,
-      devKey: process.env.SEGMENT_KEY_NEW,
+      prodKey: process.env.SEGMENT_PROD,
+      devKey: process.env.SEGMENT_STAGING,
       trackPage: false,
     },
   },
