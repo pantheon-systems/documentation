@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 anchorid: teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2022-09-19"
+reviewed: "2023-02-16"
 contenttype: [guide]
 categories: [accounts]
 newcms: [--]
