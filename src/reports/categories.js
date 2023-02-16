@@ -6,18 +6,21 @@ import showdown from "showdown"
 const converter = new showdown.Converter()
 
 
-class DashboardImages extends React.Component {
+class CategoryTree extends React.Component {
   render() {
     return (
       <StaticQuery
         query={graphql`
           query {
-            allSchemaYaml (filter: {tag: {eq: "categories"}}){
+            allSchemaYaml {
               edges {
                 node {
                   tag
                   description
-                  valid_values
+                  valid_values {
+                    group
+                    values
+                  }
                 }
               }
             }
@@ -32,10 +35,20 @@ class DashboardImages extends React.Component {
 
               <ul>
 
-              {}
-                    {yamlfile.map((category, i) => {
+                    {yamlfile.map((heading, i) => {
                       return(
-                        <li key={i}>{category.node.tag}
+                        <li key={i}>
+                          {heading.node.tag}
+                          <ul>
+                          {heading.node.valid_values.map((groups, i) => {
+                                      return (
+                                        <li key={i}>
+                                          {(i ? ", " : "") + groups.group}
+                                        </li>
+                                      )
+                                    })
+                                  }
+                          </ul>
                         </li>
                       )
                     })}
@@ -49,7 +62,7 @@ class DashboardImages extends React.Component {
   }
 }
 
-export default DashboardImages
+export default CategoryTree
 
 /* .filter(doc => {
                 return doc.title.indexOf(search) >= 0
