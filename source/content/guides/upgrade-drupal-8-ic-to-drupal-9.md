@@ -84,4 +84,4 @@ Confirm the site requirements in the sections below before upgrading to the late
 ## More Resources
 
 - [Composer Fundamentals and Workflows](/guides/composer)
-- [Drupal 10 at Pantheon](/drupal-10)
+- [Drupal 10 on Pantheon](/drupal-10)
