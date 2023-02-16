@@ -34,9 +34,9 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 1. Require the upstream management package if you have not already:
 
-```
-composer require pantheon-systems/upstream-management
-```
+    ```bash{promptUser: user}
+    composer require pantheon-systems/upstream-management
+    ```
 
 1. Run the `composer upstream:require` command for each dependency:
 
@@ -48,17 +48,17 @@ composer require pantheon-systems/upstream-management
 
 ### How to Update Dependencies in Your Upstream
 
-You may have the need to pin specific versions of your dependencies in your upstream. This is normally done with the composer.lock file but including this file in the root of the upstream will cause merge conflicts with your downstream sites. To solve this problem, you could use the `upstream:update-dependencies` composer command.
+You may need to pin specific versions of your dependencies in your upstream. This is normally done with the `composer.lock` file. However, including the `composer.lock` file in the root of the upstream causes merge conflicts with your downstream sites. You can use the `upstream:update-dependencies` composer command to solve this problem.
 
-This command will:
+1. Run `composer update-upstream-dependencies` in your custom upstream repository. The `upstream:update-dependencies` command will:
 
-1. Create or update a `upstream-configuration/composer.lock` file.
-1. Create or update a `upstream-configuration/locked/composer.json` file with all of the packages from composer.lock and their pinned versions.
-1. Update top-level `composer.json` repositories section for `upstream-configuration` to use `upstream-configuration/locked` instead of just `upstream-configuration` (if not done previously).
+    - Create or update a `upstream-configuration/composer.lock` file.
 
-This will allow you to make sure that you use specific versions for the packages in your upstream.
+    - Create or update a `upstream-configuration/locked/composer.json` file with all packages from `composer.lock` and their pinned versions.
 
-Once you run this command (`composer update-upstream-dependencies`) in your custom upstream repository, commit the changes it did so that you can start using pinned versions in your downstream sites.
+    - Update the top-level `composer.json` repositories section for `upstream-configuration` to use `upstream-configuration/locked` instead of just `upstream-configuration` (if not done previously).
+
+1. Commit the changes so that you can start using pinned versions in your downstream sites. This allows you to make sure that you use specific versions for the packages in your upstream.
 
 ## More Resources
 

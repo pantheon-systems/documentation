@@ -32,11 +32,11 @@ code/
 
 When a site is created, Pantheon runs `composer install`, generates a `composer.lock` file, and commits it back to the site’s code repository. To avoid potential merge conflicts after applying an upstream update, do not commit the `composer.lock` file from your upstream root to the upstream repository.
 
-Since the `composer.lock` file should be committed for individual sites created from your custom upstream, it should not be listed in your .gitignore file. To make it easier to avoid accidentally commit a `composer.lock` file when working directly with your custom upstream, run the following command:
+The `composer.lock` file should not be listed in your `.gitignore` file because it must be committed for individual sites created from your custom upstream. Use the command below to avoid accidentally committing a `composer.lock` file when working directly with your custom upstream.
 
        echo /composer.lock >> .git/info/exclude
 
-This will have the same effect as ignoring the file in the top-level .gitignore file, except that the `exclude` file is not saved in the repository when you push changes back to the remote origin. You therefore must re-run this command every time you make a new local clone of your upstream if you would like to protect against inadvertently committing a composer.lock file.
+The command has the same effect as ignoring the file in the top-level `.gitignore` file, except that the `exclude` file is not saved in the repository when you push changes back to the remote origin. You must re-run this command every time you make a new local clone of your upstream if you would like to protect against inadvertently committing a `composer.lock` file.
 
 Build artifacts are stored in a Git tag like `pantheon_build_artifacts_$BRANCHNAME`, where `$BRANCHNAME` is the name of the environment or Multidev feature branch.
 
