@@ -98,7 +98,7 @@ Follow the steps below to resolve the issue:
 When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
 
 ```bash
-We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://docs.pantheon.io/core-updates) for further debugging tips. Conflicts: [
   "CONFLICT (content): Merge conflict in composer.json"
 ]
 ```

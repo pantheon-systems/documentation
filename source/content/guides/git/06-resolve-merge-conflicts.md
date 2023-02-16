@@ -41,6 +41,16 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 </Tab>
 
+<Tab title="Drupal (Latest)" id="d#">
+
+  ```bash{promptUser: user}
+  git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+  # resolve conflicts
+  git push origin master
+  ```
+
+</Tab>
+
 <Tab title="WordPress" id="wp">
 
   ```bash{promptUser: user}

@@ -125,11 +125,6 @@
     type: 'reference'
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
     url: '/terminus'
-  cta_alt:
-    type: 'Essential Developer Training'
-    title: 'Command Line Interface with Terminus'
-    subtitle: "An introduction to Terminus: Pantheon's command line interface."
-    url: 'https://pantheon.io/docs/guides/edt/terminus-cli/'
   subtopics:
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
@@ -381,11 +376,6 @@
     type: 'guide'
     subtitle: "Ready to launch like a pro? Check out our step-by-step guide to see how it's done."
     url: '/guides/launch'
-  cta_alt:
-    title: 'Going Live Best Practices'
-    type: 'Essential Developer Training'
-    subtitle: 'How do you take a website live on Pantheon?'
-    url: 'https://pantheon.io/docs/guides/edt/going-live/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
@@ -725,11 +715,6 @@
     type: 'guide'
     subtitle: "Ready to dive into Pantheon's Global CDN? Check out this guide to learn how to ace an online speed test."
     url: '/guides/frontend-performance'
-  cta_alt:
-    title: 'Website Performance'
-    type: 'Essential Developer Training'
-    subtitle: 'How does Pantheon help your website run faster than other platforms?'
-    url: 'https://pantheon.io/docs/guides/edt/performance/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
@@ -967,8 +952,6 @@
           url: '/guides/wp-cli'
         - text: 'Create a WordPress Site From the Command Line Using Terminus and WP-CLI'
           url: '/guides/wp-cli'
-        - text: 'Essential Developer Training'
-          url: '/guides/edt'
         - text: 'Install and Configure Lando'
           url: '/guides/local-development/lando-wordpress'
         - text: 'Manage Some Dependencies with Composer'
@@ -1523,4 +1506,4 @@
       subtitle: ''
       links:
         - text: 'Real-time chat support'
-          url: 'https://pantheon.io/docs/support/#real-time-chat-support'
+          url: 'https://docs.pantheon.io/support/#real-time-chat-support'

@@ -37,6 +37,8 @@ You can push this new version of your website to the Pantheon platform, and then
 
 Your changes are sent up the pipeline to your Live environment when you commit. [Git allows you to quickly revert](/guides/git/undo-commits) changes without the risk of restoring the entire environment from a backup if a bug makes it past your automated testing.
 
+<Partial file="build-deploy-terminology.md" />
+
 ## More Resources
 
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)

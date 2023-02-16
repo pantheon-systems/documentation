@@ -53,6 +53,7 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 1. [Clone the site locally](/guides/local-development/configuration) and run `composer install`.
 
+<Partial file="build-deploy-terminology.md" />
 
 ## More Resources
 
