@@ -52,8 +52,8 @@ Sites using Pantheon’s Solr search indexing service require Support interventi
 
 Customer playbook should include:
 
-- _If using Redis_: Test application for ability to handle a mass Redis cache rebuild.
-- _If using Solr_: Consult with your Pantheon Customer Success Manager (CSM) to determine an appropriate monitoring and recovery strategy.
+- **If using Redis**: Test application for ability to handle a mass Redis cache rebuild.
+- **If using Solr**: Consult with your Pantheon Customer Success Manager (CSM) to determine an appropriate monitoring and recovery strategy.
 
 ## Remediating Application Issues
 
