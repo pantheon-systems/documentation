@@ -73,7 +73,7 @@
   "devDependencies": {
     "@octokit/rest": "^16.43.1",
     "date-fns": "^2.29.3",
-    "lighthouse": "^5.6.0",
+    "lighthouse": "^10.0.1",
     "prettier": "^2.7.1",
     "react-date-range": "^1.4.0"
   },
