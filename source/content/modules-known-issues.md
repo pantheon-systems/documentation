@@ -191,7 +191,9 @@ ___
 
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
-**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
+**Solution 1:** Upgrade to the [latest version of IMCE](https://www.drupal.org/project/imce/releases/3.0.7) if possible. IMCE for Drupal 7 now has an option on Dev (not a tagged release) to disable the metadata, which prevents timeouts.
+
+**Solution 2**: Break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 
 1. [Enable the Object Cache](/guides/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
 1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:

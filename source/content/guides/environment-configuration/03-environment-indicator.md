@@ -113,7 +113,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
     ```php
     /*
     * Environment Indicator module settings.
-    * see: https://pantheon.io/docs/guides/environment-configuration/environment-indicator
+    * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
     */
 
     $conf['environment_indicator_overwrite'] = TRUE;

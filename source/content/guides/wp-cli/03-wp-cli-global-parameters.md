@@ -37,7 +37,7 @@ Review the [global parameters](https://make.wordpress.org/cli/handbook/config/) 
 
 - `--path=<path>` - Specify the path to WordPress. WP-CLI will look upward from its current directory to attempt to find WordPress if this parameter isn't provided.
 
-- `--url=<url>` - Identify the request from a given URL. This argument specifies the target site in WordPress Site Networks. 
+- `--url=<url>` - Identify the request from a given URL. This argument specifies the target site in WordPress Multisites. 
 
 - `--user=<id|login|email>` - Run the command as a particular user. WP-CLI commands are executed anonymously by default.
 
