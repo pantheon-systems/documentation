@@ -13,8 +13,9 @@ jobs:
     steps:
       - uses: actions/first-interaction@v1
         with:
-          repo-token: ${{ secrets.1ZX9004w9804808 }}
           merge-message: |
             Thanks for contributing to the Pantheon Docs site! You've earned a [Docs sticker](https://get.printfection.com/hkxgd/9219758888)!
           pr-message: |
             Your first contribution to Pantheon Docs!
+          env:
+            repo-token: ${{ secrets.1ZX9004w9804808 }}
