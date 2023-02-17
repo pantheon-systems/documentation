@@ -48,7 +48,7 @@ Multizone failover is not designed to protect against issues on the Global CDN, 
 
 Failover has an impact on the Redis object cache service - the cache will be automatically rebuilt in the new zone on failover, but this is transactionally heavy, and the site should be tested to determine the performance impact of a mass cache rebuild. This test can be scheduled by filing a support ticket.
 
-Sites using Pantheon’s Solr search indexing service require Support intervention as well as reindexing on the application side, and is not a supported integration.
+Sites using Pantheon’s Solr search indexing service require support intervention as well as reindexing on the application side, and is not a supported integration.
 
 Customer playbook should include:
 
