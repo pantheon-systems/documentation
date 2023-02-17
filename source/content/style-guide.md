@@ -393,8 +393,8 @@ Meta data for a doc or guide is created in a section referred to as frontmatter.
 
 <p>
 <small>
-<i className="fa fa-users"></i> Contributors:                                                     <a href="/docs/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
-<a href="/docs/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
+<i className="fa fa-users"></i> Contributors:                                                     <a href="/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
+<a href="/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
 </small>
 
 </p>
