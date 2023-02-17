@@ -25,15 +25,15 @@ Backups are currently stored offsite for redundancy on Google Cloud Storage inst
 
 ### How do I restore from my site from a full environment backup?
 
-In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/guides/environment-configuration/restore-environment-backup).
+In the event that you need to return your site to a certain point, you can use a [full backup to restore an environment](/guides/environment-configuration/restore-environment-backup).
 
 ### How long does a backup take?
 
-This depends on how much content you have. When you are doing a full environment backup, it can take some time depending on the size of your code, database, and files.
+This depends on how much content you have. When you are doing a full environment backup, it can take some time depending on the size of your code, database, and files. Refer to [Restore Process Time](/guides/backups/restore-from-backup#restore-process-time) for more information.
 
 ### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. Refer to [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan) for details about site plans on Pantheon.
 
 ### What time zone is the backup time shown in?
 
@@ -45,7 +45,7 @@ If Pantheon's resources are occupied by other backups, your backup will be place
 
 ### Why is the Drupal module Backup & Migrate not recommended on Pantheon?
 
-As a product in general, Backup & Migrate is perfectly fine and fulfills many site owners’ needs, but it is not recommended within the context of the Pantheon platform. On Pantheon, ​​Backup & Migrate can make your Drupal site work harder for a number of reasons:
+As a product in general, Backup & Migrate fulfills many site owners’ needs, but it is not recommended within the context of the Pantheon platform. On Pantheon, ​​Backup & Migrate can make your Drupal site work harder for a number of reasons:
 
 - Requires a full Drupal bootstrap
 - Monopolizes an appserver process and MySQL process while running
@@ -66,14 +66,14 @@ In comparison, Pantheon’s backup mechanism:
 - Creates distinct archives (code, database, files)
 - Secures access to archives through Pantheon authentication (no anonymous users can access)
 
-Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/terminus).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
+Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/terminus). Also, you can get download links for retrieval (the links expire and are renewed for additional security).
 
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>
 ```
-See also <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup-and-migrate">Modules and Plugins with Known Issues</a>
+Refer to <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup-and-migrate">Modules and Plugins with Known Issues</a>
 
-### What Can I Do During Backups?
+### What can I do during backups?
 
 From the Backup Log tab on the Site Dashboard, you can see the status of currently running backups for your code, database, and files:
 
@@ -82,3 +82,9 @@ From the Backup Log tab on the Site Dashboard, you can see the status of current
 If your **Code** or **Database** backup is taking an inordinately long time to complete, we suggest you [contact support](/guides/support/contact-support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 
 If you have large amounts of static files, this can slow down the **Files** backup. For this and other reasons, we suggest large file repositories be stored on a CDN. Otherwise, during a long file backup, you can still make changes to your code and database, provided those changes don't affect static files.
+
+## More Resources
+
+- [Your Site Code on Pantheon](/code)
+- [Pantheon Logs](/guides/logs-pantheon)
+- [Pantheon WebOps Workflow](/pantheon-workflow)

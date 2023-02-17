@@ -52,9 +52,7 @@ The **Restore** button is only available when **Development Mode** is set to **G
 
 ![Backups and Restore Button](../../../images/dashboard/restore-button.png)
 
-## Frequently Asked Questions
-
-### How long does the restore process take?
+## Restore Process Time
 
 When the **Restore** button is pressed, three separate workflow process are triggered in the dashboard. One each for code, database, and assets (media files like images or other attachments). One workflow may complete ahead of the others.
 
