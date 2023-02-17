@@ -5,9 +5,9 @@ jobs:
     name: send sticker
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-      issue-message: '# Thanks for contributing to the Pantheon Docs site! You've earned a Docs sticker!'
-      pr-message: 'Your first contribution to Pantheon Docs!'
-      env:
-        repo-token: ${{ secrets.1ZX9004w9804808 }}
+      - uses: actions/first-interaction@v1
+        with:
+          issue-message: '# Thanks for contributing to the Pantheon Docs site! You've earned a Docs sticker!'
+          pr-message: 'Your first contribution to Pantheon Docs!'
+          env:
+            repo-token: ${{ secrets.1ZX9004w9804808 }}
