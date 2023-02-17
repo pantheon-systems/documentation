@@ -194,7 +194,7 @@ Additionally, you can manually trigger a full Pantheon backup job for any site e
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>
 ```
-See also <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup-and-migrate">Modules and Plugins with Known Issues</a>
+See also <a data-proofer-ignore href="/modules-plugins-known-issues/#backup-and-migrate">Modules and Plugins with Known Issues</a>
 
 ### What Can I Do During Backups?
 

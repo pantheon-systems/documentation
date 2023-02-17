@@ -1,7 +1,7 @@
 ---
-title: WordPress Site Networks
+title: WordPress Multisite
 subtitle: Configure
-description: Learn how to configure your WordPress Site Networks.
+description: Learn how to configure your WordPress Multisite.
 layout: guide
 type: guide
 contenttype: [guide]
@@ -17,7 +17,7 @@ editpath: multisite/03-config.md
 image: multisite
 ---
 
-This section is intended for customers who have had a WordPress Site Network created for them by a Pantheon employee. If you do not have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. After you visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
+This section is intended for customers who have had a WordPress Multisite upstream created for them by a Pantheon employee. If you do not have a WordPress Multisite upstream, refer to the [introduction](/guides/multisite) page of this guide. After you create a new site on the Multisite upstream and visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
 
 <Alert title="Note" type="info">
 
@@ -25,9 +25,9 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 </Alert>
 
-## Install the WordPress Site Network
+## Install the WordPress Multisite
 
-We recommend using [Terminus](/terminus) to install a WordPress Site Network.
+We recommend using [Terminus](/terminus) to install a WordPress Multisite.
 
 1. Install the most recent release of Terminus:
 
@@ -59,7 +59,7 @@ We recommend using [Terminus](/terminus) to install a WordPress Site Network.
   terminus wp <site>.<env> -- core multisite-install --url=<url> --title=<site-title> --admin_user=<username> --admin_email=<email>
   ```
 
- After you successfully install a new WordPress Site Network, a message is displayed that is similar to the following:
+ After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
 
   ```bash{outputLines: 2-6}
   terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
@@ -70,11 +70,11 @@ We recommend using [Terminus](/terminus) to install a WordPress Site Network.
   Success: Network installed. Dont forget to set up rewrite rules.
   ```
 
-The message confirms your WordPress Site Network is installed.
+The message confirms your WordPress Multisite is installed.
 
-## Configure the WordPress Site Network
+## Configure the WordPress Multisite
 
-The `wp core multisite-install` command that we ran in the previous section modifies the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant, which assigns a specific URL to your WordPress Site Network.
+The `wp core multisite-install` command that we ran in the previous section modifies the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant, which assigns a specific URL to your WordPress Multisite.
 
 To ensure it works on the Pantheon platform, you need to adjust the configuration so that the `DOMAIN_CURRENT_SITE` constant is defined conditionally based on the given environment:
 
@@ -141,19 +141,19 @@ A warning may appear in the WordPress dashboard that you need to update your `.h
 
 </Alert>
 
-## Develop the Site Network
+## Develop the Multisite
 
-Congratulations on setting up your first WordPress Site Network. When you log in to the WordPress Dashboard, you'll see a **My Sites** menu item in the toolbar:
+Congratulations on setting up your first WordPress Multisite. When you log in to the WordPress Dashboard, you'll see a **My Sites** menu item in the toolbar:
 
 ![Enabling the network](../../../images/wp-network-admin-sites.png)
 
-You will have one site and you can create another if needed. If you chose to use WordPress Site Networks with subdirectories, you'll be able to access the site right away. If you chose to use subdomains, you'll need to map a custom hostname to the environment before you can access the new environment.
+You will have one site and you can create another if needed. If you chose to use WordPress Multisite with subdirectories, you'll be able to access the site right away. If you chose to use subdomains, you'll need to map a custom hostname to the environment before you can access the new environment.
 
 <Accordion title="Mapping Custom Hostnames"  id="map-cust-hostname" icon="wrench">
 
 ### Map Custom Hostnames (subdomain configurations only)
 
-Upon installation and configuration the main site will load properly (e.g., `dev-<example>.pantheonsite.io`). However, additional network sites created will fail to load because `pantheonsite.io` doesn't support sub-sub-domains (e.g., `<new-sub-site>.dev-<example>.pantheonsite.io`). WordPress Site Networks using a subdomain configuration require custom domains to be mapped to each network site in order to load properly.
+Upon installation and configuration the main site will load properly (e.g., `dev-<example>.pantheonsite.io`). However, additional network sites created will fail to load because `pantheonsite.io` doesn't support sub-sub-domains (e.g., `<new-sub-site>.dev-<example>.pantheonsite.io`). WordPress Multisites using a subdomain configuration require custom domains to be mapped to each network site in order to load properly.
 
 1. Access the domain's DNS settings wherever they are managed.
 1. Create a wildcard CNAME `*.dev.example.com` that maps to the Dev environment's platform domain, `dev-<example>.pantheonsite.io`. Doing so ensures all hostnames mapped to the environment will load without additional DNS records.
@@ -169,11 +169,11 @@ Upon installation and configuration the main site will load properly (e.g., `dev
 
 1. Update the conditional `DOMAIN_CURRENT_SITE` definition in your `wp-config.php` file to accommodate the site's new domains.
 
-After these steps are complete, both sites on the WordPress Site Network should load with their new URLs.
+After these steps are complete, both sites on the WordPress Multisite should load with their new URLs.
 
 </Accordion>
 
-Explore the WordPress Network Dashboard to become familiar with the variety of additional settings. You can review the options that are available for each site you create, manage users across WordPress Multisite, and learn about the network settings. After you explore the WordPress Network Dashboard, learn how to use the WordPress Site Network with the Pantheon Workflow.
+Explore the WordPress Network Dashboard to become familiar with the variety of additional settings. You can review the options that are available for each site you create, manage users across WordPress Multisite, and learn about the network settings. After you explore the WordPress Network Dashboard, learn how to use the WordPress Multisite with the Pantheon Workflow.
 
 ## More Resources
 
