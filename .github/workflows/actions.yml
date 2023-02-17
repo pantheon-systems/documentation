@@ -1,21 +1,13 @@
 name: First interaction
-
-on:
-  issues:
-    types: [opened]
-  pull_request:
-    branches: [main]
-    types: [merged]
-
+on: pull_request
 jobs:
-  check_for_first_interaction:
+  email-sticker:
+    name: send sticker
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/first-interaction@v1
-        with:
-          merge-message: |
-            Thanks for contributing to the Pantheon Docs site! You've earned a [Docs sticker](https://get.printfection.com/hkxgd/9219758888)!
-          pr-message: |
-            Your first contribution to Pantheon Docs!
-          env:
-            repo-token: ${{ secrets.1ZX9004w9804808 }}
+    - uses: actions/first-interaction@v1
+      with:
+      issue-message: '# Thanks for contributing to the Pantheon Docs site! You've earned a Docs sticker!'
+      pr-message: 'Your first contribution to Pantheon Docs!'
+      env:
+        repo-token: ${{ secrets.1ZX9004w9804808 }}
