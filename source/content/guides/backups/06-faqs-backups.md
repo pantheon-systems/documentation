@@ -1,7 +1,7 @@
 ---
 title: Backups Tool
 subtitle: FAQs
-description: Get answers to your Backups questions.
+description: Get answers to your Backups Tool questions.
 tags: [backups, security]
 innav: [true]
 categories: [backup]
@@ -17,7 +17,7 @@ anchorid: faqs-backups
 contenttype: [guide]
 ---
 
-This section provides answers to frequently asked Backups questions.
+This section provides answers to frequently asked Backups Tool questions.
 
 ### Where are the backups stored?
 
@@ -33,7 +33,7 @@ This depends on how much content you have. When you are doing a full environment
 
 ### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. Refer to [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. Refer to [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan) for more information about site plans on Pantheon.
 
 ### What time zone is the backup time shown in?
 
@@ -75,11 +75,11 @@ Refer to <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup
 
 ### What can I do during backups?
 
-From the Backup Log tab on the Site Dashboard, you can see the status of currently running backups for your code, database, and files:
+The Backup Log tab on the Site Dashboard displays the current status of backups in progress for your code, database, and files:
 
 ![Backups in progress](../images/backup-progress.png)
 
-If your **Code** or **Database** backup is taking an inordinately long time to complete, we suggest you [contact support](/guides/support/contact-support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
+If your **Code** or **Database** backup is taking a long time to complete, we suggest you [contact support](/guides/support/contact-support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 
 If you have large amounts of static files, this can slow down the **Files** backup. For this and other reasons, we suggest large file repositories be stored on a CDN. Otherwise, during a long file backup, you can still make changes to your code and database, provided those changes don't affect static files.
 

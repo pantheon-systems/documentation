@@ -30,7 +30,7 @@ Pantheon's Backups Tool and unique [environment configuration](/guides/environme
 
 It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.
 
-When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time. Be patient and do not attempt to restart the restore unless you are confident that it completed. During the restore process, files might show as missing and the site as unavailable. When in doubt, [contact support](/guides/support/contact-support/).
+Your restore will be placed in a queue and executed. Depending on the size of the site, this operation may take some time. Be patient and do not attempt to restart the restore unless you are confident that it completed. During the restore process, files might show as missing and the site as unavailable. [Contact support](/guides/support/contact-support/) if you have questions.
 
 ![Backup tool](../../../images/dashboard/backup-tool.png)
 
@@ -46,7 +46,7 @@ Each manual and automatic backup can be directly restored to that environment wi
 
 <Alert title="Note" type="info">
 
-The **Restore** button is only available when **Development Mode** is set to **Git** mode in  development environments (Dev and Multidevs. This does not apply to production environments (Test and Live). For details, refer to [The Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites).
+The **Restore** button is only available when **Development Mode** is set to **Git** in  development environments (Dev and Multidevs. This does not apply to production environments (Test and Live). Refer to [The Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
 
 </Alert>
 
@@ -54,7 +54,7 @@ The **Restore** button is only available when **Development Mode** is set to **G
 
 ## Restore Process Time
 
-Three separate workflow process are triggered in the dashboard when the **Restore** button is clicked. A process runs for code, database, and assets (media files like images or other attachments). The workflows may complete at different times.
+Three separate workflow process are triggered in the dashboard when the **Restore** button is clicked. A process runs for code, database, and files (assets such as media files, images, or other attachments). The workflows may complete at different times.
 
 There is no way to determine specifically how long any one restore job will take, as it varies per site. The usual factor that extends the restore process is the *count*, or number of files in the codebase or files backup. Sites with 10,000 files or more can take over an hour to restore, though this is not a strict ratio as individual file sizes also affect process time.
 

@@ -19,10 +19,9 @@ contenttype: [guide]
 
 This section provides information on how to create new backups. We strongly urge you to back up your site regularly.
 
-
 <Alert title="Exports" type="export">
 
-This doc offers [Terminus](/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+This section offers [Terminus](/terminus) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -33,7 +32,7 @@ export env=dev
 
 ## Create a Backup in the Dashboard
 
-You can create a new backup and set the timing for how long the backup is kept. You must set this for every environment (Dev, Test, Live).
+You can create a new backup and set the timing for how long the backup is kept. You must set this for every environment (Dev, Test, and Live).
 
 1. Navigate to your site's dashboard.
 

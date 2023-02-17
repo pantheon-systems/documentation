@@ -29,7 +29,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/
 
 The jobs indicator returns to its start state to let you know that the task is complete when the backup finishes. A new backup appears in your Backups log with three separate archives (code, database, and files).
 
-The newest backup will appear at the top of the list. A backup will no longer be in the list of available archives when the retention period expires.
+The newest backup appears at the top of the list. A backup will no longer be in the list of available archives when the retention period expires.
 
 1. Navigate to your site's dashboard.
 

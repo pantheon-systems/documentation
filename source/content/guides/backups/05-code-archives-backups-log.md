@@ -1,7 +1,7 @@
 ---
 title: Backups Tool
 subtitle: Code Archives and Backups Log
-description: Learn about your code archives and Backups log.
+description: Learn about your code archives and Backups Log.
 tags: [backups, security]
 innav: [true]
 categories: [backup]
@@ -27,13 +27,13 @@ You can use a free tool like [Sourcetree](https://www.sourcetreeapp.com/) to ins
 
 <Alert title="Note" type="info">
 
-Pantheon provides default `.gitignore` files in the base of each site's code repository. This file includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore), and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore).
+Pantheon provides default `.gitignore` files in the base of each site's code repository. This file includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups. Refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore), and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore) to see the default `.gitignore` file.
 
 </Alert>
 
 ## Backup Log
 
-The Backup log displays a list of existing backups for each environment. Recent logs are listed at the top of the log. The backup components listed below can be downloaded and viewed individually.
+The Backup Log displays a list of existing backups for each environment. Recent logs are listed at the top. The backup components listed below can be downloaded and viewed individually.
 
 - Code
 - Databases

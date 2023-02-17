@@ -17,7 +17,7 @@ anchorid: backups
 contenttype: [guide]
 ---
 
-Pantheon automatically backs up your site. You can manage all of your site's backup details in the Backups tab. Each backup contains three components:
+Pantheon automatically backs up your site. You can manage your site's backup details in the Backups tab of your dashboard. Each backup contains three components:
 
 - **Code:** anything version controlled and committed via the Site Dashboard. Uncommitted SFTP changes to code are not backed up.
 - **Database:** a `mysqldump` of your site's db.
