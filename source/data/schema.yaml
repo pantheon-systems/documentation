@@ -13,7 +13,7 @@
   multi: 'yes'
   valid-values:
     - group: 'Getting Started'
-      values: [overview, dashboard, create, migrate]
+      values: [overview, plan, dashboard, create, migrate]
     - group: 'Web Ops'
       values: [custom-upstreams, multidev, workflows]
     - group: 'Dev Tools'
