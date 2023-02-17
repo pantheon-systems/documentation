@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/first-interaction@main
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.1ZX9004w9804808 }}
           merge-message: |
             Thanks for contributing to the Pantheon Docs site! You've earned a [Docs sticker](https://get.printfection.com/hkxgd/9219758888)!
           pr-message: |
