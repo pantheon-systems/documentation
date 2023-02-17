@@ -84,11 +84,11 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 This section is optional, and is only intended for customers who would like to create a network of sites using a single copy of the WordPress codebase and a common database.
 
-1. Review the [WordPress Site Networks Guide](/guides/multisite/) to ensure that you understand Multisite considerations and Multisite governance.
+1. Review the [WordPress Multisite Guide](/guides/multisite/) to ensure that you understand Multisite considerations and Multisite governance.
 
-1. Request a [WordPress Site Network](/guides/multisite/#request-a-wordpress-site-network).
+1. Request a [WordPress Multisite upstream](/guides/multisite/#request-a-wordpress-site-network).
 
-1. Complete the configuration steps in WordPress Site Networks Guide to [install](/guides/multisite/config/#install-the-wordpress-site-network) and [configure](/guides/multisite/config/#configure-the-wordpress-site-network) the WordPress Site Network created for you in step 2.
+1. Complete the configuration steps in WordPress Multisite Guide to [install](/guides/multisite/config/#install-the-wordpress-site-network) and [configure](/guides/multisite/config/#configure-the-wordpress-site-network) the WordPress Multisite created for you in step 2.
 
 ## More Resources
 

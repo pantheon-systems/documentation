@@ -32,4 +32,4 @@ This guide will show you how to migrate a Composer site currently hosted outside
 
 ## Requirements
 
-<Partial file="migrate/d8composer-d8composer.md" />
+<Partial file="migrate/d8composer-d8composer-requirements.md" />

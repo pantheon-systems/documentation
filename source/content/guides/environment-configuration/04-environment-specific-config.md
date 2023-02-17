@@ -59,11 +59,11 @@ Copy this plugin file to `wp-content/mu-plugins/site-config.php` and edit accord
 <?php
 /*
   Plugin Name: Site Config
-  Plugin URI: https://pantheon.io/docs/guides/environment-configuration/environment-specific-config
+  Plugin URI: https://docs.pantheon.io/guides/environment-configuration/environment-specific-config
   Description: Activates and deactivates plugins based on environment.
   Version: 0.1.1
   Author: Pantheon
-  Author URI: https://pantheon.io/docs/contributors
+  Author URI: https://docs.pantheon.io/contributors
 */
 # Ensuring that this is on Pantheon
 if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) :

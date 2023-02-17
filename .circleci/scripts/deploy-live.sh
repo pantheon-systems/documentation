@@ -13,7 +13,7 @@ touch ./deployment-log.txt
 try3 rsync --delete-delay -chrltzv --ipv4 --info=BACKUP,DEL -e 'ssh -p 2222 -oStrictHostKeyChecking=no' public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/ | tee deployment-log.txt;
 if [ "$?" -eq "0" ]
 then
-    echo "Success: Deployed to https://pantheon.io/docs"
+    echo "Success: Deployed to https://docs.pantheon.io"
 else
     # If rsync returns an error code the build will fail and send notifications for review
     echo "Error: Deploy failed, review rsync status"
