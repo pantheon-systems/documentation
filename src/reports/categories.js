@@ -12,7 +12,7 @@ class CategoryTree extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            allSchemaYaml {
+            allSchemaYaml(filter: {tag: {eq: "categories"}}) {
               edges {
                 node {
                   tag
@@ -24,36 +24,86 @@ class CategoryTree extends React.Component {
                 }
               }
             }
-          }
+            allMdx (
+              filter: {
+                frontmatter: { 
+                  title: { ne: "" }
+                  innav: { eq: true}
+                }
+                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
+              }
+              sort: {fields: fileInfo___relativePath, order: ASC}
+            ) {
+              edges {
+                node {
+                  fileInfo {
+                    relativePath
+                    sourceInstanceName
+                    id
+                  }
+                  frontmatter {
+                    title
+                    subtitle
+                    categories
+                  }
+                  fields {
+                    slug
+                  }
+                }
+              }
+            }
+                    }
         `}
         render={data => {
           const yamlfile = data.allSchemaYaml.edges
+          const pages = data.allMdx.edges
+          let printedGuides = []
+          let printedOverview = []
 
           return (
             <Layout>
               <h1>Category Tree</h1>
+                  {yamlfile.map((heading, i) => {
+                    return(
+                        <ul>
+                        {heading.node.valid_values.map((groups, i) => {
+                            return (
+                              <li key={i}>
+                                {groups.group}
+                                  <ul>
+                                    {groups.values.map((value, i) => {
+                                        return (
+                                          <li key={i}>
+                                            {value}
+                                            <ul>
+                                            {pages.filter(page => {
+                                              const categories = page.node.frontmatter.categories
+                                              return (
+                                                categories.indexOf(value) >= 0
+                                              )
+                                              })
+                                              .map((page) => {
+                                                return (
+                                                  <li>
+                                                  {page.node.frontmatter.title}
+                                                  : {page.node.frontmatter.subtitle}
+                                                  </li>
+                                                )
+                                              })
+                                            }
 
-              <ul>
-
-                    {yamlfile.map((heading, i) => {
-                      return(
-                        <li key={i}>
-                          {heading.node.tag}
-                          <ul>
-                          {heading.node.valid_values.map((groups, i) => {
-                                      return (
-                                        <li key={i}>
-                                          {(i ? ", " : "") + groups.group}
-                                        </li>
-                                      )
-                                    })
-                                  }
-                          </ul>
-                        </li>
-                      )
-                    })}
-              </ul>
-
+                                            </ul>
+                                          </li>
+                                        )
+                                      })}
+                                  </ul>
+                              </li>
+                            )
+                          })
+                        }
+                        </ul>
+                    )
+                  })}
             </Layout>
           )
         }}
