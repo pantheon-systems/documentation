@@ -13,19 +13,19 @@
   multi: 'yes'
   valid-values:
     - group: 'Getting Started'
-      values: [overview, plan, dashboard, create, migrate]
+      values: [overview, dashboard, create, migrate]
     - group: 'Web Ops'
       values: [custom-upstreams, multidev, workflows]
     - group: 'Dev Tools'
       values: [api, cli, config, database, files, git, localdev, php, sftp, sql]
     - group: 'Manage Sites'
-      values: [automate, backup, cache, dependencies, ecommerce, email, logs, optimize, personalize, search, test, track, traffic, update]
+      values: [automate, backup, cache, dependencies, ecommerce, email, logs, optimize, personalization, search, test, track, traffic, update]
     - group: 'Security'
       values: [security]
     - group: 'Going Live'
       values: [domains, launch]
     - group: 'Account Management'
-      values: [billing, organizations, plans, accounts]
+      values: [accounts, billing, organizations, plans]
     - group: 'Get More Help'
       values: [help, issues, troubleshooting, faq]
 - tag: contenttype
