@@ -54,11 +54,11 @@ The **Restore** button is only available when **Development Mode** is set to **G
 
 ## Restore Process Time
 
-When the **Restore** button is pressed, three separate workflow process are triggered in the dashboard. One each for code, database, and assets (media files like images or other attachments). One workflow may complete ahead of the others.
+Three separate workflow process are triggered in the dashboard when the **Restore** button is clicked. A process runs for code, database, and assets (media files like images or other attachments). The workflows may complete at different times.
 
-There is no way to determine specifically how long any one restore job will take, as it varies per site. The usual factor that extends the restore process is the *count*, or number of files in the codebase or files backup. We've seen sites take more than one hour to restore when they have 10,000 files or above, though this is not a strict ratio as individual file sizes also affect the time.
+There is no way to determine specifically how long any one restore job will take, as it varies per site. The usual factor that extends the restore process is the *count*, or number of files in the codebase or files backup. Sites with 10,000 files or more can take over an hour to restore, though this is not a strict ratio as individual file sizes also affect process time.
 
-One way to estimate time to restore is to check the last backup duration. The Terminus `workflow:list` command will show workflow durations in the **Time Elapsed** field, in seconds.
+You can check the last backup duration to estimate the potential restore process time. The Terminus `workflow:list` command displays workflow duration in seconds within the **Time Elapsed** field.
 
 ```bash{outputLines: 2-9}
 terminus workflow:list yoursite-name --fields id,env,workflow,time --format table
