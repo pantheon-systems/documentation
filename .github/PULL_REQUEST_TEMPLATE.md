@@ -52,7 +52,7 @@ The following changes still need to be completed:
 
 **Do not remove** - To be completed by the docs team upon merge:
 
-- [ ] Redirect `/docs/old-path/` => `/docs/new-path/` (if applicable)
+- [ ] Redirect `/old-path/` => `/new-path/` (if applicable)
 - [ ] Include/exclude pages ^ respectively within docs search service provider (if applicable)
 - [ ] For Heroes - add a props post to the [discussion board](https://discuss.pantheon.io/c/pantheon-platform/documentation/17).
 - [ ] Remove from the [project board](https://github.com/pantheon-systems/documentation/projects/14)

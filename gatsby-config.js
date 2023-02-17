@@ -11,12 +11,12 @@ require("dotenv").config({
 // Gatsby Configuration, Options, and Plugins
 module.exports = {
   // Puts build artifacts in a subdirectory, and updates all local links
-  pathPrefix: `/docs`,
+  pathPrefix: `/`,
   // Reusable global information
   siteMetadata: {
     title: `Pantheon Docs`,
     description: `Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform`,
-    siteUrl: `https://pantheon.io/`,
+    siteUrl: `https://docs.pantheon.io/`,
     social: {
       twitter: `getpantheon`,
     },
@@ -112,7 +112,7 @@ module.exports = {
       options: {
         name: `Pantheon Documentation`,
         short_name: `Docs`,
-        start_url: `/docs/`,
+        start_url: `/`,
         background_color: `#FFFFFF`,
         theme_color: `#EFD01B`,
         display: `standalone`,

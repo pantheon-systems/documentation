@@ -110,18 +110,18 @@ do
                 export guide_file=${guide##*/}
                 if [[ ${guide_file:0:2}  == 01 ]]
                 then
-                    grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"${guide%/*}"]("$url"/docs/"${guide%/*}")\n" >> comment.txt
+                    grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"${guide%/*}"]("$url/"${guide%/*}")\n" >> comment.txt
                 elif [[ ${guide_file:0:2}  =~ [0-9] ]]
                 then
-                    grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"${guide%/*}"/"${guide_file:3}"]("$url"/docs/"${guide%/*}"/"${guide_file:3}")\n" >> comment.txt
+                    grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"${guide%/*}"/"${guide_file:3}"]("$url/"${guide%/*}"/"${guide_file:3}")\n" >> comment.txt
                 else
-                    grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url"/docs/"$guide")\n" >> comment.txt
+                    grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url/"$guide")\n" >> comment.txt
                 fi
         elif ls -R source/content/dns-providers | grep '^\<'"${doc:29: -3}"'\>.md$'
         then
-            grep -- '\<'"${doc:29: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:29: -3}"]("$url"/docs/"${doc:29: -3}")\n" >> comment.txt
+            grep -- '\<'"${doc:29: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:29: -3}"]("$url/"${doc:29: -3}")\n" >> comment.txt
         else
-            grep -- '\<'"${doc:15: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:15: -3}"]("$url"/docs/"${doc:15: -3}")\n" >> comment.txt
+            grep -- '\<'"${doc:15: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:15: -3}"]("$url/"${doc:15: -3}")\n" >> comment.txt
         fi
     elif [[ $doc =~ $changelog_path ]]
     then
