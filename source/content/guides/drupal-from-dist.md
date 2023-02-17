@@ -162,7 +162,7 @@ Add/modify the settings in `composer.json` as follows, replacing the Drupal valu
        ]
    },
    "scripts-descriptions": {
-       "upstream-require": "Add a dependency to an upstream. See https://pantheon.io/docs/create-custom-upstream or information on creating custom upstreams."
+       "upstream-require": "Add a dependency to an upstream. See https://docs.pantheon.io/create-custom-upstream or information on creating custom upstreams."
    },
    ```
 

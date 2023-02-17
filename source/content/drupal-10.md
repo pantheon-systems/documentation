@@ -29,7 +29,7 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 1. Go to your dashboard and confirm that you are on PHP 8.1. The PHP 8.1 update will show as available to install if you are not already on it.
 
-   If you are not on PHP 8.1 and you don't see the update, refer to [Upgrade PHP Versions](https://pantheon.io/docs/guides/php/php-versions) for instructions on updating your PHP version.
+   If you are not on PHP 8.1 and you don't see the update, refer to [Upgrade PHP Versions](https://docs.pantheon.io/guides/php/php-versions) for instructions on updating your PHP version.
 
 1. Run [Drupal's Upgrade Status](https://www.drupal.org/project/upgrade_status).
 

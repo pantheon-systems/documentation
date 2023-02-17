@@ -39,7 +39,7 @@ You cannot modify the repository details on an existing Custom Upstream. we reco
 terminus site:upstream:set my-site "My New Custom Upstream"
 ```
 
-You must be a site owner to switch a site's upstream. You will need to merge changes as a one-click update after a site's upstream has been changed. Review [Example Usage](/terminus/examples/#switch-upstreams) for more details.
+You must merge changes as a one-click update after a site's upstream is changed. Review [Example Usage](/terminus/examples/#switch-upstreams) for more details.
 
 You can safely delete the old Custom Upstream after all sites have been updated to track the new Custom Upstream. Review [Delete a Custom Upstream](/guides/custom-upstream/delete-custom-upstream) for more information.
 
