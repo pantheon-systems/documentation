@@ -3,11 +3,17 @@ title: On-Server Development
 description: Develop on Pantheon directly via SFTP.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename
-categories: [develop]
 tags: [files, sftp, code]
 searchboost: 50
 layout: video
 type: video
+contenttype: [doc]
+innav: [true]
+categories: [sftp]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 <Youtube src="ktesh9SiHfc" title="On Server Development" />
@@ -32,4 +38,4 @@ For those of us who like to use command line tools, if I have [Terminus](/termin
 
 While I’m doing on-server development, the Dev environment is writable, but it’s also blocking anyone from pushing to it via Git, so I switch it back to Git mode on the dashboard.
 
-Whether you’re a Git user or an FTP user, on-server Development can be a pretty handy tool. Give it a shot and see if you can integrate it into your workflow. Learn more about [developing on Pantheon directly with SFTP mode](/sftp).
+Whether you’re a Git user or an FTP user, on-server Development can be a pretty handy tool. Give it a shot and see if you can integrate it into your workflow. Learn more about [developing on Pantheon directly with SFTP mode](/guides/sftp).

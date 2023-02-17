@@ -1,5 +1,19 @@
-1. From the User Dashboard, click the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab and select **Billing** from the left side.
+---
+contenttype: [partial]
+categories: [billing]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
 
-1. Sites are listed below the card to which they are assigned. To view recent invoices, find the credit card the invoice was billed to and click **View Invoices**.
+1. Navigate to the User Dashboard, click the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab and select **Billing**.
 
-1. Up to 100 of the most recent invoices are shown in the Invoice History. Click **View Invoice** to view a specific invoice.
+    - Sites are listed below the card to which they are assigned.
+
+1. Find the credit card the invoice was billed to and click **View Invoices** to view recent invoices.
+
+    - Up to 100 of the most recent invoices are shown in the Invoice History.
+
+1.  Click **View Invoice** to view a specific invoice.

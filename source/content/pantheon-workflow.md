@@ -1,8 +1,14 @@
 ---
 title: Use the Pantheon WebOps Workflow
 description: Understand the Pantheon WebOps workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
-categories: [get-started]
 tags: [workflow, dashboard, webops]
+contenttype: [doc]
+innav: [true]
+categories: [workflows]
+cms: [drupal, wordpress]
+audience: [development]
+product: [dashboard]
+integration: [--]
 ---
 
 <Alert title="Note" type="info">
@@ -11,7 +17,7 @@ This page offers a high level description of the intended usage of Pantheon's De
 
 </Alert>
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/multidev).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -32,7 +38,7 @@ Content refers to your site's files and the database. In this context, files are
 
 ![Dev Test and Live icon](../images/code-workflow.png)
 
-The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/files) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
+The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/guides/filesystem) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
 <Accordion title="Why does Pantheon do this?" id="why-tab" icon="question-sign">
 
@@ -44,12 +50,12 @@ Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/80205
 
 ### Commit Code in Dev
 
-Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/git).
-For more detailed information on developing directly in SFTP mode, please see the [guide](/sftp).
+Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/guides/sftp/sftp-development) or [Git](/guides/git/git-config).
+For more detailed information on developing directly in SFTP mode, please see the [guide](/guides/sftp).
 
 ### Combine Code from Dev and Content from Live in Test
 
-When you're ready to test a new set of changes, deploy your code from Dev to Test. At this point, you will be prompted to clone your content down from the Live environment. This combines the code from Dev and the database and files from Live in the Test environment. It is a WebOps best practice to simulate your eventual deployment to Live as closely as possible. Under the hood, [each deployment generates a Git tag](/git-faq#what-are-the-git-tags).
+When you're ready to test a new set of changes, deploy your code from Dev to Test. At this point, you will be prompted to clone your content down from the Live environment. This combines the code from Dev and the database and files from Live in the Test environment. It is a WebOps best practice to simulate your eventual deployment to Live as closely as possible. Under the hood, [each deployment generates a Git tag](/guides/git/faq-git#what-are-the-git-tags).
 
 <Alert title="Note" type="info">
 
@@ -57,17 +63,24 @@ While you are able to update the Dev environment via Git, if you would like to d
 
 </Alert>
 
-Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
+After changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
 
 ![Site dashboard, test environment, Deploys section](../images/dashboard/deploy-to-test-env.png)
 
  - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
+ - We provide a rolling view of typical workflow log entries on the site for 14 days. Log entries are no longer visible on the site after 14 days, but are kept for internal auditing. Log entries visible for longer than 14 days include:
+
+    - `deploy`
+    - `create_environment` (this only applies to Test and Live environments)
+    - `freeze_site`
+    - `unfreeze_site`
+
  - Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
 
  - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for database changes.
 
-   On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
+ - On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
 After running this operation, be sure that:
 
@@ -78,9 +91,9 @@ After running this operation, be sure that:
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
 
 - [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check)
-- [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check)
+- [Launch Check - WordPress Performance and Configuration Analysis](/guides/wordpress-pantheon/wordpress-launch-check)
 
-Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/quicksilver).
+Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/guides/quicksilver).
 
 This entire process is designed around making sure that the Live environment is always stable and never at risk due to code updates.
 
@@ -89,6 +102,14 @@ This entire process is designed around making sure that the Live environment is 
 After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
+
+### Content Staging
+
+Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions. 
+
+## Upload Content and Files to Test and Live Environments
+
+You can upload files directly to your Test and Live environments through an SFTP connection. Refer to [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info#sftp-file-uploads-to-test-and-live-environments) for more information.
 
 ## Configuration Management
 
@@ -104,7 +125,6 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 * [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 * [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
-* Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management).
 
 ## Understanding Write Permissions in Test and Live
 
@@ -118,23 +138,11 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 You may also clone, import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 
-The [database clone operation](/database-workflow#cloning-the-database) excludes some tables by default. The excluded tables are:
+The [database clone operation](/guides/mariadb-mysql/database-workflow-tool#cloning-the-database) excludes some tables by default. The excluded tables are:
 
-* `cache`
-* `cache_block`
-* `cache_bootstrap`
-* `cache_field`
-* `cache_filter`
-* `cache_form`
-* `cache_image`
-* `cache_menu`
-* `cache_page`
-* `cache_path`
-* `cache_update`
-* `cache_views`
-* `cache_views_data`
 * `accesslog`
 * `watchdog`
+* any table that starts with `cache`
 
 You can clone databases from one environment to another at any point. It does not need to only be within the deployment process.
 
@@ -164,7 +172,7 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
-## See Also
+## More Resources
  - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
  - [Your Site Code on Pantheon](/code)
- - [Pantheon Filesystem](/files)
+ - [Pantheon Filesystem](/guides/filesystem/)

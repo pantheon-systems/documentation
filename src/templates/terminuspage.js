@@ -26,6 +26,7 @@ import Download from "../components/download"
 import Commands from "../components/commands"
 import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
+import Partial from "../components/partial"
 
 const shortcodes = {
   Callout,
@@ -41,6 +42,7 @@ const shortcodes = {
   Releases,
   TerminusVersion,
   Download,
+  Partial,
   Commands,
   ReviewDate,
   Check,
@@ -53,55 +55,67 @@ const items = [
   {
     id: "docs-terminus",
     link: "/terminus",
-    title: "Get Started",
+    title: "Introduction",
   },
   {
     id: "docs-terminus-install",
     link: "/terminus/install",
-    title: "Install",
+    title: "Install and Update Terminus",
   },
   {
     id: "docs-terminus-examples",
     link: "/terminus/examples",
-    title: "Example Usage",
+    title: "Get Started",
   },
   {
     id: "docs-terminus-commands",
     link: "/terminus/commands",
-    title: "Commands",
+    title: "Command Directory",
   },
   {
     id: "docs-terminus-scripting",
     link: "/terminus/scripting",
-    title: "Scripting",
+    title: "Scripting with Terminus",
   },
   {
     id: "docs-terminus-plugins",
     link: "/terminus/plugins",
-    title: "Extend with Plugins",
-    items: [
-      {
-        id: "docs-terminus-directory",
-        link: "/terminus/plugins/directory",
-        title: "Directory",
-      },
-      {
-        id: "docs-terminus-create",
-        link: "/terminus/plugins/create",
-        title: "Create Plugins",
-      },
-    ],
+    title: "Install Plugins",
+  },
+  {
+    id: "docs-terminus-directory",
+    link: "/terminus/directory",
+    title: "Plugin Directory",
+  },
+  {
+    id: "docs-terminus-create",
+    link: "/terminus/create",
+    title: "Create Terminus Plugins",
   },
   {
     id: "docs-terminus-configuration",
     link: "/terminus/configuration",
-    title: "Configuration File",
+    title: "Terminus Configuration File",
   },
+
+  {
+    id: "docs-supported-terminus",
+    link: "/terminus/supported-terminus",
+    title: "Supported Terminus and PHP Versions",
+  },
+
   {
     id: "docs-terminus-updates",
     link: "/terminus/updates",
-    title: "Version Updates",
+    title: "Current Terminus Release and Changelog",
   },
+
+  {
+    id: "docs-terminus-terminus-3-0",
+    link: "/terminus/terminus-3-0",
+    title: "Terminus 3",
+  },
+
 ]
 
 class TerminusTemplate extends React.Component {
@@ -150,7 +164,7 @@ class TerminusTemplate extends React.Component {
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"/assets/images/terminus-thumbLarge.png"}
+          image={"/images/assets/terminus-thumbLarge.png"}
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />

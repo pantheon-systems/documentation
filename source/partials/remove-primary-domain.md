@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [domains]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### Update or Remove Primary Domain
 
 Update the Primary Domain using either method provided in [the previous section](#set-a-primary-domain-via-the-dashboard).
@@ -32,4 +42,4 @@ via: 1.1 varnish
 content-length: 0
 ```
 
-The presence of `x-pantheon-redirect: primary-domain-policy-doc` indicates that the domain is still being pointed at the former Primary Domain. [Contact support](/support) if this value persists.
+The presence of `x-pantheon-redirect: primary-domain-policy-doc` indicates that the domain is still being pointed at the former Primary Domain. [Contact support](/guides/support/contact-support/) if this value persists.

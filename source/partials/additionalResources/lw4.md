@@ -1,3 +1,12 @@
+---
+contenttype: [partial]
+categories: [track, optimize]
+cms: [drupal, wordpress]
+product: [newrelic]
+integration: []
+reviewed: "2022-11-07"
+---
+
 ## Website Performance with Varnish, Redis, and New Relic Performance Monitoring
 
 In this workshop, we’ll learn about Varnish and our Redis object cache, and see how to use New Relic Performance Monitoring for monitoring performance and getting alerts when things are going slower than usual.
@@ -21,21 +30,20 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 - Drupal Module: [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 - WordPress Plugin: [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache)
 - Blog post: [Caching: Advanced Topics](/caching-advanced-topics)
-- Doc: [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache)
-- Doc: [New Relic&reg; Performance Monitoring](/new-relic)
-- Blog post: [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
+- Doc: [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
+- Doc: [New Relic&reg; Performance Monitoring](/guides/new-relic)
 - Blog post: [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 - Blog post: [New Relic & Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-- Doc: [Uptime monitoring with New Relic Synthetics](/new-relic#configure-ping-monitors-for-availability)
+- Doc: [Uptime monitoring with New Relic Synthetics](/guides/new-relic)
 
 ### Keep Learning After Today
 
-Speed ahead to the next class! Check out workshop #5: [Going Live Best Practices](https://pantheon.io/workshops/going-live-best-practices). You can also pick one of our other [Workshops](https://pantheon.io/workshops).
+Speed ahead to the next class! Check out [Pantheon Learning](https://learning.pantheon.io/) for training resources. You can also pick one of our other [Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 
 - [Discuss this workshop and ask questions](https://discuss.pantheon.io/c/pantheon-training/performance-varnish-redis-new-relic/55)
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)

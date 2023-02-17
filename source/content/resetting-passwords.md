@@ -1,10 +1,18 @@
 ---
 title: Resetting Passwords
 description: Learn how to reset passwords for WordPress, Drupal, and the Pantheon Dashboard. 
-categories: [troubleshoot]
 tags: [dashboard, teams, users, security]
+contenttype: [doc]
+innav: [true]
+categories: [dashboard, security]
+cms: [drupal, wordpress]
+audience: [agency, development]
+product: [dashboard]
+integration: [--]
 ---
+
 ## Pantheon Dashboard Login
+
 If you need to reset your Pantheon Dashboard user password, logout and visit the [Dashboard password reset page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
 
 If you need to reset the password for your account on your Drupal or WordPress site, you have several options:
@@ -46,7 +54,7 @@ Remember to change the password from the example above.
 
 ### Option C: Reset your password directly in the database (advanced)
 
-If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. See the documentation on [drupal.org](https://www.drupal.org/node/44164) and [Accessing MySQL Databases](/mysql-access) for more information.
+If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. See the documentation on [drupal.org](https://www.drupal.org/node/44164) and [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access) for more information.
 
 ## WordPress Site User Login
 
@@ -72,7 +80,7 @@ As a side note, `terminus 'wp user update'` can be used to change almost any pro
 
 ### Option C: Reset your password directly in the database (advanced)
 
-If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [wordpress.org](https://wordpress.org/support/article/resetting-your-password/#through-mysql-command-line) and [Accessing MySQL Databases](/mysql-access) for more information.
+If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [wordpress.org](https://wordpress.org/support/article/resetting-your-password/#through-mysql-command-line) and [Accessing MySQL Databases](/guides/mariadb-mysql/mysql-access) for more information.
 
 ### Option D: Use the Emergency Password Reset Script
 

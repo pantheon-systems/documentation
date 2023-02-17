@@ -1,9 +1,15 @@
 ---
 title: Running WordPress and Drupal as a Backend API
 description: Learn about headless development models for decoupled architecture on Pantheon.
-categories: [develop]
 tags: [modules, plugins]
 contributors: [eabquina, rachelwhitton]
+contenttype: [doc]
+innav: [true]
+categories: [api]
+cms: [drupal, wordpress]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 Pantheon supports running WordPress and Drupal as an API (Application Programming Interface) for the backend of headless sites, which enables the CMS to interact with external frontend applications over HTTP requests.
 
@@ -55,13 +61,13 @@ Some key differences of decoupled architecture include:
 ### Pantheon's Platform Benefits
 Backend APIs running on Pantheon take advantage of the following platform features for optimal performance:
 
-* [**Global CDN**](/global-cdn): Cache backend API responses from WordPress or Drupal in 40+ global POPs (points of presence).
-* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Object Cache (formerly Redis) for Drupal or WordPress](/object-cache).
+* [**Global CDN**](/guides/global-cdn): Cache backend API responses from WordPress or Drupal in 40+ global CHI metro POPs (points of presence).
+* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
 <!--todo: does solr belong here? help wanted describing the benefits of solr in context of decoupled site.]-->
 
 
 ## Exposing the Backend API
-Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or WordPress upstream. The process to [create](/create-sites), [update core](/core-updates), and [launch](/guides/launch) a backend API on Pantheon does not deviate from the standard procedures.
+Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or WordPress upstream. The process to [create](/guides/legacy-dashboard/create-sites), [update core](/core-updates), and [launch](/guides/launch) a backend API on Pantheon does not deviate from the standard procedures.
 
 <TabList>
 
@@ -77,46 +83,15 @@ Refer to the [Rest API Handbook](https://developer.wordpress.org/rest-api/) from
 
 </Tab>
 
-<Tab title="Drupal 8" id="d8-api">
+<Tab title="Drupal" id="d7-api">
 
-#### Core Modules
-With the release of Drupal 8, Web Services have been implemented to core through different modules:
-
-* **RESTful Web Services (rest)** - Exposes entities and other resources via a RESTful web API. It depends on the Serialization module for the serialization of data that is sent to and from the API.
-* **Serialization (serialization)** - Provides a service for serialization of data to and from formats such as JSON and XML.
-* **Hypertext Application Language (hal)** - Extends the Serialization module to provide the HAL hypermedia format. This is what is used as the primary format in Drupal 8 Core. It only adds two reserved keywords, `_links` for link relations (also used by Github's Pull Request API) and `_embedded` for embedded resources. The HAL hypermedia format can be encoded in both JSON and XML.
-* **HTTP Basic Authentication (basic_auth)** - This module implements basic user authentication using the HTTP Basic authentication provider. It facilitates the use of a username and password for authentication when making calls to the REST API. It is advised to enable SSL when used in production.
-
-#### Resources Configuration
-
-By default, not all resources or endpoints are enabled. You may need to individually enable `GET`, `POST`, `PATCH` and `DELETE` operations for each web service like node entity or user. Read about the overview and steps for the configuration on the [API overview page](https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview).
-
-There is a contributed module called [REST UI](https://drupal.org/project/restui) which provides an admin interface for enabling or disabling resources, serialization formats and authentication providers. Use this to quickly manage and save your configuration.
-
-#### Resources using Views
-
-Because Views is also part of core, you can make a JSON resource once REST and Serialization modules are enabled. Just create a view and select "REST export" as its display type. Name the path as you like.
-
-* Use Filter Criterias to extract content as you like it (e.g., `/json/articles?nid=5`).
-* You can also use Contextual Filters if we want to just append the end of the path (e.g., `rest/views/articles/1`) for filtering results.
-
-#### Example Requests
-
-To create a node entity, we must send a `POST` request to `/entity/node` with the `Content-Type` header set to `application/hal+json` and declare the required type and title fields in the request `BODY`.
-
-If you have Basic Authentication enabled, you need to set headers `PHP_AUTH_USER` and `PHP_AUTH_PW` to authenticate as our user.
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-api">
-
-Web Services are implemented through various plugins in Drupal 7.
+Web Services are implemented through various plugins in Drupal.
 
   - [RESTful](https://www.drupal.org/project/restful)
   - [RESTful Web Services](https://www.drupal.org/project/restws)
   - [Services](https://www.drupal.org/project/services)
 
-The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend the Drupal 7 functionalities made available to the API.
+The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend the Drupal functionalities made available to the API.
 
 <Alert title="Note" type="info">
 
@@ -131,7 +106,7 @@ While not a REST API service by itself, you can create a JSON view using the [Vi
 ## Frequently Asked Questions
 
 ### Can I use other frameworks or distributions?
-You can use [custom upstreams](/custom-upstream), [make your own build](/guides/build-tools) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org) (Drupal 8 API distribution) can be used on the platform.
+You can use [custom upstreams](/guides/custom-upstream), [make your own build](/guides/build-tools) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org) can be used on the platform.
 
 ### How can I troubleshoot the backend API?
 We recommend using one of the following Chrome extensions to debug HTTP requests:

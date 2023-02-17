@@ -1,80 +1,88 @@
 ---
-title: Convert a Standard Drupal 8 Site to a Composer Managed Site
-description: Drupal 8 sites often require the usage of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergence from the Pantheon managed upstream.
+title: Convert a Standard Drupal Site to a Composer Managed Site
+description: Upgrade a standard Drupal site, by converting it to a Composer-managed Drupal site on the new Integrated Composer framework. 
 type: guide
 permalink: docs/guides/:basename
-cms: "Drupal"
-categories: [develop]
 tags: [composer, site, workflow]
 contributors: [dustinleblanc, greg-1-anderson, stovak]
-reviewed: "2021-03-31"
+reviewed: "2022-12-12"
+contenttype: [doc]
+innav: [true]
+categories: [optimize]
+cms: [drupal8]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
-Drupal 9 sites on Pantheon have [Integrated Composer](/integrated-composer) built-in to manage site dependencies.
+In this guide, we'll convert a standard Drupal site to use Composer to manage deployments and dependencies, then switch from `drops-8` to the new Integrated Composer `drupal-composer-managed` upstream while remaining on the current version of Drupal.
 
-For a smooth upgrade experience, and to avoid potential conflicts, this guide shows how to convert a Drupal 8 site to use Composer to manage deployments and dependencies.
+During this process, you will create a new branch based on the Git history of the new upstream.  You'll then re-add the contrib and custom code for your site to the new branch, and test it on a Multidev environment.  When everything is working correctly in the Multidev environment, you'll deploy the changes to the Dev environment by replacing your site's master branch with the new branch you've created.  Finally, after testing and confirming everything looks good, you'll use Terminus to switch the site over to the new upstream.
 
-The goals of this upgrade are to remove dependencies that Composer will manage from the existing site's Git repository, and have Composer manage those dependencies in the new site instead.
+<Partial file="drupal/see-landing.md" />
 
-Note that since you are migrating a site through this process, the new site will no longer maintain your existing commit history.
+## Overview
 
-<Alert title="Note" type="info">
+Drupal sites on Pantheon have [Integrated Composer](/guides/integrated-composer) built-in to manage site dependencies.
 
-To maintain best practice and to avoid difficult, time-consuming repairs to the site, this doc is written for users with access to Pantheon's [Multidev](/multidev) feature.
+The goals of this conversion are:
 
-Pantheon support is not available to users who avoid the Multidev steps.
+1. Remove dependencies that Composer will manage from the existing Drupal site's Git repository, and have Composer manage those dependencies instead.
 
-</Alert>
+1. Switch to the `drupal-composer-managed` Integrated Composer upstream.
+
+The `drupal-composer-managed` Integrated Composer upstream works with all versions of Drupal, and following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon.
+
+Add Drupal core dependency instructions to `drupal/core-recommended`, to keep the site on the current version of Drupal until you are ready to upgrade to the latest version of Drupal.
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal-9/upgrade-site-requirements.md" />
+<Partial file="drupal/upgrade-site-requirements.md" />
 
-The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+## Before You Begin
+
+- This guide is written for users with access to Pantheon's [Multidev](/guides/multidev) feature. Pantheon support is not available to users who avoid the Multidev steps.
+
+- The site owner should ensure the trusted host setting is up-to-date. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
+
+<Alert title="Note" type="info" >
+  
+The steps in this process migrate a site, so the new site will no longer maintain its existing commit history.
+
+</Alert>
 
 ## Prepare the Local Environment
 
-<Partial file="drupal-9/prepare-local-environment.md" />
+<Partial file="drupal/prepare-local-environment-no-clone.md" />
 
-### Apply All Available Upstream Updates
+## Apply All Available Upstream Updates
 
 <Partial file="drupal-apply-upstream-updates.md" />
 
-### (Optional) Run upgrade_status to Confirm That the Site Is Ready to Be Upgraded
-
-<Partial file="drupal-9/drupal-upgrade-status.md" />
+## Add the Integrated Composer Upstream in a New Local Branch
 
 <Partial file="drupal-8-convert-to-composer.md" />
 
-If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/settings-php#trusted-host-setting) documentation for more information.
+### Troubleshooting: Provided host name not valid
+
+If you receive the error message "The provided host name is not valid for this server.", then update your `settings.php` file with a trusted host setting. Refer to the [Trusted Host Setting](/guides/php/settings-php#trusted-host-setting) documentation for more information.
 
 ## Change Upstreams
 
-Your Pantheon site is no longer compatible with traditional upstream updates. Avoid confusion by moving your site to an empty upstream:
+Your Pantheon site is now set up to use the the latest version of Drupal Integrated Composer upstream. To continue tracking additional changes to the Pantheon upstream, change the upstream your site is tracking with Composer:
 
 ```bash{promptUser:user}
-terminus site:upstream:set $site empty
+terminus site:upstream:set $SITE drupal-composer-managed
 ```
 
-Note that only the [User in Charge](/change-management#site-level-roles-and-permissions) can set the Upstream.
+Following the `drupal-composer-managed` upstream will help keep your site up to date with any general configuration changes recommended by Pantheon. The dependency you added above on `drupal/core-recommended` will keep you on the current version of Drupal until you are ready to upgrade to the latest version.
 
-## Ongoing Core Updates
-
-Core updates are carried out via Composer:
-
-```bash{promptUser:user}
-git pull origin master
-composer update drupal/core --with-dependencies
-composer prepare-for-pantheon
-composer install --no-dev
-```
-
-Review and commit file changes, then push back to Pantheon.
-
-## Troubleshooting
+## Working With Dependency Versions
 
 <Partial file="composer-updating.md" />
 
-## See Also
+## More Resources
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)
+
+- [WordPress with Composer on Pantheon](/guides/wordpress-composer)

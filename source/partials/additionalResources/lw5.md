@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [help]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Going Live Best Practices
 
 Launching a website on Pantheon is easy! In this workshop, observe best practices from our Developer Advocates that ensure you’re prepared for success during your new website launch.
@@ -30,11 +40,11 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 - [WebPageTest](https://www.webpagetest.org)
 - [SiteSpeed](https://www.sitespeed.io/)
 - Guide: [Pantheon Launch Essentials](/going-live)
-- Doc: [Platform and Custom Domains](/domains)
+- Doc: [Platform and Custom Domains](/guides/domains)
 - Doc: [Manage Plans in the Site Dashboard](/select-plan)
-- Doc: [Pantheon Global CDN](/global-cdn)
+- Doc: [Pantheon Global CDN](/guides/global-cdn)
 - Doc: [HTTPS on Pantheon's Global CDN](/free-https)
-- Doc: [Configure Redirects](/redirects)
+- Doc: [Configure Redirects](/guides/redirect)
 - Doc: [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts)
 - [Pantheon's Advanced Global CDN](https://pantheon.io/product/advanced-global-cdn)
 
@@ -42,6 +52,6 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 ### Additional Resources
 
 - [Pantheon Community (Slack + forum)](/pantheon-community)
-- [Pantheon Support](/support)
+- [Pantheon Support](/guides/support)
 - [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
 - [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)

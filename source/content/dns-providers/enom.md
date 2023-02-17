@@ -3,10 +3,16 @@ title: Enom Domain Configuration
 provider: Enom
 dnsprovider: true
 description: Learn how to point your Enom domain to a Pantheon site.
-categories: [go-live]
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/enom.md/
+contenttype: [doc]
+innav: [true]
+categories: [domains]
+cms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 ---
 ## Before You Begin
 Be sure that you have a:
@@ -43,4 +49,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 ## Next Steps
 
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+
 * [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

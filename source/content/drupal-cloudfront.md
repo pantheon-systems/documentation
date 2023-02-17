@@ -1,13 +1,18 @@
 ---
 title: Setting Up CloudFront CDN with Drupal
 description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
-cms: "Drupal"
-categories: [performance]
 tags: [cdn, cache]
 searchboost: 50
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal]
+audience: [development]
+product: [cdn]
+integration: [cloudfront]
 ---
 
-Pantheon's [Global CDN](/global-cdn) makes it unnecessary to add a third party CDN, such as CloudFront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
+Pantheon's [Global CDN](/guides/global-cdn) makes it unnecessary to add a third party CDN, such as CloudFront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
 
 CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront, and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
 
@@ -24,7 +29,7 @@ The first step in setting up CloudFront on your Drupal site is to create a new C
 
 <Alert title="Note" type="info">
 
-A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
+A CloudFront distribution is not a Drupal distribution. A CloudFront distribution simply refers to a controller that will be configured to deliver your assets to your website.
 
 </Alert>
 
@@ -32,18 +37,22 @@ A CloudFront distribution is not a Drupal distribution. A CF distribution simply
 
 2. Select **Download** for the delivery method and click **Continue**. If you require streaming media (such as video or audio files), you'll need to choose the streaming distribution (not covered in this article).
 
-3. Complete the fields to get the basic download distribution up and running.
+3. Complete the fields to get the basic download distribution up and running:
 
-   * **Origin Domain Name:** example-domain.com. The Origin Domain Name will be either an Amazon bucket hostname (if you're using a [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) to store your assets) or a web server's hostname.
-   * **Origin ID: Custom-dev-static.pantheonsupport.com**. An identifier to easily identify the distribution.
-   * **Alternate Domain Names (CNAMEs):** www.example-domain.com. Add any alternative domains that point to your site.
-   * **Distribution State:** Enabled. Be sure to enable the distribution or your assets will not be delivered through the CDN.
+   * **Origin Domain Name:** `example-domain.com`
+     * The Origin Domain Name will be either an Amazon bucket hostname (if you're using a [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) to store your assets) or a web server's hostname.
+   * **Origin ID:** `custom-dev-static.pantheonsupport.com`
+     * An identifier to easily identify the distribution.
+   * **Alternate Domain Names (CNAMEs):** `www.example-domain.com`
+     * Add any alternative domains that point to your site.
+   * **Distribution State:** `Enabled`
+     * Be sure to enable the distribution or your assets will not be delivered through the CDN.
 
 4. Click **Create Distribution**. The CloudFront distributions table now shows your new distribution with a status of "In Progress". When your distribution is ready, the status will be "Deployed".
 
 ## Configure the CDN Module In Drupal
 
-1. Install and enable the CDN module. For more information, see  [Drupal.org](https://drupal.org/documentation/install/modules-themes) to learn how to install and enable modules through the Drupal interface, or see [Drush on Pantheon](/drush) to learn how to work with modules using Drush.
+1. Install and enable the CDN module. For more information, see  [Drupal.org](https://drupal.org/documentation/install/modules-themes) to learn how to install and enable modules through the Drupal interface, or see [Drush on Pantheon](/guides/drush) to learn how to work with modules using Drush.
 2. Go to admin/config/development/cdn to get to the General Configuration tab.
 3. Select **Enabled** and click **Save Configuration**.
 4. Go to the Details tab. There are a couple of items to address:
@@ -77,7 +86,7 @@ Execute the following steps as an anonymous user (logged out).
 ### CloudFront Unable to Connect to Pantheon
 If you find that CloudFront is unable to receive content from the origin (Pantheon) for HTTPS traffic, it's likely due to the Host HTTP header forwarded in the request. To resolve, switch Forward Headers behaviors setting from "All" to "None".
 
-## See Also
+## More Resources
 
 * [CDN Developer's Article](http://wimleers.com/article/easy-drupal-cdn-integration-for-fun-and-profit)
 * [CDN Module](https://drupal.org/project/CDN)

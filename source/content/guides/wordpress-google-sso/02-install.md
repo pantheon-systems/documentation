@@ -3,8 +3,13 @@ title: Using WP SAML Auth with Google Apps
 subtitle: Install WP SAML Auth
 description: Install the WP SAML Auth plugin
 contributors: [alexfornuto, danielbachhuber]
-cms: "WordPress"
-categories: [integrate]
+contenttype: [guide]
+innav: [true]
+categories: [security]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [plugins]
 tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide
@@ -17,7 +22,7 @@ In this step, we'll install the WP SAML Auth plugin and bring up the settings pa
 
 ## Choose Your Environment
 
-If your site has [Multidev](/multidev) enabled, we suggest working in a new multidev environment to avoid conflicting with the work of other developers on your team. Otherwise, you'll be working from the Dev environment.
+If your site has [Multidev](/guides/multidev) enabled, we suggest working in a new multidev environment to avoid conflicting with the work of other developers on your team. Otherwise, you'll be working from the Dev environment.
 
 <Alert title="Environment Variables" type="export">
 
@@ -31,7 +36,7 @@ export env=multidevname # or dev
 
 ## Set the Connection Mode
 
-This guide assumes you're working on Pantheon, as opposed to a local development environment. To that end, make sure the connection mode for your working environment is set to **SFTP**. You can do this [from the Pantheon Site Dashboard](/sftp#sftp-mode), or with Terminus:
+This guide assumes you're working on Pantheon, as opposed to a local development environment. To that end, make sure the connection mode for your working environment is set to **SFTP**. You can do this [from the Pantheon Site Dashboard](/guides/sftp), or with Terminus:
 
 ```bash{promptUser: user}
 terminus connection:set $site.$env sftp
@@ -49,7 +54,7 @@ terminus wp $site.$env -- plugin install --activate wp-saml-auth
 
 <Alert type="info" title="Pro Tip">
 
-Good developers commit after every set of like changes. Commit your changes to version control [from the Pantheon Site Dashboard](/sftp#committing-sftp-changes), or with Terminus:
+Good developers commit after every set of like changes. Commit your changes to version control [from the Pantheon Site Dashboard](/guides/sftp/sftp-development), or with Terminus:
 
 ```bash{promptUser: user}
 terminus env:commit --message "installed WP SAML Auth plugin" $site.$env

@@ -2,7 +2,7 @@ import React from "react"
 import "./style.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fab } from "@fortawesome/free-brands-svg-icons"
-import { faSlack } from "@fortawesome/fontawesome-free-brands"
+import { faSlack } from "@fortawesome/free-brands-svg-icons"
 
 const Slack = () => {
   return (

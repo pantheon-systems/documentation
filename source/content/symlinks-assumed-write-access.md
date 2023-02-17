@@ -1,9 +1,15 @@
 ---
 title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
-categories: [troubleshoot]
 tags: [cli, code, files]
 reviewed: "2021-09-13"
+contenttype: [doc]
+innav: [true]
+categories: [files]
+cms: [--]
+audience: [development]
+product: [terminus]
+integration: [--]
 ---
 
 Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon.
@@ -20,7 +26,7 @@ Extensions that create files within the codebase (e.g.,`wp-content/plugins/plugi
 
 Custom configurations that use non-standard file paths (e.g.,`sites/default/blogfiles`) are also incompatible with Pantheon.
 
-The best solution is to communicate with the maintainer of the module, plugin, or custom code/configuration and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
+The best solution is to communicate with the maintainer of the module, plugin, or custom code/configuration and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link (symlink) as a workaround to avoid failures on Test and Live.
 
 ## Create a Symbolic Link
 
@@ -32,7 +38,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 </Alert>
 
-1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/git#install-git) and [clone the code](/git#clone-your-site-codebase) locally if you have not done so already.
+1. On your Dev environment's Dashboard, change the [Connection Mode](/guides/quickstart/connection-modes) from SFTP to Git mode. [Install Git](/guides/git/git-config#install-git) and [clone the code](/guides/git/git-config#clone-your-site-codebase) locally if you have not done so already.
 
 1. From your terminal, `cd` to the site code repository:
 
@@ -48,7 +54,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
     The command above moves the directory to a local `backups` directory in your home folder. Replace this with your preferred backup location. Note that this backup is now outside and separate from your site's codebase, and is only a safety measure to prevent data loss. Once you've confirmed that the symlink works across all environments and no data has been lost, you can remove this backup.
 
-1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths:
+1. Use the `cd` command to change to the location where the symlink will live. The symlink command (`ln`) is sensitive to the working directory - the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths:
 
    ```bash{promptUser: user}
    cd wp-content/path/
@@ -99,6 +105,25 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 1. Deploy to Test and confirm results.
 1. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
+
+### Verify Your Symlink is Correct
+
+You can follow the _optional_ steps below to verify that your symlink is correct.
+
+1. In the terminal, `cd` to the symlinked path:
+
+    ```bash{promptUser: user}
+    cd /code/wp-content/cache 
+    ```
+1. Enter `pwd` to confirm you are in the path `/files/cache`.
+   
+    If the folder is symlinked correctly, an arrow will be displayed on the left side of the folder that is symlinked in your FTP or SFTP.   
+    
+    If the symlink is incorrect, you will receive an error message.  
+
+1. Click the arrow next to the folder.
+    
+    If you are directed to the `files/cache` folder, the symlink is correct.  
 
 ## Examples
 
@@ -169,7 +194,7 @@ Manually create the target folders `code/wp-content/uploads/nitropack` and `code
 
 1. Repeat steps 1 and 2 for your Test and Live environments.
 
-1. Create a symlink in the `code/wp-content` directory in your Dev environment:
+1. Navigate back to `code/wp-content` and create a symlink in your Dev environment:
 
   ```bash{promptUser: user}
   ln -s ./uploads/nitropack/ ./nitropack
@@ -332,5 +357,5 @@ lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/i
 
 Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the current directory.
 
-## See Also
+## More Resources
 For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).

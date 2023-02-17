@@ -1,7 +1,13 @@
 ---
 title: Pingdom Uptime Check
 description: How to create and configure a Pingdom Uptime check on a Pantheon site.
-categories: [integrate]
+contenttype: [doc]
+innav: [true]
+categories: [traffic]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [pingdom]
 tags: [measure, site, traffic]
 type: guide
 permalink: docs/guides/:basename
@@ -15,7 +21,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 ## What You’ll Need
 
-- At least a paid Starter plan on Pingdom. It's OK if you don't have one yet, this guide goes over the signup process. For a free alternative to Pingdom, checkout [New Relic&reg; Performance Monitoring](/new-relic#configure-ping-monitors-for-availability).
+- At least a paid Starter plan on Pingdom. It's OK if you don't have one yet, this guide goes over the signup process. For a free alternative to Pingdom, checkout [New Relic&reg; Performance Monitoring](/guides/new-relic).
 
 - A Drupal or WordPress site on Pantheon to monitor.
 

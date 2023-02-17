@@ -1,5 +1,5 @@
 /*!
-* Pantheon Docs (https://pantheon.io/docs)
+* Pantheon Docs (https://docs.pantheon.io)
 * Copyright 2018 Pantheon, Inc.
 * Licensed under the Creative Commons Attribution 3.0 Unported License. For
 * details, see http://creativecommons.org/licenses/by/3.0/.
@@ -5611,7 +5611,7 @@ width: 100% !important;
   }
 }
 .upstreams-regular {
-  content: url('/docs/assets/images/upstreams-regular.svg');
+  content: url('../static/images/upstreams-regular.svg');
   display: inline-block;
   font-style: normal;
   font-weight: normal;

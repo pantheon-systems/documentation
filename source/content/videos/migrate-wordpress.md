@@ -3,12 +3,17 @@ title: Guided WordPress Migrations
 description: Learn how to migrate existing WordPress sites using the migration plugin.
 contributors: [scottmassey]
 permalink: docs/videos/:basename
-cms: "WordPress"
-categories: [get-started]
 tags: [migrate]
 layout: video
 type: video
 searchboost: 50
+contenttype: [doc]
+innav: [true]
+categories: [migrate]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 <Youtube src="ksg1XkH1da8" title="Migrate to Pantheon" />
@@ -21,6 +26,6 @@ It takes a few minutes as it migrates code, database, and files. But then it’s
 
 We give you a guided path for most sites. If you can’t get your site on the platform, let us know so we can help you.
 
-## See Also
+## More Resources
 
 - [The Quickstart Guide to Migrating a WordPress Site](https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site)

@@ -211,8 +211,8 @@
 
     },
     {
-      "zerox" : "site deploy --site=<site> --env=<env> --sync-content --cc --updatedb --note=<note>",
-      "onex" : "env:deploy <site>.<env> --sync-content --cc --updatedb --note=<note>"
+      "zerox" : "site deploy --site=<site> --env=<env> --sync-content --updatedb --note=<note>",
+      "onex" : "env:deploy <site>.<env> --sync-content --updatedb --note=<note>"
 
     },
     {
@@ -358,7 +358,7 @@
       "onex" : "There is currently no equivalent command in 1.0. Instead, click Clear Caches within the target environment on the Site Dashboard or use the Redis command-line client."
     },
     {
-      "zerox" : "site set-conneciton-mode --site=<site> --env=<env> --mode=<mode>",
+      "zerox" : "site set-connection-mode --site=<site> --env=<env> --mode=<mode>",
       "onex" : "connection:set <site>.<env> <mode>"
 
     },
@@ -368,7 +368,7 @@
 
     },
     {
-      "zerox" : "site set-insturment  --site=<site> --instrument=<payment_method>",
+      "zerox" : "site set-instrument  --site=<site> --instrument=<payment_method>",
       "onex" : "payment-method:set <site> <payment_method>"
 
     },

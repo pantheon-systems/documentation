@@ -1,14 +1,21 @@
 ---
 title: Getting the Client IP Address
 description: Getting the client IP address to set up geolocation capabilities on your Pantheon site.
-categories: [develop]
 tags: [cdn]
+contributors: [--]
 reviewed: "2020-03-09"
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal]
+audience: [development]
+product: [cdn]
+integration: [cloudflare]
 ---
 
 <Alert title="Warning" type="danger">
 
-This page was written before the [Pantheon Global CDN](/global-cdn) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are no longer an accurate way to geolocate your traffic.
+This page was written before the [Pantheon Global CDN](/guides/global-cdn) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are no longer an accurate way to geolocate your traffic.
 
 If geolocation is a requirement for your site, consider an [Advanced Global CDN](/guides/professional-services/advanced-global-cdn) configuration, or a third party geo-aware edge, like Cloudflare.
 
@@ -45,9 +52,9 @@ For geolocation, [enable geolocation](https://support.cloudflare.com/hc/en-us/ar
 
 Any PhP reading `CF-IPCountry` values should also add `Vary: CF-IPCountry` to responses to ensure Pantheon's Global CDN properly personalizes cache hits. This will ensure cache behavior is both correct (content returned for the user agent's actual location) and efficient (cache can hit for other requests coming from the same country)
 
-#### Drupal 7 Domain Access module with Cloudflare
+#### Drupal Domain Access module with Cloudflare
 
-When using Cloudflare in combination with the Domain Access module on Drupal 7, the user's IP address will get cached by the `ip_address()` function incorrectly, early during the bootstrap process. To correct this you can add the following code block to your `settings.php` file, above where you include the Domain Access module's `settings.inc` file:
+When using Cloudflare in combination with the Domain Access module on Drupal, the user's IP address will get cached by the `ip_address()` function incorrectly, early during the bootstrap process. To correct this you can add the following code block to your `settings.php` file, above where you include the Domain Access module's `settings.inc` file:
 
 ```php:title=settings.php
 if (!empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {

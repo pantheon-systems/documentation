@@ -1,10 +1,16 @@
 ---
 title: Inclusive Language at Pantheon and in the Pantheon Community
 description: Elevate the way we communicate and support community and contributors in using more inclusive language.
-contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac]
-categories: [about]
+contributors: [sparklingrobots, carolynshannon, edwardangert, caitybishop, katiemac, cdrmarks]
 tags: [collaborate]
 reviewed: "2020-11-01"
+contenttype: [doc]
+innav: [true]
+categories: [overview]
+cms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 ---
 
 This guide is intended to elevate the way we communicate at Pantheon, and to support our community and contributors in using more inclusive language. It will help ensure everyone feels included and welcome by the language we use and the examples we share.
@@ -77,7 +83,7 @@ Phrases like "one throat to choke" can be replaced with "one hand to shake" or "
 #### Examples & Alternatives
 
 - Avoid using "slave" in any context. Use a more accurate term, such as "worker," "replica", or "secondary," depending on your needs.
-- Related, avoid the word "master". "Primary", "original" or "controller" are possible alternatives.
+- Related, avoid the word "master". "Primary", "original", "main" or "controller" are possible alternatives.
 - "Grandfathered in" is a term rooted in [racist voter suppression](https://history.howstuffworks.com/american-civil-war/grandfathered-in.htm). Try "exempt from" or "legacy" instead.
 - Many terms appropriate and disrespect Native and Indigenous traditions. Rather than "have a pow-wow", try "have a quick chat." "Spirit animals" can be replaced with "mascot". "Hold down the fort," "on the warpath," and "circle the wagons" also have roots in the violent history of US colonization and should be avoided. ([Learn more](https://www.ictinc.ca/blog/culturally-offensive-phrases-you-should-use-at).)
 
@@ -137,7 +143,7 @@ Because language constantly evolves, we welcome and encourage additions and alte
 
 Our [guide on contributing to Pantheon documentation](/contribute) can help you get started.
 
-## See Also
+## More Resources
 
 - [Pantheon Style Guide](/style-guide)  
 - [Diversity, Equity, and Inclusion at Pantheon](https://pantheon.io/blog/diversity-equity-and-inclusion-pantheon)

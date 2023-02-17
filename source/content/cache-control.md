@@ -1,10 +1,18 @@
 ---
 title: Bypassing Cache with HTTP Headers
 description: Set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
-categories: [performance]
 tags: [cache, cdn, cookies]
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
+
 ## Exclude Specific Pages from Caching
+
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="webops-cache-control">
@@ -13,24 +21,11 @@ Learn industry best practices for caching, how to take advantage of them on the 
 
 </Enablement>
 
-Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
+Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited.
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active={true}>
-
-[Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with:
-
-```php
-// $build is a render array.
-$build['#cache']['max-age'] = 0;
-```
-
-Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable. Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7">
+<Tab title="Drupal" id="d7" active={true}>
 
 Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 
@@ -70,11 +65,11 @@ foreach ($regex_path_patterns as $regex_path_pattern) {
 
 <Tab title="WordPress" id="wp">
 
-Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/wordpress-cache-plugin) plugin for all matching requests:
+Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/guides/wordpress-configurations/wordpress-cache-plugin) plugin for all matching requests:
 
 <Alert title="Note" type="info">
 
-Place this code in an [MU Plugin](/mu-plugin) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+Place this code in an [MU Plugin](/guides/wordpress-configurations/mu-plugin) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
 
 </Alert>
 
@@ -124,14 +119,14 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
   if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
       // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
       add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-
-      // Re-define the send_header value with any custom Cache-Control header
-      function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-          $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-          return $response;
-      }
       break;
   }
+}
+
+// Re-define the send_header value with any custom Cache-Control header
+function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+    $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+    return $response;
 }
 ```
 
@@ -143,7 +138,9 @@ As an alternative to using HTTP headers to control downstream caching, you can s
 
 <Alert title="Warning" type="danger">
 
-Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.
+Pantheon does not support manually editing and updating the VCL on Global CDN. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented. To submit a request for [Global CDN](/guides/global-cdn), open a [Support Ticket](/guides/support/contact-support/#ticket-support).
+
+Note some customizations to VCL are available via [Adavanced Global CDN](/guides/professional-services/advanced-global-cdn). For more information, [Contact Sales](https://pantheon.io/contact-us).
 
 </Alert>
 
@@ -173,10 +170,10 @@ X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
 ```
 
-The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/test-global-cdn-caching).
+The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching).
 
-## See Also
+## More Resources
 * [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Working with Cookies on Pantheon](/cookies)
-* [Testing Global CDN Caching](/test-global-cdn-caching)
+* [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 * [Caching: Advanced Topics](/caching-advanced-topics)

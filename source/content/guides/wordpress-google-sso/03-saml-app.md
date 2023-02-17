@@ -3,8 +3,13 @@ title: Using WP SAML Auth with Google Apps
 subtitle: Create a SAML App
 description: Define a SAML app in the Google Admin dashboard to which you can connect your WordPress site
 contributors: [alexfornuto, danielbachhuber]
-cms: "WordPress"
-categories: [integrate]
+contenttype: [guide]
+innav: [true]
+categories: [security]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [plugins]
 tags: [sso, saml, users, security, plugins]
 reviewed: "2021-03-12"
 layout: guide
@@ -41,7 +46,7 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
 
   ![Values from the Google SAML App copied to the WP SAML Auth settings](../../../images/guides/wordpress-google-sso/plugin-idp-values.png)
 
-1. Download and commit the certificate file to your [`private` directory](/private-paths#private-path-for-code) so it's inaccessible from the web. You can add upload this file over [sftp](/sftp), or commit it to a local clone of the Git repository, then commit and push. If the latter, you will need to first switch the connection mode to Git:
+1. Download and commit the certificate file to your [`private` directory](/guides/secure-development/private-paths#private-path-for-code) so it's inaccessible from the web. You can add upload this file over [sftp](/guides/sftp), or commit it to a local clone of the Git repository, then commit and push. If the latter, you will need to first switch the connection mode to Git:
 
   <TabList>
 
@@ -113,6 +118,6 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
 
   ![A warning modal saying You'll need to upload Google IDP data on your app to complete SAML configuration process](../../../images/guides/wordpress-google-sso/google-idp-data.png)
 
-## See Also
+## More Resources
 
 - [GSuite Admin Help - Set up your own custom SAML application](https://support.google.com/a/answer/6087519)

@@ -2,20 +2,26 @@
 title: Use an Empty Upstream to Host a Static Site on Pantheon
 description: How to create a static site using an empty Upstream on Pantheon.
 contributors: [michellecolon-pantheon, kyletaylored]
-categories: [get-started]
 tags: [upstreams, site]
 reviewed: "2021-08-12"
+contenttype: [doc]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstreams]
+integration: [upstreams]
 ---
 
 Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.
 
-The usual [Scope of Support](/support#scope-of-support) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
+The usual [Scope of Support](/guides/support/) applies: Pantheon Support will help diagnose and remedy platform-related issues, but cannot resolve code-related issues.
 
 This process assumes you already have a static site developed and that you have access to the files. For more information about dependencies and which files to upload, consult the documentation for the static site generator you use.
 
 ## What is an Empty Upstream?
 
-An empty Upstream is a [Custom Upstream](/custom-upstream) repository (a [Start State](/start-state)) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
+An empty Upstream is a [Custom Upstream](/guides/custom-upstream) repository (a [Start State](/start-state)) that does not have any content or code. For cases when a customer needs a blank start state, Pantheon provides an empty Upstream.
 
 Commonly, an empty Upstream is used as part of a [Build Tools](/guides/build-tools) setup. In this doc, we use it to host static HTML or PHP sites.
 
@@ -23,7 +29,7 @@ Commonly, an empty Upstream is used as part of a [Build Tools](/guides/build-too
 
 <Youtube src="PTVqXxwOJ4Q" title="Pantheon Static Site and Empty Upstreams" />
 
-There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/create-sites) and via [Terminus](/terminus).
+There are two ways to create an empty Upstream site: via the [Pantheon Dashboard](/guides/legacy-dashboard/create-sites) and via [Terminus](/terminus).
 
 - Via the Pantheon Dashboard:
 
@@ -37,9 +43,9 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
 
 ## Upload the Static Site to Pantheon
 
-Now that you have static files and an empty Upstream that is ready to host them, add files to the Pantheon Site using [SFTP](/sftp) or [Git](/git).
+Now that you have static files and an empty Upstream that is ready to host them, add files to the Pantheon Site using [SFTP](/guides/sftp) or [Git](/guides/git/git-config).
 
-Once the files have been added to the Site, [commit the code](/sftp#committing-sftp-changes), and deploy the changes through Test to Live.
+Once the files have been added to the Site, [commit the code](/guides/sftp/sftp-development), and deploy the changes through Test to Live.
 
 ## Frequently Asked Questions
 
@@ -79,7 +85,7 @@ An empty Upstream, behind the scenes, is essentially an empty Drupal environment
 
 ### Does traffic count the same way?
 
-Yes, traffic will be counted the same way. Refer to our [Traffic Metrics](/traffic-limits) documentation for more information.
+Yes, traffic will be counted the same way. Refer to our [Traffic Metrics](/guides/account-mgmt/traffic) documentation for more information.
 
 ### Can I use this process to host statically generated JAMStack sites?
 
@@ -87,10 +93,10 @@ Yes, compiled static sites that don't require a Drupal or WordPress CMS backend 
 
 Some customers utilize a two-site approach on Pantheon where one site is the CMS backend (headless WordPress or Drupal), and the other site is the decoupled frontend (Frontity, Gatsby, [etc.](https://jamstack.org/generators/)). Of course, you will likely have different deployment workflows for updating each site, and you would need to determine the best workflow for you and your team.
 
-For other Decoupled configurations, please refer to our [Decoupled Sites](/decoupled-sites) documentation.
+For other Decoupled configurations, please refer to our [Decoupled Sites](/guides/decoupled-sites) documentation.
 
 ## More on How Pantheon Uses Upstreams
 
 - [Choosing Your Start State](/start-state)
 - [Switch Upstreams](/terminus/examples#switch-upstreams)
-- [Introduction to Custom Upstreams](/custom-upstream)
+- [Introduction to Custom Upstreams](/guides/custom-upstream)

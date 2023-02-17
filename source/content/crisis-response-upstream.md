@@ -1,16 +1,21 @@
 ---
 title: Crisis Response Upstream
 description: About the Pantheon COVID-19 Response WordPress Upstream
-cms: "WordPress"
-categories: [develop]
 tags: [site, upstreams]
 contributors: [carolynshannon, kyletaylored]
 reviewed: "2020-04-02"
+contenttype: [doc]
+innav: [true]
+categories: [custom-upstreams]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## Overview
 
-The **Pantheon Crisis Response WordPress Upstream** is a specialized WordPress [custom upstream](/custom-upstream), created in response to COVID-19, to enable organizations on the front line to quickly create a production-ready website to provide timely information during a crisis.
+The **Pantheon Crisis Response WordPress Upstream** is a specialized WordPress [custom upstream](/guides/custom-upstream), created in response to COVID-19, to enable organizations on the front line to quickly create a production-ready website to provide timely information during a crisis.
 
 ![Crisis Response WP home page](../images/covid-response-home.png)
 
@@ -28,7 +33,7 @@ These plugins were selected to improve the performance of the site, and better u
 
 - **[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)** - Automatically clear related pages from Pantheon’s Edge when you update content.
 
-- **[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using [Pantheon Object Cache](/object-cache). For high visibility websites, a high-performance persistent object cache can have a huge impact.
+- **[WP Redis](https://wordpress.org/plugins/wp-redis/)** - WordPress Object Cache using [Pantheon Object Cache](/guides/object-cache). For high visibility websites, a high-performance persistent object cache can have a huge impact.
 
 ### Content Features Plugins
 
@@ -68,7 +73,7 @@ These plugins were selected to improve the content creation and moderation proce
 
 1. Once the site is configured correctly in the Dev environment, you can [create the Test and Live environments](/guides/quickstart/create-test-live), copying your code and the initial database to each.
 
-1. If you update your site code or add a new plugin, you can use the [Pantheon WebOps workflow](/pantheon-workflow). On your site's Pantheon dashboard, once changes are [committed](/sftp#committing-sftp-changes), the Deploys panel in the Test environment will prompt you to deploy the changes to the Test environment.
+1. If you update your site code or add a new plugin, you can use the [Pantheon WebOps workflow](/pantheon-workflow). On your site's Pantheon dashboard, once changes are [committed](/guides/sftp/sftp-development), the Deploys panel in the Test environment will prompt you to deploy the changes to the Test environment.
 
 1. After testing your changes in the Test environment you can deploy them to the Live environment. Deploying code from Test to Live will immediately update your live website.
 
@@ -105,9 +110,9 @@ From here, you can update the existing demo content, or delete it and create new
 ## Next Steps
 
 - Visit the [Launch Checks](/guides/launch/launch-check) guide to review key checks to perform before going live.
-- If utilizing the Object Cache, follow our guide on [enabling Object Caching for WordPress](/object-cache#enable-redis).
+- If utilizing the Object Cache, follow our guide on [enabling Object Caching for WordPress](/guides/object-cache/enable-object-cache).
 
-## See Also
+## More Resources
 
-- [Introduction to Custom Upstreams](/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams.
+- [Introduction to Custom Upstreams](/guides/custom-upstream) - Learn about the benefits of Pantheon Custom Upstreams.
 - [Professional Services](/guides/professional-services) - Learn all the great services our expert teams can provide.

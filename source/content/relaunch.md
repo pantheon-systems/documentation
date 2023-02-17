@@ -1,25 +1,31 @@
 ---
 title: Relaunch Existing Pantheon Site
 description: Take a new site live by moving custom domains from one Site Dashboard to another, with minimal HTTPS interruptions.
-categories: [go-live]
 tags: [dns, https, launch, migrate]
 reviewed: "2020-09-08"
+contenttype: [doc]
+innav: [true]
+categories: [launch]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
-Sites are considered launched on Pantheon once traffic is routed through a custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
+Sites are considered to have launched on Pantheon after traffic is routed through a custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
 
 <Alert title="Note" type="info">
 
-The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/guides/launch).
+The relaunch process applies exclusively to live sites already hosted on Pantheon. For more information on launching a site that is not already on the Pantheon platform, refer to [Launch Essentials](/guides/launch).
 
 </Alert>
 
 ## Prepare for Relaunch
 
-1. Log in to the new Pantheon Site Dashboard as an [Admin, Team Member, or Privileged User](/change-management#roles-and-permissions).
+1. Log in to the new Pantheon Site Dashboard as an [Admin, Team Member, or Privileged User](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
-1. Open a second tab for the old Pantheon Site Dashboard.
+1. Open a new tab for the old Pantheon Site Dashboard.
 
-1. In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.).
+1. In another tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.).
 
 1. Examine existing records pointing to Pantheon.
 
@@ -43,14 +49,20 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   </Accordion>
 
-1. Use [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) from your terminal to obtain the new site's A and AAAA records:
+1. In your terminal, use [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) to obtain the new site's A and AAAA records:
 
   ```bash{promptUser: user}
   dig +short live-site-name.pantheonsite.io
   dig +short AAAA live-site-name.pantheonsite.io
   ```
 
-  You can also use Google's [web implementation](https://toolbox.googleapps.com/apps/dig/) of dig.
+  You can also use the Google [web implementation](https://toolbox.googleapps.com/apps/dig/) of dig.
+
+  <Alert title="Note" type="info">
+
+  The `dig` command will not provide the correct DNS information for domains using Custom Certificates. If you are using a Custom Certificate, DNS records should not be changed.
+
+  </Alert>
 
 ### Roles & Permissions
 
@@ -58,9 +70,9 @@ The permission to manage billing and plans is granted only to the role of **Site
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site).
 
-To retain Preferred Pricing an updated [invitation to pay](/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
+To retain Preferred Pricing an updated [invitation to pay](/guides/legacy-dashboard/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
 
 The new Site Plan will be billed immediately.
 
@@ -70,7 +82,7 @@ The new Site Plan will be billed immediately.
 
 For a fast, smooth relaunch, consider having two browser tabs open, one with the old Site Dashboard, and one with the new.
 
-1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/site-plan/#purchase-a-new-plan).
+1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/guides/legacy-dashboard/site-plan#purchase-a-new-plan).
 
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 
@@ -88,7 +100,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   </Alert>
   
-1. On the Live environment tab of the Site Dashboard for the old site, click the "Clear Caches" button.
+1. In the Live environment tab of the Site Dashboard for the old site, click **Clear Caches**.
 
 1. Repeat on the Live environment of the new site.
 
@@ -108,11 +120,11 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. Repeat steps 2-6 above for each affected domain. Note `www.example.com` and `example.com` are different domains.
 
-1. In the new Site Dashboard, [standardize traffic for the primary domain](/domains/#redirect-to-https-and-the-primary-domain).
+1. In the new Site Dashboard, [standardize traffic for the primary domain](/guides/domains).
 
-1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/site-plan/#cancel-current-plan).
+1. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/guides/legacy-dashboard/site-plan/#cancel-current-plan).
 
-1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
+1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/guides/legacy-dashboard/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
 
 ## Frequently Asked Questions
 
@@ -124,7 +136,7 @@ This procedure temporarily uses the existing HTTPS certificate until the new one
 
 ### Will my site experience downtime?
 
-If you follow the process outlined above, downtime will be minimal and depends on the [TTL](/dns#dns-terminology) configuration.
+If you follow the process outlined above, downtime will be minimal and depends on the [TTL](/guides/domains/dns#dns-terminology) configuration.
 
 Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus) to run the two commands in immediate succession.
 
@@ -134,7 +146,7 @@ Finally, the relaunch procedure should be done as a single process, as quickly a
 
 ### Why do I need to lower my DNS TTL?
 
-DNS records propagate across many different servers and aren't refreshed until the record on *each server* up the tree expires. This means that a record with a 24 hour TTL can take several days to be updated across DNS servers globally. That's why we recommend lowering the TTL well before a site relaunch.
+DNS records propagate across many different servers and aren't refreshed until the record on *each server* expires. This means that a record with a 24 hour TTL can take several days to be updated across DNS servers globally. We recommend lowering the TTL before a site relaunch.
 
 Best practices during normal operation (e.g. not during a site relaunch) suggest a longer TTL (for example, 86400 seconds, or one day) because a long TTL helps reduce the number of DNS lookups that visitors' browsers need to perform. During a site relaunch, a long TTL can extend the time frame that return visitors are pointed to the old site, while new visitors are pointed to the new site.
 
@@ -142,8 +154,8 @@ Best practices during normal operation (e.g. not during a site relaunch) suggest
 
 As soon as you complete step 3, visitors to your domain will see the new site. Until step 5 is complete and the DNS is fully propagated, your visitors may still see the new site with the old site's HTTPS certificate, that will go offline shortly.
 
-## See Also
+## More Resources
 
 - [Launch Essentials](/guides/launch)
-- [Manage Plans in the Site Dashboard](/site-plan)
-- [Billing in the Site Dashboard](/site-billing)
+- [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan)
+- [Billing in the Site Dashboard](/guides/legacy-dashboard/site-billing)

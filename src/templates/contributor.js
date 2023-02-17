@@ -36,6 +36,8 @@ class ContributorTemplate extends React.Component {
     const contributor = this.props.data.contributorYaml
     const docs =
       this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
+    let printedGuides = []
+    let printedOverview = []
     return (
       <Layout>
         <SEO title={contributor.name} />
@@ -73,14 +75,46 @@ class ContributorTemplate extends React.Component {
                   <h4>Contributions</h4>
                   <ul>
                     {docs.map(({ node }) => {
-                      return (
-                        <li key={node.id}>
-                          <Link to={`/${node.fields.slug}`}>
-                            {node.frontmatter.title}
-                          </Link>
-                        </li>
-                      )
-                    })}
+                      // Guides URLs are already absolute urls.
+                      if (/^\/guides\/.*$/.test(node.fields.slug)) {
+                        const result = /^(\/guides\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.fields.slug)
+                        // Use printedGuides to avoid showing the same guide twice.
+                        if (printedGuides.indexOf(result[1]) === -1) {
+                          printedGuides.push(result[1])
+                          return (
+                            <li key={node.id}>
+                              <Link to={`${result[1]}`}>
+                                {node.frontmatter.title}
+                              </Link>
+                            </li>
+                          )
+                        }
+                      } else {
+                        if (/^\/overview\/.*$/.test(node.fields.slug)) {
+                        const result = /^(\/overview\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.fields.slug)
+                        // Use printedOverview to avoid showing the same guide twice.
+                        if (printedOverview.indexOf(result[1]) === -1) {
+                          printedOverview.push(result[1])
+                          return (
+                            <li key={node.id}>
+                              <Link to={`${result[1]}`}>
+                                {node.frontmatter.title}
+                              </Link>
+                            </li>
+                          )
+                        } }
+                       else {
+                          return (
+                          <li key={node.id}>
+                            <Link to={`/${node.fields.slug}`}>
+                              {node.frontmatter.title}
+                            </Link>
+                          </li>
+                          )
+                        }
+                      }
+                      })
+                    }
                   </ul>
                 </div>
               </div>

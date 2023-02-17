@@ -2,10 +2,16 @@
 title: Automate Testing with Behat
 description: Learn how to install Behat and write simple tests.
 type: guide
-categories: [automate]
 tags: [continuous-integration, iterate, site, webops]
 permalink: docs/guides/:basename
 contributors: [ataylorme]
+contenttype: [doc]
+innav: [true]
+categories: [test, automate]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [behat]
 ---
 
 [Behat](https://behat.org) is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers) we discuss the advantages of using Behat to continuously test your site. This guide demonstrates how to install Behat and [Mink](http://mink.behat.org/en/latest/), and how to write simple tests.
@@ -51,7 +57,7 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 ## Configure Behat
 
-1. Behat is configured with the file `behat.yml`. If you haven't used [**YAML**](https://yaml.org/) before, there is a good [YAML quickstart guide](https://yaml.org/start.html). Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
+1. Behat is configured with the file `behat.yml`. If you haven't used **YAML** before, visit [yaml.org](https://yaml.org/) for more information. Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
 
    ```yml:title=behat.yml
    default:
@@ -118,7 +124,7 @@ If you find you are repeating the same things over and over, such as logging int
 - [Behat WordPress Extension](https://wordhat.info/)
 - [Behat Drupal Extension](https://www.drupal.org/project/drupalextension)
 
-## See Also
+## More Resources
 
-- [Composer Fundamentals and Workflows](/composer)
+- [Composer Fundamentals and Workflows](/guides/composer)
 - [Behat.org](http://behat.org)

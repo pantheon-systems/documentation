@@ -2,7 +2,13 @@
 title: Pantheon Professional Services
 subtitle: Onboarding Services
 description: Pantheon Onboarding Services include Secure Integration, SSO, pre-launch load tests, and more to help you realize WebOps value, fast.
-categories: [get-started]
+contenttype: [guide]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [development, sysadmin]
+product: [--]
+integration: [--]
 tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
 reviewed: "2021-04-01"
 layout: guide
@@ -18,7 +24,7 @@ Pantheon Onboarding Managers are your website operations (**WebOps**) experts, t
 
 ## Pantheon Secure Integration
 
-Provides a static outgoing IP address for use in IP allowlisting connections to external services. [Learn more about Secure Integration](/secure-integration) or [contact us](https://pantheon.io/professional-services?docs) for details.
+Provides a static outgoing IP address for use in IP allowlisting connections to external services. [Learn more about Secure Integration](/guides/secure-development/secure-integration) or [contact us](https://pantheon.io/professional-services?docs) for details.
 
 ## SSO/SAML
 
@@ -30,11 +36,7 @@ If a Custom SSL Certificate is mission critical to your web property, you can br
 
 ## Pre-launch Load Testing
 
-Load tests provide critical insight into how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings.
-
-Using proprietary tools developed by the Onboarding team, we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
-
-Newly purchased Elite plans include one pre-launch load test. [Contact us](https://pantheon.io/professional-services?docs) for more information.
+<Partial file="load-testing.md" />
 
 ## Additional Services
 

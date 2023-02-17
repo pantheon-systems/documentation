@@ -1,7 +1,13 @@
 ---
 title: Visualize Site Activity with the WebOps Dashboard
 description: Gain valuable insight to your site's development and collaboration with Pantheon's WebOps Dashboard.
-categories: [platform]
+contenttype: [doc]
+innav: [true]
+categories: [dashboard, workflows]
+cms: [--]
+audience: [--]
+product: [dashboard]
+integration: [--]
 tags: [dashboard, webops, measure]
 contributors: [edwardangert]
 searchboost: 150
@@ -11,7 +17,7 @@ Pantheon's [WebOps](https://pantheon.io/webops) Dashboard combines metrics and d
 
 ## How to Access the WebOps Dashboard
 
-From the [User](https://dashboard.pantheon.io) or Org Dashboard, any Site that is not [Sandbox](/create-sites#sandbox-sites) or [Frozen](/platform-considerations#inactive-site-freezing) has a **Track WebOps** button:
+From the [User](https://dashboard.pantheon.io) or Org Dashboard, any Site that is not [Sandbox](/guides/legacy-dashboard/create-sites#sandbox-sites) or [Frozen](/guides/platform-considerations/platform-site-info#inactive-site-freezing) has a **Track WebOps** button:
 
 ![Screenshot of a User Dashboard with a Site showing the Track WebOps button](../images/dashboard/user-dash-track-webops.png)
 
@@ -31,4 +37,4 @@ Merges from Test to Live are considered Deploys.
 
 ### How to Request a Feature
 
-Yes! Click the **Leave Feedback** button from the WebOps Dashboard or let our team know in [chat](/support#real-time-chat-support).
+Yes! Click the **Leave Feedback** button from the WebOps Dashboard or let our team know in [chat](/guides/support/contact-support/#real-time-chat-support).

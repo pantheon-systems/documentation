@@ -1,9 +1,16 @@
 ---
 title: Considerations for Google Analytics and PANTHEON_STRIPPED
 description: Information on why PANTHEON_STRIPPED is placed in the utm_source URL parameter.
-categories: [troubleshoot]
 tags: [cache, cdn, measure]
+contenttype: [doc]
+innav: [true]
+categories: [track]
+cms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [google-analytics]
 ---
+
 Typically, Pantheon's edge cache uses the entire request URL, including query string parameters, as the content cache key. In some cases, the query parameters do not affect the content returned in the response and we can optimize your site's performance by safely ignoring these parameters from a cache perspective. For example, specific Google Analytics query parameters are used solely by JavaScript to track different AdWords campaigns running for the same page on your site.
 
 <Alert title="Warning" type="danger">
@@ -104,4 +111,4 @@ Adjust the regex as required to match your link's parameters.
 
 ### Why doesn't Google Analytics match Pantheon's traffic metrics?
 
-Google Analytics focuses on measuring visits while our request log more comprehensively measures traffic. For more details, see the [Traffic Limits and Overages](/traffic-limits#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics) doc.
+Google Analytics focuses on measuring visits while our request log more comprehensively measures traffic. For more details, see [Traffic Limits and Overages](/guides/account-mgmt/traffic).

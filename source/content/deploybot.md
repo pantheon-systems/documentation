@@ -1,9 +1,15 @@
 ---
 title:  Deploy to Pantheon from an External Repository using DeployBot
 description: Learn how to set up and use DeployBot to deploy from repositories hosted with a third party provider, like GitHub, to Pantheon.
-categories: [automate]
 tags: [git, workflow]
 contributors: [ataylorme, rachelwhitton]
+contenttype: [doc]
+innav: [true]
+categories: [automate]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 DeployBot is a continuous integration service with a friendly user interface. Instead of managing options with `yml` files, DeployBot offers an easy web GUI. For sites that already use external Git hosting, DeployBot can be integrated into your workflow to test and deploy sites that require additional build steps.
@@ -12,7 +18,7 @@ Continuous integration solutions make sure that each step in your deployment pro
 
 ## Before You Begin
 - If you don't already have a DeployBot account, [create one now](https://signup.deploybot.com/account/new).
-- Manage and store your site's code repository on a third party hosting service, such as [GitHub](/guides/collaborative-development).
+- Manage and store your site's code repository on a third party hosting service, such as [GitHub](/guides/git/collaborative-development).
 - Your workflow and build steps should already be known and established before attempting to add continuous integration.
 
   For example, if you would like to use DeployBot to send compiled CSS and JavaScript files to Pantheon you should already have a task runner, such as [Grunt](https://gruntjs.com/), within your site's codebase that can be used to compile assets.
@@ -26,7 +32,7 @@ There are a few known limitations to consider before proceeding:
 - The example workflow may result in committing compiled asset files or code on Pantheon that you might not commit in the source repositories on hosts such as GitHub. The primary use case for this example is to keep a lean repo with fewer source files in GitHub and use DeployBot to compile and ship to Pantheon.
 
 ### Example Workflow
-Let's say I use [Composer](/composer) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub, then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
+Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugin and theme requirements, and only track core and custom code in version control. I could host the lean source code repository on GitHub, then use DeployBot to run build commands that install my dependencies and deploy the full application to Pantheon's Dev environment. Here's what my `composer.json` file might look like for my site:
 
 ```json:title=composer.json
 {

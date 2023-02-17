@@ -1,8 +1,14 @@
 ---
 title: Horizontal Scalability
 description: Learn about scaling web applications and architecture of every Pantheon environment.
-categories: [platform]
 tags: [billing, launch]
+contenttype: [doc]
+innav: [true]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 
 Pantheon's distributed infrastructure facilitates horizontal scalability through the automated process of provisioning additional lightweight containers. This allows us to take sites from hundreds of pages served to hundreds of millions without downtime.
@@ -27,7 +33,7 @@ Pantheon eliminates these risks entirely by running sites on a web-scale infrast
 
 ## Container Architecture
 
-Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Object Cache](/object-cache) and/or [Pantheon Search](/solr).
+Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Object Cache](/guides/object-cache) and/or [Pantheon Search](/solr).
 
 For more information on containers, see [All About Application Containers](/application-containers).
 
@@ -35,7 +41,7 @@ For more information on containers, see [All About Application Containers](/appl
 
 Add containers by upgrading the site's plan within the Site Dashboard to a Performance Medium plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
 
-For more information about your plan changes, see [Manage Plans in the Site Dashboard](/site-plan/#upgrades).
+For more information about your plan changes, see [Manage Plans in the Site Dashboard](/guides/legacy-dashboard/site-plan/#upgrades).
 ## Handle Traffic Spikes
 
 When preparing for traffic spikes manually (not on Pantheon), you need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs).
@@ -46,7 +52,7 @@ Pantheon customers don't need to worry about these systems, as the platform is b
 
 Basic Sites do not have overage protection. If a Basic Site exceeds the 25,000 visit cap in any given month, the site plan will be automatically upgraded to the [Performance plan](https://pantheon.io/plans/performance-pricing) whose visit limit accommodates the site's traffic.
 
-For more information, see [Traffic Limits and Overages](/traffic-limits).
+For more information, see [Traffic Limits and Overages](/guides/account-mgmt/traffic).
 
 ### Performance Plans
 
@@ -58,7 +64,7 @@ Elite sites have the added benefit of managed resource provisioning, both for an
 
 When an Elite site encounters massive sudden or unexpected increases in traffic, the Pantheon platform alerts Pantheon Support, who ensure that the most appropriate level of platform resources are provisioned for the site to handle the traffic spike.
 
-For an anticipated increase in traffic, open a [Support ticket](/support#ticket-support) with the following information:
+For an anticipated increase in traffic, open a [Support ticket](/guides/support/contact-support/#ticket-support) with the following information:
 
 - **How much extra traffic?**
 
@@ -84,8 +90,8 @@ Requests that span more than 3 weeks require approval from the organization or s
 
 Consider enabling New Relic&reg; Performance Monitoring for your site. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
 
-For more information, see [New Relic&reg; Performance Monitoring](/new-relic).
+For more information, see [New Relic&reg; Performance Monitoring](/guides/new-relic).
 
 ## Managing Temporary Files
 
-The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/tmp).
+The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/guides/filesystem/tmp).

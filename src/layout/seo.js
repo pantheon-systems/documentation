@@ -41,7 +41,7 @@ function SEO({
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || "/assets/images/default-thumb-doc.png"
+  const metaImage = image || "/images/assets/default-thumb-doc.png"
   const authorList = authors ? Array.from(authors) : []
   const addSearchCategories = categories
     ? categories.join("/")

@@ -1,8 +1,14 @@
 ---
 title: User Dashboard and Account
 description: The Pantheon user entity and its relationship to Drupal or WordPress sites, teams, and organizations.
-categories: [get-started]
 tags: [dashboard, organizations, users]
+contenttype: [doc]
+innav: [true]
+categories: [dashboard]
+cms: [drupal, wordpress]
+audience: [development, sysadmin]
+product: [dashboard]
+integration: [--]
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.
@@ -33,7 +39,7 @@ This is where you can update and manage your personal account details. Use the o
 - Add and manage [SSH keys](/ssh-keys)
 - View billing details
 - Add [machine tokens](/machine-tokens)
-- [Delete your account](/delete-account)
+- [Delete your account](/guides/account-mgmt/account/delete)
 
 ### Pantheon User Account Login Session Length
 
@@ -44,6 +50,4 @@ This is where you can update and manage your personal account details. Use the o
 To associate an image with your Pantheon account, you'll need to [create a Gravatar](https://en.gravatar.com/) for the email address you use with your Pantheon account. If you already have a Gravatar set up for another email address, update your Gravatar profile to add the email address you use on Pantheon. For help, visit the [Gravatar Support](https://gravatar.com/support/) page.
 
 ## See Also
-- [Role-Based Permissions & Change Management](/change-management)
-- [New Site Owner FAQs](/site-owner-faq)
-- [Billing in the Site Dashboard](/site-billing)
+- [Account Management](/manage)

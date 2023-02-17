@@ -2,7 +2,7 @@ import React from "react"
 import './style.css';
 
 const Twitter = ({ pageTitle, path }) => {
-  const text = `@getpantheon doc:${pageTitle} https://pantheon.io/docs/${path}`
+  const text = `@getpantheon doc:${pageTitle} https://docs.pantheon.io/${path}`
   return (
         <a 
         className="btn btn-twitter"

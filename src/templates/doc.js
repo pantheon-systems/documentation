@@ -18,6 +18,8 @@ import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
+import Product from "../components/product"
+import ProductGroup from "../components/productGroup"
 import SEO from "../layout/seo"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
@@ -43,6 +45,8 @@ const shortcodes = {
   Tab,
   Card,
   CardGroup,
+  Product,
+  ProductGroup,
   Enablement,
   Color,
   Download,
@@ -95,7 +99,7 @@ class DocTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"/assets/images/default-thumb-doc.png"}
+          image={"/images/assets/default-thumb-doc.png"}
           categories={node.frontmatter.categories}
           keywords={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}

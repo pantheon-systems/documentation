@@ -3,11 +3,16 @@ title: WooCommerce Quick Start
 subtitle: Initialize Production
 description: In step five of the WooCommerce Quick Start guide, learn how to initialize your production environment.
 woocommerce: true
-anchorid: initalize-prod
+anchorid: initialize-prod
 generator: pagination
 layout: guide
-cms: "WordPress"
-categories: [get-started]
+contenttype: [guide]
+innav: [true]
+categories: [ecommerce]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [woocommerce]
 tags: [launch, plugins, site]
 type: guide
 pagination:

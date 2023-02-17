@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [cdn]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <blockquote class="block-success">
 
 ### HTTPS

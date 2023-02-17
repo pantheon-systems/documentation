@@ -18,8 +18,8 @@ If you’re a member of an Organization or Agency, you can now set your default 
 
 ## Documentation
 ### New Articles/Guides
-[Access Management for Site Owners and Administrators](/access-management)  
+[Teams](/guides/account-mgmt/workspace-sites-teams/teams)  
 
-[Identify and Kill Queries with MySQL Command-Line Tool](/kill-mysql-queries)
+[Identify and Kill Queries with MySQL Command-Line Tool](/guides/mariadb-mysql/kill-mysql-queries)
 
 We’re preparing [docs for Drupal 8](https://github.com/pantheon-systems/documentation/pulls?utf8=%E2%9C%93&q=is%3Apr+milestone%3AD8+).

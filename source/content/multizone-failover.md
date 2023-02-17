@@ -1,9 +1,15 @@
 ---
-title: Site Multizone Failover (formerly Disaster Recovery)
+title: Site Multizone Failover
 description: Learn how mission-critical websites can stay online in the event of a total zone failure
-categories: [platform]
 tags: [backup, professional-services, site, webops]
 reviewed: "2020-02-26"
+contenttype: [doc]
+innav: [true]
+categories: [overview]
+cms: [drupal7, wordpress]
+audience: [agency, development]
+product: [search]
+integration: [--]
 ---
 
 ## Overview
@@ -50,7 +56,7 @@ The object cache is not preserved after a site failover. This means you must ens
 
 To test in a Test Environment, click the **Clear Caches** button in the upper right hand corner of the Site Dashboard.
 
-You can also [connect to your Redis instance](/object-cache#use-the-redis-command-line-client) and run the `flushall` command to clear object cache via the Redis CLI.
+You can also [connect to your Redis instance](/guides/object-cache/redis-command-line) and run the `flushall` command to clear object cache via the Redis CLI.
 
 If you rely on the Redis cache for locks (mutexes) or storing other long-term data, you must move them out of Redis and into the database to avoid any issues when the Redis cache is dropped during failover.
 
@@ -64,29 +70,21 @@ If your site requires highly available search, do not use Pantheon's Search serv
 
 ### Using Pantheon Search on Sites With Multizone Failover
 
-Pantheon Search requires additional considerations when used on sites with Multizone Failover. In its default state, if a site with Pantheon Search and Multizone Failover fails over to the backup, Solr will not automatically rebuild the search index. In that case:
+Pantheon Search requires additional considerations when used on sites with Multizone Failover. Solr will not automatically rebuild the search index for sites using Pantheon Search and Multizone Failover. You will need to:
 
-1. Pantheon will need to manually re-provision your Solr instance. In the case of failover, file a support ticket requesting that the support engineers re-provision Solr for you.
+1. Create a support ticket requesting that Pantheon manually re-provision Solr for you if your site fails over.
 
-1. Once Solr has been re-provisioned you will be notified via this support ticket and you will then need to manually re-index Solr after failover.
+    <Alert title="Note"  type="info" >
 
-The reindexing process is application-side, and depending on your site the process may be different.
+    The failover state becomes the new default when a site fails over. This means that Solr re-provisioning is done in the failover state.
+
+    </Alert>
+
+1. Manually re-index Solr after you are notified through the support ticket that Pantheon is done re-provisioning Solr. The re-indexing process is application-side, and varies by site.
 
 <TabList>
 
-<Tab title="Drupal 8" id="solr-d8" active={true}>
-
-#### Using the search_api_pantheon module
-
-1. As a site administrator, navigate to `/admin/config/search/search-api/server/pantheon`.
-
-1. Click **Delete all indexed data on this server** to queue all content for re-indexing.
-
-1. Run Drupal Cron manually until all items have been indexed. You can determine that all items are indexed when search_api stops logging to watchdog on the cron runs.
-
-</Tab>
-
-<Tab title="Drupal 7" id="solr-d7">
+<Tab title="Drupal" id="solr-d7" active={true}>
 
 #### ApacheSolr module
 
@@ -120,7 +118,7 @@ For WP Site Networks, you will need to index all your subsites individually:
 terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
 ```
 
-Read more about configuring and optimizing Solr Power in the [Solr Search for WordPress](/wordpress-solr) documentation.
+Learn more about configuring and optimizing Solr Power in the [Solr Search for WordPress](/guides/wordpress-developer/wordpress-solr) documentation.
 
 </Tab>
 
@@ -134,9 +132,9 @@ You may also consider one of the following options:
 
 - **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
 
-If none of these options work for your site's needs, see our documentation on how to safely remove Pantheon Search for [Drupal 8](/guides/solr-drupal/solr-drupal-8#safely-remove-pantheon-search), [Drupal 7](/guides/solr-drupal/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
+If none of these options work for your site's needs, see our documentation on how to safely remove Pantheon Search for [Drupal 7](/guides/solr-drupal/solr-drupal-7/#safely-remove-solr) and [WordPress](/guides/wordpress-developer/wordpress-solr/#safely-remove-solr).
 
-## See also
+## More Resources
 
 - [Global Regions](/regions)
 - [Backups Tool](/backups)

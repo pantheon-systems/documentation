@@ -1,13 +1,19 @@
 ---
 title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
-categories: [performance]
-tags: [cache, cookies, security, webops]
-reviewed: "2020-10-15"
+tags: [cache, cookies, security, webops, D8, D9, D10]
+reviewed: "2022-12-13"
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 ## Allow a User to Bypass the Cache
 
-Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/global-cdn) will neither get the user's response from any existing cache nor store the response from the user into the cache.
+Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/guides/global-cdn) will neither get the user's response from any existing cache nor store the response from the user into the cache.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs" campaign="docs-webops">
 
@@ -22,6 +28,14 @@ This allows users to immediately see comments or changes they've made, even if t
 Pantheon does not support manually editing and updating the Varnish Configuration Language (VCL). We use a standard VCL for all sites on the platform. Requests for changes/updates to the standard VCL are accepted for consideration, but we do not guarantee change requests will be implemented.
 
 </Alert>
+
+## Disable Caching for WordPress Sites in a Dev Environment
+
+Follow the steps below to disable caching for WordPress sites in a Dev environment. Refer to [Review Response Caching](/guides/frontend-performance/caching#review-response-caching) in our [Frontend Performance guide](/guides/frontend-performance) for more information about caching on the Pantheon platform.
+
+1. Open the **WordPress** dashboard, click **Settings**, and then click **Pantheon Page Cache**.
+
+1. Set `max-age` (Time to Live) to `0`.
 
 ## Ignoring GET Parameters
 
@@ -39,34 +53,55 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets
 
-Pantheon sets a cache lifetime of 1 year for static assets (e.g. CSS, JS, Images, PDFs) on production and test environments, per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache:
+Pantheon sets a cache lifetime of one year for static assets (e.g. CSS, JS, Images, PDFs) on production and test environments, per industry standard best practices. Dev and Multidev environments do not cache static assets. Select one of the options below to ensure a client's browser receives a new version of any static asset after clearing a site's cache:
 
 - Rename the file
 - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
 
 For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure a new file name will be created automatically any time a site's cache is cleared:
 
-- **Drupal:** use the built-in option found in the Drupal dashboard at `/admin/config/development/performance`.
+<TabList>
 
-- **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
+<Tab title="Drupal" id="drupal" active={true}>
 
-Dev and Multidev environments do not cache static assets.
+Use the built-in option found in the Drupal dashboard at `/admin/config/development/performance`.
+
+</Tab>
+
+
+<Tab title="WordPress" id="wp">
+
+Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
+
+</Tab>
+
+</TabList>
+
+[Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn/global-cdn-caching#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
 ## Using Your Own Session-Style Cookies
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, the Global CDN will not try to respond to the request from its cache or store the response.
 
-### Drupal Sites
+<TabList>
+
+<Tab title="Drupal" id="drupal" active={true}>
 
 Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to name yours differently if you choose to use one. Generally, SESS followed by a few words will work.
 
 **Correct:** SESSmysessioncookie, SESShello123, SESSletsgo
 
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
+</Tab>
 
-### WordPress Sites
+
+<Tab title="WordPress" id="wp">
 
 WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin") plugin. It is designed to handle the naming properly.
+
+</Tab>
+
+</TabList>
 
 ### Session and Cookie Lifetime
 
@@ -78,13 +113,34 @@ Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes
 
 For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
 
-#### Drupal 7
+<TabList>
 
-Session cookie lifetime and session garbage collection can be overriden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
+<Tab title="Drupal (Latest Version)" id="drupal" active={true}>
 
-#### Drupal 8
+Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
 
-Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal 8](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
+</Tab>
+
+
+<Tab title="Drupal 7" id="drupal7">
+
+Session cookie lifetime and session garbage collection can be overridden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
+
+</Tab>
+
+<Tab title="WordPress" id="">
+
+The [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/) plugin automatically sets the session lifetime `0`, which is until the browser is closed. You can override this setting with the `pantheon_session_expiration` filter before the plugin loads.
+
+Session data is removed from the database by PHP's garbage collection when it has not been used in the time set in `gc_maxlifetime`, which is set to `200,000` seconds by default.
+
+Refer to [WordPress and PHP Sessions](/guides/php/wordpress-sessions) for more information about WordPress and PHP Sessions on Pantheon.
+
+
+</Tab>
+
+</TabList>
+
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
@@ -106,9 +162,9 @@ We recommend handling mobile detection using Responsive Web Design (RWD) techniq
 Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
 
 **Recommended Solution**
-While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**
+While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site, and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**
 
-More information on mobile site best practices can be found in the Google official developer documentation:
+More information on mobile site best practices can be found in Google's official developer documentation:
 
 - [Why make a website mobile-friendly?](https://developers.google.com/search/mobile-sites/#why)
 - [What are the top three things I should know when building a site for mobile devices?](https://developers.google.com/search/mobile-sites/get-started#key)
@@ -123,11 +179,11 @@ A full list of the devices and their support for HTML5 is available on [https://
 
 ### Using STYXKEY
 
-The Global CDN only passes through an allowlisted set of cookies. To use custom cookies with Drupal or WordPress, you can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
+The Global CDN only passes cookies in your allowlist. To use custom cookies with Drupal or WordPress, you can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
-For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
+For example, you could set a cookie named `STYXKEY_country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
 
-In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, the Global CDN will not cache that page at all, as it cannot cache a response that contains a `Set-Cookie:` header.
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set_Cookie:` header. If the code tries to set the cookie again, the Global CDN will not cache that page at all, as it cannot cache a response that contains a `Set_Cookie:` header.
 
 <Alert title="Note" type="info">
 
@@ -137,25 +193,25 @@ In your code, remember to first check whether the incoming request has the `STYX
 
 **Examples of `STYXKEY` cookie names:**
 
-- `STYXKEY-mobile-ios`: Delivers different stylesheets and content for iOS devices
+- `STYXKEY_mobile-ios`: Delivers different stylesheets and content for iOS devices
 
 - `STYXKEY_european_user`: Presents different privacy options to E.U. users
 
-- `STYXKEY-under21`: Part of your site markets alcohol and you want to change the content for minors
+- `STYXKEY_under21`: Part of your site markets alcohol and you want to change the content for minors
 
-- `STYXKEY-school`: Your site changes content depending on the user's school affiliation
+- `STYXKEY_school`: Your site changes content depending on the user's school affiliation
 
 **Invalid names that won't work:**
 
 - `STYXKEY`: Needs something after the `STYXKEY` text
 
-- `styxkey-android`: The text `STYXKEY` must be uppercase
+- `styxkey_android`: The text `STYXKEY` must be uppercase
 
-- `STYX-KEY-android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
+- `STYX-KEY_android`: The text `STYXKEY` cannot be hyphenated or contain other punctuation
 
 - `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
-- `tablet-STYXKEY`: The cookie name must start with `STYXKEY`
+- `tablet_STYXKEY`: The cookie name must start with `STYXKEY`
 
 ## Public Files and Cookies
 
@@ -171,17 +227,27 @@ Pantheon strips cookies for any file ending with the following extensions, even 
 
 Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, the Global CDN will respect them. Depending on your use case, that may be the desired result.
 
-### Drupal Sites
+<TabList>
+
+<Tab title="Drupal" id="drupal" active={true}>
 
 Drupal’s `404_fast_*` configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
-### WordPress Sites
+</Tab>
+
+
+<Tab title="WordPress" id="wordpress">
 
 WordPress does not set cache headers by default, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
+</Tab>
+
+</TabList>
+
+
 ## Environment Access Locked
 
-If you're using the [Security tool](/security) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**.
+If you're using the [Security tool](/guides/secure-development/security-tool) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**.
 
 ## Cookie Handling
 
