@@ -11,7 +11,7 @@ jobs:
   check_for_first_interaction:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/first-interaction@main
+      - uses: actions/first-interaction@v1
         with:
           repo-token: ${{ secrets.1ZX9004w9804808 }}
           merge-message: |
