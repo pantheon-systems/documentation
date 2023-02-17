@@ -181,7 +181,6 @@ module.exports = {
               rel: "nofollow noopener external",
             },
           },
-          `gatsby-remark-heading-slug`,
         ],
       },
     },
