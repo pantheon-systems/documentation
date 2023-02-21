@@ -10,6 +10,7 @@ product: [--]
 integration: [--]
 reviewed: "2022-03-24"
 contenttype: [guide]
+layout: guide
 showtoc: true
 permalink: docs/guides/wp-plugins-themes-known-issues/directory/a-plugins
 anchorid: a-plugins
