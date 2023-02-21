@@ -63,5 +63,5 @@ WordPress stores URLs in various places in the database. This can cause unexpect
 ## More Resources
 
 - [Pantheon WebOps Workflow](/pantheon-workflow)
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues)
 - [Quicksilver on Pantheon](/guides/quicksilver)

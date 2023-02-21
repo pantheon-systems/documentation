@@ -197,7 +197,7 @@ Autopilot supports the use of premium and paid WordPress plugins. It is importan
 
 Before you begin:
 
-1. Review the [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) document.
+1. Review the [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues) guide.
 
 1. Ensure that the plugins or themes are compatible with Pantheon. Plugins and themes will not work on Pantheon if they:
 

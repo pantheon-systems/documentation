@@ -109,5 +109,5 @@ These errors occur when the expected WP Pusher database table does not exist on 
 
 ## More Resources
 
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues)
 - [WP-CLI on the Pantheon Platform](/guides/create-wp-site)

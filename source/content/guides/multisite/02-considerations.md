@@ -68,4 +68,4 @@ Now that you understand all of the important aspects to running a Site Network, 
 
 - [WordPress Known Issues](/wordpress-known-issues)
 
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues)

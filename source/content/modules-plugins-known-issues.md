@@ -18,7 +18,7 @@ Pantheon is a high-performance [WebOps](/pantheon-workflow) platform. Not all mo
 These pages lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform:
 
 - [Drupal Modules with Known Issues](/modules-known-issues)
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues)
 
 Other considerations when working with third-party code are listed below.
 

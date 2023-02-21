@@ -71,7 +71,7 @@ Use the built-in option found in the Drupal dashboard at `/admin/config/developm
 
 <Tab title="WordPress" id="wp">
 
-Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
+Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/guides/wp-plugins-themes-known-issues/directory/a-plugins) to write files within the standard `wp-content/uploads` path.
 
 </Tab>
 

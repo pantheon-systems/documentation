@@ -36,17 +36,17 @@ Complete the following steps for the current site before beginning the migration
     
         - If you don’t check your comments regularly, you likely have thousands of spam comments in your queue.
 
-    1. Navigate to **Posts** > **Tags** > sort by **number of posts** > delete **tags with zero posts** > consolidate tags with only one or two posts into other tags. 
+    1. Navigate to **Posts** > **Tags** > sort by **number of posts** > delete **tags with zero posts** > consolidate tags with only one or two posts into other tags.
     
         - Tags are important for SEO, but too many can confuse search engines.
 
-1. Reduce your old post revisions. 
+1. Reduce your old post revisions.
 
-    - Post revisions can potentially double the size of your database. 
+    - Post revisions can potentially double the size of your database.
 
 1. Audit your Plugins and Themes and remove any that you no longer use.
 
-1. Review Pantheon's [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) to see if any of your plugins or themes are listed.
+1. Review Pantheon's [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues) to see if any of your plugins or themes are listed.
 
 1. Make sure your code is compatible with the latest recommended version of PHP for WordPress, and [adjust PHP versions](/guides/php/php-versions#configure-php-version) if needed.
 

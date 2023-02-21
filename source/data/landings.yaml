@@ -1068,7 +1068,7 @@
         - text: 'Modules and Plugins with Known Issues'
           url: '/modules-plugins-known-issues'
         - text: 'WordPress Plugins and Themes with Known Issues'
-          url: '/plugins-known-issues'
+          url: '/guides/wp-plugins-themes-known-issues'
     - title: 'Optimize and Secure WordPress'
       subtitle: ''
       links:
@@ -1090,7 +1090,7 @@
         - text: 'Modules and Plugins with Known Issues'
           url: '/modules-plugins-known-issues'
         - text: 'WordPress Plugins and Themes with Known Issues'
-          url: '/plugins-known-issues'
+          url: '/guides/wp-plugins-themes-known-issues'
 - title: 'Using Drupal with Pantheon'
   subtitle: ''
   path: 'develop-drupal'

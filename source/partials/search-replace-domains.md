@@ -24,13 +24,13 @@ Make sure you select the **Find & Replace** functionality:
 
 <Image alt="Enable Find & Replace" path="wp-migrate-db-setting.png" />
 
-Another popular search-replace plugin is [Better Search Replace](https://wordpress.org/plugins/better-search-replace/). However, there is an additional filter that must be added for it to work on Live, as outlined in [Plugins and Themes with Known Issues](/plugins-known-issues/#better-search-and-replace).
+Another popular search-replace plugin is [Better Search Replace](https://wordpress.org/plugins/better-search-replace/). However, there is an additional filter that must be added for it to work on Live, as outlined in [Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues/directory/b-plugins).
 
 </Tab>
 
 <Tab title="Terminus" id="terminus-replace-anchor">
 
-You can use [Terminus](/terminus) to run an additional `wp search-replace` command on the target environment after cloning. 
+You can use [Terminus](/terminus) to run an additional `wp search-replace` command on the target environment after cloning.
 
 Set or replace the variables `$site` and `$env` with your site name and the correct environment:
 

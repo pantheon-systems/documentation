@@ -48,5 +48,5 @@ terminus self:plugin:uninstall pantheon-systems/terminus-plugin-example
 
 ## More Resources
 
-- [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+- [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues)
 - [Drupal Modules with Known Issues](/modules-known-issues)

@@ -26,7 +26,7 @@ Review our [Fix Broken Links in WordPress](/guides/wordpress-developer/wordpress
 
 ## Plugins and Themes with Known Issues
 
-Review our [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) doc for a list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
+Review our [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues) doc for a list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 
 ## Known Issues
 

@@ -24,4 +24,4 @@ Development versions and beta releases are not supported.
 
 ## Plugins Support
 
-Refer to [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) for a list of known compatibility issues.
+Refer to [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues) for a list of known compatibility issues.

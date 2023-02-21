@@ -146,11 +146,11 @@ Modify your tables to use `row_format=DYNAMIC` to avoid this error.
 
 </Accordion>
 
-Refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/) for more information on how to diagnose tables and troubleshoot potential issues. 
+Refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/) for more information on how to diagnose tables and troubleshoot potential issues.
 
 ## Modules and Plugins with Known Issues
 
-Refer to [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for information about [Drupal modules](/modules-known-issues) and [WordPress plugins](/plugins-known-issues) that are not supported and/or require workarounds.
+Refer to [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for information about [Drupal modules](/modules-known-issues) and [WordPress plugins](/guides/wp-plugins-themes-known-issues) that are not supported and/or require workarounds.
 
 ## Multisite
 

@@ -91,7 +91,7 @@ Adds documentation to `README.md` which provides context on the repositories bra
 
 #### <a name="20220426-1" class="release-update"></a>Define FS_METHOD
 
-When this constant is not set, WordPress writes and then deletes a temporary file to determine if it has direct access to the filesystem, which we already know to be the case. This multiplies filesystem operations and can degrade performance of the filesystem as a whole in the case of large sites that do a lot of filesystem operations. Setting this constant to `direct` tells WordPress to assume it has direct access and skip creating the extra temporary file. Read more about `FS_METHOD` [here](/plugins-known-issues#define-fs_method).
+When this constant is not set, WordPress writes and then deletes a temporary file to determine if it has direct access to the filesystem, which we already know to be the case. This multiplies filesystem operations and can degrade performance of the filesystem as a whole in the case of large sites that do a lot of filesystem operations. Setting this constant to `direct` tells WordPress to assume it has direct access and skip creating the extra temporary file. Read more about `FS_METHOD` [here](/guides/wp-plugins-themes-known-issues/assumed-write-access#define-fs_method).
 
 ### 2022-04-05
 

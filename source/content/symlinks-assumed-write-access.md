@@ -176,7 +176,7 @@ You can also verify success using `dir`:
 
 <Accordion title="Nitropack" id="nitropack-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Nitropack](https://wordpress.org/plugins/nitropack/) assumes write access to the `wp-content/nitropack` folder and to `advanced.cache.php`.
+As discussed in [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues), [Nitropack](https://wordpress.org/plugins/nitropack/) assumes write access to the `wp-content/nitropack` folder and to `advanced.cache.php`.
 
 <Alert title="Note" type="info">
 
@@ -259,7 +259,7 @@ You can also verify success using `dir`:
 
 <Accordion title="Uncode Theme" id="uncode-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the codebase.
+As discussed in [WordPress Plugins and Themes with Known Issues](/guides/wp-plugins-themes-known-issues), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the codebase.
 
 1. Manually move the target folders. Note that Windows uses `\` instead of `/` to separate directories. These examples are formatted or Mac and Linux:
 
