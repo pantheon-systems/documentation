@@ -2,9 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 subtitle: H Plugins
 description: A list of WordPress plugins beginning with H that are not supported and/or require workarounds.
-cms: "WordPress"
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 categories: [help]
 newcms: [wordpress]
 audience: [development]

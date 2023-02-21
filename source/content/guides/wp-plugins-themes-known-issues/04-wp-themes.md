@@ -2,7 +2,6 @@
 title: WordPress Plugins and Themes with Known Issues Directory
 subtitle: Themes, Functions, and Other Issues
 description: WordPress themes and functions with known issues and workarounds, and other issues.
-cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [whitneymeredith]
 categories: [help]

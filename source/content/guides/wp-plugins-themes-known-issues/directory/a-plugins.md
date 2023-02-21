@@ -2,9 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 subtitle: A Plugins
 description: A list of WordPress plugins beginning with A that are not supported and/or require workarounds.
-cms: "WordPress"
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 categories: [help]
 newcms: [wordpress]
 audience: [development]
@@ -101,7 +99,7 @@ define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 
 Be sure to add this configuration _above_ the comment to stop editing:
 
-![Example of Autoptimize configuration above the stop editing comment](../images/autoptimize-config.png)
+![Example of Autoptimize configuration above the stop editing comment](../../../images/autoptimize-config.png)
 
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
 

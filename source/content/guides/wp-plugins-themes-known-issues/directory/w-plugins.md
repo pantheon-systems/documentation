@@ -2,9 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 subtitle: W Plugins
 description: A list of WordPress plugins beginning with W that are not supported and/or require workarounds.
-cms: "WordPress"
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 categories: [help]
 newcms: [wordpress]
 audience: [development]
@@ -56,7 +54,7 @@ ___
 
 **Solution 2:** If you don't have a local copy, SFTP into any environment's `wp-content/uploads` folder and upload the CSV file that you wish to import. Under the advanced settings of the WooCommerce import, specify the exact path where you uploaded the CSV file and import from there:
 
-![Enter the path to the CSV on the Import products from a CSV file page](../images/woocommerce/woocommerce-path-csv.png)
+![Enter the path to the CSV on the Import products from a CSV file page](../../../images/woocommerce/woocommerce-path-csv.png)
 
 There is a feature request on [WooCommerce's GitHub page](https://github.com/woocommerce/woocommerce/issues/21624) for a WP-CLI import command which would be less prone to timeouts. To express your interest to the developers, click the thumbs up on the feature request.
 
@@ -72,7 +70,7 @@ ___
 
 **Issue 1:** The [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
-![WooZone WP_MEMORY_LIMIT Error](../images/woocommerce/woozone-error.png)
+![WooZone WP_MEMORY_LIMIT Error](../../../images/woocommerce/woozone-error.png)
 
 **Solution:** Add the following line to `wp-config.php`:
 
@@ -448,13 +446,13 @@ ___
 - Clean up temporary files
 - Lower the chunk size to fewer than 100 records:
 
-  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
+  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../../../images/plugins-known-issues/wp-import-chunk-size.png)
 
 - Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 second platform PHP timeout.
 
 - Set the plugin to only process 1 record at a time:
 
-  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
+  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../../../images/plugins-known-issues/wp-import-iterative.png)
 
 The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported.
 
@@ -513,7 +511,7 @@ ___
 
 **Solution:** Activate the plugin individually for each environment you want to use the plugin with, as it requires a separate key for each domain. Instead of clicking on **Purchase a subscription or enter an existing site key**, use the **Configure WMPL** button:
 
-![The Configure WMPL Button](../images/wpml-configure.png)
+![The Configure WMPL Button](../../../images/wpml-configure.png)
 
 You can also add the registration keys to `wp-config.php`:
 

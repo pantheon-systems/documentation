@@ -2,7 +2,6 @@
 title: WordPress Plugins and Themes with Known Issues Directory
 subtitle: Plugins Directory
 description: An A to Z directory of WordPress plugins with known issues and workarounds.
-cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [whitneymeredith]
 categories: [help]

@@ -2,9 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 subtitle: R Plugins
 description: A list of WordPress plugins beginning with R that are not supported and/or require workarounds.
-cms: "WordPress"
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 categories: [help]
 newcms: [wordpress]
 audience: [development]

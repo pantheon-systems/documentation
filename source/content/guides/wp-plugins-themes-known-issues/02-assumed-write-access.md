@@ -2,7 +2,6 @@
 title: WordPress Plugins and Themes with Known Issues Directory
 subtitle: Assumed Write Access
 description: Understand assumed write access on the Pantheon platform.
-cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [whitneymeredith]
 categories: [help]
