@@ -19,7 +19,7 @@ contenttype: [guide]
 
 This section provides information on how to access your backups from your Pantheon dashboard and the command line.
 
-Backups created on Pantheon are stored offsite on Google Cloud Storage instances. We recommend a full-fledged backup solution for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon S3 instance:
+Pantheon backups are stored offsite on Google Cloud Storage instances. We recommend a full-fledged backup solution for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon S3 instance:
 
 <Download file="pantheon-backup-to-s3.sh" />
 
@@ -27,7 +27,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/main/source/
 
 ## Access Backups Via the Dashboard
 
-The jobs indicator returns to its start state to let you know that the task is complete when the backup finishes. A new backup appears in your Backups log with three separate archives (code, database, and files).
+The jobs indicator returns to its start state to let you know that the task is complete when the backup finishes. A new backup appears in your Backup Log with three separate archives (code, database, and files).
 
 The newest backup appears at the top of the list. A backup will no longer be in the list of available archives when the retention period expires.
 
@@ -37,7 +37,7 @@ The newest backup appears at the top of the list. A backup will no longer be in 
 
 1. Click the down arrow next to **Code**, **Database**, or **Files** to access the link for the offsite backup.
 
-![Access site backups Pantheon Dashboard](../images/dashboard/direct-download-backup.png)
+![Access site backups Pantheon Dashboard](../../../images/dashboard/direct-download-backup.png)
 
 <Alert title="Note" type="info">
 
@@ -47,7 +47,7 @@ Some older versions of Google Chrome can cause database backups to be downloaded
 
 ## Access Backups Via the Command Line
 
-You can copy the temporary URL provided via the Dashboard and download your backups from the command line using [`Wget`](https://www.gnu.org/software/wget/) or [Terminus](/terminus). Links to backups are assigned URLs directly from Google Cloud Storage and will expire. Return to the Dashboard and get a new link to the archive if a link has expired.
+You can copy the temporary URL provided via the Dashboard and download your backups from the command line using [`Wget`](https://www.gnu.org/software/wget/) or [Terminus](/terminus). Links to backups are assigned URLs directly from Google Cloud Storage and expire. Return to the Dashboard and get a new link to the archive if a link has expired.
 
 ### Unix/MacOS
 

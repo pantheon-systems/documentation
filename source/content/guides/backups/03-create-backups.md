@@ -32,7 +32,7 @@ export env=dev
 
 ## Create a Backup in the Dashboard
 
-You can create a new backup and set the timing for how long the backup is kept. You must set this for every environment (Dev, Test, and Live).
+You can create a new backup and set the length of time a backup is kept. You must set this for every environment (Dev, Test, and Live).
 
 1. Navigate to your site's dashboard.
 
@@ -50,7 +50,7 @@ Run backups separately for each environment (Dev, Test, and Live). Changes will 
 
 ## Create a Backup in Terminus
 
-You can use [Terminus](/terminus) to create backups:
+You can use [Terminus](/terminus) to create a backup:
 
 ```bash{promptUser: user}
 terminus backup:create $site.$env --element=<element> --keep-for=<days>

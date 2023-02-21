@@ -1,7 +1,7 @@
 ---
 title: Backups Tool
 subtitle: Introduction
-description: Learn how to back up your Pantheon site.
+description: Learn access and manage your Pantheon site backups.
 tags: [backups, security]
 innav: [true]
 categories: [backup]
@@ -17,7 +17,7 @@ anchorid: backups
 contenttype: [guide]
 ---
 
-Pantheon automatically backs up your site. You can manage your site's backup details in the Backups tab of your dashboard. Each backup contains three components:
+Pantheon automatically backs up your site. You can manage your site's backup files in the Backups tab of your dashboard. Each backup contains three components:
 
 - **Code:** anything version controlled and committed via the Site Dashboard. Uncommitted SFTP changes to code are not backed up.
 - **Database:** a `mysqldump` of your site's db.
@@ -29,7 +29,7 @@ Daily backups are scheduled automatically.
 
 **All sites:** You can run manual backups for free, and choose to keep them for one month or six months.
 
-You can enable or disable automatic backups if you have a **paid site**. A nightly backup is created and stored for a week and your weekly backup is stored for a month when automatic backups is enabled.
+**Paid sites:** You can enable or disable automatic backups. A nightly backup is created and stored for a week and your weekly backup is stored for a month when automatic backups is enabled.
 
 ### Select the Day of Your Weekly Backup
 
@@ -41,7 +41,7 @@ You can select the day you want your weekly backup to be created.
 
 1. Select the day from the drop-down menu and then click **Update Weekly Backup Schedule**.
 
-![Backup Schedule](../images/dashboard/backup-schedule.png)
+![Backup Schedule](../../../images/dashboard/backup-schedule.png)
 
 ## More Resources
 

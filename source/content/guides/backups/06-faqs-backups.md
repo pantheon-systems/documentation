@@ -45,7 +45,7 @@ If Pantheon's resources are occupied by other backups, your backup will be place
 
 ### Why is the Drupal module Backup & Migrate not recommended on Pantheon?
 
-As a product in general, Backup & Migrate fulfills many site owners’ needs, but it is not recommended within the context of the Pantheon platform. On Pantheon, ​​Backup & Migrate can make your Drupal site work harder for a number of reasons:
+As a product in general, Backup & Migrate fulfills many site owners’ needs, but it is not recommended within the context of the Pantheon platform. [Using ​​Backup & Migrate on Pantheon](/modules-known-issues#backup-and-migrate) can make your Drupal site work harder for a number of reasons:
 
 - Requires a full Drupal bootstrap
 - Monopolizes an appserver process and MySQL process while running
@@ -60,13 +60,13 @@ In comparison, Pantheon’s backup mechanism:
 
 - Does not require a full, or any, Drupal bootstrap
 - Does not utilize an appserver process
-- Does not write to Valhalla, so there are no file size limitation. Instead, backups are stored on Google Cloud Storage for black-swan redundancy
+- Does not write to Valhalla, so there are no file size limitations. Instead, backups are stored on Google Cloud Storage for black-swan redundancy
 - Uses mysqldump for minimal database impact
 - Executed using job scheduling, and will wait in the queue if the system is busy and execute as soon as its ready
-- Creates distinct archives (code, database, files)
+- Creates distinct archives for code, database, and files
 - Secures access to archives through Pantheon authentication (no anonymous users can access)
 
-Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/terminus). Also, you can get download links for retrieval (the links expire and are renewed for additional security).
+Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time with [Terminus](/terminus). This process provides download links for retrieval (the links expire and are renewed for additional security).
 
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>
@@ -75,13 +75,13 @@ Refer to <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup
 
 ### What can I do during backups?
 
-The Backup Log tab on the Site Dashboard displays the current status of backups in progress for your code, database, and files:
+Your Backup Log on the Site Dashboard displays the current status of backups in progress for your code, database, and files:
 
-![Backups in progress](../images/backup-progress.png)
+![Backups in progress](../../../images/backup-progress.png)
 
-If your **Code** or **Database** backup is taking a long time to complete, we suggest you [contact support](/guides/support/contact-support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
+If your **Code** or **Database** backup is taking a long time to complete, we suggest you [contact support](/guides/support/contact-support/) to discuss causes and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 
-If you have large amounts of static files, this can slow down the **Files** backup. For this and other reasons, we suggest large file repositories be stored on a CDN. Otherwise, during a long file backup, you can still make changes to your code and database, provided those changes don't affect static files.
+If you have a large number of static files, this can slow down the **Files** backup. We suggest large file repositories be stored on a CDN for efficiency. However, you can still make changes to your code and database during a long file backup, provided your changes don't affect static files.
 
 ## More Resources
 

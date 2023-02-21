@@ -1,7 +1,7 @@
 ---
 title: Backups Tool
-subtitle: Code Archives and Backups Log
-description: Learn about your code archives and Backups Log.
+subtitle: Code Archives and Backup Log
+description: Learn about your code archives and Backup Log.
 tags: [backups, security]
 innav: [true]
 categories: [backup]
@@ -17,7 +17,7 @@ anchorid: code-archives-backups-log
 contenttype: [guide]
 ---
 
-This section provides information on your code archives and your Backups log.
+This section provides information on your code archives and your Backup Log.
 
 ## Code Archives
 

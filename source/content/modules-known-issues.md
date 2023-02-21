@@ -64,10 +64,9 @@ ___
 
 ## [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 
-**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/guides/backups/create-backups) for more information.
+**Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to the [Backups Tool guide](/guides/backups/faqs-backups#why-is-the-drupal-module-backup--migrate-not-recommended-on-pantheon) for more information.
 
-**Solution**: You can use the automated backups that are available on the Dashboard for each environment. If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you. Refer to the [Access Backups](/guides/backups/access-backups) documentation for more details.
-
+**Solution**: You can use the automated backups that are available on the Dashboard for each environment. If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you.
 ___
 
 ## [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth)

@@ -19,18 +19,18 @@ contenttype: [guide]
 
 This section provides information on how to restore environments from a backup.
 
-Pantheon's Backups Tool and unique [environment configuration](/guides/environment-configuration) allows you to perform complex environmental restorations. Consult the links below for more information.
+Pantheon's Backups Tool and unique [environment configuration](/guides/environment-configuration) allows you to perform complex environmental restorations. This section covers the most common Backups restoration process. Consult the links below if you require a more complex restoration process.
 
 - [Restore an Environment From Another Environment's Backup](/guides/environment-configuration/restore-environment-backup#restore-an-environment-from-another-environments-backup)
 - [Restore Databases and Files](/guides/environment-configuration/restore-environment-backup#restore-database-and-files)
 - [Restore the Live Environment](/guides/environment-configuration/restore-environment-backup#restore-the-live-environment)
 - [Restore Large Sites](/guides/environment-configuration/restore-environment-backup#restoring-large-sites)
 
-## Before you Begin the Restore Process
+## Before you Begin the Restoration Process
 
-It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.
+It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. This process also restores the codebase to the state the environment was in when backed up.
 
-Your restore will be placed in a queue and executed. Depending on the size of the site, this operation may take some time. Be patient and do not attempt to restart the restore unless you are confident that it completed. During the restore process, files might show as missing and the site as unavailable. [Contact support](/guides/support/contact-support/) if you have questions.
+Your restore is placed in a queue and then executed when you select this process. Depending on the size of the site, this operation may take some time. Be patient and do not attempt to restart the restore unless you are confident that it completed. During the restore process, files might show as missing and the site as unavailable. [Contact support](/guides/support/contact-support/) if you have questions.
 
 ![Backup tool](../../../images/dashboard/backup-tool.png)
 
@@ -46,7 +46,7 @@ Each manual and automatic backup can be directly restored to that environment wi
 
 <Alert title="Note" type="info">
 
-The **Restore** button is only available when **Development Mode** is set to **Git** in  development environments (Dev and Multidevs. This does not apply to production environments (Test and Live). Refer to [The Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
+The **Restore** button is only available when your **Development Mode** is set to **Git** in your Dev or Multidev environments. This does not apply to production environments (Test and Live). Refer to [The Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites) for more information.
 
 </Alert>
 
@@ -54,7 +54,7 @@ The **Restore** button is only available when **Development Mode** is set to **G
 
 ## Restore Process Time
 
-Three separate workflow process are triggered in the dashboard when the **Restore** button is clicked. A process runs for code, database, and files (assets such as media files, images, or other attachments). The workflows may complete at different times.
+Three separate workflow processes are triggered in the dashboard when the **Restore** button is clicked. A process runs for code, database, and files (assets such as media files, images, or other attachments). The workflows may complete at different times.
 
 There is no way to determine specifically how long any one restore job will take, as it varies per site. The usual factor that extends the restore process is the *count*, or number of files in the codebase or files backup. Sites with 10,000 files or more can take over an hour to restore, though this is not a strict ratio as individual file sizes also affect process time.
 
