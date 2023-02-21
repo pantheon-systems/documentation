@@ -3,8 +3,9 @@ title: Object Cache (formerly Redis)
 subtitle: Remove Object Cache
 description: Learn how to safely remove Object Cache.
 contenttype: [guide]
+innav: [true]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

@@ -4,14 +4,15 @@ subtitle: Troubleshoot Integrated Composer
 description: Learn how to troubleshoot Integrated Composer issues.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
 anchorid: ic-troubleshooting
 contenttype: [guide]
-categories: [overview]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [dependencies, troubleshooting]
+cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
@@ -21,7 +22,7 @@ This section provides information on troubleshooting common Integrated Composer 
 
 ## Troubleshooting Code Syncs, Upstream Updates, and Redirect Errors
 
-### Site-local Drush Is Required for Drupal 9 Sites
+### Site-local Drush Is Required for Drupal Sites
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 
@@ -97,7 +98,7 @@ Follow the steps below to resolve the issue:
 When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
 
 ```bash
-We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://docs.pantheon.io/core-updates) for further debugging tips. Conflicts: [
   "CONFLICT (content): Merge conflict in composer.json"
 ]
 ```

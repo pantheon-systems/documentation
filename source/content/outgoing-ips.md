@@ -3,8 +3,9 @@ title: Dynamic Outgoing IP Addresses
 description: Understand how outgoing requests are made for WordPress and Drupal sites on Pantheon.
 tags: [email, sso, saml]
 contenttype: [doc]
+innav: [true]
 categories: [launch]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

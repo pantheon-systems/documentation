@@ -3,8 +3,9 @@ title: Quicksilver on Pantheon
 subtitle: Install Scripts
 description: Learn how to install scripts with Quicksilver.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver]

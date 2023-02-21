@@ -2,10 +2,10 @@
 title: Apache Solr for Drupal
 subtitle: Using Solr on Drupal 7
 description: Detailed information on using Apache Solr with Drupal 7.
-cms: "Drupal 7"
 contenttype: [guide]
-categories: [config]
-newcms: [drupal7]
+innav: [true]
+categories: [search]
+cms: [drupal7]
 audience: [development]
 product: [search]
 integration: [--]

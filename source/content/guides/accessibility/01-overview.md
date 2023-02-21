@@ -3,8 +3,9 @@ title: Accessibility Guide
 subtitle: Overview
 description: How to extend your site's reach with accessibility planning, fixes, and reporting.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [create]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]

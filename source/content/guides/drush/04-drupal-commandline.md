@@ -2,7 +2,6 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Create a Drupal Site From the Command Line Using Terminus and Drush
 description: Learn how to manage configuration between Pantheon environments using the command line.
-cms: "Drupal"
 tags: [terminus, site, cli]
 contributors: [stevector, whitneymeredith]
 type: guide
@@ -10,8 +9,9 @@ showtoc: true
 permalink: docs/guides/drush/drupal-commandline
 anchorid: drupal-commandline
 contenttype: [guide]
+innav: [true]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]
@@ -57,14 +57,14 @@ Your installation and authentication were successful if your Pantheon site is on
 
 <Alert title="Note" type="info">
 
-The next few sections use the example variables `my-d9-site` and `"My D9 Site"` as the site name and label. Make sure you replace each instance, as well as other variables, with your desired values.
+The next few sections use the example variables `my-site` and `"My D9 Site"` as the site name and label. Make sure you replace each instance, as well as other variables, with your desired values.
 
 </Alert>
 
 1. Create a new Drupal site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create my-d9-site "My D9 Site" "drupal-composer-managed"
+  terminus site:create my-site "My Site" "drupal-composer-managed"
   ```
 
   - You can add the `--org` option to the command above and pass the Organization name, label, or ID if you want to associate this site with an Organization.
@@ -74,15 +74,15 @@ The next few sections use the example variables `my-d9-site` and `"My D9 Site"` 
 1. Open your new Site Dashboard in a browser:
 
   ```bash{promptUser: user}
-  terminus dashboard:view my-d9-site
+  terminus dashboard:view my-site
   ```
 
   Keep this window open while you continue reading so you can see the changes you are making in Terminus appear almost immediately in your Site Dashboard.
 
-1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 9 on the Dev environment:
+1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install the latest version of Drupal on the Dev environment:
 
   ```bash{promptUser: user}
-  terminus drush my-d9-site.dev -- site-install -y
+  terminus drush my-site.dev -- site-install -y
   ```
 
   - You may need to [update your SSH configuration](/ssh-keys#control-path-error) if you get the error message `ControlPath too long`.
@@ -90,29 +90,29 @@ The next few sections use the example variables `my-d9-site` and `"My D9 Site"` 
 1. Use the password included in the output of that command to sign in to the site with your browser, or use this command to get a one-time login link:
 
    ```bash{promptUser: user}
-   terminus drush  my-d9-site.dev  -- user-login
+   terminus drush  my-site.dev  -- user-login
   ```
 
 1. Create the Test environment:
 
   ```bash{promptUser: user}
-  terminus env:deploy my-d9-site.test
+  terminus env:deploy my-site.test
   ```
 
 1. Create the Live environment:
 
   ```bash{promptUser: user}
-  terminus env:deploy my-d9-site.live
+  terminus env:deploy my-site.live
   ```
 
 ### Export the Site Name as a Variable
 
-You can now replace `my-d9-site` in every command, so that you don't have to type it every time.
+You can now replace `my-site` in every command, so that you don't have to type it every time.
 
 1. Set the site name to a variable so you can copy and paste the remainder of your commands instead of typing the site name:
 
   ```bash{promptUser: user}
-  export TERMINUS_SITE=my-d9-site
+  export TERMINUS_SITE=my-site
   ```
 
   This sets an [**environment variable**](https://en.wikipedia.org/wiki/Environment_variable) named `$TERMINUS_SITE` to `steve-new-site`. The variable name is replaced in the executed command with the value whenever you use the variable name.
@@ -312,5 +312,5 @@ Terminus provides the power to manage most aspects of your Pantheon sites, while
 ## More Resources
 
 - [Use the Pantheon Workflow](/pantheon-workflow)
-- [Configuration Workflow for Drupal 9 Sites](/drupal-9-configuration-management)
+- [Configuration Workflow for Drupal Sites](/drupal-configuration-management)
 - [Terminus Guide](/terminus)

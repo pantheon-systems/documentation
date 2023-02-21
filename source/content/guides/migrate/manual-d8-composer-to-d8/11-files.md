@@ -1,11 +1,11 @@
 ---
-title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
+title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Upload Your Files
 description: Learn how to upload your files.
-cms: "Drupal 8"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

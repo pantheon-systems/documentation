@@ -1,12 +1,13 @@
 ---
-title: Drupal 10
+title: Drupal 10 on Pantheon
 description: Your hub for all things Drupal 10.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 reviewed: "2022-10-18"
 contenttype: [doc]
-categories: [create, plan]
-newcms: [drupal10]
+innav: [true]
+categories: [create, cms]
+cms: [drupal10]
 audience: [development]
 product: [composer]
 integration: [--]
@@ -28,7 +29,7 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 1. Go to your dashboard and confirm that you are on PHP 8.1. The PHP 8.1 update will show as available to install if you are not already on it.
 
-   If you are not on PHP 8.1 and you don't see the update, refer to [Upgrade PHP Versions](https://pantheon.io/docs/guides/php/php-versions) for instructions on updating your PHP version.
+   If you are not on PHP 8.1 and you don't see the update, refer to [Upgrade PHP Versions](https://docs.pantheon.io/guides/php/php-versions) for instructions on updating your PHP version.
 
 1. Run [Drupal's Upgrade Status](https://www.drupal.org/project/upgrade_status).
 
@@ -67,6 +68,7 @@ This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) 
    composer require --no-update drupal/core-recommended:^10
    composer update
    git commit -am "Update to Drupal 10"
+   git push origin master
    ```
 
 ## FAQ
@@ -93,5 +95,5 @@ Ask questions in our Slack [#drupal channel](https://pantheon-community.slack.co
 
 ## More Resources
 
-- [Drupal 9](/drupal-9)
+- [Drupal on Pantheon](/drupal)
 - [Using Drupal with Pantheon](/develop-drupal)

@@ -3,8 +3,9 @@ title: Migrate Sites to Pantheon Using Guided Migration
 subtitle: Introduction
 description: Instructions for migrating your site using our guided migration process.
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -14,12 +15,12 @@ layout: guide
 permalink: docs/guides/guided
 anchorid: guided
 editpath: migrate/guided/01-introduction.md
-reviewed: "2021-06-15"
+reviewed: "2022-12-13"
 ---
 
 Welcome to Pantheon! We want to make it easy for you to move a site from another hosting provider to Pantheon. Simply use the following instructions and you'll be good to go!
 
-<Partial file="drupal-9/guide-note.md" />
+<Partial file="drupal/guide-note.md" />
 
 There are a few methods for migrating your site to Pantheon:
 

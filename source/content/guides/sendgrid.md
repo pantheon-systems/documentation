@@ -2,8 +2,9 @@
 title: Deliver Email Through Your Drupal Site on the Pantheon Platform
 description: Detailed information on using SendGrid to deliver email through your Drupal site.
 contenttype: [doc]
-categories: [--]
-newcms: [drupal]
+innav: [true]
+categories: [email]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [sendgrid, email]
@@ -44,16 +45,16 @@ A new Sendgrid account may need to wait 30 days before upgrading to a paid plan.
 
 ## Integrating Sendgrid With Drupal
 
-Follow the procedure outlined below for Drupal 7:
+Follow the procedure outlined below for Drupal:
 
 ### Choosing an Integration Method
 
-Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SMTP.
+Two methods can be used to integrate SendGrid with your Drupal site: API or SMTP.
 
 #### Considerations
 
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/guides/composer). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/guides/composer). For Drupal we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
 
 <Accordion title="API Integration" id="d7-api" icon="wrench" active={true}>
 

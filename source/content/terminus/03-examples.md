@@ -9,8 +9,9 @@ tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/examples
 anchorid: examples
 contenttype: [guide]
-categories: [cli, create]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
@@ -106,7 +107,7 @@ You can quickly apply updates from the command line with Terminus, including upd
 
 ### Upstream Updates (Core)
 
-Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress) and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied after they have been merged into the upstream and become available for a site.
+Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress) and [Drupal](https://github.com/pantheon-systems/drops-7). Updates can be applied after they have been merged into the upstream and become available for a site.
 
 <Alert title="Note"  type="info" >
 

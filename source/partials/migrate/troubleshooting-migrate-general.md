@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [migrate]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [--]
 tags: [--]

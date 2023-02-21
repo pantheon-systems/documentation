@@ -3,10 +3,10 @@ title: Using WP SAML Auth with Google Apps
 subtitle: Introduction
 description: WP SAML Auth makes it possible to sign in to your WordPress site using Google Apps
 contributors: [alexfornuto, danielbachhuber]
-cms: "WordPress"
 contenttype: [guide]
-categories: [siteauth]
-newcms: [wordpress]
+innav: [true]
+categories: [security]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [plugins]
@@ -24,7 +24,7 @@ This guide will help you install the WP SAML Auth plugin, create a SAML App with
 
 ## Before You Begin
 
-- Setting up is a matter of applying the correct configuration. It should take an hour or less. If you get stuck on a configuration error along the way, please reach out by creating an issue on [this doc](https://github.com/pantheon-systems/documentation/issues/new?title=Using%20WP%20SAML%20Auth%20with%20Google%20Apps%20Doc%20Update%20&body=Re%3A%20%5BUsing%20WP%20SAML%20Auth%20with%20Google%20Apps%5D(https%3A%2F%2Fpantheon.io/docs/wordpress-google-sso/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content) or the [plugin project](https://github.com/pantheon-systems/wp-saml-auth) on GitHub.
+- Setting up is a matter of applying the correct configuration. It should take an hour or less. If you get stuck on a configuration error along the way, please reach out by creating an issue on [this doc](https://github.com/pantheon-systems/documentation/issues/new?title=Using%20WP%20SAML%20Auth%20with%20Google%20Apps%20Doc%20Update%20&body=Re%3A%20%5BUsing%20WP%20SAML%20Auth%20with%20Google%20Apps%5D(https%3A%2F%2Fdocs.pantheon.io/wordpress-google-sso/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content) or the [plugin project](https://github.com/pantheon-systems/wp-saml-auth) on GitHub.
 
 - Creating a custom Google Apps SAML application requires a G Suite administrator account. If you don’t have appropriate permissions, you’ll need to pair up with someone that does.
 

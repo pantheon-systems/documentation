@@ -3,15 +3,17 @@ title: Cloudflare Domain Configuration
 provider: Cloudflare
 dnsprovider: true
 description: Learn how to point your domain to a Pantheon site using Cloudflare
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/cloudflare.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2023-02-03"
 ---
 You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Global CDN. We recommend using Cloudflare for DNS only. If you have a paid Cloudflare plan to use features like their WAF or have custom Cloudflare configurations (e.g. many page rules) you'd like to keep, however, then ensure you follow the guide below to enforce HTTPS to prevent any issues.
 
@@ -97,7 +99,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 Repeat the steps above to create an **A** record for the bare domain, using `@` as the **Name** and the same IP address, then repeat again for the **AAAA** records.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
-You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
+You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service. You must use this option if you have a [Front-End](/guides/decoupled-sites/#what-is-a-decoupled-site) site.
 
 1. Select **SSL/TLS** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
 
@@ -148,6 +150,12 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 ## Restrict Content Based on Geographic Location
 
 If you're using Cloudflare's IP Geolocation feature, you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses.
+
+## Cache Invalidation Best Practices
+
+Cloudflare allows you to turn on caching. However, no cache invalidation hook is fired when you make content changes if you have Cloudflare caching turned on. This means that Cloudflare will be unaware of your changes and persist with stale cache.
+
+We recommend that you turn off Cloudflare caching until the `pantheon_advanced_page_cache` module/plugin is extended to send API calls to Cloudflare.
 
 ## Next Steps
 

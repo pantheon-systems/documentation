@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
-categories: [migrate]
-newcms: [drupal9, drupal8]
+categories: [dependencies]
+cms: [drupal9, drupal8]
 product: [--]
 integration: [composer]
 tags: [--]

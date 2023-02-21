@@ -3,8 +3,9 @@ title: Migrate a Site From WordPress VIP to Pantheon Using Guided Migration
 subtitle: Troubleshooting
 description: Resolve issues that may occur during migration.
 contenttype: [guide]
-categories: [migrate]
-newcms: [wordpress]
+innav: [true]
+categories: [migrate, troubleshooting]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

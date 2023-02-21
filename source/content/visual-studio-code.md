@@ -2,8 +2,9 @@
 title: Configuring Visual Studio Code for Pantheon
 description: Develop your Pantheon site locally using Visual Studio Code to edit and sync code.
 contenttype: [doc]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [code]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [vscode]

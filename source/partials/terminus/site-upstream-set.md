@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [custom-upstreams]
-newcms: [--]
+cms: [--]
 product: [terminus]
 integration: [--]
 tags: [--]

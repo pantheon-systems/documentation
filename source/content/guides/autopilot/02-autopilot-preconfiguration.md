@@ -10,8 +10,9 @@ showtoc: true
 anchorid: autopilot-preconfiguration
 permalink: docs/guides/autopilot/autopilot-preconfiguration/
 contenttype: [guide]
-categories: [automate]
-newcms: [--]
+innav: [true]
+categories: [automate, test, update, faq]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

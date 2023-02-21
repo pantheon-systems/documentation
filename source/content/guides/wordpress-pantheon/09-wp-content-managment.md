@@ -3,8 +3,9 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress Content Management
 description: Learn how to manage your WordPress content efficiently.
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [true]
+categories: [cms]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -33,4 +34,4 @@ Review our [Cron for WordPress](/guides/wordpress-developer/wordpress-cron) doc 
 
 ## WordPress Multisite
 
-Review our [WordPress Multisite](/guides/multisite/) guide to learn how Pantheon supports [WordPress Site Networks](https://wordpress.org/support/article/glossary/) (also known as WordPress Multisite). WordPress Multisite lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Site Networks can make it much easier to fix bugs and deploy new features across all of those sites.
+Review our [WordPress Multisite](/guides/multisite/) guide to learn how Pantheon supports [WordPress Site Networks](https://wordpress.org/support/article/glossary/). WordPress Multisite lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Multisites can make it much easier to fix bugs and deploy new features across all of those sites.

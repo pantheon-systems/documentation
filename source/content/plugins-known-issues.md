@@ -1,12 +1,12 @@
 ---
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
-cms: "WordPress"
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 contenttype: [doc]
-categories: [help]
-newcms: [wordpress]
+innav: [true]
+categories: [issues]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -17,7 +17,7 @@ This page lists WordPress plugins, themes, and functions that may not function a
 
 We do not prevent you from installing and using these plugins or themes. However, we cannot provide support for incompatible plugins and themes, or if they are used against the guidance provided here.
 
-**Plugin & Theme Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fpantheon.io/docs/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
+**Plugin & Theme Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fdocs.pantheon.io/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform.
 
 If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/main/source/content/modules-plugins-known-issues.md).
 
@@ -31,45 +31,23 @@ The solution to these issues is usually to create a symbolic link (symlink) from
 
 The following is a list of plugins that assume write access, and the specific file or folder that needs to be symlinked to resolve:
 
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                                            |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [AccessAlly WordPress LMS](https://accessally.com/)                                           | wp-content/accessally-protected-content               | `PROTECTED_CONTENT_FOLDER` variable within the plugin assumes access to `PATH`                   |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-|                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files, and this plugin can cause                   |
-|                                                                                               |                                                       | your deployment workflows to break. You can download full backups                                |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)             +-------------------------------------------------------+  [from the Site Dashboard](/backups). See [below](#all-in-one-wp-migration)                      |
-|                                                                                               | wp-content/plugins/all-in-one-wp-migrations/storage   | for additional information.                                                                      |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                     | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions.                           |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-|                                                                                               | wp-content/et-cache                                   | Remember to repeat this process for each environment,                                            |
-| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including Multidevs.                                                                             |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-|                                                                                               | wp-content/cache                                      | Remember to repeat this process for each environment,                                            |
-| [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/)                   |                                                       | including Multidevs.                                                                             |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-|                                                                                               |                                                       | You can override this path on the plugin configuration page                                      |
-| [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)                             | wp-content/gallery                                    | (`/wp-admin/admin.php?page=ngg_other_options`) to use                                            |
-|                                                                                               |                                                       | wp-content/uploads/gallery/ instead of creating a symlink.                                       |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [Nitropack](https://wordpress.org/plugins/nitropack/)                                         | wp-content/nitropack and `advanced.cache.php`         | Allows for the caching feature to be disabled so that other features, such as                    |
-|                                                                                               |                                                       | optimization, can be used side-by-side.                                                          |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                      |                                                                                                  |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [Wordfence](https://wordpress.org/plugins/wordfence/)                                         | wp-content/wflogs                                     | Follow the steps outlined in the [Wordfence](#wordfence) section.                                |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)                           | wp-content/cache                                      | This plugin uses `is_dir` to verify the target directory, which will return                      |
-|                                                                                               |                                                       |false if the directory is a symlink. This causes a permissions error when                         |
-|                                                                                               |                                                       |  deleting cache files.                                                                           |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WP-Rocket](https://wp-rocket.me/)                                                            | wp-content/wp-rocket-config                                                                                                                              |
-|                                                                                               +----------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                                                                                               | wp-content/cache                                                                                                                                         |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
-| [WPML - The WordPress Multilingual Plugin](https://wpml.org/)                                 | wp-content/languages                                  | Alternate solutions are listed in the [WPML section](#wpml---the-wordpress-multilingual-plugin). |
-+-----------------------------------------------------------------------------------------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Plugin | Assumed Write Path | Notes |
+| --- | --- | --- |
+| [AccessAlly WordPress LMS](https://accessally.com/) | wp-content/accessally-protected-content | PROTECTED\_CONTENT\_FOLDER variable within the plugin assumes access to PATH |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
+| | wp-content/plugins/all-in-one-wp-migrations/storage |
+| [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
+| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) | wp-content/et-cache | Remember to repeat this process for each environment, including Multidevs. |
+| [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/) | wp-content/cache | Remember to repeat this process for each environment, including Multidevs. |
+| [Hummingbird](https://wordpress.org/plugins/hummingbird-performance/)  | wp-content/wphb-logs | The /wphb-logs folder logs API calls |
+| [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/) | wp-content/gallery | You can override this path on the plugin configuration page (/wp-admin/admin.php?page=ngg\_other\_options) to use wp-content/uploads/gallery/ instead of creating a symlink. |
+| [Nitropack](https://wordpress.org/plugins/nitropack/) | wp-content/nitropack and advanced.cache.php | Allows for the caching feature to be disabled so that other features, such as optimization, can be used side-by-side. |
+| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache |
+| [Wordfence](https://wordpress.org/plugins/wordfence/) | wp-content/wflogs | Follow the steps outlined in the [Wordfence](/plugins-known-issues#wordfence) section. |
+| [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/) | wp-content/cache | This plugin uses is\_dir to verify the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files. |
+| [WP-Rocket](https://wp-rocket.me/) | wp-content/wp-rocket-config |
+| | wp-content/cache |
+| [WPML - The WordPress Multilingual Plugin](https://wpml.org/) | wp-content/languages | Alternate solutions are listed in the [WPML section](/plugins-known-issues#wpml---the-wordpress-multilingual-plugin). |
 
 ### Define FS_METHOD
 
@@ -1261,7 +1239,7 @@ ___
 
 <ReviewDate date="2022-10-25" />
 
-**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](https://pantheon.io/docs/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](https://docs.pantheon.io/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
 
 **Solution 1:**
 

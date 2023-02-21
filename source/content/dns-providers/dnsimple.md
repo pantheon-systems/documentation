@@ -4,12 +4,13 @@ provider: Akamai
 dnsprovider: true
 description: Learn how to point your DNSimple domain to a Pantheon site.
 draft: true
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/dnsimple.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

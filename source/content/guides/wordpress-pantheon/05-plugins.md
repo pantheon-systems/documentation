@@ -3,8 +3,9 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Pantheon WordPress Plugins
 description: Plugins for WordPress on Pantheon.
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [true]
+categories: [cms]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]

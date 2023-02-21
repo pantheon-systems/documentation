@@ -4,8 +4,9 @@ subtitle: Temporary File Management
 description: Understand Pantheon's default temporary path and learn how to debug .tmp file errors.
 tags: [cli, code, files]
 contenttype: [doc]
-categories: [cli, database]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [files]
+cms: [drupal, wordpress]
 audience: [develoment]
 product: [terminus]
 integration: [--]
@@ -36,13 +37,13 @@ You can get the Pantheon-configured temporary path for WordPress on the [Pantheo
 
 ### Drupal
 
-We don't recommend changing the temporary settings path for Drupal 7. Changing the configuration allows temporary files to be shared across application containers, but heavily impacts performance.
+We don't recommend changing the temporary settings path for Drupal. Changing the configuration allows temporary files to be shared across application containers, but heavily impacts performance.
 
-Add the code below to your `settings.php` file to get the appropriate configuration for Drupal 7 sites.
+Add the code below to your `settings.php` file to get the appropriate configuration for Drupal sites.
 
 ```php
 /**
- * Drupal 7
+ * Drupal
  * Define appropriate location for tmp directory
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -112,7 +113,7 @@ The output for this command should look similar to the following Plupload exampl
 
 </Tab>
 
-<Tab title="Drupal 9" id="d9tmppath">
+<Tab title="Drupal (Latest)" id="d9tmppath">
 
 You must correct an unsupported temporary path set by a module or theme using `$settings` override in the `settings.php` file.
 
@@ -210,7 +211,7 @@ The output for this command should look similar to the following Plupload exampl
 
 </Tab>
 
-<Tab title="Drupal 9" id="d9workaround">
+<Tab title="Drupal (Latest)" id="d9workaround">
 
 You must configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using the `$settings` override in the `settings.php` file.
 

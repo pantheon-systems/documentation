@@ -9,8 +9,9 @@ showtoc: true
 permalink: docs/guides/global-cdn/test-global-cdn-caching
 anchorid: test-global-cdn-caching
 contenttype: [guide]
+innav: [true]
 categories: [cache, optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [cdn]
 integration: [--]
@@ -110,7 +111,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
   - Drupal's internal page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7) for more information. **Drupal Only**
 
-- **X-Generator: Drupal 7 (https://www.drupal.org/)**
+- **X-Generator: Drupal (https://www.drupal.org/)**
 
   - Drupal built the page. **Drupal Only**
 

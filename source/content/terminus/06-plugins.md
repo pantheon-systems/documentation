@@ -6,8 +6,9 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contenttype: [guide]
-categories: [cli, create]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]

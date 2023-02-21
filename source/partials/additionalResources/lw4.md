@@ -1,17 +1,7 @@
 ---
 contenttype: [partial]
-categories: [help]
-newcms: [--]
-product: [--]
-integration: [--]
-tags: [--]
-reviewed: ""
----
-
----
-contenttype: [partial]
-categories: [measure, optimize]
-newcms: [drupal, wordpress]
+categories: [track, optimize]
+cms: [drupal, wordpress]
 product: [newrelic]
 integration: []
 reviewed: "2022-11-07"
@@ -48,7 +38,7 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
-Speed ahead to the next class! Check out the video for [Going Live Best Practices](/guides/edt/going-live/). You can also pick one of our other [Workshops](https://pantheon.io/workshops).
+Speed ahead to the next class! Check out [Pantheon Learning](https://learning.pantheon.io/) for training resources. You can also pick one of our other [Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 

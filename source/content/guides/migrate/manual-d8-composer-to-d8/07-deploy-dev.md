@@ -1,11 +1,11 @@
 ---
-title: Migrate a Drupal 8 Site That Is Managed With Composer From Another Platform
+title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Deploy to Dev
 description: Learn how to deploy your site to your Dev environment.
-cms: "Drupal 8"
 contenttype: [guide]
+innav: [true]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

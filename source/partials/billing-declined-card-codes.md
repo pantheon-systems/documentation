@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [billing]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [--]
 tags: [--]

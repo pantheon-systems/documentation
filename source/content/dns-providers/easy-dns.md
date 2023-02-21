@@ -11,8 +11,9 @@ permalink: docs/guides/accessibility
 anchorid: accessibility
 editpath: accessibility/01-overview.md
 contenttype: [guide]
+innav: [true]
 categories: [optimize]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]

@@ -1,25 +1,25 @@
 ---
 title: Apache Solr for Drupal
-subtitle: Using Solr 8 on Drupal 9
-description: Information on using Pantheon Search with Solr 8 on Drupal 9
-cms: "Drupal 9"
+subtitle: Using Solr 8 on the Latest Version of Drupal
+description: Information on using Pantheon Search with Solr 8 on the latest version of Drupal
 contenttype: [guide]
-categories: [config]
-newcms: [drupal9]
+innav: [true]
+categories: [search]
+cms: [drupal9]
 audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joa-pan]
-reviewed: "2022-05-15"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
-permalink: docs/guides/solr-drupal/solr-drupal-9
+permalink: docs/guides/solr-drupal/solr-drupal
 anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 
-Pantheon Search with Solr 8 gives Drupal 9 web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
+Pantheon Search with Solr 8 gives the latest version of Drupal web teams a high-performance search index integrated with [Integrated Composer's](/guides/integrated-composer) one-click updates.
 
 
 ## Solr 8 Features
@@ -48,7 +48,7 @@ Refer to the [Search API module processors documentation](https://www.drupal.org
 
 ### Drupal Site Setup
 
-Pantheon Search with Solr 8 can be used on Drupal 9 sites. You can set up a [new Drupal 9 site](/drupal-9) or visit the [Drupal 9 upgrade and migration](/drupal-9-migration) guide to create a Drupal 9 site.
+Pantheon Search with Solr 8 can be used on Drupal sites. You can set up a [new Drupal site](/drupal) or visit the [Drupal upgrade and migration](/drupal-migration) guide to create a Drupal site.
 
 ### Prepare the Local Environment
 
@@ -105,7 +105,7 @@ You must configure the `pantheon.yml` for the platform environment after you ena
 
 1. Specify the Solr version in the `pantheon.yml` before you install the Drupal search module to avoid incompatibilities.
 
-    - Currently, Solr 8 is supported for Drupal 9 sites. Specify Solr 8 as the search version for Drupal 9 sites by adding the following to `pantheon.yml`:
+    - Currently, Solr 8 is supported for Drupal sites. Specify Solr 8 as the search version for Drupal sites by adding the following to `pantheon.yml`:
 
       ```yml:title=pantheon.yml
       search:
@@ -119,7 +119,7 @@ For more information, refer to the documentation on [Specifying a Solr version](
 
 #### Verify `pantheon.yml` is Configured Correctly
 
-After you specify the Solr 8 version in the Dev environment of your Drupal 9 site, verify that the environment is configured to use Solr 8.
+After you specify the Solr 8 version in the Dev environment of your Drupal site, verify that the environment is configured to use Solr 8.
 
 1. Navigate to **Reports > Status report**
 1. Click **More Info** to identify the PHP version. This will lead you to the PHP Info page.
@@ -257,4 +257,4 @@ This occurs because both repositories contain a package called `drupal/search_ap
 
 ### Fatal error: Cannot redeclare config_get_config_directory()
 
-This error occurs after installing `search_api_pantheon` for Drupal 8 using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
+This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.

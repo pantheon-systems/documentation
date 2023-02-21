@@ -5,8 +5,9 @@ tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/support
 contenttype: [guide]
-categories: [overview]
-newcms: [--]
+innav: [true]
+categories: [help]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
@@ -16,7 +17,7 @@ Pantheon offers multiple options to help you in building the best sites possible
 
 <ProductGroup>
 
-  <Product title={"Documentation"} link={"/docs/"}>
+  <Product title={"Documentation"} link={"/"}>
 
   You're already here! Browse and search our documentation site for the most current information to manage your site.
 
@@ -28,7 +29,7 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-  <Product title={"Professional Services"} link={"/docs/guides/professional-services"}>
+  <Product title={"Professional Services"} link={"/guides/professional-services"}>
 
   Customized solutions for the most complex technical challenges and ensure your success on Pantheon.
 
@@ -40,7 +41,7 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-  <Product title={"Get Support"} link={"/docs/guides/support/"}>
+  <Product title={"Get Support"} link={"/guides/support/"}>
 
   Pantheon offers a range of support options that include the features required for mission critical sites.
 

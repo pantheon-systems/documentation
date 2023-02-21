@@ -1,10 +1,10 @@
 ---
 title: Using Terminus to Create and Update Drupal Sites on Pantheon
 description: Detailed information on creating and updating new Pantheon Drupal sites using Terminus and the command line.
-cms: "Drupal"
 contenttype: [doc]
-categories: [create, update]
-newcms: [drupal]
+innav: [true]
+categories: [cli, create, update]
+cms: [drupal]
 audience: [development]
 product: [terminus]
 integration: [--]
@@ -12,9 +12,10 @@ tags: [terminus, drush]
 type: guide
 permalink: docs/guides/:basename
 contributors: [erikmathy]
-
+reviewed: "2022-12-13"
 ---
 ## Create Sites Faster and More Efficiently
+
 The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
 <Alert title="Note"  type="info" >
@@ -59,8 +60,8 @@ Follow the steps below to create a new site.
 1. List the available Upstreams:
 
  ```bash{outputLines:2}
- terminus upstream:list | grep "Drupal 7" | grep "core"
- 21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                               drupal7                                         core     drupal
+ terminus upstream:list | grep "Drupal" | grep "core"
+ 21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal                               drupal7                                         core     drupal
  ```
 
    - If the Upstream ID in the output you receive is shorter than 36 characters (including hyphens), enlarge your terminal window and run the command again. Otherwise, you might encounter an error similar to:
@@ -93,7 +94,7 @@ Follow the steps below to create a new site.
 
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
-1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 9 on the Dev environment:
+1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal on the Dev environment:
 
   ```bash{promptUser: user}
   terminus drush my-d9-site.dev -- site-install -y

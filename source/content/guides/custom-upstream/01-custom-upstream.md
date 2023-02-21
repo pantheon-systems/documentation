@@ -2,17 +2,19 @@
 title: Introduction to Custom Upstreams
 subtitle: Introduction
 description: Learn how to use Custom Upstreams to free up developer time.
-tags: [collaborate, launch, upstreams, webops, workflow]
+tags: [collaborate, launch, upstreams, webops, workflow, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream
 anchorid: custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 <Youtube src="b1lNrZL0xxM" title="Pantheon Custom Upstreams" />
@@ -59,7 +61,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div className="upstream-content-inner-content">
 <h3>Level 1: Pantheon's Core Upstream</h3>
 
-The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress),[Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
+The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress),[Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
 
 </div>
 </div>
@@ -128,7 +130,7 @@ Here are definitions for commonly used terms:
 
 - **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
 
-- **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress),[Drupal 9](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
+- **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress),[Drupal (Latest Version)](https://github.com/pantheon-upstreams/drupal-composer-managed), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
 
 - **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
 

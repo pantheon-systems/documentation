@@ -8,8 +8,9 @@ permalink: docs/guides/legacy-dashboard/account-billing
 anchorid: account-billing
 editpath: legacy-dashboard/04-account-billing.md
 contenttype: [guide]
+innav: [true]
 categories: [billing, accounts, dashboard]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]

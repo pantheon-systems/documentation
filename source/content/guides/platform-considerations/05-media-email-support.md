@@ -3,8 +3,9 @@ title: Platform Considerations
 subtitle: Media and Email
 description: Learn more about media and email support on the Pantheon platform.
 contenttype: [guide]
+innav: [true]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -14,6 +15,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/media-email-support
 anchorid: media-email-support
+reviewed: "2022-12-13"
 ---
 
 This section provides information on email and media support on the Pantheon platform.
@@ -32,7 +34,7 @@ We do not support ffmpeg transcoding, and we do not have plans to add this featu
 
 ## Emoji Support
 
-Emoji support is available out of the box on WordPress and Drupal 9. Drupal 7 sites can enable Emoji support by following this procedure:
+Emoji support is available out of the box on WordPress and Drupal. Drupal 7 sites can enable Emoji support by following this procedure:
 
 For new or existing Drupal 7 installs:
 

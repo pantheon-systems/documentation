@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [backup]
-newcms: [--]
+cms: [--]
 product: [terminus]
 integration: [--]
 tags: [--]

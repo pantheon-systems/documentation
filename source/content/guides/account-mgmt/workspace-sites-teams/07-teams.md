@@ -9,10 +9,11 @@ showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 anchorid: teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
-reviewed: "2022-09-19"
+reviewed: "2023-02-16"
 contenttype: [guide]
-categories: [accounts]
-newcms: [--]
+innav: [true]
+categories: [organizations]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
@@ -109,6 +110,62 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 1. Click **Actions**, and choose **Change Role**.
 
 1. Select the new role, then click **Save Changes**.
+
+### Export Users
+
+While you can view a workspace's users using the Dashboard, there may be times when you need to generate a list of users, or view a list of all users associated with the Workspace **and** all of its sites.
+
+To export a list of users:
+
+1. Go to the workspace and select the **Team** tab.
+
+1. In the upper right corner of the page, click **Export Members**.
+
+1. Select one of the following options:
+
+   - **All workspace and site members**: exports all workspace members, site-only collaborators, and supporting workspaces. 
+   - **Only workspace members**: exports only the members defined in this workspace.
+
+1. Click **Export CSV** to generate your report. You will receive an email when the report is complete and ready for download.
+
+    <Alert title="Warning" type="danger" >
+    
+    The link in the email is only good for 24 hours.  If you don't download the file within 24 hours, you must request another export.
+    
+    </Alert>
+
+    - You can only download the file using the link in the email.
+    - Only the user who requested the file can download it. If you share this link with other users, they will not be able to download the report.
+    - To share the report, download the file and share the file.
+
+The exported CSV file will contain the following information:
+
+- **isWorkspaceMember**: Indicates if the user is part of the workspace team.
+
+- **IsSiteMember**: Indicates if the user is part of a site's team. 
+
+- **SiteUID**: If **IsSiteMember** is set to true, the entry contains the UID of the site the user is a team member of.
+
+- **Site Type**: Indicates if this is a CMS or Front-end site.
+
+- **Site Name**: Name of the site.
+
+- **First Name**: User's first name.
+
+- **Last Name**: User's last name.
+
+- **Email Address**: User's email address.
+
+- **UserUID**: User's UID.
+
+- **Role**: If **SiteUID** is empty, the entry contains the user's role in the workspace. If **SiteUID** is not empty, the entry contains the user's role in the site.
+
+The following fields only appear if you select **All Workspace and site members** when creating the export:
+
+- **Supporting Workspace name**: The name of the supporting workspace (if applicable).
+
+- **Supporting Workspace UID**: The UID of the supporting workspace (if applicable). 
+
 
 ### Remove a User
 

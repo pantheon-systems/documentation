@@ -2,10 +2,10 @@
 title: WordPress Developer's Guide
 subtitle: AWS S3 Setup for WordPress
 description: Add AWS S3 storage integration to a WordPress site on Pantheon.
-cms: "WordPress"
 contenttype: [guide]
-categories: [config]
-newcms: [wordpress]
+innav: [true]
+categories: [cms]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [aws]

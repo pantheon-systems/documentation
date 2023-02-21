@@ -3,8 +3,9 @@ title: Multidev
 subtitle: Clone Content in Your Multidev
 description: Learn how to clone content in your Multidev.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [multidev]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]

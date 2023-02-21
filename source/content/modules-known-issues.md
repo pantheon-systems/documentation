@@ -3,8 +3,9 @@ title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
 tags: [modules]
 contenttype: [doc]
-categories: [plan, help]
-newcms: [drupal]
+innav: [true]
+categories: [issues]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
@@ -190,7 +191,9 @@ ___
 
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
-**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
+**Solution 1:** Upgrade to the [latest version of IMCE](https://www.drupal.org/project/imce/releases/3.0.7) if possible. IMCE for Drupal 7 now has an option on Dev (not a tagged release) to disable the metadata, which prevents timeouts.
+
+**Solution 2**: Break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 
 1. [Enable the Object Cache](/guides/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
 1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
@@ -240,7 +243,7 @@ ___
 
 ## [LiveReload](https://www.drupal.org/project/livereload)
 
-**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7.
+**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal.
 
 ___
 
@@ -319,7 +322,7 @@ ___
 
 **Solution:** Add more domains to your Google reCAPTCHA configuration. Add `dev-<sitename>.pantheonsite.io` and `test-<sitename>.pantheonsite.io` to the site. This is set in [Google's reCAPTCHA admin panel](https://www.google.com/recaptcha/admin).
 
-**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
+**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
 
 ```php:title=settings.php
 // Deactivate reCAPTCHA not running on the live site.

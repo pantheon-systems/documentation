@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [help]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [quicksilver]
 tags: [--]
