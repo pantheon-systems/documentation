@@ -28,6 +28,14 @@ This guide will show you how to migrate a site that meets the following criteria
 
 <Partial file="drupal/commit-history.md" />
 
+This doc uses the following aliases:
+
+- **Alias:** `D8_SITE`
+  - **Site Name:** `best-drupal8-site-ever`
+- **Alias:** `DRUPAL_SITE`
+  - **Site Name:** `best-drupal-site-ever`
+
+
 ## Requirements
 
 Confirm that your site meets the following requirements before you continue:
