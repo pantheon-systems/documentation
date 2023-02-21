@@ -1,7 +1,7 @@
 ---
 title: Upgrade a Site That Was Created With an Empty Upstream to the Latest Version of Drupal
 subtitle: Add the Integrated Composer Upstream in a New Local Branch
-description: 
+description:
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
@@ -74,8 +74,6 @@ This is a common location for the `config` file. If this isn't where your `confi
 
 ```bash{promptUser:user}
 git checkout main config
-git mv config/* config
-git rm -f web/sites/default/config/.htaccess
 git commit -m "Pull in configuration from default branch"
 ```
 
@@ -86,7 +84,6 @@ git commit -m "Pull in configuration from default branch"
 ```bash{promptUser:user}
 git checkout main sites/default/config
 git mv sites/default/config/* config
-git rm -f sites/default/config/.htaccess
 git commit -m "Pull in configuration from default branch"
 ```
 
