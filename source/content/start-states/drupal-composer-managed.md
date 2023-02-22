@@ -5,7 +5,7 @@ tags: [code, site, upstreams]
 showtoc: true
 permalink: docs/start-states/drupal-composer-managed
 editpath: start-states/drupal-composer-managed.md/
-reviewed: "2023-02-22"
+reviewed: "2023-02-23"
 contenttype: [doc]
 innav: [true]
 categories: [custom-upstreams]
