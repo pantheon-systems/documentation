@@ -28,12 +28,24 @@ This guide will show you how to migrate a site that meets the following criteria
 
 <Partial file="drupal/commit-history.md" />
 
-This doc uses the following aliases:
+
+<Alert title="Exports" type="export">
+
+This doc uses [Terminus](/terminus) commands. Before you begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
+
+```bash{promptUser: user}
+export site=yoursitename
+export env=dev
+```
+
+The following aliases are used as examples:
 
 - **Alias:** `D8_SITE`
   - **Site Name:** `best-drupal8-site-ever`
 - **Alias:** `DRUPAL_SITE`
   - **Site Name:** `best-drupal-site-ever`
+
+</Alert>
 
 
 ## Requirements
