@@ -30,7 +30,7 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 ## Generate SSH Key
 
-Use the following steps to generate your SSH key:
+Use the steps in this section to generate your SSH key.
 
 <Alert title="Note"  type="info" >
 
@@ -38,64 +38,105 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 </Alert>
 
+### MacOS
+
 1. Open your terminal and enter the following command to generate a key:
 
    ```bash{promptUser: user}
    ssh-keygen -t rsa
    ```
 
-  This command works on Linux, MacOS, and Windows 10.
-
-  Leave the default location of `~/.ssh/id_rsa` as is, unless you have reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
+  Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
 
 1. Set a passphrase for better security.
 
    We recommend using a passphrase, but it can conflict with some tools.
 
-1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created. 
+1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created.
 
-   Linux and Mac users can `cat`the file to the terminal and copy the output:
+   MacOS users can `cat`the file to the terminal and copy the output:
 
    ```bash{promptUser: user}
    cat ~/.ssh/id_rsa.pub
    ```
 
-   Windows users can achieve the same result with `type`:
-
-   ```bash{promptUser: winshell}
-   type .ssh\id_rsa.pub
-   ```
-
-1. Start the SSH agent.
-
-   * For Linux and Mac users, run `eval` to start the agent. The `Agent pid` output confirms it's started:
+1. Run `eval` to start the SSH agent. The `Agent pid` output confirms that the agent started:
 
       ```bash{outputLines: 2}
       eval `ssh-agent`
       Agent pid 86810
       ```
 
-   * For Windows users, run `start-ssh-agent`. The output confirms the agent has started. Enter the passphrase, if it was previously set.
-
-      ```bash{promptUser: user}
-      start-ssh-agent
-      ```
-
-      ```bash{outputLines: 2}
-      Removing old ssh-agent sockets
-      Starting ssh-agent:  done
-      ```
-
-      ```bash{promptUser: user}
-      Enter passphrase for /c/Users/[user]/.ssh/id_rsa:
-      Identity added: /c/Users/[user]/.ssh/id_rsa ([user@machine_name])
-      ```
-
-1. Add the newly created key to the ssh-agent if you are using Linux or Mac:
+1. Add the newly created key to the ssh-agent:
 
    ```bash{promptUser: user}
    ssh-add ~/.ssh/id_rsa
    ```
+
+### Linux
+
+1. Open your terminal and enter the following command to generate a key:
+
+   ```bash{promptUser: user}
+   ssh-keygen -t rsa
+   ```
+
+  Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
+
+1. Set a passphrase for better security.
+
+   We recommend using a passphrase, but it can conflict with some tools.
+
+1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created.
+
+   Linux users can `cat`the file to the terminal and copy the output:
+
+   ```bash{promptUser: user}
+   cat ~/.ssh/id_rsa.pub
+   ```
+
+1. Run `eval` to start the SSH agent. The `Agent pid` output confirms that the agent started:
+
+      ```bash{outputLines: 2}
+      eval `ssh-agent`
+      Agent pid 86810
+      ```
+
+1. Add the newly created key to the ssh-agent:
+
+   ```bash{promptUser: user}
+   ssh-add ~/.ssh/id_rsa
+   ```
+
+### Windows
+
+1. Open your terminal and enter the following command to generate a key. This command works for Windows 10:
+
+   ```bash{promptUser: winshell}
+   ssh-keygen -t rsa
+   ```
+
+  Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
+
+1. Set a passphrase for better security.
+
+   We recommend using a passphrase, but it can conflict with some tools.
+
+1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created.
+
+   ```bash{promptUser: winshell}
+   type .ssh\id_rsa.pub
+   ```
+
+1.  Run `start-ssh-agent` to start the SSH agent. The output confirms the agent has started. Enter the passphrase, if it was previously set.
+
+      ```bash{promptUser: winshell}
+      start-ssh-agent
+      Removing old ssh-agent sockets
+      Starting ssh-agent:  done
+      Enter passphrase for /c/Users/[user]/.ssh/id_rsa:
+      Identity added: /c/Users/[user]/.ssh/id_rsa ([user@machine_name])
+      ```
 
 ## Add Your SSH Key to Pantheon
 
