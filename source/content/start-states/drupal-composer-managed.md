@@ -19,9 +19,9 @@ Composer-managed Drupal sites!
 
 ## Latest Release
 
-### 2023-02-22
+### 2023-02-23
 
-<a name="20230222" class="release-update"></a>This release prepares sites that are on the Drupal (Composer Managed) upstream for Drupal 10.  The specific changes made in this release include:
+<a name="20230223" class="release-update"></a>This release prepares sites that are on the Drupal (Composer Managed) upstream for Drupal 10.  The specific changes made in this release include:
 
 - The "upstream-require" command was moved to a new project, pantheon-systems/upstream-management
 - A post-update hook is added to the site's top-level composer.json file; this hook is for potential future use, and does not do anything at present. If you remove it, Pantheon will add it again. Its purpose is to allow us to manage potential future changes that may be need to be applied to sites using this upstream.
