@@ -236,7 +236,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
 
-
       dataJson {
         commands {
           description
