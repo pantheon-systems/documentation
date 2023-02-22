@@ -393,8 +393,8 @@ Meta data for a doc or guide is created in a section referred to as frontmatter.
 
 <p>
 <small>
-<i className="fa fa-users"></i> Contributors:                                                     <a href="/docs/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
-<a href="/docs/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
+<i className="fa fa-users"></i> Contributors:                                                     <a href="/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
+<a href="/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
 </small>
 
 </p>
@@ -907,7 +907,7 @@ Tooltips are a great way to add additional information without cluttering up a s
 
 <Example>
 
-Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.
@@ -915,7 +915,7 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs 
 <hr className="source-code" /> <br/>
 
 ```markdown
-Given two new sites with slugs <Popover title="Slugs" content="Generally, are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs <Popover title="Slugs" content="Generally, are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.

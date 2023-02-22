@@ -84,7 +84,7 @@ No. Instead of a traditional Drupal Multisite setup, Pantheon designed a better 
 Our solution is to deliver granular resources and powerful code management tools so that users who want to run a large portfolio of sites can do so easily, without running the risks inherent in multisite.
 
 ### Does Pantheon support WordPress Multisite?
-Yes, Pantheon supports the following use cases of [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature:
+Yes, Pantheon supports the following use cases of [WordPress Multisite](/guides/multisite):
 
 - Blogs for faculty at a university
 - Franchise sites under a parent organization site

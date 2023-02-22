@@ -197,5 +197,5 @@ These used to be called Custom Application Services (CAS) hours.
 ## More Resources
 
 - [Migrate Sites to Pantheon](/guides/guided/ and [Manually Migrate Sites to Pantheon](/migrate-manual) to see what it takes to migrate a site yourself
-- [Migrate to Pantheon: WordPress Site Networks](/migrate-wordpress-site-networks)
+- [Migrate to Pantheon: WordPress Multisite](/migrate-wordpress-multisite)
 - [Video: Guided WordPress Migrations](/videos/migrate-wordpress)

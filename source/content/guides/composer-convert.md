@@ -1,6 +1,6 @@
 ---
 title: Convert a Standard Drupal Site to a Composer Managed Site
-description: Upgrade a standard Drupal site, by converting it to a Composer-managed Drupal site on the new Integrated Composer framework. 
+description: Upgrade a standard Drupal site by converting it to a Composer-managed Drupal site on the new Integrated Composer framework. 
 type: guide
 permalink: docs/guides/:basename
 tags: [composer, site, workflow]

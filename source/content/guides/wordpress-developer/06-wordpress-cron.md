@@ -63,9 +63,9 @@ Pantheon Cron will not execute jobs on inactive environments, including [sleepin
 
 </Alert>
 
-### WordPress Site Networks
+### WordPress Multisite
 
-Pantheon Cron does not support WordPress Site Network installations, also known as WordPress Multisite, due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Use WP-Cron if you have WordPress Site Network installations.
+Pantheon Cron does not support WordPress Multisite installations due to the unpredictable customizations to domains or subdirectories and their mapping to subsites. Use WP-Cron if you have WordPress Multisite installations.
 
 ### Security
 
@@ -107,7 +107,7 @@ Error: The DISABLE_WP_CRON constant is set to true. WP-Cron spawning is disabled
 
 This is not an error, but indicates that WordPress's internal cron scheduler has been deactivated and that the site will now rely on Pantheon Cron.
 
-The result will look similar to the example below if this is a WordPress Site Network or has WordPress cron overridden:
+The result will look similar to the example below if this is a WordPress Multisite or has WordPress cron overridden:
 
 ```bash{promptUser: user}
 Success: WP-Cron spawning is working as expected.
@@ -119,7 +119,7 @@ You can run any cron-related command with [WP-CLI](https://developer.wordpress.o
 terminus wp <SITE_NAME>.<ENV_NAME> -- cron <your wp-cron command and switches here>
 ```
 
-All `terminus wp` commands require a site name and environment to operate. WordPress Site Networks requires an additional `--url=<url>` parameter to specify which subsite to run the command on.
+All `terminus wp` commands require a site name and environment to operate. WordPress Multisites require an additional `--url=<url>` parameter to specify which subsite to run the command on.
 
 <Alert title="Note" type="info">
 

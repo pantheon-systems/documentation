@@ -250,9 +250,16 @@ Generate the required identity provider connections files through the modules, o
 
 The files must be added under the `/private/simplesamlphp/metadata` directory and symlinked into the vendor directory, if you are using Composer. This is similar to the config setup for Composer.
 
-## Alternatives
+## Other SSO Options
 
-Other plugins and modules can provide SSO provider services with less configuration. Note that Pantheon does not officially endorse any third-party plugins or modules.
+Other plugins and modules provide SSO provider services with less configuration.
+
+<Alert title="Warning" type="danger" >
+
+Pantheon does not officially endorse or provide support for any third-party plugins or modules.
+
+</Alert>
+
 
 ### SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider
 
@@ -261,3 +268,24 @@ Other plugins and modules can provide SSO provider services with less configurat
 The Support team has tested this module on Pantheon using Okta.
 
 **WordPress:** The WordPress version of [SAML SP Single Sign On – SSO login](https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/) works in exactly the same way as the Drupal module, but has not been tested by Pantheon Support.
+
+### OAuth
+
+[OAuth](https://oauth.net/) is an open authorization standard that Pantheon customers have reported success using. Refer to [SSO and Identity Federation on Pantheon](sso#oauth) for more information.
+
+### WP SAML Auth with Google Apps
+
+[WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) lets your users sign into WordPress using their Google Account if your organization uses Google's G Suite. Refer to our [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso/) guide for more information.
+
+### WordPress SSO Plugins
+
+You can consult this [list of WordPress SSO plugins](https://wordpress.org/plugins/tags/single-sign-on/) for more options.
+
+### Drupal SSO Modules
+
+You can consult this [list of Drupal SSO modules](https://groups.drupal.org/node/182004) for more options.
+
+## More Resources
+
+- [Secure Your Site with Two-Factor Authentication](/guides/secure-development/two-factor-authentication)
+- [Quicksilver Secrets Script](/guides/quicksilver/install-script#secrets)
