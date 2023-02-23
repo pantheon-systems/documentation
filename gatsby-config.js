@@ -32,16 +32,16 @@ module.exports = {
     { // Handles inserting the GTM js blob into the site
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: process.env.GTM_ID,
-        includeInDevelopment: false,
+        id: "GTM-MDF545G", // process.env.GTM_ID_NEW,
+        //testing includeInDevelopment: false,
         defaultDataLayer: { },
-      }
+      },
     },
     { // Handles inserting the Segment js blob into the site
       resolve: "gatsby-plugin-segment-js",
       options: {
-        prodKey: process.env.SEGMENT_KEY_NEW,
-        devKey: process.env.SEGMENT_KEY_NEW,
+        prodKey: "lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA",
+        devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
         trackPage: false,
       },
     },
