@@ -12,9 +12,16 @@ product: [--]
 integration: [ssh, drush, sftp]
 ---
 
-Load your public SSH key into your account to take full advantage of Pantheon. SSH keys allow you to stay secure and compliant with security regulations, provided that you use best practice to generate, store, manage, and remove them. Using SSH keys are a best practice for authentication, offering more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
+SSH keys are a best practice for authentication and offer more security than a simple password.  SSH keys allow you to stay secure and compliant with security regulations, provided that you use best practices to generate, store, manage, and remove your SSH keys.
+
+You can take full advantage of Pantheon by loading your public SSH key into your account.
+You must add your SSH key once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
+
+<Alert title="Note" type="info">
 
 Pantheon supports ECDSA and RSA SSH keys.
+
+</Alert>
 
 <Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
 
