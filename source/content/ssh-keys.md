@@ -12,22 +12,10 @@ product: [--]
 integration: [ssh, drush, sftp]
 ---
 
-SSH keys are a best practice for authentication and offer more security than a simple password.  SSH keys allow you to stay secure and compliant with security regulations, provided that you use best practices to generate, store, manage, and remove your SSH keys.
+SSH keys are a best practice for authentication and offer more security than a simple password.  SSH keys allow you to stay secure and compliant with security regulations, provided that you follow recommended guidelines to generate, store, manage, and remove your SSH keys.
 
 You can take full advantage of Pantheon by loading your public SSH key into your account.
 You must add your SSH key once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
-
-<Alert title="Note" type="info">
-
-Pantheon supports ECDSA and RSA SSH keys.
-
-</Alert>
-
-<Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
-
-<Youtube src="U8sfuvrjroY" title="Generate a SSH Key and Add it to Your Dashboard" />
-
-</Accordion>
 
 <Alert title="Note" type="info">
 
@@ -35,7 +23,7 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 </Alert>
 
-## Generate SSH Key
+## Generate an SSH Key
 
 Use the steps in this section to generate your SSH key.
 
@@ -44,6 +32,12 @@ Use the steps in this section to generate your SSH key.
 Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519` keys.
 
 </Alert>
+
+<Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
+
+<Youtube src="U8sfuvrjroY" title="Generate a SSH Key and Add it to Your Dashboard" />
+
+</Accordion>
 
 ### MacOS
 
@@ -154,8 +148,6 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Click **Add New Key**.
 
 1. Paste the copied public key into the box, and click **Save**.
-
-  ![Adding SSH Keys](../images/dashboard/new-dashboard/add-ssh-key-new-dashboard.png)
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
 
