@@ -11,7 +11,7 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
     // OneTrust Banner
     <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="fba5027b-04c0-4165-8778-4e10fb9f5fa3-test" />,
       function OptanonWrapper() {
-        window.dataLayer.push({event:'OneTrustGroupsUpdated'})
+        window.dataLayer.push({'event':'OneTrustGroupsUpdated'})
       }
   ])
 }
