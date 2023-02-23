@@ -40,7 +40,7 @@ Pantheon Front-End Sites currently supports:
 
 ### Is Decoupled Site Preview available for all instances on Front-End Sites?
 
-Decoupled Site Preview is only available for sites using Drupal as the CMS.
+Decoupled Site Preview is only available for sites using Next.js as a front-end framework.
 
 ### Can I Use Cloudflare with Front-End Sites?
 
@@ -57,7 +57,7 @@ Builds will only complete for repositories that are detected as Gatsby or Next.j
 </Accordion>
 
 <Accordion title="Gatsby does not support SSR and DSG" id="ssr-gatsby" icon="info-sign">
-Server-side Rendering and Deferred Static Generation (DSG) for Gatsby v4 are currently not supported. 
+Server-side Rendering and Deferred Static Generation (DSG) for Gatsby v4 are currently not supported.
 </Accordion>
 
 <Accordion title="Manual support is required" id="support-manual" icon="info-sign">
@@ -77,7 +77,7 @@ Select files, such as `.dockerignore` and `.gcloudignore` files can cause build 
 </Accordion>
 
 <Accordion title="Users must have permissions to enable decoupled for GitHub organization accounts." id="github-organization" icon="info-sign">
-Users must have permissions to enable decoupled for GitHub organization accounts. The user should be the Owner of the account. GitHub organization owners can allow other users to manage the Pantheon GitHub application on their behalf. 
+Users must have permissions to enable decoupled for GitHub organization accounts. The user should be the Owner of the account. GitHub organization owners can allow other users to manage the Pantheon GitHub application on their behalf.
 </Accordion>
 
 <Accordion title="You must remove a VCS user record to uninstall a Front-End Site" id="uninstalling" icon="info-sign">
