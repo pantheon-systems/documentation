@@ -42,8 +42,9 @@ This section provides information on how to enable Object Cache.
   ```php:title="object-cache.php"
   <?php
   # This is a Windows-friendly symlink
-  if (!empty($_ENV['PANTHEON_ENVIRONMENT']) && !empty($_ENV['CACHE_HOST'])) {
-    require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+  $objectCacheFile = WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+  if (!empty($_ENV['PANTHEON_ENVIRONMENT']) && !empty($_ENV['CACHE_HOST']) && file_exists($objectCacheFile)) {
+      require_once $objectCacheFile;
   }
   ```
 
