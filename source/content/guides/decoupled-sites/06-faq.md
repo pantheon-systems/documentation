@@ -77,7 +77,7 @@ Select files, such as `.dockerignore` and `.gcloudignore` files can cause build 
 </Accordion>
 
 <Accordion title="Users must have permissions to enable decoupled for GitHub organization accounts." id="github-organization" icon="info-sign">
-Users must have permissions to enable decoupled for GitHub organization accounts. The user should be the Owner of the account. GitHub organization owners can allow other users to manage the Pantheon GitHub application on their behalf.
+Users must have permissions to enable Front-End Sites for GitHub organization accounts. The user should be the Owner of the account. GitHub organization owners can allow other users to manage the Pantheon GitHub application on their behalf.
 </Accordion>
 
 <Accordion title="You must remove a VCS user record to uninstall a Front-End Site" id="uninstalling" icon="info-sign">
