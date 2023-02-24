@@ -1,5 +1,5 @@
 name: Add issues
-on: issue
+on: issues
 jobs:
   add-to-project:
     name: Add issue to project
