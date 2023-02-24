@@ -43,7 +43,7 @@ You can apply one-click updates to individual site repositories through:
 - Site Dashboard on Pantheon
 - [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
 
-## Apply Upstream Updates via the SitDashboard
+## Apply Upstream Updates via the Site Dashboard
 
 1. Navigate to the **Code** tab in the Site Dashboard on the Dev environment, then click **Apply Updates**.
 
