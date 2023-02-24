@@ -1,6 +1,5 @@
 name: Add issues
 on: issue
-
 jobs:
   add-to-project:
     name: Add issue to project
