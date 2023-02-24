@@ -1,9 +1,5 @@
 name: Add issues
-
-on:
-  issues:
-    types:
-      - opened
+on: issue
 
 jobs:
   add-to-project:
@@ -12,7 +8,5 @@ jobs:
     steps:
       - uses: actions/add-to-project@v0.4.0
         with:
-          # You can target a repository in a different organization
-          # to the issue
           project-url: https://github.com/orgs/pantheon-systems/projects/18/
           repo-token: ${{ secrets.GITHUB_TOKEN }}
