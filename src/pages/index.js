@@ -62,60 +62,54 @@ class Index extends React.Component {
 
 export default Index
 
-export const pageQuery = graphql`
-  {
-    homeYaml {
+export const pageQuery = graphql`{
+  homeYaml {
+    title
+    call_to_action {
       title
-      call_to_action {
-        title
-        sub_title
-        url
-        type
-      }
-      topics {
-        title
-        summary
-        icon
-        url
-        secondary
-      }
-      three_column_links {
-        title
-        links {
-          text
-          url
-        }
-      }
-      changelog_preview {
-        title
+      sub_title
+      url
+      type
+    }
+    topics {
+      title
+      summary
+      icon
+      url
+      secondary
+    }
+    three_column_links {
+      title
+      links {
+        text
         url
       }
     }
-
-    allMdx(
-      filter: { 
-        fileAbsolutePath: { regex: "/changelogs/" } 
-        frontmatter: { draft: {ne: true}}
-      }
-      sort: { fields: [fileAbsolutePath], order: DESC }
-      limit: 4
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-            markdownBody {
-              childMdx {
-                body
-              }
+    changelog_preview {
+      title
+      url
+    }
+  }
+  allMdx(
+    filter: {fileAbsolutePath: {regex: "/changelogs/"}, frontmatter: {draft: {ne: true}}}
+    sort: {fileAbsolutePath: DESC}
+    limit: 4
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+        }
+        fields {
+          slug
+          markdownBody {
+            childMdx {
+              body
             }
           }
         }
       }
     }
   }
-`
+}`

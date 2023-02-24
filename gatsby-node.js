@@ -123,130 +123,106 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return graphql(`
-    {
-      allDocs: allMdx(
-        filter: {
-          fields: {
-            slug: {regex: "/^((?!guides|changelog|partials).)*$/"}
-          },
-          fileAbsolutePath: { regex: "/content/"}
-          frontmatter: { draft: {ne: true}}
+  return graphql(`{
+  allDocs: allMdx(
+    filter: {fields: {slug: {regex: "/^((?!guides|changelog|partials).)*$/"}}, fileAbsolutePath: {regex: "/content/"}, frontmatter: {draft: {ne: true}}}
+  ) {
+    edges {
+      node {
+        fileAbsolutePath
+        frontmatter {
+          title
+          layout
+          permalink
+          draft
         }
-      ) {
-        edges {
-          node {
-            fileAbsolutePath
-            frontmatter {
-              title
-              layout
-              permalink
-              draft
-            }
-            fields {
-              slug
-            }
-          }
+        fields {
+          slug
         }
       }
-
-      allGuides: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/guides/"}
-          frontmatter: { draft: {ne: true}}
-        }
-        sort: { fields: [fileAbsolutePath], order: ASC }
-      ) {
-        edges {
-          previous {
-            fields {
-              slug
-              guide_directory
-            }
-          }
-          node {
-            frontmatter {
-              title
-              layout
-              permalink
-              draft
-            }
-            fields {
-              slug
-              guide_directory
-            }
-          }
-          next {
-            fields {
-              slug
-              guide_directory
-            }
-          }
-        }
-      }
-
-      allChangelogs: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/changelogs/"}
-          frontmatter: { draft: {ne: true}}
-        },
-        sort: { fields: [fileAbsolutePath], order: DESC }
-      ) {
-        edges {
-
-          previous {
-            fields {
-              slug
-            }
-          }
-
-          node {
-            id
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-            }
-          }
-
-          next {
-            fields {
-              slug
-            }
-          }
-
-        }
-      }
-
-      allContributorYaml {
-        edges {
-          node {
-            id
-          }
-        }
-      }
-
-      allLandingsYaml {
-        edges {
-          node {
-            id
-            path
-          }
-        }
-      }
-
-      dataJson {
-        commands {
-          description
-          help
-          name
-          usage
-        }
-      }
-
     }
-  `).then(result => {
+  }
+  allGuides: allMdx(
+    filter: {fileAbsolutePath: {regex: "/guides/"}, frontmatter: {draft: {ne: true}}}
+    sort: {fileAbsolutePath: ASC}
+  ) {
+    edges {
+      previous {
+        fields {
+          slug
+          guide_directory
+        }
+      }
+      node {
+        frontmatter {
+          title
+          layout
+          permalink
+          draft
+        }
+        fields {
+          slug
+          guide_directory
+        }
+      }
+      next {
+        fields {
+          slug
+          guide_directory
+        }
+      }
+    }
+  }
+  allChangelogs: allMdx(
+    filter: {fileAbsolutePath: {regex: "/changelogs/"}, frontmatter: {draft: {ne: true}}}
+    sort: {fileAbsolutePath: DESC}
+  ) {
+    edges {
+      previous {
+        fields {
+          slug
+        }
+      }
+      node {
+        id
+        frontmatter {
+          title
+        }
+        fields {
+          slug
+        }
+      }
+      next {
+        fields {
+          slug
+        }
+      }
+    }
+  }
+  allContributorYaml {
+    edges {
+      node {
+        id
+      }
+    }
+  }
+  allLandingsYaml {
+    edges {
+      node {
+        id
+        path
+      }
+    }
+  }
+  dataJson {
+    commands {
+      description
+      help
+      name
+      usage
+    }
+  }
+}`).then(result => {
     if (result.errors) {
       throw result.errors
     }
@@ -371,7 +347,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     return null
-  })
+  });
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -433,7 +409,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         })
       }
     }
-
+    // gatsby 5 doesn't like the `matter` it's getting from gray-matter here: "expected input to be a string or buffer"
     if (sourceInstanceName === 'changelogs') {
       const content = matter(node.internal.content, { excerpt: true, excerpt_separator: '<!-- excerpt -->' } );
       const excerpt = content.excerpt || "";

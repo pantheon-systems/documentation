@@ -10,38 +10,36 @@ class DashboardImages extends React.Component {
   render() {
     return (
       <StaticQuery
-        query={graphql`
-          query {
-            allFile(
-                filter: {sourceInstanceName: {eq: "partials"}, extension: {regex: "/(md)/"}}
-                sort: {fields: relativePath, order: ASC}
-                ) {
-                edges {
-                  node {
-                    relativePath
-                    childMdx {
-                        excerpt
-                      }
-                   }
-                }
-            }
-            allMdx{
-                edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  fileInfo {
-                    relativePath
-                    sourceInstanceName
-                  }
-                  rawBody
-                  excerpt
-                }
-              }
-            }
-          }
-        `}
+        query={graphql`{
+  allFile(
+    filter: {sourceInstanceName: {eq: "partials"}, extension: {regex: "/(md)/"}}
+    sort: {relativePath: ASC}
+  ) {
+    edges {
+      node {
+        relativePath
+        childMdx {
+          excerpt
+        }
+      }
+    }
+  }
+  allMdx {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        fileInfo {
+          relativePath
+          sourceInstanceName
+        }
+        rawBody
+        excerpt
+      }
+    }
+  }
+}`}
         render={data => {
           const pages = data.allMdx.edges
           const partials = data.allFile.edges
@@ -97,7 +95,7 @@ class DashboardImages extends React.Component {
           )
         }}
       />
-    )
+    );
   }
 }
 

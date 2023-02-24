@@ -33,29 +33,27 @@ const Releases = ({ data }) => (
 
 export default props => (
   <StaticQuery
-    query={graphql`
-      query {
-        allTerminusReleasesJson(
-          sort: { fields: [tag_name], order: DESC }
-          filter: { fields: { original_id: { gt: 5224487 } } }
-        ) {
-          edges {
-            node {
-              id
-              tag_name
+    query={graphql`{
+  allTerminusReleasesJson(
+    sort: {tag_name: DESC}
+    filter: {fields: {original_id: {gt: 5224487}}}
+  ) {
+    edges {
+      node {
+        id
+        tag_name
+        body
+        fields {
+          markdownBody {
+            childMdx {
               body
-              fields {
-                markdownBody {
-                  childMdx {
-                    body
-                  }
-                }
-              }
             }
           }
         }
       }
-    `}
+    }
+  }
+}`}
     render={data => <Releases data={data} {...props} />}
   />
 )

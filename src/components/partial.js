@@ -10,25 +10,23 @@ const shortcodes = {
 
 const Partial = props => (
   <StaticQuery
-    query={graphql`
-      query {
-        allDocs: allMdx(
-          filter: { fileAbsolutePath: { regex: "/partials/" }, parent: {} }
-          sort: { fields: fileAbsolutePath }
-        ) {
-          edges {
-            node {
-              body
-              parent {
-                ... on File {
-                  relativePath
-                }
-              }
-            }
+    query={graphql`{
+  allDocs: allMdx(
+    filter: {fileAbsolutePath: {regex: "/partials/"}, parent: {}}
+    sort: {fileAbsolutePath: ASC}
+  ) {
+    edges {
+      node {
+        body
+        parent {
+          ... on File {
+            relativePath
           }
         }
       }
-    `}
+    }
+  }
+}`}
     render={data => {
       const mdx = data.allDocs.edges.find(edge => {
         return edge.node.parent.relativePath === props.file

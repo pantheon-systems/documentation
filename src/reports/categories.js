@@ -10,50 +10,42 @@ class CategoryTree extends React.Component {
   render() {
     return (
       <StaticQuery
-        query={graphql`
-          query {
-            allSchemaYaml(filter: {tag: {eq: "categories"}}) {
-              edges {
-                node {
-                  tag
-                  description
-                  valid_values {
-                    group
-                    values
-                  }
-                }
-              }
-            }
-            allMdx (
-              filter: {
-                frontmatter: { 
-                  title: { ne: "" }
-                  innav: { eq: true}
-                }
-                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
-              }
-              sort: {fields: fileInfo___relativePath, order: ASC}
-            ) {
-              edges {
-                node {
-                  fileInfo {
-                    relativePath
-                    sourceInstanceName
-                    id
-                  }
-                  frontmatter {
-                    title
-                    subtitle
-                    categories
-                  }
-                  fields {
-                    slug
-                  }
-                }
-              }
-            }
-                    }
-        `}
+        query={graphql`{
+  allSchemaYaml(filter: {tag: {eq: "categories"}}) {
+    edges {
+      node {
+        tag
+        description
+        valid_values {
+          group
+          values
+        }
+      }
+    }
+  }
+  allMdx(
+    filter: {frontmatter: {title: {ne: ""}, innav: {eq: true}}, fields: {slug: {regex: "/^((?!changelog).)*$/"}}}
+    sort: {fileInfo: {relativePath: ASC}}
+  ) {
+    edges {
+      node {
+        fileInfo {
+          relativePath
+          sourceInstanceName
+          id
+        }
+        frontmatter {
+          title
+          subtitle
+          categories
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}`}
         render={data => {
           const yamlfile = data.allSchemaYaml.edges
           const pages = data.allMdx.edges
@@ -106,7 +98,7 @@ class CategoryTree extends React.Component {
           )
         }}
       />
-    )
+    );
   }
 }
 

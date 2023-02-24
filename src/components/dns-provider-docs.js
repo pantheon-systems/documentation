@@ -3,26 +3,21 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 const DNSProviderDocs = () => {
   const pages = useStaticQuery(
-    graphql`
-      {
-        allMdx(
-          filter: {
-            fileInfo: { absolutePath: { regex: "/.dns-providers/./" } }
-            frontmatter: { draft: { ne: true } }
-          }
-          sort: { fields: frontmatter___title, order: ASC }
-        ) {
-          nodes {
-            fields {
-              slug
-            }
-            frontmatter {
-              provider
-            }
-          }
-        }
+    graphql`{
+  allMdx(
+    filter: {fileInfo: {absolutePath: {regex: "/.dns-providers/./"}}, frontmatter: {draft: {ne: true}}}
+    sort: {frontmatter: {title: ASC}}
+  ) {
+    nodes {
+      fields {
+        slug
       }
-    `
+      frontmatter {
+        provider
+      }
+    }
+  }
+}`
   )
 
   return (

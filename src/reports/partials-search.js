@@ -6,39 +6,36 @@ class ReviewReport extends React.Component {
   render() {
     return (
       <StaticQuery
-        query={graphql`
-          query {
-            categorizedDocs: allMdx(
-              filter: {fileAbsolutePath: {regex: "/partials/"}}
-              sort: {fields: fileInfo___relativePath, order: ASC}
-            ) {
-              edges {
-                node {
-                  id
-                  excerpt
-                  frontmatter {
-                    categories
-                    reviewed
-                    tags
-                    type
-                    contenttype
-                    product
-                    integration
-                    cms
-                  }
-                  fileInfo {
-                    id
-                    relativePath
-                  }
-                  fields {
-                    slug
-                  }
-                }
-              }
-            }
-
-          }
-        `}
+        query={graphql`{
+  categorizedDocs: allMdx(
+    filter: {fileAbsolutePath: {regex: "/partials/"}}
+    sort: {fileInfo: {relativePath: ASC}}
+  ) {
+    edges {
+      node {
+        id
+        excerpt
+        frontmatter {
+          categories
+          reviewed
+          tags
+          type
+          contenttype
+          product
+          integration
+          cms
+        }
+        fileInfo {
+          id
+          relativePath
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}`}
         render={data => {
           const [searchcms, setSearchcms] = useState("")
           const [searchCategories, setSearchCategories] = useState("")
@@ -270,7 +267,7 @@ class ReviewReport extends React.Component {
           )
         }}
       />
-    )
+    );
   }
 }
 

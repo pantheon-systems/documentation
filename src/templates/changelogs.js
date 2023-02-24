@@ -128,29 +128,24 @@ class ChangelogsTemplate extends React.Component {
 
 export default ChangelogsTemplate
 
-export const pageQuery = graphql`
-  query Changelogs($skip: Int!, $limit: Int!) {
-    allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/changelogs/" }
-        frontmatter: { draft: { ne: true } }
-      }
-      sort: { fields: [fileAbsolutePath], order: DESC }
-      skip: $skip
-      limit: $limit
-    ) {
-      edges {
-        node {
-          id
-          body
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
+export const pageQuery = graphql`query Changelogs($skip: Int!, $limit: Int!) {
+  allMdx(
+    filter: {fileAbsolutePath: {regex: "/changelogs/"}, frontmatter: {draft: {ne: true}}}
+    sort: {fileAbsolutePath: DESC}
+    skip: $skip
+    limit: $limit
+  ) {
+    edges {
+      node {
+        id
+        body
+        frontmatter {
+          title
+        }
+        fields {
+          slug
         }
       }
     }
   }
-`
+}`

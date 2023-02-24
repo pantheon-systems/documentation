@@ -172,63 +172,57 @@ class GuideTemplate extends React.Component {
 
 export default GuideTemplate
 
-export const pageQuery = graphql`
-  query GuidePageBySlug($slug: String!, $guide_directory: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      id
-      body
-      fields {
-        slug
-        guide_directory
-        editPath
+export const pageQuery = graphql`query GuidePageBySlug($slug: String!, $guide_directory: String!) {
+  mdx(fields: {slug: {eq: $slug}}) {
+    id
+    body
+    fields {
+      slug
+      guide_directory
+      editPath
+    }
+    frontmatter {
+      title
+      subtitle
+      description
+      showtoc
+      editpath
+      contributors {
+        id
+        name
+        twitter
+        bio
+        avatar
+        url
       }
-      frontmatter {
-        title
-        subtitle
-        description
-        showtoc
-        editpath
-        contributors {
-          id
-          name
-          twitter
-          bio
-          avatar
-          url
+      featuredcontributor
+      reviewed(formatString: "MMMM DD, YYYY")
+      getfeedbackform
+      tags
+      type
+    }
+    fileAbsolutePath
+  }
+  date: mdx(fields: {slug: {eq: $slug}}) {
+    frontmatter {
+      reviewed
+    }
+  }
+  allMdx(
+    filter: {fileAbsolutePath: {ne: null}, fields: {guide_directory: {eq: $guide_directory}}, frontmatter: {draft: {ne: true}}}
+    sort: {fileAbsolutePath: ASC}
+  ) {
+    edges {
+      node {
+        id
+        fields {
+          slug
+          guide_directory
         }
-        featuredcontributor
-        reviewed(formatString: "MMMM DD, YYYY")
-        getfeedbackform
-        tags
-        type
-      }
-      fileAbsolutePath
-    }
-    date: mdx(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        reviewed
-      }
-    }
-    allMdx(
-      filter: {
-        fileAbsolutePath: { ne: null }
-        fields: { guide_directory: { eq: $guide_directory } }
-        frontmatter: { draft: {ne: true}}
-      }
-      sort: { fields: [fileAbsolutePath], order: ASC }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-            guide_directory
-          }
-          frontmatter {
-            subtitle
-          }
+        frontmatter {
+          subtitle
         }
       }
     }
   }
-`
+}`

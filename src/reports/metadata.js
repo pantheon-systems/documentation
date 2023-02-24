@@ -6,53 +6,45 @@ class ReviewReport extends React.Component {
   render() {
     return (
       <StaticQuery
-        query={graphql`
-          query {
-            categorizedDocs: allMdx(
-              filter: {
-                frontmatter: { 
-                  title: { ne: "" }
-                }
-                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
-              }
-              sort: {fields: fileInfo___relativePath, order: ASC}
-            ) {
-              edges {
-                node {
-                  id
-                  frontmatter {
-                    title
-                    categories
-                    cms
-                    reviewed
-                    tags
-                    type
-                    permalink
-                    subtitle
-                    contenttype
-                    product
-                    integration
-                    cms
-                    description
-                    permalink
-                  }
-                  fileInfo {
-                    childMdx {
-                      fileInfo {
-                        name
-                        relativePath
-                      }
-                    }
-                  }
-                  fields {
-                    slug
-                  }
-                }
-              }
+        query={graphql`{
+  categorizedDocs: allMdx(
+    filter: {frontmatter: {title: {ne: ""}}, fields: {slug: {regex: "/^((?!changelog).)*$/"}}}
+    sort: {fileInfo: {relativePath: ASC}}
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
+          categories
+          cms
+          reviewed
+          tags
+          type
+          permalink
+          subtitle
+          contenttype
+          product
+          integration
+          cms
+          description
+          permalink
+        }
+        fileInfo {
+          childMdx {
+            fileInfo {
+              name
+              relativePath
             }
-
           }
-        `}
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}`}
         render={data => {
           /* Construct the constants for our filter terms */
 
@@ -168,7 +160,7 @@ class ReviewReport extends React.Component {
           )
         }}
       />
-    )
+    );
   }
 }
 

@@ -6,51 +6,42 @@ class ReviewReport extends React.Component {
   render() {
     return (
       <StaticQuery
-        query={graphql`
-          query {
-            categorizedDocs: allMdx(
-              filter: {
-                frontmatter: { 
-                  contenttype: {ne: "partial"}
-                  title: { ne: "" }
-                }
-                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
-              }
-              sort: {fields: fileInfo___relativePath, order: ASC}
-            ) {
-              edges {
-                node {
-                  id
-                  frontmatter {
-                    categories
-                    contenttype
-                    description
-                    integration
-                    cms
-                    permalink
-                    product
-                    subtitle
-                    reviewed
-                    tags
-                    title
-                  }
-                  fileInfo {
-                    childMdx {
-                      fileInfo {
-                        name
-                        relativePath
-                      }
-                    }
-                  }
-                  fields {
-                    slug
-                  }
-                }
-              }
+        query={graphql`{
+  categorizedDocs: allMdx(
+    filter: {frontmatter: {contenttype: {ne: "partial"}, title: {ne: ""}}, fields: {slug: {regex: "/^((?!changelog).)*$/"}}}
+    sort: {fileInfo: {relativePath: ASC}}
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          categories
+          contenttype
+          description
+          integration
+          cms
+          permalink
+          product
+          subtitle
+          reviewed
+          tags
+          title
+        }
+        fileInfo {
+          childMdx {
+            fileInfo {
+              name
+              relativePath
             }
-
           }
-        `}
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}`}
         render={data => {
           const [searchTitle, setSearchTitle] = useState("")
           const [searchcms, setSearchcms] = useState("")
@@ -353,7 +344,7 @@ class ReviewReport extends React.Component {
           )
         }}
       />
-    )
+    );
   }
 }
 
