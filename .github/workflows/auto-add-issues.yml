@@ -8,5 +8,5 @@ jobs:
       - name: add issue
         uses: actions/add-to-project@v0.4.0
         with:
-          project-url: https://github.com/orgs/pantheon-systems/projects/18/
+          project-url: https://github.com/orgs/pantheon-systems/projects/main-project/
           github-token: ${{ secrets.GITHUB_TOKEN }}
