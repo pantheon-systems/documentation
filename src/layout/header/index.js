@@ -59,7 +59,7 @@ const Header = ({ data, page }) => (
           </li>
           <li className="">
             <a
-              href="https://dashboard.pantheon.io/#support/support/all"
+              href="https://dashboard.pantheon.io/#support"
               target="_blank"
               rel="noopener"
             >
