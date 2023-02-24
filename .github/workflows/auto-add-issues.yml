@@ -1,6 +1,5 @@
 name: auto-add-issues
 on: issues
-
 jobs:
   add-to-project:
     name: add issue to project
