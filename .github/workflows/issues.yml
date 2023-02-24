@@ -1,4 +1,4 @@
-name: Add-issues
+name: auto-add-issues
 on: issues
 jobs:
   add-to-project:
