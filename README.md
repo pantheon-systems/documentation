@@ -40,8 +40,8 @@ This list of steps should work on a Mac with [Homebrew](https://brew.sh/):
 
 ```bash
 brew install node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-nvm install 14
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+nvm install 18
 npm install -g gatsby-cli
 ```
 
