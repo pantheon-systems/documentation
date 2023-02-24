@@ -5,7 +5,8 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.4.0
+      - name: add issue
+        uses: actions/add-to-project@v0.4.0
         with:
           project-url: https://github.com/orgs/pantheon-systems/projects/18/
           repo-token: ${{ secrets.GITHUB_TOKEN }}
