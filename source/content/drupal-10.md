@@ -73,10 +73,6 @@ This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) 
 
 ## FAQ
 
-### When Drupal 10 is released, which version will appear in the dashboard?
-
-Drupal 9 will still be the version used when creating a Drupal Composer Managed Site until mid-January. You can upgrade new sites to Drupal 10 by [following these instructions](/drupal-10#update-a-drupal-9-site-to-drupal-10).
-
 ### When Drupal 10 is released, will my Drupal 9 site be forced to use Drupal 10?
 
 No, Drupal 9 sites can continue to use Drupal 9 and receive Drupal 9 updates.
