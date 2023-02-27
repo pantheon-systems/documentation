@@ -15,6 +15,7 @@ jobs:
 
 
   job2:
+      needs: job1
       name: add-new-issues-to-project-column
       runs-on: ubuntu-latest
       steps:
