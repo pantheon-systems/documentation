@@ -1,14 +1,13 @@
-name: auto-add-issues
-on:
-  issues:
-    types: 
-      - opened
+name: Add to project
+on: [issues, pull_request]
 jobs:
-  add-to-project:
-    name: add issue to project
+  add-new-issues-to-project-column:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.4.0
-        with:
-          project-url: https://github.com/orgs/pantheon-systems/projects/18
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: add-new-issues-to-repository-based-project-column
+      uses: docker://takanabe/github-actions-automate-projects:sandbox
+      if: github.event_name == 'issues' && github.event.action == 'opened'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_PROJECT_URL: https://github.com/orgs/pantheon-systems/projects/18/
+        GITHUB_PROJECT_COLUMN_NAME: Inbox
