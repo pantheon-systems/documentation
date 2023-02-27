@@ -16,7 +16,7 @@ The following table indicates availability of the specified Drupal version, as w
 
 | Drupal Version | Available | Recommended | Supported |
 | ----------- | :---------: | :---------: | :---------: |
-| 10          | <span style="color:green">✔</span>         | ❌           | ❌          |
+| 10          | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           | <span style="color:green">✔</span>          |
 | 9           | <span style="color:green">✔</span>          | <span style="color:green">✔</span>           | <span style="color:green">✔</span>         |
 | 8           | ❌          | ❌           | <span style="color:green">✔</span>         |
 | 7           | <span style="color:green">✔</span>         | ❌           | <span style="color:green">✔</span>          |
