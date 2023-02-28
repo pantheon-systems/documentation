@@ -1,0 +1,16 @@
+name: Add Card
+
+on:
+  issues:
+    types: [opened]
+jobs:
+  createCard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Project Card
+        uses: peter-evans/create-or-update-project-card@v2
+        with:
+          token: ${{ secrets.PAT }}
+          project-location: pantheon-systems
+          project-name: Main Project
+          column-name: Inbox
