@@ -12,7 +12,7 @@ permalink: docs/guides/decoupled-sites/considerations/
 editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]

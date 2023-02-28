@@ -11,7 +11,7 @@ anchorid: prepare
 editpath: drupal/drupal-hosted-createbt/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate, git]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]

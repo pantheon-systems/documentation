@@ -10,7 +10,7 @@ anchorid: files
 editpath: drupal/drupal-unhosted-composer/11-files.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal9]
 audience: [development]

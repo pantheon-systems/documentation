@@ -3,7 +3,7 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress Security
 description: Keep your WordPress on Pantheon site secure.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms]
 cms: [wordpress]
 audience: [development]

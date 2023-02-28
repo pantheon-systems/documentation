@@ -4,7 +4,7 @@ subtitle: Commit or Discard SFTP Changes
 description: Learn how to commit or discard and abandon your SFTP changes.
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
-innav: [true]
+innav: [false]
 categories: [sftp]
 cms: [drupal, wordpress]
 audience: [development]

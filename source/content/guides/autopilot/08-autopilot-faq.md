@@ -10,7 +10,7 @@ anchorid: autopilot-faq
 permalink: docs/guides/autopilot/autopilot-faq/
 reviewed: "2022-12-14"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate, test, update, faq]
 cms: [--]
 audience: [development]

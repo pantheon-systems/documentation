@@ -3,7 +3,7 @@ title: Quicksilver on Pantheon
 subtitle: Integrate Trello on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Trello with your dev workflow on Pantheon.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [--]
 audience: [development]

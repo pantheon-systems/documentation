@@ -3,7 +3,7 @@ title: Quick Start
 subtitle: Connection Modes
 description: In part seven of our Quick Start guide, learn how Pantheon users take advantage of Git and SFTP mode to develop their sites.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]

@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/domains/domains-faq
 anchorid: domains-faq
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains]
 cms: [--]
 audience: [development, sysadmin]

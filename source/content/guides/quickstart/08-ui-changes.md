@@ -3,7 +3,7 @@ title: Quick Start
 subtitle: Make User Interface Changes
 description: In part eight of our Quick Start guide, learn to make UI changes on your site.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]

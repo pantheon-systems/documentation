@@ -11,7 +11,7 @@ anchorid: sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [organizations]
 cms: [--]
 audience: [sysadmin]

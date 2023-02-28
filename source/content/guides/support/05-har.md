@@ -3,7 +3,7 @@ title: Get Support
 subtitle: Generate a HAR
 description: Learn how to generate a HAR file in the browser.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [help]
 cms: [--]
 audience: [agency, business, development, marketing, sysadmin]

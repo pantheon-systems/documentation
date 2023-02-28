@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/git/useful-commands
 anchorid: useful-commands
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [git]
 cms: [drupal, wordpress]
 audience: [development]

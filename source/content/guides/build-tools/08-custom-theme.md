@@ -10,7 +10,7 @@ permalink: docs/guides/build-tools/custom-theme/
 editpath: build-tools/08-custom-theme.md
 image: buildToolsGuide-thumb
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [dependencies]
 cms: [--]
 audience: [development]

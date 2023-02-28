@@ -10,7 +10,7 @@ showtoc: true
 permalink: docs/guides/domains/custom-domains
 anchorid: custom-domains
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains]
 cms: [--]
 audience: [agency, development]

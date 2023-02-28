@@ -3,7 +3,7 @@ title: Secure Development on Pantheon
 subtitle: Securely Working with phpinfo
 description: Important security considerations when working with phpinfo on your Pantheon Drupal site.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [security]
 cms: [--]
 audience: [development]

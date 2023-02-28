@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/wp-autopilot-custom-upstream
 anchorid: wp-autopilot-custom-upstream
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [--]
 audience: [development]

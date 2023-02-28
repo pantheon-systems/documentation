@@ -11,7 +11,7 @@ anchorid: dependencies
 editpath: drupal/drupal-hosted-createcustom/04-dependencies.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update, custom-upstreams]
 cms: [ drupal ]
 audience: [development]

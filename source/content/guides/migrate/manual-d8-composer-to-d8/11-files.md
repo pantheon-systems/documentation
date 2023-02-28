@@ -3,7 +3,7 @@ title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Upload Your Files
 description: Learn how to upload your files.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal]
 audience: [development]

@@ -4,7 +4,7 @@ subtitle: Configure Your Drupal Settings.php File
 description: Configure your Drupal database settings.
 contributors: [mmenavas, andrewmallis]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [php]
 cms: [drupal]
 audience: [development]

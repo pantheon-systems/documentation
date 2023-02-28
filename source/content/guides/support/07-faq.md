@@ -2,7 +2,7 @@
 title: Get Support
 subtitle: Frequently Asked Questions
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [help]
 cms: [--]
 audience: [agency, business, development, marketing, sysadmin]

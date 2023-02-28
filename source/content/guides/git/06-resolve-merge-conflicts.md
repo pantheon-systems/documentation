@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/git/resolve-merge-conflicts
 anchorid: resolve-merge-conflicts
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [git]
 cms: [drupal, wordpress]
 audience: [development]

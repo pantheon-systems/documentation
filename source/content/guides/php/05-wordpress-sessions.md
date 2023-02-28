@@ -3,7 +3,7 @@ title: PHP on Pantheon
 subtitle: WordPress and PHP Sessions
 description: Learn more about the behaviors of WordPress and PHP sessions.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [php]
 cms: [--]
 audience: [development]

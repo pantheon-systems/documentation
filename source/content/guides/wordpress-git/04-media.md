@@ -5,7 +5,7 @@ description: Beginners guide on how to use the WordPress Dashboard, an SFTP clie
 anchorid: media
 layout: guide
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [git]
 cms: [wordpress]
 audience: [development]

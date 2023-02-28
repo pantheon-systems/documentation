@@ -3,7 +3,7 @@ title: Local Development on Pantheon
 subtitle: Configure PhpStorm for Drupal
 description: Configure your local environment to build a Drupal module with JetBrains PhpStorm.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [drupal, wordpress]
 audience: [development]

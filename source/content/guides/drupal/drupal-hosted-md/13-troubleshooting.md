@@ -11,7 +11,7 @@ anchorid: troubleshooting
 editpath: drupal/drupal-hosted-md/13-troubleshooting.md
 reviewed: "2021-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate, troubleshooting]
 cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]

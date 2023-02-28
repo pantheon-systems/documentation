@@ -4,7 +4,7 @@ subtitle: Create a SAML App
 description: Define a SAML app in the Google Admin dashboard to which you can connect your WordPress site
 contributors: [alexfornuto, danielbachhuber]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [security]
 cms: [wordpress]
 audience: [development]

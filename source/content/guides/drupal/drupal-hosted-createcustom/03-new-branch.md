@@ -10,7 +10,7 @@ anchorid: new-branch
 editpath: drupal/drupal-hosted-createcustom/03-new-branch.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update, custom-upstreams]
 cms: [drupal9, drupal10, drupal8, drupal]
 audience: [agency, development]

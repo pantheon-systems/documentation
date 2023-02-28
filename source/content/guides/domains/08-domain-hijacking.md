@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/domains/domain-hijacking
 anchorid: domains-hijacking
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains]
 cms: [--]
 audience: [development, sysadmin]

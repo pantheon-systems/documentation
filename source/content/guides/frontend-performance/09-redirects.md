@@ -12,7 +12,7 @@ editpath: frontend-performance/09-redirects.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [optimize]
 cms: [drupal, wordpress]
 audience: [development]

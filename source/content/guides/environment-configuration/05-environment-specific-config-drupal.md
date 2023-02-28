@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config-drupal
 anchorid: environment-specific-config-drupal
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [config]
 cms: [drupal9]
 audience: [development]

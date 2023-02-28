@@ -3,7 +3,7 @@ title: Quick Start
 subtitle: Create a New Site
 description: In part three of our Quick Start guide, learn how to create your new Pantheon site.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]

@@ -7,7 +7,7 @@ generator: pagination
 layout: guide
 type: guide
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms, troubleshooting]
 cms: [wordpress]
 audience: [development]

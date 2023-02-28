@@ -10,7 +10,7 @@ anchorid: create-site
 editpath: hosted/05-create-site.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create, migrate]
 cms: [drupal9, drupal10]
 audience: [development]

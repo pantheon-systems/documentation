@@ -40,11 +40,19 @@ class CategoryTree extends React.Component {
                     relativePath
                     sourceInstanceName
                     id
+                    name
+                    childMdx {
+                      fileInfo {
+                        name
+                        relativePath
+                      }
+                    }
                   }
                   frontmatter {
                     title
                     subtitle
                     categories
+                    permalink
                   }
                   fields {
                     slug
@@ -83,8 +91,7 @@ class CategoryTree extends React.Component {
                                               .map((page) => {
                                                 return (
                                                   <li>
-                                                  {page.node.frontmatter.title}
-                                                  : {page.node.frontmatter.subtitle}
+                                                    <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.name) : `/${page.node.fields.slug}`}>{page.node.frontmatter.title}{" "}</Link>
                                                   </li>
                                                 )
                                               })

@@ -3,7 +3,7 @@ title: WordPress Developer's Guide
 subtitle: Cron for WordPress
 description: Learn how to create and run jobs using Pantheon Cron or WordPress's WP-Cron feature on your Pantheon site.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [wordpress]
 audience: [development]

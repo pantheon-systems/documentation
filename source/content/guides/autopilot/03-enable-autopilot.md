@@ -11,7 +11,7 @@ permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate, test, update, faq]
 cms: [--]
 audience: [development]

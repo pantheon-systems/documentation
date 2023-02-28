@@ -9,7 +9,7 @@ permalink: docs/guides/drupal-unhosted/prepare
 anchorid: prepare
 editpath: drupal/drupal-unhosted/03-prepare.md
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]

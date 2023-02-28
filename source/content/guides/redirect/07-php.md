@@ -3,7 +3,7 @@ title: Redirects Guide
 subtitle: Redirect with PHP
 description: Learn how to redirect with PHP.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains]
 cms: [--]
 audience: [development]

@@ -10,7 +10,7 @@ anchorid: code
 editpath: hosted/07-code.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update]
 cms: [drupal9, drupal10]
 audience: [development]

@@ -3,7 +3,7 @@ title: The New Pantheon Dashboard
 subtitle: Personal Settings
 description: Customize and manage your personal settings.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [dashboard]
 cms: [--]
 audience: [development, marketing, sysadmin, agency, business]

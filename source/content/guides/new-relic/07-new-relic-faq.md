@@ -3,7 +3,7 @@ title: New Relic Performance Monitoring on Pantheon
 subtitle: New Relic FAQ
 description: Get answers to your New Relic questions.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [track, faq]
 cms: [--]
 audience: [development, sysadmin]

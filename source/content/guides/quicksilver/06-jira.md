@@ -3,7 +3,7 @@ title: Quicksilver on Pantheon
 subtitle: Integrate Jira on Pantheon with Quicksilver Hooks
 description: Learn how to integrate Jira with the Pantheon Site Dashboard.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [--]
 audience: [development]

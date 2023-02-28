@@ -3,7 +3,7 @@ title: PHP on Pantheon
 subtitle: Configure Your wp-config.php File
 description: Adjust and customize your WordPress configuration file on Pantheon.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [php]
 cms: [wordpress]
 audience: [development]

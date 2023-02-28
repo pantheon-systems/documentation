@@ -3,7 +3,7 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Troubleshooting WordPress
 description: Explore WordPress troubleshooting solutions.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms, troubleshooting]
 cms: [wordpress]
 audience: [development]

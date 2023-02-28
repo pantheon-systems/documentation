@@ -3,7 +3,7 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Create a New WordPress Site
 description: Create a WordPress site on Pantheon.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms]
 cms: [wordpress]
 audience: [development]

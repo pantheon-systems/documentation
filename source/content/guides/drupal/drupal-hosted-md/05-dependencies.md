@@ -10,7 +10,7 @@ anchorid: dependencies
 editpath: drupal/drupal-hosted-md/05-dependencies.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update]
 cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]

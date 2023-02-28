@@ -3,7 +3,7 @@ title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Deploy to Dev
 description: Learn how to deploy your site to your Dev environment.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal]
 audience: [development]
