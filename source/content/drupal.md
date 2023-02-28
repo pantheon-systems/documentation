@@ -13,7 +13,7 @@ product: [integrated-composer]
 integration: [--]
 ---
 
-Drupal 10 is available to all new sites, and is available as an [upgrade path for Drupal 9 sites](https://docs.pantheon.io/drupal-10#upgrade-a-drupal-9-site-to-drupal-10). See more information about [Drupal 10 on Pantheon](https://docs.pantheon.io/drupal-10).
+Drupal 10 is available to all new sites, and is available as an [upgrade path for Drupal 9 sites](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10). Refer to [Drupal 10 on Pantheon](/drupal-10) for more information.
 
 Drupal 9 is similarly available on Pantheon to all new sites, and as an [upgrade path for Drupal 8+ sites](/drupal-migration).
 
