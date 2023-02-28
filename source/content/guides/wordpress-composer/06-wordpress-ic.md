@@ -3,7 +3,7 @@ title: WordPress with Integrated Composer on Pantheon
 subtitle: Use Integrated Composer with WordPress 
 description: Learn how to use Integrated Composer with WordPress on Pantheon.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [dependencies]
 cms: [wordpress]
 audience: [development]

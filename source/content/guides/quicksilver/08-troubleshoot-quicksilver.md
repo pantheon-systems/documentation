@@ -3,7 +3,7 @@ title: Quicksilver on Pantheon
 subtitle: Troubleshoot
 description: Review solutions to common Quicksilver troubleshooting scenarios.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate, troubleshooting]
 cms: [--]
 audience: [development]

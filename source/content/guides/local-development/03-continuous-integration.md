@@ -6,7 +6,7 @@ tags: [continuous-integration, workflow]
 contributors: [ccjjmartin]
 newtype: guide
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [drupal, wordpress]
 audience: [development]

@@ -11,7 +11,7 @@ anchorid: contrib-custom
 editpath: drupal/drupal-hosted-createcustom/05-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update, custom-upstreams]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]

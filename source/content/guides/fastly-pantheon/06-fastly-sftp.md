@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-sftp
 anchorid: fastly-sftp
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [sftp]
 cms: [--]
 audience: [development]

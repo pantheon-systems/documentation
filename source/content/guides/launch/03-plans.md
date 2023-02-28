@@ -8,7 +8,7 @@ tags: [agencies, billing, launch, webops]
 anchorid: plans
 permalink: docs/guides/launch/plans/
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [billing, plans, accounts]
 cms: [wordpress, drupal]
 audience: [agency, business]

@@ -3,7 +3,7 @@ title: Redirects Guide
 subtitle: Advanced Redirects and Restrictions
 description: Configure custom redirect logic for specific scenarios.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains]
 cms: [--]
 audience: [development]

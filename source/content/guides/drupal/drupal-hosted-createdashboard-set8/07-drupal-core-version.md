@@ -10,7 +10,7 @@ anchorid: drupal-core-version
 editpath: drupal-hosted-createdashboard-set8/07-drupal-core-version.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate, git]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]

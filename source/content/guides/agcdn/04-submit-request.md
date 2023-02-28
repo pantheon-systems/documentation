@@ -10,7 +10,7 @@ showtoc: true
 permalink: docs/guides/agcdn/submit-request
 anchorid: submit-request
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [help]
 cms: [--]
 audience: [development]

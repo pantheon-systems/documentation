@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/environment-configuration/restore-environment-backup
 anchorid: restore-environment-backup
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [backup]
 cms: [drupal9]
 audience: [development]

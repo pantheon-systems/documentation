@@ -7,7 +7,7 @@ layout: guide
 permalink: docs/guides/drush/drush-sql-queries
 anchorid: drush-sql-queries
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cli]
 cms: [drupal]
 audience: [development]

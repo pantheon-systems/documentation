@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/launch/redirects
 anchorid: launch-redirects
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains, launch]
 cms: [wordpress, drupal]
 audience: [agency, development]

@@ -10,7 +10,7 @@ permalink: docs/guides/legacy-dashboard/user-dashboard
 anchorid: user-dashboard
 editpath: legacy-dashboard/05-user-dashboard.md
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [accounts, dashboard]
 cms: [wordpress, drupal]
 audience: [agency, business]

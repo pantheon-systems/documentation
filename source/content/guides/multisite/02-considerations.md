@@ -5,7 +5,7 @@ description: Review important WordPress Multisite considerations.
 layout: guide
 type: guide
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms]
 cms: [wordpress]
 audience: [development]

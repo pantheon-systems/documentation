@@ -11,7 +11,7 @@ permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate, test, update, faq]
 cms: [--]
 audience: [development]

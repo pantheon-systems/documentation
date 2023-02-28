@@ -10,7 +10,7 @@ anchorid: deploy-dev
 editpath: drupal/drupal-hosted-createcustom/09-deploy-dev.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update, custom-upstreams]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]

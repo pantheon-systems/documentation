@@ -8,7 +8,7 @@ tags: [dns, https, launch, webops]
 permalink: docs/guides/launch/domains/
 anchorid: domains
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains, launch]
 cms: [wordpress, drupal]
 audience: [agency, development]

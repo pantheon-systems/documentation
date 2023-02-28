@@ -10,7 +10,7 @@ anchorid: drupal-core-version
 editpath: drupal/drupal-hosted-md/07-drupal-core-version.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update]
 cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]

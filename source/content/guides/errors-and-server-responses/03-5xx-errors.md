@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/5xx-errors
 anchorid: 5xx-errors
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [issues]
 cms: [drupal, wordpress]
 audience: [development]

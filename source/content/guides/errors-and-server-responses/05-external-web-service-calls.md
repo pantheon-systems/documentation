@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/external-web-service-calls
 anchorid: external-web-service-calls
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [issues]
 cms: [drupal, wordpress]
 audience: [development]

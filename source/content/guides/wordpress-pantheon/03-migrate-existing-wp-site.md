@@ -3,7 +3,7 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Migrate an Existing WordPress Site
 description: Migrate an existing WordPress site to Pantheon.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms]
 cms: [wordpress]
 audience: [development]

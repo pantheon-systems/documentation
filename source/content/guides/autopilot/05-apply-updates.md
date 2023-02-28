@@ -11,7 +11,7 @@ permalink: docs/guides/autopilot/apply-updates/
 editpath: autopilot/05-apply-updates.md
 reviewed: "2022-12-14"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate, test, update, faq]
 cms: [--]
 audience: [development]

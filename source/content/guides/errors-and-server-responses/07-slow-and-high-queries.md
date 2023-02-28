@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/errors-and-server-responses/slow-and-high-queries
 anchorid: slow-and-high-queries
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [issues]
 cms: [drupal, wordpress]
 audience: [development]

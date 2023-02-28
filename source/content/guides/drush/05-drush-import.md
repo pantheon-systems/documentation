@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/drush/drush-import
 anchorid: drush-import
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cli]
 cms: [drupal]
 audience: [development]

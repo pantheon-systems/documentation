@@ -4,7 +4,7 @@ subtitle: Install and Configure Lando for WordPress
 description: Install and configure Lando for WordPress local development.
 contributors: [digisavvy]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [wordpress]
 audience: [development]

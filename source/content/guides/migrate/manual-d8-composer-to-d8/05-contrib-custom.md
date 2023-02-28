@@ -3,7 +3,7 @@ title: Update a Drupal Site That Is Managed With Composer From Another Platform
 subtitle: Add Contrib and Custom Code
 description: Learn how to add Contrib and custom code.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal]
 audience: [development]

@@ -3,7 +3,7 @@ title: Object Cache (formerly Redis)
 subtitle: FAQs
 description: Get answers to your Object Cache questions.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cache]
 cms: [--]
 audience: [development]

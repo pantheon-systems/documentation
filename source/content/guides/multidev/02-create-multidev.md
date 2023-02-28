@@ -3,7 +3,7 @@ title: Multidev
 subtitle: Create a Multidev Environment
 description: Learn how to create a Multidev environment on Pantheon.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [multidev]
 cms: [--]
 audience: [development]

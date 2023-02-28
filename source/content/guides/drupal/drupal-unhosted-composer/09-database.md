@@ -10,7 +10,7 @@ anchorid: database
 editpath: drupal/drupal-unhosted-composer/09-database.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal9, drupal8, drupal, drupal10]
 audience: [development]

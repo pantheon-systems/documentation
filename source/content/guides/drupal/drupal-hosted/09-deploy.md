@@ -10,7 +10,7 @@ anchorid: deploy
 editpath: hosted/09-deploy.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate, deploy]
 cms: [drupal9, drupal10]
 audience: [development]

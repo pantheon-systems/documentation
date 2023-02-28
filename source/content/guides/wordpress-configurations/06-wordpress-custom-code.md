@@ -3,7 +3,7 @@ title: WordPress Configurations Guide
 subtitle: Manage Custom Code for WordPress with Plugins
 description: Learn how to manage custom plugins or themes for WordPress sites with GitHub Updater or WP Pusher.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [config]
 cms: [wordpress]
 audience: [development]

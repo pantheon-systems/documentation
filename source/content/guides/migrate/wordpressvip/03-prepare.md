@@ -3,7 +3,7 @@ title: Migrate a Site From WordPress VIP to Pantheon Using Guided Migration
 subtitle: Prepare
 description: Get your site ready for migration.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [wordpress]
 audience: [development]

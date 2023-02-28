@@ -4,7 +4,7 @@ subtitle: Pantheon Commands for WP-CLI
 description: Special commands to interact with Pantheon via WP-CLI
 contributors: [ryanwagner]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cli]
 cms: [wordpress]
 audience: [development]

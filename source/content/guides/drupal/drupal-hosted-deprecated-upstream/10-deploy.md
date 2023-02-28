@@ -10,7 +10,7 @@ anchorid: deploy
 editpath: drupal/drupal-hosted-deprecated-upstream/11-deploy.md
 reviewed: "2021-03-31"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [deploy]
 cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]

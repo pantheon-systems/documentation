@@ -3,7 +3,7 @@ title: Redirects Guide
 subtitle: Redirect to HTTPS
 description: Learn how to redirect HTTPS sites.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains]
 cms: [--]
 audience: [development]

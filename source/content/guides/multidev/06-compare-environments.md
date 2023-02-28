@@ -3,7 +3,7 @@ title: Multidev
 subtitle: Compare Multidev Environments
 description: Learn how to compare environments in Multidev.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [multidev]
 cms: [--]
 audience: [development]

@@ -11,7 +11,7 @@ anchorid: deploy-dev
 editpath: drupal/drupal-hosted-createempty-md/09-deploy-dev.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview, migrate]
 cms: [drupal8, drupal9, drupal10]
 audience: [agency, development]

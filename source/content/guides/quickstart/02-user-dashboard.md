@@ -3,7 +3,7 @@ title: Quick Start
 subtitle: Personal Workspace
 description: In part two of our Quick Start guide, learn about the Pantheon Personal Workspace.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]

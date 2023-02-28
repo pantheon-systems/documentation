@@ -3,7 +3,7 @@ title: Get Support
 subtitle: Contact Support
 description: Learn about different channels of support.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [help]
 cms: [--]
 audience: [agency, business, development, marketing, sysadmin]

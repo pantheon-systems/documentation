@@ -10,7 +10,7 @@ anchorid: database
 editpath: drupal/drupal-hosted-btworkflow/08-database.md
 reviewed: "2022-12-12"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate, database]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]

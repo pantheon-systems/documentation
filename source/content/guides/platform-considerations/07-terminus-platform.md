@@ -3,7 +3,7 @@ title: Platform Considerations
 subtitle: Terminus Platform Support
 description: Learn more about Terminus support on the Pantheon platform. 
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]

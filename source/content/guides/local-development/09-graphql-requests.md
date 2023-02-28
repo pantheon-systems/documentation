@@ -3,7 +3,7 @@ title: Local Development on Pantheon
 subtitle: GraphQL Requests
 description: Learn about GraphQL best practices and troubleshooting tips.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [automate]
 cms: [drupal, wordpress]
 audience: [development]

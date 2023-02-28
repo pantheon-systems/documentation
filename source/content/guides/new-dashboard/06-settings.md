@@ -3,7 +3,7 @@ title: The New Pantheon Dashboard
 subtitle: Settings
 description: Manage site plans, view plan history, and change billing preferences
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [dashboard]
 cms: [--]
 audience: [development, marketing, sysadmin, agency, business]

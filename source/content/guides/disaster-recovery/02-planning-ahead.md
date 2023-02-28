@@ -11,7 +11,7 @@ permalink: docs/guides/disaster-recovery/planning-ahead
 anchorid: disaster-recovery
 editpath: disaster-recovery/02-planning-ahead.md
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [sysadmin]

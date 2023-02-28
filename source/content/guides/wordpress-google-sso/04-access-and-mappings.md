@@ -4,7 +4,7 @@ subtitle: Access Permissions and Mappings
 description: Provide access to your new SAML app for your Google users, and map the proper attributes
 contributors: [alexfornuto, danielbachhuber]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [security]
 cms: [wordpress]
 audience: [development]

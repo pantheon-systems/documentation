@@ -3,7 +3,7 @@ title: Get Support
 subtitle: Copy cURL Data
 description: Learn how to copy cURL data in the browser.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [help]
 cms: [--]
 audience: [agency, business, development, marketing, sysadmin]

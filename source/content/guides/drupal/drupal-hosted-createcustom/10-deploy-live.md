@@ -10,7 +10,7 @@ anchorid: deploy-live
 editpath: drupal/drupal-hosted-createcustom/10-deploy-live.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [update, custom-upstreams]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]

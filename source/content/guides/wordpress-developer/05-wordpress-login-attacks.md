@@ -3,7 +3,7 @@ title: WordPress Developer's Guide
 subtitle: Avoid WordPress Login Attacks
 description: Learn how to avoid WordPress login attacks.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [security]
 cms: [wordpress]
 audience: [development]

@@ -3,7 +3,7 @@ title: Object Cache (formerly Redis)
 subtitle: Troubleshoot
 description: Review solutions to common troubleshooting scenarios for Object Cache.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cache, troubleshooting]
 cms: [--]
 audience: [development]
