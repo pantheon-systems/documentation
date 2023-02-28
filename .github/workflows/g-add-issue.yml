@@ -1,4 +1,4 @@
-ame: Add issue to project
+name: Add issue to project
 on:
   issues:
     types:
