@@ -24,7 +24,6 @@ permalink: docs/guides/woocommerce/
 nexturl: guides/woocommerce/store-setup/
 nextpage: Store Setup
 editpath: woocommerce/01-introduction.md
-completiontime: 1 hour
 image: guides/woocommerce/WooCommerce-logo-400-200
 searchboost: 200
 ---
