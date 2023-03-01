@@ -2,30 +2,23 @@
 title: Quick Start
 subtitle: Connection Modes
 description: In part seven of our Quick Start guide, learn how Pantheon users take advantage of Git and SFTP mode to develop their sites.
-quickstart: true
-anchorid: connection-modes
-generator: pagination
-layout: guide
-categories: [get-started]
+contenttype: [guide]
+innav: [false]
+categories: [overview]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, dashboard, git, sftp, workflow]
-type: guide
 showtoc: true
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/connection-modes/
-nexturl: guides/quickstart/ui-changes/
-nextpage: On-Server Dev, Part 1
-previousurl: guides/quickstart/clone-live-to-dev/
-previouspage: Clone Live to Dev
+anchorid: connection-modes
 editpath: quickstart/07-connection-modes.md
-image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’ll learn how to connect to your Dev environment and change code.
 
-On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you can connect and work via [SFTP](/sftp). Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
+On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you can connect and work via [SFTP](/guides/sftp). Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
 
 ![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
 
@@ -35,7 +28,7 @@ Navigate to your **Site Dashboard**, select the  <Icon icon={"wrench"} text={"De
 
 You can develop locally with Git Connection Mode. Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who prefers local development, it's an efficient way to interact with our platform: develop locally, commit, and push code to your Dev environment.
 
-For more information, refer to [Local Development](/local-development) and [Git on Pantheon](/guides/git).
+For more information, refer to [Local Development](/guides/local-development) and [Git on Pantheon](/guides/git).
 
 ## SFTP Connection Mode
 

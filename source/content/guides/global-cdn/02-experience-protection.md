@@ -2,13 +2,19 @@
 title: Pantheon Global CDN
 subtitle: Confirm Experience Protection
 description: Provide an uninterrupted experience for your users.
-categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/experience-protection
 anchorid: experience-protection
+contenttype: [guide]
+innav: [false]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 Experience Protection provides a seamless, uninterrupted experience for your users. Global CDN will serve a cached version of your page instead of displaying an error if the server is not responding and can't serve a new copy of the page. Global CDN will display the cached version even if it is _stale cache_ (expired). 
@@ -43,7 +49,7 @@ You can adjust the length of time before the site's cached content is considered
 
 - [Drupal](/drupal-cache#drupal-8-performance-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
 
-- [WordPress](/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
+- [WordPress](/guides/wordpress-configurations/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
 
 ### Session-Style Cookies or `NO_CACHE` Cookies 
 

@@ -2,7 +2,13 @@
 title: Secure Development on Pantheon
 subtitle: Secure Connections to Pantheon Services via TLS or SSH Tunnels
 description: Detailed information on securely connecting to your database and caching service using SSH tunnels.
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [security]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [database, local, ssh, redis, webops]
 contributors: [bwood]
 layout: guide
@@ -186,7 +192,7 @@ SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to 
 Fatal: Could not read from remote repository.
 ```
 
-Review [Port 2222 Blocked Workaround](/port-2222) for more information.
+Review [Port 2222 Blocked Workaround](/guides/sftp/port-2222) for more information.
 
 ## More Resources
 

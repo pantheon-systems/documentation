@@ -2,12 +2,18 @@
 title: Launch Essentials
 subtitle: Set a Primary Domain for SEO
 description: Redirect users to the correct domains and paths for your site.
-categories: [go-live]
 tags: [dns, https, launch, webops]
 layout: guide
 showtoc: true
 permalink: docs/guides/launch/redirects
 anchorid: launch-redirects
+contenttype: [guide]
+innav: [false]
+categories: [domains, launch]
+cms: [wordpress, drupal]
+audience: [agency, development]
+product: [dashboard, terminus]
+integration: [--]
 ---
 
 This section provides information on how to redirect all traffic to a primary domain, which is a best practice for SEO. This means if you choose `www.example.com` as your primary domain, then if a visitor navigates to a bare domain, for example, `example.com` (or any other domain you have connected to your site), they will end up on `https://www.example.com`.
@@ -18,7 +24,7 @@ Choose one of the following options to configure the primary domain.
 
 ### Update URL References (WordPress)
 
-WordPress site admins must ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
+WordPress site admins must ensure that all URLs in the site's database are updated. See [Fix WordPress Content References to the Wrong Domain After Cloning](/guides/wordpress-developer/wordpress-broken-links#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) for more information.
 
 ### Configure a Long-Duration HSTS Header
 

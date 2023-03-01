@@ -2,7 +2,6 @@
 title: Platform and Custom Domains
 subtitle: Platform Domains
 description: Learn more about Pantheon platform domains.
-categories: [go-live]
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
 contributors: [whitneymeredith]
@@ -10,6 +9,13 @@ layout: guide
 showtoc: true
 permalink: docs/guides/domains/platform-domains
 anchorid: platform-domains
+contenttype: [guide]
+innav: [false]
+categories: [domains]
+cms: [--]
+audience: [development, sysadmin]
+product: [dashboard]
+integration: [--]
 ---
 
 This section provides information Pantheon platform domains.

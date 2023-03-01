@@ -1,11 +1,16 @@
 ---
-title: WordPress Site Networks
+title: WordPress Multisite
 subtitle: Multisite Governance
-description: Learn more about governance with WordPress Site Networks.
+description: Learn more about governance with WordPress Multisites.
 layout: guide
 type: guide
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [cms]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/multisite-governance/
 editpath: multisite/04-multisite-governance.md

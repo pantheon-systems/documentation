@@ -2,7 +2,13 @@
 title: Migrate a Site From Platform.sh to Pantheon Using Guided Migration
 subtitle: Troubleshooting
 description: Resolve issues that may occur during migration.
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [migrate, troubleshooting]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide

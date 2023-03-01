@@ -4,8 +4,13 @@ subtitle: Install Plugins
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 anchorid: plugins
 layout: guide
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [git]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, plugins, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/plugins/

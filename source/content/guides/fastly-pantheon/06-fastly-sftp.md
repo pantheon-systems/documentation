@@ -2,13 +2,19 @@
 title: Fastly on Pantheon
 subtitle: Integrate Your Fastly Account on Pantheon with Your SFTP
 description: Learn how to use your Fastly account on Pantheon to send data to your SFTP server.
-categories: [develop]
 tags: [cms, logs, sftp]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-sftp
 anchorid: fastly-sftp
+contenttype: [guide]
+innav: [false]
+categories: [sftp]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [fastly]
 ---
 
 This section provides information on integrating your Fastly account on Pantheon with your SFTP server. SFTP integration can be a good solution if you are looking to capture your site's analytics.
@@ -34,6 +40,6 @@ Follow the steps below to send data to your SFTP sever from your Fastly account 
 
 - [Fastly](https://explore.fastly.com)
 
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
 
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)

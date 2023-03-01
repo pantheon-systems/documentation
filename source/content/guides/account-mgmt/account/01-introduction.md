@@ -2,7 +2,13 @@
 title: "Manage Your Account"
 subtitle: Introduction
 description: Learn how to create, delete, and recover your account.
-categories: [account-mgmt]
+contenttype: [guide]
+innav: [true]
+categories: [accounts]
+cms: [--]
+audience: [business]
+product: [--]
+integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide

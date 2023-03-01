@@ -2,7 +2,13 @@
 title: Object Cache (formerly Redis)
 subtitle: Introduction
 description: Understand how to use Object Cache as a drop-in caching mechanism for your Pantheon site.
-categories: [performance]
+contenttype: [guide]
+innav: [true]
+categories: [cache]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
@@ -38,5 +44,5 @@ All plans, except for the Basic plan, can use Object Cache. Sandbox site plans c
 
 - [Site Plans FAQs](/guides/account-mgmt/plans/faq)
 - [Drupal Performance and Caching Settings](/drupal-cache)
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
 - [Debug Caching Issues](/debug-cache)

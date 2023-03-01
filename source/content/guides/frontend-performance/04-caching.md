@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Caching
 description: Caching strategies for improved performance.
 anchorid: caching
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,13 @@ permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: [guide]
+innav: [false]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page includes information on how to improve optimization with caching.
@@ -222,7 +228,7 @@ Working across many environments presents opportunities for configuration change
 
 <Tab title="WordPress" id="wp-config-get" active={true}>
 
-The [Pantheon Page Cache plugin](/wordpress-cache-plugin) is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
+The [Pantheon Page Cache plugin](/guides/wordpress-configurations/wordpress-cache-plugin) is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
 1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
 

@@ -2,12 +2,20 @@
 title: Test Custom Upstream Changes
 subtitle: Test Custom Upstream Changes Before Release
 description: Create a test version of your Custom Upstream to review changes.
-categories: [develop]
-tags: [upstreams, workflow, webops]
+tags: [upstreams, workflow, webops, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/test-custom-upstream
+contributors: [--]
 anchorid: test-custom-upstream
+contenttype: [guide]
+innav: [false]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstreams]
+integration: [--]
+reviewed: "2022-12-09"
 ---
 
 
@@ -15,7 +23,7 @@ Maintainers of [Custom Upstreams](/guides/custom-upstream) bear the responsibili
 
 <Alert title="Note" type="info">
 
-Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) may cause incompatibilities with the platform (for example, the clear cache button, launch checks, cron, and more).
+Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed.git) may cause incompatibilities with the platform (for example, the clear cache button, launch checks, cron, and more).
 
 </Alert>
 
@@ -87,6 +95,14 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
 
   </Tab>
 
+  <Tab title="Drupal (Latest)" id="d10">
+
+  ```git
+  git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+  ```
+
+  </Tab>
+
   </TabList>
 
 2. Add the test site you created above as a remote to your Custom Upstream by grabbing the test site's repository URL on Pantheon using [Terminus](/terminus). Replace `<site>` with your site name:
@@ -128,6 +144,15 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
   ```git
   git fetch pantheon-drops-7
   git merge pantheon-drops-7/master
+  ```
+
+  </Tab>
+
+  <Tab title="Drupal (Latest)" id="d10">
+
+  ```git
+  git fetch pantheon-drupal-10
+  git merge pantheon-drupal-10/master
   ```
 
   </Tab>

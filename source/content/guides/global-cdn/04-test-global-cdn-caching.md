@@ -2,13 +2,19 @@
 title: Pantheon Global CDN
 subtitle: Test Global CDN Caching
 description: Detailed information on how to determine if CDN caching is working on your site.
-categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/test-global-cdn-caching
 anchorid: test-global-cdn-caching
+contenttype: [guide]
+innav: [false]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 This section provides steps on how to test your Global CDN caching.
@@ -105,7 +111,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
   - Drupal's internal page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7) for more information. **Drupal Only**
 
-- **X-Generator: Drupal 7 (https://www.drupal.org/)**
+- **X-Generator: Drupal (https://www.drupal.org/)**
 
   - Drupal built the page. **Drupal Only**
 
@@ -131,4 +137,4 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 - [Drupal Performance and Caching Settings](/drupal-cache)
 
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)

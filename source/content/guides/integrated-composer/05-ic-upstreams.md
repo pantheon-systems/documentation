@@ -3,13 +3,19 @@ title: Integrated Composer
 subtitle: Use Upstream with Integrated Composer
 description: Learn how to use Upstream with Integrated Composer.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-upstreams
 anchorid: ic-upstreams
+contenttype: [guide]
+innav: [false]
+categories: [dependencies]
+cms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides information on how to use Upstream with Integrated Composer, including steps to add dependencies to your Upstream.
@@ -24,47 +30,35 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 ### How to Add Dependencies to Your Upstream
 
-1. [Clone the Git repository](/guides/git/git-config#clone-your-site-codebase) from the Site Dashboard.
+1. Clone the Git repository for your upstream.
 
-1. Change into the Upstream's configuration directory:
-
-   - Drupal:
+1. Require the upstream management package if you have not already:
 
     ```bash{promptUser: user}
-    cd upstream-configuration
+    composer require pantheon-systems/upstream-management
     ```
 
-   - WordPress:
+1. Run the `composer upstream:require` command for each dependency:
 
     ```bash{promptUser: user}
-    cd upstream-config 
+    composer upstream-require drupal/pkg-name [--no-update]
     ```
-
-1. Run the `composer require` command for each dependency:
-
-    ```bash{promptUser: user}
-    composer require drupal/pkg-name --no-update
-    ```
-
-     - `--no-update` tells Composer to disable automatic updates of the dependency. This makes Composer faster when adding dependencies to the Upstream as shown here.
-     - `--no-update` should not be included when adding dependencies to a site.
-
-1. _Optional_ . Set or increment the current configuration version. This step can be skipped initially. Only perform this step if you are prompted to update the Composer config version.
-
-     - Confirm the version:
-
-        ```bash{outputLines:2}
-        composer config version
-        ```
-
-     - Increment the config version number when you update dependencies. If you don't increment the version number, Composer will ignore updated dependencies.
-     - Replace `1.0.1` in this example with the latest version number:
-
-       ```bash{promptUser: user}
-       composer config version 1.0.1
-       ```
 
 1. Commit and push your changes.
+
+### How to Update Dependencies in Your Upstream
+
+You may need to pin specific versions of your dependencies in your upstream. This is normally done with the `composer.lock` file. However, including the `composer.lock` file in the root of the upstream causes merge conflicts with your downstream sites. You can use the `upstream:update-dependencies` composer command to solve this problem.
+
+1. Run `composer update-upstream-dependencies` in your custom upstream repository. The `upstream:update-dependencies` command will:
+
+    - Create or update a `upstream-configuration/composer.lock` file.
+
+    - Create or update a `upstream-configuration/locked/composer.json` file with all packages from `composer.lock` and their pinned versions.
+
+    - Update the top-level `composer.json` repositories section for `upstream-configuration` to use `upstream-configuration/locked` instead of just `upstream-configuration` (if not done previously).
+
+1. Commit the changes so that you can start using pinned versions in your downstream sites. This allows you to make sure that you use specific versions for the packages in your upstream.
 
 ## More Resources
 
@@ -72,6 +66,6 @@ Upstream refers to the source code that is hosted in the Pantheon code repositor
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
 
-- [Migrate a Custom Upstream to Drupal 9](/guides/drupal-9-hosted-createcustom)
+- [Migrate a Custom Upstream to Drupal](/guides/drupal-hosted-createcustom)
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)

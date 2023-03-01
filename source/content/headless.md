@@ -1,9 +1,15 @@
 ---
 title: Running WordPress and Drupal as a Backend API
 description: Learn about headless development models for decoupled architecture on Pantheon.
-categories: [develop]
 tags: [modules, plugins]
 contributors: [eabquina, rachelwhitton]
+contenttype: [doc]
+innav: [true]
+categories: [api]
+cms: [drupal, wordpress]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 Pantheon supports running WordPress and Drupal as an API (Application Programming Interface) for the backend of headless sites, which enables the CMS to interact with external frontend applications over HTTP requests.
 
@@ -77,15 +83,15 @@ Refer to the [Rest API Handbook](https://developer.wordpress.org/rest-api/) from
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-api">
+<Tab title="Drupal" id="d7-api">
 
-Web Services are implemented through various plugins in Drupal 7.
+Web Services are implemented through various plugins in Drupal.
 
   - [RESTful](https://www.drupal.org/project/restful)
   - [RESTful Web Services](https://www.drupal.org/project/restws)
   - [Services](https://www.drupal.org/project/services)
 
-The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend the Drupal 7 functionalities made available to the API.
+The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend the Drupal functionalities made available to the API.
 
 <Alert title="Note" type="info">
 

@@ -2,7 +2,13 @@
 title: Redirects Guide
 subtitle: Redirect with PHP
 description: Learn how to redirect with PHP.
-categories: [go-live]
+contenttype: [guide]
+innav: [false]
+categories: [domains]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dns, https, redirects]
 layout: guide
 contributors: [wordsmither]

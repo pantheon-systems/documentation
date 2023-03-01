@@ -1,10 +1,16 @@
 ---
 title: Pantheon Open Source Software Support Levels
 description: Learn about Pantheon support levels for open source software
-categories: [get-started, oss]
 tags: [collaborate]
 contributors: [greg-1-anderson, kporras07]
 reviewed: "2022-03-02"
+contenttype: [doc]
+innav: [true]
+categories: [help]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 At Pantheon, we appreciate open source contributions. In an effort to effectively maintain our public repositories in [GitHub](https://github.com/orgs/pantheon-systems/repositories), we tag each Pantheon repository with a support level badge. The badge is typically displayed in the repository's `README.md`. 

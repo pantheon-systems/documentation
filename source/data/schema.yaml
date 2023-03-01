@@ -1,0 +1,158 @@
+- tag: audience
+  description: 'Type of reader this doc is best suited for'
+  type: 'list'
+  required: 'no'
+  multi: 'yes'
+  valid-values: 
+    - group: 'None'
+      values: [agency, business, development, marketing, sysadmin]
+- tag: categories
+  description: 'Organizes content by specific, pre-defined categories. This is probably the most important tag.  Will likely be used to dynamically generate navigation and landing pages.'
+  type: 'list'
+  required: 'yes'
+  multi: 'yes'
+  valid-values:
+    - group: 'Getting Started'
+      values: [overview, dashboard, create, migrate]
+    - group: 'Web Ops'
+      values: [custom-upstreams, multidev, workflows]
+    - group: 'Dev Tools'
+      values: [api, cli, config, database, files, git, localdev, php, sftp]
+    - group: 'Manage Sites'
+      values: [automate, backup, cache, dependencies, ecommerce, email, logs, optimize, personalization, search, test, track, traffic, update]
+    - group: 'Security'
+      values: [security]
+    - group: 'Going Live'
+      values: [domains, launch]
+    - group: 'Account Management'
+      values: [accounts, billing, organizations, plans]
+    - group: 'Get More Help'
+      values: [help, issues, troubleshooting, faq]
+- tag: contenttype
+  description: 'The type of document this is'
+  type: 'list'
+  required: 'yes'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [api, doc, guide, landing, partial, product]
+- tag: contributors
+  description: 'The people who worked on this doc.  Includes tech writers, SMEs.  Can even include a generic member of the public.'
+  type: 'list'
+  required: 'no'
+  multi: 'yes'
+  valid-values:
+    - group: 'None'
+      values: [contributors]
+- tag: description
+  description: 'A brief description of the doc.  Appears at the beginning of the doc.'
+  type: 'string'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: editpath
+  description: 'Used for guides, where the permalink is different than the filename.  Used when creating a PR/issue from a guide page.'
+  type: 'string'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: innav
+  description: 'Should this document appear in any navigation or landing pages?'
+  type: 'boolean'
+  required: 'yes'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [truefalse]
+- tag: integration
+  description: 'The non-Pantheon owned product to which this content refers'
+  type: 'list'
+  required: 'no'
+  multi: 'yes'
+  valid-values:
+    - group: 'None'
+      values: [modules, plugins]
+- tag: nexturl
+  description: 'For guides, the URL for the Next button.  Use when the files are not labeled sequentially (01, 02)'
+  type: 'string'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: permalink
+  description: 'For guides, the pretty URL.  Use when the files ARE labeled sequentially (01, 02)'
+  type: 'string'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: previousurl
+  description: 'For guides, the URL for the Previous button.  Use when the files are not labeled sequentially (01, 02)'
+  type: 'string'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: product
+  description: 'The Pantheon product to which this content refers'
+  type: 'list'
+  required: 'no'
+  multi: 'yes'
+  valid-values:
+    - group: 'None'
+      values: [autopilot, build-tools, cdn, composer, custom-upstreams, dashboard, decoupled, edge, enterprise-billing-center, integrated-composer, localdev, newrelic, search, secure-integration, siteportfolio, terminus]
+- tag: provider
+  description: 'Used to populate the title in a link to a DNS doc page'
+  type: 'string'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: reviewed
+  description: 'The date this file was last reviewed by a member of the docs team.'
+  type: 'date' #YYYY-MM-DD
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [date]
+- tag: showtoc
+  description: 'Indicates if the document will display a Table of Contents'
+  type: 'boolean'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [truefalse]
+- tag: sub-title
+  description: 'Used for guides, to provide a page level title (where as the title tag contains the guide title.)'
+  type: 'string'
+  required: 'no'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: tags
+  description: 'Keywords that can be used for SEO and site search.  These words are not displayed in the page, or contained in any other front matter.'
+  type: 'list'
+  required: 'no'
+  multi: 'yes'
+  valid-values:
+    - group: 'None'
+      values: [text]
+- tag: title
+  description: 'The title of the document'
+  type: 'string'
+  required: 'yes'
+  multi: 'no'
+  valid-values:
+    - group: 'None'
+      values: [text]

@@ -2,15 +2,21 @@
 title: Pantheon Autopilot
 subtitle: Troubleshoot Autopilot Error Messages
 description: Diagnose and remedy some common Autopilot errors.
-categories: [automate]
 tags: [autopilot, troubleshoot, webops]
 type: guide
 layout: guide
 showtoc: true
 anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
-editpath: autopilot/05-troubleshoot.md
-reviewed: "2022-03-30"
+editpath: autopilot/07-troubleshoot.md
+reviewed: "2022-11-01"
+contenttype: [guide]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
+audience: [development]
+product: [autopilot]
+integration: [--]
 ---
 
 This page helps troubleshoot common issues that you may encounter when using Autopilot.
@@ -161,8 +167,9 @@ This error message most likely results from a merge conflict when applying upstr
 
 Resolve conflicts to apply updates. Use the auto-resolve option in the Dashboard to resolve conflicts in favor of the upstream Git repository. Alternatively, you can manually pull changes using Git, resolve the conflicts, and then push the updates to your Pantheon site. For more information, refer to the documentation on [Applying Upstream Updates](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
-If the error is diplayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates
-](/guides/integrated-composer/ic-troubleshooting) and [Adding Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams).
+If the error is displayed due to a failed Composer build, use `git diff` to view changes, and examine the error in the log. Composer build logs are only available after the action completes or fails. For more information, refer to the documentation on [Troubleshooting Code Syncs and Upstream Updates](/guides/integrated-composer/ic-troubleshooting) and [Adding Dependencies to Your Upstream](/guides/integrated-composer/ic-upstreams).
+
+This error can also display if some of the updates failed testing. This results in partial updates, in which the updates that passed testing are applied, while the updates that failed testing are not applied. Refer to the [Failing Tests](/guides/autopilot/tests-results/#failing-tests) section for more information on how to resolve failed tests.
 
 </Accordion>
 
@@ -346,11 +353,71 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 ### Diagnosis
 
-Site is running a framework that is not Drupal, Drupal 8, or WordPress. Currently, WordPess Multisite (`wordpress_network`) is not supported.
+Site is running a framework that is not Drupal or WordPress. Currently, WordPress Multisite (`wordpress_network`) is not supported.
 
 ### Solution
   
-Contact support for assistance if running a framework that is not Drupal, Drupal 8, or WordPress. Any other framework, including WordPress Multisite Network is not supported.
+Contact support for assistance if running a framework that is not Drupal or WordPress. Any other framework, including WordPress Multisite Network is not supported.
+
+</Accordion>
+
+## CLI Tool Failed
+
+<Accordion title="We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected." id="failed-cli-tool" icon="info-sign">
+
+### Diagnosis
+
+There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
+
+Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for an unexpected output or errors. Alternatively, you can use the command `$SITE.autopilot` for the Autopilot environment.
+  
+### Solution
+  
+After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Quicksilver is Unavailable
+
+<Accordion title="We could not execute some Quicksilver scripts on this site." id="no-quicksilver" icon="info-sign">
+
+### Issue
+
+Quicksilver scripts failed to execute on the site. 
+  
+### Solution
+  
+Contact Support[/support] for assistance.
+  
+</Accordion>
+
+## Database Could Not Be Updated
+
+<Accordion title="We ran into an issue with Autopilot because the database could not be updated." id="no-database-updates" icon="info-sign">
+
+### Issue
+
+An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated. 
+  
+### Solution
+  
+Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
+  
+</Accordion>
+
+## Upstreams Could Not Be Merged
+
+<Accordion title="We could not apply upstream updates because the upstreams could not be merged." id="upstream-no-common-ancestor" icon="info-sign">
+
+### Issue
+
+This error is distinct from a merge conflict, and is encountered when there is no shared Git history between the site's commits and the upstream's commits. This error is most often encountered when the site's upstream has been changed, or when a different Git history has been force-pushed for the site's code repository.
+
+### Solution
+
+Update the site's code or the upstream so that the site and upstream share a common history.
+
+You can also disable upstream updates if you do not want Autopilot to maintain upstream updates, including core updates. Autopilot will continue to update plugins, themes, and modules.
 
 </Accordion>
 
@@ -363,3 +430,4 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
+

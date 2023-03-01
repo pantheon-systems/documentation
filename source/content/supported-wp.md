@@ -1,9 +1,15 @@
 ---
 title: Supported WordPress Versions
 description: Learn which versions of WordPress are currently supported, as well as additional compatibility information.
-categories: [platform]
 tags: [libraries, updates]
 contributors: [wordsmither]
+contenttype: [doc]
+innav: [true]
+categories: [cms]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 <Partial file="outdated-core.md" />

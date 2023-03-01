@@ -2,7 +2,13 @@
 title: Object Cache (formerly Redis)
 subtitle: Troubleshoot
 description: Review solutions to common troubleshooting scenarios for Object Cache.
-categories: [performance]
+contenttype: [guide]
+innav: [false]
+categories: [cache, troubleshooting]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
@@ -105,7 +111,7 @@ Install and enable the module to resolve this issue.
 
 ### Heavy Redis Transactions Tracing Back to a Specific Plugin (WordPress)
 
-A page load with 2,000 Redis calls can be 2 full seconds of Object Cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group in your theme's `function.php` file, or an [MU-plugin](/mu-plugin):
+A page load with 2,000 Redis calls can be 2 full seconds of Object Cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group in your theme's `function.php` file, or an [MU-plugin](/guides/wordpress-configurations/mu-plugin):
 
 ```php
 wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );

@@ -2,7 +2,6 @@
 title: Legacy Dashboard
 subtitle: Manage Plans in the Site Dashboard
 description: Upgrade a free site to a paid plan or downgrade a site's current plan within the Site Dashboard.
-categories: [platform]
 tags: [billing, dashboard, site]
 contributors: [cityofoaksdesign]
 layout: guide
@@ -11,6 +10,13 @@ reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/site-plan
 anchorid: site-plan
 editpath: legacy-dashboard/07-site-plan.md
+contenttype: [guide]
+innav: [false]
+categories: [plans, dashboard]
+cms: [wordpress, drupal7]
+audience: [agency, business]
+product: [dashboard]
+integration: [--]
 ---
 
 Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
@@ -85,7 +91,7 @@ For Object Cache and Pantheon Search (Solr), the following code changes are requ
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-id">
+<Tab title="Drupal" id="d7-id">
 
 #### Safely Remove Object Cache
 

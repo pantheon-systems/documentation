@@ -2,13 +2,19 @@
 title: Environment Configuration
 subtitle: Configuring Environment Indicators
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
-categories: [develop]
 tags: [site, terminus, workflow, webops]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-indicator
 anchorid: environment-indicator
+contenttype: [guide]
+innav: [false]
+categories: [config]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to install an indicator to receive alerts when changes are made in your site and environments.
@@ -30,7 +36,7 @@ export env=dev #or Multidev name
 
 The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue](https://github.com/pantheon-systems/pantheon-hud/issues) with questions, feature requests, or bug reports.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set $site.$env sftp
@@ -88,9 +94,9 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 
 ## Drupal: Environment Indicator
 
-The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites.
+The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal sites.
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set $site.$env sftp
@@ -102,12 +108,12 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  terminus drush $site.$env -- en environment_indicator -y
  ```
 
-1. Add the following within `settings.php` for Drupal 7:
+1. Add the following within `settings.php` for Drupal:
 
     ```php
     /*
     * Environment Indicator module settings.
-    * see: https://pantheon.io/docs/guides/environment-configuration/environment-indicator
+    * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
     */
 
     $conf['environment_indicator_overwrite'] = TRUE;
@@ -175,6 +181,6 @@ All environments will now show a color-coded environment indicator, as defined w
 
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal](/guides/environment-configuration/environment-specific-config-drupal)
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

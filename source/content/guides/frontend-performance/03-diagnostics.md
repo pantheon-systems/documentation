@@ -3,7 +3,6 @@ title: Frontend Performance
 subtitle: Diagnostic Tools
 description: Tools for evaluating performance issues.
 anchorid: diagnostics
-categories: [performance]
 tags: [measure, traffic]
 type: guide
 layout: guide
@@ -12,6 +11,13 @@ permalink: docs/guides/frontend-performance/diagnostics
 editpath: frontend-performance/03-diagnostics.md
 image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
+contenttype: [guide]
+innav: [false]
+categories: [track]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page includes information on diagnostics and tools for evaluating performance issues.

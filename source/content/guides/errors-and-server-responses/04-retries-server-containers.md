@@ -3,12 +3,18 @@ title: Errors and Server Responses
 subtitle: Retries Across Application Server Containers (High Availability)
 description: Learn more about application server containers on Pantheon.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/retries-server-containers
 anchorid: retries-server-containers
+contenttype: [guide]
+innav: [false]
+categories: [issues]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to resolve Pantheon server container errors.

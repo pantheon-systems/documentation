@@ -2,14 +2,19 @@
 title: Pantheon Global CDN
 subtitle: Global CDN FAQ
 description: Get answers to your Global CDN questions.
-categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/global-cdn-faq
 anchorid: global-cdn-faq
-
+contenttype: [guide]
+innav: [false]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 This section provides answers to frequently asked Global CDN questions.

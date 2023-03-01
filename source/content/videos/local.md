@@ -3,18 +3,24 @@ title: Local Development
 description: Sync your code, database, and files for local development.
 contributors:  [dwayne]
 permalink:  docs/videos/:basename
-categories: [develop]
 tags: [git, lando, local, sftp, workflow]
 layout: video
 searchboost: 50
 type: video
+contenttype: [doc]
+innav: [true]
+categories: [localdev]
+cms: [drupal, wordpress]
+audience: [develoment]
+product: [terminus]
+integration: [lando]
 ---
 
 <Youtube src="z01vIuB3kRg" title="Local Development" />
 
 <Partial file="deprecate-kalabox.md" />
 
-Pantheon [encourages on-server development](/guides/support/#local-development). However, many developers prefer the speed and convenience of [local development](/local-development) where sites run in virtual machines and don’t require Internet access.
+Pantheon [encourages on-server development](/guides/support/#local-development). However, many developers prefer the speed and convenience of [local development](/guides/local-development) where sites run in virtual machines and don’t require Internet access.
 
 ### Sync from Pantheon to local
 
@@ -26,4 +32,4 @@ Now we still need the files and database. On your site dashboard, select Databas
 
 ### Sync from local to Pantheon
 
-Use Git to add, commit, and push code changes up to Pantheon from your local development environment. Remember, you also need to sync the changes made to your database and media files. Since this can be tricky, we recommend using a configuration management solution, such as WP-CFM for WordPress or the Features module for Drupal 7. These tools help you push configuration separately, as part of your code base, without disturbing database content.
+Use Git to add, commit, and push code changes up to Pantheon from your local development environment. Remember, you also need to sync the changes made to your database and media files. Since this can be tricky, we recommend using a configuration management solution, such as WP-CFM for WordPress or the Features module for Drupal. These tools help you push configuration separately, as part of your code base, without disturbing database content.

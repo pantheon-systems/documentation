@@ -2,7 +2,13 @@
 title: Quicksilver on Pantheon
 subtitle: Quicksilver Variables
 description: Learn how to use variables with Quicksilver.
+contenttype: [guide]
+innav: [false]
 categories: [automate]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [quicksilver]
 tags: [quicksilver, webops, workflow]
 layout: guide
 permalink: docs/guides/quicksilver/variables

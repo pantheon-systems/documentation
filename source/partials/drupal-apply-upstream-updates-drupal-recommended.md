@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [update, migrate]
+cms: [--]
+product: [dashboard, terminus]
+integration: [--]
+tags: [--]
+reviewed: "2022-11-04"
+---
+
 [Update the site](/core-updates) to the latest [Pantheon Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) Upstream and apply all available updates.
 
 1. Use Terminus to list all available updates:

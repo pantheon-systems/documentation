@@ -2,7 +2,6 @@
 title: Pantheon Front-End Sites
 subtitle: Considerations
 description: Components needed to get started with a Front-End Site.
-categories: [platform]
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, joa-pan, backlineint, cobypear, hckia]
 type: guide
@@ -12,6 +11,13 @@ anchorid: considerations
 permalink: docs/guides/decoupled-sites/considerations/
 editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"
+contenttype: [guide]
+innav: [false]
+categories: [create]
+cms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
 ---
 
 Ensure your system has the correct components to deploy a Pantheon Front-End Site.
@@ -53,7 +59,6 @@ To create and configure a new decoupled project using a Front-End Site starter k
 * Install [Terminus](/terminus/install) version 3.0.0 or higher.
     * You can also install the following plugins to improve your experience:
        * `terminus self:plugin:install terminus-build-tools-plugin`
-       * `terminus self:plugin:install terminus-power-tools`
        * `terminus self:plugin:install terminus-secrets-plugin`
        * Reload the terminus plugins: `terminus self:plugin:reload`
        * Clear cache for composer: `composer clear-cache`

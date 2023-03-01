@@ -1,8 +1,13 @@
 ---
 title: Configuring JetBrains PhpStorm IDE with Drupal on Pantheon
 description: Best practices and recommendations for building a Drupal site using JetBrains PhpStorm.
-cms: "Drupal"
+contenttype: [doc]
+innav: [true]
 categories: [develop]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [local]
 reviewed: "2020-01-31"
 contributors: [szipfel]
@@ -59,7 +64,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 ## Configure On-Server Development
 
-1. Put your [Dev environment into SFTP mode](/sftp), and click **Connection Info** to see the connection settings.
+1. Put your [Dev environment into SFTP mode](/guides/sftp/sftp-development), and click **Connection Info** to see the connection settings.
 
 1. Within PhpStorm, go to Build, Execution, Deployment > Deployment.
 

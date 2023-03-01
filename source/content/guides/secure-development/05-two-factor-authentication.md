@@ -2,7 +2,13 @@
 title: Secure Development on Pantheon
 subtitle: Secure Your Site with Two-Factor Authentication
 description: Set up two-factor authentication on your Pantheon Drupal or WordPress site as an added security measure.
-categories: [integrate]
+contenttype: [guide]
+innav: [false]
+categories: [security]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [security, saml, users]
 contributors: [populist]
 layout: guide
@@ -80,7 +86,7 @@ Duo configuration settings and keys are stored in the database. To avoid setting
 
 - Synchronize and import your database
 
-- Use a tool like [WP-CFM](/wp-cfm)
+- Use a tool like [WP-CFM](/guides/wordpress-configurations/wp-cfm)
 
 - Keep the new application page from the Duo Admin panel open, and reenter the values for each environment
 

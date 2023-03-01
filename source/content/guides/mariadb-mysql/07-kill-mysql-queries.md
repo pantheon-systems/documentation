@@ -2,7 +2,13 @@
 title: MariaDB and MySQL on Pantheon
 subtitle: Identify and Kill Queries with MySQL Command-Line Tool
 description: Learn how to identify and kill long-running MySQL queries on your site.
-categories: [troubleshoot]
+contenttype: [guide]
+innav: [false]
+categories: [database]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [cli, database]
 contributors: [whitneymeredith]
 layout: guide
@@ -15,7 +21,7 @@ This section provides information on how to identify and kill queries with MySQL
 
 Long-running MySQL queries prevent other transactions from accessing the necessary tables to execute a request, leaving your users on hold. You can [access the environment's MySQL database](/guides/mariadb-mysql/mysql-access) to kill these queries.
 
-<Enablement title="Ramp up website performance" link="/docs/workshops?c=lw4">
+<Enablement title="Ramp up website performance" link="/workshops?c=lw4">
 
 Make your site faster. Check out our free on-demand training, where you'll learn about caching pages with our Advanced CDN, our Redis backend cache, and see how to use New Relic&reg; Performance Monitoring for monitoring performance.
 

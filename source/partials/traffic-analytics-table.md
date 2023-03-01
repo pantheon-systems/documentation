@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [billing, traffic]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 |                                                 | Counts as Traffic | Counts for Analytics |
 |:------------------------------------------------|:-----------------:|:--------------------:|
 | **API Request**                                 |        Yes        |          No          |

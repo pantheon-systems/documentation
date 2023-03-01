@@ -3,10 +3,16 @@ title: Namecheap Domain Configuration
 provider: Namecheap
 dnsprovider: true
 description: Learn how to point your Namecheap domain to a Pantheon site.
-categories: [go-live]
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/namecheap.md/
+contenttype: [doc]
+innav: [true]
+categories: [domains]
+cms: [--]
+audience: [--]
+product: [--]
+integration: [--]
 ---
 ## Before You Begin
 Ensure you have the following:

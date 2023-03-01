@@ -1,9 +1,15 @@
 ---
 title: Basic Troubleshooting
 description: Common first-step practices to troubleshoot misbehaving sites.
-categories: [wordpress, drupal]
 contributors: [alexfornuto, eabquina, carlalberto]
-reviewed: "2020-08-26"
+reviewed: "2022-12-13"
+contenttype: [doc]
+innav: [true]
+categories: [cache, security, deploy, domains, troubleshooting]
+cms: [wordpress, drupal]
+audience: [development, sysadmin]
+product: [cdn]
+integration: [--]
 ---
 
 This page is a collection of common troubleshooting tactics, curated from our Customer Success Engineers and the Pantheon community. These procedures can help you solve issues your site may have, or rule out potential causes.
@@ -46,9 +52,9 @@ Sometimes your CMS may encounter issues due to cached data that ends up in an od
 
 - [Clear your site cache](/clear-caches) using the Pantheon Dashboard, or with [Terminus](/terminus/commands/env-clear-cache).
 - Clear all keys from the Object Cache using the [Redis CLI](/guides/object-cache/redis-command-line).
-- Review the caching logic for your CMS version. [Drupal 9](/drupal-9-cache), for example, has some specific caching features that may be a factor.
+- Review the caching logic for your CMS version. [Drupal](/drupal-cache), for example, has some specific caching features that may be a factor.
 - For issues confined to a specific page or display element, review the specific [caching logic](/cache-control) for your site or page.
-- If the Pantheon Advanced Page Cache [plugin](/wordpress-cache-plugin) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) is installed to take advantage of the granular cache clearing capabilities of the Global CDN, review these settings as well.
+- If the Pantheon Advanced Page Cache [plugin](/guides/wordpress-configurations/wordpress-cache-plugin) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) is installed to take advantage of the granular cache clearing capabilities of the Global CDN, review these settings as well.
 - Certain Drupal modules and WordPress plugins can conflict with Pantheon's granular cache clearing and header system. Review the [Modules](/modules-known-issues) and [Plugins](/plugins-known-issues) With Known Issues pages to identify potential conflicts.
 
 ### Investigate recent changes
@@ -74,7 +80,7 @@ More complex issues with code may necessitate using debugging tools beyond your 
 
 - Recreate the issue locally.
 - For WordPress, [enable WP_DEBUG & WP_DEBUG_LOG](/guides/logs-pantheon/faq-logs#how-do-i-enable-error-logging-for-wordpress) in wp-config.php. Then use the debug.log file to find warnings and errors.
-- Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/lando-wordpress) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
+- Use [Xdebug](https://xdebug.org/) with a local development tool like [Lando](/guides/local-development/lando-wordpress) to set application breakpoints and dig into stack traces. See [Lando documentation](https://docs.lando.dev/config/pantheon.html#using-xdebug) for more on working with their Xdebug settings.
 
 ## Pantheon Dashboard
 
@@ -139,9 +145,9 @@ You must enable cookies for WordPress users to log in to their admin interface. 
 define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 ```
 
-## Drupal 7
+## Drupal
 
-Are you a Drupal 7 wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
+Are you a Drupal wizard? [Help us expand this section](https://github.com/pantheon-systems/documentation/edit/main/source/content/basic-troubleshooting.md).
 
 ### Displaying Error Messages
 

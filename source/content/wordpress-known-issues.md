@@ -1,8 +1,13 @@
 ---
 title: WordPress Known Issues
 description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress sites.
-cms: "WordPress"
-categories: [troubleshoot]
+contenttype: [doc]
+innav: [true]
+categories: [issues]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code]
 ---
 This page tracks known issues and the recommended solution (if any) for running WordPress on the Pantheon website platform. Most sites work fine, but there are some common gotchas we are tracking and working to address.
@@ -15,7 +20,7 @@ If you are importing a site and the database has custom prefixes for your DB tab
  - Update user metadata with `update wp_usermeta set meta_key = replace(meta_key, 'oldprefix_', 'wp_');`, replacing `oldprefix` with the previously used prefix.
 
 <Alert title="Note" type="info">
-Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/docs/guides/mariadb-mysql/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
+Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/guides/mariadb-mysql/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
 </Alert>
 
 ## Automatic Updates
@@ -41,9 +46,9 @@ WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issue
 
 For more information, refer to the [PHP Versions](/guides/php/php-versions) documentation. 
 
-## Site Networks / Multisite
+## WordPress Multisite
 
-Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Multisite](/guides/multisite).
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 

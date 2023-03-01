@@ -2,7 +2,13 @@
 title: Multidev
 subtitle: Introduction
 description: Detailed information on using Pantheon's Multidev environment for your Drupal or WordPress site.
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [multidev]
+cms: [--]
+audience: [development]
+product: [multidev]
+integration: [--]
 tags: [multidev, git, cli, workflow, collaborate]
 contributors: [whitneymeredith]
 layout: guide

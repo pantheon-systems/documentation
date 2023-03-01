@@ -2,16 +2,21 @@
 title: Pantheon Modules
 description: Details on specific Drupal modules developed and maintained for the Pantheon Website Management Platform workflow.
 contributors: [eabquina]
-cms: "Drupal"
-categories: [platform]
 tags: [cache, libraries, modules, site]
 reviewdate: "2022-04-01"
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 Pantheon maintains several modules to extend and integrate Drupal on our platform. Check out our [Pantheon Community](/pantheon-community) Slack channel to discuss these modules in real-time with Pantheon developers.
 
 <Alert title="Note" type="info">
 
-WordPress users should review [Pantheon Plugins](/guides/wordpress-pantheon/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
+WordPress users should review [Pantheon Plugins](/guides/wordpress-configurations/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
 
 </Alert>
 

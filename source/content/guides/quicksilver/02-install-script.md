@@ -2,7 +2,13 @@
 title: Quicksilver on Pantheon
 subtitle: Install Scripts
 description: Learn how to install scripts with Quicksilver.
+contenttype: [guide]
+innav: [false]
 categories: [automate]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [quicksilver]
 tags: [quicksilver, webops, workflow]
 layout: guide
 showtoc: true
@@ -113,5 +119,5 @@ Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-s
 
 - [Lockr](/guides/lockr)
 - [Private Paths for Files and Code](/guides/secure-development/private-paths)
-- [WordPress Configuration Management (WP-CFM)](/wp-cfm)
+- [WordPress Configuration Management (WP-CFM)](/guides/wordpress-configurations/wp-cfm)
 - [Drush on Pantheon](/guides/drush)

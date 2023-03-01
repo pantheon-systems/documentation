@@ -3,11 +3,17 @@ title: The Pantheon.yml Configuration File
 description: Configure our platform for your needs.
 contributors:  [davidneedham]
 permalink:  docs/videos/:basename
-categories: [develop]
 tags: [site, code]
 layout: video
 type: video
 searchboost: 50
+contenttype: [doc]
+innav: [true]
+categories: [config]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [nginx, varnish]
 ---
 
 <Youtube src="SM3QlNGgyBo" title="Pantheon.yml" />

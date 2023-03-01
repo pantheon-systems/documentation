@@ -3,7 +3,13 @@ title: Secure Development on Pantheon
 subtitle: Private Paths for Files and Code
 description: Learn how to incorporate non-web-accessible data on Pantheon's platform.
 tags: [infrastructure, security]
-categories: [platform,develop]
+contenttype: [guide]
+innav: [false]
+categories: [security]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
@@ -112,7 +118,7 @@ Site developers can author their own custom solution to:
 
 ### Known Limitations of File Names and Permissions
 
-Please see [Pantheon Filesystem](/files#known-limitations-of-file-names-and-permissions) for more information.
+Please refer to [Pantheon Filesystem](/guides/filesystem) for more information.
 
 ### Additional Drupal Configuration
 
@@ -193,4 +199,4 @@ We do not encourage developers to save credit card information on the platform, 
 
 - [Protected Web Paths](/pantheon-yml#protected-web-paths)
 
-- [Pantheon Filesystem](/files#known-limitations-of-file-names-and-permissions)
+- [Pantheon Filesystem](/guides/filesystem)

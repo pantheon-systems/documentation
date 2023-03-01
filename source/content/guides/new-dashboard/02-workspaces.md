@@ -2,7 +2,13 @@
 title: The New Pantheon Dashboard
 subtitle: Navigating Workspaces
 description: Workspaces are a home base for your WebOps.
-categories: [platform]
+contenttype: [guide]
+innav: [false]
+categories: [dashboard]
+cms: [--]
+audience: [development, marketing, sysadmin, agency, business]
+product: [dashboard]
+integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert,joa-pan]
 reviewed: "2022-07-20"

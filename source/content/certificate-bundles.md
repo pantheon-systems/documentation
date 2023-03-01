@@ -1,10 +1,16 @@
 ---
 title: Pantheon Certificate Bundles
 description: Published Certificate bundles from Pantheon
-categories: [develop]
 tags: [security]
 contributors: [clintonPantheon]
 reviewed: "2021-10-21"
+contenttype: [doc]
+innav: [true]
+categories: [security]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page lists certificates published by Pantheon. These certificates can be used to integrate tooling with Pantheon.

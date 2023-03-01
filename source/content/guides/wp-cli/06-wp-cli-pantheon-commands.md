@@ -3,8 +3,13 @@ title: WP-CLI on the Pantheon Platform
 subtitle: Pantheon Commands for WP-CLI
 description: Special commands to interact with Pantheon via WP-CLI
 contributors: [ryanwagner]
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [cli]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wp-cli, cli]
 layout: guide
 showtoc: true

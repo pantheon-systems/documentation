@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [domains]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### Set a Primary Domain via the Dashboard
 
 <Alert type="danger" title="Warning">

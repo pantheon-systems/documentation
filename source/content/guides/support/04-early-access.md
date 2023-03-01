@@ -2,8 +2,13 @@
 title: Get Support
 subtitle: Early Access Program
 description: 
-cms: "Drupal"
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [help]
+cms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [composer, local, modules, site, terminus]
 buildtools: true
 anchorid: early-success

@@ -2,13 +2,20 @@
 title: Platform Considerations
 subtitle: Media and Email
 description: Learn more about media and email support on the Pantheon platform.
-categories: [platform]
+contenttype: [guide]
+innav: [false]
+categories: [overview]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/media-email-support
 anchorid: media-email-support
+reviewed: "2022-12-13"
 ---
 
 This section provides information on email and media support on the Pantheon platform.
@@ -19,7 +26,7 @@ Pantheon has a cloud-based infrastructure, which means that we cannot ensure the
 
 All sites have access to a local Postfix service for testing and development, however we recommend using an external SMTP gateway (for example SendGrid) in production to ensure that your email is delivered.
 
-Refer to the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/sendgrid-wordpress-wp-mail-smtp) documentation for suggestions or more information.
+Refer to the [Email for Drupal documentation](/email) or the [WP Mail SMTP](/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp) documentation for suggestions or more information.
 
 ## ffmpeg Transcoding Support
 
@@ -27,7 +34,7 @@ We do not support ffmpeg transcoding, and we do not have plans to add this featu
 
 ## Emoji Support
 
-Emoji support is available out of the box on WordPress and Drupal 9. Drupal 7 sites can enable Emoji support by following this procedure:
+Emoji support is available out of the box on WordPress and Drupal. Drupal 7 sites can enable Emoji support by following this procedure:
 
 For new or existing Drupal 7 installs:
 

@@ -1,8 +1,14 @@
 ---
 title: Clearing Caches for Drupal and WordPress
 description: Learn how to clear cache for Drupal and WordPress sites on Pantheon's Global CDN.
-categories: [performance]
 tags: [cache, cdn]
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal7, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/guides/global-cdn) service.
 
@@ -40,7 +46,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-3">
+<Tab title="Drupal" id="d7-3">
 
 1. Navigate to the Site Dashboard and select the desired environment.
 2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
@@ -50,7 +56,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 4. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
 
-  ![Drupal 7 Clear Caches](../images/d7-cc.png)
+  ![Drupal Clear Caches](../images/d7-cc.png)
 
 </Tab>
 

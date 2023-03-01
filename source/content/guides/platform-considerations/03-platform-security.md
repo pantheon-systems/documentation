@@ -2,7 +2,13 @@
 title: Platform Considerations
 subtitle: Platform Security
 description: Learn more about security support on the Pantheon platform.
-categories: [platform]
+contenttype: [guide]
+innav: [false]
+categories: [overview]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 layout: guide

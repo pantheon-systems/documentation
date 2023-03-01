@@ -1,9 +1,15 @@
 ---
 title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
-categories: [get-started]
 tags: [security, dashboard, ssh]
 reviewed: "2022-03-04"
+contenttype: [doc]
+innav: [true]
+categories: [security, git, config]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [ssh, drush, sftp]
 ---
 
 Load your public SSH key into your account to take full advantage of Pantheon. SSH keys allow you to stay secure and compliant with security regulations, provided that you use best practice to generate, store, manage, and remove them. Using SSH keys are a best practice for authentication, offering more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
@@ -35,7 +41,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Open your terminal and enter the following command to generate a key:
 
    ```bash{promptUser: user}
-   ssh-keygen
+   ssh-keygen -t rsa
    ```
 
   This command works on Linux, MacOS, and Windows 10.
@@ -43,7 +49,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
   Leave the default location of `~/.ssh/id_rsa` as is, unless you have reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
 
 1. Set a passphrase for better security.
-  
+
    We recommend using a passphrase, but it can conflict with some tools.
 
 1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created. 
@@ -61,16 +67,16 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
    ```
 
 1. Start the SSH agent.
-   
+
    * For Linux and Mac users, run `eval` to start the agent. The `Agent pid` output confirms it's started:
 
       ```bash{outputLines: 2}
       eval `ssh-agent`
       Agent pid 86810
       ```
-   
+
    * For Windows users, run `start-ssh-agent`. The output confirms the agent has started. Enter the passphrase, if it was previously set.
-   
+
       ```bash{promptUser: user}
       start-ssh-agent
       ```
@@ -85,7 +91,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
       Identity added: /c/Users/[user]/.ssh/id_rsa ([user@machine_name])
       ```
 
-1. For Linux and Mac users, add the newly created key to the ssh-agent:
+1. Add the newly created key to the ssh-agent if you are using Linux or Mac:
 
    ```bash{promptUser: user}
    ssh-add ~/.ssh/id_rsa
@@ -156,35 +162,6 @@ You can still access the sites if you have active sites and no keys remaining. M
 ## Troubleshooting
 
 <Partial file="host-keys.md" />
-
-### Connections Fail With: no matching host key type found. Their offer: ssh-rsa
-
-[OpenSSH 8.8](https://www.openssh.com/txt/release-8.8) disables RSA signatures like the key type Pantheon uses.
-
-While we are working to remedy this on the platform, OpenSSH 8.8 will return this error for CLI commands:
-
-```shell
-Unable to negotiate with 203.0.113.123 port 2222: no matching host key type found. Their offer: ssh-rsa
-```
-
-**Solution**: Until the key type is updated on the Pantheon platform, add `ssh-rsa` to the accepted algorithms in `~/.ssh/config`:
-
-   1. Look for `$HOME/.ssh/config file`. If none present, create it using `type`:
-   
-   ```bash{promptUser: winshell}
-   cd %HOMEPATH%/.ssh
-   type nul > config
-   ```
-   
-   2. Copy/paste the following into config:
-   
-   ```none:title=~/.ssh/config
-   Host *.drush.in
-       # The settings on the next two lines are temporary until Pantheon updates the available key types.
-       # If 'PubkeyAcceptedAlgorithms' causes an error, remove it.
-       HostkeyAlgorithms +ssh-rsa
-       PubkeyAcceptedAlgorithms +ssh-rsa
-   ```
 
 ### Control Path Error
 

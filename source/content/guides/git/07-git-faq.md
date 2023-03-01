@@ -1,14 +1,20 @@
 ---
-title: Git FAQs
+title: Git on Pantheon Guide
 subtitle: FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
-categories: [develop]
 tags: [git, iterate, local, workflow]
 contributors: [mrfelton, alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/faq-git
 anchorid: faq-git
+contenttype: [guide]
+innav: [false]
+categories: [git]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [git]
 ---
 
 This section answers many common Git questions. If you're encountering merge conflicts, see [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts)
@@ -92,7 +98,7 @@ Navigate to the Drupal root of your site:
 git filter-branch -f --index-filter 'git rm -rf --cached --ignore-unmatch sites/default/files' --prune-empty -- f4160148..HEAD
 ```
 
-The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
+The commit `f4160148` is one from pretty far back in the Drupal history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. You might also pick a more recent starting point for Drupal if you're in a hurry.
 
 If you're on WordPress, you'll need to find your starting point by looking at the Git log.
 

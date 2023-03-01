@@ -1,3 +1,12 @@
+---
+contenttype: [partial]
+categories: [create]
+cms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
 
 ## Available Region Codes
 

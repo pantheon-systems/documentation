@@ -2,7 +2,13 @@
 title: Platform Considerations
 subtitle: Terminus Platform Support
 description: Learn more about Terminus support on the Pantheon platform. 
-categories: [platform]
+contenttype: [guide]
+innav: [false]
+categories: [overview]
+cms: [--]
+audience: [development]
+product: [terminus]
+integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
 layout: guide
@@ -11,7 +17,7 @@ permalink: docs/guides/platform-considerations/terminus-platform
 anchorid: terminus-platform
 ---
 
-This section provides information on Terminus support on the Pantheon platform. Refer to the [Terminus Manual](/terminus) for comprehensive Terminus information, or to [Supported Terminus Versions](/supported-terminus) for detailed Terminus version compatibility.
+This section provides information on Terminus support on the Pantheon platform. Refer to the [Terminus Guide](/terminus) for comprehensive Terminus information, or to [Supported Terminus Versions](/terminus/supported-terminus) for detailed Terminus version compatibility.
 
 ## Terminus Support
 
@@ -31,7 +37,7 @@ You might encounter the following error when a site is created and then quickly 
 
 ## More Resources
 
-- [Terminus and PHP Version Compatibility](/supported-terminus#php-version-compatibility-matrix)
+- [Terminus and PHP Version Compatibility](/terminus/supported-terminus#php-version-compatibility-matrix)
 
 - [Terminus Command Reference](/terminus/commands)
 

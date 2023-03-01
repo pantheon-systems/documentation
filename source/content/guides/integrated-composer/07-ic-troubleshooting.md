@@ -3,20 +3,26 @@ title: Integrated Composer
 subtitle: Troubleshoot Integrated Composer
 description: Learn how to troubleshoot Integrated Composer issues.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
 anchorid: ic-troubleshooting
+contenttype: [guide]
+innav: [false]
+categories: [dependencies, troubleshooting]
+cms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides information on troubleshooting common Integrated Composer errors and issues.
 
 ## Troubleshooting Code Syncs, Upstream Updates, and Redirect Errors
 
-### Site-local Drush Is Required for Drupal 9 Sites
+### Site-local Drush Is Required for Drupal Sites
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 
@@ -92,7 +98,7 @@ Follow the steps below to resolve the issue:
 When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
 
 ```bash
-We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://docs.pantheon.io/core-updates) for further debugging tips. Conflicts: [
   "CONFLICT (content): Merge conflict in composer.json"
 ]
 ```
@@ -115,7 +121,7 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 
 Merge the changes manually:
 
-1. Create a [local Git clone](/local-development#get-the-code) of the Pantheon site repository.
+1. Create a [local Git clone](/guides/local-development#get-the-code) of the Pantheon site repository.
 
 1. Merge in the upstream changes:
 
@@ -207,6 +213,50 @@ If your site contains a binary patch, such as https://www.drupal.org/files/issue
 A workaround for this issue is to reconfigure the patch to exclude the binary contents in it.
 
 <Partial file="configure-wp-site-networks-with-integrated-composer.md" />
+
+### GrumPHP breaks Integrated Composer when using Lando or other local development commands
+
+[GrumPHP](https://github.com/phpro/grumphp) is a code quality tool that installs into Git hooks via a Composer plugin. The hook runs whatever tasks you specify in your `grumphp.yml` file, including unit tests, code sniffing, etc., and allows or prevents a commit as needed.
+
+You can use both GrumPHP and a containerized local dev environment (such as Lando or Docksal). However, if you choose to run GrumPHP within that environment by changing the command triggered by GrumPHP on commit in your `grumphp.yml` file shown in the example below, you may encounter a build fail.
+
+  ```bash{promptUser: user}
+    grumphp:
+     git_hook_variables:
+      EXEC_GRUMPHP_COMMAND: 'lando php'
+  ```
+
+The build fails because GrumPHP runs in Integrated Composer. Composer installs GrumPHP, then Integrated Composer tries to make a commit, GrumPHP tries to run Lando (or another containerized local dev environment) PHP and then fails because Lando doesn't exist in Pantheon's build environment.
+
+**Solution**
+
+The solution is to set `EXEC_GRUMPHP_COMMAND` to run a script that tests for the needed dependencies and only runs the GrumPHP tasks if all dependencies are found. For example:
+
+```bash{promptUser: user}
+  grumphp:
+   git_hook_variables:
+    EXEC_GRUMPHP_COMMAND: '.scripts/grumphp.sh' # YOUR SCRIPT NAME HERE
+  ```
+
+Lando script example:
+
+  ```bash{promptUser: user}
+  #!/bin/sh
+  if command -v lando &> /dev/null
+  then
+    lando php "$@"
+  fi
+  ```
+
+The test in the script can be whatever is needed in your particular case. The example below tests for the existence of the `PANTHEON_ENVIRONMENT` env var:
+
+```bash{promptUser: user}
+#!/bin/sh
+if [ -z "$PANTHEON_ENVIRONMENT" ]  &> /dev/null
+then
+  lando php "$@"
+fi
+```
 
 ## More Resources
 

@@ -2,13 +2,18 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Import Drush Site Archives with Terminus
 description: Import a Drupal Drush site archive using Terminus, the Pantheon CLI tool.
-cms: "Drupal"
-categories: [get-started]
 tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-import
 anchorid: drush-import
+contenttype: [guide]
+innav: [false]
+categories: [cli]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 This section provides information on how to import Drush site archives with Terminus.
@@ -25,13 +30,13 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
 - Verify that you are using Drush 8 if you have a non-Composer managed Drupal 7 site. Note that Composer-managed sites are not supported.
 
-- Verify that you are using Drush 11 if you have a Composer-managed Drupal 9 site.Note that only Composer-managed sites are supported.
+- Verify that you are using Drush 11 if you have a Composer-managed Drupal site. Note that only Composer-managed sites are supported.
 
-   -  Use one of the following guides if you are migrating a Drupal 7 or 8 site and want to upgrade to a Drupal 9 site:
+   -  Use one of the following guides if you are migrating a Drupal site and want to upgrade to the latest version of Drupal:
 
-      - Your site is Composer-managed: [Migrate a Composer Managed Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted-composer)
+      - Your site is Composer-managed: [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer)
 
-      - Your site is not Composer-managed: [Migrate a Drupal 9 Site from Another Platform](/guides/drupal-9-unhosted)
+      - Your site is not Composer-managed: [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)
 
 - Verify that you have Drush access on your existing Drupal site.
 
@@ -57,7 +62,7 @@ Install [Terminus 3](/terminus/terminus-3-0).
 
 <TabList>
 
-<Tab title="Drupal 7 non-Composer" id="d7" active={true}>
+<Tab title="Drupal 7 Non-Composer" id="d7" active={true}>
 
 1. Authenticate into Pantheon with Terminus:
 
@@ -84,7 +89,7 @@ Install [Terminus 3](/terminus/terminus-3-0).
 
 </Tab>
 
-<Tab title="Drupal 9 Composer-managed" id="d9">
+<Tab title="Drupal (Latest Version) Composer" id="d9">
 
 1. Install the [Terminus Conversion Tools](https://github.com/pantheon-systems/terminus-conversion-tools-plugin#installation) plugin. 
 
@@ -107,5 +112,5 @@ Terminus is a rapidly evolving project, so check back frequently for updates. Fo
 ## More Resources
 
 - [Manually Migrate Sites to Pantheon](/migrate-manual)
-- [Terminus Manual](/terminus)
+- [Terminus Guide](/terminus)
 - [Drupal Drush Command-Line Utility](/guides/drush)

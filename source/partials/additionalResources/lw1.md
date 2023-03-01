@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [help]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Getting Started with Pantheon
 
 This workshop provides an overview of how to get started with Pantheon's development environments, collaborative tools, and automated Git-based workflows. (8 minutes)
@@ -25,7 +35,7 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
-Keep a good thing going! Learn more about Terminus in our on-demand [Command Line Interface with Terminus](/guides/edt/terminus-cli/) video. Or, choose one of our other [Getting Started Workshops](https://pantheon.io/workshops).
+Choose one of our other [Getting Started Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 

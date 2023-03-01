@@ -1,33 +1,53 @@
 ---
 title: Single Sign-On for Pantheon Organizations
 description: Detailed information to enable SAML single sign-on for your organization.
-categories: [manage]
 tags: [security, organizations]
+contenttype: [doc]
+innav: [true]
+categories: [security, config]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [saml, sso, azure]
 ---
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/sso).
 
-Once enabled, SAML applies to an entire email domain and is not available on a per-site, per-environment, or per-user basis.
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. Refer to [SSO and Identity Federation on Pantheon](/sso) for more information.
 
-SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
+SAML applies to an entire email domain when enabled and is not available on a per-site, per-environment, or per-user basis.
 
-## User Experience
+SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
+
+## How It Works
+
+The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** they use to access their Pantheon Dashboard.
+
+### Members of an SSO Organization
+
+Members of an SSO-enabled organization have an email address that includes the organization's email domain, for example, `@xmail.com`. You can think of these members as *internal* members of the organization. Members of an SSO organization experience the following process:
 
 - User submits the Pantheon login form with their email address.
 
 - User is redirected to the configured IdP.
 
-- After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
-
-## Terminus Authentication
-Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus) by using [machine tokens](/machine-tokens).
-
-## Managing Users
-
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
+- The IdP authenticates the user and then redirects the user to their Pantheon Dashboard.
 
 ### External Members
 
-New and existing members outside the organization are not redirected to the configured IdP. There is no change in behavior when logging in. An external member is anyone in the organization using an email address on a different domain than what's configured for SSO (e.g., `@gmail.com`).
+An external member is anyone in the organization using an email address on a different domain than what's configured for SSO, for example, `@ymail.com`. New and existing external members of the organization are not affected when SSO is enabled. External users are not redirected to the configured IdP and experience no change in behavior when logging in. External members experience the following process:
+
+- User submits the Pantheon login form with their email address.
+
+- User is authenticated and taken to their Pantheon Dashboard.
+
+
+## Terminus Authentication
+
+Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus) by using [machine tokens](/machine-tokens).
+
+## Manage Users
+
+Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
+
 
 ## Configure your IdP
 
@@ -48,7 +68,7 @@ You will need to enter the following:
     * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
     * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
     * The NameID format: `unspecified`
-    * Optional: The `user_id` attribute may need to be configured to be sent manually. If this value is not already present, it should be set to match the `email` attribute.
+    * The `user_id` attribute must be configured to be sent manually. If this value is not already present, it should be set to match the `email` attribute.
     * The SAML assertion, and the SAML response can be individually or simultaneously signed.
     * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
 
@@ -66,7 +86,6 @@ Azure configuration requires several modifications from the general instructions
     - **Reply URL text box:** `https://pantheon.auth0.com/login/callback?connection=<orgname>-SSO`
 
     - **Single sign-on URL:** `Leave Blank`
-
 
 ## Enable SAML on Pantheon
 

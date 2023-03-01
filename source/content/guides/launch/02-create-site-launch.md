@@ -2,13 +2,19 @@
 title: Launch Essentials
 subtitle: Create Your Site on Pantheon
 description: Learn how to create your site on Pantheon.
-categories: [develop]
 tags: [cms,]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/launch/create-site-launch
 anchorid: create-site-launch
+contenttype: [guide]
+innav: [false]
+categories: [create, launch]
+cms: [wordpress, drupal]
+audience: [agency, development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to [create your Live environment](/guides/quickstart/create-test-live). 

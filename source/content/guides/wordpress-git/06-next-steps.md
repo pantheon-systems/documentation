@@ -4,8 +4,13 @@ subtitle: Next Steps
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 anchorid: next-steps
 layout: guide
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [git]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/next-steps/
@@ -28,7 +33,7 @@ Consider how you would like to manage configuration, which refers to anything in
 - Widget placement
 - Menus, etc.
 
-You can repeat configuration steps manually, but that can be error prone and time consuming, especially during a launch. No fun. We recommend using WP-CFM to handle site configuration. For details, see [WordPress Configuration Management (WP-CFM)](/wp-cfm).
+You can repeat configuration steps manually, but that can be error prone and time consuming, especially during a launch. No fun. We recommend using WP-CFM to handle site configuration. For details, see [WordPress Configuration Management (WP-CFM)](/guides/wordpress-configurations/wp-cfm).
 
 ## Conclusion
 

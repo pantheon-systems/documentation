@@ -1,13 +1,19 @@
 ---
-title: Undo Git Commits
+title: Git on Pantheon Guide
 subtitle: Undo Git Commits
 description: Learn how to revert a Git commit before and after pushing to Pantheon.
-categories: [develop]
 tags: [cli, code, git, local, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/undo-commits
 anchorid: undo-commits
+contenttype: [guide]
+innav: [false]
+categories: [git]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 Git makes it easy to reverse commits pushed to the Pantheon Dev environment.
@@ -23,7 +29,7 @@ The dashboard cannot pull in upstream updates if you run the `git revert` comman
 
 You must have the items listed below completed before you begin the steps in this doc.
 
-- Set up a [local development environment](/local-development) with [Git version control](/guides/git/git-config).
+- Set up a [local development environment](/guides/local-development) with [Git version control](/guides/git/git-config).
 
 - Have a working [clone](/guides/git/git-config#clone-your-site-codebase) as a backup
 
@@ -33,7 +39,7 @@ Review the sections below carefully as instructions for reverting commits are di
 
 ## Restore Core to Upstream
 
-In this example, the `/includes/bootstrap.inc` file on a Drupal 7 site has references to when core was overwritten.
+In this example, the `/includes/bootstrap.inc` file on a Drupal site has references to when core was overwritten.
 
 ```bash{outputLines:2-7}
 git log bootstrap.inc

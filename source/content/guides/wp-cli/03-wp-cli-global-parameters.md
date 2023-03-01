@@ -2,8 +2,13 @@
 title: WP-CLI on the Pantheon Platform
 subtitle: WP-CLI Global Parameters
 description: Review important WP-CLI global parameters.
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [cli]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wp-cli, cli]
 layout: guide
 showtoc: true
@@ -32,7 +37,7 @@ Review the [global parameters](https://make.wordpress.org/cli/handbook/config/) 
 
 - `--path=<path>` - Specify the path to WordPress. WP-CLI will look upward from its current directory to attempt to find WordPress if this parameter isn't provided.
 
-- `--url=<url>` - Identify the request from a given URL. This argument specifies the target site in WordPress Site Networks. 
+- `--url=<url>` - Identify the request from a given URL. This argument specifies the target site in WordPress Multisites. 
 
 - `--user=<id|login|email>` - Run the command as a particular user. WP-CLI commands are executed anonymously by default.
 
@@ -73,5 +78,5 @@ Here are [more commands](https://developer.wordpress.org/cli/commands/) you may 
 ## More Resources
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
-- [The Terminus Manual](/terminus)
+- [Terminus Guide](/terminus)
 - [WordPress Dashboard](/cms-admin#wordpress-dashboard)

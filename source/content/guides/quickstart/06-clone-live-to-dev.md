@@ -2,25 +2,18 @@
 title: Quick Start
 subtitle: Clone Live to Dev
 description: In part six of our Quick Start guide, learn how to clone your content from Live to Dev.
-quickstart: true
-anchorid: clone-live-to-dev
-generator: pagination
-layout: guide
-categories: [get-started]
+contenttype: [guide]
+innav: [false]
+categories: [overview]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [dashboard, iterate, launch, webops, workflow]
-type: guide
 showtoc: true
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/clone-live-to-dev/
-nexturl: guides/quickstart/connection-modes/
-nextpage: Connection Modes
-previousurl: guides/quickstart/create-test-live/
-previouspage: Create Test & Live
+anchorid: clone-live-to-dev
 editpath: quickstart/06-clone-live-to-dev.md
-image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’ll explore your Live site and add an article or post to simulate working on a real production site. Then we’ll clone your Live site “down” to your Dev site.
@@ -63,7 +56,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
     As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.
 
-    The Clone operation only copies the [files](/files) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
+    The Clone operation only copies the [files](/guides/filesystem) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
 
     </Alert>
 

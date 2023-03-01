@@ -1,9 +1,14 @@
 ---
 title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
-cms: "Drupal"
-categories: [troubleshoot]
 tags: [modules]
+contenttype: [doc]
+innav: [true]
+categories: [issues]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This page lists modules that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (refer to [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -153,7 +158,7 @@ ___
 
 `RuntimeException: File <em class="placeholder">/tmp/feeds_http_fetcherOK5Hbi</em> does not exist. in Drupal\feeds\Result\FetcherResult->checkFile() (line 53 of /code/web/modules/contrib/feeds/src/Result/FetcherResult.php)`
 
-**Solution:** The [Persistent Temporary Path Workaround](/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
+**Solution:** The [Persistent Temporary Path Workaround](/guides/filesystem/tmp#persistent-temporary-path-workaround) will not work for this issue because the `/tmp` directory is hardcoded, and therefore not part of the module's configuration. The solution proposed for the persistent temporary path workaround does not work on load balanced environments and relies on a persistent directory. Note that Pantheon cautions against putting these files outside the `tmp` directory because the file will not be deleted automatically after the transfer is complete, which can create a very large set of files.
 
 We recommend following the issue on [Drupal](https://www.drupal.org/project/feeds/issues/2912130) and requesting that the module maintainer fix the module.
 
@@ -186,7 +191,9 @@ ___
 
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
-**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
+**Solution 1:** Upgrade to the [latest version of IMCE](https://www.drupal.org/project/imce/releases/3.0.7) if possible. IMCE for Drupal 7 now has an option on Dev (not a tagged release) to disable the metadata, which prevents timeouts.
+
+**Solution 2**: Break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 
 1. [Enable the Object Cache](/guides/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
 1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
@@ -236,7 +243,7 @@ ___
 
 ## [LiveReload](https://www.drupal.org/project/livereload)
 
-**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7.
+**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal.
 
 ___
 
@@ -287,7 +294,7 @@ ___
 
 ## Plupload
 
-**Issue**: [Plupload](https://www.drupal.org/project/plupload) requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
+**Issue**: [Plupload](https://www.drupal.org/project/plupload) requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](/guides/filesystem/tmp#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in `settings.php`. Example:
 
@@ -315,7 +322,7 @@ ___
 
 **Solution:** Add more domains to your Google reCAPTCHA configuration. Add `dev-<sitename>.pantheonsite.io` and `test-<sitename>.pantheonsite.io` to the site. This is set in [Google's reCAPTCHA admin panel](https://www.google.com/recaptcha/admin).
 
-**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
+**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
 
 ```php:title=settings.php
 // Deactivate reCAPTCHA not running on the live site.
@@ -336,7 +343,7 @@ ___
 
 **Issue 1:** When the module is configured to take over the public file system, Drupal's CSS/JS aggregation will not work unless you also upload Drupal Core and contrib modules to S3. See [Drupal Issue 2511090](https://www.drupal.org/project/s3fs/issues/2511090) for more information.
 
-**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [Platform upload limitations](/guides/platform-considerations/files-directories#large-files).
+**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the [upload limitations](/guides/filesystem/large-files).
 
 ___
 

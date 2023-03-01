@@ -2,7 +2,6 @@
 title: Pantheon Autopilot
 subtitle: Tests and Results
 description: Autopilot visual regression testing (VRT) results and how to deal with failing tests.
-categories: [automate]
 tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
@@ -11,6 +10,13 @@ anchorid: tests-results
 permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
+contenttype: [guide]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
+audience: [development]
+product: [autopilot]
+integration: [quicksilver]
 ---
 
 Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it applies updates to your Dev, Test or Live environment.
@@ -33,6 +39,7 @@ You can specify the environments to which Autopilot deploys. When all tests pass
 - Dev environment only: A good choice for a site under continual active development
 - Test environment (after Dev): A good choice for a high traffic site that needs an extra level of manual quality assurance (QA) or automated CI
 - Live environment (after Dev and Test)
+- Do Not Deploy: This is a good option if you want to stop updates at the Multidev. Refer to [Update Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information.
 
 ## Failing Tests
 
