@@ -2,7 +2,6 @@
 title: WooCommerce Quick Start
 subtitle: Commit Changes
 description: In step four of the WooCommerce Quick Start guide, learn how to commit your changes into the codebase, following the Pantheon workflow.
-woocommerce: true
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]

@@ -2,7 +2,6 @@
 title: WooCommerce Quick Start
 subtitle: Initialize Production
 description: In step five of the WooCommerce Quick Start guide, learn how to initialize your production environment.
-woocommerce: true
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]

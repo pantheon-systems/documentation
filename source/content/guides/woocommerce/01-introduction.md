@@ -13,7 +13,6 @@ product: [--]
 integration: [woocommerce]
 tags: [plugins, site]
 type: guide
-woocommerce: true
 permalink: docs/guides/woocommerce/
 editpath: woocommerce/01-introduction.md
 searchboost: 200

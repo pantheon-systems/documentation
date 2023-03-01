@@ -2,7 +2,6 @@
 title: WooCommerce Quick Start
 subtitle: Continue Development
 description: In step six of the WooCommerce Quick Start guide, we further customize our new site by removing unused themes.
-woocommerce: true
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]

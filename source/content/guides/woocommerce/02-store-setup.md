@@ -2,7 +2,6 @@
 title: WooCommerce Quick Start
 subtitle: Store Setup
 description: In step two of the WooCommerce Quick Start guide, learn how to set up your new store.
-woocommerce: true
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]
