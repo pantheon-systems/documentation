@@ -15,7 +15,6 @@ integration: [--]
 tags: [code, files]
 reviewed: "2021-07-14"
 permalink: docs/guides/filesystem/batch-files
-anchorid: batch-files
 ---
 
 This section provides information on how to upload and export batch files.

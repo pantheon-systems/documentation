@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/mysql-access
-anchorid: mysql-access
 ---
 
 This section provides information on how to access your MariaDB or MySQL database through Pantheon.

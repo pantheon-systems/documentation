@@ -14,7 +14,6 @@ product: [--]
 integration: [woocommerce]
 tags: [plugins, site]
 type: guide
-anchorid: woocommerce
 woocommerce: true
 generator: pagination
 pagination:

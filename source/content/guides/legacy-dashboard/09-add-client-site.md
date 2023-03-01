@@ -9,7 +9,6 @@ layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/add-client-site
-anchorid: add-client-site
 editpath: legacy-dashboard/09-add-client-site.md
 contenttype: [guide]
 innav: [false]

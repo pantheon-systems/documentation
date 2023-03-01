@@ -15,7 +15,6 @@ reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal
-anchorid: solr-drupal
 editpath: solr-drupal/02-solr-drupal.md
 ---
 

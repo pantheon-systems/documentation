@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer
-anchorid: wordpress-composer
 ---
 
 [Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides a simplified method to manage the external (non-core) code used by a WordPress site.

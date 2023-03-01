@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted-composer/prepare
-anchorid: prepare
 editpath: drupal/drupal-unhosted-composer/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]

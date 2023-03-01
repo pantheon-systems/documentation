@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-btworkflow/database
-anchorid: database
 editpath: drupal/drupal-hosted-btworkflow/08-database.md
 reviewed: "2022-12-12"
 contenttype: [guide]

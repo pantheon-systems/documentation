@@ -13,7 +13,6 @@ integration: [--]
 tags: [git, sftp, workflow]
 type: guide
 contributors: [scottmassey, rachelwhitton]
-anchorid: wordpress-git
 permalink: docs/guides/wordpress-git/
 editpath: wordpress-Git/01-introduction.md
 image: Git-sftp-wp-docs-guide

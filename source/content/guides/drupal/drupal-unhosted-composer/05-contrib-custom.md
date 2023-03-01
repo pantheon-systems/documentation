@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted-composer/contrib-custom
-anchorid: contrib-custom
 editpath: drupal/drupal-unhosted-composer/05-contrib-custom.md
 reviewed: "2022-12-13"
 contenttype: [guide]

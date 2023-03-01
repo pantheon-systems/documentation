@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/multidev/compare-environments
-anchorid: compare-environments
 ---
 
 This section provides steps on how you can compare Multidev environments on your local.

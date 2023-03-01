@@ -8,7 +8,6 @@ contributors: [alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/dns
-anchorid: dns
 contenttype: [guide]
 innav: [false]
 categories: [domains]

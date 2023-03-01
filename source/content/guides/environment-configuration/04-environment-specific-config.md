@@ -8,7 +8,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config
-anchorid: environment-specific-config
 contenttype: [guide]
 innav: [false]
 categories: [config]

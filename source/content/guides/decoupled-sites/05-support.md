@@ -7,7 +7,6 @@ contributors: [ joa-pan, joa-pan]
 type: guide
 layout: guide
 showtoc: true
-anchorid: support
 permalink: docs/guides/decoupled-sites/support/
 editpath: decoupled-sites/05-support.md
 reviewed: "2022-08-11"

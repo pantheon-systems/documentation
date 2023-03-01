@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/sftp/sftp-development
-anchorid: sftp-development
 ---
 
 This section provides information on how to commit or discard and abandon changes when developing in SFTP Mode.

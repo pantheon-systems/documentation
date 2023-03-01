@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-new-relic
-anchorid: fastly-new-relic
 contenttype: [guide]
 innav: [false]
 categories: [cache]

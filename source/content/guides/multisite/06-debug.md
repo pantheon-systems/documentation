@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Troubleshoot
 description: Review common WordPress Multisite troubleshooting scenarios.
-anchorid: debug
 generator: pagination
 layout: guide
 type: guide

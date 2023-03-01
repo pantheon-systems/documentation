@@ -13,7 +13,6 @@ tags: [quicksilver, webops, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/troubleshoot-quicksilver
-anchorid: troubleshoot-quicksilver
 ---
 
 This section provides solutions to common Quicksilver debugging and troubleshooting scenarios.

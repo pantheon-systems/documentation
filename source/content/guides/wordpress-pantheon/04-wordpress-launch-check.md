@@ -15,7 +15,6 @@ reviewed: "2022-05-04"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/wordpress-launch-check
-anchorid: wordpress-pantheon/wordpress-launch-check
 ---
 
 Pantheon provides static site analysis as a service for WordPress sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab, and are accessible by site team members.

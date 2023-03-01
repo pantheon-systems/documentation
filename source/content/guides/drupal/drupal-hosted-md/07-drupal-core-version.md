@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-md/drupal-core-version
-anchorid: drupal-core-version
 editpath: drupal/drupal-hosted-md/07-drupal-core-version.md
 reviewed: "2022-12-12"
 contenttype: [guide]

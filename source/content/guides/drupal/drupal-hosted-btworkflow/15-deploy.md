@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: false
 permalink: docs/guides/drupal-hosted-btworkflow/deploy
-anchorid: deploy
 editpath: drupal/drupal-hosted-btworkflow/15-deploy.md
 reviewed: "2022-12-12"
 contenttype: [guide]

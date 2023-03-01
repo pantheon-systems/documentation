@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/mysql-slow-log
-anchorid: mysql-slow-log
 ---
 
 This section provides information on how to analyze your MySQL Slow Log to improve site performance.

@@ -7,7 +7,6 @@ layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/test-custom-upstream
 contributors: [--]
-anchorid: test-custom-upstream
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]

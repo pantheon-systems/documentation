@@ -6,7 +6,6 @@ tags: [drush, updates]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-versions
-anchorid: drush-versions
 contenttype: [guide]
 innav: [false]
 categories: [cli]

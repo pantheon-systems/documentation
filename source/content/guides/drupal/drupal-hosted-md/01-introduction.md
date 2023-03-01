@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-md
-anchorid: drupal-hosted-md
 editpath: drupal/drupal-hosted-md/01-introduction.md
 reviewed: "2021-03-31"
 contenttype: [guide]

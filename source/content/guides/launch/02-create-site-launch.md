@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/launch/create-site-launch
-anchorid: create-site-launch
 contenttype: [guide]
 innav: [false]
 categories: [create, launch]

@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/sftp/troubleshooting-sftp
-anchorid: troubleshooting-sftp
 ---
 
 This section provides solutions to common SFTP troubleshooting scenarios.

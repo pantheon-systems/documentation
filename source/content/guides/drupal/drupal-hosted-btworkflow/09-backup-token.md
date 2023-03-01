@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-btworkflow/backup-token
-anchorid: backup-token
 editpath: drupal/drupal-hosted-btworkflow/09-backup-token.md
 reviewed: "2021-12-12"
 contenttype: [guide]

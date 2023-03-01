@@ -7,7 +7,6 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, eno
 type: guide
 layout: guide
 showtoc: true
-anchorid: drupal-sdk
 permalink: docs/guides/edge-integrations/drupal-sdk/
 editpath: edge-integrations/03-drupal-sdk.md
 contenttype: [guide]

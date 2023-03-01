@@ -15,7 +15,6 @@ reviewed: "2022-05-04"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/plugins
-anchorid: wordpress-pantheon/plugins
 ---
 
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these plugins, find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/).

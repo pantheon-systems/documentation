@@ -10,7 +10,6 @@ product: [--]
 integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
-anchorid: support-faq
 type: guide
 showtoc: true
 permalink: docs/guides/support/faq/

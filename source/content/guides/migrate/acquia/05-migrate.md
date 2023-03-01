@@ -13,7 +13,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/acquia/migrate
-anchorid: migrate
 editpath: migrate/acquia/05-migrate.md
 reviewed: "2022-12-13"
 ---

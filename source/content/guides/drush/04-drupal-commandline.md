@@ -7,7 +7,6 @@ contributors: [stevector, whitneymeredith]
 type: guide
 showtoc: true
 permalink: docs/guides/drush/drupal-commandline
-anchorid: drupal-commandline
 contenttype: [guide]
 innav: [false]
 categories: [cli]

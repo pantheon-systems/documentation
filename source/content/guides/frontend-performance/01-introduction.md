@@ -6,7 +6,6 @@ type: guide
 layout: guide
 tags: [cache, cdn, measure, traffic]
 contributors: [carolynshannon, stevector, ataylorme, rachelwhitton, dwayne, dgorton, dts, davidneedham, tessak22]
-anchorid: frontend
 permalink: docs/guides/frontend-performance
 editpath: frontend-performance/01-introduction.md
 image: CDN-speedTest-docs-guide

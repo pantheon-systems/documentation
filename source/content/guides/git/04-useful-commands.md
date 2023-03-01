@@ -7,7 +7,6 @@ tags: [code, git, local, webops, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/useful-commands
-anchorid: useful-commands
 contenttype: [guide]
 innav: [false]
 categories: [git]

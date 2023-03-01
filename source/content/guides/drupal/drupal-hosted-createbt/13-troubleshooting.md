@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createbt/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-hosted-createbt/13-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]

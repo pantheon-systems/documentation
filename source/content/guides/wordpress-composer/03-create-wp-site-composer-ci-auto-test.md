@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/create-wp-site-composer-ci-auto-test
-anchorid: create-wp-site-composer-ci-auto-test
 ---
 
 This section provides steps to create a new Pantheon WordPress site that will use [Composer](https://getcomposer.org/), Continuous Integration (CI), and Automated Testing. This guide will get you started, but you will need to customize and maintain the CI/testing set up for your projects.

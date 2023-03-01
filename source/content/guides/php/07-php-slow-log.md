@@ -13,7 +13,6 @@ tags: [cli, logs, sftp]
 layout: guide
 showtoc: true
 permalink: docs/guides/php/php-slow-log
-anchorid: php-slow-log
 ---
 
 This section provides information on how to use the PHP Slow Log and the PHP FPM Error Log to improve your site's performance.

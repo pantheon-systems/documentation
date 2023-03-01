@@ -6,7 +6,6 @@ tags: [iterate, autopilot, testing, webops]
 type: guide
 layout: guide
 showtoc: true
-anchorid: tests-results
 permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"

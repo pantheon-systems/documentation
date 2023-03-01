@@ -13,7 +13,6 @@ tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/manual-d8-composer-to-d8/database
-anchorid: database
 editpath: migrate/manual-d8-composer-to-d8/09-database.md
 reviewed: "2021-06-22"
 ---

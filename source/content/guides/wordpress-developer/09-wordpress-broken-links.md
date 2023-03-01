@@ -13,7 +13,6 @@ tags: [code, migrate, plugins]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-broken-links
-anchorid: wordpress-broken-links
 ---
 
 This section provides information on how to correct broken links so that the URL references the correct file path and domain name.

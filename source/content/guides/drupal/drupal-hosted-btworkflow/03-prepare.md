@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-btworkflow/prepare
-anchorid: prepare
 editpath: drupal/drupal-hosted-btworkflow/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]

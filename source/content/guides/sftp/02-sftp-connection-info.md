@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/sftp/sftp-connection-info
-anchorid: sftp-connection-info
 ---
 
 This section provides information on how to access the SFTP Connection Info in your dashboard, and how to authenticate your SFTP client.

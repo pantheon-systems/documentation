@@ -14,7 +14,6 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/troubleshoot-object-cache
-anchorid: troubleshoot-object-cache
 ---
 
 This section provides solutions to common troubleshooting scenarios for Object Cache.

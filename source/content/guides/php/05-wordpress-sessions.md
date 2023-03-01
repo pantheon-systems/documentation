@@ -13,7 +13,6 @@ tags: [code, users, cookies]
 layout: guide
 showtoc: true
 permalink: docs/guides/php/wordpress-sessions
-anchorid: wordpress-sessions
 ---
 
 This section provides information on WordPress and PHP sessions.

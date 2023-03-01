@@ -14,7 +14,6 @@ contributors: [masonjames]
 layout: guide
 showtoc: true
 permalink: docs/guides/php/wp-config-php
-anchorid: wp-config-php
 ---
 
 This section provides information on how to configure the `wp-config.php` file for a WordPress site. Refer to [Configure Your Settings.php File](/guides/php/settings-php) if you have a Drupal site.

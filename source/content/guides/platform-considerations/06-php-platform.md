@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/php-platform
-anchorid: php-platform
 ---
 
 This section provides information on general PHP support on the Pantheon platform. Refer to the [PHP on Pantheon](/guides/php) guide for comprehensive PHP information.

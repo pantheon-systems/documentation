@@ -8,7 +8,6 @@ reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-deprecated-upstream/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-hosted-deprecated-upstream/11-troubleshooting.md
 contenttype: [guide]
 innav: [false]

@@ -13,7 +13,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/wordpressvip/migrate
-anchorid: migrate
 editpath: migrate/wordpressvip/05-migrate.md
 reviewed: "2021-06-15"
 ---

@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/platform-site-info
-anchorid: platform-site-info
 reviewed: "2022-12-13"
 ---
 

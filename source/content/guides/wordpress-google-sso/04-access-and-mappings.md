@@ -14,7 +14,6 @@ tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/access-and-mappings
-anchorid: wordpress-google-sso/access-and-mappings
 editpath: wordpress-google-sso/04-access-and-mappings.md
 ---
 

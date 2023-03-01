@@ -8,7 +8,6 @@ reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer
-anchorid: integrated-composer
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]

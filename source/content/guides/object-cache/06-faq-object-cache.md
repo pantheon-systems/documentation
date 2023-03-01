@@ -14,7 +14,6 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/faq-object-cache
-anchorid: faq-object-cache
 ---
 
 This section provides answers to frequently asked Object Cache questions.

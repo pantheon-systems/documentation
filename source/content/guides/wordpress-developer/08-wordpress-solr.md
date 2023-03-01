@@ -14,7 +14,6 @@ contributors: [cityofoaksdesign]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-solr
-anchorid: wordpress-solr
 reviewed: "2022-12-13"
 ---
 

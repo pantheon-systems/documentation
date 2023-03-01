@@ -7,7 +7,6 @@ contributors: [bmackinney, jessifischer, mrfelton]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/collaborative-development
-anchorid: collaborative-development
 contenttype: [guide]
 innav: [false]
 categories: [git]

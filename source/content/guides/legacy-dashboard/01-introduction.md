@@ -8,7 +8,6 @@ layout: guide
 showtoc: false
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard
-anchorid: legacy-dashboard
 editpath: legacy-dashboard/01-introduction.md
 contenttype: [guide]
 innav: [true]

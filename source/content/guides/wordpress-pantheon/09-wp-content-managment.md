@@ -15,7 +15,6 @@ reviewed: "2022-05-09"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/wp-content-management
-anchorid: wordpress-pantheon/wp-content-management
 ---
 
 This section provides information to make managing content and tasks in your WordPress site easier. 

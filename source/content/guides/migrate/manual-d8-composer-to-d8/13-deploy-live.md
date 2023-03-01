@@ -13,7 +13,6 @@ tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/manual-d8-composer-to-d8/deploy-live
-anchorid: deploy-live
 editpath: migrate/manual-d8-composer-to-d8/09-deploy-live.md
 reviewed: "2022-12-13"
 ---

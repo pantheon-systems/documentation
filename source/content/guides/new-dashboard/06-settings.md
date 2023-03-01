@@ -14,7 +14,6 @@ contributors: [joa-pan, michellecolon-pantheon]
 reviewed: "2022-07-20"
 layout: guide
 permalink: docs/guides/new-dashboard/settings
-anchorid: new-dashboard
 editpath: new-dashboard/06-settings.md
 ---
 

@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/mysql-workbench
-anchorid: mysql-workbench
 ---
 
 This section provides information on how to use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) to access a database on Pantheon.

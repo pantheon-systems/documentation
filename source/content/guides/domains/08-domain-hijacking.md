@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/domain-hijacking
-anchorid: domains-hijacking
 contenttype: [guide]
 innav: [false]
 categories: [domains]

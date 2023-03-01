@@ -6,7 +6,6 @@ tags: [autopilot, webops, D8, D9, D10]
 type: guide
 layout: guide
 showtoc: true
-anchorid: autopilot-faq
 permalink: docs/guides/autopilot/autopilot-faq/
 reviewed: "2022-12-14"
 contenttype: [guide]

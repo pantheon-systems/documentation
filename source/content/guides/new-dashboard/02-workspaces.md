@@ -15,7 +15,6 @@ reviewed: "2022-07-20"
 layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/workspaces
-anchorid: new-dashboard
 editpath: new-dashboard/02-workspaces.md
 ---
 

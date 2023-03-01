@@ -4,7 +4,6 @@ subtitle: Update Your Project
 description: In step nine of the Build Tools guide, learn how to update your site as part of the continuous integration process.
 tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
-anchorid: update
 type: guide
 permalink: docs/guides/build-tools/update/
 image: buildToolsGuide-thumb

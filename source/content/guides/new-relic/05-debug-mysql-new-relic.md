@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/debug-mysql-new-relic
-anchorid: debug-mysql-new-relic
 ---
 
 This sections provides information on how to solve MySQL issues with New Relic&reg;.

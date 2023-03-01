@@ -14,7 +14,6 @@ contributors: [scottmassey]
 layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/jira
-anchorid: jira
 ---
 
 This section provides information on how to use Quicksilver to integrate Jira with Pantheon.

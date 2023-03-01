@@ -6,7 +6,6 @@ tags: [code, git, local, webops, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/git-config
-anchorid: git-config
 contenttype: [guide]
 innav: [false]
 categories: [git]

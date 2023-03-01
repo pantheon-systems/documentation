@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-btworkflow/restore-token
-anchorid: restore-token
 editpath: drupal/drupal-hosted-btworkflow/13-restore-token.md
 reviewed: "2022-12-12"
 contenttype: [guide]

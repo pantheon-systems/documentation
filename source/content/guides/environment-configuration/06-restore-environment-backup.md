@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/restore-environment-backup
-anchorid: restore-environment-backup
 contenttype: [guide]
 innav: [false]
 categories: [backup]

@@ -8,7 +8,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/primary-domain
-anchorid: primary-domain
 contenttype: [guide]
 innav: [false]
 categories: [domains]

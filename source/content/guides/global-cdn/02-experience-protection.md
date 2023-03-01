@@ -7,7 +7,6 @@ contributors: [whitneymeredith, michellecolon-pantheon]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/experience-protection
-anchorid: experience-protection
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]

@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/new-relic
-anchorid: new-relic
 ---
 
 [New Relic&reg; Performance Monitoring](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. New Relic&reg; makes it easy for you to monitor your performance and speed up the support process by helping our support team visualize corresponding performance and symptoms.

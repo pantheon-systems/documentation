@@ -5,7 +5,6 @@ description: A starter kit for teams that are looking to make the leap to more a
 tags: [collaborate, composer, continuous-integration, webops, workflow]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton, fatimask, dgorton]
 type: guide
-anchorid: build-tools
 permalink: docs/guides/build-tools/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb

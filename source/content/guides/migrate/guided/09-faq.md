@@ -14,7 +14,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/guided/faq
-anchorid: faq
 editpath: migrate/guided/09-faq.md
 reviewed: "2021-06-15"
 ---

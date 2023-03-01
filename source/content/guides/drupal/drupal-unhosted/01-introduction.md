@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted
-anchorid: drupal-unhosted
 editpath: drupal/drupal-unhosted/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]

@@ -13,7 +13,6 @@ tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 layout: guide
 permalink: docs/guides/object-cache/enable-object-cache
-anchorid: enable-object-cache
 reviewed: "2022-12-13"
 ---
 

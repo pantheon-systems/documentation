@@ -6,7 +6,6 @@ tags: [collaborate, launch, upstreams, webops, workflow, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream
-anchorid: custom-upstream
 contenttype: [guide]
 innav: [true]
 categories: [custom-upstreams]

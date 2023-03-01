@@ -4,7 +4,6 @@ subtitle: Write a New Test
 description: In step six of the Build Tools guide, learn how to use the pre-configured site tests, or customize your own.
 tags: [continuous-integration, iterate, webops, workflow, D8, D9, D10]
 buildtools: true
-anchorid: behat
 type: guide
 permalink: docs/guides/build-tools/tests/
 editpath: build-tools/06-tests.md

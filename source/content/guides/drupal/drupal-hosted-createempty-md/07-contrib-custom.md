@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createempty-md/contrib-custom
-anchorid: contrib-custom
 editpath: drupal/drupal-hosted-createempty-md/07-contrib-custom.md
 reviewed: "2022-12-13"
 contenttype: [guide]

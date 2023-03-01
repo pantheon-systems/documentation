@@ -13,7 +13,6 @@ tags: [wp-cli, cli]
 layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/install-wp-plugins-themes
-anchorid: install-wp-plugins-themes
 ---
 
 This section provides information on how to install WordPress plugins and themes with WP-CLI and Terminus.

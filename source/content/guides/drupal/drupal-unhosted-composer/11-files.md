@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-unhosted-composer/files
-anchorid: files
 editpath: drupal/drupal-unhosted-composer/11-files.md
 reviewed: "2022-12-13"
 contenttype: [guide]

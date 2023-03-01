@@ -13,7 +13,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/kinsta
-anchorid: kinsta
 editpath: migrate/kinsta/01-introduction.md
 reviewed: "2022-12-13"
 ---

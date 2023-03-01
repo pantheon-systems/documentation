@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-wafio
-anchorid: agcdn-wafio
 contenttype: [guide]
 innav: [false]
 categories: [optimize]

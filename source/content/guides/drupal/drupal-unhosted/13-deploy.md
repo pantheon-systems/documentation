@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-unhosted/deploy
-anchorid: deploy
 editpath: drupal/drupal-unhosted/11-deploy.md
 contenttype: [guide]
 innav: [false]

@@ -2,7 +2,6 @@
 title: Frontend Performance
 subtitle: Queries and Databases
 description: Optimizing queries and databases.
-anchorid: queries
 tags: [measure, traffic]
 type: guide
 layout: guide

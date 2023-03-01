@@ -2,7 +2,6 @@
 title: Frontend Performance
 subtitle: Code and CSS
 description: Optimizing code and CSS.
-anchorid: code
 tags: [measure, traffic]
 type: guide
 layout: guide

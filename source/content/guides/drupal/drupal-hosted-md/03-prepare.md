@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-md/prepare
-anchorid: prepare
 editpath: drupal/drupal-hosted-md/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]

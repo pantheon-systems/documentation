@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-md/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-hosted-md/13-troubleshooting.md
 reviewed: "2021-12-13"
 contenttype: [guide]

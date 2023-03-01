@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/5xx-errors
-anchorid: 5xx-errors
 contenttype: [guide]
 innav: [false]
 categories: [issues]

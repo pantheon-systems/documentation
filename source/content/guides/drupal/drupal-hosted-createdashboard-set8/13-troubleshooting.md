@@ -8,7 +8,6 @@ reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createdashboard-set8/troubleshooting
-anchorid: troubleshooting
 editpath: drupal-hosted-createdashboard-set8/13-troubleshooting.md
 contenttype: [guide]
 innav: [false]

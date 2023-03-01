@@ -6,7 +6,6 @@ tags: [plans]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/account-mgmt/plans/resources
-anchorid: resources
 editpath: docs/guides/account-mgmt/plans/03-resources.md
 reviewed: "2022-09-19"
 contenttype: [guide]

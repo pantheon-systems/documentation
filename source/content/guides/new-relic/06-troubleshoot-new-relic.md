@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/troubleshoot-new-relic
-anchorid: troubleshoot-new-relic
 ---
 
 This section provides solutions for common New Relic troubleshooting scenarios.

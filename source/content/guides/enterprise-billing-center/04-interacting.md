@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/interacting
-anchorid: interacting
 ---
 
 This section provides information on how you can access and interact with the Site Portfolio Report.

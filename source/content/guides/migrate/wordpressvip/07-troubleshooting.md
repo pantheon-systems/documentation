@@ -14,7 +14,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpressvip/troubleshooting
-anchorid: troubleshooting
 editpath: migrate/wordpressvip/07-troubleshooting.md
 reviewed: "2021-06-15"
 ---

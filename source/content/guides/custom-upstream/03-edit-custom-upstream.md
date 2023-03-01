@@ -6,7 +6,6 @@ tags: [upstreams, workflow, webops, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/edit-custom-upstream
-anchorid: edit-custom-upstream
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]

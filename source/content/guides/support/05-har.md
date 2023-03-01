@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
 buildtools: true
-anchorid: generate-har
 type: guide
 showtoc: true
 permalink: docs/guides/support/har/

@@ -7,7 +7,6 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
 layout: guide
 showtoc: true
-anchorid: analytics
 permalink: docs/guides/edge-integrations/analytics/
 editpath: edge-integrations/05-analytics.md
 contenttype: [guide]

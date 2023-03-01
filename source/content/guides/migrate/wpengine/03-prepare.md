@@ -13,7 +13,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/wpengine/prepare
-anchorid: prepare
 editpath: migrate/wpengine/03-prepare.md
 reviewed: "2021-06-15"
 ---

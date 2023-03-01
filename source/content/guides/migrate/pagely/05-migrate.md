@@ -13,7 +13,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/pagely/migrate
-anchorid: migrate
 editpath: migrate/pagely/05-migrate.md
 reviewed: "2021-06-15"
 ---

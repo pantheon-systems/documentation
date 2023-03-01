@@ -2,7 +2,6 @@
 title: Using Git with SFTP & WordPress
 subtitle: Next Steps
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
-anchorid: next-steps
 layout: guide
 contenttype: [guide]
 innav: [false]

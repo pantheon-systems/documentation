@@ -13,7 +13,6 @@ tags: [workflow, updates]
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-development-versions
-anchorid: wordpress-development-versions
 ---
 
 This section provides information on how to test WordPress core versions.

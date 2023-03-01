@@ -14,7 +14,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/kinsta/faq
-anchorid: faq
 editpath: migrate/kinsta/09-faq.md
 reviewed: "2021-06-15"
 ---

@@ -15,7 +15,6 @@ reviewed: "2021-11-22"
 layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/support
-anchorid: new-dashboard
 editpath: new-dashboard/05-support.md
 ---
 

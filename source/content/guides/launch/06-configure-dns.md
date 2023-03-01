@@ -6,7 +6,6 @@ tags: [dns, https, launch, webops]
 layout: guide
 showtoc: true
 permalink: docs/guides/launch/configure-dns/
-anchorid: configure-dns
 contenttype: [guide]
 innav: [false]
 categories: [config, launch]

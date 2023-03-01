@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted
-anchorid: drupal-hosted
 editpath: drupal/drupal-hosted/01-introduction.md
 reviewed: "2022-12-12"
 contenttype: [guide]

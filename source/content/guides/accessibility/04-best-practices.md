@@ -15,7 +15,6 @@ reviewed: "2022-06-01"
 layout: guide
 showtoc: true
 permalink: docs/guides/accessibility/best-practices
-anchorid: accessibility/best-practices
 editpath: accessibility/04-best-practices.md
 ---
 

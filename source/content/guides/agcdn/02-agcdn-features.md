@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-features
-anchorid: agcdn-features
 contenttype: [guide]
 innav: [false]
 categories: [optimize]

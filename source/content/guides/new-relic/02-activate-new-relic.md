@@ -14,7 +14,6 @@ contributors: [whitneymeredith, jspellman814]
 layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/activate-new-relic
-anchorid: activate-new-relic
 ---
 
 This section provides steps on how to activate and configure your New Relic&reg; account.

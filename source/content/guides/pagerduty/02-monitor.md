@@ -12,7 +12,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-anchorid: monitor
 permalink: docs/guides/pagerduty/monitor/
 editpath: pagerduty/02-monitors.md
 reviewed: "2020-08-18"

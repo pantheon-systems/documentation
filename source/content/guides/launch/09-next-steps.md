@@ -6,7 +6,6 @@ layout: guide
 showtoc: true
 tags: [launch, webops]
 permalink: docs/guides/launch/next-steps/
-anchorid: next-steps
 contenttype: [guide]
 innav: [false]
 categories: [overview, test, launch]

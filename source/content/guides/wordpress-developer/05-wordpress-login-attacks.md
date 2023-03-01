@@ -14,7 +14,6 @@ reviewed: "2022-05-16"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-login-attacks
-anchorid: wordpress-login-attacks
 ---
 
 This section provides information on how to avoid WordPress login attacks.

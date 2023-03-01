@@ -14,7 +14,6 @@ tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/
-anchorid: wordpress-google-sso
 editpath: wordpress-google-sso/01-introduction.md
 ---
 

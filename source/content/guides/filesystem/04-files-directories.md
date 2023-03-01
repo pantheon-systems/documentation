@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/filesystem/files-directories
-anchorid: files-directories
 ---
 
 This section provides information on files and directories on the Pantheon platform.

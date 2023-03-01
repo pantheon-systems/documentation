@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/multidev/clone-content
-anchorid: clone-content
 ---
 
 This section provides steps on how to clone content in your Multidev.

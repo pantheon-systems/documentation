@@ -2,7 +2,6 @@
 title: Frontend Performance
 subtitle: Diagnostic Tools
 description: Tools for evaluating performance issues.
-anchorid: diagnostics
 tags: [measure, traffic]
 type: guide
 layout: guide

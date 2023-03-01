@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createbt/upgrade
-anchorid: upgrade
 editpath: drupal/drupal-hosted-createbt/05-upgrade.md
 reviewed: "2022-12-12"
 contenttype: [guide]

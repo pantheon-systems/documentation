@@ -2,7 +2,6 @@
 title: Frontend Performance
 subtitle: Caching
 description: Caching strategies for improved performance.
-anchorid: caching
 tags: [measure, traffic]
 type: guide
 layout: guide

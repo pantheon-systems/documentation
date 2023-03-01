@@ -14,7 +14,6 @@ reviewed: "2022-04-19"
 layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/advanced-global-cdn
-anchorid: advanced-global-cdn
 editpath: professional-services/05-advanced-global-cdn.md
 ---
 

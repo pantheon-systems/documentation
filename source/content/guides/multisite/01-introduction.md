@@ -13,7 +13,6 @@ product: [--]
 integration: [--]
 tags: [multisite]
 contributors: [danielbachhuber, whitneymeredith]
-anchorid: multisite
 permalink: docs/guides/multisite/
 nexturl: guides/multisite/considerations/
 editpath: multisite/01-introduction.md

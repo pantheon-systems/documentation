@@ -8,7 +8,6 @@ layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/site-plan
-anchorid: site-plan
 editpath: legacy-dashboard/07-site-plan.md
 contenttype: [guide]
 innav: [false]

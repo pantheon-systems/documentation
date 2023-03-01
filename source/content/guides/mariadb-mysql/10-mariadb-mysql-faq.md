@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/mariadb-mysql-faq
-anchorid: mariadb-mysql-faq
 ---
 
 This section provides answers to frequently asked MariaDB and MySQL questions.

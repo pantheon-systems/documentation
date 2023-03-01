@@ -6,7 +6,6 @@ layout: guide
 tags: [backup, launch, webops]
 showtoc: true 
 permalink: docs/guides/launch/launch-check/
-anchorid: launch-check
 contenttype: [guide]
 innav: [false]
 categories: [config, cache, test, launch]

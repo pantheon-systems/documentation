@@ -13,7 +13,6 @@ tags: [quicksilver, webops, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/install-script
-anchorid: install-script
 ---
 
 This section provides information on script type and location, as well as how to install specific scripts.

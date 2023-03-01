@@ -14,7 +14,6 @@ tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
 layout: guide
 permalink: docs/guides/wordpress-google-sso/advanced-configuration
-anchorid: wordpress-google-sso/advanced-configuration
 editpath: wordpress-google-sso/06-advanced-configuration.md
 ---
 

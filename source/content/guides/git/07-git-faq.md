@@ -7,7 +7,6 @@ contributors: [mrfelton, alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/faq-git
-anchorid: faq-git
 contenttype: [guide]
 innav: [false]
 categories: [git]

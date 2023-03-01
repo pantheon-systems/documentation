@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-splunk
-anchorid: fastly-splunk
 contenttype: [guide]
 innav: [false]
 categories: [cache]

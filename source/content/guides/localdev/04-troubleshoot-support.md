@@ -6,7 +6,6 @@ tags: [localdev, local, workflow]
 reviewed: "2020-12-04"
 layout: guide
 permalink: docs/guides/localdev
-anchorid: localdev
 editpath: localdev/04-troubleshoot-support.md
 contenttype: [guide]
 innav: [false]

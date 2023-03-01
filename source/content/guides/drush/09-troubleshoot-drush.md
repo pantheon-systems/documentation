@@ -6,7 +6,6 @@ tags: [migrate, terminus, drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush/troubleshoot-drush
-anchorid: troubleshoot-drush
 contenttype: [guide]
 innav: [false]
 categories: [cli, troubleshooting]

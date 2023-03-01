@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/measure
-anchorid: measure
 editpath: docs/guides/account-mgmt/traffic/03-measure.md
 reviewed: "2022-09-19"
 contenttype: [guide]

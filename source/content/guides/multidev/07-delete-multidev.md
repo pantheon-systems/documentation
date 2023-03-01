@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/multidev/delete-multidev
-anchorid: delete-multidev
 ---
 
 This section provides steps on how to delete a branch environment and how to delete a branch.

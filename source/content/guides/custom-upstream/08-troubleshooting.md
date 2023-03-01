@@ -6,7 +6,6 @@ tags: [git, upstreams, workflow, D8, D9, D10]
 layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/troubleshooting
-anchorid: troubleshooting
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]

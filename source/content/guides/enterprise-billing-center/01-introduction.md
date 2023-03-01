@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/enterprise-billing-center
-anchorid: enterprise-billing-center
 ---
 
 The Enterprise Billing Center provides billing and site plan information for Enterprise (contract) customers. The Enterprise Billing Center allows you to:

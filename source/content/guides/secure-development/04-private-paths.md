@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/private-paths
-anchorid: private-paths
 reviewed: "2022-07-21"
 ---
 

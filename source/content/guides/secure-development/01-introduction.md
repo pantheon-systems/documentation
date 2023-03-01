@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/secure-development
-anchorid: secure-development
 reviewed: "2022-07-21"
 ---
 

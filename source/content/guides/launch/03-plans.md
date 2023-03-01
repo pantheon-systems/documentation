@@ -5,7 +5,6 @@ description: Select the right site plan to cover your needs.
 layout: guide
 showtoc: true
 tags: [agencies, billing, launch, webops]
-anchorid: plans
 permalink: docs/guides/launch/plans/
 contenttype: [guide]
 innav: [false]

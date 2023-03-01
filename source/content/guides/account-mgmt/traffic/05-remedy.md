@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/remedy
-anchorid: remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
 contenttype: [guide]

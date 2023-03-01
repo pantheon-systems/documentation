@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/overloaded-workers
-anchorid: overloaded-workers
 contenttype: [guide]
 innav: [false]
 categories: [issues]

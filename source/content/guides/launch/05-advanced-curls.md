@@ -7,7 +7,6 @@ showtoc: true
 tags: [backup, launch, webops]
 contributors: [whitneymeredith]
 permalink: docs/guides/launch/advanced-curls/
-anchorid: advanced-curls
 contenttype: [guide]
 innav: [false]
 categories: [migrate, launch, domains]

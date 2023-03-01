@@ -14,7 +14,6 @@ tags: [site, database]
 layout: guide
 showtoc: true
 permalink: docs/guides/php/settings-php
-anchorid: settings-php
 reviewed: "2022-12-13"
 ---
 

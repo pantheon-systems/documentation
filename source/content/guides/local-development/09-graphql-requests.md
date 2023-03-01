@@ -15,7 +15,6 @@ reviewed: "2022-03-22"
 layout: guide
 showtoc: true
 permalink: docs/guides/local-development/graphql-requests
-anchorid: graphql-requests
 ---
 
 This section provides information on how to use GraphQL on the Pantheon platform.

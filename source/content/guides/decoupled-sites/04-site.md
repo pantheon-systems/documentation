@@ -7,7 +7,6 @@ contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
 layout: guide
 showtoc: true
-anchorid: site
 permalink: docs/guides/decoupled-sites/site/
 editpath: decoupled-sites/04-site.md
 reviewed: "2022-12-12"

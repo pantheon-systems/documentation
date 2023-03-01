@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-btworkflow/contrib-custom
-anchorid: contrib-custom
 editpath: drupal/drupal-hosted-btworkflow/07-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]

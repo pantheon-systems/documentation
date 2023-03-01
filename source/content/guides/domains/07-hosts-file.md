@@ -7,7 +7,6 @@ contributors: [alexfornuto]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/hosts-file
-anchorid: hosts-file
 contenttype: [guide]
 innav: [false]
 categories: [domains]

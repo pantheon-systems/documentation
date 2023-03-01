@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-unhosted/prepare
-anchorid: prepare
 editpath: drupal/drupal-unhosted/03-prepare.md
 contenttype: [guide]
 innav: [false]

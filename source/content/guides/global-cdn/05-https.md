@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/https
-anchorid: https
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]

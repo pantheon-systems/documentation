@@ -2,7 +2,6 @@
 title: Frontend Performance
 subtitle: Additional Resources
 description: Additional resources for frontend performance
-anchorid: additional-resources
 tags: [measure, traffic]
 type: guide
 layout: guide

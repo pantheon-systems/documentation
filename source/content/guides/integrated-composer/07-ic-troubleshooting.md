@@ -8,7 +8,6 @@ reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
-anchorid: ic-troubleshooting
 contenttype: [guide]
 innav: [false]
 categories: [dependencies, troubleshooting]

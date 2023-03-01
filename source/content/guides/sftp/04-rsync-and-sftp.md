@@ -12,7 +12,6 @@ integration: [--]
 layout: guide
 showtoc: true
 permalink: docs/guides/sftp/rsync-and-sftp
-anchorid: rsync-and-sftp
 ---
 
 This section provides information on how to use your SFTP client or rsync to transfer large files.

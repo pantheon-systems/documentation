@@ -15,7 +15,6 @@ integration: []
 layout: guide
 showtoc: true
 permalink: docs/guides/local-development/continuous-integration
-anchorid: continuous-integration
 ---
 
 This section provides information on how to use Terminus and Drupal SimpleTest to run automated integration tests.

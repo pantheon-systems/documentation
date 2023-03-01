@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/hyperdb
-anchorid: hyperdb
 ---
 
 This section provides information on how to scale your WordPress site with MySQL Replicas and HyperDB.

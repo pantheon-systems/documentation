@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/php/php-versions
-anchorid: php-versions
 reviewed: "2022-12-13"
 ---
 

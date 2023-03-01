@@ -15,7 +15,6 @@ reviewed: "2022-04-27"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-cron
-anchorid: wordpress-cron
 ---
 
 This section provides information on how to create and run Cron jobs.

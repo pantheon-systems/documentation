@@ -7,7 +7,6 @@ type: guide
 layout: guide
 contributors: [whitneymeredith]
 showtoc: true
-anchorid: autopilot-deactivate
 permalink: docs/guides/autopilot/autopilot-deactivate
 contenttype: [guide]
 innav: [false]

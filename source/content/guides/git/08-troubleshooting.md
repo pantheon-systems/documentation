@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/troubleshooting
-anchorid: troubleshooting
 contenttype: [guide]
 innav: [false]
 categories: [git]

@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted-composer/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-unhosted-composer/15-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]

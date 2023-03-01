@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-indicator
-anchorid: environment-indicator
 contenttype: [guide]
 innav: [false]
 categories: [config]

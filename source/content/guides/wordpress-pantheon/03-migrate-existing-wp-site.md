@@ -15,7 +15,6 @@ reviewed: "2022-05-02"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/migrate-existing-wp-site
-anchorid: wordpress-pantheon/migrate-existing-wp-site
 ---
 
 This page provides steps for migrating an existing WordPress site to Pantheon's platform. Review Pantheon's [Managed Migrations](https://pantheon.io/professional-services/website-migrations?docs) page to see if having the Pantheon Professional Services team perform your migration is a better option for you before you migrate your site.

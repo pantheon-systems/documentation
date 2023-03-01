@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/logs-pantheon/automate-log-downloads
-anchorid: automate-log-downloads
 ---
 
 This section provides information on how to automate the process of accessing and maintaining your logs with a script.

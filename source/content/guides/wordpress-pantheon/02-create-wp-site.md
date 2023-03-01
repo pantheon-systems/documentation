@@ -15,7 +15,6 @@ reviewed: "2022-05-02"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/create-wp-site
-anchorid: wordpress-pantheon/create-wp-site
 ---
 
 This page provides steps on creating a new WordPress site on Pantheon. 

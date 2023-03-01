@@ -7,7 +7,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/autopilot-custom-upstream-config
-anchorid: autopilot-custom-upstream-config
 contenttype: [guide]
 innav: [false]
 categories: [automate]

@@ -7,7 +7,6 @@ contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
 layout: guide
 showtoc: true
-anchorid: wordpress-sdk
 permalink: docs/guides/edge-integrations/wordpress-sdk/
 editpath: edge-integrations/04-wordpress-sdk.md
 contenttype: [guide]

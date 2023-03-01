@@ -6,7 +6,6 @@ tags: [traffic]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/account-mgmt/traffic
-anchorid: traffic
 editpath: docs/guides/account-mgmt/traffic/01-introduction.md
 reviewed: "2022-09-19"
 contenttype: [guide]

@@ -7,7 +7,6 @@ type: guide
 layout: guide
 contributors: [whitneymeredith]
 showtoc: true
-anchorid: autopilot-preconfiguration
 permalink: docs/guides/autopilot/autopilot-preconfiguration/
 contenttype: [guide]
 innav: [false]

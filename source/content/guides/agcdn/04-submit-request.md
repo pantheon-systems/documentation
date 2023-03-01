@@ -8,7 +8,6 @@ reviewed: "2022-11-01"
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/submit-request
-anchorid: submit-request
 contenttype: [guide]
 innav: [false]
 categories: [help]

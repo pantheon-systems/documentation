@@ -8,7 +8,6 @@ reviewed: "2022-12-13"
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-faq
-anchorid: ic-faq
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]

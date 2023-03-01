@@ -13,7 +13,6 @@ tags: [wp-cli, cli]
 layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/wp-cli-sql-php-subcommands
-anchorid: wp-cli-sql-php-subcommands
 ---
 
 This section provides information on how to run SQL queries, PHP code, and subcommands on WP-CLI.

@@ -14,7 +14,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/transfer
-anchorid: transfer
 editpath: docs/guides/account-mgmt/billing/09-transfer.md
 reviewed: "2022-09-19"
 ---

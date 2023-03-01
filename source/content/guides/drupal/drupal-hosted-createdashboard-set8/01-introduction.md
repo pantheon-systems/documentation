@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 layout: guide
 permalink: docs/guides/drupal-hosted-createdashboard-set8
-anchorid: drupal-hosted-createdashboard-set8
 editpath: drupal-hosted-createdashboard-set8/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]

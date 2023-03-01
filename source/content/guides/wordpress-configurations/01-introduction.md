@@ -15,7 +15,6 @@ reviewed: "2022-05-04"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-configurations
-anchorid: wordpress-configurations
 ---
 
 Pantheon provides extensive compatibility with WordPress plugins. This guide provides information on plugin configurations for common website management plugins including Pantheon-maintained WordPress plugins and popular WordPress plugins such as:

@@ -12,7 +12,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-anchorid: introduction
 pagerduty: true
 generator: pagination
 pagination:

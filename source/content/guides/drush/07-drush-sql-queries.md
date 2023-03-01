@@ -5,7 +5,6 @@ description: Learn how to use Drush SQL queries.
 tags: [migrate, terminus, drush]
 layout: guide
 permalink: docs/guides/drush/drush-sql-queries
-anchorid: drush-sql-queries
 contenttype: [guide]
 innav: [false]
 categories: [cli]

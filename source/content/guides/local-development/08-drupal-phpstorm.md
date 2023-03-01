@@ -15,7 +15,6 @@ contributors: [szipfel]
 layout: guide
 showtoc: true
 permalink: docs/guides/local-development/drupal-phpstorm
-anchorid: drupal-phpstorm
 ---
 
 This section provides information on how to configure your local environment to build Drupal modules with [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/).

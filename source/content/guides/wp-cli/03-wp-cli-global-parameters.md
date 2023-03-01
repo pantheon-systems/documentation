@@ -13,7 +13,6 @@ tags: [wp-cli, cli]
 layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/wp-cli-global-parameters
-anchorid: wp-cli-global-parameters
 ---
 
 This section provides information on WP-CLI global parameters that you should be familiar with to help you use WP-CLI to develop and maintain your site.

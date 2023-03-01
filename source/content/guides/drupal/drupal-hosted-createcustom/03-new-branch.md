@@ -6,7 +6,6 @@ tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
 layout: guide
 permalink: docs/guides/drupal-hosted-createcustom/new-branch
-anchorid: new-branch
 editpath: drupal/drupal-hosted-createcustom/03-new-branch.md
 reviewed: "2022-12-12"
 contenttype: [guide]

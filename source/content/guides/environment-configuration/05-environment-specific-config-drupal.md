@@ -7,7 +7,6 @@ contributors: [peter-pantheon, rachelwhitton]
 layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config-drupal
-anchorid: environment-specific-config-drupal
 contenttype: [guide]
 innav: [false]
 categories: [config]

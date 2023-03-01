@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createempty-md/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-hosted-createempty-md/17-troubleshooting.md
 reviewed: "2022-12-13"
 contenttype: [guide]

@@ -14,7 +14,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/manual-d8-composer-to-d8
-anchorid: manual-d8-composer-to-d8
 editpath: migrate/manual-d8-composer-to-d8/01-introduction.md
 reviewed: "2022-12-13"
 ---

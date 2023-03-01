@@ -6,7 +6,6 @@ layout: guide
 showtoc: true
 tags: [dns, https, launch, webops]
 permalink: docs/guides/launch/domains/
-anchorid: domains
 contenttype: [guide]
 innav: [false]
 categories: [domains, launch]

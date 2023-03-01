@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/manage
-anchorid: manage
 editpath: docs/guides/account-mgmt/plans/09-manage.md
 reviewed: "2022-09-19"
 contenttype: [guide]

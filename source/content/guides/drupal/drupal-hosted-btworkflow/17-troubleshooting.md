@@ -7,7 +7,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-btworkflow/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-hosted-btworkflow/17-troubleshooting.md
 reviewed: "2022-12-12"
 contenttype: [guide]

@@ -15,7 +15,6 @@ reviewed: "2022-06-01"
 layout: guide
 showtoc: true
 permalink: docs/guides/accessibility/tools
-anchorid: accessibility/tools
 editpath: accessibility/06-tools.md
 ---
 

@@ -6,7 +6,6 @@ tags: [cli, code, git, local, workflow]
 layout: guide
 showtoc: true
 permalink: docs/guides/git/undo-commits
-anchorid: undo-commits
 contenttype: [guide]
 innav: [false]
 categories: [git]

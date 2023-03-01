@@ -15,7 +15,6 @@ integration: [--]
 tags: [code, files]
 reviewed: "2021-07-14"
 permalink: docs/guides/filesystem/large-files
-anchorid: large-files
 ---
 
 This section provides information on highly populated directories and large file management.

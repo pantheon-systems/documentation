@@ -14,7 +14,6 @@ layout: guide
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/faq
-anchorid: faq
 ---
 
 This section provides answers to frequently asked questions about the Enterprise Billing Center and the Site Portfolio Report.

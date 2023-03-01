@@ -14,7 +14,6 @@ contributors: [wordsmither]
 layout: guide
 showtoc: true
 permalink: docs/guides/platformsh/faq
-anchorid: faq
 editpath: migrate/platformsh/09-faq.md
 reviewed: "2021-06-15"
 ---

@@ -2,7 +2,6 @@
 title: Frontend Performance
 subtitle: Static Sites and Pages
 description: Static sites and static page generation, including AMP.
-anchorid: static
 tags: [measure, traffic]
 type: guide
 layout: guide

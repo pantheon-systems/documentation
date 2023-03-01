@@ -14,7 +14,6 @@ contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/monitor-new-relic
-anchorid: monitor-new-relic
 ---
 
 This section provides information on how to monitor and improve site performance with New Relic&reg;.
