@@ -17,7 +17,6 @@ permalink: docs/guides/multisite/
 nexturl: guides/multisite/considerations/
 editpath: multisite/01-introduction.md
 image: multisite
-guidetoc: true
 ---
 This guide covers the process of requesting, configuring, and maintaining a new WordPress Multisite on Pantheon. We'll also explore supported use cases, considerations and some common troubleshooting tips.
 
