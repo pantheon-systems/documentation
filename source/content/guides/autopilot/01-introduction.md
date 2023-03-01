@@ -4,7 +4,6 @@ subtitle: Introduction
 description: Visual regression testing (VRT) for your WordPress or Drupal site.
 tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 contributors: [nathantyler, alexfornuto, edwardangert]
-productpage: https://pantheon.io/autopilot?docs
 type: guide
 showtoc: true
 permalink: docs/guides/autopilot
