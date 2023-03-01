@@ -4,7 +4,6 @@ subtitle: Deploy to Dev
 description: 
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted-composer/deploy-dev
 editpath: drupal/drupal-unhosted-composer/07-deploy-dev.md
 reviewed: "2022-12-13"

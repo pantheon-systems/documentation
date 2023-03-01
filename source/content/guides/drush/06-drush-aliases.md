@@ -3,7 +3,6 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Drush Aliases
 description: Learn how to use Drush aliases.
 tags: [migrate, terminus, drush]
-layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-aliases
 contenttype: [guide]

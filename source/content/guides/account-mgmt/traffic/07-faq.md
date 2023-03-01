@@ -4,7 +4,6 @@ subtitle: FAQ
 description: Frequently asked questions regarding traffic and overages.
 tags: [faq, traffic]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/faq
 editpath: docs/guides/account-mgmt/traffic/07-faq.md

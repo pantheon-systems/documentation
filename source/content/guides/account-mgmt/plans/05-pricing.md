@@ -4,7 +4,6 @@ subtitle: Pricing
 description: Review our pricing options.
 tags: [plans]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/plans/pricing
 editpath: docs/guides/account-mgmt/plans/05-pricing.md
 reviewed: "2022-09-19"

@@ -4,7 +4,6 @@ subtitle: Upload Files
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted/upload-files
 editpath: drupal/drupal-unhosted/11-upload-files.md
 contenttype: [guide]

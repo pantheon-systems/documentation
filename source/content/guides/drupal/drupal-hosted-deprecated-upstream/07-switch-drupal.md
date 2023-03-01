@@ -4,7 +4,6 @@ subtitle: Switch to Drupal with Composer Upstream
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-deprecated-upstream/switch-drupal
 editpath: drupal/drupal-hosted-deprecated-upstream/07-switch-drupal.md
 reviewed: "2022-12-13"

@@ -3,7 +3,6 @@ title: Legacy Dashboard
 subtitle: Create A Site
 description: Create a new Drupal or WordPress site on Pantheon.
 tags: [site, dashboard]
-layout: guide
 showtoc: true
 reviewed: "2022-12-13"
 permalink: docs/guides/legacy-dashboard/create-sites

@@ -4,7 +4,6 @@ subtitle: Configure Ongoing Core Updates
 description: 
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createdashboard-set8/core-updates
 editpath: drupal-hosted-createdashboard-set8/09-core-updates.md
 reviewed: "2022-12-13"

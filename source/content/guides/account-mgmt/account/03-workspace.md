@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/account/workspace
 editpath: docs/guides/account-mgmt/account/03-workspace.md
 reviewed: "2022-09-19"

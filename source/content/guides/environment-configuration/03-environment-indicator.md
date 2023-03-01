@@ -4,7 +4,6 @@ subtitle: Configuring Environment Indicators
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
 tags: [site, terminus, workflow, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-indicator
 contenttype: [guide]

@@ -4,7 +4,6 @@ subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform to Pantheon
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted-composer
 editpath: drupal/drupal-unhosted-composer/01-introduction.md
 reviewed: "2022-12-13"

@@ -4,7 +4,6 @@ subtitle: Redirects
 description: Avoiding unnecessary redirects to optimize site performance.
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/redirects
 editpath: frontend-performance/09-redirects.md

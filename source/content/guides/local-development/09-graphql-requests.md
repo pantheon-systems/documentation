@@ -12,7 +12,6 @@ integration: []
 tags: [local, workflow]
 contributors: [whitneymeredith]
 reviewed: "2022-03-22"
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/graphql-requests
 ---

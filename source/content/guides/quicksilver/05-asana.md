@@ -11,7 +11,6 @@ product: [--]
 integration: [quicksilver, asana]
 tags: [collaborate, continuous-integration, iterate, quicksilver, workflow]
 contributors: [scottmassey]
-layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/asana
 ---

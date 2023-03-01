@@ -10,7 +10,6 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard, database, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/database-workflow-tool
 ---

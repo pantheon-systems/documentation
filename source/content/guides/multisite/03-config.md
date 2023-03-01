@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Configure
 description: Learn how to configure your WordPress Multisite.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]

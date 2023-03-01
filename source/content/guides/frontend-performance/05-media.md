@@ -4,7 +4,6 @@ subtitle: Images and Media
 description: Optimizing media and images for frontend performance.
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/media
 editpath: frontend-performance/05-media.md

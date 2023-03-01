@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [billing]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/invoices
 editpath: docs/guides/account-mgmt/billing/07-invoices.md

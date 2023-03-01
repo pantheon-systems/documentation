@@ -4,7 +4,6 @@ subtitle: Slow Queries and High Query Volumes
 description: Learn how to resolve slow queries and high query volumes.
 tags: [services]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/slow-and-high-queries
 contenttype: [guide]

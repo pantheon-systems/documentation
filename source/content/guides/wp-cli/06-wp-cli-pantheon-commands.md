@@ -11,7 +11,6 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wp-cli, cli]
-layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/wp-cli-pantheon-commands
 reviewed: "2022-10-06"

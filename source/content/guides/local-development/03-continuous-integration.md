@@ -12,7 +12,6 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/continuous-integration
 ---

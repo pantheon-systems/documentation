@@ -9,7 +9,6 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [winscp]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/winscp
 ---

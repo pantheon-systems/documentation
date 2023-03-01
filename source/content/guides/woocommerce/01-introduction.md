@@ -4,7 +4,6 @@ subtitle: Introduction
 description: This guide covers how to quickly spinup a new WooCommerce site on Pantheon.
 contributors: [BFTrick]
 featuredcontributor: true
-layout: guide
 contenttype: [guide]
 innav: [true]
 categories: [ecommerce]

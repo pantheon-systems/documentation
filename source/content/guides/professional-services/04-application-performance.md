@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [cdn, security, professional-services]
 reviewed: "2022-04-06"
-layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/application-performance
 editpath: professional-services/04-application-performance.md

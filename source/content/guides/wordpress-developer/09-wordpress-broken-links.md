@@ -10,7 +10,6 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, migrate, plugins]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-broken-links
 ---

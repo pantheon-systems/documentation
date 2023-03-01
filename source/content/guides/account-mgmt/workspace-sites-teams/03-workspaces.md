@@ -4,7 +4,6 @@ subtitle: Professional Workspaces
 description: Learn how to manage and use workspaces.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md

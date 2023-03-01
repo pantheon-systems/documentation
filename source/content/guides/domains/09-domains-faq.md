@@ -4,7 +4,6 @@ subtitle: FAQs
 description: Get answers to your domain questions.
 tags: [collaborate, dns, agencies]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/domains-faq
 contenttype: [guide]

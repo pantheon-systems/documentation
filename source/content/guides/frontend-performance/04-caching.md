@@ -4,7 +4,6 @@ subtitle: Caching
 description: Caching strategies for improved performance.
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md

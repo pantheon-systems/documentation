@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [logs, measure]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/logs-pantheon/automate-log-downloads
 ---

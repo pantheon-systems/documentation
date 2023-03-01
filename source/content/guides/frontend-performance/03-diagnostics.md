@@ -4,7 +4,6 @@ subtitle: Diagnostic Tools
 description: Tools for evaluating performance issues.
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/diagnostics
 editpath: frontend-performance/03-diagnostics.md

@@ -12,7 +12,6 @@ product: [--]
 integration: [plugins]
 tags: [sso, saml, users, security, plugins]
 reviewed: "2020-02-19"
-layout: guide
 permalink: docs/guides/wordpress-google-sso/install/
 editpath: wordpress-google-sso/02-install.md
 ---

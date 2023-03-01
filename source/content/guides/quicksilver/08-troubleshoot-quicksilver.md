@@ -10,7 +10,6 @@ audience: [development]
 product: [--]
 integration: [quicksilver]
 tags: [quicksilver, webops, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/troubleshoot-quicksilver
 ---

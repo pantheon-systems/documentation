@@ -2,7 +2,6 @@
 title: Launch Essentials
 subtitle: Pre-launch Configuration
 description: Complete important configuration before launching your site.
-layout: guide
 tags: [backup, launch, webops]
 showtoc: true 
 permalink: docs/guides/launch/launch-check/

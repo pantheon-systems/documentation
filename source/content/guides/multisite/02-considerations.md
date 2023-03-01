@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Considerations
 description: Review important WordPress Multisite considerations.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]

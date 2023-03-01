@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [professional-services, migration]
 reviewed: "2021-04-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/website-migration-service
 editpath: professional-services/02-website-migration-service.md

@@ -11,7 +11,6 @@ product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon]
-layout: guide
 showtoc: true
 permalink: docs/guides/solr-drupal
 editpath: solr-drupal/01-introduction.md

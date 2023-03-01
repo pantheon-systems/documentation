@@ -4,7 +4,6 @@ subtitle: Work With Dependency Versions
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createempty-md/dependency-versions
 editpath: drupal/drupal-hosted-createempty-md/13-dependency-versions.md
 reviewed: "2022-12-13"

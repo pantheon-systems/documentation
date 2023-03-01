@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [code]
 contributors: [greg-1-anderson]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/deprecated-constructor-notices
 ---

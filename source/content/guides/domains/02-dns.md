@@ -5,7 +5,6 @@ description: Learn what DNS is, and how to utilize it to configure your domain n
 use: [docs_tags]
 tags: [dns]
 contributors: [alexfornuto]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/dns
 contenttype: [guide]

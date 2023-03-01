@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/manual-d8-composer-to-d8/contrib-custom
 editpath: migrate/manual-d8-composer-to-d8/05-contrib-custom.md

@@ -4,7 +4,6 @@ subtitle: AGCDN Features
 description: Learn more about AGCDN features.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-features
 contenttype: [guide]

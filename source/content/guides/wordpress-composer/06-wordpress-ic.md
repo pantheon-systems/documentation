@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/wordpress-ic
 ---

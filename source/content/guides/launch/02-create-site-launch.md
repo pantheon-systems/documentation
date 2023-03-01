@@ -4,7 +4,6 @@ subtitle: Create Your Site on Pantheon
 description: Learn how to create your site on Pantheon.
 tags: [cms,]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/launch/create-site-launch
 contenttype: [guide]

@@ -12,7 +12,6 @@ integration: []
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development
 ---

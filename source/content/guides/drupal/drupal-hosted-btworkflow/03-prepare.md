@@ -4,7 +4,6 @@ subtitle: Prepare
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-btworkflow/prepare
 editpath: drupal/drupal-hosted-btworkflow/03-prepare.md

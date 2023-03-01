@@ -4,7 +4,6 @@ subtitle: Introduction
 description: Learn how to migrate a Custom Upstream to the latest version of Drupal
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createcustom
 editpath: drupal/drupal-hosted-createcustom/01-introduction.md
 reviewed: "2022-12-12"

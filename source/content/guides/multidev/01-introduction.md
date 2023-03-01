@@ -11,7 +11,6 @@ product: [multidev]
 integration: [--]
 tags: [multidev, git, cli, workflow, collaborate]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev
 ---

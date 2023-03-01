@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Workflows
 description: Learn more about WordPress Multisite workflows.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]

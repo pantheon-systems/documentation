@@ -4,7 +4,6 @@ subtitle: Ensure Dependencies are Compatible
 description: 
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createdashboard-set8/dependencies
 editpath: drupal-hosted-createdashboard-set8/05-dependencies.md
 reviewed: "2022-12-13"

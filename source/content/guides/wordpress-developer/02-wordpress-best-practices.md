@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [workflow, security, composer]
 reviewed: "2022-05-16"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-best-practices
 ---

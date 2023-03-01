@@ -5,7 +5,6 @@ description: Install, configure, and use Edge Integrations with Drupal.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814, robloach, enotick]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/edge-integrations/drupal-sdk/
 editpath: edge-integrations/03-drupal-sdk.md

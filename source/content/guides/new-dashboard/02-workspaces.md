@@ -12,7 +12,6 @@ integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [edwardangert,joa-pan]
 reviewed: "2022-07-20"
-layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/workspaces
 editpath: new-dashboard/02-workspaces.md

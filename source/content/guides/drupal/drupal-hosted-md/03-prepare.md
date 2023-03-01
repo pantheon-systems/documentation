@@ -4,7 +4,6 @@ subtitle: Prepare the Local Environment
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-md/prepare
 editpath: drupal/drupal-hosted-md/03-prepare.md

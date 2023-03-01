@@ -4,7 +4,6 @@ subtitle: External Web Service Calls
 description: Learn more about using external web service calls on Pantheon.
 tags: [services]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/external-web-service-calls
 contenttype: [guide]

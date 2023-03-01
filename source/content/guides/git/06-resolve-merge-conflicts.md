@@ -4,7 +4,6 @@ subtitle: Resolve Merge Conflicts
 description: Learn how to resolve conflicts in your site code base. 
 tags: [git, local, webops]
 contributors: [alexfornuto]
-layout: guide
 showtoc: true
 permalink: docs/guides/git/resolve-merge-conflicts
 contenttype: [guide]

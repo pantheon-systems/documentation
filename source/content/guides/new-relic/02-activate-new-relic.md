@@ -11,7 +11,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic]
 contributors: [whitneymeredith, jspellman814]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/activate-new-relic
 ---

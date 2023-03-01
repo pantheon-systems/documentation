@@ -4,7 +4,6 @@ subtitle: Integrate Your Fastly Account with New Relic
 description: Learn how to use New Relic with your Fastly account on Pantheon.
 tags: [cms, logs, newrelic]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-new-relic
 contenttype: [guide]

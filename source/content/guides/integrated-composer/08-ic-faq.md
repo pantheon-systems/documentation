@@ -5,7 +5,6 @@ description: Get answers to your Integrated Composer questions.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
 reviewed: "2022-12-13"
-layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-faq
 contenttype: [guide]

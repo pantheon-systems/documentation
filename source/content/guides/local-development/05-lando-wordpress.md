@@ -11,7 +11,6 @@ audience: [development]
 product: [terminus]
 integration: []
 tags: [code, iterate, lando, local, webops]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/lando-wordpress
 ---

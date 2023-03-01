@@ -12,7 +12,6 @@ integration: [--]
 tags: [solr, search, modules]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
-layout: guide
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal-7
 editpath: solr-drupal/04-solr-drupal-7.md

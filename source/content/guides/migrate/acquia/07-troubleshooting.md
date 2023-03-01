@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/acquia/troubleshooting
 editpath: migrate/acquia/07-troubleshooting.md

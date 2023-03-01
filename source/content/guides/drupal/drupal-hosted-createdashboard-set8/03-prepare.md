@@ -4,7 +4,6 @@ subtitle: Prepare
 description: 
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createdashboard-set8/prepare
 editpath: drupal-hosted-createdashboard-set8/03-prepare.md

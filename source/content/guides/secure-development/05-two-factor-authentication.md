@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [security, saml, users]
 contributors: [populist]
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/two-factor-authentication
 reviewed: "2022-07-21"

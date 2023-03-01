@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/acquia/faq
 editpath: migrate/acquia/09-faq.md

@@ -4,7 +4,6 @@ subtitle: Apply New Upstream Updates
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-deprecated-upstream/new-updates
 editpath: drupal/drupal-hosted-deprecated-upstream/09-new-updates.md
 reviewed: "2022-12-12"

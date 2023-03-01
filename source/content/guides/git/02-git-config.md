@@ -3,7 +3,6 @@ title: Git on Pantheon Guide
 subtitle: Install and Configure Git
 description: Use Git version control to deploy code to your Drupal or WordPress site's development environment.
 tags: [code, git, local, webops, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/git/git-config
 contenttype: [guide]

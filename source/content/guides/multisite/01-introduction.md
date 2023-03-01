@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Introduction
 description: Deploy a WordPress multisite on the Pantheon Platform.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [true]

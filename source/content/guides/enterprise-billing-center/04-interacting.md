@@ -11,7 +11,6 @@ product: [siteportfolio]
 integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/interacting
 ---

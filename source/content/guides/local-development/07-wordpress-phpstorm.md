@@ -10,7 +10,6 @@ audience: [development]
 product: [terminus]
 integration: []
 tags: [plugins]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/wordpress-phpstorm
 ---

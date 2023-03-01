@@ -12,7 +12,6 @@ integration: []
 tags: [code, collaborate, git, local, sftp]
 contributors: [sarahg, alexfornuto]
 reviewed: "2019-10-16"
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/visual-studio-code
 ---

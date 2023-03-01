@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [database, cli]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/myisam-to-innodb
 ---

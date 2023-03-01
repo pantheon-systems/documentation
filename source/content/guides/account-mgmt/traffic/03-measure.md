@@ -4,7 +4,6 @@ subtitle: Measuring Traffic
 description: Learn how Pantheon measures traffic.
 tags: [traffic]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/measure
 editpath: docs/guides/account-mgmt/traffic/03-measure.md

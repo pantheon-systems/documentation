@@ -4,7 +4,6 @@ subtitle: Add Contrib and Custom Code
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted/contrib-custom
 editpath: drupal/drupal-unhosted/07-contrib-custom.md

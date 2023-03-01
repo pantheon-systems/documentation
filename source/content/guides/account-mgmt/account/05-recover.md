@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/account/recover
 editpath: docs/guides/account-mgmt/account/05-recover.md

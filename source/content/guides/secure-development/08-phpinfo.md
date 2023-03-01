@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [cms, security, cdn]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/phpinfo
 reviewed: "2022-07-21"

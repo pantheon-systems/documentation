@@ -2,7 +2,6 @@
 title: Launch Essentials
 subtitle: Select Your Site Plan
 description: Select the right site plan to cover your needs.
-layout: guide
 showtoc: true
 tags: [agencies, billing, launch, webops]
 permalink: docs/guides/launch/plans/

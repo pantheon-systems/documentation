@@ -4,7 +4,6 @@ subtitle: Environment Configuration on Pantheon
 description: Learn about environment configurations on Pantheon.
 tags: [site, terminus, workflow, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration
 contenttype: [guide]

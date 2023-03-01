@@ -10,7 +10,6 @@ audience: [development, sysadmin]
 product: [--]
 integration: [--]
 tags: [composer, professional-services, updates, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/managed-updates
 editpath: professional-services/06-managed-updates.md

@@ -4,7 +4,6 @@ subtitle: Introduction
 description: Learn how to update a Drupal site to the latest version of Drupal
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-btworkflow
 editpath: drupal/drupal-hosted-btworkflow/01-introduction.md
 reviewed: "2022-12-13"

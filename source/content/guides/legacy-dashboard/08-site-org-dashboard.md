@@ -4,7 +4,6 @@ subtitle: Managing Sites and Teams with the Pantheon Organization Dashboard
 description: Detailed information on how to add users and sites to your organization.
 tags: [agencies, collaborate, dashboard, organizations, teams]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/org-dashboard

@@ -12,7 +12,6 @@ integration: [aws]
 tags: [files]
 contributors: [sarahg]
 reviewed: "2021-07-07"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-s3
 ---

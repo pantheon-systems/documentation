@@ -12,7 +12,6 @@ integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-18"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/wp-security
 ---

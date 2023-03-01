@@ -4,7 +4,6 @@ subtitle: Manage Your Plans
 description: Upgrade a free site to a paid plan or downgrade a site's current plan within the Site Dashboard.
 tags: [plans]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/manage
 editpath: docs/guides/account-mgmt/plans/09-manage.md

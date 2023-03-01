@@ -4,7 +4,6 @@ subtitle: Prepare
 description: 
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted-composer/prepare
 editpath: drupal/drupal-unhosted-composer/03-prepare.md

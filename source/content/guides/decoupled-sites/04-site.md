@@ -5,7 +5,6 @@ description: Configure the frontend and create a site.
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, backlineint, cobypear, hckia]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/decoupled-sites/site/
 editpath: decoupled-sites/04-site.md

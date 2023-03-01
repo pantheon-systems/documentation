@@ -4,7 +4,6 @@ subtitle: Autopilot FAQs
 description: Get answers to your Autopilot questions.
 tags: [autopilot, webops, D8, D9, D10]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/autopilot/autopilot-faq/
 reviewed: "2022-12-14"

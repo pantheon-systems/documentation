@@ -10,7 +10,6 @@ audience: [business]
 product: [siteportfolio]
 integration: [--]
 tags: [billing]
-layout: guide
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/faq

@@ -12,7 +12,6 @@ integration: [--]
 tags: [dashboard]
 contributors: [joa-pan, michellecolon-pantheon]
 reviewed: "2022-07-20"
-layout: guide
 permalink: docs/guides/new-dashboard/settings
 editpath: new-dashboard/06-settings.md
 ---

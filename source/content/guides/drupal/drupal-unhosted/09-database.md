@@ -4,7 +4,6 @@ subtitle: Add Database
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted/add-database
 editpath: drupal/drupal-unhosted/09-database.md
 contenttype: [guide]

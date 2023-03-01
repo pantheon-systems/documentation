@@ -4,7 +4,6 @@ subtitle: Configure and Verify Edge Caching
 description: Global CDN Caching for high performance with Drupal and WordPress.
 tags: [cache, cdn]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/global-cdn-caching
 contenttype: [guide]

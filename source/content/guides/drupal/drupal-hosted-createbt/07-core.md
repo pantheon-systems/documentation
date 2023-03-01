@@ -4,7 +4,6 @@ subtitle: Upgrade Drupal Core Using Composer
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createbt/core
 editpath: drupal/drupal-hosted-createbt/07-core.md
 reviewed: "2022-12-12"

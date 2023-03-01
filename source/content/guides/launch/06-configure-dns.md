@@ -3,7 +3,6 @@ title: Launch Essentials
 subtitle: Configure DNS and Provision HTTPS
 description: Configure your DNS records and provision HTTPS.
 tags: [dns, https, launch, webops]
-layout: guide
 showtoc: true
 permalink: docs/guides/launch/configure-dns/
 contenttype: [guide]

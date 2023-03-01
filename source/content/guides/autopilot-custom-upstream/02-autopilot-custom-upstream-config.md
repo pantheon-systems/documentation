@@ -4,7 +4,6 @@ subtitle: Configure a Custom Upstream for Autopilot
 description: Learn how to configure your Custom Upstream to use Autopilot.
 tags: [autopilot, upstreams, D8, D9, D10]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/autopilot-custom-upstream-config
 contenttype: [guide]

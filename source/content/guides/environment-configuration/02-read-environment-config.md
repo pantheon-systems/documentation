@@ -4,7 +4,6 @@ subtitle: Reading Pantheon Environment Configuration
 description: Learn about the separation of configuration and code within Pantheon's runtime container environment.
 tags: [code, database, files, redis]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/read-environment-config
 contenttype: [guide]

@@ -11,7 +11,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/monitor-new-relic
 ---

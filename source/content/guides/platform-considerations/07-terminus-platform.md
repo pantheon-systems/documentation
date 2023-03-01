@@ -11,7 +11,6 @@ product: [terminus]
 integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/terminus-platform
 ---

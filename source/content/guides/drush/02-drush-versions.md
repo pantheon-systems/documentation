@@ -3,7 +3,6 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Manage Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
 tags: [drush, updates]
-layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-versions
 contenttype: [guide]

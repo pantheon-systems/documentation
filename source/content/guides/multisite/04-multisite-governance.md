@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Multisite Governance
 description: Learn more about governance with WordPress Multisites.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]

@@ -4,7 +4,6 @@ subtitle: Ensure Dependencies are Compatible
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-md/dependencies
 editpath: drupal/drupal-hosted-md/05-dependencies.md
 reviewed: "2022-12-13"

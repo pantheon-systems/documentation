@@ -4,7 +4,6 @@ subtitle: Troubleshooting
 description:  Troubleshoot common issues when migrating.
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted-composer/troubleshooting
 editpath: drupal/drupal-unhosted-composer/15-troubleshooting.md

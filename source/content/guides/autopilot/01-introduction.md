@@ -6,7 +6,6 @@ tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 contributors: [nathantyler, alexfornuto, edwardangert]
 productpage: https://pantheon.io/autopilot?docs
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md

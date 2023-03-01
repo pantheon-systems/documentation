@@ -12,7 +12,6 @@ integration: [--]
 tags: [solr, search, modules]
 contributors: [carolynshannon, joa-pan]
 reviewed: "2022-12-13"
-layout: guide
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal
 editpath: solr-drupal/02-solr-drupal.md

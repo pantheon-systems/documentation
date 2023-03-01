@@ -11,7 +11,6 @@ audience: [develoment]
 product: [terminus]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/filesystem/tmp
 ---

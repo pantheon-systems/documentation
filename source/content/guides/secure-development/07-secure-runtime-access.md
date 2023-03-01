@@ -12,7 +12,6 @@ product: [--]
 integration: [--]
 contributors: [edwardangert]
 searchboost: 150
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/secure-runtime-access
 reviewed: "2022-07-21"

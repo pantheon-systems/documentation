@@ -4,7 +4,6 @@ subtitle: Batch Files
 description: Learn how to upload and export batch files.
 contenttype: [guide]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 innav: [false]
 categories: [files]

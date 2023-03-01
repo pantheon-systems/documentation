@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [wp-config]
 contributors: [masonjames]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/wp-config-php
 ---

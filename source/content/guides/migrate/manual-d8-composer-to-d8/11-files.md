@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/manual-d8-composer-to-d8/files
 editpath: migrate/manual-d8-composer-to-d8/11-files.md
 reviewed: "2021-06-22"

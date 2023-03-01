@@ -4,7 +4,6 @@ subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createbt/troubleshooting
 editpath: drupal/drupal-hosted-createbt/13-troubleshooting.md

@@ -4,7 +4,6 @@ subtitle: Upgrade Site Components Locally
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createbt/upgrade
 editpath: drupal/drupal-hosted-createbt/05-upgrade.md

@@ -5,7 +5,6 @@ description: Troubleshoot common issues when migrating.
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
 reviewed: "2022-12-13"
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createdashboard-set8/troubleshooting
 editpath: drupal-hosted-createdashboard-set8/13-troubleshooting.md

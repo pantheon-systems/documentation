@@ -4,7 +4,6 @@ subtitle: Deploy
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, stovak]
-layout: guide
 permalink: docs/guides/drupal-hosted/deploy
 editpath: hosted/09-deploy.md
 reviewed: "2022-12-12"

@@ -11,7 +11,6 @@ audience: [development]
 product: [dashboard]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/troubleshooting-sftp
 ---

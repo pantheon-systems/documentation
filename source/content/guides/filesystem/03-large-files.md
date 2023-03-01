@@ -4,7 +4,6 @@ subtitle: Large Files and Highly Populated Directories
 description: Learn more about highly populated directories and large files.
 contenttype: [guide]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 innav: [false]
 categories: [files]

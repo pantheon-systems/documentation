@@ -4,7 +4,6 @@ subtitle: Prepare Your Site for Migration
 description: Get your local environment and the existing site ready.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted/prepare
 editpath: drupal/drupal-unhosted/03-prepare.md
 contenttype: [guide]

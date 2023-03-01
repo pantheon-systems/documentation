@@ -4,7 +4,6 @@ subtitle: Test Sites and Apply Customizations
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
-layout: guide
 permalink: docs/guides/drupal-hosted-createcustom/site-customizations
 editpath: drupal/drupal-hosted-createcustom/07-site-customizations.md
 reviewed: "2022-12-13"

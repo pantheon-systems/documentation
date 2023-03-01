@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/create-wp-site-composer-ci-auto-test
 ---

@@ -11,7 +11,6 @@ product: [newrelic]
 integration: [--]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/new-relic-faq
 ---

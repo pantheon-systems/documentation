@@ -4,7 +4,6 @@ subtitle: Introduction
 description: Learn more about Pantheon's Filesystem.
 contenttype: [guide]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 innav: [true]
 categories: [files]

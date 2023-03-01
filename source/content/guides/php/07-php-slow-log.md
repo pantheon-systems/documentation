@@ -10,7 +10,6 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [cli, logs, sftp]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/php-slow-log
 ---

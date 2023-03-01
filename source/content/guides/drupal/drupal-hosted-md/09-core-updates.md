@@ -4,7 +4,6 @@ subtitle: Configure Ongoing Core Update
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-md/core-updates
 editpath: drupal/drupal-hosted-md/09-core-updates.md
 reviewed: "2022-12-13"

@@ -4,7 +4,6 @@ subtitle: Performance Metrics
 description: Overview of how and what to measure when optimizing your site for performance.
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/metrics
 editpath: frontend-performance/02-metrics.md

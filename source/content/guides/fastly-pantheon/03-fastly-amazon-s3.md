@@ -4,7 +4,6 @@ subtitle: Integrate Your Fastly Account on Pantheon with Amazon S3
 description: Learn how to use Amazon S3 with your Fastly account on Pantheon.
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-amazon-s3
 contenttype: [guide]

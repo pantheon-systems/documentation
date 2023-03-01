@@ -10,7 +10,6 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, site, webops]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/php-errors
 ---

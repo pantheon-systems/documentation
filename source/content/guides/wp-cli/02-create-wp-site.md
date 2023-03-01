@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [terminus, wp-cli]
 contributors: [bmackinney, calevans, stevector, tessak22, davidneedham]
-layout: guide
 showtoc: true
 permalink: docs/guides/create-wp-site
 ---

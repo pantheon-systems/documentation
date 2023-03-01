@@ -11,7 +11,6 @@ cms: []
 audience: [development]
 product: []
 integration: []
-layout: guide
 permalink: docs/guides/local-development/cygwin-windows
 ---
 

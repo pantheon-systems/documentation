@@ -4,7 +4,6 @@ subtitle: Purchase Plans and Addons
 description: Learn how to purchase plans and addons.
 tags: [plans]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/purchase
 editpath: docs/guides/account-mgmt/plans/07-purchase.md

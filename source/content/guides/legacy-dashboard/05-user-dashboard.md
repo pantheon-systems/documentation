@@ -3,7 +3,6 @@ title: Legacy Dashboard
 subtitle: User Dashboard and Account
 description: The Pantheon user entity and its relationship to Drupal or WordPress sites, teams, and organizations.
 tags: [dashboard, organizations, users]
-layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/user-dashboard

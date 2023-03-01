@@ -4,7 +4,6 @@ subtitle: Custom Upstream and Autopilot for WordPress
 description: Set up your WordPress site to use Custom Upstream and Autopilot.
 tags: [autopilot, upstreams]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream/wp-autopilot-custom-upstream
 contenttype: [guide]

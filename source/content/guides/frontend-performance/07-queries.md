@@ -4,7 +4,6 @@ subtitle: Queries and Databases
 description: Optimizing queries and databases.
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/queries
 editpath: frontend-performance/07-queries.md

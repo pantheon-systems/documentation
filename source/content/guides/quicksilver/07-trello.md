@@ -11,7 +11,6 @@ product: [--]
 integration: [quicksilver, trello]
 tags: [collaborate, quicksilver, webops, workflow]
 contributors: [scottmassey]
-layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/trello
 ---

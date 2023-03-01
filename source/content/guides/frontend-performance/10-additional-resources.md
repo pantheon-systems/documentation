@@ -4,7 +4,6 @@ subtitle: Additional Resources
 description: Additional resources for frontend performance
 tags: [measure, traffic]
 type: guide
-layout: guide
 permalink: docs/guides/frontend-performance/additional-resources
 editpath: frontend-performance/10-metrics.md
 reviewed: "2020-10-10"

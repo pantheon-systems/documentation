@@ -10,7 +10,6 @@ audience: [--]
 product: [--]
 integration: [--]
 tags: [workflow, updates]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-development-versions
 ---

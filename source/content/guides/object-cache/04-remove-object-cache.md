@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-layout: guide
 permalink: docs/guides/object-cache/remove-object-cache
 ---
 

@@ -10,7 +10,6 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, database, files]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/database-connection-errors
 ---

@@ -4,7 +4,6 @@ subtitle: Introduction
 description: Learn more about using Fastly on Pantheon.
 tags: [cms, logs, cdn]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon
 contenttype: [guide]
