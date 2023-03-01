@@ -2,7 +2,6 @@
 title: Pantheon Disaster Recovery Playbook
 subtitle: Planning Ahead
 description: Avert potential site failures
-generator: pagination
 layout: guide
 tags: [webops, workflow]
 contributors: [joshlieb, joa-pan]

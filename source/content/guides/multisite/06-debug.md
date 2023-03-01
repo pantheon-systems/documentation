@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Troubleshoot
 description: Review common WordPress Multisite troubleshooting scenarios.
-generator: pagination
 layout: guide
 type: guide
 contenttype: [guide]

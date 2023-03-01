@@ -15,7 +15,6 @@ integration: [woocommerce]
 tags: [plugins, site]
 type: guide
 woocommerce: true
-generator: pagination
 pagination:
     provider: data.woocommercepages
 use:

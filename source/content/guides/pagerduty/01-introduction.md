@@ -13,7 +13,6 @@ integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 pagerduty: true
-generator: pagination
 pagination:
     provider: data.pagerdutypages
 use:

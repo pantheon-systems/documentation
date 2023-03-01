@@ -3,7 +3,6 @@ title: WooCommerce Quick Start
 subtitle: Launch Your Store
 description: The final steps of the WooCommerce Quick Start guide.
 woocommerce: true
-generator: pagination
 layout: guide
 contenttype: [guide]
 innav: [false]
