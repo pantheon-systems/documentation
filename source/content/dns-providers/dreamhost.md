@@ -1,7 +1,6 @@
 ---
 title: DreamHost Domain Configuration
 provider: DreamHost
-dnsprovider: true
 description: Learn how to point your DreamHost domain to a Pantheon site.
 tags: [domains]
 permalink: docs/:basename
