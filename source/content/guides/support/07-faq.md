@@ -9,7 +9,6 @@ audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
-buildtools: true
 type: guide
 showtoc: true
 permalink: docs/guides/support/faq/

@@ -10,7 +10,6 @@ audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [composer, local, modules, site, terminus]
-buildtools: true
 type: guide
 showtoc: true
 permalink: docs/guides/support/early-access/
