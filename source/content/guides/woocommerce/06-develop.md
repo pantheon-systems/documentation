@@ -12,10 +12,6 @@ product: [--]
 integration: [woocommerce]
 tags: [iterate, plugins, site, themes, webops]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/develop/
 previousurl: guides/woocommerce/initialize-prod/
 previouspage: Initialize Production

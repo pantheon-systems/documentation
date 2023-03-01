@@ -12,10 +12,6 @@ product: [--]
 integration: [woocommerce]
 tags: [launch, plugins, site]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/initialize-prod/
 previousurl: guides/woocommerce/commit/
 previouspage: Commit Changes

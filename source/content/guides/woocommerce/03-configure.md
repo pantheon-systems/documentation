@@ -12,10 +12,6 @@ product: [--]
 integration: [woocommerce]
 tags: [plugins, site]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/configure/
 previousurl: guides/woocommerce/store-setup/
 previouspage: Store Setup

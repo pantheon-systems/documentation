@@ -12,10 +12,6 @@ product: [--]
 integration: [woocommerce]
 tags: [launch, site]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/launch/
 previousurl: guides/woocommerce/develop/
 previouspage: Continue Development

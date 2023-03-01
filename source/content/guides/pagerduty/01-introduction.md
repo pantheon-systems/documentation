@@ -11,10 +11,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-pagination:
-    provider: data.pagerdutypages
-use:
-    - pagerdutypages
 permalink: docs/guides/pagerduty/
 editpath: pagerduty/01-introduction.md
 ---

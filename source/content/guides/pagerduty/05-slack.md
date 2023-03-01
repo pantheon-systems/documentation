@@ -11,10 +11,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-pagination:
-    provider: data.pagerdutypages
-use:
-    - pagerdutypages
 permalink: docs/guides/pagerduty/slack/
 previousurl: guides/pagerduty/notify/
 editpath: pagerduty/05-slack.md

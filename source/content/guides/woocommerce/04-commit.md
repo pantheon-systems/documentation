@@ -12,10 +12,6 @@ product: [--]
 integration: [woocommerce]
 tags: [plugins, sftp, site]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/commit/
 previousurl: guides/woocommerce/configure/
 previouspage: Configure

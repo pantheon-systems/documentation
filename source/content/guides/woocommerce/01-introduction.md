@@ -14,10 +14,6 @@ integration: [woocommerce]
 tags: [plugins, site]
 type: guide
 woocommerce: true
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/
 editpath: woocommerce/01-introduction.md
 searchboost: 200

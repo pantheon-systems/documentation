@@ -12,10 +12,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-pagination:
-    provider: data.pagerdutypages
-use:
-    - pagerdutypages
 permalink: docs/guides/pagerduty/next-steps/
 previousurl: guides/pagerduty/slack/
 editpath: pagerduty/06-next-steps.md

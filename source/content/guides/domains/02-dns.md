@@ -2,7 +2,6 @@
 title: Domains on Pantheon
 subtitle: Domain Name System
 description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
-use: [docs_tags]
 tags: [dns]
 contributors: [alexfornuto]
 showtoc: true
