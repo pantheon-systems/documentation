@@ -13,8 +13,6 @@ integration: [woocommerce]
 tags: [plugins, site]
 type: guide
 permalink: docs/guides/woocommerce/store-setup/
-previousurl: guides/woocommerce/
-previouspage: Introduction
 editpath: woocommerce/02-store-setup.md
 ---
 I've already gone ahead and [created a new site on Pantheon](/guides/quickstart/create-new-site).

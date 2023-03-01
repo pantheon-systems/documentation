@@ -13,7 +13,6 @@ tags: [logs, measure, newrelic, teams, webops]
 type: guide
     - docs_tags
 permalink: docs/guides/pagerduty/schedule/
-previousurl: guides/pagerduty/monitor/
 editpath: pagerduty/03-schedule.md
 ---
 In this lesson we'll use PagerDuty to create an on-call schedule and escalation policy to automate parts of an incident response procedure in the event of a monitor failure.

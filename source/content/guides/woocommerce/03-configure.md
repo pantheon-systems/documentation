@@ -13,8 +13,6 @@ integration: [woocommerce]
 tags: [plugins, site]
 type: guide
 permalink: docs/guides/woocommerce/configure/
-previousurl: guides/woocommerce/store-setup/
-previouspage: Store Setup
 editpath: woocommerce/03-configure.md
 ---
 We've configured a few things for our WooCommerce site. But there are a few additional things to configure.

@@ -12,7 +12,6 @@ integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 permalink: docs/guides/pagerduty/slack/
-previousurl: guides/pagerduty/notify/
 editpath: pagerduty/05-slack.md
 ---
 In this lesson, we'll add the Slack extension to PagerDuty so your team can acknowledge and resolve incidents within a channel.

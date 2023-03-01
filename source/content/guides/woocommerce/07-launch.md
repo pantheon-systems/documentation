@@ -13,8 +13,6 @@ integration: [woocommerce]
 tags: [launch, site]
 type: guide
 permalink: docs/guides/woocommerce/launch/
-previousurl: guides/woocommerce/develop/
-previouspage: Continue Development
 editpath: woocommerce/07-launch.md
 survey: true
 ---

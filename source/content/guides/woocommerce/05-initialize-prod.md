@@ -13,8 +13,6 @@ integration: [woocommerce]
 tags: [launch, plugins, site]
 type: guide
 permalink: docs/guides/woocommerce/initialize-prod/
-previousurl: guides/woocommerce/commit/
-previouspage: Commit Changes
 editpath: woocommerce/05-initialize-prod.md
 ---
 Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site is configured and backed up, let's initialize our production environments (**<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live**) so we can launch our store.

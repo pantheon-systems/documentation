@@ -12,7 +12,6 @@ product: [--]
 integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/considerations/
-previousurl: guides/multisite/
 editpath: multisite/02-considerations.md
 ---
 

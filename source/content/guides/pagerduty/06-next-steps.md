@@ -13,7 +13,6 @@ integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 permalink: docs/guides/pagerduty/next-steps/
-previousurl: guides/pagerduty/slack/
 editpath: pagerduty/06-next-steps.md
 ---
 Congrats! You just setup a robust incident management procedure with automated notifications for your team. Celebrate!

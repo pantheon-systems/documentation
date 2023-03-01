@@ -12,7 +12,6 @@ product: [--]
 integration: [--]
 tags: [multisite, workflow]
 permalink: docs/guides/multisite/workflows/
-previousurl: guides/multisite/workflows/
 editpath: multisite/05-workflows.md
 ---
 This section provides information on important Multisite fundamentals.
