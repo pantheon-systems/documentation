@@ -14,7 +14,6 @@ integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/debug/
 editpath: multisite/06-debug.md
-image: multisite
 ---
 
 This section provides information on common WordPress Multisite troubleshooting scenarios.

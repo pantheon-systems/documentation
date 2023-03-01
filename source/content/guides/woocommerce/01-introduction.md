@@ -23,7 +23,6 @@ permalink: docs/guides/woocommerce/
 nexturl: guides/woocommerce/store-setup/
 nextpage: Store Setup
 editpath: woocommerce/01-introduction.md
-image: guides/woocommerce/WooCommerce-logo-400-200
 searchboost: 200
 ---
 Welcome!

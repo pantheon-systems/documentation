@@ -8,7 +8,6 @@ layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/code-css
 editpath: frontend-performance/06-code-css.md
-image: CDN-speedTest-docs-guide
 reviewed: "2022-02-09"
 contenttype: [guide]
 innav: [false]

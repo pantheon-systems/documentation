@@ -8,7 +8,6 @@ layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/queries
 editpath: frontend-performance/07-queries.md
-image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
 innav: [false]

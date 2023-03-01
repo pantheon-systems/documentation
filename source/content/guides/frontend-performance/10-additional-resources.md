@@ -7,7 +7,6 @@ type: guide
 layout: guide
 permalink: docs/guides/frontend-performance/additional-resources
 editpath: frontend-performance/10-metrics.md
-image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
 innav: [false]

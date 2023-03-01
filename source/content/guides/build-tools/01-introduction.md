@@ -7,7 +7,6 @@ contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton, fatimask, d
 type: guide
 permalink: docs/guides/build-tools/
 editpath: build-tools/01-introduction.md
-image: buildToolsGuide-thumb
 reviewed: "2022-04-19"
 contenttype: [guide]
 innav: [true]

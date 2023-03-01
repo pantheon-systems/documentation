@@ -14,7 +14,6 @@ tags: [files, git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/media/
 editpath: wordpress-git/04-media.md
-image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"
 ---
 

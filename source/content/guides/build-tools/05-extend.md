@@ -6,7 +6,6 @@ tags: [composer, local, modules, site, terminus]
 type: guide
 permalink: docs/guides/build-tools/extend/
 editpath: build-tools/05-extend.md
-image: buildToolsGuide-thumb
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]

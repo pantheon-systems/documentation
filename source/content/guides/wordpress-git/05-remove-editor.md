@@ -14,7 +14,6 @@ tags: [git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/remove-editor/
 editpath: wordpress-git/05-remove-editor.md
-image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"
 ---
 

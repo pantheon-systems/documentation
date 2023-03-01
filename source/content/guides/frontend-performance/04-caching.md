@@ -8,7 +8,6 @@ layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md
-image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
 innav: [false]

@@ -6,7 +6,6 @@ tags: [workflow, composer, continuous-integration, webops, terminus, D8, D9, D10
 type: guide
 permalink: docs/guides/build-tools/configure/
 editpath: build-tools/04-configure.md
-image: buildToolsGuide-thumb
 contributors: [szipfel]
 reviewed: "2022-12-13"
 contenttype: [guide]

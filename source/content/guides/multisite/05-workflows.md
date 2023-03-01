@@ -16,7 +16,6 @@ permalink: docs/guides/multisite/workflows/
 nexturl: guides/multisite/debug/
 previousurl: guides/multisite/workflows/
 editpath: multisite/05-workflows.md
-image: multisite
 ---
 This section provides information on important Multisite fundamentals.
 

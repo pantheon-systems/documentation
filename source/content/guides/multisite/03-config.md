@@ -14,7 +14,6 @@ integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/config/
 editpath: multisite/03-config.md
-image: multisite
 ---
 
 This section is intended for customers who have had a WordPress Multisite upstream created for them by a Pantheon employee. If you do not have a WordPress Multisite upstream, refer to the [introduction](/guides/multisite) page of this guide. After you create a new site on the Multisite upstream and visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.

@@ -14,7 +14,6 @@ integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/multisite-governance/
 editpath: multisite/04-multisite-governance.md
-image: multisite
 ---
 
 This section provides information on Multisite governance on Pantheon.

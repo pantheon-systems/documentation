@@ -14,7 +14,6 @@ tags: [git, plugins, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/plugins/
 editpath: wordpress-git/02-plugins.md
-image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"
 ---
 

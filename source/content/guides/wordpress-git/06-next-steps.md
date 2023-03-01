@@ -14,7 +14,6 @@ tags: [git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/next-steps/
 editpath: wordpress-git/06-next-steps.md
-image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"
 ---
 

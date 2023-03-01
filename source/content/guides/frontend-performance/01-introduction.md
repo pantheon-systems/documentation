@@ -8,7 +8,6 @@ tags: [cache, cdn, measure, traffic]
 contributors: [carolynshannon, stevector, ataylorme, rachelwhitton, dwayne, dgorton, dts, davidneedham, tessak22]
 permalink: docs/guides/frontend-performance
 editpath: frontend-performance/01-introduction.md
-image: CDN-speedTest-docs-guide
 contenttype: [guide]
 innav: [true]
 categories: [optimize]

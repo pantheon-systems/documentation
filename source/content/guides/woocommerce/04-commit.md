@@ -23,7 +23,6 @@ nextpage: Initialize Production
 previousurl: guides/woocommerce/configure/
 previouspage: Configure
 editpath: woocommerce/04-commit.md
-image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 At Pantheon, we believe in best practices for development, and that includes using [version control](https://pantheon.io/features/version-control-workflow) - that's why it's built into our platform. We've done a lot on the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment so far and at this point we're just about ready to move everything over to the **<span class="glyphicons glyphicons-equalizer"></span> Live** environment.
 

@@ -6,7 +6,6 @@ tags: [continuous-integration, iterate, webops, workflow, D8, D9, D10]
 type: guide
 permalink: docs/guides/build-tools/tests/
 editpath: build-tools/06-tests.md
-image: buildToolsGuide-thumb
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]

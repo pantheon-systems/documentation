@@ -15,7 +15,6 @@ type: guide
 contributors: [scottmassey, rachelwhitton]
 permalink: docs/guides/wordpress-git/
 editpath: wordpress-Git/01-introduction.md
-image: Git-sftp-wp-docs-guide
 reviewed: "2021-02-26"
 ---
 

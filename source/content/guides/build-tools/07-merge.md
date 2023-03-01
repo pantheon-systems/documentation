@@ -6,7 +6,6 @@ tags: [git, iterate, webops, workflow]
 type: guide
 permalink: docs/guides/build-tools/merge/
 editpath: build-tools/07-merge.md
-image: buildToolsGuide-thumb
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]

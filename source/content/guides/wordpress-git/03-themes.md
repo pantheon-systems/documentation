@@ -14,7 +14,6 @@ tags: [git, sftp, themes]
 type: guide
 permalink: docs/guides/wordpress-git/themes/
 editpath: wordpress-git/03-themes.md
-image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"
 ---
 

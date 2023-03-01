@@ -5,7 +5,6 @@ description: In step nine of the Build Tools guide, learn how to update your sit
 tags: [updates, continuous-integration, composer, workflow]
 type: guide
 permalink: docs/guides/build-tools/update/
-image: buildToolsGuide-thumb
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]
