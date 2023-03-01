@@ -147,17 +147,6 @@ class GuideTemplate extends React.Component {
                     <TOC title="Contents" />
                   )}
                 </div>
-                {node.frontmatter.getfeedbackform && (
-                  <GetFeedback
-                    formId={
-                      node.frontmatter.getfeedbackform === "default"
-                        ? "tfYOGoE7"
-                        : node.frontmatter.getfeedbackform
-                    }
-                    page={"/" + node.fields.slug}
-                    topic="addons"
-                  />
-                )}
                 <NavButtons
                   prev={this.props.pageContext.previous}
                   next={this.props.pageContext.next}
@@ -198,7 +187,6 @@ export const pageQuery = graphql`
         }
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
-        getfeedbackform
         tags
         type
       }

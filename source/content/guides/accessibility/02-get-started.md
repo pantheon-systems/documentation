@@ -12,7 +12,6 @@ integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
 reviewed: "2022-06-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/accessibility/get-started
 editpath: accessibility/02-get-started.md

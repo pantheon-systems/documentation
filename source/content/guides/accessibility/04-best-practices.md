@@ -12,7 +12,6 @@ integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/accessibility/best-practices
 editpath: accessibility/04-best-practices.md
