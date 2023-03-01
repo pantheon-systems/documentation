@@ -12,7 +12,7 @@ product: [--]
 integration: [--]
 tags: [collaborate, sandbox, upstreams, webops]
 contributors: [stevector, dwayne, davidneedham, tessak22]
-date: 3/26/2018
+reviewed: "2018-03-26"
 ---
 
 Pantheon makes it easy for educators training students on Drupal and WordPress to spin up and manage free sandbox sites for their students. Using Pantheon allows you and your students to focus on the CMS rather than setting up local sites or remote infrastructure. [Please contact us if you need assistance using Pantheon to conduct your trainings.](https://pantheon.io/trainers)

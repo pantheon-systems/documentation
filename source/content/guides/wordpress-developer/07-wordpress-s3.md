@@ -11,7 +11,7 @@ product: [--]
 integration: [aws]
 tags: [files]
 contributors: [sarahg]
-date: 7/7/2021
+reviewed: "2021-07-07"
 layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-s3
