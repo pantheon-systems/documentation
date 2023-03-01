@@ -11,7 +11,6 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-pagerduty: true
 pagination:
     provider: data.pagerdutypages
 use:

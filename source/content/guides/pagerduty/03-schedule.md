@@ -2,7 +2,6 @@
 title: Incident Management
 subtitle: PagerDuty Schedule
 description: Page three of our guide on Pagerduty integration with New Relic for incident management.
-pagerduty: true
 contenttype: [guide]
 innav: [false]
 categories: [track]

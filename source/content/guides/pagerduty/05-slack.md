@@ -2,7 +2,6 @@
 title: Incident Management
 subtitle: Slack Integrations (optional)
 description: Page five of our guide on Pagerduty integration with New Relic for incident management.
-pagerduty: true
 contenttype: [guide]
 innav: [false]
 categories: [track]
