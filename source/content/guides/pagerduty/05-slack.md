@@ -18,7 +18,6 @@ use:
     - pagerdutypages
 permalink: docs/guides/pagerduty/slack/
 previousurl: guides/pagerduty/notify/
-nexturl: guides/pagerduty/next-steps/
 editpath: pagerduty/05-slack.md
 ---
 In this lesson, we'll add the Slack extension to PagerDuty so your team can acknowledge and resolve incidents within a channel.

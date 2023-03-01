@@ -19,8 +19,6 @@ pagination:
 use:
     - woocommercepages
 permalink: docs/guides/woocommerce/
-nexturl: guides/woocommerce/store-setup/
-nextpage: Store Setup
 editpath: woocommerce/01-introduction.md
 searchboost: 200
 ---

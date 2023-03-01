@@ -18,7 +18,6 @@ use:
     - pagerdutypages
     - docs_tags
 permalink: docs/guides/pagerduty/schedule/
-nexturl: guides/pagerduty/notify/
 previousurl: guides/pagerduty/monitor/
 editpath: pagerduty/03-schedule.md
 ---

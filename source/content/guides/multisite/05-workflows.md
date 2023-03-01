@@ -12,7 +12,6 @@ product: [--]
 integration: [--]
 tags: [multisite, workflow]
 permalink: docs/guides/multisite/workflows/
-nexturl: guides/multisite/debug/
 previousurl: guides/multisite/workflows/
 editpath: multisite/05-workflows.md
 ---

@@ -17,8 +17,6 @@ pagination:
 use:
     - woocommercepages
 permalink: docs/guides/woocommerce/store-setup/
-nexturl: guides/woocommerce/configure/
-nextpage: Configure
 previousurl: guides/woocommerce/
 previouspage: Introduction
 editpath: woocommerce/02-store-setup.md

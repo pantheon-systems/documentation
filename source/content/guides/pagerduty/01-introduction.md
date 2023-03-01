@@ -17,8 +17,6 @@ pagination:
 use:
     - pagerdutypages
 permalink: docs/guides/pagerduty/
-nexturl: guides/pagerduty/monitor/
-nextpage: Upgrade Site Plan
 editpath: pagerduty/01-introduction.md
 ---
 Welcome! This guide will help you configure uptime monitors on a Pantheon Site with New Relic&reg; to automatically open an incident in PagerDuty and notify whoever's on-call, following a set escalation path.

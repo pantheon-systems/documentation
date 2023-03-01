@@ -17,8 +17,6 @@ pagination:
 use:
     - woocommercepages
 permalink: docs/guides/woocommerce/develop/
-nexturl: guides/woocommerce/launch/
-nextpage: Launch Your Store
 previousurl: guides/woocommerce/initialize-prod/
 previouspage: Initialize Production
 editpath: woocommerce/06-develop.md
