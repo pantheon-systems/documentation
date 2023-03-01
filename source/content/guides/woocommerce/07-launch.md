@@ -14,7 +14,6 @@ tags: [launch, site]
 type: guide
 permalink: docs/guides/woocommerce/launch/
 editpath: woocommerce/07-launch.md
-survey: true
 ---
 In order to launch your store and add a custom domain you'll need a paid [Pantheon Plan](/guides/legacy-dashboard/site-plan). Once you have upgraded to a paid Pantheon plan you can follow these instructions to [point your DNS and launch](/guides/launch).
 
