@@ -14,20 +14,20 @@ The latest version of Drupal includes many of the familiar features and layout i
 
 ## Upgrade to the Latest Version of Drupal on the Pantheon Platform
 
-You can migrate your site to Drupal, or upgrade to Drupal from another platform. The starting point for your migration or upgrade will vary depending on specific factors such as:
+You can migrate your site to Drupal from another platform and upgrade to the latest Drupal version. The starting point for your migration or upgrade will vary depending on specific factors such as:
 
-- Site Creation Method
+- **Site Creation Method**
     - Build Tools
     - Custom Upstream
     - Empty Upstream
     - Pantheon Dashboard
-- Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." />
+- **Additional Requirements** <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." />
     - Multidev
     - Drupal version set to 8
     - Build Tools Workflow
-    - Site uses drupal-project or drupal-recommended upstream
+    - Site uses the `drupal-project` or `drupal-recommended` upstream
 
-Review the starting points below to select the correct migration or upgrade path.
+Review the starting points below to select the correct migration or upgrade path for your setup.
 
 ### I created my site with Build Tools
 
@@ -51,7 +51,7 @@ Use [Upgrade a Site That Was Created with an Empty Upstream to the Latest Versio
 
 #### Pantheon Dashboard + an Upstream
 
-**Pantheon Dashboard with drupal-project or drupal-recommended Upstream Requirement Starting Point:** Start your migration or upgrade [here](/guides/drupal-hosted-deprecated-upstream) if you used the Pantheon Dashboard and drupal-project or drupal-recommended Upstream to create your Drupal site.
+Use [Upgrade a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal](/guides/drupal-hosted-deprecated-upstream) to start your migration or upgrade if you used the Pantheon Dashboard and the `drupal-project` or `drupal-recommended` Upstream to create your Drupal site.
 
 ### I use Multidev
 
@@ -71,7 +71,7 @@ Use [Upgrade a Site Created With the Pantheon Dashboard to the Latest Version of
 
 #### Pantheon Dashboard
 
-Use [Upgrade a Drupal Site to the Latest Version of Drupal](/guides/drupal-hosted) to start your migration or upgrade [here](/guides/drupal-hosted) if you used the Pantheon Dashboard to create your Drupal site, and your site has no additional requirements such as: Multidev, Build Tools, Drupal version set to 8, or  drupal-project or drupal-recommended upstream.
+Use [Upgrade a Drupal Site to the Latest Version of Drupal](/guides/drupal-hosted) to start your migration or upgrade [here](/guides/drupal-hosted) if you used the Pantheon Dashboard to create your Drupal site, and your site has no additional requirements such as: Multidev, Build Tools, Drupal version set to 8, or the  `drupal-project` or `drupal-recommended` upstream.
 
 ## Move to Drupal From Another Platform
 
