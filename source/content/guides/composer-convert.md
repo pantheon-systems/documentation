@@ -211,9 +211,16 @@ git diff master:composer.json composer.json
 
 #### Libraries
 
-Libraries of package-type `drupal-library` can be handled similarly to modules, but the specifics depend on how your library code was included in the source site. 
+Libraries be handled similarly to modules, but the specifics depend on how your library code was included in the source site. They may have been included:
 
-If contributed modules require manually adding libraries (for example, the module does not use a composer.json file to download its required libraries), you may add the libraries directly to your `require` section.   
+- by manually committing them to web/libraries
+- using the drupal libraries module
+- as a repository in an existing project composer.json file by using custom repository configuration
+- as a dependency of type `drupal-library` in a contrib module's `composer.json`
+
+For packages of type `drupal-library`, define the `installer-path` to `web/libraries`, and require your packages in the same method as Drupal contrib modules.  See [`composer.json`](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json#L49) as an example. 
+
+If contributed modules require manually adding libraries (for example, the module does not use a composer.json file to download its required libraries), you may add the libraries directly to your `require` section. 
 
 ### Custom Code
 
