@@ -20,7 +20,9 @@ reviewed: "2020-08-18"
 In this lesson, we'll set up a new ping monitor to periodically check the site's availability in New Relic&reg; Synthetics.
 
 <Alert title="Note" type="info">
-In the event that you encounter a permissions warning in New Relic while following the guide below, please reach out to customer support.
+
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+
 </Alert>
 
 ## Create a Monitor

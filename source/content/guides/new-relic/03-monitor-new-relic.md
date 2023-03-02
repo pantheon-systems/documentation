@@ -20,7 +20,9 @@ anchorid: monitor-new-relic
 This section provides information on how to monitor and improve site performance with New Relic&reg;.
 
 <Alert title="Note" type="info">
-In the event that you encounter a permissions warning in New Relic while following the guide below, please reach out to customer support.
+
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+
 </Alert>
 
 ## Monitor and Improve Performance
