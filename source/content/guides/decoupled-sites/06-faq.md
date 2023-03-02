@@ -46,6 +46,10 @@ Decoupled Site Preview is only available for sites using Drupal as the CMS.
 
 Yes. You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service. You must follow the [Option 2](/cloudflare#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn) instructions outlined in the [Cloudflare Domain Configuration](/cloudflare) documentation.
 
+### Is Multi-Region Failover available with Front-End Sites?
+
+Multi-Region Failover and Pantheon's Multizone Failover are only available for General Availability. 
+
 ## Known Issues
 
 <Accordion title="A repository can only be associated with one Front-End Site" id="repo-site" icon="info-sign">
