@@ -42,7 +42,7 @@ Autopilot supports all versions of Drupal, as follows:
 
 - Drupal sites that use Integrated Composer are compatible with Autopilot.
 
-- Sites using Drupal 7 or 8 must also use Drush 8 to be compatible with Autopilot.
+- Sites on Drupal 7 or 8 that are **not** using Integrated Composer, must use Drush 8 to be compatible with Autopilot.
 
 
 ## Does Autopilot support Terminus actions?
