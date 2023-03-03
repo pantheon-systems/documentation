@@ -61,9 +61,9 @@ The steps in this process migrate a site, so the new site will no longer maintai
 
 ## Add the Integrated Composer Upstream in a New Local Branch
 
-This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
+This process involves significant changes to the codebase that may take some time to complete and can be complicated to roll back. 
 
-To minimize issues, these steps make the codebase changes in a new branch:
+To minimize issues, make the codebase changes in a new branch:
 
 1. In your local terminal, change directories to the site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
@@ -71,7 +71,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
   cd ~/projects/$SITE/
   ```
 
-1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
+1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch called `composerify`:
 
   ```bash{outputLines:2}
   git remote add ic git@github.com:pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
@@ -101,7 +101,7 @@ Set the Drupal core version to ensure the site remains on the current version of
 
 ### Add Upgrade Status Module
 
-This step is optional; you may wait and add the Upgrade Status module to your site later.
+This step is optional; you can wait and add the Upgrade Status module to your site later.
 
 The Upgrade Status module will help to determine whether or not your site is ready to upgrade to the latest version of Drupal.
 
@@ -117,7 +117,7 @@ When you are ready to begin upgrading your site to the latest version of Drupal,
 
 ### Copy Existing Configuration
 
-Copy any existing configuration from the default branch. If no files are copied through this step, that's ok:
+Copy any existing configuration from the default branch. Please note that there might not be any files to copy through this step:
 
   ```bash{promptUser:user}
   git checkout master sites/default/config
@@ -134,7 +134,7 @@ Copy any existing configuration from the default branch. If no files are copied 
   git diff master:pantheon.yml pantheon.upstream.yml
   ```
 
-  Press `q` on your keyboard to exit the diff display.
+  Press `q` on your keyboard to exit the `diff` display.
 
 1. Copy the old `pantheon.yml` to preserve settings:
 
@@ -144,11 +144,11 @@ Copy any existing configuration from the default branch. If no files are copied 
   git commit -m 'Copy my pantheon.yml'
   ```
 
-  Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. Then add `build_step: true` to `pantheon.yml` if it is not already included.
+  Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. Then, add `build_step: true` to `pantheon.yml` if it is not already included.
 
  In the `pantheon.yml` file, the `api_version: 1` and `build_step: true` values are required.
 
-## Add in the Custom and Contrib Code Needed to Run Your Site
+## Add the Custom and Contrib Code Needed to Run Your Site
 
 What makes your site code unique is your selection of contributed modules and themes, and any custom modules or themes your development team has created. These customizations need to be replicated in your new project structure.
 
@@ -160,11 +160,11 @@ The goal of this process is to have Composer manage all the site's contrib modul
 
 The steps here ensure that any modules and themes from [drupal.org](https://drupal.org) are in the `composer.json` `require` list.
 
-Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory to have Composer upgrade all the contributed code automatically.
+Once Composer is aware of all the contributed code, you'll be able to run `composer update` from within the directory and Composer will upgrade all the contributed code automatically.
 
 Begin by reviewing the existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
-1. Review the site and make a list of exactly what versions of modules and themes you depend on. One way to do this is to run the `pm:list` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
+1. Review the site and create an accurate list of which versions of modules and themes you depend on. One way to do this is to run the `pm:list` Drush command from within a contributed modules folder (e.g. `/modules`, `/themes`, `/themes/contrib`, `/sites/all/themes`, `/sites/all/themes/contrib`, etc.).
 
   This will list each module followed by the version of that module that is installed:
 
@@ -200,7 +200,6 @@ Begin by reviewing the existing site's code. Check for contributed modules in `/
 
     <Partial file="module_name.md" />	  
 
-
 #### Other Composer Packages
 
 If you have added non-Drupal packages to your site via Composer, use the command `composer require` to migrate each package. You can use the following command to display the differences between the master and your current `composer.json`:
@@ -211,16 +210,16 @@ git diff master:composer.json composer.json
 
 #### Libraries
 
-Libraries be handled similarly to modules, but the specifics depend on how your library code was included in the source site. They may have been included:
+Libraries are handled similarly to modules, but the specifics depend on how your library code was included in the source site. They may have been included:
 
-- by manually committing them to web/libraries
-- using the drupal libraries module
-- as a repository in an existing project composer.json file by using custom repository configuration
-- as a dependency of type `drupal-library` in a contrib module's `composer.json`
+- by manually committing them to web/libraries.
+- using the drupal libraries module.
+- as a repository in an existing project `composer.json` file by using custom repository configuration.
+- as a dependency of type `drupal-library` in a contrib module's `composer.json`.
 
-For packages of type `drupal-library`, define the `installer-path` to `web/libraries`, and require your packages in the same method as Drupal contrib modules.  See [`composer.json`](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json#L49) as an example. 
+For packages of type `drupal-library`, define the `installer-path` to `web/libraries`, and require your packages in the same method as Drupal contrib modules.  Refer to [`composer.json`](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json#L49) as an example. 
 
-If contributed modules require manually adding libraries (for example, the module does not use a composer.json file to download its required libraries), you may add the libraries directly to your `require` section. 
+If contributed modules require manually adding libraries (for example, the module does not use a `composer.json` file to download its required libraries), you may add the libraries directly to your `require` section. 
 
 ### Custom Code
 
@@ -250,7 +249,7 @@ Use the above commands with any of the custom code.
 
 Your existing site may have customizations to `settings.php` or other configuration files. Review these carefully and extract relevant changes from these files to copy over. Always review any file paths referenced in the code, as these paths may change in the transition to Composer.
 
-We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory you don't want to overwrite, as well as platform-specific customizations.
+We don't recommend that you completely overwrite the `settings.php` file with the old one, as it contains customizations for moving the configuration directory that you don't want to overwrite, as well as platform-specific customizations.
 
 ```bash{promptUser:user}
 git status # Ensure working tree is clean
@@ -266,7 +265,7 @@ The resulting `settings.php` should have no `$databases` array.
 
 Any additional Composer configuration that you have added to your site should be ported over to the new `composer.json` file. This can include configurations related to repositories, minimum-stability, or extra sections.
 
-You can use the diff command to get the information you need to copy:
+You can use the `diff` command to get the information you need to copy:
 
 ```
 git diff master:composer.json composer.json
@@ -300,7 +299,7 @@ You've now committed the code to the local branch. Deploy that branch directly t
    git push origin composerify
    ```
 
-Since the commit history of the `composerify` Multidev has no commits in common with the `master` branch, you cannot view the Multidev commit history from the Dashboard or the Integrated Composer logs.
+Since the commit history of the `composerify` Multidev has no commits in common with the `master` branch, there will be no Multidev commit history in the Dashboard or the Integrated Composer logs.
 
 If the site is not working, try this Composer command on the local `composerify` branch:
 
@@ -308,7 +307,7 @@ If the site is not working, try this Composer command on the local `composerify`
 composer --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist --ansi install
 ```
 
-If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. See the [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting) section for more information about troubleshooting Integrated Composer.
+If Composer runs into an error or if any files have been changed (files that are not ignored by `.gitignore`), resolve those issues before you continue. Refer to the [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting) section for more information about troubleshooting Integrated Composer.
 
 ### Move composerify to the Main Dev Branch
 
@@ -334,7 +333,7 @@ Your site's Dev environment is now set up to use the latest version of the Drupa
 
 ### Troubleshooting: Inspect Site Logs
 
-If the site doesn't load properly, before you do too much work to investigate issues, clear the cache and try again.
+If the site doesn't load properly, before you investigate any specific issues, clear the cache and try again.
 
 Use Terminus to inspect the site's logs;
 
@@ -342,7 +341,7 @@ Use Terminus to inspect the site's logs;
 terminus drush $SITE.composerify -- wd-show
 ```
 
-See our [logs collection](/guides/logs-pantheon) documentation for more information.
+Refer to our [logs collection](/guides/logs-pantheon) documentation for more information.
 
 ### Troubleshooting: Provided host name not valid
 
