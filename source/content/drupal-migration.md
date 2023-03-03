@@ -14,14 +14,14 @@ The latest version of Drupal includes many of the familiar features and layout i
 
 ## Upgrade to the Latest Version of Drupal on the Pantheon Platform
 
-You can upgrade your Pantheon site to the latest Drupal version, however, the starting point for your upgrade will vary depending on specific factors such as:
+You can upgrade your Pantheon site to the latest Drupal version. The starting point for your upgrade will vary depending on specific factors, such as:
 
 - **Site Creation Method**
     - Build Tools
     - Custom Upstream
     - Empty Upstream
     - Pantheon Dashboard
-- **Additional Requirements** <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." />
+- **Additional Requirements** <Popover title="Additional Requirements" content="Any other features that are required, or that are desired." />
     - Multidev
     - Drupal version set to 8
     - Build Tools Workflow
@@ -77,9 +77,9 @@ Use [Upgrade a Drupal Site to the Latest Version of Drupal](/guides/drupal-hoste
 
 ## Migrate From Another Platform
 
-Developers have migrated tens of thousands of Drupal sites to Pantheon to take advantage of our WebOps workflows and amazing platform. Composer is the optimal solution to manage packages and dependencies on Pantheon for Drupal development (Version 8+).
+Developers have migrated tens of thousands of Drupal sites to Pantheon to take advantage of our WebOps workflows and platform. Composer is the optimal solution to manage packages and dependencies on Pantheon for Drupal development (Version 8+).
 
-There are different starting points for your migration depending on your Drupal version and dependency management setup.
+There are different starting points for your migration depending on your Drupal version and dependency management setup- review them below.
 
 ### I use Composer
 
