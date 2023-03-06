@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/git/faq-git
 anchorid: faq-git
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [git]
 cms: [drupal, wordpress]
 audience: [development]

@@ -3,7 +3,7 @@ title: Platform Considerations
 subtitle: Media and Email
 description: Learn more about media and email support on the Pantheon platform.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]

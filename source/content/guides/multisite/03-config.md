@@ -5,7 +5,7 @@ description: Learn how to configure your WordPress Multisite.
 layout: guide
 type: guide
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms, config]
 cms: [wordpress]
 audience: [development]

@@ -3,7 +3,7 @@ title: Apache Solr for Drupal
 subtitle: Using Solr 8 on the Latest Version of Drupal
 description: Information on using Pantheon Search with Solr 8 on the latest version of Drupal
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [search]
 cms: [drupal9]
 audience: [development]

@@ -10,7 +10,7 @@ anchorid: deploy-dev
 editpath: drupal/drupal-unhosted-composer/07-deploy-dev.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]

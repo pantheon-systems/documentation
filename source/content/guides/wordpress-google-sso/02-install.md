@@ -4,7 +4,7 @@ subtitle: Install WP SAML Auth
 description: Install the WP SAML Auth plugin
 contributors: [alexfornuto, danielbachhuber]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [security]
 cms: [wordpress]
 audience: [development]

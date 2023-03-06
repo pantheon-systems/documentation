@@ -13,7 +13,9 @@ product: [integrated-composer]
 integration: [--]
 ---
 
-Drupal 9 is available on Pantheon to all new sites, and is available as an [upgrade path for Drupal 8+ sites](/drupal-migration).  For information regarding Drupal 10, see [Drupal 10 on Pantheon](/drupal-10).
+Drupal 10 is available to all new sites, and is available as an [upgrade path for Drupal 9 sites](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10). Refer to [Drupal 10 on Pantheon](/drupal-10) for more information.
+
+Drupal 9 is similarly available on Pantheon to all new sites, and as an [upgrade path for Drupal 8+ sites](/drupal-migration).
 
 Since Drupal itself is in active development and each new version brings a number of significant changes from previous versions, this doc outlines the biggest changes and answers frequently asked questions.
 
@@ -53,13 +55,13 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 [Create a new Drupal site from the Dashboard](/guides/legacy-dashboard/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
 
-## Upgrade or Migrate to Drupal 
+## Upgrade or Migrate to Drupal
 
 To upgrade or migrate an existing Drupal site to Drupal with Integrated Composer, see the [Drupal Migration Guide](/drupal-migration).
 
 To check an existing site's compatibility to upgrade, visit the appropriate [Drupal Migration Guide](/drupal-migration).
 
-## Gutenberg for Drupal 
+## Gutenberg for Drupal
 
 After you upgrade to Drupal you may consider upgrading the authoring experience for your content creators as well. We recommend using [Gutenberg](https://www.drupal.org/project/gutenberg) for a better user experience, including:
 

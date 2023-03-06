@@ -3,7 +3,7 @@ title: WordPress Configurations Guide
 subtitle: Pantheon-maintained WordPress Plugins
 description: Pantheon plugins for WordPress.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [config]
 cms: [wordpress]
 audience: [development]

@@ -3,7 +3,7 @@ title: Platform Considerations
 subtitle: Platform and Site Information
 description: Learn about platform and site-specific configuration and support.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]

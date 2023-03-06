@@ -4,7 +4,7 @@ subtitle: Going Live
 description: Merge your new SAML configuration to your live environment, and update the appropriate values
 contributors: [alexfornuto, danielbachhuber]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [security]
 cms: [wordpress]
 audience: [development]

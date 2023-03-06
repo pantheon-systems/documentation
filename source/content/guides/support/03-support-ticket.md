@@ -3,7 +3,7 @@ title: Get Support
 subtitle: Support Ticket Best Practices
 description: Open and write a support ticket using best practices.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [help]
 cms: [--]
 audience: [agency, business, development, marketing, sysadmin]

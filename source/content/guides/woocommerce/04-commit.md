@@ -7,7 +7,7 @@ anchorid: commit
 generator: pagination
 layout: guide
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [ecommerce]
 cms: [wordpress]
 audience: [development]

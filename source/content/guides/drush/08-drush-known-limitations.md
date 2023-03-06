@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/drush/drush-known-limitations
 anchorid: drush-known-limitations
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cli]
 cms: [drupal]
 audience: [development]

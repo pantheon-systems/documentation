@@ -11,7 +11,7 @@ anchorid: contrib-custom
 editpath: drupal/drupal-unhosted/07-contrib-custom.md
 reviewed: "2022-12-13"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal9, drupal8, drupal10, drupal]
 audience: [development]

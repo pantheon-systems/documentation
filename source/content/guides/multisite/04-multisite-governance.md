@@ -5,7 +5,7 @@ description: Learn more about governance with WordPress Multisites.
 layout: guide
 type: guide
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cms]
 cms: [wordpress]
 audience: [development]

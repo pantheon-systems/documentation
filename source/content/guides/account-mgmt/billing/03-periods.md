@@ -3,7 +3,7 @@ title: "Billing"
 subtitle: Billing Periods
 description: Learn about the billing periods available, and how to manage a subscription.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [billing]
 cms: [--]
 audience: [business]

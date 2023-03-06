@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/launch/configure-dns/
 anchorid: configure-dns
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [config, launch]
 cms: [wordpress, drupal]
 audience: [agency, development]

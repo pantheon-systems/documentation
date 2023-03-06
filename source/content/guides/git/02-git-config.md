@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/git/git-config
 anchorid: git-config
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [git]
 cms: [drupal, wordpress]
 audience: [development]

@@ -11,7 +11,7 @@ anchorid: measure
 editpath: docs/guides/account-mgmt/traffic/03-measure.md
 reviewed: "2022-09-19"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [plans]
 cms: [--]
 audience: [sysadmin]

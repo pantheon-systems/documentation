@@ -9,7 +9,7 @@ tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/updates
 anchorid: updates
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [cli]
 cms: [drupal, wordpress]
 audience: [development]

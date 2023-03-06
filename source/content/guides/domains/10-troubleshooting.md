@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/domains/troubleshooting
 anchorid: troubleshooting
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [domains]
 cms: [--]
 audience: [development]

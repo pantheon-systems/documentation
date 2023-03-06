@@ -3,7 +3,7 @@ title: Quick Start
 subtitle: Create a New Site
 description: In part three of our Quick Start guide, learn how to create your new Pantheon site.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development]
@@ -31,7 +31,7 @@ To create your site:
 
 1. Select <Icon icon="plus" text="Create New Site"/>. 
 
-1. Select WordPress, Drupal with Composer, or Drupal 7, depending upon the framework you wish to use.
+1. Select WordPress, Drupal 9 with Composer, Drupal 10 with Composer, or Drupal 7, depending upon the framework you wish to use.
 
    <Alert title="Note" type="info">
 

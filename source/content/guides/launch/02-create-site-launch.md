@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/launch/create-site-launch
 anchorid: create-site-launch
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create, launch]
 cms: [wordpress, drupal]
 audience: [agency, development]

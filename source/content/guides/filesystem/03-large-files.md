@@ -6,7 +6,7 @@ contenttype: [guide]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-innav: [true]
+innav: [false]
 categories: [files]
 cms: [--]
 audience: [development]

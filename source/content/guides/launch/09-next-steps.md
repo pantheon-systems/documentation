@@ -8,7 +8,7 @@ tags: [launch, webops]
 permalink: docs/guides/launch/next-steps/
 anchorid: next-steps
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [overview, test, launch]
 cms: [wordpress, drupal]
 audience: [agency, development]
