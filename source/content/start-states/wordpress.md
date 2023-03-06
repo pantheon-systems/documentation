@@ -19,9 +19,9 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
-### 2023-03-06
+### 2023-03-07
 
-#### <a name="20230306" class="release-update"></a>Adds the `WP_ALLOW_MULTISITE` constant to sites using WordPress Multisite upstream.
+#### <a name="20230307" class="release-update"></a>Adds the `WP_ALLOW_MULTISITE` constant to sites using WordPress Multisite upstream.
 
 WordPress Multisite upstream users are no longer required to manually declare this variable.
 
