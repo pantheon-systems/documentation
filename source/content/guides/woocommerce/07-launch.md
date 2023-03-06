@@ -2,6 +2,7 @@
 title: WooCommerce Quick Start
 subtitle: Launch Your Store
 description: The final steps of the WooCommerce Quick Start guide.
+getfeedbackform: default
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]

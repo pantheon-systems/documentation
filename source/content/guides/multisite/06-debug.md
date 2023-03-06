@@ -3,6 +3,7 @@ title: WordPress Multisite
 subtitle: Troubleshoot
 description: Review common WordPress Multisite troubleshooting scenarios.
 type: guide
+getfeedbackform: default
 contenttype: [guide]
 innav: [false]
 categories: [cms, troubleshooting]

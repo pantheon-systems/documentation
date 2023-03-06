@@ -1,6 +1,7 @@
 ---
 title: Get Support
 subtitle: Frequently Asked Questions
+getfeedbackform: default
 contenttype: [guide]
 innav: [false]
 categories: [help]

@@ -109,7 +109,6 @@ class VideoTemplate extends React.Component {
             ></div>
           </div>
         </div>
-      </Layout>
         {node.frontmatter.getfeedbackform && (
           <GetFeedback
             formId={
@@ -121,6 +120,7 @@ class VideoTemplate extends React.Component {
             topic="addons"
           />
         )}
+      </Layout>
     )
   }
 }
