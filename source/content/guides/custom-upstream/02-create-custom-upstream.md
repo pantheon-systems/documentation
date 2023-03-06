@@ -186,7 +186,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     <Alert title="Note" type="info" >
     
-    This repository is a "start state" upstream, and should only be used during the initial clone when creating your custom upstream. If you have already created your custom upstream, use the repository below to merge in any updates from Pantheon:
+    This repository is a "start state" upstream, and should only be used during the initial clone when creating your Custom Upstream. If you have already created your Custom Upstream, use the repository below to merge in any updates from Pantheon:
 
     ```bash{promptUser: user}
     git remote add pantheon-updates https://github.com/pantheon-upstreams/drupal-composer-managed.git
