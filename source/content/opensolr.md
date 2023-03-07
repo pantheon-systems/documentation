@@ -82,7 +82,6 @@ A schema must be pushed in each environment (Dev/Test/Live).
 </Alert>
 
 ### Test Your New Solr Connection
-
 Now that you have created the index and configured the ApacheSolr Drupal module to point to the new index, test the connection and ensure Apache Solr can communicate with the Opensolr index.
 
 1. Go to `admin/config/search/apachesolr/settings` 
@@ -94,40 +93,33 @@ If Drupal returns a message such as “Your site has contacted the Apache Solr s
 
 ## Configure Drupal’s Search API Solr and Search API Opensolr modules (Drupal Latest Version)
 
-### Setup OpenSolr connection in Search API OpenSolr 
+### Setup Opensolr connection in Search API Opensolr 
 
-Navigate to the OpenSolrConfig Form 
-Enter you Opensolr API credentials in the fed s under the OpenSolr tabYou will need a login name and secret key for . A secret key in the drop-down after you set it up.
-(admin/config/search/search-api/opensolr)
+1. Navigate to the OpenSolrConfig Form.
+1. Enter your Opensolr API credentials. You will need to provide a login name and secret key. A secret key is provided in the drop-down menu after you configure your credentials.
 
-
-To setup a secret key API Key needs to be retrieved from Opensolr dashboard
-
-![Screenshot 2023-02-16 at 1 02 25 PM](https://user-images.githubusercontent.com/10537340/219476891-cc4a4803-9cd8-4580-8312-b3b1cc24b500.png)
+To setup a secret key, the API key needs to be retrieved from the Opensolr dashboard.
 
 <Alert title="Warning" type="danger">
-Warning:
-
-Do not click on "Generate a New API Key" on OpenSolr dahsboard (see screenshot). It does not confirm the action and immediatly changes the API key for the account which would impact all the indexes therefore all the environments (including prod).
-If you clicked on it, you need add the newly generated API key to the secret key storage.
+Do not click **Generate a New API Key** in the Opensolr dahsboard. It does not confirm the action and immediatly changes the API key for the account, which impacts the indexes of all the environments. If you clicked **Generate a New API Key** , you must add the newly generated API key to the secret key storage.
 </Alert>
 
-### Setting up OpenSolr server in Drupal’s Search API Solr:
+### Setting up Opensolr server in Drupal’s Search API Solr:
+Create a new server by going to the Search API Configuration page, `/admin/config/search/search-api` and clicking on **Add server**.
 
-You need to create a new server by going to the Search API Configuration page (/admin/config/search/search-api) and clicking on Add server.
-If you've successfully established connection to OpenSolr through the step above (Setup OpenSolr connection in Search API OpenSolr), when you pick Solr as a backend, and then OpenSolr with Basic Auth as the authentication method, you will automatically get a dropdown menu of all your existing indexes on OpenSolr. 
-### Setting up OpenSolr index in Drupal’s Search API Solr:
-As a last configuration step you need to set up an index in Drupal. You can do that through the Search API Configuration page (/admin/config/search/search-api).
+If you've successfully established connection to Opensolr using the steps above, when you choose Solr as a back-end and then Opensolr with Basic Auth as the authentication method, you will automatically be presented with a drop-down menu of all your existing indexes on Opensolr. 
+
+### Setting up Opensolr index in Drupal’s Search API Solr:
+As a last configuration step, set up an index in Drupal. You can set up an index through the Search API Configuration page (`/admin/config/search/search-api`).
+
 ### Test Your New Solr Connection
-Now that you created the server and index and configured the Search API OpenSolr and Search API Solr  Drupal module, test the connection and make sure your site can communicate with the Opensolr index.
+Now that you have created the server and index, and have configured the Search API Opensolr and Search API Solr Drupal module, test the connection and ensure your site can communicate with the Opensolr index.
 
-Go to `/admin/config/search/search-api` and click on your index. If the indexing works, your connection is successful!
+Go to `/admin/config/search/search-api` and click on your index. If the indexing works, your connection is successful.
 
 ## Customize Your Configuration
+If you would like to create custom configurations or manually edit your index, synonyms list, stop words, or make changes, you can do so by clicking **Configuration** on your Opensolr Search Index's Tools page, and then selecting the configuration file you want to edit.
 
-If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you can do so by clicking on the **Configuration** icon on your Opensolr Search Index's Tools page, then selecting the configuration file you wish to edit.
-
-![Opensolr configuration file editor page](../images/opensolr-config-files-editor.jpg)
 
 ## More Resources
 
