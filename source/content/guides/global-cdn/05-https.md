@@ -27,7 +27,7 @@ When adding the domain to your environment, you may be presented with the option
 
 </Alert>
 
-For more detailed instructions pertaining to your specific DNS host, click below:
+Click below for more detailed instructions for your specific DNS host.
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
@@ -98,6 +98,4 @@ If you encounter rate limits, we recommend the following approaches:
 ## More Resources
 
 - [Custom Certificates](/custom-certificates#option-2-manually-managed-custom-certificates)
-
 - [Bypassing Cache with HTTP Headers](/cache-control)
-

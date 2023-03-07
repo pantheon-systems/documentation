@@ -17,7 +17,7 @@ product: [cdn]
 integration: [--]
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous site pages. By serving data from cache servers all over the world, website visitors receive a response without having to wait. 
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous site pages. By serving data from cache servers all over the world, website visitors receive a response without having to wait.
 
 ## How Does Global CDN Work?
 
@@ -35,7 +35,7 @@ Global CDN can also improve the availability of your site. For example, if a PHP
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps. 
+Get the most out of Global CDN with help from the experts at Pantheon. We deliver on-demand training to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
@@ -49,19 +49,11 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 - **Dynamically expire selected content:** Global CDN includes interfaces to dynamically expire selected content from the cache, rather than doing a full cache flush. There are basic implementations available through Drupal modules and WordPress plugins, as well as a developer API for implementing custom cache tagging/clearing behavior.
 
-Many users see multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US when they first turn on Global CDN. International users will benefit even more:
-
-![Example before and after page load time](../../../images/global-cdn-time-to-load.png)
-
-
+Many users see multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US with Global CDN. International users will benefit even more.
 
 ## More Resources
 
 - [Caching: Advanced Topics](/caching-advanced-topics)
-
 - [Debug Common Cache Busters](/guides/frontend-performance/caching#troubleshoot-caching-issues)
-
 - [Traffic Limits and Overages](/guides/account-mgmt/traffic)
-
-- [Fastly on Pantheon](/guides/fastly-pantheon) 
-
+- [Fastly on Pantheon](/guides/fastly-pantheon)
