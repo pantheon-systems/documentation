@@ -180,16 +180,21 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
     <Tab title="Drupal (Latest Version)" id="dlatest">
 
+    ```bash{promptUser: user}
+    git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-10-composer-managed.git
+    ```
+
     <Alert title="Note" type="info" >
     
-    This repository has not yet been released.  This page will be updated with the correct code when it is released.
+    This repository is a "start state" upstream, and should only be used during the initial clone when creating your Custom Upstream. If you have already created your Custom Upstream, use the repository below to merge in any updates from Pantheon:
+
+    ```bash{promptUser: user}
+    git remote add pantheon-updates https://github.com/pantheon-upstreams/drupal-composer-managed.git
+    ```
 
     </Alert>
 
-    ```bash{promptUser: user}
-    git remote add pantheon-drupal https://github.com/pantheon-upstreams/---.git
-    ```
-    </Tab>
+  </Tab>
 
     <Tab title=" Drupal 7" id="d71">
 
