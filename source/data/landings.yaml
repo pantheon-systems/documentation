@@ -1507,7 +1507,7 @@
       links:
         - text: 'Real-time chat support'
           url: 'https://docs.pantheon.io/support/#real-time-chat-support'
-- title: 'WordPress On Pantheon - Pre-GA'
+- title: 'WordPress on Pantheon: Pre-GA'
   subtitle: 'Pantheon makes some WordPress features available to a limited audience for testing. Some Support exclusions will apply.'
   path: 'guides/wordpress-composer/pre-ga'
   guides:
