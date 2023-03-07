@@ -17,7 +17,7 @@ product: [cdn]
 integration: [--]
 ---
 
-Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous site pages. By serving data from cache servers all over the world, website visitors receive a response without having to wait. 
+Pantheon's [Global CDN](https://pantheon.io/features/global-cdn) (content delivery network) is a core platform offering that provides improved performance and security for customer sites. Global CDN supports caching to accelerate both static content and anonymous site pages. By serving data from cache servers all over the world, website visitors receive a response without having to wait. 
 
 ## How Does Global CDN Work?
 
@@ -64,4 +64,3 @@ Many users see multi-second speedups in Visual Progress <Popover title="Visual P
 - [Traffic Limits and Overages](/guides/account-mgmt/traffic)
 
 - [Fastly on Pantheon](/guides/fastly-pantheon) 
-
