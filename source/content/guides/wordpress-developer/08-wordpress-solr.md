@@ -52,19 +52,19 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 1. Navigate to your Dev or Multidev environment and [set the connection mode to SFTP](/guides/sftp) via the Pantheon Dashboard, or with [Terminus](/terminus):
 
- ```bash
+ ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp
  ```
 
 1. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard, or with Terminus:
 
- ```bash
+ ```bash{promptUser: user}
  terminus wp <site>.<env> -- plugin install --activate solr-power
  ```
 
  Or for WP Site Networks:
 
- ```bash
+ ```bash{promptUser: user}
  terminus wp <site>.<env> -- plugin install --activate --network solr-power
  ```
 
@@ -82,14 +82,14 @@ This plugin requires PHP version 7.1 or higher. Refer to [Upgrade PHP versions](
 
 1. Navigate to the **Actions** tab and click **Start Index** (next to **Index Searchable Post Types**) to index all publicly queryable post types, or via Terminus:
 
- ```bash
+ ```bash{promptUser: user}
  terminus wp <site>.<env> -- solr index
  ```
 
  For WP Site Networks, you must index all your subsites individually:
 
- ```bash
- terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
+ ```bash{promptUser: user}
+ terminus wp <site>.<env> -- solr index --url=example.pantheonsite.io/subsite
  ```
 
 1. Deploy the plugin to the site's Test and Live environments after validation and testing.
