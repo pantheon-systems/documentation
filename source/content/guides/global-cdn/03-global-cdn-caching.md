@@ -60,7 +60,7 @@ Follow the steps below if you have checked your HTTP headers and found that cach
 
 1. Verify that you have configured [Drupal's performance settings](/drupal-cache) or the [WordPress Pantheon Cache Plugin](/guides/wordpress-configurations/wordpress-cache-plugin) correctly.
 
-1. Go back and check the HTTP headers to verify that caching working correctly after your configuration changes.
+1. Go back and check the HTTP headers to verify that caching is working correctly after your configuration changes.
 
 #### Drupal
 
