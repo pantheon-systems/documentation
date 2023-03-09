@@ -1,9 +1,15 @@
 ---
 title: Switching Sites from HTTP to HTTPS
 description: Best-practice HTTPS configurations for WordPress and Drupal to fix mixed-content browser warnings and excessive redirects.
-categories: [go-live]
 tags: [https, launch, redirects, security]
 reviewed: "2020-02-12"
+contenttype: [doc]
+innav: [true]
+categories: [launch, domains]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 All new sites created on Pantheon are configured for HTTPS by default. HTTPS is available immediately for Platform domains like `multidev-example.pantheonsite.io`.
@@ -113,7 +119,7 @@ This will not work for Multisite installations, and can result in data loss on s
 
 <Tab title="Drupal" id="tab-2-id">
 
-  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/guides/drush/drush-commands#add-custom-drush-commands).
+  Drupal sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush commands](/guides/drush/drush-commands#add-custom-drush-commands).
 
 </Tab>
 

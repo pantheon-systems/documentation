@@ -2,13 +2,19 @@
 title: Domains on Pantheon
 subtitle: FAQs
 description: Get answers to your domain questions.
-categories: [develop]
 tags: [collaborate, dns, agencies]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/domains-faq
 anchorid: domains-faq
+contenttype: [guide]
+innav: [false]
+categories: [domains]
+cms: [--]
+audience: [development, sysadmin]
+product: [--]
+integration: [--]
 ---
 
 This section provides answers to frequently asked questions about domains and DNS on Pantheon.

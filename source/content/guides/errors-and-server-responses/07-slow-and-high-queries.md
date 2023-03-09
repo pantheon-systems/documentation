@@ -3,12 +3,18 @@ title: Errors and Server Responses
 subtitle: Slow Queries and High Query Volumes
 description: Learn how to resolve slow queries and high query volumes.
 tags: [services]
-categories: [platform]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/slow-and-high-queries
 anchorid: slow-and-high-queries
+contenttype: [guide]
+innav: [false]
+categories: [issues]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to resolve slow queries and high query volumes.
@@ -53,6 +59,6 @@ Refer to [Debugging Performance Bottlenecks](/debug-slow-performance) for detail
 
 - [Drupal Performance and Caching Settings](/drupal-cache)
 
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)
+- [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)
 
 - [Optimize Your wp-options Table and Autoloaded Data](/optimize-wp-options-table-autoloaded-data)

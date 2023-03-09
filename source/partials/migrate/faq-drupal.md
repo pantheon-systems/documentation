@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+cms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Drupal FAQ
 
 ### How should I migrate a site with a custom Drupal-based upstream?
@@ -14,7 +24,7 @@ Drupal users with access to Drush 8 or earlier can run the provided Drush comman
 
 ### How do I clone an existing Pantheon site?
 
-Drupal 7, Drupal 9, and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
+Drupal and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
 
 Replace `<source>` and `<destination>` with target [site UUIDs](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis) or site names, and specify target development environment in place of `<env>` (dev or multidev):
 

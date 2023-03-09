@@ -2,7 +2,13 @@
 title: WordPress with Composer on Pantheon
 subtitle: Introduction
 description: Learn more about using WordPress with Composer on Pantheon.
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [dependencies]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith]
 layout: guide
@@ -49,4 +55,4 @@ Please reach out to our [Professional Services](https://pantheon.io/professional
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
 
-- [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)
+- [Convert a Standard Drupal Site to a Composer-Managed Site](/guides/composer-convert)

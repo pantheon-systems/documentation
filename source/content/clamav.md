@@ -1,9 +1,14 @@
 ---
 title: Enabling ClamAV for Drupal
 description: Learn how to protect your site against malicious files with malware and other potential threats using ClamAV, an open source antivirus engine.
-cms: "Drupal"
-categories: [develop]
 tags: [modules, security, files]
+contenttype: [doc]
+innav: [true]
+categories: [security]
+cms: [drupal7, drupal8]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 **ClamAV** is an open source antivirus engine for detecting trojans, viruses, malware & other malicious threats. It supports multiple file formats, file and archive unpacking, and multiple signature languages.
@@ -33,7 +38,7 @@ As of this doc's last update, there are no actively maintained ClamAV plugins fo
 
 ### Drupal
 
-This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/project/clamav).
+This doc uses the [ClamAV Module](https://www.drupal.org/project/clamav).
 
 1. Download and enable the module in the Drupal admin panel, or via [Terminus](/terminus):
 

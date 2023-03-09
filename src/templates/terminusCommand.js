@@ -1,3 +1,4 @@
+
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -49,6 +50,8 @@ const shortcodes = {
   Partial,
 }
 
+
+
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
@@ -56,55 +59,67 @@ const items = [
   {
     id: "docs-terminus",
     link: "/terminus",
-    title: "Get Started",
+    title: "Introduction",
   },
   {
     id: "docs-terminus-install",
     link: "/terminus/install",
-    title: "Install",
+    title: "Install Terminus",
   },
   {
     id: "docs-terminus-examples",
     link: "/terminus/examples",
-    title: "Example Usage",
+    title: "Get Started",
   },
   {
     id: "docs-terminus-commands",
     link: "/terminus/commands",
-    title: "Commands",
+    title: "Command Directory",
   },
   {
     id: "docs-terminus-scripting",
     link: "/terminus/scripting",
-    title: "Scripting",
+    title: "Scripting with Terminus",
   },
   {
     id: "docs-terminus-plugins",
     link: "/terminus/plugins",
-    title: "Extend with Plugins",
-    items: [
-      {
-        id: "docs-terminus-directory",
-        link: "/terminus/plugins/directory",
-        title: "Directory",
-      },
-      {
-        id: "docs-terminus-create",
-        link: "/terminus/plugins/create",
-        title: "Create Plugins",
-      },
-    ],
+    title: "Install Plugins",
+  },
+  {
+    id: "docs-terminus-directory",
+    link: "/terminus/directory",
+    title: "Plugin Directory",
+  },
+  {
+    id: "docs-terminus-create",
+    link: "/terminus/create",
+    title: "Create Terminus Plugins",
   },
   {
     id: "docs-terminus-configuration",
     link: "/terminus/configuration",
-    title: "Configuration File",
+    title: "Terminus Configuration File",
   },
+
+  {
+    id: "docs-supported-terminus",
+    link: "/terminus/supported-terminus",
+    title: "Supported Terminus and PHP Versions",
+  },
+
   {
     id: "docs-terminus-updates",
     link: "/terminus/updates",
-    title: "Version Updates",
+    title: "Current Terminus Release and Changelog",
   },
+
+  {
+    id: "docs-terminus-terminus-3-0",
+    link: "/terminus/terminus-3-0",
+    title: "Terminus 3",
+  },
+
 ]
 
 class CommandsTemplate extends React.Component {
@@ -178,11 +193,11 @@ class CommandsTemplate extends React.Component {
         <div className="">
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
-              <Navbar
-                title={`Terminus Command Reference`}
-                items={items}
-                activePage="/terminus/commands"
-                className="manual-guide-toc"
+            <Navbar
+              title={`Terminus Command Reference`}
+              items={items}
+              activePage="/terminus/commands"
+              className="manual-guide-toc"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">

@@ -2,9 +2,15 @@
 title: Use an Empty Upstream to Host a Static Site on Pantheon
 description: How to create a static site using an empty Upstream on Pantheon.
 contributors: [michellecolon-pantheon, kyletaylored]
-categories: [get-started]
 tags: [upstreams, site]
 reviewed: "2021-08-12"
+contenttype: [doc]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
+audience: [development]
+product: [custom-upstreams]
+integration: [upstreams]
 ---
 
 Pantheon supports two of the largest open source content management systems (CMS) on the web, WordPress and Drupal. Occasionally, when customers move their portfolio of sites over to Pantheon, some sites are static and do not need a full CMS, and this is where empty Upstreams come in.
@@ -37,9 +43,9 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
 
 ## Upload the Static Site to Pantheon
 
-Now that you have static files and an empty Upstream that is ready to host them, add files to the Pantheon Site using [SFTP](/sftp) or [Git](/guides/git/git-config).
+Now that you have static files and an empty Upstream that is ready to host them, add files to the Pantheon Site using [SFTP](/guides/sftp) or [Git](/guides/git/git-config).
 
-Once the files have been added to the Site, [commit the code](/sftp#committing-sftp-changes), and deploy the changes through Test to Live.
+Once the files have been added to the Site, [commit the code](/guides/sftp/sftp-development), and deploy the changes through Test to Live.
 
 ## Frequently Asked Questions
 

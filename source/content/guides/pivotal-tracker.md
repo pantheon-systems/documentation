@@ -1,7 +1,13 @@
 ---
 title: Integrate Pivotal Tracker Project Management Application with a site on Pantheon
 description: Using Pivotal Tracker to track application development progress, using Quicksilver webhooks.
-categories: [integrate]
+contenttype: [doc]
+innav: [true]
+categories: [automate]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [pivotal]
 tags: [code, collaborate, webops, workflow]
 type: guide
 permalink: docs/guides/:basename

@@ -1,8 +1,14 @@
 ---
 title: Debugging Connectivity Issues
 description: Learn how to test and resolve connectivity issues affecting your Pantheon sites.
-categories: [troubleshoot]
 tags: [cli, ssh]
+contenttype: [doc]
+innav: [true]
+categories: [troubleshooting]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## Connectivity Error Message
@@ -45,7 +51,7 @@ If an IP address is returned, [configure your network settings to use Google Pub
 
 Make sure the port number is not blocked by your internal firewall. For example, to test whether port 2222 is blocked visit [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
-If you are not able to access port 2222, you can try our [workaround](/port-2222).
+If you are not able to access port 2222, you can try our [workaround](/guides/sftp/port-2222).
 
 ## Test Connection on the Command Line
 

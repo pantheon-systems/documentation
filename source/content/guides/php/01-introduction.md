@@ -2,7 +2,13 @@
 title: PHP on Pantheon
 subtitle: Introduction
 description: Learn more about using PHP on Pantheon.
-categories: [develop]
+contenttype: [guide]
+innav: [true]
+categories: [php]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [webops, workflow]
 contributors: [whitneymeredith]
 layout: guide

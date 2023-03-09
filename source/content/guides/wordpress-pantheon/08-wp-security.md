@@ -2,7 +2,13 @@
 title: WordPress on Pantheon Quick Start Guide
 subtitle: WordPress Security
 description: Keep your WordPress on Pantheon site secure.
-categories: [wordpress]
+contenttype: [guide]
+innav: [false]
+categories: [cms]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-18"
@@ -42,7 +48,7 @@ Pantheon provides additional security through the following features:
 
 ## Securing WordPress
 
-<Partial file="wp-login-attacks.md" />
+`wp-login.php` is the primary WordPress login path and is often subject to abuse by bots or other spammers. Refer to the [Avoid WordPress Login Attacks](/guides/wordpress-developer/wordpress-login-attacks) section of the [WordPress Developer's Guide](/guides/wordpress-developer) for information on steps you can take to help secure your site.
 
 ## Securely Updating WordPress
 
@@ -100,7 +106,7 @@ Of course, doing manual updates can be a chore, especially if you're managing mo
 
 While Custom Upstreams will help, adding automation and scripting will get you even further. The ideal system would detect available updates, deploy them to a testing environment, test them, and produce a report indicating that the site has updates that are ready to go.
 
-Our [Terminus command line tool]( /terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](/guides/wp-cli/) and add in our [Quicksilver hooks](/guides/quicksilver) to trigger testing, and you're on your way.
+Our [Terminus command line tool](/terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](/guides/wp-cli/) and add in our [Quicksilver hooks](/guides/quicksilver) to trigger testing, and you're on your way.
 
 [Pixotech has a nice writeup](http://www.pixotech.com/automating-pluginmodule-updates-on-pantheon/) on their process that does this, and our own Andrew Taylor has a [fantastic script for doing all of this plus visual regression testing](https://pantheon.io/blog/automating-security-updates-scalewpio) on Pantheon.
 

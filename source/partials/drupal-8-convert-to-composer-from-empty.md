@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+cms: [--]
+product: [integrated-composer]
+integration: [composer]
+tags: [--]
+reviewed: ""
+---
+
 This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
 
 To minimize issues, these steps make the codebase changes in a new branch:
@@ -32,15 +42,15 @@ To minimize issues, these steps make the codebase changes in a new branch:
 
 ### Set Drupal Core Version
 
-Set the Drupal core version, to ensure the site remains on Drupal 8 for now:
+Set the Drupal core version, to ensure the site remains on the current version of Drupal for now:
 
-<Partial file="drupal-9/core-version-remain-on-d8.md" />
+<Partial file="drupal/core-version-remain-on-d8.md" />
 
 ### Add Upgrade Status Module
 
 This step is optional. You can wait and add the Upgrade Status module to your site later.
 
-The Upgrade Status module will help to determine whether or not your site is ready to upgrade to Drupal 9.
+The Upgrade Status module will help to determine whether or not your site is ready to upgrade to the latest version of Drupal.
 
 Add the Upgrade Status module to your site with Composer:
 
@@ -50,7 +60,7 @@ Add the Upgrade Status module to your site with Composer:
   git commit -m "Add Upgrade Status module"
   ```
 
-When you are ready to begin upgrading your site to Drupal 9, you can enable this module and view the status report it provides to find things that need to be done before upgrading.
+When you are ready to begin upgrading your site to the latest version of Drupal, you can enable this module and view the status report it provides to find things that need to be done before upgrading.
 
 ### Copy Existing Configuration
 
@@ -242,7 +252,7 @@ Once you have confirmed that the site works in the Multidev, replace the `master
    git push --force origin master
    ```
 
-Your site's Dev environment is now set up to use the Drupal 9 Integrated Composer upstream. 
+Your site's Dev environment is now set up to use the latest version of the Drupal Integrated Composer upstream. 
 
 ### Troubleshooting: Inspect Site Logs
 

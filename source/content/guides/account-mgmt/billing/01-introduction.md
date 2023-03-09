@@ -2,7 +2,13 @@
 title: "Billing"
 subtitle: Introduction
 description: Add a new credit card, remove the current card, or transfer billing to a new site owner.
-categories: [account-mgmt]
+contenttype: [guide]
+innav: [true]
+categories: [billing]
+cms: [--]
+audience: [business]
+product: [--]
+integration: [--]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide

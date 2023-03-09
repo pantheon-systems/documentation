@@ -3,10 +3,17 @@ title: Cloudflare Domain Configuration
 provider: Cloudflare
 dnsprovider: true
 description: Learn how to point your domain to a Pantheon site using Cloudflare
-categories: [go-live]
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/cloudflare.md/
+contenttype: [doc]
+innav: [true]
+categories: [domains]
+cms: [wordpress, drupal]
+audience: [development]
+product: [--]
+integration: [--]
+reviewed: "2023-02-03"
 ---
 You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Global CDN. We recommend using Cloudflare for DNS only. If you have a paid Cloudflare plan to use features like their WAF or have custom Cloudflare configurations (e.g. many page rules) you'd like to keep, however, then ensure you follow the guide below to enforce HTTPS to prevent any issues.
 
@@ -20,8 +27,47 @@ Be sure that you have a:
 ## Locate Pantheon's DNS Values
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio" /> Live) then click **<span class="glyphicons glyphicons-global" /> Domains / HTTPS**.
-2. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
-3. Login to your [Cloudflare account](https://www.cloudflare.com/a/login) in a new tab before you continue.
+
+1. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
+
+1. Login to your [Cloudflare account](https://www.cloudflare.com/a/login) in a new tab before you continue.
+
+## Pre-Provision SSL Certificate on Cloudflare (optional)
+
+Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a planned launch can prevent a gap in SSL service immediately after updating DNS on launch date.
+
+1. Click **DNS** on the Cloudflare menu bar.
+
+1. Click **+ Add record** and then select **TXT** from the **Type** drop-down menu.
+
+1. Enter the `TXT Name/Host` in the **Name** field and the `TXT Value` in the **Content** field.
+
+  You can find both values in the the Live environment of your Pantheon Site Dashboard under **Domains/HTTPS** for that domain.
+
+1. Select your desired Time to Live (TTL) and then click **Save**.
+
+1. Log in to the Pantheon Site Dashboard.
+
+1. Navigate to the Live environment and click **Domains/HTTPS**.
+
+1. Click the **details** button next to the domain and then click the **Verify Ownership** button.
+
+  The process to provision certificates will begin after domain ownership is verified, and you will receive the following notice:
+
+  ```
+  HTTPS
+  Your DNS configuration is correct, and certificate provisioning is queued to start for this domain.
+  ```
+
+  Both the bare domain and the www domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
+
+  ```
+  HTTPS
+  Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
+  ```
+
+1. Repeat the steps above for all domains (www and non-www).
+
 
 ## Configure DNS Records on Cloudflare
 
@@ -30,7 +76,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 ![Example DNS only](../../images/cloudflare-dns-only.png)
 
-1. Click on **DNS** from the Cloudflare menu bar.
+1. Click **DNS** on the Cloudflare menu bar.
 1. Click **+ Add record**.
 1. Select **A** from the **Type** drop-down menu.
 1. Enter `www` in the **Name** field and paste the IP address value provided by Pantheon (e.g. `23.185.0.2`) in the **IPv4** field.
@@ -53,7 +99,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 Repeat the steps above to create an **A** record for the bare domain, using `@` as the **Name** and the same IP address, then repeat again for the **AAAA** records.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
-You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
+You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service. You must use this option if you have a [Front-End](/guides/decoupled-sites/#what-is-a-decoupled-site) site.
 
 1. Select **SSL/TLS** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
 
@@ -75,7 +121,7 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS certificates for a domain.
 
-1. Click on **DNS** from the Cloudflare menu bar.
+1. Click **DNS** on the Cloudflare menu bar.
 1. Click **+ Add record**.
 1. Select **CAA** from the **Type** drop-down menu.
 1. Enter the bare domain (`example.com`) in the **Name** field.
@@ -104,6 +150,12 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 ## Restrict Content Based on Geographic Location
 
 If you're using Cloudflare's IP Geolocation feature, you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses.
+
+## Cache Invalidation Best Practices
+
+Cloudflare allows you to turn on caching. However, no cache invalidation hook is fired when you make content changes if you have Cloudflare caching turned on. This means that Cloudflare will be unaware of your changes and persist with stale cache.
+
+We recommend that you turn off Cloudflare caching until the `pantheon_advanced_page_cache` module/plugin is extended to send API calls to Cloudflare.
 
 ## Next Steps
 

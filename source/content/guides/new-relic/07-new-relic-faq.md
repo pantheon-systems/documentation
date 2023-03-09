@@ -2,7 +2,13 @@
 title: New Relic Performance Monitoring on Pantheon
 subtitle: New Relic FAQ
 description: Get answers to your New Relic questions.
-categories: [automate]
+contenttype: [guide]
+innav: [false]
+categories: [track, faq]
+cms: [--]
+audience: [development, sysadmin]
+product: [newrelic]
+integration: [--]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [whitneymeredith]
 layout: guide
@@ -68,6 +74,10 @@ We don't recommend turning off New Relic&reg; for any one environment, as it mak
 New Relic&reg; Performance Monitoring logs are available at `/logs/newrelic.log`. The New Relic&reg; provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic&reg;'s left-side menu.
 
 Refer to [Log Files on Pantheon](/guides/logs-pantheon) for more information on accessing your logs.
+
+### Why do I get a permissions warning while trying to access some parts of New Relic?
+
+Pantheon provides New Relic Performance Monitoring for sites on [supported plans](/guides/new-relic#supported-site-plans). Certain components of New Relic fall outside this offering. Please [contact support](/guides/support/contact-support/) if you cannot access a New Relic feature that you should have access to.
 
 ## More Resources
 

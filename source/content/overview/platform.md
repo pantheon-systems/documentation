@@ -1,10 +1,16 @@
 ---
 title: Our Platform
 description: Learn about the components of the Pantheon platform.
-categories: [overview]
 tags: [infrastructure]
 contributors: [wordsmither]
 permalink: docs/overview/platform
+contenttype: [guide]
+innav: [true]
+categories: [overview]
+cms: [--]
+audience: [sysadmin]
+product: [--]
+integration: [--]
 ---
 
 Our massive, multi-tenant platform uniquely leverages containers on top of a dedicated infrastructure.
@@ -29,7 +35,7 @@ Our Runtime Matrix executes the code for your website. Over a million Linux cont
 
 - [Apache Solr](/solr): Pantheon Search is built into our platform using Apache Solr and delivered as a service. We manage the Solr servers, the 100% solid state drives that store all indexes, and we optimize all aspects of the search stack so you can focus your time on optimizing results pages and filters. 
 
-- [Valhalla](/files): Containers are seamlessly integrated with Valhalla, our distributed file system. Valhalla keeps your files in sync across all the containers running your site. 
+- [Valhalla](/guides/filesystem): Containers are seamlessly integrated with Valhalla, our distributed file system. Valhalla keeps your files in sync across all the containers running your site. 
 
 - [Git Version Control](/guides/git): Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
 

@@ -2,7 +2,13 @@
 title: "Billing"
 subtitle: Invoices and Subscriptions
 description: Manage and view invoices and subscriptions.
-categories: [account-mgmt]
+contenttype: [guide]
+innav: [false]
+categories: [billing]
+cms: [--]
+audience: [business]
+product: [--]
+integration: [--]
 tags: [billing]
 contributors: [wordsmither]
 layout: guide
@@ -25,6 +31,10 @@ To view your invoices:
 
 Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list.
 
+### Receiving Invoices via Email
+
+Invoices are emailed to the email address associated with the payment method.  To change the email address, [update the payment method](/guides/account-mgmt/billing/methods#update-personal-payment-method).
+
 ### Invoice Details
 
 The details in the invoice include:
@@ -38,6 +48,12 @@ The details in the invoice include:
 |Method| Credit card used|
 
 You can download the invoice as a PDF or CSV file. You can also print the PDF or import the CSV into a spreadsheet program.
+
+<Alert title="Note" type="info" >
+
+Only the Site Owner can download invoices.  If this site is a part of a contract organization, reach out to the organization for assistance.  Sites that are part of a contract organization show the organization as the User in Charge on the **Workspace** tab.
+
+</Alert>
 
 If your billing country is in the European Union (EU), your invoices may also include the value-added tax (VAT) ID.
 These invoices comply with the EU requirements of the VAT Directive (Article 226, Council Directive 2006/112/EC) and are valid for your local tax authorities. 

@@ -1,7 +1,13 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-categories: [develop]
+contenttype: [doc]
+innav: [true]
+categories: [localdev]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 ---
@@ -30,7 +36,7 @@ Be sure you have:
   - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
   - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/guides/php/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
-- SFTP client or IDE, such as [WinSCP](/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
+- SFTP client or IDE, such as [WinSCP](/guides/sftp/winscp) or [Visual Studio Code](/visual-studio-code), for transferring files OR Rsync
 - [Terminus](/terminus)
 - [Drush](/guides/drush) (optional)
 
@@ -97,7 +103,7 @@ The first step is to get a `git clone` of your code from Pantheon on your local 
 
 ## Get the Files
 
-For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsync-and-sftp).
+For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/guides/sftp/rsync-and-sftp).
 
 ### Via Terminus
 
@@ -172,7 +178,7 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 
 Send files using SFTP:
 
-1. [Copy the SFTP CLI command](/sftp#sftp-connection-information).
+1. [Copy the SFTP CLI command](/guides/sftp/sftp-connection-info).
 
 1. Use the terminal to navigate to the correct directory on your local file system:
 

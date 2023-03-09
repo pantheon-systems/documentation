@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [cache]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 <TabList>
 
 <Tab title="Via Command Line" id="cli" active={true}>
@@ -5,10 +15,10 @@
 1. Examine the headers through the command line:
 
   ```bash{outputLines: 2-20}
-  curl --head https://pantheon.io/docs
+  curl --head https://docs.pantheon.io
   HTTP/2 301
   content-type: text/html
-  location: https://pantheon.io/docs/
+  location: https://docs.pantheon.io/
   server: nginx
   strict-transport-security: max-age=31622400
   x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
@@ -36,7 +46,7 @@
 1. cURL the site headers filtered for stale cache in a terminal:
 
   ```bash{promptUser: user}
-  curl --head https://pantheon.io/docs | grep PContext-Resp-Is-Stale
+  curl --head https://docs.pantheon.io | grep PContext-Resp-Is-Stale
   ```
 
   If the response headers include `PContext-Resp-Is-Stale`, the page has been successfully served from stale cache.

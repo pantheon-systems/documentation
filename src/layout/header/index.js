@@ -59,7 +59,7 @@ const Header = ({ data, page }) => (
           </li>
           <li className="">
             <a
-              href="https://dashboard.pantheon.io/#support/support/all"
+              href="https://dashboard.pantheon.io/#support"
               target="_blank"
               rel="noopener"
             >
@@ -68,7 +68,7 @@ const Header = ({ data, page }) => (
           </li>
           <li className="dropdown">
             <a
-              href="/docs"
+              href="/"
               className="dropdown-toggle active-trail"
               role="button"
               aria-haspopup="true"
@@ -140,7 +140,7 @@ const Header = ({ data, page }) => (
                   </li>
                   <li>
                     <Link id="terminus" to="/terminus">
-                      Terminus Manual
+                      Terminus Guide
                     </Link>
                   </li>
                 </div>
@@ -155,7 +155,7 @@ const Header = ({ data, page }) => (
             <div className="container container-navsearch-box-guide">
               <form
                 id="searchform"
-                action="/docs/search"
+                action="/search"
                 role="search"
                 acceptCharset="UTF-8"
                 encType="application/x-www-form-urlencoded"

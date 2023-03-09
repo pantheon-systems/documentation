@@ -4,10 +4,16 @@ subtitle: Final Review
 description: Review next steps to take after you launch your site.
 layout: guide
 showtoc: true
-categories: [go-live]
 tags: [launch, webops]
 permalink: docs/guides/launch/next-steps/
 anchorid: next-steps
+contenttype: [guide]
+innav: [false]
+categories: [overview, test, launch]
+cms: [wordpress, drupal]
+audience: [agency, development]
+product: [newrelic]
+integration: [--]
 ---
 
 Congratulations on launching a site on Pantheon. Review next steps below for information on WordPress and Drupal launch checks, content staging, New Relic performance monitoring, load and performance testing, and secure development on the Pantheon platform.
@@ -55,4 +61,4 @@ Review our [Secure Development on Pantheon](/guides/secure-development) guide fo
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
-- [Drupal 9 on Pantheon](/drupal-9)
+- [Drupal on Pantheon](/drupal)

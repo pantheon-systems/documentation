@@ -1,14 +1,20 @@
 ---
 title: CMS Email Service on Pantheon
 description: Detailed information on configuring a third-party outgoing email service for your Pantheon Drupal or WordPress site.
-categories: [platform]
+contenttype: [doc]
+innav: [true]
+categories: [email]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [email]
 reviewed: "2022-08-03"
 ---
 
 ## Incoming Email
 
-Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as [Gmail](https://gsuite.google.com/index.html).
+Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as Gmail from [Google Workspace](https://workspace.google.com/).
 
 ## Outgoing Email
 

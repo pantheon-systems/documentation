@@ -2,8 +2,13 @@
 title: PHP on Pantheon
 subtitle: WordPress and PHP Sessions
 description: Learn more about the behaviors of WordPress and PHP sessions.
-cms: "WordPress"
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [php]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, users, cookies]
 layout: guide
 showtoc: true
@@ -64,7 +69,7 @@ Alternatively, you can inspect the headers using `curl -sI example.com` after ea
 
 Install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin if `$_SESSIONs` are necessary for your application:
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> sftp

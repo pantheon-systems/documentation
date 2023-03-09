@@ -2,7 +2,13 @@
 title: Backups Tool
 description: Learn how to back up your Drupal or WordPress site on Pantheon.
 tags: [backups, security]
-categories: [develop]
+contenttype: [doc]
+innav: [true]
+categories: [backup]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 The Backups tab is where you manage all the details for your site's backup. Each backup contains three components: code, database, and files.
@@ -188,7 +194,7 @@ Additionally, you can manually trigger a full Pantheon backup job for any site e
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>
 ```
-See also <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup-and-migrate">Modules and Plugins with Known Issues</a>
+See also <a data-proofer-ignore href="/modules-plugins-known-issues/#backup-and-migrate">Modules and Plugins with Known Issues</a>
 
 ### What Can I Do During Backups?
 

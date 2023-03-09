@@ -1,3 +1,12 @@
+---
+contenttype: [partial]
+categories: [custom-upstreams]
+cms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
 
 ## Example
 

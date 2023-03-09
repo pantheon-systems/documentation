@@ -3,13 +3,20 @@ title: Integrated Composer
 subtitle: Integrated Composer Support
 description: Learn about support for Integrated Composer.
 tags: [composer, workflow]
-categories: [get-started]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
+reviewed: "2022-12-13"
+
 layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-support
 anchorid: ic-support
+contenttype: [guide]
+innav: [false]
+categories: [dependencies]
+cms: [drupal, wordpress]
+audience: [development]
+product: [composer]
+integration: [--]
 ---
 
 This section provides information on support for Integrated Composer.

@@ -2,7 +2,13 @@
 title: MariaDB and MySQL on Pantheon
 subtitle: MariaDB and MySQL FAQ
 description: Get answers to your MariaDB and MySQL questions.
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [database]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [database]
 contributors: [whitneymeredith]
 layout: guide

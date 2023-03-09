@@ -2,13 +2,19 @@
 title: Domains on Pantheon
 subtitle: Vanity Domains
 description: Replace "pantheonsite.io" within Pantheon environments by adding a custom vanity domain.
-categories: [develop]
 tags: [collaborate, dns, agencies]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/domains/vanity-domains
 anchorid: vanity-domains
+contenttype: [guide]
+innav: [false]
+categories: [domains]
+cms: [--]
+audience: [development, sysadmin]
+product: [dashboard]
+integration: [--]
 ---
 
 This section provides information on to set up a vanity domain.
@@ -42,6 +48,12 @@ You must provide a custom certificate if you want to use a vanity domain on your
 Our [Custom Certificate](/custom-certificates#add-a-custom-certificate) service is only available to contract customers, including Elite, Enterprise, Higher Education, and Resellers. 
 
 ## Create Wildcard DNS Records
+
+<Alert title="Warning" type="danger" >
+
+Using wildcard DNS settings is not considered best practice on a cloud-hosted platform such as Pantheon.  It is more secure to create explicit records for each subdomain you require.  [Learn more about preventing DNS hijacking](/guides/domains/domain-hijacking).
+
+</Alert>
 
 At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Using the example domain `sites.example.com`, the record would need to be created as follows. Replace `X` with a `1`, `2`, `3`, or `4`:
 

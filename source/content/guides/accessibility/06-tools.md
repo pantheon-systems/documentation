@@ -2,7 +2,13 @@
 title: Optimize Your Site for Accessibility
 subtitle: Pantheon Tools
 description: Tools and techniques to improve your website's accessibility.
-categories: [optimize]
+contenttype: [guide]
+innav: [false]
+categories: [create]
+cms: [--]
+audience: [marketing, development]
+product: [--]
+integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
@@ -17,7 +23,7 @@ This section provides an overview of the tools offered by Pantheon that can help
 
 ## Custom Upstreams
 
-A Custom Upstream is a repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams (WordPress, Drupal 9, Drupal 7) and acts as a parent for site level repositories.
+A Custom Upstream is a repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams (WordPress, Drupal) and acts as a parent for site level repositories.
 
 *How does this support accessibility?* After you've built an accessible site, you can use it to create other sites.
 

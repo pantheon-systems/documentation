@@ -1,8 +1,14 @@
 ---
 title: Bypassing Cache with HTTP Headers
 description: Set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
-categories: [performance]
 tags: [cache, cdn, cookies]
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## Exclude Specific Pages from Caching
@@ -19,7 +25,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7" active={true}>
+<Tab title="Drupal" id="d7" active={true}>
 
 Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 
@@ -59,11 +65,11 @@ foreach ($regex_path_patterns as $regex_path_pattern) {
 
 <Tab title="WordPress" id="wp">
 
-Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/wordpress-cache-plugin) plugin for all matching requests:
+Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/guides/wordpress-configurations/wordpress-cache-plugin) plugin for all matching requests:
 
 <Alert title="Note" type="info">
 
-Place this code in an [MU Plugin](/mu-plugin) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+Place this code in an [MU Plugin](/guides/wordpress-configurations/mu-plugin) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
 
 </Alert>
 

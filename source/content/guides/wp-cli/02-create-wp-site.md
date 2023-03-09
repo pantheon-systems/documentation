@@ -2,8 +2,13 @@
 title: WP-CLI on the Pantheon Platform
 subtitle: Create a WordPress Site with Terminus and WP-CLI
 description: Learn how to install and use Terminus and WP-CLI to control a WordPress site on Pantheon.
-cms: "WordPress"
-categories: [get-started]
+contenttype: [guide]
+innav: [false]
+categories: [cli]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [terminus, wp-cli]
 contributors: [bmackinney, calevans, stevector, tessak22, davidneedham]
 layout: guide
@@ -24,7 +29,7 @@ Be sure that you:
 
 ## Install and Authenticate Terminus
 
-Terminus provides advanced interaction with the platform and allows you to run WP-CLI commands remotely. Terminus allows you to automate parts of your workflow by combining multiple operations. Refer to the [Terminus Manual](/terminus) for more information.
+Terminus provides advanced interaction with the platform and allows you to run WP-CLI commands remotely. Terminus allows you to automate parts of your workflow by combining multiple operations. Refer to the [Terminus Guide](/terminus) for more information.
 
 1. Install Terminus within the `$HOME/terminus` directory:
 
@@ -142,5 +147,5 @@ Terminus provides the power to manage most aspects of your Pantheon sites. Tools
 ## More Resources
 
 - [Use the Pantheon Workflow](/pantheon-workflow)
-- [WordPress Configuration Management (WP-CFM)](/wp-cfm)
-- [The Terminus Manual](/terminus)
+- [WordPress Configuration Management (WP-CFM)](/guides/wordpress-configurations/wp-cfm)
+- [Terminus Guide](/terminus)

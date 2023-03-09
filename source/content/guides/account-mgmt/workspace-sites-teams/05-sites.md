@@ -1,8 +1,7 @@
 ---
-title: "Workspaces, Sites, and Teams"
+title: Workspaces, Sites, and Teams
 subtitle: Sites Management
-description: "Learn how to manage your sites."
-categories: [account-mgmt]
+description: Learn how to manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide
@@ -11,6 +10,13 @@ permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
 anchorid: sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
+contenttype: [guide]
+innav: [false]
+categories: [organizations]
+cms: [--]
+audience: [sysadmin]
+product: [--]
+integration: [--]
 ---
 
 This guide is specific to sites management, not developing and launching sites.
@@ -90,7 +96,7 @@ To change the owner of a paid site (e.g. Basic, or Performance):
 
 1. Open the Site Dashboard for the site.
 
-1. Select **Settings**, then **Invite a business owner to pay for this site**.
+1. Select **Billing**, then **Invite a business owner to pay for this site**.
 
 1. Enter the email address for the new site owner.
 
@@ -122,6 +128,53 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 
 </TabList>
+
+## Share Preferred Pricing for a Site
+
+### Existing Site
+
+Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client. 
+
+1. Go to the Professional Workspace containing the site.
+
+1. Open the Site Dashboard for the site.
+
+1. Click the **Billing** tab.
+
+1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
+
+1. Click **Send Request**. 
+
+  A link is immediately sent to the email address to pay through the secure site.
+
+### New Site
+
+Agencies should follow the steps below to maintain Preferred Pricing through a plan change. 
+
+1. Go to the Professional Workspace containing the site.
+
+1. Open the Site Dashboard for the site.
+
+1. Click the **Billing** tab.
+
+1. Click **View All Plans**, then click **Select** for the plan you want.
+
+1. Click **Pay Annually** or **Pay Monthly** to set the billing frequency > click **Continue**.
+
+1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
+
+1. Click **Send Request**. 
+
+  A link is immediately sent to the email address to pay through the secure site.
+
+
+  <Alert title="Note" type="info">
+
+  A site transferred as a Sandbox will not receive Preferred Pricing. A site plan and billing preference (Annual or Monthly) must be selected prior to sending your client a payment invitation.
+
+  </Alert>
+
+After the person has accepted the invitation and has paid for the site, they will receive the next invoice at the end of the billing cycle.
 
 ## Delete Sites
 

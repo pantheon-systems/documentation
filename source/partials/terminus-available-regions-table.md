@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [cli]
+cms: [--]
+product: [terminus]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Available region codes:
 
 | Name           | Code |

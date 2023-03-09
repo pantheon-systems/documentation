@@ -2,7 +2,13 @@
 title: Log Files on Pantheon
 subtitle: Automate Log Downloads
 description: Learn how to automate your log downloads.
+contenttype: [guide]
+innav: [false]
 categories: [logs]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [logs, measure]
 contributors: [whitneymeredith]
 layout: guide
@@ -60,6 +66,40 @@ Read the comments in the scripts carefully to ensure that you modify variables c
   </Tab>
 
   </TabList>
+  
+## Parameterize the Script
+
+You can run the script with parameters for reusability.
+
+1. Edit the 'collect-logs-rsync.sh' (you can choose to disable the AGGREGATE_NGINX):
+  
+  ```bash{promptUser:user}
+  # Site UUID is REQUIRED: Site UUID from Dashboard URL, e.g. 12345678-1234-1234-abcd-0123456789ab
+  SITE_UUID=$2
+  # Environment is REQUIRED: dev/test/live/or a Multidev
+  ENV=$1
+
+  ########### Additional settings you don't have to change unless you want to ###########
+  # OPTIONAL: Set AGGREGATE_NGINX to true if you want to aggregate nginx logs.
+  #  WARNING: If set to true, this will potentially create a large file
+  AGGREGATE_NGINX=true
+  ```
+  
+1. Modify the script access level:
+  
+  ```bash{promptUser:user}
+  chmod 775 collect-logs-rsync.sh
+  ```
+  
+1. Run the script with parameters. For example:
+  
+  ```bash{promptUser:user}
+  # sample command for live
+  ./collect-logs-rsync.sh live 12345678-1234-1234-abcd-0123456789ab
+  
+  # sample command for dev
+  ./collect-logs-rsync.sh dev 12345678-1234-1234-abcd-0123456789ab
+  ```
 
 ### Collect Logs
 
@@ -78,6 +118,6 @@ You can collect your logs after you [create your script](/guides/logs-pantheon/a
 ## More Resources
 
 - [Fastly on Pantheon](/guides/fastly-pantheon)
-- [Develop on Pantheon Directly with SFTP Mode](/sftp)
+- [Develop on Pantheon Directly with SFTP Mode](/guides/sftp)
 - [Using Git with SFTP & WordPress](/guides/wordpress-git/)
 - [Terminus Manual](/terminus)

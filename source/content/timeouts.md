@@ -1,9 +1,15 @@
 ---
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your site.
-categories: [troubleshoot]
 tags: [cron, drush, ssh, solr, terminus]
 reviewed: "2020-03-18"
+contenttype: [doc]
+innav: [true]
+categories: [config]
+cms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [solr, cron]
 ---
 
 Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. 
@@ -57,7 +63,7 @@ Yes, use the command `terminus drush <site>.<env> -- cron` in [Terminus](/termin
 
 As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/terminus).
 
-If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
+If you're migrating to a Drupal site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 
 ```php
 $conf['migrate_drush_path'] = $_ENV['HOME'] . '/bin/drush';
@@ -73,7 +79,7 @@ Do not edit the `pantheon_apachesolr` module within your Drupal site installatio
 
 ### How do I install a theme or plugin that keeps timing out?
 
-If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/rsync-and-sftp).
+If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/guides/sftp/rsync-and-sftp).
 
 Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/guides/custom-upstream).
 

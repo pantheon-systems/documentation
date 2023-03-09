@@ -1,9 +1,15 @@
 ---
 title: Incident Management
-subtitle: New Relic&reg; Ping Monitors
-description: Page two of our guide on Pagerduty integration with New Relic&reg; for incident management.
+subtitle: New Relic Ping Monitors
+description: Page two of our guide on Pagerduty integration with New Relic for incident management.
 layout: guide
-categories: [performance]
+contenttype: [guide]
+innav: [false]
+categories: [track]
+cms: [--]
+audience: [development]
+product: [newrelic]
+integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
 anchorid: monitor
@@ -12,6 +18,12 @@ editpath: pagerduty/02-monitors.md
 reviewed: "2020-08-18"
 ---
 In this lesson, we'll set up a new ping monitor to periodically check the site's availability in New Relic&reg; Synthetics.
+
+<Alert title="Note" type="info">
+
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+
+</Alert>
 
 ## Create a Monitor
 

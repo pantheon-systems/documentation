@@ -2,7 +2,14 @@
 title: Date and Time
 description: Configure your Pantheon Drupal or WordPress site with UTC time zone information.
 tags: [services]
-categories: [platform]
+contenttype: [doc]
+innav: [true]
+categories: [config]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
+reviewed: "2022-12-07"
 ---
 Pantheon standardizes on [Coordinated Universal Time (UTC)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), the primary time standard by which the world regulates clocks and time. This includes all servers, PHP, and MySQL, and cannot be changed.
 

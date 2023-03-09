@@ -4,10 +4,16 @@ provider: Akamai
 dnsprovider: true
 description: Learn how to point your Akamai domain to a Pantheon site.
 draft: true
-categories: [go-live]
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/akamai.md/
+contenttype: [doc]
+innav: [true]
+categories: [domains]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 ## Before You Begin
 Be sure that you have a:

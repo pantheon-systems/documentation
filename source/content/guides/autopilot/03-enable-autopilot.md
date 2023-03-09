@@ -2,15 +2,21 @@
 title: Pantheon Autopilot
 subtitle: Autopilot Setup and Configuration
 description: Enable and configure Autopilot visual regression testing (VRT) for your WordPress or Drupal site.
-categories: [automate]
-tags: [iterate, autopilot, testing, webops]
+tags: [iterate, autopilot, testing, webops, D8, D9, D10 ]
 type: guide
 layout: guide
 showtoc: true
 anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2022-04-05"
+reviewed: "2022-12-13"
+contenttype: [guide]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
+audience: [development]
+product: [autopilot]
+integration: [--]
 ---
 
 ## Enable Autopilot
@@ -21,39 +27,39 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
    ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
-1. [Commit any staged changes](/sftp#committing-sftp-changes) that have not been committed before you continue if the site is in [SFTP mode](/sftp).
+1. [Commit any staged changes](/guides/sftp/sftp-development) that have not been committed before you continue if the site is in [SFTP mode](/guides/sftp).
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
-1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table. 
+1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table.
 
    To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
-   
-   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)   
+
+   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)
 
    To enable sites in bulk, select the sites you wish to activate, and click the **Activate Autopilot** button. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
 
    ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
 
-1. Select the deployment destination: Dev, Test, or Live.
+1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
    <Alert title="Note"  type="info" >
 
    Autopilot will pre-select a few pages for visual regression testing and will set the frequency to weekly by default.
-   
+
    </Alert>
-      
+
    During setup, use the buttons at the bottom to navigate between steps. If you use the browser's back button instead of **Go Back**, you'll lose any unsaved changes.
 
-## Autopilot Setup Wizard   
+## Autopilot Setup Wizard
 
-The Autopilot setup wizard automatically displays after you click **Customize** when you activate Autopilot for a single site. You must complete all items in the Configuration, Schedule, and Visual Review steps. 
+The Autopilot setup wizard automatically displays after you click **Customize** when you activate Autopilot for a single site. You must complete all items in the Configuration, Schedule, and Visual Review steps.
 
 ### Configuration
 
 1. Use the **On**/**Off** toggles to choose which features and elements should be tracked or excluded from updates.
 
-   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes). 
+   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes).
 
 1. Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
 
@@ -68,6 +74,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
     - Dev
     - Test
     - Live
+    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a> for more information." />
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -103,7 +110,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 1. Click **Save** for each section of the configuration in which you make changes.
 
@@ -115,18 +122,9 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 ### Update Destination & Frequency
 
-You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. 
+You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
 
-Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
-
-![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot-sync-environment.png)
-
-
-1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
-
-    - Dev
-    - Test
-    - Live
+![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-destination-frequency.png)
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -137,6 +135,14 @@ Some selection options are grayed out for customers with Gold plans. Only custom
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
    The **Sync Environment** feature syncs your Live environment to your Dev environment before Autopilot performs updates. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
+
+1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
+
+   - Dev
+   - Test
+   - Live
+   - Do Not Deploy
+      - Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
 
 1. Click **Save** to save the changes.
 
@@ -185,9 +191,38 @@ You can add any CSS selectors that you want to exclude from the visual regressio
 
 1. Click **Save**.
 
-## Configure Autopilot for Premium and Paid Plugins and Modules
+## Configure Autopilot for Premium and Paid Plugins
 
-Configure Autopilot for each individual premium and paid plugins and modules. Depending on the plugin, you may need to provide Autopilot with access or configure the plugin or module to work with Autopilot.
+Autopilot supports the use of premium and paid WordPress plugins. It is important to note that premium and paid plugin configuration varies case-by-case depending on how individual plugins handle their licensing.
+
+Before you begin:
+
+1. Review the [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) document.
+
+1. Ensure that the plugins or themes are compatible with Pantheon. Plugins and themes will not work on Pantheon if they:
+
+      - Require Apache
+      - Require customized `.htaccess` files
+      - Require modifications to Nginx configuration files
+      - Require PostgreSQL or other non-MySQL compatible databases
+
+1. Review the [Install Plugins section](/guides/wordpress-git/plugins/) of the [Using Git with SFTP and WordPress](/guides/wordpress-git/) guide to ensure that you install your plugins correctly.
+
+### General Paid and Premium Plugin Autopilot Configuration
+
+In general, if the paid or premium plugin's license is active on your Dev environment before the Autopilot environment is created/converged, it should be active on your Autopilot environment at update time.
+
+### License Activation Required on Individual Environments
+
+Some premium and paid plugins require the license to be explicitly activated on each environment, for example, if you are registering the site for a per-domain license.
+
+1. Ensure that the plugin updates work with WP-CLI (99% plugins work with WP-CLI).
+
+1. Ensure that the license is active on your Dev environment.
+
+1. Activate the license on your Autopilot environment. **Do not** remove the license on the Dev environment.
+
+1. Provide Autopilot with access if the plugin requires it (this varies by plugin) and/or configure the plugin as needed.
 
 ## Enable Autopilot Email Notifications
 

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [authentication]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ## Provision HTTPS
 
 The process to provision certificates kicks off automatically after the domain has been successfully routed to Pantheon, and is indicated by the following notice:

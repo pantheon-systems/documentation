@@ -2,7 +2,13 @@
 title: WordPress on Pantheon Quick Start Guide
 subtitle: Introduction to WordPress on Pantheon
 description: Your guide to using WordPress on Pantheon.
-categories: [wordpress]
+contenttype: [guide]
+innav: [true]
+categories: [cms]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-02"

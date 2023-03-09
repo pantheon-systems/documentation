@@ -3,12 +3,17 @@ title: Guided WordPress Migrations
 description: Learn how to migrate existing WordPress sites using the migration plugin.
 contributors: [scottmassey]
 permalink: docs/videos/:basename
-cms: "WordPress"
-categories: [get-started]
 tags: [migrate]
 layout: video
 type: video
 searchboost: 50
+contenttype: [doc]
+innav: [true]
+categories: [migrate]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 <Youtube src="ksg1XkH1da8" title="Migrate to Pantheon" />

@@ -1,3 +1,12 @@
+---
+contenttype: [partial]
+categories: [track, optimize]
+cms: [drupal, wordpress]
+product: [newrelic]
+integration: []
+reviewed: "2022-11-07"
+---
+
 ## Website Performance with Varnish, Redis, and New Relic Performance Monitoring
 
 In this workshop, we’ll learn about Varnish and our Redis object cache, and see how to use New Relic Performance Monitoring for monitoring performance and getting alerts when things are going slower than usual.
@@ -29,7 +38,7 @@ We sincerely want this workshop to be useful. Please help us improve by [sharing
 
 ### Keep Learning After Today
 
-Speed ahead to the next class! Check out the video for [Going Live Best Practices](/guides/edt/going-live/). You can also pick one of our other [Workshops](https://pantheon.io/workshops).
+Speed ahead to the next class! Check out [Pantheon Learning](https://learning.pantheon.io/) for training resources. You can also pick one of our other [Workshops](https://pantheon.io/workshops).
 
 ### Additional Resources
 

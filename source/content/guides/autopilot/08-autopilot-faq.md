@@ -2,14 +2,20 @@
 title: Pantheon Autopilot
 subtitle: Autopilot FAQs
 description: Get answers to your Autopilot questions.
-categories: [automate]
-tags: [autopilot, webops]
+tags: [autopilot, webops, D8, D9, D10]
 type: guide
 layout: guide
 showtoc: true
 anchorid: autopilot-faq
 permalink: docs/guides/autopilot/autopilot-faq/
-reviewed: "2022-06-14"
+reviewed: "2022-12-14"
+contenttype: [guide]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
+audience: [development]
+product: [autopilot]
+integration: [--]
 ---
 
 This section provides answers to frequently asked questions about Autopilot.
@@ -30,22 +36,26 @@ Yes. If your site is using [Integrated Composer](/guides/integrated-composer) (`
 
 Not yet. [Autopilot](/guides/autopilot) is not compatible with [Build Tools](/guides/build-tools/) or other workflows that use external Git repositories.
 
-## What versions of Drush are supported by Autopilot?
+## What versions of Drupal are supported by Autopilot?
 
-The version(s) of Drush that are supported by Autopilot for sites:
-- **Up to (not including) Drupal 9**: Drush 8
-- **Drupal 9 with Integrated Composer**: Any; Autopilot will use Composer instead of Drush.
-- **Drupal 9 without Integrated Composer**: Drush is not supported. Drupal 9 requires Drush 10 or higher, but Autopilot is not compatible with Drush 10.
+Autopilot supports all versions of Drupal, as follows:
 
-Autopilot only supports Drush 8 for all sites up to Drupal 9.
+- Drupal sites that use Integrated Composer are compatible with Autopilot.
 
-All Drupal 9 sites that use Integrated Composer are compatible with Autopilot.
+- Sites on Drupal 7 or 8 that are **not** using Integrated Composer, must use Drush 8 to be compatible with Autopilot.
 
-Autopilot does not use Drush when updating an Integrated Composer site; you can use any Drush version when using Integrated Composer. Refer to the documentation on [Drush versions](/guides/drush/drush-versions) for more information.
 
 ## Does Autopilot support Terminus actions?
 
 Not yet.
+
+## Where do my updates go if I select the Do Not Deploy destination option?
+
+Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location. Refer to [Update Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency) for more information.
+
+## Can I stop updates at the Multidev?
+
+Yes. You must select the Do Not Deploy option under Destination & Frequency. This stops updates at the Autopilot Multidev. Your updates will be tested but not deployed to any environment if you select this option. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
 
 ## Does Autopilot automatically deploy changes to the Live environment?
 
@@ -78,6 +88,10 @@ Autopilot only checks for changes and updates to modules, themes, and core. You 
 ## Is there a limit to the number screenshots Autopilot will take?
 
 Yes. Depending on your [Account](/guides/support#support-features-and-response-times), Autopilot can be set for up to 25 pages on each site. It will check for updates once a week, and can also be run on demand.
+
+## Is Autopilot compatible with premium and paid WordPress plugins?
+
+Yes, Autopilot is compatible with premium and paid WordPress plugins. Refer to [Configure Autopilot for Premium and Paid Plugins](/guides/autopilot/enable-autopilot/#configure-autopilot-for-premium-and-paid-plugins) for more information.
 
 ## More Resources
 

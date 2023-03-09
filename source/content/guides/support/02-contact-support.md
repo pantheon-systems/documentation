@@ -2,7 +2,13 @@
 title: Get Support
 subtitle: Contact Support
 description: Learn about different channels of support.
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [help]
+cms: [--]
+audience: [agency, business, development, marketing, sysadmin]
+product: [--]
+integration: [--]
 tags: [collaborate, continuous-integration, git, webops, workflow]
 buildtools: true
 anchorid: contact-support

@@ -1,10 +1,18 @@
 ---
 title: Resetting Passwords
 description: Learn how to reset passwords for WordPress, Drupal, and the Pantheon Dashboard. 
-categories: [troubleshoot]
 tags: [dashboard, teams, users, security]
+contenttype: [doc]
+innav: [true]
+categories: [dashboard, security]
+cms: [drupal, wordpress]
+audience: [agency, development]
+product: [dashboard]
+integration: [--]
 ---
+
 ## Pantheon Dashboard Login
+
 If you need to reset your Pantheon Dashboard user password, logout and visit the [Dashboard password reset page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
 
 If you need to reset the password for your account on your Drupal or WordPress site, you have several options:

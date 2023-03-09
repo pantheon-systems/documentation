@@ -6,8 +6,13 @@ woocommerce: true
 anchorid: develop
 generator: pagination
 layout: guide
-cms: "WordPress"
-categories: [get-started]
+contenttype: [guide]
+innav: [false]
+categories: [ecommerce]
+cms: [wordpress]
+audience: [development]
+product: [--]
+integration: [woocommerce]
 tags: [iterate, plugins, site, themes, webops]
 type: guide
 pagination:

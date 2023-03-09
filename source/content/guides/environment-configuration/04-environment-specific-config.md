@@ -2,8 +2,6 @@
 title: Environment Configuration
 subtitle: Environment-Specific Configuration for WordPress Sites
 description: Learn how to turn WordPress site plugins on and off based on the environment they are running on.
-cms: "WordPress"
-categories: [develop]
 tags: [workflow]
 reviewed: "2020-08-11"
 contributors: [whitneymeredith]
@@ -11,6 +9,13 @@ layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config
 anchorid: environment-specific-config
+contenttype: [guide]
+innav: [false]
+categories: [config]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides information on how to turn WordPress Site plugins on and off for each environment.
@@ -54,11 +59,11 @@ Copy this plugin file to `wp-content/mu-plugins/site-config.php` and edit accord
 <?php
 /*
   Plugin Name: Site Config
-  Plugin URI: https://pantheon.io/docs/guides/environment-configuration/environment-specific-config
+  Plugin URI: https://docs.pantheon.io/guides/environment-configuration/environment-specific-config
   Description: Activates and deactivates plugins based on environment.
   Version: 0.1.1
   Author: Pantheon
-  Author URI: https://pantheon.io/docs/contributors
+  Author URI: https://docs.pantheon.io/contributors
 */
 # Ensuring that this is on Pantheon
 if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) :
@@ -136,6 +141,6 @@ You should avoid using [`update_option()`](https://codex.wordpress.org/Function_
 
 ## More Resources
 
-- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal Sites](/guides/environment-configuration/environment-specific-config-drupal)
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

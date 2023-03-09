@@ -1,10 +1,16 @@
 ---
 title: Using Opensolr With Pantheon Sites
 description: Learn how to create and configure Opensolr with Solr for advanced search indexing features for your Drupal sites.
-categories: [integrate]
 tags: [modules, solr]
 contributors: [carolynshannon]
 reviewed: "2019-11-06"
+contenttype: [doc]
+innav: [true]
+categories: [search]
+cms: [drupal, wordpress]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 ## Overview
@@ -30,7 +36,7 @@ This doc covers Opensolr configuration for Drupal sites. For WordPress-Opensolr 
 This doc assumes that you have already enabled:
 
 - **Drupal 7** the [ApacheSolr](https://www.drupal.org/project/apachesolr) module
-- **Drupal 9** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module using Composer (required by Search API Solr to manage dependencies). 
+- **Drupal (Latest Version)** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module using Composer (required by Search API Solr to manage dependencies). 
 
 ## Create a New Index
 
@@ -62,7 +68,7 @@ After filling out the appropriate fields, click **Add Index** to create your ind
 
 ## Configure Solr Module
 
-Complete the steps below for Drupal 7.
+Complete the steps below for Drupal.
 
 ### Configure Drupal’s ApacheSolr Module
 

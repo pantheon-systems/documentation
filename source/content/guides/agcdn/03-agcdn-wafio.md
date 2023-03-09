@@ -2,20 +2,26 @@
 title: Advanced Global CDN
 subtitle: AGCDN with WAF / IO Features
 description: Learn more about AGCDN with WAF / IO features.
-categories: [develop]
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-wafio
 anchorid: agcdn-wafio
+contenttype: [guide]
+innav: [false]
+categories: [optimize]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 ---
 
 This section provides detailed information on AGCDN with WAF and IO features. AGCDN with WAF/IO includes all [AGCDN features](/guides/agcdn/agcdn-features) and the additional features below.
 
-## Layer 7 and Enterprise WAF Rules
+## OWASP Layer 7 and Enterprise WAF Rules
 
-Application-layer (OSI Layer 7) protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
+Application-layer (OSI Layer 7) protection meets [OWASP guidelines](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html#general-categories-and-basic-controls). This protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
 
 The AGCDN Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
 

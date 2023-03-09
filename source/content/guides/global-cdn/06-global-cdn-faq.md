@@ -2,14 +2,19 @@
 title: Pantheon Global CDN
 subtitle: Global CDN FAQ
 description: Get answers to your Global CDN questions.
-categories: [performance]
 tags: [cache, cdn]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/global-cdn-faq
 anchorid: global-cdn-faq
-
+contenttype: [guide]
+innav: [false]
+categories: [cache, optimize]
+cms: [drupal, wordpress]
+audience: [development]
+product: [cdn]
+integration: [--]
 ---
 
 This section provides answers to frequently asked Global CDN questions.
@@ -110,7 +115,7 @@ You can pre-provision HTTPS via DNS records, or the Let's Encrypt ACME challenge
 Verifying with the provided DNS record is the preferred method for customers who can make new DNS records for their domain(s).
 
 In some cases, such as when the custom domain has an existing third-party CAA, you must manually add the Let's Encrypt CAA.
- 
+
 Let’s Encrypt’s identifying domain name for CAA is letsencrypt.org. For more official information, read Let's Encrypt's [Certification Practice Statement CPS, section 4.2.1.](https://letsencrypt.org/repository/).
 
 This tool can be used to gather more info on how pass the custom domain verification https://letsdebug.net/
@@ -138,8 +143,5 @@ Let's Encrypt certificates are valid for 90 days and are automatically updated o
 ## More Resources
 
 - [Custom Certificates](/custom-certificates#option-2-manually-managed-custom-certificates)
-
 - [Bypassing Cache with HTTP Headers](/cache-control)
-
 - [Caching: Advanced Topics](/caching-advanced-topics)
-

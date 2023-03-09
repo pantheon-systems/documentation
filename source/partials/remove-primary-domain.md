@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [domains]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 ### Update or Remove Primary Domain
 
 Update the Primary Domain using either method provided in [the previous section](#set-a-primary-domain-via-the-dashboard).

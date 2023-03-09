@@ -2,7 +2,13 @@
 title: New Relic Performance Monitoring on Pantheon
 subtitle: Introduction
 description: Learn how New Relic Performance Monitoring can help you with your metrics and reports on Pantheon.
-categories: [performance]
+contenttype: [guide]
+innav: [true]
+categories: [track]
+cms: [--]
+audience: [development, sysadmin]
+product: [newrelic]
+integration: [--]
 tags: [logs, measure, newrelic]
 contributors: [whitneymeredith]
 layout: guide

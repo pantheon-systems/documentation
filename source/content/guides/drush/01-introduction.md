@@ -2,18 +2,23 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Introduction
 description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
-cms: "Drupal"
-categories: [develop]
 tags: [drush]
 layout: guide
 showtoc: true
 permalink: docs/guides/drush
 anchorid: drush
+contenttype: [guide]
+innav: [true]
+categories: [cli]
+cms: [drupal]
+audience: [development]
+product: [--]
+integration: [drush]
 ---
 
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities to administer and maintain your site.
 
-Drush commands require a `settings.php` file. However, Drupal 7 sites do not contain a `settings.php` file. You can copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/guides/git/git-config) for Drush to work on older Drupal versions. Refer to [Configuring Settings.php](/guides/php/settings-php) more information.
+Drush commands require a `settings.php` file. However, Drupal 7 sites do not contain a `settings.php` file. You can copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/guides/sftp) or [Git](/guides/git/git-config) for Drush to work on older Drupal versions. Refer to [Configuring Settings.php](/guides/php/settings-php) more information.
 
 ## Terminus Drush and Local Drush
 
@@ -33,5 +38,5 @@ You can view the most recent Drush release and changelogs in the [Drush reposito
 
 - [Drush Introduction Video](/videos/drush)
 - [The Terminus Manual](/terminus)
-- [Drupal 9](/drupal-9)
+- [Drupal on Pantheon](/drupal)
 - [WP-CLI on Pantheon](/guides/wp-cli)

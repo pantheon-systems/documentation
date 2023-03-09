@@ -2,7 +2,13 @@
 title: Multidev
 subtitle: Clone Content in Your Multidev
 description: Learn how to clone content in your Multidev.
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [multidev]
+cms: [--]
+audience: [development]
+product: [multidev]
+integration: [--]
 tags: [cms, logs]
 contributors: [whitneymeredith]
 layout: guide

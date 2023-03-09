@@ -2,24 +2,17 @@
 title: Quick Start
 subtitle: Make Code Changes
 description: In part nine of our Quick Start guide, learn how to make code changes using SFTP.
-quickstart: true
-anchorid: code-changes
-generator: pagination
-layout: guide
-categories: [get-started]
+contenttype: [guide]
+innav: [false]
+categories: [overview]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [code, dashboard, iterate, sftp]
-type: guide
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/code-changes/
-nexturl: guides/quickstart/next-steps/
-nextpage: Next Steps
-previousurl: guides/quickstart/ui-changes/
-previouspage: On-Server Dev, Part 1
+anchorid: code-changes
 editpath: quickstart/09-code-changes.md
-image: launchGuide-twitterLarge
 ---
 
 Finally, we’re going to edit code directly. We’ll commit our edits to <Icon icon={"wrench"} text={"Dev"}/>, review in <Icon icon={"equalizer"} text={"Test"}/>, and deploy to <Icon icon={"cardio"} text={"Live"}/>. Let’s get started!
@@ -36,7 +29,7 @@ If you haven’t added a new theme to your site, return to the [previous lesson]
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
-1. Click **Open SFTP Client**, and enter your User Dashboard password when prompted. If you run into issues, please refer to Pantheon's [SFTP documentation](/sftp#sftp-connection-information).
+1. Click **Open SFTP Client**, and enter your User Dashboard password when prompted. If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Open the `code` folder in your SFTP client, and navigate to the theme you installed previously.
 

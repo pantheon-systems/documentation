@@ -2,7 +2,13 @@
 title: Multidev
 subtitle: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
-categories: [develop]
+contenttype: [guide]
+innav: [false]
+categories: [multidev]
+cms: [--]
+audience: [development]
+product: [multidev]
+integration: [--]
 tags: [collaborate, workflow, webops, multidev]
 contributors: [whitneymeredith]
 layout: guide
@@ -107,6 +113,6 @@ Users encounter this error with sites that use the MyISAM engine with a varchar 
 
 - [Multidev Guide](/guides/multidev)
 
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
 
 - [Git on Pantheon](/guides/git)

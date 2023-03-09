@@ -1,0 +1,63 @@
+.ais-Pagination {
+    margin-top: 40px;
+  }
+  
+  .ais-Pagination-list {
+    padding: 0;
+  }
+  
+  .ais-Pagination-item {
+    display: inline;
+  }
+  
+  .ais-Pagination-item--selected a {
+    color: #AAA;
+  }
+  
+  .ais-Pagination-link {
+    font-family: Helvetica,Arial;
+    font-size: 16px;
+    color: #41444C;
+    border: 1px solid #ECECEC;
+    padding: 4px 8px;
+    margin: 0 6px 0 0;
+  }
+  
+  .ais-Hits-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .search-page-hits-container .ais-Hits-item {
+    border-bottom: 2px solid #ECECEC;
+    padding: 10px 30px 40px 30px;
+  }
+  
+  .ais-Hits-item:hover {
+    background-color: rgba(34, 116, 172, 0.15);
+  }
+  
+  .ais-Highlight {
+    font-size: 20px;
+    color: #2274AC;
+  }
+  
+  .ais-Snippet {
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .search-page-hits-container {
+    margin-top: 40px;
+  }
+  
+  @media (min-width: 768px) {
+    .search-page-hits-container {
+      width: 66%;
+    }
+  }
+  
+  .results-item-url {
+    font-size: 16px;
+    color: #006621;
+  }

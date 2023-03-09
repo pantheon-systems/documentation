@@ -3,12 +3,19 @@ title: PHP on Pantheon
 subtitle: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 tags: [libraries, updates]
-categories: [platform]
+contenttype: [guide]
+innav: [false]
+categories: [php]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/php/php-versions
 anchorid: php-versions
+reviewed: "2022-12-13"
 ---
 
 This section provides information on how to upgrade your PHP version.
@@ -34,7 +41,7 @@ Navigate to the Site Dashboard and click **Settings**, and then click **PHP vers
 
 <Alert title="Note" type="info">
 
-Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. Refer to [Deploying Configuration Changes to Multidev](/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
+Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. Refer to [Why can’t I update the PHP version on my Multidev?](/pantheon-yml/#why-cant-i-update-the-php-version-on-my-multidev) for more information.
 
 </Alert>
 
@@ -43,7 +50,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 Confirm that your CMS is compatible before changing your PHP version. 
 
 - [WordPress requirements](https://wordpress.org/about/requirements/)
-- [Drupal 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
+- [Drupal (Latest Version) PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
 
 ## Configure Your PHP Version

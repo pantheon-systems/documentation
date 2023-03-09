@@ -2,7 +2,13 @@
 title: "Manage Your Account"
 subtitle: Workspace
 description: Learn how to use your account workspace.
-categories: [account-mgmt]
+contenttype: [guide]
+innav: [false]
+categories: [accounts]
+cms: [--]
+audience: [business]
+product: [--]
+integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 layout: guide

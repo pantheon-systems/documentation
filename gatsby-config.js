@@ -11,12 +11,12 @@ require("dotenv").config({
 // Gatsby Configuration, Options, and Plugins
 module.exports = {
   // Puts build artifacts in a subdirectory, and updates all local links
-  pathPrefix: `/docs`,
+  pathPrefix: `/`,
   // Reusable global information
   siteMetadata: {
     title: `Pantheon Docs`,
     description: `Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform`,
-    siteUrl: `https://pantheon.io/`,
+    siteUrl: `https://docs.pantheon.io/`,
     social: {
       twitter: `getpantheon`,
     },
@@ -32,16 +32,16 @@ module.exports = {
     { // Handles inserting the GTM js blob into the site
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: process.env.GTM_ID,
-        includeInDevelopment: false,
+        id: "GTM-MDF545G", // process.env.GTM_ID_NEW,
+        //testing includeInDevelopment: false,
         defaultDataLayer: { },
-      }
+      },
     },
     { // Handles inserting the Segment js blob into the site
       resolve: "gatsby-plugin-segment-js",
       options: {
-        prodKey: process.env.SEGMENT_KEY_NEW,
-        devKey: process.env.SEGMENT_KEY_NEW,
+        prodKey: "lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA",
+        devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
         trackPage: false,
       },
     },
@@ -112,7 +112,7 @@ module.exports = {
       options: {
         name: `Pantheon Documentation`,
         short_name: `Docs`,
-        start_url: `/docs/`,
+        start_url: `/`,
         background_color: `#FFFFFF`,
         theme_color: `#EFD01B`,
         display: `standalone`,
@@ -181,7 +181,6 @@ module.exports = {
               rel: "nofollow noopener external",
             },
           },
-          `gatsby-remark-heading-slug`,
         ],
       },
     },
@@ -202,4 +201,3 @@ module.exports = {
     `gatsby-plugin-fontawesome-css`,
   ],
 }
-

@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [migrate]
+cms: [drupal]
+product: [--]
+integration: [--]
+tags: [--]
+reviewed: ""
+---
+
 Complete the steps below if you have custom code that you would like to move to your new site.
 
 1. Manually copy custom code from the old site to the corresponding Pantheon site directory and commit the changes.
