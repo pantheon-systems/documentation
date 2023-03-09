@@ -81,8 +81,8 @@ To create your index:
   ```
 1. Provide the following information to configure Apache Solr:
 
-  * **ServerURL:** Paste the Connection URL from Opensolr.
-  * **Description:** Briefly describe your index.
+    * **ServerURL:** Paste the Connection URL from Opensolr.
+    * **Description:** Briefly describe your index.
 
 1. Click **Save** when you are finished.
 
