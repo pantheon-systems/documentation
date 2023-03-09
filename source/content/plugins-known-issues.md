@@ -1460,7 +1460,7 @@ ___
 
 ___
 
-## YITH WooCommerce Extensions with MPDF library
+## YITH WooCommerce Extensions with MPDF Library
 
 <ReviewDate date="2023-03-09" />
 
