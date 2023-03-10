@@ -33,7 +33,7 @@
         - text: 'Pantheon Site Regions and Data Residency'
           url: '/regions'
         - text: 'Choosing Your Start State'
-          url: '/start-state' 
+          url: '/start-state'
     - title: 'Explore the Site Dashboard'
       subtitle: 'A developer console for all your sites.'
       links:
@@ -1507,3 +1507,30 @@
       links:
         - text: 'Real-time chat support'
           url: 'https://docs.pantheon.io/support/#real-time-chat-support'
+- title: 'Front-End Sites on Pantheon'
+  subtitle: 'Learn how to use Front-End Sites and starter kits.'
+  path: 'manage'
+  guides:
+    - title: ''
+      type: 'normal'
+      links:
+        - text: 'Overview'
+          url: '/guides/decoupled/overview'
+        - text: 'Frontend Starters'
+          url: '/guides/decoupled/frontend-starters'
+        - text: 'Backend Starters'
+          url: '/guides/decoupled/backend-starters'
+        - text: 'Packages'
+          url: '/guides/decoupled/packages'
+        - text: 'Getting Started'
+          url: '/guides/decoupled/getting-started'
+        - text: 'Additional Information'
+          url: '/guides/decoupled/additional-info'
+        - text: 'Build Tools'
+          url: '/guides/decoupled/build-tools'
+  topics-groups:
+    - title: 'Overview'
+      subtitle: ''
+      links:
+        - text: 'Introduction'
+          url: '/guides/decoupled/overview'
