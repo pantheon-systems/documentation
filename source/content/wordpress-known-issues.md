@@ -74,3 +74,8 @@ add_filter( 'wp_image_editors', 'force_use_gdlib' );
 ```
 
 See this [core issue](https://core.trac.wordpress.org/ticket/43310) on WordPress.org for more information.
+
+## Language Packs
+Since WordPress 4.7, admins have been able to add additional language packs to WordPress from the General Settings screen. On Pantheon, this is only possible on Dev environments in SFTP mode. This is because WordPress will attempt to download the language packs for the requested language, and file writes are disabled in all environments other than Dev.
+
+In WordPress 6.2, this feature has been extended to user profiles -- now users can install language packs from their Edit Profile pages. However, this feature, again, is not available on Pantheon outside a Dev environment in SFTP mode.
