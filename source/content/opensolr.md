@@ -37,7 +37,7 @@ This document covers Opensolr configuration for Drupal sites. For WordPress-Open
 Make sure you have already enabled:
 
 * **Drupal 7:** the [Apache Solr Search](https://www.drupal.org/project/apachesolr) module
-* **Drupal (Latest Version):** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module using Composer which is required by Search API Solr to manage dependencies.
+* **Drupal (Latest Version):** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module using Composer, which is required by Search API Solr to manage dependencies.
 
 ## Create a New Index
 
@@ -47,7 +47,7 @@ Make sure you have already enabled:
 
 1. Click **Add New**.
 
-The _Select Your Opensolr Environment_ page is displayed and you can either choose an existing environment or request a new environment.
+The **Select Your Opensolr Environment** page is displayed and you can either choose an existing environment or request a new environment.
 
 ## Set Up the Index
 
@@ -65,16 +65,18 @@ To create your index:
 
 1. Copy the following information before moving forward:
 
-    * **Port**
-    * **Path**
-    * **Hostname**
-    * **Connection URL**
+    * Port
+    * Path
+    * Hostname
+    * Connection URL
 
 ## Configure the Solr Module
 
 ### Configure Drupal’s Apache Solr Module (Drupal 7)
 
-1. Set configuration options in the Apache Solr module, to get your index working with a Drupal site. You can access the Apache Solr Settings page by appending the following to your site’s URL:
+To get your index working with a Drupal site. Set configuration options in the Apache Solr module.
+
+1. Access the Apache Solr Settings page by appending the following to your site’s URL:
 
   ```none
   admin/config/search/apachesolr/settings/solr/edit?destination=admin/config/search/apachesolr/settings/solr
@@ -132,7 +134,7 @@ You can set up an index through the Search API Configuration page (`/admin/confi
 
 ### Test Your New Solr Connection
 
-Now that you created the server and index, and configured the Search API Opensolr and Search API Solr Drupal module, test the connection and ensure your site can communicate with the Opensolr index.
+Now that you have created the server and index, and configured the Search API Opensolr and Search API Solr Drupal module, test the connection and ensure your site can communicate with the Opensolr index.
 
 1. Go to `/admin/config/search/search-api`
 
@@ -148,7 +150,7 @@ You can create custom configurations or manually edit your:
 
 1. Go to your **Opensolr Search Index's Tools** page.
 
-1. Click **Configuration**, and then select the configuration file you want to edit.
+1. Click **Configuration**, then select the configuration file you want to edit.
 
 ## More Resources
 
