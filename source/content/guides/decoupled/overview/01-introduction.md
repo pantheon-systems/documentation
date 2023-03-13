@@ -1,6 +1,6 @@
 ---
 title: Pantheon Front-End Sites
-subtitle: Introduction
+subtitle: Overview
 description: Learn about Pantheon's decoupled architecture using Front-End Sites
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, joa-pan]
@@ -65,7 +65,7 @@ Components are independent and reusable bits of code. They serve the same purpos
 [Gatsby](https://www.gatsbyjs.com/) is an open source static site generator built on Node.js using React and GraphQL. It provides over 2,500 plugins to create static sites based on sources such as Markdown documents, MDX, images, and numerous Content Management Systems such as WordPress, Drupal, and more.
 
 #### GraphQL
-[GraphQL](https://graphql.org/) is an open source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data. 
+[GraphQL](https://graphql.org/) is an open source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.
 
 #### Static Site Generation (SSG)
 SSG refers to a site in which the content is pre-rendered into HTML, CSS, and JavaScript files at build time.
@@ -80,9 +80,9 @@ Server-side Rendering is a content rendering method in which each web page is se
 With a Pantheon Front-End Site you can create sites from server-side rendering (SSR) or a static site generator (SSG). The following options exist for site creation using the Pantheon Front-End Site Early Access offering:
 
 * **Import Repository**: Connect your Git provider and select an existing repository. The CMS is optional for this configuration. Limited support is provided for this configuration.
-* **Gatsby and WordPress**: Create a decoupled site using a base Gatsby.js frontend template with WordPress as the CMS. 
-* **Next.js and Drupal**: Create a decoupled site using a base Next.js frontend template with Drupal as the CMS. 
-* **Next.js and WordPress**: Create a decoupled site using a base Next.js frontend template with WordPress as the CMS. 
+* **Gatsby and WordPress**: Create a decoupled site using a base Gatsby.js frontend template with WordPress as the CMS.
+* **Next.js and Drupal**: Create a decoupled site using a base Next.js frontend template with Drupal as the CMS.
+* **Next.js and WordPress**: Create a decoupled site using a base Next.js frontend template with WordPress as the CMS.
 
 Currently, Pantheon Front-End Sites do not support SSR using Gatsby. Support for SSG with Next.js is available.
 
@@ -97,7 +97,7 @@ You can build a decoupled site on Pantheon using several methods. The decoupled 
   1. Configure the frontend application.
   1. Connect to the Node.js frontend application.
   1. Push changes to trigger a site build.
-  
+
 * **Using a Starter Kit (With Backend Configuration)**
   1. Configure the backend.
   1. Use the kit package to connect the backend to the frontend.
