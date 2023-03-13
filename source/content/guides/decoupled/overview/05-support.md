@@ -20,7 +20,7 @@ integration: [--]
 
 ## Scope of Support
 
-Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes use of the documented workflows as defined in this documentation. 
+Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes use of the documented workflows as defined in this documentation.
 
 ### What is Included in the Scope of Support?
 

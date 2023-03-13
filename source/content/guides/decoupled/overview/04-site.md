@@ -33,7 +33,7 @@ You should have the **Decoupled** tab enabled in your dashboard after onboarding
 * (Optional) If using a preconfigured starter kit template, you will use one of the following combinations:
 
     * Drupal and Next.js
-    
+
     * WordPress and Next.js
 
     * WordPress and Gatsby
