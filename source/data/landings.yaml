@@ -1513,7 +1513,7 @@
   guides:
     - title: ''
       type: 'normal'
-      links:
+      links: 
         - text: 'Overview'
           url: '/guides/decoupled/overview'
         - text: 'Frontend Starters'

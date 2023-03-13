@@ -1,15 +1,13 @@
 ---
-title: Pantheon Front-End Sites 
+title: Pantheon Front-End Sites
 subtitle: Introduction
 description: Learn about Pantheon's decoupled architecture using Front-End Sites
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, joa-pan]
-type: guide
 layout: guide
 showtoc: true
-anchorid: introduction
-permalink: docs/guides/decoupled-sites/
-editpath: decoupled-sites/01-introduction.md
+permalink: docs/guides/decoupled/overview
+anchorid: overview
 reviewed: "2022-08-11"
 contenttype: [guide]
 innav: [true]
