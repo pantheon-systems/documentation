@@ -39,7 +39,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 </Accordion>
 
-### MacOS
+### MacOS/Linux
 
 1. Open your terminal and enter the following command to generate a key:
 
@@ -56,41 +56,6 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created.
 
    MacOS users can `cat`the file to the terminal and copy the output:
-
-   ```bash{promptUser: user}
-   cat ~/.ssh/id_rsa.pub
-   ```
-
-1. Run `eval` to start the SSH agent. The `Agent pid` output confirms that the agent started:
-
-      ```bash{outputLines: 2}
-      eval `ssh-agent`
-      Agent pid 86810
-      ```
-
-1. Add the newly created key to the ssh-agent:
-
-   ```bash{promptUser: user}
-   ssh-add ~/.ssh/id_rsa
-   ```
-
-### Linux
-
-1. Open your terminal and enter the following command to generate a key:
-
-   ```bash{promptUser: user}
-   ssh-keygen -t rsa
-   ```
-
-  Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
-
-1. Set a passphrase for better security.
-
-   We recommend using a passphrase, but it can conflict with some tools.
-
-1. Copy the contents of `~/.ssh/id_rsa.pub` to your clipboard after the files are created.
-
-   Linux users can `cat`the file to the terminal and copy the output:
 
    ```bash{promptUser: user}
    cat ~/.ssh/id_rsa.pub
