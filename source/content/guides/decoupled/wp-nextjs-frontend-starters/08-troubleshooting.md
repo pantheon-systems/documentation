@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides solutions to common issues that arise when using the `@pantheon-systems/next-wordpress-starter`. Refer to [Pantheon Front-End Sites Frequently Asked Questions](https://pantheon.io/docs/guides/decoupled-sites/faq/) for more troubleshooting information related to the Pantheon platform.
+This section provides solutions to common issues that arise when using the `@pantheon-systems/next-wordpress-starter`. Refer to [Pantheon Front-End Sites Frequently Asked Questions](https://docs.pantheon.io/guides/decoupled/overview/faq/) for more troubleshooting information related to the Pantheon platform.
 
 ## Images Are Not Working
 

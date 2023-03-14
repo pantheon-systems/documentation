@@ -137,7 +137,7 @@ The Pantheon Professional Services (PS) team works closely with partners to prov
 - [Additional Domains](/guides/domains)
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 - [Custom SSL Certificate](/custom-certificates)
-- [Decoupled CMS](/guides/decoupled-sites)
+- [Decoupled CMS](/guides/decoupled/overview)
 - [Managed Updates](/guides/professional-services/managed-updates)
 - [Multizone Failover](/multizone-failover)
 - [Site Migrations](/guides/professional-services/website-migration-service)

@@ -22,7 +22,7 @@ integration: [--]
 This document is meant to aid when troubleshooting common issues that arise when
 using the `@pantheon-systems/next-drupal-starter`. For additional
 troubleshooting information related to the Pantheon platform, see
-[Pantheon Front-End Sites Frequently Asked Questions](https://pantheon.io/docs/guides/decoupled-sites/faq/).
+[Pantheon Front-End Sites Frequently Asked Questions](/guides/decoupled/overview/faq/).
 
 ## Images Are Not Working
 

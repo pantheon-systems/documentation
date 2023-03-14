@@ -99,7 +99,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 Repeat the steps above to create an **A** record for the bare domain, using `@` as the **Name** and the same IP address, then repeat again for the **AAAA** records.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
-You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service. You must use this option if you have a [Front-End](/guides/decoupled-sites/#what-is-a-decoupled-site) site.
+You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service. You must use this option if you have a [Front-End](/guides/decoupled/overview/#what-is-a-decoupled-site) site.
 
 1. Select **SSL/TLS** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
 

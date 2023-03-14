@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides solutions to common issues when developing with the `@pantheon-systems/gatsby-wordpress-starter`. For information on troubleshooting on Pantheon, see [Pantheon Front-End Sites Frequently Asked Questions](https://pantheon.io/docs/guides/decoupled-sites/faq/).
+This section provides solutions to common issues when developing with the `@pantheon-systems/gatsby-wordpress-starter`. For information on troubleshooting on Pantheon, see [Pantheon Front-End Sites Frequently Asked Questions](https://pantheon.io/docs/guides/decoupled/overview/faq/).
 
 ## `gatsby-source-wordpress` Fails To Fetch Data From WordPress
 

@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-Front-End Sites on Pantheon allows you to use [decoupled architecture](/guides/decoupled-sites/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
+Front-End Sites on Pantheon allows you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 
 You can use a frontend starter kit to streamline the creation of your Front-End site on Pantheon. Available Drupal frontend starters are:
 

@@ -9,7 +9,7 @@ type: guide
 layout: guide
 showtoc: true
 anchorid: starter-kits
-permalink: docs/guides/decoupled-sites/starter-kits/
+permalink: docs/guides/decoupled/overview/starter-kits/
 editpath: decoupled-sites/03-starter-kits.md
 reviewed: "2022-09-19"
 ---
