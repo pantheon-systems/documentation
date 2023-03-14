@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-Build Hooks allow you to quickly trigger a build when you update the content in your content management system (CMS). You can use Build Hooks for your Front-End site if your CMS is hosted on Pantheon or hosted elsewhere.
+Build Hooks allow you to trigger a build automatically when you update the content in your content management system (CMS). You can use Build Hooks for your Front-End site if your CMS is hosted on Pantheon or hosted elsewhere.
 
 Your Pantheon Front-End site will rebuild and include your new content when a Build Hook is triggered. Each Build Hook you generate has a unique URL.
 
@@ -34,6 +34,12 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must[config
 1. Name your Build Hook and then select the branch from the **Branch to Build** drop-down menu.
 
 1. Click **Generate**. You will see the Build Hook listed under the Build Hooks section in the dashboard.
+
+1. Click **Show URL** and then click **Copy** to copy your unique Build Hooks URL.
+
+1. Optional. Copy the cURL code under **Test** to test triggering a build with your hook.
+
+![add build hook](../../../../images/add-build-hook.png)
 
 ## Edit a Build Hook
 
@@ -56,6 +62,10 @@ The Build Hook name will remain the same, but your URL will be updated each time
 1. Scroll down to the **Build Hooks** section, select **Regenerate** from the **Edit** drop-down menu next to the Build Hook you want to regenerate.
 
 1. Click **Yes** confirm your selection and then click **Regenerate Hook**.
+
+1. Click **Show URL** and then click **Copy** to copy your new unique Build Hooks URL.
+
+![add build hook](../../../../images/show-url-build-hook.png)
 
 ## Delete a Build Hook
 

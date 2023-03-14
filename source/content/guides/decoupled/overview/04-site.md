@@ -68,7 +68,7 @@ Front-End Site is available in the New Dashboard, after it is enabled during the
 1. Click the **Decoupled** tab, then click **+Create New Site**.
 
 Under the Decoupled Site section on the Site Creation page, click the option that best suits your needs. Ensure you are using compatible versions for the associated tooling before you proceed (e.g. Drupal 10, Next.js v12, etc.).
-
+Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
 ### Connect your Account
 
@@ -95,10 +95,15 @@ Prerequisites:
 
 * The repository should not be empty.
 
-* The repository needs to contain only one of the following files:
+* The repository has a `package.json` file.
 
-    * `package-lock.json`
-    * `yarn.lock`
+* The repository has only **one** lock file.
+
+    <Alert title="Note"  type="info" >
+
+    You cannot have a `package-lock.json` and `yarn.lock`. You will receive an error message if you try to import a repository with both a `package-lock.json` and `yarn.lock`.
+
+    </Alert>
 
 Process:
 
@@ -114,7 +119,7 @@ Create a site without configuring the backend and link to a frontend framework. 
 
 1. Add to the General Info section.
 
-    * Specify the Site Name: The site name is the title of your site. You can edit the site name in **Settings** after creation.
+    * Specify the Site Name: The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
     * Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator.
 
 1. (Optional) Link your CMS.

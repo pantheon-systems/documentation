@@ -70,10 +70,42 @@ To create and configure a new decoupled project using a Front-End Site starter k
 
 * Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens).
 
+## Environment Variable Naming Restrictions
+
+Variable names *can* include:
+
+- Uppercase letters
+- Numbers
+- Underscores
+
+Variable names *cannot* include:
+
+- Special characters (other than underscores)
+- Lowercase letters
+- Commas
+- Reserved words. Reserved words include:
+
+    - PORT
+    - K_SERVICE
+    - K_REVISION
+    - K_CONFIGURATION
+    - CLOUD_RUN_JOB
+    - CLOUD_RUN_EXECUTION
+    - CLOUD_RUN_TASK_INDEX
+    - CLOUD_RUN_TASK_ATTEMPT
+    - CLOUD_RUN_TASK_COUNT
+    - PANTHEON_*
+
+## Site Naming Restrictions
+
+Site names *cannot* include:
+
+- Periods
+- Underscores
 
 ## Pantheon Product and Features Considerations
 
-Front-End Sites will not work with all products and feautures on our platform.  
+Front-End Sites will not work with all products and features on our platform.
 
 Pantheon Front-End Sites are not compatible with the following Pantheon products:
 

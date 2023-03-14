@@ -18,8 +18,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-
-## Frequently Asked Questions
+This section provides answers to frequently asked Front-End Site questions.
 
 ### Can I use any CMS with Pantheon architecture for Front-End Sites?
 
@@ -46,7 +45,7 @@ Yes. You can configure Cloudflare's CDN as an additional layer on Pantheon's Glo
 
 ### Is Multi-Region Failover available with Front-End Sites?
 
-Multi-Region Failover and Pantheon's Multizone Failover are only available for General Availability. 
+Multi-Region Failover and Pantheon's Multizone Failover are only available for General Availability.
 
 ## Known Issues
 
@@ -82,6 +81,8 @@ Select files, such as `.dockerignore` and `.gcloudignore` files can cause build 
 Users must have permissions to enable Front-End Sites for GitHub organization accounts. The user should be the Owner of the account. GitHub organization owners can allow other users to manage the Pantheon GitHub application on their behalf.
 </Accordion>
 
-<Accordion title="You must remove a VCS user record to uninstall a Front-End Site" id="uninstalling" icon="info-sign">
-Uninstalling a Pantheon Front-End Site using GitHub settings requires manual removal of a VCS user record.
+<Accordion title="How to uninstall a VCS" id="uninstalling" icon="info-sign">
+
+Uninstalling a GitHub application successfully requires manual intervention by the Pantheon Support team. Reach out to [Support](/guides/support/contact-support/) if you need to uninstall your GitHub application to connect and reinstall to a different GitHub account. If you have attempted to uninstall on your own and are unable to proceed, reach out to [Support](/guides/support/contact-support/) to correct your account.
+
 </Accordion>

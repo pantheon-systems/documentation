@@ -25,10 +25,7 @@ In order to fetch data from the Drupal instance, Next.js needs to know the
 endpoint at build time. For local development, the starter kit uses
 [dotenv](https://www.npmjs.com/package/dotenv).
 
-When you clone your decoupled frontend repo, create a `.env.development.local`
-file. In this file, update the `BACKEND_URL` and `IMAGE_DOMAIN` with your Drupal
-CMS URL, and the `IMAGE_DOMAIN`. If the `BACKEND_URL` and `IMAGE_DOMAIN` are the
-same, you can omit setting the `IMAGE_DOMAIN`.
+When you clone your decoupled frontend repo, create a `.env.development.local` file. In this file, update the `BACKEND_URL` and `IMAGE_DOMAIN` with your Drupal CMS URL, and the `IMAGE_DOMAIN`. If the `BACKEND_URL` and `IMAGE_DOMAIN` are the same, you can omit setting the `IMAGE_DOMAIN`.
 
 For example:
 
@@ -51,9 +48,7 @@ For development, this value can be set to any string, or `http://localhost:3000`
 
 ## Decoupled Preview
 
-To enable Decoupled Preview, the following environment variables must be set in
-the `.env.development.local` for local dev and in the Pantheon dashboard for
-production or Multidev environments.
+To enable Decoupled Preview, the following environment variables must be set in the `.env.development.local` for local dev and in the Pantheon dashboard for production or Multidev environments.
 
 ```
 PREVIEW_SECRET
@@ -88,19 +83,11 @@ instance.
    testing preview locally.
 1. Set a secret for the Preview Site and note this value down.
 
-Now you have all of the credentials needed to make authenticated requests to the
-Drupal instance, including the ability to preview content!
-
-See [Setting Environment Variables](./setting-environment-variables.md) for more
-information on how to set these variables in your local development environment
-or on the Pantheon Dashboard.
+Now you have all of the credentials needed to make authenticated requests to the Drupal instance, including the ability to preview content!
 
 ## Using `getPreview`
 
-Now that we are set up, we can implement the `getPreview` helper, which can be
-found in the `lib` directory of the `next-drupal-starter`. This helper takes in
-two arguments, the current server context as well as the name of the node to be
-previewed.
+Now that we are set up, we can implement the `getPreview` helper, which can be found in the `lib` directory of the `next-drupal-starter`. This helper takes in two arguments, the current server context as well as the name of the node to be previewed.
 
 ```js
 // Import some helpers
@@ -144,16 +131,13 @@ export async function getStaticProps(context) {
 }
 ```
 
-See the
-[articles page from the next-drupal-starter](https://github.com/pantheon-systems/decoupled-kit-js/tree/canary/starters/next-drupal-starter/pages/articles/[...slug].js#L64)
+See the [articles page from the next-drupal-starter](https://github.com/pantheon-systems/decoupled-kit-js/tree/canary/starters/next-drupal-starter/pages/articles/[...slug].js#L64)
 for a full example on using the `getPreview` helper.
 
 ## Clearing Current Preview
 
 If you'd like to view another revision or edit, you may need to clear the
-current previewData cookie. This can be done by going to
-{YOUR_SITE_URL}/api/clear-preview. On successful clear, you will be redirected
-to the homepage.
+current previewData cookie. This can be done by going to {YOUR_SITE_URL}/api/clear-preview. On successful clear, you will be redirected to the homepage.
 
 ## Limitations
 
@@ -167,15 +151,13 @@ variable can be used inside of `next.config.js`.
 
 Either the `PANTHEON_CMS_ENDPOINT` or `BACKEND_URL` will need to be set.
 
-The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it
-in the `.env.development.local`.
+The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`.
 
 ```
 PANTHEON_CMS_ENDPOINT=dev-my-drupal-site.pantheonsite.io
 ```
 
-Taking a look at how the `next.config.js` works, there is this logic which sets
-the `backendUrl`.
+Taking a look at how the `next.config.js` works, there is this logic which sets the `backendUrl`.
 
 ```js
 let backendUrl, imageDomain;
