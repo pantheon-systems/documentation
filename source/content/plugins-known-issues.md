@@ -559,7 +559,7 @@ ___
 
 <ReviewDate date="2022-03-09" />
 
-**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
+**Issue 1:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
 **Solution:**
 
@@ -570,6 +570,17 @@ ___
 Pantheon does not support XML-RPC if it is enabled. You must resolve any issues you experience from enabling XMLPRC on your own.
 
 </Alert>
+
+**Issue 2:** Unexpected server port value error is reported by Jetpack in WP admin, where the fix suggested by the plugin causes critical errors on Pantheon. For example:
+
+![Jetpack error message unexpected Server port value](../images/jetpack-server-port-error.png)
+
+**Solution:**
+Adjust the fix suggested by Jetpack, so that `$_SERVER['SERVER_PORT']` is used instead. For example:
+
+```php
+define( 'JETPACK_SIGNATURE__HTTPS_PORT', $_SERVER['SERVER_PORT'] );
+```
 
 ___
 
@@ -1137,11 +1148,11 @@ Occassionally, when configuring the Web Application Firewall (WAF), it can resul
   ```php:title=wordfence-waf.php
   // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
   // This file was the current value of auto_prepend_file during the Wordfence WAF installation
-  
+
   if (file_exists('/includes/prepend.php')) {
     include_once '/includes/prepend.php';
   }
-  
+
     define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
     define('WFWAF_DB_USER', $_ENV['DB_USER']);
     define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
@@ -1150,7 +1161,7 @@ Occassionally, when configuring the Web Application Firewall (WAF), it can resul
     define('WFWAF_DB_COLLATE', '');
     // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
     define('WFWAF_TABLE_PREFIX', 'wp_');
-  
+
   if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
     define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
     include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
@@ -1250,7 +1261,7 @@ ___
 
 1. Activate both plugins from the dashboard.
 
-  WP Rocket will automatically make two changes as long as your environment is in SFTP mode. 
+  WP Rocket will automatically make two changes as long as your environment is in SFTP mode.
 
 1. Commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
 
@@ -1460,28 +1471,45 @@ ___
 
 ___
 
-## YITH WooCommerce Request a Quote
+## YITH WooCommerce Extensions with MPDF Library
 
-<ReviewDate date="2022-04-8" />
+<ReviewDate date="2023-03-09" />
 
-**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+### Affected Plugins
+- [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/)
+- [YITH WooCommerce PDF Invoice and Shipping List](https://yithemes.com/themes/plugins/yith-woocommerce-pdf-invoice/)
+- [YITH WooCommerce Gift Cards](https://yithemes.com/themes/plugins/yith-woocommerce-gift-cards/)
 
-**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following code sample to `functions.php`:
+**Issue:** Various YITH WooCommerce extensions use the MPFD library. This practice assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
-```php:title=wp-config.php
-/** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
-add_filter( 'ywraq_mpdf_args', 'ywraq_mpdf_change_tmp_dir', 20, 1 );
-if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
-   function ywraq_mpdf_change_tmp_dir( $args ) {
+**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/yith-mpdf-tmp`) by adding the following code sample to `functions.php`:
+
+```php:title=functions.php
+/**
+ * Changes PDF cache location for YITH WooCommerce extensions.
+ *
+ * @param array $args The configuration for MPDF initialization.
+ * @return array The updated config with writable path.
+ */
+if ( ! function_exists( 'yith_mpdf_change_tmp_dir' ) ) {
+   function yith_mpdf_change_tmp_dir( array $args ): array {
       $upload_dir      = wp_upload_dir();
       $upload_dir      = $upload_dir['basedir'];
-      $args['tempDir'] = $upload_dir . '/ywraq_mpdf_tmp/';
+      $args['tempDir'] = $upload_dir . '/yith-mpdf-tmp/';
 
       return $args;
    }
 }
-```
 
+// Request a Quote
+add_filter( 'ywraq_mpdf_args', 'yith_mpdf_change_tmp_dir', 20, 1 );
+
+// PDF Invoice
+add_filter( 'yith_ywpdi_mpdf_args', 'yith_mpdf_change_tmp_dir', 10, 1 );
+
+// Gift Cards
+add_filter( 'yith_ywgc_mpdf_args', 'yith_mpdf_change_tmp_dir', 10, 1 );
+```
 ___
 
 ## Yoast SEO
