@@ -56,7 +56,7 @@ In this example:
 
 - `<old-domain>` is the domain currently stored in the database.
 - `<new-domain>` is the new domain you'd like to replace the old domain with.
-- `--network` tells WP-CLI to perform the procedure on all Site Network tables. Its default behavior is to limit search and replace to the current site.
+- `--network` tells WP-CLI to perform the procedure on all WordPress Multisite tables. Its default behavior is to limit search and replace to the current site.
 - `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
 Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
