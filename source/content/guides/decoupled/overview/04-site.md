@@ -38,12 +38,12 @@ You should have the **Decoupled** tab enabled in your dashboard after onboarding
 
     * WordPress and Gatsby
 
-    > **NOTE**: Other configurations are not currently supported. 
+    > **NOTE**: Other configurations are not currently supported.
 
 
 ### Compatibility
 
-You can create an application from scratch by importing a repository or you can use the Pantheon starter kit templates to develop a decoupled site. 
+You can create an application from scratch by importing a repository or you can use the Pantheon starter kit templates to develop a decoupled site.
 
 You can also create a site without a CMS. Create a site from scratch by importing the repository and using Next.js or Gatsby as the static site generator.
 
@@ -63,27 +63,27 @@ Front-End Site is available in the New Dashboard, after it is enabled during the
 
 1. Log in to your Pantheon Dashboard and navigate to the **Sites** page.
 
-1. Select **Sites** in the the New Dashboard. 
+1. Select **Sites** in the the New Dashboard.
 
 1. Click the **Decoupled** tab, then click **+Create New Site**.
 
 Under the Decoupled Site section on the Site Creation page, click the option that best suits your needs. Ensure you are using compatible versions for the associated tooling before you proceed (e.g. Drupal 10, Next.js v12, etc.).
- 
+
 
 ### Connect your Account
 
-You need to configure your frontend to point to the backend. If your Pantheon backend is open, which it is by default, you will be able to connect directly from your local artifact to that repository. 
+You need to configure your frontend to point to the backend. If your Pantheon backend is open, which it is by default, you will be able to connect directly from your local artifact to that repository.
 
-1. To start you will need to specify the GitHub account associated with your decoupled site. After you select the decoupled site option that best suits your needs, you will be prompted to connect your Git provider. 
+1. To start you will need to specify the GitHub account associated with your decoupled site. After you select the decoupled site option that best suits your needs, you will be prompted to connect your Git provider.
 
-1. Select the GitHub option and click **Connect**. A window for GitHub.com is displayed, and you are prompted **“Where do you want to install Pantheon?”**. 
+1. Select the GitHub option and click **Connect**. A window for GitHub.com is displayed, and you are prompted **“Where do you want to install Pantheon?”**.
 
-1. Select the repository that you will use to develop your decoupled site. A new page is displayed that confirms where Pantheon should be installed. 
+1. Select the repository that you will use to develop your decoupled site. A new page is displayed that confirms where Pantheon should be installed.
 
-1. Specify the permission configurations and click **Install**. Your GitHub repository is now connected and you can continue with decoupled site creation on the Pantheon dashboard. 
+1. Specify the permission configurations and click **Install**. Your GitHub repository is now connected and you can continue with decoupled site creation on the Pantheon dashboard.
 
 
-### Create a Site 
+### Create a Site
 
 #### Without a Starter Kit
 
@@ -100,7 +100,7 @@ Prerequisites:
     * `package-lock.json`
     * `yarn.lock`
 
-Process: 
+Process:
 
 Create a site without configuring the backend and link to a frontend framework. To connect your GitHub repository, click **Import Repository** on the _What kind of site are you creating?_ page.
 
@@ -114,7 +114,7 @@ Create a site without configuring the backend and link to a frontend framework. 
 
 1. Add to the General Info section.
 
-    * Specify the Site Name: The site name is the title of your site. You can edit the site name in **Settings** after creation. 
+    * Specify the Site Name: The site name is the title of your site. You can edit the site name in **Settings** after creation.
     * Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator.
 
 1. (Optional) Link your CMS.
@@ -125,8 +125,8 @@ Create a site without configuring the backend and link to a frontend framework. 
 
 1. (Optional) Add configurations.
 
-    * You can add specifications to help manage your root directory, build settings, and set environment variables. 
-    * You can set the Environment Variables in the Advanced Setting section. 
+    * You can add specifications to help manage your root directory, build settings, and set environment variables.
+    * You can set the Environment Variables in the Advanced Setting section.
 
     > **NOTE**: Basic builds will function without setting environment variables if the CMS site was selected during decoupled site creation. Environment variables are not necessary for optional features like preview.
 
@@ -141,11 +141,11 @@ Prerequisites:
 * You are using a Git repository and the repository is already connected.
 * You are using Drupal as your CMS. You have installed and configured your Drupal site using the starter kit configuration.
 
-Process: 
+Process:
 
 1. After clicking the **Drupal and Next.js** option, select a repo listed under **Choose your Git provider**. Click **Continue**.
 
-1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. 
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
 
 1. Select the desired **Drupal** CMS backend from the dropdown menu.
 
@@ -160,7 +160,7 @@ Process:
 
 #### Create a Site with WordPress and Next.js
 
-Prerequisites: 
+Prerequisites:
 
 * You are using a Git repository and the repository is already connected.
 * You are using WordPress as your CMS. You have installed and configured your WordPress site using the starter kit configuration.
@@ -169,7 +169,7 @@ Process:
 
 1. After clicking the **WordPress and Next.js** option, select a repo listed under **Choose your Git provider**. Click **Continue**.
 
-1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. 
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
 
 1. Select the desired **WordPress** CMS backend from the dropdown menu.
 
@@ -186,7 +186,7 @@ Process:
 
 Prerequisites:
 
-* You are using a Git repository and you have connected your GitHub account. 
+* You are using a Git repository and you have connected your GitHub account.
 
 * You are using WordPress as your CMS. You have installed your WordPress site using the Decoupled WordPress Recommended Project configuration, which has the `wp-graphql` plugin enabled.
 
@@ -194,11 +194,11 @@ Process
 
 1. Click the **Gatsby + WordPress** template and select a Git provider listed under **Choose your Git provider**. Click **Continue**.
 
-1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for you Git repository. 
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for you Git repository.
 
 1. Select the WordPress CMS backend from the dropdown menu.
 
-1. Select the site environment from which to source the content. You can source content from Live, Test, or Dev environment. 
+1. Select the site environment from which to source the content. You can source content from Live, Test, or Dev environment.
 
 1. Optionally, you can set the Environment Variables in the **Advanced Setting** section.
 
@@ -214,7 +214,7 @@ An environment relates to every code change made against the Git repository that
 Code change events that trigger a build include:
 
 * Push to branches
-* Opened pull requests 
+* Opened pull requests
 
 <Alert title="Note" type="info">
 
@@ -224,7 +224,7 @@ NOTE: Pull requests from a Multidev branch that are made against the upstream, w
 ### Types of Environments
 
 
-* **Production environment** 
+* **Production environment**
     * The production environment is the default branch of the repository
     * This environment corresponds to the following stable URL pattern: `live-[site-name].appa.pantheon.site`
 
@@ -233,7 +233,7 @@ NOTE: Pull requests from a Multidev branch that are made against the upstream, w
     * This environment has the following stable URL pattern: `[branch-name]-[site-name].appa.pantheon.site`
 
 * **Multidev environment (based on pull requests)**
-    * This Multidev environment is built from all the opened pull requests against the upstream repository. 
+    * This Multidev environment is built from all the opened pull requests against the upstream repository.
     * This environment has the following stable URL pattern: `pr-[pr-number]-[site-name].appa.pantheon.site`
 
 

@@ -41,20 +41,20 @@ through the Drupal admin dashboard or using [drush pm-enable](https://drushcomma
 
 1. After generating a build hook on your build platform, go to
    **Configuration** >> **Build hooks** >> **Frontend environment**.
-2. Click on the **Add Frontend environment** button.
-3. Fill out the form with the required information including Label, URL,
+1. Click on the **Add Frontend environment** button.
+1. Fill out the form with the required information including Label, URL,
    Deployment strategy (for this use-case, select **When content is updated**), Weight, and Build hook URL.
-4. Save the form.
+1. Save the form.
 
 This will automatically trigger your build hook when content changes.
 
-:::note
+<Alert title="Note"  type="info" >
 
 By default the module will only log changes for content entities. If you would like to trigger build hooks based on other entity updates, go to
 **Administration** >> **Configuration** >> **Build hooks** >> **Build Hooks
 Settings** to configure other entities.
 
-:::
+</Alert>
 
 ### Trigger a Deployment Manually
 
