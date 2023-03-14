@@ -357,7 +357,7 @@ Site is running a framework that is not Drupal or WordPress. Currently, WordPres
 
 ### Solution
   
-Contact support for assistance if running a framework that is not Drupal or WordPress. Any other framework, including WordPress Multisite Network is not supported.
+Contact support for assistance if running a framework that is not Drupal or WordPress. Any other framework, including WordPress Multisite is not supported.
 
 </Accordion>
 

@@ -28,7 +28,7 @@ Pantheon supports [WordPress Multisite](https://wordpress.org/documentation/arti
 ![Multisite diagram](../../../images/Multisite-risk_2.png)
 
 ## Supported Use Cases
-Pantheon supports the most common use case for site networks: a common codebase which powers a set of related sites. This includes, but is not limited to, networks of:
+Pantheon supports the most common use case for WordPress Multisites: a common codebase which powers a set of related sites. This includes, but is not limited to, networks of:
 
 - Blogs for faculty at a university
 - Franchise sites under a parent organization site
