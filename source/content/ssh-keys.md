@@ -108,7 +108,9 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 ### Add SSH Key - New Dashboard
 
-1. Log in to your Pantheon Dashboard, and go to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page.
+1. Log in to your Pantheon Dashboard.
+
+1. In the top right of the page, click your gravatar, select **Personal Settings**, then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
 
 1. Click **Add New Key**.
 
@@ -146,7 +148,9 @@ You can use your Dev environment to clone your site code to your workstation:
 
 ### Revoke SSH Key from Pantheon - New Dashboard
 
-1. Navigate to the **SSH Keys** tab of your **User Profile's** [Personal Settings](/guides/new-dashboard/personal-settings) page to revoke a key. 
+1. Log in to your Pantheon Dashboard.
+
+1. In the top right of the page, click your gravatar, select **Personal Settings**, then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
  
 1. Click the **Revoke** button next to the key you want to remove:
 
