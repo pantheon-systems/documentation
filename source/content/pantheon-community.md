@@ -15,7 +15,7 @@ Pantheon fosters a community for those actively making use of the platform, prim
 
  - Community Forum - The [Pantheon Community Forum](https://discuss.pantheon.io/) forum is the best place for questions, discussions, and off-topic community building.
 
- - Slack - Prefer to communicate instantly with fellow Pantheon users? Pop into the [Pantheon Community Slack channel](https://slackin.pantheon.io/).
+ - Slack - Prefer to communicate instantly with fellow Pantheon users? Pop into the [Pantheon Community Slack channel](https://pantheon-community.slack.com/).
 
 ## Community Topics
 
@@ -34,7 +34,7 @@ The community is an excellent way to bounce ideas off other expert developers. I
 Join the:
 
 - [Community Forums](https://discuss.pantheon.io/), or
-- [Slack](https://slackin.pantheon.io/).
+- [Slack](https://pantheon-community.slack.com/).
 
 ## Code of Conduct
 
