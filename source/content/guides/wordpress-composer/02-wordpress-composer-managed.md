@@ -19,7 +19,7 @@ anchorid: wordpress-composer-managed
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-The WordPress Composer Managed upstream is available for [Early Access](/oss-support-levels#early-access) participants. Features for WordPress Composer Managed are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+The WordPress Composer Managed upstream is available for [Early Access](/oss-support-levels#early-access) participants. Features for WordPress Composer Managed are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://pantheon-community.slack.com/) if you don't already have an account) to learn how you can enroll in our Early Access program. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 </Alert>
 
@@ -109,7 +109,7 @@ composer upstream-require wpackagist-plugin/advanced-custom-fields
 
 Create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream. 
 
-Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program.
+Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://pantheon-community.slack.com/) if you don't already have an account) to learn how you can enroll in our Early Access program.
 
 ## More Resources
 
