@@ -1,7 +1,7 @@
 ---
 title: Drupal Frontend Starters for Front-End Sites
-subtitle: Next.js + Drupal Starter
-description: Understand the differences between SSG, ISR, and SSR.
+subtitle: Create a Next.js + Drupal Project
+description: Create a new Next.js + Drupal project.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to use the Next.js + Drupal starter kit.
+This section provides information on how to use the Next.js + Drupal starter kit. Refer to [Understand Next.js SSG, ISR, and SSR](/guides/decoupled/overview/nextjs) for differences between SSG, ISR, and SSR, and common uses cases for each.
 
 ## Before You Begin
 

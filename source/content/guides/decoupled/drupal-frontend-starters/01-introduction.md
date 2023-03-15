@@ -25,9 +25,9 @@ You can use a frontend starter kit to streamline the creation of your Front-End 
 
 ## Why Use The Next.js Drupal Starter?
 
-The `next-drupal-starter` is designed as a starting point to for a Next.js site that consumes data from a Drupal backend - specifically a Drupal backend configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
+The `next-drupal-starter` is designed as a starting point to for a Next.js site that consumes data from a Drupal backend configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
 
-The starter has a dependency on the `@pantheon-systems/drupal-kit`, which includes some helpers that maximize any available features of the Drupal backend.
+The starter has a dependency on the `@pantheon-systems/drupal-kit`. The starter kit includes helpers that maximize available Drupal backend features.
 
 ## More Resources
 

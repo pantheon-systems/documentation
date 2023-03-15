@@ -17,30 +17,27 @@ product: [decoupled]
 integration: [--]
 ---
 
-## Before You Begin
+This section provides information on how to style your configuration with Tailwind CSS. Refer to [Tailwind CSS documentation](https://tailwindcss.com/docs) before proceeding.
 
-This guide assumes the reader has a little to no experience with Tailwind CSS.
-If you are new to Tailwind CSS, we recommend reading the
-[Tailwind CSS documentation](https://tailwindcss.com/docs) before proceeding.
+## Tailwind CSS Typography Plugin
 
-To have the content from the Drupal site rendered in the Next.js frontend, you
-must have to use the typography plugin for Tailwind CSS, more information about
-this plugin can be found in the
-[Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin),
-install the plugin with the following command:
+You must have to use the typography plugin for Tailwind CSS to have content from the Drupal site rendered in the Next.js frontend. Review Tailwind typography plugin information in the [Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin).
 
-```bash
-npm install @tailwindcss/typography
-```
+### Install the Plugin
 
-Or
+1. Run the following command:
 
-```bash
-yarn add @tailwindcss/typography
-```
+	```bash{promptUser: user}
+	npm install @tailwindcss/typography
+	```
 
-To use this plugin you must have the `tailwind.config.js` file in the root of
-your project and set the plugin:
+	Or
+
+	```bash{promptUser: user}
+	yarn add @tailwindcss/typography
+	```
+
+1. Confirm that the `tailwind.config.js` file is in the root of your project and set the plugin:
 
 ```js
 module.exports = {
@@ -51,15 +48,11 @@ module.exports = {
 };
 ```
 
-## Customizing Tailwind
+## Customize Tailwind
 
 Tailwind allows you to customize the default configuration to suit your needs.
-To do this, you must have the `tailwind.config.js` file in the root of your
-project. You can find more information about customizing Tailwind in the
-[Tailwind documentation](https://tailwindcss.com/docs/configuration).
 
-In example, if you want to modify the default font family, you can add the
-following to your `tailwind.config.js` file:
+The example below modifies the default font family in the `tailwind.config.js` file:
 
 ```js
 module.exports = {
@@ -73,6 +66,4 @@ module.exports = {
 };
 ```
 
-Also the typography plugin allows you to customize the default configuration,
-you can find more information about this in the
-[Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin#customizing-the-css).
+You can also customize the default configuration. Refer to [Tailwind CSS documentation](https://tailwindcss.com/docstypography-plugin#customizing-the-css) for more information.

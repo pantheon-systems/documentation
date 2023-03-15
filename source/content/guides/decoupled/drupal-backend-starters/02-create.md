@@ -187,15 +187,15 @@ site to Drupal 10.
    ```
 1. Push the changes up to Pantheon.
 
-   ```bash
+   ```bash{promptUser: user}
    git push origin master
    ```
 
-1. Run database updates if you are updating an existing Drupal install. This can be done with terminus or via the Drupal web UI.
+1. Run database updates if you are updating an existing Drupal install. This can be done with Terminus or via the Drupal web UI.
 
-   With terminus:
+   With Terminus:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush <BACKEND_SITE>.<ENV> updatedb
    ```
 

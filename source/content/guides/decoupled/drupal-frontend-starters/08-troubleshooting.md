@@ -17,12 +17,8 @@ product: [decoupled]
 integration: [--]
 ---
 
-## Before You Begin
-
-This document is meant to aid when troubleshooting common issues that arise when
-using the `@pantheon-systems/next-drupal-starter`. For additional
-troubleshooting information related to the Pantheon platform, see
-[Pantheon Front-End Sites Frequently Asked Questions](/guides/decoupled/overview/faq/).
+This section provides solutions to common issues when using the `@pantheon-systems/next-drupal-starter`. Refer to
+[Pantheon Front-End Sites Frequently Asked Questions](/guides/decoupled/overview/faq/) for Pantheon platform troubleshooting information.
 
 ## Images Are Not Working
 
@@ -30,6 +26,7 @@ Local Development:
 
 1.  Check that the `IMAGE_DOMAIN` environment variable is set in the
     `.env.development.local` file.
+
 1.  Ensure the `IMAGE_DOMAIN` environment only contains the hostname. For
     example:
     ```.env
@@ -68,145 +65,79 @@ Local Development:
 
 ## Adapting for Use With Existing Drupal Sites
 
-Our starter kits assume that you are using Drupal's core Media module to manage
-images for article content. If you are instead using Drupal's default image
-field, you will need to make the following adjustments to the starter kit:
+Our starter kits assume that you are using Drupal's core Media module to manage images for article content. If you are using Drupal's default image
+field, you must make the following adjustments to the starter kit:
 
 1. Update grid pages to use the `field_image` field instead of the
    `field_media_image` field.
 
-In the `getServerSideProps` function in `pages/index.jsx` change the parameters
-used to source your articles. Change:
+1. Update the `getServerSideProps` function in `pages/index.jsx` to the parameters used to source your articles:
 
-```jsx
-const articles = await store.getObject({
-	objectName: 'node--article',
-	params: 'include=field_media_image.field_media_image',
-	refresh: true,
-	res: context.res,
-	anon: true,
-});
-```
+	```jsx
+	const articles = await store.getObject({
+		objectName: 'node--article',
+		params: 'include=field_image',
+		refresh: true,
+		res: context.res,
+		anon: true,
+	});
+	```
 
-to:
+1. Make the same change in `pages/articles/index.jsx`.
 
-```jsx
-const articles = await store.getObject({
-	objectName: 'node--article',
-	params: 'include=field_image',
-	refresh: true,
-	res: context.res,
-	anon: true,
-});
-```
+1. Open the `components/grid.jsx` and change the `imgSrc` constant in the `ArticleGridItem` to:
 
-Next, make the same change in `pages/articles/index.jsx`.
+	```jsx
+	export const ArticleGridItem = ({
+		content: article,
+		multiLanguage,
+		locale,
+	}) => {
+		const imgSrc = article?.field_image?.uri?.url || '';
+	```
 
-In `components/grid.jsx` change the `imgSrc` constant in the `ArticleGridItem`
-component from:
-
-```jsx
-// For use with withGrid
-export const ArticleGridItem = ({
-	content: article,
-	multiLanguage,
-	locale,
-}) => {
-	const imgSrc = article?.field_media_image?.field_media_image?.uri?.url || '';
-```
-
-to:
-
-```jsx
-export const ArticleGridItem = ({
-	content: article,
-	multiLanguage,
-	locale,
-}) => {
-	const imgSrc = article?.field_image?.uri?.url || '';
-```
-
-2. Update article detail pages to use the `field_image` field instead of the
+1. Update article detail pages to use the `field_image` field instead of the
    `field_media_image` field.
 
-_If you are aliasing your articles within the `/articles/*` path:_
+1. Update your aliasing path:
 
-Within the `articleTemplate` function in `pages/articles/[...slug].jsx`, change
-the `imgSrc` constant from:
+	- _If you are aliasing your articles within the `/articles/*` path:_
 
-```jsx
-const imgSrc = article.field_media_image?.field_media_image?.uri?.url;
-```
+		1. Go to the `articleTemplate` function in `pages/articles/[...slug].jsx` and change the `imgSrc` constant to:
 
-to:
+			```jsx
+			const imgSrc = article.field_image?.uri?.url;
+			```
 
-```jsx
-const imgSrc = article.field_image?.uri?.url;
-```
+		1. Go to the `getServerSideProps` function in `pages/articles/[...slug].jsx` and change the `params` constant to:
 
-Within the `getServerSideProps` function in `pages/articles/[...slug].jsx`,
-change the `params` constant from:
+			```jsx
+			const params = 'include=field_image';
+			```
 
-```jsx
-const params = 'include=field_media_image.field_media_image';
-```
+	- _If you are aliasing your articles using a pattern other than `/articles/*`:_
 
-to:
+		1. Go to the `renderPage` function in `pages/[...alias].jsx`, find the `if (pageData?.type === 'node--article')` conditional and change the following constants to:
 
-```jsx
-const params = 'include=field_image';
-```
+			```jsx
+			const {
+				title,
+				body: { processed },
+				field_image,
+				thumbnail,
+			} = pageData;
+			const imgSrc = field_image?.uri.url;
+			```
 
-_If you are aliasing your articles using a pattern other than `/articles/*`:_
+		1. Go to the `getServerSideProps` function in `pages/[...alias].jsx` and change the value of the `params` constant to:
 
-Within the `renderPage` function in `pages/[...alias].jsx`, find the
-`if (pageData?.type === 'node--article')` conditional and change the following
-constants from:
+			```jsx
+			const params =
+				resourceName === 'node--recipe'
+					? 'include=field_media_image.field_media_image,field_recipe_category'
+					: resourceName === 'node--article'
+					? 'include=field_image'
+					: '';
+			```
 
-```jsx
-const {
-	title,
-	body: { processed },
-	field_media_image,
-	thumbnail,
-} = pageData;
-const imgSrc = field_media_image?.field_media_image?.uri.url;
-```
-
-to:
-
-```jsx
-const {
-	title,
-	body: { processed },
-	field_image,
-	thumbnail,
-} = pageData;
-const imgSrc = field_image?.uri.url;
-```
-
-Within the `getServerSideProps` function in `pages/[...alias].jsx`, change the
-value of the `params` constant from:
-
-```jsx
-const params =
-	resourceName === 'node--recipe'
-		? 'include=field_media_image.field_media_image,field_recipe_category'
-		: resourceName === 'node--article'
-		? 'include=field_media_image.field_media_image'
-		: '';
-```
-
-to:
-
-```jsx
-const params =
-	resourceName === 'node--recipe'
-		? 'include=field_media_image.field_media_image,field_recipe_category'
-		: resourceName === 'node--article'
-		? 'include=field_image'
-		: '';
-```
-
-After making these changes, images should now display correctly within your
-articles.
+Images should now display correctly within your articles.
