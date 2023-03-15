@@ -81,17 +81,6 @@ This example below uses Drupal with the [Pantheon Advanced Page Cache module](ht
 
 ## How It Works
 
-```mermaid
-sequenceDiagram
-	participant A as Client
-    participant B as Next.js + drupal-kit
-    participant C as Drupal
-    A->>B: Request a page that fetches from Drupal
-    B->>C: Add Pantheon-SKey header to request
-    C->>B: Surrogate-Key-Raw header included on response
-    B->>A: Set Surrogate-Key header on outgoing response to browser
-```
-
 The `PantheonDrupalState` class from our `@pantheon-systems/drupal-kit` npm
 package includes an adapted fetch method that adds the `Pantheon-SKey` header
 to each request to Drupal. Responses from Drupal contain the

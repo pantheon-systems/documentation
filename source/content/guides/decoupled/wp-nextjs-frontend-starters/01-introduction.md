@@ -19,25 +19,22 @@ integration: [--]
 
 Front-End Sites on Pantheon allows you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 
-You can use a frontend starter kit to streamline the creation of your Front-End site on Pantheon. Available WordPress frontend starters are:
+You can use a frontend starter kit to streamline the creation of your Front-End Site on Pantheon. Available WordPress Front-End starters are:
 
 - Next.js + WordPress
 - Gatsby + WordPress
 
 ## Why Use The Next.js WordPress Starter?
 
-The `next-wordpress-starter` is designed as a starting point to for a Next.js site that consumes data from a WordPress backend - specifically a WordPress backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
+The `next-wordpress-starter` is designed as a starting point to for a Next.js site that consumes data from a WordPress backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
 
-The starter has a dependency on the `@pantheon-systems/wordpress-kit`, which includes some helpers that maximize any available features of the WordPress backend.
+The starter has a dependency on the `@pantheon-systems/wordpress-kit` that includes helpers that maximize available WordPress backend features.
 
 ## Important Information
 
 This guide assumes you are testing a Next.js site locally which is to be hosted at a subpath of the root, for example `/docs`, by using the [Next.js `basePath` feature](https://nextjs.org/docs/api-reference/next.config.js/basepath).
 
-### Set The Path Prefix
-See the Next.js guide on [Adding a Base Path](https://nextjs.org/docs/api-reference/next.config.js/basepath) for information on setting the `basePrefix` if you are not using the starter kit.
 
-If you are using the `@pantheon-systems/next-drupal-starter` or the `@pantheon-systems/next-wordpress-starter`, the environment variable `process.env.PANTHEON_UPLOAD_PATH` will be automatically set as the `basePath` in the `next.config.js`. To test this locally, set the `PANTHEON_UPLOAD_PATH` in your `.env.development.local` to the path you would like to test.
 
 
 ### Verify Links And Assets

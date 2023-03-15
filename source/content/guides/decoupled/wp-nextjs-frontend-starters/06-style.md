@@ -17,32 +17,34 @@ product: [decoupled]
 integration: [--]
 ---
 
-## Before You Begin
+This section provides information on how to style your configuration with Tailwind CSS. Refer to [Tailwind CSS documentation](https://tailwindcss.com/docs) before proceeding.
 
-This guide assumes the reader has a little to no experience with Tailwind CSS.
-If you are new to Tailwind CSS, we recommend reading the
-[Tailwind CSS documentation](https://tailwindcss.com/docs) before proceeding.
+## Tailwind CSS Typography Plugin
 
-To use this plugin you also must have the `wordpress-kit` installed. To install,
-run the following command:
+You must have to use the typography plugin for Tailwind CSS to have content from the Drupal site rendered in the Next.js frontend. Review Tailwind typography plugin information in the [Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin).
 
-```bash
-npm install @pantheon-systems/wordpress-kit
-```
+## Install the Plugin
 
-Or
+You must have the `wordpress-kit` installed to use this plugin.
 
-```bash
-yarn add @pantheon-systems/wordpress-kit
-```
+Run the command below to install the plugin:
+
+	```bash{promptUser: user}
+	npm install @pantheon-systems/wordpress-kit
+	```
+
+	Or
+
+	```bash{promptUser: user}
+	yarn add @pantheon-systems/wordpress-kit
+	```
 
 ## Block Editor
 
-The block editor plugin for Tailwind enables to render the content from your
-WordPress site to the Next.js frontend, with parallel styling and some
+The block editor plugin for Tailwind allows you to render the content from your WordPress site to the Next.js frontend, with parallel styling and some
 opinionated changes.
 
-To configure the plugin, add the following to the `tailwind.config.js` file:
+Add the following to the `tailwind.config.js` file to configure the plugin:
 
 ```js
 module.exports = {
@@ -57,19 +59,13 @@ module.exports = {
 };
 ```
 
-For more information about plugins, check the
-[Tailwind CSS documentation](https://tailwindcss.com/docs/plugins).
+## Customize Tailwind
 
-## Customizing Tailwind
-
-Tailwind allows you to customize the default configuration to suit your needs.
-To do this, you must have the `tailwind.config.js` file in the root of your
+Tailwind allows you to customize the default configuration to suit your needs. You must have the `tailwind.config.js` file in the root of your
 project. You can find more information about customizing Tailwind in the
 [Tailwind documentation](https://tailwindcss.com/docs/configuration).
 
-To costumize the default configuration for the block editor, you only need to
-override the tokens that you want to change. For example, if you want to change
-the primary color, you can add the following to your `tailwind.config.js` file:
+The example below customizes the default configuration for the block editor primary color by overriding the tokens in the `tailwind.config.js` file:
 
 ```js
 module.exports = {
@@ -83,8 +79,7 @@ module.exports = {
 };
 ```
 
-And then every block that uses the primary color will be rendered with the new
-color. You can get more information and autocomplete for the block editor tokens
+You can get more information and autocomplete for the block editor tokens
 if you add the type definitions to the `tailwind.config.js` file:
 
 ```js

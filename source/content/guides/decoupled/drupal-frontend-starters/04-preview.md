@@ -21,7 +21,7 @@ This section provides information on how to implement Decoupled Preview.
 
 ## Configure Your Drupal Instance
 
-Your preview site and client secret must be properly configured on your Drupal instance to use Decoupled Preview.
+Your preview site and client secret must be correctly configured on your Drupal instance to use Decoupled Preview.
 
 1. Log in to your Drupal instance.
 1. Select **Configuration**, select **SimpleOAuth**, and then select **Clients**.

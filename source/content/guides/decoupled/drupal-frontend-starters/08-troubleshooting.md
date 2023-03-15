@@ -59,8 +59,8 @@ Local Development:
 
         ```
 
-    See
-    [The docs on the `next/image` component for more information](https://nextjs.org/docs/api-reference/next/image#src).
+See
+[The docs on the `next/image` component for more information](https://nextjs.org/docs/api-reference/next/image#src).
     ````
 
 ## Adapting for Use With Existing Drupal Sites

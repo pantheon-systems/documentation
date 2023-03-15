@@ -66,4 +66,4 @@ module.exports = {
 };
 ```
 
-You can also customize the default configuration. Refer to [Tailwind CSS documentation](https://tailwindcss.com/docstypography-plugin#customizing-the-css) for more information.
+You can also customize the default configuration. Refer to [Tailwind CSS documentation](https://tailwindcss.comdocstypography-plugin#customizing-the-css) for more information.

@@ -1,7 +1,7 @@
 ---
 title: WordPress + Next.js Frontend Starter for Front-End Sites
-subtitle: Create a new project
-description: Learn how to create a new project with WordPress + Next.js frontend starter.
+subtitle: Create a New Project
+description: Learn how to create a new project with WordPress + Next.js Front-End Site starter.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -16,6 +16,9 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+
+This section provides information on how to use the Next.js + WordPress starter kit.
+
 
 ## Before You Begin
 
@@ -34,13 +37,13 @@ There are two methods to creating a new project based on the
 
 1. Go to the [GitHub repo](https://github.com/pantheon-systems/next-wordpress-starter).
 
-1. Click the **Code** button to open the clone drop-down and select your preferred cloning method.
+1. Click the **Code** button to open the clone drop-down menus and select your preferred cloning method.
 
 ### Use the `create-next-app`
 
 1. Open your terminal and run the command below.
 
-    ```bash
+    ```bash{promptUser: user}
     npx create-next-app -e https://github.com/pantheon-systems/next-wordpress-starter --use-npm
     ```
 1. Omit the `--use-npm` flag to use `yarn`, or keep the flag to use `npm`.

@@ -17,20 +17,14 @@ product: [decoupled]
 integration: [--]
 ---
 
-## Set Cache-Control Headers
+This section shows you how to set Cache-Control headers using
+`@pantheon-systems/wordpress-kit` in the `next-wordpress-starter`, or any Next.js application using the `wordpress-kit`, and how to purge your cache.
 
-### Before You Begin
 
-This guide explains the how to set Cache-Control headers using
-`@pantheon-systems/wordpress-kit` in the `next-wordpress-starter`, or any
-Next.js application using the `wordpress-kit`.
-
-### Setting Cache-Control Headers with WordPress Kit
+## Set Cache-Control Headers with WordPress Kit
 
 The `@pantheon-systems/wordpress-kit` npm package exports a function,
-`setEdgeHeaders`, which takes in a response object and a cache-control header
-value. The value is then set to the response object's headers so that when the
-request is sent along it will be cached at the edge.
+`setEdgeHeaders`. This functions takes in a response object and a cache-control header value. The value is then set to the response object's headers so that when the request is sent along it will be cached at the edge.
 
 The default cache-control header is the following:
 
@@ -38,7 +32,7 @@ The default cache-control header is the following:
 Cache-Control: public, s-maxage=600
 ```
 
-To override the default, you may pass in your own cache-control header:
+You can pass in your own cache-control header to override the default:
 
 ```jsx title=pages/example/index.js
 import { setEdgeHeaders } from '@pantheon-systems/wordpress-kit';
@@ -64,73 +58,35 @@ export async function getServerSideProps(context) {
 ### In Production
 
 Depending on where you deploy, these headers may or may not be respected with
-regards to caching at the edge. See your platform's documentation to verify.
+regards to caching at the edge. Refer to your platform's documentation to verify.
 
-## Cache Purge
 
-### Before You Begin
+## Purge Surrogate Key-based Cache
 
 You should be familiar with the concept of surrogate key based caching and
-purging.
+purging. Refer to https://docs.fastly.com/en/guides/working-with-surrogate-keys for more information on working with surrogate keys.
 
-See https://docs.fastly.com/en/guides/working-with-surrogate-keys for more
-information on working with surrogate keys.
+The example below uses WordPress with:
 
-This guide uses WordPress with the
-[WPGraphQL plugin](https://wordpress.org/plugins/wp-graphql/),
-[WPGraphQL Smart Cache plugin](https://github.com/wp-graphql/wp-graphql-smart-cache)
-and the
-[Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
-installed.
+- [WPGraphQL plugin](https://wordpress.org/plugins/wp-graphql/),
+- [WPGraphQL Smart Cache plugin](https://github.com/wp-graphql/wp-graphql-smart-cache)
+- [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
 ### How It Works
 
-```mermaid
-sequenceDiagram
-	participant A as Client
-    participant B as Next.js + wordpress-kit
-    participant C as WordPress
-    A->>B: Request a page that fetches from WordPress
-    B->>C: Add Pantheon-SKey header to request via GET
-    C->>B: Surrogate-Key-Raw header included on response
-    B->>A: Set Surrogate-Key header on outgoing response to browser
-```
-
-The `GraphqlClientFactory` class from our `@pantheon-systems/wordpress-kit` npm
-package adds the `Pantheon-Skey` header to each request and uses the GET method
-by default to take advantage of WPGraphQL Smart Cache network caching. Responses
-from WordPress will contain the `Surrogate-Key` header. With these keys, your
-frontend can be instructed to purge content from a cache when the content in
-WordPress changes.
+The `GraphqlClientFactory` class from the `@pantheon-systems/wordpress-kit` npm package adds the `Pantheon-Skey` header to each request and uses the GET method by default to take advantage of WPGraphQL Smart Cache network caching. Responses from WordPress will contain the `Surrogate-Key` header. With these keys, your Front-End Site can be instructed to purge content from a cache when the content in WordPress changes.
 
 ### How To Ensure Headers Are Set On Custom Routes
 
-:::note
+<Alert title="Note"  type="info" >
+The WordPress Back-end Starter Project and WordPress Next.js Starter Kit handle the configuration below automatically.
+</Alert>
 
-The Decoupled Kit
-[WordPress Back-end Starter Project](../../../Backend%20Starters/Decoupled%20WordPress/creating-new-project.md)
-and [WordPress Next.js Starter Kit](./intro.md) handle the configuration below
-automatically.
-
-:::
-
-- The WordPress backend has the
-  [WPGraphQL plugin](https://wordpress.org/plugins/wp-graphql/) installed and
-  configured
-- The WordPress backend has the
-  [WPGraphQL Smart Cache plugin](https://github.com/wp-graphql/wp-graphql-smart-cache)
-  installed and configured, with the Object Cache option disabled
-- The WordPress backend has the
-  [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
-  installed and configured
+- The WordPress backend has the [WPGraphQL plugin](https://wordpress.org/plugins/wp-graphql/) installed and configured.
+- The WordPress backend has the [WPGraphQL Smart Cache plugin](https://github.com/wp-graphql/wp-graphql-smart-cache) installed and configured, with the Object Cache option disabled.
+- The WordPress backend has the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) installed and configured.
 - The route fetches data using the `@pantheon-systems/wordpress-kit` Graphql
-  client or requests to WordPress are made using the GET method and include the
-  `Pantheon-SKey: 1` header
-  - in order to see the headers, you must use the `client.rawRequest()` method.
+  client or requests to WordPress are made using the GET method and include the `Pantheon-SKey: 1` header. You must use the `client.rawRequest()` method.
 - The headers must be added to the outgoing response from Next.js in
-  `getServerSideProps` (see
-  [`context.res`](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter)).
-  - The
-    [`next-wordpress-starter` includes a helper function](https://github.com/pantheon-systems/decoupled-kit-js/blob/f3eebf4b502cbad123ec8a7fcd4d4f8f0fb413eb/starters/next-wordpress-starter/lib/setOutgoingHeaders.js#L25)
-    that combines headers from multiple requests and adds them to the outgoing
-    response.
+  `getServerSideProps` (see [`context.res`](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter)).
+  - The [`next-wordpress-starter` includes a helper function](https://github.com/pantheon-systems/decoupled-kit-js/blob/f3eebf4b502cbad123ec8a7fcd4d4f8f0fb413eb/starters/next-wordpress-starter/lib/setOutgoingHeaders.js#L25) that combines headers from multiple requests and adds them to the outgoing response.
