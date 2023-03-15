@@ -77,6 +77,6 @@ See this [core issue](https://core.trac.wordpress.org/ticket/43310) on WordPress
 
 ## Language Packs
 
-WordPress 4.7 introduced the ability for admins to add additional language packs to WordPress from the General Settings screen. On Pantheon, this is only possible on Dev environments in SFTP mode. This is because WordPress attempts to download the language packs for the requested language, and file writes are disabled in all environments other than Dev.
+WordPress 4.7 introduced the ability for admins to add additional language packs to WordPress from the General Settings screen. On Pantheon, this is only possible on development environments in SFTP mode. This is because WordPress attempts to download the language packs for the requested language, and file writes are disabled in all environments other than development environments.
 
-WordPress 6.2 extends this feature to user profiles. You can install language packs from your Edit Profile page. Note that this feature is still not available on Pantheon outside of a Dev environment in SFTP mode.
+WordPress 6.2 extends this feature to user profiles. You can install language packs from your Edit Profile page. Note that this feature is still not available on Pantheon outside of a development environment in SFTP mode.
