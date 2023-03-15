@@ -96,7 +96,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 1.  Run `start-ssh-agent` to start the SSH agent. The output confirms the agent has started. Enter the passphrase, if it was previously set.
 
-      ```bash{promptUser: winshell}
+      ```bash{promptUser: winshell}{outputLines: 2,3,5}
       start-ssh-agent
       Removing old ssh-agent sockets
       Starting ssh-agent:  done
