@@ -18,7 +18,7 @@ permalink: docs/guides/wordpress-configurations/plugins
 anchorid: plugins
 ---
 
-Pantheon maintains multiple plugins to facilitate workflow within WordPress. You can find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://pantheon-community.slack.com/) for real-time discussion of these plugins.
+Pantheon maintains multiple plugins to facilitate workflow within WordPress. You can find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/) for real-time discussion of these plugins.
 
 <Alert title="Note" type="info">
 
