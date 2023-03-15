@@ -22,41 +22,45 @@ dependencies.
 
 ## Add a New Plugin or Theme
 
-A new pluginor theme can be added using the following composer require command:
+A new plugin or theme can be added using the following Composer require command.
 
-```
+Command format:
+
+```bash{promptUser: user}
 composer require <namespace>/<packagename>
 ```
 
-For example:
+Example:
 
-```
+```bash{promptUser: user}
 composer require wpackagist-plugin/akismet
 ```
 
-For more info:
+For more information:
 
 - https://docs.roots.io/bedrock/master/composer/
 
 ## Update Dependencies Manually with Composer
 
-The dependencies can be updated using the following composer update command: For updating any plugin/theme:
+Dependencies can be updated using the following Composer update command:
 
-```
+Command format for updating any plugin or theme:
+
+```bash{promptUser: user}
 composer update <namespace>/<packagename> --with-dependencies
 ```
 
-For example:
+Example:
 
-```
+```bash{promptUser: user}
 composer update wpackagist-plugin/akismet --with-dependencies
 ```
 
-For more info:
+For more information:
 
 - https://docs.roots.io/bedrock/master/composer/#updating-wp-and-plugin-versions
 
 ## Update Dependencies Automatically with the [terminus-clu-plugin](https://github.com/pantheon-systems/terminus-clu-plugin)
 
-Alternatively, Composer security updates can be applied automatically using the [Terminus CLU](https://github.com/pantheon-systems/terminus-clu-plugin)
-(Composer Lock Updater) Plugin. This plugin automatically creates pull requests based on composer.lock updates. If your project was created using our recommended Terminus [build tools project create command](creating-new-project.md) then this plugin has been configured automatically.
+Composer security updates can be applied automatically using the [Terminus CLU](https://github.com/pantheon-systems/terminus-clu-plugin)
+(Composer Lock Updater) Plugin. This plugin automatically creates pull requests based on `composer.lock` updates. If your project was created using our recommended Terminus [build tools project create command](creating-new-project.md), this plugin was configured automatically.

@@ -17,81 +17,80 @@ product: [decoupled]
 integration: [--]
 ---
 
+This section provides information on how to configure your local development environment for your WordPress backend project. The example local environment configurations outlined below are based on [Lando](https://lando.dev/).
+
 ## Before You Begin
 
-The example local environment configurations outlined below are based on
-[Lando](https://lando.dev/). To install Lando, follow the
-[Lando installation instructions](https://docs.lando.dev/getting-started/installation.html).
+- Follow the [Lando installation instructions](https://docs.lando.dev/getting-started/installation.html).
 
-Depending on your role, you may only need a local backend environment, or you
-may instead prefer a local environment that can run both the back-end and
-front-end. The following sections outline the steps to set up a local
-environment for each of these use cases.
+- Depending on your role, you may only need a local backend environment, or you may prefer a local environment that can run both the backend and
+frontend.
 
 ## Backend Only Setup
 
-If you are creating a local environment for your WordPress backend only, you can use the default Pantheon recipe provided by Lando. For more information, see the [Getting Started section of the Lando Pantheon Plugin documentation](https://docs.lando.dev/pantheon/getting-started.html).
+You can use the default Pantheon recipe provided by Lando if you are creating a local environment for your WordPress backend only. Refer to the [Getting Started section of the Lando Pantheon Plugin documentation](https://docs.lando.dev/pantheon/getting-started.html) for more information.
 
 ## Combined Frontend and Backend Setup
 
-- Create `.lando.yml` in the root of the project.
-- Copy the following config into `.lando.yml`
+1. Create `.lando.yml` in the root of the project.
 
-```
-name: %SITE_NAME%
-recipe: pantheon
-config:
-  framework: wordpress
-  site: %SITE_NAME%
-  id: %PANTHEON_SITE_ID%
+1. Copy the following config into `.lando.yml`. Replace `%SITE-NAME%`, `%PANTHEON_SITE_ID%`, and `%PORT-NUMBER%`, with
+site name, site id, and required port number for your Front-End site.
 
-proxy:
-  frontend:
-    - %SITE_NAME%-fe.lndo.site:%PORT-NUMBER%
+        ```
+        name: %SITE_NAME%
+        recipe: pantheon
+        config:
+          framework: wordpress
+          site: %SITE_NAME%
+          id: %PANTHEON_SITE_ID%
 
-excludes:
-  - frontend/node_modules
-  - node_modules
+        proxy:
+          frontend:
+            - %SITE_NAME%-fe.lndo.site:%PORT-NUMBER%
 
-services:
-  frontend:
-    type: node:16
-    globals:
-      npm: latest
-    build:
-      - "npm install --prefix ./frontend"
-    port: %PORT-NUMBER%
-    ssl: true
-    scanner: false
+        excludes:
+          - frontend/node_modules
+          - node_modules
 
-tooling:
-  node:
-    service: frontend
-  npm:
-    service: frontend
-    cmd:
-      - "npm --prefix ./frontend"
-  yarn:
-    service: frontend
-    cmd:
-      - "yarn --cwd=/app/frontend"
-```
+        services:
+          frontend:
+            type: node:16
+            globals:
+              npm: latest
+            build:
+              - "npm install --prefix ./frontend"
+            port: %PORT-NUMBER%
+            ssl: true
+            scanner: false
 
-Note: Replace `%SITE-NAME%`, `%PANTHEON_SITE_ID%`, and `%PORT-NUMBER%`, with
-site name, site id and required port number for the frontend site.
+        tooling:
+          node:
+            service: frontend
+          npm:
+            service: frontend
+            cmd:
+              - "npm --prefix ./frontend"
+          yarn:
+            service: frontend
+            cmd:
+              - "yarn --cwd=/app/frontend"
+        ```
 
-- Clone the Front-end Site code base into the `./frontend` directory. You will most likely want to add this directory to your `.gitignore` file for the
-  project.
+1. Clone the Front-End Site code base into the `./frontend` directory. You will most likely want to add this directory to your `.gitignore` file for the
+project.
 
-  ```
-  cd frontend
-  git clone git@github.com:pantheon-systems/example-fe-site.git .
-  ```
-- Consult `.env.example` to create the required environment variables files for
-  your Front-end Site.
-- Run `lando start` to start the containers.
-- Install the WordPress site and activate the plugin `WP Gatsby` if your
-  Front-end Site is using Gatsby.
-- To start your Front-end site, run `lando npm run develop`. It will now be
+    ```
+    cd frontend
+    git clone git@github.com:pantheon-systems/example-fe-site.git .
+    ```
+1. Consult `.env.example` to create the required environment variables files for your Front-End Site.
+
+1. Run `lando start` to start the containers.
+
+1. Install the WordPress site and activate the plugin `WP Gatsby` if your
+  Front-End Site is using Gatsby.
+
+1. Run `lando npm run develop` to start your Front-End Site. It will now be
   available at the URL specified in the `proxy` section of the `.lando.yml`
   file.

@@ -43,7 +43,7 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
     - Or via Terminus:
 
-      ```
+      ```bash{promptUser: user}
       terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
       ```
 
@@ -55,13 +55,13 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
       </Alert>
 
 
-## Install Drupal:
+## Install Drupal
 
 1. Click the **Visit Development Site** button.
 
 1. Select either the `Pantheon Decoupled Profile`, or
 `Pantheon Decoupled Umami Demo` profiles. The same can be done via
-[`terminus remote:drush`](https://pantheon.io/docs/terminus/commands/remote-drush).
+[`terminus remote:drush`](/terminus/commands/remote-drush).
 
 ## Install using Build Tools
 

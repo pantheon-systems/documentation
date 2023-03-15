@@ -19,4 +19,8 @@ integration: [--]
 
 Front-End Sites on Pantheon allows you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 
-You can use the decoupled WordPress backend starter kit to streamline the creation of your Front-End site on Pantheon. This guide shows you how to install, set up local development, manage WordPress dependencies, configure build hooks, and more.
+You can use the decoupled WordPress backend starter kit to streamline the creation of your Front-End Site on Pantheon. This guide shows you how to install, set up local development, manage WordPress dependencies, configure build hooks, and more.
+
+## More Resources
+
+- [Front-End Sites on Pantheon Overview](/guides/decoupled/overview)

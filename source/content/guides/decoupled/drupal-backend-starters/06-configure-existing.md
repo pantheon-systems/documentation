@@ -17,11 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
-Pantheon offers a [back-end starter project](./creating-a-new-project) to
-simplify the process of configuring a Drupal site for use with our front-end
-starter kits.
+Pantheon offers a [back-end starter project](/guides/decoupled/drupal-backend-starters/create) to simplify the process of configuring a Drupal site for use with our Front-End starter kits. However, you can configure an existing backend project to use one of Pantheon's Front-End starter kits.
 
-Follow the steps below to configure an existing Drupal backend project to work with one of our front-end starter kits.
+Follow the steps below to configure an existing Drupal backend project to work with one of our Front-End starter kits.
 
 ## Before You Begin
 
