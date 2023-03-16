@@ -5630,8 +5630,8 @@ h2>.glyphicons {
   text-decoration: none;
 }
 a.external[href]::after {
-  content: "\E390";
-  font-family: 'Glyphicons Regular';
+  content: "\e164";
+  font-family: 'Glyphicons Halflings';
   top: 2px;
   position: relative;
   margin-left: 2px;
