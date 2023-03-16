@@ -59,3 +59,28 @@ There are two methods to creating a new project based on the
     # for yarn
     gatsby options set pm yarn
     ```
+
+<Partial file="decoupled-create-in-dashboard.md" />
+
+## Create Your Project on Pantheon
+
+Make sure you meet the following prerequisites before you continue.
+
+* You are using a Git repository and you have connected your GitHub account.
+
+* You are using WordPress as your CMS. You have installed your WordPress site using the Decoupled WordPress Recommended Project configuration, which has the `wp-graphql` plugin enabled.
+
+
+1. Click the **Gatsby + WordPress** template and select a Git provider listed under **Choose your Git provider**, and then click **Continue**.
+
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for you Git repository.
+
+1. Select the WordPress CMS backend from the drop-down menu.
+
+1. Select the site environment from which to source the content. You can source content from Live, Test, or Dev environment.
+
+1. Optionally, you can set the Environment Variables in the **Advanced Setting** section.
+
+1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information and status.
+
+1. Click **Build Details** to view the build log.

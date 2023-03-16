@@ -6,7 +6,7 @@ tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/drupal-frontend-starters/troubleshooting
+permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/troubleshooting
 anchorid: troubleshooting
 contenttype: [guide]
 innav: [true]

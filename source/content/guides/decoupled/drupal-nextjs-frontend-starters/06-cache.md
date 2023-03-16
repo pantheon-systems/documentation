@@ -6,7 +6,7 @@ tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/drupal-frontend-starters/cache
+permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/cache
 anchorid: cache
 contenttype: [guide]
 innav: [true]

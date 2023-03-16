@@ -6,7 +6,7 @@ tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/drupal-frontend-starters/customization
+permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/customization
 anchorid: customization
 contenttype: [guide]
 innav: [true]

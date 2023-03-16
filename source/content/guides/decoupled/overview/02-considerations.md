@@ -32,7 +32,7 @@ Ensure your system has the correct components to deploy a Pantheon Front-End Sit
 
 The following components are needed to configure your backend, especially if using the starter kits for Pantheon Front-End Sites:
 
-* Lando: An open source, cross-platform, local development environment and DevOps tool built on Docker container technology.
+* Lando: An open source, cross-platform, local development environment, and DevOps tool built on Docker container technology.
      * Install the latest release of Lando. Lando ships with a recommended version of Docker Desktop if you do not already have it installed.
 
 * The following tools are included in the [Lando VM](https://docs.lando.dev/getting-started/installation.html), but can be useful to have installed for use without Lando:
@@ -40,16 +40,16 @@ The following components are needed to configure your backend, especially if usi
      * [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
      * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for a Front-End Site.
 
-### Frontend Requirements
+### Front-End Site Requirements
 
-The following components are needed to configure your frontend for the decoupled offering:
+The following components are needed to configure your frontend project to use Pantheon's Front-End Sites:
 
 * [Node.js](https://nodejs.org/en/)
   * Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
 
-## Before You Use the Decoupled Starter Kit
+## Before You Use Pantheon Starter Kits
 
-To create and configure a new decoupled project using a Front-End Site starter kit, the following components are required:
+The following components are required to create and configure a new decoupled project using a Front-End Site starter kit:
 
 * Install [Composer](https://getcomposer.org/download/) globally.
   * Composer is required for the CMS backends.

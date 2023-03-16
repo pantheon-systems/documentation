@@ -6,7 +6,7 @@ tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/drupal-frontend-starters/create
+permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/create
 anchorid: create
 contenttype: [guide]
 innav: [true]
@@ -45,4 +45,23 @@ There are two methods to creating a new project based on the `next-drupal-starte
 
 1. Omit the `--use-npm` flag to use yarn, or keep the flag to use npm. Note that the `create-next-app` uses the yarn package manager by default.
 
+<Partial file="decoupled-create-in-dashboard.md" />
 
+## Create Your Project on Pantheon
+
+Make sure you meet the following prerequisites before you continue.
+
+* You are using a Git repository and the repository is already connected.
+* You are using Drupal as your CMS. You have installed and configured your Drupal site using the starter kit configuration.
+
+1. Click the **Drupal and Next.js** option, select a repo listed under **Choose your Git provider**, and then click **Continue**.
+
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
+
+1. Select the desired **Drupal** CMS backend from the drop-down menu.
+
+1. Select the site environment from which to source the content, and then click **Continue**. You are directed to a new page with the site name, deployment, and build information/ status.
+
+1. Click **Build Details** to view the build log.
+
+1. Click **View Site** after the build completes to launch your Front-End Site.

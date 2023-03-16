@@ -6,7 +6,7 @@ tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/drupal-frontend-starters/environment-variables
+permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/environment-variables
 anchorid: environment-variables
 contenttype: [guide]
 innav: [true]

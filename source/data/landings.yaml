@@ -1517,7 +1517,7 @@
         - text: 'Overview'
           url: '/guides/decoupled/overview'
         - text: 'Drupal + Next.js Frontend Starter'
-          url: '/guides/decoupled/drupal-frontend-starters/'
+          url: '/guides/decoupled/drupal-nextjs-frontend-starters/'
         - text: 'WordPress + Next.js Frontend Starter'
           url: '/guides/decoupled/wp-nextjs-frontend-starters/'
         - text: 'WordPress + Gatsby Frontend Starter'
@@ -1526,8 +1526,8 @@
           url: '/guides/decoupled/drupal-backend-starters'
         - text: 'WordPress Decoupled Backend Starter'
           url: '/guides/decoupled/wp-backend-starters'
-        - text: 'Packages'
-          url: 'https://decoupledkit.pantheon.io/docs/Packages/drupal-kit/classes/DrupalState'
+        - text: 'Create a Front-End Site without a Starter'
+          url: '/guides/decoupled/no-starter-kit'
   topics-groups:
     - title: 'Overview'
       subtitle: ''
@@ -1540,7 +1540,7 @@
       subtitle: ''
       links:
         - text: 'Drupal + Next.js Frontend Starter'
-          url: '/guides/decoupled/drupal-frontend-starters'
+          url: '/guides/decoupled/drupal-nextjs-frontend-starters'
         - text: 'WordPress + Next.js Frontend Starter'
           url: '/guides/decoupled/wp-nextjs-frontend-starters'
         - text: 'WordPress + Gatsby Frontend Starter'
@@ -1552,3 +1552,8 @@
           url: '/guides/decoupled/drupal-backend-starters'
         - text: 'WordPress + Next.js Backend Starter'
           url: '/guides/decoupled/wp-backend-starters'
+    - title: 'No Starter'
+      subtitle: ''
+      links:
+        - text: 'Create a Front-End Site without a Starter Kit'
+          url: '/guides/decoupled/no-starter-kit'
