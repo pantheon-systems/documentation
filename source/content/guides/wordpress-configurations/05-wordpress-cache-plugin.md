@@ -109,9 +109,9 @@ This function flushes the cache for an individual term or terms which are passed
 public function clean_term_cache( $term_ids, $taxonomy )
 ```
 
-## Automatic Clear Cache On Archive Pages For Specific Custom Post Type
+## Automatically Clear Cache on Archive Pages for Specific Custom Post Type
 
-By default, adding a post, page or custom post type, clears the cache for the homepage and associated terms or categories associated with it. If you will need to specifically clear cache a specific page when a specific custom post type is added.
+By default, adding a post, page or custom post type, clears the cache for the homepage and associated terms or categories associated with it. To clear cache for a specific page when a specific custom post type is added:
 
 ```php
 add_action( 'save_post', 'custom_clearcache_archive_page' );
@@ -132,11 +132,9 @@ function custom_clearcache_archive_page( $post_id ){
 }
 ```
 
-
-
-
 ## More Resources
 
 - [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
+
