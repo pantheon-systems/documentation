@@ -4,7 +4,7 @@ subtitle: Pantheon WordPress Cache Plugin Configuration
 description: Optimize WordPress and Varnish caching to maximize your site's performance.
 tags: [cache, plugins]
 contenttype: [guide]
-innav: [false]
+innav: [true]
 categories: [config]
 cms: [wordpress]
 audience: [development]
@@ -65,7 +65,7 @@ You can enable maintenance mode for others while working on your site.
 
 ## Use Pantheon Cache Functions Programmatically
 
-There are three functions that are useful to developers within the [pantheon-page-cache.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) file that houses the Pantheon Cache plugin code. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/). Currently, the [limit on the number of paths](https://github.com/pantheon-systems/WordPress/issues/24) that can be cleared in a single call is 10.
+There are three functions that are useful to developers within the `pantheon-cache.php` file that houses the Pantheon Cache plugin code. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/). Currently, the [limit on the number of paths](https://github.com/pantheon-systems/WordPress/issues/24) that can be cleared in a single call is 10.
 
 ### flush_site
 
@@ -109,32 +109,8 @@ This function flushes the cache for an individual term or terms which are passed
 public function clean_term_cache( $term_ids, $taxonomy )
 ```
 
-## Automatically Clear Cache on Archive Pages for Specific Custom Post Type
-
-By default, adding a post, page or custom post type, clears the cache for the homepage and associated terms or categories associated with it. To clear cache for a specific page when a specific custom post type is added:
-
-```php
-add_action( 'save_post', 'custom_clearcache_archive_page' );
-/**
- * Clear cache on a specific page when a specific custom post type is added or modified.
- *
- * @param int $post_id
- * @return void
- */
-function custom_clearcache_archive_page( $post_id ){
-	if(get_post_type() === 'book') {
-		pantheon_clear_edge_paths(['/books-on-startups-entrepreneurship-and-venture-capital/']);
-	}
-
-	if(get_post_type() === 'public-media') {
-		pantheon_clear_edge_paths(['/archives/media/']);
-	}
-}
-```
-
 ## More Resources
 
 - [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
 - [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
-
