@@ -1,7 +1,7 @@
 ---
 title: WordPress + Gatsby Frontend Starter for Front-End Sites
 subtitle: Create a New Project
-description: Learn how to use WordPress + Gatsby frontend starter to create a new project.
+description: Learn how to use the WordPress + Gatsby frontend starter to create a new project.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -17,14 +17,15 @@ product: [decoupled]
 integration: [--]
 ---
 
+This section provides information on how to use the Gatsby + WordPress starter kit.
+
 ## Before You Begin
 
-The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
-[nodejs v16 with npm v8](https://nodejs.org/en/download/). You may want to
-install the gatsby cli globally, or
-[use `npx`](https://www.npmjs.com/package/npx)
+- The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using [nodejs v16 with npm v8](https://nodejs.org/en/download/).
 
-## Create A New Project With The Template
+- You may want to install the gatsby cli globally, or [use `npx`](https://www.npmjs.com/package/npx)
+
+## Create a New Project with the Template
 
 There are two methods to creating a new project based on the
 `gatsby-wordpress-starter`:`
@@ -36,12 +37,11 @@ There are two methods to creating a new project based on the
 
 1. Go to the [GitHub repo](https://github.com/pantheon-systems/gatsby-wordpress-starter).
 
-1 Click the **Code** button to open the clone drop-down and select your preferred cloning method.
+1. Click the **Code** button to open the clone drop-down menu and select your preferred cloning method.
 
 ### Use the `gatsby-wordpress-starter`
 
-1. Open your terminal and run the
-[`gatsby new` command](https://www.gatsbyjs.com/docs/reference/gatsby-cli/#creating-a-site-from-a-starter).
+1. Open your terminal and run the [`gatsby new` command](https://www.gatsbyjs.com/docs/reference/gatsby-cli/#creating-a-site-from-a-starter).
 
     ```shell
     # if gatsby-cli is installed locally...
@@ -50,12 +50,12 @@ There are two methods to creating a new project based on the
     npx gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
     ```
 
-If you have a package manager preference between npm and yarn, you may need to set it in the `gatsby-cli` options before initiating your new project.
+1. Optional. Set the `gatsby-cli` options before initiating your new project if you have a package manager preference between npm and yarn.
 
-```shell
-# set your preferred package manager with the following command
-# for npm
-gatsby options set pm npm
-# for yarn
-gatsby options set pm yarn
-```
+    ```shell
+    # set your preferred package manager with the following command
+    # for npm
+    gatsby options set pm npm
+    # for yarn
+    gatsby options set pm yarn
+    ```

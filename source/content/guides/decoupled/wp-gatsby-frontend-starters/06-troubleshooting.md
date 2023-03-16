@@ -17,14 +17,15 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides solutions to common issues when developing with the `@pantheon-systems/gatsby-wordpress-starter`. For information on troubleshooting on Pantheon, see [Pantheon Front-End Sites Frequently Asked Questions](https://pantheon.io/docs/guides/decoupled/overview/faq/).
+This section provides solutions to common issues when developing with the `@pantheon-systems/gatsby-wordpress-starter`. Refer to [Pantheon Front-End Sites Frequently Asked Questions](/guides/decoupled/overview/faq/) for more information on troubleshooting on Pantheon.
 
 ## `gatsby-source-wordpress` Fails To Fetch Data From WordPress
 
 There are a few possible reasons for this:
+
 - The `WP GraphQL` plugin in WordPress has not been activated
 - The `WP Gatsby` plugin in WordPress has not been activated
-	> Solution: activate the plugin
+	> Solution: activate the plugin.
 - The  `gatsby-source-plugin` fails with the following error:
 	```shell
 	Error: getaddrinfo ENOTFOUND dev-my-wordpress-site.pantheonsite.io
@@ -36,7 +37,7 @@ There are a few possible reasons for this:
 
 ## WordPress Server Overloaded
 
-Rarely, the `gatsby-source-wordpress` server complains of an overloaded WordPress server. If you are experiencing this issue frequently, it is recommended to add the following options to the `gatsby-source-wordpress` plugin inside of the `gatsby-config.js`. See the [plugin options on schema request concurrency](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/docs/plugin-options.md#schemarequestconcurrency) for more information.
+The `gatsby-source-wordpress` server complains of an overloaded WordPress server. If you are experiencing this issue frequently, it is recommended to add the following options to the `gatsby-source-wordpress` plugin inside of the `gatsby-config.js`. Refer to the [plugin options on schema request concurrency](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/docs/plugin-options.md#schemarequestconcurrency) for more information.
 ```js
 {
 // ...rest of config,

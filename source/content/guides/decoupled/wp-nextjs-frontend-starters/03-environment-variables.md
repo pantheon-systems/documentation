@@ -17,13 +17,13 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to set environment variables for local development and decoupled preview, as well as how to connect to Multidev environments.
+This section provides information on how to set environment variables for local development and Decoupled Preview, as well as how to connect to Multidev environments.
 
 ## Local Development
 
 Next.js requires the endpoint at build time to fetch data from the WordPress instance. The starter kit uses [dotenv](https://www.npmjs.com/package/dotenv) for local development.
 
-1. Clone your decoupled Front-End Site repo.
+1. Clone your Front-End Site repo.
 
 1. Create a `.env.development.local` file and update the `WPGRAPHQL_URL` and `IMAGE_DOMAIN` with your WordPress GraphQL endpoint, and the `IMAGE_DOMAIN`. If the `WPGRAPHQL_URL` and `IMAGE_DOMAIN` are the same, you can omit setting the `IMAGE_DOMAIN`. For example:
 

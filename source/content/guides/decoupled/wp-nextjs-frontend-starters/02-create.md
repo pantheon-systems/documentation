@@ -19,7 +19,6 @@ integration: [--]
 
 This section provides information on how to use the Next.js + WordPress starter kit.
 
-
 ## Before You Begin
 
 The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
