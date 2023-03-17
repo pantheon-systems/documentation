@@ -18,7 +18,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-Ensure your system has the correct components to deploy a Pantheon Front-End Site.
+Review this section carefully to ensure your system has the correct components to deploy a Pantheon Front-End Site.
 
 ## Components for Pantheon Front-End Sites
 

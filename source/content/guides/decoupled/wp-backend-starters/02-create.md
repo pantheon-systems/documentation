@@ -21,7 +21,7 @@ This section provides information on how to create a new WordPress backend proje
 
 ### Install with an Upstream
 
-Create from Decoupled WordPress Composer Managed upstream:
+Create your project from Decoupled WordPress Composer Managed upstream:
 
   - Via the Pantheon Dashboard at this link:
 
@@ -37,8 +37,7 @@ Create from Decoupled WordPress Composer Managed upstream:
 
     - Replace `'{My Team Name}'` with your team name - for example `My Agency`.
       This can also be omitted.
-    - `c9f5e5c0-248f-4205-b63a-d2729572dd1f` is upstream_id for Decoupled
-      WordPress Composer Managed.
+    - `c9f5e5c0-248f-4205-b63a-d2729572dd1f` is the `upstream_id` for Decoupled WordPress Composer Managed.
 
   </Alert>
 
@@ -48,3 +47,7 @@ Create from Decoupled WordPress Composer Managed upstream:
 
 1. Select the profile. This can also be done via
 [`terminus remote:wp`](/terminus/commands/remote-wp).
+
+## WordPress Kit Packages
+
+Refer to [WordPress Kit Packages](https://decoupledkit.pantheon.io/docs/Packages/wordpress-kit/) for more information on utilities that help simplify sourcing data from a WordPress backend for a Front-End Site hosted on Pantheon.

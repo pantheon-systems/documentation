@@ -21,7 +21,8 @@ Build Hooks allow you to trigger a build automatically when you update the conte
 
 Your Pantheon Front-End site will rebuild and include your new content when a Build Hook is triggered. Each Build Hook you generate has a unique URL.
 
-You can create and manage Build Hooks in the Pantheon Dashboard. You must[configure your backend](/guides/decoupled/overview/build-hooks#use-build-hooks-with-a-backend-starter-kit) to use the Build Hooks you create in the Pantheon dashboard.
+You can create and manage Build Hooks in the Pantheon Dashboard. You must
+ [configure your backend](/guides/decoupled/overview/build-hooks#use-build-hooks-with-a-backend-starter-kit) to use the Build Hooks you create in the Pantheon dashboard.
 
 ## Add a Build Hook
 
@@ -37,13 +38,13 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must[config
 
 1. Click **Show URL** and then click **Copy** to copy your unique Build Hooks URL.
 
-1. Optional. Copy the cURL code under **Test** to test triggering a build with your hook.
+1. Optional. Copy the cURL code under **Test** if you want to test triggering a build with your hook.
 
 ![add build hook](../../../../images/add-build-hook.png)
 
 ## Edit a Build Hook
 
-1. Navigate to your site dashboard and select the site you want to add a Build Hook to.
+1. Navigate to your site dashboard and select the site with the Build Hook you want to edit.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -53,15 +54,15 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must[config
 
 ## Regenerate a Build Hook
 
-The Build Hook name will remain the same, but your URL will be updated each time your regenerate your Build Hook. Take note of the new URL and update it where needed.
+The Build Hook name will remain the same, but your URL will be updated each time you regenerate your Build Hook. Take note of the new URL and update it where needed.
 
-1. Navigate to your site dashboard and select the site you want to add a Build Hook to.
+1. Navigate to your site dashboard and select the site you want to regenerate a Build Hook for.
 
 1. Click **Settings** and then click **Builds**.
 
 1. Scroll down to the **Build Hooks** section, select **Regenerate** from the **Edit** drop-down menu next to the Build Hook you want to regenerate.
 
-1. Click **Yes** confirm your selection and then click **Regenerate Hook**.
+1. Click **Yes** to confirm your selection and then click **Regenerate Hook**.
 
 1. Click **Show URL** and then click **Copy** to copy your new unique Build Hooks URL.
 
@@ -69,20 +70,20 @@ The Build Hook name will remain the same, but your URL will be updated each time
 
 ## Delete a Build Hook
 
-1. Navigate to your site dashboard and select the site you want to add a Build Hook to.
+1. Navigate to your site dashboard and select the site with the Build Hook you want to delete.
 
 1. Click **Settings** and then click **Builds**.
 
 1. Scroll down to the **Build Hooks** section, select **Delete** from the **Edit** drop-down menu next to the Build Hook you want to delete.
 
-1. Click **Yes** confirm your selection and then click **Delete Hook**.
+1. Click **Yes** to confirm your selection and then click **Delete Hook**.
 
 ## Use Build Hooks with a Backend Starter Kit
 
 ### Drupal Backend Starter Kit and Build Hooks
 
-Refer to [Configure Build Hooks](/guides/decoupled/drupal-backend-starters/build-hooks) for information on how to configure your Build Hook on your backend.
+Refer to [Configure Build Hooks](/guides/decoupled/drupal-backend-starters/build-hooks) for information on how to configure your Build Hook on your Drupal backend.
 
 ### WordPress Backend Starter Kit and Build Hooks
 
-Refer to [Configure Build Hooks](/guides/decoupled/wp-backend-starters/build-hooks) for information on how to configure your Build Hook on your backend.
+Refer to [Configure Build Hooks](/guides/decoupled/wp-backend-starters/build-hooks) for information on how to configure your Build Hook on your WordPress backend.

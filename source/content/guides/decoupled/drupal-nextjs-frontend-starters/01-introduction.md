@@ -29,6 +29,11 @@ The `next-drupal-starter` is designed as a starting point to for a Next.js site 
 
 The starter has a dependency on the `@pantheon-systems/drupal-kit`. The starter kit includes helpers that maximize available Drupal backend features.
 
+## Requirements and Considerations
+
+Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.
+
 ## More Resources
 
 - [Front-End Sites Overview](/guides/decoupled/overview)
+- [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)

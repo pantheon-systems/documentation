@@ -17,6 +17,9 @@ product: [decoupled]
 integration: [--]
 ---
 
+This section provides information on how to use the Drupal Backend Starter.
+
+
 ## Choose an Installation Option
 
 You can install the backend starter kit with Build Tools or with the Dashboard Upstream. Review the information below to select the right option for your setup.
@@ -204,3 +207,7 @@ site to Drupal 10.
    ```
    https://dev-my-decoupled-backend.pantheonsite.io/update.php
    ```
+
+## Drupal Kit Packages
+
+Refer to [Drupal Kit Packages](https://decoupledkit.pantheon.io/docs/Packages/drupal-kit/) for more information on utilities that help simplify sourcing data from a Drupal backend for a Front-End Site hosted on Pantheon.

@@ -17,10 +17,11 @@ product: [decoupled]
 integration: [--]
 ---
 
+This section provides information on how to configure build hooks on your backend.
+
 ## What Are Build Hooks?
 
-The [Build Hooks](https://www.drupal.org/project/build_hooks) module has the
-capability to trigger builds in one or more Front-End sites when any content
+The [Build Hooks](https://www.drupal.org/project/build_hooks) module triggers builds in one or more Front-End Sites when any content
 changes occur, such as creating, updating, or deleting.
 
 Refer to the Front-End Sites Overview guide for instructions on how to [create and manage Build Hooks in the Pantheon dashboard](/guides/decoupled/overview/build-hooks).
@@ -32,24 +33,31 @@ Install and activate the [WP-Webhooks Plugin](https://wordpress.org/plugins/wp-w
 ### Create a Build Hook That Triggers When a Post Is Created Or Updated
 
 1. Generate a Build Hook on your build platform.
-1. Navigate to your WordPress admin dashboard and open the WP Webhooks plugin interface.
+
+1. Navigate to your **WordPress admin dashboard** and open the **WP Webhooks** plugin interface.
+
 1. Click the **Send Data** tab.
+
 1. Select the **Post Created** Webhook trigger.
 1. Click **Add Webhook URL**, name the hook, and then paste the build hook URL that you generated.
+
 1. Submit the form.
+
 1. Repeat the previous steps to create a hook for the **Post Updated**
    trigger.
 
 #### Test The Post Build Hook
 
-1. Open your WordPress admin dashboard.
+1. Open your **WordPress admin dashboard**.
+
 1. Create a new Post or update a previously existing post.
+
 1. Confirm that a new build triggered in the **Site Overview** page of your build platform.
 
-### Create Build Hooks For Multiple Frontend Environments
+### Create Build Hooks for Multiple Frontend Environments
 
 The WP Webhooks plugin allows multiple build hooks to be added under a single
-action. This feature can be used to trigger builds in multiple feature branches based off of content updates in one WordPress instance.
+action. You can use this feature to trigger builds in multiple feature branches based on content updates in one WordPress instance.
 
 <Alert title="Note"  type="info" >
 
@@ -57,8 +65,12 @@ Generate separate build hooks for each of your sites' Front-End environments on 
 
 </Alert>
 
-1. Navigate to your WordPress admin dashboard.
-1. Open the WP Webhooks plugin dashboard.
+1. Navigate to your **WordPress admin dashboard**.
+
+1. Open the **WP Webhooks** plugin dashboard.
+
 1. Click the **Send Data** tab and select your desired Webhook trigger.
+
 1. Click **Add Webhook URL**, name the hook, and then add one of your previously generated build hook URL's before submitting this form.
+
 1. Repeat the previous steps for each build hook previously generated.

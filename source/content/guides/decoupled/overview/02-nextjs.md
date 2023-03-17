@@ -28,11 +28,11 @@ Pantheon provides two starter kits for Front-End Sites that use Next.js:
 
 ## What Is Static Site Generation (SSG)?
 
-A static page in Next.js is a React component exported from a file under the `pages` directory that has data fetching inside of `getStaticProps`—which is also exported from the same file—or no data fetching at all.
+A static page in Next.js is a React component exported from a file under the `pages` directory that has data fetching inside of `getStaticProps` that is also exported from the same file—or no data fetching at all.
 
-Static pages are generated at build time. Static pages utilizing dynamic routing and `getStaticProps` must also export a `getStaticPaths` function that is used to specify the exact path for the static content. Refer to the [official `getStaticPaths` documentation](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) for more information.
+Static pages are generated at build time. Static pages utilizing dynamic routing and `getStaticProps` must also export a `getStaticPaths` function to specify the exact path for the static content. Refer to the [official `getStaticPaths` documentation](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) for more information.
 
-Static pages can be served with `next export` without a Node.js server, however, many of the features that make Next.js worth using are not enabled this way and we do not recommend it.
+Static pages can be served with `next export` without a Node.js server. However, many features that make Next.js worth using are not enabled this way and we do not recommend it.
 
 ### Common Use Cases
 
@@ -42,7 +42,7 @@ Static pages can be served with `next export` without a Node.js server, however,
 
 ## What Is Incremental Static Regeneration (ISR)?
 
-It is possible to update static pages after they have been built with new content by utilizing [Incremental Static Regeneration (ISR)](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration).
+You can update static pages after they have been built with new content with[Incremental Static Regeneration (ISR)](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration).
 
 Add the `revalidate` prop to `getStaticProps` to enable ISR. The revalidate prop defines the number of seconds that the server will wait before re-running `getStaticProps`. This is known as stale-while-revalidate.
 
@@ -65,4 +65,4 @@ A dynamic page in Next.js is a React component exported from a file under the `p
 
 ## Implement Next.js Data Fetching
 
-Refer to [Your First Next.js & Drupal Customization](/guides/decoupled/drupal-nextjs-frontend-starters/customization) or [Your First Next.js & WordPress Customization](/guides/decoupled/wp-nextjs-frontend-starters/customization) for a walk-through of fetching data with `getStaticProps` and `getServerSideProps`. You can also look through the `next-drupal-starter` or `next-wordpress-starter` for a starting point or inspiration.
+Refer to [Next.js + Drupal Frontend Starter Customization](/guides/decoupled/drupal-nextjs-frontend-starters/customization) and [Next.js + WordPress Frontend Starter Customization](/guides/decoupledwp-nextjs-frontend-starters/customization) for a walk-through of fetching data with `getStaticProps` and `getServerSideProps`.

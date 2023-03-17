@@ -30,9 +30,9 @@ This section provides configuration information for Front-End Sites.
 
 * You will use Next.js or Gatsby as the frontend framework.
 
-* (Optional) You are using the latest version of Drupal, or WordPress for the CMS.
+* (Optional). You are using the latest version of Drupal, or WordPress for the CMS.
 
-* (Optional) If using a pre-configured starter kit template, you will use one of the following combinations:
+* (Optional). If using a pre-configured starter kit template, you will use one of the following combinations:
 
     * [Drupal and Next.js](/guides/decoupled/drupal-nextjs-frontend-starters/)
 
@@ -40,7 +40,7 @@ This section provides configuration information for Front-End Sites.
 
     * [WordPress and Gatsby](/guides/decoupled/wp-gatsby-frontend-starters/)
 
-    > **NOTE**: Other configurations are not currently supported.
+    > **NOTE**: Other starter kit configurations are not currently supported.
 
 
 ### Compatibility
@@ -60,7 +60,7 @@ Supported Versions:
 
 ## Create a Front-End Site
 
-Select the guide below that meets your set up needs and follow the instructions carefully.
+Select the backend or frontend guide below that meets your configuration requirements and follow the instructions carefully.
 
 ### Backend Starters
 
@@ -81,7 +81,7 @@ Select the guide below that meets your set up needs and follow the instructions 
 
 You can establish FQDN domains in decoupled environments using stable URLs.
 
-An environment relates to every code change made against the Git repository that triggers a build, in which that build generates an internet-ready site.
+An environment relates to every code change made against the Git repository that triggers a build. This build generates an internet-ready site.
 
 Code change events that trigger a build include:
 
@@ -90,7 +90,7 @@ Code change events that trigger a build include:
 
 <Alert title="Note" type="info">
 
-NOTE: Pull requests from a Multidev branch that are made against the upstream, will trigger double builds.
+Pull requests from a Multidev branch that are made against the upstream, will trigger double builds.
 </Alert>
 
 ### Types of Environments

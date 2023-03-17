@@ -32,10 +32,9 @@ You can use the default Pantheon recipe provided by Lando if you are creating a 
 
 ## Combined Frontend and Backend Setup
 
-1. Create `.lando.yml` in the root of the project.
+1. Create a `.lando.yml` file in the root of the project.
 
-1. Copy the following config into `.lando.yml`. Replace `%SITE-NAME%`, `%PANTHEON_SITE_ID%`, and `%PORT-NUMBER%`, with
-site name, site id, and required port number for your Front-End site.
+1. Copy the following config into `.lando.yml`. Replace `%SITE-NAME%`, `%PANTHEON_SITE_ID%`, and `%PORT-NUMBER%`, with the site name, site id, and required port number for your Front-End site.
 
         ```
         name: %SITE_NAME%
@@ -88,7 +87,7 @@ project.
 
 1. Run `lando start` to start the containers.
 
-1. Install the WordPress site and activate the plugin `WP Gatsby` if your
+1. Install the WordPress site and activate the `WP Gatsby` plugin if your
   Front-End Site is using Gatsby.
 
 1. Run `lando npm run develop` to start your Front-End Site. It will now be

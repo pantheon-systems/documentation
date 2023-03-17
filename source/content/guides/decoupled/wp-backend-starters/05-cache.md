@@ -23,16 +23,16 @@ WordPress can be configured to cache GraphQL requests on a CDN until the underly
 
 ## Use the Backend Starter Project
 
-If you created your WordPress site using the [backend starter project](/guides/decoupled/wp-backend-starters/create), recommended caching configurations were automatically enabled on install. Using this project:
+If you created your WordPress Front-End Site using the [backend starter project](/guides/decoupled/wp-backend-starters/create), the recommended caching configurations are already enabled. Using this project:
 
 - WPGraphQL Smart Cache plugin is enabled to allow GraphQL requests via the GET method for improved network caching.
 - Response headers are set to allow CDN caching of GraphQL requests for 10
   minutes.
-- Pantheon Advanced Page Cache module is enabled, which enables caching and purging across the entire decoupled stack.
+- Pantheon Advanced Page Cache module is enabled, allowing caching and purging across the entire decoupled stack.
 
 ## Manual Configuration
 
-You must manually configure your site to enable edge caching and purging if you do not use the Decoupled Kit backend starter project.
+You must manually configure your site to enable edge caching and purging if you did not use the Decoupled Kit backend starter project.
 
 The Edge caching instructions below focus on sites running on Pantheon, but can be adapted for other platforms.
 
@@ -44,7 +44,7 @@ The Edge caching instructions below focus on sites running on Pantheon, but can 
     composer require wp-graphql/wp-graphql-smart-cache
     ```
 
-1. Open the WordPress Dashboard and activate the WPGraphQL Smart Cache plugin.
+1. Open the **WordPress Dashboard** and activate the **WPGraphQL Smart Cache** plugin.
 
 1. Navigate to **GraphQL**, select **Settings**, and then set the
   `Cache-Control max-age` to a value greater than zero.
@@ -63,8 +63,8 @@ We recommend leaving the object cache option disabled when using this plugin on 
     composer require wpackagist-plugin/pantheon-advanced-page-cache
     ```
 
-1. Open the WordPress dashboard, and enable the Pantheon Advanced Page Cache plugin.
+1. Open the **WordPress Dashboard**, and enable the **Pantheon Advanced Page Cache** plugin.
 
-### Take Advantage of GraphQL Caching on the Front-end
+### Take Advantage of GraphQL Caching on Front-End Sites
 
-Refer to [Surrogate Key Based Cache Purging](/guides/decoupled/wp-nextjs-frontend-starters/cache#cache-purge) in the Front-end Starters guide for information on how to make full use of WPGraphQL Network Caching in your Front-End Site.
+Refer to [Surrogate Key Based Cache Purging](/guides/decoupled/wp-nextjs-frontend-starters/cache#cache-purge) in the Front-End Site guide for information on how to make full use of WPGraphQL Network Caching in your Front-End Site.

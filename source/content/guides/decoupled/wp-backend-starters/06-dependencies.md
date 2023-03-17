@@ -22,7 +22,7 @@ dependencies.
 
 ## Add a New Plugin or Theme
 
-A new plugin or theme can be added using the following Composer require command.
+You can add a new plugin or theme by using the Composer require command.
 
 Command format:
 
@@ -36,15 +36,13 @@ Example:
 composer require wpackagist-plugin/akismet
 ```
 
-For more information:
-
-- https://docs.roots.io/bedrock/master/composer/
+Refer to [Composer documentation](https://docs.roots.io/bedrock/master/composer/) for more information.
 
 ## Update Dependencies Manually with Composer
 
-Dependencies can be updated using the following Composer update command:
+You can update dependencies by using the Composer update command:
 
-Command format for updating any plugin or theme:
+Command format for updating a plugin or theme:
 
 ```bash{promptUser: user}
 composer update <namespace>/<packagename> --with-dependencies
@@ -56,11 +54,9 @@ Example:
 composer update wpackagist-plugin/akismet --with-dependencies
 ```
 
-For more information:
-
-- https://docs.roots.io/bedrock/master/composer/#updating-wp-and-plugin-versions
+Refer to [Composer documentation](https://docs.roots.io/bedrock/master/composer/#updating-wp-and-plugin-versions) for more information.
 
 ## Update Dependencies Automatically with the [terminus-clu-plugin](https://github.com/pantheon-systems/terminus-clu-plugin)
 
 Composer security updates can be applied automatically using the [Terminus CLU](https://github.com/pantheon-systems/terminus-clu-plugin)
-(Composer Lock Updater) Plugin. This plugin automatically creates pull requests based on `composer.lock` updates. If your project was created using our recommended Terminus [build tools project create command](creating-new-project.md), this plugin was configured automatically.
+(Composer Lock Updater) plugin. This plugin automatically creates pull requests based on `composer.lock` updates. If your project was created using our recommended Terminus [build tools project create command](creating-new-project.md), this plugin was configured automatically.

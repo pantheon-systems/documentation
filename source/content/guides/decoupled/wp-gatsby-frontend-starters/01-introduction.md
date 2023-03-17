@@ -32,6 +32,10 @@ site that consumes data from a WordPress backend configured with the `pantheon-d
 The starter has a dependency on the `@pantheon-systems/wordpress-kit` that
 includes helpers that maximize available WordPress backend features.
 
+## Requirements and Considerations
+
+Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.
+
 ## More Resources
 
 - [Front-End Sites on Pantheon Overview](/guides/decoupled/overview)

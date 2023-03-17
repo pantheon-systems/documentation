@@ -1,7 +1,7 @@
 ---
 title: Decoupled WordPress Backend Starter for Front-End Sites
 subtitle: Configure an Existing Project
-description: Learn how to configure an existing project to use a Front-End starter kit.
+description: Learn how to configure an existing project to use the WordPress frontend starter kit.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -39,8 +39,8 @@ No additional plugin is required.
 
 ## Create Supporting Content
 
-Our starter kits assume that there is at least one published post and page in
-your WordPress backend. A default WordPress install will have a sample of each, but if your site does not have any page or post content, you should create some before proceeding.
+Our starter kits assume that you have at least one published post and page in
+your WordPress backend. A default WordPress install provides a sample of each, but if your site does not have any page or post content, you should create some before proceeding.
 
 The footer in our starter kit sources menu data from a classic WordPress menu
 with the name 'Example Menu'. If a menu with this name does not exist, the
@@ -58,6 +58,6 @@ Your WordPress site should be configured to work with one of our Front-End start
 
 ### Enable Edge Caching
 
-For sites running on Pantheon, a small amount of configuration can be updated in order to enable edge caching and purging across the entire decoupled stack.
+You can update your configuration to enable edge caching and purging across the entire decoupled stack.
 
-Configuration recommendations can be found within the [Caching Considerations](guides/decoupled/wp-backend-starters/cache#enable-edge-caching).
+Refer to the [Caching Considerations](guides/decoupled/wp-backend-starters/cache#enable-edge-caching) section for more information.

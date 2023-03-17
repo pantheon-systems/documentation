@@ -31,3 +31,11 @@ Available frontend starters:
 - [Drupal + Next.js Frontend Starter](/guides/decoupled/drupal-nextjs-frontend-starters)
 - [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
 - [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)
+
+## Requirements and Considerations
+
+Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.
+
+## More Resources
+
+- [Front-End Sites Overview](/guides/decoupled/overview)
