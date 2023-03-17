@@ -1,7 +1,7 @@
 ---
-title: Drupal Frontend Starters for Front-End Sites
+title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Introduction
-description: Learn about available frontend starters for Front-End Sites.
+description: Learn about the Drupal + Next.js frontend starter..
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -17,13 +17,13 @@ product: [decoupled]
 integration: [--]
 ---
 
-Front-End Sites on Pantheon allows you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
+Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 
 You can use a frontend starter kit to streamline the creation of your Front-End site on Pantheon. Available Drupal frontend starters are:
 
-- Next.js + Drupal
+- Drupal + Next.js
 
-## Why Use The Next.js Drupal Starter?
+## Why Use the Next.js Drupal Starter?
 
 The `next-drupal-starter` is designed as a starting point to for a Next.js site that consumes data from a Drupal backend configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
 

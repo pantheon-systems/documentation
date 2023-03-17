@@ -1,5 +1,5 @@
 ---
-title: Drupal Frontend Starters for Front-End Sites
+title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Cache
 description: Learn how to set your cache-control headers and purge cache.
 tags: [webops, workflow, decoupled]
@@ -74,24 +74,24 @@ These headers may or may not be respected when caching at the edge depending on 
 
 ## Purge Surrogate Key-based Cache
 
-You should be familiar with the concept of surrogate key based caching and
-purging. Refer to https://docs.fastly.com/en/guides/working-with-surrogate-keys for more information on working with surrogate keys.
+You should be familiar with the concept of surrogate key-based caching and
+purging. Refer to [Fastly's documentation](https://docs.fastly.com/en/guides/working-with-surrogate-keys) for more information on working with surrogate keys.
 
-This example below uses Drupal with the [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) installed.
+The example below uses Drupal with the [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) installed.
 
 ## How It Works
 
-The `PantheonDrupalState` class from our `@pantheon-systems/drupal-kit` npm
+The `PantheonDrupalState` class from the `@pantheon-systems/drupal-kit` npm
 package includes an adapted fetch method that adds the `Pantheon-SKey` header
 to each request to Drupal. Responses from Drupal contain the
-`Surrogate-Key` header. You can use these keys to instruct your frontend can to purge content from a cache when the content in Drupal changes.
+`Surrogate-Key` header. You can use these keys to instruct your frontend to purge content from a cache when the content in Drupal changes.
 
-## How To Ensure Headers Are Set On Custom Routes
+## How to Ensure Headers Are Set on Custom Routes
 
-- The Drupal backend has the [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) installed. installed and configured
+- The Drupal backend has the [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) installed and configured.
 - Create an instance of `PantheonDrupalState` imported from
   `@pantheon-systems/drupal-kit` in your application.
-- Use the fetch methods available (see
+- Use the fetch methods available (refer to
   [`drupal-kit`](https://decoupledkit.pantheon.io/docs/Packages/drupal-kit/) for more information). The Surrogate-Key header should be set automatically if Drupal is configured correctly.
 - Pass the [`context.res`](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter) from `getServerSideProps` into the `PantheonDrupalState` fetch method so that
 the headers are added to the outgoing response.

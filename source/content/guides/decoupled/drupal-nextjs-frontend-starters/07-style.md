@@ -1,5 +1,5 @@
 ---
-title: Drupal Frontend Starters for Front-End Sites
+title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Style Configuration
 description: Learn how to configure your styling.
 tags: [webops, workflow, decoupled]
@@ -21,7 +21,7 @@ This section provides information on how to style your configuration with Tailwi
 
 ## Tailwind CSS Typography Plugin
 
-You must have to use the typography plugin for Tailwind CSS to have content from the Drupal site rendered in the Next.js frontend. Review Tailwind typography plugin information in the [Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin).
+You must use the typography plugin for Tailwind CSS to have content from the Drupal site rendered in the Next.js frontend. Review Tailwind typography plugin information in the [Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin).
 
 ### Install the Plugin
 
@@ -39,18 +39,18 @@ You must have to use the typography plugin for Tailwind CSS to have content from
 
 1. Confirm that the `tailwind.config.js` file is in the root of your project and set the plugin:
 
-```js
-module.exports = {
-	theme: {
-		extend: {},
-	},
-	plugins: [require('@tailwindcss/typography')],
-};
-```
+	```js
+	module.exports = {
+		theme: {
+			extend: {},
+		},
+		plugins: [require('@tailwindcss/typography')],
+	};
+	```
 
 ## Customize Tailwind
 
-Tailwind allows you to customize the default configuration to suit your needs.
+Tailwind allows you to customize the default configuration.
 
 The example below modifies the default font family in the `tailwind.config.js` file:
 

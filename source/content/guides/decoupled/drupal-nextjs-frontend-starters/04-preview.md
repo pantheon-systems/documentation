@@ -1,5 +1,5 @@
 ---
-title: Drupal Frontend Starters for Front-End Sites
+title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Implement Decoupled Preview
 description: Learn how to implement decoupled preview..
 tags: [webops, workflow, decoupled]
@@ -19,6 +19,10 @@ integration: [--]
 
 This section provides information on how to implement Decoupled Preview.
 
+## Before You Begin
+
+- Make sure you have [set the variables for Decoupled Preview](/guides/decoupled/drupal-nextjs-frontend-starters/environment-variables#set-environment-variables-to-enable-decoupled-preview)
+
 ## Configure Your Drupal Instance
 
 Your preview site and client secret must be correctly configured on your Drupal instance to use Decoupled Preview.
@@ -32,15 +36,15 @@ Your preview site and client secret must be correctly configured on your Drupal 
 site.
 
 1. Set the URL to point to `http(s)://{YOUR_SITE_URL}/api/preview`, replacing
-`{YOUR_SITE_URL}` with the URL of your frontend site, or `localhost:3000` to test the preview locally.
+`{YOUR_SITE_URL}` with the URL of your Front-End Site, or `localhost:3000` to test the preview locally.
 
 1. Set a secret for the Preview Site and note this value down.
 
-Now you have all of the credentials needed to make authenticated requests to the Drupal instance, including the ability to preview content!
+Now you have all of the credentials needed to make authenticated requests to the Drupal instance, including the ability to preview content.
 
 ## Use `getPreview`
 
-You can implement the `getPreview` helper found in the `lib` directory of the `next-drupal-starter`. This helper takes in two arguments:
+You can implement the `getPreview` helper found in the `lib` directory of the `next-drupal-starter`. This helper takes two arguments:
 
 - Current server context
 - Name of the node to be previewed

@@ -14,15 +14,13 @@ The option for Front-End Sites is available in the New Dashboard after it is ena
 
 Follow the steps below to access the Front-End Site decoupled architecture and start developing the frontend application in Pantheon.
 
-1. Log in to your Pantheon Dashboard and navigate to the **Sites** page.
+1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
 
-1. Select **Sites** in the the New Dashboard.
+1. Click the **Decoupled** tab and then click **+Create New Site**.
 
-1. Click the **Decoupled** tab, then click **+Create New Site**.
+1. Click the option that best suits your needs under the **Decoupled Site** section on the **Site Creation** page.
 
-1. Click the option that best suits your needs under the Decoupled Site section on the Site Creation page.
-
-1. Ensure you are using compatible versions for the associated tooling before you proceed (e.g. Drupal 10, Next.js v12, etc.).
+1. Verify that you are using compatible versions for the associated tooling before you proceed. For example, Drupal 10, Next.js v12, etc.
 
 <Alert title="Note"  type="info" >
 
@@ -36,7 +34,7 @@ You must configure your frontend to point to the backend. If your Pantheon backe
 
 1. Specify the GitHub account associated with your decoupled site. After you select the decoupled site option that best suits your needs, you will be prompted to connect your Git provider.
 
-1. Select the GitHub option and click **Connect**. A window for GitHub.com is displayed, and you are prompted **“Where do you want to install Pantheon?”**.
+1. Select the **GitHub** option and click **Connect**. A window for GitHub.com is displayed, and you are prompted with **“Where do you want to install Pantheon?”**.
 
 1. Select the repository that you will use to develop your decoupled site. A new page is displayed that confirms where Pantheon should be installed.
 

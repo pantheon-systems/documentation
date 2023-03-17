@@ -1,5 +1,5 @@
 ---
-title: Drupal Frontend Starters for Front-End Sites
+title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Troubleshooting
 description: Get solutions to common issues.
 tags: [webops, workflow, decoupled]
@@ -27,13 +27,11 @@ Local Development:
 1.  Check that the `IMAGE_DOMAIN` environment variable is set in the
     `.env.development.local` file.
 
-1.  Ensure the `IMAGE_DOMAIN` environment only contains the hostname. For
-    example:
+1.  Ensure that the `IMAGE_DOMAIN` environment only contains the hostname. For example:
     ```.env
       IMAGE_DOMAIN=example.com
     ```
-1.  Ensure that you are using the `next/image` component and that you set the
-    src by constructing the `IMAGE_DOMAIN` and the image source. For example:
+1.  Ensure that you are using the `next/image` component, and that you set the `src` by constructing the `IMAGE_DOMAIN` and the image source. For example:
 
     ````jsx // in the starter kit, the IMAGE_URL is available // as a constant
     which is exported from lib/constants.js import { IMAGE_URL } from
@@ -58,15 +56,11 @@ Local Development:
         };
 
         ```
-
-See
-[The docs on the `next/image` component for more information](https://nextjs.org/docs/api-reference/next/image#src).
     ````
 
 ## Adapting for Use With Existing Drupal Sites
 
-Our starter kits assume that you are using Drupal's core Media module to manage images for article content. If you are using Drupal's default image
-field, you must make the following adjustments to the starter kit:
+The Front-End Sites starter kits assume that you are using Drupal's core Media module to manage images for article content. You must make the following adjustments to the starter kit if you are using Drupal's default image field.
 
 1. Update grid pages to use the `field_image` field instead of the
    `field_media_image` field.
@@ -96,8 +90,7 @@ field, you must make the following adjustments to the starter kit:
 		const imgSrc = article?.field_image?.uri?.url || '';
 	```
 
-1. Update article detail pages to use the `field_image` field instead of the
-   `field_media_image` field.
+1. Update the article detail pages to use the `field_image` field instead of the `field_media_image` field.
 
 1. Update your aliasing path:
 
@@ -117,7 +110,7 @@ field, you must make the following adjustments to the starter kit:
 
 	- _If you are aliasing your articles using a pattern other than `/articles/*`:_
 
-		1. Go to the `renderPage` function in `pages/[...alias].jsx`, find the `if (pageData?.type === 'node--article')` conditional and change the following constants to:
+		1. Go to the `renderPage` function in `pages/[...alias].jsx`, find the `if (pageData?.type === 'node--article')` conditional, and change the following constants to:
 
 			```jsx
 			const {

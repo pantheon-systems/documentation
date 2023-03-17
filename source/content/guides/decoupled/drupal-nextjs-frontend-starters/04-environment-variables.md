@@ -1,5 +1,5 @@
 ---
-title: Drupal Frontend Starters for Front-End Sites
+title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Set Environment Variables
 description: Learn how to set your environment variables.
 tags: [webops, workflow, decoupled]
@@ -21,9 +21,9 @@ This section provides information on how to set environment variables for local 
 
 ## Local Development
 
-Next.js needs requires the endpoint at build time to fetch data from the Drupal instance. The starter kit uses [dotenv](https://www.npmjs.com/package/dotenv) for local development.
+Next.js requires the endpoint at build time to fetch data from the Drupal instance. The starter kit uses [dotenv](https://www.npmjs.com/package/dotenv) for local development.
 
-1. Clone your decoupled Front-End Site repo.
+1. Clone your Front-End Site repo.
 
 1. Create a `.env.development.local` file and update the `BACKEND_URL` and `IMAGE_DOMAIN` with your Drupal CMS URL, and the `IMAGE_DOMAIN`. If the `BACKEND_URL` and `IMAGE_DOMAIN` are the same, you can omit setting the `IMAGE_DOMAIN`. For example:
 
@@ -49,7 +49,7 @@ Next.js needs requires the endpoint at build time to fetch data from the Drupal 
 
 1. Open `.env.development.local` for your local development site.
 
-1. Set the `PREVIEW_SECRET` variable. For example: `{your Backend URL}/admin/structure/dp-preview-site/example_nextjs_preview`
+1. Set the `PREVIEW_SECRET` variable. For example:`{your Backend URL}/admin/structure/dp-preview-site/example_nextjs_preview`
 
 1. Set the `CLIENT_ID` variable. For example: `{your Backend URL}/en/admin/config/services/consumer`. This is visible as the UUID for the “Example Consumer.”
 
@@ -59,13 +59,13 @@ Next.js needs requires the endpoint at build time to fetch data from the Drupal 
 
 ## Connect to Multidev Environments
 
-The `PANTHEON_ENVIRONMENT` environment variable can be used inside of `next.config.js` file to connect to a Multidev environment. Either the `PANTHEON_CMS_ENDPOINT` or `BACKEND_URL` must be set inside `next.config.js`. The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`. For example:
+The `PANTHEON_ENVIRONMENT` variable can be used inside of `next.config.js` file to connect to a Multidev environment. Either the `PANTHEON_CMS_ENDPOINT` or `BACKEND_URL` must be set inside `next.config.js`. The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`. For example:
 
     ```bash{promptUser: user}
     PANTHEON_CMS_ENDPOINT=dev-my-drupal-site.pantheonsite.io
     ```
 
-1. Update the `backendUrl`. Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
+Update the `backendUrl`. Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
 
 ```js
 let backendUrl, imageDomain;
@@ -84,7 +84,7 @@ if (process.env.BACKEND_URL === undefined) {
 ```
 
 
-The code below can be added under the above logic to connect to a Multidev that is prefixed with the branch name of my site.
+The following code can be added under the logic shown above to connect to a Multidev that is prefixed with the branch name of the site.
 
 ```js
 /**

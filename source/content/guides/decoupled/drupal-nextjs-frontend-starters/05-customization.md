@@ -1,5 +1,5 @@
 ---
-title: Drupal Frontend Starters for Front-End Sites
+title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Customize Your Project
 description: Learn how to customize your project.
 tags: [webops, workflow, decoupled]
@@ -51,7 +51,7 @@ The starter kit implements [Drupal State](https://project.pages.drupalcode.org/d
 
 ### SSR Example
 
-1. Export an async function called [`getServerSideProps`](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props).
+1. Export an async function called [`getServerSideProps`](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props)
 
 1. Use Drupal State inside of the function to fetch data from Drupal and pass it to the component as props.
 
@@ -93,7 +93,7 @@ The starter kit implements [Drupal State](https://project.pages.drupalcode.org/d
 		}
 		```
 
-1. Start the app go to `http://localhost:3000/articles`
+1. Start the app and go to `http://localhost:3000/articles`
 
 1. Review the newly created `Articles` page.
 
@@ -144,7 +144,7 @@ The starter kit implements [Drupal State](https://project.pages.drupalcode.org/d
 		}
 		```
 
-1. Start the app go to `http://localhost:3000/articles`
+1. Start the app and go to `http://localhost:3000/articles`
 
 1. Navigate to `/recipes` to see the `Recipes` page.
 
@@ -157,7 +157,7 @@ The CSR pattern for this use case is the same as it is with vanilla React.
 
 <Alert title="Note"  type="info" >
 
-You must configure your Drupal instance to allow your Front-End site through CORS to achieve CSR. Remember that the store is not shared between the client and server contexts.
+You must configure your Drupal instance to allow your Front-End Site through CORS to achieve CSR. Remember that the store is not shared between the client and server contexts.
 
 </Alert>
 
@@ -205,6 +205,6 @@ You must configure your Drupal instance to allow your Front-End site through COR
 			}
 		}
 		```
-1. Start the app go to `http://localhost:3000/articles`
+1. Start the app and go to `http://localhost:3000/articles`
 
 1. Navigate to `/csr-articles` to see the page.
