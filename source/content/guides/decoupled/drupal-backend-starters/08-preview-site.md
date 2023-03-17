@@ -17,22 +17,23 @@ product: [decoupled]
 integration: [--]
 ---
 
+This section provides information on how to configure a preview site for your project.
+
 ## Before You Begin
 
-- Make sure you have necessary permissions
+- Make sure you have the necessary permissions
 - Make sure the **Pantheon Decoupled** and **Decoupled Preview** modules are installed
 
 ## Create a New Preview Site Configuration
 
 1. Go to your Drupal instance, select **Structure**, and then select **Preview Sites**.
 
-1. Click **Add preview site** to create a new configuration for your preview
-   site.
+1. Click **Add preview site** to create a new configuration.
 
 1. Fill out the form to set up the **Label**, **URL**, **Secret**, **Preview Type**, and select the **Content Type** required.
 
-1. Set the URL to point to http(s)://{YOUR_SITE_URL}/api/preview replacing
-   `{YOUR_SITE_URL}` with the URL of your frontend site, or `localhost:3000` for testing preview locally.
+1. Set the URL to point to `http(s)://{YOUR_SITE_URL}/api/preview` replacing
+   `{YOUR_SITE_URL}` with the URL of your Front-End Site, or `localhost:3000` for testing the preview locally.
 
 1. Set a secret for the Preview Site and note this value down.
 
@@ -44,6 +45,6 @@ integration: [--]
 
 1. Click **Edit** to open the configuration form.
 
-1. Update the placeholder URL to the desired URL for your preview site, from the example URL `https://example.site/api/preview` replace `example.site` with the URL of your frontend site or use `localhost:3000` for local testing.
+1. Update the placeholder URL to the desired URL for your preview site, from the example URL `https://example.site/api/preview` replace `example.site` with the URL of your Front-End Site or use `localhost:3000` for local testing.
 
 1. Save your changes.

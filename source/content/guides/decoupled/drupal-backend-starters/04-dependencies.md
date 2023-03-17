@@ -1,7 +1,7 @@
 ---
 title: Decoupled Drupal Backend Starter for Front-End Sites
 subtitle: Update Dependencies
-description: Learn how to update your dependencies.
+description: Learn how to update your project dependencies.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -17,6 +17,8 @@ product: [decoupled]
 integration: [--]
 ---
 
+This section provides information on how to update the dependencies for your backend project.
+
 Dependencies can be updated manually with Composer or automatically with the Terminus plugin.
 
 ## Update Dependencies Manually with Composer
@@ -25,7 +27,7 @@ The Drupal project uses Composer to manage dependencies. The dependencies can be
 
 ### Update Drupal Core
 
-Run the command below to update Drupal core.
+Run the command below to update Drupal core:
 
   ```bash{promptUser: user}
   composer update drupal/core "drupal/core-*" --with-all-dependencies
@@ -33,7 +35,7 @@ Run the command below to update Drupal core.
 
 ### Update Contributed Module
 
-Run the command below to update the contributed module.
+Run the command below to update the contributed module:
 
   ```bash{promptUser: user}
    composer update drupal/modulename --with-dependencies
@@ -46,5 +48,5 @@ Refer to the resources below for more information.
 
 ## Update Dependencies Automatically with the [terminus-clu-plugin](https://github.com/pantheon-systems/terminus-clu-plugin)
 
-Alternatively, Composer security updates can be applied automatically using the [Terminus CLU](https://github.com/pantheon-systems/terminus-clu-plugin)
-(Composer Lock Updater) Plugin. This plugin automatically creates pull requests based on `composer.lock` updates. If your project was created using our recommended Terminus [build tools project create command](creating-new-project.md) then this plugin has been configured automatically.
+Composer security updates can be applied automatically using the [Terminus CLU](https://github.com/pantheon-systems/terminus-clu-plugin)
+(Composer Lock Updater) plugin. This plugin automatically creates pull requests based on `composer.lock` updates. This plugin was configured automatically if your project was created using the recommended Terminus [build tools project create command](creating-new-project.md).

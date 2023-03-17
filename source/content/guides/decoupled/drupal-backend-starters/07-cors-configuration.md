@@ -16,8 +16,10 @@ product: [decoupled]
 integration: [--]
 ---
 
+This section provides information on how to configure your cross-origin resource sharing (CORS).
+
 Your decoupled site may require configuration to allow
-[cross-origin resource sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). By default, sites created using the decouled-drupal project opt-in to [Drupal's CORS support](https://www.drupal.org/node/2715637) with a permissive configuration for local development:
+[cross-origin resource sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). Sites created using the Drupal starter kit automatically opt-in to [Drupal's CORS support](https://www.drupal.org/node/2715637) with a permissive configuration for local development by default.
 
 ```yaml title="web/sites/default/cors.decoupled.services.yml"
 # Configure Cross-Site HTTP requests (CORS).
@@ -51,7 +53,7 @@ parameters:
     supportsCredentials: true
 ```
 
-Since the appropriate CORS configuration in production and pre-production
-environments may vary on a project-by-project basis, the above configuration is only loaded for local development. We recommend configuring
+The above configuration is only loaded for local development because the appropriate CORS configuration in production and pre-production
+environments may vary on a project-by-project basis. We recommend configuring
 [production and pre-production service configurations](https://docs.pantheon.io/services-yml#production-and-pre-production-service-configurations) to set the appropriate CORS configuration for your Pantheon environments if
 necessary.
