@@ -929,7 +929,7 @@ ___
 
 <ReviewDate date="2022-04-07" />
 
-**Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
+**Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are read-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
 
 **Solution:** Create a symlink for `wp-content/webp-express` in the wp-content directory and then run the following line of code:
 
