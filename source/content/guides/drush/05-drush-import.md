@@ -26,7 +26,7 @@ Follow the steps below carefully to ensure that you import your Drupal site corr
 
 - Create a Pantheon account with at least one free Dev site slot open. 
 
-   - A [Pantheon account is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, reach out to your Account Manager and they can grant you one.
+   - A [Pantheon account is free](https://pantheon.io/register?docs), and if you need an extra Dev site to try this out, reach out to your Account Manager and they can grant you one.
 
 - Verify that you are using Drush 8 if you have a non-Composer managed Drupal 7 site. Note that Composer-managed sites are not supported.
 
