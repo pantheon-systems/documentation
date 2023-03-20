@@ -17,13 +17,13 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information about available WordPress + Gatsby starter add-ons.
+This section provides information on available WordPress + Gatsby starter add-ons.
 
 ## WordPress Advanced Custom Fields Gatsby Add-on
 
-This add-on uses GraphQL to bring in a custom related content data type that was created with Advanced Custom Fields, or ACF.
+This add-on uses GraphQL to bring in a custom related content data type created with Advanced Custom Fields (ACF).
 
-Your Front-End starter will have related content section that displays at the bottom of post detail pages, if related posts are specified on the related WordPress post after you install the add-on. Examples of querying and using data from ACF will be added to your project.
+Your Front-End starter will have a related content section that displays at the bottom of post detail pages if related posts are specified on the related WordPress post after you install the add-on. Examples of querying and using data from ACF will be added to your project.
 
 ## Before You Begin
 
@@ -43,7 +43,7 @@ This document assumes you have familiarity with WordPress and Advanced Custom Fi
 
 ## Add the `gatsby-wp-acf-addon` to an Existing Project
 
-1. Use the create command to initiate the cli with the `gatsby-wp-acf-addon`
+1. Use the create command to initiate the CLI with the `gatsby-wp-acf-addon`
    generator:
 
    ```bash{promptUser: user}
@@ -56,7 +56,7 @@ This document assumes you have familiarity with WordPress and Advanced Custom Fi
 
 ## Build a New Project with the `gatsby-wp-acf-addon`
 
-1. Use the create command to initiate the cli with both the `gatsby-wp` and
+1. Use the create command to initiate the CLI with both the `gatsby-wp` and
 `gatsby-wp-acf-addon` generators:
 
    ```bash{promptUser: user}
@@ -73,11 +73,11 @@ This document assumes you have familiarity with WordPress and Advanced Custom Fi
 Accessing data within your custom fields is a simple process that closely
 resembles a standard GraphQL query.
 
-1. Reference your custom field group as an object To query a custom field.
+1. Reference your custom field group as an object.
 
 1. Fill in the object with each individual custom field name.
 
-The example below shows how to query a `Post`  that has a custom field data. In this case, the custom field group is titled `acfDemoFields`, and has fields `acfTextField`, `acfFeaturedImage`, and `acfContent`:
+The example below shows how to query a `Post` that has custom field data. The custom field group is titled `acfDemoFields`, and has fields `acfTextField`, `acfFeaturedImage`, and `acfContent`:
 
 ```jsx
 export const pageQuery = graphql`

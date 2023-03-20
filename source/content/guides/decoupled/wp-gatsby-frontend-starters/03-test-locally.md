@@ -1,7 +1,7 @@
 ---
 title: WordPress + Gatsby Frontend Starter for Front-End Sites
 subtitle: Test Locally
-description: Learn how to set path prefix to test locally.
+description: Learn how to set a path prefix to test locally.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -21,11 +21,11 @@ This section provides information on how to set your path prefix to help test yo
 
 ### Before You Begin
 
-- This section assumes you are testing a Gatsby + WordPress site locally that is hosted at a subpath of the root, for example: `/docs`, by using [Gatsby's `pathPrefix` feature](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/path-prefix/).
+- This section assumes you are performing local testing on a Gatsby + WordPress site that is hosted at a subpath of the root, for example: `/docs`, by using [Gatsby's `pathPrefix` feature](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/path-prefix/).
 
 ## Set The Path Prefix
 
-The `@pantheon-systems/gatsby-wordpress-starter` automatically sets the environment variable `process.env.PANTHEON_UPLOAD_PATH` as the `pathPrefix` in the `gatsby-config.js`.
+The `@pantheon-systems/gatsby-wordpress-starter` automatically sets the environment variable `process.env.PANTHEON_UPLOAD_PATH` as the `pathPrefix` in the `gatsby-config.js` file.
 
 Set the `PANTHEON_UPLOAD_PATH` in your `.env.development.local` file to the path you want to test locally.
 
@@ -33,7 +33,7 @@ Refer to Gatsby's guide on [Adding a Path Prefix](https://www.gatsbyjs.com/docs/
 
 ### Update The Build Command
 
-The build and serve commands require an extra flag, `--prefix-paths` to serve your site at the given path. The example below shows the `package.json` scripts after updating the commands with the flag:
+The build and serve commands require an extra `--prefix-paths` flag to serve your site at the given path. The example below shows the `package.json` scripts after updating the commands with the flag:
 
 ```json
 	"scripts": {
@@ -42,7 +42,7 @@ The build and serve commands require an extra flag, `--prefix-paths` to serve yo
     }
 ```
 
-You may also set the `PREFIX_PATHS`  environment variable before your build, for example:
+You can also set the `PREFIX_PATHS` environment variable before your build, for example:
 
 ```shell
 PREFIX_PATHS=true gatsby build

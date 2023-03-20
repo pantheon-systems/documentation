@@ -1,7 +1,7 @@
 ---
 title: WordPress + Gatsby Frontend Starter for Front-End Sites
 subtitle: Customize Your Project
-description: Learn how to customize your project.
+description: Learn how to customize your decoupled project.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -17,8 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to customize your WordPress project.
-
+This section provides information on how to customize your decoupled WordPress project.
 
 ## Before You Begin
 
@@ -29,13 +28,12 @@ Make sure you have a working knowledge of:
 
 ## Gatsby's GraphQL Layer
 
-The
-[`gatsby-source-wordpress` plugin](https://www.gatsbyjs.com/plugins/gatsby-source-wordpress/) uses the [WPGraphQL WordPress plugin](https://www.wpgraphql.com/) to cache WordPress data in Gatsby. This plugin is configured
+The [`gatsby-source-wordpress` plugin](https://www.gatsbyjs.com/plugins/gatsby-source-wordpress/) uses the [WPGraphQL WordPress plugin](https://www.wpgraphql.com/) to cache WordPress data in Gatsby. This plugin is configured
 to source data out of the box.
 
 Refer to [Gatsby's documentation](https://www.gatsbyjs.com/docs/reference/graphql-data-layer/) for an in depth look at Gatsby's GraphQL Data Layer.
 
-1. Add your GraphQL Endpoint in `.env.local` as `WPGRAPHQL_URL`. For example:
+1. Add `WPGRAPHQL_URL` as your GraphQL Endpoint in `.env.local`. For example:
 
 	```bash{promptUser: user}
 	WPGRAPHQL_URL=https://dev-my-wordpress-site.pantheon.site/wp/graphql
@@ -49,14 +47,14 @@ instance and make it available to Gatsby's GraphQL IDE. This is available at `ht
 
 ## Source Data from WordPress
 
-You can build queries your pages. The index page displays the last 5 posts. Each post page displays the post as well as any comments that belong to that post.
+You can build queries for your pages. The index page displays the last five posts. Each post page displays the post and any comments that belong to that post.
 
 There are two queries, plus an additional query to use with Gatsby's
-`createPages` utility. One query is for the index page, and the other is for the individual blog posts.
+`createPages` utility. One query is for the index page, and the other query is for the individual blog posts.
 
 ### Index Page Query
 
-You can limit the data to the last 5 blog posts in descending order in the index page. Note that you can populate the fields in the middle pane instead of selecting them from the **Explorer** pane.
+You can limit the data to the last five blog posts in descending order in the index page. Note that you can populate the fields in the middle pane instead of selecting them from the **Explorer** pane.
 
 1. Start your Gatsby app with the `WPGRAPHQL_URL` environment variable set.
 
@@ -76,33 +74,31 @@ You can limit the data to the last 5 blog posts in descending order in the index
 
 1. Select **allWpPost**, select **author**, select **nodes**, and then select **name**.
 
-
-
-```graphql
-query IndexPage {
-	allWpPost(limit: 5, sort: { fields: date, order: DESC }) {
-		nodes {
-			id
-			title
-			date
-			uri
-			author {
-				node {
-					name
+		```graphql
+		query IndexPage {
+			allWpPost(limit: 5, sort: { fields: date, order: DESC }) {
+				nodes {
+					id
+					title
+					date
+					uri
+					author {
+						node {
+							name
+						}
+					}
 				}
 			}
 		}
-	}
-}
-```
+		```
 
-You can test the query in the editor with the play button at the top.
-Results are displayed in the pane to the right. Copy the ID of a post to
-help test the next section.
+	- You can test the query in the editor with the play button at the top of the page. Results are displayed in the pane to the right.
+
+1. Copy the ID of a post to help test the next section.
 
 ### Individual Post Query
 
-The post id is [available via `pageContext`](https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs), and can be used to get more information individual posts.
+The post id is [available via `pageContext`](https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs), and can be used to get more information on individual posts.
 
 1. Start your Gatsby app with the `WPGRAPHQL_URL` environment variable set.
 
@@ -121,7 +117,7 @@ The post id is [available via `pageContext`](https://www.gatsbyjs.com/docs/creat
 
 1. Select the **Explorer** pane on the left side of the page, and then select `wpPost`.
 
-1. Select **wpPost**, select **id**, and then select **eq:**.
+1. Select **wpPost**, select **id**, and then select **eq:**
 
 1. Click the **$** to insert the variable into the query. You may need to rename the variable or edit the query manually. For example:
 
@@ -144,7 +140,7 @@ The post id is [available via `pageContext`](https://www.gatsbyjs.com/docs/creat
 
 1. Select **author**, select **node**, and then select **name**.
 
-The query should look like the following:
+Example query:
 
 ```graphql
 query PostWithCommentsById($id: String!) {
@@ -184,7 +180,7 @@ Gatsby's GraphiQL IDE's **Code Exporter** tab generates code snippets based on t
 
 ### Create Templates
 
-Part of creating pages with Gatsby involves [specifying a template](https://www.gatsbyjs.com/docs/programmatically-create-pages-from-data/#specifying-a-template). This section uses the queries created to create a template for the index page and the individual posts in the above sections.
+Part of creating pages with Gatsby involves [specifying a template](https://www.gatsbyjs.com/docs/programmatically-create-pages-from-data/#specifying-a-template). This section uses the queries you made above to create a template for the index page and individual posts.
 
 1. Open your Gatsby project and create a new file in the `src/templates` directory called `last-five-post.js`.
 
@@ -195,27 +191,23 @@ Part of creating pages with Gatsby involves [specifying a template](https://www.
 
 ### Route with `createPages`
 
-You must construct one more short query in order to tell Gatsby to generate
-pages at certain paths. Notice that this query is a stripped down version of the previous query that only needs the slug.
+You must construct one more query to tell Gatsby to generate pages at certain paths. Notice that this query is a stripped down version of the previous query that only requires the slug.
 
 The example below shows the `createPages` code that can be added to
 `gatsby-node.js` to fetch and create pages at build time.
 
 1. Use the `uri` as the slug for your new page, and the `id` to pass into your Page Query.
 
-1. Make sure you updated the code from the **Code Exporter** tab to:
+1. Update the code from the **Code Exporter** tab to:
 
 	- Point to the `templatePath` to your template from the previous step
 	- Pass the `node.uri` to the `path` property of `createPage`
 	- Pass the `node.id` to the context of `createPage`
 
-This code should generate 5 pages, one for each of the last 5 blog posts. Now
-inside of our template, we can use the query we created
+This code should generate five pages, one for each of the last five blog posts.
 
-For more information on Gatsby's `createPage`, see
-[the API reference](https://www.gatsbyjs.com/docs/reference/config-files/actions/#createPage)
-and
-[Creating Pages in `gatsby-node.js`](https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs)
+Refer to Gatsby's `createPage` [API reference](https://www.gatsbyjs.com/docs/reference/config-files/actions/#createPage) and
+[Creating Pages in `gatsby-node.js`](https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) for more information.
 
 
 ```javascript title=gatsby-node.js
@@ -252,7 +244,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 ### Index Page
 
-You can define routes in the `src/pages` if you have pages that don't need to be dynamically created. Refer to [Define routes in `src/pages`](https://www.gatsbyjs.com/docs/reference/routing/creating-routes/#define-routes-in-srcpages) for more information.
+You can define routes in `src/pages` if you have pages that don't need to be dynamically created. Refer to [Define routes in `src/pages`](https://www.gatsbyjs.com/docs/reference/routing/creating-routes/#define-routes-in-srcpages) for more information.
 
 1. Select the **Code Exporter** tab and then select the Page Query.
 
@@ -260,7 +252,7 @@ You can define routes in the `src/pages` if you have pages that don't need to be
 
 1. Paste the component from the **Code Exporter** tab into the file.
 
-	The file should like like this:
+	For example:
 
 	```jsx title=src/pages/last-five.js
 	import React from 'react';

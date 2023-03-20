@@ -21,7 +21,7 @@ This section provides information on how to set environment variables for local 
 
 ## Local Development
 
-Gatsby requires the endpoint at build time to fetch data from the WordPress instance, The starter kit uses [dotenv](https://www.npmjs.com/package/dotenv) for local development.
+Gatsby requires the endpoint at build time to fetch data from the WordPress instance. The starter kit uses [dotenv](https://www.npmjs.com/package/dotenv) for local development.
 
 1. Create a new project with the `gatsby-wordpress-starter`.
 
