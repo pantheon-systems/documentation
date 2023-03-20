@@ -137,4 +137,4 @@ If none of these options work for your site's needs, see our documentation on ho
 ## More Resources
 
 - [Global Regions](/regions)
-- [Backups Tool](/backups)
+- [Backups Tool](/guides/backups)
