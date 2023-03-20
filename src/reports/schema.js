@@ -33,17 +33,26 @@ class CategoryTree extends React.Component {
 
           return (
             <Layout>
-              <h1>Schema</h1>
               <div style={{ padding: "20px" }}>
+              <h1>Schema</h1>
+              <ul>
                 {yamlfile.map((tag, i) => {
                   return (
-                    <h2 key={i}>
+                    <li key={i}><a href={"#" + tag.node.tag}>
+                      {tag.node.tag}
+                      </a></li>
+                  )
+                })}
+                </ul>
+                {yamlfile.map((tag, i) => {
+                  return (
+                    <h2 key={i}><a id={tag.node.tag}>
                       {tag.node.tag}
                       <p>{tag.node.description}</p>
                       <ul>
                         <li>Type: {tag.node.type}</li>
                         <li>Required: {tag.node.required}</li>
-                        <li>Multiple values allowed: {tag.node.multiple}</li>
+                        <li>Multiple values allowed: {tag.node.multi}</li>
                         <li>
                           Valid Values:
                           <ul>
@@ -71,7 +80,7 @@ class CategoryTree extends React.Component {
                           </ul>
                         </li>
                       </ul>
-                    </h2>
+                      </a></h2>
                   )
                 })}
               </div>
