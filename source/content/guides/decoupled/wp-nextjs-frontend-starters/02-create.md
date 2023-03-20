@@ -1,7 +1,7 @@
 ---
 title: WordPress + Next.js Frontend Starter for Front-End Sites
 subtitle: Create a New Project
-description: Learn how to create a new project with WordPress + Next.js Front-End Site starter.
+description: Learn how to use the WordPress + Next.js frontend starter to create a new project.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -26,8 +26,7 @@ The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
 
 ## Create A New Project With The Template
 
-There are two methods to creating a new project based on the
-`next-wordpress-starter`:
+There are two methods to create a new project based on the `next-wordpress-starter`:
 
 - Clone the starter repo directly
 - Use `create-next-app`
@@ -36,7 +35,7 @@ There are two methods to creating a new project based on the
 
 1. Go to the [GitHub repo](https://github.com/pantheon-systems/next-wordpress-starter).
 
-1. Click the **Code** button to open the clone drop-down menus and select your preferred cloning method.
+1. Click the **Code** button to open the clone drop-down menu and select your preferred cloning method.
 
 ### Use the `create-next-app`
 
@@ -55,21 +54,22 @@ Note that the `create-next-app` uses the `yarn` package manager by default.
 Make sure you meet the following prerequisites before you continue.
 
 * You are using a Git repository and the repository is already connected.
-* You are using WordPress as your CMS. You have installed and configured your WordPress site using the starter kit configuration.
+* You are using WordPress as your CMS.
+* You have installed and configured your WordPress site using the starter kit configuration.
 
 
 1. Click the **WordPress and Next.js** option, select a repo listed under **Choose your Git provider**, and then click **Continue**.
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
 
-1. Select the desired **WordPress** CMS backend from the dropdown menu.
+1. Select the desired **WordPress** CMS backend from the drop-down menu.
 
 1. Select the site environment from which to source the content.
-
-1. (Optional). Set the [Environment Variables](/guides/decoupled/wp-nextjs-frontend-starters) in the **Advanced Setting** section.
 
 1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information/ status.
 
 1. Click **Build Details** to view the build log.
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
+
+1. Refer to the [Environment Variables](/guides/decoupled/wp-nextjs-frontend-starters) section to set environment variables for local development and Decoupled Preview, as well as steps to connect to Multidev environments.

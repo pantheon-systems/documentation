@@ -25,6 +25,10 @@ You can use the decoupled WordPress backend starter kit to streamline the creati
 
 Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.
 
+## WordPress Kit Packages
+
+Refer to [WordPress Kit Packages](https://decoupledkit.pantheon.io/docs/Packages/wordpress-kit/) for more information on utilities that help simplify sourcing data from a WordPress backend for a Front-End Site hosted on Pantheon.
+
 ## More Resources
 
 - [Front-End Sites on Pantheon Overview](/guides/decoupled/overview)

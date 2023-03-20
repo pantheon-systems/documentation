@@ -47,7 +47,3 @@ Create your project from Decoupled WordPress Composer Managed upstream:
 
 1. Select the profile. This can also be done via
 [`terminus remote:wp`](/terminus/commands/remote-wp).
-
-## WordPress Kit Packages
-
-Refer to [WordPress Kit Packages](https://decoupledkit.pantheon.io/docs/Packages/wordpress-kit/) for more information on utilities that help simplify sourcing data from a WordPress backend for a Front-End Site hosted on Pantheon.

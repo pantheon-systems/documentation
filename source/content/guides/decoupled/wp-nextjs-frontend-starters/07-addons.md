@@ -21,9 +21,9 @@ This section provides information on available add-ons for WordPress + Next.js.
 
 ## WordPress Advanced Custom Fields Next.js Add-on
 
-This add-on uses GraphQL to bring in a custom related content data type that was created with Advanced Custom Fields, or ACF.
+This add-on uses GraphQL to bring in a custom related content data type created with Advanced Custom Fields (ACF).
 
-Your Front-End starter will have related content section that displays at the bottom of post detail pages, if related posts are specified on the related WordPress post after you install the add-on. Examples of querying and using data from ACF will be added to your project.
+Your frontend starter has related content section that displays at the bottom of post detail pages, if related posts are specified on the related WordPress post after you install the add-on. Examples of querying and using data from ACF will be added to your project.
 
 ### Before You Begin
 
@@ -42,19 +42,22 @@ Your Front-End starter will have related content section that displays at the bo
 
 ### Add the `next-wp-acf-addon` to an Existing Project
 
-1. Use the create command to initiate the cli with the `next-wp-acf-addon`
-   generator
+1. Use the create command to initiate the CLI with the `next-wp-acf-addon`
+   generator:
+
    ```bash{promptUser: user}
    # set the `outDir` to the root directory of your existing Next WordPress Starter
    npm create pantheon-decoupled-kit next-wp-acf-addon --outDir ./my-app-dir
    ```
-1. Follow the terminal prompts, and accept the project diff changes.
+
+1. Follow the terminal prompts and accept the project diff changes.
+
 1. Start your project locally and observe the new related content section that displays at the bottom of post detail pages.
 
 ### Build a New Project with the `next-wp-acf-addon`
 
-1. Use the create command to initiate the cli with both the `next-wp` and
-   `next-wp-acf-addon` generators.
+1. Use the create command to initiate the CLI with both the `next-wp` and
+   `next-wp-acf-addon` generators:
 
    ```bash{promptUser: user}
    npm create pantheon-decoupled-kit next-wp next-wp-acf-addon
@@ -69,11 +72,10 @@ Your Front-End starter will have related content section that displays at the bo
 
 ### Fetch Data From a Custom Field
 
-Accessing data within your custom fields is a simple process that closely
-resembles a standard GraphQL query. you must reference your custom field group as an object to query a custom field, and then fill in that object with each individual custom field name.
+You can access data within your custom fields through a process that closely
+resembles a standard GraphQL query. You must reference your custom field group as an object to query a custom field, and then fill in that object with each individual custom field name.
 
-Below is an example of how to query a `Post` that has a custom field data. In
-this case, the custom field group is titled `acfDemoFields`, and has fields
+Below is an example of how to query a `Post` that has custom field data. The custom field group is titled `acfDemoFields`, and has fields
 `acfTextField`, `acfFeaturedImage`, and `acfContent`:
 
 ```jsx

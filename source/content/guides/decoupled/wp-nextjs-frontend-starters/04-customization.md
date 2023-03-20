@@ -17,18 +17,16 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to customize your Drupal project, including how to:
+This section provides information on how to customize your WordPress + Next.js project, including how to:
 
 - Create [Server Side Rendering (SSR)](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
-and
+
 - Create [Static Site Generation (SSG)](https://nextjs.org/docs/basic-features/pages#static-generation-recommended).
 
 <Alert title="Note"  type="info" >
 
-If you're not sure when to use SSR vs SSG, check out these articles:
-[When Should I Use `getServerSideProps`](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props#when-should-i-use-getserversideprops)
-and
-[When Should I Use `getStaticProps`](https://nextjs.org/docs/basic-features/data-fetching/get-static-props#when-should-i-use-getstaticprops)
+Refer to [When Should I Use `getServerSideProps`](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props#when-should-i-use-getserversideprops)
+and [When Should I Use `getStaticProps`](https://nextjs.org/docs/basic-features/data-fetching/get-static-props#when-should-i-use-getstaticprops) if you're not sure when to use SSR vs SSG.
 
 </Alert>
 
@@ -47,7 +45,7 @@ Next.js [Data Fetching Overview](https://nextjs.org/docs/basic-features/data-fet
 
 ### Fetching WordPress Content with `@pantheon-systems/wordpress-kit`
 
-The `next-wordpress-starter` has a dependency on `@pantheon-systems/wordpress-kit`, which contains a GraphQL client to help
+The `next-wordpress-starter` has a dependency on `@pantheon-systems/wordpress-kit` that contains a GraphQL client to help
 fetch data from WordPress. Be sure to use as few instances of the client as
 possible. Here is an example of how to use the client:
 
@@ -63,7 +61,7 @@ export const client = new GraphqlClientFactory(
 ).create();
 ```
 
-The client factory takes in a your WordPress GraphQL endpoint. You
+The client factory takes in your WordPress GraphQL endpoint. You
 can use the client to make GraphQL requests to your WordPress instance.
 
 ### Use the WordPress GraphiQL IDE
@@ -124,7 +122,7 @@ To open the IDE:
 		}
 		```
 
-1. Start the app go to `http://localhost:3000/articles`
+1. Go to `http://localhost:3000/articles` to start the app.
 
 1. Review the newly created `Articles` page.
 
@@ -172,6 +170,6 @@ To open the IDE:
 
 	- Notice the key difference for this page (besides fetching pages instead of posts) is the use of `getStaticProps` instead of `getServerSideProps`.
 
-1. Start the app go to `http://localhost:3000/articles`
+1. Go to `http://localhost:3000/articles` to start the app.
 
 1. Navigate to `/recipes` to see the `Recipes` page.

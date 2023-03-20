@@ -44,33 +44,39 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Click **Import Repository** on the _What kind of site are you creating?_ page to connect your GitHub repository.
 
-1. Follow the steps in the Connect your Account section if you have not already connected your GitHub account. Otherwise, if your GitHub account is already connected you can proceed to the next step and select your Git provider.
-
 1. Select a Git provider from the **Choose your Git provider** options and click **Continue**.
 
-1. Select your desired GitHub account from the **GitHub Account** drop-down menus.
+1. Select your desired GitHub account from the **GitHub Account** drop-down menu.
 
 1. Choose the repository name from the **Select Repository** drop-down menu and click **Continue**.
 
-1. Add to the **General Info** section.
+1. Populate the **General Info** section.
 
-    * Specify the Site Name: The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
-    * Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator.
+    1. **Site Name**: The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
-1. (Optional). Link your CMS.
+    1. Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator.
 
-    > **NOTE**: If you are using a specified CMS, you can link your CMS backend and the site environment from which to source content. However, this is more applicable when using the Decoupled starter kit templates.
+1. Optional. Link your CMS.
+
+    <Alert title="Note"  type="info" >
+
+    You are not required to have a CMS when using this method. If you are using a specified CMS, you can link your CMS backend and the site environment from which to source content. However, this is more applicable when using the Decoupled starter kit templates.
+
+    </Alert>
 
 1. Ensure **Make this a private repository** is selected.
 
-1. (Optional). Add configurations and then click **Continue**.
+1. Optional. Add configurations and then click **Continue**.
 
-    * You can add specifications to help manage your root directory, build settings, and set environment variables.
+    * You can add specifications to help manage your root directory and build settings.
     * You can set the Environment Variables in the Advanced Setting section.
 
-    > **NOTE**: Basic builds will function without setting environment variables if the CMS site was selected during decoupled site creation. Environment variables are not necessary for optional features like preview.
+    <Alert title="Note"  type="info" >
 
-    - You are directed to a new page with the site name, deployment, and build information/ status. You will receive a message that you decoupled site has successfully been added to Pantheon.
+     Basic builds will function without setting environment variables if the CMS site was selected during decoupled site creation. Environment variables are not necessary for optional features such as Decoupled Preview.
+
+     </Alert>
+
+    - You are directed to a new page with the site name, deployment, and build information/ status. You will receive a message that your decoupled site has successfully been added to Pantheon.
 
 1. Click **Build Details** to view the build log.
-

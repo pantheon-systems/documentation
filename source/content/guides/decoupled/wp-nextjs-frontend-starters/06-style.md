@@ -21,7 +21,7 @@ This section provides information on how to style your configuration with Tailwi
 
 ## Tailwind CSS Typography Plugin
 
-You must have to use the typography plugin for Tailwind CSS to have content from the Drupal site rendered in the Next.js frontend. Review Tailwind typography plugin information in the [Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin).
+You must use the typography plugin for Tailwind CSS to have content from the WordPress site rendered in the Next.js frontend. Review Tailwind typography plugin information in the [Tailwind CSS documentation](https://tailwindcss.com/docs/typography-plugin).
 
 ## Install the Plugin
 
@@ -33,7 +33,7 @@ Run the command below to install the plugin:
 	npm install @pantheon-systems/wordpress-kit
 	```
 
-	Or
+Or
 
 	```bash{promptUser: user}
 	yarn add @pantheon-systems/wordpress-kit

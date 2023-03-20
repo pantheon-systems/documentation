@@ -30,17 +30,20 @@ Your `PREVIEW_SECRET` and credentials must be correctly configured on your WordP
 
    <Alert title="Note"  type="info" >
 
-    This user must have the `Editor` role at minimum. This is necessary for this user able to access revisions and private posts.
+    This user must have the `Editor` role at minimum. This is necessary for the user to access revisions and private posts.
 
    </Alert>
 
-1. Hover over the username and click **Edit** to bring up the user's profile
-   page.
-1. Scroll down to the **Application Passwords** section and name your application password. Your new `WP_APPLICATION_PASSWORD` will be shown on screen. Copy this value somewhere safe.
+1. Hover over the username and click **Edit** to open the profile page.
+
+1. Scroll down to the **Application Passwords** section and name your application password. Your new `WP_APPLICATION_PASSWORD` will be shown on screen. Copy this value and store it somewhere safe.
+
 1. Select **Settings**, select **Preview Sites**, and then click the **ADD
-   PREVIEW SITE** button. Note: You must have the Pantheon Decoupled WordPress Preview Plugin installed and activated on your instance.
+   PREVIEW SITE** button. Note that you must have the Pantheon Decoupled WordPress Preview Plugin installed and activated on your instance.
+
 1. Set the URL to point to `http(s)://{YOUR_SITE_URL}/api/preview`, replacing
    `{YOUR_SITE_URL}` with the URL of your frontend site, or `localhost:3000` for testing the preview locally.
+
 1. Set a secret for the Preview Site and note this value down as your
    `PREVIEW_SECRET`.
 
@@ -131,7 +134,7 @@ Refer to the Next.js guide on [Adding a Base Path](https://nextjs.org/docs/api-r
 PANTHEON_UPLOAD_PATH
 ```
 
-- `PANTHEON_UPLOAD_PATH` - Used to deploy a your application under a sub-path of a domain. This will be automatically set as the `basePath` in the
+- `PANTHEON_UPLOAD_PATH` is used to deploy your application under a sub-path of a domain. This is automatically set as the `basePath` in the
 `next.config.js`.
 
 - Set the `PANTHEON_UPLOAD_PATH` in your `.env.development.local` to the path you would like to test if you want to test locally.

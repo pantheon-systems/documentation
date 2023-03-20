@@ -25,6 +25,10 @@ You can use the Drupal backend starter kit to streamline the creation of your Fr
 
 Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.
 
+## Drupal Kit Packages
+
+Refer to [Drupal Kit Packages](https://decoupledkit.pantheon.io/docs/Packages/drupal-kit/) for more information on utilities that help simplify sourcing data from a Drupal backend for a Front-End Site hosted on Pantheon.
+
 ## More Resources
 
 - [Front-End Sites Overview](/guides/decoupled/overview)

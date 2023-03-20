@@ -34,13 +34,13 @@ IMAGE_DOMAIN=my-image-cdn.site
 
 ## Connect to Multidev Environments
 
-The `PANTHEON_ENVIRONMENT` environment variable can be used inside of `next.config.js` file to connect to a Multidev environment. Either the `PANTHEON_CMS_ENDPOINT` or `BACKEND_URL` must be set inside `next.config.js`. The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`. For example:
+The `PANTHEON_ENVIRONMENT` environment variable can be used inside of `next.config.js` file to connect to a Multidev environment. Either the `PANTHEON_CMS_ENDPOINT` or `BACKEND_URL` must be set inside `next.config.js` file. The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`. For example:
 
 	```bash{promptUser: user}
 	PANTHEON_CMS_ENDPOINT=dev-my-wordpress-site.pantheonsite.io
 	```
 
-1. Update the `backendUrl`. Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
+Update the `backendUrl`. Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
 
 ```js
 let backendUrl, imageDomain;
@@ -62,7 +62,7 @@ if (process.env.WPGRAPHQL_URL === undefined) {
 ```
 
 This code can be added under the above logic to connect to a Multidev that is
-prefixed with the branch name of my site.
+prefixed with the branch name of `my site`.
 
 ```js
 /**
@@ -84,6 +84,6 @@ if (process.env.PANTHEON_ENVIRONMENT !== 'live') {
 
 1. Set the `WP_APPLICATION_USERNAME` variable. This is the username found and set in the **Users** tab of the WordPress dashboard.
 
-1. Set the `WP_APPLICATION_PASSWORD` variable. This is the password created for the WordPress application user. Passwords can be set through selecting a user inside the **Users** tab of the WordPress dashboard.
+1. Set the `WP_APPLICATION_PASSWORD` variable. This is the password created for the WordPress application user. Passwords can be set by selecting a user inside the **Users** tab of the WordPress dashboard.
 
 1. Go to your Pantheon dashboard and set the variables listed above for production or Multidev environments.
