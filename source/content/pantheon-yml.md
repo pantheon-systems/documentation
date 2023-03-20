@@ -10,6 +10,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [quicksilver]
+showtoc: true
 ---
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
@@ -113,6 +114,16 @@ web_docroot: true
 The name of the nested directory is not configurable.
 
 For more information, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+
+### Integrated Composer Build Step
+
+Enables or disables Integrated Composer, for example to enable Integrated Composer:
+
+```yaml:title=pantheon.yml
+build_step: true
+```
+
+For more information, see [Integrated Composer](/guides/integrated-composer).
 
 ### PHP Version
 
