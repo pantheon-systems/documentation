@@ -46,7 +46,7 @@ Pantheon also provides:
 
 - Fully managed and free [HTTPS certificates](/guides/global-cdn/https)
 
-- [Automated backups](/backups)
+- [Automated backups](/guides/backups)
 
 - [One-click updates](/core-updates) for all WebOps platform plans
 

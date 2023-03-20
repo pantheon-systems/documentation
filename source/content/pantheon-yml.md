@@ -136,7 +136,7 @@ php_version: 8.0
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
-1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. 
+1. Enable [automated backups](/guides/backups) and [confirm that a backup has been created](/guides/backups/create-backups) before you configure the database version.
 
 1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 

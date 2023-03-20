@@ -34,7 +34,7 @@ The following is a list of plugins that assume write access, and the specific fi
 | Plugin | Assumed Write Path | Notes |
 | --- | --- | --- |
 | [AccessAlly WordPress LMS](https://accessally.com/) | wp-content/accessally-protected-content | PROTECTED\_CONTENT\_FOLDER variable within the plugin assumes access to PATH |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
 | | wp-content/plugins/all-in-one-wp-migrations/storage |
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
 | [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) | wp-content/et-cache | Remember to repeat this process for each environment, including Multidevs. |
@@ -99,7 +99,7 @@ There is a very strong possibility this plugin will break the site's workflows, 
 
 </Alert>
 
-**Solution:** Use the platforms automated backups [from the Site Dashboard](/backups).
+**Solution:** Use the platforms automated backups [from the Site Dashboard](/guides/backups).
 
 ___
 
@@ -531,7 +531,7 @@ ___
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WordPress Multisite](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
 
 ___
 
@@ -605,7 +605,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WordPress Multisite](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 
@@ -899,9 +899,9 @@ ___
 
 <ReviewDate date="2022-07-18" />
 
-**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/backups/) for more information.
+**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/guides/backups/) for more information.
 
-**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by:
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/guides/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by:
 
 - Running the bash script in your local system
 
@@ -909,7 +909,7 @@ ___
 
 - Using a service that runs cron jobs for you
 
-Refer to the [Access Backups](/backups#access-backups) documentation for more details.
+Refer to the [Access Backups](/guides/backups/access-backups) documentation for more details.
 
 ___
 
@@ -929,7 +929,7 @@ ___
 
 <ReviewDate date="2022-04-07" />
 
-**Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
+**Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are read-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
 
 **Solution:** Create a symlink for `wp-content/webp-express` in the wp-content directory and then run the following line of code:
 
@@ -1614,7 +1614,7 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 
 ### wp_filesystem->get_contents()
 
-**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail wFhen an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
+**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail when an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
 
 **Solution:** As described in [this StackExchange answer](https://wordpress.stackexchange.com/questions/166161/why-cant-the-wp-filesystem-api-read-googlefonts-json/166172#166172), for cases where file ownership doesn't matter this function could be replaced with `file_get_contents()`. This is true of most cases where the file in question is only being read, not written to.
 

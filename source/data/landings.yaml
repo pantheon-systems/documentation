@@ -1507,8 +1507,11 @@
       links:
         - text: 'Real-time chat support'
           url: 'https://docs.pantheon.io/support/#real-time-chat-support'
+- title: 'WordPress on Pantheon: Pre-GA'
+  subtitle: 'Pantheon makes some WordPress features available to a limited audience for testing. Some Support exclusions will apply.'
+  path: 'guides/wordpress-composer/pre-ga'
 - title: 'Front-End Sites on Pantheon'
-  subtitle: 'Learn how to create and manage Front-End sites on Pantheon.'
+  subtitle: 'Learn about Front-End Sites on Pantheon.'
   path: 'guides/decoupled'
   guides:
     - title: ''

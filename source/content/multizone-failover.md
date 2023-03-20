@@ -112,7 +112,7 @@ You can also do this via Terminus:
 terminus wp <site>.<env> -- solr index
 ```
 
-For WP Site Networks, you will need to index all your subsites individually:
+For WordPress Multisites, you will need to index all your subsites individually:
 
 ```bash{promptUser: user
 terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
@@ -137,4 +137,4 @@ If none of these options work for your site's needs, see our documentation on ho
 ## More Resources
 
 - [Global Regions](/regions)
-- [Backups Tool](/backups)
+- [Backups Tool](/guides/backups)

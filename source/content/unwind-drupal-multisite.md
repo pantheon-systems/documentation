@@ -27,7 +27,7 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 5. Install [Drush SAR 2.x](https://www.drupal.org/project/sar) as described in this [blog post](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands).
 
-6. [Backup the site](/backups/#create-a-backup) in the Dashboard, just in case.
+6. [Backup the site](/guides/backups/create-backups) in the Dashboard, just in case.
 
 7. Run `terminus drush <site>.<env> -- sar --dry-run sites/sitename1 sites/default` to test the search and replace. This exact command can change depending on the name of your site, and broken assets in step 3.
 
