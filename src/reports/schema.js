@@ -46,7 +46,7 @@ class CategoryTree extends React.Component {
                 </ul>
                 {yamlfile.map((tag, i) => {
                   return (
-                    <h2 key={i}><a id={tag.node.tag}>
+                    <h2 key={i}><a id={tag.node.tag}> 
                       {tag.node.tag}
                       <p>{tag.node.description}</p>
                       <ul>
