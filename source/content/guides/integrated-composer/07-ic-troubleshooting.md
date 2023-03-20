@@ -28,24 +28,9 @@ Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus dru
 
 ### Build Step Affected Files That Are Not Ignored by Git
 
-Some users have encountered an error when Git recognizes an unexpected change in `composer.json`:
+This error indicates that when running a `composer install` or `composer update` files which are already tracked in the Git repository were modified. Integrated Composer should not overwrite custom code and therefore will not continue with the build process. 
 
-```bash
-The build step affected files that are not ignored by git:
-+ echo M composer.json M composer.lock
-M composer.json M composer.lock
-+ exit 1
-```
-
-To resolve this error:
-
-1. Add an empty new line to the end of `composer.json`:
-
-  ```shell
-  echo "" >> composer.json
-  ```
-
-1. Commit and push the changes
+The solution to this is to either ensure that Composer does not modify these files, or that they are removed from being tracked in the Git repository. To remove from the Git repository, first remove the files, commit that removal, and then add the path to the `.gitignore` file so that they are not tracked again. 
 
 ### View the Output of the Commit Log First
 
