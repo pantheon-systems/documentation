@@ -12,7 +12,7 @@ integration: [--]
 tags: [--]
 ---
 
-Creating a Pantheon account requires just a few pieces of information, and b a payment method.
+Creating a Pantheon account requires just a few pieces of information, and **does not require** providing a payment method.
 
 To create an account:
 
@@ -32,7 +32,7 @@ When you log in for the first time, there will be a welcome screen where you can
 
 - [Set up your team](/guides/account-mgmt/workspace-sites-teams/teams)
 
-![A screenshot of the welcome screen for the New Dashboard](../../../images/dashboard/new-dashboard/welcome-screen.png)
+![A screenshot of the welcome screen for the New Dashboard](../images/dashboard/new-dashboard/welcome-screen.png)
 
 ## More Resources
 
