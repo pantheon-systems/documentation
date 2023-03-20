@@ -15,7 +15,7 @@ anchorid: quickstart
 editpath: quickstart/01-introduction.md
 ---
 
-Welcome! This guide is designed to get you started on Pantheon.
+Welcome! This guide is designed to get you started on Pantheon. All you need before you begin is a Pantheon account. If you don't have one, [sign up now for free](https://pantheon.io/register?docs).
 
 <Callout
   title="Getting Started Training"
@@ -31,8 +31,6 @@ In this guide, you will:
 - Deploy Drupal or WordPress to the site
 - Use separate Dev, Test, and Live environments in a best-practice development workflow
 - Perform on-server development via our SFTP Connection Mode
-
-All you need before you begin is a Pantheon account. If you don't have one, [sign up now for free](https://pantheon.io/register?docs).
 
 <Alert title="Note" type="info">
 
