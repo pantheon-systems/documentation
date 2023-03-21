@@ -10,6 +10,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [quicksilver]
+showtoc: true
 ---
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
@@ -82,7 +83,7 @@ protected_web_paths_override: true
 The standard protected web paths can be important to the security of your site. If you override protection with this property, be sure to copy all of the standard protected web paths into your `pantheon.yml` file, and only remove those that you are certain are safe to expose.
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
- 
+
 * [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
@@ -113,6 +114,16 @@ web_docroot: true
 The name of the nested directory is not configurable.
 
 For more information, see [Serving Sites from the Web Subdirectory](/nested-docroot).
+
+### Integrated Composer Build Step
+
+You can enable or disable Integrated Composer in the `pantheon.yml` file. For example, to enable Integrated Composer:
+
+```yaml:title=pantheon.yml
+build_step: true
+```
+
+Refer to [Integrated Composer](/guides/integrated-composer) for more information.
 
 ### PHP Version
 
