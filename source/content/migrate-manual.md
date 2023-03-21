@@ -9,6 +9,7 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [--]
 integration: [--]
+showtoc: true
 ---
 
 Manually migrate your site to Pantheon when any of the following apply:
