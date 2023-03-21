@@ -28,9 +28,15 @@ Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus dru
 
 ### Build Step Affected Files That Are Not Ignored by Git
 
-This error indicates that when running a `composer install` or `composer update` files which are already tracked in the Git repository were modified. Integrated Composer should not overwrite custom code and therefore will not continue with the build process. 
+This error occurs when your `composer install` or `composer update` files are tracked in your Git repository and are modified unexpectedly. This causes the build process to stop because Integrated Composer should not overwrite custom code.
 
-The solution to this is to either ensure that Composer does not modify these files, or that they are removed from being tracked in the Git repository. To remove from the Git repository, first remove the files, commit that removal, and then add the path to the `.gitignore` file so that they are not tracked again. 
+The solution is to ensure that Composer does not modify these files, and that the files are removed from being tracked in the Git repository.
+
+1. Remove the files from the Git repository.
+
+1. Commit the removal.
+
+1. Add the file paths to the `.gitignore` file so that the files are not tracked again.
 
 ### View the Output of the Commit Log First
 
@@ -167,19 +173,19 @@ code/web/wp-content/
 └─ themes/
 ```
 
-See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore).
 
 </Tab>
 
 </TabList>
 
-Refer to [Add a Dependency to an Individual Site](/guides/integrated-composer/dependencies) to add a module/plugin or theme as a dependency to your site.  
+Refer to [Add a Dependency to an Individual Site](/guides/integrated-composer/dependencies) to add a module/plugin or theme as a dependency to your site.
 
 ### Changes Lost During Upstream Updates
 
 When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
 
-There are two potential solutions to resolve this issue: 
+There are two potential solutions to resolve this issue:
 
 - If you have a copy of the `composer.json` file from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 
