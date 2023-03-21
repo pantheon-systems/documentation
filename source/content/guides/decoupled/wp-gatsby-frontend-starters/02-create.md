@@ -85,3 +85,16 @@ Make sure you meet the prerequisites below before you continue.
 1. Click **Build Details** to view the build log.
 
 1. Refer to the [Set Environment Variables](/guides/decoupled/wp-gatsby-frontend-starters/environment-variables) section to set environment variables for local development and Decoupled Preview, as well as steps to connect to Multidev environments.
+
+- text: 'Drupal + Next.js Frontend Starter'
+          url: '/guides/decoupled/drupal-nextjs-frontend-starters/'
+        - text: 'WordPress Decoupled Backend Starter'
+          url: '/guides/decoupled/wp-backend-starters'
+        - text: 'WordPress + Gatsby Frontend Starter'
+          url: '/guides/decoupled/wp-gatsby-frontend-starters/'
+        - text: 'Drupal Decoupled Backend Starter'
+          url: '/guides/decoupled/drupal-backend-starters'
+        - text: 'WordPress + Next.js Frontend Starter'
+          url: '/guides/decoupled/wp-nextjs-frontend-starters/'
+        - text: 'Create a Front-End Site without a Starter'
+          url: '/guides/decoupled/no-starter-kit'
