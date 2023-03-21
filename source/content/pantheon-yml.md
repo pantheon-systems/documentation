@@ -83,7 +83,7 @@ protected_web_paths_override: true
 The standard protected web paths can be important to the security of your site. If you override protection with this property, be sure to copy all of the standard protected web paths into your `pantheon.yml` file, and only remove those that you are certain are safe to expose.
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
- 
+
 * [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
@@ -117,13 +117,13 @@ For more information, see [Serving Sites from the Web Subdirectory](/nested-docr
 
 ### Integrated Composer Build Step
 
-Enables or disables Integrated Composer, for example to enable Integrated Composer:
+You can enable or disable Integrated Composer in the `pantheon.yml` file. For example, to enable Integrated Composer:
 
 ```yaml:title=pantheon.yml
 build_step: true
 ```
 
-For more information, see [Integrated Composer](/guides/integrated-composer).
+Refer to [Integrated Composer](/guides/integrated-composer) for more information.
 
 ### PHP Version
 
