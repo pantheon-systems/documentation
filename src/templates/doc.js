@@ -126,9 +126,7 @@ class DocTemplate extends React.Component {
                 </MDXProvider>
               </div>
             </article>
-            {node.frontmatter.showtoc && (
-              <TOC title="Contents" />
-            )}
+            <TOC title="Contents" />
             <GetFeedback
               formId="tfYOGoE7"
               page={node.frontmatter.title}
