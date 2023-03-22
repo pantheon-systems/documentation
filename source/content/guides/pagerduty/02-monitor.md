@@ -17,6 +17,12 @@ reviewed: "2020-08-18"
 ---
 In this lesson, we'll set up a new ping monitor to periodically check the site's availability in New Relic&reg; Synthetics.
 
+<Alert title="Note" type="info">
+
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+
+</Alert>
+
 ## Create a Monitor
 
 1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic** then **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Go to New Relic**.

@@ -32,4 +32,4 @@ Review our [Cron for WordPress](/guides/wordpress-developer/wordpress-cron) doc 
 
 ## WordPress Multisite
 
-Review our [WordPress Multisite](/guides/multisite/) guide to learn how Pantheon supports [WordPress Site Networks](https://wordpress.org/support/article/glossary/). WordPress Multisite lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Multisites can make it much easier to fix bugs and deploy new features across all of those sites.
+WordPress Multisite lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Multisites can make it much easier to fix bugs and deploy new features across all of those sites. Review our guide to learn how Pantheon supports [WordPress Multisite](/guides/multisite/).

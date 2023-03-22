@@ -11,8 +11,10 @@ product: [--]
 integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith, jspellman814, jazzsequence]
+layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/wordpress-composer-managed
+anchorid: wordpress-composer-managed
 ---
 
 <Alert title="Early Access" type="info" icon="leaf">

@@ -34,7 +34,7 @@ The following is a list of plugins that assume write access, and the specific fi
 | Plugin | Assumed Write Path | Notes |
 | --- | --- | --- |
 | [AccessAlly WordPress LMS](https://accessally.com/) | wp-content/accessally-protected-content | PROTECTED\_CONTENT\_FOLDER variable within the plugin assumes access to PATH |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
 | | wp-content/plugins/all-in-one-wp-migrations/storage |
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
 | [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) | wp-content/et-cache | Remember to repeat this process for each environment, including Multidevs. |
@@ -99,7 +99,7 @@ There is a very strong possibility this plugin will break the site's workflows, 
 
 </Alert>
 
-**Solution:** Use the platforms automated backups [from the Site Dashboard](/backups).
+**Solution:** Use the platforms automated backups [from the Site Dashboard](/guides/backups).
 
 ___
 
@@ -531,7 +531,7 @@ ___
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WordPress Multisite](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
 
 ___
 
@@ -559,7 +559,7 @@ ___
 
 <ReviewDate date="2022-03-09" />
 
-**Issue:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
+**Issue 1:** [Jetpack](https://wordpress.org/plugins/jetpack/) requires the XMLRPC interface to communicate with [Automattic](https://automattic.com/) servers. The Pantheon WordPress upstream [disables access to the XMLRPC endpoint](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks) by default as it is a common scanning target for bots and receives a lot of invalid traffic.
 
 **Solution:**
 
@@ -570,6 +570,17 @@ ___
 Pantheon does not support XML-RPC if it is enabled. You must resolve any issues you experience from enabling XMLPRC on your own.
 
 </Alert>
+
+**Issue 2:** Unexpected server port value error is reported by Jetpack in WP admin, where the fix suggested by the plugin causes critical errors on Pantheon. For example:
+
+![Jetpack error message unexpected Server port value](../images/jetpack-server-port-error.png)
+
+**Solution:**
+Adjust the fix suggested by Jetpack, so that `$_SERVER['SERVER_PORT']` is used instead. For example:
+
+```php
+define( 'JETPACK_SIGNATURE__HTTPS_PORT', $_SERVER['SERVER_PORT'] );
+```
 
 ___
 
@@ -594,7 +605,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/guides/custom-upstream) or [WordPress Multisite](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 
@@ -888,9 +899,9 @@ ___
 
 <ReviewDate date="2022-07-18" />
 
-**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/backups/) for more information.
+**Issue:** [Updraft](https://wordpress.org/plugins/updraftplus/) can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. Refer to [Backup Creation](/guides/backups/) for more information.
 
-**Solution:** Use the platform's automated backups [from the Site Dashboard](/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by:
+**Solution:** Use the platform's automated backups [from the Site Dashboard](/guides/backups). Consider using a bash script if you want to access your backups and copy it to your own repository (for example, Amazon S3, FTP server, etc.). You can do this by:
 
 - Running the bash script in your local system
 
@@ -898,7 +909,7 @@ ___
 
 - Using a service that runs cron jobs for you
 
-Refer to the [Access Backups](/backups#access-backups) documentation for more details.
+Refer to the [Access Backups](/guides/backups/access-backups) documentation for more details.
 
 ___
 
@@ -918,7 +929,7 @@ ___
 
 <ReviewDate date="2022-04-07" />
 
-**Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are write-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
+**Issue 1:** [WebP Express](https://wordpress.org/plugins/webp-express/) assumes write access to paths in the codebase that are read-only in non-development environments. The plugin uses `is_dir` to check for the path and a symlink to `files/` does not resolve the issue.
 
 **Solution:** Create a symlink for `wp-content/webp-express` in the wp-content directory and then run the following line of code:
 
@@ -1137,11 +1148,11 @@ Occassionally, when configuring the Web Application Firewall (WAF), it can resul
   ```php:title=wordfence-waf.php
   // Before removing this file, please verify the PHP ini setting `auto_prepend_file` does not point to this.
   // This file was the current value of auto_prepend_file during the Wordfence WAF installation
-  
+
   if (file_exists('/includes/prepend.php')) {
     include_once '/includes/prepend.php';
   }
-  
+
     define('WFWAF_DB_NAME', $_ENV['DB_NAME']);
     define('WFWAF_DB_USER', $_ENV['DB_USER']);
     define('WFWAF_DB_PASSWORD', $_ENV['DB_PASSWORD']);
@@ -1150,7 +1161,7 @@ Occassionally, when configuring the Web Application Firewall (WAF), it can resul
     define('WFWAF_DB_COLLATE', '');
     // Note the table prefix should reflect your WordPress application's table prefix. Update accordingly.
     define('WFWAF_TABLE_PREFIX', 'wp_');
-  
+
   if (file_exists('../../code/wp-content/plugins/wordfence/waf/bootstrap.php')) {
     define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
     include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
@@ -1250,7 +1261,7 @@ ___
 
 1. Activate both plugins from the dashboard.
 
-  WP Rocket will automatically make two changes as long as your environment is in SFTP mode. 
+  WP Rocket will automatically make two changes as long as your environment is in SFTP mode.
 
 1. Commit both changes to your site's codebase. If your environment is in GIT mode, you'll need to make these changes yourself.
 
@@ -1460,28 +1471,45 @@ ___
 
 ___
 
-## YITH WooCommerce Request a Quote
+## YITH WooCommerce Extensions with MPDF Library
 
-<ReviewDate date="2022-04-8" />
+<ReviewDate date="2023-03-09" />
 
-**Issue:** [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/) uses the MPFD library which assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
+### Affected Plugins
+- [YITH WooCommerce Request a Quote](https://yithemes.com/themes/plugins/yith-woocommerce-request-a-quote/)
+- [YITH WooCommerce PDF Invoice and Shipping List](https://yithemes.com/themes/plugins/yith-woocommerce-pdf-invoice/)
+- [YITH WooCommerce Gift Cards](https://yithemes.com/themes/plugins/yith-woocommerce-gift-cards/)
 
-**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/ywraq_mpdf_tmp`) by adding the following code sample to `functions.php`:
+**Issue:** Various YITH WooCommerce extensions use the MPFD library. This practice assumes write access to the site's codebase within the `wp-content/plugins` directory. This is applicable to the caching of PDFs, which is not granted on Test and Live environments on Pantheon. For additional details, refer to [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
-```php:title=wp-config.php
-/** Changes location where YITH WooCommerce Request a Quote stores PDF cache */
-add_filter( 'ywraq_mpdf_args', 'ywraq_mpdf_change_tmp_dir', 20, 1 );
-if ( ! function_exists( 'ywraq_mpdf_change_tmp_dir' ) ) {
-   function ywraq_mpdf_change_tmp_dir( $args ) {
+**Solution:**  Change the location where the plugin stores the PDF cache. Configure YITH WooCommerce Request a Quote to write files within the `wp-content/uploads` path for WordPress (`wp-content/uploads/yith-mpdf-tmp`) by adding the following code sample to `functions.php`:
+
+```php:title=functions.php
+/**
+ * Changes PDF cache location for YITH WooCommerce extensions.
+ *
+ * @param array $args The configuration for MPDF initialization.
+ * @return array The updated config with writable path.
+ */
+if ( ! function_exists( 'yith_mpdf_change_tmp_dir' ) ) {
+   function yith_mpdf_change_tmp_dir( array $args ): array {
       $upload_dir      = wp_upload_dir();
       $upload_dir      = $upload_dir['basedir'];
-      $args['tempDir'] = $upload_dir . '/ywraq_mpdf_tmp/';
+      $args['tempDir'] = $upload_dir . '/yith-mpdf-tmp/';
 
       return $args;
    }
 }
-```
 
+// Request a Quote
+add_filter( 'ywraq_mpdf_args', 'yith_mpdf_change_tmp_dir', 20, 1 );
+
+// PDF Invoice
+add_filter( 'yith_ywpdi_mpdf_args', 'yith_mpdf_change_tmp_dir', 10, 1 );
+
+// Gift Cards
+add_filter( 'yith_ywgc_mpdf_args', 'yith_mpdf_change_tmp_dir', 10, 1 );
+```
 ___
 
 ## Yoast SEO
@@ -1586,7 +1614,7 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 
 ### wp_filesystem->get_contents()
 
-**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail wFhen an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
+**Issue:** With [wp_filesystem->get_contents()](https://developer.wordpress.org/reference/classes/wp_filesystem_base/get_contents/), the function `wp_filesystem->get_contents()` can fail when an environment is in Git mode (as Test and Live always are) because it is aware of filesystem-level permissions which are restricted in this mode.
 
 **Solution:** As described in [this StackExchange answer](https://wordpress.stackexchange.com/questions/166161/why-cant-the-wp-filesystem-api-read-googlefonts-json/166172#166172), for cases where file ownership doesn't matter this function could be replaced with `file_get_contents()`. This is true of most cases where the file in question is only being read, not written to.
 

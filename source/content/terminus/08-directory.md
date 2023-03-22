@@ -34,6 +34,12 @@ Create a [GitHub](https://github.com) PR Workflow to test Pantheon sites on [Cir
 
   </Card>
 
+  <Card title={"Carbon"} isOfficial author={"Kyle Taylor"} authorLink={"https://github.com/kyletaylored"} link={"https://github.com/pantheon-systems/terminus-carbon-plugin"}>
+
+Fetch carbon impact and other sustainability data on your Pantheon sites.
+
+  </Card>
+  
   <Card title={"Composer"} isOfficial author={"Brian Thompson"} authorLink={"https://github.com/rvtraveller"} link={"https://github.com/pantheon-systems/terminus-composer-plugin"}>
 
 Run [Composer](https://getcomposer.org/) commands on Pantheon sites.

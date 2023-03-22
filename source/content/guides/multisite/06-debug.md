@@ -42,7 +42,16 @@ Use `wp super-admin list` to list current super admins, and `wp super-admin add`
 
 ### Error: Cookies are blocked or not supported by your browser
 
-See the related section in [Basic Troubleshooting](/basic-troubleshooting#error-cookies-are-blocked-or-not-supported-by-your-browser) for more information.
+**Solution 1:** Follow the steps in the [Basic Troubleshooting](/basic-troubleshooting#error-cookies-are-blocked-or-not-supported-by-your-browser) cookies section.
+
+**Solution 2:** Your WPMS installation might be serving cookies from a single domain. Try serving individually:
+
+```bash
+define('ADMIN_COOKIE_PATH', '/');
+define('COOKIE_DOMAIN', '');
+define('COOKIEPATH', '');
+define('SITECOOKIEPATH', '');
+```
 
 ### Error: "Error establishing a database connection"
 
@@ -52,8 +61,8 @@ Because it's a confusing error, it's helpful to understand how it's caused. This
 
 
 1. Create a new WordPress multisite instance with one site.
-2. Set the domain value in the `wp_blogs` table to `mstest.org` manually.
-3. Edit the `DOMAIN_CURRENT_SITE` constant to `mstest.dev` manually.
+1. Set the domain value in the `wp_blogs` table to `mstest.org` manually.
+1. Edit the `DOMAIN_CURRENT_SITE` constant to `mstest.dev` manually.
 
 When you visit `mstest.dev` in your browser, you'll see the “Error establishing database connection” message. Essentially, WordPress displays an error message because it couldn't find the requested site in the `wp_blogs` table.
 

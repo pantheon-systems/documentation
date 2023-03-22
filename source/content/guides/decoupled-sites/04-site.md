@@ -188,7 +188,7 @@ Prerequisites:
 
 * You are using a Git repository and you have connected your GitHub account. 
 
-* You are using WordPress as your CMS. You have installed your WordPress site using the Decoupled WordPress Recommended Project configuration, which has the `wp-graphql` plugin enabled.
+* You are using WordPress as your CMS. You have installed your WordPress site using the Decoupled WordPress Recommended Project configuration, which has the `wp-graphql` and `wp-gatsby` plugins enabled.
 
 Process
 

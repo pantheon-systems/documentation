@@ -29,7 +29,7 @@ This section provides information on how to enable Object Cache.
   terminus wp <site>.<env> -- plugin install wp-redis
   ```
 
-  If you use site networks, you must add the site URL by adding to the command: 
+  If you use WordPress Multisite, you must add the site URL by adding to the command: 
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis --url=<url>

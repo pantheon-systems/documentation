@@ -41,7 +41,7 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, <a cla
 The key functional differences are:
 
 - Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can't be mapped to sites on subdomains.
-- Using subdomains will require you to set up your own DNS and add each custom domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `*.<env>-<site>.pantheonsite.io` namespace for Site Networks.
+- Using subdomains will require you to set up your own DNS and add each custom domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `*.<env>-<site>.pantheonsite.io` namespace for WordPress Multisites.
 - Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain. In choosing subdirectories, all sites share the same domain and SSL certificate.
 
 ## Users are Shared
@@ -58,7 +58,7 @@ Note the difference between enabling and activating. Themes can be enabled for a
 
 Super users can also choose to activate plugins across the entire network; however, site administrators cannot override that activation. Plugins active across the entire network are stored within the `wp-content/plugins` and/or `wp-content/mu-plugins` directories and are **not** displayed within an individual site's plugins list. For more details, see [Multisite Network Administration: Plugins (WordPress docs)](https://wordpress.org/documentation/article/multisite-network-administration/).
 
-Now that you understand all of the important aspects to running a Site Network, the next section will take you through the full process of configuring one.
+Now that you understand all of the important aspects to running a WordPress Multisite, the next section will take you through the full process of configuring one.
 
 ## More Resources
 

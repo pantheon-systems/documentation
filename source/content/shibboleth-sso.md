@@ -228,7 +228,7 @@ composer require drupal/simplesamlphp_auth:"^4"
 
 ## WordPress Multisite Issues
 
-WordPress Multisite users have reported a possible solution to enable SSO on their site networks; modify `inc/class-wp-saml-auth.php` to include:
+WordPress Multisite users have reported a possible solution to enable SSO on their site; modify `inc/class-wp-saml-auth.php` to include:
 
 ```php:title=class-wp-saml-auth.php
 //$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_URL );

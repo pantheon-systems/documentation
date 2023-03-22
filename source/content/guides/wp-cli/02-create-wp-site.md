@@ -23,7 +23,7 @@ Be sure that you:
 
 - Are familiar with your operating system's command line.
 - Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
-- Have already created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
+- Have already created a [Pantheon account](https://pantheon.io/register?docs). Pantheon accounts are always free for development.
 
 ## Install and Authenticate Terminus
 

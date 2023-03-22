@@ -20,9 +20,7 @@ Pantheon does not offer DNS management services. However, we can help you to und
 ## DNS Provider Instructions
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
-
 <DNSProviderDocs />
-
 </Accordion>
 
 ## DNS Terminology

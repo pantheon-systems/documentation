@@ -59,6 +59,10 @@ Autopilot requires the following:
 - A Gold, Platinum, or Diamond account
 - [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
+- A supported framework:
+    - Drupal with Integrated Composer
+    - Drupal 8 with Integrated Composer or Drush 8
+    - WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
 
 ### Autopilot Site Compatibility
 
@@ -66,7 +70,7 @@ Autopilot requires the following:
 
 ## Autopilot For Agencies
 
-Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization. 
+Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization.
 
 Agency users can only access Autopilot through the Agency Workspace.
 

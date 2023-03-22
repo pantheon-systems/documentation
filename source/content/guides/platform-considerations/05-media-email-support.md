@@ -20,7 +20,7 @@ This section provides information on email and media support on the Pantheon pla
 
 ## Email and Deliverability
 
-Pantheon has a cloud-based infrastructure, which means that we cannot ensure the high deliverability of emails originating from your Application Containers, as they have no fixed location. 
+Pantheon has a cloud-based infrastructure, which means that we cannot ensure the high deliverability of emails originating from your Application Containers, as they have no fixed location.
 
 All sites have access to a local Postfix service for testing and development, however we recommend using an external SMTP gateway (for example SendGrid) in production to ensure that your email is delivered.
 
@@ -45,7 +45,7 @@ $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 
 For existing sites that already have an active database:
 
-1. Install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. 
+1. Install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`.
 
 1. Clear Drush cache using [Terminus](/terminus) after you've installed the command in `/sites/all/drush`. This allows the new command to run.
 
@@ -53,7 +53,7 @@ For existing sites that already have an active database:
     terminus drush <site>.<env> -- cc drush
     ```
 
-1. Create a [backup](/backups) of the site database, then place the site in maintenance mode and run the following command:
+1. Create a [backup](/guides/backups) of the site database, then place the site in maintenance mode and run the following command:
 
     ```bash{promptUser: user}
     terminus drush <site>.<env> -- utf8mb4-convert-databases
@@ -68,7 +68,7 @@ This will convert the database tables in the existing installation to the correc
 - PDFs
 - Video background images
 - Streaming content such as:
-    - [Podcasts](https://itunespartner.apple.com/podcasts/articles/creating-your-show_requirements) 
+    - [Podcasts](https://itunespartner.apple.com/podcasts/articles/creating-your-show_requirements)
     - Videos with pause and resume functions
 
 Byte-range request header parameters are not supported on Pantheon. Modules and plugins that require specified byte-ranges will not work.
@@ -77,9 +77,26 @@ Byte-range request header parameters are not supported on Pantheon. Modules and 
 
 You might experience issues with PDF viewer plugins that rely on Mozilla's [PDF.js](https://github.com/mozilla/pdf.js) viewer code. It is possible to work around this issue by modifying `PDF.js` to enable the [DisableRange](https://github.com/mozilla/pdf.js/blob/master/src/display/api.js#L169-L171) option.
 
+## Large Files and Highly Populated Directories
+
+The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure is not optimized to store and deliver large files. Refer to [Large Files](/guides/filesystem/large-files#large-files) for more information on file size limitations.
+
+Highly populated directories can cause a small decline in performance at around 50,000 files in a single directory, and a significant performance drop at over 100,000 files. Refer to [Highly Populated Directories](/guides/filesystem/large-files#highly-populated-directories) for more information on how to refactor your file structure.
+
 ## Image Optimization Tools
 
-Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues/#imageapi-optimize)
+Image optimization libraries have to be installed on the server, including:
+
+- advpng
+- OptiPNG
+- PNGCRUSH
+- jpegtran
+- jfifremove
+- advdef
+- pngout
+- jpegoptim
+
+At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues/#imageapi-optimize)
 
 Pantheon also offers Image Optimization as part of [Advanced Global CDN](/guides/agcdn). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/professional-services?docs) for more information.
 
@@ -94,5 +111,5 @@ It is also possible to deliver smaller media files from Pantheon using [progress
 ## More Resources
 
 - [Images and Media](/guides/frontend-performance/media)
-
 - [Upload Media WordPress](/guides/wordpress-git/media/)
+- [Large Files and Highly Populated Directories](/guides/filesystem/large-files)

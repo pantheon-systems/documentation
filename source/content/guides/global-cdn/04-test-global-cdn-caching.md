@@ -17,7 +17,6 @@ integration: [--]
 
 This section provides steps on how to test your Global CDN caching.
 
-
 ## Test CDN Caching with curl
 
 1. Review the command instructions:
@@ -27,7 +26,7 @@ This section provides steps on how to test your Global CDN caching.
     - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
 
     - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
-    
+
     - The `egrep '(HTTP|cache-control|age:)'` command limits the output to include only the relevant information.
 
 1. Run the command below in a terminal with your full Pantheon domain URL.
@@ -37,7 +36,7 @@ This section provides steps on how to test your Global CDN caching.
       HTTP/2 200
       cache-control: public, max-age=86400
       age: 65772
-      ```    
+      ```
 
 1. Add the `Pantheon-Debug: 1` header to your request to view the `Surrogate-Key-Raw` header:
 
@@ -49,7 +48,7 @@ This section provides steps on how to test your Global CDN caching.
     age: 71611
     ```
 
-1. Remove the pipe (`|`) and everything following it from these commands to see all headers. 
+1. Remove the pipe (`|`) and everything following it from these commands to see all headers.
 
 ## Test Global CDN with Browser Headers
 
@@ -93,13 +92,13 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
   - `no-cache, must-revalidate, post-check=0, pre-check=0` typically indicates that there is a conflict in Drupal's default header.
 
-- **All static assets** 
-  
+- **All static assets**
+
   - Includes images and other assets on production environments (Test and Live) are set with a `max-age` of 366 days. We recommend using new file names or appending a changeable query string if content needs to change earlier. Development environments (Dev and Multidevs) intentionally do not cache static assets.
 
 - **X-Pantheon-Styx-Hostname**
 
-  - Hostname of the Pantheon load balancing server at the origin datacenter. There are a number of these servers, and each request may be served by a different server.
+  - Hostname of the Pantheon load balancing server at the origin data center. There are a number of these servers, and each request may be served by a different server.
 
 - **Server: nginx**
 
@@ -115,11 +114,11 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
 - **X-Served-By**
 
-  - Hostnames of CHI metro points of presence (POPs) from the Global CDN that the request routed through. The names are typically based on the codes for nearby airports. The first entry is the POP close to the origin datacenter. The second entry (if one exists) is the POP close to the device loading the page.
+  - Hostnames of CHI metro points of presence (POPs) from the Global CDN that the request routed through. The names are typically based on the codes for nearby airports. The first entry is the POP close to the origin data center. The second entry (if one exists) is the POP close to the device loading the page.
 
 - **X-Cache**
 
-  - The hit and miss values shown here correspond to the POPs listed in X-Served-By. A request can "hit" in Global CDN either close to the device loading the page or close to the origin datacenter.
+  - The hit and miss values shown here correspond to the POPs listed in X-Served-By. A request can "hit" in Global CDN either close to the device loading the page or close to the origin data center.
 
 - **Age: 233**
 
@@ -134,5 +133,4 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 ## More Resources
 
 - [Drupal Performance and Caching Settings](/drupal-cache)
-
 - [WordPress Pantheon Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin)

@@ -10,6 +10,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [quicksilver]
+showtoc: true
 ---
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
@@ -82,7 +83,7 @@ protected_web_paths_override: true
 The standard protected web paths can be important to the security of your site. If you override protection with this property, be sure to copy all of the standard protected web paths into your `pantheon.yml` file, and only remove those that you are certain are safe to expose.
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
- 
+
 * [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
@@ -114,6 +115,16 @@ The name of the nested directory is not configurable.
 
 For more information, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
+### Integrated Composer Build Step
+
+You can enable or disable Integrated Composer in the `pantheon.yml` file. For example, to enable Integrated Composer:
+
+```yaml:title=pantheon.yml
+build_step: true
+```
+
+Refer to [Integrated Composer](/guides/integrated-composer) for more information.
+
 ### PHP Version
 
 Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
@@ -136,7 +147,7 @@ php_version: 8.0
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
-1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. 
+1. Enable [automated backups](/guides/backups) and [confirm that a backup has been created](/guides/backups/create-backups) before you configure the database version.
 
 1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 

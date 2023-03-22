@@ -19,6 +19,12 @@ integration: [--]
 
 This pages includes information on optimizing media, such as images and iframes.
 
+<Alert title="Note"  type="info" >
+
+Pantheon supports a maximum upload resolution of 3999 pixels for images.
+
+</Alert>
+
 ## Lazy-loading Images
 
 Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport. Lazy-loading media elements, especially images, is a powerful way to increase perceived performance and reduce time-to-first-render.
@@ -49,7 +55,7 @@ Social sharing links are often good candidates here and are freely available in 
 
 ### Send Only as Many Pixels as Needed
 
-Images might be expected to grow and shrink by large amounts according to device and browser size, but it's overkill to use a 4000x4000 pixel image within an element that will never render larger than 200x200 pixels.
+Images might be expected to grow and shrink by large amounts according to device and browser size, but it's excessive to use a 3999x3999 pixel image within an element that will never render larger than 200x200 pixels.
 
 One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that the older `<img>` tag did not. The latest version of Drupal and WordPress core support this tag by default. Drupal 7 support has been backported to the [Picture](https://www.drupal.org/project/picture) module.
 
@@ -65,7 +71,7 @@ Use this new [HTML Tag](https://www.w3schools.com/tags/tag_picture.asp) to defin
 
 ### Send Only as Many Bytes as Needed
 
-Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option to do so.
+Resizing an image so that you can send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option to do so.
 
 The Pantheon Global CDN is limited to IO Starter. Sites that rely on a third-party CDN service provider might have the option of smushing at the CDN level for image optimization.
 

@@ -23,7 +23,7 @@ This section provides solutions for common New Relic troubleshooting scenarios.
 
 1. Select the User Account in the New Relic Dashboard.
 
-1. Select **Log Out** from the drop-down menu. 
+1. Select **Log Out** from the drop-down menu.
 
 1. Navigate to the Site Dashboard and click the **Go to New Relic** button.
 

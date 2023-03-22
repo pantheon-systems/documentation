@@ -24,7 +24,7 @@ This section provides information on how to enable backups, test your email plug
 
 1. Repeat these steps for the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live** environments.
 
-Refer to [Backups Tool](/backups) for more information on this feature.
+Refer to [Backups Tool](/guides/backups) for more information on this feature.
 
 ## Enable and Test Email Plugin/Module (Optional)
 
@@ -76,7 +76,7 @@ Follow the steps below to [test Pantheon's Global CDN](/guides/global-cdn/test-g
 
 ## More Resources
 
-- [Backups Tool](/backups)
+- [Backups Tool](/guides/backups)
 
 - [Email on Pantheon](/email)
 

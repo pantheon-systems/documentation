@@ -19,7 +19,7 @@ This section provides steps to switch an existing site's Custom Upstream to a di
 
 <Alert title="Warning" type="danger">
 
-Switching the upstream of an existing site is risky. It is safer to create a new site from your Custom Upstream and migrate the contents. [Back up](/backups) your site first and consider our documentation on [upstream merge conflicts](/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) if you must switch upstreams.
+Switching the upstream of an existing site is risky. It is safer to create a new site from your Custom Upstream and migrate the contents. [Back up](/guides/backups) your site first and consider our documentation on [upstream merge conflicts](/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) if you must switch upstreams.
 
 </Alert>
 

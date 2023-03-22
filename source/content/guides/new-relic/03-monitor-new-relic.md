@@ -17,6 +17,12 @@ permalink: docs/guides/new-relic/monitor-new-relic
 
 This section provides information on how to monitor and improve site performance with New Relic&reg;.
 
+<Alert title="Note" type="info">
+
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+
+</Alert>
+
 ## Monitor and Improve Performance
 
 New Relic&reg;'s Dashboard opens with a high-level breakdown of application performance by dividing response time into three segments in its main graph:
