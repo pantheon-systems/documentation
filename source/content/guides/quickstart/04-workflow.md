@@ -12,7 +12,6 @@ integration: [--]
 tags: [dashboard, site, workflow]
 showtoc: true
 permalink: docs/guides/quickstart/workflow/
-anchorid: site-dashboard
 editpath: quickstart/04-workflow.md
 ---
 

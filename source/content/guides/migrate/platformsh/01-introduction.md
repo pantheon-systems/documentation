@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/platformsh
-anchorid: platformsh
 editpath: migrate/platformsh/01-introduction.md
 reviewed: "2022-12-13"
 ---

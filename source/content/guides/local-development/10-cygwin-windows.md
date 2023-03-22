@@ -11,9 +11,7 @@ cms: []
 audience: [development]
 product: []
 integration: []
-layout: guide
 permalink: docs/guides/local-development/cygwin-windows
-anchorid: cygwin-windows
 ---
 
 This section provides information on local development configuration with Cygwin for Windows environments.

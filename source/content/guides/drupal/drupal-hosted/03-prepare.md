@@ -4,9 +4,7 @@ subtitle: Prepare
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted/prepare
-anchorid: prepare
 editpath: hosted/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]

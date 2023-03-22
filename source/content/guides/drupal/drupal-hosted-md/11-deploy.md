@@ -4,9 +4,7 @@ subtitle: Deploy
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-md/deploy
-anchorid: deploy
 editpath: drupal/drupal-hosted-md/11-deploy.md
 reviewed: "2022-12-13"
 contenttype: [guide]

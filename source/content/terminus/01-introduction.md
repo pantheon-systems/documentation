@@ -15,8 +15,6 @@ product: [terminus]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus
-anchorid: terminus
-image: terminus-thumbLarge
 reviewed: "2020-02-05"
 ---
 

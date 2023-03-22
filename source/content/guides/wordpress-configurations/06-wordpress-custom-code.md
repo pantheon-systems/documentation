@@ -12,7 +12,6 @@ integration: [plugins]
 tags: [workflow, code]
 contributors: [afragen, petersuhm]
 permalink: docs/guides/wordpress-configurations/wordpress-custom-code
-anchorid: wordpress-custom-code
 ---
 
 This section provides information on how to manage custom plugins and themes on your WordPress Pantheon site.

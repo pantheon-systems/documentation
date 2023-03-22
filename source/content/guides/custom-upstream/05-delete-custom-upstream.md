@@ -3,10 +3,8 @@ title: Delete a Custom Upstream
 subtitle: Delete a Custom Upstream
 description: Learn how to delete a Custom Upstream.
 tags: [upstreams, workflow, webops, D8, D9, D10]
-layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/delete-custom-upstream
-anchorid: delete-custom-upstream
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]

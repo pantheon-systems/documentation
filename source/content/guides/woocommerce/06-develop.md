@@ -2,10 +2,6 @@
 title: WooCommerce Quick Start
 subtitle: Continue Development
 description: In step six of the WooCommerce Quick Start guide, we further customize our new site by removing unused themes.
-woocommerce: true
-anchorid: develop
-generator: pagination
-layout: guide
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]
@@ -15,17 +11,8 @@ product: [--]
 integration: [woocommerce]
 tags: [iterate, plugins, site, themes, webops]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/develop/
-nexturl: guides/woocommerce/launch/
-nextpage: Launch Your Store
-previousurl: guides/woocommerce/initialize-prod/
-previouspage: Initialize Production
 editpath: woocommerce/06-develop.md
-image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 It's a good security practice to remove any plugins or themes you aren't using. So let's get rid of the themes we aren't using. We'll make the change in our **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, then move it to our **<span class="glyphicons glyphicons-equalizer"></span> Test** environment to QA, and then move it to **<span class="glyphicons glyphicons-cardio"></span> Live**.
 

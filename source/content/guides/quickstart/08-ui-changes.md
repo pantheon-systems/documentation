@@ -12,7 +12,6 @@ integration: [--]
 tags: [dashboard, iterate, site, workflow]
 showtoc: true
 permalink: docs/guides/quickstart/ui-changes/
-anchorid: ui-changes
 editpath: quickstart/08-ui-changes.md
 ---
 

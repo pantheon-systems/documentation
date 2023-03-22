@@ -4,10 +4,8 @@ subtitle: Introduction
 description: Learn how to update a Drupal site to the latest version of Drupal
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createbt
-anchorid: drupal-hosted-createbt
 editpath: drupal/drupal-hosted-createbt/01-introduction.md
 reviewed: "2022-12-12"
 contenttype: [guide]

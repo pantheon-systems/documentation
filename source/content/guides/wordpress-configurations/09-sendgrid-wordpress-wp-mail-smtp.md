@@ -13,7 +13,6 @@ integration: [email]
 tags: [email, plugins]
 reviewed: "2020-11-02"
 permalink: docs/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp
-anchorid: sendgrid-wordpress-wp-mail-smtp
 ---
 
 This section provides information on how to configure WP Mail SMTP to work with SendGrid.

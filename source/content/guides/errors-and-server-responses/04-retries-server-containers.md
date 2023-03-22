@@ -4,10 +4,8 @@ subtitle: Retries Across Application Server Containers (High Availability)
 description: Learn more about application server containers on Pantheon.
 tags: [services]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/retries-server-containers
-anchorid: retries-server-containers
 contenttype: [guide]
 innav: [false]
 categories: [issues]

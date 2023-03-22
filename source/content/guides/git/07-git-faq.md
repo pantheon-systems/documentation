@@ -4,10 +4,8 @@ subtitle: FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
 tags: [git, iterate, local, workflow]
 contributors: [mrfelton, alexfornuto]
-layout: guide
 showtoc: true
 permalink: docs/guides/git/faq-git
-anchorid: faq-git
 contenttype: [guide]
 innav: [false]
 categories: [git]

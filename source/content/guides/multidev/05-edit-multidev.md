@@ -11,10 +11,8 @@ product: [multidev]
 integration: [--]
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev/edit-multidev
-anchorid: edit-multidev
 ---
 
 This section provides steps on how to make edits, merge code in your Multidev environments, and rename a branch.

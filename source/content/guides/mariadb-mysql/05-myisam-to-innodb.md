@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [database, cli]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/myisam-to-innodb
-anchorid: myisam-to-innodb
 ---
 
 This section provides information on how to convert MySQL Tables from MyISAM to InnoDB.

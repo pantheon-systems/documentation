@@ -4,10 +4,8 @@ subtitle: Introduction
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
 tags: [git, cli, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/git
-anchorid: git
 contenttype: [guide]
 innav: [true]
 categories: [git]

@@ -2,12 +2,10 @@
 title: Launch Essentials
 subtitle: Advanced cURLs for Site Migration
 description: Use advanced cURL techniques to migrate and prepare your site for launch.
-layout: guide
 showtoc: true
 tags: [backup, launch, webops]
 contributors: [whitneymeredith]
 permalink: docs/guides/launch/advanced-curls/
-anchorid: advanced-curls
 contenttype: [guide]
 innav: [false]
 categories: [migrate, launch, domains]

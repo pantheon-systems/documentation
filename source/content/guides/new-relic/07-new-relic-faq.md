@@ -11,10 +11,8 @@ product: [newrelic]
 integration: [--]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/new-relic-faq
-anchorid: new-relic-faq
 ---
 
 This section provides answers to frequently asked New Relic&reg; questions.

@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [logs, measure]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/logs-pantheon/faq-logs
-anchorid: faq-logs
 ---
 
 This section provides answers to frequently asked questions about log files.

@@ -4,10 +4,8 @@ subtitle: Prepare
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-deprecated-upstream/prepare
-anchorid: prepare
 editpath: drupal/drupal-hosted-deprecated-upstream/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]

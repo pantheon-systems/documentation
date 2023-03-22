@@ -7,7 +7,6 @@ contributors: [joa-pan, joa-pan, backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/considerations
-anchorid: considerations
 reviewed: "2022-08-11"
 contenttype: [guide]
 innav: [false]

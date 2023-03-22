@@ -5,10 +5,8 @@ description: Learn how to apply One-click updates with Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
 reviewed: "2022-12-13"
-layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/one-click-updates
-anchorid: one-click-updates
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]

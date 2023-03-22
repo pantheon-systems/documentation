@@ -4,9 +4,7 @@ subtitle: Prepare
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createempty-md/prepare
-anchorid: prepare
 editpath: drupal/drupal-hosted-createempty-md/03-prepare.md
 reviewed: "2021-03-31"
 contenttype: [guide]

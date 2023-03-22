@@ -4,10 +4,8 @@ subtitle: FAQs
 description: Get answers to your AGCDN questions.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-faq
-anchorid: agcdn-faq
 contenttype: [guide]
 innav: [false]
 categories: [optimize]

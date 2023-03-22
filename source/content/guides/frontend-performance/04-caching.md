@@ -2,14 +2,11 @@
 title: Frontend Performance
 subtitle: Caching
 description: Caching strategies for improved performance.
-anchorid: caching
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md
-image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
 innav: [false]

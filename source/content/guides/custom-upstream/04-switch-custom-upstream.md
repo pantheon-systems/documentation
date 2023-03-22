@@ -3,10 +3,8 @@ title: Switch Your Custom Upstream
 subtitle: Switch Your Custom Upstream
 description: Learn how to switch your Custom Upstream. 
 tags: [upstreams, workflow, webops, D8, D9, D10 ]
-layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/switch-custom-upstream
-anchorid: switch-custom-upstream
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]

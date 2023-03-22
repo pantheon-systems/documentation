@@ -4,10 +4,8 @@ subtitle: Add Contrib and Custom Code
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createcustom/contrib-custom
-anchorid: contrib-custom
 editpath: drupal/drupal-hosted-createcustom/05-contrib-custom.md
 reviewed: "2022-12-12"
 contenttype: [guide]

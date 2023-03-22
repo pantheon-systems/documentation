@@ -5,10 +5,8 @@ description: Learn how to add a custom domain.
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/custom-domains
-anchorid: custom-domains
 contenttype: [guide]
 innav: [false]
 categories: [domains]

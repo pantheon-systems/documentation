@@ -12,7 +12,6 @@ integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
 type: guide
 permalink: docs/guides/support/curl
-anchorid: curl
 contributors: [whitneymeredith]
 ---
 

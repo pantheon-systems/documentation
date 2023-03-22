@@ -9,10 +9,8 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [winscp]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/winscp
-anchorid: winscp
 ---
 
 This section provides information on how to use WinSCP with Pantheon.

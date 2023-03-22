@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/redis-command-line
-anchorid: redis-command-line
 ---
 
 This section provides information on how to use the Redis Command Line to manage Object Cache.

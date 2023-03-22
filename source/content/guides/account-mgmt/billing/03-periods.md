@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [billing]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/billing/periods
-anchorid: periods
 editpath: docs/guides/account-mgmt/billing/03-periods.md
 reviewed: "2022-09-19"
 ---

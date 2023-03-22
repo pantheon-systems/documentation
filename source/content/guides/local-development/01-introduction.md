@@ -12,10 +12,8 @@ integration: []
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development
-anchorid: local-development
 ---
 
 Pantheon's [Localdev](/guides/localdev) has been deprecated. However, there are many local development options for the Pantheon platform available for use on Pantheon. This guide provides an overview of several popular local development tools to help you get started.

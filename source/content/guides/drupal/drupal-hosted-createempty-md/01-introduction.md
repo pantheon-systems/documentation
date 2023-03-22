@@ -4,9 +4,7 @@ subtitle: Introduction
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createempty-md
-anchorid: drupal-hosted-createempty-md
 editpath: drupal/drupal-hosted-createempty-md/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]

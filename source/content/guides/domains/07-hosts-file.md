@@ -4,10 +4,8 @@ subtitle: Modify the Local Hosts File
 description: Use your local hosts file to test domain-specific settings and DNS records.
 tags: [cli, dns, local]
 contributors: [alexfornuto]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/hosts-file
-anchorid: hosts-file
 contenttype: [guide]
 innav: [false]
 categories: [domains]

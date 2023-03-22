@@ -10,12 +10,10 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dns, https, redirects]
-layout: guide
 contributors: [wordsmither]
 reviewed: "2022-08-01"
 showtoc: true
 permalink: docs/guides/redirect/advanced
-anchorid: advanced
 ---
 
 Basic domain and HTTPS redirection can be handled by the [Primary Domain](/guides/redirect#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.

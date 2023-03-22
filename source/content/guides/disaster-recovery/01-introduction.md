@@ -2,14 +2,11 @@
 title: Pantheon Disaster Recovery Playbook
 subtitle: Introduction
 description: Address emergency downtime situations on the Pantheon platform
-generator: pagination
-layout: guide
 tags: [webops]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
 type: guide
 permalink: docs/guides/disaster-recovery
-anchorid: disaster-recovery
 editpath: disaster-recovery/01-introduction.md
 contenttype: [guide]
 innav: [true]

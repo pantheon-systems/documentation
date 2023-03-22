@@ -8,7 +8,6 @@ layout: terminuspage
 contributors: [greg-1-anderson]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/terminus-3-0
-anchorid: terminus-3-0
 contenttype: [guide]
 innav: [false]
 categories: [cli]

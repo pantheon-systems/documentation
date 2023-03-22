@@ -2,8 +2,6 @@
 title: Incident Management
 subtitle: Notifications
 description: Page four of our guide on Pagerduty integration with New Relic for incident management.
-anchorid: notify
-layout: guide
 contenttype: [guide]
 innav: [false]
 categories: [track]

@@ -12,7 +12,6 @@ integration: [--]
 tags: [collaborate, composer, continuous-integration, webops, workflow]
 type: guide
 showtoc: true
-anchorid: support
 permalink: docs/guides/support/
 editpath: support/01-scope.md
 reviewed: "2022-12-13"

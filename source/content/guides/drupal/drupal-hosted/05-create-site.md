@@ -4,9 +4,7 @@ subtitle: Create the Drupal Site
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted/create-site
-anchorid: create-site
 editpath: hosted/05-create-site.md
 reviewed: "2022-12-12"
 contenttype: [guide]

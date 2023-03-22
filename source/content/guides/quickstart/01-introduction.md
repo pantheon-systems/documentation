@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [launch, sandbox, site, webops, workflow]
 permalink: docs/guides/quickstart/
-anchorid: quickstart
 editpath: quickstart/01-introduction.md
 ---
 

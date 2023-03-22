@@ -1,21 +1,22 @@
 ---
-title: Hover Domain Configuration
-provider: Hover
-description: Learn how to point your Hover domain to a Pantheon site.
-tags: [domains]
+title: Easy DNS Domain Configuration
+provider: Easy DNS
+description: Learn how to point your Easy DNS domain to a Pantheon site.
+tags: [dns]
 draft: true
 permalink: docs/:basename
-editpath: dns-providers/hover.md/
+editpath: dns-providers/easy-dns.md/
 contenttype: [doc]
 innav: [true]
-categories: [domains]
+categories: [domains, launch]
 cms: [--]
 audience: [--]
 product: [--]
-integration: [cloudflare, hover]
+integration: [--]
 ---
 ## Before You Begin
 Be sure that you have a:
+
 
 - Registered domain name using Cloudflare to host DNS
 - [Paid Pantheon plan](/guides/launch/plans)

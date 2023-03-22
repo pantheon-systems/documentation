@@ -10,10 +10,8 @@ audience: [development]
 product: [terminus]
 integration: []
 tags: [collaborate, continuous-integration, git, iterate]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/jenkins
-anchorid: jenkins
 reviewed: "2022-12-13"
 ---
 

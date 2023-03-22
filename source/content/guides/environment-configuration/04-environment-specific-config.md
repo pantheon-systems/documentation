@@ -5,10 +5,8 @@ description: Learn how to turn WordPress site plugins on and off based on the en
 tags: [workflow]
 reviewed: "2020-08-11"
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config
-anchorid: environment-specific-config
 contenttype: [guide]
 innav: [false]
 categories: [config]

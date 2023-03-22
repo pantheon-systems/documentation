@@ -12,7 +12,6 @@ integration: [--]
 tags: [dashboard, iterate, launch, webops, workflow]
 showtoc: true
 permalink: docs/guides/quickstart/clone-live-to-dev/
-anchorid: clone-live-to-dev
 editpath: quickstart/06-clone-live-to-dev.md
 ---
 

@@ -2,8 +2,6 @@
 title: WordPress Multisite
 subtitle: Workflows
 description: Learn more about WordPress Multisite workflows.
-anchorid: media
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]
@@ -14,10 +12,7 @@ product: [--]
 integration: [--]
 tags: [multisite, workflow]
 permalink: docs/guides/multisite/workflows/
-nexturl: guides/multisite/debug/
-previousurl: guides/multisite/workflows/
 editpath: multisite/05-workflows.md
-image: multisite
 ---
 This section provides information on important Multisite fundamentals.
 

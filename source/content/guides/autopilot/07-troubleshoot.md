@@ -4,9 +4,7 @@ subtitle: Troubleshoot Autopilot Error Messages
 description: Diagnose and remedy some common Autopilot errors.
 tags: [autopilot, troubleshoot, webops]
 type: guide
-layout: guide
 showtoc: true
-anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/07-troubleshoot.md
 reviewed: "2022-11-01"

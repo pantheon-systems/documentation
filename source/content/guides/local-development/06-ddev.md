@@ -11,10 +11,8 @@ audience: [development]
 product: [terminus]
 integration: []
 tags: [code, iterate, local, webops]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/ddev
-anchorid: ddev
 ---
 
 This section provides information on how to use DDEV for local development with Drupal sites on Pantheon.

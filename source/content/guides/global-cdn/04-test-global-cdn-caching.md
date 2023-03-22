@@ -4,10 +4,8 @@ subtitle: Test Global CDN Caching
 description: Detailed information on how to determine if CDN caching is working on your site.
 tags: [cache, cdn]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/test-global-cdn-caching
-anchorid: test-global-cdn-caching
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]

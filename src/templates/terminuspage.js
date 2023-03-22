@@ -204,18 +204,6 @@ class TerminusTemplate extends React.Component {
                     </div>
                   )}
                 </div>
-                <NavButtons
-                  prev={
-                    node.frontmatter.previousurl
-                      ? `/${node.frontmatter.previousurl}`
-                      : null
-                  }
-                  next={
-                    node.frontmatter.nexturl
-                      ? `/${node.frontmatter.nexturl}`
-                      : null
-                  }
-                />
               </main>
             </div>
           </div>
@@ -240,8 +228,6 @@ export const pageQuery = graphql`
         title
         subtitle
         description
-        nexturl
-        previousurl
         showtoc
         contributors {
           id

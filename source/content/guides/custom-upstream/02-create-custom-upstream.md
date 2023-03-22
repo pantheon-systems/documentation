@@ -3,10 +3,8 @@ title: Create a Custom Upstream
 subtitle: Create a Custom Upstream
 description: Connect a remote repository to your Pantheon account and use it as a starting point for new sites.
 tags: [upstreams, workflow, webops, D8, D9, D10]
-layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/create-custom-upstream
-anchorid: create-custom-upstream
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]

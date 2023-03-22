@@ -4,10 +4,8 @@ subtitle: Introduction
 description: Improve site performance and security with Pantheon's Global CDN.
 tags: [cache, cdn, launch, security]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn
-anchorid: global-cdn
 contenttype: [guide]
 innav: [true]
 categories: [cache, optimize]

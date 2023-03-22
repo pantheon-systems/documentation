@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-layout: guide
 permalink: docs/guides/object-cache/remove-object-cache
-anchorid: remove-object-cache
 ---
 
 This section provides information on how to safely remove Object Cache.

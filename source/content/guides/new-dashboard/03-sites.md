@@ -12,10 +12,8 @@ integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [joa-pan, michellecolon-pantheon]
 reviewed: "2022-07-20"
-layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/sites
-anchorid: new-dashboard
 editpath: new-dashboard/03-sites.md
 ---
 

@@ -4,9 +4,7 @@ subtitle: Apply Updates
 description: Learn how to apply Autopilot updates.
 tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 type: guide
-layout: guide
 showtoc: true
-anchorid: apply-updates
 permalink: docs/guides/autopilot/apply-updates/
 editpath: autopilot/05-apply-updates.md
 reviewed: "2022-12-14"

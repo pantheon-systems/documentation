@@ -1,7 +1,6 @@
 ---
 title: Cloudflare Domain Configuration
 provider: Cloudflare
-dnsprovider: true
 description: Learn how to point your domain to a Pantheon site using Cloudflare
 tags: [domains]
 permalink: docs/:basename

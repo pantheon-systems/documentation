@@ -11,10 +11,8 @@ product: [siteportfolio]
 integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/invoices
-anchorid: invoices
 ---
 
 This section provides information on how you can access and interact with the invoices in the Enterprise Billing Center.

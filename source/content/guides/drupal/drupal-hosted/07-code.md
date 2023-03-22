@@ -4,9 +4,7 @@ subtitle: Upgrade the Code
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, stovak]
-layout: guide
 permalink: docs/guides/drupal-hosted/code
-anchorid: code
 editpath: hosted/07-code.md
 reviewed: "2022-12-12"
 contenttype: [guide]

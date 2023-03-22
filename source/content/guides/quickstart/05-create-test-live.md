@@ -12,7 +12,6 @@ integration: [--]
 tags: [dashboard, iterate, launch, workflow]
 showtoc: true
 permalink: docs/guides/quickstart/create-test-live/
-anchorid: create-test-live
 editpath: quickstart/05-create-test-live.md
 ---
 

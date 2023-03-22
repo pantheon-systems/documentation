@@ -3,10 +3,8 @@ title: Introduction to Custom Upstreams
 subtitle: Introduction
 description: Learn how to use Custom Upstreams to free up developer time.
 tags: [collaborate, launch, upstreams, webops, workflow, D8, D9, D10]
-layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream
-anchorid: custom-upstream
 contenttype: [guide]
 innav: [true]
 categories: [custom-upstreams]
