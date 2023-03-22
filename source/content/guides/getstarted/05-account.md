@@ -1,7 +1,7 @@
 ---
 title: Get Started with Pantheon
-subtitle: Pantheon Tools
-description: Tools and techniques to improve your website's accessibility.
+subtitle: Set up Your Account
+description: Create workspaces, invite team members and purchase a plan.
 contenttype: [guide]
 innav: [false]
 categories: [overview]
@@ -18,36 +18,49 @@ anchorid: getstarted/account
 editpath: getstarted/05-account.md
 ---
 
-This section provides an overview of the tools offered by Pantheon that can help you improve your website's accessibility.
+<Alert title="Note" type="info" >
 
-## Custom Upstreams
+If you are a one-person shop, and will only ever be a one-person shop, you could skip this section.  However, you may want to consider planning for growth, and perform all the steps on this page.
 
-A Custom Upstream is a repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams (WordPress, Drupal) and acts as a parent for site level repositories.
+</Alert>
 
-*How does this support accessibility?* After you've built an accessible site, you can use it to create other sites.
+## Create A Workspace
 
-Refer to the [Custom Upstreams](/guides/custom-upstream) guide for details.
+Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.  You can learn more about Workspaces in [Workspaces, Sites and Teams](/guides/account-mgmt/workspace-sites-teams).
 
-## Autopilot
+To create a workspace:
 
-Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
+You can create as many workspaces as necessary. The following process will create a Silver Tier Professional workspace.
 
-*How does this support accessibility?* After your site is compliant, use Autopilot to ensure you don't fall out of compliance.
+1. Select your gravatar in the upper left corner, then select **Create New Workspace**.
 
-Refer to [Autopilot](/guides/autopilot) for details.
+   <Alert title="Note" type="info" >
+   
+   Your gravatar is an image you can upload in your [personal settings](https://dashboard.pantheon.io/personal-settings/profile).  If you have not personalized your gravatar, it will appear as it does in the image below.
+   
+   </Alert>
 
-## WebOps Workflow
+   ![Creating a Professional Workspace](../../../images/create-workspace.png)
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with Multidev.
+1. Enter the information, upload a logo (optional), and click **Continue**.
+   
+   ![Adding Workspace Information](../../../images/create-workspace-form.png)
 
-*How does this support accessibility?* Use the Pantheon WebOps Workflow to run your manual and automated accessibility tests before going live.
+1. If you have a team member that needs access to this Workspace, enter their email address and select a role for them.  To learn about roles, select **View Role Permission Levels**.
 
-Refer to [WebOps Workflow](/pantheon-workflow) for details.
+  ![Adding a team member](../../../images/create-workspace-team.png)
 
-## Lighthouse Integration
+Your Workspace is created, and you are taken to the Workspace Dashboard.
 
-Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) provides automated audits for performance, accessibility, progressive web apps, and SEO. Lighthouse audit reports can have a big impact on your frontend performance.
+![Workspace Dashboard](../../../images/create-workspace-dashboard.png)
 
-*How does this support accessibility?* Adding automated accessibility testing to your site's build process is a key tool to maintaining and improving your site's accessibility.
+## Add Additional Team Members
 
-Refer to [Lighthouse Integration](/guides/frontend-performance/diagnostics#lighthouse) for more details.
+If you have additional people you'd like to add to the team:
+
+1. Select the <Icon icon={"fa fa-users"} text={"Teams"}/>**Team** tab, and click **Add User**. 
+
+1. Click **Invite Team Member**.
+
+1. Enter the email address of the new user, select a role, then click **Send Invite**.
+
