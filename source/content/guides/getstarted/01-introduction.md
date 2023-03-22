@@ -29,4 +29,3 @@ You will need to have the following information to complete this process:
   - Information to create a new site (site name, CMS system to use)
 - Optional: payment method information
 
-This guide will not cover the steps to launch your site.  For that, refer to our [Launch Essentials Guide](/guides/launch)
