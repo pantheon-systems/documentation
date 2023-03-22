@@ -37,25 +37,35 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
 ## Install with Dashboard Upstream
 
-1. Create the project from Decoupled Drupal Composer Managed upstream:
+1. Follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Pantheon Dashboard.
 
-    - Via the Pantheon Dashboard at this link:
+1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**.
 
-      - [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760)
+1. Confirm your organization selection when prompted in the **Confirm Organization Selection** dialogue box. The Deploying Decoupled Drupal Composer Managed progress indicator displays while your site is spinning up.
 
-    - Or via Terminus:
+1. Click **Visit your Pantheon Dashboard** when the site spin up completes.
 
-      ```bash{promptUser: user}
-      terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
-      ```
+1. Click the **Visit Development Site** button to install Drupal.
 
-      <Alert title="Note"  type="info" >
+1. Select either the `Pantheon Decoupled Profile`, or the
+`Pantheon Decoupled Umami Demo` profile. The same can be done via
+[`terminus remote:drush`](/terminus/commands/remote-drush).
 
-      - Replace `'{My Team Name}'` with your team name. For example, `My Agency`. This can also be omitted.
-        - `c76c0e51-ad85-41d7-b095-a98a75869760` is `upstream_id` for Decoupled Drupal Composer Managed.
+Your backend starter is ready to develop!
 
-      </Alert>
+Note that you can also use Terminus to initiate the site spin up in the Pantheon Dashboard:
 
+Run the command below in Terminus:
+
+```bash{promptUser: user}
+terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
+```
+
+<Alert title="Note"  type="info" >
+
+Replace `'{My Team Name}'` with your team name. For example, `My Agency`. This can also be omitted.`c76c0e51-ad85-41d7-b095-a98a75869760` is `upstream_id` for Decoupled Drupal Composer Managed.
+
+</Alert>
 
 ## Install with Build Tools
 
@@ -75,7 +85,7 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
   - Validate that the required plugins are installed:
     `terminus self:plugin:list`
 
-### Installation
+### Build Tools Installation
 
 - For all steps below:
 
@@ -113,13 +123,6 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
   please check if you have the `terminus-power-tools` plugin installed. If so
   you should remove the terminus-power-tools plugin and go through Installation again.
 
-## Install Drupal
-
-1. Click the **Visit Development Site** button.
-
-1. Select either the `Pantheon Decoupled Profile`, or the
-`Pantheon Decoupled Umami Demo` profile. The same can be done via
-[`terminus remote:drush`](/terminus/commands/remote-drush).
 
 ### Additional Options
 
