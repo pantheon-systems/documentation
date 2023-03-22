@@ -4,17 +4,9 @@ subtitle: Support
 description: Information on what supported is available for a Pantheon Front-End Site.
 tags: [webops, workflow, decoupled]
 contributors: [ joa-pan, joa-pan]
-<<<<<<< HEAD:source/content/guides/decoupled/overview/05-support.md
 layout: guide
 showtoc: true
-anchorid: support
 permalink: docs/guides/decoupled/overview/support
-=======
-type: guide
-showtoc: true
-permalink: docs/guides/decoupled-sites/support/
-editpath: decoupled-sites/05-support.md
->>>>>>> main:source/content/guides/decoupled-sites/05-support.md
 reviewed: "2022-08-11"
 contenttype: [guide]
 innav: [false]
