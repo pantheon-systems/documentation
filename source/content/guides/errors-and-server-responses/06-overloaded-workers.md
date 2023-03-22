@@ -4,10 +4,8 @@ subtitle: Overloaded Workers
 description: Learn more about overloaded workers on Pantheon.
 tags: [services]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/overloaded-workers
-anchorid: overloaded-workers
 contenttype: [guide]
 innav: [false]
 categories: [issues]

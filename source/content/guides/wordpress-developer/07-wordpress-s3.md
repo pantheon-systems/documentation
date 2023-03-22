@@ -11,11 +11,9 @@ product: [--]
 integration: [aws]
 tags: [files]
 contributors: [sarahg]
-date: 7/7/2021
-layout: guide
+reviewed: "2021-07-07"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-s3
-anchorid: wordpress-s3
 ---
 
 This section provides information on how to integrate Amazon Web Services (AWS) S3 storage with your WordPress Pantheon site.

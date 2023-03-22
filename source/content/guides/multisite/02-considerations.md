@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Considerations
 description: Review important WordPress Multisite considerations.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]
@@ -13,10 +12,7 @@ product: [--]
 integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/considerations/
-nexturl: guides/multisite/config/
-previousurl: guides/multisite/
 editpath: multisite/02-considerations.md
-image: multisite
 ---
 
 Switching from a single-site to a WordPress Multisite requires migrating the code, database, and files of the single-site into a new WordPress Multisite.

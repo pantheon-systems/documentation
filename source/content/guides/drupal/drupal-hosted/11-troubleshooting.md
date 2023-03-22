@@ -4,10 +4,8 @@ subtitle: Troubleshooting
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-hosted/11-troubleshooting.md
 reviewed: "2022-12-12"
 contenttype: [guide]

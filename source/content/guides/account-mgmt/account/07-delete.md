@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/account/delete
-anchorid: delete
 editpath: docs/guides/account-mgmt/account/07-delete.md
 reviewed: "2022-09-19"
 ---

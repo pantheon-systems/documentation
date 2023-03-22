@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [database, local, ssh, redis, webops]
 contributors: [bwood]
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/ssh-tunnels
-anchorid: ssh-tunnels
 reviewed: "2022-07-21"
 ---
 

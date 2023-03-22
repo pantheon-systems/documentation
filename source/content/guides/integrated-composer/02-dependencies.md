@@ -4,10 +4,8 @@ subtitle: Add or Remove Individual Site Dependencies
 description: Learn how to add or remove an individual site dependency.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer/dependencies
-anchorid: dependencies
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]

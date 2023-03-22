@@ -1,7 +1,6 @@
 ---
 title: Namecheap Domain Configuration
 provider: Namecheap
-dnsprovider: true
 description: Learn how to point your Namecheap domain to a Pantheon site.
 tags: [domains]
 permalink: docs/:basename

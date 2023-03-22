@@ -3,13 +3,10 @@ title: Frontend Performance
 subtitle: Introduction
 description: Learn how to optimize your site to ace an online speed test.
 type: guide
-layout: guide
 tags: [cache, cdn, measure, traffic]
 contributors: [carolynshannon, stevector, ataylorme, rachelwhitton, dwayne, dgorton, dts, davidneedham, tessak22]
-anchorid: frontend
 permalink: docs/guides/frontend-performance
 editpath: frontend-performance/01-introduction.md
-image: CDN-speedTest-docs-guide
 contenttype: [guide]
 innav: [true]
 categories: [optimize]

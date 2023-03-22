@@ -12,9 +12,7 @@ product: [--]
 integration: [plugins]
 tags: [sso, saml, users, security, plugins]
 reviewed: "2021-03-12"
-layout: guide
 permalink: docs/guides/wordpress-google-sso/saml-app/
-anchorid: wordpress-google-sso/saml-app
 editpath: wordpress-google-sso/03-saml-app.md
 ---
 

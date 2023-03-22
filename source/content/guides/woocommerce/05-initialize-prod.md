@@ -2,10 +2,6 @@
 title: WooCommerce Quick Start
 subtitle: Initialize Production
 description: In step five of the WooCommerce Quick Start guide, learn how to initialize your production environment.
-woocommerce: true
-anchorid: initialize-prod
-generator: pagination
-layout: guide
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]
@@ -15,17 +11,8 @@ product: [--]
 integration: [woocommerce]
 tags: [launch, plugins, site]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/initialize-prod/
-nexturl: guides/woocommerce/develop/
-nextpage: Continue Development
-previousurl: guides/woocommerce/commit/
-previouspage: Commit Changes
 editpath: woocommerce/05-initialize-prod.md
-image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site is configured and backed up, let's initialize our production environments (**<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live**) so we can launch our store.
 

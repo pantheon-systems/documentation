@@ -10,10 +10,8 @@ audience: [development]
 product: [terminus]
 integration: []
 tags: [plugins]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/wordpress-phpstorm
-anchorid: wordpress-phpstorm
 ---
 
 This section provides information on how to configure your local environment to build WordPress plugins or themes with [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/).

@@ -2,7 +2,6 @@
 title: Incident Management
 subtitle: Introduction
 description: Configure uptime monitors with New Relic to automatically open an incident in PagerDuty and notify whoever's on-call, following a set escalation path.
-layout: guide
 contenttype: [guide]
 innav: [true]
 categories: [track]
@@ -12,16 +11,7 @@ product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-anchorid: introduction
-pagerduty: true
-generator: pagination
-pagination:
-    provider: data.pagerdutypages
-use:
-    - pagerdutypages
 permalink: docs/guides/pagerduty/
-nexturl: guides/pagerduty/monitor/
-nextpage: Upgrade Site Plan
 editpath: pagerduty/01-introduction.md
 ---
 Welcome! This guide will help you configure uptime monitors on a Pantheon Site with New Relic&reg; to automatically open an incident in PagerDuty and notify whoever's on-call, following a set escalation path.

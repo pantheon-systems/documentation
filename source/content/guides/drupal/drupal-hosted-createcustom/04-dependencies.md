@@ -4,10 +4,8 @@ subtitle: Add Dependencies
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: false
 permalink: docs/guides/drupal-hosted-createcustom/dependencies
-anchorid: dependencies
 editpath: drupal/drupal-hosted-createcustom/04-dependencies.md
 reviewed: "2022-12-12"
 contenttype: [guide]

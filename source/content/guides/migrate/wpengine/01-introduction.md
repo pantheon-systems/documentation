@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/wpengine
-anchorid: wpengine
 editpath: migrate/wpengine/01-introduction.md
 reviewed: "2021-06-15"
 ---

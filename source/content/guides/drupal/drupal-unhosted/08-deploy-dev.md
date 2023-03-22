@@ -4,9 +4,7 @@ subtitle: Deploy to Dev
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted/deploy-dev
-anchorid: deploy-dev
 editpath: drupal/drupal-unhosted/07-deploy-dev.md
 contenttype: [guide]
 innav: [false]

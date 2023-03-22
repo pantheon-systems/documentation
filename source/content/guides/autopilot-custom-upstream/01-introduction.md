@@ -4,10 +4,8 @@ subtitle: Introduction
 description: Learn more using Autopilot with your Custom Upstream.
 tags: [autopilot, upstreams, D8, D9, D10]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/autopilot-custom-upstream
-anchorid: autopilot-custom-upstream
 contenttype: [guide]
 innav: [true]
 categories: [automate]

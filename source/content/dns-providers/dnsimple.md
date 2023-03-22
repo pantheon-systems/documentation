@@ -1,7 +1,6 @@
 ---
 title: DNSimple Domain Configuration
 provider: Akamai
-dnsprovider: true
 description: Learn how to point your DNSimple domain to a Pantheon site.
 draft: true
 tags: [domains]

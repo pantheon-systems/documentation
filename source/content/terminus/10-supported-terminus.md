@@ -8,7 +8,6 @@ layout: terminuspage
 contributors: [wordsmither]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/supported-terminus
-anchorid: supported-terminus
 contenttype: [guide]
 innav: [false]
 categories: [git]

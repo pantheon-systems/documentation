@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [terminus, wp-cli]
 contributors: [bmackinney, calevans, stevector, tessak22, davidneedham]
-layout: guide
 showtoc: true
 permalink: docs/guides/create-wp-site
-anchorid: create-wp-site
 ---
 
 This section provides information on how to create and configure a site, and initialize your environments with Terminus, which allows you to call WP-CLI remotely without using a local installation.

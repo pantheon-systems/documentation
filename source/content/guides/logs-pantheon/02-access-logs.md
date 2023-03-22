@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [logs, measure]
 contributors: [whitneymeredith]
-layout: guide
 permalink: docs/guides/logs-pantheon/access-logs
-anchorid: access-logs
 ---
 
 This section provides information on how to use SFTP to access your logs on Pantheon.

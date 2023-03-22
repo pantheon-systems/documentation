@@ -5,9 +5,7 @@ description: Learn about frequently asked questions for Pantheon's decoupled arc
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, joa-pan]
 type: guide
-layout: guide
 showtoc: true
-anchorid: faq
 permalink: docs/guides/decoupled-sites/faq/
 editpath: decoupled-sites/06-faq.md
 reviewed: "2022-08-11"

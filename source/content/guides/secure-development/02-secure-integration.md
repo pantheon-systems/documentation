@@ -13,7 +13,6 @@ tags: [database, professional-services, redis, security]
 ayout: guide
 showtoc: true
 permalink: docs/guides/secure-development/secure-integration
-anchorid: secure-integration
 reviewed: "2022-07-21"
 ---
 

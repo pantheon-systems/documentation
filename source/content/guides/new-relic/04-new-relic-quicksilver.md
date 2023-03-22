@@ -11,10 +11,8 @@ product: [newrelic]
 integration: [--]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [scottmassey]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/new-relic-quicksilver
-anchorid: new-relic-quicksilver
 ---
 
 New Relic&reg; Performance Monitoring is a powerful tool for monitoring the performance of a WordPress or Drupal site. It provides insight into how efficiently a website is using resources, and where improvements can be made in the application. Pantheon offers New Relic&reg; Pro within the Site Dashboard on all sites (excluding Basic) for free.

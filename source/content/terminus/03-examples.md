@@ -7,7 +7,6 @@ type: terminuspage
 layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/examples
-anchorid: examples
 contenttype: [guide]
 innav: [false]
 categories: [cli]

@@ -11,10 +11,8 @@ product: [multidev]
 integration: [--]
 tags: [collaborate, workflow, webops, multidev]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev/multidev-faq
-anchorid: multidev-faq
 ---
 
 This section provides answers to frequently asked Multidev questions.

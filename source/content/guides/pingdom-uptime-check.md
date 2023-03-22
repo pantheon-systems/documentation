@@ -11,7 +11,7 @@ integration: [pingdom]
 tags: [measure, site, traffic]
 type: guide
 permalink: docs/guides/:basename
-date: 5/14/2017
+reviewed: "2017-05-14"
 contributors: [scottmassey]
 ---
 

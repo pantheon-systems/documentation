@@ -4,9 +4,7 @@ subtitle: Upload Files
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-btworkflow/upload-files
-anchorid: upload-files
 editpath: drupal/drupal-hosted-btworkflow/11-upload-files.md
 reviewed: "2022-12-12"
 contenttype: [guide]

@@ -4,9 +4,7 @@ subtitle: Deploy to Dev
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither, michellecolon-pantheon]
-layout: guide
 permalink: docs/guides/drupal-hosted-createcustom/deploy-dev
-anchorid: deploy-dev
 editpath: drupal/drupal-hosted-createcustom/09-deploy-dev.md
 reviewed: "2022-12-12"
 contenttype: [guide]

@@ -4,10 +4,8 @@ subtitle: Global CDN FAQ
 description: Get answers to your Global CDN questions.
 tags: [cache, cdn]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/global-cdn-faq
-anchorid: global-cdn-faq
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]

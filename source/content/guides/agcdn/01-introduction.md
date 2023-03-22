@@ -4,10 +4,8 @@ subtitle: Introduction
 description: AGCDN enables Edge configuration tools for advanced site management,  enhanced security, and much more.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/agcdn
-anchorid: agcdn
 contenttype: [guide]
 innav: [true]
 categories: [optimize]

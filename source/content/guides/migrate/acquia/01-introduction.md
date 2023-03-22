@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/acquia
-anchorid: acquia
 editpath: migrate/acquia/01-introduction.md
 reviewed: "2022-12-13"
 

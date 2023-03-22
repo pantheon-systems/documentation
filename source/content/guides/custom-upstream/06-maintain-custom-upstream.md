@@ -3,10 +3,8 @@ title: Best Practices for Maintaining Custom Upstreams
 subtitle: Custom Upstream Best Practices
 description: Detailed information on how to maintain Custom Upstreams.
 tags: [git, upstreams, workflow, D8, D9, D10]
-layout: guide
 showtoc: true
 permalink: docs/guides/custom-upstream/maintain-custom-upstream
-anchorid: maintain-custom-upstream
 contenttype: [guide]
 innav: [false]
 categories: [custom-upstreams]

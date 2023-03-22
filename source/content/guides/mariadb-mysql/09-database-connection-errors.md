@@ -10,10 +10,8 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, database, files]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/database-connection-errors
-anchorid: database-connection errors
 ---
 
 This section provides information on database connection errors.

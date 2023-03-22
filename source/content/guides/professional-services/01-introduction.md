@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [services, migration, AGCDN, managed updates]
 reviewed: "2021-04-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/professional-services
-anchorid: professional-services
 editpath: professional-services/01-introduction.md
 ---
 

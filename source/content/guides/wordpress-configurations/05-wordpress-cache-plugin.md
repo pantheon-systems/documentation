@@ -11,7 +11,6 @@ audience: [development]
 product: [--]
 integration: [plugins]
 permalink: docs/guides/wordpress-configurations/wordpress-cache-plugin
-anchorid: wordpress-cache-plugin
 ---
 
 This section provides information on Pantheon's WordPress plugin.

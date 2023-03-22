@@ -4,9 +4,7 @@ subtitle: Add Your Database
 description: 
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted-composer/database
-anchorid: database
 editpath: drupal/drupal-unhosted-composer/09-database.md
 reviewed: "2022-12-13"
 contenttype: [guide]

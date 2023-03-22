@@ -10,8 +10,6 @@ audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [composer, terminus, webops, workflow]
-buildtools: true
-anchorid: support-ticket
 type: guide
 showtoc: true
 permalink: docs/guides/support/support-ticket/

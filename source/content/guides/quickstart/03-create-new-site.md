@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [dashboard, users, workflow]
 permalink: docs/guides/quickstart/create-new-site/
-anchorid: create-new-site
 editpath: quickstart/03-create-new-site.md
 ---
 

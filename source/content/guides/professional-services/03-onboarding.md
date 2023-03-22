@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [services, migration, onboarding, secure integration, load testing, SSO, WebOps]
 reviewed: "2021-04-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/onboarding
-anchorid: onboarding
 editpath: professional-services/03-onboarding.md
 ---
 

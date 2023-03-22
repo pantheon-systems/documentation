@@ -4,10 +4,8 @@ subtitle: Deploy to Dev
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createempty-md/deploy-dev
-anchorid: deploy-dev
 editpath: drupal/drupal-hosted-createempty-md/09-deploy-dev.md
 reviewed: "2022-12-13"
 contenttype: [guide]

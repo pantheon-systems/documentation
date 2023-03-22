@@ -11,10 +11,8 @@ product: [multidev]
 integration: [--]
 tags: [multidev, git, cli, workflow, collaborate]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev
-anchorid: multidev
 ---
 
 <dfn id="multidev">Multidevs</dfn> are development environments for teams. A Multidev environment allows a developer to fork the entire stack (code and content), work independently, and then merge the code changes back into the main `master` site. Each forked branch has its own separate development environment, including database and files. Each branch environment can be independently set to use either SFTP or Git mode for code changes.

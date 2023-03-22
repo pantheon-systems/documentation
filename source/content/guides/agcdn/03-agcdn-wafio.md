@@ -4,10 +4,8 @@ subtitle: AGCDN with WAF / IO Features
 description: Learn more about AGCDN with WAF / IO features.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/agcdn-wafio
-anchorid: agcdn-wafio
 contenttype: [guide]
 innav: [false]
 categories: [optimize]

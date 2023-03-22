@@ -11,10 +11,8 @@ product: [multidev]
 integration: [--]
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev/create-multidev
-anchorid: create-multidev
 ---
 
 This section provides steps on how to create a new fork in a Pantheon environment by using the code from the Dev environment.

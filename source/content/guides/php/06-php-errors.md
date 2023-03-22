@@ -10,10 +10,8 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [code, site, webops]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/php-errors
-anchorid: php-errors
 ---
 
 This section provides information on how to interpret and resolve PHP errors.

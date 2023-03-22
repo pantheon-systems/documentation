@@ -5,9 +5,7 @@ description: Components needed to get started with a Front-End Site.
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, joa-pan, backlineint, cobypear, hckia]
 type: guide
-layout: guide
 showtoc: true
-anchorid: considerations
 permalink: docs/guides/decoupled-sites/considerations/
 editpath: decoupled-sites/02-considerations.md
 reviewed: "2022-08-11"

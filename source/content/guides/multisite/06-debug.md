@@ -2,10 +2,8 @@
 title: WordPress Multisite
 subtitle: Troubleshoot
 description: Review common WordPress Multisite troubleshooting scenarios.
-anchorid: debug
-generator: pagination
-layout: guide
 type: guide
+getfeedbackform: default
 contenttype: [guide]
 innav: [false]
 categories: [cms, troubleshooting]
@@ -16,8 +14,6 @@ integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/debug/
 editpath: multisite/06-debug.md
-image: multisite
-getfeedbackform: default
 ---
 
 This section provides information on common WordPress Multisite troubleshooting scenarios.

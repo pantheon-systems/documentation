@@ -4,10 +4,8 @@ subtitle: Fastly on Pantheon FAQs
 description: Get answers to your Fastly on Pantheon questions. 
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-faq
-anchorid: fastly-faq
 contenttype: [guide]
 innav: [false]
 categories: [cache]

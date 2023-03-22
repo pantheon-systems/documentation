@@ -4,10 +4,8 @@ subtitle: Add the Integrated Composer Upstream in a New Local Branch
 description:
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createempty-md/composer-upstream
-anchorid: composer-upstream
 editpath: drupal/drupal-hosted-createempty-md/05-composer-upstream.md
 reviewed: "2022-12-13"
 contenttype: [guide]

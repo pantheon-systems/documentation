@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [logs, measure]
 contributors: [albertcausing, sarahg]
-layout: guide
 showtoc: true
 permalink: docs/guides/logs-pantheon/nginx-access-logs
-anchorid: nginx-access-logs
 ---
 
 This section provides information on how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.

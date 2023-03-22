@@ -1,7 +1,6 @@
 ---
 title: Name.com Domain Configuration
 provider: Name.com
-dnsprovider: true
 description: Learn how to point your Name.com domain to a Pantheon site.
 tags: [domains]
 draft: true
