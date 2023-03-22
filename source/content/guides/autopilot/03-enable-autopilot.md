@@ -82,6 +82,8 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
     - Weekly
     - Monthly
 
+    <Partial file="autopilot/custom-scheduling.md" />
+
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
    The **Sync Environment** feature syncs your Live environment to your Dev environment before Autopilot performs updates. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
@@ -131,6 +133,8 @@ You can determine how often Autopilot runs and select where you want successful 
     - Never (Update Manually)
     - Weekly
     - Monthly
+
+    <Partial file="autopilot/custom-scheduling.md" />    
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
