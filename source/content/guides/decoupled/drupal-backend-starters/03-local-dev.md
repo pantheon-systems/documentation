@@ -16,7 +16,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to set up local development for your project.
+This section provides information on how to set up local development for your project. This content is intended for advanced users who prefer to work in a local development environment outside of the Pantheon dashboard.
 
 ## Before You Begin
 

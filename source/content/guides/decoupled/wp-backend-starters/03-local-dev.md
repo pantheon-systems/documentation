@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to configure your local development environment for your WordPress backend project. The example local environment configurations outlined below are based on [Lando](https://lando.dev/).
+This section provides information on how to configure your local development environment for your WordPress backend project. This content is intended for advanced users who prefer to work in a local development environment outside of the Pantheon dashboard. The example local environment configurations outlined below are based on [Lando](https://lando.dev/).
 
 ## Before You Begin
 

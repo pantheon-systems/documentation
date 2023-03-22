@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-Pantheon offers a [backend starter project](/guides/decoupled/drupal-backend-starters/create) to simplify the process of configuring a Drupal site for use with our Front-End Site starter kits. However, you can configure an existing backend project to use one of Pantheon's Front-End Site starter kits.
+Pantheon offers a [backend starter project](/guides/decoupled/drupal-backend-starters/create) to simplify the process of configuring a Drupal site for use with our Front-End Site starter kits. However, you can configure an existing backend project to use one of Pantheon's Front-End Site starter kits. The settings below are configured out-of-the-box when using a starter kit, but must be configured manually if a starter kit wasn't used.
 
 ## Before You Begin
 
@@ -58,7 +58,7 @@ The starter kit uses the Decoupled Router module to determine the path where you
 
 ### Create Supporting Content
 
-The Front-End Sites starter kits assume that there is at least one published article and page in your Drupal backend. If your site does not have any article or page content, you should create some before proceeding.
+You must have at least one published article and page in your Drupal backend.A default Drupal install provides a sample of each, but if your site does not have any page or post content, you should create some before proceeding.
 
 ### Set the Necessary Front-End Environment Variables
 

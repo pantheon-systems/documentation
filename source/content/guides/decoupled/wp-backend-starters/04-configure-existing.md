@@ -17,9 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-Pantheon offers a [back-end starter project](/guides/decoupled/wp-backend-starters/create) to simplify the process of configuring a WordPress site for use with our Front-End starter kits. However, you can configure an existing backend project to use one of Pantheon's Front-End starter kits.
-
-Follow the steps below to configure an existing WordPress backend project to work with one of our Front-End starter kits.
+Pantheon offers a [back-end starter project](/guides/decoupled/wp-backend-starters/create) to simplify the process of configuring a WordPress site for use with our Front-End starter kits. However, you can configure an existing backend project to use one of Pantheon's Front-End starter kits. The settings below are configured out-of-the-box when using a starter kit, but must be configured manually if a starter kit wasn't used.
 
 ## Before You begin
 
@@ -39,8 +37,7 @@ No additional plugin is required.
 
 ## Create Supporting Content
 
-Our starter kits assume that you have at least one published post and page in
-your WordPress backend. A default WordPress install provides a sample of each, but if your site does not have any page or post content, you should create some before proceeding.
+You must have at least one published post and page in your WordPress backend. A default WordPress install provides a sample of each, but if your site does not have any page or post content, you should create some before proceeding.
 
 The footer in our starter kit sources menu data from a classic WordPress menu
 with the name 'Example Menu'. If a menu with this name does not exist, the
