@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information how to configure caching for your backend project.
+This section provides information how to configure caching for your backend project. Cache settings are configured out-of-the-box for you, but there are circumstances in which you might need to make your own configurations, for example, your CMS is not on Pantheon but your frontend is on Pantheon.
 
 You can configure Drupal to cache JSON:API endpoints until the underlying content changes. These same routes can also be cached on a CDN. This can improve performance for Front-End Sites that rely on these API endpoints. This can also reduce the load on your CMS if you make a large number of API requests in a short period of time, such as during a full site build process.
 

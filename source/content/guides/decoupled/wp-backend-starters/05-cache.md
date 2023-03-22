@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on cache configuration.
+This section provides information how to configure caching for your backend project. Cache settings are configured out-of-the-box for you, but there are circumstances in which you might need to make your own configurations, for example, your CMS is not on Pantheon but your frontend is on Pantheon.
 
 WordPress can be configured to cache GraphQL requests on a CDN until the underlying content changes. This can improve performance for Front-End Sites that rely on these endpoints. It can also reduce the load on your CMS in cases where a large amount of API requests are made in a short period of time, such as a full site build process.
 

@@ -46,29 +46,12 @@ The following components are needed to configure your frontend project to use Pa
 * [Node.js](https://nodejs.org/en/)
   * Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
 
-## Before You Use Pantheon Starter Kits
+## Known Issues and Limitations
 
-The following components are required to create and configure a new decoupled project using a Front-End Site starter kit:
-
-* Install [Composer](https://getcomposer.org/download/) globally.
-  * Composer is required for the CMS backends.
-
-* Install [Terminus](/terminus/install) version 3.0.0 or higher.
-    * You can also install the following plugins to improve your experience:
-       * `terminus self:plugin:install terminus-build-tools-plugin`
-       * `terminus self:plugin:install terminus-secrets-plugin`
-       * Reload the terminus plugins: `terminus self:plugin:reload`
-       * Clear cache for composer: `composer clear-cache`
-       * Validate that the required plugins are installed: `terminus self:plugin:list`
-
-* Create a Machine Token
-    * [Generate a machine token](/machine-tokens#create-a-machine-token).
-    * [Authenticate the token into Terminus](/machine-tokens#authenticate-into-terminus).
-
-* Create [GitHub Personal Access Tokens](https://github.com/settings/tokens).
-
-* Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens).
-
+- Forks are not currently supported
+- A repo cannot be connected to more than one Front-End Site
+- There are known issues around disconnecting and reconnecting a repo
+- There are known issues around the GitHub app and org level permissions
 
 ## Environment Variable Naming Restrictions
 

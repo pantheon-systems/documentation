@@ -30,6 +30,12 @@ This section provides configuration information for Front-End Sites.
 
 * You will use Next.js or Gatsby as the frontend framework.
 
+    <Alert title="Note"  type="info" >
+
+    You can use any JavaScript-based runtime, or any static site generator that outputs HTML/CSS/JS, but Pantheon only fully supports Next.js and Gatsby.
+
+    </Alert>
+
 * (Optional). You are using the latest version of Drupal, or WordPress for the CMS.
 
 * (Optional). If using a pre-configured starter kit template, you will use one of the following combinations:
@@ -40,14 +46,17 @@ This section provides configuration information for Front-End Sites.
 
     * [WordPress and Gatsby](/guides/decoupled/wp-gatsby-frontend-starters/)
 
-    > **NOTE**: Other starter kit configurations are not currently supported.
+    <Alert title="Note"  type="info" >
 
+    Other configurations are possible but not fully supported.
+
+    </Alert>
 
 ### Compatibility
 
 You can create an application from scratch by importing a repository or you can use the Pantheon starter kit templates to develop a Front-End Site.
 
-You can also create a site without a CMS. This is done by importing the repository and using Next.js or Gatsby as the static site generator.
+You can also create a site without a CMS. This is done by utilizing the import repository feature during site creation.
 
 Supported Versions:
 
@@ -57,6 +66,29 @@ Supported Versions:
 | Next.js    |   12 or higher  |
 |  Drupal    |   9 or higher   |
 | WordPress  |   5.9 or higher |
+
+## Before You Use Pantheon Starter Kits
+
+The following components are required to create and configure a new decoupled project using a Front-End Site starter kit:
+
+1. Install [Composer](https://getcomposer.org/download/) globally.
+    * Composer is required for the CMS backends.
+
+1. Install [Terminus](/terminus/install) version 3.0.0 or higher.
+    * You can also install the following plugins to improve your experience:
+       * `terminus self:plugin:install terminus-build-tools-plugin`
+       * `terminus self:plugin:install terminus-secrets-plugin`
+       * Reload the terminus plugins: `terminus self:plugin:reload`
+       * Clear cache for composer: `composer clear-cache`
+       * Validate that the required plugins are installed: `terminus self:plugin:list`
+
+1. Create a Machine Token
+    * [Generate a machine token](/machine-tokens#create-a-machine-token).
+    * [Authenticate the token into Terminus](/machine-tokens#authenticate-into-terminus).
+
+1. Create [GitHub Personal Access Tokens](https://github.com/settings/tokens).
+
+1. Create [CircleCI Personal API Tokens](https://app.circleci.com/settings/user/tokens).
 
 ## Create a Front-End Site
 
