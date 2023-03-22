@@ -19,13 +19,21 @@ integration: [--]
 
 This section provides information on how to create a new WordPress backend project with Pantheon's starter kit.
 
-### Install with an Upstream
+### Install with Dashboard Upstream
 
-1. Follow the [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) link to create your site in the Pantheon Dashboard.
+1. Log in to your Pantheon Dashboard and select the **Sites** page.
+
+1. Click the Decoupled tab and then click **+Create New Site**.
+
+1. Select **Front-End Site**, and then select **WordPress for Front-End** under **Create Backend CMS**.
+
+    - You can also use the [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) link to create your site in the Pantheon Dashboard.
+
+    ![select a starter](../../../../images/decoupled-select-starter.png)
 
 1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**.
 
-1. Confirm your organization selection when prompted in the **Confirm Organization Selection** dialogue box. The Deploying Decoupled Drupal Composer Managed progress indicator displays while your site is spinning up.
+1. Confirm your organization selection when prompted in the **Confirm Organization Selection** dialogue box. The Deploying Decoupled WordPress Composer Managed progress indicator displays while your site is spinning up.
 
 1. Click **Visit your Pantheon Dashboard** when the site spin up completes.
 

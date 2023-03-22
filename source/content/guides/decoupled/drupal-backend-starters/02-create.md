@@ -37,7 +37,15 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
 ## Install with Dashboard Upstream
 
-1. Follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Pantheon Dashboard.
+1. Log in to your Pantheon Dashboard and select the **Sites** page.
+
+1. Click the Decoupled tab and then click **+Create New Site**.
+
+1. Select **Drupal for Front-End** under **Create Backend CMS**.
+
+    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Pantheon Dashboard.
+
+    ![select a starter](../../../../images/decoupled-select-starter.png)
 
 1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**.
 

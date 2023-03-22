@@ -25,43 +25,6 @@ This section provides information on how to use the Gatsby + WordPress starter k
 
 - You may want to install the gatsby cli globally, or [use `npx`](https://www.npmjs.com/package/npx)
 
-## Create a New Project with the Template
-
-There are two methods to creating a new project based on the
-`gatsby-wordpress-starter`:
-
-- Clone the starter repo directly
-- Use the `gatsby-cli`
-
-### Clone the GitHub Repo
-
-1. Go to the [GitHub repo](https://github.com/pantheon-systems/gatsby-wordpress-starter).
-
-1. Click the **Code** button to open the clone drop-down menu and select your preferred cloning method.
-
-### Use the `gatsby-wordpress-starter`
-
-1. Open your terminal and run the [`gatsby new` command](https://www.gatsbyjs.com/docs/reference/gatsby-cli/#creating-a-site-from-a-starter).
-
-    ```shell
-    # if gatsby-cli is installed locally...
-    gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
-    # or use npx
-    npx gatsby new my-gatsby-wordpress-starter https://github.com/pantheon-systems/gatsby-wordpress-starter
-    ```
-
-1. Optional. Set the `gatsby-cli` options before initiating your new project if you have a package manager preference between npm and yarn.
-
-    ```shell
-    # set your preferred package manager with the following command
-    # for npm
-    gatsby options set pm npm
-    # for yarn
-    gatsby options set pm yarn
-    ```
-
-<Partial file="decoupled-create-in-dashboard.md" />
-
 ## Create Your Project on Pantheon
 
 Make sure you meet the prerequisites below before you continue.
@@ -72,11 +35,23 @@ Make sure you meet the prerequisites below before you continue.
 
 * You have installed your WordPress site using the [Decoupled WordPress Recommended Project](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed) configuration, which has the `wp-graphql` and `wp-gatsby` plugins enabled.
 
+1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
+
+1. Click the **Decoupled** tab and then click **+Create New Site**.
+
+    <Alert title="Note"  type="info" >
+
+    You cannot use a . (period) or _ (underscore) for site and Multidev names.
+
+    </Alert>
+
 1. Click the **Gatsby + WordPress** template, select your Git provider under **Choose your Git provider**, and then click **Continue**.
+
+  ![select a starter](../../../../images/decoupled-select-starter.png)
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
 
-1. Select the WordPress CMS backend from the drop-down menu.
+1. Select the desired WordPress CMS backend from the **Link Your CMS** drop-down menu.
 
 1. Select the site environment from which to source the content. You can source content from the Live, Test, or Dev environment.
 
@@ -84,17 +59,6 @@ Make sure you meet the prerequisites below before you continue.
 
 1. Click **Build Details** to view the build log.
 
-1. Refer to the [Set Environment Variables](/guides/decoupled/wp-gatsby-frontend-starters/environment-variables) section to set environment variables for local development and Decoupled Preview, as well as steps to connect to Multidev environments.
+1. Click **View Site** after the build completes to launch your Front-End Site.
 
-- text: 'Drupal + Next.js Frontend Starter'
-          url: '/guides/decoupled/drupal-nextjs-frontend-starters/'
-        - text: 'WordPress Decoupled Backend Starter'
-          url: '/guides/decoupled/wp-backend-starters'
-        - text: 'WordPress + Gatsby Frontend Starter'
-          url: '/guides/decoupled/wp-gatsby-frontend-starters/'
-        - text: 'Drupal Decoupled Backend Starter'
-          url: '/guides/decoupled/drupal-backend-starters'
-        - text: 'WordPress + Next.js Frontend Starter'
-          url: '/guides/decoupled/wp-nextjs-frontend-starters/'
-        - text: 'Create a Front-End Site without a Starter'
-          url: '/guides/decoupled/no-starter-kit'
+1. Refer to the [Set Environment Variables](/guides/decoupled/wp-gatsby-frontend-starters/environment-variables) section to set environment variables for local development and Decoupled Preview, as well as steps to connect to Multidev environments.
