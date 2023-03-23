@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to set environment variables for local development and decoupled preview, as well as how to connect to Multidev environments.
+This section provides information on how to set environment variables for local development and Decoupled Preview, as well as how to connect to Multidev environments.
 
 ## Local Development
 
@@ -61,9 +61,9 @@ Next.js requires the endpoint at build time to fetch data from the Drupal instan
 
 The `PANTHEON_ENVIRONMENT` variable can be used inside of `next.config.js` file to connect to a Multidev environment. Either the `PANTHEON_CMS_ENDPOINT` or `BACKEND_URL` must be set inside `next.config.js`. The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`. For example:
 
-    ```bash{promptUser: user}
-    PANTHEON_CMS_ENDPOINT=dev-my-drupal-site.pantheonsite.io
-    ```
+```bash{promptUser: user}
+PANTHEON_CMS_ENDPOINT=dev-my-drupal-site.pantheonsite.io
+```
 
 Update the `backendUrl`. Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
 

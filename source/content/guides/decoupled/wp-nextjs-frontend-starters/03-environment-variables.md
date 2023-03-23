@@ -36,9 +36,9 @@ IMAGE_DOMAIN=my-image-cdn.site
 
 The `PANTHEON_ENVIRONMENT` environment variable can be used inside of `next.config.js` file to connect to a Multidev environment. Either the `PANTHEON_CMS_ENDPOINT` or `BACKEND_URL` must be set inside `next.config.js` file. The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`. For example:
 
-	```bash{promptUser: user}
-	PANTHEON_CMS_ENDPOINT=dev-my-wordpress-site.pantheonsite.io
-	```
+```bash{promptUser: user}
+PANTHEON_CMS_ENDPOINT=dev-my-wordpress-site.pantheonsite.io
+```
 
 Update the `backendUrl`. Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
 

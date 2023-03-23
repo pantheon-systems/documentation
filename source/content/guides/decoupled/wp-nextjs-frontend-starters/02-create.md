@@ -52,10 +52,10 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Select the site environment from which to source the content.
 
-1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information/ status.
+1. Optional. Click **Advanced Settings** to set your root and output directories, build command, environment variables, and deployment path.
+
+1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information and status.
 
 1. Click **Build Details** to view the build log.
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
-
-1. Refer to the [Environment Variables](/guides/decoupled/wp-nextjs-frontend-starters) section to set environment variables for local development and Decoupled Preview, as well as steps to connect to Multidev environments.

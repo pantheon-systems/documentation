@@ -27,9 +27,10 @@ Gatsby requires the endpoint at build time to fetch data from the WordPress inst
 
 1. Create a `.env.development.local` file at the root of the project directory and add a `WPGRAPHQL_URL` key with your WordPress GraphQL Endpoint as the value. For example:
 
-	```bash{promptUser: user}
-	WPGRAPHQL_URL=https://dev-my-wordpress-site.pantheon.site/wp/graphql
-	```
+
+```bash{promptUser: user}
+WPGRAPHQL_URL=https://dev-my-wordpress-site.pantheon.site/wp/graphql
+```
 
 ## Connect to Multidev Environments
 
@@ -37,16 +38,15 @@ The `PANTHEON_ENVIRONMENT` environment variable can be used inside of `gatsby-co
 
 The `PANTHEON_CMS_ENDPOINT` can be mocked for local development by defining it in the `.env.development.local`. For example:
 
-	```bash{promptUser: user}
-	PANTHEON_CMS_ENDPOINT=dev-my-wordpress-site.pantheonsite.io
-	```
+```bash{promptUser: user}
+PANTHEON_CMS_ENDPOINT=dev-my-wordpress-site.pantheonsite.io
+```
 
 Update the `url` in the `gatsby-config.js`. For example:
 
-	```js
-	let url = process.env.WPGRAPHQL_URL || process.env.PANTHEON_CMS_ENDPOINT;
-	```
-
+```js
+let url = process.env.WPGRAPHQL_URL || process.env.PANTHEON_CMS_ENDPOINT;
+```
 
 Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
 
