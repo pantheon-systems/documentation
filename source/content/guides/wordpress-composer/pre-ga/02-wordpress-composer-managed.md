@@ -13,7 +13,7 @@ tags: [wordpress]
 contributors: [whitneymeredith, jspellman814, jazzsequence]
 layout: guide
 showtoc: true
-permalink: docs/guides/wordpress-composer/wordpress-composer-managed
+permalink: docs/guides/wordpress-composer/pre-ga/wordpress-composer-managed
 anchorid: wordpress-composer-managed
 ---
 
