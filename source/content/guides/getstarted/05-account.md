@@ -14,7 +14,6 @@ contributors: [wordsmither]
 reviewed: "2023-03-21"
 showtoc: true
 permalink: docs/guides/getstarted/account
-anchorid: getstarted/account
 editpath: getstarted/05-account.md
 ---
 

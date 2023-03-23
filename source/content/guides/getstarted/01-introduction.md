@@ -14,7 +14,6 @@ contributors: [wordsmither]
 reviewed: "2023-03-21"
 showtoc: false
 permalink: docs/guides/getstarted
-anchorid: getstarted
 editpath: getstarted/01-introduction.md
 ---
 

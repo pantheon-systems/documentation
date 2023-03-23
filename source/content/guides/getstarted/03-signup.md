@@ -14,7 +14,6 @@ contributors: [wordsmither]
 reviewed: "2023-03-21"
 showtoc: false
 permalink: docs/guides/getstarted/signup
-anchorid: getstarted/signup
 editpath: getstarted/03-signup.md
 ---
 
