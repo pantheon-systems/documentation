@@ -20,7 +20,7 @@ reviewed: ""
 ---
 
 <Alert title="Early Access Software" type="info">
-This product is currently in [Early Access](https://docs.pantheon.io/guides/support/early-access/). Information here may be subject to change. Object Cache Pro, however, is a stable product and is being used on production sites. If you have any questions, please refer to the email you received when you signed up for Object Cache Pro Early Access.
+This product is currently in <a href="https://docs.pantheon.io/guides/support/early-access/">Early Access</a>. Information here may be subject to change. Object Cache Pro, however, is a stable product and is being used on production sites. If you have any questions, please refer to the email you received when you signed up for Object Cache Pro Early Access.
 </Alert>
 
 This guide...
