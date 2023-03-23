@@ -187,9 +187,12 @@ Config::define( 'WP_REDIS_CONFIG', [
 ] );
 ```
 
-#### 5. Add Object Cache Pro configuration options
+### Configuring Object Cache Pro
+There are a few other configuration options that must be added to your configuration file before Object Cache Pro will work. The instructions below provide guidance for both regular WordPress sites on Pantheon, and WordPress (Composer Managed)-based sites. Once the configuration options are added, there are still a couple steps before Object Cache Pro is fully ready-to-go.
 
-There are a few other configuration options that must be added to your configuration file before Object Cache Pro will work. The full, recommended contents of the `WP_REDIS_CONFIG` constant are as follows:
+#### 1. Add Object Cache Pro configuration options
+
+The full, recommended contents of the `WP_REDIS_CONFIG` constant are as follows:
 
 ```php
 	'token' => '<LICENSE-TOKEN>',
@@ -209,11 +212,11 @@ There are a few other configuration options that must be added to your configura
 	],
 ```
 
-This should be added after `Config::define( 'WP_REDIS_CONFIG', [` (for WordPress (Composer Managed) or `define( 'WP_REDIS_CONFIG', [` (for a standard WordPress site).
+This should be added after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)**, or  `define( 'WP_REDIS_CONFIG', [` in `wp-config.php` for a **standard WordPress** site.
 
 There are more [configuration options](https://objectcache.pro/docs/configuration-options) that can be added here as well. We recommend using the above settings which are optimized for Pantheon if you don't know specifically what each option does.
 
-#### 6. Activate the plugin and enable redis
+#### 2. Activate the plugin and enable Redis in the plugin
 
 Before attempting to activate the plugin, make sure you `git push` your changes up to your repository.
 
