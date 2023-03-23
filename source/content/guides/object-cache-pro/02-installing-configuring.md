@@ -54,7 +54,7 @@ Once you have Object Cache Pro in your codebase, there are some configuration op
 #### 2. Add the license token
 *Note: In the future, the license key will be provided by the platform. In the meantime, you are responsible for adding it to your repository.*
 
-To add configuration values to Object Cache Pro for your site, you will need to add values to the `WP_REDIS_CONFIG` constant. On regular WordPress sites, this means saving these rules inside `wp-config.php`. If you are using a Bedrock-based upstream or WordPress (Composer Managed), you'll want to follow the instructions [below]().
+To add configuration values to Object Cache Pro for your site, you will need to add values to the `WP_REDIS_CONFIG` constant. On regular WordPress sites, this means saving these rules inside `wp-config.php`. If you are using a Bedrock-based upstream or WordPress (Composer Managed), you'll want to follow the instructions [below](#using-wordpress-composer-managed).
 
 In `wp-config.php`, somewhere above the `/* That's all, stop editing! Happy Pressing. */` line at the bottom of the file, you'll want to add the following:
 
@@ -67,7 +67,7 @@ define( 'WP_REDIS_CONFIG', [
 ] );
 ```
 
-Once this is done, there are other options that need to be added. [Skip down to the configuration options]() section to finish the setup process.
+Once this is done, there are additional options that need to be added. [Skip down to the configuration options](#configuring-object-cache-pro) section to finish the setup process.
 
 ### Using WordPress (Composer Managed)
 
