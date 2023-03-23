@@ -654,7 +654,33 @@ This Panel contains additional context, or advanced instructions.
 
 </Example>
 
-## Reusable Content
+
+## Redirects
+
+This is Pantheon Docs Team-specific.
+
+When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
+
+| Redirect from                  | to                                   |
+|--------------------------------|--------------------------------------|
+| docs/drush                     | docs/guides/drush                    |
+| docs/drush-versions            | docs/guides/drush/drush-versions     |
+| docs/drush-import              | docs/guides/drush/drush-import       |
+| docs/guides/drupal-commandline | docs/guides/drush/drupal-commandline |
+
+
+**Source Code**
+
+````markdown
+| Redirect from                 | to                                 |
+|-------------------------------|-------------------------------------|
+| docs/drush                    | docs/guides/drush                   |
+| docs/drush-versions           | docs/guides/drush/drush-versions    |
+| docs/drush-import             | docs/guides/drush/drush-import      |
+| docs/guides/drupal-commandline| docs/guides/drush/drupal-commandline|
+````
+
+## Reusable Content/Partials
 
 Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
 
