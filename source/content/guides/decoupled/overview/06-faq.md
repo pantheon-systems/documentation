@@ -7,7 +7,7 @@ contributors: [backlineint, cobypear, hckia, joa-pan]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/faq
-reviewed: "2022-08-11"
+reviewed: "2023-03-23"
 contenttype: [guide]
 innav: [false]
 categories: [create]

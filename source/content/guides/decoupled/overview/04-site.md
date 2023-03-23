@@ -8,7 +8,7 @@ layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/site
 anchorid: site
-reviewed: "2023-03-16"
+reviewed: "2023-03-23"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -69,10 +69,13 @@ Supported Versions:
 
 ## Before You Use Pantheon Starter Kits
 
-The following components are required to create and configure a new decoupled project using a Front-End Site starter kit:
+The following is required to create and configure a new decoupled project using a Front-End Site starter kit:
 
-1. Install [Composer](https://getcomposer.org/download/) globally.
+- Install [Composer](https://getcomposer.org/download/) globally.
+
     * Composer is required for the CMS backends.
+
+### Optional Components
 
 1. Install [Terminus](/terminus/install) version 3.0.0 or higher.
     * You can also install the following plugins to improve your experience:
