@@ -17,6 +17,8 @@ product: [decoupled]
 integration: [--]
 ---
 
+Cache settings are configured out-of-the-box for you, but there are circumstances in which you might need to make your own configurations, for example, your CMS is not on Pantheon but your frontend is on Pantheon.
+
 This section shows you how to set Cache-Control headers using
 `@pantheon-systems/drupal-kit` in the `next-drupal-starter`, or any Next.js
 application using the `drupal-kit`, and how to purge your cache.

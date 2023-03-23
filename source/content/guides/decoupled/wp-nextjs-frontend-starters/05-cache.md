@@ -17,9 +17,10 @@ product: [decoupled]
 integration: [--]
 ---
 
+Cache settings are configured out-of-the-box for you, but there are circumstances in which you might need to make your own configurations, for example, your CMS is not on Pantheon but your frontend is on Pantheon.
+
 This section shows you how to set Cache-Control headers using
 `@pantheon-systems/wordpress-kit` in the `next-wordpress-starter`, or any Next.js application using the `wordpress-kit`, and how to purge your cache.
-
 
 ## Set Cache-Control Headers with WordPress Kit
 
