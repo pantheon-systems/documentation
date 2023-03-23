@@ -28,6 +28,8 @@ This guide will walk you through using [Object Cache Pro](https://objectcache.pr
 ## What is Object Cache Pro?
 Object Cache Pro is a highly optimized WordPress plugin that deeply integrates into Redis for business class performance. When configured, it provides an easy-to-use administration page with analytics to show current benchmarks and has been optimized for WordPress and popular WordPress plugins such as Query Monitor, WooCommerce, Jetpack and Yoast SEO. A premium plugin, Pantheon is evaluating a partnership with Object Cache Pro to make it available to our customers.
 
+![Object Cache Pro admin page](../../../images/guides/object-cache-pro/object-cache-pro-analytics.png)
+
 ### How does it work?
 Object Cache Pro was written from the ground up to optimize for performance, maintain a small footprint in memory and avoid unnecessary Redis reads and writes. It's tested extensively against WooCommerce, fully compliant with the WordPress Object Cache API and integrates seamlessly into WordPress. 
 
