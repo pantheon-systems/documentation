@@ -17,7 +17,7 @@ permalink: docs/guides/getstarted/addsite
 editpath: getstarted/addsite.md
 ---
 
-There are literally dozens of ways to add a site on Pantheon.  This page will cover the most common scenarios for new users: creating a new CMS site, or migrating an existing WordPress or Drupal site.  For additional scenarios, see the More Resources section.
+There are literally dozens of ways to add a site on Pantheon.  This page will cover the most common scenarios for new users: creating a new CMS site, or migrating an existing WordPress or Drupal site.  For additional scenarios, see the More Resources section at the end of this document.
 
 ## Create a New CMS Site
 
@@ -93,4 +93,42 @@ To create a CMS site:
 
 ## Migrate an Existing Site
 
+If you already have a site hosted elsewhere, you can move it over to Pantheon with minimal effort.
+
+<Alert title="Warning" type="danger" >
+
+If your migration needs include any of the following, **do not use this process**, and instead refer to the specified documentation:
+
+| Scenario  | Use this document  |
+|---|---|
+| You are moving a Drupal site **and** want to upgrade to the latest version of Drupal **and** your site is Composer-managed | [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer) or  [Import Drush Site Archives with Terminus](/guides/drush/drush-import) |
+| You are moving a Drupal site **and** want to upgrade to the latest version of Drupal **and** your site is *not* Composer-managed  | [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)|
+| You are using WordPress Multisite | [Manually Migrate Sites to Pantheon](/migrate-manual)  |
+| You are migrating a site that is only on your local machine  | [Manually Migrate Sites to Pantheon](/migrate-manual) |
+| The site or site archive is greater than 500MB | [Manually Migrate Sites to Pantheon](/migrate-manual) |
+
+</Alert>
+
+### Before you Begin
+
+1. Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues).
+
+1. Make sure your code is compatible with the latest recommended version of PHP for your CMS. If not, be prepared to [adjust PHP versions](/guides/php/php-versions/#configure-php-version).
+
+1. Remove unneeded code, database tables, and files.
+
+### Perform the Migration
+
+<Partial file="migrate/migrate-all.md" />
+
+
 ## More Resources
+
+* [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer)
+* [Import Drush Site Archives with Terminus](/guides/drush/drush-import)
+* [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)
+* [Manually Migrate Sites to Pantheon](/migrate-manual)
+* [Create a Static Site Using an Empty Upstream](/static-site-empty-upstream)
+* [Create a Drupal Site Using a Drupal Distribution](/guides/drupal-from-dist)
+* [Using Terminus to Create and Update Drupal Sites on Pantheon](/terminus-drupal-site-management/)
+* [Create a WordPress Site with Terminus and WP-CLI](/guides/create-wp-site)
