@@ -42,13 +42,16 @@ terminus redis:enable <site>
 ```
 
 ### On regular WordPress Sites
+
+#### 1. Install the Object Cache Pro plugin
+
 Refer to the email you received and the link to the zip file for Object Cache Pro. Download the file, unzip, and add to your WordPress install as you normally would. 
 
 *Note: This link will always point to the latest version of Object Cache Pro. Be sure to store it in a safe place so you never miss out on updates to Object Cache Pro.*
 
 Once you have Object Cache Pro in your codebase, there are some configuration options that you need to add to set it up. All of these options are stored in your `wp-config.php` in the root of your site repoistory.
 
-#### Add the license token
+#### 2. Add the license token
 *Note: In the future, the license key will be provided by the platform. In the meantime, you are responsible for adding it to your repository.*
 
 To add configuration values to Object Cache Pro for your site, you will need to add values to the `WP_REDIS_CONFIG` constant. On regular WordPress sites, this means saving these rules inside `wp-config.php`. If you are using a Bedrock-based upstream or WordPress (Composer Managed), you'll want to follow the instructions [below]().
