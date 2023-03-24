@@ -76,7 +76,7 @@ Once this is done, there are additional options that need to be added. [Skip dow
 #### 1. Create the authentication token
 First, you must add your license token to Composer. You can do this with the following command.
 
-`comoser config --auth http-basic.objectcache.pro token <LICENSE-TOKEN>`
+`composer config --auth http-basic.objectcache.pro token <LICENSE-TOKEN>`
 
 Alternately, you can create an `auth.json` file (created by the above command) manually:
 
