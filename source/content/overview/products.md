@@ -31,7 +31,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Decoupled Hosting"} link={"/guides/decoupled-sites"}>
+  <Product title={"Decoupled Hosting"} link={"/guides/decoupled/overview"}>
 
   Decoupled Sites run a Node.js codebase in parallel with a WordPress or Drupal site.
 

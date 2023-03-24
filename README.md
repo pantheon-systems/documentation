@@ -8,7 +8,7 @@ https://docs.pantheon.io/
 This repository contains the [Pantheon](https://pantheon.io) documentation as well as the tools to build local test environments.
 
 ## Changelog
- - 2023/02: Pantheon Docs is now a [Pantheon Front-End site](https://docs.pantheon.io/guides/decoupled-sites/) running Gatsby 4.
+ - 2023/02: Pantheon Docs is now a [Pantheon Front-End site](https://docs.pantheon.io/guides/decoupled/overview) running Gatsby 4.
  - 2019/08: We've relaunched the project using [Gatsby](https://www.gatsbyjs.org) for faster development, and _much_ faster page speed.
 
 ### Contributing

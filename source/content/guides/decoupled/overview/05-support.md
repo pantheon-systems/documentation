@@ -4,11 +4,10 @@ subtitle: Support
 description: Information on what supported is available for a Pantheon Front-End Site.
 tags: [webops, workflow, decoupled]
 contributors: [ joa-pan, joa-pan]
-type: guide
+layout: guide
 showtoc: true
-permalink: docs/guides/decoupled-sites/support/
-editpath: decoupled-sites/05-support.md
-reviewed: "2022-08-11"
+permalink: docs/guides/decoupled/overview/support
+reviewed: "2023-03-23"
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -20,7 +19,7 @@ integration: [--]
 
 ## Scope of Support
 
-Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes use of the documented workflows as defined in this documentation. 
+Pantheon supports installation and configuration of decoupled sites hosted on the platform. Support includes use of the documented workflows as defined in this documentation.
 
 ### What is Included in the Scope of Support?
 
