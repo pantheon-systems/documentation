@@ -78,7 +78,7 @@ First, you must add your license token to Composer. You can do this with the fol
 
 `comoser config --auth http-basic.objectcache.pro token <LICENSE-TOKEN>`
 
-Alternately, you can create an `auth.json` file (created in the above command) manually:
+Alternately, you can create an `auth.json` file (created by the above command) manually:
 
 ```json
 {
