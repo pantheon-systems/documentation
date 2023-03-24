@@ -220,7 +220,7 @@ There are more [configuration options](https://objectcache.pro/docs/configuratio
 
 Before attempting to activate the plugin, make sure you `git push` your changes up to your repository.
 
-You can activate the Object Cache Pro plugin from the admin, locally with Lando or via Terminus. In the WordPress admin, navigate to the Plugins page and activate Object Cache Pro. Then go to the Object Cache Pro settings(?) page, ensure that you are in an environment with file write permissions (either SFTP mode, if activating on your Pantheon Dev environment or in a local development environment), and click (?) the Enable (?) button. This will create the `object-cache.php` drop-in file. If you did this in your Pantheon Dev environment, be sure to commit the change in SFTP mode. If you did this locally, you'll want to commit the file to your repository.
+You can activate the Object Cache Pro plugin from the admin, locally with Lando or via Terminus. In the WordPress admin, navigate to the Plugins page and activate Object Cache Pro. Then go to the Object Cache page in the Settings menu, ensure that you are in an environment with file write permissions (either SFTP mode, if activating on your Pantheon Dev environment or in a local development environment), and click the Enable button. This will create the `object-cache.php` drop-in file. If you did this in your Pantheon Dev environment, be sure to commit the change in SFTP mode. If you did this locally, you'll want to commit the file to your repository.
 
 If you're using Terminus, you'll want to use the following Terminus commands:
 
