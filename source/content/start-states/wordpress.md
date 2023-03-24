@@ -19,7 +19,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
-### 2023-TBD-TBD
+### 2023-03-28
 
 <a name="20230203" class="release-update"></a>Removes contact support line.
 
