@@ -45,7 +45,7 @@ A Front-End Site allows you to connect to your Git repository and deploy a site 
 
 <Accordion title="Terms to know for Pantheon Front-End Sites" id="terms-decoupled" icon="info-sign">
 
-#### CMS  
+#### CMS
 In the context of our Decoupled Product, a CMS site is a Content Management System configured to work with decoupled sites.
 
 #### Decoupled Site
@@ -89,24 +89,11 @@ Other permutations for site development using a Front-End Site can be used, but 
 
 ### Create a Decoupled Site with Pantheon
 
-You can build a decoupled site on Pantheon using several methods. The decoupled option must be enabled you can apply your own configuration or use a Pantheon developed start kit. The following workflows apply when starting your decoupled journey.
-
-* **Without a Starter Kit (No Backend Configuration)**
-  1. Import a GitHub repository.
-  1. Configure the frontend application.
-  1. Connect to the Node.js frontend application.
-  1. Push changes to trigger a site build.
-
-* **Using a Starter Kit (With Backend Configuration)**
-  1. Configure the backend.
-  1. Use the kit package to connect the backend to the frontend.
-  1. Configure the frontend application.
-  1. Connect repository to the Node.js frontend application.
-  1. Push changes to trigger a site build.
+You can build a decoupled site on Pantheon using several methods. The decoupled option must be enabled you can apply your own configuration or to use a [compatible starter kit](https://decoupledkit.pantheon.io/docs/decoupled-kit-overview). Refer to [Site Creation](guides/decoupled/overview/site) for more information.
 
 ### Pantheon Front-End Site Starter Kits
 
-Pantheon offers recommended decoupled starter kit templates that are preconfigured, and include the following:
+Pantheon offers recommended decoupled starter kit templates that are pre-configured, and include the following:
 
 * A set of recommended modules or plugins for creating decoupled sites on Pantheon.
 

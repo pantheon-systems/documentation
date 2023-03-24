@@ -1525,13 +1525,16 @@
           url: '/guides/decoupled/overview/considerations'
         - text: 'Front-End Sites Compatibility'
           url: '/guides/decoupled/overview/site#compatibility'
-        - text: 'Create Build Hooks for Front-End Sites'
-          url: '/guides/decoupled/overview/build-hooks'
         - text: 'Front-End Sites FAQs'
           url: '/guides/decoupled/overview/faq'
         - text: 'Create a Front-End Site'
           url: '/guides/decoupled/overview/site'
   topics-groups:
+    - title: 'Import a Repository'
+      subtitle: ''
+      links:
+        - text: 'Create a Front-End Site by Importing Your Repo'
+          url: '/guides/decoupled/no-starter-kit/import-repo'
     - title: 'No Starter or CMS'
       subtitle: ''
       links:

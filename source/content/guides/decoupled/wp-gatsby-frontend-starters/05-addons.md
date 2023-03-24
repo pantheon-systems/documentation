@@ -40,7 +40,6 @@ This document assumes you have familiarity with WordPress and Advanced Custom Fi
 
 </Alert>
 
-
 ## Add the `gatsby-wp-acf-addon` to an Existing Project
 
 1. Use the create command to initiate the CLI with the `gatsby-wp-acf-addon`

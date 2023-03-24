@@ -1,6 +1,6 @@
 ---
 title: Front-End Sites without a Starter Kit
-subtitle: Create a New Project
+subtitle: Create a Project | No Starter or CMS
 description: Create a Front-End Site without a starter kit.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
@@ -18,8 +18,6 @@ integration: [--]
 ---
 
 This section provides information on how to create a Front-End Site without a starter kit on Pantheon.
-
-<Partial file="decoupled-create-in-dashboard.md" />
 
 ## Create Your Project on Pantheon
 
@@ -40,7 +38,15 @@ Make sure you meet the following prerequisites before you continue.
     </Alert>
 
 
-1. Create a site without configuring the backend and link to a frontend framework.
+1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
+
+1. Click the **Decoupled** tab and then click **+Create New Site**.
+
+    <Alert title="Note"  type="info" >
+
+    You cannot use a . (period) or _ (underscore) for site and Multidev names.
+
+    </Alert>
 
 1. Click **Import Repository** on the _What kind of site are you creating?_ page to connect your GitHub repository.
 
@@ -64,7 +70,7 @@ Make sure you meet the following prerequisites before you continue.
 
     </Alert>
 
-1. Ensure **Make this a private repository** is selected.
+1. Determine if your repository will be public or private. Note that **Make this a private repository** is selected by default.
 
 1. Optional. Add configurations and then click **Continue**.
 
