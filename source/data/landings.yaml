@@ -1539,9 +1539,9 @@
       subtitle: ''
       links:
         - text: 'Create a Front-End Site without a Starter'
-          url: '/guides/decoupled/no-starter-kit'
+          url: '/guides/decoupled/no-starter-kit/create'
         - text: 'Create a Front-End Site without a CMS'
-          url: '/guides/decoupled/no-starter-kit'
+          url: '/guides/decoupled/no-starter-kit/create'
     - title: 'Frontend Starters'
       subtitle: ''
       links:

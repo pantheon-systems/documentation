@@ -1,7 +1,7 @@
 ---
 title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Introduction
-description: Learn about the Drupal + Next.js frontend starter..
+description: Learn about the Drupal + Next.js frontend starter.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide

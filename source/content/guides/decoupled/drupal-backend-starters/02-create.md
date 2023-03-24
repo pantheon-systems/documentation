@@ -59,6 +59,8 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 `Pantheon Decoupled Umami Demo` profile. The same can be done via
 [`terminus remote:drush`](/terminus/commands/remote-drush).
 
+  - The Umami Demo contains additional demo data, and is not intended for use in a production site build.
+
 Your backend starter is ready to develop!
 
 Note that you can also use Terminus to initiate the site spin up in the Pantheon Dashboard:

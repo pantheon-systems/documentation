@@ -33,7 +33,7 @@ Make sure you meet the prerequisites below before you continue.
 
 * You are using WordPress as your CMS.
 
-* You have installed your WordPress site using the [Decoupled WordPress Recommended Project](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed) configuration, which has the `wp-graphql` and `wp-gatsby` plugins enabled.
+* You have installed your WordPress site using the [Decoupled WordPress Recommended Project](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed) configuration, which has the `wp-graphql` and `wp-gatsby` plugins installed as dependencies (only `wp-graphql` is activated automatically).
 
 1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
 
