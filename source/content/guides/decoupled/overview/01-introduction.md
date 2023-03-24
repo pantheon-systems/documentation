@@ -83,7 +83,7 @@ With a Pantheon Front-End Site you can create sites from server-side rendering (
 * **Next.js and Drupal**: Create a decoupled site using a base Next.js frontend template with Drupal as the CMS.
 * **Next.js and WordPress**: Create a decoupled site using a base Next.js frontend template with WordPress as the CMS.
 
-Currently, Pantheon Front-End Sites do not support SSR using Gatsby. Support for SSG with Next.js is available.
+Currently, Pantheon Front-End Sites do not support SSR using Gatsby.
 
 Other permutations for site development using a Front-End Site can be used, but are not supported and currently not recommended.
 
