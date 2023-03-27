@@ -74,20 +74,19 @@ If you already have a site hosted elsewhere, you can move it over to Pantheon wi
 
 If your migration needs include any of the following, **do not use this process**, and instead refer to the specified documentation:
 
-| Scenario  | Use this document  |
-|---|---|
-| You are moving a Drupal site **and** want to upgrade to the latest version of Drupal **and** your site is Composer-managed | [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer) or  [Import Drush Site Archives with Terminus](/guides/drush/drush-import) |
-| You are moving a Drupal site **and** want to upgrade to the latest version of Drupal **and** your site is *not* Composer-managed  | [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)|
-| You are using WordPress Multisite | [Manually Migrate Sites to Pantheon](/migrate-manual)  |
-| You are migrating a site that is only on your local machine  | [Manually Migrate Sites to Pantheon](/migrate-manual) |
-| The site or site archive is greater than 500MB | [Manually Migrate Sites to Pantheon](/migrate-manual) |
-| You are using WordPress and don't want to install the plugin required for migration | [Manually Migrate Sites to Pantheon](/migrate-manual) |
+- You are moving a Drupal site **and** want to upgrade to the latest version of Drupal: 
+   - Your site *is* Composer-managed: [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer) or [Import Drush Site Archives with Terminus](/guides/drush/drush-import)
+   * Your site is *not* Composer-managed: [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)|
+- You are using WordPress Multisite: [Manually Migrate Sites to Pantheon](/migrate-manual) 
+- You are migrating a site that is only on your local machine: [Manually Migrate Sites to Pantheon](/migrate-manual)
+- The site or site archive is greater than 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
+- You are using WordPress and don't want to install the plugin required for migration [Manually Migrate Sites to Pantheon](/migrate-manual)
 
 </Alert>
 
 ### Before you Begin
 
-1. Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues).
+1. Check your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues).
 
 1. Make sure your code is compatible with the latest recommended version of PHP for your CMS. If not, be prepared to [adjust PHP versions](/guides/php/php-versions/#configure-php-version).
 
@@ -129,11 +128,9 @@ This process will install a WordPress plugin.  If you don't want to use a plugin
 
    ![Migration successful](../../../images/migrate-site-wp-successful.png)
 
-   IS THIS REALLY TRUE?  I HAVEN'T GOTTEN ONE YET  You will also receive an email when the migration completes. You may close this window or navigate away from this page.
-
 1. After the migration is complete, return to Pantheon tab and click **Confirm migration progress**.  Your site's dashboard appears.
 
-You have just finished adding a site in its Dev environment!
+You have successfully added a site in its Dev environment!
 
 </Tab>
 
@@ -141,7 +138,7 @@ You have just finished adding a site in its Dev environment!
 
 The recommended way to migrate Drupal sites from another host is to use `drush ard` (Drush 8 or earlier) to create an archive that can be easily imported.
 
-1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
+1. On your Personal or Professional Workspace dashboard, click the **Migrate Existing Site** button.
 
    ![Migrate site button](../../../images/migrate-site-button.png)
 
@@ -168,6 +165,8 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 1. Click **Import Archive**. Click **Visit the Site Dashboard** from the Site Dashboard on Pantheon after the imported is complete.
 
  ![Successful Drupal Migration](../../../images/dashboard/successful-drupal-migration.png)
+
+You have successfully migrated a site to its Dev environment!
 
 </Tab>
 

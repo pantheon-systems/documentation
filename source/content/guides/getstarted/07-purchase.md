@@ -25,5 +25,35 @@ The free account you created allows you to create sandbox (non-production) sites
 
 ## Purchase a Plan
 
-<Partial file="plan-purchase.md" />
+1. Go to the Site Dashboard for the site you want to purchase a plan for, and click **Upgrade** next to the site's name. 
+
+   ![Upgrade button](../../../images/purchase-upgrade-plan-button.png)
+
+1. Click **Select** for the plan you wish to purchase.
+
+   ![Plans](../../../images/dashboard/select-plan.png)
+
+1. Select a plan size and click **Continue**.
+
+   ![Selecting a plan size](../../../images/purchase-plan-size.png)
+
+1. Select **Add New Card**.
+
+   ![Select Add New Card](../../../images/purchase-add-card-button.png)
+
+1. Enter your billing information and click **Add Card**.
+
+   ![Card information](../../../images/purchase-add-card-info.png)
+
+1. Select the new card you just created and click **Continue**.
+
+   ![Select Card](../../../images/purchase-select-card.png)
+
+1. Make sure the details are correct.
+
+   ![Place order](../../../images/purchase-place-order.png)
+
+1. Click the **Place Order** button.
+
+You have purchased your plan, and can now go live!
 
