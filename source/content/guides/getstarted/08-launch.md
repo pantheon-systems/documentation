@@ -21,6 +21,38 @@ And now it's time to finally make your site available to the public!  This docum
 
 ## Deploy to Live
 
+
+1. Create your Test environment:
+
+   1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. 
+
+   1. Click **Initialize Test Environment** to create your Test environment.
+
+     This takes a few moments.
+
+   1. Click **Site Admin** and complete the installation process for the selected framework.
+
+    <Alert title="Note" type="info">
+
+    Record your new username and password. You’ll need this information again soon.
+
+    </Alert>
+
+1. Create your Live environment:
+
+   1. Go back to your Site Dashboard, and click the <Icon icon="cardio" text="Live"/> tab. Here you’ll have access to your Live environment, though it hasn’t been created yet.
+
+   1. Click **Initialize Live Environment** to create your Live environment.
+
+   1. Click **Site Admin** and complete the installation process for the selected framework.
+
+    <Alert title="Note" type="info">
+
+    Record your new username and password. You’ll need this information again soon.
+
+    </Alert>
+
+
 ### Finish your Dev site
 
 Once you've finished and committed your code to Dev, you'll need to make sure it has any content updates that have been made in the Live CMS environment.  

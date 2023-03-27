@@ -21,75 +21,50 @@ There are literally dozens of ways to add a site on Pantheon.  This page will co
 
 ## Create a New CMS Site
 
-A CMS site is a site that runs either WordPress or Drupal as the content management system (CMS).  There are four steps in creating a site:
-
-1. Create the site framework
-1. Configure configure the Dev CMS app.
-1. Set up the Test environment, and configure the Test CMS app.
-1. Set up the Live environment, and configure the Live CMS app.
-
+A CMS site is a site that runs either WordPress or Drupal as the content management system (CMS). 
 
 To create a CMS site:
 
-1. Create the site: 
 
-   1. Select <Icon icon="plus" text="Create New Site"/>. 
+1. On your Personal or Professional Workspace dashboard, select the yellow <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
+   
+   ![Create new site button](../../../images/create-new-site-button.png)
 
-   1. Select WordPress, Drupal with Composer, or Drupal 7.
+1. Select WordPress or Drupal.
 
-   1. Enter the name and select a region for this site.
+   ![Select CMS](../../../images/create-new-site-cms.png)
 
-   1. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**.
+   If you select Drupal, you will have the option to select the Drupal version you wish to use.
 
-   1. Click **Continue**. It can take several minutes to create a new site on Pantheon. 
+   ![Select Drupal version](../../../images/create-new-site-cms-drupal.png)
 
-      <Alert title="Note" type="info" >
-      
-      You can navigate away from this page during this process, but later, you'll have to go to the **Sites** tab to access your site.  If possible, stay on this tab to simplify accessing the site when the creation is complete.
-      
-      </Alert>
+1. Enter the name and select a region for this site. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**.
 
-   1. Click **Visit your Pantheon Site Dashboard** when the process is complete. 
+   ![Enter site information](../../../images/create-new-site-info.png)
 
-1. Finish setting up your Dev environment:
+1. Click **Continue**. It can take several minutes to create a new site on Pantheon. 
 
-   1. Click **Site Admin** and complete the installation process for the selected framework.
+   ![Site is created](../../../images/create-new-site-deploy.png)
 
-    <Alert title="Note" type="info">
+   <Alert title="Note" type="info" >
+   
+   You can navigate away from this page during this process, but later, you'll have to go to the **Sites** tab to access your site.  If possible, stay on this tab to simplify accessing the site when the creation is complete.
+   
+   </Alert>
 
-    Record your new username and password. You’ll need this information again soon.
+1. Click **Visit your Pantheon Site Dashboard** when the process is complete. 
 
-    </Alert>
+At this point, you have a Dev environment for your site code, but you do not have a Dev environment for your CMS.  To create that:
 
-1. Create your Test environment:
+1. Click **Site Admin**.  A new browser tab will open, and you will be presented with either Drupal or WordPress setup screens.  Enter the information in these screens, and when done, return to the browser tab with your Site Dashboard.
 
-   1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. 
+   <Alert title="Note" type="info">
 
-   1. Click **Initialize Test Environment** to create your Test environment.
+   Record your new username and password. You’ll need this information again soon.
 
-     This takes a few moments.
+   </Alert>
 
-   1. Click **Site Admin** and complete the installation process for the selected framework.
-
-    <Alert title="Note" type="info">
-
-    Record your new username and password. You’ll need this information again soon.
-
-    </Alert>
-
-1. Create your Live environment:
-
-   1. Go back to your Site Dashboard, and click the <Icon icon="cardio" text="Live"/> tab. Here you’ll have access to your Live environment, though it hasn’t been created yet.
-
-   1. Click **Initialize Live Environment** to create your Live environment.
-
-   1. Click **Site Admin** and complete the installation process for the selected framework.
-
-    <Alert title="Note" type="info">
-
-    Record your new username and password. You’ll need this information again soon.
-
-    </Alert>
+You have just finished adding a site in its Dev environment!
 
 ## Migrate an Existing Site
 
@@ -106,6 +81,7 @@ If your migration needs include any of the following, **do not use this process*
 | You are using WordPress Multisite | [Manually Migrate Sites to Pantheon](/migrate-manual)  |
 | You are migrating a site that is only on your local machine  | [Manually Migrate Sites to Pantheon](/migrate-manual) |
 | The site or site archive is greater than 500MB | [Manually Migrate Sites to Pantheon](/migrate-manual) |
+| You are using WordPress and don't want to install the plugin required for migration | [Manually Migrate Sites to Pantheon](/migrate-manual) |
 
 </Alert>
 
@@ -119,8 +95,83 @@ If your migration needs include any of the following, **do not use this process*
 
 ### Perform the Migration
 
-<Partial file="migrate/migrate-all.md" />
+<TabList>
 
+<Tab title="WordPress" id="tab-1-id" active={true}>
+
+This process will install a WordPress plugin.  If you don't want to use a plugin, migrate your site manually.
+
+1. On your Personal or Professional Workspace dashboard, select the yellow <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
+
+   ![Migrate site button](../../../images/migrate-site-button.png)
+
+1. Enter your current website URL, select **WordPress** and click **Continue**.
+
+   ![Enter URL and select CMS](../../../images/migrate-site-cms.png)
+
+1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**.
+   
+   ![Install Plugin](../../../images/migrate-site-info.png)
+
+1. Select **Generate Machine Token** and re-authenticate if prompted.  Keep the Pantheon tab open in your browser.
+
+   ![Begin process of installing plugin](../../../images/migrate-site-wp-plugin.png)
+
+1. Select **Install on /wp-admin**, then search for and install the plugin.
+
+   ![Searching for plugin on WordPress](../../../images/migrate-site-wp-search-plugin.png)
+   
+1. Click **Activate**. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and the site name.
+
+   ![Copying and pasting info](../../../images/migrate-site-wp-activate-info.png)
+
+1. Click **Migrate**. When the migration is complete the **Migration completed successfully** page appears.
+
+   ![Migration successful](../../../images/migrate-site-wp-successful.png)
+
+   IS THIS REALLY TRUE?  I HAVEN'T GOTTEN ONE YET  You will also receive an email when the migration completes. You may close this window or navigate away from this page.
+
+1. After the migration is complete, return to Pantheon tab and click **Confirm migration progress**.  Your site's dashboard appears.
+
+You have just finished adding a site in its Dev environment!
+
+</Tab>
+
+<Tab title="Drupal" id="tab-2-id">
+
+The recommended way to migrate Drupal sites from another host is to use `drush ard` (Drush 8 or earlier) to create an archive that can be easily imported.
+
+1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
+
+   ![Migrate site button](../../../images/migrate-site-button.png)
+
+1. Enter your current website URL, select **Drupal 7** or **Drupal 8**, and click **Continue**.
+
+   ![Enter URL and select CMS](../../../images/migrate-site-cms.png)
+
+1. Enter the name of your new Pantheon site, select a workspace for the site (optional), and click **Create Site**.
+   
+   ![Install Plugin](../../../images/migrate-site-drupal-create-site.png)
+
+1. Follow the instructions to **Create an Archive of Your Existing Site With Drush**:
+
+  ![Drupal create archive](../../../images/dashboard/drupal-guided-migrate.png)
+
+  The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
+
+  Click **Continue Migration**
+
+1. On the right side of the page, paste a publicly accessible URL to a download of your site archive. If you are using a Dropbox URL, change the end of the URL from `dl=0` to `dl=1` so we can import your site archive correctly.
+
+   ![Import archive](../../../images/migrate-site-drupal-import-archive.png)
+
+1. Click **Import Archive**. Click **Visit the Site Dashboard** from the Site Dashboard on Pantheon after the imported is complete.
+
+ ![Successful Drupal Migration](../../../images/dashboard/successful-drupal-migration.png)
+
+</Tab>
+
+</TabList>
 
 ## More Resources
 
