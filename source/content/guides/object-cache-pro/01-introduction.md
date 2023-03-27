@@ -1,12 +1,11 @@
 ---
-title: Object Cache Pro
+title: Object Cache Pro on Pantheon
 subtitle: Introduction
-description: 
-tags: []
+description: Learn about Object Cache Pro on Pantheon.
+tags: [cache]
 contributors: [jazzsequence]
 type: guide
 showtoc: true
-anchorid: object-cache-pro
 permalink: docs/guides/object-cache-pro/
 editpath: object-cache-pro/01-introduction.md
 contenttype: [guide]
@@ -16,22 +15,34 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: ""
+reviewed: "2023-03-27"
 ---
 
 <Alert title="Early Access Software" type="info">
-This product is currently in <a href="https://docs.pantheon.io/guides/support/early-access/">Early Access</a>. Information here may be subject to change. Object Cache Pro, however, is a stable product and is being used on production sites. If you have any questions, please refer to the email you received when you signed up for Object Cache Pro Early Access.
+
+Pantheon's Object Cache Pro is available for [Early Access](guides/support/early-access/) participants. Features for Object Cache Pro are in active development. However, Object Cache Pro is a stable product and is in use on production sites. Refer to the email you received when you signed up for Object Cache Pro Early Access if you have questions. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+
 </Alert>
 
-This guide will walk you through using [Object Cache Pro](https://objectcache.pro) on the Pantheon platform. We are currently evaluating making Object Cache Pro available to users who have access to Redis object cache. To join the Early Access program, jump to [How do I sign up](#how-do-i-sign-up) below.
+This guide provides information on how to install and configure [Object Cache Pro](https://objectcache.pro) on the Pantheon platform. We are currently evaluating making Object Cache Pro available to users who have access to Redis object cache. Refer to the [How do I sign up for Object Cache Pro on Pantheon](#how-do-i-sign-up) section to join the Early Access program.
 
 ## What is Object Cache Pro?
-Object Cache Pro is a highly optimized WordPress plugin that deeply integrates into Redis for business class performance. When configured, it provides an easy-to-use administration page with analytics to show current benchmarks and has been optimized for WordPress and popular WordPress plugins such as Query Monitor, WooCommerce, Jetpack and Yoast SEO. A premium plugin, Pantheon is evaluating a partnership with Object Cache Pro to make it available to our customers.
+
+Object Cache Pro is a highly optimized premium WordPress plugin that integrates with Redis for business class performance. It provides an easy-to-use administration page with analytics to show current benchmarks. Object Cache Pro is specifically optimized for WordPress and popular WordPress plugins, including:
+
+- Query Monitor
+- WooCommerce
+- Jetpack
+- Yoast SEO
 
 ![Object Cache Pro admin page](../../../images/guides/object-cache-pro/object-cache-pro-analytics.png)
 
-### How does it work?
-Object Cache Pro was written from the ground up to optimize for performance, maintain a small footprint in memory and avoid unnecessary Redis reads and writes. It's tested extensively against WooCommerce, fully compliant with the WordPress Object Cache API and integrates seamlessly into WordPress. 
+### How does Object Cache Pro work?
 
-### How do I sign up?
-To sign up for Object Cache Pro Early Access, please fill out [this form](https://forms.gle/3EpZcELcYqB2VRKC8). You will receive an email with a link to download the plugin and a license token. These things will be used in this guide to install and configure Object Cache Pro.
+Object Cache Pro reduces page load time and the overall load on Redis by combining Redis commands into server request batches.
+
+Object Cache Pro also optimizes for performance, using compressed data to maintain a small footprint in memory, while avoiding unnecessary Redis reads and writes. Object Cache Pro has been tested extensively against WooCommerce, is fully compliant with the WordPress Object Cache API, and integrates seamlessly into WordPress.
+
+### How do I sign up for Object Cache Pro on Pantheon?
+
+Please fill out [this form](https://forms.gle/3EpZcELcYqB2VRKC8) to sign up for Object Cache Pro Early Access. You will receive an email with a link to download the plugin and a license token. The email provides information on first steps to help you through the installation and configuration process.
