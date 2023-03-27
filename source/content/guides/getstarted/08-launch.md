@@ -19,93 +19,115 @@ editpath: getstarted/08-launch.md
 
 And now it's time to finally make your site available to the public!  This document provides the bare minimum that needs to be; for more detailed information, refer to our [Launch Guide](/guides/launch/).
 
-## Deploy to Live
-
-
-1. Create your Test environment:
-
-   1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. 
-
-   1. Click **Initialize Test Environment** to create your Test environment.
-
-     This takes a few moments.
-
-   1. Click **Site Admin** and complete the installation process for the selected framework.
-
-    <Alert title="Note" type="info">
-
-    Record your new username and password. You’ll need this information again soon.
-
-    </Alert>
-
-1. Create your Live environment:
-
-   1. Go back to your Site Dashboard, and click the <Icon icon="cardio" text="Live"/> tab. Here you’ll have access to your Live environment, though it hasn’t been created yet.
-
-   1. Click **Initialize Live Environment** to create your Live environment.
-
-   1. Click **Site Admin** and complete the installation process for the selected framework.
-
-    <Alert title="Note" type="info">
-
-    Record your new username and password. You’ll need this information again soon.
-
-    </Alert>
-
-
-### Finish your Dev site
-
-Once you've finished and committed your code to Dev, you'll need to make sure it has any content updates that have been made in the Live CMS environment.  
-
-1. Select the <Icon icon="wrench" text="Dev"/> tab, and then click <Icon icon="server" text="Database / Files"/>.
-
-1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site. 
-
-1. Click **Clone the Database & files from Live into the Development Environment**.
-
-1. Click <Icon icon="new-window-alt" text="Visit Development Site"/> when this is complete to confirm that the content you created on your Live site now appears on your Dev site.
+The steps we are covering here include:
+- Test your site
+- Deploy your site Live
+- Configure your domain.
 
 ## Test Your Site
 
-Once development is complete, it's time to test it in the Test environment.  To do so:
 
-1. Select the <Icon icon="equalizer" text="Test"/> tab.
+To create your Test environment:
 
-1. Select the <span class="glyphicons glyphicons-refresh"></span> **Deploys** tab.
+ 1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. Click **Initialize Test Environment** to create your Test environment.
 
-1. Select the **Check the Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
+ ![Initalizing the test environment](../../../images/test-initialize.png)
 
-   ![Site dashboard, test environment, Deploys section](../images/dashboard/deploy-to-test-env.png)
+  This takes a few moments.
 
-1. Select **Deploy Code from  Development to Test Environment**
+1. Click **Site Admin**.  A new browser tab will open, and you will be presented with either Drupal or WordPress setup screens.  Enter the information in these screens, and when done, return to the browser tab with your Site Dashboard.
 
-Your site is now ready to test.
+  <Alert title="Note" type="info">
 
-## Deploy to Live
+  Record your new username and password. You’ll need this information again soon.
 
-Once testing is complete you can make your site live.
+  </Alert>
 
-1. Select the <span class="glyphicons glyphicons-cardio"></span> **Live** tab.
+1. Select the <Icon icon="server" text="Database / Files"/> tab.
 
-1. Select the <span class="glyphicons glyphicons-refresh"></span> **Deploys** tab.
+1. Keep the default selections and select **Clone the Database & the Files from Development into the Test Environment**.
 
-![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
+   ![Cloning Dev to Test](../../../images/launch-clone-dev-to-test.png)
 
-1. Select **Deploy Code from Test to Live Environment**.
-   
-That's it! Your site is live!  Select the **Visit Live Site** button to view it.
+Test your site thoroughly before proceeding to the next step.
+
+## Deploy Your Site Live
+
+Once you've tested your site, it's time for it to go live.  
+
+<Alert title="Note" type="info" >
+
+Once you complete this step, your site will be live for anyone to see, at the Pantheon URL.  We will change this URL in the next section.
+
+</Alert>
+
+ 1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Live"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. Click **Initialize Live Environment** to create your Test environment.
+
+   ![Initialize live environment](../../../images/launch-initialize-live.png)
+
+1. Click **Site Admin**.  A new browser tab will open, and you will be presented with either Drupal or WordPress setup screens.  Enter the information in these screens, and when done, return to the browser tab with your Site Dashboard.
+
+  <Alert title="Note" type="info">
+
+  Record your new username and password. You’ll need this information again soon.
+
+  </Alert>
+
+1. Select the <Icon icon="server" text="Database / Files"/> tab.
+
+1. Keep the default selections *except* select "Test" from **From this Environment**, then select **Clone the Database & the Files from Development into the Test Environment**.
+
+   ![Clone test to live](../../../images/dashboard/clone-test-to-live.png)
+
+1. You will be prompted to confirm you want to go live.  Type "CLONE", then click **Overwrite This Environment**.
+
+   ![Confirm cloning](../../../images/launch-clone-test-live-confirm.png)
+
+Your site is now live at the Pantheon URL.  Click **Visit Live Site** to view it.
 
 ## Domain Configuration
 
-At this point, you have a live site with an ugly URL, like ``.  To change that to a more friendly URL, first connect your DNS:
+At this point, you have a live site with an ugly URL, like ``.  To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.
 
-<Partial file="connect-dns.md" />
+Once you've done that, you will first connect your DNS:
+
+1. Go to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+
+1. Select the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** tab.
+
+1. Enter the `www` domain (for example, `www.example.com`), then click **Connect Domain**. 
+
+1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
+
+1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**.
+
+  It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check the following:
+
+    - Ensure that there's no "parking page" or redirect configured in your DNS.
+
+    - The TXT record's Host value doesn't have a trailing `.`
+
+    - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
+
+1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/guides/domains/dns) provider. If you see:
+
+  > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
+
+  Wait one minute, then refresh the page.
+
+1. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
+
+1. Select **Connect Domain** and enter the bare domain (for example, `example.com`, and then click **Connect Domain**.
 
 And then, you'll configure your DNS:
 
-The instructions in this section cover the common `example.com` and `www.example.com` domain configuration. Refer to [Platform and Custom Domains](/guides/domains) for other domain configurations.
-
-<Partial file="configure-dns.md" />
+1. Select **Details** next to the `www` domain.
+1. Log in to the DNS host for the domain in a separate window. 
+1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an **A** record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
+1. Return to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page in the Pantheon Site Dashboard.
+1. Click **Details** next to the bare domain.
+1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an A record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
+   - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
 
 Click below for more detailed instructions for your specific DNS host. 
 

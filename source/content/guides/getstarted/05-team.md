@@ -12,7 +12,7 @@ integration: [--]
 tags: [--]
 contributors: [wordsmither]
 reviewed: "2023-03-21"
-showtoc: true
+showtoc: false
 permalink: docs/guides/getstarted/team
 editpath: getstarted/05-team.md
 ---
@@ -33,7 +33,7 @@ To set up your team:
    
    </Alert>
 
-   ![Creating a Professional Workspace](../../../images/create-workspace.png)
+   ![Select Workspace](../../../images/create-workspace.png)
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
    

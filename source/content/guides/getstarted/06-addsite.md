@@ -64,7 +64,7 @@ At this point, you have a Dev environment for your site code, but you do not hav
 
    </Alert>
 
-You have just finished adding a site in its Dev environment!
+You have successfully finished adding a site in its Dev environment!
 
 ## Migrate an Existing Site
 
