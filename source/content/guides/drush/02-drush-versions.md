@@ -62,11 +62,11 @@ Create the `pantheon.yml` file if it does not already exist. If a `pantheon.upst
 
 ## Troubleshoot Your Drush Version
 
-Occasionally, the correct version of Drush is not called even after updating the Drush version in `pantheon.yml`. 
+Occasionally, the correct version of Drush is not called even after updating the Drush version in `pantheon.yml`.
 
 The Pantheon platform always prefers the site-local Drush or other local settings over the setting in the `pantheon.yml` file.
 
-1. Check for an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory. 
+1. Check for an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory.
 
 1. Remove the file, or comment out its contents to resolve the issue.
 
@@ -76,9 +76,13 @@ Executing Drush on the platform via a `terminus drush` command will use the vers
 
 We recommend that you use the latest version of Drupal with Drush 11 installed as a site-local Drush if you manage your site with Composer.
 
-Do not select any major version of Drush lower than `8.3.2`, `9.7.1`, or `10.2.0`.
+Our default Composer-managed upstream has a start state for this dependency that will also work with Drush 12 when it is released.
 
-Refer to [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush) for more information.
+```bash{promptUser: user}
+"drush/drush": "^11 || ^12"
+```
+
+Refer to [Pantheon's Drupal Composer-Managed upstream](https://github.com/pantheon-systems/drupal-composer-managed/blob/6522cbccb4a9c057d01a6fe67898cfee6d998aba/composer.json#L23) for a complete example of the `composer.json` file.
 
 #### Permissions
 
