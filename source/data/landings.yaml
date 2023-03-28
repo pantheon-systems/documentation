@@ -188,8 +188,6 @@
             - text: 'On-Server Development'
               url: '/videos/sftp'
               icon: 'fa fa-video-camera'
-            - text: 'Working in the WordPress Dashboard and Drupal Admin Interface'
-              url: '/cms-admin'
             - text: 'Developing on Pantheon Directly with SFTP Mode'
               url: '/guides/sftp'
         - title: 'Managing Files'

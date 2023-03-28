@@ -1086,7 +1086,7 @@ Complete this step in Dev, Test, and Live Environments.
   exit
   ```
 
-1. Set the environment [connection mode to SFTP](/cms-admin#sftp-mode), then install and activate Wordfence. You can do both with Terminus:
+1. Set the environment connection mode to SFTP, then install and activate Wordfence. You can do both with Terminus:
 
   ```bash{outputLines: 2,4-25}
   terminus connection:set $SITE.$ENV sftp
