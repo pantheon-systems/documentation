@@ -1,7 +1,7 @@
 ---
 title: Get Started with Pantheon
 subtitle: Sign Up
-description: Create your account.
+description: Create your Pantheon account.
 contenttype: [guide]
 innav: [false]
 categories: [overview]
@@ -21,7 +21,7 @@ First, let's get you signed up!
 
 To create an account:
 
-1. Go to the <a href="https://pantheon.io/register?docs" target="_blank" rel="nofollow noopener external">Registration Page</a>.
+1. Go to the Pantheon <a href="https://pantheon.io/register?docs" target="_blank" rel="nofollow noopener external">Registration Page</a>.
 
 1. Enter your name, email, company name, password, country and state.
 
@@ -33,8 +33,8 @@ To create an account:
 
 1. Log in to your account.  A Welcome page will appear.
 
-   For the purposes of completing the activities in this guide, select [**Set up your team**](/guides/account-mgmt/workspace-sites-teams/teams).
+1. Select [**Set up your team**](/guides/account-mgmt/workspace-sites-teams/teams) for the purposes of completing the activities in this guide.
 
-![Welcome screen with Setup my team highighted](../../../images/welcome-screen-teams-highlight.png)
+![Welcome screen with Setup my team highlighted](../../../images/welcome-screen-teams-highlight.png)
 
 Congratulations! You are now the proud owner of a free Pantheon account.  Now let's get it set up.

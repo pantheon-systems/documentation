@@ -1,7 +1,7 @@
 ---
 title: Get Started with Pantheon
 subtitle: Purchase
-description: Purchase a Site Plan
+description: Purchase a Site Plan on Pantheon.
 contenttype: [guide]
 innav: [false]
 categories: [overview]
@@ -25,11 +25,11 @@ The free account you created allows you to create sandbox (non-production) sites
 
 ## Purchase a Plan
 
-1. On your Site Dashboard, and **Upgrade** next to the site's name. 
+1. Open your Site Dashboard and click **Upgrade** next to the site's name.
 
    ![Upgrade button](../../../images/purchase-upgrade-plan-button.png)
 
-1. Click **Select** for the plan you wish to purchase.
+1. Click **Select** for the plan you want to purchase.
 
    ![Plans](../../../images/dashboard/select-plan.png)
 
@@ -49,9 +49,8 @@ The free account you created allows you to create sandbox (non-production) sites
 
    ![Select Card](../../../images/purchase-select-card.png)
 
-1. Make sure the details are correct, and click the **Place Order** button.
+1. Make sure the details are correct, and click the **Place Your Order** button.
 
    ![Place order](../../../images/purchase-place-order.png)
 
 You have purchased your plan, and can now go live!
-

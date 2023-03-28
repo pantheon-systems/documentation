@@ -28,20 +28,20 @@ To set up your team:
 1. Select your gravatar in the upper left corner, then select **Create New Workspace**.
 
    <Alert title="Note" type="info" >
-   
+
    Your gravatar is an image you can upload in your [personal settings](https://dashboard.pantheon.io/personal-settings/profile).  If you have not personalized your gravatar, it will appear as it does in the image below.
-   
+
    </Alert>
 
    ![Select Workspace](../../../images/create-workspace.png)
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
-   
+
    ![Adding Workspace Information](../../../images/create-workspace-form.png)
 
-1. If you have a team member that needs access to this Workspace, enter their email address and select a role for them.  To learn about roles, select **View Role Permission Levels**.
-   
-   Repeat this step for each team member you wish to add.
+1. Enter the email addresses and select roles for team members that need access to this Workspace. To learn about roles, select **View Role Permission Levels**.
+
+   Repeat this step for each team member you want to add.
 
   ![Adding a team member](../../../images/create-workspace-team.png)
 
@@ -49,8 +49,6 @@ To set up your team:
 
    ![Workspace Dashboard](../../../images/create-workspace-dashboard.png)
 
-You have finished created your first workspace, and added your team members.  If you'd like to learn more about workspaces and teams, refer to [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
+You have created your first workspace, and added your team members. If you'd like to learn more about workspaces and teams, refer to [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
 
 Now, let's add a site.
-
- 
