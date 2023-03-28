@@ -2,7 +2,7 @@
 title: Choosing Your Start State
 description: See available options for starting new Drupal or WordPress sites and site import considerations.
 tags: [upstreams, site]
-reviewed: "2022-12-13"
+reviewed: "2023-03-28"
 contenttype: [doc]
 innav: [true]
 categories: [create]
