@@ -45,6 +45,7 @@ To purchase a plan for a site:
 
 The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
 
+
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## Enable Add-ons
