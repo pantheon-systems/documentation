@@ -34,7 +34,15 @@ As shown here, visits and visitors have different meanings. If two visitors go t
 
 ### Cache Hit Ratio
 
-An important performance benchmark is the number of requests that can be served from the Global CDN. Serving requests from cache rather than by the CMS allows visitors to experience a faster response and removes load from the site's server resources. A cached request is served from the nearest edge endpoint without any delay, while a request to the CMS must be individually processed and loaded. A high cache hit ratio greatly improves the browsing experience and site performance. Learn how to enable and improve caching with the [Pantheon Global CDN](/guides/global-cdn) guide.
+An important performance benchmark is the number of requests that can be served from the Global CDN. This metric does not affect site traffic measurements for the Site Plan. Serving requests from cache rather than by the CMS allows visitors to experience a faster response and removes load from the site's server resources. A cached request is served from the nearest edge endpoint without any delay, while a request to the CMS must be individually processed and loaded. A high cache hit ratio greatly improves the browsing experience and site performance.
+
+A low Cache Hit Ratio may be due several reasons.
+
+1. A site that has mainly authenticated traffic will have a low ratio because authenticated traffic is never cached. This includes both logged in site users as well as admin actions.
+1. A low or missing `max-age` header in the response from the CMS will mean cached pages are not stored or invalidated too quickly. You may view this header and others with the [Configure and Verify Edge Caching](/guides/global-cdn/global-cdn-caching) guide.
+1. Setting a cookie on page requests will bypass the GCDN cache, learn more in [Debugging Cookies and Global CDN](/guides/global-cdn/global-cdn-caching#debugging-cookies-and-global-cdn)
+
+Learn more about how to enable and improve caching with the [Pantheon Global CDN](/guides/global-cdn) guide.
 
 ## How Do You Know if a Visit Counts?
 
