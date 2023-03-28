@@ -17,39 +17,33 @@ permalink: docs/guides/getstarted/launch
 editpath: getstarted/08-launch.md
 ---
 
-And now it's time to finally make your site available to the public!  This document provides the bare minimum that needs to be; for more detailed information, refer to our [Launch Guide](/guides/launch/).
-
-The steps we are covering here include:
-- Test your site
-- Deploy your site Live
-- Configure your domain.
+And now it's time to finally make your site available to the public!  This document provides the bare minimum that needs to be done; for more detailed information, refer to our [Launch Guide](/guides/launch/).
 
 ## Test Your Site
 
-
 To create your Test environment:
 
- 1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. Click **Initialize Test Environment** to create your Test environment.
+ 1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Click **Initialize Test Environment** to create your Test environment.
 
  ![Initalizing the test environment](../../../images/test-initialize.png)
 
   This takes a few moments.
 
-1. Click **Site Admin**.  A new browser tab will open, and you will be presented with either Drupal or WordPress setup screens.  Enter the information in these screens, and when done, return to the browser tab with your Site Dashboard.
+1. Click **Site Admin**.  A new browser tab will open, and you will be presented with either Drupal or WordPress setup screens.  
+
+1. Enter the information in these screens, and when done, return to the browser tab with your Site Dashboard.
 
   <Alert title="Note" type="info">
 
-  Record your new username and password. You’ll need this information again soon.
+  Be sure to record your new username and password.
 
   </Alert>
 
-1. Select the <Icon icon="server" text="Database / Files"/> tab.
-
-1. Keep the default selections and select **Clone the Database & the Files from Development into the Test Environment**.
+1. Select the <Icon icon="server" text="Database / Files"/> tab. Keep the default selections and select **Clone the Database & the Files from Development into the Test Environment**.
 
    ![Cloning Dev to Test](../../../images/launch-clone-dev-to-test.png)
 
-Test your site thoroughly before proceeding to the next step.
+Your Test environment is now set up. Test your site thoroughly before proceeding to the next step.
 
 ## Deploy Your Site Live
 
@@ -61,7 +55,7 @@ Once you complete this step, your site will be live for anyone to see, at the Pa
 
 </Alert>
 
- 1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Live"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. Click **Initialize Live Environment** to create your Test environment.
+ 1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Live"/> tab. Click **Initialize Live Environment** to create your Test environment.
 
    ![Initialize live environment](../../../images/launch-initialize-live.png)
 
@@ -69,13 +63,11 @@ Once you complete this step, your site will be live for anyone to see, at the Pa
 
   <Alert title="Note" type="info">
 
-  Record your new username and password. You’ll need this information again soon.
+  Be sure to record your new username and password.
 
   </Alert>
 
-1. Select the <Icon icon="server" text="Database / Files"/> tab.
-
-1. Keep the default selections *except* select "Test" from **From this Environment**, then select **Clone the Database & the Files from Development into the Test Environment**.
+1. Select the <Icon icon="server" text="Database / Files"/> tab. Keep the default selections *except* select "Test" from **From this Environment**, then select **Clone the Database & the Files from Test into the Live Environment**.
 
    ![Clone test to live](../../../images/dashboard/clone-test-to-live.png)
 
@@ -87,9 +79,9 @@ Your site is now live at the Pantheon URL.  Click **Visit Live Site** to view it
 
 ## Domain Configuration
 
-At this point, you have a live site with an ugly URL, like ``.  To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.
+At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`.  To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.
 
-Once you've done that, you will first connect your DNS:
+Once you've done that, connect your DNS:
 
 1. Go to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 
@@ -99,37 +91,29 @@ Once you've done that, you will first connect your DNS:
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
 
-1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**.
+1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**. It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values.
 
-  It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check the following:
-
-    - Ensure that there's no "parking page" or redirect configured in your DNS.
-
-    - The TXT record's Host value doesn't have a trailing `.`
-
-    - That the [DNS value has propagated](https://www.whatsmydns.net/#TXT/).
-
-1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/guides/domains/dns) provider. If you see:
-
-  > Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.
-
-  Wait one minute, then refresh the page.
+1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/guides/domains/dns) provider. If you see a message like "Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.", wait one minute, then refresh the page.
 
 1. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
 
 1. Select **Connect Domain** and enter the bare domain (for example, `example.com`, and then click **Connect Domain**.
 
-And then, you'll configure your DNS:
+Then, configure your DNS:
 
 1. Select **Details** next to the `www` domain.
-1. Log in to the DNS host for the domain in a separate window. 
-1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an **A** record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
-1. Return to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page in the Pantheon Site Dashboard.
-1. Click **Details** next to the bare domain.
-1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an A record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
-   - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
 
-Click below for more detailed instructions for your specific DNS host. 
+1. Log in to the DNS host for the domain in a separate window. 
+
+1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an **A** record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
+
+1. Return to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page in the Pantheon Site Dashboard.
+
+1. Click **Details** next to the bare domain.
+
+1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an A record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
+
+Click below for detailed instructions for your specific DNS host. 
 
 <Accordion title=" DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
@@ -139,9 +123,4 @@ You can run diagnostics at [Let's Debug](https://letsdebug.net/) if you are havi
   
 </Accordion>
 
-Click [here](/guides/domains/dns/#frequently-asked-questions) to learn more about DNS settings.
-
-
-## More Resources
-
-* [Launch Guide](/guides/launch/)
+Your site is now live at the domain you have purchased!

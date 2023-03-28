@@ -49,3 +49,8 @@ To set up your team:
 
    ![Workspace Dashboard](../../../images/create-workspace-dashboard.png)
 
+You have finished created your first workspace, and added your team members.  If you'd like to learn more about workspaces and teams, refer to [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
+
+Now, let's add a site.
+
+ 

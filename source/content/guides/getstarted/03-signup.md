@@ -35,4 +35,6 @@ To create an account:
 
    For the purposes of completing the activities in this guide, select [**Set up your team**](/guides/account-mgmt/workspace-sites-teams/teams).
 
-   ![Welcome screen with Setup my team highighted](../../../images/welcome-screen-teams-highlight.png)
+![Welcome screen with Setup my team highighted](../../../images/welcome-screen-teams-highlight.png)
+
+Congratulations! You are now the proud owner of a free Pantheon account.  Now let's get it set up.

@@ -25,7 +25,7 @@ The free account you created allows you to create sandbox (non-production) sites
 
 ## Purchase a Plan
 
-1. Go to the Site Dashboard for the site you want to purchase a plan for, and click **Upgrade** next to the site's name. 
+1. On your Site Dashboard, and **Upgrade** next to the site's name. 
 
    ![Upgrade button](../../../images/purchase-upgrade-plan-button.png)
 
@@ -49,11 +49,9 @@ The free account you created allows you to create sandbox (non-production) sites
 
    ![Select Card](../../../images/purchase-select-card.png)
 
-1. Make sure the details are correct.
+1. Make sure the details are correct, and click the **Place Order** button.
 
    ![Place order](../../../images/purchase-place-order.png)
-
-1. Click the **Place Order** button.
 
 You have purchased your plan, and can now go live!
 
