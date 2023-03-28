@@ -30,7 +30,7 @@ There are a number of plugins that can help you correct and maintain your links.
 
 ### Install Broken Link Checker
 
-You can install the [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin from your [WordPress dashboard](/cms-admin/#wordpress-dashboard) by following these steps:
+You can install the [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin from your WordPress dashboard by following these steps:
 
 1. Set your **Connection Mode** to [SFTP](/guides/sftp).
 

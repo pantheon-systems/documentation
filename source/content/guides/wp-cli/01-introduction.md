@@ -14,7 +14,7 @@ showtoc: true
 permalink: docs/guides/wp-cli
 ---
 
-[WP-CLI](https://make.wordpress.org/cli/handbook/) is a command-line interface to WordPress. It provides a [wide range of utilities](https://developer.wordpress.org/cli/commands/) for managing your WordPress site. You can use WP-CLI to complete almost any action you can perform in your [WordPress Dashboard](/cms-admin#wordpress-dashboard).
+[WP-CLI](https://make.wordpress.org/cli/handbook/) is a command-line interface to WordPress. It provides a [wide range of utilities](https://developer.wordpress.org/cli/commands/) for managing your WordPress site. You can use WP-CLI to complete almost any action you can perform in your WordPress Dashboard.
 
 WP-CLI on the Pantheon Platform requires [Terminus](/terminus). Terminus is a command-line interface for managing your Pantheon sites, and is used to relay proxy commands from your local machine to your Pantheon environment.
 

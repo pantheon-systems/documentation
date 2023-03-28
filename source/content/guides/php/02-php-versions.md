@@ -25,7 +25,7 @@ Upgrading your site's PHP version will improve the security, performance, and su
 Older software is more likely to contain code that is incompatible with recent PHP versions. Before you upgrade your PHP version:
 
 - Update core to the latest release. Refer to [WordPress and Drupal Core Updates](/core-updates) for more details.
-- Update your themes, plugins, and modules. Refer to [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin) for more details.
+- Update your themes, plugins, and modules. 
 
 <Alert title="Note" type="info">
 

@@ -77,4 +77,3 @@ Here are [more commands](https://developer.wordpress.org/cli/commands/) you may 
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
 - [Terminus Guide](/terminus)
-- [WordPress Dashboard](/cms-admin#wordpress-dashboard)

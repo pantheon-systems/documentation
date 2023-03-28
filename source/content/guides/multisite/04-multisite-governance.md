@@ -91,4 +91,3 @@ A multisite setup can be more efficient for teams as long as roles and responsib
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
-- [Working in the WordPress Dashboard](/cms-admin#wordpress-dashboard)
