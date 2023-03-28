@@ -114,14 +114,14 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
     * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
     */
 
-    $conf['environment_indicator_overwrite'] = TRUE;
-      $conf['environment_indicator_overwritten_position'] = 'top';
-      $conf['environment_indicator_overwritten_fixed'] = FALSE;
+    $config['environment_indicator_overwrite'] = TRUE;
+      $config['environment_indicator_overwritten_position'] = 'top';
+      $config['environment_indicator_overwritten_fixed'] = FALSE;
 
       if (!defined('PANTHEON_ENVIRONMENT')) {
-          $conf['environment_indicator_overwritten_name'] = 'Local';
-          $conf['environment_indicator_overwritten_color'] = '#505050';
-          $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+          $config['environment_indicator_overwritten_name'] = 'Local';
+          $config['environment_indicator_overwritten_color'] = '#505050';
+          $config['environment_indicator_overwritten_text_color'] = '#ffffff';
       }
       // Pantheon Env Specific Config
       if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
@@ -132,25 +132,25 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
               $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
               break;
             case 'dev':
-              $conf['environment_indicator_overwritten_name'] = 'Dev';
-              $conf['environment_indicator_overwritten_color'] = '#307b24';
-              $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+              $config['environment_indicator_overwritten_name'] = 'Dev';
+              $config['environment_indicator_overwritten_color'] = '#307b24';
+              $config['environment_indicator_overwritten_text_color'] = '#ffffff';
               break;
             case 'test':
-              $conf['environment_indicator_overwritten_name'] = 'Test';
-              $conf['environment_indicator_overwritten_color'] = '#b85c00';
-              $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+              $config['environment_indicator_overwritten_name'] = 'Test';
+              $config['environment_indicator_overwritten_color'] = '#b85c00';
+              $config['environment_indicator_overwritten_text_color'] = '#ffffff';
               break;
             case 'live':
-              $conf['environment_indicator_overwritten_name'] = 'Live!';
-              $conf['environment_indicator_overwritten_color'] = '#e7131a';
-              $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+              $config['environment_indicator_overwritten_name'] = 'Live!';
+              $config['environment_indicator_overwritten_color'] = '#e7131a';
+              $config['environment_indicator_overwritten_text_color'] = '#ffffff';
               break;
             default:
               //Multidev catchall
-              $conf['environment_indicator_overwritten_name'] = 'Multidev';
-              $conf['environment_indicator_overwritten_color'] = '#e7131a';
-              $conf['environment_indicator_overwritten_text_color'] = '#000000';
+              $config['environment_indicator_overwritten_name'] = 'Multidev';
+              $config['environment_indicator_overwritten_color'] = '#e7131a';
+              $config['environment_indicator_overwritten_text_color'] = '#000000';
               break;
           }
       }
