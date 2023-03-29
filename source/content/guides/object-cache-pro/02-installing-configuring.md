@@ -101,7 +101,7 @@ terminus redis:enable <site>
 
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
-1. Activate the Object Cache Pro plugin and enable Redis in the plugin from the WordPress Admin, locally with Lando, or via Terminus.
+1. Activate the Object Cache Pro plugin and enable Redis in the plugin from the WordPress Admin, locally with WP-CLI, or via Terminus.
 
 	**WordPress Admin:**
 
@@ -112,6 +112,10 @@ terminus redis:enable <site>
 
 		- Make the commit in SFTP mode if you did this in your Pantheon Dev environment.
 		- Commit the file to your repository if you did this locally.
+
+	**WP-CLI:**
+
+	Refer to the [WP-CLI guide](/guides/wp-cli/install-wp-plugins-themes#install-wordpress-plugins) for instructions.
 
 	**Terminus:**
 
@@ -286,7 +290,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		```
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
-1. Activate the plugin and enable Redis in the plugin. You can activate the Object Cache Pro plugin from the WordPress Admin, locally with Lando, or via Terminus.
+1. Activate the plugin and enable Redis in the plugin. You can activate the Object Cache Pro plugin from the WordPress Admin, locally with WP-CLI, or via Terminus.
 
 	**WordPress Admin:**
 
@@ -297,6 +301,10 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 		- Make the commit in SFTP mode if you did this in your Pantheon Dev environment.
 		- Commit the file to your repository if you did this locally.
+
+	**WP-CLI:**
+
+	Refer to the [WP-CLI guide](/guides/wp-cli/install-wp-plugins-themes#install-wordpress-plugins) for instructions.
 
 	**Terminus:**
 
@@ -312,5 +320,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
+
+	
 
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
