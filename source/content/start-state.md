@@ -2,7 +2,7 @@
 title: Choosing Your Start State
 description: See available options for starting new Drupal or WordPress sites and site import considerations.
 tags: [upstreams, site]
-reviewed: "2022-12-13"
+reviewed: "2023-03-28"
 contenttype: [doc]
 innav: [true]
 categories: [create]
@@ -24,7 +24,7 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 ## Pantheon Upstreams
 
-We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/), and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
+We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/). We extend Drupal 7 sites with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment that is automatically included in the Drupal Latest Version. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php` file.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
 - [Drupal (Latest Version)](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" />
@@ -85,4 +85,4 @@ terminus dashboard:view my-new-panopoly-site
 
 ## Import an Existing Site
 
-Your site migration has four phases. You’ll package your site, import it, test it out, then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/guides/guided/.
+Your site migration has four phases. You’ll package your site, import it, test it out, then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/guides/guided/).
