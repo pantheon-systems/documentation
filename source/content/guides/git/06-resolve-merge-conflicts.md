@@ -39,10 +39,20 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 </Tab>
 
+<Tab title="Drupal 9" id="d9">
+
+  ```bash{promptUser: user}
+  git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed.git main
+  # resolve conflicts
+  git push origin master
+  ```
+
+</Tab>
+
 <Tab title="Drupal (Latest)" id="d#">
 
   ```bash{promptUser: user}
-  git remote add pantheon-drupal-10 https://github.com/pantheon-upstreams/drupal-composer-managed.git
+  git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-10-composer-managed.git main
   # resolve conflicts
   git push origin master
   ```
