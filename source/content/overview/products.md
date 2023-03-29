@@ -140,3 +140,22 @@ Pantheon offers a wide array of products and features to simplify building and m
   </Product>
 
 </ProductGroup>
+
+## Management Tools
+
+<ProductGroup>
+
+  <Product title={"Enterprise Billing Center"} link={"/overview/enterprise-billing-center"}>
+
+  Detailed billing and site plan information for Enterprise (contract) customers
+
+  </Product>
+
+  <Product title={"Pantheon Dashboard"} link={"/guides/new-dashboard"}>
+
+  Visualize and manage sites, users, traffic, metrics, visual regression testing (VRT), and more.
+
+  </Product>
+
+
+</ProductGroup>

@@ -19,10 +19,14 @@ showtoc: false
 <Tab title="Overview" id="overview" active={true}>
 
 Billing can be challenging, especially for businesses managing large numbers of sites. The Enterprise Billing Center provides detailed billing and site plan information for Enterprise (contract) customers.  The information available here will allow you to:
-* Determine chargebacks to internal departments
-* Self-serve common billing needs
-* Provide access to billing information to your team
-* Analyze your spend across multiple contracts and payment methods
+
+- Self-serve common billing needs
+
+- Determine chargebacks to internal departments
+
+- Provide access to billing information to your team
+
+- Analyze your spend across multiple contracts
 
 ![Enterprise Billing Center](../../images/enterprise-billing-center.png)
 
@@ -30,29 +34,28 @@ Billing can be challenging, especially for businesses managing large numbers of 
 
 <Tab title="Features" id="features">
 
-* View and download all invoices in one location
-* View and download all Site Portfolio Reports, which show the following:
-  * Existing sites with Automatic Upgrades
-  * New sites that exceeded the contract
-  * All active sites in your portfolio
-  * Deactivated sites
+Access all invoices and associated portfolio reports in a central location.  Each report provides a detailed breakdown of all site plan changes applied to your contract:
+
+- All active sites in your portfolio
+
+- Newly added sites
+
+- Sites with Automatic Plan Upgrades
+
+- Deactivated sites
 
 *Site Portfolio Report*
 
-![Site Portfolio Charts](../../images/site-portfolio-report-charts.png)
-
-
-*Active Sites Chart*
-
-![Active Sites Chart](../../images/site-portfolio-report-chart-hover-over.png)
+![Site Portfolio Charts](../../images/enterprise-billing-center-invoice-report.png)
 
 
 </Tab>
 
 <Tab title="Requirements" id="requirements">
 
-* You must be an Enterprise (contract) customer
-* Users must be [granted Administrator privileges](/guides/account-mgmt/workspace-sites-teams/teams#change-a-users-role).
+- You must be an Enterprise (contract) customer
+
+- You must have [Administrator privileges](/guides/account-mgmt/workspace-sites-teams/teams#change-a-users-role).
 
 </Tab>
 
@@ -60,12 +63,13 @@ Billing can be challenging, especially for businesses managing large numbers of 
 
 ## Documentation
 
-* [Enterprise Billing Center Guide](/guides/enterprise-billing-center)
+- [Enterprise Billing Center Guide](/guides/enterprise-billing-center)
 
 ## Support
 
-* [Account holders](https://dashboard.pantheon.io/workspace/ee3995c4-652e-44a0-b00b-0085e92d78da/support)
-* Reach out to your Account Manager and/or respective Pantheon support contact.
+- [Account holders](https://dashboard.pantheon.io/workspace/ee3995c4-652e-44a0-b00b-0085e92d78da/support)
+
+- Reach out to your Account Manager and/or respective Pantheon support contact.
 
 </Tab>
 
