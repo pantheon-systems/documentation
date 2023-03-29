@@ -79,8 +79,16 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
     - Never (Update Manually)
-    - Weekly
     - Monthly
+    - Weekly
+    - Daily
+    - Custom
+
+    <Alert title="Note"  type="info" >
+
+    Daily and Custom options are available to sites owned by Platinum and Diamond Workspaces.
+
+    </Alert>
 
     <Partial file="autopilot/custom-scheduling.md" />
 
@@ -131,10 +139,18 @@ You can determine how often Autopilot runs and select where you want successful 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
     - Never (Update Manually)
-    - Weekly
     - Monthly
+    - Weekly
+    - Daily
+    - Custom
 
-    <Partial file="autopilot/custom-scheduling.md" />    
+    <Alert title="Note"  type="info" >
+
+    Daily and Custom options are available to sites owned by Platinum and Diamond Workspaces.
+
+    </Alert>
+
+    <Partial file="autopilot/custom-scheduling.md" />
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
