@@ -3,7 +3,7 @@ title: Front-End Sites without a Starter Kit
 subtitle: Import Repository
 description: Learn how to import your repository to create a Front-End Site.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/no-starter-kit/import-repo

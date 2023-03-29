@@ -3,7 +3,7 @@ title: WordPress + Next.js Frontend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to use the WordPress + Next.js frontend starter to create a new project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-nextjs-frontend-starters/create

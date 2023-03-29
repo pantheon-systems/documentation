@@ -3,7 +3,7 @@ title: WordPress + Gatsby Frontend Starter for Front-End Sites
 subtitle: Introduction
 description: Learn about the WordPress + Gatsby frontend starter for Front-End Sites.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc:
 permalink: docs/guides/decoupled/wp-gatsby-frontend-starters

@@ -3,7 +3,7 @@ title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Create a Drupal + Next.js Project
 description: Create a new Drupal + Next.js project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/create

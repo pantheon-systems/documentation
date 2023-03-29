@@ -3,7 +3,7 @@ title: Decoupled Drupal Backend Starter for Front-End Sites
 subtitle: Configure Build Hooks
 description: Learn how to configure Build Hooks.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/drupal-backend-starters/build-hooks

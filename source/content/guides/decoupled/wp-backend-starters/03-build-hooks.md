@@ -3,7 +3,7 @@ title: Decoupled WordPress Backend Starter for Front-End Sites
 subtitle: Build Hooks
 description: Learn how to use Build Hooks for your project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-backend-starters/build-hooks
