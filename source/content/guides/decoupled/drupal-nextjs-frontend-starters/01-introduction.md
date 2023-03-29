@@ -7,7 +7,6 @@ contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters
-anchorid: drupal-nextjs-frontend-starters
 contenttype: [guide]
 innav: [true]
 categories: [create]
