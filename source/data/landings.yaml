@@ -5,13 +5,13 @@
   cta:
     type: 'Guide'
     title: 'Quick Start'
-    subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
+    subtitle: 'New to our platform? Check this guide to learn all the basics.'
     url: '/guides/quickstart'
   cta_alt:
-    type: 'Reference'
-    title: 'Pantheon Overview'
-    subtitle: 'An overview of our capabilities, making it possible for you to understand the language, and determine your next steps.'
-    url: '/overview'
+    type: 'Guide'
+    title: 'Getting Started'
+    subtitle: 'Step by step instructions to guide you from sign up to site launch.'
+    url: '/guides/getstarted'
   topics-groups:
     - title: 'Create a New Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
