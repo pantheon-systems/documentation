@@ -7,6 +7,7 @@ contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/caching
+anchorid: caching
 contenttype: [guide]
 innav: [true]
 categories: [create]
@@ -32,7 +33,7 @@ to each request sent to Drupal. Responses from Drupal contain the
 
 ### Purge Surrogate Key-based Cache
 
-POST a request similar to the example below, replacing <service-id> and <surrogate-key>  with your values.
+POST a request similar to the example below, replacing `service-id` and `surrogate-key`  with your values.
 
 ```bash{promptUser: user}
 POST /service/<service-id>/purge/<surrogate-key>
