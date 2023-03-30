@@ -16,25 +16,20 @@ editpath: migrate/guided/01-introduction.md
 reviewed: "2022-12-13"
 ---
 
-Welcome to Pantheon! We want to make it easy for you to move a site from another hosting provider to Pantheon. Simply use the following instructions and you'll be good to go!
+Welcome to Pantheon! We want to make it easy for you to move a site from another hosting provider to Pantheon. Use the following instructions and you'll be good to go!
 
-<Partial file="drupal/guide-note.md" />
+The overall process will only take a few minutes to go through our guided migration wizard, but it can take up to two hours Pantheon to migrate the site.  You will receive an email when the process is complete.
 
-There are a few methods for migrating your site to Pantheon:
+<Alert title="Warning" type="danger" >
 
-## Guided Migration
-
-This method uses the **Migrate Existing Site** button on the User Dashboard, and is the method described in this guide.
-
-## Migrate Manually
-
-Use this process when any of the following apply:
+If your migration needs include any of the following, **do not use this process**, and instead refer to the specified documentation:
 
 <Partial file="migrate/manual-when-all.md" />
 <Partial file="migrate/manual-when-drupal.md" />
 <Partial file="migrate/manual-when-wordpress.md" />
 
-For instructions on this method, see [Manually Migrate Sites to Pantheon](/migrate-manual).
+</Alert>
+
 
 ## Professional Services
 

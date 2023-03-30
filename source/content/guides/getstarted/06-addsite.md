@@ -71,19 +71,9 @@ If you already have a site hosted elsewhere, you can move it over to Pantheon wi
 
 If your migration needs include any of the following, **do not use this process**, and instead refer to the specified documentation:
 
-- You are moving a Drupal site **and** want to upgrade to the latest version of Drupal:
-
-   - Your site *is* Composer-managed: [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer) or [Import Drush Site Archives with Terminus](/guides/drush/drush-import)
-
-   - Your site is *not* Composer-managed: [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)
-
-- You are using WordPress Multisite: [Manually Migrate Sites to Pantheon](/migrate-manual)
-
-- You are using WordPress and don't want to install the plugin required for migration: [Manually Migrate Sites to Pantheon](/migrate-manual)
-
-- You are migrating a site that is only on your local machine: [Manually Migrate Sites to Pantheon](/migrate-manual)
-
-- The site or site archive is greater than 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
+<Partial file="migrate/manual-when-all.md" />
+<Partial file="migrate/manual-when-drupal.md" />
+<Partial file="migrate/manual-when-wordpress.md" />
 
 </Alert>
 

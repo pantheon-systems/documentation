@@ -8,10 +8,6 @@ tags: [--]
 reviewed: ""
 ---
 
-### General Scenarios
+- You are migrating a site that is only on your local machine: [Manually Migrate Sites to Pantheon](/migrate-manual)
 
-- You want to debug a failed migration.
-
-    - It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
-
-- The site or site archive is greater than 500MB.
+- The site or site archive is greater than 500MB: [Manually Migrate Sites to Pantheon](/migrate-manual)
