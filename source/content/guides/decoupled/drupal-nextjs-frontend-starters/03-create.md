@@ -33,7 +33,7 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
 
-1. Click the **Decoupled** tab and then click **+Create New Site**.
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
     <Alert title="Note"  type="info" >
 

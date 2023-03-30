@@ -25,6 +25,12 @@ Pantheon Front-End Sites are available for Early Access participants. Features f
 
 ## What is a Decoupled Site?
 
+<Alert title="Not what you're looking for?" type="success" icon="leaf">
+
+Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
+
+</Alert>
+
 Decoupled sites separate the frontend and backend into distinct entities. This allows developers to separate backend functionality and databases from the front-end Markup and JavaScript content.
 
 A traditional content management system (CMS) like Drupal or WordPress is hosted and served with the website every time a request for a page is made. With a traditional CMS the backend and frontend are bundled into a single application.
@@ -91,7 +97,7 @@ Other permutations for site development using a Front-End Site can be used, but 
 
 You can build a decoupled site on Pantheon using several methods. The decoupled option must be enabled you can apply your own configuration or to use a [compatible starter kit](https://decoupledkit.pantheon.io/docs/decoupled-kit-overview). Refer to [Site Creation](guides/decoupled/overview/site) for more information.
 
-### Pantheon Front-End Site Starter Kits
+## Pantheon Front-End Site Starter Kits
 
 Pantheon offers recommended decoupled starter kit templates that are pre-configured, and include the following:
 
@@ -102,6 +108,21 @@ Pantheon offers recommended decoupled starter kit templates that are pre-configu
 * A live preview of content from your CMS backend rendered in your frontend application.
 
 * A development environment that supports communication between backend and frontend services.
+
+### Backend Starters
+
+- [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
+- [WordPress Backend Starter](/guides/decoupled/wp-backend-starters)
+
+### Frontend Starters
+
+- [Drupal + Next.js Frontend Starter](/guides/decoupled/drupal-nextjs-frontend-starters)
+- [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
+- [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)
+
+### No Starter
+
+- [Create a Front-End Site without a Starter](/guides/decoupled/no-starter-kit)
 
 ## More Resources
 

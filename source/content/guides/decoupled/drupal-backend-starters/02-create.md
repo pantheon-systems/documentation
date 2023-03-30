@@ -39,7 +39,7 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
 1. Log in to your Pantheon Dashboard and select the **Sites** page.
 
-1. Click the Decoupled tab and then click **+Create New Site**.
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Select **Drupal for Front-End** under **Create Backend CMS**.
 

@@ -62,7 +62,7 @@ Supported Versions:
 
 |  Tooling   |      Version    |
 |  :---:     |       :---:     |
-|  Gatsby    |    4 or higher  |
+|  Gatsby (Static Site Generation (SSG) only)    |    4 or higher  |
 | Next.js    |   12 or higher  |
 |  Drupal    |   9 or higher   |
 | WordPress  |   5.9 or higher |
@@ -129,6 +129,8 @@ Pull requests from a Multidev branch that are made against the upstream, will tr
 </Alert>
 
 ### Types of Environments
+
+Refer to [Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for more information
 
 * **Production environment**
     * The production environment is the default branch of the repository

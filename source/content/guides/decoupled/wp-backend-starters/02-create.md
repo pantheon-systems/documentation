@@ -23,7 +23,7 @@ This section provides information on how to create a new WordPress backend proje
 
 1. Log in to your Pantheon Dashboard and select the **Sites** page.
 
-1. Click the Decoupled tab and then click **+Create New Site**.
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Select **Front-End Site**, and then select **WordPress for Front-End** under **Create Backend CMS**.
 
