@@ -22,3 +22,5 @@ Pantheon provides a guided path for migrating existing sites to the platform. Th
 
 Review [Troubleshooting](/guides/guided/troubleshooting) or [contact Support](/guides/support/contact-support/) if the migration is unsuccessful. Include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
 
+{??? Do you have to set up the Dev CMS and such?}
+
