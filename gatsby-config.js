@@ -183,12 +183,12 @@ const plugins = [
   `gatsby-plugin-fontawesome-css`,
 ]
 
-if(process.env.GATSBY_ALGOLIA_APP_ID && process.env.ALGOLIA_ADMIN_KEY) {
+if(process.env.GATSBY_ALGOLIA_APP_ID && process.env.GATSBY_ALGOLIA_ADMIN_KEY) {
   plugins.push({
     resolve: `gatsby-plugin-algolia`, 
     options: {
       appId: process.env.GATSBY_ALGOLIA_APP_ID, // algolia application id
-      apiKey: process.env.ALGOLIA_ADMIN_KEY, // algolia admin key
+      apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY, // algolia admin key
       queries,
       chunkSize: 10000, // default: 1000
     }

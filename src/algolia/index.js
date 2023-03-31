@@ -13,6 +13,7 @@ const pageQuery = `{
           }
           frontmatter {
             title
+            description
           }
           excerpt(pruneLength: 50000)
         }
