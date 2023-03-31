@@ -46,38 +46,34 @@ The following components are needed to configure your frontend project to use Pa
 * [Node.js](https://nodejs.org/en/)
   * Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
 
+
+## Frontend Frameworks
+
+Pantheon Decoupled Early Access (EA) program currently supports Gatsby and Next.js as frontend frameworks. Additional frameworks will be added to our official support list over the coming months.
+
+You can use frontend frameworks other Gatsby and Next.js, however the process requires manual configuration. Refer to [Use a Non-official Framework](/guides/decoupled/no-starter-kit/any-framework) for specific instructions.
+
 ## Known Issues and Limitations
 
 - Forks are not currently supported
+- A repo cannot be empty or site creation will fail
 - A repo cannot be connected to more than one Front-End Site
 - There are known issues around disconnecting and reconnecting a repo
 - There are known issues around the GitHub app and org level permissions
+- The repository must have a `package.json` file
+- The repository can have only one `lock` file
+
+    <Alert title="Note" type="info">
+
+    You cannot have a `package-lock.json` and `yarn.lock` file. You will receive an error message if you try to import a repository with both files.
+
+    </Alert>
+
+Refer to the [Known Issues and Troubleshooting](/guides/decoupled/overview/troubleshooting) section for more information.
 
 ## Environment Variable Naming Restrictions
 
-Variable names *can* include:
-
-- Uppercase letters
-- Numbers
-- Underscores
-
-Variable names *cannot* include:
-
-- Special characters (other than underscores)
-- Lowercase letters
-- Commas
-- Reserved words. Reserved words include:
-
-    - PORT
-    - K_SERVICE
-    - K_REVISION
-    - K_CONFIGURATION
-    - CLOUD_RUN_JOB
-    - CLOUD_RUN_EXECUTION
-    - CLOUD_RUN_TASK_INDEX
-    - CLOUD_RUN_TASK_ATTEMPT
-    - CLOUD_RUN_TASK_COUNT
-    - PANTHEON_*
+<Partial file="decoupled-site-environment-variables.md" />
 
 ## Site Naming Restrictions
 
@@ -113,3 +109,13 @@ The following features are currently not supported with Pantheon Front-End Sites
 * Multizone failover
 * Multiregion failover
 * Log forwarding
+
+## Front-End Sites Multidev Development Workflow
+
+Front-End Sites are compatible with Multidev. The Front-End Sites Multidev workflow is outlined below:
+
+- The external Git provider controls code posts and deployments. Code pushed to the main branch is built and deployed in your Live environment. Code pushed to any other branch will generate a new MultiDev environment. Updates to existing branches will result in the corresponding environment being updated.
+
+- On a pull request, the Multidev environment is stood up and the preview and backend URL are displayed in GitHub on the PR, on a GitHub deployment, and also in the Front-End Sites Overview section of the dashboard. The build details for a PR will also be linked to GitHub.
+
+Refer to [Types of Environments](/guides/decoupled/overview/site#types-of-environments) for more information.

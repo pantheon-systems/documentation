@@ -40,13 +40,7 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
 
-1. Click the **Decoupled** tab and then click **+Create New Site**.
-
-    <Alert title="Note"  type="info" >
-
-    You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    </Alert>
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Click **Import Repository** on the _What kind of site are you creating?_ page to connect your GitHub repository.
 
@@ -56,11 +50,9 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Choose the repository name from the **Select Repository** drop-down menu and click **Continue**.
 
-1. Populate the **General Info** section.
+1. Enter the **Site Name** in the **General Info** section. The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
-    1. **Site Name**: The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    1. Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator.
+1. Select the frontend framework in the **General Info** section. You can choose either Next.js or Gatsby as the static site generator.
 
 1. Optional. Link your CMS.
 

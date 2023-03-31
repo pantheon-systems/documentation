@@ -1,0 +1,20 @@
+---
+title: Decoupled Drupal Backend Starter for Front-End Sites
+subtitle: Manage Settings
+description: Learn how manage Front-End Sites settings in the Pantheon Dashboard.
+tags: [webops, workflow, decoupled]
+contributors: [whitneymeredith]
+layout: guide
+showtoc:
+permalink: docs/guides/decoupled/drupal-backend-starters/manage-settings
+anchorid: manage-settings
+contenttype: [guide]
+innav: [true]
+categories: [create]
+cms: [decoupled]
+audience: [development]
+product: [decoupled]
+integration: [--]
+---
+
+<Partial file="decoupled-manage-settings.md" />

@@ -37,17 +37,13 @@ Make sure you meet the prerequisites below before you continue.
 
 1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
 
-1. Click the **Decoupled** tab and then click **+Create New Site**.
-
-    <Alert title="Note"  type="info" >
-
-    You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    </Alert>
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Click the **Gatsby + WordPress** template, select your Git provider under **Choose your Git provider**, and then click **Continue**.
 
   ![select a starter](../../../../images/decoupled-select-starter.png)
+
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
 
@@ -62,3 +58,17 @@ Make sure you meet the prerequisites below before you continue.
 1. Click **Build Details** to view the build log.
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
+
+## Set Gatsby pathPrefix
+
+You can configure a site served from a subpath in the Pantheon dashboard so that Gatsby automatically reads this set subpath. This allows you to avoid setting this in both Pantheon and Gatsby.
+
+Refer to [Gatsby's documentation](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/path-prefix/#instructions) for more information on how Gatsby uses the `pathPrefix` in the `gatsby-config` file.
+
+1. Navigate to your site dashboard and select the site you want to set the `pathPrefix` for.
+
+1. Click **Settings** and then click **Builds**.
+
+1. Click the **Edit** button in the **Build & Output Settings** section.
+
+1. Set the appropriate subpath build and output. A new site deployed using the Gatsby WordPress starter kit will now automatically be available within your subdirectory.
