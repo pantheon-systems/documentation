@@ -5,7 +5,8 @@ import './style.css';
 
 import config from "../../algolia/config";
 
-const isSearchPage = typeof document !== "undefined" && document.URL.includes("search"); //const isSearchEnabled = config.search && config.search.enabled ? true : false;
+const isSearchEnabled = config.search && config.search.enabled ? true : false;
+const isSearchPage = typeof document !== "undefined" && document.URL.includes("search");
 
 let searchIndices = [];
 

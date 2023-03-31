@@ -94,7 +94,13 @@ const indexName = config.search ? config.search.indexName : '';
 const queries = [
   {
     query: pageQuery,
-    transformer: ({ data }) => flatten(data.pages.edges),
+    transformer: ({ data }) => {
+      return flatten([
+        ...data.allDocs.edges,
+        ...data.allGuides.edges,
+        ...data.allChangelogs.edges,
+      ])
+    },
     indexName: `${indexName}`,
     settings,
   },
