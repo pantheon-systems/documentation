@@ -8,11 +8,11 @@ tags: [--]
 reviewed: ""
 ---
 
-This section provides information on how to view Build details and how to trigger a new build.
+This section provides information on how to view Build details and how to trigger a new build in the Overview page.
 
 ## Build Details
 
-You can view build details and get information on your Front-End Site development and specifications. Build information is provided in three sections:
+You can view build details and get information on your Front-End Site development and specifications. Build information is provided in the Overview page in three sections:
 
 - Live Build
 - Multidev Branches
