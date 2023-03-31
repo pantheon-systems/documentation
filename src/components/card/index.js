@@ -24,7 +24,7 @@ const Card = ({ title, isOfficial, author, authorLink, link, children }) => {
         </p>
         <p className="topic-info__description">{children}</p>
         <a href={link} className="btn-primary btn get-plugin">
-          Get Plugin
+          Get plugin
         </a>
       </div>
     </div>

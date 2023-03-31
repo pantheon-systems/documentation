@@ -3,17 +3,16 @@ title: Object Cache (formerly Redis)
 subtitle: Troubleshoot
 description: Review solutions to common troubleshooting scenarios for Object Cache.
 contenttype: [guide]
-categories: [cache]
-newcms: [--]
+innav: [false]
+categories: [cache, troubleshooting]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/troubleshoot-object-cache
-anchorid: troubleshoot-object-cache
 ---
 
 This section provides solutions to common troubleshooting scenarios for Object Cache.

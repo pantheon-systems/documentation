@@ -4,17 +4,16 @@ subtitle: Batch Files
 description: Learn how to upload and export batch files.
 contenttype: [guide]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [files]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [code, files]
 reviewed: "2021-07-14"
 permalink: docs/guides/filesystem/batch-files
-anchorid: batch-files
 ---
 
 This section provides information on how to upload and export batch files.

@@ -4,17 +4,16 @@ subtitle: Large Files and Highly Populated Directories
 description: Learn more about highly populated directories and large files.
 contenttype: [guide]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [files]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [code, files]
 reviewed: "2021-07-14"
 permalink: docs/guides/filesystem/large-files
-anchorid: large-files
 ---
 
 This section provides information on highly populated directories and large file management.
@@ -67,6 +66,10 @@ You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress]
 
 Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
 
+### Media and Email
+
+Refer to the [Media and Email](/guides/platform-considerations/media-email-support) section of the [Platform Considerations](/guides/platform-considerations) guide for more information on support for large media and email files.
+
 ## Large (>100GB) File Backups
 
 Large backups take longer, use more resources, and have a higher likelihood of failing. A 100GB compressed tarball is not a convenient solution. Scheduled backups do not back up files for sites with footprints over 200GB (although code and database are backed-up as normal) for this reason. Despite the lack of backups, file content is highly durable and stored on multiple servers.
@@ -75,3 +78,4 @@ Large backups take longer, use more resources, and have a higher likelihood of f
 
 - [All About Application Containers](/application-containers)
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
+- [Platform Considerations](/guides/platform-consideratons)

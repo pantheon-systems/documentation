@@ -3,18 +3,17 @@ title: Optimize Your Site for Accessibility
 subtitle: Best Practices
 description: Best practices when building an accessible site.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [create]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [carolyn-shannon, wordsmither]
 reviewed: "2022-06-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/accessibility/best-practices
-anchorid: accessibility/best-practices
 editpath: accessibility/04-best-practices.md
 ---
 

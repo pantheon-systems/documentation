@@ -4,16 +4,15 @@ subtitle: Commit or Discard SFTP Changes
 description: Learn how to commit or discard and abandon your SFTP changes.
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+innav: [false]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/sftp-development
-anchorid: sftp-development
 ---
 
 This section provides information on how to commit or discard and abandon changes when developing in SFTP Mode.

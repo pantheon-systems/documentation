@@ -2,18 +2,16 @@
 title: Frontend Performance
 subtitle: Queries and Databases
 description: Optimizing queries and databases.
-anchorid: queries
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/queries
 editpath: frontend-performance/07-queries.md
-image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [optimize]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

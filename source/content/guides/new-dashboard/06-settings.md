@@ -3,17 +3,16 @@ title: The New Pantheon Dashboard
 subtitle: Settings
 description: Manage site plans, view plan history, and change billing preferences
 contenttype: [guide]
+innav: [false]
 categories: [dashboard]
-newcms: [--]
+cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]
 tags: [dashboard]
 contributors: [joa-pan, michellecolon-pantheon]
 reviewed: "2022-07-20"
-layout: guide
 permalink: docs/guides/new-dashboard/settings
-anchorid: new-dashboard
 editpath: new-dashboard/06-settings.md
 ---
 

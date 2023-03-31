@@ -3,20 +3,25 @@ title: New Relic Performance Monitoring on Pantheon
 subtitle: Monitor and Improve Site Performance
 description: Learn how to use New Relic to monitor and improve site performance.
 contenttype: [guide]
-categories: [measure]
-newcms: [--]
+innav: [false]
+categories: [track]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/monitor-new-relic
-anchorid: monitor-new-relic
 ---
 
 This section provides information on how to monitor and improve site performance with New Relic&reg;.
+
+<Alert title="Note" type="info">
+
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+
+</Alert>
 
 ## Monitor and Improve Performance
 

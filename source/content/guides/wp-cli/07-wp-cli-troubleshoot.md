@@ -2,18 +2,16 @@
 title: WP-CLI on the Pantheon Platform
 subtitle: Troubleshoot WP-CLI
 description: Review solutions to common troubleshooting scenarios for WP-CLI.
-cms: "WordPress"
 contenttype: [guide]
-categories: [cli]
-newcms: [wordpress]
+innav: [false]
+categories: [cli, troubleshooting]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wp-cli, cli]
-layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/wp-cli-troubleshoot
-anchorid: wp-cli-troubleshoot
 ---
 
 This section provides solutions to common WP-CLI troubleshooting scenarios.

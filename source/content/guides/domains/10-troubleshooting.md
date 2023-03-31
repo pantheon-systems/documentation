@@ -4,13 +4,12 @@ subtitle: Troubleshoot Domains
 description: Review common troubleshooting scenarios for domains.
 tags: [collaborate, dns, agencies]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/troubleshooting
-anchorid: troubleshooting
 contenttype: [guide]
+innav: [false]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

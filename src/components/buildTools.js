@@ -89,7 +89,7 @@ const BuildTools = ({}) => {
               </div>
             </div>
             <p className="topic-info__description">
-              <a href="/docs/composer/" className="external">
+              <a href="/composer/" className="external">
                 Composer
               </a>{" "}
               is a PHP dependency manager that provides an alternative, more

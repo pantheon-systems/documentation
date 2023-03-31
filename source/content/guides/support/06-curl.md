@@ -3,15 +3,15 @@ title: Get Support
 subtitle: Copy cURL Data
 description: Learn how to copy cURL data in the browser.
 contenttype: [guide]
+innav: [false]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
 type: guide
 permalink: docs/guides/support/curl
-anchorid: curl
 contributors: [whitneymeredith]
 ---
 

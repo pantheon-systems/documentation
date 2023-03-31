@@ -4,16 +4,16 @@ subtitle: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 tags: [libraries, updates]
 contenttype: [guide]
+innav: [false]
 categories: [php]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/php-versions
-anchorid: php-versions
+reviewed: "2022-12-13"
 ---
 
 This section provides information on how to upgrade your PHP version.
@@ -25,7 +25,7 @@ Upgrading your site's PHP version will improve the security, performance, and su
 Older software is more likely to contain code that is incompatible with recent PHP versions. Before you upgrade your PHP version:
 
 - Update core to the latest release. Refer to [WordPress and Drupal Core Updates](/core-updates) for more details.
-- Update your themes, plugins, and modules. Refer to [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin) for more details.
+- Update your themes, plugins, and modules. 
 
 <Alert title="Note" type="info">
 
@@ -48,7 +48,7 @@ Changes made to the `pantheon.yml` file on a branch **are not** detected when cr
 Confirm that your CMS is compatible before changing your PHP version. 
 
 - [WordPress requirements](https://wordpress.org/about/requirements/)
-- [Drupal 9 PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
+- [Drupal (Latest Version) PHP version support](https://www.drupal.org/docs/system-requirements/php-requirements#php_required)
 - [Drupal 7 PHP version support](https://www.drupal.org/docs/7/system-requirements/php-requirements#php_required)
 
 ## Configure Your PHP Version

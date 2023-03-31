@@ -3,17 +3,16 @@ title: New Relic Performance Monitoring on Pantheon
 subtitle: Troubleshoot New Relic
 description: Find troubleshooting solutions for your New Relic account.
 contenttype: [guide]
-categories: [measure]
-newcms: [--]
+innav: [false]
+categories: [track, troubleshooting]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]
 tags: [code, newrelic, quicksilver, workflow]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/troubleshoot-new-relic
-anchorid: troubleshoot-new-relic
 ---
 
 This section provides solutions for common New Relic troubleshooting scenarios.
@@ -24,7 +23,7 @@ This section provides solutions for common New Relic troubleshooting scenarios.
 
 1. Select the User Account in the New Relic Dashboard.
 
-1. Select **Log Out** from the drop-down menu. 
+1. Select **Log Out** from the drop-down menu.
 
 1. Navigate to the Site Dashboard and click the **Go to New Relic** button.
 
@@ -101,7 +100,7 @@ The code above should be added to `settings.php` for Drupal sites or `wp-config.
 
 To isolate the disabling of New Relic to only AMP pages, the example logic checks the current request for `?amp`. Adjust this example as needed based on your site's implementation of Google AMP and it's corresponding URL patterns.
 
-It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event, for instance.
+It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal, this can be done using an event subscriber that listens to the `kernel.request` event, for instance.
 
 ## APM Availability Monitoring
 

@@ -2,30 +2,17 @@
 title: Quick Start
 subtitle: Dev/Test/Live Workflow
 description: In part four of our Quick Start guide, learn about the Dev/Test/Live workflow.
-quickstart: true
-anchorid: site-dashboard
-generator: pagination
-layout: guide
 contenttype: [guide]
-categories: [overview]
-newcms: [--]
+innav: [false]
+categories: [overview, workflows]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard, site, workflow]
-type: guide
 showtoc: true
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/workflow/
-nexturl: guides/quickstart/create-test-live/
-nextpage: Create Test & Live
-previousurl: guides/quickstart/create-new-site/
-previouspage: Create New Site
 editpath: quickstart/04-workflow.md
-image: launchGuide-twitterLarge
 ---
 
 Next, we'll learn about the Dev, Test, Live workflow.

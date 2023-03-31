@@ -1,10 +1,10 @@
 ---
 title: Prevent Spamming During Drupal Debugging and Testing
 description: Set up the Drupal reroute_email module on your Pantheon Drupal site.
-cms: "Drupal"
 contenttype: [doc]
-categories: [--]
-newcms: [drupal]
+innav: [true]
+categories: [email]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [email]
@@ -24,7 +24,7 @@ You’ll be able to funnel all development and testing emails to a single inbox 
 
 ## Installation
 
-You can use [SFTP](/guides/sftp) on Pantheon or the [Drupal UI](/cms-admin/#drupal-admin-interface) to install a module. Alternatively, you can use Git to keep automated backups running on Dev.
+You can use [SFTP](/guides/sftp) on Pantheon or the Drupal UI to install a module. Alternatively, you can use Git to keep automated backups running on Dev.
 
 For instance, you can use [a start state](/start-state/#import-an-existing-site) and perform a [git clone](/guides/git/git-config) of the Pantheon site.
 
@@ -79,7 +79,7 @@ If you don’t have a `settings.php` file, copy the `default.settings.php` file.
 cp sites/default/default.settings.php sites/default/settings.php
 ```
 
-Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal 7:
+Using your favorite editor or IDE, open the `settings.php`, and add the following code for Drupal:
 
 ```php
 if (defined('PANTHEON_ENVIRONMENT')) {

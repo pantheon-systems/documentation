@@ -4,13 +4,12 @@ subtitle: Environment Configuration on Pantheon
 description: Learn about environment configurations on Pantheon.
 tags: [site, terminus, workflow, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration
-anchorid: environment-configuration
 contenttype: [guide]
+innav: [true]
 categories: [config]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -31,7 +30,7 @@ This guide shows you how to:
 
 - Restore an environment
 
-- Configure WordPress-specific environments and Drupal 9-specific environments
+- Configure WordPress-specific environments and Drupal-specific environments
 
 ## More Resources
 

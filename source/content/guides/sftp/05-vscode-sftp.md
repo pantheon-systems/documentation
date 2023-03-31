@@ -3,15 +3,14 @@ title: SFTP on Pantheon
 subtitle: Visual Studio Code SFTP Extension
 description: Learn how to upload local changes with Visual Studio Code's SFTP extension.
 tags: [files, sftp, rsync]
+innav: [false]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/vscode-sftp
-anchorid: vscode-sftp
 ---
 
 This section provides information on how to upload local changes in Visual Studio (VS) Code.

@@ -8,8 +8,9 @@ layout: video
 searchboost: 50
 type: video
 contenttype: [doc]
-categories: [cache, optimize]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cache]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [redis]

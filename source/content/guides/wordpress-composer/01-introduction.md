@@ -3,17 +3,16 @@ title: WordPress with Composer on Pantheon
 subtitle: Introduction
 description: Learn more about using WordPress with Composer on Pantheon.
 contenttype: [guide]
-categories: [--]
-newcms: [wordpress]
+innav: [true]
+categories: [dependencies]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer
-anchorid: wordpress-composer
 ---
 
 [Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides a simplified method to manage the external (non-core) code used by a WordPress site.
@@ -54,4 +53,4 @@ Please reach out to our [Professional Services](https://pantheon.io/professional
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
 
-- [Convert a Standard Drupal 8 Site to a Composer-Managed Site](/guides/composer-convert)
+- [Convert a Standard Drupal Site to a Composer-Managed Site](/guides/composer-convert)

@@ -3,17 +3,16 @@ title: Log Files on Pantheon
 subtitle: Frequently Asked Questions
 description: Get answers to your log questions.
 contenttype: [guide]
-categories: [optimize]
-newcms: [--]
+innav: [false]
+categories: [logs, faq]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [logs, measure]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/logs-pantheon/faq-logs
-anchorid: faq-logs
 ---
 
 This section provides answers to frequently asked questions about log files.

@@ -3,17 +3,16 @@ title: Platform Considerations
 subtitle: PHP Platform Support
 description: Learn more about PHP support on the Pantheon platform.
 contenttype: [guide]
+innav: [false]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/php-platform
-anchorid: php-platform
 ---
 
 This section provides information on general PHP support on the Pantheon platform. Refer to the [PHP on Pantheon](/guides/php) guide for comprehensive PHP information.
@@ -33,6 +32,10 @@ Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge
 ## PHP Maximum Execution Time Limit
 
 The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/timeouts) documentation and it cannot be increased. If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success.
+
+## PHP Maximum Input Variables (max_input_vars)
+
+The `max_input_vars` for each site is set to `10000` and can not be changed.
 
 ## PHP Sessions with WordPress
 
@@ -62,7 +65,7 @@ The [XML-RPC PHP extension](https://www.php.net/manual/en/intro.xmlrpc.php) is, 
 
 For [security reasons](https://dev.mysql.com/doc/refman/8.0/en/load-data-local-security.html), Pantheon does not support executing MySQL `LOAD DATA LOCAL INFILE` statements from your PHP application. As a workaround, developers can [connect directly to MySQL](/guides/mariadb-mysql/mysql-access) and load files from their local machine:
 
-```bash{promptUser: user}
+```sql{promptUser: user}
 MariaDB [pantheon]> LOAD DATA LOCAL INFILE 'mydata.csv' INTO TABLE `pantheon`.`mytable` FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';
 ```
 

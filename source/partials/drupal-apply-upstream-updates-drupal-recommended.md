@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
-categories: [--]
-newcms: [--]
+categories: [update, migrate]
+cms: [--]
 product: [dashboard, terminus]
 integration: [--]
 tags: [--]

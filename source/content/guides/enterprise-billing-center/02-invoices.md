@@ -2,13 +2,17 @@
 title: Enterprise Billing Center
 subtitle: Access Invoices
 description: Learn how to access your invoices.
+contenttype: [guide]
+innav: [false]
 categories: [billing]
+cms: [--]
+audience: [business]
+product: [siteportfolio]
+integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/invoices
-anchorid: invoices
 ---
 
 This section provides information on how you can access and interact with the invoices in the Enterprise Billing Center.

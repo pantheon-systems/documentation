@@ -3,23 +3,22 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Create a New WordPress Site
 description: Create a WordPress site on Pantheon.
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [false]
+categories: [cms]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-02"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/create-wp-site
-anchorid: wordpress-pantheon/create-wp-site
 ---
 
 This page provides steps on creating a new WordPress site on Pantheon. 
 
-1. [Create an account](https://dashboard.pantheon.io/register) with Pantheon if you do not already have one.
+1. [Create an account](https://pantheon.io/register?docs) with Pantheon if you do not already have one.
 
 1. Login to your Pantheon account.
 
@@ -83,11 +82,11 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 This section is optional, and is only intended for customers who would like to create a network of sites using a single copy of the WordPress codebase and a common database.
 
-1. Review the [WordPress Site Networks Guide](/guides/multisite/) to ensure that you understand Multisite considerations and Multisite governance.
+1. Review the [WordPress Multisite Guide](/guides/multisite/) to ensure that you understand Multisite considerations and Multisite governance.
 
-1. Request a [WordPress Site Network](/guides/multisite/#request-a-wordpress-site-network).
+1. Request a [WordPress Multisite upstream](/guides/multisite/#request-a-wordpress-site-network).
 
-1. Complete the configuration steps in WordPress Site Networks Guide to [install](/guides/multisite/config/#install-the-wordpress-site-network) and [configure](/guides/multisite/config/#configure-the-wordpress-site-network) the WordPress Site Network created for you in step 2.
+1. Complete the configuration steps in WordPress Multisite Guide to [install](/guides/multisite/config/#install-the-wordpress-site-network) and [configure](/guides/multisite/config/#configure-the-wordpress-site-network) the WordPress Multisite created for you in step 2.
 
 ## More Resources
 

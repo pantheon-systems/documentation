@@ -1,15 +1,15 @@
 ---
 title: HostGator Domain Configuration
 provider: HostGator
-dnsprovider: true
 description: Learn how to point your HostGator domain to a Pantheon site.
 draft: true
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/hostgator.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [cloudflare, hostgator]

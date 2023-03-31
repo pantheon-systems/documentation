@@ -1,11 +1,12 @@
 ---
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
-tags: [dashboard, git, terminus, updates]
-reviewed: "2021-04-15"
+tags: [dashboard, git, terminus, updates, D8, D9, D10]
+reviewed: "2022-12-07"
 contenttype: [doc]
+innav: [true]
 categories: [update]
-newcms: [drupal7, drupal8, drupal9, wordpress]
+cms: [drupal7, drupal8, drupal9, wordpress]
 audience: [development]
 product: [terminus, dashboard]
 integration: [--]
@@ -13,85 +14,98 @@ integration: [--]
 
 This doc includes instructions to make core updates to WordPress and Drupal sites hosted on the Pantheon WebOps platform.
 
-## Drupal 9
+## Drupal (Latest Version)
 
-Drupal 9 sites on Pantheon use [Integrated Composer](/guides/integrated-composer) to allow one-click core updates through the Dashboard.
-
-To check for available updates:
-
-1. Navigate to **Code** in the Dev tab of the site's Dashboard.
-
-1. Click **Check Now** and then click **Apply Updates** if updates are available.
+The [latest version of Drupal](/drupal-migration) automatically includes [Integrated Composer](/guides/integrated-composer). Integrated Composer allows you to use one-click core updates through the Dashboard. Site maintainers can combine these one-click updates with Pantheon's [Autopilot](/guides/autopilot) service to automate site module updates.
 
 ## Drupal 8 Composer-Managed Sites
 
-Drupal 8 sites managing core with Composer are not compatible with Pantheon's One-click updates. To be compatible with One-click updates, you must do **one** of the following:
+As of Drupal 8.8, you are required to use Composer to manage your dependencies if you want to use all contributed modules. Composer-managed sites are not compatible with Pantheon's One-click updates. However, you can easily meet Drupal's Composer requirement and be compatible with Pantheon's platform by using [Integrated Composer](/guides/integrated-composer). You must do **one** of the following to be compatible with Pantheon's One-click updates and Drupal Composer requirements:
 
-- Update core to use Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update)
+- [Convert the site to Integrated Composer](/guides/composer-convert).
 
-- [Convert the site to Integrated Composer](/guides/composer-convert)
+- Update core to use Composer exclusively. Refer to [Build Tools](/guides/build-tools/update) for instructions.
 
-- [Update to Drupal 9](/drupal-9-migration) which has [Integrated Composer](/guides/integrated-composer) built-in
+- [Update to the latest version of Drupal](/drupal-migration) which has [Integrated Composer](/guides/integrated-composer) built-in.
 
-## Non-Composer-Managed WordPress and Drupal 7 Sites
+## Check for Drupal Updates
 
-Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream), become available downstream as a one-click update.
+1. Navigate to your site Dashboard and select **Dev**.
 
-Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
+1. Click **Code**, then click **Check Now**, and then click **Apply Updates** if updates are available.
+
+## Non-Composer-Managed WordPress and Drupal Sites
+
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress) and [Drupal](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream), become available downstream as a one-click update.
+
+You can apply one-click updates to individual site repositories through:
+
+- Site Dashboard on Pantheon
+- [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/guides/support).
 
 ## Apply Upstream Updates via the Site Dashboard
 
-1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
+1. Navigate to the **Code** tab in the Site Dashboard on the Dev environment, then click **Apply Updates**.
 
   ![Screenshot of the Pantheon Site Dashboard, showing the "Apply Updates" button and the "Update Options" dropdown.](../images/dashboard/updates-available.png)
 
-1. Commit and deploy any SFTP changes and then set the site's connection mode to **Git**.
+1. Commit and deploy any SFTP changes, then set the site's **Connection Mode** to **Git**.
+
+    - You can't apply upstream updates when the Connection Mode is set to SFTP.
 
 1. Select whether or not you want to automatically resolve conflicts in the **Update Options** menu. Drupal users can opt to run `update.php` after updates are applied:
 
-  ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
+    ![Screenshot of the "Update Options" button selected to show the options "Run update.php after pulling the update", and "Auto-resolve conflicts".](../images/dashboard/update-options.png)
+
+  <Alert title="Note"  type="info" >
+
+  Some merge conflicts can't be resolved automatically. This can happen when files are removed or renamed. These files must be manually resolved. Refer to [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts) for more information.
+
+  </Alert>
 
 1. Click **Apply Updates**.
 
-1. Click **Visit Development Site** in the Development Environment to test and QA the site.
+1. Click **Visit Development Site** in the **Dev** environment to test and QA the site.
 
-1. Follow the standard [Pantheon Workflow](/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to Test and on to Live.
+1. Follow the standard [Pantheon Workflow](/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to the Test and Live environments.
 
 ### Auto-Resolve Conflicts
 
-In the event that the update fails, you may see an error indicating a conflict with some files in core. Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository. This does not solve all problems that may arise, but it should take care of most situations.
+You may see an error indicating a conflict with some files in core if the update fails. Try the "Auto-Resolve" option when applying updates. Pantheon will try to automatically resolve conflicts in favor of the upstream Git repository. This does not solve all problems that may arise, but it should take care of most situations.
 
-If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull your changes in using Git, resolve the conflicts, and then push the update up to your Pantheon site. This does not solve all problems that may arise, but it should take care of most situations.
+Some merge conflicts can't be resolved automatically. This can happen when files are removed or renamed. These files must be manually resolved. Refer to [Resolve Git Merge Conflicts](/guides/git/resolve-merge-conflicts) for more information.
 
 ## Apply Upstream Updates via Terminus
 
-If you prefer using the command line, you can apply updates with [Terminus](/terminus).
+You can apply updates with [Terminus](/terminus) if you prefer using the command line.
 
 ### Update a Specific Site
+
+1. Open Terminus and navigate to your site directory.
+
+1. Run the code below, replacing `site` and `env` with your site name and the correct environment. Learn more about this command by running `terminus help upstream:updates:apply`.
 
 ```bash{promptUser: user}
 terminus upstream:updates:apply site.env --updatedb
 ```
 
-Replace `site` and `env` with your site name and the correct environment. Learn more about this command by running `terminus help upstream:updates:apply`.
-
 ### Update Multiple Sites
 
-The Terminus Mass Update Plugin can apply core updates to multiple sites at once:
+The Terminus Mass Update Plugin can apply core updates to multiple sites at the same time:
 
 ```bash{promptUser: user}
-terminus sites:mass-update:apply
+terminus site:mass-update:apply
 ```
 
-For details, see [Terminus Mass Update Plugin](https://github.com/pantheon-systems/terminus-mass-update).
+Refer to the [Terminus Mass Update Plugin](https://github.com/pantheon-systems/terminus-mass-update) page in GitHub for more information.
 
 ## Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts
 
-If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You can resolve by overwriting your CMS core with the upstream, or attempt a manual merge conflict resolution.
+It's possible there are conflicts with your codebase in the update if the automated core update doesn't work as expected. You can resolve this by overwriting your CMS core with the upstream, or through manual [merge conflict resolution](/guides/git/resolve-merge-conflicts).
 
 ### Overwrite Core
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore` or `.htaccess`).
+The fastest resolution is often the `-Xtheirs` flag if you receive an error that you have conflicts while updating core. This will attempt to automatically resolve the conflicts with a preference for upstream changes, and is safe to run if you don't have your own changes in any of the conflicting files (for example, problems with `.gitignore` or `.htaccess`).
 
 <Alert title="Warning" type="danger">
 
@@ -101,85 +115,97 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 <TabList>
 
-<Tab title="Drupal 9" id="d9" active={true}>
+<Tab title="Drupal (Latest Version)" id="d9" active={true}>
 
-```bash{promptUser: user}
-git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed main
-# resolve conflicts
-git push origin master
-```
+1. Run the code below:
+
+  ```bash{promptUser: user}
+  git pull -Xtheirs https://github.com/pantheon-upstreams/drupal-composer-managed main
+  # resolve conflicts
+  git push origin master
+  ```
+
+1. Double-check the files before going forward to make sure no bugs were introduced.
+
+1. Refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your Git repository if this procedure fails with the message `Already up to date.`
 
 </Tab>
 
 <Tab title="Drupal 7" id="d7">
 
-```bash{promptUser: user}
-git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git master
-# resolve conflicts
-git push origin master
-```
+1. Run the code below:
+
+  ```bash{promptUser: user}
+  git pull -Xtheirs https://github.com/pantheon-systems/drops-7.git master
+  # resolve conflicts
+  git push origin master
+  ```
+
+1. Double-check the files before going forward to make sure no bugs were introduced.
+
+1. Refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your Git repository if this procedure fails with the message `Already up to date.`
 
 </Tab>
 
 <Tab title="WordPress" id="wp">
 
-```bash{promptUser: user}
-git pull -Xtheirs https://github.com/pantheon-systems/WordPress.git master
-# resolve conflicts
-git push origin master
-```
+1. Run the code below:
+
+  ```bash{promptUser: user}
+  git pull -Xtheirs https://github.com/pantheon-systems/WordPress.git master
+  # resolve conflicts
+  git push origin master
+  ```
+
+1. Double-check the files before going forward to make sure no bugs were introduced.
+
+1. Refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your Git repository if this procedure fails with the message `Already up to date.`
 
 </Tab>
 
 </TabList>
 
-Double-check the files before going forward to make sure no bugs were introduced.
-
-If this procedure fails with the message `Already up to date.` refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your git repository.
-
 #### Overwrite WordPress Core Via SFTP
 
-In the case where you're unable to use Git, you can use [SFTP](/guides/sftp) to overwrite core files.
+You can use [SFTP](/guides/sftp) to overwrite core files if you can't use Git.
 
-1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
+1. Confirm that the **Development Mode** is set to **SFTP**.
 
-  ```none
-  ├── README.md
-  ├── index.php
-  ├── license.txt
-  ├── readme.html
-  ├── wp-activate.php
-  ├── wp-blog-header.php
-  ├── wp-comments-post.php
-  ├── wp-config-sample.php
-  ├── wp-cron.php
-  ├── wp-links-opml.php
-  ├── wp-load.php
-  ├── wp-login.php
-  ├── wp-mail.php
-  ├── wp-settings.php
-  ├── wp-signup.php
-  ├── wp-trackback.php
-  ├── xmlrpc.php
-  ├── wp-admin
-  ├── wp-includes
-  ├── wp-content
-      └── index.php
-      └── mu-plugins
-          └── pantheon.php
-  ```
+1. Delete the files and folders below. ** Do NOT delete the `wp-config.php`file**.
 
-  <Alert title="Warning" type="danger">
-
-  Do not remove `wp-config.php`.
-
-  </Alert>
+    ```none
+      ├── README.md
+      ├── index.php
+      ├── license.txt
+      ├── readme.html
+      ├── wp-activate.php
+      ├── wp-blog-header.php
+      ├── wp-comments-post.php
+      ├── wp-config-sample.php
+      ├── wp-cron.php
+      ├── wp-links-opml.php
+      ├── wp-load.php
+      ├── wp-login.php
+      ├── wp-mail.php
+      ├── wp-settings.php
+      ├── wp-signup.php
+      ├── wp-trackback.php
+      ├── xmlrpc.php
+      ├── wp-admin
+      ├── wp-includes
+      ├── wp-content
+          └── index.php
+          └── mu-plugins
+              └── pantheon.php
+      ```
 
 1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress).
 
-1. Commit and switch back to Git mode.
+1. Commit your changes.
 
-1. Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update warning should disappear after a successful update.
+1. Set your **Development Mode** to **Git**.
+
+1. Apply one-click core updates via the dashboard with the auto-resolve conflicts option selected. The update warning should disappear after a successful update.
 
 ### Merge Conflict Resolution
 
@@ -189,18 +215,10 @@ This process lets you manually resolve the conflict using the command line and a
 
   <TabList>
 
-  <Tab title="WordPress" id="wp-1conflict" active={true}>
+  <Tab title="Drupal (Latest Version)" id="d9-1conflict" active={true}>
 
   ```bash{promptUser: user}
-  git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
-  ```
-
-  </Tab>
-
-  <Tab title="Drupal 9" id="d9-1conflict">
-
-  ```bash{promptUser: user}
-  git remote add pantheon-drupal-9 https://github.com/pantheon-systems/drupal-composer-managed
+  git remote add pantheon-drupal https://github.com/pantheon-systems/drupal-composer-managed
   ```
 
   </Tab>
@@ -209,6 +227,14 @@ This process lets you manually resolve the conflict using the command line and a
 
   ```bash{promptUser: user}
   git remote add pantheon-drops-7 https://github.com/pantheon-systems/drops-7.git
+  ```
+
+  </Tab>
+
+  <Tab title="WordPress" id="wp-1conflict">
+
+  ```bash{promptUser: user}
+  git remote add pantheon-wordpress https://github.com/pantheon-systems/WordPress.git
   ```
 
   </Tab>
@@ -229,20 +255,11 @@ This process lets you manually resolve the conflict using the command line and a
 
   <TabList>
 
-  <Tab title="WordPress" id="wp-2conflict" active={true}>
+  <Tab title="Drupal (Latest Version)" id="d9-2conflict" active={true}>
 
   ```bash{promptUser: user}
-  git fetch pantheon-wordpress
-  git rebase pantheon-wordpress/master
-  ```
-
-  </Tab>
-
-  <Tab title="Drupal 9" id="d9-2conflict">
-
-  ```bash{promptUser: user}
-  git fetch pantheon-drupal-9
-  git rebase pantheon-drupal-9/master
+  git fetch pantheon-drupal
+  git rebase pantheon-drupal/master
   ```
 
   </Tab>
@@ -252,6 +269,15 @@ This process lets you manually resolve the conflict using the command line and a
   ```bash{promptUser: user}
   git fetch pantheon-drops-7
   git rebase pantheon-drops-7/master
+  ```
+
+  </Tab>
+
+  <Tab title="WordPress" id="wp-2conflict">
+
+  ```bash{promptUser: user}
+  git fetch pantheon-wordpress
+  git rebase pantheon-wordpress/master
   ```
 
   </Tab>
@@ -289,32 +315,34 @@ This process lets you manually resolve the conflict using the command line and a
   To check out the original branch and stop rebasing, run "git rebase --abort".
   ```
 
-  In this example, you would open `wp-admin/about.php` in your preferred text editor.
+  In this example, you would:
 
-  Then look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
+    1. Open `wp-admin/about.php` in your preferred text editor.
 
-  Delete the conflict markers and double-check the changes.
+    1. Look for the conflict markers starting with `<<<<<<< HEAD` and manually edit the file to merge changes between Pantheon's upstream (shown first between `<<<<<<< HEAD` and `=======`) and changes made downstream in the Custom Upstream repository (shown second between `=======` and `>>>>>>> Adjust rendering of version release notes`).
 
-  Run `git status` to see conflicting files in the current index again. Once all conflicts have been addressed, you can add them to your index and continue pulling in updates:
+    1. Delete the conflict markers and double-check the changes.
 
-  ```bash{promptUser: user}
-  git add .
-  git rebase --continue
-  ```
+    1. Run `git status` to see conflicting files in the current index again. Resolve the conflicts and then add them to your index and continue pulling in updates:
 
-1. Push updates to the Site Dashboard on Pantheon:
+    ```bash{promptUser: user}
+    git add .
+    git rebase --continue
+    ```
 
-  ```bash{promptUser: user}
-  git push origin master
-  ```
+    1. Push updates to the site Dashboard on Pantheon:
+
+      ```bash{promptUser: user}
+      git push origin master
+      ```
 
 ## Core Release Updates
 
-Whenever there's a new release of WordPress or Drupal core, updates will be available within 72 hours of upstream availability. Security related updates will be made available within 24 hours.
+Updates are available within 72 hours of upstream availability whenever a new WordPress or Drupal core is released. Security related updates are made available within 24 hours.
 
 ## Suppress WordPress Admin Notice
 
-By default WordPress admin will check for new upstream updates instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin, you will still see upstream updates in the Pantheon dashboard.
+WordPress admin checks for new upstream updates by default, instead of the default WordPress update nag. You can disable this by setting the `DISABLE_PANTHEON_UPDATE_NOTICES` constant to `true` in your `wp-config.php` file. This only disables the text and notice in the WordPress admin; you will still see upstream updates in the Pantheon dashboard.
 
 ```php:title=wp-config.php
 define( 'DISABLE_PANTHEON_UPDATE_NOTICES', true );
@@ -324,7 +352,7 @@ define( 'DISABLE_PANTHEON_UPDATE_NOTICES', true );
 
 ### One-Click Updates Do Not Appear After Rewriting Git History
 
-Squashing and rewriting history may cause one-click updates to break, meaning updates will no longer appear on your Site Dashboard once available. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashboard and prevents conflicts with our one-click updates.
+Squashing and rewriting history may cause one-click updates to break. This means updates will no longer appear on your Site Dashboard when available. Instead of using squash and rebase to clean up commits from merges occurring upstream, we recommend reviewing history locally with `git log --first-parent`. This provides the same history shown on the Site Dashboard and prevents conflicts with our one-click updates.
 
 If you are in a situation where you've altered the commit history in such a way that the dashboard is no longer able to determine if your site is up to date with the upstream, the simplest course of corrective action is to use `git reset --hard` to reset the site repository to the last known good commit before the squash/rebase/revert was applied. This *will* result in losing *all* changes that have happened since this commit. You will need to re-apply all custom/contributed code updates that occurred in the interim, so make sure to take stock of these changes first and develop a plan to reapply them with the fixed Git history.
 
@@ -334,11 +362,11 @@ Core updates for Custom Upstreams are initiated by the repository maintainer, no
 
 It's important to relay the need for updating core to maintainers, even if you plan on manually pulling in core version updates. First, file an issue in the queue of your repository and reach out to a maintainer. Even better - submit a pull request for the update.
 
-Once you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
+After you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
 
 ### Custom Upstream Updates Not Available
 
-If you know your site's Custom Upstream has updated code, but it's not visible on your Site Dashboard, click on **Check now**:
+If you know your site's Custom Upstream has updated code, but it's not visible on your Site Dashboard, click **Check now**:
 
 ![Check Now](../images/dashboard/check-for-updates.png)
 
@@ -366,15 +394,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <TabList>
 
- <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
-
- GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
-
-  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.yml)
-
- </Tab>
-
- <Tab title="Drupal 9" id="d9-2conflict-merge">
+ <Tab title="Drupal (Latest Version)" id="d9-2conflict-merge" active={true}>
 
   GITHUB-EMBED https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 
@@ -387,6 +407,14 @@ This issue happens when you attempt to update very outdated core files from the 
  GITHUB-EMBED https://github.com/pantheon-systems/drops-7/blob/master/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
   [View on GitHub](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+
+ </Tab>
+
+ <Tab title="WordPress" id="wp-2conflict-merge">
+
+ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+
+  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.yml)
 
  </Tab>
 
@@ -437,3 +465,9 @@ You must update the core versions from the upstream version. However, older vers
 1. Deploy to Test and Live, and then run the database for each environment.
 
 1. Increment the version of the upstream and repeat step two. Repeat these steps until you reach the latest version of the site.
+
+- More Resources
+
+- [Git on Pantheon Guide](/guides/git)
+- [SFTP on Pantheon](/guides/sftp)
+- [Custom Upstreams](/guides/custom-upstream)

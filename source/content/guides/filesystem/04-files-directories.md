@@ -3,17 +3,16 @@ title: Pantheon Filesystem
 subtitle: Files and Directories
 description: Learn more about file and directory considerations on the Pantheon platform.
 contenttype: [guide]
-categories: [overview]
-newcms: [--]
+innav: [false]
+categories: [files]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/filesystem/files-directories
-anchorid: files-directories
 ---
 
 This section provides information on files and directories on the Pantheon platform.

@@ -2,24 +2,24 @@
 title: Switch Your Custom Upstream
 subtitle: Switch Your Custom Upstream
 description: Learn how to switch your Custom Upstream. 
-tags: [upstreams, workflow, webops]
-layout: guide
+tags: [upstreams, workflow, webops, D8, D9, D10 ]
 showtoc: true
 permalink: docs/guides/custom-upstream/switch-custom-upstream
-anchorid: switch-custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 This section provides steps to switch an existing site's Custom Upstream to a different Custom Upstream.
 
 <Alert title="Warning" type="danger">
 
-Switching the upstream of an existing site is risky. It is safer to create a new site from your Custom Upstream and migrate the contents. [Back up](/backups) your site first and consider our documentation on [upstream merge conflicts](/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) if you must switch upstreams.
+Switching the upstream of an existing site is risky. It is safer to create a new site from your Custom Upstream and migrate the contents. [Back up](/guides/backups) your site first and consider our documentation on [upstream merge conflicts](/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) if you must switch upstreams.
 
 </Alert>
 

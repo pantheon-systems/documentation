@@ -2,16 +2,14 @@
 title: Get Support
 subtitle: Early Access Program
 description: 
-cms: "Drupal"
 contenttype: [guide]
+innav: [false]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [composer, local, modules, site, terminus]
-buildtools: true
-anchorid: early-success
 type: guide
 showtoc: true
 permalink: docs/guides/support/early-access/

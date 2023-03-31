@@ -2,15 +2,13 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Drush Commands
 description: Learn how to use Drush commands on your Pantheon site.
-cms: "Drupal"
 tags: [migrate, terminus, drush]
-layout: guide
 showtoc: true
 permalink: docs/guides/drush/drush-commands
-anchorid: drush-commands
 contenttype: [guide]
-categories: [--]
-newcms: [drupal]
+innav: [false]
+categories: [cli]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]
@@ -38,13 +36,13 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 <Alert title="Note" type="info" >
 
-[Registry Rebuild](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for Drupal 9, but can still be used on Drupal 7.
+[Registry Rebuild](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for the latest version of Drupal, but can still be used on Drupal 7.
 
 </Alert>
 
 Drupal's list of PHP classes and files can become corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus).
 
-**Do not attempt to install the module on your site.** This command is provided as-is and without warranty. You must create a [backup](/backups) before continuing.
+**Do not attempt to install the module on your site.** This command is provided as-is and without warranty. You must create a [backup](/guides/backups) before continuing.
 
 ```bash{promptUser: user}
 terminus drush <site>.<env> -- rr
@@ -54,9 +52,9 @@ terminus drush <site>.<env> -- rr
 
 Use the `registry rebuild` command for Drupal 7 and older versions of Drupal.
 
-### Drupal 9
+### Drupal (Latest)
 
-Use the `drush cache:rebuild` command for Drupal 9. This command serves the same function that as the `registry rebuild` command for older Drupal versions.
+Use the `drush cache:rebuild` command for the latest version of Drupal. This command serves the same function that as the `registry rebuild` command for older Drupal versions.
 
 ## Filter Drush Responses
 
@@ -101,9 +99,9 @@ Drush core commands are available for your use, but you can also add a command t
   drush @pantheon.SITENAME.dev cc drush
   ```
 
-You should place Drush commands in `drush/Commands` if using Drupal 9.
+You should place Drush commands in `drush/Commands` if using Drupal.
 
 ## More Resources
 
 - [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)
-- [Drupal 9](/drupal-9)
+- [Drupal](/drupal)

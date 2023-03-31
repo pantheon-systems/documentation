@@ -4,17 +4,16 @@ subtitle: Introduction
 description: Learn more about Pantheon's Filesystem.
 contenttype: [guide]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [files]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [code, files]
 reviewed: "2021-07-14"
 permalink: docs/guides/filesystem/
-anchorid: files
 ---
 
 Files are static content not stored in your database, and usually consist of images, documents, or user uploads. Files are distinct from your site's [code](/code), and are excluded from version control via Pantheon's `.gitignore` files <Popover content="The <a class='external' href='https://git-scm.com/docs/gitignore'>.gitignore file</a> is located at the root of the site's codebase and instructs Git on which paths to ignore." />:

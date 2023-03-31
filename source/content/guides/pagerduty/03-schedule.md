@@ -2,26 +2,17 @@
 title: Incident Management
 subtitle: PagerDuty Schedule
 description: Page three of our guide on Pagerduty integration with New Relic for incident management.
-pagerduty: true
-anchorid: schedule
-generator: pagination
-layout: guide
 contenttype: [guide]
-categories: [optimize]
-newcms: [--]
+innav: [false]
+categories: [track]
+cms: [--]
 audience: [development]
 product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-pagination:
-    provider: data.pagerdutypages
-use:
-    - pagerdutypages
     - docs_tags
 permalink: docs/guides/pagerduty/schedule/
-nexturl: guides/pagerduty/notify/
-previousurl: guides/pagerduty/monitor/
 editpath: pagerduty/03-schedule.md
 ---
 In this lesson we'll use PagerDuty to create an on-call schedule and escalation policy to automate parts of an incident response procedure in the event of a monitor failure.

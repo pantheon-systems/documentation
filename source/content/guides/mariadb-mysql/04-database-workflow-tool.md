@@ -3,16 +3,15 @@ title: MariaDB and MySQL on Pantheon
 subtitle: Database Workflow Tool
 description: Learn about the database that runs in your Pantheon site.
 contenttype: [guide]
+innav: [false]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [dashboard, database, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/database-workflow-tool
-anchorid: database-workflow-tool
 ---
 
 This section provides information on the database workflow tool for Pantheon sites.

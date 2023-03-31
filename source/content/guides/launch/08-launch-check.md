@@ -2,14 +2,13 @@
 title: Launch Essentials
 subtitle: Pre-launch Configuration
 description: Complete important configuration before launching your site.
-layout: guide
 tags: [backup, launch, webops]
 showtoc: true 
 permalink: docs/guides/launch/launch-check/
-anchorid: launch-check
 contenttype: [guide]
+innav: [false]
 categories: [config, cache, test, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
@@ -25,7 +24,7 @@ This section provides information on how to enable backups, test your email plug
 
 1. Repeat these steps for the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live** environments.
 
-Refer to [Backups Tool](/backups) for more information on this feature.
+Refer to [Backups Tool](/guides/backups) for more information on this feature.
 
 ## Enable and Test Email Plugin/Module (Optional)
 
@@ -77,7 +76,7 @@ Follow the steps below to [test Pantheon's Global CDN](/guides/global-cdn/test-g
 
 ## More Resources
 
-- [Backups Tool](/backups)
+- [Backups Tool](/guides/backups)
 
 - [Email on Pantheon](/email)
 

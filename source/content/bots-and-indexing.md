@@ -3,8 +3,9 @@ title: Bots and Indexing on Pantheon
 description: Information on managing bots and indexing while avoiding performance degradation on your Pantheon WordPress or Drupal site.
 tags: [measure, traffic]
 contenttype: [doc]
+innav: [true]
 categories: [optimize]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [development]
 product: [--]
 integration: [--]
@@ -49,7 +50,7 @@ unix: - - [26/Jul/2013:15:26:37 +0000] "GET /index.php?q=gush/content/name-pimp-
 While Drupal and WordPress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work in Live environments of a paid site with a custom domain. It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/guides/domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/guides/domains/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```none:title=robots.txt
-# Pantheon's documentation on robots.txt: https://pantheon.io/docs/bots-and-indexing/
+# Pantheon's documentation on robots.txt: https://docs.pantheon.io/bots-and-indexing/
 User-agent: *
 Disallow: /
 

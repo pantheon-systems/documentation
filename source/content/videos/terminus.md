@@ -8,8 +8,9 @@ layout: video
 type: video
 searchboost: 50
 contenttype: [doc]
-categories: [create, cli]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]

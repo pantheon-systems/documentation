@@ -1,10 +1,10 @@
 ---
 title: Drupal Security Patches
-description: How to manually patch Drupal 7 and 8 with security patches, ahead of the upstream updates.
-cms: "Drupal"
+description: How to manually patch Drupal with security patches, ahead of the upstream updates.
 contenttype: [doc]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [security]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [--]

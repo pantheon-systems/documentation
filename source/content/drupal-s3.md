@@ -1,16 +1,16 @@
 ---
 title: AWS S3 Setup for Drupal
 description: Add the ability to integrate AWS S3 with a Drupal site on Pantheon
-cms: "Drupal"
 contenttype: [doc]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [manage, workflows]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [aws]
 tags: [files]
 contributors: [peter-pantheon, alexfornuto]
-date: 9/1/2016
+reviewed: "2016-09-01"
 ---
 
 Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with Drupal sites running on Pantheon.
@@ -108,7 +108,7 @@ We recommend that you do not access an S3 bucket using your AWS root user creden
 
 You will need to install the appropriate Drupal module(s) and the AWS SDK library.
 
-The following instructions use Drupal 7 and [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
+The following instructions use Drupal and [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
 These steps require Drush 8, which is run by default on Pantheon for newly created Drupal sites. Sites created prior to November 4, 2015 run 5.x by default.
 

@@ -2,18 +2,16 @@
 title: PHP on Pantheon
 subtitle: WordPress and PHP Sessions
 description: Learn more about the behaviors of WordPress and PHP sessions.
-cms: "WordPress"
 contenttype: [guide]
+innav: [false]
 categories: [php]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [code, users, cookies]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/wordpress-sessions
-anchorid: wordpress-sessions
 ---
 
 This section provides information on WordPress and PHP sessions.

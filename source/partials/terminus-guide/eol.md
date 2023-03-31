@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [cli]
-newcms: [--]
+cms: [--]
 product: [terminus]
 integration: [--]
 tags: [--]
@@ -12,38 +12,15 @@ Each major and minor version of Terminus is fully supported for one year from th
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We recommend you update Terminus far in advance of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 
-<TabList>
-
-<Tab title="Terminus 3.x " id="terminus-version-3" active={true}>
-
 | Version           | Release Date       | EOL Date          |
 | ----------------- | ------------------ | ----------------- |
-| 3.1.2             | January 3, 2023    |                   |
+| 3.1.4             | March 1, 2023      |                   |
+| 3.1.3             | February 1, 2023   | March 1, 2024     |
+| 3.1.2             | January 3, 2023    | February 1, 2024  |
 | 3.1.1             | November 8, 2022   | January 3, 2024   |
 | 3.1.0             | October 18, 2022   | November 8, 2023  |
 | 3.0.9             | October 06, 2022   | October 18, 2023  |
 | 3.0.8             | August 22, 2022    | October 06, 2023  |
 | 3.0.7             | March 29, 2022     | August 22, 2023   |
 | 3.0.6             | February 18, 2022  | March 29, 2023    |
-| 3.0.5             | February 08, 2022  | February 18, 2023 |
-| 3.0.4             | January  18, 2022  | February 08, 2023 |
-| 3.0.3 or earlier  | December 17, 2021  | January  18, 2023 |
-</Tab>
-
-<Tab title="Terminus 2.x" id="terminus-version-2">
-
-| Version           | Release Date      | EOL Date          |
-| ----------------- | ----------------- | ----------------- |
-| 2.6.6             | February 07, 2022 | February 07, 2023 |
-| 2.6.5             | December 17, 2021 | February 07, 2023 |
-| 2.6.4             | December 06, 2021 | December 17, 2022 |
-| 2.6.3             | December 03, 2021 | December 08, 2022 |
-| 2.6.2             | October  18, 2021 | December 03, 2022 |
-| 2.6.1             | August 04, 2021   | October 18, 2022  |
-| 2.6.0             | June 04, 2021     | August 04, 2022   |
-| 2.5.0             | January 20, 2021  | June 04, 2022     |
-| 2.4.1             | September 08, 2020| January 20, 2022  |
-| 2.4.0 or earlier  | June 20, 2020     | September 08, 2021|
-</Tab>
-
-</TabList>
+| 3.0.5 or earlier  | February 08, 2022  | February 18, 2023 |

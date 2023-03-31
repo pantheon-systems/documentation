@@ -3,17 +3,16 @@ title: Enterprise Billing Center
 subtitle: FAQs
 description: Get answers to your Enterprise Billing Center questions.
 contenttype: [guide]
+innav: [false]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [siteportfolio]
 integration: [--]
 tags: [billing]
-layout: guide
 contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/faq
-anchorid: faq
 ---
 
 This section provides answers to frequently asked questions about the Enterprise Billing Center and the Site Portfolio Report.

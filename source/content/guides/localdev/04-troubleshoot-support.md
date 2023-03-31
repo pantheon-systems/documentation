@@ -4,13 +4,12 @@ subtitle: Localdev Support & Troubleshooting
 description: Support for Localdev
 tags: [localdev, local, workflow]
 reviewed: "2020-12-04"
-layout: guide
 permalink: docs/guides/localdev
-anchorid: localdev
 editpath: localdev/04-troubleshoot-support.md
 contenttype: [guide]
-categories: [help]
-newcms: [wordpress, drupal]
+innav: [false]
+categories: [localdev]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [localdev]
 integration: [--]
@@ -63,9 +62,9 @@ The steps in this section should only be used as a last resort. This resets Loca
 
 While Localdev uses parts of Lando under the hood, they should be considered separate tools. Localdev will not respect existing Lando configuration files, and we recommend keeping the two tools separate. That is, if you are going to use both tools, they should point to separate project directories.
 
-### Can WordPress Site Networks be developed through Localdev?
+### Can WordPress Multisites be developed through Localdev?
 
-At this time, WordPress Site Network (also known as WordPress Multisite) is supported only for networks using subdirectories, not subdomains. See the [Choose Between Subdirectories and Subdomains](/guides/multisite/considerations/#choose-between-subdirectories-and-subdomains) section of our [WordPress Site Networks](/guides/multisite) guide for more information.
+See the [Choose Between Subdirectories and Subdomains](/guides/multisite/considerations/#choose-between-subdirectories-and-subdomains) section of our [WordPress Multisite](/guides/multisite) guide for more information.
 
 ### How do you configure PHP versions for sites in the Localdev environment?
 

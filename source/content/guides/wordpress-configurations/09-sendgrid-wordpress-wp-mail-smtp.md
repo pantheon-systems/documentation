@@ -4,16 +4,15 @@ subtitle: Use WP Mail SMTP to Send Email with SendGrid
 description: Learn how to configure WP Mail SMTP for use with SendGrid.
 contributors: [alexfornuto]
 contenttype: [guide]
+innav: [false]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [email]
 tags: [email, plugins]
-cms: "WordPress"
 reviewed: "2020-11-02"
 permalink: docs/guides/wordpress-configurations/sendgrid-wordpress-wp-mail-smtp
-anchorid: sendgrid-wordpress-wp-mail-smtp
 ---
 
 This section provides information on how to configure WP Mail SMTP to work with SendGrid.

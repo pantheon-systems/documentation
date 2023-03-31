@@ -3,17 +3,16 @@ title: Enterprise Billing Center
 subtitle: Site Portfolio Report Overview
 description: Learn more about the information provided in the Site Portfolio Report.
 contenttype: [guide]
+innav: [false]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [siteportfolio]
 integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/enterprise-billing-center/site-portfolio-report
-anchorid: site-portfolio-report
 ---
 
 The Site Portfolio Report provides supplemental information to help you understand and audit the charges in your invoice. Pantheon’s invoice notification generates and emails the Site Portfolio Report along with a link to the online invoice for contract customers with an active contract. The report can also be accessed in the Enterprise Billing Center within the Pantheon dashboard.

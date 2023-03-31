@@ -1,15 +1,15 @@
 ---
 title: Bluehost Domain Configuration
 provider: Bluehost
-dnsprovider: true
 draft: true
 description: Learn how to point your Bluehost domain to a Pantheon site.
-tags: [dns]
+tags: [domains]
 permalink: docs/:basename
 editpath: dns-providers/bluehost.md/
 contenttype: [doc]
+innav: [true]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

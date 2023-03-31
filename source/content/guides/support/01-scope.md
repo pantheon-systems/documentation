@@ -3,18 +3,18 @@ title: Get Support
 subtitle: Scope of Support
 description: Learn how to access Pantheon's expert team and what your Account tier includes.
 contenttype: [guide]
+innav: [true]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [collaborate, composer, continuous-integration, webops, workflow]
 type: guide
 showtoc: true
-anchorid: support
 permalink: docs/guides/support/
 editpath: support/01-scope.md
-reviewed: "2022-01-20"
+reviewed: "2022-12-13"
 ---
 
 ![Screenshot of the Support Tab](../../../images/dashboard/support-tab.png)
@@ -87,7 +87,7 @@ We are unable to debug issues with the content or structure of the Custom Upstre
 
 ### Public Distributions
 
-If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 9, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
+If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal (Latest Version), Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
 
 ### Security
 
@@ -136,7 +136,7 @@ The Pantheon Professional Services (PS) team works closely with partners to prov
 - [Additional Domains](/guides/domains)
 - [Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
 - [Custom SSL Certificate](/custom-certificates)
-- [Decoupled CMS](/guides/decoupled-sites)
+- [Decoupled CMS](/guides/decoupled/overview)
 - [Managed Updates](/guides/professional-services/managed-updates)
 - [Multizone Failover](/multizone-failover)
 - [Site Migrations](/guides/professional-services/website-migration-service)

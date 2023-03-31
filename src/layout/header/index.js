@@ -5,7 +5,7 @@ import './style.css';
 
 import config from "../../algolia/config";
 
-const isSearchEnabled = config.search && config.search.enabled ? true : false;
+const isSearchPage = typeof document !== "undefined" && document.URL.includes("search"); //const isSearchEnabled = config.search && config.search.enabled ? true : false;
 
 let searchIndices = [];
 
@@ -17,7 +17,7 @@ if (isSearchEnabled && config.search.indexName) {
   });
 }
 
-const isSearchPage = typeof document !== "undefined" && document.URL.includes("search");
+
 
 const Header = ({ data, page }) => (
   <>
@@ -75,7 +75,7 @@ const Header = ({ data, page }) => (
           </li>
           <li className="">
             <a
-              href="https://dashboard.pantheon.io/#support/support/all"
+              href="https://dashboard.pantheon.io/#support"
               target="_blank"
               rel="noopener"
             >
@@ -84,7 +84,7 @@ const Header = ({ data, page }) => (
           </li>
           <li className="dropdown">
             <a
-              href="/docs"
+              href="/"
               className="dropdown-toggle active-trail"
               role="button"
               aria-haspopup="true"

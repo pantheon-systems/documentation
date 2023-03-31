@@ -3,18 +3,17 @@ title: The New Pantheon Dashboard
 subtitle: Personal Settings
 description: Customize and manage your personal settings.
 contenttype: [guide]
+innav: [false]
 categories: [dashboard]
-newcms: [--]
+cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [joa-pan]
 reviewed: "2022-07-20"
-layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/personal-settings
-anchorid: new-dashboard
 editpath: new-dashboard/04-personal-settings.md
 ---
 

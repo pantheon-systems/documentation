@@ -2,18 +2,16 @@
 title: Frontend Performance
 subtitle: Performance Metrics
 description: Overview of how and what to measure when optimizing your site for performance.
-anchorid: metrics
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/metrics
 editpath: frontend-performance/02-metrics.md
-image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
-categories: [measure, optimize]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [track, optimize]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

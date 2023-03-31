@@ -4,14 +4,13 @@ subtitle: Introduction
 description: Learn how Workspaces, Sites, and Teams work together to help you manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/workspace-sites-teams
-anchorid: workspace-sites-teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/01-introduction.md
 reviewed: "2022-09-19"
 contenttype: [guide]
-categories: [accounts]
-newcms: [--]
+innav: [true]
+categories: [organizations]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

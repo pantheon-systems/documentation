@@ -5,19 +5,18 @@ description: Learn how to use SFTP mode for direct develop on Pantheon, and how 
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
 contenttype: [guide]
+innav: [true]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp
-anchorid: sftp
 ---
 
-Pantheon provides two development modes: [Git mode](/guides/git) and SFTP mode. SFTP mode allows you to develop directly on Pantheon. Refer to [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin) if you want to use the WordPress plugin/theme manager or Drupal Dashboard (`apps.module`).
+Pantheon provides two development modes: [Git mode](/guides/git) and SFTP mode. SFTP mode allows you to develop directly on Pantheon. 
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 

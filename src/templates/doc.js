@@ -166,6 +166,7 @@ export const pageQuery = graphql`
         }
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
+        showtoc
         tags
         type
       }

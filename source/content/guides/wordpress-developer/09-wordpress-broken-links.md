@@ -2,18 +2,16 @@
 title: WordPress Developer's Guide
 subtitle: Fix Broken Links in WordPress
 description: Learn how to update broken links on your Pantheon WordPress site.
-cms: "WordPress"
 contenttype: [guide]
-categories: [manage]
-newcms: [wordpress]
+innav: [false]
+categories: [cms, troubleshooting]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [code, migrate, plugins]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-broken-links
-anchorid: wordpress-broken-links
 ---
 
 This section provides information on how to correct broken links so that the URL references the correct file path and domain name.
@@ -32,7 +30,7 @@ There are a number of plugins that can help you correct and maintain your links.
 
 ### Install Broken Link Checker
 
-You can install the [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin from your [WordPress dashboard](/cms-admin/#wordpress-dashboard) by following these steps:
+You can install the [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin from your WordPress dashboard by following these steps:
 
 1. Set your **Connection Mode** to [SFTP](/guides/sftp).
 

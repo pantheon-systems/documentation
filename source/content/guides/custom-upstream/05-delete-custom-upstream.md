@@ -2,17 +2,17 @@
 title: Delete a Custom Upstream
 subtitle: Delete a Custom Upstream
 description: Learn how to delete a Custom Upstream.
-tags: [upstreams, workflow, webops]
-layout: guide
+tags: [upstreams, workflow, webops, D8, D9, D10]
 showtoc: true
 permalink: docs/guides/custom-upstream/delete-custom-upstream
-anchorid: delete-custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 This section provides steps to delete a Custom Upstream. A Custom Upstream cannot be deleted if there are sites using it.

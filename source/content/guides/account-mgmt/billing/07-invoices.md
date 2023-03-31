@@ -3,17 +3,16 @@ title: "Billing"
 subtitle: Invoices and Subscriptions
 description: Manage and view invoices and subscriptions.
 contenttype: [guide]
+innav: [false]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]
 tags: [billing]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/invoices
-anchorid: invoices
 editpath: docs/guides/account-mgmt/billing/07-invoices.md
 reviewed: "2022-09-19"
 ---

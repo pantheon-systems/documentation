@@ -4,16 +4,15 @@ subtitle: Troubleshooting
 description: Get solutions to common filesystem troubleshooting scenarios.
 tags: [cli, code, files]
 contenttype: [doc]
-categories: [cli, database]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [files, troubleshooting]
+cms: [drupal, wordpress]
 audience: [develoment]
 product: [terminus]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/filesystem/troubleshooting
-anchorid: troubleshooting
 ---
 
 This section provides solutions to common filesystem troubleshooting scenarios.

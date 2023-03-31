@@ -3,17 +3,16 @@ title: Platform Considerations
 subtitle: Platform Security
 description: Learn more about security support on the Pantheon platform.
 contenttype: [guide]
+innav: [false]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/platform-security
-anchorid: platform-security
 ---
 
 This section provides information on supported security for the Pantheon platform. Refer to the [Secure Development on Pantheon](/guides/secure-development) guide for comprehensive security information.

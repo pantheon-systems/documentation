@@ -3,16 +3,15 @@ title: Log Files on Pantheon
 subtitle: Introduction
 description: Use logs on Pantheon to help find, debug, and isolate potential problems.
 contenttype: [guide]
-categories: [optimize]
-newcms: [--]
+innav: [true]
+categories: [logs]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [logs, measure]
 contributors: [whitneymeredith]
-layout: guide
 permalink: docs/guides/logs-pantheon
-anchorid: logs-pantheon
 ---
 
 Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has individual log files, which can be obtained via SFTP. Application-level logs can be accessed directly through Drupal. You can use [New Relic&reg; Performance Monitoring](/guides/new-relic) in conjunction with logs to help diagnose and fix errors and performance bottlenecks.

@@ -4,14 +4,13 @@ subtitle: Troubleshoot Integrated Composer
 description: Learn how to troubleshoot Integrated Composer issues.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
-layout: guide
+reviewed: "2022-12-13"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-troubleshooting
-anchorid: ic-troubleshooting
 contenttype: [guide]
-categories: [overview]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [dependencies, troubleshooting]
+cms: [drupal, wordpress]
 audience: [development]
 product: [composer]
 integration: [--]
@@ -21,30 +20,21 @@ This section provides information on troubleshooting common Integrated Composer 
 
 ## Troubleshooting Code Syncs, Upstream Updates, and Redirect Errors
 
-### Site-local Drush Is Required for Drupal 9 Sites
+### Site-local Drush Is Required for Drupal Sites
 
 Do not remove `drush/drush` from `composer.json`. If it's removed, `terminus drush` commands will fail with errors related to Twig.
 
 ### Build Step Affected Files That Are Not Ignored by Git
 
-Some users have encountered an error when Git recognizes an unexpected change in `composer.json`:
+This error occurs when your `composer install` or `composer update` files are tracked in your Git repository and are modified unexpectedly. This causes the build process to stop because Integrated Composer should not overwrite custom code.
 
-```bash
-The build step affected files that are not ignored by git:
-+ echo M composer.json M composer.lock
-M composer.json M composer.lock
-+ exit 1
-```
+The solution is to ensure that Composer does not modify these files, and that the files are removed from being tracked in the Git repository.
 
-To resolve this error:
+1. Remove the files from the Git repository.
 
-1. Add an empty new line to the end of `composer.json`:
+1. Commit the removal.
 
-  ```shell
-  echo "" >> composer.json
-  ```
-
-1. Commit and push the changes
+1. Add the file paths to the `.gitignore` file so that the files are not tracked again.
 
 ### View the Output of the Commit Log First
 
@@ -97,7 +87,7 @@ Follow the steps below to resolve the issue:
 When you click **Apply Updates**, the process completes with the error, `Something went wrong when applying updates. View log.` Click **View log** to view the output of the log:
 
 ```bash
-We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://pantheon.io/docs/core-updates) for further debugging tips. Conflicts: [
+We were not able to perform the merge safely. See the Applying Upstream Updates doc (https://docs.pantheon.io/core-updates) for further debugging tips. Conflicts: [
   "CONFLICT (content): Merge conflict in composer.json"
 ]
 ```
@@ -181,19 +171,19 @@ code/web/wp-content/
 └─ themes/
 ```
 
-See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore). 
+See the `.gitignore` file for WordPress [here](https://github.com/pantheon-upstreams/wordpress-project/blob/master/.gitignore).
 
 </Tab>
 
 </TabList>
 
-Refer to [Add a Dependency to an Individual Site](/guides/integrated-composer/dependencies) to add a module/plugin or theme as a dependency to your site.  
+Refer to [Add a Dependency to an Individual Site](/guides/integrated-composer/dependencies) to add a module/plugin or theme as a dependency to your site.
 
 ### Changes Lost During Upstream Updates
 
 When **Auto-Resolve Updates** is selected and the `composer.json` contents are changed in the upstream, all changes the site's developers made to `composer.json` will be removed if Git cannot automatically merge the changes.
 
-There are two potential solutions to resolve this issue: 
+There are two potential solutions to resolve this issue:
 
 - If you have a copy of the `composer.json` file from before the updates were applied, add the changes from that file back to the updated `composer.json` file.
 

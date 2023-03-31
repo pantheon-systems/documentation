@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [migrate]
-newcms: [wordpress]
+cms: [wordpress]
 product: [--]
 integration: [--]
 tags: [--]
@@ -10,8 +10,8 @@ reviewed: ""
 
 ### WordPress-Specific Scenarios
 
-- You are using [WordPress Site Networks](/migrate-wordpress-site-networks).
+- You are using [WordPress Multisite](/migrate-wordpress-multisite).
 
 - Plugin install is unavailable.
 
-- You are migrating a site that is only on your local machine and not yet live. 
+- You are migrating a site that is only on your local machine and not yet live.

@@ -1,12 +1,12 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.1.0"
+        "version": "3.1.4"
     },
     "commands": [
         {
             "name": "aliases",
-            "description": "Generates Pantheon Drush aliases for sites on which the currently logged-in user is on the team.",
+            "description": "Generates Pantheon Drush aliases for sites on which the currently logged-in user is on the team. Note that Drush 9 does not read alias files from global locations. You must set valid alias locations in your drush.yml file. Refer to https:\/\/docs.pantheon.io\/guides\/drush\/drush-aliases#manage-available-site-aliases-lists for more information.",
             "usage": [
                 "aliases [--print] [--location [LOCATION]] [--all] [--only [ONLY]] [--type [TYPE]] [--base [BASE]] [--db-url [DB-URL]] [--target [TARGET]] [--no-db-url]",
                 "aliases Saves Pantheon Drush aliases for sites on which the currently logged-in user is on the team to ~\/.drush\/pantheon.aliases.drushrc.php.",
@@ -15,7 +15,7 @@
                 "drush:aliases",
                 "alpha:aliases"
             ],
-            "help": "Generates Pantheon Drush aliases for sites on which the currently logged-in user is on the team.",
+            "help": "Generates Pantheon Drush aliases for sites on which the currently logged-in user is on the team. Note that Drush 9 does not read alias files from global locations. You must set valid alias locations in your drush.yml file. Refer to https:\/\/docs.pantheon.io\/guides\/drush\/drush-aliases#manage-available-site-aliases-lists for more information.",
             "definition": {
                 "arguments": [],
                 "options": {
@@ -2196,7 +2196,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: SFTP Command (sftp_command), SFTP Username (sftp_username), SFTP Host (sftp_host), SFTP Password (sftp_password), SFTP URL (sftp_url), Git Command (git_command), Git Username (git_username), Git Host (git_host), Git Port (git_port), Git URL (git_url), MySQL Command (mysql_command), MySQL Username (mysql_username), MySQL Host (mysql_host), MySQL Password (mysql_password), MySQL URL (mysql_url), MySQL Port (mysql_port), MySQL Database (mysql_database), Redis Command (redis_command), Redis Port (redis_port), Redis URL (redis_url), Redis Password (redis_password)",
+                        "description": "Available fields: SFTP Command (sftp_command), SFTP Username (sftp_username), SFTP Host (sftp_host), SFTP Password (sftp_password), SFTP Port (sftp_port), SFTP URL (sftp_url), Git Command (git_command), Git Username (git_username), Git Host (git_host), Git Port (git_port), Git URL (git_url), MySQL Command (mysql_command), MySQL Username (mysql_username), MySQL Host (mysql_host), MySQL Password (mysql_password), MySQL URL (mysql_url), MySQL Port (mysql_port), MySQL Database (mysql_database), Redis Command (redis_command), Redis Port (redis_port), Redis URL (redis_url), Redis Password (redis_password)",
                         "default": "*_command"
                     },
                     "field": {
@@ -3912,7 +3912,7 @@
                         "accept_value": false,
                         "is_value_required": false,
                         "is_multiple": false,
-                        "description": "[DEPRECATED 2.2.1-dev] Does not work. Meant to clear caches after deploy. Please use env:clear-cache instead.",
+                        "description": "Clear caches after deploy.",
                         "default": false
                     },
                     "updatedb": {
@@ -5354,13 +5354,13 @@
         },
         {
             "name": "import:database",
-            "description": "Imports a database archive to the environment.",
+            "description": "Imports a database archive to the environment. This command drops the existing database and imports the target into a new database. Use with caution to avoid accidental database deletion.",
             "usage": [
                 "import:database <site>.<env> <url>",
                 "import:database <site>.<env> <archive_url> Imports the database archive at <archive_url> to <site>'s <env> environment.",
                 "import:db"
             ],
-            "help": "Imports a database archive to the environment.",
+            "help": "Imports a database archive to the environment. This command drops the existing database and imports the target into a new database. Use with caution to avoid accidental database deletion.",
             "definition": {
                 "arguments": {
                     "site_env": {
@@ -5597,7 +5597,7 @@
                         "name": "url",
                         "is_required": true,
                         "is_array": false,
-                        "description": "Publicly accessible URL of the site archive",
+                        "description": "Publicly accessible URL of the site archive exported with drush 8 archive-dump command. If you need to import a site in Drupal >=9 consider conversion:import-site command from https:\/\/github.com\/pantheon-systems\/terminus-conversion-tools-plugin",
                         "default": null
                     }
                 },
@@ -8386,10 +8386,11 @@
             "name": "org:site:list",
             "description": "Displays the list of sites associated with an organization.",
             "usage": [
-                "org:site:list [--plan [PLAN]] [--tag [TAG]] [--upstream [UPSTREAM]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <organization>",
+                "org:site:list [--plan [PLAN]] [--tag [TAG]] [--tags [TAGS]] [--upstream [UPSTREAM]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <organization>",
                 "org:site:list <organization> Displays the list of sites associated with <organization>.",
                 "org:site:list <organization> --plan=<plan> Displays the list of sites associated with <organization> having the plan named <plan>.",
-                "org:site:list <organization> --tag=<tag> Displays the list of sites associated with <organization> that have the <tag> tag.",
+                "org:site:list <organization> --tag=<tag> Displays the list of sites associated with <organization> that have ANY <tag> tag.",
+                "org:site:list <organization> --tags=<tags> Displays the list of sites associated with <organization> that have ALL <tags> tags.",
                 "org:site:list <organization> --upstream=<upstream> Displays the list of sites associated with <organization> with the upstream having UUID <upstream>.",
                 "org:sites"
             ],
@@ -8421,6 +8422,15 @@
                         "is_value_required": false,
                         "is_multiple": false,
                         "description": "DEPRECATED Tag name to filter",
+                        "default": null
+                    },
+                    "tags": {
+                        "name": "--tags",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "",
                         "default": null
                     },
                     "upstream": {
@@ -9540,7 +9550,7 @@
             "name": "plan:set",
             "description": "Changes a site plan.",
             "usage": [
-                "plan:set <site_id> <plan_id>",
+                "plan:set <site_id> <plan_sku>",
                 "plan:set <site> <plan> Updates <site>'s plan to <plan>."
             ],
             "help": "Changes a site plan.",
@@ -9553,11 +9563,11 @@
                         "description": "Site name",
                         "default": null
                     },
-                    "plan_id": {
-                        "name": "plan_id",
+                    "plan_sku": {
+                        "name": "plan_sku",
                         "is_required": true,
                         "is_array": false,
-                        "description": "The SKU or UUID of the plan to set",
+                        "description": "The SKU of the plan to set",
                         "default": null
                     }
                 },
@@ -15003,13 +15013,13 @@
         },
         {
             "name": "workflow:info:logs",
-            "description": "Displays the details of a workflow including Quicksilver operation logs.",
+            "description": "Displays the details of Quicksilver operation logs.",
             "usage": [
                 "workflow:info:logs [--id [ID]] [--] <site_id>",
                 "workflow:info:logs <site> --id=<workflow> Displays the details of <site>'s workflow <workflow>.",
                 "workflow:info:logs <site> Displays the details of <site>'s most recently created workflow."
             ],
-            "help": "Displays the details of a workflow including Quicksilver operation logs.",
+            "help": "Displays the details of Quicksilver operation logs.",
             "definition": {
                 "arguments": {
                     "site_id": {
@@ -15443,6 +15453,134 @@
                         "is_multiple": false,
                         "description": "Select just one field, and force format to *string*.",
                         "default": ""
+                    },
+                    "help": {
+                        "name": "--help",
+                        "shortcut": "-h",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display help for the given command. When no command is given display help for the <info>list<\/info> command",
+                        "default": false
+                    },
+                    "quiet": {
+                        "name": "--quiet",
+                        "shortcut": "-q",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not output any message",
+                        "default": false
+                    },
+                    "verbose": {
+                        "name": "--verbose",
+                        "shortcut": "-v|-vv|-vvv",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+                        "default": false
+                    },
+                    "version": {
+                        "name": "--version",
+                        "shortcut": "-V",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display this application version",
+                        "default": false
+                    },
+                    "ansi": {
+                        "name": "--ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Force (or disable --no-ansi) ANSI output",
+                        "default": null
+                    },
+                    "no-ansi": {
+                        "name": "--no-ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Negate the \"--ansi\" option",
+                        "default": false
+                    },
+                    "no-interaction": {
+                        "name": "--no-interaction",
+                        "shortcut": "-n",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not ask any interactive question",
+                        "default": false
+                    },
+                    "define": {
+                        "name": "--define",
+                        "shortcut": "-D",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": true,
+                        "description": "Define a configuration item value.",
+                        "default": []
+                    },
+                    "yes": {
+                        "name": "--yes",
+                        "shortcut": "-y",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Answer all confirmations with \"yes\"",
+                        "default": false
+                    }
+                }
+            },
+            "hidden": false
+        },
+        {
+            "name": "workflow:wait",
+            "description": "Wait for a workflow to complete. Usually this will be used to wait for code commits, since Terminus will already wait for workflows that it starts through the API.",
+            "usage": [
+                "workflow:wait [--start [START]] [--max [MAX]] [--] <site_env_id> [<description>]"
+            ],
+            "help": "Wait for a workflow to complete. Usually this will be used to wait for code commits, since Terminus will already wait for workflows that it starts through the API.",
+            "definition": {
+                "arguments": {
+                    "site_env_id": {
+                        "name": "site_env_id",
+                        "is_required": true,
+                        "is_array": false,
+                        "description": "The pantheon site to wait for.",
+                        "default": null
+                    },
+                    "description": {
+                        "name": "description",
+                        "is_required": false,
+                        "is_array": false,
+                        "description": "The workflow description to wait for. Optional; default is code sync.",
+                        "default": ""
+                    }
+                },
+                "options": {
+                    "start": {
+                        "name": "--start",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Ignore any workflows started prior to the start time (epoch)",
+                        "default": 0
+                    },
+                    "max": {
+                        "name": "--max",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Maximum number of seconds to wait for the workflow to complete",
+                        "default": 180
                     },
                     "help": {
                         "name": "--help",
@@ -16045,6 +16183,7 @@
                 "workflow:info:operations",
                 "workflow:info:status",
                 "workflow:list",
+                "workflow:wait",
                 "workflow:watch"
             ]
         }

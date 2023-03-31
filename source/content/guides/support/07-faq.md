@@ -1,21 +1,19 @@
 ---
 title: Get Support
 subtitle: Frequently Asked Questions
-cms: "Drupal"
+getfeedbackform: default
 contenttype: [guide]
+innav: [false]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
-buildtools: true
-anchorid: support-faq
 type: guide
 showtoc: true
 permalink: docs/guides/support/faq/
 editpath: support/06-faq.md
-getfeedbackform: default
 reviewed: "2020-12-13"
 ---
 

@@ -2,19 +2,17 @@
 title: WordPress Developer's Guide
 subtitle: WordPress Best Practices
 description: A list of best practices for developing WordPress sites on Pantheon.
-cms: "WordPress"
 contenttype: [guide]
-categories: [manage]
-newcms: [wordpress]
+innav: [false]
+categories: [cms]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [workflow, security, composer]
 reviewed: "2022-05-16"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-best-practices
-anchorid: wordpress-best-practices
 ---
 
 This section provides suggestions for best practices to develop and manage WordPress sites on the Pantheon platform.

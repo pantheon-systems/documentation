@@ -3,8 +3,9 @@ title: Secure Development on Pantheon
 subtitle: Pantheon Secure Integration
 description: Configuring your Drupal or WordPress site to use Secure Integration as a defense-in-depth solution to access systems behind firewalls.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [security]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -12,7 +13,6 @@ tags: [database, professional-services, redis, security]
 ayout: guide
 showtoc: true
 permalink: docs/guides/secure-development/secure-integration
-anchorid: secure-integration
 reviewed: "2022-07-21"
 ---
 

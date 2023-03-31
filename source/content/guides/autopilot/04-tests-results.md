@@ -4,15 +4,14 @@ subtitle: Tests and Results
 description: Autopilot visual regression testing (VRT) results and how to deal with failing tests.
 tags: [iterate, autopilot, testing, webops]
 type: guide
-layout: guide
 showtoc: true
-anchorid: tests-results
 permalink: docs/guides/autopilot/tests-results/
 editpath: autopilot/03-tests-results.md
 reviewed: "2021-08-09"
 contenttype: [guide]
-categories: [deploy, test, update]
-newcms: [--]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [quicksilver]

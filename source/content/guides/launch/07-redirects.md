@@ -3,13 +3,12 @@ title: Launch Essentials
 subtitle: Set a Primary Domain for SEO
 description: Redirect users to the correct domains and paths for your site.
 tags: [dns, https, launch, webops]
-layout: guide
 showtoc: true
 permalink: docs/guides/launch/redirects
-anchorid: launch-redirects
 contenttype: [guide]
+innav: [false]
 categories: [domains, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [dashboard, terminus]
 integration: [--]

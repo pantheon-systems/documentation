@@ -1,10 +1,10 @@
 ---
 title: WordPress Known Issues
 description: Learn the recommended solutions for known issues on the Pantheon Website Management Platform for WordPress sites.
-cms: "WordPress"
 contenttype: [doc]
-categories: [help]
-newcms: [wordpress]
+innav: [true]
+categories: [issues]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -20,7 +20,7 @@ If you are importing a site and the database has custom prefixes for your DB tab
  - Update user metadata with `update wp_usermeta set meta_key = replace(meta_key, 'oldprefix_', 'wp_');`, replacing `oldprefix` with the previously used prefix.
 
 <Alert title="Note" type="info">
-Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/docs/guides/mariadb-mysql/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
+Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/guides/mariadb-mysql/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
 </Alert>
 
 ## Automatic Updates
@@ -28,7 +28,6 @@ Table prefixes are not supported or recommended by Pantheon. For more details se
 WordPress's automatic update functionality will not work on Pantheon site environments. We disable all automatic updates by default with the [Pantheon Updates](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon/pantheon-updates.php) plugin, found within the mu-plugins directory of our WordPress upstream. This plugin disables core, theme, and plugin updates on all Pantheon environments. Attempting to override this functionality by editing or removing this file will break your Test and Live environments. The codebase for these environments is not writeable, and WordPress will continually attempt to download and unpack core updates, which it cannot do on these environments. For more information, see the following:
 
 - [Applying Upstream Updates](/core-updates/ "How to apply core updates to sites on Pantheon")
-- [Updating WordPress Plugins](/cms-admin/#wordpress-dashboard "How to update plugins")
 
 ## PHP Sessions
 
@@ -46,9 +45,9 @@ WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issue
 
 For more information, refer to the [PHP Versions](/guides/php/php-versions) documentation. 
 
-## Site Networks / Multisite
+## WordPress Multisite
 
-Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Multisite](/guides/multisite).
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
@@ -74,3 +73,9 @@ add_filter( 'wp_image_editors', 'force_use_gdlib' );
 ```
 
 See this [core issue](https://core.trac.wordpress.org/ticket/43310) on WordPress.org for more information.
+
+## Language Packs
+
+WordPress 4.7 introduced the ability for admins to add additional language packs to WordPress from the General Settings screen. On Pantheon, this is only possible on development environments in SFTP mode. This is because WordPress attempts to download the language packs for the requested language, and file writes are disabled in all environments other than development environments.
+
+WordPress 6.2 extends this feature to user profiles. You can install language packs from your Edit Profile page. Note that this feature is still not available on Pantheon outside of a development environment in SFTP mode.

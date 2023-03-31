@@ -3,17 +3,16 @@ title: MariaDB and MySQL on Pantheon
 subtitle: Introduction
 description: Learn how to use MariaDB and MySQL on Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [database]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql
-anchorid: mariadb-mysql
 ---
 
 Pantheon provides direct access to your databases through our platform for debugging and importing large databases. Pantheon is standardized on MariaDB, but we also support MySQL database connections.

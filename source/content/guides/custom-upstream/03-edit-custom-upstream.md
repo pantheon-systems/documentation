@@ -2,17 +2,17 @@
 title: Edit an Existing Custom Upstream
 subtitle: Edit an Existing Custom Upstream
 description: Learn how to edit your Custom Upstream settings.
-tags: [upstreams, workflow, webops]
-layout: guide
+tags: [upstreams, workflow, webops, D8, D9, D10]
 showtoc: true
 permalink: docs/guides/custom-upstream/edit-custom-upstream
-anchorid: edit-custom-upstream
 contenttype: [guide]
-categories: [git, test, updates]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
-product: [custom-upstream]
+product: [custom-upstreams]
 integration: [--]
+reviewed: "2022-12-13"
 ---
 
 This section provides information on editing an existing Custom Upstream.
@@ -37,7 +37,7 @@ You cannot modify the repository details on an existing Custom Upstream. we reco
 terminus site:upstream:set my-site "My New Custom Upstream"
 ```
 
-You must be a site owner to switch a site's upstream. You will need to merge changes as a one-click update after a site's upstream has been changed. Review [Example Usage](/terminus/examples/#switch-upstreams) for more details.
+You must merge changes as a one-click update after a site's upstream is changed. Review [Example Usage](/terminus/examples/#switch-upstreams) for more details.
 
 You can safely delete the old Custom Upstream after all sites have been updated to track the new Custom Upstream. Review [Delete a Custom Upstream](/guides/custom-upstream/delete-custom-upstream) for more information.
 

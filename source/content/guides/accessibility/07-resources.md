@@ -3,18 +3,17 @@ title: Optimize Your Site for Accessibility
 subtitle: Resources
 description: Tools and techniques to improve your website's accessibility
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [create]
+cms: [--]
 audience: [marketing, development]
 product: [--]
 integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
 reviewed: "2022-06-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/accessibility/resources
-anchorid: accessibility/resources
 editpath: accessibility/07-resources.md
 ---
 

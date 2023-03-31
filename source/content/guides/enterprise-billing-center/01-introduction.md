@@ -2,13 +2,17 @@
 title: Enterprise Billing Center
 subtitle: Introduction
 description: Learn more about the Enterprise Billing Center.
+contenttype: [guide]
+innav: [true]
 categories: [billing]
+cms: [--]
+audience: [business]
+product: [siteportfolio]
+integration: [--]
 tags: [billing]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/enterprise-billing-center
-anchorid: enterprise-billing-center
 ---
 
 The Enterprise Billing Center provides billing and site plan information for Enterprise (contract) customers. The Enterprise Billing Center allows you to:

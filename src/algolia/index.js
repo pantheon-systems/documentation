@@ -1,18 +1,5 @@
 const config = require('./config');
 
-
-const allDocsTransform = () => {
-  // TODO: Isolate all docs
-}
-
-const allGuidesTransform = () => {
-  // TODO: Isolate all docs
-}
-
-const allChangelogsTransform = () => {
-  // TODO: Isolate all docs
-}
-
 const pageQuery = /* GraphQL */`{
 
     allDocs: allMdx(
@@ -91,25 +78,6 @@ const pageQuery = /* GraphQL */`{
         }
       }
     }
-
-    # pages: allMdx {
-    #   edges {
-    #     node {
-    #       objectID: id
-    #       fields {
-    #         slug
-    #       }
-    #       headings {
-    #         value
-    #       }
-    #       frontmatter {
-    #         title
-    #         description
-    #       }
-    #       excerpt(pruneLength: 50000)
-    #     }
-    #   }
-    # }
   }`;
   
 const flatten = arr =>

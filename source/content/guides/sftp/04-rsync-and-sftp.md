@@ -3,15 +3,14 @@ title: SFTP on Pantheon
 subtitle: Large File Transfers with rsync and SFTP
 description: Transfer large files using an SFTP client or rsync.
 tags: [files, sftp, rsync]
+innav: [false]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/rsync-and-sftp
-anchorid: rsync-and-sftp
 ---
 
 This section provides information on how to use your SFTP client or rsync to transfer large files.

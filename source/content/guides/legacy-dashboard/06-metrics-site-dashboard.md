@@ -3,15 +3,14 @@ title: Legacy Dashboard
 subtitle: Metrics in the Site Dashboard
 description: Measure your site's traffic with the Metrics tool, found in the Live environment of the Site Dashboard.
 tags: [billing, dashboard, measure, traffic]
-layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/metrics
-anchorid: metrics
 editpath: legacy-dashboard/06-metrics-site-dashboard.md
 contenttype: [guide]
-categories: [measure, dashboard]
-newcms: [wordpress, drupal]
+innav: [false]
+categories: [track, dashboard]
+cms: [wordpress, drupal]
 audience: [agency, business]
 product: [dashboard]
 integration: [--]

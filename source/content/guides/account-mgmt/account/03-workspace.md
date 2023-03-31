@@ -3,16 +3,15 @@ title: "Manage Your Account"
 subtitle: Workspace
 description: Learn how to use your account workspace.
 contenttype: [guide]
-categories: [billing]
-newcms: [--]
+innav: [false]
+categories: [accounts]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/account/workspace
-anchorid: workspace
 editpath: docs/guides/account-mgmt/account/03-workspace.md
 reviewed: "2022-09-19"
 ---

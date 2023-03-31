@@ -3,17 +3,16 @@ title: Multidev
 subtitle: Access a Multidev Branch Environment
 description: Learn how to access a Multidev branch environment.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [multidev]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev/access-branch
-anchorid: access-branch
 ---
 
 This section provides steps on how to access a Multidev branch environment.

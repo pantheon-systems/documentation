@@ -3,18 +3,17 @@ title: Local Development on Pantheon
 subtitle: Introduction
 description: Learn more about developing your Pantheon site locally.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development
-anchorid: local-development
 ---
 
 Pantheon's [Localdev](/guides/localdev) has been deprecated. However, there are many local development options for the Pantheon platform available for use on Pantheon. This guide provides an overview of several popular local development tools to help you get started.

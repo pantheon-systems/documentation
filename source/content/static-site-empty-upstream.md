@@ -5,8 +5,9 @@ contributors: [michellecolon-pantheon, kyletaylored]
 tags: [upstreams, site]
 reviewed: "2021-08-12"
 contenttype: [doc]
-categories: [create]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [custom-upstreams]
+cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [upstreams]
@@ -92,7 +93,7 @@ Yes, compiled static sites that don't require a Drupal or WordPress CMS backend 
 
 Some customers utilize a two-site approach on Pantheon where one site is the CMS backend (headless WordPress or Drupal), and the other site is the decoupled frontend (Frontity, Gatsby, [etc.](https://jamstack.org/generators/)). Of course, you will likely have different deployment workflows for updating each site, and you would need to determine the best workflow for you and your team.
 
-For other Decoupled configurations, please refer to our [Decoupled Sites](/guides/decoupled-sites) documentation.
+For other Decoupled configurations, please refer to our [Decoupled Sites](/guides/decoupled/overview) documentation.
 
 ## More on How Pantheon Uses Upstreams
 

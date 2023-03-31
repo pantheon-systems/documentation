@@ -1,28 +1,23 @@
 ---
-title: WordPress Site Networks
+title: WordPress Multisite
 subtitle: Workflows
-description: Learn more about WordPress Site Networks workflows.
-anchorid: media
-layout: guide
+description: Learn more about WordPress Multisite workflows.
 type: guide
-cms: "WordPress"
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [false]
+categories: [cms, workflows]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [multisite, workflow]
 permalink: docs/guides/multisite/workflows/
-nexturl: guides/multisite/debug/
-previousurl: guides/multisite/workflows/
 editpath: multisite/05-workflows.md
-image: multisite
 ---
 This section provides information on important Multisite fundamentals.
 
 ## Create Test and Live Environments from Dev
-After you've configured a WordPress Site Network in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
+After you've configured a WordPress Multisite in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
 1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
 2. Click **Create Test Environment**.
@@ -56,7 +51,7 @@ In this example:
 
 - `<old-domain>` is the domain currently stored in the database.
 - `<new-domain>` is the new domain you'd like to replace the old domain with.
-- `--network` tells WP-CLI to perform the procedure on all Site Network tables. Its default behavior is to limit search and replace to the current site.
+- `--network` tells WP-CLI to perform the procedure on all WordPress Multisite tables. Its default behavior is to limit search and replace to the current site.
 - `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
 Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
@@ -114,7 +109,7 @@ Refreshing data in Test or Dev from Live is simply a matter of reversing the ste
 
 You can now develop against production data.
 
-Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](https://pantheon.io/docs/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
+Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](https://docs.pantheon.io/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
 
 ## Work with Large Databases
 If you have a really large database (gigabytes and gigabytes) or dozens upon dozens of tables, you may notice that `wp search-replace` can take a really long time — or even time out.
@@ -147,12 +142,12 @@ In this example:
 2. `wp_blogs` and `wp_site` are appended to the list of tables we want to transform.
 3. `wp search-replace` is limited to the table list specified, instead of the full database.
 
-If the WordPress Site Network works as expected after you run `wp search-replace`, then you're good to go. If it doesn't quite work as expected, there may be some plugins storing URL data in other locations that you'll need to debug and further assess.
+If the WordPress Multisite works as expected after you run `wp search-replace`, then you're good to go. If it doesn't quite work as expected, there may be some plugins storing URL data in other locations that you'll need to debug and further assess.
 
 Ultimately, the key idea is to only perform a search and replace where you absolutely need it, instead of globally against the entire database.
 
 ## Go for Launch
-In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Site Network on Pantheon. Check out the [Launch Essentials Guide](/guides/launch) when you're ready to push your site live — launching a WordPress Site Network isn't much different than launching a standard WordPress site.
+In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Multisite on Pantheon. Check out the [Launch Essentials Guide](/guides/launch) when you're ready to push your site live — launching a WordPress Multisite isn't much different than launching a standard WordPress site.
 
 Continue to the next page for some tips on how to manage networks and debug common issues.
 

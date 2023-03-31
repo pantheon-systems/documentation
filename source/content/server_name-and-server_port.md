@@ -4,8 +4,9 @@ description: Learn how to work around SERVER_NAME and SERVER_PORT variables in y
 tags: [site]
 reviewed: "2021-07-19"
 contenttype: [doc]
+innav: [true]
 categories: [config]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

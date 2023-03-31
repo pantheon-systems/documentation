@@ -3,13 +3,12 @@ title: Launch Essentials
 subtitle: Configure DNS and Provision HTTPS
 description: Configure your DNS records and provision HTTPS.
 tags: [dns, https, launch, webops]
-layout: guide
 showtoc: true
 permalink: docs/guides/launch/configure-dns/
-anchorid: configure-dns
 contenttype: [guide]
+innav: [false]
 categories: [config, launch]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]

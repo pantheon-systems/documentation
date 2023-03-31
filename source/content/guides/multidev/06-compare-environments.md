@@ -3,17 +3,16 @@ title: Multidev
 subtitle: Compare Multidev Environments
 description: Learn how to compare environments in Multidev.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [multidev]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev/compare-environments
-anchorid: compare-environments
 ---
 
 This section provides steps on how you can compare Multidev environments on your local.

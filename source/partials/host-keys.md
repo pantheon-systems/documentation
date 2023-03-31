@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [git]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [--]
 tags: [--]

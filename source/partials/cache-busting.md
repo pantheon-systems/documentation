@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [cache]
-newcms: [--]
+cms: [--]
 product: [--]
 integration: [--]
 tags: [cookies]

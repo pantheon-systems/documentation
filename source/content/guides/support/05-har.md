@@ -2,21 +2,19 @@
 title: Get Support
 subtitle: Generate a HAR
 description: Learn how to generate a HAR file in the browser.
-cms: "Drupal"
+getfeedbackform: default
 contenttype: [guide]
+innav: [false]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 tags: [updates, continuous-integration, composer, workflow]
-buildtools: true
-anchorid: generate-har
 type: guide
 showtoc: true
 permalink: docs/guides/support/har/
 editpath: support/05-har.md
-getfeedbackform: default
 contributors: [michellecolon-pantheon]
 reviewed: "2020-12-13"
 ---

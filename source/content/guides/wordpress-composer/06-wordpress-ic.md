@@ -3,17 +3,16 @@ title: WordPress with Integrated Composer on Pantheon
 subtitle: Use Integrated Composer with WordPress 
 description: Learn how to use Integrated Composer with WordPress on Pantheon.
 contenttype: [guide]
-categories: [--]
-newcms: [wordpress]
+innav: [false]
+categories: [dependencies]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/wordpress-ic
-anchorid: wordpress-ic
 ---
 
 [Integrated Composer](/guides/integrated-composer) is a Pantheon platform feature. Integrated Composer extends Composer functionality to WordPress core files and treats them as a managed dependency. Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.

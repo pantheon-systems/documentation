@@ -6,14 +6,14 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 contenttype: [guide]
-categories: [cli, create]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/plugins
-anchorid: plugins
 ---
 
 This section provides information on how to install plugins with Terminus, and how to add new commands through third-party plugins.

@@ -3,15 +3,14 @@ title: Legacy Dashboard
 subtitle: Create A Site
 description: Create a new Drupal or WordPress site on Pantheon.
 tags: [site, dashboard]
-layout: guide
 showtoc: true
-reviewed: "2022-08-20"
+reviewed: "2022-12-13"
 permalink: docs/guides/legacy-dashboard/create-sites
-anchorid: create-sites
 editpath: legacy-dashboard/02-create-sites.md
 contenttype: [guide]
-categories: [create, dashboard, accounts, help]
-newcms: [wordpress, drupal]
+innav: [false]
+categories: [create, dashboard, accounts]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [dashboard]
 integration: [--]
@@ -39,7 +38,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Choose a [Region](/regions) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 
-1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, Drupal 9, or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
+1. On the **Choose Your CMS** page, click **Deploy** to install WordPress, Drupal (Latest Version), or Drupal 7. See [Choosing Your Start State](/start-state) for more information.
 
    Wait while the platform provisions the site with the start state you selected.
 
@@ -59,11 +58,11 @@ Sandbox sites are useful for trying out the Pantheon platform, creating sandboxe
 | Application Containers                     | 1                       | 
 | PHP Workers                                | 4                       |         
 | PHP Memory Limit                           | 256MB             |                              |Storage                                     | 20 GB    |
-| Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/docs/guides/domains'>Domains and Redirects</a>."  />  | 0                                         | 
+| Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/guides/domains'>Domains and Redirects</a>."  />  | 0                                         | 
 | Free and managed HTTPS <Popover   content = "For details, see <a href='/guides/global-cdn/https/'>HTTPS on Pantheon's Global CDN</a>."  />   | <span  style= " color:green " > ✔ </span> |  
-| New Relic <Popover   content = "For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."  />  | <span  style= " color:green " > ✔ </span> |
-| Object Cache <Popover   content = "For details, see <a href='/docs/guides/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  /> | <span  style= " color:green " > ✔ </span> | 
-| Pantheon Search (Solr) <Popover   content = "For details, see <a href='/docs/solr/'>Pantheon Search (formerly Pantheon Solr)</a>."  />  | <span  style= " color:green " > ✔ </span> | 
+| New Relic <Popover   content = "For details, see <a href='/new-relic/'>New Relic APM Pro</a>."  />  | <span  style= " color:green " > ✔ </span> |
+| Object Cache <Popover   content = "For details, see <a href='/guides/object-cache/'>Object Cache (formerly Redis) for Drupal or WordPress</a>."  /> | <span  style= " color:green " > ✔ </span> | 
+| Pantheon Search (Solr) <Popover   content = "For details, see <a href='/solr/'>Pantheon Search (formerly Pantheon Solr)</a>."  />  | <span  style= " color:green " > ✔ </span> | 
 
 ## Your Pantheon Account
 
