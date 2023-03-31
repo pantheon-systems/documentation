@@ -4,14 +4,14 @@ import { Link } from 'gatsby';
 import propTypes from "prop-types";
 
 const PageHit = ({ hit }) => (
-  <div>
-    <Link to={hit.slug} >
+  <Link to={hit.slug} >
+    <div>
       <div>
         <Highlight attribute="title" hit={hit} tagName="mark" />
       </div>
-    </Link>
-    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
-  </div>
+      <Snippet attribute="excerpt" hit={hit} tagName="mark" />
+    </div>
+  </Link>
 );
 
 PageHit.propTypes = {
