@@ -10,7 +10,7 @@ reviewed: ""
 
 This section provides information on causes and solutions to error messages that display in the Site Dashboard if a migration fails to complete.
 
-First troubleshooting steps:
+## Before you Begin
 
 1. Review [Pantheon Platform Considerations](/guides/platform-considerations) if your code, database, and files have completed migrating, but your site is not working as you'd expect. For example, if your site uses [PHP short tags](/guides/platform-considerations/php-platform#php-short-tags), you'll need to convert them to standard PHP tags.
 
@@ -38,7 +38,7 @@ First troubleshooting steps:
 
 ### Destination Site Not Found Error
 
-**Cause**: This error occurs when you are logged in with one identity and re-authenticate with a different account or use Single Sign-On with Google. The site created will be associated with one account and the machine token with another.
+**Cause**: This error occurs when you are logged in with one identity and re-authenticate with a different account, or use Single Sign-On with Google. The site created will be associated with one account and the machine token with another.
 
 **Solution**: Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
@@ -48,7 +48,7 @@ First troubleshooting steps:
 
 > InnoDB has a maximum index length of 767 bytes for tables that use COMPACT or REDUNDANT row format, so for utf8mb3 or utf8mb4 columns, you can index a maximum of 255 or 191 characters, respectively. If you currently have utf8mb3 columns with indexes longer than 191 characters, you must index a smaller number of characters.
 
-Sites migrated from hosts using `utf8mb3` are upgraded to `utf8mb4`. If those sites have indexes larger than 191 characters MySQL will return the following error on import:
+Sites migrated from hosts using `utf8mb3` are upgraded to `utf8mb4`. If those sites have indexes larger than 191 characters, MySQL will return the following error on import:
 
 ```none
 Index column size too large. The maximum column size is 767 bytes

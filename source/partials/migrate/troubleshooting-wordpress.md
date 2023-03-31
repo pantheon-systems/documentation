@@ -20,7 +20,10 @@ reviewed: ""
 
 **Cause:** Imports can also fail for very large sites, which may time out while importing.
 
-**Solution:** Initiate the migration again from the source site, and the transfer should pick up where it left off.
+**Solution:** Restart the migration by going to the browser tab containing your WordPress dashboard, and click **Migrate**
+
+![Copying and pasting info](../../images/migrate-site-wp-blogvault.png)
+
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
 
