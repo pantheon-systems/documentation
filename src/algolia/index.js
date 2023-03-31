@@ -1,7 +1,29 @@
 const config = require('./config');
 
-const pageQuery = `{
-    pages: allMdx {
+
+const allDocsTransform = () => {
+  // TODO: Isolate all docs
+}
+
+const allGuidesTransform = () => {
+  // TODO: Isolate all docs
+}
+
+const allChangelogsTransform = () => {
+  // TODO: Isolate all docs
+}
+
+const pageQuery = /* GraphQL */`{
+
+    allDocs: allMdx(
+        filter: {
+          fields: {
+            slug: {regex: "/^((?!guides|changelog|partials).)*$/"}
+          },
+          fileAbsolutePath: { regex: "/content/"}
+          frontmatter: { draft: {ne: true}}
+        }
+    ) {
       edges {
         node {
           objectID: id
@@ -19,6 +41,75 @@ const pageQuery = `{
         }
       }
     }
+
+    allGuides: allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "/guides/"}
+        frontmatter: { draft: {ne: true}}
+      }
+      sort: { fields: [fileAbsolutePath], order: ASC }
+    ) {
+      edges {
+        node {
+          objectID: id
+          fields {
+            slug
+          }
+          headings {
+            value
+          }
+          frontmatter {
+            title
+            description
+          }
+          excerpt(pruneLength: 50000)
+        }
+      }
+    }
+
+    allChangelogs: allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "/changelogs/"}
+        frontmatter: { draft: {ne: true}}
+      },
+      sort: { fields: [fileAbsolutePath], order: DESC }
+    ) {
+      edges {
+        node {
+          objectID: id
+          fields {
+            slug
+          }
+          headings {
+            value
+          }
+          frontmatter {
+            title
+            description
+          }
+          excerpt(pruneLength: 50000)
+        }
+      }
+    }
+
+    # pages: allMdx {
+    #   edges {
+    #     node {
+    #       objectID: id
+    #       fields {
+    #         slug
+    #       }
+    #       headings {
+    #         value
+    #       }
+    #       frontmatter {
+    #         title
+    #         description
+    #       }
+    #       excerpt(pruneLength: 50000)
+    #     }
+    #   }
+    # }
   }`;
   
 const flatten = arr =>
