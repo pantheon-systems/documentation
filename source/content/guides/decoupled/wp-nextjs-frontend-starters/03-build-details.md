@@ -6,8 +6,8 @@ tags: [webops, workflow, decoupled]
 contributors: [whitneymeredith]
 layout: guide
 showtoc: true
-permalink: docs/guides/decoupled/wp-nextjs-frontend-starters/create
-anchorid: create
+permalink: docs/guides/decoupled/wp-nextjs-frontend-starters/build-details
+anchorid: build-details
 contenttype: [guide]
 innav: [true]
 categories: [create]

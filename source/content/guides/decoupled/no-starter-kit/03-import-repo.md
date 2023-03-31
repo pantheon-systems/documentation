@@ -23,12 +23,6 @@ You can import your Git-provided repository to create your Front-End Site.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
-    <Alert title="Note"  type="info" >
-
-    You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    </Alert>
-
 1. Click **Import Repository** on the _What kind of site are you creating?_ page to connect your GitHub repository.
 
 1. Select a Git provider from the **Choose your Git provider** options and click **Continue**.

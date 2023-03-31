@@ -47,7 +47,7 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
     ![select a starter](../../../../images/decoupled-select-starter.png)
 
-1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**.
+1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
 1. Confirm your organization selection when prompted in the **Confirm Organization Selection** dialogue box. The Deploying Decoupled Drupal Composer Managed progress indicator displays while your site is spinning up.
 

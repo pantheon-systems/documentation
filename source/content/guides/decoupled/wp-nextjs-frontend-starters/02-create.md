@@ -36,17 +36,11 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
-    <Alert title="Note"  type="info" >
-
-    You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    </Alert>
-
 1. Click the **WordPress and Next.js** option, select a repo listed under **Choose your Git provider**, and then click **Continue**.
 
     ![select a starter](../../../../images/decoupled-select-starter.png)
 
-1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
+1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
 1. Select the desired WordPress CMS backend from the **Link Your CMS** drop-down menu.
 
