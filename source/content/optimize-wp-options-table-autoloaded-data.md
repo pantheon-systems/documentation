@@ -88,10 +88,17 @@ Transients cache data for a set amount of time in WordPress. Although transients
 Run the following code to clean up your transient data:
 
    ```sql
+      /** Show all transient data. **/
       SELECT * 
       FROM `wp_options` 
       WHERE `autoload` = 'yes'
-      AND `option_name` LIKE '%transient%'
+      AND `option_name` LIKE '%transient%';
+
+      /** Remove all transient data. **/
+      DELETE 
+      FROM `wp_options` 
+      WHERE `autoload` = 'yes'
+      AND `option_name` LIKE '%transient%';
    ```
 
  ### Avoid Using Transient Data
