@@ -62,11 +62,11 @@ You can [contact Support](/guides/support/contact-support/) to restore a site if
 
 1. Click **Settings** or **General**.
 
-1. Click the **Edit** button in the **General Settings** section and select **Delete**.
+1. Click the **Edit** button in the **General Settings** section and select **Delete Site**.
 
     ![Delete Site](../../../../images/decoupled-delete-site.png)
 
-1. Confirm your selection when prompted by entering site name and then click **Delete Site**.
+1. Confirm your selection when prompted by entering site name, then click **Delete Site**.
 
     ![Confirm Deletion](../../../../images/decoupled-confirm-deletion.png)
 
