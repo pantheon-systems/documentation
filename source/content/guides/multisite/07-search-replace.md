@@ -25,20 +25,23 @@ WordPress Multisite (WPMS) search & replace is available for [Early Access](/oss
 This section provides information on how to configure automatic platform search-replace of URLs for both subdirectory and subdomain WordPress Multisites.
 
 ## Requirements
-A WordPress Multisite
+A [WordPress Multisite](/guides/multisite)
 
+## Opting In
 To enable search replace between environments on a WPMS site, add 
 ```yaml:title=pantheon.yml
 search_replace: true
 ```
 to [pantheon.yml](/pantheon-yml).
 
-Note, if pantheon.yml is different between environments, the search_replace value in the source environment’s pantheon.yml will determine if the job will be run or not.
+Note, if `pantheon.yml` is different between environments, the search_replace value in the source environment’s `pantheon.yml` will determine if the job will be run or not.
+
+Search & replace runs on the platform as part of environment creation and deploy workflows.
 
 ### Subdomain WPMS
-For subdomain multisites, environments to be replaced are defined and paired in the `sites.yml` file. Currently, the file must be committed at `private/sites.yml` in the site’s git repository.
+For subdomain Multisites, environments to be replaced are defined and paired in the `sites.yml` file. Currently, the file must be committed at `private/sites.yml` in the site’s git repository.
 
-See [this gist](https://gist.github.com/scottbuscemi/b051ad6510ef8494aff80d0f43afeeb2) for an example of how sites.yml might look.
+See [this gist](https://gist.github.com/scottbuscemi/b051ad6510ef8494aff80d0f43afeeb2) for an example of how `sites.yml` might look.
 
 Search-replace will run for each domain listed in the source environment that has a matching key in the target environment.
 
@@ -47,4 +50,4 @@ If search-replace is enabled for an environment, but `sites.yml` does not exist,
 There is currently a limit of 25 sites that can be configured for search-replace. We expect this number to increase before general availability.
 
 ### Subdirectory WPMS
-For subdirectory multisites, there is no configuration beyond adding the value to pantheon.yml. Search-replace will match the behavior of the platform’s search-replace for non-WPMS sites.
+For subdirectory Multisites, there is no configuration beyond adding the value to `pantheon.yml`. Search-replace will match the behavior of the platform’s search-replace for non-WPMS sites.
