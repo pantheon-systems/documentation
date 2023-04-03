@@ -46,7 +46,7 @@ Access all invoices and associated portfolio reports in a central location.  Eac
 
 *Site Portfolio Report*
 
-![Site Portfolio Charts](../../images/enterprise-billing-center-invoice-report.png)
+![Site Portfolio Charts](../../images/enterprise-billing-center-invoice-report.jpg)
 
 
 </Tab>
