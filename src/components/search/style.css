@@ -87,3 +87,50 @@
     width: 100%;
   }
 }
+
+.results-container {
+  color: #000;
+  font-size: 1.25rem;
+}
+
+.sort-by-container {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  font-size: 1.25rem;
+}
+
+.sort-by-controls {
+  display: flex;
+  color: #000;
+  font-size: 1.25rem;
+  column-gap: 0.25rem;
+}
+
+.sort-by-controls-buttonlist {
+  list-style-type: none;
+  display: flex;
+  column-gap: 0.5rem;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.sort-by-button {
+  cursor: pointer;
+  color: #000;
+  font-size: 1.25rem;
+}
+
+.sort-by-control .sort-by-button:after {
+  content: " | ";
+}
+
+.sort-by-control:last-of-type .sort-by-button:after {
+  content: "";
+}
+
+.sort-by-button--selected {
+  text-decoration: underline;
+  cursor: text;
+}

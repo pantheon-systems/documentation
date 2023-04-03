@@ -18,8 +18,6 @@ if (isSearchEnabled && config.search.indexName) {
   });
 }
 
-
-
 const Header = ({ data, page }) => (
   <>
     <nav className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
@@ -170,9 +168,7 @@ const Header = ({ data, page }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
-              {isSearchEnabled ? (
-                  <SearchComponent collapse="true" indices={searchIndices} isSearchPage={isSearchPage} />
-              ) : null}
+              <SearchComponent collapse="true" indices={searchIndices} isSearchPage={isSearchPage} />
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
                 aria-hidden="true"
@@ -187,7 +183,6 @@ const Header = ({ data, page }) => (
 )
 
 export default props => (
-
   <StaticQuery
     query={graphql`
       query {

@@ -23,6 +23,7 @@ const pageQuery = /* GraphQL */`{
           frontmatter {
             title
             description
+            reviewed
           }
           excerpt(pruneLength: 50000)
         }
@@ -48,6 +49,7 @@ const pageQuery = /* GraphQL */`{
           frontmatter {
             title
             description
+            reviewed
           }
           excerpt(pruneLength: 50000)
         }
@@ -73,6 +75,7 @@ const pageQuery = /* GraphQL */`{
           frontmatter {
             title
             description
+            reviewed
           }
           excerpt(pruneLength: 50000)
         }
@@ -95,10 +98,58 @@ const queries = [
   {
     query: pageQuery,
     transformer: ({ data }) => {
+      const allDocsWithTimestamp = data.allDocs.edges.map(({ node }) => {
+        if(node.frontmatter.reviewed) {
+          return {
+            node: {
+              ...node,
+              frontmatter: {
+                ...node.frontmatter,
+                reviewed_timestamp: new Date(node.frontmatter.reviewed).getTime(),
+              },
+            }
+          }
+        }
+
+        return { node: { ...node, frontmatter: { ...node.frontmatter, reviewed_timestamp: "" } } }
+      })
+
+      const allGuidesWithTimestamp = data.allGuides.edges.map(({ node }) => {
+        if(node.frontmatter.reviewed) {
+          return {
+            node: {
+              ...node,
+              frontmatter: {
+                ...node.frontmatter,
+                reviewed_timestamp: new Date(node.frontmatter.reviewed).getTime(),
+              },
+            }
+          }
+        }
+
+        return { node: { ...node, frontmatter: { ...node.frontmatter, reviewed_timestamp: "" } } }
+      })
+
+      const allChangelogsWithTimestamp = data.allChangelogs.edges.map(({ node }) => {
+        if(node.frontmatter.reviewed) {
+          return {
+            node: {
+              ...node,
+              frontmatter: {
+                ...node.frontmatter,
+                reviewed_timestamp: new Date(node.frontmatter.reviewed).getTime(),
+              },
+            }
+          }
+        }
+
+        return { node: { ...node, frontmatter: { ...node.frontmatter, reviewed_timestamp: "" } } }
+      })
+
       return flatten([
-        ...data.allDocs.edges,
-        ...data.allGuides.edges,
-        ...data.allChangelogs.edges,
+        ...allDocsWithTimestamp,
+        ...allGuidesWithTimestamp,
+        ...allChangelogsWithTimestamp,
       ])
     },
     indexName: `${indexName}`,

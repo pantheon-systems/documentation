@@ -11,13 +11,19 @@ const searchClient = algoliasearch(
   config.search.algoliaSearchKey
 );
 
+const isSearchPage = typeof document !== "undefined" && document.URL.includes("search");
+
 const Layout = (props) => {
   const pageType = props.type ? props.type : "default"
 
   return (
     <InstantSearch
       searchClient={searchClient}
-      indexName={config.search.indexName}
+      indexName={
+        !isSearchPage
+          ? config.search.indexName
+          : null
+      }
     >
       <div className="pantheon-docs">
         <Header page={pageType} />
