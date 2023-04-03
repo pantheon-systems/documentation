@@ -253,6 +253,15 @@ Complete the following before deploying `filemount` (**required**):
 
 1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths).
 
+### Search-Replace for WordPress Multisite (Early Access)
+
+You can opt-in to search-replace on [WordPress Multisites](/guides/multisite) by adding the following to `pantheon.yml`:
+```yaml:title=pantheon.yml
+search_replace: true
+```
+
+Running search-replace on a _subdomain_ Multisite will also require configuring a `sites.yml` file. For more information, see [WordPress Multisite Search Replace](/guides/multisite/search-replace).
+
 ## Quicksilver Platform Integration Hooks
 
 Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a team member. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
