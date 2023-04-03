@@ -41,7 +41,7 @@ To better understand what's going on, let's dive into `wp search-replace` with g
 ## Deploy Across Environments
 
 <Alert title="Note" type="info">
-Search Replace can now be handled automatically for Multisites with platform search-replace, currently in Early Access. For more details, see [Multisite Search Replace](/guides/multisite/search-replace).
+Multisite search and replace can now be handled automatically platform search & replace, currently in Early Access. For more details, see [Multisite Search Replace](/guides/multisite/search-replace).
 </Alert>
 
 WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
