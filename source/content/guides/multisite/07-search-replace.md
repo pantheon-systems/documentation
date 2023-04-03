@@ -36,7 +36,7 @@ to [pantheon.yml](/pantheon-yml).
 
 Note, if `pantheon.yml` is different between environments, the search_replace value in the source environment’s `pantheon.yml` will determine if the job will be run or not.
 
-Search & replace runs on the platform as part of environment creation and deploy workflows.
+Search & replace runs on the platform as part of creating an environment, deploying to test or live, and when cloning content between environments.
 
 ### Subdomain WPMS
 For subdomain Multisites, environments to be replaced are defined and paired in the `sites.yml` file. Currently, the file must be committed at `private/sites.yml` in the site’s git repository.
