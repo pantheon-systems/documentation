@@ -19,7 +19,7 @@ integration: [--]
 
 This section provides information on Settings. You can configure Front-End Site settings in the Pantheon dashboard, including:
 
-- General Settings: Site Details and the Connected Git repository
+- General Settings: Site Details, Connected Git repository, and site deletion
 - Build and Output settings
 - Site Environment Variables
 - Build Hooks
@@ -27,7 +27,7 @@ This section provides information on Settings. You can configure Front-End Site 
 
 ## General Settings
 
-You can change the Site Name and connect or disconnect your Git repository in General Settings.
+You can change the Site Name, connect or disconnect your Git repository, and delete your Front-End Site in General Settings.
 
 ### Change Site Name
 
@@ -51,6 +51,26 @@ There are known issues around disconnecting and reconnecting a repository.
 1. Click the **Connect** or **Disconnect** button in the **Connected Git Repository** section. Confirm your selection when prompted if you are disconnecting your Git repository.
 
 ![General Settings](../../../../images/decoupled-general-settings.png)
+
+### Delete a Front-End Site
+
+This feature only deletes your Front-End Site. Your CMS backend and connected Git repository are not affected. Visitors will not be able to access the site, and site team members will not be able to work on the site after deletion.
+
+You can [contact Support](/guides/support/contact-support/) to restore a site if it is accidentally deleted.
+
+1. Navigate to your site dashboard and select the site you want to delete.
+
+1. Click **Settings** or **General**.
+
+1. Click the **Edit** button in the **General Settings** section and select **Delete**.
+
+    ![Delete Site](../../../../images/decoupled-delete-site.png)
+
+1. Confirm your selection when prompted by entering site name and then click **Delete Site**.
+
+    ![Confirm Deletion](../../../../images/decoupled-confirm-deletion.png)
+
+1. [Update your DNS records](/guides/launch/configure-dns/) to stop pointing to the deleted site.
 
 ## CMS Settings
 
