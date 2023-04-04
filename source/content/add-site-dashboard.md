@@ -99,9 +99,11 @@ Your Test environment is now set up. Test your site thoroughly before proceeding
 
 ## Initialize the Live environment
 
+After you purchase a plan, you can deploy your site live.  But first, you have to create the Live environment.
+
 <Alert title="Warning" type="danger" >
 
-When you complete this step, your site will be live for anyone to see, at the Pantheon URL. 
+When you complete this step, your site will be live for anyone to see, at the Pantheon URL. For detailed information about launching your site, refer to our [Launch Essentials](/guides/launch/) guide.
 
 </Alert>
 
@@ -134,3 +136,6 @@ To create your Live environment.
    Your site is now live at the Pantheon URL.
 
 1. Click **Visit Live Site** to view it.
+
+At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
+
