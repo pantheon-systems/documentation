@@ -49,23 +49,9 @@ You can create a Professional Workspace as the home for an organization’s site
 
 </TabList>
 
-## Professional Workspace Features
+## Account Plans
 
-- [Multidev](/guides/multidev)
-
-- [Change Management](/guides/account-mgmt/workspace-sites-teams/teams)
-
-- [Vanity Domains](/guides/domains/vanity-domains)
-
-- Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your workspace.
-
-- [Email Notifications](#platform-email-notifications)
-
-- [Single Sign-On](/sso-organizations)
-
-## Professional Workspace Tiers
-
-Professional workspaces come in three tiers:
+With a Professional Workspace, you can upgrade the associated Account Plan to gain additional features and enhanced support: 
 
 - **Silver Workspace:** You will automatically be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace. If the workspace is not for an agency, 
 
