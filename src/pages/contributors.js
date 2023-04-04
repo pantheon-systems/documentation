@@ -43,8 +43,8 @@ class Contributors extends React.Component {
                                   <div className="pull-left">
                                     <div className="preview-info__img">
                                       <Link
-                                        to={`/contributors/${node.id}`}
-                                        title={node.id}
+                                        to={`/contributors/${node.githubid}`}
+                                        title={node.githubid}
                                       >
                                         <img
                                           alt="Author photo"
@@ -60,8 +60,8 @@ class Contributors extends React.Component {
                                     <div className="media-heading">
                                       <h3 className="toc-ignore">
                                         <Link
-                                          to={`/contributors/${node.id}`}
-                                          title={node.id}
+                                          to={`/contributors/${node.githubid}`}
+                                          title={node.githubid}
                                         >
                                           {node.name}
                                         </Link>
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
     allContributorYaml {
       edges {
         node {
-          id
+          githubid
           avatar
           name
           bio

@@ -14,8 +14,8 @@ const ContributorGuest = ({ contributor }) => {
               <div className="pull-left">
                 <div className="preview-info__img">
                   <Link
-                    to={`/contributors/${contributor.id}`}
-                    title={contributor.id}
+                    to={`/contributors/${contributor.githubid}`}
+                    title={contributor.githubid}
                   >
                     <img
                       alt="Author photo"
@@ -31,8 +31,8 @@ const ContributorGuest = ({ contributor }) => {
                 <div className="media-heading">
                   <h3 className="toc-ignore">By
                     <Link
-                      to={`/contributors/${contributor.id}`}
-                      title={contributor.id}
+                      to={`/contributors/${contributor.githubid}`}
+                      title={contributor.githubid}
                     >
                       {` ${contributor.name}`}
                     </Link>

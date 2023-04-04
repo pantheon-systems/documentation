@@ -159,7 +159,7 @@ export const pageQuery = graphql`
         categories
         cms
         contributors {
-          id
+          githubid
           name
           twitter
           bio

@@ -189,7 +189,7 @@ export const pageQuery = graphql`
         showtoc
         editpath
         contributors {
-          id
+          githubid
           name
           twitter
           bio

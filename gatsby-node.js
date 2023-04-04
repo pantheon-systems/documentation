@@ -222,7 +222,7 @@ exports.createPages = ({ graphql, actions }) => {
       allContributorYaml {
         edges {
           node {
-            id
+            githubid
           }
         }
       }
@@ -350,10 +350,10 @@ exports.createPages = ({ graphql, actions }) => {
     const contributors = result.data.allContributorYaml.edges
     contributors.forEach(contributor => {
       createPage({
-        path: `contributors/${contributor.node.id}`,
+        path: `contributors/${contributor.node.githubid}`,
         component: path.resolve(`./src/templates/contributor.js`),
         context: {
-          id: contributor.node.id,
+          id: contributor.node.githubid,
         },
       })
     })

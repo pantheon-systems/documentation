@@ -82,7 +82,7 @@ class ContributorTemplate extends React.Component {
                         if (printedGuides.indexOf(result[1]) === -1) {
                           printedGuides.push(result[1])
                           return (
-                            <li key={node.id}>
+                            <li key={node.githubid}>
                               <Link to={`${result[1]}`}>
                                 {node.frontmatter.title}
                               </Link>
@@ -96,7 +96,7 @@ class ContributorTemplate extends React.Component {
                         if (printedOverview.indexOf(result[1]) === -1) {
                           printedOverview.push(result[1])
                           return (
-                            <li key={node.id}>
+                            <li key={node.githubid}>
                               <Link to={`${result[1]}`}>
                                 {node.frontmatter.title}
                               </Link>
@@ -105,7 +105,7 @@ class ContributorTemplate extends React.Component {
                         } }
                        else {
                           return (
-                          <li key={node.id}>
+                          <li key={node.githubid}>
                             <Link to={`/${node.fields.slug}`}>
                               {node.frontmatter.title}
                             </Link>
@@ -129,9 +129,9 @@ class ContributorTemplate extends React.Component {
 export default ContributorTemplate
 
 export const pageQuery = graphql`
-  query ContributorById($id: String!) {
-    contributorYaml(id: { eq: $id }) {
-      id
+  query ContributorById($githubid: String!) {
+    contributorYaml(githubid: { eq: $githubid }) {
+      githubid
       name
       avatar
       url
@@ -146,7 +146,7 @@ export const pageQuery = graphql`
       filter: {
         fileAbsolutePath: { ne: null }
         frontmatter: {
-          contributors: { elemMatch: { id: { eq: $id } } }
+          contributors: { elemMatch: { id: { eq: $githubid } } }
           draft: {ne: true}
         }
       }
