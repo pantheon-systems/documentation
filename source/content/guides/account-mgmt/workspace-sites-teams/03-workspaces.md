@@ -51,14 +51,41 @@ You can create a Professional Workspace as the home for an organization’s site
 
 ## Account Plans
 
-With a Professional Workspace, you can upgrade the associated Account Plan to gain additional features and enhanced support: 
+With a Professional Workspace, you can upgrade the associated [Account Plan](https://pantheon.io/plans/pricing) to gain additional features and enhanced support:
 
-- **Silver Workspace:** You will automatically be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace. If the workspace is not for an agency, 
+<TabList>
 
-- **Gold Workspace:** [Gold Tier](https://pantheon.io/plans/pricing) workspaces provide additional collaboration tools such as Multidev and visual regression testing. [Contact our Sales team](https://pantheon.io/contact-sales) for more information if you are interested in upgrading to a Gold workspace.
+<Tab title="Silver Account Plan" id="silver" active={true}>
 
-- **Partner Trial Tier Workspace:** You will only be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency.
+You will automatically be assigned a Silver Account Plan workspace. The Silver Account Plan is free and offers basic WebOps tools and features. 
 
+</Tab>
+
+<Tab title="Gold Account Plan" id="gold">
+
+Gold Account Plan workspaces provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
+
+The upgrade to Gold:
+
+1. Navigate to your Personal Workspace.
+
+1. 
+
+</Tab>
+
+<Tab title="Platinum & Diamond Account Plan" id="pd">
+
+ Platinum and Diamond Account Plans offer all the tools and features of the Gold Account Plan, and include features that benefit large teams and enterprise organizations such as: direct access to experts, dedicated support, and more. [Contact Sales](https://pantheon.io/contact-sales) for more information about upgrading to a Platinum or Diamond Account Plan.
+
+</Tab>
+
+<Tab title="Partner Program" id="pp">
+
+You will only be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency.
+
+</Tab>
+
+</TabList>
 
 ## Create a Professional Workspace
 
