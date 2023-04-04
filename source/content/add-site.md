@@ -1,7 +1,7 @@
 ---
 title: Adding a Site to Pantheon
 description: Create or migrate a site on Pantheon.
-tags: [migrate, create, site]
+contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
 categories: [migrate, create]
@@ -15,7 +15,7 @@ There are many ways you can add a site to Pantheon.  To help you choose the best
 
 <Alert title="Note" type="info" >
 
-This list does not include scenarios involving Front-End sites.  For those, see [Front-End Sites on Pantheon](/guides/decoupled)
+This list does not include scenarios involving Front-End sites.  For those, see [Front-End Sites on Pantheon](/guides/decoupled).
 
 </Alert>
 
@@ -29,13 +29,10 @@ This list does not include scenarios involving Front-End sites.  For those, see 
 
 You can either add a site using the dashboard (which will guide you through the process), or use the command line.
 
-+-------------------------------+-----------------------------------------------------+
-| I want to use the Dashboard   | I want to use the command line                      |
-+===============================+=====================================================+
-| My CMS is:                    | My CMS is:                                          |
-| - [Drupal](/add-drupal)       | - [Drupal](/guides/terminus-drupal-site-management) |
-| - [WordPress](/add-wp)        | - [WordPress](/guides/create-wp-site)               |
-+-------------------------------+-----------------------------------------------------+
+- [I want to use the Dashboard](/add-site-dashboard)
+- I want to use the command line, and my CMS is:
+  - [Drupal](/guides/terminus-drupal-site-management)
+  - [WordPress](/guides/create-wp-site)
 
 </Tab>
 
