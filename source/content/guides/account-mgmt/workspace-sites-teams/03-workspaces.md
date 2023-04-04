@@ -55,17 +55,17 @@ With a Professional Workspace, you can upgrade the associated [Account Plan](htt
 
 <TabList>
 
-<Tab title="Silver Account Plan" id="silver" active={true}>
+<Tab title="Silver Account Plan" id="silver">
 
 You will automatically be assigned a Silver Account Plan workspace. The Silver Account Plan is free and offers basic WebOps tools and features. 
 
 </Tab>
 
-<Tab title="Gold Account Plan" id="gold">
+<Tab title="Gold Account Plan" id="gold" active={true}>
 
 Gold Account Plan workspaces provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
 
-To upgrade your Account Plan to Gold:
+**To upgrade your Account Plan to Gold**:
 
 1. Navigate to your Personal Workspace.
 

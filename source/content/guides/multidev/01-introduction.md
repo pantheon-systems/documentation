@@ -43,7 +43,7 @@ If a supporting organization or individual contributor has an account tier lower
 
 This logic makes Multidev features, including the ability to create Multidev environments, available to the supporting organization or the site team members on the associated sites.
 
-The assigned team members will be able to create new and manage existing Multidevs for sites within the organization as long as that organization is a Gold account or higher. This does not affect their account access for other sites or within other organizations.
+The assigned team members will be able to create new and manage existing Multidevs for sites within the organization as long as that organization is a [Gold account or higher](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans). This does not affect their account access for other sites or within other organizations.
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
