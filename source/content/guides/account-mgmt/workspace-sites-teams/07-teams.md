@@ -3,7 +3,7 @@ title: Workspaces, Sites, and Teams
 subtitle: Teams
 description: Learn how to use teams for change management.
 tags: [workspaces, sites, teams]
-contributors: [wordsmither]
+contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/teams
 editpath: docs/guides/account-mgmt/workspace-sites-teams/07-teams.md
@@ -214,7 +214,7 @@ After a user leaves, in addition to the steps above, we recommend you:
 
 ## Add a Supporting Organization to Site
 
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs), you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
 
 Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace).
 

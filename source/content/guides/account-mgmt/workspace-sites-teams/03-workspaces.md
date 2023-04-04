@@ -3,7 +3,7 @@ title: Workspaces, Sites, and Teams
 subtitle: Professional Workspaces
 description: Learn how to use and manage workspaces.
 tags: [workspaces, sites, teams]
-contributors: [wordsmither]
+contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
@@ -96,6 +96,12 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 1. Once your payment method is accepted, you will be redirected to a Billing page with your Account Subscription details.
 
   ![Billing Page](../../images/guides/account-mgmt/billing-page.png)
+
+<Alert title="Note"  type="info" >
+
+Now that you have a Professional Workspace with a Gold Account Plan, you can [add a supporting organization to your site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site).
+
+</Alert>
 
 </Tab>
 
