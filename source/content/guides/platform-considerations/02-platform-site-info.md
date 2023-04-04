@@ -3,17 +3,17 @@ title: Platform Considerations
 subtitle: Platform and Site Information
 description: Learn about platform and site-specific configuration and support.
 contenttype: [guide]
+innav: [false]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/platform-site-info
-anchorid: platform-site-info
+reviewed: "2022-12-13"
 ---
 
 This section provides information on Pantheon platform support for domain masking, htaccess, and many other configuration and site support considerations.
@@ -52,7 +52,7 @@ You must add the correct header to enable CORS services on your site. Review [ht
 
 WordPress users can enable CORS for selected domains in a [MU plugin](/guides/wordpress-configurations/mu-plugin#cross-origin-resource-sharing-cors). You can also use an Advanced Global CDN to [modify headers at the Edge](/guides/professional-services/advanced-global-cdn#modify-and-filter-headers-at-the-edge).
 
-Drupal 9 users can update `sites/default/services.yml` to enable CORS.
+Drupal users can update `sites/default/services.yml` to enable CORS.
 
 Sample `services.yml` file:
 
@@ -84,7 +84,7 @@ Pantheon does not currently support LESS or Sass/Compass CSS preprocessor langua
 
 MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping).
 
-MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Events](https://dev.mysql.com/doc/refman/8.0/en/events-overview.html) are also not supported. As an alternative, you may consider Cron for [WordPress](/wordpress-cron) or [Drupal](/drupal-cron).
+MySQL [Triggers](https://dev.mysql.com/doc/refman/8.0/en/triggers.html) and [Events](https://dev.mysql.com/doc/refman/8.0/en/events-overview.html) are also not supported. As an alternative, you may consider Cron for [WordPress](/guides/wordpress-developer/wordpress-cron) or [Drupal](/drupal-cron).
 
 ## Drupal 7 and Ampersands
 
@@ -152,7 +152,7 @@ Refer to [Modules and Plugins with Known Issues](/modules-plugins-known-issues) 
 
 ## Multisite
 
-Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Multisite](/guides/multisite).
 
 We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 

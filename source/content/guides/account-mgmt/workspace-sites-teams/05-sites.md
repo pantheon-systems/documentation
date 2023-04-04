@@ -4,15 +4,14 @@ subtitle: Sites Management
 description: Learn how to manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
-anchorid: sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
 contenttype: [guide]
-categories: [accounts]
-newcms: [--]
+innav: [false]
+categories: [organizations]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

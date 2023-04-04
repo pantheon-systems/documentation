@@ -2,18 +2,16 @@
 title: WP-CLI on the Pantheon Platform
 subtitle: Install Plugins and Themes with WP-CLI
 description: Learn how to install plugins and themes with WP-CLI and Terminus.
-cms: "WordPress"
 contenttype: [guide]
+innav: [false]
 categories: [cli]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wp-cli, cli]
-layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/install-wp-plugins-themes
-anchorid: install-wp-plugins-themes
 ---
 
 This section provides information on how to install WordPress plugins and themes with WP-CLI and Terminus.

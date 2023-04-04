@@ -1,18 +1,20 @@
 ---
 contenttype: [partial]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 product: [--]
 integration: [drush]
 tags: [--]
 reviewed: ""
 ---
 
-Drush only supports one install method. Your Drupal site is required to be built with Composer and your Drush must be compatible and listed as a dependency. Consider the following information when determining which Drush version is best suited for your site:
+Drush only supports one install method. Your Drupal site is required to be built with Composer and your Drush must be compatible and listed as a dependency. 
 
-* [Drupal 9 requires Drush 10](https://www.drush.org/latest/install/#drupal-compatibility) or higher. Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure-drush-version), or for [site-local installation](#site-local-drush-usage). It requires Drupal 9 or higher, [Composer](/guides/composer/), and PHP 7.1 or higher.
+See the [Drush Drupal Compatibility chart](https://www.drush.org/latest/install/#drupal-compatibility) for version compatibility information. Consider the following information when determining which Drush version is best suited for your site:
 
-* [Drush 9](https://docs.drush.org/en/9.x/) and Drush 10 only work on Drupal 8.4 to Drupal 9.
+* Drush 10 is available with the [addition of the  `pantheon.yml` file](#configure-drush-version), or for [site-local installation](#site-local-drush-usage). It requires Drupal 9 or higher, [Composer](/guides/composer/), and PHP 7.1 or higher.
+
+* [Drush 9](https://docs.drush.org/en/9.x/) and Drush 10 only work on Drupal 8.4 and higher.
 
 * [Drush 8](https://docs.drush.org/en/8.x/) Drush 8 is the only recommended version to use in your `pantheon.yml` file. It is compatible with Drupal 7.
 
@@ -26,7 +28,7 @@ We highly recommend running Drush version 8.3.2 or higher when running Drush loc
 
 ### Drush Requirements and Compatibility
 
-| Drush Version  | PHP Version | End of Life     | Drupal 7| Drupal 8 | Drupal 9
+| Drush Version  | PHP Version | End of Life     | Drupal 7| Drupal 8 | Drupal (Latest Version)
 | ------------- |-------------|-------------|-------------   |------------- |-------------  |
 | 11*      | 7.4+     | TBD      |  <span style="color:red">❌ </span>    |<span style="color:red">❌ </span> |<span style="color:green">✔</span>  |
 | 10      | 7.1+ | Jan. 2022| ❌ |Compatible, unsupported | Compatible, unsupported| 

@@ -3,25 +3,24 @@ title: WordPress Configurations Guide
 subtitle: Introduction
 description: Learn about available WordPress plugin configurations on the Pantheon platform.
 contenttype: [guide]
+innav: [true]
 categories: [config]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-configurations
-anchorid: wordpress-configurations
 ---
 
 Pantheon provides extensive compatibility with WordPress plugins. This guide provides information on plugin configurations for common website management plugins including Pantheon-maintained WordPress plugins and popular WordPress plugins such as:
 
 - WP-CFM
 - Apache Solr for WordPress
-- AWS S3 for WordPress
+- Custom code for plugins
 
 We recommend that you review the [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) document carefully before you download and configure plugins or themes for your WordPress site.
 

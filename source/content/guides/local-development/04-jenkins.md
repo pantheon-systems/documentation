@@ -3,16 +3,16 @@ title: Local Development on Pantheon
 subtitle: Automatically Test and Deploy to Pantheon with Jenkins
 description: Configure an existing Jenkins server to test and deploy code changes to Pantheon automatically when pushed to GitHub.
 contenttype: [guide]
+innav: [false]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []
 tags: [collaborate, continuous-integration, git, iterate]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/jenkins
-anchorid: jenkins
+reviewed: "2022-12-13"
 ---
 
 This section provides information on how to configure your Jenkins server to test and deploy code changes to Pantheon automatically.
@@ -21,7 +21,7 @@ This section provides information on how to configure your Jenkins server to tes
 
 You can use Terminus and Jenkins to script much of your development work. For example, a post-commit hook can trigger Jenkins to create a Multidev environment with the latest code on your master branch and the content from Live. This process can even run automated browser tests using [Selenium](https://github.com/SeleniumHQ/selenium).
 
-The sections below show you how to configure your existing Jenkins server to automatically test and deploy Drupal 8 to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins runs tests against both the pull request and Pantheon's master branch and displays the results. The same workflow can be applied to WordPress with a few modifications:
+The sections below show you how to configure your existing Jenkins server to automatically test and deploy Drupal to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins runs tests against both the pull request and Pantheon's master branch and displays the results. The same workflow can be applied to WordPress with a few modifications:
 
 <Accordion id="wordpress-mods" title="WordPress Modifications" icon="wrench">
 
@@ -47,7 +47,7 @@ Be sure that you have:
   - [Terminus Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
 
   <Alert title="Note" type="info" >
-  
+
   Verify you can run Terminus, Drush, and Composer commands as the Jenkins user. Terminus and Drush must be accessible from standard `PATH` directories.
 
   </Alert>
@@ -77,7 +77,7 @@ Be sure that you have:
 
 ### Local Project Instantiation
 
-1. Open your local terminal and use Composer to make a new local project based on the example, which contains Drupal 8, Behat, and other configuration settings:
+1. Open your local terminal and use Composer to make a new local project based on the example, which contains Drupal, Behat, and other configuration settings:
 
   <Alert title="Note" type="info">
 
@@ -117,12 +117,12 @@ You should now be able to create a local branch, commit a change, and push to Gi
 
 ### Create a Pantheon Site
 
-You must create a site on Pantheon for this part of the process. The example in this section uses a Drupal 9 site on Pantheon with Terminus. You must overwrite the default install with the code from your GitHub repository after you create the site. Replace the value for `--org=` with your organization's name in the commands below.
+You must create a site on Pantheon for this part of the process. The example in this section uses the latest version of Drupal on Pantheon with Terminus. You must overwrite the default install with the code from your GitHub repository after you create the site. Replace the value for `--org=` with your organization's name in the commands below.
 
 1. Use Terminus to create a site on Pantheon:
 
   ```bash{promptUser: user}
-  terminus site:create $SITE "My Site" "Drupal 9" --org="My Team"
+  terminus site:create $SITE "My Site" "Drupal (Latest Version)" --org="My Team"
   terminus connection:set $SITE.dev git
   ```
 
@@ -347,5 +347,5 @@ Be sure to push to your new origin repo on GitHub if you usually use only the Pa
 
 ## More Resources
 
-- [Cron for WordPress](/wordpress-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron)
 - [Cron for Drupal](/drupal-cron)

@@ -1,17 +1,17 @@
 ---
-title: Creating a services.yml File for Drupal 9
-description: Learn how to add a services.yml file for your Drupal 9 site.
-cms: "Drupal 9"
+title: Creating a services.yml File for Drupal
+description: Learn how to add a services.yml file for your Drupal site.
 tags: [workflow]
 contenttype: [doc]
+innav: [true]
 categories: [config]
-newcms: [drupal, drupal9]
+cms: [drupal, drupal9]
 audience: [development]
 product: [--]
 integration: [--]
 ---
 
-Drupal 9 allows users to easily define core services and environment-specific settings within the `sites/default/services.yml` configuration file, eliminating the need for hacks to swap functionality. Creating or modifying this file is not required when installing a new Drupal 9 site.
+Drupal allows users to easily define core services and environment-specific settings within the `sites/default/services.yml` configuration file, eliminating the need for hacks to swap functionality. Creating or modifying this file is not required when installing a new Drupal site.
 
 ## Production and Pre-production Service Configurations  
 
@@ -30,7 +30,7 @@ The table below illustrates which services file is used in which Pantheon enviro
 
 ## Create and Modify services.yml
 
-1.  Make sure that you have updated your Drupal site to version 9.
+1.  Make sure that you have updated your Drupal site to version 9 or higher.
 
     <Alert title="Note"  type="info" >
 

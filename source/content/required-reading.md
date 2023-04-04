@@ -3,8 +3,9 @@ title: 'Required Reading: Essential Pantheon Documentation'
 description: Recommended documentation to learn about Pantheon WebOps management platform's technologies.
 tags: [workflow]
 contenttype: [doc]
+innav: [true]
 categories: [overview]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
@@ -27,7 +28,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 - [rsync and SFTP](/guides/sftp/rsync-and-sftp)
 - [Configuring settings.php](/guides/php/settings-php) or [Configuring wp-config.php](/guides/php/wp-config-php)
 - [Drupal Drush Command-Line Utility](/guides/drush)
-- [Cron for WordPress](/wordpress-cron) or [Cron for Drupal](/drupal-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron) or [Cron for Drupal](/drupal-cron)
 
 ## Launch
 - [Launch Essentials](/guides/launch)
@@ -40,7 +41,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 - [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/sso)
-- [Backup Creation](/backups)
+- [Backup Creation](/guides/backups)
 
 ## Debug
 - [PHP Errors and Exceptions](/guides/php/php-errors)

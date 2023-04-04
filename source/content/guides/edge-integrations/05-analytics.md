@@ -5,14 +5,13 @@ description: Integrate Edge Integrations with Google Tag Manager and Google Anal
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
-layout: guide
 showtoc: true
-anchorid: analytics
 permalink: docs/guides/edge-integrations/analytics/
 editpath: edge-integrations/05-analytics.md
 contenttype: [guide]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [personalization]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

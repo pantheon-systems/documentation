@@ -3,17 +3,16 @@ title: Pantheon Professional Services
 subtitle: Advanced Global CDN
 description: Edge configuration tools that enable advanced site management, enhanced security, and a customizable WAF
 contenttype: [guide]
+innav: [false]
 categories: [help]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [cdn]
 integration: [--]
 tags: [cdn, security, professional-services]
 reviewed: "2022-04-19"
-layout: guide
 showtoc: true
 permalink: docs/guides/professional-services/advanced-global-cdn
-anchorid: advanced-global-cdn
 editpath: professional-services/05-advanced-global-cdn.md
 ---
 

@@ -126,7 +126,9 @@ class DocTemplate extends React.Component {
                 </MDXProvider>
               </div>
             </article>
-            <TOC title="Contents" />
+            {node.frontmatter.showtoc && (
+              <TOC title="Contents" />
+            )}
             <GetFeedback
               formId="tfYOGoE7"
               page={node.frontmatter.title}
@@ -166,6 +168,7 @@ export const pageQuery = graphql`
         }
         featuredcontributor
         reviewed(formatString: "MMMM DD, YYYY")
+        showtoc
         tags
         type
       }

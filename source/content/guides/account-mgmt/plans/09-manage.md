@@ -4,15 +4,14 @@ subtitle: Manage Your Plans
 description: Upgrade a free site to a paid plan or downgrade a site's current plan within the Site Dashboard.
 tags: [plans]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/manage
-anchorid: manage
 editpath: docs/guides/account-mgmt/plans/09-manage.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [false]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
@@ -52,7 +51,7 @@ To remove these addons:
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-id">
+<Tab title="Drupal" id="d7-id">
 
 #### Object Cache
 
@@ -80,7 +79,7 @@ If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-
 
 [Custom domains](/guides/domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
-Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. Refer to the [Backups Tool](/backups) for more information.
+Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. Refer to the [Backups Tool](/guides/backups) for more information.
 
 ## Downgrade Your Plan to Sandbox
 

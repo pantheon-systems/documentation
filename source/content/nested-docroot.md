@@ -5,8 +5,9 @@ tags: [code, site, terminus, workflow]
 contributors:
  - ataylorme
 contenttype: [doc]
-categories: [git, dashboard]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [files]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -38,7 +39,7 @@ If you wish to stop using one-click Dashboard updates on a particular site, and 
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7-set-upstream" active={true}>
+<Tab title="Drupal" id="d7-set-upstream" active={true}>
 
 ```bash
 terminus site:upstream:set <site> empty-7
@@ -89,7 +90,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7" active={true}>
+<Tab title="Drupal" id="d7" active={true}>
 
 The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
@@ -182,7 +183,3 @@ For example, if your `pantheon.yml` has a script location definition of `private
 ### Can I specify a subdirectory other than web?
 
 The directory name is not configurable, but you can [create a symlink](/symlinks-assumed-write-access#create-a-symbolic-link) from some other directory to `web`.
-
-### Can I use Localdev for local development of nested docroot sites?
-
-Yes, Pantheon's [Localdev](/guides/localdev/troubleshoot-support) pulls configuration information from your site's [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) and [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) files.

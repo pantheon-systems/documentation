@@ -3,17 +3,16 @@ title: MariaDB and MySQL on Pantheon
 subtitle: Convert MySQL Tables from MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
 contenttype: [guide]
+innav: [false]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [database, cli]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/myisam-to-innodb
-anchorid: myisam-to-innodb
 ---
 
 This section provides information on how to convert MySQL Tables from MyISAM to InnoDB.

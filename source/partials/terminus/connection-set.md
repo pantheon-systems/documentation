@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [sftp]
-newcms: [--]
+cms: [--]
 product: [terminus]
 integration: [--]
 tags: [--]

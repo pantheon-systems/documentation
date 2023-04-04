@@ -4,14 +4,13 @@ subtitle: Introduction
 description: Learn about Pantheon's site plans.
 tags: [plans]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/plans
-anchorid: plans
 editpath: docs/guides/account-mgmt/plans/01-introduction.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [true]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]

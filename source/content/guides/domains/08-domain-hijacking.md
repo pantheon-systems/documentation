@@ -4,13 +4,12 @@ subtitle: Prevent Domain Hijacking
 description: Learn how to prevent domain hijacking.
 tags: [collaborate, dns, agencies]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/domain-hijacking
-anchorid: domains-hijacking
 contenttype: [guide]
+innav: [false]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [--]
 integration: [--]

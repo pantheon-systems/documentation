@@ -3,18 +3,16 @@ title: Using WP SAML Auth with Google Apps
 subtitle: Create a SAML App
 description: Define a SAML app in the Google Admin dashboard to which you can connect your WordPress site
 contributors: [alexfornuto, danielbachhuber]
-cms: "WordPress"
 contenttype: [guide]
-categories: [siteauth]
-newcms: [wordpress]
+innav: [false]
+categories: [security]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [plugins]
 tags: [sso, saml, users, security, plugins]
 reviewed: "2021-03-12"
-layout: guide
 permalink: docs/guides/wordpress-google-sso/saml-app/
-anchorid: wordpress-google-sso/saml-app
 editpath: wordpress-google-sso/03-saml-app.md
 ---
 

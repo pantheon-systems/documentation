@@ -3,17 +3,16 @@ title: MariaDB and MySQL on Pantheon
 subtitle: MySQL Slow Log
 description: Use MySQL Slow Log to troubleshoot and identify serious performance issues.
 contenttype: [guide]
+innav: [false]
 categories: [database]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [cli, database]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/mysql-slow-log
-anchorid: mysql-slow-log
 ---
 
 This section provides information on how to analyze your MySQL Slow Log to improve site performance.

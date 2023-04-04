@@ -4,15 +4,14 @@ subtitle: Troubleshoot Autopilot Error Messages
 description: Diagnose and remedy some common Autopilot errors.
 tags: [autopilot, troubleshoot, webops]
 type: guide
-layout: guide
 showtoc: true
-anchorid: troubleshoot-autopilot
 permalink: docs/guides/autopilot/troubleshoot-autopilot/
 editpath: autopilot/07-troubleshoot.md
 reviewed: "2022-11-01"
 contenttype: [guide]
-categories: [automate]
-newcms: [--]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]
@@ -24,7 +23,7 @@ This page helps troubleshoot common issues that you may encounter when using Aut
 
 If you have already attempted to troubleshoot an error, or if you want to confirm that the error is consistent, try running Autopilot on the site again:
 
-1. Review and acknowledge any errors to allow Autopilot to queue updates. 
+1. Review and acknowledge any errors to allow Autopilot to queue updates.
 
    If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
@@ -32,7 +31,7 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. Navigate to the **Autopilot Configuration** screen > click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
 
-1. Click **Status** in Autopilot's side bar > click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually. 
+1. Click **Status** in Autopilot's side bar > click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually.
 
 ### Re-run Autopilot If Tests Have Already Passed
 
@@ -79,7 +78,7 @@ Pantheon's Autopilot engineers investigate each of these errors as they occur. P
 ### Issue
 
 An error occurred because your site is currently running an unsupported version of Drush.
-  
+
 ### Diagnosis
 
 If your Drupal site is not managed with Composer, Autopilot only works on sites that are running Drush 8. Composer-managed sites may use any compatible Drush version and will not display the Drush version error.
@@ -99,7 +98,7 @@ To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integ
 ### Issue
 
 * **WordPress**: This error message is displayed if a WordPress plugin or theme is not found after updates were attempted.
-  
+
 * **Drupal**: This error message is displayed if a Drupal module or theme update could not be applied.
 
 ### Diagnosis
@@ -251,7 +250,7 @@ Check that CLI cache clear steps work in the Dev environment. See if creating ot
 ### Composer Error
 
 #### Diagnosis
-The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer), 
+The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer).
 
 #### Solution
 Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
@@ -352,11 +351,15 @@ Unfreeze the site in the old dashboard before re-queueing updates. Note, unfreez
 
 ### Diagnosis
 
-Site is running a framework that is not Drupal, Drupal 8, or WordPress. Currently, WordPess Multisite (`wordpress_network`) is not supported.
+Site is running a framework that is not supported. Supported frameworks are:
+
+- Drupal with Integrated Composer
+- Drupal 8 with Integrated Composer or Drush 8
+- WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
 
 ### Solution
-  
-Contact support for assistance if running a framework that is not Drupal, Drupal 8, or WordPress. Any other framework, including WordPress Multisite Network is not supported.
+
+[Contact support](/guides/support/contact-support/) for assistance.
 
 </Accordion>
 
@@ -366,14 +369,14 @@ Contact support for assistance if running a framework that is not Drupal, Drupal
 
 ### Diagnosis
 
-There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment. 
+There is an issue with Autopilot because Drush or WP-CLI did not work as expected in the Dev or Autopilot environment.
 
 Run `terminus remote:drush $SITE.dev -- pml` or `terminus remote:wp $SITE.dev -- plugin list` and check for an unexpected output or errors. Alternatively, you can use the command `$SITE.autopilot` for the Autopilot environment.
-  
+
 ### Solution
-  
+
 After diagnosing the problem, resolve the issue that is causing the error on the Dev or Autopilot environment, then retry Autopilot. For additional help contact Support[/support] for assistance.
-  
+
 </Accordion>
 
 ## Quicksilver is Unavailable
@@ -382,12 +385,12 @@ After diagnosing the problem, resolve the issue that is causing the error on the
 
 ### Issue
 
-Quicksilver scripts failed to execute on the site. 
-  
+Quicksilver scripts failed to execute on the site.
+
 ### Solution
-  
+
 Contact Support[/support] for assistance.
-  
+
 </Accordion>
 
 ## Database Could Not Be Updated
@@ -396,12 +399,12 @@ Contact Support[/support] for assistance.
 
 ### Issue
 
-An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated. 
-  
+An issue with Autopilot occurred because the WordPress Dev, Test, or Live database could not be updated.
+
 ### Solution
-  
+
 Update the database on the target environment, and then retry Autopilot. You will be prompted to run the update on the admin dashboard of the site, or you can run `wp core update-db` in the CLI. Contact Support[/link] for assistance if the issue persists.
-  
+
 </Accordion>
 
 ## Upstreams Could Not Be Merged
@@ -423,10 +426,6 @@ You can also disable upstream updates if you do not want Autopilot to maintain u
 ## More Resources
 
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
-
 - [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
-
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
-
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
-

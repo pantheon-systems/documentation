@@ -2,17 +2,14 @@
 title: Build Tools
 subtitle: Create a Custom Theme
 description: In step eight of the Build Tools guide, learn how to create a custom theme as part of the build tooks workflow.
-cms: "Drupal"
 tags: [themes, workflow]
-buildtools: true
-anchorid: custom-theme
 type: guide
 permalink: docs/guides/build-tools/custom-theme/
 editpath: build-tools/08-custom-theme.md
-image: buildToolsGuide-thumb
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [dependencies]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]

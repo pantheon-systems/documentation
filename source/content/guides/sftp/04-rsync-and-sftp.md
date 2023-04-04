@@ -3,15 +3,14 @@ title: SFTP on Pantheon
 subtitle: Large File Transfers with rsync and SFTP
 description: Transfer large files using an SFTP client or rsync.
 tags: [files, sftp, rsync]
+innav: [false]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/rsync-and-sftp
-anchorid: rsync-and-sftp
 ---
 
 This section provides information on how to use your SFTP client or rsync to transfer large files.
@@ -27,7 +26,7 @@ An SFTP client or rsync allows you to transfer unlimited data server-to-server, 
 
 <Alert title="Notes" type="info">
 
- - This section covers copying [files](/files), excluding database files. You cannot directly access the database files. Refer to [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
+ - This section covers copying [files](/guides/filesystem), excluding database files. You cannot directly access the database files. Refer to [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
 
  - You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 
@@ -200,6 +199,6 @@ Uploading a large number of files into a multi-container Live environment may fa
 ## More Resources
 
 - [SFTP Connection Info and Authentication](/guides/sftp/sftp-connection-info)
-- [Pantheon Filesystem](/files)
-- [Platform Files and Directories](/guides/platform-considerations/files-directories)
+- [Pantheon Filesystem](/guides/filesystem)
+- [Platform Files and Directories](/guides/filesystem/files-directories)
 - [Environment Configuration on Pantheon](/guides/environment-configuration)

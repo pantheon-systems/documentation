@@ -4,14 +4,13 @@ subtitle: Autopilot Pre-Configuration Checklist
 description: Get a head start on your Autopilot journey.
 tags: [iterate, autopilot, testing, webops]
 type: guide
-layout: guide
 contributors: [whitneymeredith]
 showtoc: true
-anchorid: autopilot-preconfiguration
 permalink: docs/guides/autopilot/autopilot-preconfiguration/
 contenttype: [guide]
-categories: [automate]
-newcms: [--]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]

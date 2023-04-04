@@ -4,13 +4,12 @@ subtitle: Overloaded Workers
 description: Learn more about overloaded workers on Pantheon.
 tags: [services]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses/overloaded-workers
-anchorid: overloaded-workers
 contenttype: [guide]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [issues]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -63,4 +62,4 @@ Debugging with [New Relic&reg; Performance Monitoring](/guides/new-relic) or loo
 
 - [Cron for Drupal](/drupal-cron)
 
-- [Cron for WordPress](/wordpress-cron)
+- [Cron for WordPress](/guides/wordpress-developer/wordpress-cron)

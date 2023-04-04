@@ -5,13 +5,12 @@ description: Learn more about Pantheon platform domains.
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/platform-domains
-anchorid: platform-domains
 contenttype: [guide]
+innav: [false]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development, sysadmin]
 product: [dashboard]
 integration: [--]

@@ -2,14 +2,12 @@
 title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Drush SQL Queries
 description: Learn how to use Drush SQL queries.
-cms: "Drupal"
 tags: [migrate, terminus, drush]
-layout: guide
 permalink: docs/guides/drush/drush-sql-queries
-anchorid: drush-sql-queries
 contenttype: [guide]
+innav: [false]
 categories: [cli]
-newcms: [drupal]
+cms: [drupal]
 audience: [development]
 product: [--]
 integration: [drush]

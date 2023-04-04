@@ -7,15 +7,14 @@ type: terminuspage
 layout: terminuspage
 contributors: [whitneymeredith]
 contenttype: [guide]
-categories: [cli, create]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus
-anchorid: terminus
-image: terminus-thumbLarge
 reviewed: "2020-02-05"
 ---
 

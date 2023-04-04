@@ -6,7 +6,7 @@ import { faDiscourse } from "@fortawesome/free-brands-svg-icons"
 
 const Discourse = ({ pageTitle, path, cms }) => {
   const ifCms =  cms ? `&tags=${cms}` : null
-  const text = `https://discuss.pantheon.io/new-topic?title=Discussion%20for%20doc:%20${pageTitle}&body=[${pageTitle}](https://pantheon.io/docs/${path})&category=pantheon-platform/documentation/${pageTitle}${ifCms}`
+  const text = `https://discuss.pantheon.io/new-topic?title=Discussion%20for%20doc:%20${pageTitle}&body=[${pageTitle}](https://docs.pantheon.io/${path})&category=pantheon-platform/documentation/${pageTitle}${ifCms}`
   return (
     <a
       className="btn btn-discourse fa"

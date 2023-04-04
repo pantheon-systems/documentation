@@ -4,14 +4,13 @@ subtitle: Integrated Composer FAQ
 description: Get answers to your Integrated Composer questions.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
-reviewed: "2022-04-28"
-layout: guide
+reviewed: "2022-12-13"
 showtoc: true
 permalink: docs/guides/integrated-composer/ic-faq
-anchorid: ic-faq
 contenttype: [guide]
-categories: [overview]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [dependencies]
+cms: [drupal, wordpress, faq]
 audience: [development]
 product: [composer]
 integration: [--]
@@ -80,4 +79,4 @@ Features that are still in development:
 
 - [Integrated Composer Troubleshooting](/guides/integrated-composer/ic-troubleshooting)
 
-- [Add Contrib and Custom Code in Drupal 9](/guides/drupal-9-hosted-createcustom/contrib-custom)
+- [Add Contrib and Custom Code in image.png](/guides/drupal-hosted-createcustom/contrib-custom)

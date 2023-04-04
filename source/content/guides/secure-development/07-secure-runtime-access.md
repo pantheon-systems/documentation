@@ -4,17 +4,16 @@ subtitle: Secure Runtime Access
 description: Limit access to your site's database for additional defense against traffic-based attacks and unauthorized access.
 tags: [security]
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [security]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 contributors: [edwardangert]
 searchboost: 150
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/secure-runtime-access
-anchorid: secure-runtime-access
 reviewed: "2022-07-21"
 ---
 

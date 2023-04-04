@@ -80,7 +80,7 @@ class VideoReport extends React.Component {
               body:
                 "[" +
                 page.node.frontmatter.title +
-                "](https://pantheon.io/docs/" +
+                "](https://docs.pantheon.io/" +
                 page.node.fields.slug +
                 ") " +
                 " has been flagged as needing a new review.",

@@ -5,8 +5,9 @@ tags: [agencies, organizations, collaborate]
 contributors: [davidneedham]
 searchboost: 90
 contenttype: [doc]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [overview]
+cms: [--]
 audience: [agency]
 product: [--]
 integration: [--]
@@ -46,7 +47,7 @@ The Pantheon [Community Forums](https://discuss.pantheon.io/) and [Slack Workspa
 Follow our [Launch Essentials](/guides/launch) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 
 ## Pantheon Search
-All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/guides/wordpress-configurations/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
+All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/guides/wordpress-developer/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Object Cache
 All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
@@ -59,7 +60,7 @@ The following tools are specifically for WordPress.
 In order to use PHP Sessions with a WordPress site you will need to install the [WordPress Native PHP Sessions plugin](https://wordpress.org/plugins/wp-native-php-sessions/). For details, see [WordPress and PHP Sessions](/guides/php/wordpress-sessions).
 
 ### WordPress Multisite
-Running a WordPress Site Network requires a special configuration that is only available to contract customers. These sites can only be created by Pantheon employees. For details, see [WordPress Site Networks](/guides/multisite).
+Running a WordPress Multisite requires a special configuration that is only available to contract customers. A WordPress Multisite upstream can only be created for your organization by Pantheon employees. For details, see [WordPress Multisite](/guides/multisite).
 
 ### Migration
 The guided migration process for WordPress is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate Sites to Pantheon](/guides/guided/).
@@ -88,7 +89,7 @@ New Relic APM Pro is an advanced tool for application monitoring and troubleshoo
 - [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
 ## Cron
-Pantheon does not provide a way to set custom scheduling for cron jobs. For details, see [Cron for Drupal](/drupal-cron) and [Cron for WordPress](/wordpress-cron).
+Pantheon does not provide a way to set custom scheduling for cron jobs. For details, see [Cron for Drupal](/drupal-cron) and [Cron for WordPress](/guides/wordpress-developer/wordpress-cron).
 
 ## Advanced Workflows
 

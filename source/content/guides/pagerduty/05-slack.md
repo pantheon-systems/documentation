@@ -1,26 +1,17 @@
 ---
 title: Incident Management
 subtitle: Slack Integrations (optional)
-description: Page five of our guide on Pagerduty integration with New Relic&reg; for incident management.
-pagerduty: true
-anchorid: slack
-generator: pagination
-layout: guide
+description: Page five of our guide on Pagerduty integration with New Relic for incident management.
 contenttype: [guide]
-categories: [optimize]
-newcms: [--]
+innav: [false]
+categories: [track]
+cms: [--]
 audience: [development]
 product: [newrelic]
 integration: [--]
 tags: [logs, measure, newrelic, teams, webops]
 type: guide
-pagination:
-    provider: data.pagerdutypages
-use:
-    - pagerdutypages
 permalink: docs/guides/pagerduty/slack/
-previousurl: guides/pagerduty/notify/
-nexturl: guides/pagerduty/next-steps/
 editpath: pagerduty/05-slack.md
 ---
 In this lesson, we'll add the Slack extension to PagerDuty so your team can acknowledge and resolve incidents within a channel.

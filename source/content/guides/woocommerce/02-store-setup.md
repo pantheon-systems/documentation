@@ -2,30 +2,17 @@
 title: WooCommerce Quick Start
 subtitle: Store Setup
 description: In step two of the WooCommerce Quick Start guide, learn how to set up your new store.
-woocommerce: true
-anchorid: store-setup
-generator: pagination
-layout: guide
-cms: "WordPress"
 contenttype: [guide]
-categories: [--]
-newcms: [wordpress]
+innav: [false]
+categories: [ecommerce]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [woocommerce]
 tags: [plugins, site]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/store-setup/
-nexturl: guides/woocommerce/configure/
-nextpage: Configure
-previousurl: guides/woocommerce/
-previouspage: Introduction
 editpath: woocommerce/02-store-setup.md
-image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 I've already gone ahead and [created a new site on Pantheon](/guides/quickstart/create-new-site).
 

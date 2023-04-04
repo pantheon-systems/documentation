@@ -3,18 +3,17 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Migrate an Existing WordPress Site
 description: Migrate an existing WordPress site to Pantheon.
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [false]
+categories: [cms]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-02"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/migrate-existing-wp-site
-anchorid: wordpress-pantheon/migrate-existing-wp-site
 ---
 
 This page provides steps for migrating an existing WordPress site to Pantheon's platform. Review Pantheon's [Managed Migrations](https://pantheon.io/professional-services/website-migrations?docs) page to see if having the Pantheon Professional Services team perform your migration is a better option for you before you migrate your site.
@@ -67,7 +66,7 @@ You will need to manually migrate your site to Pantheon when any of the followin
 
 - **Git history must be preserved:** You'd like to preserve your site's existing Git commit history.
 
-- You use [WordPress Site Networks](/migrate-wordpress-site-networks)
+- You use [WordPress Multisite](/migrate-wordpress-multisite)
 
 - **Plugin installs are unavailable on the existing WordPress site:** For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 

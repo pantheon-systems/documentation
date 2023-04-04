@@ -3,16 +3,16 @@ title: Object Cache (formerly Redis)
 subtitle: Enable Object Cache
 description: Learn how to enable Object Cache on your site.
 contenttype: [guide]
+innav: [false]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-layout: guide
 permalink: docs/guides/object-cache/enable-object-cache
-anchorid: enable-object-cache
+reviewed: "2022-12-13"
 ---
 
 This section provides information on how to enable Object Cache.
@@ -29,7 +29,7 @@ This section provides information on how to enable Object Cache.
   terminus wp <site>.<env> -- plugin install wp-redis
   ```
 
-  If you use site networks, you must add the site URL by adding to the command: 
+  If you use WordPress Multisite, you must add the site URL by adding to the command: 
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
@@ -40,8 +40,9 @@ This section provides information on how to enable Object Cache.
   ```php:title="object-cache.php"
   <?php
   # This is a Windows-friendly symlink
-  if (!empty($_ENV['PANTHEON_ENVIRONMENT']) && !empty($_ENV['CACHE_HOST'])) {
-    require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+  $objectCacheFile = WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+  if (!empty($_ENV['PANTHEON_ENVIRONMENT']) && !empty($_ENV['CACHE_HOST']) && file_exists($objectCacheFile)) {
+      require_once $objectCacheFile;
   }
   ```
 
@@ -186,7 +187,7 @@ After enabling Redis, there are cache tables in the database that are no longer 
 
 </Tab>
 
-<Tab title="Drupal 9 / Composer-managed" id="d9-install">
+<Tab title="Drupal 9.3+ / Composer-managed" id="d9-install">
 
 1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, then select **Add** to enable the Redis cache server. It might take a couple of minutes for the Redis server to come online.
 
@@ -213,25 +214,77 @@ After enabling Redis, there are cache tables in the database that are no longer 
    ```php:title=sites/default/settings.php
    // Configure Redis
 
-   if (!empty($_ENV['PANTHEON_ENVIRONMENT']) && !empty($_ENV['CACHE_HOST'])) {
-     // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
-     $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+   if (defined(
+    'PANTHEON_ENVIRONMENT'
+  ) && !\Drupal\Core\Installer\InstallerKernel::installationAttempted(
+  ) && extension_loaded('redis')) {
+    // Set Redis as the default backend for any cache bin not otherwise specified.
+    $settings['cache']['default'] = 'cache.backend.redis';
 
-     //phpredis is built into the Pantheon application container.
-     $settings['redis.connection']['interface'] = 'PhpRedis';
-     // These are dynamic variables handled by Pantheon.
-     $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
-     $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
-     $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
+    //phpredis is built into the Pantheon application container.
+    $settings['redis.connection']['interface'] = 'PhpRedis';
 
-     $settings['redis_compress_length'] = 100;
-     $settings['redis_compress_level'] = 1;
+    // These are dynamic variables handled by Pantheon.
+    $settings['redis.connection']['host'] = $_ENV['CACHE_HOST'];
+    $settings['redis.connection']['port'] = $_ENV['CACHE_PORT'];
+    $settings['redis.connection']['password'] = $_ENV['CACHE_PASSWORD'];
 
-     $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
-     $settings['cache_prefix']['default'] = 'pantheon-redis';
+    $settings['redis_compress_length'] = 100;
+    $settings['redis_compress_level'] = 1;
 
-     $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
-   }
+    $settings['cache_prefix']['default'] = 'pantheon-redis';
+
+    $settings['cache']['bins']['form'] = 'cache.backend.database'; // Use the database for forms
+
+    // Apply changes to the container configuration to make better use of Redis.
+    // This includes using Redis for the lock and flood control systems, as well
+    // as the cache tag checksum. Alternatively, copy the contents of that file
+    // to your project-specific services.yml file, modify as appropriate, and
+    // remove this line.
+    $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';
+
+    // Allow the services to work before the Redis module itself is enabled.
+    $settings['container_yamls'][] = 'modules/contrib/redis/redis.services.yml';
+
+    // Manually add the classloader path, this is required for the container
+    // cache bin definition below.
+    $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src'); 
+
+    // Use redis for container cache.
+    // The container cache is used to load the container definition itself, and
+    // thus any configuration stored in the container itself is not available
+    // yet. These lines force the container cache to use Redis rather than the
+    // default SQL cache.
+    $settings['bootstrap_container_definition'] = [
+      'parameters' => [],
+      'services' => [
+        'redis.factory' => [
+          'class' => 'Drupal\redis\ClientFactory',
+        ],
+        'cache.backend.redis' => [
+          'class' => 'Drupal\redis\Cache\CacheBackendFactory',
+          'arguments' => [
+            '@redis.factory',
+            '@cache_tags_provider.container',
+            '@serialization.phpserialize',
+          ],
+        ],
+        'cache.container' => [
+          'class' => '\Drupal\redis\Cache\PhpRedis',
+          'factory' => ['@cache.backend.redis', 'get'],
+          'arguments' => ['container'],
+        ],
+        'cache_tags_provider.container' => [
+          'class' => 'Drupal\redis\Cache\RedisCacheTagsChecksum',
+          'arguments' => ['@redis.factory'],
+        ],
+        'serialization.phpserialize' => [
+          'class' => 'Drupal\Component\Serialization\PhpSerialize',
+        ],
+      ],
+    ];
+}
+
    ```
 
    <Alert title="Note" type="info">

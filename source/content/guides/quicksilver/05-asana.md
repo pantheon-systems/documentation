@@ -3,17 +3,16 @@ title: Quicksilver on Pantheon
 subtitle: Integrate Asana with Pantheon using Quicksilver Hooks
 description: Learn how to integrate Asana with Pantheon.
 contenttype: [guide]
+innav: [false]
 categories: [automate]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [quicksilver, asana]
 tags: [collaborate, continuous-integration, iterate, quicksilver, workflow]
 contributors: [scottmassey]
-layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/asana
-anchorid: asana
 ---
 
 This section provides information on how to use Quicksilver to integrate Asana with Pantheon.

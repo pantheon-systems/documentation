@@ -1,22 +1,27 @@
 ---
-title: Create a CI, Composer-managed WordPress Site 
+title: WordPress Composer
 subtitle: Create a CI, Composer-managed WordPress Site
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 contenttype: [guide]
-categories: [--]
-newcms: [wordpress]
+innav: [false]
+categories: [dependencies]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-composer/create-wp-site-composer-ci-auto-test
-anchorid: create-wp-site-composer-ci-auto-test
 ---
 
 This section provides steps to create a new Pantheon WordPress site that will use [Composer](https://getcomposer.org/), Continuous Integration (CI), and Automated Testing. This guide will get you started, but you will need to customize and maintain the CI/testing set up for your projects.
+
+<Alert title="Note" type="info">
+
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA.
+
+</Alert >
 
 ## Requirements
 

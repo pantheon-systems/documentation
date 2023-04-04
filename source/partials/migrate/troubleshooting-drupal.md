@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [migrate]
-newcms: [drupal]
+cms: [drupal]
 product: [--]
 integration: [--]
 tags: [--]
@@ -30,7 +30,7 @@ reviewed: ""
 
 **Cause:** The migration tool could not find the core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
 
-**Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive. Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:
+**Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive. Archives for Drupal sites should include `index.php` at the code root level, along with the following directories:
 
 ```none
 ├── includes
@@ -52,4 +52,4 @@ reviewed: ""
 
 **Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory: `sites/default/files/private`.
 
-**Solution:** All files must be moved into `/sites/default/files`. For more details, see [Files](/files) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).
+**Solution:** All files must be moved into `/sites/default/files`. For more details, see [Files](/guides/filesystem) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).

@@ -2,12 +2,10 @@
 title: Using Git with SFTP & WordPress
 subtitle: Upload Media
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
-anchorid: media
-layout: guide
-cms: "WordPress"
 contenttype: [guide]
+innav: [false]
 categories: [git]
-newcms: [wordpress]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -15,7 +13,6 @@ tags: [files, git, sftp]
 type: guide
 permalink: docs/guides/wordpress-git/media/
 editpath: wordpress-git/04-media.md
-image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"
 ---
 

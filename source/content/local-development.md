@@ -1,7 +1,13 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-categories: [develop]
+contenttype: [doc]
+innav: [true]
+categories: [localdev]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 ---

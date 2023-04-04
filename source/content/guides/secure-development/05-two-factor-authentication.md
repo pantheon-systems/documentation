@@ -3,17 +3,16 @@ title: Secure Development on Pantheon
 subtitle: Secure Your Site with Two-Factor Authentication
 description: Set up two-factor authentication on your Pantheon Drupal or WordPress site as an added security measure.
 contenttype: [guide]
-categories: [user-authentication]
-newcms: [--]
+innav: [false]
+categories: [security]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [security, saml, users]
 contributors: [populist]
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/two-factor-authentication
-anchorid: two-factor-authentication
 reviewed: "2022-07-21"
 ---
 

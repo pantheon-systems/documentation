@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [domains]
-newcms: [wordpress]
+cms: [wordpress]
 product: [--]
 integration: [--]
 tags: [--]
@@ -10,7 +10,7 @@ reviewed: ""
 
 WordPress sites with custom domains configured on multiple environments may see references to the wrong platform domain after cloning the database from one environment to another.
 
-The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically. This operation, however, only runs once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it's used to replace the source environment's custom domain (e.g. `www.example.com`). This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`).
+The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically. This operation only runs once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it's used to replace the source environment's custom domain (e.g. `www.example.com`). This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`).
 
 You can resolve this using one of several methods:
 
@@ -18,7 +18,7 @@ You can resolve this using one of several methods:
 
 <Tab title="Plugins" id="plugin-replace" active={true}>
 
-There are several plugins with search and replace functionality. [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/), for example, works well on our platform. 
+There are several plugins with search and replace functionality. [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/), for example, works well on our platform.
 
 Make sure you select the **Find & Replace** functionality:
 
@@ -44,13 +44,13 @@ The following example also converts the URL from HTTP to HTTPS, for situations w
 terminus remote:wp $site.$env -- search-replace "http://live-example.pantheonsite.io" "https://test.example.com" --all-tables --verbose --dry-run
 ```
 
-**Note:** The example code above includes `--dry-run`, which executes the command but prevents permanent changes. Remove this flag once confident that the values are correct.
+**Note:** The example code above includes `--dry-run`, which executes the command but prevents permanent changes. Remove this flag when you are confident that the values are correct.
 
 </Tab>
 
 <Tab title="Quicksilver" id="quicksilver-replace-anchor">
 
-Consider the following example if you are using [Quicksilver](/guides/quicksilver) scripts. 
+Consider the following example if you are using [Quicksilver](/guides/quicksilver) scripts.
 
 Replace `example#.pantheonsite.io` and `example.com` with the domains you want to find and replace on each `passthru` line:
 
@@ -73,7 +73,7 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
 ?&gt;
 ```
 
-The example above replaces three URLs when cloning to the test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/guides/domains) `example.com` when cloning to the live environment.
+The example above replaces three URLs when cloning to the Test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/guides/domains) `example.com` when cloning to the Live environment.
 
 You can find this example and many others in the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repo.
 

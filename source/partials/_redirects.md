@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [config]
-newcms: [wordpress, drupal7]
+cms: [wordpress, drupal7]
 product: [--]
 integration: [--]
 tags: [--]
@@ -53,11 +53,11 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 }
 ```
 
-WordPress users should also run a [search and replace](/wordpress-broken-links/#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) to update any references to the platform domain.
+WordPress users should also run a [search and replace](/guides/wordpress-developer/wordpress-broken-links/#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) to update any references to the platform domain.
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7redirects">
+<Tab title="Drupal" id="d7redirects">
 
 Add the following to the end of your `settings.php` file (replace `www.example.com`):
 

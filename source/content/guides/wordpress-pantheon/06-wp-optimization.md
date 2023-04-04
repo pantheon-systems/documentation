@@ -3,18 +3,17 @@ title: WordPress on Pantheon Quick Start Guide
 subtitle: Pantheon Performance and Optimization Features
 description: Optimization and Performance for WorPress on Pantheon
 contenttype: [guide]
-categories: [create]
-newcms: [wordpress]
+innav: [false]
+categories: [cms]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/wp-optimization
-anchorid: wordpress-pantheon/wp-optimization
 ---
 
 Pantheon provides support for performance and optimization features to help keep your site running quickly.
@@ -53,4 +52,4 @@ This section provides optional steps to improve your site's speed.
 
 1. Create a dedicated search index
 
-    - An external dedicated index provides more features and responsiveness than the WordPress default Search function. Refer to [Enabling Solr for WordPress](/guides/wordpress-configurations/wordpress-solr) for more details.
+    - An external dedicated index provides more features and responsiveness than the WordPress default Search function. Refer to [Enabling Solr for WordPress](/guides/wordpress-developer/wordpress-solr) for more details.

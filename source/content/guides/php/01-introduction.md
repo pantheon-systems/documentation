@@ -3,17 +3,16 @@ title: PHP on Pantheon
 subtitle: Introduction
 description: Learn more about using PHP on Pantheon.
 contenttype: [guide]
+innav: [true]
 categories: [php]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [webops, workflow]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/php
-anchorid: php
 ---
 
 PHP is a scripting language that facilitates server-side web development. The PHP code in your Pantheon account is executed at runtime whenever a request is received from the web server the same way it is on other platforms.

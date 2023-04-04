@@ -4,13 +4,12 @@ subtitle: Introduction
 description: Learn more about errors and server responses on Pantheon.
 tags: [services]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/errors-and-server-responses
-anchorid: errors-and-server-responses
 contenttype: [guide]
-categories: [--]
-newcms: [drupal, wordpress]
+innav: [true]
+categories: [issues]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]

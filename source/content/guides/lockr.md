@@ -8,8 +8,9 @@ contributors: [cteitzel]
 featuredcontributor: true
 reviewed: "2022-02-04"
 contenttype: [doc]
-categories: [measure]
-newcms: [wordpress, drupal, drupal7]
+innav: [true]
+categories: [security]
+cms: [wordpress, drupal7]
 audience: [agency, development]
 product: [terminus]
 integration: [lockr, drush]
@@ -118,9 +119,9 @@ terminus wp <site>.<env> -- lockr set-key --name=[key name] --label=[key label] 
 
 Pairing together the [Lockr](https://www.drupal.org/project/lockr), [Encrypt](https://www.drupal.org/project/encrypt), and [Key](https://www.drupal.org/project/key) modules allow Drupal to take advantage of best security practices of separating the keys away from the data they protect.
 
-### Drupal 9 Installation
+### Drupal (Latest) Installation
 
-Lockr for Drupal 9 depends on a connection library installed using Composer. If the Lockr module is not installed using Composer command `composer require 'drupal/lockr'`, the dependency must be installed manually with `composer require 'lockr/lockr:^1.0.0'`.
+Lockr for the latest version of Drupal depends on a connection library installed using Composer. If the Lockr module is not installed using Composer command `composer require 'drupal/lockr'`, the dependency must be installed manually with `composer require 'lockr/lockr:^1.0.0'`.
 
 This will download Lockr, all of its requirements, and update the `composer.json` with these requirements.
 

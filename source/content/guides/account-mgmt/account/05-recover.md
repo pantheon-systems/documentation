@@ -3,17 +3,16 @@ title: "Manage Your Account"
 subtitle: Recover Account
 description: Recover your account when someone leaves.
 contenttype: [guide]
-categories: [billing]
-newcms: [--]
+innav: [false]
+categories: [accounts]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/account/recover
-anchorid: recover
 editpath: docs/guides/account-mgmt/account/05-recover.md
 reviewed: "2022-09-19"
 ---

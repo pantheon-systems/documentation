@@ -3,15 +3,14 @@ title: SFTP on Pantheon
 subtitle: Visual Studio Code SFTP Extension
 description: Learn how to upload local changes with Visual Studio Code's SFTP extension.
 tags: [files, sftp, rsync]
+innav: [false]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/vscode-sftp
-anchorid: vscode-sftp
 ---
 
 This section provides information on how to upload local changes in Visual Studio (VS) Code.
@@ -32,7 +31,7 @@ This section provides information on how to upload local changes in Visual Studi
 
 The SFTP extension for VS Code allows you to upload code to the Pantheon Dev or Multidev environment directly from VS Code, as well as download files from the Pantheon servers to your local machine.
 
-1. Verify that your site is in [SFTP mode](/sftp#sftp-mode) before uploading code via SFTP.
+1. Verify that your site is in [SFTP mode](/guides/sftp#sftp-mode) before uploading code via SFTP.
 
 1. Install the VS Code [SFTP Extension](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp).
 

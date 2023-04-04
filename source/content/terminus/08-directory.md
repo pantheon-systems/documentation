@@ -7,10 +7,10 @@ type: terminuspage
 layout: terminuspage
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/directory
-anchorid: directory
 contenttype: [guide]
-categories: [cli, create]
-newcms: [drupal, wordpress]
+innav: [false]
+categories: [cli]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: [--]
@@ -22,12 +22,24 @@ The list below provides a small sample of popular plugins available for Terminus
 
 <CardGroup>
 
+<Card title={"Autopilot"} isOfficial author={"Tom Stovall"} authorLink={"https://github.com/stovak"} link={"https://github.com/pantheon-systems/terminus-autopilot-plugin"}>
+
+Manage [Autopilot](/guides/autopilot) functions from the command line with the Terminus Autopilot plugin.
+
+  </Card>
+
   <Card title={"Build Tools"} isOfficial author={"Greg Anderson"} authorLink={"https://github.com/greg-1-anderson"} link={"https://github.com/pantheon-systems/terminus-build-tools-plugin"}>
 
 Create a [GitHub](https://github.com) PR Workflow to test Pantheon sites on [CircleCI](https://circleci.com/) (or other CI services).
 
   </Card>
 
+  <Card title={"Carbon"} isOfficial author={"Kyle Taylor"} authorLink={"https://github.com/kyletaylored"} link={"https://github.com/pantheon-systems/terminus-carbon-plugin"}>
+
+Fetch carbon impact and other sustainability data on your Pantheon sites.
+
+  </Card>
+  
   <Card title={"Composer"} isOfficial author={"Brian Thompson"} authorLink={"https://github.com/rvtraveller"} link={"https://github.com/pantheon-systems/terminus-composer-plugin"}>
 
 Run [Composer](https://getcomposer.org/) commands on Pantheon sites.

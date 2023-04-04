@@ -2,19 +2,17 @@
 title: Pantheon Autopilot
 subtitle: Introduction
 description: Visual regression testing (VRT) for your WordPress or Drupal site.
-tags: [iterate, autopilot, testing, webops]
+tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 contributors: [nathantyler, alexfornuto, edwardangert]
-productpage: https://pantheon.io/autopilot?docs
 type: guide
-layout: guide
 showtoc: true
-anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
-reviewed: "2022-05-17"
+reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [automate]
-newcms: [--]
+innav: [true]
+categories: [automate, test, update, faqs]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]
@@ -61,19 +59,18 @@ Autopilot requires the following:
 - A Gold, Platinum, or Diamond account
 - [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
+- A supported framework:
+    - Drupal with Integrated Composer
+    - Drupal 8 with Integrated Composer or Drush 8
+    - WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
 
 ### Autopilot Site Compatibility
 
-Your site must be on Pantheon and meet the criteria below to be eligible for Autopilot. 
+<Partial file="autopilot/autopilot-compatibility.md" />
 
-| Do You Use Build Tools? |Drupal                                                                 | WordPress                                                             |
------------------------------------------------|------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| Yes = <span style = "color :red " > ❌  </span > not compatible | Drupal 8 (with Integrated Composer or Drush 8) =  <span style = "color:green" > ✔ </span > compatible | Any version without WordPress Multisite Network = <span style = "color:green" > ✔ </span > compatible|
-| No =  <span style = "color:green" > ✔  </span > compatible | Drupal 9 (with Integrated Composer) = <span style = "color:green" > ✔ </span > compatible                     | Any version with WordPress Multisite Network = <span style = "color:green" > ❌  </span > not compatible | 
-                                                                                    
 ## Autopilot For Agencies
 
-Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization. 
+Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization.
 
 Agency users can only access Autopilot through the Agency Workspace.
 

@@ -3,21 +3,20 @@ title: Local Development on Pantheon
 subtitle: Introduction
 description: Learn more about developing your Pantheon site locally.
 contenttype: [guide]
+innav: [true]
 categories: [automate]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]
 integration: []
 tags: [git, lando, local, sftp, workflow]
 reviewed: "2022-03-10"
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development
-anchorid: local-development
 ---
 
-Pantheon's [Localdev](/guides/localdev/troubleshoot-support) has been deprecated. However, there are many local development options for the Pantheon platform available for use on Pantheon. This guide provides an overview of several popular local development tools to help you get started.
+Pantheon's [Localdev](/guides/localdev) has been deprecated. However, there are many local development options for the Pantheon platform available for use on Pantheon. This guide provides an overview of several popular local development tools to help you get started.
 
 Pantheon provides several options for on-server development, however, local development has a number of advantages, especially if continuous internet access is a concern. Pantheon provides powerful local development tools, including [Terminus](/terminus) and [Multidev](/guides/multidev). Pantheon's platform can also be integrated with:
 
@@ -77,4 +76,4 @@ Review the resources below for additional developer tools and knowledge specific
 - [Terminus](/terminus)
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 - [Git on Pantheon](/guides/git)
-- [Developing on Pantheon Directly with SFTP Mode](/sftp)
+- [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)

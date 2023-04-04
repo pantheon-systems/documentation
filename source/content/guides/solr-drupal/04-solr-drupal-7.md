@@ -2,20 +2,18 @@
 title: Apache Solr for Drupal
 subtitle: Using Solr on Drupal 7
 description: Detailed information on using Apache Solr with Drupal 7.
-cms: "Drupal 7"
 contenttype: [guide]
-categories: [config]
-newcms: [drupal7]
+innav: [false]
+categories: [search]
+cms: [drupal7]
 audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
 contributors: [cityofoaksdesign, carolynshannon]
 reviewed: "2020-02-26"
-layout: guide
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal-7
-anchorid: solr-drupal
 editpath: solr-drupal/04-solr-drupal-7.md
 ---
 

@@ -26,7 +26,7 @@ class ReviewReport extends React.Component {
                     contenttype
                     description
                     integration
-                    newcms
+                    cms
                     permalink
                     product
                     subtitle
@@ -53,7 +53,7 @@ class ReviewReport extends React.Component {
         `}
         render={data => {
           const [searchTitle, setSearchTitle] = useState("")
-          const [searchnewCms, setSearchnewCms] = useState("")
+          const [searchcms, setSearchcms] = useState("")
           const [searchCategories, setSearchCategories] = useState("")
           const [searchTags, setSearchTags] = useState("")
           const [searchProduct, setSearchProduct] = useState("")
@@ -136,17 +136,17 @@ class ReviewReport extends React.Component {
                           <div className="input-group">
                             <input
                               type="text"
-                              id="command-search-newcms"
+                              id="command-search-cms"
                               className="form-control"
                               placeholder="Filter"
-                              onChange={a => setSearchnewCms(a.target.value)}
-                              value={searchnewCms}
+                              onChange={a => setSearchcms(a.target.value)}
+                              value={searchcms}
                             />
                             <div
                               style={{ background: "#fff; cursor:pointer" }}
                               className="input-group-addon"
                               id="clear-filter"
-                              onClick={a => setSearchnewCms("")}
+                              onClick={a => setSearchcms("")}
                             >
                               <span className="fa fa-times" />
                             </div>
@@ -227,9 +227,9 @@ class ReviewReport extends React.Component {
                           )
                         })
                         .filter(page => {
-                          return page.node.frontmatter.newcms
-                            ? page.node.frontmatter.newcms.filter(
-                              newcms => newcms.indexOf(searchnewCms) >= 0
+                          return page.node.frontmatter.cms
+                            ? page.node.frontmatter.cms.filter(
+                              cms => cms.indexOf(searchcms) >= 0
                               ).length
                             : page
                         })
@@ -291,11 +291,11 @@ class ReviewReport extends React.Component {
                                   : null}
                               </td>
                               <td>
-                                {page.node.frontmatter.newcms
-                                  ? page.node.frontmatter.newcms.map((newcms, i) => {
+                                {page.node.frontmatter.cms
+                                  ? page.node.frontmatter.cms.map((cms, i) => {
                                       return (
                                         <span key={i}>
-                                          {(i ? ", " : "") + newcms}
+                                          {(i ? ", " : "") + cms}
                                         </span>
                                       )
                                     })

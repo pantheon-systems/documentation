@@ -3,17 +3,16 @@ title: New Relic Performance Monitoring on Pantheon
 subtitle: MySQL Troubleshooting with New Relic
 description: Use integrated reporting services with New Relic Performance Monitoring to isolate MySQL performance issues on your Drupal or WordPress site.
 contenttype: [guide]
-categories: [measure]
-newcms: [--]
+innav: [false]
+categories: [track, troubleshooting]
+cms: [--]
 audience: [development, sysadmin]
 product: [newrelic]
 integration: [--]
 tags: [database, newrelic]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/new-relic/debug-mysql-new-relic
-anchorid: debug-mysql-new-relic
 ---
 
 This sections provides information on how to solve MySQL issues with New Relic&reg;.

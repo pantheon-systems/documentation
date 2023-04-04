@@ -1,10 +1,11 @@
 ---
 title: Manage Some Dependencies with Composer
-description: Get your feet wet with Composer on WordPress or Drupal 7 before going all in.
+description: Get your feet wet with Composer on WordPress or Drupal  before going all in.
 contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
 contenttype: [doc]
-categories: [--]
-newcms: [--]
+innav: [true]
+categories: [dependencies]
+cms: [--]
 audience: [--]
 product: [--]
 integration: [--]
@@ -12,13 +13,13 @@ tags: [composer, workflow, updates]
 type: guide
 permalink: docs/guides/:basename
 ---
-In this guide, you'll learn how to use Composer in small doses with WordPress and Drupal 7 so you can work towards best practices achieved by more advanced implementations. This allows you to continue using Pantheon's one-click core updates in the Site Dashboard while managing non-core dependencies with Composer.
+In this guide, you'll learn how to use Composer in small doses with WordPress and Drupal so you can work towards best practices achieved by more advanced implementations. This allows you to continue using Pantheon's one-click core updates in the Site Dashboard while managing non-core dependencies with Composer.
 
 ## Before You Begin
 
 - Read [Composer Fundamentals and Workflows](/guides/composer)
 - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
-- Create a WordPress or Drupal 7 site on Pantheon
+- Create a WordPress or Drupal site on Pantheon
 
 <Partial file="notes/partial-composer-adoption-warning.md" />
 
@@ -105,7 +106,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-init">
+<Tab title="Drupal" id="d7-init">
 
 1. If you haven't done so already, [clone your Pantheon site repository](/guides/git/git-config#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
@@ -186,7 +187,7 @@ Note that Pantheon does not run `composer install` on the platform, so you need 
 
 </Tab>
 
-<Tab title="Drupal 7" id="d7-require-papc-id">
+<Tab title="Drupal" id="d7-require-papc-id">
 
 #### Install Site Local Drush
 
@@ -230,6 +231,6 @@ The following example shows you how to install a site local Drush. You can use t
 
 ## Next Steps
 
-If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal 7 and WordPress.
+If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal and WordPress.
 
 If you're ready to learn best practices for Composer on Pantheon, follow the [Build Tools](/guides/build-tools) guide.

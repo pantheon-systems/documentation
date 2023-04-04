@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: [localdev]
-newcms: [drupal9]
+cms: [drupal9]
 product: [--]
 integration: [--]
 tags: [--]

@@ -2,17 +2,16 @@
 title: "Traffic"
 subtitle: Troubleshooting Traffic Events
 description: Determine and address the causes of unexpected traffic.
-tags: [plans]
+tags: [traffic, plans]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/remedy
-anchorid: remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [false]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
@@ -26,7 +25,7 @@ To get the most information about your site's traffic, review the `nginx-access.
 
 ## WordPress Best Practices
 
-Consult [WordPress best practices](/wordpress-best-practices) for a list of best practices you can implement. Pay particular attention to [avoiding XML-RPC attacks](/wordpress-best-practices#avoid-xml-rpc-attacks).
+Consult [WordPress best practices](/guides/wordpress-developer/wordpress-best-practices) for a list of best practices you can implement. Pay particular attention to [avoiding XML-RPC attacks](/guides/wordpress-developer/wordpress-best-practices#avoid-xml-rpc-attacks).
 
 In addition to your other WordPress security practices, take steps to block brute force attacks that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site:
 
@@ -148,7 +147,7 @@ if ($request_ip_forbidden) {
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7tab" active={true}>
+<Tab title="Drupal" id="d7tab" active={true}>
 
 Navigate to the site's `/admin/config/people/ip-blocking` and enter the IP address to block.
 

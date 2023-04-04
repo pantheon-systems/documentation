@@ -139,8 +139,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        getfeedbackform
         categories
+        getfeedbackform
         contributors {
           id
           name

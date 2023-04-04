@@ -4,13 +4,12 @@ subtitle: Configuring Environment Indicators
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
 tags: [site, terminus, workflow, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-indicator
-anchorid: environment-indicator
 contenttype: [guide]
+innav: [false]
 categories: [config]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
@@ -93,7 +92,7 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 
 ## Drupal: Environment Indicator
 
-The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 sites.
+The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal sites.
 
 1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
@@ -107,12 +106,12 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  terminus drush $site.$env -- en environment_indicator -y
  ```
 
-1. Add the following within `settings.php` for Drupal 7:
+1. Add the following within `settings.php` for Drupal:
 
     ```php
     /*
     * Environment Indicator module settings.
-    * see: https://pantheon.io/docs/guides/environment-configuration/environment-indicator
+    * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
     */
 
     $conf['environment_indicator_overwrite'] = TRUE;
@@ -180,6 +179,6 @@ All environments will now show a color-coded environment indicator, as defined w
 
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
 
-- [Environment-Specific Configurations for Drupal 9](/guides/environment-configuration/environment-specific-config-d9)
+- [Environment-Specific Configurations for Drupal](/guides/environment-configuration/environment-specific-config-drupal)
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config)

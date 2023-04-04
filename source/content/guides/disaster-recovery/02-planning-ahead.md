@@ -2,28 +2,26 @@
 title: Pantheon Disaster Recovery Playbook
 subtitle: Planning Ahead
 description: Avert potential site failures
-generator: pagination
-layout: guide
 tags: [webops, workflow]
 contributors: [joshlieb, joa-pan]
 reviewed: "2021-07-26"
 permalink: docs/guides/disaster-recovery/planning-ahead
-anchorid: disaster-recovery
 editpath: disaster-recovery/02-planning-ahead.md
 contenttype: [guide]
+innav: [false]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [cdn, newrelic]
 integration: [--]
 ---
 
 
-Disasters are sometimes unavoidable, but steps can be taken to ensure that these incidents are not frequent, reversible, and not destructive.
+Disasters are sometimes unavoidable, but steps can be taken to ensure that these incidents are reversible, not frequent, and not destructive.
 
 ## Monitor and Optimize Performance
 
-Keep ahead of performance issues by regularly reviewing performance with the [New Relic Application Performance Monitor](/guides/new-relic)(APM), included with all non-Basic Site plans. For more information, refer to the [Pantheon New Relic documentation](/guides/new-relic).
+Keep ahead of performance issues by regularly reviewing performance with the [New Relic Application Performance Monitor](/guides/new-relic) (APM), included with all non-Basic Site plans. For more information, refer to the [Pantheon New Relic documentation](/guides/new-relic).
 
 New Relic also provides a performance monitoring service that can send notification of downtime or degraded performance by email and other channels. Refer to the documentation on [New Relic Alerts](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/introduction-new-relic-alerts) for more information.
 
@@ -37,7 +35,7 @@ The Pantheon Global CDN delivers pages directly to users from the Varnish edge p
 
 ### Process
 
-* Determine the extent to which your site is utilizing the edge cache by requesting a cache hit rate report from Support. This shows the cache hit rate for the full site on a daily basis.
+* Determine the extent to which your site is using the edge cache by requesting a cache hit rate report from support. This report shows the cache hit rate for the full site on a daily basis.
 
 * Test the cacheability of individual pages by examining the page headers using CURL or developer tools. Refer to [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching) for more information.
 

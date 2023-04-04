@@ -3,17 +3,16 @@ title: "Billing"
 subtitle: Invoices and Subscriptions
 description: Manage and view invoices and subscriptions.
 contenttype: [guide]
+innav: [false]
 categories: [billing]
-newcms: [--]
+cms: [--]
 audience: [business]
 product: [--]
 integration: [--]
 tags: [billing]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/billing/invoices
-anchorid: invoices
 editpath: docs/guides/account-mgmt/billing/07-invoices.md
 reviewed: "2022-09-19"
 ---
@@ -29,6 +28,10 @@ To view your invoices:
 1. Click **Settings**, then click **Invoices**.
 
 Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list.
+
+### Receiving Invoices via Email
+
+Invoices are emailed to the email address associated with the payment method.  To change the email address, [update the payment method](/guides/account-mgmt/billing/methods#update-personal-payment-method).
 
 ### Invoice Details
 

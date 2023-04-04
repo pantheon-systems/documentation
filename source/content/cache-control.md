@@ -3,8 +3,9 @@ title: Bypassing Cache with HTTP Headers
 description: Set HTTP headers to disable caching along Pantheon's edge layer, Varnish.
 tags: [cache, cdn, cookies]
 contenttype: [doc]
+innav: [true]
 categories: [cache]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
@@ -24,7 +25,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
 <TabList>
 
-<Tab title="Drupal 7" id="d7" active={true}>
+<Tab title="Drupal" id="d7" active={true}>
 
 Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 

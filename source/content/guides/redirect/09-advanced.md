@@ -3,18 +3,17 @@ title: Redirects Guide
 subtitle: Advanced Redirects and Restrictions
 description: Configure custom redirect logic for specific scenarios.
 contenttype: [guide]
+innav: [false]
 categories: [domains]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [dns, https, redirects]
-layout: guide
 contributors: [wordsmither]
 reviewed: "2022-08-01"
 showtoc: true
 permalink: docs/guides/redirect/advanced
-anchorid: advanced
 ---
 
 Basic domain and HTTPS redirection can be handled by the [Primary Domain](/guides/redirect#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
@@ -336,7 +335,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && (php_sapi_name() !== 'cli') && !i
 
 </Tab>
 
-<Tab title="Drupal 7" id="restrict-drupal-7">
+<Tab title="Drupal" id="restrict-drupal-7">
 
 The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `$trusted_ips` array:
 

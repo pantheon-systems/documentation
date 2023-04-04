@@ -4,16 +4,15 @@ subtitle: Troubleshooting SFTP
 description: Get solutions to common SFTP troubleshooting scenarios.
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+innav: [false]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/troubleshooting-sftp
-anchorid: troubleshooting-sftp
 ---
 
 This section provides solutions to common SFTP troubleshooting scenarios.

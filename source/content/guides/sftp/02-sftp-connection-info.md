@@ -4,16 +4,15 @@ subtitle: SFTP Access and Authentication
 description: Access your SFTP Connection Info and authenticate your SFTP client.
 tags: [files, sftp, code]
 reviewed: "2020-02-18"
+innav: [false]
 categories: [sftp]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/sftp-connection-info
-anchorid: sftp-connection-info
 ---
 
 This section provides information on how to access the SFTP Connection Info in your dashboard, and how to authenticate your SFTP client.

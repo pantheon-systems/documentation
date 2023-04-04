@@ -3,17 +3,16 @@ title: Multidev
 subtitle: Make Edits and Merge Code in Your Multidev
 description: Learn how to make edits and merge code in your Multidev.
 contenttype: [guide]
-categories: [--]
-newcms: [--]
+innav: [false]
+categories: [multidev]
+cms: [--]
 audience: [development]
 product: [multidev]
 integration: [--]
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev/edit-multidev
-anchorid: edit-multidev
 ---
 
 This section provides steps on how to make edits, merge code in your Multidev environments, and rename a branch.

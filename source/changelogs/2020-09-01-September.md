@@ -9,7 +9,7 @@ reviewed: "2020-09-01"
 
 ### Drupal 9.0
 
-[Drupal 9](/drupal-9) is available for early access testing with new or existing sites. We don't recommend fully switching a live site to Drupal 9 until we have upgraded our version of MariaDB.
+[Drupal 9](/drupal) is available for early access testing with new or existing sites. We don't recommend fully switching a live site to Drupal 9 until we have upgraded our version of MariaDB.
 
 <!-- excerpt -->
 

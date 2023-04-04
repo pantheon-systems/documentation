@@ -3,17 +3,16 @@ title: Platform Considerations
 subtitle: Terminus Platform Support
 description: Learn more about Terminus support on the Pantheon platform. 
 contenttype: [guide]
+innav: [false]
 categories: [overview]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [terminus]
 integration: [--]
 tags: [files, libraries, security, webops]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/platform-considerations/terminus-platform
-anchorid: terminus-platform
 ---
 
 This section provides information on Terminus support on the Pantheon platform. Refer to the [Terminus Guide](/terminus) for comprehensive Terminus information, or to [Supported Terminus Versions](/terminus/supported-terminus) for detailed Terminus version compatibility.

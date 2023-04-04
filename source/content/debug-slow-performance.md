@@ -4,11 +4,13 @@ description: Identify common problems with Drupal or WordPress performance speed
 tags: [cache, code, logs, measure]
 permalink: docs/debug-slow-performance
 contenttype: [doc]
+innav: [true]
 categories: [optimize]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
+reviewed: "2022-12-07"
 ---
 This article covers the most common causes for performance problems, demonstrates how to diagnose bottlenecks, and provides actionable solutions for developers.
 
@@ -63,7 +65,7 @@ If the cache lifetime is set to something that doesn't make sense for your traff
 ### Drupal Note
 See our [guidelines on Drupal's performance settings](/drupal-cache) for more details.
 
-Other caching systems that aren't on by default that should be enabled include [block caching](/drupal-cache), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
+Other caching systems that aren't on by default that should be enabled include [Object Caching backend](/guides/object-cache) and [caching for view results](/drupal-caching-views).
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
@@ -101,7 +103,7 @@ Both Drupal and WordPress rely on running regular maintenance tasks via a cron s
 
 For Drupal sites, Pantheon executes the cron every hour via Drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/drupal-cron).
 
-This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/wordpress-cron).
+This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/guides/wordpress-developer/wordpress-cron).
 
 ## External Call Timeouts
 
@@ -111,6 +113,8 @@ Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation 
 
 ## Memory Errors
 An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](https://pantheon.io/plans/pricing-comparison), so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will cancel the process, resulting in a failed request from the user's perspective.
+
+In general, Drupal's Queue Workers should be used for any process involving large numbers of nodes and use the [Queue UI](https://www.drupal.org/project/queue_ui) module to monitor queue operations.
 
 Debugging memory issues can be challenging. Here are some things to consider when addressing memory issues:
 
@@ -125,7 +129,8 @@ Please note that memory issues caused by custom code fall outside our [scope of 
 ### Drupal
 Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler) module can help troubleshoot issues by logging peak memory usage.
 
-GD Image library and UI modules such as Views UI, Feeds UI, etc are known causes for high memory usage. 
+GD Image library and UI modules such as Views UI, Feeds UI, etc are known causes for high memory usage. All versions of PHP on pantheon's platform
+support ImageMagick for offloading of resource-intensive image tasks and Redis for caching of data.
 
 ### WordPress
 Refer to [Debugging in WordPress](https://codex.wordpress.org/Debugging_in_WordPress) from the WordPress.org Codex for information on debugging common issues.

@@ -4,13 +4,12 @@ subtitle: Introduction
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
 tags: [git, cli, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/git
-anchorid: git
 contenttype: [guide]
+innav: [true]
 categories: [git]
-newcms: [drupal, wordpress]
+cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [git]
@@ -35,6 +34,8 @@ Git allows you to create a parallel version or branch of your current codebase a
 You can push this new version of your website to the Pantheon platform, and then build an environment around it with [Multidev](/guides/multidev).
 
 Your changes are sent up the pipeline to your Live environment when you commit. [Git allows you to quickly revert](/guides/git/undo-commits) changes without the risk of restoring the entire environment from a backup if a bug makes it past your automated testing.
+
+<Partial file="build-deploy-terminology.md" />
 
 ## More Resources
 

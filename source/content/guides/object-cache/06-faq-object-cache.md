@@ -3,17 +3,16 @@ title: Object Cache (formerly Redis)
 subtitle: FAQs
 description: Get answers to your Object Cache questions.
 contenttype: [guide]
+innav: [false]
 categories: [cache]
-newcms: [--]
+cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/object-cache/faq-object-cache
-anchorid: faq-object-cache
 ---
 
 This section provides answers to frequently asked Object Cache questions.

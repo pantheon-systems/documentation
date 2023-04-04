@@ -4,8 +4,9 @@ description: Learn how mission-critical websites can stay online in the event of
 tags: [backup, professional-services, site, webops]
 reviewed: "2020-02-26"
 contenttype: [doc]
+innav: [true]
 categories: [overview]
-newcms: [drupal, drupal7, wordpress]
+cms: [drupal7, wordpress]
 audience: [agency, development]
 product: [search]
 integration: [--]
@@ -83,7 +84,7 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 <TabList>
 
-<Tab title="Drupal 7" id="solr-d7" active={true}>
+<Tab title="Drupal" id="solr-d7" active={true}>
 
 #### ApacheSolr module
 
@@ -111,13 +112,13 @@ You can also do this via Terminus:
 terminus wp <site>.<env> -- solr index
 ```
 
-For WP Site Networks, you will need to index all your subsites individually:
+For WordPress Multisites, you will need to index all your subsites individually:
 
 ```bash{promptUser: user
 terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
 ```
 
-Learn more about configuring and optimizing Solr Power in the [Solr Search for WordPress](/guides/wordpress-configurations/wordpress-solr) documentation.
+Learn more about configuring and optimizing Solr Power in the [Solr Search for WordPress](/guides/wordpress-developer/wordpress-solr) documentation.
 
 </Tab>
 
@@ -131,9 +132,9 @@ You may also consider one of the following options:
 
 - **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
 
-If none of these options work for your site's needs, see our documentation on how to safely remove Pantheon Search for [Drupal 7](/guides/solr-drupal/solr-drupal-7/#safely-remove-solr) and [WordPress](/guides/wordpress-configurations/wordpress-solr/#safely-remove-solr).
+If none of these options work for your site's needs, see our documentation on how to safely remove Pantheon Search for [Drupal 7](/guides/solr-drupal/solr-drupal-7/#safely-remove-solr) and [WordPress](/guides/wordpress-developer/wordpress-solr/#safely-remove-solr).
 
 ## More Resources
 
 - [Global Regions](/regions)
-- [Backups Tool](/backups)
+- [Backups Tool](/guides/backups)

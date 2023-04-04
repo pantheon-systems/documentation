@@ -5,13 +5,12 @@ description: Learn how to submit a configuration or support request.
 tags: [professional-services, logs, cdn, security]
 contributors: [whitneymeredith]
 reviewed: "2022-11-01" 
-layout: guide
 showtoc: true
 permalink: docs/guides/agcdn/submit-request
-anchorid: submit-request
 contenttype: [guide]
-categories: [optimize, cookies, help]
-newcms: [--]
+innav: [false]
+categories: [help]
+cms: [--]
 audience: [development]
 product: [cdn]
 integration: [--]

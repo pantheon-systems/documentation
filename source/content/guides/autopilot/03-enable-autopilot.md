@@ -2,17 +2,16 @@
 title: Pantheon Autopilot
 subtitle: Autopilot Setup and Configuration
 description: Enable and configure Autopilot visual regression testing (VRT) for your WordPress or Drupal site.
-tags: [iterate, autopilot, testing, webops]
+tags: [iterate, autopilot, testing, webops, D8, D9, D10 ]
 type: guide
-layout: guide
 showtoc: true
-anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
-reviewed: "2022-04-05"
+reviewed: "2022-12-13"
 contenttype: [guide]
-categories: [automate]
-newcms: [--]
+innav: [false]
+categories: [automate, test, update, faq]
+cms: [--]
 audience: [development]
 product: [autopilot]
 integration: [--]
@@ -30,7 +29,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
 
-1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table. 
+1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table.
 
    To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
 
@@ -40,7 +39,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
    ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
 
-1. Select the deployment destination: Dev, Test, or Live.
+1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
    <Alert title="Note"  type="info" >
 
@@ -58,7 +57,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 1. Use the **On**/**Off** toggles to choose which features and elements should be tracked or excluded from updates.
 
-   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes). 
+   Any elements that Autopilot detects as available for exclusion will be listed in each category (Modules, Plugins, Themes).
 
 1. Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
 
@@ -73,6 +72,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
     - Dev
     - Test
     - Live
+    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a> for more information." />
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -108,7 +108,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
-   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal 9 sites), Autopilot will show warnings in the sections where Composer manages updates.
+   If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 1. Click **Save** for each section of the configuration in which you make changes.
 
@@ -120,18 +120,9 @@ Use the **On**/**Off** toggle to choose which features and elements should be tr
 
 ### Update Destination & Frequency
 
-You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. 
+You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
 
-Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
-
-![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot-sync-environment.png)
-
-
-1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
-
-    - Dev
-    - Test
-    - Live
+![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-destination-frequency.png)
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -142,6 +133,14 @@ Some selection options are grayed out for customers with Gold plans. Only custom
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
    The **Sync Environment** feature syncs your Live environment to your Dev environment before Autopilot performs updates. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
+
+1. Use the **Deployment Destination** dropdown menu to choose which environment Autopilot should deploy up to:
+
+   - Dev
+   - Test
+   - Live
+   - Do Not Deploy
+      - Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
 
 1. Click **Save** to save the changes.
 

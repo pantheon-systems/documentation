@@ -2,17 +2,16 @@
 title: "Traffic"
 subtitle: Measuring Traffic
 description: Learn how Pantheon measures traffic.
-tags: [plans]
+tags: [traffic]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/measure
-anchorid: measure
 editpath: docs/guides/account-mgmt/traffic/03-measure.md
 reviewed: "2022-09-19"
 contenttype: [guide]
+innav: [false]
 categories: [plans]
-newcms: [--]
+cms: [--]
 audience: [sysadmin]
 product: [--]
 integration: [--]
@@ -57,4 +56,4 @@ Certain activities are generally excluded from the calculation of visits and pag
 ## More Resources
 
 - [Account Management](/manage)
-- [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site
+- [WordPress Best Practices](/guides/wordpress-developer/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site

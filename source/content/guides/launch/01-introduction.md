@@ -4,13 +4,12 @@ subtitle: Introduction
 description: Review essential steps for launching your site on Pantheon.
 tags: [collaborate, launch, site, webops, workflow]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
-anchorid: launch
 permalink: docs/guides/launch/
 contenttype: [guide]
+innav: [true]
 categories: [overview, launch, domains]
-newcms: [wordpress, drupal]
+cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]
 integration: [--]
