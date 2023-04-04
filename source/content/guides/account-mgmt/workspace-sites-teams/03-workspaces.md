@@ -1,7 +1,7 @@
 ---
 title: Workspaces, Sites, and Teams
 subtitle: Professional Workspaces
-description: Learn how to manage and use workspaces.
+description: Learn how to use and manage workspaces.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
 showtoc: true
@@ -17,11 +17,37 @@ product: [--]
 integration: [--]
 ---
 
-Workspaces are a home base for your WebOps.  There are two types of workspaces:
+Workspaces are a home base for your WebOps. There are two types of workspaces:
 
-- **Personal Workspace**: The personal workspace displays tools for the sites you own or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
+<TabList>
 
-- **Professional Workspace**: Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
+<Tab title="Personal Workspace" id="personal-ws" active={true}>
+
+The Personal Workspace displays tools for the sites you own, or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
+
+- Every Pantheon user is assigned one Personal Workspace. 
+- All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
+- You can use a Personal Workspace for your own projects, and for insight into sites from other organizations you are working with.
+- WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. 
+
+</Tab>
+
+<Tab title="Professional Workspace" id="professional-ws">
+
+Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
+
+You can create a Professional Workspace as the home for an organization’s sites and the teams working on them. 
+
+- Creating a Professional Workspace is free. 
+- Access to the collaboration features below are available to sites owned by Gold Workspaces or above:
+	- [Multidev](/guides/multidev)
+	- [Custom Upstreams](/guides/custom-upstream)
+- You can create any number of Professional Workspaces. 
+	- You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
+
+</Tab>
+
+</TabList>
 
 ## Professional Workspace Features
 
