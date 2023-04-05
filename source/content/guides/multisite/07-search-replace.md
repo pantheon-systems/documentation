@@ -28,7 +28,7 @@ This section provides information on how to configure automatic platform search 
 A [WordPress Multisite](/guides/multisite)
 
 ## Opting In
-To enable search replace between environments on a WPMS site, add 
+To enable search and replace between environments on a WPMS site, add 
 ```yaml:title=pantheon.yml
 search_replace: true
 ```
@@ -45,9 +45,9 @@ See [this gist](https://gist.github.com/scottbuscemi/b051ad6510ef8494aff80d0f43a
 
 Search-replace will run for each domain listed in the source environment that has a matching key in the target environment.
 
-If search and replace is enabled for an environment, but `sites.yml` does not exist, nothing will be updated. if `sites.yml` is different between environments, the `domain_maps` in the target environment’s `sites.yml` will be used to determine what to replace.
+If search and replace is enabled for an environment, but `sites.yml` does not exist, nothing will be updated. If `sites.yml` is different between environments, the `domain_maps` in the target environment’s `sites.yml` will be used to determine what to replace.
 
-There is currently a limit of 25 sites that can be configured for search and replace. We expect this number to increase before general availability.
+There is currently a limit of 25 sites that can be configured for search and replace. We expect this number to increase before General Availability.
 
 ### Subdirectory WPMS
 For subdirectory Multisites, there is no configuration beyond adding the value to `pantheon.yml`. Search-replace will match the behavior of the platform’s search and replace for non-WPMS sites.
