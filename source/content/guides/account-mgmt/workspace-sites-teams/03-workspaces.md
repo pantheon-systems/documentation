@@ -42,6 +42,7 @@ You can create a Professional Workspace as the home for an organization’s site
 - Access to the collaboration features below are available to sites owned by Gold Workspaces or above:
 	- [Multidev](/guides/multidev)
 	- [Custom Upstreams](/guides/custom-upstream)
+	- [Autopilot](/guides/autopilot)
 - You can create any number of Professional Workspaces. 
 	- You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
 
@@ -73,7 +74,7 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
 1. Click on your gravatar and navigate to `Create New Workspace`.
 
-  ![Create New Workspace](../../images/guides/account-mgmt/create-new-workspace.png)
+  ![Create New Workspace](../../images/guides/account-mgmt/create-professional-workspace.png)
 
 1. Name your Workspace and fill in details about your Workspace then click `Continue`.
 
@@ -99,7 +100,7 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
 <Alert title="Note"  type="info" >
 
-Now that you have a Professional Workspace with a Gold Account Plan, you can [add a supporting organization to your site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site).
+Now that you have a Professional Workspace with a Gold Account Plan, you can [add a supporting organization to your site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to take advantage of your new features.
 
 </Alert>
 
@@ -123,7 +124,7 @@ As a Pantheon Partner, you receive access to:
 - Preferred Pricing on site hosting plans
 
 
-**Partner Trial**: If you are creating a workspace for a web agency, you will be assigned a [Partner Trial Account](https://pantheon.io/partners/find-pantheon-partner) workspace that lets you try Gold Account Plan features free for 90 days. At the end of your trial period, the Account Plan will automatically downgrade to a Silver Account Plan unless you upgrade to a Gold Account Plan or higher.
+**Partner Trial**: If you are creating a workspace for a web agency, you will be assigned a [Partner Trial Account](https://pantheon.io/partners/find-pantheon-partner) workspace that lets you try Gold Account Plan features free for 90 days.
 
 **Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. When you register as an agency, you'll start earning credits with each sale of Pantheon services, and you'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
 
