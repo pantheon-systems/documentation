@@ -253,6 +253,16 @@ Complete the following before deploying `filemount` (**required**):
 
 1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths).
 
+### Search and Replace for WordPress Multisite (Early Access)
+
+You can enable search and replace on [WordPress Multisites](/guides/multisite) by adding the following to your `pantheon.yml` file:
+
+```yaml:title=pantheon.yml
+search_replace: true
+```
+
+Running search and replace on a _subdomain_ Multisite also requires configuring a `sites.yml` file. Refer to [WordPress Multisite Search and Replace](/guides/multisite/search-replace) for more information.
+
 ## Quicksilver Platform Integration Hooks
 
 Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a team member. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
@@ -289,7 +299,7 @@ While our parser will reject a `pantheon.yml` that is invalid, it won't necessar
 
 ### Why can’t I update the PHP version on my Multidev?
 
-The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev: 
+The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev:
 
 1. Navigate to [your `pantheon.yml` file](#configure-your-php-version).
 
