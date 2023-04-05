@@ -168,6 +168,10 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 
 1. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.
 
+## Rotate `hash_salt` setting
+
+If you need to change the value for the `hash_salt` setting, you could use terminus `env:rotate-random-seed` [command](/terminus/commands/env-rotate-random-seed). Please note that doing so will invalidate all one-time login links.
+
 ## Inclusions and Loading Order of Settings and Services Files
 
 | Settings File         | Inclusions |
