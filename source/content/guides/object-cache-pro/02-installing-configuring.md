@@ -67,18 +67,19 @@ terminus redis:enable <site>
 	- There are some configuration options that you must add to set it up the plugin now that you have Object Cache Pro in your codebase. All of these options are stored in your `wp-config.php` in the root of your site repository.
 
 1. Add the license token into your `wp-config.php` file. Note that the license key will be provided by the platform in the future. Currently, you are responsible for adding it to your repository. Open the `wp-config.php` file and add the values below to the `WP_REDIS_CONFIG` constant somewhere above the `/* That's all, stop editing! Happy Pressing. */` line at the bottom of the file.
-		```php
+
+	```php
 		/**
 		 * Object Cache Pro config
 		 */
 		define( 'WP_REDIS_CONFIG', [
 			'token' => '<LICENSE-TOKEN>',
 		] );
-		```
+	```
 
 1. Add Object Cache Pro configuration options after `define( 'WP_REDIS_CONFIG', [` in `wp-config.php` for a **standard WordPress** site. Note that there are more [configuration options](https://objectcache.pro/docs/configuration-options) that can be added. We recommend using the below settings which are optimized for Pantheon if you don't know specifically what each option does. The full, recommended contents of the `WP_REDIS_CONFIG` constant are:
 
-		```php
+	```php
 		'token' => '<LICENSE-TOKEN>',
 		'host' => $_SERVER['CACHE_HOST'] ?? '127.0.0.1',
 		'port' => $_SERVER['CACHE_PORT'] ?? 6379,
@@ -94,7 +95,7 @@ terminus redis:enable <site>
 			'retention' => 3600, // 1 hour
 			'footnote' => true,
 			],
-		```
+	```
 
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
@@ -164,41 +165,28 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	git add auth.json && git commit -m "Add Object Cache Pro auth token."
 	```
 
-1. Add the Object Cache Pro repository to your `composer.json` file's `repositories` section:
+1. Add the Object Cache Pro repository to your `composer.json` file's `repositories` section. Your final `repositories` section should look something like this:
 
-		```json
-		{
-			"repositories": [
-				{
-					"type": "composer",
-					"url": "https://objectcache.pro/repo/"
-				}
-			]
-		}
-		```
-
-	Your final `repositories` section should look something like this:
-
-		```json
-		"repositories": [
+	```json
+		repositories: [
 			{
-				"type": "composer",
-				"url": "https://objectcache.pro/repo/"
+			"type": "composer",
+			"url": "https://objectcache.pro/repo/"
 			},
 			{
-				"type": "composer",
-				"url": "https://wpackagist.org",
-				"only": [
-					"wpackagist-plugin/*",
-					"wpackagist-theme/*"
-				]
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+					]
 			},
 			{
-				"type": "path",
-				"url": "upstream-configuration"
+			"type": "path",
+			"url": "upstream-configuration"
 			}
-		],
-		```
+			],
+	```
 
 1. Install Object Cache Pro via Composer using one of the methods listed below.
 
@@ -238,7 +226,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 1. Locate the `Config::apply()` line at the bottom of the file and add the following code above the line:
 
-		```php
+	```php
 		/**
 		 * Object Cache Pro config
 		 */
@@ -264,11 +252,11 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		Config::define( 'WP_REDIS_CONFIG', [
 			'token' => '<LICENSE-TOKEN>',
 		] );
-		```
+	```
 
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
-		```php
+	```php
 		'token' => '<LICENSE-TOKEN>',
 		'host' => $_SERVER['CACHE_HOST'] ?? '127.0.0.1',
 		'port' => $_SERVER['CACHE_PORT'] ?? 6379,
@@ -284,7 +272,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 			'retention' => 3600, // 1 hour
 			'footnote' => true,
 		],
-		```
+	```
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
 1. Activate the plugin and enable Redis in the plugin. You can activate the Object Cache Pro plugin from the WordPress Admin, locally with WP-CLI, or via Terminus.
@@ -317,7 +305,5 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
-
-	
 
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
