@@ -253,14 +253,15 @@ Complete the following before deploying `filemount` (**required**):
 
 1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths).
 
-### Searchand Replace for WordPress Multisite (Early Access)
+### Search and Replace for WordPress Multisite (Early Access)
 
-You can opt-in to search and replace on [WordPress Multisites](/guides/multisite) by adding the following to `pantheon.yml`:
+You can enable search and replace on [WordPress Multisites](/guides/multisite) by adding the following to your `pantheon.yml` file:
+
 ```yaml:title=pantheon.yml
 search_replace: true
 ```
 
-Running search and replace on a _subdomain_ Multisite will also require configuring a `sites.yml` file. For more information, see [WordPress Multisite Search Replace](/guides/multisite/search-replace).
+Running search and replace on a _subdomain_ Multisite also requires configuring a `sites.yml` file. Refer to [WordPress Multisite Search and Replace](/guides/multisite/search-replace) for more information.
 
 ## Quicksilver Platform Integration Hooks
 
