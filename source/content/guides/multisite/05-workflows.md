@@ -69,7 +69,7 @@ terminus remote:wp <site>.<env> -- search-replace --network
 
 Now that you've performed the search and replace on your database, WordPress has the correct stored configuration.
 
-##  Flush Cache Globally after Search-Replace
+##  Flush Cache Globally after Search and Replace
 If you use Redis as a persistent storage backend for your object cache, you'll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn't serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
