@@ -129,8 +129,8 @@ class ContributorTemplate extends React.Component {
 export default ContributorTemplate
 
 export const pageQuery = graphql`
-  query ContributorById($githubid: String!) {
-    contributorYaml(githubid: { eq: $githubid }) {
+  query ContributorById($id: String) {
+    contributorYaml(githubid: { eq: $id }) {
       githubid
       name
       avatar
@@ -146,7 +146,7 @@ export const pageQuery = graphql`
       filter: {
         fileAbsolutePath: { ne: null }
         frontmatter: {
-          contributors: { elemMatch: { id: { eq: $githubid } } }
+          contributors: { elemMatch: { githubid: { eq: $id } } }
           draft: {ne: true}
         }
       }
