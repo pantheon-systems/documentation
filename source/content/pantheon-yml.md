@@ -299,7 +299,7 @@ While our parser will reject a `pantheon.yml` that is invalid, it won't necessar
 
 ### Why can’t I update the PHP version on my Multidev?
 
-The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev: 
+The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev:
 
 1. Navigate to [your `pantheon.yml` file](#configure-your-php-version).
 
