@@ -41,6 +41,13 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 ### WordPress with Integrated Composer
 
+
+<Alert title="Note" type="info">
+
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with **Bedrock**. This upstream is currently in EA.
+
+</Alert >
+
 1. [Fork the Pantheon-maintained repository](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
 
 1. [Add a new Custom Upstream](/guides/custom-upstream/create-custom-upstream#connect-repository-to-pantheon) on the Pantheon Dashboard.
