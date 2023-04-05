@@ -70,33 +70,33 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
 1. Navigate to your Personal Workspace.
 
-  ![Personal Workspace](../../images/guides/account-mgmt/personal-workspace.png)
+  ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
 
 1. Click on your gravatar and navigate to `Create New Workspace`.
 
-  ![Create New Workspace](../../images/guides/account-mgmt/create-professional-workspace.png)
+  ![Create New Workspace](../../../../images/guides/account-mgmt/create-professional-workspace.png)
 
 1. Name your Workspace and fill in details about your Workspace then click `Continue`.
 
-  ![Create Workspace Details](../../images/guides/account-mgmt/create-workspace-details.png)
+  ![Create Workspace Details](../../../../images/guides/account-mgmt/create-workspace-details.png)
 
 1. Add any team members you would like to include in this Workspace and click `Continue`. You will be automatically added as a team member.
 
-  ![Invite Team Members](../../images/guides/account-mgmt/invite-team.png)
+  ![Invite Team Members](../../../../images/guides/account-mgmt/invite-team.png)
 
 1. Your Workspace is now ready. Click `Go to Workspace Home`.
 
-  ![Workspace is ready](../../images/guides/account-mgmt/ws-ready.png)
+  ![Workspace is ready](../../../../images/guides/account-mgmt/ws-ready.png)
 
 1. To upgrade to Gold, you can click on `Upgrade Workspace` in the banner at the top of the page, or click `Upgrade now` on the right side of the page, under `Get the most out of Pantheon`.
 
-  ![Upgrade to Gold](../../images/guides/account-mgmt/upgrade-workspace.png)
+  ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
 
 1. On the `Change Your Workspace Plan` page, click `Upgrade Now` and you will then be prompted to add a Payment Method.
 
 1. Once your payment method is accepted, you will be redirected to a Billing page with your Account Subscription details.
 
-  ![Billing Page](../../images/guides/account-mgmt/billing-page.png)
+  ![Billing Page](../../../../images/guides/account-mgmt/billing-page.png)
 
 <Alert title="Note"  type="info" >
 
