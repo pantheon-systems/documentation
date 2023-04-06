@@ -1,6 +1,6 @@
 ---
 title: Workspaces, Sites, and Teams
-subtitle: Professional Workspaces
+subtitle: Personal and Professional Workspaces
 description: Learn how to use and manage workspaces.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither, michellecolon-pantheon]
@@ -21,20 +21,20 @@ Workspaces are a home base for your WebOps. There are two types of workspaces:
 
 <TabList>
 
-<Tab title="Personal Workspace" id="personal-ws" active={true}>
+<Tab title="Personal Workspace" id="personal-workspace" active={true}>
 
-The Personal Workspace displays tools for the sites you own, or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
+The Personal Workspace displays tools for the sites you own, or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
 
 - Every Pantheon user is assigned one Personal Workspace. 
 - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
-- You can use a Personal Workspace for your own projects, and for insight into sites from other organizations you are working with.
-- WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. 
+- You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
+- WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
 
 </Tab>
 
-<Tab title="Professional Workspace" id="professional-ws">
+<Tab title="Professional Workspace" id="professional-workspace">
 
-Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
+Professional workspaces bring together users and sites to allow administrators to effectively manage a large number of sites. You may be a member of any number of professional workspaces, depending on your company setup.
 
 You can create a Professional Workspace as the home for an organization’s sites and the teams working on them. 
 
@@ -106,13 +106,13 @@ Now that you have a Professional Workspace with a Gold Account Plan, you can [ad
 
 </Tab>
 
-<Tab title="Platinum & Diamond Account Plan" id="pd">
+<Tab title="Platinum & Diamond Account Plan" id="platinum-diamond">
 
  Platinum and Diamond Account Plans offer all the tools and features of the Gold Account Plan, and include features that benefit large teams and enterprise organizations such as: direct access to experts, dedicated support, and more. [Contact Sales](https://pantheon.io/contact-sales) for more information about upgrading to a Platinum or Diamond Account Plan.
 
 </Tab>
 
-<Tab title="Partner Program" id="pp">
+<Tab title="Partner Program" id="partner-program">
 
 You will only be assigned a [Partner Program](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency. 
 
