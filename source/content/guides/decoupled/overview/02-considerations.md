@@ -119,3 +119,7 @@ Front-End Sites are compatible with Multidev. The Front-End Sites Multidev workf
 - On a pull request, the Multidev environment is stood up and the preview and backend URL are displayed in GitHub on the PR, on a GitHub deployment, and also in the Front-End Sites Overview section of the dashboard. The build details for a PR will also be linked to GitHub.
 
 Refer to [Types of Environments](/guides/decoupled/overview/site#types-of-environments) for more information.
+
+## Static Site Indexing
+
+We recommend that you use proxy search requests to [Solr](/solr) instances on their backends. We also recommend that you use statically compiled search engines.
