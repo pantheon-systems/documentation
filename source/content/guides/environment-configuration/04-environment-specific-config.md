@@ -139,7 +139,7 @@ You should avoid using [`update_option()`](https://codex.wordpress.org/Function_
 
 ## Rotate Authentication Unique Keys and Salts
 
-If you need to change the value for the keys and salts, you could use terminus `env:rotate-random-seed` [command](/terminus/commands/env-rotate-random-seed). Please note that doing so will invalidate all one-time login links and force all users to login again.
+You can use the Terminus `env:rotate-random-seed` [command](/terminus/commands/env-rotate-random-seed) if you need to change the value for the keys and salts. This command invalidates all one-time login links and forces all users to login again.
 
 ## More Resources
 
