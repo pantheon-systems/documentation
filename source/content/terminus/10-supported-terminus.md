@@ -19,12 +19,6 @@ integration: [--]
 
 <Partial file="terminus-guide/eol.md" />
 
-<Alert title="Note" type="info" >
-
-Terminus 2.x, 1.x and 0.x are EOL.
-
-</Alert>
-
 ### PHP Version Compatibility Matrix
 
 <Partial file="terminus-guide/php.md" />
