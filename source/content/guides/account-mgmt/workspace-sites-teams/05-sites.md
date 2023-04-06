@@ -190,8 +190,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 </Alert>
 
-
-### Delete a site from the Site Dashboard
+### Delete a Site from the Site Dashboard
 
 1. Open the Site Dashboard for the site.
 
@@ -203,7 +202,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Click **Delete This Site**.
 
-### Delete a site from a Workspace
+### Delete a Site from a Workspace
 
 1. Go to the Professional Workspace containing the site.
 
@@ -229,6 +228,9 @@ You can see a list of all your sites by running `terminus site:list`.
 
 </Alert>
 
+### Delete a Front-End Site
+
+Refer to the [Delete a Front-End Site](/guides/decoupled/overview/manage-settings#delete-a-front-end-site) section of the [Front-End Sites Overview](/guides/decoupled/overview) guide for instructions.
 
 ### Delete a Multidev Environment
 
