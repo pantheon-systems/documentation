@@ -24,7 +24,7 @@ Pantheon's Object Cache Pro is available for [Early Access](/guides/support/earl
 
 </Alert>
 
-This guide provides information on how to install and configure [Object Cache Pro](https://objectcache.pro) on the Pantheon platform. We are currently evaluating making Object Cache Pro available to users who have access to Redis object cache. Refer to the [How do I sign up for Object Cache Pro on Pantheon](#how-do-i-sign-up) section to join the Early Access program.
+This guide provides information on how to install and configure [Object Cache Pro](https://objectcache.pro) on the Pantheon platform. We are currently evaluating making Object Cache Pro available to users who have access to Redis object cache. Refer to the [How do I sign up for Object Cache Pro on Pantheon](/guides/object-cache-pro/#how-do-i-sign-up-for-object-cache-pro-on-pantheon) section to join the Early Access program.
 
 ## What is Object Cache Pro?
 
