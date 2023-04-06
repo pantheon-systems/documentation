@@ -25,7 +25,7 @@ This list does not include scenarios involving Front-End sites.  For those, see 
 
 **How do you want to add a site?**  You have the following options:
 - *Create* from scratch
-- *Clone* an existing Pantheon site
+- Create a site from a *Custom Upstream*
 - *Migrate* a site that's hosted elsewhere
 
 <TabList>
@@ -41,9 +41,11 @@ This list does not include scenarios involving Front-End sites.  For those, see 
 
 </Tab>
 
-<Tab title="Clone" id="clone">
+<Tab title="Custom Upstream" id="cu">
 
-Refer to [Clone an Existing Pantheon Site](/add-site-clone)
+If you are a part of a Professional that has [Custom Upstreams](/guides/custom-upstream), you can build a site from an existing Upstream.
+
+Refer to [Create a Site Using a Custom Upstream](/add-site-custom-upstream)
 
 </Tab>
 
