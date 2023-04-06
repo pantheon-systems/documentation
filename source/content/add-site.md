@@ -9,6 +9,8 @@ cms: [drupal, wordpress]
 audience: [agency, development]
 product: [--]
 integration: [--]
+showtoc: false
+reviewed: 2023-04-06
 ---
 
 There are many ways you can add a site to Pantheon.  To help you choose the best method for you, answer the questions below.
@@ -19,15 +21,18 @@ This list does not include scenarios involving Front-End sites.  For those, see 
 
 </Alert>
 
-## Find Your Scenario
+## Find Your Path
 
-**Are you trying to create a brand new site, or do you already have a site you want to migrate to Pantheon?**
+**How do you want to add a site?**  You have the following options:
+- *Create* from scratch
+- *Clone* an existing Pantheon site
+- *Migrate* a site that's hosted elsewhere
 
 <TabList>
 
-<Tab title="I'm starting from scratch" id="add" active={true}>
+<Tab title="Create" id="add" active={true}>
 
-You can either add a site using the dashboard (which will guide you through the process), or use the command line.
+**Would you like to create your site using the dashboard (which will guide you through the process), or use the command line?**  
 
 - [I want to use the Dashboard](/add-site-dashboard)
 - I want to use the command line, and my CMS is:
@@ -36,65 +41,52 @@ You can either add a site using the dashboard (which will guide you through the 
 
 </Tab>
 
-<Tab title="I already have a site" id="migrate">
+<Tab title="Clone" id="clone">
 
-If your existing site meets either of the following criteria, you'll need to [manually migrate your site to Pantheon](/migrate-manual):
-
-- The site or site archive is greater than 500MB
-
-- You are migrating a site that is only on your local machine
-
-**Which CMS are you using?**
-
-<TabList>
-
-<Tab title="Drupal" id="drupal" active={true}>
-
-**Do you want to upgrade your Drupal version during migration?**
-
-- [No, remain at my current version](/guides/guided)
-
-- Yes, upgrade my site to the latest version of Drupal:
-  - [My site is Composer-managed, *and* uses Drush](/guides/drush/drush-import)
-  - [My site is Composer-managed](/guides/drupal-unhosted-composer)
-  - [My site is *not* Composer-managed](/guides/drupal-unhosted)
+Refer to [Clone an Existing Pantheon Site](/add-site-clone)
 
 </Tab>
 
-<Tab title="WordPress" id="wordpress">
+<Tab title="Migrate" id="migrate">
 
-[Use our guided migration](/guides/guided), unless:
-- [You are using multisite](/migrate-manual)
-- [Do not wish to install the plugin necessary for guided migration](/migrate-manual)
+**Is your site archive greater than 500MB, or only exist on your local machine?**
+
+- If so, [manually migrate your site to Pantheon](/migrate-manual).
+
+- If not...
+
+  **Which CMS are you using?**
+
+  <Accordion title="Drupal" id="drupal">
+
+  **Do you want to upgrade your Drupal version during migration?**
+
+  - [No, remain at my current version](/guides/guided)
+
+  - Yes, upgrade my site to the latest version of Drupal:
+    - [My site is Composer-managed, *and* I'm using Drush](/guides/drush/drush-import)
+    - [My site is Composer-managedm, and I'm *not* using Drush](/guides/drupal-unhosted-composer)
+    - [My site is *not* Composer-managed](/guides/drupal-unhosted)
+  
+  </Accordion>
+
+  <Accordion title="WordPress" id="wordpress">
+
+  **Do you want to use a Custom Upstream?**
+
+  - If so, [use the Pantheon Migrations plugin with a custom WordPress upstream](/migrate-wp-upstream).
+  - If not...
+
+    **Are you using multisite, or do you want to avoid installing a plugin?**
+
+    - If so, [manually migrate your site to Pantheon](/migrate-manual).
+    - If not, [use our guided migration](/guides/guided)
+
+  </Accordion>
 
 </Tab>
+
+
 
 </TabList>
 
-</Tab>
-
-</TabList>
-
-## Rare Scenarios
-
-### Clone an existing Pantheon site
-
-Drupal and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
-
-Replace `<source>` and `<destination>` with target [site UUIDs](/guides/account-mgmt/workspace-sites-teams/sites#retrieve-the-site-uuis) or site names, and specify target development environment in place of `<env>` (dev or multidev):
-
-```bash
-terminus site:clone <source>.<env> <destination>.<env>
-```
-
-### Use the Pantheon Migrations plugin with a custom WordPress upstream
-
-If you'd like your existing WordPress site to get one-click updates from your [Custom Upstream](/guides/custom-upstream), then the migration process will be slightly different. The general process will be the same as a vanilla WordPress site with a few differences.
-
-1. Click **Create New Site** instead of **Migrate existing site**.
-
-1. Name your new site, and be sure to add it to the workspace with access to the Custom Upstream you want to use.
-
-1. Choose your Custom Upstream and complete the installation.
-
-You can now proceed with the [standard migration procedure](migrate), starting at Step 8.
