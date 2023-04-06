@@ -38,7 +38,7 @@ Check the size of your autoloaded data:
 
 1. Select your database (by default `pantheon`) and then click the `SQL` tab.
 
-1. Run the following code to see the total autoloaded data and data count:
+1. Run the code below to see the total autoloaded data and data count:
 
   ```sql
   SELECT 'autoloaded data in KiB' as name, ROUND(SUM(LENGTH(option_value))/ 1024) as value FROM wp_options WHERE autoload='yes' UNION SELECT 'autoloaded data count', count(*) FROM wp_options WHERE autoload='yes';
