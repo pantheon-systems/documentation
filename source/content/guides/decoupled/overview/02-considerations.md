@@ -89,7 +89,6 @@ Front-End Sites will not work with all products and features on our platform.
 Pantheon Front-End Sites are not compatible with the following Pantheon products:
 
 * [Autopilot](https://pantheon.io/autopilot)
-* [AGCDN](https://pantheon.io/product/advanced-global-cdn)
 
 The following features are currently not supported with Pantheon Front-End Sites:
 
