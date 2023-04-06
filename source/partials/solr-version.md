@@ -8,4 +8,4 @@ tags: [--]
 reviewed: ""
 ---
 
-Currently, the version of Solr on Pantheon is Apache Solr v3.6.
+Currently, Pantheon provides Apache Solr v3.6 and v8.0 as a service for all plans except the Basic plan.
