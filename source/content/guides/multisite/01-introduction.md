@@ -28,7 +28,7 @@ Pantheon supports the most common use case for WordPress Multisites: a common co
 - Blogs for faculty at a university
 - Franchise sites under a parent organization site
 - Sections within a media publication
-- [Bedrock based](https://carlalexander.ca/using-bedrock-with-pantheon/) or Composer based WP Multi-site is a possibility and can be discussed during onboarding
+- [Bedrock based](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) or Composer based WP Multisite is a possibility and can be discussed during onboarding
 
 ## Unsupported Use Cases
 We do not support uses of WordPress Multisite that run functionally-different or uniquely-owned sites on the same WordPress installation. This includes, but is not limited to:

@@ -65,3 +65,5 @@ Now that you understand all of the important aspects to running a WordPress Mult
 - [WordPress Known Issues](/wordpress-known-issues)
 
 - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)
+
+- [Why WordPress Multisite?](https://pantheon.io/blog/why-wordpress-multisite)
