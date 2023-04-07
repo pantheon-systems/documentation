@@ -68,7 +68,7 @@ Professional Workspaces with a Gold Account Plan provide additional collaboratio
 
 **To upgrade your Professional Workspace Account Plan to Gold**:
 
-1. Navigate to the Workspace Switcher located in the upper left corner of your Personal Workspace. If you already have a Professional Workspace, then navigate to that Professional Workspace using the Workspace Switcher and skip ahead to Step 6.
+1. Navigate to the Workspace Switcher located in the upper left corner of your Personal Workspace. If you already have a Professional Workspace, then navigate to that Professional Workspace <Popover title="Account Plans" content="Account Plans are attached to Professional Workspaces. Select the Professional Workspace to which you'd like to attach the account plan, or create a Professional Workspace if you don't have one set up already." /> using the Workspace Switcher and skip ahead to Step 6.
 
   ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
 
@@ -123,10 +123,9 @@ As a Pantheon Partner, you receive access to:
 - Sales playbooks, training, and [Gold Level Support](/guides/support/#support-features-and-response-times)
 - Preferred Pricing on site hosting plans
 
-
 **Partner Trial**: If you are creating a workspace for a web agency, you will be assigned a [Partner Trial Account](https://pantheon.io/partners/find-pantheon-partner) workspace that lets you try Gold Account Plan features free for 90 days.
 
-**Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. When you register as an agency, you'll start earning credits with each sale of Pantheon services, and you'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
+**Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. Registering as an agency will start your path to partnership with Pantheon. You'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
 
 For more information about our partner program and how to unlock higher partner tiers, check out our [Partner Program Guide](https://pantheon.io/resources/pantheon-partner-program-guide).
 
