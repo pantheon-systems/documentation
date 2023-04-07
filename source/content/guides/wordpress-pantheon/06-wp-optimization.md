@@ -1,7 +1,7 @@
 ---
 title: WordPress on Pantheon Quick Start Guide
 subtitle: Pantheon Performance and Optimization Features
-description: Optimization and Performance for WorPress on Pantheon
+description: Optimization and Performance for WordPress on Pantheon
 contenttype: [guide]
 innav: [false]
 categories: [cms]
