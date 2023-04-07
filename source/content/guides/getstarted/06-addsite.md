@@ -51,7 +51,11 @@ To create a CMS site:
 
 At this point, you have a Dev environment for your site code, but you do not have a Dev environment for your CMS.  To create that:
 
-1. Click **Site Admin**. A new browser tab will open, and you will be presented with your CMS setup screen.
+1. Click **Site Admin**. 
+   ![The Site Admin button](../images/create-site-site-admin.png)
+
+1. A new browser tab will open, and you will be presented with either a Drupal or WordPress setup screen.
+   ![Drupal and WordPress installation screens.](../images/create-site-cms-both.png)
 
 1. Enter the information on the screen, and when done, return to the browser tab containing your Site Dashboard.
 
