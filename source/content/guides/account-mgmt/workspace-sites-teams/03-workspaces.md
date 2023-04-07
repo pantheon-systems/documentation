@@ -34,7 +34,7 @@ The Personal Workspace displays tools for the sites you own, or are a team membe
 
 <Tab title="Professional Workspace" id="professional-workspace">
 
-Professional workspaces bring together users and sites to allow administrators to effectively manage a large number of sites. You may be a member of any number of professional workspaces, depending on your company setup.
+Professional workspaces bring together users and sites to allow administrators to effectively manage a large number of sites. Keep in mind, you can be a member of multiple professional workspaces at the same time.
 
 You can create a Professional Workspace as the home for an organization’s sites and the teams working on them. 
 
@@ -58,7 +58,7 @@ With a Professional Workspace, you can upgrade the associated [Account Plan](htt
 
 <Tab title="Silver Account Plan" id="silver">
 
-You will automatically be assigned a Silver Account Plan workspace. The Silver Account Plan is free and offers basic WebOps tools and features. 
+New workspaces start with a Silver Account Plan by default. The Silver Account Plan is free and offers basic WebOps tools and features. 
 
 </Tab>
 
@@ -72,15 +72,15 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
   ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
 
-1. Click on your gravatar and navigate to `Create New Workspace`.
+1. Click on your gravatar and navigate to `Create a Professional Workspace`.
 
-  ![Create New Workspace](../../../../images/guides/account-mgmt/create-professional-workspace.png)
+  ![Create a Professional Workspace](../../../../images/guides/account-mgmt/create-new-professional-workspace.png)
 
 1. Name your Workspace and fill in details about your Workspace then click `Continue`.
 
-  ![Create Workspace Details](../../../../images/guides/account-mgmt/create-workspace-details.png)
+  ![Create Workspace Details](../../../../images/guides/account-mgmt/create-professional-workspace.png)
 
-1. Add any team members you would like to include in this Workspace and click `Continue`. You will be automatically added as a team member.
+1. Add any team members you would like to include in this Workspace and click `Continue`. You will be automatically added as an Administrator of this Professional Workspace.
 
   ![Invite Team Members](../../../../images/guides/account-mgmt/invite-team.png)
 
@@ -88,11 +88,11 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
   ![Workspace is ready](../../../../images/guides/account-mgmt/ws-ready.png)
 
-1. To upgrade to Gold, you can click on `Upgrade Workspace` in the banner at the top of the page, or click `Upgrade now` on the right side of the page, under `Get the most out of Pantheon`.
+1. To add a  Gold Account Plan to this workspace, you can click on `Upgrade Account Plan` in the banner at the top of the page, or click `Upgrade Account to Gold` on the right side of the page, under `Get the most out of Pantheon`.
 
   ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
 
-1. On the `Change Your Workspace Plan` page, click `Upgrade Now` and you will then be prompted to add a Payment Method.
+1. On the `Select Account Plan` page, click `Select Plan` and you will then be prompted to add a Payment Method.
 
 1. Once your payment method is accepted, you will be redirected to a Billing page with your Account Subscription details.
 
@@ -108,7 +108,7 @@ Now that you have a Professional Workspace with a Gold Account Plan, you can [ad
 
 <Tab title="Platinum & Diamond Account Plan" id="platinum-diamond">
 
- Platinum and Diamond Account Plans offer all the tools and features of the Gold Account Plan, and include features that benefit large teams and enterprise organizations such as: direct access to experts, dedicated support, and more. [Contact Sales](https://pantheon.io/contact-sales) for more information about upgrading to a Platinum or Diamond Account Plan.
+ Platinum and Diamond Account Plans offer all the tools and features of the Gold Account Plan, and include features that benefit large teams and enterprise organizations such as direct access to experts, dedicated support, and more. [Contact Sales](https://pantheon.io/contact-sales) for more information about upgrading to a Platinum or Diamond Account Plan.
 
 </Tab>
 
@@ -128,7 +128,7 @@ As a Pantheon Partner, you receive access to:
 
 **Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. When you register as an agency, you'll start earning credits with each sale of Pantheon services, and you'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
 
-For more information about our partner program, check out our [Partner Program Guide](https://pantheon.io/resources/pantheon-partner-program-guide).
+For more information about our partner program and how to unlock higher partner tiers, check out our [Partner Program Guide](https://pantheon.io/resources/pantheon-partner-program-guide).
 
 </Tab>
 
