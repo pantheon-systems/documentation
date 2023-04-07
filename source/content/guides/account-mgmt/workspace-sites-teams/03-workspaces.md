@@ -58,17 +58,17 @@ With a Professional Workspace, you can upgrade the associated [Account Plan](htt
 
 <Tab title="Silver Account Plan" id="silver">
 
-New workspaces start with a Silver Account Plan by default. The Silver Account Plan is free and offers basic WebOps tools and features. 
+New Professional Workspaces start with a Silver Account Plan by default. The Silver Account Plan is free and offers basic WebOps tools and features. 
 
 </Tab>
 
 <Tab title="Gold Account Plan" id="gold" active={true}>
 
-Gold Account Plan workspaces provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
+Professional Workspaces with a Gold Account Plan provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
 
-**To upgrade your Account Plan to Gold**:
+**To upgrade your Professional Workspace Account Plan to Gold**:
 
-1. Navigate to your Personal Workspace.
+1. Navigate to the Workspace Switcher located in the upper left corner of your Personal Workspace. If you already have a Professional Workspace, then navigate to that Professional Workspace using the Workspace Switcher and skip ahead to Step 6.
 
   ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
 
@@ -76,15 +76,15 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
   ![Create a Professional Workspace](../../../../images/guides/account-mgmt/create-new-professional-workspace.png)
 
-1. Name your Workspace and fill in details about your Workspace then click `Continue`.
+1. Name your Professional Workspace and fill in details about your Workspace then click `Continue`.
 
   ![Create Workspace Details](../../../../images/guides/account-mgmt/create-professional-workspace.png)
 
-1. Add any team members you would like to include in this Workspace and click `Continue`. You will be automatically added as an Administrator of this Professional Workspace.
+1. Add any team members you would like to include in this Professional Workspace and click `Continue`. You will be automatically added as an Administrator of this Professional Workspace.
 
   ![Invite Team Members](../../../../images/guides/account-mgmt/invite-team.png)
 
-1. Your Workspace is now ready. Click `Go to Workspace Home`.
+1. Your Professional Workspace is now ready. Click `Go to Workspace Home`.
 
   ![Workspace is ready](../../../../images/guides/account-mgmt/ws-ready.png)
 
@@ -92,7 +92,7 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
   ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
 
-1. On the `Select Account Plan` page, click `Select Plan` and you will then be prompted to add a Payment Method.
+1. On the `Select Account Plan` page, click `Select Plan` under Gold, and follow the prompts to add a Payment Method.
 
 1. Once your payment method is accepted, you will be redirected to a Billing page with your Account Subscription details.
 
@@ -100,7 +100,7 @@ Gold Account Plan workspaces provide additional collaboration tools such as [Mul
 
 <Alert title="Note"  type="info" >
 
-Now that you have a Professional Workspace with a Gold Account Plan, you can [add a supporting organization to your site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to take advantage of your new features.
+Now that you have a Professional Workspace with a Gold Account Plan, you can [add it as a supporting organization](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to your site to take advantage of your new features.
 
 </Alert>
 
