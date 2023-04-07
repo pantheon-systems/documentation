@@ -61,9 +61,11 @@ Refer to [Create a Site Using a Custom Upstream](/add-site-custom-upstream)
 
   <Accordion title="Drupal" id="drupal">
 
-  **Do you want to upgrade your Drupal version during migration?**
+  **Do you want to upgrade your Drupal version during migration, or are you using Drupal version 9 or higher?**
 
   - [No, remain at my current version](/guides/guided)
+
+  - [No, I am using Drupal version 8 or lower](/guides/guided)
 
   - Yes, upgrade my site to the latest version of Drupal:
     - [My site is Composer-managed, *and* I'm using Drush](/guides/drush/drush-import)

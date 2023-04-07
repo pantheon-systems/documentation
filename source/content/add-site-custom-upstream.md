@@ -38,4 +38,25 @@ To create a site using a Custom Upstream:
 
    ![Site creation completed](../images/create-site-done.png)
 
-Once your site is created, you'll need to set up your CMS app, and possibly create your Test and Live environments. To perform these steps, continue with the instructions in [Create a New CMS Site](/add-site-dashboard#install-the-cms-for-the-dev-environment).
+## Install the CMS for the Dev Environment
+
+<Partial file="cms-dev.md" />
+
+## Initialize the Test environment
+
+<Partial file="test-initialize.md" />
+
+## Install the CMS for the Test environment
+
+<Partial file="cms-test.md" />
+
+## Initialize the Live environment
+
+<Partial file="live-initialize.md" />
+
+## Install the CMS for the Live environment
+
+<Partial file="cms-live.md" />
+
+At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
+

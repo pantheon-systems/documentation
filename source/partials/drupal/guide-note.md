@@ -10,7 +10,7 @@ reviewed: ""
 
 <Alert title="Note" type="info" >
 
-If you are moving a Drupal site and want to upgrade to the latest version of Drupal, use one of the following guides instead:
+If you are using Drupal version 9 or higher, or are moving a Drupal site **and** want to upgrade to the latest version of Drupal, use one of the following guides instead:
 
 - Your site is Composer-managed: [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer) or  [Import Drush Site Archives with Terminus](/guides/drush/drush-import)
 - Your site is not Composer-managed: [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)

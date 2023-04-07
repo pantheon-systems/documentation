@@ -34,6 +34,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
    ![Begin process of installing plugin](../../images/migrate-site-wp-plugin.png)
 
 1. Select **Install on /wp-admin**.  A new tab will open with your WordPress CMS for your existing site. Keep the Pantheon tab open in your browser.
+   ![Install on /wp-admin](../../images/migrate-site-wp-install.png)
 
 1. Search for and install the plugin.
 
@@ -43,7 +44,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
    ![Copying and pasting info](../../images/migrate-site-wp-activate.png)
 
-1. Go back to the browser tab containing your Pantheon dashboard, copy the machine token from the Pantheon Dashboard, then go back to the WordPress Dashboard on your existing site. Paste the machine token and the site name, and click **Migrate**
+1. Go back to the browser tab containing your Pantheon dashboard, copy the machine token from the Pantheon Dashboard, then go back to the WordPress Dashboard on your existing site. Paste the machine token and the site name, and click **Migrate**.
 
    ![Copying and pasting info](../../images/migrate-site-wp-activate-info.png)
 

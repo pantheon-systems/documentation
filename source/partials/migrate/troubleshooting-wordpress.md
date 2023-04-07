@@ -58,7 +58,7 @@ reviewed: ""
 
 ### Multiple file directories found within the import archive
 
-**Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory: `sites/default/files/private`.
+**Cause:** The migration tool found more than one potential location for files within the archive. 
 
 **Solution:** All files must be moved into `/wp-content/uploads`. For more details, see [Files](/guides/filesystem/) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).
 
