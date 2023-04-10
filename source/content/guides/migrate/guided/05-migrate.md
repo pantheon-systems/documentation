@@ -22,7 +22,10 @@ Pantheon provides a guided path for migrating existing sites to the platform. Th
 
 You now have a Dev environment containing your migrated site, including your Content Management System (accessible via the **Site Admin** button).  
 
-If you want to create your Test and Live environments, refer to the relevant sections in [Create a New CMS Site](/add-site-dashboard).
+<Partial file="test-initialize.md" />
+
+<Partial file="live-initialize.md" />
+
 
 Review [Troubleshooting](/guides/guided/troubleshooting) or [contact Support](/guides/support/contact-support/) if the migration is unsuccessful. Include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from.
 

@@ -23,25 +23,15 @@ And now it's time to finally make your site available to the public! This sectio
 
 <Partial file="test-initialize.md" />
 
-Finally, install your CMS in your test environment: 
-
-<Partial file="cms-test.md" />
+You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
 
 ## Deploy Your Site to Live
 
-After you've tested your site, it's time for it to go live.
-
-<Alert title="Note" type="info" >
-
-When you complete this step, your site will be live for anyone to see, at the Pantheon URL. We will change this URL in the next section.
-
-</Alert>
+After you [purchase a plan](/guides/getstarted/purchase), you can deploy your site live.  But first, you have to create the Live environment.
 
 <Partial file="live-initialize.md" />
 
-Finally, install your CMS in your live environment: 
-
-<Partial file="cms-live.md" />
+You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
 
 ## Domain Configuration
 

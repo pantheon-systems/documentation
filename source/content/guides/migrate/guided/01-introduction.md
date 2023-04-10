@@ -20,7 +20,7 @@ Welcome to Pantheon! We want to make it easy for you to move a site from another
 
 <Alert title="Note" type="info" >
 
-If you're coming from any of the following providers, we have specific instructions for you:
+If you're coming from any of the following providers, we have customized instructions for you:
 
 - [Acquia](/guides/acquia/migrate)
 - [Kinsta](/guides/kinsta/migrate)

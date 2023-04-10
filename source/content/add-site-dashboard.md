@@ -12,18 +12,10 @@ integration: [--]
 tags: [--]
 ---
 
-A Pantheon CMS site contains two components: code, and a CMS (Content Management System).  When you create a site, you are creating both of these components in the Dev environment.  Then, when you are ready, you will do the same for your Test and Live environments.
+A Pantheon CMS site contains two components: code, and a CMS (Content Management System).  When you create a site, you are creating both of these components in the Dev environment.  Then, when you are ready, you will do the create your Test and Live environments.
 
-At a high level, this is what you'll be doing:
 
-1. Use the <Icon icon="plus" text="Create New Site"/> button create the Dev environment for your code.
-1. Install the CMS for the Dev environment.
-1. Initialize the Test environment.
-1. Install the CMS for the Test environment.
-1. Initialize the Live environment.
-1. Install the CMS for the Live environment.
-
-## Create the Dev Environment for Your Code
+## Create the Dev Environment
 
 To create a CMS site:
 
@@ -39,13 +31,20 @@ To create a CMS site:
 
    ![Select Drupal version](../images/create-new-site-cms-drupal.png)
 
-1. Enter the name and select a region for this site. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**. Click **Continue**. It can take several minutes to create a new site on Pantheon.
+1. Enter the following information and click **Continue**:
+   - Sitename
+   - Select a region for this site. 
+   - If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**. 
 
    ![Enter site information](../images/create-new-site-info.png)
 
+1. The deployment process begins. It can take several minutes to create a new site on Pantheon.
+
+   ![Deploying a new site](../images/create-new-site-deploy.png)
+
    <Alert title="Note" type="info" >
 
-   You can navigate away from this page during this process, but later, you'll have to go to the **Sites** tab to access your site.  If possible, stay on this tab to simplify accessing the site when the creation is complete.
+   You can navigate away from this page during this process, but later, you'll have access the site via the **Sites** tab in your Workspace.
 
    </Alert>
 
@@ -55,25 +54,29 @@ To create a CMS site:
 
 You've now created the core portion of your Dev environment; now you have to install the CMS.
 
-## Install the CMS for the Dev Environment
-
 <Partial file="cms-dev.md" />
 
-## Initialize the Test environment
+You have successfully finished adding a site in its Dev environment.  Click **Visit Dev Site** to view your site.
+
+## Create the Test environment
 
 <Partial file="test-initialize.md" />
 
-## Install the CMS for the Test environment
+You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
 
-<Partial file="cms-test.md" />
+## Create the Live environment
 
-## Initialize the Live environment
+After you [purchase a plan](/guides/getstarted/purchase), you can deploy your site live.  But first, you have to create the Live environment.
+
+<Alert title="Warning" type="danger" >
+
+When you complete this step, your site will be live for anyone to see, at the Pantheon URL. For detailed information about launching your site, refer to our [Launch Essentials](/guides/launch/) guide.
+
+</Alert>
 
 <Partial file="live-initialize.md" />
 
-## Install the CMS for the Live environment
-
-<Partial file="cms-live.md" />
+You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
 
