@@ -23,7 +23,7 @@ Workspaces are a home base for your WebOps. There are two types of workspaces:
 
 <Tab title="Personal Workspace" id="personal-workspace" active={true}>
 
-The Personal Workspace displays tools for the sites you own, or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
+The Personal Workspace displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one personal workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
 
 - Every Pantheon user is assigned one Personal Workspace. 
 - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 

@@ -212,17 +212,19 @@ After a user leaves, in addition to the steps above, we recommend you:
 - Review the Git history in the commit log to see if the site team member made code changes after leaving. Refer to recommendations from [Drupal](https://www.drupal.org/node/2365547) and [WordPress](https://wordpress.org/support/article/faq-my-site-was-hacked/).
 
 
-## Add a Supporting Organization to Site
+## Add a Supporting Workspace to Site
 
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
 
 Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace).
 
-1. Open the Site Dashboard for the site.
+1. Click **Sites** tab on the left hand panel > Click on the site you want to make changes to.
 
 1. Click **Team** in the Site Dashboard.
 
-1. Click **Add a Supporting Organization**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
+  ![Click on Team](../../../../images/guides/account-mgmt/sites-team.png)
+
+1. Under **Supporting Workspace**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
 1. Select a role, then click **Add**. All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
 

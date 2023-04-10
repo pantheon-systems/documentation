@@ -40,7 +40,7 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
 
 ### Tag Sites
 
