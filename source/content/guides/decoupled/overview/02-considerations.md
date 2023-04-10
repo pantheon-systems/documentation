@@ -1,6 +1,6 @@
 ---
 title: Pantheon Front-End Sites
-subtitle: Considerations
+subtitle: Requirements and Considerations
 description: Components needed to get started with a Front-End Site.
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, joa-pan, backlineint, cobypear, hckia]
@@ -19,15 +19,19 @@ integration: [--]
 
 Review this section carefully to ensure your system has the correct components to deploy a Pantheon Front-End Site.
 
-## Components for Pantheon Front-End Sites
-
-### General Requirements
+## General Requirements
 
 * You have the decoupled offering enabled in your dashboard.
 * You are using [Visual Studio Code (VS Code)](https://code.visualstudio.com/)
   * Other IDEs can be used, but our project ships with suggested plugins and example settings for VSCode.
 
-### Backend Requirements
+<Alert title="Not what you're looking for?" type="success" icon="leaf">
+
+Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
+
+</Alert>
+
+## Backend Requirements
 
 The following components are needed to configure your backend, especially if using the starter kits for Pantheon Front-End Sites:
 
@@ -39,19 +43,18 @@ The following components are needed to configure your backend, especially if usi
      * [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
      * [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for a Front-End Site.
 
-### Front-End Site Requirements
+## Frontend Requirements
 
 The following components are needed to configure your frontend project to use Pantheon's Front-End Sites:
 
 * [Node.js](https://nodejs.org/en/)
   * Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
 
-
 ## Frontend Frameworks
 
-Pantheon Decoupled Early Access (EA) program currently supports Gatsby and Next.js as frontend frameworks. Additional frameworks will be added to our official support list over the coming months.
+Pantheon Front-End Sites Early Access (EA) program currently supports Gatsby and Next.js as frontend frameworks. Additional frameworks will be added to our official support list over the coming months.
 
-You can use frontend frameworks other Gatsby and Next.js, however the process requires manual configuration. Refer to [Use a Non-official Framework](/guides/decoupled/no-starter-kit/any-framework) for specific instructions.
+You can use frontend frameworks other than Gatsby and Next.js, however the process requires manual configuration. Refer to [Use a Non-official Framework](/guides/decoupled/no-starter-kit/any-framework) for specific instructions.
 
 ## Known Issues and Limitations
 
@@ -84,7 +87,7 @@ Site names *cannot* include:
 
 ## Pantheon Product and Features Considerations
 
-Front-End Sites will not work with all products and features on our platform.
+Front-End Sites does not work with all products and features on our platform.
 
 Pantheon Front-End Sites are not compatible with the following Pantheon products:
 
@@ -122,3 +125,8 @@ Refer to [Types of Environments](/guides/decoupled/overview/site#types-of-enviro
 ## Static Site Indexing
 
 We recommend that you use proxy search requests to [Solr](/solr) instances on their backends. We also recommend that you use statically compiled search engines.
+
+## More Resources
+
+- [Multidev](/guides/multidev)
+- [Use a Non-official Front-End Sites Framework](/guides/decoupled/no-starter-kit/any-framework)

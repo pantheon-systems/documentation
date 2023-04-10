@@ -1,6 +1,6 @@
 ---
 title: Pantheon Front-End Sites
-subtitle: Site Creation
+subtitle: Create a Front-End Site
 description: Create and configure a Front-End Site.
 tags: [webops, workflow, decoupled]
 contributors: [joa-pan, backlineint, cobypear, hckia]
@@ -18,11 +18,13 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides configuration information for Front-End Sites.
+This section provides information to help you create your Front-End Site.
 
-## Prerequisites
+## Front-End Sites Prerequisites
 
-* The **Decoupled** tab is enabled in your dashboard after onboarding.
+Confirm the following prerequisites before you create your site:
+
+* The **Front-End-Sites** tab is enabled in your dashboard after onboarding.
 
 * Your site repository is in GitHub.
 
@@ -52,20 +54,6 @@ This section provides configuration information for Front-End Sites.
 
     </Alert>
 
-### Compatibility
-
-You can create an application from scratch by importing a repository or you can use the Pantheon starter kit templates to develop a Front-End Site.
-
-You can also create a site without a CMS. This is done by utilizing the import repository feature during site creation.
-
-Supported Versions:
-
-|  Tooling   |      Version    |
-|  :---:     |       :---:     |
-|  Gatsby (Static Site Generation (SSG) only)    |    4 or higher  |
-| Next.js    |   12 or higher  |
-|  Drupal    |   9 or higher   |
-| WordPress  |   5.9 or higher |
 
 ## Before You Use Pantheon Starter Kits
 
@@ -108,13 +96,19 @@ Select the backend or frontend guide below that meets your configuration require
 - [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
 - [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)
 
-### No Starter
+### No Starter or CMS
 
 - [Create a Front-End Site without a Starter](/guides/decoupled/no-starter-kit)
 
+- [Create a Front-End Site without a CMS](/guides/decoupled/no-starter-kit/create)
+
+### Import Repository
+
+- [Create a Front-End Site by Importing Your Repo](/guides/decoupled/no-starter-kit/import-repo)
+
 ## Stable URLs
 
-You can establish FQDN domains in decoupled environments using stable URLs.
+You can establish FQDN domains in Front-End Site environments using stable URLs.
 
 An environment relates to every code change made against the Git repository that triggers a build. This build generates an internet-ready site.
 
@@ -125,7 +119,8 @@ Code change events that trigger a build include:
 
 <Alert title="Note" type="info">
 
-Pull requests from a Multidev branch that are made against the upstream, will trigger double builds.
+Pull requests from a Multidev branch that are made against the upstream will trigger double builds.
+
 </Alert>
 
 ### Types of Environments
@@ -145,7 +140,7 @@ Refer to [Front-End Sites Multidev Development Workflow](/guides/decoupled/overv
     * This environment has the following stable URL pattern: `pr-[pr-number]-[site-name].appa.pantheon.site`
 
 
-### Stable URLs template
+### Stable URLs Template
 
 | Environment                       | Name            |  FQDN      |
 | -----------                       | -----------     | ---------- |
