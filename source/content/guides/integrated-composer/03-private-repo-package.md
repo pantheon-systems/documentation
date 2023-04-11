@@ -24,6 +24,8 @@ The steps below outline a method for adding a package from a private GitHub, Git
 
 A token will be added to your code repository for this procedure. This allows anyone with the token to read and write to private repositories associated with the issuing account. You can explore workarounds to limit the scope of the token access. For example, you can create a new GitHub user and restrict that user's permission to only the private repositories needed for your Composer packages. This ensures your site repository code is not published publicly.
 
+Your repository should contain a composer.json that declares a package name in its name field. If it is a WordPress plugin or a Drupal module, it should specify a type of wordpress-plugin or drupal-module respectively. For these instructions, we will assume your package name is mycompany/my-private-repo.
+
 <TabList>
 
 <Tab title="GitHuB" id="github-example" active={true}>
@@ -41,13 +43,11 @@ A token will be added to your code repository for this procedure. This allows an
     ],
     ```
 
-1. Run the command below to require the package and specify the branch, prefixed with `dev-`:
+1. Run the command below to require the package (you may specify any needed version constraint in this step):
 
    ```bash{promptUser: user
-   composer require mycompany/my-private-repo:dev-branch-name
+   composer require mycompany/my-private-repo
    ```
-
-1. Run the `composer update` command to install the new package.
 
 1. Run the commands below to commit the updated Composer files and add them to your environment only if the above command update works locally.
 
@@ -74,13 +74,11 @@ A token will be added to your code repository for this procedure. This allows an
     ],
     ```
 
-1. Run the command below to require the package and specify the branch, prefixed with `dev-`:
+1. Run the command below to require the package (you may specify any needed version constraint in this step):
 
    ```bash{promptUser: user
-   composer require mycompany/my-private-repo:dev-branch-name
+   composer require mycompany/my-private-repo
    ```
-
-1. Run the `composer update` command to install the new package.
 
 1. Run the commands below to commit the updated Composer files and add them to your environment only if the above command update works locally.
 
@@ -101,20 +99,17 @@ A token will be added to your code repository for this procedure. This allows an
     ```json:title=composer.json
     "repositories": [
         {
-            "name": "vendor/package-name",
             "type": "vcs",
             "url": "https://username@bitbucket.org/vendor/package-name.git"
         }
     ],
     ```
 
-1. Run the command below to require the package and specify the branch, prefixed with `dev-`:
+1. Run the command below to require the package (you may specify any needed version constraint in this step):
 
    ```bash{promptUser: user
-   composer require mycompany/my-private-repo:dev-branch-name
+   composer require mycompany/my-private-repo
    ```
-
-1. Run the `composer update` command to install the new package.
 
 1. Run the commands below to commit the updated Composer files and add them to your environment only if the above command update works locally.
 
