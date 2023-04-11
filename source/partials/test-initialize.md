@@ -7,11 +7,11 @@ To create your Test environment:
 
    This takes a few moments.
 
-1. Go to the the <Icon icon="server" text="Database / Files"/> tab and select the following:
+1. Go to the <Icon icon="server" text="Database / Files"/> tab and select the following:
    - **From this Environment**: Development
    - **Clone Database**: Checked
    - **Clone Files**: Checked
-   
-   Click **Clone the Database & the Files from Development into the Test Environment**.
+
+1. Click **Clone the Database & the Files from Development into the Test Environment**.
 
    ![Cloning Dev to Test](../images/launch-clone-dev-to-test.png)

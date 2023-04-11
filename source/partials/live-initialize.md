@@ -10,12 +10,12 @@ To create your Live environment:
    - **From this Environment**: Development
    - **Clone Database**: Checked
    - **Clone Files**: Checked
-   
-   Click **Clone the Database & the Files from Test into the Live Environment**.
+
+1. Click **Clone the Database & the Files from Test into the Live Environment**.
 
    ![Clone test to live](../images/launch-clone-test-to-live.png)
 
-1. You will be prompted to confirm you want to go live.  Type "CLONE", then click **Overwrite This Environment**.
+1. Type "CLONE" and then click **Overwrite This Environment** when prompted to confirm you want to go live.
 
    ![Confirm cloning](../images/launch-clone-test-live-confirm.png)
 

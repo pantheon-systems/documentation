@@ -24,14 +24,14 @@ If you're coming from any of the following providers, we have customized instruc
 
 - [Acquia](/guides/acquia/migrate)
 - [Kinsta](/guides/kinsta/migrate)
-- [Pagely](/guides/acquia/pagely)
-- [Platform.sh](/guides/acquia/platformsh)
-- [WordPress VIP](/guides/acquia/wordpressvip)
-- [WP Engine](/guides/acquia/wpengine)
+- [Pagely](/guides/pagely/migrate)
+- [Platform.sh](/guides/platformsh/migrate)
+- [WordPress VIP](/guides/wordpressvip/migrate)
+- [WP Engine](/guides/wpengine/migrate)
 
 </Alert>
 
-The overall process will only take a few minutes to go through our guided migration wizard, but it can take up to two hours Pantheon to migrate the site.  You will receive an email when the process is complete.
+The overall process will only take a few minutes to go through our guided migration wizard, but it can take up to two hours for Pantheon to migrate your site. You will receive an email when the process is complete.
 
 <Alert title="Warning" type="danger" >
 
@@ -46,5 +46,4 @@ If your migration needs include any of the following, **do not use this process*
 
 ## Professional Services
 
-If you'd prefer to have our Professional Services team do it for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.
-
+If you'd prefer to have our Professional Services team migrate your site for you, learn more about our [Website Migration Service](https://pantheon.io/professional-services/website-migrations?docs) and how we can help you migrate one or hundreds of sites to Pantheon.

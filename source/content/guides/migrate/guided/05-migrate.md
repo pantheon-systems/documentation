@@ -20,7 +20,7 @@ Pantheon provides a guided path for migrating existing sites to the platform. Th
 
 <Partial file="migrate/migrate-all.md" />
 
-You now have a Dev environment containing your migrated site, including your Content Management System (accessible via the **Site Admin** button).  
+You now have a Dev environment containing your migrated site, including your Content Management System (accessible via the **Site Admin** button).
 
 <Partial file="test-initialize.md" />
 
