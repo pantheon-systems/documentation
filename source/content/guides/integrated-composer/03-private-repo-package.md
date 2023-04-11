@@ -18,6 +18,12 @@ integration: [--]
 
 This section provides information on how to add a package from a private repository using Integrated Composer.
 
+<Alert title="Note" type="info">
+
+Pantheons Secrets Manager is currently in Early Access (EA). You can use the [Terminus plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) to manage your secrets for private repositories in Integrated Composer builds.
+
+</Alert >
+
 ## Add a Package from a Private Repository
 
 The steps below outline a method for adding a package from a private GitHub, GitLab, or Bitbucket repository. Refer to the official [Composer documentation](https://getcomposer.org/doc/articles/handling-private-packages.md) for additional information on handling private packages.
