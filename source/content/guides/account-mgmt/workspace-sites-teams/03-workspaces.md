@@ -1,9 +1,9 @@
 ---
 title: Workspaces, Sites, and Teams
-subtitle: Professional Workspaces
-description: Learn how to manage and use workspaces.
+subtitle: Personal and Professional Workspaces
+description: Learn how to use and manage workspaces.
 tags: [workspaces, sites, teams]
-contributors: [wordsmither]
+contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
@@ -17,42 +17,127 @@ product: [--]
 integration: [--]
 ---
 
-Workspaces are a home base for your WebOps.  There are two types of workspaces:
+Workspaces are a home base for your WebOps. There are two types of workspaces:
 
-- **Personal Workspace**: The personal workspace displays tools for the sites you own or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
+<TabList>
 
-- **Professional Workspace**: Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
+<Tab title="Personal Workspace" id="personal-workspace" active={true}>
 
-## Professional Workspace Features
+The Personal Workspace displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one personal workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
 
-- [Multidev](/guides/multidev)
+- Every Pantheon user is assigned one Personal Workspace. 
+- All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
+- You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
+- WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
 
-- [Change Management](/guides/account-mgmt/workspace-sites-teams/teams)
+</Tab>
 
-- [Vanity Domains](/guides/domains/vanity-domains)
+<Tab title="Professional Workspace" id="professional-workspace">
 
-- Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your workspace.
+Professional workspaces bring together users and sites to allow administrators to effectively manage a large number of sites. Keep in mind, you can be a member of multiple professional workspaces at the same time.
 
-- [Email Notifications](#platform-email-notifications)
+You can create a Professional Workspace as the home for an organization’s sites and the teams working on them. 
 
-- [Single Sign-On](/sso-organizations)
+- Creating a Professional Workspace is free. 
+- Access to the collaboration features below are available to sites owned by Gold Workspaces or above:
+	- [Multidev](/guides/multidev)
+	- [Custom Upstreams](/guides/custom-upstream)
+	- [Autopilot](/guides/autopilot)
+- You can create any number of Professional Workspaces. 
+	- You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
 
-## Professional Workspace Tiers
+</Tab>
 
-Professional workspaces come in three tiers:
+</TabList>
 
-- **Silver Workspace:** You will automatically be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace. If the workspace is not for an agency, 
+## Account Plans
 
-- **Gold Workspace:** [Gold Tier](https://pantheon.io/plans/pricing) workspaces provide additional collaboration tools such as Multidev and visual regression testing. [Contact our Sales team](https://pantheon.io/contact-sales) for more information if you are interested in upgrading to a Gold workspace.
+With a Professional Workspace, you can upgrade the associated [Account Plan](https://pantheon.io/plans/pricing) to gain additional features and enhanced support:
 
-- **Partner Trial Tier Workspace:** You will only be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency.
+<TabList>
 
+<Tab title="Silver Account Plan" id="silver">
+
+New Professional Workspaces start with a Silver Account Plan by default. The Silver Account Plan is free and offers basic WebOps tools and features. 
+
+</Tab>
+
+<Tab title="Gold Account Plan" id="gold" active={true}>
+
+Professional Workspaces with a Gold Account Plan provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
+
+**To upgrade your Professional Workspace Account Plan to Gold**:
+
+1. Click the Workspace Switcher located in the upper left corner of your Personal Workspace. If you already have a Professional Workspace, then select that Professional Workspace <Popover title="Account Plans" content="Account Plans are attached to Professional Workspaces. Select the Professional Workspace to which you'd like to attach the account plan, or create a Professional Workspace if you don't have one set up already." /> using the Workspace Switcher and skip ahead to Step 6.
+
+  ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
+
+1. Click on your gravatar and select `Create a Professional Workspace`.
+
+  ![Create a Professional Workspace](../../../../images/guides/account-mgmt/create-new-professional-workspace.png)
+
+1. Name your Professional Workspace, fill in the details, and click `Continue`.
+
+  ![Create Workspace Details](../../../../images/guides/account-mgmt/create-professional-workspace.png)
+
+1. Add any team members you would like to include in this Professional Workspace and click `Continue`. You will be automatically added as an Administrator of this Professional Workspace.
+
+  ![Invite Team Members](../../../../images/guides/account-mgmt/invite-team.png)
+
+1. Your Professional Workspace is now ready. Click `Go to Workspace Home`.
+
+  ![Workspace is ready](../../../../images/guides/account-mgmt/ws-ready.png)
+
+1. To add a  Gold Account Plan to this workspace, click `Upgrade Account Plan` in the banner at the top of the page, or click `Upgrade Account to Gold` on the right side of the page, under `Get the most out of Pantheon`.
+
+  ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
+
+1. On the `Select Account Plan` page, click `Select Plan` under Gold, and follow the prompts to add a Payment Method.
+
+1. Once your payment method is accepted, you will be redirected to a Billing page with your Account Subscription details.
+
+  ![Billing Page](../../../../images/guides/account-mgmt/billing-page.png)
+
+<Alert title="Note"  type="info" >
+
+Now that you have a Professional Workspace with a Gold Account Plan, you can [add it as a supporting organization](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to your site to take advantage of your new features.
+
+</Alert>
+
+</Tab>
+
+<Tab title="Platinum & Diamond Account Plan" id="platinum-diamond">
+
+ Platinum and Diamond Account Plans offer all the tools and features of the Gold Account Plan, and include features that benefit large teams and enterprise organizations such as direct access to experts, dedicated support, and more. [Contact Sales](https://pantheon.io/contact-sales) for more information about upgrading to a Platinum or Diamond Account Plan.
+
+</Tab>
+
+<Tab title="Partner Program" id="partner-program">
+
+You will only be assigned a [Partner Program](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency. 
+
+As a Pantheon Partner, you receive access to:
+
+- Pantheon's Partner Portal
+- A listing in our Agency Directory
+- Sales playbooks, training, and [Gold Level Support](/guides/support/#support-features-and-response-times)
+- Preferred Pricing on site hosting plans
+
+**Partner Trial**: If you are creating a workspace for a web agency, you will be assigned a [Partner Trial Account](https://pantheon.io/partners/find-pantheon-partner) workspace that lets you try Gold Account Plan features free for 90 days.
+
+**Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. Registering as an agency will start your path to partnership with Pantheon. You'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
+
+For more information about our partner program and how to unlock higher partner tiers, check out our [Partner Program Guide](https://pantheon.io/resources/pantheon-partner-program-guide).
+
+</Tab>
+
+</TabList>
 
 ## Create a Professional Workspace
 
-You can create as many workspaces as necessary. The following process will create a Silver Tier Professional workspace.
+You can create as many workspaces as necessary. The following process will create a Professional Workspace with a free Silver Account Plan.
 
-1. Select your gravatar in the upper left corner, then select **Create New Workspace**.
+1. Click on your gravatar in the upper left corner, then select **Create New Workspace**.
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
@@ -94,6 +179,8 @@ You can customize the following for a workspace:
 
 - Payment and terms of service information for Sites built in your workspace.
 
+- [Upgrade](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans) a Silver Account Plan to a Gold Account Plan.
+
 To customize a Professional Workspace, go to the workspace you wish to customize, then click the **Settings** tab.
 
 ## Delete a Workspace
@@ -110,11 +197,11 @@ Refer to [Sites](/guides/account-mgmt/workspace-sites-teams/) for more informati
 
 Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logs in and out successfully 3 times.
 
-As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for password-less access](/ssh-keys).
+As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for passwordsless access](/ssh-keys).
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
 
-Only workspace team members and administrators of a Supporting Organization with Multidev can use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, will not be able to commit code to them.
+Only workspace team members and administrators of a Supporting Organization with Multidev can use this feature. Site team members who are associated with the site but not the professional workspace can access Multidev environments via the unique URL, will not be able to commit code to them.
 
 ### Why can't my Agency workspace own a site?
 
@@ -134,4 +221,4 @@ Yes, but only for sites owned by Enterprise or EDU+ workspaces. Roles designated
 
 ### As an Agency, how many sandbox sites do members of a workspace receive?
 
-Each member of an workspace can create up to 10 Sandbox sites. When the limit of 10 is reached, take a site live or delete unused sites to free up additional Sandbox slots.
+Each member of a workspace can create up to 10 Sandbox sites. When the limit of 10 is reached, take a site live or delete unused sites to free up additional Sandbox slots.
