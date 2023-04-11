@@ -34,7 +34,7 @@ Your repository should contain a composer.json that declares a package name in i
 
 <TabList>
 
-<Tab title="GitHuB" id="github-example" active={true}>
+<Tab title="GitHub" id="github-example" active={true}>
 
 1. Generate a GitHub [Personal Access Tokens](https://github.com/settings/tokens) page. The Github token must have all `repo` permissions selected.
 
