@@ -61,7 +61,7 @@ Your repository should contain a composer.json that declares a package name in i
 
 <Tab title="GitLab" id="gitlab-example">
 
-1. [Generate a GitLab token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). Ensure that all repository scopes are selected for the token.
+1. [Generate a GitLab token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). Ensure that `read_repository` scope is selected for the token.
 
 1. Add the private repository to `composer.json`, replacing `<token>` with your newly generated token.
  
