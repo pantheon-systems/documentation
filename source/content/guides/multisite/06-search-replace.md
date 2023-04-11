@@ -52,7 +52,7 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
 
 1. Define and pair the environments to be replaced. Refer to [this gist](https://gist.github.com/scottbuscemi/b051ad6510ef8494aff80d0f43afeeb2) for an example of how `sites.yml` might look. 
 
-1. The `sites.yml` file can be validated before committing using Pantheon's sites-yml-validator utility available [on Github](https://github.com/pantheon-systems/sites-yml-validator). The project's README includes details on how to install and use the utility.
+1. The `sites.yml` file can be validated before committing using Pantheon's `sites-yml-validator` utility available [on Github](https://github.com/pantheon-systems/sites-yml-validator). The project's README includes details on how to install and use the utility.
 
 1. Commit the  `sites.yml` file in the `private/sites.yml` in the site’s Git repository.
 
