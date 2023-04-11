@@ -92,7 +92,13 @@ Your repository should contain a composer.json that declares a package name in i
 
 <Tab title="Bitbucket" id="bitbucket-example">
 
-1. [Generate a Bitbucket token](https://confluence.atlassian.com/bitbucketserver072/personal-access-tokens-1005335924.html). Ensure that all repository scopes are selected for the token.
+1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Also, set the consumer as private and put a (dummy) callback URL.
+
+1. Use the consumer key and consumer secret to create an `auth.json` file in your repo root like this:
+
+    ```bash{promptUser: user}
+    composer config bitbucket-oauth.bitbucket.org consumer-key consumer-secret
+    ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
 
@@ -100,7 +106,7 @@ Your repository should contain a composer.json that declares a package name in i
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://username@bitbucket.org/vendor/package-name.git"
+            "url": "https://bitbucket.org/vendor/package-name.git"
         }
     ],
     ```
@@ -114,7 +120,7 @@ Your repository should contain a composer.json that declares a package name in i
 1. Run the commands below to commit the updated Composer files and add them to your environment only if the above command update works locally.
 
    ```bash{promptUser: user
-   git add composer.json composer.lock
+   git add auth.json composer.json composer.lock
    git commit -m "Adding private package <your-package>"
    git push
    ```
