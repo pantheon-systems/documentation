@@ -1,6 +1,6 @@
 ---
 title: Front-End Sites without a Starter Kit
-subtitle: Use a Non-official Framework
+subtitle: Use a Non-official Frontend Framework
 description: Learn how to use a non-official framework to create a Front-End Site.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia]
@@ -35,13 +35,7 @@ You can use frontend frameworks other Gatsby and Next.js. Note that while other 
 
 1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
 
-1. Click the **Decoupled** tab and then click **+Create New Site**.
-
-    <Alert title="Note"  type="info" >
-
-    You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    </Alert>
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Click **Import Repository** on the _What kind of site are you creating?_ page to connect your GitHub repository.
 

@@ -31,12 +31,16 @@ You can create an application from scratch by importing a repository or you can 
 
 Pantheon Front-End Sites can be created from server-side rendering (SSR) or a static site generator (SSG). The following options are available for Pantheon Front-End Site Early Access offering:
 
-| Site Option           | Description                                                                                                                                                    |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Import Repository**](/guides/decoupled/no-starter-kit/import-repo)     | Connect your Git provider and select an existing repository. The CMS is optional for this configuration. Limited support is provided for this configuration. |
-| [**WordPress and Gatsby**](/guides/decoupled/wp-gatsby-frontend-starters)  | Create a Front-End Site using a base Gatsby.js frontend template with WordPress as the CMS.                                                                    |
-| [**Drupal and Next.js**](guides/decoupled/drupal-nextjs-frontend-starters)    | Create a Front-End Site using a base Next.js frontend template with Drupal as the CMS.                                                                         |
-| [**WordPress and Next.js**](/guides/decoupled/wp-nextjs-frontend-starters) | Create a Front-End Site using a base Next.js frontend template with WordPress as the CMS.                                                                      |
+|  Site Creation Option                                   | Description                                                                                                                                                                                            | CMS Required      | Starter Kit |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|-------------|
+| [**Import Repository**](/guides/decoupled/no-starter-kit/import-repo)                                       | Connect your Git provider and select an existing repository. The CMS is  optional for this configuration. Limited support is provided for this  configuration.                                         | Optional | ❌           |
+| [**Create Your Site without a Starter Kit and/or CMS**](/guides/decoupled/no-starter-kit/create)       | You are not required to have a CMS when using this method. This option is does not use a pre-configured starter kit, and must be configured manually.                                                  | Optional | ❌          |
+| [**Create Your Site with a Non-official Frontend Framework**](/guides/decoupled/no-starter-kit/any-framework) | Pantheon Decoupled Early Access (EA) program currently supports Gatsby and Next.js as frontend frameworks. The process for non-officially supported frontend frameworks requires manual configuration. | Optional | ❌          |
+| [**WordPress and Gatsby Frontend**](/guides/decoupled/wp-gatsby-frontend-starters)                           | Create a decoupled site using a base Gatsby.js frontend template with WordPress as the CMS.                                                                                                            | <span style="color:green">✔</span>       | <span style="color:green">✔</span>         |
+| [**Drupal and Next.js Frontend**](guides/decoupled/drupal-nextjs-frontend-starters)                            | Create a decoupled site using a base Next.js frontend template with Drupal as the CMS.                                                                                                                 | <span style="color:green">✔</span>       | <span style="color:green">✔</span>          |
+|[**WordPress and Next.js Frontend**](/guides/decoupled/wp-nextjs-frontend-starters)                         | Create a decoupled site using a base Next.js frontend template with WordPress as the CMS.                                                                                                              | <span style="color:green">✔</span>       | <span style="color:green">✔</span>          |
+| [**Drupal Backend**](/guides/decoupled/drupal-backend-starters/create)                                         | Use the Drupal backend starter kit to streamline the creation of your Front-End Site on Pantheon. This option is pre-configured.                                                                                                                                                                                                    | <span style="color:green">✔</span>       | <span style="color:green">✔</span>          |
+| [**WordPress Backend**](/guides/decoupled/wp-backend-starters/create)                                       | Use the WordPress backend starter kit to streamline the creation of your Front-End Site on Pantheon. This option is pre-configured.                                                                                                                                                                                                                                                     | <span style="color:green">✔</span>       | <span style="color:green">✔</span>         |
 
 <Alert title="Note"  type="info" >
 
@@ -70,23 +74,10 @@ Pantheon offers recommended decoupled starter kit templates that are pre-configu
 
 * A development environment that supports communication between backend and frontend services.
 
-### Backend Starters
+## More Resources
 
 - [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
 - [WordPress Backend Starter](/guides/decoupled/wp-backend-starters)
-
-### Frontend Starters
-
 - [Drupal + Next.js Frontend Starter](/guides/decoupled/drupal-nextjs-frontend-starters)
 - [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
 - [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)
-
-### No Starter or CMS
-
-- [Create a Front-End Site without a Starter](/guides/decoupled/no-starter-kit)
-
-- [Create a Front-End Site without a CMS](/guides/decoupled/no-starter-kit/create)
-
-### Import Repository
-
-- [Create a Front-End Site by Importing Your Repo](/guides/decoupled/no-starter-kit/import-repo)
