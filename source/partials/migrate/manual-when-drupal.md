@@ -8,8 +8,8 @@ tags: [--]
 reviewed: "2022-11-03"
 ---
 
-### Drupal-Specific Scenarios
+- You are using Drupal version 9 or higher, or are moving a Drupal site **and** want to upgrade to the latest version of Drupal:
 
-- The site uses Drush 9 or later (`drush ard` is only available on Drush 8 and earlier).
+   - Your site *is* Composer-managed: [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer) or [Import Drush Site Archives with Terminus](/guides/drush/drush-import)
 
-- The site is managed with Composer.
+   - Your site is *not* Composer-managed: [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)
