@@ -20,7 +20,7 @@ This section provides information on how to add a package from a private reposit
 
 <Alert title="Note" type="info">
 
-Pantheons Secrets Manager is currently in Early Access (EA). You can use the [Terminus plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) to manage your secrets for private repositories in Integrated Composer builds.
+Pantheons Secrets Manager is currently in Early Access (EA). You can also use the [Terminus plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) to manage your secrets for private repositories in Integrated Composer builds without committing your credentials to the repository.
 
 </Alert >
 
