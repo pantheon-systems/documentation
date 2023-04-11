@@ -68,15 +68,15 @@ Professional Workspaces with a Gold Account Plan provide additional collaboratio
 
 **To upgrade your Professional Workspace Account Plan to Gold**:
 
-1. Navigate to the Workspace Switcher located in the upper left corner of your Personal Workspace. If you already have a Professional Workspace, then navigate to that Professional Workspace <Popover title="Account Plans" content="Account Plans are attached to Professional Workspaces. Select the Professional Workspace to which you'd like to attach the account plan, or create a Professional Workspace if you don't have one set up already." /> using the Workspace Switcher and skip ahead to Step 6.
+1. Click the Workspace Switcher located in the upper left corner of your Personal Workspace. If you already have a Professional Workspace, then select that Professional Workspace <Popover title="Account Plans" content="Account Plans are attached to Professional Workspaces. Select the Professional Workspace to which you'd like to attach the account plan, or create a Professional Workspace if you don't have one set up already." /> using the Workspace Switcher and skip ahead to Step 6.
 
   ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
 
-1. Click on your gravatar and navigate to `Create a Professional Workspace`.
+1. Click on your gravatar and select `Create a Professional Workspace`.
 
   ![Create a Professional Workspace](../../../../images/guides/account-mgmt/create-new-professional-workspace.png)
 
-1. Name your Professional Workspace and fill in details about your Workspace then click `Continue`.
+1. Name your Professional Workspace, fill in the details, and click `Continue`.
 
   ![Create Workspace Details](../../../../images/guides/account-mgmt/create-professional-workspace.png)
 
@@ -88,7 +88,7 @@ Professional Workspaces with a Gold Account Plan provide additional collaboratio
 
   ![Workspace is ready](../../../../images/guides/account-mgmt/ws-ready.png)
 
-1. To add a  Gold Account Plan to this workspace, you can click on `Upgrade Account Plan` in the banner at the top of the page, or click `Upgrade Account to Gold` on the right side of the page, under `Get the most out of Pantheon`.
+1. To add a  Gold Account Plan to this workspace, click `Upgrade Account Plan` in the banner at the top of the page, or click `Upgrade Account to Gold` on the right side of the page, under `Get the most out of Pantheon`.
 
   ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
 
