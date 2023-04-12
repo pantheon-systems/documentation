@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/account
-anchorid: account
 editpath: docs/guides/account-mgmt/account/01-introduction.md
 reviewed: "2022-09-19"
 ---
@@ -26,11 +24,6 @@ The first thing you need to do when starting with Pantheon is create an account.
 
 [Create your account for free](https://pantheon.io/register?docs).
 
-<Alert title="Note" type="info">
-
-Are you an agency? Do you build sites for others? If so, check **Are you an agency?** on the [sign-up form](https://pantheon.io/register?docs) to get more free features. There are no restrictions on agency size. You can sign up if you're an agency of one or an agency of one thousand.
-
-</Alert>
 
 ## Personal Settings
 

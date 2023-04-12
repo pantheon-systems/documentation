@@ -4,9 +4,7 @@ subtitle: Deploy Live
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-createempty-md/deploy-live
-anchorid: deploy-live
 editpath: drupal/drupal-hosted-createempty-md/15-deploy-live.md
 reviewed: "2022-12-13"
 contenttype: [guide]

@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [cli, database]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/mariadb-mysql/kill-mysql-queries
-anchorid: kill-mysql-queries
 ---
 
 This section provides information on how to identify and kill queries with MySQL Command-Line Tool.

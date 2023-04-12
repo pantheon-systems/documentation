@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [wp-config]
 contributors: [masonjames]
-layout: guide
 showtoc: true
 permalink: docs/guides/php/wp-config-php
-anchorid: wp-config-php
 ---
 
 This section provides information on how to configure the `wp-config.php` file for a WordPress site. Refer to [Configure Your Settings.php File](/guides/php/settings-php) if you have a Drupal site.
@@ -156,7 +154,7 @@ More information can be found in our [PHP 7.1 & ionCube Decoder Now Available fo
 
 ### Can I increase the memory limit of my WordPress site?
 
-WordPress installations have a core PHP memory limit of 40MB for single sites and 64MB for site networks by default. 
+WordPress installations have a core PHP memory limit of 40MB for single sites and 64MB for WordPress Multisites by default. 
 You can [increase this limit](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php) up to the limit of memory allocated for your [site plan](/guides/account-mgmt/plans/faq#plan-resources).
 
 Example for Elite sites:

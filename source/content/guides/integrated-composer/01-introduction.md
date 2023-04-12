@@ -5,10 +5,8 @@ description: Learn how to use Integrated Composer.
 tags: [composer, workflow]
 contributors: [ari, edwardangert]
 reviewed: "2022-12-13"
-layout: guide
 showtoc: true
 permalink: docs/guides/integrated-composer
-anchorid: integrated-composer
 contenttype: [guide]
 innav: [true]
 categories: [dependencies]
@@ -42,6 +40,12 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 </Alert>
 
 ### WordPress with Integrated Composer
+
+<Alert title="Note" type="info">
+
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) upstream. You can use this upstream to create an Integrated Composer WordPress site with **Bedrock**. This upstream is currently in EA.
+
+</Alert>
 
 1. [Fork the Pantheon-maintained repository](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely) from [https://github.com/pantheon-upstreams/wordpress-project](https://github.com/pantheon-upstreams/wordpress-project).
 

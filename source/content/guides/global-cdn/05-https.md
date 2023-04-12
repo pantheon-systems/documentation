@@ -4,10 +4,8 @@ subtitle: Configure DNS and Provision HTTPS
 description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt.
 tags: [cdn, dns, https, security]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/global-cdn/https
-anchorid: https
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]

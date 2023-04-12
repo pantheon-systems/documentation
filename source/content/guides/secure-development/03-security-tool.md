@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [dashboard, security, users]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development/security-tool
-anchorid: security-tool
 reviewed: "2022-07-21"
 ---
 

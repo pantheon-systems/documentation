@@ -11,10 +11,8 @@ audience: [develoment]
 product: [terminus]
 integration: [--]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/filesystem/tmp
-anchorid: tmp
 ---
 
 This section provides information on how to use and debug the default temporary path, `.tmp`.

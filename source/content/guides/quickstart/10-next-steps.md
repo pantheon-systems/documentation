@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [launch, webops, workflow]
 permalink: docs/guides/quickstart/next-steps/
-anchorid: next-steps
 editpath: quickstart/10-next-steps.md
 ---
 

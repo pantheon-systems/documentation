@@ -11,10 +11,8 @@ product: [multidev]
 integration: [--]
 tags: [collaborate, workflow, webops, multidev]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/multidev/multidev-faq
-anchorid: multidev-faq
 ---
 
 This section provides answers to frequently asked Multidev questions.
@@ -29,7 +27,7 @@ Multidev environments that are already created on a Pantheon site are available 
 
 You can create a new Multidev if you:
 
-- Belong to a Gold Account or above
+- Belong to a [Gold Account or above](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans)
 
 - Support a site that is owned by a Gold Account customer or above
 

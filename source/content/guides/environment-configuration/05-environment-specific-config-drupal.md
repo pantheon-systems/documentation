@@ -4,10 +4,8 @@ subtitle: Environment-Specific Configurations for Drupal
 description: Manage verbose debugging options and system performance settings per environment on Pantheon using our service configuration files and Drupal's configuration override system.
 tags: [workflow, D8, D9, D10]
 contributors: [peter-pantheon, rachelwhitton]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config-drupal
-anchorid: environment-specific-config-drupal
 contenttype: [guide]
 innav: [false]
 categories: [config]
@@ -169,6 +167,10 @@ This issue can be caused by a number of scenarios related to cache tags, such as
    </Alert>
 
 1. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.
+
+## Rotate `hash_salt` setting
+
+You can use the Terminus `env:rotate-random-seed` [command](/terminus/commands/env-rotate-random-seed) if you need to change the value for the keys and salts. This command invalidates all one-time login links and forces all users to login again.
 
 ## Inclusions and Loading Order of Settings and Services Files
 

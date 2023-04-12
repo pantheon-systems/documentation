@@ -12,10 +12,8 @@ integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-18"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/wp-security
-anchorid: wordpress-pantheon/wp-security
 ---
 
 This section will cover the basics of securely administering and updating WordPress, recommend plugins that can help enhance your security, and help you close the most often exploited WordPress vulnerabilities.
@@ -27,7 +25,7 @@ Pantheon automatically provides the following security measures:
 - [Automated HTTPS](/guides/global-cdn/https)
 - [Secure Dev environment](/pantheon-workflow)
 - [DDOS and intrusion protection](/guides/agcdn/agcdn-features#osi-layer-3-and-4-ddos-protection--mitigation)
-- [Automated backups](/backups)
+- [Automated backups](/guides/backups)
 - [Dashboard Security](/guides/secure-development/security-tool) to lock your environments
 
 ### Additional Security

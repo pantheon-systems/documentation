@@ -11,7 +11,6 @@ product: [--]
 integration: [--]
 tags: [code, dashboard, iterate, sftp]
 permalink: docs/guides/quickstart/code-changes/
-anchorid: code-changes
 editpath: quickstart/09-code-changes.md
 ---
 

@@ -4,10 +4,8 @@ subtitle: Introduction
 description: Learn how to migrate a site to the latest version of Drupal using Multidev
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-md
-anchorid: drupal-hosted-md
 editpath: drupal/drupal-hosted-md/01-introduction.md
 reviewed: "2021-03-31"
 contenttype: [guide]

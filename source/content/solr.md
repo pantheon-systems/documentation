@@ -2,7 +2,7 @@
 title: Pantheon Search (formerly Pantheon Solr)
 description: Detailed information on using Pantheon Search with your Pantheon Drupal or WordPress site.
 tags: [solr,search]
-reviewed: "2021-08-05"
+reviewed: "2023-04-03"
 contenttype: [doc]
 innav: [true]
 categories: [search]
@@ -18,9 +18,7 @@ Pantheon Search (formerly Pantheon Solr) is a system for indexing and searching 
 
 <Alert title="Important Note" type="info">
 
-**Pantheon Search** derives from Solr and can perform full-text content searching in a single language. 
-
-<Partial file="solr-version.md" />
+**Pantheon Search** derives from Solr and can perform full-text content searching in a single language.
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
@@ -165,3 +163,8 @@ The following Apache Solr search components are supported:
 - SpellCheckComponent
 - TermVectorComponent
 - TermsComponent
+
+## More Resources
+
+- [Pantheon Solr Search for Drupal](/guides/solr-drupal)
+- [Enable Solr for WordPress](/guides/wordpress-developer/wordpress-solr)

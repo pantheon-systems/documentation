@@ -4,10 +4,8 @@ subtitle: Prepare
 description: 
 tags: [code, launch, migrate, site, updates, composer]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-createdashboard-set8/prepare
-anchorid: prepare
 editpath: drupal-hosted-createdashboard-set8/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
@@ -24,6 +22,10 @@ integration: [--]
 Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to ensure that your site is ready for upgrade to the latest version of Drupal.
 
 </Alert>
+
+## Ensure Dependencies are Compatible
+
+<Partial file="drupal/dependencies-compatible.md" />
 
 ## Verify the Repository
 

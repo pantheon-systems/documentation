@@ -19,6 +19,14 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 
 ## Latest Release
 
+### 2023-03-29
+
+<a name="20230203" class="release-update"></a>Removes contact support line.
+
+Pantheon Customer Support Engineers are no longer needed to shuffle salt keys. You will no longer see the contact support line in the `wp-pantheon-config.php` file. You can visit https://api.wordpress.org/secret-key/1.1/salt/ to replace the values provided by the platform.
+
+## Previous Releases
+
 ### 2023-01-17
 
 <a name="20230117" class="release-update"></a>Fixes a bug where a fatal error for an undefined variable was thrown on PHP 8+.
@@ -32,8 +40,6 @@ A previous update that added a loader to pull in the pantheon-mu-plugin introduc
 This commit aligns the mu-plugin format to [our standalone repository](https://github.com/pantheon-systems/pantheon-mu-plugin), and will allow for the mu-plugin to receive updates from that repo whenever an updated version of WordPress is released. If you'd like to suggest changes to our mu-plugin, create an issue or open a PR [in `pantheon-mu-plugin` issues](https://github.com/pantheon-systems/pantheon-mu-plugin/issues). 
 
 The commit also adds a standardized mu-plugin `loader.php` file that additional mu-plugins can be added to manually if more are necessary to include in our default upstreams in the future.
-
-## Previous Releases
 
 ### 2022-08-30
 

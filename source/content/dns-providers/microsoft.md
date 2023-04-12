@@ -1,7 +1,6 @@
 ---
 title: Microsoft Domain Configuration
 provider: Microsoft
-dnsprovider: true
 description: Learn how to point your Microsoft domain to a Pantheon site.
 tags: [domains]
 draft: true

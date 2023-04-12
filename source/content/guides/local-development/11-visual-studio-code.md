@@ -12,10 +12,8 @@ integration: []
 tags: [code, collaborate, git, local, sftp]
 contributors: [sarahg, alexfornuto]
 reviewed: "2019-10-16"
-layout: guide
 showtoc: true
 permalink: docs/guides/local-development/visual-studio-code
-anchorid: visual-studio-code
 ---
 
 This section provides information on how to develop your Pantheon site locally with Visual Studio Code.

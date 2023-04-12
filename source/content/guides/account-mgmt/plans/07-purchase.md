@@ -4,10 +4,8 @@ subtitle: Purchase Plans and Addons
 description: Learn how to purchase plans and addons.
 tags: [plans]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/purchase
-anchorid: purchase
 editpath: docs/guides/account-mgmt/plans/07-purchase.md
 reviewed: "2022-09-19"
 contenttype: [guide]
@@ -46,6 +44,7 @@ To purchase a plan for a site:
 1. Click the **Submit** button.
 
 The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
+
 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 

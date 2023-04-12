@@ -9,10 +9,8 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
-layout: guide
 showtoc: true
 permalink: docs/guides/sftp/vscode-sftp
-anchorid: vscode-sftp
 ---
 
 This section provides information on how to upload local changes in Visual Studio (VS) Code.

@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [billing]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/account-mgmt/billing
-anchorid: billing
 editpath: docs/guides/account-mgmt/billing/01-introduction.md
 reviewed: "2022-09-19"
 ---

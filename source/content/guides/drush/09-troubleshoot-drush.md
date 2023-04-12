@@ -3,10 +3,8 @@ title: Drupal Drush Command-Line Utility on Pantheon
 subtitle: Troubleshoot Drush
 description: Review solutions to common Drush troubleshooting scenarios.
 tags: [migrate, terminus, drush]
-layout: guide
 showtoc: true
 permalink: docs/guides/drush/troubleshoot-drush
-anchorid: troubleshoot-drush
 contenttype: [guide]
 innav: [false]
 categories: [cli, troubleshooting]

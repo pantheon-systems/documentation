@@ -4,7 +4,6 @@ description: Configure an existing Jenkins server to automatically test and depl
 tags: [collaborate, continuous-integration, git, iterate]
 type: guide
 permalink: docs/guides/:basename
-date: 6/20/2017
 contenttype: [doc]
 innav: [true]
 categories: [automate, overview]

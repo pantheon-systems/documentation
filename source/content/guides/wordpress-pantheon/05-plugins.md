@@ -12,10 +12,8 @@ integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-04"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/plugins
-anchorid: wordpress-pantheon/plugins
 ---
 
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these plugins, find Pantheon developers in our [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/).
@@ -42,7 +40,6 @@ The [Pantheon Updates](https://github.com/pantheon-systems/WordPress/tree/master
 
 The Test and Live environment codebases also cannot be written to, preventing automatic updates from downloading files from WordPress.org. Any plugin or theme updates must be performed in a development environment then committed and deployed to the Test and Live environments. WordPress core updates must be applied to a development environment via our Git-based [upstream core updates feature](/core-updates).
 
-Check out the WordPress Dashboard section of [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin#wordpress-dashboard) for more information on managing plugins and themes across multiple environments.
 
 ### Pantheon Page Cache
 

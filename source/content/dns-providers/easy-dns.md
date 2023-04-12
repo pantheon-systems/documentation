@@ -1,18 +1,14 @@
 ---
-ttitle: Accessibility Guide
-subtitle: Overview
-description: How to extend your site's reach with accessibility planning, fixes, and reporting.
-tags: [accessibility, workflow, SEO]
-contributors: [carolyn-shannon, wordsmither]
-reviewed: "2022-06-01"
-layout: guide
-showtoc: true
-permalink: docs/guides/accessibility
-anchorid: accessibility
-editpath: accessibility/01-overview.md
-contenttype: [guide]
+title: Easy DNS Domain Configuration
+provider: Easy DNS
+description: Learn how to point your Easy DNS domain to a Pantheon site.
+tags: [dns]
+draft: true
+permalink: docs/:basename
+editpath: dns-providers/easy-dns.md/
+contenttype: [doc]
 innav: [true]
-categories: [optimize]
+categories: [domains, launch]
 cms: [--]
 audience: [--]
 product: [--]

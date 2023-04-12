@@ -28,7 +28,6 @@ Table prefixes are not supported or recommended by Pantheon. For more details se
 WordPress's automatic update functionality will not work on Pantheon site environments. We disable all automatic updates by default with the [Pantheon Updates](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon/pantheon-updates.php) plugin, found within the mu-plugins directory of our WordPress upstream. This plugin disables core, theme, and plugin updates on all Pantheon environments. Attempting to override this functionality by editing or removing this file will break your Test and Live environments. The codebase for these environments is not writeable, and WordPress will continually attempt to download and unpack core updates, which it cannot do on these environments. For more information, see the following:
 
 - [Applying Upstream Updates](/core-updates/ "How to apply core updates to sites on Pantheon")
-- [Updating WordPress Plugins](/cms-admin/#wordpress-dashboard "How to update plugins")
 
 ## PHP Sessions
 
@@ -74,3 +73,9 @@ add_filter( 'wp_image_editors', 'force_use_gdlib' );
 ```
 
 See this [core issue](https://core.trac.wordpress.org/ticket/43310) on WordPress.org for more information.
+
+## Language Packs
+
+WordPress 4.7 introduced the ability for admins to add additional language packs to WordPress from the General Settings screen. On Pantheon, this is only possible on development environments in SFTP mode. This is because WordPress attempts to download the language packs for the requested language, and file writes are disabled in all environments other than development environments.
+
+WordPress 6.2 extends this feature to user profiles. You can install language packs from your Edit Profile page. Note that this feature is still not available on Pantheon outside of a development environment in SFTP mode.

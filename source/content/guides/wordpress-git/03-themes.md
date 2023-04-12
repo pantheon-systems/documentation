@@ -2,8 +2,6 @@
 title: Using Git with SFTP & WordPress
 subtitle: Manage Themes
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
-anchorid: themes
-layout: guide
 contenttype: [guide]
 innav: [false]
 categories: [git]
@@ -15,7 +13,6 @@ tags: [git, sftp, themes]
 type: guide
 permalink: docs/guides/wordpress-git/themes/
 editpath: wordpress-git/03-themes.md
-image: git-sftp-wp-docs-guide
 reviewed: "2020-02-26"
 ---
 

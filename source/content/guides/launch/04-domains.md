@@ -2,11 +2,9 @@
 title: Launch Essentials
 subtitle: Connect a Domain Name
 description: Learn how to connect your domain to your Pantheon-hosted site.
-layout: guide
 showtoc: true
 tags: [dns, https, launch, webops]
 permalink: docs/guides/launch/domains/
-anchorid: domains
 contenttype: [guide]
 innav: [false]
 categories: [domains, launch]

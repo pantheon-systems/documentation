@@ -2,11 +2,9 @@
 title: Launch Essentials
 subtitle: Final Review
 description: Review next steps to take after you launch your site.
-layout: guide
 showtoc: true
 tags: [launch, webops]
 permalink: docs/guides/launch/next-steps/
-anchorid: next-steps
 contenttype: [guide]
 innav: [false]
 categories: [overview, test, launch]

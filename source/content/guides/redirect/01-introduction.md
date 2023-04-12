@@ -10,11 +10,9 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dns, https, redirects]
-layout: guide
 contributors: [wordsmither]
 reviewed: "2022-08-01"
 permalink: docs/guides/redirect
-anchorid: redirect
 ---
 
 This guide provides information on how to:

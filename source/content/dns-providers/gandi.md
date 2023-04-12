@@ -1,7 +1,6 @@
 ---
 title: Gandi Domain Configuration
 provider: Gandi
-dnsprovider: true
 description: Learn how to point your Gandi domain to a Pantheon site.
 tags: [domains]
 permalink: docs/:basename

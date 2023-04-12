@@ -4,10 +4,8 @@ subtitle: FAQ
 description: Commonly asked questions about plans.
 tags: [plans, faq]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/plans/faq
-anchorid: faq
 editpath: docs/guides/account-mgmt/plans/11-faq.md
 reviewed: "2022-09-19"
 contenttype: [guide]

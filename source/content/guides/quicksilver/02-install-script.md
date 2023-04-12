@@ -10,10 +10,8 @@ audience: [development]
 product: [--]
 integration: [quicksilver]
 tags: [quicksilver, webops, workflow]
-layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/install-script
-anchorid: install-script
 ---
 
 This section provides information on script type and location, as well as how to install specific scripts.
@@ -37,19 +35,7 @@ If your site uses a [nested docroot](/nested-docroot), the script paths in your 
 
 You can use Terminus to install Quicksilver Composer scripts if you have a Composer-managed site. The sections below provide links to Pantheon-maintained repositories with install scripts.
 
-### Secrets
 
-Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
-
-You can also use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values securely. Note that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path when storing keys for Quicksilver scripts in the private files path.
-
-Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
-
-This allows you to write and remove key values. The code example below shows you how to write a value to a key:
-
-```bash{promptUser: user}
-terminus secrets:set site.env key value
-```
 
 ### Clear Cloudflare Cache
 
@@ -103,6 +89,20 @@ Use the [Pantheon New Relic Deploy Markers repository](https://github.com/panthe
 
 Use the [Pantheon Search and Replace URLs on WordPress Sites repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace) to automatically find and replace URLs in the database of a WordPress website. This is helpful for sites that have multiple domains in an environment.
 
+### Secrets
+
+Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr).
+
+You can also use your site's [private files path](/guides/secure-development/private-paths#private-path-for-files) to store values securely. Note that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path when storing keys for Quicksilver scripts in the private files path.
+
+Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to manage secret data in JSON files in your site's private files path.
+
+This allows you to write and remove key values. The code example below shows you how to write a value to a key:
+
+```bash{promptUser: user}
+terminus secrets:set site.env key value
+```
+
 ### Slack Integration
 
 Use the [Pantheon Slack Integration repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/slack_notification) to integrate Slack notifications from your Pantheon project using Quicksilver. This integration overview also provides information on how to manage API keys outside of your site repository.
@@ -114,6 +114,10 @@ Use the [Pantheon URL Checker repository](https://github.com/pantheon-systems/qu
 ### Webhooks
 
 Use the [Pantheon Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) to post workflow data to an external URL for a generic Webhook implementation.
+
+### WP Solr Indexing
+
+Use the [Pantheon WP Solr Index repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_solr_index) when you create a new WordPress Multidev environment. New WordPress Multidevs clone the code, files, and database, but not the Solr instance. This script re-indexes Solr using WP-CLI and the Solr Power WordPress plugin.
 
 ## More Resources
 

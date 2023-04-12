@@ -11,9 +11,7 @@ product: [--]
 integration: [--]
 tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-layout: guide
 permalink: docs/guides/object-cache/enable-object-cache
-anchorid: enable-object-cache
 reviewed: "2022-12-13"
 ---
 
@@ -31,7 +29,7 @@ This section provides information on how to enable Object Cache.
   terminus wp <site>.<env> -- plugin install wp-redis
   ```
 
-  If you use site networks, you must add the site URL by adding to the command: 
+  If you use WordPress Multisite, you must add the site URL by adding to the command: 
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis --url=<url>

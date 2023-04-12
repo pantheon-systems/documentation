@@ -5,10 +5,8 @@ description: Learn more about choosing your primary domain.
 tags: [dashboard, dns, https, redirects]
 searchboost: 150
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/domains/primary-domain
-anchorid: primary-domain
 contenttype: [guide]
 innav: [false]
 categories: [domains]

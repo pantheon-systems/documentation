@@ -4,10 +4,8 @@ subtitle: Integrate Your Fastly Account on Pantheon with Syslog
 description: Learn how to use Syslog with your Fastly account on Pantheon.
 tags: [cms, logs]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/fastly-pantheon/fastly-syslog
-anchorid: fastly-syslog
 contenttype: [guide]
 innav: [false]
 categories: [cache]

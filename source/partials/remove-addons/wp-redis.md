@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin. Review [Uninstall Plugins](/cms-admin#uninstall-plugins) for detailed instructions.
+1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin. 
 
 1. Delete the `wp-content/object-cache.php` file.
 

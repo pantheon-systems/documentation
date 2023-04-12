@@ -12,10 +12,8 @@ integration: [--]
 tags: [accessibility, workflow, SEO]
 contributors: [wordsmither]
 reviewed: "2022-06-01"
-layout: guide
 showtoc: true
 permalink: docs/guides/accessibility/resources
-anchorid: accessibility/resources
 editpath: accessibility/07-resources.md
 ---
 

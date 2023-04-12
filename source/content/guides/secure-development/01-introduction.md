@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [cms, security, cdn]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/secure-development
-anchorid: secure-development
 reviewed: "2022-07-21"
 ---
 
@@ -46,7 +44,7 @@ Pantheon also provides:
 
 - Fully managed and free [HTTPS certificates](/guides/global-cdn/https)
 
-- [Automated backups](/backups)
+- [Automated backups](/guides/backups)
 
 - [One-click updates](/core-updates) for all WebOps platform plans
 

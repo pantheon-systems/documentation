@@ -8,7 +8,6 @@ layout: terminuspage
 contributors: [wordsmither]
 tags: [reference, cli, local, terminus, workflow]
 permalink: docs/terminus/supported-terminus
-anchorid: supported-terminus
 contenttype: [guide]
 innav: [false]
 categories: [git]
@@ -19,12 +18,6 @@ integration: [--]
 ---
 
 <Partial file="terminus-guide/eol.md" />
-
-<Alert title="Note" type="info" >
-
-Terminus 2.x, 1.x and 0.x are EOL.
-
-</Alert>
 
 ### PHP Version Compatibility Matrix
 

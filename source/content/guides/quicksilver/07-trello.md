@@ -11,10 +11,8 @@ product: [--]
 integration: [quicksilver, trello]
 tags: [collaborate, quicksilver, webops, workflow]
 contributors: [scottmassey]
-layout: guide
 showtoc: true
 permalink: docs/guides/quicksilver/trello
-anchorid: trello
 ---
 
 This section provides information on how to integrate Trello with Pantheon using Quicksilver.

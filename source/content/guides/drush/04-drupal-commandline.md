@@ -7,7 +7,6 @@ contributors: [stevector, whitneymeredith]
 type: guide
 showtoc: true
 permalink: docs/guides/drush/drupal-commandline
-anchorid: drupal-commandline
 contenttype: [guide]
 innav: [false]
 categories: [cli]
@@ -27,7 +26,7 @@ Be sure that you:
 
 - Are familiar with your operating system's command line.
 - Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
-- Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
+- Have created a [Pantheon account](https://pantheon.io/register?docs). Pantheon accounts are always free for development.
 - Have an [SSH key](/ssh-keys) generated, added to your Pantheon dashboard, and loaded in to your local SSH agent.
 - You have [Composer](https://getcomposer.org/download/), the package manager for PHP, installed on your machine.
 

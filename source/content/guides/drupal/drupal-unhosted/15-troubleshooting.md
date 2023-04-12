@@ -4,10 +4,8 @@ subtitle: Troubleshooting
 description: Troubleshoot common issues when migrating.
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-unhosted/troubleshooting
-anchorid: troubleshooting
 editpath: drupal/drupal-unhosted/15-troubleshooting.md
 contenttype: [guide]
 innav: [false]

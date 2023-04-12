@@ -10,10 +10,8 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wp-cli, cli]
-layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/wp-cli-global-parameters
-anchorid: wp-cli-global-parameters
 ---
 
 This section provides information on WP-CLI global parameters that you should be familiar with to help you use WP-CLI to develop and maintain your site.
@@ -79,4 +77,3 @@ Here are [more commands](https://developer.wordpress.org/cli/commands/) you may 
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
 - [Terminus Guide](/terminus)
-- [WordPress Dashboard](/cms-admin#wordpress-dashboard)

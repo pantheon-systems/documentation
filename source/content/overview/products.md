@@ -31,13 +31,13 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Decoupled Hosting"} link={"/guides/decoupled-sites"}>
+  <Product title={"Decoupled Hosting"} link={"/guides/decoupled/overview"}>
 
   Decoupled Sites run a Node.js codebase in parallel with a WordPress or Drupal site.
 
   </Product>
 
-  <Product title={"Backups"} link={"/backups"}>
+  <Product title={"Backups"} link={"/docs/guides/backups"}>
 
   Nightly automated backups of your site’s database, files, and code.
 
@@ -138,5 +138,24 @@ Pantheon offers a wide array of products and features to simplify building and m
   Use our [Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) for a generic Webhook implementation.
 
   </Product>
+
+</ProductGroup>
+
+## Management Tools
+
+<ProductGroup>
+
+  <Product title={"Enterprise Billing Center"} link={"/overview/enterprise-billing-center"}>
+
+  Detailed billing and site plan information for Enterprise (contract) customers
+
+  </Product>
+
+  <Product title={"Pantheon Dashboard"} link={"/guides/new-dashboard"}>
+
+  Visualize and manage sites, users, traffic, metrics, visual regression testing (VRT), and more.
+
+  </Product>
+
 
 </ProductGroup>

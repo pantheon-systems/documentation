@@ -12,10 +12,8 @@ integration: [--]
 tags: [dashboard, webops, workflow]
 contributors: [joa-pan]
 reviewed: "2022-07-20"
-layout: guide
 showtoc: true
 permalink: docs/guides/new-dashboard/personal-settings
-anchorid: new-dashboard
 editpath: new-dashboard/04-personal-settings.md
 ---
 

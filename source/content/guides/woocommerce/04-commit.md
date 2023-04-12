@@ -2,10 +2,6 @@
 title: WooCommerce Quick Start
 subtitle: Commit Changes
 description: In step four of the WooCommerce Quick Start guide, learn how to commit your changes into the codebase, following the Pantheon workflow.
-woocommerce: true
-anchorid: commit
-generator: pagination
-layout: guide
 contenttype: [guide]
 innav: [false]
 categories: [ecommerce]
@@ -15,17 +11,8 @@ product: [--]
 integration: [woocommerce]
 tags: [plugins, sftp, site]
 type: guide
-pagination:
-    provider: data.woocommercepages
-use:
-    - woocommercepages
 permalink: docs/guides/woocommerce/commit/
-nexturl: guides/woocommerce/initialize-prod/
-nextpage: Initialize Production
-previousurl: guides/woocommerce/configure/
-previouspage: Configure
 editpath: woocommerce/04-commit.md
-image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 At Pantheon, we believe in best practices for development, and that includes using [version control](https://pantheon.io/features/version-control-workflow) - that's why it's built into our platform. We've done a lot on the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment so far and at this point we're just about ready to move everything over to the **<span class="glyphicons glyphicons-equalizer"></span> Live** environment.
 
@@ -45,7 +32,7 @@ Once you're all done click **Commit**. When you've finished you should see your 
 
 ![Pantheon dashboard commit log](../../../images/guides/woocommerce/15-Pantheon-dashboard-commit-log.png)
 
-We've just made a ton of changes and, before we hand this off to someone to add content to the site, we should [make a backup](/backups) in case we need to restore to this starting state.
+We've just made a ton of changes and, before we hand this off to someone to add content to the site, we should [make a backup](/guides/backups) in case we need to restore to this starting state.
 
 With a free plan you can make as many manual backups as you like. If you upgrade to a paid plan you enable automatic backups. Let's create a manual backup.
 

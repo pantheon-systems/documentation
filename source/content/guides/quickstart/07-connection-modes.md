@@ -12,7 +12,6 @@ integration: [--]
 tags: [code, dashboard, git, sftp, workflow]
 showtoc: true
 permalink: docs/guides/quickstart/connection-modes/
-anchorid: connection-modes
 editpath: quickstart/07-connection-modes.md
 ---
 

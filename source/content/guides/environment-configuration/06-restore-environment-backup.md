@@ -4,10 +4,8 @@ subtitle: Restoring an Environment from a Backup
 description: Detailed information on how to safely restore a Drupal or WordPress site backup to any environment.
 tags: [backup, dashboard, git, webops, workflow]
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/restore-environment-backup
-anchorid: restore-environment-backup
 contenttype: [guide]
 innav: [false]
 categories: [backup]
@@ -133,7 +131,7 @@ If you still want to restore a backup to the Live environment, we recommend the 
 
 1. [Lock the environment](/guides/secure-development/security-tool).
 
-1. [Run a backup](/backups) of LIVE, in order to have a copy of files and the database that will be overwritten.
+1. [Run a backup](/guides/backups) of LIVE, in order to have a copy of files and the database that will be overwritten.
 
 1. Run the restore while the site is still locked.
 
@@ -216,6 +214,6 @@ terminus workflow:list yoursite-name --fields id,env,workflow,time --format tabl
 
 ## More Resources
 
-- [Backups Tool](/backups)
+- [Backups Tool](/guides/backups)
 
 - [Terminus rsync plugin](https://github.com/pantheon-systems/terminus-rsync-plugin)

@@ -2,8 +2,6 @@
 title: WordPress Multisite
 subtitle: Workflows
 description: Learn more about WordPress Multisite workflows.
-anchorid: media
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]
@@ -14,10 +12,7 @@ product: [--]
 integration: [--]
 tags: [multisite, workflow]
 permalink: docs/guides/multisite/workflows/
-nexturl: guides/multisite/debug/
-previousurl: guides/multisite/workflows/
 editpath: multisite/05-workflows.md
-image: multisite
 ---
 This section provides information on important Multisite fundamentals.
 
@@ -44,6 +39,13 @@ After you've configured a WordPress Multisite in the Dev environment, you'll qui
 To better understand what's going on, let's dive into `wp search-replace` with greater detail.
 
 ## Deploy Across Environments
+
+<Alert title="Note" type="info">
+
+Search and replace for Multisites can now be handled automatically by the platform search and replace, currently in Early Access. For more details, see [Multisite Search Replace](/guides/multisite/search-replace).
+
+</Alert>
+
 WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
 
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
@@ -56,7 +58,7 @@ In this example:
 
 - `<old-domain>` is the domain currently stored in the database.
 - `<new-domain>` is the new domain you'd like to replace the old domain with.
-- `--network` tells WP-CLI to perform the procedure on all Site Network tables. Its default behavior is to limit search and replace to the current site.
+- `--network` tells WP-CLI to perform the procedure on all WordPress Multisite tables. Its default behavior is to limit search and replace to the current site.
 - `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
 Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
@@ -69,7 +71,7 @@ terminus remote:wp <site>.<env> -- search-replace --network
 
 Now that you've performed the search and replace on your database, WordPress has the correct stored configuration.
 
-##  Flush Cache Globally after Search-Replace
+##  Flush Cache Globally after Search and Replace
 If you use Redis as a persistent storage backend for your object cache, you'll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn't serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:

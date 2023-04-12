@@ -12,10 +12,8 @@ integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-05"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/wordpress-developers
-anchorid: wordpress-pantheon/wordpress-developers
 ---
 
 Review the resources in this section to learn how to develop your WordPress Pantheon site efficiently.

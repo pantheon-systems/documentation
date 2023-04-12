@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Multisite Governance
 description: Learn more about governance with WordPress Multisites.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]
@@ -14,7 +13,6 @@ integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/multisite-governance/
 editpath: multisite/04-multisite-governance.md
-image: multisite
 ---
 
 This section provides information on Multisite governance on Pantheon.
@@ -93,4 +91,3 @@ A multisite setup can be more efficient for teams as long as roles and responsib
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)
 
-- [Working in the WordPress Dashboard](/cms-admin#wordpress-dashboard)

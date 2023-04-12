@@ -1,7 +1,6 @@
 ---
 title: Register.com Domain Configuration
 provider: Register.com
-dnsprovider: true
 description: Learn how to point your Register.com domain to a Pantheon site.
 tags: [domains]
 draft: true

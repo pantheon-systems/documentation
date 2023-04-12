@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/pagely/troubleshooting
-anchorid: troubleshooting
 editpath: migrate/pagely/07-troubleshooting.md
 reviewed: "2021-06-15"
 ---

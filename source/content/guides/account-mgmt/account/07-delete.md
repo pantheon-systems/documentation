@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/account/delete
-anchorid: delete
 editpath: docs/guides/account-mgmt/account/07-delete.md
 reviewed: "2022-09-19"
 ---
@@ -25,7 +23,7 @@ Follow the steps below to completely delete your account.
 
 You should backup and export your site(s) before you delete your account. Even though you are leaving the platform, you should still have a backup of your work just in case you need it in the future.
 
-Refer to [Create a Backup](/backups#create-a-backup) if you need to make a backup of an existing environment.
+Refer to [Create a Backup](/guides/backups/create-backups) if you need to make a backup of an existing environment.
 
 Refer to [Restoring a Backup](/guides/environment-configuration/restore-environment-backup) for more information about exporting a backup of an environment.
 

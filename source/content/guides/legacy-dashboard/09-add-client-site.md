@@ -5,11 +5,9 @@ description: Learn how to add a client to your Partner Agency to share special f
 tags: [agencies, billing, organizations]
 contributors: [edwardangert]
 searchboost: 150
-layout: guide
 showtoc: true
 reviewed: "2022-08-20"
 permalink: docs/guides/legacy-dashboard/add-client-site
-anchorid: add-client-site
 editpath: legacy-dashboard/09-add-client-site.md
 contenttype: [guide]
 innav: [false]

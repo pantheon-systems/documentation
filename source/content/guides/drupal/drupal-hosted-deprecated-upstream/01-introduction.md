@@ -4,9 +4,7 @@ subtitle: Introduction
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-hosted-deprecated-upstream
-anchorid: drupal-hosted-deprecated-upstream
 editpath: drupal/drupal-hosted-deprecated-upstream/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]

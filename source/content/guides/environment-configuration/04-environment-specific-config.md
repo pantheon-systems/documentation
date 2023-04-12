@@ -5,10 +5,8 @@ description: Learn how to turn WordPress site plugins on and off based on the en
 tags: [workflow]
 reviewed: "2020-08-11"
 contributors: [whitneymeredith]
-layout: guide
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-specific-config
-anchorid: environment-specific-config
 contenttype: [guide]
 innav: [false]
 categories: [config]
@@ -138,6 +136,10 @@ The [`pre_option_(option_name)`](https://codex.wordpress.org/Plugin_API/Filter_R
 It runs after the value is pulled from the database, providing the ability to overwrite the option value before it’s used by WordPress.
 
 You should avoid using [`update_option()`](https://codex.wordpress.org/Function_Reference/update_option) in this case, as the value is only changed under specific conditions and a database write of the new value is not required.
+
+## Rotate Authentication Unique Keys and Salts
+
+You can use the Terminus `env:rotate-random-seed` [command](/terminus/commands/env-rotate-random-seed) if you need to change the value for the keys and salts. This command invalidates all one-time login links and forces all users to login again.
 
 ## More Resources
 

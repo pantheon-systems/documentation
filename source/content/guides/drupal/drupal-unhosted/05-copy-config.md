@@ -4,9 +4,7 @@ subtitle: Copy Existing Configuration
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 permalink: docs/guides/drupal-unhosted/copy-config
-anchorid: copy-config
 editpath: drupal/drupal-unhosted/05-copy-config.md
 contenttype: [guide]
 innav: [false]

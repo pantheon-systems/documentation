@@ -10,9 +10,7 @@ audience: [development]
 product: [--]
 integration: [quicksilver]
 tags: [quicksilver, webops, workflow]
-layout: guide
 permalink: docs/guides/quicksilver/hooks
-anchorid: hooks
 ---
 
 This section provides information on Quicksilver Hooks workflows.

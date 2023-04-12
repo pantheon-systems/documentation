@@ -4,10 +4,8 @@ subtitle: Prepare the Local Environment
 description: 
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/drupal-hosted-md/prepare
-anchorid: prepare
 editpath: drupal/drupal-hosted-md/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
@@ -20,6 +18,12 @@ integration: [--]
 ---
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon. 
+
+## Ensure Dependencies are Compatible
+
+<Partial file="drupal/dependencies-compatible.md" />
+
+## Prepare the Local Environment
 
 <Partial file="drupal/prepare-local-environment-no-clone.md" />
 

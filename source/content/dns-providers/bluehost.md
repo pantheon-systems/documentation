@@ -1,7 +1,6 @@
 ---
 title: Bluehost Domain Configuration
 provider: Bluehost
-dnsprovider: true
 draft: true
 description: Learn how to point your Bluehost domain to a Pantheon site.
 tags: [domains]

@@ -11,10 +11,8 @@ product: [--]
 integration: [--]
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/platformsh/troubleshooting
-anchorid: troubleshooting
 editpath: migrate/guided/07-troubleshooting.md
 reviewed: "2021-06-15"
 ---

@@ -10,10 +10,8 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wp-cli, cli]
-layout: guide
 showtoc: true
 permalink: docs/guides/wp-cli/wp-cli-troubleshoot
-anchorid: wp-cli-troubleshoot
 ---
 
 This section provides solutions to common WP-CLI troubleshooting scenarios.

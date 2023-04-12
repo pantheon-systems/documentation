@@ -4,9 +4,7 @@ subtitle: Autopilot Setup and Configuration
 description: Enable and configure Autopilot visual regression testing (VRT) for your WordPress or Drupal site.
 tags: [iterate, autopilot, testing, webops, D8, D9, D10 ]
 type: guide
-layout: guide
 showtoc: true
-anchorid: enable-autopilot
 permalink: docs/guides/autopilot/enable-autopilot/
 editpath: autopilot/02-enable-autopilot.md
 reviewed: "2022-12-13"

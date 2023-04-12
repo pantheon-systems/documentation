@@ -4,11 +4,8 @@ subtitle: Introduction
 description: Visual regression testing (VRT) for your WordPress or Drupal site.
 tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 contributors: [nathantyler, alexfornuto, edwardangert]
-productpage: https://pantheon.io/autopilot?docs
 type: guide
-layout: guide
 showtoc: true
-anchorid: autopilot
 permalink: docs/guides/autopilot
 editpath: autopilot/01-introduction.md
 reviewed: "2022-12-13"
@@ -51,7 +48,7 @@ Autopilot is for you if you build or maintain WordPress and Drupal sites.
 
 Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual maintenance work it takes to keep sites updated.
 
-Autopilot requires [Multidev](/guides/multidev), and is available to Pantheon Gold Accounts or higher.
+Autopilot requires [Multidev](/guides/multidev), and is available to Pantheon [Gold Accounts or higher](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans).
 
 Autopilot is enabled for Pantheon sites at the organization level.
 
@@ -62,6 +59,10 @@ Autopilot requires the following:
 - A Gold, Platinum, or Diamond account
 - [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
+- A supported framework:
+    - Drupal with Integrated Composer
+    - Drupal 8 with Integrated Composer or Drush 8
+    - WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
 
 ### Autopilot Site Compatibility
 
@@ -69,7 +70,7 @@ Autopilot requires the following:
 
 ## Autopilot For Agencies
 
-Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization. 
+Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization.
 
 Agency users can only access Autopilot through the Agency Workspace.
 

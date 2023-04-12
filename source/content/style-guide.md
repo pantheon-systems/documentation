@@ -4,6 +4,7 @@ description: Formatting rules and guidelines for Pantheon's open-source document
 contributors: [alexfornuto, rachelwhitton, carolynshannon]
 reviewed: "2021-02-26"
 contenttype: [doc]
+showtoc: true
 categories: [overview, help]
 newcms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]
@@ -645,7 +646,7 @@ This Panel contains additional context, or advanced instructions.
 ```html
 <Accordion title="Panel Title" id="example-panel" icon="wrench">
 
-### Panel Content Header 
+### Panel Content Header
 
 This Panel contains additional context, or advanced instructions.
 
@@ -654,7 +655,31 @@ This Panel contains additional context, or advanced instructions.
 
 </Example>
 
-## Reusable Content
+
+## Redirects
+
+This is Pantheon Docs Team-specific.
+
+When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
+
+
+| Redirect from                  | to                                   |
+|--------------------------------|--------------------------------------|
+| https: //docs.pantheon.io/doc-name | https: //docs.pantheon.io/new-doc-name
+| https: //docs.pantheon.io/guides/guide-name  |https: //docs.pantheon.io/guides/new-guide-name    |
+| https: //docs.pantheon.io/drush-import| https: //docs.pantheon.io/guides/drush-import       |
+
+**Source Code**
+
+````markdown
+| Redirect from                              |to                                             |
+|---------------------------------------------|-------------------------------------------------|
+| https: //docs.pantheon.io/doc-name          | https: //docs.pantheon.io/new-doc-name          |
+| https: //docs.pantheon.io/guides/guide-name | https: //docs.pantheon.io/guides/new-guide-name |
+| https: //docs.pantheon.io/drush-import      | https: //docs.pantheon.io/guides/drush-import   |
+````
+
+## Reusable Content/Partials
 
 Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
 

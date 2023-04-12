@@ -4,10 +4,8 @@ subtitle: Sites Management
 description: Learn how to manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-layout: guide
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
-anchorid: sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
 reviewed: "2022-09-19"
 contenttype: [guide]
@@ -42,7 +40,7 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
 
 ### Tag Sites
 
@@ -192,8 +190,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 </Alert>
 
-
-### Delete a site from the Site Dashboard
+### Delete a Site from the Site Dashboard
 
 1. Open the Site Dashboard for the site.
 
@@ -205,7 +202,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Click **Delete This Site**.
 
-### Delete a site from a Workspace
+### Delete a Site from a Workspace
 
 1. Go to the Professional Workspace containing the site.
 
@@ -231,6 +228,9 @@ You can see a list of all your sites by running `terminus site:list`.
 
 </Alert>
 
+### Delete a Front-End Site
+
+Refer to the [Delete a Front-End Site](/guides/decoupled/overview/manage-settings#delete-a-front-end-site) section of the [Front-End Sites Overview](/guides/decoupled/overview) guide for instructions.
 
 ### Delete a Multidev Environment
 

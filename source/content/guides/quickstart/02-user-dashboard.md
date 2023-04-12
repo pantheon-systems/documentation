@@ -12,7 +12,6 @@ integration: [--]
 tags: [dashboard]
 showtoc: true
 permalink: docs/guides/quickstart/user-dashboard/
-anchorid: user-dashboard
 editpath: quickstart/02-user-dashboard.md
 ---
 

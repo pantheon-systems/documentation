@@ -12,15 +12,13 @@ integration: [--]
 tags: [wordpress, webops]
 contributors: [whitneymeredith]
 reviewed: "2022-05-02"
-layout: guide
 showtoc: true
 permalink: docs/guides/wordpress-pantheon/create-wp-site
-anchorid: wordpress-pantheon/create-wp-site
 ---
 
 This page provides steps on creating a new WordPress site on Pantheon. 
 
-1. [Create an account](https://dashboard.pantheon.io/register) with Pantheon if you do not already have one.
+1. [Create an account](https://pantheon.io/register?docs) with Pantheon if you do not already have one.
 
 1. Login to your Pantheon account.
 

@@ -5,9 +5,7 @@ description: A modern approach to audience-based content personalization.
 tags: [collaborate, composer, continuous-integrations, webops, workflow]
 contributors: [michellecolon-pantheon, jazzsequence, jspellman814]
 type: guide
-layout: guide
 showtoc: true
-anchorid: edge-integrations
 permalink: docs/guides/edge-integrations/
 editpath: edge-integrations/01-introduction.md
 contenttype: [guide]

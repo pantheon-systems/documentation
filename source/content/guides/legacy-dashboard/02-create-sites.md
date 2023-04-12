@@ -3,11 +3,9 @@ title: Legacy Dashboard
 subtitle: Create A Site
 description: Create a new Drupal or WordPress site on Pantheon.
 tags: [site, dashboard]
-layout: guide
 showtoc: true
 reviewed: "2022-12-13"
 permalink: docs/guides/legacy-dashboard/create-sites
-anchorid: create-sites
 editpath: legacy-dashboard/02-create-sites.md
 contenttype: [guide]
 innav: [false]
@@ -59,7 +57,8 @@ Sandbox sites are useful for trying out the Pantheon platform, creating sandboxe
 |------------------------------------------------|---------------------|
 | Application Containers                     | 1                       | 
 | PHP Workers                                | 4                       |         
-| PHP Memory Limit                           | 256MB             |                              |Storage                                     | 20 GB    |
+| PHP Memory Limit                           | 256MB             |                              
+|Storage                                     | 20 GB    |
 | Custom Domain Limit (per site) <Popover   content = "For details, see <a href='/guides/domains'>Domains and Redirects</a>."  />  | 0                                         | 
 | Free and managed HTTPS <Popover   content = "For details, see <a href='/guides/global-cdn/https/'>HTTPS on Pantheon's Global CDN</a>."  />   | <span  style= " color:green " > ✔ </span> |  
 | New Relic <Popover   content = "For details, see <a href='/new-relic/'>New Relic APM Pro</a>."  />  | <span  style= " color:green " > ✔ </span> |

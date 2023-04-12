@@ -1,7 +1,6 @@
 ---
 title: Amazon Route 53 Domain Configuration
 provider: Amazon Route 53
-dnsprovider: true
 description: Learn how to point your Amazon Route 53 domain to a Pantheon site.
 tags: [domains]
 permalink: docs/:basename

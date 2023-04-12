@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Introduction
 description: Deploy a WordPress multisite on the Pantheon Platform.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [true]
@@ -13,12 +12,8 @@ product: [--]
 integration: [--]
 tags: [multisite]
 contributors: [danielbachhuber, whitneymeredith]
-anchorid: multisite
 permalink: docs/guides/multisite/
-nexturl: guides/multisite/considerations/
 editpath: multisite/01-introduction.md
-image: multisite
-guidetoc: true
 ---
 This guide covers the process of requesting, configuring, and maintaining a new WordPress Multisite on Pantheon. We'll also explore supported use cases, considerations and some common troubleshooting tips.
 
@@ -28,12 +23,12 @@ Pantheon supports [WordPress Multisite](https://wordpress.org/documentation/arti
 ![Multisite diagram](../../../images/Multisite-risk_2.png)
 
 ## Supported Use Cases
-Pantheon supports the most common use case for site networks: a common codebase which powers a set of related sites. This includes, but is not limited to, networks of:
+Pantheon supports the most common use case for WordPress Multisites: a common codebase which powers a set of related sites. This includes, but is not limited to, networks of:
 
 - Blogs for faculty at a university
 - Franchise sites under a parent organization site
 - Sections within a media publication
-- [Bedrock based](https://carlalexander.ca/using-bedrock-with-pantheon/) or Composer based WP Multi-site is a possibility and can be discussed during onboarding
+- [Bedrock based](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) or Composer based WP Multisite is a possibility and can be discussed during onboarding
 
 ## Unsupported Use Cases
 We do not support uses of WordPress Multisite that run functionally-different or uniquely-owned sites on the same WordPress installation. This includes, but is not limited to:

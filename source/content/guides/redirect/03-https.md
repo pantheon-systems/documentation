@@ -10,11 +10,9 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dns, https, redirects]
-layout: guide
 contributors: [wordsmither]
 reviewed: "2022-08-01"
 permalink: docs/guides/redirect/https/
-anchorid: https
 ---
 
 The standard best practice when using HTTPS is to set an [HSTS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) header to force connections over HTTPS only.

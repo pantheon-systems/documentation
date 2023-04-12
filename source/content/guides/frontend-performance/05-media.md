@@ -2,14 +2,11 @@
 title: Frontend Performance
 subtitle: Images and Media
 description: Optimizing media and images for frontend performance.
-anchorid: media
 tags: [measure, traffic]
 type: guide
-layout: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/media
 editpath: frontend-performance/05-media.md
-image: CDN-speedTest-docs-guide
 reviewed: "2020-10-10"
 contenttype: [guide]
 innav: [false]

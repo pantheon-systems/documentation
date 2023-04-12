@@ -3,7 +3,6 @@ title: Frequently Asked Questions
 description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
 tags: [support]
 permalink: docs/faq
-anchorid: faq
 contenttype: [doc]
 innav: [true]
 categories: [faq]

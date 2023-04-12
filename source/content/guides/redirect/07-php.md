@@ -10,12 +10,10 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [dns, https, redirects]
-layout: guide
 contributors: [wordsmither]
 reviewed: "2022-08-01"
 showtoc: true
 permalink: docs/guides/redirect/php
-anchorid: php
 ---
 
 If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. However, redirecting the platform domain will break the screenshot of your site in the User Dashboard, and might complicate troubleshooting for our [Support](/guides/support/contact-support/) team.

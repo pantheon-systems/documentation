@@ -10,6 +10,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [quicksilver]
+showtoc: true
 ---
 
 Hook into platform workflows and manage advanced site configuration via the `pantheon.yml` file. Add it to the root of your site's codebase, and deploy it along with the rest of your code.
@@ -82,7 +83,7 @@ protected_web_paths_override: true
 The standard protected web paths can be important to the security of your site. If you override protection with this property, be sure to copy all of the standard protected web paths into your `pantheon.yml` file, and only remove those that you are certain are safe to expose.
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
- 
+
 * [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 * [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
@@ -114,6 +115,16 @@ The name of the nested directory is not configurable.
 
 For more information, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
+### Integrated Composer Build Step
+
+You can enable or disable Integrated Composer in the `pantheon.yml` file. For example, to enable Integrated Composer:
+
+```yaml:title=pantheon.yml
+build_step: true
+```
+
+Refer to [Integrated Composer](/guides/integrated-composer) for more information.
+
 ### PHP Version
 
 Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
@@ -136,7 +147,7 @@ php_version: 8.0
 
 Specify the site's version of MariaDB to keep the software your site uses current and up to date, or set a specific version to avoid incompatibilities:
 
-1. Enable [automated backups](/backups) and [confirm that a backup has been created](/backups#via-the-dashboard) before you configure the database version. 
+1. Enable [automated backups](/guides/backups) and [confirm that a backup has been created](/guides/backups/create-backups) before you configure the database version.
 
 1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 
@@ -242,6 +253,16 @@ Complete the following before deploying `filemount` (**required**):
 
 1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths).
 
+### Search and Replace for WordPress Multisite (Early Access)
+
+You can enable search and replace on [WordPress Multisites](/guides/multisite) by adding the following to your `pantheon.yml` file:
+
+```yaml:title=pantheon.yml
+search_replace: true
+```
+
+Running search and replace on a _subdomain_ Multisite also requires configuring a `sites.yml` file. Refer to [WordPress Multisite Search and Replace](/guides/multisite/search-replace) for more information.
+
 ## Quicksilver Platform Integration Hooks
 
 Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a team member. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
@@ -278,7 +299,7 @@ While our parser will reject a `pantheon.yml` that is invalid, it won't necessar
 
 ### Why can’t I update the PHP version on my Multidev?
 
-The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev: 
+The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev:
 
 1. Navigate to [your `pantheon.yml` file](#configure-your-php-version).
 

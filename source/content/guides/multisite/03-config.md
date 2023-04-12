@@ -2,7 +2,6 @@
 title: WordPress Multisite
 subtitle: Configure
 description: Learn how to configure your WordPress Multisite.
-layout: guide
 type: guide
 contenttype: [guide]
 innav: [false]
@@ -14,7 +13,6 @@ integration: [--]
 tags: [multisite]
 permalink: docs/guides/multisite/config/
 editpath: multisite/03-config.md
-image: multisite
 ---
 
 This section is intended for customers who have had a WordPress Multisite upstream created for them by a Pantheon employee. If you do not have a WordPress Multisite upstream, refer to the [introduction](/guides/multisite) page of this guide. After you create a new site on the Multisite upstream and visit the Dev environment's site URL, you should be redirected to the WordPress web-based installer.
@@ -51,7 +49,7 @@ We recommend using [Terminus](/terminus) to install a WordPress Multisite.
 
   <Alert title="Note" type="info">
 
-  The default behavior for this command is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.
+  The default behavior for this command is to create a WordPress Multisite with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.
 
   </Alert>
 
@@ -62,7 +60,7 @@ We recommend using [Terminus](/terminus) to install a WordPress Multisite.
  After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
 
   ```bash{outputLines: 2-6}
-  terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
+  terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
   Admin password: abcdefgnotarealpassword
   Created single site database tables.
   Set up multisite database tables.
@@ -110,7 +108,7 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
   if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
     switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
       case 'live':
-        // Value should be the primary domain for the Site Network.
+        // Value should be the primary domain for the WordPress Multisite.
         define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
         // Once you map a domain to Live, you can change DOMAIN_CURRENT_SITE
         // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
