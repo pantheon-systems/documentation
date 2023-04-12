@@ -30,7 +30,7 @@ The steps below outline a method for adding a package from a private GitHub, Git
 
 A token will be added to your code repository for this procedure. This allows anyone with the token to read and write to private repositories associated with the issuing account. You can explore workarounds to limit the scope of the token access. For example, you can create a new GitHub user and restrict that user's permission to only the private repositories needed for your Composer packages. This ensures your site repository code is not published publicly.
 
-Your repository should contain a composer.json that declares a package name in its name field. If it is a WordPress plugin or a Drupal module, it should specify a type of wordpress-plugin or drupal-module respectively. For these instructions, we will assume your package name is mycompany/my-private-repo.
+Your repository should contain a `composer.json` file that declares a package name in its name field. If it is a WordPress plugin or a Drupal module, it should specify a type of `wordpress-plugin` or `drupal-module` respectively. For these instructions, we will assume your package name is `mycompany/my-private-repo`.
 
 <TabList>
 
