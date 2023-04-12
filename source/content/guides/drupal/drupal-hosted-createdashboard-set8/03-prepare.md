@@ -23,6 +23,10 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 </Alert>
 
+## Ensure Dependencies are Compatible
+
+<Partial file="drupal/dependencies-compatible.md" />
+
 ## Verify the Repository
 
 1. Check that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream.
