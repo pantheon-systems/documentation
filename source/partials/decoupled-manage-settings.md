@@ -1,7 +1,7 @@
 ---
 contenttype: [partial]
 categories: []
-cms: [drupal]
+cms: [drupal,wordpress]
 product: [front-end]
 integration: []
 tags: [--]

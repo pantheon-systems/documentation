@@ -21,7 +21,7 @@ This section provides answers to frequently asked Front-End Site questions.
 
 ### Can I use any CMS with Pantheon architecture for Front-End Sites?
 
-WordPress and Drupal are currently the only CMSs supported by Pantheon Decoupled.
+WordPress and Drupal are currently supported by Pantheon Front-End Sites.
 
 ### What dependency versions are supported with Front-End Sites?
 
@@ -46,7 +46,7 @@ Multi-Region Failover and Pantheon's Multizone Failover are only available for G
 
 ### Is Multidev compatible with Front-End Sites?
 
-Yes, Multidev is compatible with Front-End Sites. Refer to [Types of Environments](/guides/decoupled/overview/site#types-of-environments) and[Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for more information.
+Yes, Multidev is compatible with Front-End Sites. Refer to [Types of Environments](/guides/decoupled/overview/considerations#types-of-environments) and[Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for more information.
 
 ### Is Advanced Global CDN (AGCDN) compatible with Front-End Sites?
 

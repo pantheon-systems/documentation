@@ -135,12 +135,12 @@ Environment variables are key-value pairs configured outside your source code. T
 
 ## Build Hooks
 
-Build Hooks allow you to trigger a build automatically when you update the content in your content management system (CMS). You can use Build Hooks for your Front-End site if your CMS is hosted on Pantheon or hosted elsewhere.
+Build Hooks allow you to trigger a build automatically when you update the content in your CMS. You can use Build Hooks for your Front-End site if your CMS is hosted on Pantheon or hosted elsewhere.
 
-Your Pantheon Front-End site will rebuild and include your new content when a Build Hook is triggered. Each Build Hook you generate has a unique URL.
+Your Pantheon Front-End Site will rebuild and include your new content when a Build Hook is triggered. Each Build Hook you generate has a unique URL.
 
 You can create and manage Build Hooks in the Pantheon Dashboard. You must
- [configure your backend](/guides/decoupled/overview/build-hooks#use-build-hooks-with-a-backend-starter-kit) to use the Build Hooks you create in the Pantheon dashboard.
+ [configure your Drupal backend](/guides/decoupled/drupal-backend-starters/build-hooks) or [WordPress backend](/guides/decoupled/wp-backend-starters/build-hooks) to use the Build Hooks you create in the Pantheon dashboard.
 
 ### Add a Build Hook
 

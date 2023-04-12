@@ -1,7 +1,7 @@
 ---
 title: Pantheon Front-End Sites
 subtitle: Known Issues and Troubleshooting
-description: Review known issues and get solutions to common issues.
+description: Review known issues and solutions.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia]
 layout: guide
@@ -42,11 +42,13 @@ Preview functionality is not currently supported for Gatsby. Currently, it is on
 </Accordion>
 
 <Accordion title="Renaming a linked repository in GitHub will cause a break in your decoupled experience." id="rename-repo" icon="info-sign">
-Renaming a linked repository in GitHub is not recommended, as it will cause a break in your decoupled experience. In the event a user renames an attached Git repository on GitHub and disconnects the Git repository and attaches the renamed site, this will trigger a false live-build and the Decoupled site will be in a persistent build log state that cannot be canceled. To fix this issue, disconnect the renamed Git repository and revert to the original name. This action will instantly restore all data. Renaming the Git repository on GitHub to the original name should fix the build process.
+Renaming a linked repository in GitHub is not recommended, as it will cause a break in your experience. In the event a user renames an attached Git repository on GitHub and disconnects the Git repository and attaches the renamed site, this will trigger a false live-build and the Front-End Site will be in a persistent build log state that cannot be canceled. To fix this issue, disconnect the renamed Git repository and revert to the original name. This action will instantly restore all data. Renaming the Git repository on GitHub to the original name should fix the build process.
 </Accordion>
 
 <Accordion title="Select files can cause build errors" id="remove-files" icon="info-sign">
+
 Select files, such as `.dockerignore` and `.gcloudignore` files can cause build errors or failed builds. Removing these files from source and adding them to `.gitignore` solves the issue.
+
 </Accordion>
 
 <Accordion title="Users must have permissions to enable decoupled for GitHub organization accounts." id="github-organization" icon="info-sign">
@@ -78,7 +80,7 @@ Follow the steps below if your build works locally but won't build on Pantheon.
 
     - If the build and start steps have a different name, specify it in the Dashboard in the Advanced Settings section when creating a site. You can also specify this in the Builds section of the site’s dashboard.
 
-### Images are not showing up on my Next.js site.
+### Images are not showing up on my Next.js site
 
 Consult the Next.js docs on their image component. Set the IMAGE_DOMAIN environment variable if the images are coming from a domain that is different from your liked CMS.
 

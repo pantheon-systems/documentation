@@ -27,21 +27,29 @@ Pantheon Front-End Sites are available for Early Access participants. Features f
 
 ## What is a Decoupled Site?
 
-Decoupled sites separate the frontend and backend into distinct entities. This allows developers to separate backend functionality and databases from the front-end Markup and JavaScript content.
+Decoupled sites separate the frontend and backend. This allows developers to separate backend functionality and databases from the frontend Markup and JavaScript content.
 
-A traditional content management system (CMS) like Drupal or WordPress is hosted and served with the website every time a request for a page is made. With a traditional CMS the backend and frontend are bundled into a single application.
+A traditional content management system (CMS) like Drupal or WordPress is hosted and served with the website every time a request for a page is made. A traditional CMS bundles the backend and frontend into a single application.
 
-Decoupling is the process of separating the content system or services. By decoupling the services needed to operate a site, each component can become easier to independently work on, minimizing site interruptions and failures, and providing a more efficient and smoother WebOps experience.
+Decoupling is the process of separating the content system or services. By decoupling the services needed to operate a site, each component can be worked on independently, minimizing site interruptions and failures, and providing a more efficient and smoother WebOps experience.
 
-Decoupled Architecture is a site architecture that combines the speed and agility of static sites with the editing ease of standard-model content management systems. Web teams can use tools and frameworks tailored to their areas of expertise. For example, Frontend Developers can use modern JavaScript-centric frameworks and libraries rather than the theming systems of older, monolithic systems like WordPress and Drupal.
+Decoupled Architecture is a site architecture that combines the speed and agility of static sites with the editing ease of standard-model content management systems. Web teams can use tools and frameworks tailored to their areas of expertise. For example, frontend developers can use modern JavaScript-centric frameworks and libraries rather than the theming systems of older, monolithic systems like WordPress and Drupal.
 
 ## What is a Front-End Site?
 
 Pantheon Front-End Sites provide users with tools that improve the experience of building a decoupled frontend that sources data from a CMS backend.
 
-With decoupled sites, a CMS site can be linked to a single decoupled site, multiple sites, or you can not use a CMS at all and link directly to a frontend application.
+Front-End Sites allows a CMS site to be linked to a single site, multiple sites, or you can link directly to a frontend application without a CMS.
 
-A Front-End Site allows you to connect to your Git repository and deploy a site with Gatsby, Next.js, or no CMS at all. When creating a new decoupled site, you can choose from select CMS backends and JavaScript frontends as a starting point, or start with a clean set up and connect your site account to an existing repository.
+You can connect your Front-End Site to your Git repository and choose from select CMS backends and JavaScript frontends as a starting point:
+
+- WordPress and Gatsby
+- WordPress and Next.js
+- Drupal and Next.js
+- Direct import with no CMS
+
+You can also start with a clean set up and connect your site account to an existing Git repository.
+
 
 <Alert title="Not what you're looking for?" type="success" icon="leaf">
 
