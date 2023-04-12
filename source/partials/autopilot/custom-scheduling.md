@@ -8,7 +8,7 @@ tags: [--]
 reviewed: "2023-03-17"
 ---
 
-Custom Frequency Scheduling is available to sites owned by Platinum and Diamond Workspaces. This functionality allows you to schedule Autopilot to run on a more specific cadence. For example, on a particular day of the week, or day of the month.
+Custom Frequency Scheduling allows you to schedule Autopilot to run on a more specific cadence. For example, on a particular day of the week, or day of the month.
 
 To update your settings, navigate to your site's **Configuration** tab, scroll down to the **Destination & Frequency** section, and select **Custom** under the **Update Frequency** section.
 
