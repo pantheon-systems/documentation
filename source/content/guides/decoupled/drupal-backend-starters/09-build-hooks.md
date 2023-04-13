@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: Configure Build Hooks
 description: Learn how to configure Build Hooks.
 tags: [webops, workflow, decoupled]
@@ -62,7 +62,7 @@ By default the module will only log changes for content entities. If you would l
 
 ### Trigger a Deployment Manually
 
-You can create a build hook that can only be triggered manually. This can be useful if you want more control over the time of deployment or if you prefer to batch multiple content changes into a single deployment.
+You can create a build hook that can only be triggered manually. This can be useful if you want more control over the deployment or if you prefer to batch multiple content changes into a single deployment.
 
 1. Generate a Build Hook on your build platform.
 

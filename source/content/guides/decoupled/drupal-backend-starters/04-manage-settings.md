@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: Manage Settings
 description: Learn how manage Front-End Sites settings in the Pantheon Dashboard.
 tags: [webops, workflow, decoupled]
