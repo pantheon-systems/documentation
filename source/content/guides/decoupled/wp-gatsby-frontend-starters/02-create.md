@@ -21,19 +21,17 @@ This section provides information on how to use the Gatsby + WordPress starter k
 
 ## Before You Begin
 
-- The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using [nodejs v16 with npm v8](https://nodejs.org/en/download/).
+The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using [nodejs v16 with npm v8](https://nodejs.org/en/download/). Make sure you meet the prerequisites below before you continue.
 
-- You may want to install the gatsby cli globally, or [use `npx`](https://www.npmjs.com/package/npx)
+- You are using a Git repository and you have connected your GitHub account.
+
+- You are using WordPress as your CMS.
+
+- You have installed your WordPress site using the [Decoupled WordPress Recommended Project](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed) configuration, which has the `wp-graphql` and `wp-gatsby` plugins installed as dependencies (only `wp-graphql` is activated automatically).
+
+- Optional. You may want to install the gatsby cli globally, or [use `npx`](https://www.npmjs.com/package/npx)
 
 ## Create Your Project on Pantheon
-
-Make sure you meet the prerequisites below before you continue.
-
-* You are using a Git repository and you have connected your GitHub account.
-
-* You are using WordPress as your CMS.
-
-* You have installed your WordPress site using the [Decoupled WordPress Recommended Project](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed) configuration, which has the `wp-graphql` and `wp-gatsby` plugins installed as dependencies (only `wp-graphql` is activated automatically).
 
 1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
 
@@ -45,13 +43,16 @@ Make sure you meet the prerequisites below before you continue.
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
-1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository.
-
 1. Select the desired WordPress CMS backend from the **Link Your CMS** drop-down menu.
 
 1. Select the site environment from which to source the content. You can source content from the Live, Test, or Dev environment.
 
-1. Optional. Click **Advanced Settings** to set your root and output directories, build command, environment variables, and deployment path.
+1. Optional. Click **Advanced Settings** to set your:
+
+    - Root and output directories
+    - Build command
+    - Environment variables
+    - Deployment path
 
 1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information and status.
 
