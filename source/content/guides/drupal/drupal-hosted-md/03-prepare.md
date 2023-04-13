@@ -19,6 +19,12 @@ integration: [--]
 
 Complete all steps in this section to ensure that your site is ready to be migrated to Pantheon. 
 
+## Ensure Dependencies are Compatible
+
+<Partial file="drupal/dependencies-compatible.md" />
+
+## Prepare the Local Environment
+
 <Partial file="drupal/prepare-local-environment-no-clone.md" />
 
 ## Apply All Available Upstream Updates

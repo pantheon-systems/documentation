@@ -8,10 +8,6 @@ tags: [--]
 reviewed: ""
 ---
 
-### WordPress-Specific Scenarios
+- You are using WordPress Multisite: [Manually Migrate Sites to Pantheon](/migrate-manual)
 
-- You are using [WordPress Multisite](/migrate-wordpress-multisite).
-
-- Plugin install is unavailable.
-
-- You are migrating a site that is only on your local machine and not yet live.
+- You are using WordPress and don't want to install the plugin required for migration: [Manually Migrate Sites to Pantheon](/migrate-manual)

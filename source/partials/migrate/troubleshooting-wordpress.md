@@ -20,7 +20,10 @@ reviewed: ""
 
 **Cause:** Imports can also fail for very large sites, which may time out while importing.
 
-**Solution:** Initiate the migration again from the source site, and the transfer should pick up where it left off.
+**Solution:** Restart the migration by going to the browser tab containing your WordPress dashboard, and click **Migrate**
+
+![Copying and pasting info](../../images/migrate-site-wp-blogvault.png)
+
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
 
@@ -55,7 +58,7 @@ reviewed: ""
 
 ### Multiple file directories found within the import archive
 
-**Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory: `sites/default/files/private`.
+**Cause:** The migration tool found more than one potential location for files within the archive. 
 
 **Solution:** All files must be moved into `/wp-content/uploads`. For more details, see [Files](/guides/filesystem/) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).
 

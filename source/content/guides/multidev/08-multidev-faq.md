@@ -27,7 +27,7 @@ Multidev environments that are already created on a Pantheon site are available 
 
 You can create a new Multidev if you:
 
-- Belong to a Gold Account or above
+- Belong to a [Gold Account or above](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans)
 
 - Support a site that is owned by a Gold Account customer or above
 

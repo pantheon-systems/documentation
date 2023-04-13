@@ -1,5 +1,5 @@
 ---
-title: Decoupled WordPress Backend Starter for Front-End Sites
+title: WordPress Backend Starter for Front-End Sites
 subtitle: Build Hooks
 description: Learn how to use Build Hooks for your project.
 tags: [webops, workflow, decoupled]
@@ -17,12 +17,11 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to configure build hooks on your backend.
+This section provides information on how to configure build hooks on your WordPress backend.
 
 ## What Are Build Hooks?
 
-The [Build Hooks](https://www.drupal.org/project/build_hooks) module triggers builds in one or more Front-End Sites when any content
-changes occur, such as creating, updating, or deleting.
+Build hooks allow you to trigger builds in one or more Front-End Sites when any content changes occur, such as creating, updating, or deleting.
 
 Refer to the Front-End Sites Overview guide for instructions on how to [create and manage Build Hooks in the Pantheon dashboard](/guides/decoupled/overview/build-hooks).
 
@@ -39,6 +38,7 @@ Install and activate the [WP-Webhooks Plugin](https://wordpress.org/plugins/wp-w
 1. Click the **Send Data** tab.
 
 1. Select the **Post Created** Webhook trigger.
+
 1. Click **Add Webhook URL**, name the hook, and then paste the build hook URL that you generated.
 
 1. Submit the form.

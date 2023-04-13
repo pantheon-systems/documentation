@@ -1,5 +1,5 @@
 ---
-title: Decoupled WordPress Backend Starter for Front-End Sites
+title: WordPress Backend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to create a new decoupled WordPress backend project.
 tags: [webops, workflow, decoupled]
