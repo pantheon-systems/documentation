@@ -21,14 +21,14 @@ This section provides information on how to configure build hooks on your backen
 
 ## What Are Build Hooks?
 
-The [Build Hooks](https://www.drupal.org/project/build_hooks) module triggers builds in one or more Front-End Sites when any content
+Build Hooks trigger builds in one or more Front-End Sites when any content
 changes occur, such as creating, updating, or deleting.
 
-Refer to the Front-End Sites Overview guide for instructions on how to [create and manage Build Hooks in the Pantheon dashboard](/guides/decoupled/overview/build-hooks).
+Refer to the Front-End Sites Overview guide for instructions on how to [create and manage Build Hooks in the Pantheon dashboard](/guides/decoupled/overview/manage-settings#build-hooks).
 
 ### Install and Activate WP Webhooks Plugin
 
-Install and activate the [WP-Webhooks Plugin](https://wordpress.org/plugins/wp-webhooks/).
+Install and activate the [WP-Webhooks Plugin](https://wordpress.org/plugins/wp-webhooks/) to create build hooks.
 
 ### Create a Build Hook That Triggers When a Post Is Created Or Updated
 
@@ -39,12 +39,18 @@ Install and activate the [WP-Webhooks Plugin](https://wordpress.org/plugins/wp-w
 1. Click the **Send Data** tab.
 
 1. Select the **Post Created** Webhook trigger.
+
 1. Click **Add Webhook URL**, name the hook, and then paste the build hook URL that you generated.
 
 1. Submit the form.
 
-1. Repeat the previous steps to create a hook for the **Post Updated**
-   trigger.
+1. Select **Settings** under the **Action** menu.
+
+1. Enter **publish** under the **Trigger on post status** setting and toggle the **fire only once per instance option** on.
+
+1. Save your settings.
+
+You can repeat these steps to create a build hook for the Updated Webhook trigger.
 
 #### Test The Post Build Hook
 
