@@ -38,7 +38,7 @@ Make sure you meet the following prerequisites before you continue.
     </Alert>
 
 
-1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
+1. Log in to your **Site Dashboard** and select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 

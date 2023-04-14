@@ -31,7 +31,7 @@ You can change the Site Name, connect or disconnect your Git repository, and del
 
 ### Change Site Name
 
-1. Navigate to your site dashboard and select the site you want to change the name of.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to change the name of.
 
 1. Click **Settings** or **General**.
 
@@ -44,7 +44,7 @@ You can change the Site Name, connect or disconnect your Git repository, and del
 Note that a repository cannot be connected to more than one Front-End Site.
 There are known issues around disconnecting and reconnecting a repository.
 
-1. Navigate to your site dashboard and select the site you want to connect or disconnect with your Git repository.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to connect or disconnect with your Git repository.
 
 1. Click **Settings** or **General**.
 
@@ -58,7 +58,7 @@ This feature only deletes your Front-End Site. Your CMS backend and connected Gi
 
 You can [contact Support](/guides/support/contact-support/) to restore a site if it is accidentally deleted.
 
-1. Navigate to your site dashboard and select the site you want to delete.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to delete.
 
 1. Click **Settings** or **General**.
 
@@ -78,7 +78,7 @@ You can link your CMS to your Front-End Site if you’re already managing conten
 
 ### Configure CMS Connections
 
-1. Navigate to your site dashboard and select the site you want to configure CMS Connections for.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure CMS Connections for.
 
 1. Click **Settings** and then click **CMS**.
 
@@ -103,7 +103,7 @@ You can configure and edit the following Build and Output Settings:
 
 ### Configure Build and Output Settings
 
-1. Navigate to your site dashboard and select the site you want to configure Build and Output settings for.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure Build and Output settings for.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -123,7 +123,7 @@ Environment variables are key-value pairs configured outside your source code. T
 
 ### Add Site Environment Variables
 
-1. Navigate to your site dashboard and select the site you want to configure Site Environment Variables for.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure Site Environment Variables for.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -144,7 +144,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 ### Add a Build Hook
 
-1. Navigate to your site dashboard and select the site you want to add a Build Hook to.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to add a Build Hook to.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -162,7 +162,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 ### Edit a Build Hook
 
-1. Navigate to your site dashboard and select the site with the Build Hook you want to edit.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site with the Build Hook you want to edit.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -174,7 +174,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 The Build Hook name will remain the same, but your URL will be updated each time you regenerate your Build Hook. Take note of the new URL and update it where needed.
 
-1. Navigate to your site dashboard and select the site you want to regenerate a Build Hook for.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to regenerate a Build Hook for.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -188,7 +188,7 @@ The Build Hook name will remain the same, but your URL will be updated each time
 
 ### Delete a Build Hook
 
-1. Navigate to your site dashboard and select the site with the Build Hook you want to delete.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site with the Build Hook you want to delete.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -212,7 +212,7 @@ You can provide a deployment path if your static site lives in a subdirectory of
 
 ### Set Deployment Path
 
-1. Navigate to your site dashboard and select the site you want to configure the Deployment Settings for.
+1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure the Deployment Settings for.
 
 1. Click **Settings** and then click **Builds**.
 

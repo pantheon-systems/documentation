@@ -21,7 +21,7 @@ This section provides information on how to create a new WordPress backend proje
 
 ### Install with Dashboard Upstream
 
-1. Log in to your Pantheon Dashboard and select the **Sites** page.
+1. Log in to your **Site Dashboard** and then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
