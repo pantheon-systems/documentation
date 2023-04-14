@@ -1027,21 +1027,21 @@ export ENV=dev
 1. Change to the site's `wp-content` directory:
 
    ```bash{promptUser: user}
-   cd $SITE/wp-content
+   cd $SITE
    ```
 
 1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
-  rm wflogs
+  rm ./wp-content/wflogs
   ```
 
 1. Create the following symlinks:
 
   ```bash{promptUser: user}
-  ln -s ../../files/private/wflogs ./wflogs
-  ln -s ../../files/private/wordfence-waf.php ./../wordfence-waf.php
-  ln -s ../../files/private/.user.ini ./../.user.ini
+  ln -s ../../files/private/wflogs ./wp-content/wflogs
+  ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
+  ln -s ../files/private/.user.ini ./.user.ini
   ```
 
 1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
