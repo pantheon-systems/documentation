@@ -76,6 +76,10 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 
 <Tab title="To a Workspace" id="addwsp" active={true}>
 
+When a team member is added to a Workspace:
+- That Workspace will be accessible from the Workspace selector (gravatar in upper left)
+- The role they are given applies to all sites in that Workspace
+
 1. Go to the workspace, select the **Team** tab, and click **Add User**.
 
 1. Click **Invite Team Member**.
@@ -86,11 +90,16 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 
 <Tab title="To a Site" id="addsite">
 
+When a team member is added to a site:
+- That site will be available in their Personal Workspace
+- That Workspace containing that site will be accessible from the Workspace selector (gravatar in upper left)
+- The role they are given applies only to that site - not to any of the other in the same Workspace
+
 1. Open the Site Dashboard for the site.
    
 1. Click **Team**.
 
-1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**
+1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**.
 
 </Tab>
 
@@ -101,6 +110,10 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 ### Change a User's Role
 
+<TabList>
+
+<Tab title="In a Workspace" id="chws" active={true}>
+
 1. Go to the workspace and select the **Team** tab.
 
 1. Find and select the team member(s) whose role you want to change.
@@ -108,6 +121,21 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 1. Click **Actions**, and choose **Change Role**.
 
 1. Select the new role, then click **Save Changes**.
+
+</Tab>
+
+
+<Tab title="In a Site" id="chs">
+
+1. Open the Site Dashboard for the site.
+   
+1. Click **Team**.
+
+1. Under **Team Members**, find the Team Member, and select a new role from the list.
+
+</Tab>
+
+</TabList>
 
 ### Export Users
 

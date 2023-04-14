@@ -73,13 +73,13 @@ Finally, because sites in the Random workspace are so, well, random, they've als
 
 So now, when the individual team members log on, they will see the workspaces made available to them.  In our example, this is what they would see:
 
-| Team Member | Workspaces |
-|---|---|
-| Jane Doe |Writing Sites, Random Sites|
-| John Smith |Writing Sites, Widget Sites|
-| Joe Intern |Writing Sites|
-| Dolores Orange |Random Sites|
-| Ed Kay |Random Sites|
+| Team Member | Professional Workspaces | Personal Workspace Sites
+|---|---|---|
+| Jane Doe |Writing Sites, Random Sites| n/a |
+| John Smith |Writing Sites, Widget Sites| n/a |
+| Joe Intern |Writing Sites| n/a |
+| Dolores Orange |Random Sites| n/a |
+| Ed Kay |Random Sites| Site X |
 
 When they select a workspace, they will then see the sites they have access to in that workspace, as well as any sites they have created.
 
