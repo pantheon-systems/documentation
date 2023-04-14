@@ -1,5 +1,5 @@
 ---
-title: Dashboard Product Overview
+title: Workspaces and Dashboard Product Overview
 description: A developer console for all your sites
 contributors: [wordsmither]
 contenttype: [doc]
@@ -20,7 +20,7 @@ showtoc: false
 
 Easily visualize and manage sites, users, traffic, metrics, visual regression testing (VRT), and everything else needed to keep your WebOps experience smooth and uneventful.
 
-The dashboard is a real-time interface into Pantheon. It includes everything you need to build, launch, and run sites. Create new projects, manage team access, interface via SFTP or Git (version control), and track miscellaneous tools like backups. It also allows you to deploy and scale your sites.
+Our workspaces and dashboards provide a real-time interface into Pantheon. It includes everything you need to build, launch, and run sites. Create new projects, manage team access, interface via SFTP or Git (version control), and track miscellaneous tools like backups. It also allows you to deploy and scale your sites.
 
 ![The Pantheon Dashboard](../../images/dashboard/new-dashboard/workspace-overview.png)
 
