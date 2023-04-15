@@ -29,6 +29,16 @@ This section provides information on Settings. You can configure Front-End Site 
 
 You can change the Site Name, connect or disconnect your Git repository, and delete your Front-End Site in General Settings.
 
+### NodeJS Version
+
+Pantheon respects the setting in `.nvmrc` when selecting the NodeJS version for runtime. Currently supported versions are:
+
+- 14
+- 16
+- 18
+
+If you need to change the version of NodeJS for your Front End Site, you can test it out by pushing the change to `.nvmrc` to a branch first. 
+
 ### Change Site Name
 
 1. Navigate to your site dashboard and select the site you want to change the name of.
