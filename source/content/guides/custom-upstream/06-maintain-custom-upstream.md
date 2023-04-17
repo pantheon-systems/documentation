@@ -12,7 +12,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [custom-upstreams]
 integration: [--]
-reviewed: "2022-12-13"
+reviewed: "2023-04-17"
 ---
 
 This section provides information to help you manage and maintain your Custom Upstream.
@@ -36,6 +36,12 @@ if ( file_exists( dirname( __FILE__ ) . '/guides/redirect.php' ) && isset( $_ENV
 Remember that this file is not included in the Custom Upstream and must exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/guides/php/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
 WordPress sites can also store redirects in an [MU-Plugin](/guides/wordpress-configurations/mu-plugin).
+
+## WordPress MU-Plugins
+
+Be sure to include and update the [MU-Plugins](https://github.com/pantheon-systems/WordPress/tree/6.2/wp-content/mu-plugins/pantheon-mu-plugin) if you are using WordPress.
+
+Refer to the [WordPress Configuration](/guides/wordpress-configurations) guide for more information about [MU-Plugins on the platform](/guides/wordpress-configurations/mu-plugin).
 
 ## More Resources
 
