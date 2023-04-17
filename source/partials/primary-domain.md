@@ -22,6 +22,11 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 1. Navigate to the **Choose Primary Domain** section, select the domain to which traffic should be redirected, and then click **Save Configuration**.
 
+<Alert title="Note" type="info">
+
+You will only see the primary redirect option when you have 2 or more custom domains attached in your environment. 
+</Alert>
+
 ### Set a Primary Domain with Terminus
 
 1. Install or upgrade to the [latest version of Terminus](/terminus/install).
