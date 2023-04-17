@@ -13,7 +13,7 @@ integration: [--]
 
 <Alert title="Note" type="info">
 
-Before you can migrate a WordPress Multisite, you must be a contract customer, and a Pantheon employee must create a [WordPress Multisite](/guides/multisite) for you.
+Before you can migrate a WordPress Multisite(WPMS), your organization should have the WPMS upstream configured so you can spin up an empty WPMS site. 
 
 </Alert>
 
