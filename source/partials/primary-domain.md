@@ -22,6 +22,12 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 1. Navigate to the **Choose Primary Domain** section, select the domain to which traffic should be redirected, and then click **Save Configuration**.
 
+<Alert title="Note" type="info">
+
+You will only see the primary redirect option when you have two or more custom domains attached to your environment. If you want to redirect a single platform domain, you must do the [primary redirect via PHP](/guides/redirect/php#without-regex). For example, `live-mysite.pantheonsite.io` to `www.example.com` 
+
+</Alert>
+
 ### Set a Primary Domain with Terminus
 
 1. Install or upgrade to the [latest version of Terminus](/terminus/install).
