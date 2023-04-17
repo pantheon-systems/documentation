@@ -27,10 +27,10 @@ WordPress and Drupal are currently supported by Pantheon Front-End Sites.
 
 Pantheon Front-End Sites currently supports:
 
-* Gatsby v3 and v4
-* Next.js v12 and v13
-* Drupal 9 or higher
-* WordPress 5.9 and 6
+- Gatsby v4 or higher
+- Next.js v12 or higher
+- Drupal 9 or higher
+- WordPress 5.9 or higher
 
 ### Is Decoupled Site Preview available for all instances on Front-End Sites?
 
