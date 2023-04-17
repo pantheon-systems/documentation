@@ -13,7 +13,9 @@ integration: [--]
 
 <Alert title="Note" type="info">
 
-Before you can migrate a WordPress Multisite(WPMS), your organization should have the WPMS upstream configured so you can spin up an empty WPMS site. 
+WordPress Multisite requires a special configuration that is only available to select customers. Before you can migrate a WordPress Multisite(WPMS), your organization should have the WPMS upstream configured so you can spin up an empty WPMS site. 
+  
+
 
 </Alert>
 
