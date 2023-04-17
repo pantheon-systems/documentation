@@ -192,7 +192,7 @@ You should now have all three of the major components of your site imported into
 
 ## WP Search and Replace
 
-When you imported your database, all of the URLs remained active at the previous site's domain name. Visiting the site at this point should return an incorrect connection information error message. To resolve it, the last step of the import process is to change the URLs to match the development environment using the WP-CLI command `wp search-replace`. In the example below, replace `example.com` with the domain your site currently runs at.
+When you imported your database, all of the URLs remained active at the previous site's domain name. Visiting the site at this point should return an incorrect DB connection information error message. To resolve it, the last step of the import process is to change the URLs to match the development environment using the WP-CLI command `wp search-replace`. In the example below, replace `example.com` with the domain your site currently runs at.
 
 **Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
 
@@ -205,6 +205,14 @@ Note that we replaced the usual `--network` flag with `--all-tables`. After the 
 Visit the Development environment and confirm your site was imported correctly!
 
 When you re-import the database with current content (prior to going live on Pantheon) you will need to run `wp search-replace` again.
+
+
+<Alert title="Note" type="info">
+
+For you to be able to access your WPMS in different environments, you need to enable the Search and Replace for WPMS. Refer [here to this guide to configure your `sites.yml` file](/guides/multisite/search-replace/#enable-search-and-replace).
+  
+</Alert>
+  
 
 ## More Resources
 
