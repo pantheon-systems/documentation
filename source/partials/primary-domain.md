@@ -24,7 +24,7 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 <Alert title="Note" type="info">
 
-You will only see the primary redirect option when you have 2 or more custom domains attached in your environment. If you want to redirect your only platform domain(eg: live-mysite.pantheonsite.io to www.example.com), you will need to do the [primary redirect via PHP](/guides/redirect/php#without-regex).
+You will only see the primary redirect option when you have two or more custom domains attached to your environment. If you want to redirect a single platform domain, you must do the [primary redirect via PHP](/guides/redirect/php#without-regex). For example, `live-mysite.pantheonsite.io` to `www.example.com` 
 
 </Alert>
 
