@@ -17,7 +17,15 @@ product: [--]
 integration: [--]
 ---
 
-Teams allow you to define the users who will have access to a workspace or site. Team members added to a workspace will have access to all sites in that workspace, whereas team members added to a site can only access that site.
+Teams allow you to define the users who will have access to a workspace or site. 
+
+## Workspace Teams vs Site Dashboard Teams
+
+There are two places a team can be defined: on a Professional Workspace, or in the Site Dashboard.
+
+- Professional Workspace team members have access to both all sites in that Workspace, and any sites that have that Workspace assigned as a supporting organization.
+
+- Site Team members only have access to that site.
 
 ## Roles and Permissions
 
