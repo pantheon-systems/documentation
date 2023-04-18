@@ -354,6 +354,16 @@ function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
 }
 ```
 
+## Troubleshooting
+
+### Error contacting Pantheon API
+
+**Issue:** You receive the error below in your PHP logs when trying to use an MU-Plugin.
+
+`Error contacting Pantheon API: Operation timed out after 1001 milliseconds with 0 bytes received`
+
+**Solution:** Verify that your MU-Plugin is up to date. An outdated MU-Plugin (particularly those earlier than the bundled 5.8) can cause this error.
+
 ## More Resources
 
 - [Configuring wp-config.php](/guides/php/wp-config-php)
