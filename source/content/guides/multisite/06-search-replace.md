@@ -84,7 +84,10 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
         4: staff-portal.example.com
         5: dcustomers.example.com
         6: hr-department.example.com
-
+      multidev1:
+        1: multidev1-example.pantheonsite.io
+        2: multidev1.about.example.com
+        3: multidev1.employee.example.com
 
      # Anything else in the file will be ignored, but not rejected.
 
