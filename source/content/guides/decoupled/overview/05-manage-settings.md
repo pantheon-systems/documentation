@@ -37,7 +37,7 @@ Pantheon respects the setting in `.nvmrc` when selecting the NodeJS version for 
 - 16
 - 18
 
-If you need to change the version of NodeJS for your Front End Site, you can test it out by pushing the change to `.nvmrc` to a branch first. 
+If you need to change the version of NodeJS for your Front-End Site, you can test the new version by pushing the updated `.nvmrc` to a branch first.
 
 ### Change Site Name
 
