@@ -52,7 +52,24 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
 
 1. Define and pair the environments to be replaced. 
 
+    ```yaml:title=private/sites.yml
+    ---
+    api_version: 1 # Currently only one api version.
+    # file should be placed in the /private folder
+    # "domain_maps" is a collection of blog URLs for each environment used to
+    # facilitate search-replace of a WordPress Multisite (WPMS) across pantheon
+    # environments. Each key of "domain_maps" must be a valid environment name.
+    domain_maps:
+      # environment: <collection of domains to be used on this environment>
+      # i.e. dev, test, live, feat-branch, &c.
+      dev:
+        # each environment collection maps the blog ID to its URL. A url must be
+        # set in both the target and source environments for search-replace to be
+        # run.
+        # i.e. 2: blog1-mysite.com
+        1: dev-example.pantheonsite.io
 
+    ```
 
 Refer to [this gist](https://gist.github.com/scottbuscemi/b051ad6510ef8494aff80d0f43afeeb2) for an example of how `sites.yml` might look.
 
