@@ -33,7 +33,7 @@ Check out the [Front-End Sites landing page](/guides/decoupled/) to access all d
 
 ## Backend Requirements
 
-The following components required for your backend, especially if using the starter kits for Pantheon Front-End Sites:
+The following components are required for your backend, especially if using the starter kits for Pantheon Front-End Sites:
 
 - Lando: An open source, cross-platform, local development environment, and DevOps tool built on Docker container technology.
      - Install the latest release of Lando. Lando ships with a recommended version of Docker Desktop if you do not already have it installed.

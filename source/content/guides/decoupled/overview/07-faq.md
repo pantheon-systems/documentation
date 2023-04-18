@@ -46,7 +46,7 @@ Multi-Region Failover and Pantheon's Multizone Failover are only available for G
 
 ### Is Multidev compatible with Front-End Sites?
 
-Yes, Multidev is compatible with Front-End Sites. Refer to [Types of Environments](/guides/decoupled/overview/considerations#types-of-environments) and[Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for more information.
+Yes, Multidev is compatible with Front-End Sites. Refer to [Types of Environments](/guides/decoupled/overview/considerations#types-of-environments) and [Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for more information.
 
 ### Is Advanced Global CDN (AGCDN) compatible with Front-End Sites?
 

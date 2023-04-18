@@ -166,7 +166,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 1. Click **Settings** and then click **Builds**.
 
-1. Scroll down to the **Build Hooks** section, select **Edit** from the **Edit** drop-down menu next to the Build Hook you want to make changes to.
+1. Scroll down to the **Build Hooks** section, then select **Edit** from the **Edit** drop-down menu next to the Build Hook you want to make changes to.
 
 1. Update the Build Hook information and then click **Save Changes**.
 
@@ -178,7 +178,7 @@ The Build Hook name will remain the same, but your URL will be updated each time
 
 1. Click **Settings** and then click **Builds**.
 
-1. Scroll down to the **Build Hooks** section, select **Regenerate** from the **Edit** drop-down menu next to the Build Hook you want to regenerate.
+1. Scroll down to the **Build Hooks** section, then select **Regenerate** from the **Edit** drop-down menu next to the Build Hook you want to regenerate.
 
 1. Click **Yes** to confirm your selection and then click **Regenerate Hook**.
 
@@ -192,7 +192,7 @@ The Build Hook name will remain the same, but your URL will be updated each time
 
 1. Click **Settings** and then click **Builds**.
 
-1. Scroll down to the **Build Hooks** section, select **Delete** from the **Edit** drop-down menu next to the Build Hook you want to delete.
+1. Scroll down to the **Build Hooks** section, then select **Delete** from the **Edit** drop-down menu next to the Build Hook you want to delete.
 
 1. Click **Yes** to confirm your selection and then click **Delete Hook**.
 

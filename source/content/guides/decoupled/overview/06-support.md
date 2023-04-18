@@ -27,14 +27,14 @@ Technical Support covers issues related to the following:
 - Troubleshoot customer cases related to the platform
 - Enable customers by providing related documentation, where to access logs, and when appropriate share similar case studies that provide a solution for the customer in line with the product life cycle.
 - Advocate for customers by validating and reporting bugs, feature requests, and improving platform documentation in line with the product life cycle
-- During customer outages that cannot be resolved by the customers or CSE, escalation to on-call engineers
+- During customer outages that cannot be resolved by the customers or CSE, escalate to on-call engineers
 
 
 Technical Support for Pantheon Front-End Sites does not include the following:
 
 - Debugging custom applications and code
 - Customization of solutions, templates, or tools; including unsupported software functionality.
-- Issues specific to customer-developed code.
+- Troubleshooting issues specific to customer-developed code.
 - Consultation on administration, configuration, performance, or security.
 
 
