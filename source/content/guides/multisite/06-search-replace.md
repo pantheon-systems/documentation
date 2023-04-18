@@ -50,7 +50,7 @@ Note, if `pantheon.yml` is different between environments, the `search_replace` 
 
 For subdomain Multisites, environments to be replaced are defined and paired in the `sites.yml` file. Search and replace will run for each domain listed in the source environment that has a matching key in the target environment. If search and replace is enabled for an environment, but `sites.yml` does not exist, nothing will be updated. If `sites.yml` is different between environments, the `domain_maps` in the target environment’s `sites.yml` will be used to determine what to replace.
 
-1. Define and pair the environments to be replaced. 
+1. Create a `sites.yml` file inside the `private/` folder. Define and pair the environments to be replaced like the sample code below. 
 
     ```yaml:title=private/sites.yml
     ---
@@ -92,8 +92,6 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
      # Anything else in the file will be ignored, but not rejected.
 
     ```
-
-Refer to [this gist](https://gist.github.com/scottbuscemi/b051ad6510ef8494aff80d0f43afeeb2) for an example of how `sites.yml` might look.
 
 1. Commit the  `sites.yml` file in the `private/sites.yml` in the site’s Git repository.
 
