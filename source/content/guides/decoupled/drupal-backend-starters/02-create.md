@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to create a new project.
 tags: [webops, workflow, decoupled]
@@ -37,13 +37,13 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
 ## Install with Dashboard Upstream
 
-1. Log in to your Pantheon Dashboard and select the **Sites** page.
+1. Log in to your **Site Dashboard** and select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Select **Drupal for Front-End** under **Create Backend CMS**.
 
-    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Pantheon Dashboard.
+    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your Front-End Site in the Site Dashboard.
 
     ![select a starter](../../../../images/decoupled-select-starter.png)
 

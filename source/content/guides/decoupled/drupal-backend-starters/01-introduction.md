@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: Introduction
 description: Learn about the Drupal backend starter for Front-End Sites.
 tags: [webops, workflow, decoupled]

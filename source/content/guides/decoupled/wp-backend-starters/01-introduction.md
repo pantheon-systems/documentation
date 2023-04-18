@@ -1,7 +1,7 @@
 ---
-title: Decoupled WordPress Backend Starter for Front-End Sites
+title: WordPress Backend Starter for Front-End Sites
 subtitle: Introduction
-description: Learn about the decoupled WordPress backend starter for Front-End Sites.
+description: Learn about the WordPress backend starter for Front-End Sites.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -19,7 +19,7 @@ integration: [--]
 
 Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 
-You can use the decoupled WordPress backend starter kit to streamline the creation of your Front-End Site on Pantheon. This guide shows you how to install, set up local development, manage WordPress dependencies, configure build hooks, and more.
+You can use the WordPress backend starter kit to streamline the creation of your Front-End Site on Pantheon. This guide shows you how to install, set up local development, manage WordPress dependencies, configure build hooks, and more.
 
 <Alert title="Not what you're looking for?" type="success" icon="leaf">
 
