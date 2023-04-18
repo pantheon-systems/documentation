@@ -77,6 +77,15 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
         1: test-example.pantheonsite.io
         2: test.about.example.com
         6: test.hr-department.example.com
+      live:
+        1: www.example.com
+        2: about.example.com
+        3: employee.example.com
+        4: staff-portal.example.com
+        5: dcustomers.example.com
+        6: hr-department.example.com
+
+
      # Anything else in the file will be ignored, but not rejected.
 
     ```
