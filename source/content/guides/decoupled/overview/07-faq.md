@@ -21,16 +21,16 @@ This section provides answers to frequently asked Front-End Site questions.
 
 ### Can I use any CMS with Pantheon architecture for Front-End Sites?
 
-WordPress and Drupal are currently the only CMSs supported by Pantheon Decoupled.
+WordPress and Drupal are currently supported by Pantheon Front-End Sites.
 
 ### What dependency versions are supported with Front-End Sites?
 
 Pantheon Front-End Sites currently supports:
 
-* Gatsby v3 and v4
-* Next.js v12 and v13
-* Drupal 9 or higher
-* WordPress 5.9 and 6
+- Gatsby v4 or higher
+- Next.js v12 or higher
+- Drupal 9 or higher
+- WordPress 5.9 or higher
 
 ### Is Decoupled Site Preview available for all instances on Front-End Sites?
 
@@ -46,9 +46,9 @@ Multi-Region Failover and Pantheon's Multizone Failover are only available for G
 
 ### Is Multidev compatible with Front-End Sites?
 
-Yes, Multidev is compatible with Front-End Sites. Refer to [Types of Environments](/guides/decoupled/overview/site#types-of-environments) and[Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for more information.
+Yes, Multidev is compatible with Front-End Sites. Refer to [Types of Environments](/guides/decoupled/overview/considerations#types-of-environments) and [Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for more information.
 
-### Is Advanced Global CDN (AGCDN) compatible with Front-End Sites?
+### Is Advanced Global CDN (AGCDN) compatible with Front-End Sites? 
 
 Yes, [AGCDN](/guides/agcdn) is compatible with Front-End Sites. [Contact Support](/guides/support/contact-support/) to get assistance adding AGCDN to your Front-End Site.
 

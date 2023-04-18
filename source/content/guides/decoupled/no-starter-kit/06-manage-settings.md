@@ -1,7 +1,7 @@
 ---
 title: Front-End Sites without a Starter Kit
 subtitle: Manage Settings
-description: Learn how manage Front-End Sites settings in the Pantheon Dashboard.
+description: Learn how to manage Front-End Sites settings in the Pantheon Dashboard.
 tags: [webops, workflow, decoupled]
 contributors: [whitneymeredith]
 layout: guide

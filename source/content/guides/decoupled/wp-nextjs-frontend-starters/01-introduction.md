@@ -1,7 +1,7 @@
 ---
 title: WordPress + Next.js Frontend Starter for Front-End Sites
 subtitle: Introduction
-description: Learn about WordPress + Next.js frontend starter for Front-End Sites.
+description: Learn about the WordPress + Next.js frontend starter for Front-End Sites.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia, whitneymeredith]
 layout: guide
@@ -30,9 +30,9 @@ Check out the [Front-End Sites landing page](/guides/decoupled/) to access all d
 
 </Alert>
 
-## Why Use The Next.js WordPress Starter?
+## Why Use the Next.js WordPress Starter?
 
-The `next-wordpress-starter` is designed as a starting point to for a Next.js site that consumes data from a WordPress backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
+The `next-wordpress-starter` is designed as a starting point for a Next.js site that consumes data from a WordPress backend configured with the `pantheon-decoupled` and `wp-graphql` plugins installed.
 
 The starter has a dependency on the `@pantheon-systems/wordpress-kit` that includes helpers to maximize available WordPress backend features.
 
