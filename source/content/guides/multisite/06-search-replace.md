@@ -68,6 +68,13 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
         # run.
         # i.e. 2: blog1-mysite.com
         1: dev-example.pantheonsite.io
+        2: dev.about.example.com
+        3: dev.employee.example.com
+        4: dev.staff-portal.example.com
+        5: dev.customers.example.com
+        6: dev.hr-department.example.com
+
+    # Anything else in the file will be ignored, but not rejected.
 
     ```
 
