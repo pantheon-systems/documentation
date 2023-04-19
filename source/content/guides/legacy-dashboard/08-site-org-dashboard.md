@@ -121,5 +121,3 @@ Organization Administrators can add members to the Organization Team as follows:
 3. Enter the user's email address.
 4. Choose the user's role.
 5. Click **Add user**.
-
-If the person does not yet have a Pantheon account, they will receive an email with an invitation to create one. Once they have successfully created an account, they will be automatically added to the Organization. If they already have an account, they will receive an email with a link to the Organization's dashboard.
