@@ -33,7 +33,7 @@ You can create a new Multidev if you:
 
 <Alert title="Note"  type="info" >
 
-Site admins of an organization with Multidev can invite independent contractors or set an agency as a supporting organization. The Pantheon system will automatically choose the highest account tier among the group. This logic makes Multidev features, including the ability to create Multidev environments, available to the supporting organization or the site team members on the associated sites.   
+Site admins of an organization with Multidev can invite independent contractors or set an agency as a Supporting Workspace. The Pantheon system will automatically choose the highest account tier among the group. This logic makes Multidev features, including the ability to create Multidev environments, available to the Supporting Workspace or the site team members on the associated sites.   
 
 </Alert>
 

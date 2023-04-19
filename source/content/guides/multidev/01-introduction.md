@@ -35,13 +35,13 @@ Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sale
 
 ### Multidev Access for Team Members and Supporting Agencies
 
-Site admins of an organization with Multidev can invite independent contractors or assign an agency as a supporting organization to a site.
+Site admins of an organization with Multidev can invite independent contractors or assign an agency as a Supporting Workspace to a site.
 
 The Pantheon platform will automatically choose the highest account tier among the group for the site.
 
-If a supporting organization or individual contributor has an account tier lower than the site owner's tier, their Multidev access will be the same as the site owner's tier.
+If a Supporting Workspace or individual contributor has an account tier lower than the site owner's tier, their Multidev access will be the same as the site owner's tier.
 
-This logic makes Multidev features, including the ability to create Multidev environments, available to the supporting organization or the site team members on the associated sites.
+This logic makes Multidev features, including the ability to create Multidev environments, available to the Supporting Workspace or the site team members on the associated sites.
 
 The assigned team members will be able to create new and manage existing Multidevs for sites within the organization as long as that organization is a [Gold account or higher](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans). This does not affect their account access for other sites or within other organizations.
 
