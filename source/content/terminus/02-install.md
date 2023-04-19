@@ -117,7 +117,7 @@ You must log in with a machine token after the installation completes. A machine
 
 1. Navigate to the **User Dashboard**, select **Account**, and then select **Machine Tokens** to [create your machine token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
-1. Use your machine token to authenticate into Terminus, replacing <email@example.com> and <machine_token>:
+1. Use your machine token to authenticate into Terminus, replacing `<email@example.com>` and `<machine_token>`:
 
   ```bash{promptUser: user}
   terminus auth:login --email=<email@example.com> --machine-token=<machine_token>
