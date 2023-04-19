@@ -134,7 +134,7 @@ Pantheon Search and Object Cache are available to Sandbox plans for testing. Pan
 
 Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. Pantheon allocates two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live, or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more Sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
 
-To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/manage#cancel-your-plan).
+To downgrade to Sandbox, see [Cancel Current Plan](/guides/account-mgmt/plans/site-plans#cancel-your-plan).
 
 ## Change Your Plan
 

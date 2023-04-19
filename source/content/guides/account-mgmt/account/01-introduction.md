@@ -25,18 +25,8 @@ The first thing you need to do when starting with Pantheon is create an account.
 [Create your account for free](https://pantheon.io/register?docs).
 
 
-## Personal Settings
+<Alert title="Note" type="info" >
 
-Click your user icon in the upper right corner to update and manage your personal account information. 
+<Partial file="dashboard-login-session-length.md" />
 
-  - **Profile:** Update your user profile information, or connect your Google account to Pantheon.
-
-  - **Account and Security:** Change your account email password.
-
-  - **Notifications:** Select the notifications you want to receive.
-
-  - **SSH Keys:** Add and manage your SSH keys.
-
-  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus).
-
-  - **Preferences:** Slide the toggle to **Off** to use the old dashboard. 
+</Alert>

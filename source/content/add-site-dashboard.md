@@ -19,7 +19,7 @@ A Pantheon CMS site contains two components: code, and a CMS (Content Management
 
 To create a CMS site:
 
-1. Open your Personal or Professional Workspace dashboard and select the <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
+1. Open the [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
 
    ![Create new site button](../images/create-new-site-button.png)
 

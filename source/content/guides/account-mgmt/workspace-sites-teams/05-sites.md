@@ -25,7 +25,7 @@ The Pantheon [Site Dashboard](/site-dashboard) is the hub of all development and
 
 To view a Site Dashboard:
 
-1. Go to the Workspace containing the site.
+1. Go to the [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 1. Select the **Sites** tab. Here, you can:
    - Search for the site by site name.
    - Narrow the list using the filters on the left.
@@ -53,7 +53,7 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-workspace-to-site).
 
 ### Tag Sites
 
@@ -146,7 +146,7 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client. 
 
-1. Go to the Professional Workspace containing the site.
+1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 
 1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
 
@@ -162,7 +162,7 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 Agencies should follow the steps below to maintain Preferred Pricing through a plan change. 
 
-1. Go to the Professional Workspace containing the site.
+1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 
 1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
 
@@ -197,7 +197,7 @@ Only the site's "User in Charge" or "Owner" can delete a site. Refer to [Roles a
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-**Before you delete a site**: Downgrade the site plan to Sandbox. Refer to [Manage Site Plans](/guides/account-mgmt/plans/manage) for more information.
+**Before you delete a site**: Downgrade the site plan to Sandbox. Refer to [Manage Site Plans](/guides/account-mgmt/plans/site-plans) for more information.
 
 **After you delete a site that had a live domain or subdomain**: Update the DNS records to avoid pointing to the deleted site.
 
@@ -217,7 +217,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ### Delete a Site from a Workspace
 
-1. Go to the Professional Workspace containing the site.
+1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 
 1. Select the checkbox next to the site(s) you want to delete.
 

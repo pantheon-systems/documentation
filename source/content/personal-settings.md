@@ -14,9 +14,7 @@ reviewed: "2023-04-19"
 showtoc: true
 ---
 
-Personal Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner.
-
-To update your personal settings click the user gravatar, then click **Personal Settings**.
+Personal Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner, then **Personal Settings**.
 
 ![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/personal-settings-profile.jpg)
 

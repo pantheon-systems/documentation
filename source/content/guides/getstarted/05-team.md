@@ -25,7 +25,7 @@ If you are a one-person shop, and will only ever be a one-person shop, you could
 
 To set up your team:
 
-1. Select your gravatar in the upper left corner, then select **Create New Workspace**.
+1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select **Create New Workspace**.
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 

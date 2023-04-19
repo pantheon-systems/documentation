@@ -23,7 +23,7 @@ Workspaces are a home base for your WebOps. There are two types of workspaces:
 
 <Tab title="Personal Workspace" id="personal-workspace" active={true}>
 
-The Personal Workspace displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one personal workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
+The Personal Workspace displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one Personal Workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
 
 - Every Pantheon user is assigned one Personal Workspace. 
 - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
@@ -50,6 +50,34 @@ You can create a Professional Workspace as the home for an organization’s site
 
 </TabList>
 
+## Workspace Tools
+
+The navigation bar on the left contains several additional tabs to help you manage your sites:
+
+- **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining.
+
+  - **Create New Site:** Start the process of creating a new site on Pantheon. New sites will appear under the Sites tab.
+
+  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, refer to [Migrate Sites to Pantheon](/guides/guided/) on our [Get Started](/get-started) page.
+
+- **Team*:** Create a new workspace.
+
+- **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
+
+- **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
+
+- **Custom Upstreams*:** Create a new workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
+
+- **Settings:** Modify the workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
+
+\* Not available in Personal Workspaces.
+
+<Alert title="Note" type="info" >
+
+<Partial file="dashboard-login-session-length.md" />
+
+</Alert>
+
 ## Supporting Workspaces
 
 If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add it to the site as a **Supporting Workspace**, which will give the members of that Workspace access to help build, launch, or maintain your site.
@@ -58,7 +86,7 @@ If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plan
 
 You can create as many workspaces as necessary. The following process will create a Professional Workspace with a free Silver Account Plan.
 
-1. Click on your gravatar in the upper left corner, then select **Create New Workspace**.
+1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) in the upper left corner, then select **Create New Workspace**.
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
@@ -128,7 +156,7 @@ You can configure email notifications for Autopilot alerts and activity digests.
 
 If you're a member of multiple workspaces, you can stay logged in, and switch between workspaces to work on different projects.
 
-To switch between workspaces, click your gravatar in the upper left to switch between workspaces:
+To switch between workspaces, click the icon in the upper left to switch between workspaces:
 
 ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
 

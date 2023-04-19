@@ -23,7 +23,7 @@ Learn how to view and manage your invoices and subscriptions.
 
 To view your invoices:
 
-1. Go to your personal workspace.
+1. Click your [user gravatar](personal-settings#profile).
 
 1. Click **Settings**, then click **Invoices**.
 

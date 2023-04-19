@@ -31,13 +31,13 @@ Payment for a site can't be split among payment methods. This means that your pa
 
 ## Personal Payment Methods
 
-Personal payment methods can be used on all sites you own. Personal payment methods are managed via your [Personal Workspace](/guides/account-mgmt/account/workspace).
+Personal payment methods can be used on all sites you own. Personal payment methods are managed via your Personal Workspace.
 
 ### Add Personal Payment Method
 
 To add a payment method:
 
-1. Go to your personal workspace.
+1. Click your [user gravatar](personal-settings#profile).
 
 1. Select **Settings**, then select **Payment Methods**.
 
@@ -53,7 +53,7 @@ The email address you enter here is the address invoices will be sent to.
 
 ### Update Personal Payment Method
 
-1. Go to your personal workspace.
+1. Click your [user gravatar](personal-settings#profile).
 
 1. Select **Settings**, then select **Payment Methods**.
 
@@ -79,7 +79,7 @@ Deleting a card profile from your account will also delete its associated billin
 
 </Alert>
 
-1. Go to your personal workspace.
+1. Click your [user gravatar](personal-settings#profile).
 
 1. Select **Settings**, then select **Payment Methods**.
 
@@ -92,7 +92,7 @@ Deleting a card profile from your account will also delete its associated billin
 
 ### View History
 
-1. Go to your personal workspace.
+1. Click your [user gravatar](personal-settings#profile).
 
 1. Select **Settings**, then select **Payment Methods**.
 
