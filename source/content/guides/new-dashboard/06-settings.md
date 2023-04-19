@@ -54,5 +54,3 @@ You can add optional payment and terms of service information for Sites built in
 Users can purchase a site plan on a Sandbox site. Enter a site address in the **Customized Billing Instruction URL** field to direct users where they can view workspace billing instructions.
 
 If a user attempts to update a site plan for any site that is not in a Sandbox, the user can view you administrators that can assist them.
-
-You can enter terms and conditions that are displayed to Workspace members.
