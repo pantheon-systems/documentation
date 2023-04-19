@@ -15,8 +15,11 @@ showtoc: true
 permalink: docs/guides/multidev/create-multidev
 ---
 
-This section provides steps on how to create a new fork in a Pantheon environment by using the code from the Dev environment.
+This section provides steps on how to create a new Multidev.
 
+## Create in the Dashboard
+
+You can create a new fork in a Pantheon environment by using the code from the Dev environment.
 
 1. Navigate to the **Site Dashboard** then click the **Multidev** tab.
 
@@ -54,7 +57,7 @@ The cache tables can contain entries that exceed the transaction redo limit set 
 
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
-## Local Multidev Creation
+## Create Locally with Terminus
 
 You can create a Multidev on your local setup with the [Terminus Multidev create command](/terminus/commands/multidev-create).
 
