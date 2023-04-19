@@ -1,6 +1,6 @@
 ---
 title: Workspaces and Dashboard Product Overview
-description: A developer console for all your sites
+description: A developer console for all your sites.
 contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
@@ -34,9 +34,9 @@ Our workspaces and dashboards provide a real-time interface into Pantheon. It in
 * Test sites
 * One-click updates to Drupal core and WordPress
 * Site crash reporting with backtraces
-* SFTP development controls, including git commits
+* SFTP development controls, including Git commits
 * Add and configure New Relic monitoring
- 
+
 
 *Manage Sites*
 
@@ -54,9 +54,14 @@ Our workspaces and dashboards provide a real-time interface into Pantheon. It in
 
 <Tab title="Requirements" id="requirements">
 
-* Personal Workspace Dashboard: A valid Pantheon account
-* Professional Workspace Dashboard: Must be invited to the Workspace by an Administrator
-* Site Dashboard: Must be invited to the site by an Administrator
+**Personal Workspace Dashboard**
+- A valid Pantheon account
+
+**Professional Workspace Dashboard**
+- Must be invited to the Workspace by an Administrator
+
+**Site Dashboard**
+- Must be invited to the site by an Administrator
 
 </Tab>
 
@@ -65,7 +70,7 @@ Our workspaces and dashboards provide a real-time interface into Pantheon. It in
 ## Documentation
 
 * [Dashboard Guide](/guides/new-dashboard)
-* [Account Management at Pantheon](/manage) 
+* [Account Management at Pantheon](/manage)
 
 ## Learning
 
