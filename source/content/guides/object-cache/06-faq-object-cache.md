@@ -72,7 +72,7 @@ Yes. There is a `redis.log` file that is available on the Redis container for ea
 
 Follow the steps below to access the Redis container.
 
-1. Navigate to the Site Dashboard and click the **Connection Info** button.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click the **Connection Info** button.
 
 1. Copy the SFTP command line string and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
 

@@ -73,7 +73,7 @@ There is also a one-click option to connect with a GUI client. The main director
 
 You can use SFTP to upload files to your site's files directory in the Test and Live environments. Note that SFTP mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
 
-1. Navigate to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. Select the **Test** or **Live** environment and click **Connection Info**.
 

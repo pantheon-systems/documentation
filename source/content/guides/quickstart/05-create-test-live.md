@@ -25,7 +25,7 @@ If you haven’t completed the installation of your Dev site, return to [Create 
 
 ## Create Test Environment
 
-1. Go to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. 
+1. Go to your [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, though it hasn’t been created yet. 
 
 1. Click **Initialize Test Environment** to create your Test environment.
 

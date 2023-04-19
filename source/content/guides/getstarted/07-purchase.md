@@ -25,7 +25,7 @@ The free account you created allows you to create sandbox (non-production) sites
 
 ## Purchase a Plan
 
-1. Open your Site Dashboard and click **Upgrade** next to the site's name.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click **Upgrade** next to the site's name.
 
    ![Upgrade button](../../../images/purchase-upgrade-plan-button.png)
 

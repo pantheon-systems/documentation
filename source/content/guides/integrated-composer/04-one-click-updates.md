@@ -22,7 +22,7 @@ You can apply one-click updates in the Site Dashboard or with Terminus.
 
 ## Site Dashboard
 
-1. Navigate to the **Dev** tab of the Site Dashboard, and click **Code**.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)], **Dev** tab, and click **Code**.
 
 1. Click **Check Now**.
 

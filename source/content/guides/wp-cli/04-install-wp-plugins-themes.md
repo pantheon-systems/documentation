@@ -26,7 +26,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) provides a lis
     terminus wp $TERMINUS_SITE.dev -- plugin install contact-form-7 --activate
     ```
 
-    - Open the Site Dashboard to confirm that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, or continue to use the command line as the example below.
+    - Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] to confirm that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, or continue to use the command line as the example below.
 
     ![Pantheon Site Dashboard: Install CF7](../../../images/wordpress-commandline-install-cf7.png)
 

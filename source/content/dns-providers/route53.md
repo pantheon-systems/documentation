@@ -23,7 +23,7 @@ Be sure that you have a:
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
 
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+1. Navigate to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
 Keep this page open and login to your [Amazon Route 53 account](https://console.aws.amazon.com/route53/) in a new tab before you continue.

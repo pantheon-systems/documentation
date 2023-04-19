@@ -25,7 +25,7 @@ Be sure that you have a:
 
 ## Locate Pantheon's DNS Values
 
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio" /> Live) then click **<span class="glyphicons glyphicons-global" /> Domains / HTTPS**.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and select the target environment (typically <span class="glyphicons glyphicons-cardio" /> Live) then click **<span class="glyphicons glyphicons-global" /> Domains / HTTPS**.
 
 1. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
 
@@ -45,7 +45,7 @@ Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a plan
 
 1. Select your desired Time to Live (TTL) and then click **Save**.
 
-1. Log in to the Pantheon Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. Navigate to the Live environment and click **Domains/HTTPS**.
 

@@ -91,7 +91,7 @@ Pantheon offers savings for sites purchased with annual billing. Refer to [Panth
 
 </Alert>
 
-1. Go to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
 
@@ -119,7 +119,7 @@ You can enable the following add-ons:
 
 To enable or disable add-ons:
 
-1. Go to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. Click **Settings**, and then click **Add Ons**. You will see all the available add-ons for your site.
 
@@ -153,7 +153,7 @@ To change your plan:
 
 1. Log in as an [organization administrator](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
-1. Go to the Site Dashboard, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)], click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
 
 1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
 
@@ -168,7 +168,7 @@ If the site plan isn't shown on the Dashboard immediately, refresh the page or c
 
 <Tab title="All Other Sites" id="other">
 
-1. Go to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
 
@@ -184,7 +184,7 @@ Before making any changes, please review [Before You Make Changes](#before-you-m
 
 </Alert>
 
-1. Go to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. Select the current plan (to the right of the site name).
 

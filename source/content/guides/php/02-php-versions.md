@@ -35,7 +35,7 @@ Changes to `pantheon.yml` [deployed as hotfixes](/pantheon-yml#deploying-hotfixe
 
 ## Verify Your Current PHP Version
 
-Navigate to the Site Dashboard and click **Settings**, and then click **PHP version** to verify your PHP version.
+Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click **Settings**, and then click **PHP version** to verify your PHP version.
 
 <Alert title="Note" type="info">
 
@@ -63,7 +63,7 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
 <Tab title="SFTP Mode" id="sftp-steps" active={true}>
 
-1. Navigate to the Site Dashboard and click **Dev**.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click **Dev**.
 
 1. Select **SFTP** as your **Development Mode**.
 
@@ -81,7 +81,7 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
 1. Navigate to your SFTP client and refresh the `/code` directory to verify that the `pantheon.yml` file has been created and contains the changed version.
 
-1. Navigate to the Site Dashboard and refresh the **Dev** environment tab to verify that the `pantheon.yml` file is available to commit.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and refresh the **Dev** environment tab to verify that the `pantheon.yml` file is available to commit.
 
 1. Enter a commit message and click **Commit changes**.
 
@@ -103,7 +103,7 @@ If the contents of `pantheon.yml` are valid, you can commit normally. If there i
 
 <Tab title="Git Mode" id="git-steps">
 
-1. Navigate to the Site Dashboard and click **Dev**.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click **Dev**.
 
 1. Select **Git** as your **Development Mode**.
 

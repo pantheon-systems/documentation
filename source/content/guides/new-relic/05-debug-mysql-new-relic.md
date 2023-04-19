@@ -21,7 +21,7 @@ Modern reporting services that are integrated with your site help speed up the p
 
 ## Open New Relic&reg; Performance Monitoring
 
-1. Navigate to the Site Dashboard of the site you suspect is having problems with MySQL query performance.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] of the site you suspect is having problems with MySQL query performance.
 
 1. Select the environment: Dev, Test, or Live.
 

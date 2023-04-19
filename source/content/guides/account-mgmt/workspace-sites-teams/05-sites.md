@@ -19,6 +19,19 @@ integration: [--]
 
 This guide is specific to sites management, not developing and launching sites.
 
+## Site Dashboard
+
+The Pantheon [Site Dashboard](/site-dashboard) is the hub of all development and activity for an individual site.
+
+To view a Site Dashboard:
+
+1. Go to the Workspace containing the site.
+1. Select the **Sites** tab. Here, you can:
+   - Search for the site by site name.
+   - Narrow the list using the filters on the left.
+   - Sort the columns by clicking on the column heading.
+1. Click the name of the site.  The Site Dashboard appears.
+
 ## Create a Site
 
 <Alert title="Note" type="info" >
@@ -92,7 +105,7 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
-1. Open the Site Dashboard for the site.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
 
 1. Select **Billing**, then **Invite a business owner to pay for this site**.
 
@@ -135,7 +148,7 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 1. Go to the Professional Workspace containing the site.
 
-1. Open the Site Dashboard for the site.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
 
 1. Click the **Billing** tab.
 
@@ -151,7 +164,7 @@ Agencies should follow the steps below to maintain Preferred Pricing through a p
 
 1. Go to the Professional Workspace containing the site.
 
-1. Open the Site Dashboard for the site.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
 
 1. Click the **Billing** tab.
 
@@ -192,7 +205,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ### Delete a Site from the Site Dashboard
 
-1. Open the Site Dashboard for the site.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
 
 1. Select **Settings**, and then select **Delete Site**.
 

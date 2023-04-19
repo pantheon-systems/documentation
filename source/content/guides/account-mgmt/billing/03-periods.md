@@ -28,7 +28,7 @@ Before changing your billing period from monthly to annual, or vice-versa, consi
 
 To change your billing cadence:
 
-1. Open the Site Dashboard for the site, then click on the name of your site plan (to the right of the site's name).
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site, then click on the name of your site plan (to the right of the site's name).
 
 1. Select your current plan if you're keeping the same plan size and only switching to annual billing.
 

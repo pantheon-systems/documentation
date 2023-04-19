@@ -25,7 +25,7 @@ This section provides solutions for common New Relic troubleshooting scenarios.
 
 1. Select **Log Out** from the drop-down menu.
 
-1. Navigate to the Site Dashboard and click the **Go to New Relic** button.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click the **Go to New Relic** button.
 
 ### If You Click the Go to New Relic Button and Are Instead Sent to a Log in Screen
 

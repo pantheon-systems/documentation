@@ -351,7 +351,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 #### Pantheon Dashboard
 
-1. Navigate to the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)], select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
 
 <Partial file="drupal/migrate-add-files-part3.md" />
 

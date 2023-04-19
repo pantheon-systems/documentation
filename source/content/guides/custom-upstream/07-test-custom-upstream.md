@@ -163,7 +163,7 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
   git push pantheon-test core-update
   ```
 
-7. Return to the Site Dashboard for your test site > navigate to the **Multidev** overview tab > click **Git Branches**.
+7. Return to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for your test site > navigate to the **Multidev** overview tab > click **Git Branches**.
 
 8. Click the **Create Environment** button next to the `core-update` branch.
 

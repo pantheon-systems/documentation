@@ -23,7 +23,7 @@ Congratulations on launching a site on Pantheon. Review next steps below for inf
 [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check):
 Pantheon provides recommendations that fit the vast majority of use cases by using a technique known as static program analysis which gathers performance and behavior patterns to see how a site works.
 
-[Drupal Launch Check](/drupal-launch-check/): Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members.
+[Drupal Launch Check](/drupal-launch-check/): Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] under the Status tab and are accessible by site team members.
 
 ## Content Staging
 

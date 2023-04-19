@@ -96,7 +96,7 @@ We were not able to perform the merge safely. See the Applying Upstream Updates 
 
 **Solution 1:** Copy the Upstream URL and then follow **Solution 2**:
 
-1. Navigate to the Site Dashboard, and click the **Dev** tab.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)], and click the **Dev** tab.
 
 1. Click **Settings**, then click **About site**.
 

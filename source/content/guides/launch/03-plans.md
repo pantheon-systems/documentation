@@ -22,7 +22,7 @@ Contract customers must contact their account manager when they're ready to upgr
 
 Add your payment method to upgrade and pay for the site now:
 
-1. Navigate to the Pantheon Site Dashboard, and click **Upgrade** next to the site's name.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)], and click **Upgrade** next to the site's name.
 
 1. Click the **Select** button under the [plan you choose](https://pantheon.io/pricing/).
 
