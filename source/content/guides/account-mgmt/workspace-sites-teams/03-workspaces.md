@@ -64,6 +64,15 @@ You can create as many workspaces as necessary. The following process will creat
 
 1. Invite team members or skip this step by clicking **Continue**.
 
+## Switch Between Workspaces
+
+If you're a member of multiple [Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces), you can stay logged in, and switch between Workspaces to work on personal projects or to work between Organizations.
+
+Click the Workspace Switcher (the icon in the upper left) to switch between Workspaces:
+
+![Workspace switcher shows a personal and Agency workspace](../../../images/dashboard/new-dashboard/workspaces-selector.png)
+
+
 ## Retrieve the Workspace UUID
 
 Every entity (user, workspace, product, and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:

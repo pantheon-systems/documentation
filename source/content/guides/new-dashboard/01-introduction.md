@@ -102,5 +102,3 @@ On the homepage, you have access to an overview of the Workspace that provides t
 ### Workspaces
 
 Each Workspace is a portal for all your Site and Organization WebOps needs.
-
-Switch between Workspaces to manages each one's Sites, Users, Upstreams, and settings.
