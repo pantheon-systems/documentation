@@ -84,7 +84,7 @@ If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plan
 
 ## Create a Professional Workspace
 
-You can create as many workspaces as necessary. The following process will create a Professional Workspace with a free Silver Account Plan.
+You can create as many workspaces as necessary. The following process will create a Professional Workspace with a free Silver Account Plan.  To upgrade a Workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
 
 1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) in the upper left corner, then select **Create New Workspace**.
 
@@ -194,7 +194,7 @@ Only workspace team members and administrators of a Supporting Workspace with Mu
 
 ### Why can't my Agency workspace own a site?
 
-Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
+Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. 
 
 ### Can I add my own Agency as a Supporting Workspace to a client's site?
 
