@@ -1,6 +1,6 @@
 ---
 title: Workspaces, Sites, and Teams
-subtitle: Personal and Professional Workspaces
+subtitle: Workspaces
 description: Learn how to use and manage workspaces.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither, michellecolon-pantheon]
@@ -50,88 +50,9 @@ You can create a Professional Workspace as the home for an organization’s site
 
 </TabList>
 
-## Account Plans
+## Supporting Workspaces
 
-With a Professional Workspace, you can upgrade the associated [Account Plan](https://pantheon.io/plans/pricing) to gain additional features and enhanced support:
-
-<TabList>
-
-<Tab title="Silver Account Plan" id="silver">
-
-New Professional Workspaces start with a Silver Account Plan by default. The Silver Account Plan is free and offers basic WebOps tools and features.
-
-</Tab>
-
-<Tab title="Gold Account Plan" id="gold" active={true}>
-
-Professional Workspaces with a Gold Account Plan provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing.
-
-**To upgrade your Professional Workspace Account Plan to Gold**:
-
-1. Click the Workspace Switcher located in the upper left corner of your Personal Workspace. If you already have a Professional Workspace, then select that Professional Workspace <Popover title="Account Plans" content="Account Plans are attached to Professional Workspaces. Select the Professional Workspace to which you'd like to attach the account plan, or create a Professional Workspace if you don't have one set up already." /> using the Workspace Switcher and skip ahead to Step 6.
-
-  ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
-
-1. Click on your gravatar and select `Create a Professional Workspace`.
-
-  ![Create a Professional Workspace](../../../../images/guides/account-mgmt/create-new-professional-workspace.png)
-
-1. Name your Professional Workspace, fill in the details, and click `Continue`.
-
-  ![Create Workspace Details](../../../../images/guides/account-mgmt/create-professional-workspace.png)
-
-1. Add any team members you would like to include in this Professional Workspace and click `Continue`. You will be automatically added as an Administrator of this Professional Workspace.
-
-  ![Invite Team Members](../../../../images/guides/account-mgmt/invite-team.png)
-
-1. Your Professional Workspace is now ready. Click `Go to Workspace Home`.
-
-  ![Workspace is ready](../../../../images/guides/account-mgmt/ws-ready.png)
-
-1. To add a  Gold Account Plan to this workspace, click `Upgrade Account Plan` in the banner at the top of the page, or click `Upgrade Account to Gold` on the right side of the page, under `Get the most out of Pantheon`.
-
-  ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
-
-1. On the `Select Account Plan` page, click `Select Plan` under Gold, and follow the prompts to add a Payment Method.
-
-1. Once your payment method is accepted, you will be redirected to a Billing page with your Account Subscription details.
-
-  ![Billing Page](../../../../images/guides/account-mgmt/billing-page.png)
-
-<Alert title="Note"  type="info" >
-
-Now that you have a Professional Workspace with a Gold Account Plan, you can [add it as a supporting organization](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to your site to take advantage of your new features.
-
-</Alert>
-
-</Tab>
-
-<Tab title="Platinum & Diamond Account Plan" id="platinum-diamond">
-
- Platinum and Diamond Account Plans offer all the tools and features of the Gold Account Plan, and include features that benefit large teams and enterprise organizations such as direct access to experts, dedicated support, and more. [Contact Sales](https://pantheon.io/contact-sales) for more information about upgrading to a Platinum or Diamond Account Plan.
-
-</Tab>
-
-<Tab title="Partner Program" id="partner-program">
-
-You will only be assigned a [Partner Program](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency.
-
-As a Pantheon Partner, you receive access to:
-
-- Pantheon's Partner Portal
-- A listing in our Agency Directory
-- Sales playbooks, training, and [Gold Level Support](/guides/support/#support-features-and-response-times)
-- Preferred Pricing on site hosting plans
-
-**Partner Trial**: If you are creating a workspace for a web agency, you will be assigned a [Partner Trial Account](https://pantheon.io/partners/find-pantheon-partner) workspace that lets you try Gold Account Plan features free for 90 days.
-
-**Registered Agency**: This is recommended for any professional website developer or agency that develops websites for clients. Registering as an agency will start your path to partnership with Pantheon. You'll receive access to Pantheon Partner benefits for 90 days. After your trial period, your account plan will become a Registered Agency, and you will lose access to Gold Account Plan benefits until you qualify as a Pantheon Partner.
-
-For more information about our partner program and how to unlock higher partner tiers, check out our [Partner Program Guide](https://pantheon.io/resources/pantheon-partner-program-guide).
-
-</Tab>
-
-</TabList>
+If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add it to the site as a **Supporting Workspace**, which will give the members of that Workspace access to help build, launch, or maintain your site.
 
 ## Create a Professional Workspace
 
@@ -230,23 +151,23 @@ Any large agency that has multiple developers who login frequently via username/
 
 As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for passwordsless access](/ssh-keys).
 
-### Why can't I access Multidev on my site when the Supporting Organization can use it?
+### Why can't I access Multidev on my site when the Supporting Workspace can use it?
 
-Only workspace team members and administrators of a Supporting Organization with Multidev can use this feature. Site team members who are associated with the site but not the professional workspace can access Multidev environments via the unique URL, will not be able to commit code to them.
+Only workspace team members and administrators of a Supporting Workspace with Multidev can use this feature. Site team members who are associated with the site but not the professional workspace can access Multidev environments via the unique URL, will not be able to commit code to them.
 
 ### Why can't my Agency workspace own a site?
 
 Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
 
-### Can I add my own Agency as a Supporting Organization to a client's site?
+### Can I add my own Agency as a Supporting Workspace to a client's site?
 
-No. Only the owner of the site can add an agency as a Supporting Organization. This action grants all members of the workspace access to the site. You should ask site owners to add your agency as a Supporting Organization if you are providing services to the site.
+No. Only the owner of the site can add an agency as a Supporting Workspace. This action grants all members of the workspace access to the site. You should ask site owners to add your agency as a Supporting Workspace if you are providing services to the site.
 
-### What privileges and roles are granted when adding a Supporting Organization?
+### What privileges and roles are granted when adding a Supporting Workspace?
 
-All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
+All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
 
-### Can the site owner override privileges and access for team members of a Supporting Organization?
+### Can the site owner override privileges and access for team members of a Supporting Workspace?
 
 Yes, but only for sites owned by Enterprise or EDU+ workspaces. Roles designated on the Site Team modal will override any roles assigned within the workspace.
 

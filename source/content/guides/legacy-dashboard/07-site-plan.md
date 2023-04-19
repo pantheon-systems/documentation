@@ -19,7 +19,7 @@ integration: [--]
 
 Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
 
-If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing), contact your Supporting Workspace for assistance, in order to retain your special pricing rate.
 
 ## Access Site Plan
 
@@ -41,13 +41,13 @@ Changing your site plan is typically done at launch time. For a comprehensive st
 
 Site plan upgrades will change your site's resources and access to features immediately. The associated card will be charged a prorated amount for the remainder of the current billing period.
 
-If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Organization for assistance in order to retain your special pricing rate.
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Workspace for assistance in order to retain your special pricing rate.
 
 ## Downgrades
 
 Site plan downgrades will change your site's resources and access to features immediately. Beginning on the next billing cycle, the associated card will be charged for the new site plan. No prorated refunds or credits will be issued for site downgrades.
 
-If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing?docs), contact your Supporting Workspace for assistance, in order to retain your special pricing rate.
 
 ### Downgrade to Sandbox
 

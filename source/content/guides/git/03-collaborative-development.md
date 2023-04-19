@@ -255,7 +255,7 @@ You must create the `settings.php` file to develop in sync.
 
 1. Checkout a branch to start working on a new feature:
 
-    Since the site is associated with a supporting organization that has a Multidev environment, you can test out any feature. These environments have an 11-character limit for branch names, so you should use short branch names for your feature branches.  
+    Since the site is associated with a Supporting Workspace that has a Multidev environment, you can test out any feature. These environments have an 11-character limit for branch names, so you should use short branch names for your feature branches.  
 
     ```bash{outputLines: 2}
     git checkout -b configs

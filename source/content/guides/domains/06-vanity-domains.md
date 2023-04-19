@@ -73,11 +73,11 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 - Existing sites created before configuring a Vanity domain will continue to use the default Platform domains and will not use the custom Vanity domain.
 
-- Sites associated with your organization will receive the custom Vanity domain for all environments (including Multidev) created while the organization remains a supporting organization.
+- Sites associated with your organization will receive the custom Vanity domain for all environments (including Multidev) created while the organization remains a Supporting Workspace.
 
 - After adding a custom Vanity domain to your organization, some workflow operations such as restoring an environment from a backup or changing the PHP version, can cause site domain URLs in other environments to unexpectedly change from the Pantheon domain to the custom domain.
 
-- **Environment URLs are permanent.** If an organization is removed as the supporting organization, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URLs after launch and disassociation of the site with the organization.
+- **Environment URLs are permanent.** If an organization is removed as the Supporting Workspace, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URLs after launch and disassociation of the site with the organization.
 
 - **Do not configure DNS for custom domains using Vanity domain values.** Even after configuring a vanity domain, your custom domain records should *always* be `A`/`AAAA` records pointing to the platform IP addresses, as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page. Vanity domains are designed to be viewed by end users, not added into records for other domains.
 
