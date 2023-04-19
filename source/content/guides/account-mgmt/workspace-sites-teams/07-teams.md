@@ -103,7 +103,7 @@ When a team member is added to a site:
 - That Workspace containing that site will be accessible from the Workspace selector (gravatar in upper left)
 - The role they are given applies only to that site - not to any of the other in the same Workspace
 
-1. Open the Site Dashboard for the site.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
    
 1. Click **Team**.
 
@@ -135,7 +135,7 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 <Tab title="In a Site" id="chs">
 
-1. Open the Site Dashboard for the site.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
    
 1. Click **Team**.
 
@@ -229,7 +229,7 @@ To remove a user:
 
 To remove a team member from a site:
 
-1. Open the Site Dashboard for the site.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
 
 1. Click **Team**.
    

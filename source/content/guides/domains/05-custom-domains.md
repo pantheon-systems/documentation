@@ -50,7 +50,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
 1. Log in as an [Admin, Team Member, or Privileged User](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
-1. Navigate to the Site Dashboard for the environment you want the domain to point to (usually Live), and then click the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the environment you want the domain to point to (usually Live), and then click the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
 1. Enter a domain and click **Connect Domain**:
 

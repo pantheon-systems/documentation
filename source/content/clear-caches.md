@@ -27,7 +27,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 **Note:** To clear the Object cache, please see our [Object Cache](/guides/object-cache/redis-command-line#clear-cache) doc.
 
 ### Pantheon Dashboard
-1. Navigate to the Site Dashboard and select the desired environment.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and select the desired environment.
 2. Click the **Clear Caches** button:
 
   ![Clear Cache Button](../images/clear-cache-button.png)
@@ -38,7 +38,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 <Tab title="WordPress" id="wp-1" active={true}>
 
-1. Navigate to the Site Dashboard and select the desired environment.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and select the desired environment.
 2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
 3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
 
@@ -48,7 +48,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 <Tab title="Drupal" id="d7-3">
 
-1. Navigate to the Site Dashboard and select the desired environment.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and select the desired environment.
 2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
 3. Ensure the [Pantheon Platform API](/modules#pantheon-module-drupal-7) module is enabled:
 

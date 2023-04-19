@@ -34,7 +34,7 @@ The sections below will show you the basics for collaborating with others if you
 
 ## Synchronizing Existing Pantheon Sites to GitHub
 
-1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site you want to work on.
 
     ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 

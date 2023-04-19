@@ -26,7 +26,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing pla
 
 1. From the User Dashboard, click on the site you want to access billing for.
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click the **Billing** tab.
 
 <Alert title="Note" type="info">
 
@@ -66,7 +66,7 @@ If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides
     - Already has a card associated with it:
         - Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click the **Billing** tab.
 
 1. Find the existing card under **Billing Information** and click **Change** next to it, then click **Add New Card**.
 
@@ -81,7 +81,7 @@ Once you have added the card, set it as the new payment method for the site as d
 
 Select the card you want the site to use as the new payment method _after_ it has been added as described in the [previous section](#add-new-credit-card).
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click the **Billing** tab.
 
 1. Find the existing card under BILLING INFORMATION and click **Change** next to it.
 
@@ -95,7 +95,7 @@ A credit card can only be removed from a site when that site is set to [bill ano
 
 After downgrading from a paid plan to Sandbox, remove the card as a payment method for the site:
 
-1. Go to the Site Dashboard and click the **Billing** tab.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and click the **Billing** tab.
 1. Find your card under BILLING INFORMATION and click **Remove Card**.
 
  You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."

@@ -94,7 +94,7 @@ After you begin this process, you have:
     
    </Alert>
 
-1. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
+1. Return to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
 Your domain's HTTPS certificate(s) will begin to generate automatically after your verify domain ownership. The certificate will automatically deploy to Pantheon’s Global CDN within an hour.
 

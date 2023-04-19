@@ -47,7 +47,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
     </Accordion>
 
-1. Navigate to your Site Dashboard, select the <Icon icon="wrench" text="Dev"/> tab, and then click <Icon icon="server" text="Database / Files"/>.
+1. Go to your [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)], select the <Icon icon="wrench" text="Dev"/> tab, and then click <Icon icon="server" text="Database / Files"/>.
 
 1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site. 
 

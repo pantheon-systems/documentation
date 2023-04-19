@@ -23,7 +23,7 @@ If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-
 
 ## Access Site Plan
 
-1. Go to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. For Sandbox sites, click **Upgrade** next to the site's name:
   ![Upgrade plan button shown on Sandbox sites](../../../images/dashboard/upgrade-plan.png)
@@ -127,7 +127,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 
 ### Select Plan
 
-1. Go to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. For Sandbox sites, click **Upgrade** next to the site's name. Otherwise, click the current plan tag next to the site's name.
 
@@ -196,7 +196,7 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 </Alert>
 
-1. Go to the Site Dashboard.
+1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)].
 
 1. Select the current plan:
 
