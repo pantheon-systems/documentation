@@ -27,14 +27,6 @@ To set up your team:
 
 1. Select your gravatar in the upper left corner, then select **Create New Workspace**.
 
-   <Alert title="Note" type="info" >
-
-   Your gravatar is an image you can upload in your [personal settings](https://dashboard.pantheon.io/personal-settings/profile).  If you have not personalized your gravatar, it will appear as it does in the image below.
-
-   </Alert>
-
-   ![Select Workspace](../../../images/create-workspace.png)
-
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
    ![Adding Workspace Information](../../../images/create-workspace-form.png)
