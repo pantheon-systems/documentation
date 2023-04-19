@@ -318,6 +318,16 @@ remote:
 remote:
 ```
 
+### Pantheon.yml changes aren't reflected when creating a new Multidev
+
+**Issue:** Changes to your `pantheon.yml` file won't be reflected if you created a Git branch locally, made a change to the `pantheon.yml file`, and then pushed the branch, or used a CI pipeline to create a new Multidev.
+
+**Solution:**
+
+You must do *one* of the following to ensure that your newly created Multidev has the `pantheon.yml` changes:
+- Re-commit your changes to the Multidev and/or `pantheon.yml` file
+- Push the `pantheon.yml` changes directly to the Dev (master branch) environment
+
 ### Deploying Hotfixes
 
 Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). Git tags created manually and pushed on the platform do not invoke all the processes that an actual deployment does. Pantheon standard workflow is done via the dashboard deploy or `terminus env:deploy`. As a workaround for hotfixes:
