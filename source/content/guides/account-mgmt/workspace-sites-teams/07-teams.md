@@ -85,7 +85,7 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 <Tab title="To a Workspace" id="addwsp" active={true}>
 
 When a team member is added to a Workspace:
-- That Workspace will be accessible from the Workspace selector (gravatar in upper left)
+- That Workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies to all sites in that Workspace
 
 1. Go to the workspace, select the **Team** tab, and click **Add User**.
@@ -100,7 +100,7 @@ When a team member is added to a Workspace:
 
 When a team member is added to a site:
 - That site will be available in their Personal Workspace
-- That Workspace containing that site will be accessible from the Workspace selector (gravatar in upper left)
+- That Workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies only to that site - not to any of the other in the same Workspace
 
 1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
