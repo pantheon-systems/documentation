@@ -1,29 +1,33 @@
 ---
-title: The New Pantheon Dashboard
-subtitle: Personal Settings
+title: Personal Settings
 description: Customize and manage your personal settings.
-contenttype: [guide]
-innav: [false]
+contenttype: [doc]
+innav: [true]
 categories: [dashboard]
 cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]
 tags: [dashboard, webops, workflow]
-contributors: [joa-pan]
-reviewed: "2022-07-20"
+contributors: [wordsmither]
+reviewed: "2023-04-19"
 showtoc: true
-permalink: docs/guides/new-dashboard/personal-settings
-editpath: new-dashboard/04-personal-settings.md
 ---
 
-The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **Personal Settings**.
+Personal Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner.
 
-![A screenshot of the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.jpg)
+To update your personal settings click the user gravatar, then click **Personal Settings**.
+
+![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/personal-settings-profile.jpg)
+
 
 ## Profile
 
-Update your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
+The user gravatar is a personalized image you can upload.  If you have not personalized your gravatar, it will appear as it does in the image below. To customize it, click **Change your Gravator**, to the right of the existing gravatar.
+
+![The user gravatar](../images/gravatar-user.png)
+
+You can also add your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
 
 ### Account and Security
 
