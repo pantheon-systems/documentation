@@ -43,6 +43,7 @@ module.exports = {
         prodKey: "lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA",
         devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
         trackPage: false,
+        trackPageOnlyIfReady: true,
       },
     },
     // Each instance of `gatsby-source-filesystem` tells Gatsby to look in a different directory for source files.
