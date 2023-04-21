@@ -69,7 +69,7 @@ After you upgrade to Drupal you may consider upgrading the authoring experience 
  - Easier build process for landing pages
  - Scalable performance
 
-You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal : An Opportunity](https://pantheon.io/blog/gutenberg-drupal).
+You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal : An Opportunity](https://pantheon.io/blog/gutenberg-drupal-9).
 
 You can also read more about the installation process on [Drupal.org](https://www.drupal.org/docs/contributed-modules/gutenberg/installation-and-upgrades).
 
