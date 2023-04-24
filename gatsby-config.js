@@ -44,6 +44,7 @@ module.exports = {
         devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
         trackPage: false,
         trackPageOnlyIfReady: true,
+        customSnippet: '!function(){var analytics=window.analytics||[];...;analytics.load("${writeKey}");analytics.ready(function() {window.dataLayer.push({"event": "segment_analytics_loaded"});});analytics.page();}}();',
       },
     },
     // Each instance of `gatsby-source-filesystem` tells Gatsby to look in a different directory for source files.
