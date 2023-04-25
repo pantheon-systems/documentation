@@ -241,7 +241,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		] );
 		```
 
-	You can put this directly under the `WP_DEBUG` rules so it looks like this:
+You can put this directly under the `WP_DEBUG` rules so it looks like this:
 
 		```php
 		/**
