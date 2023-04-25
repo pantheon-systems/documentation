@@ -355,6 +355,7 @@ For Composer-managed WordPress multisites using the [WordPress (Composer Managed
 - Subsites do not get their own configuration or graphs.
 - If installed as a normal plugin on a WordPress multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
 - You will need to manually click the "Enable Cache" button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro or use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
+- As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications and updates need to be handled manually.
 
 	<Alert title="Note" type="info">
 
