@@ -15,7 +15,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2023-03-27"
+reviewed: "2023-04-25"
 ---
 
 <Alert title="Early Access Software" type="info">
@@ -33,18 +33,6 @@ Before you can install and activate Object Cache Pro, verify that you have:
 	- You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus.
 
 - You have received an email in response to [signing up for the Early Access program](https://forms.gle/3EpZcELcYqB2VRKC8). The email should contain a download link and a license token. Throughout this process the license token will be displayed as `<LICENSE-TOKEN>`.
-
-### WordPress Multisite Considerations
-
-- Object Cache Pro applies to all subsites when activated.
-- Subsites do not get their own configuration or graphs.
-- The Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
-
-	<Alert title="Note" type="info">
-
-	You can use Object Cache Pro's documentation to [hide the dashboard widget](https://objectcache.pro/docs/customizations#dashboard-widget).
-
-	</Alert>
 
 ### Activate Redis on the Dashboard
 
@@ -253,7 +241,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		] );
 		```
 
-		You can put this directly under the `WP_DEBUG` rules so it looks like this:
+	You can put this directly under the `WP_DEBUG` rules so it looks like this:
 
 		```php
 		/**
@@ -327,3 +315,54 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
+
+### Installing Object Cache Pro on WordPress Multisite
+
+When using WordPress Multisite, the recommended installation is to install Object Cache Pro as an `mu-plugin`. This allows Object Cache Pro to handle each individual site separately, while also allowing Super Admins to flush the network cache.
+
+#### Traditional WordPress Multisite
+For normal WordPress installations, you will need to do the following:
+
+1. Move the `object-cache-pro` plugin directory to your `wp-content/mu-plugins/` folder.
+1. Add a line in `wp-content/mu-plugins/loader.php` to point to `object-cache-pro/object-cache-pro.php` under the `pantheon-mu-plugin/pantheon.php` line in the `$pantheon_mu_plugins` array. The result should look like this:
+
+	```php
+	// Add mu-plugins here.
+	$pantheon_mu_plugins = [
+		'pantheon-mu-plugin/pantheon.php',
+		'object-cache-pro/object-cache-pro.php',
+	];
+	```
+#### Composer-Managed WordPress Multisite
+For Composer-managed WordPress multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed), the only change is to add a line to your `composer.json` file.
+
+1. In the `"extra"` section of your `composer.json`, add `"rhubarbgroup/object-cache-pro"` to the installer path for `"web/app/mu-plugins/{$name}"`. Your final `"installer-paths"` might look like this:
+
+	```json
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "rhubarbgroup/object-cache-pro"
+      ],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+	```
+
+#### Additional Considerations
+- When installed as a `mu-plugin`, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
+- Flushing the network cache from the network admin will flush all caches across the network.
+- Subsites do not get their own configuration or graphs.
+- If installed as a normal plugin on a WordPress multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
+- You will need to manually click the "Enable Cache" button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro or use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
+
+	<Alert title="Note" type="info">
+
+	You can use Object Cache Pro's documentation to [hide the dashboard widget](https://objectcache.pro/docs/customizations#dashboard-widget).
+
+	</Alert>
+
+#### More Resources About `mu-plugin`s
+
+* [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin)
+* [Must Use Plugins](https://wordpress.org/documentation/article/must-use-plugins/)
