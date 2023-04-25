@@ -20,7 +20,7 @@ const unusedImages = () => {
     const body = {
       query: `
         query {
-          allMdx(filter: {rawBody: {regex: "/(jpg|png)/"}}) {
+          allMdx(filter: {rawBody: {regex: "/(jpg|png|svg)/"}}) {
             edges {
               node {
                 fields {
@@ -33,7 +33,10 @@ const unusedImages = () => {
               }
             }
           }
-          allFile(filter: {extension: {regex: "/(jpg|png)/"}, relativeDirectory: {regex: "/(^(?!assets).).+/"}}) {
+          allFile(filter: {extension: {regex: "/(jpg|png|svg)/"}}
+          sort: {order: ASC, fields: relativePath}
+          )
+          {
             edges {
               node {
                 relativePath
