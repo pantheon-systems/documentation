@@ -316,11 +316,11 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
-### Installing Object Cache Pro on WordPress Multisite
+## Installing Object Cache Pro on WordPress Multisite
 
 When using WordPress Multisite, the recommended installation is to install Object Cache Pro as an `mu-plugin`. This allows Object Cache Pro to handle each individual site separately, while also allowing Super Admins to flush the network cache.
 
-#### Traditional WordPress Multisite
+### Traditional WordPress Multisite
 For normal WordPress installations, you will need to do the following:
 
 1. Move the `object-cache-pro` plugin directory to your `wp-content/mu-plugins/` folder.
@@ -333,7 +333,7 @@ For normal WordPress installations, you will need to do the following:
 		'object-cache-pro/object-cache-pro.php',
 	];
 	```
-#### Composer-Managed WordPress Multisite
+### Composer-Managed WordPress Multisite
 For Composer-managed WordPress multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed), the only change is to add a line to your `composer.json` file.
 
 1. In the `"extra"` section of your `composer.json`, add `"rhubarbgroup/object-cache-pro"` to the installer path for `"web/app/mu-plugins/{$name}"`. Your final `"installer-paths"` might look like this:
@@ -349,7 +349,7 @@ For Composer-managed WordPress multisites using the [WordPress (Composer Managed
     },
 	```
 
-#### Additional Considerations
+### Additional Considerations
 - When installed as a `mu-plugin`, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
 - Flushing the network cache from the network admin will flush all caches across the network.
 - Subsites do not get their own configuration or graphs.
@@ -363,7 +363,7 @@ For Composer-managed WordPress multisites using the [WordPress (Composer Managed
 
 	</Alert>
 
-#### More Resources About `mu-plugin`s
+### More Resources About `mu-plugin`s
 
 * [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin)
 * [Must Use Plugins](https://wordpress.org/documentation/article/must-use-plugins/)
