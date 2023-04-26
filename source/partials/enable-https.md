@@ -16,4 +16,4 @@ The process to provision certificates kicks off automatically after the domain h
 
 Both the bare domain and the `www` domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
 
-<Partial file="notes/http-success.md" />
+<Partial file="notes/https-success.md" />

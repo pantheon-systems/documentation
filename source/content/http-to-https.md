@@ -26,7 +26,7 @@ Be sure that you have:
 - A [Custom Domain](/guides/domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/guides/domains), with DNS properly configured.
 - HTTPS provisioned, indicated by the following notice:
 
-  <Partial file="notes/http-success.md" />
+  <Partial file="notes/https-success.md" />
 
 ## Test HTTPS Availability and Existing Redirects
 

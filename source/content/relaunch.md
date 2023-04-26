@@ -108,7 +108,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
 
-  <Partial file="notes/http-success.md" />
+  <Partial file="notes/https-success.md" />
 
    This process typically takes about an hour.
 
