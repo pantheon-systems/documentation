@@ -13,7 +13,14 @@ integration: [--]
 
 Manually migrate your site to Pantheon when any of the following apply:
 
-<Partial file="drupal/guide-note.md" />
+<Alert title="Note" type="info" >
+
+If you are using Drupal version 9 or higher, or are moving a Drupal site **and** want to upgrade to the latest version of Drupal, use one of the following guides instead:
+
+- Your site is Composer-managed: [Migrate a Composer Managed Drupal Site from Another Platform](/guides/drupal-unhosted-composer) or  [Import Drush Site Archives with Terminus](/guides/drush/drush-import)
+- Your site is not Composer-managed: [Migrate a Drupal Site from Another Platform](/guides/drupal-unhosted)
+
+</Alert>
 
 - **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 - **Large WordPress Site**: WordPress site exceeds 500MB.
@@ -106,8 +113,12 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `wp-content/uploads` (WordPress) / `sites/default/files` (Drupal) directory, or any other static assets you do not want tracked by version control.
 
-  <Partial file="code.md" />
+The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
+ - [Drupal 7](https://github.com/pantheon-systems/drops-7)
+ - [Drupal 8](https://github.com/pantheon-systems/drops-8)
+ - [WordPress](https://github.com/pantheon-systems/wordpress)
+  
   <Alert title="Note" type="info">
 
   If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/) or [Cyberduck](https://cyberduck.io/).

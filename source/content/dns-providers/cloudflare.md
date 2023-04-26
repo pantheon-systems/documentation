@@ -57,10 +57,7 @@ Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a plan
 
   Both the bare domain and the www domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
 
-  ```
-  HTTPS
-  Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
-  ```
+  <Partial file="notes/http-success.md" />
 
 1. Repeat the steps above for all domains (www and non-www).
 

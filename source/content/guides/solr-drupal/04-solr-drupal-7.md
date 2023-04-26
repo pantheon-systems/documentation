@@ -181,7 +181,11 @@ The following are Pantheon-specific variables that you can check for, depending 
 
 Keep in mind that newly indexed items have a 2-minute delay until cron has been run or manually indexed before they become available in Solr search.
 
-<Partial file="solr-commit-changes.md" />
+<Alert title="Note" type="info">
+
+The "Commit changes to Memory" feature of the Apache Solr Search module is not compatible with Solr 3.x versions.
+
+</Alert>
 
 #### apachesolr.module
 

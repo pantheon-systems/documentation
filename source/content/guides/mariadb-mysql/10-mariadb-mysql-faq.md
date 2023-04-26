@@ -71,7 +71,13 @@ For more information on this behavior change, refer to the [MySQL 8.0 Reference 
 
 ### What is the database's maximum connections?
 
-<Partial file="sql/sql-max-connections.md" />
+To find the maximum connections available to the site’s database, connect to the site’s database and run:
+
+```sql{promptUser: sql}
+mysql> SHOW VARIABLES LIKE "max_connections";
+```
+
+There are many other factors that you should consider if you have concerns about maximum database connections. Contact your [CSM](/guides/professional-services#customer-success-management) or [Sales](https://pantheon.io/contact-sales?docs) for more information.
 
 ## More Resources
 

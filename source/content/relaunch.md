@@ -108,13 +108,13 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
 
-  <Partial file="notes/https-success.md" />
+  <Partial file="notes/http-success.md" />
 
    This process typically takes about an hour.
 
 1. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
-  <Partial file="standard-dns-config2.md" />
+  <Partial file="standard-dns-config.md" />
 
 1. Test and confirm that the new site is accessible via the custom domain over HTTPS (e.g., `https://www.example.com/`).
 
