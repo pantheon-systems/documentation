@@ -35,4 +35,4 @@ There are some hosting providers that block complete site exports from cPanel, m
 
 1. Test the site.
 
-1. Now that you have the site exported and running locally, you can [migrate to Pantheon](/guides/guided/.
+1. Now that you have the site exported and running locally, you can [migrate to Pantheon](/guides/guided/).
