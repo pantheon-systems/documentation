@@ -45,7 +45,7 @@ Because Supporting Organizations have full access to a site, only the site owner
 
 1. Click <span class="glyphicons glyphicons-plus-sign"></span> **Add Supporting Organization** at the bottom of the Manage Team window.
 
-  ![Add a supporting organization button](../images/dashboard/multi_org1.png)
+  ![Add a supporting organization button](../../../images/dashboard/multi_org1.png)
 
 1. Enter the agency's full name > click **Search**. 
 
@@ -53,7 +53,7 @@ Because Supporting Organizations have full access to a site, only the site owner
 
 1. Click the **Add** button after you've located and confirmed the correct agency.
 
-  ![Confirm supporting organization](../images/dashboard/multi_org2.png)
+  ![Confirm supporting organization](../../../images/dashboard/multi_org2.png)
 
   The agency will receive an email notification.
 
