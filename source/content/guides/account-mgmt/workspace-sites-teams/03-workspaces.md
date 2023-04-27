@@ -28,7 +28,7 @@ The Personal Workspace displays tools for the sites you own, or are a team membe
 - Every Pantheon user is assigned one Personal Workspace. 
 - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
 - You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
-- WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
+- WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
 
 </Tab>
 
@@ -36,14 +36,14 @@ The Personal Workspace displays tools for the sites you own, or are a team membe
 
 Professional workspaces bring together users and sites to allow administrators to effectively manage a large number of sites. Keep in mind, you can be a member of multiple professional workspaces at the same time.
 
-You can create a Professional Workspace as the home for an organization’s sites and the teams working on them. 
+You can create a Professional Workspace as the home for an organization’s sites and the teams working on them.
 
-- Creating a Professional Workspace is free. 
+- Creating a Professional Workspace is free.
 - Access to the collaboration features below are available to sites owned by Gold Workspaces or above:
 	- [Multidev](/guides/multidev)
 	- [Custom Upstreams](/guides/custom-upstream)
 	- [Autopilot](/guides/autopilot)
-- You can create any number of Professional Workspaces. 
+- You can create any number of Professional Workspaces.
 	- You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
 
 </Tab>
@@ -58,13 +58,13 @@ With a Professional Workspace, you can upgrade the associated [Account Plan](htt
 
 <Tab title="Silver Account Plan" id="silver">
 
-New Professional Workspaces start with a Silver Account Plan by default. The Silver Account Plan is free and offers basic WebOps tools and features. 
+New Professional Workspaces start with a Silver Account Plan by default. The Silver Account Plan is free and offers basic WebOps tools and features.
 
 </Tab>
 
 <Tab title="Gold Account Plan" id="gold" active={true}>
 
-Professional Workspaces with a Gold Account Plan provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing. 
+Professional Workspaces with a Gold Account Plan provide additional collaboration tools such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) with automated visual regression testing.
 
 **To upgrade your Professional Workspace Account Plan to Gold**:
 
@@ -114,7 +114,7 @@ Now that you have a Professional Workspace with a Gold Account Plan, you can [ad
 
 <Tab title="Partner Program" id="partner-program">
 
-You will only be assigned a [Partner Program](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency. 
+You will only be assigned a [Partner Program](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency.
 
 As a Pantheon Partner, you receive access to:
 

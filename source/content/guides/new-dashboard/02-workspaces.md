@@ -25,9 +25,9 @@ editpath: new-dashboard/02-workspaces.md
 
 ### Create a New Workspace
 
-#### Organization Workspace
+#### Professional Workspace
 
-To create a new Workspace from the Dashboard, click the Organization’s name and icon in the upper left of the Global Primary Navigation, and select **Create New Workspace** from the drop-down menu. 
+To create a new Workspace from the Dashboard, click the Organization’s name and icon in the upper left of the Global Primary Navigation, and select **Create New Workspace** from the drop-down menu.
 
 ![A screenshot of creating a Workspace](../../../images/dashboard/new-dashboard/create-workspace.png)
 
@@ -65,7 +65,7 @@ Once it's enabled, use it to visually compare changes to the site. Visit the [Au
 
 Create a new Workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
-1. To add a custom Upstream in the Organization Workspace, select the **Upstream** tab.
+1. To add a custom Upstream in the Professional Workspace, select the **Upstream** tab.
 
 1. On the Custom Upstreams page click **Get Started**. The Create New Custom Upstream page is displayed.
 

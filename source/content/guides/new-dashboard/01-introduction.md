@@ -22,7 +22,7 @@ The new Pantheon Dashboard is WebOps in a single, fast Workspace. Easily visuali
 
 Want to try the New Dashboard?
 
-Click **Try the New Dashboard** in the User or Organization Dashboard to access the new Dashboard. 
+Click **Try the New Dashboard** in the User or Organization Dashboard to access the new Dashboard.
 
 ![A screenshot of the Switch to New Dashboard button](../../../images/dashboard/new-dashboard/try-new-dashboard.png)
 
@@ -50,7 +50,7 @@ To stick with the old Dashboard, click on the banner at the top of the page to o
 
 ## Sites
 
-Select the **Sites** tab in the left-navigation menu to search for a Site, migrate an existing Site, or create a new Site. 
+Select the **Sites** tab in the left-navigation menu to search for a Site, migrate an existing Site, or create a new Site.
 
 ### Create a New Site
 
@@ -81,20 +81,20 @@ On the homepage, you have access to an overview of the Workspace that provides t
 * Workspace type
 * Sites
 * Account tier
-* Sandbox sites used 
+* Sandbox sites used
 
 ![A screenshot of the New Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
 
 </Tab>
 
-<Tab title="Organization Workspace" id="organization-workspace">
+<Tab title="Professional Workspace" id="organization-workspace">
 
 * Workspace type
 * Team members
 * Sites
 * Account tier
 
-![A screenshot of the new Dashboard homepage with Organization Overview](../../../images/dashboard/new-dashboard/organization-overview.png)
+![A screenshot of the new Dashboard homepage with Professional Overview](../../../images/dashboard/new-dashboard/organization-overview.png)
 
 </Tab>
 </TabList>
