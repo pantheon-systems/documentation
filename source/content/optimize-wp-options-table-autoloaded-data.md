@@ -92,7 +92,6 @@ Run the code below to clean up your transient data:
       SELECT *
       FROM `wp_options`
       WHERE `autoload` = 'yes'
-      AND `option_name` LIKE '%transient%'
       AND `option_name` LIKE '%transient%';
       /** Remove all transient data. **/
       DELETE
