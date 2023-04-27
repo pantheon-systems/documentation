@@ -21,7 +21,7 @@ The Organization Dashboard is where Organization Administrators and Team Members
 
 <Alert title="For Info on the New Dashboard" type="info">
 
-This document refers to the Legacy Dashboard. Visit the [New Pantheon Dashboard Workspaces guide](/guides/new-dashboard/workspaces) for information on teams and organization workspaces in the New Pantheon Dashboard.
+This document refers to the Legacy Dashboard. Visit the [New Pantheon Dashboard Workspaces guide](/guides/new-dashboard/workspaces) for information on teams and professional workspaces in the New Pantheon Dashboard.
 
 </Alert>
 

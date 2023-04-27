@@ -33,19 +33,19 @@ You can manage all the invoices in your workspace. Click **Invoices** to view th
 
 ### Payment Methods
 
-You can use multiple payment methods in the workspace. To add a payment method, click **+ Add Payment Method**. 
+You can use multiple payment methods in the workspace. To add a payment method, click **+ Add Payment Method**.
 
 ![A screenshot of the adding card information](../../../images/dashboard/new-dashboard/add-payment.png)
 
-## Organization Workspace
+## Professional Workspace
 
 Workspace settings are visible to Admins only.
 
-![A screenshot of the organization workspace settings](../../../images/dashboard/new-dashboard/workspace-settings.png)
+![A screenshot of the professional workspace settings](../../../images/dashboard/new-dashboard/workspace-settings.png)
 
 ### Appearance
 
-You can change the name and icon of the organization worskpace.
+You can change the name and icon of the organization workspace.
 
 ### Site Billing Terms
 
@@ -53,6 +53,6 @@ You can add optional payment and terms of service information for Sites built in
 
 Users can purchase a site plan on a Sandbox site. Enter a site address in the **Customized Billing Instruction URL** field to direct users where they can view workspace billing instructions.
 
-If a user attempts to update a site plan for any site that is not in a Sandbox, the user can view you administrators that can assist them. 
+If a user attempts to update a site plan for any site that is not in a Sandbox, the user can view you administrators that can assist them.
 
 You can enter terms and conditions that are displayed to Workspace members.
