@@ -22,21 +22,19 @@ This section provides information on how to use the Next.js + WordPress starter 
 ## Before You Begin
 
 The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
-[nodejs v16 with npm v8](https://nodejs.org/en/download/).
+[nodejs v16 with npm v8](https://nodejs.org/en/download/). Make sure you meet the following prerequisites before you continue.
+
+- You are using a Git repository and the repository is already connected.
+- You are using WordPress as your CMS.
+- You have installed and configured your WordPress site using the starter kit configuration.
 
 ## Create Your Project on Pantheon
 
-Make sure you meet the following prerequisites before you continue.
-
-* You are using a Git repository and the repository is already connected.
-* You are using WordPress as your CMS.
-* You have installed and configured your WordPress site using the starter kit configuration.
-
-1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
+1. Log in to your **Site Dashboard** and then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
-1. Click the **WordPress and Next.js** option, select a repo listed under **Choose your Git provider**, and then click **Continue**.
+1. Click the **WordPress and Next.js** option, select a repo under **Choose your Git provider**, and then click **Continue**.
 
     ![select a starter](../../../../images/decoupled-select-starter.png)
 
@@ -46,7 +44,12 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Select the site environment from which to source the content.
 
-1. Optional. Click **Advanced Settings** to set your root and output directories, build command, environment variables, and deployment path.
+1. Optional. Click **Advanced Settings** to set your:
+
+    - Root and output directories
+    - Build command
+    - Environment variables
+    - Deployment path
 
 1. Click **Continue**. You are directed to a new page with the site name, deployment, and build information and status.
 

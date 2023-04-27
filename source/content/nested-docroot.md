@@ -13,17 +13,16 @@ product: [--]
 integration: [--]
 ---
 
-The [<dfn id="droot">docroot</dfn>](/code#pantheon-git-repository) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (for example `code/web`).
+The [docroot](/nested-docroot#enable-nested-docroot) is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#nested-docroot) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (for example `code/web`).
 
 <Alert title="Warning" type="danger">
 
-  
+
 Using Pantheon's one-click Dashboard updates feature depends on a correctly set the `web_docroot` property.
 
 - Composer-managed sites, including [Integrated Composer](/guides/integrated-composer) sites, require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that use a [Custom Upstream](/guides/custom-upstream) require you to set the `web_docroot` property in the `pantheon.upstream.yml` file.
 - Sites that do not use Composer and do not use a Custom Upstream should not set the `web_docroot` property, if one-click Dashboard updates are desired.
-
 
 </Alert>
 

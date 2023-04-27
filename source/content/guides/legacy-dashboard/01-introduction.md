@@ -19,4 +19,8 @@ integration: [--]
 
 Pantheon's Legacy Dashboard gives you access to billing, metrics, managing sites and teams, how to creates sites, open support tickets, and more. This guide will walk you through how to utilize the tools available to make the most of your WebOps experience.
 
-<Partial file="new-dashboard-info.md" />
+<Alert title="For Info on the New Dashboard" type="info">
+
+This document refers to the Legacy Dashboard. Visit the [New Pantheon Dashboard guide](/guides/new-dashboard/workspaces) for information on teams, workspaces, and more.
+
+</Alert>

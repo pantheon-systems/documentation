@@ -19,7 +19,7 @@ integration: [--]
 
 Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/decoupled/overview/#what-is-a-decoupled-site) to separate your frontend and backend into distinct entities.
 
-You can use a frontend starter kit to streamline the creation of your Front-End site on Pantheon. Available Drupal frontend starters are:
+You can use a frontend starter kit to streamline the creation of your Front-End Site on Pantheon. Available Drupal frontend starters are:
 
 - Drupal + Next.js
 
@@ -31,7 +31,7 @@ Check out the [Front-End Sites landing page](/guides/decoupled/) to access all d
 
 ## Why Use the Next.js Drupal Starter?
 
-The `next-drupal-starter` is designed as a starting point to for a Next.js site that consumes data from a Drupal backend configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
+The `next-drupal-starter` is designed as a starting point for a Next.js site that consumes data from a Drupal backend configured with the [`pantheon_decoupled` module](https://www.drupal.org/project/pantheon_decoupled) installed.
 
 The starter has a dependency on the `@pantheon-systems/drupal-kit`. The starter kit includes helpers that maximize available Drupal backend features.
 

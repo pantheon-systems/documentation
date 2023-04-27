@@ -17,5 +17,13 @@ integration: [--]
 ---
 
 <Partial file="drupal/migrate-add-files-part1.md" />
-   <Partial file="drupal/migrate-add-files-part2-not-nested.md" />
-   <Partial file="drupal/migrate-add-files-part3.md" />
+
+1. Navigate to your Drupal site's root directory to run this command:
+
+   ```bash{promptUser:user}
+   cd sites/default/files
+   tar -czf ~/files.tar.gz .
+   ```
+   Now you have created an archive file in your user's home directory.
+   
+<Partial file="drupal/migrate-add-files-part3.md" />

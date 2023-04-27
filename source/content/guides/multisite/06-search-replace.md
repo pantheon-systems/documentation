@@ -28,7 +28,7 @@ Search and replace runs on the platform as part of creating an environment, depl
 
 ## Requirements
 
-You must have the following to enable search and replace.
+You must have the following to enable search and replace:
 
 - A [WordPress Multisite](/guides/multisite)
 
@@ -50,7 +50,50 @@ Note, if `pantheon.yml` is different between environments, the `search_replace` 
 
 For subdomain Multisites, environments to be replaced are defined and paired in the `sites.yml` file. Search and replace will run for each domain listed in the source environment that has a matching key in the target environment. If search and replace is enabled for an environment, but `sites.yml` does not exist, nothing will be updated. If `sites.yml` is different between environments, the `domain_maps` in the target environment’s `sites.yml` will be used to determine what to replace.
 
-1. Define and pair the environments to be replaced. Refer to [this gist](https://gist.github.com/scottbuscemi/b051ad6510ef8494aff80d0f43afeeb2) for an example of how `sites.yml` might look.
+1. Create a `sites.yml` file inside the `private/` folder. Define and pair the environments to be replaced like the sample code below. 
+
+    ```yaml:title=private/sites.yml
+    ---
+    api_version: 1 # Currently only one api version.
+    # file should be placed in the /private folder
+    # "domain_maps" is a collection of blog URLs for each environment used to
+    # facilitate search-replace of a WordPress Multisite (WPMS) across pantheon
+    # environments. Each key of "domain_maps" must be a valid environment name.
+    domain_maps:
+      # environment: <collection of domains to be used on this environment>
+      # i.e. dev, test, live, feat-branch, &c.
+      dev:
+        # each environment collection maps the blog ID to its URL. A url must be
+        # set in both the target and source environments for search-replace to be
+        # run.
+        # i.e. 2: blog1-mysite.com
+        1: dev-example.pantheonsite.io
+        2: dev.about.example.com
+        3: dev.employee.example.com
+        4: dev.staff-portal.example.com
+        5: dev.customers.example.com
+        6: dev.hr-department.example.com
+      test:
+        1: test-example.pantheonsite.io
+        2: test.about.example.com
+        6: test.hr-department.example.com
+      live:
+        1: www.example.com
+        2: about.example.com
+        3: employee.example.com
+        4: staff-portal.example.com
+        5: dcustomers.example.com
+        6: hr-department.example.com
+      multidev1:
+        1: multidev1-example.pantheonsite.io
+        2: multidev1.about.example.com
+        3: multidev1.employee.example.com
+
+     # Anything else in the file will be ignored, but not rejected.
+
+    ```
+
+1. Validate the `sites.yml` file (recommended) with Pantheon's `sites-yml-validator` utility available [on Github](https://github.com/pantheon-systems/sites-yml-validator). The project's README includes details on how to install and use the utility.
 
 1. Commit the  `sites.yml` file in the `private/sites.yml` in the site’s Git repository.
 

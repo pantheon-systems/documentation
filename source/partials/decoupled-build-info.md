@@ -34,7 +34,7 @@ Build details include:
 
 ### View Build Details
 
-1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
+1. Log in to your **Site Dashboard** and select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and select the site you want to view the build details for.
 
@@ -44,7 +44,7 @@ Build details include:
 
 You can save time by quickly triggering a build from your Overview page.
 
-1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
+1. Log in to your Front-End Site workspace and select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and select the site you want to trigger a build for.
 

@@ -17,6 +17,8 @@ Custom Upstreams act as a scaffold for new sites, allowing developers and site o
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
+## Create the Dev Environment
+
 To create a site using a Custom Upstream:
 
 1. Go to the Professional Workspace that contains the Custom Upstream, and select the yellow <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
@@ -38,25 +40,35 @@ To create a site using a Custom Upstream:
 
    ![Site creation completed](../images/create-site-done.png)
 
-## Install the CMS for the Dev Environment
+You've now created the core portion of your Dev environment; now you have to install the CMS.
 
 <Partial file="cms-dev.md" />
+
+You have successfully finished adding a site in its Dev environment.  Click **Visit Dev Site** to view your site.
 
 ## Initialize the Test environment
 
 <Partial file="test-initialize.md" />
 
-## Install the CMS for the Test environment
+## Create the Test environment
 
-<Partial file="cms-test.md" />
+<Partial file="test-initialize.md" />
 
-## Initialize the Live environment
+You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
+
+## Create the Live environment
+
+After you [purchase a plan](/guides/getstarted/purchase), you can deploy your site live.  But first, you have to create the Live environment.
+
+<Alert title="Warning" type="danger" >
+
+When you complete this step, your site will be live for anyone to see, at the Pantheon URL. For detailed information about launching your site, refer to our [Launch Essentials](/guides/launch/) guide.
+
+</Alert>
 
 <Partial file="live-initialize.md" />
 
-## Install the CMS for the Live environment
-
-<Partial file="cms-live.md" />
+You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
 

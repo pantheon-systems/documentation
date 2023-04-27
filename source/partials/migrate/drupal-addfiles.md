@@ -8,12 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-Now that you've added your database, you need to add your files.
-
-**Files** refer to anything stored within `sites/default/files`. This typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. Files are not under Git version control and are stored separately from the site's code.
-
-You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
-
+<Partial file="drupal/migrate-add-files-part1.md" />
 1. Export a `tar.gz` or `.zip` file of your files directory:
 
   Navigate to your Drupal site's root directory to run this command, which will create an archive file in your user's home directory:

@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: View and Trigger Builds
 description: Learn how to view and trigger builds.
 tags: [webops, workflow, decoupled]

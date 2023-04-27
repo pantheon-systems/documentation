@@ -79,7 +79,21 @@ If your migration needs include any of the following, **do not use this process*
 
 ### Perform the Migration
 
-<Partial file="migrate/manual-all.md" />
+<TabList>
+
+<Tab title="WordPress" id="tab-1-id" active={true}>
+
+<Partial file="migrate/migrate-wp.md" />
+
+</Tab>
+
+<Tab title="Drupal" id="tab-2-id">
+
+<Partial file="migrate/migrate-drupal.md" />
+
+</Tab>
+
+</TabList>
 
 You have successfully migrated a site to its Dev environment!
 

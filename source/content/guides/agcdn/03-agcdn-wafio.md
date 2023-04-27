@@ -29,15 +29,15 @@ Support for XSS vulnerabilities.
 
 Image Optimization (IO) renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
 
-## Advanced Bot Detection and Mitigation 
+## Advanced Bot Detection and Mitigation
 
 The following third-party plugins are available:
-  
+
 - [Shape Log Analysis](https://devcentral.f5.com/s/articles/How-to-Setup-Shape-Log-Analysis-in-Fastly?page=1)
 
 - [DataDome](https://docs.datadome.co/docs/module-fastly)
 
-- [PerimeterX](https://www.fastly.com/products/cloud-security/bot-detection)
+- [PerimeterX](https://www.perimeterx.com/)
 
 The customer is responsible for purchasing, maintaining payment for, and supporting these plugins.
 

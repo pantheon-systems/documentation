@@ -213,7 +213,7 @@ Any additional Composer configuration that you have added to your site should be
 
 ## Upload Your Files
 
-<Partial file="migrate-add-files-only-drupal.md" />
+<Partial file="migrate/drupal-addfiles.md" />
 
 ## Restore tokens.json file
 
