@@ -37,7 +37,17 @@ Add Drupal core dependency instructions to `drupal/core-recommended`, to keep th
 
 ## Will This Guide Work for Your Site?
 
-<Partial file="drupal/upgrade-site-requirements.md" />
+Confirm that your site meets the following requirements before you continue:
+
+- The site cannot be set to use an empty upstream.
+
+- The site does not use a nested docroot.
+
+   - The process outlined in this guide will not work if the site repository has a `/web` folder at its root.
+
+   - Refer to the documentation on [Serving Sites from the Web Subdirectory](/nested-docroot) for information about nested docroots.
+
+- The site does not use another package and library manager like [Ludwig](https://www.drupal.org/project/ludwig).
 
 ## Before You Begin
 

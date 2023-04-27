@@ -31,7 +31,14 @@ Pantheon tracks every single request to the platform. In contrast, analytics too
 
 This table shows some of the reasons why traffic in the Dashboard may differ from your analytics suite:
 
-<Partial file="traffic-analytics-table.md" />
+|                                                 | Counts as Traffic | Counts for Analytics |
+|:------------------------------------------------|:-----------------:|:--------------------:|
+| **API Request**                                 |        Yes        |          No          |
+| **Automated traffic from bots or load testing** |        Yes        |       Sometimes      |
+| **Content pre-fetching**                        |        Yes        |       Sometimes      |
+| **Pages without a tracking asset**              |        Yes        |          No          |
+| **User closes browser before tracking loads**   |        Yes        |          No          |
+| **User with adblocker enabled**                 |        Yes        |       Sometimes      |
 
 Analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only."
 

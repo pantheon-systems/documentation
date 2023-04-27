@@ -53,17 +53,11 @@ Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a plan
 
   The process to provision certificates will begin after domain ownership is verified, and you will receive the following notice:
 
-  ```
-  HTTPS
-  Your DNS configuration is correct, and certificate provisioning is queued to start for this domain.
-  ```
+  <Partial file="notes/https-info.md" />
 
   Both the bare domain and the www domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
 
-  ```
-  HTTPS
-  Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
-  ```
+  <Partial file="notes/https-success.md" />
 
 1. Repeat the steps above for all domains (www and non-www).
 
