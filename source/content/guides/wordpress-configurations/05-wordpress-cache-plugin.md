@@ -19,7 +19,7 @@ Pantheon maintains an [optimized version of WordPress](https://github.com/panthe
 
 ## Clear Site Cache
 
-You can clear the site cache manually or automatically. 
+You can clear the site cache manually or automatically.
 
 - To clear the cache manually, click the **Clear Cache** button.
 
@@ -29,7 +29,7 @@ You can clear the site cache manually or automatically.
 
 ### Increase the Default Time to Live Value
 
-You can increase he default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
+You can increase the default time to live value to improve the chances that a visitor will request a cached page. Cached page requests reduce page load times.
 
 1. Log in to your WordPress site as an administrator.
 
