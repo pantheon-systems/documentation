@@ -19,36 +19,27 @@ integration: [--]
 
 Workspaces are a home base for your WebOps. There are two types of workspaces:
 
-<TabList>
+- The **Personal Workspace** displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one Personal Workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
+  - Every Pantheon user is assigned one Personal Workspace. 
+  - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
+  - You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
+  - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
+- **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.  You can create a Professional Workspace as the home for an organization’s sites and the teams working on them.
+  - Access to the collaboration features below are available to sites owned by Gold Workspaces or above:
+  	- [Multidev](/guides/multidev)
+  	- [Custom Upstreams](/guides/custom-upstream)
+  	- [Autopilot](/guides/autopilot)
+  - You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
 
-<Tab title="Personal Workspace" id="personal-workspace" active={true}>
+## Account Plans
 
-The Personal Workspace displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one Personal Workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
+When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).  
 
-- Every Pantheon user is assigned one Personal Workspace. 
-- All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
-- You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
-- WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
+<Alert title="Important" type="danger" >
 
-</Tab>
+Every Workspace that is upgraded to Gold or higher is billed as another plan/subscription.
 
-<Tab title="Professional Workspace" id="professional-workspace">
-
-Professional workspaces bring together users and sites to allow administrators to effectively manage a large number of sites. Keep in mind, you can be a member of multiple professional workspaces at the same time.
-
-You can create a Professional Workspace as the home for an organization’s sites and the teams working on them.
-
-- Creating a Professional Workspace is free.
-- Access to the collaboration features below are available to sites owned by Gold Workspaces or above:
-	- [Multidev](/guides/multidev)
-	- [Custom Upstreams](/guides/custom-upstream)
-	- [Autopilot](/guides/autopilot)
-- You can create any number of Professional Workspaces.
-	- You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
-
-</Tab>
-
-</TabList>
+</Alert>
 
 ## Workspace Tools
 
@@ -68,7 +59,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Custom Upstreams*:** Create a new workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
-- **Settings:** Modify the workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
+- **Settings:** Modify the workspace name, logo, billing information, and if your Workspace is configured for it, billing terms and instructions for your team.
 
 \* Not available in Personal Workspaces.
 
@@ -84,7 +75,15 @@ If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plan
 
 ## Create a Professional Workspace
 
-You can create as many workspaces as necessary. The following process will create a Professional Workspace with a free Silver Account Plan.  To upgrade a Workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
+You can create as many workspaces as necessary. 
+
+<Alert title="Warning" type="danger" >
+
+If you are a contract customer, your contract is associated to one Professional Workspace, which is created for you when you sign up. You may still create additional Professional Workspaces, but it may not contain any sites.  
+
+</Alert>
+
+The following process will create a Professional Workspace with a free Silver Account Plan.  To upgrade a Workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
 
 1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) in the upper left corner, then select **Create New Workspace**.
 
@@ -114,51 +113,6 @@ You can also use [Terminus](/terminus) to find the UUID of your workspaces:
 ```bash{promptUser: user}
 terminus org:list
 ```
-
-
-## Platform Email Notifications
-
-### Platform Email Notifications
-
-Pantheon platform email notifications are listed below. These notifications are non-configurable, and are generated by automated Pantheon monitoring or by user actions within the dashboard.
-
-The emails listed below are received by all users, regardless of their assigned role. Refer to [Roles and Permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions) for more information.
-
-- **New membership:** a site admin-generated invitation to a user. The invited user is not required to have an account yet.
-
-- **Password reset:** a user-generated email sent after submitting a request on the login form.
-
-- **Payment invite:** a site admin-generated invitation to a user to pay for and take over ownership of a site. The invited user is not required to have an account yet.
-
-- **Site deleted:** a site admin-generated notification sent to all site team members when a site is deleted.
-
-- **Workspace invite:** a user-generated invitation to join a workspace. The invited user is not required to have an account yet.
-
-The emails listed below are only received by users who have been assigned to the site admin role.
-
-- **Site plan level change:** a Pantheon-generated notification sent to all site admins and workspace admins when a site's plan is upgraded or downgraded.
-
-- **Site added as supporting organization:** a Pantheon-generated notification sent to all workspace admins when a site is added to an workspace as a supporting organization.
-
-### Autopilot Email Notifications
-
-You can configure email notifications for Autopilot alerts and activity digests. 
-
-1. Navigate to your **Personal Workspace** settings.
-
-1. Click **Notifications** and select which emails you want to receive in the **Autopilot Email Notifications** section:
-
-   - **Weekly Activity Digest**: A weekly summary of Autopilot activity across all sites within the workspaces that have Autopilot enabled. Digests are sent each Monday with information about the previous seven days.
-
-   - **Failed Visual Regression Tests**: Real-time email notifications for failed visual regression tests for a given site.
-
-## Switch Between Workspaces
-
-If you're a member of multiple workspaces, you can stay logged in, and switch between workspaces to work on different projects.
-
-To switch between workspaces, click the icon in the upper left to switch between workspaces:
-
-![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
 
 ## Customize a Workspace
 
