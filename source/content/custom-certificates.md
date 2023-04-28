@@ -38,7 +38,7 @@ Allow two business days for your Account Team to load the certificate.
 - Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
 
   <Alert title="Streamlined AGCDN"  type="info" >
-    This procedure also applies for customers who use Streamlined AGCDN. Certificate gets uploaded by Pantheon and the related domains are marked or show an indicator the same way regular domains with custom certificates.
+    This procedure also applies for customers who use Streamlined AGCDN. Pantheon staff uploads your certificate and the related domains are marked or show an indicator the same way regular domains with custom certificates do.
   </Alert>
 
 </Tab>
@@ -46,7 +46,7 @@ Allow two business days for your Account Team to load the certificate.
 
 <Tab title="Legacy AGCDN" id="newagcdn">
 
-You can use the self service tool to add your custom certificate if you have streamlined AGCDN.
+You can use the self service tool to add your custom certificate if you have a legacy AGCDN setup.
 
 ## Before You Begin
 
@@ -72,7 +72,7 @@ Note: The platform currently only accepts 2048-bit RSA keys. AGCDN custom certif
 1. Click **Upload New Cert**, paste your certificate and intermediate certificate into the appropriate fields, and then click **Upload**. Both certificates must be in `.PEM` format. You can click **Refresh Cert List** to see the newly added certificate.
 
 
-As an alternative, you can also submit the certificate bundle to Pantheon Support to upload, but allow two business days for your Account Team to load the certificate.
+As an alternative, you can also submit the certificate bundle to Pantheon Support to upload. You must allow two business days for your Account Team to load the certificate.
 
 </Tab>
 
