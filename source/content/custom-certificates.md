@@ -37,20 +37,27 @@ Allow two business days for your Account Team to load the certificate.
 
 - Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
 
+  <Alert title="Streamliend AGCDN"  type="info" >
+    This procedure also applies for customers who use Streamlined AGCDN.
+  </Alert>
+
 </Tab>
 
 
-<Tab title="AGCDN" id="newagcdn">
+<Tab title="Legacy AGCDN" id="newagcdn">
 
 You can use the self service tool to add your custom certificate if you have streamlined AGCDN.
 
 ## Before You Begin
 
-Make sure you have a:
+Make sure you have your certificate bundle ready:
 
-- Private Key (optional). A private key is only required if your certificate has a private key associated with it.
 - Main certificate
 - Intermediate certificate
+- Private Key
+
+Note: The platform currently only accepts 2048-bit RSA keys. AGCDN custom certificates (and private keys) must be in `.PEM` format.
+
 
 1. Navigate to your [**Customer Cert Management**](https://certs.ps-pantheon.com/) account and log in.
 
@@ -64,18 +71,8 @@ Make sure you have a:
 
 1. Click **Upload New Cert**, paste your certificate and intermediate certificate into the appropriate fields, and then click **Upload**. Both certificates must be in `.PEM` format. You can click **Refresh Cert List** to see the newly added certificate.
 
-</Tab>
 
-<Tab title="Legacy AGCDN" id="ccagcdn">
-
-You must provide the certificate bundle below to your Account Team if you have legacy [Advanced Global CDN](/guides/professional-services#advanced-global-cdn):
-
-- Main Certificate
-- Intermediate Certificate
-- Private Key
-
-Allow two business days for your Account Team to load the certificate.
-Note: The key file upload tool currently only accepts 2048-bit RSA keys. AGCDN custom certificates (and private keys) must be in `.PEM` format.
+As an alternative, you can also submit the certificate bundle to Pantheon Support to upload, but allow two business days for your Account Team to load the certificate.
 
 </Tab>
 
