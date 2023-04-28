@@ -1,6 +1,6 @@
 ---
 title: Workspaces, Sites, and Teams
-subtitle: Sites Management
+subtitle: Sites
 description: Learn how to manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
