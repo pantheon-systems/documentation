@@ -37,8 +37,8 @@ Allow two business days for your Account Team to load the certificate.
 
 - Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
 
-  <Alert title="Streamliend AGCDN"  type="info" >
-    This procedure also applies for customers who use Streamlined AGCDN.
+  <Alert title="Streamlined AGCDN"  type="info" >
+    This procedure also applies for customers who use Streamlined AGCDN. Certificate gets uploaded by Pantheon and the related domains are marked or show an indicator the same way regular domains with custom certificates.
   </Alert>
 
 </Tab>
