@@ -29,7 +29,7 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
-Newer versions of Drush fail with the message: `[warning] Drush command terminated abnormally.` For example: 
+Newer versions of Drush fail with the message: `[warning] Drush command terminated abnormally.` For example:
 
 ```bash
 [warning] Drush command terminated abnormally.
@@ -108,8 +108,7 @@ drush @pantheon.SITENAME.ENV status
 
 ### Drush Error: "Unknown option: --db-url"
 
-This error only affects Drupal 7 sites running a Drush version below Drush 8, and 
-looks similar to the example below:
+This error only affects Drupal 7 sites running a Drush version below Drush 8, and looks similar to the example below:
 
 ```bash{outputLines:2-3}
 drush @pantheon.SITENAME.ENV cc all
@@ -117,7 +116,7 @@ Unknown option: --db-url. See `drush help cache-clear` for available [error]
 options. To suppress this error, add the option --strict=0.
 ```
 
-Follow the suggestion and add the option `--strict=0` to resolve this error: 
+Follow the suggestion and add the option `--strict=0` to resolve this error:
 
 ```bash{outputLines:2-3}
 drush @pantheon.SITENAME.ENV cc all --strict=0
@@ -227,6 +226,12 @@ This error indicates that the vendor directory contains Drush binaries that shou
 ```none
 Fatal error: require(): Failed opening required '/srv/bindings/.../code/vendor/bin/includes/preflight.inc' (include_path='.:/usr/share/pear:/usr/share/php') in /srv/bindings/.../vendor/bin/drush.php on line 11
 ```
+
+### Drush 11 error: Declaration of Drush\Sql\Sqlmysql::command() must be compatible with Drush\Sql\SqlBase::command()
+
+This error can occur on Multidevs with a [site-local installation](/guides/drush/drush-versions#site-local-drush-usage) version of Drush 11 that removes the Drush version from the `pantheon.yml` file. This error occurs because the Multidev does not recognize that there is a site-local installation and attempts to use the Pantheon-installed version (which by default is Drush 8.4.12).
+
+You can add a compatible Drush version in your `pantheon.yml` file to refresh the environment as a potential workaround. For Drupal 9 and later, add `drush_version: 10` to the `pantheon.yml` file.
 
 ## More Resources
 
