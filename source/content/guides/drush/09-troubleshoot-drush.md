@@ -227,6 +227,11 @@ This error indicates that the vendor directory contains Drush binaries that shou
 ```none
 Fatal error: require(): Failed opening required '/srv/bindings/.../code/vendor/bin/includes/preflight.inc' (include_path='.:/usr/share/pear:/usr/share/php') in /srv/bindings/.../vendor/bin/drush.php on line 11
 ```
+### Drush 11 error: Declaration of Drush\Sql\Sqlmysql::command() must be compatible with Drush\Sql\SqlBase::command()
+
+This error can occur on multi-devs that are using a [site-local installation](/guides/drush/drush-versions#site-local-drush-usage) version of Drush 11, where the drush version has been removed from the `pantheon.yml` file.  This error occurs because the mutli-dev does not recognize that there is a site-local installation and attempts to use the Pantheon installed version (which by default is Drush 8.4.12).  
+
+A workaround is to add a compatible drush version in `pantheon.yml` to refresh the environment.  For Drupal 9 and later, add `drush_version: 10` to the `pantheon.yml` file.
 
 ## More Resources
 
