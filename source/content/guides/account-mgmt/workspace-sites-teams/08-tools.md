@@ -1,6 +1,6 @@
 ---
 title: Workspaces, Sites, and Teams
-subtitle: Where Do I...?
+subtitle: Where Is...?
 description: Learn where to find Pantheon products and features.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
