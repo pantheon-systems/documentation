@@ -38,7 +38,7 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
     - If the build command is `start`, you do not have to do anything for your build commands, although you may need to pay attention to Root Directory and Output Directory as these may be different for the framework used.
 
     - If your framework uses a different command, you must update `package.json` to include an equivalent command called `start`. For example, if you have a that uses the command `npm run serve`, you must rename the command to be `start` or create a duplicate start command.
-    - If your `package.json` does not include a `start` command, one must be added.
+    - If your `package.json` does not include a `start` command, you must add it.
 
 ## Create Your Site
 
