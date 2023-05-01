@@ -1,22 +1,26 @@
 ---
-title: SSO and Identity Federation on Pantheon
+title: Single Sign-on with Pantheon
+subtitle: SSO and Identity Federation on Pantheon
 description: Use SSO to centrally manage user identities and provide seamless integration across multiple applications.
 tags: [security, sso, users]
-contenttype: [doc]
+contenttype: [guide]
 innav: [true]
 categories: [security]
 cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [shibboleth, sso]
+permalink: docs/guides/sso/sso
 ---
-Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions. Learn more about [Single Sign-On for Pantheon Organizations](/sso-organizations).
 
-Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions (protocol, port, etc.) for traffic from Pantheon to external services.
+This section provides recommendations and supported solutions for SSO on Pantheon.
 
-Use SSL certificates for encrypted secure communication with externally hosted servers for authentication.
+## SSL Certificates
+
+Use Secure Sockets Layer (SSL) certificates for encrypted secure communication with externally hosted servers for authentication.
 
 ## Two-Factor Authentication
+
 Two-factor authentication (TFA) is a security practice that requires users of your website to provide, along with their standard username and password, an additional form of authentication to log in.
 
 We strongly recommend using SAML, both for sites and the Dashboard. Learn more about [two-factor authentication](/guides/secure-development/two-factor-authentication).
@@ -27,7 +31,7 @@ Both LDAP and LDAPS are supported on Pantheon. For more information, see [LDAP a
 
 ## Shibboleth and SimpleSAMLphp
 
-[Shibboleth](https://shibboleth.net/) is an open-source single sign-on solution. Use [SimpleSAMLphp](https://simplesamlphp.org/) as a service provider to connect to either Shibboleth or a SAML 2.0 Identity Provider. For more information on SimpleSAMLphp on Pantheon, see [Using SimpleSAMLphp](/shibboleth-sso).
+[Shibboleth](https://shibboleth.net/) is an open-source single sign-on solution. Use [SimpleSAMLphp](https://simplesamlphp.org/) as a service provider to connect to either Shibboleth or a SAML 2.0 Identity Provider. For more information on SimpleSAMLphp on Pantheon, see [Using SimpleSAMLphp](/guides/sso/shibboleth-sso).
 
 ## OAuth
 
