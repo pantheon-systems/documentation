@@ -63,7 +63,7 @@ In addition to your other WordPress security practices, take steps to block brut
 
     ### Use Single Sign-On (SSO)
 
-    If your workspace makes use of an Identity Provider (IdP) such as Google Workspace, Microsoft AzureAD, or others for [Single Sign-On](/sso-organizations), utilize that as the login authority for your WordPress site.
+    If your workspace makes use of an Identity Provider (IdP) such as Google Workspace, Microsoft AzureAD, or others for [Single Sign-On](/guides/sso/sso-organizations), utilize that as the login authority for your WordPress site.
 
     Some plugins or services can simplify the SSO integration of your IdP, such as [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) or [MiniOrange](https://plugins.miniorange.com/wordpress).
 

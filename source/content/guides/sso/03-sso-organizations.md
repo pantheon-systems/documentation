@@ -1,23 +1,19 @@
 ---
-title: Single Sign-On for Pantheon Organizations
-description: Detailed information to enable SAML single sign-on for your organization.
+title: Single Sign-on with Pantheon
+subtitle: SSO for Pantheon Organizations
+description: Learn how to enable SAML single sign-on for your organization.
 tags: [security, organizations]
-contenttype: [doc]
+contenttype: [guide]
 innav: [true]
 categories: [security, config]
 cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [saml, sso, azure]
+permalink: docs/guides/sso/sso-organizations
 ---
 
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. Refer to [SSO and Identity Federation on Pantheon](/sso) for more information.
-
-SAML applies to an entire email domain when enabled and is not available on a per-site, per-environment, or per-user basis.
-
-SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
-
-## How It Works
+This section provides information on SSO workflow on Pantheon, as well as authentication and IdP configuration requirements.
 
 The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** they use to access their Pantheon Dashboard.
 
