@@ -17,29 +17,26 @@ product: [--]
 integration: [--]
 ---
 
-Workspaces are a home base for your WebOps. There are two types of workspaces:
+Workspaces are a home base for your WebOps. 
 
-- The **Personal Workspace** displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one Personal Workspace. Learn more about workspaces in the [Accounts](/guides/account-mgmt/account) guide.
+## Types of Workspaces
+
+- The **Personal Workspace** displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one Personal Workspace. 
   - Every Pantheon user is assigned one Personal Workspace. 
   - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
   - You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
   - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
-- **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.  You can create a Professional Workspace as the home for an organization’s sites and the teams working on them.
-  - Access to the collaboration features below are available to sites owned by Gold Workspaces or above:
-  	- [Multidev](/guides/multidev)
-  	- [Custom Upstreams](/guides/custom-upstream)
-  	- [Autopilot](/guides/autopilot)
+- **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites. 
+  - Access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) are available to Gold Workspaces or above.
   - You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
+  - If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add a Professional Workspace to a site as a **Supporting Workspace**, which will give the members of that Workspace access to help build, launch, or maintain your site. Refer to [Add a Supporting Workspace to a Site](http://localhost:8000/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site) for details.
+  - When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).  
 
-## Account Plans
+  <Alert title="Important" type="danger" >
 
-When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).  
+  Every Workspace that is upgraded to Gold or higher is billed as another plan/subscription.
 
-<Alert title="Important" type="danger" >
-
-Every Workspace that is upgraded to Gold or higher is billed as another plan/subscription.
-
-</Alert>
+  </Alert>
 
 ## Workspace Tools
 
@@ -69,11 +66,9 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 </Alert>
 
-## Supporting Workspaces
+## Manage Workspaces
 
-If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add it to the site as a **Supporting Workspace**, which will give the members of that Workspace access to help build, launch, or maintain your site.
-
-## Create a Professional Workspace
+### Create a Professional Workspace
 
 You can create as many workspaces as necessary. 
 
@@ -91,7 +86,7 @@ The following process will create a Professional Workspace with a free Silver Ac
 
 1. Invite team members or skip this step by clicking **Continue**.
 
-## Switch Between Workspaces
+### Switch Between Workspaces
 
 If you're a member of multiple [Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces), you can stay logged in, and switch between Workspaces to work on personal projects or to work between Organizations.
 
@@ -100,7 +95,7 @@ Click the Workspace Switcher (the icon in the upper left) to switch between Work
 ![Workspace switcher shows a personal and Agency workspace](../../../images/dashboard/new-dashboard/workspaces-selector.png)
 
 
-## Retrieve the Workspace UUID
+### Retrieve the Workspace UUID
 
 Every entity (user, workspace, product, and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
 
@@ -114,7 +109,7 @@ You can also use [Terminus](/terminus) to find the UUID of your workspaces:
 terminus org:list
 ```
 
-## Customize a Workspace
+### Customize a Workspace
 
 You can customize the following for a workspace:
 
@@ -126,7 +121,11 @@ You can customize the following for a workspace:
 
 To customize a Professional Workspace, go to the workspace you wish to customize, then click the **Settings** tab.
 
-## Delete a Workspace
+### Change the Workspace Plan Type
+
+Refer to [Workspace Plans](guides/account-mgmt/plans/workspace-plans) for information.
+
+### Delete a Workspace
 
 Workspaces cannot be deleted.
 
