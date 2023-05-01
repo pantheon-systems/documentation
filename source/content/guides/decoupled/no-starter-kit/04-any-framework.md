@@ -31,8 +31,11 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
     - If your framework uses a different command, you must adjust the build command on the Build Settings page. For example, if you have a static site framework that uses the command `npm run generate`, you must input `generate` as the build command.
 
 - For sites that use server-side rendering, examine the `start` command for the framework you have chosen. Depending on the framework, you may need to adjust the files to run a Front-End Site successfully.
+
     - If the build command is `start`, you do not have to do anything for your build commands, although you may need to pay attention to Root Directory and Output Directory as these may be different for the framework used.
+    
     - If your framework uses a different command, you must update `package.json` to include an equivalent command called `start`. For example, if you have a that uses the command `npm run serve`, you must rename the command to be `start` or create a duplicate start command.
+    
     - If your `package.json` does not include a `start` command, one must be added.
 
 ## Create Your Site
