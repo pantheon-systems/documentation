@@ -23,7 +23,7 @@ Teams allow you to define the users who will have access to a workspace or site.
 
 There are two places a team can be defined: on a Professional Workspace, or in the Site Dashboard.
 
-- Professional Workspace team members have access to both all sites in that Workspace, and any sites that have that Workspace assigned as a Supporting Workspace.
+- Professional Workspace team members have access to all sites in that Workspace, and any sites that have that Workspace assigned as a Supporting Workspace.
 
 - Site Team members only have access to that site.
 
@@ -88,7 +88,7 @@ When a team member is added to a Workspace:
 - That Workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies to all sites in that Workspace
 
-1. Go to the workspace, select the **Team** tab, and click **Add User**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Add User**.
 
 1. Click **Invite Team Member**.
 
@@ -103,7 +103,7 @@ When a team member is added to a site:
 - That Workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 - The role they are given applies only to that site - not to any of the other in the same Workspace
 
-1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
    
 1. Click **Team**.
 
@@ -122,7 +122,7 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 <Tab title="In a Workspace" id="chws" active={true}>
 
-1. Go to the workspace and select the **Team** tab.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
 
 1. Find and select the team member(s) whose role you want to change.
 
@@ -135,7 +135,7 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 <Tab title="In a Site" id="chs">
 
-1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
    
 1. Click **Team**.
 
@@ -151,7 +151,7 @@ While you can view a workspace's users using the Dashboard, there may be times w
 
 To export a list of users:
 
-1. Go to the workspace and select the **Team** tab.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
 
 1. In the upper right corner of the page, click **Export Members**.
 
@@ -203,6 +203,8 @@ The following fields only appear if you select **All Workspace and site members*
 
 ### Remove a User
 
+When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.
+
 <Alert title="Note" type="info">
 
 All users can be removed except the site owner. 
@@ -215,7 +217,7 @@ To remove a user:
 
 <Tab title="From a Workspace" id="remws" active={true}>
 
-1. Go to the workspace and select the **Team** tab.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
 
 1. Find and select the team member(s) you wish to remove.
 
@@ -229,7 +231,7 @@ To remove a user:
 
 To remove a team member from a site:
 
-1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click **Team**.
    
@@ -238,8 +240,6 @@ To remove a team member from a site:
 </Tab>
 
 </TabList>
-
-When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.
 
 After a user leaves, in addition to the steps above, we recommend you:
 
@@ -250,11 +250,11 @@ After a user leaves, in addition to the steps above, we recommend you:
 
 ## Add a Supporting Workspace to Site
 
+Supporting Workspaces are Professional Workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site.
+
 Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#supporting-workspaces).
 
-1. Click **Sites** tab on the left hand panel > Click on the site you want to make changes to.
-
-1. Click **Team** in the Site Dashboard.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site, then click **Team**.
 
 1. Under **Supporting Workspace**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 

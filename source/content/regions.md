@@ -85,7 +85,7 @@ If you'd like help migrating your site between regions, our [Professional Servic
 
 Use the Dashboard to see the Pantheon Global Region in which the site is hosted:
 
-1.  Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)]
+1.  Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)
 1.  Click **Settings**, then **About Site**
 1.  **Region** will show either `United States` by default, or the name of the International Region in which the Site is hosted.
 

@@ -29,7 +29,7 @@ Professional Workspaces with a Gold Account Plan provide additional collaboratio
 
 To upgrade your Professional Workspace Account Plan to Gold:
 
-1. Select the Professional Workspace, or [create one](http://localhost:8000/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), or [create one](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
 
   ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
 
