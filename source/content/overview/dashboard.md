@@ -1,5 +1,5 @@
 ---
-title: Workspaces and Dashboard Product Overview
+title: Pantheon Site Dashbvard
 description: A developer console for all your sites.
 contributors: [wordsmither]
 contenttype: [doc]
@@ -20,16 +20,15 @@ showtoc: false
 
 Easily visualize and manage sites, users, traffic, metrics, visual regression testing (VRT), and everything else needed to keep your WebOps experience smooth and uneventful.
 
-Our workspaces and dashboards provide a real-time interface into Pantheon. It includes everything you need to build, launch, and run sites. Create new projects, manage team access, interface via SFTP or Git (version control), and track miscellaneous tools like backups. It also allows you to deploy and scale your sites.
+Our site dashboard provide a real-time interface into Pantheon. It includes everything you need to build, launch, and run sites. Create new projects, manage team access, interface via SFTP or Git (version control), and track miscellaneous tools like backups. It also allows you to deploy and scale your sites.
 
-![The Pantheon Dashboard](../../images/dashboard/new-dashboard/workspace-overview.png)
+![The Pantheon Dashboard](../../images/dashboard/new-dashboard/sites.png)
 
 </Tab>
 
 <Tab title="Features" id="features">
 
-* Find and navigate to site dashboards
-* Manage teams and users
+* Manage users
 * Manage invoices and billing
 * Test sites
 * One-click updates to Drupal core and WordPress
@@ -42,26 +41,19 @@ Our workspaces and dashboards provide a real-time interface into Pantheon. It in
 
 ![Manage Sites](../../images/dashboard/new-dashboard/sites.png)
 
-*Manage Teams*
+*View Site Status*
 
-![Manage Teams](../../images/dashboard/new-dashboard/teams.png)
+![View Site Status](../../images/dashboard/status-tab.png)
 
-*Maintain Individual Sites*
+*Manage Backups*
 
-![Maintain Individual Sites](../../images/dashboard/new-dashboard/site-dashboard.png)
+![Manage Backups](../../images/dashboard/backup-tool.png)
 
 </Tab>
 
 <Tab title="Requirements" id="requirements">
 
-**Personal Workspace Dashboard**
-- A valid Pantheon account
-
-**Professional Workspace Dashboard**
-- Must be invited to the Workspace by an Administrator
-
-**Site Dashboard**
-- Must be invited to the site by an Administrator
+- Must own the site, or be invited to the site by an Administrator
 
 </Tab>
 
@@ -69,8 +61,7 @@ Our workspaces and dashboards provide a real-time interface into Pantheon. It in
 
 ## Documentation
 
-* [Dashboard Guide](/guides/new-dashboard)
-* [Account Management at Pantheon](/manage)
+* [The Site Dashboard](/site-dashboard)
 
 ## Learning
 

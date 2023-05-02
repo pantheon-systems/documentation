@@ -32,20 +32,13 @@ To view a Site Dashboard:
    - Sort the columns by clicking on the column heading.
 1. Click the name of the site.  The Site Dashboard appears.
 
-## Create a Site
+## Add a Site
 
-<Alert title="Note" type="info" >
-
-Be sure to set up workspaces before creating sites.
-
-</Alert>
-
-<Partial file="create-new-site-new-dash.md" />
-
+For guidance on how best to create or migrate a site, see [Adding a Site to Pantheon](/add-site).
 
 ## Manage Sites
 
-The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
+The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites. 
 
 Agency workspaces will show "Site Owners" instead of "Users in Charge"
 
@@ -91,11 +84,9 @@ The person who creates the site owns it until someone else starts paying for it.
 
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Workspace Administrator**. Other roles do not have access to change the site plan as described on this page. Refer to [Role-Based Permissions & Change Management](/guides/account-mgmt/workspace-sites-teams/teams/#site-level-roles-and-permissions) for more information.
 
-
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
-
+If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly.
 
 </Alert>
 
@@ -105,7 +96,7 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
-1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Select **Billing**, then **Invite a business owner to pay for this site**.
 
@@ -146,9 +137,7 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client. 
 
-1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
-
-1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click the **Billing** tab.
 
@@ -162,9 +151,7 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 Agencies should follow the steps below to maintain Preferred Pricing through a plan change. 
 
-1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
-
-1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click the **Billing** tab.
 
@@ -205,7 +192,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ### Delete a Site from the Site Dashboard
 
-1. Go to the [Site Dashboard[(/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)] for the site.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Select **Settings**, and then select **Delete Site**.
 

@@ -21,15 +21,13 @@ Workspaces are a home base for your WebOps.
 
 ## Types of Workspaces
 
-- The **Personal Workspace** displays tools for the sites you own, or are a team member of, your account plan, and billing for sites you own.  You have only one Personal Workspace. 
+- The **Personal Workspace** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own.  You have only one Personal Workspace. 
   - Every Pantheon user is assigned one Personal Workspace. 
   - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
   - You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
   - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
 - **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites. 
-  - Access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot) are available to Gold Workspaces or above.
   - You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
-  - If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add a Professional Workspace to a site as a **Supporting Workspace**, which will give the members of that Workspace access to help build, launch, or maintain your site. Refer to [Add a Supporting Workspace to a Site](http://localhost:8000/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site) for details.
   - When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).  
 
   <Alert title="Important" type="danger" >
@@ -38,19 +36,37 @@ Workspaces are a home base for your WebOps.
 
   </Alert>
 
+- Supporting Workspaces are Professional Workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site. Refer to [Add a Supporting Workspace to a Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site) for details.
+
 ## Workspace Tools
 
 The navigation bar on the left contains several additional tabs to help you manage your sites:
+
+- **Home**: The home page of a Workspace contains the following information:
+
+  - Access to Workspace settings\*
+  - Number of Team Members\*
+  - Number of sites in the Workspace
+  - Account Tier \*\*
+  - Number of Sandbox Sites used
+  - Options to migrate or create a site
+  - A list of sites you've recently accessed
+
+  \* Not available in Personal Workspaces.
+
+  \*\* Not available in Professional Workspaces.
 
 - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining.
 
   - **Create New Site:** Start the process of creating a new site on Pantheon. New sites will appear under the Sites tab.
 
-  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, refer to [Migrate Sites to Pantheon](/guides/guided/) on our [Get Started](/get-started) page.
+  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, refer to the [Get Started](/get-started) page.
 
-- **Team*:** Create a new workspace.
+- **Team*:** Invite people to work on sites in this Workspace.
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
+
+- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime. 
 
 - **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
@@ -60,13 +76,15 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 \* Not available in Personal Workspaces.
 
-<Alert title="Note" type="info" >
-
-<Partial file="dashboard-login-session-length.md" />
-
-</Alert>
-
 ## Manage Workspaces
+
+### Switch Between Workspaces
+
+You can switch between Workspaces to work on personal projects or to switch between Professional Workspaces.  To do so:
+
+- Click the Workspace Switcher (the icon in the upper left) to switch between Workspaces:
+
+  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
 
 ### Create a Professional Workspace
 
@@ -74,7 +92,7 @@ You can create as many workspaces as necessary.
 
 <Alert title="Warning" type="danger" >
 
-If you are a contract customer, your contract is associated to one Professional Workspace, which is created for you when you sign up. You may still create additional Professional Workspaces, but it may not contain any sites.  
+If you are a contract customer, your contract is associated to one Professional Workspace, which is created for you when you sign up. You may still create additional Professional Workspaces, but they may not contain any sites.  
 
 </Alert>
 
@@ -84,16 +102,7 @@ The following process will create a Professional Workspace with a free Silver Ac
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
-1. Invite team members or skip this step by clicking **Continue**.
-
-### Switch Between Workspaces
-
-If you're a member of multiple [Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces), you can stay logged in, and switch between Workspaces to work on personal projects or to work between Organizations.
-
-Click the Workspace Switcher (the icon in the upper left) to switch between Workspaces:
-
-![Workspace switcher shows a personal and Agency workspace](../../../images/dashboard/new-dashboard/workspaces-selector.png)
-
+1. Invite team members, or skip this step by clicking **Continue**.
 
 ### Retrieve the Workspace UUID
 
@@ -119,7 +128,10 @@ You can customize the following for a workspace:
 
 - [Upgrade](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans) a Silver Account Plan to a Gold Account Plan.
 
-To customize a Professional Workspace, go to the workspace you wish to customize, then click the **Settings** tab.
+To customize a Professional Workspace:
+
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to customize
+1. Click the **Settings** tab.
 
 ### Change the Workspace Plan Type
 
@@ -137,7 +149,7 @@ Refer to [Sites](/guides/account-mgmt/workspace-sites-teams/) for more informati
 
 ### Why do login attempts fail for all users across my workspace simultaneously?
 
-Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logs in and out successfully 3 times.
+Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logs in and out successfully three times.
 
 As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for passwordsless access](/ssh-keys).
 
