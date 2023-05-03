@@ -6,6 +6,7 @@ tags: [security, sso, users]
 contributors: [kyletaylored]
 contenttype: [guide]
 innav: [true]
+showtoc: true
 categories: [security]
 cms: [drupal, wordpress]
 audience: [development]

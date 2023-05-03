@@ -5,6 +5,7 @@ description: Learn how to enable SAML single sign-on for your organization.
 tags: [security, organizations]
 contenttype: [guide]
 innav: [true]
+showtoc: true
 categories: [security, config]
 cms: [drupal, wordpress]
 audience: [development]
