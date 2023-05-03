@@ -1,7 +1,7 @@
 ---
 title: Single Sign-on with Pantheon
 subtitle: Introduction
-description: Learn how to use secure Single Sign-on on Pantheon.
+description: Learn how to use secure Single Sign-on with Pantheon.
 tags: [security]
 reviewed: "2023-05-01"
 contenttype: [guide]
@@ -18,24 +18,24 @@ permalink: docs/guides/sso
 
 Single sign-on (SSO) allows you to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 
-Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions (protocol, port, etc.) for traffic from Pantheon to external services.
+Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions for traffic from Pantheon to external services.
 
 ## Who is Single Sign-on for?
 
-SSO can help organizations centrally manage their users' identities and provide seamless integration across multiple applications. Numerous Pantheon customers use a variety of SSO solutions, including:
+SSO can help organizations centrally manage their users' identities and provide seamless integration across multiple applications. Numerous Pantheon customers use an SSO solution, including:
 
-- Higher educational institutions
+- Higher education institutions
 - School districts
 - Local governments
 - Other groups and organizations
 
 ## How Does SSO Work?
 
-Pantheon uses Security Assertion Markup Language (SAML)for SSO authentication. SAML is an XML-based open-standard that transfers identity data between two parties, such as an identity provider (IdP) and a service provider (SP) or web application. SAML streamlines the authentication process by enabling users to access multiple, independent web applications across domains using one set of credentials.
+Pantheon uses Security Assertion Markup Language (SAML) for SSO authentication. SAML is an XML-based open standard that transfers identity data between two parties, such as an identity provider (IdP) and a service provider (SP) or web application. SAML streamlines the authentication process by enabling users to access multiple, independent web applications across domains using one set of credentials.
 
 <Alert title="Note"  type="info" >
 
-SAML applies to an entire email domain when enabled on Pantheon and is not available on a per-site, per-environment, or per-user basis.
+SAML applies to an entire email domain when enabled on Pantheon. You cannot use SAML on a per-site, per-environment, or per-user basis. Refer to [Members of an SSO Organization](/guides/sso/sso-organizations#members-of-an-sso-organization) for more information on internal and external members of an SSO organization.
 
 </Alert>
 
