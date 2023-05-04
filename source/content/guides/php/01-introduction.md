@@ -26,7 +26,7 @@ Click the links below to display complete PHP information for each version, incl
 | Version                                          | Available   | Recommended |
 | ------------------------------------------------ | :---------: | :---------: |
 | [8.2](https://v82-php-info.pantheonsite.io/)\*   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
-| [8.1](https://v81-php-info.pantheonsite.io/)\*   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
+| [8.1](https://v81-php-info.pantheonsite.io/)\**   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.0](https://v80-php-info.pantheonsite.io/) | <span style="color:green">✔</span>         | ❌          |
 | [7.4](https://v74-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌          |
 | [7.3](https://v73-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
@@ -41,7 +41,7 @@ Sites that run older PHP versions not listed above will continue to serve pages.
 
 \* New Relic is not supported in PHP 8.2
 
-\* WordPress is not fully compatible with PHP 8.1+.
+\** WordPress is not fully compatible with PHP 8.1+.
 
 ## Drush Compatibility
 
