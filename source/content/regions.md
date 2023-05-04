@@ -48,7 +48,7 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 
 1. Install and authenticate [Terminus](/terminus).
 
-1. Use Terminus to create a new site associated with your organization and include the `--region` option.
+1. Use Terminus to create a new site associated with your Workspace and include the `--region` option.
 
     Available region codes:
 
@@ -101,10 +101,10 @@ In the following sections, assign `$SITE` or replace it in each example with you
 terminus site:info $SITE
 ```
 
-### Display a list of organization sites and their region
+### Display a list of Workspace sites and their region
 
 ```bash
-terminus site:list --org "My Organization Name" --fields name,region
+terminus site:list --org "My Workspace Name" --fields name,region
 ```
 
 ### Verify Domains Route Correctly

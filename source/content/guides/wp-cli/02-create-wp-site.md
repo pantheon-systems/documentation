@@ -67,9 +67,9 @@ The next sections use the example variables `tessa-site-wp` and `"Terminus Demo 
     terminus site:create tessa-site-wp "Terminus Demo Site" WordPress
     ```
 
-    - Add the `--org` option to the command above and pass the Organization name, label, or ID if you want to associate this site with an Organization. 
+    - Add the `--org` option to the command above and pass the Workspace name, label, or ID if you want to associate this site with an Workspace. 
 
-    - Use the `site:org:add` command to associate an existing site with an Organization.
+    - Use the `site:org:add` command to associate an existing site with an Workspace.
 
 2. Open your new Site Dashboard in a browser:
 

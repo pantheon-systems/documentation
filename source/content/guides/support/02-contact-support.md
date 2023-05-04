@@ -38,13 +38,13 @@ The ticket support feature is available to certain Account packages and account 
 
 1. Click **Open Ticket**
 
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an Workspace, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
 
 ## Real Time Chat Support
 
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
-To receive the highest level of support available to your site or organization, remember to access the chat from the Organization Dashboard if available.
+To receive the highest level of support available to your site or Workspace, remember to access the chat from the Workspace Dashboard if available.
 
 1. From your Site or User Dashboard, click **Support**.
 

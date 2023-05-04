@@ -319,7 +319,7 @@ Every site has an assigned upstream to deliver [one-click updates](/core-updates
   terminus upstream:list
   ```
 
-  If your organization has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
+  If your Workspace has a [Custom Upstream](/guides/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
 
   ```bash{promptUser: user}
   terminus site:upstream:set my-site "My Custom Upstream"
