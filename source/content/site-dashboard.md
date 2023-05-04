@@ -35,6 +35,10 @@ On the right side, there are two rows of options:
 
 ## Environment Tabs
 
+### <span class="glyphicons glyphicons-cloud"></span> Multidev
+
+Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site. 
+
 ### <span class="glyphicons glyphicons-wrench"></span> Dev
 
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.

@@ -22,7 +22,7 @@ Easily visualize and manage sites, users, traffic, metrics, visual regression te
 
 Our site dashboard provide a real-time interface into Pantheon. It includes everything you need to build, launch, and run sites. Create new projects, manage team access, interface via SFTP or Git (version control), and track miscellaneous tools like backups. It also allows you to deploy and scale your sites.
 
-![The Pantheon Dashboard](../../images/dashboard/new-dashboard/sites.png)
+![The Pantheon Dashboard](../../images/dashboard/new-dashboard/site-dashboard.png)
 
 </Tab>
 
@@ -37,9 +37,9 @@ Our site dashboard provide a real-time interface into Pantheon. It includes ever
 * Add and configure New Relic monitoring
 
 
-*Manage Sites*
+*Manage Team*
 
-![Manage Sites](../../images/dashboard/new-dashboard/sites.png)
+![Manage Sites](../../images/dashboard/manage-site-team.png)
 
 *View Site Status*
 
