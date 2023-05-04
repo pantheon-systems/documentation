@@ -1,7 +1,7 @@
 ---
 title: "Plans"
-subtitle: Workspace Plans
-description: Upgrade your Professional Workspace.
+subtitle: Account Plans
+description: Upgrade your Account Plan.
 tags: [plans]
 contributors: [wordsmither]
 showtoc: true
@@ -31,9 +31,7 @@ To upgrade your Professional Workspace Account Plan to Gold:
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), or [create one](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
 
-  ![Personal Workspace](../../../../images/guides/account-mgmt/personal-workspace.png)
-
-1. Click **Upgrade Account Plan** in the banner at the top of the page, or click **Upgrade Account to Gold** on the right side of the page, under "Get the most out of Pantheon".
+1. Click **Upgrade Account Plan** in the banner at the top of the page.
 
   ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
 
@@ -45,7 +43,7 @@ To upgrade your Professional Workspace Account Plan to Gold:
 
 <Alert title="Note"  type="info" >
 
-Now that you have a Professional Workspace with a Gold Account Plan, you can [add it as a Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to your site to take advantage of your new features.
+Now that you have a Professional Workspace with a Gold Account Plan, you can [add it as a Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to your site(s) to take advantage of your new features.
 
 </Alert>
 

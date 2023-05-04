@@ -23,8 +23,7 @@ Workspaces are a home base for your WebOps.
 
 - The **Personal Workspace** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own.  You have only one Personal Workspace. 
   - Every Pantheon user is assigned one Personal Workspace. 
-  - All the sites you have created, as well as individual sites from other organizations you've been invited to collaborate on, will be in your Personal Workspace. 
-  - You can use a Personal Workspace for your own projects, and for visibility into sites from other organizations you are working with.
+  - All the sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in your Personal Workspace. 
   - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
 - **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites. 
   - You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
@@ -42,25 +41,9 @@ Workspaces are a home base for your WebOps.
 
 The navigation bar on the left contains several additional tabs to help you manage your sites:
 
-- **Home**: The home page of a Workspace contains the following information:
-
-  - Access to Workspace settings\*
-  - Number of Team Members\*
-  - Number of sites in the Workspace
-  - Account Tier \*\*
-  - Number of Sandbox Sites used
-  - Options to migrate or create a site
-  - A list of sites you've recently accessed
-
-  \* Not available in Personal Workspaces.
-
-  \*\* Not available in Professional Workspaces.
+- **Home**: The home page of a Workspace contains information related to your workspace, such as the number of sites, sites recently added, and more.
 
 - **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining.
-
-  - **Create New Site:** Start the process of creating a new site on Pantheon. New sites will appear under the Sites tab.
-
-  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, refer to the [Get Started](/get-started) page.
 
 - **Team*:** Invite people to work on sites in this Workspace.
 
@@ -130,12 +113,12 @@ You can customize the following for a workspace:
 
 To customize a Professional Workspace:
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to customize
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to customize.
 1. Click the **Settings** tab.
 
 ### Change the Workspace Plan Type
 
-Refer to [Workspace Plans](guides/account-mgmt/plans/workspace-plans) for information.
+Refer to [Account Plans](guides/account-mgmt/plans/workspace-plans) for information.
 
 ### Delete a Workspace
 
@@ -145,7 +128,10 @@ Workspaces cannot be deleted.
 
 ### How do we add new sites to a Professional Workspace?
 
-Refer to [Sites](/guides/account-mgmt/workspace-sites-teams/) for more information.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to add sites to.
+
+1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/add-site) for more details. 
+
 
 ### Why do login attempts fail for all users across my workspace simultaneously?
 

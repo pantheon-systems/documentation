@@ -25,7 +25,7 @@ The Pantheon [Site Dashboard](/site-dashboard) is the hub of all development and
 
 To view a Site Dashboard:
 
-1. Go to the [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
+1. [Go to the Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 1. Select the **Sites** tab. Here, you can:
    - Search for the site by site name.
    - Narrow the list using the filters on the left.

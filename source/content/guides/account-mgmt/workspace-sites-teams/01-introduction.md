@@ -23,7 +23,7 @@ Workspaces, Sites, and Teams work together to help you organize and manage your 
 
 - **Sites** are the individual web sites with their own unique domain. You can have one site or hundreds.
 - **Teams** are groups of people who can work on the sites.  Team members can be associated with a group of sites, or a single site.
-- **Workspaces** are what bring it all together.  There are two types of Workspaces: Personal Workspaces (displays tools for the sites you have access to or own), and Professional Workspaces (which bring together sites, teams and features, simplifying the management of large numbers of sites).
+- **Workspaces** are bring together sites, teams and features, simplifying the management of large numbers of sites.
 
 ## Enterprise vs. Credit Card Customers
 
@@ -33,7 +33,7 @@ Workspace behavior differs depending on the type of customer you are.
 
 Enterprise customers are those who have signed a contract with Pantheon.
 
-When you sign a contract, we create a Professional Workspace for you, attached to your billing ID.  This Workspace will contain all your sites(in this example, we've named it "All Sites"). When you log in, you will see the following Workspaces, Sites and Teams:
+When you sign a contract, we create a Professional Workspace for you, attached to your billing ID.  This Workspace will contain all your sites (in this example, we've named it "All Sites"). When you log in, you will see the following Workspaces, Sites and Teams:
 
 |   | Personal Workspace  | All Sites Workspace  |
 |---|---|---|
@@ -60,28 +60,29 @@ When you sign up, you will have a Personal Workspace, and can create as many Pro
 The most important thing to remember is Workspaces are associated with Account Plans.  So, if you have a Workspace with with a Silver Plan, and one with a Gold Plan, only sites in the Gold Plan Workspace will have access to [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot).
 
 Here are some examples of ways you might organize your sites:
-- Create all your sites in a single Professional Workspace, then create additional Workspaces with team members that can be added to individual sites. 
+
+1. Create all your sites in a single Professional Workspace, then create additional Workspaces with team members that can be added as Supporting Workspaces to individual sites. 
 
     |   | Personal | All Sites Workspace | Drupal Devs Workspace | WordPress Devs Workspace |
     |---|---|---|---|---|
     | **Sites Tab** | Sites you have access to | Contains all sites your organization maintains | No sites  | No Sites |
     | **Teams Tab** | n/a | Team members that have access to all sites | Drupal developers  | WordPress developers  |
 
-- Create one Professional Workspace with a Gold Account plan for sites that require Autopilot and Custom Upstreams (among others), and another Professional Workspace with a Silver Account plan for those sites that don't.
-
-    |   | Personal | Silver Account Workspace | Gold Account Workspace |
-    |---|---|---|---|
-    | **Sites Tab** | Sites you have access to | Sites with basic functionality | Sites that require Autopilot, Custom Upstreams, or Multidev. |
-    | **Teams Tab** | n/a | Team members that can work on these sites | Team members that can work on these sites  |
-
-- Create a Workspace for each CMS, creating sites using that CMS in each, and adding developers specific to each CMS to each.
+1. Create a Workspace for each CMS, creating sites using that CMS in each, and adding developers specific to each CMS to each. This differs from the first example in that the WordPress and Drupal Workspaces do *not* have to be added as Supporting Workspaces to individual sites - the team members automatically have access to all sites in that Workspace.
 
     |   | Personal | WordPress Sites Workspace | Drupal Sites Workspace |
     |---|---|---|---|
     | **Sites Tab** | Sites you have access to | Sites built using WordPress | Sites built using Drupal. |
     | **Teams Tab** | n/a | WordPress Developers | Drupal Developers  |
 
-- Create a Workspace for each department which contains the site(s) that department maintains, and invite any department staff that should have access to the site to the team.
+1. Create one Professional Workspace with a Gold Account plan for sites that require Autopilot and Custom Upstreams (among other features), and another Professional Workspace with a Silver Account plan for those sites that don't.
+
+    |   | Personal | Silver Account Workspace | Gold Account Workspace |
+    |---|---|---|---|
+    | **Sites Tab** | Sites you have access to | Sites with basic functionality | Sites that require Autopilot, Custom Upstreams, or Multidev. |
+    | **Teams Tab** | n/a | Team members that can work on these sites | Team members that can work on these sites  |
+
+1. Create a Workspace for each department which contains the site(s) that department maintains, and invite any department staff that should have access to the site to the team.
   
     |   | Personal | Math Department Workspace | Athletics Department Workspace |
     |---|---|---|---|
