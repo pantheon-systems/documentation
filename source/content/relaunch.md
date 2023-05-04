@@ -66,7 +66,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
 ### Roles & Permissions
 
-The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.
+The permission to manage billing and plans is granted only to the role of **Site Owner** / **Workspace Administrators**. Other roles do not have access as described on this page.
 
 <Alert title="Note" type="info">
 

@@ -78,4 +78,4 @@ The token key will only be shown once and provides the same access as your usern
 
 If you would like to be directed to the redesigned Dashboard interface when you log into Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
 
-If you choose to use the redesigned Dashboard, you will not be able to navigate to your User or Organization Dashboard. Certain features, such as site billing, are not currently available in the redesigned Dashboard. 
+If you choose to use the redesigned Dashboard, you will not be able to navigate to your User or Workspace Dashboard. Certain features, such as site billing, are not currently available in the redesigned Dashboard. 

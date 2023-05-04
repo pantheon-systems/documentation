@@ -53,9 +53,9 @@ Commands that normally require user interaction must be bypassed with the approp
 
 ## Example Bash Scripts
 
-### Take a backup of the Live environment of all sites in an organization
+### Take a backup of the Live environment of all sites in a Workspace
 
-The script in this example goes through every site in an organization, skips any sites that are frozen, and creates a backup of the Live environment. This script requires that you set the variable `ORG_UUID` within the script itself. You can find the UUID using `terminus org:list`.
+The script in this example goes through every site in a Workspace, skips any sites that are frozen, and creates a backup of the Live environment. This script requires that you set the variable `ORG_UUID` within the script itself. You can find the UUID using `terminus org:list`.
 
 
 ```bash
@@ -88,11 +88,11 @@ while read -r PANTHEON_SITE_NAME; do
 done <<< "$PANTHEON_SITES"
 ```
 
-### Save the PHP version of the Live environment of all sites in an organization to a CSV file
+### Save the PHP version of the Live environment of all sites in a Workspace to a CSV file
 
 This example saves the output of various Terminus commands to variables for reuse, similar to the example above.
 
-This script requires that you set the variable `PANTHEON_ORG` within the script itself. This can be either the organization name or UUID, both of which can be found using `terminus org:list`. Optionally, you can also update the name and path of the CSV file if you prefer something other than `pantheon-site-php-versions.csv`.
+This script requires that you set the variable `PANTHEON_ORG` within the script itself. This can be either the Workspace name or UUID, both of which can be found using `terminus org:list`. Optionally, you can also update the name and path of the CSV file if you prefer something other than `pantheon-site-php-versions.csv`.
 
 ```bash
 #!/bin/bash

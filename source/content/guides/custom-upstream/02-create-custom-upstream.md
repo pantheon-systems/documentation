@@ -15,7 +15,7 @@ integration: [--]
 reviewed: "2022-12-13"
 ---
 
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Organization Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Organization members will be able to create new sites from a set common codebase after an Organization Administrator creates a Custom Upstream. The Custom Upstream must be created within each Organization’s Dashboard if you want to use a specific Custom Upstream for multiple Organizations. 
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the [Workspace Dashboard](/guides/account-mgmt/workspace-sites-teams/workspaces) with an eligible plan. Workspace members will be able to create new sites from a set common codebase after an Workspace Administrator creates a Custom Upstream. The Custom Upstream must be created within each Workspace Dashboard if you want to use a specific Custom Upstream for multiple Workspaces. 
 
 <Alert title="Note" type="info">
 

@@ -18,7 +18,7 @@ Pantheon makes it easy for educators training students on Drupal and WordPress t
 
 ## Initial Setup
 
-Before preparing sites to use Pantheon for a specific class, test out the platform and make a Pantheon organization.
+Before preparing sites to use Pantheon for a specific class, test out the platform and make a Pantheon Workspace.
 
  1. Each trainer should [create a Pantheon account](https://pantheon.io/register) for themselves.
 
@@ -26,11 +26,11 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
  3. [Please contact us](https://pantheon.io/trainers) and let us know you want to use the platform as a trainer. This will ensure you have full access to all the available tools as they are developed and maintain access to enough free sandboxes for your students. We can also help guide you through the processes to ensure you have the best experience and find success.
 
- 4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency). This Agency organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/guides/account-mgmt/workspace-sites-teams/workspaces).
+ 4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency). This Agency Workspace will give you a dashboard overview of all of your students' sites. Creating a Workspace account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Workspace Dashboard [here](/guides/account-mgmt/workspace-sites-teams/workspaces).
 
     <Alert title="Note" type="info">
 
-    You are limited to creating one organization per unique email. If you have already created a Pantheon Agency in the past you will need to create a brand new Pantheon user account with a different email address.
+    You are limited to creating one Workspace per unique email. If you have already created a Pantheon Agency in the past you will need to create a brand new Pantheon user account with a different email address.
 
     </Alert>
 
@@ -46,7 +46,7 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
 If you need to create many sites before a training, [contact us](https://pantheon.io/trainers) and we can assist with this process.
 
-Otherwise, please ask each student to [create their own Pantheon account](https://pantheon.io/register) and then create a new sandbox site.  Once created, students can add your organization as a [Supporting Workspace](/guides/legacy-dashboard/org-dashboard) which will give you access to the site.
+Otherwise, please ask each student to [create their own Pantheon account](https://pantheon.io/register) and then create a new sandbox site.  Once created, students can add your Workspace as a [Supporting Workspace](/guides/legacy-dashboard/org-dashboard) which will give you access to the site.
 
 ## Communicating with Students
 
