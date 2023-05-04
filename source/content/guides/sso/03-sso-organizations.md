@@ -104,15 +104,19 @@ Azure configuration requires several modifications from the general instructions
 ## Troubleshooting
 
 ### Cannot Authenticate with Username/Password When Creating a New Machine Token
+
 If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session.
 
 ### Cannot Log in Using a Google Account
+
 Google account login is disabled for users in organizations using single sign-on. SAML allows organizations to centrally manage authentication policies, so allowing social login could circumvent that policy.
 
-### Use Base-64 encoded X.509(.CER) when using Microsoft ADSF as idp 
-Make sure you generate the certificate using the right encoding.
+### Use Base-64 encoded X.509(.CER) when using Microsoft Active Directory Federation Services (AD FS) as an IdP
 
-### Use token-signing certificate when using Microsoft ADSF as idp 
+Make sure you generate the certificate using the correct encoding.
+
+### Use token-signing certificate when using Microsoft AD FS as an IdP
+
 There are 3 types of certificate that you can generate:
 
  - `communication-service`
