@@ -28,6 +28,12 @@ Members of an SSO-enabled organization have an email address that includes the o
 
 - The IdP authenticates the user and then redirects the user to their Pantheon Dashboard.
 
+<Alert title="Note"  type="info" >
+
+SAML applies to an entire email domain when enabled on Pantheon. You cannot use SAML on a per-site, per-environment, or per-user basis.
+
+</Alert>
+
 ### External Members
 
 An external member is anyone in the organization using an email address on a different domain than what's configured for SSO, for example, `@ymail.com`. New and existing external members of the organization are not affected when SSO is enabled. External users are not redirected to the configured IdP and experience no change in behavior when logging in. External members experience the following process:
@@ -45,16 +51,15 @@ Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/t
 
 Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
 
-
 ## Configure your IdP
 
 Refer to your IdP for general SAML 2.0 setup instructions. Pantheon will supply the string to be used in place of `Pantheon-SSO-Connection-Name` in the examples below.
 
-You will need to enter the following:
+You must enter the following:
 
 1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name`
 
-    Note that the single sign-on URL is **case sensitive**.
+    - Note that the single sign-on URL is **case sensitive**.
 
 2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 
@@ -119,3 +124,9 @@ There are 3 types of certificate that you can generate:
  - `token-signing`
 
 Use a `token-signing` certificate, otherwise you will get a thumbprint error.
+
+
+## More Resources
+
+- [Managing Sites and Teams with the Pantheon Organization Dashboard](/guides/legacy-dashboard/org-dashboard)
+- [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces)

@@ -28,7 +28,7 @@ We strongly recommend using SAML, both for sites and the Dashboard. Learn more a
 
 ## LDAP and LDAPS (LDAP over SSL)
 
-Both LDAP and LDAPS are supported on Pantheon. Refer to [LDAP and LDAPS on Pantheon](/ldap-and-ldaps) for more information.
+Both Lightweight Directory Access Protocol (LDAP) and LDAP over SSL (LDAPS) are supported on Pantheon. Refer to [LDAP and LDAPS on Pantheon](/ldap-and-ldaps) for more information.
 
 ## Shibboleth and SimpleSAMLphp
 
