@@ -78,7 +78,7 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 
   **Do you want to use a Custom Upstream?**
 
-  - If so, [use the Pantheon Migrations plugin with a custom WordPress upstream](/migrate-wp-upstream)
+  - If so, [use the Pantheon Migrations plugin with a custom WordPress upstream](https://wordpress.org/plugins/bv-pantheon-migration/#description)
   - If not...
 
     **Are you using multisite, or do you want to avoid installing a plugin?**
