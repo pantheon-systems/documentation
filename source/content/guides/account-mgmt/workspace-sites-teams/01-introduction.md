@@ -25,7 +25,7 @@ Workspaces, Sites, and Teams work together to help you organize and manage your 
 - **Teams** are groups of people who can work on the sites.  Team members can be associated with a group of sites, or a single site.
 - **Workspaces** are bring together sites, teams and features, simplifying the management of large numbers of sites.
 
-## Enterprise vs. Credit Card Customers
+## Enterprise vs. Programmatic Customers
 
 Workspace behavior differs depending on the type of customer you are.
 

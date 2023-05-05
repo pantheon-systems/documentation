@@ -1,6 +1,6 @@
 ---
 title: "Plans"
-subtitle: Site Plans and Addons
+subtitle: Site Hosting Plans and Addons
 description: Learn how to purchase and manage site plans and addons.
 tags: [plans]
 contributors: [wordsmither]
