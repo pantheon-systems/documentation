@@ -52,7 +52,7 @@ While Drupal and WordPress both generate their own `robots.txt` file by default,
 ```none:title=robots.txt
 # Pantheon's documentation on robots.txt: https://docs.pantheon.io/bots-and-indexing/
 User-agent: *
-Disallow: /
+Allow: /
 
 User-agent: RavenCrawler
 User-agent: rogerbot
