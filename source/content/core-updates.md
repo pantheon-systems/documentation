@@ -30,7 +30,7 @@ As of Drupal 8.8, you are required to use Composer to manage your dependencies i
 
 ## Check for Drupal Updates
 
-1. Navigate to your site Dashboard and select **Dev**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select **Dev**.
 
 1. Click **Code**, then click **Check Now**, and then click **Apply Updates** if updates are available.
 

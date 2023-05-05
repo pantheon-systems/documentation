@@ -154,8 +154,6 @@ You can use your Dev environment to clone your site code to your workstation:
  
 1. Click the **Revoke** button next to the key you want to remove:
 
-![Revoke SSH Key](../images/dashboard/remove-ssh-key.png)
-
 ### Remove SSH Key from Pantheon - Classic Dashboard
 
 1. Navigate to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**.

@@ -24,7 +24,7 @@ To create your site:
 
    <Alert title="Note" type="info">
 
-   If you registered as an agency, and this is your first time logging in, you’ll land on your Workspace Dashboard. Go to your Personal Workspace by selecting your name in the menu bar, then select **Personal Workspace**.
+   If you registered as an agency, and this is your first time logging in, you’ll land on your Workspace. Go to your Personal Workspace by selecting your name in the menu bar, then select **Personal Workspace**.
 
    </Alert>
 

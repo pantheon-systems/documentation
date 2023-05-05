@@ -53,7 +53,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Create a New Drupal Site with Integrated Composer
 
-[Create a new Drupal site from the Dashboard](/guides/legacy-dashboard/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
+[Create a new Drupal site from the Dashboard](/add-site-dashboard) as you would with any new site. Integrated Composer is built in and ready to use.
 
 ## Upgrade or Migrate to Drupal
 

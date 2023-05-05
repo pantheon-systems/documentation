@@ -44,7 +44,7 @@ Once a ticket is submitted, you can view details for your support requests. If a
 
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
-To receive the highest level of support available to your site or Workspace, remember to access the chat from the Workspace Dashboard if available.
+To receive the highest level of support available to your site or Workspace, remember to access the chat from the Workspace if available.
 
 1. From your Site Dashboard or Personal Workspace, click **Support**.
 
