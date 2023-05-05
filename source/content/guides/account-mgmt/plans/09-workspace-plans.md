@@ -1,7 +1,7 @@
 ---
 title: "Plans"
-subtitle: Account Plans
-description: Upgrade your Account Plan.
+subtitle: Account Tiers
+description: Manage your Account Tier.
 tags: [plans]
 contributors: [wordsmither]
 showtoc: true
