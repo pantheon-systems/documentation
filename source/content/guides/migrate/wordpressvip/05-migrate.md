@@ -16,7 +16,7 @@ editpath: migrate/wordpressvip/05-migrate.md
 reviewed: "2021-06-15"
 ---
 
-Pantheon provides a WordPress VIP path for migrating existing sites to the platform. This process begins by clicking the **Migrate Existing Site** button on the User Dashboard.
+Pantheon provides a WordPress VIP path for migrating existing sites to the platform. This process begins by clicking the **Migrate Existing Site** button on either the workspace Home Page or Sites tab..
 
 <Partial file="migrate/migrate-wp.md" />
 

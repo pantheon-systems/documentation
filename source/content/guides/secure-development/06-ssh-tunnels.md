@@ -36,7 +36,7 @@ You should consider [Secure Runtime Access](/guides/secure-development/secure-ru
 
 - [Redis command-line client](/guides/object-cache/redis-command-line)
 
-- Add an [SSH key](/ssh-keys) to your Pantheon User Dashboard
+- Add an [SSH key](/ssh-keys) to your Pantheon Personal Settings.
 
 ## Create Secure Connection to MySQL using TLS
 

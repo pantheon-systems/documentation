@@ -51,7 +51,7 @@ Follow the procedure to [create a custom upstream](/guides/custom-upstream/creat
 
 This test site will be used later for evaluating Custom Upstream changes.
 
-1. Navigate to your User Dashboard > click **Create New Site**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) > click **Create New Site**.
 
 1. Name your site.
 

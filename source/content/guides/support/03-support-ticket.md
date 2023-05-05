@@ -26,7 +26,7 @@ In this section, we go over best practices when writing a support ticket, which 
 
 If you are a member of an [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces), use the Workspace's Dashboard to visit the Support tab.
 
-Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Workspace with a higher Account package. For a visual, check out the [Support Tab from the Workspace Dashboard](/guides/support/support-ticket/#organization-dashboard-support-tab).
+Contacting Support from your Personal Workspace will not provide the same support level as a Site Dashboard owned by an Workspace with a higher Account package. For a visual, check out the [Support Tab from the Workspace Dashboard](/guides/support/support-ticket/#organization-dashboard-support-tab).
 
 ### Workspace Dashboard Support Tab
 

@@ -46,7 +46,7 @@ Start a chat with our Support Team to ask questions or request assistance on iss
 
 To receive the highest level of support available to your site or Workspace, remember to access the chat from the Workspace Dashboard if available.
 
-1. From your Site or User Dashboard, click **Support**.
+1. From your Site Dashboard or Personal Workspace, click **Support**.
 
 1. Click **Launch Chat**, then click **New Conversation**.
 

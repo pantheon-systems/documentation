@@ -269,9 +269,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 <Tab title="GitHub" id="gh-auth" active={true}>
 
-1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations)** tab within the Pantheon Dashboard and select your organization:
-
-  ![Organization Dashboard](../../../images/dashboard/organizations.png)
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you want to add the upstream.
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
@@ -304,7 +302,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
       1. Click **Generate token** and copy the new token to your clipboard.
 
-1. Return to the Pantheon Organization Dashboard where you are creating the Custom Upstream.
+1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the Custom Upstream.
 
 1. Paste your new GitHub access token.
 
@@ -318,9 +316,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 <Tab title="Bitbucket" id="bb-auth">
 
-1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations)** tab within the Pantheon Dashboard and select your organization:
-
-  ![Organization Dashboard](../../../images/dashboard/organizations.png)
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you want to add the upstream.
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
@@ -349,7 +345,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
         1. Click **Create** and copy the new password.
 
-        1. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
+        1. [Return to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) where you are creating the Custom Upstream.
 
         1. Paste your new Bitbucket app password. The username field should already be populated based on the repository URL. 
 

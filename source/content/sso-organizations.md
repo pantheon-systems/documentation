@@ -46,7 +46,7 @@ Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/t
 
 ## Manage Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
+Pantheon organization administrators can manage sites and teams with the Professional Workspace. Automated user provisioning isn't available.
 
 
 ## Configure your IdP
