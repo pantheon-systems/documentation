@@ -15,11 +15,11 @@ integration: [SimpleSAMLphp]
 permalink: docs/guides/sso/shibboleth-sso
 ---
 
-This section provides information on how to install and configure [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. For a simpler SSO service provider solution, jump to [Alternatives](#alternatives).
+This section provides information on how to install and configure [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. If you are searching for an SSO service provider solution with minimal configuration requirements, go to [Alternatives](#alternatives).
 
 ## Before You Begin
 
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/stable/simplesamlphp-sp.html). This documentation contains only the necessary extra steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
+- Complete SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/stable/simplesamlphp-sp.html). This documentation contains the necessary steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
 
 <Alert title="Note" type="info">
 
@@ -29,17 +29,13 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 
 ## Install SimpleSAMLphp
 
-<Alert title="Note" type="info">
-
 [PHP mcrypt](http://php.net/manual/en/book.mcrypt.php) is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
-
-</Alert>
 
 <TabList>
 
 <Tab title="Download Method" id="tab-1-id" active={true}>
 
-1. Download [SimpleSAMLphp](https://simplesamlphp.org/) and add it to your git repository as `private/simplesamlphp`.
+1. Download [SimpleSAMLphp](https://simplesamlphp.org/) and add it to your Git repository as `private/simplesamlphp`
 
   ```bash{promptUser: user}
   wget https://simplesamlphp.org/download?latest -O simplesamlphp-latest.tar.gz
@@ -63,9 +59,9 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 
 <Tab title="Composer Method" id="tab-2-id">
 
-When using Composer to manage the SimpleSAMLphp library, you'll need to store your config files outside of the vendor directory in order to prevent those from being overwritten when you apply updates. We can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
+When using Composer to manage the SimpleSAMLphp library, you must store your config files outside of the vendor directory to prevent the files from being overwritten when you apply updates. You can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
 
-Commands below require a [nested docroot](/nested-docroot) structure and should all be run from the site root (not the nested docroot `web` directory).
+The commands below require a [nested docroot](/nested-docroot) structure and should all be run from the site root (not the nested docroot `web` directory).
 
 1. Add the SimpleSAMLphp library:
 
@@ -98,7 +94,7 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
  ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
  ```
 
-1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
+1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if you update or re-install SimpleSAMLphp using Composer:
 
  ```json:title=composer.json
 "scripts": {
@@ -113,17 +109,17 @@ Commands below require a [nested docroot](/nested-docroot) structure and should 
 
 1. Repeat the steps for the metadata folder (depending on your requirements).
 
-1. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
+1. Commit and push these changes back to your Pantheon Dev or Multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
 1. [Generate or install certificates](https://simplesamlphp.org/docs/stable/simplesamlphp-sp) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 
-By the end of these steps, you should have a docroot structure similar to the output below:
+You should now have a docroot structure similar to the output below:
 
 ```bash
 .
 ├── private
 │   └── simplesamlphp
-|       ├── config 
+|       ├── config
 │       │   ├── authsources.php
 |       |   └── config.php
 |       └── metadata (optional)
@@ -200,7 +196,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
   git commit -am "Adding SimpleSaml config files."
   ```
 
-You can now visit the subdirectory `/simplesaml` on your development site and complete your metadata configuration.
+1. Visit the subdirectory `/simplesaml` on your development site and complete your metadata configuration.
 
 ## Drupal Configuration
 
@@ -208,7 +204,7 @@ If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/proje
 
 ### Composer settings.php File
 
-Configuration of the `setting.php` file is not needed if you are using Composer. 
+Configuration of the `setting.php` file is not needed if you are using Composer.
 
 ### Non-Composer settings.php File
 
@@ -233,7 +229,7 @@ composer require drupal/simplesamlphp_auth:"^4"
 
 ## WordPress Multisite Issues
 
-WordPress Multisite users have reported a possible solution to enable SSO on their site; modify `inc/class-wp-saml-auth.php` to include:
+WordPress Multisite users have reported a possible solution to enable SSO on their site. To use this solution, modify `inc/class-wp-saml-auth.php` to include:
 
 ```php:title=class-wp-saml-auth.php
 //$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_URL );
