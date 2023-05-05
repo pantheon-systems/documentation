@@ -34,7 +34,7 @@ export env=dev
 
 You can create a new backup and set the length of time a backup is kept. You must set this for every environment (Dev, Test, and Live).
 
-1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Click **Backups** and then click **Create New Backup**. The status of the new backup is shown in the progress bar. The jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 

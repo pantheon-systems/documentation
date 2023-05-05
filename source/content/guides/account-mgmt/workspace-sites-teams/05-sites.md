@@ -96,7 +96,7 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
-1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Select **Billing**, then **Invite a business owner to pay for this site**.
 
@@ -137,7 +137,7 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client. 
 
-1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click the **Billing** tab.
 
@@ -151,7 +151,7 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 Agencies should follow the steps below to maintain Preferred Pricing through a plan change. 
 
-1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click the **Billing** tab.
 
@@ -192,7 +192,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 ### Delete a Site from the Site Dashboard
 
-1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Select **Settings**, and then select **Delete Site**.
 

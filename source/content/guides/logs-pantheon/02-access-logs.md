@@ -32,7 +32,7 @@ Click **Connection Info** in the Site Dashboard of the desired environment to ge
 
 Follow the steps below to download your application log files.
 
-1. Navigate to the **Site Dashboard** and open the desired environment (Multidev, Dev, Test, or Live).
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 
@@ -67,7 +67,7 @@ Note that this will only connect to one application container. If you have multi
 
 Follow the steps below to download your database log files.
 
-1. Navigate to the **Site Dashboard** and open the desired environment (Multidev, Dev, Test, or Live).
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 

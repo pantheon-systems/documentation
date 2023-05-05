@@ -37,9 +37,9 @@ To set up your team:
 
   ![Adding a team member](../../../images/create-workspace-team.png)
 
-1. Click **Continue**. Your Workspace is created, and you are taken to the Workspace Dashboard.
+1. Click **Continue**. Your Workspace is created, and you are taken to the Workspace.
 
-   ![Workspace Dashboard](../../../images/create-workspace-dashboard.png)
+   ![Workspace](../../../images/create-workspace-dashboard.png)
 
 You have created your first workspace, and added your team members. If you'd like to learn more about workspaces and teams, refer to [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
 

@@ -32,4 +32,4 @@ The emails listed below are only received by users who have been assigned to the
 
 - **Site plan level change:** a Pantheon-generated notification sent to all site admins and workspace admins when a site's plan is upgraded or downgraded.
 
-- **Site added as supporting Workspace:** a Pantheon-generated notification sent to all workspace admins when a site is added to an workspace as a supporting Workspace.
+- **Site added as supporting workspace:** a Pantheon-generated notification sent to all workspace admins when a site is added to an workspace as a supporting Workspace.

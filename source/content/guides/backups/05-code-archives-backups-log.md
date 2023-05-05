@@ -41,7 +41,7 @@ The Backup Log displays a list of existing backups for each environment. Recent 
 
 ### Access Backup Log
 
-1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Click **Backups** and then click **Backup Log**.
 

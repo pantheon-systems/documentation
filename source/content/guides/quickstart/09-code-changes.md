@@ -22,7 +22,7 @@ Finally, we’re going to edit code directly. We’ll commit our edits to <Icon 
 
 If you haven’t added a new theme to your site, return to the [previous lesson](/guides/quickstart/ui-changes) and do so.
 
-1. Navigate to your **Site Dashboard**, select the **Dev** tab, and then click **Code**. 
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **Dev** tab, and then click **Code**. 
 
 1. Confirm your Connection Mode is set to **SFTP**.
 
