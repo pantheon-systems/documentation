@@ -34,7 +34,7 @@ Build details include:
 
 ### View Build Details
 
-1. Log in to your **Site Dashboard** and select the **Sites** page.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and select the site you want to view the build details for.
 

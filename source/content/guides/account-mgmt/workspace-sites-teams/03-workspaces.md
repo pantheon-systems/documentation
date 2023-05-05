@@ -65,7 +65,9 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 You can switch between Workspaces to work on personal projects or to switch between Professional Workspaces.  To do so:
 
-- Click the Workspace Switcher (the icon in the upper left) to switch between Workspaces:
+- Click the Workspace Switcher (the icon in the upper left) to switch between Workspaces.
+
+  Your Personal Workspace is at the top, followed by an Professional Workspaces in which you are a member.
 
   ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
 

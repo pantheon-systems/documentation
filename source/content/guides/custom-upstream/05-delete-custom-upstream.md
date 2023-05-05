@@ -19,7 +19,7 @@ This section provides steps to delete a Custom Upstream. A Custom Upstream canno
 
 Follow these steps to delete your Custom Upstream.
 
-1. Navigate to the Organization Dashboard > click **Upstreams**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the upstream you want to delete.
 
 1. Click **Settings** next to the Upstream you want to delete.
 

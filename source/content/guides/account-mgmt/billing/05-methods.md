@@ -37,9 +37,7 @@ Personal payment methods can be used on all sites you own. Personal payment meth
 
 To add a payment method:
 
-1. Click your [user gravatar](personal-settings#profile).
-
-1. Select **Settings**, then select **Payment Methods**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **+ Add Payment Method**. 
 

@@ -33,7 +33,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 ## Create Your Project on Pantheon
 
-1. Log in to your **Site Dashboard** and then select the **Sites** page.
+1. Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 

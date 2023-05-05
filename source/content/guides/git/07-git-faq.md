@@ -102,7 +102,7 @@ If you're on WordPress, you'll need to find your starting point by looking at th
 
 ## Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/ssh-keys).
+If you're having problems cloning your Git repository, verify your SSH key [Personal Settings](/guides/personal-settings) in your  is enabled. For more information, see [Generating SSH Keys](/ssh-keys).
 
 ## Why am I being prompted for my password after adding the public key?
 

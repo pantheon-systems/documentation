@@ -110,7 +110,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 1. Log in to your Pantheon Dashboard.
 
-1. In the top right of the page, click your [user gravatar](personal-settings#profile), select **Personal Settings**, then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
+1. [Go to your Personal Settings](/guides/personal-settings), then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
 
 1. Click **Add New Key**.
 
@@ -150,7 +150,7 @@ You can use your Dev environment to clone your site code to your workstation:
 
 1. Log in to your Pantheon Dashboard.
 
-1. In the top right of the page, click your [user gravatar](personal-settings#profile), select **Personal Settings**, then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
+1. [Go to your Personal Settings](/guides/personal-settings), then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
  
 1. Click the **Revoke** button next to the key you want to remove:
 
@@ -215,7 +215,7 @@ Password requests may still occur after adding an SSH key to your Pantheon accou
 ssh-add -L | ssh-keygen -l -E md5 -f - | awk '{print substr($2,5)}'
 ```
 
-The resulting string should match one of the keys [listed in your User Dashboard](https://dashboard.pantheon.io/users/#account/ssh-keys).
+The resulting string should match one of the keys [listed in your Personal Settings](https://dashboard.pantheon.io/users/#account/ssh-keys).
 
 To resolve, add your SSH key to the ssh-agent using the following command, replacing `id_rsa` with the name of your private key, if different:
 

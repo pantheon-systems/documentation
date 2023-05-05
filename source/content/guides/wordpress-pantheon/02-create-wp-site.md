@@ -22,7 +22,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Login to your Pantheon account.
 
-    The Sites tab of your User Dashboard opens by default unless you are registered as an agency and this is your first time logging in. In that case, you’ll land on your Workspace Dashboard. Navigate to your User Dashboard by selecting your name in the menu bar, then My Dashboard.
+    Your Personal Workspace opens by default unless you are registered as an agency and this is your first time logging in. In that case, you’ll land on your Workspace Dashboard. Go to your Personal Workspace by selecting your name in the menu bar, then Personal Workspace.
 
 1. Select <Icon icon="plus" text="Create New Site"/>.
 
