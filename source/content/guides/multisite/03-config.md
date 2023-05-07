@@ -24,20 +24,10 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 </Alert>
 
 ## Install the WordPress Multisite
+  
+### Via Terminus  
 
-We recommend using [Terminus](/terminus) to install a WordPress Multisite.
-
-1. Install the most recent release of Terminus:
-
-  ```bash{promptUser: user}
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-  ```
-
-1. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
-
-    ```bash{promptUser: user}
-    terminus auth:login --machine-token=<machine-token>
-    ```
+Make sure [Terminus](/terminus) is installed and authenticated.
 
 1. Make sure the site's connection mode is set to SFTP:
 
