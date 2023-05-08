@@ -50,7 +50,7 @@ If you do not use Composer on your project, you can still get started with the W
 
 * Download the most recent version of the Source Code (zip) file.
 
-![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets.png)
+![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets2.png)
 
 * Extract the plugin in your `wp-content/plugins` directory. You will get all of the compiled assets and included dependencies, including the CMS-agnostic, [global PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations) in the package.
 
