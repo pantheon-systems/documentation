@@ -23,58 +23,75 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 </Alert>
 
-## Install the WordPress Multisite
+## Install WordPress Multisite Via Terminus
 
-We recommend using [Terminus](/terminus) to install a WordPress Multisite.
+Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/install#authenticate) before you complete the steps below.
 
-1. Install the most recent release of Terminus:
-
-  ```bash{promptUser: user}
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-  ```
-
-1. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
-
-    ```bash{promptUser: user}
-    terminus auth:login --machine-token=<machine-token>
-    ```
-
-1. Make sure the site's connection mode is set to SFTP:
+1. Set the site's connection mode to SFTP:
 
     ```bash{promptUser: user}
     terminus connection:set <site>.dev sftp
     ```
 
-1. Use Terminus to execute the `wp core multisite-install` command. You can refer to the [documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/) for more information.
+1. Use Terminus to execute the `wp core multisite-install` command. You can refer to the [WordPress documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/) for more information.
 
-  <Alert title="Note" type="info">
+      <Alert title="Note" type="info">
 
-  The default behavior for this command is to create a WordPress Multisite with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.
+      The default behavior for this command is to create a WordPress Multisite with the **subdirectory** configuration. To create your network with the **subdomain** configuration, add the `--subdomains` flag.
 
-  </Alert>
+      </Alert>
 
-  ```bash{promptUser: user}
-  terminus wp <site>.<env> -- core multisite-install --url=<url> --title=<site-title> --admin_user=<username> --admin_email=<email>
+      ```bash{promptUser: user}
+      terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_email=<email>
+      ```
+
+      After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
+
+      ```bash{outputLines: 2-6}
+      terminus wp sitenetworks.dev -- core multisite-install --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
+      Admin password: abcdefgnotarealpassword
+      Created single site database tables.
+      Set up multisite database tables.
+      Added multisite constants to 'wp-config.php'.
+      Success: Network installed. Don't forget to set up rewrite rules (and a .htaccess file, if using Apache).
+      ```
+
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. The `wp core multisite-install` command that you ran modified the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which must be updated to work on Pantheon.
+
+1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
+
+1. Click **Open SFTP client**, and enter your User Dashboard password when prompted.
+
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
+
+1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
+
+1. Locate the configuration added by WP-CLI, and **modify** the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded URL to a dynamic URL `$_SERVER['HTTP_HOST']`. This automatically detects the URL on each environment. You must replace this variable. For example:
+
+  ```php:title=wp-config.php
+  define( 'WP_ALLOW_MULTISITE', true );
+  define( 'MULTISITE', true );
+  define( 'SUBDOMAIN_INSTALL', false );
+  $base = '/';
+  define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
+  define( 'PATH_CURRENT_SITE', '/' );
+  define( 'SITE_ID_CURRENT_SITE', 1 );
+  define( 'BLOG_ID_CURRENT_SITE', 1 );
   ```
 
- After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
+    Refer to the [wp-config-php documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
 
-  ```bash{outputLines: 2-6}
-  terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
-  Admin password: abcdefgnotarealpassword
-  Created single site database tables.
-  Set up multisite database tables.
-  Added multisite constants to 'wp-config.php'.
-  Success: Network installed. Dont forget to set up rewrite rules.
-  ```
+1. Save your changes and upload the `wp-config.php` file to Pantheon's **Dev** environment.
 
-The message confirms your WordPress Multisite is installed.
+<Alert title="Note" type="info">
 
-## Configure the WordPress Multisite
+A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for Multisite use by your Account Manager, you can ignore this warning.
 
-The `wp core multisite-install` command that we ran in the previous section modifies the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant, which assigns a specific URL to your WordPress Multisite.
+</Alert>
 
-To ensure it works on the Pantheon platform, you need to adjust the configuration so that the `DOMAIN_CURRENT_SITE` constant is defined conditionally based on the given environment:
+## Install WordPress Multisite Via the GUI
+
+You can configure a newly installed WordPress site into a WordPress Multisite within the GUI.
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
@@ -86,58 +103,15 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and **comment out** the line that sets `DOMAIN_CURRENT_SITE`. You will replace this variable in the following step. For example:
+1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
 
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
-  define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', false );
-  $base = '/';
-  # define( 'DOMAIN_CURRENT_SITE', 'example.com' );
-  define( 'PATH_CURRENT_SITE', '/' );
-  define( 'SITE_ID_CURRENT_SITE', 1 );
-  define( 'BLOG_ID_CURRENT_SITE', 1 );
+
+  /* That's all, stop editing! Happy Pressing. */
   ```
 
-1. Add the following code block to your `wp-config.php` file, under the lines mentioned in the previous step:
-
-  ```php:title=wp-config.php
-  /**
-   * Define DOMAIN_CURRENT_SITE conditionally.
-   */
-  if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-    switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
-      case 'live':
-        // Value should be the primary domain for the WordPress Multisite.
-        define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
-        // Once you map a domain to Live, you can change DOMAIN_CURRENT_SITE
-        // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
-        break;
-      case 'test':
-        define( 'DOMAIN_CURRENT_SITE', 'test-<site>.pantheonsite.io' );
-        break;
-      case 'dev':
-        define( 'DOMAIN_CURRENT_SITE', 'dev-<site>.pantheonsite.io' );
-        break;
-      default:
-        # Catch-all to accommodate default naming for multi-dev environments.
-        define( 'DOMAIN_CURRENT_SITE', $_ENV['PANTHEON_ENVIRONMENT'] . '-' . $_ENV['PANTHEON_SITE_NAME'] . '.pantheonsite.io' );
-        break;
-      }
-  }
-  ```
-
-    If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
-      
-    You may notice that the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, you should conditionally define the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
-
-1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment after you edit.
-
-<Alert title="Note" type="info">
-
-A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for multisite use by your Account Manager, you can ignore this warning.
-
-</Alert>
+1. Navigate to the WordPress Admin dashboard, and select the **Tools** menu to confirm that **Network Setup** now appears.
 
 ## Develop the Multisite
 
