@@ -44,18 +44,18 @@ Make sure [Terminus](/terminus) is installed and authenticated.
   </Alert>
 
   ```bash{promptUser: user}
-  terminus wp <site>.<env> -- core multisite-install --url=<url> --title=<site-title> --admin_user=<username> --admin_email=<email>
+  terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_email=<email>
   ```
 
  After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
 
   ```bash{outputLines: 2-6}
-  terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
+  terminus wp sitenetworks.dev -- core multisite-install --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
   Admin password: abcdefgnotarealpassword
   Created single site database tables.
   Set up multisite database tables.
   Added multisite constants to 'wp-config.php'.
-  Success: Network installed. Dont forget to set up rewrite rules.
+  Success: Network installed. Don't forget to set up rewrite rules (and a .htaccess file, if using Apache).
   ```
 
 The message confirms your WordPress Multisite is installed.
@@ -63,8 +63,6 @@ The message confirms your WordPress Multisite is installed.
 ## Configure the WordPress Multisite
 
 The `wp core multisite-install` command that we ran in the previous section modifies the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant, which assigns a specific URL to your WordPress Multisite.
-
-To ensure it works on the Pantheon platform, you need to adjust the configuration so that the `DOMAIN_CURRENT_SITE` constant is defined conditionally based on the given environment:
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
@@ -76,14 +74,14 @@ To ensure it works on the Pantheon platform, you need to adjust the configuratio
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and **comment out** the line that sets `DOMAIN_CURRENT_SITE`. You will replace this variable in the following step. For example:
+1. Locate the configuration added by WP-CLI, and **modify** the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded url to a dynamic one `$_SERVER['HTTP_HOST']` . You will replace this variable in the following step. For example:
 
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false );
   $base = '/';
-  # define( 'DOMAIN_CURRENT_SITE', 'example.com' );
+  define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
