@@ -557,10 +557,10 @@
     subtitle: 'Learn how to use Quicksilver to automate your WebOps workflow'
     url: '/guides/quicksilver/'
   cta_alt:
-    title: 'Automate and Integrate with Quicksilver'
-    type: 'Essential Developer Training'
-    subtitle: "An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything."
-    url: '/workshops?c=lw3'
+    title: 'Pantheon Learning'
+    type: 'learn more'
+    subtitle: "Self-paced courses and virtual instructor-led training."
+    url: 'https://learning.pantheon.io/?docs'
   topics-groups:
     - title: ''
       subtitle: ''
