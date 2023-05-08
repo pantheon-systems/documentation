@@ -23,9 +23,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 </Alert>
 
-## Install the WordPress Multisite
-  
-### Via Terminus  
+## Install the WordPress Multisite Via Terminus
 
 Make sure [Terminus](/terminus) is installed and authenticated.
 
@@ -60,9 +58,7 @@ Make sure [Terminus](/terminus) is installed and authenticated.
 
 The message confirms your WordPress Multisite is installed.
 
-## Configure the WordPress Multisite
-
-The `wp core multisite-install` command that we ran in the previous section modifies the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant, which assigns a specific URL to your WordPress Multisite.
+The `wp core multisite-install` command that we ran modifies the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which we need to update in order to work best in Pantheon.
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
@@ -97,6 +93,33 @@ A warning may appear in the WordPress dashboard that you need to update your `.h
 
 </Alert>
 
+## Install the WordPress Multisite Via the GUI
+
+Alternatively, you can configure a newly installad WP site into a WordPress Multisite by:  
+  
+1. Navigatting to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+
+1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
+
+1. Click **Open SFTP client**, and enter your User Dashboard password when prompted.
+
+  If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
+
+1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
+
+1. Before the line `/* That's all, stop editing! Happy Pressing. */`, add the `define( 'WP_ALLOW_MULTISITE', true );` to enable the WPMS configuration.
+
+  ```php:title=wp-config.php
+  define( 'WP_ALLOW_MULTISITE', true );
+  
+  /* That's all, stop editing! Happy Pressing. */
+  ```
+
+1. From the WordPress Admin dashboard, the `Network Setup` will now appear under `Tools` menu.
+  
+  
+  
+  
 ## Develop the Multisite
 
 Congratulations on setting up your first WordPress Multisite. When you log in to the WordPress Dashboard, you'll see a **My Sites** menu item in the toolbar:
