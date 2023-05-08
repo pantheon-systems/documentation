@@ -18,7 +18,7 @@ permalink: docs/guides/sso
 
 Single sign-on (SSO) allows you to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 
-Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions for traffic from Pantheon to external services.
+Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are also no outbound restrictions for traffic from Pantheon to external services.
 
 ## Who is Single Sign-on for?
 
