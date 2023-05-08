@@ -1,7 +1,7 @@
 ---
 title: Single Sign-on with Pantheon
 subtitle: Use SimpleSAMLphp with Shibboleth SSO
-description: Using SimpleSAMLphp to configure a single sign-on system for your Drupal or WordPress site.
+description: Configure a single sign-on system for your Drupal or WordPress site with SimpleSAMLphp.
 tags: [security, sso, users]
 contributors: [kyletaylored]
 contenttype: [guide]
@@ -15,21 +15,21 @@ integration: [SimpleSAMLphp]
 permalink: docs/guides/sso/shibboleth-sso
 ---
 
-This section provides information on how to install and configure [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. If you are searching for an SSO service provider solution with minimal configuration requirements, go to [Alternatives](#alternatives).
+This section provides information on how to install and configure [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. Refer to the [Other SSO Options](#other-sso-options) section if you are searching for an SSO service provider solution with minimal configuration requirements.
 
 ## Before You Begin
 
-- Complete SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/stable/simplesamlphp-sp.html). This documentation contains the necessary steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
+- Complete SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/stable/simplesamlphp-sp.html). This documentation contains necessary steps to get SimpleSAMLphp working on Pantheon with Drupal or WordPress.
 
 <Alert title="Note" type="info">
 
-This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module from Drupal.org. For WordPress sites, use the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) plugin from WordPress.org with the bundled OneLogin SAML PHP library. WordPress Multisite users require [additional configuration](#wordpress-multisite-issues).
+The instructions below are only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module from Drupal.org. For WordPress sites, use the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) plugin from WordPress.org with the bundled OneLogin SAML PHP library. WordPress Multisite users require [additional configuration](#wordpress-multisite-issues).
 
 </Alert>
 
 ## Install SimpleSAMLphp
 
-[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php) is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
+[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php) is still used in SimpleSAMLphp 1.14.x, but was removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
 
 <TabList>
 
@@ -61,7 +61,7 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 
 When using Composer to manage the SimpleSAMLphp library, you must store your config files outside of the vendor directory to prevent the files from being overwritten when you apply updates. You can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
 
-The commands below require a [nested docroot](/nested-docroot) structure and should all be run from the site root (not the nested docroot `web` directory).
+The commands below require a [nested docroot](/nested-docroot) structure and must all be run from the site root (not the nested docroot `web` directory).
 
 1. Add the SimpleSAMLphp library:
 
@@ -181,11 +181,11 @@ Set up your SimpleSAMLphp `config.php` as follows:
   ]
   ```
 
-   A custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/simplesamlphp/simplesamlphp/blob/master/lib/SimpleSAML/Logger.php) implementation is required for persistent and centralized logging.
+   A custom `SimpleSAML/Logger/LoggingHandlerInterface` implementation is required for persistent and centralized logging.
 
   <Alert title="Note" type="info">
 
-  Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. To troubleshoot, remove `:443` from the line.
+  Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. To solve this error, remove `:443` from the line.
 
   </Alert>
 
@@ -200,7 +200,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 
 ## Drupal Configuration
 
-If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth). These instructions cover both Composer and non-Composer implementations for Drupal sites.
+If you are using the [simpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth) module, follow the instructions listed in the [README](https://git.drupalcode.org/project/simplesamlphp_auth) file. These instructions cover both Composer and non-Composer implementations for Drupal sites.
 
 ### Composer settings.php File
 
