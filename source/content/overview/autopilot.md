@@ -31,11 +31,10 @@ Pantheon's Autopilot:
 
 <Tab title="Features" id="features">
 
-* Automated Update Detection
-* Update Core CMS Upstreams
-* Hands-off Visual Regression testing
+* Schedule updates Monthly, Weekly or Daily
+* Update Core CMS, themes and extensions
+* Hands-off visual regression testing (VRT)
 * Pre-configured workflows
-* Scheduled Updates on On-demand performance testing
 * Triggered notifications
 * Activity reporting
 
@@ -56,8 +55,8 @@ Pantheon's Autopilot:
 <Tab title="Requirements" id="requirements">
 
 * Gold, Platinum or Diamond account.
+* WordPress or Drupal site
 * If you're using Drupal, a [compatible version of Drush or Integrated Composer](https://docs.pantheon.io/guides/autopilot/autopilot-faq/#what-versions-of-drupal-are-supported-by-autopilot)
-* Multidev
 
 
 </Tab>
