@@ -18,11 +18,12 @@ showtoc: false
 
 <Tab title="Overview" id="overview" active={true}>
 
-Automatically detect and deploy new updates for WordPress and Drupal CMS sites, plugins and themes through an isolated Multidev environment and review with visual regression testing to approve changes before release. Scale your portfolio of sites by de-risking vulnerabilities, removing overhead and saving time for your users to deliver on business initiatives that drive results and higher-value experiences for customers.
+Pantheon's Autopilot:
 
-* Automate efficiency. Streamline the web operations process for updates with pre-configured automation and desired frequency from detection to deployment
-* Scale Open Source CMS. Maintain full control over your website stack with access to the latest innovations and management of critical dependencies for faster time-to-value for WordPress and Drupal sites
-* Optimize for experience. Leverage with certainty open source tooling available to organizations and bring increased value to your website, your teams and your customers
+- Automatically detects when new WordPress or Drupal updates are available
+- Performs the updates in an isolated [Multidev](/guides/multidev) environment
+- Tests the updates with automated visual regression testing (VRT)
+- Optionally deploys the updates
 
 ![Autopilot Dashboard](../../images/autopilot/autopilot-sites-overview.png)
 
@@ -70,7 +71,8 @@ Automatically detect and deploy new updates for WordPress and Drupal CMS sites, 
 
 ## Learning
 
-* https://learning.pantheon.io/page/catalog#products-and-features_autopilot
+* [Autopilot Overview](https://learning.pantheon.io/autopilot-quick-start)
+* [Is Autopilot Right for My Website?](https://learning.pantheon.io/is-autopilot-right-for-my-website-quick-lesson?reg=1)
 
 
 ## Support
