@@ -74,7 +74,7 @@ The `wp core multisite-install` command that we ran in the previous section modi
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and **modify** the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded url to a dynamic one `$_SERVER['HTTP_HOST']` . You will replace this variable in the following step. For example:
+1. Locate the configuration added by WP-CLI, and **modify** the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded url to a dynamic one `$_SERVER['HTTP_HOST']` so it will automatically detect the url on each environment. You will replace this variable in the following step. For example:
 
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
@@ -87,37 +87,7 @@ The `wp core multisite-install` command that we ran in the previous section modi
   define( 'BLOG_ID_CURRENT_SITE', 1 );
   ```
 
-1. Add the following code block to your `wp-config.php` file, under the lines mentioned in the previous step:
-
-  ```php:title=wp-config.php
-  /**
-   * Define DOMAIN_CURRENT_SITE conditionally.
-   */
-  if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-    switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
-      case 'live':
-        // Value should be the primary domain for the WordPress Multisite.
-        define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
-        // Once you map a domain to Live, you can change DOMAIN_CURRENT_SITE
-        // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
-        break;
-      case 'test':
-        define( 'DOMAIN_CURRENT_SITE', 'test-<site>.pantheonsite.io' );
-        break;
-      case 'dev':
-        define( 'DOMAIN_CURRENT_SITE', 'dev-<site>.pantheonsite.io' );
-        break;
-      default:
-        # Catch-all to accommodate default naming for multi-dev environments.
-        define( 'DOMAIN_CURRENT_SITE', $_ENV['PANTHEON_ENVIRONMENT'] . '-' . $_ENV['PANTHEON_SITE_NAME'] . '.pantheonsite.io' );
-        break;
-      }
-  }
-  ```
-
-    If your site uses a custom domain instead of a platform domain, edit the `wp-config.php` to reflect the custom domain. 
-      
-    You may notice that the `test` and `dev` cases are redundant. Remove the `test` and `dev` cases if you don't intend to add custom domains to those environments. Generally, you should conditionally define the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
+    If you have environment specific configuration, you can refer [here](https://docs.pantheon.io/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment)
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment after you edit.
 
