@@ -118,7 +118,7 @@ and setting `convert_to_subdirectory: true` in `sites.yml`.
     api_version: 1
     convert_to_subdirectory: true
     ```
-The domain map in `sites.yml` is not neccisary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the live site will convert with the following pattern:
+The domain map in `sites.yml` is not necessary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the live site will convert with the following pattern:
 * site.com           => test-site.pantheonsite.io
 * blog.site.com      => test-site.pantheonsite.io/blog/
 * blog.site.com/dir/ => test-site.pantheonsite.io/blog-dir/
