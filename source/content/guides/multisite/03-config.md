@@ -23,44 +23,40 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 </Alert>
 
-## Install the WordPress Multisite Via Terminus
+## Install WordPress Multisite Via Terminus
 
-Make sure [Terminus](/terminus) is installed and authenticated.
+Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/install#authenticate) before you complete the steps below.
 
-1. Make sure the site's connection mode is set to SFTP:
+1. Set the site's connection mode to SFTP:
 
     ```bash{promptUser: user}
     terminus connection:set <site>.dev sftp
     ```
 
-1. Use Terminus to execute the `wp core multisite-install` command. You can refer to the [documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/) for more information.
+1. Use Terminus to execute the `wp core multisite-install` command. You can refer to the [WordPress documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/) for more information.
 
-  <Alert title="Note" type="info">
+      <Alert title="Note" type="info">
 
-  The default behavior for this command is to create a WordPress Multisite with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.
+      The default behavior for this command is to create a WordPress Multisite with the **subdirectory** configuration. To create your network with the **subdomain** configuration, add the `--subdomains` flag.
 
-  </Alert>
+      </Alert>
 
-  ```bash{promptUser: user}
-  terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_email=<email>
-  ```
+      ```bash{promptUser: user}
+      terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_email=<email>
+      ```
 
- After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
+      After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
 
-  ```bash{outputLines: 2-6}
-  terminus wp sitenetworks.dev -- core multisite-install --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
-  Admin password: abcdefgnotarealpassword
-  Created single site database tables.
-  Set up multisite database tables.
-  Added multisite constants to 'wp-config.php'.
-  Success: Network installed. Don't forget to set up rewrite rules (and a .htaccess file, if using Apache).
-  ```
+      ```bash{outputLines: 2-6}
+      terminus wp sitenetworks.dev -- core multisite-install --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
+      Admin password: abcdefgnotarealpassword
+      Created single site database tables.
+      Set up multisite database tables.
+      Added multisite constants to 'wp-config.php'.
+      Success: Network installed. Don't forget to set up rewrite rules (and a .htaccess file, if using Apache).
+      ```
 
-The message confirms your WordPress Multisite is installed.
-
-The `wp core multisite-install` command that we ran modifies the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which we need to update in order to work best in Pantheon.
-
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. The `wp core multisite-install` command that you ran modified the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which must be updated to work on Pantheon.
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
@@ -70,7 +66,7 @@ The `wp core multisite-install` command that we ran modifies the `wp-config.php`
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and **modify** the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded url to a dynamic one `$_SERVER['HTTP_HOST']` so it will automatically detect the url on each environment. You will replace this variable in the following step. For example:
+1. Locate the configuration added by WP-CLI, and **modify** the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded URL to a dynamic URL `$_SERVER['HTTP_HOST']`. This automatically detects the URL on each environment. You must replace this variable. For example:
 
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
@@ -83,21 +79,21 @@ The `wp core multisite-install` command that we ran modifies the `wp-config.php`
   define( 'BLOG_ID_CURRENT_SITE', 1 );
   ```
 
-    If you have environment specific configuration, you can refer [here](https://docs.pantheon.io/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment)
+    Refer to the [wp-config-php documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
 
-1. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment after you edit.
+1. Save your changes and upload the `wp-config.php` file to Pantheon's **Dev** environment.
 
 <Alert title="Note" type="info">
 
-A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for multisite use by your Account Manager, you can ignore this warning.
+A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for Multisite use by your Account Manager, you can ignore this warning.
 
 </Alert>
 
-## Install the WordPress Multisite Via the GUI
+## Install WordPress Multisite Via the GUI
 
-Alternatively, you can configure a newly installad WP site into a WordPress Multisite by:  
-  
-1. Navigatting to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+You can configure a newly installed WordPress site into a WordPress Multisite within the GUI.
+
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
@@ -107,19 +103,16 @@ Alternatively, you can configure a newly installad WP site into a WordPress Mult
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Before the line `/* That's all, stop editing! Happy Pressing. */`, add the `define( 'WP_ALLOW_MULTISITE', true );` to enable the WPMS configuration.
+1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
 
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
-  
+
   /* That's all, stop editing! Happy Pressing. */
   ```
 
-1. From the WordPress Admin dashboard, the `Network Setup` will now appear under `Tools` menu.
-  
-  
-  
-  
+1. Navigate to the WordPress Admin dashboard, and select the **Tools** menu to confirm that **Network Setup** now appears.
+
 ## Develop the Multisite
 
 Congratulations on setting up your first WordPress Multisite. When you log in to the WordPress Dashboard, you'll see a **My Sites** menu item in the toolbar:
