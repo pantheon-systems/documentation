@@ -31,13 +31,11 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table.
 
-   To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
+   To activate Autopilot for a single site, select the checkbox next to that site and click the **Activate Autopilot** button. There, you can update settings for the Schedule you'd like Autopilot to run and the Deployment Destination.
 
-   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)
+   ![Autopilot customize setup button](../../../images/autopilot/bulk-activate.png)
 
-   To enable sites in bulk, select the sites you wish to activate, and click the **Activate Autopilot** button. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
-
-   ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
+   To activate Autopilot for sites in bulk, select the checkboxes for the sites you wish to activate, and click the **Activate Autopilot** button. Here, you can update settings for the Schedule you'd like Autopilot to run and the Deployment Destination. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
 
 1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
@@ -104,6 +102,8 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
+To configure a single site:
+
 1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace > click **Actions** <i className="fa fa-chevron-down fa-w-14"></i> > **Manage Autopilot Settings**.
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
@@ -111,6 +111,16 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
    If the Site uses [Integrated Composer](/guides/integrated-composer) (including all Drupal sites), Autopilot will show warnings in the sections where Composer manages updates.
 
 1. Click **Save** for each section of the configuration in which you make changes.
+
+To configure sites in bulk:
+
+1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace > In the **Site** column, select the checkboxes for the sites you wish to activate > Click the **Bulk Actions** button, then **Manage Settings**. 
+
+   Here, you can set the Schedule you'd like Autopilot to run, the Environoment Sync, and the Deployment Destination.
+
+   ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-actions.png)
+
+   Please note that you can still access these, and more advanced settings, for individual sites if you click into an individual site and select **Configuration** on the lefthand menu.
 
 ### Update Scope
 
