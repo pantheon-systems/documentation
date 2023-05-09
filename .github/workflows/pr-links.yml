@@ -13,6 +13,9 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.7.0
         with:
+          args: >
+            --accept 200,204,206,421,429
+            --verbose
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
