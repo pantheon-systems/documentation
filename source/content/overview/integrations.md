@@ -129,13 +129,13 @@ These are examples, not necessarily best practice.  Please refer to the [Scope o
 
   </Product>
 
-  <Product title={"Shibboleth SSO"} link={"/shibboleth-sso"}>
+  <Product title={"Shibboleth SSO"} link={"/guides/sso/shibboleth-sso"}>
 
   Use SimpleSAMLphp to configure a single sign-on system for your Drupal or WordPress site.
 
   </Product>
 
-  <Product title={"SSO"} link={"/sso-organizations"}>
+  <Product title={"SSO"} link={"/guides/sso/sso-organizations"}>
 
   Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
 

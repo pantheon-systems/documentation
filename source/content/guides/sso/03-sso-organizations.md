@@ -1,25 +1,22 @@
 ---
-title: Single Sign-On for Pantheon Organizations
-description: Detailed information to enable SAML single sign-on for your organization.
+title: Single Sign-on with Pantheon
+subtitle: SSO for Pantheon Organizations
+description: Learn how to enable SAML single sign-on for your organization.
 tags: [security, organizations]
-contenttype: [doc]
+contenttype: [guide]
 innav: [true]
+showtoc: true
 categories: [security, config]
 cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [saml, sso, azure]
+permalink: docs/guides/sso/sso-organizations
 ---
 
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. Refer to [SSO and Identity Federation on Pantheon](/sso) for more information.
+This section provides information on SSO workflow on Pantheon, as well as authentication and IdP configuration requirements.
 
-SAML applies to an entire email domain when enabled and is not available on a per-site, per-environment, or per-user basis.
-
-SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
-
-## How It Works
-
-The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** they use to access their Pantheon Dashboard.
+The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** used to access Pantheon.
 
 ### Members of an SSO Organization
 
@@ -29,7 +26,13 @@ Members of an SSO-enabled organization have an email address that includes the o
 
 - User is redirected to the configured IdP.
 
-- The IdP authenticates the user and then redirects the user to their Pantheon Dashboard.
+- The IdP authenticates the user and then redirects the user to Pantheon.
+
+<Alert title="Note"  type="info" >
+
+SAML applies to an entire email domain when enabled on Pantheon. You cannot use SAML on a per-site, per-environment, or per-user basis.
+
+</Alert>
 
 ### External Members
 
@@ -37,7 +40,7 @@ An external member is anyone in the organization using an email address on a dif
 
 - User submits the Pantheon login form with their email address.
 
-- User is authenticated and taken to their Pantheon Dashboard.
+- User is authenticated and taken to Pantheon.
 
 
 ## Terminus Authentication
@@ -46,24 +49,23 @@ Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/t
 
 ## Manage Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
-
+Pantheon organization administrators can [manage sites and teams with the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces). Automated user provisioning isn't available.
 
 ## Configure your IdP
 
-Refer to your IdP for general SAML 2.0 setup instructions. Pantheon will supply the string to be used in place of `Pantheon-SSO-Connection-Name` in the examples below.
+Refer to your IdP for general SAML 2.0 configuration instructions. Pantheon supplies the string you must use in place of `Pantheon-SSO-Connection-Name` in the examples below.
 
-You will need to enter the following:
+You must enter the following:
 
 1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name`
 
-    Note that the single sign-on URL is **case sensitive**.
+    - Note that the single sign-on URL is **case sensitive**.
 
-2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
+1. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 
-3. **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attributes `mail` to `user.email` and `user_name` to `user.email`.
+1. **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attributes `mail` to `user.email` and `user_name` to `user.email`.
 
-4. **Additional configuration details:**
+1. **Additional configuration details:**
     * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
     * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
     * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
@@ -93,11 +95,11 @@ Azure configuration requires several modifications from the general instructions
 
 1. **Email Domain(s)**: The email domain(s) your organization controls. Only users with email addresses in this domain will use the Organization's IdP.
 
-2. **Single Sign-on URL**: The URL of your IdP that we will redirect to for authentication.
+1. **Single Sign-on URL**: The URL of your IdP that we will redirect to for authentication.
 
-3. **Certificate**: The X.509 certificate used to validate incoming SAML requests. Please share this via https://gist.github.com/
+1. **Certificate**: The X.509 certificate used to validate incoming SAML requests. Please share this via https://gist.github.com/
 
-4. **Date/time to enable**: A time you'd like Pantheon to enable SSO, when you can test and ensure everything works.
+1. **Date/time to enable**: A time you'd like Pantheon to enable SSO, when you can test and ensure everything works.
 
 ## Troubleshooting
 
@@ -115,10 +117,16 @@ Make sure you generate the certificate using the correct encoding.
 
 ### Use token-signing certificate when using Microsoft AD FS as an IdP
 
-There are 3 types of certificate that you can generate:
+There are three types of certificates that you can generate:
 
  - `communication-service`
  - `token-decrypting`
  - `token-signing`
 
 Use a `token-signing` certificate, otherwise you will get a thumbprint error.
+
+
+## More Resources
+
+- [Managing Sites and Teams with the Pantheon Workspace](/guides/account-mgmt/workspace-sites-teams/)
+- [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces/)
