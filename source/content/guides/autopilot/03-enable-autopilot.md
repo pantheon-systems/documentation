@@ -35,7 +35,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
    ![Autopilot customize setup button](../../../images/autopilot/bulk-activate.png)
 
-   To activate Autopilot for sites in bulk, select the checkboxes for the sites you wish to activate, and click the **Activate Autopilot** button. Here, you can update settings for the Schedule you'd like Autopilot to run and the Deployment Destination. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
+   To activate Autopilot for sites in bulk, select the checkboxes for the sites you want to activate, and then click the **Activate Autopilot** button. You can update settings for the Schedule you'd like Autopilot to run and the Deployment Destination. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
 
 1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
@@ -60,12 +60,12 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 1. Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
 
 1. Click **Continue**.
-  
+
    ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../../images/autopilot/autopilot-setup-configuration.png)
 
 ### Schedule
 
-1. Set the **Deployment Destination** to the desired environment: 
+1. Set the **Deployment Destination** to the desired environment:
 
     - Dev
     - Test
@@ -88,7 +88,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 ### Visual Review
 
-1. Add pages to track for visual regression testing. 
+1. Add pages to track for visual regression testing.
 
    Autopilot automatically suggests up to ten URL paths during setup:
 
@@ -102,9 +102,11 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
-To configure a single site:
+You can configure a single site or use the bulk feature to configure multiple sites at the same time.
 
-1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace > click **Actions** <i className="fa fa-chevron-down fa-w-14"></i> > **Manage Autopilot Settings**.
+###  Configure a Single Site
+
+1. Navigate to the **<i className="fa fa-robot"></i>Autopilot** page of the Workspace, click **Actions**<i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
@@ -112,15 +114,19 @@ To configure a single site:
 
 1. Click **Save** for each section of the configuration in which you make changes.
 
-To configure sites in bulk:
+### Configure Sites in Bulk
 
-1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace > In the **Site** column, select the checkboxes for the sites you wish to activate > Click the **Bulk Actions** button, then **Manage Settings**. 
+1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace.
 
-   Here, you can set the Schedule you'd like Autopilot to run, the Environoment Sync, and the Deployment Destination.
+1. Select the checkboxes for the sites you wish to activate in the **Site** column.
+
+1. Click the **Bulk Actions** button and then select **Manage Settings**.
+
+   Manage Settings allows you to set the Schedule you'd like Autopilot to run on, the Environment Sync, and the Deployment Destination.
 
    ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-actions.png)
 
-   Please note that you can still access these, and more advanced settings, for individual sites if you click into an individual site and select **Configuration** on the lefthand menu.
+   Please note that you can still access these settings, and more advanced settings, for individual sites if you select an individual site and click **Configuration** on the left-hand menu.
 
 ### Update Scope
 
