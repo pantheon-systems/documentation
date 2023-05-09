@@ -16,7 +16,7 @@ showtoc: true
 permalink: docs/guides/sso
 ---
 
-Single sign-on (SSO) allows you to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard.
+Single sign-on (SSO) allows you to authenticate against your Identity Provider (IdP) when logging into Pantheon.
 
 Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are also no outbound restrictions for traffic from Pantheon to external services.
 
@@ -39,7 +39,7 @@ SAML applies to an entire email domain when enabled on Pantheon. You cannot use 
 
 </Alert>
 
-SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Organizations](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
+SAML SSO is included for customers with Diamond Accounts and is available for most [Pantheon Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces). If you'd like to upgrade to an eligible Account, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager for qualification requirements. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
 
 ## More Resources
 

@@ -16,7 +16,7 @@ permalink: docs/guides/sso/sso-organizations
 
 This section provides information on SSO workflow on Pantheon, as well as authentication and IdP configuration requirements.
 
-The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** used to access the Pantheon Dashboard.
+The SSO user experience for members and external members is outlined in the sections below. Note that the distinction between members and external members is determined by the **email domain** used to access Pantheon.
 
 ### Members of an SSO Organization
 
@@ -26,7 +26,7 @@ Members of an SSO-enabled organization have an email address that includes the o
 
 - User is redirected to the configured IdP.
 
-- The IdP authenticates the user and then redirects the user to their Pantheon Dashboard.
+- The IdP authenticates the user and then redirects the user to Pantheon.
 
 <Alert title="Note"  type="info" >
 
@@ -40,7 +40,7 @@ An external member is anyone in the organization using an email address on a dif
 
 - User submits the Pantheon login form with their email address.
 
-- User is authenticated and taken to their Pantheon Dashboard.
+- User is authenticated and taken to Pantheon.
 
 
 ## Terminus Authentication
@@ -49,7 +49,7 @@ Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/t
 
 ## Manage Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/guides/legacy-dashboard/org-dashboard). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces). Automated user provisioning isn't available.
 
 ## Configure your IdP
 
@@ -128,5 +128,5 @@ Use a `token-signing` certificate, otherwise you will get a thumbprint error.
 
 ## More Resources
 
-- [Managing Sites and Teams with the Pantheon Organization Dashboard](/guides/legacy-dashboard/org-dashboard)
-- [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces)
+- [Managing Sites and Teams with the Pantheon Workspace](/guides/account-mgmt/workspace-sites-teams/)
+- [Professional Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces/)
