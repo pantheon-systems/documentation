@@ -48,13 +48,15 @@ Note, if `pantheon.yml` is different between environments, the `search_replace` 
 
 ### Subdirectory WPMS
 
-No additional configuration is needed if you already completed the steps in [Enable Search and Replace](/guides/multisite/search-replace/#enable-search-and-replace). Search and replace will match the behavior of the platform’s search and replace for non-WPMS sites.
+No additional configuration is needed if you have already completed the steps in the [Enable Search and Replace](/guides/multisite/search-replace/#enable-search-and-replace) section. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites.
 
 ### Subdomain WPMS
 
-For subdomain Multisites, environments to be replaced are defined and paired in the `sites.yml` file. Search and replace will run for each domain listed in the source environment that has a matching key in the target environment. If search and replace is enabled for an environment, but `sites.yml` does not exist, nothing will be updated. If `sites.yml` is different between environments, the `domain_maps` in the target environment’s `sites.yml` will be used to determine what to replace.
+Environments that need to be replaced are defined and paired in the `sites.yml` file for subdomain Multisites. Search and replace runs for each domain listed in the source environment that has a matching key in the target environment. If Search and Replace is enabled for an environment, but the `sites.yml` file does not exist, nothing will be updated. If the `sites.yml` file is different between environments, the `domain_maps` in the target environment’s `sites.yml` file will be used to determine what is replaced.
 
-1. Create a `sites.yml` file inside the `private/` folder. Define and pair the environments to be replaced like the sample code below. 
+1. Create a `sites.yml` file inside the `private/` folder.
+
+1. Define and pair the environments to be replaced like the sample code below.
 
     ```yaml:title=private/sites.yml
     ---
@@ -97,35 +99,40 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
 
     ```
 
-1. Validate the `sites.yml` file (recommended) with Pantheon's `sites-yml-validator` utility available [on Github](https://github.com/pantheon-systems/sites-yml-validator). The project's README includes details on how to install and use the utility.
+1. Validate the `sites.yml` file (recommended) with Pantheon's `sites-yml-validator` utility available [on GitHub](https://github.com/pantheon-systems/sites-yml-validator). The project's `README` file includes details on how to install and use the utility.
 
 1. Commit the  `sites.yml` file in the `private/sites.yml` in the site’s Git repository.
 
 ### Subdomain to Subdirectory Conversion
-Sites can also be configured to use subdomain Multisite on the live environment, and subdirectory in all other instances.
 
-This can be configured by making `SUBDOMAIN_INSTALL` conditional in `wp-config.php`,
+Sites can also be configured to use subdomain Multisite in the Live environment, and subdirectory in all other instances.
+
+To configure this:
+
+1. Make `SUBDOMAIN_INSTALL` conditional in the `wp-config.php` file:
 
     ```php:title=wp-config.php
     if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) && $_ENV['PANTHEON_ENVIRONMENT'] ==  'live' ) {
       define( 'SUBDOMAIN_INSTALL', true );
     }
     ```
-and setting `convert_to_subdirectory: true` in `sites.yml`.
+
+1. Set `convert_to_subdirectory: true` in the `sites.yml` file.
 
     ```yaml:title=private/sites.yml
     ---
     api_version: 1
     convert_to_subdirectory: true
     ```
-The domain map in `sites.yml` is not necessary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the live site will convert with the following pattern:
-* site.com           => test-site.pantheonsite.io
-* blog.site.com      => test-site.pantheonsite.io/blog/
-* blog.site.com/dir/ => test-site.pantheonsite.io/blog-dir/
-* blog.com           => test-site.pantheonsite.io/blog-com/
-* blog.com/dir/      => test-site.pantheonsite.io/blog-com-dir/
+The domain map in the `sites.yml` file is not necessary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the Live site will convert with the following pattern:
 
-Sites configured for subdomain conversion will _only_ run the conversion step from live to a non-live environment. All other workflows assume a subdirectory-to-subdirectory search-replace.
+* `site.com`           => `test-site.pantheonsite.io`
+* `blog.site.com`      => `test-site.pantheonsite.io/blog/`
+* `blog.site.com/dir/` => `test-site.pantheonsite.io/blog-dir/`
+* `blog.com`           => `test-site.pantheonsite.io/blog-com/`
+* `blog.com/dir/`      => `test-site.pantheonsite.io/blog-com-dir/`
+
+Sites configured for subdomain conversion will _only_ run the conversion step from Live to a non-live environment. All other workflows assume a subdirectory-to-subdirectory search and replace.
 
 ## More Resources
 
