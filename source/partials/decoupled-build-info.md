@@ -53,20 +53,33 @@ You can save time by quickly triggering a build from your Overview page.
 ## Trigger a Build with GitHub Merges
 
 A build and deploy process is automatically triggered when you
-you push code to the default branch of your repository or merge a pull
+push code to the default branch of your repository or merge a pull
 request to that branch.
 
 You can follow the steps below to observe the build and deployment process in real time. Note that the steps below assume that you have already cloned your Front-End Site repository from GitHub to your local.
 
-1. Check out the `main` branch of your repository. You can use `git checkout main` to do this.
+1. Check out the `main` branch of your repository.
+
+    ```bash{promptUser: user}
+    git checkout main
+    ```
 
 1. Make a change to a file in your repository.
 
-1. Add and commit the change to the `main` branch using `git add .` and `git commit -m <message>`
+1. Add and commit the change to the `main` branch.
 
-1. Push the new commit to GitHub with `git push`
+    ```bash{promptUser: user}
+    git add .
+    git commit -m <message>
+    ```
 
-1. Open your site dashboard and navigate to the **Live Build** section on the **Overview** page to observe the new build in progress.
+1. Push the new commit.
+
+    ```bash{promptUser: user}
+    git push
+    ```
+
+1. Open your Site Dashboard, navigate to the **Overview** page and locate the **Live Build** section to observe the new build in progress.
 
 ## Multidev Branch Builds
 
@@ -74,17 +87,34 @@ You can build specific branches by naming the branch to begin with the prefix `m
 
 You can follow the steps below to observe the build and deployment process for a Multidev branch in real time. Note that the steps below assume that you have already cloned your Front-End Site repository from GitHub to your local.
 
-1. Check out the `main` branch of your repository. You can use `git checkout main` to do this.
+1. Check out the `main` branch of your repository.
 
-1. Create a new branch using the `multi-` prefix, for example:  `git checkout -b multi-example-update`
+    ```bash{promptUser: user}
+    git checkout main
+    ```
+
+1. Create a new branch using the `multi-` prefix, for example:
+
+    ```bash{promptUser: user}
+    git checkout -b multi-example-update
+    ```
 
 1. Make a change to a file in your repository.
 
-1. Add and commit the change to the `main` branch using `git add .` and `git commit -m <message>`
+1. Add and commit the change to the `main` branch.
 
-1. Push the branch to GitHub using `git push origin your-branch-name`
+    ```bash{promptUser: user}
+    git add .
+    git commit -m <message>
+    ```
 
-1. Open your site dashboard and navigate to the **Multidev Branches** section on the **Overview** page. You should see that branch begin to build after approximately a minute.
+1. Push the branch:
+
+    ```bash{promptUser: user}
+     git push origin your-branch-name
+    ```
+
+1. Open your Site Dashboard, navigate to the **Overview** page and scroll down to the **Multidev Branches** section. You should see your Multidev branch begin to build after approximately a minute.
 
 1. Use the **Actions** drop-down menu to visit the Multidev version of the site, view the logs, or get more information about the build.
 
