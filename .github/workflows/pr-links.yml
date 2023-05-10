@@ -16,6 +16,7 @@ jobs:
           args: >
             --accept 200,204,206,403,421,429
             --verbose
+            --exclude http://localhost:8000/
             "*.md"
             "source/content/**/*.md"
           fail: true
