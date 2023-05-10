@@ -16,6 +16,7 @@ jobs:
           args: >
             --accept 200,204,206,421,429
             --verbose
+            "*.md"
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
