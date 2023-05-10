@@ -68,7 +68,7 @@ The sections below will show you the basics for collaborating with others if you
 
 Follow the steps below to configure your GitHub repository.
 
-1. Set the **Owner** drop-down to **pantheon-systems**.
+1. If you have an **Owner** drop-down (as a member of one or more GitHub organizations), set the **Owner** value to your GitHub user or organization (wherever you want the GitHub repository to live). GitHub users that aren't part of any organizations will not have an option to change the owner.
 
 1. Enter the **Repository name** (the examples on this page use d7-ci).
 
