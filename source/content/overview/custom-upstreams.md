@@ -47,7 +47,7 @@ Instead of repeating the same technical work on each individual site, you can bu
 
 <Tab title="Requirements" id="requirements">
 
-* Plan type????
+* Gold, Platinum or Diamond Account Tier
 * Create or manage upstreams: Administor or Owner
 * Change or deploy upstream: Administrator, Team Member, Developer
 
