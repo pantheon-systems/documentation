@@ -8,8 +8,6 @@ tags: [--]
 reviewed: ""
 ---
 
-[Update the site](/core-updates) to the latest [Pantheon Drops 8](https://github.com/pantheon-systems/drops-8) Upstream and apply all available updates.
-
 1. Use Terminus to list all available updates:
 
   ```bash{outputLines:2}
