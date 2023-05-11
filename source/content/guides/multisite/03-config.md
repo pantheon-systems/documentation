@@ -45,7 +45,7 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
       terminus wp <site>.<env> -- core multisite-install --title=<site-title> --admin_user=<username> --admin_email=<email>
       ```
 
-      After you successfully install a new WordPress Multisite, a message is displayed that is similar to the following:
+      After you successfully install a new WordPress Multisite, a message displays that is similar to the following:
 
       ```bash{outputLines: 2-6}
       terminus wp sitenetworks.dev -- core multisite-install --title="WordPress Multisite" --admin_user=aghost --admin_email=aghost@pantheon.io
@@ -56,7 +56,9 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
       Success: Network installed. Don't forget to set up rewrite rules (and a .htaccess file, if using Apache).
       ```
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. The `wp core multisite-install` command that you ran modified the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which must be updated to work on Pantheon.
+      The `wp core multisite-install` command that you ran modified the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which must be updated to work on Pantheon.
+
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
@@ -66,12 +68,12 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and **modify** the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded URL to a dynamic URL `$_SERVER['HTTP_HOST']`. This automatically detects the URL on each environment. You must replace this variable. For example:
+1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded URL to a dynamic URL `$_SERVER['HTTP_HOST']`. This automatically detects the URL in each environment. You must replace this variable. For example:
 
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', false );
+  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
   $base = '/';
   define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
   define( 'PATH_CURRENT_SITE', '/' );
@@ -91,7 +93,19 @@ A warning may appear in the WordPress dashboard that you need to update your `.h
 
 ## Install WordPress Multisite Via the GUI
 
-You can configure a newly installed WordPress site into a WordPress Multisite within the GUI.
+Complete the steps below after spinning up a new WPMS site from the correct Custom Upstream in your workspace.
+
+1. Navigate to the WordPress Admin dashboard, select **Tools**, and then select **Network Setup**.
+
+  ![Network setup step 1](../../../images/wp-network-config.png)
+
+1. Select either the **Sub-domains** or **Sub-directories** option.
+
+1. Enter the **Network Title** and **Network Admin Email**, and then click **Install**.
+
+1. Finalize the installation by following steps provided from the GUI or by following the next steps.
+
+  ![Network setup last step](../../../images/wp-network-config-last.png)
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
@@ -106,12 +120,15 @@ You can configure a newly installed WordPress site into a WordPress Multisite wi
 1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
 
   ```php:title=wp-config.php
-  define( 'WP_ALLOW_MULTISITE', true );
+  define( 'MULTISITE', true );
+  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
+  define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
+  define( 'PATH_CURRENT_SITE', '/' );
+  define( 'SITE_ID_CURRENT_SITE', 1 );
+  define( 'BLOG_ID_CURRENT_SITE', 1 );
 
   /* That's all, stop editing! Happy Pressing. */
   ```
-
-1. Navigate to the WordPress Admin dashboard, and select the **Tools** menu to confirm that **Network Setup** now appears.
 
 ## Develop the Multisite
 
