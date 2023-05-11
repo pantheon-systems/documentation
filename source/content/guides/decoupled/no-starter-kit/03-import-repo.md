@@ -37,7 +37,7 @@ You can import your Git-provided repository to create your Front-End Site.
 
 1. Optional. Click **Advanced Settings** to set your:
 
-    - Root and output directories
+    - Output directory
     - Build command
     - Environment variables
     - Deployment path
