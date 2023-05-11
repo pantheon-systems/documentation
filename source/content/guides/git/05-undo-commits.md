@@ -160,9 +160,9 @@ You can revert a past commit that has been pushed to your Test or Live environme
 
     For example: to get rid of the commit that included Devel, grab the commit ID of the Devel commit and use it in the revert command.
 
-        ```bash{promptUser: user}
-        git revert ee24ab75e44239102bd0e72da8fb3b423168b4c5 --no-edit
-        ```
+    ```bash{promptUser: user}
+    git revert ee24ab75e44239102bd0e72da8fb3b423168b4c5 --no-edit
+    ```
 
 1. Push the change to Pantheon.
 
