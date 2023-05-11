@@ -77,7 +77,7 @@ Also note the impact of watchdog INSERTs; this is why you should fix your PHP er
 One of the services Pantheon offers is an [Object Cache backend](/guides/object-cache), which is a key-value store and is optimized for this type of work.​
 
 ### WordPress Caching Note
-There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
+There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-page-cache plugin](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
 
 ## Not Enough Traffic
 The next problem is when a site doesn't have enough traffic, which may seem paradoxical.

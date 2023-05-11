@@ -74,7 +74,7 @@ Our workspaces and dashboards provide a real-time interface into Pantheon. It in
 
 ## Learning
 
-* [Getting Started with Pantheon Overview](https://learning.pantheon.io/getting-started-with-pantheon)
+* [Getting Started with Pantheon Overview](https://learning.pantheon.io/getting-started-with-pantheon-overview)
 
 ## Support
 
