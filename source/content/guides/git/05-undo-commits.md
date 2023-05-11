@@ -159,7 +159,7 @@ You can revert a past commit that has been pushed to your Test or Live environme
     ```
 
 
-    For example: to get rid of the commit that included Devel, copy the commit ID of the Devel commit and use it in the revert command.
+    For example: to get rid of the commit that included Devel, copy the commit ID of the Devel commit and use it in the revert command:
 
 
     ```bash{promptUser: user}
