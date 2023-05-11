@@ -31,7 +31,7 @@ You must have the items listed below completed before you begin the steps in thi
 
 - Have a working [clone](/guides/git/git-config#clone-your-site-codebase) as a backup
 
-    - If you accidentally overwrite the core and re-write the Git log, the changes will be permanent. 
+    - If you accidentally overwrite the core and re-write the Git log, the changes will be permanent.
 
 Review the sections below carefully as instructions for reverting commits are different depending on the environment (Dev, Test, Live).
 
