@@ -47,7 +47,7 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Optional. Click **Advanced Settings** to set your:
 
-     - Root and output directories
+     - Output directory
      - Build command
      - Environment variables
      - Deployment path
