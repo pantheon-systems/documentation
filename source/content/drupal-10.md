@@ -20,7 +20,7 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 | Scenario | Status | Documentation |
 |---|---|---|
 | Create a Drupal 10 site on Pantheon | Available | [Create a Drupal 10 Site](/drupal-10#create-a-drupal-10-site)|
-| Upgrade a Drupal 9 site to Drupal 10 manually | Available | [Upgrade from Drupal 9 to Drupal 10](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10) |
+| Upgrade a Drupal 9 site to Drupal 10 manually | Available | [Upgrade from Drupal 9 to Drupal 10](/drupal-10#update-a-drupal-9-site-to-drupal-10) |
 | Create a Drupal 10 site from the Pantheon Dashboard | Available | |
 | Upgrade a Drupal 9 site to Drupal 10 using the [Terminus Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) | Early Access | Use the following command: `terminus conversion:upgrade-d10` |
 
