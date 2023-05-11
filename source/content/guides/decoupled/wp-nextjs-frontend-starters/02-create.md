@@ -46,7 +46,7 @@ The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
 
 1. Optional. Click **Advanced Settings** to set your:
 
-    - Root and output directories
+    - Output directory
     - Build command
     - Environment variables
     - Deployment path

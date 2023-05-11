@@ -106,8 +106,6 @@ You can link your CMS to your Front-End Site if you’re already managing conten
 
 You can configure and edit the following Build and Output Settings:
 
-- Root Directory
-    - This allows you to define the project's path if it's located in a subdirectory within your Git repo.
 - Build Command
 - Output Directory
 
@@ -121,7 +119,7 @@ You can configure and edit the following Build and Output Settings:
 
 1. Enter your desired settings and click **Save**.
 
-![Build and Output Settings](../../../../images/decoupled-build-output-settings.png)
+![Build and Output Settings](../../../../images/fes-build-output-settings.png)
 
 ## Site Environment Variables
 
