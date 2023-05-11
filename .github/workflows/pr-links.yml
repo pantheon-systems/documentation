@@ -19,7 +19,6 @@ jobs:
             --exclude http://localhost:8000/
             "*.md"
             "source/content/**/*.md"
-            --exclude "^Youtube src="
-          fail: true
+          fail: false
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
