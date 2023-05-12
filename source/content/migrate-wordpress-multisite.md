@@ -15,9 +15,9 @@ This document provides information on how to migrate WordPress Multisites, inclu
 
 <Alert title="Note" type="info">
 
-WordPress Multisite requires a special configuration that is only available to select customers. Before you can migrate a WordPress Multisite (WPMS), your organization must have the WPMS Upstream configured. This allows you to spin up an empty WPMS site to start the manual migration process. 
+WordPress Multisite requires a special configuration that is only available to select customers. Before you can migrate a WordPress Multisite (WPMS), your Workspace must have the WPMS Upstream configured. This allows you to spin up an empty WPMS site to start the manual migration process. 
 
-If you do not have the WPMS Upstream configured under your organization, refer to [Pantheon Account Options & Site Hosting Pricing](https://pantheon.io/plans/pricing) to see if you qualify for a WordPress Multisite. A Pantheon employee must create a custom WPMS Upstream in your organization before you can create Multisites. Reach out to your account manager to request that a new WPMS Upstream be created for you. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
+If you do not have the WPMS Upstream configured under your Workspace, refer to [Pantheon Account Options & Site Hosting Pricing](https://pantheon.io/plans/pricing) to see if you qualify for a WordPress Multisite. A Pantheon employee must create a custom WPMS Upstream in your Workspace before you can create Multisites. Reach out to your account manager to request that a new WPMS Upstream be created for you. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 
 
 </Alert>

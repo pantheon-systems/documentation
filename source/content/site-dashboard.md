@@ -1,49 +1,59 @@
 ---
-title: Quick Start
-subtitle: Dev/Test/Live Workflow
-description: In part four of our Quick Start guide, learn about the Dev/Test/Live workflow.
-contenttype: [guide]
-innav: [false]
+title: The Site Dashboard
+description: Learn how to work with the Pantheon Site Dashboard.
+contributors: [wordsmither]
+contenttype: [doc]
+innav: [true]
 categories: [overview, workflows]
 cms: [--]
-audience: [development]
-product: [--]
+audience: [--]
+product: [dashboard]
 integration: [--]
-tags: [dashboard, site, workflow]
+tags: [--]
 showtoc: true
-permalink: docs/guides/quickstart/workflow/
-editpath: quickstart/04-workflow.md
+reviewed: 2023-04-19
 ---
 
-Next, we'll learn about the Dev, Test, Live workflow.
+The Pantheon Site Dashboard is the hub of all development and activity for an individual site.
 
-Every Pantheon site comes with three separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
+![The Pantheon Site Dashboard](../images/dashboard/site-dashboard-image.png)
 
-<Alert title="Note" type="info">
+## Header Elements
 
-Agencies have access to additional development environments under the <Icon icon={"cloud"} text={"Multidev"} /> tab.
+On the top left of the page, you will see the following information:
+- The icon for the CMS you have installed
+- The name of the site.
+- If applicable, a yellow **Upgrade** button, that will allow you to [upgrade the site](/guides/account-mgmt/plans/site-plans).
+- If applicable, the name of the Professional Workspace containing this site.
 
-</Alert>
+On the right side, there are two rows of options:
+- Workflows: displays information about any active workflows.
+- Team: [manage the team](/guides/account-mgmt/workspace-sites-teams/teams#manage-teams) specific to this site.
+- Settings: [manage add ons](/guides/account-mgmt/plans/site-plans), [delete site](https://docs.pantheon.io/guides/account-mgmt/workspace-sites-teams/sites), and site information, including the PHP version.
+- Billing: [payment methods](/guides/account-mgmt/billing/methods) specific to this site.
+- Support: search for documentation, or start a chat with a Pantheon Customer Success Engineer.
 
-If you aren’t already on a Site Dashboard, [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Sites** tab, and then select the site you want to work with.
+## Environment Tabs
 
-## <span class="glyphicons glyphicons-wrench"></span> Dev
+### <span class="glyphicons glyphicons-cloud"></span> Multidev
+
+Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site. 
+
+### <span class="glyphicons glyphicons-wrench"></span> Dev
 
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
 Within the safety of this isolated environment, you can edit code and make updates to your site. All development on your Pantheon sites starts here.
 
-## <span class="glyphicons glyphicons-equalizer"></span> Test
+### <span class="glyphicons glyphicons-equalizer"></span> Test
 
 This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 
-To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content (from your installed CMS) “down” from your Live environment.
+### <span class="glyphicons glyphicons-cardio"> </span> Live
 
-![Pantheon Workflow](../../../images/code-workflow.png)
+This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. 
 
-## <span class="glyphicons glyphicons-cardio"> </span> Live
-
-This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. For more details, refer to [The Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites), or the condensed glossary below.
+## Left Navigation
 
 The following links are located within your Dev, Test, and Live environment tabs:
 

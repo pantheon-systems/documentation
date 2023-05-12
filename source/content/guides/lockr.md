@@ -193,4 +193,4 @@ If you're encrypting sensitive information in your production environment, that 
 
 #### Who do I contact for Lockr support?
 
-You can email the Lockr Support Team at support@lockr.io or get real-time support on Lockr's [Slack channel](http://slack.lockr.io).
+You can email the Lockr Support Team at support@lockr.io or get real-time support on Lockr's [Slack channel](https://slack.lockr.io/).

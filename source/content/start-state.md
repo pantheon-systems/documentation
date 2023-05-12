@@ -20,11 +20,11 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 </Alert>
 
-[Custom Upstreams](/guides/custom-upstream) are available to team members when the organization is associated during site creation.
+[Custom Upstreams](/guides/custom-upstream) are available to team members when the Workspace is associated during site creation.
 
 ## Pantheon Upstreams
 
-We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/). We extend Drupal 7 sites with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment that is automatically included in the Drupal Latest Version. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php` file.
+We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/). We extend Drupal 7 sites with [Pressflow](http://www.pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment that is automatically included in the Drupal Latest Version. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php` file.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
 - [Drupal (Latest Version)](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" />

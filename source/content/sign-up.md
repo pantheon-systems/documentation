@@ -22,7 +22,7 @@ To create an account:
 
 1. Read and accept the terms of service.
 
-1. Click **Create Account**.  Your account will be created (it may take a few moments), and a login page will appear.
+1. Click **Create Account**. Your account will be created (it may take a few moments), and a login page will appear.
 
 When you log in for the first time, there will be a welcome screen where you can choose to:
 
@@ -36,5 +36,5 @@ When you log in for the first time, there will be a welcome screen where you can
 
 ## More Resources
 
- - [Quick Start](/guides/quickstart/)  
- - [Get Started](https://docs.pantheon.io/get-started)
+- [Quick Start](/guides/quickstart/)
+- [Get Started](/get-started)

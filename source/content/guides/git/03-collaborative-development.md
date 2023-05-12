@@ -34,7 +34,7 @@ The sections below will show you the basics for collaborating with others if you
 
 ## Synchronizing Existing Pantheon Sites to GitHub
 
-1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site you want to work on.
 
     ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
@@ -257,7 +257,7 @@ You must create the `settings.php` file to develop in sync.
 
 1. Checkout a branch to start working on a new feature:
 
-    Since the site is associated with a supporting organization that has a Multidev environment, you can test out any feature. These environments have an 11-character limit for branch names, so you should use short branch names for your feature branches.
+    Since the site is associated with a Supporting Workspace that has a Multidev environment, you can test out any feature. These environments have an 11-character limit for branch names, so you should use short branch names for your feature branches.  
 
     ```bash{outputLines: 2}
     git checkout -b configs
