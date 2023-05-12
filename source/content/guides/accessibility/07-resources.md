@@ -51,7 +51,7 @@ This section is intended to serve as a quick reference and an expanded resource 
 
 ### Tools
 
-- [Accessibility Evaluation Tools ](https://webaim.org/articles/tools)
+- [Accessibility Evaluation Tools](https://webaim.org/articles/tools)
 - [Easy Checks – A First Review of Web Accessibility](https://www.w3.org/WAI/test-evaluate/preliminary/)
 - [General Checklist](https://a11yproject.com/checklist.html)
 - [WAVE testing tool](https://wave.webaim.org/)
@@ -60,7 +60,7 @@ This section is intended to serve as a quick reference and an expanded resource 
 ### Developers: Command-line Testing and Linting tools
 
 - [accesslint-ci](https://thoughtbot.com/blog/introducing-accesslint-web-accessibility-testing-in-ci)
-- [equa11y](http://www.equa11y.com/equa11ycli): axe-core command-line testing tool for developers.
+- [equa11y](https://github.com/oslabs-beta/Equa11y): axe-core command-line testing tool for developers.
 - [Pa11y](https://pa11y.org/): a range of free and open source tools to help designers and developers make their web pages more accessible Automated accessibility testing as part of site builds.
 
 #### Browser extensions
@@ -69,16 +69,15 @@ This section is intended to serve as a quick reference and an expanded resource 
 - [AXE](https://www.deque.com/axe/)
 - [WAVE Firefox and Chrome extensions](https://wave.webaim.org/extension)
 
-
 ## Best Practices
 
 ### Tables
 
- - [Deque University's Tables](https://dequeuniversity.com/checklists/web/tables)
+- [Deque University's Tables](https://dequeuniversity.com/checklists/web/tables)
 
 ### Links
 
- - [Writing Hyperlinks](https://www.nngroup.com/articles/writing-links/) from Nielsen Norman Group
+- [Writing Hyperlinks](https://www.nngroup.com/articles/writing-links/) from Nielsen Norman Group
 
 ### Media
 
@@ -88,7 +87,7 @@ This section is intended to serve as a quick reference and an expanded resource 
 - [Building Accessible Sites With Gatsby (workshop) - Reducing Motion](https://marcysutton.github.io/gatsby-a11y-workshop/animation/)
 - [Designing Safer Web Animation for Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [GIFS and prefers-reduced-motion](https://css-tricks.com/gifs-and-prefers-reduced-motion/)
-- [How much motion is too much?](https://uxdesign.cc/accessible-interaction-design-38db3b72c3ae) 
+- [How much motion is too much?](https://uxdesign.cc/accessible-interaction-design-38db3b72c3ae)
 - [Introduction to the CSS Reduced Motion Media Query | CSS Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Present slides with captions](https://support.google.com/docs/answer/9109474?hl=en)
 
@@ -99,6 +98,6 @@ This section is intended to serve as a quick reference and an expanded resource 
 ### Inclusive Language
 
 - [American College Personnel Association: Inclusive language for presenters](https://www.youtube.com/watch?v=vTqrSMrVW3w)
-- [Association for Experimental Education: Inclusive and accessible virtual presentations](https://www.aee.org/assets/Enews/2018/Feb/Inclusive-Accessible-Virtual-Meetings.pdf)
+- [Conscious Style Guide](https://consciousstyleguide.com/)
 - [Hubspot: How to use and promote inclusive language at your organization](https://blog.hubspot.com/marketing/inclusive-language)
 - [National Center on Disability and Journalism: Disability Language Style Guide](https://ncdj.org/style-guide/)

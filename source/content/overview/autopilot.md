@@ -31,12 +31,12 @@ Pantheon's Autopilot:
 
 <Tab title="Features" id="features">
 
-* Schedule updates Monthly, Weekly or Daily
-* Update Core CMS, themes and extensions
-* Hands-off visual regression testing (VRT)
-* Pre-configured workflows
-* Triggered notifications
-* Activity reporting
+- Schedule updates Monthly, Weekly or Daily
+- Update Core CMS, themes and extensions
+- Hands-off visual regression testing (VRT)
+- Pre-configured workflows
+- Triggered notifications
+- Activity reporting
 
 *Autopilot Setup Wizard*
 
@@ -54,10 +54,9 @@ Pantheon's Autopilot:
 
 <Tab title="Requirements" id="requirements">
 
-* Gold, Platinum or Diamond account.
-* WordPress or Drupal site
-* If you're using Drupal, a [compatible version of Drush or Integrated Composer](https://docs.pantheon.io/guides/autopilot/autopilot-faq/#what-versions-of-drupal-are-supported-by-autopilot)
-
+- Gold, Platinum or Diamond account.
+- WordPress or Drupal site
+- If you're using Drupal, a [compatible version of Drush or Integrated Composer](/guides/autopilot/autopilot-faq/#what-versions-of-drupal-are-supported-by-autopilot)
 
 </Tab>
 
@@ -65,18 +64,17 @@ Pantheon's Autopilot:
 
 ## Documentation
 
-* [Autopilot Guide](/guides/autopilot)
-* [Autopilot and Custom Upstreams](/guides/autopilot-custom-upstream)
+- [Autopilot Guide](/guides/autopilot)
+- [Autopilot and Custom Upstreams](/guides/autopilot-custom-upstream)
 
 ## Learning
 
-* [Autopilot Overview](https://learning.pantheon.io/autopilot-quick-start)
-* [Is Autopilot Right for My Website?](https://learning.pantheon.io/is-autopilot-right-for-my-website-quick-lesson?reg=1)
-
+- [Autopilot Overview](https://learning.pantheon.io/autopilot-quick-start)
+- [Is Autopilot Right for My Website?](https://learning.pantheon.io/is-autopilot-right-for-my-website-quick-lesson)
 
 ## Support
 
-* [Account holders](https://dashboard.pantheon.io/workspace/ee3995c4-652e-44a0-b00b-0085e92d78da/support)
+- [Account holders](https://dashboard.pantheon.io/workspace/support)
 
 </Tab>
 

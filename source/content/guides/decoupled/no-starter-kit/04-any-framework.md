@@ -29,13 +29,13 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
 
 - Examine the build command for the framework you have chosen. Depending on the framework, you may need to adjust the files to build a Front-End Site successfully.
 
-    - If the build command is `build`, you do not have to do anything for your build commands, although you may need to pay attention to Root Directory and Output Directory as these may be different for the framework used.
+    - If the build command is `build`, you do not have to do anything for your build commands, although you may need to pay attention to the Output Directory as this may be different for the framework used.
 
     - If your framework uses a different command, you must adjust the build command on the Build Settings page. For example, if you have a static site framework that uses the command `npm run generate`, you must input `generate` as the build command.
 
 - For sites that use server-side rendering, examine the `start` command for the framework you have chosen. Depending on the framework, you may need to adjust the files to run a Front-End Site successfully.
 
-    - If the build command is `start`, you do not have to do anything for your build commands, although you may need to pay attention to Root Directory and Output Directory as these may be different for the framework used.
+    - If the build command is `start`, you do not have to do anything for your build commands, although you may need to pay attention to the Output Directory as this may be different for the framework used.
 
     - If your framework uses a different command, you must update your `package.json` file to include an equivalent command called `start`. For example, if you use the command `npm run serve`, you must rename the command to `start` or create a duplicate start command.
 
@@ -43,7 +43,7 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
 
 ## Create Your Site
 
-1. Log in to your **Site Dashboard** and select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
@@ -64,7 +64,7 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
 
 1. Optional. Click **Advanced Settings** to set your:
 
-    - Root and output directories
+    - Output directory
     - Build command
     - Environment variables
     - Deployment path

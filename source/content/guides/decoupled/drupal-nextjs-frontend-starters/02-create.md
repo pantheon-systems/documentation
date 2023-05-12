@@ -31,7 +31,7 @@ Make sure you meet the following prerequisites before you continue.
 
 ## Create Your Project on Pantheon
 
-1. Log in to your **Site Dashboard** and select the **Sites** page.
+1. [[Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
@@ -47,7 +47,7 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Optional. Click **Advanced Settings** to set your:
 
-     - Root and output directories
+     - Output directory
      - Build command
      - Environment variables
      - Deployment path

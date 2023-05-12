@@ -94,22 +94,22 @@ Pantheon Front-End Sites are not compatible with the following Pantheon products
 
 The following features are currently not supported with Pantheon Front-End Sites:
 
-- New Relic
-- Object Cache
-- Pantheon Search (Solr)
-- Automated, one-click core updates
-- Role-based access (RBAC)
-- Automated backup and retention
-- Anti-malware
-- Deployed patches and updates
-- SOC-2 Type 2 Audit
-- Network security/intrusion prevention
-- Self-service domain management
-- Active purging
-- Supporting organizations
-- Multizone failover
-- Multiregion failover
-- Log forwarding
+* New Relic
+* Object Cache
+* Pantheon Search (Solr)
+* Automated, one-click core updates
+* Role-based access (RBAC)
+* Automated backup and retention
+* Anti-malware
+* Deployed patches and updates
+* SOC-2 Type 2 Audit
+* Network security/intrusion prevention
+* Self-service domain management
+* Active purging
+* Supporting Workspaces
+* Multizone failover
+* Multiregion failover
+* Log forwarding
 
 ## Stable URLs
 
@@ -156,7 +156,7 @@ Pull requests from a Multidev branch that are made against the upstream will tri
 
 The Front-End Sites Multidev workflow is outlined below:
 
-- **Code Push:** The external Git provider controls code posts and deployments. Code pushed to the main branch is built and deployed in your Live environment. Code pushed to any other branch generates a new MultiDev environment. Updates to existing branches result in the corresponding environment being updated.
+- **Code Push:** The external Git provider controls code posts and deployments. Code pushed to the main branch is built and deployed in your Live environment. Code pushed to any other branch generates a new Multidev environment. Updates to existing branches result in the corresponding environment being updated.
 
 - **Pull Request:** The Multidev environment is stood up and the preview and backend URL are displayed in GitHub on the PR, on a GitHub deployment, and also in the Front-End Sites Overview section of the dashboard. The build details for a PR are also be linked to GitHub.
 

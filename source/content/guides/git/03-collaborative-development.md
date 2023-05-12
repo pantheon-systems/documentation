@@ -3,7 +3,7 @@ title: Git on Pantheon Guide
 subtitle: Collaborative Development with an External Repository
 description: Use GitHub to collaborate with the team members on your Pantheon site.
 tags: [collaborate, git, local, webops, workflow]
-contributors: [bmackinney, jessifischer, mrfelton]
+contributors: [bmackinney, jessifischer, mrfelton, jazzsequence]
 showtoc: true
 permalink: docs/guides/git/collaborative-development
 contenttype: [guide]
@@ -21,7 +21,7 @@ Pantheon provides Git repositories for all sites on the platform. However, some 
 
 The codebase for your site is stored in a Git repository. This includes your versions of Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to power your site. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
-This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed/ "Pantheon's Drupal repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"), or one of their forks that our users manage as [Custom Upstreams](/guides/custom-upstream). Your site’s repository on the Pantheon platform will track one of these upstream repositories as a Git remote. 
+This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal](https://github.com/pantheon-upstreams/drupal-composer-managed/ "Pantheon's Drupal repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"), or one of their forks that our users manage as [Custom Upstreams](/guides/custom-upstream). Your site’s repository on the Pantheon platform will track one of these upstream repositories as a Git remote.
 
 These repositories control the common codebase for several sites. The most common change to an upstream is the release of a new core version. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using GitHub to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repository in sync with GitHub.
 
@@ -34,11 +34,11 @@ The sections below will show you the basics for collaborating with others if you
 
 ## Synchronizing Existing Pantheon Sites to GitHub
 
-1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site you want to work on.
 
     ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
-1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**:
+1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab, set the **Development Mode** to **Git**, and then click **Clone with Git**:
 
     Your local copy will now track the Pantheon repository as the origin.
 
@@ -68,17 +68,19 @@ The sections below will show you the basics for collaborating with others if you
 
 Follow the steps below to configure your GitHub repository.
 
-1. Set the **Owner** drop-down to **pantheon-systems**.
+1. Click the **Owner** drop-down menu to set the owner to your GitHub user or organization (wherever you want the GitHub repository to live).
+
+    - Only members of one or more GitHub organization have the option to change the owner. GitHub users that aren't part of an organization are not given the option to change the owner and will not have an **Owner** drop-down menu.
 
 1. Enter the **Repository name** (the examples on this page use d7-ci).
 
 1. Select **Public**.
 
-1. Keep **Initialize this repository with a README** unchecked if you want the option to add code to your repository. 
+1. Keep **Initialize this repository with a README** unchecked if you want the option to add code to your repository.
 
-1. Select the **Add .gitignore** checkbox > set the **.gitignore template** drop-down to **none**.
+1. Select the **Add .gitignore** checkbox and set the **.gitignore template** drop-down to **none**.
 
-1. Select the **Choose a license** checkbox > set the **License** drop-down to **none**.
+1. Select the **Choose a license** checkbox and set the **License** drop-down to **none**.
 
 1. Click **Create Repository**.
 
@@ -86,7 +88,7 @@ Follow the steps below to configure your GitHub repository.
 
 ### Add the GitHub Repository as a Remote
 
-Replace the word `origin` with the name you want for your remote to add the GithHub repository as a remote.
+Replace the word `origin` with the name you want for your remote to add the GitHub repository as a remote.
 
   - The remote, in this case, cannot be named `origin` because your local clone is already tracking the Pantheon site repository as `origin`.
 
@@ -234,7 +236,7 @@ You must create the `settings.php` file to develop in sync.
 
       The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
 
-      We recommend renaming the remote repository to something more specific than `origin`, such as `pantheon`. 
+      We recommend renaming the remote repository to something more specific than `origin`, such as `pantheon`.
 
 1. Rename the remote repository:
 
@@ -251,11 +253,11 @@ You must create the `settings.php` file to develop in sync.
 
  Working with teams on GitHub requires a branching strategy. You must add your colleagues to the site you're developing, both on [GitHub](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and on [Pantheon](/guides/account-mgmt/workspace-sites-teams/teams).
 
- Locally, your codebase is in sync with both repositories. 
+ Locally, your codebase is in sync with both repositories.
 
 1. Checkout a branch to start working on a new feature:
 
-    Since the site is associated with a supporting organization that has a Multidev environment, you can test out any feature. These environments have an 11-character limit for branch names, so you should use short branch names for your feature branches.  
+    Since the site is associated with a Supporting Workspace that has a Multidev environment, you can test out any feature. These environments have an 11-character limit for branch names, so you should use short branch names for your feature branches.  
 
     ```bash{outputLines: 2}
     git checkout -b configs
@@ -268,7 +270,7 @@ You must create the `settings.php` file to develop in sync.
     composer require drupal/xautoload
     ```
 
-1. Enable the module > test and verify that the module is working. 
+1. Enable the module > test and verify that the module is working.
 
 1. Add, commit, and push to branches on Pantheon and GitHub:
 
@@ -303,8 +305,8 @@ You must create the `settings.php` file to develop in sync.
     To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
     ```
 
-    The platform found no Multidev environments associated with the Git branch. 
-  
+    The platform found no Multidev environments associated with the Git branch.
+
     Continue with the steps below to create a Multidev environment.
 
 1. Create a Multidev environment in Terminus:
@@ -315,7 +317,7 @@ You must create the `settings.php` file to develop in sync.
 
     ![New environment named configs](../../../images/dashboard/new-env-configs.png)
 
-    The module will now be available to activate and test on Pantheon for your colleagues to experience. 
+    The module will now be available to activate and test on Pantheon for your colleagues to experience.
 
 1. Add a link to the module's configuration page on the Multidev environment in your GitHub pull request.
 
@@ -323,7 +325,7 @@ You must create the `settings.php` file to develop in sync.
 
 ### Create Pull Request
 
- You are now ready to create a pull request on GitHub. The pull request can include: 
+ You are now ready to create a pull request on GitHub. The pull request can include:
 
  - Links to the Multidev environment where the team can view the effects of the commits
 
@@ -353,7 +355,7 @@ You must create the `settings.php` file to develop in sync.
 
 ## Optional Tools to Optimize Workflows
 
-There are other options to further optimize workflows now that you have the basic setup. 
+There are other options to further optimize workflows now that you have the basic setup.
 
 - Pantheon's [Build Tools](/guides/build-tools/)
 

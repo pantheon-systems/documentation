@@ -926,6 +926,13 @@ Some code.
 
 </Example>
 
+## Terminology
+
+- Personal Workspace: a user's personal work area, containing sites/settings specific to that user.
+- Professional Workspace: (formerly Organization) a feature set for a collection of users or sites.
+- Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a Workspace
+- Supporting Workspace: (formerly Supporting Organization): a Professional Workspace that's been added to a specific site's Team.
+
 ## Tooltips
 
 Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:

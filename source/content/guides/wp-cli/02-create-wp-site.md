@@ -37,7 +37,7 @@ Terminus provides advanced interaction with the platform and allows you to run W
     curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
     ```
 
-2. Navigate to your **User Dashboard**, select **Account**, select **Machine Tokens**, and then [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/). T
+2. [Go to your Personal Settings](/guides/personal-settings), select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/), then [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
 1. Use the Machine token to authenticate Terminus:
 
@@ -67,9 +67,9 @@ The next sections use the example variables `tessa-site-wp` and `"Terminus Demo 
     terminus site:create tessa-site-wp "Terminus Demo Site" WordPress
     ```
 
-    - Add the `--org` option to the command above and pass the Organization name, label, or ID if you want to associate this site with an Organization. 
+    - Add the `--org` option to the command above and pass the Workspace name, label, or ID if you want to associate this site with an Workspace. 
 
-    - Use the `site:org:add` command to associate an existing site with an Organization.
+    - Use the `site:org:add` command to associate an existing site with an Workspace.
 
 2. Open your new Site Dashboard in a browser:
 
