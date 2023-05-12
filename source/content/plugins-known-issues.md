@@ -1033,7 +1033,7 @@ export ENV=dev
 1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
-  rm ./wp-content/wflogs
+  rm -rf ./wp-content/wflogs
   ```
 
 1. Create the following symlinks:
