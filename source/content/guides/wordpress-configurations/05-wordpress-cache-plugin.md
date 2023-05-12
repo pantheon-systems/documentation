@@ -64,7 +64,7 @@ You can enable maintenance mode for others while working on your site.
 
 ## Use Pantheon Cache Functions Programmatically
 
-There are three functions that are useful to developers within the [pantheon-page-cache.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) file that houses the Pantheon Cache plugin code. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/). Currently, the [limit on the number of paths](https://github.com/pantheon-systems/WordPress/issues/24) that can be cleared in a single call is 10.
+There are three functions that are useful to developers within the [pantheon-page-cache.php](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) file that houses the Pantheon Cache plugin code. You can call them from within your own custom code using various WordPress hooks, such as [save_post()](https://developer.wordpress.org/reference/hooks/save_post/).
 
 ### flush_site
 

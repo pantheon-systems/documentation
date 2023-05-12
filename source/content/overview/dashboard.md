@@ -65,7 +65,7 @@ Our site dashboard provide a real-time interface into Pantheon. It includes ever
 
 ## Learning
 
-* [Getting Started with Pantheon Overview](https://learning.pantheon.io/getting-started-with-pantheon)
+* [Getting Started with Pantheon Overview](https://learning.pantheon.io/getting-started-with-pantheon-overview)
 
 ## Support
 
