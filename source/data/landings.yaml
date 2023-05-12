@@ -1288,7 +1288,7 @@
         - text: 'Purchase Plans and Addons'
           url: '/guides/account-mgmt/plans/purchase'
         - text: 'Manage Your Plans'
-          url: '/guides/account-mgmt/plans/manage'
+          url: '/guides/account-mgmt/plans/site-plans#purchase-a-plan'
     - title: 'Workspaces, Sites, and Teams'
       subtitle: ''
       links:
@@ -1441,7 +1441,7 @@
         - text: 'Pricing Comparison'
           url: 'https://pantheon.io/pricing-comparison'
         - text: 'Site Plan Change'
-          url: '/guides/account-mgmt/plans/manage'
+          url: '/guides/account-mgmt/plans/site-plans#change-your-plan'
         - text: 'Transfer ownership (User-to-User/individual owner to a new individual owner)'
           url: '/guides/account-mgmt/workspace-sites-teams/sites#share-preferred-pricing-for-a-site'
         - text: 'Accept an invitation to pay (for the new owner)'
@@ -1449,7 +1449,7 @@
         - text: 'Update the credit card on file'
           url: '/guides/account-mgmt/billing/methods#update-personal-payment-method'
         - text: 'Cancel Site plan'
-          url: '/guides/account-mgmt/plans/manage#cancel-your-plan'
+          url: '/guides/account-mgmt/plans/site-plans#cancel-your-plan'
     - title: 'Preferred Pricing'
       subtitle: ''
       links:
