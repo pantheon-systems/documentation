@@ -414,7 +414,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
 
-  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.yml)
+  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
  </Tab>
 

@@ -30,20 +30,19 @@ Pantheon maintains an optimized version of WordPress that includes [WordPress Pa
 
 ## Pantheon Must-Use Plugin
 
-[Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon) is vital to the operation of your site on the platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
+[Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/default/wp-content/mu-plugins/pantheon-mu-plugin) is vital to the operation of your site on the platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
 
 The functionality of this plugin is broken into two parts: Updates and Page Cache.
 
 ### Pantheon Updates
 
-The [Pantheon Updates](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon/pantheon-updates.php) plugin disables automatic updates of all plugins, themes, and WordPress core on Pantheon's Test and Live environments. We do this because it is unsafe to apply updates to production environments directly without first verifying updates on a development environment.
+The [Pantheon Updates](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-updates.php) plugin disables automatic updates of all plugins, themes, and WordPress core on Pantheon's Test and Live environments. We do this because it is unsafe to apply updates to production environments directly without first verifying updates on a development environment.
 
 The Test and Live environment codebases also cannot be written to, preventing automatic updates from downloading files from WordPress.org. Any plugin or theme updates must be performed in a development environment then committed and deployed to the Test and Live environments. WordPress core updates must be applied to a development environment via our Git-based [upstream core updates feature](/core-updates).
 
-
 ### Pantheon Page Cache
 
-The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon/pantheon-page-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
+The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
 
 1. Navigate to your WordPress dashboard > click **Settings** > **Pantheon Page Cache**.
 
