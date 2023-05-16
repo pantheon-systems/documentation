@@ -17,17 +17,17 @@ product: [--]
 integration: [--]
 ---
 
-Workspaces are a home base for your WebOps. 
+Workspaces are a home base for your WebOps.
 
 ## Types of Workspaces
 
-- The **Personal Workspace** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own.  You have only one Personal Workspace. 
-  - Every Pantheon user is assigned one Personal Workspace. 
-  - All the sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in your Personal Workspace. 
-  - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace). 
-- **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites. 
+- The **Personal Workspace** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one Personal Workspace.
+  - Every Pantheon user is assigned one Personal Workspace.
+  - All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in your Personal Workspace.
+  - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
+- **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.
   - You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
-  - When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).  
+  - When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).
 
   <Alert title="Important" type="danger" >
 
@@ -49,7 +49,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
 
-- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime. 
+- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime.
 
 - **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
@@ -73,11 +73,11 @@ You can switch between Workspaces to work on personal projects or to switch betw
 
 ### Create a Professional Workspace
 
-You can create as many workspaces as necessary. 
+You can create as many workspaces as necessary.
 
 <Alert title="Warning" type="danger" >
 
-If you are a contract customer, your contract is associated to one Professional Workspace, which is created for you when you sign up. You may still create additional Professional Workspaces, but they may not contain any sites.  
+If you are a contract customer, your contract is associated to one Professional Workspace, which is created for you when you sign up. You may still create additional Professional Workspaces, but they may not contain any sites.
 
 </Alert>
 
@@ -111,7 +111,7 @@ You can customize the following for a workspace:
 
 - Payment and terms of service information for Sites built in your workspace.
 
-- [Upgrade](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans) a Silver Account Plan to a Gold Account Plan.
+- [Upgrade](/guides/account-mgmt/plans/workspace-plans) a Silver Account Plan to a Gold Account Plan.
 
 To customize a Professional Workspace:
 
@@ -120,7 +120,7 @@ To customize a Professional Workspace:
 
 ### Change the Workspace Plan Type
 
-Refer to [Account Plans](guides/account-mgmt/plans/workspace-plans) for information.
+Refer to [Account Plans](/guides/account-mgmt/plans/workspace-plans) for information.
 
 ### Delete a Workspace
 
@@ -132,7 +132,7 @@ Workspaces cannot be deleted.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to add sites to.
 
-1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/add-site) for more details. 
+1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/add-site) for more details.
 
 
 ### Why do login attempts fail for all users across my workspace simultaneously?
@@ -147,7 +147,7 @@ Only workspace team members and administrators of a Supporting Workspace with Mu
 
 ### Why can't my Agency workspace own a site?
 
-Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. 
+Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner.
 
 ### Can I add my own Agency as a Supporting Workspace to a client's site?
 

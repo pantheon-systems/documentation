@@ -65,7 +65,7 @@ This section uses several commands that use the temporary command line alias, `$
 
 Follow the steps below to get a clone of your Pantheon code on your local computer.
 
-1. Log in to Pantheon and [go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)
+1. Log in to Pantheon and [go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Locate the `git clone` command at the top of the development panel and copy and paste it into your terminal.
 

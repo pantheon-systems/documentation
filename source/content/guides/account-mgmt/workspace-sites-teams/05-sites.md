@@ -17,7 +17,7 @@ product: [--]
 integration: [--]
 ---
 
-This guide is specific to sites management, not developing and launching sites.
+This section is specific to sites management, not developing and launching sites.
 
 ## Site Dashboard
 
@@ -29,7 +29,7 @@ To view a Site Dashboard:
 1. Select the **Sites** tab. Here, you can:
    - Search for the site by site name.
    - Narrow the list using the filters on the left.
-   - Sort the columns by clicking on the column heading.
+   - Sort the columns by clicking the column heading.
 1. Click the name of the site.  The Site Dashboard appears.
 
 ## Add a Site
@@ -38,7 +38,7 @@ For guidance on how best to create or migrate a site, see [Adding a Site to Pant
 
 ## Manage Sites
 
-The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites. 
+The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites.
 
 Agency workspaces will show "Site Owners" instead of "Users in Charge"
 
@@ -135,7 +135,7 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 ### Existing Site
 
-Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client. 
+Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client.
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
@@ -143,13 +143,13 @@ Agencies should follow the steps below to share Preferred Pricing of an existing
 
 1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
 
-1. Click **Send Request**. 
+1. Click **Send Request**.
 
   A link is immediately sent to the email address to pay through the secure site.
 
 ### New Site
 
-Agencies should follow the steps below to maintain Preferred Pricing through a plan change. 
+Agencies should follow the steps below to maintain Preferred Pricing through a plan change.
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
@@ -161,7 +161,7 @@ Agencies should follow the steps below to maintain Preferred Pricing through a p
 
 1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
 
-1. Click **Send Request**. 
+1. Click **Send Request**.
 
   A link is immediately sent to the email address to pay through the secure site.
 

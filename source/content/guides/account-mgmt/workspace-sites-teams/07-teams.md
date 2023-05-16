@@ -17,7 +17,7 @@ product: [--]
 integration: [--]
 ---
 
-Teams allow you to define the users who will have access to a workspace or site. 
+Teams allow you to define the users who will have access to a workspace or site.
 
 ## Workspace Teams vs Site Dashboard Teams
 
@@ -46,7 +46,7 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Create new Multidev environments                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Create or view support tickets                                    | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Access and manage [Autopilot](/guides/autopilot)        | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
-| Access the [workspace](/guides/new-dashboard/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> <Popover title="Workspace Unprivileged" content="Users with an Unprivileged role will see the workspace's name, but will not be able to access it." />|
+| Access the [workspace](/guides/account-mgmt/workspace-sites-teams/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> <Popover title="Workspace Unprivileged" content="Users with an Unprivileged role will see the workspace's name, but will not be able to access it." />|
 | Access the Workspace                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
 | Change site upstream <Popover title="Permissions Note" content="The site and the upstream must both belong to the same workspace." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Deploy to Test and Live                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |

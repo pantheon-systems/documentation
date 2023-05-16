@@ -37,7 +37,7 @@ On the right side, there are two rows of options:
 
 ### <span class="glyphicons glyphicons-cloud"></span> Multidev
 
-Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site. 
+Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site.
 
 ### <span class="glyphicons glyphicons-wrench"></span> Dev
 
@@ -51,7 +51,7 @@ This environment is for reviewing the changes made in your Dev environment with 
 
 ### <span class="glyphicons glyphicons-cardio"> </span> Live
 
-This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment. 
+This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment.
 
 ## Left Navigation
 
