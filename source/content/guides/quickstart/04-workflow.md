@@ -25,7 +25,7 @@ Agencies have access to additional development environments under the <Icon icon
 
 </Alert>
 
-If you aren’t already on a Site Dashboard, [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Sites** tab, and then select the site you want to work with.
+If you aren’t already on a Site Dashboard, go to **Personal Workspace**, select the **Sites** tab, and then select the site you want to work with.
 
 ## <span class="glyphicons glyphicons-wrench"></span> Dev
 

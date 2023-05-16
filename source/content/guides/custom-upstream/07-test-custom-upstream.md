@@ -51,7 +51,7 @@ Follow the procedure to [create a custom upstream](/guides/custom-upstream/creat
 
 This test site will be used later for evaluating Custom Upstream changes.
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) > click **Create New Site**.
+1. Navigate to your User Dashboard > click **Create New Site**.
 
 1. Name your site.
 
@@ -163,7 +163,7 @@ Custom Upstreams cannot contain the tags `pantheon_test_n` or `pantheon_live_n`.
   git push pantheon-test core-update
   ```
 
-7. Return to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for your test site > navigate to the **Multidev** overview tab > click **Git Branches**.
+7. Return to the Site Dashboard for your test site > navigate to the **Multidev** overview tab > click **Git Branches**.
 
 8. Click the **Create Environment** button next to the `core-update` branch.
 

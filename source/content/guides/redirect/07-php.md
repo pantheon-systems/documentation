@@ -16,7 +16,7 @@ showtoc: true
 permalink: docs/guides/redirect/php
 ---
 
-If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. However, redirecting the platform domain will break the screenshot of your site in the Personal Workspace, and might complicate troubleshooting for our [Support](/guides/support/contact-support/) team.
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects. However, redirecting the platform domain will break the screenshot of your site in the User Dashboard, and might complicate troubleshooting for our [Support](/guides/support/contact-support/) team.
 
 AGCDN only works with custom domains. This means that `.pantheonsite.io` domains are not covered. With AGCDN, a site will not be fully protected under WAF if it is using the platform domain. A platform domain redirect to the main domain is recommended. 
 

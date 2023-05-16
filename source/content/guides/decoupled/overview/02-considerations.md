@@ -94,22 +94,22 @@ Pantheon Front-End Sites are not compatible with the following Pantheon products
 
 The following features are currently not supported with Pantheon Front-End Sites:
 
-* New Relic
-* Object Cache
-* Pantheon Search (Solr)
-* Automated, one-click core updates
-* Role-based access (RBAC)
-* Automated backup and retention
-* Anti-malware
-* Deployed patches and updates
-* SOC-2 Type 2 Audit
-* Network security/intrusion prevention
-* Self-service domain management
-* Active purging
-* Supporting Workspaces
-* Multizone failover
-* Multiregion failover
-* Log forwarding
+- New Relic
+- Object Cache
+- Pantheon Search (Solr)
+- Automated, one-click core updates
+- Role-based access (RBAC)
+- Automated backup and retention
+- Anti-malware
+- Deployed patches and updates
+- SOC-2 Type 2 Audit
+- Network security/intrusion prevention
+- Self-service domain management
+- Active purging
+- Supporting organizations
+- Multizone failover
+- Multiregion failover
+- Log forwarding
 
 ## Stable URLs
 

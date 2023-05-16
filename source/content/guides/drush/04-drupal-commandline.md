@@ -36,7 +36,7 @@ Terminus provides advanced interaction with the platform and allows us to run Dr
 
 1. [Install Terminus](/terminus/install#install-terminus).
 
-1. [Go to your Personal Settings](/guides/personal-settings), select **Account and Security**, and then select **Machine Tokens** to [generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
+1. Navigate to the Pantheon dashboard, click **User Dashboard**, select **Account**, and then select **Machine Tokens** to [generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
 1. Use the Machine Token to authenticate Terminus:
 
@@ -66,9 +66,9 @@ The next few sections use the example variables `my-site` and `"My D9 Site"` as 
   terminus site:create my-site "My Site" "drupal-composer-managed"
   ```
 
-  - You can add the `--org` option to the command above and pass the Workspace name, label, or ID if you want to associate this site with an Workspace.
+  - You can add the `--org` option to the command above and pass the Organization name, label, or ID if you want to associate this site with an Organization.
   
-  - Use the `site:org:add` command to associate an existing site with an Workspace.
+  - Use the `site:org:add` command to associate an existing site with an Organization.
 
 1. Open your new Site Dashboard in a browser:
 

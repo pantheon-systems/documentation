@@ -38,7 +38,7 @@ The navigation bar on the left contains several additional tabs to help you mana
 
   - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).  For information about migrating a site from a competitor, or other migration scenarios, refer to [Migrate Sites to Pantheon](/guides/guided/) on our [Get Started](/get-started) page.
 
-- **Team:** If you belong to a Workspace, you’ll see it listed here. Click the Workspace name to view the Workspace's dashboard.
+- **Team:** If you belong to an organization, you’ll see it listed here. Click the organization name view the organization's dashboard.
 
 - **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your Workspace.
 

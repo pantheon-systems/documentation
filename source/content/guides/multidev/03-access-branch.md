@@ -18,7 +18,7 @@ permalink: docs/guides/multidev/access-branch
 This section provides steps on how to access a Multidev branch environment.
 
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Multidev**.
+1. Navigate to the **Site Dashboard** then click **Multidev**.
 
 1. Select the name of the environment.
 

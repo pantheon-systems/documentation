@@ -109,7 +109,7 @@ At this point, you should be able to create a local branch, commit a change, and
 
 ### Create a Pantheon Site
 
-Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the default install with the code from our GitHub repository. In the commands below, replace the value for `--org=` with your Workspace's name.
+Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the default install with the code from our GitHub repository. In the commands below, replace the value for `--org=` with your organization's name.
 
 1. From your local terminal, use terminus to create a site on Pantheon:
 
