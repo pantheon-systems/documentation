@@ -23,7 +23,9 @@ Learn how to view and manage your invoices and subscriptions.
 
 To view your invoices:
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Invoices**.
+1. Go to your personal workspace.
+
+1. Click **Settings**, then click **Invoices**.
 
 Sites are listed below the card to which they are assigned. Up to 100 of the most recent invoices are shown in the list.
 

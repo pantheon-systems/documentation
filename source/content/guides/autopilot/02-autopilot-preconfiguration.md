@@ -76,7 +76,7 @@ Autopilot's visual regression tool takes before and after screenshots to check f
 
 1. Click **More Actions** in the **Review Test Results** page to see Autopilot data for a specific site.
 
-1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Workspace to view the site preview in a new browser tab.
+1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Dashboard to view the site preview in a new browser tab.
 
 1. Share this preview link with stakeholders and request their approval.
 

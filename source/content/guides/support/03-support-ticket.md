@@ -24,15 +24,15 @@ In this section, we go over best practices when writing a support ticket, which 
 
 ### Open the Ticket in the Right Place
 
-If you are a member of an [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces), use the Workspace's Dashboard to visit the Support tab.
+If you are a member of an [Organization](/guides/account-mgmt/workspace-sites-teams/workspaces), use the Organization's Dashboard to visit the Support tab.
 
-Contacting Support from your Personal Workspace will not provide the same support level as a Site Dashboard owned by an Workspace with a higher Account package. For a visual, check out the [Support Tab from the Workspace](/guides/support/support-ticket/#organization-dashboard-support-tab).
+Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher Account package. For a visual, check out the [Support Tab from the Organization Dashboard](/guides/support/support-ticket/#organization-dashboard-support-tab).
 
-### Workspace Support Tab
+### Organization Dashboard Support Tab
 
-If you are part of an Workspace with an enhanced Account package, navigate to the Support tab from the Workspace's Dashboard to make use of the Workspace's Support level.
+If you are part of an Organization with an enhanced Account package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level.
 
-![Select Support from the Workspace's Dashboard](../../../images/dashboard/support-from-org-dash.gif)
+![Select Support from the Organization's Dashboard](../../../images/dashboard/support-from-org-dash.gif)
 
 ### One Ticket Per Issue
 

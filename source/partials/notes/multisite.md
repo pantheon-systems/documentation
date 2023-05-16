@@ -10,6 +10,6 @@ reviewed: ""
 
 <Alert title="Note" type="info">
 
-Running a WordPress Multisite requires a special configuration that is only available to contract customers, and only Pantheon employees have the ability to create the Multisite upstream in your Workspace.
+Running a WordPress Multisite requires a special configuration that is only available to contract customers, and only Pantheon employees have the ability to create the Multisite upstream in your organization.
 
 </Alert >

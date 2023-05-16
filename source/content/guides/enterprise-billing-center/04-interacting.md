@@ -21,7 +21,9 @@ This section provides information on how you can access and interact with the Si
 
 You can access the Site Portfolio Report in the Enterprise Billing Center within the dashboard. You must have Admin privileges of the workspace to view the Site Portfolio Report. Note that access may vary depending on how your organization has configured [roles and permissions](/guides/account-mgmt/workspace-sites-teams/teams#roles-and-permissions).
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then click **Billing**.
+1. Navigate to the dashboard.
+
+1. Click **Settings** and then click **Billing**.
 
     Note that the Enterprise Billing Center page displays differently for different account types:
 
@@ -87,6 +89,10 @@ Enter the site name you want to search for in the **Search by site name** box lo
 You can increase the number of rows shown in each of the three Breakdown tables.
 
 Click the **Show rows per page** drop-down menu and select the number of rows you want to view.
+
+## Navigate to the Organization Dashboard from the Site Portfolio Report
+
+Click the link under the Customer Organization heading at the top of the report to access your [Organization Dashboard](/guides/legacy-dashboard/org-dashboard).
 
 ## Collapse the Breakdown Tables
 

@@ -38,7 +38,7 @@ We do not support uses of WordPress Multisite that run functionally-different or
 - [WordPress Multi-Network](https://wordpress.org/plugins/wp-multi-network/) installations where multiple domains can be added aside from subdomains and subdirectories.
 
 ## Request a WordPress Multisite
-WordPress Multisite requires a special configuration that is only available to select customers. Refer to [Pantheon Account Options & Site Hosting Pricing](https://pantheon.io/plans/pricing) to see if you qualify for a WordPress Multisite. A Pantheon employee must create a custom WordPress Multisite upstream in your Workspace for you to be able to create Multisites. Existing WordPress sites cannot be converted to a multisite, however they can be [migrated](/migrate-wordpress-multisite).
+WordPress Multisite requires a special configuration that is only available to select customers. Refer to [Pantheon Account Options & Site Hosting Pricing](https://pantheon.io/plans/pricing) to see if you qualify for a WordPress Multisite. A Pantheon employee must create a custom WordPress Multisite upstream in your organization for you to be able to create Multisites. Existing WordPress sites cannot be converted to a multisite, however they can be [migrated](/migrate-wordpress-multisite).
 
 Reach out to your account manager to request that a new WordPress Multisite upstream be created for you. Once an employee of Pantheon has created the upstream, you will be able to use it create Multisites in your org. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 

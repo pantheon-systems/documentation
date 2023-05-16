@@ -43,7 +43,7 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
 
 ## Create Your Site
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
+1. Log in to your **Site Dashboard** and select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 

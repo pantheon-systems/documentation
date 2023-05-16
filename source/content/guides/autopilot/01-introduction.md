@@ -70,7 +70,7 @@ Autopilot requires the following:
 
 ## Autopilot For Agencies
 
-Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning workspace.
+Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization.
 
 Agency users can only access Autopilot through the Agency Workspace.
 

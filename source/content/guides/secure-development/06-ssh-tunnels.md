@@ -36,7 +36,7 @@ You should consider [Secure Runtime Access](/guides/secure-development/secure-ru
 
 - [Redis command-line client](/guides/object-cache/redis-command-line)
 
-- Add an [SSH key](/ssh-keys) to your Pantheon Personal Settings.
+- Add an [SSH key](/ssh-keys) to your Pantheon User Dashboard
 
 ## Create Secure Connection to MySQL using TLS
 
@@ -88,7 +88,7 @@ Set up your SSH tunnel in Terminus:
 
 To manually create an SSH tunnel within your Pantheon Site Dashboard:
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and access the environment you want to connect with.
+1. Navigate to your Site Dashboard and access the environment you want to connect with.
 
 1. Click **Connection Info**. This will give you the required environment specific values for the command example below.
 
@@ -153,7 +153,7 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 
 ## Manually Create an SSH Tunnel to a Redis Cache Server
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the environment you want to connect with.
+1. Navigate to your Site Dashboard and select the environment you want to connect with.
 
 1. Get the one-line connection string. It will be in the following format:
 

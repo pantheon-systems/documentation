@@ -25,14 +25,14 @@ Click **Connection Info** in the Site Dashboard of the desired environment to ge
     | `appserver`  | `dev`, `test`, `live`, `<multidev-env>` | ex. `c5c75825-5cd4-418e-8cb0-fb9aa1a7f671`, as found in `https://dashboard.pantheon.io/sites/<site-uuid>` |
     | `dbserver`   |                                         |                                                                                                           |
 
-    - You must [add an SSH key](/ssh-keys) in your Personal Settings if you want to enable password-less access and avoid authentication prompts.
+    - You must [add an SSH key](/ssh-keys) within your User Dashboard if you want to enable password-less access and avoid authentication prompts.
 
 
 ### Application Log Files
 
 Follow the steps below to download your application log files.
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and open the desired environment (Multidev, Dev, Test, or Live).
+1. Navigate to the **Site Dashboard** and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 
@@ -67,7 +67,7 @@ Note that this will only connect to one application container. If you have multi
 
 Follow the steps below to download your database log files.
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and open the desired environment (Multidev, Dev, Test, or Live).
+1. Navigate to the **Site Dashboard** and open the desired environment (Multidev, Dev, Test, or Live).
 
 1. Click **Connection Info** and copy the **SFTP Command Line** command.
 

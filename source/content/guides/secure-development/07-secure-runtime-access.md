@@ -23,11 +23,11 @@ Pantheon’s database services use strong, random passwords and TLS to encrypt c
 
 SRA actively discards attempts to connect to persistent instances like MySQL databases or SFTP, disregarding the attempt before it reaches the service. When SRA is enabled, the connection attempts to the service will be rejected unless the connection comes through the appropriate [SSH tunnel](/guides/secure-development/ssh-tunnels).
 
-In addition to defense in depth, this feature can be used to enforce role-based permissions by preventing users with a developer role from accessing a live database. It also guarantees that users who are removed from a site team or Workspace can no longer use a saved set of credentials.
+In addition to defense in depth, this feature can be used to enforce role-based permissions by preventing users with a developer role from accessing a live database. It also guarantees that users who are removed from a site team or organization can no longer use a saved set of credentials.
 
 ## How to Enable SRA on Your Site
 
-Secure Runtime Access is available to [contract](https://pantheon.io/plans/pricing?docs) customers with a [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) dashboard. [Contact Sales](https://pantheon.io/contact-us?docs) to request that SRA be enabled for your site.
+Secure Runtime Access is available to [contract](https://pantheon.io/plans/pricing?docs) customers with an [Organization](/guides/account-mgmt/workspace-sites-teams/workspaces) dashboard. [Contact Sales](https://pantheon.io/contact-us?docs) to request that SRA be enabled for your site.
 
 ## How to Access Runtime Services When SRA Is Enabled
 

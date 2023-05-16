@@ -21,7 +21,7 @@ On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you 
 
 ![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
 
-[Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/>, and then select <Icon icon={"embed-close"} text={"Code"}/>.
+Navigate to your **Site Dashboard**, select the  <Icon icon={"wrench"} text={"Dev"}/>, and then select <Icon icon={"embed-close"} text={"Code"}/>.
 
 ## Git Connection Mode
 

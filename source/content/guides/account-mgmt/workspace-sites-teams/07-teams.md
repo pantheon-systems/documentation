@@ -17,15 +17,7 @@ product: [--]
 integration: [--]
 ---
 
-Teams allow you to define the users who will have access to a workspace or site. 
-
-## Workspace Teams vs Site Dashboard Teams
-
-There are two places a team can be defined: on a Professional Workspace, or in the Site Dashboard.
-
-- Professional Workspace team members have access to all sites in that Workspace, and any sites that have that Workspace assigned as a Supporting Workspace.
-
-- Site Team members only have access to that site.
+Teams allow you to define the users who will have access to a workspace or site. Team members added to a workspace will have access to all sites in that workspace, whereas team members added to a site can only access that site.
 
 ## Roles and Permissions
 
@@ -47,7 +39,7 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Create or view support tickets                                    | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Access and manage [Autopilot](/guides/autopilot)        | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
 | Access the [workspace](/guides/new-dashboard/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> <Popover title="Workspace Unprivileged" content="Users with an Unprivileged role will see the workspace's name, but will not be able to access it." />|
-| Access the Workspace                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
+| Access the org Dashboard                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
 | Change site upstream <Popover title="Permissions Note" content="The site and the upstream must both belong to the same workspace." /> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Deploy to Test and Live                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
 | Invite new team members                                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> | <span  style="color:red">❌</span> |
@@ -71,7 +63,7 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Clear cache on Test and Live                      | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Manage user roles                                 | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Delete sites or remove users from a site          | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace)                     | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Manage a site's plan                              | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When a workspace is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Enable Pantheon Search                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:red">❌</span>  |
 
@@ -84,11 +76,7 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 
 <Tab title="To a Workspace" id="addwsp" active={true}>
 
-When a team member is added to a Workspace:
-- That Workspace will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
-- The role they are given applies to all sites in that Workspace
-
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), select the **Team** tab, and click **Add User**.
+1. Go to the workspace, select the **Team** tab, and click **Add User**.
 
 1. Click **Invite Team Member**.
 
@@ -98,16 +86,11 @@ When a team member is added to a Workspace:
 
 <Tab title="To a Site" id="addsite">
 
-When a team member is added to a site:
-- That site will be available in their Personal Workspace
-- That Workspace containing that site will be accessible from the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
-- The role they are given applies only to that site - not to any of the others in the same Workspace
-
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. Open the Site Dashboard for the site.
    
 1. Click **Team**.
 
-1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**.
+1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**
 
 </Tab>
 
@@ -118,11 +101,7 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 ### Change a User's Role
 
-<TabList>
-
-<Tab title="In a Workspace" id="chws" active={true}>
-
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
+1. Go to the workspace and select the **Team** tab.
 
 1. Find and select the team member(s) whose role you want to change.
 
@@ -130,28 +109,13 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 
 1. Select the new role, then click **Save Changes**.
 
-</Tab>
-
-
-<Tab title="In a Site" id="chs">
-
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
-   
-1. Click **Team**.
-
-1. Under **Team Members**, find the Team Member, and select a new role from the list.
-
-</Tab>
-
-</TabList>
-
 ### Export Users
 
 While you can view a workspace's users using the Dashboard, there may be times when you need to generate a list of users, or view a list of all users associated with the Workspace **and** all of its sites.
 
 To export a list of users:
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
+1. Go to the workspace and select the **Team** tab.
 
 1. In the upper right corner of the page, click **Export Members**.
 
@@ -203,8 +167,6 @@ The following fields only appear if you select **All Workspace and site members*
 
 ### Remove a User
 
-When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.
-
 <Alert title="Note" type="info">
 
 All users can be removed except the site owner. 
@@ -217,7 +179,7 @@ To remove a user:
 
 <Tab title="From a Workspace" id="remws" active={true}>
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
+1. Go to the workspace and select the **Team** tab.
 
 1. Find and select the team member(s) you wish to remove.
 
@@ -231,7 +193,7 @@ To remove a user:
 
 To remove a team member from a site:
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. Open the Site Dashboard for the site.
 
 1. Click **Team**.
    
@@ -240,6 +202,8 @@ To remove a team member from a site:
 </Tab>
 
 </TabList>
+
+When a person with access to your site(s) on the platform leaves the company or project, it is important to immediately remove them from the team so that they no longer have access to make changes to your site.
 
 After a user leaves, in addition to the steps above, we recommend you:
 
@@ -250,17 +214,19 @@ After a user leaves, in addition to the steps above, we recommend you:
 
 ## Add a Supporting Workspace to Site
 
-Supporting Workspaces are Professional Workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a [Pantheon Partner Agency](https://pantheon.io/plans/partner-program?docs) or have a Professional Workspace with a Gold Account Plan, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
 
-Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#supporting-workspaces).
+Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting Organization](/guides/account-mgmt/workspace-sites-teams/sites#associate-a-site-to-a-workspace).
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site, then click **Team**.
+1. Click **Sites** tab on the left hand panel > Click on the site you want to make changes to.
+
+1. Click **Team** in the Site Dashboard.
+
+  ![Click on Team](../../../../images/guides/account-mgmt/sites-team.png)
 
 1. Under **Supporting Workspace**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
-1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
-   
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
+1. Select a role, then click **Add**. All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
 
 ## FAQ
 
@@ -270,7 +236,7 @@ Only sites owned by Enterprise and EDU+ can assign the developer role to specifi
 
 ### Which role should I assign a user to give them the lowest level of access?
 
-At the site level, the Developer role has the least amount of permissions and can create sites, view the Workspace, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Unprivileged role has the least amount of permissions and can only create sites.
+At the site level, the Developer role has the least amount of permissions and can create sites, view the Workspace Dashboard, and deploy to the Development and Multidev environments. At the Professional Workspace level, the Unprivileged role has the least amount of permissions and can only create sites.
 
 ### Which environments can a user with the Developer role deploy to?
 
@@ -278,7 +244,7 @@ The Developer role can only deploy to Development and Multidev environments. If 
 
 ### Who can add users to workspaces?
 
-Enterprise Administrators can add site Team Members or Supporting Workspaces to sites owned by the workspace, with the Developer or workspace Team Member roles. Partner workspaces can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
+Enterprise Administrators can add site Team Members or Supporting Organizations to sites owned by the workspace, with the Developer or workspace Team Member roles. Partner workspaces can assign users the role of an Administrator, Team Member, or Developer at the workspace level.
 
 ### How do I recover an account after a site owner leaves?
 

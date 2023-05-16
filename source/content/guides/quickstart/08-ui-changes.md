@@ -94,7 +94,7 @@ Now we’re going to work directly on the server to make changes to our site's u
 
 1. Review the changes to make sure everything looks correct.
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **Live** tab, and then click **Deploys**.
+1. Navigate to your **Site Dashboard**, select the **Live** tab, and then click **Deploys**.
 
 1. Add a Deploy Log Message (optional), then click **Deploy Code from Test to Live Environment**.
 

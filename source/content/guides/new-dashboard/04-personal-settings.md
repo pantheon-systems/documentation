@@ -1,31 +1,29 @@
 ---
-title: Personal Settings
+title: The New Pantheon Dashboard
+subtitle: Personal Settings
 description: Customize and manage your personal settings.
-contenttype: [doc]
-innav: [true]
+contenttype: [guide]
+innav: [false]
 categories: [dashboard]
 cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]
 integration: [--]
 tags: [dashboard, webops, workflow]
-contributors: [wordsmither]
-reviewed: "2023-04-19"
+contributors: [joa-pan]
+reviewed: "2022-07-20"
 showtoc: true
+permalink: docs/guides/new-dashboard/personal-settings
+editpath: new-dashboard/04-personal-settings.md
 ---
 
-Personal Settings help you control several key aspects of the Dashboard, and can be accessed by clicking the user gravatar in the upper right corner, then **Personal Settings**.
+The Personal Settings of your profile help you control several key aspects of the Dashboard. To update your personal settings click the Gravatar in the upper right corner and then click **Personal Settings**.
 
-![A screenshot of the Personal Settings page](../images/dashboard/new-dashboard/personal-settings-profile.jpg)
-
+![A screenshot of the Personal Settings page](../../../images/dashboard/new-dashboard/personal-settings-profile.jpg)
 
 ## Profile
 
-The user gravatar is a personalized image you can upload.  If you have not personalized your gravatar, it will appear as it does in the image below. To customize it, click **Change your Gravator**, to the right of the existing gravatar.
-
-![The user gravatar](../images/gravatar-user.png)
-
-You can also add your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
+Update your name, email address, password, country and region, or [delete your account](/guides/account-mgmt/account/delete).
 
 ### Account and Security
 
@@ -78,4 +76,4 @@ The token key will only be shown once and provides the same access as your usern
 
 If you would like to be directed to the redesigned Dashboard interface when you log into Pantheon, select **ON**. Otherwise to disable this feature, select **OFF**.
 
-If you choose to use the redesigned Dashboard, you will not be able to navigate to your User or Workspace. Certain features, such as site billing, are not currently available in the redesigned Dashboard. 
+If you choose to use the redesigned Dashboard, you will not be able to navigate to your User or Organization Dashboard. Certain features, such as site billing, are not currently available in the redesigned Dashboard. 

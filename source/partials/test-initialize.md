@@ -1,6 +1,6 @@
 To create your Test environment:
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+1. Go to your Site Dashboard.
 1. Click the <Icon icon="equalizer" text="Test"/> tab, then click **Initialize Test Environment** to create your Test environment.
 
    ![Initializing the test environment](../images/test-initialize.png)
