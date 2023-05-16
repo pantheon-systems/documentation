@@ -23,11 +23,7 @@ Workspaces, Sites, and Teams work together to help you organize and manage your 
 
 - **Sites** are the individual web sites with their own unique domains. You can have one site or hundreds.
 - **Teams** are groups of people who can work on the sites.  Team members can be associated with a group of sites, or a single site.
-<<<<<<< HEAD
-- **Workspaces** are bring together sites, teams, and features, simplifying the management of large numbers of sites.
-=======
 - **Workspaces** bring together sites, teams and features, simplifying the management of large numbers of sites.
->>>>>>> dea625557c7cda233c8cb7f449338acccb2ba6a0
 
 ## Enterprise vs. Self-Serve Customers
 
@@ -44,11 +40,7 @@ When you sign a contract, we create a Professional Workspace for you, attached t
 | **Sites Tab** | Sites you have access to |  All sites your organization maintains |
 | **Teams Tab** | A message to create a Professional Workspace  | Team members that have access to all sites |
 
-<<<<<<< HEAD
-While you can create additional Professional Workspaces, those Workspaces can only be used for team management, and cannot contain any sites.
-=======
 You can create as many Professional Workspaces as you like. Use additional Professional Workspace to organize teams and the sites they should have access to. Professional Workspaces you create cannot contain new sites; they are a place to assign existing sites to teams, much like a playlist contains songs you select from your music library..
->>>>>>> dea625557c7cda233c8cb7f449338acccb2ba6a0
 
 For example, let's say you have both WordPress and Drupal sites, and you want your WordPress developers to only see the WordPress sites, and your Drupal developers to only see the Drupal Sites.  To do so, [create a Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace) for your Drupal developers, and another for your WordPress developers, then [invite the appropriate team members](/guides/account-mgmt/workspace-sites-teams/teams#add-a-user).  You now have the following Workspaces:
 
@@ -69,11 +61,7 @@ The most important thing to remember is an Account Plan is assigned to a specifi
 
 Here are some examples of ways you might organize your sites:
 
-<<<<<<< HEAD
-1. Create all your sites in a single Professional Workspace, then create additional Workspaces with team members that can be added as Supporting Workspaces to individual sites.
-=======
 1. Create all your sites in a single Professional Workspace, then create additional Workspaces with team members that will be added as Supporting Workspaces to individual sites. 
->>>>>>> dea625557c7cda233c8cb7f449338acccb2ba6a0
 
     |   | Personal | All Sites Workspace | Drupal Devs Workspace | WordPress Devs Workspace |
     |---|---|---|---|---|
