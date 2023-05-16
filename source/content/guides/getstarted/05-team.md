@@ -25,7 +25,7 @@ If you are a one-person shop, and will only ever be a one-person shop, you could
 
 To set up your team:
 
-1. If you are a Programmatic Customer (paying via Credit Card), click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select **Create New Workspace**.  If you are an Enterprise Customer (paying via a contract), either select the Professional Workspace created when you created your account, or click **Create a New Workspace**.
+1. If you are a Self-Serve Customer (paying via Credit Card), click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select **Create New Workspace**.  If you are an Enterprise Customer (paying via a contract), either select the Professional Workspace created when you created your account, or click **Create a New Workspace**.
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
