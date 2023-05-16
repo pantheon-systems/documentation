@@ -66,7 +66,7 @@ terminus redis:enable <site>
 
 	- There are some configuration options that you must add to set it up the plugin now that you have Object Cache Pro in your codebase. All of these options are stored in your `wp-config.php` in the root of your site repository.
 
-1. Add the license token into your `wp-config.php` file. Note that the license key will be provided by the platform in the future. Currently, you are responsible for adding it to your repository. Open the `wp-config.php` file and add the values below to the `WP_REDIS_CONFIG` constant somewhere above the `/* That's all, stop editing! Happy Pressing. */` line at the bottom of the file.
+1. Add the license token and configuration into your `wp-config.php` file. Note that the license key will be provided by the platform in the future. Currently, you are responsible for adding it to your repository. Open the `wp-config.php` file and add the values below to the `WP_REDIS_CONFIG` constant somewhere above the `/* That's all, stop editing! Happy Pressing. */` line at the bottom of the file. Note that there are more [configuration options](https://objectcache.pro/docs/configuration-options) that can be added.
 
 	```php
 		/**
@@ -74,27 +74,22 @@ terminus redis:enable <site>
 		 */
 		define( 'WP_REDIS_CONFIG', [
 			'token' => '<LICENSE-TOKEN>',
-		] );
-	```
-
-1. Add Object Cache Pro configuration options after `define( 'WP_REDIS_CONFIG', [` in `wp-config.php` for a **standard WordPress** site. Note that there are more [configuration options](https://objectcache.pro/docs/configuration-options) that can be added. We recommend using the below settings which are optimized for Pantheon if you don't know specifically what each option does. The full, recommended contents of the `WP_REDIS_CONFIG` constant are:
-
-	```php
-		'token' => '<LICENSE-TOKEN>',
-		'host' => $_SERVER['CACHE_HOST'] ?? '127.0.0.1',
-		'port' => $_SERVER['CACHE_PORT'] ?? 6379,
-		'database' => $_SERVER['CACHE_DB'] ?? 0,
-		'password' => $_SERVER['CACHE_PASSWORD'] ?? null,
-		'maxttl' => 86400 * 7,
-		'timeout' => 1.0,
-		'read_timeout' => 1.0,
-		'debug' => false,
-		'analytics' => [
-			'enabled' => true,
-			'persist' => true,
-			'retention' => 3600, // 1 hour
-			'footnote' => true,
+			'host' => $_SERVER['CACHE_HOST'] ?? '127.0.0.1',
+			'port' => $_SERVER['CACHE_PORT'] ?? 6379,
+			'database' => $_SERVER['CACHE_DB'] ?? 0,
+			'password' => $_SERVER['CACHE_PASSWORD'] ?? null,
+			'maxttl' => 86400 * 7,
+			'prefetch' => true,
+			'timeout' => 1.0,
+			'read_timeout' => 1.0,
+			'debug' => false,
+			'analytics' => [
+				'enabled' => true,
+				'persist' => true,
+				'retention' => 3600, // 1 hour
+				'footnote' => true,
 			],
+		] );
 	```
 
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
