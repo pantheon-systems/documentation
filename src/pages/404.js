@@ -19,18 +19,18 @@ componentDidMount() { //On page load...
       // An Algolia search solution will likely render most of this as removable.
 
     window.addsearch_settings = { // These are a bunch of key/value pairs addsearch wants. So we set them. See Addsearch's "documentation" for more info.
-      display_url: true,
-      display_resultscount: false,
-      display_sortby: false,
-      display_category: true,
-      automatic_match_all_query: false,
-      number_of_results: 4,
+      "search_widget": {
+        "display_meta_description": true,
+        "display_result_image": false,
+        "hide_logo": true,
+        "analytics_enabled": true
+        }
     }
 
     const script = document.createElement("script") // Loads the Addsearch JS blob from them
     script.setAttribute(
       "src",
-      `https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage`
+      `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a77fb1eb2c3c8fafe2b301824369ed97&id=search_widget`
     )
     script.setAttribute("defer", true)
 

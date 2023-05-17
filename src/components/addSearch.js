@@ -6,7 +6,7 @@ class AddSearch extends React.Component {
     const script = document.createElement("script")
     script.setAttribute(
       "src",
-      `https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6${
+      `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a77fb1eb2c3c8fafe2b301824369ed97&id=search_widget${
         resultPage.includes("search") ? "&type=resultpage" : ""
       }`
     )

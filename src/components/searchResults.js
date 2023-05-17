@@ -28,11 +28,12 @@ class SearchResults extends React.Component {
           dangerouslySetInnerHTML={{
             __html: `
                     window.addsearch_settings = {
-                        display_url: true,
-                        display_resultscount: true,
-                        display_date: true,
-                        display_sortby: true,
-                        display_category: true
+                        "search_widget": {
+                        "display_meta_description": true,
+                        "display_result_image": false,
+                        "hide_logo": true,
+                        "analytics_enabled": true
+                        }
                     }
                     `,
           }}

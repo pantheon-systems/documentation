@@ -20,7 +20,7 @@ class Search extends React.Component {
                   <div className="row">
                     <div className="col-md-8 search-results">
                       <SearchResults />
-                      <script src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage"></script>
+                      <script src="https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a77fb1eb2c3c8fafe2b301824369ed97&id=search_widget"></script>
                     </div>
                   </div>
                 </div>
