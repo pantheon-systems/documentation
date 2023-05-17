@@ -1449,7 +1449,7 @@
         - text: 'Update the credit card on file'
           url: '/guides/account-mgmt/billing/methods#update-personal-payment-method'
         - text: 'Cancel Site plan'
-          url: '/guides/account-mgmt/plans/manage#cancel-your-plan'
+          url: '/guides/account-mgmt/plans/site-plans#cancel-your-plan'
     - title: 'Preferred Pricing'
       subtitle: ''
       links:
