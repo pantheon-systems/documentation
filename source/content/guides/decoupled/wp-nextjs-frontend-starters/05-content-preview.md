@@ -19,13 +19,19 @@ integration: [--]
 
 This section provides information on how to configure decoupled content preview for your site. This allows you to preview your content changes in the Next.js app before publishing to your live site.
 
+## Before You Begin
+
+Make sure you have:
+
+- Installed and activated the [Pantheon Decoupled WordPress Preview Plugin](https://github.com/pantheon-systems/wp-decoupled-preview) on your instance
+
 ## Configure Environment Variables
 
 1. Navigate to your Site Dashboard and click **Builds**.
 
 1. Scroll down to **Site Environment Variables** and click the **Get Started** or **Make Changes** button. The Get Started button displays if you have not added any Site Environment Variables yet.
 
-    ![Site Environment Variables](../../../../images/decoupled-preview-env-variables.png)
+    ![Site Environment Variables](../../../../images/decoupled-wp-preview-env-variables.png)
 
 1. Add the keys below and the corresponding values and then click **Save**. These are the secure preview key-value pairs you were provided with and copied when you installed your CMS.
 
@@ -33,9 +39,9 @@ This section provides information on how to configure decoupled content preview 
     - `WP_APPLICATION_PASSWORD`
     - `PREVIEW_SECRET`
 
-1. Open the **Overview** page, locate your live build in the **Multidev** section, select **View Details of the Multidev**, and then select **View Build Details**.
+1. Go to the **Overview** page and click the **Trigger Build** button to start a new build and deployment.
 
-1.  Click the **Trigger Build** button to start a new build and deployment and ensure that your environment variables are set on your live Front-End Site.
+1. Locate your live build in the **Multidev** section, click **Actions**, and then select **View Latest Build Logs** to confirm that your environment variables are set on your live Front-End Site.
 
 1. Log in to your WordPress dashboard.
 
@@ -48,7 +54,7 @@ This section provides information on how to configure decoupled content preview 
 
 1. Hover over the user name and click **Edit** to open the user's profile page.
 
-1. Scroll down to the **Application Passwords** section and name your application password. Your new `WP_APPLICATION_PASSWORD` will display. Copy this value somewhere safe.
+1. Scroll down to the **Application Passwords** section and add your application password. Your new `WP_APPLICATION_PASSWORD` will display on the screen. Copy and store this value somewhere safe.
 
     - You now have a client that can use the preview site, however, you must configure the preview site.
 
@@ -56,7 +62,7 @@ This section provides information on how to configure decoupled content preview 
 
     <Alert title="Note"  type="info" >
 
-    You must have the Pantheon Decoupled WordPress Preview Plugin installed and activated on your instance.
+    You must have the [Pantheon Decoupled WordPress Preview Plugin](https://github.com/pantheon-systems/wp-decoupled-preview) installed and activated on your instance.
 
     </Alert>
 

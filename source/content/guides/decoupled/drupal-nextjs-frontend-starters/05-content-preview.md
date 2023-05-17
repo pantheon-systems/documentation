@@ -33,9 +33,9 @@ This section provides information on how to configure decoupled content preview 
     - `CLIENT_SECRET`
     - `PREVIEW_SECRET`
 
-1. Open the **Overview** page, locate your live build in the **Multidev** section, select **View Details of the Multidev**, and then select **View Build Details**.
+1. Go to the **Overview** page and click the **Trigger Build** button to start a new build and deployment.
 
-1.  Click the **Trigger Build** button to start a new build and deployment and ensure that your environment variables are set on your live Front-End Site.
+1. Locate your live build in the **Multidev** section, click **Actions**, and then select **View Latest Build Logs** to confirm that your environment variables are set on your live Front-End Site.
 
 1. Log in to your Drupal dashboard, navigate to the Live environment, and select the **Structure** menu.
 
