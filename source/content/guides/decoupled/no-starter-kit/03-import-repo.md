@@ -19,7 +19,7 @@ integration: [--]
 
 You can import your Git-provided repository to create your Front-End Site.
 
-1. Log in to your **Site Dashboard** and select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 

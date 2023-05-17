@@ -19,7 +19,7 @@ This section provides answers to frequently asked Multidev questions.
 
 ## Is Multidev available for all accounts?
 
-Multidev is available to all organizations and users with [Gold Accounts](/guides/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
+Multidev is available to all Workspaces and users with [Gold Accounts](/guides/support/#support-features-and-response-times) and above, as well as their supporting partners and agencies.
 
 ### Who can access Multidev?
 
@@ -33,7 +33,7 @@ You can create a new Multidev if you:
 
 <Alert title="Note"  type="info" >
 
-Site admins of an organization with Multidev can invite independent contractors or set an agency as a supporting organization. The Pantheon system will automatically choose the highest account tier among the group. This logic makes Multidev features, including the ability to create Multidev environments, available to the supporting organization or the site team members on the associated sites.   
+Site admins of an Workspace with Multidev can invite independent contractors or set an agency as a Supporting Workspace. The Pantheon system will automatically choose the highest account tier among the group. This logic makes Multidev features, including the ability to create Multidev environments, available to the Supporting Workspace or the site team members on the associated sites.   
 
 </Alert>
 
@@ -95,9 +95,9 @@ No, but developers can use [Quicksilver hooks](/guides/quicksilver/hooks) to int
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage Multidev environments.
 
-## Will I lose access to Multidev environments if the organization downgrades the plan?
+## Will I lose access to Multidev environments if the Workspace downgrades the plan?
 
-If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
+If the Workspace changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
 
 ## How long will the Multidev stay active?
 

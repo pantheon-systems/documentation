@@ -46,7 +46,7 @@ Ensure you have the latest versions of Terminus and the Terminus Build Tools plu
     Terminus 3.0.1
     ```
 
-1. [Add an SSH key](/ssh-keys) in your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+1. [Add an SSH key](/ssh-keys) in your Personal Workspace to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 1. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus.
 
