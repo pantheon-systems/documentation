@@ -21,7 +21,7 @@ This section provides information on how to configure decoupled content preview 
 
 ## Configure Environment Variables
 
-1. Navigate to your Site Dashboard and click **Builds**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click **Builds**.
 
 1. Scroll down to **Site Environment Variables** and click the **Get Started** or **Make Changes** button. The Get Started button displays if you have not added any Site Environment Variables yet.
 
