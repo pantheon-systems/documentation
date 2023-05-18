@@ -18,4 +18,4 @@ Keep the following in mind when using a partial:
 - Exclude the heading. Use the context of the referring doc to introduce the content.
 - Use links to headings that will work in any doc. Use `[Frontmatter](/style-guide#frontmatter)` instead of `[Frontmatter](#frontmatter)`.
 - Note that if you include an image within a partial in a subdirectory, it requires another set of `../` to escape the directory.
-   - So an image referenced from a partial in `source/partials/autopilot/` would be `../../images/autopilot/image.png`.
+   - So an image referenced from a partial in `source/partials/autopilot/` would be `../../../images/autopilot/image.png`.

@@ -22,7 +22,7 @@ reviewed: ""
 
 **Solution:** Restart the migration by going to the browser tab containing your WordPress dashboard, and click **Migrate**
 
-![Copying and pasting info](../../images/migrate-site-wp-blogvault.png)
+![Copying and pasting info](../../../images/migrate-site-wp-blogvault.png)
 
 
 ### Could not import code, the import file does not appear to contain a valid code directory.
