@@ -43,9 +43,9 @@ The customer is responsible for purchasing, maintaining payment for, and support
 
 [See a comparison of the features](https://pantheon.io/product/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
-### Rate Limiting 
+### Rate Limiting
 
-Rate Limiting is in early access. Rate Limiting lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
+Rate Limiting lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
 
 The benefits of Rate Limiting include:
 
@@ -54,7 +54,6 @@ The benefits of Rate Limiting include:
 - **Policy-based Control** - Adjust configurations for your policy, including requests per second, and detection window.
 
 - **Custom Responses** - Select from actions that allow you to block requests or log them, and configure custom responses for your policy.
-
 
 ## More Resources
 
