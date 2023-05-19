@@ -48,7 +48,8 @@ The following components are required for your backend, especially if using the 
 The following components are required for your frontend project to use Pantheon's Front-End Sites:
 
 - [Node.js](https://nodejs.org/en/)
-  - Supported Node.js versions: 14, 16, 18.
+  - Supported Node.js versions for static sites (Gatsby): 14, 16, 18.
+  - Supported Node.js versions for dynamic sites (Next.js): 16.
   - Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
 
 ## Frontend Frameworks
