@@ -10,8 +10,8 @@ audience: [development]
 product: [--]
 integration: [aws]
 tags: [files]
-contributors: [sarahg]
-reviewed: "2021-07-07"
+contributors: [sarahg,carl-alberto]
+reviewed: "2023-05-19"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-s3
 ---
@@ -56,7 +56,7 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Select a region and click **Create**.
 
-1. Configure the **Set properties** section and click **Next** when complete. You can configure these options now, or wait and configure later.
+1. Under the **Object Ownership**, select the **ACLs enabled** and Object Ownership should be **Bucket owner preferred**.
 
 1. Open the **Permissions** tab, select the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
 
