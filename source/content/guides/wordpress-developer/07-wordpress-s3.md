@@ -56,11 +56,11 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Select a region and click **Create**.
 
-1. Under the **Object Ownership**, select the **ACLs enabled** and Object Ownership should be **Bucket owner preferred**.
+1. Under the **Object Ownership** section, select the **ACLs enabled** and Object Ownership should be **Bucket owner preferred**.
 
-1. Open the **Permissions** tab, select the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
+1. Under the **Block Public Access settings for this bucket** section, uncheck the **Block all public access** an check the acknowledgement of that setting.
 
-1. Review your settings, and then click **Create bucket**.
+1. Leave other setting to default and review your settings, and then click **Create bucket**.
 
 ## Integrate S3 with WordPress
 
