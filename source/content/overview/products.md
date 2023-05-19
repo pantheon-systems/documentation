@@ -97,7 +97,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"New Relic Performance Monitoring"} link={"/guides/new-relic"}>
+  <Product title={"New Relic Performance Monitoring"} link={"/overview/new-relic"}>
 
   New Relic® Performance Monitoring provides a nearly real-time look into the performance of a web application.
 
@@ -127,7 +127,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
 <ProductGroup>
 
-  <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/guides/autopilot"}>
+  <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/overview/autopilot"}>
 
   Automate finding, testing, and applying WordPress and Drupal updates. 
 

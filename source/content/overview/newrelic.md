@@ -73,7 +73,7 @@ On Pantheon, most plans come with free New Relic APM Pro, giving you code-level 
 
 ## Support
 
-* [Account holders](https://dashboard.pantheon.io/workspace/ee3995c4-652e-44a0-b00b-0085e92d78da/support)
+* [Account holders](https://dashboard.pantheon.io/workspace/support)
 
 </Tab>
 
