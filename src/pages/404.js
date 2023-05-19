@@ -20,9 +20,18 @@ componentDidMount() { //On page load...
 
     window.addsearch_settings = { // These are a bunch of key/value pairs addsearch wants. So we set them. See Addsearch's "documentation" for more info.
       "search_widget": {
+        "placeholder": "Search Pantheon Docs",
+        "show_search_suggestions": true,
+        "search_suggestion_position": "left",
+        "default_sortby": "relevance",
+        "display_date": false,
         "display_meta_description": true,
         "display_result_image": false,
-        "hide_logo": true,
+        "link_target": "_blank",
+        "hide_logo": false,
+        "direction": "ltr",
+        "api_throttle_time": 2000,
+        "automatic_filter_results_by_site_language": false,
         "analytics_enabled": true
         }
     }
