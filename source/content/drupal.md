@@ -39,7 +39,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Before You Begin
 
-- Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
+- Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [Personal Workspace](/guides/quickstart/user-dashboard) before you create a new site.
 
 - Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
@@ -53,7 +53,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Create a New Drupal Site with Integrated Composer
 
-[Create a new Drupal site from the Dashboard](/guides/legacy-dashboard/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
+[Create a new Drupal site from the Dashboard](/add-site-dashboard) as you would with any new site. Integrated Composer is built in and ready to use.
 
 ## Upgrade or Migrate to Drupal
 

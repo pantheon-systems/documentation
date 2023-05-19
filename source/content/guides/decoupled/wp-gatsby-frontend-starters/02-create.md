@@ -33,7 +33,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 ## Create Your Project on Pantheon
 
-1. Log in to your **Site Dashboard** and then select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
@@ -66,7 +66,7 @@ You can configure a site served from a subpath in the Pantheon dashboard so that
 
 Refer to [Gatsby's documentation](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/path-prefix/#instructions) for more information on how Gatsby uses the `pathPrefix` in the `gatsby-config` file.
 
-1. Navigate to your site dashboard and select the site you want to set the `pathPrefix` for.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the site you want to set the `pathPrefix` for.
 
 1. Click **Settings** and then click **Builds**.
 

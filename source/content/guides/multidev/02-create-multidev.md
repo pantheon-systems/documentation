@@ -21,7 +21,7 @@ This section provides steps on how to create a new Multidev.
 
 You can create a new fork in a Pantheon environment by using the code from the Dev environment.
 
-1. Navigate to the **Site Dashboard** then click the **Multidev** tab.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click the **Multidev** tab.
 
 1. Click **Create Multidev Environment**.
 

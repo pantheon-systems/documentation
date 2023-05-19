@@ -51,10 +51,6 @@
           url: '/ssh-keys'
         - text: 'Get Support'
           url: '/guides/support'
-        - text: 'User Dashboard and Account'
-          url: '/user-dashboard'
-        - text: 'Visualize Site Activity with the WebOps Dashboard'
-          url: '/webops-dashboard'
   subtopics:
     - title: 'Migrate your Sites to Pantheon'
       subtitle: 'Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.'
@@ -1430,7 +1426,7 @@
       links:
         - text: 'Add and remove site team members'
           url: '/guides/account-mgmt/workspace-sites-teams/teams#remove-a-user'
-        - text: 'Account billing in the user dashboard: update or change billing'
+        - text: 'Account billing in the personal workspace: update or change billing'
           url: '/guides/account-mgmt/billing'
         - text: 'View invoices'
           url: '/guides/account-mgmt/billing/invoices#invoices'
@@ -1453,7 +1449,7 @@
         - text: 'Update the credit card on file'
           url: '/guides/account-mgmt/billing/methods#update-personal-payment-method'
         - text: 'Cancel Site plan'
-          url: '/guides/account-mgmt/plans/manage#cancel-your-plan'
+          url: '/guides/account-mgmt/plans/site-plans#cancel-your-plan'
     - title: 'Preferred Pricing'
       subtitle: ''
       links:

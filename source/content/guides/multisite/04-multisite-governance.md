@@ -23,7 +23,7 @@ There are two primary layers involved in the governance system when you own a mu
 
 **Pantheon**
 
-- Organization admin (full portfolio)
+- Workspace admin (full portfolio)
 
     - Site owner (specific WP site)
 

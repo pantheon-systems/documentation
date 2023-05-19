@@ -23,8 +23,8 @@ Partner Agencies are added to the [Agency Partner Directory](https://directory.p
 ## Learn Pantheon through Product Trainings, Resources, and Guides
 [Get hands on training](https://pantheon.io/learn-pantheon?docs) from knowledgeable experts at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
 
-## Become a Supporting Organization
-When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/guides/account-mgmt/workspace-sites-teams/teams/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
+## Become a Supporting Workspace
+When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/teams/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your Workspace permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
 ## Extend Preferred Pricing to Your Clients
 [Qualified agencies](https://pantheon.io/plans/partner-program?docs) have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/guides/legacy-dashboard/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
@@ -63,7 +63,7 @@ In order to use PHP Sessions with a WordPress site you will need to install the 
 Running a WordPress Multisite requires a special configuration that is only available to contract customers. A WordPress Multisite upstream can only be created for your organization by Pantheon employees. For details, see [WordPress Multisite](/guides/multisite).
 
 ### Migration
-The guided migration process for WordPress is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate Sites to Pantheon](/guides/guided/).
+The guided migration process for WordPress is baked into the Pantheon Workspace - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate Sites to Pantheon](/guides/guided/).
 
 ## Drupal and Composer
 Drupal now includes Composer usage within Drupal Core itself. For details, see [Composer Fundamentals and Workflows](/guides/composer).
@@ -94,7 +94,7 @@ Pantheon does not provide a way to set custom scheduling for cron jobs. For deta
 ## Advanced Workflows
 
 ### Custom Upstreams
-In addition to the [frameworks offered by Pantheon during the site creation process](/start-state), Custom Upstreams add a private installation option for all team members of an organization. A Custom Upstream is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/guides/custom-upstream). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
+In addition to the [frameworks offered by Pantheon during the site creation process](/start-state), Custom Upstreams add a private installation option for all team members of an Workspace. A Custom Upstream is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/guides/custom-upstream). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
 
 ### Build Steps
 
