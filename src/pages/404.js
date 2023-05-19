@@ -30,7 +30,7 @@ componentDidMount() { //On page load...
     const script = document.createElement("script") // Loads the Addsearch JS blob from them
     script.setAttribute(
       "src",
-      `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a77fb1eb2c3c8fafe2b301824369ed97&id=search_widget`
+      `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a7b957b7a8f57f4cc544c54f289611c6&id=search_widget`
     )
     script.setAttribute("defer", true)
 
