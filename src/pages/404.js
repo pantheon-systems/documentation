@@ -19,27 +19,30 @@ componentDidMount() { //On page load...
       // An Algolia search solution will likely render most of this as removable.
 
     window.addsearch_settings = { // These are a bunch of key/value pairs addsearch wants. So we set them. See Addsearch's "documentation" for more info.
-      "search_widget": {
-        "placeholder": "Search Pantheon Docs",
-        "show_search_suggestions": true,
-        "search_suggestion_position": "left",
+      "arp_01": {
+        "show_search_suggestions": false,
+        "automatic_match_all_query": false,
         "default_sortby": "relevance",
+        "display_category": true,
         "display_date": false,
-        "display_meta_description": true,
-        "display_result_image": false,
-        "link_target": "_blank",
+        "display_meta_description": false,
+        "display_results_count": true,
+        "display_result_image": true,
+        "display_url": false,
+        "display_sortby": true,
+        "link_target": "_self",
         "hide_logo": false,
         "direction": "ltr",
-        "api_throttle_time": 2000,
+        "analytics_enabled": false,
         "automatic_filter_results_by_site_language": false,
-        "analytics_enabled": true
-        }
+        "facets": {}
+      }
     }
 
     const script = document.createElement("script") // Loads the Addsearch JS blob from them
     script.setAttribute(
       "src",
-      `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a7b957b7a8f57f4cc544c54f289611c6&id=search_widget`
+      `https://cdn.addsearch.com/v5/addsearch-ui.min.js?key=a7b957b7a8f57f4cc544c54f289611c6&id=arp_01`
     )
     script.setAttribute("defer", true)
 
