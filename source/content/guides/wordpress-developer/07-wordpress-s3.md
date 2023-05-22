@@ -52,9 +52,7 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Click **Create Bucket**.
 
-1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You can not change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket.
-
-1. Select a region and click **Create**.
+1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You can not change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket. Then, select an AWS Region.
 
 1. Under the **Object Ownership** section, select the **ACLs enabled** and Object Ownership should be **Bucket owner preferred**.
 
