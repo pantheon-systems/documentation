@@ -4,7 +4,7 @@ import SearchResults from "../components/searchResults"
 import Helmet from "react-helmet"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
-import SVG404 from "../../source/images/404_dark.svg"
+import SVG404 from "source/images/404_dark.svg"
 
 class NotFoundPage extends React.Component {
 
