@@ -132,7 +132,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 1. Click the **Add Key** button.
 
-  ![Adding SSH Keys](../images/dashboard/add-ssh-key-dashboard.png)
+  ![Adding SSH Keys](images/dashboard/add-ssh-key-dashboard.png)
 
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
 
@@ -160,7 +160,7 @@ You can use your Dev environment to clone your site code to your workstation:
  
 1. Click the **Remove** button next to the key you want to delete:
 
-![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
+![Delete SSH Key](images/dashboard/remove-ssh-key.png)
 
 ### Site Access After Removing Keys
 

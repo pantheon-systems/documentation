@@ -36,7 +36,7 @@ The sections below will show you the basics for collaborating with others if you
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-    ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
+    ![Copy Git Clone Command](../../images/dashboard/git-string.png)
 
 1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab, set the **Development Mode** to **Git**, and then click **Clone with Git**:
 
@@ -84,7 +84,7 @@ Follow the steps below to configure your GitHub repository.
 
 1. Click **Create Repository**.
 
- ![Create a Repository on GitHub](../../../images/create-git-reponew.png)
+ ![Create a Repository on GitHub](../../images/create-git-reponew.png)
 
 ### Add the GitHub Repository as a Remote
 
@@ -92,7 +92,7 @@ Replace the word `origin` with the name you want for your remote to add the GitH
 
   - The remote, in this case, cannot be named `origin` because your local clone is already tracking the Pantheon site repository as `origin`.
 
-  ![Push an existing repo to GitHub](../../../images/push-existing-reponew.png)
+  ![Push an existing repo to GitHub](../../images/push-existing-reponew.png)
 
 In the example below, the remote is named `github`.
 
@@ -130,7 +130,7 @@ Run the command below in your terminal:
 
  The repository on GitHub now has all of the same code as the existing site.
 
- ![GitHub repo same as site](../../../images/github-repo-origin-sameas-remotenew.png)
+ ![GitHub repo same as site](../../images/github-repo-origin-sameas-remotenew.png)
 
 ## Migrate Existing Site Repositories to Pantheon
 
@@ -209,7 +209,7 @@ You must create the `settings.php` file to develop in sync.
 
       This push to Pantheon failed, because the Development environment was in SFTP mode.
 
-      ![Connection Mode set to SFTP](../../../images/dashboard/connection-mode-sftp.png)
+      ![Connection Mode set to SFTP](../../images/dashboard/connection-mode-sftp.png)
 
 1. Set the **Development Mode** to **Git** by clicking on the toggle, or enter the code below in the command line:
 
@@ -217,7 +217,7 @@ You must create the `settings.php` file to develop in sync.
       terminus connection:set <site>.<env> git
       ```
 
-      ![Connection Mode set to Git](../../../images/dashboard/connection-mode-git.png)
+      ![Connection Mode set to Git](../../images/dashboard/connection-mode-git.png)
 
 1. Push to Pantheon:
 
@@ -232,7 +232,7 @@ You must create the `settings.php` file to develop in sync.
         fe267cb..b802550  master -> master
       ```
 
-      ![Commit deployed to Pantheon Dashboard](../../../images/dashboard/commit-deployed-pantheon-dashboard.png)
+      ![Commit deployed to Pantheon Dashboard](../../images/dashboard/commit-deployed-pantheon-dashboard.png)
 
       The GitHub repository and Pantheon site both now have a `settings.php` file. This will allow for environment-specific configuration to enable modules through remote Drush calls and other essential functionality.
 
@@ -315,13 +315,13 @@ You must create the `settings.php` file to develop in sync.
     terminus multidev:create <site>.dev <to_env>
     ```
 
-    ![New environment named configs](../../../images/dashboard/new-env-configs.png)
+    ![New environment named configs](../../images/dashboard/new-env-configs.png)
 
     The module will now be available to activate and test on Pantheon for your colleagues to experience.
 
 1. Add a link to the module's configuration page on the Multidev environment in your GitHub pull request.
 
-    ![New environment configuration admin url](../../../images/configs-admin-url-configs-env.png)
+    ![New environment configuration admin url](../../images/configs-admin-url-configs-env.png)
 
 ### Create Pull Request
 
@@ -333,11 +333,11 @@ You must create the `settings.php` file to develop in sync.
 
  - A list of tasks for team members to perform before merging
 
- ![Pull request for configs branch](../../../images/configuration-pull-request-1.png)
+ ![Pull request for configs branch](../../images/configuration-pull-request-1.png)
 
  Timani completed the tasks, we discussed a bit in person, and he merged the PR.
 
- ![Merged pull request for configs branch](../../../images/merged-pull-request-1.png)
+ ![Merged pull request for configs branch](../../images/merged-pull-request-1.png)
 
 ## Deploy to Pantheon
 
@@ -351,7 +351,7 @@ You must create the `settings.php` file to develop in sync.
     git push pantheon master
     ```
 
-   ![Merged PR commit in the Pantheon dashboard](../../../images/dashboard/merged-pull-request-1-dashboard.png)
+   ![Merged PR commit in the Pantheon dashboard](../../images/dashboard/merged-pull-request-1-dashboard.png)
 
 ## Optional Tools to Optimize Workflows
 

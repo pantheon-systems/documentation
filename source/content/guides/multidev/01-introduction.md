@@ -29,7 +29,7 @@ Multidev is available for the following accounts:
 
 - Agency partners
 
-![Dev Test and Live icon](../../../images/multidev-flow.png)
+![Dev Test and Live icon](../../images/multidev-flow.png)
 
 Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/contact-sales) to discuss which plan is best for your needs.
 
@@ -59,7 +59,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers on-d
 
 **A fork for every developer on your team:** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
 
-![Pantheon standard workflow vs multidev](../../../images/multidev-workflow.png)​
+![Pantheon standard workflow vs multidev](../../images/multidev-workflow.png)​
 
 ## Branching and Multidev Terminology
 

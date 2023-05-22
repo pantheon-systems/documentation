@@ -22,7 +22,7 @@ showtoc: false
 
 On Pantheon, most plans come with free New Relic APM Pro, giving you code-level visibility into your website’s performance. You can track releases, investigate query performance, and identify areas for improvement with New Relic's software analytics tool suite.
 
-![New Relic](../../images/integrations/newrelic/new-relic-get-started.png)
+![New Relic](../images/integrations/newrelic/new-relic-get-started.png)
 
 
 </Tab>
@@ -41,11 +41,11 @@ On Pantheon, most plans come with free New Relic APM Pro, giving you code-level 
 
 *Deployments View*
 
-![View Deployments](../../images/integrations/newrelic/deploy_tab.png)
+![View Deployments](../images/integrations/newrelic/deploy_tab.png)
 
 *Summary View*
 
-![Summary view](../../images/integrations/newrelic/new-relic-summary.png)
+![Summary view](../images/integrations/newrelic/new-relic-summary.png)
 
 </Tab>
 

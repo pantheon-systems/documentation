@@ -22,13 +22,13 @@ Instead of repeating the same technical work on each individual site, you can bu
 To create a site using a Custom Upstream:
 
 1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) that contains the Custom Upstream, and select the yellow <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
-   ![Create new site button](../images/create-new-site-button.png)
+   ![Create new site button](images/create-new-site-button.png)
 
 1. Select **Custom Upstream**.
 1. Select the upstream you wish to use.
 1. Enter the name and select a region for this site, then click **Continue**. It can take several minutes to create a new site on Pantheon.
 
-   ![Enter site information](../images/create-new-site-info.png)
+   ![Enter site information](images/create-new-site-info.png)
 
    <Alert title="Note" type="info" >
 
@@ -38,7 +38,7 @@ To create a site using a Custom Upstream:
 
 1. Click **Visit your Pantheon Site Dashboard** when the process is complete.
 
-   ![Site creation completed](../images/create-site-done.png)
+   ![Site creation completed](images/create-site-done.png)
 
 You've now created the core portion of your Dev environment; now you have to install the CMS.
 

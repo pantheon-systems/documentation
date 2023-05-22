@@ -18,7 +18,7 @@ integration: [--]
 
 It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
 
-![Diagram showing Pantheon's zone-based Multizone Failover architecture](../images/site-mz-diagram.png)
+![Diagram showing Pantheon's zone-based Multizone Failover architecture](images/site-mz-diagram.png)
 
 ### RPO and RTO - Minutes to Recovery
 
@@ -90,7 +90,7 @@ Pantheon Search requires additional considerations when used on sites with Multi
 
 You can do this at `admin/config/search/apachesolr`. Click **Queue all content for reindexing** to initiate. This will add content that has not yet been indexed to the Solr indexing queue (following the configured items-per-cron-event setting).
 
-![ApacheSolr Indexing](../images/d7-solr-reindex.png)
+![ApacheSolr Indexing](images/d7-solr-reindex.png)
 
 #### Search API Solr module
 
@@ -104,7 +104,7 @@ You can initiate the reindexing process from the WordPress dashboard or via Term
 
 To reindex from the WordPress Dashboard, navigate to `/wp-admin/admin.php?page=solr-power#top#solr_action` and click **Start Index**.
 
-![WordPress Solr Power indexing](../images/solr-power-index.png)
+![WordPress Solr Power indexing](images/solr-power-index.png)
 
 You can also do this via Terminus:
 

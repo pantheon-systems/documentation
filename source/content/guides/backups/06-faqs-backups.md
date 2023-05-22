@@ -77,7 +77,7 @@ Refer to <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup
 
 Your Backup Log on the Site Dashboard displays the current status of backups in progress for your code, database, and files:
 
-![Backups in progress](../../../images/backup-progress.png)
+![Backups in progress](../../images/backup-progress.png)
 
 If your **Code** or **Database** backup is taking a long time to complete, we suggest you [contact support](/guides/support/contact-support/) to discuss causes and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 

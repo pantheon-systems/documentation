@@ -104,7 +104,7 @@ The [rsync configuration workflow](https://github.com/pantheon-systems/drush-con
 
 Additionally, the [three-way merge page](https://github.com/pantheon-systems/drush-config-workflow/blob/master/docs/three_way_merge.md) in this repository describes what to do when the `config-merge` tool encounters a conflict, and brings up a three-way merge tool such as [kdiff3](http://kdiff3.sourceforge.net/). This tool can considerably reduce the time needed to comprehend and resolve merge conflicts.
 
-![MySQL Credentials](../images/kdiff3-user-field-conflicts.png)
+![MySQL Credentials](images/kdiff3-user-field-conflicts.png)
 
 ### Installation Script
 

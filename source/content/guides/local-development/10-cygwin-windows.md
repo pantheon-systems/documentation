@@ -40,7 +40,7 @@ You can install [Cygwin](https://cygwin.com/) if you do not have access to a Mac
     - `php-json`
     - `php-phar` (PHP)
 
-    ![Select openSSL package](../../../images/cygwin-select-packages.png)
+    ![Select openSSL package](../../images/cygwin-select-packages.png)
 
 1. Complete the set up. Repeat this process when you update Cygwin or add more packages.
 

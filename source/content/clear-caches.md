@@ -30,7 +30,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the desired environment.
 2. Click the **Clear Caches** button:
 
-  ![Clear Cache Button](../images/clear-cache-button.png)
+  ![Clear Cache Button](images/clear-cache-button.png)
 
 ### Site Admin
 
@@ -42,7 +42,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
 3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
 
-  ![WordPress Clear Caches](../images/wp-cc.png)
+  ![WordPress Clear Caches](images/wp-cc.png)
 
 </Tab>
 
@@ -52,11 +52,11 @@ We refer to this as "full cache clearing" because the operation removes all page
 2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
 3. Ensure the [Pantheon Platform API](/modules#pantheon-module-drupal-7) module is enabled:
 
-  ![Pantheon Platform API module](../images/pantheon-platform-api-enabled.png)
+  ![Pantheon Platform API module](images/pantheon-platform-api-enabled.png)
 
 4. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
 
-  ![Drupal Clear Caches](../images/d7-cc.png)
+  ![Drupal Clear Caches](images/d7-cc.png)
 
 </Tab>
 

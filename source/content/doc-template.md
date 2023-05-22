@@ -84,7 +84,7 @@ Now let's look at some of the commonly used Markdown syntax in the docs.
 ## Images
 Images are a great way to show what the user should be seeing in a graphic user interface (**GUI**) environment, like the WordPress Admin Dashboard:
 
-![This is the alternate text, important for screen readers.](../images/WordPress_Pantheon-Cache-Settings.png)
+![This is the alternate text, important for screen readers.](images/WordPress_Pantheon-Cache-Settings.png)
 
 <Alert title="Warning" type="danger">
 

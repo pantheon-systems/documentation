@@ -95,7 +95,7 @@ You can now look at HTTP Headers with the steps above completed.
 
 1. Make a new article node complete with at least one taxonomy term in the **tags** field:
 
-  ![node/add/article](../../images/guides/drupal-8-advanced-page-cache/img2-node-add-article.png)
+  ![node/add/article](../images/guides/drupal-8-advanced-page-cache/img2-node-add-article.png)
 
 2. Use `curl -IH` to view the headers returned from that page:
 
@@ -143,7 +143,7 @@ You can now look at HTTP Headers with the steps above completed.
 
     By clicking on the first request you can see more detailed information like the HTTP headers.
 
-    ![node/add/article](../../images/guides/drupal-8-advanced-page-cache/img4-node-1-dev-console.png)
+    ![node/add/article](../images/guides/drupal-8-advanced-page-cache/img4-node-1-dev-console.png)
 
 The rest of this guide will show you how to make content changes and inspect the changing HTTP headers, referencing `curl -I` output because browser inspector tools have a lot of additional information that would distract from this demonstration. But if you are more comfortable in the browser, you can continue using that incognito window.
 
@@ -199,7 +199,7 @@ The remaining steps in this guide trim the output of the `curl` commands to only
 
 6. Open the edit screen and decide what caching behavior you want for `/node/1`, `/node/2`, and `/taxonomy/term/1`. (`node/1/edit`):
 
-  ![Node edit form](../../images/guides/drupal-8-advanced-page-cache/img7-node-edit-admin.png)
+  ![Node edit form](../images/guides/drupal-8-advanced-page-cache/img7-node-edit-admin.png)
 
 7. Check the age on the three pages:
 
@@ -243,7 +243,7 @@ If you add a new node that used taxonomy term 1, you would want the listing page
 
 1. Add a new article and use the same taxonomy term:
 
-  ![Node add form](../../images/guides/drupal-8-advanced-page-cache/img8-node-add-article.png)
+  ![Node add form](../images/guides/drupal-8-advanced-page-cache/img8-node-add-article.png)
 
 2. Run curl on the taxonomy listing page.
 
@@ -262,7 +262,7 @@ Follow the steps below to add a custom module that uses a hook to clear the cach
 
 2. Open `code/modules` > create a new directory called `custom_cache_tags`.> ope your newly created folder:
 
-  ![SFTP Client](../../images/guides/drupal-8-advanced-page-cache/img9-sftp-client.png)
+  ![SFTP Client](../images/guides/drupal-8-advanced-page-cache/img9-sftp-client.png)
 
 3. Create a new file named `custom_cache_tags.info.yml` and add the following:
 
@@ -365,7 +365,7 @@ Follow the steps below to add a custom module that uses a hook to clear the cach
 
 8. Make the new article node and use the same taxonomy term:
 
-  ![Node add form](../../images/guides/drupal-8-advanced-page-cache/img10-node-add-article2.png)
+  ![Node add form](../images/guides/drupal-8-advanced-page-cache/img10-node-add-article2.png)
 
 9. Run curl again:
 
@@ -398,11 +398,11 @@ The code we added clears all references to each taxonomy term every time a node 
 
 3. Edit the View that controls taxonomy terms (`admin/structure/views/view/taxonomy_term`) and change the **caching** settings from "Tag based" to “Custom Tag based". You may have to expand the **Advanced** column:
 
-  ![Views edit screen](../../images/guides/drupal-8-advanced-page-cache/img11-view-taxonomy-term.png)
+  ![Views edit screen](../images/guides/drupal-8-advanced-page-cache/img11-view-taxonomy-term.png)
 
 4. Use `taxonomy-listing:{{ raw_arguments.tid }}` for the custom tag and then Save the View:
 
- ![Views caching config form](../../images/guides/drupal-8-advanced-page-cache/img12-page-caching-option.png)
+ ![Views caching config form](../images/guides/drupal-8-advanced-page-cache/img12-page-caching-option.png)
 
 5. Clear all caches to see the change:
 
@@ -432,7 +432,7 @@ The code we added clears all references to each taxonomy term every time a node 
 
 8. Check that adding a new article clears the taxonomy listing page:
 
-    ![Node add form](../../images/guides/drupal-8-advanced-page-cache/img13-node-add-article-3.png)
+    ![Node add form](../images/guides/drupal-8-advanced-page-cache/img13-node-add-article-3.png)
 
     ```bash{outputLines: 2}
     curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1

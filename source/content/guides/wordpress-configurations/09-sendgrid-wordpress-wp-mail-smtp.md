@@ -48,11 +48,11 @@ Each method requires first setting your working environment (Dev or a Multidev e
 
 1. Select **Plugins**, then select **Add New**
 
-  ![The WordPress Admin Dashboard, highlighting the Plugins page and Add New button](../../../images/guides/wp-mail-smtp/add-new-plugin.png)
+  ![The WordPress Admin Dashboard, highlighting the Plugins page and Add New button](../../images/guides/wp-mail-smtp/add-new-plugin.png)
 
 1. Enter "wp mail smtp" in the search box, locate **WP Mail SMTP by WPForms** and click **Install Now**:
 
-  ![The Add Plugins search view](../../../images/guides/wp-mail-smtp/search-plugins-install.png)
+  ![The Add Plugins search view](../../images/guides/wp-mail-smtp/search-plugins-install.png)
 
 1. Click **Activate** when the installation finishes.
 
@@ -103,7 +103,7 @@ export env=dev #Or a multidev name
 
 1. Select **SendGrid** in the **Mailer** subsection:
 
-  ![The plugins settings page for WP Mail SMTP](../../../images/guides/wp-mail-smtp/plugin-settings.png)
+  ![The plugins settings page for WP Mail SMTP](../../images/guides/wp-mail-smtp/plugin-settings.png)
 
 1. Navigate to the next section, then paste in your API key, and then select **Save Settings**.
 

@@ -26,7 +26,7 @@ Pantheon's platform is [elastic](https://en.wikipedia.org/wiki/Elasticity_(cloud
 
 Secure Integration uses TLS encryption to create a tunnel from the application containers to a pair of [F5 load balancers](https://f5.com/glossary/load-balancer), offering a consistent IP address range (*not* a single address) from which requests are made to your local service.
 
-![Secure Integration diagram](../../../images/si-diagram.png)
+![Secure Integration diagram](../../images/si-diagram.png)
 
 ## Create a Secure Tunnel
 

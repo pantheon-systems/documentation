@@ -35,7 +35,7 @@ Object Cache Pro is a highly optimized premium WordPress plugin that integrates 
 - Jetpack
 - Yoast SEO
 
-![Object Cache Pro admin page](../../../images/guides/object-cache-pro/object-cache-pro-analytics.png)
+![Object Cache Pro admin page](../../images/guides/object-cache-pro/object-cache-pro-analytics.png)
 
 ### How does Object Cache Pro work?
 

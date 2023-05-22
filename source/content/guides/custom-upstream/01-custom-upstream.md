@@ -31,7 +31,7 @@ The Custom Upstream workflow frees up developer time, and establishes a sustaina
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-![Custom Upstream update strategy](../../../images/update-diagram.png)
+![Custom Upstream update strategy](../../images/update-diagram.png)
 
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-edu-drupal-case-study).
 
@@ -49,7 +49,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div className="upstream-overview-outter">
 <div className="upstream-content-inner-icon">
 
-![Parent upstream level](../../../images/levelone-icon.png)
+![Parent upstream level](../../images/levelone-icon.png)
 
 <ul class="upstream">
 <li>Core Updates</li>
@@ -68,7 +68,7 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 <div className="upstream-overview-outter">
 <div className="upstream-content-inner-icon">
 
-![Custom upstream level](../../../images/leveltwo-icon.png)
+![Custom upstream level](../../images/leveltwo-icon.png)
 
 <ul class="upstream">
 <li>Parent Theme</li>
@@ -91,7 +91,7 @@ To create a Custom Upstream from another Git hosting provider (like Azure DevOps
 <div className="upstream-overview-outter">
 <div className="upstream-content-inner-icon">
 
-![Site upstream level](../../../images/levelthree-icon.png)
+![Site upstream level](../../images/levelthree-icon.png)
 
 <ul class="upstream">
 <li>Child Theme</li>

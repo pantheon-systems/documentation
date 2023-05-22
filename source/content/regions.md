@@ -42,7 +42,7 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 
 [Create a new Site](/guides/account-mgmt/workspace-sites-teams/sites) from the Dashboard and select the Region:
 
-![Select a Region from the Create Your Pantheon Site screen](../images/dashboard/create-pantheon-site.png)
+![Select a Region from the Create Your Pantheon Site screen](images/dashboard/create-pantheon-site.png)
 
 ### Create a New Site in a Specific Region using Terminus
 
@@ -88,7 +88,7 @@ Use the Dashboard to see the Pantheon Global Region in which the site is hosted:
 1.  [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), click **Settings**, then **About Site**.
 1.  **Region** will show either `United States` by default, or the name of the International Region in which the Site is hosted.
 
-![Site Dashboard > Settings > About Site > Region: European Union](../images/settings-about-site-region-eu.png)
+![Site Dashboard > Settings > About Site > Region: European Union](images/settings-about-site-region-eu.png)
 
 You can also get this information via Terminus.
 

@@ -60,7 +60,7 @@ You must create a local copy of your [codebase](/code#pantheon-git-repository "A
 
 1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**. 
 
-  ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
+  ![Copy Git Clone Command](../../images/dashboard/git-string.png)
 
 1. Copy the `git clone` command and paste it into Terminal. Git will create a directory as part of the clone, so you don't need to create one:
 
@@ -180,7 +180,7 @@ There is a handy list of Git commands (along with a lot of other documentation) 
 
 Pantheon instantly deploys the changes to your development server when the push command completes.
 
-![Image of the Dev tab syncing with a recently pushed git commit](../../../images/dashboard/sync-code.png)
+![Image of the Dev tab syncing with a recently pushed git commit](../../images/dashboard/sync-code.png)
 
 1. Navigate to your site's dashboard > click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab.
 

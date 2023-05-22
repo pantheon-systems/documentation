@@ -38,7 +38,7 @@ A Workspace in VS Code contains settings for your project, including recommended
 
 1. Navigate to the VS Code Welcome screen, click **Open folder...** under the **Start** heading:
 
-  ![The Open folder option from the Visual Studio Code Start screen](../../../images/vscode-open-folder.png)
+  ![The Open folder option from the Visual Studio Code Start screen](../../images/vscode-open-folder.png)
 
   If you have already closed the Welcome screen, click **Open...** in the **File** menu.
 

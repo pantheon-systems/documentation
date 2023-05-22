@@ -23,7 +23,7 @@ Autopilot updates and visually tests a copy of your site on a [Multidev](/guides
 
 To review your test results, go to your Autopilot overview page.  Here you can see what sites passed testing and are up to date, as well as sites that need your manual review. 
 
-![Autopilot overview page shows the testing status of all sites](../../../images/autopilot/autopilot-sites-overview.png)
+![Autopilot overview page shows the testing status of all sites](../../images/autopilot/autopilot-sites-overview.png)
 
 
 ## Successful Tests
@@ -47,7 +47,7 @@ If an error is detected during an update attempt, the **Autopilot Status** shows
 
 1. Click **View Update Details** for details:
 
- ![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
+ ![Autopilot Update Details shows a list of updates and the versions](../../images/autopilot/autopilot-status-what-changed.png)
 
 1. Click **Review Test Results** to compare changes.
 

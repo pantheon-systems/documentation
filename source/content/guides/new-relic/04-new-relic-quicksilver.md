@@ -102,7 +102,7 @@ In this guide, we'll automatically label code changes to your site in New Relic&
 
   In the terminal, you should see that your `pantheon.yml` file is being applied. Even this initial code push should appear in your Dev environment's New Relic&reg; account, on the **Deployments** tab:
 
-  ![Deployment tab display](../../../images/integrations/newrelic/deploy_tab.png)
+  ![Deployment tab display](../../images/integrations/newrelic/deploy_tab.png)
 
 1. Confirm that there are no issues, then deploy your new commit to Test and Live. Your deploys will now be recorded in New Relic&reg; Performance Monitoring.
 

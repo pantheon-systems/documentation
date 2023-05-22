@@ -86,7 +86,7 @@ Next, [add the domain to your environment](/guides/domains).
 
 Once the certificate is in place, you will see the following under **Details** for your domain(s):
 
-  ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
+  ![Custom Certificate Confirmation](images/dashboard/custom-cert-confirm.png)
 
 ## Test Before Going Live
 

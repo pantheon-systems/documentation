@@ -67,7 +67,7 @@ Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a plan
 ### Option 1: Use Cloudflare for DNS Only (Recommended)
 This configuration routes traffic to Pantheon's Global CDN exclusively. Unless you're paying for advanced Cloudflare features or if you have custom configurations (e.g. many page rules) you'd like to keep, turn off Cloudflare's CDN so that only DNS hosting services are used:
 
-![Example DNS only](../../images/cloudflare-dns-only.png)
+![Example DNS only](../images/cloudflare-dns-only.png)
 
 1. Click **DNS** on the Cloudflare menu bar.
 1. Click **+ Add record**.
@@ -96,11 +96,11 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 1. Select **SSL/TLS** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
 
-  ![Enable SSL](../../images/cloudflare-ssl-strict.png)
+  ![Enable SSL](../images/cloudflare-ssl-strict.png)
 
 1. Navigate to the **Edge Certificates** page on the sub-menu and enable **Always Use HTTPS**
 
-  ![Cloudflare Always HTTPS](../../images/cloudflare-always-https.png)
+  ![Cloudflare Always HTTPS](../images/cloudflare-always-https.png)
 
 1. Scroll down and enable **Automatic HTTPS Rewrites**
 
@@ -108,7 +108,7 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 1. Proceed with DNS configuration as described in Option 1, but make sure the cloud is toggled orange, not gray:
 
-   ![Example DNS only](../../images/cloudflare-full.png)
+   ![Example DNS only](../images/cloudflare-full.png)
 
 ## CAA Records (Optional)
 
@@ -136,7 +136,7 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
 1. Click **Add Record**. Your record should look similar to the following once it has been created:
 
-  ![CAA record](../../images/cf-caa-final.png)
+  ![CAA record](../images/cf-caa-final.png)
 
 1. Repeat this process for the `www` subdomain.
 

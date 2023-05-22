@@ -260,7 +260,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
    
-   ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
+   ![Site with two Supporting Workspaces](../../../images/dashboard/manage-site-team.png)
 
 ## FAQ
 

@@ -37,7 +37,7 @@ The Site Portfolio Report provides important account information at the top of t
 
 The Site Portfolio Report provides a snapshot of your portfolio through three charts:
 
-![Site Portfolio Charts](../../../images/site-portfolio-report-charts.png)
+![Site Portfolio Charts](../../images/site-portfolio-report-charts.png)
 
 ### Existing Sites with Automatic Upgrades
 

@@ -89,7 +89,7 @@ An `A` record points a domain name to an IPv4 address. A `CNAME` record points a
 
 Pantheon provides `A` and `AAAA` values:
 
-![DNS Values provided by the Pantheon Site Dashboard](../../../images/dashboard/dns-values.png)
+![DNS Values provided by the Pantheon Site Dashboard](../../images/dashboard/dns-values.png)
 
 <Accordion title="Learn More" id="example-panel" icon="education">
 

@@ -76,7 +76,7 @@ However, some Git GUI clients, including SourceTree, also support the use of
 
 1. Enter your site name in the the **Name** field.
 
-![SourceTree git Configuration](../../../images/sourcetree-config.png)
+![SourceTree git Configuration](../../images/sourcetree-config.png)
 
 Alternatively, you can simply clone the repository using `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
 

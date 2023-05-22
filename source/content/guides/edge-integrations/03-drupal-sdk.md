@@ -79,23 +79,23 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 1. Navigate to `/admin/structure/smart_content_segment_set`.
 
 1. Click **+Add Global Segment Set**.
-    ![Segment Set entities](../../../images/guides/edge-integrations/segementsetentities.png)
+    ![Segment Set entities](../../images/guides/edge-integrations/segementsetentities.png)
 
 1. Provide a label (e.g. Geo).
 
 1. Click **Add Segment**.
-    ![Add Segment](../../../images/guides/edge-integrations/setsegment.png)
+    ![Add Segment](../../images/guides/edge-integrations/setsegment.png)
 
 1. Change the segment name to something meaningful (e.g. Canada, US, etc).
 
 1. Select **Geo** condition under the Smart CDN category.
-    ![Select Geo](../../../images/guides/edge-integrations/selectgeo.png)
+    ![Select Geo](../../images/guides/edge-integrations/selectgeo.png)
 
 1. Click **Add Condition**.
 
 1. Fill in value for **Equals**. Fastly is currently set up to return 2-letter country codes for geolocation. If your country is USA, type in “US” in all uppercase letters.
 
-    ![Segment Equals](../../../images/guides/edge-integrations/segmentequals.png)
+    ![Segment Equals](../../images/guides/edge-integrations/segmentequals.png)
 
 1. Add all of the required segments and select one that will act as the default.
 
@@ -121,7 +121,7 @@ There are a few different ways to use Smart Content CDN. In this doc, we will co
 
 1. If you don’t have a VPN client, navigate to the **Segments Sets Admin** page at `/admin/structure/smart_content_segment_set`, edit the set, select one preview checkbox, and save.
 
-    ![Smart Content Preview](../../../images/guides/edge-integrations/ei-drupal-smart-content-preview.png)
+    ![Smart Content Preview](../../images/guides/edge-integrations/ei-drupal-smart-content-preview.png)
 
 The content corresponding to this segment will display. Please note that only users who are logged in can access the content in preview; anonymous users will not have access.
 
@@ -130,7 +130,7 @@ The content corresponding to this segment will display. Please note that only us
 In this section, we identify the content type where you want to use personalization by Interest, add a taxonomy field, and connect it to the pertinent vocabulary. For this example, we will assume it is Tags `field_tags`.
 
 1. Navigate to **Admin > Config > System > Smart Content CDN** at `/admin/config/system/smart-content-cdn`. In the configuration form for Smart CDN, select the checkbox for Tags. The form automatically reads all available taxonomy reference terms for all content types and allows you to select them.
-    ![Interest Fields](../../../images/guides/edge-integrations/interestfields.png)
+    ![Interest Fields](../../images/guides/edge-integrations/interestfields.png)
 
 1. Create tags for your Tags vocabulary.
 
@@ -139,12 +139,12 @@ In this section, we identify the content type where you want to use personalizat
 1. Navigate to `/admin/structure/smart_content_segment_set` to configure interest/taxonomy segments. 
 
 1. Click **+Add Global Segment Set**.
-    ![Add Global Segment Set](../../../images/guides/edge-integrations/segementsetentities.png)
+    ![Add Global Segment Set](../../images/guides/edge-integrations/segementsetentities.png)
 
 1. Provide a label (e.g. Interest) - the name isn't critical.
 
 1. Click **Add Segment**.
-    ![Add Segment](../../../images/guides/edge-integrations/setsegment.png)
+    ![Add Segment](../../images/guides/edge-integrations/setsegment.png)
 
 1. Change segment name to something meaningful. We recommend matching the term name (e.g. "Biking").
 
@@ -153,7 +153,7 @@ In this section, we identify the content type where you want to use personalizat
 1. Click **Add Condition**.
 
 1. Fill in value for **Equals** with the taxonomy term name.
-    ![Interests](../../../images/guides/edge-integrations/interests.png)
+    ![Interests](../../images/guides/edge-integrations/interests.png)
 
 1. Set default segment and save.
 
@@ -174,7 +174,7 @@ There is some additional configuration that you can apply to Smart Content. The 
 To set up the threshold after which the user will be placed in the particular Interest segment:
 
 1. Navigate to the **Configuration > System > Smart Content CDN Configuration** page at `/admin/config/system/smart-content-cdn`.
-    ![configform](../../../images/guides/edge-integrations/smartcdnconfiguration.png)
+    ![configform](../../images/guides/edge-integrations/smartcdnconfiguration.png)
 
 1. Update the Interest threshold value.
 

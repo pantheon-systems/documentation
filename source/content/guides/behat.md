@@ -107,7 +107,7 @@ Next, we can take some of the steps we listed above, most of which are provided 
 
    You should see output like this:
 
-   ![Behat test results](../../images/guides/behat-output.png)
+   ![Behat test results](../images/guides/behat-output.png)
 
    **Note:** The extra parameters are not required, just a common set of preferences. Here's what they do:
 

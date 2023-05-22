@@ -30,6 +30,6 @@ If you do not have access to a Mac or Linux environment, you can install [Cygwin
 
 1. Search for each package, open the appropriate category (Net or PHP), and click **Skip** next to each package to select it for installation. Required packages: `curl`, `openssh`, `openssl` (Net), `php`, `php-curl`, `php-json`, `php-phar` (PHP)
 
-  ![Select openSSL package](../images/cygwin-select-packages.png)
+  ![Select openSSL package](images/cygwin-select-packages.png)
 
 1. Complete the set up. Repeat this process when updating Cygwin or adding more packages.

@@ -36,7 +36,7 @@ Content refers to your site's files and the database. In this context, files are
 
 ## Code Moves Up, Content Moves Down
 
-![Dev Test and Live icon](../images/code-workflow.png)
+![Dev Test and Live icon](images/code-workflow.png)
 
 The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/guides/filesystem) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
@@ -65,7 +65,7 @@ While you are able to update the Dev environment via Git, if you would like to d
 
 After changes are pushed to Dev, the Deploys panel in the Test tab will prompt you to commit the changes to Test:
 
-![Site dashboard, test environment, Deploys section](../images/dashboard/deploy-to-test-env.png)
+![Site dashboard, test environment, Deploys section](images/dashboard/deploy-to-test-env.png)
 
  - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
@@ -101,7 +101,7 @@ This entire process is designed around making sure that the Live environment is 
 
 After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
-![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
+![Site dashboard, live environment, workflow section](images/dashboard/deploy-live.png)
 
 ### Content Staging
 

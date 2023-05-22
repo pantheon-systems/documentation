@@ -25,7 +25,7 @@ Pantheon's Autopilot:
 - Tests the updates with automated visual regression testing (VRT)
 - Optionally deploys the updates
 
-![Autopilot Dashboard](../../images/autopilot/autopilot-sites-overview.png)
+![Autopilot Dashboard](../images/autopilot/autopilot-sites-overview.png)
 
 </Tab>
 
@@ -40,15 +40,15 @@ Pantheon's Autopilot:
 
 *Autopilot Setup Wizard*
 
-![Autopilot Setup Wizard](../../images/autopilot/autopilot-setup-configuration.png)
+![Autopilot Setup Wizard](../images/autopilot/autopilot-setup-configuration.png)
 
 *Reviewing Test Results*
 
-![Reviewing Test Results](../../images/autopilot/autopilot-review-test-results.png)
+![Reviewing Test Results](../images/autopilot/autopilot-review-test-results.png)
 
 *View Recent Activity*
 
-![View Recent Activity](../../images/autopilot/autopilot-site-recent-activity.png)
+![View Recent Activity](../images/autopilot/autopilot-site-recent-activity.png)
 
 </Tab>
 

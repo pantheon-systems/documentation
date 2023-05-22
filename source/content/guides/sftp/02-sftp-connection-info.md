@@ -23,7 +23,7 @@ This section provides information on how to access the SFTP Connection Info in y
 
 1. Click **Connect with SFTP**. Your connection credentials will be displayed along with a button to connect directly with your preferred client.
 
- ![SFTP Connection Data](../../../images/dashboard/sftp-connection-info.png)
+ ![SFTP Connection Data](../../images/dashboard/sftp-connection-info.png)
 
 The connection information may differ from what you've used in the past. The information is based on your unique Site ID (the long string at the end of your Dashboard URL).
 
@@ -67,7 +67,7 @@ You can connect to an environment over SFTP with your terminal. The command to d
 
 There is also a one-click option to connect with a GUI client. The main directory listing includes Pantheon, logs, environment data, and configuration. Your website is in the `code` directory. For instance, in Cyberduck on MacOS :
 
-![Cyberduck Example](../../../images/cyberduck-example.png)
+![Cyberduck Example](../../images/cyberduck-example.png)
 
 ## SFTP File Uploads to Test and Live Environments
 

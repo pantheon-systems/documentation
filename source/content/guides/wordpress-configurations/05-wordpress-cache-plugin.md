@@ -43,7 +43,7 @@ You can increase the default time to live value to improve the chances that a vi
 
 1. Click **Save Changes**.
 
-![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
+![WordPress Pantheon Cache Plugin settings](../../images/WordPress_Pantheon-Cache-Settings.png)
 
 ### Maintenance Mode
 

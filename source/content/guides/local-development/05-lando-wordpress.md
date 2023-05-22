@@ -34,7 +34,7 @@ Be sure that you have:
 
 1. Open the installer package. The installer has a few pre-flight checks it runs before it starts.
 
-  ![Image of the Lando installer](../../../images/guides/lando-wordpress/lando-installer.png)
+  ![Image of the Lando installer](../../images/guides/lando-wordpress/lando-installer.png)
 
 1. Follow the system prompts to install Lando.
 
@@ -74,7 +74,7 @@ You can follow these same basic steps with an existing Pantheon Drupal site by r
 
 1. Choose WordPress as your starting recipe.
 
-  ![Choose your Lando recipe to spin up a new website.](../../../images/guides/lando-wordpress/lando-choose-recipe.png)
+  ![Choose your Lando recipe to spin up a new website.](../../images/guides/lando-wordpress/lando-choose-recipe.png)
 
 1. Press enter and Lando will spin up the site for your webroot from your current directory.
 
@@ -88,7 +88,7 @@ You can follow these same basic steps with an existing Pantheon Drupal site by r
 
   This starts your Lando app and gives you some basic information like your Appserver URLs to access the site in your local browser of choice:
 
-  ![alt text](../../../images/guides/lando-wordpress/lando-start.png)
+  ![alt text](../../images/guides/lando-wordpress/lando-start.png)
 
 1. Download the WordPress Core:
 

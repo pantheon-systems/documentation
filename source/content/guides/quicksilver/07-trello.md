@@ -43,7 +43,7 @@ Create a new machine user in your Trello instance. This user is referred to as a
 
 1. Login to your Trello instance, click <i class="fa fa-plus"></i> in the upper panel, and then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create** to create a team if you haven't done so already.
 
-    ![Create a team](../../../images/integrations/trello/new-team.png)
+    ![Create a team](../../images/integrations/trello/new-team.png)
 
     If you already have a team, select it from your dashboard.
 
@@ -53,15 +53,15 @@ Create a new machine user in your Trello instance. This user is referred to as a
 
   We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. The email needs to be an account you have access to:
 
-    ![Create an automation user](../../../images/integrations/trello/add-member.png)
+    ![Create an automation user](../../images/integrations/trello/add-member.png)
 
 1. Login as the new "Automation User" and make sure you're a team member on the relevant board:
 
-    ![Add a team](../../../images/integrations/trello/team-board.png)
+    ![Add a team](../../images/integrations/trello/team-board.png)
 
 1. Copy the machine user's API key from [here](https://trello.com/app-key), then click the link to manually generate a Token:
 
-    ![Copy developer api key](../../../images/integrations/trello/developer-keys.png)
+    ![Copy developer api key](../../images/integrations/trello/developer-keys.png)
 
 1. Save your key and token for use in the next section.
 
@@ -167,7 +167,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Create a test issue in an existing or new Trello project. Copy the issue ID, which is located in the Trello card's URL:
 
-    ![Trello card ID](../../../images/integrations/trello/card-id.png)
+    ![Trello card ID](../../images/integrations/trello/card-id.png)
 
 1. Optional: Run `terminus workflow:watch $SITE` in a separate Terminal window to see the process unfold in real time.
 
@@ -179,7 +179,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Return to the issue in Trello to see a message from our machine user:
 
-    ![Trello card](../../../images/integrations/trello/trello-card.png)
+    ![Trello card](../../images/integrations/trello/trello-card.png)
 
 ## External Repositories
 

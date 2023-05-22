@@ -67,7 +67,7 @@ If you do need to upload module files directly to the server, be sure to use SFT
 
 1. Click **Lockr** from within the WordPress Dashboard to visit the Lockr Configuration page  (`/wp-admin/admin.php?page=lockr-site-config`):
 
-   ![WP Lockr Configuration Example](../../images/lockr_wpconfig.png)​
+   ![WP Lockr Configuration Example](../images/lockr_wpconfig.png)​
 
 1. Enter your email address, and click **Register Site**.
 

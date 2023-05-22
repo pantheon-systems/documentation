@@ -21,7 +21,7 @@ integration: [--]
 
 Build Tools connects Pantheon with your CI service and external Git provider. It also includes Composer support, Automated Testing, and best practice recommendations for your advanced [WebOps workflow](https://pantheon.io/webops). This is an extension of the [Pantheon WebOps workflow](/pantheon-workflow).
 
-![Build Tools Structure diagram ](../../../images/pr-workflow/build-tools-structure-diagram.png)
+![Build Tools Structure diagram ](../../images/pr-workflow/build-tools-structure-diagram.png)
 
 Build Tools helps you create new projects that:
 
@@ -45,7 +45,7 @@ Build Tools currently supports the following combinations of Git and CI services
 
 1. [<em class="fa fa-bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
 
-![Build Tools Providers Diagram](../../../images/pr-workflow/build-tools-provider-diagram.png)
+![Build Tools Providers Diagram](../../images/pr-workflow/build-tools-provider-diagram.png)
 
 ## Is Build Tools Right For You?
 

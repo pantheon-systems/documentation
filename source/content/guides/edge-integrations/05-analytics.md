@@ -41,7 +41,7 @@ The [Pantheon WordPress Edge Integrations plugin](https://github.com/pantheon-sy
 
 1. Navigate to the **General Settings** page in your WordPress admin and scroll to the **Google Tag Manager Code** field.
 
-    ![Google Tag Manager Code field in admin settings](../../../images/guides/edge-integrations/ei-analytics-wp-1-gtm-code.png)
+    ![Google Tag Manager Code field in admin settings](../../images/guides/edge-integrations/ei-analytics-wp-1-gtm-code.png)
 
     Alternately, you can use the `pantheon.ei.gtm_code` filter. This filter can be used to either override the above setting in the admin, or to define a GTM code in your codebase.
 
@@ -98,17 +98,17 @@ This section will cover the configuration of Google Tag Manager and Google Analy
 
 Before you start, if you are setting up a brand new site/property, you must select "Create a Universal Analytics property" under **Advanced Options**. While you can choose either the "Create both a Google Analytics 4 and a Universal Analytics property" or the "Create a Universal Analytics property only" options, all of the additional settings described here refer to the Universal Analytics property, specifically. Google Analytics 4 is not currently supported.
 
-![Google Analytics Property Setup](../../../images/guides/edge-integrations/ei-analytics-0-ua-property.png)
+![Google Analytics Property Setup](../../images/guides/edge-integrations/ei-analytics-0-ua-property.png)
 
 #### Track Personalization Properties as Custom Dimensions in GA
 
 1. Navigate to the **Admin > Property** area of Google Analytics. Expand Custom Definitions and select **Custom Dimensions**:
 
-  ![Custom Dimensions](../../../images/guides/edge-integrations/ei-analytics-1-custom-dimensions.png)
+  ![Custom Dimensions](../../images/guides/edge-integrations/ei-analytics-1-custom-dimensions.png)
 
 1. Add **New Custom Dimensions** that correspond to the identifiers. Most dimensions will be set to “Hit,” as they change based on user behavior. For geotargeting, you have to set the scope to "Session" to allow the setting to persist.
 
-  ![New Custom Dimension](../../../images/guides/edge-integrations/ei-analytics-2-new-custom-dimension.jpg)
+  ![New Custom Dimension](../../images/guides/edge-integrations/ei-analytics-2-new-custom-dimension.jpg)
 
 Take note of the Index for each of your new Custom Dimensions, as you will need them to configure your Variables in Google Tag Manager. Your indexes will differ from this example if you have pre-existing configurations.
 
@@ -120,11 +120,11 @@ You now have the option to verify that the identifiers are accurately pushing da
 
 1. Navigate to **User -Defined Variables** and click **New** in the upper right-hand corner.
 
-  ![User Defined Variables](../../../images/guides/edge-integrations/ei-analytics-3-user-defined-variables.png)
+  ![User Defined Variables](../../images/guides/edge-integrations/ei-analytics-3-user-defined-variables.png)
 
 1. From the list, select **Data Layer Variable**.
 
-  ![Choose Variable Type](../../../images/guides/edge-integrations/ei-analytics-4-choose-variable-type.png)
+  ![Choose Variable Type](../../images/guides/edge-integrations/ei-analytics-4-choose-variable-type.png)
 
 1. Create Variables following these best practices:
 
@@ -132,7 +132,7 @@ You now have the option to verify that the identifiers are accurately pushing da
     - Include the Custom Dimension Index ID in your variable name, so that it's easy to reference.
     - When you create new variables that include text, we highly recommend that the **Format Value** is lowercase.
 
-    ![Change Case to Lowercase and Data Layer Variable](../../../images/guides/edge-integrations/ei-analytics-6-change-case.png)
+    ![Change Case to Lowercase and Data Layer Variable](../../images/guides/edge-integrations/ei-analytics-6-change-case.png)
 
     - Keep the **Data Layer Version** at Version 2.
     - Leave the **Set a Default Value** box unchecked.
@@ -140,7 +140,7 @@ You now have the option to verify that the identifiers are accurately pushing da
       - audience.geo
       - interest
 
-<!-- ![Data Layer Variable, Variable Configuration](../../../images/guides/edge-integrations/ei-analytics-5-geo-variable-config.png)
+<!-- ![Data Layer Variable, Variable Configuration](../../images/guides/edge-integrations/ei-analytics-5-geo-variable-config.png)
  -->
 
 #### Append Variables to Your Google Analytics Settings in Tag Manager
@@ -149,7 +149,7 @@ After your variables are created, you can attach them to your Google Analytics S
 
 In your list of Custom Variables, be sure that the **Type** is the same. If you are using a “Constant” or have hardcoded the UA ID into each tag, change that in favor of GTM tags in order to ensure future usability.
 
-![Custom Variables List](../../../images/guides/edge-integrations/ei-analytics-7-custom-variables.png)
+![Custom Variables List](../../images/guides/edge-integrations/ei-analytics-7-custom-variables.png)
 
 To append the variables:
 
@@ -163,23 +163,23 @@ To append the variables:
 
 1. Create an entry for each of your custom dimensions, and ensure that your Index and Dimension Values are correct:
 
-  ![Custom Dimensions List](../../../images/guides/edge-integrations/ei-analytics-8-custom-dimensions.png)
+  ![Custom Dimensions List](../../images/guides/edge-integrations/ei-analytics-8-custom-dimensions.png)
 
 ## Test and Debug
 
 1. In Google Tag Manager, click **Preview** in your Workspace to debug. If you are new to using **Preview**, please refer to the [Preview and debug containers](https://support.google.com/tagmanager/answer/6107056?hl=en) support documentation on Google Tag Manager Support.
 
-  ![Preview Workspace](../../../images/guides/edge-integrations/ei-analytics-9-preview-workspace.png)
+  ![Preview Workspace](../../images/guides/edge-integrations/ei-analytics-9-preview-workspace.png)
 
 1. Use the [DataSlayer Chrome extension](https://chrome.google.com/webstore/detail/dataslayer/ikbablmmjldhamhcldjjigniffkkjgpo) to verify data is accurately being sent to Analytics. The Data Layer properties displayed should correspond directly to what is pushed to Google Analytics. Additionally, your personalization values with the Custom Dimension Index numbers you previously set up should also display.
 
-  ![DataSlayer Personalization Values](../../../images/guides/edge-integrations/ei-analytics-10-data-layer-properties.png)
+  ![DataSlayer Personalization Values](../../images/guides/edge-integrations/ei-analytics-10-data-layer-properties.png)
 
 ## Click Tracking and Goal Setup
 
 This section will cover how to capture clicks on a particular link and set up a goal with Google Analytics. For this example, we will use Google Tag Manager to capture a “View recipe” button click as an event, and set it up as a goal in Google Analytics.
 
-<!-- ![Vegan Poutine recipe example](../../../images/guides/edge-integrations/ei-analytics-11-vegan-poutine.png)
+<!-- ![Vegan Poutine recipe example](../../images/guides/edge-integrations/ei-analytics-11-vegan-poutine.png)
  -->
 With dataSlayer, there is a dataLayer push that happens when you click on the “View recipe” button because it is a link click and has a unique Click Text – namely, “View recipe.” The values you will use in Google Tag Manager are:
 
@@ -205,31 +205,31 @@ With dataSlayer, there is a dataLayer push that happens when you click on the �
     - Label: {{Click Text}}
     - Google Analytics Settings: {{GA ID}}
 
-    ![GA Event View Recipe Click](../../../images/guides/edge-integrations/ei-analytics-13-ga-event-recipe-click.png)
+    ![GA Event View Recipe Click](../../images/guides/edge-integrations/ei-analytics-13-ga-event-recipe-click.png)
 
 1. Scroll beyond the **Tag Configuration** section. In the **Triggering** section, click the gray circle to choose a trigger that will make the tag fire.
 
-    ![Create a Trigger](../../../images/guides/edge-integrations/ei-analytics-14-triggering.png)
+    ![Create a Trigger](../../images/guides/edge-integrations/ei-analytics-14-triggering.png)
 
 1. Click on the + in the upper right-hand corner to create a new trigger.
 
-    ![Choose a Trigger](../../../images/guides/edge-integrations/ei-analytics-15-choose-a-trigger.png)
+    ![Choose a Trigger](../../images/guides/edge-integrations/ei-analytics-15-choose-a-trigger.png)
 
 1. Click on the gray circle again and select the **Just Links** trigger type from the fly-out menu.
 
-    ![Choose trigger type, Just Links](../../../images/guides/edge-integrations/ei-analytics-16-just-links.png)
+    ![Choose trigger type, Just Links](../../images/guides/edge-integrations/ei-analytics-16-just-links.png)
 
 1. Fill out the form details for the trigger. Ensure you give it a name that is  easy to understand for anyone who refers to it in the future. In the example below, we've called it “Link Click - View Recipe.” To make the trigger specific to the “View recipe” button, select **Some Link Clicks**, instead of **All Link Clicks**. Be sure to specify that **Click Text** should be set to **matches RegEx** for “View recipe," which is the value we got from the dataSlayer extension. Save the trigger.
 
-    ![Link Click - View Recipe Example](../../../images/guides/edge-integrations/ei-analytics-17-link-click-view-recipe.png)
+    ![Link Click - View Recipe Example](../../images/guides/edge-integrations/ei-analytics-17-link-click-view-recipe.png)
 
 You now have a fully working Tag and corresponding Trigger.
 
-![Tag and Trigger, successful configuration](../../../images/guides/edge-integrations/ei-analytics-18-ga-event-view-recipe-click.png)
+![Tag and Trigger, successful configuration](../../images/guides/edge-integrations/ei-analytics-18-ga-event-view-recipe-click.png)
 
 To test that the Tag and Trigger function as expected, use Preview mode. In GTM, your tag will fire when you click on the link.
 
-![GA Tags Fired](../../../images/guides/edge-integrations/ei-analytics-19-tag-fired.png)
+![GA Tags Fired](../../images/guides/edge-integrations/ei-analytics-19-tag-fired.png)
 
 In dataSlayer your event will fire with the values that you previously set up in your tag.
 
@@ -239,21 +239,21 @@ In this example case:
 * action: (site URL)
 * label: View recipe
 
-<!-- ![DataSlayer Event Firing](../../../images/guides/edge-integrations/ei-analytics-20-dataslayer-internal-link-click.png)
+<!-- ![DataSlayer Event Firing](../../images/guides/edge-integrations/ei-analytics-20-dataslayer-internal-link-click.png)
  -->
 After you test your new event, make sure to publish your changes by pressing the **Submit** button in your Workspace.
 
-![Submit Button](../../../images/guides/edge-integrations/ei-analytics-33-submit.png)
+![Submit Button](../../images/guides/edge-integrations/ei-analytics-33-submit.png)
 
 ### Goal Setup in Google Analytics
 
 1. Navigate to the **Goal** section and click **+ New Goal**.
 
-    ![New Goal Button](../../../images/guides/edge-integrations/ei-analytics-21-ga-new-goal.png)
+    ![New Goal Button](../../images/guides/edge-integrations/ei-analytics-21-ga-new-goal.png)
 
 1. Name your goal and select **Event** as the type. Click **Continue**.
 
-    ![Goal Description](../../../images/guides/edge-integrations/ei-analytics-22-ga-goal-description.png)
+    ![Goal Description](../../images/guides/edge-integrations/ei-analytics-22-ga-goal-description.png)
 
 1. Input the condition of the goal. In this case, you need the label value that was generated in the previous section:
 
@@ -261,7 +261,7 @@ After you test your new event, make sure to publish your changes by pressing the
 
     Based on this information, enter the value of “label” into the Label field. Ensure that you change the default “Equals to” condition to “Regular expression,” which makes the matching more flexible.
 
-    ![Goal Details](../../../images/guides/edge-integrations/ei-analytics-23-goal-details.png)
+    ![Goal Details](../../images/guides/edge-integrations/ei-analytics-23-goal-details.png)
 
 1. Save the goal.
 
@@ -269,19 +269,19 @@ After you test your new event, make sure to publish your changes by pressing the
 
 1. To find your new data, log into Google Analytics. In the main navigation, go to Behavior > Events > Top Events.
 
-    ![Top Events menu](../../../images/guides/edge-integrations/ei-analytics-24-top-events.png)
+    ![Top Events menu](../../images/guides/edge-integrations/ei-analytics-24-top-events.png)
 
 1. Click on the **Secondary dimension** button, right below the **Event Category** label. This will display the custom dimensions you created earlier.
 
-    ![Event Analytics view](../../../images/guides/edge-integrations/ei-analytics-25-events-analytics-view.png)
+    ![Event Analytics view](../../images/guides/edge-integrations/ei-analytics-25-events-analytics-view.png)
 
 1. Click on any label in the list to display the associated data.
 
-    ![Secondary Dimension](../../../images/guides/edge-integrations/ei-analytics-26-secondary-dimension.png)
+    ![Secondary Dimension](../../images/guides/edge-integrations/ei-analytics-26-secondary-dimension.png)
 
 You can also toggle between the different custom dimensions by clicking in the list of events to switch views:
 
-![List of events by dimension](../../../images/guides/edge-integrations/ei-analytics-27-event-list.png)
+![List of events by dimension](../../images/guides/edge-integrations/ei-analytics-27-event-list.png)
 
 ### Segmentation
 
@@ -289,31 +289,31 @@ Create segments based on your custom dimensions in order to slice and dice your 
 
 1. Most reports in Google Analytics allow you to segment your data by clicking on the **+ Add Segment** button in the **Pages** section.
 
-  ![Add Segment](../../../images/guides/edge-integrations/ei-analytics-28-add-segment.png)
+  ![Add Segment](../../images/guides/edge-integrations/ei-analytics-28-add-segment.png)
 
 1. Create a new segment by clicking on the **+ New Segment** button. If you have any existing segments, they will be listed.
 
-  ![New Segment](../../../images/guides/edge-integrations/ei-analytics-29-new-segment.png)
+  ![New Segment](../../images/guides/edge-integrations/ei-analytics-29-new-segment.png)
 
 1. Under **Advanced** choose **Conditions** and select the kind of segment you want to create. For example, if you want to see how Canadian session behavior differs from all other visitors, go to the dimension field, find the appropriate dimension and click on it. In this case, it is **audience geo**.
 
-  ![New segment custom dimensions](../../../images/guides/edge-integrations/ei-analytics-30-segment-dimensions.png)
+  ![New segment custom dimensions](../../images/guides/edge-integrations/ei-analytics-30-segment-dimensions.png)
 
 1. In this example, we want data for Canadian visitors, so the custom dimension should contain a value of `ca`. Name and save your segment, for example: `Audience Geo - Canada`.
 
-  ![Audience Geo - Canada](../../../images/guides/edge-integrations/ei-analytics-31-geo-segment.png)
+  ![Audience Geo - Canada](../../images/guides/edge-integrations/ei-analytics-31-geo-segment.png)
 
 1. Follow the same steps to create additional segments in your reports, like a US geo audience, to compare outcomes.  
 
-  ![Compare Segments](../../../images/guides/edge-integrations/ei-analytics-32-compare-segments.png)
+  ![Compare Segments](../../images/guides/edge-integrations/ei-analytics-32-compare-segments.png)
 
 It is useful to add audiences to your Goals. Tying this back to our previous Recipe Click goal, if we add US and Canadian audiences, we can compare outcomes. If we're more interested to see click-through rates based on audience interest, we can do that, too!
 
-![Compare Audiences](../../../images/guides/edge-integrations/ei-analytics-34-comparative-audiences.png)
+![Compare Audiences](../../images/guides/edge-integrations/ei-analytics-34-comparative-audiences.png)
 
 You can also observe how different audiences convert towards the same Goal.
 
-![Compared goals](../../../images/guides/edge-integrations/ei-analytics-35-compared-goals.png)
+![Compared goals](../../images/guides/edge-integrations/ei-analytics-35-compared-goals.png)
 
 ## More Resources
 

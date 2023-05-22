@@ -97,7 +97,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
 1. Navigate to the WordPress Admin dashboard, select **Tools**, and then select **Network Setup**.
 
-  ![Network setup step 1](../../../images/wp-network-config.png)
+  ![Network setup step 1](../../images/wp-network-config.png)
 
 1. Select either the **Sub-domains** or **Sub-directories** option.
 
@@ -105,7 +105,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
 1. Finalize the installation by following steps provided from the GUI or by following the next steps.
 
-  ![Network setup last step](../../../images/wp-network-config-last.png)
+  ![Network setup last step](../../images/wp-network-config-last.png)
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
 
@@ -134,7 +134,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
 Congratulations on setting up your first WordPress Multisite. When you log in to the WordPress Dashboard, you'll see a **My Sites** menu item in the toolbar:
 
-![Enabling the network](../../../images/wp-network-admin-sites.png)
+![Enabling the network](../../images/wp-network-admin-sites.png)
 
 You will have one site and you can create another if needed. If you chose to use WordPress Multisite with subdirectories, you'll be able to access the site right away. If you chose to use subdomains, you'll need to map a custom hostname to the environment before you can access the new environment.
 

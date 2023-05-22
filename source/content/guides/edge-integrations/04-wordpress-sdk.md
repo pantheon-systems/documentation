@@ -50,7 +50,7 @@ If you do not use Composer on your project, you can still get started with the W
 
 * Download the most recent version of the Source Code (zip) file.
 
-![Release Assets](../../../images/guides/edge-integrations/ei-wp-plugin-assets2.png)
+![Release Assets](../../images/guides/edge-integrations/ei-wp-plugin-assets2.png)
 
 * Extract the plugin in your `wp-content/plugins` directory. You will get all of the compiled assets and included dependencies, including the CMS-agnostic, [global PHP library](https://github.com/pantheon-systems/pantheon-edge-integrations) in the package.
 
@@ -58,7 +58,7 @@ If you do not use Composer on your project, you can still get started with the W
 
 In either case, the last step is activating the plugin from your WordPress dashboard Plugins page. There is no other admin interface for the WordPress plugin -- all the features and components are handled in the code itself, with hooks that developers can use to interact with the geolocation and interest tracking features.
 
-![WP Plugin Active](../../../images/guides/edge-integrations/ei-wp-plugin-active.png)
+![WP Plugin Active](../../images/guides/edge-integrations/ei-wp-plugin-active.png)
 
 ## Geolocation
 
@@ -72,11 +72,11 @@ You can learn more about how to use or manage the geolocation data in the [Geolo
 
 To validate that geolocation is working, open your browser inspector tools, click the Network tab (in Chrome and Firefox), and reload the page so that new data can be recorded and displayed. When you click on the page URL- usually listed first- and inspect the Response Headers, the relevant geolocation data will appear. In this example, the response headers begin with `p13n-geo`.
 
-![Chrome Developer Tools Geolocation Headers](../../../images/guides/edge-integrations/ei-wp-geo-headers.png)
+![Chrome Developer Tools Geolocation Headers](../../images/guides/edge-integrations/ei-wp-geo-headers.png)
 
 If the plugin is installed and configured correctly, the relevant geolocation header you are varying on (`P13n-Geo-Country-Code` by default) will appear as a value in the `vary` field, indicating that the header is being used to vary the cache on the CDN.
 
-![Chrome Developer Tools Vary Headers](../../../images/guides/edge-integrations/ei-wp-geo-vary.png)
+![Chrome Developer Tools Vary Headers](../../images/guides/edge-integrations/ei-wp-geo-vary.png)
 
 ## Interests
 
@@ -90,7 +90,7 @@ You can read more about how to use or manipulate the interest data in the [Inter
 
 You can validate that the interest tracking is working by clicking on multiple pages tagged with the same term 3 (or more, depending on your configuration) times, then going to the same Network tab in your browser inspector tools. This time, you should see a value for `p13n-interest` that matches the pages you navigated to.
 
-![Chrome Developer Tools Interest Headers](../../../images/guides/edge-integrations/ei-wp-interest-header.png)
+![Chrome Developer Tools Interest Headers](../../images/guides/edge-integrations/ei-wp-interest-header.png)
 
 ### Interests Code Samples
 

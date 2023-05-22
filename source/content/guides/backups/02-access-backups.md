@@ -37,7 +37,7 @@ The newest backup appears at the top of the list. A backup will no longer be in 
 
 1. Click the down arrow next to **Code**, **Database**, or **Files** to access the link for the offsite backup.
 
-![Access site backups Pantheon Dashboard](../../../images/dashboard/direct-download-backup.png)
+![Access site backups Pantheon Dashboard](../../images/dashboard/direct-download-backup.png)
 
 <Alert title="Note" type="info">
 

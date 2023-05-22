@@ -39,7 +39,7 @@ Refer to [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpres
 
 [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard. This plugin also provides quick access to interface with your WordPress installation via the command line:
 
-![Pantheon HUD](../../../images/pantheon-hud.png)
+![Pantheon HUD](../../images/pantheon-hud.png)
 
 Refer to [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator) for installation details.
 

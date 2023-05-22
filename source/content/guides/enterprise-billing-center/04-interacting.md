@@ -27,7 +27,7 @@ You can access the Site Portfolio Report in the Enterprise Billing Center within
 
     - Click **Download CSV** next to the desired invoice period under **Portfolio Report**.
 
-        ![Dashboard Site Portfolio Display Example 1](../../../images/site-portfolio-report-dashboard-portfolio-report-section.png)
+        ![Dashboard Site Portfolio Display Example 1](../../images/site-portfolio-report-dashboard-portfolio-report-section.png)
 
     **OR**
 
@@ -35,7 +35,7 @@ You can access the Site Portfolio Report in the Enterprise Billing Center within
 
     - Click the **View** link next to desired invoice period to view the report in the dashboard or click **Download CSV** to download a CSV version of the report.
 
-        ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
+        ![Dashboard Site Portfolio Display Example 2](../../images/site-portfolio-report-no-portfolio-section.png)
 
 ## View Additional Information in the Charts
 
@@ -43,7 +43,7 @@ You can view additional information for each of the charts.
 
 Hover over the bars in the chart to see more information, including the number of sites by plan.
 
-![Hover over charts](../../../images/site-portfolio-report-chart-hover-over.png)
+![Hover over charts](../../images/site-portfolio-report-chart-hover-over.png)
 
 ## Filter the Report
 
@@ -80,7 +80,7 @@ You can search each of the Breakdown tables by site name.
 
 Enter the site name you want to search for in the **Search by site name** box located above the breakdown headings.
 
-![Breakdown Table Search Box](../../../images/site-portfolio-report-search.png)
+![Breakdown Table Search Box](../../images/site-portfolio-report-search.png)
 
 ## Increase the Number of Rows Shown in the Breakdown Tables
 
@@ -98,7 +98,7 @@ Click the arrow located next to the site count of any of the Breakdown tables to
 
 You can click the Download CSV button under the All Active Sites in Portfolio breakdown table to download data. This allows you to view all data for active sites in Excel or a similar application.
 
-![Breakdown Table with Download](../../../images/site-portfolio-report-breakdown-download.png)
+![Breakdown Table with Download](../../images/site-portfolio-report-breakdown-download.png)
 
 ## More Resources
 

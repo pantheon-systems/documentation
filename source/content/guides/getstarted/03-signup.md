@@ -29,12 +29,12 @@ To create an account:
 
 1. Click **Sign Up**.  Your account will be created (it may take a few moments), and a login page will appear.
 
-   ![Signing up for Pantheon](../../../images/signup.png)
+   ![Signing up for Pantheon](../../images/signup.png)
 
 1. Log in to your account.  A Welcome page will appear.
 
 1. Select [**Set up your team**](/guides/account-mgmt/workspace-sites-teams/teams) for the purposes of completing the activities in this guide.
 
-![Welcome screen with Setup my team highlighted](../../../images/welcome-screen-teams-highlight.png)
+![Welcome screen with Setup my team highlighted](../../images/welcome-screen-teams-highlight.png)
 
 Congratulations! You are now the proud owner of a free Pantheon account.  Now let's get it set up.

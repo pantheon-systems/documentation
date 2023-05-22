@@ -49,7 +49,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 5. Click **Create**:
 
-  ![Route 53 A record](../../images/route53-a-record.png)
+  ![Route 53 A record](../images/route53-a-record.png)
 
 ### AAAA Records
 
@@ -69,7 +69,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 4. Click **Create**:
 
-  ![Route 53 AAAA records](../../images/route53-aaaa-records.png)
+  ![Route 53 AAAA records](../images/route53-aaaa-records.png)
 
 ### A Record for subdomain
 An A record is required to configure a subdomain (e.g., `www.example.com`).

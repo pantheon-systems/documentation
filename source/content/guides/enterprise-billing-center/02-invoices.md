@@ -27,7 +27,7 @@ You must have Admin privileges for the workspace to view invoices. Note that acc
 
 1. Click the invoice number you want to review.
 
-    ![Dashboard Site Portfolio Display Example 2](../../../images/site-portfolio-report-no-portfolio-section.png)
+    ![Dashboard Site Portfolio Display Example 2](../../images/site-portfolio-report-no-portfolio-section.png)
 
 ## Filter the Invoice
 

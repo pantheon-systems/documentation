@@ -33,7 +33,7 @@ Machine tokens:
 
 1. Click **I understand** to continue.
 
-![Machine token ready modal](../images/dashboard/machine-token-ready.png)
+![Machine token ready modal](images/dashboard/machine-token-ready.png)
 
 ## Authenticate into Terminus
 

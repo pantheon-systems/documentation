@@ -62,7 +62,7 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 
 1. Review the request and object cache data for potential red flags.
 
-![Debug Bar WordPress](../../../images/guides/front-end-performance/debug-bar.png)
+![Debug Bar WordPress](../../images/guides/front-end-performance/debug-bar.png)
 
 </Tab>
 
@@ -70,7 +70,7 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 
 The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel) and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
 
-![Devel Drupal](../../../images/guides/front-end-performance/drupal8-commandline--webprofiler.png)
+![Devel Drupal](../../images/guides/front-end-performance/drupal8-commandline--webprofiler.png)
 
 </Tab>
 

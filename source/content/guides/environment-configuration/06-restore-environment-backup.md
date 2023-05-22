@@ -35,7 +35,7 @@ It is important that you and your team know that this is a **destructive** proce
 
 When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time. Be patient and do not attempt to restart the restore unless you are confident that it completed. During the restore process, files might show as missing and the site as unavailable. When in doubt, [contact support](/guides/support/contact-support/).
 
-![Backup tool](../../../images/dashboard/backup-tool.png)
+![Backup tool](../../images/dashboard/backup-tool.png)
 
 ## Restore an Environment From Its Own Backup
 
@@ -47,7 +47,7 @@ For development environments (Dev and Multidevs), the **Restore** button is only
 
 </Alert>
 
-![Backups and Restore Button](../../../images/dashboard/restore-button.png)
+![Backups and Restore Button](../../images/dashboard/restore-button.png)
 
 ## Restore an Environment From Another Environment's Backup
 
@@ -57,7 +57,7 @@ For development environments (Dev and Multidevs), the **Restore** button is only
 
 1. Click the the download link for Database and Files.
 
-  ![Temporary backup link](../../../images/dashboard/direct-download-archive.png)
+  ![Temporary backup link](../../images/dashboard/direct-download-archive.png)
 
   - This provides a temporary private link directly from Google Cloud Storage, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
 
@@ -78,7 +78,7 @@ Follow the steps below to restore Database and Files.
 1. Click **Import** for each backup part to restore.
 
 If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
-![Workflow Tab](../../../images/dashboard/workflow-tab.png)
+![Workflow Tab](../../images/dashboard/workflow-tab.png)
 
 ### Restore Code
 
@@ -92,7 +92,7 @@ This method is recommended for distributed teams working collaboratively. To und
 
 1. Copy the commit ID:
 
- ![commit ID](../../../images/dashboard/commit-id.png)
+ ![commit ID](../../images/dashboard/commit-id.png)
 
 1. Replace **ID** with the commit ID and run: `git revert ID --no-edit`
 
@@ -110,7 +110,7 @@ This is a destructive process. If you're not comfortable with this technique, us
 
 1. Copy the commit ID:
 
- ![commit ID](../../../images/dashboard/commit-id.png)
+ ![commit ID](../../images/dashboard/commit-id.png)
 
 1. Replace **ID** with the commit ID you want to reset and run: `git reset ID --hard`
 

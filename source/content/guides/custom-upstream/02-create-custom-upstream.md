@@ -47,7 +47,7 @@ Follow the steps for your preferred Git host below to create your repository.
 
    **Do not** select the options to create a `README`, `.gitignore`, or license file:
 
-   ![GitHub Initialization options](../../../images/github-avoid-readme.png)
+   ![GitHub Initialization options](../../images/github-avoid-readme.png)
 
   <Alert type="info" title="Note">
 
@@ -61,7 +61,7 @@ Follow the steps for your preferred Git host below to create your repository.
 
 1. Copy the repository URI (SSH) found in the **Quick setup** section:
 
-  ![GitHub Repo URI](../../../images/github-repo-url.png)
+  ![GitHub Repo URI](../../images/github-repo-url.png)
 
 1. Clone the repository to your local from the command line (replace the URI):
 
@@ -112,7 +112,7 @@ Follow the steps for your preferred Git host below to create your repository.
 
 1. Copy the repository URL (HTTPS), found on the top right of the page:
 
-  ![Bitbucket Repo URL](../../../images/bitbucket-repo-url.png)
+  ![Bitbucket Repo URL](../../images/bitbucket-repo-url.png)
 
 1. Clone the repository to your local from the command line (replace the URL):
 
@@ -280,11 +280,11 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
    - **Name**
    - **Upstream Repository URL**:
 
-    ![GitHub HTTPS Repo URL](../../../images/github-https-url.png)
+    ![GitHub HTTPS Repo URL](../../images/github-https-url.png)
 
      - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
 
-     ![GitHub Upstream Authentication](../../../images/dashboard/create-upstream-auth-gh.png)
+     ![GitHub Upstream Authentication](../../images/dashboard/create-upstream-auth-gh.png)
 
      For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
@@ -298,7 +298,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
       1. Select "repo" as the scope:
 
-          ![GitHub generate token](../../../images/github-token.png)
+          ![GitHub generate token](../../images/github-token.png)
 
       1. Click **Generate token** and copy the new token to your clipboard.
 
@@ -327,11 +327,11 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
    - **Name**
    - **Upstream Repository URL**:
 
-       ![Bitbucket HTTPS Repo URL](../../../images/bitbucket-https-url.png)
+       ![Bitbucket HTTPS Repo URL](../../images/bitbucket-https-url.png)
 
    - **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
 
-      ![BitBucket Upstream Authentication](../../../images/dashboard/create-upstream-auth-bb.png)
+      ![BitBucket Upstream Authentication](../../images/dashboard/create-upstream-auth-bb.png)
 
       For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
@@ -341,7 +341,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
         1. Enter a label and select the `"Repositories:Read"` permission:
 
-           ![Bitbucket app password](../../../images/bitbucket-app-password.png)
+           ![Bitbucket app password](../../images/bitbucket-app-password.png)
 
         1. Click **Create** and copy the new password.
 
@@ -369,7 +369,7 @@ A Custom Upstream from a GitLab repository must be set up for you by Pantheon Su
     - **Username**: We suggest setting a custom username to provide to Pantheon Support.
     - Select the **read_repository** scope for the token.
 
-    ![Adding a deploy token to a GitLab repository](../../../images/gitlab-deploy-token.png)
+    ![Adding a deploy token to a GitLab repository](../../images/gitlab-deploy-token.png)
 
 1. Click **Create deploy token** > save the token immediately to provide to Pantheon Support. GitLab will not show it again.
 
@@ -423,7 +423,7 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
 1. Select if **Git** or **SFTP** mode should be enabled by default and then click **Update**. New sites created from this Custom Upstream will use this connection mode by default going forward.
 
-  ![Modify initial connection mode](../../../images/dashboard/initial-connection-mode.png)
+  ![Modify initial connection mode](../../images/dashboard/initial-connection-mode.png)
 
 
 ## More Resources

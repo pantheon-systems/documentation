@@ -40,7 +40,7 @@ Before you can install and activate Object Cache Pro, verify that you have:
 
 1. Click the **Add** button under **Redis**. It might take a couple of minutes for the Object Cache server to come online. You will see a success message in a green box stating that Redis has been enabled.
 
-![Pantheon Settings Add-Ons](../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
+![Pantheon Settings Add-Ons](../../images/guides/object-cache-pro/pantheon-settings-addons.png)
 
 ### Activate Redis with Terminus
 

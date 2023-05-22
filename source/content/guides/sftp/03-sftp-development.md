@@ -29,7 +29,7 @@ SFTP mode has a comment box above the commit log. The Dashboard automatically tr
 
 1. Click **SFTP** next to the **Development Mode** toggle to enable SFTP mode.
 
- ![Enable SFTP mode](../../../images/dashboard/sftp-enabled.png)
+ ![Enable SFTP mode](../../images/dashboard/sftp-enabled.png)
 
 ## SFTP Changes
 
@@ -46,7 +46,7 @@ You cannot use Git to push changes remotely with SFTP mode enabled. You must com
 
 1. Click the notification message to expand the listing of pending changes.
 
-    ![A snapshot of a Pantheon Site Dashboard showing 119 uncommitted changes to the code](../../../images/dashboard/pantheon-dashboard-uncommitted-changes.png)
+    ![A snapshot of a Pantheon Site Dashboard showing 119 uncommitted changes to the code](../../images/dashboard/pantheon-dashboard-uncommitted-changes.png)
 
 1. Write a helpful commit message to go with your changes. This makes it easier for other developers to understand changes you've made.
 

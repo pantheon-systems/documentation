@@ -193,4 +193,4 @@ Pantheon's Composer-based example repositories are maintained and supported on G
 
 Once your site is ready, the URL to your project page will be printed in the terminal. Copy this address and paste it into a browser to visit your new project on Github:
 
-![Initial Project Page shows title of project in GitHub](../../../images/pr-workflow/initial-project-page.png)
+![Initial Project Page shows title of project in GitHub](../../images/pr-workflow/initial-project-page.png)

@@ -21,7 +21,7 @@ This section will be performed from the command line, to prepare your local syst
 
 1. Navigate to the **Code** tab of the GitHub repository, then click **<span class="glyphicons glyphicon-save"></span> Code** and copy the repository URL:
 
-  ![Click Code and copy the repository URL](../../../images/github/github-code-clone-ssh.png "GitHub clone URL")
+  ![Click Code and copy the repository URL](../../images/github/github-code-clone-ssh.png "GitHub clone URL")
 
 2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
 
@@ -58,7 +58,7 @@ This section will be performed from the command line, to prepare your local syst
 
     Note that the dependencies of pathauto, token and ctools, are also installed:
 
-    ![Composer require pathauto](../../../images/pr-workflow/composer-require-pathauto.png)
+    ![Composer require pathauto](../../images/pr-workflow/composer-require-pathauto.png)
 
 2. Commit the updated `composer.json` and `composer.lock` files and push your work to the `slogan` branch on GitHub:
 
@@ -68,7 +68,7 @@ This section will be performed from the command line, to prepare your local syst
       git push origin slogan
     ```
 
-    ![Commit composer.json and composer.lock](../../../images/pr-workflow/commit-pathauto.png)
+    ![Commit composer.json and composer.lock](../../images/pr-workflow/commit-pathauto.png)
 
 3. Enable the Pathauto module on the Pantheon Multidev environment from the command line using Terminus and Drush:
 
@@ -89,6 +89,6 @@ This section will be performed from the command line, to prepare your local syst
     terminus env:commit $SITE.$ENV --message="Install and enable pathauto"
     ```
 
-    ![enable export config and commit](../../../images/pr-workflow/export-module-enable-config.png)
+    ![enable export config and commit](../../images/pr-workflow/export-module-enable-config.png)
 
 Use this process to install any new dependency required by your project. The site should *never* use Drupal's **Extend** -> **Install new module** feature or `drush pm-download`, as neither of these techniques modify the `composer.json` file. Modules added using these methods will disappear the next time the build artifacts are pushed to your Pantheon Multidev environment. You must use Composer to install new modules exclusively.

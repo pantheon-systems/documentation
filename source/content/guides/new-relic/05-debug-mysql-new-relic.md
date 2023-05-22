@@ -73,13 +73,13 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
     - If the log is small enough (or if you have enough RAM), you can load it into your favorite text editor or IDE instead.
 
- ![Review slow log](../../../images/review-slow-log.png)​
+ ![Review slow log](../../images/review-slow-log.png)​
 
 1. Close out the SFTP session and get the MySQL CLI information for the Test MySQL server. If the Test server has major differences from your Live server, you can either connect to Live (not recommended) or clone your Live database to your Dev or Test environment via your Pantheon Dashboard.  
 
 1. Connect to the MySQL server of your choice and run the query.
 
- ![Execute the query](../../../images/execute-query.png)
+ ![Execute the query](../../images/execute-query.png)
 
     - Tips for reviewing the query:
 
@@ -87,12 +87,12 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
          
          - Look for odd things. For example, the one below doesn't look that bad, except that the users table is referenced twice via alias and there isn't a single key index being used to search them. Looking at that table with a MySQL `describe` command shows that there is no primary key set on the UID field.
 
-        ![Extended information example](../../../images/extended-info-example.png)
+        ![Extended information example](../../images/extended-info-example.png)
 
-        ![MySQL table describe users](../../../images/mysql-table-describe-users.png)
+        ![MySQL table describe users](../../images/mysql-table-describe-users.png)
         Now that the problem has been found, it can be addressed. In this case, simply adding in the primary key and re-running the query gets a much improved query performance of 0.10 seconds.
         
-        ![Improved query performance](../../../images/improved-query-performance.png)
+        ![Improved query performance](../../images/improved-query-performance.png)
 
 ## Recap
 

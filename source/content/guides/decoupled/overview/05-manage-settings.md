@@ -60,7 +60,7 @@ There are known issues around disconnecting and reconnecting a repository.
 
 1. Click the **Connect** or **Disconnect** button in the **Connected Git Repository** section. Confirm your selection when prompted if you are disconnecting your Git repository.
 
-![General Settings](../../../../images/decoupled-general-settings.png)
+![General Settings](../../../images/decoupled-general-settings.png)
 
 ### Delete a Front-End Site
 
@@ -74,11 +74,11 @@ You can [contact Support](/guides/support/contact-support/) to restore a site if
 
 1. Click the **Edit** button in the **General Settings** section and select **Delete Site**.
 
-    ![Delete Site](../../../../images/decoupled-delete-site.png)
+    ![Delete Site](../../../images/decoupled-delete-site.png)
 
 1. Confirm your selection when prompted by entering site name, then click **Delete Site**.
 
-    ![Confirm Deletion](../../../../images/decoupled-confirm-deletion.png)
+    ![Confirm Deletion](../../../images/decoupled-confirm-deletion.png)
 
 1. [Update your DNS records](/guides/launch/configure-dns/) to stop pointing to the deleted site.
 
@@ -100,7 +100,7 @@ You can link your CMS to your Front-End Site if you’re already managing conten
 
 1. Click **Save**.
 
-![CMS Connections](../../../../images/decoupled-cms-connections.png)
+![CMS Connections](../../../images/decoupled-cms-connections.png)
 
 ## Build and Output Settings
 
@@ -119,7 +119,7 @@ You can configure and edit the following Build and Output Settings:
 
 1. Enter your desired settings and click **Save**.
 
-![Build and Output Settings](../../../../images/fes-build-output-settings.png)
+![Build and Output Settings](../../../images/fes-build-output-settings.png)
 
 ## Site Environment Variables
 
@@ -139,7 +139,7 @@ Environment variables are key-value pairs configured outside your source code. T
 
 1. Enter your desired key-value pairs and click **Save**.
 
-![Site Environment Variables](../../../../images/decoupled-site-env-variables.png)
+![Site Environment Variables](../../../images/decoupled-site-env-variables.png)
 
 ## Build Hooks
 
@@ -166,7 +166,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 1. Optional. Copy the cURL code under **Test** if you want to test triggering a build with your hook.
 
-![add build hook](../../../../images/add-build-hook.png)
+![add build hook](../../../images/add-build-hook.png)
 
 ### Edit a Build Hook
 
@@ -192,7 +192,7 @@ The Build Hook name will remain the same, but your URL will be updated each time
 
 1. Click **Show URL** and then click **Copy** to copy your new unique Build Hooks URL.
 
-![add build hook](../../../../images/show-url-build-hook.png)
+![add build hook](../../../images/show-url-build-hook.png)
 
 ### Delete a Build Hook
 
@@ -228,4 +228,4 @@ You can provide a deployment path if your static site lives in a subdirectory of
 
 1. Enter your desired **Deployment Path** and click **Save**.
 
-![Deployment Settings](../../../../images/decoupled-deployment-path.png)
+![Deployment Settings](../../../images/decoupled-deployment-path.png)

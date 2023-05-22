@@ -26,7 +26,7 @@ Redirecting all traffic to a primary domain is a best practice for SEO since it 
 
 Choose a primary domain from the dropdown at the bottom of **Domains / HTTPS**:
 
-![Set the primary domain in the Site Dashboard](../../../images/dashboard/choose-primary-domain.png)
+![Set the primary domain in the Site Dashboard](../../images/dashboard/choose-primary-domain.png)
 
 <Alert title="Note" type="info">
 

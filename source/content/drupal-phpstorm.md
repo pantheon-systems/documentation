@@ -30,7 +30,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 1. From the **Create New Project: Choose Your Scenario**, window select **Source files are in a local directory, no Web server is yet configured**, then click **next**:
 
-  ![PHPStorm new project wizard](../images/phpstorm-newprojectwizard.png)
+  ![PHPStorm new project wizard](images/phpstorm-newprojectwizard.png)
 
 1. Choose the [project directory](https://www.jetbrains.com/help/phpstorm/create-new-project-choose-project-directory.html).
 
@@ -60,7 +60,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 1. **Choose Tool** > **Drush**, and specify the path.
 
-  ![Drush Support](../images/phpstorm-drushsupport.png)
+  ![Drush Support](images/phpstorm-drushsupport.png)
 
 ## Configure On-Server Development
 
@@ -70,7 +70,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 1. Click **plus** for the [add server dialog](https://www.jetbrains.com/help/phpstorm/add-server-dialog.html), and choose SFTP
 
-  ![PhpStorm on-server development settings](../images/phpstorm-onserversettings.png)
+  ![PhpStorm on-server development settings](images/phpstorm-onserversettings.png)
 
 1. Enter the Pantheon site name followed by a dash and the environment. For example, `anita-drupal-dev`.
 

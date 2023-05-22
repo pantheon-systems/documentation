@@ -24,7 +24,7 @@ Custom Upstreams act as a scaffold for new sites, allowing developers and site o
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
-![Custom Upstreams](../../images/upstreams-foundations4.svg)
+![Custom Upstreams](../images/upstreams-foundations4.svg)
 
 
 </Tab>
@@ -37,11 +37,11 @@ Instead of repeating the same technical work on each individual site, you can bu
 
 *Manage Custom Upstreams from the Dashboard*
 
-![Manage Custom Upstreams from the Dashboard](../../images/manage-custom-upstreams.png)
+![Manage Custom Upstreams from the Dashboard](../images/manage-custom-upstreams.png)
 
 *Add a Custom Upstream*
 
-![Add a Custom Upstream](../../images/add-custom-upstream.png)
+![Add a Custom Upstream](../images/add-custom-upstream.png)
 
 </Tab>
 

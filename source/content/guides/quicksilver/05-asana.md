@@ -51,27 +51,27 @@ Create a new machine user in Asana. This user is referred to as a "machine user"
 
 1. Select **<span class="glyphicon glyphicon-plus-sign"></span>** from the menu on the left, next to existing team members:
 
-   ![Add a user](../../../images/integrations/asana/new-user.png)
+   ![Add a user](../../images/integrations/asana/new-user.png)
 
 1. Enter a name and email address for the machine user, which acts as the intermediary between Asana and the Pantheon Site Dashboard. Then click **Send Invite**.
 
   We suggest naming machine users relative to their function; in this example we name our new user `Automation User`. The email needs to be an account you have access to:
 
-   ![Create an automation user](../../../images/integrations/asana/new-user-add.png)
+   ![Create an automation user](../../images/integrations/asana/new-user-add.png)
 
 1. Check the address used in the last step for an email from Asana. Click the **Accept Invite** button and follow prompts to set the machine user's password. You should be logged in as the machine user.
 
 1. Click on your profile in the top right, and select **My Profile Settings**:
 
-   ![My profile settings](../../../images/integrations/asana/my-profile-settings.png)
+   ![My profile settings](../../images/integrations/asana/my-profile-settings.png)
 
 1. Select **Apps**, then select **Manage Developer Apps**:
 
-   ![Apps](../../../images/integrations/asana/apps.png)
+   ![Apps](../../images/integrations/asana/apps.png)
 
 1. Scroll down to **Personal Access Tokens**, then click **+ Create New Personal Access Token**:
 
-   ![Create a token](../../../images/integrations/asana/access-token.png)
+   ![Create a token](../../images/integrations/asana/access-token.png)
 
 1. Give the token a name which denotes it's purpose and save the string generated for the next steps.
 
@@ -173,7 +173,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Copy the ID for a task you're working on. The ID is the last part of the open task's URL:
 
-    ![Asana task ID](../../../images/integrations/asana/task-id.png)
+    ![Asana task ID](../../images/integrations/asana/task-id.png)
 
 1. Push a code change to Pantheon containing the Asana task ID in the commit message in brackets (e.g., [398734709134915]). This workflow will trigger `asana_integration.php` script, which will search commits for possible task IDs and comment in Asana when found.
 
@@ -183,7 +183,7 @@ You must add Pantheon's example [Quicksilver](/guides/quicksilver) integration s
 
 1. Return to the issue in Asana to see a message from our machine user:
 
-    ![Asana message](../../../images/integrations/asana/asana-task.png)
+    ![Asana message](../../images/integrations/asana/asana-task.png)
 
 ## GitHub and Asana
 

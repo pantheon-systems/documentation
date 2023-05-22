@@ -104,7 +104,7 @@ The following blog post walks through how to use results from the [Critical Path
 
 Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, Drupal will combine individual CSS and Javascript files in a smaller number of bigger files. This easy optimization can be done at `admin/config/development/performance`:
 
-![Drupal performance admin interface](../../../images/guides/front-end-performance/drops-performance.png)
+![Drupal performance admin interface](../../images/guides/front-end-performance/drops-performance.png)
 
 Checking these boxes will take a normal Drupal site from having dozens (or hundreds) of small CSS/JS files to just a few. As you browse around the site the aggregated files loaded will be different as different modules add different source files to the page. [For more details, see the Drupal.org documentation on CSS organization.](https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8)
 

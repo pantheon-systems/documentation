@@ -30,15 +30,15 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 1. Click **Continue**.
 
-    ![Alt text describing the image](../../../images/create-new-site-updated.png)
+    ![Alt text describing the image](../../images/create-new-site-updated.png)
 
 1. Select the WordPress **Deploy** button to create your WordPress site.
 
-    ![Alt text describing the image](../../../images/choose-your-cms.png)
+    ![Alt text describing the image](../../images/choose-your-cms.png)
 
 1. Wait for your site to finish deploying (this can take a couple of minutes) and then visit your Pantheon [Site Dashboard](/guides/quickstart/workflow/).
 
-    ![Alt text describing the image](../../../images/new-site-deployment.png)
+    ![Alt text describing the image](../../images/new-site-deployment.png)
 
 ## Initialize Your Test and Live Environments
 
@@ -46,7 +46,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
     This can take a couple of minutes. Note that you must create your Test environment before you can create your Live environment.
 
-    ![Alt text describing the image](../../../images/create-test-environment-updated.png)
+    ![Alt text describing the image](../../images/create-test-environment-updated.png)
 
 1. Click <Icon icon="new-window-alt" text="Visit Test Site"/> to open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
 
@@ -69,7 +69,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
     You can develop in [Git mode](/guides/git/git-config), or you can develop with [SFTP mode](/guides/sftp), or even switch between both modes depending on your task and workflow.
 
-    ![Development Modes](../../../images/development-mode-pantheon-updated.png)
+    ![Development Modes](../../images/development-mode-pantheon-updated.png)
 
 1. Review and follow the steps in the [Using Git with SFTP & WordPress Guide](/guides/wordpress-git/) to ensure that you understand the best ways to:
 

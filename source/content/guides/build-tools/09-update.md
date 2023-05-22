@@ -71,7 +71,7 @@ repositories": [
 
 1. Run `git diff composer.lock` to see the updated dependency details:
 
-  ![composer diff core](../../../images/pr-workflow/composer-lock-diff.png)
+  ![composer diff core](../../images/pr-workflow/composer-lock-diff.png)
 
 1. Commit the updated `composer.lock` file and push a new branch up to GitHub, for example (replace `drupal-x.x.x` according to your current task):
 

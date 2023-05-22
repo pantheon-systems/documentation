@@ -45,11 +45,11 @@ You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
     - One way is to execute cron manually from the Drupal admin interface:
 
-      ![The Drupal admin interface with a Cron listing under System.](../images/cron-config.png)
+      ![The Drupal admin interface with a Cron listing under System.](images/cron-config.png)
 
       Click **Run cron** to run all scheduled tasks:
 
-      ![The "Run cron" button in the Drupal admin interface.](../images/run-cron.png)
+      ![The "Run cron" button in the Drupal admin interface.](images/run-cron.png)
 
     - Alternatively, you can run all scheduled cron tasks with the following [Terminus](/terminus) command:
 
@@ -59,11 +59,11 @@ You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
 1. To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at **Reports** > **Recent log messages**.
 
- ![The "Recent log messages" listing under Reports in the Drupal admin interface.](../images/recent-log-reports.png)
+ ![The "Recent log messages" listing under Reports in the Drupal admin interface.](images/recent-log-reports.png)
 
  If cron has run recently, entries will appear in the log. You can also filter the log to only show cron entries:
 
- ![Drupal log messages, filtered for cron entries only.](../images/drupal-cron-logging.png)
+ ![Drupal log messages, filtered for cron entries only.](images/drupal-cron-logging.png)
 
 ### Run Cron More Often
 
@@ -95,19 +95,19 @@ To disable Drupal's standard cron:
 1. Select **Never** from the "Run cron every" drop-down menu.
 1. Click **Save configuration**:
 
-  ![The cron settings in the Drupal admin interface, set to run cron "never".](../images/run-cron-config.png)
+  ![The cron settings in the Drupal admin interface, set to run cron "never".](images/run-cron-config.png)
 
 ### Drupal and Elysia Cron
 
 Drupal sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron) contrib module to extend the standard cron can disable it globally in the module's settings:
 
-![Disable cron globally, including Elysia Cron and Drush invocations.](../images/disable_cron_elysia.png)
+![Disable cron globally, including Elysia Cron and Drush invocations.](images/disable_cron_elysia.png)
 
 **Note:** This will disable all cron jobs, including those handled by Elysia Cron and those invoked via Drush.
 
 To disable triggering cron by page visits, adjust the value of **Run cron on visitor's requests, every** at `/admin/config/system/cron/settings`:
 
-![The Drupal admin interface with Run cron on visitor's requests set to Never.](../images/disable-cron-requests.png)
+![The Drupal admin interface with Run cron on visitor's requests set to Never.](images/disable-cron-requests.png)
 
 ## Troubleshooting Cron
 

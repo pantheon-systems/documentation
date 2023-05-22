@@ -28,7 +28,7 @@ The number of Pages Served allowed for each Site Plan is five times the maximum 
 
 For both metrics, the platform counts based on the total volume of requests, which includes visitors receiving pages (or other CMS-generated resources) which are served from our Global CDN cache.
 
-![Diagram demonstrating how pages served and visits are tracked](../../images/dashboard/metrics-diagram.png)
+![Diagram demonstrating how pages served and visits are tracked](../images/dashboard/metrics-diagram.png)
 
 As shown here, visits and visitors have different meanings. If two visitors go to the site, and one opens another page but the other leaves, that would be tracked as two visitors and three pages served. If one of those visitors returns again the next day, it would be counted as two visitors, three visits, and four pages served.
 
@@ -88,4 +88,4 @@ A visit does not count if it is one of the following:
 
   - Client errors are returned as [400-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors) responses, and do not count as part of plan traffic limits. 
 
-![Flowchart shows that traffic is only counted as a visit if the points above are satisfied and it loads successfully.](../../images/platform-traffic-counted.png)
+![Flowchart shows that traffic is only counted as a visit if the points above are satisfied and it loads successfully.](../images/platform-traffic-counted.png)

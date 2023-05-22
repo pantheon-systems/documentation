@@ -39,7 +39,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 1. Click the **Gatsby + WordPress** template, select your Git provider under **Choose your Git provider**, and then click **Continue**.
 
-  ![select a starter](../../../../images/decoupled-select-starter.png)
+  ![select a starter](../../../images/decoupled-select-starter.png)
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 

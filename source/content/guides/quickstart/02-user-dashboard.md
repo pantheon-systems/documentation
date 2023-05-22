@@ -26,7 +26,7 @@ Your Home page contains the following information:
 * Account tier
 * Sandbox sites used 
 
-![A screenshot of the new Dashboard homepage with Workspace Overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
+![A screenshot of the new Dashboard homepage with Workspace Overview](../../images/dashboard/new-dashboard/workspace-overview.png)
 
 ## Tabs
 

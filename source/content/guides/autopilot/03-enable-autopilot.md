@@ -23,7 +23,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. [Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
 
-   ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
+   ![Autopilot Overview page shows sites available for Autopilot](../../images/autopilot/autopilot-sites-overview.png)
 
 1. [Commit any staged changes](/guides/sftp/sftp-development) that have not been committed before you continue if the site is in [SFTP mode](/guides/sftp).
 
@@ -33,11 +33,11 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
    To enable a single site, click the **Activate** button. There, you have the option to [customize the Autopilot setup](#autopilot-setup-wizard). You can also access the setup wizard by clicking on the site name.
 
-   ![Autopilot customize setup button](../../../images/autopilot/customize-setup.png)
+   ![Autopilot customize setup button](../../images/autopilot/customize-setup.png)
 
    To enable sites in bulk, select the sites you wish to activate, and click the **Activate Autopilot** button. You can select up to 100 sites. Please note that you cannot access the Autopilot Setup Wizard when enabling in bulk.
 
-   ![Autopilot Overview page shows the Activate Autopilot button](../../../images/autopilot/bulk-enablement.png)
+   ![Autopilot Overview page shows the Activate Autopilot button](../../images/autopilot/bulk-enablement.png)
 
 1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
@@ -63,7 +63,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 1. Click **Continue**.
   
-   ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../../images/autopilot/autopilot-setup-configuration.png)
+   ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../images/autopilot/autopilot-setup-configuration.png)
 
 ### Schedule
 
@@ -84,7 +84,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
    The **Sync Environment** feature syncs your Live environment to your Dev environment before Autopilot performs updates. Your databases and files will be synced, but not your code. If the Dev code does not match the Live code, Autopilot will use the code in the Dev environment.
 
-   ![Autopilot Setup Wizard Schedule](../../../images/autopilot/autopilot-setup-wizard-schedule-step.png)
+   ![Autopilot Setup Wizard Schedule](../../images/autopilot/autopilot-setup-wizard-schedule-step.png)
 
 1. Click **Continue** to choose pages for screenshot comparison tests.
 
@@ -94,13 +94,13 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
    Autopilot automatically suggests up to ten URL paths during setup:
 
-  ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
+  ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../images/autopilot/autopilot-setup-visual-review.png)
 
 1. Click **Save** to initialize Autopilot on the Site.
 
 1. Click **Status** in the Autopilot sidebar for the current status of the testing. This process might take a while:
 
-  ![Autopilot Sidebar - The sidebar shows links to Status, Activity, and Configuration screens.](../../../images/autopilot/autopilot-sidebar.png)
+  ![Autopilot Sidebar - The sidebar shows links to Status, Activity, and Configuration screens.](../../images/autopilot/autopilot-sidebar.png)
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
@@ -116,13 +116,13 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 Use the **On**/**Off** toggle to choose which features and elements should be tracked for updates then click **Save**.
 
-![Autopilot Configuration screen - Customize the type of updates included in the automated updates.](../../../images/autopilot/autopilot-configuration-update-scope.png)
+![Autopilot Configuration screen - Customize the type of updates included in the automated updates.](../../images/autopilot/autopilot-configuration-update-scope.png)
 
 ### Update Destination & Frequency
 
 You can determine how often Autopilot runs and select where you want successful updates deployed in the Destination and Frequency section. Some selection options are grayed out for customers with Gold plans. Only customers with Platinum and Diamond plans have the ability to choose a setting for each option.
 
-![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../../images/autopilot/autopilot-destination-frequency.png)
+![Autopilot Configuration screen - Determine how often Autopilot runs on this site, and where successful updates are deployed.](../../images/autopilot/autopilot-destination-frequency.png)
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
@@ -148,7 +148,7 @@ You can determine how often Autopilot runs and select where you want successful 
 
 You can add pages to track for visual regression testing, along with a percent of acceptable change.
 
-![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
+![Autopilot Configuration - Visual Test Screenshots](../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
 1. Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
 
@@ -173,7 +173,7 @@ Additional DOM element exclusion is in active development.
 
 Autopilot checks for plugins, modules, and themes that are eligible for exclusion. You can choose what you would like to be excluded.
 
-![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
+![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
 1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
 
@@ -183,7 +183,7 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 You can add any CSS selectors that you want to exclude from the visual regression tests.
 
-![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
+![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
 1. List the CSS selectors you want to exclude from VRT, using a comma or line break to separate elements in the list.
 
@@ -228,7 +228,7 @@ Configure email notifications for Autopilot alerts and activity digests in your 
 
 <Partial file="autopilot/autopilot-email-notifications.md" />
 
-![Personal Workspace Settings include options for Autopilot email notifications](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
+![Personal Workspace Settings include options for Autopilot email notifications](../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
 
 1. Click the <i className="fa fa-user-circle"></i> Gravatar in the upper right corner and click <i className="fa fa-user-cog"></i> **User Settings**.
 

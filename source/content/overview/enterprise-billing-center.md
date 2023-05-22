@@ -28,7 +28,7 @@ Billing can be challenging, especially for businesses managing large numbers of 
 
 - Analyze your spend across multiple contracts
 
-![Enterprise Billing Center](../../images/enterprise-billing-center.png)
+![Enterprise Billing Center](../images/enterprise-billing-center.png)
 
 </Tab>
 
@@ -46,7 +46,7 @@ Access all invoices and associated portfolio reports in a central location.  Eac
 
 *Site Portfolio Report*
 
-![Site Portfolio Charts](../../images/enterprise-billing-center-invoice-report.jpg)
+![Site Portfolio Charts](../images/enterprise-billing-center-invoice-report.jpg)
 
 
 </Tab>

@@ -25,19 +25,19 @@ To create a CMS site:
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the yellow <Icon icon="plus" text="Create New Site"/> button on the lower right side of the page.
 
-   ![Create new site button](../../../images/create-new-site-button.png)
+   ![Create new site button](../../images/create-new-site-button.png)
 
 1. Select **WordPress** or **Drupal**.
 
-   ![Select CMS](../../../images/create-new-site-cms.png)
+   ![Select CMS](../../images/create-new-site-cms.png)
 
    If you select Drupal, you will have the option to select the Drupal version you want to use.
 
-   ![Select Drupal version](../../../images/create-new-site-cms-drupal.png)
+   ![Select Drupal version](../../images/create-new-site-cms-drupal.png)
 
 1. Enter the name and select a region for this site. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**. Click **Continue**. It can take several minutes to create a new site on Pantheon.
 
-   ![Enter site information](../../../images/create-new-site-info.png)
+   ![Enter site information](../../images/create-new-site-info.png)
 
    <Alert title="Note" type="info" >
 
@@ -47,7 +47,7 @@ To create a CMS site:
 
 1. Click **Visit your Pantheon Site Dashboard** when the process is complete.
 
-   ![Site creation completed](../../../images/create-site-done.png)
+   ![Site creation completed](../../images/create-site-done.png)
 
 At this point, you have a Dev environment for your site code, but you do not have a Dev environment for your CMS.  To create that:
 

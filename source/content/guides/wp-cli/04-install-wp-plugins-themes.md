@@ -28,7 +28,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) provides a lis
 
     - [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) to confirm that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, or continue to use the command line as the example below.
 
-    ![Pantheon Site Dashboard: Install CF7](../../../images/wordpress-commandline-install-cf7.png)
+    ![Pantheon Site Dashboard: Install CF7](../../images/wordpress-commandline-install-cf7.png)
 
 1. Review the file changes:
 
@@ -43,7 +43,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) provides a lis
     ```
 
     You can see the commit on the Dev environment if you refer back to the Site Dashboard:
-    ![Pantheon Site Dashboard: Commit CF7](../../../images/wordpress-commandline-commit-cf7-to-dev.png)
+    ![Pantheon Site Dashboard: Commit CF7](../../images/wordpress-commandline-commit-cf7-to-dev.png)
 
 1. Deploy the code to Test and pull content down from Live:
 
@@ -125,7 +125,7 @@ The [WordPress theme repository](https://wordpress.org/themes/) provides a list 
 
 1. Navigate to the WordPress Dashboard, select **Appearance**, and then select **Themes** to access the new theme.
 
-    ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../../images/wordpress-commandline-child-theme-wp.jpg)
+    ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../images/wordpress-commandline-child-theme-wp.jpg)
 
     You can now edit your child theme. This allows your parent theme, in this example, Shapely, to receive updates without conflict or interference to the functionality of the site.
 

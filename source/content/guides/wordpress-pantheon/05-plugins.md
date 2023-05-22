@@ -58,7 +58,7 @@ The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/def
 
 [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
 
-![Pantheon HUD](../../../images/pantheon-hud.png)
+![Pantheon HUD](../../images/pantheon-hud.png)
 
 For installation details, see [Configuring Environment Indicators](/guides/environment-configuration/environment-indicator).
 

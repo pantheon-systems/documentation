@@ -50,7 +50,7 @@ This section provides information on how to enable Object Cache.
 
 1. Navigate to the Dev environment's WordPress Dashboard, and verify the installation by selecting **Drop-ins** from the Plugins section:
 
-  ![The object-cache Drop-In Plugin](../../../images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
+  ![The object-cache Drop-In Plugin](../../images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
   You can upgrade by the normal Plugin update mechanism in WordPress or via Terminus when a new version of the WP Redis plugin is released:
 

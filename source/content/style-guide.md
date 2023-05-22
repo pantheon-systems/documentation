@@ -111,13 +111,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
+![Incorrect vanity domain A record required DNS value](images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
+![Correct vanity domain A record required DNS value](images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 
@@ -126,13 +126,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 ```html
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
+![Incorrect vanity domain A record required DNS value](images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
+![Correct vanity domain A record required DNS value](images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 
@@ -722,12 +722,12 @@ Screenshots are used to reference GUI instructions:
 
 <Example>
 
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 ```
 
 </Example>
@@ -738,12 +738,12 @@ Terminal screenshots should be described in the text as much as possible, and sh
 
 <Example>
 
-![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](images/pr-workflow/composer-require-pathauto.png)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](images/pr-workflow/composer-require-pathauto.png)
 ```
 
 </Example>

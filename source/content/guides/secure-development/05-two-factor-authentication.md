@@ -72,7 +72,7 @@ There are many different [WordPress plugins for two-factor authentication](https
 
 1. Open the settings page for the Duo plugin, then configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:
 
-  ![TFA Duo Configuration](../../../images/duo-settings.png)
+  ![TFA Duo Configuration](../../images/duo-settings.png)
 
 1. Click **Save Changes**. The page will be automatically redirected to the Duo setup wizard.
 
@@ -110,13 +110,13 @@ In addition to the foundation module, you also will need to use a specific TFA m
 
    - Allow **Trusted Browsers** for your domain.
 
-   ![TFA Module Settings](../../../images/tfa-drupal-module-settings.png)
+   ![TFA Module Settings](../../images/tfa-drupal-module-settings.png)
 
 1. Go to the Security settings on each user profile you want to use TFA, then click **Enable TFA**.
 
 1. Enter your current password > view the TFA Setup - Application page.
 
-  ![TFA setup](../../../images/tfa-drupal-otp-setup.png)
+  ![TFA setup](../../images/tfa-drupal-otp-setup.png)
 
 1. Use the app on your mobile phone to scan the QR code to install a new TFA account on your mobile phone.
 
@@ -124,7 +124,7 @@ In addition to the foundation module, you also will need to use a specific TFA m
 
 1. Log in to your Drupal site by using the TOTP mobile app to generate a six digit code.
 
-  ![TFA setup](../../../images/tfa-drupal-login.png)
+  ![TFA setup](../../images/tfa-drupal-login.png)
 
 </Tab>
 
@@ -146,17 +146,17 @@ There are many different organization-wide [WordPress plugins for single sign on
 
 1. Edit the OneLogin WordPress app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
 
-  ![TFA OneLogin Config](../../../images/tfa-wp-onelogin-config.png)
+  ![TFA OneLogin Config](../../images/tfa-wp-onelogin-config.png)
 
 1. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
 
-  ![TFA OneLogin Methods](../../../images/tfa-onelogin-tfa-methods.png)
+  ![TFA OneLogin Methods](../../images/tfa-onelogin-tfa-methods.png)
 
 1. Create user accounts in the Users Administration area of OneLogin.
 
 1. Click **New User** and verify that the “Username” and "Email" fields in OneLogin match their WordPress username and email.
 
-  ![TFA OneLogin New User](../../../images/tfa-onelogin-new-user.png)
+  ![TFA OneLogin New User](../../images/tfa-onelogin-new-user.png)
 
 #### WordPress Instructions
 
@@ -164,7 +164,7 @@ There are many different organization-wide [WordPress plugins for single sign on
 
 1. Configure the **Identity Provider Settings** section in the SSO/SAML Settings within the WordPress Admin to provide the appropriate values, which are available in the SSO section of the OneLogin Configuration page.
 
-  ![TFA OneLogin Ident](../../../images/tfa-wp-onelogin-ident.png)
+  ![TFA OneLogin Ident](../../images/tfa-wp-onelogin-ident.png)
 
 1. Configure the **Options** section (optional) under the SSO/SAML Settings:
 
@@ -172,7 +172,7 @@ There are many different organization-wide [WordPress plugins for single sign on
 
    - Select the **Keep Local login** checkout if you still want to use the normal WP login form, otherwise you will always be using OneLogin to authenticate.
 
-   ![TFA OneLogin Options](../../../images/tfa-wp-onelogin-options.png)
+   ![TFA OneLogin Options](../../images/tfa-wp-onelogin-options.png)
 
 1. Populate the **Attribute Mapping** fields below in the SSO/SAML Settings of the WordPress Admin. Values are case-sensitive.
 
@@ -182,15 +182,15 @@ There are many different organization-wide [WordPress plugins for single sign on
    - Last Name
    - Role
 
-  ![TFA OneLogin Attributes](../../../images/tfa-wp-onelogin-attribute.png)
+  ![TFA OneLogin Attributes](../../images/tfa-wp-onelogin-attribute.png)
 
 1. Configure the **Customize Actions and Links** in the SSO/SAML Settings of the WordPress Admin to **Prevent use of ?normal**. This requires OneLogin as the authentication solution.
 
-   ![TFA OneLogin Custom Actions](../../../images/tfa-onelogin-custom-actions.png)
+   ![TFA OneLogin Custom Actions](../../images/tfa-onelogin-custom-actions.png)
 
 1. Use the OneLogin dashboard to log in to your WordPress site.
 
-   ![TFA OneLogin WP Login](../../../images/tfa-onelogin-wp-login.png)
+   ![TFA OneLogin WP Login](../../images/tfa-onelogin-wp-login.png)
 
    <Alert title="Note" type="info">
 
@@ -212,17 +212,17 @@ There are many different organization-wide [Drupal modules for single sign-on](h
 
 1. Edit the OneLogin Drupal app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
 
-  ![TFA OneLogin Config](../../../images/tfa-drupal-onelogin-config.png)
+  ![TFA OneLogin Config](../../images/tfa-drupal-onelogin-config.png)
 
 1. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
 
-  ![TFA OneLogin Methods](../../../images/tfa-onelogin-tfa-methods.png)
+  ![TFA OneLogin Methods](../../images/tfa-onelogin-tfa-methods.png)
 
 1. Create user accounts in the Users Administration area in OneLogin.
 
 1. Click **New User** and verify that the “Username” and "Email" fields in OneLogin match their Drupal username and email.
 
-![TFA OneLogin New User](../../../images/tfa-onelogin-new-user.png)
+![TFA OneLogin New User](../../images/tfa-onelogin-new-user.png)
 
 #### Drupal Instructions
 
@@ -240,7 +240,7 @@ There are many different organization-wide [Drupal modules for single sign-on](h
    - E-mail
    - Role
 
-  ![TFA OneLogin Options](../../../images/tfa-drupal-onelogin-options.png)
+  ![TFA OneLogin Options](../../images/tfa-drupal-onelogin-options.png)
 
 1. Use the OneLogin dashboard to log in to your Drupal site.
 
@@ -254,7 +254,7 @@ There are many different organization-wide [Drupal modules for single sign-on](h
 
 The Pantheon Dashboard offers social login with Google, which can be configured to use [Google TFA](https://www.google.com/landing/2step/):
 
-![Connect with Google](../../../images/log-in-with-google.png)
+![Connect with Google](../../images/log-in-with-google.png)
 
 <Alert title="Note" type="info">
 

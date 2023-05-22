@@ -33,7 +33,7 @@ In VS Code, a Workspace contains settings for your project, including recommende
 
 1. From the Welcome screen, click **Open folder...** under the **Start** heading:
 
-  ![The Open folder option from the Visual Studio Code Start screen](../images/vscode-open-folder.png)
+  ![The Open folder option from the Visual Studio Code Start screen](images/vscode-open-folder.png)
 
   If you have already closed the Welcome screen, click **Open...** in the **File** menu.
 

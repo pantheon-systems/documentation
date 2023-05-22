@@ -32,7 +32,7 @@ Contacting Support from your Personal Workspace will not provide the same suppor
 
 If you are part of an Workspace with an enhanced Account package, navigate to the Support tab from the Workspace's Dashboard to make use of the Workspace's Support level.
 
-![Select Support from the Workspace's Dashboard](../../../images/dashboard/support-from-org-dash.gif)
+![Select Support from the Workspace's Dashboard](../../images/dashboard/support-from-org-dash.gif)
 
 ### One Ticket Per Issue
 

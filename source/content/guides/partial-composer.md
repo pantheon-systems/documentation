@@ -159,7 +159,7 @@ Note that Pantheon does not run `composer install` on the platform, so you need 
 
 1. Review modified files using `git status`, you should see the module has been installed in the `wp-content/plugins` directory like so:
 
-  ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../../images/guides/partial-composer/require-papc-plugin.png)
+  ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../images/guides/partial-composer/require-papc-plugin.png)
 
   Notice a missing dependency was also installed, `composer/installers`. This package is needed to support the installation paths configured in the previous section, and needs to be tracked in version control.
 
@@ -207,7 +207,7 @@ The following example shows you how to install a site local Drush. You can use t
 
 1. Review modified files using `git status`:
 
-  ![Require drupal/pantheon_advanced_page_cache output](../../images/guides/partial-composer/require-drush.png)
+  ![Require drupal/pantheon_advanced_page_cache output](../images/guides/partial-composer/require-drush.png)
 
 1. Commit your work to version control with Git:
 

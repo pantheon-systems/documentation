@@ -93,11 +93,11 @@ You can use SFTP or Git mode to create or change the `pantheon.yml` file. Follow
 
 Your Site Dashboard will detect the changes when you upload a new or modified `pantheon.yml` file in SFTP mode.
 
-![The Site Dashboard sees changes to pantheon.yml](../../../images/dashboard/pantheon-yml-changes-sftp.png)
+![The Site Dashboard sees changes to pantheon.yml](../../images/dashboard/pantheon-yml-changes-sftp.png)
 
 If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. The example below shows a failed attempt to set the PHP version to 12:
 
-![The Site Dashboard doesn't commit invalid changes](../../../images/dashboard/pantheon-yml-failure-sftp.png)
+![The Site Dashboard doesn't commit invalid changes](../../images/dashboard/pantheon-yml-failure-sftp.png)
 
 </Tab>
 

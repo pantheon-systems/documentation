@@ -20,13 +20,13 @@ In this lesson, we'll demonstrate how media files are handled on Pantheon. Media
 
 1. Let's upload a custom logo in the WordPress Dashboard. Feel free to use this example:
 
-  ![New Logo](../../../images/guides/git-wordpress/logo-wp-git-demo.png)
+  ![New Logo](../../images/guides/git-wordpress/logo-wp-git-demo.png)
 
 1. Within the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's WordPress Dashboard, navigate to **Appearance** > **Customize** > **Site Identity** then upload a new logo.
 
 1. Click **Save and Publish**:
 
-  ![Uploaded Logo](../../../images/guides/git-wordpress/logo-upload.png)
+  ![Uploaded Logo](../../images/guides/git-wordpress/logo-upload.png)
 
 1. Refresh the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's site URL and you should see your changes reflected.
 
@@ -34,6 +34,6 @@ In this lesson, we'll demonstrate how media files are handled on Pantheon. Media
 
   Use your SFTP client to upload media to the file directory (`wp-content/uploads/`) outside the WordPress Dashboard:
 
-  ![WP-Uploads file directory](../../../images/guides/git-wordpress/uploads.png)
+  ![WP-Uploads file directory](../../images/guides/git-wordpress/uploads.png)
 
   For more information on managing files across environments, see [Use the Pantheon Workflow](/pantheon-workflow).

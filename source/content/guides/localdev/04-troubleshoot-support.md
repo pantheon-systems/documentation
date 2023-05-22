@@ -72,11 +72,11 @@ Localdev will [respect the changes made to your local `pantheon.yml`](/guides/ph
 
 A forced rebuild is required for changes in `pantheon.yml` to take effect:
 
-![Force Rebuild your app in Localdev](../../../images/localdev/localdev-rebuild.png)
+![Force Rebuild your app in Localdev](../../images/localdev/localdev-rebuild.png)
 
 You can verify which version of PHP your site is using by clicking **Launch Terminal**, then running `php -v`:
 
-![Verify your app's version of PHP](../../../images/localdev/localdev-php-version.png)
+![Verify your app's version of PHP](../../images/localdev/localdev-php-version.png)
 
 ### Can I create Multidev environments from Localdev?
 

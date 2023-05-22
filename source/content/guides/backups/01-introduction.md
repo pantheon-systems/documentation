@@ -41,7 +41,9 @@ You can select the day you want your weekly backup to be created.
 
 1. Select the day from the drop-down menu and then click **Update Weekly Backup Schedule**.
 
-![Backup Schedule](../../../images/dashboard/backup-schedule.png)
+![Backup Schedule](../../images/dashboard/backup-schedule.png)
+
+
 
 ## More Resources
 

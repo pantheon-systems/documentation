@@ -83,7 +83,7 @@ You must correct an unsupported temporary path set by a plugin or theme in the `
 
 The output for this command should look similar to the following Contact Form 7 example:
 
-![config get wpcf7 uploads tmp dir default](../../../images/wp-config-get-tmp-default.png)
+![config get wpcf7 uploads tmp dir default](../../images/wp-config-get-tmp-default.png)
 
 </Tab>
 
@@ -107,7 +107,7 @@ You must correct an unsupported temporary path set by a module or theme using `$
 
 The output for this command should look similar to the following Plupload example:
 
-![cget plupload settings temporary_uri filesystem](../../../images/d7-vget-tmp-default.png)
+![cget plupload settings temporary_uri filesystem](../../images/d7-vget-tmp-default.png)
 
 </Tab>
 
@@ -179,7 +179,7 @@ You must configure a temporary path that uses a private subdirectory of Pantheon
 
 The output for this command should look similar to the following Contact Form 7 example:
 
-![config get wpcf7 uploads tmp dir filesystem](../../../images/wp-config-get-tmp-filesystem.png)
+![config get wpcf7 uploads tmp dir filesystem](../../images/wp-config-get-tmp-filesystem.png)
 
 </Tab>
 
@@ -205,7 +205,7 @@ You must configure a temporary path that uses a private subdirectory of Pantheon
 
 The output for this command should look similar to the following Plupload example:
 
-![cget plupload settings temporary_uri filesystem](../../../images/d7-vget-tmp-filesystem.png)
+![cget plupload settings temporary_uri filesystem](../../images/d7-vget-tmp-filesystem.png)
 
 </Tab>
 

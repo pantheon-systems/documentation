@@ -44,7 +44,7 @@ To create your site:
 
 1. Click **Visit your Pantheon Site Dashboard** when the process is complete. Your **Site Dashboard** looks like this:
 
-     ![Site Dashboard in the Dev tab shows the Visit Development Site button](../../../images/dashboard/site-dashboard-dev.png)
+     ![Site Dashboard in the Dev tab shows the Visit Development Site button](../../images/dashboard/site-dashboard-dev.png)
 
 1. Access your new site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/>, and follow the prompts to complete the installation of your site.
 

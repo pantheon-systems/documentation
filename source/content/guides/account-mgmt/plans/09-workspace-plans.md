@@ -33,13 +33,13 @@ To upgrade your Professional Workspace Account Plan to Gold:
 
 1. Click **Upgrade Account Plan** in the banner at the top of the page.
 
-  ![Upgrade to Gold](../../../../images/guides/account-mgmt/upgrade-workspace.png)
+  ![Upgrade to Gold](../../../images/guides/account-mgmt/upgrade-workspace.png)
 
 1. On the **Select Account Plan** page, click **Select Plan** under Gold, and follow the prompts to add a Payment Method.
 
 1. Once your payment method is accepted, you will be redirected to a Billing page with your Account Subscription details.
 
-  ![Billing Page](../../../../images/guides/account-mgmt/billing-page.png)
+  ![Billing Page](../../../images/guides/account-mgmt/billing-page.png)
 
 <Alert title="Note"  type="info" >
 

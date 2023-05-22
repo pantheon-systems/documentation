@@ -4759,7 +4759,7 @@ a.topic-info-link {
   background-color: rgba(49,57,69,0.20);
   background-repeat:no-repeat;
   background-position:center;
-  background-image: url(../images/play-btn-small.svg);
+  background-image: url(images/play-btn-small.svg);
 }
 
 .video-info__text {

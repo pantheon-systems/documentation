@@ -159,7 +159,7 @@ define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 
 Be sure to add this configuration _above_ the comment to stop editing:
 
-![Example of Autoptimize configuration above the stop editing comment](../images/autoptimize-config.png)
+![Example of Autoptimize configuration above the stop editing comment](images/autoptimize-config.png)
 
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
 
@@ -573,7 +573,7 @@ Pantheon does not support XML-RPC if it is enabled. You must resolve any issues 
 
 **Issue 2:** Unexpected server port value error is reported by Jetpack in WP admin, where the fix suggested by the plugin causes critical errors on Pantheon. For example:
 
-![Jetpack error message unexpected Server port value](../images/jetpack-server-port-error.png)
+![Jetpack error message unexpected Server port value](images/jetpack-server-port-error.png)
 
 **Solution:**
 Adjust the fix suggested by Jetpack, so that `$_SERVER['SERVER_PORT']` is used instead. For example:
@@ -963,7 +963,7 @@ ___
 
 **Solution 2:** If you don't have a local copy, SFTP into any environment's `wp-content/uploads` folder and upload the CSV file that you wish to import. Under the advanced settings of the WooCommerce import, specify the exact path where you uploaded the CSV file and import from there:
 
-![Enter the path to the CSV on the Import products from a CSV file page](../images/woocommerce/woocommerce-path-csv.png)
+![Enter the path to the CSV on the Import products from a CSV file page](images/woocommerce/woocommerce-path-csv.png)
 
 There is a feature request on [WooCommerce's GitHub page](https://github.com/woocommerce/woocommerce/issues/21624) for a WP-CLI import command which would be less prone to timeouts. To express your interest to the developers, click the thumbs up on the feature request.
 
@@ -979,7 +979,7 @@ ___
 
 **Issue 1:** The [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
-![WooZone WP_MEMORY_LIMIT Error](../images/woocommerce/woozone-error.png)
+![WooZone WP_MEMORY_LIMIT Error](images/woocommerce/woozone-error.png)
 
 **Solution:** Add the following line to `wp-config.php`:
 
@@ -1364,13 +1364,13 @@ ___
 - Clean up temporary files
 - Lower the chunk size to fewer than 100 records:
 
-  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-chunk-size.png)
+  ![A screenshot showing the Chunk Size setting under Advanced Settings for WP Import All](images/plugins-known-issues/wp-import-chunk-size.png)
 
 - Cron Processing Time Limit should be set not more than 50 seconds to be safe with the 59 second platform PHP timeout.
 
 - Set the plugin to only process 1 record at a time:
 
-  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](../images/plugins-known-issues/wp-import-iterative.png)
+  ![A screenshot of the Iterative, Piece-by-Piece processing option under Advanced Settings for WP Import All](images/plugins-known-issues/wp-import-iterative.png)
 
 The optimal number of records to process at one time depends on how many post_metas and custom functions are associated with each post imported.
 
@@ -1429,7 +1429,7 @@ ___
 
 **Solution:** Activate the plugin individually for each environment you want to use the plugin with, as it requires a separate key for each domain. Instead of clicking on **Purchase a subscription or enter an existing site key**, use the **Configure WMPL** button:
 
-![The Configure WMPL Button](../images/wpml-configure.png)
+![The Configure WMPL Button](images/wpml-configure.png)
 
 You can also add the registration keys to `wp-config.php`:
 

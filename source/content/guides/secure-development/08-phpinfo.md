@@ -48,7 +48,7 @@ Follow the steps below to keep your `phpinfo` file secure.
 
 1. Visit the file in a web browser to view `phpinfo`.
 
-  ![obscure-phpinfo-filename](../../../images/obscure-phpinfo-delete-immediately.png)
+  ![obscure-phpinfo-filename](../../images/obscure-phpinfo-delete-immediately.png)
 
 1. Delete the file immediately so you do not expose sensitive information, such as the password used to connect to the DB.
 

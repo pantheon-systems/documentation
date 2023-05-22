@@ -49,11 +49,11 @@ This doc uses the [ClamAV Module](https://www.drupal.org/project/clamav).
 
 2. From the module's configuration page, ensure that the scan method is set to to daemon mode, with the hostname `localhost` and the port number `3310`:
 
-    ![ClamAV Module Settings](../images/clamav-settings.png)
+    ![ClamAV Module Settings](images/clamav-settings.png)
 
 When ClamAV detects a virus, it will display a warning:
 
-![ClamAV Virus Detected](../images/clamav-detection.png)
+![ClamAV Virus Detected](images/clamav-detection.png)
 
 ## Known Issues
 

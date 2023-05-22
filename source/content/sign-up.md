@@ -32,7 +32,7 @@ When you log in for the first time, there will be a welcome screen where you can
 
 - [Set up your team](/guides/account-mgmt/workspace-sites-teams/teams)
 
-![A screenshot of the welcome screen for the New Dashboard](../images/dashboard/new-dashboard/welcome-screen.png)
+![A screenshot of the welcome screen for the New Dashboard](images/dashboard/new-dashboard/welcome-screen.png)
 
 ## More Resources
 

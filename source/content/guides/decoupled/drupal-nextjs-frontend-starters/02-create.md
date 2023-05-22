@@ -37,7 +37,7 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Click the **Drupal and Next.js** option, select a repo under **Choose your Git provider**, and then click **Continue**.
 
-    ![select a starter](../../../../images/decoupled-select-starter.png)
+    ![select a starter](../../../images/decoupled-select-starter.png)
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 

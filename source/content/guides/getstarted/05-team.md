@@ -29,17 +29,17 @@ To set up your team:
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
-   ![Adding Workspace Information](../../../images/create-workspace-form.png)
+   ![Adding Workspace Information](../../images/create-workspace-form.png)
 
 1. Enter the email addresses and select roles for team members that need access to this Workspace. To learn about roles, select **View Role Permission Levels**.
 
    Repeat this step for each team member you want to add.
 
-  ![Adding a team member](../../../images/create-workspace-team.png)
+  ![Adding a team member](../../images/create-workspace-team.png)
 
 1. Click **Continue**. Your Workspace is created, and you are taken to the Workspace.
 
-   ![Workspace](../../../images/create-workspace-dashboard.png)
+   ![Workspace](../../images/create-workspace-dashboard.png)
 
 You have created your first workspace, and added your team members. If you'd like to learn more about workspaces and teams, refer to [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
 

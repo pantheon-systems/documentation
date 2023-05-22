@@ -38,7 +38,7 @@ You can pre-define these URLs when you begin preparing your site for Autopilot.
 
 - Receive major content updates 
 
-![Pre-define Autopilot VRT URLs](../../../images/autopilot/autopilot-setup-visual-review.png)
+![Pre-define Autopilot VRT URLs](../../images/autopilot/autopilot-setup-visual-review.png)
 
 ## Consider What Web Elements You Want to Exclude
 
@@ -56,7 +56,7 @@ Dynamic elements are created by your browser and only exist during runtime. Cons
 
     - You can have static elements defined in your source code, but the attributes and data inside this element might be modified or set by JavaScript. For example, using `setAttribute` to change an attribute on a static element.
 
-![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
+![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
 ### Adjust the Threshold for Dynamic Content
 
@@ -64,7 +64,7 @@ There might be some dynamic web elements that you don't want to completely exclu
 
 You will be notified of test failures that fall below the set threshold if you [subscribe to Autopilot notifications](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications).
 
-![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
+![Autopilot Configuration - Visual Test Screenshots](../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
 ### Review Exclusions for Composer with Extra Care
 
@@ -80,7 +80,7 @@ Autopilot's visual regression tool takes before and after screenshots to check f
 
 1. Share this preview link with stakeholders and request their approval.
 
-    ![Autopilot Review Test Results](../../../images/autopilot/autopilot-review-test-results.png)
+    ![Autopilot Review Test Results](../../images/autopilot/autopilot-review-test-results.png)
 
 1. Encourage your stakeholders to [enable Autopilot notifications](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications).
 

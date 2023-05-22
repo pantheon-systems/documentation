@@ -162,7 +162,7 @@ Follow the steps below to resolve this scenario.
 
 1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `< HEAD` at the top, and `> <commit-id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
 
-  ![An example of Visual Studio Code highlighting a merge conflict](../../../images/vscode-merge-conflict.png)
+  ![An example of Visual Studio Code highlighting a merge conflict](../../images/vscode-merge-conflict.png)
 
 1. Edit the conflict by choosing one of the two versions of the conflicting line(s), or by editing a version containing both updates.
 
@@ -198,11 +198,11 @@ Follow the steps below to resolve a merge conflict that is preventing you from m
 
 1. Navigate to your **Dev** environment > set the **Development Mode** to **Git**:
 
-    ![Git Connection Mode](../../../images/dashboard/connection-mode-git.png)
+    ![Git Connection Mode](../../images/dashboard/connection-mode-git.png)
 
 1. Click **Clone with Git** to Clone the repository to your local computer:
 
-    ![Git Clone](../../../images/dashboard/git-string.png)
+    ![Git Clone](../../images/dashboard/git-string.png)
 
 1. Navigate to the repository directory, change to the `master` branch and pull the Multidev branch to `master`.
 

@@ -29,7 +29,7 @@ Pantheon's Autopilot:
 - Tests the updates with automated visual regression testing (VRT)
 - Optionally deploys the updates
 
-![A gif showing Autopilot visual regression testing](../../../images/dashboard/vrt.gif)
+![A gif showing Autopilot visual regression testing](../../images/dashboard/vrt.gif)
 
 ## Get Autopilot
 

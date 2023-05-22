@@ -19,7 +19,7 @@ In this lesson, we’ll learn how to connect to your Dev environment and change 
 
 On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you can connect and work via [SFTP](/guides/sftp). Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
 
-![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
+![Connection Modes](../../images/dashboard/connection-mode-sftp.png)
 
 [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/>, and then select <Icon icon={"embed-close"} text={"Code"}/>.
 

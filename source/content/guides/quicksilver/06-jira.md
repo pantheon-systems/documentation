@@ -57,7 +57,7 @@ Create a new machine user in your Atlassian Cloud instance. This user is referre
 
   We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Automation`. The email needs to be an account you have access to:
 
-    ![Create an automation user](../../../images/integrations/jira-new-user.png)
+    ![Create an automation user](../../images/integrations/jira-new-user.png)
 
 1. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine user's password.
 
@@ -184,7 +184,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 1. Return to the issue in Jira to see a message from our machine user:
 
-    ![Jira issue](../../../images/integrations/jira_log.png)
+    ![Jira issue](../../images/integrations/jira_log.png)
 
 ## External Repositories
 

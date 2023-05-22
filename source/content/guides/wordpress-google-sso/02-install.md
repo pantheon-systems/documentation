@@ -64,6 +64,6 @@ terminus env:commit --message "installed WP SAML Auth plugin" $site.$env
 
 Open the plugin's settings page (`/wp-admin/options-general.php?page=wp-saml-auth-settings`):
 
-![The WP SAML Auth Settings page immediately after install](../../../images/guides/wordpress-google-sso/plugin-default-values.png)
+![The WP SAML Auth Settings page immediately after install](../../images/guides/wordpress-google-sso/plugin-default-values.png)
 
 Note that some fields are already filled in, and some are empty. Leave this page open in a separate tab or window, as we'll be referencing and adding to this page in the following steps.

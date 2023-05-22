@@ -31,11 +31,11 @@ In this lesson, we'll set up a new ping monitor to periodically check the site's
 
 1. Select **Get started**, then under **Back-end, front-end, and mobile applications**, select **New Relic Synthetics:**
 
-  ![New Relic Synthetics Selection](../../../images/pagerduty/new-relic-synthetics-screen.png)
+  ![New Relic Synthetics Selection](../../images/pagerduty/new-relic-synthetics-screen.png)
 
 1. Enter the details for the URL you want to monitor (e.g. `https://www.example.com`).
 
-  ![New Relic Synthetics Selection](../../../images/pagerduty/new-relic-create-monitor-screen.png)
+  ![New Relic Synthetics Selection](../../images/pagerduty/new-relic-create-monitor-screen.png)
 
 1. Click **Advanced Options** and check **Verify SSL**.
 
@@ -63,11 +63,11 @@ Now that you have a monitor setup in New Relic&reg; to periodically check your P
 
 1. Select **Create a condition**, and choose **Synthetics** and either **single failure** or **multiple location failures**, then **Next, select entities**:
 
-  ![New Relic Synthetics Selection](../../../images/pagerduty/new-relic-new-policy-condition-screen.png)
+  ![New Relic Synthetics Selection](../../images/pagerduty/new-relic-new-policy-condition-screen.png)
 
 1. Select the monitor that you created in [the previous step](#create-a-monitor) and **Next, define thresholds**.
 
-  ![New Relic select entity](../../../images/pagerduty/new-relic-policy-select-monitor.png)
+  ![New Relic select entity](../../images/pagerduty/new-relic-policy-select-monitor.png)
 
 1. If you selected multiple location failures, define the number of locations to trigger the failure. Name the Click **Create condition**.
 

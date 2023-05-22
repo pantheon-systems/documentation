@@ -25,7 +25,7 @@ This section provides information on how to configure decoupled content preview 
 
 1. Scroll down to **Site Environment Variables** and click the **Get Started** or **Make Changes** button. The Get Started button displays if you have not added any Site Environment Variables yet.
 
-    ![Site Environment Variables](../../../../images/decoupled-preview-env-variables.png)
+    ![Site Environment Variables](../../../images/decoupled-preview-env-variables.png)
 
 1. Add the keys below and the corresponding values and then click **Save**. These are the secure preview key-value pairs you were provided with and copied when you installed your CMS.
 

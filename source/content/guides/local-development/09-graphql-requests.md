@@ -53,11 +53,11 @@ Note that GraphQL does not use HTTP status codes in the same way that REST-based
 
 1. Review queries carefully. In the example below, it is not obvious that one of these queries failed, as every request returned a 200 status code:
 
-    ![GraphQL 200 Status Codes](../../../images/graphql-200-status.png)
+    ![GraphQL 200 Status Codes](../../images/graphql-200-status.png)
 
 1. Inspect the errors key in each request response.
 
-    ![GraphQL Errors Key](../../../images/graphql-errors-key.png)
+    ![GraphQL Errors Key](../../images/graphql-errors-key.png)
 
     This is the only identifiable symptom in DevTools when an operation fails. You can install the [GraphQL Network Inspector Chrome extension](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) for better network insights on GraphQL requests.
 
@@ -67,7 +67,7 @@ Each request can result in one or more errors. This means that the error key in 
 
 The example below shows an error returned for a workspace that requires multi-factor authentication to be enabled:
 
-![GraphQL Error Example](../../../images/graphql-error-example.png)
+![GraphQL Error Example](../../images/graphql-error-example.png)
 
 ## More Resources
 

@@ -44,7 +44,7 @@ Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection
 
 1. Specify or browse to the root directory for your local WordPress site, and click **Create**.
 
-    ![Configuring wp-cli path for PhpStorm](../../../images/phpstorm-new-project-wordpress-plugin-screen.png)
+    ![Configuring wp-cli path for PhpStorm](../../images/phpstorm-new-project-wordpress-plugin-screen.png)
 
 There will be no open files in your project after you complete these steps. You can find a PHP file in the project's root with the standard plugin header for WordPress.
 
@@ -65,7 +65,7 @@ You can configure PhpStorm to recognize WP-CLI from within your project after yo
 1. Choose the tool **WP-CLI**, and click **OK**.
 
 1. Select **Executable Available** and enter the file path to your local `wp` directory.
- ![Configuring wp-cli path for PhpStorm](../../../images/path-to-wp-phpstorm.png)
+ ![Configuring wp-cli path for PhpStorm](../../images/path-to-wp-phpstorm.png)
 
 1. Click **OK** to save the changes.
 
@@ -80,7 +80,7 @@ You can configure PhpStorm to recognize WP-CLI from within your project after yo
 1. Enter your Pantheon site name, followed by a dash and the environment.
 
 1. Select **SFTP** for type and click **OK**.
-![Add web server PhpStorm](../../../images/add-web-server-phpstorm.png)
+![Add web server PhpStorm](../../images/add-web-server-phpstorm.png)
 
 ### Connection Tab
 
@@ -98,7 +98,7 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 
 1. **Root Path:** Click the **Autodetect** button and the Root Path should be automatically populated:
 
-    ![Add web server PhpStorm](../../../images/phpstorm-deployment-connection-tab.png)
+    ![Add web server PhpStorm](../../images/phpstorm-deployment-connection-tab.png)
 
     <Alert title="Warning" type="danger">
 
@@ -109,7 +109,7 @@ Use your site's [SFTP connection information](/sftp#sftp-connection-information)
 
 1. Click **OK**.
 
-    ![Add web server PhpStorm](../../../images/phpstorm-deployment-connection-test-sftp-success.png)
+    ![Add web server PhpStorm](../../images/phpstorm-deployment-connection-test-sftp-success.png)
 
 ### Mappings Tab
 

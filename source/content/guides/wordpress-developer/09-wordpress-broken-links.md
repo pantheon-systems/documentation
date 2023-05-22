@@ -50,7 +50,7 @@ Broken Link Checker is a reporting tool and won't keep you from creating bad lin
 
 WordPress stores URLs in various places in the database. This can cause unexpected behavior due to Pantheon's multi-environment workflow. WP-CLI's search and replace functionality is integrated into the workflow to assist in updating URLs.
 
-![Dashboard DB URL converter](../../../images/dashboard/convert-urls.png)​
+![Dashboard DB URL converter](../../images/dashboard/convert-urls.png)​
 
 [Pantheon's workflow](/pantheon-workflow) for WordPress includes an additional feature to update environment URLs automatically. Note that you can't override the defaults that are selected when performing a clone operation when you update the URL to match whatever environment you're cloning to. You can convert HTTP to HTTPS and vice versa if this varies among your environments.
 

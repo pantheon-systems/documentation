@@ -104,7 +104,7 @@ Be sure that you have:
 
 1. Navigate to the GitHub dashboard, and [create a new repository](https://github.com/new) without creating a `README` or `.gitignore` file.
 
-    ![New empty repository](../../../images/integrations/new_repo.png)
+    ![New empty repository](../../images/integrations/new_repo.png)
 
 1. Open your local command line and connect your local project to this repository as `origin`, then push the code to the master branch. Remember to replace the URL path:
 
@@ -154,13 +154,13 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
 
 1. Open the main Jenkins menu on the left side, select **Credentials**, select **System**, select **Global credentials**, then select **Add Credentials** to add your GitHub and Terminus tokens.
 
-    ![Credentials Page](../../../images/integrations/credentials.png)
+    ![Credentials Page](../../images/integrations/credentials.png)
 
 1. Open a new browser tab and go to your GitHub account. 
 
 1. Go to [Settings](https://github.com/settings/profile) in GitHub, select **Developer Settings**, select **Personal access tokens**, and generate a new token. This should have all **repo** and **admin:repo-hook** options:
 
-    ![GitHub token permissions](../../../images/integrations/jenkins-gh-token-access.png)
+    ![GitHub token permissions](../../images/integrations/jenkins-gh-token-access.png)
 
 1. Copy the generated token. You will not be able to view the token again.
 
@@ -184,7 +184,7 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
 
 1. Save both credentials. Your credentials will be accessible for secure use.
 
-    ![Credentials Page](../../../images/integrations/2_credentials.png)
+    ![Credentials Page](../../images/integrations/2_credentials.png)
 
     <Alert title="Note" type="info">
     Keep your Terminus token handy; you'll need to enter it again later.
@@ -204,11 +204,11 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
 
 1. Log in to the Jenkins dashboard as an admin user and click **New Item**.
 
-    ![Jenkins dashboard](../../../images/integrations/jenkins_dash.png)
+    ![Jenkins dashboard](../../images/integrations/jenkins_dash.png)
 
 1. Give the project a name with no spaces, select **Freestyle Project**, and click **OK** to save.
 
-    ![New Jenkins project](../../../images/integrations/new_job.png)
+    ![New Jenkins project](../../images/integrations/new_job.png)
 
 1. Click the **General** tab, select **GitHub project** and enter the repository URL (for example, `https://github.com/YOUR-ORG/YOUR-PROJECT`).
 
@@ -220,7 +220,7 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
     - **Branch specifier**: `origin/*`
     - **Additional Behaviours**: Add **Prune stale remote-tracking branches**:
 
-    ![SCM view](../../../images/integrations/scm_settings.png)
+    ![SCM view](../../images/integrations/scm_settings.png)
 
 1. Click  **Build Triggers** and check the box labelled **GitHub hook trigger for GITScm polling**. This allows code changes to trigger your build (as opposed to setting up a periodic build, for example).
 
@@ -232,11 +232,11 @@ Now the master branch of GitHub, your local, and Pantheon are in sync.
 
     - **SITE_ID=**your-site-name
 
-    ![Env vars view](../../../images/integrations/env_vars.png)
+    ![Env vars view](../../images/integrations/env_vars.png)
 
 1. Check the **Use secret text(s) or file(s)** option, click **Bindings**, add a secret text binding named **TERMINUS_TOKEN**, and select the Terminus secret text credential from the drop-down menu:
 
-    ![Bindings](../../../images/integrations/jenkins-binding.png)
+    ![Bindings](../../images/integrations/jenkins-binding.png)
 
 ### Add Build Steps
 
@@ -305,7 +305,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks exec
       ```
 
     Your conditional step should look like this:
-    ![Conditional Step](../../../images/integrations/jenkins-conditional.png)
+    ![Conditional Step](../../images/integrations/jenkins-conditional.png)
 
 1. Create a cleanup task:
 
@@ -336,11 +336,11 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks exec
 
 1. Commit and push to GitHub to initiate a build. You should see the results of the test, which link to the Jenkins job:
 
-  ![Passing Github test](../../../images/integrations/test_pass.png)
+  ![Passing Github test](../../images/integrations/test_pass.png)
 
   Click the job, then select **Console Output** if a test fails to see the details.
 
-  ![Job Details](../../../images/integrations/job_details.png)
+  ![Job Details](../../images/integrations/job_details.png)
 
 
 Be sure to push to your new origin repo on GitHub if you usually use only the Pantheon repository.You can still add the Pantheon repo as a remote to take advantage of Multidev and work on your own environment. Continue to add new tests as you add new features.

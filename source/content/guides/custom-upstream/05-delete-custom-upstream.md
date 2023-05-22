@@ -25,7 +25,7 @@ Follow these steps to delete your Custom Upstream.
 
 1. Select **Source** > click the **Delete Upstream** button:
 
-  ![Delete Upstream Button](../../../images/dashboard/delete-upstream.png)
+  ![Delete Upstream Button](../../images/dashboard/delete-upstream.png)
 
 
 ## More Resources

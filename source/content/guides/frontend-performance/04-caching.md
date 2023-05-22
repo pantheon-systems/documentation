@@ -31,48 +31,48 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 
 <Tab title="Global" id="globaltab1" active={true}>
 
-![Global CDN Map](../../../images/guides/front-end-performance/CDN-map.png)
+![Global CDN Map](../../images/guides/front-end-performance/CDN-map.png)
 
 </Tab>
 
 <Tab title="N. America" id="natab1">
 
-![North America CDN Map](../../../images/guides/front-end-performance/CDN-map-NA.png)
+![North America CDN Map](../../images/guides/front-end-performance/CDN-map-NA.png)
 <p class="pop-desc">Ashburn (x2), Atlanta (x2), Boston, Chicago (x2), Dallas, Denver, Los Angeles (x2), Miami, Minneapolis, Montreal, New York (x2), San Jose (x2), Seattle, Toronto</p>
 
 </Tab>
 
 <Tab title="S. America" id="satab1">
 
-![South America CDN Map](../../../images/guides/front-end-performance/CDN-map-SA.png)
+![South America CDN Map](../../images/guides/front-end-performance/CDN-map-SA.png)
 <p class="pop-desc">São Paulo, Rio de Janeiro</p>
 
 </Tab>
 
 <Tab title="Africa" id="aftab1">
 
-![Africa CDN Map](../../../images/guides/front-end-performance/CDN-map-AF.png)
+![Africa CDN Map](../../images/guides/front-end-performance/CDN-map-AF.png)
 <p class="pop-desc">Cape Town, Johannesburg</p>
 
 </Tab>
 
 <Tab title="Europe" id="eutab1">
 
-![Europe CDN Map](../../../images/guides/front-end-performance/CDN-map-EU.png)
+![Europe CDN Map](../../images/guides/front-end-performance/CDN-map-EU.png)
 <p class="pop-desc">Amsterdam, Frankfurt (x2), London (x2), Madrid, Paris, Stockholm</p>
 
 </Tab>
 
 <Tab title="Asia" id="asiatab1">
 
-![Asia CDN Map](../../../images/guides/front-end-performance/CDN-map-Asia.png)
+![Asia CDN Map](../../images/guides/front-end-performance/CDN-map-Asia.png)
 <p class="pop-desc">Dubai, Hong Kong, Osaka, Singapore, Tokyo (x2)</p>
 
 </Tab>
 
 <Tab title="Australia & New Zealand" id="austab1">
 
-![Australia CDN Map](../../../images/guides/front-end-performance/CDN-map-AUZ.png)
+![Australia CDN Map](../../images/guides/front-end-performance/CDN-map-AUZ.png)
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
 
 </Tab>
@@ -125,13 +125,13 @@ This header indicates which POP your response came from. Our primary infrastruct
 
 </dl>
 
-![Chrome network headers](../../../images/guides/front-end-performance/chrome-network-headers.png)
+![Chrome network headers](../../images/guides/front-end-performance/chrome-network-headers.png)
 
 <Accordion title="Google's Developer Tools" id="dev-tools" icon="lightbulb">
 
 Examine the HTTP headers for the response using Chrome's Developer tools:
 
-![Check headers in chrome](../../../images/guides/front-end-performance/inspect-network.gif)
+![Check headers in chrome](../../images/guides/front-end-performance/inspect-network.gif)
 
 1. Right click somewhere on the page.
 
@@ -233,7 +233,7 @@ The [Pantheon Page Cache plugin](/guides/wordpress-configurations/wordpress-cach
 
 1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
 
-  ![Pantheon Cache Plugin](../../../images/guides/front-end-performance/pantheon-page-cache.png)
+  ![Pantheon Cache Plugin](../../images/guides/front-end-performance/pantheon-page-cache.png)
 
 </Tab>
 
