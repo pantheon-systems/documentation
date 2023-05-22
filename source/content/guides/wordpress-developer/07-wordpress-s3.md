@@ -54,6 +54,8 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You can not change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket. Then, select an AWS Region.
 
+   ![Create s3 bucket for WordPress](../../../images/s3-step1.png)
+
 1. Under the **Object Ownership** section, select the **ACLs enabled** and Object Ownership should be **Bucket owner preferred**.
 
 1. Under the **Block Public Access settings for this bucket** section, uncheck the **Block all public access** an check the acknowledgement of that setting.
