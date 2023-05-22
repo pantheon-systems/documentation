@@ -38,7 +38,7 @@ Build details include:
 
 1. Click the **Front-End Sites** tab and select the site you want to view the build details for.
 
-![build details](../images/decoupled-build-details.png)
+![build details](../../images/decoupled-build-details.png)
 
 ## Trigger a Manual Build
 
