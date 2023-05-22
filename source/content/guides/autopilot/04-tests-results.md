@@ -17,13 +17,19 @@ product: [autopilot]
 integration: [quicksilver]
 ---
 
-Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it applies updates to your Dev, Test or Live environment.
+Autopilot updates and visually tests a copy of your site on a [Multidev](/guides/multidev) so it can detect issues before it applies updates to your Dev, Test or Live environment. Autopilot does this by taking before and after screenshots to check for changes. Before screenshots are taken from the Dev environment and After screenshots are taken from the Multidev environment. You also have the option to pull down your site's live content to the Dev environment before taking the Before screenshot so that it is in parity with your Live environment.
 
-## Understanding Test Results
+## View Test Results
 
-To review your test results, go to your Autopilot overview page.  Here you can see what sites passed testing and are up to date, as well as sites that need your manual review. 
+1. Navigate to your Autopilot **Overview** page and click the VRT results under **Autopilot Sites**. This section displays which sites passed testing and are up to date, as well as sites that need your manual review.
 
-![Autopilot overview page shows the testing status of all sites](../../../images/autopilot/autopilot-sites-overview.png)
+    ![Autopilot overview page shows the testing status of all sites](../../../images/autopilot/autopilot-sites-overview.png)
+
+1. Click **More Actions** in the **Review Test Results** page to see Autopilot data for a specific site.
+
+1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Workspace to view the site preview in a new browser tab.
+
+    ![Autopilot Review Test Results](../../../images/autopilot/autopilot-review-test-results.png)
 
 
 ## Successful Tests

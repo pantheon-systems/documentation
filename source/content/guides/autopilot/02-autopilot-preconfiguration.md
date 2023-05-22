@@ -26,7 +26,7 @@ Make sure that your current site configuration is [compatible with Autopilot](/g
 
 Autopilot allows you to define specific URLs for individual regression tests. You can define as many URLs for individual regression testing as you want during the [Visual Review](/guides/autopilot/enable-autopilot/#visual-review) section of the Autopilot Wizard.
 
-You can pre-define these URLs when you begin preparing your site for Autopilot. 
+You can pre-define these URLs when you begin preparing your site for Autopilot.
 
  We recommend that you include pages that:
 
@@ -36,13 +36,13 @@ You can pre-define these URLs when you begin preparing your site for Autopilot.
 
 - Appear as top links on your homepage
 
-- Receive major content updates 
+- Receive major content updates
 
 ![Pre-define Autopilot VRT URLs](../../../images/autopilot/autopilot-setup-visual-review.png)
 
 ## Consider What Web Elements You Want to Exclude
 
-Certain [web elements can be excluded](/guides/autopilot/enable-autopilot/#excluded-web-elements) from your visual regression testing. We recommend creating a list of web elements that you can exclude from testing before you begin to configure Autopilot. 
+Certain [web elements can be excluded](/guides/autopilot/enable-autopilot/#excluded-web-elements) from your visual regression testing. We recommend creating a list of web elements that you can exclude from testing before you begin to configure Autopilot.
 
 Dynamic elements are created by your browser and only exist during runtime. Consider excluding the following dynamic web elements from your tests:
 
@@ -52,7 +52,7 @@ Dynamic elements are created by your browser and only exist during runtime. Cons
 
 - CSS and Pseudo-Elements
 
-- Static Elements with Dynamic Parts 
+- Static Elements with Dynamic Parts
 
     - You can have static elements defined in your source code, but the attributes and data inside this element might be modified or set by JavaScript. For example, using `setAttribute` to change an attribute on a static element.
 
@@ -60,7 +60,7 @@ Dynamic elements are created by your browser and only exist during runtime. Cons
 
 ### Adjust the Threshold for Dynamic Content
 
-There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and false positives caused by dynamic web elements or other factors. 
+There might be some dynamic web elements that you don't want to completely exclude. You can [adjust the threshold for acceptable change](/guides/autopilot/enable-autopilot/#acceptable-change) in this case. Adjusting the testing threshold will help distinguish between true test failures and false positives caused by dynamic web elements or other factors.
 
 You will be notified of test failures that fall below the set threshold if you [subscribe to Autopilot notifications](/guides/autopilot/enable-autopilot/#enable-autopilot-email-notifications).
 
@@ -72,7 +72,9 @@ Sites managed through Composer have less flexibility when setting exclusions in 
 
 ## Determine Stakeholders for Your VRT Feedback Loop
 
-Autopilot's visual regression tool takes before and after screenshots to check for changes. You can accept the changes page by page or accept all changes for all pages an once depending on your requirements and thresholds. It's a good idea to have multiple team members review changes when several updates and content changes have been made. You can share the test results and preview pages with stakeholders to ensure that your site has wide approval before accepting the changes.
+Autopilot's visual regression tool takes before and after screenshots to check for changes. Before screenshots are taken from the Dev environment and After screenshots are taken from the Multidev environment. You also have the option to pull down your site's live content to the Dev environment before taking the Before screenshot so that it is in parity with your Live environment.
+
+You can accept the changes page by page or accept all changes for all pages an once depending on your requirements and thresholds. It's a good idea to have multiple team members review changes when several updates and content changes have been made. You can share the test results and preview pages with stakeholders to ensure that your site has wide approval before accepting the changes.
 
 1. Click **More Actions** in the **Review Test Results** page to see Autopilot data for a specific site.
 

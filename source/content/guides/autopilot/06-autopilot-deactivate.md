@@ -30,7 +30,7 @@ Use **one** of the deactivation methods below to deactivate Autopilot on an indi
 
 1. Click the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu on the site listing, and then click **Deactivate Autopilot**.
 
-1. Click **Deactivate Autopilot** in the pop-up to confirm the action. 
+1. Click **Deactivate Autopilot** in the pop-up to confirm the action.
 
 ## Deactivate From the Autopilot Site Configuration Page
 
@@ -42,7 +42,7 @@ Use **one** of the deactivation methods below to deactivate Autopilot on an indi
 
 1. Click **Deactivate Autopilot**.
 
-1. Click **Deactivate Autopilot** in the pop-up to confirm the action. 
+1. Click **Deactivate Autopilot** in the pop-up to confirm the action.
 
 ## More Resources
 
