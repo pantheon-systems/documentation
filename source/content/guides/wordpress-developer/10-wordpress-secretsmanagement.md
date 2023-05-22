@@ -42,7 +42,7 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-s
 
 This plugin writes entries into the file ~/files/private/secrets.json (NOTE: This refers to a different private directory than the private directory used to store your Quicksilver scripts!). This file is, naturally enough, a JSON file containing multiple keys that is not included in your project's source code. The terminus secrets script will fetch this file, modify is as requested, and then write it back to the Pantheon site. 
 
-https://github.com/pantheon-systems/terminus-secrets-plugin
+
 
 ### Via Lockr
 
@@ -52,5 +52,7 @@ https://docs.pantheon.io/guides/lockr
 
 ## More Resources
 
-- [WordPress Configuration Management](/wordpress-configurations/wp-cfm)
+- [WordPress Configuration Management](/guides/wordpress-configurations/wp-cfm)
 - [WordPress wp-config configuration](/guides/php/wp-config.php)
+- [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
+- [Storingg Your Secret Keys Via Lockr](/guides/lockr)
