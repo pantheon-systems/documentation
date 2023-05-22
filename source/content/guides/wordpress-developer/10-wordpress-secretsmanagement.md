@@ -28,7 +28,7 @@ Plugin and theme license keys are unique codes used to activate and authenticate
 
 ### Via wp-config.php
 
-Most plugin and theme author's documentation recommend in storing their license or API keys via the wp-config.php file. While this is the most popular approach, it would not be secure and scalable specially if you are using version control as this will store those sensitive information in the codebase. It would still be best to have it stored on a secure non-version controlled file location like `~/files/private/wp-config.secrets.php`, in this way, it can have different values in each environement
+Most plugin and theme author's documentation recommend in storing their license or API keys via the wp-config.php file. While this is the most popular approach, it would not be secure and scalable specially if you are using version control as this will store those sensitive information in the codebase. It would still be best to have it stored on a secure non-version controlled file location like `~/files/private/wp-config.secrets.php`, in this way, it can have different values in each environement.
 
 ```
 if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-secrets.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
@@ -42,7 +42,25 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-s
 
 This plugin writes entries into the file ~/files/private/secrets.json (NOTE: This refers to a different private directory than the private directory used to store your Quicksilver scripts!). This file is, naturally enough, a JSON file containing multiple keys that is not included in your project's source code. The terminus secrets script will fetch this file, modify is as requested, and then write it back to the Pantheon site. 
 
+You can add secret key pairs using this command for each:
 
+```
+terminus secrets:set examplesite.dev wp_sample_key EXAMPLEKEY1234
+```
+
+You can then parse those values via wp-config and assign them to the corresponding variables and environment using this sample code:
+
+```
+if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/secrets.json' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+	$json = json_decode( file_get_contents( dirname( __FILE__ ) . '/wp-content/uploads/private/secrets.json' ) );
+
+	if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+				if ( isset( $json->wp_sample_key ) ) {
+					define( 'WP_STATELESS_MEDIA_JSON_KEY', $json->wp_sample_key );
+				}
+  }
+}
+```        
 
 ### Via Lockr
 
