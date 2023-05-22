@@ -23,7 +23,8 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version           | Release Date       | EOL Date          |
 | ----------------- | ------------------ | ----------------- |
-| 3.1.5             | April 6, 2023      |                   |
+| 3.2.0             | May 22 , 2023      |                   |
+| 3.1.5             | April 6, 2023      | May 22, 2024      |
 | 3.1.4             | March 1, 2023      | April 6, 2024     |
 | 3.1.3             | February 1, 2023   | March 1, 2024     |
 | 3.1.2             | January 3, 2023    | February 1, 2024  |
