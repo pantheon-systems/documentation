@@ -48,7 +48,7 @@ Instead of repeating the same technical work on each individual site, you can bu
 <Tab title="Requirements" id="requirements">
 
 * Gold, Platinum or Diamond Account Tier
-* Create or manage upstreams: Administor or Owner
+* Create or manage upstreams: Administrator or Owner
 * Change or deploy upstream: Administrator, Team Member, Developer
 
 
@@ -66,7 +66,7 @@ Instead of repeating the same technical work on each individual site, you can bu
 
 ## Support
 
-* [Account holders](https://dashboard.pantheon.io/workspace/support)
+* [Users with a Pantheon account](https://dashboard.pantheon.io/workspace/support)
 
 </Tab>
 
