@@ -20,7 +20,7 @@ showtoc: false
 
 [New Relic® Performance Monitoring](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. New Relic® makes it easy for you to monitor your performance and speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
-On Pantheon, most plans come with free New Relic APM Pro, giving you code-level visibility into your website’s performance. Track releases, investigate query performance, and identify areas for improvement with the best-in-class software analytics tool suite.
+On Pantheon, most plans come with free New Relic APM Pro, giving you code-level visibility into your website’s performance. You can track releases, investigate query performance, and identify areas for improvement with New Relic's software analytics tool suite.
 
 ![New Relic](../../images/integrations/newrelic/new-relic-get-started.png)
 
@@ -39,7 +39,7 @@ On Pantheon, most plans come with free New Relic APM Pro, giving you code-level 
 * Integration with DevOps tooling
 * Cloud-service instrumentation
 
-*View deployments*
+*Deployments View*
 
 ![View Deployments](../../images/integrations/newrelic/deploy_tab.png)
 
@@ -51,7 +51,9 @@ On Pantheon, most plans come with free New Relic APM Pro, giving you code-level 
 
 <Tab title="Requirements" id="requirements">
 
-* Sandbox, Performance, or Elite plan
+All [Pantheon plans](https://pantheon.io/plans/pricing) except for a Basic plan can use New Relic®. New Relic® is available to free Sandbox site plans for developmental purposes, but will not be available when your Basic plan goes live.
+
+* Sandbox (for development only), Performance, or Elite plan
 
 </Tab>
 
@@ -73,7 +75,7 @@ On Pantheon, most plans come with free New Relic APM Pro, giving you code-level 
 
 ## Support
 
-* [Account holders](https://dashboard.pantheon.io/workspace/support)
+* [Users with Pantheon Accounts](https://dashboard.pantheon.io/workspace/support)
 
 </Tab>
 
