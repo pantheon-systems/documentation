@@ -1,6 +1,6 @@
 ---
-title: WordPress Plugins that Work Well with Pantheon
-description: A list of WordPress plugins that are supported and encouraged for use on Pantheon.
+title: Recommended WordPress Plugins
+description: A list of WordPress plugins that are recommended for use on Pantheon.
 tags: [plugins]
 contributors: [jspellman814]
 contenttype: [doc]
