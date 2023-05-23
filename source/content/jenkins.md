@@ -2,8 +2,6 @@
 title: Automatically Test and Deploy GitHub Changes to Pantheon from an Existing Jenkins Server
 description: Configure an existing Jenkins server to automatically test and deploy code changes to Pantheon when pushed to GitHub.
 tags: [collaborate, continuous-integration, git, iterate]
-type: guide
-permalink: docs/guides/:basename
 contenttype: [doc]
 innav: [true]
 categories: [automate, overview]
@@ -96,7 +94,7 @@ You will need:
 
 1. From the GitHub dashboard, [create a new repository](https://github.com/new), without creating a `README` or `.gitignore` file.
 
-    ![New empty repository](../../images/integrations/new_repo.png)
+    ![New empty repository](../images/integrations/new_repo.png)
 
 1. From your local command line, connect your local project to this repository as `origin`, and push the code to the master branch. Remember to replace the URL path:
 
@@ -146,11 +144,11 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
 
 1. From the main Jenkins menu on the left side, select **Credentials**, then **System**. Click on **Global credentials**, then **Add Credentials**. Here we will add our GitHub and Terminus tokens.
 
-    ![Credentials Page](../../images/integrations/credentials.png)
+    ![Credentials Page](../images/integrations/credentials.png)
 
 2. In a new browser tab, go to your GitHub account. Go to [Settings](https://github.com/settings/profile). Under **Developer Settings** click on **Personal access tokens**  and generate a new token. This should have all **repo**  and **admin:repo-hook** options:
 
-    ![GitHub token permissions](../../images/integrations/jenkins-gh-token-access.png)
+    ![GitHub token permissions](../images/integrations/jenkins-gh-token-access.png)
 
     Copy the generated token. Be careful, as you will not be able to view it again.
 
@@ -174,7 +172,7 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
 
     After saving both, your credentials will be accessible for secure use.
 
-    ![Credentials Page](../../images/integrations/2_credentials.png)
+    ![Credentials Page](../images/integrations/2_credentials.png)
 
     <Alert title="Note" type="info">
     Keep your Terminus token handy, you'll need to enter it again later.
@@ -194,11 +192,11 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
 
 1. Log into the Jenkins dashboard as an admin user. Click on **New Item**.
 
-    ![Jenkins dashboard](../../images/integrations/jenkins_dash.png)
+    ![Jenkins dashboard](../images/integrations/jenkins_dash.png)
 
 2. Give the project a name with no spaces. Select **Freestyle Project** and click **OK** to save.
 
-    ![New Jenkins project](../../images/integrations/new_job.png)
+    ![New Jenkins project](../images/integrations/new_job.png)
 
 3. The next page lets you configure options for this project. In the **General** tab, select "GitHub project" and enter the repository URL (e.g. `https://github.com/YOUR-ORG/YOUR-PROJECT`).
 
@@ -210,7 +208,7 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
     - **Branch specifier**: `origin/*`
     - **Additional Behaviours**: Add **Prune stale remote-tracking branches**:
 
-    ![SCM view](../../images/integrations/scm_settings.png)
+    ![SCM view](../images/integrations/scm_settings.png)
 
 5. We want code changes to trigger our build (as opposed to setting up a periodic build, for example). Under **Build Triggers**, Check the box labelled, "GitHub hook trigger for GITScm polling".
 
@@ -222,11 +220,11 @@ Now we will spin up a Drupal site on Pantheon with Terminus, then overwrite the 
 
     - **SITE_ID=**your-site-name
 
-    ![Env vars view](../../images/integrations/env_vars.png)
+    ![Env vars view](../images/integrations/env_vars.png)
 
 9. Check "Use secret text(s) or file(s)" option. A new button called **Bindings** will appear. add a secret text binding. Name it **TERMINUS_TOKEN** and select the Terminus secret text credential from the dropdown:
 
-    ![Bindings](../../images/integrations/jenkins-binding.png)
+    ![Bindings](../images/integrations/jenkins-binding.png)
 
 ### Add Build Steps
 
@@ -293,7 +291,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
       ```
 
     Your conditional step should look like this:
-    ![Conditional Step](../../images/integrations/jenkins-conditional.png)
+    ![Conditional Step](../images/integrations/jenkins-conditional.png)
 
 7. Finally, a cleanup task:
 
@@ -322,11 +320,11 @@ Finally, hit **Save** to complete the configuration of your Jenkins build proces
 
 Now on your local computer, create a new branch and makes a change to it. When you commit and push to GitHub, a build should initiate. You should see the results of the test, which link to the Jenkins job:
 
-![Passing Github test](../../images/integrations/test_pass.png)
+![Passing Github test](../images/integrations/test_pass.png)
 
 If a test fails, you can see the details by clicking the job, then "Console Output"
 
-![Job Details](../../images/integrations/job_details.png)
+![Job Details](../images/integrations/job_details.png)
 
 ## Conclusion
 

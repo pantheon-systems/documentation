@@ -10,8 +10,6 @@ audience: [--]
 product: [--]
 integration: [--]
 tags: [composer, workflow, updates]
-type: guide
-permalink: docs/guides/:basename
 ---
 In this guide, you'll learn how to use Composer in small doses with WordPress and Drupal so you can work towards best practices achieved by more advanced implementations. This allows you to continue using Pantheon's one-click core updates in the Site Dashboard while managing non-core dependencies with Composer.
 
@@ -159,7 +157,7 @@ Note that Pantheon does not run `composer install` on the platform, so you need 
 
 1. Review modified files using `git status`, you should see the module has been installed in the `wp-content/plugins` directory like so:
 
-  ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../../images/guides/partial-composer/require-papc-plugin.png)
+  ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../images/guides/partial-composer/require-papc-plugin.png)
 
   Notice a missing dependency was also installed, `composer/installers`. This package is needed to support the installation paths configured in the previous section, and needs to be tracked in version control.
 
@@ -207,7 +205,7 @@ The following example shows you how to install a site local Drush. You can use t
 
 1. Review modified files using `git status`:
 
-  ![Require drupal/pantheon_advanced_page_cache output](../../images/guides/partial-composer/require-drush.png)
+  ![Require drupal/pantheon_advanced_page_cache output](../images/guides/partial-composer/require-drush.png)
 
 1. Commit your work to version control with Git:
 

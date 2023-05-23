@@ -1,8 +1,6 @@
 ---
 title: Convert an Empty Upstream Drupal Site to a Composer Managed Site
 description: Upgrade a Drupal site using an empty upstream by converting it to a Composer-managed Drupal site on the new Integrated Composer framework. 
-type: guide
-permalink: docs/guides/:basename
 tags: [composer, site, workflow, D8, D9, D10]
 contributors: [dustinleblanc, greg-1-anderson, stovak, kporras07]
 reviewed: "2022-12-13"

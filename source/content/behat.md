@@ -1,9 +1,7 @@
 ---
 title: Automate Testing with Behat
 description: Learn how to install Behat and write simple tests.
-type: guide
 tags: [continuous-integration, iterate, site, webops]
-permalink: docs/guides/:basename
 contributors: [ataylorme]
 contenttype: [doc]
 innav: [true]
@@ -107,7 +105,7 @@ Next, we can take some of the steps we listed above, most of which are provided 
 
    You should see output like this:
 
-   ![Behat test results](../../images/guides/behat-output.png)
+   ![Behat test results](../images/guides/behat-output.png)
 
    **Note:** The extra parameters are not required, just a common set of preferences. Here's what they do:
 
