@@ -44,6 +44,8 @@ Pantheon provides additional security through the following features:
 
 - [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/guides/secure-development/ssh-tunnels)
 
+- [Secrets Management in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
+
 ## Securing WordPress
 
 `wp-login.php` is the primary WordPress login path and is often subject to abuse by bots or other spammers. Refer to the [Avoid WordPress Login Attacks](/guides/wordpress-developer/wordpress-login-attacks) section of the [WordPress Developer's Guide](/guides/wordpress-developer) for information on steps you can take to help secure your site.
@@ -130,7 +132,7 @@ It's possible to take every precaution in keeping your site secure, but to intro
 
 ### Cross-Site Scripting (XSS)
 
-XSS attacks are the most common vulnerability, making up nearly half of all vulnerabilities. In an XSS attack, hackers use forms that can accept arbitrary user input as a vehicle to insert malicious code.  
+XSS attacks are the most common vulnerability, making up nearly half of all vulnerabilities. In an XSS attack, hackers use forms that can accept arbitrary user input as a vehicle to insert malicious code.
 
 Avoid this attack by validating, escaping, and sanitizing your data. For detailed instructions, [this XSS article](https://www.wordfence.com/learn/how-to-prevent-cross-site-scripting-attacks/) is a great resource.
 
@@ -142,12 +144,17 @@ As with XSS attacks, preventing SQL injections is all about proper data hygiene.
 
 ### Cross-Site Request Forgery (CSRF)
 
-This type of attack uses a trusted user's account to fool your website into accepting malicious code. The attack is possible when a user logs into your website, then navigates away from the site and encounters a forged link. The user clicks the link, which generates a forged request to your site. The user doesn't know what happened, and your site is fooled into thinking the request came from the user.  
+This type of attack uses a trusted user's account to fool your website into accepting malicious code. The attack is possible when a user logs into your website, then navigates away from the site and encounters a forged link. The user clicks the link, which generates a forged request to your site. The user doesn't know what happened, and your site is fooled into thinking the request came from the user.
 
-WordPress has a built-in function to help stop CSRF attacks called a "nonce,” or "number used once.” The number is an identifier attached to a specific user and session and can be changed at any interval you decide. Any information that looks like it comes from the user, but doesn't include the nonce, will be rejected.  
-    
+WordPress has a built-in function to help stop CSRF attacks called a "nonce,” or "number used once.” The number is an identifier attached to a specific user and session and can be changed at any interval you decide. Any information that looks like it comes from the user, but doesn't include the nonce, will be rejected.
+
 For detailed information on how to generate and use nonces, review the following WordPress documentation:
 
-* [Nonces](https://developer.wordpress.org/plugins/security/nonces/)
+- [Nonces](https://developer.wordpress.org/plugins/security/nonces/)
+- [Using Nonces](https://developer.wordpress.org/themes/theme-security/using-nonces/)
 
-* [Using Nonces](https://developer.wordpress.org/themes/theme-security/using-nonces/)
+## More Resources
+
+- [Secure Development on Pantheon](/guides/secure-development)
+- [Secrets Management in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
+- [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
