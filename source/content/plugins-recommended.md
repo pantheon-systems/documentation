@@ -19,7 +19,7 @@ This page lists WordPress plugins that Pantheon recommends using for various use
 
 <ReviewDate date="2023-05-23" />
 
-[Index WP MySQL For Speed](https://wordpress.org/plugins/index-wp-mysql-for-speed/) works to make your MySQL database work more efficiently by adding high-performance keys to the tables you choose.
+[Index WP MySQL For Speed](https://wordpress.org/plugins/index-wp-mysql-for-speed/) makes your MySQL database work more efficiently by adding high-performance keys to the tables you choose.
 
 On a modestly sized site (with a few users and a few hundred posts) your database may be fast enough without these keys. The speed improvements are most noticeable on larger sites with many posts and products.
 
