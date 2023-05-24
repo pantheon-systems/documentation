@@ -41,7 +41,7 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
 
     - If your `package.json` file does not include a `start` command, you must add it.
 
-## Create Your Site
+## General Site Creation
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
@@ -70,3 +70,92 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
     - Deployment path
 
 1. Click **Build Details** to view the build log.
+
+## Bootstrap Site Creation Example
+
+You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) website theme with some manual configuration. The example below uses a [free, downloadable Bootstrap theme](https://startbootstrap.com/template/shop-homepage). Note that the steps below are specific to Mac users. Steps may differ for Windows users.
+
+1. Download your Bootstrap website template.
+
+1. Create a GitHub repository containing your Bootstrap site.
+
+1. Open your terminal and use the `cd` command to change into the directory:
+
+    ```bash{promptUser: user}
+    cd <your-bootstrap-site-directory>
+    ```
+
+1. Create a `package.json` file if the directory does not have one. The [example Bootstrap site](https://startbootstrap.com/template/shop-homepage) does not have a `package.json` file. **A `package.json` file is required for Front-End Sites.**
+
+    ```bash{promptUser: user}
+    npm init --yes
+    ```
+
+1. Create a `package-lock.json` file if the directory does not have one:
+
+    ```bash{promptUser: user}
+    npm install
+    ```
+
+1. Open your `package.json` file  and locate `scripts`. You should see something like:
+
+    ```bash{promptUser: user}
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    ```
+
+1. Update the `scripts` section to match the example below. This is necessary because the [example Bootstrap site](https://startbootstrap.com/template/shop-homepage) is a static site that does not require a build step while the Front-End Site container expects a build script.
+
+    ```bash{promptUser: user}
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "noop": "echo 'noop'",
+    "build": "npm run noop",
+    "start": "npm run noop"
+    },
+    ```
+
+1. Create a new directory in your repo and name it `build`.
+
+1. Move your assets (HTML, CSS, and JS) into the `build` directory.
+
+1. Commit and push your changes.
+
+    - Your repo is now ready to import into Pantheon's Front-End Sites.
+
+1. Log in to your **Site Dashboard** on Pantheon and select the **Sites** page.
+
+1. Click **+Create New Site** and then click **Front-End Site**.
+
+1. Click **Import Repository** on the *What kind of site are you creating?* page to connect your GitHub repository.
+
+1. Select a Git provider from the **Choose your Git provider** options and then click **Continue**.
+
+1. Select your desired GitHub account from the **GitHub Account** drop-down menu.
+
+1. Select the repository with your Bootstrap site from the **Select Repository** drop-down menu and then click **Continue**.
+
+1. Enter the **Site Name** in the **General Info** section. The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
+
+1. Select **Gatsby** as the frontend framework in the **General Info** section. Bootstrap uses a static site framework like Gatsby.
+
+1. Click **Advanced Settings** and set the following:
+
+    - **Build Command:** build
+    - **Output Directory**: build
+
+    <Alert title="Note"  type="info" >
+
+    The Output Directory must match the name of the directory you created and stored your assets in.
+
+    </Alert>
+
+1. Click **Continue.**  The site build begins.
+
+1. Click **Build Details** to view the build log.
+
+
+## Docusaurus Site Creation Example
+
+You can create a Front-End Site using a free Docusaurus website template with some manual configuration.
