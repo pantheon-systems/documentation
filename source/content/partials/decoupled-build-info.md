@@ -137,3 +137,5 @@ Commits pushed on this branch will now be built and deployed to the Multidev. Th
 1. Click the **Front-End Sites** tab and select the site you want to clear the build cache for.
 
 1. Click the **Trigger Build** button in the top left corner and select **Clear caches and Build** from the drop-down menu.
+
+![trigger build button](../../images/decoupled-trigger-build.png)
