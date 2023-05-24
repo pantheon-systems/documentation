@@ -8,9 +8,9 @@ tags: [--]
 reviewed: ""
 ---
 
-This section provides information on how to view Build details, how to trigger a new build manually in the Overview page, how to trigger a build with GitHub merges, Multidev branch builds, and pull request builds.
+This section provides information on how to view Build details, how to trigger a new build manually in the Overview page, how to trigger a build with GitHub merges, Multidev branch builds, and pull request builds, as well as how to clear your build cache.
 
-## Build Details
+## Build Information
 
 You can view build details and get information on your Front-End Site development and specifications. Build information is provided in the Overview page in three sections:
 
@@ -18,7 +18,7 @@ You can view build details and get information on your Front-End Site developmen
 - Multidev Branches
 - Pull Requests
 
-Build details include:
+Build history includes:
 
 - **Status:** The build’s latest status. Possible status values are:
     - `In Progress`
@@ -32,13 +32,23 @@ Build details include:
 - **Last Updated:** The date the site content was last modified.
 - **Triggered by:** The name of the user who deployed the site build.
 
-### View Build Details
+### View Build History
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then select the **Sites** page.
 
+1. Click the **Front-End Sites** tab and select the site you want to view the build history for. The **Build History** section displays on the **Overview** page that opens automatically.
+
+![build history](../../images/decoupled-build-history.png)
+
+## View Build Log Details
+
+The Build Details page provides a complete log of the build. You can also copy the build URL to share with others and download the log in CSV format on this page.
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the **Sites** page.
+
 1. Click the **Front-End Sites** tab and select the site you want to view the build details for.
 
-![build details](../../images/decoupled-build-details.png)
+1. Scroll down to the **Build History** section and click the **View Logs** link to open the **Build Details** page.
 
 ## Trigger a Manual Build
 
@@ -48,7 +58,7 @@ You can save time by quickly triggering a build from your Overview page.
 
 1. Click the **Front-End Sites** tab and select the site you want to trigger a build for.
 
-1. Click the **Trigger Build** button in the top left corner.
+1. Click the **Trigger Build** button in the top left corner of the **Overview** page.
 
 ## Trigger a Build with GitHub Merges
 
@@ -118,4 +128,12 @@ You can follow the steps below to observe the build and deployment process for a
 
 1. Use the **Actions** drop-down menu to visit the Multidev version of the site, view the logs, or get more information about the build.
 
-Any commits pushed on this branch will now be built and deployed to the Multidev. This allows you and your team to review the branch as work progresses. Pull requests opened against this branch will also trigger a build.
+Commits pushed on this branch will now be built and deployed to the Multidev. This allows you and your team to review the branch as work progresses. Pull requests opened against this branch will also trigger a build.
+
+## Clear Caches and Build
+
+1. Log in to your Front-End Site workspace and select the **Sites** page.
+
+1. Click the **Front-End Sites** tab and select the site you want to clear the build cache for.
+
+1. Click the **Trigger Build** button in the top left corner and select **Clear caches and Build** from the drop-down menu.
