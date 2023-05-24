@@ -34,7 +34,7 @@ Build history includes:
 
 ### View Build History
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then select the **Sites** page.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and select the site you want to view the build history for. The **Build History** section displays on the **Overview** page that opens automatically.
 
