@@ -39,14 +39,6 @@ This plugin is recommended for use on any site where a plugin or theme uses PHP 
 
 This plugin is recommended for use on any site using Redis and object caching.
 
-## Bulk Indexer for Yoast
-
-<ReviewDate date="2023-05-23" />
-
-Yoast background indexing can fail to complete for sites with large numbers of posts so Pantheon created [Bulk Indexer for Yoast](https://github.com/pantheon-systems/yoast-bulk-indexer). This plugin speeds up the indexables generation process significantly. It leverages [Action Scheduler](https://actionscheduler.org/) and Yoast's core functionality to process hundreds or thousands of posts at a time.
-
-This plugin is recommended for use on any site using Yoast SEO with hundreds of thousands or millions of posts.
-
 ## Safe Redirect Manager
 
 <ReviewDate date="2023-05-23" />
