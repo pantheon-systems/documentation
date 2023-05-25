@@ -1553,7 +1553,7 @@
         - text: 'WordPress + Next.js Backend Starter'
           url: '/guides/decoupled/wp-backend-starters'
 - title: 'Security'
-  subtitle: 'Learn more about platform security, secure development, and security integrations on Pantheon.'
+  subtitle: 'Learn more about platform security, secure development, and secure integration on Pantheon.'
   path: 'guides/security'
   guides:
     - title: ''
