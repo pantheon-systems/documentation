@@ -141,3 +141,4 @@ done
 ## More Resources
 
 - [Drupal Security Advisory](https://www.drupal.org/security)
+- [Pantheon Security](/guides/security)

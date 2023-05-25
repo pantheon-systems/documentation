@@ -141,7 +141,7 @@ Lockr is also available for Drupal 7. Refer to the project's [GitHub page](https
 
 1. Navigate to the Lockr configuration page (`/admin/config/system/lockr`)
 
-1. Enter your email address and click **Sign Up**.  
+1. Enter your email address and click **Sign Up**.
 
 ### Drush Commands
 
@@ -192,3 +192,8 @@ If you're encrypting sensitive information in your production environment, that 
 #### Who do I contact for Lockr support?
 
 You can email the Lockr Support Team at support@lockr.io or get real-time support on Lockr's [Slack channel](https://slack.lockr.io/).
+
+## More Resources
+
+- [Pantheon Security](/guides/security)
+- [Terminus Secrets Management Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)

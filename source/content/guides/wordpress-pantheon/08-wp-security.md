@@ -158,3 +158,4 @@ For detailed information on how to generate and use nonces, review the following
 - [Secure Development on Pantheon](/guides/secure-development)
 - [Secrets Management in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
 - [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)
+- [Pantheon Security](/guides/security)
