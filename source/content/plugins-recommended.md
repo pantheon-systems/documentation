@@ -15,7 +15,15 @@ reviewed: "2023-05-23"
 
 This page lists WordPress plugins that Pantheon recommends using for various use cases. This is not a comprehensive list, and will continue to evolve over time.
 
-## Index WP MySQL For Speed
+## Pantheon Advanced Page Cache
+
+<ReviewDate date="2023-05-23" />
+
+[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) (PAPC) optimizes caching specifically for Pantheon's hosting environment, resulting in faster page load times and improved overall website performance.
+
+Pantheon's WordPress upstream already ships with a limited version of PAPC in our mu plugins, but the plugin fleshes out additional features, such as a seamless integration with Pantheon's Global CDN and edge caches.
+
+We recommend this plugin for all Pantheon customers.
 
 <ReviewDate date="2023-05-23" />
 
