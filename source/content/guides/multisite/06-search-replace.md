@@ -123,7 +123,6 @@ To configure this:
       ---
       api_version: 1
       convert_to_subdirectory: true
-
       ```
 
 The domain map in the `sites.yml` file is not necessary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the Live site will convert with the following pattern:
@@ -134,7 +133,7 @@ The domain map in the `sites.yml` file is not necessary when converting from sub
 * `blog.com`           => `test-site.pantheonsite.io/blog-com/`
 * `blog.com/dir/`      => `test-site.pantheonsite.io/blog-com-dir/`
 
-Sites configured for subdomain conversion will _only_ run the conversion step from Live to a non-live environment. All other workflows assume a subdirectory-to-subdirectory search and replace.
+Sites configured for subdomain conversion will _only_ run the conversion step from Live to a non-live environment. All other workflows assume a subdirectory-to-subdirectory search and replace. There is no limit on domains when using the conversion step.
 
 ## More Resources
 
