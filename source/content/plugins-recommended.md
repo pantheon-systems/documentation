@@ -25,6 +25,8 @@ Pantheon's WordPress upstream already ships with a limited version of PAPC in ou
 
 We recommend this plugin for all Pantheon customers.
 
+## Index WP MySQL For Speed
+
 <ReviewDate date="2023-05-23" />
 
 [Index WP MySQL For Speed](https://wordpress.org/plugins/index-wp-mysql-for-speed/) makes your MySQL database work more efficiently by adding high-performance keys to the tables you choose.
