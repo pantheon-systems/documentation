@@ -28,11 +28,24 @@ class SearchResults extends React.Component {
           dangerouslySetInnerHTML={{
             __html: `
                     window.addsearch_settings = {
-                        display_url: true,
-                        display_resultscount: true,
-                        display_date: true,
-                        display_sortby: true,
-                        display_category: true
+                      "arp_01": {
+                        "show_search_suggestions": false,
+                        "automatic_match_all_query": false,
+                        "default_sortby": "relevance",
+                        "display_category": true,
+                        "display_date": false,
+                        "display_meta_description": false,
+                        "display_results_count": true,
+                        "display_result_image": true,
+                        "display_url": false,
+                        "display_sortby": true,
+                        "link_target": "_self",
+                        "hide_logo": false,
+                        "direction": "ltr",
+                        "analytics_enabled": false,
+                        "automatic_filter_results_by_site_language": false,
+                        "facets": {}
+                      }
                     }
                     `,
           }}
