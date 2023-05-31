@@ -3,14 +3,17 @@ title: Recommended WordPress Plugins
 description: A list of WordPress plugins recommended for use on Pantheon.
 tags: [plugins]
 contributors: [jspellman814]
-contenttype: [doc]
-innav: [true]
+contenttype: [guide]
+innav: [false]
 categories: [issues]
+tags: [wordpress, webops, plugins]
 cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
 reviewed: "2023-05-23"
+showtoc: true
+permalink: docs/guides/wordpress-pantheon/recommended-plugins
 ---
 
 This page provides WordPress plugins that Pantheon recommends using for various use cases. This is not a comprehensive list, and will continue to evolve over time.
