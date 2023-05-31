@@ -71,21 +71,19 @@ You can use frontend frameworks other than Gatsby and Next.js. Note that while o
 
 1. Click **Build Details** to view the build log.
 
-## Bootstrap Site Creation Example
+## No Framework HTML, CSS, JS Site Creation Example
 
-You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) website theme with some manual configuration. The example below uses a [free, downloadable Bootstrap theme](https://startbootstrap.com/template/shop-homepage). Note that the steps below are specific to Mac users. Steps may differ for Windows users.
+You can create a Front-End Site using plain HTML, CSS, JS with some manual configuration. Note that the steps below are specific to Mac users. Steps may differ for Windows users.
 
-1. Download your Bootstrap website template.
-
-1. Create a GitHub repository containing your Bootstrap site.
+1. Create a GitHub repository containing your local HTML, CSS, JS content.
 
 1. Open your terminal and use the `cd` command to change into the directory:
 
     ```bash{promptUser: user}
-    cd <your-bootstrap-site-directory>
+    cd <your-site-directory>
     ```
 
-1. Create a `package.json` file if the directory does not have one. The [example Bootstrap site](https://startbootstrap.com/template/shop-homepage) does not have a `package.json` file.
+1. Create a `package.json` file if the directory does not have one.
 
     <Alert title="Note"  type="info" >
 
@@ -111,7 +109,7 @@ You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) w
     },
     ```
 
-1. Update the `scripts` section to match the example below. This is necessary because the [example Bootstrap site](https://startbootstrap.com/template/shop-homepage) is a static site that does not require a build step while the Front-End Site container expects a build script.
+1. Update the `scripts` section to match the example below. This is necessary for all static sites, even those that do not require a build step as the Front-End Site container expects a build script.
 
     ```bash{promptUser: user}
     "scripts": {
@@ -138,13 +136,13 @@ You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) w
 
 1. Select **GitHub** from the **Choose your Git provider** options and then click **Continue**.
 
-1. Select the GitHub account you used to create your Bootstrap repository from the **GitHub Account** drop-down menu.
+1. Select the GitHub account you used to create your site repository from the **GitHub Account** drop-down menu.
 
-1. Select your Bootstrap site repository name from the **Select Repository** drop-down menu and then click **Continue**.
+1. Select your site repository name from the **Select Repository** drop-down menu and then click **Continue**.
 
 1. Enter the **Site Name** in the **General Info** section. The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
-1. Select **Gatsby** as the frontend framework in the **General Info** section. Bootstrap uses a static site framework like Gatsby.
+1. Select **Gatsby** as the frontend framework in the **General Info** section. A plain HTML, CSS, and JS site uses a static site framework like Gatsby.
 
 1. Click **Advanced Settings** and set the following:
 
@@ -153,7 +151,7 @@ You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) w
 
     <Alert title="Note"  type="info" >
 
-    You don't need to adjust the Build Command in this example as Bootstrap already uses `build` which is the command Front-End Sites expects. The Output Directory must match the name of the directory you created and stored your assets in.
+    The Output Directory must match the name of the directory you created and stored your assets in.
 
     </Alert>
 
