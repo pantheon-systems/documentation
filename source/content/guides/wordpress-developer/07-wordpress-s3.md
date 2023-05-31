@@ -64,6 +64,12 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Leave other setting to default and review your settings, and then click **Create bucket**.
 
+### Configure your AWS Access
+
+1. First, you need to configure you S3 user's access policy via Identity and Access Management, under `Access Management` and `Policies`, click the `Create policy` button.
+
+
+
 ## Integrate S3 with WordPress
 
 You must install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://wordpress.org/plugins/amazon-s3-and-cloudfront/).
