@@ -72,8 +72,6 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Select `JSON` and paste this under the `Policy editor`(You will need to change the `bucketname` that you specified from the previous section):
 
-   ![Create AWS S3 access step 2](../../../images/guides/s3-access2.png)
-
    ```bash{promptUser: user}
    {
      "Version": "2012-10-17",
@@ -102,12 +100,28 @@ You must configure the service within your [AWS Management Console](https://cons
      ]
    }
    ```
+   
+   ![Create AWS S3 access step 2](../../../images/guides/s3-access2.png)
 
    Then hit `Next` button.
 
-1. Specify your `Policy Name` and hit the `Create Policy`.
+1. Specify your `Policy Name` (eg: Pantheons3Access) and hit the `Create Policy`.
 
    ![Create AWS S3 access step 3](../../../images/guides/s3-access3.png)
+   
+   
+
+1. Going back under `Access Management` and `Users`, click the `Add users`.
+
+1. Specify the `User name` (eg: S3-user) and hit `Next`.
+
+1. Under `Permissions options`, select `Attach policies directly`. Find the policy that you created from step 3.
+
+   <Alert title="Note" type="info">
+   Steps 1-3 will create a custom AWS User policy that is enough to read and write to your specific bucket assigned specifically to your site. If you will be having read or write issues, you can choose `AmazonS3FullAccess` policy to replace the custom policy that you created.
+   </Alert>
+
+
 
 ## Integrate S3 with WordPress
 
