@@ -44,13 +44,13 @@ You can enable search and replace between environments on a WPMS site.
     search_replace: true
     ```
 
-Note, if `pantheon.yml` is different between environments, the `search_replace` value in the source environment’s `pantheon.yml` will determine if the job will be run or not. The source environment is where you clone the database and files from when you create a Multidev.
+**Note:** After June 30, 2023, the `search_replace` value will be `true` by default. If you wish to _disable_ it, you would set `search_replace: false` in your `pantheon.yml`. Additionally, if `pantheon.yml` is different between environments, the `search_replace` value in the source environment’s `pantheon.yml` will determine if the job will be run or not. The source environment is where you clone the database and files from when you create a Multidev.
 
 ### Subdomain WPMS
 
 For subdomain Multisites, environments to be replaced are defined and paired in the `sites.yml` file. Search and replace will run for each domain listed in the source environment that has a matching key in the target environment. If search and replace is enabled for an environment, but `sites.yml` does not exist, nothing will be updated. If `sites.yml` is different between environments, the `domain_maps` in the target environment’s `sites.yml` will be used to determine what to replace.
 
-1. Create a `sites.yml` file inside the `private/` folder. Define and pair the environments to be replaced like the sample code below. 
+1. Create a `sites.yml` file inside the `private/` folder. Define and pair the environments to be replaced like the sample code below.
 
     ```yaml:title=private/sites.yml
     ---
