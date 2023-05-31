@@ -153,14 +153,13 @@ You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) w
 
     <Alert title="Note"  type="info" >
 
-    The Output Directory must match the name of the directory you created and stored your assets in.
+    You don't need to adjust the Build Command in this example as Bootstrap already uses `build` which is the command Front-End Sites expects. The Output Directory must match the name of the directory you created and stored your assets in.
 
     </Alert>
 
 1. Click **Continue.**  The site build begins.
 
 1. Click **Build Details** to view the build log.
-
 
 ## Docusaurus Site Creation Example
 
@@ -190,6 +189,12 @@ You can create a Front-End Site using a free [Docusaurus](https://docusaurus.io/
 1. Click **Advanced Settings** and set the following:
     - **Build Command:** build
     - **Output Directory:** build
+
+    <Alert title="Note"  type="info" >
+
+    You don't need to adjust the Build Command in this example as Docusaurus already uses `build` which is the command Front-End Sites expects. The Output Directory must be set to `build` to match the folder name that contains the Docusaurus template's assets.
+
+    </Alert>
 
 1. Click **Continue.**  The site build begins.
 
