@@ -68,7 +68,7 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. First, you need to configure you S3 user's access policy via Identity and Access Management, under `Access Management` and `Policies`, click the `Create policy` button.
 
-   ![Create AWS S3 access](../../../images/guides/s3-access1.png)
+   ![Create AWS S3 access step 1](../../../images/guides/s3-access1.png)
 
 1. Select `JSON` and paste this under the `Policy editor`(You can change the `bucketname` that you specified from the previous section):
 
@@ -100,6 +100,9 @@ You must configure the service within your [AWS Management Console](https://cons
      ]
    }
    ```
+   
+   ![Create AWS S3 access step 2](../../../images/guides/s3-access1.png)
+   
    Then hit `Next` button.
 
 
