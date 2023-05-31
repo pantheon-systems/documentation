@@ -128,10 +128,11 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Review the configuration and hit the `Create user` button. This will create the user but to have a programmatic access, you will need to edit your user account and hit the `Security credentials` tab. Go to the `Access Keys` section and hit the `Create access key`.
 
+   ![Create AWS S3 access step 7](../../../images/guides/s3-create-p1.png)   
 
 1. Choose the `Application running outside AWS` and hit `Next`. On the next page, you can set the optional tags then hit the `Create Access key` to finalize the access. Make sure you take note of the `Access Key` and `Secret Access Key` and store it securely.
 
-
+   ![Create AWS S3 access step 8](../../../images/guides/s3-create-p2.png)   
 
 
 
@@ -173,7 +174,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
    </Alert>
 
-1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely. Refer here for various [Secret Management Techniques](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys) for more secure methods to store your keys.
 
 1. Commit and push the new plugin and your `wp-config.php` file updates to the Dev environment, then switch to SFTP mode and activate the plugin:
 
@@ -216,4 +217,5 @@ Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offlo
 ## More Resources
 
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
+- [Securely store your Secret Keys in WordPress](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys)
 - [AWS S3 Setup for Drupal](/drupal-s3)
