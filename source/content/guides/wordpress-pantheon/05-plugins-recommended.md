@@ -1,7 +1,7 @@
 ---
-title: Recommended WordPress Plugins
+title: WordPress on Pantheon Quick Start Guide
+subtitle: Recommended WordPress Plugins
 description: A list of WordPress plugins recommended for use on Pantheon.
-tags: [plugins]
 contributors: [jspellman814]
 contenttype: [guide]
 innav: [false]
@@ -13,10 +13,10 @@ product: [--]
 integration: [--]
 reviewed: "2023-05-23"
 showtoc: true
-permalink: docs/guides/wordpress-pantheon/recommended-plugins
+permalink: docs/guides/wordpress-pantheon/plugins-recommended
 ---
 
-This page provides WordPress plugins that Pantheon recommends using for various use cases. This is not a comprehensive list, and will continue to evolve over time.
+This section provides WordPress plugins that Pantheon recommends using for various use cases. This is not a comprehensive list, and will continue to evolve over time.
 
 ## Pantheon Advanced Page Cache
 
