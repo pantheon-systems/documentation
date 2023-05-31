@@ -70,7 +70,9 @@ You must configure the service within your [AWS Management Console](https://cons
 
    ![Create AWS S3 access step 1](../../../images/guides/s3-access1.png)
 
-1. Select `JSON` and paste this under the `Policy editor`(You can change the `bucketname` that you specified from the previous section):
+1. Select `JSON` and paste this under the `Policy editor`(You will need to change the `bucketname` that you specified from the previous section):
+
+   ![Create AWS S3 access step 2](../../../images/guides/s3-access2.png)
 
    ```bash{promptUser: user}
    {
@@ -100,15 +102,12 @@ You must configure the service within your [AWS Management Console](https://cons
      ]
    }
    ```
-   
-   ![Create AWS S3 access step 2](../../../images/guides/s3-access1.png)
-   
-   Then hit `Next` button.
 
+   Then hit `Next` button.
 
 1. Specify your `Policy Name` and hit the `Create Policy`.
 
-
+   ![Create AWS S3 access step 3](../../../images/guides/s3-access3.png)
 
 ## Integrate S3 with WordPress
 
