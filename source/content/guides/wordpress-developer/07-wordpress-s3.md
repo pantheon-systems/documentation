@@ -116,13 +116,15 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Specify the `User name` (eg: S3-user) and hit `Next`.
 
-   ![Create AWS S3 access step 4](../../../images/guides/s3-create2.png)
+   ![Create AWS S3 access step 5](../../../images/guides/s3-create2.png)
  
 1. Under `Permissions options`, select `Attach policies directly`. Find the policy that you created from step 3 and hit `Next`.
 
    <Alert title="Note" type="info">
    Steps 1-3 will create a custom AWS User policy that is enough to read and write to your specific bucket assigned specifically to your site. If you will be having read or write issues, you can choose `AmazonS3FullAccess` policy to replace the custom policy that you created.
    </Alert>
+   
+   ![Create AWS S3 access step 6](../../../images/guides/s3-create3.png)   
 
 1. Review the configuration and hit the `Create user` button. This will create the user but to have a programmatic access, you will need to edit your user account and hit the `Security credentials` tab. Go to the `Access Keys` section and hit the `Create access key`.
 
