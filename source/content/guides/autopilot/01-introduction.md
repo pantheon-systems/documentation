@@ -59,11 +59,8 @@ Autopilot requires the following:
 - A Gold, Platinum, or Diamond account
 - [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
-- A supported framework:
-    - Drupal with Integrated Composer
-    - Drupal 8 with Integrated Composer or Drush 8
-    - WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
-
+- A compatible site framework (refer to [Autopilot Site Compatibility](https://docs.pantheon.io/guides/autopilot#autopilot-site-compatibility) for details
+  
 ### Autopilot Site Compatibility
 
 <Partial file="autopilot/autopilot-compatibility.md" />
