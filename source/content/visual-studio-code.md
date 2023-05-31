@@ -70,7 +70,7 @@ VS Code includes Git integration and an integrated terminal, either of which can
 Make sure your site is in [Git mode](/guides/quickstart/connection-modes) before pushing code via Git.
 
 #### Git Version Control in VS Code
-Open the Git menu (**Ctrl** + **Shift** + **G** or **View** -> **SCM**). From here you can review your outstanding changes, commit them with a message, switch branches and more. See the [video on the VS Code docs](https://code.visualstudio.com/docs/introvideos/versioncontrol) for more information.
+Open the Git menu (**Ctrl** + **Shift** + **G** or **View** -> **SCM**). From here you can review your outstanding changes, commit them with a message, switch branches and more. See the [video on the VS Code docs](https://code.visualstudio.com/docs/introversioncontrol) for more information.
 
 #### Integrated Terminal
 Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) with **Ctrl** + **`** or **View** -> **Terminal**. Now you can interact with Git as you would normally, without leaving VS Code.
