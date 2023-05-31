@@ -50,7 +50,7 @@ This plugin is recommended for any site with a plugin or theme that uses PHP Ses
 
 [Object Cache Pro](https://objectcache.pro/) remembers, or caches, any queries to the server after a Drupal or WordPress page is loaded for the first time. When another user loads the page, the results are provided from the Object Cache which is stored in memory without querying the database again. This results in much faster page load times, and less server impact on database resources.
 
-This plugin is recommended for any site using Redis and object caching.
+This plugin is recommended for any site using Redis and object caching. For more information on using Object Cache Pro on Pantheon, [check out our guide](https://docs.pantheon.io/guides/object-cache-pro/).
 
 ## Safe Redirect Manager
 
