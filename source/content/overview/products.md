@@ -43,7 +43,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Caching"} link={"/videos/cache"}>
+  <Product title={"Caching"} link={"/cache"}>
 
   Pantheon provides key-value based Redis for backend caching.
 

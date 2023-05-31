@@ -72,7 +72,7 @@
         - title: 'Guided Migrations'
           links:
             - text: 'Guided WordPress Migrations'
-              url: '/videos/migrate-wordpress'
+              url: '/migrate-wordpress'
               icon: 'fa fa-video-camera'
             - text: 'Migrate Sites to Pantheon'
               url: '/guides/guided/'
@@ -128,7 +128,7 @@
         - title: 'Terminus'
           links:
             - text: 'Introduction to Terminus'
-              url: '/videos/terminus'
+              url: '/terminus'
               icon: 'fa fa-video-camera'
             - text: 'Create a Drupal Site From the Command Line Using Terminus and Drush'
               url: '/guides/drush/drupal-commandline'
@@ -146,7 +146,7 @@
         - title: 'Drush'
           links:
             - text: 'Drush'
-              url: '/videos/drush'
+              url: '/drush'
               icon: 'fa fa-video-camera'
             - text: 'Configuration Workflow for Drupal Sites'
               url: '/drupal-configuration-management'
@@ -182,14 +182,14 @@
         - title: 'Using the Admin Interface'
           links:
             - text: 'On-Server Development'
-              url: '/videos/sftp'
+              url: '/sftp'
               icon: 'fa fa-video-camera'
             - text: 'Developing on Pantheon Directly with SFTP Mode'
               url: '/guides/sftp'
         - title: 'Managing Files'
           links:
             - text: 'On-Server Development'
-              url: '/videos/sftp'
+              url: '/sftp'
               icon: 'fa fa-video-camera'
             - text: 'Pantheon Filesystem'
               url: '/guides/filesystem'
@@ -203,7 +203,7 @@
         - title: ''
           links:
             - text: 'Local Development'
-              url: '/videos/local'
+              url: '/local'
               icon: 'fa fa-video-camera'
             - text: 'Install and Configure Lando'
               url: '/guides/local-development/lando-wordpress'
@@ -514,7 +514,7 @@
         - title: ''
           links:
             - text: 'The Pantheon.yml Configuration File'
-              url: '/videos/pantheon-yml'
+              url: '/pantheon-yml'
               icons: 'fa fa-video-camera'
             - text: 'Serving Sites from the Web Subdirectory'
               url: '/nested-docroot'
@@ -635,7 +635,7 @@
         - title: ''
           links:
             - text: 'The Pantheon.yml Configuration File'
-              url: '/videos/pantheon-yml'
+              url: '/pantheon-yml'
               icons: 'fa fa-video-camera'
             - text: 'Serving Sites from the Web Subdirectory'
               url: '/nested-docroot'
@@ -668,7 +668,7 @@
         - title: 'Terminus'
           links:
             - text: 'Introduction to Terminus'
-              url: '/videos/terminus'
+              url: '/terminus'
               icon: 'fa fa-video-camera'
             - text: 'Create a Drupal Site From the Command Line Using Terminus and Drush'
               url: '/guides/drush/drupal-commandline'
@@ -686,7 +686,7 @@
         - title: 'Drush'
           links:
             - text: 'Drush'
-              url: '/videos/drush'
+              url: '/drush'
               icon: 'fa fa-video-camera'
             - text: 'Configuration Workflow for Drupal Sites'
               url: '/drupal-configuration-management'
@@ -755,7 +755,7 @@
             - text: Advanced Global CDN
               url: '/guides/professional-services/advanced-global-cdn'
             - text: 'Caching'
-              url: '/videos/cache'
+              url: '/cache'
               icon: 'fa fa-video-camera'
             - text: 'Bypassing Cache with HTTP Headers'
               url: '/cache-control'
@@ -1048,7 +1048,7 @@
         - text: 'WordPress Configuration Management (WP-CFM)'
           url: '/guides/wordpress-configurations/wp-cfm'
         - text: 'Guided WordPress Migrations'
-          url: '/videos/migrate-wordpress'
+          url: '/migrate-wordpress'
           icon: 'fa fa-video-camera'
         - text: 'Create a WordPress MU-Plugin for Actions and Filters'
           url: '/guides/wordpress-configurations/mu-plugin'
@@ -1159,7 +1159,7 @@
         - text: 'Creating a services.yml File for Drupal'
           url: '/services-yml'
         - text: 'Drush'
-          url: '/videos/drush'
+          url: '/drush'
           icon: 'fa fa-video-camera'
     - title: 'Manage Your Drupal Site'
       subtitle: ''
@@ -1288,7 +1288,7 @@
         - text: 'Purchase Plans and Addons'
           url: '/guides/account-mgmt/plans/purchase'
         - text: 'Manage Your Plans'
-          url: '/guides/account-mgmt/plans/manage'
+          url: '/guides/account-mgmt/plans/site-plans'
     - title: 'Workspaces, Sites, and Teams'
       subtitle: ''
       links:
@@ -1372,7 +1372,7 @@
         - text: 'Purchase Plans and Addons'
           url: '/guides/account-mgmt/plans/purchase'
         - text: 'Manage Your Plans'
-          url: '/guides/account-mgmt/plans/manage'
+          url: '/guides/account-mgmt/plans/site-plans'
     - title: 'Workspaces, Sites, and Teams'
       subtitle: ''
       links:
@@ -1441,7 +1441,7 @@
         - text: 'Pricing Comparison'
           url: 'https://pantheon.io/pricing-comparison'
         - text: 'Site Plan Change'
-          url: '/guides/account-mgmt/plans/manage'
+          url: '/guides/account-mgmt/plans/site-plans'
         - text: 'Transfer ownership (User-to-User/individual owner to a new individual owner)'
           url: '/guides/account-mgmt/workspace-sites-teams/sites#share-preferred-pricing-for-a-site'
         - text: 'Accept an invitation to pay (for the new owner)'
