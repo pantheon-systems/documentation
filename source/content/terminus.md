@@ -2,7 +2,7 @@
 title: Introduction to Terminus
 description: The Pantheon CLI.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename
+permalink:  docs/:basename
 tags: [terminus, workflow, cli, wp-cli, drush]
 layout: video
 type: video

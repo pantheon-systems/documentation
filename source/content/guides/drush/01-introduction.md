@@ -34,7 +34,7 @@ You can view the most recent Drush release and changelogs in the [Drush reposito
 
 ## More Resources
 
-- [Drush Introduction Video](/videos/drush)
+- [Drush Introduction Video](/drush)
 - [The Terminus Manual](/terminus)
 - [Drupal on Pantheon](/drupal)
 - [WP-CLI on Pantheon](/guides/wp-cli)
