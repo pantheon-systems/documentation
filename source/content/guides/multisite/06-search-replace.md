@@ -123,7 +123,7 @@ To configure this:
       ---
       api_version: 1
       convert_to_subdirectory: true
-      ```
+  ```
 
 The domain map in the `sites.yml` file is not necessary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the Live site will convert with the following pattern:
 
