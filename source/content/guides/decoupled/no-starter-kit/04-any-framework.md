@@ -136,11 +136,11 @@ You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) w
 
 1. Click **Import Repository** on the *What kind of site are you creating?* page to connect your GitHub repository.
 
-1. Select a Git provider from the **Choose your Git provider** options and then click **Continue**.
+1. Select **GitHub** from the **Choose your Git provider** options and then click **Continue**.
 
-1. Select your desired GitHub account from the **GitHub Account** drop-down menu.
+1. Select the GitHub account you used to create your Bootstrap repository from the **GitHub Account** drop-down menu.
 
-1. Select the repository with your Bootstrap site from the **Select Repository** drop-down menu and then click **Continue**.
+1. Select your Bootstrap site repository name from the **Select Repository** drop-down menu and then click **Continue**.
 
 1. Enter the **Site Name** in the **General Info** section. The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
@@ -149,7 +149,7 @@ You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) w
 1. Click **Advanced Settings** and set the following:
 
     - **Build Command:** build
-    - **Output Directory**: build
+    - **Output Directory:** build
 
     <Alert title="Note"  type="info" >
 
@@ -166,9 +166,10 @@ You can create a Front-End Site using a [Bootstrap](https://getbootstrap.com/) w
 
 You can create a Front-End Site using a free [Docusaurus](https://docusaurus.io/) website template with some manual configuration. The example site in this section uses the [Docusaurus scaffold project website classic](https://docusaurus.io/docs/installation#scaffold-project-website).
 
-### Before You Begin
 
-- Create a GitHub repository containing your Docusaurus site.
+1. Download your Docusaurus website template.
+
+1. Create a GitHub repository containing your Docusaurus site.
 
 1. Log in to your **Site Dashboard** and select the **Sites** page.
 
@@ -176,19 +177,19 @@ You can create a Front-End Site using a free [Docusaurus](https://docusaurus.io/
 
 1. Click **Import Repository** on the *What kind of site are you creating?* page to connect your GitHub repository.
 
-1. Select a Git provider from the **Choose your Git provider** options and then click **Continue**.
+1. Select **GitHub** from the **Choose your Git provider** options and then click **Continue**.
 
-1. Select your desired GitHub account from the **GitHub Account** drop-down menu.
+1. Select the GitHub account you used to create your Docusaurus repository from the **GitHub Account** drop-down menu.
 
-1. Choose the repository name from the **Select Repository** drop-down menu and then click **Continue**.
+1. Select your Docusaurus site repository name from the **Select Repository** drop-down menu and then click **Continue**.
 
 1. Enter the **Site Name** in the **General Info** section. The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
 1. Select **Gatsby** as the frontend framework in the **General Info** section.
 
 1. Click **Advanced Settings** and set the following:
-    - **Build Command: build**
-    - **Output Directory**: build
+    - **Build Command:** build
+    - **Output Directory:** build
 
 1. Click **Continue.**  The site build begins.
 
