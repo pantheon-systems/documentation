@@ -68,6 +68,43 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. First, you need to configure you S3 user's access policy via Identity and Access Management, under `Access Management` and `Policies`, click the `Create policy` button.
 
+   ![Create AWS S3 access](../../../images/guides/s3-access1.png)
+
+1. Select `JSON` and paste this under the `Policy editor`(You can change the `bucketname` that you specified from the previous section):
+
+   ```bash{promptUser: user}
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Sid": "ObjectLevel",
+         "Effect": "Allow",
+         "Action": [
+           "s3:PutObject",
+           "s3:GetObject",
+           "s3:DeleteObject"
+         ],
+         "Resource": "arn:aws:s3:::bucketname/*"
+       },
+       {
+         "Sid": "BucketLevel",
+         "Effect": "Allow",
+         "Action": [
+           "s3:GetBucketPublicAccessBlock",
+           "s3:GetBucketOwnershipControls",
+           "s3:ListBucket",
+           "s3:GetBucketLocation"
+         ],
+         "Resource": "arn:aws:s3:::bucketname"
+       }
+     ]
+   }
+   ```
+   Then hit `Next` button.
+
+
+1. Specify your `Policy Name` and hit the `Create Policy`.
+
 
 
 ## Integrate S3 with WordPress
