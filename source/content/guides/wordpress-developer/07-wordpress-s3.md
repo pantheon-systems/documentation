@@ -206,6 +206,10 @@ WP Offload Media plugin is supported.
 
 Refer to the [WP Offload Media documentation](https://deliciousbrains.com/wp-offload-media/doc/multisite-per-subsite-bucket-and-custom-domain-settings/) for more information.
 
+#### URL Rewriting
+
+By default, the URLs saved in the database will be using S3's provided URL (eg: https://bucketname.s3.amazonaws.com/uploads/2023/01/image.jpg), if you need the URLs to be masked to match you site's domain for SEO purpose, our [Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) can help out. You can [reach out our sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open up a [support ticket](/guides/agcdn/submit-request#submit-a-request) so w can help you out with the Domain Masking.
+
 #### Additional Configuration
 
 Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting, and offline development.
@@ -218,4 +222,5 @@ Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offlo
 
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
 - [Securely store your Secret Keys in WordPress](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys)
+- [Mask your S3 URLs to match your domain](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)
 - [AWS S3 Setup for Drupal](/drupal-s3)
