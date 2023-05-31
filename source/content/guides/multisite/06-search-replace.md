@@ -50,6 +50,10 @@ If you have a new _subdirectory multisite_, you don't need to configure anything
 
 No additional configuration is needed if you have already completed the steps in the [Enable Search and Replace](/guides/multisite/search-replace/#enable-search-and-replace) section. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites.
 
+### Subdirectory WPMS
+
+No additional configuration is needed if you have already completed the steps in the [Enable Search and Replace](/guides/multisite/search-replace/#enable-search-and-replace) section. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites.
+
 ### Subdomain WPMS
 
 Environments that need to be replaced are defined and paired in the `sites.yml` file for subdomain Multisites. Search and replace runs for each domain listed in the source environment that has a matching key in the target environment. If Search and Replace is enabled for an environment, but the `sites.yml` file does not exist, nothing will be updated. If the `sites.yml` file is different between environments, the `domain_maps` in the target environment’s `sites.yml` file will be used to determine what is replaced.
