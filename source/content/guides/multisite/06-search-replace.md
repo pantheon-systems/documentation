@@ -117,13 +117,7 @@ To configure this:
     }
     ```
 
-1. Set `convert_to_subdirectory: true` in the `sites.yml` file.
-
-  ```yaml:title=private/sites.yml
-      ---
-      api_version: 1
-      convert_to_subdirectory: true
-      ```
+This step is not required, but ensures that new sites can be created in the live environment as subdomain sites, and will be created as subdirectory sites in all other environments.
 
 The domain map in the `sites.yml` file is not necessary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the Live site will convert with the following pattern:
 
