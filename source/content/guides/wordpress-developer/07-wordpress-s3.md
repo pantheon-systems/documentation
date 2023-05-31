@@ -46,31 +46,29 @@ You must configure the service within your [AWS Management Console](https://cons
 
 ### Create a New AWS S3 Bucket
 
- Create a bucket if you do not already have one for your site.
-
 1. Open your [AWS Console](https://console.aws.amazon.com) and click **S3**.
 
 1. Click **Create Bucket**.
 
-1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You can not change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket. Then, select an AWS Region.
+1. Enter a bucket name and then select an **AWS Region**. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You cannot change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket.
+
+1. Select **ACLs enabled** and set **Object Ownership** to **Bucket owner preferred** in the **Object Ownership** section.
 
    ![Create s3 bucket for WordPress](../../../images/s3-step1.png)
 
-1. Under the **Object Ownership** section, select the **ACLs enabled** and Object Ownership should be **Bucket owner preferred**.
+1. Uncheck the **Block all public access** in the **Block Public Access settings for this bucket** section and then select the checkbox to acknowledge turning off this setting when prompted.
 
    ![Create s3 bucket for WordPress](../../../images/s3-step2.png)
 
-1. Under the **Block Public Access settings for this bucket** section, uncheck the **Block all public access** an check the acknowledgement of that setting.
-
-1. Leave other setting to default and review your settings, and then click **Create bucket**.
+1. Leave all other settings to default and then click **Create bucket**.
 
 ### Configure your AWS Access
 
-1. First, you need to configure you S3 user's access policy via Identity and Access Management, under `Access Management` and `Policies`, click the `Create policy` button.
+1. Open your **Identity and Access Management (IAM)** dashboard, select **Access Management**, select **Policies**, and then click the **Create policy** button.
 
    ![Create AWS S3 access step 1](../../../images/guides/s3-access1.png)
 
-1. Select `JSON` and paste this under the `Policy editor`(You will need to change the `bucketname` that you specified from the previous section):
+1. Select `JSON` and paste the code below under the `Policy editor`, then change the `bucketname`  to the name you specified in the [Create a New AWS S3 Bucket](/guides/wordpress-developer/wordpress-s3#create-a-new-aws-s3-bucket) section, and then click **Next**.
 
    ```bash{promptUser: user}
    {
@@ -100,43 +98,42 @@ You must configure the service within your [AWS Management Console](https://cons
      ]
    }
    ```
-   
+
    ![Create AWS S3 access step 2](../../../images/guides/s3-access2.png)
 
-   Then hit `Next` button.
-
-1. Specify your `Policy Name` (eg: Pantheons3Access) and hit the `Create Policy`.
+1. Enter your policy name in the **Policy name** field (for example, Pantheons3Access) and then click **Create Policy**.
 
    ![Create AWS S3 access step 3](../../../images/guides/s3-access3.png)
 
-
-1. Go back under `Access Management` and `Users`, click the `Add users` so you can create a user based from the policy that was created.
+1. Go back to **Access Management** in the IAM dashboard, select **Users**, and then click **Add users** to create a user based on the policy you created.
 
    ![Create AWS S3 access step 4](../../../images/guides/s3-create1.png)
 
-1. Specify the `User name` (eg: S3-user) and hit `Next`.
+1. Enter a name for your user in the **User name** field (for example, S3-user), and then click **Next**.
 
    ![Create AWS S3 access step 5](../../../images/guides/s3-create2.png)
- 
-1. Under `Permissions options`, select `Attach policies directly`. Find the policy that you created from step 3 and hit `Next`.
+
+1. Select **Attach policies directly** in the **Permissions options** section, locate the policy that you created in the above steps, and then click **Next**.
 
    <Alert title="Note" type="info">
-   Steps 1-3 will create a custom AWS User policy that is enough to read and write to your specific bucket assigned specifically to your site. If you will be having read or write issues, you can choose `AmazonS3FullAccess` policy to replace the custom policy that you created.
+
+   Steps 1-3 create a custom AWS User policy with read and write permissions to the specific bucket assigned to your site. You can select the **AmazonS3FullAccess** policy to replace the custom policy that you created if you require higher permissions.
+
    </Alert>
-   
-   ![Create AWS S3 access step 6](../../../images/guides/s3-create3.png)   
 
-1. Review the configuration and hit the `Create user` button. This will create the user but to have a programmatic access, you will need to edit your user account and hit the `Security credentials` tab. Go to the `Access Keys` section and hit the `Create access key`.
+   ![Create AWS S3 access step 6](../../../images/guides/s3-create3.png)
 
-   ![Create AWS S3 access step 7](../../../images/guides/s3-create-p1.png)   
+1. Review the configuration and click **Create user**. This creates a user profile without programmatic access.
 
-1. Choose the `Application running outside AWS` and hit `Next`. On the next page, you can set the optional tags then hit the `Create Access key` to finalize the access. Make sure you take note of the `Access Key` and `Secret Access Key` and store it securely.
+1. Open your user profile, select the **Security credentials** tab, and click the **Create access key** in the **Access Keys** section.
 
-   ![Create AWS S3 access step 8](../../../images/guides/s3-create-p2.png)   
+   ![Create AWS S3 access step 7](../../../images/guides/s3-create-p1.png)
 
+1. Select the **Application running outside AWS** option and click **Next**.
 
+1. Set the optional tags if desired and then click **Create Access key** to finalize the access. Be sure to note the **Access Key** and **Secret Access Key** and store them securely.
 
-
+   ![Create AWS S3 access step 8](../../../images/guides/s3-create-p2.png)
 
 ## Integrate S3 with WordPress
 
