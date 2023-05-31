@@ -32,19 +32,19 @@ You must have the following to enable search and replace:
 
 - A [WordPress Multisite](/guides/multisite)
 
-## Enable Search and Replace
+## Search and Replace Configuration
 
-You can enable search and replace between environments on a WPMS site.
+If you have a new _subdirectory multisite_, you don't need to configure anything. Search and replace will just work for you. However, you can modify the behavior of Multisite Search and Replace by editing the `search_replace` value in your [`pantheon.yml`](/pantheon-yml) file. Valid options are:
 
-1. Navigate to your [pantheon.yml](/pantheon-yml) file.
+* _null_: No `search_replace` value. Defaults to `subdirectory`.
+* `true`: Deprecated. Equivalent to `subdirectory`.
+* `false`: Deprecated. Equivalent to `disabled`.
+* `disabled`: Do not run search and replace at all. Disables search and replace even for non-WPMS sites.
+* `subdirectory`: Run subdirectory-based search and replace.
+* `subdomain`: Run search and replace based on the domain map in `sites.yml`. Requires a valid `sites.yml` to exist.
+* `convert`: Run subdomain to subdirectory conversion when cloning from the Pantheon Live environment, and subdirectory to subdirectory in all other cases.
 
-1. Add the code below:
-
-    ```yaml:title=pantheon.yml
-    search_replace: true
-    ```
-
-**Note:** After June 30, 2023, the `search_replace` value will be `true` by default. If you wish to _disable_ it, you would set `search_replace: false` in your `pantheon.yml`. Additionally, if `pantheon.yml` is different between environments, the `search_replace` value in the source environment’s `pantheon.yml` will determine if the job will be run or not. The source environment is where you clone the database and files from when you create a Multidev.
+**Note:** If `pantheon.yml` is different between environments, the `search_replace` value in the source environment’s `pantheon.yml` will determine if the job will be run or not. The source environment is where you clone the database and files from when you create a Multidev.
 
 ### Subdomain WPMS
 
@@ -99,7 +99,7 @@ For subdomain Multisites, environments to be replaced are defined and paired in 
 
 ### Subdirectory WPMS
 
-No additional configuration is needed if you already completed the steps in [Enable Search and Replace](/guides/multisite/search-replace/#enable-search-and-replace). Search and replace will match the behavior of the platform’s search and replace for non-WPMS sites.
+No additional configuration is needed for subdirectory search and replace. Search and replace on subdirectory multisites will match the behavior of the platform’s search and replace for non-WPMS sites.
 
 ## More Resources
 
