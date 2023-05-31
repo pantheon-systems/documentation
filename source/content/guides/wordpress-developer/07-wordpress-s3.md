@@ -115,11 +115,20 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Specify the `User name` (eg: S3-user) and hit `Next`.
 
-1. Under `Permissions options`, select `Attach policies directly`. Find the policy that you created from step 3.
+1. Under `Permissions options`, select `Attach policies directly`. Find the policy that you created from step 3 and hit `Next`.
 
    <Alert title="Note" type="info">
    Steps 1-3 will create a custom AWS User policy that is enough to read and write to your specific bucket assigned specifically to your site. If you will be having read or write issues, you can choose `AmazonS3FullAccess` policy to replace the custom policy that you created.
    </Alert>
+
+1. Review the configuration and hit the `Create user` button. This will create the user but to have a programmatic access, you will need to edit your user account and hit the `Security credentials` tab. Go to the `Access Keys` section and hit the `Create access key`.
+
+
+1. Choose the `Application running outside AWS` and hit `Next`. On the next page, you can set the optional tags then hit the `Create Access key` to finalize the access. Make sure you take note of the `Access Key` and `Secret Access Key` and store it securely.
+
+
+
+
 
 
 
