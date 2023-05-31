@@ -108,13 +108,16 @@ You must configure the service within your [AWS Management Console](https://cons
 1. Specify your `Policy Name` (eg: Pantheons3Access) and hit the `Create Policy`.
 
    ![Create AWS S3 access step 3](../../../images/guides/s3-access3.png)
-   
-   
 
-1. Going back under `Access Management` and `Users`, click the `Add users`.
+
+1. Go back under `Access Management` and `Users`, click the `Add users` so you can create a user based from the policy that was created.
+
+   ![Create AWS S3 access step 4](../../../images/guides/s3-create1.png)
 
 1. Specify the `User name` (eg: S3-user) and hit `Next`.
 
+   ![Create AWS S3 access step 4](../../../images/guides/s3-create2.png)
+ 
 1. Under `Permissions options`, select `Attach policies directly`. Find the policy that you created from step 3 and hit `Next`.
 
    <Alert title="Note" type="info">
