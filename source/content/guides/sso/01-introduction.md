@@ -45,3 +45,4 @@ SAML SSO is included for customers with Diamond Accounts and is available for mo
 
 - [WP SAML Auth with Google Apps](/guides/wordpress-google-sso/saml-app/)
 - [Secure Your Site with Two-Factor Authentication](/guides/secure-development/two-factor-authentication)
+- [Pantheon Security](/guides/security)

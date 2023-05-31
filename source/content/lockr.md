@@ -2,8 +2,6 @@
 title: Using Lockr to Secure and Manage API and Encryption Keys
 description: Detailed information on how to set up and use Lockr in your WordPress and Drupal site.
 tags: [plugins, security]
-type: guide
-permalink: docs/guides/:basename
 contributors: [cteitzel]
 featuredcontributor: true
 reviewed: "2022-02-04"
@@ -67,7 +65,7 @@ If you do need to upload module files directly to the server, be sure to use SFT
 
 1. Click **Lockr** from within the WordPress Dashboard to visit the Lockr Configuration page  (`/wp-admin/admin.php?page=lockr-site-config`):
 
-   ![WP Lockr Configuration Example](../../images/lockr_wpconfig.png)​
+   ![WP Lockr Configuration Example](../images/lockr_wpconfig.png)​
 
 1. Enter your email address, and click **Register Site**.
 
@@ -143,7 +141,7 @@ Lockr is also available for Drupal 7. Refer to the project's [GitHub page](https
 
 1. Navigate to the Lockr configuration page (`/admin/config/system/lockr`)
 
-1. Enter your email address and click **Sign Up**.  
+1. Enter your email address and click **Sign Up**.
 
 ### Drush Commands
 
@@ -194,3 +192,8 @@ If you're encrypting sensitive information in your production environment, that 
 #### Who do I contact for Lockr support?
 
 You can email the Lockr Support Team at support@lockr.io or get real-time support on Lockr's [Slack channel](https://slack.lockr.io/).
+
+## More Resources
+
+- [Pantheon Security](/guides/security)
+- [Terminus Secrets Management Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin)

@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.1.5"
+        "version": "3.2.0"
     },
     "commands": [
         {
@@ -3461,16 +3461,17 @@
         },
         {
             "name": "env:clone-content",
-            "description": "Clones database\/files from one environment to another environment.",
+            "description": "Clones database\/files from one environment to another environment. WordPress sites will search the database for the default domain and replace it with the target environment's domain unless you specify a different search\/replace string with --search-for and --replace-with.",
             "usage": [
-                "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--] <site>.<env> <target_env>",
+                "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--from-url [FROM-URL]] [--to-url [TO-URL]] [--] <site>.<env> <target_env>",
                 "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --cc Clones from <site>'s <env> environment to <target_env> environment and clears the cache.",
                 "env:clone-content <site>.<env> <target_env> --db-only Clones only the database from <site>'s <env> environment to <target_env> environment.",
                 "env:clone-content <site>.<env> <target_env> --files-only Clones only files from <site>'s <env> environment to <target_env> environment.",
-                "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env> environment to <target_env> environment and updates the Drupal database (if applicable)."
+                "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env> environment to <target_env> environment and updates the Drupal database (if applicable).",
+                "env:clone-content <site>.<env> <target_env> --from-url=www.example.com --to-url=mulitidevenv.example.com (WordPress only) Clones from <site>'s <env> environment to <target_env> environment and replaces www.example.com with mulitidevenv.example.com in the database."
             ],
-            "help": "Clones database\/files from one environment to another environment.",
+            "help": "IMPORTANT NOTE: if you have a WordPress Multisite installation, you\nwill need an entry in your pantheon.yml in order to search all the\nsites in your install.  See http:\/\/pantheon.io\/some\/link\/in\/docs.",
             "definition": {
                 "arguments": {
                     "site_env": {
@@ -3524,6 +3525,24 @@
                         "is_multiple": false,
                         "description": "Update the Drupal database",
                         "default": false
+                    },
+                    "from-url": {
+                        "name": "--from-url",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "URL to search for (WordPress only)",
+                        "default": ""
+                    },
+                    "to-url": {
+                        "name": "--to-url",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "URL to replace (WordPress only)",
+                        "default": ""
                     },
                     "help": {
                         "name": "--help",
@@ -3656,6 +3675,111 @@
                         "description": "Select just one field, and force format to *string*.",
                         "default": ""
                     },
+                    "help": {
+                        "name": "--help",
+                        "shortcut": "-h",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display help for the given command. When no command is given display help for the <info>list<\/info> command",
+                        "default": false
+                    },
+                    "quiet": {
+                        "name": "--quiet",
+                        "shortcut": "-q",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not output any message",
+                        "default": false
+                    },
+                    "verbose": {
+                        "name": "--verbose",
+                        "shortcut": "-v|-vv|-vvv",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+                        "default": false
+                    },
+                    "version": {
+                        "name": "--version",
+                        "shortcut": "-V",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display this application version",
+                        "default": false
+                    },
+                    "ansi": {
+                        "name": "--ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Force (or disable --no-ansi) ANSI output",
+                        "default": null
+                    },
+                    "no-ansi": {
+                        "name": "--no-ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Negate the \"--ansi\" option",
+                        "default": false
+                    },
+                    "no-interaction": {
+                        "name": "--no-interaction",
+                        "shortcut": "-n",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not ask any interactive question",
+                        "default": false
+                    },
+                    "define": {
+                        "name": "--define",
+                        "shortcut": "-D",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": true,
+                        "description": "Define a configuration item value.",
+                        "default": []
+                    },
+                    "yes": {
+                        "name": "--yes",
+                        "shortcut": "-y",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Answer all confirmations with \"yes\"",
+                        "default": false
+                    }
+                }
+            },
+            "hidden": false
+        },
+        {
+            "name": "env:code-rebuild",
+            "description": "Rebuild code for the given environment (only dev and multidev allowed).",
+            "usage": [
+                "env:code-rebuild <site>.<env>",
+                "env:code-rebuild <site>.<env> Sync code into the <site>'s Dev or multidev environment.",
+                "code-rebuild"
+            ],
+            "help": "Rebuild code for the given environment (only dev and multidev allowed).",
+            "definition": {
+                "arguments": {
+                    "site_env": {
+                        "name": "site_env",
+                        "is_required": true,
+                        "is_array": false,
+                        "description": "Site & environment in the format `site-name.env` (only Dev or Multidev)",
+                        "default": null
+                    }
+                },
+                "options": {
                     "help": {
                         "name": "--help",
                         "shortcut": "-h",
@@ -12079,7 +12203,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: ID (id), Name (name), Label (label), Created (created), Framework (framework), Region (region), Organization (organization), Plan (plan_name), Max Multidevs (max_num_cdes), Upstream (upstream), Holder Type (holder_type), Holder ID (holder_id), Owner (owner), Is Frozen? (frozen), Date Last Frozen (last_frozen_at)",
+                        "description": "Available fields: ID (id), Name (name), Label (label), Created (created), Framework (framework), Region (region), Organization (organization), Plan (plan_name), Max Multidevs (max_num_cdes), Upstream (upstream), Upstream Label (upstream_label), Holder Type (holder_type), Holder ID (holder_id), Owner (owner), Is Frozen? (frozen), Date Last Frozen (last_frozen_at)",
                         "default": ""
                     },
                     "field": {
@@ -15895,6 +16019,7 @@
                 "art",
                 "backups",
                 "branches",
+                "code-rebuild",
                 "completion",
                 "dashboard",
                 "deploy",
@@ -16004,6 +16129,7 @@
                 "env:clear-cache",
                 "env:clone-content",
                 "env:code-log",
+                "env:code-rebuild",
                 "env:commit",
                 "env:create",
                 "env:delete",

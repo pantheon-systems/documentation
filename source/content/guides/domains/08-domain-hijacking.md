@@ -45,3 +45,4 @@ Open a chat or [ticket](/guides/support/support-ticket/) to report a subdomain t
 
 - [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts)
 - [Secure Development on Pantheon](/guides/secure-development)
+- [Pantheon Security](/guides/security)

@@ -2,7 +2,7 @@
 title: Drush
 description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
-permalink:  docs/videos/:basename
+permalink:  docs/:basename
 layout: video
 tags: [drush, cli]
 searchboost: 50

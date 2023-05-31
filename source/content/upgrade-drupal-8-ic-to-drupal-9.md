@@ -1,8 +1,6 @@
 ---
 title: Update a Drupal Site with Integrated Composer to the Latest Version of Drupal
 description: Upgrade Pantheon Drupal sites with Integrated Composer to the latest version of Drupal.
-type: guide
-permalink: docs/guides/:basename
 contenttype: [doc]
 innav: [true]
 categories: [update]

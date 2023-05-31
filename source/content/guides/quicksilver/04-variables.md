@@ -15,7 +15,7 @@ permalink: docs/guides/quicksilver/variables
 
 This section provides information on Quicksilver variables.
 
-Variables are made available through the `$_POST` global variable, and the `$_ENV` and `$_SERVER` objects. These variables include the following:
+Variables are made available through the `$_POST` global variable. You can use this variable to find the following information:
 
 | Variable Name | Description                   | Hooks Available | Notes |
 |---------------|-------------------------------|-----------------|-------|
@@ -39,7 +39,7 @@ Variables are made available through the `$_POST` global variable, and the `$_EN
 |`vrt_result_url`|Page URL associated with an Autopilot VRT result|`autopilot_vrt`|[Autopilot](/guides/autopilot) is only available in the new Pantheon Dashboard|
 |`updates_info`|List of the plugins/modules/themes that were updated prior to the VRT|`autopilot_vrt`|Returns JSON data structure|
 
-Refer to the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for examples on how to use these variables.
+Refer to the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for examples on how to use the above variables.
 
 ## More Resources
 

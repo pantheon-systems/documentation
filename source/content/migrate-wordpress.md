@@ -2,7 +2,7 @@
 title: Guided WordPress Migrations
 description: Learn how to migrate existing WordPress sites using the migration plugin.
 contributors: [scottmassey]
-permalink: docs/videos/:basename
+permalink: docs/:basename
 tags: [migrate]
 layout: video
 type: video
