@@ -127,7 +127,7 @@ You must configure the service within your [AWS Management Console](https://cons
 
 1. Open your user profile, select the **Security credentials** tab, and click the **Create access key** in the **Access Keys** section.
 
-   ![Create AWS S3 access step 7](../../../images/guides/s3-create-p1.png)
+   ![Create AWS S3 access step 7](../../../images/s3-create-p1-edit.png)
 
 1. Select the **Application running outside AWS** option and click **Next**.
 
@@ -137,11 +137,11 @@ You must configure the service within your [AWS Management Console](https://cons
 
 ## Integrate S3 with WordPress
 
-You must install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://wordpress.org/plugins/amazon-s3-and-cloudfront/).
+You must install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) to integrate S3 with WordPress.
 
 WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
 
-### Install and Deploy S3 Uploads
+### Install and Deploy S3 Uploads Plugin
 
 <Alert title="Note" type="info">
 
@@ -171,7 +171,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
    </Alert>
 
-1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely. Refer here for various [Secret Management Techniques](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys) for more secure methods to store your keys.
+1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely. Refer to [Secret Management Techniques](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys) for more secure methods to store your keys.
 
 1. Commit and push the new plugin and your `wp-config.php` file updates to the Dev environment, then switch to SFTP mode and activate the plugin:
 
@@ -205,7 +205,7 @@ Refer to the [WP Offload Media documentation](https://deliciousbrains.com/wp-of
 
 #### URL Rewriting
 
-By default, the URLs saved in the database will be using S3's provided URL (eg: https://bucketname.s3.amazonaws.com/uploads/2023/01/image.jpg), if you need the URLs to be masked to match you site's domain for SEO purpose, our [Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) can help out. You can [reach out our sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open up a [support ticket](/guides/agcdn/submit-request#submit-a-request) so w can help you out with the Domain Masking.
+URLs saved in the database use S3's provided URL (for example, https://bucketname.s3.amazonaws.com/uploads/2023/01/image.jpg) by default. You can use [Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) to mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request help with Domain Masking if you have AGCDN.
 
 #### Additional Configuration
 
