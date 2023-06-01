@@ -26,15 +26,15 @@ Drupal 8 reached end-of-life status in November 2021, and is no longer supported
 
 We base our Drupal repositories on the canonical source from [Drupal.org](https://www.drupal.org/). We extend Drupal 7 sites with [Pressflow](http://www.pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment that is automatically included in the Drupal Latest Version. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php` file.
 
-- [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
-- [Drupal (Latest Version)](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" />
-- [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
+- [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf) (id: e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
+- [Drupal (Latest Version)](https://dashboard.pantheon.io/sites/create?upstream_id=897fdf15-992e-4fa1-beab-89e2b5027e03) <Popover content="Defaults to SFTP Mode" /> (id: 897fdf15-992e-4fa1-beab-89e2b5027e03)
+- [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0) (id: 21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ### Empty Upstream
 
 An empty Upstream is a Custom Upstream that does not have any content or code:
 
-- [Pantheon Empty Upstream](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65)
+- [Pantheon Empty Upstream](https://dashboard.pantheon.io/sites/create?upstream_id=4c7176de-e079-eed1-154d-44d5a9945b65) (id: 4c7176de-e079-eed1-154d-44d5a9945b65)
 
 Use an empty Upstream to [host a static site or files on Pantheon](/static-site-empty-upstream).
 
