@@ -17,7 +17,7 @@ product: [--]
 integration: [--]
 ---
 
-This section covers purchasing a new plan. 
+This section covers purchasing a new plan.
 
 ## Before You Begin
 
@@ -105,7 +105,6 @@ Pantheon offers savings for sites purchased with annual billing. Refer to [Panth
 
 The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
 
-
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## Enable Add-ons
@@ -127,7 +126,6 @@ To enable or disable add-ons:
 
 Pantheon Search and Object Cache are available to Sandbox plans for testing. Pantheon Search and Object Cache are available to Performance Small plans and higher for production sites. If either feature is enabled on your site, the feature will stop functioning and may cause errors if the site is moved to a Basic plan.
 
-
 ## Sandbox Sites
 
 Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. Pantheon allocates two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live, or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) for more Sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/edu?docs).
@@ -140,7 +138,7 @@ Only Site Administrators or Site Owners can change site plans.
 
 <Alert title="Warning" type="danger">
 
-Before making any changes, please review [Before You Make Changes](#before-you-make-changes).
+Before making any changes, please review [Before You Make Changes](#before-you-begin).
 
 </Alert>
 
@@ -162,7 +160,6 @@ If the site plan isn't shown on the Dashboard immediately, refresh the page or c
 
 </Tab>
 
-
 <Tab title="All Other Sites" id="other">
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
@@ -177,7 +174,7 @@ If the site plan isn't shown on the Dashboard immediately, refresh the page or c
 
 <Alert title="Warning" type="danger">
 
-Before making any changes, please review [Before You Make Changes](#before-you-make-changes).
+Before making any changes, please review [Before You Make Changes](#before-you-begin).
 
 </Alert>
 

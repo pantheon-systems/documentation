@@ -33,6 +33,6 @@ Pantheon's platform security controls include blocking most [UDP traffic](https:
 
 ## More Resources
 
+- [Pantheon Security](/guides/security)
 - [Bots and Indexing on Pantheon](/bots-and-indexing)
-
 - [Drupal Security Patches](/drupal-security-patches)
