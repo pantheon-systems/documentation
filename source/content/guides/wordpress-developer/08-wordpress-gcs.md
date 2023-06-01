@@ -48,7 +48,11 @@ You must configure the service within your [Google Cloud Console](https://consol
 
 You will need a Service account to programmatically access you GCS bucket and assign fine grain access.
 
+1. Go to **IAM & Admin** > **Service Accounts** and click **Create Service Account** from the top.
 
+1. Name your service account, hit **Create and Continue** and **Done** to finalize the account creation.
+
+1. Edit the Service account that you created, take note of the email that is automatically assigned, then hit the **Keys** tab. Choose **JSON** from the popup, then hit **Create**. This will download a JSON file and make sure you store the JSON file securely.
 
 ### Create a New GCS Bucket
 
