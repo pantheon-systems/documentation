@@ -74,7 +74,11 @@ You will need a Service account to programmatically access you GCS bucket and as
  
 1. Uncheck the **Enforce public access prevention on this bucket** and Control access is **Fine-grained**.
  
+   ![GCS Bucket Settings 4](../../../images/guides/gcs14.png)    
+ 
 1. Make sure that Data Encryption is set to **Google-managed encryption key** then hit **Create**.
+
+   ![GCS Bucket Settings 5](../../../images/guides/gcs15.png)    
 
 1. Edit the bucket that you created. Go to the **Premissions** tab and hit the **Grant Access** button. Enter the email that was automatically assigned under you service account under the **New Principal** Field then under the **Assign Roles** find the **Storage Admin**.
 
