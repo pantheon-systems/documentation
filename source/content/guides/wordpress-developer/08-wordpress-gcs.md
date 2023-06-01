@@ -54,6 +54,8 @@ You will need a Service account to programmatically access you GCS bucket and as
 
 1. Name your service account, hit **Create and Continue** and **Done** to finalize the account creation.
 
+   ![GCS Service account 2](../../../images/guides/gcs-aa2.png)
+
 1. Edit the Service account that you created, take note of the email that is automatically assigned, then hit the **Keys** tab. Choose **JSON** from the popup, then hit **Create**. This will download a JSON file and make sure you store the JSON file securely.
 
 ### Create a New GCS Bucket
