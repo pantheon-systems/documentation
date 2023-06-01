@@ -44,5 +44,7 @@ export env=dev
 
 You must configure the service within your [Google Cloud Console](https://console.cloud.google.com/) before integrating Google Cloud Storage with your Pantheon site.
 
-### Create a New GCS Bucket
+### Create a Google Service Account
+
+You will need a Service account to programmatically access you GCS bucket and assign fine grain access.
 
