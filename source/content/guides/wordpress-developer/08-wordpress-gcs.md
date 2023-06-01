@@ -39,3 +39,10 @@ export env=dev
 ```
 
 </Alert>
+
+## Configure Google Cloud Storage within the AWS Console
+
+You must configure the service within your [Google Cloud Console](https://console.cloud.google.com/) before integrating Google Cloud Storage with your Pantheon site.
+
+### Create a New GCS Bucket
+
