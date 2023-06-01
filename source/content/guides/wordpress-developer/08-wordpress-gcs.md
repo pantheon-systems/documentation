@@ -58,6 +58,8 @@ You will need a Service account to programmatically access you GCS bucket and as
 
 1. Go to **Cloud Storage**, then **Buckets** and click **Create Bucket**.
 
+   ![Solr Settings](../../../images/guides/gcs11.png)
+
 1. Name your bucket, choose Region that is closest to your website (US, Canada, Europe or Australia) during site creation.
  
 1. Uncheck the **Enforce public access prevention on this bucket** and Control access is **Fine-grained**.
