@@ -69,3 +69,21 @@ You will need a Service account to programmatically access you GCS bucket and as
 1. Edit the bucket that you created. Go to the **Premissions** tab and hit the **Grant Access** button. Enter the email that was automatically assigned under you service account under the **New Principal** Field then under the **Assign Roles** find the **Storage Admin**.
 
 
+## Integrate Google Cloud Storage (GCS) in WordPress
+
+You must install a plugin such as [WP Offload Media Lite](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) or [WP Stateless](https://wordpress.org/plugins/wp-stateless/).
+
+WP Offload Media Lite is a free version but there is premium version for support & additional features, including multisite support. You can refer here for full plugin [installation and configuration](https://wordpress.org/plugins/wp-stateless/#installation).
+
+S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
+
+WP-Stateless is another alternative for GCS integrations, you can refer here for the [full installation guide](https://wp-stateless.github.io/docs/manual-setup/). 
+
+
+
+## More Resources
+
+- [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
+- [AWS S3 Setup for WordPress](/guides/wordpress-developer/wordpress-s3)
+- [Securely Store your API Keys in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
+
