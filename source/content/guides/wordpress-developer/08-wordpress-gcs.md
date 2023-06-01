@@ -58,11 +58,14 @@ You will need a Service account to programmatically access you GCS bucket and as
 
 1. Go to **Cloud Storage**, then **Buckets** and click **Create Bucket**.
 
-   ![Solr Settings](../../../images/guides/gcs11.png)
+   ![GCS Bucket Settings 1](../../../images/guides/gcs11.png)
 
 1. Name your bucket, choose Region that is closest to your website (US, Canada, Europe or Australia) during site creation.
  
 1. Uncheck the **Enforce public access prevention on this bucket** and Control access is **Fine-grained**.
  
 1. Make sure that Data Encryption is set to **Google-managed encryption key** then hit **Create**.
+
+1. Edit the bucket that you created. Go to the **Premissions** tab and hit the **Grant Access** button. Enter the email that was automatically assigned under you service account under the **New Principal** Field then under the **Assign Roles** find the **Storage Admin**.
+
 
