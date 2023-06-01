@@ -18,7 +18,10 @@ permalink: docs/guides/wordpress-pantheon/plugins-recommended
 
 This section provides WordPress plugins that Pantheon recommends using for various use cases. This is not a comprehensive list, and will continue to evolve over time.
 
-## Pantheon Advanced Page Cache
+## Pantheon Maintained Plugins
+These plugins are built and maintained by Pantheon and will improve site compatibility and performance with Pantheon. Use of these plugins is included in the [Scope of Support](/guides/support/).
+
+### Pantheon Advanced Page Cache
 
 <ReviewDate date="2023-05-23" />
 
@@ -28,15 +31,7 @@ Pantheon's WordPress upstream already ships with a limited version of PAPC in ou
 
 We recommend this plugin for all Pantheon customers.
 
-## Index WP MySQL For Speed
-
-<ReviewDate date="2023-05-23" />
-
-[Index WP MySQL For Speed](https://wordpress.org/plugins/index-wp-mysql-for-speed/) makes your MySQL database work more efficiently by adding high-performance keys to the tables you choose.
-
-The database on a modestly sized site (with a few users and a few hundred posts) may be fast enough without these keys. The speed improvements are most noticeable on larger sites with many posts and products.
-
-## WordPress Native PHP Sessions
+### WordPress Native PHP Sessions
 
 <ReviewDate date="2023-05-23" />
 
@@ -44,7 +39,20 @@ The database on a modestly sized site (with a few users and a few hundred posts)
 
 This plugin is recommended for any site with a plugin or theme that uses PHP Sessions.
 
-## Object Cache Pro
+## Third-Party Plugins
+
+These plugins are not maintained by Pantheon and support is not provided or guaranteed. However, these have been shown to reliably improve site performance on Pantheon. We recommend making your own tests and evaluations of these plugins to see if they offer improvements.
+
+### Index WP MySQL For Speed
+
+<ReviewDate date="2023-05-23" />
+
+[Index WP MySQL For Speed](https://wordpress.org/plugins/index-wp-mysql-for-speed/) makes your MySQL database work more efficiently by adding high-performance keys to the tables you choose.
+
+The database on a modestly sized site (with a few users and a few hundred posts) may be fast enough without these keys. The speed improvements are most noticeable on larger sites with many posts and products.
+
+
+### Object Cache Pro
 
 <ReviewDate date="2023-05-23" />
 
@@ -52,7 +60,7 @@ This plugin is recommended for any site with a plugin or theme that uses PHP Ses
 
 This plugin is recommended for any site using Redis and object caching. For more information on using Object Cache Pro on Pantheon, [check out our guide](https://docs.pantheon.io/guides/object-cache-pro/).
 
-## Safe Redirect Manager
+### Safe Redirect Manager
 
 <ReviewDate date="2023-05-23" />
 
