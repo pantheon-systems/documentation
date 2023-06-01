@@ -68,6 +68,10 @@ You will need a Service account to programmatically access you GCS bucket and as
 
 1. Name your bucket, choose Region that is closest to your website (US, Canada, Europe or Australia) during site creation.
  
+   ![GCS Bucket Settings 2](../../../images/guides/gcs12.png)
+   
+   ![GCS Bucket Settings 3](../../../images/guides/gcs13.png)   
+ 
 1. Uncheck the **Enforce public access prevention on this bucket** and Control access is **Fine-grained**.
  
 1. Make sure that Data Encryption is set to **Google-managed encryption key** then hit **Create**.
