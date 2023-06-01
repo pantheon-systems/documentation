@@ -16,10 +16,11 @@ showtoc: true
 permalink: docs/guides/wordpress-pantheon/plugins-recommended
 ---
 
-This section provides WordPress plugins that Pantheon recommends using for various use cases. This is not a comprehensive list, and will continue to evolve over time.
+This section provides WordPress plugins that Pantheon recommends for various use cases. This is not a comprehensive list, and will continue to evolve over time.
 
 ## Pantheon Maintained Plugins
-These plugins are built and maintained by Pantheon and will improve site compatibility and performance with Pantheon. Use of these plugins is included in the [Scope of Support](/guides/support/).
+
+The plugins listed below are built and maintained by Pantheon and will improve site compatibility and performance on the Pantheon platform. Use of these plugins is included in the [Scope of Support](/guides/support/).
 
 ### Pantheon Advanced Page Cache
 
@@ -41,7 +42,7 @@ This plugin is recommended for any site with a plugin or theme that uses PHP Ses
 
 ## Third-Party Plugins
 
-These plugins are not maintained by Pantheon and support is not provided or guaranteed. However, these have been shown to reliably improve site performance on Pantheon. We recommend making your own tests and evaluations of these plugins to see if they offer improvements.
+The third-party plugins listed below are not maintained by Pantheon and support is not provided or guaranteed. However, these plugins have been shown to reliably improve site performance on the Pantheon platform. We recommend that you test and evaluate these plugins to confirm their benefits for your use case.
 
 ### Index WP MySQL For Speed
 
