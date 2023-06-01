@@ -48,3 +48,15 @@ You must configure the service within your [Google Cloud Console](https://consol
 
 You will need a Service account to programmatically access you GCS bucket and assign fine grain access.
 
+
+
+### Create a New GCS Bucket
+
+1. Go to **Cloud Storage**, then **Buckets** and click **Create Bucket**.
+
+1. Name your bucket, choose Region that is closest to your website (US, Canada, Europe or Australia) during site creation.
+ 
+1. Uncheck the **Enforce public access prevention on this bucket** and Control access is **Fine-grained**.
+ 
+1. Make sure that Data Encryption is set to **Google-managed encryption key** then hit **Create**.
+
