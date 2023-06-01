@@ -16,9 +16,9 @@ showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-gcs
 ---
 
-This section provides information on how to integrate Google Cloud (GCS) Storage with your WordPress Pantheon site.
+This section provides information on how to integrate Google Cloud Storage (GCS) with your WordPress Pantheon site.
 
-Google Cloud Platform offers Google Cloud (GCS) Storage for scalable storage and content distribution that you can integrate with sites running on Pantheon. Pantheon already offers content distribution through our [Global CDN](/guides/global-cdn), but GCS is a good option for addressing issues with [highly populated directories](/guides/filesystem/large-files) or serving large files and as alternative for AWS S3.
+GCS is a scalable storage and content distribution solution that you can integrate with sites running on Pantheon. Pantheon already offers content distribution through our [Global CDN](/guides/global-cdn), but GCS is a good option to address issues with [highly populated directories](/guides/filesystem/large-files) or [serving large files](/guides/filesystem/large-files#large-files) and as alternative for AWS S3.
 
 ## Before You Begin
 
@@ -46,56 +46,55 @@ You must configure the service within your [Google Cloud Console](https://consol
 
 ### Create a Google Service Account
 
-You will need a Service account to programmatically access you GCS bucket and assign fine grain access.
+You must have a service account to programmatically access your GCS bucket and assign fine-grain access.
 
-1. Go to **IAM & Admin** > **Service Accounts** and click **Create Service Account** from the top.
+1. Go to your GCS account, select **IAM & Admin**, select **Service Accounts**, and then click **Create Service Account**.
 
    ![GCS Service account 1](../../../images/guides/gcs-aa1.png)
 
-1. Name your service account, hit **Create and Continue** and **Done** to finalize the account creation.
+1. Name your service account, click **Create and Continue**, and then click **Done** to finalize the account creation.
 
    ![GCS Service account 2](../../../images/guides/gcs-aa2.png)
 
-1. Edit the Service account that you created, take note of the email that is automatically assigned, then hit the **Keys** tab. Choose **JSON** from the popup, then hit **Create**. This will download a JSON file and make sure you store the JSON file securely.
+1. Note the email that is automatically assigned to your service account, select the **Keys** tab, select **JSON** in the pop-up, then click **Create**. This downloads a JSON file. Make sure you store this JSON file securely.
 
    ![GCS Service account 3](../../../images/guides/gcs-aa3.png)
 
 ### Create a New GCS Bucket
 
-1. Go to **Cloud Storage**, then **Buckets** and click **Create Bucket**.
+1. Go to your **GCS** account, select **Cloud Storage**, select **Buckets**, and then click **Create Bucket**.
 
    ![GCS Bucket Settings 1](../../../images/guides/gcs11.png)
 
-1. Name your bucket, choose Region that is closest to your website (US, Canada, Europe or Australia) during site creation.
- 
+1. Name your bucket, select **Region**, and then select the region from the drop-down menu that is closest to your website (US, Canada, Europe or Australia) during site creation.
+
    ![GCS Bucket Settings 2](../../../images/guides/gcs12.png)
-   
-   ![GCS Bucket Settings 3](../../../images/guides/gcs13.png)   
- 
-1. Uncheck the **Enforce public access prevention on this bucket** and Control access is **Fine-grained**.
- 
-   ![GCS Bucket Settings 4](../../../images/guides/gcs14.png)    
- 
-1. Make sure that Data Encryption is set to **Google-managed encryption key** then hit **Create**.
 
-   ![GCS Bucket Settings 5](../../../images/guides/gcs15.png)    
+   ![GCS Bucket Settings 3](../../../images/guides/gcs13.png)
 
-1. Edit the bucket that you created. Go to the **Premissions** tab and hit the **Grant Access** button. Enter the email that was automatically assigned under you service account under the **New Principal** Field then under the **Assign Roles** find the **Storage Admin**.
+1. Uncheck the **Enforce public access prevention on this bucket** and select **Fine-grained** under **Access control**.
 
-   ![GCS Bucket Settings 7](../../../images/guides/gcs17.png)    
+   ![GCS Bucket Settings 4](../../../images/guides/gcs14.png)
+
+1. Make sure that **Data encryption** is set to **Google-managed encryption key** and then click **Create**.
+
+   ![GCS Bucket Settings 5](../../../images/guides/gcs15.png)
+
+1. Go to the **Permissions** tab, click the **Grant Access** button, enter the email that was automatically assigned under your service account in the **New Principal** field, select **Storage Admin** under **Assign Roles**, and then click **Save**.
+
+   ![GCS Bucket Settings 7](../../../images/guides/gcs17-edit.png)
 
 ## Integrate Google Cloud Storage (GCS) in WordPress
 
-You must install a plugin such as [WP Offload Media Lite](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) or [WP Stateless](https://wordpress.org/plugins/wp-stateless/).
+You must install a plugin such as [WP Offload Media Lite](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) or [WP Stateless](https://wordpress.org/plugins/wp-stateless/) to integrate GCS with WordPress.
 
-WP Offload Media Lite is a free version but there is premium version for support & additional features, including multisite support. You can refer here for full plugin [installation and configuration](https://wordpress.org/plugins/wp-stateless/#installation).
+WP Offload Media Lite is a free version but there is a premium version that includes support and additional features, such as multisite support. Refer to [installation and configuration](https://wordpress.org/plugins/wp-stateless/#installation) for instructions.
 
-WP-Stateless is another alternative for GCS integrations, you can refer here for the [full installation guide](https://wp-stateless.github.io/docs/manual-setup/). 
-
+WP-Stateless is another option for GCS integration. Refer to the [full installation guide](https://wp-stateless.github.io/docs/manual-setup/) for instructions.
 
 ## URL Rewriting
 
-By default, the URLs saved in the database will be using GCS's provided URL (eg: https://storage.googleapis.com/example.com/2023/1/image.jpg), if you need the URLs to be masked to match you site's domain for SEO purpose, our [Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) can help out. You can [reach out our sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open up a [support ticket](/guides/agcdn/submit-request#submit-a-request) so we can help you out with the Domain Masking.
+URLs saved in the database use GCS-provided URLs (for example, https://storage.googleapis.com/example.com/2023/1/image.jpg) by default.[Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) can mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request Domain Masking if you have AGCDN.
 
 ## More Resources
 
