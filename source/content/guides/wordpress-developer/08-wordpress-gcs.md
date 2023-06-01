@@ -90,8 +90,6 @@ You must install a plugin such as [WP Offload Media Lite](https://wordpress.org/
 
 WP Offload Media Lite is a free version but there is premium version for support & additional features, including multisite support. You can refer here for full plugin [installation and configuration](https://wordpress.org/plugins/wp-stateless/#installation).
 
-S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
-
 WP-Stateless is another alternative for GCS integrations, you can refer here for the [full installation guide](https://wp-stateless.github.io/docs/manual-setup/). 
 
 
