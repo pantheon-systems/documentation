@@ -82,6 +82,7 @@ You will need a Service account to programmatically access you GCS bucket and as
 
 1. Edit the bucket that you created. Go to the **Premissions** tab and hit the **Grant Access** button. Enter the email that was automatically assigned under you service account under the **New Principal** Field then under the **Assign Roles** find the **Storage Admin**.
 
+   ![GCS Bucket Settings 7](../../../images/guides/gcs17.png)    
 
 ## Integrate Google Cloud Storage (GCS) in WordPress
 
