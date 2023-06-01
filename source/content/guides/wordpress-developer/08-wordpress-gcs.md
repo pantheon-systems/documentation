@@ -80,10 +80,13 @@ S3 Uploads is open-source but does not include an admin UI and requires [Terminu
 WP-Stateless is another alternative for GCS integrations, you can refer here for the [full installation guide](https://wp-stateless.github.io/docs/manual-setup/). 
 
 
+## URL Rewriting
+
+By default, the URLs saved in the database will be using GCS's provided URL (eg: https://storage.googleapis.com/example.com/2023/1/image.jpg), if you need the URLs to be masked to match you site's domain for SEO purpose, our [Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) can help out. You can [reach out our sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open up a [support ticket](/guides/agcdn/submit-request#submit-a-request) so we can help you out with the Domain Masking.
 
 ## More Resources
 
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
 - [AWS S3 Setup for WordPress](/guides/wordpress-developer/wordpress-s3)
 - [Securely Store your API Keys in WordPress](/guides/wordpress-developer/wordpress-secrets-management)
-
+- [Mask your Google Cloud Storage URLs to match your domain](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)
