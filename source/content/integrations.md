@@ -3,7 +3,6 @@ title: Integrations
 description: Products and services that can be integrated with the Pantheon platform.
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/integrations
 contenttype: [guide]
 innav: [true]
 categories: [overview]

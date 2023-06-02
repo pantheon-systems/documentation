@@ -3,7 +3,6 @@ title: Developer Workflow
 description: 
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/workflows
 contenttype: [doc]
 innav: [true]
 categories: [overview, workflows]

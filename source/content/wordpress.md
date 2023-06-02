@@ -3,8 +3,6 @@ title: Pantheon WordPress Upstream
 description: Release notes and customizations to the Pantheon WordPress Upstream
 tags: [code, site, upstreams]
 showtoc: true
-permalink: docs/start-states/wordpress
-editpath: start-states/wordpress.md/
 reviewed: "2022-06-01"
 contenttype: [doc]
 innav: [true]
@@ -105,7 +103,7 @@ Disabled `wp-cron.php` from running on every page load and rely on Pantheon to r
 
 ## Related Links
 
-- [Pantheon Start States](/start-states)
+- [Pantheon Start States](/start-state)
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon)
 - [WordPress Best Practices](/guides/wordpress-developer/wordpress-best-practices)
 - [WordPress and Drupal Core Updates](/core-updates)

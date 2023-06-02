@@ -10,7 +10,6 @@ audience: [development, sysadmin]
 product: [dashboard]
 integration: [--]
 tags: [--]
-permalink: docs/overview/newrelic
 showtoc: false
 ---
 

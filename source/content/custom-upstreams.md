@@ -10,7 +10,6 @@ audience: [development, sysadmin]
 product: [custom-upstreams]
 integration: [--]
 tags: [--]
-permalink: docs/overview/custom-upstreams
 showtoc: false
 ---
 

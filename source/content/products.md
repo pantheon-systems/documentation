@@ -3,7 +3,6 @@ title: Products and Features
 description: Learn about the components of the Pantheon platform.
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/products
 contenttype: [guide]
 innav: [true]
 categories: [overview]
@@ -97,7 +96,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"New Relic Performance Monitoring"} link={"/overview/new-relic"}>
+  <Product title={"New Relic Performance Monitoring"} link={"/new-relic"}>
 
   New Relic® Performance Monitoring provides a nearly real-time look into the performance of a web application.
 
@@ -127,7 +126,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
 <ProductGroup>
 
-  <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/overview/autopilot"}>
+  <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/autopilot"}>
 
   Automate finding, testing, and applying WordPress and Drupal updates. 
 
@@ -145,7 +144,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
 <ProductGroup>
 
-  <Product title={"Enterprise Billing Center"} link={"/overview/enterprise-billing-center"}>
+  <Product title={"Enterprise Billing Center"} link={"/enterprise-billing-center"}>
 
   Detailed billing and site plan information for Enterprise (contract) customers
 

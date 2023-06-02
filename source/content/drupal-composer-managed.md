@@ -3,8 +3,6 @@ title: Pantheon Drupal (Composer Managed) Upstream
 description: Release notes and customizations to the Pantheon Drupal (Composer Managed) Upstream
 tags: [code, site, upstreams]
 showtoc: true
-permalink: docs/start-states/drupal-composer-managed
-editpath: start-states/drupal-composer-managed.md/
 reviewed: "2023-02-23"
 contenttype: [doc]
 innav: [true]
@@ -43,5 +41,5 @@ These changes have minimal impact on existing sites today, and are primarily int
 ## More Resources
 
 - [Pantheon Start States](/start-state)
-- [Pantheon WordPress Upstream](/start-states/wordpress)
+- [Pantheon WordPress Upstream](/wordpress)
 - [WordPress and Drupal Core Updates](/core-updates)

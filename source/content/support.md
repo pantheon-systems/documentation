@@ -3,7 +3,6 @@ title: Support and Training
 description: 
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/support
 contenttype: [guide]
 innav: [true]
 categories: [help]

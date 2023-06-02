@@ -10,7 +10,6 @@ audience: [development, sysadmin]
 product: [enterprise-billing-center]
 integration: [--]
 tags: [--]
-permalink: docs/overview/enterprise-billing-center
 showtoc: false
 ---
 

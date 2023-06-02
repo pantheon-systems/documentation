@@ -3,7 +3,6 @@ title: Our Platform
 description: Learn about the components of the Pantheon platform.
 tags: [infrastructure]
 contributors: [wordsmither]
-permalink: docs/overview/platform
 contenttype: [guide]
 innav: [true]
 categories: [overview]
