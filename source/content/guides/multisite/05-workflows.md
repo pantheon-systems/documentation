@@ -164,4 +164,4 @@ Continue to the next page for some tips on how to manage networks and debug comm
 
 - [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool)
 
-- [Developer Workflow](/overview/workflows)
+- [Developer Workflow](/workflows)
