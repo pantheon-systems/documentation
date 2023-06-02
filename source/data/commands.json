@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.2.0"
+        "version": "3.2.1"
     },
     "commands": [
         {
@@ -3464,12 +3464,12 @@
             "description": "Clones database\/files from one environment to another environment. WordPress sites will search the database for the default domain and replace it with the target environment's domain unless you specify a different search\/replace string with --search-for and --replace-with.",
             "usage": [
                 "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--from-url [FROM-URL]] [--to-url [TO-URL]] [--] <site>.<env> <target_env>",
-                "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s <env> environment to <target_env> environment.",
-                "env:clone-content <site>.<env> <target_env> --cc Clones from <site>'s <env> environment to <target_env> environment and clears the cache.",
-                "env:clone-content <site>.<env> <target_env> --db-only Clones only the database from <site>'s <env> environment to <target_env> environment.",
-                "env:clone-content <site>.<env> <target_env> --files-only Clones only files from <site>'s <env> environment to <target_env> environment.",
-                "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env> environment to <target_env> environment and updates the Drupal database (if applicable).",
-                "env:clone-content <site>.<env> <target_env> --from-url=www.example.com --to-url=mulitidevenv.example.com (WordPress only) Clones from <site>'s <env> environment to <target_env> environment and replaces www.example.com with mulitidevenv.example.com in the database."
+                "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s",
+                "env:clone-content <site>.<env> <target_env> --cc Clones from <site>'s <env>",
+                "env:clone-content <site>.<env> <target_env> --db-only Clones only the database from",
+                "env:clone-content <site>.<env> <target_env> --files-only Clones only files from",
+                "env:clone-content <site>.<env> <target_env> --updatedb Clones from <site>'s <env>",
+                "env:clone-content <site>.<env> <target_env> --from-url=www.example.com"
             ],
             "help": "IMPORTANT NOTE: if you have a WordPress Multisite installation, you\nwill need an entry in your pantheon.yml in order to search all the\nsites in your install.  See http:\/\/pantheon.io\/some\/link\/in\/docs.",
             "definition": {
@@ -4533,8 +4533,8 @@
             "usage": [
                 "env:metrics [--period [PERIOD]] [--datapoints [DATAPOINTS]] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site>.<env>",
                 "env:metrics <site>.<env> Displays metrics for <site>'s <env> environment.",
-                "env:metrics <site> Displays the combined metrics for all of <site>'s environments.",
-                "env:metrics <site> --fields=datetime,pages_served Displays only the pages served for each date period.",
+                "env:metrics <site> Displays the combined metrics for all of <site>'s",
+                "env:metrics <site> --fields=datetime,pages_served Displays only the pages",
                 "metrics",
                 "alpha:env:metrics",
                 "alpha:metrics"
