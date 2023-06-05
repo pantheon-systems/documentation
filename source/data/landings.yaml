@@ -1443,7 +1443,7 @@
         - text: 'Site Plan Change'
           url: '/guides/account-mgmt/plans/site-plans'
         - text: 'Transfer ownership (User-to-User/individual owner to a new individual owner)'
-          url: '/guides/account-mgmt/workspace-sites-teams/sites#share-preferred-pricing-for-a-site'
+          url: '/guides/account-mgmt/billing/transfer'
         - text: 'Accept an invitation to pay (for the new owner)'
           url: '/guides/account-mgmt/billing/transfer#accept-an-invitation-to-pay'
         - text: 'Update the credit card on file'
@@ -1493,7 +1493,7 @@
       subtitle: ''
       links:
         - text: 'W-9 Form 2022'
-          url: ' https://pantheon.io/sites/default/files/pdf/2022-W-9.pdf '
+          url: ' https://pantheon.io/w9 '
         - text: 'Request Tax Exempt Status'
           url: '/tax-exempt-status'
     - title: 'General'
