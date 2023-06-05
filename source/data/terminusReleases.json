@@ -71,7 +71,7 @@
         ],
         "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/3.2.1",
         "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/3.2.1",
-        "body": ""
+        "body": "### Fixed\r\n- Fix bug where `env:clone-content` command was not working Drupal sites (#2469)\r\n- Fix bug where `env:clone-content` command was not working WordPress sites (#2471)\r\n- Fix passthrough exit code from drush and wp-cli (#2470)"
     },
     {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/103861286",
