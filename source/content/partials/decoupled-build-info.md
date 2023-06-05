@@ -83,39 +83,4 @@ You can follow the steps below to observe the build and deployment process in re
 
 ## Multidev Branch Builds
 
-You can build specific branches by naming the branch to begin with the prefix `multi-`. Refer to [Front-End Sites Multidev Development Workflow](/guides/decoupled/overview/considerations#front-end-sites-multidev-development-workflow) for a detailed outline of the development workflow for Multidev sites.
-
-You can follow the steps below to observe the build and deployment process for a Multidev branch in real time. Note that the steps below assume that you have already cloned your Front-End Site repository from GitHub to your local.
-
-1. Check out the `main` branch of your repository.
-
-    ```bash{promptUser: user}
-    git checkout main
-    ```
-
-1. Create a new branch using the `multi-` prefix, for example:
-
-    ```bash{promptUser: user}
-    git checkout -b multi-example-update
-    ```
-
-1. Make a change to a file in your repository.
-
-1. Add and commit the change to the `main` branch.
-
-    ```bash{promptUser: user}
-    git add .
-    git commit -m <message>
-    ```
-
-1. Push the branch:
-
-    ```bash{promptUser: user}
-     git push origin your-branch-name
-    ```
-
-1. Open your Site Dashboard, navigate to the **Overview** page and scroll down to the **Multidev Branches** section. You should see your Multidev branch begin to build after approximately a minute.
-
-1. Use the **Actions** drop-down menu to visit the Multidev version of the site, view the logs, or get more information about the build.
-
-Any commits pushed on this branch will now be built and deployed to the Multidev. This allows you and your team to review the branch as work progresses. Pull requests opened against this branch will also trigger a build.
+Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for information on Multidev Branch Builds.
