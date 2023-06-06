@@ -1,5 +1,5 @@
 ---
-title: Best Practices for Maintaining Custom Upstreams
+title: Custom Upstreams on Pantheon
 subtitle: Custom Upstream Best Practices
 description: Detailed information on how to maintain Custom Upstreams.
 tags: [git, upstreams, workflow, D8, D9, D10]

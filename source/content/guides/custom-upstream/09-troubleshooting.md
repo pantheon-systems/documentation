@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Custom Upstreams
+title: Custom Upstreams on Pantheon
 subtitle: Troubleshoot a Custom Upstream
 description: Learn more about troubleshooting your Custom Upstream.
 tags: [git, upstreams, workflow, D8, D9, D10]
