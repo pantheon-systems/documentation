@@ -17,7 +17,7 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on the Front-End Sites Multidev workflow, and configuration steps to connect your Front-End Site to a Multidev environment.
+This section provides information on the Front-End Sites Multidev workflow, configuration steps to connect your Front-End Site to a Multidev environment, and information on Multidev branch builds.
 
 ## Front-End Sites Multidev Development Workflow
 
@@ -27,7 +27,11 @@ The Front-End Sites Multidev workflow is outlined below:
 
 - **Pull Request:** The Multidev environment is stood up and the preview and backend URL are displayed in the GitHub PR, the GitHub deployment, and in the Front-End Sites Overview section of the dashboard. The build details for a PR are also linked to GitHub.
 
-## Connect to Multidev Environments with Drupal + Next.js
+## Connect to a Multidev Environment
+
+<TabList>
+
+<Tab title="Drupal + Next.js" id="drupal-next" active={true}>
 
 You can use the `PANTHEON_ENVIRONMENT` variable inside your `next.config.js` file to connect to a Drupal Multidev environment. Refer to the [Drupal + Next.js Frontend Starter for Front-End Sites](/guides/decoupled/drupal-nextjs-frontend-starters) guide for more information about this starter.
 
@@ -72,7 +76,10 @@ You can use the `PANTHEON_ENVIRONMENT` variable inside your `next.config.js` fil
 	PANTHEON_CMS_ENDPOINT=dev-my-drupal-site.pantheonsite.io
 	```
 
-## Connect to Multidev Environments with WordPress + Next.js
+
+</Tab>
+
+<Tab title="WordPress + Next.js" id="wp-next">
 
 You can use the `PANTHEON_ENVIRONMENT` variable inside your `next.config.js` file to connect to a WordPress Multidev environment. Refer to the [WordPress + Next.js Frontend Starter for Front-End Sites](/guides/decoupled/wp-nextjs-frontend-starters) guide for more information about this starter.
 
@@ -103,7 +110,10 @@ You can use the `PANTHEON_ENVIRONMENT` variable inside your `next.config.js` fil
 	PANTHEON_CMS_ENDPOINT=dev-my-wordpress-site.pantheonsite.io
 	```
 
-## Connect to Multidev Environments with WordPress + Gatsby
+
+</Tab>
+
+<Tab title="WordPress + Gatsby" id="wp-gatsby">
 
 You can use the `PANTHEON_ENVIRONMENT` variable inside the `gatsby-config.js` file to connect to a Multidev environment. Refer to the [WordPress + Gatsby Frontend Starter for Front-End Sites](/guides/decoupled/wp-gatsby-frontend-starters) guide for more information about this starter.
 
@@ -118,6 +128,12 @@ You can use the `PANTHEON_ENVIRONMENT` variable inside the `gatsby-config.js` fi
 	```bash{promptUser: user}
 	PANTHEON_CMS_ENDPOINT=dev-my-wordpress-site.pantheonsite.io
 	```
+
+
+</Tab>
+
+</TabList>
+
 
 ## Multidev Branch Builds
 
