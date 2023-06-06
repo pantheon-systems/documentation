@@ -30,7 +30,7 @@ Follow the steps in the [Composer Conversion Guide](/guides/composer-convert) to
 
 ## Will This Guide Work for Your Site?
 
-You must be on Drupal using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream. 
+You must be on Drupal using Integrated Composer to use this guide. You can confirm that Integrated Composer is set up by checking that your site has the [Pantheon drupal-composer-managed repo](https://github.com/pantheon-upstreams/drupal-composer-managed) in its upstream.
 
 Confirm the site requirements in the sections below before upgrading to the latest version of Drupal.
 
@@ -41,7 +41,7 @@ Confirm the site requirements in the sections below before upgrading to the late
 1. Use Terminus to Confirm the drupal-composer-managed Upstream:
 
   ```bash
-  terminus site:info $SITE 
+  terminus site:info $SITE
   ```
 
   The following values indicate that a site is using the `drupal-composer-managed` upstream:
@@ -67,7 +67,7 @@ Confirm the site requirements in the sections below before upgrading to the late
 
 ## Prepare the Local Environment
 
-<Partial file="drupal/prepare-local-environment-no-clone.md" />
+<Partial file="drupal/prepare-local-environment-no-clone-new.md" />
 
 ### Apply All Available Upstream Updates
 
@@ -100,12 +100,12 @@ Use the command `composer update` instead of `composer update drupal/core* -W` i
 
 One-click core updates can be made through the Dashboard:
 
-1. Navigate to **Code** in the Dev tab of the site's Dashboard. 
+1. Navigate to **Code** in the Dev tab of the site's Dashboard.
 
-1. Click **Check Now**. 
+1. Click **Check Now**.
 
 1. Click **Apply Updates** if updates are available.
-   
+
 ## Troubleshooting
 
 <Partial file="composer-updating.md" />
