@@ -1,7 +1,7 @@
 ---
-title: Switch Your Custom Upstream
+title: Custom Upstreams on Pantheon
 subtitle: Switch Your Custom Upstream
-description: Learn how to switch your Custom Upstream. 
+description: Learn how to switch your Custom Upstream.
 tags: [upstreams, workflow, webops, D8, D9, D10 ]
 showtoc: true
 permalink: docs/guides/custom-upstream/switch-custom-upstream

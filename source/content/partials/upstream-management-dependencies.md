@@ -8,11 +8,11 @@ tags: [--]
 reviewed: ""
 ---
 
-### How to Add Dependencies to Your Upstream
+## Add Dependencies to Your Upstream
 
-1. Clone the Git repository for your upstream.
+1. Clone the Git repository for your Custom Upstream.
 
-1. Require the upstream management package if you have not already:
+1. Require the Custom Upstream management package if you have not already:
 
     ```bash{promptUser: user}
     composer require pantheon-systems/upstream-management
@@ -26,9 +26,9 @@ reviewed: ""
 
 1. Commit and push your changes.
 
-### How to Update Dependencies in Your Upstream
+## Update Dependencies in Your Upstream
 
-You may need to pin specific versions of your dependencies in your upstream. This is normally done with the `composer.lock` file. However, including the `composer.lock` file in the root of the upstream causes merge conflicts with your downstream sites. You can use the `upstream:update-dependencies` composer command to solve this problem.
+You may need to pin specific versions of your dependencies in your Custom Upstream. This is normally done with the `composer.lock` file. However, including the `composer.lock` file in the root of the Custom Upstream causes merge conflicts with your downstream sites. You can use the `upstream:update-dependencies` composer command to solve this problem.
 
 1. Run `composer update-upstream-dependencies` in your custom upstream repository. The `upstream:update-dependencies` command will:
 
@@ -38,4 +38,4 @@ You may need to pin specific versions of your dependencies in your upstream. Thi
 
     - Update the top-level `composer.json` repositories section for `upstream-configuration` to use `upstream-configuration/locked` instead of just `upstream-configuration` (if not done previously).
 
-1. Commit the changes so that you can start using pinned versions in your downstream sites. This allows you to make sure that you use specific versions for the packages in your upstream.
+1. Commit the changes and begin using the pinned versions in your downstream sites. This allows you to make sure that you use specific versions for the packages in your Custom Upstream.

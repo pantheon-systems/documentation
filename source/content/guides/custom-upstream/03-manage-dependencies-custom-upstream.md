@@ -1,7 +1,7 @@
 ---
-title: Manage dependencies in your Custom Upstream
-subtitle: Manage dependencies in your custom upstream
-description: Learn how to manage dependencies for your custom upstream.
+title: Custom Upstreams on Pantheon
+subtitle: Manage Custom Upstream Dependencies
+description: Learn how to manage dependencies for your Custom Upstream.
 tags: [upstreams, workflow, webops, D8, D9, D10]
 showtoc: true
 permalink: docs/guides/custom-upstream/manage-dependencies-custom-upstream
@@ -15,9 +15,8 @@ integration: [--]
 reviewed: "2023-06-06"
 ---
 
-This section provides information on managing dependencies for an existing Custom Upstream.
+This section provides information on how to manage dependencies for an existing Custom Upstream.
 
-## Managing dependencies
 
 <Partial file="upstream-management-dependencies.md" />
 
