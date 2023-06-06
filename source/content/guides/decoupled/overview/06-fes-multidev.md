@@ -42,32 +42,32 @@ You can use the `PANTHEON_ENVIRONMENT` variable inside your `next.config.js` fil
 	Note that `PANTHEON_ENVIRONMENT` includes a PR number or integration branch name in the example below.
 
 	```js
-		let backendUrl, imageDomain;
-		if (process.env.BACKEND_URL === undefined) {
-		backendUrl = `https://${process.env.PANTHEON_CMS_ENDPOINT}`;
-		imageDomain = process.env.IMAGE_DOMAIN || process.env.PANTHEON_CMS_ENDPOINT;
+	let backendUrl, imageDomain;
+	if (process.env.BACKEND_URL === undefined) {
+	backendUrl = `https://${process.env.PANTHEON_CMS_ENDPOINT}`;
+	imageDomain = process.env.IMAGE_DOMAIN || process.env.PANTHEON_CMS_ENDPOINT;
 
-		// populate BACKEND_URL as a fallback and for build scripts
-		process.env.BACKEND_URL = `https://${process.env.PANTHEON_CMS_ENDPOINT}`;}
-		else {
-		backendUrl = process.env.BACKEND_URL;
-		imageDomain =
-		process.env.IMAGE_DOMAIN ||
-		process.env.BACKEND_URL.replace(/^https?:\/\//, '');
+	// populate BACKEND_URL as a fallback and for build scripts
+	process.env.BACKEND_URL = `https://${process.env.PANTHEON_CMS_ENDPOINT}`;}
+	else {
+	backendUrl = process.env.BACKEND_URL;
+	imageDomain =
+	process.env.IMAGE_DOMAIN ||
+	process.env.BACKEND_URL.replace(/^https?:\/\//, '');
 			}
 	```
 
 	- The code below can be added under the above logic to connect to a Multidev that is prefixed with the branch name of `my site`.
 
 	```js
-		* PANTHEON_ENVIRONMENT is equal to `multi-demo` since that is the name of my branch. I will use this variable to create a `backendUrl` which points
-		* to my Multidev backend.
-		**/
-		if (process.env.PANTHEON_ENVIRONMENT !== 'live') {
-			backendUrl = `https://${
-				process.env.PANTHEON_ENVIRONMENT
-			}-${backendUrl.replace(/^https?:\/\/[^-]*-/, '')}`;
-		}
+	* PANTHEON_ENVIRONMENT is equal to `multi-demo` since that is the name of my branch. I will use this variable to create a `backendUrl` which points
+	* to my Multidev backend.
+	**/
+	if (process.env.PANTHEON_ENVIRONMENT !== 'live') {
+		backendUrl = `https://${
+			process.env.PANTHEON_ENVIRONMENT
+		}-${backendUrl.replace(/^https?:\/\/[^-]*-/, '')}`;
+	}
 	```
 
 1. Optional. Mock the `PANTHEON_CMS_ENDPOINT` for local development by defining it in the `.env.development.local`. For example:
