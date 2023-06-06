@@ -153,14 +153,6 @@ Pull requests from a Multidev branch that are made against the upstream will tri
 | Multidev (based on pull requests) | `pr-*`          | `pr-[pr-number]-[site-name].appa.pantheon.site`|
 
 
-## Front-End Sites Multidev Development Workflow
-
-The Front-End Sites Multidev workflow is outlined below:
-
-- **Code Push:** The external Git provider controls code posts and deployments. Code pushed to the main branch is built and deployed in your Live environment. Code pushed to any other branch generates a new Multidev environment. Updates to existing branches result in the corresponding environment being updated.
-
-- **Pull Request:** The Multidev environment is stood up and the preview and backend URL are displayed in GitHub on the PR, on a GitHub deployment, and also in the Front-End Sites Overview section of the dashboard. The build details for a PR are also be linked to GitHub.
-
 ## Static Site Indexing
 
 We recommend that you use proxy search requests to [Solr](/solr) instances on their backends. We also recommend that you use statically compiled search engines.
