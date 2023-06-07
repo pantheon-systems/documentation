@@ -14,7 +14,7 @@ integration: [--]
 reviewed: "2022-12-13"
 ---
 
-Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch. 
+Distributions are pre-made packages that you can use to simplify creating and setting up a Drupal website. Drupal distributions are exceptionally helpful if you want to create a website, but don't want to build it from scratch.
 
 Review the [documentation provided with the community distribution](https://www.drupal.org/project/project_distribution) before following the steps below.
 
@@ -36,15 +36,15 @@ There are two ways to create an empty Upstream site: via the [Pantheon Dashboard
   terminus site:create my-new-site "My New Site" empty
   ```
 
-## Create the Project 
+## Create the Project
 
-Use the documentation provided with the Drupal distribution to run the recommended Composer `create-project` command. 
+Use the documentation provided with the Drupal distribution to run the recommended Composer `create-project` command.
 
 You can review a list of commonly used distributions on the [Drupal Distributions](https://www.drupal.org/project/project_distribution) page.
 
 ## Add Files and Folders
 
-Now you're going to copy files and folders from the Pantheon GitHub repository for use in your project. 
+Now you're going to copy files and folders from the Pantheon GitHub repository for use in your project.
 
 1. Clone https://github.com/pantheon-systems/drupal-composer-managed into another folder.
 
@@ -74,7 +74,7 @@ Add/modify the settings in `composer.json` as follows, replacing the Drupal valu
 
 1. Add the `upstream-configuration` path repository:
 
-   ```
+   ```json:title=composer.json
    "repositories": [
        {
            "type": "composer",
@@ -91,7 +91,7 @@ Add/modify the settings in `composer.json` as follows, replacing the Drupal valu
 
 1. Include the following in the `require` section:
 
-   ```
+   ```json:title=composer.json
    "require": {
        "pantheon-upstreams/upstream-configuration": "dev-main",
        "pantheon-systems/drupal-integrations": "^9",
@@ -99,9 +99,9 @@ Add/modify the settings in `composer.json` as follows, replacing the Drupal valu
    },
    ```
 
-1. Add `pantheon-systems/drupal-integrations` and quicksilver scripts (optional) to `extra`:
-   
-   ```
+1. Add `pantheon-systems/drupal-integrations` and Quicksilver scripts (optional) to `extra`:
+
+   ```json:title=composer.json
    "extra": {
        "drupal-scaffold": {
            "locations": {
@@ -129,7 +129,7 @@ Add/modify the settings in `composer.json` as follows, replacing the Drupal valu
            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
     //highlight-start
-         "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
+           "web/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
     //highlight-end
        },
        "composer-exit-on-patch-failure": true,
@@ -138,19 +138,20 @@ Add/modify the settings in `composer.json` as follows, replacing the Drupal valu
        }
    },
    ```
+
 1. Add `autoload.classmap`:
 
-   ```
+   ```json:title=composer.json
    "autoload": {
        "classmap": [
            "upstream-configuration/scripts/ComposerScripts.php"
        ]
    },
-   ``` 
-
-1. Add these `scripts` and `scripts-description` sections: 
-
    ```
+
+1. Add these `scripts` and `scripts-description` sections:
+
+   ```json:title=composer.json
    "scripts": {
        "pre-update-cmd": [
            "DrupalComposerManagedComposerScripts::preUpdate"
@@ -168,38 +169,38 @@ Add/modify the settings in `composer.json` as follows, replacing the Drupal valu
 
 Add the following to your `/web/sites/default/settings.php` file.
 
-```
+```php:title=settings.php
 include __DIR__ . "/settings.pantheon.php";
 ```
 
 ## Initialize, Push, and Test
 
 1. Initialize the git repo and commit everything:
-   
-   ```
+
+   ```bash{promptUser: user}
    git init -b master
    git commit -am "Initial commit"
    ```
 
 1. Add the Pantheon repository as a remote:
-   
-   ```
+
+   ```bash{promptUser: user}
    git remote add origin [pantheon_remote]
    ```
 
    If you need to get `pantheon_remote`, use Terminus:
 
-   ```
+   ```bash{promptUser: user}
    terminus connection:info --field=git_url [site].dev
    ```
 
-1. Force push to Pantheon master branch:
-   ```
+1. Force push to Pantheon `master` branch:
+
+   ```bash{promptUser: user}
    git push origin master -f
    ```
 
 1. Install your site in the dev environment and test that everything works.
-
 
 ## More Resources
 
