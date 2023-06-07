@@ -150,7 +150,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Pantheon Dashboard"} link={"/guides/new-dashboard"}>
+  <Product title={"Pantheon Dashboard"} link={"/dashboard"}>
 
   Visualize and manage sites, users, traffic, metrics, visual regression testing (VRT), and more.
 
