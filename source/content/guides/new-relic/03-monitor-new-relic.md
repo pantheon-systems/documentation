@@ -19,7 +19,7 @@ This section provides information on how to monitor and improve site performance
 
 <Alert title="Note" type="info">
 
- Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below, or if you can't access these features.
 
 </Alert>
 
