@@ -4,10 +4,7 @@ subtitle: Authenticating Terminus in a Gitlab Pipline
 description: How to authenticate terminus properly in a CI pipline that avoids errors from authenticating too many times.
 ---
 # Caching Authentication Information in GitLab CI/CD
-
-GitLab CI/CD provides built-in functionality for caching files between pipeline runs. Here's how you would go about caching authentication information for builds in GitLab CI/CD:
-
-Firstly, you need to specify the cache paths and keys in the `.gitlab-ci.yml` file for your project.
+If you want to restore the entire `$HOME/.terminus/cache` folder in GitLab CI/CD, you can adjust the cache paths in the `.gitlab-ci.yml` file to point to this directory. Here's how you would modify the earlier instructions:
 
 ## Step 1: Set Up the Cache Key and Path
 
@@ -17,10 +14,10 @@ The cache key is used to define a unique value for your cache, whereas the cache
 cache:
   key: "$CI_JOB_NAME"
   paths:
-    - ~/.terminus/cache/session
+    - ~/.terminus/cache/
 ```
 
-Here, `$CI_JOB_NAME` is a predefined variable that represents the job name of the CI/CD pipeline, and `~/.terminus/cache/session` is the path to your terminus session cache.
+Here, `$CI_JOB_NAME` is a predefined variable that represents the job name of the CI/CD pipeline, and `~/.terminus/cache/` is the path to your terminus session cache directory.
 
 ## Step 2: Check Cache and Authenticate
 
@@ -60,7 +57,7 @@ build_job:
   cache:
     key: "$CI_JOB_NAME"
     paths:
-      - ~/.terminus/cache/session
+      - ~/.terminus/cache/
 ```
 
 In this script, `${TOKEN}` needs to be replaced with the machine token provided by Terminus, and should be added to your variables in the GitLab CI/CD settings.

@@ -6,11 +6,11 @@ description: How to authenticate terminus properly in a CI pipline that avoids e
 
 # Caching Authentication Information in Bitbucket Pipelines
 
-Bitbucket Pipelines offers a caching feature that you can use to store the Terminus session information. Here's how you would go about caching authentication information for builds in Bitbucket Pipelines:
+To cache the entire `$HOME/.terminus/cache` folder in Bitbucket Pipelines, you can adjust the cache definition in your `bitbucket-pipelines.yml` file and make some changes in the script:
 
 ## Step 1: Define Cache Configuration
 
-First, define a cache configuration for your Terminus session in the `bitbucket-pipelines.yml` file:
+First, define a cache configuration for your Terminus cache in the `bitbucket-pipelines.yml` file:
 
 ```yaml
 pipelines:
@@ -20,25 +20,36 @@ pipelines:
           - terminus
 ```
 
-Here, `terminus` is a custom cache identifier for your Terminus session cache.
+Here, `terminus` is a custom cache identifier for your Terminus cache.
 
-## Step 2: Check Cache and Authenticate
+## Step 2: Create a Symbolic Link
+
+As mentioned earlier, Bitbucket Pipelines cache the directories in the build's top level directory that match the name of the cache. So, you'll need to create a symbolic link from `~/.terminus/cache` to a directory in your top-level directory:
+
+```yaml
+script:
+  - mkdir -p ./terminus && ln -sf ~/.terminus/cache/* ./terminus/
+```
+
+This command creates a symbolic link from each file in `~/.terminus/cache` to a directory named `terminus` in the top-level directory.
+
+## Step 3: Check Cache and Authenticate
 
 Next, create a script to authenticate Terminus based on whether a valid session cache exists. If the session file exists, it indicates a cache hit. If it does not, then you would use the machine token for authentication:
 
 ```yaml
-        script:
-          - if [ -f ~/.terminus/cache/session ]; then terminus auth:login; else terminus auth:login --machine-token=${TOKEN}; fi
+script:
+  - if [ -f ~/.terminus/cache/session ]; then terminus auth:login; else terminus auth:login --machine-token=${TOKEN}; fi
 ```
 
 Remember to set the `TOKEN` as a secured environment variable in your Bitbucket pipeline settings for security.
 
-## Step 3: Updating the Session Expiry Date
+## Step 4: Updating the Session Expiry Date
 
 Finally, to update the session expiry date, you could use `terminus auth:whoami` after the authentication step:
 
 ```yaml
-          - terminus auth:whoami
+  - terminus auth:whoami
 ```
 
 # Full Example
@@ -54,27 +65,9 @@ pipelines:
         caches:
           - terminus
         script:
+          - mkdir -p ./terminus && ln -sf ~/.terminus/cache/* ./terminus/
           - if [ -f ~/.terminus/cache/session ]; then terminus auth:login; else terminus auth:login --machine-token=${TOKEN}; fi
           - terminus auth:whoami
 ```
 
 In this script, `${TOKEN}` needs to be replaced with the machine token provided by Terminus, and should be added to your environment variables in the Bitbucket pipeline settings.
-
-## Note on Cache Definition
-
-In Bitbucket Pipelines, the path of the cache is determined by the language of the build environment:
-
-- For Node.js, caches are stored in `node_modules`.
-- For Python, caches are stored in the directories used by pip and pipenv.
-- For PHP, caches are stored in the directories used by Composer.
-
-For other languages or custom caches (like in this case), Bitbucket Pipelines will cache the directories in the build's top level directory that match the name of the cache. This means that for the cache to work correctly with Bitbucket Pipelines, you might need to create a symbolic link from `~/.terminus/cache/session` to a file in your top level directory.
-
-For instance:
-
-```yaml
-script:
-  - ln -s ~/.terminus/cache/session ./terminus
-```
-
-This command creates a symbolic link named `terminus` in the top-level directory that points to the `~/.terminus/cache/session` file. With this link in place, Bitbucket Pipelines should be able to cache the session file correctly.
