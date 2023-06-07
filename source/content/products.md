@@ -96,7 +96,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"New Relic Performance Monitoring"} link={"/new-relic"}>
+  <Product title={"New Relic Performance Monitoring"} link={"/newrelic"}>
 
   New Relic® Performance Monitoring provides a nearly real-time look into the performance of a web application.
 
