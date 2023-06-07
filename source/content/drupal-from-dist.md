@@ -2,7 +2,7 @@
 title: Create a Drupal Site Using a Drupal Distribution
 description: Learn how to create a site using a Drupal distribution.
 tags: [site, D8, D9, D10]
-permalink: docs/guides/drupal-from-dist
+permalink: docs/drupal-from-dist
 contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
