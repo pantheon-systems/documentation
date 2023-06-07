@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/wp-gatsby-frontend-starters/build-details
 anchorid: build-details
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]

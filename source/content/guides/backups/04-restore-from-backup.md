@@ -3,7 +3,7 @@ title: Backups Tool
 subtitle: Restore a Backup
 description: Learn how restore from an existing backup.
 tags: [backups, security]
-innav: [true]
+innav: [false]
 categories: [backup]
 cms: [drupal, wordpress]
 audience: [development]

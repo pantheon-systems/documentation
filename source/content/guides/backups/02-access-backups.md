@@ -3,7 +3,7 @@ title: Backups Tool
 subtitle: Access Backups
 description: Learn how to access your backups.
 tags: [backups, security]
-innav: [true]
+innav: [false]
 categories: [backup]
 cms: [drupal, wordpress]
 audience: [development]

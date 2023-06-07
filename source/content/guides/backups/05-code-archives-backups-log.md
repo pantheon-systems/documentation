@@ -3,7 +3,7 @@ title: Backups Tool
 subtitle: Code Archives and Backup Log
 description: Learn about your code archives and Backup Log.
 tags: [backups, security]
-innav: [true]
+innav: [false]
 categories: [backup]
 cms: [drupal, wordpress]
 audience: [development]
