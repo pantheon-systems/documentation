@@ -147,18 +147,12 @@ Running `terminus auth:login --machine-token=${TOKEN}` will run a complete backe
 
 Restoring that file in the CI Context will allow terminus to login using `terminus auth:login` with no `--machine-token`. Terminus will use that session ID and session token to update the session expiry date.
 
-You can use the expires_at property to check to see if terminus needs to re-login like this:
+Here are insructions for specific CI Piplines:
 
-```bash
-EXPIRES_AT=$(cat $HOME/.terminus/cache/session | jq .expires_at)
-NOW=$(date +%s)
-if [$EXPIRES_AT <= $NOW]
-then
-	terminus auth:login
-fi
-```
-
-
+* [Bitbucket](/terminus/CI/bitbucket)
+* [CircleCI](/terminus/CI/circleci)
+* [Gitlab](/terminus/CI/gitlab)
+* [Github](/terminus/CI/github-actions)
 
 
 ## More Resources
