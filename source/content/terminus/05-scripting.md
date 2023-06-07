@@ -133,6 +133,34 @@ done <<< "$PANTHEON_SITES"
 echo "Site PHP information has been saved to $CSV_FILE"
 ```
 
+### Authenticating terminus in a CI context
+
+Running `terminus auth:login --machine-token=${TOKEN}` will run a complete backend authorization accessing Auth0 behind the scenes to positively identify the terminus client with an OAuth token. Auth0 places limits on how many times this can be done in a given time period. Using the machine token to authorize terminus too many times in a given time period can run afoul of Auth0's rate limits and the `--machine-token` command should be used sparingly. Once a machine-token has been logged in, terminus will create a cached session in the local user's $HOME folder (e.g. `$HOME/.terminus/cache/session`). Once that session file has been created, that session token should be used for repeated logins. That session file takes the following format:
+
+```json
+{
+  "session": "${PANTHEON_USER_ID}:${CURRENT_SESSION_ID}:${OAUTH_SESSION_TOKEN}",
+  "expires_at": ${EXPIRE_DATETIME},
+  "user_id": "${PANTHEON_USER_ID}"
+}
+```
+
+Restoring that file in the CI Context will allow terminus to login using `terminus auth:login` with no `--machine-token`. Terminus will use that session ID and session token to update the session expiry date.
+
+You can use the expires_at property to check to see if terminus needs to re-login like this:
+
+```bash
+EXPIRES_AT=$(cat $HOME/.terminus/cache/session | jq .expires_at)
+NOW=$(date +%s)
+if [$EXPIRES_AT <= $NOW]
+then
+	terminus auth:login
+fi
+```
+
+
+
+
 ## More Resources
 
 - [Install Quicksilver Scripts](/guides/quicksilver/install-script)
