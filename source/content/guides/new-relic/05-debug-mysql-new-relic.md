@@ -19,9 +19,9 @@ This sections provides information on how to solve MySQL issues with New Relic&r
 
 Modern reporting services that are integrated with your site help speed up the process of going through MySQL and PHP slow logs to find issues. There are a few different systems to choose from- at Pantheon we use [New Relic&reg; Performance Monitoring](/guides/new-relic). The information below explains how you can troubleshoot MySQL databases with New Relic&reg; APM.
 
-## Overview
+## Debugging Overview
 
-The general process is as follows:
+General guidelines for debugging performance issues are listed below.
 
 1. Use New Relic&reg; Performance Monitoring to narrow and identify periods of time that have high load and/or slow response times.
 
