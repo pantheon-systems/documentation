@@ -52,13 +52,13 @@ Provide a name and email with which your commits will be associated before you c
 
 ## Clone Your Site Codebase
 
-You must create a local copy of your [codebase](/code#pantheon-git-repository "About your site's code repository on Pantheon") using the `git clone` command. Follow the steps below to ensure that you create the clone correctly.
+You must create a local copy of your [codebase](/guides/git/collaborative-development#git-repositories-on-pantheon) using the `git clone` command. Follow the steps below to ensure that you create the clone correctly.
 
 1. Navigate to the Terminal directory where you keep your projects.
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**. 
+1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**.
 
   ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 

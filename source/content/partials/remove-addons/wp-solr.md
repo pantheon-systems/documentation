@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-1. Uninstall the [Solr Search for WordPress](https://wordpress.org/plugins/solr-power/) plugin. 
+1. Uninstall the [Solr Search for WordPress](https://wordpress.org/plugins/solr-power/) plugin.
 
 1. Ensure the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) is functioning.
 

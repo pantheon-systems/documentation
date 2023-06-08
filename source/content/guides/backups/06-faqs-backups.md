@@ -85,6 +85,6 @@ If you have a large number of static files, this can slow down the **Files** bac
 
 ## More Resources
 
-- [Your Site Code on Pantheon](/code)
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
 - [Pantheon Logs](/guides/logs-pantheon)
 - [Pantheon WebOps Workflow](/pantheon-workflow)

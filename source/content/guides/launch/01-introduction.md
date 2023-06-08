@@ -44,4 +44,4 @@ This guide will show you how to create, configure, and launch your site on the P
 
 - [Use the Pantheon WebOps Workflow](/pantheon-workflow)
 
-- [Your Site Code on Pantheon](/code)
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)

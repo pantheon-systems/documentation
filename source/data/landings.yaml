@@ -38,7 +38,7 @@
       subtitle: 'A developer console for all your sites.'
       links:
         - text: 'Your Site Code on Pantheon'
-          url: '/code'
+          url: '/pantheon-workflow#your-site-code-on-pantheon'
         - text: 'WordPress and Drupal Core Updates'
           url: '/core-updates'
         - text: 'Database Workflow Tool'
