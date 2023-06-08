@@ -68,7 +68,7 @@ Pantheon's Autopilot:
 
 ## Learning
 
-- [Autopilot Overview](https://learning.pantheon.io/autopilot-quick-start)
+- [Autopilot Overview](https://learning.pantheon.io/autopilot-overview)
 - [Is Autopilot Right for My Website?](https://learning.pantheon.io/is-autopilot-right-for-my-website-quick-lesson)
 
 ## Support
