@@ -3,6 +3,7 @@ title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
 tags: [modules]
 contenttype: [doc]
+showtoc: true
 innav: [true]
 categories: [issues]
 cms: [drupal]
