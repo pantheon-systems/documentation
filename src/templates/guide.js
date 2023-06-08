@@ -36,6 +36,7 @@ import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 import LocaldevChangelog from "../components/localdevChangelog"
+import Example from "../components/styleExample"
 
 const shortcodes = {
   Callout,
@@ -63,6 +64,7 @@ const shortcodes = {
   DNSProviderDocs,
   Check,
   LocaldevChangelog,
+  Example,
 }
 
 class GuideTemplate extends React.Component {
