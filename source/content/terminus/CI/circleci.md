@@ -2,9 +2,23 @@
 title: Terminus Guide - CI Specific - CIRCLECI
 subtitle: Authenticating Terminus in a Circle CI Pipline
 description: How to authenticate terminus properly in a CI pipline that avoids errors from authenticating too many times.
+contributors: [stovak]
+terminuspage: true
+type: terminuspage
+layout: terminuspage
+tags: [reference, cli, local, terminus, workflow]
+permalink: docs/terminus/ci/circleci
+contenttype: [guide]
+innav: [false]
+categories: [automate]
+cms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
+reviewed: "2023-06-08"
 ---
 
-# Caching Authentication Information in CircleCI
+## Caching Authentication Information in CircleCI
 
 To cache the entire `$HOME/.terminus/cache` folder in CircleCI, you would adjust the `save_cache` and `restore_cache` steps to include this directory. Here's how you would modify the earlier instructions:
 
@@ -12,7 +26,7 @@ To cache the entire `$HOME/.terminus/cache` folder in CircleCI, you would adjust
 
 First, define a cache key for your Terminus cache in the `config.yml` file. Here, I'm using a checksum of `composer.lock` to create a unique key for the cache:
 
-```yaml
+```yaml:title=config.yml
 - restore_cache:
     keys:
       - terminus-cache-{{ checksum "composer.lock" }}
@@ -22,7 +36,7 @@ First, define a cache key for your Terminus cache in the `config.yml` file. Here
 
 Next, create a command to authenticate Terminus based on whether a valid session cache exists. If the session file exists, it indicates a cache hit. If it does not, then you would use the machine token for authentication:
 
-```yaml
+```yaml:title=config.yml
 - run:
     name: Authenticate Terminus
     command: |
@@ -39,7 +53,7 @@ Remember to set the `TOKEN` as an environment variable in your CircleCI project 
 
 Finally, to update the session expiry date, you could use `terminus auth:whoami` after the authentication step:
 
-```yaml
+```yaml:title=config.yml
 - run:
     name: Update Session Expiry Date
     command: terminus auth:whoami
@@ -49,14 +63,14 @@ Finally, to update the session expiry date, you could use `terminus auth:whoami`
 
 After authentication, save the cache for the next run:
 
-```yaml
+```yaml:title=config.yml
 - save_cache:
     key: terminus-cache-{{ checksum "composer.lock" }}
     paths:
       - ~/.terminus/cache/
 ```
 
-# Full Example
+## Full Example
 
 Here's a full example of how you would cache authentication information for builds in CircleCI:
 

@@ -2,9 +2,23 @@
 title: Terminus Guide - CI Specific - Github Actions
 subtitle: Authenticating Terminus in a Github Actions Pipline
 description: How to authenticate terminus properly in a CI pipline that avoids errors from authenticating too many times.
+permalink: docs/terminus/ci/github-actions
+contributors: [stovak]
+terminuspage: true
+type: terminuspage
+layout: terminuspage
+tags: [reference, cli, local, terminus, workflow]
+contenttype: [guide]
+innav: [false]
+categories: [automate]
+cms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
+reviewed: "2023-06-08"
 ---
 
-# Caching Authentication Information in GitHub Actions
+## Caching Authentication Information in GitHub Actions
 
 To cache the entire `$HOME/.terminus/cache` folder in GitHub Actions, you would adjust the `path` input for the `actions/cache@v2` action to this directory. Here's how you would modify the earlier instructions:
 
@@ -12,7 +26,7 @@ To cache the entire `$HOME/.terminus/cache` folder in GitHub Actions, you would 
 
 The cache key is used to define a unique value for your cache, and the cache path is the location of the cache files. This can be done like so:
 
-```yaml
+```yaml:title=.github/workflows/terminus-cache-auth.yml
 - uses: actions/cache@v2
   id: terminus-cache
   with:
@@ -28,7 +42,7 @@ Here, the key is a composite key consisting of the runner operating system, a st
 
 Next, create a script to authenticate Terminus based on whether a valid session cache exists. If the session file exists, it indicates a cache hit. If it does not, then you would use the machine token for authentication:
 
-```yaml
+```yaml:title=.github/workflows/terminus-cache-auth.yml
 - name: Authenticate Terminus
   run: |
     if [ -f ~/.terminus/cache/session ]; then
@@ -44,16 +58,16 @@ Remember to set the `TOKEN` as a secret in your GitHub repository settings for s
 
 Finally, to update the session expiry date, you could use `terminus auth:whoami` after the authentication step.
 
-```yaml
+```yaml:title=.github/workflows/terminus-cache-auth.yml
 - name: Update Session Expiry Date
   run: terminus auth:whoami
 ```
 
-# Full Example
+## Full Example
 
 Here's a full example of how you would cache authentication information for builds in GitHub Actions:
 
-```yaml
+```yaml:title=.github/workflows/terminus-cache-auth.yml
 name: CI
 
 on: [push, pull_request]

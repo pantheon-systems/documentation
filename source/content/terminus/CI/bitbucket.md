@@ -1,10 +1,25 @@
 ---
-title: Terminus Guide - CI Specific - BITBUCKET
+title: Terminus Guide - CI Specific - Bitbucket
 subtitle: Authenticating Terminus in a Bitbucket CI Pipline
 description: How to authenticate terminus properly in a CI pipline that avoids errors from authenticating too many times.
+permalink: docs/terminus/ci/bitbucket
+contributors: [stovak]
+terminuspage: true
+type: terminuspage
+layout: terminuspage
+tags: [reference, cli, local, terminus, workflow]
+contenttype: [guide]
+innav: [false]
+categories: [automate]
+cms: [drupal, wordpress]
+audience: [development]
+product: [terminus]
+integration: [--]
+reviewed: "2023-06-08"
 ---
 
-# Caching Authentication Information in Bitbucket Pipelines
+
+## Caching Authentication Information in Bitbucket Pipelines
 
 To cache the entire `$HOME/.terminus/cache` folder in Bitbucket Pipelines, you can adjust the cache definition in your `bitbucket-pipelines.yml` file and make some changes in the script:
 
@@ -12,7 +27,7 @@ To cache the entire `$HOME/.terminus/cache` folder in Bitbucket Pipelines, you c
 
 First, define a cache configuration for your Terminus cache in the `bitbucket-pipelines.yml` file:
 
-```yaml
+```yaml:title=bitbucket-pipelines.yml
 pipelines:
   default:
     - step:
@@ -26,7 +41,7 @@ Here, `terminus` is a custom cache identifier for your Terminus cache.
 
 As mentioned earlier, Bitbucket Pipelines cache the directories in the build's top level directory that match the name of the cache. So, you'll need to create a symbolic link from `~/.terminus/cache` to a directory in your top-level directory:
 
-```yaml
+```yaml:title=bitbucket-pipelines.yml
 script:
   - mkdir -p ./terminus && ln -sf ~/.terminus/cache/* ./terminus/
 ```
@@ -37,7 +52,7 @@ This command creates a symbolic link from each file in `~/.terminus/cache` to a 
 
 Next, create a script to authenticate Terminus based on whether a valid session cache exists. If the session file exists, it indicates a cache hit. If it does not, then you would use the machine token for authentication:
 
-```yaml
+```yaml:title=bitbucket-pipelines.yml
 script:
   - if [ -f ~/.terminus/cache/session ]; then terminus auth:login; else terminus auth:login --machine-token=${TOKEN}; fi
 ```
@@ -48,11 +63,11 @@ Remember to set the `TOKEN` as a secured environment variable in your Bitbucket 
 
 Finally, to update the session expiry date, you could use `terminus auth:whoami` after the authentication step:
 
-```yaml
+```yaml:title=bitbucket-pipelines.yml
   - terminus auth:whoami
 ```
 
-# Full Example
+## Full Example
 
 Here's a full example of how you would cache authentication information for builds in Bitbucket Pipelines:
 
