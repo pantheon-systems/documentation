@@ -22,7 +22,7 @@ There are several things you can do to prepare your site and your team for Autop
 
 Make sure that your current site configuration is [compatible with Autopilot](/guides/autopilot#autopilot-site-compatibility).
 
-## Pre-define Your URLs for Virtual Regression Testing
+## Pre-define Your URLs for Visual Regression Testing
 
 Autopilot allows you to define specific URLs for individual regression tests. You can define as many URLs for individual regression testing as you want during the [Visual Review](/guides/autopilot/enable-autopilot/#visual-review) section of the Autopilot Wizard.
 
