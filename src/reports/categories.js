@@ -32,7 +32,7 @@ class CategoryTree extends React.Component {
                 }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
-              sort: {fields: fileInfo___relativePath, order: ASC}
+              sort: {fields: frontmatter___title, order: ASC}
             ) {
               edges {
                 node {

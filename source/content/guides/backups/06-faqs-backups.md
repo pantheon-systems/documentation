@@ -3,7 +3,7 @@ title: Backups Tool
 subtitle: FAQs
 description: Get answers to your Backups Tool questions.
 tags: [backups, security]
-innav: [true]
+innav: [false]
 categories: [backup]
 cms: [drupal, wordpress]
 audience: [development]

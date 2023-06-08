@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]

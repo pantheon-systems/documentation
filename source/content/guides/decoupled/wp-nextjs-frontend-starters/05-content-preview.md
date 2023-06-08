@@ -9,7 +9,7 @@ showtoc:
 permalink: docs/guides/decoupled/wp-nextjs-frontend-starters/content-preview
 anchorid: content-preview
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]

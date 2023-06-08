@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/no-starter-kit/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]
