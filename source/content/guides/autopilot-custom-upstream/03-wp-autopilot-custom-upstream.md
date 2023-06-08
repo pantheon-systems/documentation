@@ -1,6 +1,6 @@
 ---
 title: Autopilot for Custom Upstreams
-subtitle: Custom Upstream and Autopilot for WordPress 
+subtitle: Custom Upstream and Autopilot for WordPress
 description: Set up your WordPress site to use Custom Upstream and Autopilot.
 tags: [autopilot, upstreams]
 contributors: [whitneymeredith]
@@ -22,24 +22,24 @@ This setup runs Autopilot on the Custom Upstream site and on each child site. Yo
 
 ## Create a Custom Upstream WordPress Site and Enable Autopilot
 
-The simplest way to start your Custom Upstream journey is to create a new, vanilla WordPress site. The new site’s repository will be the starting point for your Custom Upstream codebase, and will be the only place Autopilot actually affects your Custom Upstream code. 
+The simplest way to start your Custom Upstream journey is to create a new, vanilla WordPress site. The new site’s repository will be the starting point for your Custom Upstream codebase, and will be the only place Autopilot actually affects your Custom Upstream code.
 
 1. Name the site in a way that identifies it as the Custom Upstream, for example “Sites Upstream”.
 
 1. [Create a new WordPress site](/guides/legacy-dashboard/create-sites#create-a-site) and generate two or three pages of content.
 
-1. [Activate Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) and select all three scopes – upstream, plugins, and themes under **What Should Autopilot Update?** 
+1. [Activate Autopilot](/guides/autopilot/enable-autopilot/#enable-autopilot) and select all three scopes – upstream, plugins, and themes under **What Should Autopilot Update?**
 
     - Selecting the Upstream scope ensures Autopilot keeps WordPress core updated.
 
-1. Test the Custom Upstream Autopilot setup by selecting the content pages you created for VRT.  
+1. Test the Custom Upstream Autopilot setup by selecting the content pages you created for VRT.
 
     - These are not public-facing pages that serve as a generic test case for Autopilot at the Custom Upstream level.
 
 
 ## Configure the Custom Upstream
 
-The WordPress site you created in the steps above will be your Custom Upstream codebase. You must store code in your your preferred Git host (for example, GitHub, Bitbucket, or Gitlab).  
+The WordPress site you created in the steps above will be your Custom Upstream codebase. You must store code in your your preferred Git host (for example, GitHub, Bitbucket, or Gitlab).
 
 1. Follow the steps to [Create and Host the Repository Remotely](/guides/custom-upstream/create-custom-upstream#create-and-host-the-repository-remotely).
 
