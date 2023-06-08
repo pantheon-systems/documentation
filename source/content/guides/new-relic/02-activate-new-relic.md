@@ -25,6 +25,8 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../../images/integrations/newrelic/activate-new-relic.png)
 
+   It may take several moments for the activation to complete.
+
 1. Visit your site in the browser and make some un-cached requests to generate data in New Relic&reg;. It will take a few minutes for your information to become available in New Relic.
 
 ## Configure New Relic&reg; Performance Monitoring Access
@@ -48,6 +50,16 @@ New Relic&reg; is automatically enabled for all application containers added to 
 - If the site owner is an **organization**, the name and email address of the organization's Pantheon user who activates New Relic&reg; is used to create the New Relic&reg; account.
 
 In both cases, there is not a one-to-one mapping between Pantheon users and New Relic&reg; users. Every Pantheon user who selects **Go to New Relic** from the Pantheon dashboard is logged in as the same New Relic&reg; user.
+
+## Open New Relic&reg; Performance Monitoring
+
+Moving forward, to open New Relic&reg; Performance Monitoring:
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) of the site you suspect is having problems with MySQL query performance.
+
+1. Select the environment: Dev, Test, or Live.
+
+1. Click the **New Relic** tab, and then select **Go to New Relic**.
 
 ## More Resources
 
