@@ -37,7 +37,7 @@ Go to **Account** > **Security** > **Personal Access Tokens**.
 
 ### Export Local Environment Variables
 
-Be kind. If you're writing a guide that will use one or more example variables the reader must replace when following along, you should walk them through exporting them to local environment variables. See the [Variables](#variables) section below for more details.
+Be kind. If you're writing a guide that will use one or more example variables the reader must replace when following along, you should walk them through exporting them to local environment variables. See [Variables](/guides/style-guide/style#variables) for more details.
 
 ### Inline
 
@@ -60,13 +60,6 @@ Inline code styling using backticks, like `$EXAMPLE`.
 <Example>
 
 ```php
-/**
-* Example Comment
-*
-* To provide additional context for the following
-* code, and defining any variables the user must
-* manually edit.
-**/
 if (!function_exists('install_drupal')) {
   $conf['preprocess_css'] = 1;
 }
@@ -76,15 +69,48 @@ if (!function_exists('install_drupal')) {
 
 ````markdown
 ```php
-# This is a Windows-friendly symlink
-require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+if (!function_exists('install_drupal')) {
+  $conf['preprocess_css'] = 1;
 ```
 
 ````
 
 </Example>
 
-#### Shell Prompts
+### File Excerpts
+
+File excerpts are [code blocks](#blocks) with a file name specified after the syntax as `:title=FILENAME`:
+
+<Example>
+
+```git:title=.gitignore
+# WordPress #
+############
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+```
+
+
+<hr class="source-code" /> <br />
+
+````markdown
+```git:title=.gitignore
+# WordPress #
+############
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+```
+````
+
+</Example>
+
+### Shell Prompts
 
 You can also define a single line code block as a command:
 
@@ -132,7 +158,7 @@ mdx-slug
 
 </Example>
 
-#### Line Highlighting
+### Line Highlighting
 You can highlight a specific line in a code block the reader should focus on with `//highlight-line`, or a group with `//highlight-start` and `//highlight-end`:
 
 <Example>

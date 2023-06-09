@@ -60,39 +60,6 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 
 </Example>
 
-## File Excerpts
-
-File excerpts are [code blocks](#blocks) with a file name specified after the syntax as `:title=FILENAME`:
-
-<Example>
-
-```git:title=.gitignore
-# WordPress #
-############
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-```
-
-
-<hr class="source-code" /> <br />
-
-````markdown
-```git:title=.gitignore
-# WordPress #
-############
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-```
-````
-
-</Example>
-
 ## Placeholder Text
 
 Documentation IP set: specifically reserved for documentation (Reserved IP addresses):
@@ -126,12 +93,12 @@ Screenshots are used to reference GUI instructions:
 
 <Example>
 
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 ```
 
 </Example>
@@ -142,12 +109,12 @@ Terminal screenshots should be described in the text as much as possible, and sh
 
 <Example>
 
-![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../../../images/pr-workflow/composer-require-pathauto.png)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../../../images/pr-workflow/composer-require-pathauto.png)
 ```
 
 </Example>

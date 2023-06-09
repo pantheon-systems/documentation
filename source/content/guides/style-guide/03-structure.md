@@ -88,61 +88,13 @@ To see the values currently used in our documentation, [install our repository l
 
 - Partials: [List of all partials and tags](http://localhost:8000/partials); [Searchable list of all partials and tags](http://localhost:8000/partials-search).
 
-<Accordion title="Frontmatter Values" id="frontmatter-values" icon="list-alt">
-
-<dl>
-
-<dt><code>title</code></dt>
-<dd>The title of the content.</dd>
-
-<dt><code>description</code></dt>
-<dd>A brief description displayed under the title.</dd>
-
-<dt><code>contributors</code></dt>
-<dd>
-
-An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
-
-</dd>
-
-<dt><code>reviewed</code></dt>
-<dd>The last date when the content was updated or reviewed for accuracy.</dd>
-
-<dt><code>tags</code></dt>
-<dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
-
-<dt><code>category</code></dt>
-<dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
-
-<dt><code>contenttype</code></dt>
-<dd>
-
-The content type for this content. Defaults to `doc`.
-
-</dd>
-
-<dt><code>subtitle</code></dt>
-<dd>Used in multipage guides to define a title for that page of the guide.</dd>
-
-<dt><code>cms</code></dt>
-
-<dd>
-
-An array of values for each CMS and version to which the content applies
-
-</dd>
-
-</dl>
-
-</Accordion>
-
 ## More Resources Sections
 
 This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
 
 <Example>
 
-<h2 className="toc-ignore"> See Also</h2>
+<h2 className="toc-ignore"> More Resources</h2>
 
 - [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
@@ -170,7 +122,7 @@ Partial file names must not duplicate the names of files in the source/content d
 
 </Alert>
 
-Partials use all of the same Markdown, style, and HTML as needed and outlined on this page, but do not require frontmatter. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
+Partials use all of the same Markdown, style, and HTML as needed and outlined on this page. They can be included as their own paragraphs and sections as well as in lists as a step or bullet point.
 
 After you create the file, include it in the doc:
 

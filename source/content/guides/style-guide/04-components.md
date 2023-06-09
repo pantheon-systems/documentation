@@ -15,7 +15,7 @@ product: [--]
 integration: [--]
 ---
 
-Our site uses "components" to standardize formatting (such as callouts) or add functionality (such as downloading files).
+Our site uses Gatsby components to standardize formatting (such as callouts) or add functionality (such as downloading files).
 
 ## Callouts
 
@@ -65,7 +65,7 @@ Warnings cover information critical to the reader and highlight potential danger
 
 </Example>
 
-### Success
+### Success/Danger
 
 Success callouts are used infrequently, usually in guides with specific end results expected. Use success callouts to differentiate between two binary results.
 
@@ -73,13 +73,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
+![Incorrect vanity domain A record required DNS value](../../../images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
+![Correct vanity domain A record required DNS value](../../../images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 
@@ -88,13 +88,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 ```html
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
+![Incorrect vanity domain A record required DNS value](../../../images/dashboard/wrong-vanity-aname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
+![Correct vanity domain A record required DNS value](../../../images/dashboard/correct-a-aaaa-dns.png)
 
 </Alert>
 
@@ -196,11 +196,27 @@ Creates a link to a downloadable file.  Files must be stored in `source/scripts`
 
 ## Icons
 
+<Alert title="Warning" type="danger" >
+
+As of June 2023, the `<Icon/>` component is not rendering icons.  For the time being, use the following syntax:
+
+```markdown
+<i className="fa fa-chevron-down fa-w-14"></i>
+```
+
+</Alert>
+
+<Example>
+
+<Icon icon={"more-windows"} text={"Sites:"}/>
+
 ```
 <Icon icon={"more-windows"} text={"Sites:"}/>
 ```
 
-[Font Awesome Web Application Icons](https://www.w3schools.com/icons/fontawesome_icons_webapp.asp)
+</Example>
+
+[Search for Font Awesome Web Application Icons](https://fontawesome.com/search)
 
 
 
@@ -323,16 +339,10 @@ Tooltips are a great way to add additional information without cluttering up a s
 
 Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
-* Subdirectories: `example.com/first-site` and `example.com/second-site`.
-* Subdomains: `first-site.example.com` and `second-site.example.com`.
-
 <hr className="source-code" /> <br/>
 
 ```markdown
 Given two new sites with slugs <Popover title="Slugs" content="Generally, are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
-
-* Subdirectories: `example.com/first-site` and `example.com/second-site`.
-* Subdomains: `first-site.example.com` and `second-site.example.com`.
 ```
 
 </Example>
