@@ -149,10 +149,10 @@ Restoring that file in the CI Context will allow terminus to login using `termin
 
 Here are insructions for specific CI Piplines:
 
-* [Bitbucket](/terminus/CI/bitbucket)
-* [CircleCI](/terminus/CI/circleci)
-* [Gitlab](/terminus/CI/gitlab)
-* [Github](/terminus/CI/github-actions)
+* [Bitbucket](/terminus/ci/bitbucket)
+* [CircleCI](/terminus/ci/circleci)
+* [Gitlab](/terminus/ci/gitlab)
+* [Github](/terminus/ci/github-actions)
 
 
 ## More Resources
