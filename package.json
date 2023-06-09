@@ -20,7 +20,7 @@
     "dotenv": "^10.0.0",
     "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
-    "gatsby": "^4.25.4",
+    "gatsby": "^4.25.7",
     "gatsby-cli": "^4.25.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-algolia": "^1.0.3",
