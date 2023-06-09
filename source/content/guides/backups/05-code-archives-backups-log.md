@@ -51,4 +51,4 @@ The Backup Log displays a list of existing backups for each environment. Recent 
 
 - [Pantheon Logs](/guides/logs-pantheon)
 - [Fastly on Pantheon](/guides/fastly-pantheon)
-- [Your Site Code on Pantheon](/code)
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)

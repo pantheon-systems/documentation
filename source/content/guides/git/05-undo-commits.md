@@ -191,6 +191,6 @@ This happens if you **reset** Dev to an earlier commit, rather than using **reve
 ## More Resources
 
 - [Pantheon WebOps Workflow](/pantheon-workflow)
-- [Your Site Code on Pantheon](/code)
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
 - [Git FAQs](/guides/git/faq-git)
 - [Resolve Merge Conflicts](/guides/git/resolve-merge-conflicts)

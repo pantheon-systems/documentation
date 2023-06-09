@@ -58,7 +58,7 @@ You can connect to an environment over SFTP with your terminal. The command to d
     host: appserver.dev.***-*****-***-****
     protocol: sftp
     port: 2222
-    username: anita-username 
+    username: anita-username
     remotePath: /code/
     uploadOnSave: true
     ```
