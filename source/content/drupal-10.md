@@ -45,7 +45,7 @@ Composer will prompt you to add `phpstan/extension-installer` to your `allow-plu
 
 <Alert title="Note" type="info" >
 
-This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) version 2.2.
+This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) version 2.2 and uses Pantheon's current [PHP version](/guides/php#supported-php-versions).
 
 </Alert>
 
@@ -53,23 +53,9 @@ This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) 
 
 1. [Clone the site](/guides/git/git-config#clone-your-site-codebase) locally with Git.
 
-1. Run the following commands:
+   - The cloned site contains a pre-configured `composer.json` file. No additional configuration is needed for the site to work on Pantheon.
 
-   ```bash{promptUser: user}
-   composer config minimum-stability rc
-   git commit -am "composer config minimum-stability rc"
-   composer config platform.php 8.1
-   git commit -am "composer config platform.php 8.1"
-   composer config allow-plugins.phpstan/extension-installer true
-   git commit -am "composer config allow-plugins.phpstan/extension-installer true"
-   composer require --no-update --dev drupal/core-dev:^10
-   composer require --no-update drupal/core-composer-scaffold:^10
-   composer require --no-update pantheon-systems/drupal-integrations:^10
-   composer require --no-update drupal/core-recommended:^10
-   composer update
-   git commit -am "Update to Drupal 10"
-   git push origin master
-   ```
+1. Review the documentation to [install and configure Git](/guides/git/git-config) correctly before you begin developing your site on Pantheon.
 
 ## FAQ
 
