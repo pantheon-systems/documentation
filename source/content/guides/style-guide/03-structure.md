@@ -2,6 +2,7 @@
 title: Style Guide
 subtitle: Structure
 description: Content structure.
+reviewed: "2023-06-09" 
 contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/style-guide/structure
@@ -17,6 +18,38 @@ integration: [--]
 ## Content Types
 
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
+
+## Before You Begin Sections
+
+This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
+
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Guide](/terminus) .
+
+<Example>
+
+<h2 class="toc-ignore">Before You Begin</h2>
+
+Be sure that you have:
+
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
+- [Terminus](/terminus) installed on your local computer.
+
+<hr className="source-code" /> <br/>
+
+```markdown
+## Before You Begin
+
+Be sure that you have:
+
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
+- [Terminus](/terminus) installed on your local computer.
+```
+
+</Example>
 
 ## Frontmatter
 
@@ -103,38 +136,7 @@ An array of values for each CMS and version to which the content applies
 
 </Accordion>
 
-## Before You Begin Sections
-
-This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
-
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Guide](/terminus) .
-
-<Example>
-
-<h2 class="toc-ignore">Before You Begin</h2>
-
-Be sure that you have:
-
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
-- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/terminus) installed on your local computer.
-
-<hr className="source-code" /> <br/>
-
-```markdown
-## Before You Begin
-
-Be sure that you have:
-
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
-- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/terminus) installed on your local computer.
-```
-
-</Example>
-## More Resources Section
+## More Resources Sections
 
 This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
 
@@ -160,7 +162,7 @@ This is the optimal place to provide links to external resources on the subject,
 
 Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
 
-Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
+Place the Markdown file within the `source/content/partials/` directory.
 
 <Alert title="Warning" type="danger" >
 
@@ -185,3 +187,20 @@ After you create the file, include it in the doc:
 </Example>
 
 To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
+
+
+## Review Dates
+
+Review dates indicate the last time a member of the Documentation team reviewed a document.  There are two ways to indicate review dates.
+
+The most common is by using the frontmatter `reviewed: "YYYY-MM-DD" `.  The other is at the section level, using the ReviewDate component:
+
+```markdown
+## Section Title
+<ReviewDate date="YYYY-MM-DD" />
+```
+
+## Table of Contents
+
+You can add a TOC to the right side of a document using the following frontmatter: `showtoc: true`.
+
