@@ -1,7 +1,7 @@
 ---
 title: Terminus Guide - CI Specific - Bitbucket
 subtitle: Authenticating Terminus in a Bitbucket CI Pipline
-description: How to authenticate terminus properly in a CI pipline that avoids errors from authenticating too many times.
+description: How to authenticate terminus properly in a ci pipline that avoids errors from authenticating too many times.
 permalink: docs/terminus/ci/bitbucket
 contributors: [stovak]
 terminuspage: true
