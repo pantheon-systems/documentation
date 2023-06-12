@@ -31,15 +31,13 @@ Payment for a site can't be split among payment methods. This means that your pa
 
 ## Personal Payment Methods
 
-Personal payment methods can be used on all sites you own. Personal payment methods are managed via your [Personal Workspace](/guides/account-mgmt/account/workspace).
+Personal payment methods can be used on all sites you own. Personal payment methods are managed via your Personal Workspace.
 
 ### Add Personal Payment Method
 
 To add a payment method:
 
-1. Go to your personal workspace.
-
-1. Select **Settings**, then select **Payment Methods**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **+ Add Payment Method**. 
 
@@ -53,9 +51,7 @@ The email address you enter here is the address invoices will be sent to.
 
 ### Update Personal Payment Method
 
-1. Go to your personal workspace.
-
-1. Select **Settings**, then select **Payment Methods**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **View Details** for the payment method you want to edit.
 
@@ -79,9 +75,7 @@ Deleting a card profile from your account will also delete its associated billin
 
 </Alert>
 
-1. Go to your personal workspace.
-
-1. Select **Settings**, then select **Payment Methods**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **View Details** for the payment method you want to edit.
 
@@ -92,9 +86,7 @@ Deleting a card profile from your account will also delete its associated billin
 
 ### View History
 
-1. Go to your personal workspace.
-
-1. Select **Settings**, then select **Payment Methods**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **View Details** for the payment method whose history you want to view.
 
@@ -115,7 +107,7 @@ If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides
 
 To add a payment method to a site:
 
-1. Open the Site Dashboard for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Go to the **Billing** tab and click **Add Card**.
 
@@ -127,7 +119,7 @@ To add a payment method to a site:
 
 To change the card used to bill a site:
 
-1. Open the Site Dashboard for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Go to the **Billing** tab and click **Remove Card**.
 
@@ -137,6 +129,6 @@ To change the card used to bill a site:
 
 To delete a payment method:
 
-1. Open the Site Dashboard for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Go to the **Billing** tab and click **Remove Card**.

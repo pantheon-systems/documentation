@@ -4,6 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 contenttype: [doc]
+showtoc: true
 innav: [true]
 categories: [issues]
 cms: [wordpress]
@@ -1027,21 +1028,21 @@ export ENV=dev
 1. Change to the site's `wp-content` directory:
 
    ```bash{promptUser: user}
-   cd $SITE/wp-content
+   cd $SITE
    ```
 
 1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
-  rm wflogs
+  rm -rf ./wp-content/wflogs
   ```
 
 1. Create the following symlinks:
 
   ```bash{promptUser: user}
-  ln -s ../../files/private/wflogs ./wflogs
-  ln -s ../../files/private/wordfence-waf.php ./../wordfence-waf.php
-  ln -s ../../files/private/.user.ini ./../.user.ini
+  ln -s ../../files/private/wflogs ./wp-content/wflogs
+  ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
+  ln -s ../files/private/.user.ini ./.user.ini
   ```
 
 1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
@@ -1249,7 +1250,7 @@ ___
 
 <ReviewDate date="2022-10-25" />
 
-**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](https://docs.pantheon.io/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
 
 **Solution 1:**
 

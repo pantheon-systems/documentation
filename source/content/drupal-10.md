@@ -20,7 +20,7 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 | Scenario | Status | Documentation |
 |---|---|---|
 | Create a Drupal 10 site on Pantheon | Available | [Create a Drupal 10 Site](/drupal-10#create-a-drupal-10-site)|
-| Upgrade a Drupal 9 site to Drupal 10 manually | Available | [Upgrade from Drupal 9 to Drupal 10](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10) |
+| Upgrade a Drupal 9 site to Drupal 10 manually | Available | [Upgrade from Drupal 9 to Drupal 10](/drupal-10#update-a-drupal-9-site-to-drupal-10) |
 | Create a Drupal 10 site from the Pantheon Dashboard | Available | |
 | Upgrade a Drupal 9 site to Drupal 10 using the [Terminus Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) | Early Access | Use the following command: `terminus conversion:upgrade-d10` |
 
@@ -29,7 +29,7 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 1. Go to your dashboard and confirm that you are on PHP 8.1. The PHP 8.1 update will show as available to install if you are not already on it.
 
-   If you are not on PHP 8.1 and you don't see the update, refer to [Upgrade PHP Versions](https://docs.pantheon.io/guides/php/php-versions) for instructions on updating your PHP version.
+   If you are not on PHP 8.1 and you don't see the update, refer to [Upgrade PHP Versions](/guides/php/php-versions) for instructions on updating your PHP version.
 
 1. Run [Drupal's Upgrade Status](https://www.drupal.org/project/upgrade_status).
 

@@ -23,11 +23,11 @@ Follow the steps below to request and send the appropriate certificate, and priv
 
 <TabList>
 
-<Tab title="For Global CDN" id="ccgcdn" active={true}>
+<Tab title="Global CDN" id="ccgcdn" active={true}>
 
 ### Send the CSR to Your CA
 
-Approximately two business days after a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). 
+Approximately two business days after a closed contract, the [Pantheon Onboarding Team](/guides/professional-services/onboarding) will provide you with the CSR file, to pass on to your **Certificate Authority** (CA).
 
 Allow two business days for your Account Team to load the certificate.
 
@@ -36,24 +36,47 @@ Allow two business days for your Account Team to load the certificate.
 - You must use a Pantheon-generated CSR. This is a hard requirement. If you already have a certificate, it will need to be re-keyed to match the CSR we provide.
 
 - Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to use another CA.
-    
+
+  <Alert title="Streamlined AGCDN"  type="info" >
+    This procedure also applies for customers who use Streamlined AGCDN. Pantheon staff uploads your certificate and the related domains are marked or show an indicator the same way regular domains with custom certificates do.
+  </Alert>
+
 </Tab>
 
-<Tab title="For AGCDN" id="ccagcdn">
 
-Sites with [Advanced Global CDN](/guides/professional-services#advanced-global-cdn) should provide the following certificate bundle:
+<Tab title="Legacy AGCDN" id="newagcdn">
 
-1. Main Certificate
-1. Intermediate Certificate
-1. Private Key
+You can use the self service tool to add your custom certificate if you have a legacy AGCDN setup.
 
-Allow two business days for your Account Team to load the certificate. 
-Note: The key file upload tool currently only accepts 2048-bit RSA keys. AGCDN custom certificates (and private keys) must be in `.PEM` format.
+## Before You Begin
+
+Make sure you have your certificate bundle ready:
+
+- Main certificate
+- Intermediate certificate
+- Private Key
+
+Note: The platform currently only accepts 2048-bit RSA keys. AGCDN custom certificates (and private keys) must be in `.PEM` format.
+
+
+1. Navigate to your [**Customer Cert Management**](https://certs.ps-pantheon.com/) account and log in.
+
+  <Alert title="Note"  type="info" >
+
+  You must [contact Professional Services](https://pantheon.io/professional-services?docs) to have your account created for you if you don't have an existing account.
+
+  </Alert>
+
+1. Optional. Click **Upload New Key**, paste your key into the **Key** field, enter a name for the key in the **Key name** field, and then click **Upload**. Note that this step is required if your certificate has a private key. You can click the **Refresh Key List** button to see the newly added key.
+
+1. Click **Upload New Cert**, paste your certificate and intermediate certificate into the appropriate fields, and then click **Upload**. Both certificates must be in `.PEM` format. You can click **Refresh Cert List** to see the newly added certificate.
+
+
+As an alternative, you can also submit the certificate bundle to Pantheon Support to upload. You must allow two business days for your Account Team to load the certificate.
 
 </Tab>
 
 </TabList>
-
 
 ### Add the Domain
 

@@ -3,7 +3,7 @@ title: Backups Tool
 subtitle: Restore a Backup
 description: Learn how restore from an existing backup.
 tags: [backups, security]
-innav: [true]
+innav: [false]
 categories: [backup]
 cms: [drupal, wordpress]
 audience: [development]
@@ -38,7 +38,7 @@ Your restore is placed in a queue and then executed when you select this process
 
 Each manual and automatic backup can be directly restored to that environment within the Pantheon Dashboard. Refer to [Restoring an Environment From a Backup](/guides/environment-configuration/restore-environment-backup) for more information.
 
-1. Navigate to your site's dashboard.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Click **Backups** and then click **Backup Log**.
 

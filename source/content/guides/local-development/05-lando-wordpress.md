@@ -40,9 +40,9 @@ Be sure that you have:
 
 ## Get Started
 
-You must manage your Lando instances via the command-line. The Lando command is installed globally. You can run it from anywhere within your terminal. 
+You must manage your Lando instances via the command-line. The Lando command is installed globally. You can run it from anywhere within your terminal.
 
-1. Review the short list of useful Lando commands [here](https://docs.devwithlando.io/cli/usage.html) or run the command below for a list of useful Lando commands:
+1. Review the short list of useful Lando commands [in the Lando documentation](https://docs.lando.dev/cli/) or run the command below for a list of useful Lando commands:
 
   ```bash
   lando --help

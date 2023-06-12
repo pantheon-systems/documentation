@@ -1,6 +1,6 @@
 ---
 title: Workspaces, Sites, and Teams
-subtitle: Sites Management
+subtitle: Sites
 description: Learn how to manage your sites.
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
@@ -17,22 +17,28 @@ product: [--]
 integration: [--]
 ---
 
-This guide is specific to sites management, not developing and launching sites.
+This section is specific to sites management, not developing and launching sites.
 
-## Create a Site
+## Site Dashboard
 
-<Alert title="Note" type="info" >
+The Pantheon [Site Dashboard](/site-dashboard) is the hub of all development and activity for an individual site.
 
-Be sure to set up workspaces before creating sites.
+To view a Site Dashboard:
 
-</Alert>
+1. [Go to the Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
+1. Select the **Sites** tab. Here, you can:
+   - Search for the site by site name.
+   - Narrow the list using the filters on the left.
+   - Sort the columns by clicking the column heading.
+1. Click the name of the site.  The Site Dashboard appears.
 
-<Partial file="create-new-site-new-dash.md" />
+## Add a Site
 
+For guidance on how best to create or migrate a site, see [Adding a Site to Pantheon](/add-site).
 
 ## Manage Sites
 
-The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
+The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites.
 
 Agency workspaces will show "Site Owners" instead of "Users in Charge"
 
@@ -40,7 +46,7 @@ A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>*
 
 ### Associate a Site to a Workspace
 
-If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Organization to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-organization-to-site).
+If you did not select a workspace when creating the site, you can add it to a workspace later. Refer to [Add Supporting Workspace to Site](/guides/account-mgmt/workspace-sites-teams/teams#add-supporting-workspace-to-site).
 
 ### Tag Sites
 
@@ -78,11 +84,9 @@ The person who creates the site owns it until someone else starts paying for it.
 
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Workspace Administrator**. Other roles do not have access to change the site plan as described on this page. Refer to [Role-Based Permissions & Change Management](/guides/account-mgmt/workspace-sites-teams/teams/#site-level-roles-and-permissions) for more information.
 
-
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/guides/account-mgmt/workspace-sites-teams/sites#change-site-ownership).
-
+If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly.
 
 </Alert>
 
@@ -92,7 +96,7 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 
 To change the owner of a paid site (e.g. Basic, or Performance):
 
-1. Open the Site Dashboard for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Select **Billing**, then **Invite a business owner to pay for this site**.
 
@@ -131,27 +135,23 @@ For all sites, we recommend instructing users to change their passwords regularl
 
 ### Existing Site
 
-Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client. 
+Agencies should follow the steps below to share Preferred Pricing of an existing site with a new client.
 
-1. Go to the Professional Workspace containing the site.
-
-1. Open the Site Dashboard for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click the **Billing** tab.
 
 1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
 
-1. Click **Send Request**. 
+1. Click **Send Request**.
 
   A link is immediately sent to the email address to pay through the secure site.
 
 ### New Site
 
-Agencies should follow the steps below to maintain Preferred Pricing through a plan change. 
+Agencies should follow the steps below to maintain Preferred Pricing through a plan change.
 
-1. Go to the Professional Workspace containing the site.
-
-1. Open the Site Dashboard for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click the **Billing** tab.
 
@@ -161,7 +161,7 @@ Agencies should follow the steps below to maintain Preferred Pricing through a p
 
 1. Click **Transfer Site** and enter the email address associated with the account to which you want to send an invitation to pay.
 
-1. Click **Send Request**. 
+1. Click **Send Request**.
 
   A link is immediately sent to the email address to pay through the secure site.
 
@@ -184,16 +184,15 @@ Only the site's "User in Charge" or "Owner" can delete a site. Refer to [Roles a
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-**Before you delete a site**: Downgrade the site plan to Sandbox. Refer to [Manage Site Plans](/guides/account-mgmt/plans/manage) for more information.
+**Before you delete a site**: Downgrade the site plan to Sandbox. Refer to [Manage Site Plans](/guides/account-mgmt/plans/site-plans) for more information.
 
 **After you delete a site that had a live domain or subdomain**: Update the DNS records to avoid pointing to the deleted site.
 
 </Alert>
 
+### Delete a Site from the Site Dashboard
 
-### Delete a site from the Site Dashboard
-
-1. Open the Site Dashboard for the site.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Select **Settings**, and then select **Delete Site**.
 
@@ -203,9 +202,9 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Click **Delete This Site**.
 
-### Delete a site from a Workspace
+### Delete a Site from a Workspace
 
-1. Go to the Professional Workspace containing the site.
+1. Go to the [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) containing the site.
 
 1. Select the checkbox next to the site(s) you want to delete.
 
@@ -229,6 +228,9 @@ You can see a list of all your sites by running `terminus site:list`.
 
 </Alert>
 
+### Delete a Front-End Site
+
+Refer to the [Delete a Front-End Site](/guides/decoupled/overview/manage-settings#delete-a-front-end-site) section of the [Front-End Sites Overview](/guides/decoupled/overview) guide for instructions.
 
 ### Delete a Multidev Environment
 

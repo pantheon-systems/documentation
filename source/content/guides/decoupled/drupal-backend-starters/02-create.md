@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to create a new project.
 tags: [webops, workflow, decoupled]
@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/drupal-backend-starters/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]
@@ -37,17 +37,17 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
 ## Install with Dashboard Upstream
 
-1. Log in to your Pantheon Dashboard and select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
-1. Click the Decoupled tab and then click **+Create New Site**.
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Select **Drupal for Front-End** under **Create Backend CMS**.
 
-    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Pantheon Dashboard.
+    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your Front-End Site in the Site Dashboard.
 
     ![select a starter](../../../../images/decoupled-select-starter.png)
 
-1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**.
+1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
 1. Confirm your organization selection when prompted in the **Confirm Organization Selection** dialogue box. The Deploying Decoupled Drupal Composer Managed progress indicator displays while your site is spinning up.
 

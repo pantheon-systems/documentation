@@ -45,5 +45,5 @@ You can select the day you want your weekly backup to be created.
 
 ## More Resources
 
-- [Your Site Code on Pantheon](/code)
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
 - [MariaDB and MySQL on Pantheon](/guides/mariadb-mysql)

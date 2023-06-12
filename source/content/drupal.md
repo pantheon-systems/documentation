@@ -13,7 +13,7 @@ product: [integrated-composer]
 integration: [--]
 ---
 
-Drupal 10 is available to all new sites, and is available as an [upgrade path for Drupal 9 sites](/drupal-10#upgrade-a-drupal-9-site-to-drupal-10). Refer to [Drupal 10 on Pantheon](/drupal-10) for more information.
+Drupal 10 is available to all new sites, and is available as an [upgrade path for Drupal 9 sites](/drupal-10#update-a-drupal-9-site-to-drupal-10). Refer to [Drupal 10 on Pantheon](/drupal-10) for more information.
 
 Drupal 9 is similarly available on Pantheon to all new sites, and as an [upgrade path for Drupal 8+ sites](/drupal-migration).
 
@@ -39,7 +39,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Before You Begin
 
-- Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [User Dashboard](/guides/quickstart/user-dashboard) before you create a new site.
+- Log in to your Pantheon account. If you don't have one, [create one first](https://pantheon.io/register?docs) and familiarize yourself with the [Personal Workspace](/guides/quickstart/user-dashboard) before you create a new site.
 
 - Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
@@ -53,7 +53,7 @@ Learn more about working with upstream and site dependencies in the [Integrated 
 
 ## Create a New Drupal Site with Integrated Composer
 
-[Create a new Drupal site from the Dashboard](/guides/legacy-dashboard/create-sites) as you would with any new site. Integrated Composer is built in and ready to use.
+[Create a new Drupal site from the Dashboard](/add-site-dashboard) as you would with any new site. Integrated Composer is built in and ready to use.
 
 ## Upgrade or Migrate to Drupal
 
@@ -69,7 +69,7 @@ After you upgrade to Drupal you may consider upgrading the authoring experience 
  - Easier build process for landing pages
  - Scalable performance
 
-You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal : An Opportunity](https://pantheon.io/blog/gutenberg-drupal).
+You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal : An Opportunity](https://pantheon.io/blog/gutenberg-drupal-9).
 
 You can also read more about the installation process on [Drupal.org](https://www.drupal.org/docs/contributed-modules/gutenberg/installation-and-upgrades).
 

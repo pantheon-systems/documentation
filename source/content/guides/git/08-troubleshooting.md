@@ -47,7 +47,7 @@ git filter-repo --path wp-content/themes/mytheme/assets/images/largefile.mp4 --i
 
 ### Checking Out Code using GUI Clients
 
-Git GUI clients generally prompt for a Source URL using HTTP or HTTPS to the repository to check out the site code. Pantheon does not provide Git repository access over HTTP(s), and instead provides a "Git over SSH" command. For example: 
+Git GUI clients generally prompt for a Source URL using HTTP or HTTPS to the repository to check out the site code. Pantheon does not provide Git repository access over HTTP(s), and instead provides a "Git over SSH" command. For example:
 
 ```bash
 git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -72,7 +72,7 @@ However, some Git GUI clients, including SourceTree, also support the use of
       ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git
       ```
 
-1. Enter the local path where you want to clone the repository in the **Destination Path** field. 
+1. Enter the local path where you want to clone the repository in the **Destination Path** field.
 
 1. Enter your site name in the the **Name** field.
 

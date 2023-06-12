@@ -24,17 +24,17 @@ Use **one** of the deactivation methods below to deactivate Autopilot on an indi
 
 ## Deactivate From the Autopilot Index Page
 
-1. Navigate to the **Admin Dashboard** and click **Autopilot**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click **Autopilot**.
 
 1. Locate the site you want to deactivate.
 
 1. Click the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu on the site listing, and then click **Deactivate Autopilot**.
 
-1. Click **Deactivate Autopilot** in the pop-up to confirm the action. 
+1. Click **Deactivate Autopilot** in the pop-up to confirm the action.
 
 ## Deactivate From the Autopilot Site Configuration Page
 
-1. Navigate to the **Admin Dashboard** and click **Autopilot**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click **Autopilot**.
 
 1. Locate the site you want to deactivate, and then click the site name.
 
@@ -42,7 +42,7 @@ Use **one** of the deactivation methods below to deactivate Autopilot on an indi
 
 1. Click **Deactivate Autopilot**.
 
-1. Click **Deactivate Autopilot** in the pop-up to confirm the action. 
+1. Click **Deactivate Autopilot** in the pop-up to confirm the action.
 
 ## More Resources
 

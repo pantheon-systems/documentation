@@ -5,7 +5,7 @@ description: Learn about the WordPress + Gatsby frontend starter for Front-End S
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia]
 layout: guide
-showtoc:
+showtoc: true
 permalink: docs/guides/decoupled/wp-gatsby-frontend-starters
 anchorid: wp-gatsby-frontend-starters
 contenttype: [guide]
@@ -24,6 +24,12 @@ You can use a frontend starter kit to streamline the creation of your Front-End 
 - Next.js + WordPress
 - Gatsby + WordPress
 
+<Alert title="Not what you're looking for?" type="success" icon="leaf">
+
+Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
+
+</Alert>
+
 ## Why Use the Gatsby WordPress Starter?
 
 The `gatsby-wordpress-starter` is designed as a starting point for a Gatsby
@@ -38,5 +44,9 @@ Review [requirements and considerations](/guides/decoupled/overview/consideratio
 
 ## More Resources
 
-- [Front-End Sites on Pantheon Overview](/guides/decoupled/overview)
-- [WordPress + Next.js Frontend Starter for Front-End Sites](/guides/decoupled/wp-nextjs-frontend-starters)
+- [Front-End Sites Overview](/guides/decoupled/overview)
+- [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
+- [WordPress Backend Starter](/guides/decoupled/wp-backend-starters)
+- [Drupal + Next.js Frontend Starter](/guides/decoupled/drupal-nextjs-frontend-starters)
+- [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
+- [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)

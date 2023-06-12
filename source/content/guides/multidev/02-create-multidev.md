@@ -15,10 +15,13 @@ showtoc: true
 permalink: docs/guides/multidev/create-multidev
 ---
 
-This section provides steps on how to create a new fork in a Pantheon environment by using the code from the Dev environment.
+This section provides steps on how to create a new Multidev.
 
+## Create in the Dashboard
 
-1. Navigate to the **Site Dashboard** then click the **Multidev** tab.
+You can create a new fork in a Pantheon environment by using the code from the Dev environment.
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click the **Multidev** tab.
 
 1. Click **Create Multidev Environment**.
 
@@ -26,8 +29,8 @@ This section provides steps on how to create a new fork in a Pantheon environmen
 
    - Multidev branch names must be all lowercase, less than 11 characters, and can contain a dash (`-`).
 
-   - Environments cannot be created with the following reserved names: 
-   
+   - Environments cannot be created with the following reserved names:
+
       - `master`
       - `settings`
       - `team`
@@ -54,8 +57,20 @@ The cache tables can contain entries that exceed the transaction redo limit set 
 
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
+## Create Locally with Terminus
+
+You can create a Multidev on your local setup with the [Terminus Multidev create command](/terminus/commands/multidev-create).
+
+<Alert title="Note"  type="info" >
+
+Changes to your `pantheon.yml` file won't be reflected if you created a Git branch locally, made a change to the `pantheon.yml file`, and then pushed the branch, or used a CI pipeline to create a new Multidev.
+You must do *one* of the following to ensure that your newly created Multidev has the `pantheon.yml` changes:
+- Re-commit your changes to the Multidev and/or `pantheon.yml` file
+- Push the `pantheon.yml` changes directly to the Dev (master branch) environment
+
+</Alert>
+
 ## More Resources
 
 - [Components of a site](/pantheon-workflow#components-of-a-site)
-
 - [Clearing Caches for Drupal and WordPress](/clear-caches)

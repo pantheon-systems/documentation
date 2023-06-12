@@ -19,7 +19,7 @@ This section provides information on important Multisite fundamentals.
 ## Create Test and Live Environments from Dev
 After you've configured a WordPress Multisite in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
-1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
 2. Click **Create Test Environment**.
 
   This takes a few moments.
@@ -39,6 +39,13 @@ After you've configured a WordPress Multisite in the Dev environment, you'll qui
 To better understand what's going on, let's dive into `wp search-replace` with greater detail.
 
 ## Deploy Across Environments
+
+<Alert title="Note" type="info">
+
+Search and replace for Multisites can now be handled automatically by the platform search and replace, currently in Early Access. For more details, see [Multisite Search Replace](/guides/multisite/search-replace).
+
+</Alert>
+
 WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
 
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
@@ -64,7 +71,7 @@ terminus remote:wp <site>.<env> -- search-replace --network
 
 Now that you've performed the search and replace on your database, WordPress has the correct stored configuration.
 
-##  Flush Cache Globally after Search-Replace
+##  Flush Cache Globally after Search and Replace
 If you use Redis as a persistent storage backend for your object cache, you'll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn't serve stale values.
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
@@ -109,7 +116,7 @@ Refreshing data in Test or Dev from Live is simply a matter of reversing the ste
 
 You can now develop against production data.
 
-Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](https://docs.pantheon.io/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
+Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
 
 ## Work with Large Databases
 If you have a really large database (gigabytes and gigabytes) or dozens upon dozens of tables, you may notice that `wp search-replace` can take a really long time — or even time out.
@@ -157,4 +164,4 @@ Continue to the next page for some tips on how to manage networks and debug comm
 
 - [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool)
 
-- [Developer Workflow](/overview/workflows)
+- [Developer Workflow](/workflows)

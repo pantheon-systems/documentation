@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/no-starter-kit/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]
@@ -17,19 +17,19 @@ product: [decoupled]
 integration: [--]
 ---
 
-This section provides information on how to create a Front-End Site without a starter kit on Pantheon.
+This section provides information on how to create a Front-End Site without a starter kit and/or CMS on Pantheon.
 
 ## Create Your Project on Pantheon
 
 Make sure you meet the following prerequisites before you continue.
 
-* You are using a Git repository.
+- You are using a Git repository.
 
-* The repository should not be empty.
+- The repository is not empty.
 
-* The repository has a `package.json` file.
+- The repository has a `package.json` file.
 
-* The repository has only **one** lock file.
+- The repository has only **one** lock file.
 
     <Alert title="Note"  type="info" >
 
@@ -38,15 +38,9 @@ Make sure you meet the following prerequisites before you continue.
     </Alert>
 
 
-1. Log in to your **Pantheon Dashboard** and select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
-1. Click the **Decoupled** tab and then click **+Create New Site**.
-
-    <Alert title="Note"  type="info" >
-
-    You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    </Alert>
+1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Click **Import Repository** on the _What kind of site are you creating?_ page to connect your GitHub repository.
 
@@ -56,11 +50,9 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Choose the repository name from the **Select Repository** drop-down menu and click **Continue**.
 
-1. Populate the **General Info** section.
+1. Enter the **Site Name** in the **General Info** section. The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
-    1. **Site Name**: The site name is the title of your site. You can edit the site name in **Settings** after creation. Note: You cannot use a . (period) or _ (underscore) for site and Multidev names.
-
-    1. Select the frontend framework. You can choose either Next.js or Gatsby as the static site generator.
+1. Select the frontend framework in the **General Info** section. You can choose either Next.js or Gatsby as the static site generator.
 
 1. Optional. Link your CMS.
 
@@ -72,17 +64,19 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Determine if your repository will be public or private. Note that **Make this a private repository** is selected by default.
 
-1. Optional. Add configurations and then click **Continue**.
+1. Optional. Click **Advanced Settings** to set your:
 
-    * You can add specifications to help manage your root directory and build settings.
-    * You can set the Environment Variables in the Advanced Setting section.
+    - Output directory
+    - Build command
+    - Environment variables
+    - Deployment path
 
     <Alert title="Note"  type="info" >
 
-     Basic builds will function without setting environment variables if the CMS site was selected during decoupled site creation. Environment variables are not necessary for optional features such as Decoupled Preview.
+     Basic builds will function without setting environment variables if the CMS site was selected during site creation. Environment variables are not necessary for optional features such as Decoupled Preview.
 
      </Alert>
 
-    - You are directed to a new page with the site name, deployment, and build information/ status. You will receive a message that your decoupled site has successfully been added to Pantheon.
+    - You are directed to a new page with the site name, deployment, and build information and status. You will receive a message that your Front-End Site has been successfully added to Pantheon.
 
 1. Click **Build Details** to view the build log.

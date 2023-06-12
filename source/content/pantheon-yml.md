@@ -253,6 +253,16 @@ Complete the following before deploying `filemount` (**required**):
 
 1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths).
 
+### Search and Replace for WordPress Multisite (Early Access)
+
+You can enable search and replace on [WordPress Multisites](/guides/multisite) by adding the following to your `pantheon.yml` file:
+
+```yaml:title=pantheon.yml
+search_replace: true
+```
+
+Running search and replace on a _subdomain_ Multisite also requires configuring a `sites.yml` file. Refer to [WordPress Multisite Search and Replace](/guides/multisite/search-replace) for more information.
+
 ## Quicksilver Platform Integration Hooks
 
 Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a team member. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
@@ -261,7 +271,7 @@ For more information, see [Automate your Workflow with Quicksilver Platform Inte
 
 ## Custom Upstream Configurations
 
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/guides/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/guides/quicksilver/hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your Workspace's [Custom Upstream](/guides/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/guides/quicksilver/hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
@@ -289,7 +299,7 @@ While our parser will reject a `pantheon.yml` that is invalid, it won't necessar
 
 ### Why can’t I update the PHP version on my Multidev?
 
-The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev: 
+The PHP version changes automatically when you modify the `pantheon.yml` file of a site with a pre-existing Multidev. A PHP version change will not appear in a Multidev created after your `pantheon.yml` changes are made. To update your Multidev:
 
 1. Navigate to [your `pantheon.yml` file](#configure-your-php-version).
 
@@ -307,6 +317,16 @@ remote: Successfully applied `pantheon.yml` to the 'new-feature' environment.
 remote:
 remote:
 ```
+
+### Pantheon.yml changes aren't reflected when creating a new Multidev
+
+**Issue:** Changes to your `pantheon.yml` file won't be reflected if you created a Git branch locally, made a change to the `pantheon.yml file`, and then pushed the branch, or used a CI pipeline to create a new Multidev.
+
+**Solution:**
+
+You must do *one* of the following to ensure that your newly created Multidev has the `pantheon.yml` changes:
+- Re-commit your changes to the Multidev and/or `pantheon.yml` file
+- Push the `pantheon.yml` changes directly to the Dev (master branch) environment
 
 ### Deploying Hotfixes
 

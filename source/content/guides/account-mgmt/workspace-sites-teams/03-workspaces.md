@@ -1,9 +1,9 @@
 ---
 title: Workspaces, Sites, and Teams
-subtitle: Professional Workspaces
-description: Learn how to manage and use workspaces.
+subtitle: Workspaces
+description: Learn how to use and manage workspaces.
 tags: [workspaces, sites, teams]
-contributors: [wordsmither]
+contributors: [wordsmither, michellecolon-pantheon]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/workspaces
 editpath: docs/guides/account-mgmt/workspace-sites-teams/03-workspaces.md
@@ -17,48 +17,79 @@ product: [--]
 integration: [--]
 ---
 
-Workspaces are a home base for your WebOps.  There are two types of workspaces:
+Workspaces are a home base for your WebOps.
 
-- **Personal Workspace**: The personal workspace displays tools for the sites you own or are a team member of, your account tier, and billing for sites you own.  You have only one personal workspace.  We cover this workspace in the [Accounts](/guides/account-mgmt/account) guide.
+## Types of Workspaces
 
-- **Professional Workspace**: Professional workspaces bring together users, sites, tools, and support to allow administrators to effectively manage a large number of sites. You may be a part of no workspaces, or many workspaces, depending on your company setup.
+- The **Personal Workspace** displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one Personal Workspace.
+  - Every Pantheon user is assigned one Personal Workspace.
+  - All sites you have created, as well as individual sites from other Workspaces you've been invited to collaborate on, will be in your Personal Workspace.
+  - WebOps collaboration features such as [Multidev](/guides/multidev) and [Custom Upstreams](/guides/custom-upstream) are not available in Personal Workspaces. To access these features, you need a [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#create-a-professional-workspace).
+- **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.
+  - You may be a member of more than one Professional Workspace, and can switch between your Personal and Professional Workspace at any time.
+  - When you first create a Professional Workspace, it is created with a Silver Account plan, which gives you access to the basic capabilities of the Pantheon Platform.  To take advantage of features such as [Multidev](/guides/multidev), [Custom Upstreams](/guides/custom-upstream), and [Autopilot](/guides/autopilot), you'll want to [upgrade the Workspace to a Gold plan](/guides/account-mgmt/plans/workspace-plans).
 
-## Professional Workspace Features
+  <Alert title="Important" type="danger" >
 
-- [Multidev](/guides/multidev)
+  Every Workspace that is upgraded to Gold or higher is billed as another plan/subscription.
 
-- [Change Management](/guides/account-mgmt/workspace-sites-teams/teams)
+  </Alert>
 
-- [Vanity Domains](/guides/domains/vanity-domains)
+- Supporting Workspaces are Professional Workspaces that contain team members only. These workspaces can then be added to individual sites to allow those team members access to work on that site. Refer to [Add a Supporting Workspace to a Site](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-workspace-to-site) for details.
 
-- Email-Based Registration: New users who sign up with the email address domain you specify will be automatically added to your workspace.
+## Workspace Tools
 
-- [Email Notifications](#platform-email-notifications)
+The navigation bar on the left contains several additional tabs to help you manage your sites:
 
-- [Single Sign-On](/sso-organizations)
+- **Home**: The home page of a Workspace contains information related to your workspace, such as the number of sites, sites recently added, and more.
 
-## Professional Workspace Tiers
+- **Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining.
 
-Professional workspaces come in three tiers:
+- **Team*:** Invite people to work on sites in this Workspace.
 
-- **Silver Workspace:** You will automatically be assigned a [Silver Tier](https://pantheon.io/plans/pricing) workspace. If the workspace is not for an agency, 
+- **Autopilot:** [Autopilot](/guides/autopilot) is Visual Regression Testing (VRT) for every WordPress and Drupal Site within your workspace.
 
-- **Gold Workspace:** [Gold Tier](https://pantheon.io/plans/pricing) workspaces provide additional collaboration tools such as Multidev and visual regression testing. [Contact our Sales team](https://pantheon.io/contact-sales) for more information if you are interested in upgrading to a Gold workspace.
+- **Edge*:** [Advanced Global CDN](/guides/agcdn) offers a suite of edge capabilities ensuring your sites are fast, reliable, and secure. Our specialists help you optimize your site performance for maximum uptime.
 
-- **Partner Trial Tier Workspace:** You will only be assigned a [Partner Trial Tier](https://pantheon.io/plans/partner-program) workspace if you are creating the workspace for a web agency.
+- **Support:** View details of an open support request or create a new support request. Our chat-based support is available 24-hours a day.
 
+- **Custom Upstreams*:** Create a new workspace-specific [Custom Upstream](/guides/custom-upstream) using a GitHub or Bitbucket repository. Custom Upstreams allow you to use an external repository as a template for your site.
 
-## Create a Professional Workspace
+- **Settings:** Modify the workspace name, logo, billing information, and if your Workspace is configured for it, billing terms and instructions for your team.
 
-You can create as many workspaces as necessary. The following process will create a Silver Tier Professional workspace.
+\* Not available in Personal Workspaces.
 
-1. Select your gravatar in the upper left corner, then select **Create New Workspace**.
+## Manage Workspaces
+
+### Switch Between Workspaces
+
+You can switch between Workspaces to work on personal projects or to switch between Professional Workspaces.  To do so:
+
+- Click the Workspace Switcher (the icon in the upper left) to switch between Workspaces.
+
+  Your Personal Workspace is at the top, followed by an Professional Workspaces in which you are a member.
+
+  ![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
+
+### Create a Professional Workspace
+
+You can create as many workspaces as necessary.
+
+<Alert title="Warning" type="danger" >
+
+If you are a contract customer, your contract is associated to one Professional Workspace, which is created for you when you sign up. You may still create additional Professional Workspaces, but they may not contain any sites.
+
+</Alert>
+
+The following process will create a Professional Workspace with a free Silver Account Plan.  To upgrade a Workspace to Gold, see [Workspace Plans](/guides/account-mgmt/plans/workspace-plans).
+
+1. Click the [Workspace Switcher](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) in the upper left corner, then select **Create New Workspace**.
 
 1. Enter the information, upload a logo (optional), and click **Continue**.
 
-1. Invite team members or skip this step by clicking **Continue**.
+1. Invite team members, or skip this step by clicking **Continue**.
 
-## Retrieve the Workspace UUID
+### Retrieve the Workspace UUID
 
 Every entity (user, workspace, product, and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
 
@@ -72,21 +103,7 @@ You can also use [Terminus](/terminus) to find the UUID of your workspaces:
 terminus org:list
 ```
 
-
-## Platform Email Notifications
-
-<Partial file="pantheon-email-notifications.md" />
-
-
-## Switch Between Workspaces
-
-If you're a member of multiple workspaces, you can stay logged in, and switch between workspaces to work on different projects.
-
-To switch between workspaces, click your gravatar in the upper left to switch between workspaces:
-
-![Workspace switcher shows a personal and Agency workspace](../../../../images/dashboard/new-dashboard/workspaces-selector.png)
-
-## Customize a Workspace
+### Customize a Workspace
 
 You can customize the following for a workspace:
 
@@ -94,9 +111,18 @@ You can customize the following for a workspace:
 
 - Payment and terms of service information for Sites built in your workspace.
 
-To customize a Professional Workspace, go to the workspace you wish to customize, then click the **Settings** tab.
+- [Upgrade](/guides/account-mgmt/plans/workspace-plans) a Silver Account Plan to a Gold Account Plan.
 
-## Delete a Workspace
+To customize a Professional Workspace:
+
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to customize.
+1. Click the **Settings** tab.
+
+### Change the Workspace Plan Type
+
+Refer to [Account Plans](/guides/account-mgmt/plans/workspace-plans) for information.
+
+### Delete a Workspace
 
 Workspaces cannot be deleted.
 
@@ -104,34 +130,37 @@ Workspaces cannot be deleted.
 
 ### How do we add new sites to a Professional Workspace?
 
-Refer to [Sites](/guides/account-mgmt/workspace-sites-teams/) for more information.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) you wish to add sites to.
+
+1. Click **Migrate Existing Site** or **Create New Site**.  Refer to [Adding a Site to Pantheon](/add-site) for more details.
+
 
 ### Why do login attempts fail for all users across my workspace simultaneously?
 
-Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logs in and out successfully 3 times.
+Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logs in and out successfully three times.
 
-As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for password-less access](/ssh-keys).
+As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for passwordsless access](/ssh-keys).
 
-### Why can't I access Multidev on my site when the Supporting Organization can use it?
+### Why can't I access Multidev on my site when the Supporting Workspace can use it?
 
-Only workspace team members and administrators of a Supporting Organization with Multidev can use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, will not be able to commit code to them.
+Only workspace team members and administrators of a Supporting Workspace with Multidev can use this feature. Site team members who are associated with the site but not the professional workspace can access Multidev environments via the unique URL, will not be able to commit code to them.
 
 ### Why can't my Agency workspace own a site?
 
-Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in [Workspaces, Sites, and Teams](/guides/account-mgmt/workspace-sites-teams).
+Enterprise, Reseller, OEM, and EDU+ workspaces own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU workspaces support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner.
 
-### Can I add my own Agency as a Supporting Organization to a client's site?
+### Can I add my own Agency as a Supporting Workspace to a client's site?
 
-No. Only the owner of the site can add an agency as a Supporting Organization. This action grants all members of the workspace access to the site. You should ask site owners to add your agency as a Supporting Organization if you are providing services to the site.
+No. Only the owner of the site can add an agency as a Supporting Workspace. This action grants all members of the workspace access to the site. You should ask site owners to add your agency as a Supporting Workspace if you are providing services to the site.
 
-### What privileges and roles are granted when adding a Supporting Organization?
+### What privileges and roles are granted when adding a Supporting Workspace?
 
-All members of the Supporting Organization receive the role assigned on the site, regardless of their role in the Supporting Organization.
+All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
 
-### Can the site owner override privileges and access for team members of a Supporting Organization?
+### Can the site owner override privileges and access for team members of a Supporting Workspace?
 
 Yes, but only for sites owned by Enterprise or EDU+ workspaces. Roles designated on the Site Team modal will override any roles assigned within the workspace.
 
 ### As an Agency, how many sandbox sites do members of a workspace receive?
 
-Each member of an workspace can create up to 10 Sandbox sites. When the limit of 10 is reached, take a site live or delete unused sites to free up additional Sandbox slots.
+Each member of a workspace can create up to 10 Sandbox sites. When the limit of 10 is reached, take a site live or delete unused sites to free up additional Sandbox slots.

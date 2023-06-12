@@ -19,21 +19,36 @@ This sections provides information on how to solve MySQL issues with New Relic&r
 
 Modern reporting services that are integrated with your site help speed up the process of going through MySQL and PHP slow logs to find issues. There are a few different systems to choose from- at Pantheon we use [New Relic&reg; Performance Monitoring](/guides/new-relic). The information below explains how you can troubleshoot MySQL databases with New Relic&reg; APM.
 
-## Open New Relic&reg; Performance Monitoring
+## Debugging Overview
 
-1. Navigate to the Site Dashboard of the site you suspect is having problems with MySQL query performance.
+General guidelines for debugging performance issues are listed below.
 
-1. Select the environment: Dev, Test, or Live.
+1. Use New Relic&reg; Performance Monitoring to narrow and identify periods of time that have high load and/or slow response times.
 
-1. Click the **New Relic** tab, and then select **Go to New Relic**.
+   - Narrow down the scope to one of those time periods and find the worst performing transactions.
+
+   - Go into the SQL trace to discover long running queries within those transactions.
+
+   - Use SFTP to download the appropriate MySQL Slow Log and retrieve the query in its entirety.
+
+1. Review the log entries.
+
+   - Connect to a safe MySQL server via CLI and run the query to test the performance.
+
+   - Use the `EXPLAIN` and `EXPLAIN EXTENDED` MySQL command to get additional information if the query result is poor. You can also examine the MySQL tables for structural issues using the `DESCRIBE` and `ANALYZE` commands.
+
+   - Correct the issue when you discover it. The fix may be to adjust the SQL query itself, or it can be within the application by redoing code or configurations that are creating the errant query.
+
 
 ## Investigate Activity
+
+1. Go to [New Relic&reg; Performance Monitoring](/guides/new-relic/activate-new-relic#open-new-relic-performance-monitoring).
 
 1. Select the application the issue has been reported on (Dev/Test/Live). By default New Relic&reg; Performance Monitoring lists your **Applications**.
 
 1. Use the graph to locate the time period in which the issue occurred. This is usually visually apparent through large spikes in the graph. If it is not apparent, use the New Relic&reg; time period selection tool to broaden your search (30 min, 60 min, 3 hours, etc.) until you find the problem.
 
-1. Highlight the spike in activity you want to investigate. New Relic&reg; will reload the page with the time frame you've selected.
+1. Highlight (click and drag) the spike in activity you want to investigate. New Relic&reg; will reload the page with the time frame you've selected.
 
 1. Click **Transactions**. It is sorted by **Most Time Consuming** by default, but this can be a false positive, as it measures a sum of time loading specific transactions, not the time per individual transaction. If a particular item is called 10x more than another, but loads quickly, it's **sum** will send it to the top of the list even if it's behaving properly.
 
@@ -94,21 +109,6 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
         
         ![Improved query performance](../../../images/improved-query-performance.png)
 
-## Recap
-
-1. Use New Relic&reg; Performance Monitoring to narrow and identify periods of time that have high load and/or slow response times.
-
-1. Narrow down the scope to one of those time periods and find the worst performing transactions.
-
-1. Go into the SQL trace to discover long running queries within those transactions.
-
-1. Use SFTP to download the appropriate MySQL Slow Log and retrieve the query in its entirety.
-
-1. Connect to a safe MySQL server via CLI and run the query to test the performance.
-
-1. Use the `EXPLAIN` and `EXPLAIN EXTENDED` MySQL command to get additional information if the query result is poor. You can also examine the MySQL tables for structural issues using the `DESCRIBE` and `ANALYZE` commands.
-
-1. Correct the issue when you discover it. The fix may be to adjust the SQL query itself, or it can be within the application by redoing code or configurations that are creating the errant query.
 
 ## More Resources
 

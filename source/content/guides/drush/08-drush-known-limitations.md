@@ -1,7 +1,7 @@
 ---
 title: Drupal Drush Command-Line Utility on Pantheon
-subtitle: Drush Known Limitation with Pantheon
-description: Review known Drush limitations. 
+subtitle: Drush Known Limitations with Pantheon
+description: Review known Drush limitations.
 tags: [migrate, terminus, drush]
 showtoc: true
 permalink: docs/guides/drush/drush-known-limitations

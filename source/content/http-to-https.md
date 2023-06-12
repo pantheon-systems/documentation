@@ -26,11 +26,7 @@ Be sure that you have:
 - A [Custom Domain](/guides/domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/guides/domains), with DNS properly configured.
 - HTTPS provisioned, indicated by the following notice:
 
-  <Alert title="HTTPS" type="dash-success">
-
-  <span class="glyphicons glyphicons-ok text-success" color="#5CB85C"></span> Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
-
-  </Alert>
+  <Partial file="notes/https-success.md" />
 
 ## Test HTTPS Availability and Existing Redirects
 

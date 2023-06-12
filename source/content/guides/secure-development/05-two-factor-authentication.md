@@ -264,7 +264,7 @@ We recommend adding an [SSH Key](/ssh-keys) to authenticate yourself on Pantheon
 
 ### Single Sign-on for Orgs
 
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-on for Pantheon Organizations](/sso-organizations).
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-on for Pantheon Organizations](/guides/sso/sso-organizations).
 
 ## More Resources
 

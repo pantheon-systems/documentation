@@ -11,9 +11,14 @@ product: [--]
 integration: [--]
 ---
 
+This document provides information on how to migrate WordPress Multisites, including configuration requirements and step-by-step instructions.
+
 <Alert title="Note" type="info">
 
-Before you can migrate a WordPress Multisite, you must be a contract customer, and a Pantheon employee must create a [WordPress Multisite](/guides/multisite) for you.
+WordPress Multisite requires a special configuration that is only available to select customers. Before you can migrate a WordPress Multisite (WPMS), your Workspace must have the WPMS Upstream configured. This allows you to spin up an empty WPMS site to start the manual migration process. 
+
+If you do not have the WPMS Upstream configured under your Workspace, refer to [Pantheon Account Options & Site Hosting Pricing](https://pantheon.io/plans/pricing) to see if you qualify for a WordPress Multisite. A Pantheon employee must create a custom WPMS Upstream in your Workspace before you can create Multisites. Reach out to your account manager to request that a new WPMS Upstream be created for you. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
+
 
 </Alert>
 
@@ -189,7 +194,7 @@ You should now have all three of the major components of your site imported into
 
 ## WP Search and Replace
 
-When you imported your database, all of the URLs remained active at the previous site's domain name. Visiting the site at this point should return an incorrect connection information error message. To resolve it, the last step of the import process is to change the URLs to match the development environment using the WP-CLI command `wp search-replace`. In the example below, replace `example.com` with the domain your site currently runs at.
+When you imported your database, all of the URLs remained active at the previous site's domain name. Visiting the site at this point should return an incorrect DB connection information error message. To resolve it, the last step of the import process is to change the URLs to match the development environment using the WP-CLI command `wp search-replace`. In the example below, replace `example.com` with the domain your site currently runs at.
 
 **Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
 
@@ -203,8 +208,16 @@ Visit the Development environment and confirm your site was imported correctly!
 
 When you re-import the database with current content (prior to going live on Pantheon) you will need to run `wp search-replace` again.
 
+
+<Alert title="Note" type="info">
+
+For you to be able to access your WPMS in different environments, you need to enable the Search and Replace for WPMS. Refer [here to this guide to configure your `sites.yml` file](/guides/multisite/search-replace/#enable-search-and-replace).
+  
+</Alert>
+  
+
 ## More Resources
 
 * [Migrate Sites to Pantheon](/guides/guided/)
-* [Guided WordPress Migrations (video)](/videos/migrate-wordpress)
+* [Guided WordPress Migrations (video)](/migrate-wordpress)
 * [WordPress Launch Check](/guides/wordpress-pantheon/wordpress-launch-check)

@@ -18,7 +18,7 @@ product: [autopilot]
 integration: [--]
 ---
 
-[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
+[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated visual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
 ## What Autopilot Does
 
@@ -48,7 +48,7 @@ Autopilot is for you if you build or maintain WordPress and Drupal sites.
 
 Site upkeep can be tedious with constant monitoring, building, maintaining websites, and working cross-functionally to deliver digital experiences for customers. Autopilot relieves you of the continual maintenance work it takes to keep sites updated.
 
-Autopilot requires [Multidev](/guides/multidev), and is available to Pantheon Gold Accounts or higher.
+Autopilot requires [Multidev](/guides/multidev), and is available to Pantheon [Gold Accounts or higher](/guides/account-mgmt/workspace-sites-teams/workspaces#account-plans).
 
 Autopilot is enabled for Pantheon sites at the organization level.
 
@@ -59,18 +59,15 @@ Autopilot requires the following:
 - A Gold, Platinum, or Diamond account
 - [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
-- A supported framework:
-    - Drupal with Integrated Composer
-    - Drupal 8 with Integrated Composer or Drush 8
-    - WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
-
+- A compatible site framework (refer to [Autopilot Site Compatibility](https://docs.pantheon.io/guides/autopilot#autopilot-site-compatibility) for details
+  
 ### Autopilot Site Compatibility
 
 <Partial file="autopilot/autopilot-compatibility.md" />
 
 ## Autopilot For Agencies
 
-Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning organization.
+Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning workspace.
 
 Agency users can only access Autopilot through the Agency Workspace.
 

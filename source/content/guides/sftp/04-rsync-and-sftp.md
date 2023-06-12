@@ -38,7 +38,7 @@ There are two mechanisms for transferring files: SFTP and rsync.
 
 There are a number of GUI SFTP clients available, such as [WinSCP](https://winscp.net/eng/index.php) and [Cyberduck](https://cyberduck.io/). Do not use simultaneous connections.
 
-1. Navigate to your Site dashboard.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Click **Connection Info** to access your credentials. 
 

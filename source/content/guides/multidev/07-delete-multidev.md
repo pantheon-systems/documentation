@@ -21,7 +21,7 @@ This section provides steps on how to delete a branch environment and how to del
 
 A deleted branch environment will remain on the platform and must be removed manually.
 
-1. Navigate to your **Site Dashboard** then click **Multidev**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Multidev**.
 
 1. Click **Multidev Environments** then click **Delete Environment**.
 
@@ -32,7 +32,7 @@ Branches can be deleted locally and the commit can be pushed to Pantheon, but th
 
 Follow the steps below to delete a branch with no environment associated with it.
 
-1. Navigate to your **Site Dashboard** then click **Multidev**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then click **Multidev**.
 
 1. Click **Git Branches** then click **Delete Git Branch**.
 

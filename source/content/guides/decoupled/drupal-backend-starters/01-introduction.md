@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: Introduction
 description: Learn about the Drupal backend starter for Front-End Sites.
 tags: [webops, workflow, decoupled]
@@ -21,6 +21,12 @@ Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/de
 
 You can use the Drupal backend starter kit to streamline the creation of your Front-End Site on Pantheon. This guide shows you how to install, set up local development, update dependencies, configure build hooks, and more.
 
+<Alert title="Not what you're looking for?" type="success" icon="leaf">
+
+Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
+
+</Alert>
+
 ## Requirements and Considerations
 
 Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.
@@ -32,4 +38,8 @@ Refer to [Drupal Kit Packages](https://decoupledkit.pantheon.io/docs/Packages/dr
 ## More Resources
 
 - [Front-End Sites Overview](/guides/decoupled/overview)
+- [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
+- [WordPress Backend Starter](/guides/decoupled/wp-backend-starters)
 - [Drupal + Next.js Frontend Starter](/guides/decoupled/drupal-nextjs-frontend-starters)
+- [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
+- [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)

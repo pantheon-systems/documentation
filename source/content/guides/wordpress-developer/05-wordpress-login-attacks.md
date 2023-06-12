@@ -61,7 +61,7 @@ Use one of the many [Two-Factor Authentication](https://wordpress.org/plugins/ta
 
 ### Use Single Sign-On (SSO)
 
-SSO often includes or requires [MFA](#add-multi-factor-authentication-mfa) to help secure your site. Some workspaces use an Identity Provider (IdP) for [Single Sign-On](/sso-organizations), including, Google Workspace and Microsoft AzureAD.
+SSO often includes or requires [MFA](#add-multi-factor-authentication-mfa) to help secure your site. Some workspaces use an Identity Provider (IdP) for [Single Sign-On](/guides/sso/sso-organizations), including, Google Workspace and Microsoft AzureAD.
 
 1. Use your IdP's SSO as the login authority for your WordPress site.
 

@@ -31,7 +31,7 @@ You must have the items listed below completed before you begin the steps in thi
 
 - Have a working [clone](/guides/git/git-config#clone-your-site-codebase) as a backup
 
-    - If you accidentally overwrite the core and re-write the Git log, the changes will be permanent. 
+    - If you accidentally overwrite the core and re-write the Git log, the changes will be permanent.
 
 Review the sections below carefully as instructions for reverting commits are different depending on the environment (Dev, Test, Live).
 
@@ -51,7 +51,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
 1. Run a Git log on a core file to get back to a previous version of core.
 
-1. Revert your code back to the commit before core was overwritten. 
+1. Revert your code back to the commit before core was overwritten.
 
     - In this example, before commit `9a11sd8f67af9679a6fsafasdf802834207489328`, where changes were made on `Date: Fri Dec 6 15:37:24 2014 -0700`.
 
@@ -59,13 +59,13 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
 ## Delete the Last Commit That Hasn't Been Sent to Pantheon
 
-You can delete changes made in your local environment that have not been pushed to Pantheon. 
+You can delete changes made in your local environment that have not been pushed to Pantheon.
 
 ### Hard Reset
 
 A hard reset will completely destroy all changes and remove them from the local directory.
 
-Run the command below to locally delete that last commit. 
+Run the command below to locally delete that last commit.
 
 ```bash{promptUser: user}
 git reset --hard HEAD~1
@@ -73,7 +73,7 @@ git reset --hard HEAD~1
 
 ### Soft Reset
 
-A soft reset will keep your files and stage all changes back automatically. 
+A soft reset will keep your files and stage all changes back automatically.
 
 Run the command below to locally delete that last commit:
 
@@ -158,11 +158,11 @@ You can revert a past commit that has been pushed to your Test or Live environme
     git revert COMMITID --no-edit
     ```
 
-    For example: to get rid of the commit that included Devel, grab the commit ID of the Devel commit and use it in the revert command.
+    For example, you can undo a commit that included Devel by copying the commit ID and pasting it into the revert command:
 
-        ```bash{promptUser: user}
-        git revert ee24ab75e44239102bd0e72da8fb3b423168b4c5 --no-edit
-        ```
+    ```bash{promptUser: user}
+    git revert ee24ab75e44239102bd0e72da8fb3b423168b4c5 --no-edit
+     ```
 
 1. Push the change to Pantheon.
 
@@ -172,7 +172,7 @@ You can revert a past commit that has been pushed to your Test or Live environme
 
 ## Reset Dev Environment to Live
 
-You can reset your Dev environment history to match the current state of your Live environment using [Terminus](/terminus). The method in this section is destructive and should be used with caution. It does not clone the Live environment's database or files down to Dev. However, it does reset the Dev environment's codebase. 
+You can reset your Dev environment history to match the current state of your Live environment using [Terminus](/terminus). The method in this section is destructive and should be used with caution. It does not clone the Live environment's database or files down to Dev. However, it does reset the Dev environment's codebase.
 
 1. Identify the most recent commit deployed to Live.
 
@@ -191,9 +191,6 @@ This happens if you **reset** Dev to an earlier commit, rather than using **reve
 ## More Resources
 
 - [Pantheon WebOps Workflow](/pantheon-workflow)
-
-- [Your Site Code on Pantheon](/code)
-
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
 - [Git FAQs](/guides/git/faq-git)
-
 - [Resolve Merge Conflicts](/guides/git/resolve-merge-conflicts)

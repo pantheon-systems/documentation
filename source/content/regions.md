@@ -48,9 +48,25 @@ With this set of region-specific resources, you can run WordPress or Drupal site
 
 1. Install and authenticate [Terminus](/terminus).
 
-1. Use Terminus to create a new site associated with your organization and include the `--region` option.
+1. Use Terminus to create a new site associated with your Workspace and include the `--region` option.
 
-<Partial file="terminus-available-regions-table.md" />
+    Available region codes:
+
+    | Name           | Code |
+    |----------------|------|
+    | Australia      | au   |
+    | Canada         | ca   |
+    | European Union | eu   |
+    | United States  | us   |
+
+    For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress`, `My Workspace Name`, and the `eu` region accordingly):
+
+    ```bash{outputLines: 2-4}
+    terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Workspace Name" --region eu
+    [notice] Creating a new site...
+    [notice] Deploying CMS...
+    [notice] Deployed CMS
+    ```
 
 See `terminus site:create --help` for more information on the options and values used in this command.
 
@@ -69,8 +85,7 @@ If you'd like help migrating your site between regions, our [Professional Servic
 
 Use the Dashboard to see the Pantheon Global Region in which the site is hosted:
 
-1.  Navigate to the Site Dashboard
-1.  Click **Settings**, then **About Site**
+1.  [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), click **Settings**, then **About Site**.
 1.  **Region** will show either `United States` by default, or the name of the International Region in which the Site is hosted.
 
 ![Site Dashboard > Settings > About Site > Region: European Union](../images/settings-about-site-region-eu.png)
@@ -85,10 +100,10 @@ In the following sections, assign `$SITE` or replace it in each example with you
 terminus site:info $SITE
 ```
 
-### Display a list of organization sites and their region
+### Display a list of Workspace sites and their region
 
 ```bash
-terminus site:list --org "My Organization Name" --fields name,region
+terminus site:list --org "My Workspace Name" --fields name,region
 ```
 
 ### Verify Domains Route Correctly

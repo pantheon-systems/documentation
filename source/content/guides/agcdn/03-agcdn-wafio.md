@@ -29,23 +29,23 @@ Support for XSS vulnerabilities.
 
 Image Optimization (IO) renders images using high-density points of presence (POPs) that cache content for longer times and serve millions of image variations. Serving from the edge in this way offloads work from your servers and improves your site's performance. IO supports several formats, including animated GIFs.
 
-## Advanced Bot Detection and Mitigation 
+## Advanced Bot Detection and Mitigation
 
 The following third-party plugins are available:
-  
+
 - [Shape Log Analysis](https://devcentral.f5.com/s/articles/How-to-Setup-Shape-Log-Analysis-in-Fastly?page=1)
 
 - [DataDome](https://docs.datadome.co/docs/module-fastly)
 
-- [PerimeterX](https://www.fastly.com/products/cloud-security/bot-detection)
+- [PerimeterX](https://www.perimeterx.com/)
 
 The customer is responsible for purchasing, maintaining payment for, and supporting these plugins.
 
 [See a comparison of the features](https://pantheon.io/product/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
-### Rate Limiting 
+### Rate Limiting
 
-Rate Limiting is in early access. Rate Limiting lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
+Rate Limiting lets you place limits on request volume at the network perimeter. Organizations of all sizes can adopt this edge configuration to block malicious traffic. Rate Limiting can be configured to guard critical assets including login, form, and promotional pages by adding another layer of security to your site.
 
 The benefits of Rate Limiting include:
 
@@ -54,7 +54,6 @@ The benefits of Rate Limiting include:
 - **Policy-based Control** - Adjust configurations for your policy, including requests per second, and detection window.
 
 - **Custom Responses** - Select from actions that allow you to block requests or log them, and configure custom responses for your policy.
-
 
 ## More Resources
 

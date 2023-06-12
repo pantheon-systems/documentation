@@ -62,7 +62,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 1. Click **Manage Excluded Updates** then the **Exclude** button on the element's row to exclude it from Autopilot updates.
 
 1. Click **Continue**.
-  
+
    ![Autopilot Setup - Configuration screen. Select whether Autopilot should track changes to the Upstream, plugins, or themes.](../../../images/autopilot/autopilot-setup-configuration.png)
 
 ### Schedule
@@ -90,7 +90,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 ### Visual Review
 
-1. Add pages to track for visual regression testing. 
+1. Add pages to track for visual regression testing.
 
    Autopilot automatically suggests up to ten URL paths during setup:
 
@@ -104,7 +104,7 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
-1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace > click **Actions** <i className="fa fa-chevron-down fa-w-14"></i> > **Manage Autopilot Settings**.
+1. Navigate to the **<i className="fa fa-robot"></i>Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
@@ -224,7 +224,15 @@ Some premium and paid plugins require the license to be explicitly activated on 
 
 ## Enable Autopilot Email Notifications
 
+Configure email notifications for Autopilot alerts and activity digests in your Personal Workspace settings:
+
 <Partial file="autopilot/autopilot-email-notifications.md" />
+
+![Personal Workspace Settings include options for Autopilot email notifications](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
+
+1. Click the <i className="fa fa-user-circle"></i> Gravatar in the upper right corner and click <i className="fa fa-user-cog"></i> **User Settings**.
+
+1. Click **Notifications** and select your desired settings in the **Autopilot Email Notifications** section.
 
 ## More Resources
 

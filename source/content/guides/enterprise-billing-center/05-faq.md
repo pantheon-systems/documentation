@@ -104,7 +104,7 @@ The Site Portfolio Report is emailed to the Site Owner of the account or a team 
 
 ### Can I share the Site Portfolio report?
 
-Yes. Any team member with Admin privileges within the Organization can download and share the report.
+Yes. Any team member with Admin privileges within the Workspace can download and share the report.
 
 ### Can I change who receives the email for the Site Portfolio report?
 

@@ -56,10 +56,9 @@ AGCDN provides many features:
 | [Modify and Filter Headers at the Edge](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |<span style="color:green">✔</span> |
 | [Edge Redirects](/guides/agcdn/agcdn-features#edge-redirects) | <span style="color:green">✔</span> |
 | [Domain Masking and Reverse Proxy](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)| <span style="color:green">✔</span> |
-| [Enterprise Blue and Green Deployment Support](/guides/agcdn/agcdn-features#enterprise-blue-and-green-deployment-support)| <span style="color:green">✔</span> | 
-|[Custom Rules and Redirects](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |  <span style="color:green">✔</span> | 
+| [Enterprise Blue and Green Deployment Support](/guides/agcdn/agcdn-features#enterprise-blue-and-green-deployment-support)| <span style="color:green">✔</span> |
+|[Custom Rules and Redirects](/guides/agcdn/agcdn-features#custom-rules-and-redirects) |  <span style="color:green">✔</span> |
 |[Tor Traffic Blocking](/guides/agcdn/agcdn-features#tor-traffic-blocking)| <span style="color:green">✔</span> |
-
 
 ### AGCDN with WAF/IO Features
 
@@ -69,13 +68,12 @@ AGCDN with WAF/IO includes everything in the table above with the following addi
 | ------------- | ------------------------- |
 | [Layer 7 and Enterprise WAF rules](/guides/agcdn/agcdn-features#layer-7-and-enterprise-waf-rules)| <span style="color:green">✔</span> |
 | [Efficient Image Optimization at the Edge](/guides/agcdn/agcdn-features#efficient-image-optimization-at-the-edge)  |  <span style="color:green">✔</span> |
-| [Rate Limiting (early access)](/guides/agcdn/agcdn-wafio#rate-limiting)   | <span style="color:green">✔</span> |
-| [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-features#advanced-bot-detection-and-mitigation-available-as-an-add-on) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> | 
-
+| [Rate Limiting](/guides/agcdn/agcdn-wafio#rate-limiting)   | <span style="color:green">✔</span> |
+| [Advanced Bot Detection and Mitigation](/guides/agcdn/agcdn-features#advanced-bot-detection-and-mitigation-available-as-an-add-on) <Popover content="Not all plugins are supported." />        | <span style="color:green">✔</span> |
 
 ## Is AGCDN Right For Me?
 
-AGCDN is a great option for many users. AGCDN is for you if you're looking for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation. 
+AGCDN is a great option for many users. AGCDN is for you if you're looking for advanced site management, enhanced security, and custom WAF. You can review the [AGCDN case study](https://pantheon.io/blog/fight-cyberattacks-advanced-global-cdn) for a real-life example of an AGCDN implementation.
 
 ## Get AGCDN
 

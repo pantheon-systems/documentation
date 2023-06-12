@@ -25,7 +25,7 @@ Be sure that you have a:
 
 ## Locate Pantheon's DNS Values
 
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio" /> Live) then click **<span class="glyphicons glyphicons-global" /> Domains / HTTPS**.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the target environment (typically <span class="glyphicons glyphicons-cardio" /> Live) then click **<span class="glyphicons glyphicons-global" /> Domains / HTTPS**.
 
 1. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
 
@@ -45,7 +45,7 @@ Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a plan
 
 1. Select your desired Time to Live (TTL) and then click **Save**.
 
-1. Log in to the Pantheon Site Dashboard.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Navigate to the Live environment and click **Domains/HTTPS**.
 
@@ -53,17 +53,11 @@ Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a plan
 
   The process to provision certificates will begin after domain ownership is verified, and you will receive the following notice:
 
-  ```
-  HTTPS
-  Your DNS configuration is correct, and certificate provisioning is queued to start for this domain.
-  ```
+  <Partial file="notes/https-info.md" />
 
   Both the bare domain and the www domain will be accessible over HTTPS after the HTTPS status turns green (which may take up to an hour):
 
-  ```
-  HTTPS
-  Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
-  ```
+  <Partial file="notes/https-success.md" />
 
 1. Repeat the steps above for all domains (www and non-www).
 

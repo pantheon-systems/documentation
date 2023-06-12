@@ -20,7 +20,7 @@ Combining [Autopilot](/guides/autopilot) with [Custom Upstreams](/guides/custom-
 
 ## Autopilot
 
-Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
+Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated visual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
 Pantheon's Autopilot:
 
@@ -68,7 +68,7 @@ New features and functionality can be continuously developed in the Custom Upstr
 
 Download the [Partner Program guide](https://pantheon.io/resources/pantheon-partner-program-guide?docs) to learn more about getting Custom Upstreams and other benefits of becoming a Pantheon Partner. Digital agencies that serve clients and resellers of Pantheon are qualified to join the Partner program.
 
-### Custom Upstreams for Corporate and Higher Education Customers 
+### Custom Upstreams for Corporate and Higher Education Customers
 
 Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 

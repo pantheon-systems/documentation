@@ -1,7 +1,7 @@
 ---
 title: Build Tools
 subtitle: Create a Custom Theme
-description: In step eight of the Build Tools guide, learn how to create a custom theme as part of the build tooks workflow.
+description: In step eight of the Build Tools guide, learn how to create a custom theme as part of the build tools workflow.
 tags: [themes, workflow]
 type: guide
 permalink: docs/guides/build-tools/custom-theme/

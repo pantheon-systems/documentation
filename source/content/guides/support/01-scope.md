@@ -99,7 +99,7 @@ Code-level debugging and site architecture recommendations are available to Diam
 
 ### Performance
 
-If your site is slow or modules aren't working, please see our [performance articles](/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
+If your site is slow or modules aren't working, please see our [performance articles](/guides/frontend-performance/code-css). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
 
 ### Intermittent Issues
 
