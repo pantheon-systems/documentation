@@ -150,6 +150,16 @@ ___
 
 ___
 
+___
+
+## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference/issues/2930423)
+
+<ReviewDate date="2023-06-09" />
+
+**Issue:** Dynamic Entity Reference isn't supported on Pantheon because MySQL triggers are not supported. Stored procedures and events are also not supported. Refer to [Database Stored Procedures](/guides/platform-considerations/platform-site-info#database-stored-procedures) in the [Platform Considerations](/guides/platform-considerations) guide for more information.
+
+___
+
 ## [Feeds](https://www.drupal.org/project/feeds)
 
 <ReviewDate date="2022-01-25" />
