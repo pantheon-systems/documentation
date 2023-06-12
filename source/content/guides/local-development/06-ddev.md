@@ -5,7 +5,7 @@ description: Install and configure DDEV for Drupal local development.
 contributors: [whitneymeredith]
 contenttype: [guide]
 innav: [false]
-categories: [automate]
+categories: [localdev]
 cms: [drupal]
 audience: [development]
 product: [terminus]

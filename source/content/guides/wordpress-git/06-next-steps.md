@@ -5,7 +5,7 @@ description: Beginners guide on how to use the WordPress Dashboard, an SFTP clie
 getfeedbackform: default
 contenttype: [guide]
 innav: [false]
-categories: [git]
+categories: [git, sftp]
 cms: [wordpress]
 audience: [development]
 product: [--]

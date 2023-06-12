@@ -10,7 +10,7 @@ permalink: docs/guides/drupal-hosted-createdashboard-set8/troubleshooting
 editpath: drupal-hosted-createdashboard-set8/13-troubleshooting.md
 contenttype: [guide]
 innav: [false]
-categories: [migrate, troubleshooting]
+categories: [update, troubleshooting]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]

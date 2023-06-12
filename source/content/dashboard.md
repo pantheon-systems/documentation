@@ -1,9 +1,9 @@
 ---
-title: Pantheon Site Dashbvard
+title: Pantheon Site Dashboard Product Overview
 description: A developer console for all your sites.
 contributors: [wordsmither]
 contenttype: [doc]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development, sysadmin]

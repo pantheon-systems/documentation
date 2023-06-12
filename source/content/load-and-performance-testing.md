@@ -5,7 +5,7 @@ tags: [measure, newrelic, professional-services]
 reviewed: "2022-03-15"
 contenttype: [doc]
 innav: [true]
-categories: [track, optimize, test]
+categories: [optimize, test]
 cms: [--]
 audience: [development]
 product: [--]

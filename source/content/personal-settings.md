@@ -3,7 +3,7 @@ title: Personal Settings
 description: Customize and manage your personal settings.
 contenttype: [doc]
 innav: [true]
-categories: [dashboard]
+categories: [overview]
 cms: [--]
 audience: [development, marketing, sysadmin, agency, business]
 product: [dashboard]

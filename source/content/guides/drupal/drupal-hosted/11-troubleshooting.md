@@ -10,7 +10,7 @@ editpath: drupal/drupal-hosted/11-troubleshooting.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [false]
-categories: [migrate, troubleshooting]
+categories: [update, troubleshooting]
 cms: [drupal9, drupal10]
 audience: [development]
 product: [--]

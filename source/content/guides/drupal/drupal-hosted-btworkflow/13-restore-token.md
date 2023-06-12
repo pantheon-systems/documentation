@@ -9,7 +9,7 @@ editpath: drupal/drupal-hosted-btworkflow/13-restore-token.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [false]
-categories: [migrate, sftp]
+categories: [update, sftp]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [dashboard]

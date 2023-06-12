@@ -4,7 +4,7 @@ subtitle: Configure PhpStorm for WordPress
 description: Configure your local environment to build a WordPress plugin or theme with JetBrains PhpStorm.
 contenttype: [guide]
 innav: [false]
-categories: [automate]
+categories: [localdev]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

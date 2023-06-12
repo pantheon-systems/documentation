@@ -10,7 +10,7 @@ editpath: drupal/drupal-hosted-btworkflow/03-prepare.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [false]
-categories: [migrate, git]
+categories: [update, git]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [terminus]

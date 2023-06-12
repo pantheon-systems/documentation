@@ -4,7 +4,7 @@ subtitle: Configure PhpStorm for Drupal
 description: Configure your local environment to build a Drupal module with JetBrains PhpStorm.
 contenttype: [guide]
 innav: [false]
-categories: [automate]
+categories: [localdev]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

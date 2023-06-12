@@ -1,9 +1,9 @@
 ---
-title:  Custom Upstreams
+title:  Custom Upstreams Product Overvidew
 description: Centralized Management for Your Sites
 contributors: [wordsmither]
 contenttype: [doc]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development, sysadmin]

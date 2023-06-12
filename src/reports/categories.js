@@ -29,6 +29,7 @@ class CategoryTree extends React.Component {
                 frontmatter: { 
                   title: { ne: "" }
                   innav: { eq: true}
+                  draft: { ne: true}
                 }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }

@@ -1,5 +1,5 @@
 ---
-title: Local Development
+title: Local Development Overview
 description: Sync your code, database, and files for local development.
 contributors:  [dwayne]
 permalink:  docs/:basename

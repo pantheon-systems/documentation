@@ -10,7 +10,7 @@ editpath: drupal/drupal-hosted-md/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [false]
-categories: [update]
+categories: [update, multidev]
 cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [composer, terminus]

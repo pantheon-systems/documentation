@@ -9,7 +9,7 @@ editpath: drupal/drupal-hosted-btworkflow/08-database.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [false]
-categories: [migrate, database]
+categories: [update, database]
 cms: [drupal8, drupal9, drupal10]
 audience: [development]
 product: [terminus]

@@ -4,7 +4,7 @@ subtitle: GraphQL Requests
 description: Learn about GraphQL best practices and troubleshooting tips.
 contenttype: [guide]
 innav: [false]
-categories: [automate]
+categories: [localdev]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

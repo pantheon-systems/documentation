@@ -7,7 +7,7 @@ contributors: [ccjjmartin]
 newtype: guide
 contenttype: [guide]
 innav: [false]
-categories: [automate]
+categories: [localdev]
 cms: [drupal, wordpress]
 audience: [development]
 product: [terminus]

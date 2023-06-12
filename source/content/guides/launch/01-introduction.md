@@ -8,7 +8,7 @@ showtoc: true
 permalink: docs/guides/launch/
 contenttype: [guide]
 innav: [true]
-categories: [overview, launch, domains]
+categories: [launch]
 cms: [wordpress, drupal]
 audience: [agency, development]
 product: [--]

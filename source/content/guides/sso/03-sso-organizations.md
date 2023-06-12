@@ -4,7 +4,7 @@ subtitle: SSO for Pantheon Organizations
 description: Learn how to enable SAML single sign-on for your organization.
 tags: [security, organizations]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 showtoc: true
 categories: [security, config]
 cms: [drupal, wordpress]

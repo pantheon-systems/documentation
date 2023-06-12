@@ -1,5 +1,5 @@
 ---
-title: Introduction to Terminus
+title: Terminus Demo
 description: The Pantheon CLI.
 contributors:  [scottmassey]
 permalink:  docs/:basename

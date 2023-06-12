@@ -3,7 +3,7 @@ title: New Relic Product Overview
 description: Monitor your application performance
 contributors: [wordsmither]
 contenttype: [doc]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development, sysadmin]

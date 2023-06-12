@@ -9,7 +9,7 @@ editpath: drupal/drupal-hosted-md/09-core-updates.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [false]
-categories: [migrate, config]
+categories: [update, multidev, config]
 cms: [drupal8, drupal9, drupal, drupal10]
 audience: [development]
 product: [composer, dashboard]

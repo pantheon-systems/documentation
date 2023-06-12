@@ -4,7 +4,7 @@ subtitle: Getting Started
 description: How to integrate accessibility into new site builds, and audit existing sites.
 contenttype: [guide]
 innav: [false]
-categories: [create]
+categories: [help]
 cms: [--]
 audience: [marketing, development]
 product: [--]

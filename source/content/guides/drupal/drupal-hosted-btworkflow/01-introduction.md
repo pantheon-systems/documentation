@@ -9,7 +9,7 @@ editpath: drupal/drupal-hosted-btworkflow/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
-categories: [development]
+categories: [update]
 cms: [drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [dashboard, terminus]

@@ -5,7 +5,7 @@ description: Configure a single sign-on system for your Drupal or WordPress site
 tags: [security, sso, users]
 contributors: [kyletaylored]
 contenttype: [guide]
-innav: [true]
+innav: [false]
 showtoc: true
 categories: [security]
 cms: [drupal, wordpress]

@@ -9,7 +9,7 @@ editpath: hosted/05-create-site.md
 reviewed: "2022-12-12"
 contenttype: [guide]
 innav: [false]
-categories: [create, migrate]
+categories: [update]
 cms: [drupal9, drupal10]
 audience: [development]
 product: [dashboard, composer]

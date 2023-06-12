@@ -4,7 +4,7 @@ description: Learn how to work with the Pantheon Site Dashboard.
 contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
-categories: [overview, workflows]
+categories: [workflows]
 cms: [--]
 audience: [--]
 product: [dashboard]

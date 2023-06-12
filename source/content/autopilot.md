@@ -3,7 +3,7 @@ title: Autopilot Product Overview
 description: Always keep your sites up to date.
 contributors: [wordsmither]
 contenttype: [doc]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development, sysadmin]

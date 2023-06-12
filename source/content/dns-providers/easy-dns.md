@@ -8,7 +8,7 @@ permalink: docs/:basename
 editpath: dns-providers/easy-dns.md/
 contenttype: [doc]
 innav: [true]
-categories: [domains, launch]
+categories: [domains]
 cms: [--]
 audience: [--]
 product: [--]

@@ -4,7 +4,7 @@ subtitle: Resources
 description: Tools and techniques to improve your website's accessibility
 contenttype: [guide]
 innav: [false]
-categories: [create]
+categories: [help]
 cms: [--]
 audience: [marketing, development]
 product: [--]

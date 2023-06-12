@@ -6,7 +6,7 @@ tags: [local, ssh]
 reviewed: "2020-02-05"
 newtype: guide
 innav: [false]
-categories: [security]
+categories: [localdev]
 cms: []
 audience: [development]
 product: []

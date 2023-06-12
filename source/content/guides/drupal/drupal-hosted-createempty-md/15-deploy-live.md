@@ -9,7 +9,7 @@ editpath: drupal/drupal-hosted-createempty-md/15-deploy-live.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [false]
-categories: [overview, migrate]
+categories: [update]
 cms: [drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]

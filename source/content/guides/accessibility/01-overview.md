@@ -4,7 +4,7 @@ subtitle: Overview
 description: How to extend your site's reach with accessibility planning, fixes, and reporting.
 contenttype: [guide]
 innav: [true]
-categories: [create]
+categories: [help]
 cms: [--]
 audience: [marketing, development]
 product: [--]

@@ -10,7 +10,7 @@ editpath: drupal/drupal-hosted-deprecated-upstream/03-prepare.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [false]
-categories: [migrate, update]
+categories: [update, update]
 cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [terminus, composer]

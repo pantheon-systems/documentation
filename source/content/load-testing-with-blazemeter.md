@@ -6,7 +6,7 @@ contributors: [jessifischer]
 reviewed: "2022-03-15"
 contenttype: [doc]
 innav: [true]
-categories: [localdev]
+categories: [optimize, test]
 cms: [wordpress, drupal]
 audience: [agency, development]
 product: [newrelic]

@@ -7,7 +7,7 @@ permalink: docs/:basename
 editpath: dns-providers/dyn.md/
 contenttype: [doc]
 innav: [true]
-categories: [domains, launch]
+categories: [domains]
 cms: [--]
 audience: [--]
 product: [--]

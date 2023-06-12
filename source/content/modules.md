@@ -6,7 +6,7 @@ tags: [cache, libraries, modules, site]
 reviewed: "2022-04-01"
 contenttype: [doc]
 innav: [true]
-categories: [cache]
+categories: [dependencies]
 cms: [drupal]
 audience: [development]
 product: [--]

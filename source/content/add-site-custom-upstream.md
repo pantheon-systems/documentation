@@ -4,7 +4,7 @@ description: Build a new site using a template.
 contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
-categories: [migrate]
+categories: [create]
 cms: [wordpress]
 audience: [agency, development]
 product: [--]

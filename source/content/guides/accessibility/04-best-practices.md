@@ -4,7 +4,7 @@ subtitle: Best Practices
 description: Best practices when building an accessible site.
 contenttype: [guide]
 innav: [false]
-categories: [create]
+categories: [help]
 cms: [--]
 audience: [marketing, development]
 product: [--]

@@ -9,7 +9,7 @@ editpath: drupal/drupal-hosted-createempty-md/03-prepare.md
 reviewed: "2021-03-31"
 contenttype: [guide]
 innav: [false]
-categories: [overview, migrate]
+categories: [update]
 cms: [drupal8, drupal9, drupal10]
 audience: [agency, development]
 product: [--]

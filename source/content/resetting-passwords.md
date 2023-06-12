@@ -4,7 +4,7 @@ description: Learn how to reset passwords for WordPress, Drupal, and the Pantheo
 tags: [dashboard, teams, users, security]
 contenttype: [doc]
 innav: [true]
-categories: [dashboard, security]
+categories: [security]
 cms: [drupal, wordpress]
 audience: [agency, development]
 product: [dashboard]

@@ -9,7 +9,7 @@ editpath: drupal/drupal-hosted-deprecated-upstream/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
-categories: [overview, migrate]
+categories: [update]
 cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: []

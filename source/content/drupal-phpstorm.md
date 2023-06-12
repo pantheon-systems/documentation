@@ -3,7 +3,7 @@ title: Configuring JetBrains PhpStorm IDE with Drupal on Pantheon
 description: Best practices and recommendations for building a Drupal site using JetBrains PhpStorm.
 contenttype: [doc]
 innav: [true]
-categories: [develop]
+categories: [php]
 cms: [drupal]
 audience: [development]
 product: [--]

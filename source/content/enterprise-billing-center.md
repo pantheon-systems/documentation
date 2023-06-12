@@ -3,7 +3,7 @@ title: Enterprise Billing Center Product Overview
 description: Billing and site plan information
 contributors: [wordsmither]
 contenttype: [doc]
-innav: [true]
+innav: [false]
 categories: [overview]
 cms: [--]
 audience: [development, sysadmin]

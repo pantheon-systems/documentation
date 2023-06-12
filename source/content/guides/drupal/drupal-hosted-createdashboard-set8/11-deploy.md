@@ -9,7 +9,7 @@ editpath: drupal-hosted-createdashboard-set8/11-deploy.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [false]
-categories: [migrate, git]
+categories: [update]
 cms: [drupal, drupal8, drupal9, drupa10]
 audience: [development]
 product: [dashboard]
