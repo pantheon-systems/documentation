@@ -45,11 +45,7 @@ Next, create a script to authenticate Terminus based on whether a valid session 
 ```yaml:title=.github/workflows/terminus-cache-auth.yml
 - name: Authenticate Terminus
   run: |
-    if [ -f ~/.terminus/cache/session ]; then
-      terminus auth:login
-    else
-      terminus auth:login --machine-token=${{ secrets.TOKEN }}
-    fi
+    terminus auth:login || terminus auth:login --machine-token="${{ inputs.pantheon-machine-token }}"
 ```
 
 Remember to set the `TOKEN` as a secret in your GitHub repository settings for security.
@@ -89,11 +85,7 @@ jobs:
 
     - name: Authenticate Terminus
       run: |
-        if [ -f ~/.terminus/cache/session ]; then
-          terminus auth:login
-        else
-          terminus auth:login --machine-token=${{ secrets.TOKEN }}
-        fi
+        terminus auth:login || terminus auth:login --machine-token="${{ inputs.pantheon-machine-token }}"
 
     - name: Update Session Expiry Date
       run: terminus auth:whoami
