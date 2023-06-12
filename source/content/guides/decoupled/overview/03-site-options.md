@@ -64,6 +64,53 @@ The table below provides compatibility information for Front-End Sites.
 | WordPress  |   5.9 or higher |
 
 
+## Rendering Options
+
+This section provides a comparison of static site generation (SSG), server side rendering (SSR), and incremental static regeneration (ISR) modes, and some common use cases for each.
+
+Refer to [Decoupled Architectures: What Computer Assembles the Websites](https://pantheon.io/blog/decoupled-architectures-what-computer-assembles-websites) for more information. You can also check out this [Decoupled Architecture video](https://www.youtube.com/watch?v=dF39cXW3IqY) for a demonstration of the different approaches each mode takes.
+
+### What Is Static Site Generation (SSG)?
+
+SSG compiles and renders your website at build time. SSG output consists of:
+
+- **Static files:** HTML
+- **Assets:** JavaScript, CSS, etc.
+
+#### Common SSG Use Cases
+
+- Pages with content that is the same for all users
+- Pages that can be publicly cached
+- Pages that do not require data from an outside source
+
+### What Is Server Side Rendering (SSR)?
+
+SSR uses a web server to display your site instead of a browser. The server prepares your HTML file with user-specific data and sends this to the user's browser. The browser interprets the content and displays a fully rendered HTML page without waiting for CSS or JavaScript files to load.
+
+### Common SSR Use Cases
+
+- Pages that are user specific
+- Pages that require authentication
+- Pages that require data fetched at request time
+
+### What Is Incremental Static Regeneration (ISR)?
+
+<Alert title="Note"  type="info" >
+
+Pantheon does not support Incremental Static Regeneration (ISR).
+
+</Alert>
+
+ISR allows you to regenerate static pages during runtime without having to rebuild your site. Refer to [Next.js ISR](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) for more information.
+
+
+### Summary Of Differences
+
+- SSG compiles and renders your website at build time.
+- SSR uses a web server to display your site instead of a browser. SSR pages fetch data at the time the page is requested.
+- ISR is not supported on the Pantheon platform. ISR pages are SSG pages that refetch data after a given time has expired.
+
+
 ## More Resources
 
 - [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
