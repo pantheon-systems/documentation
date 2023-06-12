@@ -4,7 +4,7 @@ description: Quickly sign up for an account and get started building your site.
 contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
-categories: [overview]
+categories: [overview, account]
 cms: [--]
 audience: [agency, business, development, sysadmin]
 product: [--]

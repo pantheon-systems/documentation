@@ -11,7 +11,7 @@ editpath: autopilot/01-introduction.md
 reviewed: "2022-12-13"
 contenttype: [guide]
 innav: [true]
-categories: [automate, test, update, faqs]
+categories: [automate, test, update, faq]
 cms: [--]
 audience: [development]
 product: [autopilot]

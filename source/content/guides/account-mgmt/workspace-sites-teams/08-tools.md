@@ -9,7 +9,7 @@ permalink: docs/guides/account-mgmt/workspace-sites-teams/tools
 editpath: docs/guides/account-mgmt/workspace-sites-teams/08-tools.md
 reviewed: "2022-09-19"
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [organizations]
 cms: [--]
 audience: [sysadmin]

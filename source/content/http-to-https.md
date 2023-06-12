@@ -5,7 +5,7 @@ tags: [https, launch, redirects, security]
 reviewed: "2020-02-12"
 contenttype: [doc]
 innav: [true]
-categories: [launch, domains]
+categories: [domains]
 cms: [drupal, wordpress]
 audience: [development]
 product: [--]

@@ -17,7 +17,7 @@
     - group: 'Web Ops'
       values: [custom-upstreams, multidev, workflows]
     - group: 'Dev Tools'
-      values: [api, cli, config, database, files, git, localdev, php, sftp]
+      values: [api, cli, cms, config, database, files, git, localdev, php, sftp]
     - group: 'Manage Sites'
       values: [automate, backup, cache, dependencies, ecommerce, email, logs, optimize, personalization, search, test, track, traffic, update]
     - group: 'Security'

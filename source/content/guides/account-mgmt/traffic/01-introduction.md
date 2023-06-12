@@ -9,7 +9,7 @@ editpath: docs/guides/account-mgmt/traffic/01-introduction.md
 reviewed: "2022-09-19"
 contenttype: [guide]
 innav: [true]
-categories: [plans]
+categories: [traffic]
 cms: [--]
 audience: [sysadmin]
 product: [--]

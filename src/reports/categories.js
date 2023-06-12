@@ -75,12 +75,11 @@ class CategoryTree extends React.Component {
                         <ul>
                         {heading.node.valid_values.map((groups, i) => {
                             return (
-                              <li key={i}>
+                              <h2 key={i}>
                                 {groups.group}
-                                  <ul>
                                     {groups.values.map((value, i) => {
                                         return (
-                                          <li key={i}>
+                                          <h3 key={i}>
                                             {value}
                                             <ul>
                                             {pages.filter(page => {
@@ -99,11 +98,10 @@ class CategoryTree extends React.Component {
                                             }
 
                                             </ul>
-                                          </li>
+                                          </h3>
                                         )
                                       })}
-                                  </ul>
-                              </li>
+                              </h2>
                             )
                           })
                         }
