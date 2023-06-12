@@ -104,7 +104,7 @@ Pantheon does not support Incremental Static Regeneration (ISR).
 ISR allows you to regenerate static pages during runtime without having to rebuild your site. Refer to [Next.js ISR](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) for more information.
 
 
-### Summary Of Differences
+### Key Differences
 
 - SSG compiles and renders your website at build time.
 - SSR uses a web server to display your site instead of a browser. SSR pages fetch data at the time the page is requested.
