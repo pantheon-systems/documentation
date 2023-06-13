@@ -65,7 +65,7 @@ You can use frontend frameworks other than Gatsby and Next.js, however the proce
 - A repo cannot be connected to more than one Front-End Site
 - There are known issues around disconnecting and reconnecting a repo
 - There are known issues around the GitHub app and org level permissions
-- Incremental Static Regeneration (ISR) is not supported
+- Incremental Static Regeneration (ISR) is not supported on the Pantheon platform. Like SSR, ISR renders individual pages on the fly. However, ISR stores the results in an internal cache. This is a less efficient solution than using a CDN. Pantheon provides [Global CDN](/guides/global-cdn) to all Pantheon sites. The combination of SSR and a CDN solves the same problem as ISR in a more robust way.
 - The repository must have a `package.json` file
 - The repository can have only one `lock` file
 
