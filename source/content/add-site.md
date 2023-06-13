@@ -56,6 +56,10 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 - If so, [manually migrate your site to Pantheon](/migrate-manual)
 
 - If not...
+  
+  **Are you coming from one of the following platforms?**
+  
+  - list of competitor migration docs
 
   **Which CMS are you using?**
 
