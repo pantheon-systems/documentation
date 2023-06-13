@@ -3,8 +3,8 @@ title: Platform Considerations
 subtitle: Platform Security
 description: Learn more about security support on the Pantheon platform.
 contenttype: [guide]
-innav: [false]
-categories: [overview]
+innav: [true]
+categories: [security]
 cms: [--]
 audience: [development]
 product: [--]

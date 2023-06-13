@@ -4,7 +4,7 @@ description: Start with Composer basics then explore suggested WebOps workflows 
 tags: [composer, workflow, updates, webops]
 contenttype: [doc]
 innav: [true]
-categories: [update]
+categories: [dependencies, workflow]
 cms: [wordpress, drupal]
 audience: [development]
 product: [--]

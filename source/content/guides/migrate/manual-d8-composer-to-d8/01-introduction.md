@@ -3,7 +3,7 @@ title: Migrate a Composer-Managed Drupal Site from Another Platform
 subtitle: Introduction
 description: Learn how to migrate a site that's hosted on another platform.
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [migrate]
 cms: [drupal]
 audience: [development]

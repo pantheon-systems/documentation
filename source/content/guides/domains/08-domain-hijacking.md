@@ -7,8 +7,8 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/domains/domain-hijacking
 contenttype: [guide]
-innav: [false]
-categories: [domains]
+innav: [true]
+categories: [security]
 cms: [--]
 audience: [development, sysadmin]
 product: [--]

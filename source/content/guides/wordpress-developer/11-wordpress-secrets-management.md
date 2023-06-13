@@ -3,8 +3,8 @@ title: WordPress Developer's Guide
 subtitle: Secrets Management in WordPress
 description: Best practices in managing secret keys in WordPress.
 contenttype: [guide]
-innav: [false]
-categories: [cms]
+innav: [true]
+categories: [security]
 cms: [wordpress]
 audience: [development]
 product: [--]
