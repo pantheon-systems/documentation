@@ -25,7 +25,7 @@ image: ubuntu:latest
 
 before_script:
   - apt-get update -yq
-  - apt-get install -y php curl perl sudo git
+  - apt-get install -y php curl perl sudo git jq
 
 stages:
   - build
@@ -37,7 +37,7 @@ cache:
 install_terminus:
   stage: build
   script:
-    - export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g')
+    - export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | jq -r .tag_name)
     - mkdir ~/terminus && cd ~/terminus
     - echo "Installing Terminus v$TERMINUS_RELEASE"
     - curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus

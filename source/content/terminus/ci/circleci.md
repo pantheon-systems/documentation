@@ -38,7 +38,7 @@ commands:
           name: Install dependencies
           command: |
             sudo apt-get update
-            sudo apt-get install -y php curl perl git
+            sudo apt-get install -y php curl perl git jq
       - restore_cache:
           keys:
             - terminus-cache-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "composer.lock" }}
@@ -47,7 +47,7 @@ commands:
       - run:
           name: Install Terminus
           command: |
-            export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g')
+            export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | jq -r .tag_name)
             mkdir ~/terminus && cd ~/terminus
             echo "Installing Terminus v$TERMINUS_RELEASE"
             curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus

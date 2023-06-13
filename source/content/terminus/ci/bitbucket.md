@@ -33,9 +33,9 @@ pipelines:
         name: Install and Configure PHP and Terminus
         script:
           - apt-get update
-          - apt-get install -y php curl perl sudo git
+          - apt-get install -y php curl perl sudo git jq
           - git clone $BITBUCKET_CLONE_URL . 
-          - export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g')
+          - export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | jq -r .tag_name)
           - mkdir ~/terminus && cd ~/terminus
           - echo "Installing Terminus v$TERMINUS_RELEASE"
           - curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
