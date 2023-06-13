@@ -1548,9 +1548,9 @@
     - title: 'Backend Starters'
       subtitle: ''
       links:
-        - text: 'Drupal + Next.js Backend Starter'
+        - text: 'Drupal Backend Starter'
           url: '/guides/decoupled/drupal-backend-starters'
-        - text: 'WordPress + Next.js Backend Starter'
+        - text: 'WordPress Backend Starter'
           url: '/guides/decoupled/wp-backend-starters'
 - title: 'Security'
   subtitle: 'Learn more about platform security, secure development, and secure integration on Pantheon.'

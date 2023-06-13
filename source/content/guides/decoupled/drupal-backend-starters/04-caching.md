@@ -1,7 +1,7 @@
 ---
 title: Decoupled Drupal Backend Starter for Front-End Sites
-subtitle: Purge Surrogate Key-based Cache
-description: Learn how to purge surrogate key-based cache.
+subtitle: Caching Recommendations
+description: Learn about caching recommendations for your Drupal backend starter kit.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia]
 layout: guide
@@ -19,12 +19,18 @@ integration: [--]
 
 Cache settings are configured out-of-the-box for you, but there are circumstances in which you might need to make your own configurations, for example, your CMS is not on Pantheon but your frontend is on Pantheon.
 
+## How it Works
+
+<Partial file="decoupled-caching.md" />
+
+## Using the Starter Kit
+
 The recommended caching configurations are automatically enabled if you created your Drupal site using the [backend starter project](/guides/decoupled/drupal-backend-starters/create), including:
 
 - JSON:API is configured to cache responses for 10 minutes.
 - The Pantheon Advanced Page Cache module is enabled. This enables edge caching and purging across the entire decoupled stack.
 
-## Manual Configuration
+## Custom Implementation
 
 You can manually enable edge caching and purging if you did not use the Decoupled Kit backend starter project. The Edge caching instructions below focus on sites running on Pantheon, but can be adapted for other platforms.
 
@@ -43,3 +49,7 @@ You can manually enable edge caching and purging if you did not use the Decouple
     ```
 
 1. Enable the Pantheon Advanced Page Cache module.
+
+## More Resources
+
+- [Fastly Surrogate Key documentation](https://docs.fastly.com/en/guides/working-with-surrogate-keys)

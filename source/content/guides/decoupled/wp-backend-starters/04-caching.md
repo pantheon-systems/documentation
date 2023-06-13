@@ -1,7 +1,7 @@
 ---
 title: Decoupled WordPress Backend Starter for Front-End Sites
-subtitle: Purge Surrogate Key-based Cache
-description: Learn how to purge surrogate key-based cache.
+subtitle: Caching Recommendations
+description: Learn about caching recommendations for your WordPress backend starter kit.
 tags: [webops, workflow, decoupled]
 contributors: [backlineint, cobypear, hckia]
 layout: guide
@@ -19,6 +19,12 @@ integration: [--]
 
 Cache settings are configured out-of-the-box for you, but there are circumstances in which you might need to make your own configurations, for example, your CMS is not on Pantheon but your frontend is on Pantheon.
 
+## How it Works
+
+<Partial file="decoupled-caching.md" />
+
+## Using the Starter Kit
+
 WordPress can be configured to cache GraphQL requests on a CDN until the underlying content changes. This can improve performance for frontend sites that rely on these endpoints. This also reduces the load on your CMS when a large amount of API requests are made in a short period of time, such as a full site build process.
 
 Note that the items below are configured automatically if you created your site using the WordPress backend starter:
@@ -28,7 +34,7 @@ Note that the items below are configured automatically if you created your site 
   minutes.
 - The Pantheon Advanced Page Cache module is enabled, which enables caching and purging across the entire decoupled stack.
 
-## Manual Configuration
+## Custom Implementation
 
 You can manually configure your project to enable edge caching and purging
 if you didn't use the Decoupled Kit backend starter project. The edge caching instructions below focus on sites running on Pantheon, but can be
@@ -65,3 +71,7 @@ We recommend leaving the object cache option disabled when using this plugin on 
 ### GraphQL Caching on Your Frontend
 
 You can use WPGraphQL Network Caching in your frontend application. Refer to the [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters/caching) documentation for more information.
+
+## More Resources
+
+- [Fastly Surrogate Key documentation](https://docs.fastly.com/en/guides/working-with-surrogate-keys)
