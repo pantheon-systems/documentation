@@ -21,11 +21,7 @@ reviewed: "2023-06-08"
 
 ## Caching Authentication Information in Bitbucket Pipelines
 
-To cache the entire `$HOME/.terminus/cache` folder in Bitbucket Pipelines, you can adjust the cache definition in your `bitbucket-pipelines.yml` file and make some changes in the script:
-
-Here's a full example of how you would cache authentication information for builds in Bitbucket Pipelines:
-
-Here's a `bitbucket-pipelines.yml` file which accomplishes the tasks you mentioned. Please ensure that you have defined `TERMINUS_TOKEN` in Bitbucket Pipeline's Environment Variables.
+Here's a `bitbucket-pipelines.yml` file which is a full start-to-finish terminus authentication. Please ensure that you have defined `TERMINUS_TOKEN` in Bitbucket Pipeline's Environment Variables.
 
 ```yaml:title=bitbucket-pipelines.yml
 
@@ -68,4 +64,4 @@ This pipeline does the following:
 8. Defines a cache for the `$HOME/.terminus` directory. The pipeline system will save and restore the cache for subsequent runs.
 ```
 
-In this script, `${TOKEN}` needs to be replaced with the machine token provided by Terminus, and should be added to your environment variables in the Bitbucket pipeline settings.
+In this script, `${TERMINUS_TOKEN}` needs to be replaced with the machine token provided by Terminus, and should be added to your environment variables in the Bitbucket pipeline settings.

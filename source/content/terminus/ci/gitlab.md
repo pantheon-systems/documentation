@@ -18,62 +18,44 @@ integration: [--]
 reviewed: "2023-06-08"
 ---
 
-## Caching Authentication Information in GitLab CI/CD
-
-If you want to restore the entire `$HOME/.terminus/cache` folder in GitLab CI/CD, you can adjust the cache paths in the `.gitlab-ci.yml` file to point to this directory. Here's how you would modify the earlier instructions:
-
-## Step 1: Set Up the Cache Key and Path
-
-The cache key is used to define a unique value for your cache, whereas the cache path is the location of the cache files. This can be done like so:
+Here's a `.gitlab-ci.yml` file which accomplishes authentication of terminus in a CI Environment. Please ensure that you have defined `TERMINUS_TOKEN` in GitLab's CI/CD Environment Variables.
 
 ```yaml
-cache:
-  key: "$CI_JOB_NAME"
-  paths:
-    - ~/.terminus/cache/
-```
+image: ubuntu:latest
 
-Here, `$CI_JOB_NAME` is a predefined variable that represents the job name of the CI/CD pipeline, and `~/.terminus/cache/` is the path to your terminus session cache directory.
+before_script:
+  - apt-get update -yq
+  - apt-get install -y php curl perl sudo git
 
-## Step 2: Check Cache and Authenticate
-
-Next, you would create a script to authenticate Terminus based on whether a valid session cache exists. If the session file exists, it indicates a cache hit. If it does not, then you would use the machine token for authentication. You would use the `test` command to check if the file exists.
-
-```yaml
-script:
-  - if test -f ~/.terminus/cache/session; then terminus auth:login; else terminus auth:login --machine-token=${TOKEN}; fi
-```
-
-Remember to set the `TOKEN` as a CI/CD variable in your GitLab project settings for security.
-
-## Step 3: Updating the Session Expiry Date
-
-Finally, to update the session expiry date, you could use `terminus auth:whoami` after the authentication step.
-
-```yaml
-  - terminus auth:whoami
-```
-
-# Full Example
-
-Here's a full example of how you would cache authentication information for builds in GitLab CI/CD:
-
-```yaml
 stages:
   - build
 
-variables:
-  TERMINUS_TOKEN: ${{TOKEN}}
+cache:
+  paths:
+    - ~/.terminus
 
-build_job:
+install_terminus:
   stage: build
   script:
-    - if test -f ~/.terminus/cache/session; then terminus auth:login; else terminus auth:login --machine-token=${TERMINUS_TOKEN}; fi
+    - export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g')
+    - mkdir ~/terminus && cd ~/terminus
+    - echo "Installing Terminus v$TERMINUS_RELEASE"
+    - curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
+    - chmod +x terminus
+    - sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+    - export TERMINUS_TOKEN=$TERMINUS_TOKEN
+    - terminus auth:login || terminus auth:login --machine-token="${TERMINUS_TOKEN}"
     - terminus auth:whoami
-  cache:
-    key: "$CI_JOB_NAME"
-    paths:
-      - ~/.terminus/cache/
 ```
 
-In this script, `${TOKEN}` needs to be replaced with the machine token provided by Terminus, and should be added to your variables in the GitLab CI/CD settings.
+This pipeline does the following:
+
+1. Uses the `ubuntu:latest` Docker image.
+2. Updates the system and installs necessary tools like PHP, curl, perl, sudo, and git before the script stages.
+3. Defines a cache for the `$HOME/.terminus` directory. The pipeline system will save and restore the cache for subsequent runs.
+4. Determines the latest release of Terminus from the GitHub API and stores it in the `TERMINUS_RELEASE` variable.
+5. Creates a directory for Terminus, downloads it into that directory, makes it executable, and then creates a symbolic link to it in `/usr/local/bin` so that you can run it from anywhere.
+6. Exports the `TERMINUS_TOKEN` environment variable (assuming that you've already set it in your pipeline settings) and uses it to authenticate Terminus.
+7. Checks that Terminus is authenticated with `terminus auth:whoami`.
+
+In this script, `${TERMINUS_TOKEN` needs to be replaced with the machine token provided by Terminus, and should be added to your variables in the GitLab CI/CD settings.

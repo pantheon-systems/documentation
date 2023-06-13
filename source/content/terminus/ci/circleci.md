@@ -20,92 +20,76 @@ reviewed: "2023-06-08"
 
 ## Caching Authentication Information in CircleCI
 
-To cache the entire `$HOME/.terminus/cache` folder in CircleCI, you would adjust the `save_cache` and `restore_cache` steps to include this directory. Here's how you would modify the earlier instructions:
-
-## Step 1: Define Cache Configuration
-
-First, define a cache key for your Terminus cache in the `config.yml` file. Here, I'm using a checksum of `composer.lock` to create a unique key for the cache:
-
-```yaml:title=config.yml
-- restore_cache:
-    keys:
-      - terminus-cache-{{ checksum "composer.lock" }}
-```
-
-## Step 2: Check Cache and Authenticate
-
-Next, create a command to authenticate Terminus based on whether a valid session cache exists. If the session file exists, it indicates a cache hit. If it does not, then you would use the machine token for authentication:
-
-```yaml:title=config.yml
-- run:
-    name: Authenticate Terminus
-    command: |
-      if [ -f ~/.terminus/cache/session ]; then
-        terminus auth:login
-      else
-        terminus auth:login --machine-token=${TOKEN}
-      fi
-```
-
-Remember to set the `TOKEN` as an environment variable in your CircleCI project settings for security.
-
-## Step 3: Updating the Session Expiry Date
-
-Finally, to update the session expiry date, you could use `terminus auth:whoami` after the authentication step:
-
-```yaml:title=config.yml
-- run:
-    name: Update Session Expiry Date
-    command: terminus auth:whoami
-```
-
-## Step 4: Save Cache
-
-After authentication, save the cache for the next run:
-
-```yaml:title=config.yml
-- save_cache:
-    key: terminus-cache-{{ checksum "composer.lock" }}
-    paths:
-      - ~/.terminus/cache/
-```
-
-## Full Example
-
-Here's a full example of how you would cache authentication information for builds in CircleCI:
+Here is an example `config.yml` file for CircleCI that accomplishes an authentication with terminus from a CI Environment. Please make sure to set `TERMINUS_TOKEN` in the CircleCI project's Environment Variables.
 
 ```yaml
 version: 2.1
-jobs:
-  build:
+
+executors:
+  ubuntu-executor:
     docker:
-      - image: circleci/php:7.4
+      - image: circleci/php:latest
+
+commands:
+  install_dependencies:
     steps:
       - checkout
-
+      - run:
+          name: Install dependencies
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y php curl perl git
       - restore_cache:
           keys:
-            - terminus-cache-{{ checksum "composer.lock" }}
-
+            - terminus-cache-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "composer.lock" }}
+            - terminus-cache-{{ .Environment.CIRCLE_BRANCH }}-
+            - terminus-cache-
+      - run:
+          name: Install Terminus
+          command: |
+            export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | perl -nle'print $& while m#"tag_name": "\K[^"]*#g')
+            mkdir ~/terminus && cd ~/terminus
+            echo "Installing Terminus v$TERMINUS_RELEASE"
+            curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
+            chmod +x terminus
+            echo 'export PATH=$PATH:~/terminus' >> $BASH_ENV
+      - save_cache:
+          key: terminus-cache-{{ .Environment.CIRCLE_BRANCH }}-{{ checksum "composer.lock" }}
+          paths:
+            - ~/.terminus
       - run:
           name: Authenticate Terminus
           command: |
-            if [ -f ~/.terminus/cache/session ]; then
-              terminus auth:login
-            else
-              terminus auth:login --machine-token=${TOKEN}
-            fi
-
+            terminus auth:login || terminus auth:login --machine-token="${TERMINUS_TOKEN}"
       - run:
-          name: Update Session Expiry Date
+          name: Validate Terminus
           command: terminus auth:whoami
 
-      - save_cache:
-          key: terminus-cache-{{ checksum "composer.lock" }}
-          paths:
-            - ~/.terminus/cache/
+jobs:
+  build:
+    executor: ubuntu-executor
+    steps:
+      - install_dependencies
 
-      # Continue with your build steps...
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
 ```
 
+This CircleCI config file does the following:
+
+1. Defines an executor with an Ubuntu environment, which installs PHP.
+2. Defines a command `install_dependencies` which does the following:
+    - Checks out the code.
+    - Installs necessary packages.
+    - Restores cache of `~/.terminus` folder if it exists.
+    - Fetches the latest version of Terminus from the GitHub API.
+    - Installs Terminus and adds its path to the environment variable `$PATH`.
+    - Saves the cache for the `~/.terminus` folder.
+    - Authenticates Terminus.
+    - Validates Terminus is logged in.
+3. Defines a job `build` that uses the `install_dependencies` command.
+4. Defines a workflow that executes the `build` job.
 In this script, replace `TOKEN` with the machine token provided by Terminus, and add it to your environment variables in the CircleCI project settings.
