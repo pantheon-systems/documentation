@@ -1,7 +1,7 @@
 ---
-title: Terminus Guide - CI Specific - Github Actions
-subtitle: Authenticating Terminus in a Github Actions Pipline
-description: How to authenticate terminus properly in a CI pipline that avoids errors from authenticating too many times.
+title: Terminus Guide
+subtitle: Authenticate Terminus in a GitHub Actions Pipeline
+description: Learn how to authenticate Terminus in a GitHub Actions CI pipeline without receiving errors.
 permalink: docs/terminus/ci/github-actions
 contributors: [stovak]
 terminuspage: true
@@ -18,9 +18,20 @@ integration: [--]
 reviewed: "2023-06-08"
 ---
 
-## Caching Authentication Information in GitHub Actions
+This section provides information on how to to authenticate Terminus in a GitHub Actions CI pipeline without receiving errors and avoiding authentication rate limits.
 
-Here's a full example of how you would cache authentication information for builds in GitHub Actions:
+## Caching Authentication for GitHub Actions
+
+You can use the example script in this section for a full start-to-finish Terminus authentication in GitHub Actions.
+
+<Alert title="Note"  type="info" >
+
+Before you use this script:
+
+- Replace `${{ secrets.TOKEN }}` with the machine token provided by Terminus.
+- Add the machine token provided by Terminus to your secrets in the GitHub repository settings.
+
+</Alert>
 
 ```yaml:title=.github/workflows/terminus-cache-auth.yml
 name: CI
@@ -74,5 +85,3 @@ jobs:
 
     # Continue with your build steps...
 ```
-
-In this script, you should replace `${{ secrets.TOKEN }}` with the machine token provided by Terminus, and add it to your secrets in the GitHub repository settings.

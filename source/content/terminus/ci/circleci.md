@@ -1,7 +1,7 @@
 ---
-title: Terminus Guide - CI Specific - CIRCLECI
-subtitle: Authenticating Terminus in a Circle CI Pipline
-description: How to authenticate terminus properly in a CI pipline that avoids errors from authenticating too many times.
+title: Terminus Guide
+subtitle: Authenticate Terminus in a CircleCI Pipeline
+description: Learn how to authenticate Terminus in a CircleCI pipeline without errors.
 contributors: [stovak]
 terminuspage: true
 type: terminuspage
@@ -18,9 +18,34 @@ integration: [--]
 reviewed: "2023-06-08"
 ---
 
-## Caching Authentication Information in CircleCI
+This section provides information on how to authenticate Terminus in a CircleCI pipeline without receiving errors and avoiding authentication rate limits.
 
-Here is an example `config.yml` file for CircleCI that accomplishes an authentication with terminus from a CI Environment. Please make sure to set `TERMINUS_TOKEN` in the CircleCI project's Environment Variables.
+## Caching Authentication for CircleCI Pipelines
+
+You can use the example script in this section for a full start-to-finish Terminus authentication in CircleCI. This pipeline does the following:
+
+- Defines an executor with an Ubuntu environment, which installs PHP.
+- Defines a command `install_dependencies` which does the following:
+    - Checks out the code.
+    - Installs necessary packages.
+    - Restores cache of `~/.terminus` folder if it exists.
+    - Fetches the latest version of Terminus from the GitHub API.
+    - Installs Terminus and adds its path to the environment variable `$PATH`.
+    - Saves the cache for the `~/.terminus` folder.
+    - Authenticates Terminus.
+    - Validates Terminus is logged in.
+- Defines a job `build` that uses the `install_dependencies` command.
+- Defines a workflow that executes the `build` job.
+
+<Alert title="Note"  type="info" >
+
+Before you use this script:
+
+- Replace `TOKEN` in the script below with the machine token provided by Terminus.
+- Add the machine token provided by Terminus to your environment variables in the CircleCI project settings.
+
+</Alert>
+
 
 ```yaml
 version: 2.1
@@ -77,19 +102,3 @@ workflows:
     jobs:
       - build
 ```
-
-This CircleCI config file does the following:
-
-1. Defines an executor with an Ubuntu environment, which installs PHP.
-2. Defines a command `install_dependencies` which does the following:
-    - Checks out the code.
-    - Installs necessary packages.
-    - Restores cache of `~/.terminus` folder if it exists.
-    - Fetches the latest version of Terminus from the GitHub API.
-    - Installs Terminus and adds its path to the environment variable `$PATH`.
-    - Saves the cache for the `~/.terminus` folder.
-    - Authenticates Terminus.
-    - Validates Terminus is logged in.
-3. Defines a job `build` that uses the `install_dependencies` command.
-4. Defines a workflow that executes the `build` job.
-In this script, replace `TOKEN` with the machine token provided by Terminus, and add it to your environment variables in the CircleCI project settings.
