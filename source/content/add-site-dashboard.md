@@ -12,7 +12,7 @@ integration: [--]
 tags: [--]
 ---
 
-A Pantheon CMS site contains two components: code, and a CMS (Content Management System).  When you create a site, you are creating both of these components in the Dev environment.  Then, when you are ready, you will do the create your Test and Live environments.
+A Pantheon CMS site contains three components: code, files, and a database containing the content and configurations of your CMS (Content Management System).  When you create a site, you are creating each of these components in the Dev environment.  Then, when you are ready, you will do the create your Test and Live environments.
 
 
 ## Create the Dev Environment
