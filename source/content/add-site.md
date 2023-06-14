@@ -36,7 +36,7 @@ This list does not include scenarios for decoupled architecture. For those, see 
 
 - [I want to use the Dashboard](/add-site-dashboard)
 - I want to use the command line, and my CMS is:
-  - [Drupal](/guides/terminus-drupal-site-management)
+  - [Drupal](/terminus-drupal-site-management)
   - [WordPress](/guides/create-wp-site)
 
 </Tab>
@@ -56,16 +56,16 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 - If so, [manually migrate your site to Pantheon](/migrate-manual)
 
 - If not...
-  
+
   **Are you coming from one of the following platforms?**
     - If so, read our guide for migrating from the platform:
-     
+
       - [Acquia](/guides/acquia)
       - [Kinsta](/guides/kinsta)
       - [Pagely](/guides/pagely)
       - [Platform.sh](/guides/platformsh)
       - [WordPress VIP](/guides/wordpressvip)
-      - [WP Engine](/wpengine)
+      - [WP Engine](/guides/wpengine)
 
     - If not...
 
@@ -77,7 +77,7 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 
       - [No, remain at my current version](/guides/guided)
 
-      - [No, I am using Drupal version 8 or lower](/guides/guided)
+      - [No, I am using Drupal version 8 or lower](/guides/drupal-unhosted)
 
       - Yes, upgrade my site to the latest version of Drupal:
         - [My site is Composer-managed, *and* I'm using Drush](/guides/drush/drush-import)
