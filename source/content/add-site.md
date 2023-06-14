@@ -51,7 +51,7 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 
 <Tab title="Migrate" id="migrate">
 
-**Is your site archive greater than 500MB, or only exists on your local machine?**
+**Is your site archive greater than 500MB, or does it only exist on your local machine?**
 
 - If so, [manually migrate your site to Pantheon](/migrate-manual)
 
@@ -88,15 +88,13 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 
       <Accordion title="WordPress" id="wordpress">
 
-      **Do you want to use a Custom Upstream?**
+      [Use our guided migration](/guides/guided), unless you have one of the following scenarios:
 
-      - If so, [use the Pantheon Migrations plugin with a custom WordPress upstream](https://wordpress.org/plugins/bv-pantheon-migration/#description)
-      - If not...
+      - **To use a Custom Upstream**, [use the Pantheon Migrations plugin with a custom WordPress upstream](https://wordpress.org/plugins/bv-pantheon-migration/#description)
 
-        **Are you using multisite, or do you want to avoid installing a plugin?**
+      - **If you are using Multisite**, use [Migrate a WordPress Multisite](/migrate-wordpress-multisite).
 
-        - If so, [manually migrate your site to Pantheon](/migrate-manual)
-        - If not, [use our guided migration](/guides/guided)
+      - **To avoid installing a plugin**, use [Manually Migrate Your Site to Pantheon](/migrate-manual).
 
       </Accordion>
 
