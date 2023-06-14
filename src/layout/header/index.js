@@ -166,6 +166,7 @@ const Header = ({ data, page }) => (
                   className="addsearch"
                   placeholder="Search Pantheon Documentation"
                   aria-label="Search through documentation"
+                  data-addsearch-id="search_widget"
                 />
                 { page == "default" ?
                   <AddSearch />
