@@ -58,39 +58,47 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 - If not...
   
   **Are you coming from one of the following platforms?**
-  
-  - list of competitor migration docs
+    - If so, read our guide for migrating from the platform:
+     
+      - [Acquia](/guides/acquia)
+      - [Kinsta](/guides/kinsta)
+      - [Pagely](/guides/pagely)
+      - [Platform.sh](/guides/platformsh)
+      - [WordPress VIP](/guides/wordpressvip)
+      - [WP Engine](/wpengine)
 
-  **Which CMS are you using?**
+    - If not...
 
-  <Accordion title="Drupal" id="drupal">
+      **Which CMS are you using?**
 
-  **Do you want to upgrade your Drupal version during migration, or are you using Drupal version 9 or higher?**
+      <Accordion title="Drupal" id="drupal">
 
-  - [No, remain at my current version](/guides/guided)
+      **Do you want to upgrade your Drupal version during migration, or are you using Drupal version 9 or higher?**
 
-  - [No, I am using Drupal version 8 or lower](/guides/guided)
+      - [No, remain at my current version](/guides/guided)
 
-  - Yes, upgrade my site to the latest version of Drupal:
-    - [My site is Composer-managed, *and* I'm using Drush](/guides/drush/drush-import)
-    - [My site is Composer-managed, and I'm *not* using Drush](/guides/drupal-unhosted-composer)
-    - [My site is *not* Composer-managed](/guides/drupal-unhosted)
+      - [No, I am using Drupal version 8 or lower](/guides/guided)
 
-  </Accordion>
+      - Yes, upgrade my site to the latest version of Drupal:
+        - [My site is Composer-managed, *and* I'm using Drush](/guides/drush/drush-import)
+        - [My site is Composer-managed, and I'm *not* using Drush](/guides/drupal-unhosted-composer)
+        - [My site is *not* Composer-managed](/guides/drupal-unhosted)
 
-  <Accordion title="WordPress" id="wordpress">
+      </Accordion>
 
-  **Do you want to use a Custom Upstream?**
+      <Accordion title="WordPress" id="wordpress">
 
-  - If so, [use the Pantheon Migrations plugin with a custom WordPress upstream](https://wordpress.org/plugins/bv-pantheon-migration/#description)
-  - If not...
+      **Do you want to use a Custom Upstream?**
 
-    **Are you using multisite, or do you want to avoid installing a plugin?**
+      - If so, [use the Pantheon Migrations plugin with a custom WordPress upstream](https://wordpress.org/plugins/bv-pantheon-migration/#description)
+      - If not...
 
-    - If so, [manually migrate your site to Pantheon](/migrate-manual)
-    - If not, [use our guided migration](/guides/guided)
+        **Are you using multisite, or do you want to avoid installing a plugin?**
 
-  </Accordion>
+        - If so, [manually migrate your site to Pantheon](/migrate-manual)
+        - If not, [use our guided migration](/guides/guided)
+
+      </Accordion>
 
 </Tab>
 
