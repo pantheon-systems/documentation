@@ -1,8 +1,8 @@
 ---
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
-contributors: [alexfornuto, rachelwhitton, carolynshannon]
-reviewed: "2021-02-26"
+contributors: [wordsmither]
+reviewed: "2023-06-15"
 contenttype: [doc]
 showtoc: true
 categories: [overview, help]
@@ -136,6 +136,59 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 </Alert>
 
+```
+
+</Example>
+
+### Cards
+
+Use cards to visually display a list of items, with links to more information.
+
+<Alert title="Note" type="info" >
+
+`CardGroup/Card` is intended for Terminus guide use only.  Instead, use `ProductGroup/Product`
+
+</Alert>
+
+<Example>
+
+![Cards](../../../images/sg-cards.png)
+
+
+<hr className="source-code" /> <br/>
+
+```markdown
+<ProductGroup>
+
+  <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/autopilot"}>
+
+  Automate finding, testing, and applying WordPress and Drupal updates. 
+
+  </Product>
+
+  <Product title={"Quicksilver Webhooks"} link={"/guides/quicksilver/hooks"}>
+
+  Use our [Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) for a generic Webhook implementation.
+
+  </Product>
+
+</ProductGroup>
+```
+
+</Example>
+
+### Check
+
+Simple green checkmark.  Replaces `<span style="color:green">✔</span>`
+
+<Example>
+
+<Check/>
+
+<hr className="source-code" /> <br/>
+
+```markdown
+<Check/>
 ```
 
 </Example>
@@ -297,19 +350,38 @@ Vary: Accept-Encoding, Cookie
 
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
 
-## Dummy Text
+### DNS
 
-Documentation IP set: specifically reserved for documentation (Reserved IP addresses):
+Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do *not* have `draft: true` frontmatter. 
 
+<Example>
+
+<DNSProviderDocs />
+
+
+<hr className="source-code" /> <br/>
+
+```markdown
+<DNSProviderDocs />
 ```
-203.0.113.0–203.0.113.255
+
+</Example>
+
+### File Downloads
+
+Creates a link to a downloadable file.  Files must be stored in `source/scripts`.
+
+<Example>
+
+<Download file="pantheon-backup-to-s3.sh" />
+
+<hr className="source-code" /> <br/>
+
+```markdown
+<Download file="pantheon-backup-to-s3.sh" />
 ```
 
-Pantheon
-
-- Organization: Anita Agency
-
-- Site name: Anita Drupal
+</Example>
 
 ## Error Messages
 
@@ -655,6 +727,19 @@ This Panel contains additional context, or advanced instructions.
 
 </Example>
 
+## Placeholder Text
+
+Documentation IP set: specifically reserved for documentation (Reserved IP addresses):
+
+```
+203.0.113.0–203.0.113.255
+```
+
+Pantheon
+
+- Organization: Anita Agency
+
+- Site name: Anita Drupal
 
 ## Redirects
 
@@ -709,6 +794,17 @@ After you create the file, include it in the doc:
 
 To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
 
+
+### Review Dates
+
+Review dates indicate the last time a member of the Documentation team reviewed a document.  There are two ways to indicate review dates.
+
+The most common is by using the frontmatter `reviewed: "YYYY-MM-DD" `.  The other is at the section level, using the ReviewDate component:
+
+```markdown
+### Section Title
+<ReviewDate date="YYYY-MM-DD" />
+```
 
 ## Screenshots
 
@@ -933,6 +1029,11 @@ Some code.
 - Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a Workspace
 - Supporting Workspace: (formerly Supporting Organization): a Professional Workspace that's been added to a specific site's Team.
 
+### Table of Contents
+
+You can add a TOC to the right side of a document using the following frontmatter: `showtoc: true`.
+
+
 ## Tooltips
 
 Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:
@@ -998,3 +1099,55 @@ Some General Rules:
 - Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
 - Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
 - Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
+
+### Where's the User?
+
+It is important to direct the user to the area in which an activity is taking place.  For example:
+
+<Example>
+
+To create a backup:
+
+1. Click the **Backup** tab.
+
+1. More instructions...
+
+</Example>
+
+This instruction does not tell the user where the Backup tab is - is it in a Workspace?  If so, which one?  Is it on a Site Dashboard?
+
+Instead, start by placing the user in the correct location:
+
+<Example>
+
+To create a backup:
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+
+1. Click the **Backup** tab.
+
+1. More instructions...
+
+</Example>
+
+Here are code snippets you can use to direct users to the correct location:
+
+#### Dashboard
+
+```markdown
+[Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)
+```
+
+#### Personal Workspace
+
+```markdown
+[Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+```
+
+#### Professional Workspace
+
+```markdown
+[Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+
+```
+
