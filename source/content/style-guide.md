@@ -743,26 +743,30 @@ Pantheon
 
 ## Redirects
 
-This is Pantheon Docs Team-specific.
+Redirects are required whenever you change an existing URL or when a doc or guide is deprecated and removed from the Docs site. Deprecated pages should always be redirected to related content so users to do not receive a 404. Always add the Redirect label to the PR that includes a redirect.  This allows us to find these changes later if we need to reference why a page was moved or deleted.
 
 When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
 
+<Example>
 
-| Redirect from                  | to                                   |
-|--------------------------------|--------------------------------------|
-| https: //docs.pantheon.io/doc-name | https: //docs.pantheon.io/new-doc-name
-| https: //docs.pantheon.io/guides/guide-name  |https: //docs.pantheon.io/guides/new-guide-name    |
-| https: //docs.pantheon.io/drush-import| https: //docs.pantheon.io/guides/drush-import       |
+| Redirect from | to |
+|---|---|
+| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
+| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
+| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
+| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/guides/drush/drupal-commandline |
 
-**Source Code**
+<hr className="source-code" /> <br/>
 
-````markdown
-| Redirect from                              |to                                             |
-|---------------------------------------------|-------------------------------------------------|
-| https: //docs.pantheon.io/doc-name          | https: //docs.pantheon.io/new-doc-name          |
-| https: //docs.pantheon.io/guides/guide-name | https: //docs.pantheon.io/guides/new-guide-name |
-| https: //docs.pantheon.io/drush-import      | https: //docs.pantheon.io/guides/drush-import   |
-````
+```markdown
+| Redirect from | to |
+|---|---|
+| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
+| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
+| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
+| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/guides/drush/drupal-commandline |
+```
+</Example>
 
 ## Reusable Content/Partials
 
@@ -795,7 +799,7 @@ After you create the file, include it in the doc:
 To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
 
 
-### Review Dates
+## Review Dates
 
 Review dates indicate the last time a member of the Documentation team reviewed a document.  There are two ways to indicate review dates.
 
@@ -882,7 +886,7 @@ Use ✓ to indicate yes and `❌` to indicate no.
 
 Visit the [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables) for help with creating nice-looking and well-formatted tables.
 
-<Accordion title="Advanced Tables">
+### Advanced Tables
 
 Standard markdown tables don't allow for cells to span multiple rows or columns, but by using the [gatsby-remark-grid-tables](https://www.gatsbyjs.org/packages/gatsby-remark-grid-tables/) plugin, we can overcome this limitation:
 
@@ -937,8 +941,6 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 ````
 
 </Example>
-
-</Accordion>
 
 ## Tabs
 
@@ -1029,10 +1031,9 @@ Some code.
 - Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a Workspace
 - Supporting Workspace: (formerly Supporting Organization): a Professional Workspace that's been added to a specific site's Team.
 
-### Table of Contents
+## Table of Contents
 
 You can add a TOC to the right side of a document using the following frontmatter: `showtoc: true`.
-
 
 ## Tooltips
 
@@ -1100,7 +1101,7 @@ Some General Rules:
 - Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
 - Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
 
-### Where's the User?
+## Where's the User?
 
 It is important to direct the user to the area in which an activity is taking place.  For example:
 
@@ -1132,19 +1133,19 @@ To create a backup:
 
 Here are code snippets you can use to direct users to the correct location:
 
-#### Dashboard
+**Dashboard**
 
 ```markdown
 [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)
 ```
 
-#### Personal Workspace
+**Personal Workspace**
 
 ```markdown
 [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 ```
 
-#### Professional Workspace
+**Professional Workspace**
 
 ```markdown
 [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
