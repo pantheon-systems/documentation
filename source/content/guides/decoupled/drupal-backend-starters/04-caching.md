@@ -21,6 +21,8 @@ Cache settings are configured out-of-the-box for you, but there are circumstance
 
 ## How it Works
 
+You can configure your Drupal site to cache JSON:API endpoints until the underlying content changes. You can also cache these same routes on a CDN. Edge caching can improve performance for your Front-End Sites that rely on these API endpoints, and also reduce the load on your CMS in cases when a large number of API requests are made in a short period of time, such as during a full site build process.
+
 <Partial file="decoupled-caching.md" />
 
 ## Using the Starter Kit

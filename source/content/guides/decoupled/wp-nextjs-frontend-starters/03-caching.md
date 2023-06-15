@@ -21,6 +21,8 @@ Cache settings are configured out-of-the-box for you, but there are circumstance
 
 ## How it Works
 
+Edge caching can improve performance for Front-End Sites that rely on API endpoints, and also reduce the load on your CMS in cases when a large number of API requests are made in a short period of time, such as during a full site build process.
+
 <Partial file="decoupled-caching.md" />
 
 ## Using the Starter Kit
@@ -34,34 +36,11 @@ The information in this section uses WordPress with the plugins below installed:
 
 The `GraphqlClientFactory` class from our `@pantheon-systems/wordpress-kit` npm package adds the `Fastly-Debug` header to each request and uses the GET method by default to take advantage of WPGraphQL Smart Cache network caching. Responses from WordPress will contain the `Surrogate-Key` header. You can use these keys to instruct your frontend to purge content from a cache when the content in WordPress changes.
 
-## Ensure Headers Are Set On Custom Routes
+## Cache-Control Headers
 
-<Alert title="Note"  type="info" >
-
-The Decoupled Kit [WordPress Backend Starter Project](/guides/decoupled/wp-backend-starters) and [WordPress Next.js Starter Kit](/guides/decoupled/wp-nextjs-frontend-starters) handle the configuration below automatically.
-
-</Alert>
-
-1. Verify that the WordPress backend has the [WPGraphQL plugin](https://wordpress.org/plugins/wp-graphql/) installed and configured.
-
-1. Verify that the WordPress backend has the [WPGraphQL Smart Cache plugin](https://github.com/wp-graphql/wp-graphql-smart-cache) installed and configured and that the Object Cache option is disabled.
-
-1. Verify that the WordPress backend has the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) installed and configured.
-
-1. Review your route fetches data and confirm that it uses the `@pantheon-systems/wordpress-kit` Graphql client or requests to WordPress are made using the GET method and include the `Fastly-Debug: 1` header. You must use the `client.rawRequest()` method to see headers.
-
-1. Confirm that headers are added to the outgoing response from Next.js in
-  `getServerSideProps` (refer to [`context.res`](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter)).
-
-1. Use the [`next-wordpress-starter` helper function](https://github.com/pantheon-systems/decoupled-kit-js/blob/f3eebf4b502cbad123ec8a7fcd4d4f8f0fb413eb/starters/next-wordpress-starter/lib/setOutgoingHeaders.js#L25) that combines headers from multiple requests and adds them to the outgoing response.
-
-## Purge Edge Caching
-
-This guide explains the how to set Cache-Control headers using
+This section explains how to set Cache-Control headers using
 `@pantheon-systems/wordpress-kit` in the `next-wordpress-starter`, or any
 Next.js application using the `wordpress-kit`.
-
-### Set the Cache-Control Headers with WordPress Kit
 
 The `@pantheon-systems/wordpress-kit` npm package exports a function,
 `setEdgeHeaders`, which takes in a response object and a cache-control header
@@ -78,7 +57,7 @@ Cache-Control: public, s-maxage=600
 
 You must pass in your own cache-control header to override the default. For example:
 
-```jsx title=pages/example/index.js
+```jsx
 import { setEdgeHeaders } from '@pantheon-systems/wordpress-kit';
 
 export default function MyPage(props) {
@@ -98,6 +77,101 @@ export async function getServerSideProps(context) {
 	// Fetch data and return props...
 }
 ```
+
+You can take advantage of this feature without using the starter kit.
+
+## Purge Edge Caching
+
+### Ensure Headers Are Set On Custom Routes
+
+<Alert title="Note"  type="info" >
+
+The Decoupled Kit [WordPress Backend Starter Project](/guides/decoupled/wp-backend-starters) and [WordPress Next.js Starter Kit](/guides/decoupled/wp-nextjs-frontend-starters) handle the configuration below automatically. You do not need to make configuration changes for existing routes because the starter kit configures this for you.
+
+</Alert>
+
+1. Verify that the WordPress backend has the [WPGraphQL plugin](https://wordpress.org/plugins/wp-graphql/) installed and configured.
+
+1. Verify that the WordPress backend has the [WPGraphQL Smart Cache plugin](https://github.com/wp-graphql/wp-graphql-smart-cache) installed and configured and that the Object Cache option is disabled.
+
+1. Verify that the WordPress backend has the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) installed and configured.
+
+1. Review your route fetches data and confirm that it uses the `@pantheon-systems/wordpress-kit` Graphql client or requests to WordPress are made using the GET method and include the `Fastly-Debug: 1` header. You must use the `client.rawRequest()` method to see headers.
+
+1. Confirm that headers are added to the outgoing response from Next.js in
+  `getServerSideProps` (refer to [`context.res`](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter)).
+
+1. Use the [`next-wordpress-starter` helper function](https://github.com/pantheon-systems/decoupled-kit-js/blob/f3eebf4b502cbad123ec8a7fcd4d4f8f0fb413eb/starters/next-wordpress-starter/lib/setOutgoingHeaders.js#L25) that combines headers from multiple requests and adds them to the outgoing response.
+
+### Create a New Route
+
+Follow the steps below if you need to create a **new** route.
+
+In the example below, the code is used to set the headers necessary for
+cache purging on a post list page.
+
+1. Open your post list page, import required utilities, and create an instance of the GraphQL Client:
+
+	```js
+	import {
+		gql,
+		GraphQLClientFactory,
+		setEdgeHeader,
+		setSurrogateKeyHeader,
+	} from '@pantheon-systems/wordpress-kit';
+	const client = new GraphQLClientFactory(
+		'https://dev-wordpress-purge-demo.pantheonsite.io/wp/graphql',
+		{
+			method: 'GET',
+		},
+	).create();
+	```
+
+1. Use the `client` instance in `getSeverSideProps` to fetch data from
+   WordPress, and then use utilities provided by `wordpress-kit` to set caching
+   related headers on the outgoing response:
+
+	```js
+	export async function getServerSideProps({ res }) {
+		// Customize your query as needed
+		const query = gql`
+			query LatestPostsQuery($totalPosts: Int!) {
+				posts(first: $totalPosts) {
+					edges {
+						node {
+							id
+							uri
+							title
+							featuredImage {
+								node {
+									altText
+									sourceUrl
+								}
+							}
+						}
+					}
+				}
+			}
+		`;
+		// Retrieve post data and surrogate key values from WordPress
+		const {
+			data: {
+				posts: { edges },
+			},
+			headers,
+		} = await client.rawRequest(query, { totalPosts: 100 });
+		const posts = edges.map(({ node }) => node);
+		const keys = headers.get('surrogate-key');
+		// Add unique surrogate keys to outgoing response
+		keys && setSurrogateKeyHeader(keys, res);
+		// Set cache control header to ensure response is cached at edge
+		setEdgeHeader({ res });
+		return { props: { posts } };
+	}
+	```
+
+	- You should now see the `Surrogate-Key` header on the outgoing response for `/posts/` if your backend is configured correctly. This allows the cache for this page to be purged automatically when related content changes in WordPress.
+
 
 ## More Resources
 

@@ -21,6 +21,8 @@ Cache settings are configured out-of-the-box for you, but there are circumstance
 
 ## How it Works
 
+You can configure your WordPress site cache GraphQL requests on a CDN until the underlying content changes. This can improve performance for your Front-End Sites that rely on these endpoints, and reduce the load on your CMS in cases when a large number of API requests are made in a short period of time, such as during a full site build process.
+
 <Partial file="decoupled-caching.md" />
 
 ## Using the Starter Kit
