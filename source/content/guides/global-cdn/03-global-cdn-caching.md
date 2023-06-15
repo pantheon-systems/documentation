@@ -17,7 +17,7 @@ integration: [--]
 
 This section provides steps on how to configure and verify your edge caching.
 
-Global CDN is automatically present on each Pantheon site. You do not need to form install or activate it. However, you should review the content on this page if you are interested in configuring how Global CDN will cache your site.
+Global CDN is automatically present on each Pantheon site. You do not need to install or activate it. However, you should review the content on this page if you are interested in configuring how Global CDN will cache your site.
 
 <Alert title="Note" type="info">
 
