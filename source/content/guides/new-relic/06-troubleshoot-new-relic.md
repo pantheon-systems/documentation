@@ -71,13 +71,11 @@ If the New Relic account holder (the site owner or user who activated the New Re
 
 You must manually [remove a deleted Multidev environment in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers) after you delete it from your Pantheon site.
 
-1. Navigate to your Dashboard, select the **New Relic** tab, and click **Open New Relic**.
+1. Navigate to your Dashboard, select the **New Relic** tab, and click **Open New Relic** to see **APM & Services**.
 
-1. Select **APM** and then select **Applications** in the New Relic menu bar.
+1. Select the specific APM (application) you want to remove from the **APM** list, then click the **Application** tab in the left menu.
 
-1. Wait until the color-coded health status turns gray, and then click on the app's gear icon.
-
-1. Select **Delete app**, and then click the confirmation button.
+1. Navigate to the bottom of the page and click the **Delete application** button and then click the **Confirmation** button when prompted.
 
 ## Disable New Relic Browser Monitoring Agent
 
