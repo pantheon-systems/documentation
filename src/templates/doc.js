@@ -155,7 +155,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        getfeedbackform
         categories
         cms
         contributors {

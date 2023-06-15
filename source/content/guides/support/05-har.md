@@ -2,7 +2,6 @@
 title: Get Support
 subtitle: Generate a HAR
 description: Learn how to generate a HAR file in the browser.
-getfeedbackform: default
 contenttype: [guide]
 innav: [false]
 categories: [help]
