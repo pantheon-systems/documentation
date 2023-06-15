@@ -4,7 +4,7 @@ description: Formatting rules and guidelines for Pantheon's open-source document
 contributors: [wordsmither]
 reviewed: "2023-06-15"
 contenttype: [doc]
-showtoc: true
+showtoc: false
 categories: [overview, help]
 newcms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]
@@ -18,6 +18,11 @@ All documentation repositories should adhere to a [style guide](https://en.wikip
 You can also reference the [Pantheon Documentation Template](/doc-template) to see the common structure of our docs, or copy it to begin a new content piece.
 
 Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines.
+
+```toc
+# This code block gets replaced with the TOC
+```
+
 
 ## Before You Begin Sections
 
