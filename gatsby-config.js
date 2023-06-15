@@ -169,7 +169,7 @@ module.exports = {
               tight: true,
               ordered: false,
               fromHeading: 2,
-              toHeading: 2,
+              toHeading: 3,
               className: "table-of-contents"
             },
           },
