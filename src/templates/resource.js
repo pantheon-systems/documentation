@@ -140,7 +140,6 @@ export const pageQuery = graphql`
         title
         description
         categories
-        getfeedbackform
         contributors {
           id
           name
