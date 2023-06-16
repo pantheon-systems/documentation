@@ -21,7 +21,7 @@ This section provides information on how to open a support ticket as well as oth
 
 <Alert title="Note" type="info" >
 
-We recommend you begin your Support journey from the affected [Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard). This will ensure that the appropriate Support options are available to you, and will simplify the process of contacting us.
+We recommend you begin your Support journey from the affected [Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard). This ensures that the appropriate Support options are available to you, and simplifies the process of contacting us.
 
 </Alert>
 
@@ -31,7 +31,7 @@ The ticket support feature is available to certain Account packages and account 
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) affected by the issue.
 
-1. Click **Support**, then **Open Ticket**. This will automatically include the site/workspace and user information.
+1. Click **Support**, then **Open Ticket**. This automatically includes the site/workspace and user information.
 
 1. Choose the **ticket type**.
 
@@ -46,7 +46,7 @@ The ticket support feature is available to certain Account packages and account 
 
 1. Click **Open Ticket**
 
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an Workspace, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
+After a ticket is submitted, you can view details for your support requests. If are you are part of an Workspace, your support tickets are visible to all members except [Unprivileged users](/guides/account-mgmt/workspace-sites-teams/teams#organizations-roles-and-permissions).
 
 ## Real Time Chat Support
 
@@ -77,6 +77,6 @@ Some in-browser ad or tracking blockers can interfere with the **Launch Chat** b
 
 ## Premium Technical Support and On-Call Services
 
-Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab. 
+Diamond and Platinum Account customers can call Pantheon's premium technical support line directly for any technical issues, escalations, site, billing, or overages queries. The phone number can be found in your Workspace, in the Support tab.
 
 Diamond and Platinum customers also have the option to page Pantheon's operations response team, either via the Pantheon Dashboard or via an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
