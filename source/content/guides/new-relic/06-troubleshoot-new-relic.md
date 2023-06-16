@@ -67,9 +67,9 @@ If the New Relic account holder (the site owner or user who activated the New Re
 
 [Contact support](/guides/support/contact-support/) if you are unsure what user the New Relic account is associated with and are unable to identify where the password reset email has been sent.
 
-## Removing Multidev Environments in New Relic
+## Remove Multidev Environments in New Relic
 
-You must manually [remove a deleted Multidev environment in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers) after you delete it from your Pantheon site.
+You must manually [remove a deleted Multidev environment in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers) after you [delete the Multidev from your Pantheon site](/guides/multidev/delete-multidev).
 
 1. Navigate to your Dashboard, select the **New Relic** tab, and click **Open New Relic** to see **APM & Services**.
 
