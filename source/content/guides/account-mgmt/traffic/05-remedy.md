@@ -177,7 +177,7 @@ if ($request_ip_forbidden) {
 
 <TabList>
 
-<Tab title="Drupal" id="d7tab" active={true}>
+<Tab title="Drupal 7" id="d7tab" active={true}>
 
 Navigate to the site's `/admin/config/people/ip-blocking` and enter the IP address to block.
 
@@ -186,6 +186,14 @@ If the site is slow or unavailable, run the MySQL query below, replacing `192.0.
 ```sql
 mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 ```
+
+</Tab>
+
+<Tab title="Drupal 8 or higher" id="drupal8+">
+
+1. Install the [Drupal ban module](https://www.drupal.org/docs/8/core/modules/ban/overview) (it is not enabled by default).
+
+1. Navigate to the site's `/admin/config/people/ban` and enter the IP address to block: `ban_ip`
 
 </Tab>
 
