@@ -34,7 +34,7 @@ If you are unable to log in, try [resetting your password](https://dashboard.pan
 
 ### How can I review my chat threads?
 
-Access support history for chats in the User or Site Dashboards by selecting **Support** > **Launch Chat**.
+Access support history for chats in the Workspace or Site Dashboards by selecting **Support** > **Launch Chat**.
 
 ### Can I start a chat session via email?
 

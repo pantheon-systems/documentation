@@ -19,11 +19,19 @@ reviewed: "2020-12-13"
 
 This section provides information on how to open a support ticket as well as other ways to contact support.
 
+<Alert title="Note" type="info" >
+
+We recommend you begin your Support journey from the affected [Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), [Professional Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard). This will ensure that the appropriate Support options are available to you, and will simplify the process of contacting us.
+
+</Alert>
+
 ## Ticket Support
 
 The ticket support feature is available to certain Account packages and account types. For details, refer to the [support feature table](/guides/support/#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
-1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) affected by the issue.
+
+1. Click **Support**, then **Open Ticket**. This will automatically include the site/workspace and user information.
 
 1. Choose the **ticket type**.
 
@@ -46,9 +54,9 @@ Start a chat with our Support Team to ask questions or request assistance on iss
 
 To receive the highest level of support available to your site or Workspace, remember to access the chat from the Workspace if available.
 
-1. From your Site Dashboard or Personal Workspace, click **Support**.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) or [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) affected by the issue.
 
-1. Click **Launch Chat**, then click **New Conversation**.
+1. Click **Support**, **Launch Chat**, then **New Conversation**.
 
 1. Provide a detailed summary of your support request, such as:
    - Steps to reproduce the issue (including URLs or paths to files).
