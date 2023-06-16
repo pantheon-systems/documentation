@@ -43,7 +43,7 @@ If you are an administrator for a Pantheon workspace, [contact support](/guides/
 | Create sites within an org                              | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Work in Dev environments                                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Access to Multidev environments                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
-| Create new Multidev environments                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
+| Create or delete Multidev environments                         | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:green">✔</span>|
 | Create or view support tickets                                    | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>  | <span  style="color:green">✔</span> | <span  style="color:red">❌</span> |
 | Access and manage [Autopilot](/guides/autopilot)        | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> |
 | Access the [workspace](/guides/account-mgmt/workspace-sites-teams/workspaces)| <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span>| <span  style="color:red">❌</span> <Popover title="Workspace Unprivileged" content="Users with an Unprivileged role will see the workspace's name, but will not be able to access it." />|
@@ -104,7 +104,7 @@ When a team member is added to a site:
 - The role they are given applies only to that site - not to any of the others in the same Workspace
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
-   
+
 1. Click **Team**.
 
 1. Under **Team Members**, enter the user's email address, select a role (EDU+ and Enterprise sites only), then click **Add to Team**.
@@ -136,7 +136,7 @@ An email confirmation is sent to the user. Users with an existing Pantheon accou
 <Tab title="In a Site" id="chs">
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
-   
+
 1. Click **Team**.
 
 1. Under **Team Members**, find the Team Member, and select a new role from the list.
@@ -157,15 +157,15 @@ To export a list of users:
 
 1. Select one of the following options:
 
-   - **All workspace and site members**: exports all workspace members, site-only collaborators, and supporting workspaces. 
+   - **All workspace and site members**: exports all workspace members, site-only collaborators, and supporting workspaces.
    - **Only workspace members**: exports only the members defined in this workspace.
 
 1. Click **Export CSV** to generate your report. You will receive an email when the report is complete and ready for download.
 
     <Alert title="Warning" type="danger" >
-    
+
     The link in the email is only good for 24 hours.  If you don't download the file within 24 hours, you must request another export.
-    
+
     </Alert>
 
     - You can only download the file using the link in the email.
@@ -176,7 +176,7 @@ The exported CSV file will contain the following information:
 
 - **isWorkspaceMember**: Indicates if the user is part of the workspace team.
 
-- **IsSiteMember**: Indicates if the user is part of a site's team. 
+- **IsSiteMember**: Indicates if the user is part of a site's team.
 
 - **SiteUID**: If **IsSiteMember** is set to true, the entry contains the UID of the site the user is a team member of.
 
@@ -198,7 +198,7 @@ The following fields only appear if you select **All Workspace and site members*
 
 - **Supporting Workspace name**: The name of the supporting workspace (if applicable).
 
-- **Supporting Workspace UID**: The UID of the supporting workspace (if applicable). 
+- **Supporting Workspace UID**: The UID of the supporting workspace (if applicable).
 
 
 ### Remove a User
@@ -207,11 +207,11 @@ When a person with access to your site(s) on the platform leaves the company or 
 
 <Alert title="Note" type="info">
 
-All users can be removed except the site owner. 
+All users can be removed except the site owner.
 
 </Alert>
 
-To remove a user: 
+To remove a user:
 
 <TabList>
 
@@ -234,7 +234,7 @@ To remove a team member from a site:
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
 1. Click **Team**.
-   
+
 1. Select the '**x**' for each team member you wish to remove.
 
 </Tab>
@@ -259,7 +259,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 1. Under **Supporting Workspace**, enter the workspace's name in the search box, and click **Search**.  The workspace name must match exactly.
 
 1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
-   
+
    ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
 
 ## FAQ
