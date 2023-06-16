@@ -4,7 +4,7 @@ description: Formatting rules and guidelines for Pantheon's open-source document
 contributors: [wordsmither]
 reviewed: "2023-06-15"
 contenttype: [doc]
-showtoc: false
+showtoc: true
 categories: [overview, help]
 newcms: [drupal, wordpress]
 audience: [agency, business, development, marketing, sysadmin]
@@ -19,307 +19,7 @@ You can also reference the [Pantheon Documentation Template](/doc-template) to s
 
 Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines.
 
-```toc
-# This code block gets replaced with the TOC
-```
-
-## Style and Structure
-
-### Before You Begin Sections
-
-This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
-
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Guide](/terminus) .
-
-<Example>
-
-<h2 class="toc-ignore">Before You Begin</h2>
-
-Be sure that you have:
-
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
-- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/terminus) installed on your local computer.
-
-<hr className="source-code" /> <br/>
-
-```markdown
-## Before You Begin
-
-Be sure that you have:
-
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
-- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/terminus) installed on your local computer.
-```
-
-</Example>
-
-#### Export Local Environment Variables
-
-Be kind. If you're writing a guide that will use one or more example variables the reader must replace when following along, you should walk them through exporting them to local environment variables. See the [Variables](#variables) section below for more details.
-
-### Content Types
-
-The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
-
-### Frontmatter
-
-Meta data for a doc or guide is created in a section referred to as frontmatter. It lives at the very top of the file and is wrapped in three dashes.
-
-<Example>
-
-<h1 className="toc-ignore">Style Guide</h1>
-
-<p className="article-subhead">Formatting rules and guidelines for Pantheon&#039;s open-source documentation.
-</p>
-
-<p>
-<small>
-<i className="fa fa-users"></i> Contributors:                                                     <a href="/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
-<a href="/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
-</small>
-
-</p>
-
-<hr className="source-code" /> <br/>
-
-```html
----
-title: Style Guide
-description: Formatting rules and guidelines for Pantheon's open-source documentation.
-contributors: [alexfornuto, rachelwhitton]
----
-```
-
-</Example>
-
-To see the values currently used in our documentation, [install our repository locally](https://github.com/pantheon-systems/documentation), then run one of the following reports:
-
-- Docs: [List of all docs and tags](http://localhost:8000/metadata); [Searchable list of all docs and tags](http://localhost:8000/metadata-search).
-
-- Partials: [List of all partials and tags](http://localhost:8000/partials); [Searchable list of all partials and tags](http://localhost:8000/partials-search).
-
-<Accordion title="Frontmatter Values" id="frontmatter-values" icon="list-alt">
-
-<dl>
-
-<dt><code>title</code></dt>
-<dd>The title of the content.</dd>
-
-<dt><code>description</code></dt>
-<dd>A brief description displayed under the title.</dd>
-
-<dt><code>contributors</code></dt>
-<dd>
-
-An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
-
-</dd>
-
-<dt><code>reviewed</code></dt>
-<dd>The last date when the content was updated or reviewed for accuracy.</dd>
-
-<dt><code>tags</code></dt>
-<dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
-
-<dt><code>category</code></dt>
-<dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
-
-<dt><code>contenttype</code></dt>
-<dd>
-
-The content type for this content. Defaults to `doc`.
-
-</dd>
-
-<dt><code>subtitle</code></dt>
-<dd>Used in multipage guides to define a title for that page of the guide.</dd>
-
-<dt><code>cms</code></dt>
-
-<dd>
-
-An array of values for each CMS and version to which the content applies
-
-</dd>
-
-</dl>
-
-</Accordion>
-
-### More Resources Section
-
-This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
-
-<Example>
-
-<h2 className="toc-ignore"> See Also</h2>
-
-- [An internal link](/guides)
-- [An external link](https://pantheon.io/blog/)
-
-<hr className="source-code" /> <br/>
-
-```markdown
-## More Resources
-
-- [An internal link](/guides)
-- [An external link](https://pantheon.io/blog/)
-```
-
-</Example>
-
-### Placeholder Text
-
-Documentation IP set: specifically reserved for documentation (Reserved IP addresses):
-
-```
-203.0.113.0–203.0.113.255
-```
-
-Pantheon
-
-- Organization: Anita Agency
-
-- Site name: Anita Drupal
-
-### Redirects
-
-Redirects are required whenever you change an existing URL or when a doc or guide is deprecated and removed from the Docs site. Deprecated pages should always be redirected to related content so users to do not receive a 404. Always add the Redirect label to the PR that includes a redirect.  This allows us to find these changes later if we need to reference why a page was moved or deleted.
-
-When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
-
-<Example>
-
-| Redirect from | to |
-|---|---|
-| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
-| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
-| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
-| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/guides/drush/drupal-commandline |
-
-<hr className="source-code" /> <br/>
-
-```markdown
-| Redirect from | to |
-|---|---|
-| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
-| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
-| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
-| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/guides/drush/drupal-commandline |
-```
-</Example>
-
-### Terminology
-
-- Personal Workspace: a user's personal work area, containing sites/settings specific to that user.
-- Professional Workspace: (formerly Organization) a feature set for a collection of users or sites.
-- Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a Workspace
-- Supporting Workspace: (formerly Supporting Organization): a Professional Workspace that's been added to a specific site's Team.
-
-### Variables
-
-When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
-
-<Example>
-
-<Alert title="Exports" type="export">
-
-This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
-
-```bash{promptUser: user}
-export site=yoursitename
-export env=dev
-```
-
-</Alert>
-
-<hr className="source-code" /> <br/>
-
-````markdown
-<Alert title="Exports" type="export">
-
-This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
-
-```bash{promptUser: user}
-export site=yoursitename
-export env=dev
-```
-
-</Alert>
-````
-
-</Example>
-
-### Voice, Style, and Flow
-
-Some General Rules:
-
-- Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
-- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
-- Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
-- Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
-- Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
-
-### Where's the User?
-
-It is important to direct the user to the area in which an activity is taking place.  For example:
-
-<Example>
-
-To create a backup:
-
-1. Click the **Backup** tab.
-
-1. More instructions...
-
-</Example>
-
-This instruction does not tell the user where the Backup tab is - is it in a Workspace?  If so, which one?  Is it on a Site Dashboard?
-
-Instead, start by placing the user in the correct location:
-
-<Example>
-
-To create a backup:
-
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
-
-1. Click the **Backup** tab.
-
-1. More instructions...
-
-</Example>
-
-Here are code snippets you can use to direct users to the correct location:
-
-**Dashboard**
-
-```markdown
-[Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)
-```
-
-**Personal Workspace**
-
-```markdown
-[Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
-```
-
-**Professional Workspace**
-
-```markdown
-[Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
-
-```
-
-
-## Markdown
-
-
-### Bold
+## Bold
 
 Bold is used for navigational elements within a given interface:
 
@@ -335,11 +35,11 @@ Go to **Account** > **Security** > **Personal Access Tokens**.
 
 </Example>
 
-### Callouts
+## Callouts
 
 There are several types of callouts commonly used in our docs:
 
-#### Notes
+### Notes
 
 <Example>
 
@@ -361,7 +61,7 @@ Notes should identify important pieces of information the reader shouldn't miss.
 
 </Example>
 
-#### Warnings
+### Warnings
 
 <Example>
 
@@ -383,7 +83,7 @@ Warnings cover information critical to the reader and highlight potential danger
 
 </Example>
 
-#### Success
+### Success
 
 Success callouts are used infrequently, usually in guides with specific end results expected. Use success callouts to differentiate between two binary results.
 
@@ -420,7 +120,7 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 </Example>
 
-#### Cards
+### Cards
 
 Use cards to visually display a list of items, with links to more information.
 
@@ -432,8 +132,7 @@ Use cards to visually display a list of items, with links to more information.
 
 <Example>
 
-![Cards](../../../images/sg-cards.png)
-
+![Cards](../images/sg-cards.png)
 
 <hr className="source-code" /> <br/>
 
@@ -457,7 +156,7 @@ Use cards to visually display a list of items, with links to more information.
 
 </Example>
 
-#### Check
+### Check
 
 Simple green checkmark.  Replaces `<span style="color:green">✔</span>`
 
@@ -473,9 +172,45 @@ Simple green checkmark.  Replaces `<span style="color:green">✔</span>`
 
 </Example>
 
-### Code Samples
+## Before You Begin Sections
 
-#### Inline
+This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
+
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Guide](/terminus) .
+
+<Example>
+
+<h2 class="toc-ignore">Before You Begin</h2>
+
+Be sure that you have:
+
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
+- [Terminus](/terminus) installed on your local computer.
+
+<hr className="source-code" /> <br/>
+
+```markdown
+## Before You Begin
+
+Be sure that you have:
+
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
+- A [local clone](/guides/git/git-config#clone-your-site-codebase) of your code repository.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
+- [Terminus](/terminus) installed on your local computer.
+```
+
+</Example>
+
+### Export Local Environment Variables
+
+Be kind. If you're writing a guide that will use one or more example variables the reader must replace when following along, you should walk them through exporting them to local environment variables. See the [Variables](#variables) section below for more details.
+
+## Code Samples
+
+### Inline
 
 Used for file names, variables, commands, and output, inline within paragraphs:
 
@@ -491,7 +226,7 @@ Inline code styling using backticks, like `$EXAMPLE`.
 
 </Example>
 
-#### Blocks
+### Blocks
 
 <Example>
 
@@ -625,15 +360,16 @@ Vary: Accept-Encoding, Cookie
 
 </Example>
 
+## Content Types
 
-### DNS
+The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
+## DNS
 
 Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do *not* have `draft: true` frontmatter. 
 
 <Example>
 
 <DNSProviderDocs />
-
 
 <hr className="source-code" /> <br/>
 
@@ -643,7 +379,7 @@ Creates a bulleted list of links to all DNS Provider docs stored in `source/cont
 
 </Example>
 
-#### File Downloads
+### File Downloads
 
 Creates a link to a downloadable file.  Files must be stored in `source/scripts`.
 
@@ -659,7 +395,7 @@ Creates a link to a downloadable file.  Files must be stored in `source/scripts`
 
 </Example>
 
-### Definitions
+## Definitions
 
 <Example>
 
@@ -677,7 +413,7 @@ Definitions and Definition Lists are automatically added to the [Glossary](/glos
 
 </Example>
 
-### Error Messages
+## Error Messages
 
 <ReviewDate date="2022-06-05" />
 
@@ -687,7 +423,7 @@ When providing solutions to error messages, document them verbatim as H3s within
 
 <Example>
 
-#### RedisException: Redis server went away
+### RedisException: Redis server went away
 
 The following error occurs when Redis has not been enabled within the Site Dashboard:
 
@@ -700,7 +436,7 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 <hr className="source-code" /> <br/>
 
 ````markdown
-#### RedisException: Redis server went away
+### RedisException: Redis server went away
 The following error occurs when Redis has not been enabled within the Site Dashboard:
 
  ```none
@@ -712,8 +448,7 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 
 </Example>
 
-
-### File Excerpts
+## File Excerpts
 
 File excerpts are [code blocks](#blocks) with a file name specified after the syntax as `:title=FILENAME`:
 
@@ -728,7 +463,6 @@ wp-content/uploads
 wp-content/blogs.dir/
 wp-content/upgrade/
 ```
-
 
 <hr class="source-code" /> <br />
 
@@ -746,11 +480,96 @@ wp-content/upgrade/
 
 </Example>
 
-### Hyperlinks
+## Frontmatter
+
+Meta data for a doc or guide is created in a section referred to as frontmatter. It lives at the very top of the file and is wrapped in three dashes.
+
+<Example>
+
+<h1 className="toc-ignore">Style Guide</h1>
+
+<p className="article-subhead">Formatting rules and guidelines for Pantheon&#039;s open-source documentation.
+</p>
+
+<p>
+<small>
+<i className="fa fa-users"></i> Contributors:                                                     <a href="/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>, &nbsp;
+<a href="/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
+</small>
+
+</p>
+
+<hr className="source-code" /> <br/>
+
+```html
+---
+title: Style Guide
+description: Formatting rules and guidelines for Pantheon's open-source documentation.
+contributors: [alexfornuto, rachelwhitton]
+---
+```
+
+</Example>
+
+To see the values currently used in our documentation, [install our repository locally](https://github.com/pantheon-systems/documentation), then run one of the following reports:
+
+- Docs: [List of all docs and tags](http://localhost:8000/metadata); [Searchable list of all docs and tags](http://localhost:8000/metadata-search).
+
+- Partials: [List of all partials and tags](http://localhost:8000/partials); [Searchable list of all partials and tags](http://localhost:8000/partials-search).
+
+<Accordion title="Frontmatter Values" id="frontmatter-values" icon="list-alt">
+
+<dl>
+
+<dt><code>title</code></dt>
+<dd>The title of the content.</dd>
+
+<dt><code>description</code></dt>
+<dd>A brief description displayed under the title.</dd>
+
+<dt><code>contributors</code></dt>
+<dd>
+
+An array of IDs for contributors to the content. The ID must correspond to an entry in [contributor.yaml](https://github.com/pantheon-systems/documentation/blob/main/source/data/contributor.yaml).
+
+</dd>
+
+<dt><code>reviewed</code></dt>
+<dd>The last date when the content was updated or reviewed for accuracy.</dd>
+
+<dt><code>tags</code></dt>
+<dd>An array of tags used by our search engine to quickly identify the primary topics found in the content.</dd>
+
+<dt><code>category</code></dt>
+<dd>A value corresponding to the content's position in the site architecture and (sometimes) corresponding category landing page.</dd>
+
+<dt><code>contenttype</code></dt>
+<dd>
+
+The content type for this content. Defaults to `doc`.
+
+</dd>
+
+<dt><code>subtitle</code></dt>
+<dd>Used in multipage guides to define a title for that page of the guide.</dd>
+
+<dt><code>cms</code></dt>
+
+<dd>
+
+An array of values for each CMS and version to which the content applies
+
+</dd>
+
+</dl>
+
+</Accordion>
+
+## Hyperlinks
 
 Do not specify a target tab or window for external, or any other links, leaving the viewer the option to open in a new tab.
 
-#### Internal Links
+### Internal Links
 
 Use relative paths when linking to other pages of the docs site.
 
@@ -766,7 +585,7 @@ Use relative paths when linking to other pages of the docs site.
 
 </Example>
 
-#### External Links
+### External Links
 
 <Example>
 
@@ -780,7 +599,7 @@ Use relative paths when linking to other pages of the docs site.
 
 </Example>
 
-### Icons
+## Icons
 
 ```
 <Icon icon={"more-windows"} text={"Sites:"}/>
@@ -788,7 +607,7 @@ Use relative paths when linking to other pages of the docs site.
 
 [Font Awesome Web Application Icons](https://www.w3schools.com/icons/fontawesome_icons_webapp.asp)
 
-### Italics
+## Italics
 
 <Example>
 
@@ -802,7 +621,7 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 
 </Example>
 
-### Headings
+## Headings
 
 Give heading levels a meaningful hierarchy to ensure accessible navigation and structure.
 
@@ -823,15 +642,15 @@ Give heading levels a meaningful hierarchy to ensure accessible navigation and s
 title: Page Title
 ---
 
-### Header
+## Header
 
-#### Sub Header
+### Sub Header
 ##### Section not listed on TOC
 ```
 
 </Example>
 
-### Line Breaks and Spaces
+## Line Breaks and Spaces
 
   - Line breaks between components including between
 
@@ -847,7 +666,29 @@ title: Page Title
 
 - Spaces, not tabs! Each tab is two spaces or four sometimes
 
-### Panels/Accordions
+## More Resources Section
+
+This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
+
+<Example>
+
+<h2 className="toc-ignore"> See Also</h2>
+
+- [An internal link](/guides)
+- [An external link](https://pantheon.io/blog/)
+
+<hr className="source-code" /> <br/>
+
+```markdown
+## More Resources
+
+- [An internal link](/guides)
+- [An external link](https://pantheon.io/blog/)
+```
+
+</Example>
+
+## Panels/Accordions
 
 Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
@@ -855,7 +696,7 @@ Use panels for extraneous but useful information such as troubleshooting section
 
 <Accordion title="Panel Title" id="example-panel" icon="wrench">
 
-#### Panel Content Header 
+### Panel Content Header 
 
 This Panel contains additional context, or advanced instructions.
 
@@ -866,7 +707,7 @@ This Panel contains additional context, or advanced instructions.
 ```html
 <Accordion title="Panel Title" id="example-panel" icon="wrench">
 
-#### Panel Content Header
+### Panel Content Header
 
 This Panel contains additional context, or advanced instructions.
 
@@ -875,7 +716,48 @@ This Panel contains additional context, or advanced instructions.
 
 </Example>
 
-### Reusable Content/Partials
+## Placeholder Text
+
+Documentation IP set: specifically reserved for documentation (Reserved IP addresses):
+
+```
+203.0.113.0–203.0.113.255
+```
+
+Pantheon
+
+- Organization: Anita Agency
+
+- Site name: Anita Drupal
+
+## Redirects
+
+Redirects are required whenever you change an existing URL or when a doc or guide is deprecated and removed from the Docs site. Deprecated pages should always be redirected to related content so users to do not receive a 404. Always add the Redirect label to the PR that includes a redirect.  This allows us to find these changes later if we need to reference why a page was moved or deleted.
+
+When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
+
+<Example>
+
+| Redirect from | to |
+|---|---|
+| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
+| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
+| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
+| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/guides/drush/drupal-commandline |
+
+<hr className="source-code" /> <br/>
+
+```markdown
+| Redirect from | to |
+|---|---|
+| docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
+| docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
+| docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
+| docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/guides/drush/drupal-commandline |
+```
+</Example>
+
+## Reusable Content/Partials
 
 Create reusable content in a separate Markdown file that can be included within sections of other docs. These are called **partials**.
 
@@ -905,25 +787,24 @@ After you create the file, include it in the doc:
 
 To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
 
-
-### Review Dates
+## Review Dates
 
 Review dates indicate the last time a member of the Documentation team reviewed a document.  There are two ways to indicate review dates.
 
 The most common is by using the frontmatter `reviewed: "YYYY-MM-DD" `.  The other is at the section level, using the ReviewDate component:
 
 ```markdown
-#### Section Title
+### Section Title
 <ReviewDate date="YYYY-MM-DD" />
 ```
 
-### Screenshots
+## Screenshots
 
 Submit screenshots without additional markup. For example, don't use Skitch to add an arrow. This helps the Docs team make edits as needed later.
 
 Do not include any personal information like a name, email address, or UUID in the screenshot.
 
-#### GUI
+### GUI
 
 Screenshots are used to reference GUI instructions:
 
@@ -939,7 +820,7 @@ Screenshots are used to reference GUI instructions:
 
 </Example>
 
-#### Terminal
+### Terminal
 
 Terminal screenshots should be described in the text as much as possible, and should only be used to demonstrate intended output:
 
@@ -955,7 +836,7 @@ Terminal screenshots should be described in the text as much as possible, and sh
 
 </Example>
 
-### Tables
+## Tables
 
 You can use markdown tables to describe availability based on service levels before providing instructions on how to enable or use a given feature. For example:
 
@@ -975,7 +856,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 <hr className="source-code" /> <br/>
 
 ```markdown
-### Enable Redis
+## Enable Redis
 
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
@@ -993,7 +874,7 @@ Use ✓ to indicate yes and `❌` to indicate no.
 
 Visit the [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables) for help with creating nice-looking and well-formatted tables.
 
-#### Advanced Tables
+### Advanced Tables
 
 Standard markdown tables don't allow for cells to span multiple rows or columns, but by using the [gatsby-remark-grid-tables](https://www.gatsbyjs.org/packages/gatsby-remark-grid-tables/) plugin, we can overcome this limitation:
 
@@ -1049,7 +930,7 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 
 </Example>
 
-### Tabs
+## Tabs
 
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
@@ -1131,11 +1012,18 @@ Some code.
 
 </Example>
 
-### Table of Contents
+## Table of Contents
 
 You can add a TOC to the right side of a document using the following frontmatter: `showtoc: true`.
 
-### Tooltips
+## Terminology
+
+- Personal Workspace: a user's personal work area, containing sites/settings specific to that user.
+- Professional Workspace: (formerly Organization) a feature set for a collection of users or sites.
+- Site Dashboard: the page the user gets when selecting a site from the **Sites** tab in a Workspace
+- Supporting Workspace: (formerly Supporting Organization): a Professional Workspace that's been added to a specific site's Team.
+
+## Tooltips
 
 Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:
 
@@ -1156,3 +1044,98 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, are UR
 ```
 
 </Example>
+## Variables
+
+When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
+
+<Example>
+
+<Alert title="Exports" type="export">
+
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+
+```bash{promptUser: user}
+export site=yoursitename
+export env=dev
+```
+
+</Alert>
+
+<hr className="source-code" /> <br/>
+
+````markdown
+<Alert title="Exports" type="export">
+
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+
+```bash{promptUser: user}
+export site=yoursitename
+export env=dev
+```
+
+</Alert>
+````
+
+</Example>
+
+## Voice, Style, and Flow
+
+Some General Rules:
+
+- Only assume as much knowledge from the reader as specified in the Before You Begin section. Otherwise explain everything.
+- [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/).
+- Avoid personal opinions, feelings, or anecdotes. Use an informal but succinct tone.
+- Use [Inclusive Language](/inclusive-language), avoid colloquialisms and hyperbole.
+- Use [title case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case) for section headings.
+
+## Where's the User?
+
+It is important to direct the user to the area in which an activity is taking place.  For example:
+
+<Example>
+
+To create a backup:
+
+1. Click the **Backup** tab.
+
+1. More instructions...
+
+</Example>
+
+This instruction does not tell the user where the Backup tab is - is it in a Workspace?  If so, which one?  Is it on a Site Dashboard?
+
+Instead, start by placing the user in the correct location:
+
+<Example>
+
+To create a backup:
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
+
+1. Click the **Backup** tab.
+
+1. More instructions...
+
+</Example>
+
+Here are code snippets you can use to direct users to the correct location:
+
+**Dashboard**
+
+```markdown
+[Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard)
+```
+
+**Personal Workspace**
+
+```markdown
+[Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+```
+
+**Professional Workspace**
+
+```markdown
+[Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
+
+```
+
