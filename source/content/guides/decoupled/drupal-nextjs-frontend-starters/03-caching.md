@@ -89,7 +89,7 @@ const myCacheControlHeader = 'public, max-age=604800, must-revalidate';
 
 You can take advantage of this feature without using the starter kit.
 
-## Purge Caching
+## Purge Edge Caching
 
 ### Ensure Headers Are Set for Custom Routes
 
