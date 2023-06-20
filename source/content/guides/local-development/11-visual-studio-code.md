@@ -90,7 +90,7 @@ VS Code includes Git integration and an integrated terminal, either of which can
 
 1. Review your outstanding changes before you commit them with a message.
 
-You can also switch branches. Refer to the [video on the VS Code docs](https://code.visualstudio.com/docs/introversioncontrol) for more information.
+You can also switch branches. Refer to the [VS Code docs](https://learn.microsoft.com/en-us/visualstudio/version-control/) for more information.
 
 #### Integrated Terminal
 
