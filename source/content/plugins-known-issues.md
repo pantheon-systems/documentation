@@ -1025,16 +1025,22 @@ export ENV=dev
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Change to the site's `wp-content` directory:
+1. Change your current directory to the location where the site's Git clone is stored:
 
    ```bash{promptUser: user}
    cd $SITE
    ```
 
-1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
+1. Navigate to `/wp-content` and check if `/wp-content/wflogs` folder exists. If it does, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
-  rm -rf ./wp-content/wflogs
+  cd wp-content
+  rm -rf wflogs
+  ```
+
+1. Return to the root directory of the Git clone:
+  ```bash{promptUser: user}
+  cd ..
   ```
 
 1. Create the following symlinks:
@@ -1043,7 +1049,10 @@ export ENV=dev
   ln -s ../../files/private/wflogs ./wp-content/wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
-  ```
+  ```![replicate-1](https://github.com/pantheon-systems/documentation/assets/103234849/5b7e8d70-e081-49c8-a71d-09a9f8d66109)
+![replicate-2](https://github.com/pantheon-systems/documentation/assets/103234849/72b71341-ed1b-4692-b501-4c4eace7ee41)
+![wordfence](https://github.com/pantheon-systems/documentation/assets/103234849/d1ae1e49-025a-4ef6-a8cd-8dbb5fdb0745)
+
 
 1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
 
