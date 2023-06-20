@@ -1,5 +1,5 @@
 ---
-title: Introduction to Custom Upstreams
+title: Custom Upstreams on Pantheon
 subtitle: Introduction
 description: Learn how to use Custom Upstreams to free up developer time.
 tags: [collaborate, launch, upstreams, webops, workflow, D8, D9, D10]

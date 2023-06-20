@@ -82,13 +82,13 @@ There are several different tools you can use to analyze a MySQL Slow Log:
 
 - [Percona Toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html)
 
-  Recommended. This toolkit is actively maintained and includes a number of database utilities, including a Slow Query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html). 
+  Recommended. This toolkit is actively maintained and includes a number of database utilities, including a Slow Query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html).
 
 - [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/)
 
   This filter has not been updated since 2007. Although still useful, using this filter will throw warnings with newer versions of PHP.
 
-These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL Slow Log. Refer to each tool's documentation for more information. 
+These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL Slow Log. Refer to each tool's documentation for more information.
 
 ### Percona Toolkit's pt-query-digest
 

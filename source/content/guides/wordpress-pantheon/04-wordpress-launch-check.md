@@ -129,9 +129,9 @@ This check will display a list of exploited patterns in code, the file name that
 This tells you if Object Caching and Redis are enabled.
 
 If you receive an error message similar to the example below, you'll need to move `object-cache.php` from the `plugin` directory to the `wp-content` directory. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
-    
+
 `Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php`
-    
+
 ### Plugins
 
 This check lists all your enabled plugins and alerts you when they need to be updated. It also checks for any vulnerabilities.

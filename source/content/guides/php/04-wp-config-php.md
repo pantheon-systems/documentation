@@ -55,9 +55,9 @@ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/wp-confi
 
 ## Pantheon Platform Settings in wp-config-pantheon.php
 
-Pantheon includes the `wp-config-pantheon.php` file to get the latest WordPress upstream updates while avoiding merge conflicts. 
+Pantheon includes the `wp-config-pantheon.php` file to get the latest WordPress upstream updates while avoiding merge conflicts.
 
-Apply the latest upstream updates in [WordPress and Drupal Core Updates](/core-updates) if you don’t see the `wp-config-pantheon.php` file in your [WP code directory](/code#wordpress-code-structure). 
+Apply the latest upstream updates in [WordPress and Drupal Core Updates](/core-updates) if you don’t see the `wp-config-pantheon.php` file in your [WP code directory](/migrate-manual#import-your-code).
 
 Do not edit the `wp-config-pantheon.php` file. It includes database and environment configuration settings that the platform uses and that Pantheon maintains.
 

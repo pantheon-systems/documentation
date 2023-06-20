@@ -86,15 +86,15 @@ VS Code includes Git integration and an integrated terminal, either of which can
 
 #### Git Version Control in VS Code
 
-1. Open the Git menu and press **Ctrl** + **Shift** + **G** or click **View** and select **SCM**. 
+1. Open the Git menu and press **Ctrl** + **Shift** + **G** or click **View** and select **SCM**.
 
 1. Review your outstanding changes before you commit them with a message.
 
-You can also switch branches. Refer to the [video on the VS Code docs](https://code.visualstudio.com/docs/introvideos/versioncontrol) for more information.
+You can also switch branches. Refer to the [video on the VS Code docs](https://code.visualstudio.com/docs/introversioncontrol) for more information.
 
 #### Integrated Terminal
 
-1. Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) with **Ctrl** + **`** or click **View** and select **Terminal**. 
+1. Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) with **Ctrl** + **`** or click **View** and select **Terminal**.
 
 1. Interact with Git as you would normally, without leaving VS Code.
 

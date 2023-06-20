@@ -34,7 +34,7 @@ Autopilot Enabled on Downstream Sites Only is the best option if you are using D
 
 - Follows Autopilot's default workflow and is less likely to run into errors
 
-**Cons**: 
+**Cons**:
 
 - A new site created from the upstream might be out of date because Autopilot is not maintaining the upstream
 
@@ -52,7 +52,7 @@ Autopilot Enabled on Downstream Sites Only is the best option if you are using D
 
 This use case requires you to set up your Custom Upstream as a Pantheon site and enable Autopilot. This setup is beneficial if you have broad portfolios of similar sites (such as universities). We recommend that the child sites exclude certain updates coming from the upstream (such as common plugins or modules) so out-of-sync updates do not accidentally get applied.
 
-**Pros**: 
+**Pros**:
 
 - Two layers of testing
 
@@ -77,13 +77,13 @@ This use case requires you to set up your Custom Upstream as a Pantheon site and
 
 This use case requires you to set up your Custom Upstream as a Pantheon site with Autopilot enabled. However, you must ensure that your downstream sites do not have Autopilot enabled. This setup makes sense if you have thousands of sites and do not want to go through the process of maintaining Autopilot on each one. You might want to use Terminus commands to apply updates from the upstream if you use this setup.
 
-**Pros**: 
+**Pros**:
 
 - All updates are maintained at one level
 
 - Fewer VRT results to review
 
-**Cons**: 
+**Cons**:
 
 - Does not fully take advantage of Autopilot's benefits
 

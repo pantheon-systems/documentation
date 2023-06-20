@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]
@@ -57,3 +57,7 @@ Make sure you meet the following prerequisites before you continue.
 1. Click **Build Details** to view the build log.
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
+
+## Connect to a Multidev Environment
+
+Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for instructions on how to connect your Front-End Site to a Multidev environment.

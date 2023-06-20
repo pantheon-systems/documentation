@@ -36,7 +36,7 @@ This list does not include scenarios for decoupled architecture. For those, see 
 
 - [I want to use the Dashboard](/add-site-dashboard)
 - I want to use the command line, and my CMS is:
-  - [Drupal](/guides/terminus-drupal-site-management)
+  - [Drupal](/terminus-drupal-site-management)
   - [WordPress](/guides/create-wp-site)
 
 </Tab>
@@ -51,42 +51,52 @@ If you are a part of a Professional team that has [Custom Upstreams](/guides/cus
 
 <Tab title="Migrate" id="migrate">
 
-**Is your site archive greater than 500MB, or only exists on your local machine?**
+**Is your site archive greater than 500MB, or does it only exist on your local machine?**
 
 - If so, [manually migrate your site to Pantheon](/migrate-manual)
 
 - If not...
 
-  **Which CMS are you using?**
+  **Are you coming from one of the following platforms?**
+    - If so, read our guide for migrating from the platform:
 
-  <Accordion title="Drupal" id="drupal">
+      - [Acquia](/guides/acquia)
+      - [Kinsta](/guides/kinsta)
+      - [Pagely](/guides/pagely)
+      - [Platform.sh](/guides/platformsh)
+      - [WordPress VIP](/guides/wordpressvip)
+      - [WP Engine](/guides/wpengine)
 
-  **Do you want to upgrade your Drupal version during migration, or are you using Drupal version 9 or higher?**
+    - If not...
 
-  - [No, remain at my current version](/guides/guided)
+      **Which CMS are you using?**
 
-  - [No, I am using Drupal version 8 or lower](/guides/guided)
+      <Accordion title="Drupal" id="drupal">
 
-  - Yes, upgrade my site to the latest version of Drupal:
-    - [My site is Composer-managed, *and* I'm using Drush](/guides/drush/drush-import)
-    - [My site is Composer-managed, and I'm *not* using Drush](/guides/drupal-unhosted-composer)
-    - [My site is *not* Composer-managed](/guides/drupal-unhosted)
+      **Do you want to upgrade your Drupal version during migration, or are you using Drupal version 9 or higher?**
 
-  </Accordion>
+      - [No, remain at my current version](/guides/guided)
 
-  <Accordion title="WordPress" id="wordpress">
+      - [No, I am using Drupal version 8 or lower](/guides/drupal-unhosted)
 
-  **Do you want to use a Custom Upstream?**
+      - Yes, upgrade my site to the latest version of Drupal:
+        - [My site is Composer-managed, *and* I'm using Drush](/guides/drush/drush-import)
+        - [My site is Composer-managed, and I'm *not* using Drush](/guides/drupal-unhosted-composer)
+        - [My site is *not* Composer-managed](/guides/drupal-unhosted)
 
-  - If so, [use the Pantheon Migrations plugin with a custom WordPress upstream](https://wordpress.org/plugins/bv-pantheon-migration/#description)
-  - If not...
+      </Accordion>
 
-    **Are you using multisite, or do you want to avoid installing a plugin?**
+      <Accordion title="WordPress" id="wordpress">
 
-    - If so, [manually migrate your site to Pantheon](/migrate-manual)
-    - If not, [use our guided migration](/guides/guided)
+      [Use our guided migration](/guides/guided), unless you have one of the following scenarios:
 
-  </Accordion>
+      - **To use a Custom Upstream**, [use the Pantheon Migrations plugin with a custom WordPress upstream](https://wordpress.org/plugins/bv-pantheon-migration/#description)
+
+      - **If you are using Multisite**, use [Migrate a WordPress Multisite](/migrate-wordpress-multisite).
+
+      - **To avoid installing a plugin**, use [Manually Migrate Your Site to Pantheon](/migrate-manual).
+
+      </Accordion>
 
 </Tab>
 

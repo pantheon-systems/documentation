@@ -9,7 +9,7 @@ showtoc:
 permalink: docs/guides/decoupled/wp-backend-starters/manage-settings
 anchorid: manage-settings
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]

@@ -80,7 +80,7 @@ This method allows you to use a custom plugin to toggle between activated and de
   terminus wp my-site.dev -- plugin activate disable-xmlrpc
   ```
 
-1. Commit and deploy your code changes. 
+1. Commit and deploy your code changes.
 
 1. Activate the plugin on your Test and Live environments.
 
@@ -89,3 +89,4 @@ This method allows you to use a custom plugin to toggle between activated and de
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 - [WP-CLI on the Pantheon Platform](/guides/wp-cli)
 - [Manage Custom Code for WordPress with Plugins](/guides/wordpress-configurations/wordpress-custom-code)
+- [Pantheon Security](/guides/security)

@@ -18,7 +18,7 @@ product: [autopilot]
 integration: [--]
 ---
 
-[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated virtual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
+[Autopilot](https://pantheon.io/autopilot?docs) is part of Pantheon's [New Dashboard](/guides/new-dashboard) experience. Pantheon Autopilot automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated visual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
 ## What Autopilot Does
 
@@ -59,11 +59,8 @@ Autopilot requires the following:
 - A Gold, Platinum, or Diamond account
 - [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
-- A supported framework:
-    - Drupal with Integrated Composer
-    - Drupal 8 with Integrated Composer or Drush 8
-    - WordPress (note that WordPress Multisite (`wordpress_network`) is not currently supported)
-
+- A compatible site framework (refer to [Autopilot Site Compatibility](https://docs.pantheon.io/guides/autopilot#autopilot-site-compatibility) for details
+  
 ### Autopilot Site Compatibility
 
 <Partial file="autopilot/autopilot-compatibility.md" />

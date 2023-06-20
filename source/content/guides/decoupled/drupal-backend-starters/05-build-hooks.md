@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/drupal-backend-starters/build-hooks
 anchorid: build-hooks
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]

@@ -1,5 +1,5 @@
 ---
-title: Delete a Custom Upstream
+title: Custom Upstreams on Pantheon
 subtitle: Delete a Custom Upstream
 description: Learn how to delete a Custom Upstream.
 tags: [upstreams, workflow, webops, D8, D9, D10]

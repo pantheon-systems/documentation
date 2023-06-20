@@ -9,7 +9,7 @@ showtoc: true
 permalink: docs/guides/decoupled/wp-gatsby-frontend-starters/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]
@@ -73,3 +73,7 @@ Refer to [Gatsby's documentation](https://www.gatsbyjs.com/docs/how-to/previews-
 1. Click the **Edit** button in the **Build & Output Settings** section.
 
 1. Set the appropriate subpath build and output. A new site deployed using the Gatsby WordPress starter kit will now automatically be available within your subdirectory.
+
+## Connect to a Multidev Environment
+
+Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for instructions on how to connect your Front-End Site to a Multidev environment.

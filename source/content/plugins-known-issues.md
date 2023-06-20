@@ -4,6 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 contenttype: [doc]
+showtoc: true
 innav: [true]
 categories: [issues]
 cms: [wordpress]

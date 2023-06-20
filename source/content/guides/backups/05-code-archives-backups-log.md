@@ -3,7 +3,7 @@ title: Backups Tool
 subtitle: Code Archives and Backup Log
 description: Learn about your code archives and Backup Log.
 tags: [backups, security]
-innav: [true]
+innav: [false]
 categories: [backup]
 cms: [drupal, wordpress]
 audience: [development]
@@ -51,4 +51,4 @@ The Backup Log displays a list of existing backups for each environment. Recent 
 
 - [Pantheon Logs](/guides/logs-pantheon)
 - [Fastly on Pantheon](/guides/fastly-pantheon)
-- [Your Site Code on Pantheon](/code)
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)

@@ -65,6 +65,7 @@ You can use frontend frameworks other than Gatsby and Next.js, however the proce
 - A repo cannot be connected to more than one Front-End Site
 - There are known issues around disconnecting and reconnecting a repo
 - There are known issues around the GitHub app and org level permissions
+- Agency Partner Workspaces: you cannot currently share limited access with an agency partner. As a workaround, a shared workspace can be created. Agency team members can then be added directly to the owning organization that has Front-End Sites enabled.
 - The repository must have a `package.json` file
 - The repository can have only one `lock` file
 
@@ -152,14 +153,6 @@ Pull requests from a Multidev branch that are made against the upstream will tri
 | Multidev (based on branches)      | `branch-name`   | `[branch-name]-[site-name].appa.pantheon.site`|
 | Multidev (based on pull requests) | `pr-*`          | `pr-[pr-number]-[site-name].appa.pantheon.site`|
 
-
-## Front-End Sites Multidev Development Workflow
-
-The Front-End Sites Multidev workflow is outlined below:
-
-- **Code Push:** The external Git provider controls code posts and deployments. Code pushed to the main branch is built and deployed in your Live environment. Code pushed to any other branch generates a new Multidev environment. Updates to existing branches result in the corresponding environment being updated.
-
-- **Pull Request:** The Multidev environment is stood up and the preview and backend URL are displayed in GitHub on the PR, on a GitHub deployment, and also in the Front-End Sites Overview section of the dashboard. The build details for a PR are also be linked to GitHub.
 
 ## Static Site Indexing
 

@@ -21,7 +21,7 @@ Front-End Sites on Pantheon allow you to use [decoupled architecture](/guides/de
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-Pantheon Front-End Sites are available for Early Access participants. Features for Pantheon Front-End Sites are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. To learn how you can enroll in our Early Access program, visit https://pantheon.io/features/decoupled-cms. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+Pantheon Front-End Sites are available for Early Access participants. Features for Pantheon Front-End Sites are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Enrollment is open for our [ Front-End Sites Early Access program](https://pantheon.io/features/decoupled-cms). Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 </Alert>
 
