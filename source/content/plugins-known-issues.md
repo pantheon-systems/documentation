@@ -992,7 +992,7 @@ ___
 
 ## Wordfence
 
-<ReviewDate date="2022-12-16" />
+<ReviewDate date="2023-06-20" />
 
 **Issue 1:** Wordfence can't write configuration and log files to the codebase.
 
@@ -1019,7 +1019,7 @@ export ENV=dev
   terminus connection:set $SITE.$ENV git
   ```
 
-1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/guides/git/git-config#clone-your-site-codebase):
+1. Clone your site's codebase locally if you haven't already. You can get the path to your codebase from the [Site Dashboard](/guides/git/git-config#clone-your-site-codebase):
 
   ```bash{promptUser: user}
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -1031,7 +1031,7 @@ export ENV=dev
    cd $SITE
    ```
 
-1. Navigate to `/wp-content` and check if `/wp-content/wflogs` folder exists. If it does, remove it before you create the symlinks in the next steps:
+1. Navigate to `/wp-content` and check if the `/wp-content/wflogs` folder exists. If it does, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
   cd wp-content
@@ -1049,10 +1049,11 @@ export ENV=dev
   ln -s ../../files/private/wflogs ./wp-content/wflogs
   ln -s ../files/private/wordfence-waf.php ./wordfence-waf.php
   ln -s ../files/private/.user.ini ./.user.ini
-  ```![replicate-1](https://github.com/pantheon-systems/documentation/assets/103234849/5b7e8d70-e081-49c8-a71d-09a9f8d66109)
-![replicate-2](https://github.com/pantheon-systems/documentation/assets/103234849/72b71341-ed1b-4692-b501-4c4eace7ee41)
-![wordfence](https://github.com/pantheon-systems/documentation/assets/103234849/d1ae1e49-025a-4ef6-a8cd-8dbb5fdb0745)
 
+  ![replicate-1](https://github.com/pantheon-systems/documentation/assets/103234849/5b7e8d70-e081-49c8-a71d-09a9f8d66109)
+  ![replicate-2](https://github.com/pantheon-systems/documentation/assets/103234849/72b71341-ed1b-4692-b501-4c4eace7ee41)
+  ![wordfence](https://github.com/pantheon-systems/documentation/assets/103234849/d1ae1e49-025a-4ef6-a8cd-8dbb5fdb0745)
+  ```
 
 1. Open `pantheon.yml` and add a [protected web path](/guides/secure-development/private-paths) for `.user.ini`:
 
@@ -1061,7 +1062,7 @@ export ENV=dev
     - /.user.ini
   ```
 
-1. [Set the `FS_METHOD` to `direct` in `wp-config.php`](#define-fs_method).
+1. Set the [`FS_METHOD` to `direct`](#define-fs_method) in `wp-config.php`.
 
 1. Commit and push the changes to the platform:
 
