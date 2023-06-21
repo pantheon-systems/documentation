@@ -3,11 +3,10 @@ title: Drupal + Next.js Frontend Starter for Front-End Sites
 subtitle: Create a Drupal + Next.js Project
 description: Learn how to create a new Drupal + Next.js project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/drupal-nextjs-frontend-starters/create
-anchorid: create
 contenttype: [guide]
 innav: [false]
 categories: [create]
@@ -31,7 +30,7 @@ Make sure you meet the following prerequisites before you continue.
 
 ## Create Your Project on Pantheon
 
-1. [[Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
