@@ -134,7 +134,7 @@ You can sign up for a [GitLab.com](https://about.gitlab.com) account, or use a s
 
 1. Navigate to your GitLab dashboard and click **New project**.
 
-1. Provide a **Project name**, **Project description** (optional), and **Visibility Level** > click **Create project**.
+1. Provide a **Project name**, **Visibility Level**, and make sure "`Initialize repository with a README`" is not checked > click **Create project**.
 
 1. Copy the repository URL (HTTPS), and clone the site locally:
 
