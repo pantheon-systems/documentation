@@ -1,5 +1,5 @@
 ---
-title: "Billing"
+title: "Billing for Self-Serve Accounts"
 subtitle: Payment Methods
 description: Learn how to manage the credit cards used to pay for your account.
 contenttype: [guide]
@@ -17,11 +17,7 @@ editpath: docs/guides/account-mgmt/billing/05-methods.md
 reviewed: "2022-09-19"
 ---
 
-You can set up payment methods that you use for all sites you own, or site-specific payment methods.
-
-## Accepted Payment Methods
-
-Sites purchased online through the Pantheon Site Dashboard accept credit card payments only. Pantheon does not currently accept alternative methods of payment for online site purchases (e.g., checks, PayPal, etc.).
+Self-serve accounts accept credit card payments only. Pantheon does not currently accept alternative methods of payment for online site purchases (e.g., checks, PayPal, etc.).
 
 <Alert title="Note" type="info" >
 
@@ -29,19 +25,17 @@ Payment for a site can't be split among payment methods. This means that your pa
 
 </Alert>
 
-## Personal Payment Methods
+## Add Payment Method
 
-Personal payment methods can be used on all sites you own. Personal payment methods are managed via your Personal Workspace.
+Payment methods can be added in either your Personal Settings, or in a Site Dashboard.
 
-### Add Personal Payment Method
-
-To add a payment method:
+To add a payment method via Personal Settings:
 
 1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
 1. Click **+ Add Payment Method**. 
 
-1. Enter the card information, then click **Add New Card**.
+1. Enter the card information, then click **Add New Card**.  The card will appear in the list, and will be available as a selection for any site you own.
 
 <Alert title="Note" type="info" >
 
@@ -49,7 +43,23 @@ The email address you enter here is the address invoices will be sent to.
 
 </Alert>
 
-### Update Personal Payment Method
+To add a payment method via a Site Dashboard
+
+<Alert title="Note" type="info" >
+
+If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. 
+
+</Alert>
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+
+1. Go to the **Billing** tab and click **Add Card**.
+
+   - If you already have payment methods defined in your Personal Workspace, you will see them listed.  To use a listed payment method, select it and click **Update Credit Card**.
+
+   - If you don’t want to use a listed card, click **Add New Card**, add the information, click **Add Card**, and then click **Update Credit Card**.
+
+## Update Payment Method
 
 1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
@@ -65,7 +75,7 @@ The email address you enter here is the address invoices will be sent to.
 
 </Alert>
 
-### Delete Personal Payment Method
+## Delete Payment Method
 
 All sites must be disassociated from the card before it can be deleted.
 
@@ -84,7 +94,7 @@ Deleting a card profile from your account will also delete its associated billin
 1. Select **Yes, I want to delete it**, then click **Delete**.
 
 
-### View History
+## View History
 
 1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
 
@@ -93,27 +103,7 @@ Deleting a card profile from your account will also delete its associated billin
    The history will show the last 100 transactions.
 
 
-## Site-Specific Payment Methods
-
-Site-specific payment methods can only be used on the site on which they are defined.
-
-### Add a Site-Specific Payment Method
-
-<Alert title="Note" type="info" >
-
-If the site is currently in Sandbox mode (free), [upgrade the site plan](/guides/launch/plans/) to add and begin billing to a credit card. 
-
-</Alert>
-
-To add a payment method to a site:
-
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
-
-1. Go to the **Billing** tab and click **Add Card**.
-
-   - If you already have payment methods defined in your Personal Workspace, you will see them listed.  To use a listed payment method, select it and click **Update Credit Card**.
-
-   - If you don’t want to use a listed card, click **Add New Card**, add the information, click **Add Card**, and then click **Update Credit Card**.
+## Manage Payment Methods for a Site
 
 ### Change the Card Used to Bill This Site
 
@@ -148,7 +138,7 @@ Alternatively, you can:
 1. Here you can change the payment method to another card you have on file or add a new card.
 
 
-### Delete a Site-Specific Payment Method
+### Delete a Payment Method From a Site
 
 <Alert title="Note" type="info" >
 
