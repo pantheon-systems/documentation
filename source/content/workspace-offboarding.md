@@ -26,7 +26,7 @@ In addition, you must have an Enterprise account to use this feature.
 
 Use this process if you want to remove a member from either a single workspace, or from a workspace and **all** it's associated sites.
 
-1. Go to the workspace and select the **Team** tab.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
 
 1. Find and select the team member(s) you wish to remove.
 
@@ -36,7 +36,7 @@ Use this process if you want to remove a member from either a single workspace, 
 
    - **Everything**: removes a member from all workspaces and associated sites.
 
-   - **Workspace only**: removes a member from this workspace only. Associated sites will not be impacted.
+   - **Workspace Only**: removes a member from this workspace only. Associated sites will not be impacted.
 
      ![Alt text](../images/workspace-offboarding.png)
 
