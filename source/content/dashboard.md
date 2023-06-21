@@ -1,5 +1,5 @@
 ---
-title: Pantheon Site Dashbvard
+title: Pantheon Site Dashboard
 description: A developer console for all your sites.
 contributors: [wordsmither]
 contenttype: [doc]
