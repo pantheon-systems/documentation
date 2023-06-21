@@ -18,7 +18,7 @@ reviewed: 2023-06-21
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-Workspace Offboarding is available for Early Access participants. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+Workspace Offboarding is available for [Early Access](/guides/support/early-access/) participants. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 In addition, you must have an Enterprise account to use this feature.
 
