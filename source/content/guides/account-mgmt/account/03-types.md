@@ -11,8 +11,8 @@ product: [--]
 integration: [--]
 tags: [workspaces, sites, teams]
 contributors: [wordsmither]
-permalink: docs/guides/account-mgmt/account
-editpath: docs/guides/account-mgmt/account/01-introduction.md
+permalink: docs/guides/account-mgmt/account/types
+editpath: docs/guides/account-mgmt/account/03-types.md
 reviewed: "2023-06-21"
 ---
 
