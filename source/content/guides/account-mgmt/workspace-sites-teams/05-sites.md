@@ -40,7 +40,7 @@ For guidance on how best to create or migrate a site, see [Adding a Site to Pant
 
 The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites.
 
-Agency workspaces will show "Site Owners" instead of "Users in Charge"
+Agency workspaces show "Site Owners" instead of "Users in Charge".
 
 A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/frozen-site).
 
