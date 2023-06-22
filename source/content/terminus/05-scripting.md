@@ -31,6 +31,31 @@ If so, consider how you can turn the task into a script.
 
 Terminus must be authenticated before you can execute most commands. You must authenticate Terminus with a [machine token](/terminus/install#machine-token) that has the correct permissions before running a script.
 
+### Authenticate Terminus for Continuous Integration
+
+You can run a complete backend authorization in Terminus by accessing Auth0 behind the scenes to positively identify the Terminus client with an OAuth token. Auth0 places limits on how many times this can be done in a given time period. Use your machine token to authorize Terminus sparingly to avoid exceeding Auth0 rate limits.
+
+1. Running `terminus auth:login --machine-token=${TOKEN}` to run a complete backend authorization. This process:
+
+    - Logs in your `machine-token`
+    - Allows Terminus to create a cached session in the local user's $HOME folder (for example, `$HOME/.terminus/cache/session`). Use this cached session token for repeated logins. The session file takes the following format:
+
+        ```json
+        {
+        "session": "${PANTHEON_USER_ID}:${CURRENT_SESSION_ID}:${OAUTH_SESSION_TOKEN}",
+        "expires_at": ${EXPIRE_DATETIME},
+        "user_id": "${PANTHEON_USER_ID}"
+        }
+        ```
+
+1. Restore the session file in a CI context to allow Terminus to log in using `terminus auth:login` with no `--machine-token`. Instructions for specific CI pipelines are listed below.
+
+    - [Bitbucket](/terminus/ci/bitbucket)
+    - [CircleCI](/terminus/ci/circleci)
+    - [GitHub](/terminus/ci/github-actions)
+    - [GitLab](/terminus/ci/gitlab)
+
+
 ## Example Repositories
 
 - The [Pantheon Example Terminus Auto Update Script](https://github.com/pantheon-systems/example-terminus-auto-update-script) demonstrates how you can use Terminus to automate plugin and theme updates for multiple sites.
@@ -133,8 +158,13 @@ done <<< "$PANTHEON_SITES"
 echo "Site PHP information has been saved to $CSV_FILE"
 ```
 
+
+
 ## More Resources
 
 - [Install Quicksilver Scripts](/guides/quicksilver/install-script)
 - [Cron for WordPress](/guides/wordpress-developer/wordpress-cron)
 - [Cron for Drupal](/drupal-cron)
+- [Continuous Integration Solutions on Pantheon](/continuous-integration)
+- [WordPress Composer Continuous Integration](/guides/wordpress-composer/create-wp-site-composer-ci-auto-test#continuous-integration)
+- [Build Tools Continuous Integration](/guides/wordpress-composer/create-wp-site-composer-ci-auto-test#continuous-integration)
