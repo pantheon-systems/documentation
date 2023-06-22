@@ -42,7 +42,16 @@ Currently, Pantheon Front-End Sites do not support SSR using Gatsby. Other permu
 
 ## Pantheon Front-End Site Starter Kits
 
-Pantheon offers recommended starter kit templates that are pre-configured, and include the following:
+Pantheon offers recommended starter kit templates:
+
+- [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
+- [WordPress Backend Starter](/guides/decoupled/wp-backend-starters)
+- [Drupal + Next.js Frontend Starter](/guides/decoupled/drupal-nextjs-frontend-starters)
+- [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
+- [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)
+
+
+All starter kits are pre-configured, and include the following:
 
 * A set of recommended modules or plugins for creating Front-End Sites on Pantheon.
 
