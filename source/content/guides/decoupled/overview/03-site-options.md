@@ -64,6 +64,54 @@ The table below provides compatibility information for Front-End Sites.
 | WordPress  |   5.9 or higher |
 
 
+## Rendering Options
+
+This section provides a comparison of static site generation (SSG), server side rendering (SSR), and incremental static regeneration (ISR) modes, and some common use cases for each.
+
+Refer to [Decoupled Architectures: What Computer Assembles the Websites](https://pantheon.io/blog/decoupled-architectures-what-computer-assembles-websites) for more information. You can also check out this [Decoupled Architecture video](https://www.youtube.com/watch?v=dF39cXW3IqY) for a demonstration of the different approaches each mode takes.
+
+### What Is Static Site Generation (SSG)?
+
+SSG compiles and renders your entire website at build time. SSG output consists of:
+
+- ***Static files:**** HTML
+- ***Assets:**** JavaScript, CSS, etc.
+
+#### Common SSG Use Cases
+
+- Pages with content that is the same for all users.
+- Pages that do not require back and forth processing with a runtime.
+- Pages with infrequent content changes.
+- Pages with critical uptime needs. Content dependencies are met at build time for SSG sites. This means that a failure by a dependent content source will only block a content update. In contrast, an SSR site cannot return a result if a CMS is down when an SSR site tries to render a page.
+
+### What Is Server Side Rendering (SSR)?
+
+SSR uses a web server running Node.js to render individual pages on demand. This is different from SSG which renders the entire site at build time.
+
+#### Common SSR Use Cases
+
+- Pages that are user specific
+- Pages that require authentication
+- Pages that change frequently
+- Pages that do not require back and forth processing with a runtime.
+- Pages with regular content changes or edits benefit from SSR because the entire site is not compiled as it is with SSG.
+
+### What Is Incremental Static Regeneration (ISR)?
+
+<Alert title="Note"  type="info" >
+
+Pantheon does not support Incremental Static Regeneration (ISR).
+
+</Alert>
+
+ISR allows you to regenerate static pages during runtime without having to rebuild your entire site. Refer to [Next.js ISR](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration) for more information.
+
+### Key Differences
+
+- SSG compiles and renders your entire website at build time.
+- SSR uses a web server to render individual webpages on demand as opposed to SSG which renders entire websites at build time.
+- ISR is not supported on the Pantheon platform. Like SSR, ISR renders individual pages on demand. However, ISR stores the results in an internal cache. This is a less efficient solution than using a CDN. Pantheon provides [Global CDN](/guides/global-cdn) to all Pantheon sites. The combination of SSR and a CDN solves the same problem as ISR in a more robust way.
+
 ## More Resources
 
 - [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
