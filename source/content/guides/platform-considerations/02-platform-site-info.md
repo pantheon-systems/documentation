@@ -110,6 +110,17 @@ If your site contains rules in `.htaccess` that cannot be migrated to PHP, Panth
 
 Drupal 7 and 8 checks for arbitrary code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, refer to [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
 
+## Inactive Site Freezing
+
+Sandbox sites that are over four months old that have not had code commits or other Git activity for three months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
+
+You can easily reactivate a site:
+
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), **Sites** tab, and select the frozen site. 
+
+1. Click **Unfreeze site**. The site will be ready for development again within a few minutes. 
+
+If you experience any issues, like missing static assets, a [backup](/guides/environment-configuration/restore-environment-backup) of the site is available and can be restored via the Site Dashboard. Please note that only files that have been committed will be available after unfreezing.
 
 ## Maintenance Mode
 
