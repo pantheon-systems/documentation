@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/workspace-sites-teams/sites
 editpath: docs/guides/account-mgmt/workspace-sites-teams/05-sites.md
-reviewed: "2022-09-19"
+reviewed: "2023-06-20"
 contenttype: [guide]
 innav: [false]
 categories: [organizations]
@@ -40,9 +40,9 @@ For guidance on how best to create or migrate a site, see [Adding a Site to Pant
 
 The **Sites** tab shows all sites you own or are a team member of. You can quickly tag, sort, and filter your sites.
 
-Agency workspaces will show "Site Owners" instead of "Users in Charge"
+Agency workspaces show "Site Owners" instead of "Users in Charge".
 
-A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/guides/platform-considerations/platform-site-info#inactive-site-freezing).
+A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/frozen-site).
 
 ### Associate a Site to a Workspace
 
@@ -194,13 +194,19 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
+   <Alert title="Note" type="info" >
+
+   If you get a message that the site is frozen, and you still want to delete the site, click the **click here to delete it** link.
+
+   </Alert>
+
 1. Select **Settings**, and then select **Delete Site**.
 
 1. Click the **Delete Site** button.
 
-1. Enter the site title; this ensures you're aware of the site you're deleting.
+1. Enter the site title (provided just above the text field) to confirm you're aware of which site you're deleting.
 
-1. Click **Delete This Site**.
+1. Click **Delete This Site**. After a few moments, the site will be deleted, and you will be returned to your Personal Workspace home.
 
 ### Delete a Site from a Workspace
 
@@ -212,7 +218,7 @@ This action is permanent and irreversible. Export any needed content, code, or f
 
 1. Type **Delete**.
 
-1. Click **Delete Site(s)**.
+1. Click **Delete Site(s)**. A flyout message will appear indicating that the site has been deleted.
 
 ### Delete a Site with Terminus
 
