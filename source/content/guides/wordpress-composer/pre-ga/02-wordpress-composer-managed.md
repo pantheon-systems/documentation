@@ -76,28 +76,28 @@ Bedrock installs WordPress as a required package so updates can be managed by Co
 
 [WPackagist](https://wpackagist.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box. 
 
-You can install packages from Packagist or WPackagist without any additional configuration using `composer upstream-require`.
+You can install packages from Packagist or WPackagist without any additional configuration using `composer require`.
 
 #### Require a Package from Packagist
 
 Some WordPress developers push their packages to Packagist in addition to the WordPress plugin and theme repositories. In this way, it may be beneficial to pull those packages directly from Packagist to get the latest code directly from the source.
 
 ```
-composer upstream-require yoast/wordpress-seo
+composer require yoast/wordpress-seo
 ```
 
 Packages that are flagged as `wordpress-plugin`, `wordpress-theme` or `wordpress-muplugin` in their `composer.json` files will be installed automatically in the appropriate `web/app/` directory by Composer.
 
 #### Requiring a package from WPackagist
 
-For all other plugins and themes that are not managed on Packagist, you can use `composer upstream-require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
+For all other plugins and themes that are not managed on Packagist, you can use `composer require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
 
 ```
-composer upstream-require wpackagist-theme/twentytwentytwo
+composer require wpackagist-theme/twentytwentytwo
 ```
 
 ```
-composer upstream-require wpackagist-plugin/advanced-custom-fields
+composer require wpackagist-plugin/advanced-custom-fields
 ```
 
 ## Known Issues
