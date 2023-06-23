@@ -10,6 +10,7 @@ audience: [development]
 product: [dashboard]
 integration: [--]
 showtoc: true
+reviewed: 2023-06-23
 ---
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
@@ -102,7 +103,135 @@ After testing your changes in the Test environment you can move them to the Live
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
 
-## Specific Workflow Scenarios
+## Examples
+
+### Create an Article on the Site
+
+1. Click the <Icon icon="new-window-alt" text="Site Admin"/> button to open your Live site in a new tab. You’ll need to log in before being directed to the site administration dashboard.
+
+    <Alert title="Note" type="info">
+      Your WordPress or Drupal username and password are the same set you
+      created when you installed your Dev site for the first time.
+    </Alert>
+
+1. Create a new Drupal article or WordPress post. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article. When finished, visit the front page of your site and confirm that you can see the new content.
+
+1. Go back to your **Site Dashboard**, click the <Icon icon="wrench" text="Dev"/> tab, and open your Dev site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/>.
+
+    Notice that the content you just created on your Live site doesn’t appear on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
+
+    It’s important to develop on a recent copy of your site with the newest content, so let’s clone your Live site—with its new content—to your Dev environment.
+
+1. Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup:
+
+    <Accordion id="create-backup-2" title="Create Backup (optional)">
+
+    The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+
+    1. Click <Icon icon="cloud-upload" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard.
+    2. Click **Create New Backup**.
+
+    </Accordion>
+
+1. Go to your [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the <Icon icon="wrench" text="Dev"/> tab, and then click <Icon icon="server" text="Database / Files"/>.
+
+1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site. 
+
+    <Alert type="danger" title="Warning">
+
+    As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.
+
+    The Clone operation only copies the [files](/guides/filesystem) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
+
+    </Alert>
+
+1. Click **Clone the Database & files from Live into the Development Environment**.
+
+1. Click <Icon icon="new-window-alt" text="Visit Development Site"/> when this is complete to confirm that the content you created on your Live site now appears on your Dev site.
+
+Nice work! You added a page to your Live site, then cloned this environment "down" to Dev. Your Dev environment is a safe place for editing code, and now it's up-to-date with your latest content.
+
+### Make Changes to the Site Theme
+
+1. Go to **Site Dashboard**, select the **Dev** tab, and then select **Code**. 
+
+1. Confirm your Connection Mode is set to **SFTP**.
+
+1. Log in to your Dev site by clicking the <Icon icon="new-window-alt" text="Site Admin"/> button.
+
+1. Install and activate a _new_ theme (do not activate/enable a theme that came pre-packaged with your site).
+   
+   - [WordPress instructions](https://wordpress.org/documentation/article/worik-with-themes/)
+   - [Drupal instructions](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
+
+1. Visit your site to confirm the theme change.
+
+1. Return to **Site Dashboard** and select the **Dev** tab. The files you just added are highlighted.
+
+  <Alert title="Note" type="info">
+
+  You may need to refresh your dashboard to see these files in your Dev environment.
+
+  </Alert>
+
+1. Add a commit message, then click **Commit** to add these files to your Dev environment.
+
+    <Alert title="Note" type="info">
+
+    In the Dev environment, you can’t make a commit without first adding a commit message.
+
+    </Alert>
+
+1. Review your changes in Dev.
+
+1. Go to your **Site Dashboard**, select the **Test** tab, and then select **Deploys**. As you can see, 1 commit is ready to deploy from the Dev environment.
+
+1. Check the **Pull files and the database from the Live environment** box.
+
+1. Consider creating a backup before proceeding:
+
+    <Accordion title="Create Backup (optional)" id="create-backup" >
+
+    The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+
+    1. Click <Icon icon="cloud-upload" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard.
+
+    1. Click **Create New Backup**.
+
+    1. Click <Icon icon="refresh" text="Deploys"/> to return to the lesson.
+
+    </Accordion>
+
+    <Alert title="Warning" type="danger">
+
+      As intended, the following action will overwrite your Test database and files. If you skipped this backup task you will be unable to recover this data hereafter.
+
+    </Alert>
+
+1. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
+
+    <Accordion title="Deploy Commits to Test (optional)" id="understand-deploy" icon="lightbulb">
+
+    Test is a separate environment from Dev, with its own codebase, database, and media files. When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.
+
+    </Accordion>
+
+1. Click <Icon icon="new-window-alt" text="Site Admin"/> when the deployment completes to go to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
+
+1. Activate/enable your theme. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
+
+1. Review your Test site.
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **Live** tab, and then click **Deploys**.
+
+1. Add a Deploy Log Message (optional), then click **Deploy Code from Test to Live Environment**.
+
+1. Activate/enable your theme. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
+
+Congratulations! You just performed on-server development to make changes to your UI. You made changes on your Dev site, reviewed them on your Test site, then deployed them to Live.
+
+
+## Specific Workflow Tasks
 
 ### Content Staging
 
