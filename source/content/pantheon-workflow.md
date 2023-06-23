@@ -1,5 +1,5 @@
 ---
-title: Use the Pantheon WebOps Workflow
+title: Pantheon WebOps Workflow
 description: Understand the Pantheon WebOps workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
 tags: [workflow, dashboard, webops]
 contenttype: [doc]
@@ -9,13 +9,8 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
+showtoc: true
 ---
-
-<Alert title="Note" type="info">
-
-This page offers a high level description of the intended usage of Pantheon's Dev, Test, and Live WebOps workflow. After familiarizing yourself with the concepts described here, follow our step-by-step [Quick Start Guide](/guides/quickstart) to practice the basics.
-
-</Alert>
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
 
@@ -107,30 +102,34 @@ After testing your changes in the Test environment you can move them to the Live
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
 
+## Specific Workflow Scenarios
+
 ### Content Staging
 
 Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions.
 
-## Upload Content and Files to Test and Live Environments
-
 You can upload files directly to your Test and Live environments through an SFTP connection. Refer to [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info#sftp-file-uploads-to-test-and-live-environments) for more information.
 
-## Configuration Management
+Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this case, you may move the database and files (e.g. images) from Dev or Test to Live via the **Database/Files** > **Clone** area of the Dashboard.
+
+Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made in Live, like comments or ecommerce orders from the public. Also note that overwriting the database of a Live environment may cause downtime.
+
+### Configuration Management
 
 Dealing with changes to your site's configuration, stored in the database, can be a challenge. Moving the database up from Dev to Test and Live typically won't work, because it will overwrite content in Live. While you can make manual configuration changes on each environment, **it's a best practice to manage configuration in code**.
 
-### WordPress
+WordPress
 
 * [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`.
 * [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
 
 
-### Drupal
+Drupal
 
 * [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 * [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
 
-## Understanding Write Permissions in Test and Live
+### Understanding Write Permissions in Test and Live
 
 By design, code changes via SFTP are prevented in Test and Live. All code changes should be done in Dev. There are two ways to update code in Test or Live:
 
@@ -138,7 +137,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
 
-## Managing Database and Files: Clone, Import, Export, Wipe
+### Managing Database and Files: Clone, Import, Export, Wipe
 
 You may also clone, import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 
@@ -156,16 +155,6 @@ The **Export** tool does not include a copy of the site's codebase and cannot be
 
 </Alert>
 
-## Uncommon Workflows
-
-Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this case, you may move the database and files (e.g. images) from Dev or Test to Live via the **Database/Files** > **Clone** area of the Dashboard.
-
-Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made in Live, like comments or ecommerce orders from the public. Also note that overwriting the database of a Live environment may cause downtime.
-
-If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
-
-## Troubleshooting
-
 #### Uncaught Exception: Table 'pantheon.semaphore' Doesn't Exist
 
 If you access the site before a database import is complete, you may see the following error:
@@ -176,7 +165,20 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
+
+## Additional Workflow Tools
+
+Within this workflow, there are several ways you can manage and develop your sites.
+
+- Manage multiple sites with [Custom Upstreams](/guides/custom-upstream).
+- Create sites by using Pantheon Upstreams, importing existing sites, [plus other methods](/start-state).
+- Support large teams using [Multidev](/guides/multidev).
+- Migrate your site [from a competitor](/get-started).
+- [Use the command line](/terminus) to manage and create sites.
+- Develop using either [Git](/guides/git) or [SFTP](/guides/sftp).
+
+There are even more tools and options available to you.  Refer to [Develop](/develop) for more information.
+
 ## More Resources
  - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
- - [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
  - [Pantheon Filesystem](/guides/filesystem/)
