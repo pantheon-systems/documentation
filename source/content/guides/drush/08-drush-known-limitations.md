@@ -51,9 +51,9 @@ The following Drush commands are not supported and will not work on Pantheon sit
  __ROOT__/sites/default/drushrc.php
  ```
 
-## Cancelling confirmation prompts with Ctrl + c is not supported
+## Cancelling Confirmation Prompts with Ctrl + c is not Supported
 
-Attempting to cancel a Drush confirmation prompt using `ctrl+c` will have the unintended consequence of sending the default response to the server. This happens because for SSH to correctly handle signals like `SIGINT` (`ctrl+c`), it requires a PTY and that is not supported in Pantheon.
+Attempting to cancel a Drush confirmation prompt using `ctrl+c` will send the default response to the server. This happens because SSH requires a PTY to correctly handle signals like `SIGINT` (`ctrl+c`), which is not supported on Pantheon.
 
 ## More Resources
 
