@@ -78,7 +78,7 @@ If an application issue is preventing a password reset via Terminus, you may nee
 
 ## WordPress Site User Login
 
-### Password reset
+### Password reset link from WordPress
 
 1. From the main login form, click **Lost Your Password?**.
 
