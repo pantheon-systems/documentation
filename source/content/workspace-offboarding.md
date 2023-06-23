@@ -1,6 +1,6 @@
 ---
 title: Workspace Offboarding
-description: Easily remove users from multiple sites.
+description: Easily remove users and supporting workspaces from multiple sites.
 contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
@@ -10,7 +10,7 @@ audience: [--]
 product: [--]
 integration: [--]
 tags: [--]
-showtoc: false
+showtoc: true
 reviewed: 2023-06-21
 ---
 
@@ -23,6 +23,8 @@ Workspace Offboarding is available for [Early Access](/guides/support/early-acce
 In addition, you must have an Enterprise account to use this feature.
 
 </Alert>
+
+## Remove Team Members
 
 Use this process if you want to remove a member from either a single workspace, or from a workspace and **all** it's associated sites.
 
@@ -41,3 +43,21 @@ Use this process if you want to remove a member from either a single workspace, 
      ![Alt text](../images/workspace-offboarding.png)
 
 1. Click **Remove Access**. The members are removed based on the selection you made.
+
+## Remove Supporting Organizations
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
+
+1. Click **<span class="glyphicons glyphicons-group"></span> Team**.
+
+1. Click the **x** to the right of the Supporting Workspace you wish to remove. 
+
+1. Select one of the following options:
+
+   - **This site**: removes the workspace from this site only.
+
+   - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
+
+     ![Alt text](../images/workspace-offboarding-supporting.png)
+
+1. Click **Yes, remove access**. The Supporting Workspace is removed based on the selection you made.
