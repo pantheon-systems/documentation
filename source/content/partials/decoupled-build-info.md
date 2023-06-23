@@ -40,7 +40,11 @@ Build details include:
 
 ![build details](../../images/decoupled-build-details.png)
 
-## Trigger a Manual Build
+## Trigger a Build
+
+You can trigger builds manually in the dashboard or automatically when you merge GitHub changes. You cannot trigger a build from a [linked CMS](/guides/decoupled/overview/manage-settings#cms-settings).
+
+### Trigger a Build in the Dashboard
 
 You can save time by quickly triggering a build from your Overview page.
 
@@ -50,7 +54,7 @@ You can save time by quickly triggering a build from your Overview page.
 
 1. Click the **Trigger Build** button in the top left corner.
 
-## Trigger a Build with GitHub Merges
+### Trigger a Build with GitHub Merges
 
 A build and deploy process is automatically triggered when you
 push code to the default branch of your repository or merge a pull
