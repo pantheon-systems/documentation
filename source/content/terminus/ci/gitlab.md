@@ -22,23 +22,23 @@ This section provides information on how to to authenticate Terminus in a GitLab
 
 ## Caching Authentication for GitLab
 
-You can use the example script in this section as a starting point and guide for your own CI scripts..
+You can use the example script in this section as a starting point to create your own CI scripts.
 
-This pipeline demonstrates an initial `build` stage which installs and authenticates terminus, followed by a `deploy_many` stage with two parallel jobs which reuse the downloaded terminus and session token.
+This pipeline demonstrates an initial `build` stage which installs and authenticates Terminus, followed by a `deploy_many` stage with two parallel jobs which reuse the downloaded Terminus and session token.
 
 - Uses the `ubuntu:latest` Docker image.
-- Updates the system and installs necessary tools like PHP, curl, and php libraries terminus needs before the script stages.
-- Adds the current directory to `$PATH`, because we will download terminus to the current directory.
+- Updates the system and installs necessary tools like PHP, cURL, and PHP libraries Terminus needs before the script stages.
+- Adds the current directory to `$PATH`, because you will download Terminus to the current directory.
 - Sets an environment variable to store the session token inside the build directory.
-- Specifies that the downloaded terminus phar and the session folder should be cached for future jobs.
-- Downloads the latest release of Terminus
+- Specifies that the downloaded Terminus phar and the session folder should be cached for future jobs.
+- Downloads the latest release of Terminus.
 - Checks that Terminus is authenticated with `terminus auth:whoami`.
-- Runs two parallel jobs in the `deploy_many` stage, which both reuse the downloaded terminus and session token.
+- Runs two parallel jobs in the `deploy_many` stage, which both reuse the downloaded Terminus and session token.
 
 
 <Alert title="Note"  type="info" >
 
-Before using this script, you need to add a `TERMINUS_TOKEN` variable in the repository's CI/CD settings.
+Before using this script, you must add a `TERMINUS_TOKEN` variable in the repository's CI/CD settings.
 
 </Alert>
 
