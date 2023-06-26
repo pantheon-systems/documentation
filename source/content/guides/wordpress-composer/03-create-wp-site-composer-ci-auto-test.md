@@ -1,6 +1,6 @@
 ---
 title: WordPress Composer
-subtitle: Create a ci, Composer-managed WordPress Site
+subtitle: Create a CI, Composer-managed WordPress Site
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 contenttype: [guide]
 innav: [false]
@@ -42,7 +42,7 @@ Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/
        - [Continuous Integration](https://pantheon.io/integrations/continuous-integration) configuration
        - Credential set up
 
-1. Run the following command to spin up your site: 
+1. Run the following command to spin up your site:
 
     ```bash
     terminus build:project:create wp
@@ -65,7 +65,7 @@ Your files may still be accessible from your version control project if it is pu
 
 Your directories and files within the `/web` directory are stored in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
 
-1. Verify that the `WP_SITEURL` file is in the `/web/wp` directory to allow WordPress core functions to work correctly. 
+1. Verify that the `WP_SITEURL` file is in the `/web/wp` directory to allow WordPress core functions to work correctly.
 
 1. Review the `/web/wp-config.php` file for key settings and move other files to the to the `/web/wp` directory as necessary.
 
@@ -77,7 +77,7 @@ Third-party WordPress dependencies, such as plugins and themes, are added to the
 
 Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
-1. Place all dependencies in the **require** section of your `composer.json` file. 
+1. Place all dependencies in the **require** section of your `composer.json` file.
 
     - This includes dependencies that are only used in non-Live environments. All dependencies in the **require** section are pushed to Pantheon.
 
@@ -113,7 +113,7 @@ All scripts stored in the `.ci/deploy` directory facilitate code deployment to P
 
 The `.ci/tests` scripts run automated tests. You can add or remove scripts depending on your testing needs.
 
-### Static Testing 
+### Static Testing
 
 - `.ci/test/static` and `tests/unit` are static tests that analyze code without executing it. These tests are good at detecting syntax errors but not functionality errors.
 
@@ -121,7 +121,7 @@ The `.ci/tests` scripts run automated tests. You can add or remove scripts depen
 
 - `tests/unit/bootstrap.php` bootstraps the Composer autoloader.
 
-- `tests/unit/TestAssert.php` provides an example Unit test. 
+- `tests/unit/TestAssert.php` provides an example Unit test.
 
 1. Create all project-specific test files in the `tests/unit` directory.
 
@@ -131,13 +131,13 @@ The scripts stored in the `.ci/test/visual-regression` directory run visual regr
 
 - `.ci/test/visual-regression/run` runs [BackstopJS](https://github.com/garris/BackstopJS) visual regression testing.
 
-- `.ci/test/visual-regression/backstopConfig.js` is the [BackstopJS](https://github.com/garris/BackstopJS) configuration file. 
+- `.ci/test/visual-regression/backstopConfig.js` is the [BackstopJS](https://github.com/garris/BackstopJS) configuration file.
 
-1. Update the settings in `.ci/test/visual-regression/backstopConfig.js` file for your project. 
+1. Update the settings in `.ci/test/visual-regression/backstopConfig.js` file for your project.
 
     - For example, the `pathsToTest` variable determines the URLs to test.
 
-## Behat Testing 
+## Behat Testing
 
 Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org/en/latest/) is an acceptance/end-to-end testing framework written in PHP. It facilitates testing the fully-built WordPress site on Pantheon. [WordHat](https://wordhat.info/) is used to help integrate Behat and WordPress.
 
@@ -149,7 +149,7 @@ Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org
 
 - `tests/behat/behat-pantheon.yml` runs tests against the Pantheon site.
 
-- `tests/behat/tests/behat/features` stores Behat `.feature` extension test files. 
+- `tests/behat/tests/behat/features` stores Behat `.feature` extension test files.
 
 1. Store all `.feature` extension test files in the `tests/behat/tests/behat/features` directory.
 
@@ -164,13 +164,13 @@ Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org
 
 ## GitHub Actions
 
-This section provides information enabling GitHub Actions for your site. 
+This section provides information enabling GitHub Actions for your site.
 
 The Build Tools Site will configure GitHub Actions automatically if it was passed as the selected CI when creating the site. You will need to consult advanced external resources if you're working with an existing non-Build Tools site and want to add Github Actions.
 
-The steps to enable GitHub Actions for an existing Build Tools site created with another CI (for example, CircleCI) shown below might work for you.  
+The steps to enable GitHub Actions for an existing Build Tools site created with another CI (for example, CircleCI) shown below might work for you.
 
-1. Copy `.ci/.github` to `.github`. 
+1. Copy `.ci/.github` to `.github`.
 
 1. Add the following secrets to the Github Actions configuration:
 
@@ -200,8 +200,8 @@ Complete the one-time steps below to get started using [Lando](https://docs.devw
 1. Manually create a `.lando.yml` file with your preferred configuration, based on the WordPress recipe.
 
 1. Run `lando start` to start Lando.
-    
-1. Save the local site URL. 
+
+1. Save the local site URL.
 
     - The local site URL should look similar to: `https://<PROJECT_NAME>.lndo.site.`
 
@@ -215,13 +215,13 @@ Complete the one-time steps below to get started using [Lando](https://docs.devw
 
     ```bash
     `lando pull --code=none`
-    ``` 
-    
+    ```
+
 1. Visit the local site URL saved in the preceding steps.
 
     - You should now be able to edit your site locally. The steps above do not need to be completed on subsequent starts. You can stop Lando with `lando stop` and start it again with `lando start`.
 
-1. Run all Composer, Terminus and wp-cli commands in Lando instead of the host machine. 
+1. Run all Composer, Terminus and wp-cli commands in Lando instead of the host machine.
 
     - This is done by prefixing the desired command with `lando`. For example, after a change to `composer.json` run `lando composer update` rather than `composer update`.
 
