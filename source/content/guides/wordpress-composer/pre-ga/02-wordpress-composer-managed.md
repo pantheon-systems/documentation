@@ -35,7 +35,7 @@ WordPress does not natively support [Composer](https://getcomposer.org/), howeve
 
 ## Create Your Site
 
-There are two ways you can spin up a site using the WordPress Composer Managed :
+There are two ways you can spin up a site using WordPress Composer Managed :
 
 - Running the following terminus command:
 
