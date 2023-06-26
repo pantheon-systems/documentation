@@ -25,6 +25,6 @@ This section provides information on how to create your Live environment.
 
 ## More Resources
 
-- [Pantheon Getting Started Guide](/guides/get-started/)
+- [Pantheon Getting Started Guide](/guides/getstarted/)
 
 - [Content Staging with WordPress and Drupal](/content-staging)

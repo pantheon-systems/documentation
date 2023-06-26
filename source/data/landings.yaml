@@ -25,8 +25,8 @@
       links:
         - text: 'Sign up and launch a site'
           url: '/guides/getstarted'
-        - text: 'Add or migrate a site'
-          url: '/add-site'
+        - text: 'Create a Front-End Site'
+          url: '/guides/decoupled/overview/site'
     - title: 'Explore More Features'
       subtitle: ''
       links:
@@ -357,7 +357,7 @@
     title: 'Getting Started'
     type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
-    url: '/guides/get-started'
+    url: '/guides/getstarted'
   cta_alt:
     type: 'Reference'
     title: 'Pantheon Overview'
@@ -730,7 +730,7 @@
     title: 'Getting Started'
     type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
-    url: '/guides/get-started'
+    url: '/guides/getstarted'
   topics-groups:
     - title: 'Code'
       subtitle: 'Learn how to handle PHP errors, notices, warnings, and exceptions.'
@@ -796,7 +796,7 @@
       links:
         - text: 'Getting Started'
           image: 'launchGuide-twitterLarge.png'
-          url: '/guides/get-started'
+          url: '/guides/getstarted'
         - text: 'Launch Essentials'
           image: 'getting-started-Largethumb.png'
           url: '/guides/launch'

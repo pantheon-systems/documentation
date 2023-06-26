@@ -13,7 +13,8 @@ showtoc: true
 reviewed: 2023-06-23
 ---
 
-The goal of the Developer workflow is to protect your live site as much as possible. The main process of the Pantheon Developer workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
+Every Pantheon site comes with three environments: Dev, Test, and Live.
+Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 

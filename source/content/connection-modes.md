@@ -18,7 +18,7 @@ On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you 
 
 <Alert title="Note"  type="info" >
 
-It’s common to switch back and forth between SFTP and Git Connection Mode, depending on the task. For example, WordPress and Drupal Core updates are managed by Pantheon, and they must be applied in Git Connection Mode. Plugin/module updates made in the UI must be applied in SFTP Connection Mode.
+It’s common to switch between SFTP and Git Connection Mode, depending on the task. For example, WordPress and Drupal Core updates are managed by Pantheon, and they must be applied in Git Connection Mode. Plugin and module updates made in the UI must be applied in SFTP Connection Mode.
 
 </Alert>
 
@@ -26,7 +26,7 @@ It’s common to switch back and forth between SFTP and Git Connection Mode, dep
 
 To manage connection modes:
 
-- [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/> tab,  then select <Icon icon={"embed-close"} text={"Code"}/>.
+- [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/> tab, and then select <Icon icon={"embed-close"} text={"Code"}/>.
 
 ## Git Connection Mode
 
