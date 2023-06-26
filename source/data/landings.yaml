@@ -13,13 +13,13 @@
     subtitle: 'Create or migrate a site on Pantheon'
     url: '/add-site'
   topics-groups:
-    - title: 'Learn'
+    - title: 'Before You Begin'
       subtitle: ''
       links:
         - text: 'Pantheon Overview'
           url: '/overview'
-        - text: 'Workspaces, Sites and Teams'
-          url: '/guides/account-mgmt/workspace-sites-teams'
+        - text: 'Platform Considerations'
+          url: '/guides/platform-considerations'
     - title: 'Create a Site'
       subtitle: ''
       links:
@@ -32,8 +32,8 @@
       links:
         - text: 'Products and Features'
           url: '/products'
-        - text: 'Account Management'
-          url: '/manage'
+        - text: 'Integrations'
+          url: '/integrations'
     - title: 'Get Help'
       subtitle: ''
       links:
@@ -1172,8 +1172,8 @@
           url: '/products'
         - text: 'Integrations'
           url: '/integrations'
-        - text: 'Developer Workflow'
-          url: '/workflows'
+        - text: 'Pantheon WebOps Workflow'
+          url: '/pantheon-workflow'
         - text: 'Account Management'
           url: '/manage'
         - text: 'Support'

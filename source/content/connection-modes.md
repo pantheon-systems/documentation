@@ -24,7 +24,9 @@ It’s common to switch back and forth between SFTP and Git Connection Mode, dep
 
 ![Connection Modes](../images/dashboard/connection-mode-sftp.png)
 
-[Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/>, and then select <Icon icon={"embed-close"} text={"Code"}/>.
+To manage connection modes:
+
+- [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/> tab,  then select <Icon icon={"embed-close"} text={"Code"}/>.
 
 ## Git Connection Mode
 
@@ -38,7 +40,7 @@ You can develop directly on our servers with SFTP Connection Mode. It’s partic
 
 Code changes made in SFTP Connection Mode are still committed into a Git repository. This makes working with other developers easy and ensures _all_ changes are tracked in version control. Whether you’re a novice or seasoned developer, our SFTP Connection Mode is handy and safe to use.
 
-For more information, refer to [SFTP on Pantheon](/guides/sftp)
+For more information, refer to [SFTP on Pantheon](/guides/sftp).
 
 ## More Resources
 
