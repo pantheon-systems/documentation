@@ -354,10 +354,10 @@
   path: 'platform'
   video_id: 'qWyMHOCU79M'
   cta:
-    title: 'Quick Start'
+    title: 'Getting Started'
     type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
-    url: '/guides/quickstart'
+    url: '/guides/get-started'
   cta_alt:
     type: 'Reference'
     title: 'Pantheon Overview'
@@ -727,10 +727,10 @@
   path: 'troubleshoot'
   video_id: 'V7RvZwl5Sw8'
   cta:
-    title: 'Quick Start'
+    title: 'Getting Started'
     type: 'guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
-    url: '/guides/quickstart'
+    url: '/guides/get-started'
   topics-groups:
     - title: 'Code'
       subtitle: 'Learn how to handle PHP errors, notices, warnings, and exceptions.'
@@ -794,9 +794,9 @@
     - title: ''
       type: 'normal'
       links:
-        - text: 'Quick Start'
+        - text: 'Getting Started'
           image: 'launchGuide-twitterLarge.png'
-          url: '/guides/quickstart'
+          url: '/guides/get-started'
         - text: 'Launch Essentials'
           image: 'getting-started-Largethumb.png'
           url: '/guides/launch'

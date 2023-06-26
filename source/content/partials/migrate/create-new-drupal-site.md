@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-1. Log in to your Pantheon account. If you don't have an account, [create one](https://pantheon.io/register?docs) and familiarize yourself with the [Personal Workspace](/guides/quickstart/user-dashboard) before you create a new site.
+1. Log in to your Pantheon account. If you don't have an account, [create one](https://pantheon.io/register?docs) and familiarize yourself with [Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces) before you create a new site.
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 

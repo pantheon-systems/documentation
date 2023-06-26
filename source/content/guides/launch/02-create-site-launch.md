@@ -15,19 +15,16 @@ product: [--]
 integration: [--]
 ---
 
-This section provides information on how to [create your Live environment](/guides/quickstart/create-test-live). 
+This section provides information on how to create your Live environment. 
 
-1. Complete the steps in the [Create New Site](/guides/quickstart/create-new-site/) section of the Quick Start guide.
+1. [Create a New Site](/add-site).
 
-1. Learn how to use your [Personal Workspace](/guides/quickstart/user-dashboard/).
+1. Learn how to use [Workspaces](/guides/account-mgmt/workspace-sites-teams/workspaces).
 
 1. Learn how to use your [Site Dashboard](/site-dashboard).
 
-1. Learn how to [Create Test and Live](/guides/quickstart/workflow/) environments.
-
-
 ## More Resources
 
-- [Pantheon Quick Start Guide](/guides/quickstart/)
+- [Pantheon Getting Started Guide](/guides/get-started/)
 
 - [Content Staging with WordPress and Drupal](/content-staging)

@@ -38,5 +38,5 @@ Consult the [WordPress with Composer on Pantheon Guide](/guides/wordpress-compos
 
 ## More Resources
 
-- [Pantheon Quick Start Guide](/guides/quickstart/)
+- [Pantheon Getting Started Guide](/guides/get-started/)
 - [Platform Considerations](/guides/platform-considerations)

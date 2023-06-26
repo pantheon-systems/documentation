@@ -1,9 +1,9 @@
 - id: home
   title: 'Documentation Topics'
   call-to-action:
-    title: 'Quick Start Guide'
+    title: 'Getting Started Guide'
     sub-title: 'New to the Pantheon platform? Check out our step-by-step guide to learn all the basics.'
-    url: '/guides/quickstart/'
+    url: '/guides/get-started/'
     type: 'guide'
   topics:
     - title: 'Get Started'

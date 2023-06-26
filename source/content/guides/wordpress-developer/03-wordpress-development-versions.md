@@ -54,7 +54,7 @@ Development versions and beta releases are not supported and should not be run o
 
 ## Update Core Manually with Git
 
-1. Set the [connection mode to **Git**](/guides/quickstart/connection-modes/#git-connection-mode) within the Pantheon Site Dashboard, or with [Terminus](/terminus) if you are working on a Multidev environment.
+1. Set the [connection mode to **Git**](/connection-modes/#git-connection-mode) within the Pantheon Site Dashboard, or with [Terminus](/terminus) if you are working on a Multidev environment.
 
  ```bash{promptUser: user}
  terminus connection:set <site>.<env> git
