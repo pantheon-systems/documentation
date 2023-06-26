@@ -84,7 +84,9 @@ You can [contact Support](/guides/support/contact-support/) to restore a site if
 
 ## CMS Settings
 
-You can link your CMS to your Front-End Site if you’re already managing content through a Pantheon-hosted site. Changes made in Drupal or WordPress will automatically render on the page. Note that linking your CMS is optional.
+You can link your CMS to your Front-End Site if you’re already managing content through a Pantheon-hosted site. Changes made in Drupal or WordPress will automatically render on the page. Linking your CMS is optional.
+
+Note that you cannot trigger a Front-End Sites build from your CMS settings. You can trigger a build in your Front-End Sites dashboard or with GitHub merges.
 
 ### Configure CMS Connections
 
