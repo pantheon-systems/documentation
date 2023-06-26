@@ -8,17 +8,18 @@ tags: [--]
 reviewed: ""
 ---
 
-This section provides information on how to view Build details, how to trigger a new build manually in the Overview page, how to trigger a build with GitHub merges, Multidev branch builds, and pull request builds.
+This section provides information on how to view your build and related information, how to trigger a new build manually in the Overview page, how to trigger a build with GitHub merges, build information on Multidev branch builds, and information on pull request builds.
 
-## Build Details
+## Build Information
 
-You can view build details and get information on your Front-End Site development and specifications. Build information is provided in the Overview page in three sections:
+You can view build information on your Front-End Site development and specifications. Build information is provided in the Overview page in four sections:
 
 - Live Build
+- Build History
 - Multidev Branches
 - Pull Requests
 
-Build details include:
+Build history includes:
 
 - **Status:** The build’s latest status. Possible status values are:
     - `In Progress`
@@ -32,13 +33,43 @@ Build details include:
 - **Last Updated:** The date the site content was last modified.
 - **Triggered by:** The name of the user who deployed the site build.
 
-### View Build Details
+### View Live Build
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), then select the **Sites** page.
+The Live build shows the active production build visible to your users.
 
-1. Click the **Front-End Sites** tab and select the site you want to view the build details for.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and then select the **Sites** page.
 
-![build details](../../images/decoupled-build-details.png)
+1. Click the **Front-End Sites** tab and select the site you want to view the Live build for. The Overview page displays with the Live Build section at the top.
+
+    ![live build](../../images/decoupled-live-build.png)
+
+
+### View Build History and Build Details
+
+The Build History section provides a brief overview of the build history for your site. Each build entry has a View Logs button that opens the Build Details page where you can find more granular details about each build.
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and then select the **Sites** page.
+
+1. Click the **Front-End Sites** tab and select the site you want to view the build history or details for.
+
+1. Navigate to the **Build History** section and then click **View Logs** for the site build you want to review details for. The Build Details page displays.
+
+    ![build deployment](../../images/decoupled-view-logs.png)
+
+1. Click the drop-down menus under **Build Log**, click the **Download** button, or click the **Copy to Clipboard** button as desired.
+
+### View Build Deployments
+
+Each successful build has a link with for a deployment preview. You can follow the link to review specific changes pushed to the site.
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and then select the **Sites** page.
+
+1. Click the **Front-End Sites** tab and select the site you want to view the build deployment for.
+
+1. Navigate to the **Build History** section and then click the link in the **deployment** column for the site build you want to review the deployment for.
+
+    ![view logs](../../images/decoupled-view-logs.png)
+
 
 ## Trigger a Build
 
