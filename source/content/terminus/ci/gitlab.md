@@ -22,52 +22,75 @@ This section provides information on how to to authenticate Terminus in a GitLab
 
 ## Caching Authentication for GitLab
 
-You can use the example script in this section for a full start-to-finish Terminus authentication in GitLab.
+You can use the example script in this section as a starting point to create your own CI scripts.
 
-This pipeline does the following:
+This pipeline demonstrates an initial `build` stage which installs and authenticates Terminus, followed by a `deploy_many` stage with two parallel jobs which reuse the downloaded Terminus and session token.
 
 - Uses the `ubuntu:latest` Docker image.
-- Updates the system and installs necessary tools like PHP, curl, perl, sudo, and git before the script stages.
-- Defines a cache for the `$HOME/.terminus` directory. The pipeline system will save and restore the cache for subsequent runs.
-- Determines the latest release of Terminus from the GitHub API and stores it in the `TERMINUS_RELEASE` variable.
-- Creates a directory for Terminus, downloads it into that directory, makes it executable, and then creates a symbolic link to it in `/usr/local/bin` so that you can run it from anywhere.
-- Exports the `TERMINUS_TOKEN` environment variable (assuming that you've already set it in your pipeline settings) and uses it to authenticate Terminus.
+- Updates the system and installs necessary tools like PHP, cURL, and PHP libraries Terminus needs before the script stages.
+- Adds the current directory to `$PATH`, because you will download Terminus to the current directory.
+- Sets an environment variable to store the session token inside the build directory.
+- Specifies that the downloaded Terminus phar and the session folder should be cached for future jobs.
+- Downloads the latest release of Terminus.
 - Checks that Terminus is authenticated with `terminus auth:whoami`.
+- Runs two parallel jobs in the `deploy_many` stage, which both reuse the downloaded Terminus and session token.
 
 
 <Alert title="Note"  type="info" >
 
-Before you use this script:
-
-- Define `TERMINUS_TOKEN` in GitLab's CI/CD Environment Variables.
-- Replace `${TERMINUS_TOKEN` in the script below with the machine token provided by Terminus.
+Before using this script, you must add a `TERMINUS_TOKEN` variable in the repository's CI/CD settings.
 
 </Alert>
 
 ```yaml
 image: ubuntu:latest
 
+variables:
+  DEBIAN_FRONTEND: noninteractive  # avoid interactive prompts
+
 before_script:
   - apt-get update -yq
-  - apt-get install -y php curl perl sudo git jq
+  - apt-get install -y jq php curl php-xml php-mbstring
+
+  # add current directory to $PATH
+  - export PATH="${PATH}:."
+
+  # need to store the session token inside the build directory
+  - export TERMINUS_CACHE_DIR=${PWD}/terminus-session
+
 
 stages:
   - build
+  - deploy_many
 
 cache:
   paths:
-    - ~/.terminus
+    # holds the session login token for reuse in future jobs - $HOME/.terminus by default
+    - terminus-session
+    # The actual terminus phar so we only need to download it once
+    - terminus
 
 install_terminus:
   stage: build
   script:
     - export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | jq -r .tag_name)
-    - mkdir ~/terminus && cd ~/terminus
-    - echo "Installing Terminus v$TERMINUS_RELEASE"
-    - curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
+    - echo Fetching release ${TERMINUS_RELEASE}
+    - echo "Installing Terminus v${TERMINUS_RELEASE}"
+    - curl -L https://github.com/pantheon-systems/terminus/releases/download/${TERMINUS_RELEASE}/terminus.phar --output terminus
     - chmod +x terminus
-    - sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
-    - export TERMINUS_TOKEN=$TERMINUS_TOKEN
-    - terminus auth:login || terminus auth:login --machine-token="${TERMINUS_TOKEN}"
-    - terminus auth:whoami
+    - mkdir -p ${PWD}/terminus-session
+    - terminus -vvv auth:login --machine-token="${TERMINUS_TOKEN}"
+    - terminus -vvv auth:whoami
+
+deployment_one:
+  stage: deploy_many
+  dependencies: [install_terminus]
+  script:
+    - terminus -vvv auth:whoami
+
+deployment_two:
+  stage: deploy_many
+  dependencies: [install_terminus]
+  script:
+    - terminus -vvv auth:whoami
 ```
