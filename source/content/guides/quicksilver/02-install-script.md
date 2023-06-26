@@ -20,7 +20,7 @@ This section provides information on script type and location, as well as how to
 
 Quicksilver currently supports `webphp` scripting, which runs a PHP script through the same runtime environment as the website. PHP scripts are subject to the same limits as any code on the platform, such as [timeouts](/timeouts). PHP scripts cannot be batched, and run continuously and sequentially. Each command executes after the previous command has finished or timed out.
 
-We recommend setting the `web_docroot` to `true` to create a dedicated directory in the docroot (for example, `private/scripts`). This tracks files by instructing Quicksilver to look for the files inside the `web` folder. If your site uses this [nested docroot](/nested-docroot) setting, the scripts directory must be located in the `web` subdirectory of your site's code repository (for example, `web/private/scripts`).
+We recommend setting the `web_docroot` to `true` and to create a dedicated directory under the docroot (for example, `web/private/scripts`). This tracks files by instructing Quicksilver to look for the files inside the `web` folder. If your site uses this [nested docroot](/nested-docroot) setting, the scripts directory must be located in the `web` subdirectory of your site's code repository (for example, `web/private/scripts`).
 
 <Alert type="info" title="Nested Docroots">
 
@@ -28,6 +28,14 @@ If your site uses a [nested docroot](/nested-docroot), the script paths in your 
 
 - `private/scripts/new_relic_deploy.php`
 - `private/scripts/slack_deploy_notification.php`
+
+Even though the pantheon.yml `script` section does not include the `web` folder, the location the file is located in is inside `web`. For example, if this line is set in the `pantheon.yml`:
+
+`private/scripts/new_relic_deploy.php`
+
+The file needs to be located in this location:
+
+`web/private/scripts/new_relic_deploy.php`
 
 </Alert>
 
