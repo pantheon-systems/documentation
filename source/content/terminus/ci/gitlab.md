@@ -53,10 +53,10 @@ before_script:
   - apt-get install -y jq php curl php-xml php-mbstring
 
   # add current directory to $PATH
-  - export PATH="$PATH:."
+  - export PATH="${PATH}:."
 
   # need to store the session token inside the build directory
-  - export TERMINUS_CACHE_DIR=`pwd`/terminus-session
+  - export TERMINUS_CACHE_DIR=${PWD}/terminus-session
 
 
 stages:
@@ -75,10 +75,10 @@ install_terminus:
   script:
     - export TERMINUS_RELEASE=$(curl --silent "https://api.github.com/repos/pantheon-systems/terminus/releases/latest" | jq -r .tag_name)
     - echo Fetching release ${TERMINUS_RELEASE}
-    - echo "Installing Terminus v$TERMINUS_RELEASE"
-    - curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
+    - echo "Installing Terminus v${TERMINUS_RELEASE}"
+    - curl -L https://github.com/pantheon-systems/terminus/releases/download/${TERMINUS_RELEASE}/terminus.phar --output terminus
     - chmod +x terminus
-    - mkdir -p `pwd`/terminus-session
+    - mkdir -p ${PWD}/terminus-session
     - terminus -vvv auth:login --machine-token="${TERMINUS_TOKEN}"
     - terminus -vvv auth:whoami
 
