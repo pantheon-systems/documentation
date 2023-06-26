@@ -82,6 +82,7 @@ You can install packages from Packagist or WPackagist without any additional con
 
 Some WordPress developers push their packages to Packagist in addition to the WordPress plugin and theme repositories. In this way, it may be beneficial to pull those packages directly from Packagist to get the latest code directly from the source.
 
+
 ```bash{promptUser: user}
 composer require yoast/wordpress-seo
 ```
@@ -91,6 +92,7 @@ Packages that are flagged as `wordpress-plugin`, `wordpress-theme` or `wordpress
 #### Requiring a package from WPackagist
 
 For all other plugins and themes that are not managed on Packagist, you can use `composer require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
+
 
 ```bash{promptUser: user}
 composer require wpackagist-theme/twentytwentytwo
