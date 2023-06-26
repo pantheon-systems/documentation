@@ -35,11 +35,11 @@ WordPress does not natively support [Composer](https://getcomposer.org/), howeve
 
 ## Create Your Site
 
-There are two ways you can spin up a site using the WordPress Composer Managed upstream:
+There are two ways you can spin up a site using the WordPress Composer Managed :
 
 - Running the following terminus command:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus site:create --org ORG --region REGION -- <site_name> <label> "WordPress (Composer Managed)"
     ```
 
@@ -74,30 +74,30 @@ Bedrock installs WordPress as a required package so updates can be managed by Co
 
 [Packagist](https://packagist.org) is a repository of Composer packages that are available by default to projects managed by Composer. Packagist libraries receive updates from their source GitHub repositories automatically.
 
-[WPackagist](https://wpackagist.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box. 
+[WPackagist](https://wpackagist.org) is a Packagist-like mirror of the WordPress.org [plugin](https://wordpress.org/plugins) and [theme](https://wordpress.org/themes) repositories and is included with Bedrock out of the box.
 
-You can install packages from Packagist or WPackagist without any additional configuration using `composer upstream-require`.
+You can install packages from Packagist or WPackagist without any additional configuration using `composer require`.
 
 #### Require a Package from Packagist
 
 Some WordPress developers push their packages to Packagist in addition to the WordPress plugin and theme repositories. In this way, it may be beneficial to pull those packages directly from Packagist to get the latest code directly from the source.
 
-```
-composer upstream-require yoast/wordpress-seo
+```bash{promptUser: user}
+composer require yoast/wordpress-seo
 ```
 
 Packages that are flagged as `wordpress-plugin`, `wordpress-theme` or `wordpress-muplugin` in their `composer.json` files will be installed automatically in the appropriate `web/app/` directory by Composer.
 
 #### Requiring a package from WPackagist
 
-For all other plugins and themes that are not managed on Packagist, you can use `composer upstream-require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
+For all other plugins and themes that are not managed on Packagist, you can use `composer require` as well, using `wpackagist-plugin` or `wpackagist-theme` as the vendor and the plugin or theme slug as the package name.
 
-```
-composer upstream-require wpackagist-theme/twentytwentytwo
+```bash{promptUser: user}
+composer require wpackagist-theme/twentytwentytwo
 ```
 
-```
-composer upstream-require wpackagist-plugin/advanced-custom-fields
+```bash{promptUser: user}
+composer require wpackagist-plugin/advanced-custom-fields
 ```
 
 ## Known Issues
@@ -107,7 +107,7 @@ composer upstream-require wpackagist-plugin/advanced-custom-fields
 
 ## Report an Issue
 
-Create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream. 
+Create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
 
 Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program.
 
