@@ -25,6 +25,8 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../../images/integrations/newrelic/activate-new-relic.png)
 
+   It may take several moments for the activation to complete.
+
 1. Visit your site in the browser and make some un-cached requests to generate data in New Relic&reg;. It will take a few minutes for your information to become available in New Relic.
 
 ## Configure New Relic&reg; Performance Monitoring Access
@@ -49,27 +51,15 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
 In both cases, there is not a one-to-one mapping between Pantheon users and New Relic&reg; users. Every Pantheon user who selects **Go to New Relic** from the Pantheon dashboard is logged in as the same New Relic&reg; user.
 
-## Configure Ping Monitors for Availability
+## Open New Relic&reg; Performance Monitoring
 
-New Relic&reg; provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. 
+Moving forward, to open New Relic&reg; Performance Monitoring:
 
-To configure this service:
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) of the site you suspect is having problems with MySQL query performance.
 
-1. Click **New Relic** and then click **Go to New Relic** from the target environment within the Site Dashboard on Pantheon.
+1. Select the environment: Dev, Test, or Live.
 
-1. Select **Synthetics** from the menu bar at the top of the page.
-
-1. Click **Add new** on the **Monitors** tab (default) and enter the details for the URL you want to monitor.
-
-1. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false positives due to long-distance networking issues.
-
-1. Set the frequency for checks. We suggest 5 minutes.
-
-1. Provide an email address for notifications.
-
-1. Click **Create my monitor**.
-
-Pantheon can provide New Relic&reg; Ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — are only available to customers on an annual contract at an additional cost. Review [New Relic Ping Monitors](/guides/pagerduty/monitor/) for more details.
+1. Click the **New Relic** tab, and then select **Go to New Relic**.
 
 ## More Resources
 

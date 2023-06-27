@@ -23,7 +23,7 @@ Disasters are sometimes unavoidable, but steps can be taken to ensure that these
 
 Keep ahead of performance issues by regularly reviewing performance with the [New Relic Application Performance Monitor](/guides/new-relic) (APM), included with all non-Basic Site plans. For more information, refer to the [Pantheon New Relic documentation](/guides/new-relic).
 
-New Relic also provides a performance monitoring service that can send notification of downtime or degraded performance by email and other channels. Refer to the documentation on [New Relic Alerts](https://docs.newrelic.com/docs/alerts/new-relic-alerts/getting-started/introduction-new-relic-alerts) for more information.
+New Relic also provides a performance monitoring service that can send notification of downtime or degraded performance by email and other channels. Refer to the documentation on [New Relic Alerts](https://docs.newrelic.com/docs/alerts-applied-intelligence/overview/) for more information.
 
 If you have been assigned a Customer Success Manager, you will receive periodic technical reviews. These sessions include training on how to use New Relic to proactively address performance issues.
 

@@ -48,7 +48,8 @@ The following components are required for your backend, especially if using the 
 The following components are required for your frontend project to use Pantheon's Front-End Sites:
 
 - [Node.js](https://nodejs.org/en/)
-  - Supported Node.js versions: 14, 16, 18.
+  - Supported Node.js versions for static sites (Gatsby): 14, 16, 18.
+  - Supported Node.js versions for dynamic sites (Next.js): 16.
   - Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
 
 ## Frontend Frameworks
@@ -64,6 +65,8 @@ You can use frontend frameworks other than Gatsby and Next.js, however the proce
 - A repo cannot be connected to more than one Front-End Site
 - There are known issues around disconnecting and reconnecting a repo
 - There are known issues around the GitHub app and org level permissions
+- Incremental Static Regeneration (ISR) is not supported on the Pantheon platform. Like SSR, ISR renders individual pages on demand. However, ISR stores the results in an internal cache. This is a less efficient solution than using a CDN. Pantheon provides [Global CDN](/guides/global-cdn) to all Pantheon sites. The combination of SSR and a CDN solves the same problem as ISR in a more robust way.
+- Agency Partner Workspaces: you cannot currently share limited access with an agency partner. As a workaround, a shared workspace can be created. Agency team members can then be added directly to the owning organization that has Front-End Sites enabled.
 - The repository must have a `package.json` file
 - The repository can have only one `lock` file
 
@@ -94,22 +97,22 @@ Pantheon Front-End Sites are not compatible with the following Pantheon products
 
 The following features are currently not supported with Pantheon Front-End Sites:
 
-- New Relic
-- Object Cache
-- Pantheon Search (Solr)
-- Automated, one-click core updates
-- Role-based access (RBAC)
-- Automated backup and retention
-- Anti-malware
-- Deployed patches and updates
-- SOC-2 Type 2 Audit
-- Network security/intrusion prevention
-- Self-service domain management
-- Active purging
-- Supporting organizations
-- Multizone failover
-- Multiregion failover
-- Log forwarding
+* New Relic
+* Object Cache
+* Pantheon Search (Solr)
+* Automated, one-click core updates
+* Role-based access (RBAC)
+* Automated backup and retention
+* Anti-malware
+* Deployed patches and updates
+* SOC-2 Type 2 Audit
+* Network security/intrusion prevention
+* Self-service domain management
+* Active purging
+* Supporting Workspaces
+* Multizone failover
+* Multiregion failover
+* Log forwarding
 
 ## Stable URLs
 
@@ -151,14 +154,6 @@ Pull requests from a Multidev branch that are made against the upstream will tri
 | Multidev (based on branches)      | `branch-name`   | `[branch-name]-[site-name].appa.pantheon.site`|
 | Multidev (based on pull requests) | `pr-*`          | `pr-[pr-number]-[site-name].appa.pantheon.site`|
 
-
-## Front-End Sites Multidev Development Workflow
-
-The Front-End Sites Multidev workflow is outlined below:
-
-- **Code Push:** The external Git provider controls code posts and deployments. Code pushed to the main branch is built and deployed in your Live environment. Code pushed to any other branch generates a new MultiDev environment. Updates to existing branches result in the corresponding environment being updated.
-
-- **Pull Request:** The Multidev environment is stood up and the preview and backend URL are displayed in GitHub on the PR, on a GitHub deployment, and also in the Front-End Sites Overview section of the dashboard. The build details for a PR are also be linked to GitHub.
 
 ## Static Site Indexing
 

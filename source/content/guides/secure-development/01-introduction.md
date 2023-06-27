@@ -51,5 +51,5 @@ Pantheon also provides:
 ## More Resources
 
 - [Pantheon Global CDN](/guides/global-cdn)
-
 - [Pantheon Advanced Global CDN](/guides/professional-services/advanced-global-cdn)
+- [Pantheon Security](/guides/security)

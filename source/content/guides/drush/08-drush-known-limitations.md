@@ -1,7 +1,7 @@
 ---
 title: Drupal Drush Command-Line Utility on Pantheon
-subtitle: Drush Known Limitation with Pantheon
-description: Review known Drush limitations. 
+subtitle: Drush Known Limitations with Pantheon
+description: Review known Drush limitations.
 tags: [migrate, terminus, drush]
 showtoc: true
 permalink: docs/guides/drush/drush-known-limitations
@@ -50,6 +50,10 @@ The following Drush commands are not supported and will not work on Pantheon sit
  __ROOT__/../drush/drushrc.php
  __ROOT__/sites/default/drushrc.php
  ```
+
+## Cancelling Confirmation Prompts with Ctrl + c is not Supported
+
+Attempting to cancel a Drush confirmation prompt using `ctrl+c` will send the default response to the server. This happens because SSH requires a PTY to correctly handle signals like `SIGINT` (`ctrl+c`), which is not supported on Pantheon.
 
 ## More Resources
 

@@ -117,13 +117,23 @@ For more information, refer to the documentation on [Specifying a Solr version](
 
 #### Verify `pantheon.yml` is Configured Correctly
 
-After you specify the Solr 8 version in the Dev environment of your Drupal site, verify that the environment is configured to use Solr 8.
+After you specify the Solr 8 version in the Dev environment of your Drupal site, verify that the environment is configured to use Solr 8. The configured Solr environment will have several `PANTHEON_INDEX_*` variables, one of which will be `PANTHEON_INDEX_PORT`. If Solr 8 is configured correctly, the `PANTHEON_INDEX_PORT` value will be `443`. If any other value is displayed, your site is still configured to use Solr 3.
 
-1. Navigate to **Reports > Status report**
-1. Click **More Info** to identify the PHP version. This will lead you to the PHP Info page.
-1. Scroll to the “Environment Variables” section of the PHP Info page.
+1. Run the command below:
 
-The configured Solr environment will have several `PANTHEON_INDEX_*` variables, one of which will be `PANTHEON_INDEX_PORT`. If Solr 8 is configured correctly, the `PANTHEON_INDEX_PORT` value will be `443`. If any other value is displayed, your site is still configured to use Solr 3.
+  ```bash{promptUser:user}
+  terminus drush SITE.ENV -- ev "phpinfo();" | grep PANTHEON_INDEX_PORT
+  ```
+
+1. Confirm that the `PANTHEON_INDEX_PORT` value is `443`. The output from the command above should look similar to the example below.
+
+  ```bash{promptUser:user}
+  terminus drush solr8-sandbox.dev -- ev "phpinfo();" | grep PANTHEON_INDEX_PORT
+  [warning] This environment is in read-only Git mode. If you want to make changes to the codebase of this site (e.g. updating modules or plugins), you will need to toggle into read/write SFTP mode first.
+  PANTHEON_INDEX_PORT => 443
+  $_SERVER['PANTHEON_INDEX_PORT'] => 443
+  $_ENV['PANTHEON_INDEX_PORT'] => 443
+  ```
 
 ## Install and Enable the Search API Pantheon Module
 

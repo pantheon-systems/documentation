@@ -94,12 +94,12 @@ Branch names must be lowercase and no more than 11 characters. If you push a bra
   git push origin new-name
   ```
 
-  This creates a new branch with the commit history intact. 
-  
+  This creates a new branch with the commit history intact.
+
 1. Navigate to the **Multidev Environments** page then click **Git Branches** then delete the original branch. You will now be able to create an environment associated with the renamed Git branch.
 
 ## More Resources
 
-- [Your Site Code on Pantheon](/code)
+- [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
 
 - [Developing on Pantheon Directly with SFTP Mode](/guides/sftp)

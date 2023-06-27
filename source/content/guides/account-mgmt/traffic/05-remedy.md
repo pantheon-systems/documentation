@@ -63,7 +63,7 @@ In addition to your other WordPress security practices, take steps to block brut
 
     ### Use Single Sign-On (SSO)
 
-    If your workspace makes use of an Identity Provider (IdP) such as Google Workspace, Microsoft AzureAD, or others for [Single Sign-On](/sso-organizations), utilize that as the login authority for your WordPress site.
+    If your workspace makes use of an Identity Provider (IdP) such as Google Workspace, Microsoft AzureAD, or others for [Single Sign-On](/guides/sso/sso-organizations), utilize that as the login authority for your WordPress site.
 
     Some plugins or services can simplify the SSO integration of your IdP, such as [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) or [MiniOrange](https://plugins.miniorange.com/wordpress).
 
@@ -177,7 +177,7 @@ if ($request_ip_forbidden) {
 
 <TabList>
 
-<Tab title="Drupal" id="d7tab" active={true}>
+<Tab title="Drupal 7" id="d7tab" active={true}>
 
 Navigate to the site's `/admin/config/people/ip-blocking` and enter the IP address to block.
 
@@ -186,6 +186,14 @@ If the site is slow or unavailable, run the MySQL query below, replacing `192.0.
 ```sql
 mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
 ```
+
+</Tab>
+
+<Tab title="Drupal 8 or higher" id="drupal8+">
+
+1. Install the [Drupal ban module](https://www.drupal.org/docs/8/core/modules/ban/overview) (it is not enabled by default).
+
+1. Navigate to the site's `/admin/config/people/ban` and enter the IP address to block: `ban_ip`
 
 </Tab>
 

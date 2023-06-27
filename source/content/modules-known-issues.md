@@ -3,6 +3,7 @@ title: Drupal Modules with Known Issues
 description: A list of Drupal modules that are not supported and/or require workarounds.
 tags: [modules]
 contenttype: [doc]
+showtoc: true
 innav: [true]
 categories: [issues]
 cms: [drupal]
@@ -146,6 +147,16 @@ ___
 <ReviewDate date="2020-06-30" />
 
 **Issue:** Uploads using the "Media Entity DropzoneJS" widget do not reliably work on Pantheon. The widget relies on a temporary path that is not shared between application containers. Refer to [this issue](https://www.drupal.org/project/dropzonejs/issues/2916330) for more information.
+
+___
+
+___
+
+## [Dynamic Entity Reference](https://www.drupal.org/project/dynamic_entity_reference/issues/2930423)
+
+<ReviewDate date="2023-06-09" />
+
+**Issue:** Dynamic Entity Reference isn't supported on Pantheon because MySQL triggers are not supported. Stored procedures and events are also not supported. Refer to [Database Stored Procedures](/guides/platform-considerations/platform-site-info#database-stored-procedures) in the [Platform Considerations](/guides/platform-considerations) guide for more information.
 
 ___
 

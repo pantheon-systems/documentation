@@ -4,6 +4,7 @@ description: A list of WordPress plugins, themes, and functions that are not sup
 tags: [plugins, themes, code]
 contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
 contenttype: [doc]
+showtoc: true
 innav: [true]
 categories: [issues]
 cms: [wordpress]
@@ -1033,7 +1034,7 @@ export ENV=dev
 1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
-  rm ./wp-content/wflogs
+  rm -rf ./wp-content/wflogs
   ```
 
 1. Create the following symlinks:
@@ -1249,7 +1250,7 @@ ___
 
 <ReviewDate date="2022-10-25" />
 
-**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](https://docs.pantheon.io/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
+**Issue 1:** As with other caching plugins, [WP Rocket](https://wp-rocket.me/)'s HTML caching feature conflicts with [Pantheon's page caching](/guides/frontend-performance/caching#page-caching). The caching feature can be disabled to allow other features, like file optimization, media, etc. to be used side-by-side.
 
 **Solution 1:**
 

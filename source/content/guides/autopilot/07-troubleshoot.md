@@ -27,17 +27,17 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
    If there are errors that require attention, in the **Needs Review** section of the Autopilot screen, click **Review Test Results** next to the site you want to review, and **Approve** or **Discard** a test, or **Accept All Changes** before you run Autopilot again.
 
-1. Click **Sites** > **Actions** >  **Manage Autopilot Settings**.
+1. Click **Sites**, click **Actions**, and then click **Manage Autopilot Settings**.
 
-1. Navigate to the **Autopilot Configuration** screen > click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
+1. Navigate to the **Autopilot Configuration** screen and click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
 
-1. Click **Status** in Autopilot's side bar > click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually.
+1. Click **Status** in Autopilot's side bar and then click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually.
 
 ### Re-run Autopilot If Tests Have Already Passed
 
 You must manually start an update, or Autopilot will automatically schedule one in accordance with your site's update cadence. To start an update manually:
 
-Click **Actions** in the site's row on the Autopilot screen > click **Start Applying Updates**.
+Click **Actions** in the site's row on the Autopilot screen and then click **Start Applying Updates**.
 
 ### Re-run Autopilot If Tests Were Approved After Dev Changes
 

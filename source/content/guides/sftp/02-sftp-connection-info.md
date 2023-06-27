@@ -19,7 +19,7 @@ This section provides information on how to access the SFTP Connection Info in y
 
 ## SFTP Connection Info
 
-1. Navigate to your Site dashboard.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Click **Connect with SFTP**. Your connection credentials will be displayed along with a button to connect directly with your preferred client.
 
@@ -58,7 +58,7 @@ You can connect to an environment over SFTP with your terminal. The command to d
     host: appserver.dev.***-*****-***-****
     protocol: sftp
     port: 2222
-    username: anita-username 
+    username: anita-username
     remotePath: /code/
     uploadOnSave: true
     ```
@@ -73,7 +73,7 @@ There is also a one-click option to connect with a GUI client. The main director
 
 You can use SFTP to upload files to your site's files directory in the Test and Live environments. Note that SFTP mode does **NOT** allow you to upload files to the Code directory in the **Test** or **Live** environment.
 
-1. Navigate to the Site Dashboard.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
 
 1. Select the **Test** or **Live** environment and click **Connection Info**.
 
@@ -86,4 +86,4 @@ Refer to [Large File Transfers with rsync and SFTP](/guides/sftp/rsync-and-sftp)
 ## More Resources
 
 - [Creating and Revoking Machine Tokens](/machine-tokens)
-- [Single Sign-On for Pantheon Organizations](/sso-organizations)
+- [Single Sign-On for Pantheon Organizations](/guides/sso/sso-organizations)

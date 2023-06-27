@@ -3,13 +3,13 @@ title: WordPress + Gatsby Frontend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to use the WordPress + Gatsby frontend starter to create a new project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-gatsby-frontend-starters/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]
@@ -33,13 +33,13 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 ## Create Your Project on Pantheon
 
-1. Log in to your **Site Dashboard** and then select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Click the **Gatsby + WordPress** template, select your Git provider under **Choose your Git provider**, and then click **Continue**.
 
-  ![select a starter](../../../../images/decoupled-select-starter.png)
+  ![select a starter](../../../../images/decoupled-select-starter-new.png)
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
@@ -49,7 +49,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 1. Optional. Click **Advanced Settings** to set your:
 
-    - Root and output directories
+    - Output directory
     - Build command
     - Environment variables
     - Deployment path
@@ -66,10 +66,14 @@ You can configure a site served from a subpath in the Pantheon dashboard so that
 
 Refer to [Gatsby's documentation](https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/path-prefix/#instructions) for more information on how Gatsby uses the `pathPrefix` in the `gatsby-config` file.
 
-1. Navigate to your site dashboard and select the site you want to set the `pathPrefix` for.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the site you want to set the `pathPrefix` for.
 
 1. Click **Settings** and then click **Builds**.
 
 1. Click the **Edit** button in the **Build & Output Settings** section.
 
 1. Set the appropriate subpath build and output. A new site deployed using the Gatsby WordPress starter kit will now automatically be available within your subdirectory.
+
+## Connect to a Multidev Environment
+
+Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for instructions on how to connect your Front-End Site to a Multidev environment.

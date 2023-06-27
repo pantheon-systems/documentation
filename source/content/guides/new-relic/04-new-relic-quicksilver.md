@@ -21,7 +21,7 @@ In this guide, we'll automatically label code changes to your site in New Relic&
 
 ## Configure Quicksilver Hook to Record Deployments
 
-1. Follow the instructions to [activate New Relic&reg; APM Pro](/guides/new-relic/activate-new-relic) if you have not already activated it.
+1. Go to [New Relic&reg; Performance Monitoring](/guides/new-relic/activate-new-relic#open-new-relic-performance-monitoring).
 
 1. Use Pantheon's Quicksilver hooks to run our example [New Relic&reg; script](https://github.com/pantheon-systems/quicksilver-examples/blob/master/new_relic_deploy/new_relic_deploy.php) immediately after code is synced on Dev or a Multidev environment and after code is deployed to Test and Live. The script configured in this guide applies a label to the Deployment page in New Relic&reg;.
 

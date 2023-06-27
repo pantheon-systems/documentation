@@ -19,7 +19,7 @@ This section provides information on how to monitor and improve site performance
 
 <Alert title="Note" type="info">
 
- Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below.
+ Please [contact support](/guides/support/contact-support/) if you encounter a permissions warning in New Relic while following the steps below, or if you can't access these features.
 
 </Alert>
 
@@ -55,9 +55,9 @@ Follow the steps below to configure the monitor service.
 
 1. Click **New Relic**, then go to New Relic from the target environment within the Site Dashboard on Pantheon.
 
-1. Select **Synthetics** from the menu bar at the top of the page.
+1. Select **Synthetic Monitoring** from the main menu.
 
-1. Click **Add new** in the **Monitors** tab (default) and enter the details for the URL you want to monitor.
+1. Click **Create Monitor** in the **Monitors** tab (default) and enter the details for the URL you want to monitor.
 
 1. Select the locations you want to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance network mixups.
 
@@ -65,7 +65,7 @@ Follow the steps below to configure the monitor service.
 
 1. Provide an email address for notifications.
 
-1. Click **Create my monitor**.
+1. Click **Save monitor**.
 
 ## Focus on Authenticated Users Only
 

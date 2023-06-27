@@ -71,9 +71,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
 ## Create Pantheon Site
 
-1. Navigate to your User Dashboard and click the **Migrate Existing Site** button:
-
-   ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and click the **Migrate Existing Site** button:
 
 1. Enter your current website URL, choose your site type, and click **Continue**:
 
@@ -81,7 +79,7 @@ Sites running Drupal 7 must add a `settings.php` file that includes `settings.lo
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
-1. Name your site and select an [Organization](/guides/account-mgmt/workspace-sites-teams/workspaces) (optional), then click **Create Site**:
+1. Name your site and select an [Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces) (optional), then click **Create Site**:
 
    ![Name the Migrated Site and Optionally Choose a Workspace](../images/dashboard/migrate-step3.png)
 
@@ -131,7 +129,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
-1. Click **Open SFTP Client** to open your default local SFTP client, and enter your User Dashboard password when prompted.
+1. Click **Open SFTP Client** to open your default local SFTP client, and enter your password when prompted.
 
   If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
@@ -244,7 +242,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
   If you haven't already configured [SSH Keys](/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
 
-1. Review your current index using `git status`, then commit all changes. Refer to [Pantheon Core Files](/code#pantheon-core-files) and [Pantheon Git Repository](/code#pantheon-git-repository) for more information on core files and code structure.
+1. Review your current index using `git status`, then commit all changes.
 
   ```bash{promptUser: user}
   git add .
@@ -351,7 +349,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 #### Pantheon Dashboard
 
-1. Navigate to the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
 
 <Partial file="drupal/migrate-add-files-part3.md" />
 

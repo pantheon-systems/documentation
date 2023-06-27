@@ -34,11 +34,15 @@ Code refers to anything version controlled by Git which includes core, custom an
 ### Content
 Content refers to your site's files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/default/files` for Drupal.
 
-## Code Moves Up, Content Moves Down
+## Your Site Code on Pantheon
+
+This section outlines how your code is processed in the WebOps workflow.
+
+### Code Moves Up, Content Moves Down
 
 ![Dev Test and Live icon](../images/code-workflow.png)
 
-The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/guides/filesystem) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
+The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/guides/filesystem) into our distributed filesystem, Valhalla, and [code](/guides/git/collaborative-development#git-repositories-on-pantheon) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
 <Accordion title="Why does Pantheon do this?" id="why-tab" icon="question-sign">
 
@@ -105,7 +109,7 @@ After testing your changes in the Test environment you can move them to the Live
 
 ### Content Staging
 
-Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions. 
+Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions.
 
 ## Upload Content and Files to Test and Live Environments
 
@@ -174,5 +178,5 @@ MySQL imports tables sequentially, in alphabetical order from A to Z. If you acc
 
 ## More Resources
  - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
- - [Your Site Code on Pantheon](/code)
+ - [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
  - [Pantheon Filesystem](/guides/filesystem/)

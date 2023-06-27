@@ -116,7 +116,7 @@ Sandbox sites that are over four months old that have not had code commits or ot
 
 You can easily reactivate a site:
 
-1. Navigate to your Pantheon User Dashboard, and select the frozen site in the Dashboard. 
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), **Sites** tab, and select the frozen site. 
 
 1. Click **Unfreeze site**. The site will be ready for development again within a few minutes. 
 

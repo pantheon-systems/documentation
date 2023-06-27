@@ -109,17 +109,6 @@ class VideoTemplate extends React.Component {
             ></div>
           </div>
         </div>
-        {node.frontmatter.getfeedbackform && (
-          <GetFeedback
-            formId={
-              node.frontmatter.getfeedbackform === "default"
-                ? "12z1fMzn"
-                : node.frontmatter.getfeedbackform
-            }
-            page={"/" + node.fields.slug}
-            topic="addons"
-          />
-        )}
       </Layout>
     )
   }
@@ -138,7 +127,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        getfeedbackform
         contributors {
           id
           name

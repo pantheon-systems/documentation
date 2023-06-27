@@ -89,7 +89,7 @@ The commands below will:
 
     ```bash{promptUser: user}
   mkdir -p ~/terminus && cd ~/terminus
-  curl -L https://github.com/pantheon-systems/terminus/releases/download/3.1.5/terminus.phar --output terminus
+  curl -L https://github.com/pantheon-systems/terminus/releases/download/3.2.1/terminus.phar --output terminus
   chmod +x terminus
   ./terminus self:update
   sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
@@ -115,7 +115,7 @@ Follow the steps in the [Standalone Terminus PHAR](/terminus/install#standalone-
 
 You must log in with a machine token after the installation completes. A machine token is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. Refer to [Machine Tokens](/machine-tokens/) for more information.
 
-1. Navigate to the **User Dashboard**, select **Account**, and then select **Machine Tokens** to [create your machine token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
+2. [Go to your Personal Settings](/guides/personal-settings), select [Machine Tokens](https://dashboard.pantheon.io/users/#account/tokens/), then [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
 1. Use your machine token to authenticate into Terminus, replacing `<email@example.com>` and `<machine_token>`:
 

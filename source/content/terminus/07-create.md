@@ -145,6 +145,8 @@ You can specify this in the `compatible-version` section of your `composer.json`
 
 1. Make sure that your constraint expression does not accidentally include the next major version of Terminus if you change `compatible-version`. For example, `>=3.0 <4.0.0` is fine, but `>=3.0` is not.
 
+1. Add a new Git tag to the repository. This publishes the plugin as a new version in Packagist. Note that additional steps may be required depending on your plugin needs.
+
 ## Test Plugins
 
 Automated plugin testing is an important step to complete before you distribute your plugins. Automated tests give prospective new users the assurance that the plugin works, and provides a basis for evaluating changes to the plugin.

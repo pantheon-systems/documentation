@@ -106,7 +106,7 @@ You can configure a single site or use the bulk feature to configure multiple si
 
 ###  Configure a Single Site
 
-1. Navigate to the **<i className="fa fa-robot"></i>Autopilot** page of the Workspace, click **Actions**<i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
+1. Navigate to the **<i className="fa fa-robot"></i>Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 

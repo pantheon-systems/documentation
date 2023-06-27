@@ -25,7 +25,7 @@ Refer to [Change Site Ownership](/guides/account-mgmt/workspace-sites-teams/site
 
 ## Accept an Invitation to Pay
 
-You'll receive an email inviting you to pay for the site when a supporting organization is ready to transfer ownership of the site to you.
+You'll receive an email inviting you to pay for the site when a Supporting Workspace is ready to transfer ownership of the site to you.
 
 <Alert title="Note" type="info" >
 

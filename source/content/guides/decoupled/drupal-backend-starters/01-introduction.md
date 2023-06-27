@@ -3,7 +3,7 @@ title: Drupal Backend Starter for Front-End Sites
 subtitle: Introduction
 description: Learn about the Drupal backend starter for Front-End Sites.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/drupal-backend-starters

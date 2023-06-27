@@ -19,7 +19,7 @@ This section provides information on important Multisite fundamentals.
 ## Create Test and Live Environments from Dev
 After you've configured a WordPress Multisite in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
-1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
 2. Click **Create Test Environment**.
 
   This takes a few moments.
@@ -116,7 +116,7 @@ Refreshing data in Test or Dev from Live is simply a matter of reversing the ste
 
 You can now develop against production data.
 
-Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](https://docs.pantheon.io/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
+Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
 
 ## Work with Large Databases
 If you have a really large database (gigabytes and gigabytes) or dozens upon dozens of tables, you may notice that `wp search-replace` can take a really long time — or even time out.
@@ -164,4 +164,4 @@ Continue to the next page for some tips on how to manage networks and debug comm
 
 - [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool)
 
-- [Developer Workflow](/overview/workflows)
+- [Developer Workflow](/workflows)

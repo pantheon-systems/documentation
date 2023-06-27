@@ -3,13 +3,13 @@ title: WordPress + Next.js Frontend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to use the WordPress + Next.js frontend starter to create a new project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-nextjs-frontend-starters/create
 anchorid: create
 contenttype: [guide]
-innav: [true]
+innav: [false]
 categories: [create]
 cms: [decoupled]
 audience: [development]
@@ -30,13 +30,13 @@ The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
 
 ## Create Your Project on Pantheon
 
-1. Log in to your **Site Dashboard** and then select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
 1. Click the **Front-End Sites** tab and then click **+Create New Site**.
 
 1. Click the **WordPress and Next.js** option, select a repo under **Choose your Git provider**, and then click **Continue**.
 
-    ![select a starter](../../../../images/decoupled-select-starter.png)
+    ![select a starter](../../../../images/decoupled-select-starter-new.png)
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 
@@ -46,7 +46,7 @@ The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
 
 1. Optional. Click **Advanced Settings** to set your:
 
-    - Root and output directories
+    - Output directory
     - Build command
     - Environment variables
     - Deployment path
@@ -56,3 +56,7 @@ The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
 1. Click **Build Details** to view the build log.
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
+
+## Connect to a Multidev Environment
+
+Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for instructions on how to connect your Front-End Site to a Multidev environment.

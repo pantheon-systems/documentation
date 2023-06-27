@@ -24,7 +24,7 @@ Ready to learn more?
 - Set up a [Local Development](/guides/local-development) environment.
 - If you’re on a team, start using [Multidev environments](/guides/multidev).
 - Install [Terminus](/terminus), and start interacting with Pantheon from the command line.
-- Learn what [Products](/overview/products) and [Integrations](/overview/integrations) we support.
+- Learn what [Products](/products) and [Integrations](/integrations) we support.
 - Visit [Pantheon Learning](https://learning.pantheon.io/) for both video and instructor-led trainings.
 
 <Enablement title="Are you an agency?" link="https://pantheon.io/solutions/web-agency-success-tools?docs" >

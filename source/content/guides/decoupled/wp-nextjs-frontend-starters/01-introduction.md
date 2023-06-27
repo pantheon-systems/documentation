@@ -3,7 +3,7 @@ title: WordPress + Next.js Frontend Starter for Front-End Sites
 subtitle: Introduction
 description: Learn about the WordPress + Next.js frontend starter for Front-End Sites.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-nextjs-frontend-starters

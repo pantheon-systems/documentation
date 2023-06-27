@@ -41,7 +41,7 @@ If you need to change the version of Node.js for your Front-End Site, you can te
 
 ### Change Site Name
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to change the name of.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, then select the site you want to change the name of.
 
 1. Click **Settings** or **General**.
 
@@ -54,7 +54,7 @@ If you need to change the version of Node.js for your Front-End Site, you can te
 Note that a repository cannot be connected to more than one Front-End Site.
 There are known issues around disconnecting and reconnecting a repository.
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to connect or disconnect with your Git repository.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to connect or disconnect with your Git repository.
 
 1. Click **Settings** or **General**.
 
@@ -68,7 +68,7 @@ This feature only deletes your Front-End Site. Your CMS backend and connected Gi
 
 You can [contact Support](/guides/support/contact-support/) to restore a site if it is accidentally deleted.
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to delete.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to delete.
 
 1. Click **Settings** or **General**.
 
@@ -84,11 +84,13 @@ You can [contact Support](/guides/support/contact-support/) to restore a site if
 
 ## CMS Settings
 
-You can link your CMS to your Front-End Site if you’re already managing content through a Pantheon-hosted site. Changes made in Drupal or WordPress will automatically render on the page. Note that linking your CMS is optional.
+You can link your CMS to your Front-End Site if you’re already managing content through a Pantheon-hosted site. Changes made in Drupal or WordPress will automatically render on the page. Linking your CMS is optional.
+
+Note that you cannot trigger a Front-End Sites build from your CMS settings. You can trigger a build in your Front-End Sites dashboard or with GitHub merges.
 
 ### Configure CMS Connections
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure CMS Connections for.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to configure CMS Connections for.
 
 1. Click **Settings** and then click **CMS**.
 
@@ -104,16 +106,13 @@ You can link your CMS to your Front-End Site if you’re already managing conten
 
 ## Build and Output Settings
 
-You can configure and edit the following Build and Output Settings:
+You can configure and edit the Build Command and Output Directory in Build and Output Settings. You do not need to modify these settings if you are using a recommended [starter kit](/guides/decoupled/overview/site-options#pantheon-front-end-site-starter-kits).
 
-- Root Directory
-    - This allows you to define the project's path if it's located in a subdirectory within your Git repo.
-- Build Command
-- Output Directory
+Adjustments to these settings might be required if you are not using a starter kit. Refer to [Use a Non-official Frontend Framework](/guides/decoupled/no-starter-kit/any-framework) for more information.
 
 ### Configure Build and Output Settings
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure Build and Output settings for.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to configure **Build and Output** settings for.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -121,7 +120,7 @@ You can configure and edit the following Build and Output Settings:
 
 1. Enter your desired settings and click **Save**.
 
-![Build and Output Settings](../../../../images/decoupled-build-output-settings.png)
+![Build and Output Settings](../../../../images/fes-build-output-settings.png)
 
 ## Site Environment Variables
 
@@ -133,7 +132,7 @@ Environment variables are key-value pairs configured outside your source code. T
 
 ### Add Site Environment Variables
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure Site Environment Variables for.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to configure Site Environment Variables for.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -154,7 +153,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 ### Add a Build Hook
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to add a Build Hook to.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to add a Build Hook to.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -172,7 +171,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 ### Edit a Build Hook
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site with the Build Hook you want to edit.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site with the Build Hook you want to edit.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -184,7 +183,7 @@ You can create and manage Build Hooks in the Pantheon Dashboard. You must
 
 The Build Hook name will remain the same, but your URL will be updated each time you regenerate your Build Hook. Take note of the new URL and update it where needed.
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to regenerate a Build Hook for.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to regenerate a Build Hook for.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -198,7 +197,7 @@ The Build Hook name will remain the same, but your URL will be updated each time
 
 ### Delete a Build Hook
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site with the Build Hook you want to delete.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site with the Build Hook you want to delete.
 
 1. Click **Settings** and then click **Builds**.
 
@@ -222,7 +221,7 @@ You can provide a deployment path if your static site lives in a subdirectory of
 
 ### Set Deployment Path
 
-1. Navigate to your **Site Dashboard**, click **Sites**, and then select the site you want to configure the Deployment Settings for.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to configure the Deployment Settings for.
 
 1. Click **Settings** and then click **Builds**.
 

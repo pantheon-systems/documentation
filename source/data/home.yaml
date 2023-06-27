@@ -18,6 +18,11 @@
       summary: 'Learn how to launch sites on Pantheon. Select the correct plan, then add your domain and enable HTTPS.'
       icon: 'icon-golive.svg'
       url: '/go-live/'
+    - title: 'CREATE A FRONT-END SITE'
+      summary: 'Get started with decoupled architecture on Pantheon.'
+      icon: 'icon-develop.svg'
+      url: '/guides/decoupled/'
+      secondary: true
     - title: 'EXPLORE PLATFORM ARCHITECTURE'
       summary: 'Understand and leverage our container-based infrastructure for smooth scaling.'
       icon: 'icon-platform.svg'

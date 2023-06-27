@@ -10,15 +10,15 @@ audience: [development]
 product: [--]
 integration: [aws]
 tags: [files]
-contributors: [sarahg]
-reviewed: "2021-07-07"
+contributors: [sarahg,carl-alberto]
+reviewed: "2023-05-19"
 showtoc: true
 permalink: docs/guides/wordpress-developer/wordpress-s3
 ---
 
 This section provides information on how to integrate Amazon Web Services (AWS) S3 storage with your WordPress Pantheon site.
 
-AWS offers Simple Storage Service (S3) for scalable storage and content distribution that you can integrate with sites running on Pantheon. Pantheon already offers content distribution through our [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/guides/filesystem/large-files) or serving large files.
+AWS offers Simple Storage Service (S3) for scalable storage and content distribution that you can integrate with sites running on Pantheon. Pantheon already offers content distribution through our [Global CDN](/guides/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/guides/platform-considerations/media-email-support#large-files-and-highly-populated-directories) or [serving large files](/guides/filesystem/large-files).
 
 ## Before You Begin
 
@@ -46,29 +46,102 @@ You must configure the service within your [AWS Management Console](https://cons
 
 ### Create a New AWS S3 Bucket
 
- Create a bucket if you do not already have one for your site.
-
 1. Open your [AWS Console](https://console.aws.amazon.com) and click **S3**.
 
 1. Click **Create Bucket**.
 
-1. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You can not change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket.
+1. Enter a bucket name and then select an **AWS Region**. The bucket name you choose must be unique across all existing bucket names in Amazon S3. You cannot change the name after you create a bucket. Note that the bucket name you choose is visible in the URL that points to the objects stored in the bucket.
 
-1. Select a region and click **Create**.
+1. Select **ACLs enabled** and set **Object Ownership** to **Bucket owner preferred** in the **Object Ownership** section.
 
-1. Configure the **Set properties** section and click **Next** when complete. You can configure these options now, or wait and configure later.
+   ![Create s3 bucket for WordPress](../../../images/s3-step1.png)
 
-1. Open the **Permissions** tab, select the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
+1. Uncheck the **Block all public access** in the **Block Public Access settings for this bucket** section and then select the checkbox to acknowledge turning off this setting when prompted.
 
-1. Review your settings, and then click **Create bucket**.
+   ![Create s3 bucket for WordPress](../../../images/s3-step2.png)
+
+1. Leave all other settings to default and then click **Create bucket**.
+
+### Configure your AWS Access
+
+1. Open your **Identity and Access Management (IAM)** dashboard, select **Access Management**, select **Policies**, and then click the **Create policy** button.
+
+   ![Create AWS S3 access step 1](../../../images/guides/s3-access1.png)
+
+1. Select `JSON` and paste the code below under the `Policy editor`, then change the `bucketname`  to the name you specified in the [Create a New AWS S3 Bucket](/guides/wordpress-developer/wordpress-s3#create-a-new-aws-s3-bucket) section, and then click **Next**.
+
+   ```bash{promptUser: user}
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Sid": "ObjectLevel",
+         "Effect": "Allow",
+         "Action": [
+           "s3:PutObject",
+           "s3:GetObject",
+           "s3:DeleteObject"
+         ],
+         "Resource": "arn:aws:s3:::bucketname/*"
+       },
+       {
+         "Sid": "BucketLevel",
+         "Effect": "Allow",
+         "Action": [
+           "s3:GetBucketPublicAccessBlock",
+           "s3:GetBucketOwnershipControls",
+           "s3:ListBucket",
+           "s3:GetBucketLocation"
+         ],
+         "Resource": "arn:aws:s3:::bucketname"
+       }
+     ]
+   }
+   ```
+
+   ![Create AWS S3 access step 2](../../../images/guides/s3-access2.png)
+
+1. Enter your policy name in the **Policy name** field (for example, Pantheons3Access) and then click **Create Policy**.
+
+   ![Create AWS S3 access step 3](../../../images/guides/s3-access3.png)
+
+1. Go back to **Access Management** in the IAM dashboard, select **Users**, and then click **Add users** to create a user based on the policy you created.
+
+   ![Create AWS S3 access step 4](../../../images/guides/s3-create1.png)
+
+1. Enter a name for your user in the **User name** field (for example, S3-user), and then click **Next**.
+
+   ![Create AWS S3 access step 5](../../../images/guides/s3-create2.png)
+
+1. Select **Attach policies directly** in the **Permissions options** section, locate the policy that you created in the above steps, and then click **Next**.
+
+   <Alert title="Note" type="info">
+
+   Steps 1-3 create a custom AWS User policy with read and write permissions to the specific bucket assigned to your site. You can select the **AmazonS3FullAccess** policy to replace the custom policy that you created if you require higher permissions.
+
+   </Alert>
+
+   ![Create AWS S3 access step 6](../../../images/guides/s3-create3.png)
+
+1. Review the configuration and click **Create user**. This creates a user profile without programmatic access.
+
+1. Open your user profile, select the **Security credentials** tab, and click the **Create access key** in the **Access Keys** section.
+
+   ![Create AWS S3 access step 7](../../../images/s3-create-p1-edit.png)
+
+1. Select the **Application running outside AWS** option and click **Next**.
+
+1. Set the optional tags if desired and then click **Create Access key** to finalize the access. Be sure to note the **Access Key** and **Secret Access Key** and store them securely.
+
+   ![Create AWS S3 access step 8](../../../images/guides/s3-create-p2.png)
 
 ## Integrate S3 with WordPress
 
-You must install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://wordpress.org/plugins/amazon-s3-and-cloudfront/).
+You must install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://wordpress.org/plugins/amazon-s3-and-cloudfront/) to integrate S3 with WordPress.
 
 WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/guides/wp-cli) for setup and migration.
 
-### Install and Deploy S3 Uploads
+### Install and Deploy S3 Uploads Plugin
 
 <Alert title="Note" type="info">
 
@@ -98,7 +171,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
    </Alert>
 
-1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+1. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For increased security, we recommend a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely. Refer to [Secret Management Techniques](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys) for more secure methods to store your keys.
 
 1. Commit and push the new plugin and your `wp-config.php` file updates to the Dev environment, then switch to SFTP mode and activate the plugin:
 
@@ -130,6 +203,10 @@ WP Offload Media plugin is supported.
 
 Refer to the [WP Offload Media documentation](https://deliciousbrains.com/wp-offload-media/doc/multisite-per-subsite-bucket-and-custom-domain-settings/) for more information.
 
+#### URL Rewriting
+
+URLs saved in the database use S3's provided URL (for example, https://bucketname.s3.amazonaws.com/uploads/2023/01/image.jpg) by default. You can use [Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) to mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request help with Domain Masking if you have AGCDN.
+
 #### Additional Configuration
 
 Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting, and offline development.
@@ -141,4 +218,6 @@ Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offlo
 ## More Resources
 
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
+- [Securely store your Secret Keys in WordPress](/guides/wordpress-developer/wordpress-secrets-management#store-your-keys)
+- [Mask your S3 URLs to match your domain](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy)
 - [AWS S3 Setup for Drupal](/drupal-s3)
