@@ -1,27 +1,32 @@
 ---
-title: Quick Start
-subtitle: Connection Modes
-description: In part seven of our Quick Start guide, learn how Pantheon users take advantage of Git and SFTP mode to develop their sites.
-contenttype: [guide]
-innav: [false]
-categories: [overview]
+title: Connection Modes
+description: Learn how Pantheon users take advantage of Git and SFTP mode to develop their sites.
+contributors: [wordsmither]
+contenttype: [doc]
+innav: [true]
+categories: [git, sftp, workflows]
 cms: [--]
-audience: [development]
+audience: [--]
 product: [--]
 integration: [--]
-tags: [code, dashboard, git, sftp, workflow]
+tags: [--]
 showtoc: true
-permalink: docs/guides/quickstart/connection-modes/
-editpath: quickstart/07-connection-modes.md
+reviewed: 2023-06-23
 ---
-
-In this lesson, we’ll learn how to connect to your Dev environment and change code.
 
 On Pantheon, you can connect and work via [Git](/guides/git/git-config), or you can connect and work via [SFTP](/guides/sftp). Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
 
-![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
+<Alert title="Note"  type="info" >
 
-[Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/>, and then select <Icon icon={"embed-close"} text={"Code"}/>.
+It’s common to switch between SFTP and Git Connection Mode, depending on the task. For example, WordPress and Drupal Core updates are managed by Pantheon, and they must be applied in Git Connection Mode. Plugin and module updates made in the UI must be applied in SFTP Connection Mode.
+
+</Alert>
+
+![Connection Modes](../images/dashboard/connection-mode-sftp.png)
+
+To manage connection modes:
+
+- [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the  <Icon icon={"wrench"} text={"Dev"}/> tab, and then select <Icon icon={"embed-close"} text={"Code"}/>.
 
 ## Git Connection Mode
 
@@ -35,12 +40,10 @@ You can develop directly on our servers with SFTP Connection Mode. It’s partic
 
 Code changes made in SFTP Connection Mode are still committed into a Git repository. This makes working with other developers easy and ensures _all_ changes are tracked in version control. Whether you’re a novice or seasoned developer, our SFTP Connection Mode is handy and safe to use.
 
-<Alert title="Note"  type="info" >
+For more information, refer to [SFTP on Pantheon](/guides/sftp).
 
-It’s common to switch back and forth between SFTP and Git Connection Mode,
-depending on the task. For example, WordPress and Drupal Core updates are
-managed by Pantheon, and they must be applied in Git Connection Mode.
-Plugin/module updates made in the UI must be applied in SFTP Connection
-Mode.
+## More Resources
 
-</Alert>
+- [Local Development](/guides/local-development)
+- [Git on Pantheon](/guides/git)
+- [SFTP on Pantheon](/guides/sftp)

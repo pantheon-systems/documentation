@@ -49,7 +49,7 @@ This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) 
 
 </Alert>
 
-1. Create a new Drupal site using the ["Drupal with Composer" CMS/Start State](/guides/quickstart/create-new-site/).
+1. Create a new Drupal site using the ["Drupal with Composer" CMS/Start State](/add-site/).
 
 1. [Clone the site](/guides/git/git-config#clone-your-site-codebase) locally with Git.
 

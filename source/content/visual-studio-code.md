@@ -68,7 +68,7 @@ Once you've made some code changes, you'll want to push those up to your Pantheo
 
 VS Code includes Git integration and an integrated terminal, either of which can be used to make Git changes and push them back to your Pantheon repository and Dev environment.
 
-Make sure your site is in [Git mode](/guides/quickstart/connection-modes) before pushing code via Git.
+Make sure your site is in [Git mode](/connection-modes) before pushing code via Git.
 
 #### Git Version Control in VS Code
 

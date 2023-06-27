@@ -1,5 +1,5 @@
 ---
-title: Use the Pantheon WebOps Workflow
+title: Pantheon WebOps Workflow
 description: Understand the Pantheon WebOps workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
 tags: [workflow, dashboard, webops]
 contenttype: [doc]
@@ -9,15 +9,12 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [dashboard]
 integration: [--]
+showtoc: true
+reviewed: 2023-06-23
 ---
 
-<Alert title="Note" type="info">
-
-This page offers a high level description of the intended usage of Pantheon's Dev, Test, and Live WebOps workflow. After familiarizing yourself with the concepts described here, follow our step-by-step [Quick Start Guide](/guides/quickstart) to practice the basics.
-
-</Alert>
-
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
+Every Pantheon site comes with three environments: Dev, Test, and Live.
+Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/guides/multidev).
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -26,13 +23,12 @@ Optimize your dev team and streamline WebOps workflows. Pantheon delivers on-dem
 </Enablement>
 
 ## Components of a Site
+
 One of the core concepts at the heart of the Pantheon WebOps workflow is the distinction between **code** and **content**.
 
-### Code
-Code refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
+- Code refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
 
-### Content
-Content refers to your site's files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/default/files` for Drupal.
+- Content refers to your site's files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/default/files` for Drupal.
 
 ## Your Site Code on Pantheon
 
@@ -40,7 +36,7 @@ This section outlines how your code is processed in the WebOps workflow.
 
 ### Code Moves Up, Content Moves Down
 
-![Dev Test and Live icon](../images/code-workflow.png)
+![Visual describing how code moves up from Dev to Test, and Content froms down from Live to Test](../images/code-workflow.png)
 
 The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/guides/filesystem) into our distributed filesystem, Valhalla, and [code](/guides/git/collaborative-development#git-repositories-on-pantheon) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
@@ -107,30 +103,137 @@ After testing your changes in the Test environment you can move them to the Live
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
 
+## Examples
+
+### Create an Article on the Site
+
+1. Click the <Icon icon="new-window-alt" text="Site Admin"/> button to open your Live site in a new tab. You’ll need to log in before being directed to the site administration dashboard.
+
+    <Alert title="Note" type="info">
+      Your WordPress or Drupal username and password are the same set you
+      created when you installed your Dev site for the first time.
+    </Alert>
+
+1. Create a new Drupal article or WordPress post. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article. When finished, visit the front page of your site and confirm that you can see the new content.
+
+1. Go back to your **Site Dashboard**, click the <Icon icon="wrench" text="Dev"/> tab, and open your Dev site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/>.
+
+    Notice that the content you just created on your Live site doesn’t appear on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
+
+    It’s important to develop on a recent copy of your site with the newest content, so let’s clone your Live site—with its new content—to your Dev environment.
+
+    <Alert title="Warning" type="danger" >
+
+    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="cloud-upload" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
+
+    </Alert>
+
+1. Go to your [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the <Icon icon="wrench" text="Dev"/> tab, then click <Icon icon="server" text="Database / Files"/>.
+
+1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site. 
+
+1. Click **Clone the Database & files from Live into the Development Environment**.
+   
+   The Clone operation only copies the [files](/guides/filesystem) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
+
+1. When complete, click <Icon icon="new-window-alt" text="Visit Development Site"/> to confirm that the content you created on your Live site now appears on your Dev site.
+
+Nice work! You added a page to your Live site, then cloned this environment "down" to Dev. Your Dev environment is a safe place for editing code, and now it's up-to-date with your latest content.
+
+### Make Changes to the Site Theme
+
+1. Go to **Site Dashboard**, select the **Dev** tab, then select **Code**. 
+
+1. Confirm your Connection Mode is set to **SFTP**.
+
+1. Log in to your Dev site by clicking the <Icon icon="new-window-alt" text="Site Admin"/> button.
+
+1. Install and activate a _new_ theme (do not activate/enable a theme that came pre-packaged with your site).
+   
+   - [WordPress instructions](https://wordpress.org/documentation/article/worik-with-themes/)
+   - [Drupal instructions](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html)
+
+1. Visit your site to confirm the theme change.
+
+1. Return to **Site Dashboard** and select the **Dev** tab. The files you just added are highlighted.
+
+  <Alert title="Note" type="info">
+
+  You may need to refresh your dashboard to see these files in your Dev environment.
+
+  </Alert>
+
+1. Add a commit message, then click **Commit** to add these files to your Dev environment.
+
+    <Alert title="Note" type="info">
+
+    In the Dev environment, you can’t make a commit without first adding a commit message.
+
+    </Alert>
+
+1. Review your changes in Dev.
+
+1. Go to your **Site Dashboard**, select the **Test** tab, then select **Deploys**. As you can see, 1 commit is ready to deploy from the Dev environment.
+
+1. Check the **Pull files and the database from the Live environment** box.
+
+    <Alert title="Warning" type="danger" >
+
+    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="cloud-upload" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
+
+    </Alert>
+
+1. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
+
+    <Accordion title="Deploy Commits to Test (optional)" id="understand-deploy" icon="lightbulb">
+
+    Test is a separate environment from Dev, with its own codebase, database, and media files. When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.
+
+    </Accordion>
+
+1. When complete, click <Icon icon="new-window-alt" text="Site Admin"/> to go to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
+
+1. Activate/enable your theme. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
+
+1. Review your Test site.
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **Live** tab, then click **Deploys**.
+
+1. Add a Deploy Log Message (optional), then click **Deploy Code from Test to Live Environment**.
+
+1. Activate/enable your theme. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
+
+Congratulations! You just performed on-server development to make changes to your UI. You made changes on your Dev site, reviewed them on your Test site, then deployed them to Live.
+
+
+## Specific Workflow Tasks
+
 ### Content Staging
 
-Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions.
+Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this case, you may move the database and files (e.g. images) from Dev or Test to Live via the **Database/Files** > **Clone** area of the Dashboard.
 
-## Upload Content and Files to Test and Live Environments
+Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made in Live, like comments or ecommerce orders from the public. Also note that overwriting the database of a Live environment may cause downtime.
 
 You can upload files directly to your Test and Live environments through an SFTP connection. Refer to [SFTP File Uploads to Test and Live Environments](/guides/sftp/sftp-connection-info#sftp-file-uploads-to-test-and-live-environments) for more information.
 
-## Configuration Management
+Review our [Content Staging](/content-staging) guide for WordPress and Drupal content staging workflow solutions.
+
+### Configuration Management
 
 Dealing with changes to your site's configuration, stored in the database, can be a challenge. Moving the database up from Dev to Test and Live typically won't work, because it will overwrite content in Live. While you can make manual configuration changes on each environment, **it's a best practice to manage configuration in code**.
 
-### WordPress
+WordPress
 
 * [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`.
 * [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
 
 
-### Drupal
+Drupal
 
 * [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 * [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
 
-## Understanding Write Permissions in Test and Live
+### Managing Write Permissions in Test and Live
 
 By design, code changes via SFTP are prevented in Test and Live. All code changes should be done in Dev. There are two ways to update code in Test or Live:
 
@@ -138,7 +241,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
 
-## Managing Database and Files: Clone, Import, Export, Wipe
+### Managing Database and Files: Clone, Import, Export, Wipe
 
 You may also clone, import, export, and wipe the database and files per environment. Wiping completely resets the database and files, but leaves the codebase intact. This means you will lose all data and will need to either re-import, or re-install to get your site back online.
 
@@ -156,16 +259,6 @@ The **Export** tool does not include a copy of the site's codebase and cannot be
 
 </Alert>
 
-## Uncommon Workflows
-
-Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this case, you may move the database and files (e.g. images) from Dev or Test to Live via the **Database/Files** > **Clone** area of the Dashboard.
-
-Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made in Live, like comments or ecommerce orders from the public. Also note that overwriting the database of a Live environment may cause downtime.
-
-If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
-
-## Troubleshooting
-
 #### Uncaught Exception: Table 'pantheon.semaphore' Doesn't Exist
 
 If you access the site before a database import is complete, you may see the following error:
@@ -176,7 +269,20 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
+
+## Additional Workflow Tools
+
+Within the Pantheon WebOps workflow, there are several ways you can manage and develop your sites.
+
+- Manage multiple sites with [Custom Upstreams](/guides/custom-upstream).
+- Create sites by using Pantheon Upstreams, importing existing sites, [plus other methods](/start-state).
+- Support large teams using [Multidev](/guides/multidev).
+- Migrate your site [from a competitor](/get-started).
+- [Use the command line](/terminus) to manage and create sites.
+- Develop using either [Git](/guides/git) or [SFTP](/guides/sftp).
+
+There are even more tools and options available to you.  Refer to [Develop](/develop) for more information.
+
 ## More Resources
  - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
- - [Your Site Code on Pantheon](/pantheon-workflow#your-site-code-on-pantheon)
  - [Pantheon Filesystem](/guides/filesystem/)
