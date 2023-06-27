@@ -3,7 +3,7 @@ title: Pantheon Front-End Sites
 subtitle: Create a Front-End Site
 description: Create and configure a Front-End Site.
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan, backlineint, cobypear, hckia]
+contributors: [joan-ing, backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/site

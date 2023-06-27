@@ -3,7 +3,7 @@ title: Pantheon Disaster Recovery Playbook
 subtitle: What to Do If Your Site Goes Down
 description: Working with Pantheon support during emergencies
 tags: [webops]
-contributors: [joshlieb, joa-pan]
+contributors: [joshlieb, joan-ing]
 reviewed: "2021-07-26"
 type: guide
 permalink: docs/guides/disaster-recovery/site-goes-down

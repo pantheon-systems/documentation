@@ -3,7 +3,7 @@ title: Pantheon Disaster Recovery Playbook
 subtitle: Incident Remediation
 description: Bring a site back from downtime and implement post-recovery actions
 tags: [dashboard, webops, workflow]
-contributors: [joshlieb, joa-pan]
+contributors: [joshlieb, joan-ing]
 reviewed: "2021-07-26"
 type: guide
 permalink: docs/guides/disaster-recovery/incident-remediation

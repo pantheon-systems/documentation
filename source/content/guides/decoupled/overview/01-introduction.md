@@ -3,7 +3,7 @@ title: Pantheon Front-End Sites
 subtitle: Overview
 description: Learn about Pantheon's decoupled architecture with Front-End Sites.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, joa-pan]
+contributors: [backlineint, cobypear, hckia, joan-ing]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview

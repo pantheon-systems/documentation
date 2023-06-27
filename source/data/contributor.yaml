@@ -11,12 +11,6 @@
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
-- id: joa-pan
-  name: Joanie Edwards
-  bio: Senior Technical Writer, Pantheon
-  github: //github.com/joa-pan
-  avatar: //github.com/joa-pan.png?size=460
-  drupal: //www.drupal.org/u/_joan
 - id: wordsmither
   name: Jennifer Hoffman
   avatar: //github.com/wordsmither.png?size=460
@@ -99,6 +93,12 @@
   linkedin: //www.linkedin.com/in/steven-dubois-31987721/
   drupal: //www.drupal.org/u/srdtwc
   bio: Support Dispatcher and Web Developer at DevCollaborative.
+- id: joan-ing
+  name: Joanie Edwards
+  bio: Community contributor
+  github: //github.com/joan-ing
+  avatar: //github.com/joan-ing.png?size=460
+  drupal: //www.drupal.org/u/_joan
 - id: calevans
   name: Cal Evans
   url: //calevans.com
