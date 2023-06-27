@@ -63,7 +63,7 @@ Uninstalling a GitHub application successfully requires manual intervention by t
 
 <Accordion title="Next.js 13 App Router" id="nextjs-approuter" icon="info-sign">
 
-The Front-End Sites cache purging approach is not currently compatible with the Next.js 13 App Router.
+The caching recommendations outlined for use with our Next.js starter kits are currently only compatible with the Next.js Pages Router, not the App Router.
 
 </Accordion>
 

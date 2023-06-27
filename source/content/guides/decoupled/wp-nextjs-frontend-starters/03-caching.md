@@ -27,6 +27,12 @@ Edge caching can improve performance for Front-End Sites that rely on API endpoi
 
 ## Using the Starter Kit
 
+<Alert title="Note"  type="info" >
+
+The Front-End Sites starter kits use Next.js 13 and the Pages Router. The instructions below only apply to the Pages Router and are not currently compatible with the App Router.
+
+</Alert>
+
 The information in this section uses WordPress with the plugins below installed:
 
 - [WPGraphQL plugin](https://wordpress.org/plugins/wp-graphql/),
@@ -81,12 +87,6 @@ export async function getServerSideProps(context) {
 You can take advantage of this feature without using the starter kit.
 
 ## Purge Edge Caching
-
-<Alert title="Note"  type="info" >
-
-The Front-End Sites cache purging approach is not currently compatible with the Next.js 13 App Router.
-
-</Alert>
 
 ### Ensure Headers Are Set On Custom Routes
 
