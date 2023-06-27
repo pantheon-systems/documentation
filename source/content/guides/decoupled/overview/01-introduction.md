@@ -69,7 +69,7 @@ Pantheon's Front-End Sites:
 
 ## Decoupled Terminology
 
-<Accordion title="Terms to know for Pantheon Front-End Sites" id="terms-decoupled" icon="info-sign">
+<Accordion title="Terms to know for Pantheon Front-End Sites" id="terms-decoupled" >
 
 #### CMS
 In the context of our Decoupled Product, a CMS site is a Content Management System configured to work with decoupled sites.
