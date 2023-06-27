@@ -57,6 +57,6 @@ Otherwise, please ask each student to [create their own Pantheon account](https:
 
  Providing links to key documents in your follow up materials will help your students long after class ends as they start to explore Pantheon on their own. We recommend the following:
 
- - [Quick Start Guide](/guides/quickstart)
+ - [Getting Started Guide](/guides/getstarted)
  - [Going live](/guides/launch)
  - [How to delete account](/guides/account-mgmt/account/delete)

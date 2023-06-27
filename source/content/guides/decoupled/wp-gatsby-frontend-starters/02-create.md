@@ -3,7 +3,7 @@ title: WordPress + Gatsby Frontend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to use the WordPress + Gatsby frontend starter to create a new project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-gatsby-frontend-starters/create
@@ -39,7 +39,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 1. Click the **Gatsby + WordPress** template, select your Git provider under **Choose your Git provider**, and then click **Continue**.
 
-  ![select a starter](../../../../images/decoupled-select-starter.png)
+  ![select a starter](../../../../images/decoupled-select-starter-new.png)
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 

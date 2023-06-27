@@ -53,7 +53,7 @@ Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your
 
 ## Can I stop updates at the Multidev?
 
-Yes. You must select the Do Not Deploy option under Destination & Frequency. This stops updates at the Autopilot Multidev. Your updates will be tested but not deployed to any environment if you select this option. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
+Yes. You must select the Do Not Deploy option under [Destination & Frequency](/guides/autopilot/enable-autopilot/#update-destination--frequency). This stops updates at the Autopilot Multidev. Your updates will be tested but not deployed to any environment if you select this option. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
 
 ## Does Autopilot automatically deploy changes to the Live environment?
 

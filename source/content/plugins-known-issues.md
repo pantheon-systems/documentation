@@ -1013,7 +1013,7 @@ export ENV=dev
 
 </Alert>
 
-1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/guides/quickstart/connection-modes) in the dashboard or via Terminus:
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/connection-modes) in the dashboard or via Terminus:
 
   ```bash{promptUser: user}
   terminus connection:set $SITE.$ENV git

@@ -575,12 +575,12 @@ Use relative paths when linking to other pages of the docs site.
 
 <Example>
 
-[Quick Start](/guides/quickstart)
+[Getting Started](/guides/getstarted)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-[Quick Start](/guides/quickstart)
+[Getting Started](/guides/getstarted)
 ```
 
 </Example>

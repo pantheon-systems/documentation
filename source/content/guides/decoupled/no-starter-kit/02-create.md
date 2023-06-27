@@ -3,7 +3,7 @@ title: Front-End Sites without a Starter Kit
 subtitle: Create a Site- No Starter and/or CMS
 description: Create a Front-End Site without a starter kit and/or without a CMS.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/no-starter-kit/create

@@ -17,7 +17,7 @@ Our tech includes NGINX, PHP, Object Cache (formerly Redis), [Global CDN](/guide
 
 ## Get to Know Pantheon
 
-- [Quick Start](/guides/quickstart)
+- [Getting Started](/guides/getstarted)
 - [Using the Pantheon Workflow](/pantheon-workflow)
 - [All About Application Containers](/application-containers)
 - [Platform Considerations](/guides/platform-considerations)

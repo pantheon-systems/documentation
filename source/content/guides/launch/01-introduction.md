@@ -27,7 +27,7 @@ This guide will show you how to create, configure, and launch your site on the P
 
 ## Essential Steps in This Guide
 
-- [Create the Live environment](/guides/quickstart/create-test-live/)
+- [Create the Live environment](/add-site-dashboard#create-the-live-environment)
 
 - [Select Your Site Plan](/guides/launch/plans/)
 

@@ -31,7 +31,7 @@ WP Mail SMTP is not the only plugin available to integrate WordPress with SendGr
 
 This guide assumes a pre-existing configuration of:
 
-- A configured WordPress site. Refer to our [Quick Start](/guides/quickstart) guide if you need to set up a new WordPress site on Pantheon.
+- A configured WordPress site. Refer to our [Getting Started](/guides/getstarted) guide if you need to set up a new WordPress site on Pantheon.
 - A familiarity with the [WebOps workflow](/pantheon-workflow), as steps involve moving code and content between environments.
 - A SendGrid account and API key. Follow the steps in [Create a SendGrid Account](/guides/sendgrid/#create-a-sendgrid-account) to create and authenticate an account.
 - If your site has access to [Multidev](/guides/multidev), we suggest creating a new Multidev environment to work in. If so, substitute the Multidev name for `dev` in the guide below, unless otherwise noted.

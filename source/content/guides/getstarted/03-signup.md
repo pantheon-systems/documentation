@@ -31,6 +31,12 @@ To create an account:
 
    ![Signing up for Pantheon](../../../images/signup.png)
 
+   <Alert title="Note" type="info">
+
+   Are you an agency? Do you build sites for others? If so, check **Are you an agency?** on the [signup form](https://pantheon.io/register) to get more free features and really make the most of this guide. You can sign up if you're an agency of one or one thousand.
+
+   </Alert>
+
 1. Log in to your account.  A Welcome page will appear.
 
 1. Select [**Set up your team**](/guides/account-mgmt/workspace-sites-teams/teams) for the purposes of completing the activities in this guide.

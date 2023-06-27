@@ -26,7 +26,7 @@ To create an account:
 
 When you log in for the first time, there will be a welcome screen where you can choose to:
 
-- [Create a new site](/guides/quickstart/create-new-site/)
+- [Create a new site](/add-site/)
 
 - [Migrate an existing site](/get-started)
 
@@ -36,5 +36,4 @@ When you log in for the first time, there will be a welcome screen where you can
 
 ## More Resources
 
-- [Quick Start](/guides/quickstart/)
 - [Get Started](/get-started)
