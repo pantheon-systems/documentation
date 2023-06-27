@@ -128,7 +128,7 @@ export const pageQuery = graphql`
         title
         description
         contributors {
-          id
+          yamlId
           name
           twitter
           bio
