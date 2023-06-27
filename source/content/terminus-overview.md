@@ -19,7 +19,17 @@ reviewd: 2023-06-26
 <Tab title="Overview" id="overview" active={true}>
 
 Terminus is a command line interface that provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, as well as scripting and much more.
-tools like backups. It also allows you to deploy and scale your sites.
+
+```bash{outputLines:2-7}
+terminus site:list
++--------------------------+-----------+---------------+--------------------------+
+| Site                     | Framework | Service Level | UUID                     |
++--------------------------+-----------+---------------+--------------------------+
+| terminus-create          | drupal9   | free          | terminus-create          |
+| git-import-example       | drupal    | free          | git-import-example       |
++--------------------------+-----------+---------------+--------------------------+
+```
+
 
 </Tab>
 
@@ -31,17 +41,38 @@ tools like backups. It also allows you to deploy and scale your sites.
 - Check for and apply upstream updates
 - Deploy code from one environment to another
 - Run [Drush](/guides/drush/) and [WP-CLI](/guides/wp-cli/) commands
-- Perform [other operations](/terminus/commands/)
+
+*Create a New Site*
+
+ ```bash{outputLines:2}
+ terminus site:create terminus-cli-create "Terminus CLI Create" 21e1fada-199c-492b-97bd-0b36b53a9da0
+ [notice] Creating a new site...
+ ```
+
+*Deploy Code*
+
+  ```bash{promptUser: user}
+  terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates"
+  ```
+
+
 
 </Tab>
 
 <Tab title="Requirements" id="requirements">
 
-Terminus is available for MacOS and Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), and then install Terminus in the Linux shell. Terminus has been tested on the following platforms:
+Terminus has been tested on the following platforms:
 
 - MacOS
 - Windows 10 – WSL 2 Ubuntu 20.0
 - Ubuntu 20.0 – this would include Ubuntu under Docker or VirtualBox
+
+Terminus does not work with the following platforms:
+
+- Windows 10 – Command Line
+- Windows 10 – Git Bash (MingW)
+- Ubuntu 18.0 and earlier versions
+- Linux system with coreutils equal to or less than 8.28
 
 </Tab>
 
