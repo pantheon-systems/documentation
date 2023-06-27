@@ -82,6 +82,12 @@ You can take advantage of this feature without using the starter kit.
 
 ## Purge Edge Caching
 
+<Alert title="Note"  type="info" >
+
+The Front-End Sites cache purging approach is not currently compatible with the Next.js 13 App Router.
+
+</Alert>
+
 ### Ensure Headers Are Set On Custom Routes
 
 <Alert title="Note"  type="info" >
