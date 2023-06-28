@@ -48,7 +48,7 @@ You can run a complete backend authorization in Terminus by accessing Auth0 behi
         }
         ```
 
-1. Restore the session file in a CI context to allow Terminus to log in using `terminus auth:login` with no `--machine-token`. Instructions for specific CI pipelines are listed below.
+1. Restore the session file in a CI context to stay logged in without needing to reauthenticate every time. Instructions for specific CI pipelines are listed below.
 
     - [Bitbucket](/terminus/ci/bitbucket)
     - [CircleCI](/terminus/ci/circleci)

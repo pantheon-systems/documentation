@@ -28,10 +28,9 @@ This pipeline does the following:
 
 - Uses the `ubuntu:latest` Docker image.
 - Updates the system and installs necessary tools like PHP, curl, perl, sudo, and git before the script stages.
-- Defines a cache for the `$HOME/.terminus` directory. The pipeline system will save and restore the cache for subsequent runs.
+- Defines a cache for the `$HOME/.terminus` directory and the terminus binary. The pipeline system will save and restore the cache for subsequent runs.
 - Determines the latest release of Terminus from the GitHub API and stores it in the `TERMINUS_RELEASE` variable.
 - Creates a directory for Terminus, downloads it into that directory, makes it executable, and then creates a symbolic link to it in `/usr/local/bin` so that you can run it from anywhere.
-- Exports the `TERMINUS_TOKEN` environment variable (assuming that you've already set it in your pipeline settings) and uses it to authenticate Terminus.
 - Checks that Terminus is authenticated with `terminus auth:whoami`.
 
 
@@ -39,7 +38,6 @@ This pipeline does the following:
 
 Before you use this script:
 
-- Replace `${{ secrets.TOKEN }}` with the machine token provided by Terminus.
 - Add the machine token provided by Terminus to your secrets in the GitHub repository settings.
 
 </Alert>
@@ -57,14 +55,21 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: '8.1'
       - uses: actions/cache@v2
         id: terminus-cache
         with:
           path: ~/.terminus
-          key: ${{ runner.os }}-terminus-${{ hashFiles('**/composer.lock') }}
+          key: ${{ runner.os }}-terminus-cache-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
-            ${{ runner.os }}-terminus-
+            ${{ runner.os }}-terminus-cache-
+      - uses: actions/cache@v2
+        id: terminus-binary
+        with:
+          path: ~/terminus/terminus
+          key: ${{ runner.os }}-terminus-binary-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-terminus-binary-
       - name: Determine version
         shell: bash
         if: ${{ ! inputs.terminus-version }}
@@ -84,15 +89,43 @@ jobs:
           curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
           chmod +x terminus
           sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+
         env:
           TERMINUS_RELEASE: ${{ inputs.terminus-version || env.TERMINUS_RELEASE }}
       - name: Authenticate Terminus
         env:
           TERMINUS_TOKEN: ${{ secrets.TERMINUS_TOKEN }}
         run: |
-          terminus auth:login || terminus auth:login --machine-token="${TERMINUS_TOKEN}"
-      - name: Update Session Expiry Date
+          terminus auth:login --machine-token="${TERMINUS_TOKEN}"
+      - name: Whoami
         run: terminus auth:whoami
+  deploy:
+    needs: [connect]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+      - uses: actions/cache@v2
+        id: terminus-cache
+        with:
+          path: ~/.terminus
+          key: ${{ runner.os }}-terminus-cache-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-terminus-cache-
+      - uses: actions/cache@v2
+        id: terminus-binary
+        with:
+          path: ~/terminus/terminus
+          key: ${{ runner.os }}-terminus-binary-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-terminus-binary-
+      - name: Whoami
+        run: |
+          sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+          terminus auth:whoami
 
-    # Continue with your build steps...
+  # Continue with your build steps...
 ```
