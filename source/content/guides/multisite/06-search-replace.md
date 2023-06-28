@@ -34,7 +34,7 @@ You must have the following to enable Search and Replace:
 
 ## Search and Replace Configuration
 
-Search and Replace will automatically work for you without any configuration if you have a new `_subdirectory multisite_`. However, you can modify the behavior of Multisite Search and Replace by editing the `search_replace` value.
+You can enable search and replace between environments on a WPMS site.
 
 1. Open your [`pantheon.yml`](/pantheon-yml) file.
 
