@@ -27,8 +27,8 @@ You can use the example script in this section for a full start-to-finish Termin
 This pipeline does the following:
 
 - Uses the `ubuntu:latest` Docker image.
-- Updates the system and installs necessary tools like PHP, curl, perl, sudo, and git before the script stages.
-- Defines a cache for the `$HOME/.terminus` directory and the terminus binary. The pipeline system will save and restore the cache for subsequent runs.
+- Updates the system and installs necessary tools like PHP, curl, perl, sudo, and Git before the script stages.
+- Defines a cache for the `$HOME/.terminus` directory and the Terminus binary. The pipeline system will save and restore the cache for subsequent runs.
 - Determines the latest release of Terminus from the GitHub API and stores it in the `TERMINUS_RELEASE` variable.
 - Creates a directory for Terminus, downloads it into that directory, makes it executable, and then creates a symbolic link to it in `/usr/local/bin` so that you can run it from anywhere.
 - Checks that Terminus is authenticated with `terminus auth:whoami`.
