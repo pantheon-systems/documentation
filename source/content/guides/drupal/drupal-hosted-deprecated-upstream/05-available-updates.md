@@ -14,6 +14,7 @@ cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [terminus, dashboard]
 integration: []
+draft: true
 ---
 
 <Partial file="drupal-apply-upstream-updates-drupal-recommended.md" />
