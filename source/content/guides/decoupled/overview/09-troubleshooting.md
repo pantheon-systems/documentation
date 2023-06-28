@@ -61,6 +61,12 @@ Uninstalling a GitHub application successfully requires manual intervention by t
 
 </Accordion>
 
+<Accordion title="Next.js 13 App Router" id="nextjs-approuter" icon="info-sign">
+
+The caching recommendations outlined for use with our Next.js starter kits are currently only compatible with the Next.js Pages Router, not the App Router.
+
+</Accordion>
+
 ## Troubleshooting
 
 ### Build works locally but won't build on Pantheon

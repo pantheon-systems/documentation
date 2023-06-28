@@ -27,6 +27,12 @@ Edge caching can improve performance for Front-End Sites that rely on API endpoi
 
 ## Using the Starter Kit
 
+<Alert title="Note"  type="info" >
+
+The Front-End Sites starter kits use Next.js 13 and the Pages Router. The instructions below only apply to the Pages Router and are not currently compatible with the App Router.
+
+</Alert>
+
 The recommended caching configurations are automatically enabled if you created your Drupal site using the [Drupal + Next.js frontend starter project](/guides/decoupled/drupal-nextjs-frontend-starters/create).
 
 The `PantheonDrupalState` class from the `@pantheon-systems/drupal-kit` npm
