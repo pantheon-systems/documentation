@@ -17,17 +17,18 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 ## Current Status of Drupal 10 at Pantheon
 
-| Scenario | Status | Documentation |
-|---|---|---|
-| Create a Drupal 10 site on Pantheon | Available | [Create a Drupal 10 Site](/drupal-10#create-a-drupal-10-site)|
-| Upgrade a Drupal 9 site to Drupal 10 manually | Available | [Upgrade from Drupal 9 to Drupal 10](/drupal-10#update-a-drupal-9-site-to-drupal-10) |
-| Create a Drupal 10 site from the Pantheon Dashboard | Available | |
-| Upgrade a Drupal 9 site to Drupal 10 using the [Terminus Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) | Early Access | Use the following command: `terminus conversion:upgrade-d10` |
-
+| Scenario                                                                                                                                                | Status       | Documentation                                                                        |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------|
+| Create a Drupal 10 site on Pantheon                                                                                                                     | Available    | [Create a Drupal 10 Site](/drupal-10#create-a-drupal-10-site)                        |
+| Upgrade a Drupal 9 site to Drupal 10 manually                                                                                                           | Available    | [Upgrade from Drupal 9 to Drupal 10](/drupal-10#update-a-drupal-9-site-to-drupal-10) |
+| Create a Drupal 10 site from the Pantheon Dashboard                                                                                                     | Available    |                                                                                      |
+| Upgrade a Drupal 9 site to Drupal 10 using the [Terminus Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) | Early Access | Use the following command: `terminus conversion:upgrade-d10`                         |
 
 ## Update a Drupal 9 Site to Drupal 10
 
-1. Go to your dashboard and confirm that you are on PHP 8.1. The PHP 8.1 update will show as available to install if you are not already on it.
+1. Confirm that the site uses PHP 8.1 or higher:
+
+   Go to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click **Settings**, and then click **PHP version**. The PHP 8.1+ update will show as available to install if you are not already on it.
 
    If you are not on PHP 8.1 and you don't see the update, refer to [Upgrade PHP Versions](/guides/php/php-versions) for instructions on updating your PHP version.
 
@@ -35,21 +36,13 @@ Drupal 10 is now available on the Pantheon platform. This page will be updated f
 
 1. Use [Composer to update](/guides/upgrade-drupal-8-ic-to-drupal-9#set-drupal-core-version) to Drupal 10. Refer to the [Drupal release-specific documentation](https://www.drupal.org/project/drupal/releases) for more information.
 
-<Alert title="Note" type="info" >
-
-Composer will prompt you to add `phpstan/extension-installer` to your `allow-plugins` config if you haven't done so already.
-
-</Alert>
+   Composer will prompt you to add `phpstan/extension-installer` to your `allow-plugins` config if you haven't done so already.
 
 ## Create a Drupal 10 Site
 
-<Alert title="Note" type="info" >
-
 This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) version 2.2 and uses Pantheon's current [PHP version](/guides/php#supported-php-versions).
 
-</Alert>
-
-1. Create a new Drupal site using the ["Drupal with Composer" CMS/Start State](/guides/quickstart/create-new-site/).
+1. Create a new Drupal 10 site using the ["Drupal with Composer" CMS/Start State](/guides/quickstart/create-new-site/) documentation.
 
 1. [Clone the site](/guides/git/git-config#clone-your-site-codebase) locally with Git.
 
@@ -59,7 +52,7 @@ This process requires [Composer](https://getcomposer.org/doc/01-basic-usage.md) 
 
 ## FAQ
 
-### When Drupal 10 is released, will my Drupal 9 site be forced to use Drupal 10?
+### Will my Drupal 9 site be forced to upgrade to Drupal 10?
 
 No, Drupal 9 sites can continue to use Drupal 9 and receive Drupal 9 updates.
 
