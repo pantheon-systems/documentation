@@ -17,41 +17,43 @@ editpath: multisite/07-search-replace.md
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-WordPress Multisite (WPMS) search and replace is available for [Early Access](/oss-support-levels#early-access) participants. Features for platform search and replace on WPMS sites are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+WordPress Multisite (WPMS) Search and Replace is available for [Early Access](/oss-support-levels#early-access) participants. Features for platform search and replace on WPMS sites are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
 
 </Alert>
 
-This section provides information on how to configure automatic platform search and replace for URLs. This feature can be used with both subdirectory and subdomain WordPress Multisites.
-
-Search and replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 25 sites that can be configured for search and replace. We expect this number to increase before General Availability.
+This section provides information on how to configure automatic platform Search and Replace for URLs. This feature can be used with both subdirectory and subdomain WordPress Multisites.
 
 ## Requirements
 
-You must have the following to enable search and replace:
+You must have the following to enable Search and Replace:
 
 - A [WordPress Multisite](/guides/multisite)
 
-## Enable Search and Replace
+<Alert title="Note"  type="info" >
 
-You can enable search and replace between environments on a WPMS site.
+If your `pantheon.yml` file is different between environments, the `search_replace` value in your source environment’s `pantheon.yml` file will determine if the job runs or not. When you create a Multidev, the source environment is where you clone the database and files from.
 
-1. Navigate to your [pantheon.yml](/pantheon-yml) file.
+</Alert>
 
-1. Add the code below:
+## Subdirectory WordPress Multisite Search and Replace Configuration
 
-    ```yaml:title=pantheon.yml
-    search_replace: true
-    ```
+Enabling Search and Replace for Subdirectory Multisites requires a `true` value for the `search_replace` parameter in your `pantheon.yml`.
+<!--No additional configuration is needed for Subdirectory Multisite Search and Replace. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites. TODO: Before GA, add note about explicitlly DISABLING S&R.-->
 
-Note, if `pantheon.yml` is different between environments, the `search_replace` value in the source environment’s `pantheon.yml` will determine if the job will be run or not. The source environment is where you clone the database and files from when you create a Multidev.
+```yaml:title=pantheon.yml
+search_replace: true
+```
 
-### Subdirectory WPMS
+## Subdomain WordPress Multisite Search and Replace Configuration
+Search and Replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 25 sites that can be configured for search and replace. We expect this number to increase before General Availability.
 
-No additional configuration is needed if you have already completed the steps in the [Enable Search and Replace](/guides/multisite/search-replace/#enable-search-and-replace) section. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites.
+By default, Subdomain Multisites do not run any Search and Replace. Enabling Search and Replace for Subdomain Multisites requires setting the `search_replace` value to `custom` in `pantheon.yml` and creating a `sites.yml`. Environments that need to be replaced are defined and paired in the `sites.yml` file for subdomain Multisites. Search and replace runs for each domain listed in the source environment that has a matching key in the target environment. If Search and Replace is enabled for an environment, but the `sites.yml` file does not exist, nothing will be updated. If the `sites.yml` file is different between environments, the `domain_maps` in the target environment’s `sites.yml` file will be used to determine what is replaced.
 
-### Subdomain WPMS
+1. In your `pantheon.yml` file, set the `search_replace` value to `custom`.
 
-Environments that need to be replaced are defined and paired in the `sites.yml` file for subdomain Multisites. Search and replace runs for each domain listed in the source environment that has a matching key in the target environment. If Search and Replace is enabled for an environment, but the `sites.yml` file does not exist, nothing will be updated. If the `sites.yml` file is different between environments, the `domain_maps` in the target environment’s `sites.yml` file will be used to determine what is replaced.
+  ```yaml:title=pantheon.yml
+  search_replace: custom
+  ```
 
 1. Create a `sites.yml` file inside the `private/` folder.
 
@@ -102,13 +104,21 @@ Environments that need to be replaced are defined and paired in the `sites.yml` 
 
 1. Commit the  `sites.yml` file in the `private/sites.yml` in the site’s Git repository.
 
-### Subdomain to Subdirectory Conversion
+## Subdomain to Subdirectory Multisite Conversion
 
-Sites can also be configured to use subdomain Multisite in the Live environment, and subdirectory in all other instances.
+Sites can also be configured to use Subdomain Multisite in the Live environment, and Subdirectory in all other environments.
 
 To configure this:
 
-1. Make `SUBDOMAIN_INSTALL` conditional in the `wp-config.php` file:
+1. In your `pantheon.yml` file, set the `search_replace` value to `convert`.
+
+  ```yaml:title=pantheon.yml
+  search_replace: convert
+  ```
+
+1. Open your `wp-config.php` file and locate the `SUBDOMAIN_INSTALL` key.
+
+1. Set the `SUBDOMAIN_INSTALL` value to conditional:
 
     ```php:title=wp-config.php
     if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) && $_ENV['PANTHEON_ENVIRONMENT'] ==  'live' ) {
@@ -116,13 +126,7 @@ To configure this:
     }
     ```
 
-1. Set `convert_to_subdirectory: true` in the `sites.yml` file.
-
-  ```yaml:title=private/sites.yml
-      ---
-      api_version: 1
-      convert_to_subdirectory: true
-  ```
+    - This step is not required, but ensures that you can create new sites as subdomain sites in the Live environment while your other environments create the new sites as subdirectory sites.
 
 The domain map in the `sites.yml` file is not necessary when converting from subdomain to subdirectory structure. When cloned, subdomains, domains, and subdirectories on the Live site will convert with the following pattern:
 
@@ -133,6 +137,18 @@ The domain map in the `sites.yml` file is not necessary when converting from sub
 * `blog.com/dir/`      => `test-site.pantheonsite.io/blog-com-dir/`
 
 Sites configured for subdomain conversion will _only_ run the conversion step from Live to a non-live environment. All other workflows assume a subdirectory-to-subdirectory search and replace. There is no limit on domains when using the conversion step.
+
+## `search_replace` Parameter Reference
+
+* `_null_`: No `search_replace` value. Defaults to `false`.<!-- TODO: ADD NOTE THAT THIS DEFAULTS TO TRUE IN GA -->
+* `true`: Runs a Search and Replace for a Subdirectory multisite.
+* `false`: Do not run Search and Replace at all.
+* `custom`: Run Search and Replace based on the domain map in `sites.yml`. Requires a valid `sites.yml` to exist.
+* `convert`: Run Subdomain to Subdirectory conversion when cloning from the Pantheon Live environment, and Subdirectory to Subdirectory in all other cases.
+
+## Known Issues
+
+* Sites with PHP notices or errors will not be able to successfully run a Search and Replace.
 
 ## More Resources
 
