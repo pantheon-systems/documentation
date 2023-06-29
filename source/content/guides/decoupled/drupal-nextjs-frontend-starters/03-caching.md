@@ -122,12 +122,6 @@ Follow the steps below if you need to create a **new** route.
 In the example below, the code sets the headers necessary for
 cache purging on an article list page.
 
-1. Open your `next.config.js` file and add the following to the `nextConfig` object:
-
-	```js
-	transpilePackages: ['@pantheon-systems/drupal-kit'],
-	```
-
 1. Create an instance of `DrupalState` in your article list page:
 
 	```js
