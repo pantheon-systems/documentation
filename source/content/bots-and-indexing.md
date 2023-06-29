@@ -3,6 +3,7 @@ title: Bots and Indexing on Pantheon
 description: Information on managing bots and indexing while avoiding performance degradation on your Pantheon WordPress or Drupal site.
 tags: [measure, traffic]
 contenttype: [doc]
+showtoc: true
 innav: [true]
 categories: [optimize]
 cms: [wordpress, drupal]
@@ -119,6 +120,10 @@ You can test this locally using `composer install`. If successful, use the follo
 git add assets/my-robots-additions.txt composer.json
 git commit -m "Append robots.txt changes via composer"
 ```
+
+## Robots.txt for Front-End Sites
+
+You can use a `robots.txt` file on Next.js and Gatsby Front-End Sites frameworks. Refer to [Drupal + Next.js](/guides/decoupled/drupal-nextjs-frontend-starters/robots-indexing), [WordPress + Next.js](/guides/decoupled/wp-nextjs-frontend-starters/robots-indexing), or [WordPress + Gatsby](/guides/decoupled/wp-gatsby-frontend-starters/robots-indexing) for more information.
 
 ## Troubleshooting
 
