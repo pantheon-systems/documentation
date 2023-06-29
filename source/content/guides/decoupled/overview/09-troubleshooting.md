@@ -25,10 +25,6 @@ This section provides information on known issues and solutions to common troubl
 A repository can only be associated with one Front-End Site at a time. You will receive an error message if you attempt to connect a repository to two or more sites.
 </Accordion>
 
-<Accordion title="Builds are only available for Gatsby and Next.js " id="terms-decoupled" >
-Builds will only complete for repositories that are detected as Gatsby or Next.js repositories. Builds for all other frameworks will fail.
-</Accordion>
-
 <Accordion title="Gatsby does not support SSR and DSG" id="ssr-gatsby" >
 Server-side Rendering and Deferred Static Generation (DSG) for Gatsby v4 are currently not supported.
 </Accordion>
@@ -61,7 +57,7 @@ Uninstalling a GitHub application successfully requires manual intervention by t
 
 </Accordion>
 
-<Accordion title="Next.js 13 App Router" id="nextjs-approuter" icon="info-sign">
+<Accordion title="Next.js 13 App Router" id="nextjs-approuter" >
 
 The caching recommendations outlined for use with our Next.js starter kits are currently only compatible with the Next.js Pages Router, not the App Router.
 
