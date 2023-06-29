@@ -3,7 +3,7 @@ title: WordPress Backend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to create a new decoupled WordPress backend project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-backend-starters/create
@@ -29,7 +29,7 @@ This section provides information on how to create a new WordPress backend proje
 
     - You can also use the [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) link to create your site in the Pantheon Dashboard.
 
-    ![select a starter](../../../../images/decoupled-select-starter.png)
+    ![select a starter](../../../../images/decoupled-select-starter-new.png)
 
 1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 

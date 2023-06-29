@@ -3,7 +3,6 @@ title: WordPress Multisite
 subtitle: Search and Replace
 description: Learn about configuration requirements for search and replace on WordPress Multisites.
 type: guide
-getfeedbackform: default
 contenttype: [guide]
 innav: [false]
 categories: [cms, troubleshooting]

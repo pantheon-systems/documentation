@@ -106,7 +106,7 @@ We recommend the following resources for further learning:
 - [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/)
 - [GitKraken - Git GUI Client](https://www.gitkraken.com/)
 - [GitHub Desktop - Git GUI Client](https://desktop.github.com/)
-- [Repository mirroring](https://docs.gitlab.com/ee/workflow/repository_mirroring.html)
+- [Repository mirroring](https://docs.gitlab.com/ee/user/project/repository/mirror/)
 
 For Pantheon-specific Git questions, see the following:
 

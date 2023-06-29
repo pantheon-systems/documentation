@@ -61,7 +61,7 @@ No, Pantheon only provides one database user. Some customers have asked about cr
 
 When updating your MySQL client (CLI) from 5.x to 8.x, reading data from DB columns with BLOB types (such as the `variable` table in Drupal 7.x) may change data from binary to hexadecimal (ex: `0×1f34c9`).
 
-To disable hexadecimal notation, add `--skip-binary-as-hex` to the [database connection](/guides/quickstart/connection-modes/) when you connect from the command line:
+To disable hexadecimal notation, add `--skip-binary-as-hex` to the [database connection](/connection-modes/) when you connect from the command line:
 
 ```bash{promptUser: user}
 mysql -u pantheon --skip-binary-as-hex -p02f7b34a02…

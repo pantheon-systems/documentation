@@ -3,7 +3,7 @@ title: WordPress + Next.js Frontend Starter for Front-End Sites
 subtitle: Create a New Project
 description: Learn how to use the WordPress + Next.js frontend starter to create a new project.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, whitneymeredith]
+contributors: [backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/wp-nextjs-frontend-starters/create
@@ -36,7 +36,7 @@ The Pantheon `next-wordpress-starter` uses Next.js and has been tested using
 
 1. Click the **WordPress and Next.js** option, select a repo under **Choose your Git provider**, and then click **Continue**.
 
-    ![select a starter](../../../../images/decoupled-select-starter.png)
+    ![select a starter](../../../../images/decoupled-select-starter-new.png)
 
 1. Select your desired GitHub account and enter the repository name. You can select **Make this a private repository** to provide greater security for your Git repository. You cannot use a . (period) or _ (underscore) for site and Multidev names.
 

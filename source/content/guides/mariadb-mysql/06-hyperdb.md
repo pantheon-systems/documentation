@@ -48,7 +48,7 @@ Complete the steps below after your site service level has been updated to Elite
 
 1. Deploy the `db.php` database drop-in to production. WordPress will start allocating MySQL database reads and writes based on the configuration details you’ve provided in `db-config.php`.
 
-The following sample configurations can be used in place of the `dp-config.php` file provided within the plugin archive. These examples require no additional edits for sites running on Pantheon. For more advanced options, refer to the `db-config.php` file provided in the HyperDB plugin archive.
+The following sample configurations can be used in place of the `db-config.php` file provided within the plugin archive. These examples require no additional edits for sites running on Pantheon. For more advanced options, refer to the `db-config.php` file provided in the HyperDB plugin archive.
 
 ### Split Reads Between Primary and Replica
 You can split reads between the primary and the replica database to distribute the load between two servers.

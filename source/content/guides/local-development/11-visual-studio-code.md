@@ -74,7 +74,7 @@ You must push code changes up to your Pantheon Dev or Multidev environment. You 
 
 VS Code includes Git integration and an integrated terminal, either of which can be used to make Git changes and push them back to your Pantheon repository and Dev environment.
 
-1. Make sure your site is in [Git mode](/guides/quickstart/connection-modes) before pushing code via Git.
+1. Make sure your site is in [Git mode](/connection-modes) before pushing code via Git.
 
 1. Make changes to your local site.
 
@@ -90,7 +90,7 @@ VS Code includes Git integration and an integrated terminal, either of which can
 
 1. Review your outstanding changes before you commit them with a message.
 
-You can also switch branches. Refer to the [video on the VS Code docs](https://code.visualstudio.com/docs/introversioncontrol) for more information.
+You can also switch branches. Refer to the [VS Code docs](https://learn.microsoft.com/en-us/visualstudio/version-control/) for more information.
 
 #### Integrated Terminal
 

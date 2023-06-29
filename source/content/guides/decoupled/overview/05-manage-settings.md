@@ -84,7 +84,9 @@ You can [contact Support](/guides/support/contact-support/) to restore a site if
 
 ## CMS Settings
 
-You can link your CMS to your Front-End Site if you’re already managing content through a Pantheon-hosted site. Changes made in Drupal or WordPress will automatically render on the page. Note that linking your CMS is optional.
+You can link your CMS to your Front-End Site if you’re already managing content through a Pantheon-hosted site. Changes made in Drupal or WordPress will automatically render on the page. Linking your CMS is optional.
+
+Note that you cannot trigger a Front-End Sites build from your CMS settings. You can trigger a build in your Front-End Sites dashboard or with GitHub merges.
 
 ### Configure CMS Connections
 
@@ -104,14 +106,13 @@ You can link your CMS to your Front-End Site if you’re already managing conten
 
 ## Build and Output Settings
 
-You can configure and edit the following Build and Output Settings:
+You can configure and edit the Build Command and Output Directory in Build and Output Settings. You do not need to modify these settings if you are using a recommended [starter kit](/guides/decoupled/overview/site-options#pantheon-front-end-site-starter-kits).
 
-- Build Command
-- Output Directory
+Adjustments to these settings might be required if you are not using a starter kit. Refer to [Use a Non-official Frontend Framework](/guides/decoupled/no-starter-kit/any-framework) for more information.
 
 ### Configure Build and Output Settings
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to configure Build and Output settings for.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Sites**, and then select the site you want to configure **Build and Output** settings for.
 
 1. Click **Settings** and then click **Builds**.
 

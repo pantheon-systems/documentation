@@ -108,7 +108,7 @@ Pantheon offers a wide array of products and features to simplify building and m
 
   </Product>
 
-  <Product title={"Terminus CLI"} link={"/terminus"}>
+  <Product title={"Terminus CLI"} link={"/terminus-overview"}>
 
   Access complete platform functionality from our integrated command line.
 

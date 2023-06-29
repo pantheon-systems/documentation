@@ -29,7 +29,7 @@ The Pantheon Dashboard supports the following browsers to maintain platform secu
 
 Visit <https://www.whatsmybrowser.org> to confirm which browser version you are using and compare your browser's version with the latest available:
 
-  - [Chrome](https://en.wikipedia.org/wiki/Google_Chrome_version_history#Anchor_to_the_latest_release.)
+  - [Chrome](https://chromereleases.googleblog.com/search/label/chrome)
   - [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history)
   - [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases)
   - [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility)

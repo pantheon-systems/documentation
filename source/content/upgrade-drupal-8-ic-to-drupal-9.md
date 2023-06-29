@@ -82,7 +82,7 @@ Confirm the site requirements in the sections below before upgrading to the late
 1. Set the Drupal core version to the latest version of Drupal:
 
   ```shell{promptUser: user}
-  composer require --update-with-dependencies --no-update 'drupal/core-recommended:^9' 'drupal/core-composer-scaffold:^10'
+  composer require --update-with-dependencies --no-update 'drupal/core-recommended:^10' 'drupal/core-composer-scaffold:^10'
   composer update drupal/core* -W
   git add composer.*
   git commit -m "upgrade to Drupal 10"

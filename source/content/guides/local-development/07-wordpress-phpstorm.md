@@ -24,11 +24,11 @@ Refer to [WordPress Development using PhpStorm](https://confluence.jetbrains.com
 
 ## Create a WordPress site
 
-[Create a new WordPress site](/guides/quickstart) on Pantheon if you don't already have one. This site should be empty to develop your new plugin or theme.
+[Create a new WordPress site](/add-site-dashboard) on Pantheon if you don't already have one. This site should be empty to develop your new plugin or theme.
 
 ## Clone the Code Repository
 
-Copy your site code to your local workstation using [SFTP](/sftp#sftp-connection-information) or clone your site codebase with [Git](/guides/git/git-config#clone-your-site-codebase).
+Copy your site code to your local workstation using [SFTP](/guides/sftp/sftp-connection-info#sftp-connection-info) or clone your site codebase with [Git](/guides/git/git-config#clone-your-site-codebase).
 
 ## Create a PhpStorm Project
 

@@ -65,17 +65,21 @@ At this point, you should see your site files in the File Explorer on the left s
 Once you've made some code changes, you'll want to push those up to your Pantheon Dev or Multidev environment. You can do this using Git, or with SFTP.
 
 ### Push changes with Git (recommended)
+
 VS Code includes Git integration and an integrated terminal, either of which can be used to make Git changes and push them back to your Pantheon repository and Dev environment.
 
-Make sure your site is in [Git mode](/guides/quickstart/connection-modes) before pushing code via Git.
+Make sure your site is in [Git mode](/connection-modes) before pushing code via Git.
 
 #### Git Version Control in VS Code
-Open the Git menu (**Ctrl** + **Shift** + **G** or **View** -> **SCM**). From here you can review your outstanding changes, commit them with a message, switch branches and more. See the [video on the VS Code docs](https://code.visualstudio.com/docs/introversioncontrol) for more information.
+
+Open the Git menu (**Ctrl** + **Shift** + **G** or **View** -> **SCM**). From here you can review your outstanding changes, commit them with a message, switch branches and more. Visit the [VS Code docs](https://learn.microsoft.com/en-us/visualstudio/version-control/) for more information.
 
 #### Integrated Terminal
+
 Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) with **Ctrl** + **`** or **View** -> **Terminal**. Now you can interact with Git as you would normally, without leaving VS Code.
 
 ### Upload your changes with SFTP
+
 The SFTP extension for VS Code allows developers to upload code to the Pantheon Dev or Multidev environment directly from VS Code, as well as download files from the Pantheon servers.
 
 Make sure your site is in [SFTP mode](/guides/sftp) before uploading code via SFTP.

@@ -47,6 +47,7 @@
     "gatsby-remark-prismjs": "^6.25.0",
     "gatsby-remark-responsive-iframe": "^5.25.0",
     "gatsby-remark-static-images": "^1.2.1",
+    "gatsby-remark-table-of-contents": "^2.0.0",
     "gatsby-source-filesystem": "^4.25.0",
     "gatsby-transformer-json": "^4.25.0",
     "gatsby-transformer-remark": "^5.25.1",

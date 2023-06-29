@@ -10,10 +10,10 @@ audience: [developers]
 product: [--]
 integration: [--]
 tags: [--]
+showtoc: true
 ---
 
-A Pantheon CMS site contains two components: code, and a CMS (Content Management System).  When you create a site, you are creating both of these components in the Dev environment.  Then, when you are ready, you will do the create your Test and Live environments.
-
+ Pantheon CMS site contains three components: code, files, and a database containing the content and configurations of your Content Management System (CMS). When you create a site, you are creating each of these components in the Dev environment. Then, when you are ready, you will create your Test and Live environments.
 
 ## Create the Dev Environment
 
@@ -33,8 +33,8 @@ To create a CMS site:
 
 1. Enter the following information and click **Continue**:
    - Sitename
-   - Select a region for this site. 
-   - If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**. 
+   - Select a region for this site.
+   - If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**.
 
    ![Enter site information](../images/create-new-site-info.png)
 

@@ -66,7 +66,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
       options: {
         plugins: [ // Takes additional plugins
-          {
+        {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               // Moves downloadable scripts to a subdirectory in the build artifact
@@ -162,6 +162,17 @@ module.exports = {
             },
           },
           `gatsby-remark-static-images`,
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: true,
+              ordered: false,
+              fromHeading: 2,
+              toHeading: 3,
+              className: "table-of-contents"
+            },
+          },
           `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
@@ -179,7 +190,7 @@ module.exports = {
           {
             resolve: "gatsby-remark-external-links",
             options: {
-              target: null,
+              target: "_blank",
               rel: "nofollow noopener external",
             },
           },
