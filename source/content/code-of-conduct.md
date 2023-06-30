@@ -32,7 +32,7 @@ Examples of unacceptable behavior by members include but are not limited to:
 - The use of sexualized language or imagery and unwelcome sexual attention or advances
 - Discriminatory or derogatory jokes and language relating to gender identity and expression, sexuality, disability, physical appearance, socioeconomic status, educational background and level of experience, ethnicity, nationality, age, lifestyle choices, and religious affiliation
 - Personal solicitations and/or spam
-- Publishing others’ private information, such as a physical or electronic address, without explicit permission
+- Publishing others’ private information, such as a legal name, or physical or electronic address, without explicit permission
 - Other conduct which could reasonably be considered inappropriate in a professional setting
 - Advocating for or encouraging any of the above behaviors
 
@@ -64,7 +64,7 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 
 ## Rewards Disclaimer
 
-Community members will be able to accrue “points” that can be redeemed for reward(s) in the storefront. When redeeming a reward(s), you agree to pay any applicable taxes levied or based on any rewards received by you under the Pantheon Community Hub, and to comply with any professional rules regarding use of the Program or points or rewards awarded thereunder.This program is open to legal residents of the United States of America and rewards will only be awarded within said locations. Reward redemptions exceeding more than $600 in aggregate payments in a calendar year are considered to be taxable income by U.S. law. You are also responsible for your compliance with all applicable laws, governmental regulations, and internal corporate policies affecting your business and for any use you may make of the Program
+Community members will be able to accrue “points” that can be redeemed for reward(s) in the storefront. When redeeming a reward(s), you agree to pay any applicable taxes levied based on any rewards received by you under the Pantheon Community Hub, and to comply with any professional rules regarding use of the Program or points or rewards awarded thereunder.This program is open to legal residents of the United States of America and rewards will only be awarded within said locations. Reward redemptions exceeding more than $600 in aggregate payments in a calendar year are considered taxable income by U.S. law. You are also responsible for your compliance with all applicable laws, governmental regulations, and internal corporate policies affecting your business and for any use you may make of the Program.
 
 ## Privacy
 
