@@ -20,7 +20,7 @@ Pantheon monitors your site traffic as part of our evaluation of overall site he
 
 Pantheon designed Overage Protection for Performance sites to prevent one-time traffic spikes from causing billing issues. All Performance plans and higher include Overage Protection, which provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
 
-If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. You will receive notifications of this change ahead of time.
+If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. You will receive notifications of this change in an email with a subject of "You've been right-sized" ahead of time.
 
 <Alert title="Note" type="info">
 

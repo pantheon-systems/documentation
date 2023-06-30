@@ -10,7 +10,7 @@ reviewed: ""
 
 ### Will Pantheon warn me if my site has an overage?
 
-Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. These adjustments will be communicated via email.
+Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. These adjustments will be communicated in an email with a subject of "You've been right-sized".
 
 ### Where can I manage my plan along with my site traffic?
 
