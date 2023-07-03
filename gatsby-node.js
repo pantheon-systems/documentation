@@ -120,7 +120,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   `)
 }
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   return graphql(`
@@ -368,6 +368,13 @@ exports.createPages = ({ graphql, actions }) => {
           id: topic.node.id,
         },
       })
+    })
+
+    // in-Gatsby redirects
+    const { createRedirect } = actions
+    createRedirect({
+      fromPath: `/guides/drupal-hosted-deprecated-upstream`,
+      toPath: `/drupal-migration`,
     })
 
     return null
