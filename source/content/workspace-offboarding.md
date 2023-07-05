@@ -1,6 +1,6 @@
 ---
 title: Workspace Offboarding
-description: Easily remove users and supporting workspaces from multiple sites.
+description: Easily remove Pantheon users and supporting workspaces from multiple Pantheon sites.
 contributors: [wordsmither]
 contenttype: [doc]
 innav: [true]
