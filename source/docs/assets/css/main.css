@@ -3358,7 +3358,6 @@ div.col-md-3.manual-guide-toc {
   padding-left: 0px;
   padding-right: 0px;
   color: #1e1e2b;
-  max-height: 100vh;
   overflow-y: auto;
   overflow-x:hidden;
 }
