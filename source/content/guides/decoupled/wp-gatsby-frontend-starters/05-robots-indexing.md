@@ -21,7 +21,7 @@ This section provides information on how to use a `robots.txt` file to manage in
 
 ## Robots.txt File
 
-A `robots.txt` file instructs search engine crawlers on which URLs and files can be accessed on your domain. This allows you to prevent crawling and indexing of specified areas of your website.
+A `robots.txt` file instructs search engine crawlers on which URLs and files can be accessed on your domain. This allows you to prevent crawling and indexing to specified areas of your website.
 
 ## Install and Configure the Gatsby robots.txt Plugin
 
@@ -41,7 +41,7 @@ You can install the `gatsby-plugin-robots-txt` plugin to if you are using the Ga
     npm install --save gatsby-plugin-robots-txt
     ```
 
-1. Open your `gatsby-config.js` file and to add which URLs you want to block or allow crawler access to.
+1. Open your `gatsby-config.js` file and add the URLs you want to block or allow crawler access to.
 
     ```bash{promptUser: user}
     //gatsby-config.js
