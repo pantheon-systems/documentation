@@ -14,19 +14,25 @@ showtoc: true
 reviewed: 2023-06-21
 ---
 
-<!-- note to authors: this is early access content.  when the feature goes to general access, this content should be added to /source/content/guides/account-mgmt/workspace-sites-teams/07-teams.md -->
+<!-- Note to authors: this is early access content. When the feature goes to general access, this content should be added to /source/content/guides/account-mgmt/workspace-sites-teams/07-teams.md -->
 
 <Alert title="Early Access" type="info" icon="leaf">
 
-Workspace Offboarding is available for [Early Access](/guides/support/early-access/) participants. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
+Workspace Offboarding is available for:
 
-In addition, you must have an Enterprise account to use this feature.
+- [Early Access](/guides/support/early-access/) participants.
+
+This feature is available to:
+
+- Selected Enterprise accounts.
+
+While this feature is in Early Access, Pantheon's development team releases new functionality often. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about support expectations for and access to Pantheon's pre-release software.
 
 </Alert>
 
 ## Remove Team Members
 
-Use this process if you want to remove a member from either a single workspace, or from a workspace and **all** it's associated sites.
+Use this process if you want to remove a member from either a single workspace or from a workspace and **all** its associated sites.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
 
@@ -50,7 +56,7 @@ Use this process if you want to remove a member from either a single workspace, 
 
 1. Click **<span class="glyphicons glyphicons-group"></span> Team**.
 
-1. Click the **x** to the right of the Supporting Workspace you wish to remove. 
+1. Click the **x** to the right of the Supporting Workspace you wish to remove.
 
 1. Select one of the following options:
 
