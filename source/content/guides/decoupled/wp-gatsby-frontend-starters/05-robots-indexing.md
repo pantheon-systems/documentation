@@ -43,7 +43,7 @@ You can install the `gatsby-plugin-robots-txt` plugin to if you are using the Ga
 
 1. Open your `gatsby-config.js` file and add the URLs you want to block or allow crawler access to.
 
-    ```bash{promptUser: user}
+    ```js
     //gatsby-config.js
 
     module.exports = {
@@ -56,7 +56,7 @@ You can install the `gatsby-plugin-robots-txt` plugin to if you are using the Ga
 
     **Example configuration:**
 
-     ```bash{promptUser: user}
+     ```js
 
         //gatsby-config.js
         module.exports = {

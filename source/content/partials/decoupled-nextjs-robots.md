@@ -20,7 +20,7 @@ You can add a `robots.txt` file to your Front-End Sites project using the Next.j
 
 1. Create a file named `robots.txt` and specify which URLs you want to block or allow crawler access to. For example:
 
-    ```bash{promptUser: user}
+    ```txt
     //robots.txt
 
     # Block crawler access
