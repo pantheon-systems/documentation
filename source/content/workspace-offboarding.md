@@ -14,7 +14,11 @@ showtoc: true
 reviewed: 2023-06-21
 ---
 
-<!-- Note to authors: this is early access content. When the feature goes to general access, this content should be added to /source/content/guides/account-mgmt/workspace-sites-teams/07-teams.md -->
+<!-- Note to authors: this is early access content. When the feature goes to general access, this content should be added to /source/content/guides/account-mgmt/workspace-sites-teams/07-teams.md 
+
+Also, this URL has been added to addsearch to exclude it from search results. that entry should be removed when EA is over
+
+-->
 
 <Alert title="Early Access" type="info" icon="leaf">
 
@@ -50,7 +54,7 @@ Use this process if you want to remove a member from either a single workspace o
 
 1. Click **Remove Access**. The members are removed based on the selection you made.
 
-## Remove Supporting Organizations
+## Remove Supporting Workspaces
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
 
