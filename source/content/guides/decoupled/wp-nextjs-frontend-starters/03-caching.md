@@ -122,8 +122,7 @@ cache purging on a post list page.
 	import {
 		gql,
 		GraphQLClientFactory,
-		setEdgeHeader,
-		setSurrogateKeyHeader,
+ 		setOutgoingHeaders,
 	} from '@pantheon-systems/wordpress-kit';
 	const client = new GraphQLClientFactory(
 		'https://dev-wordpress-purge-demo.pantheonsite.io/wp/graphql',
@@ -167,11 +166,10 @@ cache purging on a post list page.
 			headers,
 		} = await client.rawRequest(query, { totalPosts: 100 });
 		const posts = edges.map(({ node }) => node);
-		const keys = headers.get('surrogate-key');
-		// Add unique surrogate keys to outgoing response
-		keys && setSurrogateKeyHeader(keys, res);
-		// Set cache control header to ensure response is cached at edge
-		setEdgeHeader({ res });
+    		// Add unique surrogate keys to outgoing response
+    		// and set cache control header to ensure response is cached at edge
+    		setOutgoingHeaders({ headers, res });
+
 		return { props: { posts } };
 	}
 	```
