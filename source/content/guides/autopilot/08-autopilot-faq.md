@@ -45,7 +45,7 @@ Autopilot supports all versions of Drupal, as follows:
 
 ## Does Autopilot support Terminus actions?
 
-Not yet.
+Refer to the [Autopilot Terminus plugin documentation](https://github.com/pantheon-systems/terminus-autopilot-plugin#readme) for information on supported actions.
 
 ## Where do my updates go if I select the Do Not Deploy destination option?
 

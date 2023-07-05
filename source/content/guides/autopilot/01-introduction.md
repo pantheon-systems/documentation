@@ -42,7 +42,7 @@ Autopilot is available for the following accounts:
 
 Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to discuss which plan is best for your needs.
 
-## Who is Autopilot For?
+## Who is Autopilot for?
 
 Autopilot is for you if you build or maintain WordPress and Drupal sites.
 
@@ -59,28 +59,27 @@ Autopilot requires the following:
 - A Gold, Platinum, or Diamond account
 - [Multidev](/guides/multidev)
 - A compatible version of Drush (if you are not using Integrated Composer)
-- A compatible site framework (refer to [Autopilot Site Compatibility](https://docs.pantheon.io/guides/autopilot#autopilot-site-compatibility) for details
-  
+- A compatible site framework (refer to [Autopilot Site Compatibility](/guides/autopilot#autopilot-site-compatibility) for more information.
+
 ### Autopilot Site Compatibility
 
 <Partial file="autopilot/autopilot-compatibility.md" />
 
-## Autopilot For Agencies
+## Autopilot for Agencies
 
 Agency users can navigate to the Agency Workspace to see sites that have been granted agency access. The Agency Workspace also shows client sites for which the agency is a supporting or owning workspace.
 
 Agency users can only access Autopilot through the Agency Workspace.
 
+## Autopilot Terminus Plugin
+
+You can use the [Autopilot Terminus plugin](https://github.com/pantheon-systems/terminus-autopilot-plugin#readme) to perform several Autopilot actions from your terminal. The Autopilot Terminus plugin does not provide the full range of functions available through the dashboard at this time.
+
 ## More Resources
 
 - [Autopilot Pre-Configuration Checklist](/guides/autopilot/autopilot-preconfiguration/)
-
 - [Autopilot Custom Upstream Guide](/guides/autopilot-custom-upstream)
-
 - [Autopilot Product Page](https://pantheon.io/autopilot?docs)
-
 - [Webinar: Put CMS Updates on Cruise Control with Autopilot](https://pantheon.io/put-cms-updates-on-cruise-control-with-autopilot-webinar)
-
 - [Autopilot Makes Open Source CMS a Reality at Scale](https://pantheon.io/blog/open-source-cms-scale-autopilot)
-
 - [Robots, Autopilot, and The Holy Grail of WebOps](https://pantheon.io/blog/robots-autopilot-and-holy-grail-webops)
