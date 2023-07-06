@@ -33,7 +33,7 @@
     "gatsby-plugin-react-helmet": "^5.25.0",
     "gatsby-plugin-sass": "^5.25.0",
     "gatsby-plugin-segment-js": "^4.0.3",
-    "gatsby-plugin-sharp": "^4.25.0",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-sitemap": "^5.25.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-autolink-headers": "^5.25.0",
