@@ -14,6 +14,7 @@ cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: []
 integration: []
+draft: true
 ---
 
 This guide will show you how to migrate a site that meets the following criteria to the latest version of Drupal:

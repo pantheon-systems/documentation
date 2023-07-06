@@ -51,10 +51,6 @@ Use [Upgrade a Site That Was Created with an Empty Upstream to the Latest Versio
 
 Refer to [Pantheon Dashboard + Multidev](/drupal-migration#pantheon-dashboard+multidev) if you used the Pantheon Dashboard to create your Drupal site, and your site requires Multidev.
 
-#### Pantheon Dashboard + an Upstream
-
-Use [Upgrade a Site That Was Created Using a Deprecated Upstream to the Latest Version of Drupal](/guides/drupal-hosted-deprecated-upstream) to start your upgrade if you used the Pantheon Dashboard and the `drupal-project` or `drupal-recommended` Upstream to create your Drupal site.
-
 ### I use Multidev
 
 #### Pantheon Dashboard + Multidev

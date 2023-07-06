@@ -14,6 +14,7 @@ cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [dashboard]
 integration: []
+draft: true
 ---
 
 Check for updates at this stage in migrating your Drupal site to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).
