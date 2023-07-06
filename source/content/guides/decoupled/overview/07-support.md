@@ -3,7 +3,7 @@ title: Pantheon Front-End Sites
 subtitle: Support
 description: Learn more about what support is available for a Pantheon Front-End Site.
 tags: [webops, workflow, decoupled]
-contributors: [ joan-ing]
+contributors: [joan-ing]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/support
