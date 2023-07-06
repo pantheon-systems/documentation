@@ -58,3 +58,8 @@ Run the command below in Terminus:
   - `c9f5e5c0-248f-4205-b63a-d2729572dd1f` is the `upstream_id` for Decoupled WordPress Composer Managed.
 
 </Alert>
+
+
+## Create Your Project with the Terminus Plugin
+
+<Partial file="decoupled-terminus-plugin-backend.md" />

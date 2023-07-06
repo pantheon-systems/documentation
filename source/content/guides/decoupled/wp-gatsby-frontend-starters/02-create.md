@@ -29,7 +29,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 - You have installed your WordPress site using the [Decoupled WordPress Recommended Project](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed) configuration, which has the `wp-graphql` and `wp-gatsby` plugins installed as dependencies (only `wp-graphql` is activated automatically).
 
-- Optional. You may want to install the gatsby cli globally, or [use `npx`](https://www.npmjs.com/package/npx)
+- Optional. You may want to install the Gatsby cli globally, or [use `npx`](https://www.npmjs.com/package/npx)
 
 ## Create Your Project on Pantheon
 
@@ -60,7 +60,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
 
-## Set Gatsby pathPrefix
+### Set Gatsby pathPrefix
 
 You can configure a site served from a subpath in the Pantheon dashboard so that Gatsby automatically reads this set subpath. This allows you to avoid setting this in both Pantheon and Gatsby.
 

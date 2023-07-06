@@ -175,6 +175,10 @@ If you would like the repo created to be under a GitHub organization instead of 
 For information on additional options, consult the
 [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
 
+## Create Your Project with the Terminus Plugin
+
+<Partial file="decoupled-terminus-plugin-backend.md" />
+
 ## Update to Drupal 10
 
 Follow the steps below to update a [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760)
@@ -221,3 +225,4 @@ site to Drupal 10.
    ```
    https://dev-my-decoupled-backend.pantheonsite.io/update.php
    ```
+
