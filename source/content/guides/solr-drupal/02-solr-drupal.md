@@ -10,7 +10,7 @@ audience: [development]
 product: [search]
 integration: [--]
 tags: [solr, search, modules]
-contributors: [carolynshannon, joa-pan]
+contributors: [carolynshannon, joan-ing]
 reviewed: "2022-12-13"
 showtoc: true
 permalink: docs/guides/solr-drupal/solr-drupal

@@ -9,7 +9,7 @@ audience: [development]
 product: [--]
 integration: [sendgrid, email]
 tags: [code, email, modules, plugins]
-contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois, joa-pan]
+contributors: [erikmathy, rvtraveller, wbconnor, sarahg, sdubois, joan-ing]
 reviewed: "2022-05-02"
 ---
 Email is a necessity when running a website - whether it's used with a simple contact form or to manage subscription based services. Email delivery can be used for notification of content updates, delivery of sales receipts, updates for password or membership information, and more. Email is the most effective way of communicating with a site's user base, and it is important that messages are filtered properly and not incorrectly marked as spam.
