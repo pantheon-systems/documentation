@@ -28,9 +28,18 @@ While this feature is in Early Access, Pantheon's development team releases new 
 
 </Alert>
 
-The Terminus Scheduled Jobs Plugin allows customers to schedule and automate specific tasks or jobs according to their requirements. It empowers users to define the frequency, timing, and specific actions to be executed automatically, saving time and effort.
+The [Terminus](/terminus-overview) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
 
-Customers can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
+### Jobs "Budget"
+
+Each site has a fixed allocated budget of 300 minutes per day. This is calculated as the sum of all job durations, from the moment the job has started until it finished. 
+
+There are currently no restrictions around the number of schedules that can be created for any given site. If the daily budget is exhausted, running jobs are given a 15 minute grace period after which a timeout signal will be issued. No other jobs will be created that day until midnight UTC when all budgets are reset. In calculating the budget, partial minutes are rounded up.
+
+### Job Timeouts
+
+Timeouts are dynamic and dependent on the remaining budget plus the 15 minute grace period. For instance, the daily available budget at the start of the day is 300 minutes, which means the first job's timeout is 315 minutes. When a job is launched throughout the day and the remaining budget is 60 minutes, the timeout will be calculated to 75 minutes.
+
 
 ## Requirements
 
@@ -46,32 +55,51 @@ To install this plugin, run the following:
 terminus self:plugin:install <path to local clone>
 ```
 
-For more information about installing Terminus Plugins, see [Install Plugins in our Terminus Guide](/terminus/plugins).
+For more information about installing Terminus Plugins, see [Install Plugins](/terminus/plugins) in our Terminus Guide.
 
 ## Usage
 
 The plugin uses the following syntax:
 
 ```bash
-terminus scheduledjobs:<command> <site>.<env> "<job name>" "<cron command>" "<job schedule>"
+terminus scheduledjobs:<command>:<subcommand> <site>.<env> "<job name>" "<cron command>" "<cron schedule>"
 ```
 
 Where:
-- `<command>`: the Scheduled Jobs pPugin command. See the [Commands](/customer-scheduled-cron-jobs#commands) section for details.
+
+- `<command>:<subcommand>`: the Scheduled Jobs Plugin command and subcommand. See the [Commands](/customer-scheduled-cron-jobs#commands) section for details.
+
 - `<site>.<env>`: the site name or UUID.  Use `terminus site:list` to retrieve a list of site names and UUIDs.
+
 - `<job name>`: a brief description of the job.
-- `<cron command>`: the cron command you are scheduling. 
-- `<job schedule>`: the schedule for the job.  See the [Job Schedules](/customer-scheduled-cron-jobs#job-schedules) section for details.
 
-## Jobs
+- `<cron command>`: the cron command you are scheduling. The following commands cannot be used:
+  - Outbound email via `sendmail` or `localhost` SMTP is not permitted. Email can still be sent via integrations with third party email providers either via their SMTP servers or API integrations.
+  - New Relic
 
-Jobs are defined as individual executions associated with a certain schedule. Listing jobs involves obtaining the schedule id.
+- `<cron schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
 
-### Job Budget
+## Commands
 
-Each site has a fixed allocated budget of 300 minutes per day. This is calculated as the sum of all job durations, from the moment the job has started until it finished. There are currently no restrictions around the number of schedules that can be created for any given site. If the daily budget is exhausted, running jobs are given a 15 minute grace period after which a timeout signal will be issued. No other jobs will be created that day until midnight UTC when all budgets are reset. In calculating the budget, partial minutes are rounded up.
+These commands may require the following variables, indicated by `<variable name>`. 
 
-```bash
+- `<site>.<env>`: the site name or UUID.  Use `terminus site:list` to retrieve a list of site names and UUIDs.
+
+- `<job name>`: a brief description of the job.
+
+- `<cron command>`: the cron command you are scheduling. The following commands cannot be used:
+
+- `<cron schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
+
+- `<job ID>`: The unique ID of the job, which you can find using the [`jobs:list`](/customer-scheduled-cron-jobs#list) command.
+
+- `<schedule ID>`: the unique ID of the schedule, which you can find using the [`schedule:list`](/customer-scheduled-cron-jobs#schedulelist) command.
+
+### budget:info
+
+View your current budget status.
+
+```bash{promptUser: user}{outputLines: 2-7}
 terminus scheduledjobs:budget:info <site>.<env>
 
 ---------------------- ------------------------ -----------
@@ -81,57 +109,9 @@ terminus scheduledjobs:budget:info <site>.<env>
 ---------------------- ------------------------ -----------
 ```
 
-### Job Timeout
+### jobs:list
 
-Timeouts are dynamic and dependent on the remaining budget plus a grace period. For instance, the daily available budget at the start of the day is 300 minutes, which means the first job's timeout is 315 minutes. When a job is launched throughout the day and the remaining budget is 60 minutes, the timeout will be calculated to 75 minutes.
-
-### Job Schedules
-
-Job schedules are characterized as job definitions which allow setting a name for each job, a command and schedule in the UNIX cron format (https://en.wikipedia.org/wiki/Cron).
-
-```
-# ┌───────────── minute (0 - 59)
-# │ ┌───────────── hour (0 - 23)
-# │ │ ┌───────────── day of the month (1 - 31)
-# │ │ │ ┌───────────── month (1 - 12)
-# │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
-# │ │ │ │ │                                   7 is also Sunday on some systems)
-# │ │ │ │ │
-# │ │ │ │ │
-# * * * * * <command to execute>
-```
-
-## Commands
-
-### create
-
-Creating a new schedule can be performed running the command below. This example runs an hourly job executing Drupal cron:
-
-```bash
-terminus scheduledjobs:create <site>.<env> "test-scheduled-job-hourly" "drush -vvv cron" "0 * * * *"
-```
-
-### delete
-
-Delete an existing job. Replace `<<schedule_ID>>` with the ID of the job, which you can find using the [`list`](/customer-scheduled-cron-jobs#list) command.
-
-```bash
-terminus scheduledjobs:schedule:delete <site>.<env> <<schedule_ID>>
-```
-
-### list
-
-Generates a list of either all schedules.
-
-```bash{promptUser: user}{outputLines: 2-7}
-terminus scheduledjobs:schedule:list <site>.<env> 
-
--------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
- ID                                     Name                        Schedule      Command                            Status    Created At (UTC)
--------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
- d178dd16-b0e3-47dc-a446-1bf4343f7fff   test-scheduled-job-hourly   0 * * * *     ls -la /files && drush -vvv cron   ENABLED   2023-05-19T07:34:26Z
--------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
-```
+Returns a list of all active jobs.
 
 ```bash{promptUser: user}{outputLines: 2-12}
 terminus scheduledjobs:job:list <site>.<env> 
@@ -148,30 +128,56 @@ terminus scheduledjobs:job:list <site>.<env>
 -------------------------------------- ------------------------------- ------------------------------- ---------
 ```
 
-### logs
+### jobs:logs
 
-View logs associated with jobs is possible by passing the job ID to the command below:
+View logs associated with a job ID.
 
 ```bash
 terminus scheduledjobs:job:logs <site>.<env> <job ID>
 ```
 
-### pause / resume
+### schedule:create
 
-At any point, job executions can either be paused or resumed.
+Creates a new scheduled job.
 
 ```bash
-terminus scheduledjobs:schedule:pause <site>.<env> <schedule_ID>
-terminus scheduledjobs:schedule:resume <site>.<env> <schedule_ID>
+terminus scheduledjobs:schedule:create <site>.<env> "<job name>" "<cron command>" "<cron schedule>"
 ```
 
-## Limitations and Known Issues
+### schedule:delete
 
-### Not Implemented
+Delete an existing schedule. 
 
-- Outbound email via `sendmail` or `localhost` SMTP is not permitted. Email can still be sent via integrations with third party email providers either via their SMTP servers or API integrations.
-- New Relic
+```bash
+terminus scheduledjobs:schedule:delete <site>.<env> <schedule ID>
+```
 
-### Quotas
+### schedule:list
 
-The private beta nature of this feature comes with a quota defined at the site level as a daily runtime budget.
+Generates a list of all schedules for the specified site environment. 
+
+```bash{promptUser: user}{outputLines: 2-7}
+terminus scheduledjobs:schedule:list <site>.<env> 
+
+-------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
+ ID                                     Name                        Schedule      Command                            Status    Created At (UTC)
+-------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
+ d178dd16-b0e3-47dc-a446-1bf4343f7fff   test-scheduled-job-hourly   0 * * * *     ls -la /files && drush -vvv cron   ENABLED   2023-05-19T07:34:26Z
+-------------------------------------- --------------------------- ------------- ---------------------------------- --------- ----------------------
+```
+
+### schedule:pause
+
+Pause a schedule. 
+
+```bash
+terminus scheduledjobs:schedule:pause <site>.<env> <schedule ID>
+```
+
+### schedule:resume
+
+Resume a paused schedule. 
+
+```bash
+terminus scheduledjobs:schedule:resume <site>.<env> <schedule ID>
+```
