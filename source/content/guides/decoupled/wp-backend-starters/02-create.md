@@ -19,7 +19,7 @@ integration: [--]
 
 This section provides information on how to create a new WordPress backend project with Pantheon's starter kit.
 
-### Install with Dashboard Upstream
+## Create with Dashboard Upstream
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
@@ -60,6 +60,10 @@ Run the command below in Terminus:
 </Alert>
 
 
-## Create Your Project with the Terminus Plugin
+## Create with Terminus Plugin
 
 <Partial file="decoupled-terminus-plugin-backend.md" />
+
+## Create with Node.js CLI
+
+<Partial file="decoupled-nodejs-cli.md" />

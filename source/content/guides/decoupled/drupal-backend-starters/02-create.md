@@ -19,9 +19,9 @@ integration: [--]
 
 This section provides information on how to use the Drupal Backend Starter for Front-End Sites.
 
-## Choose an Installation Option
+## Choose a Creation Option
 
-You can install the backend starter kit with Build Tools or with the Dashboard Upstream. Review the information below to select the right option for your setup.
+You can create your backend starter kit project with the Dashboard Upstream, the Terminus Decoupled Kit Plugin, or with Build Tools. Review the information below to select the right option for your setup.
 
 ### Use the Dashboard Upstream if:
 
@@ -29,13 +29,17 @@ You can install the backend starter kit with Build Tools or with the Dashboard U
 
 - The Pantheon repository is your source of truth
 
+### Use the Dashboard Upstream if:
+
+- You prefer to use the CLI
+
 ### Use Build Tools if:
 
 - Testing is an important part of your workflow
 
 - You don’t want to manually push changes to your code repo
 
-## Install with Dashboard Upstream
+## Create with Dashboard Upstream
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
@@ -77,7 +81,15 @@ Replace `'{My Team Name}'` with your team name. For example, `My Agency`. This c
 
 </Alert>
 
-## Install with Build Tools
+## Create with Terminus Plugin
+
+<Partial file="decoupled-terminus-plugin-backend.md" />
+
+## Create with Node.js CLI
+
+<Partial file="decoupled-nodejs-cli.md" />
+
+## Create with Build Tools
 
 ### Prerequisites
 
@@ -175,9 +187,6 @@ If you would like the repo created to be under a GitHub organization instead of 
 For information on additional options, consult the
 [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
 
-## Create Your Project with the Terminus Plugin
-
-<Partial file="decoupled-terminus-plugin-backend.md" />
 
 ## Update to Drupal 10
 

@@ -42,7 +42,7 @@ Currently, Pantheon Front-End Sites do not support SSR using Gatsby. Other permu
 
 ## Pantheon Front-End Site Starter Kits
 
-Pantheon offers recommended starter kit templates:
+Pantheon offers recommended starter kit templates.
 
 - [Drupal Backend Starter](/guides/decoupled/drupal-backend-starters)
 - [WordPress Backend Starter](/guides/decoupled/wp-backend-starters)
@@ -72,6 +72,10 @@ The table below provides compatibility information for Front-End Sites.
 |  Drupal    |   9 or higher   |
 | WordPress  |   5.9 or higher |
 
+
+## Terminus Plugin
+
+Terminus Decoupled Kit Plugin allows you to create your backend project in Terminus with the option to select [Drupal](/guides/decoupled/drupal-backend-starters/create#create-with-terminus-plugin), [WordPress](/guides/decoupled/wp-backend-starters/create#create-with-terminus-plugin), or no CMS.
 
 ## Rendering Options
 

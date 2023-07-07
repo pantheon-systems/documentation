@@ -39,7 +39,7 @@ Create a [GitHub](https://github.com) PR Workflow to test Pantheon sites on [Cir
 Fetch carbon impact and other sustainability data on your Pantheon sites.
 
   </Card>
-  
+
   <Card title={"Composer"} isOfficial author={"Brian Thompson"} authorLink={"https://github.com/rvtraveller"} link={"https://github.com/pantheon-systems/terminus-composer-plugin"}>
 
 Run [Composer](https://getcomposer.org/) commands on Pantheon sites.
@@ -55,6 +55,12 @@ Run Drupal Console commands on Pantheon sites.
   <Card title={"Filer"} author={"Sean Dietrich"} authorLink={"https://github.com/sean-e-dietrich"} link={"https://github.com/terminus-plugin-project/terminus-filer-plugin"}>
 
 Open SFTP Connections to your Pantheon Sites.
+
+  </Card>
+
+  <Card title={"Front-End Sites"} isOfficial author={"Pantheon Decoupled Kit"}  link={"/guides/decoupled/overview/site-options#terminus-plugin"}>
+
+  Create your Front-End Sites project with the Terminus Decoupled Kit plugin. You must enroll in our [Front-End Sites Early Access program](https://pantheon.io/features/decoupled-cms) before you can use Front-End Sites and and this plugin.
 
   </Card>
 

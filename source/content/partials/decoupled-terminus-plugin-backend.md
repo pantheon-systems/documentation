@@ -8,13 +8,19 @@ tags: [--]
 reviewed: ""
 ---
 
-[Terminus](/terminus) is a command line interface that provides advanced interaction with Pantheon. You can create your project with the Terminus Decoupled Kit Plugin if you prefer to work in the terminal.
+[Terminus](/terminus) is a command line interface that provides advanced interaction with Pantheon. You can create your project with the [Terminus Decoupled Kit Plugin](https://decoupledkit.pantheon.io/docs/backend-starters/terminus-decoupled-kit) if you prefer to work in the terminal.
 
 The Terminus Decoupled Kit Plugin provides commands useful for creating decoupled projects on Pantheon using pre-configured starter kits.
 
+<Alert title="Note"  type="info" >
+
+Note that the Terminus plugin creates your frontend codebase, but does not automatically deploy it to Pantheon. You must deploy your frontend codebase to Pantheon using the [import repository workflow](/guides/decoupled/no-starter-kit/import-repo).
+
+</Alert>
+
 The steps below show how you can use the Front-End Sites Terminus plugin to:
 
-- Create a new site on Pantheon for the CMS back-end of your choice.
+- Create a new site on Pantheon for the CMS backend of your choice.
 - Optionally install your CMS.
 - Create a frontend codebase that sources data from your newly created CMS project. This codebase will be automatically configured for local development, and can later be deployed to Pantheon using the import repository workflow.
 
@@ -24,7 +30,7 @@ Before you follow the steps below, make sure you have:
 - Installed [Node.js](https://nodejs.org/en/download)
 - Created a [Machine Token](/machine-tokens#create-a-machine-token)
 
-1. Open your terminal and run the command below to install the Front-End Sites Terminus plugin.
+1. Open your terminal and run the command below to install the Terminus Decoupled Kit plugin.
 
     ```bash{promptUser:user}
     terminus self:plugin:install pantheon-systems/terminus-decoupled-kit-plugin
@@ -32,7 +38,7 @@ Before you follow the steps below, make sure you have:
 
     - You should see a message, such as `Installed pantheon-systems/terminus-decoupled-kit-plugin`
 
-1. Run command below, updating `<site_name>` and `<label>` with your own information, to create your project.
+1. Run the command below, updating `<site_name>` and `<label>` with your own information, to create your project.
 
     ```bash{promptUser:user}
     terminus decoupled-kit:create <site_name> <label>
@@ -41,11 +47,11 @@ Before you follow the steps below, make sure you have:
     - Additional commands are provided below. Note that these commands are optional.
 
         - `--org[=ORG]`: Organization name, label, or ID.
-        - `--region[=REGION]`: The region to create the site in. See the Pantheon regions documentation for details.
-        - `--cms[=CMS]`: The CMS to use. Currently supported: drupal, wordpress.
-        - `--install-cms[=INSTALL-CMS]`: Whether to install the CMS. Defaults to true.
+        - `--region[=REGION]`: The region in which you want to create your site. Refer to the [Pantheon regions documentation](/regions) for more information.
+        - `--cms[=CMS]`: This selects the CMS you want to use. Current supported CMS options are: `drupal` and `wordpress`.
+        - `--install-cms[=INSTALL-CMS]`: This instructs the plugin to install your CMS or not. The default value is `true`. You can set this value to `false` if you do not want to install a CMS for your project.
 
-1. Select the CMS you want to use when prompted. The options should look similar to the example below.
+1. Select the CMS you want to use when prompted. This option does appear if you set the optional `--install-cms[=INSTALL-CMS]` command to `false`. The options should look similar to the example below.
 
     ```bash{outputLine}
     Choose your CMS back-end:
@@ -54,7 +60,7 @@ Before you follow the steps below, make sure you have:
     [2] WordPress
     ```
 
-    - This might take several minutes. You should see a message similar to the example below to let you know that your project is being created.
+    - CMS installation might take several minutes. You should see a message similar to the example below to let you know your project is deploying.
 
       ```bash{outputLine}
       Creating a new site...
@@ -71,7 +77,7 @@ Before you follow the steps below, make sure you have:
     Ok to proceed? (y)
     ```
 
-1. Select the framework (generator) you want to use.
+1. Select the framework generator you want to use.
 
     ```bash{outputLines}
     Which generator(s) would you like to run? (Press <space> to select, <a> to toggle all, <i> to
@@ -132,6 +138,6 @@ Before you follow the steps below, make sure you have:
     Your Decoupled Kit project has been created!
     ```
 
-    - You can see this project in your Pantheon account. Go to your Pantheon dashboard and select **Sites**. You will see your project listed with the **label** you entered in the steps above.
+    - You can see this project in your Pantheon account. Go to your Pantheon dashboard and select **Sites**. You will see your project listed with the **label** name you entered in the steps above.
 
 1. [Import your repository](/guides/decoupled/no-starter-kit/import-repo) to create the frontend of your Pantheon Front-End Site.
