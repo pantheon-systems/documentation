@@ -30,17 +30,6 @@ While this feature is in Early Access, Pantheon's development team releases new 
 
 The [Terminus](/terminus-overview) Scheduled Jobs Plugin allows customers to schedule and automate specific cron jobs according to their requirements. You can specify the desired frequency (e.g., daily, weekly, monthly, hourly), and the actions to be performed. The system then executes the scheduled jobs automatically based on the provided instructions.
 
-### Jobs "Budget"
-
-Each site has a fixed allocated budget of 300 minutes per day. This is calculated as the sum of all job durations, from the moment the job has started until it finished. 
-
-There are currently no restrictions around the number of schedules that can be created for any given site. If the daily budget is exhausted, running jobs are given a 15 minute grace period after which a timeout signal will be issued. No other jobs will be created that day until midnight UTC when all budgets are reset. In calculating the budget, partial minutes are rounded up.
-
-### Job Timeouts
-
-Timeouts are dynamic and dependent on the remaining budget plus the 15 minute grace period. For instance, the daily available budget at the start of the day is 300 minutes, which means the first job's timeout is 315 minutes. When a job is launched throughout the day and the remaining budget is 60 minutes, the timeout will be calculated to 75 minutes.
-
-
 ## Requirements
 
 - [Terminus](/terminus/install)
@@ -78,6 +67,16 @@ Where:
   - New Relic
 
 - `<cron schedule>`: the schedule for the job.  See [this Wikipedia page](https://en.wikipedia.org/wiki/Cron) for more information about cron schedules.
+
+### Jobs "Budget"
+
+Each site has a fixed allocated budget of 300 minutes per day. This is calculated as the sum of all job durations, from the moment the job has started until it finished. 
+
+There are currently no restrictions around the number of schedules that can be created for any given site. If the daily budget is exhausted, running jobs are given a 15 minute grace period after which a timeout signal will be issued. No other jobs will be created that day until midnight UTC when all budgets are reset. In calculating the budget, partial minutes are rounded up.
+
+### Job Timeouts
+
+Timeouts are dynamic and dependent on the remaining budget plus the 15 minute grace period. For instance, the daily available budget at the start of the day is 300 minutes, which means the first job's timeout is 315 minutes. When a job is launched throughout the day and the remaining budget is 60 minutes, the timeout will be calculated to 75 minutes.
 
 ## Commands
 
