@@ -15,12 +15,6 @@ permalink: docs/guides/multisite/search-replace/
 editpath: multisite/07-search-replace.md
 ---
 
-<Alert title="Early Access" type="info" icon="leaf">
-
-WordPress Multisite (WPMS) Search and Replace is available for [Early Access](/oss-support-levels#early-access) participants. Features for platform search and replace on WPMS sites are in active development. Pantheon's development team is rolling out new functionality often while this product is in Early Access. Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
-
-</Alert>
-
 This section provides information on how to configure automatic platform Search and Replace for URLs. This feature can be used with both subdirectory and subdomain WordPress Multisites.
 
 ## Requirements
