@@ -230,7 +230,7 @@ export const pageQuery = graphql`
         description
         showtoc
         contributors {
-          id
+          yamlId
           name
           twitter
         }

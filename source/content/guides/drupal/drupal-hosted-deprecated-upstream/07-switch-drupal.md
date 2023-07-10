@@ -14,6 +14,7 @@ cms: [drupal9, drupal, drupal10, drupal8]
 audience: [development]
 product: [composer, terminus]
 integration: []
+draft: true
 ---
 
 This page provides steps to switch your site from Drupal to `drupal-composer-managed`, the [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer) upstream that keeps your site current with general configuration changes recommended by Pantheon.

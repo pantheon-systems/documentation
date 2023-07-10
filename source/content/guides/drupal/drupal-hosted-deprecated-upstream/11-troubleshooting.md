@@ -15,6 +15,7 @@ cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: []
 integration: []
+draft: true
 ---
 
 This page covers common troubleshooting scenarios when migrating a Drupal site to [Drupal with Composer Upstream](/guides/integrated-composer#get-started-with-integrated-composer).

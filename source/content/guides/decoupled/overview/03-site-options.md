@@ -3,7 +3,7 @@ title: Pantheon Front-End Sites
 subtitle: Site Options and Starter Kits
 description: Learn about site options and available starter kits.
 tags: [webops, workflow, decoupled]
-contributors: [joa-pan, backlineint, cobypear, hckia]
+contributors: [joan-ing, backlineint, cobypear, hckia]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/site-options

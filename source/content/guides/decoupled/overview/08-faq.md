@@ -3,7 +3,7 @@ title: Pantheon Front-End Sites
 subtitle: Frequently Asked Questions
 description: Learn about frequently asked questions for Pantheon's decoupled architecture using Front-End Sites.
 tags: [webops, workflow, decoupled]
-contributors: [backlineint, cobypear, hckia, joa-pan]
+contributors: [backlineint, cobypear, hckia, joan-ing]
 layout: guide
 showtoc: true
 permalink: docs/guides/decoupled/overview/faq

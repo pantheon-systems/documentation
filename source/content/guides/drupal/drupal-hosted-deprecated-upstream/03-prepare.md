@@ -15,6 +15,7 @@ cms: [drupal9, drupal, drupal8, drupal10]
 audience: [development]
 product: [terminus, composer]
 integration: []
+draft: true
 ---
 
 This page provides steps on preparing your site for migration to [Drupal with Composer Upstream](/guides/integrated-composer).

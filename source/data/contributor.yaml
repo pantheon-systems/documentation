@@ -11,12 +11,6 @@
   bio: Technical Writer, Pantheon
   github: //github.com/michellecolon-pantheon
   linkedin: //www.linkedin.com/in/michellecolon
-- id: joa-pan
-  name: Joanie Edwards
-  bio: Senior Technical Writer, Pantheon
-  github: //github.com/joa-pan
-  avatar: //github.com/joa-pan.png?size=460
-  drupal: //www.drupal.org/u/_joan
 - id: wordsmither
   name: Jennifer Hoffman
   avatar: //github.com/wordsmither.png?size=460
@@ -99,6 +93,12 @@
   linkedin: //www.linkedin.com/in/steven-dubois-31987721/
   drupal: //www.drupal.org/u/srdtwc
   bio: Support Dispatcher and Web Developer at DevCollaborative.
+- id: joan-ing
+  name: Joanie Edwards
+  bio: Community contributor
+  github: //github.com/joan-ing
+  avatar: //github.com/joan-ing.png?size=460
+  drupal: //www.drupal.org/u/_joan
 - id: calevans
   name: Cal Evans
   url: //calevans.com
@@ -161,7 +161,7 @@
   name: Cyrus Kia
   avatar: //avatars.githubusercontent.com/u/7597686?v=4
   github: //github.com/hckia
-  bio: Customer Success Engineer, Pantheon
+  bio: Software Engineer, Pantheon
 - id: fatimask
   name: Fatima Sarah Khalid
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/fatima.jpg
@@ -254,7 +254,7 @@
 - id: scottmassey
   name: Scott Massey
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/ScottNew.jpg
-  bio: Master of Customer Success, Pantheon
+  bio: Community contributor
   linkedin: //www.linkedin.com/in/scottlmassey
   github: //github.com/sukottokun
   twitter: https://twitter.com/astrocolossal
@@ -312,7 +312,7 @@
   github: //github.com/stevector
   drupal: https://www.drupal.org/user/179805
   wordpress: //profiles.wordpress.org/stevector
-  bio: Director, Technical Marketing, Pantheon
+  bio: Senior Manager, Outbound Product Management, Pantheon
 - id: iameap
   name: Eric Peterson
   url: //www.eric.pe/terson
@@ -338,11 +338,11 @@
   wordpress: //profiles.wordpress.org/jazzs3quence
   linkedin: //www.linkedin.com/in/chrissreynolds
   url: //chrisreynolds.io
-  bio: Software Engineer, Pantheon
+  bio: Senior Software Engineer, Pantheon
 - id: jrastaban
   name: John Richards II
   avatar: //github.com/jrastaban.png?size=460
-  bio: Manager of Developer Advocacy, Pantheon
+  bio: Community contributor
   github: //github.com/jrastaban
 - id: LukasRos
   name: Lukas Rosenstock
@@ -354,7 +354,7 @@
 - id: peter-pantheon
   name: Peter Sawczynec
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
-  bio: Customer Onboarding Manager, Pantheon
+  bio: Community contributor
   github: //github.com/peter-pantheon
 - id: jms-pantheon
   name: Jordan Schulz
@@ -381,7 +381,7 @@
   name: Coby Sher
   avatar: //avatars.githubusercontent.com/cobypear
   github: //github.com/CobyPear
-  bio: Software Engineer, Pantheon
+  bio: Senior Software Engineer, Pantheon
 - id: jspellman814
   name: John Spellman
   avatar: //github.com/jspellman814.png?size=460
@@ -389,11 +389,11 @@
   wordpress: //profiles.wordpress.org/jspellman
   drupal: //www.drupal.org/u/jspellman
   linkedin: //www.linkedin.com/in/john-spellman-86039262
-  bio: Software Engineer, Pantheon
+  bio: Community contributor
 - id: stovak
   name: Tom Stovall
   github: //github.com/stovak
-  bio: Developer Experience Engineer, Pantheon
+  bio: Senior Software Engineer, Pantheon
   avatar: //avatars.githubusercontent.com/u/119924
 - id: dts
   name: David Strauss
@@ -441,7 +441,7 @@
 - id: nathantyler
   name: Nathan Tyler
   avatar: //avatars.githubusercontent.com/u/232096
-  bio: Sr Product Manager, Pantheon
+  bio: Community contributor
   github: //github.com/tylerdigital
 - id: digisavvy
   name: Alex Vasquez
@@ -463,7 +463,7 @@
   name: Kit Wong
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/KitNew.jpg
   github: //github.com/hengkit
-  bio: Principal Sales Engineer, Pantheon
+  bio: Manager, Sales Engineering, Pantheon
 - id: bwood
   name: Brian Wood
   avatar: //avatars2.githubusercontent.com/u/185537
