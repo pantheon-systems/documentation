@@ -19,12 +19,12 @@ This section provides information on important Multisite fundamentals.
 ## Create Test and Live Environments from Dev
 After you've configured a WordPress Multisite in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Test** tab.
 2. Click **Create Test Environment**.
 
   This takes a few moments.
 
-3. Click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`. At this point, it will show a database connection error.
+3. Click **<span class="glyphicon glyphicon-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`. At this point, it will show a database connection error.
 
 4. Navigate to the command line, and perform a `wp search-replace` on the Test environment's database via Terminus:
 
