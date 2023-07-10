@@ -158,7 +158,7 @@ export const pageQuery = graphql`
         categories
         cms
         contributors {
-          id
+          yamlId
           name
           twitter
           bio

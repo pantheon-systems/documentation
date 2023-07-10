@@ -43,7 +43,7 @@ class Contributors extends React.Component {
                                   <div className="pull-left">
                                     <div className="preview-info__img">
                                       <Link
-                                        to={`/contributors/${node.id}`}
+                                        to={`/contributors/${node.yamlId}`}
                                         title={node.id}
                                       >
                                         <img
@@ -60,7 +60,7 @@ class Contributors extends React.Component {
                                     <div className="media-heading">
                                       <h3 className="toc-ignore">
                                         <Link
-                                          to={`/contributors/${node.id}`}
+                                          to={`/contributors/${node.yamlId}`}
                                           title={node.id}
                                         >
                                           {node.name}
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
     allContributorYaml {
       edges {
         node {
-          id
+          yamlId
           avatar
           name
           bio

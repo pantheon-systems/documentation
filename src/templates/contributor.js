@@ -76,8 +76,8 @@ class ContributorTemplate extends React.Component {
                   <ul>
                     {docs.map(({ node }) => {
                       // Guides URLs are already absolute urls.
-                      if (/^\/guides\/.*$/.test(node.fields.slug)) {
-                        const result = /^(\/guides\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.fields.slug)
+                      if (/^\/guides\/.*$/.test(node.publicURL)) {
+                        const result = /^(\/guides\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.publicURL)
                         // Use printedGuides to avoid showing the same guide twice.
                         if (printedGuides.indexOf(result[1]) === -1) {
                           printedGuides.push(result[1])
@@ -90,8 +90,8 @@ class ContributorTemplate extends React.Component {
                           )
                         }
                       } else {
-                        if (/^\/overview\/.*$/.test(node.fields.slug)) {
-                        const result = /^(\/overview\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.fields.slug)
+                        if (/^\/overview\/.*$/.test(node.publicURL)) {
+                        const result = /^(\/overview\/[A-Za-z0-9\-\_]+)\/?.*$/.exec(node.publicURL)
                         // Use printedOverview to avoid showing the same guide twice.
                         if (printedOverview.indexOf(result[1]) === -1) {
                           printedOverview.push(result[1])
@@ -106,7 +106,7 @@ class ContributorTemplate extends React.Component {
                        else {
                           return (
                           <li key={node.id}>
-                            <Link to={`/${node.fields.slug}`}>
+                            <Link to={`/${node.publicURL}`}>
                               {node.frontmatter.title}
                             </Link>
                           </li>
@@ -130,10 +130,10 @@ export default ContributorTemplate
 
 export const pageQuery = graphql`
   query ContributorById($id: String!) {
-    contributorYaml(id: { eq: $id }) {
-      id
+    contributorYaml {
       name
       avatar
+      yamlId
       url
       github
       drupal
@@ -142,11 +142,11 @@ export const pageQuery = graphql`
       linkedin
     }
 
-    allDocs: allMdx(
+    allDocs: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { ne: null }
         frontmatter: {
-          contributors: { elemMatch: { id: { eq: $id } } }
+          contributors: { eq: $id }
           draft: {ne: true}
         }
       }
@@ -157,9 +157,16 @@ export const pageQuery = graphql`
           frontmatter {
             title
           }
-          fields {
-            slug
-          }
+          fileAbsolutePath
+        }
+      }
+    }
+    relativePath: allFile(
+      filter: {relativePath: {ne: "null"}}) {
+      edges {
+        node {
+          relativePath
+          publicURL
         }
       }
     }

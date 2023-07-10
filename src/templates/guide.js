@@ -178,7 +178,7 @@ export const pageQuery = graphql`
         showtoc
         editpath
         contributors {
-          id
+          yamlId
           name
           twitter
           bio
