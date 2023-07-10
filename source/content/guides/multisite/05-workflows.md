@@ -19,40 +19,47 @@ This section provides information on important Multisite fundamentals.
 ## Create Test and Live Environments from Dev
 After you've configured a WordPress Multisite in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
+WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments. WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. Pantheon's [WordPress Multisite Search and Replace](/guides/multisite/search-replace) can handle this step for you and provides multiple configuration options depending on your desired workflow.
+
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Test** tab.
 2. Click **Create Test Environment**.
 
   This takes a few moments.
 
-3. Click **<span class="glyphicon glyphicon-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`. At this point, it will show a database connection error.
+3. Click **<span class="glyphicon glyphicon-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
 
-4. Navigate to the command line, and perform a `wp search-replace` on the Test environment's database via Terminus:
+4. Configure the `search_replace` value in your `pantheon.yml` file based on what type of Multisite you are setting up and what your preferences are: 
 
-    ```bash
-    terminus remote:wp <site>.test -- search-replace <dev-domain> <test-domain> --url=<dev-domain> --network
-    ```
+    * `true` for Subdirectory Multisite, 
+    * `custom` for Subdomain Multisite with a `sites.yml` file, 
+    * `convert` for a Subdomain Multisite to use Subdirectory for the Test and Live environments, or
+    * `false` for no automatic URL conversion at all.
+    
+    Refer to the [WordPress Multisite Search and Replace](/guides/multisite/search-replace) guide for detailed instructions.
 
-    Ensure the database connection error is resolved on the Test environment's URL.
+5. Deploy your code change from Dev to Test and refresh the Pantheon Dashboard.
 
-5. Repeat this process for the Live environment.
+6. Making sure that you've [configured your WordPress site to use Multisite](/guides/multisite/config/), use the [Database Workflow Tool](/guides/mariadb-mysql/database-workflow-tool) to clone the database from the Dev to the Test environment.
 
-To better understand what's going on, let's dive into `wp search-replace` with greater detail.
+    ![Workflow Tool](../../../images/dashboard/interface-workflow-tool.png)
 
-## Deploy Across Environments
+    <Alert title="Warning" type="danger">
 
-<Alert title="Note" type="info">
+    Pushing content up to Live should almost never be done to a launched site, as it can overwrite the environment configurations. Refer to [Using the Pantheon Workflow](/pantheon-workflow) for more information.
 
-Search and replace for Multisites can now be handled automatically by the platform search and replace, currently in Early Access. For more details, see [Multisite Search Replace](/guides/multisite/search-replace).
+    </Alert>
 
-</Alert>
+7. Repeat the process for the Live environment.
 
-WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
+## Run WP-CLI `search-replace` Manually
 
-WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
+Terminus allows you to run WP-CLI commands yourself and, using that, you can manually run `wp search-replace`. The general pattern you'll want to follow is:
 
 ```bash
 terminus remote:wp <site>.<env> -- search-replace "<old-domain>" "<new-domain>" --network --url=<old-domain>
 ```
+
+Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
 
 In this example:
 
@@ -62,14 +69,6 @@ In this example:
 - `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
 Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
-
-Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
-
-```bash
-terminus remote:wp <site>.<env> -- search-replace --network
-```
-
-Now that you've performed the search and replace on your database, WordPress has the correct stored configuration.
 
 ##  Flush Cache Globally after Search and Replace
 If you use Redis as a persistent storage backend for your object cache, you'll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn't serve stale values.
@@ -94,7 +93,7 @@ Because the WordPress object cache stores its data as key => value pairs and Wor
 </Alert>
 
 ## Refresh Data from Live
-Refreshing data in Test or Dev from Live is simply a matter of reversing the steps you took to initially create the Live environment when you have a production environment. 
+Refreshing data in Test or Dev from Live is simply a matter of using the Database Clone feature in the Pantheon Dashboard. reversing the steps you took to initially create the Live environment when you have a production environment. 
 
 1. Clone the content from Live into Dev:
 
@@ -123,15 +122,9 @@ If you have a really large database (gigabytes and gigabytes) or dozens upon doz
 
 To better understand what's going on, it's helpful to have some background knowledge.
 
-First, `wp search-replace` is necessary when moving a database between environments for two reasons:
-
-1. WordPress stores full URLs in the database, for better or for worse. When you move a database between environments, you may want to update all of those URL references.
-2. WordPress can store URLs in PHP serialized data. Because URL string length can vary, MySQL search and replace can break PHP serialized data. `wp search-replace` detects and properly handles PHP serialized data.
-
-Second, `wp search-replace` is *probably* spending a lot of time processing data in the `post`  and `postmeta` tables. If you don't care about updating URL references within post data, then it may be iterating a bunch of data unnecessarily.
+`wp search-replace` is *probably* spending a lot of time processing data in the `post`  and `postmeta` tables. If you don't care about updating URL references within post data, then it may be iterating a bunch of data unnecessarily.
 
 In a stock WordPress install (e.g. no custom plugins), there are a few key places URL configuration data is stored:
-
 
 - `wp_blogs` table, `domain` column.
 - `wp_site` table, `domain` column.
