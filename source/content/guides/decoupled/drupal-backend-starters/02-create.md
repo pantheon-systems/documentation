@@ -29,7 +29,9 @@ You can create your backend starter kit project with the Dashboard Upstream, the
 
 - The Pantheon repository is your source of truth
 
-### Use the Dashboard Upstream if:
+### Use the Terminus Plugin if:
+
+- You want to create a related backend and frontend codebase in a single process.
 
 - You prefer to use the CLI
 
@@ -43,7 +45,9 @@ You can create your backend starter kit project with the Dashboard Upstream, the
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
-1. Click the **Front-End Sites** tab and then click **+Create New Site**.
+1. Click **+Create New Site**.
+
+1. Select **Front-End Site** instead of CMS site when prompted.
 
 1. Select **Drupal for Front-End** under **Create Backend CMS**.
 
@@ -85,9 +89,6 @@ Replace `'{My Team Name}'` with your team name. For example, `My Agency`. This c
 
 <Partial file="decoupled-terminus-plugin-backend.md" />
 
-## Create with Node.js CLI
-
-<Partial file="decoupled-nodejs-cli.md" />
 
 ## Create with Build Tools
 

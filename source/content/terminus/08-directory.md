@@ -60,7 +60,7 @@ Open SFTP Connections to your Pantheon Sites.
 
   <Card title={"Front-End Sites"} isOfficial author={"Pantheon Decoupled Kit"}  link={"/guides/decoupled/overview/site-options#terminus-plugin"}>
 
-  Create your Front-End Sites project with the Terminus Decoupled Kit plugin. You must enroll in our [Front-End Sites Early Access program](https://pantheon.io/features/decoupled-cms) before you can use Front-End Sites and and this plugin.
+  Create your Front-End Sites project with the Terminus Decoupled Kit plugin. You must enroll in our [Front-End Sites Early Access program](https://pantheon.io/features/decoupled-cms) before you can use Front-End Sites and this plugin.
 
   </Card>
 

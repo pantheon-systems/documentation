@@ -74,6 +74,10 @@ Refer to [Gatsby's documentation](https://www.gatsbyjs.com/docs/how-to/previews-
 
 1. Set the appropriate subpath build and output. A new site deployed using the Gatsby WordPress starter kit will now automatically be available within your subdirectory.
 
+## Create with Node.js CLI
+
+<Partial file="decoupled-nodejs-cli.md" />
+
 ## Connect to a Multidev Environment
 
 Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for instructions on how to connect your Front-End Site to a Multidev environment.

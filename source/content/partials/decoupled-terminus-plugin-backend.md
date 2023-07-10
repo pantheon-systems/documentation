@@ -51,7 +51,7 @@ Before you follow the steps below, make sure you have:
         - `--cms[=CMS]`: This selects the CMS you want to use. Current supported CMS options are: `drupal` and `wordpress`.
         - `--install-cms[=INSTALL-CMS]`: This instructs the plugin to install your CMS or not. The default value is `true`. You can set this value to `false` if you do not want to install a CMS for your project.
 
-1. Select the CMS you want to use when prompted. This option does appear if you set the optional `--install-cms[=INSTALL-CMS]` command to `false`. The options should look similar to the example below.
+1. Select the CMS you want to use when prompted. This option does appear if you used the optional `--cms[=CMS]` command or set the optional  `--install-cms[=INSTALL-CMS]` command to `false`. The options should look similar to the example below.
 
     ```bash{outputLine}
     Choose your CMS back-end:
@@ -138,6 +138,6 @@ Before you follow the steps below, make sure you have:
     Your Decoupled Kit project has been created!
     ```
 
-    - You can see this project in your Pantheon account. Go to your Pantheon dashboard and select **Sites**. You will see your project listed with the **label** name you entered in the steps above.
+    - You can see this backend project in your Pantheon account. Go to your Pantheon dashboard and select **Sites**. You will see your backend project listed with the **label** name you entered in the steps above.
 
 1. [Import your repository](/guides/decoupled/no-starter-kit/import-repo) to create the frontend of your Pantheon Front-End Site.

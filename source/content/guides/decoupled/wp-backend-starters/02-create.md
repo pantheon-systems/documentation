@@ -23,9 +23,11 @@ This section provides information on how to create a new WordPress backend proje
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
 
-1. Click the **Front-End Sites** tab and then click **+Create New Site**.
+1. Click **+Create New Site**.
 
-1. Select **Front-End Site**, and then select **WordPress for Front-End** under **Create Backend CMS**.
+1. Select **Front-End Site** instead of CMS site when prompted.
+
+1. Select **WordPress for Front-End** under **Create Backend CMS**.
 
     - You can also use the [Decoupled WordPress Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c9f5e5c0-248f-4205-b63a-d2729572dd1f) link to create your site in the Pantheon Dashboard.
 
@@ -59,11 +61,6 @@ Run the command below in Terminus:
 
 </Alert>
 
-
 ## Create with Terminus Plugin
 
 <Partial file="decoupled-terminus-plugin-backend.md" />
-
-## Create with Node.js CLI
-
-<Partial file="decoupled-nodejs-cli.md" />

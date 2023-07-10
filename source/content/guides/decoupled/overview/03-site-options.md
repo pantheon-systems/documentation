@@ -75,7 +75,7 @@ The table below provides compatibility information for Front-End Sites.
 
 ## Terminus Plugin
 
-Terminus Decoupled Kit Plugin allows you to create your backend project in Terminus with the option to select [Drupal](/guides/decoupled/drupal-backend-starters/create#create-with-terminus-plugin), [WordPress](/guides/decoupled/wp-backend-starters/create#create-with-terminus-plugin), or no CMS.
+Terminus Decoupled Kit Plugin allows you to create your backend project in Terminus with the option to select [Drupal](/guides/decoupled/drupal-backend-starters/create#create-with-terminus-plugin) or [WordPress](/guides/decoupled/wp-backend-starters/create#create-with-terminus-plugin).
 
 ## Rendering Options
 

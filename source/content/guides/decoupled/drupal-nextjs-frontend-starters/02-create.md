@@ -57,6 +57,10 @@ Make sure you meet the following prerequisites before you continue.
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
 
+## Create with Node.js CLI
+
+<Partial file="decoupled-nodejs-cli.md" />
+
 ## Connect to a Multidev Environment
 
 Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for instructions on how to connect your Front-End Site to a Multidev environment.
