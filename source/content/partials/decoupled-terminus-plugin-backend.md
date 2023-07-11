@@ -51,7 +51,7 @@ Before you follow the steps below, make sure you have:
         - `--cms[=CMS]`: This selects the CMS you want to use. Current supported CMS options are: `drupal` and `wordpress`.
         - `--install-cms[=INSTALL-CMS]`: This instructs the plugin to install your CMS or not. The default value is `true`. You can set this value to `false` if you do not want to install a CMS for your project.
 
-1. Select the CMS you want to use when prompted. This option does appear if you used the optional `--cms[=CMS]` command or set the optional  `--install-cms[=INSTALL-CMS]` command to `false`. The options should look similar to the example below.
+1. Select the CMS you want to use when prompted. This option does appear if you used the optional `--cms[=CMS]` command. The options should look similar to the example below.
 
     ```bash{outputLine}
     Choose your CMS back-end:
