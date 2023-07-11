@@ -119,3 +119,7 @@ You can follow the steps below to observe the build and deployment process in re
 ## Multidev Branch Builds
 
 Refer to [Multidev Workflow and Configuration](/guides/decoupled/overview/fes-multidev) for information on Multidev Branch Builds.
+
+## Build Hooks
+
+Refer to [WordPress Build Hooks](/guides/decoupled/wp-backend-starters/build-hooks) or [Drupal Build Hooks](/guides/decoupled/drupal-backend-starters/build-hooks) if you are interested in triggering builds in one or more Front-End Sites projects when content is created, updated, or deleted.
