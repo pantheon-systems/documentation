@@ -56,7 +56,7 @@ Use **Build Tools** if:
 
 1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**.
 
-    Site and Multidevs names cannot contain a `.` (period) or `_` (underscore).
+    Site and Multidev names cannot contain a `.` (period) or `_` (underscore).
 
     - To do this step through Terminus, replace `my-new-site`, the site description, and the org ([if available](/terminus/commands/org-list)) in `My Team Name` in the following command:
 

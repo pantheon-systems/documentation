@@ -39,7 +39,6 @@ Currently, Pantheon Front-End Sites do not support SSR using Gatsby. Other permu
 
 </Alert>
 
-
 ## Pantheon Front-End Site Starter Kits
 
 Pantheon offers recommended starter kit templates.
@@ -50,32 +49,27 @@ Pantheon offers recommended starter kit templates.
 - [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
 - [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)
 
-
 All starter kits are pre-configured, and include the following:
 
-* A set of recommended modules or plugins for creating Front-End Sites on Pantheon.
-
-* An example content integration showing content from your CMS backend rendered in your frontend application.
-
-* A live preview of content from your CMS backend rendered in your frontend application.
-
-* A development environment that supports communication between backend and frontend services.
+- A set of recommended modules or plugins for creating Front-End Sites on Pantheon.
+- An example content integration showing content from your CMS backend rendered in your frontend application.
+- A live preview of content from your CMS backend rendered in your frontend application.
+- A development environment that supports communication between backend and frontend services.
 
 ### Compatibility
 
 The table below provides compatibility information for Front-End Sites.
 
-|  Tooling   |      Version    |
-|  :---:     |       :---:     |
-|  Gatsby (Static Site Generation (SSG) only)    |    4 or higher  |
-| Next.js    |   12 or higher  |
-|  Drupal    |   9 or higher   |
-| WordPress  |   5.9 or higher |
-
+|                  Tooling                   |    Version    |
+|:------------------------------------------:|:-------------:|
+| Gatsby (Static Site Generation (SSG) only) |  4 or higher  |
+|                  Next.js                   | 12 or higher  |
+|                   Drupal                   |  9 or higher  |
+|                 WordPress                  | 5.9 or higher |
 
 ## Terminus Plugin
 
-Terminus Decoupled Kit Plugin allows you to create your backend project in Terminus with the option to select [Drupal](/guides/decoupled/drupal-backend-starters/create#create-with-terminus-plugin) or [WordPress](/guides/decoupled/wp-backend-starters/create#create-with-terminus-plugin).
+The Terminus Decoupled Kit plugin allows you to create your backend project in Terminus with the option to select [Drupal](/guides/decoupled/drupal-backend-starters/create#create-with-terminus-plugin) or [WordPress](/guides/decoupled/wp-backend-starters/create#create-with-terminus-plugin).
 
 ## Rendering Options
 
@@ -87,8 +81,8 @@ Refer to [Decoupled Architectures: What Computer Assembles the Websites](https:/
 
 SSG compiles and renders your entire website at build time. SSG output consists of:
 
-- ***Static files:**** HTML
-- ***Assets:**** JavaScript, CSS, etc.
+- **Static files:** HTML
+- **Assets:** JavaScript, CSS, etc.
 
 #### Common SSG Use Cases
 
@@ -111,7 +105,7 @@ SSR uses a web server running Node.js to render individual pages on demand. This
 
 ### What Is Incremental Static Regeneration (ISR)?
 
-<Alert title="Note"  type="info" >
+<Alert title="Note" type="info" >
 
 Pantheon does not support Incremental Static Regeneration (ISR).
 
