@@ -148,7 +148,7 @@ Sites configured for subdomain conversion will _only_ run the conversion step fr
 
 ## Known Issues
 
-* Bedrock-based Multisites are not currently compatible.
+* WordPress Multisites that are using the WordPress (Composer Managed) upstream are currently unable to use Multisite Search and Replace. For those sites, we recommend setting the `search_replace` value to `false` and using WP-CLI via Terminus to perform the Search and Replace. See [Run WP-CLI `search-replace`` Manually](/guides/multisite/workflows/#run-wp-cli-search-replace-manually) for more information.
 
 ## More Resources
 
