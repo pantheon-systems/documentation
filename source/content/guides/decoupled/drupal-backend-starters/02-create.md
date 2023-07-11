@@ -19,115 +19,111 @@ integration: [--]
 
 This section provides information on how to use the Drupal Backend Starter for Front-End Sites.
 
-## Choose a Creation Option
+## Choose How to Create the Project
 
-You can create your backend starter kit project with the Dashboard Upstream, the Terminus Decoupled Kit Plugin, or with Build Tools. Review the information below to select the right option for your setup.
+You can create your backend starter kit project with the Dashboard Upstream, the Terminus Decoupled Kit Plugin, or with Build Tools.
 
-### Use the Dashboard Upstream if:
+Review the following sections to select the right option for your setup.
 
-- You require a simpler setup
+Use the **Dashboard Upstream** if:
 
-- The Pantheon repository is your source of truth
+- You require a simpler setup.
+- The Pantheon repository is your source of truth.
 
-### Use the Terminus Plugin if:
+Use the **Terminus Plugin** if:
 
 - You want to create a related backend and frontend codebase in a single process.
+- You prefer to use the CLI.
 
-- You prefer to use the CLI
+Use **Build Tools** if:
 
-### Use Build Tools if:
-
-- Testing is an important part of your workflow
-
-- You don’t want to manually push changes to your code repo
+- Testing is an important part of your workflow.
+- You don’t want to manually push changes to your code repository.
 
 ## Create with Dashboard Upstream
 
-1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then select the **Sites** page.
+1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), that the new site should be a part of, then select the **Sites** page.
 
 1. Click **+Create New Site**.
 
-1. Select **Front-End Site** instead of CMS site when prompted.
+1. Select **Front-End Site** when prompted.
 
 1. Select **Drupal for Front-End** under **Create Backend CMS**.
 
     - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your Front-End Site in the Site Dashboard.
 
-    ![select a starter](../../../../images/decoupled-select-starter-new.png)
+    ![Select a Starter](../../../../images/decoupled-select-starter-new.png)
 
-1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**. You cannot use a . (period) or _ (underscore) for site and Multidev names.
+1. Name your site, select your decoupled environment from the **Choose a Workspace for the Site** drop-down menu, and then click **Continue**.
 
-1. Confirm your organization selection when prompted in the **Confirm Organization Selection** dialogue box. The Deploying Decoupled Drupal Composer Managed progress indicator displays while your site is spinning up.
+    Site and Multidevs names cannot contain a `.` (period) or `_` (underscore).
 
-1. Click **Visit your Pantheon Dashboard** when the site spin up completes.
+    - To do this step through Terminus, replace `my-new-site`, the site description, and the org ([if available](/terminus/commands/org-list)) in `My Team Name` in the following command:
+
+      ```bash{promptUser: user}
+      terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
+      ```
+
+      Note that `c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer-Managed.
+
+1. Confirm your organization selection when prompted in **Confirm Organization Selection**. The **Deploying Decoupled Drupal Composer Managed** progress indicator displays while your site is spinning up.
+
+1. Click **Visit your Pantheon Dashboard** when the site spinup completes.
 
 1. Click the **Visit Development Site** button to install Drupal.
 
-1. Select either the `Pantheon Decoupled Profile`, or the
-`Pantheon Decoupled Umami Demo` profile. The same can be done via
-[`terminus remote:drush`](/terminus/commands/remote-drush).
+1. Select either the `Pantheon Decoupled Profile`, or the `Pantheon Decoupled Umami Demo` profile. The same can be done via [`terminus remote:drush`](/terminus/commands/remote-drush).
 
-  - The Umami Demo contains additional demo data, and is not intended for use in a production site build.
+    - The Umami Demo contains additional demo data, and is not intended for use in a production site build.
 
 Your backend starter is ready to develop!
-
-Note that you can also use Terminus to initiate the site spin up in the Pantheon Dashboard:
-
-Run the command below in Terminus:
-
-```bash{promptUser: user}
-terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
-```
-
-<Alert title="Note"  type="info" >
-
-Replace `'{My Team Name}'` with your team name. For example, `My Agency`. This can also be omitted.`c76c0e51-ad85-41d7-b095-a98a75869760` is `upstream_id` for Decoupled Drupal Composer Managed.
-
-</Alert>
 
 ## Create with Terminus Plugin
 
 <Partial file="decoupled-terminus-plugin-backend.md" />
 
-
 ## Create with Build Tools
 
 ### Prerequisites
 
-- Composer (required for CMS backends):
-  [Install Globally](https://getcomposer.org/download/)
-- [Generate machine token](https://pantheon.io/docs/machine-tokens#create-a-machine-token)
-  & [Authenticate into Terminus](https://pantheon.io/docs/machine-tokens#authenticate-into-terminus)
-- [Install Terminus](https://pantheon.io/docs/terminus/install) (3.0.0 above
-  required)
-- Also install the following plugins:
-  - `terminus self:plugin:install terminus-build-tools-plugin`
-  - `terminus self:plugin:install terminus-secrets-plugin`
-  - Reload the terminus plugins: `terminus self:plugin:reload`
-  - Clear cache for composer: `composer clear-cache`
-  - Validate that the required plugins are installed:
-    `terminus self:plugin:list`
+- Composer (required for CMS backends): [Install Composer](https://getcomposer.org/download/)
+- [Generate a machine token](/machine-tokens#create-a-machine-token) and [authenticate into Terminus](/machine-tokens#authenticate-into-terminus)
+- [Install Terminus](/terminus/install) (3.0.0 or above required)
+- Install and confirm Terminus plugins:
+
+    1. Install the Terminus Build Tools and Secrests plugins:
+
+    ```bash{promptUser: user}
+    terminus self:plugin:install terminus-build-tools-plugin terminus-secrets-plugin
+    ```
+
+    1. Reload the Terminus plugins, clear Composer cache, and validate that the plugins are installed:
+
+    ```bash{promptUser: user}
+    terminus self:plugin:reload && composer clear-cache && terminus self:plugin:list
+    ```
 
 ### Build Tools Installation
 
 - For all steps below:
 
-  - Replace `{PROJECT_NAME}` with your project name. For example,
-    `decoupled-drupal`.
+  - Replace `PROJECT_NAME` with your project name. For example, `decoupled-drupal`.
 
-  - Replace `'{My Team Name}'` with your team name. For example, `My Agency`.
-    This can also be omitted.
+  - Replace `My Team Name` with your team name. For example, `My Agency`.
 
-  - Build Tools should prompt you for the credentials required to create these assets. While GitHub and CircleCI are the defaults, other providers are supported as well. Refer to [available services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services)
-    for more information.
+    Use `terminus org:list` to list which orgs are available.
+
+    This can also be omitted if the site is not part of an org.
+
+  - Build Tools should prompt you for the credentials required to create these assets. While GitHub and CircleCI are the defaults, other providers are supported as well. Refer to [available services](https://github.com/pantheon-systems/terminus-build-tools-plugin#available-services) for more information.
 
 1. Create your project using the `build:project:create` command as shown below:
 
-    ```
+    ```bash{promptUser: bash}{outputLines: 2-6}
     terminus build:project:create \
-      --team='{My Team Name}' \
+      --team='My Team Name' \
       --template-repository="git@github.com:pantheon-upstreams/decoupled-drupal-composer-managed.git" pantheon-upstreams/decoupled-drupal-composer-managed \
-      --visibility private {PROJECT_NAME} \
+      --visibility private PROJECT_NAME \
       --profile="pantheon_decoupled_profile" \
       --stability=dev
     ```
@@ -140,30 +136,25 @@ Replace `'{My Team Name}'` with your team name. For example, `My Agency`. This c
 
 1. Refer to [Commands available as part of the Build Tools plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin#commands)for additional options for repository or CI providers.
 
-#### Known Issues
+#### Known Issues with Build Tools
 
-- If you encounter errors during the [Installation](#installation) process,
-  please check if you have the `terminus-power-tools` plugin installed. If so
-  you should remove the terminus-power-tools plugin and go through Installation again.
+If you encounter errors during the installation process, please check if you have the terminus-power-tools plugin installed. If you do, run the following command to remove it and go through installation again:
 
+```bash{promptUser: user}
+terminus self:plugin:uninstall terminus-power-tools
+```
 
 ### Additional Options
 
 #### Install with Umami Demo Data
 
-The installation command above will create a backend with limited example
-content. You can create a site with Drupal's Umami demo data set instead.
-
-Change the profile flag to `--profile="pantheon_decoupled_umami_demo"` in your `terminus build:project:create` command.
+The Build Tools installation process will create a backend with limited example content. To create a site with Drupal's Umami demo data set instead, change the profile flag to `--profile="pantheon_decoupled_umami_demo"` in the `terminus build:project:create` command.
 
 #### Use Other Git Hosts or CI Services
 
 Terminus Build Tools supports other Git hosts and CI services.
 
-For example, to use GitHub actions as your CI service, you can add the
-following additional flag to your `terminus build:project:create` command:
-
-`--ci=githubactions`
+For example, to use GitHub actions as your CI service, you can add the `--ci=githubactions` flag to your `terminus build:project:create` command.
 
 Other possible values are:
 
@@ -188,21 +179,21 @@ If you would like the repo created to be under a GitHub organization instead of 
 For information on additional options, consult the
 [command options section of the build tools documentation](https://github.com/pantheon-systems/terminus-build-tools-plugin#command-options).
 
-
 ## Update to Drupal 10
 
-Follow the steps below to update a [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760)
-site to Drupal 10.
+Follow the following steps to update a [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) site to Drupal 10.
 
-1. Clone the backend site repo.
+1. Clone the backend site repository.
 
-1. Update to PHP 8.1 or greater if you have not already done so, by editing
-   `pantheon.yml` and adding the following, with your chosen version of PHP:
-   ```yaml
+1. Update to PHP 8.1 or greater if you have not already done so. Edit `pantheon.yml` and add the following with your chosen version of PHP:
+
+   ```yaml:title=pantheon.yml
    php_version: 8.1
    ```
+
 1. Update packages in your `composer.json` to the appropriate new versions:
-   ```bash
+
+   ```bash{promptUser: user}
    composer config platform.php 8.1
    git commit -am "composer config platform.php 8.1"
    composer config minimum-stability dev
@@ -216,7 +207,8 @@ site to Drupal 10.
    composer update
    git commit -am "Update to Drupal 10"
    ```
-1. Push the changes up to Pantheon.
+
+1. Push the changes up to Pantheon:
 
    ```bash{promptUser: user}
    git push origin master
@@ -230,9 +222,4 @@ site to Drupal 10.
    terminus drush <BACKEND_SITE>.<ENV> updatedb
    ```
 
-   Via the Drupal web UI: Visit `/update.php` on your Drupal backend site, e.g.
-
-   ```
-   https://dev-my-decoupled-backend.pantheonsite.io/update.php
-   ```
-
+   Via the Drupal web UI: Visit `/update.php` on your Drupal backend site. This would look something like `https://dev-my-decoupled-backend.pantheonsite.io/update.php`.
