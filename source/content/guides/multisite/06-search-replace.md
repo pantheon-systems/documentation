@@ -148,7 +148,7 @@ Sites configured for subdomain conversion will _only_ run the conversion step fr
 
 ## Known Issues
 
-* Sites with PHP notices or errors will not be able to successfully run a Search and Replace.
+* Bedrock-based Multisites are not currently compatible.
 
 ## More Resources
 
