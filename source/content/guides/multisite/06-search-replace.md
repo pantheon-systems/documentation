@@ -32,7 +32,7 @@ If your `pantheon.yml` file is different between environments, the `search_repla
 ## Subdirectory WordPress Multisite Search and Replace Configuration
 
 Enabling Search and Replace for Subdirectory Multisites requires a `true` value for the `search_replace` parameter in your `pantheon.yml`.
-<!--No additional configuration is needed for Subdirectory Multisite Search and Replace. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites. TODO: Before GA, add note about explicitlly DISABLING S&R.-->
+<!--No additional configuration is needed for Subdirectory Multisite Search and Replace. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites. TODO: Before GA, add note about explicitly DISABLING S&R.-->
 
 ```yaml:title=pantheon.yml
 search_replace: true
@@ -43,7 +43,7 @@ Search and Replace runs on the platform as part of creating an environment, depl
 
 By default, Subdomain Multisites do not run any Search and Replace. Enabling Search and Replace for Subdomain Multisites requires setting the `search_replace` value to `custom` in `pantheon.yml` and creating a `sites.yml`. Environments that need to be replaced are defined and paired in the `sites.yml` file for subdomain Multisites. Search and replace runs for each domain listed in the source environment that has a matching key in the target environment. If Search and Replace is enabled for an environment, but the `sites.yml` file does not exist, nothing will be updated. If the `sites.yml` file is different between environments, the `domain_maps` in the target environment’s `sites.yml` file will be used to determine what is replaced.
 
-1. In your `pantheon.yml` file, set the `search_replace` value to `custom`.
+1. Open your `pantheon.yml` file and set the `search_replace` value to `custom`.
 
   ```yaml:title=pantheon.yml
   search_replace: custom
@@ -104,7 +104,7 @@ Sites can also be configured to use Subdomain Multisite in the Live environment,
 
 To configure this:
 
-1. In your `pantheon.yml` file, set the `search_replace` value to `convert`.
+1. Open your `pantheon.yml` file and set the `search_replace` value to `convert`.
 
   ```yaml:title=pantheon.yml
   search_replace: convert
