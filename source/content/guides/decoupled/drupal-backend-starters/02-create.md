@@ -50,7 +50,7 @@ Use **Build Tools** if:
 
 1. Select **Drupal for Front-End** under **Create Backend CMS**.
 
-    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your Front-End Site in the Site Dashboard.
+    - You can also follow the [Decoupled Drupal Composer Managed](https://dashboard.pantheon.io/sites/create?upstream_id=c76c0e51-ad85-41d7-b095-a98a75869760) link to create your site in the Site Dashboard.
 
     ![Select a Starter](../../../../images/decoupled-select-starter-new.png)
 
@@ -64,11 +64,11 @@ Use **Build Tools** if:
       terminus site:create my-new-site "Describe Site" --org='My Team Name' c76c0e51-ad85-41d7-b095-a98a75869760
       ```
 
-      Note that `c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer-Managed.
+      Note that `c76c0e51-ad85-41d7-b095-a98a75869760` is the `upstream_id` for Decoupled Drupal Composer Managed.
 
-1. Confirm your organization selection when prompted in **Confirm Organization Selection**. The **Deploying Decoupled Drupal Composer Managed** progress indicator displays while your site is spinning up.
+1. Confirm your organization selection when prompted in **Confirm Organization Selection**. The **Deploying Decoupled Drupal Composer Managed** progress indicator displays while your site is being created.
 
-1. Click **Visit your Pantheon Dashboard** when the site spinup completes.
+1. Click **Visit your Pantheon Dashboard** when the site creation completes.
 
 1. Click the **Visit Development Site** button to install Drupal.
 
