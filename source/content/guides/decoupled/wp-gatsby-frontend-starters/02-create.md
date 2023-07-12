@@ -67,7 +67,7 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 1. Click **View Site** after the build completes to launch your Front-End Site.
 
-## Set Gatsby pathPrefix
+### Set Gatsby pathPrefix
 
 You can configure a site served from a subpath in the Pantheon dashboard so that Gatsby automatically reads this set subpath. This allows you to avoid setting this in both Pantheon and Gatsby.
 
@@ -80,6 +80,10 @@ Refer to [Gatsby's documentation](https://www.gatsbyjs.com/docs/how-to/previews-
 1. Click the **Edit** button in the **Build & Output Settings** section.
 
 1. Set the appropriate subpath build and output. A new site deployed using the Gatsby WordPress starter kit will now automatically be available within your subdirectory.
+
+## Create with Node.js CLI
+
+<Partial file="decoupled-nodejs-cli.md" />
 
 ## Connect to a Multidev Environment
 
