@@ -17,7 +17,7 @@ editpath: multisite/05-workflows.md
 This section provides information on important Multisite fundamentals.
 
 ## Create Test and Live Environments from Dev
-After you've configured a WordPress Multisite in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
+After you've configured a WordPress Multisite in the Dev environment, you'll want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
 WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments. WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. Pantheon's [WordPress Multisite Search and Replace](/guides/multisite/search-replace) can handle this step for you and provides multiple configuration options depending on your desired workflow.
 
