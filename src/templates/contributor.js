@@ -148,6 +148,7 @@ export const pageQuery = graphql`
         frontmatter: {
           contributors: { eq: $id }
           draft: {ne: true}
+          innav: { eq: true }
         }
       }
     ) {
