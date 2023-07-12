@@ -130,7 +130,7 @@ export default ContributorTemplate
 
 export const pageQuery = graphql`
   query ContributorById($id: String!) {
-    contributorYaml {
+    contributorYaml(yamlId: { eq: $id }) {
       name
       avatar
       yamlId
