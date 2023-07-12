@@ -91,7 +91,7 @@ Your backend starter is ready to develop!
 - [Install Terminus](/terminus/install) (3.0.0 or above required)
 - Install and confirm Terminus plugins:
 
-    1. Install the Terminus Build Tools and Secrests plugins:
+    1. Install the Terminus Build Tools and Secrets plugins:
 
     ```bash{promptUser: user}
     terminus self:plugin:install terminus-build-tools-plugin terminus-secrets-plugin
