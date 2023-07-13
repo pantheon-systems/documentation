@@ -21,14 +21,7 @@ After you've configured a WordPress Multisite in the Dev environment, you'll wan
 
 WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments. WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. Pantheon's [WordPress Multisite Search and Replace](/guides/multisite/search-replace) can handle this step for you and provides multiple configuration options depending on your desired workflow.
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Test** tab.
-2. Click **Create Test Environment**.
-
-  This takes a few moments.
-
-3. Click **<span class="glyphicon glyphicon-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
-
-4. Configure the `search_replace` value in your `pantheon.yml` file based on what type of Multisite you are setting up and what your preferences are: 
+1. Configure the `search_replace` value in your `pantheon.yml` file based on what type of Multisite you are setting up and what your preferences are: 
 
     * `true` for Subdirectory Multisite, 
     * `custom` for Subdomain Multisite with a `sites.yml` file, 
@@ -36,6 +29,18 @@ WordPress stores full URLs in the database. These URLs can be links within the p
     * `false` for no automatic URL conversion at all.
     
     Refer to the [WordPress Multisite Search and Replace](/guides/multisite/search-replace) guide for detailed instructions.
+
+    <Alert title="Note" type="info">
+        After August 1, 2023, `true` will be the default value for Multisite Search and Replace whether or not it exists in the `pantheon.yml` explicitly.
+    </Alert>
+
+2. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Test** tab.
+
+3. Click **Create Test Environment**.
+
+  This takes a few moments.
+
+4. Click **<span class="glyphicon glyphicon-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
 
 5. Deploy your code change from Dev to Test and refresh the Pantheon Dashboard.
 
