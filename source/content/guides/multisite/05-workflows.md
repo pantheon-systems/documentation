@@ -31,7 +31,7 @@ WordPress stores full URLs in the database. These URLs can be links within the p
     Refer to the [WordPress Multisite Search and Replace](/guides/multisite/search-replace) guide for detailed instructions.
 
     <Alert title="Note" type="info">
-        After August 1, 2023, `true` will be the default value for Multisite Search and Replace whether or not it exists in the `pantheon.yml` explicitly.
+        After July 31, 2023, `true` will be the default value for Multisite Search and Replace whether or not it exists in the `pantheon.yml` explicitly.
     </Alert>
 
 2. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click the **<span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Test** tab.
