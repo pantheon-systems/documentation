@@ -70,7 +70,7 @@ In this example:
 
 Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
 
-## Refresh Data from Live
+### Refresh Data from Live
 Refreshing data in Test or Dev from Live is simply a matter of using the Database Clone feature in the Pantheon Dashboard. reversing the steps you took to initially create the Live environment when you have a production environment. 
 
 1. Clone the content from Live into Dev:
@@ -93,9 +93,7 @@ Refreshing data in Test or Dev from Live is simply a matter of using the Databas
 
 You can now develop against production data.
 
-Note: You can also automate the search-replace process after performing a database clone with the [Quicksilver](/guides/quicksilver) [search-replace script](https://github.com/pantheon-systems/quicksilver-examples/tree/main/wp_search_replace).
-
-## Work with Large Databases
+### Work with Large Databases
 If you have a really large database (gigabytes and gigabytes) or dozens upon dozens of tables, you may notice that `wp search-replace` can take a really long time — or even time out.
 
 To better understand what's going on, it's helpful to have some background knowledge.
