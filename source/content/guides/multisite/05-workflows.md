@@ -70,28 +70,6 @@ In this example:
 
 Refer to the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
 
-##  Flush Cache Globally after Search and Replace
-If you use Redis as a persistent storage backend for your object cache, you'll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn't serve stale values.
-
-With Terminus and WP-CLI, you can flush cache globally with one operation:
-
-```bash
-terminus remote:wp <site>.<env> -- cache flush
-```
-
-The Terminus command to clear all caches for an environment is:
-
-```bash
-terminus env:clear-cache <site>.<env>
-```
-
-Running into “Error: Site Not Found”? See [Troubleshoot](/guides/multisite/debug) for the cause and resolution.
-
-
-<Alert title="Note" type="info">
-Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.
-</Alert>
-
 ## Refresh Data from Live
 Refreshing data in Test or Dev from Live is simply a matter of using the Database Clone feature in the Pantheon Dashboard. reversing the steps you took to initially create the Live environment when you have a production environment. 
 
@@ -145,6 +123,28 @@ In this example:
 If the WordPress Multisite works as expected after you run `wp search-replace`, then you're good to go. If it doesn't quite work as expected, there may be some plugins storing URL data in other locations that you'll need to debug and further assess.
 
 Ultimately, the key idea is to only perform a search and replace where you absolutely need it, instead of globally against the entire database.
+
+##  Flush Cache Globally after Search and Replace
+If you use Redis as a persistent storage backend for your object cache, you'll need to flush your cache each time you complete a set of search and replace operations to ensure it doesn't serve stale values.
+
+With Terminus and WP-CLI, you can flush cache globally with one operation:
+
+```bash
+terminus remote:wp <site>.<env> -- cache flush
+```
+
+The Terminus command to clear all caches for an environment is:
+
+```bash
+terminus env:clear-cache <site>.<env>
+```
+
+Running into “Error: Site Not Found”? See [Troubleshoot](/guides/multisite/debug) for the cause and resolution.
+
+
+<Alert title="Note" type="info">
+Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.
+</Alert>
 
 ## Go for Launch
 In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Multisite on Pantheon. Check out the [Launch Essentials Guide](/guides/launch) when you're ready to push your site live — launching a WordPress Multisite isn't much different than launching a standard WordPress site.
