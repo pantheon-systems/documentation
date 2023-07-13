@@ -59,7 +59,7 @@ Terminus allows you to run WP-CLI commands yourself and, using that, you can man
 terminus remote:wp <site>.<env> -- search-replace "<old-domain>" "<new-domain>" --network --url=<old-domain>
 ```
 
-Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
+**You should only need to run `wp search-replace` manually via Terminus if you are explicitly _not_ using the built-in [WordPress Multisite Search and Replace](/guides/multisite/search-replace).** Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
 
 In this example:
 
