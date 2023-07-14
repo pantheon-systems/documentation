@@ -134,11 +134,13 @@ Sites configured for subdomain conversion will _only_ run the conversion step fr
 
 ## `search_replace` Parameter Reference
 
-* `_null_`: No `search_replace` value. Defaults to `false`.<!-- TODO: ADD NOTE THAT THIS DEFAULTS TO TRUE IN GA -->
+* `_null_`: No `search_replace` value. Defaults to `false`. Sites created after July 31, 2023 will default to `true`.
 * `true`: Runs a Search and Replace for a Subdirectory multisite.
 * `false`: Do not run Search and Replace at all.
 * `custom`: Run Search and Replace based on the domain map in `sites.yml`. Requires a valid `sites.yml` to exist.
 * `convert`: Run Subdomain to Subdirectory conversion when cloning from the Pantheon Live environment, and Subdirectory to Subdirectory in all other cases.
+
+
 
 ## Known Issues
 
