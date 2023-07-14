@@ -144,7 +144,7 @@ Sites configured for subdomain conversion will _only_ run the conversion step fr
 
 ## Known Issues
 
-* Sites with PHP notices or errors will not be able to successfully run a Search and Replace.
+* WordPress Multisites that are using the WordPress (Composer Managed) upstream are currently unable to use Multisite Search and Replace. For those sites, we recommend setting the `search_replace` value to `false` and using WP-CLI via Terminus to perform the Search and Replace. See [Run WP-CLI `search-replace` Manually](/guides/multisite/workflows/#run-wp-cli-search-replace-manually) for more information.
 
 ## More Resources
 
