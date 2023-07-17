@@ -57,6 +57,12 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
   ------------------ -------------------------------------------------------------------------------------
   ```
 
+<Alert title="Note" type="info">
+
+  If you have access to [Multidev](/guides/multidev), you could also do this process in an automated way via [Terminus](/terminus) using the [Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) command `conversion:update-from-deprecated-upstream` and following instructions after running that command.
+  
+</Alert>
+
 ## Prepare the Local Environment
 
 <Partial file="drupal/prepare-local-environment-no-clone.md" />
