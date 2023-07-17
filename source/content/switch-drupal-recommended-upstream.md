@@ -58,7 +58,9 @@ Run the command `terminus site:info $SITE` to display the site's basic informati
   ```
 
 <Alert title="Note" type="info">
-  If you have access to multidev, you could also do this process in an automated way using the <a href="https://packagist.org/packages/pantheon-systems/terminus-conversion-tools-plugin" target="_blank" rel="nofollow noopener external">Conversion Tools plugin</a> command <code>conversion:update-from-deprecated-upstream</code> and following instructions after running that command.
+
+  If you have access to [Multidev](/guides/multidev), you could also do this process in an automated way via [Terminus](/terminus) using the [Conversion Tools plugin](https://github.com/pantheon-systems/terminus-conversion-tools-plugin) command `conversion:update-from-deprecated-upstream` and following instructions after running that command.
+  
 </Alert>
 
 ## Prepare the Local Environment
