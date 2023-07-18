@@ -37,7 +37,7 @@ Enabling Search and Replace for Subdirectory Multisites requires a `true` value 
 
 ### For sites created _after_ August 1, 2023
 
-No additional configuration is needed for Subdirectory Multisite Search and Replace. Search and Replace will match the behavior of the platform’s Search and Replace for non-WPMS sites.
+No additional configuration is needed for Subdirectory Multisite Search and Replace. Search and Replace will match the behavior of the platform’s Search and Replace for non-Multisite sites.
 
 If you wish to disable Multisite Search and Replace, alter your `pantheon.yml` file to include a `false` value for the `search_replace` parameter.
 
