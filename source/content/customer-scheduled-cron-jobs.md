@@ -34,14 +34,12 @@ The [Terminus](/terminus-overview) Scheduled Jobs Plugin allows customers to sch
 
 - [Terminus](/terminus/install)
 
-- Local clone of the [plugin repository](https://github.com/pantheon-systems/terminus-scheduled-jobs-plugin).
-
 ## Installation
 
 To install this plugin, run the following:
 
 ```bash
-terminus self:plugin:install <path to local clone>
+terminus self:plugin:install pantheon-systems/terminus-scheduled-jobs-plugin
 ```
 
 For more information about installing Terminus Plugins, see [Install Plugins](/terminus/plugins) in our Terminus Guide.
