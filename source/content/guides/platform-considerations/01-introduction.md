@@ -21,19 +21,13 @@ This guide features common platform considerations specific to Pantheon's distri
 
 The Pantheon Dashboard supports the following browsers to maintain platform security measures and to focus internal development and engineering work: 
 
-+------------------------+--------+---------+-------+------+---------------------+
-|                        | Chrome | Firefox | Opera | Edge | Safari              |
-+========================+========+=========+=======+======+=====================+
-| **Versions Supported** | Evergreen Browsers - Last 4     | Current + Last Year |
-+------------------------+---------------------------------+---------------------+
-
-Visit <https://www.whatsmybrowser.org> to confirm which browser version you are using and compare your browser's version with the latest available:
-
-  - [Chrome](https://chromereleases.googleblog.com/search/label/chrome)
-  - [Edge](https://en.wikipedia.org/wiki/Microsoft_Edge#New_Edge_release_history)
-  - [Firefox](https://en.wikipedia.org/wiki/Firefox_version_history#Current_supported_official_releases)
+  - [Google Chrome](https://chromereleases.googleblog.com/search/label/chrome)
+  - [Microsoft Edge](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel)
+  - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/releases/)
   - [Opera](https://en.wikipedia.org/wiki/History_of_the_Opera_web_browser#Release_compatibility)
-  - [Safari](https://en.wikipedia.org/wiki/Safari_version_history#Version_compatibility)
+  - [Safari](https://developer.apple.com/documentation/safari-release-notes)
+
+Visit <https://www.whatsmybrowser.org> to confirm which browser version you are using and compare your browser's version with the latest available. Panthoen recommends using 'Evergreen' browsers. These are browsers that have the ability to update themselves and do not require the user to manually download new packages.
 
 
 ## More Resources
