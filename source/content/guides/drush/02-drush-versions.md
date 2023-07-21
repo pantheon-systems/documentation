@@ -27,6 +27,12 @@ Pantheon runs Drush versions based on your Drupal version:
 
 We recommend managing your site through Composer. Visit the [Build Tools Workflow](/guides/build-tools/) for information on how to use Composer to manage Drupal sites on Pantheon, or the [Convert to Composer](/guides/composer-convert) guide to convert an existing site to a Composer-managed site.
 
+<Alert title="Note"  type="info" >
+
+Drush 11 is only available via Composer. We only support this version, Drush 11 has to be installed as a site-local Drush.
+
+</Alert>
+
 ## Verify Current Drush Version
 
 You can use [Terminus](/terminus/) to verify the current version of Drush running on your Pantheon site:
