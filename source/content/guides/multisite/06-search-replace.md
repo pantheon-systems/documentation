@@ -51,7 +51,13 @@ search_replace: false
 ```
 
 ## Subdomain WordPress Multisite Search and Replace Configuration
-Search and Replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 25 sites that can be configured for search and replace. We expect this number to increase before General Availability.
+Search and Replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 25 sites that can be configured for Search and Replace via domain mapping.
+
+<Alert title="We are collecting feedback"  type="info" >
+
+We are collecting feedback about use cases that require more than 25 URLs to be replaced. Please contact your Customer Success Manager (CSM) if this is the case. Alternatively, check out the [Subdomain to Subdirectory Multisite Conversion](#subdomain-to-subdirectory-multisite-conversion) option below which does not have any limits.
+
+</Alert>
 
 By default, Subdomain Multisites do not run any Search and Replace. Enabling Search and Replace for Subdomain Multisites requires setting the `search_replace` value to `custom` in `pantheon.yml` and creating a `sites.yml`. Environments that need to be replaced are defined and paired in the `sites.yml` file for subdomain Multisites. Search and replace runs for each domain listed in the source environment that has a matching key in the target environment. If Search and Replace is enabled for an environment, but the `sites.yml` file does not exist, nothing will be updated. If the `sites.yml` file is different between environments, the `domain_maps` in the target environment’s `sites.yml` file will be used to determine what is replaced.
 
