@@ -29,12 +29,6 @@ The Pantheon `gatsby-wordpress-starter` uses Gatsby v4 and has been tested using
 
 - You have installed your WordPress site using the [Decoupled WordPress Recommended Project](https://github.com/pantheon-upstreams/decoupled-wordpress-composer-managed) configuration, which has the `wp-graphql` and `wp-gatsby` plugins installed as dependencies.
 
-  <Alert title="Note"  type="info" >
-
-  You must activate the `wp-graphql` plugin after the installation completes to avoid a failed build. `wp-graphql` is activated automatically and requires no further action.
-
-  </Alert>
-
 
 - Optional. You may want to install the Gatsby CLI globally, or [use `npx`](https://www.npmjs.com/package/npx)
 
