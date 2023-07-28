@@ -1470,12 +1470,6 @@ ___
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 
-**Solution 2:**
-
-1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
-
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
-
 ___
 
 ## YITH WooCommerce Extensions with MPDF Library
