@@ -56,7 +56,9 @@ By default, WordPress tests each directory before uploading a file by writing a 
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('FS_METHOD', 'direct');
+    if ( !defined('FS_METHOD') ) {
+        define('FS_METHOD', 'direct');
+    }
 }
 ```
 
