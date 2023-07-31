@@ -1465,7 +1465,8 @@ ___
   	define('WP_TEMP_DIR', sys_get_temp_dir() );
   }
   ```
-
+1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+   
 1. Create the `languages/wpml` directory inside `/files` for each environment.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
