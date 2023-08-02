@@ -1460,8 +1460,8 @@ ___
 1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
-  if ( !defined('WP_TEMP_DIR') ) {    
-  	define( 'WP_TEMP_DIR','/files/languages/wpml' );
+  if ( !defined('WP_LANG_DIR') ) {    
+  	define( 'WP_LANG_DIR','/files/languages/wpml' );
   }
   if ( !defined('WP_TEMP_DIR') ) {
   	define('WP_TEMP_DIR', sys_get_temp_dir() );
