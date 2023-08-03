@@ -550,7 +550,7 @@ h2 > .glyphicons {
 }
 
 @media screen and (max-width: 995px) {
-  
+
 	input[type="search"],
 	input[type="search"]:focus {
 		/* padding: 0px 0px 0px 45px; */
@@ -606,4 +606,9 @@ a.release-update::before {
 	height: 160px;
 	margin-top: -160px;
 	visibility: hidden;
+}
+
+@font-face {
+  font-family: 'Glyphicons Regular';
+  src: url(/fonts/glyphicons/glyphicons-regular-v192.woff2) format('woff2');
 }
