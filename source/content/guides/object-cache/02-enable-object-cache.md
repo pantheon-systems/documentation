@@ -21,6 +21,8 @@ This section provides information on how to enable Object Cache.
 
 <Tab title="WordPress" id="wp-install" active={true}>
 
+1. Customers who are on a paid Elite or Pro plan are eligible for an upgraded object cache plugin: Object Cache Pro. For more information, visit [Object Cache Pro on Pantheon](guides/object-cache-pro/).
+
 1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, then select **Add**. It might take a couple of minutes for the Object Cache server to come online.
 
 1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. You can also install the plugin via [Terminus](/terminus) if you [set the connection mode to SFTP](/guides/sftp) and run:

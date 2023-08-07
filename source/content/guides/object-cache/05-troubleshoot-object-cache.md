@@ -25,7 +25,7 @@ Refer to the [Minimum Cache Lifetime](/drupal-cache#minimum-cache-lifetime) sect
 
 ### Cannot Activate the Redis Plugin for WordPress
 
-WP Redis is a drop-in plugin that should only be loaded using the installation methods in [Enable Object Cache](/guides/object-cache/enable-object-cache). No activation is required.
+WP Redis is a drop-in plugin that should only be loaded using the installation methods in [Enable Object Cache](/guides/object-cache/enable-object-cache), and only if you are not using Object Cache Pro. No activation is required.
 
 ### RedisException: Redis server went away
 

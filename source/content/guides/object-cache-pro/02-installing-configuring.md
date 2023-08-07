@@ -63,6 +63,11 @@ terminus redis:enable <site>
    1. Commit and push this file to your site upstream.
 
 1. Add the Terminus Addon Installer Plugin to your machine.
+
+   	<Alert title="Note" type="info">
+    Your local version of Terminus must be 3.x or higher.
+    </Alert>
+   
 	```bash
 	terminus self:plugin:install terminus-addons-installer-plugin
 	```
@@ -80,12 +85,7 @@ terminus redis:enable <site>
 	**WordPress Admin:**
 
 	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu.
-	1. Ensure that you are in an environment with file write permissions (either SFTP mode, if activating on your Pantheon Dev environment or in a local development environment).
 	1. Click the **Enable** button. This will create the `object-cache.php` drop-in file.
-	1. Commit the change.
-
-		- Make the commit in SFTP mode if you did this in your Pantheon Dev environment.
-		- Commit the file to your repository if you did this locally.
 
 	**WP-CLI:**
 
@@ -94,18 +94,14 @@ terminus redis:enable <site>
 	**Terminus:**
 
 	1. Open your terminal.
-	1. Run the following commands:
+	1. Run the following command:
 
 		```bash{promptUser: user}
-		terminus connection:set sftp
 		terminus wp -- <site>.<env> plugin activate object-cache-pro
-		terminus wp -- <site>.<env> redis enable
-		terminus env:commit <site>.<env> --message="Add Object Cache Pro drop-in"
-		terminus connection:set git
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
-
+	
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
 	<Alert title="Note" type="info">

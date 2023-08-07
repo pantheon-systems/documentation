@@ -132,6 +132,8 @@ If you receive an error message similar to the example below, you'll need to mov
 
 `Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php`
 
+If you are running a paid Elite or Pro plan, you are eligible for an upgrade to [Object Cache Pro](guides/object-cache-pro/).  
+
 ### Plugins
 
 This check lists all your enabled plugins and alerts you when they need to be updated. It also checks for any vulnerabilities.

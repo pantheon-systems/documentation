@@ -80,7 +80,7 @@ Drupal deletes and regenerates cached entries during a cache rebuild or cache cl
 
 #### WordPress
 
-If [WP Redis](https://wordpress.org/plugins/wp-redis/) is installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
+If [WP Redis](https://wordpress.org/plugins/wp-redis/) or [Object Cache Pro](guides/object-cache-pro/) are installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
 
 Refer to the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup method if necessary.
 
