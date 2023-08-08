@@ -72,14 +72,13 @@ terminus redis:enable <site>
     terminus install:run <site>.<environment> ocp
     ```
 
-1. Wait for the workflow to run. This will take some time, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown.
+1. Wait for the workflow to run. The terminus command will only trigger the workflow, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown. This will take some time to complete
 
 1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus, and enable the object cache drop-in.
 
 	**WordPress Admin:**
 
 	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu.
-	1. Click the **Enable** button. This will create the `object-cache.php` drop-in file.
 
 	**WP-CLI:**
 
