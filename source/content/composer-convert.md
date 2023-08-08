@@ -82,7 +82,7 @@ To minimize issues, make the codebase changes in a new branch:
 1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
+  git remote add ic https://github.com/pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
   Switched to a new branch 'composerify'
   ```
 
