@@ -145,7 +145,7 @@
         ],
         "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/3.2.0",
         "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/3.2.0",
-        "body": "### Added\r\n\r\n- New env:rebuild-code command (#2417)\r\n- Validation for aliases command (#2447)\r\n\r\n### Fixed\r\n- Bug with multidev:delete when ids are numbers-only (#2462)\r\n\r\n### Changed\r\n- Add upstream label field to site:info (#2455)\r\n- Do not check for user membership to remove supporting org (#2453)\r\n- Improve error messages on error 5xx (#2454)\r\n- Add search and replace to env:clone-content command for WordPress sites (#2448)\r\n- Deprecate getSite with param (#2449)"
+        "body": "### Added\r\n\r\n- New env:code-rebuild command (#2417)\r\n- Validation for aliases command (#2447)\r\n\r\n### Fixed\r\n- Bug with multidev:delete when ids are numbers-only (#2462)\r\n\r\n### Changed\r\n- Add upstream label field to site:info (#2455)\r\n- Do not check for user membership to remove supporting org (#2453)\r\n- Improve error messages on error 5xx (#2454)\r\n- Add search and replace to env:clone-content command for WordPress sites (#2448)\r\n- Deprecate getSite with param (#2449)"
     },
     {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/98432252",
