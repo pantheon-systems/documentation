@@ -58,7 +58,7 @@ Follow the steps below to store data that should be version controlled, such as 
 
 1. Navigate to the `code` directory.
 
-1. Select the `private` directory at the root level (the same level as `index.php`) and upload your files. 
+1. Select the `private` directory at the root level (the same level as `index.php`) and upload your files.
 
    - The private path for code is the same for both Drupal and WordPress sites.
 
@@ -156,13 +156,13 @@ If you have a private code library that needs to have a specific sub-directory e
 
 ```bash
 # from within a git checkout
-ln -s private/simplesamlphp/www ./simplesaml
+ln -s private/simplesamlphp/public ./simplesaml
 git add simplesaml
 git commit simplesaml -m "adding simplesaml symlink"
 git push origin master
 ```
 
-The result will be a web-accessible URL at `https://dev.yoursite.pantheonsite.io/simplesaml` which will point to the code in `/private/simplesamlphp/www`.
+The result will be a web-accessible URL at `https://dev.yoursite.pantheonsite.io/simplesaml` which will point to the code in `/private/simplesamlphp/public`.
 
 ### Setting Commerce Kickstart or Ubercart Key Path
 

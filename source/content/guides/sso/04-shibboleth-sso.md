@@ -45,10 +45,10 @@ The instructions below are only for advanced users working on integrating a Shib
   git commit -am "Adding SimpleSAML"
   ```
 
-1. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp/www`:
+1. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp/public`:
 
   ```bash{promptUser: user}
-  ln -s private/simplesamlphp/www simplesaml
+  ln -s private/simplesamlphp/public simplesaml
   git add simplesaml
   git commit -am "Adding SimpleSAML symlink"
   ```
@@ -69,10 +69,10 @@ The commands below require a [nested docroot](/nested-docroot) structure and mus
  composer require simplesamlphp/simplesamlphp
  ```
 
-1. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
+1. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/public`:
 
  ```bash{promptUser: user}
- ln -s ../vendor/simplesamlphp/simplesamlphp/www web/simplesaml
+ ln -s ../vendor/simplesamlphp/simplesamlphp/public web/simplesaml
  ```
 
 1. Create your site-specific config file:
@@ -130,7 +130,7 @@ You should now have a docroot structure similar to the output below:
 │       └── simplesamlphp
 │           └── config -> ../../../private/simplesamlphp/config
 └── web
-    └── simplesaml -> ../vendor/simplesamlphp/simplesamlphp/www
+    └── simplesaml -> ../vendor/simplesamlphp/simplesamlphp/public
 ```
 
 </Tab>
