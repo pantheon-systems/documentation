@@ -337,7 +337,13 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 	```
 
 ### Additional Considerations
-- When moving from Dev to Test, and from Test to live, note that you _must_ flush the cache and enable the plugin.
+- When moving from Dev to Test, and from Test to live, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`. 
+	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
+    - To summarize, the full order of steps are:
+      1. Disable wp-redis or other redis modules if present
+      1. Merge code
+      1. Activate OCP
+      1. Flush Redis cache
 - When installed as a `mu-plugin`, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
 - Flushing the network cache from the network admin will flush all caches across the network.
 - Subsites do not get their own configuration or graphs.
