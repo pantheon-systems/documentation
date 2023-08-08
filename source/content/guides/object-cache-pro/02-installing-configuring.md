@@ -53,19 +53,10 @@ terminus redis:enable <site>
 
 1. Ensure that your site has Redis enabled via the steps above.
 
-1. Ensure that your site is using Redis version 6.2 or higher. 
-   1. Open your `pantheon.yml` file and modify the `object_cache` entry or add an `object_cache` entry if there is not one already such that your `pantheon.yml` file includes:
-   
-       ```yaml
-       object_cache:
-         version: 6.2
-       ```
-   1. Commit and push this file to your site upstream.
-
 1. Add the Terminus Addon Installer Plugin to your machine.
 
    	<Alert title="Note" type="info">
-    Your local version of Terminus must be 3.x or higher.
+    Your local version of Terminus must be 3.2 or higher.
     </Alert>
    
 	```bash
@@ -74,13 +65,12 @@ terminus redis:enable <site>
 
 1. Run the installation workflow to perform the Object Cache Pro installation on your development or multidev environment. NOTE: This workflow cannot be run on test or live environments.
     ```bash
-    terminus install:run <site>.<environment> install-ocp
+    terminus install:run <site>.<environment> ocp
     ```
 
 1. Wait for the workflow to run. This will take some time, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown.
 
-
-1. Once complete, activate the Object Cache Pro plugin. and enable Redis in the plugin from the WordPress Admin, locally with WP-CLI, or via Terminus.
+1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus, and enable the object cache drop-in.
 
 	**WordPress Admin:**
 
@@ -113,6 +103,17 @@ terminus redis:enable <site>
 ## Installation and Configuration for Composer-Managed WordPress Sites
 
 Refer to the [official Object Cache Pro documentation](https://objectcache.pro/docs/composer-installation) for full configuration instructions.
+
+1. Ensure that your site has Redis enabled via the steps above.
+
+1. Ensure that your site is using Redis version 6.2 or higher.
+	1. Open your `pantheon.yml` file and modify the `object_cache` entry or add an `object_cache` entry if there is not one already such that your `pantheon.yml` file includes:
+
+	    ```yaml
+        object_cache:
+          version: 6.2
+        ```
+	1. Commit and push this file to your site.
 
 1. Obtain a license token to use in the following authentication steps.
 
