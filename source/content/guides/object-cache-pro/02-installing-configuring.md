@@ -24,14 +24,15 @@ Before you can install and activate Object Cache Pro, verify that you have:
 
 - A working site on Pantheon with Redis enabled.
 
-	- You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus.
-
 - Terminus installed and authenticated with a machine token to your local machine.
     - Installation instructions can be found [here](https://docs.pantheon.io/terminus/install#install-terminus).
     - Authentication instructions can be found [here](https://docs.pantheon.io/terminus/install#authenticate).
 
 
 ### Activate Redis on the Dashboard
+<Alert title="Note" type="info">
+You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus, but should not use both instructions.
+</Alert> 
 
 1. Navigate to your **Pantheon Site Dashboard**, select **Settings**, and then select **Add Ons**.
 
@@ -40,6 +41,9 @@ Before you can install and activate Object Cache Pro, verify that you have:
 ![Pantheon Settings Add-Ons](../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
 
 ### Activate Redis with Terminus
+<Alert title="Note" type="info">
+You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus, but should not use both instructions.
+</Alert>
 
 Run the command below to enable Redis via the command line with Terminus:
 
@@ -91,7 +95,7 @@ terminus redis:enable <site>
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
-	
+
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
 	<Alert title="Note" type="info">
@@ -333,6 +337,7 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 	```
 
 ### Additional Considerations
+- When moving from Dev to Test, and from Test to live, note that you _must_ flush the cache and enable the plugin.
 - When installed as a `mu-plugin`, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
 - Flushing the network cache from the network admin will flush all caches across the network.
 - Subsites do not get their own configuration or graphs.
