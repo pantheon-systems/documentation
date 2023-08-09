@@ -18,7 +18,7 @@ integration: [--]
 reviewed: "2023-03-27"
 ---
 
-This guide provides information on how to install and configure [Object Cache Pro](https://objectcache.pro) on the Pantheon platform. We are currently evaluating making Object Cache Pro available to users who have access to Redis object cache. Refer to the [How do I sign up for Object Cache Pro on Pantheon](/guides/object-cache-pro/#how-do-i-sign-up-for-object-cache-pro-on-pantheon) section to join the Early Access program.
+This guide provides information on how to install and configure [Object Cache Pro](https://objectcache.pro) on the Pantheon platform.
 
 ## What is Object Cache Pro?
 

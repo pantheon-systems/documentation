@@ -29,10 +29,9 @@ Before you can install and activate Object Cache Pro, verify that you have:
     - Authentication instructions can be found [here](https://docs.pantheon.io/terminus/install#authenticate).
 
 
-### Activate Redis on the Dashboard
-<Alert title="Note" type="info">
-You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus, but should not use both instructions.
-</Alert> 
+### Activate Redis
+You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus.
+#### On the Dashboard
 
 1. Navigate to your **Pantheon Site Dashboard**, select **Settings**, and then select **Add Ons**.
 
@@ -40,11 +39,7 @@ You can [activate Redis](/guides/object-cache/enable-object-cache) either from t
 
 ![Pantheon Settings Add-Ons](../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
 
-### Activate Redis with Terminus
-<Alert title="Note" type="info">
-You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus, but should not use both instructions.
-</Alert>
-
+#### With Terminus
 Run the command below to enable Redis via the command line with Terminus:
 
 ```bash{promptUser: user}
@@ -67,14 +62,14 @@ terminus redis:enable <site>
 	terminus self:plugin:install terminus-addons-installer-plugin
 	```
 
-1. Run the installation workflow to perform the Object Cache Pro installation on your development or multidev environment. NOTE: This workflow cannot be run on test or live environments.
+1. Run the installation workflow to install Object Cache Pro on your development or multidev environment. NOTE: This workflow cannot be run on test or live environments.
     ```bash
     terminus install:run <site>.<environment> ocp
     ```
 
 1. Wait for the workflow to run. The terminus command will only trigger the workflow, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown. This will take some time to complete
 
-1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus, and enable the object cache drop-in.
+1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus.
 
 	**WordPress Admin:**
 
@@ -339,11 +334,11 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 - When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`. 
 	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
     - To summarize, the full order of steps are:
-      1. Disable wp-redis or other redis modules if present
+      1. Disable wp-redis or other redis plugins if present
       1. Merge code
       1. Activate OCP
       1. Flush Redis cache
-- When installed as a `mu-plugin`, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
+- When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
 - Flushing the network cache from the network admin will flush all caches across the network.
 - Subsites do not get their own configuration or graphs.
 - If installed as a normal plugin on a WordPress multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
