@@ -1,7 +1,7 @@
 ---
 title: WordPress on Pantheon Quick Start Guide
 subtitle: Launch Check - WordPress Performance and Configuration Analysis
-description: Learn more about the checks we automatically run on your Pantheon WordPress site. 
+description: Learn more about the checks we automatically run on your Pantheon WordPress site.
 contenttype: [guide]
 innav: [false]
 categories: [cms]
@@ -36,7 +36,7 @@ WP Launch Check uses the [WPScan API](https://wpscan.com/api) to check for outda
 
 1. Obtain an [API token](https://wpscan.com/wordpress-security-scanner) from the WPScan website by creating an account.
 
-1. Add the token to your site's `wp-config.php` file using the following PHP code: 
+1. Add the token to your site's `wp-config.php` file using the following PHP code:
 
     ```php:title=wp-config.php
     define( 'WPSCAN_API_TOKEN', '$your_api_token' );
@@ -97,7 +97,7 @@ The database stores your site's data including:
 - user data
 - plugins and themes
 - categories, tags, and system-wide settings
-- tables 
+- tables
 
 Launch Check displays database stats, including:
 
@@ -108,7 +108,7 @@ Launch Check displays database stats, including:
     InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
     To learn how to move your tables to InnoDB, see [Moving MySQL tables from MyISAM to InnoDB](/guides/mariadb-mysql/myisam-to-innodb).
 
-- [Transients](https://developer.wordpress.org/apis/handbook/transients/) and expired transients which are cached data temporarily stored in the `wp_options` table. 
+- [Transients](https://developer.wordpress.org/apis/handbook/transients/) and expired transients which are cached data temporarily stored in the `wp_options` table.
 
 The `wp_options` table stores several types of data for your site, including:
 
@@ -131,6 +131,8 @@ This tells you if Object Caching and Redis are enabled.
 If you receive an error message similar to the example below, you'll need to move `object-cache.php` from the `plugin` directory to the `wp-content` directory. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
 
 `Cannot redeclare class WP_Object_Cache in/srv/bindings0fef773f42984256a4f6feec2556a5ed/code/wp-content/plugins/wp-redis/object-cache.php`
+
+If you are running a paid Elite or Performance plan, you are eligible for an upgrade to [Object Cache Pro](/guides/object-cache-pro/).  
 
 ### Plugins
 

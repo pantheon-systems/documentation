@@ -21,6 +21,8 @@ This section provides information on how to enable Object Cache.
 
 <Tab title="WordPress" id="wp-install" active={true}>
 
+1. Customers who are on a paid Elite or Performance plan are eligible for an upgraded object cache plugin: Object Cache Pro. For more information, visit [Object Cache Pro on Pantheon](/guides/object-cache-pro/).
+
 1. Navigate to your Pantheon Site Dashboard, select **Settings**, select **Add Ons**, then select **Add**. It might take a couple of minutes for the Object Cache server to come online.
 
 1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. You can also install the plugin via [Terminus](/terminus) if you [set the connection mode to SFTP](/guides/sftp) and run:
@@ -29,7 +31,7 @@ This section provides information on how to enable Object Cache.
   terminus wp <site>.<env> -- plugin install wp-redis
   ```
 
-  If you use WordPress Multisite, you must add the site URL by adding to the command: 
+  If you use WordPress Multisite, you must add the site URL by adding to the command:
 
   ```bash{promptUser: user}
   terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
@@ -248,7 +250,7 @@ After enabling Redis, there are cache tables in the database that are no longer 
 
     // Manually add the classloader path, this is required for the container
     // cache bin definition below.
-    $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src'); 
+    $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
 
     // Use redis for container cache.
     // The container cache is used to load the container definition itself, and

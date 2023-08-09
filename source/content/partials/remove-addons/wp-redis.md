@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin. 
+1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) or Object Cache Pro plugin. 
 
 1. Delete the `wp-content/object-cache.php` file.
 
