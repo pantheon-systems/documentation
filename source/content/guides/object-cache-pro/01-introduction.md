@@ -36,7 +36,3 @@ Object Cache Pro is a highly optimized premium WordPress plugin that integrates 
 Object Cache Pro reduces page load time and the overall load on Redis by combining Redis commands into server request batches.
 
 Object Cache Pro also optimizes for performance, using compressed data to maintain a small footprint in memory, while avoiding unnecessary Redis reads and writes. Object Cache Pro has been tested extensively against WooCommerce, is fully compliant with the WordPress Object Cache API, and integrates seamlessly into WordPress.
-
-### How do I sign up for Object Cache Pro on Pantheon?
-
-Please fill out [this form](https://forms.gle/3EpZcELcYqB2VRKC8) to sign up for Object Cache Pro Early Access. You will receive an email with a link to download the plugin and a license token. The email provides information on first steps to help you through the installation and configuration process.
