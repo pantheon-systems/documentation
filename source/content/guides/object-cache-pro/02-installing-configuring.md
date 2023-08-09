@@ -75,10 +75,6 @@ terminus redis:enable <site>
 
 	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu.
 
-	**WP-CLI:**
-
-	Refer to the [WP-CLI guide](/guides/wp-cli/install-wp-plugins-themes#install-wordpress-plugins) for instructions.
-
 	**Terminus:**
 
 	1. Open your terminal.
