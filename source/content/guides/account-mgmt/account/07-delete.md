@@ -37,7 +37,7 @@ The next step is to delete the associated credit cards. Refer to [Payment Method
 
 ## 4. Delete Your Account
 
-1. [Go to your Personal Settings](/guides/personal-settings), select **Profile**, and click the **Delete Account** button. 
+1. [Go to your Personal Settings](/personal-settings), select **Profile**, and click the **Delete Account** button. 
 
 1. Enter the verification text to confirm.
 

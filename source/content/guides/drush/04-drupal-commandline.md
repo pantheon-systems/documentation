@@ -36,7 +36,7 @@ Terminus provides advanced interaction with the platform and allows us to run Dr
 
 1. [Install Terminus](/terminus/install#install-terminus).
 
-1. [Go to your Personal Settings](/guides/personal-settings), select **Account and Security**, and then select **Machine Tokens** to [generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
+1. [Go to your Personal Settings](/personal-settings), select **Account and Security**, and then select **Machine Tokens** to [generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/).
 
 1. Use the Machine Token to authenticate Terminus:
 
