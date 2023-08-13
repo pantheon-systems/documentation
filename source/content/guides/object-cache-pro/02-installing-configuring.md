@@ -149,22 +149,22 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	```json
 		repositories: [
 			{
-			"type": "composer",
-			"url": "https://objectcache.pro/repo/"
+				"type": "composer",
+				"url": "https://objectcache.pro/repo/"
 			},
 			{
-			"type": "composer",
-			"url": "https://wpackagist.org",
-			"only": [
-				"wpackagist-plugin/*",
-				"wpackagist-theme/*"
-					]
+				"type": "composer",
+				"url": "https://wpackagist.org",
+				"only": [
+					"wpackagist-plugin/*",
+					"wpackagist-theme/*"
+				]
 			},
 			{
-			"type": "path",
-			"url": "upstream-configuration"
+				"type": "path",
+				"url": "upstream-configuration"
 			}
-			],
+		],
 	```
 
 1. Install Object Cache Pro via Composer using one of the methods listed below.
