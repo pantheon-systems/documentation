@@ -18,7 +18,7 @@ For the most part, [Pantheon's WordPress upstream](https://github.com/pantheon-s
 ## Latest Release
 
 ### 2023-08-14
-This update bumps the default PHP version to 8.1. We will continue to support sites running PHP 7.4 despite its EOL status (see https://www.php.net/supported-versions.php).
+<a name="20230814" class="release-update"></a>This update bumps the default PHP version to 8.1. We will continue to support sites running PHP 7.4 despite its EOL status (see https://www.php.net/supported-versions.php).
 
 Please test your site thoroughly before deploying this update to your live site. If your site requires an older version of PHP or if you'd like to upgrade to PHP 8.2, please see https://docs.pantheon.io/guides/php/php-versions for more information on using pantheon.yml to set your PHP version.
 
