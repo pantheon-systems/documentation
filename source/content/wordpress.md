@@ -22,13 +22,13 @@ This update bumps the default PHP version to 8.1. We will continue to support si
 
 Please test your site thoroughly before deploying this update to your live site. If your site requires an older version of PHP or if you'd like to upgrade to PHP 8.2, please see https://docs.pantheon.io/guides/php/php-versions for more information on using pantheon.yml to set your PHP version.
 
+## Previous Releases
+
 ### 2023-03-29
 
 <a name="20230203" class="release-update"></a>Removes contact support line.
 
 Pantheon Customer Support Engineers are no longer needed to shuffle salt keys. You will no longer see the contact support line in the `wp-pantheon-config.php` file. You can visit https://api.wordpress.org/secret-key/1.1/salt/ to replace the values provided by the platform.
-
-## Previous Releases
 
 ### 2023-01-17
 
