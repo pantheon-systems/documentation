@@ -65,7 +65,7 @@ Refer to [this stackoverflow thread](https://stackoverflow.com/questions/1868874
 ## Unhandled Exceptions
 A PHP exception is a mechanism for defining error conditions and how to handle them. Refer to [PHP documentation on Exceptions](https://secure.php.net/manual/en/language.exceptions.php) for more information.
 
-PHP Exceptions are errors, and depending on the severity can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
+PHP Exceptions are errors, and depending on the severity can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
 ## Undefined Function Error
 Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <Popover title="Bootstrap" content="Loading sequence for an application, or the process of loading necessary functionality." /> the site.

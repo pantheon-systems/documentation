@@ -77,7 +77,7 @@ The following links are located within your Dev, Test, and Live environment tabs
 
   - **Wipe:** Reset the database and files, and start fresh with your codebase.
 
-- **Errors:** Check this page to see if there are any critical PHP errors on your site. You can find more error logs by connecting via SFTP.
+- **Errors:** This page provides links on how to access error logs on Pantheon. You can find all your error logs by connecting via SFTP.
 
 - **Domains/HTTPS:** Add custom domains to your site, enable SSL and manage certificates. (This feature is only available on paid plans.)
 
