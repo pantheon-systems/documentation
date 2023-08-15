@@ -22,7 +22,9 @@ reviewed: "2023-04-25"
 
 Before you can install and activate Object Cache Pro, verify that you have:
 
-- A working site on Pantheon with Redis enabled.
+- A working site on Pantheon
+    - Redis is enabled for the site
+    - The site is running PHP 7.4 or higher
 
 - Terminus installed and authenticated with a machine token to your local machine.
     - Installation instructions can be found [here](https://docs.pantheon.io/terminus/install#install-terminus).
@@ -240,20 +242,28 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	```php
 		'token' => '<LICENSE-TOKEN>',
-		'host' => $_SERVER['CACHE_HOST'] ?? '127.0.0.1',
-		'port' => $_SERVER['CACHE_PORT'] ?? 6379,
-		'database' => $_SERVER['CACHE_DB'] ?? 0,
-		'password' => $_SERVER['CACHE_PASSWORD'] ?? null,
+		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
+		'port' => getenv('CACHE_PORT') ?: 6379,
+		'database' => getenv('CACHE_DB') ?: 0,
+		'password' => getenv('CACHE_PASSWORD') ?: null,
 		'maxttl' => 86400 * 7,
-		'timeout' => 1.0,
-		'read_timeout' => 1.0,
+		'timeout' => 0.5,
+		'read_timeout' => 0.5,
+		'retries' => 3,
+		'backoff' => 'smart',
+		'split_alloptions' => true,
+		'prefetch' => true,
 		'debug' => false,
+		'save_commands' => false,
 		'analytics' => [
 			'enabled' => true,
 			'persist' => true,
 			'retention' => 3600, // 1 hour
 			'footnote' => true,
 		],
+		'prefix' => "ocppantheon", // This prefix can be changed. Setting a prefix helps avoid conflict when switching from other plugins like wp-redis.
+		'serializer' => 'igbinary',
+		'compression' => 'zstd',
 	```
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
