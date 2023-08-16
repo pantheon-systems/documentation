@@ -1,12 +1,18 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import './style.css';
+import "./style.css"
 import AddSearch from "../../components/addSearch"
 
 const Header = ({ data, page }) => (
   <>
-    <nav className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
-    <div id="skiptocontent"><a href="#docs-main">skip to main content</a></div>
+    <nav
+      className="navbar navbar-fixed-top pio-docs-nav"
+      role="navigation"
+      id="header"
+    >
+      <div id="skiptocontent">
+        <a href="#docs-main">skip to main content</a>
+      </div>
       <div className="navbar-header">
         <button
           type="button"
@@ -81,9 +87,9 @@ const Header = ({ data, page }) => (
               <div className="row sub-menu-top">
                 <div className="col-xs-6">
                   <li>
-                      <Link id="get-started" to="/get-started">
+                    <Link id="get-started" to="/get-started">
                       Get Started
-                      </Link>
+                    </Link>
                   </li>
                   <li>
                     <Link id="develop" to="/develop">
@@ -168,10 +174,7 @@ const Header = ({ data, page }) => (
                   aria-label="Search through documentation"
                   data-addsearch-id="search_widget"
                 />
-                { page == "default" ?
-                  <AddSearch />
-                  : null
-                }
+                {page == "default" ? <AddSearch /> : null}
               </form>
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
@@ -186,8 +189,7 @@ const Header = ({ data, page }) => (
   </>
 )
 
-export default props => (
-
+export default (props) => (
   <StaticQuery
     query={graphql`
       query {
@@ -200,6 +202,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Header data={data} {...props} />}
+    render={(data) => <Header data={data} {...props} />}
   />
 )
