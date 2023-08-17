@@ -18,7 +18,7 @@ import './src/styles/codeBlocks.css'
 import "tocbot/dist/tocbot.css"
 import "tocbot/dist/tocbot.min.js"
 
-import "./src/styles/global.scss"
+import "./src/styles/global.css"
 
 //Segment
 export const onRouteUpdate = () => {
