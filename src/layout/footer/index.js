@@ -10,6 +10,7 @@ import {
   FooterLinks,
   FooterHeading,
   SiteFooter,
+  SocialLinks,
 } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
@@ -68,6 +69,8 @@ const Footer = ({ data }) => {
   return (
     <>
       <CTASlice
+        backgroundColor="secondary"
+        containerWidth="wide"
         headingText="Got questions? We've got answers!"
         primaryLink={primaryCTA}
         secondaryLink={secondaryCTA}
@@ -105,7 +108,7 @@ const Footer = ({ data }) => {
               headingLevel="h2"
               className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
             />
-            <p className="footer-form-intro">
+            <p className="footer-form-intro pds-ts-s">
               Awesome development news, tutorials, and tips. Plus get 3 free
               downloads, just for signing up. If you don't love it, unsubscribe
               with just a click.
@@ -133,7 +136,24 @@ const Footer = ({ data }) => {
                 formName="mktoForm_2014"
               />
             </div>
+            <SocialLinks className="pds-spacing-mar-block-start-xl" />
           </div>
+        </div>
+
+        <div className="cc-license pds-spacing-mar-block-start-5xl">
+          <div className="cc-license__logo">
+            {CCLogo && (
+              <img
+                src={CCLogo.node.publicURL}
+                alt="Creative Commons Attribution-ShareAlike Logo"
+              />
+            )}
+          </div>
+          <p className="cc-license__text pds-ts-s">
+            Our Documentation is licensed under a Creative Commons
+            Attribution-ShareAlike 4.0 International License. Code snippets are
+            additionally licensed under The MIT License.
+          </p>
         </div>
       </SiteFooter>
     </>
