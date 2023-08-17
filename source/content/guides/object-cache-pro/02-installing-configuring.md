@@ -71,6 +71,10 @@ terminus redis:enable <site>
 
 1. Wait for the workflow to run. The terminus command will only trigger the workflow, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown. This will take some time to complete
 
+   	<Alert title="Note" type="info">
+    If the workflow text in the dashboard turns red, it did not succeed. Please create a ticket with support to debug this further.
+    </Alert>
+
 1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus.
 
 	**WordPress Admin:**
