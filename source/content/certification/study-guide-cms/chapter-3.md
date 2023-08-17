@@ -55,6 +55,18 @@ A Pantheon CMS site contains three components: code, files, and a database conta
 
 ### Enable New Relic
 
+<Partial file="new-relic-enabling.md" />
+
+### Install the CMS
+
+
+There are a few different ways to install a Drupal or WordPress site. These include:
+
+* Site Install Wizard: Initializing the site installation process through the Administrative dashboard. Both CMS’s automatically redirect you to an installation wizard that takes you through the steps of provisioning your new site. This is the process we will follow in this activity.
+*Command Line: Drupal (Drush) and WordPress (WP-CLI) both include command line interface tools that include commands to install a new site at the database level. These are drush site:install and wp core install, respectively.
+* Existing Site Archive: Pantheon provides many tools and support for manually migrating existing sites to the platform. For more information, see this guide: https://docs.pantheon.io/migrate-manual/
+
+In this section, we will walk through the first method, installing a fresh WordPress site through the WordPress Administrative Dashboard wizard.
 
 
 

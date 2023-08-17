@@ -42,3 +42,6 @@ reviewed: ""
    ![Site creation completed](../../images/create-site-done.png)
 
 You've now created the core portion of your Dev environment; now you have to install the CMS.
+
+
+
