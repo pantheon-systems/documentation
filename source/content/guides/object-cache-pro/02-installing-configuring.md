@@ -18,23 +18,22 @@ integration: [--]
 reviewed: "2023-04-25"
 ---
 
-<Alert title="Early Access Software" type="info">
-
-Pantheon's Object Cache Pro is available for [Early Access](/guides/support/early-access/) participants. Features for Object Cache Pro are in active development. However, Object Cache Pro is a stable product and is in use on production sites. Refer to the email you received when you signed up for Object Cache Pro Early Access if you have questions. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about access to our software.
-
-</Alert>
-
 ## Before You Begin
 
 Before you can install and activate Object Cache Pro, verify that you have:
 
-- A working site on Pantheon with Redis enabled.
+- A working site on Pantheon
+    - Redis is enabled for the site
+    - The site is running PHP 7.4 or higher
 
-	- You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus.
+- Terminus installed and authenticated with a machine token to your local machine.
+    - Installation instructions can be found [here](https://docs.pantheon.io/terminus/install#install-terminus).
+    - Authentication instructions can be found [here](https://docs.pantheon.io/terminus/install#authenticate).
 
-- You have received an email in response to [signing up for the Early Access program](https://forms.gle/3EpZcELcYqB2VRKC8). The email should contain a download link and a license token. Throughout this process the license token will be displayed as `<LICENSE-TOKEN>`.
 
-### Activate Redis on the Dashboard
+### Activate Redis
+You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus.
+#### On the Dashboard
 
 1. Navigate to your **Pantheon Site Dashboard**, select **Settings**, and then select **Add Ons**.
 
@@ -42,8 +41,7 @@ Before you can install and activate Object Cache Pro, verify that you have:
 
 ![Pantheon Settings Add-Ons](../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
 
-### Activate Redis with Terminus
-
+#### With Terminus
 Run the command below to enable Redis via the command line with Terminus:
 
 ```bash{promptUser: user}
@@ -52,75 +50,40 @@ terminus redis:enable <site>
 
 ## Installation and Configuration for Regular WordPress Sites
 
-1. Open the email you received after signing up for Early Access Object Cache Pro on Pantheon.
+1. Ensure that your site is on a paid Performance or Elite plan. This can be verified by navigating to your **Pantheon Site Dashboard**, selecting **Settings**, selecting **About Site**, and then looking at the **Service Level**.
 
-	<Alert title="Note" type="info">
+1. Ensure that your site has Redis enabled via the steps above.
 
-	This link will always point to the latest version of Object Cache Pro. Be sure to store it in a safe place so you never miss out on updates to Object Cache Pro.
+1. Add the Terminus Addon Installer Plugin to your machine.
 
-	</Alert>
-
-1. Click the link in the email and download the file to install the Object Cache Pro plugin.
-
-1. Unzip the file and add it to your WordPress install as you normally would.
-
-	- There are some configuration options that you must add to set it up the plugin now that you have Object Cache Pro in your codebase. All of these options are stored in your `wp-config.php` in the root of your site repository.
-
-1. Add the license token and configuration into your `wp-config.php` file. Note that the license key will be provided by the platform in the future. Currently, you are responsible for adding it to your repository. Open the `wp-config.php` file and add the values below to the `WP_REDIS_CONFIG` constant somewhere above the `/* That's all, stop editing! Happy Pressing. */` line at the bottom of the file. Note that there are more [configuration options](https://objectcache.pro/docs/configuration-options) that can be added.
-
-	```php
-		/**
-		 * Object Cache Pro config
-		 */
-		define( 'WP_REDIS_CONFIG', [
-			'token' => '<LICENSE-TOKEN>',
-			'host' => $_SERVER['CACHE_HOST'] ?? '127.0.0.1',
-			'port' => $_SERVER['CACHE_PORT'] ?? 6379,
-			'database' => $_SERVER['CACHE_DB'] ?? 0,
-			'password' => $_SERVER['CACHE_PASSWORD'] ?? null,
-			'maxttl' => 86400 * 7,
-			'prefetch' => true,
-			'timeout' => 1.0,
-			'read_timeout' => 1.0,
-			'debug' => false,
-			'analytics' => [
-				'enabled' => true,
-				'persist' => true,
-				'retention' => 3600, // 1 hour
-				'footnote' => true,
-			],
-		] );
+   	<Alert title="Note" type="info">
+    Your local version of Terminus must be 3.2 or higher.
+    </Alert>
+   
+	```bash
+	terminus self:plugin:install terminus-addons-installer-plugin
 	```
 
-1. Make sure you `git push` your changes up to your repository before you activate the plugin.
+1. Run the installation workflow to install Object Cache Pro on your development or multidev environment. NOTE: This workflow cannot be run on test or live environments.
+    ```bash
+    terminus install:run <site>.<environment> ocp
+    ```
 
-1. Activate the Object Cache Pro plugin and enable Redis in the plugin from the WordPress Admin, locally with WP-CLI, or via Terminus.
+1. Wait for the workflow to run. The terminus command will only trigger the workflow, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown. This will take some time to complete
+
+1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus.
 
 	**WordPress Admin:**
 
 	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu.
-	1. Ensure that you are in an environment with file write permissions (either SFTP mode, if activating on your Pantheon Dev environment or in a local development environment).
-	1. Click the **Enable** button. This will create the `object-cache.php` drop-in file.
-	1. Commit the change.
-
-		- Make the commit in SFTP mode if you did this in your Pantheon Dev environment.
-		- Commit the file to your repository if you did this locally.
-
-	**WP-CLI:**
-
-	Refer to the [WP-CLI guide](/guides/wp-cli/install-wp-plugins-themes#install-wordpress-plugins) for instructions.
 
 	**Terminus:**
 
 	1. Open your terminal.
-	1. Run the following commands:
+	1. Run the following command:
 
 		```bash{promptUser: user}
-		terminus connection:set sftp
 		terminus wp -- <site>.<env> plugin activate object-cache-pro
-		terminus wp -- <site>.<env> redis enable
-		terminus env:commit <site>.<env> --message="Add Object Cache Pro drop-in"
-		terminus connection:set git
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
@@ -136,6 +99,23 @@ terminus redis:enable <site>
 ## Installation and Configuration for Composer-Managed WordPress Sites
 
 Refer to the [official Object Cache Pro documentation](https://objectcache.pro/docs/composer-installation) for full configuration instructions.
+
+1. Ensure that your site has Redis enabled via the steps above.
+
+1. Ensure that your site is using Redis version 6.2 or higher.
+	1. Open your `pantheon.yml` file and modify the `object_cache` entry or add an `object_cache` entry if there is not one already such that your `pantheon.yml` file includes:
+
+	    ```yaml
+        object_cache:
+          version: 6.2
+        ```
+	1. Commit and push this file to your site.
+
+1. Obtain a license token to use in the following authentication steps.
+
+	```bash
+	terminus remote:wp "<site>.<env>" -- eval "echo getenv('OCP_LICENSE');"
+    ```
 
 1. Create the authentication token and add your license token to Composer. You can do this automatically with the following command or create it manually with the steps below.
 
@@ -171,22 +151,22 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	```json
 		repositories: [
 			{
-			"type": "composer",
-			"url": "https://objectcache.pro/repo/"
+				"type": "composer",
+				"url": "https://objectcache.pro/repo/"
 			},
 			{
-			"type": "composer",
-			"url": "https://wpackagist.org",
-			"only": [
-				"wpackagist-plugin/*",
-				"wpackagist-theme/*"
-					]
+				"type": "composer",
+				"url": "https://wpackagist.org",
+				"only": [
+					"wpackagist-plugin/*",
+					"wpackagist-theme/*"
+				]
 			},
 			{
-			"type": "path",
-			"url": "upstream-configuration"
+				"type": "path",
+				"url": "upstream-configuration"
 			}
-			],
+		],
 	```
 
 1. Install Object Cache Pro via Composer using one of the methods listed below.
@@ -262,20 +242,28 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	```php
 		'token' => '<LICENSE-TOKEN>',
-		'host' => $_SERVER['CACHE_HOST'] ?? '127.0.0.1',
-		'port' => $_SERVER['CACHE_PORT'] ?? 6379,
-		'database' => $_SERVER['CACHE_DB'] ?? 0,
-		'password' => $_SERVER['CACHE_PASSWORD'] ?? null,
+		'host' => getenv('CACHE_HOST') ?: '127.0.0.1',
+		'port' => getenv('CACHE_PORT') ?: 6379,
+		'database' => getenv('CACHE_DB') ?: 0,
+		'password' => getenv('CACHE_PASSWORD') ?: null,
 		'maxttl' => 86400 * 7,
-		'timeout' => 1.0,
-		'read_timeout' => 1.0,
+		'timeout' => 0.5,
+		'read_timeout' => 0.5,
+		'retries' => 3,
+		'backoff' => 'smart',
+		'split_alloptions' => true,
+		'prefetch' => true,
 		'debug' => false,
+		'save_commands' => false,
 		'analytics' => [
 			'enabled' => true,
 			'persist' => true,
 			'retention' => 3600, // 1 hour
 			'footnote' => true,
 		],
+		'prefix' => "ocppantheon", // This prefix can be changed. Setting a prefix helps avoid conflict when switching from other plugins like wp-redis.
+		'serializer' => 'igbinary',
+		'compression' => 'zstd',
 	```
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
@@ -349,7 +337,14 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 	```
 
 ### Additional Considerations
-- When installed as a `mu-plugin`, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
+- When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`. 
+	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
+    - To summarize, the full order of steps are:
+      1. Disable wp-redis or other redis plugins if present
+      1. Merge code
+      1. Activate OCP
+      1. Flush Redis cache
+- When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
 - Flushing the network cache from the network admin will flush all caches across the network.
 - Subsites do not get their own configuration or graphs.
 - If installed as a normal plugin on a WordPress multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
