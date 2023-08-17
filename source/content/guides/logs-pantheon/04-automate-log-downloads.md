@@ -65,7 +65,7 @@ Read the comments in the scripts carefully to ensure that you modify variables c
 
   </TabList>
   
-## Parameterize the Script
+### Parameterize the Script
 
 You can run the script with parameters for reusability.
 
