@@ -1044,6 +1044,7 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, are UR
 ```
 
 </Example>
+
 ## Variables
 
 When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
