@@ -59,7 +59,7 @@ terminus redis:enable <site>
    	<Alert title="Note" type="info">
     Your local version of Terminus must be 3.2 or higher.
     </Alert>
-   
+
 	```bash
 	terminus self:plugin:install terminus-addons-installer-plugin
 	```
@@ -71,9 +71,11 @@ terminus redis:enable <site>
 
 1. Wait for the workflow to run. The terminus command will only trigger the workflow, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown. This will take some time to complete
 
-   	<Alert title="Note" type="info">
-    If the workflow text in the dashboard turns red, it did not succeed. Please create a ticket with support to debug this further.
-    </Alert>
+  <Alert title="Note" type="info">
+
+  If the workflow text in the dashboard turns red, it did not succeed. Please [create a ticket with support](/guides/support/contact-support/#ticket-support) to debug this further.
+
+  </Alert>
 
 1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus.
 
@@ -341,7 +343,7 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 	```
 
 ### Additional Considerations
-- When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`. 
+- When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`.
 	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
     - To summarize, the full order of steps are:
       1. Disable wp-redis or other redis plugins if present
