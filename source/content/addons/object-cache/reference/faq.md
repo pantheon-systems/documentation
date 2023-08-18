@@ -91,15 +91,15 @@ When you replace the database with one that doesn't match the Object Cache, it c
 - [Performance Addons](/addons)
 - [Object Cache Overview](/object-cache)
 
-**How-to Guides**:
+### How-to Guides
 - [Enable Object Cache Pro for WordPress](/object-cache/wp)
 - [Enable Object Cache for Drupal](/object-cache/drupal)
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)
 
-**References**:
+### References
 - [Object Cache Errors](/object-cache/errors)
 
-**See Also**:
+### See Also
 - [Plan Resources](/guides/account-mgmt/plans/faq#plan-resources)
 - [Platform Considerations](/guides/platform-considerations)

@@ -382,17 +382,17 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
 ## More Resources
 - [Performance Addons](/addons)
 - [Object Cache Overview](/object-cache)
-<hr/>
 
-**How-to Guides**:
+
+### How-to Guides
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)
-<hr/>
 
-**References**:
+
+### References
 - [Object Cache Errors](/object-cache/errors)
 - [Object Cache FAQs](/object-cache/faq)
 
-**See Also**:
+### See Also
 - [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin)
 - [Must Use Plugins](https://wordpress.org/documentation/article/must-use-plugins/)

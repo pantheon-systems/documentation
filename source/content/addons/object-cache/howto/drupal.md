@@ -192,17 +192,17 @@ After enabling Redis, there are cache tables in the database that are no longer 
 ## More Resources
 - [Performance Addons](/addons)
 - [Object Cache Overview](/object-cache)
-<hr/>
 
-**How-to Guides**:
+
+### How-to Guides
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)
-<hr/>
 
-**References**:
+
+### References
 - [Object Cache Errors](/object-cache/errors)
 - [Object Cache FAQs](/object-cache/faq)
 
-**See Also**:
+### See Also
 - [Caching in Drupal Views](/drupal-caching-views)
 - [Frontend Performance Caching](/guides/frontend-performance/caching)

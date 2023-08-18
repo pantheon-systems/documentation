@@ -122,14 +122,14 @@ Performance and Elite WordPress site(s) that are currently running WP Redis are 
 ## More Resources
 - [Performance Addons](/addons)
 - [Object Cache Overview](/object-cache)
-<hr/>
 
-**How-to Guides**:
+
+### How-to Guides
 - [Enable Object Cache Pro for WordPress](/object-cache/wp)
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)
-<hr/>
 
-**References**:
+
+### References
 - [Object Cache Errors](/object-cache/errors)
 - [Object Cache FAQs](/object-cache/faq)

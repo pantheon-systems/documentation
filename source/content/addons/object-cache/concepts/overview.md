@@ -54,13 +54,12 @@ Object Cache Pro also optimizes for performance, using compressed data to mainta
 
 ## More Resources
 
-**How-to Guides**:
+### How-to Guides
 - [Enable Object Cache Pro for WordPress](/object-cache/wp)
 - [Enable Object Cache for Drupal](/object-cache/drupal)
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)
-<hr/>
 
-**References**:
+### References
 - [Object Cache Errors](/object-cache/errors)
 - [Object Cache FAQs](/object-cache/faq)
