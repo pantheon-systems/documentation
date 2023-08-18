@@ -1,7 +1,7 @@
 ---
-title: Redis Object Cache Overview
-description: Learn about the benefits and requirements of Redis object caching on Pantheon.
-permalink: docs/redis
+title: Object Cache Overview
+description: Learn about the benefits and requirements of Pantheon's Object Cache performance addon.
+permalink: docs/object-cache
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -55,12 +55,12 @@ Object Cache Pro also optimizes for performance, using compressed data to mainta
 ## More Resources
 
 **How-to Guides**:
-- [Enable Object Cache Pro for WordPress](/redis/wp)
-- [Enable Redis for Drupal](/redis/drupal)
-- [Use the Redis CLI](/redis/cli)
-- [Safely Remove Redis](/redis/remove)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache for Drupal](/object-cache/drupal)
+- [Use the Redis CLI](/object-cache/cli)
+- [Safely Remove Object Cache](/object-cache/remove)
 <hr/>
 
 **References**:
-- [Redis Errors](/redis/errors)
-- [Redis FAQs](/redis/faq)
+- [Object Cache Errors](/object-cache/errors)
+- [Object Cache FAQs](/object-cache/faq)

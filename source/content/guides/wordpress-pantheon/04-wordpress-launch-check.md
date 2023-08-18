@@ -134,8 +134,8 @@ If you receive an error message similar to the example below, you'll need to mov
 
 Performance and Elite WordPress site(s) that are currently running WP Redis are eligible for an upgraded solution. For more details, see:
 
-- [Redis Object Cache Overview](/redis#wordpress-object-cache-pro)
-- [Enable Object Cache Pro for WordPress](/redis/wp)
+- [Object Cache Overview](/object-cache#wordpress-object-cache-pro)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
 
 ### Plugins
 

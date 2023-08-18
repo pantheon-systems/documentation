@@ -1,7 +1,7 @@
 ---
-title: Enable Redis for Drupal
-description: How to install and configure Redis for Drupal.
-permalink: docs/redis/drupal
+title: Enable Object Cache for Drupal
+description: How to install and configure Object Cache for Drupal.
+permalink: docs/object-cache/drupal
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -191,17 +191,17 @@ After enabling Redis, there are cache tables in the database that are no longer 
 
 ## More Resources
 - [Performance Addons](/addons)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)
 <hr/>
 
 **How-to Guides**:
-- [Use the Redis CLI](/redis/cli)
-- [Safely Remove Redis](/redis/remove)
+- [Use the Redis CLI](/object-cache/cli)
+- [Safely Remove Object Cache](/object-cache/remove)
 <hr/>
 
 **References**:
-- [Redis Errors](/redis/errors)
-- [Redis FAQs](/redis/faq)
+- [Object Cache Errors](/object-cache/errors)
+- [Object Cache FAQs](/object-cache/faq)
 
 **See Also**:
 - [Caching in Drupal Views](/drupal-caching-views)

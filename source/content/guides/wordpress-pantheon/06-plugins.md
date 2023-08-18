@@ -86,8 +86,8 @@ provides support for SAML Authentication. The plugin comes bundled with the OneL
 ## Object Cache Pro
 [Object Cache Pro](https://objectcache.pro/) is a highly optimized premium WordPress plugin that integrates with Redis for business class performance. For more details, see also:
 
-- [Redis Object Cache Overview](/redis#wordpress-object-cache-pro)
-- [Enable Object Cache Pro for WordPress](/redis/wp)
+- [Object Cache Overview](/object-cache#wordpress-object-cache-pro)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
 
 ## WP Solr
 

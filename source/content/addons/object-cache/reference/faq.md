@@ -1,7 +1,7 @@
 ---
-title: Redis Object Cache FAQs
-description: Review frequently asked questions on Redis object caching.
-permalink: docs/redis/faq
+title: Object Cache FAQs
+description: Review frequently asked questions on Object Caching.
+permalink: docs/object-cache/faq
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -85,20 +85,20 @@ sftp>
 
 ### Why won't my site work after importing a database backup?
 
-When you replace the database with one that doesn't match the Object Cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the Object Cache from the command line](/redis/cli#clear-cached-data).
+When you replace the database with one that doesn't match the Object Cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the Object Cache from the command line](/object-cache/cli#clear-cached-data).
 
 ## More Resources
 - [Performance Addons](/addons)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)
 
 **How-to Guides**:
-- [Enable Object Cache Pro for WordPress](/redis/wp)
-- [Enable Redis for Drupal](/redis/drupal)
-- [Use the Redis CLI](/redis/cli)
-- [Safely Remove Redis](/redis/remove)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache for Drupal](/object-cache/drupal)
+- [Use the Redis CLI](/object-cache/cli)
+- [Safely Remove Object Cache](/object-cache/remove)
 
 **References**:
-- [Redis Errors](/redis/errors)
+- [Object Cache Errors](/object-cache/errors)
 
 **See Also**:
 - [Plan Resources](/guides/account-mgmt/plans/faq#plan-resources)

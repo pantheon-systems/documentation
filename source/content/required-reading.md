@@ -13,7 +13,7 @@ integration: [--]
 
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable [WebOps](https://en.wikipedia.org/wiki/Web_operations) platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
-Our tech includes NGINX, PHP, Redis object caching, [Global CDN](/guides/global-cdn/global-cdn-caching), Pantheon Search (Solr) and Git—common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
+Our tech includes NGINX, PHP, Object Cache, [Global CDN](/guides/global-cdn/global-cdn-caching), Pantheon Search (Solr) and Git—common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
 
 ## Get to Know Pantheon
 
@@ -38,7 +38,7 @@ Our tech includes NGINX, PHP, Redis object caching, [Global CDN](/guides/global-
 - [New Relic&reg; Performance Monitoring](/guides/new-relic)
 - [Applying Upstream Updates](/core-updates)
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)
 - [Drupal Performance and Caching Settings](/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/guides/sso)
 - [Backup Creation](/guides/backups)

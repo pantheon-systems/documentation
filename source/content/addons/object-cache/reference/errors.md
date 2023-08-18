@@ -1,7 +1,7 @@
 ---
-title: Redis Object Cache Errors
+title: Object Cache Errors
 description: Review solutions to common troubleshooting scenarios for Object Cache.
-permalink: docs/redis/errors
+permalink: docs/object-cache/errors
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -23,9 +23,9 @@ Redis busy errors are caused by large amounts of cached data. Setting the Minimu
 Refer to the [Minimum Cache Lifetime](/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](/drupal-cache) documentation for more information about this setting.
 
 ### Cannot Activate WP Redis Plugin for WordPress
-[WP Redis](/redis/wp-deprecated), while still actively maintained, is no longer the preferred method for enabling Redis object caching for WordPress on Pantheon.
+[WP Redis](/object-cache/wp-deprecated), while still actively maintained, is no longer the preferred method for enabling Object Cache for WordPress on Pantheon.
 
-Instead, use [Object Cache Pro](/redis/wp).
+Instead, use [Object Cache Pro](/object-cache/wp).
 
 Note that both WP Redis and Object Cache Pro both have mandatory drop-in plugins, but these plugins are _not_ interchangeable. No activation is required.
 
@@ -121,7 +121,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 ### Out of Memory Errors
 
-You can use the `info memory` option to view your site's memory metrics. Running out of storage is a regular occurrance and is handled by the eviction policy. Memory limits per plan and more details about the eviction policy are in the [Object Cache FAQs](/redis/faq#how-much-object-cache-is-available-for-each-plan-level)
+You can use the `info memory` option to view your site's memory metrics. Running out of storage is a regular occurrance and is handled by the eviction policy. Memory limits per plan and more details about the eviction policy are in the [Object Cache FAQs](/object-cache/faq#how-much-object-cache-is-available-for-each-plan-level)
 
 Run the following command to access your site's memory usage metrics:
 
@@ -138,16 +138,16 @@ Run the following command to access your site's memory usage metrics:
 
 ## More Resources
 - [Performance Addons](/addons)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)
 
 **How-to Guides**:
-- [Enable Object Cache Pro for WordPress](/redis/wp)
-- [Enable Redis for Drupal](/redis/drupal)
-- [Use the Redis CLI](/redis/cli)
-- [Safely Remove Redis](/redis/remove)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache for Drupal](/object-cache/drupal)
+- [Use the Redis CLI](/object-cache/cli)
+- [Safely Remove Object Cache](/object-cache/remove)
 
 **References**:
-- [Redis FAQs](/redis/faq)
+- [Object Cache FAQs](/object-cache/faq)
 
 **See Also**:
 - [Basic Troubleshooting](/basic-troubleshooting)

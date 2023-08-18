@@ -26,7 +26,7 @@ There are currently two services on Pantheon that support SSH tunneling:
 
 - [MySQL database](/guides/mariadb-mysql/mysql-access) (dbserver)
 
-- [Redis cache](/redis)
+- [Object Cache](/object-cache)
 
 You should consider [Secure Runtime Access](/guides/secure-development/secure-runtime-access) if you want to allow only SSH tunnels to access the dbserver.
 
@@ -34,7 +34,7 @@ You should consider [Secure Runtime Access](/guides/secure-development/secure-ru
 
 - Local installation of a MySQL client
 
-- [Redis command-line client](/redis/cli)
+- [Redis command-line client](/object-cache/cli)
 
 - Add an [SSH key](/ssh-keys) to your Pantheon Personal Settings.
 
@@ -196,6 +196,6 @@ Review [Port 2222 Blocked Workaround](/guides/sftp/port-2222) for more informati
 
 - [MySQL database](/guides/mariadb-mysql/mysql-access) (dbserver)
 
-- [Redis cache](/redis)
+- [Object Cache](/object-cache)
 
 - [Secure Runtime Access](/guides/secure-development/secure-runtime-access)

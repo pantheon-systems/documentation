@@ -58,9 +58,9 @@ Refer to [Drupal Launch Check](/drupal-launch-check) and [WordPress Launch Check
 
 ### Enable Object Cache
 
-Pantheon's [Redis object caching)](/redis) provides an alternative, drop-in caching backend for your website. This removes caching work from the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers, including managing queues and custom caching.
+Pantheon's [Object Cache)](/object-cache) provides an alternative, drop-in caching backend for your website. This removes caching work from the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers, including managing queues and custom caching.
 
-All paid plans except for a Basic plan can use Object Cache. 
+All paid plans except for a Basic plan can use Object Cache.
 
 ### Configure Caching
 

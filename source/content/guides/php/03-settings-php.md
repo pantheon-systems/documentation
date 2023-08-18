@@ -33,7 +33,7 @@ Pantheon uses a variant of [Pressflow](https://www.pressflow.org/) Drupal for Dr
 Review the following articles for techniques and configurations for your `settings.php` file on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) (including domain_access)
-- [Enable Redis for Drupal](/redis/drupal)
+- [Enable Object Cache for Drupal](/object-cache/drupal)
 - [Platform and Custom Domains](/guides/domains)
 - [Configure Redirects](/guides/redirect)
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
@@ -141,9 +141,9 @@ There are three possibilities depending on your use case:
 
   </Alert>
 
-- For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. It will contain Dev, Test, or Live. Refer to the [Object Cache](/redis/drupal) guide for examples.
+- For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. It will contain Dev, Test, or Live. Refer to the [Object Cache](/object-cache/drupal) guide for examples.
 
-- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or refer to our [Object Cache](/redis/drupal) guide for examples.
+- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or refer to our [Object Cache](/object-cache/drupal) guide for examples.
 
 As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. Refer to [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472) for more information.
 
@@ -289,7 +289,7 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 
 ## More Resources
 
-- [Object Cache](/redis/drupal)
+- [Object Cache](/object-cache/drupal)
 
 - [PHP Slow Log](/guides/php/php-slow-log)
 

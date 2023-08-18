@@ -1,7 +1,7 @@
 ---
 title: Enable WP-Redis [Deprecated]
 description: How to install and configure WP Redis for WordPress.
-permalink: docs/redis/wp-deprecated
+permalink: docs/object-cache/wp-deprecated
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -21,7 +21,7 @@ This page is considered deprecated.
 
 [WP Redis](https://wordpress.org/plugins/wp-redis), while still actively maintained, is no longer the preferred method for enabling object cache for WordPress on Pantheon.
 
-Performance and Elite WordPress site(s) that are currently running WP Redis are eligible for an upgraded solution: [Enable Object Cache Pro for WordPress](/redis/wp).
+Performance and Elite WordPress site(s) that are currently running WP Redis are eligible for an upgraded solution: [Enable Object Cache Pro for WordPress](/object-cache/wp).
 
 </Alert>
 
@@ -121,15 +121,15 @@ Performance and Elite WordPress site(s) that are currently running WP Redis are 
 
 ## More Resources
 - [Performance Addons](/addons)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)
 <hr/>
 
 **How-to Guides**:
-- [Enable Object Cache Pro for WordPress](/redis/wp)
-- [Use the Redis CLI](/redis/cli)
-- [Safely Remove Redis](/redis/remove)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Use the Redis CLI](/object-cache/cli)
+- [Safely Remove Object Cache](/object-cache/remove)
 <hr/>
 
 **References**:
-- [Redis Errors](/redis/errors)
-- [Redis FAQs](/redis/faq)
+- [Object Cache Errors](/object-cache/errors)
+- [Object Cache FAQs](/object-cache/faq)

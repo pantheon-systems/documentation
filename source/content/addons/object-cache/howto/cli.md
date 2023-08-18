@@ -1,7 +1,7 @@
 ---
 title: Use the Redis CLI
 description: How to use the Redis Command Line to manage Object Cache.
-permalink: docs/redis/cli
+permalink: docs/object-cache/cli
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -79,7 +79,7 @@ Drupal deletes and regenerates cached entries during a cache rebuild or cache cl
 
 #### WordPress
 
-If [WP Redis](https://wordpress.org/plugins/wp-redis/) or [Object Cache Pro](/redis/wp/) are installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
+If [WP Redis](https://wordpress.org/plugins/wp-redis/) or [Object Cache Pro](/object-cache/wp/) are installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
 
 Refer to the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup method if necessary.
 
@@ -184,15 +184,15 @@ Biggest   hash found 'myobject' has 3 fields
 
 ## More Resources
 - [Performance Addons](/addons)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)
 <hr/>
 
 **How-to Guides**:
-- [Enable Object Cache Pro for WordPress](/redis/wp)
-- [Enable Redis for Drupal](/redis/drupal)
-- [Safely Remove Redis](/redis/remove)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache for Drupal](/object-cache/drupal)
+- [Safely Remove Object Cache](/object-cache/remove)
 <hr/>
 
 **References**:
-- [Redis Errors](/redis/errors)
-- [Redis FAQs](/redis/faq)
+- [Object Cache Errors](/object-cache/errors)
+- [Object Cache FAQs](/object-cache/faq)

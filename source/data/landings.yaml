@@ -160,8 +160,8 @@
           url: '/guides/professional-services'
         - text: 'New Relic APM Pro'
           url: '/guides/new-relic'
-        - text: 'Redis Object Cache Overview'
-          url: '/redis/'
+        - text: 'Object Cache Overview'
+          url: '/object-cache/'
         - text: 'Pantheon Search'
           url: '/solr'
         - text: 'Enabling Pantheon Search for Drupal'
@@ -716,8 +716,8 @@
               url: '/drupal-cache'
             - text: 'Caching in Drupal Views'
               url: '/drupal-caching-views'
-            - text: 'Redis Object Cache Overview'
-              url: '/redis/'
+            - text: 'Object Cache Overview'
+              url: '/object-cache/'
             - text: 'WordPress Pantheon Cache Plugin Configuration'
               url: '/guides/wordpress-configurations/wordpress-cache-plugin'
             - text: 'Optimize Your wp-options Table and Autoloaded Data'
@@ -1557,26 +1557,26 @@
           url: '/guides/solr-drupal'
 
   subtopics:
-    - title: 'Redis Object Cache'
-      subtitle: 'Redis object cache provides an alternative caching backend that resides in memory rather than a database.'
+    - title: 'Object Cache'
+      subtitle: 'Object Cache provides an alternative caching backend that resides in memory rather than a database.'
       subtopic-lists:
         - title: 'Concepts'
           links:
-            - text: Redis Overview
-              url: '/redis'
+            - text: Object Cache Overview
+              url: '/object-cache'
         - title: 'Reference'
           links:
-            - text: Redis Errors
-              url: '/redis/errors'
-            - text: Redis FAQs
-              url: '/redis/faq'
+            - text: Object Cache Errors
+              url: '/object-cache/errors'
+            - text: Object Cache FAQs
+              url: '/object-cache/faq'
         - title: 'How-to Guides'
           links:
             - text: 'Enable Object Cache Pro for WordPress'
-              url: '/redis/wp'
-            - text: 'Enable Redis for Drupal'
-              url: '/redis/drupal'
+              url: '/object-cache/wp'
+            - text: 'Enable Object Cache for Drupal'
+              url: '/object-cache/drupal'
             - text: 'Use the Redis CLI'
-              url: '/redis/cli'
-            - text: 'Safely Remove Redis'
-              url: '/redis/remove'
+              url: '/object-cache/cli'
+            - text: 'Safely Remove Object Cache'
+              url: '/object-cache/remove'

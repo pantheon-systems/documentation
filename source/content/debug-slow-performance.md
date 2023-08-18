@@ -65,7 +65,7 @@ If the cache lifetime is set to something that doesn't make sense for your traff
 ### Drupal Note
 See our [guidelines on Drupal's performance settings](/drupal-cache) for more details.
 
-Other caching systems that aren't on by default that should be enabled include [Redis](/redis/drupal) and [caching for view results](/drupal-caching-views).
+Other caching systems that aren't on by default that should be enabled include [Object Cache](/object-cache/drupal) and [caching for view results](/drupal-caching-views).
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
@@ -74,7 +74,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.
 
-One of the services Pantheon offers is Redis as an [Object Cache backend](/redis/drupal), which is a key-value store and is optimized for this type of work.​
+One of the services Pantheon offers is Redis as an [Object Cache backend](/object-cache/drupal), which is a key-value store and is optimized for this type of work.​
 
 ### WordPress Caching Note
 There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-page-cache plugin](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
@@ -88,7 +88,7 @@ There are a large number of caches involved in every single request, including:
 
 - [Pantheon Global CDN](/guides/global-cdn/global-cdn-caching) - Spread out across multiple servers, and the cache is not shared between servers.
 - [APCu](/apcu) - PHP has its own user-level cache, which is not shared between application containers.
-- [Drupal](https://drupal.org/node/326504) and [Redis](/redis/drupal) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
+- [Drupal](https://drupal.org/node/326504) and [Object Cache](/object-cache/drupal) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
 Of course, too much site traffic can be a problem if you just don't have enough resources.
@@ -120,7 +120,7 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 
 - Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
 - Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/) or [XHProf](http://php.net/manual/en/book.xhprof.php)) or to help refactor code that could be leaking memory
-- Enabling [Redis](/redis) could boost site performance by providing an in-memory backend caching
+- Enabling [Object Cache](/object-cache) could boost site performance by providing an in-memory backend caching
 - [Update PHP version](/guides/php/php-versions)
 - In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
 

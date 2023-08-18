@@ -1,7 +1,7 @@
 ---
 title: Enable Object Cache Pro for WordPress
 description: How to install and configure Object Cache Pro for WordPress.
-permalink: docs/redis/wp
+permalink: docs/object-cache/wp
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -381,17 +381,17 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
 
 ## More Resources
 - [Performance Addons](/addons)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)
 <hr/>
 
 **How-to Guides**:
-- [Use the Redis CLI](/redis/cli)
-- [Safely Remove Redis](/redis/remove)
+- [Use the Redis CLI](/object-cache/cli)
+- [Safely Remove Object Cache](/object-cache/remove)
 <hr/>
 
 **References**:
-- [Redis Errors](/redis/errors)
-- [Redis FAQs](/redis/faq)
+- [Object Cache Errors](/object-cache/errors)
+- [Object Cache FAQs](/object-cache/faq)
 
 **See Also**:
 - [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin)

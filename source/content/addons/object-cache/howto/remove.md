@@ -1,7 +1,7 @@
 ---
-title: Remove Redis Object Cache
-description: How to safely remove Redis object caching.
-permalink: docs/redis/remove
+title: Remove Object Cache
+description: How to safely remove Pantheon's Object Caching.
+permalink: docs/object-cache/remove
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -40,4 +40,4 @@ The following code changes are required before Object Cache can be safely uninst
 ## More Resources
 
 - [Performance Addons](/addons)
-- [Redis Object Cache Overview](/redis)
+- [Object Cache Overview](/object-cache)

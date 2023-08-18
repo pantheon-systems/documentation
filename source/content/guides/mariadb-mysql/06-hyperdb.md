@@ -86,7 +86,7 @@ if ( ! empty( $_ENV['REPLICA_DB_HOST'] ) ) {
 ### Pass Frontend Read Queries to Replica, WordPress Dashboard Reads and Writes to Primary
 You can pass all frontend database read queries to the replica. This leaves the primary database dedicated to WordPress dashboard reads and writes. This setup can help ensure WordPress dashboard availability during times of high frontend load.
 
-You should use [some form of cache fallback](/redis/wp) if reads to the replica begin failing.
+You should use [some form of cache fallback](/object-cache/wp) if reads to the replica begin failing.
 
 ```php
 <?php

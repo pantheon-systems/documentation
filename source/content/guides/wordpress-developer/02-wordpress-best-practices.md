@@ -23,7 +23,7 @@ This section provides suggestions for best practices to develop and manage WordP
 
 - Do not modify core WordPress files. Core file modification frequently causes unintended issues, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).  Create a custom or [Must Use](/guides/wordpress-configurations/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/) if you need to modify any WP functionality.
 
-- Use [Redis](/redis/wp). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Redis on Pantheon makes it easy to cache a large number database queries in WordPress.
+- Use [Object Cache Pro](/object-cache/wp). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Redis on Pantheon makes it easy to cache a large number database queries in WordPress.
 
 - Use [wp-cfm](/guides/wordpress-configurations/wp-cfm). wp-cfm lets you store settings from the `wp_options` table in Git and pull it into the database. This helps with the option-heavy nature of WordPress site configurations. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 

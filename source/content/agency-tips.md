@@ -54,8 +54,8 @@ All paid plans, except for the Basic plan, can use Object Cache.
 
 For installation instructions and additional details, see the following:
 
-- [Enable Object Cache Pro for WordPress](/redis/wp)
-- [Enable Redis for Drupal](/redis/drupal)
+- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache for Drupal](/object-cache/drupal)
 
 
 ## WordPress

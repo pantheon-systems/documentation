@@ -31,7 +31,7 @@ In addition, consider the following changes to feature access _before_ upgrading
 
 ### Disable Addons When Downgrading to Basic Plan
 
-[Redis Object Caching](/redis) and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[Object Caching](/object-cache) and [Pantheon Search](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 To remove these addons:
 
@@ -43,7 +43,7 @@ To remove these addons:
 
 To safely disable Redis, refer to the following how-to guide:
 
-- [Remove Redis Object Cache](/redis/remove)
+- [Remove Object Cache](/object-cache/remove)
 
 #### Pantheon Search
 
@@ -57,7 +57,7 @@ To safely disable Redis, refer to the following how-to guide:
 
 To safely disable Redis, refer to the following how-to guide:
 
-- [Remove Redis Object Cache](/redis/remove)
+- [Remove Object Cache](/object-cache/remove)
 
 #### Pantheon Search
 
@@ -116,7 +116,7 @@ Invoices and transaction history related to this change can be found in **<span 
 You can enable the following add-ons:
 
 - [Pantheon Search](/solr) is a Solr-based system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
- - [Object Cache](/redis) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+ - [Object Cache](/object-cache) is a Redis-based open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
 ### Add-ons and the Basic Plan
