@@ -50,7 +50,13 @@ Follow our [Launch Essentials](/guides/launch) guide to automatically provision 
 All plans except for the Basic plan can enable [Pantheon Search](/solr) for search indexing. For installation instructions and additional details, see [Enabling Pantheon Search for WordPress](/guides/wordpress-developer/wordpress-solr) or [Enabling Pantheon Search with Drupal 7](/guides/solr-drupal/solr-drupal-7).
 
 ## Object Cache
-All plans except for the Basic plan can enable the Pantheon Object Cache. For installation instructions and additional details, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
+All paid plans, except for the Basic plan, can use Object Cache.
+
+For installation instructions and additional details, see the following:
+
+- [Enable Object Cache Pro for WordPress](/redis/wp)
+- [Enable Redis for Drupal](/redis/drupal)
+
 
 ## WordPress
 

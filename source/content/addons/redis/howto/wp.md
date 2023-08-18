@@ -1,21 +1,18 @@
 ---
-title: Object Cache Pro on Pantheon
-subtitle: Install and Configure Object Cache Pro
-description: Learn how to install and configure Object Cache Pro on Pantheon.
-tags: [cache]
-contributors: [jazzsequence]
-type: guide
-showtoc: true
-permalink: docs/guides/object-cache-pro/installing-configuring/
-editpath: object-cache-pro/02-installing-configuring.md
-contenttype: [guide]
+title: Enable Object Cache Pro for WordPress
+description: How to install and configure Object Cache Pro for WordPress.
+permalink: docs/redis/wp
+tags: [cache, plugins, modules, database]
+reviewed: "2023-08-17"
+contenttype: [doc]
 innav: [true]
-categories: []
+categories: [cache]
 cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2023-04-25"
+contributors: [jazzsequence]
+showtoc: true
 ---
 
 ## Before You Begin
@@ -30,16 +27,16 @@ Before you can install and activate Object Cache Pro, verify that you have:
     - Installation instructions can be found [here](https://docs.pantheon.io/terminus/install#install-terminus).
     - Authentication instructions can be found [here](https://docs.pantheon.io/terminus/install#authenticate).
 
-
 ### Activate Redis
-You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus.
+You can activate Redis either from the Pantheon dashboard or with Terminus.
+
 #### On the Dashboard
 
 1. Navigate to your **Pantheon Site Dashboard**, select **Settings**, and then select **Add Ons**.
 
 1. Click the **Add** button under **Redis**. It might take a couple of minutes for the Object Cache server to come online. You will see a success message in a green box stating that Redis has been enabled.
 
-![Pantheon Settings Add-Ons](../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
+![Pantheon Settings Add-Ons](../../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
 
 #### With Terminus
 Run the command below to enable Redis via the command line with Terminus:
@@ -382,7 +379,20 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
 
 	</Alert>
 
-### More Resources
+## More Resources
+- [Performance Addons](/addons)
+- [Redis Object Cache Overview](/redis)
+<hr/>
 
+**How-to Guides**:
+- [Use the Redis CLI](/redis/cli)
+- [Safely Remove Redis](/redis/remove)
+<hr/>
+
+**References**:
+- [Redis Errors](/redis/errors)
+- [Redis FAQs](/redis/faq)
+
+**See Also**:
 - [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin)
 - [Must Use Plugins](https://wordpress.org/documentation/article/must-use-plugins/)

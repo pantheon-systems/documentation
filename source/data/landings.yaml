@@ -1537,3 +1537,46 @@
           url: '/guides/secure-development/private-paths'
         - text: 'Enforce HTTPS + HSTS'
           url: '/pantheon-yml#enforce-https--hsts'
+- title: 'Performance Addons'
+  subtitle: 'Built-in services to improve search, monitor performance, and enable robust application caching.'
+  path: 'addons'
+  topics-groups:
+    - title: 'New Relic Performance Monitoring'
+      subtitle: ''
+      links:
+        - text: 'New Relic Guide'
+          url: '/guides/new-relic'
+    - title: 'Solr Search'
+      subtitle: 'Solr'
+      links:
+        - text: 'Solr Overview'
+          url: '/solr'
+        - text: 'Enable Solr for WordPress'
+          url: '/guides/wordpress-developer/wordpress-solr'
+        - text: 'Enable Solr for Drupal'
+          url: '/guides/solr-drupal'
+
+  subtopics:
+    - title: 'Redis Object Cache'
+      subtitle: 'Redis object cache provides an alternative caching backend that resides in memory rather than a database.'
+      subtopic-lists:
+        - title: 'Concepts'
+          links:
+            - text: Redis Overview
+              url: '/redis'
+        - title: 'Reference'
+          links:
+            - text: Redis Errors
+              url: '/redis/errors'
+            - text: Redis FAQs
+              url: '/redis/faq'
+        - title: 'How-to Guides'
+          links:
+            - text: 'Enable Object Cache Pro for WordPress'
+              url: '/redis/wp'
+            - text: 'Enable Redis for Drupal'
+              url: '/redis/drupal'
+            - text: 'Use the Redis CLI'
+              url: '/redis/cli'
+            - text: 'Safely Remove Redis'
+              url: '/redis/remove'

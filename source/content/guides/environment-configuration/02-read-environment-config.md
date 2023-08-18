@@ -19,7 +19,7 @@ This section provides information on how to use database credentials for Object 
 
 You should never copy and paste credentials from your Dashboard into any of your site's code.
 
-Database credentials, [Object Cache](/guides/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
+Database credentials, [Object Cache](/redis) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
 ```php
 <?php var_dump($_ENV); ?>
@@ -58,7 +58,7 @@ extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/guides/object-cache/enable-object-cache) in `settings.php`. For example, in Drupal:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/redis/drupal) in `settings.php`. For example, in Drupal:
 
 ```php
 // All Pantheon Environments.
@@ -166,7 +166,7 @@ array(63) {
 
 ## Setting Environment Variables
 
-It is not possible to set environment variables on Pantheon. However, there are three common solutions you can use instead. 
+It is not possible to set environment variables on Pantheon. However, there are three common solutions you can use instead.
 
 ### Terminus Secrets Plugin
 

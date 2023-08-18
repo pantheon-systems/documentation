@@ -26,7 +26,7 @@ Drupal users, see [Pantheon Modules](/modules) for details on Drupal modules dev
 
 ## WordPress Pantheon Cache
 
-Pantheon maintains an optimized version of WordPress that includes [WordPress Pantheon Cache](/guides/wordpress-configurations/wordpress-cache-plugin) plugin to control cache expiration. 
+Pantheon maintains an optimized version of WordPress that includes [WordPress Pantheon Cache](/guides/wordpress-configurations/wordpress-cache-plugin) plugin to control cache expiration.
 
 ## Pantheon Must-Use Plugin
 
@@ -83,9 +83,11 @@ For example, create an mu-plugin called `00.php` and add a line in it to include
 [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/)
 provides support for SAML Authentication. The plugin comes bundled with the OneLogin SAML library and [SimpleSAMLphp](https://simplesamlphp.org/). For an example use case, see [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso)
 
-## WP Redis
+## Object Cache Pro
+[Object Cache Pro](https://objectcache.pro/) is a highly optimized premium WordPress plugin that integrates with Redis for business class performance. For more details, see also:
 
-[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache).
+- [Redis Object Cache Overview](/redis#wordpress-object-cache-pro)
+- [Enable Object Cache Pro for WordPress](/redis/wp)
 
 ## WP Solr
 

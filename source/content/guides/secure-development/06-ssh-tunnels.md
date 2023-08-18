@@ -26,7 +26,7 @@ There are currently two services on Pantheon that support SSH tunneling:
 
 - [MySQL database](/guides/mariadb-mysql/mysql-access) (dbserver)
 
-- [Redis cache](/guides/object-cache)
+- [Redis cache](/redis)
 
 You should consider [Secure Runtime Access](/guides/secure-development/secure-runtime-access) if you want to allow only SSH tunnels to access the dbserver.
 
@@ -34,7 +34,7 @@ You should consider [Secure Runtime Access](/guides/secure-development/secure-ru
 
 - Local installation of a MySQL client
 
-- [Redis command-line client](/guides/object-cache/redis-command-line)
+- [Redis command-line client](/redis/cli)
 
 - Add an [SSH key](/ssh-keys) to your Pantheon Personal Settings.
 
@@ -57,28 +57,28 @@ Set up your SSH tunnel in Terminus:
     SITE=$1
     if [ x$SITE = x ]; then
       echo "USAGE:
-  
+
   terminus-sql-cli site-shortname environment
-  
+
   Open a mysql connection to a site.
-  
+
     site-shortname: REQUIRED: If your site is dev-example.pantheon.io
                     this would be \"example\" .
-  
+
     environment:    Defaults to \"dev\".
   "
       return
     fi
-  
+
     ENV=$2
     if [ -z "$ENV" ]; then
       ENV="dev"
     fi
-  
+
     if [ "$ENV" != "live" ]; then
       terminus env:wake $SITE.$ENV
     fi
-  
+
     $(terminus connection:info $SITE.$ENV --fields=mysql_command --format=string) -A --ssl
   }
   alias tsqlc=terminus-sql-cli
@@ -196,6 +196,6 @@ Review [Port 2222 Blocked Workaround](/guides/sftp/port-2222) for more informati
 
 - [MySQL database](/guides/mariadb-mysql/mysql-access) (dbserver)
 
-- [Redis cache](/guides/object-cache)
+- [Redis cache](/redis)
 
 - [Secure Runtime Access](/guides/secure-development/secure-runtime-access)

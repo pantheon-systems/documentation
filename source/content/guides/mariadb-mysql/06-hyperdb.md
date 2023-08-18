@@ -38,7 +38,7 @@ Keep in mind, HyperDB is a powerful tool with several tuning options based on da
 
 ## Install and Configure HyperDB
 
-A Customer Success Manager (CSM) must change your site service level to Elite before you can install HyperDB. The Pantheon platform will automatically configure and manage your primary and replica databases. [Contact us](https://pantheon.io/contact-us) to learn more about service levels and how a CSM can help. 
+A Customer Success Manager (CSM) must change your site service level to Elite before you can install HyperDB. The Pantheon platform will automatically configure and manage your primary and replica databases. [Contact us](https://pantheon.io/contact-us) to learn more about service levels and how a CSM can help.
 
 Complete the steps below after your site service level has been updated to Elite.
 
@@ -86,7 +86,7 @@ if ( ! empty( $_ENV['REPLICA_DB_HOST'] ) ) {
 ### Pass Frontend Read Queries to Replica, WordPress Dashboard Reads and Writes to Primary
 You can pass all frontend database read queries to the replica. This leaves the primary database dedicated to WordPress dashboard reads and writes. This setup can help ensure WordPress dashboard availability during times of high frontend load.
 
-You should use [some form of cache fallback](/guides/object-cache) if reads to the replica begin failing.
+You should use [some form of cache fallback](/redis/wp) if reads to the replica begin failing.
 
 ```php
 <?php

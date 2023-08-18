@@ -3,7 +3,7 @@ title: Launch Essentials
 subtitle: Pre-launch Configuration
 description: Complete important configuration before launching your site.
 tags: [backup, launch, webops]
-showtoc: true 
+showtoc: true
 permalink: docs/guides/launch/launch-check/
 contenttype: [guide]
 innav: [false]
@@ -58,9 +58,9 @@ Refer to [Drupal Launch Check](/drupal-launch-check) and [WordPress Launch Check
 
 ### Enable Object Cache
 
-Pantheon's [Object Cache (formerly Redis)](/guides/object-cache) provides an alternative, drop-in caching backend for your website. This removes caching work from the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers, including managing queues and custom caching.
+Pantheon's [Redis object caching)](/redis) provides an alternative, drop-in caching backend for your website. This removes caching work from the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers, including managing queues and custom caching.
 
-All plans except for a Basic plan can use Object Cache. Object Cache is available to Sandbox plans for developmental purposes, but will not be available going live on a Basic plan.
+All paid plans except for a Basic plan can use Object Cache. 
 
 ### Configure Caching
 

@@ -22,7 +22,7 @@ The Drupal system configuration in code is set in the `sites/default/settings.ph
 
 ## Drupal (Latest Version)
 
-Drupal sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. Your site will stop working on Pantheon if the stock `settings.php` file is used in place of the bundled file. 
+Drupal sites on Pantheon run an unmodified version of core, bundled with a custom `settings.php` file that includes the necessary `settings.pantheon.php`. Your site will stop working on Pantheon if the stock `settings.php` file is used in place of the bundled file.
 
 ## Drupal 7 and Earlier
 
@@ -33,7 +33,7 @@ Pantheon uses a variant of [Pressflow](https://www.pressflow.org/) Drupal for Dr
 Review the following articles for techniques and configurations for your `settings.php` file on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) (including domain_access)
-- [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
+- [Enable Redis for Drupal](/redis/drupal)
 - [Platform and Custom Domains](/guides/domains)
 - [Configure Redirects](/guides/redirect)
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
@@ -86,9 +86,9 @@ Don't use the code snippet if you're using the Drupal redirects from our [Config
 
 </Alert>
 
-1. Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, and adjust patterns as needed. 
+1. Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, and adjust patterns as needed.
 
-1. Escape any characters that need to be escaped in regular expressions, including dots (`.`). 
+1. Escape any characters that need to be escaped in regular expressions, including dots (`.`).
 
 
 ```php
@@ -131,19 +131,19 @@ Yes, but only if at least one other file (for example, `settings.php`) is presen
 
 ### How can I write logic based on the Pantheon server environment?
 
-There are three possibilities depending on your use case: 
+There are three possibilities depending on your use case:
 
 - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). Refer to our [Redirects](/guides/domains) guide for examples.
 
   <Alert title="Note" type="info">
-  
+
   `$_SERVER` is not generally available from the command line so [logic should check for that when used](/guides/domains), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/server_name-and-server_port).
-  
+
   </Alert>
 
-- For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. It will contain Dev, Test, or Live. Refer to the [Object Cache](/guides/object-cache) guide for examples.
+- For actions that should take place on every environment, such as object caching, use the constant `PANTHEON_ENVIRONMENT`. It will contain Dev, Test, or Live. Refer to the [Object Cache](/redis/drupal) guide for examples.
 
-- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or refer to our [Object Cache](/guides/object-cache) guide for examples.
+- For Actions that require access to protected services like Object Cache or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config) for more information, or refer to our [Object Cache](/redis/drupal) guide for examples.
 
 As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. Refer to [Defining variables in a site's settings.php $conf array](https://www.drupal.org/node/1525472) for more information.
 
@@ -289,7 +289,7 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 
 ## More Resources
 
-- [Object Cache](/guides/object-cache)
+- [Object Cache](/redis/drupal)
 
 - [PHP Slow Log](/guides/php/php-slow-log)
 

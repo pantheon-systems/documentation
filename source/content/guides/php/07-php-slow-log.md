@@ -106,7 +106,7 @@ Make sure that you have:
   [0x0000000005fb4600] drupal_deliver_html_page() /code/includes/common.inc:2589
   [0x0000000005fb3f50] drupal_deliver_page() /code/includes/menu.inc:532
   [0x0000000005fb3d70] menu_execute_active_handler() /code/index.php:21
-  
+
   [08-Dec-2014 16:56:48]  [pool www] pid 3883
   script_filename = /code/index.php
   [0x00000000027b95a0] realpath() /code/includes/stream_wrappers.inc:377
@@ -153,4 +153,4 @@ By using these methods and files to find your PHP errors and performance issues,
 
 - [PHP Errors and Exceptions](/guides/php/php-errors)
 
-- [Object Cache](/guides/object-cache)
+- [Object Cache](/redis)

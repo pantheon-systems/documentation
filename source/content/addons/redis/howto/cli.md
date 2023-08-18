@@ -1,20 +1,19 @@
 ---
-title: Object Cache (formerly Redis)
-subtitle: Use the Redis Command Line
-description: Use the Redis Command Line to manage Object Cache.
-contenttype: [guide]
-innav: [false]
+title: Use the Redis CLI
+description: How to use the Redis Command Line to manage Object Cache.
+permalink: docs/redis/cli
+tags: [cache, plugins, modules, database]
+reviewed: "2023-08-17"
+contenttype: [doc]
+innav: [true]
 categories: [cache]
 cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 showtoc: true
-permalink: docs/guides/object-cache/redis-command-line
 ---
-
 This section provides information on how to use the Redis Command Line to manage Object Cache.
 
 ## Use the Redis Command-Line Client
@@ -80,7 +79,7 @@ Drupal deletes and regenerates cached entries during a cache rebuild or cache cl
 
 #### WordPress
 
-If [WP Redis](https://wordpress.org/plugins/wp-redis/) or [Object Cache Pro](/guides/object-cache-pro/) are installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
+If [WP Redis](https://wordpress.org/plugins/wp-redis/) or [Object Cache Pro](/redis/wp/) are installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
 
 Refer to the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup method if necessary.
 
@@ -182,3 +181,18 @@ Biggest   hash found 'myobject' has 3 fields
 1 hashs with 3 fields (00.20% of keys, avg size 3.00)
 0 zsets with 0 members (00.00% of keys, avg size 0.00)
 ```
+
+## More Resources
+- [Performance Addons](/addons)
+- [Redis Object Cache Overview](/redis)
+<hr/>
+
+**How-to Guides**:
+- [Enable Object Cache Pro for WordPress](/redis/wp)
+- [Enable Redis for Drupal](/redis/drupal)
+- [Safely Remove Redis](/redis/remove)
+<hr/>
+
+**References**:
+- [Redis Errors](/redis/errors)
+- [Redis FAQs](/redis/faq)

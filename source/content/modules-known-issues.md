@@ -205,7 +205,7 @@ ___
 
 **Solution 2**: Break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 
-1. [Enable the Object Cache](/guides/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
+1. [Enable the Object Cache](/redis/drupal), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
 1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```php:title=imce.page.inc
@@ -411,7 +411,7 @@ ___
 
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. Refer to [Pantheon's Global CDN](/guides/global-cdn) documentation. 
+**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. Refer to [Pantheon's Global CDN](/guides/global-cdn) documentation.
 ___
 
 ## [Views data export](https://www.drupal.org/project/views_data_export)

@@ -443,7 +443,7 @@ ___
   ln -s ./uploads/cache ./cache
   ```
 
-1. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/guides/object-cache/redis-command-line#clear-cache). Earlier versions have this option in the Fast Velocity Minify's **Settings** tab for the **Cache Location**.
+1. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/redis/cli#clear-cache). Earlier versions have this option in the Fast Velocity Minify's **Settings** tab for the **Cache Location**.
 
 **Solution 2:** The `FVM_CACHE_DIR` and `FVM_CACHE_URL` variables are available to override the cache location to address this [bug](https://github.com/peixotorms/fast-velocity-minify/issues/7) as of version 3.3.3.
 

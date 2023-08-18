@@ -102,7 +102,7 @@ Run the code below to clean up your transient data:
 
  ### Avoid Using Transient Data
 
- You can use Pantheon's [Object Cache](/guides/object-cache) to minimize the use of transient data inside the `wp_options` table.
+ You can use Pantheon's [Object Cache Pro](/redis/wp) to minimize the use of transient data inside the `wp_options` table.
 
  ### Use Pantheon's Professional Services
 

@@ -1,18 +1,18 @@
 ---
-title: Object Cache (formerly Redis)
-subtitle: FAQs
-description: Get answers to your Object Cache questions.
-contenttype: [guide]
-innav: [false]
+title: Redis Object Cache FAQs
+description: Review frequently asked questions on Redis object caching.
+permalink: docs/redis/faq
+tags: [cache, plugins, modules, database]
+reviewed: "2023-08-17"
+contenttype: [doc]
+innav: [true]
 categories: [cache]
 cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 showtoc: true
-permalink: docs/guides/object-cache/faq-object-cache
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 ---
 
 This section provides answers to frequently asked Object Cache questions.
@@ -21,13 +21,10 @@ This section provides answers to frequently asked Object Cache questions.
 
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
-| Sandbox*               |               64           |
 | Basic                  |               N/A          |
 | Performance Small      |               256          |
 | Performance M, L, XL   |               512          |
 | Elite                  |               1024         |
-
-*Object Cache is available on free Sandbox plans for usage during development and will remain available through upgrades to any other plan except for Basic. Refer to the [Object Cache Requirements](/guides/object-cache#object-cache-requirements) section for details about which account types have Object Cache on paid plans.
 
 ### What Happens When Object Cache Reaches Maxmemory?
 
@@ -88,9 +85,21 @@ sftp>
 
 ### Why won't my site work after importing a database backup?
 
-When you replace the database with one that doesn't match the Object Cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the Object Cache from the command line](/guides/object-cache/redis-command-line#clear-cached-data).
+When you replace the database with one that doesn't match the Object Cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush the Object Cache from the command line](/redis/cli#clear-cached-data).
 
 ## More Resources
+- [Performance Addons](/addons)
+- [Redis Object Cache Overview](/redis)
 
+**How-to Guides**:
+- [Enable Object Cache Pro for WordPress](/redis/wp)
+- [Enable Redis for Drupal](/redis/drupal)
+- [Use the Redis CLI](/redis/cli)
+- [Safely Remove Redis](/redis/remove)
+
+**References**:
+- [Redis Errors](/redis/errors)
+
+**See Also**:
 - [Plan Resources](/guides/account-mgmt/plans/faq#plan-resources)
 - [Platform Considerations](/guides/platform-considerations)

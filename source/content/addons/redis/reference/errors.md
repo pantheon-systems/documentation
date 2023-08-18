@@ -1,20 +1,19 @@
 ---
-title: Object Cache (formerly Redis)
-subtitle: Troubleshoot
+title: Redis Object Cache Errors
 description: Review solutions to common troubleshooting scenarios for Object Cache.
-contenttype: [guide]
-innav: [false]
-categories: [cache, troubleshooting]
+permalink: docs/redis/errors
+tags: [cache, plugins, modules, database]
+reviewed: "2023-08-17"
+contenttype: [doc]
+innav: [true]
+categories: [cache]
 cms: [--]
 audience: [development]
 product: [--]
 integration: [--]
-tags: [cache, plugins, modules, database]
-contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 showtoc: true
-permalink: docs/guides/object-cache/troubleshoot-object-cache
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 ---
-
 This section provides solutions to common troubleshooting scenarios for Object Cache.
 
 ### Redis Busy Error for Drupal Users
@@ -23,9 +22,12 @@ Redis busy errors are caused by large amounts of cached data. Setting the Minimu
 
 Refer to the [Minimum Cache Lifetime](/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](/drupal-cache) documentation for more information about this setting.
 
-### Cannot Activate the Redis Plugin for WordPress
+### Cannot Activate WP Redis Plugin for WordPress
+[WP Redis](/redis/wp-deprecated), while still actively maintained, is no longer the preferred method for enabling Redis object caching for WordPress on Pantheon.
 
-WP Redis is a drop-in plugin that should only be loaded using the installation methods in [Enable Object Cache](/guides/object-cache/enable-object-cache). Note that wp-redis and OCP both have mandatory drop-in plugins, but these plugins are _not_ interchangeable. No activation is required.
+Instead, use [Object Cache Pro](/redis/wp).
+
+Note that both WP Redis and Object Cache Pro both have mandatory drop-in plugins, but these plugins are _not_ interchangeable. No activation is required.
 
 ### RedisException: Redis server went away
 
@@ -119,7 +121,7 @@ This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `
 
 ### Out of Memory Errors
 
-You can use the `info memory` option to view your site's memory metrics. Running out of storage is a regular occurrance and is handled by the eviction policy. Memory limits per plan and more details about the eviction policy are in the [Object Cache FAQs](/guides/object-cache/faq-object-cache#how-much-object-cache-is-available-for-each-plan-level)
+You can use the `info memory` option to view your site's memory metrics. Running out of storage is a regular occurrance and is handled by the eviction policy. Memory limits per plan and more details about the eviction policy are in the [Object Cache FAQs](/redis/faq#how-much-object-cache-is-available-for-each-plan-level)
 
 Run the following command to access your site's memory usage metrics:
 
@@ -135,6 +137,18 @@ Run the following command to access your site's memory usage metrics:
   ```
 
 ## More Resources
+- [Performance Addons](/addons)
+- [Redis Object Cache Overview](/redis)
 
+**How-to Guides**:
+- [Enable Object Cache Pro for WordPress](/redis/wp)
+- [Enable Redis for Drupal](/redis/drupal)
+- [Use the Redis CLI](/redis/cli)
+- [Safely Remove Redis](/redis/remove)
+
+**References**:
+- [Redis FAQs](/redis/faq)
+
+**See Also**:
 - [Basic Troubleshooting](/basic-troubleshooting)
 - [PHP Errors and Exceptions](/guides/php/php-errors)

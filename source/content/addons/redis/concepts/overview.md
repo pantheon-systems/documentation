@@ -1,0 +1,66 @@
+---
+title: Redis Object Cache Overview
+description: Learn about the benefits and requirements of Redis object caching on Pantheon.
+permalink: docs/redis
+tags: [cache, plugins, modules, database]
+reviewed: "2023-08-17"
+contenttype: [doc]
+innav: [true]
+categories: [cache]
+cms: [--]
+audience: [development]
+product: [--]
+integration: [--]
+showtoc: true
+contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
+---
+Pantheon's Object Cache performance addon service is an open-source, networked, in-memory, key-value data store based on Redis that can be used as a drop-in caching backend for your Drupal or WordPress website.
+
+## Benefits of Object Cache
+
+Most website frameworks like Drupal and WordPress use databases to cache internal application objects along with queries for normal page requests, which causes increased load-times.
+
+Object Cache remembers, or caches, any queries to the server after a Drupal or WordPress page is loaded for the first time. When another user loads the page, the results are provided from the Object Cache which is stored in memory without querying the database again. This results in much faster page load times, and less server impact on database resources.
+
+### Scalable Performance
+
+Object Cache provides an alternative caching backend that resides in memory rather than a database that stores data on a disk or a solid-state drive (SSD). By eliminating the need to access disks, Object Cache avoids seek time delays and can access data in microseconds. This improves performance for dynamic pages and logged-in users. It also provides a number of other features for developers looking to use it to manage queues, or perform custom caching of their own.
+
+## Object Cache Requirements
+
+All paid plans, except for the Basic plan, can use Object Cache.
+
+| Plans         | Object Cache Support <Popover content="Available across all environments, including Multidevs."/> |
+| ------------- | -------------------------------------- |
+| Basic         | ❌                                 |
+| Performance   | <span style="color:green">✔</span> |
+| Elite         | <span style="color:green">✔</span> |
+
+## WordPress Object Cache Pro
+Object Cache Pro is a highly optimized premium WordPress plugin that integrates with Redis for business class performance. It provides an easy-to-use administration page with analytics to show current benchmarks. Object Cache Pro is specifically optimized for WordPress and popular WordPress plugins, including:
+
+- Query Monitor
+- WooCommerce
+- Jetpack
+- Yoast SEO
+
+![Object Cache Pro admin page](../../../../images/guides/object-cache-pro/object-cache-pro-analytics.png)
+
+### How does WordPress Object Cache Pro work?
+
+WordPress Object Cache Pro reduces page load time and the overall load on Redis by combining Redis commands into server request batches.
+
+Object Cache Pro also optimizes for performance, using compressed data to maintain a small footprint in memory, while avoiding unnecessary Redis reads and writes. Object Cache Pro has been tested extensively against WooCommerce, is fully compliant with the WordPress Object Cache API, and integrates seamlessly into WordPress.
+
+## More Resources
+
+**How-to Guides**:
+- [Enable Object Cache Pro for WordPress](/redis/wp)
+- [Enable Redis for Drupal](/redis/drupal)
+- [Use the Redis CLI](/redis/cli)
+- [Safely Remove Redis](/redis/remove)
+<hr/>
+
+**References**:
+- [Redis Errors](/redis/errors)
+- [Redis FAQs](/redis/faq)
