@@ -128,7 +128,7 @@ const Footer = ({ data }) => {
                 onClick="sampleClick()"
               />
             </Form>
-            <div className="pds-form pds-spacing-mar-block-start-3xl">
+            <div className="pds-form pds-form--marketo pds-spacing-mar-block-start-3xl">
               <MarketoForm
                 baseUrl="https://app-ab05.marketo.com"
                 munchkinId="316-GSV-089"
