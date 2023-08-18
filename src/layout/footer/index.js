@@ -118,11 +118,6 @@ const Footer = ({ data }) => {
                 type="email"
                 label="Email address"
               />
-              <Button
-                label="Subscribe"
-                buttonType="submit"
-                onClick="sampleClick()"
-              />
             </Form>
           </div>
         </div>
