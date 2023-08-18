@@ -98,6 +98,33 @@ const Footer = ({ data }) => {
               />
             </FlexContainer>
           </div>
+          <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-4">
+            <FooterHeading
+              headingText="Connect"
+              headingLevel="h2"
+              className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
+            />
+            <p className="footer-form-intro pds-ts-s">
+              Awesome development news, tutorials, and tips. Plus get 3 free
+              downloads, just for signing up. If you don't love it, unsubscribe
+              with just a click.
+            </p>
+            <Form
+              layout="single-field"
+              className="pds-spacing-mar-block-start-3xl"
+            >
+              <InputText
+                id="subscribe-email-footer"
+                type="email"
+                label="Email address"
+              />
+              <Button
+                label="Subscribe"
+                buttonType="submit"
+                onClick="sampleClick()"
+              />
+            </Form>
+          </div>
         </div>
       </SiteFooter>
     </>
