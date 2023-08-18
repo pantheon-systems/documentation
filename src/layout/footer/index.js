@@ -109,18 +109,32 @@ const Footer = ({ data }) => {
               downloads, just for signing up. If you don't love it, unsubscribe
               with just a click.
             </p>
-            <Form
-              layout="single-field"
-              className="pds-spacing-mar-block-start-3xl"
-            >
-              <InputText
-                id="subscribe-email-footer"
-                type="email"
-                label="Email address"
+            <div className="pds-form pds-form--marketo pds-spacing-mar-block-start-3xl">
+              <MarketoForm
+                baseUrl="https://app-ab05.marketo.com"
+                munchkinId="316-GSV-089"
+                formId={2014}
+                formName="mktoForm_2014"
               />
-              <Button label="Subscribe" buttonType="submit" />
-            </Form>
+            </div>
+            <SocialLinks className="pds-spacing-mar-block-start-xl" />
           </div>
+        </div>
+
+        <div className="cc-license pds-spacing-mar-block-start-5xl">
+          <div className="cc-license__logo">
+            {CCLogo && (
+              <img
+                src={CCLogo.node.publicURL}
+                alt="Creative Commons Attribution-ShareAlike Logo"
+              />
+            )}
+          </div>
+          <p className="cc-license__text pds-ts-s">
+            Our Documentation is licensed under a Creative Commons
+            Attribution-ShareAlike 4.0 International License. Code snippets are
+            additionally licensed under The MIT License.
+          </p>
         </div>
       </SiteFooter>
     </>
