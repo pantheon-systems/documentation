@@ -118,6 +118,7 @@ const Footer = ({ data }) => {
                 type="email"
                 label="Email address"
               />
+              <Button label="Subscribe" buttonType="submit" />
             </Form>
           </div>
         </div>
