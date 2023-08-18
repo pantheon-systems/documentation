@@ -71,7 +71,7 @@ const Footer = ({ data }) => {
         primaryLink={primaryCTA}
         secondaryLink={secondaryCTA}
       />
-      {/* <SiteFooter containerWidth="wide">
+      <SiteFooter containerWidth="wide">
         <div className="pds-footer__links-area pds-grid pds-grid--wide">
           <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
             <FlexContainer
@@ -98,60 +98,8 @@ const Footer = ({ data }) => {
               />
             </FlexContainer>
           </div>
-          <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-4">
-            <FooterHeading
-              headingText="Connect"
-              headingLevel="h2"
-              className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
-            />
-            <p className="footer-form-intro pds-ts-s">
-              Awesome development news, tutorials, and tips. Plus get 3 free
-              downloads, just for signing up. If you don't love it, unsubscribe
-              with just a click.
-            </p>
-            <Form
-              layout="single-field"
-              className="pds-spacing-mar-block-start-3xl"
-            >
-              <InputText
-                id="subscribe-email-footer"
-                type="email"
-                label="Email address"
-              />
-              <Button
-                label="Subscribe"
-                buttonType="submit"
-                onClick="sampleClick()"
-              />
-            </Form>
-            <div className="pds-form pds-form--marketo pds-spacing-mar-block-start-3xl">
-              <MarketoForm
-                baseUrl="https://app-ab05.marketo.com"
-                munchkinId="316-GSV-089"
-                formId={2014}
-                formName="mktoForm_2014"
-              />
-            </div>
-            <SocialLinks className="pds-spacing-mar-block-start-xl" />
-          </div>
         </div>
-
-        <div className="cc-license pds-spacing-mar-block-start-5xl">
-          <div className="cc-license__logo">
-            {CCLogo && (
-              <img
-                src={CCLogo.node.publicURL}
-                alt="Creative Commons Attribution-ShareAlike Logo"
-              />
-            )}
-          </div>
-          <p className="cc-license__text pds-ts-s">
-            Our Documentation is licensed under a Creative Commons
-            Attribution-ShareAlike 4.0 International License. Code snippets are
-            additionally licensed under The MIT License.
-          </p>
-        </div>
-      </SiteFooter> */}
+      </SiteFooter>
     </>
   )
 }
