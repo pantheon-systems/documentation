@@ -9,5 +9,13 @@
 }
 
 .cc-license__logo img {
-  width: 7rem;
+  width: 6rem;
+}
+
+.cc-license__text {
+  padding-block-start: 0.5rem;
+  line-height: var(--pds-typography-line-height-m);
+}
+
+.pds-form--marketo {
 }
