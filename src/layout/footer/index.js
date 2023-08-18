@@ -48,10 +48,6 @@ const communityLinks = [
 ]
 
 const Footer = ({ data }) => {
-  const pantheonLogo = data.allFile.edges.find(
-    (file) => file.node.publicURL.indexOf("pantheon-logo-symbol") > -1
-  )
-
   const CCLogo = data.allFile.edges.find(
     (file) => file.node.publicURL.indexOf("CC-BY-SA_icon") > -1
   )
@@ -164,13 +160,7 @@ export default (props) => (
   <StaticQuery
     query={graphql`
       {
-        allFile(
-          filter: {
-            relativePath: {
-              in: ["pantheon-logo-symbol.svg", "CC-BY-SA_icon.png"]
-            }
-          }
-        ) {
+        allFile(filter: { relativePath: { in: ["CC-BY-SA_icon.png"] } }) {
           edges {
             node {
               id
