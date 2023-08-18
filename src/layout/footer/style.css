@@ -63,7 +63,7 @@
   padding-left: 0;
 }
 .office-hours {
-  background: #efd01b;
+  background: #ccc;
   text-align: center;
   color: #181d21;
   font-family: "TabletGothic";
@@ -589,7 +589,7 @@
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   border: 0;
   color: #000;
   background: #fff;
