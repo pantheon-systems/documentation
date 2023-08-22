@@ -6,7 +6,7 @@ import SEO from "../layout/seo"
 
 class Search extends React.Component {
   componentDidMount() { //On page load...
-
+/*
     window.addsearch_settings = {
       "search_widget": {
         "placeholder": "Search Pantheon Docs",
@@ -33,7 +33,67 @@ class Search extends React.Component {
   script.setAttribute("defer", true)
 
   document.body.appendChild(script)
+*/
+    const script2 = document.createElement("script") // Loads the Addsearch JS blob from them
+    script2.setAttribute(
+      "src",
+      `https://cdn.jsdelivr.net/npm/addsearch-js-client@0.8/dist/addsearch-js-client.min.js`
+    )
+    //script2.setAttribute("defer", true)
+    document.body.appendChild(script2)
+
+
+    const script3 = document.createElement("script") // Loads the Addsearch JS blob from them
+    script3.setAttribute(
+      "src",
+      `https://cdn.jsdelivr.net/npm/addsearch-search-ui@0.7/dist/addsearch-search-ui.min.js`
+    )
+   // script3.setAttribute("defer", true)
+    script3.onload = () => this.addSearchStuff();
+   document.body.appendChild(script3)
+
+
+    const link = document.createElement("script") // Loads the Addsearch JS blob from them
+    link.setAttribute(
+      "href",
+      `https://cdn.jsdelivr.net/npm/addsearch-search-ui@0.7/dist/addsearch-search-ui.min.css`
+    )
+    link.setAttribute("rel", 'stylesheet')
+
+    //alert('mount up');
+    document.body.appendChild(link)
+
+
+
+
+
+
 }
+ addSearchStuff() {
+  alert('add it');
+   var client = new AddSearchClient('a7b957b7a8f57f4cc544c54f289611c6');
+
+   // Search UI instance
+   var searchui = new AddSearchUI(client);
+
+   // Add components
+   searchui.searchField({
+     containerId: 'searchfield',
+     placeholder: 'Keyword..',
+     button: 'Search',
+     searchAsYouType: true
+   });
+   searchui.searchResults({
+     containerId: 'results'
+   });
+   searchui.pagination({
+     containerId: 'pagination'
+   });
+
+   // All components added. Start
+   searchui.start();
+
+ }
 
 
 
@@ -44,13 +104,13 @@ class Search extends React.Component {
         <div style={{ marginTop: "-20px" }} className="container">
           <main className=" doc-content-well" id="docs-main">
             <div className="">
-              <h1 className="title">Search Results</h1>
+              <h1 className="title">Search Results:asdfasdf</h1>
             </div>
             <div className="" style={{ marginBottom: "15px" }}></div>
             <div className=" mb-70">
               <div className="">
                 <div className="container">
-                  <div className="row">
+                  <div className="row" id="results">
                   </div>
                 </div>
               </div>
