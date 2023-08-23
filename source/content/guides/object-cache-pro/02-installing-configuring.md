@@ -81,7 +81,7 @@ terminus redis:enable <site>
 
 	**WordPress Admin:**
 
-	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu.
+	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu. **Note:** WordPress Multisite users will need to go to the **Network Admin Plugins** page and _network activate_ **Object Cache Pro** from there. In order to access the **Network Admin**, you must be logged in as a **Super Admin**.
 
 	**Terminus:**
 
@@ -93,6 +93,8 @@ terminus redis:enable <site>
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
+
+	**Note:** WordPress Multisite users will need to append the `--network` flag to network activate the plugin.
 
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
