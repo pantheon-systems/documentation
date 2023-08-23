@@ -59,7 +59,7 @@ terminus redis:enable <site>
    	<Alert title="Note" type="info">
     Your local version of Terminus must be 3.2 or higher.
     </Alert>
-   
+
 	```bash
 	terminus self:plugin:install terminus-addons-installer-plugin
 	```
@@ -71,11 +71,17 @@ terminus redis:enable <site>
 
 1. Wait for the workflow to run. The terminus command will only trigger the workflow, but the progress is visible in the **Pantheon Site Dashboard** in the **Workflows** dropdown. This will take some time to complete
 
+  <Alert title="Note" type="info">
+
+  If the workflow text in the dashboard turns red, it did not succeed. Please [create a ticket with support](/guides/support/contact-support/#ticket-support) to debug this further.
+
+  </Alert>
+
 1. Once complete, activate the Object Cache Pro plugin from the WordPress Admin or via WP-CLI through Terminus.
 
 	**WordPress Admin:**
 
-	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu.
+	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu. **Note:** WordPress Multisite users will need to go to the **Network Admin Plugins** page and _network activate_ **Object Cache Pro** from there. In order to access the **Network Admin**, you must be logged in as a **Super Admin**.
 
 	**Terminus:**
 
@@ -87,6 +93,8 @@ terminus redis:enable <site>
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
+
+	**Note:** WordPress Multisite users will need to append the `--network` flag to network activate the plugin.
 
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
@@ -249,8 +257,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		'maxttl' => 86400 * 7,
 		'timeout' => 0.5,
 		'read_timeout' => 0.5,
-		'retries' => 3,
-		'backoff' => 'smart',
 		'split_alloptions' => true,
 		'prefetch' => true,
 		'debug' => false,
@@ -264,6 +270,8 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		'prefix' => "ocppantheon", // This prefix can be changed. Setting a prefix helps avoid conflict when switching from other plugins like wp-redis.
 		'serializer' => 'igbinary',
 		'compression' => 'zstd',
+ 		'async_flush' => true,
+ 		'strict' => true,
 	```
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
@@ -321,7 +329,7 @@ For normal WordPress installations, you will need to do the following:
 	```
 ### Composer-Managed WordPress Multisite
 
-You must add a line to your `composer.json` file if you have Composer-managed WordPress multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed).
+You must add a line to your `composer.json` file if you have Composer-managed WordPress Multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed).
 
 1. Navigate to the `"extra"` section of your `composer.json` file and add `"rhubarbgroup/object-cache-pro"` to the installer path for `"web/app/mu-plugins/{$name}"`. Your final `"installer-paths"` might look like this:
 
@@ -335,9 +343,26 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
 	```
+## Known Issues and Workarounds
+### `terminus install:run <site>.<env> ocp` fails to install Object Cache Pro on _subdomain Multisites_
+While most of the time, the Terminus command runs on single or WordPress Multisites without issues, we have observed the workflow failing when _the Pantheon platform url_ (e.g. `dev-mysite.pantheonsite.io`) does not match the _site URL stored in the database_. This might happen if vanity domains are configured for the non-live (e.g. `dev.mysite.com`). This can be observed when the link provided to the site from the Pantheon dashboard does not match the WordPress site URL. To check the URL stored in the database, you can run `terminus wp -- <site>.<env> option get siteurl`.
+
+#### Workaround
+The workaround for getting the Terminus command to succeed when the Pantheon platform URL does not match the URL stored in the database is to temporarily replace the vanity URL in the development database with the platform dev URL, running the Terminus command again to install Object Cache Pro, and then restoring the database from a backup or pulling it down from live.
+
+1. Make a [database backup](https://docs.pantheon.io/guides/backups/create-backups) before you begin.
+1. Run the `wp search-replace` command via Terminus:
+
+		```bash{promptUser: user}
+		terminus wp -- <site>.<env> search-replace <old-url> <new-url> --all-tables --network
+		```	
+	
+	In this example the `<old-url>` represents your custom **vanity domain** and the `<new-url>` you are changing it _to_ represents the Pantheon platform domain (e.g. `dev-mysite.pantheonsite.io`). You do not need to include the protocols (e.g. `http`/`https`) in the URLs. You may wish to append `--dry-run` to the command initially if you would like to test the command and see how many changes will be made before running.
+1. Re-run the `terminus install:run <site>.<env> ocp` command and wait for the workflow to finish.
+1. After the workflow has finished, assuming Object Cache Pro was installed successfully, you can pull your database down from your live environment (if it exists, see the [WordPress Multisite Search and Replace](https://docs.pantheon.io/guides/multisite/search-replace/) documentation for more information about that process), re-run the `search-replace` command above, swapping the `<old-url>` and `<new-url>` values, or you may simply [restore your backup](https://docs.pantheon.io/guides/backups/restore-from-backup)
 
 ### Additional Considerations
-- When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`. 
+- When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`.
 	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
     - To summarize, the full order of steps are:
       1. Disable wp-redis or other redis plugins if present
@@ -347,7 +372,7 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
 - Flushing the network cache from the network admin will flush all caches across the network.
 - Subsites do not get their own configuration or graphs.
-- If installed as a normal plugin on a WordPress multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
+- If installed as a normal plugin on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
 - You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
 - As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications. Updates must be handled manually.
 
