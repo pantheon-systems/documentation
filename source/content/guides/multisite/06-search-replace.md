@@ -30,7 +30,7 @@ If your `pantheon.yml` file is different between environments, the `search_repla
 </Alert>
 
 ## Defaults
-See the following Search and Replace defaults for new and existing WordPress Site Networks on Pantheon:
+See the following Search and Replace defaults for new and existing WordPress Multisites on Pantheon:
 
 | WP Multisite Configuration      | Default Search and Replace |
 | ------------- | -------------------------------------- |
