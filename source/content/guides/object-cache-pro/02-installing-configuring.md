@@ -348,7 +348,7 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 While most of the time, the Terminus command runs on single or WordPress multisites without issues, we have observed the workflow failing when _the Pantheon platform url_ (e.g. `dev-mysite.pantheonsite.io`) does not match the _site URL stored in the database_. This might happen if vanity domains are configured for the non-live (e.g. `dev.mysite.com`). This can be observed when the link provided to the site from the Pantheon dashboard does not match the WordPress site URL. To check the URL stored in the database, you can run `terminus wp -- <site>.<env> option get siteurl`.
 
 #### Workaround
-The workaround for getting the Terminus command to succeed when the Pantheon platform URL does not match the URL stored in the database is to temporarily replace the vanity URL in the database with the platform URL, running the Terminus command again to install Object Cache Pro, and then re-running the search & replace (or restoring a database backup).
+The workaround for getting the Terminus command to succeed when the Pantheon platform URL does not match the URL stored in the database is to temporarily replace the vanity URL in the development database with the platform dev URL, running the Terminus command again to install Object Cache Pro, and then restoring the database from a backup or pulling it down from live.
 
 1. Make a [database backup](https://docs.pantheon.io/guides/backups/create-backups) before you begin.
 1. Run the `wp search-replace` command via Terminus:
@@ -359,7 +359,7 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
 	
 	In this example the `<old-url>` represents your custom **vanity domain** and the `<new-url>` you are changing it _to_ represents the Pantheon platform domain (e.g. `dev-mysite.pantheonsite.io`). You do not need to include the protocols (e.g. `http`/`https`) in the URLs. You may wish to append `--dry-run` to the command initially if you would like to test the command and see how many changes will be made before running.
 1. Re-run the `terminus install:run <site>.<env> ocp` command and wait for the workflow to finish.
-1. After the workflow has finished, assuming Object Cache Pro was installed successfully, you can re-run the `search-replace` command above, swapping the `<old-url>` and `<new-url>` values, or you may simply [restore your backup](https://docs.pantheon.io/guides/backups/restore-from-backup)
+1. After the workflow has finished, assuming Object Cache Pro was installed successfully, you can pull your database down from your live environment (if it exists, see the [WordPress Multisite Search and Replace](https://docs.pantheon.io/guides/multisite/search-replace/) documentation for more information about that process), re-run the `search-replace` command above, swapping the `<old-url>` and `<new-url>` values, or you may simply [restore your backup](https://docs.pantheon.io/guides/backups/restore-from-backup)
 
 ### Additional Considerations
 - When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`.
