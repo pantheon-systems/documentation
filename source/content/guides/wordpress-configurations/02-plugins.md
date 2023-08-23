@@ -35,6 +35,21 @@ Refer to [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpres
 
 [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) automatically clears related pages from Pantheon's Edge when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be served immediately to anonymous visitors.
 
+### Disable Surrogate Keys for Taxonomy Terms
+Setting surrogate keys for posts with large numbers of taxonomies (such as WooCommerce products with a large number of global attributes) can suffer from slower queries. Surrogate keys can be skipped for 'product' post types' taxonomy terms (or any other criteria you see fit) with the following filter:
+
+```php
+function custom_should_add_terms($should_add_terms, $wp_query) {
+    if ( $wp_query->is_singular( 'product' ) ) {
+        return false;
+    }
+    return $should_add_terms;
+}
+add_filter('pantheon_should_add_terms', 'custom_should_add_terms', 10, 2);
+```
+
+For additional details, refer to the [plugin README file](https://github.com/pantheon-systems/pantheon-advanced-page-cache#140).
+
 ## Pantheon HUD
 
 [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard. This plugin also provides quick access to interface with your WordPress installation via the command line:
