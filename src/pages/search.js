@@ -70,7 +70,7 @@ class Search extends React.Component {
 
 }
  addSearchStuff() {
-  alert('add it');
+  //alert('add it');
    var client = new AddSearchClient('a7b957b7a8f57f4cc544c54f289611c6');
 
    // Search UI instance
@@ -104,7 +104,7 @@ class Search extends React.Component {
         <div style={{ marginTop: "-20px" }} className="container">
           <main className=" doc-content-well" id="docs-main">
             <div className="">
-              <h1 className="title">Search Results:asdfasdf</h1>
+              <h1 className="title">Search Results:</h1>
             </div>
             <div className="" style={{ marginBottom: "15px" }}></div>
             <div className=" mb-70">
