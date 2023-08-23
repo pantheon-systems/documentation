@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 import AddSearch from "../../components/addSearch"
+import AddSearch2023 from "../../components/addSearch2023"
 
 const Header = ({ data, page }) => (
   <>

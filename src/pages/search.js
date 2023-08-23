@@ -73,8 +73,13 @@ class Search extends React.Component {
   //alert('add it');
    var client = new AddSearchClient('a7b957b7a8f57f4cc544c54f289611c6');
 
+
+   var searchui_conf = {
+     //searchResultsPageUrl: 'search'
+     searchResultsPageUrl: 'search'
+   }
    // Search UI instance
-   var searchui = new AddSearchUI(client);
+   var searchui = new AddSearchUI(client, searchui_conf);
 
    // Add components
    searchui.searchField({
@@ -110,6 +115,8 @@ class Search extends React.Component {
             <div className=" mb-70">
               <div className="">
                 <div className="container">
+                  <div className="row" id="searchfield">
+                  </div>
                   <div className="row" id="results">
                   </div>
                 </div>
