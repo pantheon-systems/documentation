@@ -255,8 +255,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		'maxttl' => 86400 * 7,
 		'timeout' => 0.5,
 		'read_timeout' => 0.5,
-		'retries' => 3,
-		'backoff' => 'smart',
 		'split_alloptions' => true,
 		'prefetch' => true,
 		'debug' => false,
@@ -270,6 +268,8 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 		'prefix' => "ocppantheon", // This prefix can be changed. Setting a prefix helps avoid conflict when switching from other plugins like wp-redis.
 		'serializer' => 'igbinary',
 		'compression' => 'zstd',
+ 		'async_flush' => true,
+ 		'strict' => true,
 	```
 1. Make sure you `git push` your changes up to your repository before you activate the plugin.
 
