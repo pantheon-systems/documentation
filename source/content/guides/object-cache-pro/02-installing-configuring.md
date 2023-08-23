@@ -345,7 +345,7 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 	```
 ## Known Issues and Workarounds
 ### `terminus install:run <site>.<env> ocp` fails to install Object Cache Pro on _subdomain multisites_
-While most of the time, the Terminus command runs on single or WordPress multisites without issues, we have observed the workflow failing when _the Pantheon platform url_ (e.g. `dev-mysite.pantheonsite.io`) does not match the _site URL stored in the database_. This might happen if vanity domains are configured for the lower environments (e.g. `dev.mysite.com`). This can be observed when the link provided to the site from the Pantheon dashboard does not match the WordPress site URL. To check the URL stored in the database, you can run `terminus wp -- <site>.<env> option get siteurl`.
+While most of the time, the Terminus command runs on single or WordPress multisites without issues, we have observed the workflow failing when _the Pantheon platform url_ (e.g. `dev-mysite.pantheonsite.io`) does not match the _site URL stored in the database_. This might happen if vanity domains are configured for the non-live (e.g. `dev.mysite.com`). This can be observed when the link provided to the site from the Pantheon dashboard does not match the WordPress site URL. To check the URL stored in the database, you can run `terminus wp -- <site>.<env> option get siteurl`.
 
 #### Workaround
 The workaround for getting the Terminus command to succeed when the Pantheon platform URL does not match the URL stored in the database is to temporarily replace the vanity URL in the database with the platform URL, running the Terminus command again to install Object Cache Pro, and then re-running the search & replace (or restoring a database backup).
