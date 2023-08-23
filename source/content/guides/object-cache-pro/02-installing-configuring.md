@@ -329,7 +329,7 @@ For normal WordPress installations, you will need to do the following:
 	```
 ### Composer-Managed WordPress Multisite
 
-You must add a line to your `composer.json` file if you have Composer-managed WordPress multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed).
+You must add a line to your `composer.json` file if you have Composer-managed WordPress Multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed).
 
 1. Navigate to the `"extra"` section of your `composer.json` file and add `"rhubarbgroup/object-cache-pro"` to the installer path for `"web/app/mu-plugins/{$name}"`. Your final `"installer-paths"` might look like this:
 
@@ -344,8 +344,8 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
     },
 	```
 ## Known Issues and Workarounds
-### `terminus install:run <site>.<env> ocp` fails to install Object Cache Pro on _subdomain multisites_
-While most of the time, the Terminus command runs on single or WordPress multisites without issues, we have observed the workflow failing when _the Pantheon platform url_ (e.g. `dev-mysite.pantheonsite.io`) does not match the _site URL stored in the database_. This might happen if vanity domains are configured for the non-live (e.g. `dev.mysite.com`). This can be observed when the link provided to the site from the Pantheon dashboard does not match the WordPress site URL. To check the URL stored in the database, you can run `terminus wp -- <site>.<env> option get siteurl`.
+### `terminus install:run <site>.<env> ocp` fails to install Object Cache Pro on _subdomain Multisites_
+While most of the time, the Terminus command runs on single or WordPress Multisites without issues, we have observed the workflow failing when _the Pantheon platform url_ (e.g. `dev-mysite.pantheonsite.io`) does not match the _site URL stored in the database_. This might happen if vanity domains are configured for the non-live (e.g. `dev.mysite.com`). This can be observed when the link provided to the site from the Pantheon dashboard does not match the WordPress site URL. To check the URL stored in the database, you can run `terminus wp -- <site>.<env> option get siteurl`.
 
 #### Workaround
 The workaround for getting the Terminus command to succeed when the Pantheon platform URL does not match the URL stored in the database is to temporarily replace the vanity URL in the development database with the platform dev URL, running the Terminus command again to install Object Cache Pro, and then restoring the database from a backup or pulling it down from live.
@@ -372,7 +372,7 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
 - Flushing the network cache from the network admin will flush all caches across the network.
 - Subsites do not get their own configuration or graphs.
-- If installed as a normal plugin on a WordPress multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
+- If installed as a normal plugin on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
 - You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
 - As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications. Updates must be handled manually.
 
