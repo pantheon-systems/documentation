@@ -32,12 +32,12 @@ If your `pantheon.yml` file is different between environments, the `search_repla
 ## Defaults
 See the following Search and Replace defaults for new and existing WordPress Site Networks on Pantheon:
 
-| WPMU Configuration      | Default Search and Replace |
+| WP Multisite Configuration      | Default Search and Replace |
 | ------------- | -------------------------------------- |
-| Existing Subdirectory <Popover content="Created before August 1, 2023"/> | False |
-| New Subdirectory | True |
-| Existing Subdomain <Popover content="Created before August 1, 2023"/> | False |
-| New Subdomain | False |
+| Existing Subdirectory <Popover content="Created before August 1, 2023"/> | `false` |
+| New Subdirectory | `true` |
+| Existing Subdomain <Popover content="Created before August 1, 2023"/> | `false` |
+| New Subdomain | `false` |
 
 
 ## Subdirectory WordPress Multisite Search and Replace Configuration
