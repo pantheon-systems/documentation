@@ -34,10 +34,10 @@ See the following Search and Replace defaults for new and existing WordPress Mul
 
 | WP Multisite Configuration      | Default `search_replace` value |
 | ------------- | -------------------------------------- |
-| Existing Subdirectory <Popover content="Created before August 1, 2023"/> | `false` |
-| New Subdirectory | `true` |
-| Existing Subdomain <Popover content="Created before August 1, 2023"/> | `false` |
-| New Subdomain | `false` |
+| Existing Multisite - Subdirectory <Popover content="Created before August 1, 2023"/> | `false` |
+| New Multisite - Subdirectory | `true` |
+| Existing Multisite - Subdomain <Popover content="Created before August 1, 2023"/> | `false` |
+| New Multisite - Subdomain | `false` |
 
 
 ## Subdirectory WordPress Multisite Search and Replace Configuration
