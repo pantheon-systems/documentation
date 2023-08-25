@@ -74,17 +74,17 @@ const items = [
   },
   {
     id: "docs-certification-chapter-4",
-    link: "/certification/study-guide/chapter-4-cdns",
+    link: "/certification/study-guide/chapter-4-edge",
     title: "Chapter 4: CDNs",
   },
   {
     id: "docs-certification-chapter-5",
-    link: "/certification/study-guide/chapter-5-cms-infrastructure",
+    link: "/certification/study-guide/chapter-5-cms",
     title: "Chapter 5: CMS Infrastructure",
   },
   {
     id: "docs-certification-chapter-6",
-    link: "/certification/study-guide/chapter-6-deployment-pipeline",
+    link: "/certification/study-guide/chapter-6-deployment",
     title: "Chapter 6: The Deployment Pipeline",
   },
   {
