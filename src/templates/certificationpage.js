@@ -89,24 +89,24 @@ const items = [
   },
   {
     id: "docs-certification-chapter-7",
-    link: "/certification/study-guide/chapter-7-connecting-people",
+    link: "/certification/study-guide/chapter-7-people",
     title: "Chapter 7: Connecting People",
   },
   {
     id: "docs-certification-chapter-8",
-    link: "/certification/study-guide/chapter-8-cli-and-hooks",
+    link: "/certification/study-guide/chapter-8-extending",
     title: "Chapter 8: CLI and Hooks",
   },
 
   {
     id: "docs-certification-chapter-9",
-    link: "/certification/study-guide/chapter-9-more-automation",
+    link: "/certification/study-guide/chapter-9-automation",
     title: "Chapter 9: Additional Automation",
   },
 
   {
     id: "docs-certification-chapter-10",
-    link: "/certification/study-guide/chapter-10",
+    link: "/certification/study-guide/chapter-10-custom-upstreams",
     title: "Chapter 10: Custom Upstreams",
   },
 
