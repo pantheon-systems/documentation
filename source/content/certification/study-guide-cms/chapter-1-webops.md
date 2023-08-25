@@ -7,7 +7,7 @@ showtoc: true
 type: certificationpage
 layout: certificationpage
 tags: []
-permalink: docs/certification/study-guide/chapter-1
+permalink: docs/certification/study-guide/chapter-1-webops
 contenttype: [guide]
 innav: [false]
 categories: []

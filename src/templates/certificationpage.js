@@ -59,54 +59,54 @@ const items = [
   },
   {
     id: "docs-certification-chapter-1",
-    link: "/certification/study-guide/chapter-1",
+    link: "/certification/study-guide/chapter-1-webops",
     title: "Chapter 1",
   },
   {
     id: "docs-certification-chapter-2",
-    link: "/certification/study-guide/chapter-2",
+    link: "/certification/study-guide/chapter-2-pantheon",
     title: "Chapter 2",
   },
   {
     id: "docs-certification-chapter-3",
-    link: "/certification/study-guide/chapter-3",
+    link: "/certification/study-guide/chapter-3-site-creation",
     title: "Chapter 3",
   },
   {
     id: "docs-certification-chapter-4",
-    link: "/certification/study-guide/chapter-4",
+    link: "/certification/study-guide/chapter-4-cdn",
     title: "Chapter 4",
   },
   {
     id: "docs-certification-chapter-5",
-    link: "/certification/study-guide/chapter-5",
+    link: "/certification/study-guide/chapter-5-cms-infrastructure",
     title: "Chapter 5",
   },
   {
     id: "docs-certification-chapter-6",
-    link: "/certification/study-guide/chapter-6",
+    link: "/certification/study-guide/chapter-6-deployment-pipeline",
     title: "Chapter 6",
   },
   {
     id: "docs-certification-chapter-7",
-    link: "/certification/study-guide/chapter-7",
+    link: "/certification/study-guide/chapter-7-connecting-people",
     title: "Chapter 7",
   },
   {
     id: "docs-certification-chapter-8",
-    link: "/certification/study-guide/chapter-8",
+    link: "/certification/study-guide/chapter-8-cli-and-hooks",
     title: "Chapter 8",
   },
 
   {
     id: "docs-certification-chapter-9",
-    link: "/certification/study-guide/chapter-9",
+    link: "/certification/study-guide/chapter-9-more-automation",
     title: "Chapter 9",
   },
 
   {
     id: "docs-certification-chapter-10",
-    link: "/certification/study-guide/chapter-10",
+    link: "/certification/study-guide/chapter-10-upstreams",
     title: "Chapter 10",
   },
 

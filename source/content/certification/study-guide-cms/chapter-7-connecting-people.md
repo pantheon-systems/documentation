@@ -1,13 +1,13 @@
 ---
-title: Chapter 4
+title: Chapter 7
 subtitle:
-description:  
+description:
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-4
+permalink: docs/certification/study-guide/chapter-7-connecting-people
 contenttype: [guide]
 innav: [false]
 categories: []

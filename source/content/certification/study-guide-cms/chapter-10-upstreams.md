@@ -1,13 +1,13 @@
 ---
-title: Chapter 9
+title: Chapter 10: Custom Upstreams
 subtitle:
-description:  
+description:
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-9
+permalink: docs/certification/study-guide/chapter-10-upstreams
 contenttype: [guide]
 innav: [false]
 categories: []

@@ -1,13 +1,13 @@
 ---
-title: Chapter 2
+title: Chapter 6
 subtitle:
-description:  
+description:
 certificationpage: true
-showtoc: true
 type: certificationpage
 layout: certificationpage
+showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-2
+permalink: docs/certification/study-guide/chapter-6
 contenttype: [guide]
 innav: [false]
 categories: []

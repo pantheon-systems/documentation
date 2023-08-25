@@ -8,7 +8,7 @@ showtoc: true
 type: certificationpage
 layout: certificationpage
 tags: []
-permalink: docs/certification/study-guide/chapter-3
+permalink: docs/certification/study-guide/chapter-3-site-creation
 contenttype: [guide]
 innav: [false]
 categories: []
