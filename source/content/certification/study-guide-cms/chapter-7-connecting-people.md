@@ -1,6 +1,6 @@
 ---
-title: Chapter 7
-subtitle:
+title: Chapter 7: Connecting People
+subtitle: Workspaces, Permissions, and DNS
 description:
 certificationpage: true
 type: certificationpage

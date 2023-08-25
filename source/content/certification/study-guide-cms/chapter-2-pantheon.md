@@ -7,7 +7,7 @@ showtoc: true
 type: certificationpage
 layout: certificationpage
 tags: []
-permalink: docs/certification/study-guide/chapter-2
+permalink: docs/certification/study-guide/chapter-2-pantheon
 contenttype: [guide]
 innav: [false]
 categories: []

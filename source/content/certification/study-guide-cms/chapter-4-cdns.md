@@ -1,5 +1,6 @@
 ---
-title: Chapter 4
+title: Chapter 4: CDNs
+
 subtitle:
 description:
 certificationpage: true
@@ -7,7 +8,7 @@ type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-4-cdn
+permalink: docs/certification/study-guide/chapter-4-cdns
 contenttype: [guide]
 innav: [false]
 categories: []
@@ -18,4 +19,8 @@ integration: [--]
 ---
 
 ## Header
+
+
 ### Subheader
+
+

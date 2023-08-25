@@ -1,5 +1,5 @@
 ---
-title: Chapter 8
+title: Chapter 8: Extending Pantheon with Hooks and the CLI
 subtitle:
 description:
 certificationpage: true

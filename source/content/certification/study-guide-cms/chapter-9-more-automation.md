@@ -1,5 +1,5 @@
 ---
-title: Chapter 9
+title: Chapter 9: Pantheon WebOps Automation Tools
 subtitle:
 description:
 certificationpage: true

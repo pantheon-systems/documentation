@@ -1,7 +1,7 @@
 ---
-title: Chapter 5
+title: Chapter 5: CMS Infrastructure
 subtitle:
-description:  
+description:
 certificationpage: true
 type: certificationpage
 layout: certificationpage
