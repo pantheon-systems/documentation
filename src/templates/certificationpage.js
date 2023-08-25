@@ -108,13 +108,7 @@ const items = [
     id: "docs-certification-chapter-10",
     link: "/certification/study-guide/chapter-10-custom-upstreams",
     title: "Chapter 10: Custom Upstreams",
-  },
-
-  {
-    id: "docs-certification-chapter-11",
-    link: "/certification/study-guide/chapter-11",
-    title: "Chapter 11: Custom Upstreams",
-  },
+  }
 
 
 ]
