@@ -343,6 +343,20 @@ While the CDN provides caching to speed up the performance for anonymous users, 
 The Pantheon Platform has redundancy built-in throughout our containerized infrastructure. In addition, sites with Multizone Failover get a replicated database in an alternative availability zone for even higher availability. For more information, see [https://docs.pantheon.io/multizone-failover](https://docs.pantheon.io/multizone-failover).
 
 
+### Email
 
+#### Incoming Email
 
+Pantheon does not host inboxes for incoming mail. We recommend using an externally hosted email solution, such as Gmail from [Google Workspace](https://workspace.google.com/).
 
+#### Outgoing Email
+
+Drupal and WordPress both require a configured outgoing email service.
+
+For outgoing emails, we recommend integrating a third-party service provider that supports a REST API configuration. You can use an SMTP configuration, but because SMTP requests are associated with dynamic outgoing IPs there can be negative impacts to deliverability. For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
+
+##### REST API Providers
+
+<Partial file="email-rest.md" />
+
+For more information, see https://docs.pantheon.io/email.
