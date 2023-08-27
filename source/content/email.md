@@ -88,7 +88,7 @@ SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you
 
 ### WordPress Password Reset Emails Are Not Delivered
 
-The password reset email may not be delivered. This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Emails will only be sent if the URLs match. This applies to all emails sent by WordPress, including instances when a new user is added. 
+The password reset email may not be delivered. This happens when the current URL does not match the URL that is stored in the environment's `wp_options` table. Emails will only be sent if the URLs match. This applies to all emails sent by WordPress, including instances when a new user is added.
 
 In the following example, a password reset email will not be sent because the URL is not listed in the table:
 
@@ -147,10 +147,10 @@ Because we don't support SPF, it is likely that most Exchange or Office 365 serv
 
 [`Autodiscover.xml`](https://docs.microsoft.com/en-us/exchange/architecture/client-access/autodiscover?view=exchserver-2019) automates the configuration of Outlook email server authentication. An issue can occur when the mail software erroneously and repeatedly calls for an `autodiscover.xml` file that does not exist. If left unmanaged, this may start using unnecessary resources, return 404 errors, and can result in a slower site.
 
-To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
+To stop `autodiscover.xml` requests that can cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`.
 
 Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 error instead.
 
 ## More Resources
 
-- [Resetting Passwords](/resetting-passwords)  
+- [Resetting Passwords](/resetting-passwords)
