@@ -1,6 +1,6 @@
 ---
-title: Chapter 6 - Deployment Pipeline
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 6 - Deployment Pipeline
 description: hello
 certificationpage: true
 type: certificationpage

@@ -1,6 +1,6 @@
 ---
-title: Chapter 1
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 1
 description:
 certificationpage: true
 showtoc: true

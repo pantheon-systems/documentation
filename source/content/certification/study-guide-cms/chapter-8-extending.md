@@ -1,6 +1,6 @@
 ---
-title: Chapter 8 - Extending
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 8 - Extending
 description: hello
 certificationpage: true
 type: certificationpage

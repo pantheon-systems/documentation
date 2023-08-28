@@ -1,6 +1,6 @@
 ---
-title: Chapter 3 - Creating Your First Site on Pantheon
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 3 - Creating Your First Site on Pantheon
 description:
 certificationpage: true
 contributors: [todo]

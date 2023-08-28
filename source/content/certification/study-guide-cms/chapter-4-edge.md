@@ -1,6 +1,6 @@
 ---
-title: Chapter 4 - edge
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 4 - edge
 description: hello
 certificationpage: true
 type: certificationpage

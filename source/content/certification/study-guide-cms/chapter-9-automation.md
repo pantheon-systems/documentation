@@ -1,6 +1,6 @@
 ---
-title: Chapter 9 - Automation
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 9 - Automation
 description: hello
 certificationpage: true
 type: certificationpage

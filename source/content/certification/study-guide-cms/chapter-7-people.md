@@ -1,6 +1,6 @@
 ---
-title: Chapter 7 - People
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 7 - People
 description: hello
 certificationpage: true
 type: certificationpage

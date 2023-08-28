@@ -1,6 +1,6 @@
 ---
-title: Chapter 10 - Custom Upstreams
-subtitle:
+title: WebOps Certification
+subtitle: Chapter 10 - Custom Upstreams
 description: hello
 certificationpage: true
 type: certificationpage
@@ -19,6 +19,3 @@ integration: [--]
 
 ## Header
 ### Subheader
-
-
-
