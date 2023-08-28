@@ -204,7 +204,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	```bash{promptUser: user}
 	git add composer.* && git commit -m "Require Object Cache Pro"
-
 	```
 
 1. Add the license token your `config/application.php` file. Note that in the future, the license key will be provided by the platform. Currently, you are responsible for adding it to your repository.
@@ -226,22 +225,22 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	You can put this directly under the `WP_DEBUG` rules so it looks like this:
 	```php
 
-			/**
-			 * Debugging Settings
-			 */
-			Config::define('WP_DEBUG_DISPLAY', false);
-			Config::define('WP_DEBUG_LOG', false);
-			Config::define('SCRIPT_DEBUG', false);
-			ini_set('display_errors', '0');
+  	/**
+  	 * Debugging Settings
+  	 */
+  	Config::define('WP_DEBUG_DISPLAY', false);
+  	Config::define('WP_DEBUG_LOG', false);
+  	Config::define('SCRIPT_DEBUG', false);
+  	ini_set('display_errors', '0');
 
-			/**
-			 * Object Cache Pro config
-			 */
-			Config::define( 'WP_REDIS_CONFIG', [
-				'token' => '<LICENSE-TOKEN>',
-			] );
+  	/**
+  	 * Object Cache Pro config
+  	 */
+  	Config::define( 'WP_REDIS_CONFIG', [
+  		'token' => '<LICENSE-TOKEN>',
+  	] );
 
-		```
+  ```
 
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
