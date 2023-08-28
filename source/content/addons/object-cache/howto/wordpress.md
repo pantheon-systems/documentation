@@ -36,7 +36,7 @@ You can activate Redis either from the Pantheon dashboard or with Terminus.
 
 1. Click the **Add** button under **Redis**. It might take a couple of minutes for the Object Cache server to come online. You will see a success message in a green box stating that Redis has been enabled.
 
-![Pantheon Settings Add-Ons](../../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
+![Pantheon Settings Add-Ons](../../../../images/guides/object-cache-pro/pantheon_settings-addons.png)
 
 #### With Terminus
 Run the command below to enable Redis via the command line with Terminus:
