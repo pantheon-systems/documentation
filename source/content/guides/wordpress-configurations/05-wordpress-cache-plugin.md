@@ -135,4 +135,4 @@ function custom_clearcache_archive_page( $post_id ){
 
 - [Testing Global CDN Caching](/guides/global-cdn/test-global-cdn-caching)
 - [Global CDN Caching for High Performance](/guides/global-cdn/global-cdn-caching)
-- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache Pro for WordPress](/object-cache/wordpress)

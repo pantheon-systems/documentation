@@ -195,6 +195,7 @@ After enabling Redis, there are cache tables in the database that are no longer 
 
 
 ### How-to Guides
+- [Enable Object Cache Pro for WordPress](/object-cache/wordpress)
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)
 

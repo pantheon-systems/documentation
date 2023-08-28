@@ -1,7 +1,7 @@
 ---
 title: Enable Object Cache Pro for WordPress
 description: How to install and configure Object Cache Pro for WordPress.
-permalink: docs/object-cache/wp
+permalink: docs/object-cache/wordpress
 tags: [cache, plugins, modules, database]
 reviewed: "2023-08-17"
 contenttype: [doc]
@@ -350,11 +350,12 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
 1. Make a [database backup](https://docs.pantheon.io/guides/backups/create-backups) before you begin.
 1. Run the `wp search-replace` command via Terminus:
 
-		```bash{promptUser: user}
-		terminus wp -- <site>.<env> search-replace <old-url> <new-url> --all-tables --network
-		```	
-	
+  ```bash{promptUser: user}
+  terminus wp -- <site>.<env> search-replace <old-url> <new-url> --all-tables --network
+  ```
+
 	In this example the `<old-url>` represents your custom **vanity domain** and the `<new-url>` you are changing it _to_ represents the Pantheon platform domain (e.g. `dev-mysite.pantheonsite.io`). You do not need to include the protocols (e.g. `http`/`https`) in the URLs. You may wish to append `--dry-run` to the command initially if you would like to test the command and see how many changes will be made before running.
+
 1. Re-run the `terminus install:run <site>.<env> ocp` command and wait for the workflow to finish.
 1. After the workflow has finished, assuming Object Cache Pro was installed successfully, you can pull your database down from your live environment (if it exists, see the [WordPress Multisite Search and Replace](https://docs.pantheon.io/guides/multisite/search-replace/) documentation for more information about that process), re-run the `search-replace` command above, swapping the `<old-url>` and `<new-url>` values, or you may simply [restore your backup](https://docs.pantheon.io/guides/backups/restore-from-backup)
 
@@ -367,17 +368,17 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
       1. Activate OCP
       1. Flush Redis cache
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
-- Flushing the network cache from the network admin will flush all caches across the network.
-- Subsites do not get their own configuration or graphs.
-- If installed as a normal plugin on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
-- You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
-- As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications. Updates must be handled manually.
+  - Flushing the network cache from the network admin will flush all caches across the network.
+  - Subsites do not get their own configuration or graphs.
+  - If installed as a normal plugin on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
+  - You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
+  - As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications. Updates must be handled manually.
 
-	<Alert title="Note" type="info">
+  	<Alert title="Note" type="info">
 
-	You can use Object Cache Pro's documentation to [hide the dashboard widget](https://objectcache.pro/docs/customizations#dashboard-widget).
+  	You can use Object Cache Pro's documentation to [hide the dashboard widget](https://objectcache.pro/docs/customizations#dashboard-widget).
 
-	</Alert>
+  	</Alert>
 
 ## More Resources
 - [Performance Addons](/addons)
@@ -385,6 +386,7 @@ The workaround for getting the Terminus command to succeed when the Pantheon pla
 
 
 ### How-to Guides
+- [Enable Object Cache for Drupal](/object-cache/drupal)
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)
 

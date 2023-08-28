@@ -267,7 +267,7 @@ Sites loading a lot of content can benefit from Object Caching. For more details
 
 - [Object Cache Overview](/object-cache)
 - [Enable Object Cache for Drupal](/object-cache/drupal)
-- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache Pro for WordPress](/object-cache/wordpress)
 
 ### Enable OPcache
 

@@ -36,7 +36,7 @@ These plugins were selected to improve the performance of the site, and better u
 - **[Object Cache Pro](https://objectcache.pro/)** - Object Cache Pro is a highly optimized premium WordPress plugin that integrates with Redis for business class performance. For more details, see:
 
 - [Object Cache Overview](/object-cache#wordpress-object-cache-pro)
-- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache Pro for WordPress](/object-cache/wordpress)
 
 ### Content Features Plugins
 
@@ -113,7 +113,7 @@ From here, you can update the existing demo content, or delete it and create new
 ## Next Steps
 
 - Visit the [Launch Checks](/guides/launch/launch-check) guide to review key checks to perform before going live.
-- If utilizing the Object Cache, follow our guide on [enabling Object Caching for WordPress](/object-cache/wp).
+- If utilizing the Object Cache, follow our guide on [enabling Object Caching for WordPress](/object-cache/wordpress).
 
 ## More Resources
 

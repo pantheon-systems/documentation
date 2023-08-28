@@ -23,9 +23,9 @@ Redis busy errors are caused by large amounts of cached data. Setting the Minimu
 Refer to the [Minimum Cache Lifetime](/drupal-cache#minimum-cache-lifetime) section of the [Drupal Performance and Caching Settings](/drupal-cache) documentation for more information about this setting.
 
 ### Cannot Activate WP Redis Plugin for WordPress
-[WP Redis](/object-cache/wp-deprecated), while still actively maintained, is no longer the preferred method for enabling Object Cache for WordPress on Pantheon.
+[WP Redis](/object-cache/wordpress-deprecated), while still actively maintained, is no longer the preferred method for enabling Object Cache for WordPress on Pantheon.
 
-Instead, use [Object Cache Pro](/object-cache/wp).
+Instead, use [Object Cache Pro](/object-cache/wordpress).
 
 Note that both WP Redis and Object Cache Pro both have mandatory drop-in plugins, but these plugins are _not_ interchangeable. No activation is required.
 
@@ -141,7 +141,7 @@ Run the following command to access your site's memory usage metrics:
 - [Object Cache Overview](/object-cache)
 
 ### How-to Guides
-- [Enable Object Cache Pro for WordPress](/object-cache/wp)
+- [Enable Object Cache Pro for WordPress](/object-cache/wordpress)
 - [Enable Object Cache for Drupal](/object-cache/drupal)
 - [Use the Redis CLI](/object-cache/cli)
 - [Safely Remove Object Cache](/object-cache/remove)

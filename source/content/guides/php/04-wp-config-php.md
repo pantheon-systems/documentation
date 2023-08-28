@@ -182,6 +182,6 @@ Actions or filters that require CLI tools like WP-CLI might fail from `wp-config
 
 - [WordPress PHP Requirements](https://wordpress.org/about/requirements/)
 
-- [Object Cache Pro](/object-cache/wp)
+- [Object Cache Pro](/object-cache/wordpress)
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)

@@ -1573,7 +1573,7 @@
         - title: 'How-to Guides'
           links:
             - text: 'Enable Object Cache Pro for WordPress'
-              url: '/object-cache/wp'
+              url: '/object-cache/wordpress'
             - text: 'Enable Object Cache for Drupal'
               url: '/object-cache/drupal'
             - text: 'Use the Redis CLI'
