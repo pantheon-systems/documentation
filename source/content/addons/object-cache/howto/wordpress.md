@@ -20,6 +20,7 @@ showtoc: true
 Before you can install and activate Object Cache Pro, verify that you have:
 
 - A working site on Pantheon
+    - A Performance or Elite site plan is required
     - Redis is enabled for the site
     - The site is running PHP 7.4 or higher
 
