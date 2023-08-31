@@ -10,10 +10,9 @@ class NotFoundPage extends React.Component {
 componentDidMount() { //On page load...
   const { pathname } = this.props.location // pull the "location" prop and save it as 'pathname'
       var searchPath = pathname.replace(/\//g, " ").replace(/-/g, " ") // define searchPath as pathname by removing the slash and replacing dashes w with spaces
-      var searchPath = searchPath.replace("docs", "")// Remove docs from the search path
       window.location.href.toString().includes("search") // If the current page address includes "addsearch"...
         ? null // Do nothing
-        : (window.location = ` 404?search=${searchPath}`) // Otherwise, rewrite the URL (which I think inits a reload) to form the UTM parameters Addsearch needs to run a query.
+        : window.location = `/404?search=${searchPath}` // Otherwise, rewrite the URL (which I think inits a reload) to form the UTM parameters Addsearch needs to run a query.
         // Note: This while mess is here not only because of my novice React skills, but because Addsearch would not accept search parameters by any form other than UTM parameters.
         // An Algolia search solution will likely render most of this as removable
       /*window.addsearch_settings = {"search_widget": { // These are a bunch of key/value pairs addsearch wants. So we set them. See Addsearch's "documentation" for more info.
@@ -74,16 +73,13 @@ componentDidMount() { //On page load...
 
        var searchui_conf = {
          //searchResultsPageUrl: 'search'
-         searchResultsPageUrl: 'search'
+         searchResultsPageUrl: '404'
        }
        // Search UI instance
        var searchui = new AddSearchUI(client, searchui_conf);
 
        // Add components
        searchui.searchField({
-         containerId: 'searchfield',
-         placeholder: 'Keyword..',
-         button: 'Search',
          searchAsYouType: true,
          selectorToBind: '.addsearch',
          ignoreSearchResultsPageUrl: true,
@@ -103,7 +99,6 @@ componentDidMount() { //On page load...
 
 
         render() {
-          const { pathname } = this.props.location
           const {
             data: { homeYaml },
           } = this.props
