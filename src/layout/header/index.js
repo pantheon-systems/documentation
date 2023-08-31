@@ -169,7 +169,10 @@ const Header = ({ data, page }) => (
                   aria-label="Search through documentation"
                   data-addsearch-id="search_widget"
                 />
-                <AddSearch />
+                { page == "default" ?
+                  <AddSearch />
+                  : null
+                }
               </form>
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
