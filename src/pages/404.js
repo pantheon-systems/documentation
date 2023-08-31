@@ -99,9 +99,6 @@ componentDidMount() { //On page load...
 
 
         render() {
-          const {
-            data: { homeYaml },
-          } = this.props
           return (
             <Layout type="404">
               <SEO
@@ -117,44 +114,9 @@ componentDidMount() { //On page load...
                   You can try one of the links below, or go{" "}
                   <Link to="/"> back to all docs</Link>?
                 </h3>
-                <div class="row">
-                  <div
-                    className="col addsearch-container"
-                    style={{ width: "45%", float: "left" }}
-                  >
-                    <h2 className="subtitle">Similar Pages</h2>
+                    <h2 className="subtitle">Search Results</h2>
                     <div id="addsearch-results"></div>
                     <div id="addsearch-pagination"></div>
-
-                  </div>
-                  <div className="col" style={{ width: "45%", float: "right" }}>
-                    <h2 className="subtitle">{homeYaml.fourohfourlinks.title}</h2>
-                    <br />
-                    <ul
-                    style={{
-                      listStyleType: "none",
-                      marginTop: "20px",
-                      maxWidth: "75%",
-                    }}
-                  >
-                    {homeYaml.fourohfourlinks.links.map(link => {
-                      return (
-                        <li
-                          key={link.url}
-                          style={{
-                            fontSize: "20px",
-                            marginBottom: "20px",
-                            paddingBottom: "10px",
-                            borderBottom: "1px solid #a4bbc1",
-                          }}
-                        >
-                          <Link to={link.url}>{link.text}</Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              </div>
             </div>
           </main>
         </div>
@@ -163,16 +125,3 @@ componentDidMount() { //On page load...
   }
 }
 export default NotFoundPage
-export const pageQuery = graphql`
-  {
-    homeYaml {
-      fourohfourlinks {
-        title
-        links {
-          text
-          url
-        }
-      }
-    }
-  }
-`
