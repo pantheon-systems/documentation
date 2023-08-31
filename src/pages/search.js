@@ -86,7 +86,9 @@ class Search extends React.Component {
      containerId: 'searchfield',
      placeholder: 'Keyword..',
      button: 'Search',
-     searchAsYouType: true
+     searchAsYouType: true,
+     selectorToBind: '.addsearch',
+     ignoreSearchResultsPageUrl: true,
    });
    searchui.searchResults({
      containerId: 'results'
@@ -118,6 +120,8 @@ class Search extends React.Component {
                   <div className="row" id="searchfield">
                   </div>
                   <div className="row" id="results">
+                  </div>
+                  <div className="row" id="pagination">
                   </div>
                 </div>
               </div>

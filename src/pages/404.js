@@ -5,7 +5,7 @@ import SVG404 from "../../source/images/404_dark.svg"
 
 class NotFoundPage extends React.Component {
 
-componentDidMount() { //On page load...
+/*componentDidMount() { //On page load...
 
       window.addsearch_settings = {
         "search_widget": {
@@ -33,7 +33,7 @@ componentDidMount() { //On page load...
     script.setAttribute("defer", true)
 
     document.body.appendChild(script)
-  }
+  }*/
 
   render() {
     const { pathname } = this.props.location
@@ -56,7 +56,6 @@ componentDidMount() { //On page load...
         </div>
       </Layout>
     )
-    return <div className="addsearch-container" />
   }
 }
 
