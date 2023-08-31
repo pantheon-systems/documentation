@@ -105,3 +105,106 @@ In this section, we will walk through the first method, installing a fresh WordP
 1. You will see a “Success” message once the site has been installed. Once the site has been installed, you will be able to login to your WordPress admin dashboard directly through the Pantheon dashboard’s Site Admin button, or through the standard WordPress login URL (e.g. https://environment-sitename.pantheonsite.io/wp-login.php).
 
 Congratulations! You have now successfully installed WordPress on your Pantheon sit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Overview of Site Infrastructure
+
+<Alert title="Learning Objectives for This Section"  type="info" >
+
+* Define the three layers of Pantheon's Platform Architecture..
+* Describe how Pantheon's Edge Layer corresponds with the WebOps Credibility Layer, aiding the performance and uptime of a website.
+* Describe how the containerized infrastructure of Pantheon's Runtime Matrix benefits both the Credibility and Productivity Layers of WebOps, helping websites scale and helping teams achieve productivity through automation.
+* List and Describe the additional services provided by the Pantheon platform that help applications store data and serve files, improve performance for logged-in users, and aid in full site search.
+
+</Alert>
+
+Now that you've made a site, let's look at an architectural overview of what you've got with each environment for each site.
+
+**todo image. New diagram coming from Design**
+
+**Pantheon’s container-base platform** runs an integrated set of tools across a distributed and redundant infrastructure. This architecture provides everything needed to build, launch, and manage websites that achieve unmatched performance and reliability. The platform comprises three layers, which include Pantheon’s Global Edge, Runtime Matrix, and Application Services.
+
+**Pantheon’s Global Edge** is the exterior layer of the platform, meaning it is the first point of contact for traffic. The Edge Layer has a built-in HTTPS accelerator that serves cached data from virtual memory, allowing responses to be returned without going through the application containers. This keeps resource consumption low, so dynamic requests can be generated with ease during traffic spikes. If cached content is not found, the edge layer will automatically load balance and route requests to the next layer of the platform, our Runtime Matrix. On its way back out, the response will be cached for optimal performance. 
+
+**The Application Containers Layer **is where Nginx and PHP workers are fired off in millions of isolated Linux containers. Our robots do all the work by provisioning at the speed of software and at the click of a button, allowing you to go from hundreds of page views to hundreds of millions, without downtime or architectural changes.
+
+Pantheon can also detect failures in the event that an application container is unresponsive or unhealthy, automatically rerouting traffic to a failover container when necessary. Every environment runs on its own container, and all containers within the same application are connected by version control. 
+
+**Application Services Layer:** Similar to our application containers, our **database service** is based on a grid model and facilitates horizontal scalability using replication topology. This allows you to spread requests across multiple databases to improve site performance and load times.
+
+Pantheon’s **cloud based file system,** runs multiple layers of caching and is designed to stay in sync as you work and scale. Files are replicated for high availability.
+
+**Redis** is provided for sites that require persistent object cache backend. Put simply, Redis helps accelerate the logged in experience of the CMS, such as the content editorial experience or the shopping chart experience. Pantheon manages Solr services to provide full-text search at incredible speed with zero overhead required.
+
+This architecture provides everything needed to build, launch and manage websites that achieve unmatched performance and reliability.
+
+The next two chapters will dive deeper into these layers of Edge technology [todo link] and CMS Infrastructure [todo link].
+
+
+<Alert title="Key Takeaways"  type="info" >
+
+* Pantheon comprises three general architectural layers: The Edge Layer, the Runtime Matrix, and the Application Services Layer.
+* Each of these three layers works together to deliver Credibility, Productivity, and Impact to the website
+
+</Alert>
