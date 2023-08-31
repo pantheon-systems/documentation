@@ -102,8 +102,8 @@
         url: '/guides/php/settings-php'
       - text: 'Generating and Adding SSH Keys'
         url: '/ssh-keys/'
-      - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
-        url: '/guides/object-cache/'
+      - text: 'Object Cache Overview'
+        url: '/object-cache/'
       - text: 'Drupal Drush Command-Line Utility'
         url: '/guides/drush/'
   changelog-preview:

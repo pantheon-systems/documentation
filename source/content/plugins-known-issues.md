@@ -56,7 +56,9 @@ By default, WordPress tests each directory before uploading a file by writing a 
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('FS_METHOD', 'direct');
+    if ( !defined('FS_METHOD') ) {
+        define('FS_METHOD', 'direct');
+    }
 }
 ```
 
@@ -443,7 +445,7 @@ ___
   ln -s ./uploads/cache ./cache
   ```
 
-1. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/guides/object-cache/redis-command-line#clear-cache). Earlier versions have this option in the Fast Velocity Minify's **Settings** tab for the **Cache Location**.
+1. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/object-cache/cli#clear-cache). Earlier versions have this option in the Fast Velocity Minify's **Settings** tab for the **Cache Location**.
 
 **Solution 2:** The `FVM_CACHE_DIR` and `FVM_CACHE_URL` variables are available to override the cache location to address this [bug](https://github.com/peixotorms/fast-velocity-minify/issues/7) as of version 3.3.3.
 
@@ -1424,7 +1426,7 @@ ___
 
 ## WPML - The WordPress Multilingual Plugin
 
-<ReviewDate date="2019-10-22" />
+<ReviewDate date="2023-07-28" />
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
@@ -1448,7 +1450,7 @@ Learn more in the [WPML Guide](https://wpml.org/faq/install-wpml/#registration-u
 
 ___
 
-**Issue 3:** Upon activating WPML String Translation plugin, you may see this error:
+**Issue 3:** Your wp-admin becomes too slow or upon activating WPML String Translation plugin, you may see this error:
 
 >WPML String Translation is attempting to write .mo files with translations to folder:
 >
@@ -1458,21 +1460,22 @@ ___
 >To resolve this, please contact your hosting company and request that they make that folder writable.
 >For more details, see WPML's documentation on troubleshooting .mo files generation.
 
+
 **Solution 1:**
 
 1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
-  define('WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages');
+  if ( !defined('WP_LANG_DIR') ) {    
+  	define( 'WP_LANG_DIR','/files/languages/wpml' );
+  }
+  if ( !defined('WP_TEMP_DIR') ) {
+  	define('WP_TEMP_DIR', sys_get_temp_dir() );
+  }
   ```
-
-1. Create the `languages` directory inside `/files` for each environment.
-
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
-
-**Solution 2:**
-
 1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+   
+1. Create the `languages/wpml` directory inside `/files` for each environment.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 

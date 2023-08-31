@@ -1,17 +1,18 @@
 ---
-title: Object Cache (formerly Redis)
-subtitle: Remove Object Cache
-description: Learn how to safely remove Object Cache.
-contenttype: [guide]
-innav: [false]
+title: Remove Object Cache
+description: How to safely remove Pantheon's Object Caching.
+permalink: docs/object-cache/remove
+tags: [cache, plugins, modules, database]
+reviewed: "2023-08-17"
+contenttype: [doc]
+innav: [true]
 categories: [cache]
-cms: [--]
+cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-tags: [cache, plugins, modules, database]
 contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
-permalink: docs/guides/object-cache/remove-object-cache
+showtoc: true
 ---
 
 This section provides information on how to safely remove Object Cache.
@@ -22,7 +23,7 @@ The following code changes are required before Object Cache can be safely uninst
 
 <TabList>
 
-<Tab title="WordPress" id="wp-uninstall" active={true}>
+<Tab title="WP Redis" id="wp-uninstall" active={true}>
 
 <Partial file="remove-addons/wp-redis.md" />
 
@@ -35,3 +36,8 @@ The following code changes are required before Object Cache can be safely uninst
 </Tab>
 
 </TabList>
+
+## More Resources
+
+- [Performance Addons](/addons)
+- [Object Cache Overview](/object-cache)

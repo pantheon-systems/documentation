@@ -160,8 +160,8 @@
           url: '/guides/professional-services'
         - text: 'New Relic APM Pro'
           url: '/guides/new-relic'
-        - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
-          url: '/guides/object-cache'
+        - text: 'Object Cache Overview'
+          url: '/object-cache/'
         - text: 'Pantheon Search'
           url: '/solr'
         - text: 'Enabling Pantheon Search for Drupal'
@@ -716,8 +716,8 @@
               url: '/drupal-cache'
             - text: 'Caching in Drupal Views'
               url: '/drupal-caching-views'
-            - text: 'Object Cache (formerly Redis) for Drupal or WordPress'
-              url: '/guides/object-cache'
+            - text: 'Object Cache Overview'
+              url: '/object-cache/'
             - text: 'WordPress Pantheon Cache Plugin Configuration'
               url: '/guides/wordpress-configurations/wordpress-cache-plugin'
             - text: 'Optimize Your wp-options Table and Autoloaded Data'
@@ -1537,3 +1537,46 @@
           url: '/guides/secure-development/private-paths'
         - text: 'Enforce HTTPS + HSTS'
           url: '/pantheon-yml#enforce-https--hsts'
+- title: 'Performance Addons'
+  subtitle: 'Built-in services to improve search, monitor performance, and enable robust application caching.'
+  path: 'addons'
+  topics-groups:
+    - title: 'New Relic Performance Monitoring'
+      subtitle: ''
+      links:
+        - text: 'New Relic Guide'
+          url: '/guides/new-relic'
+    - title: 'Solr Search'
+      subtitle: ''
+      links:
+        - text: 'Solr Overview'
+          url: '/solr'
+        - text: 'Enable Solr for WordPress'
+          url: '/guides/wordpress-developer/wordpress-solr'
+        - text: 'Enable Solr for Drupal'
+          url: '/guides/solr-drupal'
+
+  subtopics:
+    - title: 'Object Cache'
+      subtitle: 'Object Cache provides an alternative caching backend that resides in memory rather than a database.'
+      subtopic-lists:
+        - title: 'Concepts'
+          links:
+            - text: Object Cache Overview
+              url: '/object-cache'
+        - title: 'Reference'
+          links:
+            - text: Object Cache Errors
+              url: '/object-cache/errors'
+            - text: Object Cache FAQs
+              url: '/object-cache/faq'
+        - title: 'How-to Guides'
+          links:
+            - text: 'Enable Object Cache Pro for WordPress'
+              url: '/object-cache/wordpress'
+            - text: 'Enable Object Cache for Drupal'
+              url: '/object-cache/drupal'
+            - text: 'Use the Redis CLI'
+              url: '/object-cache/cli'
+            - text: 'Safely Remove Object Cache'
+              url: '/object-cache/remove'

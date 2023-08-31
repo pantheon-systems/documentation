@@ -24,7 +24,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 - Site Admin
 - Command Line
 
-**Note:** To clear the Object cache, please see our [Object Cache](/guides/object-cache/redis-command-line#clear-cache) doc.
+**Note:** To clear the Object cache, please see our [Object Cache](/object-cache/cli#clear-cache) doc.
 
 ### Pantheon Dashboard
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the desired environment.

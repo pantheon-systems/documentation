@@ -79,9 +79,12 @@ For example, create an mu-plugin called `00.php` and add a line in it to include
 [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/)
 provides support for SAML Authentication. The plugin comes bundled with the OneLogin SAML library and [SimpleSAMLphp](https://simplesamlphp.org/). Refer to [Using WP SAML Auth with Google Apps](/guides/wordpress-google-sso) for an example use case.
 
-## WP Redis
 
-[WP Redis](https://wordpress.org/plugins/wp-redis) provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. Refer to [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache) for more information.
+## Object Cache Pro
+[Object Cache Pro](https://objectcache.pro/) is a highly optimized premium WordPress plugin that integrates with Redis for business class performance. For more details, see also:
+
+- [Object Cache Overview](/object-cache#wordpress-object-cache-pro)
+- [Enable Object Cache Pro for WordPress](/object-cache/wordpress)
 
 ## WP Solr
 
@@ -90,4 +93,4 @@ provides support for SAML Authentication. The plugin comes bundled with the OneL
 ## More Resources
 
 - [Pantheon Search (formerly Pantheon Solr)](/solr)
-- [Object Cache (formerly Redis) for Drupal or WordPress](/guides/object-cache)
+- [Enable Object Cache Pro for WordPress](/object-cache/wordpress)

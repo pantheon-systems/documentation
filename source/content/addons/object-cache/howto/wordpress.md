@@ -1,21 +1,18 @@
 ---
-title: Object Cache Pro on Pantheon
-subtitle: Install and Configure Object Cache Pro
-description: Learn how to install and configure Object Cache Pro on Pantheon.
-tags: [cache]
-contributors: [jazzsequence]
-type: guide
-showtoc: true
-permalink: docs/guides/object-cache-pro/installing-configuring/
-editpath: object-cache-pro/02-installing-configuring.md
-contenttype: [guide]
+title: Enable Object Cache Pro for WordPress
+description: How to install and configure Object Cache Pro for WordPress.
+permalink: docs/object-cache/wordpress
+tags: [cache, plugins, modules, database]
+reviewed: "2023-08-17"
+contenttype: [doc]
 innav: [true]
-categories: []
+categories: [cache]
 cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2023-04-25"
+contributors: [jazzsequence]
+showtoc: true
 ---
 
 ## Before You Begin
@@ -23,6 +20,7 @@ reviewed: "2023-04-25"
 Before you can install and activate Object Cache Pro, verify that you have:
 
 - A working site on Pantheon
+    - A Performance or Elite site plan is required
     - Redis is enabled for the site
     - The site is running PHP 7.4 or higher
 
@@ -30,16 +28,16 @@ Before you can install and activate Object Cache Pro, verify that you have:
     - Installation instructions can be found [here](https://docs.pantheon.io/terminus/install#install-terminus).
     - Authentication instructions can be found [here](https://docs.pantheon.io/terminus/install#authenticate).
 
-
 ### Activate Redis
-You can [activate Redis](/guides/object-cache/enable-object-cache) either from the Pantheon dashboard or with Terminus.
+You can activate Redis either from the Pantheon dashboard or with Terminus.
+
 #### On the Dashboard
 
 1. Navigate to your **Pantheon Site Dashboard**, select **Settings**, and then select **Add Ons**.
 
 1. Click the **Add** button under **Redis**. It might take a couple of minutes for the Object Cache server to come online. You will see a success message in a green box stating that Redis has been enabled.
 
-![Pantheon Settings Add-Ons](../../../images/guides/object-cache-pro/pantheon-settings-addons.png)
+![Pantheon Settings Add-Ons](../../../../images/guides/object-cache-pro/pantheon_settings-addons.png)
 
 #### With Terminus
 Run the command below to enable Redis via the command line with Terminus:
@@ -81,7 +79,7 @@ terminus redis:enable <site>
 
 	**WordPress Admin:**
 
-	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu.
+	1. Navigate to the **Plugins** page, activate **Object Cache Pro**, then go to the **Object Cache** page in the **Settings** menu. **Note:** WordPress Multisite users will need to go to the **Network Admin Plugins** page and _network activate_ **Object Cache Pro** from there. In order to access the **Network Admin**, you must be logged in as a **Super Admin**.
 
 	**Terminus:**
 
@@ -93,6 +91,8 @@ terminus redis:enable <site>
 		```
 
 	1. Run the `git pull` command if you did not create the file locally.
+
+	**Note:** WordPress Multisite users will need to append the `--network` flag to network activate the plugin.
 
 1. Navigate to `/wp-admin/options-general.php?page=objectcache` to see the current status of Object Cache Pro on your site as well as live graphs of requests, memory usage, and more.
 
@@ -205,7 +205,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	```bash{promptUser: user}
 	git add composer.* && git commit -m "Require Object Cache Pro"
-
 	```
 
 1. Add the license token your `config/application.php` file. Note that in the future, the license key will be provided by the platform. Currently, you are responsible for adding it to your repository.
@@ -227,22 +226,22 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	You can put this directly under the `WP_DEBUG` rules so it looks like this:
 	```php
 
-			/**
-			 * Debugging Settings
-			 */
-			Config::define('WP_DEBUG_DISPLAY', false);
-			Config::define('WP_DEBUG_LOG', false);
-			Config::define('SCRIPT_DEBUG', false);
-			ini_set('display_errors', '0');
+  	/**
+  	 * Debugging Settings
+  	 */
+  	Config::define('WP_DEBUG_DISPLAY', false);
+  	Config::define('WP_DEBUG_LOG', false);
+  	Config::define('SCRIPT_DEBUG', false);
+  	ini_set('display_errors', '0');
 
-			/**
-			 * Object Cache Pro config
-			 */
-			Config::define( 'WP_REDIS_CONFIG', [
-				'token' => '<LICENSE-TOKEN>',
-			] );
+  	/**
+  	 * Object Cache Pro config
+  	 */
+  	Config::define( 'WP_REDIS_CONFIG', [
+  		'token' => '<LICENSE-TOKEN>',
+  	] );
 
-		```
+  ```
 
 1. Add Object Cache Pro configuration options after `Config::define( 'WP_REDIS_CONFIG', [` in `config/application.php` for **WordPress (Composer Managed)** sites. The full, recommended contents of the WP_REDIS_CONFIG constant are:
 
@@ -327,7 +326,7 @@ For normal WordPress installations, you will need to do the following:
 	```
 ### Composer-Managed WordPress Multisite
 
-You must add a line to your `composer.json` file if you have Composer-managed WordPress multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed).
+You must add a line to your `composer.json` file if you have Composer-managed WordPress Multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed).
 
 1. Navigate to the `"extra"` section of your `composer.json` file and add `"rhubarbgroup/object-cache-pro"` to the installer path for `"web/app/mu-plugins/{$name}"`. Your final `"installer-paths"` might look like this:
 
@@ -351,19 +350,33 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
       1. Activate OCP
       1. Flush Redis cache
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
-- Flushing the network cache from the network admin will flush all caches across the network.
-- Subsites do not get their own configuration or graphs.
-- If installed as a normal plugin on a WordPress multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
-- You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
-- As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications. Updates must be handled manually.
+  - Flushing the network cache from the network admin will flush all caches across the network.
+  - Subsites do not get their own configuration or graphs.
+  - If installed as a normal plugin on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
+  - You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
+  - As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications. Updates must be handled manually.
 
-	<Alert title="Note" type="info">
+  	<Alert title="Note" type="info">
 
-	You can use Object Cache Pro's documentation to [hide the dashboard widget](https://objectcache.pro/docs/customizations#dashboard-widget).
+  	You can use Object Cache Pro's documentation to [hide the dashboard widget](https://objectcache.pro/docs/customizations#dashboard-widget).
 
-	</Alert>
+  	</Alert>
 
-### More Resources
+## More Resources
+- [Performance Addons](/addons)
+- [Object Cache Overview](/object-cache)
 
+
+### How-to Guides
+- [Enable Object Cache for Drupal](/object-cache/drupal)
+- [Use the Redis CLI](/object-cache/cli)
+- [Safely Remove Object Cache](/object-cache/remove)
+
+
+### References
+- [Object Cache Errors](/object-cache/errors)
+- [Object Cache FAQs](/object-cache/faq)
+
+### See Also
 - [Create a WordPress MU-Plugin for Actions and Filters](/guides/wordpress-configurations/mu-plugin)
 - [Must Use Plugins](https://wordpress.org/documentation/article/must-use-plugins/)

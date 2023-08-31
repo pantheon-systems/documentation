@@ -43,7 +43,7 @@ To upgrade your Professional Workspace Account Plan to Gold:
 
 <Alert title="Note"  type="info" >
 
-Now that you have a Professional Workspace with a Gold Account Plan, you can [add it as a Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to your site(s) to take advantage of your new features.
+Now that you have a Professional Workspace with a Gold Account Plan, you can [add it as a Supporting Workspace](/guides/account-mgmt/workspace-sites-teams/teams#add-a-supporting-organization-to-site) to your site(s) to take advantage of your new features. If you do not yet have a paid site plan, you must purchase one separately from your gold account tier. Site plans are not included in your purchase of a Professional Gold Account Plan.
 
 </Alert>
 

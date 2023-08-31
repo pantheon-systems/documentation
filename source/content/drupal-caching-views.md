@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 reviewed: "2022-12-13"
 ---
-While configuring [Drupal's performance and caching settings](/drupal-cache) and using [Redis as a Drupal caching backend](/guides/object-cache) will make a significant performance difference, not every module uses Drupal's caching out of the box.
+While configuring [Drupal's performance and caching settings](/drupal-cache) and using [Object Cache](/object-cache/drupal) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 
 ## Views
 
