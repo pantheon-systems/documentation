@@ -17,14 +17,14 @@ componentDidMount() { //On page load...
         : (window.location = ` 404?addsearch=${searchPath}`) // Otherwise, rewrite the URL (which I think inits a reload) to form the UTM parameters Addsearch needs to run a query.
         // Note: This while mess is here not only because of my novice React skills, but because Addsearch would not accept search parameters by any form other than UTM parameters.
         // An Algolia search solution will likely render most of this as removable
-      window.addsearch_settings = { // These are a bunch of key/value pairs addsearch wants. So we set them. See Addsearch's "documentation" for more info.
+      window.addsearch_settings = {"search_widget": { // These are a bunch of key/value pairs addsearch wants. So we set them. See Addsearch's "documentation" for more info.
         display_url: true,
         display_resultscount: false,
         display_sortby: false,
         display_category: true,
         automatic_match_all_query: true,
         number_of_results: 4,
-      }
+      }}
       const script = document.createElement("script") // Loads the Addsearch JS blob from them
       script.setAttribute(
             "src",
