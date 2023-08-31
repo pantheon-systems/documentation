@@ -2,16 +2,44 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import AddSearch from "../../components/addSearch"
- import { Navbar } from '@pantheon-systems/pds-toolkit-react'
+import { Navbar } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
+const navbarChildren = [
+  <a
+    key="2"
+    slot="items-right"
+    className="pds-button pds-button--navbar"
+    href="https://dashboard.pantheon.io/#support"
+    target="_blank"
+  >
+    Support
+  </a>,
+  <a
+    key="3"
+    slot="items-right"
+    className="pds-button pds-button--brand-secondary"
+    href="https://dashboard.pantheon.io"
+    target="_blank"
+  >
+    Log in
+  </a>,
+  <a
+    key="4"
+    slot="items-right"
+    className="pds-button pds-button--brand"
+    href="https://pantheon.io/register"
+    target="_blank"
+  >
+    Get free account
+  </a>,
+]
 
-
-
-const Header = ({ data, page }) => (
-  <header> <Navbar/></header>
-
+const Header = () => (
+  <header>
+    <Navbar ariaLabel="Main navigation" children={navbarChildren} />
+  </header>
 )
 
 export default (props) => (
