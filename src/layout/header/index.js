@@ -163,7 +163,7 @@ const Header = ({ data, page }) => (
                 title="Search Pantheon Documentation form"
               >
                 <input
-                  type="search"
+                  id="piodocs" type="search"
                   className="addsearch"
                   placeholder="Search Pantheon Documentation"
                   aria-label="Search through documentation"

@@ -16,7 +16,7 @@ class SearchResults extends React.Component {
                         return queryString;
                         }
                         var urlParams = parseParamsFromUrl();
-                        document.getElementById('searchform').setAttribute('value', urlParams);
+                        document.getElementById('piodocs').setAttribute('value', urlParams);
                     `,
             }}
           />
