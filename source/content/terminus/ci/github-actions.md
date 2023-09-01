@@ -28,9 +28,9 @@ This pipeline does the following:
 
 - Uses the `ubuntu:latest` Docker image.
 - Updates the system and installs necessary tools like PHP, curl, perl, sudo, and Git before the script stages.
-- Defines a cache for the `$HOME/.terminus` directory and the Terminus binary. The pipeline system will save and restore the cache for subsequent runs.
 - Determines the latest release of Terminus from the GitHub API and stores it in the `TERMINUS_RELEASE` variable.
 - Creates a directory for Terminus, downloads it into that directory, makes it executable, and then creates a symbolic link to it in `/usr/local/bin` so that you can run it from anywhere.
+- Ensures there is a valid Terminus session populated in the encrypted cache.
 - Checks that Terminus is authenticated with `terminus auth:whoami`.
 
 
@@ -38,7 +38,7 @@ This pipeline does the following:
 
 Before you use this script:
 
-- Add the machine token provided by Terminus to your secrets in the GitHub repository settings.
+- Add a Pantheon account machine token to your GitHub **environment** (preferred) or **repository** secrets named `TERMINUS_TOKEN`. _(Always store production secrets in a GitHub "Environment" that restricts which branches can deploy to it, and protect those branches with rules including code review and security tests)._
 
 </Alert>
 
@@ -50,19 +50,14 @@ on: [push, pull_request]
 jobs:
   connect:
     runs-on: ubuntu-latest
+    # Uncomment this line if your TERMINUS_TOKEN secret belongs to a GitHub
+    # Environment (preferred for security, see note above).
     steps:
       - uses: actions/checkout@v3
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
-      - uses: actions/cache@v2
-        id: terminus-cache
-        with:
-          path: ~/.terminus
-          key: ${{ runner.os }}-terminus-cache-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-terminus-cache-
       - uses: actions/cache@v2
         id: terminus-binary
         with:
@@ -89,19 +84,20 @@ jobs:
           curl -L https://github.com/pantheon-systems/terminus/releases/download/$TERMINUS_RELEASE/terminus.phar --output terminus
           chmod +x terminus
           sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
-
         env:
           TERMINUS_RELEASE: ${{ inputs.terminus-version || env.TERMINUS_RELEASE }}
-      - name: Authenticate Terminus
-        env:
-          TERMINUS_TOKEN: ${{ secrets.TERMINUS_TOKEN }}
-        run: |
-          terminus auth:login --machine-token="${TERMINUS_TOKEN}"
+      - name: Authenticate Terminus (with session cache)
+        uses: lullabot/terminus-auth-with-session-cache@v2
+        with:
+          pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
       - name: Whoami
         run: terminus auth:whoami
   deploy:
     needs: [connect]
     runs-on: ubuntu-latest
+    # Uncomment this line if your TERMINUS_TOKEN secret belongs to a GitHub
+    # Environment (preferred for security, see note above).
+    # environment: Pantheon
     steps:
       - uses: actions/checkout@v3
       - name: Setup PHP
@@ -122,6 +118,10 @@ jobs:
           key: ${{ runner.os }}-terminus-binary-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-terminus-binary-
+      - name: Authenticate Terminus (with session cache)
+        uses: lullabot/terminus-auth-with-session-cache@v2
+        with:
+          pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
       - name: Whoami
         run: |
           sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
