@@ -87,7 +87,7 @@ jobs:
         env:
           TERMINUS_RELEASE: ${{ inputs.terminus-version || env.TERMINUS_RELEASE }}
       - name: Authenticate Terminus (with session cache)
-        uses: lullabot/terminus-auth-with-session-cache@v2
+        uses: lullabot/terminus-auth-with-session-cache@v3
         with:
           pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
       - name: Whoami
@@ -119,7 +119,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-terminus-binary-
       - name: Authenticate Terminus (with session cache)
-        uses: lullabot/terminus-auth-with-session-cache@v2
+        uses: lullabot/terminus-auth-with-session-cache@v3
         with:
           pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
       - name: Whoami
