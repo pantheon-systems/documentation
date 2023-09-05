@@ -58,6 +58,11 @@ const items = [
     title: "Introduction",
   },
   {
+    id: "docs-certification-chapter-0",
+    link: "/certification/study-guide/chapter-0-intro",
+    title: "Chapter 0: Intro",
+  },
+  {
     id: "docs-certification-chapter-1",
     link: "/certification/study-guide/chapter-1-webops",
     title: "Chapter 1: WebOps",
