@@ -28,6 +28,7 @@ This pipeline does the following:
 
 - Uses the `ubuntu:latest` Docker image.
 - Updates the system and installs necessary tools like PHP, curl, perl, sudo, and Git before the script stages.
+- Defines a cache for the Terminus binary. The pipeline system will save and restore the cache for subsequent runs.
 - Determines the latest release of Terminus from the GitHub API and stores it in the `TERMINUS_RELEASE` variable.
 - Creates a directory for Terminus, downloads it into that directory, makes it executable, and then creates a symbolic link to it in `/usr/local/bin` so that you can run it from anywhere.
 - Ensures there is a valid Terminus session populated in the encrypted cache.
@@ -52,6 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     # Uncomment this line if your TERMINUS_TOKEN secret belongs to a GitHub
     # Environment (preferred for security, see note above).
+    # environment: <environment-name>
     steps:
       - uses: actions/checkout@v3
       - name: Setup PHP
@@ -97,7 +99,7 @@ jobs:
     runs-on: ubuntu-latest
     # Uncomment this line if your TERMINUS_TOKEN secret belongs to a GitHub
     # Environment (preferred for security, see note above).
-    # environment: Pantheon
+    # environment: <environment-name>
     steps:
       - uses: actions/checkout@v3
       - name: Setup PHP
