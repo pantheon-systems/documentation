@@ -123,4 +123,4 @@ Again there's a risk carried over from the old mindset of website operations tha
 
 Is the web team solely responsible for every layer of technology from the JavaScript running on site visitor's devices to the operating systems on the servers producing the site? If so, there is a high likelihood that any bug at any layer sets off a chain of frustrations like we saw in that hypothetical situation going from CDN to CSS to CMS.
 
-Clear boundaries between layers of **platform** technology ensure that the **people **responsible for making the website successful are less likely to get bogged down as they execute their **process**.
+Clear boundaries between layers of **platform** technology ensure that the **people** responsible for making the website successful are less likely to get bogged down as they execute their **process**.
