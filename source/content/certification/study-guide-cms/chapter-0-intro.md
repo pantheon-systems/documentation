@@ -23,8 +23,6 @@ We've developed our views of WebOps to reflect and articulate in greater detail 
 
 Our perspective on WebOps is broad. At Pantheon we see WebOps as the composed of three interrelated parts:
 
-
-
 * The **people **who define and bring about the website's success
 * The **processes** they use to increase their velocity toward success
 * The technology **platform** they rely on to stabilize their success
@@ -33,19 +31,15 @@ This view of WebOps is more holistic and cross-functional than the technological
 
 A lot has changed in the decades that professionals have operated websites, particularly in those three areas noted above.
 
-
-
 * The number of **people** involved in operating a professional website has climbed enormously. It's not just "webmasters" operating websites anymore.
 * The **waterfall processes** that still structure a great deal of projects are increasingly ineffective.
 * The general-purpose servers operated by IT generalists to host websites are giving way to purpose-built **platforms**.
 
 Teams that don't respond appropriately to these overwhelming market pressures set themselves up for one or more of the failure modes of the website operations.
 
-
 # Three Failure Modes of Website Operations
 
 Websites can fail in so so so many ways. Here are three common modes of failure that highlight the way websites strain people, process, and platforms.
-
 
 ## People Failure: From Authoritative Webmaster to Unorganized Web Mob.
 
