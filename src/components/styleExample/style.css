@@ -17,6 +17,9 @@
     letter-spacing: 1px;
     content: "Example";
 }
+.certification.style-example::after {
+    content: "Command Line Interface:";
+}
 
 .h1 {
 	margin-top: 35px;
@@ -36,4 +39,9 @@
     content: "Source Code";
     margin-top: 10px;
 }
-
+.certification.source-code::after  {
+    content: "Pantheon Dashboard Interface:";
+}
+.certification.cms.source-code::after  {
+    content: "CMS Dashboard Interface:";
+}
