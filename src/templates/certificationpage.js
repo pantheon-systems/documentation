@@ -55,7 +55,7 @@ const items = [
   {
     id: "docs-certification",
     link: "/certification/study-guide",
-    title: "Introduction",
+    title: "Certification Study Guide",
   },
   {
     id: "docs-certification-chapter-0",
@@ -102,20 +102,16 @@ const items = [
     link: "/certification/study-guide/chapter-8-extending",
     title: "Chapter 8: CLI and Hooks",
   },
-
   {
     id: "docs-certification-chapter-9",
     link: "/certification/study-guide/chapter-9-automation",
     title: "Chapter 9: Additional Automation",
   },
-
   {
     id: "docs-certification-chapter-10",
     link: "/certification/study-guide/chapter-10-custom-upstreams",
     title: "Chapter 10: Custom Upstreams",
   }
-
-
 ]
 
 class CertificationTemplate extends React.Component {

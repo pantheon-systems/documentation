@@ -1,7 +1,7 @@
 ---
 title: WebOps Certification
 subtitle: Chapter 0
-description: hello
+description:
 certificationpage: true
 type: certificationpage
 layout: certificationpage
