@@ -136,11 +136,7 @@ Once you have generated your token, you can use it to authenticate with Terminus
 terminus auth:login -machine-token=<replace your machine token here>
 ```
 
-### Running Terminus Commands
-
-This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
-
-#### Terminus Command Structure
+### Terminus Command Structure
 
 The following command structure pattern presupposes formal web application naming conventions.
 
@@ -174,17 +170,143 @@ You can get a list of all available commands by using the `list` command:
 terminus list
 ```
 
+#### Drush and WP-CLI
+Drush and WP-CLI commands must be run from the command line via Terminus. It is not possible to invoke Drush or WP-CLI in the Pantheon Dashboard.
+
+The syntax for Drush and WP-CLI commands starts by using the basic Terminus command structure, then adds `--` after `<site>.<env>` which is then followed by the Drush or WP-CLI command and all arguments. For example:
+
+```bash{promptUser: user}
+terminus wp <site>.<env> -- plugin activate debug-bar
+```
+
+While a comprehensive exploration of all that is possible with [Drush](https://www.drush.org/) and [WP-CLI](https://wp-cli.org/) is outside the scope of this guide, we would highly recommend visiting the documentation sites and exploring the possible uses for each tool.
+
+
+### CLI vs Dashboard Interface
+Let’s walk through some common actions within the dashboard and their Terminus command counterparts.
+
+#### Site List
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus site:list
+```
+<hr className="certification source-code" /> <br/>
+
+![View site list from the Pantheon Dashbaord](../../../images/certification/study-guide-cms/dashboard-site-list.png)
+</Example>
+
+#### Create Site
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus site:create mysite “My Site” wordpress
+```
+<hr className="certification source-code" /> <br/>
+
+![Create a new site from the Pantheon Dashbaord](../../../images/certification/study-guide-cms/dashboard-create-site.png)
+</Example>
+
+#### Install WordPress
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus wp mysite.dev -- core install --title="My Site" --admin_user=admin123
+```
+<hr className="certification cms source-code" /> <br/>
+
+![Install WordPress via the WordPress admin interface](../../../images/certification/study-guide-cms/wp-dashboard-install.png)
+</Example>
+
+#### Create Multidev Environment
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus multidev:create mysite.live calendar
+```
+<hr className="certification source-code" /> <br/>
+
+![Create a new Multidev environment via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-create-multidev.png)
+</Example>
+
+#### Enable SFTP Development Mode
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus connection:set mysite.dev sftp
+```
+<hr className="certification source-code" /> <br/>
+
+![Switch to SFTP mode via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-enable-sftp-mode.png)
+</Example>
+
+#### Activate Plugins
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus wp mysite.dev -- plugin activate debug-bar
+```
+<hr className="certification cms source-code" /> <br/>
+
+![Use the WordPress Dashboard to activate plugins](../../../images/certification/study-guide-cms/wp-dashboard-activate-plugin.png)
+</Example>
+
+#### Enable Modules
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus drush mysite.dev -- pm-enable serialization
+```
+<hr className="certification cms source-code" /> <br/>
+
+![Use the Drupal admin interface to install modules](../../../images/certification/study-guide-cms/drupal-admin-install-module.png)
+</Example>
+
+#### Deploy Test to Live
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus deploy mysite.test --note="one sidebar" --updatedb --cc --sync-content
+```
+<hr className="certification source-code" /> <br/>
+
+![Use the Pantheon Dashboard to deploy from Test to Live](../../../images/certification/study-guide-cms/dashboard-deploy-from-test-to-live.png)
+</Example>
+
+#### Clear Caches
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus env:clear-cache mysite.dev
+```
+<hr className="certification source-code" /> <br/>
+
+![Clear caches via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-clear-caches.png)
+</Example>
+
+#### Retrieve Database Backup from Test
+
+<Example class="certification style-example">
+
+```bash{promptUser: user}
+terminus backup:get mysite.test --element=db
+```
+<hr className="certification source-code" /> <br/>
+
+![Get backups from the Pantheon Dashbaord](../../../images/certification/study-guide-cms/dashboard-get-database-backup.png)
+</Example>
+
 ### Scripting with Terminus
-
-<Alert title="Tutorial Activity #14: Using Terminus to Accelerate Development"  type="info" >
-
-Pantheon also allows you to programmatically create sites using Terminus. The terminus site:create command is just one example of how Terminus can automate the completion of a complex task, in this case creating a new site. In this section, we will walk through several useful examples of what Terminus can do for you without requiring you to login to the Pantheon Dashboard in your browser. And keep in mind that these examples are merely scratching the surface of what is possible with Terminus and WebOps.
-
-</Alert>
-
-This section provides information on how to automate your workflow with Terminus scripting.
-
-Terminus makes it easy to directly interact with Pantheon from your command line, and provides additional value with scripting abilities. You can make Pantheon a part of your standardized workflow by adding Terminus to your automated tasks.
+As demonstrated in the comparisons above, nearly anything you can do in the Pantheon Dashboard interface is possible via the command line, and thus is scriptable.
 
 Consider the repetitive tasks you perform using the Pantheon Dashboard:
 
@@ -197,129 +319,9 @@ Terminus must be authenticated before you can execute most commands (using the `
 
 Using Terminus commands, you can create customized WebOps automation scripts to further automate tedious tasks, effortlessly enforce quality control guardrails, permit self-service completion of a complex multistep provisioning process, and more.
 
-Now that we have created a site through the dashboard, let’s see how to create a site programmatically with Terminus!
-
-
-1. Terminus should already be installed on our local machine, and you should have already created a Machine Token in the Pantheon dashboard to allow Terminus to authenticate on our behalf.
-
-    - To install Terminus, you can follow the steps on [this documentation page](/terminus/install).
-    - To create a Machine Token, you can follow the steps on this [documentation page](/machine-tokens).
-
-  You can validate the successful installation of Terminus on your machine by typing the following into your command line:
-  ```bash{promptUser: user}
-  which terminus
-  ```
-  If Terminus is successfully installed you should see something like the following:
-  ```bash{promptUser: user}
-  /usr/local/bin/terminus
-  ```
-
-1. Now that Terminus is installed, we will authenticate through the command line by authenticating with our machine token. To generate a machine token in your dashboard, you can following the directions on [this documentation page](/machine-tokens).
-
-  Once you have created your token and copied it to a secure place, you can authenticate with Terminus by typing the following command:
-  ```bash{promptUser: user}
-  terminus auth:login --email=<email@example.com> --machine-token=<machine_token>
-  ```
-
-  In this example, use the email address associated with the user who is logging into the dashboard. Note that Terminus will have the same permissions as the user associated with the email address you provide here. Also, replace `<machine_token>` with the machine token string you copied when you created your machine token.
-
-1. Now that you are logged into Terminus, you can run individual commands in your command line. You can view a list of available commands on [this documentation page](/terminus/commands), or you can type the following command to get a list of all commands:
-  ```bash{promptUser: user}
-  terminus list
-  ```
-  Here is an example of the command we will use to create a new site with Terminus:
-  ```bash{promptUser: user}
-  terminus site:create <site_name> <label> <upstream_id> --org <org_id> --region <region>
-  ```
-  In this case, there are a few parameters we will need to grab. We would like to create a new site that is a fresh install of the latest version of WordPress, deployed to the United States region. We will call the site “New WordPress Example Site”.
-
-  To create this site, therefore, we will input the following parameters:
-    - **site name:** This is the machine name for your site. In this case, we would type in “new-wordpress-example-site”
-    - **label**: This is the human-readable name of the site. In this case, we would enter “New WordPress Example Site”.
-    - **upstream_id:** This is a string that can denote one of Pantheon’s core upstreams (e.g. “WordPress” or “Drupal”), or you can use the ID number of a Custom Upstream. In this case, we will be deploying a fresh installation of WordPress, so we will select “WordPress” as our upstream ID.
-    - **org:** This is the unique identifier for the Organization the site will belong to. This ID number can be found in the URL of your Workspace. In this case, the organization ID is `1b50534e-d6d6-458a-9095-878e32b52a33`. You can easily copy and paste this string from your Workspace’s URL (fig. 9.1).
-
-      ![Find Org UUID from the Dashboard URL](../../../images/certification/study-guide-cms/find-org-uuid-from-dashboard-url.png)
-
-    - **region:** Pantheon allows you to deploy to one of four global regions: Australia (au), Canada (ca), European Union (eu), and the United States (us). In this case, we will choose United States (us)
-
-  The complete command line command should look like this:
-  ```bash{promptUser: user}
-  terminus site:create new-wordpress-example-site "New WordPress Example Site” "WordPress" --org 1b50534e-d6d6-458a-9095-878e32b52a33 --region us
-  ```
-
-1. Terminus will now run through the process of provisioning a new site. The process typically takes a couple minutes or less. Once the process completes, you should see confirmation with the “Deployed CMS” message:
-  ![Terminus site create command to spin up new WordPress example site](../../../images/certification/study-guide-cms/terminus-site-create-new-wordpress-example.png)
-
-1. Head back to the dashboard in the web browser. In the “Sites” tab of your Workspace, you should now see the new site listed with the other sites:
-  ![New example site in Workspace](../../../images/certification/study-guide-cms/new-example-site-in-workspace.png)
-
-  Clicking on the link will bring you to the site dashboard for your new site.
-
-Now, you have seen how to create a new site programmatically using Terminus in the command line. We have just scratched the surface on what is possible with Terminus. Here are some suggested next steps to get your feet wet with Terminus:
-
-- **Install your WordPress site:** You can do this with the [WP-CLI](https://developer.wordpress.org/cli/commands/core/) command [`wp core install`](https://developer.wordpress.org/cli/commands/core/)**.** Terminus provides a wrapper for writing WP-CLI commands (and Drush commands for Drupal websites) with the [`terminus remote:wp`](/terminus/commands/remote-wp) command. The following example would install WordPress in the Dev environment of our WordPress site:
-  ```bash{promptUser: user}
-  terminus remote:wp --progress new-wordpress-example-site.dev core install
-  ```
-
-- **Initialize your Test and Live environments:** When you create the new site, everything is provisioned within the Dev environment. You can initialize your Test and Live environments through the dashboard, but Terminus provides a faster way to do this with the [`terminus env:deploy`](/terminus/commands/env-deploy) command. The following example would initialize the Test environment for our new WordPress site:
-  ```bash{promptUser: user}
-  terminus env:deploy --sync-content --cc --updatedb -- new-wordpress-example-site.test
-  ```
-
-- **Create a backup of your new site:** You can programmatically create backups of your site using the [`terminus backup:create`](/terminus/commands/backup-create) command. You can also use this command as part of a script that runs every time a new version of the site is deployed. The following example would create a backup of the code, database, and files in the Dev environment of our site:
-  ```bash{promptUser: user}
-  terminus backup:create new-wordpress-example-site.dev
-  ```
-
-- **Create a new Multidev environment for new site:** You can programmatically create Multidevs for your new site using the [`terminus multidev:create`](/terminus/commands/multidev-create) command. This can save significant time, especially when working on large projects or handling multiple development streams simultaneously. Scripting the creation of Multidevs with Terminus unlocks a whole world of potential for using Multidevs as build artifact destinations in a CI/CD workflow. The following example would create a new Multidev called newfeature, and clone the code, database, and files from the Dev environment of our site:
-  ```bash{promptUser: user}
-  terminus multidev:create  -- new-wordpress-example-site.dev newfeature
-  ```
-
 Keep in mind that you can run Terminus commands individually, but the real power comes in the ability to script your Terminus commands. This enables you to put specific guardrails in place automatically, opening up virtually unlimited possibilities for your WebOps workflow!
 
 For more information on scripting with Terminus, see the following [documentation page](/terminus/scripting).
-
-### Interacting Programmatically with the CMS
-As you know, Pantheon is a platform for hosting, developing, deploying and managing Drupal, WordPress, and JavaScript frontend applications. It is worth quickly distinguishing between the different types of users who login to the Pantheon dashboard, and those who login to the administrative dashboard of the Drupal or WordPress CMS applications.
-
-#### Content Management System Users
-These users are generally content creators, marketers, SEO specialists, and administrators who need to manage the website's content, look, and feel. They use the CMS interface for tasks like creating, editing, and publishing content; managing site structure and navigation; updating visual themes and layouts; and handling SEO metadata. Their main goal is to ensure the website's content is engaging, up-to-date, and effectively reaching its target audience.
-
-![Druapl admin interface](../../../images/certification/study-guide-cms/drupal-admin-interface.png)
-
-While there is a dedicated link in the site dashboard to access the admin dashboard of the CMS application, it should be noted that this link is there for convenience only. CMS users may log directly into the CMS through the CMS login form, and do not need to interface with Pantheon on a daily basis.
-
-#### Pantheon Dashboard Users
-These are typically website developers, DevOps engineers, and IT personnel, who use the Pantheon dashboard to manage technical aspects of websites, including code commits, development, testing, and deployment live environments. Their primary focus is ensuring the technical health and performance of the website. Additionally, agency and organization administrators often use the Pantheon Dashboard to manage their teams and to review usage and billing information.
-
-Pantheon Dashboard users can log directly into the dashboard with a username and password, authenticate via a SAML-based Single Sign-On (SSO) solution, or authenticate via a machine token with Terminus.
-
-There are often reasons why developers would want to interact directly with the application itself, not just with the code or underlying database. Terminus provides a simple, secure way to interact directly with the CMS through the command line or through scripting by providing a shell for running Drush and WP-CLI commands.
-
-Both Drupal and WordPress provide convenient CLI (Command Line Interface) tools, known as [Drush](http://drush.org/) and [WP-CLI](https://wp-cli.org/) respectively, which enable developers to perform a variety of tasks and manage site configurations directly from the command line. Both allow you to update plugins and modules, configure individual and WordPress multisite installations, perform utility tasks such as clearing the cache and updating the database, and more, all without using a web browser.
-
-While a comprehensive exploration of all that is possible with each of these tools is outside the scope of this guide, we would highly recommend visiting the documentation sites and exploring the possible uses for each tool.
-
-#### Running Drush and WP-CLI Commands
-Here's an example of how to use Terminus to run a Drush command. Let's use drush status as an example command:
-
-
-```bash{promptUser: user}
-terminus remote:drush new-wordpress-example-site.dev -- status
-```
-
-This command would return the status of your Drupal site (although in this case, you'd want to run a WordPress command since the site is a WordPress site).
-But if you're working with a WordPress site, you might use WP-CLI instead of Drush. An example command for that might be:
-
-
-```bash{promptUser: user}
-terminus remote:wp new-wordpress-example-site.dev -- core version
-```
-
-This command would return the version of WordPress core that is currently running on your site in the dev environment.
 
 ## Quicksilver
 Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow. There is a growing set of example scripts available for review and contributions. Several scripts enable additional functionality, including:
@@ -383,7 +385,7 @@ The following are some common examples of how Quicksilver can help you automate 
 | New Site Created | <ul><li>Send SMS to administrator</li><li>Notify a Slack channel</li><li>Run Composer scripts</li></ul>|
 
 ### More Quicksilver Examples
-The steps above provide a fast way to integrate New Relic® Performance Monitoring and Pantheon with Quicksilver. The Quicksilver Examples repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
+The Quicksilver Examples repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
 
 #### More Resources
 - [Automate and Integrate your WebOps Workflow with Quicksilver](/guides/quicksilver)
