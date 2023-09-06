@@ -60,7 +60,7 @@ In this section, we will install Terminus, Pantheon’s command line interface t
 
 This section provides information on how to install and authenticate Terminus. Terminus is available for MacOS and Linux. Windows 10 users can install the Windows Subsystem for Linux, and then install Terminus in the Linux shell.
 
-Some Terminus commands use SSH authentication. You should add SSH keys to your account before you continue.
+Some Terminus commands use SSH authentication. You should add [SSH keys](/certification/study-guide/chapter-6-deployment#connect-with-ssh) to your account before you continue.
 
 
 | **Compatible Operating Systems** | **Incompatible Operating Systems**|
@@ -146,7 +146,6 @@ The following command structure pattern presupposes formal web application namin
 
 Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, and should not to be included in your commands. For example, running the env:clear-cache command for the Live environment of a site labeled "Your Awesome Site”:
 
-
 ```bash{promptUser: user}
 terminus env:clear-cache your-awesome-site.live
 ```
@@ -230,7 +229,7 @@ Now that we have created a site through the dashboard, let’s see how to create
   ```
   Here is an example of the command we will use to create a new site with Terminus:
   ```bash{promptUser: user}
-  terminus site:create <site_name> <label> <upstream_id> --org <org_id> —region <region>
+  terminus site:create <site_name> <label> <upstream_id> --org <org_id> --region <region>
   ```
   In this case, there are a few parameters we will need to grab. We would like to create a new site that is a fresh install of the latest version of WordPress, deployed to the United States region. We will call the site “New WordPress Example Site”.
 
