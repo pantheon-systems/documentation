@@ -29,7 +29,7 @@ WordPress Multisites can now run automated Search and Replace when cloning the d
 
 Subdomain Multisites can use a domain map to define the URLs between environments, or auto-convert to a subdirectory Multisite in non-live environments.
 
-For more information, see Pantheon’s documentation on [Search and Replace](/guides/multisite/search-replace/).Or join the [#WordPress Slack Channel](http://slackin.pantheon.io) to connect with other Pantheon customers & super-users.
+For more information, see Pantheon’s documentation on [Search and Replace](/guides/multisite/search-replace/). Or join the [#WordPress Slack Channel](http://slackin.pantheon.io) to connect with other Pantheon customers & super-users.
 
 ### Early Access: Customer Scheduled Jobs
 [The Terminus Scheduled Jobs Plugin](/customer-scheduled-cron-jobs) allows you to schedule and automate specific cron jobs according to site requirements without affecting performance.
