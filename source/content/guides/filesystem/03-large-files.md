@@ -41,15 +41,15 @@ The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure is
 
 ### Large File Restrictions
 
-- **Files over 50MB** can be uploaded with WordPress, Drupal, or SFTP. You will experience noticeable degradation in performance.
-- **Files over 100MB** cannot be uploaded through WordPress or Drupal. You must add files of this size by [SFTP or rsync](/guides/sftp/rsync-and-sftp).
-- **Files over 256MB** will fail no matter how they are uploaded.
+- **Files over 50MiB** can be uploaded with WordPress, Drupal, or SFTP. You will experience noticeable degradation in performance.
+- **Files over 100MiB** cannot be uploaded through WordPress or Drupal. You must add files of this size by [SFTP or rsync](/guides/sftp/rsync-and-sftp).
+- **Files over 256MiB** are not supported and cannot be stored on the Pantheon Filesystem.
 
-| File Size     | Platform Compatibility               | Notes                               |
-|:--------------|--------------------------------------|-------------------------------------|
-| ≤ 100MB       | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
-| 100MB - 256MB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
-| > 256MB       | <span  style="color:red">❌</span>    | Must be hosted via 3rd-party CDN    |
+| File Size       | Platform Compatibility               | Notes                               |
+|:----------------|--------------------------------------|-------------------------------------|
+| ≤ 100MiB        | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
+| 100MiB - 256MiB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
+| > 256MiB        | <span  style="color:red">❌</span>    | Must be hosted via 3rd-party CDN    |
 
 ### CDNs
 
@@ -58,24 +58,26 @@ We recommend using a CDN like Amazon S3 as a cost-effective file serving solut
 - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs).
 - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
 
-You cannot upload files over 100MB through the CMS even when using an external CDN to host files. You can upload these files directly to the CDN. Refer to Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html) for more information.
+You cannot upload files over 100MiB through the CMS even when using an external CDN to host files. You can upload these files directly to the CDN. Refer to Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html) for more information.
 
 You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress](/guides/wordpress-developer/wordpress-s3) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
 
-Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
+Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MiB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
 
 ### Media and Email
 
 Refer to the [Media and Email](/guides/platform-considerations/media-email-support) section of the [Platform Considerations](/guides/platform-considerations) guide for more information on support for large media and email files.
 
-## Large (>100GB) File Backups
+## Large (>100GiB) File Backups
 
-Large backups take longer, use more resources, and have a higher likelihood of failing. A 100GB compressed tarball is not a convenient solution. Scheduled backups do not back up files for sites with footprints over 200GB (although code and database are backed-up as normal) for this reason. Despite the lack of backups, file content is highly durable and stored on multiple servers.
+Large backups take longer, use more resources, and have a higher likelihood of failing. A 100GiB compressed tarball is not a convenient solution. Sites with footprints over 200GiB or two million files cannot be backed up for this reason (although code and database are backed up as normal).
+
+Despite the lack of backups, file content is highly durable and stored on multiple servers.
 
 ## More Resources
 
 - [All About Application Containers](/application-containers)
 - [Integrate Your Fastly Account on Pantheon with Amazon S3](/guides/fastly-pantheon/fastly-amazon-s3)
-- [Platform Considerations](/guides/platform-consideratons)
+- [Platform Considerations](/guides/platform-considerations)
