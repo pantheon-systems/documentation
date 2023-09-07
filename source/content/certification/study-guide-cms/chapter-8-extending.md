@@ -128,7 +128,7 @@ To set up a machine token on Pantheon, follow these steps:
 
 You should see the following screen upon completion:
 
-![New machine token successfully created](../../../images/certification/study-guide-cms/new-machine-token-successfully-created.png)
+![New machine token successfully created](../../../images/dashboard/machine-token-ready.png)
 
 Once you have generated your token, you can use it to authenticate with Terminus. In order to authenticate with Terminus, run the following command (using the unique machine token string you have just generated in the Pantheon Dashboard):
 
@@ -194,7 +194,7 @@ terminus site:list
 ```
 <hr className="certification source-code" /> <br/>
 
-![View site list from the Pantheon Dashbaord](../../../images/certification/study-guide-cms/dashboard-site-list.png)
+![View site list from the Pantheon Dashbaord](../../../images/dashboard/new-dashboard/sites.png)
 </Example>
 
 #### Create Site
@@ -206,7 +206,7 @@ terminus site:create mysite “My Site” wordpress
 ```
 <hr className="certification source-code" /> <br/>
 
-![Create a new site from the Pantheon Dashbaord](../../../images/certification/study-guide-cms/dashboard-create-site.png)
+![Create a new site from the Pantheon Dashbaord](../../../images/dashboard/create-pantheon-site.png)
 </Example>
 
 #### Install WordPress
@@ -242,7 +242,7 @@ terminus connection:set mysite.dev sftp
 ```
 <hr className="certification source-code" /> <br/>
 
-![Switch to SFTP mode via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-enable-sftp-mode.png)
+![Switch to SFTP mode via the Pantheon Dashboard](../../../images/SFTP-mode.png)
 </Example>
 
 #### Activate Plugins
@@ -274,7 +274,7 @@ terminus drush mysite.dev -- pm-enable serialization
 <Example class="certification style-example">
 
 ```bash{promptUser: user}
-terminus deploy mysite.test --note="one sidebar" --updatedb --cc --sync-content
+terminus deploy mysite.live --note="one sidebar" --updatedb --cc --sync-content
 ```
 <hr className="certification source-code" /> <br/>
 
@@ -293,12 +293,12 @@ terminus env:clear-cache mysite.dev
 ![Clear caches via the Pantheon Dashboard](../../../images/certification/study-guide-cms/dashboard-clear-caches.png)
 </Example>
 
-#### Retrieve Database Backup from Test
+#### Retrieve Latest Database Backup from Live
 
 <Example class="certification style-example">
 
 ```bash{promptUser: user}
-terminus backup:get mysite.test --element=db
+terminus backup:get mysite.live --element=db
 ```
 <hr className="certification source-code" /> <br/>
 
@@ -335,7 +335,7 @@ To see some example scripts to get started with, check out our [Quicksilver Exam
 Quicksilver workflows are defined in your `pantheon.yml` file. You can specify the workflows you want to hook into, for example, deploy or sync_code. You can also specify the workflow stage (before or after) and the location of the script relative to the root of your site's docroot.
 
 ### Quicksilver Example with Pantheon.yml
-The adapted slack_notification example below provides steps to post to Slack every time you deploy:
+The adapted [`slack_notification` example](https://github.com/pantheon-systems/quicksilver-examples/tree/main/slack_notification) below provides steps to post to Slack every time you deploy:
 
 Commit a `pantheon.yml` file with the following content:
 ```yaml:title=pantheon.yml
@@ -396,4 +396,4 @@ The Quicksilver Examples repository provides many more ways to automate developm
 
 ## Chapter Summary
 
-We have covered a lot in this section! We started by getting familiar with Terminus, and you learned how to install the powerful command line interface tool in your laptop. Next, you learned about running individual Terminus commands, and then about scripting Terminus using your scripting language of choice (Bash, Python, etc.). And finally, you learned about how Terminus can allow you to interact directly with your CMS site, using Drush or WP-CLI commands as a starting point. We have covered a lot in this chapter. In the next and final chapter, we will learn about some of Pantheon’s other automation tools: Integrated Composer, Autopilot, and Quicksilver.
+We have covered a lot in this section! We started by getting familiar with Terminus, and you learned how to install the powerful command line interface tool in your laptop. Next, you learned about running individual Terminus commands, and then about scripting Terminus using your scripting language of choice (Bash, Python, etc.). And finally, you learned about how Quicksilver platform hooks can allow you to extend WebOps workflows and integrate external services. We have covered a lot in this chapter. In the next and final chapter, we will learn about some of Pantheon’s other automation tools: Integrated Composer and Autopilot.
