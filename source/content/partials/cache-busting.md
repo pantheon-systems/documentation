@@ -27,3 +27,5 @@ wp-resetpass-[A-Za-z0-9_]+
 (wp_)?woocommerce[A-Za-z0-9_-]+
 amazon_Login_[A-Za-z0-9_]+
 ```
+
+Note that `wp-wpml_*` cookies are an exception to the above WordPress pattern. Pantheon will treat language-preference cookies from WPML as cache _varying_ cookies.
