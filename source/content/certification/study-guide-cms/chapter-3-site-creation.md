@@ -151,23 +151,40 @@ In later chapters, we will talk about environments on Pantheon. There are typica
 
 </Alert>
 
+
 Now that you've made a site, let's look at an architectural overview of what you've got with each environment for each site.
 
-**todo image. New diagram coming from Design**
+### The Infrastructure that Serves a CMS Site
+
+  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-full.png)
 
 **Pantheon’s container-base platform** runs an integrated set of tools across a distributed and redundant infrastructure. This architecture provides everything needed to build, launch, and manage websites that achieve unmatched performance and reliability. The platform comprises three layers, which include Pantheon’s Global Edge, Runtime Matrix, and Application Services.
 
-**Pantheon’s Global Edge** is the exterior layer of the platform, meaning it is the first point of contact for traffic. The Edge Layer has a built-in HTTPS accelerator that serves cached data from virtual memory, allowing responses to be returned without going through the application containers. This keeps resource consumption low, so dynamic requests can be generated with ease during traffic spikes. If cached content is not found, the edge layer will automatically load balance and route requests to the next layer of the platform, our Runtime Matrix. On its way back out, the response will be cached for optimal performance. 
+#### The Edge Layer
+
+  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-cache-hit.png)
+
+**Pantheon’s Global Edge** is the exterior layer of the platform, meaning it is the first point of contact for traffic. The Edge Layer has a built-in HTTPS accelerator that serves cached data from virtual memory, allowing responses to be returned without going through the application containers. This keeps resource consumption low, so dynamic requests can be generated with ease during traffic spikes. If cached content is not found, the edge layer will automatically load balance and route requests to the next layer of the platform, our the application containers. On its way back out, the response will be cached for optimal performance. 
+
+#### Application Containers
+
+  ![The load balancer passing requests to PHP Application Containers](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-load-balancer.png)
 
 **The PHP Application Containers Layer** is where Nginx and PHP workers are fired off in millions of isolated Linux containers. Our robots do all the work by provisioning at the speed of software and at the click of a button, allowing you to go from hundreds of page views to hundreds of millions, without downtime or architectural changes.
 
 Pantheon can also detect failures in the event that an application container is unresponsive or unhealthy, automatically rerouting traffic to a failover container when necessary. Every environment runs on its own container, and all containers within the same application are connected by version control. 
 
+#### Application Services
+
+  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-application-services.png)
+
 **Application Services Layer:** Similar to our application containers, our **database service** is based on a grid model and facilitates horizontal scalability using replication topology. This allows you to spread requests across multiple databases to improve site performance and load times.
 
-Pantheon’s **cloud based file system,** runs multiple layers of caching and is designed to stay in sync as you work and scale. Files are replicated for high availability.
+An **Object Cache** is provided for sites needing faster performance through Redis. Put simply, Redis helps accelerate the logged in experience of the CMS, such as the content editorial experience or the shopping chart experience.
 
-An **Object Cache** is provided for sites needing faster performance through Redis. Put simply, Redis helps accelerate the logged in experience of the CMS, such as the content editorial experience or the shopping chart experience. Pantheon manages Solr services to provide full-text search at incredible speed with zero overhead required.
+A **Search Index** is provided for sites faster and more complex search than is possible through the database. CMS Sites interact with Solr using plugins and modules.
+
+Pantheon’s **cloud-based file system,** runs multiple layers of caching and is designed to stay in sync as you work and scale. Files are replicated for high availability.
 
 This architecture provides everything needed to build, launch and manage websites that achieve unmatched performance and reliability.
 
