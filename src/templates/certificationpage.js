@@ -55,12 +55,12 @@ const items = [
   {
     id: "docs-certification",
     link: "/certification/study-guide",
-    title: "Certification Study Guide",
+    title: "The Program",
   },
   {
     id: "docs-certification-chapter-0",
     link: "/certification/study-guide/chapter-0-intro",
-    title: "Chapter 0: Intro",
+    title: "Foreword",
   },
   {
     id: "docs-certification-chapter-1",

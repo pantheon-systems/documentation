@@ -16,6 +16,8 @@ tags: []
 permalink: certification/study-guide
 ---
 
+Pantheon is introducing a certification program that validates knowledge of our core CMS Sites offering. This program is presently invite-only for [Pantheon Heroes](https://pantheon.io/developer-community/heroes) and developers at [Partners agencies](https://pantheon.io/partners/become-pantheon-partner). We expect to open it more widely in 2024.
+
 ### Why Become Certified?
 
 Pantheon’s certification in WebOps provides a number of benefits to individual developers, agencies, and companies that have mission-critical digital channels that need to be leveraged to their maximum capabilities. 
