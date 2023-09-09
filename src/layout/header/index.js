@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import AddSearch from "../../components/addSearch"
-import { MenuButton, Navbar } from "@pantheon-systems/pds-toolkit-react"
+import { Navbar } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
@@ -18,30 +18,6 @@ const documentationMenuItems = [
 ]
 
 const navbarChildren = [
-  <MenuButton
-    key="1"
-    slot="items-left"
-    label="Documentation"
-    variant="navbar"
-    withinNavbar
-    menuItems={documentationMenuItems}
-  />,
-  <Link
-    key="2"
-    slot="items-left"
-    className="pds-button pds-button--navbar"
-    to="/changelog"
-  >
-    Changelog
-  </Link>,
-  <Link
-    key="2"
-    slot="items-left"
-    className="pds-button pds-button--navbar"
-    to="/glossary"
-  >
-    Glossary
-  </Link>,
   <a
     key="2"
     slot="items-right"
