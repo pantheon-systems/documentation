@@ -2,22 +2,91 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import AddSearch from "../../components/addSearch"
-import { Navbar } from "@pantheon-systems/pds-toolkit-react"
+import { Navbar, NavMenu } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
-const documentationMenuItems = [
+const mainNavigationLinks = [
   {
-    isNode: true,
-    nodeContent: (
-      <Link id="get-started" to="/get-started">
-        Get Started
-      </Link>
-    ),
+    label: "Documentation",
+    links: [
+      {
+        linkContent: (
+          <Link id="get-started" to="/get-started">
+            Get Started
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="develop" to="/develop">
+            Develop
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="platform" to="/platform">
+            Explore Platform Architecture
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="performance" to="/performance">
+            Optimize Performance
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="manage" to="/manage">
+            Manage Teams & Organizations
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="troubleshoot" to="/troubleshoot">
+            Troubleshoot
+          </Link>
+        ),
+      },
+      {
+        isSeparator: true,
+      },
+      {
+        linkContent: (
+          <Link id="changelogs" to="/changelog">
+            Changelog
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="Glossary" to="/glossary">
+            Glossary
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="terminus" to="/terminus">
+            Terminus Guide
+          </Link>
+        ),
+      },
+    ],
   },
 ]
 
 const navbarChildren = [
+  <NavMenu
+    key="1"
+    slot="items-left"
+    ariaLabel="Main Navigation"
+    menuItems={mainNavigationLinks}
+  />,
   <a
     key="2"
     slot="items-right"
@@ -48,9 +117,7 @@ const navbarChildren = [
 ]
 
 const Header = () => (
-  <header>
-    <Navbar ariaLabel="Main navigation" children={navbarChildren} />
-  </header>
+  <Navbar ariaLabel="Main navigation" children={navbarChildren} />
 )
 
 export default (props) => (
