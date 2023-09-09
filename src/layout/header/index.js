@@ -2,7 +2,12 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 
 import AddSearch from "../../components/addSearch"
-import { Navbar, NavMenu } from "@pantheon-systems/pds-toolkit-react"
+import {
+  Container,
+  InputText,
+  Navbar,
+  NavMenu,
+} from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
@@ -117,8 +122,28 @@ const navbarChildren = [
   </div>,
 ]
 
-const Header = () => (
-  <Navbar ariaLabel="Main navigation" children={navbarChildren} />
+const Header = ({ data, page }) => (
+  <>
+    <Navbar ariaLabel="Main navigation" children={navbarChildren} />
+    <Container id="search-bar">
+      <form
+        id="searchform"
+        action="/search"
+        role="search"
+        acceptCharset="UTF-8"
+        encType="application/x-www-form-urlencoded"
+        title="Search Pantheon Documentation"
+      >
+        <InputText
+          aria-label="Search Pantheon Documentation"
+          placeholder="Search Pantheon Documentation"
+          type="search"
+          data-addsearch-id="search_widget"
+        />
+        {page == "default" ? <AddSearch /> : null}
+      </form>
+    </Container>
+  </>
 )
 
 export default (props) => (

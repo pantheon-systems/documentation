@@ -1,8 +1,19 @@
 /* Temporary hacks -- fix in toolkit */
-
 .pds-navbar__mobile {
-  background-color: white;
+  background-color: var(--pds-color-background-default);
   height: 100vh;
-  top: 80px;
   padding-top: 14px;
+  top: 80px;
+}
+
+/* Search bar styles */
+#search-bar {
+  align-items: center;
+  display: flex;
+  height: var(--pds-spacing-6xl);
+  padding-block-end: var(--pds-spacing-xl);
+}
+
+#search-bar #searchform {
+  width: 100%;
 }
