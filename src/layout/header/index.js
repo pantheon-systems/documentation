@@ -96,24 +96,22 @@ const navbarChildren = [
   >
     Support
   </a>,
-  <a
-    key="3"
-    slot="items-right"
-    className="pds-button pds-button--brand-secondary"
-    href="https://dashboard.pantheon.io"
-    target="_blank"
-  >
-    Log in
-  </a>,
-  <a
-    key="4"
-    slot="items-right"
-    className="pds-button pds-button--brand"
-    href="https://pantheon.io/register"
-    target="_blank"
-  >
-    Get free account
-  </a>,
+  <div key="3" slot="items-right" className="pds-button-group">
+    <a
+      className="pds-button pds-button--brand-secondary"
+      href="https://dashboard.pantheon.io"
+      target="_blank"
+    >
+      Log in
+    </a>
+    <a
+      className="pds-button pds-button--brand"
+      href="https://pantheon.io/register"
+      target="_blank"
+    >
+      Get free account
+    </a>
+  </div>,
 ]
 
 const Header = () => (
