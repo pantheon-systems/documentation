@@ -9,7 +9,7 @@ const MarketoForm = ({ baseUrl, munchkinId, formId, formName }) => {
       const scriptsToLoad = ["/js/forms2/js/forms2.min.js"]
 
       Promise.all(
-        scriptsToLoad.map(scriptItem => {
+        scriptsToLoad.map((scriptItem) => {
           return new Promise((resolve, reject) => {
             const script = document.createElement("script")
             script.src = `${baseUrl}${scriptItem}`
@@ -21,11 +21,11 @@ const MarketoForm = ({ baseUrl, munchkinId, formId, formName }) => {
           })
         })
       )
-        .then(item => {
+        .then((item) => {
           const windowGlobal = typeof window !== "undefined" && window
 
           if (windowGlobal && windowGlobal.MktoForms2) {
-            MktoForms2.loadForm(baseUrl, munchkinId, formId, o => {
+            MktoForms2.loadForm(baseUrl, munchkinId, formId, (o) => {
               o.onSuccess(() => {
                 // Set component to sent
                 setIsSent(true)
@@ -42,7 +42,7 @@ const MarketoForm = ({ baseUrl, munchkinId, formId, formName }) => {
   })
 
   return !isSent ? (
-    <form id={formName} name={formName} />
+    <form id={formName} name={formName} className="pds-form" />
   ) : (
     <p>Thank You for Signing Up</p>
   )

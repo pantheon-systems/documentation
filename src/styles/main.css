@@ -1,1 +1,90 @@
 /* For local styles not coming from PDS. */
+
+/* Temporary hacks for marketo forms */
+
+/* Buttons */
+.mktoButtonRow .mktoButtonWrap button.mktoButton {
+  background-color: var(
+    --pds-color-button-primary-background-default
+  ) !important;
+  border: 1px solid var(--pds-color-button-primary-background-default) !important;
+  border-radius: var(--pds-border-radius-default);
+  box-shadow: none !important;
+  color: var(--pds-color-button-primary-foreground-default) !important;
+  font-family: var(--pds-typography-font-default) !important;
+  font-size: 1rem !important;
+  font-weight: var(--pds-typography-font-weight-bold) !important;
+  height: 2.25rem;
+  letter-spacing: var(--pds-typography-letter-spacing-m);
+  transition: var(--pds-animation-button-transition);
+}
+
+.mktoButtonRow .mktoButtonWrap button.mktoButton:hover {
+  background-color: var(--pds-color-button-primary-background-hover) !important;
+  border-color: var(--pds-color-button-primary-background-hover) !important;
+  transition: var(--pds-animation-button-transition);
+}
+
+.mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
+  outline: 2px solid var(--pds-color-interactive-focus) !important;
+  outline-offset: 1px;
+}
+
+/* Inputs */
+.mktoForm input[type="text"],
+.mktoForm input[type="url"],
+.mktoForm input[type="email"],
+.mktoForm input[type="tel"],
+.mktoForm input[type="number"],
+.mktoForm input[type="date"],
+.mktoForm select.mktoField,
+.mktoForm textarea.mktoField {
+  background-color: var(--pds-color-background-default);
+  border: 1px solid var(--pds-color-input-border-default);
+  border-radius: var(--pds-border-radius-default);
+  box-shadow: none !important;
+  color: var(--pds-color-foreground-default);
+  height: 2.25rem;
+  line-height: 1.5em;
+  padding: var(--pds-spacing-2xs);
+}
+.mktoForm input[type="text"]:focus,
+.mktoForm input[type="url"]:focus,
+.mktoForm input[type="email"]:focus,
+.mktoForm input[type="tel"]:focus,
+.mktoForm input[type="number"]:focus,
+.mktoForm input[type="date"]:focus,
+.mktoForm select.mktoField:focus,
+.mktoForm textarea.mktoField:focus {
+  outline: 1px solid var(--pds-color-interactive-focus) !important;
+  outline-offset: 1px;
+}
+
+.mktoForm .mktoAsterix {
+  display: none !important;
+}
+
+/* Error tooltip */
+.mktoForm .mktoError .mktoErrorMsg {
+  background-color: var(--pds-color-foreground-default);
+  background-image: none;
+  border: 1px solid var(--pds-color-foreground-default);
+  -webkit-box-shadow: var(--pds-elevation-overlay);
+  box-shadow: var(--pds-elevation-overlay);
+  color: var(--pds-color-text-reverse);
+  text-shadow: none;
+}
+.mktoForm .mktoError {
+  color: var(--pds-color-foreground-default);
+}
+.mktoForm .mktoError .mktoErrorArrow {
+  background-color: var(--pds-color-foreground-default);
+  border: 1px solid var(--pds-color-foreground-default);
+}
+
+.mktoForm input.mktoField.mktoInvalid,
+.mktoForm textarea.mktoField.mktoInvalid,
+.mktoForm select.mktoField.mktoInvalid,
+.mktoForm .mktoLogicalField.mktoInvalid {
+  border: 1px solid var(--pds-color-input-border-critical);
+}

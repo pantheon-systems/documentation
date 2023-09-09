@@ -13,9 +13,23 @@
 }
 
 .cc-license__text {
-  padding-block-start: 0.5rem;
   line-height: var(--pds-typography-line-height-m);
+  padding-block-start: 0.5rem;
 }
 
-.pds-form--marketo {
+.pds-site-footer .mktoForm .mktoOffset,
+.pds-site-footer div.mktoGutter.mktoHasWidth {
+  display: none;
+}
+
+#mktoForm_2014 {
+  display: flex;
+}
+
+#mktoForm_2014 input {
+  min-width: 13rem;
+}
+
+#mktoForm_2014 .mktoButtonWrap.mktoInset {
+  margin-left: var(--pds-spacing-m) !important;
 }

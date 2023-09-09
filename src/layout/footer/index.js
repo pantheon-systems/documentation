@@ -109,7 +109,7 @@ const Footer = ({ data }) => {
               downloads, just for signing up. If you don't love it, unsubscribe
               with just a click.
             </p>
-            <div className="pds-form pds-form--marketo pds-spacing-mar-block-start-3xl">
+            <div className="pds-spacing-mar-block-xl">
               <MarketoForm
                 baseUrl="https://app-ab05.marketo.com"
                 munchkinId="316-GSV-089"

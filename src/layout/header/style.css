@@ -2,8 +2,7 @@
 .pds-navbar__mobile {
   background-color: var(--pds-color-background-default);
   height: 100vh;
-  padding-top: 14px;
-  top: 80px;
+  top: var(--pds-spacing-7xl);
 }
 
 /* Search bar styles */
