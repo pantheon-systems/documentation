@@ -78,6 +78,13 @@ const mainNavigationLinks = [
       },
     ],
   },
+  {
+    linkContent: (
+      <a href="https://dashboard.pantheon.io/#support" target="_blank">
+        Support
+      </a>
+    ),
+  },
 ]
 
 const navbarChildren = [
@@ -87,16 +94,12 @@ const navbarChildren = [
     ariaLabel="Main Navigation"
     menuItems={mainNavigationLinks}
   />,
-  <a
+  <div
     key="2"
     slot="items-right"
-    className="pds-button pds-button--navbar"
-    href="https://dashboard.pantheon.io/#support"
-    target="_blank"
+    className="pds-button-group pds-spacing-mar-block-start-xl
+				pds-spacing-mar-block-start-none@lg"
   >
-    Support
-  </a>,
-  <div key="3" slot="items-right" className="pds-button-group">
     <a
       className="pds-button pds-button--brand-secondary"
       href="https://dashboard.pantheon.io"
