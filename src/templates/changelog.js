@@ -46,8 +46,8 @@ class ChangelogTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -58,8 +58,8 @@ class ChangelogTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -78,7 +78,7 @@ class ChangelogTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/images/assets/default-thumb-doc.png"}
         />
-        <main className="container doc-content-well" id="docs-main">
+        <main className="pds-container pds-container--wide" id="docs-main">
           <article className="doc article col-md-9 md-70">
             <div id="doc" className="doc article col-md-9 md-70">
               <h1 className="toc-ignore">Pantheon Changelog</h1>

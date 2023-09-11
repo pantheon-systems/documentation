@@ -33,12 +33,15 @@ class Glossary extends React.Component {
       //console.log("Match Title: ", node.frontmatter.title) // For Debugging
       //console.log("match: ", matches) // For Debugging
       if (matches && matches.length) {
-        matches.forEach(term => {
+        matches.forEach((term) => {
           //console.log("slug: ", node.fields.slug, "slice: ", node.fields.slug.slice(0, 1)),
           defLists.push({
             title: term.match(/<dt>(.*?)<\/dt>/)[1],
             from: node.frontmatter.title,
-            slug: node.fields.slug.slice(0, 1) === "/" ? node.fields.slug.slice(1) : node.fields.slug,
+            slug:
+              node.fields.slug.slice(0, 1) === "/"
+                ? node.fields.slug.slice(1)
+                : node.fields.slug,
             definition: term.match(/<dd>\n\n\s*(.*?)\n\n\s*<\/dd>/)[1],
             letter: term.match(/<dt>(.*?)<\/dt>/)[1][0].toUpperCase(),
           })
@@ -46,12 +49,12 @@ class Glossary extends React.Component {
       }
     })
 
-//    defLists.sort((a, b) =>
-//      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
-//    )
-//    defLists.sort(function(a, b) {
-//      return a.title[0].localeCompare(b.title[0])
-//    })
+    //    defLists.sort((a, b) =>
+    //      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+    //    )
+    //    defLists.sort(function(a, b) {
+    //      return a.title[0].localeCompare(b.title[0])
+    //    })
     //console.log("defLists: ", defLists) // For debugging
 
     let allDfns = []
@@ -63,12 +66,15 @@ class Glossary extends React.Component {
       )
       //console.log("isDfn", isDfn) //For Debugging
       if (isDfn && isDfn.length) {
-        isDfn.forEach(def => {
+        isDfn.forEach((def) => {
           //console.log("slug: ", node.fields.slug, "slice: ", node.fields.slug.slice(0, 1)),
           allDfns.push({
             title: def.match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[2],
             from: node.frontmatter.title,
-            slug: node.fields.slug.slice(0, 1) === "/" ? node.fields.slug.slice(1) : node.fields.slug,
+            slug:
+              node.fields.slug.slice(0, 1) === "/"
+                ? node.fields.slug.slice(1)
+                : node.fields.slug,
             definition: def,
             letter: def
               .match(/\n.*?<dfn id="(.*?)">(.*?)<\/dfn>.*?\n/)[1][0]
@@ -78,12 +84,12 @@ class Glossary extends React.Component {
         })
       }
     })
-//    allDfns.sort((a, b) =>
-//      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
-//    )
-//    allDfns.sort(function(a, b) {
-//      return a.title[0].localeCompare(b.title[0])
-//    })
+    //    allDfns.sort((a, b) =>
+    //      a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1
+    //    )
+    //    allDfns.sort(function(a, b) {
+    //      return a.title[0].localeCompare(b.title[0])
+    //    })
     //console.log("allDfns: ", allDfns) //For Debugging
 
     const allDefs = allDfns.concat(defLists)
@@ -129,7 +135,7 @@ class Glossary extends React.Component {
             description="A collection of terms and definitions through Pantheon's Documentation"
           />
           <main id="doc">
-            <div className="container doc-content-well">
+            <div className="pds-container pds-container--wide">
               <article className="doc article col-md-9 md-70">
                 <HeaderBody
                   title="Glossary"
@@ -138,9 +144,9 @@ class Glossary extends React.Component {
                 <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                   This page dynamically displays all defined terms in the
                   Pantheon Documentation project.
-                  {letters.map(index => (
+                  {letters.map((index) => (
                     <>
-                      {allDefs.filter(def => {
+                      {allDefs.filter((def) => {
                         return JSON.stringify(def.letter).match(index)
                       }).length > 0 ? (
                         <Link to={`#${index.toLowerCase()}`}>
@@ -154,7 +160,7 @@ class Glossary extends React.Component {
                         </Link>
                       ) : null}
                       {allDefs
-                        .filter(def => {
+                        .filter((def) => {
                           //console.log("Now rendering ", def.title, def) //For Debugging
                           return (
                             def.letter.toUpperCase() === index.toUpperCase()
@@ -162,21 +168,31 @@ class Glossary extends React.Component {
                         })
                         .map(({ from, slug, title, definition }) => (
                           <>
-                            <section key={title.replace(/ +/g, '-')}>
+                            <section key={title.replace(/ +/g, "-")}>
                               <hr />
-                              <Link to={`#${title.toLowerCase().replace(/ +/g, '-')}`}>
+                              <Link
+                                to={`#${title
+                                  .toLowerCase()
+                                  .replace(/ +/g, "-")}`}
+                              >
                                 <h3
-                                  key={`${title.replace(/ +/g, '-')}-header`}
-                                  id={title.toLowerCase().replace(/ +/g, '-')}
-                                  name={title.toLowerCase().replace(/ +/g, '-')}
+                                  key={`${title.replace(/ +/g, "-")}-header`}
+                                  id={title.toLowerCase().replace(/ +/g, "-")}
+                                  name={title.toLowerCase().replace(/ +/g, "-")}
                                   className="glossary-term"
                                 >
-                                  {title.charAt(0).toUpperCase() + title.slice(1)}
+                                  {title.charAt(0).toUpperCase() +
+                                    title.slice(1)}
                                 </h3>
                               </Link>
                               <div
                                 dangerouslySetInnerHTML={{
-                                  __html: converter.makeHtml(definition).replace(/<a href="\/(.+?)">/g, "<a href=/$1>")
+                                  __html: converter
+                                    .makeHtml(definition)
+                                    .replace(
+                                      /<a href="\/(.+?)">/g,
+                                      "<a href=/$1>"
+                                    ),
                                 }}
                               />
                               {from.length > 0 ? (

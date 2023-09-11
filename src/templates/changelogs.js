@@ -56,8 +56,8 @@ class ChangelogsTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -68,8 +68,8 @@ class ChangelogsTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -87,7 +87,7 @@ class ChangelogsTemplate extends React.Component {
           image={"assets/images/default-thumb-doc.png"}
         />
         <div className="">
-          <div className="container doc-content-well">
+          <div className="pds-container pds-container--wide">
             <div id="doc" className="doc article col-md-9 md-70">
               <h1 className="toc-ignore">Pantheon Changelog</h1>
               <Callout
@@ -98,7 +98,7 @@ class ChangelogsTemplate extends React.Component {
                 monthly email on what's new and improved across the platform.
               </Callout>
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
-                {changelogs.map(changelog => (
+                {changelogs.map((changelog) => (
                   <React.Fragment key={changelog.id}>
                     <Link to={`/${changelog.node.fields.slug}`}>
                       <h2 id={changelog.node.fields.slug}>

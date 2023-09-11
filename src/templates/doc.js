@@ -68,8 +68,8 @@ class DocTemplate extends React.Component {
       placement: "right",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -80,8 +80,8 @@ class DocTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -106,7 +106,7 @@ class DocTemplate extends React.Component {
           type={node.frontmatter.type}
         />
         <main id="doc">
-          <div className="container doc-content-well">
+          <div className="pds-container pds-container--wide">
             <article className="doc article col-md-9 md-70" id="doc">
               <HeaderBody
                 title={node.frontmatter.title}
@@ -126,13 +126,15 @@ class DocTemplate extends React.Component {
                 </MDXProvider>
               </div>
             </article>
-            {node.frontmatter.showtoc && (
-              <TOC title="Contents" />
-            )}
+            {node.frontmatter.showtoc && <TOC title="Contents" />}
             <GetFeedback
               formId="tfYOGoE7"
               page={node.frontmatter.title}
-              topic={node.frontmatter.categories ? node.frontmatter.categories.toString() : null}
+              topic={
+                node.frontmatter.categories
+                  ? node.frontmatter.categories.toString()
+                  : null
+              }
             />
           </div>
         </main>
