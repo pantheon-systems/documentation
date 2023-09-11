@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 
 import AddSearch from "../../components/addSearch"
 import {
@@ -11,6 +11,7 @@ import {
 
 import "./style.css"
 
+// Links for NavMenu component.
 const mainNavigationLinks = [
   {
     label: "Documentation",
@@ -92,40 +93,39 @@ const mainNavigationLinks = [
   },
 ]
 
-const navbarChildren = [
-  <NavMenu
-    key="1"
-    slot="items-left"
-    ariaLabel="Main Navigation"
-    menuItems={mainNavigationLinks}
-  />,
-  <div
-    key="2"
-    slot="items-right"
-    className="pds-button-group pds-spacing-mar-block-start-xl
+const Header = ({ page }) => (
+  <Navbar>
+    <NavMenu
+      slot="items-left"
+      ariaLabel="Main Navigation"
+      menuItems={mainNavigationLinks}
+    />
+    <div
+      slot="items-right"
+      className="pds-button-group pds-spacing-mar-block-start-xl
 				pds-spacing-mar-block-start-none@lg"
-  >
-    <a
-      className="pds-button pds-button--brand-secondary"
-      href="https://dashboard.pantheon.io"
-      target="_blank"
     >
-      Log in
-    </a>
-    <a
-      className="pds-button pds-button--brand"
-      href="https://pantheon.io/register"
-      target="_blank"
+      <a
+        className="pds-button pds-button--brand-secondary"
+        href="https://dashboard.pantheon.io"
+        target="_blank"
+      >
+        Log in
+      </a>
+      <a
+        className="pds-button pds-button--brand"
+        href="https://pantheon.io/register"
+        target="_blank"
+      >
+        Get free account
+      </a>
+    </div>
+    <Container
+      slot="items-below"
+      id="search-bar"
+      className="pds-spacing-mar-block-2xl"
+      width="wide"
     >
-      Get free account
-    </a>
-  </div>,
-]
-
-const Header = ({ data, page }) => (
-  <>
-    <Navbar ariaLabel="Main navigation" children={navbarChildren} />
-    <Container id="search-bar">
       <form
         id="searchform"
         action="/search"
@@ -143,22 +143,7 @@ const Header = ({ data, page }) => (
         {page == "default" ? <AddSearch /> : null}
       </form>
     </Container>
-  </>
+  </Navbar>
 )
 
-export default (props) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        logo: file(relativePath: { eq: "logo-pantheon-logotype.png" }) {
-          childImageSharp {
-            fluid {
-              src
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => <Header data={data} {...props} />}
-  />
-)
+export default Header
