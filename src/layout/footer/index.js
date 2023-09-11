@@ -2,7 +2,6 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import React from "react"
 import MarketoForm from "../../components/marketoForm"
 import {
-  Button,
   CTASlice,
   InputText,
   FlexContainer,
