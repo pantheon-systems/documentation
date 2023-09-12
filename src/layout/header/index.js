@@ -6,7 +6,6 @@ import {
   Container,
   InputText,
   Navbar,
-  NavMenu,
 } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
@@ -95,11 +94,6 @@ const mainNavigationLinks = [
 
 const Header = ({ page }) => (
   <Navbar>
-    <NavMenu
-      slot="items-left"
-      ariaLabel="Main Navigation"
-      menuItems={mainNavigationLinks}
-    />
     <div
       slot="items-right"
       className="pds-button-group pds-spacing-mar-block-start-xl
