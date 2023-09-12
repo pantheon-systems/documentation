@@ -3,10 +3,11 @@ import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Layout from "../layout/layout"
 import CallToAction from "../layout/call-to-action"
-import TopicsGrid from "../layout/topics-grid"
 import ThreeColumnList from "../layout/three-column-list"
 import ChangelogPreview from "../layout/changelog-preview"
 import SEO from "../layout/seo"
+
+import { TileGrid } from "@pantheon-systems/pds-toolkit-react"
 
 class Index extends React.Component {
   render() {
@@ -22,15 +23,15 @@ class Index extends React.Component {
         />
         <main className="pds-container pds-container--wide" id="docs-main">
           <h1>{homeYaml.title}</h1>
-
+          {/*
           <CallToAction
             title={homeYaml.call_to_action.title}
             subTitle={homeYaml.call_to_action.sub_title}
             url={homeYaml.call_to_action.url}
             type={homeYaml.call_to_action.type}
-          />
+          /> */}
 
-          <TopicsGrid topics={homeYaml.topics} />
+          <TileGrid headingLevel="h3" tiles={homeYaml.topics} />
 
           <ThreeColumnList
             title={homeYaml.three_column_links.title}
@@ -66,11 +67,10 @@ export const pageQuery = graphql`
         type
       }
       topics {
-        title
-        summary
+        headingText
+        bodyText
         icon
-        url
-        secondary
+        ctaLink
       }
       three_column_links {
         title

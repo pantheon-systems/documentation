@@ -1,111 +1,100 @@
 - id: home
-  title: 'Documentation Topics'
+  title: "Documentation Topics"
   call-to-action:
-    title: 'Getting Started Guide'
-    sub-title: 'New to the Pantheon platform? Check out our step-by-step guide to learn all the basics.'
-    url: '/guides/getstarted/'
-    type: 'guide'
+    title: "Getting Started Guide"
+    sub-title: "New to the Pantheon platform? Check out our step-by-step guide to learn all the basics."
+    url: "/guides/getstarted/"
+    type: "guide"
   topics:
-    - title: 'Get Started'
-      summary: 'Migrate existing sites or spin up a new site, then learn how to manage your projects on Pantheon.'
-      icon: 'icon-start.svg'
-      url: '/get-started/'
-    - title: 'Develop'
-      summary: 'Set up your local or work via SFTP and Git within our Dev, Test, and Live environments to follow development best practices.'
-      icon: 'icon-develop.svg'
-      url: '/develop/'
-    - title: 'Go live'
-      summary: 'Learn how to launch sites on Pantheon. Select the correct plan, then add your domain and enable HTTPS.'
-      icon: 'icon-golive.svg'
-      url: '/go-live/'
-    - title: 'CREATE A FRONT-END SITE'
-      summary: 'Get started with decoupled architecture on Pantheon.'
-      icon: 'icon-develop.svg'
-      url: '/guides/decoupled/'
-      secondary: true
-    - title: 'EXPLORE PLATFORM ARCHITECTURE'
-      summary: 'Understand and leverage our container-based infrastructure for smooth scaling.'
-      icon: 'icon-platform.svg'
-      url: '/platform/'
-      secondary: true
-    - title: 'AUTOMATE & INTEGRATE'
-      summary: 'Script common procedures using Quicksilver and the Pantheon YAML file. Integrate third-party services with Drupal and WordPress.'
-      icon: 'icon-automate.svg'
-      url: '/automate/'
-      secondary: true
-    - title: 'OPTIMIZE PERFORMANCE'
-      summary: 'Configure cache, upgrade PHP, and use New Relic APM for optimal performance.'
-      icon: 'icon-performance.svg'
-      url: '/performance/'
-      secondary: true
-    - title: 'MANAGE TEAMS & ORGANIZATIONS'
-      summary: 'Add team members, restrict access, and manage projects in bulk using cloud-based development tools.'
-      icon: 'icon-manage.svg'
-      url: '/manage/'
-      secondary: true
-    - title: 'TROUBLESHOOT'
-      summary: 'Understand known issues with plugins or modules and expose problems in log files.'
-      icon: 'icon-troubleshoot.svg'
-      url: '/troubleshoot/'
-      secondary: true
-    - title: 'ACCESSIBILITY GUIDE'
-      summary: 'Extend your site''s reach with accessibility planning, fixes and testing.'
-      url: '/guides/accessibility'
-      secondary: true
-    - title: 'USING WORDPRESS?'
-      summary: 'The information you need to use WordPress with Pantheon.'
-      url: '/develop-wordpress'
-      secondary: true
-    - title: 'USING DRUPAL?'
-      summary: 'The information you need to use Drupal with Pantheon.'
-      url: '/develop-drupal'
-      secondary: true
-    - title: 'DISASTER RECOVERY PLAYBOOK'
-      summary: 'Be ready to act if your site stops responding.'
-      url: '/guides/disaster-recovery/site-goes-down/'
-      secondary: true
-    - title: 'PLATFORM STATUS'
-      summary: 'Check for platform incident reports.'
-      url: 'https://status.pantheon.io/'
-      secondary: true
+    - headingText: "Get started"
+      bodyText: "Migrate existing sites or spin up a new site, then learn how to manage your projects on Pantheon."
+      icon: "icon-start.svg"
+      ctaLink: "/get-started/"
+    - headingText: "Develop"
+      bodyText: "Set up your local or work via sftp and git within our dev, test, and live environments to follow development best practices."
+      icon: "icon-develop.svg"
+      ctaLink: "/develop/"
+    - headingText: "Go live"
+      bodyText: "Learn how to launch sites on Pantheon. Select the correct plan, then add your domain and enable https."
+      icon: "icon-golive.svg"
+      ctaLink: "/go-live/"
+    - headingText: "Create a front-end site"
+      bodyText: "Get started with decoupled architecture on Pantheon."
+      icon: "icon-develop.svg"
+      ctaLink: "/guides/decoupled/"
+    - headingText: "Explore platform architecture"
+      bodyText: "Understand and leverage our container-based infrastructure for smooth scaling."
+      icon: "icon-platform.svg"
+      ctaLink: "/platform/"
+    - headingText: "Automate & integrate"
+      bodyText: "Script common procedures using quicksilver and the Pantheon yaml file. Integrate third-party services with drupal and wordpress."
+      icon: "icon-automate.svg"
+      ctaLink: "/automate/"
+    - headingText: "Optimize performance"
+      bodyText: "Configure cache, upgrade php, and use new relic apm for optimal performance."
+      icon: "icon-performance.svg"
+      ctaLink: "/performance/"
+    - headingText: "Manage teams & organizations"
+      bodyText: "Add team members, restrict access, and manage projects in bulk using cloud-based development tools."
+      icon: "icon-manage.svg"
+      ctaLink: "/manage/"
+    - headingText: "Troubleshoot"
+      bodyText: "Understand known issues with plugins or modules and expose problems in log files."
+      icon: "icon-troubleshoot.svg"
+      ctaLink: "/troubleshoot/"
+    - headingText: "Accessibility guide"
+      bodyText: "Extend your site's reach with accessibility planning, fixes and testing."
+      ctaLink: "/guides/accessibility"
+    - headingText: "Using wordpress?"
+      bodyText: "The information you need to use wordpress with Pantheon."
+      ctaLink: "/develop-wordpress"
+    - headingText: "Using drupal?"
+      bodyText: "The information you need to use drupal with Pantheon."
+      ctaLink: "/develop-drupal"
+    - headingText: "Disaster recovery playbook"
+      bodyText: "Be ready to act if your site stops responding."
+      ctaLink: "/guides/disaster-recovery/site-goes-down/"
+    - headingText: "Platform status"
+      bodyText: "Check for platform incident reports."
+      ctaLink: "Https://status.Pantheon.io/"
   fourohfourlinks:
-    title: 'Popular Documentation'
+    title: "Popular Documentation"
     links:
-      - text: 'Terminus Guide'
-        url: '/terminus/'
-      - text: 'Upgrade to the Latest Version of Drupal'
-        url: '/drupal-migration'
-      - text: 'Pantheon Solr Search for Drupal'
-        url: '/guides/solr-drupal/solr-drupal'
-      - text: 'Domains and Redirects'
-        url: '/guides/domains/'
-      - text: 'Generating and Adding SSH Keys'
-        url: '/ssh-keys/'
+      - text: "Terminus Guide"
+        url: "/terminus/"
+      - text: "Upgrade to the Latest Version of Drupal"
+        url: "/drupal-migration"
+      - text: "Pantheon Solr Search for Drupal"
+        url: "/guides/solr-drupal/solr-drupal"
+      - text: "Domains and Redirects"
+        url: "/guides/domains/"
+      - text: "Generating and Adding SSH Keys"
+        url: "/ssh-keys/"
   three-column-links:
-    title: 'Popular Documentation'
+    title: "Popular Documentation"
     links:
-      - text: 'Terminus Guide'
-        url: '/terminus/'
-      - text: 'Upgrade to the Latest Version of Drupal'
-        url: '/drupal-migration'
-      - text: 'Pantheon Solr Search for Drupal'
-        url: '/guides/solr-drupal/solr-drupal'
-      - text: 'Launch Essentials'
-        url: '/guides/launch/'
-      - text: 'Using the Pantheon Workflow'
-        url: '/pantheon-workflow/'
-      - text: 'Identify and Kill MySQL Queries'
-        url: '/guides/mariadb-mysql/kill-mysql-queries'
-      - text: 'Domains and Redirects'
-        url: '/guides/domains'
-      - text: 'Configuring settings.php'
-        url: '/guides/php/settings-php'
-      - text: 'Generating and Adding SSH Keys'
-        url: '/ssh-keys/'
-      - text: 'Object Cache Overview'
-        url: '/object-cache/'
-      - text: 'Drupal Drush Command-Line Utility'
-        url: '/guides/drush/'
+      - text: "Terminus Guide"
+        url: "/terminus/"
+      - text: "Upgrade to the Latest Version of Drupal"
+        url: "/drupal-migration"
+      - text: "Pantheon Solr Search for Drupal"
+        url: "/guides/solr-drupal/solr-drupal"
+      - text: "Launch Essentials"
+        url: "/guides/launch/"
+      - text: "Using the Pantheon Workflow"
+        url: "/Pantheon-workflow/"
+      - text: "Identify and Kill MySQL Queries"
+        url: "/guides/mariadb-mysql/kill-mysql-queries"
+      - text: "Domains and Redirects"
+        url: "/guides/domains"
+      - text: "Configuring settings.php"
+        url: "/guides/php/settings-php"
+      - text: "Generating and Adding SSH Keys"
+        url: "/ssh-keys/"
+      - text: "Object Cache Overview"
+        url: "/object-cache/"
+      - text: "Drupal Drush Command-Line Utility"
+        url: "/guides/drush/"
   changelog-preview:
-    title: 'Changelog'
-    url: '/changelog'
+    title: "Changelog"
+    url: "/changelog"
