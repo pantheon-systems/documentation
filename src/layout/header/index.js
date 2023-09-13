@@ -134,10 +134,12 @@ const Header = ({ page }) => (
         title="Search Pantheon Documentation"
       >
         <InputText
+          id="search-field"
           aria-label="Search Pantheon Documentation"
           placeholder="Search Pantheon Documentation"
           type="search"
           data-addsearch-id="search_widget"
+          label=" "
         />
         {page == "default" ? <AddSearch /> : null}
       </form>
