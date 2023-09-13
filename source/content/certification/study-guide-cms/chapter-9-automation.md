@@ -203,7 +203,7 @@ If an error is detected during an update attempt, the Autopilot Status shows “
   ![Show status of sites that need manual review](../../../images/autopilot/autpilot-needs-review.png)
 1. The Status column in the sitelist of the Autopilot Sites section will display one of three statuses:
 
-  |||
+  |Status<span style="padding-right:80px"/>|Indication|
   |:-----|:----|
   | ![Error](../../../images/autopilot/autopilot-status-error.png) | An “Error” status indicates that there is an issue with the site configuration that has prevented the Visual Regression Test from running. Under “Actions” select “View Error”. See Troubleshooting Autopilot Errors for more information.|
   | ![Up to date](../../../images/autopilot/autopilot-status-up-to-date.png) | “Up to Date” indicates that there are no new updates to be applied. Autopilot checks for updates at the interval you set in the configuration screen: Daily, Weekly, Monthly, or Never.|
