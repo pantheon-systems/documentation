@@ -1,6 +1,6 @@
 ---
 title: WebOps Certification Foreword
-subtitle: Chapter 0: Foreword
+subtitle: Chapter 0 - Foreword
 description:
 certificationpage: true
 type: certificationpage
