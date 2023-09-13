@@ -324,7 +324,11 @@ Keep in mind that you can run Terminus commands individually, but the real power
 For more information on scripting with Terminus, see the following [documentation page](/terminus/scripting).
 
 ## Quicksilver
-Quicksilver hooks into platform workflows to automate your Pantheon WebOps workflow. This allows the platform to run selected scripts automatically every hour, or when a team member triggers the corresponding workflow. There is a growing set of example scripts available for review and contributions. Several scripts enable additional functionality, including:
+Quicksilver is Pantheon's platform automation tool, designed to trigger scripts or operations in response to specific platform-related events. It provides an event-driven script execution system which allows developers to build automation pipelines and integrate with external tools.
+
+With Quicksilver, you can automate workflows such as clearing caches when code is deployed, notifying team members via Slack when a new commit is pushed, or running security tests after a site update, thus enhancing efficiency, reliability, and the overall maintenance of your web projects.
+
+There is a growing set of example scripts available for review and contributions. Several scripts enable additional functionality, including:
 - Chat-ops
 - Database sanitization
 - Deployment logging
