@@ -93,18 +93,17 @@ const mainNavigationLinks = [
   },
 ]
 
+const mobileMenuBreakpoint = 900
+
 const Header = ({ page }) => (
-  <Navbar>
+  <Navbar mobileMenuMaxWidth={mobileMenuBreakpoint}>
     <NavMenu
       slot="items-left"
       ariaLabel="Main Navigation"
       menuItems={mainNavigationLinks}
+      mobileMenuMaxWidth={mobileMenuBreakpoint}
     />
-    <div
-      slot="items-right"
-      className="pds-button-group pds-spacing-mar-block-start-xl
-				pds-spacing-mar-block-start-none@lg"
-    >
+    <div slot="items-right" className="pds-button-group">
       <a
         className="pds-button pds-button--brand-secondary"
         href="https://dashboard.pantheon.io"
