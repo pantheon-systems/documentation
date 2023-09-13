@@ -3,7 +3,7 @@ title: Pantheon Filesystem
 subtitle: Large Files and Highly Populated Directories
 description: Learn more about highly populated directories and large files.
 contenttype: [guide]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith,carl-alberto]
 showtoc: true
 innav: [false]
 categories: [files]
@@ -20,9 +20,9 @@ This section provides information on highly populated directories and large file
 
 ## Highly Populated Directories
 
-Highly populated directories can cause a small decline in performance at around 50,000 files in a single directory, and a significant performance drop at over 100,000 files. Once above 100,000 files, backups may fail, and the filesystem itself may be corrupted leading to data loss and site dwontime.
+Highly populated directories can cause a small decline in performance at around 10,000 files in a single directory, and a significant performance drop at over 25,000 files. Once above 25,000 files, backups may fail, and the filesystem itself may be corrupted leading to data loss and site downtime.
 
-You can refactor your file structure if you have individual directories with tens of thousands of files (for example, an image repository) to optimize site performance on Pantheon. If refactoring is not a possiblity, you may wish to offload the files to dedicated external filesystem like Amazon S3 or Google Cloud Storage.
+You can refactor your file structure if you have individual directories with tens of thousands of files (for example, an image repository) to optimize site performance on Pantheon. If refactoring is not a possiblity, you may wish to offload the files to dedicated external filesystem like [Amazon S3](/guides/wordpress-developer/wordpress-s3) or [Google Cloud Storage](/guides/wordpress-developer/wordpress-gcs).
 
 To prevent this issue going forward both WordPress and Drupal, can manage uploaded content into different directories based on the date or user, which is preferable to adding all uploads into a single directory. Refactoring an existing large-scale site with this issue is usually a matter of re-arranging the files, then updating the files table in Drupal or WordPress.
 
