@@ -4,7 +4,6 @@ import Helmet from "react-helmet"
 import Layout from "../layout/layout"
 
 import CallToAction from "../layout/call-to-action"
-import ThreeColumnList from "../layout/three-column-list"
 import ChangelogPreview from "../layout/changelog-preview"
 import SEO from "../layout/seo"
 
