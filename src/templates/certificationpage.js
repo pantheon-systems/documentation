@@ -171,7 +171,7 @@ class CertificationTemplate extends React.Component {
                 items={items}
                 activePage={node.fields.slug}
               />
-              <main id="doc" className="terminus col-md-9 guide-doc-body">
+              <main id="doc" className="certification terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <article
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
