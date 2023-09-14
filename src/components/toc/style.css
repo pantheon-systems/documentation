@@ -1,3 +1,9 @@
+/* .toc-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+} */
+
 #doc h1,
 #terminus h1,
 #doc h2,
@@ -16,7 +22,8 @@
   max-height: 77vh;
   overflow: auto;
 }
-.toc-list .is-active-link::before, .toc-link::before {
+.toc-list .is-active-link::before,
+.toc-link::before {
   display: none;
 }
 
@@ -25,23 +32,13 @@
   display: block;
 }
 
-/* .pio-docs-sidebar .nav > li > a:hover,
-.pio-docs-sidebar .nav .nav > li > a:hover,
-.pio-docs-sidebar .nav > li > a:active,
-.pio-docs-sidebar .nav .nav > li > a:active,
-.pio-docs-sidebar .nav > li > a:focus,
-.pio-docs-sidebar .nav .nav > li > a:focus {
-  border-right: 0;
-  background-color: transparent;
-} */
-
 .toc-link:hover::before {
   background-color: #ccc;
 }
 
-.toc-list.is-collapsible{
+.toc-list.is-collapsible {
   max-height: 5000px;
 }
-.toc-list.is-collapsible.is-collapsed{
+.toc-list.is-collapsible.is-collapsed {
   max-height: 0;
 }

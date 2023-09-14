@@ -31,6 +31,8 @@ import {
   headline4,
 } from "../components/releaseHeadlines"
 
+import "../styles/changelogs.css"
+
 const shortcodes = {
   Callout,
   Alert,
@@ -50,6 +52,7 @@ const shortcodes = {
   h3: headline4,
 }
 
+// Combined changelog template.
 class ChangelogsTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({

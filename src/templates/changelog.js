@@ -7,7 +7,6 @@ import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
 import NavButtons from "../components/navButtons"
 
-import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
@@ -24,8 +23,11 @@ import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
 
+import { FlexContainer } from "@pantheon-systems/pds-toolkit-react"
+
+import "../styles/changelogs.css"
+
 const shortcodes = {
-  Callout,
   Alert,
   Accordion,
   ExternalLink,
@@ -39,6 +41,8 @@ const shortcodes = {
   Color,
   Download,
 }
+
+// Individual changelog template.
 
 class ChangelogTemplate extends React.Component {
   componentDidMount() {
@@ -79,17 +83,24 @@ class ChangelogTemplate extends React.Component {
           image={"/images/assets/default-thumb-doc.png"}
         />
         <main className="pds-container pds-container--wide" id="docs-main">
-          <article className="doc article col-md-9 md-70">
-            <div id="doc" className="doc article col-md-9 md-70">
-              <h1 className="toc-ignore">Pantheon Changelog</h1>
-              <h2 className="toc-ignore">{node.frontmatter.title}</h2>
-              <Callout
-                title="Subscribe Now"
-                link="https://learn.pantheon.io/Changelog-Opt-In.html"
-              >
-                Sign up for the Pantheon Changelog Newsletter to receive a
-                monthly email on what's new and improved across the platform.
-              </Callout>
+          <article className="changelog changelog--individual">
+            <div id="doc" className="doc changelog__content">
+              <div className="pds-overline-text">Pantheon Changelog</div>
+              <h1 className="toc-ignore">{node.frontmatter.title}</h1>
+              <div className="pds-spacing-mar-block-end-3xl">
+                <p className="pds-lead-text pds-lead-text--small">
+                  Sign up for the Pantheon Changelog Newsletter to receive a
+                  monthly email on what's new and improved across the platform.
+                </p>
+                <a
+                  className="pds-button"
+                  href="https://learn.pantheon.io/Changelog-Opt-In.html"
+                >
+                  Subscribe Now
+                </a>
+              </div>
+              <hr className="pds-spacing-mar-block-end-3xl" />
+
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{node.body}</MDXRenderer>

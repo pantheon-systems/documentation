@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import './style.css';
+import "./style.css"
 
 const TOC = ({ title }) => {
   const [initialized, setInitialized] = useState(false)
@@ -20,7 +20,7 @@ const TOC = ({ title }) => {
       }
 
       if (windowGlobal && windowGlobal.tocbot) {
-        jQuery('.tab-pane h2, .tab-pane h3').addClass('toc-ignore')
+        jQuery(".tab-pane h2, .tab-pane h3").addClass("toc-ignore")
         windowGlobal.tocbot.init(settings)
       }
 
@@ -29,11 +29,11 @@ const TOC = ({ title }) => {
   })
 
   return (
-    <nav aria-labelledby="toc-nav" className="pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
-    <div id="toc" className="tocbot">
-      <h4 id="toc-nav">{title || "Table of Contents"}</h4>
-      <div className="toc-placeholder" />
-    </div>
+    <nav aria-labelledby="toc-nav" className="toc-container">
+      <div id="toc" className="tocbot">
+        <h2 id="toc-nav">{title || "Table of Contents"}</h2>
+        <div className="toc-placeholder" />
+      </div>
     </nav>
   )
 }
