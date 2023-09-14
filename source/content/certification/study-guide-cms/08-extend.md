@@ -268,16 +268,16 @@ terminus drush mysite.dev -- pm-enable serialization
 ![Use the Drupal admin interface to install modules](../../../images/certification/study-guide-cms/drupal-admin-install-module.png)
 </Example>
 
-#### Deploy Test to Live
+#### Deploy Dev to Test
 
 <Example class="certification style-example">
 
 ```bash{promptUser: user}
-terminus deploy mysite.live --note="one sidebar" --updatedb --cc --sync-content
+terminus deploy mysite.test --note="one sidebar" --updatedb --cc --sync-content
 ```
 <hr className="certification source-code" /> <br/>
 
-![Use the Pantheon Dashboard to deploy from Test to Live](../../../images/certification/study-guide-cms/dashboard-deploy-from-test-to-live.png)
+![Use the Pantheon Dashboard to deploy from Test to Live](../../../images/dashboard/deploy-to-test-env.png)
 </Example>
 
 #### Clear Caches
