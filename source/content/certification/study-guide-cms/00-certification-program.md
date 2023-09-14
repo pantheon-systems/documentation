@@ -1,7 +1,6 @@
 ---
-title: WebOps Certification Program
-subtitle: WebOps Certification Program
-description:
+title: WebOps Certification
+subtitle: Certification Program
 certificationpage: true
 showtoc: true
 type: certificationpage
@@ -13,7 +12,7 @@ categories: []
 cms: [drupal, wordpress]
 integration: [--]
 tags: []
-permalink: certification/study-guide
+permalink: docs/certification/study-guide
 ---
 
 Pantheon is introducing a certification program that validates knowledge of our core CMS Sites offering. This program is presently invite-only for [Pantheon Heroes](https://pantheon.io/developer-community/heroes) and developers at [Partners agencies](https://pantheon.io/partners/become-pantheon-partner). We expect to open it more widely in 2024.

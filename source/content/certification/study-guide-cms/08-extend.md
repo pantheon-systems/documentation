@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Chapter 8 - Extending Pantheon with Hooks and the CLI
-description: Learn about Pantheon's Command-Line Interface, Terminus.
+subtitle: "Chapter 8: Extend with CLI and Hooks"
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-8-extending
+permalink: docs/certification/study-guide/extend
 contenttype: [guide]
 innav: [false]
 categories: []

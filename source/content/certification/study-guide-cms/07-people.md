@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Chapter 7 - People
-description: hello
+subtitle: "Chapter 7: Connecting People"
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-7-people
+permalink: docs/certification/study-guide/people
 contenttype: [guide]
 innav: [false]
 categories: []

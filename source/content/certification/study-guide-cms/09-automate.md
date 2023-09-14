@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Pantheon WebOps Automation Tools
-description: Learn about automation tools like integrated composer and autopilot.
+subtitle: "Chapter 9: Additional Automation"
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-9-automation
+permalink: docs/certification/study-guide/automate
 contenttype: [guide]
 innav: [false]
 categories: []

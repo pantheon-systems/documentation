@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Chapter 6 - Deployment Pipeline
-description: hello
+subtitle: "Chapter 6: The Deployment Pipeline"
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-6-deployment
+permalink: docs/certification/study-guide/deploy
 contenttype: [guide]
 innav: [false]
 categories: []
@@ -41,7 +40,7 @@ integration: [--]
  </figure>
 
 
-Every Pantheon site comes with three permanent environments: Dev, Test, and Live (fig. 6.1). Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with Multidev. 
+Every Pantheon site comes with three permanent environments: Dev, Test, and Live (fig. 6.1). Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with Multidev.
 
 <figure>
 
@@ -53,33 +52,33 @@ Every Pantheon site comes with three permanent environments: Dev, Test, and Live
 
  ### Steps for Basic Dev/Test/Live Workflow
 
- 1. **Commit Code in Dev:** Code is writable in the Dev (or a Multidev) environment. In Test and Live, only the git-based deployment pipeline has permission to change code. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via SFTP or Git. 
+ 1. **Commit Code in Dev:** Code is writable in the Dev (or a Multidev) environment. In Test and Live, only the git-based deployment pipeline has permission to change code. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via SFTP or Git.
 
  1. **Sync Content from Live to Test:** At this point, you will be prompted to clone your content down from the Live environment. This combines the code from Dev and the database and files from Live in the Test environment. It is a WebOps best practice to simulate your eventual deployment to Live as closely as possible. Under the hood, each deployment generates a Git tag.
- 
- 1. **Deploy Code from Dev to Test:** When you're ready to test a new set of changes, deploy your code from Dev to Test. 
- 
- 1. **Evaluate Code Changes Against Synced Content:** In the Test environment, Developer and stakeholders evaluate code changes from Dev against content synced from Live. Each environment has a shareable URL to gather additional stakeholder feedback prior to pushing to Live. 
- 
- 1. **Deploy Code to Live:** After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the Clear Caches option when deploying changes to your Live environment. 
+
+ 1. **Deploy Code from Dev to Test:** When you're ready to test a new set of changes, deploy your code from Dev to Test.
+
+ 1. **Evaluate Code Changes Against Synced Content:** In the Test environment, Developer and stakeholders evaluate code changes from Dev against content synced from Live. Each environment has a shareable URL to gather additional stakeholder feedback prior to pushing to Live.
+
+ 1. **Deploy Code to Live:** After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the Clear Caches option when deploying changes to your Live environment.
 
 
-For more information on the Dev/Test/Live WebOps Workflow, see [this docs page](https://docs.pantheon.io/pantheon-workflow). 
+For more information on the Dev/Test/Live WebOps Workflow, see [this docs page](https://docs.pantheon.io/pantheon-workflow).
 
 
 ## Multidevs
 
 In addition to the three permanent environments, you also have access to up to 10 additional Multidev environments for most paid applications. Multidevs are on-demand environments that can be spun up or spun down as needed. By managing changes in isolated environments and integrating them systematically, Multidev helps to maintain code integrity, speed up development cycles, and streamline workflows.
 
-Using Multidevs can significantly boost a development team's efficiency and productivity in several ways: 
+Using Multidevs can significantly boost a development team's efficiency and productivity in several ways:
 
-* **Concurrent Feature Development:** Different team members or teams are able to work concurrently on different features or fixes, without interfering with each other's work. Each developer or team can work in their own Multidev environment, test their changes, and then merge their work back into the main codebase when ready. 
+* **Concurrent Feature Development:** Different team members or teams are able to work concurrently on different features or fixes, without interfering with each other's work. Each developer or team can work in their own Multidev environment, test their changes, and then merge their work back into the main codebase when ready.
 
-* **Higher Confidence in Testing:** By providing a sandbox that is an exact replica of the live environment, using Multidevs helps teams catch any issues before changes are pushed live. Creating multiple development environments helps reduce the potential for conflicts and broken code. 
+* **Higher Confidence in Testing:** By providing a sandbox that is an exact replica of the live environment, using Multidevs helps teams catch any issues before changes are pushed live. Creating multiple development environments helps reduce the potential for conflicts and broken code.
 
-* **Cross-Team Collaboration:** Developing in Multidev environments allows developers to share their work in progress with stakeholders for early feedback, thereby reducing rework and improving quality. 
+* **Cross-Team Collaboration:** Developing in Multidev environments allows developers to share their work in progress with stakeholders for early feedback, thereby reducing rework and improving quality.
 
-Multidev environments are associated with feature branches that have been checked out from the default branch (fig. 6.3). Therefore, when you develop on Multidev environments, you are committing your changes to a feature branch for review and stakeholder approval. In order to push these changes to your default branch, you must merge your feature branch into the main branch, which resides in your dev environment. 
+Multidev environments are associated with feature branches that have been checked out from the default branch (fig. 6.3). Therefore, when you develop on Multidev environments, you are committing your changes to a feature branch for review and stakeholder approval. In order to push these changes to your default branch, you must merge your feature branch into the main branch, which resides in your dev environment.
 
 <figure>
 
@@ -97,7 +96,7 @@ Multidevs must be associated with git feature branches, and they can be created 
 
 * **Using the `terminus multidev:create` command through a command line:** Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, including the creation of Multidev environments. This offers a convenient way to sync your local feature development branch with a new Multidev environment, without having to login to the Dashboard through your browser. We will show you how to do this in Activity #10.
 
-* **Using the `terminus multidev:create` command as part of a script or CI/CD workflow:** By scripting this Terminus command, you can kick off the creation of a new Multidev environment as part of a CI/CD workflow. The Multidev environment then becomes the destination for a build artifact resulting from a build process that executes in an external system (e.g. GitHub Actions, Bitbucket Pipelines, GitLabCI, Jenkins, etc.) 
+* **Using the `terminus multidev:create` command as part of a script or CI/CD workflow:** By scripting this Terminus command, you can kick off the creation of a new Multidev environment as part of a CI/CD workflow. The Multidev environment then becomes the destination for a build artifact resulting from a build process that executes in an external system (e.g. GitHub Actions, Bitbucket Pipelines, GitLabCI, Jenkins, etc.)
 
 ### Creating a Multidev in the Dashboard
 
@@ -143,7 +142,7 @@ Congratulations! You have successfully created your first Multidev Environment!
 
  7. Click on the name of the Multidev (“basetheme” in this case), and it will bring you to the dashboard of your new on-demand environment. Notice how the site dashboard for your Multidev environment looks identical to the dashboard of your permanent environments (Dev, Test, and Live).
 
-8. Because cloning the database from one environment to another will overwrite the destination database, let’s first create a backup of the existing database. While this is not really necessary with a fresh installation that has no existing data, it is considered best practice to prevent unwanted overwriting of your site’s important data. Select the **Backups** menu item from the left navigation menu, and click **Create New Backup**. 
+8. Because cloning the database from one environment to another will overwrite the destination database, let’s first create a backup of the existing database. While this is not really necessary with a fresh installation that has no existing data, it is considered best practice to prevent unwanted overwriting of your site’s important data. Select the **Backups** menu item from the left navigation menu, and click **Create New Backup**.
 
 ![Create New Backup Button](../../../images/create-new-backup-button.png)
 
@@ -153,7 +152,7 @@ Congratulations! You have successfully created your first Multidev Environment!
 
 10. Now that our database is saved, we can restore it if needed. We can now open the **Database/Files** tab on the left navigation bar. Select Clone, and select the desired information.
 
-Congratulations! You have successfully cloned your database from your Dev environment to your new Multidev environment. We are now ready to continue development on our site! 
+Congratulations! You have successfully cloned your database from your Dev environment to your new Multidev environment. We are now ready to continue development on our site!
 For more information, see [https://docs.pantheon.io/guides/multidev](https://docs.pantheon.io/guides/multidev).
 
 ### Connect with SSH
@@ -182,11 +181,11 @@ In this section, we will walk through the process of generating SSH keys and add
      ```shell{promptUser:user}
       ssh-keygen -t rsa
      ```
-    
+
     Do not edit the default location of ~/.ssh/id_rsa unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
 
     **Multiple SSH Keys**
-    
+
     If you have multiple SSH keys for different purposes and want to tell all of your Pantheon sites to use a specific key, you can configure your local ssh setup to use one key for all Pantheon servers. Follow the instructions here: https://web.berkeley.edu/web-hosting-pantheon/hosting-your-site-pantheon/special-topics-pantheon-sites/using-ssh-keys
 
 2. **Set a passphrase for better security.** We recommend using a passphrase, but it can conflict with some tools.
@@ -220,7 +219,7 @@ In this section, we will walk through the process of generating SSH keys and add
 2. Do not edit the default location of `~/.ssh/id_rsa` unless you have a reason to change it. If the command says the key already exists, you can either overwrite it, or continue to the next step with your existing key.
 
 3. Set a passphrase for better security. We recommend using a passphrase, but it can conflict with some tools. Copy the contents of `~/.ssh/id_rsa` to your clipboard after the files are created.
-    
+
     ```shell{promptUser:user}
     type .ssh\id_rsa.pub
     ```
@@ -332,7 +331,7 @@ To connect your site’s Git repository with your local machine, follow these st
     ```shell{promptUser:user}
     ~/Documents/Pantheon/certification/new-wordpress-example-site git:(master)
     ```
-     
+
 As mentioned previously, all code commits to `master` are pushed to the Dev environment. Test and Live are immutable to code changes. Feature branches will correspond to individual Multidev environments.
 
 We are now going to install the popular [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin by downloading the plugin to our local machine. We will then commit that directory locally to our master branch, then push that change up to our Dev environment on Pantheon.
@@ -353,7 +352,7 @@ Pantheon recognizes the need and has made the decision to standardize on main ra
 3. We will now add the plugin to our local git instance, then commit the plugin into the repository:
 
     ```shell{promptUser:user}
-    git add wp-content/plugins/wordpress-seo 
+    git add wp-content/plugins/wordpress-seo
     git commit -m 'Yoast SEO Plugin'
     ```
 4. We can now push this change up to our site on Pantheon:
@@ -517,7 +516,7 @@ In this section, we will show you how to create a Multidev environment from an e
 
     </figure>
 
-Congratulations! You have now successfully created a new Multidev environment from an existing feature branch that only existed in your local development environment previously. Creating Multidev environments for specific feature branches provides endless possibilities for developing, testing and deploying updates to your site, while mitigating the risk that these changes will have unforeseen consequences on your Live environment. 
+Congratulations! You have now successfully created a new Multidev environment from an existing feature branch that only existed in your local development environment previously. Creating Multidev environments for specific feature branches provides endless possibilities for developing, testing and deploying updates to your site, while mitigating the risk that these changes will have unforeseen consequences on your Live environment.
 
 <Alert title="Local Development Options on Pantheon"  type="info" >
 
@@ -530,12 +529,12 @@ While many devevelopers (paricularly in the WordPress space) enjoy the convenien
 * Drush
 * WP-CLI
 
-For more information on Local Development options on Pantheon, see [https://docs.pantheon.io/guides/local-development](https://docs.pantheon.io/guides/local-development). 
+For more information on Local Development options on Pantheon, see [https://docs.pantheon.io/guides/local-development](https://docs.pantheon.io/guides/local-development).
 </Alert>
 
 ### SFTP Mode
 
-Pantheon provides two development modes: Git mode and SFTP mode. SFTP mode allows you to develop directly on Pantheon. 
+Pantheon provides two development modes: Git mode and SFTP mode. SFTP mode allows you to develop directly on Pantheon.
 
 SFTP development provides advantages when working with Git and/or local development is not the best option for you or your team. SFTP mode is especially useful when:
 * a remote collaborator (or client) needs to see changes immediately
@@ -602,6 +601,6 @@ You can discard and abandon SFTP changes that you don't want to commit. This is 
 
 ### Chapter Summary
 
-In this chapter, you have learned all about the Pantheon WebOps workflow. We learned about the different environments on Pantheon, including Dev-Test-Live, our permanent environments. We also explored Multidevs, which are powerful on-demand containerized environments that can be used for various purposes, including testing new features, upgrading in place, and allowing development teams to work on many features in parallel. Finally, we showed you how to enable SSH access to your Git repository on Pantheon, as well as how to set up multiple remotes to facilitate a workflow that includes the standard versioning platforms that many development teams enjoy. 
+In this chapter, you have learned all about the Pantheon WebOps workflow. We learned about the different environments on Pantheon, including Dev-Test-Live, our permanent environments. We also explored Multidevs, which are powerful on-demand containerized environments that can be used for various purposes, including testing new features, upgrading in place, and allowing development teams to work on many features in parallel. Finally, we showed you how to enable SSH access to your Git repository on Pantheon, as well as how to set up multiple remotes to facilitate a workflow that includes the standard versioning platforms that many development teams enjoy.
 
 In the next chapter, we will learn about managing website portfolios on Pantheon at scale.

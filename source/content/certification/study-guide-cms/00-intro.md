@@ -1,13 +1,12 @@
 ---
-title: WebOps Certification Foreword
-subtitle: Chapter 0 - Foreword
-description:
+title: WebOps Certification
+subtitle: Introduction
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-0-intro
+permalink: docs/certification/study-guide/intro
 contenttype: [guide]
 innav: [false]
 categories: []

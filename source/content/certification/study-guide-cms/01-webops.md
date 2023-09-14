@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Chapter 1
-description:
+subtitle: "Chapter 1: WebOps"
 certificationpage: true
 showtoc: true
 type: certificationpage
 layout: certificationpage
 tags: []
-permalink: docs/certification/study-guide/chapter-1-webops
+permalink: docs/certification/study-guide/webops
 contenttype: [guide]
 innav: [false]
 categories: []

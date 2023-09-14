@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Chapter 2
-description:
+subtitle: "Chapter 2: Pantheon Platform"
 certificationpage: true
 showtoc: true
 type: certificationpage
 layout: certificationpage
 tags: []
-permalink: docs/certification/study-guide/chapter-2-pantheon
+permalink: docs/certification/study-guide/platform
 contenttype: [guide]
 innav: [false]
 categories: []

@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Chapter 10 - Custom Upstreams
-description: hello
+subtitle: "Chapter 10: Custom Upstreams"
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-10-custom-upstreams
+permalink: docs/certification/study-guide/custom-upstreams
 contenttype: [guide]
 innav: [false]
 categories: []

@@ -1,13 +1,12 @@
 ---
 title: WebOps Certification
-subtitle: Chapter 4 - edge
-description: hello
+subtitle: "Chapter 4: Content Delivery Network"
 certificationpage: true
 type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/chapter-4-edge
+permalink: docs/certification/study-guide/cdn
 contenttype: [guide]
 innav: [false]
 categories: []
@@ -216,7 +215,3 @@ In addition to routing requests to the correct application, Our load balancer al
 * Pantheon’s Web Application Firewall is an optional, fully-managed service that protects Drupal and WordPress applications from some of the most common Layer 3, 4, and 7 attacks, including DDoS, Cross-Site Scripting, SQL Injection, etc. Included are OWASP Top 10, Trustwave, Drupal-specific, and WordPress-specific rulesets.
 
 </Alert>
-
-
-
-
