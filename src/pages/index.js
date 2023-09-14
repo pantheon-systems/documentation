@@ -2,11 +2,11 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Layout from "../layout/layout"
-import CallToAction from "../layout/call-to-action"
 import SEO from "../layout/seo"
 
 import ChangelogList from "../pds-middleware/ChangelogList"
 import LinksList from "../pds-middleware/LinksList"
+import CallToAction from "../pds-middleware/CallToAction"
 import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
 import TopicsGrid from "../pds-middleware/TopicsGrid"
 
@@ -25,14 +25,12 @@ class Index extends React.Component {
           image={"/images/assets/default-thumb-doc.png"}
         />
         <main className="pds-container pds-container--wide" id="docs-main">
-          {/* <h1>{homeYaml.title}</h1> */}
-          {/*
           <CallToAction
-            title={homeYaml.call_to_action.title}
-            subTitle={homeYaml.call_to_action.sub_title}
+            title={homeYaml.title}
+            subTitle={homeYaml.call_to_action.subtitle}
             url={homeYaml.call_to_action.url}
-            type={homeYaml.call_to_action.type}
-          /> */}
+            linkText={homeYaml.call_to_action.linkText}
+          />
 
           <h2 className="pds-spacing-mar-block-end-2xl">
             {homeYaml.topics.title}
@@ -80,10 +78,9 @@ export const pageQuery = graphql`
     homeYaml {
       title
       call_to_action {
-        title
-        sub_title
+        subtitle
         url
-        type
+        linkText
       }
       topics {
         title

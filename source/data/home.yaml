@@ -1,10 +1,9 @@
 - id: home
-  title: "Documentation Topics"
+  title: "Pantheon Docs"
   call-to-action:
-    title: "Getting Started Guide"
-    sub-title: "New to the Pantheon platform? Check out our step-by-step guide to learn all the basics."
+    subtitle: "New to the Pantheon platform? Check out our step-by-step guide to learn all the basics."
     url: "/guides/getstarted/"
-    type: "guide"
+    linkText: Getting started guide
   topics:
     title: "Documentation Topics"
     tiles:
