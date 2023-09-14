@@ -2,13 +2,15 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Layout from "../layout/layout"
-
 import CallToAction from "../layout/call-to-action"
-import ChangelogPreview from "../layout/changelog-preview"
 import SEO from "../layout/seo"
 
-import ThreeColumnLinks from "../pds-middleware/ThreeColumnLinks"
+import ChangelogList from "../pds-middleware/ChangelogList"
+import LinksList from "../pds-middleware/LinksList"
+import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
 import TopicsGrid from "../pds-middleware/TopicsGrid"
+
+import { TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
 
 class Index extends React.Component {
   render() {
@@ -37,16 +39,28 @@ class Index extends React.Component {
           </h2>
           <TopicsGrid topics={homeYaml.topics.tiles} />
 
-          <h2 className="pds-spacing-mar-block-start-6xl pds-spacing-mar-block-end-2xl">
-            {homeYaml.three_column_links.title}
-          </h2>
-          <ThreeColumnLinks links={homeYaml.three_column_links.links} />
+          <TwoItemLayout
+            layoutVariant="one-third-end"
+            className="pds-spacing-mar-block-start-6xl"
+          >
+            <div slot="first-item">
+              <h2 className="pds-spacing-mar-block-end-2xl">
+                {homeYaml.three_column_links.title}
+              </h2>
+              <LinksList links={homeYaml.three_column_links.links} />
+            </div>
 
-          <ChangelogPreview
-            title={homeYaml.changelog_preview.title}
-            url={homeYaml.changelog_preview.url}
-            changelogs={allMdx.edges}
-          />
+            <div slot="second-item">
+              <h2 className="pds-spacing-mar-block-end-2xl">
+                {homeYaml.changelog_preview.title}
+              </h2>
+              <ChangelogList
+                url={homeYaml.changelog_preview.url}
+                changelogs={allMdx.edges}
+              />
+            </div>
+          </TwoItemLayout>
+
           <Helmet title="Pantheon Docs" titleTemplate={`%s`}>
             <meta
               name="msvalidate.01"
