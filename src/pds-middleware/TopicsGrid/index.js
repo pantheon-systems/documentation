@@ -1,12 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-
 import { Link } from "gatsby"
 
 import { Tile } from "@pantheon-systems/pds-toolkit-react"
+
 const propTypes = {
   topics: PropTypes.array,
 }
+
+// This component translates the yaml data into something useful for PDS implementation of tiles.
 
 function TopicsGrid(props) {
   const { topics } = props
