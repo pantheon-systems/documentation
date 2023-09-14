@@ -15,6 +15,8 @@ cms: [drupal, wordpress]
 audience: []
 product: []
 integration: [--]
+previousurl: /certification/study-guide/platform
+nexturl: /certification/study-guide/cdn
 ---
 
 <Alert title="By the end of this chapter, you will be able to:"  type="info" >

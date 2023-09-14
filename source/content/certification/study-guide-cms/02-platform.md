@@ -14,6 +14,8 @@ cms: [drupal, wordpress]
 audience: []
 product: []
 integration: [--]
+previousurl: /certification/study-guide/webops
+nexturl: /certification/study-guide/create
 ---
 
 <Alert title="Learning Objectives for This Chapter" type="info" >

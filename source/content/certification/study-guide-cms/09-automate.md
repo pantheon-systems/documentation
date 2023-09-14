@@ -14,6 +14,8 @@ cms: [drupal, wordpress]
 audience: []
 product: []
 integration: [--]
+previousurl: /certification/study-guide/extend
+nexturl: /certification/study-guide/custom-upstreams
 ---
 
 <Alert title="Learning objectives for this chapter:"  type="info" >

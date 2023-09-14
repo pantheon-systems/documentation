@@ -190,6 +190,10 @@ class CertificationTemplate extends React.Component {
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.body}</MDXRenderer>
                     </MDXProvider>
+                    <NavButtons
+                      prev={node.frontmatter.previousurl}
+                      next={node.frontmatter.nexturl}
+                    />
                   </article>
                   {node.frontmatter.showtoc && (
                     <div
@@ -232,6 +236,8 @@ export const pageQuery = graphql`
         }
         reviewed(formatString: "MMMM DD, YYYY")
         type
+        previousurl
+        nexturl
       }
       fileAbsolutePath
     }

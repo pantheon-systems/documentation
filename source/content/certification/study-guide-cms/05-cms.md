@@ -14,6 +14,8 @@ cms: [drupal, wordpress]
 audience: []
 product: []
 integration: [--]
+previousurl: /certification/study-guide/cdn
+nexturl: /certification/study-guide/deploy
 ---
 
 

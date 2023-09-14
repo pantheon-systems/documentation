@@ -14,6 +14,8 @@ cms: [drupal, wordpress]
 audience: []
 product: []
 integration: [--]
+previousurl: /certification
+nexturl: /certification/study-guide/webops
 ---
 
 At Pantheon we consider velocity to be the indispensable shared characteristic of successful websites and web teams. Successful web teams make changes confidently and quickly because the target for what will win on the web never stops moving.
