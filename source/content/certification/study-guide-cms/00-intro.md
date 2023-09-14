@@ -6,7 +6,7 @@ type: certificationpage
 layout: certificationpage
 showtoc: true
 tags: []
-permalink: docs/certification/study-guide/intro
+permalink: docs/certification/study-guide
 contenttype: [guide]
 innav: [false]
 categories: []

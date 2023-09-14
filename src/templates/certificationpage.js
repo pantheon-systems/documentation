@@ -54,12 +54,12 @@ const shortcodes = {
 const items = [
   {
     id: "docs-certification",
-    link: "/certification/study-guide",
+    link: "/certification",
     title: "Certification Program",
   },
   {
     id: "docs-certification-chapter-0",
-    link: "/certification/study-guide/intro",
+    link: "/certification/study-guide",
     title: "Introduction",
   },
   {
