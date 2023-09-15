@@ -8,6 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
+
 This is an example of a partial.
 
 It's reusable content so that editors can maintain a single source of information that can be included in multiple docs.

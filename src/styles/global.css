@@ -612,3 +612,6 @@ a.release-update::before {
   font-family: 'Glyphicons Regular';
   src: url(/fonts/glyphicons/glyphicons-regular-v192.woff2) format('woff2');
 }
+.certification .pio-docs-sidebar  {
+top: 160px !important;
+}
