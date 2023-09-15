@@ -94,7 +94,7 @@ There is no such thing as a perfect website. And even if a website _could_ be pe
 
 Left untouched, or left running on inertia, most every website decays over time unless a team intentionally changes it for the better.
 
-And "better" is a constantly moving target. (Remember in 2013ish when every fresh website needed huge images with a parallax scrolling effect. Yikes. Yesterday's "better" might be tomorrow's "worse."
+And "better" is a constantly moving target. (Remember in 2013-ish when every fresh website needed huge images with a parallax scrolling effect. Yikes. Yesterday's "better" might be tomorrow's "worse.")
 
 In this reality of constant change, the best any website, web team, or web platform can do is increase their velocity toward that ever-moving target of better.
 
