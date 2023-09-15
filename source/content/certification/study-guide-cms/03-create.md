@@ -2,7 +2,6 @@
 title: WebOps Certification
 subtitle: "Chapter 3: Site Creation"
 certificationpage: true
-contributors: [todo]
 showtoc: true
 type: certificationpage
 layout: certificationpage
@@ -35,7 +34,7 @@ In making a new site on Pantheon, you have a few options:
 At the end of this section, you will be able to create a new CMS Site through the Pantheon Dashboard.
 
 
-### Create a Site
+## Create a Site
 
 <Alert title="Create a Site in the Pantheon Dashboard"  type="info" >
 
@@ -107,7 +106,7 @@ Note: While code changes are version controlled across environments, and Files a
 
 </Alert>
 
-### Components of a Site: Code & Content
+## Components of a Site: Code & Content
 
 Now that you have created your site through the Pantheon Dashboard, we will discuss the components of a site on Pantheon.
 
@@ -116,29 +115,16 @@ The distinction between code and content is a core facilitator of WebOps practic
 * **Code** refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
 * **Content** refers to your site's files and the database. In this context, files are static images and assets stored in the standard upload path wp-content/uploads for WordPress and sites/default/files for Drupal.
 
-#### Why distinguish between code and content?
+### Why distinguish between code and content?
 
 Pantheon is an "opinionated platform". Specifically, we're of the opinion that it makes sense to separate the code and content because there is some level of separation between the people changing each:
 
 * **Content Editors:** Generally speaking, the team members editing content expect to sign into a live environment, make changes, and immediately see the changes on that public site. 
 * **Developers:** Web developers and designers changing code often prefer to make their changes in a non-live environment because the risk of breaking the site is too great. Changing code directly in a production environment is a practice we call "Cowboy Coding" and we greatly discourage it.
 
-#### Code Moves Up, Content Moves Down
+### Code Moves Up, Content Moves Down
 
 In later chapters, we will talk about environments on Pantheon. There are typically three environments: Dev, Test, and Live.The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put files into our distributed filesystem, Valhalla, and code on to the application containers.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Overview of Site Infrastructure
@@ -161,13 +147,13 @@ Now that you've made a site, let's look at an architectural overview of what you
 
 **Pantheon’s container-base platform** runs an integrated set of tools across a distributed and redundant infrastructure. This architecture provides everything needed to build, launch, and manage websites that achieve unmatched performance and reliability. The platform comprises three layers, which include Pantheon’s Global Edge, Runtime Matrix, and Application Services.
 
-#### The Edge Layer
+### The Edge Layer
 
   ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-cache-hit.png)
 
 **Pantheon’s Global Edge** is the exterior layer of the platform, meaning it is the first point of contact for traffic. The Edge Layer has a built-in HTTPS accelerator that serves cached data from virtual memory, allowing responses to be returned without going through the application containers. This keeps resource consumption low, so dynamic requests can be generated with ease during traffic spikes. If cached content is not found, the edge layer will automatically load balance and route requests to the next layer of the platform, our the application containers. On its way back out, the response will be cached for optimal performance. 
 
-#### Application Containers
+### Application Containers
 
   ![The load balancer passing requests to PHP Application Containers](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-load-balancer.png)
 
@@ -175,7 +161,7 @@ Now that you've made a site, let's look at an architectural overview of what you
 
 Pantheon can also detect failures in the event that an application container is unresponsive or unhealthy, automatically rerouting traffic to a failover container when necessary. Every environment runs on its own container, and all containers within the same application are connected by version control. 
 
-#### Application Services
+### Application Services
 
   ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-application-services.png)
 

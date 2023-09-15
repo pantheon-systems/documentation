@@ -18,7 +18,7 @@ nexturl: /certification/study-guide
 
 Pantheon is introducing a certification program that validates knowledge of our core CMS Sites offering. This program is presently invite-only for [Pantheon Heroes](https://pantheon.io/developer-community/heroes) and developers at [Partners agencies](https://pantheon.io/partners/become-pantheon-partner). We expect to open it more widely in 2024.
 
-### Why Become Certified?
+## Why Become Certified?
 
 Pantheon’s certification in WebOps provides a number of benefits to individual developers, agencies, and companies that have mission-critical digital channels that need to be leveraged to their maximum capabilities. 
 
@@ -27,7 +27,7 @@ Pantheon’s certification in WebOps provides a number of benefits to individual
 
 Ultimately, investing in a WebOps certification on Pantheon can lead to the highest-quality web presence, increased user satisfaction, and consequential business growth.
 
-####     How Developers Benefit from being certified
+###     How Developers Benefit from being certified
 
 * **Proof of Competency** - A WebOps certification provides validation for developers’ technical proficiency on Pantheon, demonstrating expertise in key areas such as development workflows, cross-functional team collaboration, website optimization, and more.
 * **Career Advancement** - A WebOps certification can enhance a developer’s professional credibility by showcasing their proficiency on Pantheon’s platform, as well as their understanding and adherence to best development practices.
@@ -36,7 +36,7 @@ Ultimately, investing in a WebOps certification on Pantheon can lead to the high
 * **Boost Confidence** - Mastery of WebOps fosters a sense of accomplishment and confidence, encouraging the developer to further explore and innovate in web development practices.
 * **Commitment to Growth** - A WebOps certification demonstrates the developer’s dedication to holistic web development skills, as well as a broader understanding of web technologies.
 
-#### How Agencies & Employers Benefit
+### How Agencies & Employers Benefit
 
 * **Guaranteed Proficiency** - Getting your team certified ensures that the team has a complete understanding of WebOps, which can improve developer velocity, foster cross-functional collaboration, and improve the outcomes generated from your digital properties.
 * **Enhanced Reputation** - Certified WebOps staff enhance a company’s credibility, showing commitment to delivering websites against industry standard best practices. 

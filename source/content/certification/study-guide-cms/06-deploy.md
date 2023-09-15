@@ -601,7 +601,7 @@ You can discard and abandon SFTP changes that you don't want to commit. This is 
 
 2. Toggle back to SFTP mode when you're ready to resume SFTP development.
 
-### Chapter Summary
+## Chapter Summary
 
 In this chapter, you have learned all about the Pantheon WebOps workflow. We learned about the different environments on Pantheon, including Dev-Test-Live, our permanent environments. We also explored Multidevs, which are powerful on-demand containerized environments that can be used for various purposes, including testing new features, upgrading in place, and allowing development teams to work on many features in parallel. Finally, we showed you how to enable SSH access to your Git repository on Pantheon, as well as how to set up multiple remotes to facilitate a workflow that includes the standard versioning platforms that many development teams enjoy.
 

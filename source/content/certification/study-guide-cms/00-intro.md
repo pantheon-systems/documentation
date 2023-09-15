@@ -38,11 +38,11 @@ A lot has changed in the decades that professionals have operated websites, part
 
 Teams that don't respond appropriately to these overwhelming market pressures set themselves up for one or more of the failure modes of the website operations.
 
-# Three Failure Modes of Website Operations
+## Three Failure Modes of Website Operations
 
 Websites can fail in so so so many ways. Here are three common modes of failure that highlight the way websites strain people, process, and platforms.
 
-## People Failure: From Authoritative Webmaster to Unorganized Web Mob.
+### People Failure: From Authoritative Webmaster to Unorganized Web Mob.
 
 Were you ever a "webmaster?"
 
@@ -82,7 +82,7 @@ Of course, directly addressing the **people**-problems in this hypothetical disa
 Ignoring the people challenges can bring you straight into a process failure.
 
 
-## Process Failure: The Never Ending Relaunch
+### Process Failure: The Never Ending Relaunch
 
 What if our hypothetical failing website above with its broken CDN, CSS, and CMS could be wiped away entirely and replaced with the perfect website?
 
@@ -108,7 +108,7 @@ The last few decades of software engineering have provided tried and true agile 
 Whichever flavor of project management **processes** your **people** like, there's still one more failure mode of website operations to avoid.
 
 
-## Platform failure: Serving Servers
+### Platform failure: Serving Servers
 
 Even with a solid cross-functional team of **people** and iterative **processes, **the path to resolving the above hypothetical web disaster needs a solid technology platform.
 

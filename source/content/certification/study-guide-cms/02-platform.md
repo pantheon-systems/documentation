@@ -38,21 +38,21 @@ nexturl: /certification/study-guide/create
 In the previous chapter we reviewed how the competing pressures to deliver more value faster and keep a system stable influence the **people** on a web team and shape their **processes**. This chapter will provide an overview of how Pantheon responds to those pressures to create an optimized **platform** for the plurality of professional web teams.
 
 
-# CMS Sites
+## CMS Sites
 
 Pantheon's CMS Sites offering runs both WordPress and Drupal sites. To many in our ecosystem, that seems like an odd choice. Why not only focus on one CMS like so many of our competitors? Or why not open it up even more widely to anything using PHP and a database?
 
 Neither of those other options is _wrong._ But the pressures on website operations lead us to prefer this path. Consider the pressure from our customers' customers.
 
 
-## (Customer's) Customer-first
+### (Customer's) Customer-first
 
 At Pantheon, one of our four core company values is "customer-first." That leads us to think about our direct customers (web teams) and also _their_ customers (the site visitors). Those site visitors generally do not care at all which CMS or framework generated the site (they care about whether the site meets their needs).
 
 The wide web ecosystem will _always_ be changing and developing better ways of meeting the needs of those customers. It would be unwise of us to overfit Pantheon to only one CMS or framework. We support a handful of frameworks across CMS Sites and Front-End Sites so that we can develop the deep expertise necessary to build a polished platform for a given framework. But not over-specializing so as to limit options when the wider web world moves. In another decade a not-yet-created framework may best serve site visitors's needs.
 
 
-# What Works for Web Teams
+## What Works for Web Teams
 
 While we can expect the landscape of web tooling to continue to change (and have added our Front-End Sites offering accordingly) the CMS-based website has had remarkable staying power over the multi decade history of the web. Serving our customers (web teams) first, requires us to support the most adopted tools.
 
@@ -61,7 +61,7 @@ WordPress is far and away the most popular website application framework, poweri
 Part of what makes WordPress and Drupal so durable is the way they balance the pressures on web teams, particularly by layering concerns as we'll see next.
 
 
-## Stable Layers
+### Stable Layers
 
 By the end of this section, you should be able to:
 
@@ -94,11 +94,11 @@ To move focus to the top of the pyramid, any web team, on Pantheon or not, needs
 With that mindset, let's look at what lies ahead in the rest of this Study Guide, starting with the end.
 
 
-#### Balancing Standardization and Independence
+### Balancing Standardization and Independence
 
 [Chapter 10](/certification/study-guide/chapter-10-custom-upstreams) examines how a central web team can manage shared code using Custom Upstreams to save time for a wider organization running dozens, hundreds, or thousands of sites.
 
-#### Automating Repetitive Tasks
+### Automating Repetitive Tasks
 
 Performing code updates is one of the most tedious tasks in website operations where human error adds huge risk. With security updates the stakes are raised. [Chapter 9](/certification/study-guide/chapter-9-automation) shows Pantheon's answers.
 
@@ -154,7 +154,7 @@ Within the workflow of a single site, any number of details can trip up a team o
 * **Immutable codebase for Test and Live environments:** When code only changes through a version control-based deployment pipeline, it is much harder for a bad-actor to deface a live site.
 
 
-#### Fast and Stable Infrastructure
+### Fast and Stable Infrastructure
 
 That collaboration depends on Pantheon's founding breakthrough: moving WordPress and Drupal past the model of running on single servers.
 
@@ -173,7 +173,7 @@ With our containerization, you get
     * **Automated HTTPS certificates:** Pantheon automates the provisioning of HTTPS certificates by default, and we manage their renewal as well. This means you never have to worry about certificate expiration. IT likes the security aspect of this, Marketing likes the SEO aspect.
 
 
-#### Get off the ground quickly
+### Get off the ground quickly
 
 Now all of the stuff only matters if you can make a website.
 

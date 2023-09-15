@@ -239,7 +239,7 @@ Pantheon offers a variety of plans to suit your needs. This section will cover t
 
 Before reading on, we recommend you familiarize yourself with the following terminology:
 
-### Types of Site Plans
+#### Types of Site Plans
 
 Pantheon offers four different tiers of site plans: Sandbox, Basic, Performance, and Elite.
 
@@ -267,7 +267,7 @@ Elite plans are for mission-critical websites that require a contractually-backe
 
 For more information about Pantheon’s Multizone Failover site plans, see [https://pantheon.io/features/multizone-failover](https://pantheon.io/features/multizone-failover). 
 
-#### Upgrading Site Plans
+### Upgrading Site Plans
 
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below (fig. 5.8).
 
@@ -287,7 +287,7 @@ The platform resources provided to your website depend on your current plan. Pan
 A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable internet protocol (IP) addresses like `127.0.0.1.` All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 
 
-#### Domain Name System (DNS)
+### Domain Name System (DNS)
 
 Pantheon does not offer DNS management services. However, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.
 
