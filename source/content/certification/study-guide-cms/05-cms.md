@@ -103,20 +103,20 @@ Every environment for your site (Dev, Test, Live, Multidevs) runs on its own con
 
 Pantheon containers spin down (sleep) after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
 
-Attempts to remotely access services (such as MySQL or SFTP connections) will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the [env:wake Terminus command](https://docs.pantheon.io/terminus/commands/env-wake).
+Attempts to remotely access services (such as MySQL or SFTP connections) will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the [env:wake Terminus command](/terminus/commands/env-wake).
 
 
 ### The Pantheon.yml File
 
-While most of Pantheon’s container configurations are managed by Pantheon in order to standardize and automate guardrails and best practices across the platform, many of Pantheon’s container configurations are managed by code for individual sites. Pantheon exposes a subset of controls that a customer can modify, which are stored in a YAML file that lives in the root of every site. For customers implementing a common codebase for a portfolio of sites, [default configurations can be implemented in a pantheon.upstream.yml](https://docs.pantheon.io/pantheon-yml#custom-upstream-configurations), and then overridden at an individual site level.
+While most of Pantheon’s container configurations are managed by Pantheon in order to standardize and automate guardrails and best practices across the platform, many of Pantheon’s container configurations are managed by code for individual sites. Pantheon exposes a subset of controls that a customer can modify, which are stored in a YAML file that lives in the root of every site. For customers implementing a common codebase for a portfolio of sites, [default configurations can be implemented in a pantheon.upstream.yml](/pantheon-yml#custom-upstream-configurations), and then overridden at an individual site level.
 
-The `pantheon.yml`` file provides a way to version-controllable means to configure platform options for any project. Some of the configurable items include PHP version, Drush version, protected paths, nested docroot, and Quicksilver platform hooks.
+The `pantheon.yml` file provides a way to version-controllable means to configure platform options for any project. Some of the configurable items include PHP version, Drush version, protected paths, nested docroot, and Quicksilver platform hooks.
 
 Items such as Nginx configuration or Varnish settings are not editable.
 
 Your site's `pantheon.yml` configuration file can be found in the root of your site's code repository. If you have a local git clone of your site, this is the project root. When accessing the site over an SFTP connection, look in the code directory.
 
-For more information, see [https://docs.pantheon.io/pantheon-yml](https://docs.pantheon.io/pantheon-yml).
+For more information, see [this documentation page](/pantheon-yml).
 
 
 
@@ -192,8 +192,8 @@ The following example would update the environmental version of PHP to version 8
 
 For more information, see:
 
-* [https://docs.pantheon.io/guides/php/php-versions?search=pantheon.yml#configure-your-php-version](https://docs.pantheon.io/guides/php/php-versions?search=pantheon.yml#configure-your-php-version)
-* [https://docs.pantheon.io/guides/php](https://docs.pantheon.io/guides/php)
+* [Configure Your PHP Version](/guides/php/php-versions?search=pantheon.yml#configure-your-php-version)
+* [PHP on Pantheon](/guides/php)
 
 
 ### Database
@@ -216,13 +216,13 @@ In this section, we will learn about Pantheon’s database service and how it po
 The Pantheon platform provides each site environment with a container that runs MariaDB. MariaDB originated as a fork of MySQL that included enhanced features and performance improvements. MariaDB and MySQL both use the MySQL protocol.
 
 
-You can use the tools in the Database / Files tab to overwrite the databases on your site's Dev or Test environment with the database on your Live environment. This allows you to pull content from Live into other environments (fig. 4.1 todo):
+You can use the tools in the Database / Files tab to overwrite the databases on your site's Dev or Test environment with the database on your Live environment. This allows you to pull content from Live into other environments (fig. 4.1):
 
-**todo image**
+![clone content from live into test](../../../images/dashboard/clone-live-to-test.png)
 
-Note that cloning a database from one environment to another will overwrite the contents of the target environment’s database. It is therefore recommended to create an on demand backup of the existing database before cloning the database between environments. On-Demand Backups are available in the Backups tab of the left sidebar (fig. 4.2 todo):
+Note that cloning a database from one environment to another will overwrite the contents of the target environment’s database. It is therefore recommended to create an on demand backup of the existing database before cloning the database between environments. On-Demand Backups are available in the Backups tab of the left sidebar (fig. 4.2):
 
-**todo image**
+![clone content from live into test](../../../images/dashboard/backup-tool.png)
 
 To create an on demand backup of your code, database, and files, simply click the “Create New Backup” button. The new backup will appear at the top of the list of archived backups once completed. More importantly, the label for the backup will have a “Restore” button next to it that will allow you to roll back your database changes if needed. This protects you from the risk of cloning a database between environments.
 
@@ -241,7 +241,7 @@ In addition to On-Demand backups, Pantheon automatically backs up your site with
 * **All sites: **You can run manual backups for free, and choose to keep them for one month or six months.
 * **Paid sites: **You can enable or disable automatic backups. A nightly backup is created and stored for a week and your weekly backup is stored for a month when automatic backups is enabled.
 
-Backups can also be triggered with Pantheon's CLI's [backup:create](https://docs.pantheon.io/terminus/commands/backup-create) command. That command can be part of a multi-step script that also includes the cloning of the database from one environment to another.
+Backups can also be triggered with Pantheon's CLI's [backup:create](/terminus/commands/backup-create) command. That command can be part of a multi-step script that also includes the cloning of the database from one environment to another.
 
 ####  Connecting to Your Database
 
@@ -249,9 +249,9 @@ Pantheon provides direct access to your databases through our platform for debug
 
 You can find the credentials for connecting to your database directly in your Site Dashboard.
 
-Navigate to the environment you want to connect with, and select **Connection Info** to view your Database credentials (fig. 4.3 todo):
+Navigate to the environment you want to connect with, and select **Connection Info** to view your Database credentials (fig. 4.3):
 
-**todo image**
+![connection info details for mysql etc](../../../images/dashboard/mysql-info.png)
 
 The following required fields are provided:
 
@@ -284,7 +284,7 @@ Pantheon creates a symbolic link (symlink) to the files directory in the appropr
 * WordPress: `wp-content/uploads`
 * Drupal: `sites/default/files`
 
-It is important to note that this directory is not part of the document root and is not directly web-accessible. You must create an additional symbolic link from within the document root if you need to make a path in files accessible from the docroot. Non-standard file locations must be symbolically linked to `/files`` or moved manually.
+It is important to note that this directory is not part of the document root and is not directly web-accessible. You must create an additional symbolic link from within the document root if you need to make a path in files accessible from the docroot. Non-standard file locations must be symbolically linked to `/files` or moved manually.
 
 #### Accessing Files
 You can connect directly to the filesystem with an SFTP client, such as FileZilla, ForkLift, CyberDuck, or WinSCP. To do so, follow these simple steps:
@@ -322,13 +322,13 @@ On Pantheon, most plans come with free New Relic APM Pro, giving you code-level 
 
 Your Pantheon New Relic instance also comes with Synthetics, which allows you to monitor your websites, detect and diagnose performance issues, and ensure the optimal function of your business's online presence.
 
-You can follow the [steps in this guide](https://docs.pantheon.io/guides/pagerduty/monitor/#create-a-monitor) to set up a ping monitor to periodically check your site’s availability.
+You can follow the [steps in this guide](/guides/pagerduty/monitor/#create-a-monitor) to set up a ping monitor to periodically check your site’s availability.
 
 ### Pantheon Search
 
 **Pantheon Search** is a system for indexing and searching site content. Pantheon provides Solr-based search as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Pantheon Search.
 
-Currently, Pantheon provides Apache Solr v3.6 and v8.0 as a service for all plans except the Basic plan. For more information, see [https://docs.pantheon.io/solr](https://docs.pantheon.io/solr)
+Currently, Pantheon provides Apache Solr v3.6 and v8.0 as a service for all plans except the Basic plan. For more information, see [Pantheon Search](/solr).
 
 
 ### Object Cache/Redis
@@ -337,11 +337,11 @@ Currently, Pantheon provides Apache Solr v3.6 and v8.0 as a service for all plan
 
 Most website frameworks like Drupal and WordPress use databases to cache internal application objects along with queries for normal page requests, which causes increased load-times.
 
-While the CDN provides caching to speed up the performance for anonymous users, it does not cache pages when users are logged in. Object Cache speeds up performance for logged-in users by remembering, or caching, results from database queries. When another user loads the page, the results are provided from the Object Cache which is stored in memory without querying the database again. This results in much faster page load times, and less strain on database resources. For more information, see [https://docs.pantheon.io/guides/object-cache](https://docs.pantheon.io/guides/object-cache)
+While the CDN provides caching to speed up the performance for anonymous users, it does not cache pages when users are logged in. Object Cache speeds up performance for logged-in users by remembering, or caching, results from database queries. When another user loads the page, the results are provided from the Object Cache which is stored in memory without querying the database again. This results in much faster page load times, and less strain on database resources. For more information, see [Object Cache Overview](/object-cache)
 
 ### Failover Database Server
 
-The Pantheon Platform has redundancy built-in throughout our containerized infrastructure. In addition, sites with Multizone Failover get a replicated database in an alternative availability zone for even higher availability. For more information, see [https://docs.pantheon.io/multizone-failover](https://docs.pantheon.io/multizone-failover).
+The Pantheon Platform has redundancy built-in throughout our containerized infrastructure. In addition, sites with Multizone Failover get a replicated database in an alternative availability zone for even higher availability. For more information, see [this documentation page](/multizone-failover).
 
 
 ### Email
@@ -360,4 +360,4 @@ For outgoing emails, we recommend integrating a third-party service provider tha
 
 <Partial file="email-rest.md" />
 
-For more information, see https://docs.pantheon.io/email.
+For more information, see [CMS Email Service on Pantheon](/email).

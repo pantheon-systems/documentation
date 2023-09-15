@@ -77,7 +77,7 @@ For how overwhelming it can be to approach WordPress and Drupal as decades old c
 
 This practice of layering technology platforms supports more conceptual layering of value. At Pantheon we often think about the efforts of website operations going toward one of three layers of value: Credibility, Productivity, Impact.
 
-[todo image]
+![pantheon webops layer hierarchy of needs](../../../images/certification/study-guide-cms/maslows-webops-hierarchy.png)
 
 Similar in concept to [Maslow’s Hierarchy of Needs](https://en.wikipedia.org/wiki/Maslow's_hierarchy_of_needs), each of these layers builds upon the one below it.
 

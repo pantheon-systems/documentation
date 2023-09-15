@@ -65,7 +65,7 @@ Every Pantheon site comes with three permanent environments: Dev, Test, and Live
  1. **Deploy Code to Live:** After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the Clear Caches option when deploying changes to your Live environment.
 
 
-For more information on the Dev/Test/Live WebOps Workflow, see [this docs page](https://docs.pantheon.io/pantheon-workflow).
+For more information on the Dev/Test/Live WebOps Workflow, see [this docs page](/pantheon-workflow).
 
 
 ## Multidevs
@@ -155,7 +155,7 @@ Congratulations! You have successfully created your first Multidev Environment!
 10. Now that our database is saved, we can restore it if needed. We can now open the **Database/Files** tab on the left navigation bar. Select Clone, and select the desired information.
 
 Congratulations! You have successfully cloned your database from your Dev environment to your new Multidev environment. We are now ready to continue development on our site!
-For more information, see [https://docs.pantheon.io/guides/multidev](https://docs.pantheon.io/guides/multidev).
+For more information, see [this documentation page](/guides/multidev).
 
 ### Connect with SSH
 
@@ -246,7 +246,7 @@ In this section, we will walk through the process of generating SSH keys and add
 
 Your computer is now set up to securely connect to the Pantheon Git server.
 
-To [add your SSH Key](https://docs.pantheon.io/ssh-keys#add-ssh-key---new-dashboard) to Pantheon, follow these steps:
+To [add your SSH Key](/ssh-keys#add-ssh-key---new-dashboard) to Pantheon, follow these steps:
 
 1. **Log in to your Pantheon Dashboard.** In your Personal Workspace, you should see an avatar icon in the upper right-hand corner of your screen:
 
@@ -291,7 +291,7 @@ To interact with your site’s codebase, you will eventually need to clone your 
 
 <Alert title="Prerequisite for this activity:"  type="danger" >
 
-You will need to create and upload a valid SSH key to your account dashboard. See the previous section on SSH Access for instructions on how to do this. Alternatively, you can follow the instructions on this documentation page: https://docs.pantheon.io/ssh-keys#add-ssh-key---new-dashboard
+You will need to create and upload a valid SSH key to your account dashboard. See the previous section on SSH Access for instructions on how to do this. Alternatively, you can follow the instructions on [this documentation page](/ssh-keys#add-ssh-key---new-dashboard).
 
 </Alert>
 
@@ -340,7 +340,7 @@ We are now going to install the popular [Yoast SEO](https://wordpress.org/plugin
 
 <Alert title="A Note on Inclusive Language"  type="danger" >
 
-Pantheon recognizes the need and has made the decision to standardize on main rather than master for branch naming conventions. Our engineering team is in the process of making this switch. However, the “main” branch on Pantheon is currently `master`. For more information, see [our documentation page on Inclusive Language](https://docs.pantheon.io/inclusive-language).
+Pantheon recognizes the need and has made the decision to standardize on main rather than master for branch naming conventions. Our engineering team is in the process of making this switch. However, the “main” branch on Pantheon is currently `master`. For more information, see [our documentation page on Inclusive Language](/inclusive-language).
 
 </Alert>
 
@@ -426,7 +426,7 @@ In this section, we will show you how to create a Multidev environment from an e
 
 2. Now that we have synced our local environment with the branches in our Pantheon environment, let’s create a new local branch called `php-upgrade`. As the name suggests, we will use this branch to upgrade the PHP version of our site using a Multidev environment.
 
-    Pantheon lets you [configure your PHP version](https://docs.pantheon.io/guides/php/php-versions#configure-your-php-version) per environment, which means that you never have to worry about an unforeseen impact to your production site when you upgrade PHP. To check which version of PHP a particular environment is running, select “Settings” in the upper righthand corner of your Site Dashboard, then select “PHP Version”:
+    Pantheon lets you [configure your PHP version](/guides/php/php-versions#configure-your-php-version) per environment, which means that you never have to worry about an unforeseen impact to your production site when you upgrade PHP. To check which version of PHP a particular environment is running, select “Settings” in the upper righthand corner of your Site Dashboard, then select “PHP Version”:
 
     Working from your local workstation within the directory containing the local git version of your website on Pantheon, create a new branch called `php-upgrade`:
 
@@ -531,7 +531,7 @@ While many devevelopers (paricularly in the WordPress space) enjoy the convenien
 * Drush
 * WP-CLI
 
-For more information on Local Development options on Pantheon, see [https://docs.pantheon.io/guides/local-development](https://docs.pantheon.io/guides/local-development).
+For more information on Local Development options on Pantheon, see [this documentation page](/guides/local-development).
 </Alert>
 
 ### SFTP Mode

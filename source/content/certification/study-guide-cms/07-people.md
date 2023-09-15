@@ -85,17 +85,15 @@ We will start by exploring the **Personal Workspace**, which is what you see aft
 
 The Personal Workspace displays tools for the sites you own (or are a team member of), your account plan, and billing for sites you own. You have only one Personal Workspace.
 
-The Home Page of your Personal Workspace contains the following information: Workspace type, Sites, Account tier, and Sandbox sites used (fig. 5.1 todo)
+The Home Page of your Personal Workspace contains the following information: Workspace type, Sites, Account tier, and Sandbox sites used (fig. 5.1)
 
-**todo image**
+![Workspace overview](../../../images/dashboard/new-dashboard/workspace-overview.png)
 
 #### Tabs in your Personal Workspace
 
 
 
-The navigation bar on the left contains several additional tabs to help you manage your sites (fig. 5.2 todo):
-
-**todo image**
+The navigation bar on the left contains several additional tabs to help you manage your sites:
 
 * **Sites: **Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
     * **Create New Site:** Start the process of creating a new site on Pantheon. New sites will appear under the Sites tab.
@@ -107,15 +105,15 @@ The navigation bar on the left contains several additional tabs to help you mana
 
 **Settings:** Modify the Workspace name, logo, billing information, and if your Organization is configured for it, billing terms and instructions for your team.
 
-For more information, see [https://docs.pantheon.io/guides/quickstart/user-dashboard/](https://docs.pantheon.io/guides/quickstart/user-dashboard/).
+For more information, see [Workspaces, Sites, and Teams](/guides/quickstart/user-dashboard/).
 
 **Professional Workspace**
 
 **Professional workspaces** bring together users and sites to allow administrators to effectively manage a large number of sites.
 
-The navigation bar on the left contains several additional tabs to help you manage your sites (fig 5.3 todo):
+The navigation bar on the left contains several additional tabs to help you manage your sites (fig 5.3):
 
-**todo image**
+![professional workspace overview](../../../images/certification/study-guide-cms/professional-workspace-overview.png)
 
 
 * **Home: **The home page of a Workspace contains information related to your workspace, such as the number of sites, sites recently added, and more.
@@ -140,12 +138,11 @@ There are two places a team can be defined: on a Professional Workspace, or in t
 
 #### Roles and Permissions
 
-There are two tiers of roles and permissions on Pantheon: **Workspace Level Permissions**, and **Site Level Permissions** (figs. 5.4 and 5.5 todo), each of which has multiple roles:
+There are two tiers of roles and permissions on Pantheon: **Workspace Level Permissions**, and **Site Level Permissions** (figs. 5.4 and 5.5), each of which has multiple roles:
 
-**todo image 5.4 / 7.4**
+![site level roles and permissions](../../../images/certification/study-guide-cms/site-level-permissions.png)
 
-**todo image 5.5 / 7.5**
-
+![workspace level roles and permissions](../../../images/certification/study-guide-cms/workspace-level-permissions.png)
 
 ### Sites
 
@@ -153,7 +150,7 @@ A Pantheon CMS Site is a complete web project that includes all of the elements 
 
 A **Site** has a site dashboard (fig. 5.6) and consists of environments kept in sync through platform automation.
 
-**todo image 5.6 / 7.6**
+![site dashboard](../../../images/certification/study-guide-cms/site-dashboard.png)
 
 
 
@@ -161,7 +158,7 @@ A **Site** has a site dashboard (fig. 5.6) and consists of environments kept in 
 
 A Site on Pantheon consists of multiple **Environments**. (fig. 5.7)
 
-**todo image 5.7 / 7.7**
+![multidev diagram](../../../images/certification/study-guide-cms/multidev-diagram.png)
 
 An Environment on Pantheon is a self-contained space where a specific stage of development takes place. All sites on Pantheon come with three permanent environments (Dev, Test, and Live), and sites that are part of a Gold Workspace and above also have up to 10 on-demand sandbox environments called Multidevs. Each environment has its own codebase, database, and files, which are kept in sync with other environments through Pantheon’s orchestration layer. This allows you to develop and test features without impacting your Live site.
 
@@ -210,9 +207,7 @@ In order to lock an environment on Pantheon with a username and password, follow
 4. Provide a username and password.
 5. Click Lock Environment.
 
-**todo image**
-
-
+![dashboard security tool https basic auth lock](../../../images/dashboard/lock-environment.png)
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
@@ -222,9 +217,9 @@ You can set a different username and password for each environment. This is impo
 
 Visit the URL of the environment that you have made private to verify that everything is working correctly. You should see an authentication form prompting you to enter the username and password for that environment to start your session.
 
-In addition to being able to lock environments through the Pantheon Dashboard, you can [also lock and unlock environments using Terminus](https://docs.pantheon.io/terminus/commands/lock-enable).
+In addition to being able to lock environments through the Pantheon Dashboard, you can [also lock and unlock environments using Terminus](/terminus/commands/lock-enable).
 
-For more information, see: [https://docs.pantheon.io/guides/secure-development/security-tool](https://docs.pantheon.io/guides/secure-development/security-tool).
+For more information, see: [Secure Development on Pantheon](/guides/secure-development/security-tool).
 
 ### Site Plans
 
@@ -329,7 +324,7 @@ All platform domains are available over HTTPS. Redirecting to HTTPS during devel
 
 <Partial file="dns-primary.md" />
 
-For more information on Primary Domains, see https://docs.pantheon.io/guides/domains/primary-domain.
+For more information on Primary Domains, see [this documentation page](/guides/domains/primary-domain).
 
 
 #### Custom Domains

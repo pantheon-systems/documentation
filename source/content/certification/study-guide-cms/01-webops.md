@@ -171,9 +171,7 @@ That's why you need a WebOps platform!
 
 WebOps platforms automate repetitive tasks where constant manual interventions are not only inefficient, but also risky, in that they introduce risk of human error, threatening the stability and security of the website. A WebOps platform provides the tools and workflows to allow teams to automatically adhere to best practices every time by packaging multiple manual steps into automated, repeatable functions. This process is commonly known as a CI/CD pipeline, which includes three separate but related practices: Continuous Integration, Continuous Delivery, and Continuous Deployment (see fig. 1.1 for more detail).  
 
-todo alert box
-
-**Web Development Terminology: CI/CD Workflow**
+#### Web Development Terminology: CI/CD Workflow
 
 **Continuous Integration** (CI) is the process of automatically turning the commits you make in your codebase into a usable build (website). It involves integrating changes from multiple contributors into the main codebase frequently, often several times a day. Each integration is verified by an automated build and test process to catch errors early. Continuous Integration requires some level of testing to verify that the build process succeeded. With CI you define how your code is transformed into a working site; often living in a sandbox environment.
 
