@@ -27,6 +27,8 @@ import Commands from "../components/commands"
 import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
 import Partial from "../components/partial"
+import Youtube from "../components/youtube"
+
 
 const shortcodes = {
   Callout,
@@ -46,6 +48,7 @@ const shortcodes = {
   Commands,
   ReviewDate,
   Check,
+  Youtube
 }
 
 // @TODO relocate this list

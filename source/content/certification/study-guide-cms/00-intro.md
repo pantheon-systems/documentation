@@ -71,7 +71,7 @@ But for too many organizations the players might not recognize each other as tea
 * that your CIO (Chief Information Officer) needed to comply with
 * the CCPA (California Consumer Privacy Act)
 
-**todo embed youtube video**
+<Youtube src="qL3KNmRPI3Y" title="Steve Gets Overloaded with Initialisms Again" />
 
 Every person in this situation can point blame at someone else. No one here seems to be accountable for the holistic success of the website.
 
