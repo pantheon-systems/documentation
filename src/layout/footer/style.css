@@ -27,7 +27,13 @@
 }
 
 #mktoForm_2014 input {
-  min-width: 13rem;
+  min-width: 15rem;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  #mktoForm_2014 input {
+    min-width: 10rem;
+  }
 }
 
 #mktoForm_2014 .mktoButtonWrap.mktoInset {
