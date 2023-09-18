@@ -4,9 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
-import HeaderBody from "../components/headerBody"
 import NavButtons from "../components/navButtons"
-
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
@@ -14,8 +12,6 @@ import Icon from "../components/icon"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
-
-import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
@@ -28,8 +24,6 @@ import {
   SidebarLayout,
   TableOfContents,
 } from "@pantheon-systems/pds-toolkit-react"
-
-import "../styles/changelogs.css"
 
 const shortcodes = {
   Alert,
@@ -93,7 +87,7 @@ class ChangelogTemplate extends React.Component {
             >
               <div id="doc" className="doc changelog__content">
                 <div className="pds-overline-text">Pantheon Changelog</div>
-                <h1 className="toc-ignore">{node.frontmatter.title}</h1>
+                <h1>{node.frontmatter.title}</h1>
                 <div className="pds-spacing-mar-block-end-3xl">
                   <p className="pds-lead-text pds-lead-text--small">
                     Sign up for the Pantheon Changelog Newsletter to receive a
@@ -103,20 +97,25 @@ class ChangelogTemplate extends React.Component {
                   <a
                     className="pds-button"
                     href="https://learn.pantheon.io/Changelog-Opt-In.html"
+                    target="_blank"
                   >
                     Subscribe Now
                   </a>
                 </div>
                 <hr className="pds-spacing-mar-block-end-3xl" />
 
-                <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+                <div className="pds-spacing-mar-block-start-l pds-spacing-mar-block-end-4xl">
                   <MDXProvider components={shortcodes}>
                     <MDXRenderer>{node.body}</MDXRenderer>
                   </MDXProvider>
                 </div>
               </div>
             </article>
-            <TableOfContents slot="sidebar" headingText="Contents" />
+            <TableOfContents
+              slot="sidebar"
+              headingText="Contents"
+              ignoreClass="toc-ignore"
+            />
           </SidebarLayout>
           <NavButtons
             prev={

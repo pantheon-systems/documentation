@@ -8,14 +8,41 @@
 a.docs-header-anchor {
   margin-inline-start: var(--pds-spacing-xs);
 }
-
 a.docs-header-anchor svg {
   fill: var(--pds-color-text-default-secondary);
   height: var(--pds-spacing-l);
 }
-
 a.docs-header-anchor:hover svg {
   fill: var(--pds-color-link-hover);
+}
+
+/* Changelog styles */
+a.individual-changelog-link {
+  color: var(--pds-color-text-default);
+  display: block;
+
+  text-decoration: none;
+}
+
+a.individual-changelog-link:not(:first-child) {
+  padding-block-start: var(--pds-spacing-m);
+}
+
+a.individual-changelog-link:hover {
+  color: var(--pds-color-link-hover);
+  text-decoration: underline;
+}
+
+/* Main content headings */
+#doc h2,
+#doc h3,
+#doc h4 {
+  margin-block-start: var(--pds-spacing-3xl);
+}
+
+#doc h2 + h3,
+#doc h3 + h4 {
+  margin-block-start: var(--pds-spacing-xl);
 }
 
 /* Temporary hacks for marketo forms */
