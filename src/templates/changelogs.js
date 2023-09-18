@@ -9,7 +9,6 @@ import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
@@ -28,6 +27,7 @@ import {
 } from "../components/releaseHeadlines"
 
 import {
+  Icon,
   Pager,
   SidebarLayout,
   TableOfContents,
@@ -38,7 +38,6 @@ const shortcodes = {
   Alert,
   Accordion,
   ExternalLink,
-  Icon,
   Popover,
   TabList,
   Tab,
@@ -106,6 +105,7 @@ class ChangelogsTemplate extends React.Component {
                     target="_blank"
                   >
                     Subscribe Now
+                    <Icon iconName="externalLink" />
                   </a>
                 </div>
                 <hr className="pds-spacing-mar-block-end-3xl" />
