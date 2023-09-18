@@ -1,3 +1,9 @@
 .hero-cta {
   margin-block-end: var(--pds-spacing-5xl);
+  display: flex;
+  align-items: center;
+}
+
+.hero-cta-image img {
+  width: 100%;
 }
