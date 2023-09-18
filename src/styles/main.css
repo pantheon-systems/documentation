@@ -4,6 +4,20 @@
   padding-block-start: var(--pds-spacing-xl);
 }
 
+/* In-document anchor links. */
+a.docs-header-anchor {
+  margin-inline-start: var(--pds-spacing-xs);
+}
+
+a.docs-header-anchor svg {
+  fill: var(--pds-color-text-default-secondary);
+  height: var(--pds-spacing-l);
+}
+
+a.docs-header-anchor:hover svg {
+  fill: var(--pds-color-link-hover);
+}
+
 /* Temporary hacks for marketo forms */
 
 /* Buttons */
