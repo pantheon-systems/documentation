@@ -7,7 +7,6 @@ import SEO from "../layout/seo"
 import ChangelogList from "../pds-middleware/ChangelogList"
 import LinksList from "../pds-middleware/LinksList"
 import CallToAction from "../pds-middleware/CallToAction"
-import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
 import TopicsGrid from "../pds-middleware/TopicsGrid"
 
 import { TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"

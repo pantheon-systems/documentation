@@ -27,7 +27,7 @@ const NavButtons = ({
         </ul>
       )}
       {next && (
-        <ul className=" pagination pager-guides">
+        <ul className="pagination pager-guides">
           <li>
             <Link to={next} rel="prev" className="pds-button">
               {nextTitle}
