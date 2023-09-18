@@ -29,23 +29,26 @@ module.exports = {
     `gatsby-transformer-yaml`,
     // Supports SCSS stylesheets. Prime to be removed with a CSS refactor
     `gatsby-plugin-sass`, //https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/
-    { // Handles inserting the GTM js blob into the site
+    {
+      // Handles inserting the GTM js blob into the site
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: "GTM-MDF545G", // process.env.GTM_ID_NEW,
         //testing includeInDevelopment: false,
-        defaultDataLayer: { },
+        defaultDataLayer: {},
       },
     },
-    { // Handles inserting the Segment js blob into the site
+    {
+      // Handles inserting the Segment js blob into the site
       resolve: "gatsby-plugin-segment-js",
       options: {
         prodKey: "lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA",
         devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
         trackPage: false,
         trackPageOnlyIfReady: true,
-        customSnippet: '!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="${writeKey}";;analytics.SNIPPET_VERSION="4.15.3";analytics.load("${writeKey}");analytics.ready(function() {window.dataLayer.push({"event": "segment_analytics_loaded"});});analytics.page();}}();'
-        },
+        customSnippet:
+          '!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="${writeKey}";;analytics.SNIPPET_VERSION="4.15.3";analytics.load("${writeKey}");analytics.ready(function() {window.dataLayer.push({"event": "segment_analytics_loaded"});});analytics.page();}}();',
+      },
     },
     // Each instance of `gatsby-source-filesystem` tells Gatsby to look in a different directory for source files.
     {
@@ -62,22 +65,24 @@ module.exports = {
         name: `data`,
       },
     },
-    { // Converts Markdown into HTML
+    {
+      // Converts Markdown into HTML
       resolve: `gatsby-transformer-remark`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
       options: {
-        plugins: [ // Takes additional plugins
-        {
+        plugins: [
+          // Takes additional plugins
+          {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               // Moves downloadable scripts to a subdirectory in the build artifact
-              destignationDir: f => `scripts/${f.name}`, // destignationDir is defined in gatsby-node.js
+              destignationDir: (f) => `scripts/${f.name}`, // destignationDir is defined in gatsby-node.js
             },
           },
         ],
       },
-        // Honestly not sure why this is here.
-        path: `${__dirname}/source/scripts`,
-        name: `scripts`,
+      // Honestly not sure why this is here.
+      path: `${__dirname}/source/scripts`,
+      name: `scripts`,
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -101,13 +106,16 @@ module.exports = {
       },
     },
     // When running Gatsby develop, creates reporting pages
-    ...(process.env.NODE_ENV === 'development' ? [
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/reports`,
-      },
-    }, ] : []),
+    ...(process.env.NODE_ENV === "development"
+      ? [
+          {
+            resolve: `gatsby-plugin-page-creator`,
+            options: {
+              path: `${__dirname}/src/reports`,
+            },
+          },
+        ]
+      : []),
     // ...? Just read the page, I dunno.
     {
       resolve: `gatsby-plugin-manifest`, // https://www.gatsbyjs.com/plugins/gatsby-plugin-manifest/
@@ -123,29 +131,34 @@ module.exports = {
     },
     // Consumes JSON files into GraphQL
     `gatsby-transformer-json`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-json/
-    { // Allows for React components within the Markdown files.
+    {
+      // Allows for React components within the Markdown files.
       resolve: `gatsby-plugin-mdx`, // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
-          { // Allows for more complex tables
+          {
+            // Allows for more complex tables
             resolve: "gatsby-remark-grid-tables", // https://www.gatsbyjs.com/plugins/gatsby-remark-grid-tables/
           },
-          { // Used to create code snippets from files on GitHub
+          {
+            // Used to create code snippets from files on GitHub
             resolve: "gatsby-remark-github", // https://www.gatsbyjs.com/plugins/gatsby-remark-github/
             options: {
-              marker: 'GITHUB-EMBED',
+              marker: "GITHUB-EMBED",
               insertEllipsisComments: true,
-              ellipsisPhrase: '...',
+              ellipsisPhrase: "...",
               useCache: true,
-              cacheKey: 'gatsby-remark-github-v1',
+              cacheKey: "gatsby-remark-github-v1",
               token: process.env.GITHUB_API,
-            }
+            },
           },
-          { // Required so the custom Youtube component can create iframes that work with Gatsby
+          {
+            // Required so the custom Youtube component can create iframes that work with Gatsby
             resolve: "gatsby-remark-responsive-iframe", // https://www.gatsbyjs.com/plugins/gatsby-remark-responsive-iframe/
           },
-          { // Self-explanatory
+          {
+            // Self-explanatory
             resolve: "gatsby-remark-images", // https://www.gatsbyjs.com/plugins/gatsby-remark-images/
             options: {
               maxWidth: 1035,
@@ -155,7 +168,8 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          { // Adds titles to code blocks... obvi
+          {
+            // Adds titles to code blocks... obvi
             resolve: `gatsby-remark-code-titles`, // https://www.gatsbyjs.com/plugins/gatsby-remark-code-titles/
             options: {
               className: `gatsby-remark-code-title`, // Defines the CSS class it uses, for custom styling
@@ -170,10 +184,19 @@ module.exports = {
               ordered: false,
               fromHeading: 2,
               toHeading: 3,
-              className: "table-of-contents"
+              className: "table-of-contents",
             },
           },
-          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: `<svg xmlns="http://www.w3.org/2000/svg" height="0.75em" viewBox="0 0 576 512"><path d="M0 256C0 167.6 71.6 96 160 96h64c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-53 0-96 43-96 96s43 96 96 96h64c17.7 0 32 14.3 32 32s-14.3 32-32 32H160C71.6 416 0 344.4 0 256zm576 0c0 88.4-71.6 160-160 160H352c-17.7 0-32-14.3-32-32s14.3-32 32-32h64c53 0 96-43 96-96s-43-96-96-96H352c-17.7 0-32-14.3-32-32s14.3-32 32-32h64c88.4 0 160 71.6 160 160zM192 224H384c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>`,
+              className: `docs-header-anchor`,
+              maintainCase: true,
+              removeAccents: true,
+              isIconAfterHeader: true,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -209,7 +232,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: "gatsby-plugin-sitemap",
     },
     `gatsby-plugin-fontawesome-css`,
   ],
