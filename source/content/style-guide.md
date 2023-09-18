@@ -141,7 +141,7 @@ Use cards to visually display a list of items, with links to more information.
 
   <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/autopilot"}>
 
-  Automate finding, testing, and applying WordPress and Drupal updates. 
+  Automate finding, testing, and applying WordPress and Drupal updates.
 
   </Product>
 
@@ -365,7 +365,7 @@ Vary: Accept-Encoding, Cookie
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
 ## DNS
 
-Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do *not* have `draft: true` frontmatter. 
+Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do *not* have `draft: true` frontmatter.
 
 <Example>
 
@@ -696,7 +696,7 @@ Use panels for extraneous but useful information such as troubleshooting section
 
 <Accordion title="Panel Title" id="example-panel" icon="wrench">
 
-### Panel Content Header 
+### Panel Content Header
 
 This Panel contains additional context, or advanced instructions.
 

@@ -43,7 +43,7 @@ Pantheon's [Sales](https://pantheon.io/contact-sales?docs) and Billing teams are
    - Identifying application-level (Drupal or WordPress) versus platform-level issues
    - Identifying problematic modules and plugins
    - Multidev
-   - Assistance with basic caching issues, Terminus, Localdev, and Custom Upstreams
+   - Assistance with basic caching issues, Terminus, and Custom Upstreams
 - **Performance**:
    - New Relic
    - Caching

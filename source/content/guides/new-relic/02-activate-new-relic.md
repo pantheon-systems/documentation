@@ -21,13 +21,8 @@ This section provides steps on how to activate and configure your New Relic&reg;
 
 New Relic&reg; is automatically enabled for all application containers added to the site, including Multidev environments. You can activate New Relic&reg; in the Site Dashboard if you or a team member previously disabled it.
 
-1. Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and then click **Activate New Relic Pro**:
+<Partial file="new-relic-enabling.md" />
 
-  ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../../images/integrations/newrelic/activate-new-relic.png)
-
-   It may take several moments for the activation to complete.
-
-1. Visit your site in the browser and make some un-cached requests to generate data in New Relic&reg;. It will take a few minutes for your information to become available in New Relic.
 
 ## Configure New Relic&reg; Performance Monitoring Access
 
@@ -42,6 +37,8 @@ New Relic&reg; is automatically enabled for all application containers added to 
 1. Click your site name to access the data for your site.
 
   ![SCreenshot of the New Relic APM data for a Pantheon site.](../../../images/integrations/newrelic/new-relic-summary.png)
+
+
 
 ### Who is the New Relic&reg; account associated with?
 
