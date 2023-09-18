@@ -24,6 +24,7 @@ import Color from "../components/color.js"
 import Download from "../components/download"
 
 import {
+  Pager,
   SidebarLayout,
   TableOfContents,
 } from "@pantheon-systems/pds-toolkit-react"
@@ -116,22 +117,21 @@ class ChangelogTemplate extends React.Component {
               </div>
             </article>
             <TableOfContents slot="sidebar" headingText="Contents" />
-
-            <NavButtons
-              prev={
-                this.props.pageContext.previous
-                  ? `/${this.props.pageContext.previous}`
-                  : null
-              }
-              next={
-                this.props.pageContext.next
-                  ? `/${this.props.pageContext.next}`
-                  : null
-              }
-              prevTitle="Older"
-              nextTitle="Newer"
-            />
           </SidebarLayout>
+          <NavButtons
+            prev={
+              this.props.pageContext.previous
+                ? `/${this.props.pageContext.previous}`
+                : null
+            }
+            next={
+              this.props.pageContext.next
+                ? `/${this.props.pageContext.next}`
+                : null
+            }
+            prevTitle="Older"
+            nextTitle="Newer"
+          />
         </main>
       </Layout>
     )
