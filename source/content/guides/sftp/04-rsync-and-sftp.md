@@ -17,7 +17,7 @@ This section provides information on how to use your SFTP client or rsync to tra
 
 ## File Size Limits
 
-You can't use your Pantheon Dashboard to import files over 500 MB. You must use an SFTP client or rsync to transfer files larger than 500 MB to your `/files` directory.
+You can't use your Pantheon Dashboard to import files over 500 MB.
 
 - **Drupal:** `sites/default/files`
 - **WordPress:** `wp-content/uploads`
