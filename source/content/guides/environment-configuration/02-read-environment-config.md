@@ -181,7 +181,7 @@ You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/te
 ```bash
 $secrets_json_text = file_get_contents('/files/private/secrets.json');
 $secrets_data = json_decode($secrets_json_text, TRUE);
-define('EXAMPLE_API_KEY', $data['example_api_key']);
+define('EXAMPLE_API_KEY', $secrets_data['example_api_key']);
 ```
 
 </Tab>
@@ -240,8 +240,8 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
     $secrets_json_text = file_get_contents('/files/private/' . $secrets_filename);
     $secrets_data = json_decode($secrets_json_text, TRUE);
 
-    define('SENDGRID_API_KEY', $data['sendgrid_api_key']);
-    define('SOME_OTHER_OPTION', $data['other_key_example']);
+    define('SENDGRID_API_KEY', $secrets_data['sendgrid_api_key']);
+    define('SOME_OTHER_OPTION', $secrets_data['other_key_example']);
 }
 ```
 
