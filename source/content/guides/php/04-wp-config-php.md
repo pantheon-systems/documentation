@@ -164,16 +164,6 @@ define( 'WP_MEMORY_LIMIT', '512M' );
 
 ## Troubleshooting
 
-### Request to a Remote API Does Not Return Expected Response
-
-The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
-
-If the API expects `&` as an argument separator but receives `&amp;` (for example, when using `http_build_query`), you can override the default `arg_separator.output` value by adding the following line to `wp-config.php`:
-
-```php:title=wp-config.php
-ini_set('arg_separator.output', '&');
-```
-
 ### Actions and Filters in `wp-config.php`
 
 Actions or filters that require CLI tools like WP-CLI might fail from `wp-config.php`, because the functions required are not yet accessible. Put these directives in an [MU Plugin](/guides/wordpress-configurations/mu-plugin) to resolve this issue.
