@@ -38,7 +38,7 @@ class Index extends React.Component {
           <TopicsGrid topics={homeYaml.topics.tiles} />
 
           <TwoItemLayout
-            layoutVariant="one-third-end"
+            layoutVariant="equal"
             className="pds-spacing-mar-block-start-6xl"
           >
             <div slot="first-item">
