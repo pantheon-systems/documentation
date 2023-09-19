@@ -69,7 +69,6 @@ Create one A record and 2 AAAA records for the given subdomain (e.g., `www.examp
 3. Select desired Time to Live (TTL).
 4. Click **Add**.
 5. Repeat steps 1-4 for the two AAAA records.
-6. Repeat steps 1-5 for the two AAAA records.
 
 ## Dyn Docs
 

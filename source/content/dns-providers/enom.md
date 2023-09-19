@@ -39,8 +39,8 @@ Create one A record and 2 AAAA records for the given subdomain (e.g., `www.examp
 
 1. Click **New Row**.
 2. Enter **www** in the **Host Name** field, select **A** for the **Record Type** then enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Address** field.
-4. Click **Save**.
-5. Repeat steps 1-4 for the two AAAA records.
+3. Click **Save**.
+5. Repeat steps 1-3 for the two AAAA records.
 
 
 ## Enom Docs
