@@ -85,7 +85,9 @@ class ChangelogTemplate extends React.Component {
               className="changelog changelog--individual"
             >
               <div id="doc" className="doc changelog__content">
-                <div className="pds-overline-text">Pantheon Changelog</div>
+                <div className="pds-overline-text pds-spacing-mar-block-end-xs">
+                  Pantheon Changelog
+                </div>
                 <h1>{node.frontmatter.title}</h1>
                 <div className="pds-spacing-mar-block-end-3xl">
                   <p className="pds-lead-text pds-lead-text--small">
