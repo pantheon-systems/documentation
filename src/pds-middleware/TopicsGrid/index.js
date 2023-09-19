@@ -19,6 +19,7 @@ function TopicsGrid(props) {
         topics.map((topic, index) => (
           <Tile
             key={index}
+            imageSrc={topic.imageSrc}
             headingLevel="h3"
             headingText={topic.headingText}
             summary={topic.summary}
