@@ -61,20 +61,6 @@ To upgrade or migrate an existing Drupal site to Drupal with Integrated Composer
 
 To check an existing site's compatibility to upgrade, visit the appropriate [Drupal Migration Guide](/drupal-migration).
 
-## Gutenberg for Drupal
-
-After you upgrade to Drupal you may consider upgrading the authoring experience for your content creators as well. We recommend using [Gutenberg](https://www.drupal.org/project/gutenberg) for a better user experience, including:
-
- - Creating, saving, and reusing content blocks
- - Easier build process for landing pages
- - Scalable performance
-
-You can read more about Pantheon's experience with Gutenberg in [Gutenberg on Drupal : An Opportunity](https://pantheon.io/blog/gutenberg-drupal-9).
-
-You can also read more about the installation process on [Drupal.org](https://www.drupal.org/docs/contributed-modules/gutenberg/installation-and-upgrades).
-
-We recommend monitoring your site's traffic using [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics) to check for increased traffic after installing Gutenberg.
-
 ## Troubleshooting and Support
 
 See the appropriate [Drupal Migration Guide](/drupal-migration) for help troubleshooting common issues with Drupal with Integrated Composer.
