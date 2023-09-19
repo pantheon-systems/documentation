@@ -62,13 +62,14 @@ Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in
 4. Click **Save**.
 5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### A Record for subdomain
-An A record is required to configure a subdomain (e.g., `www.example.com`).
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. Click the **Add** button and select **A** from the Type dropdown menu.
 2. Enter **www** in the **Host** field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Points to** field.
 3. Select desired Time to Live (TTL).
 4. Click **Save**.
+5. Repeat steps 1-4 for the two AAAA records.
 
 ## Troubleshooting
 

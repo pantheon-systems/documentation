@@ -53,9 +53,8 @@ Be sure that you have a:
 
 1. Repeat steps 1-5 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### A Record for subdomain
-
-The A record is required if you wish to include `www` within your site's primary domain name.
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. Select **A** from the dropdown menu.
 
@@ -66,6 +65,9 @@ The A record is required if you wish to include `www` within your site's primary
 1. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 
 1. Click **Add Record**.
+
+1. Repeat steps 1-5 for the two AAAA records.
+
 
 ### TXT Record
 

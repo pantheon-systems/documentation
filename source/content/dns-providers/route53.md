@@ -71,13 +71,14 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
   ![Route 53 AAAA records](../../images/route53-aaaa-records.png)
 
-### A Record for subdomain
-An A record is required to configure a subdomain (e.g., `www.example.com`).
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. Click **Create Record Set** to add a new record, then select **A - IPv4 address** for the record type.
 2. Enter **www** in the **Name** field and enter the A record value provided by Pantheon in the **Value** field (e.g. `23.185.0.2`)
 3. Select desired Time to Live (TTL).
 4. Click **Create**:
+5. Repeat steps 1-4 for the two AAAA records.
 
 ## Next Steps
 

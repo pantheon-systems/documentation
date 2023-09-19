@@ -39,14 +39,15 @@ Be sure that you have a:
 
 5. Click **Save**.
 
-### A Record for subdomain
-An A record is required to configure a subdomain (e.g., `www.example.com`).
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. In the **Domains** section of the Control Panel, next to your desired domain, click on **gear symbol** under **Actions** and select **DNS**.
 2. Click **Add record** and select the **A** type.
 3. In the **Host name** field, specify the desired host (e.g. `www`).
 4. In the **Points to** field, enter the desired IPv4 address (e.g. `23.185.0.2`).
 5. Click **Save**.
+6. Repeat steps 2-5 for the two AAAA records.
 
 
 ## 1&1 Docs
@@ -59,4 +60,3 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
 
 * [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)
-
