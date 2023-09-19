@@ -29,6 +29,7 @@ Be sure that you have a:
 ## Configure DNS Records on 1&1
 
 ### A/AAAA Records
+Complete the following to configure DNS for the bare domain (e.g., `example.com`) and repeat for any subdomains (e.g., `www`):
 
 1. Click **Domain Center** from the Domains panel.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Edit DNS Settings**.
@@ -37,15 +38,6 @@ Be sure that you have a:
 
     Pantheon provides two AAAA records for improved uptime and reliability, however 1&1 only supports one IPv6 record per domain. If you'd like to add both AAAA records, then consider transferring your domain or name server to another DNS host.
 
-5. Click **Save**.
-
-### A Record for subdomain
-An A record is required to configure a subdomain (e.g., `www.example.com`).
-
-1. In the **Domains** section of the Control Panel, next to your desired domain, click on **gear symbol** under **Actions** and select **DNS**.
-2. Click **Add record** and select the **A** type.
-3. In the **Host name** field, specify the desired host (e.g. `www`).
-4. In the **Points to** field, enter the desired IPv4 address (e.g. `23.185.0.2`).
 5. Click **Save**.
 
 
@@ -59,4 +51,3 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 * [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
 
 * [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)
-

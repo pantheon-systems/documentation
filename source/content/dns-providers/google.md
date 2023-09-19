@@ -64,12 +64,14 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 ![Google configure ipv6](../../images/google-aaaa.png)
 
 
-### A Record for subdomain
-An A record is required to configure a subdomain (e.g., `www.example.com`).
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. Within the same section (**Custom resource records**), select the record type **A**.
 2. Enter `www` in the **Host** field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **IPv4** field.
 3. Set desired Time to Live (TTL), then click **Add** to create the record.
+4. Repeat steps 1-3 for the two AAAA records.
+
 
 ## Next Steps
 

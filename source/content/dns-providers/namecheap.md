@@ -29,7 +29,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and log in to your [Namecheap account](https://www.namecheap.com/myaccount/login.aspx) in a new tab before you continue.
 
 ## Verify the Domain to Add HTTPS
-When entering the value for the Name/Host, the bare domain and trailing dot (".") must be removed from the value provided by Pantheon. For example, the value entered in the **Name/Host** field for the Namecheap Advanced DNS configuration should look like `_name-sample`, or in the case of a subdomain, like `_name-sample.subdomain` where the subdomain is replaced with a specific subdomain. 
+When entering the value for the Name/Host, the bare domain and trailing dot (".") must be removed from the value provided by Pantheon. For example, the value entered in the **Name/Host** field for the Namecheap Advanced DNS configuration should look like `_name-sample`, or in the case of a subdomain, like `_name-sample.subdomain` where the subdomain is replaced with a specific subdomain.
 
 After completing the fields on the page, click **Verify Ownership**.
 
@@ -58,20 +58,22 @@ You can click **Skip without HTTPS** to skip verification. By skipping, vistors 
 
 ### AAAA Records
 1. From the **Advanced DNS** tab, click **Add New Record**.
-1. Select **AAAA Record** for _Type_. 
+1. Select **AAAA Record** for _Type_.
 2. Enter `@` in the **Host** field and enter the first _AAAA record value_ provided by Pantheon in the **Value** field.
 3. Select the desired Time to Live (TTL).
 4. Click **Save changes**.
 5. Repeat steps 1-4 for the second _AAAA record value_ provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### A Record for subdomain
-An _A record_ is required to configure a subdomain (e.g., `www.example.com`).
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. From the **Advanced DNS** tab, click **Add New Record**.
-1. Select **A Record** for the _Type_. 
+1. Select **A Record** for the _Type_.
 1. Enter `www` in the **Host** field and enter the _A record value_ provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
 1. Select the desired Time to Live (TTL).
 1. Click **Save changes**.
+1. Repeat steps 1-5 for the two AAAA records.
+
 
 ## Namecheap Docs
 
