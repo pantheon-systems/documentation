@@ -99,16 +99,14 @@ class ChangelogTemplate extends React.Component {
           <hr />
 
           <SidebarLayout sidebarMobileLocation="before">
-            <article
-              slot="content"
-              id="pds-toc-source"
-              className="changelog changelog--individual"
-            >
+            <article slot="content" className="changelog changelog--individual">
               <div id="doc" className="doc changelog__content">
-                <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                  <MDXProvider components={shortcodes}>
-                    <MDXRenderer>{node.body}</MDXRenderer>
-                  </MDXProvider>
+                <div id="pds-toc-source">
+                  <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                    <MDXProvider components={shortcodes}>
+                      <MDXRenderer>{node.body}</MDXRenderer>
+                    </MDXProvider>
+                  </div>
                 </div>
               </div>
             </article>

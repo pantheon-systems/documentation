@@ -106,24 +106,26 @@ class ChangelogsTemplate extends React.Component {
           </div>
           <hr />
           <SidebarLayout sidebarMobileLocation="before">
-            <div slot="content" id="pds-toc-source">
+            <div slot="content">
               <div id="doc" className="doc changelog__content">
-                <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                  {changelogs.map((changelog) => (
-                    <React.Fragment key={changelog.id}>
-                      <Link
-                        to={`/${changelog.node.fields.slug}`}
-                        className="individual-changelog-link"
-                      >
-                        <h2 id={changelog.node.fields.slug}>
-                          {changelog.node.frontmatter.title}
-                        </h2>
-                      </Link>
-                      <MDXProvider components={shortcodes}>
-                        <MDXRenderer>{changelog.node.body}</MDXRenderer>
-                      </MDXProvider>
-                    </React.Fragment>
-                  ))}
+                <div id="pds-toc-source">
+                  <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                    {changelogs.map((changelog) => (
+                      <React.Fragment key={changelog.id}>
+                        <Link
+                          to={`/${changelog.node.fields.slug}`}
+                          className="individual-changelog-link"
+                        >
+                          <h2 id={changelog.node.fields.slug}>
+                            {changelog.node.frontmatter.title}
+                          </h2>
+                        </Link>
+                        <MDXProvider components={shortcodes}>
+                          <MDXRenderer>{changelog.node.body}</MDXRenderer>
+                        </MDXProvider>
+                      </React.Fragment>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
