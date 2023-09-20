@@ -1,0 +1,28 @@
+a.glossary__letter-link {
+  margin-block-start: var(--pds-spacing-5xl);
+  display: block;
+}
+
+a.glossary__letter-link:first-of-type {
+  margin-block-start: var(--pds-spacing-3xl);
+}
+
+a.glossary__letter-link,
+a.glossary__term-link {
+  text-decoration: none;
+  color: var(--pds-color-text-default);
+}
+
+a.glossary__letter-link:hover,
+a.glossary__term-link:hover {
+  color: var(--pds-color-link-hover);
+}
+
+.glossary__letter {
+  font-size: 2.488rem;
+  margin-block-end: var(--pds-spacing-s);
+}
+
+.glossary hr {
+  margin-block: 0;
+}

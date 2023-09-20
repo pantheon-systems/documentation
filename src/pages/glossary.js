@@ -8,6 +8,10 @@ import SEO from "../layout/seo"
 import TOC from "../components/toc"
 import showdown from "showdown"
 
+import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+
+import "./styles/glossary.css"
+
 const converter = new showdown.Converter()
 
 const previewFlexPanelItem = {
@@ -136,85 +140,98 @@ class Glossary extends React.Component {
           />
           <main id="doc">
             <div className="pds-container pds-container--wide">
-              <article className="doc article col-md-9 md-70">
-                <HeaderBody
-                  title="Glossary"
-                  description="A collection of terms and definitions through Pantheon's Documentation"
-                />
-                <div style={{ marginTop: "15px", marginBottom: "45px" }}>
-                  This page dynamically displays all defined terms in the
-                  Pantheon Documentation project.
-                  {letters.map((index) => (
-                    <>
-                      {allDefs.filter((def) => {
-                        return JSON.stringify(def.letter).match(index)
-                      }).length > 0 ? (
-                        <Link to={`#${index.toLowerCase()}`}>
-                          <h2
-                            key={index}
-                            className="tocify-item"
-                            id={index.toLowerCase()}
-                          >
-                            {index}
-                          </h2>
-                        </Link>
-                      ) : null}
-                      {allDefs
-                        .filter((def) => {
-                          //console.log("Now rendering ", def.title, def) //For Debugging
-                          return (
-                            def.letter.toUpperCase() === index.toUpperCase()
-                          )
-                        })
-                        .map(({ from, slug, title, definition }) => (
+              <SidebarLayout>
+                <article slot="content" className="doc article glossary">
+                  <HeaderBody
+                    title="Glossary"
+                    description="A collection of terms and definitions through Pantheon's Documentation"
+                  />
+                  <div className="pds-spacing-mar-block-start-m pds-spacing-mar-block-end-4xl">
+                    <p>
+                      This page dynamically displays all defined terms in the
+                      Pantheon Documentation project.
+                    </p>
+
+                    {letters.map((index) => (
+                      <>
+                        {allDefs.filter((def) => {
+                          return JSON.stringify(def.letter).match(index)
+                        }).length > 0 ? (
                           <>
-                            <section key={title.replace(/ +/g, "-")}>
-                              <hr />
-                              <Link
-                                to={`#${title
-                                  .toLowerCase()
-                                  .replace(/ +/g, "-")}`}
+                            <Link
+                              to={`#${index.toLowerCase()}`}
+                              className="glossary__letter-link"
+                            >
+                              <h2
+                                key={index}
+                                className="tocify-item glossary__letter"
+                                id={index.toLowerCase()}
                               >
-                                <h3
-                                  key={`${title.replace(/ +/g, "-")}-header`}
-                                  id={title.toLowerCase().replace(/ +/g, "-")}
-                                  name={title.toLowerCase().replace(/ +/g, "-")}
-                                  className="glossary-term"
-                                >
-                                  {title.charAt(0).toUpperCase() +
-                                    title.slice(1)}
-                                </h3>
-                              </Link>
-                              <div
-                                dangerouslySetInnerHTML={{
-                                  __html: converter
-                                    .makeHtml(definition)
-                                    .replace(
-                                      /<a href="\/(.+?)">/g,
-                                      "<a href=/$1>"
-                                    ),
-                                }}
-                              />
-                              {from.length > 0 ? (
-                                <>
-                                  Excerpt from:{" "}
-                                  <Link
-                                    key={`${title}-reference`}
-                                    to={`/${slug}`}
-                                  >
-                                    {from}
-                                  </Link>
-                                </>
-                              ) : null}
-                              <br />
-                            </section>
+                                {index}
+                              </h2>
+                            </Link>
+                            <hr />
                           </>
-                        ))}
-                    </>
-                  ))}
-                </div>
-              </article>
-              <TOC title="Contents" />
+                        ) : null}
+                        {allDefs
+                          .filter((def) => {
+                            //console.log("Now rendering ", def.title, def) //For Debugging
+                            return (
+                              def.letter.toUpperCase() === index.toUpperCase()
+                            )
+                          })
+                          .map(({ from, slug, title, definition }) => (
+                            <>
+                              <section key={title.replace(/ +/g, "-")}>
+                                <Link
+                                  to={`#${title
+                                    .toLowerCase()
+                                    .replace(/ +/g, "-")}`}
+                                  className="glossary__term-link"
+                                >
+                                  <h3
+                                    key={`${title.replace(/ +/g, "-")}-header`}
+                                    id={title.toLowerCase().replace(/ +/g, "-")}
+                                    name={title
+                                      .toLowerCase()
+                                      .replace(/ +/g, "-")}
+                                    className="glossary__term"
+                                  >
+                                    {title.charAt(0).toUpperCase() +
+                                      title.slice(1)}
+                                  </h3>
+                                </Link>
+                                <div
+                                  dangerouslySetInnerHTML={{
+                                    __html: converter
+                                      .makeHtml(definition)
+                                      .replace(
+                                        /<a href="\/(.+?)">/g,
+                                        "<a href=/$1>"
+                                      ),
+                                  }}
+                                />
+                                {from.length > 0 ? (
+                                  <>
+                                    Excerpt from:{" "}
+                                    <Link
+                                      key={`${title}-reference`}
+                                      to={`/${slug}`}
+                                    >
+                                      {from}
+                                    </Link>
+                                  </>
+                                ) : null}
+                              </section>
+                            </>
+                          ))}
+                      </>
+                    ))}
+                  </div>
+                </article>
+
+                <TOC slot="sidebar" title="Contents" />
+              </SidebarLayout>
             </div>
           </main>
         </Layout>
