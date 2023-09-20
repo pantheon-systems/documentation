@@ -104,7 +104,7 @@ const Footer = ({ data }) => {
               className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
             />
             <p className="footer-form-intro pds-ts-s">
-              Awesome development news, tutorials, and tips. Plus get 3 free
+              Awesome development news, tutorials, and tips. Plus get three free
               downloads, just for signing up. If you don't love it, unsubscribe
               with just a click.
             </p>
