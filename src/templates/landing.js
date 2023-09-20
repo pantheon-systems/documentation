@@ -10,6 +10,8 @@ import GuideItem from "../layout/guide-item"
 import IntegrationGuideItem from "../layout/integration-guide-item"
 import SEO from "../layout/seo"
 
+import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
+
 import {
   Container,
   FlexContainer,
@@ -26,20 +28,22 @@ class LandingTemplate extends Component {
       <Layout>
         <SEO title={topic.title} />
         <main id="docs-main">
-          <FlexContainer
-            alignItems="center"
-            flexDirection="column"
-            mobileFlex="same"
-            spacing="narrow"
-            className="landing-page-heading pds-spacing-pad-block-m"
-          >
-            <h1 className="pds-spacing-mar-block-none">{topic.title}</h1>
-            {topic.subtitle && (
-              <div className="pds-lead-text pds-spacing-mar-block-end-xs">
-                {topic.subtitle}
-              </div>
-            )}
-          </FlexContainer>
+          <Container width="narrow" className="landing-page__header">
+            <FlexContainer
+              alignItems="center"
+              flexDirection="column"
+              mobileFlex="same"
+              spacing="narrow"
+              className="landing-page-heading pds-spacing-pad-block-m"
+            >
+              <h1 className="pds-spacing-mar-block-none">{topic.title}</h1>
+              {topic.subtitle && (
+                <div className="pds-lead-text pds-spacing-mar-block-end-xs">
+                  {topic.subtitle}
+                </div>
+              )}
+            </FlexContainer>
+          </Container>
 
           {topic.video_id && (
             <div className="landing-page__video-background">
@@ -54,9 +58,9 @@ class LandingTemplate extends Component {
 
           {topic.guides &&
             topic.guides.map((guide) => (
-              <React.Fragment>
+              <Container width="narrow" className="landing-page__guides">
                 {guide.title && <h2>{guide.title}</h2>}
-                <div className="flex-panel-group">
+                <div className="landing-page__guide-items">
                   {guide.links &&
                     guide.links.map((link) =>
                       guide.type === "normal" ? (
@@ -73,7 +77,7 @@ class LandingTemplate extends Component {
                       )
                     )}
                 </div>
-              </React.Fragment>
+              </Container>
             ))}
 
           {topic.subtopics &&

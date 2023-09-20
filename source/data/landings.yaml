@@ -3,12 +3,12 @@
   path: "get-started"
   video_id: "qHHWonKfGsQ"
   cta:
-    type: "guide"
+    type: "Guide"
     title: "Getting Started"
     subtitle: "Step by step instructions to guide you from sign up to site launch."
     url: "/guides/getstarted"
   cta_alt:
-    type: "guide"
+    type: "Guide"
     title: "Add or Migrate a Site"
     subtitle: "Create or migrate a site on Pantheon"
     url: "/add-site"
@@ -889,7 +889,7 @@
   video_id: "ksg1XkH1da8"
   cta:
     title: "WordPress Quick Start Guide"
-    type: "guide"
+    type: "Guide"
     subtitle: "Your guide to using WordPress on Pantheon."
     url: "/guides/wordpress-pantheon/"
   cta_alt:
@@ -1020,7 +1020,7 @@
   video_id: "PsYTvhGhmYo"
   cta:
     title: "Drupal 10"
-    type: "guide"
+    type: "Guide"
     subtitle: "Learn about Drupal 10 the Pantheon WebOps Platform."
     url: "/drupal-10"
   cta_alt:

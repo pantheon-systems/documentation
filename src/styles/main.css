@@ -5,12 +5,9 @@
 }
 
 /* Landing pages */
-.landing-page-cta {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+
+.landing-page__header {
   text-align: center;
-  width: 50%;
 }
 
 .landing-page__video-background {
@@ -27,10 +24,30 @@
   box-shadow: var(--pds-elevation-raised);
 }
 
-.landing-page__related h2 {
+.landing-page__guide-items {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--pds-spacing-3xl);
+  padding-block-start: var(--pds-spacing-xl);
+  row-gap: var(--pds-spacing-xl);
   text-align: center;
-  margin-block-start: var(--pds-spacing-4xl);
+}
+
+@media (min-width: 641px) {
+  .landing-page__guide-items {
+    column-gap: var(--pds-spacing-3xl);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-inline: auto;
+    width: 90%;
+  }
+}
+
+.landing-page__related h2 {
   margin-block-end: var(--pds-spacing-3xl);
+  margin-block-start: var(--pds-spacing-4xl);
+  text-align: center;
 }
 
 /* In-document anchor links. */
