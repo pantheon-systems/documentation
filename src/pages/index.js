@@ -9,17 +9,7 @@ import LinksList from "../pds-middleware/LinksList"
 import CallToAction from "../pds-middleware/CallToAction"
 import TopicsGrid from "../pds-middleware/TopicsGrid"
 
-import { CTASlice, TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
-
-const primaryCTA = {
-  text: "Learn Pantheon",
-  url: "https://pantheon.io/learn-pantheon?docs",
-}
-
-const secondaryCTA = {
-  text: "Office Hours",
-  url: "https://pantheon.io/developers/office-hours?docs",
-}
+import { TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
 
 class Index extends React.Component {
   render() {
@@ -76,13 +66,6 @@ class Index extends React.Component {
             />
           </Helmet>
         </main>
-        <CTASlice
-          backgroundColor="secondary"
-          containerWidth="wide"
-          headingText="Got questions? We've got answers!"
-          primaryLink={primaryCTA}
-          secondaryLink={secondaryCTA}
-        />
       </Layout>
     )
   }
