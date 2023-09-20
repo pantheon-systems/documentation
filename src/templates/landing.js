@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
+import CallToAction from "../layout/call-to-action"
 import Layout from "../layout/layout"
 import TopicGroup from "../layout/topic-group"
 import SubTopicGroup from "../layout/subtopic-group"
@@ -38,22 +39,6 @@ class LandingTemplate extends Component {
                 {topic.subtitle}
               </div>
             )}
-
-            <div className="pds-button-group">
-              {topic.cta && (
-                <Link to={topic.cta.url} className="pds-button">
-                  {`${topic.cta.title} ${topic.cta.type}`}
-                </Link>
-              )}
-              {topic.cta_alt && (
-                <Link
-                  to={topic.cta.url}
-                  className="pds-button pds-button--secondary"
-                >
-                  {`${topic.cta_alt.title} ${topic.cta_alt.type}`}
-                </Link>
-              )}
-            </div>
           </FlexContainer>
 
           {topic.video_id && (
@@ -118,6 +103,37 @@ class LandingTemplate extends Component {
                 />
               ))}
           </Container>
+
+          {(topic.cta || topic.cta_alt) && (
+            <>
+              <hr />
+              <Container
+                width="narrow"
+                className="landing-page__related pds-spacing-pad-block-end-5xl"
+              >
+                <h2>Related Resources</h2>
+                <FlexContainer spacing="wide">
+                  {topic.cta && (
+                    <CallToAction
+                      title={topic.cta.title}
+                      type={topic.cta.type}
+                      subTitle={topic.cta.subtitle}
+                      url={topic.cta.url}
+                    />
+                  )}
+                  {topic.cta_alt && (
+                    <CallToAction
+                      title={topic.cta_alt.title}
+                      type={topic.cta_alt.type}
+                      subTitle={topic.cta_alt.subtitle}
+                      url={topic.cta_alt.url}
+                      dark
+                    />
+                  )}
+                </FlexContainer>
+              </Container>
+            </>
+          )}
         </main>
       </Layout>
     )
