@@ -23,7 +23,7 @@ function CallToAction(props) {
       </div>
       <div className="hero-cta-text" slot="second-item">
         <h1>{title}</h1>
-        <p className="pds-lead-text">{subTitle}</p>
+        <p className="pds-lead-text pds-lead-text--small">{subTitle}</p>
         <Link
           to={url}
           className="pds-button pds-button--large pds-spacing-mar-block-start-m"

@@ -33,7 +33,7 @@ class Index extends React.Component {
           description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
           image={"/images/assets/default-thumb-doc.png"}
         />
-        <main className="pds-container pds-container--wide" id="docs-main">
+        <main className="pds-container" id="docs-main">
           <CallToAction
             title={homeYaml.title}
             subTitle={homeYaml.call_to_action.subtitle}
@@ -42,7 +42,7 @@ class Index extends React.Component {
             imageSrc={homeYaml.call_to_action.imageSrc}
           />
 
-          <h2 className="pds-spacing-mar-block-end-2xl">
+          <h2 className="pds-spacing-mar-block-start-6xl pds-spacing-mar-block-end-2xl">
             {homeYaml.topics.title}
           </h2>
           <TopicsGrid topics={homeYaml.topics.tiles} />
