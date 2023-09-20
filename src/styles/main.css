@@ -4,6 +4,20 @@
   padding-block-start: var(--pds-spacing-xl);
 }
 
+/* Landing pages */
+.landing-page__video-background {
+  padding-block: var(--pds-spacing-2xl);
+  margin-block-end: var(--pds-spacing-6xl);
+  background: linear-gradient(
+    to top,
+    var(--pds-color-button-secondary-background-hover) 70%,
+    white 0%
+  );
+}
+.video-container .gatsby-resp-iframe-wrapper {
+  box-shadow: var(--pds-elevation-raised);
+}
+
 /* In-document anchor links. */
 a.docs-header-anchor {
   margin-inline-start: var(--pds-spacing-xs);
