@@ -99,8 +99,6 @@
               icon: "fa fa-video-camera"
             - text: "WordPress and Drupal Core Updates"
               url: "/core-updates"
-        - title: ""
-          links:
             - text: "Your Site Code on Pantheon"
               url: "/code"
             - text: "Multidev"
@@ -449,8 +447,6 @@
               url: "/nested-docroot"
             - text: "Upgrade PHP Versions"
               url: "/guides/php/php-versions"
-        - title: ""
-          links:
             - text: "Managing Drush Versions on Pantheon"
               url: "/guides/drush/drush-versions"
             - text: "Pantheon YAML Configuration Files"
@@ -466,8 +462,6 @@
               url: "/supported-drupal"
             - text: "WordPress"
               url: "/supported-wp"
-        - title: ""
-          links:
             - text: "PHP"
               url: "/guides/php"
             - text: "Terminus"
@@ -570,8 +564,6 @@
               url: "/nested-docroot"
             - text: "Upgrade PHP Versions"
               url: "/guides/php/php-versions"
-        - title: ""
-          links:
             - text: "Managing Drush Versions on Pantheon"
               url: "/guides/drush/drush-versions"
             - text: "Pantheon YAML Configuration Files"
@@ -587,8 +579,6 @@
               url: "/guides/composer"
             - text: "Convert a Standard Drupal Site to a Composer-Managed Site"
               url: "/guides/composer-convert"
-        - title: ""
-          links:
             - text: "Integrated Composer"
               url: "/guides/integrated-composer"
     - title: "Command Line Interface"

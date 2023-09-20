@@ -71,8 +71,8 @@ class GuideTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -83,8 +83,8 @@ class GuideTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -96,7 +96,7 @@ class GuideTemplate extends React.Component {
     const node = this.props.data.mdx
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
-    const items = this.props.data.allMdx.edges.map(item => {
+    const items = this.props.data.allMdx.edges.map((item) => {
       return {
         id: item.node.id,
         link: item.node.fields.slug,
@@ -115,45 +115,43 @@ class GuideTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-          <div className="container">
-            <div className="row col-md-12 guide-nav manual-guide-toc-well">
-              <Navbar
-                title={node.frontmatter.title}
-                activePage={node.fields.slug}
-                items={items}
+        <div className="container">
+          <div className="row col-md-12 guide-nav manual-guide-toc-well">
+            <Navbar
+              title={node.frontmatter.title}
+              activePage={node.fields.slug}
+              items={items}
+            />
+            <main id="docs-main" className="col-md-9 guide-doc-body">
+              <div className="row guide-content-well">
+                <article
+                  className={`col-xs-${contentCols} col-md-${contentCols} doc`}
+                  id="doc"
+                >
+                  <HeaderBody
+                    title={node.frontmatter.title}
+                    subtitle={node.frontmatter.subtitle}
+                    description={node.frontmatter.description}
+                    slug={node.fields.slug}
+                    contributors={node.frontmatter.contributors}
+                    featured={node.frontmatter.featuredcontributor}
+                    editPath={node.fields.editPath}
+                    reviewDate={node.frontmatter.reviewed}
+                    isoDate={isoDate.frontmatter.reviewed}
+                  />
+                  <MDXProvider components={shortcodes}>
+                    <MDXRenderer>{node.body}</MDXRenderer>
+                  </MDXProvider>
+                </article>
+                {node.frontmatter.showtoc && <TOC title="Contents" />}
+              </div>
+              <NavButtons
+                prev={this.props.pageContext.previous}
+                next={this.props.pageContext.next}
               />
-              <main id="docs-main" className="col-md-9 guide-doc-body">
-                <div className="row guide-content-well">
-                  <article
-                    className={`col-xs-${contentCols} col-md-${contentCols} doc`}
-                    id="doc"
-                  >
-                    <HeaderBody
-                      title={node.frontmatter.title}
-                      subtitle={node.frontmatter.subtitle}
-                      description={node.frontmatter.description}
-                      slug={node.fields.slug}
-                      contributors={node.frontmatter.contributors}
-                      featured={node.frontmatter.featuredcontributor}
-                      editPath={node.fields.editPath}
-                      reviewDate={node.frontmatter.reviewed}
-                      isoDate={isoDate.frontmatter.reviewed}
-                    />
-                    <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{node.body}</MDXRenderer>
-                    </MDXProvider>
-                  </article>
-                  {node.frontmatter.showtoc && (
-                    <TOC title="Contents" />
-                  )}
-                </div>
-               <NavButtons
-                  prev={this.props.pageContext.previous}
-                  next={this.props.pageContext.next}
-                />
-              </main>
-            </div>
+            </main>
           </div>
+        </div>
       </Layout>
     )
   }
@@ -201,7 +199,7 @@ export const pageQuery = graphql`
       filter: {
         fileAbsolutePath: { ne: null }
         fields: { guide_directory: { eq: $guide_directory } }
-        frontmatter: { draft: {ne: true}}
+        frontmatter: { draft: { ne: true } }
       }
       sort: { fields: [fileAbsolutePath], order: ASC }
     ) {

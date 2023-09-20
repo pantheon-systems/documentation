@@ -18,12 +18,25 @@ import {
   LinksCard,
 } from "@pantheon-systems/pds-toolkit-react"
 
+const twoColumnClasses =
+  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6"
+
+const threeColumnClasses =
+  "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4"
+
 class LandingTemplate extends Component {
   render() {
     const {
       data: { landingsYaml },
     } = this.props
     const topic = landingsYaml
+
+    const groupLength = topic.topics_groups.length
+    const topicGroupsColumns =
+      groupLength === 2 || groupLength === 4 ? "two" : "three"
+
+    console.log(topicGroupsColumns)
+
     return !topic ? null : (
       <Layout>
         <SEO title={topic.title} />
@@ -44,7 +57,7 @@ class LandingTemplate extends Component {
               )}
             </FlexContainer>
           </Container>
-
+          {/* Video */}
           {topic.video_id && (
             <div className="landing-page__video-background">
               <Container
@@ -56,9 +69,13 @@ class LandingTemplate extends Component {
             </div>
           )}
 
+          {/* Topic guides */}
           {topic.guides &&
             topic.guides.map((guide) => (
-              <Container width="narrow" className="landing-page__guides">
+              <Container
+                width="narrow"
+                className="landing-page__guides pds-spacing-mar-block-end-2xl"
+              >
                 {guide.title && <h2>{guide.title}</h2>}
                 <div className="landing-page__guide-items">
                   {guide.links &&
@@ -80,63 +97,75 @@ class LandingTemplate extends Component {
               </Container>
             ))}
 
-          {topic.subtopics &&
-            topic.subtopics.map((subtopic) => (
-              <SubTopicGroup
-                key={subtopic.title}
-                title={subtopic.title}
-                subTitle={subtopic.subtitle}
-                topics={subtopic.subtopic_lists}
-              />
-            ))}
-
-          <Container
-            width="narrow"
-            className="pds-grid pds-spacing-mar-block-start-2xl pds-grid pds-spacing-mar-block-end-6xl"
-          >
-            {topic.topics_groups &&
-              topic.topics_groups.map((group, key) => (
-                <LinksCard
-                  className="pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4"
-                  key={group.title}
-                  headingLevel="h2"
-                  headingText={group.title}
-                  linkItems={group.links.map((link, index) => (
-                    <Link to={link.url}>{link.text}</Link>
-                  ))}
-                />
-              ))}
-          </Container>
-
+          {/* Subtopics */}
+          {topic.subtopics && (
+            <FlexContainer
+              flexDirection="column"
+              mobileFlex="same"
+              spacing="wide"
+              className="pds-spacing-pad-block-5xl"
+            >
+              {topic.subtopics &&
+                topic.subtopics.map((subtopic) => (
+                  <Container width="narrow" className="landing-page__subtopics">
+                    <SubTopicGroup
+                      key={subtopic.title}
+                      title={subtopic.title}
+                      subTitle={subtopic.subtitle}
+                      topics={subtopic.subtopic_lists}
+                    />
+                  </Container>
+                ))}
+            </FlexContainer>
+          )}
+          {/* Topic groups */}
+          <div className="pds-background-default-secondary pds-spacing-pad-block-5xl">
+            <Container width="narrow" className="landing-page__topics pds-grid">
+              {topic.topics_groups &&
+                topic.topics_groups.map((group, key) => (
+                  <LinksCard
+                    className={
+                      topicGroupsColumns === "two"
+                        ? twoColumnClasses
+                        : threeColumnClasses
+                    }
+                    key={group.title}
+                    headingLevel="h2"
+                    headingText={group.title}
+                    linkItems={group.links.map((link, index) => (
+                      <Link to={link.url}>{link.text}</Link>
+                    ))}
+                  />
+                ))}
+            </Container>
+          </div>
+          {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
-            <>
-              <hr />
-              <Container
-                width="narrow"
-                className="landing-page__related pds-spacing-pad-block-end-5xl"
-              >
-                <h2>Related Resources</h2>
-                <FlexContainer spacing="wide">
-                  {topic.cta && (
-                    <CallToAction
-                      title={topic.cta.title}
-                      type={topic.cta.type}
-                      subTitle={topic.cta.subtitle}
-                      url={topic.cta.url}
-                    />
-                  )}
-                  {topic.cta_alt && (
-                    <CallToAction
-                      title={topic.cta_alt.title}
-                      type={topic.cta_alt.type}
-                      subTitle={topic.cta_alt.subtitle}
-                      url={topic.cta_alt.url}
-                      dark
-                    />
-                  )}
-                </FlexContainer>
-              </Container>
-            </>
+            <Container
+              width="narrow"
+              className="landing-page__related pds-spacing-pad-block-end-5xl"
+            >
+              <h2>Related Resources</h2>
+              <FlexContainer spacing="wide">
+                {topic.cta && (
+                  <CallToAction
+                    title={topic.cta.title}
+                    type={topic.cta.type}
+                    subTitle={topic.cta.subtitle}
+                    url={topic.cta.url}
+                  />
+                )}
+                {topic.cta_alt && (
+                  <CallToAction
+                    title={topic.cta_alt.title}
+                    type={topic.cta_alt.type}
+                    subTitle={topic.cta_alt.subtitle}
+                    url={topic.cta_alt.url}
+                    dark
+                  />
+                )}
+              </FlexContainer>
+            </Container>
           )}
         </main>
       </Layout>

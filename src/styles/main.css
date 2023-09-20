@@ -16,12 +16,20 @@
     var(--pds-color-button-secondary-background-hover) 70%,
     white 0%
   );
-  margin-block-end: var(--pds-spacing-6xl);
   padding-block: var(--pds-spacing-2xl);
 }
 
 .video-container .gatsby-resp-iframe-wrapper {
   box-shadow: var(--pds-elevation-raised);
+}
+
+.landing-page__subtopics {
+  width: 100%;
+}
+
+.landing-page__guides h2 {
+  padding-block-start: var(--pds-spacing-xl);
+  text-align: center;
 }
 
 .landing-page__guide-items {

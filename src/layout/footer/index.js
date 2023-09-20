@@ -69,6 +69,7 @@ const Footer = ({ data }) => {
         headingText="Got questions? We've got answers!"
         primaryLink={primaryCTA}
         secondaryLink={secondaryCTA}
+        className="pre-footer-slice"
       />
       <SiteFooter containerWidth="wide">
         <div className="pds-footer__links-area pds-grid pds-grid--wide">
