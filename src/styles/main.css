@@ -80,7 +80,6 @@ a.individual-changelog-link:hover {
 }
 
 /* Main content headings */
-#doc h2,
 #doc h3,
 #doc h4 {
   margin-block-start: var(--pds-spacing-3xl);
@@ -89,6 +88,10 @@ a.individual-changelog-link:hover {
 #doc h2 + h3,
 #doc h3 + h4 {
   margin-block-start: var(--pds-spacing-xl);
+}
+
+#doc p + h2 {
+  margin-block-start: var(--pds-spacing-5xl);
 }
 
 /* Temporary hacks for marketo forms */

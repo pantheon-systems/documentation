@@ -89,28 +89,26 @@ class ChangelogsTemplate extends React.Component {
           image={"assets/images/default-thumb-doc.png"}
         />
         <main className="pds-container pds-container--wide" id="docs-main">
-          <SidebarLayout>
+          <h1>Pantheon Changelog</h1>
+          <div className="pds-spacing-mar-block-end-3xl">
+            <p className="pds-lead-text pds-lead-text--small">
+              Sign up for the Pantheon Changelog Newsletter to receive a monthly
+              email on what's new and improved across the platform.
+            </p>
+            <a
+              className="pds-button"
+              href="https://learn.pantheon.io/Changelog-Opt-In.html"
+              target="_blank"
+            >
+              Subscribe Now
+              <Icon iconName="externalLink" />
+            </a>
+          </div>
+          <hr />
+          <SidebarLayout sidebarMobileLocation="before">
             <div slot="content" id="pds-toc-source">
               <div id="doc" className="doc changelog__content">
-                <h1>Pantheon Changelog</h1>
-                <div className="pds-spacing-mar-block-end-3xl">
-                  <p className="pds-lead-text pds-lead-text--small">
-                    Sign up for the Pantheon Changelog Newsletter to receive a
-                    monthly email on what's new and improved across the
-                    platform.
-                  </p>
-                  <a
-                    className="pds-button"
-                    href="https://learn.pantheon.io/Changelog-Opt-In.html"
-                    target="_blank"
-                  >
-                    Subscribe Now
-                    <Icon iconName="externalLink" />
-                  </a>
-                </div>
-                <hr className="pds-spacing-mar-block-end-3xl" />
-
-                <div className="pds-spacing-mar-block-start-l pds-spacing-mar-block-end-4xl">
+                <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
                   {changelogs.map((changelog) => (
                     <React.Fragment key={changelog.id}>
                       <Link
