@@ -129,6 +129,7 @@ const Header = ({ page }) => (
     <Container
       slot="items-below"
       id="search-bar"
+      width="wide"
       className="pds-spacing-mar-block-start-2xl pds-spacing-mar-block-end-m"
     >
       <form
