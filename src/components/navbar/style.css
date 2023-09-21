@@ -1,17 +1,22 @@
 .manual-guide-toc {
-  margin-block: var(--pds-spacing-m);
+  padding-block-start: var(--pds-spacing-xl);
   padding-inline-end: var(--pds-spacing-xl);
 }
 
 h2.manual-guide-toc__heading {
   font-size: var(--pds-typography-size-xl);
-  margin-block-end: var(--pds-spacing-m);
+  line-height: var(--pds-typography-line-height-m);
+  margin-block-end: var(--pds-spacing-s);
 }
 
 .manual-guide-toc__menu {
-  list-style-type: none;
-  padding: 0;
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+  padding: 0;
   row-gap: var(--pds-spacing-3xs);
+}
+
+.navbar-toggle {
+  display: none;
 }

@@ -3,5 +3,5 @@
 
 .guide-sidebar {
   border-right: 1px solid var(--pds-color-border-default);
-  height: calc(100% - var(--pds-spacing-m));
+  height: 100%;
 }
