@@ -5,6 +5,7 @@ cms: [drupal7]
 product: []
 integration: []
 reviewed: "2022-11-07"
+draft: true
 ---
 
 1. Initialize composer to create a `composer.json` file with the Drupal 7 package repository:

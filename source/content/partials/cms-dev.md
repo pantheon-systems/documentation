@@ -1,4 +1,14 @@
-1. Click **Site Admin**. 
+---
+contenttype: [partial]
+categories: [--]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+draft: true
+reviewed: ""
+---
+1. Click **Site Admin**.
    ![The Site Admin button](../../images/create-site-site-admin.png)
 
 1. You will be presented with either a Drupal or WordPress setup screen.

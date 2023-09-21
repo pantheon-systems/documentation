@@ -763,6 +763,8 @@ Create reusable content in a separate Markdown file that can be included within 
 
 Place the Markdown file within the `source/partials/` directory, in its own directory if it is feature-specific.
 
+Add `draft: true` to the frontmatter of the partial file, otherwise it will be rendered and published as it's own page which we do not want.
+
 <Alert title="Warning" type="danger" >
 
 Partial file names must not duplicate the names of files in the source/content directory.
@@ -1139,4 +1141,3 @@ Here are code snippets you can use to direct users to the correct location:
 [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 
 ```
-

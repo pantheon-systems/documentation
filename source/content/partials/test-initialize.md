@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [--]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+draft: true
+reviewed: ""
+---
 To create your Test environment:
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
