@@ -51,93 +51,73 @@ const Footer = ({ data }) => {
     (file) => file.node.publicURL.indexOf("CC-BY-SA_icon") > -1
   )
 
-  const primaryCTA = {
-    text: "Learn Pantheon",
-    url: "https://pantheon.io/learn-pantheon?docs",
-  }
-
-  const secondaryCTA = {
-    text: "Office Hours",
-    url: "https://pantheon.io/developers/office-hours?docs",
-  }
-
   return (
-    <>
-      <CTASlice
-        backgroundColor="secondary"
-        containerWidth="wide"
-        headingText="Got questions? We've got answers!"
-        primaryLink={primaryCTA}
-        secondaryLink={secondaryCTA}
-        className="pre-footer-slice"
-      />
-      <SiteFooter containerWidth="wide">
-        <div className="pds-footer__links-area pds-grid pds-grid--wide">
-          <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
-            <FlexContainer
-              spacing="standard"
-              justifyContent="between"
-              mobileFlex="reverse"
-            >
-              <FooterLinks
-                headingText="Topics"
-                headingLevel="h2"
-                linkItems={topicLinks}
-              />
-              <FooterLinks
-                headingText="Help"
-                headingLevel="h2"
-                linkItems={helpLinks}
-                className="pds-spacing-mar-block-start-xl@sm"
-              />
-              <FooterLinks
-                headingText="Community"
-                headingLevel="h2"
-                linkItems={communityLinks}
-                className="pds-spacing-mar-block-start-xl@sm"
-              />
-            </FlexContainer>
-          </div>
-          <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-4">
-            <FooterHeading
-              headingText="Connect"
+    <SiteFooter containerWidth="wide">
+      <div className="pds-footer__links-area pds-grid pds-grid--wide">
+        <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
+          <FlexContainer
+            spacing="standard"
+            justifyContent="between"
+            mobileFlex="reverse"
+          >
+            <FooterLinks
+              headingText="Topics"
               headingLevel="h2"
-              className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
+              linkItems={topicLinks}
             />
-            <p className="footer-form-intro pds-ts-s">
-              Awesome development news, tutorials, and tips. Plus get three free
-              downloads, just for signing up. If you don't love it, unsubscribe
-              with just a click.
-            </p>
-            <div className="pds-spacing-mar-block-xl">
-              <MarketoForm
-                baseUrl="https://app-ab05.marketo.com"
-                munchkinId="316-GSV-089"
-                formId={2014}
-                formName="mktoForm_2014"
-              />
-            </div>
-            <SocialLinks className="pds-spacing-mar-block-start-xl" />
-          </div>
+            <FooterLinks
+              headingText="Help"
+              headingLevel="h2"
+              linkItems={helpLinks}
+              className="pds-spacing-mar-block-start-xl@sm"
+            />
+            <FooterLinks
+              headingText="Community"
+              headingLevel="h2"
+              linkItems={communityLinks}
+              className="pds-spacing-mar-block-start-xl@sm"
+            />
+          </FlexContainer>
         </div>
-
-        <div className="cc-license pds-spacing-mar-block-start-5xl">
-          <div className="cc-license__logo">
-            {CCLogo && (
-              <img
-                src={CCLogo.node.publicURL}
-                alt="Creative Commons Attribution-ShareAlike Logo"
-              />
-            )}
-          </div>
-          <p className="cc-license__text pds-ts-s">
-            Our Documentation is licensed under a Creative Commons
-            Attribution-ShareAlike 4.0 International License. Code snippets are
-            additionally licensed under The MIT License.
+        <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-4">
+          <FooterHeading
+            headingText="Connect"
+            headingLevel="h2"
+            className="pds-spacing-pad-block-start-xl pds-spacing-pad-block-start-none@lg"
+          />
+          <p className="footer-form-intro pds-ts-s">
+            Awesome development news, tutorials, and tips. Plus get three free
+            downloads, just for signing up. If you don't love it, unsubscribe
+            with just a click.
           </p>
+          <div className="pds-spacing-mar-block-xl">
+            <MarketoForm
+              baseUrl="https://app-ab05.marketo.com"
+              munchkinId="316-GSV-089"
+              formId={2014}
+              formName="mktoForm_2014"
+            />
+          </div>
+          <SocialLinks className="pds-spacing-mar-block-start-xl" />
         </div>
-      </SiteFooter>
-    </>
+      </div>
+
+      <div className="cc-license pds-spacing-mar-block-start-5xl">
+        <div className="cc-license__logo">
+          {CCLogo && (
+            <img
+              src={CCLogo.node.publicURL}
+              alt="Creative Commons Attribution-ShareAlike Logo"
+            />
+          )}
+        </div>
+        <p className="cc-license__text pds-ts-s">
+          Our Documentation is licensed under a Creative Commons
+          Attribution-ShareAlike 4.0 International License. Code snippets are
+          additionally licensed under The MIT License.
+        </p>
+      </div>
+    </SiteFooter>
   )
 }
 
