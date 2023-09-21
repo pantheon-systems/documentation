@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../layout/layout"
+import GuideLayout from "../layout/GuideLayout"
 import HeaderBody from "../components/headerBody"
 import Callout from "../components/callout"
 import Alert from "../components/alert"
@@ -114,8 +114,9 @@ class GuideTemplate extends React.Component {
     const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
 
     return (
-      <Layout>
+      <GuideLayout>
         <SEO
+          slot="seo"
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           keywords={node.frontmatter.tags}
@@ -124,48 +125,39 @@ class GuideTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <div className="pds-container pds-container--wide">
-          <SidebarLayout sidebarLocation="left">
-            <Navbar
-              slot="sidebar"
-              title={node.frontmatter.title}
-              activePage={node.fields.slug}
-              items={items}
-            />
-            <main slot="content" id="docs-main">
-              <ContentLayoutType>
-                <div slot="content" className="guide-doc-body">
-                  <article
-                    className="doc pds-spacing-pad-block-end-2xl"
-                    id="doc"
-                  >
-                    <HeaderBody
-                      title={node.frontmatter.title}
-                      subtitle={node.frontmatter.subtitle}
-                      description={node.frontmatter.description}
-                      slug={node.fields.slug}
-                      contributors={node.frontmatter.contributors}
-                      featured={node.frontmatter.featuredcontributor}
-                      editPath={node.fields.editPath}
-                      reviewDate={node.frontmatter.reviewed}
-                      isoDate={isoDate.frontmatter.reviewed}
-                    />
-                    <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{node.body}</MDXRenderer>
-                    </MDXProvider>
-                  </article>
-                </div>
-                <NavButtons
-                  prev={this.props.pageContext.previous}
-                  next={this.props.pageContext.next}
-                />
+        <Navbar
+          slot="guide-menu"
+          title={node.frontmatter.title}
+          activePage={node.fields.slug}
+          items={items}
+        />
+        <ContentLayoutType slot="guide-content">
+          <div slot="content" className="guide-doc-body">
+            <article className="doc pds-spacing-pad-block-end-2xl" id="doc">
+              <HeaderBody
+                title={node.frontmatter.title}
+                subtitle={node.frontmatter.subtitle}
+                description={node.frontmatter.description}
+                slug={node.fields.slug}
+                contributors={node.frontmatter.contributors}
+                featured={node.frontmatter.featuredcontributor}
+                editPath={node.fields.editPath}
+                reviewDate={node.frontmatter.reviewed}
+                isoDate={isoDate.frontmatter.reviewed}
+              />
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{node.body}</MDXRenderer>
+              </MDXProvider>
+            </article>
+          </div>
+          <NavButtons
+            prev={this.props.pageContext.previous}
+            next={this.props.pageContext.next}
+          />
 
-                {hasTOC && <TOC slot="sidebar" title="Contents" />}
-              </ContentLayoutType>
-            </main>
-          </SidebarLayout>
-        </div>
-      </Layout>
+          {hasTOC && <TOC slot="sidebar" title="Contents" />}
+        </ContentLayoutType>
+      </GuideLayout>
     )
   }
 }

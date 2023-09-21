@@ -1,7 +1,7 @@
 .header-actions {
   display: flex;
   flex-wrap: wrap;
-  row-gap: var(--pds-spacing-l);
+  gap: var(--pds-spacing-l);
   margin-block-end: var(--pds-spacing-xs);
   margin-block-start: var(--pds-spacing-2xl);
 }

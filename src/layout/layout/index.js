@@ -5,6 +5,7 @@ import "./style.css"
 
 const Layout = (props) => {
   const pageType = props.type ? props.type : "default"
+
   return (
     <div className="pantheon-docs">
       <Header page={pageType} />
