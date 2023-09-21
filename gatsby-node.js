@@ -128,7 +128,8 @@ exports.createPages = ({ graphql, actions }) => {
       allDocs: allMdx(
         filter: {
           fields: {
-            slug: {regex: "/^((?!guides|changelog|partials).)*$/"}
+            slug: {regex: "/^((?!guides|changelog|partials).)*$/"},
+            contenttype: {ne: partial}
           },
           fileAbsolutePath: { regex: "/content/"}
           frontmatter: { draft: {ne: true}}
