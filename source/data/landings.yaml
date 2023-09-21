@@ -132,14 +132,11 @@
         - title: ''
           links:
             - text: 'Local Development'
-              url: '/local'
-              icon: 'fa fa-video-camera'
+              url: '/guides/local-development'
             - text: 'Install and Configure Lando'
               url: '/guides/local-development/lando-wordpress'
             - text: 'Configuring JetBrains PhpStorm IDE with Drupal on Pantheon'
               url: '/guides/local-development/drupal-phpstorm'
-            - text: 'Local Development'
-              url: '/guides/local-development'
         - title: ''
           links:
             - text: 'Install Cygwin on Windows'
