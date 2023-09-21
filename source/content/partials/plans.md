@@ -1,3 +1,13 @@
+---
+contenttype: [partial]
+categories: [--]
+cms: [--]
+product: [--]
+integration: [--]
+tags: [--]
+draft: true
+reviewed: ""
+---
 The following tables provide both the list and preferred pricing for Pantheon Plans, as well as the savings you can achieve using Annual pricing.
 
 <TabList>
@@ -13,16 +23,7 @@ The List Price is the set price for new sites created after November 15, 2018 th
 | **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
 </Tab>
----
-contenttype: [partial]
-categories: [--]
-cms: [--]
-product: [--]
-integration: [--]
-tags: [--]
-draft: true
-reviewed: ""
----
+
 <Tab title="Preferred Price" id="tab-2-id">
 
 [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](https://pantheon.io/partner-program).
