@@ -138,8 +138,6 @@
               url: "/guides/local-development/drupal-phpstorm"
             - text: "Local Development"
               url: "/guides/local-development"
-        - title: ""
-          links:
             - text: "Install Cygwin on Windows"
               url: "/guides/local-development/cygwin-windows"
             - text: "Modify the Local Hosts File"
