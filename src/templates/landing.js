@@ -31,11 +31,10 @@ class LandingTemplate extends Component {
     } = this.props
     const topic = landingsYaml
 
-    const groupLength = topic.topics_groups.length
+    // Check for amount of topic groups if they exist.
+    const groupLength = topic.topics_groups ? topic.topics_groups.length : null
     const topicGroupsColumns =
       groupLength === 2 || groupLength === 4 ? "two" : "three"
-
-    console.log(topicGroupsColumns)
 
     return !topic ? null : (
       <Layout>
