@@ -1,12 +1,20 @@
 import React, { Components } from "react"
 import Header from "../header"
 import Footer from "../footer"
+
+import SearchBar from "../SearchBar"
+
+import { Container } from "@pantheon-systems/pds-toolkit-react"
+
 import "./style.css"
 
 const Layout = ({ children, pageType = "default" }) => {
   return (
     <div className="pantheon-docs">
       <Header page={pageType} />
+      <Container>
+        <SearchBar page={pageType} />
+      </Container>
       {children}
       <Footer />
     </div>

@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import AddSearch from "../../components/addSearch"
 import {
   Container,
   InputText,
@@ -126,31 +125,6 @@ const Header = ({ page }) => (
         Get free account
       </a>
     </div>
-    <Container
-      slot="items-below"
-      id="search-bar"
-      width="wide"
-      className="pds-spacing-mar-block-start-2xl pds-spacing-mar-block-end-m"
-    >
-      <form
-        id="searchform"
-        action="/search"
-        role="search"
-        acceptCharset="UTF-8"
-        encType="application/x-www-form-urlencoded"
-        title="Search Pantheon Documentation"
-      >
-        <InputText
-          id="search-field"
-          aria-label="Search Pantheon Documentation"
-          placeholder="Search Pantheon Documentation"
-          type="search"
-          data-addsearch-id="search_widget"
-          label=" "
-        />
-        {page == "default" ? <AddSearch /> : null}
-      </form>
-    </Container>
   </Navbar>
 )
 

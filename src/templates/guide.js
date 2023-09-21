@@ -36,6 +36,7 @@ import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 import LocaldevChangelog from "../components/localdevChangelog"
+import SearchBar from "../layout/SearchBar"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -96,7 +97,6 @@ class GuideTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
-    const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const items = this.props.data.allMdx.edges.map((item) => {
       return {
@@ -132,6 +132,7 @@ class GuideTemplate extends React.Component {
           items={items}
         />
         <ContentLayoutType slot="guide-content">
+          <SearchBar slot="content" page="default" />
           <div slot="content" className="guide-doc-body">
             <article className="doc pds-spacing-pad-block-end-2xl" id="doc">
               <HeaderBody
