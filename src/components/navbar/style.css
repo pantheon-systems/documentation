@@ -1,5 +1,24 @@
+.manual-guide-toc {
+  height: calc(100% - var(--pds-spacing-m));
+  border-right: 1px solid var(--pds-color-border-default);
+  margin-block: var(--pds-spacing-m);
+  padding-inline-end: var(--pds-spacing-xl);
+}
 
-.manual-guide-toc h3 {
+h2.manual-guide-toc__heading {
+  font-size: var(--pds-typography-size-xl);
+  margin-block-end: var(--pds-spacing-m);
+}
+
+.manual-guide-toc__menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--pds-spacing-3xs);
+}
+
+/* .manual-guide-toc h3 {
   font-size: 24px;
   margin-top: 40px;
   padding: 0px 0px 10px 40px;
@@ -9,7 +28,7 @@
   .manual-guide-toc h3 {
     margin-top: 20px;
   }
-}
+}a
 .manual-guide-toc a {
   color: #45454d;
   font-weight: normal;
@@ -109,9 +128,8 @@ ul.manual-guide-toc > li > a:hover {
     top: 0;
     display: flex;
     flex-wrap: wrap;
-    
   }
- 
+
   .manual-guide-toc .active-trail {
     margin-right: 0px;
     border-top: 1px solid #ccc;
@@ -124,4 +142,4 @@ ul.manual-guide-toc > li > a:hover {
   .manual-guide-toc .active-trail {
     background-color: #f5f5f5 !important;
   }
-}
+} */

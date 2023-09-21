@@ -6,6 +6,9 @@ import Twitter from "../twitter"
 import Slack from "../slack"
 import Discourse from "../discourse"
 import ContributorGuest from "../contributorGuest"
+
+import { Badge } from "@pantheon-systems/pds-toolkit-react"
+
 import "./style.css"
 
 const HeaderBody = ({
@@ -24,13 +27,19 @@ const HeaderBody = ({
   const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null
   return (
     <>
-      <header className="buttons">
+      <header>
+        <Badge
+          hasStatusType={false}
+          label={lastReviewed}
+          className="pds-spacing-mar-block-end-m"
+        />
+        {/* <p className="review-date">
+          <time dateTime={isoDate} pubdate="pubdate">
+            {lastReviewed}
+          </time>
+        </p> */}
         {!subtitle && (
-          <h1
-            style={{ marginBottom: "10px", marginTop: "0px" }}
-            className="pio-docs-title"
-            id="docs-main"
-          >
+          <h1 className="docs-title" id="docs-main">
             {title}
           </h1>
         )}
@@ -40,20 +49,23 @@ const HeaderBody = ({
         <p className="pds-lead-text pds-lead-text--small pds-spacing-mar-block-end-xl">
           {description}
         </p>
-        <p className="review-date">
-          <time dateTime={isoDate} pubdate="pubdate">
-            {lastReviewed}
-          </time>
-        </p>
+
         {!featured && <Contributors contributors={contributors} />}
-        <div className="pds-button-group">
-          <Discourse pageTitle={title} path={slug} cms={cms} />
-          <Slack />
+        <div className="header-actions">
+          <div className="header-actions__discuss">
+            <Discourse pageTitle={title} path={slug} cms={cms} />
+            <Slack />
+          </div>
+          <Github
+            className="header-actions__github"
+            pageTitle={title}
+            path={slug}
+            editPath={editPath}
+          />
         </div>
 
         {featured && <ContributorGuest contributor={contributor} />}
         <br />
-        <Github pageTitle={title} path={slug} editPath={editPath} />
       </header>
     </>
   )

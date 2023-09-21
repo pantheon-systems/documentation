@@ -1,20 +1,13 @@
-/* .pio-docs-title {
-  color: #000000;
-  display: block;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--pds-spacing-l);
+  margin-block-end: var(--pds-spacing-xs);
+  margin-block-start: var(--pds-spacing-2xl);
 }
-.article-subhead {
-  font-family: "Open Sans", sans-serif;
-  font-size: 25px;
-  color: #747676;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  line-height: 1.5em;
+
+.header-actions__discuss,
+.header-actions__github {
+  display: flex;
+  column-gap: var(--pds-spacing-l);
 }
-.review-date, h4.review-date {
-  font-family: "Open Sans", "sans-serif";
-  color: #71767a;
-  font-size: .9em;
-  font-weight: 500;
-} */

@@ -53,3 +53,7 @@ ul.toc-list ul li {
 .toc-link::before {
   display: none;
 }
+
+.tocify-item.is-active-li a {
+  font-weight: var(--pds-typography-font-weight-regular);
+}

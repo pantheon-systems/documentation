@@ -1,29 +1,44 @@
+.toc__menu-item {
+}
 
-.manual-guide-toc .child a {
-  padding:10px 10px 10px 70px;
+.toc__menu-item a {
+  background-color: var(--pds-color-menu-item-background-default);
+  border-radius: var(--pds-border-radius-default);
+  color: var(--pds-color-menu-item-foreground);
+  cursor: pointer;
+  font-size: var(--pds-typography-size-m);
+  line-height: var(--pds-typography-line-height-s);
+  margin: 0;
+  font-weight: var(--pds-typography-font-weight-semibold);
+  padding: var(--pds-spacing-xs) var(--pds-spacing-s);
+  text-decoration: none;
+  display: block;
+}
 
+.toc__menu-item a:hover,
+.toc__menu-item a.active-trail {
+  background-color: var(--pds-color-menu-item-background-hover);
+}
+
+/* .manual-guide-toc .child a {
+  padding: 10px 10px 10px 70px;
 }
 .manual-guide-toc .child a:hover {
-  padding:10px 10px 10px 50px;
-
+  padding: 10px 10px 10px 50px;
 }
 .manual-guide-toc .child .active-trail {
-  padding:10px 10px 10px 50px !important;
-
+  padding: 10px 10px 10px 50px !important;
 }
 .manual-guide-toc a {
-  padding:10px 10px 10px 40px;
+  padding: 10px 10px 10px 40px;
   display: block;
 }
 .manual-guide-toc .child a {
-  padding:10px 10px 10px 70px;
-
+  padding: 10px 10px 10px 70px;
 }
 .manual-guide-toc .child a:hover {
-  padding:10px 10px 10px 50px;
-
+  padding: 10px 10px 10px 50px;
 }
 .manual-guide-toc .child .active-trail {
-  padding:10px 10px 10px 50px !important;
-
-}
+  padding: 10px 10px 10px 50px !important;
+} */

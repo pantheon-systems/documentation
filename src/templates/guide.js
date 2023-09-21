@@ -37,6 +37,8 @@ import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 import LocaldevChangelog from "../components/localdevChangelog"
 
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+
 const shortcodes = {
   Callout,
   Alert,
@@ -104,6 +106,13 @@ class GuideTemplate extends React.Component {
       }
     })
 
+    // Preprocess content region layout if has TOC or not.
+    const hasTOC = node.frontmatter.showtoc
+    const ContainerDiv = ({ children }) => (
+      <div className="content-wrapper">{children}</div>
+    )
+    const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
+
     return (
       <Layout>
         <SEO
@@ -115,42 +124,46 @@ class GuideTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <div className="container">
-          <div className="row col-md-12 guide-nav manual-guide-toc-well">
+        <div className="pds-container pds-container--wide">
+          <SidebarLayout sidebarLocation="left">
             <Navbar
+              slot="sidebar"
               title={node.frontmatter.title}
               activePage={node.fields.slug}
               items={items}
             />
-            <main id="docs-main" className="col-md-9 guide-doc-body">
-              <div className="row guide-content-well">
-                <article
-                  className={`col-xs-${contentCols} col-md-${contentCols} doc`}
-                  id="doc"
-                >
-                  <HeaderBody
-                    title={node.frontmatter.title}
-                    subtitle={node.frontmatter.subtitle}
-                    description={node.frontmatter.description}
-                    slug={node.fields.slug}
-                    contributors={node.frontmatter.contributors}
-                    featured={node.frontmatter.featuredcontributor}
-                    editPath={node.fields.editPath}
-                    reviewDate={node.frontmatter.reviewed}
-                    isoDate={isoDate.frontmatter.reviewed}
-                  />
-                  <MDXProvider components={shortcodes}>
-                    <MDXRenderer>{node.body}</MDXRenderer>
-                  </MDXProvider>
-                </article>
-                {node.frontmatter.showtoc && <TOC title="Contents" />}
-              </div>
-              <NavButtons
-                prev={this.props.pageContext.previous}
-                next={this.props.pageContext.next}
-              />
+            <main slot="content" id="docs-main">
+              <ContentLayoutType>
+                <div slot="content" className="guide-doc-body">
+                  <article
+                    className="doc pds-spacing-pad-block-end-2xl"
+                    id="doc"
+                  >
+                    <HeaderBody
+                      title={node.frontmatter.title}
+                      subtitle={node.frontmatter.subtitle}
+                      description={node.frontmatter.description}
+                      slug={node.fields.slug}
+                      contributors={node.frontmatter.contributors}
+                      featured={node.frontmatter.featuredcontributor}
+                      editPath={node.fields.editPath}
+                      reviewDate={node.frontmatter.reviewed}
+                      isoDate={isoDate.frontmatter.reviewed}
+                    />
+                    <MDXProvider components={shortcodes}>
+                      <MDXRenderer>{node.body}</MDXRenderer>
+                    </MDXProvider>
+                  </article>
+                </div>
+                <NavButtons
+                  prev={this.props.pageContext.previous}
+                  next={this.props.pageContext.next}
+                />
+
+                {hasTOC && <TOC slot="sidebar" title="Contents" />}
+              </ContentLayoutType>
             </main>
-          </div>
+          </SidebarLayout>
         </div>
       </Layout>
     )
