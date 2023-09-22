@@ -12,6 +12,7 @@ import ExternalLink from "../components/externalLink"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
+import TOC from "../components/toc"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
@@ -26,12 +27,7 @@ import {
   headline4,
 } from "../components/releaseHeadlines"
 
-import {
-  Icon,
-  Pager,
-  SidebarLayout,
-  TableOfContents,
-} from "@pantheon-systems/pds-toolkit-react"
+import { Icon, Pager, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
@@ -129,11 +125,7 @@ class ChangelogsTemplate extends React.Component {
                 </div>
               </div>
             </div>
-            <TableOfContents
-              slot="sidebar"
-              headingText="Contents"
-              ignoreClass="toc-ignore"
-            />
+            <TOC slot="sidebar" title="Contents" />
           </SidebarLayout>
           <NavButtons
             prev={this.props.pageContext.previous}

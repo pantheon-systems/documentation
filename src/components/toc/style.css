@@ -39,7 +39,15 @@ ul.toc-list {
   flex-direction: column;
   list-style-type: none;
   padding-inline-start: var(--pds-spacing-xl);
-  row-gap: var(--pds-spacing-s);
+  row-gap: var(--pds-spacing-m);
+}
+
+ul.toc-list ul {
+  padding-block-start: var(--pds-spacing-m);
+}
+
+ul.toc-list ul.is-collapsed {
+  padding-block-start: 0;
 }
 
 ul.toc-list ul li {
@@ -56,7 +64,7 @@ ul.toc-list ul li {
 }
 
 .tocify-item {
-  line-height: var(--pds-typography-line-height-m);
+  line-height: var(--pds-typography-line-height-s);
 }
 
 .tocify-item.is-active-li a {
