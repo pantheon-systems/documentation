@@ -4,7 +4,7 @@
 }
 
 h2.manual-guide-toc__heading {
-  font-size: var(--pds-typography-size-xl);
+  font-size: var(--pds-typography-size-l);
   line-height: var(--pds-typography-line-height-m);
   margin-block-end: var(--pds-spacing-s);
 }

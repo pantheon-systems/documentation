@@ -30,6 +30,7 @@ const GuideLayout = ({ children, pageType = "default" }) => {
       <Header page={pageType} />
       {pageSEO}
       <SidebarLayout
+        gridGap="narrow"
         sidebarLocation="left"
         className="pds-container pds-container--wide"
       >
