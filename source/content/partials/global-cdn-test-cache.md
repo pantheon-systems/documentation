@@ -16,25 +16,19 @@ reviewed: ""
 
   ```bash{outputLines: 2-20}
   curl --head https://docs.pantheon.io
-  HTTP/2 301
+  HTTP/2 200
   content-type: text/html
-  location: https://docs.pantheon.io/
-  server: nginx
-  strict-transport-security: max-age=31622400
-  x-pantheon-styx-hostname: styx-fe2-a-5d96768699-vcdvh
-  x-styx-req-id: b7b8d4d2-04d9-11ec-a467-9a05fab906d1
-  cache-control: public, max-age=86400
-  date: Tue, 24 Aug 2021 15:30:21 GMT
-  x-served-by: cache-mdw17379-MDW, cache-ewr18124-EWR
-  x-cache: HIT, HIT
-  x-cache-hits: 1, 1
-  x-timer: S1629819022.932985,VS0,VE1
-  pantheon-trace-id: be58e6a03a904fbfa64515ee136ffd34
-  vary: Cookie, Cookie
-  age: 9654
-  accept-ranges: bytes
+  age: 2808
+  cache-control: public, maxage=60
+  expires: Thu, 21 Sep 2023 21:39:51 GMT
+  last-modified: Thu, 21 Sep 2023 19:04:09 GMT
   via: 1.1 varnish, 1.1 varnish
-  content-length: 162
+  strict-transport-security: max-age=300
+  date: Thu, 21 Sep 2023 21:26:39 GMT
+  x-served-by: cache-bfi-krnt7300115-BFI, cache-bfi-krnt7300115-BFI
+  x-cache: MISS, MISS
+  x-cache-hits: 0, 0
+  x-timer: S1695331600.573858,VS0,VE60
   ```
 
   Note the result for `age` or `max-age`.
