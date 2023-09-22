@@ -8,7 +8,7 @@ import SEO from "../layout/seo"
 import TOC from "../components/toc"
 import showdown from "showdown"
 
-import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 import "./styles/glossary.css"
 
@@ -19,6 +19,9 @@ const previewFlexPanelItem = {
   margin: "0px 0px 15px 15px",
   color: "#333",
 }
+
+// Set container width for search and main content.
+const containerWidth = "wide"
 
 class Glossary extends React.Component {
   render() {
@@ -133,13 +136,16 @@ class Glossary extends React.Component {
 
     return (
       <>
-        <Layout>
+        <Layout containerWidth={containerWidth}>
           <SEO
             title="Glossary"
             description="A collection of terms and definitions through Pantheon's Documentation"
           />
           <main id="doc">
-            <div className="pds-container pds-container--wide">
+            <Container
+              width={containerWidth}
+              className="pds-spacing-pad-block-end-4xl"
+            >
               <SidebarLayout>
                 <article slot="content" className="doc article glossary">
                   <HeaderBody
@@ -229,10 +235,9 @@ class Glossary extends React.Component {
                     ))}
                   </div>
                 </article>
-
                 <TOC slot="sidebar" title="Contents" />
               </SidebarLayout>
-            </div>
+            </Container>
           </main>
         </Layout>
       </>

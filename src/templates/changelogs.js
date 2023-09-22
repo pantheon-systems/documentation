@@ -27,7 +27,12 @@ import {
   headline4,
 } from "../components/releaseHeadlines"
 
-import { Icon, Pager, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import {
+  Container,
+  Icon,
+  Pager,
+  SidebarLayout,
+} from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
@@ -46,6 +51,9 @@ const shortcodes = {
   h2: headline3,
   h3: headline4,
 }
+
+// Set container width for search and main content.
+const containerWidth = "standard"
 
 // Combined changelog template.
 class ChangelogsTemplate extends React.Component {
@@ -78,61 +86,63 @@ class ChangelogsTemplate extends React.Component {
   render() {
     const changelogs = this.props.data.allMdx.edges
     return (
-      <Layout>
+      <Layout containerWidth={containerWidth}>
         <SEO
           title="Pantheon Changelog"
           description="Pantheon Changelog"
           image={"assets/images/default-thumb-doc.png"}
         />
-        <main className="pds-container pds-container--wide" id="docs-main">
-          <h1>Pantheon Changelog</h1>
-          <div className="pds-spacing-mar-block-end-3xl">
-            <p className="pds-lead-text pds-lead-text--small">
-              Sign up for the Pantheon Changelog Newsletter to receive a monthly
-              email on what's new and improved across the platform.
-            </p>
-            <a
-              className="pds-button"
-              href="https://learn.pantheon.io/Changelog-Opt-In.html"
-              target="_blank"
-            >
-              Subscribe Now
-              <Icon iconName="externalLink" />
-            </a>
-          </div>
-          <hr />
-          <SidebarLayout sidebarMobileLocation="before">
-            <div slot="content">
-              <div id="doc" className="doc changelog__content">
-                <div id="pds-toc-source">
-                  <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                    {changelogs.map((changelog) => (
-                      <React.Fragment key={changelog.id}>
-                        <Link
-                          to={`/${changelog.node.fields.slug}`}
-                          className="individual-changelog-link"
-                        >
-                          <h2 id={changelog.node.fields.slug}>
-                            {changelog.node.frontmatter.title}
-                          </h2>
-                        </Link>
-                        <MDXProvider components={shortcodes}>
-                          <MDXRenderer>{changelog.node.body}</MDXRenderer>
-                        </MDXProvider>
-                      </React.Fragment>
-                    ))}
+        <main id="docs-main">
+          <Container width={containerWidth}>
+            <h1>Pantheon Changelog</h1>
+            <div className="pds-spacing-mar-block-end-3xl">
+              <p className="pds-lead-text pds-lead-text--small">
+                Sign up for the Pantheon Changelog Newsletter to receive a
+                monthly email on what's new and improved across the platform.
+              </p>
+              <a
+                className="pds-button"
+                href="https://learn.pantheon.io/Changelog-Opt-In.html"
+                target="_blank"
+              >
+                Subscribe Now
+                <Icon iconName="externalLink" />
+              </a>
+            </div>
+            <hr />
+            <SidebarLayout sidebarMobileLocation="before">
+              <div slot="content">
+                <div id="doc" className="doc changelog__content">
+                  <div id="pds-toc-source">
+                    <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                      {changelogs.map((changelog) => (
+                        <React.Fragment key={changelog.id}>
+                          <Link
+                            to={`/${changelog.node.fields.slug}`}
+                            className="individual-changelog-link"
+                          >
+                            <h2 id={changelog.node.fields.slug}>
+                              {changelog.node.frontmatter.title}
+                            </h2>
+                          </Link>
+                          <MDXProvider components={shortcodes}>
+                            <MDXRenderer>{changelog.node.body}</MDXRenderer>
+                          </MDXProvider>
+                        </React.Fragment>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <TOC slot="sidebar" title="Contents" />
-          </SidebarLayout>
-          <NavButtons
-            prev={this.props.pageContext.previous}
-            next={this.props.pageContext.next}
-            prevTitle="Older"
-            nextTitle="Newer"
-          />
+              <TOC slot="sidebar" title="Contents" />
+            </SidebarLayout>
+            <NavButtons
+              prev={this.props.pageContext.previous}
+              next={this.props.pageContext.next}
+              prevTitle="Older"
+              nextTitle="Newer"
+            />
+          </Container>
         </main>
       </Layout>
     )

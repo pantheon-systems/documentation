@@ -8,11 +8,11 @@ import { Container } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
-const Layout = ({ children, pageType = "default" }) => {
+const Layout = ({ children, containerWidth, pageType = "default" }) => {
   return (
     <div className="pantheon-docs">
       <Header page={pageType} />
-      <Container>
+      <Container width={containerWidth}>
         <SearchBar page={pageType} />
       </Container>
       {children}

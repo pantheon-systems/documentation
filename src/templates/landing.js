@@ -18,6 +18,9 @@ import {
   LinksCard,
 } from "@pantheon-systems/pds-toolkit-react"
 
+// Set container width for search and main content.
+const containerWidth = "narrow"
+
 const twoColumnClasses =
   "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6"
 
@@ -37,10 +40,10 @@ class LandingTemplate extends Component {
       groupLength === 2 || groupLength === 4 ? "two" : "three"
 
     return !topic ? null : (
-      <Layout>
+      <Layout containerWidth={containerWidth}>
         <SEO title={topic.title} />
         <main id="docs-main">
-          <Container width="narrow" className="landing-page__header">
+          <Container width={containerWidth} className="landing-page__header">
             <FlexContainer
               alignItems="center"
               flexDirection="column"
@@ -60,7 +63,7 @@ class LandingTemplate extends Component {
           {topic.video_id && (
             <div className="landing-page__video-background">
               <Container
-                width="narrow"
+                width={containerWidth}
                 className="video-container  pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-4xl"
               >
                 <Youtube src={topic.video_id} title={topic.title} />
@@ -72,7 +75,7 @@ class LandingTemplate extends Component {
           {topic.guides &&
             topic.guides.map((guide) => (
               <Container
-                width="narrow"
+                width={containerWidth}
                 className="landing-page__guides pds-spacing-mar-block-end-2xl"
               >
                 {guide.title && <h2>{guide.title}</h2>}
@@ -106,7 +109,10 @@ class LandingTemplate extends Component {
             >
               {topic.subtopics &&
                 topic.subtopics.map((subtopic) => (
-                  <Container width="narrow" className="landing-page__subtopics">
+                  <Container
+                    width={containerWidth}
+                    className="landing-page__subtopics"
+                  >
                     <SubTopicGroup
                       key={subtopic.title}
                       title={subtopic.title}
@@ -119,7 +125,10 @@ class LandingTemplate extends Component {
           )}
           {/* Topic groups */}
           <div className="pds-background-default-secondary pds-spacing-pad-block-5xl">
-            <Container width="narrow" className="landing-page__topics pds-grid">
+            <Container
+              width={containerWidth}
+              className="landing-page__topics pds-grid"
+            >
               {topic.topics_groups &&
                 topic.topics_groups.map((group, key) => (
                   <LinksCard
@@ -141,7 +150,7 @@ class LandingTemplate extends Component {
           {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
             <Container
-              width="narrow"
+              width={containerWidth}
               className="landing-page__related pds-spacing-pad-block-end-5xl"
             >
               <h2>Related Resources</h2>
