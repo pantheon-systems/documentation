@@ -43,8 +43,6 @@ AGCDN allows you to use custom site rules, including:
 
 - Bespoke cookie-handling
 
-- URL rate-limiting
-
 - Header modifications and filters
 
 - URL and query string sorting and filtering 
