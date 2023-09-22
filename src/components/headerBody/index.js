@@ -28,11 +28,13 @@ const HeaderBody = ({
   return (
     <>
       <header>
-        <Badge
-          hasStatusType={false}
-          label={lastReviewed}
-          className="pds-spacing-mar-block-end-m"
-        />
+        {lastReviewed && (
+          <Badge
+            hasStatusType={false}
+            label={lastReviewed}
+            className="pds-spacing-mar-block-end-m"
+          />
+        )}
         {/* <p className="review-date">
           <time dateTime={isoDate} pubdate="pubdate">
             {lastReviewed}
