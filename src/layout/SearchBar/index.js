@@ -6,8 +6,6 @@ import { InputText } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
-const mobileMenuBreakpoint = 900
-
 const SearchBar = ({ page }) => (
   <form
     id="searchform"

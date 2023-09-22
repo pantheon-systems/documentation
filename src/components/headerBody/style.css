@@ -1,8 +1,8 @@
 .header-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--pds-spacing-l);
-  margin-block-end: var(--pds-spacing-xs);
+  gap: var(--pds-spacing-xl);
+  margin-block-end: var(--pds-spacing-xl);
   margin-block-start: var(--pds-spacing-2xl);
 }
 

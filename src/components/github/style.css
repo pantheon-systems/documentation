@@ -1,0 +1,18 @@
+.github-group {
+  align-items: center;
+  column-gap: var(--pds-spacing-l);
+  display: flex;
+}
+
+a.github-link {
+  color: var(--pds-color-text-default);
+  column-gap: var(--pds-spacing-2xs);
+  display: flex;
+  font-size: var(--pds-typography-size-s);
+  text-decoration: none;
+}
+
+a.github-link:hover {
+  color: var(--pds-color-link-hover);
+  text-decoration: underline;
+}

@@ -32,7 +32,7 @@ const GuideLayout = ({ children, pageType = "default" }) => {
       <SidebarLayout
         gridGap="narrow"
         sidebarLocation="left"
-        className="pds-container pds-container--wide"
+        className="pds-container pds-container--x-wide"
       >
         <div slot="sidebar" className="guide-sidebar">
           {guideMenu}
