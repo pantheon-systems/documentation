@@ -1,11 +1,6 @@
 /* For local styles not coming from PDS. */
 
-#docs-main {
-  padding-block-start: var(--pds-spacing-xl);
-}
-
 /* Landing pages */
-
 .landing-page__header {
   text-align: center;
 }
@@ -85,21 +80,6 @@ a.individual-changelog-link:not(:first-child) {
 a.individual-changelog-link:hover {
   color: var(--pds-color-link-hover);
   text-decoration: underline;
-}
-
-/* Main content headings */
-#doc h3,
-#doc h4 {
-  margin-block-start: var(--pds-spacing-3xl);
-}
-
-#doc h2 + h3,
-#doc h3 + h4 {
-  margin-block-start: var(--pds-spacing-xl);
-}
-
-#doc p + h2 {
-  margin-block-start: var(--pds-spacing-5xl);
 }
 
 /* Temporary hacks for marketo forms */
