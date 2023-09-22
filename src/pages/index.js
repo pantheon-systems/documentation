@@ -9,22 +9,7 @@ import LinksList from "../pds-middleware/LinksList"
 import CallToAction from "../pds-middleware/CallToAction"
 import TopicsGrid from "../pds-middleware/TopicsGrid"
 
-import {
-  Container,
-  CTASlice,
-  TwoItemLayout,
-} from "@pantheon-systems/pds-toolkit-react"
-
-// Content for CTA
-const primaryCTA = {
-  text: "Learn Pantheon",
-  url: "https://pantheon.io/learn-pantheon?docs",
-}
-
-const secondaryCTA = {
-  text: "Office Hours",
-  url: "https://pantheon.io/developers/office-hours?docs",
-}
+import { Container, TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -35,7 +20,7 @@ class Index extends React.Component {
       data: { homeYaml, allMdx },
     } = this.props
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} hasCta={true}>
         <SEO
           title="Pantheon Docs"
           description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
@@ -86,14 +71,6 @@ class Index extends React.Component {
             </Helmet>
           </Container>
         </main>
-        <CTASlice
-          backgroundColor="secondary"
-          containerWidth="wide"
-          headingText="Got questions? We've got answers!"
-          primaryLink={primaryCTA}
-          secondaryLink={secondaryCTA}
-          className="pre-footer-slice"
-        />
       </Layout>
     )
   }

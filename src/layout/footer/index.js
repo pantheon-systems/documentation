@@ -46,13 +46,13 @@ const communityLinks = [
   <Link to="/contribute/">Learn to Contribute</Link>,
 ]
 
-const Footer = ({ data }) => {
+const Footer = ({ data, className }) => {
   const CCLogo = data.allFile.edges.find(
     (file) => file.node.publicURL.indexOf("CC-BY-SA_icon") > -1
   )
 
   return (
-    <SiteFooter containerWidth="wide">
+    <SiteFooter containerWidth="wide" className={className}>
       <div className="pds-footer__links-area pds-grid pds-grid--wide">
         <div className="pds-footer__links-area-column pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-12 pds-grid-item--lg-8">
           <FlexContainer
