@@ -21,7 +21,7 @@ const previewFlexPanelItem = {
 }
 
 // Set container width for search and main content.
-const containerWidth = "wide"
+const containerWidth = "standard"
 
 class Glossary extends React.Component {
   render() {
