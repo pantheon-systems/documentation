@@ -133,8 +133,8 @@ class GuideTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <div slot="content" className="guide-doc-body">
-            <article className="doc pds-spacing-pad-block-end-2xl" id="doc">
+          <main slot="content" id="doc">
+            <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
               <HeaderBody
                 title={node.frontmatter.title}
                 subtitle={node.frontmatter.subtitle}
@@ -150,7 +150,7 @@ class GuideTemplate extends React.Component {
                 <MDXRenderer>{node.body}</MDXRenderer>
               </MDXProvider>
             </article>
-          </div>
+          </main>
           <NavButtons
             prev={this.props.pageContext.previous}
             next={this.props.pageContext.next}
