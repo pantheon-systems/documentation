@@ -1,30 +1,34 @@
-.command-line-prompt {
-	display: block;
-	float: left;
-	font-size: 100%;
-	letter-spacing: -5px;
-	margin-right: 0em;
-	pointer-events: none;
+.gatsby-highlight {
+  margin-block-end: var(--pds-spacing-2xl);
+}
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.command-line-prompt {
+  display: block;
+  float: left;
+  font-size: 100%;
+  letter-spacing: -5px;
+  margin-right: 0em;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .command-line-prompt > span:before {
-	color: #999;
-	content: ' ';
-	display: block;
-	padding-right: 0.8em;
+  color: #999;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
 }
 
 .command-line-prompt > span[data-user]:before {
-	content: "$";
+  content: "$";
 }
 
 .command-line-prompt > span[data-user="root"]:before {
-	content: "#";
+  content: "#";
 }
 
 .command-line-prompt > span[data-user="winshell"]::before {
@@ -43,11 +47,11 @@
 }
 
 .command-line-prompt > span[data-prompt]:before {
-	content: attr(data-prompt);
+  content: attr(data-prompt);
 }
 
 .highlight {
-	background: yellow;
+  background: yellow;
 }
 
 .gatsby-highlight-code-line {
@@ -60,31 +64,31 @@
   border-left: 0.25em solid #f99;
 }
 
-.gatsby-highlight-code-line, .gatsby-highlight-code-line .token {
-    color: #181D21 !important;
+.gatsby-highlight-code-line,
+.gatsby-highlight-code-line .token {
+  color: #181d21 !important;
 }
 
 .gatsby-remark-code-title {
   margin-bottom: -0.6rem;
   padding: 0.5em 1em;
-  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
     monospace;
-	font-weight: bolder !important;
+  font-weight: bolder !important;
 
-  background-color: #44525E;
+  background-color: #44525e;
   display: inline;
   color: white;
   z-index: 0;
 
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
-
 }
 
 div.gatsby-remark-code-title::before {
-    content: "File: ";
+  content: "File: ";
 }
 
 span.line-numbers-rows {
