@@ -101,31 +101,6 @@ const mainNavigationLinks = [
 
 const mobileMenuBreakpoint = 900
 
-const Header = ({ page }) => (
-  <Navbar mobileMenuMaxWidth={mobileMenuBreakpoint}>
-    <NavMenu
-      slot="items-left"
-      ariaLabel="Main Navigation"
-      menuItems={mainNavigationLinks}
-      mobileMenuMaxWidth={mobileMenuBreakpoint}
-    />
-    <div slot="items-right" className="pds-button-group">
-      <a
-        className="pds-button pds-button--brand-secondary"
-        href="https://dashboard.pantheon.io"
-        target="_blank"
-      >
-        Log in
-      </a>
-      <a
-        className="pds-button pds-button--brand"
-        href="https://pantheon.io/register"
-        target="_blank"
-      >
-        Get free account
-      </a>
-    </div>
-  </Navbar>
-)
+const Header = ({ page }) => <p>Testing</p>
 
 export default Header
