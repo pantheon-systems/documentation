@@ -1,3 +1,7 @@
 .docs-alert {
   margin-block: var(--pds-spacing-xl);
 }
+
+header + .docs-alert {
+  margin-block-start: 0;
+}
