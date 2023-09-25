@@ -135,112 +135,108 @@ class Glossary extends React.Component {
     ]
 
     return (
-      <>
-        <Layout containerWidth={containerWidth}>
-          <SEO
-            title="Glossary"
-            description="A collection of terms and definitions through Pantheon's Documentation"
-          />
-          <main id="doc">
-            <Container
-              width={containerWidth}
-              className="pds-spacing-pad-block-end-4xl"
-            >
-              <SidebarLayout>
-                <article slot="content" className="doc article glossary">
-                  <HeaderBody
-                    title="Glossary"
-                    description="A collection of terms and definitions through Pantheon's Documentation"
-                  />
-                  <div className="pds-spacing-mar-block-start-m pds-spacing-mar-block-end-4xl">
-                    <p>
-                      This page dynamically displays all defined terms in the
-                      Pantheon Documentation project.
-                    </p>
+      <Layout containerWidth={containerWidth}>
+        <SEO
+          title="Glossary"
+          description="A collection of terms and definitions through Pantheon's Documentation"
+        />
+        <main id="doc">
+          <Container
+            width={containerWidth}
+            className="pds-spacing-pad-block-end-4xl"
+          >
+            <SidebarLayout>
+              <article slot="content" className="doc article glossary">
+                <HeaderBody
+                  title="Glossary"
+                  description="A collection of terms and definitions through Pantheon's Documentation"
+                />
+                <div className="pds-spacing-mar-block-start-m pds-spacing-mar-block-end-4xl">
+                  <p>
+                    This page dynamically displays all defined terms in the
+                    Pantheon Documentation project.
+                  </p>
 
-                    {letters.map((index) => (
-                      <>
-                        {allDefs.filter((def) => {
-                          return JSON.stringify(def.letter).match(index)
-                        }).length > 0 ? (
-                          <>
-                            <Link
-                              to={`#${index.toLowerCase()}`}
-                              className="glossary__letter-link"
+                  {letters.map((index) => (
+                    <>
+                      {allDefs.filter((def) => {
+                        return JSON.stringify(def.letter).match(index)
+                      }).length > 0 ? (
+                        <>
+                          <Link
+                            to={`#${index.toLowerCase()}`}
+                            className="glossary__letter-link"
+                          >
+                            <h2
+                              key={index}
+                              className="tocify-item glossary__letter"
+                              id={index.toLowerCase()}
                             >
-                              <h2
-                                key={index}
-                                className="tocify-item glossary__letter"
-                                id={index.toLowerCase()}
+                              {index}
+                            </h2>
+                          </Link>
+                          <hr />
+                        </>
+                      ) : null}
+                      {allDefs
+                        .filter((def) => {
+                          //console.log("Now rendering ", def.title, def) //For Debugging
+                          return (
+                            def.letter.toUpperCase() === index.toUpperCase()
+                          )
+                        })
+                        .map(({ from, slug, title, definition }) => (
+                          <>
+                            <section key={title.replace(/ +/g, "-")}>
+                              <Link
+                                to={`#${title
+                                  .toLowerCase()
+                                  .replace(/ +/g, "-")}`}
+                                className="glossary__term-link"
                               >
-                                {index}
-                              </h2>
-                            </Link>
-                            <hr />
-                          </>
-                        ) : null}
-                        {allDefs
-                          .filter((def) => {
-                            //console.log("Now rendering ", def.title, def) //For Debugging
-                            return (
-                              def.letter.toUpperCase() === index.toUpperCase()
-                            )
-                          })
-                          .map(({ from, slug, title, definition }) => (
-                            <>
-                              <section key={title.replace(/ +/g, "-")}>
-                                <Link
-                                  to={`#${title
-                                    .toLowerCase()
-                                    .replace(/ +/g, "-")}`}
-                                  className="glossary__term-link"
+                                <h3
+                                  key={`${title.replace(/ +/g, "-")}-header`}
+                                  id={title.toLowerCase().replace(/ +/g, "-")}
+                                  name={title.toLowerCase().replace(/ +/g, "-")}
+                                  className="glossary__term"
                                 >
-                                  <h3
-                                    key={`${title.replace(/ +/g, "-")}-header`}
-                                    id={title.toLowerCase().replace(/ +/g, "-")}
-                                    name={title
-                                      .toLowerCase()
-                                      .replace(/ +/g, "-")}
-                                    className="glossary__term"
+                                  {title.charAt(0).toUpperCase() +
+                                    title.slice(1)}
+                                </h3>
+                              </Link>
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: converter
+                                    .makeHtml(definition)
+                                    .replace(
+                                      /<a href="\/(.+?)">/g,
+                                      "<a href=/$1>"
+                                    ),
+                                }}
+                              />
+                              {from.length > 0 ? (
+                                <>
+                                  Excerpt from:{" "}
+                                  <Link
+                                    key={`${title}-reference`}
+                                    to={`/${slug}`}
                                   >
-                                    {title.charAt(0).toUpperCase() +
-                                      title.slice(1)}
-                                  </h3>
-                                </Link>
-                                <div
-                                  dangerouslySetInnerHTML={{
-                                    __html: converter
-                                      .makeHtml(definition)
-                                      .replace(
-                                        /<a href="\/(.+?)">/g,
-                                        "<a href=/$1>"
-                                      ),
-                                  }}
-                                />
-                                {from.length > 0 ? (
-                                  <>
-                                    Excerpt from:{" "}
-                                    <Link
-                                      key={`${title}-reference`}
-                                      to={`/${slug}`}
-                                    >
-                                      {from}
-                                    </Link>
-                                  </>
-                                ) : null}
-                              </section>
-                            </>
-                          ))}
-                      </>
-                    ))}
-                  </div>
-                </article>
-                <TOC slot="sidebar" title="Contents" />
-              </SidebarLayout>
-            </Container>
-          </main>
-        </Layout>
-      </>
+                                    {from}
+                                  </Link>
+                                </>
+                              ) : null}
+                            </section>
+                          </>
+                        ))}
+                    </>
+                  ))}
+                </div>
+              </article>
+              <TOC slot="sidebar" title="Contents" />
+            </SidebarLayout>
+          </Container>
+        </main>
+      </Layout>
     )
   }
 }
