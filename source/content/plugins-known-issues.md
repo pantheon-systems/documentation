@@ -80,7 +80,7 @@ Plugins and themes with issues resolved (at least partially) by this include the
 
 <Alert title="Note"  type="info" >
 
-If your site is using an up-to-date version of the Pantheon WordPress upstream, FS_METHOD will automatically be set for you.
+If your site is using an up-to-date version of the Pantheon WordPress upstream, `FS_METHOD` will automatically be set for you.
 
 </Alert>
 
