@@ -1,30 +1,41 @@
 import React from "react"
 import logo from "../../../source/images/official-plugin.svg"
-import './style.css';
+
+import { Icon, PantheonLogo } from "@pantheon-systems/pds-toolkit-react"
+
+import "./style.css"
 
 const Card = ({ title, isOfficial, author, authorLink, link, children }) => {
   return (
-    <div className="flex-panel-item">
-      <div className="flex-panel-body">
-        <div className="flex-panel-title">
-          <h3 className="plugin-title">{title}</h3>
+    <div className="plugin-card pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-4">
+      <div className="plugin-card__header">
+        {isOfficial && <PantheonLogo displayType="icon" />}
+
+        <div className="plugin-card__title-wrapper">
+          <h2 className="plugin-card__title">{title}</h2>
           {isOfficial && (
-            <div className="pantheon-official">
-              <img
-                alt="Official Pantheon Plugin"
-                src={logo}
-                className="main-topic-info__plugin-image"
-              />
-              <p className="pantheon-official">Pantheon Official</p>
+            <div className="plugin-card__pantheon-official">
+              Pantheon Official
             </div>
           )}
         </div>
-        <p className="topic-info__description">
+      </div>
+
+      <div className="plugin-card__text">
+        <p className="plugin-card__author">
           Author: <a href={authorLink}>{author}</a>
         </p>
-        <p className="topic-info__description">{children}</p>
-        <a href={link} className="btn-primary btn get-plugin">
+        <p className="plugin-card__description">{children}</p>
+      </div>
+
+      <div className="plugin-card__link">
+        <a href={link} target="_blank" className="pds-button">
           Get plugin
+          <Icon
+            iconName="externalLink"
+            iconSize="md"
+            className="pds-spacing-pad-inline-start-5xs"
+          />
         </a>
       </div>
     </div>
