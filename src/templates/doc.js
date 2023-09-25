@@ -34,6 +34,8 @@ import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+
 const shortcodes = {
   Callout,
   Alert,
@@ -60,6 +62,9 @@ const shortcodes = {
   DNSProviderDocs,
   Check,
 }
+
+// Set container width for search and main content.
+const containerWidth = "standard"
 
 class DocTemplate extends React.Component {
   componentDidMount() {
@@ -106,37 +111,42 @@ class DocTemplate extends React.Component {
           type={node.frontmatter.type}
         />
         <main id="doc">
-          <div className="pds-container pds-container--wide">
-            <article className="doc article col-md-9 md-70" id="doc">
-              <HeaderBody
-                title={node.frontmatter.title}
-                subtitle={node.frontmatter.subtitle}
-                description={node.frontmatter.description}
-                slug={node.fields.slug}
-                contributors={node.frontmatter.contributors}
-                featured={node.frontmatter.featuredcontributor}
-                editPath={node.fields.editPath}
-                reviewDate={node.frontmatter.reviewed}
-                isoDate={isoDate.frontmatter.reviewed}
-                cms={node.frontmatter.cms}
+          <Container
+            width={containerWidth}
+            className="pds-spacing-pad-block-end-4xl"
+          >
+            <SidebarLayout>
+              <article slot="content" className="doc article styleguide">
+                <HeaderBody
+                  title={node.frontmatter.title}
+                  subtitle={node.frontmatter.subtitle}
+                  description={node.frontmatter.description}
+                  slug={node.fields.slug}
+                  contributors={node.frontmatter.contributors}
+                  featured={node.frontmatter.featuredcontributor}
+                  editPath={node.fields.editPath}
+                  reviewDate={node.frontmatter.reviewed}
+                  isoDate={isoDate.frontmatter.reviewed}
+                  cms={node.frontmatter.cms}
+                />
+                <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+                  <MDXProvider components={shortcodes}>
+                    <MDXRenderer>{node.body}</MDXRenderer>
+                  </MDXProvider>
+                </div>
+              </article>
+              <TOC slot="sidebar" title="Contents" />
+              <GetFeedback
+                formId="tfYOGoE7"
+                page={node.frontmatter.title}
+                topic={
+                  node.frontmatter.categories
+                    ? node.frontmatter.categories.toString()
+                    : null
+                }
               />
-              <div style={{ marginTop: "15px", marginBottom: "45px" }}>
-                <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{node.body}</MDXRenderer>
-                </MDXProvider>
-              </div>
-            </article>
-            {node.frontmatter.showtoc && <TOC title="Contents" />}
-            <GetFeedback
-              formId="tfYOGoE7"
-              page={node.frontmatter.title}
-              topic={
-                node.frontmatter.categories
-                  ? node.frontmatter.categories.toString()
-                  : null
-              }
-            />
-          </div>
+            </SidebarLayout>
+          </Container>
         </main>
       </Layout>
     )
