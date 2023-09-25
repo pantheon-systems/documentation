@@ -27,7 +27,7 @@ const HeaderBody = ({
   const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null
   return (
     <>
-      <header>
+      <header className="doc-content-header">
         {lastReviewed && (
           <Badge
             hasStatusType={false}
@@ -53,13 +53,13 @@ const HeaderBody = ({
         </p>
 
         {!featured && <Contributors contributors={contributors} />}
-        <div className="header-actions">
-          <div className="header-actions__discuss">
+        <div className="doc-content-header__actions">
+          <div className="doc-content-header__discuss">
             <Discourse pageTitle={title} path={slug} cms={cms} />
             <Slack />
           </div>
           <Github
-            className="header-actions__github"
+            className="doc-content-header__github"
             pageTitle={title}
             path={slug}
             editPath={editPath}
