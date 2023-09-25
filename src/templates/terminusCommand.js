@@ -1,4 +1,3 @@
-
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -28,7 +27,7 @@ import Commands from "../components/commands"
 import Partial from "../components/partial"
 import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
-let commandsJson = require('../../source/data/commands.json')
+let commandsJson = require("../../source/data/commands.json")
 
 const shortcodes = {
   Callout,
@@ -49,8 +48,6 @@ const shortcodes = {
   Check,
   Partial,
 }
-
-
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
@@ -119,7 +116,6 @@ const items = [
     link: "/terminus/terminus-3-0",
     title: "Terminus 3",
   },
-
 ]
 
 class CommandsTemplate extends React.Component {
@@ -128,8 +124,8 @@ class CommandsTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -140,8 +136,8 @@ class CommandsTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -161,8 +157,10 @@ class CommandsTemplate extends React.Component {
     const commands = this.props.data.dataJson.commands
     //console.log("commands: ", commands) //For Debugging
 
-    const getCommandBySlug = slug => commands.find(({name}) => name === slug)
-    const getCommandJSONBySlug = slug => commandsJson.commands.find(({name}) => name === slug)
+    const getCommandBySlug = (slug) =>
+      commands.find(({ name }) => name === slug)
+    const getCommandJSONBySlug = (slug) =>
+      commandsJson.commands.find(({ name }) => name === slug)
 
     const command = getCommandBySlug(name)
     //console.log("command: ", command) //For Debugging
@@ -170,16 +168,18 @@ class CommandsTemplate extends React.Component {
     const thisCommandJson = getCommandJSONBySlug(name)
     //console.log("thisCommandJson: ", thisCommandJson) //For Debugging
 
-    var options = Object.keys(thisCommandJson.definition.options).map(function (key) {
+    var options = Object.keys(thisCommandJson.definition.options).map(function (
+      key
+    ) {
       return [String(key), thisCommandJson.definition.options[key]]
     })
-    options.forEach(option => {
+    options.forEach((option) => {
       option.shift()
     })
 
-    options.sort((a, b) => (a[0].name > b[0].name) ? 1 : -1)
-    options.sort(function(a, b) {
-      return a[0].name.localeCompare(b[0].name);
+    options.sort((a, b) => (a[0].name > b[0].name ? 1 : -1))
+    options.sort(function (a, b) {
+      return a[0].name.localeCompare(b[0].name)
     })
     //console.log("Options: ", options) //For Debugging
 
@@ -193,11 +193,11 @@ class CommandsTemplate extends React.Component {
         <div className="">
           <div className="container-fluid">
             <div className="row col-md-10 guide-nav manual-guide-toc-well">
-            <Navbar
-              title={`Terminus Command Reference`}
-              items={items}
-              activePage="/terminus/commands"
-              className="manual-guide-toc"
+              <Navbar
+                title={`Terminus Command Reference`}
+                items={items}
+                activePage="/terminus/commands"
+                className="manual-guide-toc"
               />
               <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
@@ -214,39 +214,54 @@ class CommandsTemplate extends React.Component {
                     {command.description}
                     <br />
                     <h2>Example Usage</h2>
-                    <pre className="language-bash"><code className="language=bash">terminus {command.usage[0].replace(/\[|\]/g, "")}</code></pre>
+                    <pre className="language-bash">
+                      <code className="language=bash">
+                        terminus {command.usage[0].replace(/\[|\]/g, "")}
+                      </code>
+                    </pre>
                     <br />
-                    {command.usage.map( (usage, i) => {
-                      if (i  !== 0) { return (
-                        <>
-                        <p key={i}>
-                        <code key={`${i}-pre`}>{usage.replace(/\[|\]/g, "").replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, '')}</code> {usage.replace(/\[|\]/g, "").match(/(?!^)\b[A-Z][a-z]*\b.+/)}
-                        </p>
-                        <hr className="commandHr"/>
-                        </>
-                      )}
+                    {command.usage.map((usage, i) => {
+                      if (i !== 0) {
+                        return (
+                          <>
+                            <p key={i}>
+                              <code key={`${i}-pre`}>
+                                {usage
+                                  .replace(/\[|\]/g, "")
+                                  .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
+                              </code>{" "}
+                              {usage
+                                .replace(/\[|\]/g, "")
+                                .match(/(?!^)\b[A-Z][a-z]*\b.+/)}
+                            </p>
+                            <hr className="commandHr" />
+                          </>
+                        )
+                      }
                     })}
 
                     <h2>Options</h2>
                     <table>
-                    <thead>
-                      <tr>
-                        <th>Option</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    {options.map(( option ) => {
-                      return (
-                        <>
-                        <tr key={option}>
-                          <td key={`${option}-name`}>{option[0].name}</td>
-                          <td key={`${option}-desc`}>{option[0].description}</td>
+                      <thead>
+                        <tr>
+                          <th>Option</th>
+                          <th>Description</th>
                         </tr>
-                        </>
-                      )
-                    })}
-                    </tbody>
+                      </thead>
+                      <tbody>
+                        {options.map((option) => {
+                          return (
+                            <>
+                              <tr key={option}>
+                                <td key={`${option}-name`}>{option[0].name}</td>
+                                <td key={`${option}-desc`}>
+                                  {option[0].description}
+                                </td>
+                              </tr>
+                            </>
+                          )
+                        })}
+                      </tbody>
                     </table>
 
                     <Partial file={`terminus/${slug}.md`} />
