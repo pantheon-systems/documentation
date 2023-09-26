@@ -29,7 +29,7 @@ function CallToAction(props) {
           className="pds-button pds-button--large pds-spacing-mar-block-start-m"
         >
           {linkText}
-          <Icon iconName="arrowRight" iconSize="large" />
+          <Icon iconName="arrowRight" iconSize="lg" />
         </Link>
       </div>
     </FlexContainer>
