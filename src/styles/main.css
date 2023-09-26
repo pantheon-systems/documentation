@@ -89,6 +89,31 @@ a.individual-changelog-link:hover {
   text-decoration: underline;
 }
 
+.docs-contributor__header {
+  margin-block-end: var(--pds-spacing-3xl);
+}
+
+/* Contributor pages */
+.docs-contributor__social {
+  align-items: center;
+  column-gap: var(--pds-spacing-m);
+  display: flex;
+  margin-block: var(--pds-spacing-l);
+}
+
+.docs-contributor__image img {
+  border-radius: 100%;
+  height: 12rem;
+  width: 12rem;
+}
+
+.docs-contributor__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--pds-spacing-s);
+  margin-block-end: var(--pds-spacing-4xl);
+}
+
 /* Temporary hacks for marketo forms */
 
 /* Buttons */
