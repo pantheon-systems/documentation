@@ -1,5 +1,5 @@
 .gatsby-highlight {
-  margin-block-end: var(--pds-spacing-2xl);
+  margin-block-end: var(--pds-spacing-l);
 }
 
 .command-line-prompt {
@@ -78,7 +78,7 @@
     monospace;
   font-weight: bolder !important;
 
-  background-color: #44525e;
+  background-color: var(--pds-color-brand-secondary-default);
   display: inline;
   color: white;
   z-index: 0;
