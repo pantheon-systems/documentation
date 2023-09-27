@@ -27,6 +27,8 @@ import Image from "../layout/image"
 import Example from "../components/styleExample"
 import Youtube from "../components/youtube"
 
+import { Container } from "@pantheon-systems/pds-toolkit-react"
+
 const shortcodes = {
   Callout,
   Alert,
@@ -46,6 +48,9 @@ const shortcodes = {
   Example,
   Youtube,
 }
+
+// Set container width for search and main content.
+const containerWidth = "narrow"
 
 class VideoTemplate extends React.Component {
   componentDidMount() {
@@ -78,7 +83,7 @@ class VideoTemplate extends React.Component {
     const node = this.props.data.mdx
 
     return (
-      <Layout>
+      <Layout containerWidth={containerWidth}>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
@@ -86,29 +91,23 @@ class VideoTemplate extends React.Component {
           image={"/images/assets/default-thumb-doc.png"}
           type={node.frontmatter.type}
         />
-        <div className="">
-          <div className="pds-container pds-container--wide">
-            <div id="doc" className="doc article col-md-9 md-70">
-              <HeaderBody
-                title={node.frontmatter.title}
-                subtitle={node.frontmatter.subtitle}
-                description={node.frontmatter.description}
-                slug={node.fields.slug}
-                contributors={node.frontmatter.contributors}
-                featured={node.frontmatter.featuredcontributor}
-              />
-              <article style={{ marginTop: "15px", marginBottom: "45px" }}>
-                <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{node.body}</MDXRenderer>
-                </MDXProvider>
-              </article>
-            </div>
-            <div
-              className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-              role="complementary"
-            ></div>
-          </div>
-        </div>
+        <main id="docs-main">
+          <Container width={containerWidth} className="docs-video">
+            <HeaderBody
+              title={node.frontmatter.title}
+              subtitle={node.frontmatter.subtitle}
+              description={node.frontmatter.description}
+              slug={node.fields.slug}
+              contributors={node.frontmatter.contributors}
+              featured={node.frontmatter.featuredcontributor}
+            />
+            <article className="pds-spacing-mar-block-end-4xl">
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{node.body}</MDXRenderer>
+              </MDXProvider>
+            </article>
+          </Container>
+        </main>
       </Layout>
     )
   }
