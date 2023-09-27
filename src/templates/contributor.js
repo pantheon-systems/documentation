@@ -9,7 +9,7 @@ import { Container, TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
 const links = [
   {
     property: "url",
-    icon: "globe",
+    icon: "user",
   },
   {
     property: "github",
@@ -43,6 +43,9 @@ class ContributorTemplate extends React.Component {
       this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
     let printedGuides = []
     let printedOverview = []
+
+    console.log(contributor)
+
     return (
       <Layout containerWidth={containerWidth}>
         <SEO title={contributor.name} />
@@ -63,7 +66,7 @@ class ContributorTemplate extends React.Component {
 
                 <div slot="second-item" className="docs-contributor__header">
                   <h1>{contributor.name}</h1>
-                  {/* <div className="docs-contributor__social">
+                  <div className="docs-contributor__social">
                     {links.map((link, i) => {
                       const url = contributor.hasOwnProperty(link.property)
                         ? contributor[link.property]
@@ -74,7 +77,7 @@ class ContributorTemplate extends React.Component {
                         )
                       }
                     })}
-                  </div> */}
+                  </div>
                 </div>
 
                 <div
