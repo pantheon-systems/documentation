@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import Layout from "../layout/layout"
+import Layout from "../layout/Layout"
 import Accordion from "../components/accordion"
 import newGitHubIssueUrl from "new-github-issue-url"
 
@@ -50,7 +50,7 @@ class VideoReport extends React.Component {
             }
           }
         `}
-        render={data => {
+        render={(data) => {
           /* Construct the constants for our filter terms */
           const [searchTitle, setSearch] = useState("")
           //console.log("SearchTitle: ", searchTitle) // For Debugging
@@ -64,7 +64,7 @@ class VideoReport extends React.Component {
           //console.log("Docs: ", docs) // For Debugging
 
           const reviewedTertiaryPages = data.docsWithVideo.edges.filter(
-            page => {
+            (page) => {
               return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
             }
           )
@@ -72,7 +72,7 @@ class VideoReport extends React.Component {
           const videoLinkRegex = /src=\\\"(.+?)\\\"/
 
           /* Construct the GitHub Issue Body */
-          const makeNewIssue = page => {
+          const makeNewIssue = (page) => {
             return newGitHubIssueUrl({
               user: "pantheon-systems",
               repo: "documentation",
@@ -102,14 +102,14 @@ class VideoReport extends React.Component {
                     id="command-search-title"
                     className="form-control"
                     placeholder="Filter by Title"
-                    onChange={e => setSearch(e.target.value)}
+                    onChange={(e) => setSearch(e.target.value)}
                     value={searchTitle}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
                     className="input-group-addon"
                     id="clear-filter"
-                    onClick={e => setSearch("")}
+                    onClick={(e) => setSearch("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -127,14 +127,14 @@ class VideoReport extends React.Component {
                     id="command-search-category"
                     className="form-control"
                     placeholder="Filter by Category"
-                    onChange={f => setSearchCat(f.target.value)}
+                    onChange={(f) => setSearchCat(f.target.value)}
                     value={searchCategory}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
                     className="input-group-addon"
                     id="clear-filter"
-                    onClick={e => setSearchCat("")}
+                    onClick={(e) => setSearchCat("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -152,14 +152,14 @@ class VideoReport extends React.Component {
                     id="command-search-tag"
                     className="form-control"
                     placeholder="Filter by Tag"
-                    onChange={g => setSearchTags(g.target.value)}
+                    onChange={(g) => setSearchTags(g.target.value)}
                     value={searchTags}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
                     className="input-group-addon"
                     id="clear-filter"
-                    onClick={e => setSearchTags("")}
+                    onClick={(e) => setSearchTags("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -196,7 +196,7 @@ class VideoReport extends React.Component {
                     </thead>
                     <tbody>
                       {docs
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
@@ -207,11 +207,23 @@ class VideoReport extends React.Component {
                           return (
                             <tr key={i}>
                               <td>
-                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
-                                {page.node.frontmatter.title}{" "}
-                                {page.node.frontmatter.subtitle
-                                  ? ` - ${page.node.frontmatter.subtitle}`
-                                  : null}
+                                <Link
+                                  to={
+                                    page.node.frontmatter.permalink
+                                      ? page.node.frontmatter.permalink
+                                          .replace("docs", "")
+                                          .replace(
+                                            ":basename",
+                                            page.node.fileInfo.childMdx.fileInfo
+                                              .name
+                                          )
+                                      : `/${page.node.fields.slug}`
+                                  }
+                                >
+                                  {page.node.frontmatter.title}{" "}
+                                  {page.node.frontmatter.subtitle
+                                    ? ` - ${page.node.frontmatter.subtitle}`
+                                    : null}
                                 </Link>
                               </td>
                               <td>{page.node.fields.slug}</td>
@@ -262,7 +274,7 @@ class VideoReport extends React.Component {
                     </thead>
                     <tbody>
                       {landings
-                        .filter(landing => {
+                        .filter((landing) => {
                           return (
                             landing.node.title
                               .toLowerCase()

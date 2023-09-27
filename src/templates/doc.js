@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../layout/layout"
+import Layout from "../layout/Layout"
 import HeaderBody from "../components/headerBody"
 
 import Callout from "../components/callout"

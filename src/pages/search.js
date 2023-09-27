@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../layout/layout"
+import Layout from "../layout/Layout"
 import SEO from "../layout/seo"
 
 import { Container } from "@pantheon-systems/pds-toolkit-react"

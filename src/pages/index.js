@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
-import Layout from "../layout/layout"
+import Layout from "../layout/Layout"
 import SEO from "../layout/seo"
 
 import ChangelogList from "../pds-middleware/ChangelogList"

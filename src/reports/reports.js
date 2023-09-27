@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import Layout from "../layout/layout"
+import Layout from "../layout/Layout"
 import Accordion from "../components/accordion"
 import newGitHubIssueUrl from "new-github-issue-url"
 
@@ -10,7 +10,12 @@ class ReviewReport extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            cmsDocs: allMdx(filter: {frontmatter: {draft: {ne: true}, cms: {ne: null}}, fields: {slug: {regex: "/^((?!changelog).)*$/"}}}) {
+            cmsDocs: allMdx(
+              filter: {
+                frontmatter: { draft: { ne: true }, cms: { ne: null } }
+                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
+              }
+            ) {
               edges {
                 node {
                   id
@@ -28,10 +33,7 @@ class ReviewReport extends React.Component {
             }
             allReviewedDocs: allMdx(
               filter: {
-                frontmatter: { 
-                    reviewed: { ne: null }
-                    draft: {ne: true}
-                  }
+                frontmatter: { reviewed: { ne: null }, draft: { ne: true } }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
             ) {
@@ -50,9 +52,9 @@ class ReviewReport extends React.Component {
             }
             staleDocs: allMdx(
               filter: {
-                frontmatter: { 
+                frontmatter: {
                   reviewed: { lt: "2020-01-01" }
-                  draft: {ne: true}
+                  draft: { ne: true }
                 }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
@@ -72,10 +74,10 @@ class ReviewReport extends React.Component {
             }
             unreviewedDocs: allMdx(
               filter: {
-                frontmatter: { 
+                frontmatter: {
                   reviewed: { eq: null }
                   title: { ne: "" }
-                  draft: {ne: true}
+                  draft: { ne: true }
                 }
                 fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
@@ -127,7 +129,7 @@ class ReviewReport extends React.Component {
             uncategorizedDocs: allMdx(
               filter: {
                 frontmatter: { categories: { eq: null }, title: { ne: "" } }
-                fields: { slug: { regex: "/^((?!changelog).)*$/"}}
+                fields: { slug: { regex: "/^((?!changelog).)*$/" } }
               }
             ) {
               edges {
@@ -149,7 +151,7 @@ class ReviewReport extends React.Component {
             }
           }
         `}
-        render={data => {
+        render={(data) => {
           /* Construct the constants for our filter terms */
           const [searchTitle, setSearch] = useState("")
           //console.log("SearchTitle: ", searchTitle) // For Debugging
@@ -161,7 +163,7 @@ class ReviewReport extends React.Component {
           /* Construct the constants for each of our Graphql Queries */
           const reviewedPages = data.allReviewedDocs.edges
           const reviewedTertiaryPages = data.allReviewedDocs.edges.filter(
-            page => {
+            (page) => {
               return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
             }
           )
@@ -170,7 +172,7 @@ class ReviewReport extends React.Component {
           const unreviewedPages = data.unreviewedDocs.edges
           //console.log("Unreviewed Docs Array: ", unreviewedPages) // For debugging
           const unreviewedTertiaryPages = data.unreviewedDocs.edges.filter(
-            page => {
+            (page) => {
               return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
             }
           )
@@ -183,9 +185,8 @@ class ReviewReport extends React.Component {
           //console.log("cmsDocs: ", cmsDocs) //For Debugging
           const [searchCms, setSearchCms] = useState("")
 
-
           /* Construct the GitHub Issue Body */
-          const makeNewIssue = page => {
+          const makeNewIssue = (page) => {
             return newGitHubIssueUrl({
               user: "pantheon-systems",
               repo: "documentation",
@@ -215,14 +216,14 @@ class ReviewReport extends React.Component {
                     id="command-search-title"
                     className="form-control"
                     placeholder="Filter by Title"
-                    onChange={e => setSearch(e.target.value)}
+                    onChange={(e) => setSearch(e.target.value)}
                     value={searchTitle}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
                     className="input-group-addon"
                     id="clear-filter"
-                    onClick={e => setSearch("")}
+                    onClick={(e) => setSearch("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -240,14 +241,14 @@ class ReviewReport extends React.Component {
                     id="command-search-category"
                     className="form-control"
                     placeholder="Filter by Category"
-                    onChange={f => setSearchCat(f.target.value)}
+                    onChange={(f) => setSearchCat(f.target.value)}
                     value={searchCategory}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
                     className="input-group-addon"
                     id="clear-filter"
-                    onClick={e => setSearchCat("")}
+                    onClick={(e) => setSearchCat("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -265,14 +266,14 @@ class ReviewReport extends React.Component {
                     id="command-search-tag"
                     className="form-control"
                     placeholder="Filter by Tag"
-                    onChange={g => setSearchTags(g.target.value)}
+                    onChange={(g) => setSearchTags(g.target.value)}
                     value={searchTags}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
                     className="input-group-addon"
                     id="clear-filter"
-                    onClick={e => setSearchTags("")}
+                    onClick={(e) => setSearchTags("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -290,14 +291,14 @@ class ReviewReport extends React.Component {
                     id="command-search-cms"
                     className="form-control"
                     placeholder="Filter by CMS"
-                    onChange={h => setSearchCms(h.target.value)}
+                    onChange={(h) => setSearchCms(h.target.value)}
                     value={searchCms}
                   />
                   <div
                     style={{ background: "#fff; cursor:pointer" }}
                     className="input-group-addon"
                     id="clear-filter"
-                    onClick={e => setSearchCms("")}
+                    onClick={(e) => setSearchCms("")}
                   >
                     <span className="fa fa-times" />
                   </div>
@@ -331,7 +332,7 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {reviewedPages
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
@@ -368,7 +369,7 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {oldPages
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
@@ -419,7 +420,7 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {unreviewedPages
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
@@ -457,7 +458,7 @@ class ReviewReport extends React.Component {
                         <td>{categorizedPages.length}</td>
                         <td>
                           {
-                            categorizedPages.filter(page => {
+                            categorizedPages.filter((page) => {
                               return page.node.frontmatter.tags
                             }).length
                           }
@@ -477,22 +478,22 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {categorizedPages
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
                               .indexOf(searchTitle.toLowerCase()) >= 0
                           )
                         })
-                        .filter(page => {
+                        .filter((page) => {
                           return page.node.frontmatter.categories.filter(
-                            category => category.indexOf(searchCategory) > -1
+                            (category) => category.indexOf(searchCategory) > -1
                           ).length
                         })
-                        .filter(page => {
+                        .filter((page) => {
                           return page.node.frontmatter.tags
                             ? page.node.frontmatter.tags.filter(
-                                tag => tag.indexOf(searchTags) > -1
+                                (tag) => tag.indexOf(searchTags) > -1
                               ).length
                             : page
                         })
@@ -505,15 +506,31 @@ class ReviewReport extends React.Component {
                                 </a>
                               </td>
                               <td>
-                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
-                                {page.node.frontmatter.title}{" "}
-                                {page.node.frontmatter.subtitle
-                                  ? ` - ${page.node.frontmatter.subtitle}`
-                                  : null}
+                                <Link
+                                  to={
+                                    page.node.frontmatter.permalink
+                                      ? page.node.frontmatter.permalink
+                                          .replace("docs", "")
+                                          .replace(
+                                            ":basename",
+                                            page.node.fileInfo.childMdx.fileInfo
+                                              .name
+                                          )
+                                      : `/${page.node.fields.slug}`
+                                  }
+                                >
+                                  {page.node.frontmatter.title}{" "}
+                                  {page.node.frontmatter.subtitle
+                                    ? ` - ${page.node.frontmatter.subtitle}`
+                                    : null}
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
+                              <td>
+                                {page.node.frontmatter.cms
+                                  ? page.node.frontmatter.cms
+                                  : null}
+                              </td>
                               <td>
                                 {page.node.frontmatter.categories.map(
                                   (category, i) => {
@@ -538,7 +555,11 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
+                              <td>
+                                {page.node.frontmatter.type
+                                  ? page.node.frontmatter.type
+                                  : "doc"}
+                              </td>
                             </tr>
                           )
                         })}
@@ -565,7 +586,7 @@ class ReviewReport extends React.Component {
                         <td>{uncategorizedPages.length}</td>
                         <td>
                           {
-                            uncategorizedPages.filter(page => {
+                            uncategorizedPages.filter((page) => {
                               return page.node.frontmatter.tags
                             }).length
                           }
@@ -584,17 +605,17 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {uncategorizedPages
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
                               .indexOf(searchTitle.toLowerCase()) >= 0
                           )
                         })
-                        .filter(page => {
+                        .filter((page) => {
                           return page.node.frontmatter.tags
                             ? page.node.frontmatter.tags.filter(
-                                tag => tag.indexOf(searchTags) > -1
+                                (tag) => tag.indexOf(searchTags) > -1
                               ).length
                             : page
                         })
@@ -612,7 +633,11 @@ class ReviewReport extends React.Component {
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
+                              <td>
+                                {page.node.frontmatter.cms
+                                  ? page.node.frontmatter.cms
+                                  : null}
+                              </td>
                               <td>
                                 {page.node.frontmatter.tags
                                   ? page.node.frontmatter.tags.map((tag, i) => {
@@ -624,7 +649,11 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
+                              <td>
+                                {page.node.frontmatter.type
+                                  ? page.node.frontmatter.type
+                                  : "doc"}
+                              </td>
                             </tr>
                           )
                         })}
@@ -665,29 +694,29 @@ class ReviewReport extends React.Component {
                     </thead>
                     <tbody>
                       {cmsDocs
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.cms
                               .toLowerCase()
                               .indexOf(searchCms.toLowerCase()) >= 0
                           )
                         })
-                        .filter(page => {
+                        .filter((page) => {
                           return (
                             page.node.frontmatter.title
                               .toLowerCase()
                               .indexOf(searchTitle.toLowerCase()) >= 0
                           )
                         })
-                        .filter(page => {
+                        .filter((page) => {
                           return page.node.frontmatter.categories.filter(
-                            category => category.indexOf(searchCategory) > -1
+                            (category) => category.indexOf(searchCategory) > -1
                           ).length
                         })
-                        .filter(page => {
+                        .filter((page) => {
                           return page.node.frontmatter.tags
                             ? page.node.frontmatter.tags.filter(
-                                tag => tag.indexOf(searchTags) > -1
+                                (tag) => tag.indexOf(searchTags) > -1
                               ).length
                             : page
                         })
@@ -700,15 +729,31 @@ class ReviewReport extends React.Component {
                                 </a>
                               </td>
                               <td>
-                                <Link to={page.node.frontmatter.permalink ? page.node.frontmatter.permalink.replace("docs", "").replace(":basename", page.node.fileInfo.childMdx.fileInfo.name) : `/${page.node.fields.slug}`}>
-                                {page.node.frontmatter.title}{" "}
-                                {page.node.frontmatter.subtitle
-                                  ? ` - ${page.node.frontmatter.subtitle}`
-                                  : null}
+                                <Link
+                                  to={
+                                    page.node.frontmatter.permalink
+                                      ? page.node.frontmatter.permalink
+                                          .replace("docs", "")
+                                          .replace(
+                                            ":basename",
+                                            page.node.fileInfo.childMdx.fileInfo
+                                              .name
+                                          )
+                                      : `/${page.node.fields.slug}`
+                                  }
+                                >
+                                  {page.node.frontmatter.title}{" "}
+                                  {page.node.frontmatter.subtitle
+                                    ? ` - ${page.node.frontmatter.subtitle}`
+                                    : null}
                                 </Link>
                               </td>
                               <td>{page.node.frontmatter.reviewed}</td>
-                              <td>{page.node.frontmatter.cms ? page.node.frontmatter.cms : null}</td>
+                              <td>
+                                {page.node.frontmatter.cms
+                                  ? page.node.frontmatter.cms
+                                  : null}
+                              </td>
                               <td>
                                 {page.node.frontmatter.categories.map(
                                   (category, i) => {
@@ -733,7 +778,11 @@ class ReviewReport extends React.Component {
                                     })
                                   : null}
                               </td>
-                              <td>{page.node.frontmatter.type ? page.node.frontmatter.type : "doc"}</td>
+                              <td>
+                                {page.node.frontmatter.type
+                                  ? page.node.frontmatter.type
+                                  : "doc"}
+                              </td>
                             </tr>
                           )
                         })}
@@ -741,7 +790,6 @@ class ReviewReport extends React.Component {
                   </table>
                 </div>
               </Accordion>
-
             </Layout>
           )
         }}
