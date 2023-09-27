@@ -10,7 +10,7 @@ class NotFoundPage extends React.Component {
     const { pathname } = this.props.location
 
     return (
-      <Layout type="404" containerWidth="narrow">
+      <Layout containerWidth="narrow">
         <SEO
           title="404"
           description="Zoinks! You've hit a URL that doesn't exist. Let's try a search:"
