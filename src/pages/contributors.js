@@ -34,14 +34,11 @@ class Contributors extends React.Component {
         alt: " ",
         name: node.name,
         title: node.bio,
-        link: `/contributors/${node.yamlId}`,
+        linkContent: (
+          <Link to={`/contributors/${node.yamlId}`} title={node.id}></Link>
+        ),
       })
     })
-
-    // <Link
-    //                         to={`/contributors/${node.yamlId}`}
-    //                         title={node.id}
-    //                       >
 
     return (
       <Layout containerWidth={containerWidth}>
