@@ -1,7 +1,7 @@
 import { Link, graphql } from "gatsby"
 
 import HeaderBody from "../components/headerBody"
-import Layout from "../layout/Layout"
+import Layout from "../layout/layout"
 import Popover from "../components/popover"
 import React from "react"
 import SEO from "../layout/seo"

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Layout from "../layout/Layout"
+import Layout from "../layout/layout"
 import SearchField from "./components/searchField"
 //import newGitHubIssueUrl from "new-github-issue-url"
 
@@ -9,12 +9,13 @@ This report provides all links to Dashboard pages and features, for quick
 reference when they are updates or changed in the product.
 */
 
+
 // Helper / Builder Functions //
 /* This function filters an array to unique entities, without changing the
 object type to a set. */
 function uniq(a) {
   var seen = {}
-  return a.filter(function (item) {
+  return a.filter(function(item) {
     return seen.hasOwnProperty(item) ? false : (seen[item] = true)
   })
 }
@@ -23,7 +24,7 @@ function uniq(a) {
 // Create the React Component as a function
 const DashLinks = () => {
   // Data objects
-  const [pages, setPages] = useState([])
+  const [pages, setPages] = useState([]);
   var tertiaryPages = []
 
   /* Query all pages that include a dashboard link, excluding the base domain dashboard.pantheon.io. */
@@ -45,20 +46,19 @@ const DashLinks = () => {
             }
           }
       }`,
-    }
+    };
     fetch(`http://localhost:8000/___graphql`, {
       body: JSON.stringify(body),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
-      method: "POST",
+      method: 'POST',
     })
-      .then((response) => response.json()) // parse JSON from request
-      .then((resultData) => {
-        setPages(resultData.data.allMdx.edges)
-        tertiaryPages = resultData.data.allMdx.edges.filter(
-          //All guide sub-pages
-          (page) => {
+      .then(response => response.json()) // parse JSON from request
+      .then(resultData => {
+        setPages(resultData.data.allMdx.edges);
+        tertiaryPages = resultData.data.allMdx.edges.filter( //All guide sub-pages
+          page => {
             return page.node.fields.slug.match(/\/guides(\/[a-z,\-]*){2}/)
           }
         )
@@ -74,25 +74,19 @@ const DashLinks = () => {
 
   /* This call to the useEffect hook applies the filtering to our results table if either search term has a value.*/
   useEffect(() => {
-    if (searchTitle || searchLinks) {
-      //If either search field has a value...
-      const applyFilter = (
-        data // Define a function to filter the table, using data as a placeholder value,
-      ) =>
+    if (searchTitle || searchLinks) { //If either search field has a value...
+      const applyFilter = data => // Define a function to filter the table, using data as a placeholder value,
         data
-          .filter((page) => {
-            // Filter out objects where the title doesn't match the title search value,
+          .filter(page => { // Filter out objects where the title doesn't match the title search value,
             return (
               page.node.frontmatter.title
                 .toLowerCase()
                 .indexOf(searchTitle.toLowerCase()) >= 0
             )
           })
-          .filter((page) => {
-            // Filter objects where the body doesn't contain the specified link string,
+          .filter(page => { // Filter objects where the body doesn't contain the specified link string,
             return (
-              page.node.body.toLowerCase().indexOf(searchLinks.toLowerCase()) >=
-              0
+              page.node.body.toLowerCase().indexOf(searchLinks.toLowerCase()) >= 0
             )
           })
       setFilteredPages(applyFilter(pages)) //Apply the filter function to the pages,
@@ -106,23 +100,18 @@ const DashLinks = () => {
     return (
       //Construct a table body
       <tbody>
-        {filteredPages.map((page, i) => {
-          // Map over each page and,
+        {filteredPages.map((page, i) => { // Map over each page and,
           return (
-            <tr key={i}>
-              {/*Create a table row*/}
-              <td>{page.node.frontmatter.title || "Partial File"}</td>
-              {/*Provide the page title, or specify a partial file if there isn't one*/}
-              <td>{page.node.fields.slug}</td>
-              {/*Provide the path to the page*/}
-              <td>
-                {uniq(
-                  //Return only one unique instance where,
-                  page.node.body //in the body
-                    .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g)) // there's a reference to a dashboard page,
-                    .map((link, i) => link + "\n") // and list each one on a new line.
-                )}
-              </td>
+            <tr key={i}>{/*Create a table row*/}
+              <td>{page.node.frontmatter.title || "Partial File"}</td>{/*Provide the page title, or specify a partial file if there isn't one*/}
+              <td>{page.node.fields.slug}</td>{/*Provide the path to the page*/}
+              <td>{
+                uniq( //Return only one unique instance where,
+                    page.node.body //in the body
+                      .match(RegExp(/dashboard.pantheon.io\/[a-z-\/]+/g)) // there's a reference to a dashboard page,
+                      .map((link, i) => link + "\n") // and list each one on a new line.
+                  )
+                }</td>
             </tr>
           )
         })}
