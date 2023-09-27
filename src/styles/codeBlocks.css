@@ -95,3 +95,15 @@ span.line-numbers-rows {
   padding-top: 1em;
   padding-left: 1em;
 }
+
+code {
+  background-color: #f0ecff;
+  font-weight: var(--pds-typography-font-weight-semibold);
+  margin-inline: var(--pds-spacing-6xs);
+  padding: var(--pds-spacing-6xs) var(--pds-spacing-4xs);
+}
+
+pre > code {
+  background-color: inherit;
+  font-weight: var(--pds-typography-font-weight-regular);
+}

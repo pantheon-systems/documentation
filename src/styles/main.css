@@ -1,12 +1,5 @@
 /* For local styles not coming from PDS. */
 
-code {
-  background-color: var(--pds-color-neutral-200);
-  font-weight: var(--pds-typography-font-weight-semibold);
-  margin-inline: var(--pds-spacing-6xs);
-  padding: var(--pds-spacing-6xs) var(--pds-spacing-4xs);
-}
-
 /* Landing pages */
 .landing-page__header {
   text-align: center;
