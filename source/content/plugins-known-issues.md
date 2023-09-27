@@ -78,6 +78,13 @@ Plugins and themes with issues resolved (at least partially) by this include the
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 - [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 
+<Alert title="Note"  type="info" >
+
+If your site is using an up-to-date version of the Pantheon WordPress upstream, `FS_METHOD` will automatically be set for you.
+
+</Alert>
+
+
 ## AdThrive Ads
 
 <ReviewDate date="2022-10-10" />
