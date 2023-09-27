@@ -225,6 +225,22 @@ Both the server and index you just created should be displayed on the page.
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal
 
+### Incorrect Solr Version
+
+This error is indicative of Solr 3 being active when Solr 8 is expected:
+
+```
+Server index status - Error while checking server index status: An error occurred while searching, try again later.
+```
+
+When running `drush sapi-search` commands, you may also see:
+
+```
+Apache Tomcat/7.0.68 - Error report HTTP Status 400
+```
+
+This can be fixed by [updating pantheon.yml to use Solr 8](/pantheon-yml#specify-a-solr-version).
+
 ### Diagnose Issues
 
 The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working.
