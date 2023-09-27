@@ -8,6 +8,8 @@ const Alert = ({ title, type, icon, children }) => {
   // Recalibrate types for this site.
   if (type === "danger") {
     type = "warning"
+  } else if (type === "export") {
+    type = "discovery"
   } else {
     type = type
   }
