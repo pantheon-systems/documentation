@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../layout/Layout"
+import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import SVG404 from "../../source/images/404_dark.svg"
 
