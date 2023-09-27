@@ -5,15 +5,6 @@ import SEO from "../layout/seo"
 
 import { AvatarTileList, Container } from "@pantheon-systems/pds-toolkit-react"
 
-{
-  /* @TODO Convert to a React Component */
-}
-const previewFlexPanelItem = {
-  flex: "1 46%",
-  margin: "0px 0px 15px 15px",
-  color: "#333",
-}
-
 // Set container width for search and main content.
 const containerWidth = "narrow"
 
@@ -24,14 +15,12 @@ class Contributors extends React.Component {
     } = this.props
 
     let contributorsList = []
-    //
-    //     console.log(allContributorYaml.edges)
 
     allContributorYaml.edges.map(({ node }) => {
       console.log(node)
       contributorsList.push({
         image: node.avatar,
-        alt: " ",
+        alt: "",
         name: node.name,
         title: node.bio,
         linkContent: (
