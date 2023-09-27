@@ -19,8 +19,14 @@
 .subtopic__list a {
   font-size: 1rem;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .subtopic__list a:hover {
   text-decoration: underline;
+}
+
+.subtopic__icon {
+  margin-inline-end: var(--pds-spacing-2xs);
 }

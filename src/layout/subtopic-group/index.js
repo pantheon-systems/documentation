@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import { Panel } from "@pantheon-systems/pds-toolkit-react"
+import { Icon, Panel } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
@@ -30,7 +30,14 @@ function SubtopicGroup(props) {
                 topic.links.map((link) => (
                   <li key={link.url}>
                     <Link to={link.url}>
-                      {link.icon && <i className={link.icon} />} {link.text}
+                      {link.icon && (
+                        <Icon
+                          iconName={link.icon}
+                          iconSize="lg"
+                          className="subtopic__icon"
+                        />
+                      )}
+                      {link.text}
                     </Link>
                   </li>
                 ))}
