@@ -63,7 +63,7 @@ class ContributorTemplate extends React.Component {
 
                 <div slot="second-item" className="docs-contributor__header">
                   <h1>{contributor.name}</h1>
-                  <div className="docs-contributor__social">
+                  {/* <div className="docs-contributor__social">
                     {links.map((link, i) => {
                       const url = contributor.hasOwnProperty(link.property)
                         ? contributor[link.property]
@@ -74,7 +74,7 @@ class ContributorTemplate extends React.Component {
                         )
                       }
                     })}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div
