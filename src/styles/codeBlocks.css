@@ -56,12 +56,12 @@
 
 .gatsby-highlight-code-line {
   background-color: #efcf1b;
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
   border-left: 0.25em solid #f99;
+  display: block;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 0.75em;
+  padding-right: 1em;
 }
 
 .gatsby-highlight-code-line,
@@ -70,30 +70,25 @@
 }
 
 .gatsby-remark-code-title {
-  margin-bottom: -0.6rem;
-  padding: 0.5em 1em;
+  background-color: var(--pds-color-brand-secondary-default);
+
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  color: white;
+  display: inline;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
     "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
     "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
     monospace;
   font-weight: bolder !important;
-
-  background-color: var(--pds-color-brand-secondary-default);
-  display: inline;
-  color: white;
+  margin-bottom: -0.6rem;
+  padding: 0.5em 1em;
   z-index: 0;
-
-  border-top-left-radius: 0.3em;
-  border-top-right-radius: 0.3em;
-}
-
-div.gatsby-remark-code-title::before {
-  content: "File: ";
 }
 
 span.line-numbers-rows {
-  padding-top: 1em;
   padding-left: 1em;
+  padding-top: 1em;
 }
 
 code {
@@ -106,4 +101,18 @@ code {
 pre > code {
   background-color: inherit;
   font-weight: var(--pds-typography-font-weight-regular);
+}
+
+.gatsby-highlight {
+  margin-block-end: var(--pds-spacing-2xl);
+}
+
+.gatsby-remark-code-title {
+  display: inline-block;
+  margin-block-start: var(--pds-spacing-m);
+  margin-block-end: -7px;
+}
+
+div.gatsby-remark-code-title::before {
+  content: "File: ";
 }
