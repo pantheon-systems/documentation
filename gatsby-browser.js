@@ -3,6 +3,8 @@ import { location, globalHistory } from "@reach/router"
 
 // Import PDS core styles.
 import "./node_modules/@pantheon-systems/pds-toolkit-react/_dist/css/pds-core.css"
+import "./node_modules/@pantheon-systems/pds-toolkit-react/_dist/css/pds-layouts.css"
+import "./node_modules/@pantheon-systems/pds-toolkit-react/_dist/css/pds-components.css"
 
 // Global styles
 import "./src/styles/main.css"
