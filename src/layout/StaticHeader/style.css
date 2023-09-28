@@ -1,4 +1,11 @@
 .docs-static-header {
-  height: token("spacing.6XL" to rem);
   border-bottom: 0.0625rem solid var(--pds-color-border-default);
+}
+
+.docs-static-header__container {
+  align-items: center;
+  column-gap: var(--pds-spacing-xl);
+  display: flex;
+  height: var(--pds-spacing-6xl);
+  justify-content: flex-start;
 }
