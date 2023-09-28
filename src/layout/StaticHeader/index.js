@@ -14,7 +14,7 @@ const StaticHeader = ({ page }) => (
         />
       </div>
       <div className="docs-static-header__link">
-        <Link id="home" to="/" className="pds-button pds-button--navbar">
+        <Link id="home" to="/">
           Docs Home
         </Link>
       </div>
