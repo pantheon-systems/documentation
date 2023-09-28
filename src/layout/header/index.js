@@ -38,8 +38,22 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
+          <Link id="go-live" to="/go-live">
+            Go Live
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
           <Link id="platform" to="/platform">
             Explore Platform Architecture
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="automate" to="/automate">
+            Automate & Integrate
           </Link>
         ),
       },
