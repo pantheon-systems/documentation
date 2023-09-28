@@ -1,5 +1,7 @@
 a.guide-item {
   text-decoration: none;
-  font-weight: var(--pds-typography-font-weight-semibold);
-  font-size: 1.44rem;
+}
+
+a.guide-item:hover {
+  text-decoration: underline;
 }

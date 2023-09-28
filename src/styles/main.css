@@ -22,9 +22,16 @@
   width: 100%;
 }
 
-.landing-page__guides h2 {
+hr.landing-page__guides-separator {
+  width: 96%;
+  margin-block: var(--pds-spacing-m);
+}
+
+.landing-page__guides-title {
   padding-block-start: var(--pds-spacing-xl);
   text-align: center;
+  font-size: var(--pds-typography-size-l);
+  font-weight: var(--pds-typography-font-weight-semibold);
 }
 
 .landing-page__guide-items {

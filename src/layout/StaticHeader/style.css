@@ -1,5 +1,5 @@
 .docs-static-header {
-  border-bottom: 0.0625rem solid var(--pds-color-border-default);
+  border-block-end: 0.0625rem solid var(--pds-color-border-default);
 }
 
 .docs-static-header__container {

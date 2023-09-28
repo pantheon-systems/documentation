@@ -78,7 +78,13 @@ class LandingTemplate extends Component {
                 width={containerWidth}
                 className="landing-page__guides pds-spacing-mar-block-end-2xl"
               >
-                {guide.title && <h2>{guide.title}</h2>}
+                <hr className="landing-page__guides-separator" />
+                {guide.title ? (
+                  <h2 className="landing-page__guides-title">{guide.title}</h2>
+                ) : (
+                  <h2 className="landing-page__guides-title">Popular guides</h2>
+                )}
+
                 <div className="landing-page__guide-items">
                   {guide.links &&
                     guide.links.map((link) =>
