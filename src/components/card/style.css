@@ -13,8 +13,8 @@
   column-gap: var(--pds-spacing-l);
 }
 
-.pds-pantheon-logo,
-.pds-pantheon-logo svg {
+.plugin-card__pantheon-official .pds-pantheon-logo,
+.plugin-card__pantheon-official .pds-pantheon-logo svg {
   height: 3.5rem;
 }
 
