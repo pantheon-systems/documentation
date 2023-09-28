@@ -314,6 +314,17 @@ $conf['plupload_temporary_uri'] ='private://tmp';
 
 ___
 
+## [Replica - Database Configuration](https://www.drupal.org/docs/8/api/database-api/database-configuration)
+
+<ReviewDate date="2023-09-28" />
+
+**Issue:** Pantheon's database replication architecture is incompatible with replica configurations for Drupal, as the application does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
+
+
+**Solution:** Replica configuration is not supported or recommended on Pantheon and there is no known workaround at this time.
+
+___
+
 ## [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 
 <ReviewDate date="2020-05-05" />

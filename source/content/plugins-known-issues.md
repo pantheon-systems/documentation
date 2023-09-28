@@ -533,6 +533,18 @@ ___
 **Solution:** To resolve this issue flush the Hummingbird cache. Note that flushing the cache purges the cache storage, which might affect other processes that use the same storage.
 ___
 
+## HyperDB
+
+<ReviewDate date="2023-09-28" />
+
+**Issue:** Pantheon's database replication architecture is incompatible with HypeDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
+
+
+**Solution:** HyperDB is not supported or recommended on Pantheon and there is no known workaround at this time.
+
+___
+
+
 ## InfiniteWP
 
 <ReviewDate date="2019-10-01" />
@@ -1481,7 +1493,7 @@ ___
   }
   ```
 1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
-   
+
 1. Create the `languages/wpml` directory inside `/files` for each environment.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
