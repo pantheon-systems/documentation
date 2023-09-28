@@ -9,7 +9,7 @@ const Alert = ({ title, type, icon, children }) => {
   if (type === "danger") {
     type = "warning"
   } else if (type === "export") {
-    type = "discovery"
+    type = "code"
   } else {
     type = type
   }
