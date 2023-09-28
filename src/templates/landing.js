@@ -129,30 +129,34 @@ class LandingTemplate extends Component {
                 ))}
             </FlexContainer>
           )}
+
           {/* Topic groups */}
-          <div className="pds-background-default-secondary pds-spacing-pad-block-5xl">
-            <Container
-              width={containerWidth}
-              className="landing-page__topics pds-grid"
-            >
-              {topic.topics_groups &&
-                topic.topics_groups.map((group, key) => (
-                  <LinksCard
-                    className={
-                      topicGroupsColumns === "two"
-                        ? twoColumnClasses
-                        : threeColumnClasses
-                    }
-                    key={group.title}
-                    headingLevel="h2"
-                    headingText={group.title}
-                    linkItems={group.links.map((link, index) => (
-                      <Link to={link.url}>{link.text}</Link>
-                    ))}
-                  />
-                ))}
-            </Container>
-          </div>
+          {topic.topics_groups && (
+            <div className="pds-background-default-secondary pds-spacing-pad-block-5xl">
+              <Container
+                width={containerWidth}
+                className="landing-page__topics pds-grid"
+              >
+                {topic.topics_groups &&
+                  topic.topics_groups.map((group, key) => (
+                    <LinksCard
+                      className={
+                        topicGroupsColumns === "two"
+                          ? twoColumnClasses
+                          : threeColumnClasses
+                      }
+                      key={group.title}
+                      headingLevel="h2"
+                      headingText={group.title}
+                      linkItems={group.links.map((link, index) => (
+                        <Link to={link.url}>{link.text}</Link>
+                      ))}
+                    />
+                  ))}
+              </Container>
+            </div>
+          )}
+
           {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
             <Container
