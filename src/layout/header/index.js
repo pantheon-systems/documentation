@@ -13,15 +13,15 @@ import "./style.css"
 // Links for NavMenu component.
 const mainNavigationLinks = [
   {
-    linkContent: (
-      <Link id="home" to="/">
-        Docs Home
-      </Link>
-    ),
-  },
-  {
     label: "Documentation",
     links: [
+      {
+        linkContent: (
+          <Link id="home" to="/">
+            Docs Home
+          </Link>
+        ),
+      },
       {
         linkContent: (
           <Link id="get-started" to="/get-started">
