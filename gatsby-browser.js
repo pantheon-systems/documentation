@@ -36,3 +36,8 @@ export const onRouteUpdate = () => {
     })
   //console.log("Title: ", document.title) //For debugging
 }
+
+// Trigger resize event once rendered
+export const onInitialClientRender = () => {
+  window.dispatchEvent(new Event("resize"))
+}
