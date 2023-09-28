@@ -1,0 +1,4 @@
+.docs-static-header {
+  height: token("spacing.6XL" to rem);
+  border-bottom: 0.0625rem solid var(--pds-color-border-default);
+}
