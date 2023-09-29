@@ -14,7 +14,7 @@ const propTypes = {
   type: PropTypes.string,
 }
 
-function CallToAction(props) {
+function HeroCTA(props) {
   const { url, title, subTitle, linkText, imageSrc } = props
 
   return (
@@ -42,6 +42,6 @@ function CallToAction(props) {
   )
 }
 
-CallToAction.propTypes = propTypes
+HeroCTA.propTypes = propTypes
 
-export default CallToAction
+export default HeroCTA

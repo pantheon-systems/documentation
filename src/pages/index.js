@@ -3,10 +3,10 @@ import { Link, graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
+import HeroCTA from "../components/HeroCTA"
 
 import ChangelogList from "../pds-middleware/ChangelogList"
 import LinksList from "../pds-middleware/LinksList"
-import CallToAction from "../pds-middleware/CallToAction"
 import TopicsGrid from "../pds-middleware/TopicsGrid"
 
 import { Container, TwoItemLayout } from "@pantheon-systems/pds-toolkit-react"
@@ -28,7 +28,7 @@ class Index extends React.Component {
         />
         <main id="docs-main">
           <Container width={containerWidth}>
-            <CallToAction
+            <HeroCTA
               title={homeYaml.title}
               subTitle={homeYaml.call_to_action.subtitle}
               url={homeYaml.call_to_action.url}
