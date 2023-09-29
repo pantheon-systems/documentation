@@ -51,9 +51,9 @@ class LandingTemplate extends Component {
               spacing="narrow"
               className="landing-page-heading pds-spacing-pad-block-m"
             >
-              <h1 className="pds-spacing-mar-block-none">{topic.title}</h1>
+              <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
               {topic.subtitle && (
-                <div className="pds-lead-text pds-spacing-mar-block-end-xs">
+                <div className="pds-lead-text pds-lead-text--small pds-spacing-mar-block-end-xs">
                   {topic.subtitle}
                 </div>
               )}

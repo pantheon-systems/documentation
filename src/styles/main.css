@@ -3,6 +3,7 @@
 /* Landing pages */
 .landing-page__header {
   text-align: center;
+  width: 80%;
 }
 
 .landing-page__video-background {
