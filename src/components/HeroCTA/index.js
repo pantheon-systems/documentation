@@ -24,6 +24,7 @@ function HeroCTA(props) {
           src="https://cdn.bfldr.com/MEM5087K/at/933t7sx45wwnmsrrjq94z4f/front-page-hero.png?auto=webp&format=png"
           alt=""
           placeholder="none"
+          width={1080}
         />
       </div>
       <div className="hero-cta-text" slot="second-item">
