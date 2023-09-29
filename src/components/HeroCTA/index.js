@@ -15,13 +15,13 @@ const propTypes = {
 }
 
 function HeroCTA(props) {
-  const { url, title, subTitle, linkText, imageSrc } = props
+  const { url, title, subTitle, linkText } = props
 
   return (
     <FlexContainer spacing="wide" className="hero-cta">
       <div className="hero-cta-image" slot="first-item">
         <StaticImage
-          src="https://cdn.bfldr.com/MEM5087K/as/2ckv698krjq73jqvpwqsf4kp/WEB-2x1-ProductDetailFrontEndSites-Hero_v2-1166x792_docs-site?auto=webp&format=png"
+          src="https://cdn.bfldr.com/MEM5087K/at/933t7sx45wwnmsrrjq94z4f/front-page-hero.png?auto=webp&format=png"
           alt=""
           placeholder="blurred"
         />

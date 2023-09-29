@@ -33,7 +33,6 @@ class Index extends React.Component {
               subTitle={homeYaml.call_to_action.subtitle}
               url={homeYaml.call_to_action.url}
               linkText={homeYaml.call_to_action.linkText}
-              imageSrc={homeYaml.call_to_action.imageSrc}
             />
 
             <h2 className="pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-2xl">
@@ -86,7 +85,6 @@ export const pageQuery = graphql`
         subtitle
         url
         linkText
-        imageSrc
       }
       topics {
         title
