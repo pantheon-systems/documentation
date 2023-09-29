@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import "./styles.css"
-
 import { FlexContainer, Icon } from "@pantheon-systems/pds-toolkit-react"
+
+import "./styles.css"
 
 const propTypes = {
   dark: PropTypes.bool,
