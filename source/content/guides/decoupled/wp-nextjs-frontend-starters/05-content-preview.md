@@ -24,7 +24,7 @@ This section provides information on how to configure decoupled content preview 
 Make sure you have:
 
 - Installed and activated the [Pantheon Decoupled WordPress Preview Plugin](https://github.com/pantheon-systems/wp-decoupled-preview) on your instance
-
+- Installed and activated the [Pantheon Decoupled Plugin](https://github.com/pantheon-systems/wp-pantheon-decoupled) on your instance
 ## Configure Environment Variables
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and click **Builds**.
@@ -33,7 +33,13 @@ Make sure you have:
 
     ![Site Environment Variables](../../../../images/decoupled-wp-preview-env-variables.png)
 
-1. Add the keys below and the corresponding values and then click **Save**. These are the secure preview key-value pairs you were provided with and copied when you installed your CMS.
+    <Alert title="Note"  type="info" >
+
+    If you have not already created a preview site within your WordPress instance, refer to the [Decoupled Kit preview configuration documentation](https://decoupledkit.pantheon.io/docs/backend-starters/decoupled-wordpress/configuring-preview-site) before proceeding.
+
+    </Alert>
+
+1. Add the keys below and the corresponding values and then click **Save**. These are the secure preview key-value pairs associated with your site. Their values can be found under the **Environment Variables** action in the **Settings** >> **Pantheon Front-End Sites** section of your WordPress instance. Refer to [Decoupled Kit project creation documentation](https://decoupledkit.pantheon.io/docs/backend-starters/decoupled-wordpress/creating-a-new-project#completing-your-configuration) for more information.
 
     - `WP_APPLICATION_USERNAME`
     - `WP_APPLICATION_PASSWORD`

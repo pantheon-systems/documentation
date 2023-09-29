@@ -73,10 +73,6 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 
 [Object Cache](/object-cache) provides an alternative caching backend. It takes caching work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers looking to manage queues, or do custom caching of their own.
 
-### Consider MySQL Replication (WordPress)
-
-[MySQL replication](/guides/mariadb-mysql/hyperdb) rapidly copies content from the primary database to a replica database. This allows you to spread requests across multiple databases to improve site performance and load times.
-
 ## More Resources
 
 - [Access MySQL Databases](/guides/mariadb-mysql/mysql-access)
