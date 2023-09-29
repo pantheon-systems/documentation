@@ -23,7 +23,7 @@ function HeroCTA(props) {
         <StaticImage
           src="https://cdn.bfldr.com/MEM5087K/at/933t7sx45wwnmsrrjq94z4f/front-page-hero.png?auto=webp&format=png"
           alt=""
-          placeholder="blurred"
+          placeholder="none"
         />
       </div>
       <div className="hero-cta-text" slot="second-item">
