@@ -1,0 +1,8 @@
+ul.three-column-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.three-column-links.pds-grid {
+  row-gap: 1rem;
+}

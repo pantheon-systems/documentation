@@ -1,9 +1,12 @@
 import React from "react"
 
-const CardGroup = props => {
+const CardGroup = (props) => {
   return (
-    <div className="flex-panel-group">
-      {props.children.map(card => {
+    <div
+      className="pds-grid
+    pds-spacing-pad-block-start-l pds-spacing-pad-block-end-3xl"
+    >
+      {props.children.map((card) => {
         return card
       })}
     </div>

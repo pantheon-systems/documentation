@@ -1,31 +1,18 @@
 import React from "react"
-import './style.css';
+
+import { Icon } from "@pantheon-systems/pds-toolkit-react"
+
+import "./style.css"
 
 const Download = ({ file }) => {
   const downloadPath = `/docs/scripts/${file}.txt`
   return (
-    <>
-      <div
-        className="script-file-header"
-      >
+    <div className="script-file-download">
+      <a href={downloadPath} download={file} className="pds-button">
         {file}
-
-        <a href={downloadPath}
-          download={file}
-        >
-          <button
-            className="btn btn-default btn-download"
-          >
-            <i
-              className="fa fa-download"
-              aria-hidden="true"
-            >
-            </i>
-            {` Download File`}
-          </button>
-        </a>
-      </div>
-    </>
+        <Icon iconName="download" iconSize="lg" />
+      </a>
+    </div>
   )
 }
 

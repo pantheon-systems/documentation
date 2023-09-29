@@ -1,0 +1,12 @@
+.changelog-preview {
+  margin-block-end: var(--pds-spacing-5xl);
+}
+
+.changelog-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-block-end: var(--pds-spacing-3xl);
+  padding: 0;
+  row-gap: var(--pds-spacing-l);
+}

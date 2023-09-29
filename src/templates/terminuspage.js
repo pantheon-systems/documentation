@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../layout/layout"
+import GuideLayout from "../layout/GuideLayout"
 import HeaderBody from "../components/headerBody"
 import Callout from "../components/callout"
 import Alert from "../components/alert"
@@ -27,6 +27,9 @@ import Commands from "../components/commands"
 import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
 import Partial from "../components/partial"
+import SearchBar from "../layout/SearchBar"
+
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
@@ -115,7 +118,6 @@ const items = [
     link: "/terminus/terminus-3-0",
     title: "Terminus 3",
   },
-
 ]
 
 class TerminusTemplate extends React.Component {
@@ -124,8 +126,8 @@ class TerminusTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -136,8 +138,8 @@ class TerminusTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -147,7 +149,6 @@ class TerminusTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
-    const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const ifCommandsDate =
       node.fields.slug == "/terminus/commands"
@@ -158,9 +159,17 @@ class TerminusTemplate extends React.Component {
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
 
+    // Preprocess content region layout if has TOC or not.
+    const hasTOC = node.frontmatter.showtoc
+    const ContainerDiv = ({ children }) => (
+      <div className="content-wrapper">{children}</div>
+    )
+    const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
+
     return (
-      <Layout>
+      <GuideLayout>
         <SEO
+          slot="seo"
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
@@ -168,47 +177,37 @@ class TerminusTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-          <div className="container-fluid">
-            <div className="row col-md-10 guide-nav manual-guide-toc-well">
-              <Navbar
+        <Navbar
+          slot="guide-menu"
+          title={node.frontmatter.title}
+          items={items}
+          activePage={node.fields.slug}
+        />
+        <ContentLayoutType slot="guide-content">
+          <SearchBar slot="content" page="default" />
+          <main slot="content" id="doc" className="terminus">
+            <article className="doc guide-doc-body pds-spacing-pad-block-end-xl">
+              <HeaderBody
                 title={node.frontmatter.title}
-                items={items}
-                activePage={node.fields.slug}
+                subtitle={node.frontmatter.subtitle}
+                description={node.frontmatter.description}
+                slug={node.fields.slug}
+                contributors={node.frontmatter.contributors}
+                featured={node.frontmatter.featuredcontributor}
+                editPath={node.fields.editPath}
+                reviewDate={ifCommandsDate}
+                isoDate={ifCommandsISO}
               />
-              <main id="doc" className="terminus col-md-9 guide-doc-body">
-                <div className="row guide-content-well">
-                  <article
-                    className={`col-xs-${contentCols} col-md-${contentCols}`}
-                  >
-                    <HeaderBody
-                      title={node.frontmatter.title}
-                      subtitle={node.frontmatter.subtitle}
-                      description={node.frontmatter.description}
-                      slug={node.fields.slug}
-                      contributors={node.frontmatter.contributors}
-                      featured={node.frontmatter.featuredcontributor}
-                      editPath={node.fields.editPath}
-                      reviewDate={ifCommandsDate}
-                      isoDate={ifCommandsISO}
-                    />
-                    <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{node.body}</MDXRenderer>
-                    </MDXProvider>
-                  </article>
-                  {node.frontmatter.showtoc && (
-                    <div
-                      className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-                      role="complementary"
-                    >
-                      <TOC title="Contents" />
-                    </div>
-                  )}
-                </div>
-              </main>
-            </div>
-          </div>
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{node.body}</MDXRenderer>
+              </MDXProvider>
+            </article>
+          </main>
+          {hasTOC && <TOC slot="sidebar" title="Contents" />}
+        </ContentLayoutType>
+
         <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
-      </Layout>
+      </GuideLayout>
     )
   }
 }

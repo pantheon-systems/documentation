@@ -934,7 +934,6 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
-Note that `active={true}` is required for each first or default tab. Without it, the tabs will still load, but will appear broken until the reader clicks on a tab.
 
 <Example>
 
@@ -1139,4 +1138,3 @@ Here are code snippets you can use to direct users to the correct location:
 [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 
 ```
-

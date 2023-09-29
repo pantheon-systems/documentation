@@ -1,12 +1,16 @@
 import React from "react"
 
+import { Icon } from "@pantheon-systems/pds-toolkit-react"
+
+import "./style.css"
+
 const ContributorLink = ({ url, icon }) => {
   return (
-    <h2>
+    <div className="docs-contributor-link">
       <a aria-hidden="true" href={url} target="_blank">
-        <i className={`icon icon-${icon}`} />
+        <Icon iconName={icon} iconSize="2xl" />
       </a>
-    </h2>
+    </div>
   )
 }
 

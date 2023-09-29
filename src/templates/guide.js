@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../layout/layout"
+import GuideLayout from "../layout/GuideLayout"
 import HeaderBody from "../components/headerBody"
 import Callout from "../components/callout"
 import Alert from "../components/alert"
@@ -36,6 +36,9 @@ import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 import LocaldevChangelog from "../components/localdevChangelog"
+import SearchBar from "../layout/SearchBar"
+
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
@@ -71,8 +74,8 @@ class GuideTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -83,8 +86,8 @@ class GuideTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -94,9 +97,8 @@ class GuideTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
-    const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
-    const items = this.props.data.allMdx.edges.map(item => {
+    const items = this.props.data.allMdx.edges.map((item) => {
       return {
         id: item.node.id,
         link: item.node.fields.slug,
@@ -104,9 +106,17 @@ class GuideTemplate extends React.Component {
       }
     })
 
+    // Preprocess content region layout if has TOC or not.
+    const hasTOC = node.frontmatter.showtoc
+    const ContainerDiv = ({ children }) => (
+      <div className="content-wrapper">{children}</div>
+    )
+    const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
+
     return (
-      <Layout>
+      <GuideLayout>
         <SEO
+          slot="seo"
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           keywords={node.frontmatter.tags}
@@ -115,46 +125,40 @@ class GuideTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-          <div className="container">
-            <div className="row col-md-12 guide-nav manual-guide-toc-well">
-              <Navbar
+        <Navbar
+          slot="guide-menu"
+          title={node.frontmatter.title}
+          activePage={node.fields.slug}
+          items={items}
+        />
+        <ContentLayoutType slot="guide-content">
+          <SearchBar slot="content" page="default" />
+          <main slot="content" id="doc">
+            <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
+              <HeaderBody
                 title={node.frontmatter.title}
-                activePage={node.fields.slug}
-                items={items}
+                subtitle={node.frontmatter.subtitle}
+                description={node.frontmatter.description}
+                slug={node.fields.slug}
+                contributors={node.frontmatter.contributors}
+                featured={node.frontmatter.featuredcontributor}
+                editPath={node.fields.editPath}
+                reviewDate={node.frontmatter.reviewed}
+                isoDate={isoDate.frontmatter.reviewed}
               />
-              <main id="docs-main" className="col-md-9 guide-doc-body">
-                <div className="row guide-content-well">
-                  <article
-                    className={`col-xs-${contentCols} col-md-${contentCols} doc`}
-                    id="doc"
-                  >
-                    <HeaderBody
-                      title={node.frontmatter.title}
-                      subtitle={node.frontmatter.subtitle}
-                      description={node.frontmatter.description}
-                      slug={node.fields.slug}
-                      contributors={node.frontmatter.contributors}
-                      featured={node.frontmatter.featuredcontributor}
-                      editPath={node.fields.editPath}
-                      reviewDate={node.frontmatter.reviewed}
-                      isoDate={isoDate.frontmatter.reviewed}
-                    />
-                    <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{node.body}</MDXRenderer>
-                    </MDXProvider>
-                  </article>
-                  {node.frontmatter.showtoc && (
-                    <TOC title="Contents" />
-                  )}
-                </div>
-               <NavButtons
-                  prev={this.props.pageContext.previous}
-                  next={this.props.pageContext.next}
-                />
-              </main>
-            </div>
-          </div>
-      </Layout>
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{node.body}</MDXRenderer>
+              </MDXProvider>
+            </article>
+          </main>
+          <NavButtons
+            prev={this.props.pageContext.previous}
+            next={this.props.pageContext.next}
+          />
+
+          {hasTOC && <TOC slot="sidebar" title="Contents" />}
+        </ContentLayoutType>
+      </GuideLayout>
     )
   }
 }
@@ -201,7 +205,7 @@ export const pageQuery = graphql`
       filter: {
         fileAbsolutePath: { ne: null }
         fields: { guide_directory: { eq: $guide_directory } }
-        frontmatter: { draft: {ne: true}}
+        frontmatter: { draft: { ne: true } }
       }
       sort: { fields: [fileAbsolutePath], order: ASC }
     ) {
