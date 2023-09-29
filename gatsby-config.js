@@ -27,6 +27,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-yaml`,
+    `gatsby-plugin-image`,
     // Supports SCSS stylesheets. Prime to be removed with a CSS refactor
     `gatsby-plugin-sass`, //https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/
     {

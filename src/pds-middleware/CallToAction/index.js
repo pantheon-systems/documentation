@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import "./styles.css"
 
 import { FlexContainer, Icon } from "@pantheon-systems/pds-toolkit-react"
@@ -19,7 +20,12 @@ function CallToAction(props) {
   return (
     <FlexContainer spacing="wide" className="hero-cta">
       <div className="hero-cta-image" slot="first-item">
-        <img src={imageSrc} alt="" />
+        {/* <img src={imageSrc} alt="" /> */}
+        <StaticImage
+          src="https://cdn.bfldr.com/MEM5087K/as/2ckv698krjq73jqvpwqsf4kp/WEB-2x1-ProductDetailFrontEndSites-Hero_v2-1166x792_docs-site?auto=webp&format=png"
+          alt=""
+          placeholder="none"
+        />
       </div>
       <div className="hero-cta-text" slot="second-item">
         <h1>{title}</h1>
