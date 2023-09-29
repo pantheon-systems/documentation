@@ -28,8 +28,6 @@ module.exports = {
   plugins: [
     `gatsby-transformer-yaml`,
     `gatsby-plugin-image`,
-    // Supports SCSS stylesheets. Prime to be removed with a CSS refactor
-    `gatsby-plugin-sass`, //https://www.gatsbyjs.com/plugins/gatsby-plugin-sass/
     {
       // Handles inserting the GTM js blob into the site
       resolve: `gatsby-plugin-google-tagmanager`,
