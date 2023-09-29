@@ -1,5 +1,14 @@
 /* For local styles not coming from PDS. */
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
 /* Landing pages */
 .landing-page__header {
   text-align: center;
