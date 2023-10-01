@@ -107,3 +107,24 @@
   background-color: var(--pds-color-pager-background-active);
   color: var(--pds-color-pager-foreground-active);
 }
+
+/* Hack to add previous/next icons from PDS.  */
+/* TODO: Remove if this can be configured in Addsearch instead */
+.addsearch-pagination button[data-page="previous"],
+.addsearch-pagination button[data-page="next"] {
+  color: transparent;
+  padding-block-end: var(--pds-spacing-4xs);
+}
+
+.addsearch-pagination button[data-page="previous"]:before,
+.addsearch-pagination button[data-page="next"]:before {
+  padding-inline-start: var(--pds-spacing-2xs);
+}
+
+.addsearch-pagination button[data-page="previous"]:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 448 512" height="1rem" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet" focusable="false" class="pds-icon pds-icon--md pds-icon--arrowLeft" classes="pds-page__icon"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" fill="currentColor"></path></svg>');
+}
+
+.addsearch-pagination button[data-page="next"]:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 448 512" height="1rem" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet" focusable="false" class="pds-icon pds-icon--md pds-icon--arrowRight" classes="pds-page__icon"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="currentColor"></path></svg>');
+}
