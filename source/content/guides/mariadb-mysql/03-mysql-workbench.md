@@ -17,7 +17,7 @@ permalink: docs/guides/mariadb-mysql/mysql-workbench
 
 This section provides information on how to use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) to access a database on Pantheon.
 
-[MySQL Workbench](https://dev.mysql.com/downloads/workbench/) provides database administrators and developers with integrated tools for: 
+[MySQL Workbench](https://dev.mysql.com/downloads/workbench/) provides database administrators and developers with integrated tools for:
 
 - Database design and modeling
 
@@ -29,11 +29,11 @@ This section provides information on how to use [MySQL Workbench](https://dev.my
 
 ## Get Started
 
-Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the sites Dashboard. Refer to [Accessing MySQL database](/guides/mariadb-mysql/mysql-access) for detailed information. 
+Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the sites Dashboard. Refer to [Accessing MySQL database](/guides/mariadb-mysql/mysql-access) for detailed information.
 
 ## Create a New MySQL Connection
 
-1. Start MySQL Workbench and click the **+** icon on the top left of the screen to create a MySQL connection. 
+1. Start MySQL Workbench and click the **+** icon on the top left of the screen to create a MySQL connection.
 
 1. Enter the information to connect to the database. The following fields are required:
 
@@ -66,7 +66,7 @@ You can now administer your database. There will be a new entry on the Workbench
 
 ## Troubleshooting MySQL Connections
 
-Refer to [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access#troubleshooting-mysql-connections) for more information.
+Refer to [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access#Troubleshooting-MySQL-Connections) for more information.
 
 ## More Resources
 
