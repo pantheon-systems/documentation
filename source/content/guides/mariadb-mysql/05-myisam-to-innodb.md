@@ -146,14 +146,14 @@ die(0);
 
 ## Advanced Method via Command Line
 
-Use the script below if you want to run the script from the command line instead of adding it to your codebase. 
+Use the script below if you want to run the script from the command line instead of adding it to your codebase.
 
 ### Before You Begin
 
 Make sure you have:
 
 - PHP installed on your computer
-- Your [database connection info](/guides/mariadb-mysql/mysql-access#accessing-the-database-directly)
+- Your [database connection info](/guides/mariadb-mysql/mysql-access#Access-Your-Database-Directly)
 
 
 1. Copy the script below.
@@ -216,7 +216,7 @@ Make sure you have:
     - **Password:** This is your MySQL password for the user you specified in the line above.
 
     - **Database:** This is the name of the database that contains the tables. If you are a pantheon customer, this is `pantheon`. If you are not a Pantheon customer, you will need to get this from your host.
-    
+
 1. Save the script in a file with a `.php` extension in your home directory, and set it as executable.
 
 1. Execute the program from a command window.
