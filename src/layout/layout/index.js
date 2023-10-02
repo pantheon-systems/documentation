@@ -1,4 +1,4 @@
-import React, { Components } from "react"
+import React, { Components, useEffect } from "react"
 import Header from "../header"
 import Footer from "../footer"
 
@@ -19,9 +19,18 @@ const secondaryCTA = {
   url: "https://pantheon.io/developers/office-hours?docs",
 }
 
+// Apply body class based on container width.
 const Layout = ({ children, containerWidth, hasCta, pageType = "default" }) => {
+  useEffect(() => {
+    document.body.classList.add(`docs-search--${containerWidth}`)
+
+    return () => {
+      document.body.classList.remove(`docs-search--${containerWidth}`)
+    }
+  }, [])
+
   return (
-    <div className="pantheon-docs">
+    <div className={`pantheon-docs pantheon-docs--${containerWidth}`}>
       <Header page={pageType} />
       <Container width={containerWidth}>
         <SearchBar page={pageType} />

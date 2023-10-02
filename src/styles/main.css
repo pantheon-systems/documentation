@@ -9,6 +9,12 @@ body {
   position: relative;
 }
 
+/* Customize addsearch dropdown to  be full width */
+.adds-components-widget-results {
+  left: 10% !important;
+  width: 80% !important;
+}
+
 /* Landing pages */
 .landing-page__header {
   text-align: center;
