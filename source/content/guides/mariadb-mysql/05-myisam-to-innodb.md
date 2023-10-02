@@ -153,7 +153,7 @@ Use the script below if you want to run the script from the command line instead
 Make sure you have:
 
 - PHP installed on your computer
-- Your [database connection info](/guides/mariadb-mysql/mysql-access#Access-Your-Database-Directly)
+- Your [database connection info](/guides/mariadb-mysql/mysql-access#access-your-database-directly)
 
 
 1. Copy the script below.
