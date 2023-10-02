@@ -5,7 +5,9 @@
   padding-block: var(--pds-spacing-l);
 }
 
-.addsearch-searchresults-no-results h2 {
+.addsearch-searchresults-no-results h2,
+.addsearch-searchresults .number-of-results,
+.addsearch-searchresults .number-of-results h2 {
   font-size: var(--pds-typography-size-m);
   font-weight: var(--pds-typography-font-weight-regular);
   padding-block: var(--pds-spacing-l);
