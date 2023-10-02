@@ -66,7 +66,7 @@ You can now administer your database. There will be a new entry on the Workbench
 
 ## Troubleshooting MySQL Connections
 
-Refer to [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access#Troubleshooting-MySQL-Connections) for more information.
+Refer to [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access#troubleshooting-mysql-connections) for more information.
 
 ## More Resources
 

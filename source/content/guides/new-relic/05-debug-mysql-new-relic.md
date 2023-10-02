@@ -76,7 +76,7 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
 1. Navigate back to the site's panel on the Dashboard and get the SFTP connection information.
 
-1. Follow the steps in the [MySQL Access](/guides/mariadb-mysql/mysql-access#Access-Your-Database-Directly) doc to connect to MySQL via SFTP through your terminal or an FTP program that supports the SFTP protocol.
+1. Follow the steps in the [MySQL Access](/guides/mariadb-mysql/mysql-access#access-your-database-directly) doc to connect to MySQL via SFTP through your terminal or an FTP program that supports the SFTP protocol.
 
 1. [Download database log files](/guides/logs-pantheon/access-logs#database-log-files) and review the `mysql-slow-query.log` file.
 
