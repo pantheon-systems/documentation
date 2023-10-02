@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.2.1"
+        "version": "3.2.2"
     },
     "commands": [
         {
@@ -3762,13 +3762,13 @@
         },
         {
             "name": "env:code-rebuild",
-            "description": "Rebuild code for the given environment (only dev and multidev allowed).",
+            "description": "Moves code to the specified environment's runtime from the associated git branch, retriggering Composer builds for sites using Integrated Composer. (Not applicable for Test and Live environments which run on git tags made from the Dev environment's git history.)",
             "usage": [
                 "env:code-rebuild <site>.<env>",
                 "env:code-rebuild <site>.<env> Sync code into the <site>'s Dev or multidev environment.",
                 "code-rebuild"
             ],
-            "help": "Rebuild code for the given environment (only dev and multidev allowed).",
+            "help": "Moves code to the specified environment's runtime from the associated git branch, retriggering Composer builds for sites using Integrated Composer. (Not applicable for Test and Live environments which run on git tags made from the Dev environment's git history.)",
             "definition": {
                 "arguments": {
                     "site_env": {
@@ -4905,7 +4905,7 @@
             "name": "env:wake",
             "description": "Wakes the environment by pinging it. Note: Development environments and Sandbox sites will automatically sleep after a period of inactivity.",
             "usage": [
-                "env:wake <site>.<env>",
+                "env:wake [--retry [RETRY]] [--delay [DELAY]] [--] <site>.<env>",
                 "env:wake <site>.<env> Wakes <site>'s <env> environment by pinging it."
             ],
             "help": "Wakes the environment by pinging it. Note: Development environments and Sandbox sites will automatically sleep after a period of inactivity.",
@@ -4920,6 +4920,24 @@
                     }
                 },
                 "options": {
+                    "retry": {
+                        "name": "--retry",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Number of times to retry if the environment is not awake",
+                        "default": 3
+                    },
+                    "delay": {
+                        "name": "--delay",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Number of seconds to wait between retries",
+                        "default": 3
+                    },
                     "help": {
                         "name": "--help",
                         "shortcut": "-h",
@@ -6059,6 +6077,121 @@
                     }
                 },
                 "options": {
+                    "help": {
+                        "name": "--help",
+                        "shortcut": "-h",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display help for the given command. When no command is given display help for the <info>list<\/info> command",
+                        "default": false
+                    },
+                    "quiet": {
+                        "name": "--quiet",
+                        "shortcut": "-q",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not output any message",
+                        "default": false
+                    },
+                    "verbose": {
+                        "name": "--verbose",
+                        "shortcut": "-v|-vv|-vvv",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+                        "default": false
+                    },
+                    "version": {
+                        "name": "--version",
+                        "shortcut": "-V",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display this application version",
+                        "default": false
+                    },
+                    "ansi": {
+                        "name": "--ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Force (or disable --no-ansi) ANSI output",
+                        "default": null
+                    },
+                    "no-ansi": {
+                        "name": "--no-ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Negate the \"--ansi\" option",
+                        "default": false
+                    },
+                    "no-interaction": {
+                        "name": "--no-interaction",
+                        "shortcut": "-n",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not ask any interactive question",
+                        "default": false
+                    },
+                    "define": {
+                        "name": "--define",
+                        "shortcut": "-D",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": true,
+                        "description": "Define a configuration item value.",
+                        "default": []
+                    },
+                    "yes": {
+                        "name": "--yes",
+                        "shortcut": "-y",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Answer all confirmations with \"yes\"",
+                        "default": false
+                    }
+                }
+            },
+            "hidden": false
+        },
+        {
+            "name": "local:dockerize",
+            "description": "Create new backup of your live site db and download to $HOME\/pantheon-local-copies\/{Site}\/db",
+            "usage": [
+                "local:dockerize [--overwrite] [--] <site>",
+                "local:dockerize <site> Create new backup of your live site and download to $HOME\/pantheon-local-copies\/{Site}\/db",
+                "local:dockerize <site> --overwrite Same + overwrite existing file",
+                "ldz"
+            ],
+            "help": "Create new backup of your live site db and download to $HOME\/pantheon-local-copies\/{Site}\/db",
+            "definition": {
+                "arguments": {
+                    "site": {
+                        "name": "site",
+                        "is_required": true,
+                        "is_array": false,
+                        "description": "Site",
+                        "default": null
+                    }
+                },
+                "options": {
+                    "overwrite": {
+                        "name": "--overwrite",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Overwrite existing file",
+                        "default": false
+                    },
                     "help": {
                         "name": "--help",
                         "shortcut": "-h",
@@ -7907,6 +8040,138 @@
                         "is_value_required": true,
                         "is_multiple": false,
                         "description": "Available fields: Name (name), Status (status), Subscribed On (subscribed), State (state)",
+                        "default": ""
+                    },
+                    "field": {
+                        "name": "--field",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": false,
+                        "description": "Select just one field, and force format to *string*.",
+                        "default": ""
+                    },
+                    "help": {
+                        "name": "--help",
+                        "shortcut": "-h",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display help for the given command. When no command is given display help for the <info>list<\/info> command",
+                        "default": false
+                    },
+                    "quiet": {
+                        "name": "--quiet",
+                        "shortcut": "-q",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not output any message",
+                        "default": false
+                    },
+                    "verbose": {
+                        "name": "--verbose",
+                        "shortcut": "-v|-vv|-vvv",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+                        "default": false
+                    },
+                    "version": {
+                        "name": "--version",
+                        "shortcut": "-V",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display this application version",
+                        "default": false
+                    },
+                    "ansi": {
+                        "name": "--ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Force (or disable --no-ansi) ANSI output",
+                        "default": null
+                    },
+                    "no-ansi": {
+                        "name": "--no-ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Negate the \"--ansi\" option",
+                        "default": false
+                    },
+                    "no-interaction": {
+                        "name": "--no-interaction",
+                        "shortcut": "-n",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not ask any interactive question",
+                        "default": false
+                    },
+                    "define": {
+                        "name": "--define",
+                        "shortcut": "-D",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": true,
+                        "description": "Define a configuration item value.",
+                        "default": []
+                    },
+                    "yes": {
+                        "name": "--yes",
+                        "shortcut": "-y",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Answer all confirmations with \"yes\"",
+                        "default": false
+                    }
+                }
+            },
+            "hidden": false
+        },
+        {
+            "name": "org:info",
+            "description": "Displays information about an organization.",
+            "usage": [
+                "org:info [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <organization>",
+                "org:info <organization> Displays information about an organization.",
+                "org"
+            ],
+            "help": "Displays information about an organization.",
+            "definition": {
+                "arguments": {
+                    "organization": {
+                        "name": "organization",
+                        "is_required": true,
+                        "is_array": false,
+                        "description": "Organization name, label, or ID",
+                        "default": null
+                    }
+                },
+                "options": {
+                    "format": {
+                        "name": "--format",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": false,
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,string,table,tsv,var_dump,var_export,xml,yaml",
+                        "default": "table"
+                    },
+                    "fields": {
+                        "name": "--fields",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": false,
+                        "description": "Available fields: ID (id), Name (name), Label (label)",
                         "default": ""
                     },
                     "field": {
@@ -16030,6 +16295,7 @@
                 "lc",
                 "lcp",
                 "ldb",
+                "ldz",
                 "lf",
                 "list",
                 "login",
@@ -16038,6 +16304,7 @@
                 "metrics",
                 "mts",
                 "multidevs",
+                "org",
                 "orgs",
                 "payment-methods",
                 "plans",
@@ -16174,6 +16441,7 @@
             "commands": [
                 "local:clone",
                 "local:commitAndPush",
+                "local:dockerize",
                 "local:getLiveDB",
                 "local:getLiveFiles"
             ]
@@ -16223,6 +16491,7 @@
         {
             "id": "org",
             "commands": [
+                "org:info",
                 "org:list",
                 "org:people:add",
                 "org:people:list",
