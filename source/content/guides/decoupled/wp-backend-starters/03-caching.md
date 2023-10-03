@@ -1,5 +1,5 @@
 ---
-title: WordPress Starter for Front-End Sites
+title: WordPress Backend Starter for Front-End Sites
 subtitle: Caching Recommendations
 description: Learn about caching recommendations for your WordPress backend starter kit.
 tags: [webops, workflow, decoupled]
