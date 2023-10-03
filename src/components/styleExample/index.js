@@ -1,10 +1,8 @@
 import React from "react"
-import './style.css';
+import "./style.css"
 
 const Example = ({ children }) => (
-  <div className={`style-example`} >
-    {children}
-  </div>
+  <div className={`style-example`}>{children}</div>
 )
 
 export default Example

@@ -4,7 +4,7 @@ const matter = require('gray-matter');
 var fs = require('fs-extra')
 
 /*
-For additional reference material, see 
+For additional reference material, see
 https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
 
 The contents of this file define how the source content is converted
@@ -127,11 +127,10 @@ exports.createPages = ({ graphql, actions }) => {
     {
       allDocs: allMdx(
         filter: {
-          fields: {
-            slug: {regex: "/^((?!guides|changelog|partials).)*$/"}
-          },
-          fileAbsolutePath: { regex: "/content/"}
-          frontmatter: { draft: {ne: true}}
+          fileAbsolutePath: { regex: "/content(?!/(partials|changelog|guides)/)/"}
+          frontmatter: {
+            draft: {ne: true}
+          }
         }
       ) {
         edges {

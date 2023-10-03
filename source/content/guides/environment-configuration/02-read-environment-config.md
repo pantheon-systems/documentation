@@ -19,7 +19,7 @@ This section provides information on how to use database credentials for Object 
 
 You should never copy and paste credentials from your Dashboard into any of your site's code.
 
-Database credentials, [Object Cache](/guides/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
+Database credentials, [Object Cache](/object-cache) authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
 ```php
 <?php var_dump($_ENV); ?>
@@ -58,7 +58,7 @@ extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/guides/object-cache/enable-object-cache) in `settings.php`. For example, in Drupal:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Object Cache configurations](/object-cache/drupal) in `settings.php`. For example, in Drupal:
 
 ```php
 // All Pantheon Environments.
@@ -166,7 +166,7 @@ array(63) {
 
 ## Setting Environment Variables
 
-It is not possible to set environment variables on Pantheon. However, there are three common solutions you can use instead. 
+It is not possible to set environment variables on Pantheon. However, there are three common solutions you can use instead.
 
 ### Terminus Secrets Plugin
 
@@ -181,7 +181,7 @@ You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/te
 ```bash
 $secrets_json_text = file_get_contents('/files/private/secrets.json');
 $secrets_data = json_decode($secrets_json_text, TRUE);
-define('EXAMPLE_API_KEY', $data['example_api_key']);
+define('EXAMPLE_API_KEY', $secrets_data['example_api_key']);
 ```
 
 </Tab>
@@ -240,8 +240,8 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
     $secrets_json_text = file_get_contents('/files/private/' . $secrets_filename);
     $secrets_data = json_decode($secrets_json_text, TRUE);
 
-    define('SENDGRID_API_KEY', $data['sendgrid_api_key']);
-    define('SOME_OTHER_OPTION', $data['other_key_example']);
+    define('SENDGRID_API_KEY', $secrets_data['sendgrid_api_key']);
+    define('SOME_OTHER_OPTION', $secrets_data['other_key_example']);
 }
 ```
 

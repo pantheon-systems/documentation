@@ -1,0 +1,28 @@
+a.glossary__letter-link,
+a.glossary__term-link {
+  text-decoration: none;
+  color: var(--pds-color-text-default);
+  display: block;
+}
+
+a.glossary__letter-link:hover,
+a.glossary__term-link:hover {
+  color: var(--pds-color-link-hover);
+}
+
+a.glossary__letter-link {
+  margin-block-start: var(--pds-spacing-4xl);
+}
+
+a.glossary__letter-link:first-of-type {
+  margin-block-start: var(--pds-spacing-xl);
+}
+
+a.glossary__term-link {
+  margin-block-start: var(--pds-spacing-3xl);
+}
+
+.glossary hr {
+  margin-block-start: var(--pds-spacing-4xs);
+  margin-block-end: var(--pds-spacing-xl);
+}

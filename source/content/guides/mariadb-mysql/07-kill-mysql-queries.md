@@ -27,7 +27,7 @@ Make your site faster. Check out our free on-demand training, where you'll learn
 
 ## Identify Long-Running Queries
 
-1. Create a local [MySQL connection](/guides/mariadb-mysql/mysql-access#accessing-the-database-directly) to the site's database.
+1. Create a local [MySQL connection](/guides/mariadb-mysql/mysql-access#access-your-database-directly) to the site's database.
 
 1. Run the following command to show a list of active threads:
 
@@ -71,11 +71,7 @@ Use your site's [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log) to troubl
 
 Most website frameworks like Drupal and WordPress use the database to cache internal application objects which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Because the database also handles many queries for normal page requests, it is the most common bottleneck causing increased load-times.
 
-[Object Cache](/guides/object-cache) provides an alternative caching backend. It takes caching work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers looking to manage queues, or do custom caching of their own.
-
-### Consider MySQL Replication (WordPress)
-
-[MySQL replication](/guides/mariadb-mysql/hyperdb) rapidly copies content from the primary database to a replica database. This allows you to spread requests across multiple databases to improve site performance and load times.
+[Object Cache](/object-cache) provides an alternative caching backend. It takes caching work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other features for developers looking to manage queues, or do custom caching of their own.
 
 ## More Resources
 

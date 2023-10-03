@@ -225,6 +225,22 @@ Both the server and index you just created should be displayed on the page.
 
 ## Troubleshooting Pantheon Search with Solr 8 for Drupal
 
+### Incorrect Solr Version
+
+This error is indicative of Solr 3 being active when Solr 8 is expected:
+
+```
+Server index status - Error while checking server index status: An error occurred while searching, try again later.
+```
+
+When running `drush sapi-search` commands, you may also see:
+
+```
+Apache Tomcat/7.0.68 - Error report HTTP Status 400
+```
+
+This can be fixed by [updating pantheon.yml to use Solr 8](/pantheon-yml#specify-a-solr-version).
+
 ### Diagnose Issues
 
 The diagnose command `drush search-api-pantheon:diagnose` (sapd) checks the Search API install and returns an error for any part that is not working.
@@ -266,3 +282,14 @@ This occurs because both repositories contain a package called `drupal/search_ap
 ### Fatal error: Cannot redeclare config_get_config_directory()
 
 This error occurs after installing `search_api_pantheon` for Drupal using Composer.  If you receive this error, you should switch to the [Drupal Composer-managed Upstream](https://github.com/pantheon-upstreams/drupal-composer-managed).  See [Switch Your Custom Upstream](/guides/custom-upstream/switch-custom-upstream) for instructions on how to do this.
+
+### Reloading Solr Core
+
+Reloading Solr Core would be helpful if synonyms or other Solr config that you've recently posted isn't reflecting even after reindexing your site. You can follow this steps on how to enable the Reload Core in your Search API configuration:
+
+1. Go to `/admin/modules`
+2. Enable `Search API Solr Admin`
+3. Go to `/admin/config/search/search-api`
+4. Click the server you want to reload
+5. You'll be able to see the `Reload Core` button and you can simply click and confirm to reload
+6. Reindex the site to apply any changes

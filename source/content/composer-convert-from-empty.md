@@ -1,6 +1,6 @@
 ---
 title: Convert an Empty Upstream Drupal Site to a Composer Managed Site
-description: Upgrade a Drupal site using an empty upstream by converting it to a Composer-managed Drupal site on the new Integrated Composer framework. 
+description: Upgrade a Drupal site using an empty upstream by converting it to a Composer-managed Drupal site on the new Integrated Composer framework.
 tags: [composer, site, workflow, D8, D9, D10]
 contributors: [dustinleblanc, greg-1-anderson, stovak, kporras07]
 reviewed: "2022-12-13"
@@ -90,7 +90,7 @@ Confirm that your site meets the following requirements before you continue:
 
 ## Add the Integrated Composer Upstream in a New Local Branch
 
-This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back. 
+This process involves significant changes to the codebase that may take some time to complete, and can be complicated to roll back.
 
 To minimize issues, these steps make the codebase changes in a new branch:
 
@@ -103,7 +103,7 @@ To minimize issues, these steps make the codebase changes in a new branch:
 1. Add the Pantheon Drupal Project upstream as a new remote called `ic`, fetch the `ic` upstream, and checkout to a new local branch based on it called `composerify`:
 
   ```bash{outputLines:2}
-  git remote add ic git@github.com:pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
+  git remote add ic https://github.com/pantheon-upstreams/drupal-composer-managed.git && git fetch ic && git checkout --no-track -b composerify ic/main
   Switched to a new branch 'composerify'
   ```
 
@@ -173,7 +173,7 @@ Copy any existing configuration from the default branch. Adjust the source folde
   git commit -m 'Copy my pantheon.yml'
   ```
 
-Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`. 
+Remove any values from `pantheon.yml` that you prefer to keep listed in `pantheon.upstream.yml`.
 
 Note that `api_version: 1` and `build_step: true` should already be included in `pantheon.upstream.yml`. Therefore, `api_version: 1` and `build_step: true` are not required in `pantheon.yml`.
 
@@ -334,7 +334,7 @@ Once you have confirmed that the site works in the Multidev, replace the `master
    git push --force origin master
    ```
 
-Your site's Dev environment is now set up to use the latest version of the Drupal Integrated Composer upstream. 
+Your site's Dev environment is now set up to use the latest version of the Drupal Integrated Composer upstream.
 
 ### Troubleshooting: Inspect Site Logs
 

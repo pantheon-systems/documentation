@@ -1,0 +1,7 @@
+.docs-contributor-link a {
+  color: var(--pds-color-text-default-secondary);
+}
+
+.docs-contributor-link a:hover {
+  color: var(--pds-color-link-hover);
+}

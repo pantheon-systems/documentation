@@ -69,13 +69,14 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 
   ![dns made easy aaaa records](../../images/dns-made-easy-aaaa-records.png)
 
-### A Record for subdomain
-An A record is required to configure a subdomain (e.g., `www.example.com`).
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. Within the **A** table, click <span class="glyphicon glyphicon-plus"></span> to add a new record.
 2. Enter **www** in the **Name** field and enter the A record value provided by Pantheon in the **IP** field (e.g. `23.185.0.2`).
 3. Select desired Time to Live (TTL).
 4. Click **Submit**:
+5. Repeat steps 1-4 for the two AAAA records.
 
 ## Next Steps
 

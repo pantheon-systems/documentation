@@ -1,19 +1,26 @@
 import React from "react"
-import './style.css';
+
+import { Callout } from "@pantheon-systems/pds-toolkit-react"
+
+import "./style.css"
 
 const Alert = ({ title, type, icon, children }) => {
-  const alertClass = `alert alert-${type}`
-  const glyphiconClass = `glyphicon glyphicon-${icon}`
+  // Recalibrate types for this site.
+  if (type === "danger") {
+    type = "warning"
+  } else if (type === "export") {
+    type = "code"
+  } else {
+    type = type
+  }
+
   return (
-    <>
-    <div className={alertClass}>
-      <h4 className={type}>
-      <span className={glyphiconClass}></span>&nbsp;
-      {title}
-      </h4>
-      {children}
-    </div>
-    </>
+    <Callout
+      children={children}
+      type={type}
+      title={title}
+      className="docs-alert"
+    />
   )
 }
 

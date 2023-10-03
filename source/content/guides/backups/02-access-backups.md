@@ -82,5 +82,5 @@ terminus backup:get $site.$env --file=<filename> --to=path/to/file.tar.gz
 ## More Resources
 
 - [Terminus](/terminus)
-- [AWS S3 Setup for WordPress](/guides/wordpress-configurations/wordpress-s3)
+- [AWS S3 Setup for WordPress](/guides/wordpress-developer/wordpress-s3)
 - [AWS S3 Setup for Drupal](/drupal-s3)

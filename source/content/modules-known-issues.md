@@ -205,7 +205,7 @@ ___
 
 **Solution 2**: Break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Object Cache) is used for operations on highly populated directories:
 
-1. [Enable the Object Cache](/guides/object-cache), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
+1. [Enable the Object Cache](/object-cache/drupal), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable the object cache.)
 1. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```php:title=imce.page.inc
@@ -314,6 +314,17 @@ $conf['plupload_temporary_uri'] ='private://tmp';
 
 ___
 
+## [Replica - Database Configuration](https://www.drupal.org/docs/8/api/database-api/database-configuration)
+
+<ReviewDate date="2023-09-28" />
+
+**Issue:** Pantheon's database replication architecture is incompatible with replica configurations for Drupal, as the application does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
+
+
+**Solution:** Replica configuration is not supported or recommended on Pantheon and there is no known workaround at this time.
+
+___
+
 ## [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 
 <ReviewDate date="2020-05-05" />
@@ -411,7 +422,7 @@ ___
 
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. Refer to [Pantheon's Global CDN](/guides/global-cdn) documentation. 
+**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. Refer to [Pantheon's Global CDN](/guides/global-cdn) documentation.
 ___
 
 ## [Views data export](https://www.drupal.org/project/views_data_export)

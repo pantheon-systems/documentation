@@ -1,5 +1,79 @@
 [
     {
+        "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/123038879",
+        "assets_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/123038879\/assets",
+        "upload_url": "https:\/\/uploads.github.com\/repos\/pantheon-systems\/terminus\/releases\/123038879\/assets{?name,label}",
+        "html_url": "https:\/\/github.com\/pantheon-systems\/terminus\/releases\/tag\/3.2.2",
+        "id": 123038879,
+        "author": {
+            "login": "pantheon-ci-bot",
+            "id": 26102846,
+            "node_id": "MDQ6VXNlcjI2MTAyODQ2",
+            "avatar_url": "https:\/\/avatars.githubusercontent.com\/u\/26102846?v=4",
+            "gravatar_id": "",
+            "url": "https:\/\/api.github.com\/users\/pantheon-ci-bot",
+            "html_url": "https:\/\/github.com\/pantheon-ci-bot",
+            "followers_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/followers",
+            "following_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/following{\/other_user}",
+            "gists_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/gists{\/gist_id}",
+            "starred_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/starred{\/owner}{\/repo}",
+            "subscriptions_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/subscriptions",
+            "organizations_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/orgs",
+            "repos_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/repos",
+            "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
+            "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "node_id": "RE_kwDOAQSNzs4HVWyf",
+        "tag_name": "3.2.2",
+        "target_commitish": "3.x",
+        "name": "3.2.2",
+        "draft": false,
+        "prerelease": false,
+        "created_at": "2023-09-28T19:55:35Z",
+        "published_at": "2023-09-28T21:07:01Z",
+        "assets": [
+            {
+                "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/assets\/128202774",
+                "id": 128202774,
+                "node_id": "RA_kwDOAQSNzs4HpDgW",
+                "name": "terminus.phar",
+                "label": "",
+                "uploader": {
+                    "login": "pantheon-ci-bot",
+                    "id": 26102846,
+                    "node_id": "MDQ6VXNlcjI2MTAyODQ2",
+                    "avatar_url": "https:\/\/avatars.githubusercontent.com\/u\/26102846?v=4",
+                    "gravatar_id": "",
+                    "url": "https:\/\/api.github.com\/users\/pantheon-ci-bot",
+                    "html_url": "https:\/\/github.com\/pantheon-ci-bot",
+                    "followers_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/followers",
+                    "following_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/following{\/other_user}",
+                    "gists_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/gists{\/gist_id}",
+                    "starred_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/starred{\/owner}{\/repo}",
+                    "subscriptions_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/subscriptions",
+                    "organizations_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/orgs",
+                    "repos_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/repos",
+                    "events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/events{\/privacy}",
+                    "received_events_url": "https:\/\/api.github.com\/users\/pantheon-ci-bot\/received_events",
+                    "type": "User",
+                    "site_admin": false
+                },
+                "content_type": "application\/octet-stream",
+                "state": "uploaded",
+                "size": 10050136,
+                "download_count": 0,
+                "created_at": "2023-09-28T21:07:02Z",
+                "updated_at": "2023-09-28T21:07:02Z",
+                "browser_download_url": "https:\/\/github.com\/pantheon-systems\/terminus\/releases\/download\/3.2.2\/terminus.phar"
+            }
+        ],
+        "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/3.2.2",
+        "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/3.2.2",
+        "body": "### Fixed\r\n\r\n- Return empty string on zero dates (#2494)\r\n- Catch down network exception and non-object responses in fetch (#2492)\r\n\r\n### Added\r\n\r\n- New org:info command (#2472)\r\n- Commands trace metadata (#2461)\r\n\r\n### Changed\r\n\r\n- Add retry and delay options for env:wake command (#2498)\r\n- More specific description in env:code-rebuild (#2488)"
+    },
+    {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/105724915",
         "assets_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/105724915\/assets",
         "upload_url": "https:\/\/uploads.github.com\/repos\/pantheon-systems\/terminus\/releases\/105724915\/assets{?name,label}",
@@ -145,7 +219,7 @@
         ],
         "tarball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/tarball\/3.2.0",
         "zipball_url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/zipball\/3.2.0",
-        "body": "### Added\r\n\r\n- New env:rebuild-code command (#2417)\r\n- Validation for aliases command (#2447)\r\n\r\n### Fixed\r\n- Bug with multidev:delete when ids are numbers-only (#2462)\r\n\r\n### Changed\r\n- Add upstream label field to site:info (#2455)\r\n- Do not check for user membership to remove supporting org (#2453)\r\n- Improve error messages on error 5xx (#2454)\r\n- Add search and replace to env:clone-content command for WordPress sites (#2448)\r\n- Deprecate getSite with param (#2449)"
+        "body": "### Added\r\n\r\n- New env:code-rebuild command (#2417)\r\n- Validation for aliases command (#2447)\r\n\r\n### Fixed\r\n- Bug with multidev:delete when ids are numbers-only (#2462)\r\n\r\n### Changed\r\n- Add upstream label field to site:info (#2455)\r\n- Do not check for user membership to remove supporting org (#2453)\r\n- Improve error messages on error 5xx (#2454)\r\n- Add search and replace to env:clone-content command for WordPress sites (#2448)\r\n- Deprecate getSite with param (#2449)"
     },
     {
         "url": "https:\/\/api.github.com\/repos\/pantheon-systems\/terminus\/releases\/98432252",

@@ -33,12 +33,13 @@ Be sure that you have a:
 2. Click the **Add IPv6 Now** button and enter the AAAA record value provided by Pantheon.
 3. Repeat steps 1-2 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### A Record for subdomain
-An A record is required to configure a subdomain (e.g., `www.example.com`).
+### Subdomains
+Create one A record and 2 AAAA records for the given subdomain (e.g., `www.example.com`):
 
 1. Navigate to **Panel** > **Domains** > **Manage Domains** and click **DNS**.
-2. Leave the **Name** field blank, select A from the Type dropdown menu, and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
+2. Enter **www** in the **Name** field and, select A from the Type dropdown menu, and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
 3. Click **Add record now!**.
+5. Repeat steps 1-3 for the two AAAA records.
 
 ## DreamHost Docs
 

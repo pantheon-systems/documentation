@@ -141,7 +141,7 @@ Use cards to visually display a list of items, with links to more information.
 
   <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/autopilot"}>
 
-  Automate finding, testing, and applying WordPress and Drupal updates. 
+  Automate finding, testing, and applying WordPress and Drupal updates.
 
   </Product>
 
@@ -365,7 +365,7 @@ Vary: Accept-Encoding, Cookie
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
 ## DNS
 
-Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do *not* have `draft: true` frontmatter. 
+Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do *not* have `draft: true` frontmatter.
 
 <Example>
 
@@ -696,7 +696,7 @@ Use panels for extraneous but useful information such as troubleshooting section
 
 <Accordion title="Panel Title" id="example-panel" icon="wrench">
 
-### Panel Content Header 
+### Panel Content Header
 
 This Panel contains additional context, or advanced instructions.
 
@@ -934,7 +934,6 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
-Note that `active={true}` is required for each first or default tab. Without it, the tabs will still load, but will appear broken until the reader clicks on a tab.
 
 <Example>
 
@@ -1044,6 +1043,7 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, are UR
 ```
 
 </Example>
+
 ## Variables
 
 When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
@@ -1138,4 +1138,3 @@ Here are code snippets you can use to direct users to the correct location:
 [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
 
 ```
-

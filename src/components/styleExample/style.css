@@ -1,39 +1,40 @@
-
 .style-example {
-    border: solid 2px #6E818E;
-    position: relative;
-    padding: 45px 15px 15px;
-    margin-bottom: 20px;
+  border: solid 2px var(--pds-color-border-default);
+  border-radius: var(--pds-border-radius-container);
+  margin-bottom: var(--pds-spacing-3xl);
+  padding: var(--pds-spacing-3xl) var(--pds-spacing-l) 0;
+  position: relative;
+}
+
+.style-example::after,
+.source-code::after {
+  color: var(--pds-color-text-default-secondary);
+  font-size: var(--pds-typography-size-s);
+  font-weight: var(--pds-typography-font-weight-bold);
+  letter-spacing: var(--pds-typography-letter-spacing-s);
+  position: absolute;
+  text-transform: uppercase;
 }
 
 .style-example::after {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #959595;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    content: "Example";
+  content: "Example";
+  left: var(--pds-spacing-m);
+  top: var(--pds-spacing-m);
 }
 
-.h1 {
-	margin-top: 35px;
-	font-family: "TabletGothic";
-	color: #313945;
-	font-size: 50px;
-	font-weight: 700;
+.certification.style-example::after {
+  content: "Command Line Interface:";
 }
 
-.source-code::after  {
-    position: absolute;
-    font-size: 12px;
-    font-weight: 700;
-    color: #959595;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    content: "Source Code";
-    margin-top: 10px;
+.source-code::after {
+  content: "Source Code";
+  margin-top: var(--pds-spacing-m);
 }
 
+.certification.source-code::after {
+  content: "Pantheon Dashboard Interface:";
+}
+
+.certification.cms.source-code::after {
+  content: "CMS Dashboard Interface:";
+}

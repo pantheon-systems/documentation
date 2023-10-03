@@ -20,21 +20,10 @@ This section provides information on how to add a custom domain to the Pantheon 
 
 ## Custom Domains
 
-Pantheon provides the values for your DNS records that are assigned with your DNS service provider when adding a custom domain to your site:
 
-![DNS Recommendations](../../../images/dashboard/domain-added.png)
+<Partial file="dns-custom.md" />
 
-If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 
-<Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
-
-<DNSProviderDocs />
-
-</Accordion>
-
-Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/guides/global-cdn/https).
-
-<Partial file="tables/custom-domains-limit.md" />
 
 <Alert title="Note" type="info">
 
@@ -60,9 +49,9 @@ Note that each custom domain is counted regardless of the environment to which i
 
   ![Adding an additional domain to the Site Dashboard](../../../images/dashboard/add-additional-domains.png)
 
-1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. 
+1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL.
 
-1. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
+1. Select the method you prefer, and follow the instructions. Note that the values are randomized for security.
 
 1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**:
 

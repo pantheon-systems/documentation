@@ -76,13 +76,13 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
 1. Navigate back to the site's panel on the Dashboard and get the SFTP connection information.
 
-1. Follow the steps in the [MySQL Access](/guides/mariadb-mysql/mysql-access#frequently-asked-questions) doc to connect to MySQL via SFTP through your terminal or an FTP program that supports the SFTP protocol.
+1. Follow the steps in the [MySQL Access](/guides/mariadb-mysql/mysql-access#access-your-database-directly) doc to connect to MySQL via SFTP through your terminal or an FTP program that supports the SFTP protocol.
 
 1. [Download database log files](/guides/logs-pantheon/access-logs#database-log-files) and review the `mysql-slow-query.log` file.
 
 1. Search for the query within the log. If it isn't there, download and unzip any applicable archived slow logs (for example, `mysqld-slow-query.log-20160606`) and search there. The archived slow logs are created by date and time, so look for the one that corresponds with the trace you are working with.
 
-1. Use the information from the New Relic&reg; trace to find the full query in the slow log. Tips: 
+1. Use the information from the New Relic&reg; trace to find the full query in the slow log. Tips:
 
     - Choose a distinctive part of the query. The example here uses `grep -c users_comment.uis AS users_comment_uid` to get the number of times that field has been included in the slow log.
 
@@ -98,15 +98,15 @@ At times, systems like Drupal's Watchdog appear at the top of the results for sl
 
     - Tips for reviewing the query:
 
-         - If the results confirm your suspicions, as the one above does, dig deeper to find out why the query is not functioning properly. Type [EXPLAIN](https://dev.mysql.com/doc/refman/5.7/en/explain.html) and then re-paste the query. MySQL will display extended information on how it’s [executing the query](https://dev.mysql.com/doc/refman/5.7/en/using-explain.html). 
-         
+         - If the results confirm your suspicions, as the one above does, dig deeper to find out why the query is not functioning properly. Type [EXPLAIN](https://dev.mysql.com/doc/refman/5.7/en/explain.html) and then re-paste the query. MySQL will display extended information on how it’s [executing the query](https://dev.mysql.com/doc/refman/5.7/en/using-explain.html).
+
          - Look for odd things. For example, the one below doesn't look that bad, except that the users table is referenced twice via alias and there isn't a single key index being used to search them. Looking at that table with a MySQL `describe` command shows that there is no primary key set on the UID field.
 
         ![Extended information example](../../../images/extended-info-example.png)
 
         ![MySQL table describe users](../../../images/mysql-table-describe-users.png)
         Now that the problem has been found, it can be addressed. In this case, simply adding in the primary key and re-running the query gets a much improved query performance of 0.10 seconds.
-        
+
         ![Improved query performance](../../../images/improved-query-performance.png)
 
 

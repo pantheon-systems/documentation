@@ -1,0 +1,7 @@
+ul.links-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  row-gap: var(--pds-spacing-m);
+}

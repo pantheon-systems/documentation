@@ -56,7 +56,9 @@ By default, WordPress tests each directory before uploading a file by writing a 
 
 ```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('FS_METHOD', 'direct');
+    if ( !defined('FS_METHOD') ) {
+        define('FS_METHOD', 'direct');
+    }
 }
 ```
 
@@ -75,6 +77,13 @@ Plugins and themes with issues resolved (at least partially) by this include the
 - [Wordfence Security](https://wordpress.org/plugins/wordfence/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 - [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
+
+<Alert title="Note"  type="info" >
+
+If your site is using an up-to-date version of the Pantheon WordPress upstream, `FS_METHOD` will automatically be set for you.
+
+</Alert>
+
 
 ## AdThrive Ads
 
@@ -443,7 +452,7 @@ ___
   ln -s ./uploads/cache ./cache
   ```
 
-1. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/guides/object-cache/redis-command-line#clear-cache). Earlier versions have this option in the Fast Velocity Minify's **Settings** tab for the **Cache Location**.
+1. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/object-cache/cli#clear-cache). Earlier versions have this option in the Fast Velocity Minify's **Settings** tab for the **Cache Location**.
 
 **Solution 2:** The `FVM_CACHE_DIR` and `FVM_CACHE_URL` variables are available to override the cache location to address this [bug](https://github.com/peixotorms/fast-velocity-minify/issues/7) as of version 3.3.3.
 
@@ -523,6 +532,18 @@ ___
 
 **Solution:** To resolve this issue flush the Hummingbird cache. Note that flushing the cache purges the cache storage, which might affect other processes that use the same storage.
 ___
+
+## HyperDB
+
+<ReviewDate date="2023-09-28" />
+
+**Issue:** Pantheon's database replication architecture is incompatible with HypeDB requirements, as the [HyperDB](https://wordpress.org/plugins/hyperdb/) plugin does not expect the replica to be readable during the bootstrap process and continues to query it instead of falling back to the main database. This issue is known to cause significant application problems when used on the platform.
+
+
+**Solution:** HyperDB is not supported or recommended on Pantheon and there is no known workaround at this time.
+
+___
+
 
 ## InfiniteWP
 
@@ -992,7 +1013,7 @@ ___
 
 ## Wordfence
 
-<ReviewDate date="2022-12-16" />
+<ReviewDate date="2023-06-20" />
 
 **Issue 1:** Wordfence can't write configuration and log files to the codebase.
 
@@ -1019,22 +1040,28 @@ export ENV=dev
   terminus connection:set $SITE.$ENV git
   ```
 
-1. If you haven't already, clone your site's codebase locally. You can get the path to your codebase from the [Site Dashboard](/guides/git/git-config#clone-your-site-codebase):
+1. Clone your site's codebase locally if you haven't already. You can get the path to your codebase from the [Site Dashboard](/guides/git/git-config#clone-your-site-codebase):
 
   ```bash{promptUser: user}
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
   ```
 
-1. Change to the site's `wp-content` directory:
+1. Change your current directory to the location where the site's Git clone is stored:
 
    ```bash{promptUser: user}
    cd $SITE
    ```
 
-1. If `/wp-content/wflogs` exists, remove it before you create the symlinks in the next steps:
+1. Navigate to `/wp-content` and check if the `/wp-content/wflogs` folder exists. If it does, remove it before you create the symlinks in the next steps:
 
   ```bash{promptUser: user}
-  rm -rf ./wp-content/wflogs
+  cd wp-content
+  rm -rf wflogs
+  ```
+
+1. Return to the root directory of the Git clone:
+  ```bash{promptUser: user}
+  cd ..
   ```
 
 1. Create the following symlinks:
@@ -1052,7 +1079,7 @@ export ENV=dev
     - /.user.ini
   ```
 
-1. [Set the `FS_METHOD` to `direct` in `wp-config.php`](#define-fs_method).
+1. Set the [`FS_METHOD` to `direct`](#define-fs_method) in `wp-config.php`.
 
 1. Commit and push the changes to the platform:
 
@@ -1418,7 +1445,7 @@ ___
 
 ## WPML - The WordPress Multilingual Plugin
 
-<ReviewDate date="2019-10-22" />
+<ReviewDate date="2023-07-28" />
 
 **Issue 1:** Locking an environment prevents the [WPML - The WordPress Multilingual Plugin](https://wpml.org/) plugin from operating and returns the following error:  `It looks like languages per directories will not function`.
 
@@ -1442,7 +1469,7 @@ Learn more in the [WPML Guide](https://wpml.org/faq/install-wpml/#registration-u
 
 ___
 
-**Issue 3:** Upon activating WPML String Translation plugin, you may see this error:
+**Issue 3:** Your wp-admin becomes too slow or upon activating WPML String Translation plugin, you may see this error:
 
 >WPML String Translation is attempting to write .mo files with translations to folder:
 >
@@ -1452,21 +1479,22 @@ ___
 >To resolve this, please contact your hosting company and request that they make that folder writable.
 >For more details, see WPML's documentation on troubleshooting .mo files generation.
 
+
 **Solution 1:**
 
 1. In `wp-config.php`, add the following above the line `/* That's all, stop editing! Happy Pressing. */`:
 
   ```php:title=wp-config.php
-  define('WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages');
+  if ( !defined('WP_LANG_DIR') ) {    
+  	define( 'WP_LANG_DIR','/files/languages/wpml' );
+  }
+  if ( !defined('WP_TEMP_DIR') ) {
+  	define('WP_TEMP_DIR', sys_get_temp_dir() );
+  }
   ```
-
-1. Create the `languages` directory inside `/files` for each environment.
-
-1. Define the [FS_METHOD in the wp-config](#define-fs_method).
-
-**Solution 2:**
-
 1. Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
+
+1. Create the `languages/wpml` directory inside `/files` for each environment.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 

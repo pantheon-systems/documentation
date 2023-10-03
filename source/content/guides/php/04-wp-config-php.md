@@ -19,21 +19,21 @@ This section provides information on how to configure the `wp-config.php` file f
 
 ## WordPress Configuration
 
-WordPress configuration is set in `wp-config.php` in your WordPress site root. Pantheon automatically includes this file for you with all you need to get started when you install a WordPress site. 
+WordPress configuration is set in `wp-config.php` in your WordPress site root. Pantheon automatically includes this file for you with all you need to get started when you install a WordPress site.
 
 Most users do not need to customize this file. However, you can customize the `wp-config.php` file with any customizations you need for plugins, themes, and caching.
 
-Two additional config files are referenced in `wp-config.php`: 
+Two additional config files are referenced in `wp-config.php`:
 
 - `wp-config-local.php`: this is an optional file for local development settings and is based on the example `wp-config-local-sample.php` found in your WordPress site root.
 
-- `wp-config-pantheon.php`: this is for dynamically-supplied platform configuration settings (such as database credentials). 
+- `wp-config-pantheon.php`: this is for dynamically-supplied platform configuration settings (such as database credentials).
 
 <Alert title="Warning" type="danger">
 
 Never put the database connection information for a Pantheon database within your `wp-config.php` file. These credentials will change.
 
-Ensure that you are running the latest version of [WordPress core](/core-updates) and have the correct `wp-config.php` file for Pantheon if you experience connection errors. 
+Ensure that you are running the latest version of [WordPress core](/core-updates) and have the correct `wp-config.php` file for Pantheon if you experience connection errors.
 
 </Alert>
 
@@ -154,7 +154,7 @@ More information can be found in our [PHP 7.1 & ionCube Decoder Now Available fo
 
 ### Can I increase the memory limit of my WordPress site?
 
-WordPress installations have a core PHP memory limit of 40MB for single sites and 64MB for WordPress Multisites by default. 
+WordPress installations have a core PHP memory limit of 40MB for single sites and 64MB for WordPress Multisites by default.
 You can [increase this limit](https://wordpress.org/support/article/editing-wp-config-php/#increasing-memory-allocated-to-php) up to the limit of memory allocated for your [site plan](/guides/account-mgmt/plans/faq#plan-resources).
 
 Example for Elite sites:
@@ -164,16 +164,6 @@ define( 'WP_MEMORY_LIMIT', '512M' );
 
 ## Troubleshooting
 
-### Request to a Remote API Does Not Return Expected Response
-
-The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
-
-If the API expects `&` as an argument separator but receives `&amp;` (for example, when using `http_build_query`), you can override the default `arg_separator.output` value by adding the following line to `wp-config.php`:
-
-```php:title=wp-config.php
-ini_set('arg_separator.output', '&');
-```
-
 ### Actions and Filters in `wp-config.php`
 
 Actions or filters that require CLI tools like WP-CLI might fail from `wp-config.php`, because the functions required are not yet accessible. Put these directives in an [MU Plugin](/guides/wordpress-configurations/mu-plugin) to resolve this issue.
@@ -182,6 +172,6 @@ Actions or filters that require CLI tools like WP-CLI might fail from `wp-config
 
 - [WordPress PHP Requirements](https://wordpress.org/about/requirements/)
 
-- [Object Cache](/guides/object-cache)
+- [Object Cache Pro](/object-cache/wordpress)
 
 - [WordPress on Pantheon Quick Start Guide](/guides/wordpress-pantheon/)

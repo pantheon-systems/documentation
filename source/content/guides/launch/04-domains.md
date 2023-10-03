@@ -71,7 +71,7 @@ Skipping this step will result in service interruption for existing sites that r
 
 After you begin this process, you have:
 
-- 7 days to complete the challenge response. After that, you must create a new challenge.
+- 7 days to complete the challenge response. If the challenge is not completed in that time frame, you will see a *0006* error. To resolve the error, you would just need to remove then re-add the custom domain.
 - 30 days to adjust DNS values.
 
 </Alert>

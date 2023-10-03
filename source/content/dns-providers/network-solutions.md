@@ -65,18 +65,6 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 
 1. Once changes are saved, the section of the Advanced DNS interface for A records should look like this:
 
-### A Record for Subdomain
-
-An A record is required to configure a subdomain (e.g., `www.example.com`).
-
-1. In the IP Address (A records) section, click **Edit A Records**.
-
-1. Edit the **www** record field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Numeric IP** field.
-
-1. Select desired Time to Live (TTL).
-
-1. Click **Save Changes**.
-
 ### AAAA Records
 
 1. In the IPV6 Address (AAAA Records) section, click **Edit AAAA Records**.

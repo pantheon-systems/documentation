@@ -1,14 +1,13 @@
 import React from "react"
 import NavbarItem from "../navbarItem"
-import './style.css';
+import "./style.css"
 
 const Navbar = ({ title, items, activePage }) => {
   return (
-      <nav className="col-md-3 manual-guide-toc" aria-labelledby="guide-nav">
+    <nav className="manual-guide-toc" aria-labelledby="guide-nav">
       <button
         type="button"
         className="navbar-toggle"
-        style={{ marginTop: "-15px", paddingRight: "20px" }}
         data-toggle="collapse"
         data-target="#guide-collapse"
         data-original-title=""
@@ -17,11 +16,13 @@ const Navbar = ({ title, items, activePage }) => {
         <span className="sr-only">Toggle navigation</span>
         <i className="fa fa-bars" />
       </button>
-      <h3 id="guide-nav">{title}</h3>
+      <h2 id="guide-nav" className="manual-guide-toc__heading">
+        {title}
+      </h2>
       <div className="collapse navbar-collapse" id="guide-collapse">
         {items && (
-          <ul id="manual-guide-toc" className="manual-guide-toc">
-            {items.map(item => {
+          <ul id="manual-guide-toc" className="manual-guide-toc__menu">
+            {items.map((item) => {
               return (
                 <NavbarItem
                   key={`${item.id}-item-key`}
@@ -33,7 +34,7 @@ const Navbar = ({ title, items, activePage }) => {
           </ul>
         )}
       </div>
-      </nav>
+    </nav>
   )
 }
 

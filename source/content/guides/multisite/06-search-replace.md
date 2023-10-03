@@ -29,6 +29,17 @@ If your `pantheon.yml` file is different between environments, the `search_repla
 
 </Alert>
 
+## Defaults
+See the following Search and Replace defaults for new and existing WordPress Multisites on Pantheon:
+
+| WP Multisite Configuration      | Default `search_replace` value |
+| ------------- | -------------------------------------- |
+| Existing Multisite - Subdirectory <Popover content="Created before August 1, 2023"/> | `false` |
+| New Multisite - Subdirectory | `true` |
+| Existing Multisite - Subdomain <Popover content="Created before August 1, 2023"/> | `false` |
+| New Multisite - Subdomain | `false` |
+
+
 ## Subdirectory WordPress Multisite Search and Replace Configuration
 
 ### For sites created _before_ August 1, 2023
@@ -55,7 +66,7 @@ Search and Replace runs on the platform as part of creating an environment, depl
 
 <Alert title="We are collecting feedback"  type="info" >
 
-We are collecting feedback about use cases that require more than 25 URLs to be replaced. Please contact your Customer Success Manager (CSM) if this is the case. Alternatively, check out the [Subdomain to Subdirectory Multisite Conversion](#subdomain-to-subdirectory-multisite-conversion) option below which does not have any limits.
+We are collecting feedback about use cases that require more than 25 URLs to be replaced. Please [fill out this form](https://forms.gle/TYvuHYSNrVmptVBW9) if this is the case. Alternatively, check out the [Subdomain to Subdirectory Multisite Conversion](#subdomain-to-subdirectory-multisite-conversion) option below which does not have any limits.
 
 </Alert>
 
