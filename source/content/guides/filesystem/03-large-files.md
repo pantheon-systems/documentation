@@ -20,7 +20,7 @@ This section provides information on highly populated directories and large file
 
 ## Highly Populated Directories
 
-Highly populated directories can cause a small decline in performance at around 50,000 files in a single directory, and a significant performance drop at over 100,000 files. Once above 100,000 files, backups may fail, and the filesystem itself may be corrupted leading to data loss and site downtime.
+Highly populated directories can cause a small decline in performance at around 50,000 files in a single directory, and a significant performance drop at over 100,000 files. Once above 100,000 files, backups may fail, and the filesystem itself may be corrupted leading to data loss and site downtime. 
 
 You can refactor your file structure if you have individual directories with tens of thousands of files (for example, an image repository) to optimize site performance on Pantheon. If refactoring is not a possiblity, you may wish to offload the files to dedicated external filesystem like Amazon S3 or Google Cloud Storage.
 
