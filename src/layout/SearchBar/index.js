@@ -17,7 +17,7 @@ const SearchBar = ({ page }) => (
     className="pds-spacing-pad-block-start-l pds-spacing-pad-block-end-2xl"
   >
     <InputText
-      id="search-field"
+      id="search"
       aria-label="Search Pantheon Documentation"
       placeholder="Search Pantheon Documentation"
       type="search"
