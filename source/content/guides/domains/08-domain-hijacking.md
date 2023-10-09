@@ -21,6 +21,8 @@ Domain Name Server (DNS) hijacking is a type of DNS attack in which bad actors s
 
 ## How to Avoid DNS Hijacking
 
+Previously, it was possible to add your custom domains/sub-domains to your Pantheon sites without validating ownership by skipping the dashboard option to add HTTPS. We now require you to validate ownership of your custom domains at the time of adding  domains to Pantheon sites. For the specific steps on adding custom domains, see [Add a Custom Domain](/guides/domains/custom-domains#add-a-custom-domain). Validating ownership (which is now enforced) would ensure that your custom domains will not be taken over by bad actors. 
+
 ### Clear DNS Records Before Removing Unused Subdomains
 
 When removing unused sites, delete the corresponding A or CNAME records with your DNS provider.
