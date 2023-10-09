@@ -114,7 +114,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
  - [Drupal 7](https://github.com/pantheon-systems/drops-7)
- - [Drupal 8](https://github.com/pantheon-systems/drops-8)
+ - [Drupal 9+](https://github.com/pantheon-systems/drupal-composer-managed)
  - [WordPress](https://github.com/pantheon-systems/wordpress)
   
   <Alert title="Note" type="info">
