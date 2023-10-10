@@ -53,9 +53,15 @@ Note that each custom domain is counted regardless of the environment to which i
 
 1. Select the method you prefer, and follow the instructions. Note that the values are randomized for security.
 
-1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**:
+1. Click **Verify Ownership** to confirm:
 
-  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/verify-domain-ownership.png)
+   <Alert title="Note" type="info">
+
+  If you have a wildcard domain pointed at Pantheon and you have a valid use case to skip this verification for your sub-domains (although it is recommended to prevent domain takeovers), you may request an exemption to skip the verification by contacting Pantheon Support via chat or [ticket](/guides/support/support-ticket/).
+
+  </Alert>
+
+  ![Verify domain ownership for HTTPS by DNS or by uploading a file to an existing site](../../../images/dashboard/verify-domain-with-remove-button.png)
 
   It might take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check some of the following:
 
