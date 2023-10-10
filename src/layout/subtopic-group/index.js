@@ -15,7 +15,7 @@ const propTypes = {
 function SubtopicGroup(props) {
   const { title, subTitle, topics } = props
   return (
-    <Container>
+    <Container width="narrow">
       <Panel>
         <h2 className="subtopic__heading">{title}</h2>
         {subTitle && (
