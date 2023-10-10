@@ -30,7 +30,7 @@ class Contributors extends React.Component {
     })
 
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO title="Contributors" />
         <main id="docs-main">
           <Container width={containerWidth} className="docs-contributors">

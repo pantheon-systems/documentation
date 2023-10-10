@@ -23,6 +23,10 @@ table {
   width: 80%;
 }
 
+h2.landing-page__section-heading {
+  margin-block-start: 0 !important;
+}
+
 .landing-page__video-background {
   background: linear-gradient(
     to top,

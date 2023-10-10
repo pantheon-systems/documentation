@@ -74,7 +74,7 @@ class ChangelogTemplate extends React.Component {
     const node = this.props.data.mdx
 
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}

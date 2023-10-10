@@ -47,7 +47,7 @@ class ContributorTemplate extends React.Component {
     console.log(contributor)
 
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO title={contributor.name} />
         <title>{contributor.name}</title>
         <main id="docs-main">

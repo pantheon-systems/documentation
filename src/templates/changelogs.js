@@ -86,7 +86,7 @@ class ChangelogsTemplate extends React.Component {
   render() {
     const changelogs = this.props.data.allMdx.edges
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO
           title="Pantheon Changelog"
           description="Pantheon Changelog"

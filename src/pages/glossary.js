@@ -135,7 +135,7 @@ class Glossary extends React.Component {
     ]
 
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO
           title="Glossary"
           description="A collection of terms and definitions through Pantheon's Documentation"

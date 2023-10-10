@@ -19,7 +19,13 @@ const secondaryCTA = {
   url: "https://pantheon.io/developers/office-hours?docs",
 }
 
-const Layout = ({ children, containerWidth, hasCta, pageType = "default" }) => {
+const Layout = ({
+  children,
+  containerWidth,
+  hasCta,
+  footerBorder,
+  pageType = "default",
+}) => {
   return (
     <div className="pantheon-docs">
       <Header page={pageType} />
@@ -36,7 +42,7 @@ const Layout = ({ children, containerWidth, hasCta, pageType = "default" }) => {
           className="pre-footer-slice"
         />
       )}
-      <Footer className={hasCta ? "with-cta" : null} />
+      <Footer className={footerBorder ? "with-border" : null} />
     </div>
   )
 }

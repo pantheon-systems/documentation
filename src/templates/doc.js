@@ -99,7 +99,7 @@ class DocTemplate extends React.Component {
     const isoDate = this.props.data.date
 
     return (
-      <Layout>
+      <Layout footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
