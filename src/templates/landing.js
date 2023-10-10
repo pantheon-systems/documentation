@@ -118,17 +118,14 @@ class LandingTemplate extends Component {
             >
               {topic.subtopics &&
                 topic.subtopics.map((subtopic) => (
-                  <Container
-                    width={containerWidth}
-                    className="landing-page__subtopics"
-                  >
+                  <div className="landing-page__subtopics">
                     <SubTopicGroup
                       key={subtopic.title}
                       title={subtopic.title}
                       subTitle={subtopic.subtitle}
                       topics={subtopic.subtopic_lists}
                     />
-                  </Container>
+                  </div>
                 ))}
             </FlexContainer>
           )}

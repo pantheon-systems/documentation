@@ -40,20 +40,16 @@ h2.landing-page__section-heading {
   box-shadow: var(--pds-elevation-raised);
 }
 
-.landing-page__subtopics {
-  width: 100%;
-}
-
 hr.landing-page__guides-separator {
-  width: 96%;
   margin-block: var(--pds-spacing-m);
+  width: 96%;
 }
 
 .landing-page__guides-title {
-  padding-block-start: var(--pds-spacing-xl);
-  text-align: center;
   font-size: var(--pds-typography-size-l);
   font-weight: var(--pds-typography-font-weight-semibold);
+  padding-block-start: var(--pds-spacing-xl);
+  text-align: center;
 }
 
 .landing-page__guide-items {
@@ -132,8 +128,8 @@ a.individual-changelog-link:hover {
 .docs-contributor__list {
   display: flex;
   flex-direction: column;
-  row-gap: var(--pds-spacing-s);
   margin-block-end: var(--pds-spacing-4xl);
+  row-gap: var(--pds-spacing-s);
 }
 
 /* Temporary hacks for marketo forms */
