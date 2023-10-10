@@ -1,9 +1,11 @@
 ul.pagination {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
 }
 
-li.pagination__next {
-  float: right;
+ul.pagination:has(li.pagination__prev) {
+  justify-content: space-between;
 }
