@@ -18,7 +18,7 @@ const NavButtons = ({
     >
       {prev && (
         <ul className="pagination pager-guides">
-          <li>
+          <li className="pagination__prev">
             <Link to={prev} rel="prev" className="pds-button">
               <Icon iconName="angleLeft"></Icon>
               {prevTitle}
@@ -28,8 +28,8 @@ const NavButtons = ({
       )}
       {next && (
         <ul className="pagination pager-guides">
-          <li>
-            <Link to={next} rel="prev" className="pds-button">
+          <li className="pagination__next">
+            <Link to={next} rel="next" className="pds-button">
               {nextTitle}
               <Icon iconName="angleRight"></Icon>
             </Link>

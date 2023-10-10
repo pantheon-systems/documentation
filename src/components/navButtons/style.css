@@ -1,4 +1,9 @@
 ul.pagination {
   list-style-type: none;
   padding: 0;
+  width: 100%;
+}
+
+li.pagination__next {
+  float: right;
 }
