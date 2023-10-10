@@ -9,6 +9,14 @@ body {
   position: relative;
 }
 
+table {
+  margin-block-end: var(--pds-spacing-4xl);
+}
+
+.pds-callout table {
+  margin-block-end: var(--pds-spacing-m) !important;
+}
+
 /* Landing pages */
 .landing-page__header {
   text-align: center;
