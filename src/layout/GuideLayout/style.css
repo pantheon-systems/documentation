@@ -2,6 +2,11 @@
 @import "../../styles/codeBlocks.css";
 
 .guide-sidebar {
-  border-right: 1px solid var(--pds-color-border-default);
   height: 100%;
+}
+
+@media (min-width: 641px) {
+  .guide-sidebar {
+    border-right: 1px solid var(--pds-color-border-default);
+  }
 }

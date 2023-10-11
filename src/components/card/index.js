@@ -29,7 +29,11 @@ const Card = ({ title, isOfficial, author, authorLink, link, children }) => {
       </div>
 
       <div className="plugin-card__link">
-        <a href={link} target="_blank" className="pds-button">
+        <a
+          href={link}
+          target="_blank"
+          className="pds-button pds-button--secondary"
+        >
           Get plugin
           <Icon
             iconName="externalLink"

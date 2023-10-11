@@ -99,7 +99,7 @@ class DocTemplate extends React.Component {
     const isoDate = this.props.data.date
 
     return (
-      <Layout>
+      <Layout footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
@@ -110,7 +110,7 @@ class DocTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <main id="doc">
+        <main id="docs-main" tabindex="-1">
           <Container
             width={containerWidth}
             className="pds-spacing-pad-block-end-4xl"

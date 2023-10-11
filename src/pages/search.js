@@ -65,9 +65,9 @@ class Search extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout footerBorder>
         <SEO image={"/images/assets/default-thumb-doc.png"} title="Search" />
-        <main id="docs-main">
+        <main id="docs-main" tabindex="-1">
           <Container width="standard" className="search-results">
             <div className="search-results__heading">
               <h1>Search Results</h1>
