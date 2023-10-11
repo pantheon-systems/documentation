@@ -50,7 +50,7 @@ class ContributorTemplate extends React.Component {
       <Layout containerWidth={containerWidth} footerBorder>
         <SEO title={contributor.name} />
         <title>{contributor.name}</title>
-        <main id="docs-main">
+        <main id="docs-main" tabindex="-1">
           <Container width={containerWidth} className="docs-contributor">
             <div className="article">
               <TwoItemLayout layoutVariant="one-third-start">

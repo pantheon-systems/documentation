@@ -32,7 +32,7 @@ class Contributors extends React.Component {
     return (
       <Layout containerWidth={containerWidth} footerBorder>
         <SEO title="Contributors" />
-        <main id="docs-main">
+        <main id="docs-main" tabindex="-1">
           <Container width={containerWidth} className="docs-contributors">
             <h1 className="title">Contributors</h1>
             <AvatarTileList listItems={contributorsList} />
