@@ -1,5 +1,4 @@
 /* For local styles not coming from PDS. */
-
 html,
 body {
   overflow-x: hidden;
@@ -7,6 +6,10 @@ body {
 
 body {
   position: relative;
+}
+
+#docs-main:focus {
+  outline: none;
 }
 
 table {
