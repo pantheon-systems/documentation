@@ -1,19 +1,19 @@
 [![Actively Maintained](https://img.shields.io/badge/Pantheon-Actively_Maintained-yellow?logo=pantheon&color=FFDC28)](https://docs.pantheon.io/oss-support-levels#actively-maintained-support)
 
-Pantheon Documentation
-======================
+# Pantheon Documentation
 
 https://docs.pantheon.io/
 
 This repository contains the [Pantheon](https://pantheon.io) documentation as well as the tools to build local test environments.
 
 ## Changelog
- - 2023/02: Pantheon Docs is now a [Pantheon Front-End site](https://docs.pantheon.io/guides/decoupled/overview) running Gatsby 4.
- - 2019/08: We've relaunched the project using [Gatsby](https://www.gatsbyjs.org) for faster development, and _much_ faster page speed.
+
+- 2023/02: Pantheon Docs is now a [Pantheon Front-End site](https://docs.pantheon.io/guides/decoupled/overview) running Gatsby 4.
+- 2019/08: We've relaunched the project using [Gatsby](https://www.gatsbyjs.org) for faster development, and _much_ faster page speed.
 
 ### Contributing
 
-Our docs are written in [Markdown](https://daringfireball.net/projects/markdown/) and extended with [MDX](https://github.com/mdx-js/mdx) components. The pages live in `source/content`. Read [CONTRIBUTING](<CONTRIBUTING.md>) for more details on contributing documentation improvements.
+Our docs are written in [Markdown](https://daringfireball.net/projects/markdown/) and extended with [MDX](https://github.com/mdx-js/mdx) components. The pages live in `source/content`. Read [CONTRIBUTING](CONTRIBUTING.md) for more details on contributing documentation improvements.
 
 ### Style Guide
 
@@ -23,16 +23,16 @@ Read [our Style Guide](https://docs.pantheon.io/style-guide) for our guidelines 
 
 ### Prerequisites
 
- - MacOS or Linux system (untested with Bash on Windows)
- - [Node.js](https://nodejs.org/en/)
- - [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)
- - Gatsby CLI:
+- MacOS or Linux system (untested with Bash on Windows)
+- [Node.js](https://nodejs.org/en/)
+- [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Gatsby CLI:
 
-   ```bash
-   npm install -g gatsby-cli
-    ```
+  ```bash
+  npm install -g gatsby-cli
+  ```
 
- - Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine. Lando requires a Docker version in the `2.1.0.0` - `3.1.99` range.
+- Alternatively, you can use [Lando](https://docs.lando.dev). Use Lando to bypass installing Node.js and the Gatsby CLI on your local machine. Lando requires a Docker version in the `2.1.0.0` - `3.1.99` range.
 
 #### Mac Steps
 
@@ -117,3 +117,5 @@ We include several tools to test that new content doesn't break the documentatio
 ### Merge Conflicts
 
 To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`.
+
+test
