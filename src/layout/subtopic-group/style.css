@@ -17,10 +17,10 @@
 }
 
 .subtopic__list a {
-  align-items: center;
-  display: inline-flex;
   font-size: 1rem;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .subtopic__list a:hover {

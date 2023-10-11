@@ -74,14 +74,14 @@ class ChangelogTemplate extends React.Component {
     const node = this.props.data.mdx
 
     return (
-      <Layout containerWidth={containerWidth} footerBorder>
+      <Layout containerWidth={containerWidth}>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/images/assets/default-thumb-doc.png"}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main">
           <Container width={containerWidth}>
             <div className="pds-overline-text pds-spacing-mar-block-end-xs">
               Pantheon Changelog

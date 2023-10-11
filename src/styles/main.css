@@ -1,4 +1,5 @@
 /* For local styles not coming from PDS. */
+
 html,
 body {
   overflow-x: hidden;
@@ -8,26 +9,10 @@ body {
   position: relative;
 }
 
-#docs-main:focus {
-  outline: none;
-}
-
-table {
-  margin-block-end: var(--pds-spacing-4xl);
-}
-
-.pds-callout table {
-  margin-block-end: var(--pds-spacing-m) !important;
-}
-
 /* Landing pages */
 .landing-page__header {
   text-align: center;
   width: 80%;
-}
-
-h2.landing-page__section-heading {
-  margin-block-start: 0 !important;
 }
 
 .landing-page__video-background {
@@ -43,16 +28,20 @@ h2.landing-page__section-heading {
   box-shadow: var(--pds-elevation-raised);
 }
 
+.landing-page__subtopics {
+  width: 100%;
+}
+
 hr.landing-page__guides-separator {
-  margin-block: var(--pds-spacing-m);
   width: 96%;
+  margin-block: var(--pds-spacing-m);
 }
 
 .landing-page__guides-title {
-  font-size: var(--pds-typography-size-l);
-  font-weight: var(--pds-typography-font-weight-semibold);
   padding-block-start: var(--pds-spacing-xl);
   text-align: center;
+  font-size: var(--pds-typography-size-l);
+  font-weight: var(--pds-typography-font-weight-semibold);
 }
 
 .landing-page__guide-items {
@@ -131,8 +120,8 @@ a.individual-changelog-link:hover {
 .docs-contributor__list {
   display: flex;
   flex-direction: column;
-  margin-block-end: var(--pds-spacing-4xl);
   row-gap: var(--pds-spacing-s);
+  margin-block-end: var(--pds-spacing-4xl);
 }
 
 /* Temporary hacks for marketo forms */

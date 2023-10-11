@@ -185,12 +185,7 @@ class TerminusTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main
-            slot="content"
-            id="docs-main"
-            tabindex="-1"
-            className="terminus"
-          >
+          <main slot="content" id="doc" className="terminus">
             <article className="doc guide-doc-body pds-spacing-pad-block-end-xl">
               <HeaderBody
                 title={node.frontmatter.title}

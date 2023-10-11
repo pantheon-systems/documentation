@@ -39,7 +39,7 @@ const GuideLayout = ({ children, pageType = "default" }) => {
         </div>
         <div slot="content">{guideContent}</div>
       </SidebarLayout>
-      <Footer className="with-border" />
+      <Footer />
     </div>
   )
 }

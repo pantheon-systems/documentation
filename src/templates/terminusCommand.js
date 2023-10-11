@@ -201,7 +201,7 @@ class CommandsTemplate extends React.Component {
         />
         <Container slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main slot="content" id="docs-main" tabindex="-1">
+          <main slot="content" id="doc">
             <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
               <div className="pds-overline-text pds-spacing-pad-block-xs">
                 Command

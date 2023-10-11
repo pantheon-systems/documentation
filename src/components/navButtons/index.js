@@ -16,24 +16,26 @@ const NavButtons = ({
       justifyContent="between"
       className="pds-spacing-mar-block-start-m pds-spacing-mar-block-end-xl"
     >
-      <ul className="pagination pager-guides">
-        {prev && (
-          <li className="pagination__prev">
+      {prev && (
+        <ul className="pagination pager-guides">
+          <li>
             <Link to={prev} rel="prev" className="pds-button">
               <Icon iconName="angleLeft"></Icon>
               {prevTitle}
             </Link>
           </li>
-        )}
-        {next && (
-          <li className="pagination__next">
-            <Link to={next} rel="next" className="pds-button">
+        </ul>
+      )}
+      {next && (
+        <ul className="pagination pager-guides">
+          <li>
+            <Link to={next} rel="prev" className="pds-button">
               {nextTitle}
               <Icon iconName="angleRight"></Icon>
             </Link>
           </li>
-        )}
-      </ul>
+        </ul>
+      )}
     </FlexContainer>
   )
 }
