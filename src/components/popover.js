@@ -1,11 +1,11 @@
 import React from "react"
 
-import { Popover as PDSPopover } from "@pantheon-systems/pds-toolkit-react"
+import { Tooltip } from "@pantheon-systems/pds-toolkit-react"
 
 const Popover = ({ icon, title, content }) => {
-  const processedContent = <div dangerouslySetInnerHTML={{ __html: content }} />
+  const tooltipContent = title ? [title, ": ", content] : content
 
-  return <PDSPopover content={processedContent} title={title} />
+  return <Tooltip iconName="circleInfo" tooltipText={tooltipContent} />
 }
 
 export default Popover

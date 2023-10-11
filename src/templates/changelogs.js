@@ -86,13 +86,13 @@ class ChangelogsTemplate extends React.Component {
   render() {
     const changelogs = this.props.data.allMdx.edges
     return (
-      <Layout containerWidth={containerWidth} footerBorder>
+      <Layout containerWidth={containerWidth}>
         <SEO
           title="Pantheon Changelog"
           description="Pantheon Changelog"
           image={"assets/images/default-thumb-doc.png"}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main">
           <Container width={containerWidth}>
             <h1>Pantheon Changelog</h1>
             <div className="pds-spacing-mar-block-end-3xl">

@@ -30,9 +30,9 @@ class Contributors extends React.Component {
     })
 
     return (
-      <Layout containerWidth={containerWidth} footerBorder>
+      <Layout containerWidth={containerWidth}>
         <SEO title="Contributors" />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main">
           <Container width={containerWidth} className="docs-contributors">
             <h1 className="title">Contributors</h1>
             <AvatarTileList listItems={contributorsList} />

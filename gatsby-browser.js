@@ -8,7 +8,7 @@ import "./node_modules/@pantheon-systems/pds-toolkit-react/_dist/css/pds-compone
 
 // Global styles
 import "./src/styles/main.css"
-import "./src/styles/pds-additions.css"
+import "./src/styles/hacks.css"
 
 // custom typefaces
 import "prismjs/themes/prism-okaidia.css"

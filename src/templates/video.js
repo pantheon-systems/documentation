@@ -91,7 +91,7 @@ class VideoTemplate extends React.Component {
           image={"/images/assets/default-thumb-doc.png"}
           type={node.frontmatter.type}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main">
           <Container width={containerWidth} className="docs-video">
             <HeaderBody
               title={node.frontmatter.title}

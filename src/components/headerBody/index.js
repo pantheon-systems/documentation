@@ -40,7 +40,11 @@ const HeaderBody = ({
             {lastReviewed}
           </time>
         </p> */}
-        {!subtitle && <h1 className="docs-title">{title}</h1>}
+        {!subtitle && (
+          <h1 className="docs-title" id="docs-main">
+            {title}
+          </h1>
+        )}
 
         {subtitle && <h1>{subtitle}</h1>}
 

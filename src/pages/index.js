@@ -26,7 +26,7 @@ class Index extends React.Component {
           description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
           image={"/images/assets/default-thumb-doc.png"}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main">
           <Container width={containerWidth}>
             <HeroCTA
               title={homeYaml.title}
