@@ -1,4 +1,4 @@
-.pds-site-footer:not(.with-cta) {
+.pds-site-footer.with-border {
   border-top: 1px solid var(--pds-color-border-default);
 }
 
