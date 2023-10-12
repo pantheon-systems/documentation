@@ -135,12 +135,12 @@ class Glossary extends React.Component {
     ]
 
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO
           title="Glossary"
           description="A collection of terms and definitions through Pantheon's Documentation"
         />
-        <main id="doc">
+        <main id="docs-main" tabindex="-1">
           <Container
             width={containerWidth}
             className="pds-spacing-pad-block-end-4xl"

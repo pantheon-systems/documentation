@@ -185,7 +185,13 @@ class CertificationTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main slot="content" id="doc" className="certification terminus">
+
+          <main
+            slot="content"
+            id="docs-main"
+            tabindex="-1"
+            className="certification terminus"
+          >
             <article className="doc guide-doc-body">
               <HeaderBody
                 title={node.frontmatter.title}

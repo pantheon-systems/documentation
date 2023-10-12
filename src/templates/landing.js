@@ -40,9 +40,12 @@ class LandingTemplate extends Component {
       groupLength === 2 || groupLength === 4 ? "two" : "three"
 
     return !topic ? null : (
-      <Layout containerWidth={containerWidth}>
+      <Layout
+        containerWidth={containerWidth}
+        footerBorder={topic.footer_border}
+      >
         <SEO title={topic.title} />
-        <main id="docs-main">
+        <main id="docs-main" tabindex="-1">
           <Container width={containerWidth} className="landing-page__header">
             <FlexContainer
               alignItems="center"
@@ -111,28 +114,25 @@ class LandingTemplate extends Component {
               flexDirection="column"
               mobileFlex="same"
               spacing="wide"
-              className="pds-spacing-pad-block-5xl"
+              className="pds-spacing-pad-block-start-5xl"
             >
               {topic.subtopics &&
                 topic.subtopics.map((subtopic) => (
-                  <Container
-                    width={containerWidth}
-                    className="landing-page__subtopics"
-                  >
+                  <div className="landing-page__subtopics">
                     <SubTopicGroup
                       key={subtopic.title}
                       title={subtopic.title}
                       subTitle={subtopic.subtitle}
                       topics={subtopic.subtopic_lists}
                     />
-                  </Container>
+                  </div>
                 ))}
             </FlexContainer>
           )}
 
           {/* Topic groups */}
           {topic.topics_groups && (
-            <div className="pds-background-default-secondary pds-spacing-pad-block-5xl">
+            <div className="pds-spacing-pad-block-5xl">
               <Container
                 width={containerWidth}
                 className="landing-page__topics pds-grid"
@@ -159,31 +159,32 @@ class LandingTemplate extends Component {
 
           {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
-            <Container
-              width={containerWidth}
-              className="landing-page__related pds-spacing-pad-block-end-5xl"
-            >
-              <h2>Related Resources</h2>
-              <FlexContainer spacing="wide">
-                {topic.cta && (
-                  <CallToAction
-                    title={topic.cta.title}
-                    type={topic.cta.type}
-                    subTitle={topic.cta.subtitle}
-                    url={topic.cta.url}
-                  />
-                )}
-                {topic.cta_alt && (
-                  <CallToAction
-                    title={topic.cta_alt.title}
-                    type={topic.cta_alt.type}
-                    subTitle={topic.cta_alt.subtitle}
-                    url={topic.cta_alt.url}
-                    dark
-                  />
-                )}
-              </FlexContainer>
-            </Container>
+            <div className="landing-page__related pds-background-default-secondary pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
+              <Container width={containerWidth}>
+                <h2 className="landing-page__section-heading">
+                  Related Resources
+                </h2>
+                <FlexContainer spacing="wide">
+                  {topic.cta && (
+                    <CallToAction
+                      title={topic.cta.title}
+                      type={topic.cta.type}
+                      subTitle={topic.cta.subtitle}
+                      url={topic.cta.url}
+                    />
+                  )}
+                  {topic.cta_alt && (
+                    <CallToAction
+                      title={topic.cta_alt.title}
+                      type={topic.cta_alt.type}
+                      subTitle={topic.cta_alt.subtitle}
+                      url={topic.cta_alt.url}
+                      dark
+                    />
+                  )}
+                </FlexContainer>
+              </Container>
+            </div>
           )}
         </main>
       </Layout>
@@ -201,6 +202,7 @@ export const pageQuery = graphql`
       id
       title
       subtitle
+      footer_border
       video_id
       path
       cta {

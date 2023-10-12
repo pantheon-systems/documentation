@@ -100,6 +100,7 @@ code {
 
 pre > code {
   background-color: inherit;
+  color: #ffffff;
   font-weight: var(--pds-typography-font-weight-regular);
 }
 

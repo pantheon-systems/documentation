@@ -1,7 +1,4 @@
 /* Temporary global styles that should be incorporated back into PDS */
-.pds-tooltip {
-  display: inline;
-}
 
 /* Set explicit image width/height for tile images. */
 .pds-tile__image img {
