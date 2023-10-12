@@ -41,7 +41,3 @@ For our own Docs site, we saw a reduction of many minutes in build time.
 If you are satisfied with the results, you can switch over all branches and builds by setting the environment variable to `all`. If you wish to test across multiple branches, you can set the environment variable to a comma-separated list of branches like `multi-v1pipeline,multi-v1pipeline2`. TODO: ADD PR EXAMPLE see https://docs.google.com/document/d/1XWVyLfGTisRHVzYp1k0akBCG-YBWnD1fSHFxopSo1Ng/edit?disco=AAAA7Cn4Yto
 
 TODO: Add screenshot
-
-
-
-
