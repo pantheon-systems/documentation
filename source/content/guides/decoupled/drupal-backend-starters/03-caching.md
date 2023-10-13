@@ -1,5 +1,5 @@
 ---
-title: Decoupled Drupal Backend Starter for Front-End Sites
+title: Drupal Backend Starter for Front-End Sites
 subtitle: Caching Recommendations
 description: Learn about caching recommendations for your Drupal backend starter kit.
 tags: [webops, workflow, decoupled]

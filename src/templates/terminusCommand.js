@@ -1,10 +1,9 @@
-
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../layout/layout"
+import GuideLayout from "../layout/GuideLayout"
 import HeaderBody from "../components/headerBody"
 import Callout from "../components/callout"
 import Alert from "../components/alert"
@@ -28,7 +27,10 @@ import Commands from "../components/commands"
 import Partial from "../components/partial"
 import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
-let commandsJson = require('../../source/data/commands.json')
+import SearchBar from "../layout/SearchBar"
+let commandsJson = require("../../source/data/commands.json")
+
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
@@ -49,8 +51,6 @@ const shortcodes = {
   Check,
   Partial,
 }
-
-
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
@@ -119,7 +119,6 @@ const items = [
     link: "/terminus/terminus-3-0",
     title: "Terminus 3",
   },
-
 ]
 
 class CommandsTemplate extends React.Component {
@@ -128,8 +127,8 @@ class CommandsTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -140,8 +139,8 @@ class CommandsTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -150,8 +149,6 @@ class CommandsTemplate extends React.Component {
   }
 
   render() {
-    const contentCols = 12
-
     const slug = this.props.pageContext.slug
     //console.log("slug: ", slug) // For Debugging
 
@@ -161,8 +158,10 @@ class CommandsTemplate extends React.Component {
     const commands = this.props.data.dataJson.commands
     //console.log("commands: ", commands) //For Debugging
 
-    const getCommandBySlug = slug => commands.find(({name}) => name === slug)
-    const getCommandJSONBySlug = slug => commandsJson.commands.find(({name}) => name === slug)
+    const getCommandBySlug = (slug) =>
+      commands.find(({ name }) => name === slug)
+    const getCommandJSONBySlug = (slug) =>
+      commandsJson.commands.find(({ name }) => name === slug)
 
     const command = getCommandBySlug(name)
     //console.log("command: ", command) //For Debugging
@@ -170,95 +169,120 @@ class CommandsTemplate extends React.Component {
     const thisCommandJson = getCommandJSONBySlug(name)
     //console.log("thisCommandJson: ", thisCommandJson) //For Debugging
 
-    var options = Object.keys(thisCommandJson.definition.options).map(function (key) {
+    var options = Object.keys(thisCommandJson.definition.options).map(function (
+      key
+    ) {
       return [String(key), thisCommandJson.definition.options[key]]
     })
-    options.forEach(option => {
+    options.forEach((option) => {
       option.shift()
     })
 
-    options.sort((a, b) => (a[0].name > b[0].name) ? 1 : -1)
-    options.sort(function(a, b) {
-      return a[0].name.localeCompare(b[0].name);
+    options.sort((a, b) => (a[0].name > b[0].name ? 1 : -1))
+    options.sort(function (a, b) {
+      return a[0].name.localeCompare(b[0].name)
     })
     //console.log("Options: ", options) //For Debugging
 
     return (
-      <Layout>
+      <GuideLayout>
         <SEO
+          slot="seo"
           title={command.name + " | Terminus Commands"}
           description={command.description}
           image={"/images/assets/terminus-thumbLarge.png"}
         />
-        <div className="">
-          <div className="container-fluid">
-            <div className="row col-md-10 guide-nav manual-guide-toc-well">
-            <Navbar
-              title={`Terminus Command Reference`}
-              items={items}
-              activePage="/terminus/commands"
-              className="manual-guide-toc"
+        <Navbar
+          slot="guide-menu"
+          title={`Terminus Command Reference`}
+          items={items}
+          activePage="/terminus/commands"
+          className="manual-guide-toc"
+        />
+        <Container slot="guide-content">
+          <SearchBar slot="content" page="default" />
+          <main slot="content" id="docs-main" tabindex="-1">
+            <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
+              <div className="pds-overline-text pds-spacing-pad-block-xs">
+                Command
+              </div>
+              <HeaderBody
+                title="Terminus Command Reference"
+                subtitle={`terminus ${command.name}`}
+                description=""
+                slug={slug}
               />
-              <div id="doc" className="terminus col-md-9 guide-doc-body">
-                <div className="row guide-content-well">
-                  <div
-                    className={`col-xs-${contentCols} col-md-${contentCols}`}
-                  >
-                    <HeaderBody
-                      title="Terminus Command Reference"
-                      subtitle={`terminus ${command.name}`}
-                      description=""
-                      slug={slug}
-                    />
-                    <h2>Description</h2>
-                    {command.description}
-                    <br />
-                    <h2>Example Usage</h2>
-                    <pre className="language-bash"><code className="language=bash">terminus {command.usage[0].replace(/\[|\]/g, "")}</code></pre>
-                    <br />
-                    {command.usage.map( (usage, i) => {
-                      if (i  !== 0) { return (
-                        <>
-                        <p key={i}>
-                        <code key={`${i}-pre`}>{usage.replace(/\[|\]/g, "").replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, '')}</code> {usage.replace(/\[|\]/g, "").match(/(?!^)\b[A-Z][a-z]*\b.+/)}
-                        </p>
-                        <hr className="commandHr"/>
-                        </>
-                      )}
-                    })}
+              <h2>Description</h2>
+              <p>{command.description}</p>
 
-                    <h2>Options</h2>
-                    <table>
-                    <thead>
-                      <tr>
-                        <th>Option</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    {options.map(( option ) => {
+              <h2>Example Usage</h2>
+              <div className="pds-spacing-mar-block-start-l pds-spacing-mar-block-end-4xl">
+                <pre className="language-bash">
+                  <code className="language=bash">
+                    terminus {command.usage[0].replace(/\[|\]/g, "")}
+                  </code>
+                </pre>
+              </div>
+
+              <div className="pds-spacing-mar-block-end-4xl">
+                {command.usage.map((usage, i) => {
+                  if (i !== 0) {
+                    return (
+                      <>
+                        <p key={i}>
+                          <code
+                            key={`${i}-pre`}
+                            className="pds-spacing-mar-inline-end-2xs"
+                          >
+                            {usage
+                              .replace(/\[|\]/g, "")
+                              .replace(/(?!^)\s\b[A-Z][a-z]\w*.+/g, "")}
+                          </code>{" "}
+                          {usage
+                            .replace(/\[|\]/g, "")
+                            .match(/(?!^)\b[A-Z][a-z]*\b.+/)}
+                        </p>
+                        <hr className="commandHr" />
+                      </>
+                    )
+                  }
+                })}
+              </div>
+
+              <h2>Options</h2>
+              <div className="pds-spacing-mar-block-end-4xl">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Option</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {options.map((option) => {
                       return (
                         <>
-                        <tr key={option}>
-                          <td key={`${option}-name`}>{option[0].name}</td>
-                          <td key={`${option}-desc`}>{option[0].description}</td>
-                        </tr>
+                          <tr key={option}>
+                            <td key={`${option}-name`}>{option[0].name}</td>
+                            <td key={`${option}-desc`}>
+                              {option[0].description}
+                            </td>
+                          </tr>
                         </>
                       )
                     })}
-                    </tbody>
-                    </table>
-
-                    <Partial file={`terminus/${slug}.md`} />
-                    <Link to="/terminus/commands">Back to all commands</Link>
-                  </div>
-                </div>
+                  </tbody>
+                </table>
               </div>
-            </div>
-          </div>
-        </div>
+
+              <Partial file={`terminus/${slug}.md`} />
+
+              <Link to="/terminus/commands">Back to all commands</Link>
+            </article>
+          </main>
+        </Container>
         <GetFeedback page={"/" + slug} />
-      </Layout>
+      </GuideLayout>
     )
   }
 }

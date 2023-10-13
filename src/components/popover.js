@@ -1,21 +1,11 @@
 import React from "react"
 
+import { Popover as PDSPopover } from "@pantheon-systems/pds-toolkit-react"
+
 const Popover = ({ icon, title, content }) => {
-  return (
-    <>
-      <span
-        rel="tooltip"
-        data-proofer-ignore
-        data-toggle="popover"
-        data-html="true"
-        data-title={title}
-        data-content={content}
-        style={{ color: "rgb(18, 124, 187)" }}
-      >
-        <em className={`fa fa-info-circle`} />
-      </span>
-    </>
-  )
+  const processedContent = <div dangerouslySetInnerHTML={{ __html: content }} />
+
+  return <PDSPopover content={processedContent} title={title} />
 }
 
 export default Popover

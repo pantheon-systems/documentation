@@ -20,7 +20,7 @@ If you are importing a site and the database has custom prefixes for your DB tab
  - Update user metadata with `update wp_usermeta set meta_key = replace(meta_key, 'oldprefix_', 'wp_');`, replacing `oldprefix` with the previously used prefix.
 
 <Alert title="Note" type="info">
-Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/guides/mariadb-mysql/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.
+Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/guides/mariadb-mysql/mariadb-mysql-faq#are-table-prefixes-supported">Accessing MySQL Databases</a>.
 </Alert>
 
 ## Automatic Updates
@@ -41,9 +41,9 @@ It means you have some code (plugin or theme) that's using PHP Sessions, which r
 
 ### PHP Version Compatibility
 
-WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issues with PHP 8.1 are deprecation notices. A deprecation notice is not an error, but an indicator of the compatibility work that is needed before PHP 9 is released and notices become fatal errors. The PHP code will continue to work with the deprecation notices. 
+WordPress is not fully compatible with PHP 8.0 or 8.1. The remaining known issues with PHP 8.1 are deprecation notices. A deprecation notice is not an error, but an indicator of the compatibility work that is needed before PHP 9 is released and notices become fatal errors. The PHP code will continue to work with the deprecation notices.
 
-For more information, refer to the [PHP Versions](/guides/php/php-versions) documentation. 
+For more information, refer to the [PHP Versions](/guides/php/php-versions) documentation.
 
 ## WordPress Multisite
 

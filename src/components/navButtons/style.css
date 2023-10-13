@@ -1,34 +1,11 @@
-
-.terminus-pager-lsaquo {
-	font-size: 30px;
-	margin-right: 10px;
-	float: left;
-	color: #efd01b;
-	line-height: 0.7;
-	font-weight: bold;
-}
-.terminus-pager-rsaquo {
-	font-size: 30px;
-	margin-left: 10px;
-	float: right;
-	color: #efd01b;
-	line-height: 0.7;
-	font-weight: bold;
-}
-.terminus-pager {
-	padding: 20px;
-	text-align: center;
-}
-.terminus-pager a {
-	text-decoration: none;
+ul.pagination {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.pager-guides > li > a {
-	background-color: #0a6bb5 !important;
-	color: #fff !important;
-	font-weight: bold !important;
-	border: none !important;
-}
-.pager-guides > li > a:hover {
-	opacity: 0.65;
+ul.pagination:has(li.pagination__prev) {
+  justify-content: space-between;
 }

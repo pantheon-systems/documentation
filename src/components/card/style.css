@@ -1,69 +1,43 @@
-
-.plugin-title {
-  margin-top: 10px;
-  font-size: larger;
-  align-self: flex-start;
+.plugin-card {
+  border: 1px solid var(--pds-color-border-default);
+  border-radius: var(--pds-border-radius-container);
+  padding: var(--pds-spacing-l);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: var(--pds-spacing-l);
 }
-.get-plugin {
-  max-width: 120px;
+
+.plugin-card__header {
+  display: flex;
+  align-items: center;
+  column-gap: var(--pds-spacing-l);
 }
 
-.btn-primary,
-.btn-primary:visited,
-.btn-primary:focus {
-  border-radius: 0;
-  border: none;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  transition: 200ms all;
-  background: #efd01b !important;
-  color: #222 !important;
-  font-size: 14px !important;
+.plugin-card__pantheon-official .pds-pantheon-logo,
+.plugin-card__pantheon-official .pds-pantheon-logo svg {
+  height: 3.5rem;
+}
+
+.plugin-card__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--pds-spacing-6xs);
+}
+
+.plugin-card__title {
+  font-size: var(--pds-typography-size-xl);
+  margin: 0;
+}
+
+.plugin-card__pantheon-official {
+  font-size: var(--pds-typography-size-s);
+  color: var(--pds-color-text-default-secondary);
+}
+
+.plugin-card__text p {
+  font-size: var(--pds-typography-size-m);
+}
+
+p.plugin-card__author {
   font-weight: 600;
-}
-.btn-primary:hover {
-  background: #222 !important;
-  color: #efd01b !important;
-  opacity: 1 !important;
-}
-
-a.btn-primary:after {
-  font-family: "FontAwesome" !important;
-  content: "\f105";
-  padding: 0px 0px 0px 12px;
-}
-a.btn-primary:hover:after {
-  color: #efd01b !important;
-}
-.btn-primary-inverse,
-.btn-primary-inverse:visited,
-.btn-primary-inverse:focus {
-  border-radius: 0;
-  border: none;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: 200ms all;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  background: #222 !important;
-  color: #efd01b !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-  font-weight: 900;
-  padding: 15px;
-}
-.btn-primary-inverse:hover {
-  background: #efd01b !important;
-  color: #222 !important;
-  opacity: 1 !important;
-}
-
-a.btn-primary-inverse:after {
-  content: "\203a";
-  color: #efd01b;
-  margin: 0 0 0 10px;
-  height: 100%;
-}
-a.btn-primary-inverse:hover:after {
-  color: #222 !important;
 }

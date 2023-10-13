@@ -41,7 +41,7 @@ This is by no means an exhaustive list. You can find more details on each entry 
 
 ## Web Content Accessibility Guidelines
 
-The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility Guidelines (WCAG)</dfn>](https://www.w3.org/WAI/standards-guidelines/) are an internationally accepted standard for website accessibility. WCAG documents provide detailed explanations and examples on how to make web content more accessible to people with disabilities. The current standard and drafts can be found in the [WCAG 2 Overview](https://www.w3.org/WAI/standards-guidelines/wcag/). 
+The World Wide Web Consortium's (W3C) [<dfn id="wacc">Web Content Accessibility Guidelines (WCAG)</dfn>](https://www.w3.org/WAI/standards-guidelines/) are an internationally accepted standard for website accessibility. WCAG documents provide detailed explanations and examples on how to make web content more accessible to people with disabilities. The current standard and drafts can be found in the [WCAG 2 Overview](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
 ## Principles of Accessibility and Success Criteria
 
@@ -51,11 +51,11 @@ The [WCAG principles](https://www.w3.org/TR/WCAG20/#guidelines) that structure a
 - AA (ideal)
 - AAA (high-level support)
 
-## WAI-ARIA for Rich Internet Applications 
+## WAI-ARIA for Rich Internet Applications
 
 <p>[<dfn id="waiaria">WAI-ARIA 1.1</dfn>](https://www.w3.org/TR/wai-aria-practices-1.1/) provides guidance for dynamic content and advanced user interface controls developed with HTML, JavaScript, and related technologies. It provides insights on ARIA roles, states, and properties to make custom widgets accessible, usable, and interoperable with assistive technologies and to those who rely on keyboard navigation.</p>
 
-[Dequeue](https://www.deque.com/blog/top-5-rules-of-aria/) provides guidance on how to use ARIA effectively to improve the accessibility of web application controls, offering specific guidance for [React](https://www.deque.com/blog/debunking-the-myth-accessibility-and-react/) and [Angular](https://www.deque.com/blog/angular-and-accessibility-issues-and-strategies/) development. 
+[Dequeue](https://www.deque.com/blog/top-5-rules-of-aria/) provides guidance on how to use ARIA effectively to improve the accessibility of web application controls, offering specific guidance for [React](https://www.deque.com/blog/debunking-the-myth-accessibility-and-react/) and [Angular](https://www.deque.com/blog/angular-and-accessibility-issues-and-strategies/) development.
 
 ## Inclusive Design
 

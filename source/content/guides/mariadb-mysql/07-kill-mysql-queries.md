@@ -27,7 +27,7 @@ Make your site faster. Check out our free on-demand training, where you'll learn
 
 ## Identify Long-Running Queries
 
-1. Create a local [MySQL connection](/guides/mariadb-mysql/mysql-access#accessing-the-database-directly) to the site's database.
+1. Create a local [MySQL connection](/guides/mariadb-mysql/mysql-access#access-your-database-directly) to the site's database.
 
 1. Run the following command to show a list of active threads:
 

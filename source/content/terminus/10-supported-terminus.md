@@ -23,7 +23,8 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version          | Release Date      | EOL Date        |
 |------------------|-------------------|-----------------|
-| 3.2.1            | June 1, 2023      |                 |
+| 3.2.2            | September 28, 2023 |                 |
+| 3.2.1            | June 1, 2023      | September 28, 2024 |
 | 3.2.0            | May 22 , 2023     | June 1, 2024    |
 | 3.1.5            | April 6, 2023     | May 22, 2024    |
 | 3.1.4            | March 1, 2023     | April 6, 2024   |
@@ -40,6 +41,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | PHP Version | Terminus 3.x |
 | ----------- | :-----------: |
+| 8.3 (pre-release) | <span style="color:green">✔</span>         |
 | 8.2 | <span style="color:green">✔</span>         |
 | 8.1 | <span style="color:green">✔</span>         |
 | 8.0 | <span style="color:green">✔</span>        |

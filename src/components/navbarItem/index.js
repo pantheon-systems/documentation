@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import './style.css';
+import "./style.css"
 
 const NavbarItem = ({ item, activePage }) => {
   let children = ""
@@ -8,7 +8,7 @@ const NavbarItem = ({ item, activePage }) => {
     children = (
       <li key={`${item.id}-li-child`} id={`${item.id}-li-child`}>
         <ul id="manual-guide-toc-child" className="manual-guide-toc child">
-          {item.items.map(item => {
+          {item.items.map((item) => {
             return (
               <li key={`${item.id}-li-key`} id={`${item.id}-li`}>
                 <Link
@@ -27,7 +27,11 @@ const NavbarItem = ({ item, activePage }) => {
 
   return (
     <>
-      <li key={`${item.id}-li-key`} id={`${item.id}-li`}>
+      <li
+        key={`${item.id}-li-key`}
+        id={`${item.id}-li`}
+        className="toc__menu-item"
+      >
         <Link
           to={item.link}
           className={activePage === item.link ? "active-trail" : ""}

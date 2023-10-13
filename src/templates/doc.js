@@ -34,6 +34,8 @@ import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+
 const shortcodes = {
   Callout,
   Alert,
@@ -61,6 +63,9 @@ const shortcodes = {
   Check,
 }
 
+// Set container width for search and main content.
+const containerWidth = "standard"
+
 class DocTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
@@ -68,8 +73,8 @@ class DocTemplate extends React.Component {
       placement: "right",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -80,8 +85,8 @@ class DocTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -94,7 +99,7 @@ class DocTemplate extends React.Component {
     const isoDate = this.props.data.date
 
     return (
-      <Layout>
+      <Layout footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
@@ -105,36 +110,43 @@ class DocTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <main id="doc">
-          <div className="container doc-content-well">
-            <article className="doc article col-md-9 md-70" id="doc">
-              <HeaderBody
-                title={node.frontmatter.title}
-                subtitle={node.frontmatter.subtitle}
-                description={node.frontmatter.description}
-                slug={node.fields.slug}
-                contributors={node.frontmatter.contributors}
-                featured={node.frontmatter.featuredcontributor}
-                editPath={node.fields.editPath}
-                reviewDate={node.frontmatter.reviewed}
-                isoDate={isoDate.frontmatter.reviewed}
-                cms={node.frontmatter.cms}
+        <main id="docs-main" tabindex="-1">
+          <Container
+            width={containerWidth}
+            className="pds-spacing-pad-block-end-4xl"
+          >
+            <SidebarLayout>
+              <article slot="content" className="doc article styleguide">
+                <HeaderBody
+                  title={node.frontmatter.title}
+                  subtitle={node.frontmatter.subtitle}
+                  description={node.frontmatter.description}
+                  slug={node.fields.slug}
+                  contributors={node.frontmatter.contributors}
+                  featured={node.frontmatter.featuredcontributor}
+                  editPath={node.fields.editPath}
+                  reviewDate={node.frontmatter.reviewed}
+                  isoDate={isoDate.frontmatter.reviewed}
+                  cms={node.frontmatter.cms}
+                />
+                <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+                  <MDXProvider components={shortcodes}>
+                    <MDXRenderer>{node.body}</MDXRenderer>
+                  </MDXProvider>
+                </div>
+              </article>
+              <TOC slot="sidebar" title="Contents" />
+              <GetFeedback
+                formId="tfYOGoE7"
+                page={node.frontmatter.title}
+                topic={
+                  node.frontmatter.categories
+                    ? node.frontmatter.categories.toString()
+                    : null
+                }
               />
-              <div style={{ marginTop: "15px", marginBottom: "45px" }}>
-                <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{node.body}</MDXRenderer>
-                </MDXProvider>
-              </div>
-            </article>
-            {node.frontmatter.showtoc && (
-              <TOC title="Contents" />
-            )}
-            <GetFeedback
-              formId="tfYOGoE7"
-              page={node.frontmatter.title}
-              topic={node.frontmatter.categories ? node.frontmatter.categories.toString() : null}
-            />
-          </div>
+            </SidebarLayout>
+          </Container>
         </main>
       </Layout>
     )

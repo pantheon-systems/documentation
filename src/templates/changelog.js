@@ -4,19 +4,14 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
-import HeaderBody from "../components/headerBody"
 import NavButtons from "../components/navButtons"
-
-import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
 import TOC from "../components/toc"
-import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
@@ -24,12 +19,17 @@ import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
 
+import {
+  Container,
+  Icon,
+  Pager,
+  SidebarLayout,
+} from "@pantheon-systems/pds-toolkit-react"
+
 const shortcodes = {
-  Callout,
   Alert,
   Accordion,
   ExternalLink,
-  Icon,
   Popover,
   TabList,
   Tab,
@@ -40,14 +40,17 @@ const shortcodes = {
   Download,
 }
 
+// Set container width for search and main content.
+const containerWidth = "standard"
+
 class ChangelogTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -58,8 +61,8 @@ class ChangelogTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -71,47 +74,67 @@ class ChangelogTemplate extends React.Component {
     const node = this.props.data.mdx
 
     return (
-      <Layout>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/images/assets/default-thumb-doc.png"}
         />
-        <main className="container doc-content-well" id="docs-main">
-          <article className="doc article col-md-9 md-70">
-            <div id="doc" className="doc article col-md-9 md-70">
-              <h1 className="toc-ignore">Pantheon Changelog</h1>
-              <h2 className="toc-ignore">{node.frontmatter.title}</h2>
-              <Callout
-                title="Subscribe Now"
-                link="https://learn.pantheon.io/Changelog-Opt-In.html"
-              >
+        <main id="docs-main" tabindex="-1">
+          <Container width={containerWidth}>
+            <div className="pds-overline-text pds-spacing-mar-block-end-xs">
+              Pantheon Changelog
+            </div>
+            <h1>{node.frontmatter.title}</h1>
+            <div className="pds-spacing-mar-block-end-3xl">
+              <p className="pds-lead-text pds-lead-text--small">
                 Sign up for the Pantheon Changelog Newsletter to receive a
                 monthly email on what's new and improved across the platform.
-              </Callout>
-              <div style={{ marginTop: "15px", marginBottom: "45px" }}>
-                <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{node.body}</MDXRenderer>
-                </MDXProvider>
-              </div>
+              </p>
+              <a
+                className="pds-button"
+                href="https://learn.pantheon.io/Changelog-Opt-In.html"
+                target="_blank"
+              >
+                Subscribe Now
+                <Icon iconName="externalLink" />
+              </a>
             </div>
-          </article>
-          <TOC title="Contents" />
-          <NavButtons
-            prev={
-              this.props.pageContext.previous
-                ? `/${this.props.pageContext.previous}`
-                : null
-            }
-            next={
-              this.props.pageContext.next
-                ? `/${this.props.pageContext.next}`
-                : null
-            }
-            prevTitle="Older"
-            nextTitle="Newer"
-          />
+            <hr />
+
+            <SidebarLayout sidebarMobileLocation="before">
+              <article
+                slot="content"
+                className="changelog changelog--individual"
+              >
+                <div id="doc" className="doc changelog__content">
+                  <div id="pds-toc-source">
+                    <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                      <MDXProvider components={shortcodes}>
+                        <MDXRenderer>{node.body}</MDXRenderer>
+                      </MDXProvider>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <TOC slot="sidebar" title="Contents" />
+            </SidebarLayout>
+            <NavButtons
+              prev={
+                this.props.pageContext.previous
+                  ? `/${this.props.pageContext.previous}`
+                  : null
+              }
+              next={
+                this.props.pageContext.next
+                  ? `/${this.props.pageContext.next}`
+                  : null
+              }
+              prevTitle="Older"
+              nextTitle="Newer"
+            />
+          </Container>
         </main>
       </Layout>
     )

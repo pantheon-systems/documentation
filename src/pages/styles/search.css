@@ -1,0 +1,132 @@
+.number-of-results {
+  border-bottom: 1px solid var(--pds-color-border-default);
+  font-size: var(--pds-typography-size-m);
+  font-weight: var(--pds-typography-font-weight-semibold);
+  padding-block: var(--pds-spacing-l);
+}
+
+.addsearch-searchresults-no-results h2,
+.addsearch-searchresults .number-of-results,
+.addsearch-searchresults .number-of-results h2 {
+  font-size: var(--pds-typography-size-m);
+  font-weight: var(--pds-typography-font-weight-regular);
+  padding-block: var(--pds-spacing-l);
+}
+
+.addsearch-searchresults-no-results h2 em {
+  font-weight: var(--pds-typography-font-weight-semibold);
+}
+
+/* Individual results */
+.search-results__items .hit {
+  line-height: var(--pds-typography-line-height-l);
+  padding-block: var(--pds-spacing-xl);
+}
+
+.search-results__items .hit .category {
+  background-color: var(--pds-color-tag-4-background);
+  border-radius: var(--pds-border-radius-default);
+  color: var(--pds-color-tag-4-foreground);
+  display: inline-flex;
+  font-size: var(--pds-typography-size-s);
+  font-weight: var(--pds-typography-font-weight-semibold);
+  line-height: var(--pds-typography-line-height-s);
+  margin-block-start: var(--pds-spacing-m);
+  padding-block: var(--pds-spacing-4xs);
+  padding-inline: var(--pds-spacing-2xs);
+}
+
+.search-results__items .hit img {
+  display: none;
+}
+
+.search-results__items .hit h2,
+.search-results__items .hit h3 {
+  line-height: 1;
+}
+
+.search-results__items .hit h2 a,
+.search-results__items .hit h3 a {
+  font-size: var(--pds-typography-size-l);
+  font-weight: var(--pds-typography-font-weight-semibold);
+  text-decoration: none;
+}
+
+.search-results__items .hit h2 a:hover,
+.search-results__items .hit h3 a:hover {
+  text-decoration: underline;
+}
+
+.search-results__items .hit .highlight {
+  background-color: transparent;
+}
+
+.search-results__items .hit .highlight em {
+  background-color: #fff1a9;
+  font-weight: var(--pds-typography-font-weight-semibold);
+  padding-inline: var(--pds-spacing-4xs);
+}
+
+/* Pagination */
+.search-results__pager {
+  padding-block: var(--pds-spacing-m) var(--pds-spacing-4xl);
+}
+
+.addsearch-pagination {
+  align-items: center;
+  color: var(--pds-color-text-default);
+  column-gap: var(--pds-spacing-3xs);
+  display: flex;
+  font-family: var(--pds-typography-font-default);
+  font-weight: var(--pds-typography-font-weight-semibold);
+  justify-content: center;
+  list-style-type: none;
+}
+
+.addsearch-pagination button {
+  align-items: center;
+  border-radius: var(--pds-border-radius-default);
+  color: var(--pds-color-text-default);
+  display: flex;
+  font-weight: var(--pds-typography-font-weight-semibold);
+  justify-content: center;
+  line-height: 1;
+  min-width: var(--pds-spacing-2xl);
+  padding: var(--pds-spacing-2xs) 0;
+  text-decoration: none;
+  transition: var(--pds-animation-button-transition);
+}
+
+.addsearch-pagination button:hover {
+  background-color: var(--pds-color-pager-background-hover);
+}
+
+.addsearch-pagination button:focus-visible {
+  outline: 2px solid var(--pds-color-interactive-focus);
+}
+
+.addsearch-pagination button[aria-current="true"] {
+  background-color: var(--pds-color-pager-background-active);
+  color: var(--pds-color-pager-foreground-active);
+}
+
+/* Hack to add previous/next icons from PDS.  */
+/* TODO: Remove if this can be configured in Addsearch instead */
+.addsearch-pagination button[data-page="previous"],
+.addsearch-pagination button[data-page="next"] {
+  color: transparent;
+  padding-block-end: var(--pds-spacing-4xs);
+}
+
+.addsearch-pagination button[data-page="previous"]:before,
+.addsearch-pagination button[data-page="next"]:before {
+  padding-inline-start: var(--pds-spacing-2xs);
+}
+
+.addsearch-pagination button[data-page="previous"]:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 448 512" height="1rem" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet" focusable="false" class="pds-icon pds-icon--md pds-icon--arrowLeft" classes="pds-page__icon"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" fill="currentColor"></path></svg>');
+}
+
+.addsearch-pagination button[data-page="next"]:before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 448 512" height="1rem" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet" focusable="false" class="pds-icon pds-icon--md pds-icon--arrowRight" classes="pds-page__icon"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="currentColor"></path></svg>');
+}

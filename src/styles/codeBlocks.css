@@ -1,30 +1,34 @@
-.command-line-prompt {
-	display: block;
-	float: left;
-	font-size: 100%;
-	letter-spacing: -5px;
-	margin-right: 0em;
-	pointer-events: none;
+.gatsby-highlight {
+  margin-block-end: var(--pds-spacing-l);
+}
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.command-line-prompt {
+  display: block;
+  float: left;
+  font-size: 100%;
+  letter-spacing: -5px;
+  margin-right: 0em;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .command-line-prompt > span:before {
-	color: #999;
-	content: ' ';
-	display: block;
-	padding-right: 0.8em;
+  color: #999;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
 }
 
 .command-line-prompt > span[data-user]:before {
-	content: "$";
+  content: "$";
 }
 
 .command-line-prompt > span[data-user="root"]:before {
-	content: "#";
+  content: "#";
 }
 
 .command-line-prompt > span[data-user="winshell"]::before {
@@ -43,51 +47,73 @@
 }
 
 .command-line-prompt > span[data-prompt]:before {
-	content: attr(data-prompt);
+  content: attr(data-prompt);
 }
 
 .highlight {
-	background: yellow;
+  background: yellow;
 }
 
 .gatsby-highlight-code-line {
   background-color: #efcf1b;
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
   border-left: 0.25em solid #f99;
+  display: block;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 0.75em;
+  padding-right: 1em;
 }
 
-.gatsby-highlight-code-line, .gatsby-highlight-code-line .token {
-    color: #181D21 !important;
+.gatsby-highlight-code-line,
+.gatsby-highlight-code-line .token {
+  color: #181d21 !important;
 }
 
 .gatsby-remark-code-title {
-  margin-bottom: -0.6rem;
-  padding: 0.5em 1em;
-  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
-    monospace;
-	font-weight: bolder !important;
-
-  background-color: #44525E;
-  display: inline;
-  color: white;
-  z-index: 0;
+  background-color: var(--pds-color-brand-secondary-default);
 
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
-
-}
-
-div.gatsby-remark-code-title::before {
-    content: "File: ";
+  color: white;
+  display: inline;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
+    monospace;
+  font-weight: bolder !important;
+  margin-bottom: -0.6rem;
+  padding: 0.5em 1em;
+  z-index: 0;
 }
 
 span.line-numbers-rows {
-  padding-top: 1em;
   padding-left: 1em;
+  padding-top: 1em;
+}
+
+code {
+  background-color: #f0ecff;
+  font-weight: var(--pds-typography-font-weight-semibold);
+  margin-inline: var(--pds-spacing-6xs);
+  padding: var(--pds-spacing-6xs) var(--pds-spacing-4xs);
+}
+
+pre > code {
+  background-color: inherit;
+  color: #ffffff;
+  font-weight: var(--pds-typography-font-weight-regular);
+}
+
+.gatsby-highlight {
+  margin-block-end: var(--pds-spacing-2xl);
+}
+
+.gatsby-remark-code-title {
+  display: inline-block;
+  margin-block-start: var(--pds-spacing-m);
+  margin-block-end: -7px;
+}
+
+div.gatsby-remark-code-title::before {
+  content: "File: ";
 }

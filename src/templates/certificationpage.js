@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../layout/layout"
+import GuideLayout from "../layout/GuideLayout"
 import HeaderBody from "../components/headerBody"
 import Callout from "../components/callout"
 import Alert from "../components/alert"
@@ -28,7 +28,9 @@ import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
 import Partial from "../components/partial"
 import Youtube from "../components/youtube"
+import SearchBar from "../layout/SearchBar"
 
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
@@ -48,7 +50,7 @@ const shortcodes = {
   Commands,
   ReviewDate,
   Check,
-  Youtube
+  Youtube,
 }
 
 // @TODO relocate this list
@@ -114,7 +116,7 @@ const items = [
     id: "docs-certification-chapter-10",
     link: "/certification/study-guide/custom-upstreams",
     title: "Chapter 10: Custom Upstreams",
-  }
+  },
 ]
 
 class CertificationTemplate extends React.Component {
@@ -123,8 +125,8 @@ class CertificationTemplate extends React.Component {
       trigger: "click",
     })
 
-    $("body").on("click", function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").on("click", function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (
           !$(this).is(e.target) &&
           $(this).has(e.target).length === 0 &&
@@ -135,8 +137,8 @@ class CertificationTemplate extends React.Component {
       })
     })
 
-    $("body").keyup(function(e) {
-      $('[data-toggle="popover"]').each(function() {
+    $("body").keyup(function (e) {
+      $('[data-toggle="popover"]').each(function () {
         if (event.which === 27) {
           $(this).popover("hide")
         }
@@ -157,9 +159,17 @@ class CertificationTemplate extends React.Component {
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
 
+    // Preprocess content region layout if has TOC or not.
+    const hasTOC = node.frontmatter.showtoc
+    const ContainerDiv = ({ children }) => (
+      <div className="content-wrapper">{children}</div>
+    )
+    const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
+
     return (
-      <Layout>
+      <GuideLayout>
         <SEO
+          slot="seo"
           title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
@@ -167,51 +177,47 @@ class CertificationTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-          <div className="container-fluid">
-            <div className="row col-md-10 guide-nav manual-guide-toc-well">
-              <Navbar
+        <Navbar
+          slot="guide-menu"
+          title={node.frontmatter.title}
+          items={items}
+          activePage={node.fields.slug}
+        />
+        <ContentLayoutType slot="guide-content">
+          <SearchBar slot="content" page="default" />
+
+          <main
+            slot="content"
+            id="docs-main"
+            tabindex="-1"
+            className="certification terminus"
+          >
+            <article className="doc guide-doc-body">
+              <HeaderBody
                 title={node.frontmatter.title}
-                items={items}
-                activePage={node.fields.slug}
+                subtitle={node.frontmatter.subtitle}
+                description={node.frontmatter.description}
+                slug={node.fields.slug}
+                contributors={node.frontmatter.contributors}
+                featured={node.frontmatter.featuredcontributor}
+                editPath={node.fields.editPath}
+                reviewDate={ifCommandsDate}
+                isoDate={ifCommandsISO}
               />
-              <main id="doc" className="certification terminus col-md-9 guide-doc-body">
-                <div className="row guide-content-well">
-                  <article
-                    className={`col-xs-${contentCols} col-md-${contentCols}`}
-                  >
-                    <HeaderBody
-                      title={node.frontmatter.title}
-                      subtitle={node.frontmatter.subtitle}
-                      description={node.frontmatter.description}
-                      slug={node.fields.slug}
-                      contributors={node.frontmatter.contributors}
-                      featured={node.frontmatter.featuredcontributor}
-                      editPath={node.fields.editPath}
-                      reviewDate={ifCommandsDate}
-                      isoDate={ifCommandsISO}
-                    />
-                    <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{node.body}</MDXRenderer>
-                    </MDXProvider>
-                    <NavButtons
-                      prev={node.frontmatter.previousurl}
-                      next={node.frontmatter.nexturl}
-                    />
-                  </article>
-                  {node.frontmatter.showtoc && (
-                    <div
-                      className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-                      role="complementary"
-                    >
-                      <TOC title="Contents" />
-                    </div>
-                  )}
-                </div>
-              </main>
-            </div>
-          </div>
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{node.body}</MDXRenderer>
+              </MDXProvider>
+              <NavButtons
+                prev={node.frontmatter.previousurl}
+                next={node.frontmatter.nexturl}
+              />
+            </article>
+          </main>
+          {hasTOC && <TOC slot="sidebar" title="Contents" />}
+        </ContentLayoutType>
+
         <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
-      </Layout>
+      </GuideLayout>
     )
   }
 }

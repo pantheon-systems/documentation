@@ -1,0 +1,31 @@
+.docs-static-header {
+  border-block-end: 0.0625rem solid var(--pds-color-border-default);
+}
+
+.docs-static-header__container {
+  align-items: center;
+  column-gap: var(--pds-spacing-l);
+  display: flex;
+  height: var(--pds-spacing-6xl);
+  justify-content: flex-start;
+}
+
+.docs-static-header__link a {
+  align-items: center;
+  color: var(--pds-color-text-default);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--pds-typography-font-default);
+  font-size: var(--pds-typography-size-m);
+  font-weight: var(--pds-typography-font-weight-semibold);
+  justify-content: center;
+  letter-spacing: var(--pds-typography-letter-spacing-m);
+  line-height: 1;
+  padding: var(--pds-spacing-xs) var(--pds-spacing-s);
+  text-decoration: none;
+  transition: var(--pds-animation-button-transition);
+}
+
+.docs-static-header__link a:hover {
+  color: var(--pds-color-link-hover);
+}
