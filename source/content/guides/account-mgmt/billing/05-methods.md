@@ -84,6 +84,17 @@ Deleting a card profile from your account will also delete its associated billin
 1. Select **Yes, I want to delete it**, then click **Delete**.
 
 
+### Move Subscriptions to Another Payment Method
+
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
+
+1. Click **View Details** for the payment method you want to move subscriptions from.
+
+1. Click **Actions**, then click **Move Subscriptions**.
+
+1. Select the new payment method you want to use, then click **Save**.
+
+
 ### View History
 
 1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**.
