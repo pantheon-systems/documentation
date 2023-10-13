@@ -2,3 +2,6 @@
 # Additional code owners can be added for specific paths.
 # For more information about CODEOWNERS files, refer to https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 * @pantheon-systems/docs-admins
+
+# The CMS Platform Squad is responsible for many of plugins, modules, and CMS extension points that our customers interact with.
+source/content/addons/object-cache/ @pantheon-systems/cms-platform
