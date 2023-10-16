@@ -83,29 +83,24 @@ Note that each custom domain is counted regardless of the environment to which i
 
    - Note that if the Platform detects a CNAME record, the **Status** will show `Remove this detected record` on the line with the CNAME. Remove the CNAME from the DNS management service to avoid potential issues or interruptions.
 
-## Domain Validation FAQ
-1. I have existing custom domains which were previously connected and launched prior to the enforcement of Domain Verification, will those be impacted?
+## FAQ
+### I have existing custom domains which were previously connected and launched prior to the enforcement of Domain Verification, will those be impacted?
+No. Any custom domains previously added or launched will not require explicit domain verification. However, if any of those domains are deleted by the customer and then re-added, the process of re-addition (whether to the same environment or any other environment) will trigger domain verification.
 
-   No. Any custom domains previously added or launched will not require explicit domain verification. However, if any of those domains are deleted by the customer and then re-added, the process of re-addition (whether to the same environment or any other environment) will trigger domain verification. 
-
-1. Is pre-provisioning HTTPS now a requirement to connect a custom domain?
-
-   Yes. Skipping HTTPS provisioning is no longer an option. 
+### Is pre-provisioning HTTPS now a requirement to connect a custom domain?
+Yes. Skipping HTTPS provisioning is no longer an option.
 
 
-1. Is Wild Card DNS routing supported by Domain Verification?
-
-   Pantheon does not allow wild card domains to be directly added as a custom domain. Customers may point wildcard domains (eg: *.example.com) in their own DNS to Pantheon, but are still required to have specific domains (eg: mysite.example.com) added and connected to specific environments on Pantheon. 
-
-
-1. Can I opt-out of Domain Verification for a given custom domain?
-
-   We do not recommend opting out of domain verification for custom domains because it increases the risk of domains being taken over or hijacked. If you have a specific reason to exclude domains from domain verification (for example, for subdomains belonging to a WordPress Multisite for which domain verification is not feasible for a specific reason) you may reach out to Pantheon Support via chat or [ticket](/guides/support/support-ticket/)
+### Is Wild Card DNS routing supported by Domain Verification?
+Pantheon does not allow wild card domains to be directly added as a custom domain. Customers may point wildcard domains (eg: *.example.com) in their own DNS to Pantheon, but are still required to have specific domains (eg: mysite.example.com) added and connected to specific environments on Pantheon.
 
 
-1. Can I opt-out of Domain Verification for all domains connected to a given site, or across a given professional workspace?
+### Can I opt-out of Domain Verification for a given custom domain?
+We do not recommend opting out of domain verification for custom domains because it increases the risk of domains being taken over or hijacked. If you have a specific reason to exclude domains from domain verification (for example, for subdomains belonging to a WordPress Multisite for which domain verification is not feasible for a specific reason) you may reach out to Pantheon Support via chat or [ticket](/guides/support/support-ticket/)
 
-   We do not provide such an opt-out mechanism by default. If you have a specific reason to exclude domains from domain verification (for example, for subdomains belonging to a WordPress Multisite for which domain verification is not feasible for a specific reason) you may reach out to Pantheon Support via chat or [ticket](/guides/support/support-ticket/)
+
+### Can I opt-out of Domain Verification for all domains connected to a given site, or across a given professional workspace?
+We do not provide such an opt-out mechanism by default. If you have a specific reason to exclude domains from domain verification (for example, for subdomains belonging to a WordPress Multisite for which domain verification is not feasible for a specific reason) you may reach out to Pantheon Support via chat or [ticket](/guides/support/support-ticket/)
 
 
 
