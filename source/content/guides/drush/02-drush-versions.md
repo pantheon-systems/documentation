@@ -82,7 +82,7 @@ Our default Composer-managed upstream has a start state for this dependency that
 "drush/drush": "^11 || ^12"
 ```
 
-Refer to [Pantheon's Drupal Composer-Managed upstream](https://github.com/pantheon-systems/drupal-composer-managed/blob/6522cbccb4a9c057d01a6fe67898cfee6d998aba/composer.json#L23) for a complete example of the `composer.json` file.
+Refer to [Pantheon's Drupal Composer-Managed upstream](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/6522cbccb4a9c057d01a6fe67898cfee6d998aba/composer.json#L23) for a complete example of the `composer.json` file.
 
 #### Permissions
 
