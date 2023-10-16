@@ -33,8 +33,6 @@ When entering the value for the Name/Host, the bare domain and trailing dot ("."
 
 After completing the fields on the page, click **Verify Ownership**.
 
-You can click **Skip without HTTPS** to skip verification. By skipping, vistors to your site will receive a browser warning until Pantheon automatically provisions HTTPS, which can take approximately one hour after going live.  
-
 ## Configure DNS Records on Namecheap
 
 ### A Record
