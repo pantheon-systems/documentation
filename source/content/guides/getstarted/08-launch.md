@@ -47,7 +47,7 @@ After you've done that, connect your DNS:
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security.
 
-1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**. It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values.
+1. Click **Verify Ownership** to confirm. It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values.
 
 1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/guides/domains/dns) provider. If you see a message like "Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.", wait one minute, then refresh the page.
 

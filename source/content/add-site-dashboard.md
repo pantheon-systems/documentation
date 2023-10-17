@@ -23,7 +23,7 @@ To create a CMS site:
 <Partial file="dashboard-site-creation-1.md" />
 
 
-
+### Install the CMS
 
 <Partial file="cms-dev.md" />
 
@@ -50,4 +50,3 @@ When you complete this step, your site will be live for anyone to see, at the Pa
 You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
 
 At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
-

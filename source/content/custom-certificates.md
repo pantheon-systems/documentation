@@ -82,8 +82,6 @@ As an alternative, you can also submit the certificate bundle to Pantheon Suppor
 
 Next, [add the domain to your environment](/guides/domains).
 
-  If you are presented with the option to **Verify your domain to provision HTTPS**, skip the verification by clicking **Skip to updating DNS**.
-
 Once the certificate is in place, you will see the following under **Details** for your domain(s):
 
   ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)

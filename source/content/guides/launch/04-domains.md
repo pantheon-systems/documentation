@@ -34,7 +34,13 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
 
-1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**.
+1. Click **Verify Ownership** to confirm.
+
+   <Alert title="Note" type="info">
+
+   If you have a wildcard domain pointed at Pantheon and you have a valid use case to skip this verification for your sub-domains (although it is recommended to prevent domain takeovers), you may request an exemption to skip the verification by contacting Pantheon Support via chat or [ticket](/guides/support/support-ticket/).
+
+  </Alert>
 
   It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values. If you encounter issues after 30 minutes, check the following:
 
