@@ -43,36 +43,13 @@ The following components are required for your backend, especially if using the 
      - [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
      - [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for a Front-End Site.
 
-## Node.js Versions
+## Front-End Requirements
 
-As of the release of our [V1 build pipeline](/guides/decoupled/overview/v1-pipeline), Front-End Sites runs can run v16, v18, or v20 of Node.js.
+Front-Ends Sites
 
-Non-LTS versions like v17 are not available.
+As of the release of our [V1 build pipeline](/guides/decoupled/overview/v1-pipeline), Front-End Sites runs can run v16, v18, or v20 of Node.js [as specified in your `package.json` file](/guides/decoupled/overview/manage-settings#nodejs-version).
 
-Pantheon respects the engines field in package.json when selecting a specific Node.js version for the build (Gatsby.js and Next.js) and runtime (Next.js) of your Front-End Site. For example, to select Node.js 16 for a given deployment, you should do the following:
-
-```json
-"engines": {
-  "node": ">=16.0.0 <18.0.0"
-},
-```
-
-To break down that example, the `package.json`` file for the project declares it expects something greater than or equal to 16.0.0 and less than 18.0.0. As of the writing of this documentation, this declaration would result in 16.20.2 being used.
-
-Note that if you select a range of major Node.js versions, Pantheon will select the most recent Node.js major version for that deployment. For example, the following configuration would result in Node.js 18.x being selected:
-
-```json
-"engines": {
-  "node": ">=16.0.0 <20.0.0"
-},
-```
-We recommend that when you need to change the version of Node.js for your Front-End Site, that you test the new version by pushing the updated `package.json` to a branch first and create a pull request. Pantheon will create an environment for your site specific to that pull request.
-
-Sites made prior to DATE run on the v0 pipeline which supported the declaration of Node.js versions via [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/).
-
-## Frontend Frameworks
-
-Pantheon Front-End Sites Early Access (EA) program currently supports Gatsby and Next.js as frontend frameworks. Additional frameworks will be added to our official support list over the coming months.
+Pantheon Front-End Sites Early Access (EA) program currently supports Gatsby and Next.js as frameworks. Additional frameworks will be added to our official support list over the coming months.
 
 You can use frontend frameworks other than Gatsby and Next.js, however the process requires manual configuration. Refer to [Use a Non-official Framework](/guides/decoupled/no-starter-kit/any-framework) for specific instructions.
 
