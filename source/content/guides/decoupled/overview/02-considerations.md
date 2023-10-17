@@ -45,8 +45,6 @@ The following components are required for your backend, especially if using the 
 
 ## Front-End Requirements
 
-Front-Ends Sites
-
 As of the release of our [V1 build pipeline](/guides/decoupled/overview/v1-pipeline), Front-End Sites runs can run v16, v18, or v20 of Node.js [as specified in your `package.json` file](/guides/decoupled/overview/manage-settings#nodejs-version).
 
 Pantheon Front-End Sites Early Access (EA) program currently supports Gatsby and Next.js as frameworks. Additional frameworks will be added to our official support list over the coming months.
