@@ -32,17 +32,12 @@ We recommend trying the new pipeline with a branch or pull request before switch
 
 To switch over a single multidev environment, set an environment variable in your site's dashboard named `FLAG_V1_PIPELINE` to the name of a Multidev branch that you can make next like `multi-v1pipeline`.
 
-TODO: Add screenshot
-
-
 ![Setting FLAG_V1_PIPELINE in the dashboard](../../../../images/decoupled/v1-flag.png)
-
-
 
 To see the improvement in build times, you will need to make at least two pushes to the branch.
 The first push will be a full build, and the second push will be a cached build.
 For our own Docs site, we saw a reduction of many minutes in build time.
 
-If you are satisfied with the results, you can switch over all branches and builds by setting the environment variable to `all`. If you wish to test across multiple branches, you can set the environment variable to a comma-separated list of branches like `multi-v1pipeline,multi-v1pipeline2`. TODO: ADD PR EXAMPLE see
+If you are satisfied with the results, you can switch over all branches and builds by setting the environment variable to `all`. If you wish to test across multiple branches, you can set the environment variable to a comma-separated list of branches like `multi-v1pipeline, multi-v1pipeline2, pr-123`. TODO: ADD PR EXAMPLE see
 
 ![Multiple commna separated values in FLAG_V1_PIPELINE](../../../../images/decoupled/v1-flag-comma.png)
