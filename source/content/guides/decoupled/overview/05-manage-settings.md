@@ -169,15 +169,15 @@ During the development and management of a project you might want to run a build
 
 Each environment in the Pantheon dashboard includes an option to Clear Cache and Build from the previous build. The production environment includes this within an action menu under the Trigger Build button on the site overview:
 
-TODO IMAGE 1
+![Screenshot of trigger menu](../../../../images/decoupled/purge-build-cachge--trigger.png)
 
 For a Multidev environment, you can access the same option on the site overview for any Multidev listed:
 
-TODO IMAGE 2
+![Screenshot of Multidev menu](../../../../images/decoupled/purge-build-cachge--multidev.png)
 
 Or on the Branch Details page:
 
-TODO IMAGE 3
+![Screenshot of branch details menu](../../../../images/decoupled/purge-build-cachge--branch-detail.png)
 
 
 ### Bust the Build Cache through Code Changes
