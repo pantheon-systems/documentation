@@ -388,8 +388,6 @@
           url: "/guides/php/php-versions"
         - text: "Securely Working with phpinfo"
           url: "/guides/secure-development/phpinfo"
-        - text: "Platform Resources for Legacy Plans"
-          url: "/guides/account-mgmt/plans"
         - text: "Timeouts on Pantheon"
           url: "/timeouts"
         - text: "Cron for WordPress"

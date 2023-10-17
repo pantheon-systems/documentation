@@ -396,13 +396,7 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal (Latest Version)" id="d9-2conflict-merge" active={true}>
 
-
-
-
-
-
-
- [View on GitHub](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml)
+ [View on GitHub](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/pantheon.upstream.yml)
 
  </Tab>
 
