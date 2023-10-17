@@ -57,7 +57,7 @@ Note that each custom domain is counted regardless of the environment to which i
 
    <Alert title="Note" type="info">
 
-  If you have a wildcard domain pointed at Pantheon and you have a valid use case to skip this verification for your sub-domains (although it is recommended to prevent domain takeovers), you may request an exemption to skip the verification by contacting Pantheon Support via chat or [ticket](/guides/support/support-ticket/).
+  If you have a wildcard domain pointed at Pantheon and you have a valid use case to skip this verification for your sub-domains (although it is recommended to prevent domain takeovers), you may request an exemption. For details, [see this FAQ below](#can-i-opt-out-of-domain-verification).
 
   </Alert>
 
