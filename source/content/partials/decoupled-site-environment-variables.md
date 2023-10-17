@@ -21,13 +21,17 @@ Variable names *cannot* include:
 - Commas
 - Reserved words. Reserved words include:
 
-    - PORT
-    - K_SERVICE
-    - K_REVISION
-    - K_CONFIGURATION
-    - CLOUD_RUN_JOB
-    - CLOUD_RUN_EXECUTION
-    - CLOUD_RUN_TASK_INDEX
-    - CLOUD_RUN_TASK_ATTEMPT
-    - CLOUD_RUN_TASK_COUNT
-    - PANTHEON_*
+    - `PORT`
+    - `K_SERVICE`
+    - `K_REVISION`
+    - `K_CONFIGURATION`
+    - `CLOUD_RUN_JOB`
+    - `CLOUD_RUN_EXECUTION`
+    - `CLOUD_RUN_TASK_INDEX`
+    - `CLOUD_RUN_TASK_ATTEMPT`
+    - `CLOUD_RUN_TASK_COUNT`
+    - `PANTHEON_*`
+
+Pantheon can use environment variables as the mechanism to opt-in to new enhancements like:
+
+- `FLAG_V1_PIPELINE` to opt-in to the [V1 build pipeline](/guides/decoupled/overview/v1-pipeline)
