@@ -97,16 +97,12 @@ Pantheon does not allow wild card domains to be directly added as a custom domai
 ### How can I know which domains are still pending ownership verification ?
 For any domain that has been added that is pending verification, clicking on the "Details" button in the Domains list page for that domain will take you to another page where you can put in the information required to verify ownership for that domain. If the ownership of the domain has been already verified, the detail page will instead show the DNS records you need to update in your authoritative DNS to point to Pantheon, as well as the status of HTTPS provisioning. In other words, if your domain is not verified, we will require you to provide the necessary information to verify ownership first.
 
-You can get a high-level status view for all custom domains connected to a given environment via Terminus using the [`domain:dns` command](/terminus/commands/domain-dns). Domains that are pending verification will have the "pending verification" status returned as part of the Terminus `domain:dns` command. 
+You can get a high-level status view for all custom domains connected to a given environment via Terminus using the [`domain:dns` command](/terminus/commands/domain-dns). Domains that are pending verification will have the "pending verification" status returned as part of the Terminus `domain:dns` command.
 
-### Can I opt-out of Domain Verification for a given custom domain?
-We do not recommend opting out of domain verification for custom domains because it increases the risk of domains being taken over or hijacked. If you have a specific reason to exclude domains from domain verification (for example, for subdomains belonging to a WordPress Multisite for which domain verification is not feasible for a specific reason) you may reach out to Pantheon Support via chat or [ticket](/guides/support/support-ticket/)
+### Can I opt-out of Domain Verification?
+Yes, a professional workspace can opt-out from domain verifications across all sites in their organization but only by request. Please [contact support](/guides/support/contact-support/) to request exemption from domain verification, and once granted - you will see an option to skip domain verification when connecting domains to sites in your workspace.
 
-
-### Can I opt-out of Domain Verification for all domains connected to a given site, or across a given professional workspace?
-We do not provide such an opt-out mechanism by default. If you have a specific reason to exclude domains from domain verification (for example, for subdomains belonging to a WordPress Multisite for which domain verification is not feasible for a specific reason) you may reach out to Pantheon Support via chat or [ticket](/guides/support/support-ticket/)
-
-
+Exemption is only available at the workspace level. For example, you cannot request exemption for just one site in your workspace, or an individual custom domain such as `example.com`.
 
 ## More Resources
 
