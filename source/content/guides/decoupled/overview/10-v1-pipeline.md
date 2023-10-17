@@ -18,7 +18,7 @@ integration: [--]
 ---
 
 In the Fall of 2023 Pantheon introduced a new build pipeline for Front End Sites.
-Among under-the-hood-optimizations, like caching of folders between builds, the new pipeline changes the mechanism by which the Node.js version is selected for your build and your runtime environment.
+Among under-the-hood-optimizations, like [caching of folders between builds](/guides/decoupled/overview/manage-settings#build-cache), [the new pipeline now uses your `package.json` file](/guides/decoupled/overview/manage-settings#nodejs-version) to select the appropriate version of Node.js your build and your runtime environments.
 
 Sites made prior to **TODO DATE** will continue to use the old pipeline, and will need to opt-in to the new pipeline to take advantage of the new features.
 
