@@ -26,6 +26,7 @@ import Partial from "../components/partial"
 import Image from "../layout/image"
 import Example from "../components/styleExample"
 import Youtube from "../components/youtube"
+import Wistia from "../components/wistia"
 
 import { Container } from "@pantheon-systems/pds-toolkit-react"
 
@@ -47,6 +48,7 @@ const shortcodes = {
   Image,
   Example,
   Youtube,
+  Wistia
 }
 
 // Set container width for search and main content.

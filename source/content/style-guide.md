@@ -1102,6 +1102,24 @@ export env=dev
 
 </Example>
 
+## Videos
+
+To embed videos to the docs, use either the Youtube or Wistia components:
+
+<Example>
+
+<Wistia src="7gn1g3ljz6" />
+
+<hr className="source-code" /> <br />
+
+```markdown
+<Wistia src="7gn1g3ljz6" />
+```
+
+</Example>
+
+
+
 ## Voice, Style, and Flow
 
 Some General Rules:
