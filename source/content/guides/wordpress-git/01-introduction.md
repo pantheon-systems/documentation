@@ -17,6 +17,8 @@ editpath: wordpress-Git/01-introduction.md
 reviewed: "2021-02-26"
 ---
 
+<Wistia src="7gn1g3ljz6" />
+
 This guide demonstrates how SFTP users can build WordPress sites on Pantheon's Git-based platform. Don't use Git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
 
 Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard or adding a lot of complexity to your workflow. But first, why should you use Git, when SFTP and a text editor has been working fine? Here are a few reasons why:
