@@ -86,12 +86,3 @@ The account tier and cost is displayed on the Subscriptions page. You can also v
 
 By default, sites are listed by name. You can sort according to your preference. For more information on a site in your Personal Workspace, you can click the site name in the Site Subscriptions table or click the **Sites** tab. Additionally, you can filter sites by site plan or payment method.
 
-
-#### Move Site Subscriptions to Another Payment Method
-
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Subscriptions**.
-
-1. Find the site subscription you want to another payment method, click **Actions**, then click **Change Payment Method**.
-
-1. Select the new payment method you want to use, then click **Save**.
-
