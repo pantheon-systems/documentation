@@ -34,6 +34,37 @@ Ineffective caching at the GCDN level is often a primary cause of slow site perf
 
 [Detailed Debug Cache Guide](/debug-cache)
 
+### Redis Object Caching
+
+On performance plans and above, Redis enhances performance by reducing redundant database queries.
+
+#### How to Check:
+
+- Confirm Redis object caching is enabled.
+- Review Redis usage in New Relic or connect directly to Redis.
+
+#### Recommended Solutions:
+
+- Ensure optimal Redis configurations.
+
+[Pantheon's Object Cache Documentation](/object-cache)
+
+### PHP Errors and Watchdog Logs
+
+PHP errors and watchdog logs in Drupal can indicate issues affecting site performance and can slow down the site by constant logging.
+
+#### How to Check:
+
+- **PHP Error Logs**: Review PHP logs for recurring errors or warnings.
+- **Drupal Watchdog Logs**: If you're running a Drupal site, regularly check the watchdog logs for errors.
+
+#### Recommended Solutions:
+
+- Solve any recurring PHP errors.
+- Address issues identified in the watchdog logs.
+
+[PHP Errors and Exceptions](/guides/php/php-errors)
+
 ### New Relic Analysis
 
 On all plans except basic, New Relic offers insights into performance bottlenecks and external calls that might be causing slowdowns.
@@ -79,37 +110,6 @@ Site performance can be affected by slow database queries.
 - Address and optimize slow queries.
 
 [Pantheon's MySQL Slow Log Guide](/guides/mariadb-mysql/mysql-slow-log)
-
-### Redis Object Caching
-
-On performance plans and above, Redis enhances performance by reducing redundant database queries.
-
-#### How to Check:
-
-- Confirm Redis object caching is enabled.
-- Review Redis usage in New Relic or connect directly to Redis.
-
-#### Recommended Solutions:
-
-- Ensure optimal Redis configurations.
-
-[Pantheon's Object Cache Documentation](/object-cache)
-
-### PHP Errors and Watchdog Logs
-
-PHP errors and watchdog logs in Drupal can indicate issues affecting site performance and can slow down the site by constant logging.
-
-#### How to Check:
-
-- **PHP Error Logs**: Review PHP logs for recurring errors or warnings.
-- **Drupal Watchdog Logs**: If you're running a Drupal site, regularly check the watchdog logs for errors.
-
-#### Recommended Solutions:
-
-- Solve any recurring PHP errors.
-- Address issues identified in the watchdog logs.
-
-[PHP Errors and Exceptions](/guides/php/php-errors)
 
 ### Conclusion
 
