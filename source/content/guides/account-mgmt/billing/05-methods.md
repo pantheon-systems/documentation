@@ -119,16 +119,56 @@ To add a payment method to a site:
 
 To change the card used to bill a site:
 
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Subscriptions**.
+
+1. Click the **Actions** dropdown next to the site you’d like to update.
+
+1. Click **Change Payment Method**
+
+1. Here you can change the payment method for that site to another card you have on file or add a new card.
+
+Alternatively, you can:
+
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
 
-1. Go to the **Billing** tab and click **Remove Card**.
+1. Go to the **Billing** tab and click **Change Card**.
 
-1. Click **Add Card**, and follow the steps in the [previous section](#add-a-site-specific-payment-method) to bill this site to a different card.
+1. Here you can change the payment method for that site to another card you have on file or add a new card.
+
+### Change the Card Used to Bill Multiple Sites
+
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**. Here you can see all cards you have on file and a count of how many sites are billed to each card
+
+1. Click the **View Details** on the card you wish to move multiple sites away from.
+
+1. Click the **Actions** dropdown, click Move Subscriptions.
+
+1. Click **Change Payment Method**
+
+1. Here you can change the payment method to another card you have on file or add a new card.
+
 
 ### Delete a Site-Specific Payment Method
 
+<Alert title="Note" type="info" >
+
+In order to delete a payment method, any associated site(s) must first either be downgraded to Sandbox or moved to a different payment method.
+Refer to [upgrade the site plan](/guides/account-mgmt/plans/07-site-plans.md) for more information.
+
+</Alert>
+
 To delete a payment method:
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for the site.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), click **Settings**, then select **Payment Methods**. Here you can see all cards you have on file and a count of how many sites are billed to each card
+
+1. Click the **View Details** on the card you wish to move multiple sites away from.
+
+1. Click the **Actions** dropdown, click Move Subscriptions.
+
+1. Here you can change the payment method to another card you have on file or add a new card.
+
+Alternatively, you can
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) for a Sandboxed site.
 
 1. Go to the **Billing** tab and click **Remove Card**.
