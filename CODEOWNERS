@@ -3,6 +3,5 @@
 # For more information about CODEOWNERS files, refer to https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 * @pantheon-systems/docs-admins
 
-
 # The Platform-Edge-Routing team is responsible for connecting custom domains to Pantheon
 source/content/guides/domains/ @pantheon-systems/platform-edge-routing
