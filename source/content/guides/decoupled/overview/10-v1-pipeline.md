@@ -20,11 +20,9 @@ integration: [--]
 In the Fall of 2023 Pantheon introduced a new build pipeline for Front End Sites.
 Among under-the-hood-optimizations, like [caching of folders between builds](/guides/decoupled/overview/manage-settings#build-cache), [the new pipeline now uses your `package.json` file](/guides/decoupled/overview/manage-settings#nodejs-version) to select the appropriate version of Node.js your build and your runtime environments.
 
-Sites made prior to **TODO DATE** will continue to use the old pipeline, and will need to opt-in to the new pipeline to take advantage of the new features.
+Beginning on **November 13th, 2023h**, newly created sites will automatically use the new pipeline and cannot opt back to the old pipeline. Sites made prior to that date can opt-in to the new pipeline to take advantage of the new features.
 
-Sites made after **TODO DATE** will automatically use the new pipeline and cannot opt to the old pipeline.
-
-On **TODO NEXT DATE**, all sites will be migrated to the new pipeline.
+On or around **January 15th, 2024**, all new builds for all previously created sites will use the new pipeline.
 
 ## How to Opt-In
 
