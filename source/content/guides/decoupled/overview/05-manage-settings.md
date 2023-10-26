@@ -43,7 +43,7 @@ Pantheon inspects the engines field in `package.json`` when selecting a specific
 },
 ```
 
-To break down that example, the `package.json`` file for the project declares it expects something greater than or equal to 16.0.0 and less than 18.0.0. As of the writing of this documentation, this declaration would result in 16.20.2 being used.
+To break down that example, the `package.json` file for the project declares it expects something greater than or equal to 16.0.0 and less than 18.0.0. As of the writing of this documentation, this declaration would result in 16.20.2 being used.
 
 Note that if you select a range of major Node.js versions, Pantheon will select the most recent Node.js major version for that deployment. For example, the following configuration would result in Node.js 18.x being selected:
 
