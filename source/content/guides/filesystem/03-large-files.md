@@ -77,7 +77,9 @@ Refer to the [Media and Email](/guides/platform-considerations/media-email-suppo
 
 ## Large (>100GiB) File Backups
 
-Large backups take longer, use more resources, and have a higher likelihood of failing. Sites exceeding 200GiB or containing over two million files can't be backed up (though code and databases are backed up as normal). Even without backups, file content is reliably stored across multiple servers.
+Large backups take longer, use more resources, and have a higher likelihood of failing.
+Filesystems exceeding 200 GiB or containing over two million files cannot be backed up (though code and databases are backed up as normal).
+Even without filesystem backups, file content is protected by redundant storage.
 
 ## More Resources
 
