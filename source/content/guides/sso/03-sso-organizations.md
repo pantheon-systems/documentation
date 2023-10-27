@@ -83,9 +83,9 @@ Azure configuration requires several modifications from the general instructions
 
 1. Confirm that you make all required edits to correctly map custom attributes, including:
 
-    - **Identifier text box:** `urn:auth0:pantheon:<orgname>-SSO`
+    - **Identifier text box:** `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 
-    - **Reply URL text box:** `https://pantheon.auth0.com/login/callback?connection=<orgname>-SSO`
+    - **Reply URL text box:** `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name`
 
     - **Single sign-on URL:** `Leave Blank`
 
