@@ -42,7 +42,7 @@ A code repository larger than 2GB increases the possibility of Git errors when c
 
 ## Large Files
 
-The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure are not optimized to store and deliver large files.
+The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure are not optimized to store and deliver large files.  The maximum size for any single file is 256 MiB.
 
 ### Large File Restrictions
 
