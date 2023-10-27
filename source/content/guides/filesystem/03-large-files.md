@@ -20,13 +20,18 @@ This section provides information on highly populated directories and large file
 
 ## Highly Populated Directories
 
-Highly populated directories can cause a small decline in performance at around 50,000 files in a single directory, and a significant performance drop at over 100,000 files. Once above 100,000 files, backups may fail, and the filesystem itself may be corrupted leading to data loss and site downtime.
+Directories that house a large number of files can cause performance issues. Notably:
 
-You can refactor your file structure if you have individual directories with tens of thousands of files (for example, an image repository) to optimize site performance on Pantheon. If refactoring is not a possiblity, you may wish to offload the files to dedicated external filesystem like Amazon S3 or Google Cloud Storage.
+- Around 50,000 files in one directory may lead to performance degradation.
+- Exceeding 100,000 files in one directory can result in very poor performance and eventually filesystem corruption, potentially causing extended site downtime and file loss.
 
-To prevent this issue going forward both WordPress and Drupal, can manage uploaded content into different directories based on the date or user, which is preferable to adding all uploads into a single directory. Refactoring an existing large-scale site with this issue is usually a matter of re-arranging the files, then updating the files table in Drupal or WordPress.
+To optimize performance:
 
-Refer to the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories in Drupal, or browse [WordPress plugins](https://wordpress.org/plugins/) for other solutions.
+- If possible, restructure directories that contain more than 50,000 files.
+- Consider offloading files to dedicated external storage solutions, such as Amazon S3 or Google Cloud Storage.
+- Use content management settings in both WordPress and Drupal to organize uploaded content into directories based on the YYYY/MM or YYYY/MM/DD format or specific user criteria. This approach is preferable over writing all uploads to a single directory. For sites already facing this issue, the solution typically involves reorganizing the files into multiple directories and then updating the respective file tables in Drupal or WordPress.
+
+Useful tools for offloading are detailed below under CDNs.
 
 ## Large Code Repository
 
@@ -37,7 +42,7 @@ A code repository larger than 2GB increases the possibility of Git errors when c
 
 ## Large Files
 
-The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure is not optimized to store and deliver large files.
+The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure are not optimized to store and deliver large files.  The maximum size for any single file is 256 MiB.
 
 ### Large File Restrictions
 
@@ -49,11 +54,11 @@ The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure is
 |:----------------|--------------------------------------|-------------------------------------|
 | ≤ 100MiB        | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
 | 100MiB - 256MiB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
-| > 256MiB        | <span  style="color:red">❌</span>    | Must be hosted via 3rd-party CDN    |
+| > 256MiB        | <span  style="color:red">❌</span>    | Must be offloaded to an external filesystem
 
 ### CDNs
 
-We recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary if you are distributing large binaries or hosting big media files.
+For hosting either large files or a very large number of media files, we recommend external file systems like Amazon S3 or Google Cloud Storage. These offer a cost-effective solution and can allow direct uploads without utilizing the Pantheon Filesystem.
 
 - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs).
 - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
@@ -64,7 +69,7 @@ You can also refer to our documentation for [Drupal](/drupal-s3) and [WordPress]
 
 ### Upload Speed
 
-Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MiB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
+If you're transferring large files over a slow internet connection, the upload might exceed our 59-second [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable). Use an [upload time calculator](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to ascertain if your connection speed might prevent uploads from completing in time.
 
 ### Media and Email
 
@@ -72,9 +77,9 @@ Refer to the [Media and Email](/guides/platform-considerations/media-email-suppo
 
 ## Large (>100GiB) File Backups
 
-Large backups take longer, use more resources, and have a higher likelihood of failing. A 100GiB compressed tarball is not a convenient solution. Sites with footprints over 200GiB or two million files cannot be backed up for this reason (although code and database are backed up as normal).
-
-Despite the lack of backups, file content is highly durable and stored on multiple servers.
+Large backups take longer, use more resources, and have a higher likelihood of failing.
+Filesystems exceeding 200 GiB or containing over two million files cannot be backed up (though code and databases are backed up as normal).
+Even without filesystem backups, file content is protected by redundant storage.
 
 ## More Resources
 

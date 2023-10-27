@@ -5,3 +5,5 @@
 
 # The Platform-Edge-Routing team is responsible for connecting custom domains to Pantheon
 source/content/guides/domains/ @pantheon-systems/platform-edge-routing
+# The FileSystem team is responsible for managing static files on Pantheon
+source/content/guides/filesystem/ @pantheon-systems/filesystem
