@@ -29,7 +29,7 @@ To optimize performance:
 
 - If possible, restructure directories that contain more than 50,000 files.
 - Consider offloading files to dedicated external storage solutions, such as Amazon S3 or Google Cloud Storage.
-- Use content management settings in both WordPress and Drupal to organize uploaded content into directories based on the YYYY/MM or YYYY/MM/DD format or specific user criteria. This approach is preferable over consolidating all uploads into a single directory. For sites already facing this issue, the solution typically involves reorganizing the files into multiple directories and then updating the respective file tables in Drupal or WordPress.
+- Use content management settings in both WordPress and Drupal to organize uploaded content into directories based on the YYYY/MM or YYYY/MM/DD format or specific user criteria. This approach is preferable over writing all uploads to a single directory. For sites already facing this issue, the solution typically involves reorganizing the files into multiple directories and then updating the respective file tables in Drupal or WordPress.
 
 Useful tools for offloading are detailed below under CDNs.
 
