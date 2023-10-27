@@ -58,7 +58,7 @@ The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure ar
 
 ### CDNs
 
-For hosting either large files or a very large number of  media files, we recommend external file systems like Amazon S3 or Google Cloud Storage. These offer a cost-effective solution and can allow direct uploads to an external service without utilizing the Pantheon Filesystem..
+For hosting either large files or a very large number of media files, we recommend external file systems like Amazon S3 or Google Cloud Storage. These offer a cost-effective solution and can allow direct uploads without utilizing the Pantheon Filesystem.
 
 - Drupal sites can use a modules such as [S3 File System](https://www.drupal.org/project/s3fs).
 - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
