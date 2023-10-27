@@ -36,6 +36,6 @@ To see the improvement in build times, you will need to make at least two pushes
 The first push will be a full build, and the second push will be a cached build.
 For our own Docs site, we saw a reduction of many minutes in build time.
 
-If you are satisfied with the results, you can switch over all branches and builds by setting the environment variable to `all`. If you wish to test across multiple branches, you can set the environment variable to a comma-separated list of environment names like `multi-v1pipeline, multi-v1pipeline2, pr-123`.
+If you are satisfied with the results, you can switch over all branches and builds by setting the environment variable to `ANY`. If you wish to test across multiple branches, you can set the environment variable to a comma-separated list of environment names like `multi-v1pipeline, multi-v1pipeline2, pr-123`.
 
 ![Multiple commna separated values in FLAG_V1_PIPELINE](../../../../images/decoupled/v1-flag-comma.png)
