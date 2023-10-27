@@ -691,6 +691,8 @@
               url: "/guides/global-cdn/test-global-cdn-caching"
         - title: "Application Configurations"
           links:
+            - text: "Upgrade PHP Versions"
+              url: "/guides/php/php-versions"
             - text: "APCu Cache Basics"
               url: "/apcu"
             - text: "Clearing Caches for Drupal and WordPress"
