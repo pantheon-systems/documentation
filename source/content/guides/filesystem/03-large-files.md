@@ -54,7 +54,7 @@ The [Pantheon Filesystem](/guides/filesystem) and file serving infrastructure ar
 |:----------------|--------------------------------------|-------------------------------------|
 | ≤ 100MiB        | <span  style="color:green">✔</span>  | Can be uploaded via any means       |
 | 100MiB - 256MiB | <span  style="color:orange">✔</span> | Must be uploaded over SFTP or rsync |
-| > 256MiB        | <span  style="color:red">❌</span>    | Must be offloaded to an external filesystem|
+| > 256MiB        | <span  style="color:red">❌</span>    | Must be offloaded to an external filesystem
 
 ### CDNs
 
