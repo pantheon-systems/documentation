@@ -35,22 +35,26 @@ const Wistia = ({ src }) => {
 
   return (
     // Return the iframe, wrapped in a div.
-    <div class="wistia_responsive_padding">
-      <div class="wistia_responsive_wrapper">
-        <div
-          class={
-            "wistia_embed wistia_async_" + `${src}` + " seo=true videoFoam=true"
-          }
-        >
-          <div class="wistia_swatch">
-            <img
-              src={
-                "https://fast.wistia.com/embed/medias/" + `${src}` + "/swatch"
-              }
-              alt=""
-              aria-hidden="true"
-              onload="this.parentNode.style.opacity=1;"
-            />
+    <div className="wistia_container">
+      <div className="wistia_responsive_padding">
+        <div className="wistia_responsive_wrapper">
+          <div
+            className={
+              "wistia_embed wistia_async_" +
+              `${src}` +
+              " seo=true videoFoam=true"
+            }
+          >
+            <div className="wistia_swatch">
+              <img
+                src={
+                  "https://fast.wistia.com/embed/medias/" + `${src}` + "/swatch"
+                }
+                alt=""
+                aria-hidden="true"
+                onload="this.parentNode.style.opacity=1;"
+              />
+            </div>
           </div>
         </div>
       </div>
