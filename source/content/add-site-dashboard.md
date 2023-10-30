@@ -15,6 +15,8 @@ showtoc: true
 
  Pantheon CMS site contains three components: code, files, and a database containing the content and configurations of your Content Management System (CMS). When you create a site, you are creating each of these components in the Dev environment. Then, when you are ready, you will create your Test and Live environments.
 
+ <Wistia src="kprkgaikos" />
+
 ## Create the Dev Environment
 
 To create a CMS site:
