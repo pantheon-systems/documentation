@@ -14,6 +14,7 @@ contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/multidev/edit-multidev
 ---
+<Wistia src="2lyxgxgkfw" />
 
 This section provides steps on how to make edits, merge code in your Multidev environments, and rename a branch.
 
@@ -42,7 +43,7 @@ You can edit your code locally in one of two ways:
 
 1. Set the connection mode to **Git** if it is not already set.
 
-1. Select **Clone with Git** and copy the provided command. 
+1. Select **Clone with Git** and copy the provided command.
 
 1. Paste the command in a terminal window to clone a copy of your site's code repository to your local.
 

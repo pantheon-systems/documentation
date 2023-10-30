@@ -15,6 +15,7 @@ audience: [development]
 product: [terminus]
 integration: [--]
 ---
+<Wistia src="0ajhtj2r9s" />
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
 
@@ -260,7 +261,7 @@ You can use Terminus to test a new set of changes by deploying code from develop
 1. Test the changes, and then use Terminus to deploy code from Test up to Live:
 
   ```bash{promptUser: user}
-  terminus env:deploy my-site.live --note="Deploy core and contrib updates" 
+  terminus env:deploy my-site.live --note="Deploy core and contrib updates"
   ```
 
 1. Clear the site after each deployment:

@@ -16,6 +16,7 @@ audience: [development]
 product: [autopilot]
 integration: [--]
 ---
+<Wistia src="c15eoj3eca" />
 
 ## Enable Autopilot
 
@@ -52,6 +53,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 The Autopilot setup wizard automatically displays after you click **Customize** when you activate Autopilot for a single site. You must complete all items in the Configuration, Schedule, and Visual Review steps.
 
 ### Configuration
+<Wistia src="158bo3jnms" />
 
 1. Use the **On**/**Off** toggles to choose which features and elements should be tracked or excluded from updates.
 
@@ -259,6 +261,7 @@ Some premium and paid plugins require the license to be explicitly activated on 
 1. Provide Autopilot with access if the plugin requires it (this varies by plugin) and/or configure the plugin as needed.
 
 ## Enable Autopilot Email Notifications
+<Wistia src="7o76jael2w" />
 
 Configure email notifications for Autopilot alerts and activity digests in your Personal Workspace settings:
 
