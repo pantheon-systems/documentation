@@ -1103,8 +1103,27 @@ export env=dev
 </Example>
 
 ## Videos
+Use the Wistia and YouTube components to embed videos across the docs site.
 
-To embed videos to the docs, use either the Youtube or Wistia components:
+With the exception of landing pages (e.g., [Go Live](/go-live), [Optimize Performance](/performance), etc.) which are sourced from [`source/data/landings.yaml`](https://github.com/pantheon-systems/documentation/blob/main/source/data/landings.yaml) and only support YouTube video embedding.
+
+### YouTube
+Use the YouTube component to embed YouTube videos. Set both `title` and `src`, for example:
+
+<Example>
+
+<Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
+
+<hr className="source-code" /> <br />
+
+```markdown
+<Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
+```
+
+</Example>
+
+### Wistia
+Use the Wistia component to embed Wistia videos. Set only the `src` without `title`, for example:
 
 <Example>
 
@@ -1117,7 +1136,6 @@ To embed videos to the docs, use either the Youtube or Wistia components:
 ```
 
 </Example>
-
 
 
 ## Voice, Style, and Flow
