@@ -54,7 +54,7 @@ Note that if you select a range of major Node.js versions, Pantheon will select 
 ```
 We recommend that when you need to change the version of Node.js for your Front-End Site, that you test the new version by pushing the updated `package.json` to a branch first and create a pull request. Pantheon will create an environment for your site specific to that pull request.
 
-Sites made prior to DATE set the Node.js version via  `.nvmrc` and can select via:
+Sites made prior to **November 13th, 2023** set the Node.js version via  `.nvmrc` and can select via:
 
 - Node.js 14
 - Node.js 16
