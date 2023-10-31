@@ -1,6 +1,6 @@
 [![Actively Maintained](https://img.shields.io/badge/Pantheon-Actively_Maintained-yellow?logo=pantheon&color=FFDC28)](https://docs.pantheon.io/oss-support-levels#actively-maintained-support)
 
-Pantheon Documentation
+Pantheon Documentation!
 ======================
 
 https://docs.pantheon.io/
