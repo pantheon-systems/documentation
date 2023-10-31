@@ -147,7 +147,7 @@ Adjustments to these settings might be required if you are not using a starter k
 
 ## Build Cache
 
-The first build on [any environment](/guides/decoupled/overview/considerations#types-of-environments)) runs without a cache. During the first build, Pantheon caches the following assets based on the framework you’ve selected:
+The first build on [any environment](/guides/decoupled/overview/considerations#types-of-environments) runs without a cache. During the first build, Pantheon caches the following assets based on the framework you’ve selected:
 
 *  `.node_modules` (all sites)
 * `.next/cache` (when a site is build using Next.js)
