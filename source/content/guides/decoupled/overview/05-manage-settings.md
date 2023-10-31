@@ -33,7 +33,7 @@ You can change the Site Name, connect or disconnect your Git repository, and del
 
 As of the release of our [V1 build pipeline](/guides/decoupled/overview/v1-pipeline), Front-End Sites runs can run v16, v18, or v20 of Node.js as specified in your `package.json` file.
 
-Non-LTS versions like v17 are not available.
+[Odd-numbered Node.js releases, such as v17, never enter "Active LTS" status](https://nodejs.org/en/about/previous-releases#previous-releases). They are not available on Pantheon.
 
 Pantheon inspects the engines field in `package.json` when selecting a specific Node.js version for the build (Gatsby.js and Next.js) and runtime (Next.js) of your Front-End Site. For example, to select Node.js 16 for a given deployment, you should do the following:
 
