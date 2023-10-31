@@ -37,7 +37,7 @@ Non-LTS versions like v17 are not available.
 
 Pantheon inspects the engines field in `package.json` when selecting a specific Node.js version for the build (Gatsby.js and Next.js) and runtime (Next.js) of your Front-End Site. For example, to select Node.js 16 for a given deployment, you should do the following:
 
-```json
+```json:title=package.json
 "engines": {
   "node": ">=16.0.0 <18.0.0"
 },
