@@ -27,8 +27,6 @@ During this procedure, there will be a very brief period of disruption where req
 
 The `404 Unknown Site` error will be returned as soon as the custom domain is removed from the old site, and once connected to the new site dashboard requests will immediately start to return a `200 OK` status once again. Requests will start routing to the new site dashboard after the TTL for the DNS records expires.
 
-There is no risk of HTTPS interruption during the relaunch procedure. Since launched domains already have a valid certificate, the existing certificate is served and valid until a new one is provisioned and deployed by the platform.  
-
 Due to the very brief period of disruption when a `404 Unknown Site` error is returned to site visitors, we recommend planning a relaunch based on historical traffic patterns for the given site and scheduling the switch during off-peak hours.
 
 When following the below procedure for relaunch, the duration of the disruption should be very low, usually less than one minute.
