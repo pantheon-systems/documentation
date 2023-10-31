@@ -29,7 +29,7 @@ The `404 Unknown Site` error will be returned as soon as the custom domain is re
 
 Due to the very brief period of disruption when a `404 Unknown Site` error is returned to site visitors, we recommend planning a relaunch based on historical traffic patterns for the given site and scheduling the switch during off-peak hours.
 
-When following the below procedure for relaunch, the duration of the disruption should be very low, usually less than one minute.
+When following the below procedure for relaunch, the duration of the disruption should be very low, usually less than a few minutes.
 
 ### Before You Begin:
 
