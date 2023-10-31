@@ -80,29 +80,21 @@ The commands below require a [nested docroot](/nested-docroot) structure and mus
  ```bash{promptUser: user}
  mkdir -p private/simplesamlphp
  mv vendor/simplesamlphp/simplesamlphp/config private/simplesamlphp/config
- cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesamlphp/config/
- cp vendor/simplesamlphp/simplesamlphp/config-templates/authsources.php private/simplesamlphp/config/
+ cp private/simplesamlphp/config/config.php.dist private/simplesamlphp/config/config.php
+ cp private/simplesamlphp/config/authsources.php.dist private/simplesamlphp/config/authsources.php
  ```
 
 1. Follow the directions in the next section to [set up your config file](#configure-simplesamlphp) (`private/simplesamlphp/config/config.php`).
-
-1. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
-
- ```bash{promptUser: user}
- # Remove existing config directory before adding symlink.
- rm -rf vendor/simplesamlphp/simplesamlphp/config
- ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
- ```
 
 1. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if you update or re-install SimpleSAMLphp using Composer:
 
  ```json:title=composer.json
 "scripts": {
     "post-update-cmd": [
-        "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ],
     "post-install-cmd": [
-        "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ]
 },
  ```
