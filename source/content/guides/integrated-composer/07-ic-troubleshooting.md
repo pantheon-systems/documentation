@@ -224,15 +224,14 @@ The solution is to set `EXEC_GRUMPHP_COMMAND` to run a script that tests for the
 ```bash{promptUser: user}
   grumphp:
    git_hook_variables:
-    EXEC_GRUMPHP_COMMAND: '.scripts/grumphp.sh' # YOUR SCRIPT NAME HERE
+    EXEC_GRUMPHP_COMMAND: './scripts/grumphp.sh' # YOUR SCRIPT NAME HERE
   ```
 
 Lando script example:
 
   ```bash{promptUser: user}
   #!/bin/sh
-  if command -v lando &> /dev/null
-  then
+  if command -v lando; then
     lando php "$@"
   fi
   ```
@@ -241,8 +240,7 @@ The test in the script can be whatever is needed in your particular case. The ex
 
 ```bash{promptUser: user}
 #!/bin/sh
-if [ -z "$PANTHEON_ENVIRONMENT" ]  &> /dev/null
-then
+if [ -z "$PANTHEON_ENVIRONMENT" ]; then
   lando php "$@"
 fi
 ```
