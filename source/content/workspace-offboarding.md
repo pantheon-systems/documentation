@@ -14,26 +14,6 @@ showtoc: true
 reviewed: 2023-06-21
 ---
 
-<!-- Note to authors: this is early access content. When the feature goes to general access, this content should be added to /source/content/guides/account-mgmt/workspace-sites-teams/07-teams.md 
-
-Also, this URL has been added to addsearch to exclude it from search results. that entry should be removed when EA is over
-
--->
-
-<Alert title="Early Access" type="info" icon="leaf">
-
-Workspace Offboarding is available for:
-
-- [Early Access](/guides/support/early-access/) participants.
-
-This feature is available to:
-
-- Selected Enterprise accounts.
-
-While this feature is in Early Access, Pantheon's development team releases new functionality often. Please review Pantheon's [Software Evaluation Licensing Terms](https://legal.pantheon.io/#contract-hkqlbwpxo) for more information about support expectations for and access to Pantheon's pre-release software.
-
-</Alert>
-
 ## Remove Team Members
 
 Use this process if you want to remove a member from either a single workspace or from a workspace and **all** its associated sites.
