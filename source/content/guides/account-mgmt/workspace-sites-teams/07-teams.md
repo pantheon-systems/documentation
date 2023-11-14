@@ -225,7 +225,7 @@ To remove a user:
 
 1. Select **Yes, I am sure I want to remove this person**, then click **Yes, Remove**.
 
-1. If you are a Diamond or Platinum customer, you will instead be provided additional options to remove the user's access from associated sites. You will need to select one of the following and then click **Remove Access**:
+1. If you are a Diamond or Platinum contract customer, you will instead be provided additional options to remove the user's access from associated sites. You will need to select one of the following and then click **Remove Access**:
 
    - **Everything**: removes a member from all workspaces and associated sites.
 
@@ -245,7 +245,7 @@ To remove a team member from a site:
 
 1. Select the '**x**' for each team member you wish to remove.
 
-1. If you are a Diamond or Platinum customer, you will be provided additional options to remove the user's access from associated sites and will need to select one of the following:
+1. If you are a Diamond or Platinum contract customer, you will be provided additional options to remove the user's access from associated sites and will need to select one of the following:
 
    - **This site**: removes the workspace from this site only.
 
@@ -288,7 +288,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. Click the **x** to the right of the Supporting Workspace you wish to remove.
 
-1. If you are a Diamond or Platinum customer, you will be provided additional options to remove the user's access from associated sites and will need to select one of the following:
+1. If you are a Diamond or Platinum contract customer, you will be provided additional options to remove the user's access from associated sites and will need to select one of the following:
 
    - **This site**: removes the workspace from this site only.
 
