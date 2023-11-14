@@ -16,7 +16,7 @@ reviewed: 2023-06-21
 
 ## Remove Team Members
 
-Use this process if you want to remove a member from either a single workspace or from a workspace and **all** its associated sites.
+Use this process if you want to remove a member from either a single workspace or from a workspace and **all** its associated sites. NOTE: This flow is available only to Platinum and Diamond Customers.
 
 1. [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces) and select the **Team** tab.
 
@@ -35,6 +35,8 @@ Use this process if you want to remove a member from either a single workspace o
 1. Click **Remove Access**. The members are removed based on the selection you made.
 
 ## Remove Supporting Workspaces
+
+NOTE: This flow is available only to Platinum and Diamond Customers.
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
 
