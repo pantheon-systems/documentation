@@ -225,6 +225,14 @@ To remove a user:
 
 1. Select **Yes, I am sure I want to remove this person**, then click **Yes, Remove**.
 
+1. If you are a Diamond or Platinum customer, you will instead be provided additional options to remove the user's access from associated sites. You will need to select one of the following and then click **Remove Access**:
+
+   - **Everything**: removes a member from all workspaces and associated sites.
+
+   - **Workspace Only**: removes a member from this workspace only. Associated sites will not be impacted.
+
+      ![Alt text](../../../../images/workspace-offboarding.png)
+
 </Tab>
 
 <Tab title="From a Site" id="remsite">
@@ -236,6 +244,16 @@ To remove a team member from a site:
 1. Click **Team**.
 
 1. Select the '**x**' for each team member you wish to remove.
+
+1. If you are a Diamond or Platinum customer, you will be provided additional options to remove the user's access from associated sites and will need to select one of the following:
+
+   - **This site**: removes the workspace from this site only.
+
+   - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
+
+     ![Alt text](../../../../images/workspace-offboarding-site-team-member.png)
+
+1. Click **Remove Access** with one of the selections provided. The team is removed based on the selection you made.
 
 </Tab>
 
@@ -261,6 +279,24 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 1. Select a role, then click **Add**. All members of the Supporting Workspace receive the role assigned on the site, regardless of their role in the Supporting Workspace.
 
    ![Site with two Supporting Workspaces](../../../../images/dashboard/manage-site-team.png)
+
+## Remove a Supporting Workspace from a Site
+
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
+
+1. Click **<span class="glyphicons glyphicons-group"></span> Team**.
+
+1. Click the **x** to the right of the Supporting Workspace you wish to remove.
+
+1. If you are a Diamond or Platinum customer, you will be provided additional options to remove the user's access from associated sites and will need to select one of the following:
+
+   - **This site**: removes the workspace from this site only.
+
+   - **All sites workspace has access to**: removes the workspace from all sites it's currently associated with.
+
+     ![Alt text](../../../../images/workspace-offboarding-supporting.png)
+
+1. Click **Yes, remove access**. The Supporting Workspace is removed based on the selection you made.
 
 ## FAQ
 
