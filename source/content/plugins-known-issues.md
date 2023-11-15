@@ -678,7 +678,8 @@ ___
 **Solution:** Define the constant `PLL_COOKIE` to false in `wp-config.php` to remove the cookie:
 
 ```php:title=wp-config.php
-define('PLL_COOKIE', false)
+// Disable Polylang's feature to set a cookie that stores the visitor's selected language.
+define('PLL_COOKIE', false);
 ```
 
 The value of `PLL_COOKIE` defaults to `pll_polylang`. This defines the name of the cookie used by Polylang to store the visitor's language. When `PLL_COOKIE` is set to false, Polylang does not set any cookie. Be aware that in this case some features of the plugin may not work completely. For example, the login page will not be translated.
