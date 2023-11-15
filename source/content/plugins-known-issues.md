@@ -671,7 +671,7 @@ ___
 
 ## PolyLang
 
-<ReviewDate date="2019-12-19" />
+<ReviewDate date="2023-11-15" />
 
 **Issue:** The [PolyLang](https://wordpress.org/plugins/polylang/) plugin adds a cache-busting cookie (ex. `pll_language=en`) for each request.
 
