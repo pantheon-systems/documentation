@@ -10,6 +10,7 @@ import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
+import Icon from "../components/icon"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
@@ -33,11 +34,7 @@ import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 
-import {
-  Container,
-  Icon,
-  SidebarLayout,
-} from "@pantheon-systems/pds-toolkit-react"
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,

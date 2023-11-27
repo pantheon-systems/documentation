@@ -5,10 +5,12 @@ import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
+
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
+import Icon from "../components/icon"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
@@ -25,7 +27,7 @@ import Image from "../layout/image"
 import Example from "../components/styleExample"
 import Youtube from "../components/youtube"
 
-import { Container, Icon } from "@pantheon-systems/pds-toolkit-react"
+import { Container } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,

@@ -9,6 +9,7 @@ import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
+import Icon from "../components/icon"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
@@ -29,11 +30,7 @@ import Partial from "../components/partial"
 import Youtube from "../components/youtube"
 import SearchBar from "../layout/SearchBar"
 
-import {
-  Container,
-  Icon,
-  SidebarLayout,
-} from "@pantheon-systems/pds-toolkit-react"
+import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
