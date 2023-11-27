@@ -10,7 +10,6 @@ import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
 import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
@@ -29,6 +28,8 @@ import LocaldevChangelog from "../components/localdevChangelog"
 import DrushChangelog from "../components/drushChangelog"
 import ReviewDate from "../components/reviewDate"
 import ResourceSelector from "../components/resourceSelector"
+
+import { Icon } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
   Callout,
