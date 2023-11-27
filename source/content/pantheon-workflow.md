@@ -67,26 +67,26 @@ After changes are pushed to Dev, the Deploys panel in the Test tab will prompt y
 
 ![Site dashboard, test environment, Deploys section](../images/dashboard/deploy-to-test-env.png)
 
- - The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
+- The **Deploy Log** helps you group a batch of commits into a single deployment. Best practice is to keep logical groups of edits together and then summarize those groups with a single deployment message.
 
- - We provide a rolling view of typical workflow log entries on the site for 14 days. Log entries are no longer visible on the site after 14 days, but are kept for internal auditing. Log entries visible for longer than 14 days include:
+- We provide a rolling view of typical workflow log entries on the site for 14 days. Log entries are no longer visible on the site after 14 days, but are kept for internal auditing. Log entries visible for longer than 14 days include:
 
-    - `deploy`
-    - `create_environment` (this only applies to Test and Live environments)
-    - `freeze_site`
-    - `unfreeze_site`
+  - `deploy`
+  - `create_environment` (this only applies to Test and Live environments)
+  - `freeze_site`
+  - `unfreeze_site`
 
- - Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
+- Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
 
- - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for database changes.
+- Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for database changes.
 
- - On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
+- On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
 After running this operation, be sure that:
 
-* Your database updates succeed
-* Your exported configuration is in place
-* The site is functioning as expected in the Test environment
+- Your database updates succeed
+- Your exported configuration is in place
+- The site is functioning as expected in the Test environment
 
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
 
@@ -107,49 +107,49 @@ After testing your changes in the Test environment you can move them to the Live
 
 ### Create an Article on the Site
 
-1. Click the <Icon icon="new-window-alt" text="Site Admin"/> button to open your Live site in a new tab. You’ll need to log in before being directed to the site administration dashboard.
+1. Click the <Icon icon="externalLink" text="Site Admin"/> button to open your Live site in a new tab. You’ll need to log in before being directed to the site administration dashboard.
 
-    <Alert title="Note" type="info">
-      Your WordPress or Drupal username and password are the same set you
-      created when you installed your Dev site for the first time.
-    </Alert>
+<Alert title="Note" type="info">
+  Your WordPress or Drupal username and password are the same set you
+  created when you installed your Dev site for the first time.
+</Alert>
 
 1. Create a new Drupal article or WordPress post. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article. When finished, visit the front page of your site and confirm that you can see the new content.
 
-1. Go back to your **Site Dashboard**, click the <Icon icon="wrench" text="Dev"/> tab, and open your Dev site by clicking <Icon icon="new-window-alt" text="Visit Development Site"/>.
+1. Go back to your **Site Dashboard**, click the <Icon icon="wrench" text="Dev"/> tab, and open your Dev site by clicking <Icon icon="externalLink" text="Visit Development Site"/>.
 
-    Notice that the content you just created on your Live site doesn’t appear on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
+   Notice that the content you just created on your Live site doesn’t appear on your Dev site. This is because each environment is a stand-alone copy of your site, with its own codebase, database, and files.
 
-    It’s important to develop on a recent copy of your site with the newest content, so let’s clone your Live site—with its new content—to your Dev environment.
+   It’s important to develop on a recent copy of your site with the newest content, so let’s clone your Live site—with its new content—to your Dev environment.
 
-    <Alert title="Warning" type="danger" >
+   <Alert title="Warning" type="danger" >
 
-    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="cloud-upload" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
+   Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="command" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
 
-    </Alert>
+   </Alert>
 
-1. Go to your [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the <Icon icon="wrench" text="Dev"/> tab, then click <Icon icon="server" text="Database / Files"/>.
+1. Go to your [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the <Icon icon="wrench" text="Dev"/> tab, then click <Icon icon="download" text="Database / Files"/>.
 
-1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site. 
+1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site.
 
 1. Click **Clone the Database & files from Live into the Development Environment**.
-   
+
    The Clone operation only copies the [files](/guides/filesystem) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
 
-1. When complete, click <Icon icon="new-window-alt" text="Visit Development Site"/> to confirm that the content you created on your Live site now appears on your Dev site.
+1. When complete, click <Icon icon="externalLink" text="Visit Development Site"/> to confirm that the content you created on your Live site now appears on your Dev site.
 
 Nice work! You added a page to your Live site, then cloned this environment "down" to Dev. Your Dev environment is a safe place for editing code, and now it's up-to-date with your latest content.
 
 ### Make Changes to the Site Theme
 
-1. Go to **Site Dashboard**, select the **Dev** tab, then select **Code**. 
+1. Go to **Site Dashboard**, select the **Dev** tab, then select **Code**.
 
 1. Confirm your Connection Mode is set to **SFTP**.
 
-1. Log in to your Dev site by clicking the <Icon icon="new-window-alt" text="Site Admin"/> button.
+1. Log in to your Dev site by clicking the <Icon icon="externalLink" text="Site Admin"/> button.
 
 1. Install and activate a _new_ theme (do not activate/enable a theme that came pre-packaged with your site).
-   
+
    - [WordPress instructions](https://wordpress.org/documentation/article/worik-with-themes/)
    - [Drupal instructions](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html)
 
@@ -159,17 +159,17 @@ Nice work! You added a page to your Live site, then cloned this environment "dow
 
   <Alert title="Note" type="info">
 
-  You may need to refresh your dashboard to see these files in your Dev environment.
+You may need to refresh your dashboard to see these files in your Dev environment.
 
   </Alert>
 
 1. Add a commit message, then click **Commit** to add these files to your Dev environment.
 
-    <Alert title="Note" type="info">
+   <Alert title="Note" type="info">
 
-    In the Dev environment, you can’t make a commit without first adding a commit message.
+   In the Dev environment, you can’t make a commit without first adding a commit message.
 
-    </Alert>
+   </Alert>
 
 1. Review your changes in Dev.
 
@@ -177,21 +177,21 @@ Nice work! You added a page to your Live site, then cloned this environment "dow
 
 1. Check the **Pull files and the database from the Live environment** box.
 
-    <Alert title="Warning" type="danger" >
+   <Alert title="Warning" type="danger" >
 
-    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="cloud-upload" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
+   Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="command" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
 
-    </Alert>
+   </Alert>
 
 1. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
-    <Accordion title="Deploy Commits to Test (optional)" id="understand-deploy" icon="lightbulb">
+   <Accordion title="Deploy Commits to Test (optional)" id="understand-deploy" icon="lightbulb">
 
-    Test is a separate environment from Dev, with its own codebase, database, and media files. When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.
+   Test is a separate environment from Dev, with its own codebase, database, and media files. When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.
 
-    </Accordion>
+   </Accordion>
 
-1. When complete, click <Icon icon="new-window-alt" text="Site Admin"/> to go to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
+1. When complete, click <Icon icon="externalLink" text="Site Admin"/> to go to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
 
 1. Activate/enable your theme. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
 
@@ -204,7 +204,6 @@ Nice work! You added a page to your Live site, then cloned this environment "dow
 1. Activate/enable your theme. If you need help with this step, refer to the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
 
 Congratulations! You just performed on-server development to make changes to your UI. You made changes on your Dev site, reviewed them on your Test site, then deployed them to Live.
-
 
 ## Specific Workflow Tasks
 
@@ -224,14 +223,13 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 WordPress
 
-* [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`.
-* [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
-
+- [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`.
+- [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
 
 Drupal
 
-* [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
-* [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
+- [hook_update_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
+- [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules.
 
 ### Managing Write Permissions in Test and Live
 
@@ -247,9 +245,9 @@ You may also clone, import, export, and wipe the database and files per environm
 
 The [database clone operation](/guides/mariadb-mysql/database-workflow-tool#cloning-the-database) excludes some tables by default. The excluded tables are:
 
-* `accesslog`
-* `watchdog`
-* any table that starts with `cache`
+- `accesslog`
+- `watchdog`
+- any table that starts with `cache`
 
 You can clone databases from one environment to another at any point. It does not need to only be within the deployment process.
 
@@ -269,7 +267,6 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
-
 ## Additional Workflow Tools
 
 Within the Pantheon WebOps workflow, there are several ways you can manage and develop your sites.
@@ -281,8 +278,9 @@ Within the Pantheon WebOps workflow, there are several ways you can manage and d
 - [Use the command line](/terminus) to manage and create sites.
 - Develop using either [Git](/guides/git) or [SFTP](/guides/sftp).
 
-There are even more tools and options available to you.  Refer to [Develop](/develop) for more information.
+There are even more tools and options available to you. Refer to [Develop](/develop) for more information.
 
 ## More Resources
- - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
- - [Pantheon Filesystem](/guides/filesystem/)
+
+- [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
+- [Pantheon Filesystem](/guides/filesystem/)

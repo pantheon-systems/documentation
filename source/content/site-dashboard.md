@@ -21,12 +21,14 @@ The Pantheon Site Dashboard is the hub of all development and activity for an in
 ## Header Elements
 
 On the top left of the page, you will see the following information:
+
 - The icon for the CMS you have installed
 - The name of the site.
 - If applicable, a yellow **Upgrade** button, that will allow you to [upgrade the site](/guides/account-mgmt/plans/site-plans).
 - If applicable, the name of the Professional Workspace containing this site.
 
 On the right side, there are two rows of options:
+
 - Workflows: displays information about any active workflows.
 - Team: [manage the team](/guides/account-mgmt/workspace-sites-teams/teams#manage-teams) specific to this site.
 - Settings: [manage add ons](/guides/account-mgmt/plans/site-plans), [delete site](https://docs.pantheon.io/guides/account-mgmt/workspace-sites-teams/sites), and site information, including the PHP version.
@@ -83,7 +85,7 @@ The following links are located within your Dev, Test, and Live environment tabs
 
 - **Backup:** Create a backup of the environment.
 
-  - **Backup Log:** View existing backups of the environment. Click the <Icon icon={"download-alt"} text={"Download"}/> icon to download individual archives within a backup.
+  - **Backup Log:** View existing backups of the environment. Click the <Icon icon="download" text="Download"/> icon to download individual archives within a backup.
 
   - **Backup Schedule:** Schedule daily or weekly automatic backups of the environment. (This feature is only available on paid plans.)
 

@@ -12,6 +12,6 @@ reviewed: ""
 
 1. Set up [SSH Keys](/ssh-keys) on your local computer and Pantheon account.
 
-1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then click <Icon icon={"more-windows"} text={"Sites:"}/> **Create New Site**.
+1. [Go to your Personal Workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces), then click <Icon icon="windowRestore" text="Sites:"/> **Create New Site**.
 
 1. Click **Visit your Pantheon Site Dashboard**.
