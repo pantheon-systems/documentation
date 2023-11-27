@@ -27,7 +27,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. [Commit any staged changes](/guides/sftp/sftp-development) that have not been committed before you continue if the site is in [SFTP mode](/guides/sftp).
 
-1. Click the <Icon iconName="robot"/> **Autopilot** icon in the Global Primary Navigation.
+1. Click the <Icon icon="robot"/> **Autopilot** icon in the Global Primary Navigation.
 
 1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table.
 
@@ -39,7 +39,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
-   <Alert title="Note"  type="info" >
+   <Alert title="Note" type="info" >
 
    Autopilot will pre-select a few pages for visual regression testing and will set the frequency to weekly by default.
 
@@ -116,7 +116,7 @@ You can configure a single site or use the bulk feature to configure multiple si
 
 ### Configure a Single Site
 
-1. Navigate to the **<Icon iconName="robot"/> Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
+1. Navigate to the **<Icon icon="robot"/> Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
@@ -126,7 +126,7 @@ You can configure a single site or use the bulk feature to configure multiple si
 
 ### Configure Sites in Bulk
 
-1. Navigate to the **<Icon iconName="robot"/> Autopilot** page of the Workspace.
+1. Navigate to the **<Icon icon="robot"/> Autopilot** page of the Workspace.
 
 1. Select the checkboxes for the sites you wish to activate in the **Site** column.
 

@@ -1,9 +1,10 @@
 import React from "react"
+import { Icon as PDSIcon } from "@pantheon-systems/pds-toolkit-react"
 
 const Icon = ({ icon, text }) => {
   return (
     <strong>
-      <span className={`glyphicons glyphicons-${icon}`} /> {text}
+      <PDSIcon iconName={icon} /> {text}
     </strong>
   )
 }
