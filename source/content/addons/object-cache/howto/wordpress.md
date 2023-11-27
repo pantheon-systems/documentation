@@ -46,7 +46,7 @@ Run the command below to enable Redis via the command line with Terminus:
 terminus redis:enable <site>
 ```
 
-## Installation and Configuration for Regular WordPress Sites
+## Installation and Configuration for non-Composer WordPress Sites
 
 1. Ensure that your site is on a paid Performance or Elite plan. This can be verified by navigating to your **Pantheon Site Dashboard**, selecting **Settings**, selecting **About Site**, and then looking at the **Service Level**.
 
@@ -307,40 +307,6 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
-## Installing Object Cache Pro on WordPress Multisite
-
-When using WordPress Multisite, the recommended installation is to install Object Cache Pro as an `mu-plugin`. This allows Object Cache Pro to handle each individual site separately, while also allowing Super Admins to flush the network cache.
-
-### Traditional WordPress Multisite
-For normal WordPress installations, you will need to do the following:
-
-1. Move the `object-cache-pro` plugin directory to your `wp-content/mu-plugins/` folder.
-1. Add a line in `wp-content/mu-plugins/loader.php` to point to `object-cache-pro/object-cache-pro.php` under the `pantheon-mu-plugin/pantheon.php` line in the `$pantheon_mu_plugins` array. The result should look like this:
-
-	```php
-	// Add mu-plugins here.
-	$pantheon_mu_plugins = [
-		'pantheon-mu-plugin/pantheon.php',
-		'object-cache-pro/object-cache-pro.php',
-	];
-	```
-### Composer-Managed WordPress Multisite
-
-You must add a line to your `composer.json` file if you have Composer-managed WordPress Multisites using the [WordPress (Composer Managed) upstream](/guides/wordpress-composer/pre-ga/wordpress-composer-managed).
-
-1. Navigate to the `"extra"` section of your `composer.json` file and add `"rhubarbgroup/object-cache-pro"` to the installer path for `"web/app/mu-plugins/{$name}"`. Your final `"installer-paths"` might look like this:
-
-	```json
-    "installer-paths": {
-      "web/app/mu-plugins/{$name}/": [
-        "type:wordpress-muplugin",
-        "rhubarbgroup/object-cache-pro"
-      ],
-      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
-    },
-	```
-
 ### Additional Considerations
 - When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`.
 	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
@@ -352,9 +318,8 @@ You must add a line to your `composer.json` file if you have Composer-managed Wo
 - When installed as a `mu-plugin` on a WordPress Multisite, Object Cache Pro handles each subsite separately. The dashboard widget applies to the current site and none of the other sites on the network.
   - Flushing the network cache from the network admin will flush all caches across the network.
   - Subsites do not get their own configuration or graphs.
-  - If installed as a normal plugin on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache.
+  - If installed on a WordPress Multisite, the Flush cache button in the subsite dashboard widget flushes the cache of the entire network, not just the subsite cache. The default behavior can be modified by [adjusting the `WP_REDIS_CONFIG` settings](https://objectcache.pro/docs/configuration-options/#flushing-networks). Alternatively, you can flush a single site's cache by using the [WP-CLI command](https://objectcache.pro/docs/wp-cli/#multisite-flushing).
   - You must manually click the **Enable Cache** button in the Network Admin Object Cache Pro settings page while in SFTP mode to enable Object Cache Pro. Alternatively, you can use the Terminus commands above and commit the `object-cache.php` drop-in to your repository.
-  - As noted in the [Caveats](https://wordpress.org/documentation/article/must-use-plugins/#caveats) section of the Must Use Plugins documentation in the Developer Hub, `mu-plugin`s do not receive plugin update notifications. Updates must be handled manually.
 
   	<Alert title="Note" type="info">
 
