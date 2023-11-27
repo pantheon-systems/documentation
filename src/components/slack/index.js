@@ -6,7 +6,7 @@ import { faSlack } from "@fortawesome/free-brands-svg-icons"
 const Slack = () => {
   return (
     <a
-      className="pds-button pds-button--secondary pds-button--small"
+      className="pds-button pds-button--secondary pds-button--sm"
       href="https://slackin.pantheon.io/"
     >
       <FontAwesomeIcon icon={faSlack} size="1x" className="fa" /> Discuss in
