@@ -28,7 +28,7 @@ You can validate that HTTPS configuration for the domain is ready on Pantheon by
 
 1. Access the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Navigate to the **<Icon icon="globeLine" /> Domains / HTTPS** page.
+1. Navigate to the **<Icon icon="global" /> Domains / HTTPS** page.
 
 1. Select **Details** next to the bare domain.
 

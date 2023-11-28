@@ -41,7 +41,7 @@ After you've done that, connect your DNS:
 
 1. Go to the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Select the **<Icon icon="globeLine" /> Domains / HTTPS** tab.
+1. Select the **<Icon icon="global" /> Domains / HTTPS** tab.
 
 1. Enter the `www` domain (for example, `www.example.com`), then click **Connect Domain**.
 
@@ -63,7 +63,7 @@ Then, configure your DNS:
 
 1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an **A** record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
 
-1. Return to the **<Icon icon="globeLine" /> Domains / HTTPS** page in the Pantheon Site Dashboard.
+1. Return to the **<Icon icon="global" /> Domains / HTTPS** page in the Pantheon Site Dashboard.
 
 1. Click **Details** next to the bare domain.
 

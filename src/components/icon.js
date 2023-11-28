@@ -8,6 +8,7 @@ const legacyIcons = [
   "cleaning",
   "cloud-upload",
   "equalizer",
+  "global",
   "server",
 ]
 
