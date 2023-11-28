@@ -22,7 +22,7 @@ WordPress allows privileged users to edit code directly from the admin panel. Th
 
  ![WordPress admin editor](../../../images/guides/git-wordpress/editor.png)
 
-This editor is not recommended for a few reasons. You (or your client) may not want administrative users to be able to view and possibly modify the site's code inadvertently. Also, those who **are** familiar with this admin panel will not be able to edit code as expected in the **<Icon icon="grid" /> Test**, and **<Icon icon="wavePulse" /> Live** environments, because of how Pantheon secures each. Finally, even basic text editors have spellcheck, undo/redo, custom fonts, code formatting, and other useful features this barebones editor lacks.
+This editor is not recommended for a few reasons. You (or your client) may not want administrative users to be able to view and possibly modify the site's code inadvertently. Also, those who **are** familiar with this admin panel will not be able to edit code as expected in the **<Icon icon="equalizer" /> Test**, and **<Icon icon="wavePulse" /> Live** environments, because of how Pantheon secures each. Finally, even basic text editors have spellcheck, undo/redo, custom fonts, code formatting, and other useful features this barebones editor lacks.
 
 It's a common practice to disable this editor, as well as a good example to show how to edit a core WordPress file.
 

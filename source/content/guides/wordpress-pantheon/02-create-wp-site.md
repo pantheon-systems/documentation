@@ -42,7 +42,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
 ## Initialize Your Test and Live Environments
 
-1. Click the <Icon icon="grid" text="Test"/> tab in the Site Dashboard > click **Create Test Environment**.
+1. Click the <Icon icon="equalizer" text="Test"/> tab in the Site Dashboard > click **Create Test Environment**.
 
    This can take a couple of minutes. Note that you must create your Test environment before you can create your Live environment.
 

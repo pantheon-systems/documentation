@@ -1,7 +1,7 @@
 To create your Live environment:
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard).
-1. Click the <Icon icon="grid" text="Live"/> tab.
+1. Click the <Icon icon="equalizer" text="Live"/> tab.
 1. Click **Initialize Live Environment** to create your Live environment.
 
 ![Initialize live environment](../../images/launch-initialize-live.png)

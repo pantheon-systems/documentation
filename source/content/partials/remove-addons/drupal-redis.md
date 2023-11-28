@@ -16,4 +16,4 @@ reviewed: ""
 
 1. Go to <Icon icon="gear" /> **Settings**, select **Add Ons**, then click **Remove** for Redis.
 
-1. Go to the Site Dashboard, and click <span class="glyphicons glyphicons-cleaning"></span> **Clear Caches**.
+1. Go to the Site Dashboard, and click <Icon icon="cleaning" /> **Clear Caches**.

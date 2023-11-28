@@ -41,17 +41,17 @@ On the right side, there are two rows of options:
 
 Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site.
 
-### <Icon icon="wrench" /> Dev
+### <Icon icon="wrench" size="lg"/> Dev
 
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
 Within the safety of this isolated environment, you can edit code and make updates to your site. All development on your Pantheon sites starts here.
 
-### <Icon icon="grid" /> Test
+### <Icon icon="equalizer" /> Test
 
 This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 
-### <span class="glyphicons glyphicons-cardio"> </span> Live
+### <Icon icon="wavePulse" size="lg"/> Live
 
 This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment.
 

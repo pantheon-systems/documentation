@@ -22,7 +22,7 @@ This section provides information on how to enable backups, test your email plug
 
 1. Switch the toggle to **Enable** if needed, then pick the day on which you want to create weekly backups, and then click **Update Weekly Backup Schedule**.
 
-1. Repeat these steps for the **<Icon icon="grid" /> Test** and **<Icon icon="wavePulse" /> Live** environments.
+1. Repeat these steps for the **<Icon icon="equalizer" /> Test** and **<Icon icon="wavePulse" /> Live** environments.
 
 Refer to [Backups Tool](/guides/backups) for more information on this feature.
 
