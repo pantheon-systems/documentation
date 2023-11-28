@@ -172,7 +172,7 @@ A single `.sql` dump that contains the content and active state of the site's co
 
 </dl>
 
-If your `.sql` file is less than 500MB, you can use the Import tool in the <Icon icon="chartNetwork" /> **Database/Files** section of the Site Dashboard to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
+If your `.sql` file is less than 500MB, you can use the Import tool in the <Icon icon="server" /> **Database/Files** section of the Site Dashboard to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
 
 1. Navigate to the Dev environment on the Site Dashboard, click **Connection Info**, and copy the database connection string. It will look similar to this:
 

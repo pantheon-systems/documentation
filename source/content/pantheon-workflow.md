@@ -124,11 +124,11 @@ After testing your changes in the Test environment you can move them to the Live
 
     <Alert title="Warning" type="danger" >
 
-    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="command" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
+    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="cloudArrowUp" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
 
     </Alert>
 
-1. Go to your [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the <Icon icon="wrench" text="Dev"/> tab, then click <Icon icon="chartNetwork" text="Database / Files"/>.
+1. Go to your [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the <Icon icon="wrench" text="Dev"/> tab, then click <Icon icon="server" text="Database / Files"/>.
 
 1. Select **Live** from the **From this Environment** list to clone the database and files from the Live site.
 
@@ -179,7 +179,7 @@ Nice work! You added a page to your Live site, then cloned this environment "dow
 
     <Alert title="Warning" type="danger" >
 
-    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="command" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
+    Consider creating a backup before proceeding. After the next step, you will not be able to recover Dev database and files without a backup. To do so, click <Icon icon="cloudArrowUp" text="Backups"/> on the <Icon icon="wrench" text="Dev"/> tab of your Site Dashboard, then click **Create New Backup**.
 
     </Alert>
 

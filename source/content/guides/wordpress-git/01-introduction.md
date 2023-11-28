@@ -61,10 +61,10 @@ Visit our guide to [Configure Visual Studio Code](/guides/local-development/visu
 
 >Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours. -- You, probably.
 
-*Hold it right there*. Sites on Pantheon each include **<Icon icon="wrench" /> Dev**, **<Icon icon="grid" /> Test**, and **<Icon icon="chartLine" /> Live** environments -- and as the name implies, **<Icon icon="wrench" /> Dev** is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
+*Hold it right there*. Sites on Pantheon each include **<Icon icon="wrench" /> Dev**, **<Icon icon="grid" /> Test**, and **<Icon icon="wavePulse" /> Live** environments -- and as the name implies, **<Icon icon="wrench" /> Dev** is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
 
 Using the **<Icon icon="wrench" /> Dev** environment means you can:
 
-* Build in a known state with fewer surprises, since **<Icon icon="wrench" /> Dev** is the same as **<Icon icon="chartLine" /> Live**.
+* Build in a known state with fewer surprises, since **<Icon icon="wrench" /> Dev** is the same as **<Icon icon="wavePulse" /> Live**.
 * Share work in progress with a web accessible URL (e.g., `example-dev.pantheonsite.io`)
 * Stop Cowboy Coding <Popover title="Cowboy Coding" content="Developing directly on the production environment, a poor practice." />

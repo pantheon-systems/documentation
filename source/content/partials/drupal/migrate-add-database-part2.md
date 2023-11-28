@@ -10,7 +10,7 @@ reviewed: "2022-11-04"
 
 1. Select the **<Icon icon="wrench" /> Dev** environment in the Site Dashboard.
 
-1. Select **<Icon icon="chartNetwork" /> Database / Files**.
+1. Select **<Icon icon="server" /> Database / Files**.
 
 1. Click **Import** and add your archive accordingly (based on file size):
 

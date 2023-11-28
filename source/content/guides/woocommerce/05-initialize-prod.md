@@ -14,7 +14,7 @@ type: guide
 permalink: docs/guides/woocommerce/initialize-prod/
 editpath: woocommerce/05-initialize-prod.md
 ---
-Now that our **<Icon icon="grid" /> Dev** site is configured and backed up, let's initialize our production environments (**<Icon icon="grid" /> Test** and **<Icon icon="chartLine" /> Live**) so we can launch our store.
+Now that our **<Icon icon="grid" /> Dev** site is configured and backed up, let's initialize our production environments (**<Icon icon="grid" /> Test** and **<Icon icon="wavePulse" /> Live**) so we can launch our store.
 
 1. In your site settings in Pantheon go to the **<Icon icon="grid" /> Test** tab and click **Initialize Test Environment**:
 
@@ -26,7 +26,7 @@ Now that our **<Icon icon="grid" /> Dev** site is configured and backed up, let'
 
     Now we can move the test site to live mode.
 
-2. We can repeat the process for Live by clicking on the **<Icon icon="chartLine" /> Live** tab, then **Initialize Live Environment**:
+2. We can repeat the process for Live by clicking on the **<Icon icon="wavePulse" /> Live** tab, then **Initialize Live Environment**:
 
     ![Initializing the live environment](../../../images/guides/woocommerce/19-Pantheon-dashboard-initialize-live-environment.png)
 
@@ -40,7 +40,7 @@ Now that our **<Icon icon="grid" /> Dev** site is configured and backed up, let'
 
 ## Create a Test Order
 
-Our site is looking good and loading really fast! Now to show you the power of multiple environments with version control, we're going to make an order on our **<Icon icon="chartLine" /> Live** environment and pull that information back down into our **<Icon icon="grid" /> Test** environment.
+Our site is looking good and loading really fast! Now to show you the power of multiple environments with version control, we're going to make an order on our **<Icon icon="wavePulse" /> Live** environment and pull that information back down into our **<Icon icon="grid" /> Test** environment.
 
 1. When you install Storefront it prompts you to add demo products. If you don't have any demo products you can manually create products:
 
@@ -64,7 +64,7 @@ Our site is looking good and loading really fast! Now to show you the power of m
 
 Now let's bring these changes back to our test site:
 
-1. In our site settings in Pantheon go to either your **<Icon icon="grid" /> Test** or **<Icon icon="wrench" /> Dev** environment. Then click the **<Icon icon="chartNetwork" /> Database / Files** tab.
+1. In our site settings in Pantheon go to either your **<Icon icon="grid" /> Test** or **<Icon icon="wrench" /> Dev** environment. Then click the **<Icon icon="server" /> Database / Files** tab.
 
 2. Select **Live** in the dropdown for **From this environment**.
 

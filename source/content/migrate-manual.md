@@ -349,7 +349,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 #### Pantheon Dashboard
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **<Icon icon="wrench" /> Dev** environment, select **<Icon icon="chartNetwork" /> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **<Icon icon="wrench" /> Dev** environment, select **<Icon icon="server" /> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
 
 <Partial file="drupal/migrate-add-files-part3.md" />
 

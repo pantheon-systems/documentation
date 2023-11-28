@@ -6,7 +6,7 @@ To create your Live environment:
 
 ![Initialize live environment](../../images/launch-initialize-live.png)
 
-1. Go to the the <Icon icon="chartNetwork" text="Database / Files"/> tab and select the following:
+1. Go to the the <Icon icon="server" text="Database / Files"/> tab and select the following:
 
    - **From this Environment**: Development
    - **Clone Database**: Checked

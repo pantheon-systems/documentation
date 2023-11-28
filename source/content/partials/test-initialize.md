@@ -7,7 +7,7 @@ To create your Test environment:
 
    This takes a few moments.
 
-1. Go to the <Icon icon="chartNetwork" text="Database / Files"/> tab and select the following:
+1. Go to the <Icon icon="server" text="Database / Files"/> tab and select the following:
 
    - **From this Environment**: Development
    - **Clone Database**: Checked

@@ -26,9 +26,9 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 ## Connect Domain
 
-1. Access the **<Icon icon="chartLine" /> Live** environment in your Pantheon Site Dashboard.
+1. Access the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Navigate to the **<Icon icon="sun" /> Domains / HTTPS** page.
+1. Navigate to the **<Icon icon="globeLine" /> Domains / HTTPS** page.
 
 1. Enter the `www` domain (for example, `www.example.com`), then click **Connect Domain**. You'll enter the bare domain (without the `www`) in a later step.
 
@@ -82,9 +82,9 @@ After you begin this process, you have:
 
 </Alert>
 
-1. Navigate to the **<Icon icon="chartLine" /> Live** environment in your Pantheon Site Dashboard.
+1. Navigate to the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Select the **<Icon icon="sun" /> Domains / HTTPS** page.
+1. Select the **<Icon icon="globeLine" /> Domains / HTTPS** page.
 
 1. Select **Details** next to the bare domain.
 
@@ -100,7 +100,7 @@ After you begin this process, you have:
 
    </Alert>
 
-1. Return to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and refresh the **<Icon icon="sun" /> Domains / HTTPS** page.
+1. Return to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and refresh the **<Icon icon="globeLine" /> Domains / HTTPS** page.
 
 Your domain's HTTPS certificate(s) will begin to generate automatically after your verify domain ownership. The certificate will automatically deploy to Pantheon’s Global CDN within an hour.
 

@@ -65,7 +65,7 @@ To receive the highest level of support available to your site or Workspace, rem
    - Error messages received, if applicable.
    - Links to screenshots or screencasts of the behavior, if necessary.
 
-You can download a transcript of your chat with the <Icon icon="snowflake"/> button:
+You can download a transcript of your chat with the <Icon icon="arrowDownToLine"/> button:
 
 ![Screenshot of a the support chat window with an arrow pointing to the button to download a transcript.](../../../images/chat-log-download.png)
 

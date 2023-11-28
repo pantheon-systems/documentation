@@ -99,7 +99,7 @@ Because we use caching on our Git logs, you may not see your hotfix commit liste
 
 You will see a message that there is a pending change that needs to be deployed if your tests pass.
 
-1. Open **<Icon icon="rotate" /> Deploys** and click the **<Icon icon="chartLine" /> Live** tab to see changes pending deployment.
+1. Open **<Icon icon="rotate" /> Deploys** and click the **<Icon icon="wavePulse" /> Live** tab to see changes pending deployment.
 
 1. Create a `_new_` tag to deploy changes to Live:
 

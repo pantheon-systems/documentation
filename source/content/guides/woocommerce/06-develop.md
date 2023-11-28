@@ -14,7 +14,7 @@ type: guide
 permalink: docs/guides/woocommerce/develop/
 editpath: woocommerce/06-develop.md
 ---
-It's a good security practice to remove any plugins or themes you aren't using. So let's get rid of the themes we aren't using. We'll make the change in our **<Icon icon="wrench" /> Dev** environment, then move it to our **<Icon icon="grid" /> Test** environment to QA, and then move it to **<Icon icon="chartLine" /> Live**.
+It's a good security practice to remove any plugins or themes you aren't using. So let's get rid of the themes we aren't using. We'll make the change in our **<Icon icon="wrench" /> Dev** environment, then move it to our **<Icon icon="grid" /> Test** environment to QA, and then move it to **<Icon icon="wavePulse" /> Live**.
 
 1. In the WordPress admin of our **<Icon icon="wrench" /> Dev** environment under **Appearance** you'll see all of the installed themes.
 
@@ -38,10 +38,10 @@ It's a good security practice to remove any plugins or themes you aren't using. 
 
 
 
-  When you're moving files (ex. Uploaded media files, such as images) or the database, use the clone functionality in the Pantheon dashboard. When you're moving code, use the deploy functionality. As a reminder, code should be deployed from the **<Icon icon="wrench" /> Dev** environment to **<Icon icon="grid" /> Test** and then **<Icon icon="chartLine" /> Live** environments. The database and files (content) should be cloned from the live environment back down to the **<Icon icon="grid" /> Test** and **<Icon icon="wrench" /> Dev** environments periodically to keep them up to date with the latest content.
+  When you're moving files (ex. Uploaded media files, such as images) or the database, use the clone functionality in the Pantheon dashboard. When you're moving code, use the deploy functionality. As a reminder, code should be deployed from the **<Icon icon="wrench" /> Dev** environment to **<Icon icon="grid" /> Test** and then **<Icon icon="wavePulse" /> Live** environments. The database and files (content) should be cloned from the live environment back down to the **<Icon icon="grid" /> Test** and **<Icon icon="wrench" /> Dev** environments periodically to keep them up to date with the latest content.
 
   With a quick test we can see all of the other themes were deleted, leaving only the active  Storefront theme.
 
   ![The WordPress dashboard showing only a single theme installed](../../../images/guides/woocommerce/31-WordPress-dashboard-single-theme.png)
 
-Now that you know how to move content changes around you can keep your store live and accepting new orders while you add functionality to your site in the **<Icon icon="wrench" /> Dev** environment and then test the new changes in the **<Icon icon="grid" /> Test** environment. Once the changes are ready for production they can be deployed to the **<Icon icon="chartLine" /> Live** environment.
+Now that you know how to move content changes around you can keep your store live and accepting new orders while you add functionality to your site in the **<Icon icon="wrench" /> Dev** environment and then test the new changes in the **<Icon icon="grid" /> Test** environment. Once the changes are ready for production they can be deployed to the **<Icon icon="wavePulse" /> Live** environment.

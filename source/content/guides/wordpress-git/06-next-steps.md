@@ -18,7 +18,7 @@ reviewed: "2020-02-26"
 
 ## Deploy Code from Dev
 
-We only made changes to our **<Icon icon="wrench" /> Dev** environment, so the next step would be to push all of these changes all the way out to production. For details on the deployment process for moving code up to **<Icon icon="grid" /> Test** and **<Icon icon="chartLine" /> Live**, see [Use the Pantheon Workflow](/pantheon-workflow).
+We only made changes to our **<Icon icon="wrench" /> Dev** environment, so the next step would be to push all of these changes all the way out to production. For details on the deployment process for moving code up to **<Icon icon="grid" /> Test** and **<Icon icon="wavePulse" /> Live**, see [Use the Pantheon Workflow](/pantheon-workflow).
 
 ## Configuration
 

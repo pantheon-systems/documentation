@@ -20,7 +20,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 1. Navigate to your existing site's Dashboard.
 
-1. In the Live environment, select <Icon icon="chartNetwork" /> **Database / Files**.
+1. In the Live environment, select <Icon icon="server" /> **Database / Files**.
 
 1. Click **Export Database**.
 

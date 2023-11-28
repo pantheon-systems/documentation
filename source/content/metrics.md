@@ -22,8 +22,8 @@ terminus metrics <site>.<env>
 
 ## Access Metrics
 
-1. Navigate to the **<Icon icon="chartLine" /> Live** environment of the Site Dashboard.
-1. Click **<span class="glyphicons glyphicons-charts"></span> Metrics**.
+1. Navigate to the **<Icon icon="wavePulse" /> Live** environment of the Site Dashboard.
+1. Click **<Icon icon="chartSimple" /> Metrics**.
 1. Toggle displayed date ranges by clicking **Day**, **Week**, or **Month**:
   ![Charts for pages served and visits within the Metrics tool of the Site Dashboard](../images/dashboard/metrics-graphs.png)
 
