@@ -22,7 +22,7 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
 1. Download the [Bento](https://wordpress.org/themes/bento/) theme from WordPress.org to your local machine.
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is still set to **SFTP**.
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard. Confirm your Connection Mode is still set to **SFTP**.
 
 1. Establish a secure connection from your local to Pantheon using an SFTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/)).
 
@@ -125,7 +125,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
  ### WP-CLI & Terminus
 
- You can do the exact same process from the command line using [Terminus](/terminus), the Pantheon CLI. Install Terminus, then run a WP-CLI command against the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment to create the child theme scaffold for you automatically. That's right, go from all the steps above to a one-liner to kick things into warp speed:
+ You can do the exact same process from the command line using [Terminus](/terminus), the Pantheon CLI. Install Terminus, then run a WP-CLI command against the **<Icon icon="wrench" /> Dev** environment to create the child theme scaffold for you automatically. That's right, go from all the steps above to a one-liner to kick things into warp speed:
 
  ```bash{promptUser: user}
  terminus wp <site>.<env> -- scaffold child-theme bento-child --parent_theme=bento
@@ -157,7 +157,7 @@ Finally, let’s make a few small customizations to our active child theme using
 
 1. Save the file changes in Atom.
 
-1. Refresh the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's site URL and you should see your changes reflected. The header background should be salmon and the page should have deepskyblue anchors:
+1. Refresh the **<Icon icon="wrench" /> Dev** environment's site URL and you should see your changes reflected. The header background should be salmon and the page should have deepskyblue anchors:
 
   ![Site with New CSS changes](../../../images/guides/git-wordpress/new-css.png)
 

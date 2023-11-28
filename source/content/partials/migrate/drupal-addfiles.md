@@ -64,7 +64,7 @@ reviewed: ""
   terminus rsync . my_site.dev:files
   ```
 
-  When using Rsync manually, the script below is useful for dealing with transfers that are interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits two minutes and picks up where it left off:
+  When using Rsync manually, the script below is useful for dealing with transfers that are interrupted due to connectivity issues. It uploads files to your Pantheon site's **<Icon icon="wrench" /> Dev** environment. If an error occurs during transfer, it waits two minutes and picks up where it left off:
 
   <Download file="manual-rsync-script.sh" />
 

@@ -8,9 +8,9 @@ tags: [--]
 reviewed: "2022-11-04"
 ---
 
-1. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
+1. Select the **<Icon icon="wrench" /> Dev** environment in the Site Dashboard.
 
-1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+1. Select **<Icon icon="chartNetwork" /> Database / Files**.
 
 1. Click **Import** and add your archive accordingly (based on file size):
 
@@ -56,7 +56,7 @@ reviewed: "2022-11-04"
 
    1. Navigate to the Pantheon Site Dashboard.
 
-   1. Open the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+   1. Open the **<Icon icon="wrench" /> Dev** environment.
 
    1. Click **Connection Info**.
 
@@ -80,7 +80,7 @@ reviewed: "2022-11-04"
 
      If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/guides/mariadb-mysql/mysql-access/#troubleshooting-mysql-connections).
 
-    The `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment after you run the command.
+    The `.sql` file is imported to the **<Icon icon="wrench" /> Dev** environment after you run the command.
 
   </Tab>
 

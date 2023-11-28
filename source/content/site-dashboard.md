@@ -41,13 +41,13 @@ On the right side, there are two rows of options:
 
 Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site.
 
-### <span class="glyphicons glyphicons-wrench"></span> Dev
+### <Icon icon="wrench" /> Dev
 
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
 Within the safety of this isolated environment, you can edit code and make updates to your site. All development on your Pantheon sites starts here.
 
-### <span class="glyphicons glyphicons-equalizer"></span> Test
+### <Icon icon="grid" /> Test
 
 This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 

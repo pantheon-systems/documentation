@@ -86,11 +86,11 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 
-  **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details** > **Remove Domain**
+  **<Icon icon="chartLine" /> Live** > **<Icon icon="sun" /> Domains / HTTPS** > **Details** > **Remove Domain**
 
 1. In the new Site Dashboard, connect the custom domain affected by the relaunch:
 
-  **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Connect Domain**
+  **<Icon icon="chartLine" /> Live** > **<Icon icon="sun" /> Domains / HTTPS** > **Connect Domain**
 
   <Alert title="Warning" type="danger">
 
@@ -106,7 +106,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 1. Wait for HTTPS to provision for the newly connected domains:
 
-  **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
+  **<Icon icon="chartLine" /> Live** > **<Icon icon="sun" /> Domains / HTTPS** > **Details**
 
   <Partial file="notes/https-success.md" />
 

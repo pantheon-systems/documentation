@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-The <Icon icon="triangleExclamation" /> icon within the Domains / HTTPS page indicates that the domain has not been correctly routed to Pantheon. Complete the steps below before you provision your HTTPS.
+The <Icon icon="<Icon icon="triangleExclamation" />" /> icon within the Domains / HTTPS page indicates that the domain has not been correctly routed to Pantheon. Complete the steps below before you provision your HTTPS.
 
 1. Access the **<Icon icon="chartLine" /> Live** environment in your Pantheon Site Dashboard.
 1. Navigate to the **<Icon icon="sun" /> Domains / HTTPS** page.
