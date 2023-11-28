@@ -360,7 +360,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 A Custom Upstream from a GitLab repository must be set up for you by Pantheon Support.
 
-1. Navigate to the repository, click **<i class="fa fa-gear"></i> Settings**, and then select **Repository**.
+1. Navigate to the repository, click <Icon icon="gear" /> **Settings**, and then select **Repository**.
 
 1. Click **Expand** next to **Deploy Tokens** and fill out the fields:
 

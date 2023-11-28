@@ -26,7 +26,7 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
 ## Configure New Relic&reg; Performance Monitoring Access
 
-1. Go to the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Go to New Relic**.
+1. Go to the <Icon icon="eye" /> **New Relic** tab on your Site Dashboard, and click **Go to New Relic**.
 
   ![Screenshot showing the newly activated New Relic.](../../../images/integrations/newrelic/new-relic-activated.png)
 

@@ -18,13 +18,13 @@ integration: [--]
 
 This guide will show you how to migrate a site that meets the following criteria to the latest version of Drupal:
 
-| <i class="fa fa-cloud"></i><br/> Current Host | <i class="fa fa-wrench"></i><br/> How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | <i class="fa fa-exclamation-circle"></i><br/> Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
-|:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                   Pantheon                    |                                                                     Dashboard                                                                      |                                                                                             --                                                                                             |
+| Current Host | How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
+| :-------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                   Pantheon                    |                                                                  Dashboard                                                                   |                                                                                             --                                                                                             |
 
 <Alert title="Note" type="info" >
 
-This guide is intended for those who do not have access to Multidev.  If you do have access, use [Upgrade a Drupal Site with Multidev to the latest version of Drupal Using Multidev](/guides/drupal-hosted-md) instead.
+This guide is intended for those who do not have access to Multidev. If you do have access, use [Upgrade a Drupal Site with Multidev to the latest version of Drupal Using Multidev](/guides/drupal-hosted-md) instead.
 
 </Alert>
 

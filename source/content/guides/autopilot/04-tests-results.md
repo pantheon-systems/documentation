@@ -23,14 +23,13 @@ Autopilot updates and visually tests a copy of your site on a [Multidev](/guides
 
 1. Navigate to your Autopilot **Overview** page and click the VRT results under **Autopilot Sites**. This section displays which sites passed testing and are up to date, as well as sites that need your manual review.
 
-    ![Autopilot overview page shows the testing status of all sites](../../../images/autopilot/autopilot-sites-overview.png)
+   ![Autopilot overview page shows the testing status of all sites](../../../images/autopilot/autopilot-sites-overview.png)
 
 1. Click **More Actions** in the **Review Test Results** page to see Autopilot data for a specific site.
 
 1. Click **Visit Autopilot Site** under the **Autopilot** tab in the Workspace to view the site preview in a new browser tab.
 
-    ![Autopilot Review Test Results](../../../images/autopilot/autopilot-review-test-results.png)
-
+   ![Autopilot Review Test Results](../../../images/autopilot/autopilot-review-test-results.png)
 
 ## Successful Tests
 
@@ -53,11 +52,11 @@ If an error is detected during an update attempt, the **Autopilot Status** shows
 
 1. Click **View Update Details** for details:
 
- ![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
+![Autopilot Update Details shows a list of updates and the versions](../../../images/autopilot/autopilot-status-what-changed.png)
 
 1. Click **Review Test Results** to compare changes.
 
-1. Click **Approve** to accept the changes or click **More Actions** <i className="fa fa-chevron-down fa-w-14"></i> to view the Multidev, or adjust the threshold for acceptable changes.
+1. Click **Approve** to accept the changes or click **More Actions** <Icon icon="angleDown" /> to view the Multidev, or adjust the threshold for acceptable changes.
 
 ### Acknowledge All Failed Test Results Before You Run Another Test
 
@@ -68,4 +67,3 @@ When a failed test requires review, no new tests can be run on the site until th
 - [Autopilot Setup and Configuration](/guides/autopilot/enable-autopilot)
 
 - [Autopilot FAQs](/guides/autopilot/autopilot-faq)
-

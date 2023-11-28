@@ -29,9 +29,9 @@ If you have already attempted to troubleshoot an error, or if you want to confir
 
 1. Click **Sites**, click **Actions**, and then click **Manage Autopilot Settings**.
 
-1. Navigate to the **Autopilot Configuration** screen and click <i class="fa fa-refresh"></i> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
+1. Navigate to the **Autopilot Configuration** screen and click <Icon icon="rotate" /> **Refresh Updates** to force Autopilot to check for new components (like plugins, modules, or themes).
 
-1. Click **Status** in Autopilot's side bar and then click **Queue Updates** under <i class="fa fa-wrench"></i> **Available Updates** to run Autopilot manually.
+1. Click **Status** in Autopilot's side bar and then click **Queue Updates** under <Icon icon="wrench" /> **Available Updates** to run Autopilot manually.
 
 ### Re-run Autopilot If Tests Have Already Passed
 
@@ -97,9 +97,9 @@ To resolve this issue, switch to Drush 8 in the `pantheon.yml` file or use Integ
 
 ### Issue
 
-* **WordPress**: This error message is displayed if a WordPress plugin or theme is not found after updates were attempted.
+- **WordPress**: This error message is displayed if a WordPress plugin or theme is not found after updates were attempted.
 
-* **Drupal**: This error message is displayed if a Drupal module or theme update could not be applied.
+- **Drupal**: This error message is displayed if a Drupal module or theme update could not be applied.
 
 ### Diagnosis
 
@@ -143,7 +143,7 @@ Applying updates with Drush or WP-CLI failed. This could be because of a read/wr
 
 Ensure Drush or the WP-CLI works as expected on the Dev and Multidev environments.
 
-Apply the plugin or theme updates either in the UI or with Drush or WP-CLI using Terminus. Resolve any issues or errors that arise. After conflicts are  resolved, the updates should be committed to the `master` branch.
+Apply the plugin or theme updates either in the UI or with Drush or WP-CLI using Terminus. Resolve any issues or errors that arise. After conflicts are resolved, the updates should be committed to the `master` branch.
 
 If possible, manually edit or update the plugins required to resolve the update failure and allow Autopilot to run its subsequent round of updates.
 
@@ -242,17 +242,21 @@ Ensure the Dev environment is live and reachable with no fatal errors and return
 ### CMS Error
 
 #### Diagnosis
+
 This can result from Drush or WP-CLI failing after `db pull`. This might be Autopilot specific, due to a site-level CMS issue, or could also be due to a platform-wide event.
 
 #### Solution
+
 Check that CLI cache clear steps work in the Dev environment. See if creating other Multidevs works correctly, delete the Autopilot environment and branch. Deleting the branch is important because the branch remains in Git if only the Multidev is deleted. If these actions works correctly, try running Autopilot again.
 
 ### Composer Error
 
 #### Diagnosis
+
 The error could be caused by a Composer build failure if you are utilizing [Integrated Composer](/guides/integrated-composer).
 
 #### Solution
+
 Check the build log in the Site dashboard. Review the most recent commit to see if an error was posted.
 
 You can also use [Composer 2](/guides/integrated-composer/ic-support) to test locally and identify issues by running `composer install` or `composer update`
@@ -293,11 +297,11 @@ Ensure the commands work. You will not be able to see if the workflow failed, bu
 
 Use the following steps:
 
-* For WordPress:
+- For WordPress:
 
   `wp cache flush`
 
-* Drupal:
+- Drupal:
 
   `drush cache-rebuild`
 

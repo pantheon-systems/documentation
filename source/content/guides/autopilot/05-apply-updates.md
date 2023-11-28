@@ -33,7 +33,7 @@ Autopilot can manage updates for any site that can [apply updates via the Site D
 
 You can also apply updates from the site list on the **<Icon icon="robot"/> Autopilot** page:
 
-1. Click the **Actions** <i className="fa fa-chevron-down fa-w-14"></i> drop-down menu next to each site name, and then click **Start Applying Updates**.
+1. Click the **Actions** <Icon icon="angleDown" /> drop-down menu next to each site name, and then click **Start Applying Updates**.
 
    - The platform adds the request to a queue, and will apply updates and deploy them to the chosen environments as quickly as possible, depending on the current platform load.
 

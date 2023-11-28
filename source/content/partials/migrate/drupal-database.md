@@ -27,9 +27,9 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   The resulting file will be named `db.sql.gz`. You can use the Pantheon Dashboard or a MySQL client to add your site's database.
 
-1. Navigate to the Site Dashboard and select the **<span class="fa fa-wrench"></span> Dev** environment.
+1. Navigate to the Site Dashboard and select the **<Icon icon="wrench" /> Dev** environment.
 
-1. Select **<span class="fa fa-server"></span> Database / Files**.
+1. Select <Icon icon="chartNetwork" /> **Database / Files**.
 
 1. Click **Import** and add your archive (based on file size):
 
@@ -81,7 +81,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
     1. Paste the connection string and append it with: `< database.sql`
 
-       - This imports the `.sql` file to the **<span class="fa fa-wrench"></span> Dev** environment.
+       - This imports the `.sql` file to the **<Icon icon="wrench" /> Dev** environment.
 
        - Your command will look similar to the example below:
 

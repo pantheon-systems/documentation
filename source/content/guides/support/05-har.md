@@ -33,20 +33,20 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 <Tab title="Chrome" id="chrome" active={true}>
 
 1. In the **View** menu, go to **Developer** and open **Developer Tools**.
-  
+
    - Refer to [Google Chrome's official documentation](https://developer.chrome.com/docs/devtools/open/) for more options.
 
 1. Select the **Network** tab.
 
 1. Locate the **Record 🔴** button; it should be red. If the **Record 🔴** button is gray, click to begin recording.
 
-1. Check the **<i class="fa fa-check-square"></i> Preserve log** box to enable.
+1. Check the <Icon icon="xTwitter" /> **Preserve log** box to enable.
 
 1. Click the **Clear 🚫** symbol to clear all current network requests.
 
 1. Navigate to the search bar and enter the URL of the page that is having issues. Reproduce the steps that led to the issue.
 
-1. Once you have reproduced the issue, click on the **Export HAR <i class="fa fa-download"></i>** symbol and save the file.
+1. Once you have reproduced the issue, click on the **Export HAR** <Icon icon="download"/> symbol and save the file.
 
 </Tab>
 
@@ -56,7 +56,7 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select the **Network** tab.
 
-1. Locate and click the **Cog <i class="fa fa-gear"></i>** icon on the right side of the panel, then select **Persist Logs**.
+1. Locate and click the **Cog <Icon icon="gear" />** icon on the right side of the panel, then select **Persist Logs**.
 
 1. Locate the **Trash** icon on the left side of the panel and click to clear all current network requests.
 
@@ -74,13 +74,13 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Locate the **Record 🔴** button; it should be red. If the **Record 🔴** button is gray, click to begin recording.
 
-1. Check the **<i class="fa fa-check-square"></i> Preserve log** box to enable.
+1. Check the <Icon icon="xTwitter" /> **Preserve log** box to enable.
 
 1. Click the **Clear 🚫** symbol to clear all current network requests.
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue.
 
-1. Once you have reproduced the issue, click on the **Export HAR <i class="fa fa-download"></i>** symbol and save the file.
+1. Once you have reproduced the issue, click on the **Export HAR** <Icon icon="download"/> symbol and save the file.
 
 </Tab>
 
@@ -90,15 +90,15 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select the **Network** tab.
 
-1. On the left side of the panel, locate, and click, a green **Record <i class="fa fa-caret-right"></i>** button; once clicked, there will be a red square to indicate it is recording.
+1. On the left side of the panel, locate, and click, a green **Record** <Icon icon="play"/> button; once clicked, there will be a red square to indicate it is recording.
 
-1. Next, locate the **<i class="fa fa-times"></i>** icon and click to clear all current network requests.
+1. Next, locate the <Icon icon="xmark" /> icon and click to clear all current network requests.
 
 1. Check the **Preserve** icon (arrow with a red x) to preserve your console logs.
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue.
 
-1. Once you have reproduced the issue, click the **Export <i class="fa fa-save"></i>** symbol and save the file.
+1. Once you have reproduced the issue, click the **Export** <Icon icon="circle" />symbol and save the file.
 
 </Tab>
 
@@ -108,15 +108,14 @@ It is recommended that you generate multiple HAR files, for comparison. For exam
 
 1. Select the **Network** tab.
 
-1. Check the **<i class="fa fa-check-square"></i> Preserve Log** box to enable.
+1. Check the <Icon icon="xTwitter" /> **Preserve log** box to enable.
 
 1. Locate the **Trash** icon on the right side of the panel and click to clear all current network requests.
 
 1. Navigate to the search bar and enter the URL of the page that is having issues; reproduce the steps that led to the issue.
 
-1. After you have reproduced the issue, click on the **<i class="fa fa-upload"></i> Export** symbol and save the file.
+1. After you have reproduced the issue, click on the <Icon icon="moon" />**Export** symbol and save the file.
 
 </Tab>
 
 </TabList>
-

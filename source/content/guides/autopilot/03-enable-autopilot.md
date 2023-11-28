@@ -116,7 +116,7 @@ You can configure a single site or use the bulk feature to configure multiple si
 
 ### Configure a Single Site
 
-1. Navigate to the **<Icon icon="robot"/> Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
+1. Navigate to the **<Icon icon="robot"/> Autopilot** page of the Workspace, click **Actions** <Icon icon="angleDown" />, and then click **Manage Autopilot Settings**.
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
@@ -186,7 +186,7 @@ You can add pages to track for visual regression testing, along with a percent o
 
 ![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
-1. Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
+1. Click **<Icon icon="circlePlus" /> Add** to add more pages.
 
 1. Click **Save** to save changes.
 
@@ -211,7 +211,7 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
-1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
+1. Click <Icon icon="rotate" />**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
 
 1. Select updates that should be excluded and then click **Save**.
 
@@ -266,7 +266,7 @@ Configure email notifications for Autopilot alerts and activity digests in your 
 
 ![Personal Workspace Settings include options for Autopilot email notifications](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
 
-1. Click the <i className="fa fa-user-circle"></i> Gravatar in the upper right corner and click <i className="fa fa-user-cog"></i> **User Settings**.
+1. Click the <Icon icon="user" /> avatar in the upper right corner and click <Icon icon="userGear" /> **Personal Settings**.
 
 1. Click **Notifications** and select your desired settings in the **Autopilot Email Notifications** section.
 
