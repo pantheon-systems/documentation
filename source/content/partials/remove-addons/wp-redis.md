@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) or Object Cache Pro plugin. 
+1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) or Object Cache Pro plugin.
 
 1. Delete the `wp-content/object-cache.php` file.
 
@@ -16,4 +16,4 @@ reviewed: ""
 
 1. Go to <Icon icon="gear" /> **Settings**, select **Add Ons**, then click the **Remove** button for Redis.
 
-1. Go to the Site Dashboard, and click <span class="glyphicons glyphicons-cleaning"></span> **Clear Caches**.
+1. Go to the Site Dashboard, and click <Icon icon="cleaning" /> **Clear Caches**.

@@ -37,7 +37,7 @@ On the right side, there are two rows of options:
 
 ## Environment Tabs
 
-### <span class="glyphicons glyphicons-cloud"></span> Multidev
+### <Icon icon="cloud" size="lg"/> Multidev
 
 Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site.
 

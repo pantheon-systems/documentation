@@ -19,7 +19,7 @@ Next, we'll add a module to our existing `slogan` branch using Composer. You sho
 ## Local Setup
 This section will be performed from the command line, to prepare your local system.
 
-1. Navigate to the **Code** tab of the GitHub repository, then click **<span class="glyphicons glyphicon-save"></span> Code** and copy the repository URL:
+1. Navigate to the **Code** tab of the GitHub repository, then click <Icon icon="arrowDownToLine" /> **Code** and copy the repository URL:
 
   ![Click Code and copy the repository URL](../../../images/github/github-code-clone-ssh.png "GitHub clone URL")
 

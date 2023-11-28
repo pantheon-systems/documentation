@@ -28,7 +28,7 @@ If you are managing a high profile site, using PagerDuty is an excellent way to 
 
   ![New User](../../../images/pagerduty/pg-user-contact.png)
 
-4. Go to the **Notification Rules** tab and setup your notification rules. The default is alerting everything at once. Click the edit (<span class="glyphicons glyphicons-edit"></span>) buttons to adjust the rules to your preference, for example:
+4. Go to the **Notification Rules** tab and setup your notification rules. The default is alerting everything at once. Click the edit (<Icon icon="squarePen" />) buttons to adjust the rules to your preference, for example:
 
   ![User contact information](../../../images/pagerduty/pg-user-notifications.png)
 

@@ -18,7 +18,7 @@ This section provides information on how to enable backups, test your email plug
 
 ## Enable and Schedule Weekly Backups
 
-1. Click **<span class="glyphicons glyphicons-cloud-upload"></span> Backups** on the <Icon icon="wrench" /> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
+1. Click <Icon icon="cloud-upload" /> **Backups** on the <Icon icon="wrench" /> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
 
 1. Switch the toggle to **Enable** if needed, then pick the day on which you want to create weekly backups, and then click **Update Weekly Backup Schedule**.
 

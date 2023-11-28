@@ -74,7 +74,7 @@ Create one A record and 2 AAAA records for the given subdomain (e.g., `www.examp
 ## Troubleshooting
 
 ### The specified record already exists
-If you receive an error message that says `The specified record already exists`, click **Cancel** and select **<span class="glyphicons glyphicons-pencil"></span>** next to the existing record. Replace the value in the **Points to** field with the record value provided by Pantheon, then click **Save**.
+If you receive an error message that says `The specified record already exists`, click **Cancel** and select **<Icon icon="pen" />** next to the existing record. Replace the value in the **Points to** field with the record value provided by Pantheon, then click **Save**.
 
 ## GoDaddy Docs
 
