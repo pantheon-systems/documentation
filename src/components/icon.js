@@ -45,7 +45,7 @@ const Icon = ({ icon, text, size }) => {
       <strong>
         <PDSIcon
           iconName={icon}
-          iconSize={size ? size : "sm"}
+          iconSize={size ? size : "md"}
           style={{ paddingInline: ".125rem" }}
         />{" "}
         {text}
