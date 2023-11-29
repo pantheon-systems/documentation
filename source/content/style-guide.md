@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [wordsmither]
-reviewed: "2023-06-15"
+reviewed: "2023-11-29"
 contenttype: [doc]
 showtoc: true
 categories: [overview, help]
