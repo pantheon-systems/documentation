@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [wordsmither]
-reviewed: "2023-06-15"
+reviewed: "2023-11-28"
 contenttype: [doc]
 showtoc: true
 categories: [overview, help]
@@ -11,13 +11,14 @@ audience: [agency, business, development, marketing, sysadmin]
 product: [--]
 integration: [--]
 ---
+
 <!-- markdownlint-disable -->
 
 All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's documentation.
 
 You can also reference the [Pantheon Documentation Template](/doc-template) to see the common structure of our docs, or copy it to begin a new content piece.
 
-Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/).  However, the guidelines in this document supersede the Google guidelines.
+Detailed style guidelines can be found in the [Google Developers Documentation Style Guide](https://developers.google.com/style/). However, the guidelines in this document supersede the Google guidelines.
 
 ## Bold
 
@@ -52,10 +53,9 @@ Notes should identify important pieces of information the reader shouldn't miss.
 <hr className="source-code" /> <br/>
 
 ```html
-<Alert title="Note"  type="info" >
-
-Notes should identify important pieces of information the reader shouldn't miss.
-
+<Alert title="Note" type="info">
+  Notes should identify important pieces of information the reader shouldn't
+  miss.
 </Alert>
 ```
 
@@ -74,10 +74,9 @@ Warnings cover information critical to the reader and highlight potential danger
 <hr className="source-code" /> <br/>
 
 ```html
-<Alert title="Warning" type="danger" >
-
-Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
-
+<Alert title="Warning" type="danger">
+  Warnings cover information critical to the reader and highlight potential
+  dangers, especially those that can cause data loss.
 </Alert>
 ```
 
@@ -105,17 +104,14 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 ```html
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
-
-![Incorrect vanity domain A record required DNS value](../images/dashboard/wrong-vanity-aname-dns.png)
-
+  ![Incorrect vanity domain A record required DNS
+  value](../images/dashboard/wrong-vanity-aname-dns.png)
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
-
-![Correct vanity domain A record required DNS value](../images/dashboard/correct-a-aaaa-dns.png)
-
+  ![Correct vanity domain A record required DNS
+  value](../images/dashboard/correct-a-aaaa-dns.png)
 </Alert>
-
 ```
 
 </Example>
@@ -126,7 +122,7 @@ Use cards to visually display a list of items, with links to more information.
 
 <Alert title="Note" type="info" >
 
-`CardGroup/Card` is intended for Terminus guide use only.  Instead, use `ProductGroup/Product`
+`CardGroup/Card` is intended for Terminus guide use only. Instead, use `ProductGroup/Product`
 
 </Alert>
 
@@ -139,15 +135,15 @@ Use cards to visually display a list of items, with links to more information.
 ```markdown
 <ProductGroup>
 
-  <Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/autopilot"}>
+<Product title={"Visual Regression Testing (VRT) and Automatic Updates with Autopilot"} link={"/autopilot"}>
 
-  Automate finding, testing, and applying WordPress and Drupal updates.
+Automate finding, testing, and applying WordPress and Drupal updates.
 
   </Product>
 
-  <Product title={"Quicksilver Webhooks"} link={"/guides/quicksilver/hooks"}>
+<Product title={"Quicksilver Webhooks"} link={"/guides/quicksilver/hooks"}>
 
-  Use our [Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) for a generic Webhook implementation.
+Use our [Quicksilver Webhooks repository](https://github.com/pantheon-systems/quicksilver-examples/tree/main/webhook) for a generic Webhook implementation.
 
   </Product>
 
@@ -158,7 +154,7 @@ Use cards to visually display a list of items, with links to more information.
 
 ### Check
 
-Simple green checkmark.  Replaces `<span style="color:green">✔</span>`
+Simple green checkmark. Replaces `<span style="color:green">✔</span>`
 
 <Example>
 
@@ -250,7 +246,6 @@ if (!function_exists('install_drupal')) {
 # This is a Windows-friendly symlink
 require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
 ```
-
 ````
 
 </Example>
@@ -304,6 +299,7 @@ mdx-slug
 </Example>
 
 ##### Line Highlighting
+
 You can highlight a specific line in a code block the reader should focus on with `//highlight-line`, or a group with `//highlight-start` and `//highlight-end`:
 
 <Example>
@@ -363,9 +359,10 @@ Vary: Accept-Encoding, Cookie
 ## Content Types
 
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are paginated and designed to walk the reader through a complex feature/product or to provide a collected resource of related topics in one location.
+
 ## DNS
 
-Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do *not* have `draft: true` frontmatter.
+Creates a bulleted list of links to all DNS Provider docs stored in `source/content/dns-providers`, which do _not_ have `draft: true` frontmatter.
 
 <Example>
 
@@ -381,7 +378,7 @@ Creates a bulleted list of links to all DNS Provider docs stored in `source/cont
 
 ### File Downloads
 
-Creates a link to a downloadable file.  Files must be stored in `source/scripts`.
+Creates a link to a downloadable file. Files must be stored in `source/scripts`.
 
 <Example>
 
@@ -406,9 +403,10 @@ Definitions and Definition Lists are automatically added to the [Glossary](/glos
 <hr className="source-code" /> <br/>
 
 ```html
-A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a new term.
-New terms should only be defined once throughout the doc, and then cross-referenced.
-Definitions and Definition Lists are automatically added to the [Glossary](/glossary).
+A <dfn id="dfn">dfn</dfn> tag is used to indicate that a paragraph is defining a
+new term. New terms should only be defined once throughout the doc, and then
+cross-referenced. Definitions and Definition Lists are automatically added to
+the [Glossary](/glossary).
 ```
 
 </Example>
@@ -437,11 +435,12 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 
 ````markdown
 ### RedisException: Redis server went away
+
 The following error occurs when Redis has not been enabled within the Site Dashboard:
 
- ```none
- RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
- ```
+```none
+RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
+```
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
 ````
@@ -626,21 +625,18 @@ These additional icons will be deprecated but are currently available to represe
 <Icon icon="userPlus" text="Add user" />
 ```
 
-
 </Example>
-
-
 
 ## Italics
 
 <Example>
 
-Emphasis should *always* be stressed with italics, and *never* with bold.
+Emphasis should _always_ be stressed with italics, and _never_ with bold.
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-Emphasis should *always* be stressed with italics, and *never* with bold.
+Emphasis should _always_ be stressed with italics, and _never_ with bold.
 ```
 
 </Example>
@@ -669,6 +665,7 @@ title: Page Title
 ## Header
 
 ### Sub Header
+
 ##### Section not listed on TOC
 ```
 
@@ -676,13 +673,13 @@ title: Page Title
 
 ## Line Breaks and Spaces
 
-  - Line breaks between components including between
+- Line breaks between components including between
 
-    - the YAML and the content
+  - the YAML and the content
 
-    - headings and content
+  - headings and content
 
-    - list items (sometimes - check the preview to see if more space would help)
+  - list items (sometimes - check the preview to see if more space would help)
 
 - No trailing spaces.
 
@@ -730,11 +727,8 @@ This Panel contains additional context, or advanced instructions.
 
 ```html
 <Accordion title="Panel Title" id="example-panel" icon="wrench">
-
-### Panel Content Header
-
-This Panel contains additional context, or advanced instructions.
-
+  ### Panel Content Header This Panel contains additional context, or advanced
+  instructions.
 </Accordion>
 ```
 
@@ -756,14 +750,14 @@ Pantheon
 
 ## Redirects
 
-Redirects are required whenever you change an existing URL or when a doc or guide is deprecated and removed from the Docs site. Deprecated pages should always be redirected to related content so users to do not receive a 404. Always add the Redirect label to the PR that includes a redirect.  This allows us to find these changes later if we need to reference why a page was moved or deleted.
+Redirects are required whenever you change an existing URL or when a doc or guide is deprecated and removed from the Docs site. Deprecated pages should always be redirected to related content so users to do not receive a 404. Always add the Redirect label to the PR that includes a redirect. This allows us to find these changes later if we need to reference why a page was moved or deleted.
 
 When you're moving a doc or heading to a new location, include a formatted table with your redirect request in the Pull Request comments.
 
 <Example>
 
-| Redirect from | to |
-|---|---|
+| Redirect from                              | to                                                                 |
+| ------------------------------------------ | ------------------------------------------------------------------ |
 | docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
 | docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
 | docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
@@ -772,13 +766,14 @@ When you're moving a doc or heading to a new location, include a formatted table
 <hr className="source-code" /> <br/>
 
 ```markdown
-| Redirect from | to |
-|---|---|
+| Redirect from                              | to                                                                 |
+| ------------------------------------------ | ------------------------------------------------------------------ |
 | docs.pantheon.io/drush                     | sc=301\|t=https://docs.pantheon.io/guides/drush                    |
 | docs.pantheon.io/drush-versions            | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-versions     |
 | docs.pantheon.io/drush-import              | sc=301\|t=https://docs.pantheon.io/guides/drush/drush-import       |
 | docs.pantheon.io/guides/drupal-commandline | sc=301\|t=https://docs.pantheon.io/guides/drush/drupal-commandline |
 ```
+
 </Example>
 
 ## Reusable Content/Partials
@@ -809,16 +804,17 @@ After you create the file, include it in the doc:
 
 </Example>
 
-To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)).  The report can be filtered by metadata tags, and includes an excerpt of each partial.
+To find partials to reuse, [run this report](http://localhost:8000/partials-search) (requires a [local build of gatsby](https://github.com/pantheon-systems/documentation#readme)). The report can be filtered by metadata tags, and includes an excerpt of each partial.
 
 ## Review Dates
 
-Review dates indicate the last time a member of the Documentation team reviewed a document.  There are two ways to indicate review dates.
+Review dates indicate the last time a member of the Documentation team reviewed a document. There are two ways to indicate review dates.
 
-The most common is by using the frontmatter `reviewed: "YYYY-MM-DD" `.  The other is at the section level, using the ReviewDate component:
+The most common is by using the frontmatter `reviewed: "YYYY-MM-DD" `. The other is at the section level, using the ReviewDate component:
 
 ```markdown
 ### Section Title
+
 <ReviewDate date="YYYY-MM-DD" />
 ```
 
@@ -870,12 +866,12 @@ You can use markdown tables to describe availability based on service levels bef
 
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
-| Plans         | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
-| ------------- | -------------------------------------- |
-| Sandbox       | <span style="color:green">✔</span> |
-| Basic         | ❌  |
-| Performance   | <span style="color:green">✔</span> |
-| Elite         | <span style="color:green">✔</span> |
+| Plans       | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
+| ----------- | ------------------------------------------------------------------------------------------- |
+| Sandbox     | <span style="color:green">✔</span>                                                          |
+| Basic       | ❌                                                                                          |
+| Performance | <span style="color:green">✔</span>                                                          |
+| Elite       | <span style="color:green">✔</span>                                                          |
 
 <hr className="source-code" /> <br/>
 
@@ -884,12 +880,12 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
-| Plans         | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
-| ------------- | -------------------------------------- |
-| Sandbox       | <span style="color:green">✔</span> |
-| Basic         | ❌  |
-| Performance   | <span style="color:green">✔</span> |
-| Elite         | <span style="color:green">✔</span> |
+| Plans       | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
+| ----------- | ------------------------------------------------------------------------------------------- |
+| Sandbox     | <span style="color:green">✔</span>                                                          |
+| Basic       | ❌                                                                                          |
+| Performance | <span style="color:green">✔</span>                                                          |
+| Elite       | <span style="color:green">✔</span>                                                          |
 ```
 
 </Example>
@@ -907,57 +903,58 @@ Standard markdown tables don't allow for cells to span multiple rows or columns,
 +-----------------+--------------+-------------+--------------+------------------------+
 | **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
 +-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-| Dev             | warning      | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
+| | notice | **✓** | **✓** | |
+| +--------------+-------------+--------------+------------------------+
+| Dev | warning | **✓** | **✓** | |
+| +--------------+-------------+--------------+------------------------+
+| | error | **✓** | | **✓** |
 +-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Test            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Live            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        |             |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
+| | notice | | **✓** | |
+
+-                 +--------------+-------------+--------------+------------------------+
+  | Test | warning | | **✓** | |
+  | +--------------+-------------+--------------+------------------------+
+  | | error | **✓** | | **✓** |
+  +-----------------+--------------+-------------+--------------+------------------------+
+  | | notice | | **✓** | |
+-                 +--------------+-------------+--------------+------------------------+
+  | Live | warning | | **✓** | |
+  | +--------------+-------------+--------------+------------------------+
+  | | error | | | **✓** |
+  +-----------------+--------------+-------------+--------------+------------------------+
 
 **Source Code**
 
-````markdown
+```markdown
 +-----------------+--------------+-------------+--------------+------------------------+
 | **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
 +-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-| Dev             | warning      | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
+| | notice | **✓** | **✓** | |
+| +--------------+-------------+--------------+------------------------+
+| Dev | warning | **✓** | **✓** | |
+| +--------------+-------------+--------------+------------------------+
+| | error | **✓** | | **✓** |
 +-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Test            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Live            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        |             |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-````
+| | notice | | **✓** | |
+
+-                 +--------------+-------------+--------------+------------------------+
+  | Test | warning | | **✓** | |
+  | +--------------+-------------+--------------+------------------------+
+  | | error | **✓** | | **✓** |
+  +-----------------+--------------+-------------+--------------+------------------------+
+  | | notice | | **✓** | |
+-                 +--------------+-------------+--------------+------------------------+
+  | Live | warning | | **✓** | |
+  | +--------------+-------------+--------------+------------------------+
+  | | error | | | **✓** |
+  +-----------------+--------------+-------------+--------------+------------------------+
+```
 
 </Example>
 
 ## Tabs
 
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
-
 
 <Example>
 
@@ -1054,16 +1051,16 @@ Tooltips are a great way to add additional information without cluttering up a s
 
 Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
-* Subdirectories: `example.com/first-site` and `example.com/second-site`.
-* Subdomains: `first-site.example.com` and `second-site.example.com`.
+- Subdirectories: `example.com/first-site` and `example.com/second-site`.
+- Subdomains: `first-site.example.com` and `second-site.example.com`.
 
 <hr className="source-code" /> <br/>
 
 ```markdown
 Given two new sites with slugs <Popover title="Slugs" content="Generally, are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Multisite, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
 
-* Subdirectories: `example.com/first-site` and `example.com/second-site`.
-* Subdomains: `first-site.example.com` and `second-site.example.com`.
+- Subdirectories: `example.com/first-site` and `example.com/second-site`.
+- Subdomains: `first-site.example.com` and `second-site.example.com`.
 ```
 
 </Example>
@@ -1114,7 +1111,7 @@ Some General Rules:
 
 ## Where's the User?
 
-It is important to direct the user to the area in which an activity is taking place.  For example:
+It is important to direct the user to the area in which an activity is taking place. For example:
 
 <Example>
 
@@ -1126,7 +1123,7 @@ To create a backup:
 
 </Example>
 
-This instruction does not tell the user where the Backup tab is - is it in a Workspace?  If so, which one?  Is it on a Site Dashboard?
+This instruction does not tell the user where the Backup tab is - is it in a Workspace? If so, which one? Is it on a Site Dashboard?
 
 Instead, start by placing the user in the correct location:
 
@@ -1160,5 +1157,4 @@ Here are code snippets you can use to direct users to the correct location:
 
 ```markdown
 [Go to the workspace](/guides/account-mgmt/workspace-sites-teams/workspaces#switch-between-workspaces)
-
 ```
