@@ -233,6 +233,5 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
     },
-    `gatsby-plugin-fontawesome-css`,
   ],
 }
