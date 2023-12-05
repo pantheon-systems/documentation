@@ -109,7 +109,7 @@ composer require wpackagist-plugin/advanced-custom-fields
 
 ## Report an Issue
 
-Create an [issue in the Github repo](https://github.com/pantheon-systems/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
+Create an [issue in the Github repo](https://github.com/pantheon-upstreams/wordpress-composer-managed/issues) for the team to review and address if you discover an issue with the WordPress Composer Managed upstream.
 
 Visit [#wordpress in our community Slack](https://pantheon-community.slack.com/archives/CT8MC5Y0K) (you can sign up for the [Pantheon Slack channel here](https://slackin.pantheon.io/) if you don't already have an account) to learn how you can enroll in our Early Access program.
 
