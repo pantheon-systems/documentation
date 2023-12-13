@@ -273,7 +273,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
-1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
+1. Click the **<Icon icon="plus" /> Add New Upstream** button. You must be an Organization Administrator to add a new upstream.
 
 1. Enter the following information about the Custom Upstream:
 
@@ -320,7 +320,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 
-1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
+1. Click the **<Icon icon="plus" /> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
 
 1. Enter the following information about the Custom Upstream:
 
@@ -360,7 +360,7 @@ You must track Pantheon's corresponding upstream repository within the Custom Up
 
 A Custom Upstream from a GitLab repository must be set up for you by Pantheon Support.
 
-1. Navigate to the repository, click **<i class="fa fa-gear"></i> Settings**, and then select **Repository**.
+1. Navigate to the repository, click <Icon icon="gear" /> **Settings**, and then select **Repository**.
 
 1. Click **Expand** next to **Deploy Tokens** and fill out the fields:
 
@@ -413,7 +413,7 @@ The default connection mode for new sites created from a Custom Upstream is Git 
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 
-1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" )** tab within the Pantheon Dashboard and select your organization.
+1. Navigate to the **[<Icon icon="users" />Organizations](https://dashboard.pantheon.io/#organizations" )** tab within the Pantheon Dashboard and select your organization.
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 

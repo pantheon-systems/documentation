@@ -1,7 +1,7 @@
 ---
 title: Upgrade a Site That Was Created with Build Tools to Drupal
 subtitle: Upgrade Site Components Locally
-description: 
+description:
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 showtoc: true
@@ -59,17 +59,17 @@ integration: [--]
 
    ```yaml:title=pantheon.yml
    api_version: 1
-   
+
    # Move the DOCUMENT_ROOT of your site to the */web* folder:
    web_docroot: true
-   
+
    # The latest version of Drupal requires PHP 7.3 or higher. If your code isn't ready for PHP 7.4 you may need to use 7.3 here:
    php_version: 7.4
-   
+
    # The latest version of Drupal requires a higher version of the DB. It will take a few minutes to complete the upgrade to 10.4 once you push this file:
    database:
      version: 10.4
-   
+
    # The latest version of Drupal prefers Drush 10. If you have written a lot of custom Drush commands you may need to go back to Drush 9 or 8:
    drush_version: 10
    ```
@@ -96,7 +96,7 @@ integration: [--]
 
 1. Copy the URL from the result (line 4 in the previous output) and use your local web browser to navigate to it to create a pull request. Creating a pull request will cause Build Tools to create a Multidev environment. This is called `$ENV` in the next steps.
 
-1. After the build has finished without error, you will see a new environment in the Dashboard under **<span class="glyphicons glyphicons-cloud"></span> Multidev**, named in reference to your pull request.
+1. After the build has finished without error, you will see a new environment in the Dashboard under <Icon icon="cloud" /> **Multidev**, named in reference to your pull request.
 
    ```bash{promptUser: user}
    terminus env:info $SITE.$ENV

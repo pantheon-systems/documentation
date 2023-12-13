@@ -63,12 +63,12 @@ The `pantheon.upstream.yml` file provided by your upstream might define protecte
 
 #### Considerations
 
-* Specify the exact path; path is case-sensitive
-* No regex or wildcards allowed
-* Paths begin with a leading `/` and are relative to your docroot
-* Limited to 24 protected paths
-* You may not be able to protect files or paths with special characters
-* Wait a few seconds for changes to take effect
+- Specify the exact path; path is case-sensitive
+- No regex or wildcards allowed
+- Paths begin with a leading `/` and are relative to your docroot
+- Limited to 24 protected paths
+- You may not be able to protect files or paths with special characters
+- Wait a few seconds for changes to take effect
 
 ### Protected Web Paths Override
 
@@ -84,8 +84,8 @@ The standard protected web paths can be important to the security of your site. 
 
 For a list of standard protected paths, see the `pantheon.upstream.yml` for:
 
-* [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
-* [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
+- [Drupal](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+- [WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
 ### Enforce HTTPS + HSTS
 
@@ -151,16 +151,16 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 
 1. Push the changes to a [Multidev](/guides/multidev) and ensure that the site performs as expected.
 
-  Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
+Apply this change to an existing environment. If you try to create a new environment with the `database` key specified in `pantheon.yml`, the commit will be rejected with an error.
 
 1. Use the `database` directive in `pantheon.yml` to choose a specific version of MariaDB:
 
-  ```yaml:title=pantheon.yml
-  database:
-    version: 10.6
-  ```
+```yaml:title=pantheon.yml
+database:
+  version: 10.6
+```
 
-  This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
+This can also be accomplished via [one-click updates in the Site Dashboard](/core-updates#apply-upstream-updates-via-the-site-dashboard).
 
 1. Confirm that the database upgrade completed successfully:
 
@@ -171,13 +171,13 @@ Specify the site's version of MariaDB to keep the software your site uses curren
 This table shows the supported MariaDB version for each CMS:
 
 | CMS           | Supported MariaDB Version(s) |
-|---------------|-----------------------------|
-| Drupal < 7.76 | 10.3                        |
-| Drupal ≥ 7.76 | 10.4                        |
-| Drupal < 8.5  | 10.3                        |
-| Drupal ≥ 8.6  | 10.4                        |
-| Drupal ≥ 9.0  | 10.4 or 10.6                |
-| WordPress     | 10.4 or 10.6                |
+| ------------- | ---------------------------- |
+| Drupal < 7.76 | 10.3                         |
+| Drupal ≥ 7.76 | 10.4                         |
+| Drupal < 8.5  | 10.3                         |
+| Drupal ≥ 8.6  | 10.4                         |
+| Drupal ≥ 9.0  | 10.4 or 10.6                 |
+| WordPress     | 10.4 or 10.6                 |
 
 Users of Drupal 6 sites should consider [upgrading to the latest version of Drupal](/drupal-updates) for better support.
 
@@ -235,7 +235,7 @@ Pantheon provides a [cloud-based filesystem](/guides/filesystem) to store user-g
 
 <Alert title="Warning" type="danger">
 
-We recommend *only* changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/symlinks-assumed-write-access) in your code base.
+We recommend _only_ changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/symlinks-assumed-write-access) in your code base.
 
 </Alert>
 
@@ -305,7 +305,7 @@ The PHP version changes automatically when you modify the `pantheon.yml` file of
 
 1. Modify your `pantheon.yml` file and re-commit to the Multidev.
 
-    - It does not matter what change you make to the file. Any change- even a comment- will allow the Multidev to detect the configuration change. You will receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
+   - It does not matter what change you make to the file. Any change- even a comment- will allow the Multidev to detect the configuration change. You will receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
 ```none
 remote:
@@ -324,7 +324,8 @@ remote:
 
 **Solution:**
 
-You must do *one* of the following to ensure that your newly created Multidev has the `pantheon.yml` changes:
+You must do _one_ of the following to ensure that your newly created Multidev has the `pantheon.yml` changes:
+
 - Re-commit your changes to the Multidev and/or `pantheon.yml` file
 - Push the `pantheon.yml` changes directly to the Dev (master branch) environment
 
@@ -338,5 +339,5 @@ Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](
 
 ## More Resources
 
-* [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver)
-* [Upgrade PHP Versions](/guides/php/php-versions)
+- [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/guides/quicksilver)
+- [Upgrade PHP Versions](/guides/php/php-versions)

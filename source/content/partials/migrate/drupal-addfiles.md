@@ -18,9 +18,9 @@ reviewed: ""
   tar -czf ~/files.tar.gz .
   ```
 
-1. Select the **<span class="fa fa-wrench"></span> Dev** environment in the Site Dashboard.
+1. Select the **<Icon icon="wrench" /> Dev** environment in the Site Dashboard.
 
-1. Select **<span class="fa fa-server"></span> Database / Files**.
+1. Select <Icon icon="server" /> **Database / Files**.
 
 1. Click **Import** and add your archive accordingly (based on file size):
 
@@ -64,7 +64,7 @@ reviewed: ""
   terminus rsync . my_site.dev:files
   ```
 
-  When using Rsync manually, the script below is useful for dealing with transfers that are interrupted due to connectivity issues. It uploads files to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, it waits two minutes and picks up where it left off:
+  When using Rsync manually, the script below is useful for dealing with transfers that are interrupted due to connectivity issues. It uploads files to your Pantheon site's **<Icon icon="wrench" /> Dev** environment. If an error occurs during transfer, it waits two minutes and picks up where it left off:
 
   <Download file="manual-rsync-script.sh" />
 

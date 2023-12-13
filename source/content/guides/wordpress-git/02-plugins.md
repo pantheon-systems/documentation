@@ -18,9 +18,9 @@ reviewed: "2020-02-26"
 
 This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mode. We'll install a few plugins and submit each one to version control as individual commits.
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
-1. Now log in to your Dev site by clicking the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** button.
+1. Now log in to your Dev site by clicking the **<Icon icon="externalLink" /> Site Admin** button.
 
   ![Add new plugin](../../../images/guides/git-wordpress/sftp-mode.png)
 
@@ -30,7 +30,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
   ![Install Pantheon Advanced Page Cache plugin](../../../images/guides/git-wordpress/install-yoast.png)
 
-  If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
+  If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<Icon icon="wrench" /> Dev** environment.
 
 1. Return to the Pantheon Site Dashboard and click the yellow notification to review file changes as a result of our actions in the WordPress Dashboard:
 

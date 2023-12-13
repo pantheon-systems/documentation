@@ -32,7 +32,7 @@ function HeroCTA(props) {
         <p className="pds-lead-text pds-lead-text--small">{subTitle}</p>
         <Link
           to={url}
-          className="pds-button pds-button--large pds-spacing-mar-block-start-m"
+          className="pds-button pds-button--lg pds-spacing-mar-block-start-m"
         >
           {linkText}
           <Icon iconName="arrowRight" iconSize="lg" />

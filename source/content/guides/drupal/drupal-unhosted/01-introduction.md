@@ -19,9 +19,9 @@ integration: [--]
 
 This guide will show you how to migrate an existing non-Pantheon hosted Drupal site to Pantheon's platform.
 
-| <i class="fa fa-cloud"></i><br/> Current Host | <i class="fa fa-wrench"></i><br/> How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> | <i class="fa fa-exclamation-circle"></i><br/> Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
-|:---------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                   Elsewhere                   |                                                                        n/a                                                                         |                                                                                             --                                                                                             |
+|  Current Host | How Site Was Created <Popover title="Site Creation" content="What is the method you used to create the site?" /> |  Additional Requirements <Popover title="Additional Requirements" content="Any other features that must be in place, or that are desired." /> |
+| :-------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                   Elsewhere                   |                                                                     n/a                                                                      |                                                                                             --                                                                                             |
 
 <Partial file="drupal/see-landing.md" />
 

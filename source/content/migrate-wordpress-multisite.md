@@ -15,7 +15,7 @@ This document provides information on how to migrate WordPress Multisites, inclu
 
 <Alert title="Note" type="info">
 
-WordPress Multisite requires a special configuration that is only available to select customers. Before you can migrate a WordPress Multisite (WPMS), your Workspace must have the WPMS Upstream configured. This allows you to spin up an empty WPMS site to start the manual migration process. 
+WordPress Multisite requires a special configuration that is only available to select customers. Before you can migrate a WordPress Multisite (WPMS), your Workspace must have the WPMS Upstream configured. This allows you to spin up an empty WPMS site to start the manual migration process.
 
 If you do not have the WPMS Upstream configured under your Workspace, refer to [Pantheon Account Options & Site Hosting Pricing](https://pantheon.io/plans/pricing) to see if you qualify for a WordPress Multisite. A Pantheon employee must create a custom WPMS Upstream in your Workspace before you can create Multisites. Reach out to your account manager to request that a new WPMS Upstream be created for you. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 
@@ -172,7 +172,7 @@ A single `.sql` dump that contains the content and active state of the site's co
 
 </dl>
 
-If your `.sql` file is less than 500MB, you can use the Import tool in the <span class="glyphicons glyphicons-server" aria-hidden="true"></span> **Database/Files** section of the Site Dashboard to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
+If your `.sql` file is less than 500MB, you can use the Import tool in the <Icon icon="server" /> **Database/Files** section of the Site Dashboard to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
 
 1. Navigate to the Dev environment on the Site Dashboard, click **Connection Info**, and copy the database connection string. It will look similar to this:
 
@@ -212,9 +212,9 @@ When you re-import the database with current content (prior to going live on Pan
 <Alert title="Note" type="info">
 
 For you to be able to access your WPMS in different environments, you need to enable the Search and Replace for WPMS. Refer [here to this guide to configure your `sites.yml` file](/guides/multisite/search-replace/#enable-search-and-replace).
-  
+
 </Alert>
-  
+
 
 ## More Resources
 

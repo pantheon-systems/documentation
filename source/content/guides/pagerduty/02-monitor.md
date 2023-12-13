@@ -25,7 +25,7 @@ In this lesson, we'll set up a new ping monitor to periodically check the site's
 
 ## Create a Monitor
 
-1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic** then **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Go to New Relic**.
+1. Navigate to the **<Icon icon="wrench" /> Live** environment in your Site Dashboard, and click **<Icon icon="eye" /> New Relic** then **<Icon icon="externalLink" /> Go to New Relic**.
 
 1. Select **Synthetics** from the menu bar at the top of the page.
 
@@ -53,7 +53,7 @@ Pantheon can provide New Relic&reg; ping monitoring for free as part of the serv
 
 Now that you have a monitor setup in New Relic&reg; to periodically check your Pantheon site, you'll need to configure alerts for downtime incidents:
 
-1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic** then **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Go to New Relic**.
+1. Navigate to the **<Icon icon="wrench" /> Live** environment in your Site Dashboard, and click **<Icon icon="eye" /> New Relic** then **<Icon icon="externalLink" /> Go to New Relic**.
 
 1. Select **Alerts & AI** from the menu bar at the top of the page, then **Policies** from the menu on the right.
 

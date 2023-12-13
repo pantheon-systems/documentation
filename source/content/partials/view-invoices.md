@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-1. Navigate to the User Dashboard, click the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab and select **Billing**.
+1. Navigate to the User Dashboard, click the **<Icon icon="gear" /> Account** tab and select **Billing**.
 
     - Sites are listed below the card to which they are assigned.
 

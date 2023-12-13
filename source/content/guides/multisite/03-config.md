@@ -58,7 +58,7 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 
       The `wp core multisite-install` command that you ran modified the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which must be updated to work on Pantheon.
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
@@ -107,7 +107,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
   ![Network setup last step](../../../images/wp-network-config-last.png)
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 

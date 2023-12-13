@@ -28,7 +28,7 @@ If you are managing a high profile site, using PagerDuty is an excellent way to 
 
   ![New User](../../../images/pagerduty/pg-user-contact.png)
 
-4. Go to the **Notification Rules** tab and setup your notification rules. The default is alerting everything at once. Click the edit (<span class="glyphicons glyphicons-edit"></span>) buttons to adjust the rules to your preference, for example:
+4. Go to the **Notification Rules** tab and setup your notification rules. The default is alerting everything at once. Click the edit (<Icon icon="squarePen" />) buttons to adjust the rules to your preference, for example:
 
   ![User contact information](../../../images/pagerduty/pg-user-notifications.png)
 
@@ -64,7 +64,7 @@ Next, we'll create an on-call Schedule, to configure a scalable custom alert wor
 
 3. At the top of the page, name this schedule. We suggest using the domain name, like "example.com".
 
-4. Click **<span class="glyphicons glyphicons-check"></span>Create Schedule**.
+4. Click **<Icon icon="check" />Create Schedule**.
 
   Refer to the the **Final Schedule** at the bottom of the page to see who's on call and the first point of contact:
 
@@ -75,7 +75,7 @@ When an incident is created, PagerDuty uses an escalation policy to determine wh
 
 1. Login to your PagerDuty account and go to **Configuration** > **Escalation**.
 
-2. Click the **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span>** icon next to the existing **Default** policy and select **Edit**.
+2. Click the **<Icon icon="gear" />** icon next to the existing **Default** policy and select **Edit**.
 
 3. Rename the default policy so it's project specific (e.g., `example.com`) and add your new **example.com** schedule:
 

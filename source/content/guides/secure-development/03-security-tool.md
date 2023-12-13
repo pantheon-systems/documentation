@@ -34,7 +34,7 @@ When a Dev environment is locked, a lock icon will be added to the screenshot of
 
 You have the ability to password protect any of the available environments.
 
-1. Select the environment (for example, <span class="glyphicon glyphicon-wrench"></span> **Dev**).
+1. Select the environment (for example, <Icon icon="wrench" />**Dev**).
 
 1. Select **Security**.
 
@@ -121,7 +121,7 @@ Sites that have the environment locked on Pantheon in addition to enabling the m
 
 1. Clear the cache.
 
-1. Disable the module in Drupal's admin interface. 
+1. Disable the module in Drupal's admin interface.
 
 1. Lock the environment on Pantheon after you've disabled the module.
 

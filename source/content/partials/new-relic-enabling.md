@@ -8,7 +8,7 @@ tags: [--]
 reviewed: ""
 ---
 
-1. Select the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and then click **Activate New Relic Pro**:
+1. Select the <Icon icon="eye" /> **New Relic** tab on your Site Dashboard, and then click **Activate New Relic Pro**:
 
   ![Screenshot of the Activate New Relic Pro button in the Site Dashboard, under the New Relic tab.](../../images/integrations/newrelic/activate-new-relic.png)
 

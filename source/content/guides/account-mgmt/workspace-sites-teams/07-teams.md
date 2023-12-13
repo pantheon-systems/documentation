@@ -284,7 +284,7 @@ Workspace Administrators, Users in Charge, or Site Owners can add a [Supporting 
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) with the Supporting Workspace you wish to remove.
 
-1. Click **<span class="glyphicons glyphicons-group"></span> Team**.
+1. Click **<Icon icon="users" />Team**.
 
 1. Click the **x** to the right of the Supporting Workspace you wish to remove.
 
