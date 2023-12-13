@@ -25,6 +25,16 @@ Directories that house a large number of files can cause performance issues. Not
 - Around 50,000 files in one directory may lead to performance degradation.
 - Exceeding 100,000 files in one directory can result in very poor performance and eventually filesystem corruption, potentially causing extended site downtime and file loss.
 
+### Alerts
+Pantheon monitors for highly populated directories and alerts site administrators pro-actively via the Status page of the Pantheon Site Dashboard and email notifications.
+
+When a directory is found to be approaching a concerning level, the Status page result will return a warning at 50k and a higher severity warning at 100k
+
+![Status check for highly populated directories warning for 50k](../../../images/files-status-check-50k-warning.png)
+
+![Status check for highly populated directories warning for 100k](../../../images/files-status-check-100k-warning.png)
+
+### Optimize
 To optimize performance:
 
 - If possible, restructure directories that contain more than 50,000 files.
