@@ -1355,7 +1355,7 @@
         - text: "Site plan FAQs"
           url: "/guides/account-mgmt/plans/faq"
         - text: "Pricing Comparison"
-          url: "https://pantheon.io/pricing-comparison"
+          url: "https://pantheon.io/plans/pricing/pantheon-web-hosting-pricing-comparison?docs"
         - text: "Site Plan Change"
           url: "/guides/account-mgmt/plans/site-plans"
         - text: "Transfer ownership (User-to-User/individual owner to a new individual owner)"

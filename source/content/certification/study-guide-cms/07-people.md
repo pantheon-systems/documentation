@@ -244,7 +244,7 @@ Pantheon is a containerized infrastructure with automated provisioning of new co
 
 There are a couple of limitations to be aware of for Sandbox sites:
 
-* **Custom Domains:** Sandbox sites only allow for the use of platform domains (e.g. https://live-mysandboxsite.pantheon.io) and do not allow access to the Custom Domain feature. In order to associate a custom domain with your site, you will need to upgrade to one of the paid plans.
+* **Custom Domains:** Sandbox sites only allow for the use of platform domains (e.g. `https://live-mysandboxsite.pantheon.io`) and do not allow access to the Custom Domain feature. In order to associate a custom domain with your site, you will need to upgrade to one of the paid plans.
 * **Automated Backups:** Sandbox sites also do not provide access to the Automated Backups feature, which means that you will need to create backups manually. 
 * **Inactivity Periods:** After a certain period of inactivity, Sandbox sites (as well as development environments) will automatically sleep. They can be woken up quickly (8-10 seconds) by simply pinging the site or visiting the URL in the dashboard.
 

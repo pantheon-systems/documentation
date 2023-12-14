@@ -54,7 +54,7 @@ This page provides steps on creating a new WordPress site on Pantheon.
 
    This can take a couple of minutes. You will have Dev, Test, and Live copies of your site running in three separate environments when it finishes.
 
-1. [Clone](pantheon-workflow#combine-code-from-dev-and-content-from-live-in-test) your Live environment to your Dev environment (optional).
+1. [Clone](/pantheon-workflow#combine-code-from-dev-and-content-from-live-in-test) your Live environment to your Dev environment (optional).
 
 1. Navigate to the <Icon icon="wrench" text="Dev"/> environment in your Site Dashboard > click <Icon icon="code" text="Code"/>.
 

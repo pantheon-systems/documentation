@@ -66,7 +66,7 @@ Terminus does not work with the following platforms:
 
 ### Recommended Packages
 
-- [Drush](http://docs.drush.org/en/master/install/). This is useful if you need to run Drush commands that are incompatible with Terminus.
+- [Drush](https://www.drush.org/12.x/install/). This is useful if you need to run Drush commands that are incompatible with Terminus.
 - [WP-CLI](http://wp-cli.org/). This is useful if you need to run WP-CLI commands that are incompatible with Terminus.
 
 ## Install Terminus
