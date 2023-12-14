@@ -184,6 +184,40 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
 
+      allReleaseNotes: allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/releasenotes/"}
+        },
+        sort: { fields: [fileAbsolutePath], order: DESC }
+      ) {
+        edges {
+
+          previous {
+            fields {
+              slug
+            }
+          }
+
+          node {
+            id
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+
+          next {
+            fields {
+              slug
+            }
+          }
+
+        }
+      }
+
+
       allChangelogs: allMdx(
         filter: {
           fileAbsolutePath: { regex: "/changelogs/"}
@@ -309,6 +343,23 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+
+
+    // Create each release note page.
+    const releaseNotes = result.data.allReleaseNotes.edges;
+    releaseNotes.forEach(releaseNote => {
+      const template = calculateTemplate(releaseNote.node, "releaseNote");
+      createPage({
+        path: releaseNote.node.fields.slug,
+        component: path.resolve(`./src/templates/${template}.js`),
+        context: {
+          slug: releaseNote.node.fields.slug,
+        },
+      })
+      console.log('hello');
+    })
+
+
     // Create Terminus Command pages
     const terminusCommands = result.data.dataJson.commands
     terminusCommands.forEach(command => {
@@ -344,6 +395,34 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+    // Create changelog pagination.
+    const ReleaseNotesPerPage = 6
+    const numberOfReleaseNotePages = Math.ceil(changelogs.length / ReleaseNotesPerPage)
+    Array.from({ length: numberOfReleaseNotePages }).forEach((_, i) => {
+      const currentPage = i + 1;
+      const next = currentPage === 1 ? null : (currentPage === 2 ? `/release-notes/` : `/release-notes/page/${currentPage - 1}`);
+      const previous = currentPage < numberOfReleaseNotePages ? `/changelog/page/${currentPage + 1}` : null;
+      createPage({
+        path: i === 0 ? `/release-notes/` : `/release-notes/page/${i + 1}`,
+        component: path.resolve("./src/templates/release-notes.js"),
+        context: {
+          limit: ReleaseNotesPerPage,
+          skip: i * ReleaseNotesPerPage,
+          numberOfReleaseNotePages,
+          currentPage,
+          previous,
+          next
+        },
+      })
+    })
+
+
+
+
+
+
+
 
     // Create contributor pages.
     const contributors = result.data.allContributorYaml.edges
