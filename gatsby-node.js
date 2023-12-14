@@ -209,7 +209,8 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             id
             frontmatter {
-              title
+              title,
+              categories
             }
             fields {
               slug

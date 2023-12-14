@@ -1,6 +1,7 @@
 ---
 title: New Release Notes Structure
 publish_dated: "2023-12-31"
+categories: [security, anothercat]
 ---
 
 For nearly a decade, we have published a monthly "changelog" here within our Documentation site that summarizes significant changes to the platform.
@@ -12,6 +13,6 @@ This switch will support more proactive communication and ensure that any notewo
 
 Here you will find:
 * A listing of all Release Notes at docs.pantheon.io/release-notes
-* A listing of Release Notes by category like docs.pantheon.io/release-notes/infrastructure
-* A month-by-month breakdown of all Release Notes like docs.pantheon.io/release-notes/all/2023-12 (todo or should it be docs.pantheon.io/release-notes/all/2023/12)
-* A month-by-month breakdown of Release Notes by catetory and month like docs.pantheon.io/release-notes/infrastructure/2023-12
+* A listing of Release Notes by category (WordPress, Drupal, etc) like docs.pantheon.io/release-notes/infrastructure
+
+

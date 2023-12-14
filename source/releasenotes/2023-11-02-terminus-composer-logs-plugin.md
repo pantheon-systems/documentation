@@ -9,3 +9,4 @@ Visibility into composer logs has been a top customer request. Now, if you need 
 
 
 TODO: Does this note belong in "action required?" Not every customer needs to do something. Only those who want to use the plugin.
+After discussion with Ingrid, no this would not get "Action required". because that should only be used for things that would disrupt.
