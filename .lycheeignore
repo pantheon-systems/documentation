@@ -1,5 +1,6 @@
 <!-- This file lists all links/regex to be ignored by lychee in the PR Links workflow -->
 https://admin.google.com/AdminHome?hl=en#AppsList:serviceType=SAML_APPS
+https://admin.google.com/AdminHome%3Fhl%3Den&hl=en&q=EgQ0n47CGL_C7asGIjD7znCUUdbvLfMp5WY7uK_J4D3a4l0lglfHZVB4HopxnanandpTdL8kxFvph-BfV6MyBj5qY25kcloBQw
 https://wp-stateless.github.io/docs/manual-setup/
 <!-- Ignore videos from YouTube component (False Positive) -->
 file:///home/runner/work/documentation/documentation/source/content/partials/migrate/ksg1XkH1da8

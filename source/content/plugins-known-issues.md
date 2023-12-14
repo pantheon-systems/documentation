@@ -866,7 +866,7 @@ ___
 
 ## Timthumb
 
-**Issue:** [Timthumb](https://code.google.com/p/timthumb/) is no longer supported or maintained.
+**Issue:** [Timthumb](https://code.google.com/archive/p/timthumb/) is no longer supported or maintained.
 
 ___
 

@@ -59,7 +59,7 @@ A CloudFront distribution is not a Drupal distribution. A CloudFront distributio
    * **Mode:** Origin Pull. For the CloudFront configuration, use Origin Pull mode. File Conveyor mode allows integration with [File Conveyor](http://fileconveyor.org) for more complicated configurations. Pantheon does not support File Conveyor.
 
        Return to the CloudFront distributions table and copy the domain name for your new distribution.  
-   * **CDN Mapping:** `https://my.cloudfrontcdndomain.net`. Be sure to add the protocol in front of the domain name. For example, "https://my.cloudfrontcdndomain.net" will work but "my.cloudfrontcdndomain.net" may cause problems. Be sure to use HTTPS.
+   * **CDN Mapping:** `https://my.cloudfrontcdndomain.net`. Be sure to add the protocol in front of the domain name. For example, `https://my.cloudfrontcdndomain.net` will work but `my.cloudfrontcdndomain.net` may cause problems. Be sure to use HTTPS.
 
    Return to the Drupal CDN module configuration and paste the domain name copied from CloudFront.
 
