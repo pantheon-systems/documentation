@@ -57,7 +57,7 @@ const shortcodes = {
 const containerWidth = "standard"
 
 // Combined changelog template.
-class ChangelogsTemplate extends React.Component {
+class ReleaseNotesListingTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
       trigger: "click",
@@ -159,19 +159,16 @@ class ChangelogsTemplate extends React.Component {
   }
 }
 
-export default ChangelogsTemplate
+export default ReleaseNotesListingTemplate
 
 /* todo remove draft filter from query */
 export const pageQuery = graphql`
-  query Changelogs($skip: Int!, $limit: Int!) {
+  query Changelogs {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/releasenotes/" }
-        frontmatter: { draft: { ne: true } }
       }
       sort: { fields: [fileAbsolutePath], order: DESC }
-      skip: $skip
-      limit: $limit
     ) {
       edges {
         node {
