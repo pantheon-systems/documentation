@@ -86,6 +86,7 @@ class ChangelogsTemplate extends React.Component {
 
   render() {
     const changelogs = this.props.data.allMdx.edges
+    console.log(changelogs)
     return (
       <Layout containerWidth={containerWidth} footerBorder>
         <SEO
@@ -95,7 +96,7 @@ class ChangelogsTemplate extends React.Component {
         />
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
-            <h1>Pantheon Changelog</h1>
+            <h1>Pantheon Release Notes</h1>
             <div className="pds-spacing-mar-block-end-3xl">
               <p className="pds-lead-text pds-lead-text--small">
                 Sign up for the Pantheon Changelog Newsletter to receive a
@@ -117,7 +118,9 @@ class ChangelogsTemplate extends React.Component {
                   <div id="pds-toc-source">
                     <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
                       {changelogs.map((changelog) => (
+
                         <React.Fragment key={changelog.id}>
+                          <div>WHAT</div>
                           <Link
                             to={`/${changelog.node.fields.slug}`}
                             className="individual-changelog-link"

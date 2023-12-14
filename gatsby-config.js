@@ -97,6 +97,19 @@ module.exports = {
         name: `changelogs`,
       },
     },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/source/releasenotes`,
+        name: `releasenotes`,
+      },
+    },
+
+
+
+
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

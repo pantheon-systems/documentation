@@ -31,6 +31,12 @@ const calculateSlug = (node, getNode) => {
     const split = fileName.split('-'); // split the file name where hyphenated...
     return `changelog/${split[0]}/${split[1]}` // and return a slug of changelog/YYYY/MM
   }
+  // This section creates the releasenotes slug based on the YYYY-MM-DD-slug.md template
+  if (getNode(node.parent).absolutePath.includes("releasenotes")) { // If the file is in the releasenotes directory...
+    const split = fileName.split('-'); // split the file name where hyphenated...
+    // #todo, wait this should the slug should include all the words after the date, not just the first one.
+    return `releasenotes/${split[0]}/${split[1]}/${split[3]}${split[4]}` // and return a slug of releasenotes/YYYY/MM/slug
+  }
 
   return `${fileName}` // Otherwise, as long as there is a filename in GraphQL, use it as the slug.
 }
@@ -127,7 +133,7 @@ exports.createPages = ({ graphql, actions }) => {
     {
       allDocs: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "/content(?!/(partials|changelog|guides)/)/"}
+          fileAbsolutePath: { regex: "/content(?!/(partials|changelog|guides|releasenotes)/)/"}
           frontmatter: {
             draft: {ne: true}
           }
@@ -297,35 +303,6 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create guide pages.
-    const guides = result.data.allGuides.edges
-    guides.forEach(guide => {
-      if (guide.node.fields.guide_directory !== null) {
-        const previous = calculatePrevious(guide);
-        const next = calculateNext(guide);
-        const template = calculateTemplate(guide.node, "guide")
-        createPage({
-          path: guide.node.fields.slug,
-          component: path.resolve(`./src/templates/${template}.js`),
-          context: {
-            slug: guide.node.fields.slug,
-            guide_directory: guide.node.fields.guide_directory,
-            previous,
-            next
-          },
-        })
-      } else {
-        const template = calculateTemplate(guide.node, "doc")
-        createPage({
-          path: guide.node.fields.slug,
-          component: path.resolve(`./src/templates/${template}.js`),
-          context: {
-            slug: guide.node.fields.slug,
-          },
-        })
-      }
-    })
-
     // Create changelog pages.
     const changelogs = result.data.allChangelogs.edges
     changelogs.forEach(changelog => {
@@ -360,21 +337,6 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
 
-    // Create Terminus Command pages
-    const terminusCommands = result.data.dataJson.commands
-    terminusCommands.forEach(command => {
-      const slugRegExp = /:/g
-      const slug = command.name.replace(slugRegExp, "-")
-      createPage({
-        path: `terminus/commands/${slug}`,
-        component: path.resolve(`./src/templates/terminusCommand.js`),
-        context: {
-          slug: slug,
-          name: command.name
-        }
-      })
-    })
-
     // Create changelog pagination.
     const postsPerPage = 6
     const numPages = Math.ceil(changelogs.length / postsPerPage)
@@ -398,18 +360,37 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create changelog pagination.
     const ReleaseNotesPerPage = 6
-    const numberOfReleaseNotePages = Math.ceil(changelogs.length / ReleaseNotesPerPage)
+    const numberOfReleaseNotePages = Math.ceil(releaseNotes.length / ReleaseNotesPerPage)
     Array.from({ length: numberOfReleaseNotePages }).forEach((_, i) => {
       const currentPage = i + 1;
       const next = currentPage === 1 ? null : (currentPage === 2 ? `/release-notes/` : `/release-notes/page/${currentPage - 1}`);
-      const previous = currentPage < numberOfReleaseNotePages ? `/changelog/page/${currentPage + 1}` : null;
+      const previous = currentPage < numberOfReleaseNotePages ? `/release-notes/page/${currentPage + 1}` : null;
       createPage({
         path: i === 0 ? `/release-notes/` : `/release-notes/page/${i + 1}`,
-        component: path.resolve("./src/templates/release-notes.js"),
+        component: path.resolve("./src/templates/releaseNotesListing.js"),
         context: {
           limit: ReleaseNotesPerPage,
           skip: i * ReleaseNotesPerPage,
           numberOfReleaseNotePages,
+          currentPage,
+          previous,
+          next
+        },
+      })
+    })
+
+    // Create releasenotes pagination.
+    Array.from({ length: numPages }).forEach((_, i) => {
+      const currentPage = i + 1;
+      const next = currentPage === 1 ? null : (currentPage === 2 ? `/releasenotes/` : `/releasenotes/page/${currentPage - 1}`);
+      const previous = currentPage < numPages ? `/releasenotes/page/${currentPage + 1}` : null;
+      createPage({
+        path: i === 0 ? `/releasenotes/` : `/releasenotes/page/${i + 1}`,
+        component: path.resolve("./src/templates/releaseNotesListing.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
           currentPage,
           previous,
           next
@@ -424,29 +405,8 @@ exports.createPages = ({ graphql, actions }) => {
 
 
 
-    // Create contributor pages.
-    const contributors = result.data.allContributorYaml.edges
-    contributors.forEach(contributor => {
-      createPage({
-        path: `contributors/${contributor.node.yamlId}`,
-        component: path.resolve(`./src/templates/contributor.js`),
-        context: {
-          id: contributor.node.yamlId,
-        },
-      })
-    })
 
-    // Create topics pages.
-    const topics = result.data.allLandingsYaml.edges
-    topics.forEach(topic => {
-      createPage({
-        path: topic.node.path,
-        component: path.resolve(`./src/templates/landing.js`),
-        context: {
-          id: topic.node.id,
-        },
-      })
-    })
+
 
     return null
   })
@@ -512,7 +472,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       }
     }
 
-    if (sourceInstanceName === 'changelogs') {
+    if (sourceInstanceName === 'changelogs' || sourceInstanceName === 'releasenotes') {
       const content = matter(node.internal.content, { excerpt: true, excerpt_separator: '<!-- excerpt -->' } );
       const excerpt = content.excerpt || "";
 
