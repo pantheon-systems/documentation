@@ -18,6 +18,7 @@ import SEO from "../layout/seo"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
+import ReleaseNoteCategories from "../components/releaseNoteCategories"
 
 
 import {
@@ -44,7 +45,7 @@ const shortcodes = {
 // Set container width for search and main content.
 const containerWidth = "standard"
 
-class ChangelogTemplate extends React.Component {
+class ReleaseNoteTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
       trigger: "click",
@@ -88,6 +89,7 @@ class ChangelogTemplate extends React.Component {
               Pantheon Release Notes
             </div>
             <h1>{node.frontmatter.title}</h1>
+            <ReleaseNoteCategories categories={node.frontmatter.categories} />
 
             <hr />
 
@@ -99,6 +101,7 @@ class ChangelogTemplate extends React.Component {
                 <div id="doc" className="doc changelog__content">
                   <div id="pds-toc-source">
                     <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+
                       <MDXProvider components={shortcodes}>
                         <MDXRenderer>{node.body}</MDXRenderer>
                       </MDXProvider>
@@ -106,22 +109,7 @@ class ChangelogTemplate extends React.Component {
                   </div>
                 </div>
               </article>
-              <TOC slot="sidebar" title="Contents" />
             </SidebarLayout>
-            <NavButtons
-              prev={
-                this.props.pageContext.previous
-                  ? `/${this.props.pageContext.previous}`
-                  : null
-              }
-              next={
-                this.props.pageContext.next
-                  ? `/${this.props.pageContext.next}`
-                  : null
-              }
-              prevTitle="Older"
-              nextTitle="Newer"
-            />
           </Container>
         </main>
       </Layout>
@@ -129,7 +117,7 @@ class ChangelogTemplate extends React.Component {
   }
 }
 
-export default ChangelogTemplate
+export default ReleaseNoteTemplate
 
 export const pageQuery = graphql`
   query ChangelogBySlug($slug: String!) {
@@ -140,7 +128,9 @@ export const pageQuery = graphql`
         slug
       }
       frontmatter {
-        title
+        title,
+        published_date,
+        categories
       }
     }
   }

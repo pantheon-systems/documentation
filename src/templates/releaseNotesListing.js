@@ -121,7 +121,6 @@ class ChangelogsTemplate extends React.Component {
 
 
                     <React.Fragment key={changelog.id}>
-                      <div>HELLO</div>
                       <Link
                         to={`/${changelog.node.fields.slug}`}
                         className="individual-changelog-link"
