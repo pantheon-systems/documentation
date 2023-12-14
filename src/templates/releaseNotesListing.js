@@ -19,6 +19,7 @@ import SEO from "../layout/seo"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
+import ReleaseNoteCategories from "../components/releaseNoteCategories"
 
 
 import {
@@ -32,7 +33,6 @@ import {
   Container,
   Icon,
   Pager,
-  SidebarLayout,
 } from "@pantheon-systems/pds-toolkit-react"
 
 const shortcodes = {
@@ -87,6 +87,7 @@ class ChangelogsTemplate extends React.Component {
   render() {
     const changelogs = this.props.data.allMdx.edges
     console.log(changelogs)
+    console.log(changelogs[0].node.frontmatter.categories)
     return (
       <Layout containerWidth={containerWidth} footerBorder>
         <SEO
@@ -113,35 +114,39 @@ class ChangelogsTemplate extends React.Component {
               </a>
             </div>
             <hr />
-            <SidebarLayout sidebarMobileLocation="before">
-              <div slot="content">
-                <div id="doc" className="doc changelog__content">
-                  <div id="pds-toc-source">
-                    <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                      {changelogs.map((changelog) => (
+            <div id="doc" className="doc changelog__content">
+              <div id="pds-toc-source">
+                <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                  {changelogs.map((changelog) => (
 
-                        <React.Fragment key={changelog.id}>
-                          <div>HELLO</div>
-                          <Link
-                            to={`/${changelog.node.fields.slug}`}
-                            className="individual-changelog-link"
-                          >
-                            <h2 id={changelog.node.fields.slug}>
-                              {changelog.node.frontmatter.title}
-                            </h2>
-                            test
-                          </Link>
-                          <MDXProvider components={shortcodes}>
-                            <MDXRenderer>{changelog.node.body}</MDXRenderer>
-                          </MDXProvider>
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  </div>
+
+                    <React.Fragment key={changelog.id}>
+                      <div>HELLO</div>
+                      <Link
+                        to={`/${changelog.node.fields.slug}`}
+                        className="individual-changelog-link"
+                      >
+                        <h2 id={changelog.node.fields.slug}>
+                          {changelog.node.frontmatter.title}
+                        </h2>
+
+                      </Link>
+                      Todo, transform to date format<br></br>
+                      {changelog.node.frontmatter.published_date}
+
+                      Maybe
+                      <ReleaseNoteCategories categories={changelog.node.frontmatter.categories} />
+
+
+                      <MDXProvider components={shortcodes}>
+                        <MDXRenderer>{changelog.node.body}</MDXRenderer>
+                      </MDXProvider>
+                    </React.Fragment>
+                  ))}
                 </div>
               </div>
-              <TOC slot="sidebar" title="Contents" />
-            </SidebarLayout>
+            </div>
+
             <NavButtons
               prev={this.props.pageContext.previous}
               next={this.props.pageContext.next}
@@ -174,7 +179,9 @@ export const pageQuery = graphql`
           id
           body
           frontmatter {
-            title
+            title,
+            published_date,
+            categories,
           }
           fields {
             slug

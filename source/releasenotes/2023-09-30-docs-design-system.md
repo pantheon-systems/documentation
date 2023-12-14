@@ -1,6 +1,6 @@
 ---
 title: Documentation Site Updated with the Design System
-publish_dated: "2023-09-30"
+published_date: "2023-09-30"
 ---
 
 

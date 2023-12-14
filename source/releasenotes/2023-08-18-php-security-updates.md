@@ -1,6 +1,6 @@
 ---
 title: "PHP Security Updates"
-publish_dated: "2023-08-18"
+published_date: "2023-08-18"
 ---
 
 

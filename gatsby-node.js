@@ -210,7 +210,8 @@ exports.createPages = ({ graphql, actions }) => {
             id
             frontmatter {
               title,
-              categories
+              categories,
+              published_date
             }
             fields {
               slug
@@ -524,6 +525,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         value: excerpt,
       })
 
+
       const textNode = {
         id: `${node.id}-MarkdownBody`,
         parent: node.id,
@@ -591,3 +593,5 @@ exports.onPreBootstrap = () => {
 
 
 /* todo should there be an error thrown if a release note category is set that is not allowed */
+/* todo, infer published date from file name. And throw an error if there are files that don't follow the pattern. */
+/* todo, make a json file of allowed categories, description of the category, color name */

@@ -1,6 +1,6 @@
 ---
 title: New Release Notes Structure
-publish_dated: "2023-12-31"
+published_date: "2023-12-31"
 categories: [security, anothercat]
 ---
 

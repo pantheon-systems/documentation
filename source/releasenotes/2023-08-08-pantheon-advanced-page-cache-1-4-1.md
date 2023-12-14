@@ -1,6 +1,6 @@
 ---
 title: "Pantheon Advanced Page Cache WordPress Plugin Updates"
-publish_dated: "2023-08-08"
+published_date: "2023-08-08"
 ---
 
 

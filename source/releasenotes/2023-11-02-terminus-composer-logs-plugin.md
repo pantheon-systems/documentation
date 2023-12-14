@@ -1,6 +1,6 @@
 ---
 title: Terminus Composer Logs Plugin 1.0.0 Released
-publish_dated: "2023-11-02"
+published_date: "2023-11-02"
 ---
 
 
