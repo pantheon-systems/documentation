@@ -303,6 +303,50 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Create guide pages.
+    const guides = result.data.allGuides.edges
+    guides.forEach(guide => {
+      if (guide.node.fields.guide_directory !== null) {
+        const previous = calculatePrevious(guide);
+        const next = calculateNext(guide);
+        const template = calculateTemplate(guide.node, "guide")
+        createPage({
+          path: guide.node.fields.slug,
+          component: path.resolve(`./src/templates/${template}.js`),
+          context: {
+            slug: guide.node.fields.slug,
+            guide_directory: guide.node.fields.guide_directory,
+            previous,
+            next
+          },
+        })
+      } else {
+        const template = calculateTemplate(guide.node, "doc")
+        createPage({
+          path: guide.node.fields.slug,
+          component: path.resolve(`./src/templates/${template}.js`),
+          context: {
+            slug: guide.node.fields.slug,
+          },
+        })
+      }
+    })
+
+    // Create Terminus Command pages
+    const terminusCommands = result.data.dataJson.commands
+    terminusCommands.forEach(command => {
+      const slugRegExp = /:/g
+      const slug = command.name.replace(slugRegExp, "-")
+      createPage({
+        path: `terminus/commands/${slug}`,
+        component: path.resolve(`./src/templates/terminusCommand.js`),
+        context: {
+          slug: slug,
+          name: command.name
+        }
+      })
+    })
+
     // Create changelog pages.
     const changelogs = result.data.allChangelogs.edges
     changelogs.forEach(changelog => {
@@ -375,6 +419,31 @@ exports.createPages = ({ graphql, actions }) => {
           currentPage,
           previous,
           next
+        },
+      })
+    })
+
+
+    // Create contributor pages.
+    const contributors = result.data.allContributorYaml.edges
+    contributors.forEach(contributor => {
+      createPage({
+        path: `contributors/${contributor.node.yamlId}`,
+        component: path.resolve(`./src/templates/contributor.js`),
+        context: {
+          id: contributor.node.yamlId,
+        },
+      })
+    })
+
+    // Create topics pages.
+    const topics = result.data.allLandingsYaml.edges
+    topics.forEach(topic => {
+      createPage({
+        path: topic.node.path,
+        component: path.resolve(`./src/templates/landing.js`),
+        context: {
+          id: topic.node.id,
         },
       })
     })
