@@ -308,7 +308,7 @@ Refer to the [official Object Cache Pro documentation](https://objectcache.pro/d
 	- If you are using WordPress Multisite, subsites do not get their own configuration or graphs. Navigate to `/wp-admin/network/settings.php?page=objectcache` to view network-wide configuration and graphs. This is the only screen throughout the network that displays this information.
 
 ### Additional Considerations
-- When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- wp cache flush`.
+- When moving from Dev to Test, and from Test to live with OCP for the first time, note that you _must_ activate the plugin and then flush the cache via `terminus wp <site>.<env> -- cache flush`.
 	- If you already have WP-Redis or other Redis plugins installed, these should be disabled before merging code.
     - To summarize, the full order of steps are:
       1. Disable wp-redis or other redis plugins if present
