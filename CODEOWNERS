@@ -11,3 +11,5 @@ source/content/guides/filesystem/ @pantheon-systems/filesystem
 source/content/guides/integrated-composer/ @pantheon-systems/lifecycle-ops
 # The cms-platform team is responsible for WordPress Multisite
 source/content/guides/multisite/ @pantheon-systems/cms-platform
+# The cms-platform team is responsible for External Libraries on Pantheon
+source/content/external-libraries @pantheon-systems/cms-platform
