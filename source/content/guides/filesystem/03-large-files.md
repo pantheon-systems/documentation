@@ -32,7 +32,7 @@ When a directory is found to be approaching a concerning level, the Status Repor
 
 ![Status check for highly populated directories warning for 50k](../../../images/files-status-check-50k-warning.png)
 
-![Sample critical status report for exceeding 100k files](../../../images/files-status-check-100k-warning.png)
+![Sample critical status report for exceeding 100k files](../../../images/files-status-check-100k-critical.png)
 
 ### Optimize
 To optimize performance:
