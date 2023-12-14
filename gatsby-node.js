@@ -379,35 +379,6 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create releasenotes pagination.
-    Array.from({ length: numPages }).forEach((_, i) => {
-      const currentPage = i + 1;
-      const next = currentPage === 1 ? null : (currentPage === 2 ? `/releasenotes/` : `/releasenotes/page/${currentPage - 1}`);
-      const previous = currentPage < numPages ? `/releasenotes/page/${currentPage + 1}` : null;
-      createPage({
-        path: i === 0 ? `/releasenotes/` : `/releasenotes/page/${i + 1}`,
-        component: path.resolve("./src/templates/releaseNotesListing.js"),
-        context: {
-          limit: postsPerPage,
-          skip: i * postsPerPage,
-          numPages,
-          currentPage,
-          previous,
-          next
-        },
-      })
-    })
-
-
-
-
-
-
-
-
-
-
-
     return null
   })
 }
