@@ -3,8 +3,6 @@ title: New Release Notes Structure
 publish_dated: "2023-12-31"
 ---
 
-# New Release Notes Structure
-
 For nearly a decade, we have published a monthly "changelog" here within our Documentation site that summarizes significant changes to the platform.
 Going forward in 2024 we are changing some of the details of how we publish and organize this information.
 

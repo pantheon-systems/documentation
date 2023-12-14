@@ -85,23 +85,10 @@ class ChangelogTemplate extends React.Component {
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
             <div className="pds-overline-text pds-spacing-mar-block-end-xs">
-              Pantheon Changelog
+              Pantheon Release Notes
             </div>
             <h1>{node.frontmatter.title}</h1>
-            <div className="pds-spacing-mar-block-end-3xl">
-              <p className="pds-lead-text pds-lead-text--small">
-                Sign up for the Pantheon Changelog Newsletter to receive a
-                monthly email on what's new and improved across the platform.
-              </p>
-              <a
-                className="pds-button"
-                href="https://learn.pantheon.io/Changelog-Opt-In.html"
-                target="_blank"
-              >
-                Subscribe Now
-                <Icon iconName="externalLink" />
-              </a>
-            </div>
+
             <hr />
 
             <SidebarLayout sidebarMobileLocation="before">

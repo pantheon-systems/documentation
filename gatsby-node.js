@@ -35,7 +35,9 @@ const calculateSlug = (node, getNode) => {
   if (getNode(node.parent).absolutePath.includes("releasenotes")) { // If the file is in the releasenotes directory...
     const split = fileName.split('-'); // split the file name where hyphenated...
     // #todo, wait this should the slug should include all the words after the date, not just the first one.
-    return `releasenotes/${split[0]}/${split[1]}/${split[3]}${split[4]}` // and return a slug of releasenotes/YYYY/MM/slug
+    // set a const to remaining slug based on the keys from split that are not the date.
+    const remainingSlug = split.slice(3).join('-');
+    return `releasenotes/${split[0]}/${split[1]}/${remainingSlug}` // and return a slug of releasenotes/YYYY/MM/slug
   }
 
   return `${fileName}` // Otherwise, as long as there is a filename in GraphQL, use it as the slug.
@@ -402,7 +404,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create changelog pagination.
+    // Create Release Note pagination.
     const ReleaseNotesPerPage = 6
     const numberOfReleaseNotePages = Math.ceil(releaseNotes.length / ReleaseNotesPerPage)
     Array.from({ length: numberOfReleaseNotePages }).forEach((_, i) => {
@@ -422,7 +424,6 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
-
 
     // Create contributor pages.
     const contributors = result.data.allContributorYaml.edges
@@ -586,3 +587,6 @@ exports.onPreBootstrap = () => {
 
   fs.copySync(scriptsCopyFrom, scriptsCopyTo)
 }
+
+
+/* todo should there be an error thrown if a release note category is set that is not allowed */

@@ -102,6 +102,7 @@ class ChangelogsTemplate extends React.Component {
                 Sign up for the Pantheon Changelog Newsletter to receive a
                 monthly email on what's new and improved across the platform.
               </p>
+              todo link to somewhere other than Pantheon learning.<br></br>
               <a
                 className="pds-button"
                 href="https://learn.pantheon.io/Changelog-Opt-In.html"
@@ -120,7 +121,7 @@ class ChangelogsTemplate extends React.Component {
                       {changelogs.map((changelog) => (
 
                         <React.Fragment key={changelog.id}>
-                          <div>WHAT</div>
+                          <div>HELLO</div>
                           <Link
                             to={`/${changelog.node.fields.slug}`}
                             className="individual-changelog-link"
@@ -128,6 +129,7 @@ class ChangelogsTemplate extends React.Component {
                             <h2 id={changelog.node.fields.slug}>
                               {changelog.node.frontmatter.title}
                             </h2>
+                            test
                           </Link>
                           <MDXProvider components={shortcodes}>
                             <MDXRenderer>{changelog.node.body}</MDXRenderer>
@@ -155,6 +157,7 @@ class ChangelogsTemplate extends React.Component {
 
 export default ChangelogsTemplate
 
+/* todo remove draft filter from query */
 export const pageQuery = graphql`
   query Changelogs($skip: Int!, $limit: Int!) {
     allMdx(
