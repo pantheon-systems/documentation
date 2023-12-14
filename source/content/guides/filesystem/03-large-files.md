@@ -30,7 +30,7 @@ Pantheon monitors for highly populated directories and alerts site administrator
 
 When a directory is found to be approaching a concerning level, the Status Report will show warning when 50,000 files is reached and critical when 100,000 files is reached or exceeded.
 
-![Status check for highly populated directories warning for 50k](../../../images/files-status-check-50k-warning.png)
+![Sample warning status report for exceeding 50k files](../../../images/files-status-check-50k-warning.png)
 
 ![Sample critical status report for exceeding 100k files](../../../images/files-status-check-100k-critical.png)
 
