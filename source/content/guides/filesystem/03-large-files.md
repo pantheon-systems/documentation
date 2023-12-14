@@ -28,7 +28,7 @@ Directories that house a large number of files can cause performance issues. Not
 ### Alerts
 Pantheon monitors for highly populated directories and alerts site administrators pro-actively via the Status page of the Pantheon Site Dashboard and email notifications.
 
-When a directory is found to be approaching a concerning level, the Status page result will return a warning at 50k and a higher severity warning at 100k
+When a directory is found to be approaching a concerning level, the Status Report will show warning when 50,000 files is reached and critical when 100,000 files is reached or exceeded.
 
 ![Status check for highly populated directories warning for 50k](../../../images/files-status-check-50k-warning.png)
 
