@@ -218,7 +218,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal (Latest Version)" id="d9-1conflict" active={true}>
 
   ```bash{promptUser: user}
-  git remote add pantheon-drupal https://github.com/pantheon-systems/drupal-composer-managed
+  git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-composer-managed
   ```
 
   </Tab>

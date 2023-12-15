@@ -27,7 +27,7 @@ Refer to the Front-End Sites Overview guide for instructions on how to [create a
 
 ## Install the Build Hooks Module
 
-The Build Hooks module is already included as a Composer dependency if you are using the [Decoupled Drupal Composer Managed](https://github.com/pantheon-systems/drupal-composer-managed) starter template. For other projects:
+The Build Hooks module is already included as a Composer dependency if you are using the [Decoupled Drupal Composer Managed](https://github.com/pantheon-upstreams/drupal-composer-managed) starter template. For other projects:
 
 1. Run the following command to add the module as a dependency:
 
