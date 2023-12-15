@@ -1,7 +1,7 @@
 ---
 title: New Release Notes Structure
 published_date: "2023-12-31"
-categories: [security, anothercat]
+categories: [security, documentation]
 ---
 
 For nearly a decade, we have published a monthly "changelog" here within our Documentation site that summarizes significant changes to the platform.

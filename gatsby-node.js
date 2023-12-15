@@ -406,26 +406,35 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create Release Note pagination.
-    const ReleaseNotesPerPage = 6
-    const numberOfReleaseNotePages = Math.ceil(releaseNotes.length / ReleaseNotesPerPage)
-    Array.from({ length: numberOfReleaseNotePages }).forEach((_, i) => {
-      const currentPage = i + 1;
-      const next = currentPage === 1 ? null : (currentPage === 2 ? `/release-notes/` : `/release-notes/page/${currentPage - 1}`);
-      const previous = currentPage < numberOfReleaseNotePages ? `/release-notes/page/${currentPage + 1}` : null;
+      // Create release notes without pagination. At a later date, we may want to add pagination.
+      // And can reused the code above.
       createPage({
-        path: i === 0 ? `/release-notes/` : `/release-notes/page/${i + 1}`,
+        path: `/release-notes/`,
         component: path.resolve("./src/templates/releaseNotesListing.js"),
+      })
+
+      const allowedReleaseNoteCategories = {
+        "security": {
+          "Display Name": "Security",
+          "color": "red"
+        },
+        "documentation": {
+          "Display Name": "Documentation",
+          "color": "purple"
+        },
+    };
+
+ // Loop through all allowed categories and create a page for each one.
+    Object.keys(allowedReleaseNoteCategories).forEach((category) => {
+      createPage({
+        path: `/release-notes/${category}`,
+        component: path.resolve("./src/templates/releaseNotesListingByCategory.js"),
         context: {
-          limit: ReleaseNotesPerPage,
-          skip: i * ReleaseNotesPerPage,
-          numberOfReleaseNotePages,
-          currentPage,
-          previous,
-          next
+          category: category,
         },
       })
     })
+
 
     // Create contributor pages.
     const contributors = result.data.allContributorYaml.edges

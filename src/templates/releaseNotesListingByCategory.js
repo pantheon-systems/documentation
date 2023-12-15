@@ -57,7 +57,7 @@ const shortcodes = {
 const containerWidth = "standard"
 
 // Combined changelog template.
-class ReleaseNotesListingTemplate extends React.Component {
+class ReleaseNotesListingByCategoryTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
       trigger: "click",
@@ -159,7 +159,7 @@ class ReleaseNotesListingTemplate extends React.Component {
   }
 }
 
-export default ReleaseNotesListingTemplate
+export default ReleaseNotesListingByCategoryTemplate
 
 /* todo remove draft filter from query */
 export const pageQuery = graphql`

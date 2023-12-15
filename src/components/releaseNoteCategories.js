@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const ReleaseNoteCategories = ({categories}) => {
 
@@ -18,7 +19,15 @@ if (!categories) {
 
       {categories.map((category, index) => (
         <div key={index}>
-          <h4>{category}</h4>
+
+          <Link
+            to={`/release-notes/${category}`}
+          >
+            <h4>{category}</h4>
+          </Link>
+
+
+
         </div>
       ))
       }
