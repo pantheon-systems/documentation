@@ -163,11 +163,10 @@ export default ReleaseNotesListingTemplate
 
 /* todo remove draft filter from query */
 export const pageQuery = graphql`
-  query Changelogs($category: String!) {
+  query Changelogs {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/releasenotes/" }
-          frontmatter: { categories: {eq: $category}}
       }
       sort: { fields: [fileAbsolutePath], order: DESC }
     ) {
