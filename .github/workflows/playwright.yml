@@ -12,6 +12,7 @@ on:
 env:
   GITHUB_PR_NUMBER: ${{ github.event.number }}
   GITHUB_SHA:  ${{ github.sha }}
+  GITHUB_WORKFLOW_SHA: ${{ github.workflow_sha }}
 jobs:
 
 # https://docs.github.com/en/actions/using-jobs/setting-default-values-for-jobs#example-setting-default-run-step-options-for-a-job
@@ -36,6 +37,8 @@ jobs:
         node-version: 18
     - name: Print Commit SHA
       run:  echo $GITHUB_SHA
+    - name: Print Workflow SHA
+      run:  echo $GITHUB_WORKFLOW_SHA
     - name: Install dependencies
       run:  cd tests && npm ci
     - name: Install Playwright Browsers
