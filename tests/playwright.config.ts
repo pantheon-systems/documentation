@@ -23,6 +23,8 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    // @todo, figure out if this is working in GitHub Actions.
+    video: 'on',
     /* Base URL to use in actions like `await page.goto('/')`. */
     // TODO, update this url to handle building on the main branch.
     baseURL: process.env.GITHUB_PR_NUMBER ? 'https://pr-' + process.env.GITHUB_PR_NUMBER + '-documentation.appa.pantheon.site' : 'http://localhost:8000',
