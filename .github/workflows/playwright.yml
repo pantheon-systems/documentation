@@ -16,8 +16,19 @@ env:
 
 jobs:
 
+# https://docs.github.com/en/actions/using-jobs/setting-default-values-for-jobs#example-setting-default-run-step-options-for-a-job
+# todo set the working directory to tests? https://docs.github.com/en/actions/using-jobs/setting-default-values-for-jobs#example-setting-default-run-step-options-for-a-job
+# jobs:
+  # job1:
+  #   runs-on: ubuntu-latest
+  #   defaults:
+  #     run:
+  #       shell: bash
+
+
+
+
   test:
-    working-directory: ./tests
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -27,15 +38,12 @@ jobs:
         node-version: 18
     - name: Print Commit SHA
       run:  echo $GIT_SHA
-
-    - name: Check githead
-      run:  curl https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
     - name: Install dependencies
-      run:  npm ci
+      run:  cd tests && npm ci
     - name: Install Playwright Browsers
-      run:  npx playwright install --with-deps
+      run:  cd tests && npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: cd tests && npx playwright test
     - uses: actions/upload-artifact@v3
     # @todo, figure out how to record video of tests executing.
       if: always()
