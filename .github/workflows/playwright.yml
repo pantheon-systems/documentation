@@ -2,6 +2,8 @@ name: Playwright Tests
 # todo, this GitHub Action should either be Triggered by Pantheon's build process
 # phoning back to GitHub Actions after the deployment completes
 # Or the GitHub Action will need to poll somehow that the deployment has completed.
+# The Gatsby Build Process could place a file that reports that Git Hash that it was
+# built from. Check that via polling.
 on:
   push:
     branches: [ main, master ]

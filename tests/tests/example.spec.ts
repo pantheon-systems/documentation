@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('http://localhost:8000/release-notes');
+  await page.goto('https://pr-8804-documentation.appa.pantheon.site/release-notes');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Pantheon Release Notes/);
