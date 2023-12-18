@@ -11,6 +11,7 @@ on:
     branches: [ main, master ]
 env:
   GITHUB_PR_NUMBER: ${{ github.event.number }}
+  # @todo figure out how to make this work on main.
   GIT_SHA:  ${{ github.event.pull_request.head.sha }}
 
 jobs:
