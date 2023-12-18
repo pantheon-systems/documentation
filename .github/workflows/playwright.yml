@@ -38,6 +38,8 @@ jobs:
         node-version: 18
     - name: Print Commit SHA
       run:  echo $GIT_SHA
+    - name: Check githead
+      run:  curl https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
     - name: Install dependencies
       run:  cd tests && npm ci
     - name: Install Playwright Browsers

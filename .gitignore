@@ -67,6 +67,9 @@ typings/
 .cache/
 public
 
+# This file is made during the build process. It is used to determine the current git commit hash.
+static/githead.txt
+
 # Mac files
 .DS_Store
 
