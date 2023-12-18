@@ -91,8 +91,8 @@ class ReleaseNotesListingTemplate extends React.Component {
     return (
       <Layout containerWidth={containerWidth} footerBorder>
         <SEO
-          title="Pantheon Changelog"
-          description="Pantheon Changelog"
+          title="Pantheon Release Notes"
+          description="A summary of changes to the Pantheon Platform"
           image={"assets/images/default-thumb-doc.png"}
         />
         <main id="docs-main" tabindex="-1">
