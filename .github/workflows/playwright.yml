@@ -1,0 +1,32 @@
+name: Playwright Tests
+# todo, this GitHub Action should either be Triggered by Pantheon's build process
+# phoning back to GitHub Actions after the deployment completes
+# Or the GitHub Action will need to poll somehow that the deployment has completed.
+# The Gatsby Build Process could place a file that reports that Git Hash that it was
+# built from. Check that via polling.
+on:
+  pull_request:
+    branches: [ main, master ]
+env:
+  GITHUB_PR_NUMBER: ${{ github.event.number }}
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Install dependencies
+      run:  cd tests && npm ci
+    - name: Install Playwright Browsers
+      run:  cd tests && npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: cd tests && npx playwright test
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-report
+        path: tests/playwright-report/
+        retention-days: 30
