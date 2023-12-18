@@ -5,10 +5,10 @@ name: Playwright Tests
 # The Gatsby Build Process could place a file that reports that Git Hash that it was
 # built from. Check that via polling.
 on:
-  push:
-    branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+env:
+  GITHUB_PR_NUMBER: ${{ github.event.number }}
 jobs:
   test:
     timeout-minutes: 60
