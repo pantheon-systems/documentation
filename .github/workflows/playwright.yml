@@ -1,4 +1,7 @@
 name: Playwright Tests
+# todo, this GitHub Action should either be Triggered by Pantheon's build process
+# phoning back to GitHub Actions after the deployment completes
+# Or the GitHub Action will need to poll somehow that the deployment has completed.
 on:
   push:
     branches: [ main, master ]
@@ -14,11 +17,11 @@ jobs:
       with:
         node-version: 18
     - name: Install dependencies
-      run: npm ci
+      run:  cd tests && npm ci
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      run:  cd tests && npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: cd tests && npx playwright test
     - uses: actions/upload-artifact@v3
       if: always()
       with:
