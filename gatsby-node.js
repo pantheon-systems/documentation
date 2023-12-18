@@ -465,6 +465,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
   }
 
+/**
+ * Todo, create a page for the git hash.
+ */
+
+
   // Releases and Changelog Content
   var nodeString = node.internal.type.toString()
   var isReleaseJson = nodeString.includes("ReleasesJson")
