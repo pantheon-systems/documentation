@@ -34,6 +34,17 @@ jobs:
       run:  npm ci
     - name: Install Playwright Browsers
       run:  npx playwright install --with-deps
+
+
+    - uses: artiz/poll-endpoint@1.0.2
+      with:
+        url: https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
+        method: GET
+        expect-status: 200
+        expect-response-regex: ".*${GIT_SHA}.*"
+        timeout: 60000
+        interval: 5000
+
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v3
