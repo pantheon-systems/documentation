@@ -15,19 +15,6 @@ env:
   GIT_SHA:  ${{ github.event.pull_request.head.sha }}
 
 jobs:
-
-# https://docs.github.com/en/actions/using-jobs/setting-default-values-for-jobs#example-setting-default-run-step-options-for-a-job
-# todo set the working directory to tests? https://docs.github.com/en/actions/using-jobs/setting-default-values-for-jobs#example-setting-default-run-step-options-for-a-job
-# jobs:
-  # job1:
-  #   runs-on: ubuntu-latest
-  #   defaults:
-  #     run:
-  #       shell: bash
-
-
-
-
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
