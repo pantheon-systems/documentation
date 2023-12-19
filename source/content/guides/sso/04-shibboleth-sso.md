@@ -91,10 +91,10 @@ The commands below require a [nested docroot](/nested-docroot) structure and mus
  ```json:title=composer.json
 "scripts": {
     "post-update-cmd": [
-        "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        "rm-rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ],
     "post-install-cmd": [
-        "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        "rm-rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ]
 },
  ```
