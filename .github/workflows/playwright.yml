@@ -42,7 +42,7 @@ jobs:
         # url: https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
         method: GET
         expectStatus: 200
-        expectBodyRegex: ".*${GIT_SHA}.*"
+        expectBodyRegex: "${GIT_SHA}"
         timeout: 600000
         interval: 5000
 
