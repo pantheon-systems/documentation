@@ -37,7 +37,8 @@ jobs:
         url: https://pr-${{ github.event.number }}-documentation.appa.pantheon.site/githead-${{ github.event.pull_request.head.sha }}.txt
         method: GET
         expectStatus: 200
-        # expectBodyRegex: ${{ github.event.pull_request.head.sha }}
+        expectBody: ${{ github.event.pull_request.head.sha }}
+        #expectBodyRegex: "git commit"
         timeout: 600000
         interval: 5000
 
