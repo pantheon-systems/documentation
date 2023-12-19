@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
+/* todo, decide whether or not to use dotenv */
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -10,7 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: './playwright-tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -23,7 +24,6 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    // @todo, figure out if this is working in GitHub Actions.
     video: 'on',
     /* Base URL to use in actions like `await page.goto('/')`. */
     // TODO, update this url to handle building on the main branch.
