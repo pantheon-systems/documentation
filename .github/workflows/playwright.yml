@@ -35,11 +35,11 @@ jobs:
     - uses: artiz/poll-endpoint@1.0.2
       with:
         url: https://pr-${{ github.event.number }}-documentation.appa.pantheon.site/githead.txt
-        # url: https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
+#        url: https://pr-${{ GITHUB_PR_NUMBER }} -documentation.appa.pantheon.site/githead.txt
         method: GET
         expectStatus: 200
-#        expectBodyRegex: "${GIT_SHA}"
-#        timeout: 600000
+        expectBodyRegex: ${{ github.event.pull_request.head.sha }}
+        timeout: 600000
         interval: 5000
 
     - name: Install dependencies
