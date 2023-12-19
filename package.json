@@ -85,7 +85,7 @@
   },
   "scripts": {
 
-    "build": "echo $(git rev-parse  HEAD) > static/githead.txt && gatsby build --prefix-paths --log-pages",
+    "build": "echo   $(git rev-parse  HEAD) > static/githead-$(git rev-parse  HEAD).txt && gatsby build --prefix-paths --log-pages",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
