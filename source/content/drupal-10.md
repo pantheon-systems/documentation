@@ -60,10 +60,6 @@ No, Drupal 9 sites can continue to use Drupal 9 and receive Drupal 9 updates.
 
 Refer to [Upgrade from Drupal 9 to Drupal 10](/drupal-10#update-a-drupal-9-site-to-drupal-10).
 
-### When will official Drupal 10 support start?
-
-When Drupal 10 is officially released (expected December 14, 2022).
-
 ### Where do I go with questions?
 
 Ask questions in our Slack [#drupal channel](https://pantheon-community.slack.com/archives/CTA1621KK).
