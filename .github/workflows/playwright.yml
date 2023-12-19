@@ -30,21 +30,25 @@ jobs:
       run:  echo $GIT_SHA
     - name: Check githead
       run:  curl https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
+
+
+    - uses: artiz/poll-endpoint@1.0.2
+      with:
+        url: https://pr-${{ github.event.number }}-documentation.appa.pantheon.site/githead.txt
+        # url: https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
+        method: GET
+        expectStatus: 200
+#        expectBodyRegex: "${GIT_SHA}"
+#        timeout: 600000
+        interval: 5000
+
     - name: Install dependencies
       run:  npm ci
     - name: Install Playwright Browsers
       run:  npx playwright install --with-deps
 
 
-    - uses: artiz/poll-endpoint@1.0.2
-      with:
-        url: https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
-        # url: https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
-        method: GET
-        expectStatus: 200
-#        expectBodyRegex: "${GIT_SHA}"
-        timeout: 600000
-        interval: 5000
+
 
     - name: Run Playwright tests
       run: npx playwright test
