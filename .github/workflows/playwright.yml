@@ -31,16 +31,16 @@ jobs:
     - name: Check githead
       run:  curl https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
 
-
-    - uses: artiz/poll-endpoint@1.0.2
-      with:
-        url: https://pr-${{ github.event.number }}-documentation.appa.pantheon.site/githead-${{ github.event.pull_request.head.sha }}.txt
-        method: GET
-        expectStatus: 200
-        expectBody: ${{ github.event.pull_request.head.sha }}
-        #expectBodyRegex: "git commit"
-        timeout: 600000
-        interval: 5000
+    # @todo, this is a hack to get the githead from the build process.
+    # - uses: artiz/poll-endpoint@1.0.2
+    #   with:
+    #     url: https://pr-${{ github.event.number }}-documentation.appa.pantheon.site/githead-${{ github.event.pull_request.head.sha }}.txt
+    #     method: GET
+    #     expectStatus: 200
+    #     expectBody: ${{ github.event.pull_request.head.sha }}
+    #     #expectBodyRegex: "git commit"
+    #     timeout: 600000
+    #     interval: 5000
 
     - name: Install dependencies
       run:  npm ci
@@ -50,7 +50,6 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v3
-    # @todo, figure out how to record video of tests executing.
       if: always()
       with:
         name: playwright-report
