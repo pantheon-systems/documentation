@@ -88,7 +88,7 @@
       - text: "Launch Essentials"
         url: "/guides/launch/"
       - text: "Using the Pantheon Workflow"
-        url: "/Pantheon-workflow/"
+        url: "/pantheon-workflow/"
       - text: "Identify and Kill MySQL Queries"
         url: "/guides/mariadb-mysql/kill-mysql-queries"
       - text: "Domains and Redirects"
