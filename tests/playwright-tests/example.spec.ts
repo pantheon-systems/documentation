@@ -14,11 +14,7 @@ test('Use Search Form', async ({ page }) => {
   await page.fill('#searchform input', 'Terminus');
   // Submit the form
   await page.press('#searchform input', 'Enter');
-
-
-
   // Check that the page contains "Introduction | Terminus Guide | Pantheon Docs"
-
 //
   //const searchResults = page.getByTestId('h3 a').nth(0);
 
@@ -34,5 +30,9 @@ const firstResult = await page.locator('h3 a')
 
   // check that the current path is guides/platform-considerations/terminus-platform
   // ignore the base URL.
-  await expect(page).toHaveURL('https://docs.pantheon.io/guides/platform-considerations/terminus-platform');
+//  await expect(page).toHaveURL('https://docs.pantheon.io/guides/platform-considerations/terminus-platform');
+// check that the current path contains guides/platform-considerations/terminus-platform
+  await expect(page).toHaveURL(/guides\/platform-considerations\/terminus-platform/);
+
+
 });
