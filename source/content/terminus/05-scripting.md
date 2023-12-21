@@ -15,7 +15,6 @@ audience: [development]
 product: [terminus]
 integration: [--]
 ---
-<Wistia src="ocpgih01w1" />
 
 This section provides information on how to automate your workflow with Terminus scripting.
 
