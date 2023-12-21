@@ -89,10 +89,10 @@ wp_
 ```
 
 ### After (The Future State)
-When running WP-CLI, ”display_errors” will be changed to “stderr” in php.ini, so that errors can be handled separate from the actual command output. Three changes are notable here—
+When running WP-CLI, ”display_errors” will be changed to “stderr” in php.ini, so that errors can be handled separate from the actual command output. Three changes are notable here:
 
 #### Errors go to STDERR
-The obvious and intentional change. With errors going to stderr, it is now possible to capture the output of a WP-CLI command with no extra steps
+The obvious and intentional change. With errors going to stderr, it is now possible to capture the output of a WP-CLI command with no extra steps.
 ```bash
 $ PREFIX=$(terminus remote:wp {site}.{env} -- config get table_prefix)
 Notice: A Notice. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 78
@@ -100,7 +100,6 @@ Warning: A Warning. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cl
  [notice] Command: {site}.{env} -- wp config get table_prefix [Exit: 0]
 $ echo $PREFIX
 wp_
-
 ```
 
 #### Live errors will display in WP-CLI
