@@ -1105,7 +1105,7 @@ export env=dev
 ## Videos
 Use the Wistia and YouTube components to embed videos across the docs site.
 
-With the exception of landing pages (e.g., [Go Live](/go-live), [Optimize Performance](/performance), etc.) which are sourced from [`source/data/landings.yaml`](https://github.com/pantheon-systems/documentation/blob/main/source/data/landings.yaml) and only support YouTube video embedding.
+[Landing pages](https://github.com/pantheon-systems/documentation/blob/main/source/data/landings.yaml#L4) (e.g., [Get Started](/get-started), [Develop](/develop), [Go Live](/go-live), etc.) can set a `video_id` attribute to embed a YouTube sourced video to the top of the page. Embedding Wistia videos is not supported on landing pages at this time, however Wistia videos can be embedded elsewhere across the docs using the Wistia component as described below.
 
 ### YouTube
 Use the YouTube component to embed YouTube videos. Set both `title` and `src`, for example:
