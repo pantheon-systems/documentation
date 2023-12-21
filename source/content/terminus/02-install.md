@@ -15,7 +15,6 @@ audience: [development]
 product: [terminus]
 integration: [--]
 ---
-<Wistia src="mi456ux965" />
 
 This section provides information on how to install and authenticate Terminus.
 
