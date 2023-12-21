@@ -16,11 +16,12 @@ audience: [development]
 product: [autopilot]
 integration: [--]
 ---
-<Wistia src="c15eoj3eca" />
 
 ## Enable Autopilot
 
 Autopilot can be enabled for individual sites, or in bulk, within each eligible Workspace.
+
+<Wistia src="c15eoj3eca" />
 
 1. [Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
 

@@ -10,9 +10,10 @@ audience: [--]
 product: [--]
 integration: [--]
 ---
-<Wistia src="b0zcwncjx6" />
 
 Become one of our [contributors](/contributors)! Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
+
+<Wistia src="b0zcwncjx6" />
 
 Pantheon's documentation is a static site built by [Gatsby](https://www.gatsbyjs.com/docs/glossary/static-site-generator/) from files maintained in a public [GitHub repository](https://github.com/pantheon-systems/documentation).
 

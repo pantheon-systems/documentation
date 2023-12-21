@@ -14,9 +14,10 @@ contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/multidev/create-multidev
 ---
-<Wistia src="5fncfu9ygh" />
 
 This section provides steps on how to create a new Multidev.
+
+<Wistia src="5fncfu9ygh" />
 
 ## Create in the Dashboard
 

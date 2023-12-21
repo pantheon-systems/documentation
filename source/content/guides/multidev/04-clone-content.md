@@ -14,9 +14,9 @@ contributors: [whitneymeredith]
 showtoc: true
 permalink: docs/guides/multidev/clone-content
 ---
-<Wistia src="d3vw8r3ooi" />
 
 This section provides steps on how to clone content in your Multidev.
+<Wistia src="d3vw8r3ooi" />
 
 1. Select the environment that will contain the cloned content (files and database).
 
