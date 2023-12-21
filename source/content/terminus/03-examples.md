@@ -15,7 +15,6 @@ audience: [development]
 product: [terminus]
 integration: [--]
 ---
-<Wistia src="0ajhtj2r9s" />
 
 This section provides information on how to apply updates, deploy code, switch upstreams, and install Drush and WP-CLI with Terminus, as well as information on command structure and automatic site and environment detection.
 
