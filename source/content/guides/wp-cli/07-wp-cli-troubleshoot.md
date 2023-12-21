@@ -65,21 +65,21 @@ The appearance of PHP errors is changing when invoking WP-CLI. This is unlikely 
 </Alert>
 
 ### Before January 15th
-When a command is invoked in WP-CLI in a non-live environment, errors are sent to STDOUT as part of the output. When invoked over Terminus, errors are printed before the command output. In this example, I have called `trigger_error()` for a warning and notice in my wp-config.php file.
+When a command is invoked in WP-CLI in a non-live environment, errors are sent to STDOUT as part of the output. When invoked over Terminus, errors are printed before the command output. In this example, I have called `trigger_error()` for a warning and notice in my `wp-config.php` file.
 ```bash
-$ terminus wp {site}.{env} -- config get table_prefix
+$ terminus wp <site>.<env> -- config get table_prefix
 
 Notice: A Notice. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 78
 
 Warning: A Warning. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 79
 wp_
- [notice] Command: {site}.{env} -- wp config get table_prefix [Exit: 0]
+ [notice] Command: <site>.<env> -- wp config get table_prefix [Exit: 0]
 ```
 
 This makes it especially difficult to script something that relies on capturing the value of a given command (i.e. `config get` or `plugin list`), as the errors also end up captured, and it takes convoluted shell gymnastics to work around.
 ```bash
-$ PREFIX=$(terminus remote:wp {site}.{env} -- config get table_prefix)
- [notice] Command: {site}.{env} -- wp config get table_prefix [Exit: 0]
+$ PREFIX=$(terminus remote:wp <site>.<env> -- config get table_prefix)
+ [notice] Command: <site>.<env> -- wp config get table_prefix [Exit: 0]
 $ echo $PREFIX
 
 Notice: A Notice. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 78
@@ -89,30 +89,30 @@ wp_
 ```
 
 ### Starting January 15th
-When running WP-CLI, ”display_errors” will be changed to “stderr” in php.ini, so that errors can be handled separate from the actual command output. Three changes are notable here:
+When running WP-CLI, `display_errors` will be changed to `stderr` in `php.ini`, so that errors can be handled separate from the actual command output. Three changes are notable here:
 
 #### Errors go to STDERR
-The obvious and intentional change. With errors going to stderr, it is now possible to capture the output of a WP-CLI command with no extra steps.
+The obvious and intentional change. With errors going to `stderr`, it is now possible to capture the output of a WP-CLI command with no extra steps.
 ```bash
-$ PREFIX=$(terminus remote:wp {site}.{env} -- config get table_prefix)
+$ PREFIX=$(terminus remote:wp <site>.<env> -- config get table_prefix)
 Notice: A Notice. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 78
 Warning: A Warning. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 79
- [notice] Command: {site}.{env} -- wp config get table_prefix [Exit: 0]
+ [notice] Command: <site>.<env> -- wp config get table_prefix [Exit: 0]
 $ echo $PREFIX
 wp_
 ```
 
 #### Live errors will display in WP-CLI
-The change to WP-CLI’s error handling is environment-agnostic, so while display_errors remains off (i.e. unchanged) on live PHP-FPM configuration (i.e. in the browser), it will be “stderr” only for CLI interactions.
+The change to WP-CLI’s error handling is environment-agnostic, so while `display_errors` remains `off` (i.e. unchanged) on Live PHP-FPM configuration (i.e. in the browser), it will be `stderr` only for CLI interactions.
 
 #### Terminus now displays error messages after the command output
 Because of Terminus’ specific handling of STDOUT and STDERR, PHP errors now display after the command output instead of before.
 ```bash
-$ terminus remote:wp {site}.{env} -- config get table_prefix
+$ terminus remote:wp <site>.<env> -- config get table_prefix
 wp_
 Notice: A Notice. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 78
 Warning: A Warning. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cli/config-command/src/Config_Command.php(444) : eval()'d code on line 79
- [notice] Command: {site}.{env} -- wp config get table_prefix [Exit: 0]
+ [notice] Command: <site>.<env> -- wp config get table_prefix [Exit: 0]
 ```
 
 ## More Resources
