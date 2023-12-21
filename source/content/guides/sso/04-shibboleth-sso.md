@@ -264,7 +264,7 @@ The Support team has tested this module on Pantheon using Okta.
 
 ### OAuth
 
-[OAuth](https://oauth.net/) is an open authorization standard that Pantheon customers have reported success using. Refer to [SSO and Identity Federation on Pantheon](sso#oauth) for more information.
+[OAuth](https://oauth.net/) is an open authorization standard that Pantheon customers have reported success using. Refer to [SSO and Identity Federation on Pantheon](/guides/sso/sso#oauth) for more information.
 
 ### WP SAML Auth with Google Apps
 

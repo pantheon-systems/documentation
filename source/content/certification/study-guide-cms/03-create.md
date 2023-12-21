@@ -91,7 +91,7 @@ In this section, we will walk through the first method, installing a fresh WordP
 
 1. This will open up a new browser tab containing the WordPress installation process form.
 
-1. You will see a “Success” message once the site has been installed. Once the site has been installed, you will be able to login to your WordPress admin dashboard directly through the Pantheon dashboard’s Site Admin button, or through the standard WordPress login URL (e.g. https://environment-sitename.pantheonsite.io/wp-login.php).
+1. You will see a “Success” message once the site has been installed. Once the site has been installed, you will be able to login to your WordPress admin dashboard directly through the Pantheon dashboard’s Site Admin button, or through the standard WordPress login URL (e.g. `https://environment-sitename.pantheonsite.io/wp-login.php`).
 
 Congratulations! You have now successfully installed WordPress on your Pantheon site.
 

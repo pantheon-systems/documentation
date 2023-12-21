@@ -14,7 +14,7 @@ integration: [--]
 
 This page includes commonly asked questions to give you more information about Pantheon, including what our platform offers and supports.
 
-Review [Platform Considerations](/guides/platform-considerations) for more technical information. 
+Review [Platform Considerations](/guides/platform-considerations) for more technical information.
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ Pantheon supports the most recent release of WordPress via our [upstream](https:
 
 ### How much does Pantheon cost?
 
-You can develop new sites for free on Pantheon. Billing starts when you're ready to go live and direct traffic to a site. See available plans on our [pricing page](https://pantheon.io/pricing).
+You can develop new sites for free on Pantheon. Billing starts when you're ready to go live and direct traffic to a site. See available plans on our [pricing page](https://pantheon.io/plans/pricing).
 
 ### Where are the Pantheon servers located?
 

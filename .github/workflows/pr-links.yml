@@ -18,8 +18,8 @@ jobs:
             --verbose
             --exclude http://localhost:8000/
             "*.md"
-            "source/content/**/*.md"
+            "source/**/*.md"
             --timeout 20
-          fail: false
+          fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

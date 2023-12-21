@@ -111,7 +111,7 @@ Performing code updates is one of the most tedious tasks in website operations w
 
 **Integrated Composer** is a Pantheon platform feature that extends Composer  functionality to WordPress and Drupal's core files, and treats them as a managed dependency. Integrated Composer enables one-click updates from the Dashboard for upstream updates and Composer dependencies on your Composer-managed Pantheon site.
 
-Web teams frequently need to build their own specific automations. Pantheon enables that with our command line interface (Terminus) and hook system (Quicksilver) as you will see in [Chapter 8](certification/study-guide/chapter-8-extending).
+Web teams frequently need to build their own specific automations. Pantheon enables that with our command line interface (Terminus) and hook system (Quicksilver) as you will see in [Chapter 8](/certification/study-guide/chapter-8-extending).
 
 **Terminus** is a command line interface that provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, as well as scripting and much more. Here are just a few of the things you can do with Terminus:
 
@@ -139,13 +139,13 @@ Web teams frequently need to build their own specific automations. Pantheon enab
 
 Moving up to higher levels of value also requires effective collaboration between people.
 
-[Chapter 7](certification/study-guide/chapter-7-people) shows how to connect with your team on Pantheon, and most critically, how to connect your DNS so that the public can find your site. It covers:
+[Chapter 7](/certification/study-guide/chapter-7-people) shows how to connect with your team on Pantheon, and most critically, how to connect your DNS so that the public can find your site. It covers:
 
 * **Site Security Tab:** Allows users to** **lock down environments to only be accessible using a username/password, allowing for selective sharing of progress.
 * **Expert Support: **Pantheon offers a range of Account options that include the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance, and concierge pre-launch load testing for Diamond Elite sites.
 * **Role-base access control:** Users can be automatically provisioned with adherence to** **the principle of least privilege.
 
-Within the workflow of a single site, any number of details can trip up a team on a regular basis or with the occasional disaster. [Chapter 6](certification/study-guide/chapter-6-deployment) highlights the guardrails Pantheon puts around the workflow of a site as code moves through the deployment pipeline from Multidev environments to Dev to Test to Live.
+Within the workflow of a single site, any number of details can trip up a team on a regular basis or with the occasional disaster. [Chapter 6](/certification/study-guide/chapter-6-deployment) highlights the guardrails Pantheon puts around the workflow of a site as code moves through the deployment pipeline from Multidev environments to Dev to Test to Live.
 
 * **Multidev Environments:** Perhaps the best loved feature of Pantheon, Multidevs provide on-demand sandbox environments that are full clones of your production environment and data. Per-environment configurations allow you to upgrade PHP and CMS versions in-place, allowing you to complete critical maintenance tasks without having to “drop everything right now” to do so.
 * With push-button synchronization, you can instantly sync changes across environments on Pantheon. Syncing content, code, and configuration changes between environments can be done in seconds, eliminating the need to copy anything manually between environments. This ensures that your developers are always developing new features and functionality against the very latest version of your marketing team's content.
@@ -158,7 +158,7 @@ Within the workflow of a single site, any number of details can trip up a team o
 
 That collaboration depends on Pantheon's founding breakthrough: moving WordPress and Drupal past the model of running on single servers.
 
-[Chapter 5](certification/study-guide/chapter-5-cms) describes the containerization model that supports highly scaled sites, and perhaps just as importantly, enables teams to move between sites (large and small) without rethinking every detail of their workflow.
+[Chapter 5](/certification/study-guide/chapter-5-cms) describes the containerization model that supports highly scaled sites, and perhaps just as importantly, enables teams to move between sites (large and small) without rethinking every detail of their workflow.
 
 With our containerization, you get
 

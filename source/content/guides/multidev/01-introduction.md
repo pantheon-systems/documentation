@@ -31,7 +31,7 @@ Multidev is available for the following accounts:
 
 ![Dev Test and Live icon](../../../images/multidev-flow.png)
 
-Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/contact-sales) to discuss which plan is best for your needs.
+Check out our [pricing page](https://pantheon.io/plans/pricing?docs) and contact [Sales](https://pantheon.io/contact-sales) to discuss which plan is best for your needs.
 
 ### Multidev Access for Team Members and Supporting Agencies
 

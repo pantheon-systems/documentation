@@ -41,7 +41,7 @@ Autopilot is available for the following accounts:
  - Diamond
  - Agency partners
 
-Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/earlyaccess/autopilot?docs) to discuss which plan is best for your needs.
+Check out our [pricing page](https://pantheon.io/plans/pricing?docs) and contact [Sales](https://pantheon.io/contact-sales?docs) to discuss which plan is best for your needs.
 
 ### Autopilot Site Compatibility
 
@@ -70,7 +70,7 @@ Download the [Partner Program guide](https://pantheon.io/resources/pantheon-part
 
 ### Custom Upstreams for Corporate and Higher Education Customers
 
-Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
@@ -89,4 +89,3 @@ Support for Custom Upstreams requires that the externally hosted upstream reposi
 - [Custom Upstreams Guide](/guides/custom-upstream)
 
 - [Multidev](/guides/multidev)
-

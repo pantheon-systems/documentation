@@ -89,7 +89,7 @@ Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
 The scripts that run on Continuous Integration are stored in the `.ci` directory. Provider-specific configuration files, such as `.circle/config.yml` and `.gitlab-ci.yml` use these scripts.
 
-The scripts are organized into subdirectories according to their function: 
+The scripts are organized into subdirectories according to their function:
 
 - Build
 - Deploy
@@ -139,7 +139,7 @@ The scripts stored in the `.ci/test/visual-regression` directory run visual regr
 
 ## Behat Testing
 
-Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org/en/latest/) is an acceptance/end-to-end testing framework written in PHP. It facilitates testing the fully-built WordPress site on Pantheon. [WordHat](https://wordhat.info/) is used to help integrate Behat and WordPress.
+Behat testing uses `.ci/test/behat` and `tests/behat`. [Behat](https://behat.org/en/latest/) is an acceptance/end-to-end testing framework written in PHP. It facilitates testing the fully-built WordPress site on Pantheon. [WordHat](https://github.com/paulgibbs/behat-wordpress-extension) is used to help integrate Behat and WordPress.
 
 - `.ci/test/behat/initialize` deletes any existing WordPress user from Behat testing and creates a backup of the environment to be tested.
 
