@@ -64,7 +64,7 @@ Actions or filters that require CLI tools like WP-CLI might fail from `wp-config
 The appearance of PHP errors is changing when invoking WP-CLI. This is unlikely to affect you unless you have shell scripts that are specifically expecting to handle or parse PHP errors as part of the output of a WP-CLI command.
 </Alert>
 
-### Before January 15th
+### Before January 15th 2024
 When a command is invoked in WP-CLI in a non-live environment, errors are sent to STDOUT as part of the output. When invoked over Terminus, errors are printed before the command output. In this example, I have called `trigger_error()` for a warning and notice in my `wp-config.php` file.
 ```bash
 $ terminus wp <site>.<env> -- config get table_prefix
@@ -88,7 +88,7 @@ Warning: A Warning. in phar:///opt/pantheon/wpcli/wp-cli-2.8.1.phar/vendor/wp-cl
 wp_
 ```
 
-### Starting January 15th
+### Starting January 15th 2024
 When running WP-CLI, `display_errors` will be changed to `stderr` in `php.ini`, so that errors can be handled separate from the actual command output. Three changes are notable here:
 
 #### Errors go to STDERR
