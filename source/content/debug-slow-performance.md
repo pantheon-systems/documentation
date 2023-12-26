@@ -10,7 +10,7 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2023-10-20"
+reviewed: "2023-12-26"
 showtoc: true
 contributors: [jms-pantheon]
 ---
@@ -37,7 +37,7 @@ A low Cache Hit Ratio <Popover title="Cache Hit Ratio" content="Serving requests
 ___
 
 ## Redis Object Caching
-On performance plans and above, Redis enhances performance by reducing redundant database queries.
+On performance plans and above, Redis reads and writes cache data incredibly quickly and takes load off the primary database.
 
 **How to Check:**
 - Make sure Redis has been activated from Settings > Addons in the Pantheon Site Dashboard.
@@ -56,13 +56,7 @@ PHP errors can indicate issues affecting site performance and can slow down the 
 
 **How to Check:**
 - Download [Application log files](/guides/logs-pantheon/access-logs#application-log-files) and review for recurring entries.
-- Regularly check the status of Watchdog (Drupal Sites):
-  - Navigate to the Status tab of a given environment and click "run the checks now" and review results for "Watchdog database logs".
-  - Or use the Drupal Admin interface at `/admin/reports/dblog`
-  - Or tail dblogs from the command-line with Terminus:
-    ```bash{promptUser: user}
-    terminus drush <site>.<env> -- watchdog-show --tail
-    ```
+- For Drupal sites, regularly check the status of Watchdog at `/admin/reports/dblog`
 
 **Recommended Solutions:**
 - Solve any recurring log entries observed in `php-error.log`
