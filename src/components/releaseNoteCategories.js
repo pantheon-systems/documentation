@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 
 const ReleaseNoteCategories = ({categories}) => {
 
-console.log(categories);
-
 if (!categories) {
   return null
 }

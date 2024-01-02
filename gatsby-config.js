@@ -105,11 +105,6 @@ module.exports = {
         name: `releasenotes`,
       },
     },
-
-
-
-
-
     {
       resolve: `gatsby-source-filesystem`,
       options: {

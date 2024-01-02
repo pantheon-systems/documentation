@@ -33,11 +33,11 @@ const calculateSlug = (node, getNode) => {
   }
   // This section creates the releasenotes slug based on the YYYY-MM-DD-slug.md template
   if (getNode(node.parent).absolutePath.includes("releasenotes")) { // If the file is in the releasenotes directory...
-    const split = fileName.split('-'); // split the file name where hyphenated...
-    // #todo, wait this should the slug should include all the words after the date, not just the first one.
+    // split the file name where hyphenated.
+    const split = fileName.split('-');
     // set a const to remaining slug based on the keys from split that are not the date.
     const remainingSlug = split.slice(3).join('-');
-    return `releasenotes/${split[0]}/${split[1]}/${remainingSlug}` // and return a slug of releasenotes/YYYY/MM/slug
+    return `release-notes/${split[0]}/${split[1]}/${remainingSlug}` // and return a slug of releasenotes/YYYY/MM/slug
   }
 
   return `${fileName}` // Otherwise, as long as there is a filename in GraphQL, use it as the slug.
@@ -368,23 +368,6 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-
-
-    // Create each release note page.
-    const releaseNotes = result.data.allReleaseNotes.edges;
-    releaseNotes.forEach(releaseNote => {
-      const template = calculateTemplate(releaseNote.node, "releaseNote");
-      createPage({
-        path: releaseNote.node.fields.slug,
-        component: path.resolve(`./src/templates/${template}.js`),
-        context: {
-          slug: releaseNote.node.fields.slug,
-        },
-      })
-      console.log('hello');
-    })
-
-
     // Create changelog pagination.
     const postsPerPage = 6
     const numPages = Math.ceil(changelogs.length / postsPerPage)
@@ -435,6 +418,18 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Create each release note page.
+    const releaseNotes = result.data.allReleaseNotes.edges;
+    releaseNotes.forEach(releaseNote => {
+      const template = calculateTemplate(releaseNote.node, "releaseNote");
+      createPage({
+        path: releaseNote.node.fields.slug,
+        component: path.resolve(`./src/templates/${template}.js`),
+        context: {
+          slug: releaseNote.node.fields.slug,
+        },
+      })
+    })
 
     // Create contributor pages.
     const contributors = result.data.allContributorYaml.edges
@@ -603,4 +598,3 @@ exports.onPreBootstrap = () => {
 
 /* todo should there be an error thrown if a release note category is set that is not allowed */
 /* todo, infer published date from file name. And throw an error if there are files that don't follow the pattern. */
-/* todo, make a json file of allowed categories, description of the category, color name */
