@@ -227,7 +227,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
 
-
       allChangelogs: allMdx(
         filter: {
           fileAbsolutePath: { regex: "/changelogs/"}
@@ -528,7 +527,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         node,
         value: excerpt,
       })
-
 
       const textNode = {
         id: `${node.id}-MarkdownBody`,
