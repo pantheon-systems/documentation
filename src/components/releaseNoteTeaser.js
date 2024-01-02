@@ -1,25 +1,16 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import ReleaseNoteCategories from "../components/releaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
 
+const ReleaseNoteTeaser = ({ ReleaseNoteData }) => {
 
-
-
-
-
-
-
-const ReleaseNoteTeaser = ({ key, ReleaseNoteData }) => {
-
-
-  console.log("ReleaseNoteData", ReleaseNoteData);
   if (!ReleaseNoteData) {
     return null
   }
 
   return (
-
+    <React.Fragment key={ReleaseNoteData.id}>
     <div>
       <Link
         to={`/${ReleaseNoteData.fields.slug}`}
@@ -38,6 +29,7 @@ const ReleaseNoteTeaser = ({ key, ReleaseNoteData }) => {
       <MdxWrapper mdx={ReleaseNoteData.body} />
 
     </div>
+    </React.Fragment>
   )
 }
 
