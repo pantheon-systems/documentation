@@ -3,8 +3,9 @@ import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
+import { releaseNoteCategories } from "../data/releaseNoteCategories.js"
 import { Container } from "@pantheon-systems/pds-toolkit-react"
-import {releaseNoteCategories} from "../data/releaseNoteCategories.js"
+
 
 // Set container width for search and main content.
 const containerWidth = "standard"

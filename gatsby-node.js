@@ -395,7 +395,7 @@ exports.createPages = ({ graphql, actions }) => {
         path: `/release-notes/`,
         component: path.resolve("./src/templates/releaseNotesListing.js"),
       })
-
+    // @todo, switch to "../data/releaseNoteCategories.js"
       const allowedReleaseNoteCategories = {
         "security": {
           "Display Name": "Security",

@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import { releaseNoteCategories } from "../data/releaseNoteCategories.js"
+
+
 
 const ReleaseNoteCategories = ({categories}) => {
 
@@ -15,13 +18,16 @@ if (!categories) {
     : <h3>Categories:</h3>
 }
 
-      {categories.map((category, index) => (
+
+      {categories.map((categorySlug, index) => (
+
+
         <div key={index}>
 
           <Link
-            to={`/release-notes/${category}`}
+            to={`/release-notes/${categorySlug}`}
           >
-            <h4>{category}</h4>
+            <h4 style={{ 'color': releaseNoteCategories[categorySlug].color }}>{releaseNoteCategories[categorySlug].displayName}</h4>
           </Link>
 
 
