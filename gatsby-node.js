@@ -421,7 +421,7 @@ exports.createPages = ({ graphql, actions }) => {
     // Create each release note page.
     const releaseNotes = result.data.allReleaseNotes.edges;
     releaseNotes.forEach(releaseNote => {
-      const template = calculateTemplate(releaseNote.node, "releaseNote");
+      const template = calculateTemplate(releaseNote.node, "releaseNotePage");
       createPage({
         path: releaseNote.node.fields.slug,
         component: path.resolve(`./src/templates/${template}.js`),

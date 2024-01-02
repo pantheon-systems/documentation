@@ -19,7 +19,9 @@ import SEO from "../layout/seo"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
-import ReleaseNoteCategories from "../components/releaseNoteCategories"
+import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
+import MdxWrapper from "../components/mdxWrapper.js"
+// import { releaseNotePseudoQueryFields } from "../data/fragments.js"
 
 
 import {
@@ -86,8 +88,6 @@ class ReleaseNotesListingTemplate extends React.Component {
 
   render() {
     const changelogs = this.props.data.allMdx.edges
-    console.log(changelogs)
-    console.log(changelogs[0].node.frontmatter.categories)
     return (
       <Layout containerWidth={containerWidth} footerBorder>
         <SEO
@@ -121,25 +121,9 @@ class ReleaseNotesListingTemplate extends React.Component {
 
 
                     <React.Fragment key={changelog.id}>
-                      <Link
-                        to={`/${changelog.node.fields.slug}`}
-                        className="individual-changelog-link"
-                      >
-                        <h2 id={changelog.node.fields.slug}>
-                          {changelog.node.frontmatter.title}
-                        </h2>
 
-                      </Link>
-                      Todo, transform to date format<br></br>
-                      {changelog.node.frontmatter.published_date}
+                      <ReleaseNoteTeaser key={changelog.id} ReleaseNoteData={changelog.node} />
 
-                      Maybe
-                      <ReleaseNoteCategories categories={changelog.node.frontmatter.categories} />
-
-
-                      <MDXProvider components={shortcodes}>
-                        <MDXRenderer>{changelog.node.body}</MDXRenderer>
-                      </MDXProvider>
                     </React.Fragment>
                   ))}
                 </div>
@@ -161,9 +145,10 @@ class ReleaseNotesListingTemplate extends React.Component {
 
 export default ReleaseNotesListingTemplate
 
-/* todo remove draft filter from query */
 export const pageQuery = graphql`
-  query Changelogs {
+
+
+query Changelogs {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/releasenotes/" }
