@@ -1,64 +1,19 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-
 import Layout from "../layout/layout"
-import NavButtons from "../components/navButtons"
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
-import TOC from "../components/toc"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
-import Enablement from "../components/enablement"
-import Color from "../components/color.js"
-import Download from "../components/download"
 import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
-import MdxWrapper from "../components/mdxWrapper.js"
 // import { releaseNotePseudoQueryFields } from "../data/fragments.js"
 
 
 import {
-  headline1,
-  headline2,
-  headline3,
-  headline4,
-} from "../components/releaseHeadlines"
-
-import {
   Container,
   Icon,
-  Pager,
 } from "@pantheon-systems/pds-toolkit-react"
-
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Enablement,
-  Color,
-  Download,
-  h1: headline2,
-  h2: headline3,
-  h3: headline4,
-}
 
 // Set container width for search and main content.
 const containerWidth = "standard"
 
-// Combined changelog template.
 class ReleaseNotesListingTemplate extends React.Component {
   componentDidMount() {
     $("[data-toggle=popover]").popover({
@@ -87,7 +42,7 @@ class ReleaseNotesListingTemplate extends React.Component {
   }
 
   render() {
-    const changelogs = this.props.data.allMdx.edges
+    const releasenotes = this.props.data.allMdx.edges
     return (
       <Layout containerWidth={containerWidth} footerBorder>
         <SEO
@@ -98,44 +53,18 @@ class ReleaseNotesListingTemplate extends React.Component {
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
             <h1>Pantheon Release Notes</h1>
-            <div className="pds-spacing-mar-block-end-3xl">
-              <p className="pds-lead-text pds-lead-text--small">
-                Sign up for the Pantheon Changelog Newsletter to receive a
-                monthly email on what's new and improved across the platform.
-              </p>
-              todo link to somewhere other than Pantheon learning.<br></br>
-              <a
-                className="pds-button"
-                href="https://learn.pantheon.io/Changelog-Opt-In.html"
-                target="_blank"
-              >
-                Subscribe Now
-                <Icon iconName="externalLink" />
-              </a>
-            </div>
             <hr />
             <div id="doc" className="doc changelog__content">
               <div id="pds-toc-source">
                 <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                  {changelogs.map((changelog) => (
-
-
-                    <React.Fragment key={changelog.id}>
-
-                      <ReleaseNoteTeaser key={changelog.id} ReleaseNoteData={changelog.node} />
-
+                  {releasenotes.map((releasenote) => (
+                    <React.Fragment key={releasenote.id}>
+                      <ReleaseNoteTeaser key={releasenote.id} ReleaseNoteData={releasenote.node} />
                     </React.Fragment>
                   ))}
                 </div>
               </div>
             </div>
-
-            <NavButtons
-              prev={this.props.pageContext.previous}
-              next={this.props.pageContext.next}
-              prevTitle="Older"
-              nextTitle="Newer"
-            />
           </Container>
         </main>
       </Layout>
@@ -148,7 +77,7 @@ export default ReleaseNotesListingTemplate
 export const pageQuery = graphql`
 
 
-query Changelogs {
+query releasenotes {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/releasenotes/" }
