@@ -1102,6 +1102,42 @@ export env=dev
 
 </Example>
 
+## Videos
+Use the Wistia and YouTube components to embed videos across the docs site.
+
+[Landing pages](https://github.com/pantheon-systems/documentation/blob/main/source/data/landings.yaml#L4) (e.g., [Get Started](/get-started), [Develop](/develop), [Go Live](/go-live), etc.) can set a `video_id` attribute to embed a YouTube sourced video to the top of the page. Embedding Wistia videos is not supported on landing pages at this time, however Wistia videos can be embedded elsewhere across the docs using the Wistia component as described below.
+
+### YouTube
+Use the YouTube component to embed YouTube videos. Set both `title` and `src`, for example:
+
+<Example>
+
+<Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
+
+<hr className="source-code" /> <br />
+
+```markdown
+<Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
+```
+
+</Example>
+
+### Wistia
+Use the Wistia component to embed Wistia videos. Set only the `src` without `title`, for example:
+
+<Example>
+
+<Wistia src="7gn1g3ljz6" />
+
+<hr className="source-code" /> <br />
+
+```markdown
+<Wistia src="7gn1g3ljz6" />
+```
+
+</Example>
+
+
 ## Voice, Style, and Flow
 
 Some General Rules:

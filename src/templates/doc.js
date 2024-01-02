@@ -33,6 +33,7 @@ import Youtube from "../components/youtube"
 import ResourceSelector from "../components/resourceSelector"
 import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
+import Wistia from "../components/wistia"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -61,6 +62,7 @@ const shortcodes = {
   ResourceSelector,
   DNSProviderDocs,
   Check,
+  Wistia,
 }
 
 // Set container width for search and main content.

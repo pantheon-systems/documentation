@@ -37,6 +37,7 @@ import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 import LocaldevChangelog from "../components/localdevChangelog"
 import SearchBar from "../layout/SearchBar"
+import Wistia from "../components/wistia"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -66,6 +67,7 @@ const shortcodes = {
   DNSProviderDocs,
   Check,
   LocaldevChangelog,
+  Wistia,
 }
 
 class GuideTemplate extends React.Component {

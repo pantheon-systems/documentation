@@ -20,6 +20,8 @@ integration: [--]
 
 [Autopilot](https://pantheon.io/autopilot?docs) automatically detects, performs, and deploys updates for WordPress and Drupal. Autopilot also features automated visual regression testing (VRT) to ensure that your site's user experience (UX) is consistent while securing your site and implementing new features.
 
+<Wistia src="g6syd1p6ed" />
+
 ## What Autopilot Does
 
 Pantheon's Autopilot:
