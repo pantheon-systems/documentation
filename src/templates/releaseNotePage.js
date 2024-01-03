@@ -57,35 +57,7 @@ class ReleaseNoteTemplate extends React.Component {
 
 export default ReleaseNoteTemplate
 
-const frontMatterFields = `
-  frontmatter {
-    title
-    published_date
-    categories
-  }
-`;
-/*
-const theQuery = `
-  query ReleaseNoteBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      id
-      body
-      fields {
-        slug
-      }
-      frontmatter {
-        title,
-        published_date,
-        categories
-      }
-    }
-  }
-`
-export const pageQuery = graphql(
-  {query: theQuery}
-  );
 
-*/
 
 export const somefields = graphql`
    fragment theReleaseNoteFields on Mdx {
@@ -99,24 +71,12 @@ export const somefields = graphql`
         published_date,
         categories
       }
-
-}
-
-
-`
+}`
 
 
 export const pageQuery = graphql`
-
-
-
 query ReleaseNoteBySlug($slug: String!) {
-
-
-
     mdx(fields: { slug: { eq: $slug } }) {
       ...theReleaseNoteFields
-
-
     }
   }`
