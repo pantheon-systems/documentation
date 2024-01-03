@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
 
-export const somefields = graphql`
+export const releaseNoteFragment = graphql`
    fragment theReleaseNoteFields on Mdx {
   id
   body

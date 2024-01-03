@@ -58,7 +58,6 @@ class ReleaseNoteTemplate extends React.Component {
 
 export default ReleaseNoteTemplate
 
-
 export const pageQuery = graphql`
 query ReleaseNoteBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {

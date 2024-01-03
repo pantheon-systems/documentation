@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
-import ReleaseNoteTeaserBySlug from "../components/releaseNoteTeaserBySlug.js"
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
 

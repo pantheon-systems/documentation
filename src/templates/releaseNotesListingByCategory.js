@@ -56,16 +56,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          id
-          body
-          frontmatter {
-            title,
-            published_date,
-            categories,
-          }
-          fields {
-            slug
-          }
+      ...theReleaseNoteFields
         }
       }
     }
