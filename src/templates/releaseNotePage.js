@@ -5,6 +5,7 @@ import SEO from "../layout/seo"
 import ReleaseNoteCategories from "../components/releaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
 import FormattedPublishedDate from "../components/formattedPublishedDate.js"
+// This is used to get the fields from the MDX file.
 import { releaseNotedFraggy } from "../fragments/releaseNote.js"
 import {
   Container,
@@ -56,22 +57,6 @@ class ReleaseNoteTemplate extends React.Component {
 }
 
 export default ReleaseNoteTemplate
-
-
-
-export const somefields = graphql`
-   fragment theReleaseNoteFields on Mdx {
-  id
-  body
-      fields {
-        slug
-      }
-      frontmatter {
-        title,
-        published_date,
-        categories
-      }
-}`
 
 
 export const pageQuery = graphql`
