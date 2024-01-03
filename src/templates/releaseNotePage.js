@@ -5,7 +5,7 @@ import SEO from "../layout/seo"
 import ReleaseNoteCategories from "../components/releaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
 import FormattedPublishedDate from "../components/formattedPublishedDate.js"
-
+import { releaseNotedFraggy } from "../fragments/releaseNote.js"
 import {
   Container,
   SidebarLayout,
@@ -87,20 +87,10 @@ export const pageQuery = graphql(
 
 */
 
-export const pageQuery = graphql`
-
-   fragment releaseNotedFields on Mdx {
+export const somefields = graphql`
+   fragment theReleaseNoteFields on Mdx {
   id
   body
-  }
-
-query ReleaseNoteBySlug($slug: String!) {
-
-
-
-    mdx(fields: { slug: { eq: $slug } }) {
-      ...releaseNotedFields
-
       fields {
         slug
       }
@@ -109,5 +99,24 @@ query ReleaseNoteBySlug($slug: String!) {
         published_date,
         categories
       }
+
+}
+
+
+`
+
+
+export const pageQuery = graphql`
+
+
+
+query ReleaseNoteBySlug($slug: String!) {
+
+
+
+    mdx(fields: { slug: { eq: $slug } }) {
+      ...theReleaseNoteFields
+
+
     }
   }`
