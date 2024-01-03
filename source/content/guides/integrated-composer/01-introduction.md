@@ -39,6 +39,8 @@ You can use the [Terminus Conversion Tools Plugin](https://github.com/pantheon-s
 
 </Alert>
 
+<p></p>
+
 ### WordPress with Integrated Composer
 
 <Alert title="Note" type="info">
