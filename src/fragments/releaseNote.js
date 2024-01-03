@@ -13,10 +13,3 @@ export const somefields = graphql`
         categories
       }
 }`
-
-
-export const releaseNotedFraggy = graphql`
-  fragment releaseNotedFraggy on Mdx {
-    id
-  }`
-

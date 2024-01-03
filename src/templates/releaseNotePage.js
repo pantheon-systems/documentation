@@ -6,7 +6,7 @@ import ReleaseNoteCategories from "../components/releaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
 import FormattedPublishedDate from "../components/formattedPublishedDate.js"
 // This is used to get the fields from the MDX file.
-import { releaseNotedFraggy } from "../fragments/releaseNote.js"
+import { releaseNoteFragment } from "../fragments/releaseNote.js"
 import {
   Container,
   SidebarLayout,

@@ -3,11 +3,15 @@ import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
-// import { releaseNotePseudoQueryFields } from "../data/fragments.js"
+import ReleaseNoteTeaserBySlug from "../components/releaseNoteTeaserBySlug.js"
+import { releaseNoteFragment } from "../fragments/releaseNote.js"
+
 
 import {
   Container,
 } from "@pantheon-systems/pds-toolkit-react"
+
+
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -30,6 +34,7 @@ class ReleaseNotesListingTemplate extends React.Component {
             <div id="doc" className="doc changelog__content">
                 <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
                   {releasenotes.map((releasenote) => (
+
                       <ReleaseNoteTeaser ReleaseNoteData={releasenote.node} />
                   ))}
                 </div>
@@ -44,7 +49,8 @@ class ReleaseNotesListingTemplate extends React.Component {
 export default ReleaseNotesListingTemplate
 
 export const pageQuery = graphql`
-query releasenotes {
+
+query releasenotesListing {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/releasenotes/" }
@@ -53,15 +59,8 @@ query releasenotes {
     ) {
       edges {
         node {
-          id
-          body
-          frontmatter {
-            title,
-            published_date,
-            categories,
-          }
-          fields {
-            slug
+          ... on Mdx {
+            ...theReleaseNoteFields
           }
         }
       }
