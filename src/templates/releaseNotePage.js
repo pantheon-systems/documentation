@@ -4,6 +4,8 @@ import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteCategories from "../components/releaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
+import FormattedPublishedDate from "../components/formattedPublishedDate.js"
+
 import {
   Container,
   SidebarLayout,
@@ -39,12 +41,10 @@ class ReleaseNoteTemplate extends React.Component {
                 className="changelog changelog--individual"
               >
                 <div id="doc" className="doc changelog__content">
-                  <div id="pds-toc-source">
                     <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-
+                      <FormattedPublishedDate dateString={node.frontmatter.published_date} />
                       <MdxWrapper mdx={node.body} />
                     </div>
-                  </div>
                 </div>
               </article>
             </SidebarLayout>

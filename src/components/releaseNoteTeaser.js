@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import ReleaseNoteCategories from "../components/releaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
+import FormattedPublishedDate from "./formattedPublishedDate.js"
 
 const ReleaseNoteTeaser = ({ ReleaseNoteData }) => {
 
@@ -21,13 +22,8 @@ const ReleaseNoteTeaser = ({ ReleaseNoteData }) => {
         </h2>
       </Link>
     <ReleaseNoteCategories categories={ReleaseNoteData.frontmatter.categories} />
-
-
-      Todo, transform to date format<br></br>
-      {ReleaseNoteData.frontmatter.published_date}
-
+      <FormattedPublishedDate dateString={ReleaseNoteData.frontmatter.published_date} />
       <MdxWrapper mdx={ReleaseNoteData.body} />
-
     </div>
     </React.Fragment>
   )
