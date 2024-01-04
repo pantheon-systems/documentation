@@ -8,36 +8,26 @@ MenuButton,
 } from "@pantheon-systems/pds-toolkit-react"
 
 
-const mainNavigationLinks = [
-  {
-    label: {
-      linkContent: (
-        <Link id="home" to="/">
-          Docs Home
-        </Link>
-      ),
-    },
-    links: [
+
+
+
+const releaseNoteCategoryMenuLinks = function (currentCategorySlug) {
+  const menuArray = []
+
+  // loop over the categories and add the displayName to the links array
+  Object.keys(releaseNoteCategories).map((categorySlug, index) => (
+    menuArray.push(
       {
-        linkContent: (
-          <Link id="home" to="/">
-            Docs Home
-          </Link>
-        ),
-      },
-      {
-        linkContent: (
-          <Link id="get-started" to="/get-started">
-            Get Started
-          </Link>
-        ),
-      },
-]}
+        "label": releaseNoteCategories[categorySlug].displayName,
+        "callback": () => { window.location.href = `/release-notes/${categorySlug}` },
+      }
+    )
+  ))
 
-]
+  return menuArray;
+}
 
-
-const releaseNoteCategoryLinks = function () {
+const releaseNoteCategoryLinks = function (currentCategorySlug) {
 
   const links = [
 
@@ -49,7 +39,7 @@ const releaseNoteCategoryLinks = function () {
 
       {
         linkContent: (
-          <Link id="get-started" to="/get-started">
+          <Link id={`${categorySlug}`} to={`/release-notes/${categorySlug}`}>
           {
               releaseNoteCategories[categorySlug].displayName
 
@@ -62,61 +52,28 @@ const releaseNoteCategoryLinks = function () {
       )
   ))
   return links;
-
 }
 
 
-
-
 // Loop through the categories and create a list of links to each category.
-
-
-
 const ReleaseNoteCategorySelector = (currentCategorySlug) => {
-
-
-
   return (
     <div>
-   These are all the categories!
-
-<ul>
-
-
-{
-
-// Loop through the categories and create a list of links to each category.
-Object.keys(releaseNoteCategories).map((categorySlug, index) => (
-  <li key={index}>
-    <Link
-      to={`/release-notes/${categorySlug}`}
-
-      style={{ 'color': releaseNoteCategories[categorySlug].color }}
-    >
-      { // If the current category is the same as the category we're looping through, add a checkmark.
-        currentCategorySlug === categorySlug &&
-        <span role="img" aria-label="Current category">✅</span>
-      }
-
-      {releaseNoteCategories[categorySlug].displayName}
-
-
-    </Link>
-  </li>
-))
-}
-</ul>
-
       <div>
         and another way
         <NavMenu
         label="Categories"
-          menuItems={releaseNoteCategoryLinks()}
+          menuItems={releaseNoteCategoryLinks(currentCategorySlug)}
          />
-
-
       </div>
 
+      <div>
+        and another way
+        <MenuButton
+          label="Categories"
+          menuItems={releaseNoteCategoryMenuLinks(currentCategorySlug)}
+        />
+      </div>
 
 
 
