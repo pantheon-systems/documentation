@@ -68,7 +68,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/source/releasenotescategories`,
-        name: `releasenotecategories`,
+        name: `releasenotescategories`,
       },
     },
     {

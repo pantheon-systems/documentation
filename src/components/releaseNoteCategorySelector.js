@@ -1,27 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
-import { releaseNoteCategories } from "../data/releaseNoteCategories.js"
+import releaseNoteCategoriesObject from "../../source/releasenotescategories/releaseNoteCategories.json"
 import {
 MenuButton,
   NavMenu,
 } from "@pantheon-systems/pds-toolkit-react"
 
 
-const releaseNoteCategoryMenuLinks = function (currentCategorySlug) {
-  const menuArray = []
-
-  // loop over the categories and add the displayName to the links array
-  Object.keys(releaseNoteCategories).map((categorySlug, index) => (
-    menuArray.push(
-      {
-        "label": releaseNoteCategories[categorySlug].displayName,
-        "callback": () => { window.location.href = `/release-notes/${categorySlug}` },
-      }
-    )
-  ))
-  return menuArray;
-}
-
+/*
 const releaseNoteCategoryLinks = function (currentCategorySlug) {
   const links = [];
   // loop over the categories and add the displayName to the links array
@@ -40,13 +25,36 @@ const releaseNoteCategoryLinks = function (currentCategorySlug) {
   ))
   return links;
 }
+*/
+
+const releaseNoteCategoryLinksFromJson = function () {
+  const menuItems = [
+    {
+      "label": "All Release Notes",
+      "callback": () => { window.location.href = `/release-notes` },
+    }
+  ];
+  // loop over the categories and add the displayName to the links array
+  releaseNoteCategoriesObject.categories.forEach((category) => {
+
+    menuItems.push(
+      {
+        "label": category.displayName,
+        "callback": () => { window.location.href = `/release-notes/${category.slug}` },
+      }
+    )
+  })
+
+  return menuItems;
+}
+
 
 // Loop through the categories and create a list of links to each category.
 const ReleaseNoteCategorySelector = (currentCategorySlug) => {
   return (
     <MenuButton
       label="Categories"
-      menuItems={releaseNoteCategoryMenuLinks(currentCategorySlug)}
+      menuItems={releaseNoteCategoryLinksFromJson()}
     />
   )
 }

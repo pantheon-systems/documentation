@@ -3,6 +3,7 @@
         "name": "Terminus",
         "version": "3.3.0"
     },
+
     "commands": [
         {
             "name": "aliases",

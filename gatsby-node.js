@@ -284,7 +284,7 @@ exports.createPages = ({ graphql, actions }) => {
           usage
         }
       }
-      releasenotecategoriesJson {
+      releasenotescategoriesJson {
         categories {
           slug
         }
@@ -411,7 +411,7 @@ exports.createPages = ({ graphql, actions }) => {
  // Loop through all allowed categories and create a page for each one.
     Object.keys(allowedReleaseNoteCategories).forEach((category) => {
       createPage({
-        path: `/release-notes/${category}`,
+        path: `/release-notez/${category}`,
         component: path.resolve("./src/templates/releaseNotesListingByCategory.js"),
         context: {
           category: category,
@@ -421,8 +421,18 @@ exports.createPages = ({ graphql, actions }) => {
 
 
     // // Create Terminus Command pages
-     const allReleaseNoteCategories = result.data.dataJson.jokes
+     const allReleaseNoteCategories = result.data.releasenotescategoriesJson.categories
      console.log(allReleaseNoteCategories)
+      allReleaseNoteCategories.forEach(category => {
+        createPage({
+          path: `/release-notes/${category.slug}`,
+          component: path.resolve("./src/templates/releaseNotesListingByCategory.js"),
+          context: {
+            category: category.slug,
+          },
+        })
+      })
+
     // terminusCommands.forEach(command => {
     //   const slugRegExp = /:/g
     //   const slug = command.name.replace(slugRegExp, "-")
