@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
+import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
 
@@ -29,6 +30,7 @@ class ReleaseNotesListingTemplate extends React.Component {
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
             <h1>Pantheon Release Notes</h1>
+            <ReleaseNoteCategorySelector />
             <hr />
             <div id="doc" className="doc changelog__content">
                 <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">

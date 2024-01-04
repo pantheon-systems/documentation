@@ -1,12 +1,5 @@
 export const releaseNoteCategories = {
-  "security": {
-    "displayName": "Security",
-    "color": "red"
-  },
-  "documentation": {
-    "displayName": "Documentation",
-    "color": "purple"
-  },
+
   "action-required": {
     "displayName": "Action Required",
     "color": "red",
@@ -98,7 +91,7 @@ export const releaseNoteCategories = {
     "description": "Reserved for updates related to migrations, ensuring users are informed about changes affecting the movement of data and content within the Pantheon platform"
   },
   "integration": {
-    "displayName": "",
+    "displayName": "Integration",
     "color": "gray",
     "description": "Addresses updates related to system integration, helping IT and tech leads understand changes relevant to connecting Pantheon with other tools and services",
     "_comment-from-Rachel": "I think we should remove this as a duplicate of the Tools/APIs category"

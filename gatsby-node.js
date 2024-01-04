@@ -10,29 +10,6 @@ https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
 The contents of this file define how the source content is converted
 into web pages. It is prime for refactoring.
 */
-/*
-exports.createResolvers = ({ createResolvers }) => {
-  createResolvers({
-    Query: {
-      // Include the fragment in every query
-      releaseNotedFraggy: {
-        type: "Mdx", // Adjust the type based on your schema
-        resolve: () => ({}),
-      },
-      releaseNotedFraggy: {
-        type: "Node", // Adjust the type based on your schema
-        resolve: () => ({}),
-      },
-      body: {
-        type: "Node", // Adjust the type based on your schema
-        resolve: () => ({}),
-      },
-    },
-  });
-};
-
-*/
-
 
 /** This helper function determines what slug a piece of content will use */
 const calculateSlug = (node, getNode) => {
