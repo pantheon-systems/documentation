@@ -6,10 +6,8 @@ import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
 import { releaseNoteCategories } from "../data/releaseNoteCategories.js"
 import { Container } from "@pantheon-systems/pds-toolkit-react"
 
-
 // Set container width for search and main content.
 const containerWidth = "standard"
-
 
 class ReleaseNotesListingByCategoryTemplate extends React.Component {
 
@@ -28,6 +26,7 @@ class ReleaseNotesListingByCategoryTemplate extends React.Component {
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
             <h1>Pantheon Release Notes: {categoryDisplayName}</h1>
+            TODO Render the category description here.
             <hr />
             <div id="doc" className="doc changelog__content">
                 <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
