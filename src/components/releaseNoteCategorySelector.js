@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { releaseNoteCategories } from "../data/releaseNoteCategories.js"
-
 import {
 MenuButton,
   NavMenu,
@@ -45,24 +44,20 @@ const releaseNoteCategoryLinks = function (currentCategorySlug) {
 // Loop through the categories and create a list of links to each category.
 const ReleaseNoteCategorySelector = (currentCategorySlug) => {
   return (
-    <div>
-      <div>
-        and another way
+    <MenuButton
+      label="Categories"
+      menuItems={releaseNoteCategoryMenuLinks(currentCategorySlug)}
+    />
+  )
+}
+
+// Loop through the categories and create a list of links to each category.
+const ReleaseNoteCategorySelectorNav = (currentCategorySlug) => {
+  return (
         <NavMenu
-        label="Categories"
-          menuItems={releaseNoteCategoryLinks(currentCategorySlug)}
-         />
-      </div>
-
-      <div>
-        and another way
-        <MenuButton
           label="Categories"
-          menuItems={releaseNoteCategoryMenuLinks(currentCategorySlug)}
+          menuItems={releaseNoteCategoryLinks(currentCategorySlug)}
         />
-      </div>
-
-    </div>
   )
 }
 

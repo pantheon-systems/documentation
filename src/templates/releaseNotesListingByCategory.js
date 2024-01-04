@@ -27,7 +27,7 @@ class ReleaseNotesListingByCategoryTemplate extends React.Component {
         <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
             <h1>Pantheon Release Notes: {categoryDisplayName}</h1>
-            TODO Render the category description here.
+            <p>TODO Render the category description here.</p>
             <ReleaseNoteCategorySelector />
             <hr />
             <div id="doc" className="doc changelog__content">
