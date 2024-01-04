@@ -2,9 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 import { releaseNoteCategories } from "../data/releaseNoteCategories.js"
 
+import {
+MenuButton
+} from "@pantheon-systems/pds-toolkit-react"
 
 
 
+const categoryLinks = [];
 const ReleaseNoteCategorySelector = (currentCategorySlug) => {
 
 
@@ -14,7 +18,10 @@ const ReleaseNoteCategorySelector = (currentCategorySlug) => {
    These are all the categories!
 
 <ul>
+
+
 {
+
 // Loop through the categories and create a list of links to each category.
 Object.keys(releaseNoteCategories).map((categorySlug, index) => (
   <li key={index}>
@@ -37,7 +44,39 @@ Object.keys(releaseNoteCategories).map((categorySlug, index) => (
 }
 </ul>
 
+      <div>
+        and another way
+
+        {
+
+          // Loop through the categories and create a list of links to each category.
+          Object.keys(releaseNoteCategories).map((categorySlug, index) => (
+
+              <Link
+                to={`/release-notes/${categorySlug}`}
+
+                style={{ 'color': releaseNoteCategories[categorySlug].color }}
+              >
+                {releaseNoteCategories[categorySlug].displayName}
+              </Link>
+
+          ))
+        }
+
+
+
+      </div>
+
+
+
+
     </div>
+
+
+
+
+
+
 
   )
 }
