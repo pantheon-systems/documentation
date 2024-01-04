@@ -276,7 +276,6 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-
       dataJson {
         commands {
           description
@@ -285,7 +284,11 @@ exports.createPages = ({ graphql, actions }) => {
           usage
         }
       }
-
+      releasenotecategoriesJson {
+        categories {
+          slug
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -415,6 +418,23 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+
+    // // Create Terminus Command pages
+     const allReleaseNoteCategories = result.data.dataJson.jokes
+     console.log(allReleaseNoteCategories)
+    // terminusCommands.forEach(command => {
+    //   const slugRegExp = /:/g
+    //   const slug = command.name.replace(slugRegExp, "-")
+    //   createPage({
+    //     path: `terminus/commands/${slug}`,
+    //     component: path.resolve(`./src/templates/terminusCommand.js`),
+    //     context: {
+    //       slug: slug,
+    //       name: command.name
+    //     }
+    //   })
+    // })
 
     // Create each release note page.
     const releaseNotes = result.data.allReleaseNotes.edges;
