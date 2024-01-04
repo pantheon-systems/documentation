@@ -116,5 +116,4 @@ export const releaseNoteCategories = {
     "_comment-from-Rachel": "Review needed: New category not yet reviewed/approved by Ingrid or design team",
     "_another_comment-from-Rachel": "We should require any new category to go through a review panel which includes design team, since too many tags can reduce usability of the feature and duplicate categories can cause confusion for intended usage."
   }
->>>>>>> origin/backfill-release-notes
 };
