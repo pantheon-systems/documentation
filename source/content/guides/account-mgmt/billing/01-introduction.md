@@ -18,7 +18,7 @@ reviewed: "2022-09-19"
 
 This guide covers billing periods, payment methods, managing invoices, and more.
 
-The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to the billing information described on this page.
+The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<Icon icon="users" />Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to the billing information described on this page.
 
 <Alert title="Note" type="info">
 

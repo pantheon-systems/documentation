@@ -94,7 +94,7 @@ WP-Stateless is another option for GCS integration. Refer to the [full installat
 
 ## URL Rewriting
 
-URLs saved in the database use GCS-provided URLs (for example, https://storage.googleapis.com/example.com/2023/1/image.jpg) by default.[Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) can mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request Domain Masking if you have AGCDN.
+URLs saved in the database use GCS-provided URLs (for example, `https://storage.googleapis.com/example.com/2023/1/image.jpg`) by default.[Advanced Global CDN](/guides/agcdn/agcdn-features#domain-masking-and-reverse-proxy) can mask the URLs to match your site's domain for SEO purposes. [Contact sales](https://pantheon.io/contact-sales) if you do not have AGCDN or open a [support ticket](/guides/agcdn/submit-request#submit-a-request) to request Domain Masking if you have AGCDN.
 
 ## More Resources
 

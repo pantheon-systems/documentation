@@ -114,7 +114,7 @@ Download the [Partner Program guide](https://pantheon.io/resources/pantheon-part
 
 ## Custom Upstreams for Corporate and Higher Education Customers 
 
-Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+Custom Upstreams are included for [Pantheon Enterprise](https://pantheon.io/plans/elite) Gold Accounts and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 
@@ -150,4 +150,3 @@ Here are definitions for commonly used terms:
 - [WordPress and Drupal Core Updates](/core-updates)
 
 - [Autopilot for Custom Upstreams](/guides/autopilot-custom-upstream)
-

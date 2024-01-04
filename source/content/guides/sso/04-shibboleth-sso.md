@@ -91,10 +91,10 @@ The commands below require a [nested docroot](/nested-docroot) structure and mus
  ```json:title=composer.json
 "scripts": {
     "post-update-cmd": [
-        "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        "rm-rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ],
     "post-install-cmd": [
-        "ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        "rm-rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
     ]
 },
  ```
@@ -264,7 +264,7 @@ The Support team has tested this module on Pantheon using Okta.
 
 ### OAuth
 
-[OAuth](https://oauth.net/) is an open authorization standard that Pantheon customers have reported success using. Refer to [SSO and Identity Federation on Pantheon](sso#oauth) for more information.
+[OAuth](https://oauth.net/) is an open authorization standard that Pantheon customers have reported success using. Refer to [SSO and Identity Federation on Pantheon](/guides/sso/sso#oauth) for more information.
 
 ### WP SAML Auth with Google Apps
 

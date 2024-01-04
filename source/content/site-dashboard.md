@@ -16,17 +16,19 @@ reviewed: 2023-04-19
 
 The Pantheon Site Dashboard is the hub of all development and activity for an individual site.
 
-![The Pantheon Site Dashboard](../images/dashboard/site-dashboard-image.png)
+![The Pantheon Site Dashboard](../images/dashboard/new-dashboard/site-dashboard.png)
 
 ## Header Elements
 
 On the top left of the page, you will see the following information:
+
 - The icon for the CMS you have installed
 - The name of the site.
 - If applicable, a yellow **Upgrade** button, that will allow you to [upgrade the site](/guides/account-mgmt/plans/site-plans).
 - If applicable, the name of the Professional Workspace containing this site.
 
 On the right side, there are two rows of options:
+
 - Workflows: displays information about any active workflows.
 - Team: [manage the team](/guides/account-mgmt/workspace-sites-teams/teams#manage-teams) specific to this site.
 - Settings: [manage add ons](/guides/account-mgmt/plans/site-plans), [delete site](https://docs.pantheon.io/guides/account-mgmt/workspace-sites-teams/sites), and site information, including the PHP version.
@@ -35,21 +37,21 @@ On the right side, there are two rows of options:
 
 ## Environment Tabs
 
-### <span class="glyphicons glyphicons-cloud"></span> Multidev
+### <Icon icon="cloud" size="lg"/> Multidev
 
 Multidev enables developers to design and build in multiple concurrent development environments with just a few clicks without touching the live site.
 
-### <span class="glyphicons glyphicons-wrench"></span> Dev
+### <Icon icon="wrench" size="lg"/> Dev
 
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
 Within the safety of this isolated environment, you can edit code and make updates to your site. All development on your Pantheon sites starts here.
 
-### <span class="glyphicons glyphicons-equalizer"></span> Test
+### <Icon icon="equalizer" /> Test
 
 This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 
-### <span class="glyphicons glyphicons-cardio"> </span> Live
+### <Icon icon="wavePulse" size="lg"/> Live
 
 This environment is for your live site, where content creators actively post and upload media files. After passing review, you push your new code “up” from the Test environment to this Live environment.
 
@@ -83,7 +85,7 @@ The following links are located within your Dev, Test, and Live environment tabs
 
 - **Backup:** Create a backup of the environment.
 
-  - **Backup Log:** View existing backups of the environment. Click the <Icon icon={"download-alt"} text={"Download"}/> icon to download individual archives within a backup.
+  - **Backup Log:** View existing backups of the environment. Click the <Icon icon="download" text="Download"/> icon to download individual archives within a backup.
 
   - **Backup Schedule:** Schedule daily or weekly automatic backups of the environment. (This feature is only available on paid plans.)
 

@@ -21,7 +21,7 @@ This section provides information on editing an existing Custom Upstream.
 
 Follow the steps below if you want to change the name or description of your Custom Upstream.
 
-1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
+1. Navigate to the **[<Icon icon="users" />Organizations](https://dashboard.pantheon.io/#organizations")** tab within the Pantheon Dashboard and select your organization.
 
 1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 

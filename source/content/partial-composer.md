@@ -177,9 +177,9 @@ Note that Pantheon does not run `composer install` on the platform, so you need 
   git push origin master
   ```
 
-1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard.
+1. Navigate to the **<Icon icon="wrench" /> Dev** environment of the Site Dashboard.
 
-1. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
+1. Click the  <Icon icon="externalLink" /> **Site Admin** button and login.
 
 1. Navigate to **Plugins** and activate Pantheon Advanced Page Cache.
 

@@ -75,6 +75,11 @@ Use **Build Tools** if:
 1. Select either the `Pantheon Decoupled Profile`, or the `Pantheon Decoupled Umami Demo` profile. The same can be done via [`terminus remote:drush`](/terminus/commands/remote-drush).
 
     - The Umami Demo contains additional demo data, and is not intended for use in a production site build.
+    - The Decoupled Umami Demo must first be added to your project as a dependency using composer:
+
+        ```bash{promptUser: user}
+        composer require drupal/pantheon_decoupled_umami_demo
+        ```
 
 Your backend starter is ready to develop!
 
@@ -149,6 +154,12 @@ terminus self:plugin:uninstall terminus-power-tools
 #### Install with Umami Demo Data
 
 The Build Tools installation process will create a backend with limited example content. To create a site with Drupal's Umami demo data set instead, change the profile flag to `--profile="pantheon_decoupled_umami_demo"` in the `terminus build:project:create` command.
+
+    - The Decoupled Umami Demo must first be added to your project as a dependency using composer:
+
+        ```bash{promptUser: user}
+        composer require drupal/pantheon_decoupled_umami_demo
+        ```
 
 #### Use Other Git Hosts or CI Services
 

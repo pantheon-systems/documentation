@@ -119,7 +119,7 @@ Review the available step definitions again by running `./vendor/bin/behat -dl`,
 
 If you find you are repeating the same things over and over, such as logging into WordPress or Drupal, try framework extensions. Each one adds additional steps, specific to their corresponding framework:
 
-- [Behat WordPress Extension](https://wordhat.info/)
+- [Behat WordPress Extension](https://github.com/paulgibbs/behat-wordpress-extension)
 - [Behat Drupal Extension](https://www.drupal.org/project/drupalextension)
 
 ## More Resources

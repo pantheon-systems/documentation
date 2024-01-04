@@ -8,10 +8,6 @@
     "url": "https://github.com/pantheon-systems/documentation/issues"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.19",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@pantheon-systems/pds-toolkit-react": "^1.0.0-dev.44",
@@ -25,7 +21,6 @@
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-feed": "^4.25.0",
-    "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-google-tagmanager": "^4.25.0",
     "gatsby-plugin-image": "^2.25.0",
     "gatsby-plugin-manifest": "^4.25.0",
@@ -57,7 +52,6 @@
     "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.7.2",
     "new-github-issue-url": "^0.2.1",
-    "node-font-awesome": "^1.0.2",
     "postcss": "^8.4.21",
     "prismjs": "^1.29.0",
     "react": "^17.0.2",
@@ -85,6 +79,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pantheon-systems/documentation.git"
+  },
+  "engines": {
+    "node": ">=18.0.0 <20.0.0"
   },
   "scripts": {
     "build": "gatsby build --prefix-paths --log-pages",

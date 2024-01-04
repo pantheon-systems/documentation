@@ -50,7 +50,7 @@ Use the latest version of Drupal and Drupal 7 configuration snippets in the subs
 
 ### Drupal (Latest Version)
 
-1. Configure environment-specific settings within the `settings.local.php` file, which is ignored by Git in the Pantheon [Drupal upstream](https://github.com/pantheon-systems/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
+1. Configure environment-specific settings within the `settings.local.php` file, which is ignored by Git in the Pantheon [Drupal upstream](https://github.com/pantheon-upstreams/drupal-composer-managed). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
   ```php
     /**
@@ -231,7 +231,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I get a copy of a default.settings.php file?
 
-- **Drupal (Latest Version):** There is no `default.settings.php` file in the latest version of Drupal repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/web/sites/default/settings.php)
+- **Drupal (Latest Version):** There is no `default.settings.php` file in the latest version of Drupal repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/web/sites/default/settings.php](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/web/sites/default/settings.php)
 
 - **Drupal 7:** [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 

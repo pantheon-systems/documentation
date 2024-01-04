@@ -26,13 +26,13 @@ The steps below will guide you through the process of migrating a site onto Pant
 
 ## Connect Domain
 
-1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+1. Access the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
+1. Navigate to the **<Icon icon="global" /> Domains / HTTPS** page.
 
 1. Enter the `www` domain (for example, `www.example.com`), then click **Connect Domain**. You'll enter the bare domain (without the `www`) in a later step.
 
-1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security. 
+1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security.
 
 1. Click **Verify Ownership** to confirm.
 
@@ -56,7 +56,7 @@ The steps below will guide you through the process of migrating a site onto Pant
 
   Wait one minute, then refresh the page.
 
-1. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
+1. Click **<Icon icon="arrowLeft" /> Back to Domains/HTTPS**.
 
 1. Select **Connect Domain** and enter the bare domain (for example, `example.com`, and then click **Connect Domain**.
 
@@ -82,25 +82,25 @@ After you begin this process, you have:
 
 </Alert>
 
-1. Navigate to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+1. Navigate to the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Select the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
+1. Select the **<Icon icon="global" /> Domains / HTTPS** page.
 
 1. Select **Details** next to the bare domain.
 
-1. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
+1. Click **<Icon icon="download" /> Download File**.
 
 1. Serve the file from your existing live site. Drupal users can use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
 
     <Alert title="Note" type="info">
 
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
-    
+
    A misconfiguration of the validation file invalidates these records. You will receive an error message if the DNS validation fails.
-    
+
    </Alert>
 
-1. Return to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
+1. Return to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and refresh the **<Icon icon="global" /> Domains / HTTPS** page.
 
 Your domain's HTTPS certificate(s) will begin to generate automatically after your verify domain ownership. The certificate will automatically deploy to Pantheon’s Global CDN within an hour.
 

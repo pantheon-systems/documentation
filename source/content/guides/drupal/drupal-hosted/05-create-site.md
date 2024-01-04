@@ -1,7 +1,7 @@
 ---
 title: Upgrade a Drupal Site to the Latest Version of Drupal
 subtitle: Create the Drupal Site
-description: 
+description:
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 permalink: docs/guides/drupal-hosted/create-site
@@ -26,7 +26,7 @@ integration: [--]
 
    After you click **Continue**, it will take several minutes for the platform to configure everything.
 
-1. In the **<span class="fa fa-wrench"></span> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/guides/sftp).
+1. In the **<Icon icon="wrench" /> Dev** tab on the Dashboard, set the site's Development Mode to [SFTP](/guides/sftp).
 
 1. In the Dev tab, click **Visit Development Site** and follow the prompts to complete the CMS installation.
 

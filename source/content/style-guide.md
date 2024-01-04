@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [wordsmither]
-reviewed: "2023-06-15"
+reviewed: "2023-11-29"
 contenttype: [doc]
 showtoc: true
 categories: [overview, help]
@@ -601,11 +601,35 @@ Use relative paths when linking to other pages of the docs site.
 
 ## Icons
 
+[List of available icons](https://live-pds-toolkit-react.appa.pantheon.site/?path=/docs/components-icon--docs)
+<Accordion title="Legacy icons" id="legacy-icons">
+These additional icons will be deprecated but are currently available to represent icons in the site dashboard.
+
+- <Icon icon="charts" /> <code>charts</code>
+- <Icon icon="cleaning" /> <code>cleaning</code>
+- <Icon icon="cloud-upload" /> <code>cloud-upload</code>
+- <Icon icon="equalizer" /> <code>equalizer</code>
+- <Icon icon="global" /> <code>global</code>
+- <Icon icon="server" /> <code>server</code>
+
+</Accordion>
+
+<Example>
+
+<br/>
+
+<Icon icon="userPlus" text="Add user"/>
+
+<hr className="source-code" /> <br/>
+
 ```
-<Icon icon={"more-windows"} text={"Sites:"}/>
+<Icon icon="userPlus" text="Add user" />
 ```
 
-[Font Awesome Web Application Icons](https://www.w3schools.com/icons/fontawesome_icons_webapp.asp)
+
+</Example>
+
+
 
 ## Italics
 

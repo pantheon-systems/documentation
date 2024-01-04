@@ -8,9 +8,9 @@ tags: [--]
 reviewed: ""
 ---
 
-2. Select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment in the Site Dashboard.
+2. Select the **<Icon icon="wrench" /> Dev** environment in the Site Dashboard.
 
-3. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+3. Select **<Icon icon="server" /> Database / Files**.
 
 4. Click **Import** and then add your archive (based on file size) by following the steps below.
 
@@ -79,7 +79,7 @@ reviewed: ""
       done
       ```
 
-   Your files will be uploaded to your Pantheon site's **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. If an error occurs during transfer, the command waits 180 seconds before continuing where it left off.
+   Your files will be uploaded to your Pantheon site's **<Icon icon="wrench" /> Dev** environment. If an error occurs during transfer, the command waits 180 seconds before continuing where it left off.
 
   </Tab>
 

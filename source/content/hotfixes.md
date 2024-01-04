@@ -52,8 +52,8 @@ Note that [Integrated Composer](/guides/integrated-composer) is not compatible w
    ```bash{outputLines: 2-16}
    git checkout pantheon_live_1
    Note: checking out 'pantheon_live_1'.
-   
-    
+
+
    You are in 'detached HEAD' state. You can make experimental
    changes and commit them, and you can discard any commits you make without impacting any branches by performing another checkout.
    ...
@@ -99,7 +99,7 @@ Because we use caching on our Git logs, you may not see your hotfix commit liste
 
 You will see a message that there is a pending change that needs to be deployed if your tests pass.
 
-1. Open **<span class="glyphicons glyphicons-refresh"></span> Deploys** and click the **<span class="glyphicons glyphicons-cardio"></span> Live** tab to see changes pending deployment.
+1. Open **<Icon icon="rotate" /> Deploys** and click the **<Icon icon="wavePulse" /> Live** tab to see changes pending deployment.
 
 1. Create a `_new_` tag to deploy changes to Live:
 

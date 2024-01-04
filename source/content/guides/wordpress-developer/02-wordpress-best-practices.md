@@ -19,7 +19,7 @@ This section provides suggestions for best practices to develop and manage WordP
 
 ## Development
 
-- Use an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Brackets](https://github.com/adobe/brackets/), or [Visual Studio Code](/guides/local-development/visual-studio-code).
+- Use an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), [Brackets](https://github.com/adobe/brackets/), [CodeLobster](https://codelobster.com/), or [Visual Studio Code](/guides/local-development/visual-studio-code).
 
 - Do not modify core WordPress files. Core file modification frequently causes unintended issues, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).  Create a custom or [Must Use](/guides/wordpress-configurations/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/) if you need to modify any WP functionality.
 

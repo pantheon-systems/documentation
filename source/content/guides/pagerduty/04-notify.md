@@ -37,7 +37,7 @@ Now we'll add a Service, which is any application, component, or team you wish t
 
 Now we'll hookup our PagerDuty service as a notification channel for our alert policy in New Relic&reg;:
 
-1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic** then **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Go to New Relic**.
+1. Navigate to the **<Icon icon="wrench" /> Live** environment in your Site Dashboard, and click **<Icon icon="eye" /> New Relic** then **<Icon icon="externalLink" /> Go to New Relic**.
 
 1. Go to **Alerts & AI** from the top menu, then **Notification Channels** from the right.
 

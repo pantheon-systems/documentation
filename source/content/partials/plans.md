@@ -16,7 +16,7 @@ The List Price is the set price for new sites created after November 15, 2018 th
 
 <Tab title="Preferred Price" id="tab-2-id">
 
-[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](https://pantheon.io/partner-program).
+[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](https://pantheon.io/partners).
 
 
 |                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
