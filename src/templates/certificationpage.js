@@ -29,6 +29,7 @@ import Check from "../components/check.js"
 import Partial from "../components/partial"
 import Youtube from "../components/youtube"
 import SearchBar from "../layout/SearchBar"
+import Wistia from "../components/wistia"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -51,6 +52,7 @@ const shortcodes = {
   ReviewDate,
   Check,
   Youtube,
+  Wistia,
 }
 
 // @TODO relocate this list

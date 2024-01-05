@@ -9,6 +9,7 @@ import Youtube from "../components/youtube"
 import GuideItem from "../layout/guide-item"
 import IntegrationGuideItem from "../layout/integration-guide-item"
 import SEO from "../layout/seo"
+import Wistia from "../components/wistia"
 
 import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
 
