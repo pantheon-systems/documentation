@@ -1,5 +1,6 @@
 import React from "react"
 import releaseNoteCategoriesObject from "../../source/releasenotescategories/releaseNoteCategories.json"
+import { navigate } from "@reach/router"
 import {
 MenuButton,
   NavMenu,
@@ -28,6 +29,7 @@ const releaseNoteCategoryLinks = function (currentCategorySlug) {
 */
 
 const releaseNoteCategoryLinksFromJson = function () {
+
   const menuItems = [
     {
       "label": "All Release Notes",
@@ -43,14 +45,13 @@ const releaseNoteCategoryLinksFromJson = function () {
     menuItems.push(
       {
         "label": category.displayName,
-        "callback": () => { window.location.href = `/release-notes/${category.slug}` },
+        "callback": () => { navigate( `/release-notes/${category.slug}`  ) },
       }
     )
   })
 
   return menuItems;
 }
-
 
 // Loop through the categories and create a list of links to each category.
 const ReleaseNoteCategorySelector = (currentCategorySlug) => {
