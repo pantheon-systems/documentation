@@ -30,10 +30,14 @@ const releaseNoteCategoryLinks = function (currentCategorySlug) {
 
 const releaseNoteCategoryLinksFromJson = function () {
 
+  const navigateToCategory = (categorySlug) => {
+    return window.location.href = `/release-notes/${categorySlug}`
+  }
+
   const menuItems = [
     {
       "label": "All Release Notes",
-      "callback": () => { window.location.href = `/release-notes` },
+      "callback": function () { window.location.href = `/release-notes` },
     },
     {
       "isSeparator": true
@@ -45,7 +49,10 @@ const releaseNoteCategoryLinksFromJson = function () {
     menuItems.push(
       {
         "label": category.displayName,
-        "callback": () => { navigate( `/release-notes/${category.slug}`  ) },
+        // "callback": { navigateToCategory(`${category.slug }`) },
+        //"callback": () => { window.location.href = `/release-notes/${category.slug}` },
+        //"callback": () => { navigateToCategory(`${category.slug}`) },
+        "callback": function () { window.location.href = `/release-notes/${category.slug}` },
       }
     )
   })
