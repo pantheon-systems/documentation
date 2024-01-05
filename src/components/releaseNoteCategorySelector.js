@@ -32,6 +32,9 @@ const releaseNoteCategoryLinksFromJson = function () {
     {
       "label": "All Release Notes",
       "callback": () => { window.location.href = `/release-notes` },
+    },
+    {
+      "isSeparator": true
     }
   ];
   // loop over the categories and add the displayName to the links array
