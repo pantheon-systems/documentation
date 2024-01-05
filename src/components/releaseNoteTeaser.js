@@ -21,7 +21,7 @@ const ReleaseNoteTeaser = ({ ReleaseNoteData }) => {
           {ReleaseNoteData.frontmatter.title}
         </h2>
       </Link>
-    <ReleaseNoteCategories categories={ReleaseNoteData.frontmatter.categories} />
+        <ReleaseNoteCategories categories={ReleaseNoteData.frontmatter.categories} />
       <FormattedPublishedDate dateString={ReleaseNoteData.frontmatter.published_date} />
       <MdxWrapper mdx={ReleaseNoteData.body} />
     </div>
