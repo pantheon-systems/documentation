@@ -2,6 +2,12 @@
 
 "categories": [
 
+  {
+    "slug": "action-required",
+    "displayName": "Action Required",
+    "color": "red",
+    "description": "Requires customer to act in order to avoid disruption"
+  },
 {
     "slug": "drupal",
     "displayName": "Drupal",

@@ -1,4 +1,30 @@
-export const releaseNoteCategories = {
+import releaseNoteCategoriesObject from "../../source/releasenotescategories/releaseNoteCategories.json"
+
+
+
+
+
+export const theFunction = function () {
+
+
+
+  const NewThings = {
+  }
+
+  releaseNoteCategoriesObject.categories.forEach(category => {
+    NewThings[category.slug] = category;
+  });
+
+  console.log(NewThings);
+
+  return NewThings;
+
+
+};
+
+export const otherStuff = "other stuff";
+
+export const oldReleaseNoteCategories = {
 
 
   "action-required": {

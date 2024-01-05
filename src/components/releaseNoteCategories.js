@@ -1,14 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
-import { releaseNoteCategories } from "../data/releaseNoteCategories.js"
+import { theFunction, oldReleaseNoteCategories, otherStuff } from "../data/releaseNoteCategories.js"
+
+
 
 
 
 const ReleaseNoteCategories = ({categories}) => {
 
+
 if (!categories) {
   return null
 }
+  const zoldReleaseNoteCategories = theFunction();
+
+  console.log(zoldReleaseNoteCategories);
+console.log(oldReleaseNoteCategories);
 
   return (
     <div>
@@ -21,18 +28,26 @@ if (!categories) {
 
       {categories.map((categorySlug, index) => (
 
+// If the category is in the oldReleaseNoteCategories object
+// return the displayName from the zoldReleaseNoteCategories object
+// else return the categorySlug
+
+
+
 
         <div key={index}>
 
           <Link
             to={`/release-notes/${categorySlug}`}
           >
-            <h4 style={{ 'color': releaseNoteCategories[categorySlug].color }}>{releaseNoteCategories[categorySlug].displayName}</h4>
+            <h4 style={{ 'color': zoldReleaseNoteCategories[categorySlug].color }}>{zoldReleaseNoteCategories[categorySlug].displayName}</h4>
           </Link>
 
 
 
         </div>
+
+
       ))
       }
     </div>
