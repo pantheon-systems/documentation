@@ -79,33 +79,19 @@ export const releaseNoteCategories = {
     "color": "gray",
     "description": "Serves as a catch-all for updates that don't neatly fit into specific categories, offering a broad overview of general changes on the Pantheon platform"
   },
-  "issue-bug": {
-    "displayName": "Issue/Bug",
-    "color": "gray",
-    "description": "Merges information about issues and bugs into a unified category, allowing users to easily identify and understand the current status and steps taken to address reported problems"
-  },
   "migration": {
     "displayName": "Migration",
     "color": "gray",
     "description": "Reserved for updates related to migrations, ensuring users are informed about changes affecting the movement of data and content within the Pantheon platform"
   },
-  "integration": {
-    "displayName": "Integration",
-    "color": "gray",
-    "description": "Addresses updates related to system integration, helping IT and tech leads understand changes relevant to connecting Pantheon with other tools and services",
-    "_comment-from-Rachel": "I think we should remove this as a duplicate of the Tools/APIs category"
-  },
   "platform": {
     "displayName": "Platform",
     "color": "gray",
-    "description": "Offers general updates about the Pantheon platform, providing users with a comprehensive overview of changes that influence the overall system",
-    "_comment-from-Rachel": "I think we should remove this as a duplicate of the Infrastructure category"
+    "description": "Offers general updates about the Pantheon platform, providing users with a comprehensive overview of changes that influence the overall system"
   },
-  "documentation" : {
-    "displayName": "Documentation",
+  "docs": {
+    "displayName": "Pantheon Docs",
     "color": "gray",
-    "description": "Communicates substantive changes to docs.pantheon.io",
-    "_comment-from-Rachel": "Review needed: New category not yet reviewed/approved by Ingrid or design team",
-    "_another_comment-from-Rachel": "We should require any new category to go through a review panel which includes design team, since too many tags can reduce usability of the feature and duplicate categories can cause confusion for intended usage."
+    "description": "Reserved for updates that involve substantive changes, additions, or clarifications within Pantheon Docs — the centralized hub containing manuals and essential documentation for Pantheon users."  
   }
 };
