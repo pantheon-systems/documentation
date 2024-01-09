@@ -49,8 +49,8 @@ export const releaseNoteCategories = {
     "color": "black",
     "description": "Highlights updates related to changes in the user interface, ensuring that designers, marketers, and other users are aware of alterations to the visual and interactive elements of the platform"
   },
-  "account-management": {
-    "displayName": "Account Management",
+  "billing": {
+    "displayName": "Billing & Finance",
     "color": "black",
     "description": "Covers finance and billing-related updates, allowing billing and finance managers to track changes affecting their financial aspects"
   },
