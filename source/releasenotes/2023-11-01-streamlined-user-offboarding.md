@@ -1,7 +1,7 @@
 ---
 title: Streamlined User Offboarding
 published_date: "2023-11-01"
-categories: [account-management, user-interface, new-feature]
+categories: [billing, user-interface, new-feature]
 ---
 Administrators of large workspaces will now be able to easily remove access for offboarded users at scale. When a member of your team changes jobs, or for whatever reason you need to remove a person from your sites, you can now do so faster
 
