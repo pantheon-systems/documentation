@@ -170,7 +170,7 @@ More information on mobile site best practices can be found in Google's official
 - [What are the top three things I should know when building a site for mobile devices?](https://developers.google.com/search/mobile-sites/get-started#key)
 - [What are the top three mistakes beginners want to avoid?](https://developers.google.com/search/mobile-sites/get-started#mistakes)
 
-A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.co):
+A full list of the devices and their support for HTML5 is available on [https://html5test.co](https://html5test.co):
 
 - [Desktop browsers](https://html5test.co/results/desktop.html)
 - [Tablet browsers](https://html5test.co/results/tablet.html)
