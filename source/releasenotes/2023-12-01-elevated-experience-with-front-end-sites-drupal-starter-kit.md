@@ -1,7 +1,7 @@
 ---
 title: "Elevated Experience With Front-End Sites Drupal Starter Kit"
 published_date: "2023-12-01"
-categories: [front-end-sites, user-interface]
+categories: [front-end-sites, user-interface, drupal]
 ---
 The Pantheon Drupal Starter Kit for Front-End Sites has undergone significant improvements.
 * **Setup experience**: The setup process is now more user-friendly and guided for a seamless experience.
