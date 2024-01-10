@@ -44,4 +44,7 @@ Analytics implementations can be variable. It may be that your analytics solutio
 
 Content pre-fetching increasingly plays a role in driving up traffic metrics without having the same impact on visitor-centric analytics. Speculatively loading pages in the background is a common tactic to improve the user experience on the web, which we support people using. However, this does generate more overall traffic from the perspective of the platform.
 
+### What environments count towards traffic limits?
+Only traffic for the Live environment is counted towards a site plan's traffic limit. Traffic for non-live environments (Dev, Test, and Multidev environments) are not counted towards the plan's traffic limit.  
+
 <Partial file="traffic-overages-faq.md" />
