@@ -1,7 +1,7 @@
 ---
 title: "Early Access: Streamlined User Offboarding"
 published_date: "2023-09-01"
-categories: [billing, user-interface]
+categories: [account-management, user-interface]
 ---
 Helps Workspace Admins more effectively manage user access by providing the ability to offboard users from multiple sites in a single click.
 

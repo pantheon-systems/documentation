@@ -89,9 +89,14 @@ export const releaseNoteCategories = {
     "color": "gray",
     "description": "Offers general updates about the Pantheon platform, providing users with a comprehensive overview of changes that influence the overall system"
   },
-  "docs": {
+  "pantheon-docs": {
     "displayName": "Pantheon Docs",
     "color": "gray",
     "description": "Reserved for updates that involve substantive changes, additions, or clarifications within Pantheon Docs — the centralized hub containing manuals and essential documentation for Pantheon users."  
+  },
+  "account-management": {
+    "displayName": "Account Management",
+    "color": "gray",
+    "description": "Highlights updates related to account permissions, user roles, and any changes that impact how users manage and interact with their accounts."
   }
 };
