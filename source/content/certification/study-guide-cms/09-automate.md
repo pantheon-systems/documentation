@@ -40,7 +40,7 @@ nexturl: /certification/study-guide/custom-upstreams
 
 </Alert>
 
-In this chapter, we will explore three of Pantheon’s powerful automation tools that help teams adopt a WebOps practice. These tools are Integrated Composer and Autopilot.
+In this chapter, we will explore two of Pantheon’s powerful automation tools that help teams adopt a WebOps practice. These tools are Integrated Composer and Autopilot.
 
 Integrated Composer simplifies dependency management by extending Composer functionality to core WordPress and Drupal files, treating them as a managed dependency. Instead of committing your vendor directory with your dependencies, you simply commit your `composer.json` and `composer.lock` file to your Pantheon site, and we automate the rest. This enables one-click updates from the Pantheon Dashboard for upstream updates and Composer dependencies on your site, streamlining site maintenance and saving significant time and effort.
 
