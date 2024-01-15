@@ -241,7 +241,7 @@ In addition to On-Demand backups, Pantheon automatically backs up your site with
 * **All sites: **You can run manual backups for free, and choose to keep them for one month or six months.
 * **Paid sites: **You can enable or disable automatic backups. A nightly backup is created and stored for a week and your weekly backup is stored for a month when automatic backups is enabled.
 
-Backups can also be triggered with Pantheon's CLI's [backup:create](/terminus/commands/backup-create) command. That command can be part of a multi-step script that also includes the cloning of the database from one environment to another.
+Backups can also be triggered with terminus' [backup:create](/terminus/commands/backup-create) command. That command can be part of a multi-step script that also includes the cloning of the database from one environment to another.
 
 ####  Connecting to Your Database
 
