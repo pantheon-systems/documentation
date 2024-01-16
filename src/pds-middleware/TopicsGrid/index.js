@@ -26,7 +26,7 @@ function TopicsGrid(props) {
             linkContent={
               <Link to={topic.url}>
                 Learn more
-                <span className="pds-visually-hidden">
+                <span className="visually-hidden">
                   about {topic.headingText}
                 </span>
               </Link>
