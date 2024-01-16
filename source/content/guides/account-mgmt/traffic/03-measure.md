@@ -17,7 +17,7 @@ product: [--]
 integration: [--]
 ---
 
-The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan.
+The number of unique visits displayed in Pantheon’s Site Dashboard determines the traffic Pantheon will apply for evaluating use on your site under your pricing plan. Only the Live environment traffic counts towards traffic limits for a given site plan.
 
 ## Site Traffic Measurement Model
 
@@ -42,6 +42,8 @@ If there are specific cases that create traffic spikes or events for your site, 
 <Partial file="traffic-limits-overages.md" />
 
 ## FAQ
+### What environments count towards traffic limits?
+Only traffic for the Live environment is counted towards a site plan's traffic limit. Traffic for non-live environments (Dev, Test, and Multidev environments) are not counted towards the plan's traffic limit.  
 
 ### What traffic is excluded from Pantheon's metrics?
 

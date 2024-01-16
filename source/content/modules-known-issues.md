@@ -82,7 +82,7 @@ ___
 
 ## [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
 
-<ReviewDate date="2018-04-22" />
+<ReviewDate date="2024-01-09" />
 
 **Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output. Since BigPipe provides no benefit on Pantheon sites, we recommend disabling it.
 
