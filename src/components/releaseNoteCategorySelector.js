@@ -1,63 +1,31 @@
 import React from "react"
 import releaseNoteCategoriesObject from "../../source/releasenotescategories/releaseNoteCategories.json"
-import { navigate } from "@reach/router"
-import {
-MenuButton,
-  NavMenu,
-} from "@pantheon-systems/pds-toolkit-react"
+import { MenuButton } from "@pantheon-systems/pds-toolkit-react"
+import { Link } from "gatsby"
 
-
-/*
-const releaseNoteCategoryLinks = function (currentCategorySlug) {
-  const links = [];
-  // loop over the categories and add the displayName to the links array
-  Object.keys(releaseNoteCategories).map((categorySlug, index) => (
-    links.push(
-      {
-        linkContent: (
-          <Link id={`${categorySlug}`} to={`/release-notes/${categorySlug}`}>
-          {
-              releaseNoteCategories[categorySlug].displayName
-          }
-          </Link>
-        ),
-      },
-      )
-  ))
-  return links;
-}
-*/
-
-const releaseNoteCategoryLinksFromJson = function () {
-
-  const navigateToCategory = (categorySlug) => {
-    return window.location.href = `/release-notes/${categorySlug}`
-  }
-
+const releaseNoteCategoryLinks = function () {
   const menuItems = [
     {
-      "label": "All Release Notes",
-      "callback": function () { window.location.href = `/release-notes` },
+      isLink: true,
+      linkContent: <Link to={`/release-notes`}>All Release Notes</Link>,
     },
     {
-      "isSeparator": true
-    }
-  ];
-  // loop over the categories and add the displayName to the links array
+      isSeparator: true,
+    },
+  ]
+  // loop over the categories and add each to the links array
   releaseNoteCategoriesObject.categories.forEach((category) => {
-
-    menuItems.push(
-      {
-        "label": category.displayName,
-        // "callback": { navigateToCategory(`${category.slug }`) },
-        //"callback": () => { window.location.href = `/release-notes/${category.slug}` },
-        //"callback": () => { navigateToCategory(`${category.slug}`) },
-        "callback": function () { window.location.href = `/release-notes/${category.slug}` },
-      }
-    )
+    menuItems.push({
+      isLink: true,
+      linkContent: (
+        <Link to={`/release-notes/${category.slug}`}>
+          {category.displayName}
+        </Link>
+      ),
+    })
   })
 
-  return menuItems;
+  return menuItems
 }
 
 // Loop through the categories and create a list of links to each category.
@@ -65,18 +33,9 @@ const ReleaseNoteCategorySelector = (currentCategorySlug) => {
   return (
     <MenuButton
       label="Categories"
-      menuItems={releaseNoteCategoryLinksFromJson()}
+      variant="secondary"
+      menuItems={releaseNoteCategoryLinks()}
     />
-  )
-}
-
-// Loop through the categories and create a list of links to each category.
-const ReleaseNoteCategorySelectorNav = (currentCategorySlug) => {
-  return (
-        <NavMenu
-          label="Categories"
-          menuItems={releaseNoteCategoryLinks(currentCategorySlug)}
-        />
   )
 }
 
