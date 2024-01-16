@@ -21,7 +21,8 @@ This section provides information on how to configure automatic platform Search 
 
 You must have the following to enable Search and Replace:
 
-- A [WordPress Multisite](/guides/multisite)
+- A [WordPress Multisite](/guides/multisite).
+- A PHP version of 7.4 or later.
 
 <Alert title="Note"  type="info" >
 
