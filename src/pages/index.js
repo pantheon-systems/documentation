@@ -35,7 +35,7 @@ class Index extends React.Component {
               linkText={homeYaml.call_to_action.linkText}
             />
 
-            <h2 className="pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-2xl">
+            <h2 className="pds-ts-3xl pds-spacing-mar-block-xl">
               {homeYaml.topics.title}
             </h2>
             <TopicsGrid topics={homeYaml.topics.tiles} />
@@ -45,14 +45,14 @@ class Index extends React.Component {
               className="pds-spacing-mar-block-start-6xl"
             >
               <div slot="first-item">
-                <h2 className="pds-spacing-mar-block-end-2xl">
+                <h2 className="pds-ts-3xl pds-spacing-mar-block-end-2xl">
                   {homeYaml.three_column_links.title}
                 </h2>
                 <LinksList links={homeYaml.three_column_links.links} />
               </div>
 
               <div slot="second-item">
-                <h2 className="pds-spacing-mar-block-end-2xl">
+                <h2 className="pds-ts-3xl pds-spacing-mar-block-end-2xl">
                   {homeYaml.changelog_preview.title}
                 </h2>
                 <ChangelogList
