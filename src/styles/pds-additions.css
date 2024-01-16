@@ -5,3 +5,7 @@
   width: 5rem;
   height: 5rem;
 }
+
+.pds-input-field__input-wrapper {
+  max-width: unset;
+}
