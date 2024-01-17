@@ -6,18 +6,12 @@ import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
 import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
-
-import {
-  Container,
-} from "@pantheon-systems/pds-toolkit-react"
-
-
+import { Container } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
 
 class ReleaseNotesListingTemplate extends React.Component {
-
   render() {
     const releasenotes = this.props.data.allMdx.edges
     return (
@@ -33,12 +27,14 @@ class ReleaseNotesListingTemplate extends React.Component {
             <ReleaseNoteCategorySelector />
             <hr />
             <div id="doc" className="doc changelog__content">
-                <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                  {releasenotes.map((releasenote) => (
-
-                      <ReleaseNoteTeaser ReleaseNoteData={releasenote.node} />
-                  ))}
-                </div>
+              <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                {releasenotes.map((releasenote, index) => (
+                  <ReleaseNoteTeaser
+                    key={index}
+                    ReleaseNoteData={releasenote.node}
+                  />
+                ))}
+              </div>
             </div>
           </Container>
         </main>
@@ -50,12 +46,9 @@ class ReleaseNotesListingTemplate extends React.Component {
 export default ReleaseNotesListingTemplate
 
 export const pageQuery = graphql`
-
-query releasenotesListing {
+  query releasenotesListing {
     allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/releasenotes/" }
-      }
+      filter: { fileAbsolutePath: { regex: "/releasenotes/" } }
       sort: { fields: [fileAbsolutePath], order: DESC }
     ) {
       edges {
