@@ -28,7 +28,7 @@ function HeroCTA(props) {
         />
       </div>
       <div className="hero-cta-text" slot="second-item">
-        <h1>{title}</h1>
+        <h1 className="pds-ts-5xl">{title}</h1>
         <p className="pds-lead-text">{subTitle}</p>
         <Link
           to={url}
