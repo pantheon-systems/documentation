@@ -1,0 +1,5 @@
+.docs-release-note-teaser__header {
+  display: flex;
+  align-content: center;
+  column-gap: var(--pds-spacing-l);
+}
