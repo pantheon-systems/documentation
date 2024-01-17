@@ -11,11 +11,10 @@ import { Container } from "@pantheon-systems/pds-toolkit-react"
 const containerWidth = "standard"
 
 class ReleaseNotesListingByCategoryTemplate extends React.Component {
-
   render() {
     const releasenotes = this.props.data.allMdx.edges
-    const categorySlug = this.props.pageContext.category;
-    const categoryData = releaseNoteCategoryLoader(categorySlug);
+    const categorySlug = this.props.pageContext.category
+    const categoryData = releaseNoteCategoryLoader(categorySlug)
 
     return (
       <Layout containerWidth={containerWidth} footerBorder>
@@ -24,16 +23,19 @@ class ReleaseNotesListingByCategoryTemplate extends React.Component {
           description="A filtering of changes to the Pantheon Platform by the category of {categoryDisplayName}"
           image={"assets/images/default-thumb-doc.png"}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth}>
             <h1>Pantheon Release Notes: {categoryData["displayName"]}</h1>
             <ReleaseNoteCategorySelector />
             <hr />
             <div id="doc" className="doc changelog__content">
-                <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                  {releasenotes.map((releasenote) => (
-                      <ReleaseNoteTeaser ReleaseNoteData={releasenote.node} />
-                  ))}
+              <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
+                {releasenotes.map((releasenote, index) => (
+                  <ReleaseNoteTeaser
+                    key={index}
+                    ReleaseNoteData={releasenote.node}
+                  />
+                ))}
               </div>
             </div>
           </Container>
@@ -50,13 +52,13 @@ export const pageQuery = graphql`
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/releasenotes/" }
-          frontmatter: { categories: {eq: $category}}
+        frontmatter: { categories: { eq: $category } }
       }
       sort: { fields: [fileAbsolutePath], order: DESC }
     ) {
       edges {
         node {
-      ...theReleaseNoteFields
+          ...theReleaseNoteFields
         }
       }
     }
