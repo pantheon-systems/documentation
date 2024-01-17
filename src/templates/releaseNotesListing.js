@@ -21,7 +21,7 @@ class ReleaseNotesListingTemplate extends React.Component {
           description="A summary of changes to the Pantheon Platform"
           image={"assets/images/default-thumb-doc.png"}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth}>
             <h1>Pantheon Release Notes</h1>
             <ReleaseNoteCategorySelector />

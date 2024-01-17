@@ -191,7 +191,7 @@ class CertificationTemplate extends React.Component {
           <main
             slot="content"
             id="docs-main"
-            tabindex="-1"
+            tabIndex="-1"
             className="certification terminus"
           >
             <article className="doc guide-doc-body">

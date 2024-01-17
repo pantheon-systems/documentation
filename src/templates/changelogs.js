@@ -92,7 +92,7 @@ class ChangelogsTemplate extends React.Component {
           description="Pantheon Changelog"
           image={"assets/images/default-thumb-doc.png"}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth}>
             <h1>Pantheon Changelog</h1>
             <div className="pds-spacing-mar-block-end-3xl">

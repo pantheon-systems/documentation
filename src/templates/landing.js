@@ -46,7 +46,7 @@ class LandingTemplate extends Component {
         footerBorder={topic.footer_border}
       >
         <SEO title={topic.title} />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth} className="landing-page__header">
             <FlexContainer
               alignItems="center"

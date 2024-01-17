@@ -81,7 +81,7 @@ class ChangelogTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/images/assets/default-thumb-doc.png"}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth}>
             <div className="pds-overline-text pds-spacing-mar-block-end-xs">
               Pantheon Changelog
