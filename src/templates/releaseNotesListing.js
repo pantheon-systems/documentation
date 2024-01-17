@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
-import ReleaseNoteTeaser from "../components/releaseNoteTeaser.js"
+import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
 import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
 import { Container } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
-const containerWidth = "standard"
+const containerWidth = "narrow"
 
 class ReleaseNotesListingTemplate extends React.Component {
   render() {
@@ -27,14 +27,13 @@ class ReleaseNotesListingTemplate extends React.Component {
             <ReleaseNoteCategorySelector />
             <hr />
             <div id="doc" className="doc changelog__content">
-              <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                {releasenotes.map((releasenote, index) => (
-                  <ReleaseNoteTeaser
-                    key={index}
-                    ReleaseNoteData={releasenote.node}
-                  />
-                ))}
-              </div>
+              {releasenotes.map((releasenote, index) => (
+                <ReleaseNoteTeaser
+                  key={index}
+                  ReleaseNoteData={releasenote.node}
+                  className="pds-spacing-mar-block-start-2xl pds-spacing-mar-block-end-4xl"
+                />
+              ))}
             </div>
           </Container>
         </main>

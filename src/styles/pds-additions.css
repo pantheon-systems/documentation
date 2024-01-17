@@ -5,3 +5,7 @@
   width: 5rem;
   height: 5rem;
 }
+
+.pds-tag {
+  white-space: nowrap;
+}
