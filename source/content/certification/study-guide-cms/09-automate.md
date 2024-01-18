@@ -40,7 +40,7 @@ nexturl: /certification/study-guide/custom-upstreams
 
 </Alert>
 
-In this final chapter, we will explore three of Pantheon’s powerful automation tools that help teams adopt a WebOps practice. These tools are Integrated Composer and Autopilot.
+In this chapter, we will explore two of Pantheon’s powerful automation tools that help teams adopt a WebOps practice. These tools are Integrated Composer and Autopilot.
 
 Integrated Composer simplifies dependency management by extending Composer functionality to core WordPress and Drupal files, treating them as a managed dependency. Instead of committing your vendor directory with your dependencies, you simply commit your `composer.json` and `composer.lock` file to your Pantheon site, and we automate the rest. This enables one-click updates from the Pantheon Dashboard for upstream updates and Composer dependencies on your site, streamlining site maintenance and saving significant time and effort.
 
@@ -185,7 +185,7 @@ Autopilot’s Visual Regression Testing (VRT) looks for “regressions” in the
 For each page, you can set a threshold for the maximum percentage of pixels that can be different between the two screenshots. An acceptable change of 0% would render a failed VRT if there is any difference between the two screenshots, but you can set the percentage to be higher if you would like the tests to be a bit more forgiving.
 
 ### Excluded Web Elements
-Often, a webpage will have one or more animated components that will cause a false positive Visual Regression Test. Examples include video backdrops, embedded video clips, or animated components such menu dropdowns or buttons that change when you hover over them. For these use cases, Autopliot allows you to select specific DOM elements with CSS selectors (id and class name) to exclude from the Visual Regression Tests (fig. 10.4). Use commas or a line break to separate excluded elements. This can be useful to prevent landing pages with animation or videos from causing false positive Visual Regression Tests:
+Often, a webpage will have one or more animated components that will cause a false positive Visual Regression Test. Examples include video backdrops, embedded video clips, or animated components such as menu dropdowns or buttons that change when you hover over them. For these use cases, Autopliot allows you to select specific DOM elements with CSS selectors (id and class name) to exclude from the Visual Regression Tests (fig. 10.4). Use commas or a line break to separate excluded elements. This can be useful to prevent landing pages with animation or videos from causing false positive Visual Regression Tests:
 
 ![Autopilot configuration for which web elements should be excluded from Visual Regression Testing](../../../images/autopilot/autopilot-configuration-excluded-web-elements.png)
 
