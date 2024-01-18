@@ -15,3 +15,5 @@ source/content/guides/integrated-composer/ @pantheon-systems/lifecycle-ops
 source/content/guides/multisite/ @pantheon-systems/cms-platform
 # The cms-platform team is responsible for External Libraries on Pantheon
 source/content/external-libraries @pantheon-systems/cms-platform
+# There is a team just for release note permissions
+source/releasenotes/ @pantheon-systems/release-note-authors
