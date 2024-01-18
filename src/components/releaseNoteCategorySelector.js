@@ -13,7 +13,7 @@ const releaseNoteCategoryLinks = function () {
       isSeparator: true,
     },
   ]
-  // loop over the categories and add each to the links array
+  // Loop over the categories and add each to the links array.
   releaseNoteCategoriesObject.categories.forEach((category) => {
     menuItems.push({
       isLink: true,
