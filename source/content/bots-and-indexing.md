@@ -63,6 +63,8 @@ User-agent: SiteAuditBot
 User-agent: SplitSignalBot
 User-agent: PowerMapper
 User-agent: Swiftbot
+User-agent: lyticsbot
+User-agent: Dubbotbot
 Allow: /
 ```
 
@@ -80,6 +82,8 @@ To support pre-launch SEO and site search testing, we allow the following bots a
 - [Dotbot](https://moz.com/help/guides/moz-procedures/dotbot) by Moz
 - [PowerMapper](https://www.powermapper.com/products/mapper/)
 - [Swiftbot](https://swiftype.com/swiftbot) by Swiftype
+- [lyticsbot](https://docs.lytics.com/docs/enrichment#lyticsbot-directive-configurations)
+- [Dubbotbot](https://help.dubbot.com/en/)
 
 Some tools (like [Siteimprove](https://siteimprove.com/) or [ScreamingFrog](https://www.screamingfrog.co.uk/seo-spider/)) can be set to ignore `robots.txt` when scanning. If you're testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/guides/support/faq/#can-i-request-a-feature-be-added-to-the-platform) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
 
