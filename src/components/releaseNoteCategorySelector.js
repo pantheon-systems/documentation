@@ -3,38 +3,34 @@ import releaseNoteCategoriesObject from "../../source/releasenotescategories/rel
 import { MenuButton } from "@pantheon-systems/pds-toolkit-react"
 import { Link } from "gatsby"
 
-const releaseNoteCategoryLinks = function () {
-  const menuItems = [
-    {
-      isLink: true,
-      linkContent: <Link to={`/release-notes`}>All Release Notes</Link>,
-    },
-    {
-      isSeparator: true,
-    },
-  ]
-  // Loop over the categories and add each to the links array.
-  releaseNoteCategoriesObject.categories.forEach((category) => {
-    menuItems.push({
-      isLink: true,
-      linkContent: (
-        <Link to={`/release-notes/${category.slug}`}>
-          {category.displayName}
-        </Link>
-      ),
-    })
+// Initialize the links array with the All Release Notes link and a separator.
+const categoryMenuItems = [
+  {
+    isLink: true,
+    linkContent: <Link to={`/release-notes`}>All Release Notes</Link>,
+  },
+  {
+    isSeparator: true,
+  },
+]
+
+// Map over the categories and add each to the links array.
+releaseNoteCategoriesObject.categories.map((category) => {
+  categoryMenuItems.push({
+    isLink: true,
+    linkContent: (
+      <Link to={`/release-notes/${category.slug}`}>{category.displayName}</Link>
+    ),
   })
+})
 
-  return menuItems
-}
-
-// Loop through the categories and create a list of links to each category.
+// Create the menu button with the links array.
 const ReleaseNoteCategorySelector = (currentCategorySlug) => {
   return (
     <MenuButton
       label="Categories"
       variant="secondary"
-      menuItems={releaseNoteCategoryLinks()}
+      menuItems={categoryMenuItems}
     />
   )
 }
