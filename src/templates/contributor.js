@@ -34,7 +34,7 @@ const links = [
 ]
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 class ContributorTemplate extends React.Component {
   render() {

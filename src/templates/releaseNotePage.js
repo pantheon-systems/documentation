@@ -10,7 +10,7 @@ import { releaseNoteFragment } from "../fragments/releaseNote.js"
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 class ReleaseNoteTemplate extends React.Component {
   render() {

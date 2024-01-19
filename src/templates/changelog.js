@@ -88,7 +88,7 @@ class ChangelogTemplate extends React.Component {
             </div>
             <h1>{node.frontmatter.title}</h1>
             <div className="pds-spacing-mar-block-end-3xl">
-              <p className="pds-lead-text pds-lead-text--small">
+              <p className="pds-lead-text pds-lead-text--sm">
                 Sign up for the Pantheon Changelog Newsletter to receive a
                 monthly email on what's new and improved across the platform.
               </p>

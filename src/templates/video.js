@@ -52,7 +52,7 @@ const shortcodes = {
 }
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 class VideoTemplate extends React.Component {
   componentDidMount() {
