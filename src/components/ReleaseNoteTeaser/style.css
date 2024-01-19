@@ -1,5 +1,16 @@
 .docs-release-note-teaser__header {
   display: flex;
-  align-content: center;
-  column-gap: var(--pds-spacing-l);
+  column-gap: var(--pds-spacing-xl);
+  margin-block-end: var(--pds-spacing-l);
+}
+
+.docs-release-note-teaser__header {
+  .docs-release-notes-tags {
+    padding-block-start: var(--pds-spacing-4xs);
+  }
+}
+
+.individual-changelog-link h2 {
+  padding: 0;
+  margin: 0;
 }

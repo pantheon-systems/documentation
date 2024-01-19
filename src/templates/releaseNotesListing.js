@@ -25,13 +25,12 @@ class ReleaseNotesListingTemplate extends React.Component {
           <Container width={containerWidth}>
             <h1>Pantheon Release Notes</h1>
             <ReleaseNoteCategorySelector />
-            <hr />
-            <div id="doc" className="doc changelog__content">
+            <div id="doc">
               {releasenotes.map((releasenote, index) => (
                 <ReleaseNoteTeaser
                   key={index}
                   ReleaseNoteData={releasenote.node}
-                  className="pds-spacing-mar-block-start-2xl pds-spacing-mar-block-end-4xl"
+                  className="pds-spacing-mar-block-4xl"
                 />
               ))}
             </div>
