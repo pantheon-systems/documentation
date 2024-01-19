@@ -34,10 +34,11 @@ class ReleaseNoteTemplate extends React.Component {
             </h1>
             <ReleaseNoteCategories
               categories={node.frontmatter.categories}
+              displayType="page"
               className="pds-spacing-mar-block-end-xl"
             />
 
-            <article>
+            <article className="pds-spacing-pad-block-end-xl">
               <div id="doc" className="doc changelog__content">
                 <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
                   <PublishedDate

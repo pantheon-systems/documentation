@@ -5,22 +5,20 @@ import { Tag } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
-const ReleaseNoteCategories = ({ categories, className }) => {
+const ReleaseNoteCategories = ({ categories, displayType, className }) => {
   if (!categories) {
     return null
   }
 
+  /* If there is one category display the singular form.*/
+  const categoryHeading = categories.length === 1 ? "Category:" : "Categories:"
+
+  /* Change heading level based on displayType prop */
+  const HeadingLevel = displayType === "page" ? "h2" : "h3"
+
   return (
     <div className={className}>
-      {
-        /* If there is one category display the singular form.*/
-        categories.length === 1 ? (
-          <h3 className="visually-hidden">Category:</h3>
-        ) : (
-          <h3 className="visually-hidden">Categories:</h3>
-        )
-      }
-
+      <HeadingLevel className="visually-hidden">{categoryHeading}</HeadingLevel>
       <div className="docs-release-notes-tags">
         {categories.map((categorySlug, index) => (
           <Tag
