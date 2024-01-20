@@ -30,7 +30,7 @@ class ReleaseNotesListingTemplate extends React.Component {
                 <ReleaseNoteTeaser
                   key={index}
                   ReleaseNoteData={releasenote.node}
-                  className="pds-spacing-mar-block-4xl"
+                  className="pds-spacing-mar-block-5xl"
                 />
               ))}
             </div>

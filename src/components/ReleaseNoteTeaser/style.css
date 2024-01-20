@@ -1,7 +1,17 @@
 .docs-release-note-teaser__header {
   display: flex;
-  column-gap: var(--pds-spacing-xl);
+  flex-direction: column;
+  row-gap: var(--pds-spacing-s);
   margin-block-end: var(--pds-spacing-l);
+}
+
+@media (min-width: 1025px) {
+  .docs-release-note-teaser__header {
+    display: flex;
+    column-gap: var(--pds-spacing-xl);
+    margin-block-end: var(--pds-spacing-l);
+    flex-direction: row;
+  }
 }
 
 .docs-release-note-teaser__header {

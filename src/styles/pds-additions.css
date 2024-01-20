@@ -6,6 +6,10 @@
   height: 5rem;
 }
 
+strong {
+  font-weight: var(--pds-typography-font-weight-semibold);
+}
+
 .pds-tag {
   white-space: nowrap;
 }
