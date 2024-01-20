@@ -1,7 +1,7 @@
 const path = require(`path`)
 const crypto = require("crypto")
-const matter = require('gray-matter');
-var fs = require('fs-extra')
+const matter = require("gray-matter")
+var fs = require("fs-extra")
 
 /*
 For additional reference material, see
@@ -14,7 +14,8 @@ into web pages. It is prime for refactoring.
 /** This helper function determines what slug a piece of content will use */
 const calculateSlug = (node, getNode) => {
   const fileName = getNode(node.parent).name // Sets the filename from GraphQL
-  if (node.frontmatter.permalink) { //If the "permalink" frontmatter value is present...
+  if (node.frontmatter.permalink) {
+    //If the "permalink" frontmatter value is present...
     return node.frontmatter.permalink // return it.
       .replace(":basename", fileName) // If permalink includes ":basename", prepend the filename to the slug
       .replace("docs", "") // If it includes "docs", remove it. Docs is added by the pathPrefix in gatsby-config.js
@@ -26,26 +27,33 @@ const calculateSlug = (node, getNode) => {
   }
 
   // This section creates the changelog slug based on the YYYY-MM-DD-MONTH.md template
-  if (getNode(node.parent).absolutePath.includes("changelogs")) { // If the file is in the changelogs directory...
-    const split = fileName.split('-'); // split the file name where hyphenated...
+  if (getNode(node.parent).absolutePath.includes("changelogs")) {
+    // If the file is in the changelogs directory...
+    const split = fileName.split("-") // split the file name where hyphenated...
     return `changelog/${split[0]}/${split[1]}` // and return a slug of changelog/YYYY/MM
   }
   // This section creates the releasenotes slug based on the YYYY-MM-DD-slug.md template
-  if (getNode(node.parent).absolutePath.includes("releasenotes")) { // If the file is in the releasenotes directory...
+  if (getNode(node.parent).absolutePath.includes("releasenotes")) {
+    // If the file is in the releasenotes directory...
     // split the file name where hyphenated.
-    const split = fileName.split('-');
+    const split = fileName.split("-")
     // set a const to remaining slug based on the keys from split that are not the date.
-    const remainingSlug = split.slice(3).join('-');
+    const remainingSlug = split.slice(3).join("-")
     return `release-notes/${split[0]}/${split[1]}/${remainingSlug}` // and return a slug of releasenotes/YYYY/MM/slug
   }
 
   return `${fileName}` // Otherwise, as long as there is a filename in GraphQL, use it as the slug.
 }
 
-
 /* This helper function helps determine which template should be applied to a piece of content */
-const calculateTemplate = (node, defaultTemplate) => { // The functions accepts as arguments a GraphQL node and default template.
-  if (node.frontmatter && node.frontmatter.layout && node.frontmatter.layout !== null) { // If the node has the layout value in frontmatter...
+const calculateTemplate = (node, defaultTemplate) => {
+  // The functions accepts as arguments a GraphQL node and default template.
+  if (
+    node.frontmatter &&
+    node.frontmatter.layout &&
+    node.frontmatter.layout !== null
+  ) {
+    // If the node has the layout value in frontmatter...
     return node.frontmatter.layout // use that value.
   }
 
@@ -55,42 +63,39 @@ const calculateTemplate = (node, defaultTemplate) => { // The functions accepts 
 /* These helper functions are used to provide multi-page guide pages with the previous
 and next pages in the guide, to be used in the construction of the table of contents.
  */
-const calculatePrevious = (guide) => { // The function accepts as an argument the node of the guide page in question
-  if (!guide.previous) { // If the page doesn't have a value for the "previous" field in GraphQL
-    return null; // return nothing.
+const calculatePrevious = (guide) => {
+  // The function accepts as an argument the node of the guide page in question
+  if (!guide.previous) {
+    // If the page doesn't have a value for the "previous" field in GraphQL
+    return null // return nothing.
   }
 
   // Also return nothing if  the guide_directory value doesn't exist.
-  if (guide.node.fields.guide_directory !== guide.previous.fields.guide_directory) {
-    return null;
+  if (
+    guide.node.fields.guide_directory !== guide.previous.fields.guide_directory
+  ) {
+    return null
   }
   // Otherwise, return the slug of the page identified as previous by GraphQL. How it determines which one is previous, unclear to me at this time.
-  return guide.previous.fields.slug;
+  return guide.previous.fields.slug
 }
 // Same as above.
 const calculateNext = (guide) => {
   if (!guide.next) {
-    return null;
+    return null
   }
 
   if (guide.node.fields.guide_directory !== guide.next.fields.guide_directory) {
-    return null;
+    return null
   }
 
-  return guide.next.fields.slug;
+  return guide.next.fields.slug
 }
 
-const digest = str =>
-  (str != null) ?
-    crypto
-      .createHash("md5")
-      .update(str)
-      .digest("hex")
-  :
-    crypto
-      .createHash("md5")
-      .update(" ")
-      .digest("hex")
+const digest = (str) =>
+  str != null
+    ? crypto.createHash("md5").update(str).digest("hex")
+    : crypto.createHash("md5").update(" ").digest("hex")
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -101,13 +106,12 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 }
 
 exports.createSchemaCustomization = ({ actions, schema }) => {
-
   actions.createFieldExtension({
     name: `defaultFalse`,
     extend() {
       return {
         resolve(source, args, context, info) {
-          if (source[info.fieldName] == null ) {
+          if (source[info.fieldName] == null) {
             return false
           }
           return source[info.fieldName]
@@ -134,10 +138,10 @@ exports.createPages = ({ graphql, actions }) => {
     {
       allDocs: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "/content(?!/(partials|changelog|guides|releasenotes)/)/"}
-          frontmatter: {
-            draft: {ne: true}
+          fileAbsolutePath: {
+            regex: "/content(?!/(partials|changelog|guides|releasenotes)/)/"
           }
+          frontmatter: { draft: { ne: true } }
         }
       ) {
         edges {
@@ -158,8 +162,8 @@ exports.createPages = ({ graphql, actions }) => {
 
       allGuides: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "/guides/"}
-          frontmatter: { draft: {ne: true}}
+          fileAbsolutePath: { regex: "/guides/" }
+          frontmatter: { draft: { ne: true } }
         }
         sort: { fields: [fileAbsolutePath], order: ASC }
       ) {
@@ -192,13 +196,10 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       allReleaseNotes: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/releasenotes/"}
-        },
+        filter: { fileAbsolutePath: { regex: "/releasenotes/" } }
         sort: { fields: [fileAbsolutePath], order: DESC }
       ) {
         edges {
-
           previous {
             fields {
               slug
@@ -208,8 +209,8 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             id
             frontmatter {
-              title,
-              categories,
+              title
+              categories
               published_date
             }
             fields {
@@ -222,19 +223,17 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             }
           }
-
         }
       }
 
       allChangelogs: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "/changelogs/"}
-          frontmatter: { draft: {ne: true}}
-        },
+          fileAbsolutePath: { regex: "/changelogs/" }
+          frontmatter: { draft: { ne: true } }
+        }
         sort: { fields: [fileAbsolutePath], order: DESC }
       ) {
         edges {
-
           previous {
             fields {
               slug
@@ -256,7 +255,6 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             }
           }
-
         }
       }
 
@@ -290,14 +288,14 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
       throw result.errors
     }
 
     // Create doc pages.
     const docs = result.data.allDocs.edges
-    docs.forEach(doc => {
+    docs.forEach((doc) => {
       const template = calculateTemplate(doc.node, "doc")
       createPage({
         path: doc.node.fields.slug,
@@ -310,10 +308,10 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create guide pages.
     const guides = result.data.allGuides.edges
-    guides.forEach(guide => {
+    guides.forEach((guide) => {
       if (guide.node.fields.guide_directory !== null) {
-        const previous = calculatePrevious(guide);
-        const next = calculateNext(guide);
+        const previous = calculatePrevious(guide)
+        const next = calculateNext(guide)
         const template = calculateTemplate(guide.node, "guide")
         createPage({
           path: guide.node.fields.slug,
@@ -322,7 +320,7 @@ exports.createPages = ({ graphql, actions }) => {
             slug: guide.node.fields.slug,
             guide_directory: guide.node.fields.guide_directory,
             previous,
-            next
+            next,
           },
         })
       } else {
@@ -339,8 +337,10 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create changelog pages.
     const changelogs = result.data.allChangelogs.edges
-    changelogs.forEach(changelog => {
-      const previous = changelog.previous ? changelog.previous.fields.slug || null : null
+    changelogs.forEach((changelog) => {
+      const previous = changelog.previous
+        ? changelog.previous.fields.slug || null
+        : null
       const next = changelog.next ? changelog.next.fields.slug || null : null
       const template = calculateTemplate(changelog.node, "changelog")
       createPage({
@@ -349,7 +349,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           slug: changelog.node.fields.slug,
           next: previous,
-          previous: next
+          previous: next,
         },
       })
     })
@@ -358,9 +358,15 @@ exports.createPages = ({ graphql, actions }) => {
     const postsPerPage = 6
     const numPages = Math.ceil(changelogs.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
-      const currentPage = i + 1;
-      const next = currentPage === 1 ? null : (currentPage === 2 ? `/changelog/` : `/changelog/page/${currentPage - 1}`);
-      const previous = currentPage < numPages ? `/changelog/page/${currentPage + 1}` : null;
+      const currentPage = i + 1
+      const next =
+        currentPage === 1
+          ? null
+          : currentPage === 2
+          ? `/changelog/`
+          : `/changelog/page/${currentPage - 1}`
+      const previous =
+        currentPage < numPages ? `/changelog/page/${currentPage + 1}` : null
       createPage({
         path: i === 0 ? `/changelog/` : `/changelog/page/${i + 1}`,
         component: path.resolve("./src/templates/changelogs.js"),
@@ -370,14 +376,14 @@ exports.createPages = ({ graphql, actions }) => {
           numPages,
           currentPage,
           previous,
-          next
+          next,
         },
       })
     })
 
     // Create Terminus Command pages
     const terminusCommands = result.data.dataJson.commands
-    terminusCommands.forEach(command => {
+    terminusCommands.forEach((command) => {
       const slugRegExp = /:/g
       const slug = command.name.replace(slugRegExp, "-")
       createPage({
@@ -385,53 +391,32 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/terminusCommand.js`),
         context: {
           slug: slug,
-          name: command.name
-        }
+          name: command.name,
+        },
       })
     })
 
-      // Create release notes without pagination. At a later date, we may want to add pagination.
-      // And can reused the code above.
-      createPage({
-        path: `/release-notes/`,
-        component: path.resolve("./src/templates/releaseNotesListing.js"),
-      })
-    // @todo, switch to "../data/releaseNoteCategories.js"
-      const allowedReleaseNoteCategories = {
-        "security": {
-          "Display Name": "Security",
-          "color": "red"
-        },
-        "documentation": {
-          "Display Name": "Documentation",
-          "color": "purple"
-        },
-    };
+    // Create release notes without pagination. At a later date, we may want to add pagination.
+    // And can reused the code above.
+    createPage({
+      path: `/release-notes/`,
+      component: path.resolve("./src/templates/releaseNotesListing.js"),
+    })
 
- // Loop through all allowed categories and create a page for each one.
-    Object.keys(allowedReleaseNoteCategories).forEach((category) => {
+    // Create Terminus Command pages
+    const allReleaseNoteCategories =
+      result.data.releasenotescategoriesJson.categories
+    allReleaseNoteCategories.forEach((category) => {
       createPage({
-        path: `/release-notez/${category}`,
-        component: path.resolve("./src/templates/releaseNotesListingByCategory.js"),
+        path: `/release-notes/${category.slug}`,
+        component: path.resolve(
+          "./src/templates/releaseNotesListingByCategory.js"
+        ),
         context: {
-          category: category,
+          category: category.slug,
         },
       })
     })
-
-
-    // // Create Terminus Command pages
-     const allReleaseNoteCategories = result.data.releasenotescategoriesJson.categories
-     console.log(allReleaseNoteCategories)
-      allReleaseNoteCategories.forEach(category => {
-        createPage({
-          path: `/release-notes/${category.slug}`,
-          component: path.resolve("./src/templates/releaseNotesListingByCategory.js"),
-          context: {
-            category: category.slug,
-          },
-        })
-      })
 
     // terminusCommands.forEach(command => {
     //   const slugRegExp = /:/g
@@ -447,9 +432,9 @@ exports.createPages = ({ graphql, actions }) => {
     // })
 
     // Create each release note page.
-    const releaseNotes = result.data.allReleaseNotes.edges;
-    releaseNotes.forEach(releaseNote => {
-      const template = calculateTemplate(releaseNote.node, "releaseNotePage");
+    const releaseNotes = result.data.allReleaseNotes.edges
+    releaseNotes.forEach((releaseNote) => {
+      const template = calculateTemplate(releaseNote.node, "releaseNotePage")
       createPage({
         path: releaseNote.node.fields.slug,
         component: path.resolve(`./src/templates/${template}.js`),
@@ -461,7 +446,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create contributor pages.
     const contributors = result.data.allContributorYaml.edges
-    contributors.forEach(contributor => {
+    contributors.forEach((contributor) => {
       createPage({
         path: `contributors/${contributor.node.yamlId}`,
         component: path.resolve(`./src/templates/contributor.js`),
@@ -473,7 +458,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create topics pages.
     const topics = result.data.allLandingsYaml.edges
-    topics.forEach(topic => {
+    topics.forEach((topic) => {
       createPage({
         path: topic.node.path,
         component: path.resolve(`./src/templates/landing.js`),
@@ -517,14 +502,14 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   // MDX content
   if (node.internal.type === `Mdx`) {
-    const sourceInstanceName = getNode(node.parent).sourceInstanceName;
-    if (sourceInstanceName === 'content') {
-      const editPath = `source/content/${getNode(node.parent).relativePath}`;
-       // Add editPath field
+    const sourceInstanceName = getNode(node.parent).sourceInstanceName
+    if (sourceInstanceName === "content") {
+      const editPath = `source/content/${getNode(node.parent).relativePath}`
+      // Add editPath field
       createNodeField({
         name: `editPath`,
         node,
-        value: editPath
+        value: editPath,
       })
     }
 
@@ -533,11 +518,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: slug
+      value: slug,
     })
 
     if (slug.includes("guides/")) {
-      if (getNode(node.parent).relativeDirectory !== 'guides') {
+      if (getNode(node.parent).relativeDirectory !== "guides") {
         // Add guide_directory field
         createNodeField({
           name: `guide_directory`,
@@ -547,9 +532,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       }
     }
 
-    if (sourceInstanceName === 'changelogs' || sourceInstanceName === 'releasenotes') {
-      const content = matter(node.internal.content, { excerpt: true, excerpt_separator: '<!-- excerpt -->' } );
-      const excerpt = content.excerpt || "";
+    if (
+      sourceInstanceName === "changelogs" ||
+      sourceInstanceName === "releasenotes"
+    ) {
+      const content = matter(node.internal.content, {
+        excerpt: true,
+        excerpt_separator: "<!-- excerpt -->",
+      })
+      const excerpt = content.excerpt || ""
 
       createNodeField({
         name: `excerpt`,
@@ -621,7 +612,6 @@ exports.onPreBootstrap = () => {
 
   fs.copySync(scriptsCopyFrom, scriptsCopyTo)
 }
-
 
 /* todo should there be an error thrown if a release note category is set that is not allowed */
 /* todo, infer published date from file name. And throw an error if there are files that don't follow the pattern. */
