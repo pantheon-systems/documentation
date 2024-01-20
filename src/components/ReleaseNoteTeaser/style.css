@@ -3,6 +3,7 @@
   flex-direction: column;
   row-gap: var(--pds-spacing-s);
   margin-block-end: var(--pds-spacing-l);
+  justify-content: space-between;
 }
 
 @media (min-width: 1025px) {
