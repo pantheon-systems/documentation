@@ -29,18 +29,12 @@ const ReleaseNoteCategorySelector = () => {
     })
   }
 
-  // Get the active categories data.
-  const activeCategories = JSON.parse(activeReleaseNoteCategories())
-
-  // Create the menu items.
-  createCategoryMenuItems(activeCategories)
-
   return (
     <>
       <MenuButton
         label="Categories"
         variant="secondary"
-        menuItems={categoryMenuItems}
+        menuItems={activeReleaseNoteCategories()}
       />
     </>
   )
