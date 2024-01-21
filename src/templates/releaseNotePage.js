@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteCategories from "../components/ReleaseNoteCategories"
@@ -26,9 +26,11 @@ class ReleaseNoteTemplate extends React.Component {
         />
         <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth}>
-            <div className="pds-overline-text pds-spacing-mar-block-end-xs">
-              Pantheon Release Notes
-            </div>
+            <Link to="/release-notes" className="pds-spacing-mar-block-end-m">
+              <div className="pds-overline-text pds-overline-text--lg pds-spacing-mar-block-end-xs">
+                Pantheon Release Notes
+              </div>
+            </Link>
             <h1 className="pds-spacing-mar-block-end-l">
               {node.frontmatter.title}
             </h1>
