@@ -6,7 +6,7 @@ import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
 import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
-import { Container } from "@pantheon-systems/pds-toolkit-react"
+import { Container, FlexContainer } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -23,12 +23,17 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   const handleInputChange = (event) => {
     const query = event.target.value
 
-    // const releasenotes = data.allMdx.edges || []
+    // Get all releasenotes.
+    const releasenotes = data.allMdx.edges || []
 
     // Filter releasenotes based on query.
     const filteredData = releasenotes.filter((releasenote) => {
       const { title } = releasenote.node.frontmatter
-      return title.toLowerCase().includes(query.toLowerCase())
+      const { rawBody } = releasenote.node
+      return (
+        title.toLowerCase().includes(query.toLowerCase()) ||
+        rawBody.toLowerCase().includes(query.toLowerCase())
+      )
     })
 
     // Update state based on query.
@@ -50,23 +55,36 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       <main id="docs-main" tabIndex="-1">
         <Container width={containerWidth}>
           <h1>Pantheon Release Notes</h1>
-          <div className="pds-input-field__input-wrapper">
-            <input
-              type="text"
-              aria-label="Search"
-              placeholder="Search release notes"
-              id="release-note-search"
-              className="pds-input-field__input"
-              onChange={handleInputChange}
-            />
-          </div>
-          <ReleaseNoteCategorySelector />
-          <div id="doc">
+          <FlexContainer
+            style={{
+              borderBottom: "1px solid var(--pds-color-border-default)",
+              paddingBlockEnd: "var(--pds-spacing-3xl)",
+              paddingBlockStart: "var(--pds-spacing-s)",
+            }}
+          >
+            <div
+              className="pds-input-field__input-wrapper"
+              style={{
+                flexGrow: "2",
+              }}
+            >
+              <input
+                type="text"
+                aria-label="Search"
+                placeholder="Search release notes"
+                id="release-note-search"
+                className="pds-input-field__input"
+                onChange={handleInputChange}
+              />
+            </div>
+            <ReleaseNoteCategorySelector />
+          </FlexContainer>
+          <div id="doc" className="pds-spacing-mar-block-start-2xl">
             {releasenotes.map((releasenote, index) => (
               <ReleaseNoteTeaser
                 key={index}
                 ReleaseNoteData={releasenote.node}
-                className="pds-spacing-mar-block-5xl"
+                className="pds-spacing-mar-block-end-5xl"
               />
             ))}
           </div>
@@ -86,6 +104,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          rawBody
           ... on Mdx {
             ...theReleaseNoteFields
           }
