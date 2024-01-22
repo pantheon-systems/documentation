@@ -66,5 +66,5 @@ export const activeReleaseNoteCategories = () => {
   // Sort the categories alphabetically by display name.
   activeCategories.sort((a, b) => (a.displayName > b.displayName ? 1 : -1))
 
-  return activeCategories
+  return JSON.stringify(activeCategories)
 }
