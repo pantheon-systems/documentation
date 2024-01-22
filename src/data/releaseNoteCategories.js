@@ -84,15 +84,10 @@ export const releaseNoteCategories = {
     "color": "gray",
     "description": "Reserved for updates related to migrations, ensuring users are informed about changes affecting the movement of data and content within the Pantheon platform"
   },
-  "platform": {
-    "displayName": "Platform",
-    "color": "gray",
-    "description": "Offers general updates about the Pantheon platform, providing users with a comprehensive overview of changes that influence the overall system"
-  },
   "pantheon-docs": {
     "displayName": "Pantheon Docs",
     "color": "gray",
-    "description": "Reserved for updates that involve substantive changes, additions, or clarifications within Pantheon Docs — the centralized hub containing manuals and essential documentation for Pantheon users."  
+    "description": "Reserved for updates that involve substantive changes, additions, or clarifications within Pantheon Docs — the centralized hub containing manuals and essential documentation for Pantheon users."
   },
   "account-management": {
     "displayName": "Account Management",
