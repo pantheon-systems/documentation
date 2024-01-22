@@ -11,7 +11,7 @@ import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
-
+// Add comment
 class ReleaseNoteTemplate extends React.Component {
   render() {
     const node = this.props.data.mdx
