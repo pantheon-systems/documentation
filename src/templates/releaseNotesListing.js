@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
-import ReleaseNoteCategorySelector from "../components/ReleaseNoteCategorySelector.js"
+import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
 import { Container } from "@pantheon-systems/pds-toolkit-react"
