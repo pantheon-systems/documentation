@@ -26,11 +26,11 @@ class ReleaseNoteTemplate extends React.Component {
         />
         <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth}>
-            <Link to="/release-notes" className="pds-spacing-mar-block-end-m">
-              <div className="pds-overline-text pds-overline-text--lg pds-spacing-mar-block-end-xs">
+            <div className="pds-overline-text pds-overline-text--lg pds-spacing-mar-block-end-xs">
+              <Link to="/release-notes" className="pds-spacing-mar-block-end-m">
                 Pantheon Release Notes
-              </div>
-            </Link>
+              </Link>
+            </div>
             <h1 className="pds-spacing-mar-block-end-l">
               {node.frontmatter.title}
             </h1>
