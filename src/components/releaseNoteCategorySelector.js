@@ -38,7 +38,7 @@ const ReleaseNoteCategorySelector = () => {
   return (
     <>
       <MenuButton
-        label="Categories"
+        label="Filter by category"
         variant="secondary"
         menuItems={categoryMenuItems}
       />
