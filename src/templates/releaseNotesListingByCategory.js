@@ -10,38 +10,36 @@ import { Container } from "@pantheon-systems/pds-toolkit-react"
 // Set container width for search and main content.
 const containerWidth = "standard"
 
-class ReleaseNotesListingByCategoryTemplate extends React.Component {
-  render() {
-    const releasenotes = this.props.data.allMdx.edges
-    const categorySlug = this.props.pageContext.category
-    const categoryData = releaseNoteCategoryLoader(categorySlug)
+const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
+  const releasenotes = data.allMdx.edges
+  const categorySlug = pageContext.category
+  const categoryData = releaseNoteCategoryLoader(categorySlug)
 
-    return (
-      <Layout containerWidth={containerWidth} footerBorder>
-        <SEO
-          title="Pantheon Release Notes about {categoryDisplayName}"
-          description="A filtering of changes to the Pantheon Platform by the category of {categoryDisplayName}"
-          image={"assets/images/default-thumb-doc.png"}
-        />
-        <main id="docs-main" tabIndex="-1">
-          <Container width={containerWidth}>
-            <h1>Pantheon Release Notes: {categoryData["displayName"]}</h1>
-            <ReleaseNoteCategorySelector />
+  return (
+    <Layout containerWidth={containerWidth} footerBorder>
+      <SEO
+        title="Pantheon Release Notes about {categoryDisplayName}"
+        description="A filtering of changes to the Pantheon Platform by the category of {categoryDisplayName}"
+        image={"assets/images/default-thumb-doc.png"}
+      />
+      <main id="docs-main" tabIndex="-1">
+        <Container width={containerWidth}>
+          <h1>Pantheon Release Notes: {categoryData["displayName"]}</h1>
+          <ReleaseNoteCategorySelector />
 
-            <div id="doc">
-              {releasenotes.map((releasenote, index) => (
-                <ReleaseNoteTeaser
-                  key={index}
-                  ReleaseNoteData={releasenote.node}
-                  className="pds-spacing-mar-block-5xl"
-                />
-              ))}
-            </div>
-          </Container>
-        </main>
-      </Layout>
-    )
-  }
+          <div id="doc">
+            {releasenotes.map((releasenote, index) => (
+              <ReleaseNoteTeaser
+                key={index}
+                ReleaseNoteData={releasenote.node}
+                className="pds-spacing-mar-block-5xl"
+              />
+            ))}
+          </div>
+        </Container>
+      </main>
+    </Layout>
+  )
 }
 
 export default ReleaseNotesListingByCategoryTemplate
