@@ -95,7 +95,7 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
               <ReleaseNoteTeaser
                 key={index}
                 ReleaseNoteData={releasenote.node}
-                className="pds-spacing-mar-block-5xl"
+                className="pds-spacing-mar-block-end-5xl"
               />
             ))}
           </div>
