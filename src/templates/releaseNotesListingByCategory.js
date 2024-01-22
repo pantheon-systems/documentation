@@ -56,8 +56,8 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
   return (
     <Layout containerWidth={containerWidth} footerBorder>
       <SEO
-        title="Pantheon Release Notes about {categoryDisplayName}"
-        description="A filtering of changes to the Pantheon Platform by the category of {categoryDisplayName}"
+        title={`Pantheon Release Notes about ${categoryData["displayName"]}`}
+        description={`A filtering of changes to the Pantheon Platform by the category of ${categoryData["displayName"]}`}
         image={"assets/images/default-thumb-doc.png"}
       />
       <main id="docs-main" tabIndex="-1">
