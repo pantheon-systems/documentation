@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
@@ -12,7 +12,34 @@ import { Container } from "@pantheon-systems/pds-toolkit-react"
 const containerWidth = "standard"
 
 const ReleaseNotesListingTemplate = ({ data }) => {
-  const releasenotes = data.allMdx.edges
+  const allReleasenotes = data.allMdx.edges
+  const emptyQuery = ""
+
+  // Set up state.
+  const [filteredData, setFilteredData] = useState([])
+  const [query, setQuery] = useState(emptyQuery)
+
+  // Handle search input.
+  const handleInputChange = (event) => {
+    const query = event.target.value
+
+    // const releasenotes = data.allMdx.edges || []
+
+    // Filter releasenotes based on query.
+    const filteredData = releasenotes.filter((releasenote) => {
+      const { title } = releasenote.node.frontmatter
+      return title.toLowerCase().includes(query.toLowerCase())
+    })
+
+    // Update state based on query.
+    setFilteredData(filteredData)
+    setQuery(query)
+  }
+
+  // If query is empty, show all releasenotes.
+  const hasSearchResults = filteredData && query !== emptyQuery
+  const releasenotes = hasSearchResults ? filteredData : allReleasenotes
+
   return (
     <Layout containerWidth={containerWidth} footerBorder>
       <SEO
@@ -23,6 +50,16 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       <main id="docs-main" tabIndex="-1">
         <Container width={containerWidth}>
           <h1>Pantheon Release Notes</h1>
+          <div className="pds-input-field__input-wrapper">
+            <input
+              type="text"
+              aria-label="Search"
+              placeholder="Search release notes"
+              id="release-note-search"
+              className="pds-input-field__input"
+              onChange={handleInputChange}
+            />
+          </div>
           <ReleaseNoteCategorySelector />
           <div id="doc">
             {releasenotes.map((releasenote, index) => (
