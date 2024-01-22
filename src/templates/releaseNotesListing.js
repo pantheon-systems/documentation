@@ -9,7 +9,6 @@ import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelect
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
 import { Container, FlexContainer } from "@pantheon-systems/pds-toolkit-react"
-import { de } from "date-fns/locale"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
