@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
+import debounce from "lodash.debounce"
+
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
@@ -7,6 +9,7 @@ import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelect
 import { releaseNoteFragment } from "../fragments/releaseNote.js"
 
 import { Container, FlexContainer } from "@pantheon-systems/pds-toolkit-react"
+import { de } from "date-fns/locale"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -41,6 +44,9 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     setQuery(query)
   }
 
+  // Debounce search input.
+  const debouncedHandleInputChange = debounce(handleInputChange, 500)
+
   // If query is empty, show all releasenotes.
   const hasSearchResults = filteredData && query !== emptyQuery
   const releasenotes = hasSearchResults ? filteredData : allReleasenotes
@@ -70,11 +76,11 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             >
               <input
                 type="text"
-                aria-label="Search"
-                placeholder="Search release notes"
+                aria-label="Filter release notes"
+                placeholder="Filter release notes"
                 id="release-note-search"
                 className="pds-input-field__input"
-                onChange={handleInputChange}
+                onChange={debouncedHandleInputChange}
               />
             </div>
             <ReleaseNoteCategorySelector />
