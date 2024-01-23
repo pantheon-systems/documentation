@@ -4,7 +4,7 @@
       "slug": "account-management",
       "displayName": "Account Management",
       "color": "color-1",
-      "description": "Covers finance and billing-related updates, allowing billing and finance managers to track changes affecting their financial aspects"
+      "description": "Highlights updates related to account permissions, user roles, and any changes that impact how users manage and interact with their accounts"
     },
     {
       "slug": "action-required",
@@ -13,10 +13,10 @@
       "description": "Requires customer to act in order to avoid disruption"
     },
     {
-      "slug": "content-management",
-      "displayName": "Content Management",
-      "color": "color-9",
-      "description": "Include changes relevant to managing digital content on the Pantheon platform, ensuring users stay informed about updates related to content creation, editing, and relevant tools"
+      "slug": "billing",
+      "displayName": "Billing & Finance",
+      "color": "color-1",
+      "description": "Covers finance and billing-related updates, allowing billing and finance managers to track changes affecting their financial aspects"
     },
     {
       "slug": "deprecated",
@@ -26,11 +26,9 @@
     },
     {
       "slug": "documentation",
-      "displayName": "Documentation",
+      "displayName": "Pantheon Docs",
       "color": "color-4",
-      "description": "Communicates substantive changes to docs.pantheon.io",
-      "_comment-from-Rachel": "Review needed: New category not yet reviewed/approved by Ingrid or design team",
-      "_another_comment-from-Rachel": "We should require any new category to go through a review panel which includes design team, since too many tags can reduce usability of the feature and duplicate categories can cause confusion for intended usage."
+      "description": "Reserved for updates that involve substantive changes, additions, or clarifications within Pantheon Docs — the centralized hub containing manuals and essential documentation for Pantheon users"
     },
     {
       "slug": "drupal",
@@ -41,13 +39,13 @@
     {
       "slug": "events",
       "displayName": "Events",
-      "color": "color-6",
+      "color": "color-4",
       "description": "Highlights updates related to special events, promotions, or limited-time occurrences on the Pantheon platform, keeping users informed about time-sensitive opportunities"
     },
     {
       "slug": "front-end-sites",
       "displayName": "Front-End Sites",
-      "color": "color-2",
+      "color": "color-9",
       "description": "Focuses on updates related to Front-End Site (FES) enhancements, ensuring that developers and designers stay informed about changes affecting how they use the product"
     },
     {
@@ -59,21 +57,8 @@
     {
       "slug": "infrastructure",
       "displayName": "Infrastructure",
-      "color": "color-10",
+      "color": "color-8",
       "description": "Details changes related to the underlying technology and architecture of the Pantheon platform, providing insights into changes that may impact performance and reliability"
-    },
-    {
-      "slug": "integration",
-      "displayName": "Integration",
-      "color": "color-3",
-      "description": "Addresses updates related to system integration, helping IT and tech leads understand changes relevant to connecting Pantheon with other tools and services",
-      "_comment-from-Rachel": "I think we should remove this as a duplicate of the Tools/APIs category"
-    },
-    {
-      "slug": "issue-bug",
-      "displayName": "Issue/Bug",
-      "color": "color-5",
-      "description": "Merges information about issues and bugs into a unified category, allowing users to easily identify and understand the current status and steps taken to address reported problems"
     },
     {
       "slug": "migration",
@@ -90,7 +75,7 @@
     {
       "slug": "performance",
       "displayName": "Performance",
-      "color": "color-7",
+      "color": "color-6",
       "description": "Highlights updates focused on optimizing the speed, efficiency, and overall performance of the Pantheon platform, giving users insights into improvements that enhance user experience"
     },
     {
@@ -114,21 +99,14 @@
     {
       "slug": "user-interface",
       "displayName": "User interface",
-      "color": "color-8",
+      "color": "color-2",
       "description": "Highlights updates related to changes in the user interface, ensuring that designers, marketers, and other users are aware of alterations to the visual and interactive elements of the platform"
     },
     {
       "slug": "wordpress",
       "displayName": "WordPress",
-      "color": "color-8",
+      "color": "color-9",
       "description": "Tailored for updates specific to the WordPress content management system, helping WordPress users stay informed about platform changes that directly impact their workflows"
-    },
-    {
-      "slug": "platform",
-      "displayName": "Platform",
-      "color": "color-10",
-      "description": "Offers general updates about the Pantheon platform, providing users with a comprehensive overview of changes that influence the overall system",
-      "_comment-from-Rachel": "I think we should remove this as a duplicate of the Infrastructure category"
     }
   ]
 }
