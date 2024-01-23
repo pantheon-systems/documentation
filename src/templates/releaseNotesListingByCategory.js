@@ -63,6 +63,22 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
   const hasSearchResults = filteredData && query !== emptyQuery
   const releasenotes = hasSearchResults ? filteredData : allReleasenotes
 
+  // Preprocess release notes teasers.
+  const renderedTeasers = releasenotes.map((releasenote, index) => (
+    <ReleaseNoteTeaser
+      key={index}
+      ReleaseNoteData={releasenote.node}
+      className="pds-spacing-mar-block-end-5xl"
+    />
+  ))
+
+  // Render release notes or no results message.
+  const noResultsMessage = (
+    <p className="pds-spacing-mar-block-end-2xl">No results.</p>
+  )
+  const renderedReleaseNotes =
+    releasenotes.length !== 0 ? renderedTeasers : noResultsMessage
+
   return (
     <Layout containerWidth={containerWidth} excludeSearch footerBorder>
       <SEO
@@ -105,15 +121,8 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
             </div>
             <ReleaseNoteCategorySelector />
           </FlexContainer>
-
           <div id="doc" className="pds-spacing-mar-block-start-2xl">
-            {releasenotes.map((releasenote, index) => (
-              <ReleaseNoteTeaser
-                key={index}
-                ReleaseNoteData={releasenote.node}
-                className="pds-spacing-mar-block-end-5xl"
-              />
-            ))}
+            {renderedReleaseNotes}
           </div>
         </Container>
       </main>
