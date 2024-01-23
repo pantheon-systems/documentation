@@ -391,14 +391,6 @@ ___
 1. Define a new class that inherits from the `PantheonApachesolrSearchApiSolrService` and contains logic from the `SearchApiSolrDateSortSolrService` (or vice a versa). Refer to the [module source code](https://git.drupalcode.org/project/search_api_solr_date_sort/-/blob/7.x-1.x/includes/service.inc) for examples.
 
 1. Implement the `hook_search_api_service_info_alter()` function in your custom module's `.module` file and add your class into a configuration array. Refer to the [developer documentation](https://www.drupal.org/node/1999396) for details. Ensure that your [module's weight](https://www.drupal.org/docs/7/creating-custom-modules/howtos/how-to-update-a-modules-weight) is gereater than that of `search_api_solr_date` and `pantheon_apachesolr`.
-
-___
-
-## [Simple OAuth / OAuth 2.0](https://www.drupal.org/project/simple_oauth)
-
-**Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
-
-**Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
 ___
 
 ## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 9 (core)
