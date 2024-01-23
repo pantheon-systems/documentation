@@ -17,7 +17,7 @@ class ReleaseNoteTemplate extends React.Component {
     const node = this.props.data.mdx
 
     return (
-      <Layout containerWidth={containerWidth} footerBorder>
+      <Layout containerWidth={containerWidth} excludeSearch footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
@@ -25,7 +25,10 @@ class ReleaseNoteTemplate extends React.Component {
           image={"/images/assets/default-thumb-doc.png"}
         />
         <main id="docs-main" tabIndex="-1">
-          <Container width={containerWidth}>
+          <Container
+            width={containerWidth}
+            className="pds-spacing-mar-block-start-3xl"
+          >
             <div className="pds-overline-text pds-overline-text--lg pds-spacing-mar-block-end-xs">
               <Link to="/release-notes" className="pds-spacing-mar-block-end-m">
                 Pantheon Release Notes

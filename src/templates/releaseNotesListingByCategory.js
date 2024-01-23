@@ -64,14 +64,17 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
   const releasenotes = hasSearchResults ? filteredData : allReleasenotes
 
   return (
-    <Layout containerWidth={containerWidth} footerBorder>
+    <Layout containerWidth={containerWidth} excludeSearch footerBorder>
       <SEO
         title={`Pantheon Release Notes about ${categoryData["displayName"]}`}
         description={`A filtering of changes to the Pantheon Platform by the category of ${categoryData["displayName"]}`}
         image={"assets/images/default-thumb-doc.png"}
       />
       <main id="docs-main" tabIndex="-1">
-        <Container width={containerWidth}>
+        <Container
+          width={containerWidth}
+          className="pds-spacing-mar-block-start-3xl"
+        >
           <h1>
             Pantheon Release Notes: <em>{categoryData["displayName"]}</em>
           </h1>
