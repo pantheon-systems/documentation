@@ -10,17 +10,20 @@ const ReleaseNoteCategories = ({ categories, displayType, className }) => {
     return null
   }
 
-  /* If there is one category display the singular form.*/
+  // If there is one category display the singular form.
   const categoryHeading = categories.length === 1 ? "Category:" : "Categories:"
 
-  /* Change heading level based on displayType prop */
+  // Change heading level based on displayType prop.
   const HeadingLevel = displayType === "page" ? "h2" : "h3"
+
+  // Put categories in alphabetical order.
+  const sortedCategories = categories.sort()
 
   return (
     <div className={className}>
       <HeadingLevel className="visually-hidden">{categoryHeading}</HeadingLevel>
       <div className="docs-release-notes-tags">
-        {categories.map((categorySlug, index) => (
+        {sortedCategories.map((categorySlug, index) => (
           <Tag
             key={index}
             linkContent={<Link to={`/release-notes/${categorySlug}`} />}
