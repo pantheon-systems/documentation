@@ -84,7 +84,7 @@ const mainNavigationLinks = [
       {
         linkContent: (
           <Link id="release-notes" to="/release-notes">
-            Release Notes
+            Release Notes (Changelog)
           </Link>
         ),
       },
