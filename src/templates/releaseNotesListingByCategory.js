@@ -8,7 +8,11 @@ import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
 import { releaseNoteCategoryLoader } from "../data/releaseNoteCategories.js"
 import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
 
-import { Container, FlexContainer } from "@pantheon-systems/pds-toolkit-react"
+import {
+  Container,
+  FlexContainer,
+  Icon,
+} from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -33,21 +37,27 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
 
     // Filter releasenotes based on query.
     const filteredData = releasenotes.filter((releasenote) => {
-      const { title } = releasenote.node.frontmatter
-      const { rawBody } = releasenote.node
+      const title = releasenote.node.frontmatter.title
+      const rawBody = releasenote.node.rawBody
+      const publishedDate = releasenote.node.frontmatter.published_date
+      const dateOptions = { year: "numeric", month: "long", day: "numeric" }
+      const formattedDate = new Date(publishedDate).toLocaleDateString(
+        undefined,
+        dateOptions
+      )
       return (
         title.toLowerCase().includes(query.toLowerCase()) ||
-        rawBody.toLowerCase().includes(query.toLowerCase())
+        rawBody.toLowerCase().includes(query.toLowerCase()) ||
+        formattedDate.toLowerCase().includes(query.toLowerCase())
       )
     })
-
     // Update state based on query.
     setFilteredData(filteredData)
     setQuery(query)
   }
 
   // Debounce search input.
-  const debouncedHandleInputChange = debounce(handleInputChange, 500)
+  const debouncedHandleInputChange = debounce(handleInputChange, 300)
 
   // If query is empty, show all releasenotes.
   const hasSearchResults = filteredData && query !== emptyQuery
@@ -78,11 +88,14 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
                 flexGrow: "2",
               }}
             >
+              <div class="pds-input-field__decorators">
+                <Icon iconName="barsFilter" />
+              </div>
               <input
-                type="text"
+                type="search"
                 aria-label="Filter release notes"
                 placeholder={`Filter ${categoryData["displayName"]} release notes`}
-                id="release-note-search"
+                id="release-note-filter-by-category"
                 className="pds-input-field__input"
                 onChange={debouncedHandleInputChange}
               />
