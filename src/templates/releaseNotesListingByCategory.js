@@ -82,7 +82,7 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
             style={{
               borderBottom: "1px solid var(--pds-color-border-default)",
               paddingBlockEnd: "var(--pds-spacing-3xl)",
-              paddingBlockStart: "var(--pds-spacing-s)",
+              paddingBlockStart: "var(--pds-spacing-m)",
             }}
           >
             <div

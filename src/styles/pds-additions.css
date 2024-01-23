@@ -13,3 +13,7 @@ strong {
 .pds-tag {
   white-space: nowrap;
 }
+
+.pds-input-field__decorators {
+  padding-inline: var(--pds-spacing-5xs);
+}
