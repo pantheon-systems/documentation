@@ -39,13 +39,13 @@
     {
       "slug": "events",
       "displayName": "Events",
-      "color": "color-6",
+      "color": "color-4",
       "description": "Highlights updates related to special events, promotions, or limited-time occurrences on the Pantheon platform, keeping users informed about time-sensitive opportunities"
     },
     {
       "slug": "front-end-sites",
       "displayName": "Front-End Sites",
-      "color": "color-2",
+      "color": "color-9",
       "description": "Focuses on updates related to Front-End Site (FES) enhancements, ensuring that developers and designers stay informed about changes affecting how they use the product"
     },
     {
@@ -57,7 +57,7 @@
     {
       "slug": "infrastructure",
       "displayName": "Infrastructure",
-      "color": "color-10",
+      "color": "color-8",
       "description": "Details changes related to the underlying technology and architecture of the Pantheon platform, providing insights into changes that may impact performance and reliability"
     },
     {
@@ -75,7 +75,7 @@
     {
       "slug": "performance",
       "displayName": "Performance",
-      "color": "color-7",
+      "color": "color-6",
       "description": "Highlights updates focused on optimizing the speed, efficiency, and overall performance of the Pantheon platform, giving users insights into improvements that enhance user experience"
     },
     {
@@ -99,13 +99,13 @@
     {
       "slug": "user-interface",
       "displayName": "User interface",
-      "color": "color-8",
+      "color": "color-2",
       "description": "Highlights updates related to changes in the user interface, ensuring that designers, marketers, and other users are aware of alterations to the visual and interactive elements of the platform"
     },
     {
       "slug": "wordpress",
       "displayName": "WordPress",
-      "color": "color-8",
+      "color": "color-9",
       "description": "Tailored for updates specific to the WordPress content management system, helping WordPress users stay informed about platform changes that directly impact their workflows"
     }
   ]
