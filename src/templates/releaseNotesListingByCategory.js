@@ -74,7 +74,10 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
 
   // Render release notes or no results message.
   const noResultsMessage = (
-    <p className="pds-spacing-mar-block-end-2xl">No results.</p>
+    <p className="pds-spacing-mar-block-end-2xl">
+      No results found. Try refining your search terms or explore other
+      categories.
+    </p>
   )
   const renderedReleaseNotes =
     releasenotes.length !== 0 ? renderedTeasers : noResultsMessage
@@ -108,12 +111,12 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
               }}
             >
               <div class="pds-input-field__decorators">
-                <Icon iconName="barsFilter" />
+                <Icon iconName="magnifyingGlass" />
               </div>
               <input
                 type="search"
-                aria-label="Filter release notes"
-                placeholder={`Filter ${categoryData["displayName"]} release notes`}
+                aria-label={`Search ${categoryData["displayName"]} release notes`}
+                placeholder={`Search ${categoryData["displayName"]} release notes`}
                 id="release-note-filter-by-category"
                 className="pds-input-field__input"
                 onChange={debouncedHandleInputChange}
