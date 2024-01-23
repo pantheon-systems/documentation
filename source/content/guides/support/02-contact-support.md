@@ -71,7 +71,7 @@ You can download a transcript of your chat with the <Icon icon="arrowDownToLine"
 
 <Alert title="Note" type="info">
 
-Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://www.intercom.com/help/en/articles/1200-why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
+Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try allowlisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://www.intercom.com/help/en/articles/2546256-troubleshooting-when-the-messenger-doesn-t-appear) on their site.
 
 </Alert>
 
