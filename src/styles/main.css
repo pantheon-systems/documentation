@@ -21,6 +21,11 @@ table {
   margin-block-end: var(--pds-spacing-m) !important;
 }
 
+/* Highlighted text */
+mark {
+  background-color: #fff1a9;
+}
+
 /* Landing pages */
 .landing-page__header {
   text-align: center;
