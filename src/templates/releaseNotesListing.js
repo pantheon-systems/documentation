@@ -106,7 +106,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 flexGrow: "2",
               }}
             >
-              <div class="pds-input-field__decorators">
+              <div className="pds-input-field__decorators">
                 <Icon iconName="magnifyingGlass" />
               </div>
               <input
