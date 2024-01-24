@@ -95,7 +95,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   return (
     <Layout containerWidth={containerWidth} excludeSearch footerBorder>
       <SEO
-        title="Pantheon Release Notes"
+        title="Pantheon release notes"
         description="A summary of changes to the Pantheon Platform"
         image={"assets/images/default-thumb-doc.png"}
       />
@@ -104,7 +104,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
           width={containerWidth}
           className="pds-spacing-mar-block-start-3xl"
         >
-          <h1>Pantheon Release Notes</h1>
+          <h1>Pantheon release notes</h1>
           <FlexContainer
             style={{
               borderBottom: "1px solid var(--pds-color-border-default)",

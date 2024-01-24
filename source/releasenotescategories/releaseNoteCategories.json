@@ -2,25 +2,25 @@
   "categories": [
     {
       "slug": "account-management",
-      "displayName": "account management",
+      "displayName": "Account management",
       "color": "color-1",
       "description": "Highlights updates related to account permissions, user roles, and any changes that impact how users manage and interact with their accounts"
     },
     {
       "slug": "action-required",
-      "displayName": "action required",
+      "displayName": "Action required",
       "color": "color-3",
       "description": "Requires customer to act in order to avoid disruption"
     },
     {
       "slug": "billing",
-      "displayName": "billing & finance",
+      "displayName": "Billing & Finance",
       "color": "color-1",
       "description": "Covers finance and billing-related updates, allowing billing and finance managers to track changes affecting their financial aspects"
     },
     {
       "slug": "deprecated",
-      "displayName": "deprecated",
+      "displayName": "Deprecated",
       "color": "color-4",
       "description": "Reserved for updates indicating the phasing out or discontinuation of specific features or functionalities"
     },
@@ -38,7 +38,7 @@
     },
     {
       "slug": "events",
-      "displayName": "events",
+      "displayName": "Events",
       "color": "color-4",
       "description": "Highlights updates related to special events, promotions, or limited-time occurrences on the Pantheon platform, keeping users informed about time-sensitive opportunities"
     },
@@ -50,43 +50,43 @@
     },
     {
       "slug": "general",
-      "displayName": "general",
+      "displayName": "General",
       "color": "color-4",
       "description": "Serves as a catch-all for updates that don't neatly fit into specific categories, offering a broad overview of general changes on the Pantheon platform"
     },
     {
       "slug": "infrastructure",
-      "displayName": "infrastructure",
+      "displayName": "Infrastructure",
       "color": "color-8",
       "description": "Details changes related to the underlying technology and architecture of the Pantheon platform, providing insights into changes that may impact performance and reliability"
     },
     {
       "slug": "migration",
-      "displayName": "migration",
+      "displayName": "Migration",
       "color": "color-6",
       "description": "Reserved for updates related to migrations, ensuring users are informed about changes affecting the movement of data and content within the Pantheon platform"
     },
     {
       "slug": "new-feature",
-      "displayName": "new feature",
+      "displayName": "New feature",
       "color": "color-7",
       "description": "Consolidates information about both new features and improvements, providing users with insights into enhancements that contribute to a better overall experience"
     },
     {
       "slug": "performance",
-      "displayName": "performance",
+      "displayName": "Performance",
       "color": "color-6",
       "description": "Highlights updates focused on optimizing the speed, efficiency, and overall performance of the Pantheon platform, giving users insights into improvements that enhance user experience"
     },
     {
       "slug": "policy",
-      "displayName": "policy",
+      "displayName": "Policy",
       "color": "color-10",
       "description": "Communicates updates related to platform policies, ensuring users are aware of any changes in rules or guidelines that may impact their usage"
     },
     {
       "slug": "security",
-      "displayName": "security",
+      "displayName": "Security",
       "color": "color-5",
       "description": "Addresses security-related updates, emphasizing the importance of staying informed about changes aimed at maintaining a secure and protected environment for users"
     },
@@ -98,7 +98,7 @@
     },
     {
       "slug": "user-interface",
-      "displayName": "user interface",
+      "displayName": "User interface",
       "color": "color-2",
       "description": "Highlights updates related to changes in the user interface, ensuring that designers, marketers, and other users are aware of alterations to the visual and interactive elements of the platform"
     },

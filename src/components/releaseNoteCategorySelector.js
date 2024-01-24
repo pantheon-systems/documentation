@@ -8,7 +8,7 @@ const ReleaseNoteCategorySelector = () => {
   const categoryMenuItems = [
     {
       isLink: true,
-      linkContent: <Link to={`/release-notes`}>All Release Notes</Link>,
+      linkContent: <Link to={`/release-notes`}>All release notes</Link>,
     },
     {
       isSeparator: true,
