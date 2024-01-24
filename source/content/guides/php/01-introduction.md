@@ -25,7 +25,7 @@ Click the links below to display complete PHP information for each version, incl
 
 | Version                                          | Available   | Recommended |
 | ------------------------------------------------ | :---------: | :---------: |
-| [8.3](https://v83-php-info.pantheonsite.io/) <sup>1</sup>   | <span style="color:green">✔</span>         | ❌           |
+| [8.3](https://v83-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.2](https://v82-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.1](https://v81-php-info.pantheonsite.io/)   | <span style="color:green">✔</span>         | <span style="color:green">✔</span>           |
 | [8.0](https://v80-php-info.pantheonsite.io/) | <span style="color:green">✔</span>         | ❌          |
@@ -37,12 +37,6 @@ Click the links below to display complete PHP information for each version, incl
 | [5.6](https://v56-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 
 Sites that run older PHP versions not listed above will continue to serve pages. However, new development cannot be done because the development environment behavior is undefined and no longer supported. You can [upgrade your PHP version](/guides/php/php-versions) in the development environment to resume development on your site.
-
-<Alert title="PHP 8.3 New Relic compatibility" type="info">
-
-<sup>1</sup> Currently, New Relic does not support PHP 8.3. As such, you will not be able to view your New Relic dashboard on any site that has been updated to PHP 8.3. We will be updating our platform to support New Relic on PHP 8.3 sites as soon as a compatible New Relic release is available to us.
-
-</Alert>
 
 ## Drush Compatibility
 
