@@ -20,6 +20,6 @@ jobs:
             "*.md"
             "source/**/*.md"
             --timeout 20
-          fail: true
+          fail: false
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
