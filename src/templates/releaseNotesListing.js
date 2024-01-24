@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import debounce from "lodash.debounce"
+import Mark from "mark.js"
 
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
@@ -52,6 +53,17 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     // Update state based on query.
     setFilteredData(filteredData)
     setQuery(query)
+
+    var context = document.querySelector(".docs-release-note-results")
+    var markInstance = new Mark(context)
+
+    setTimeout(function () {
+      markInstance.unmark({
+        done: function () {
+          markInstance.mark(query)
+        },
+      })
+    }, 100)
   }
 
   // Debounce search input.
@@ -120,7 +132,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             </div>
             <ReleaseNoteCategorySelector />
           </FlexContainer>
-          <div id="doc" className="pds-spacing-mar-block-start-2xl">
+          <div
+            id="doc"
+            className="docs-release-note-results pds-spacing-mar-block-start-2xl"
+          >
             {renderedReleaseNotes}
           </div>
         </Container>
