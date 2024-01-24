@@ -53,6 +53,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     setFilteredData(filteredData)
     setQuery(query)
 
+    // Mark releasenotes based on query.
     var context = document.querySelector(".docs-release-note-results")
     var markInstance = new Mark(context)
 
