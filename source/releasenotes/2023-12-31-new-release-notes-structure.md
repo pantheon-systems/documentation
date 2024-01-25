@@ -1,16 +1,22 @@
 ---
-title: New Release Notes Structure
-published_date: "2023-12-31"
+title: Pantheon release notes - A new year, a new chapter
+published_date: "2024-01-25"
 categories: [documentation]
 ---
 
-For nearly a decade, we have published a monthly "changelog" here within our Documentation site that summarizes significant changes to the platform.
-Going forward in 2024 we are changing some of the details of how we publish and organize this information.
+As we embark on a new year, we're excited to unveil a transformation. This January marks the introduction of **Pantheon release notes**, a rebranding of our changelog. Our aim is to elevate your platform experience by providing even more valuable insights into product updates.
 
-Rather than treating the monthly retrospective as the base unit of information, we will instead publish a new "Release Note" for each significant change to the platform as needed, rather than waiting for the monthly summary.
+**What's new?**
+* **Enhanced visibility:** Discover our improved interface with added tags to each release note, indicating their category and whether action is required. This feature ensures quick insights at a glance, making your navigation smoother.
+* **Filter functionality:** Explore the convenience of our newly integrated filter functionality, allowing you to tailor your release note view based on specific tags. This feature ensures you get information that's most relevant to you.
 
-This switch will support more proactive communication and ensure that any noteworthy change is marked here in addition to the blog posts, emails, and other channels we use to communicate with our customers.
+**What’s coming up?**
+Get ready for a streamlined and more dynamic experience with Pantheon release notes. We're committed to keeping you in the loop every step of the way, ensuring you stay informed about the latest.
 
-Here you will find:
-* A listing of all Release Notes at docs.pantheon.io/release-notes
-* A listing of Release Notes by category (WordPress, Drupal, etc) like docs.pantheon.io/release-notes/infrastructure
+* **Frequent updates:** Say goodbye to waiting for a monthly summary. We're shifting from the monthly retrospective model to publishing a release note for each significant update, providing you with real-time information.
+* **Proactive communication:** This change supports more proactive communication. Now, any noteworthy change will be marked here, complementing other channels like blog posts and emails.
+
+**What lies ahead?**
+This is just the beginning! Stay tuned for more enhancements down the road as we continue to refine and elevate your Pantheon experience.
+
+We appreciate your continued support and look forward to a year filled with collaborative success.
