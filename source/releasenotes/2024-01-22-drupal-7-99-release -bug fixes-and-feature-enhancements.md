@@ -1,4 +1,3 @@
-
 ---
 title: Drupal 7.99 release - bug fixes & feature enhancements 
 published_date: "2024-01-22"
