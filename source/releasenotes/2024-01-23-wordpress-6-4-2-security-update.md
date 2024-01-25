@@ -1,21 +1,17 @@
 ---
-title: WP-CLI v2.9.0 release now available on Pantheon
+title: WordPress 6.4.2 security updates
 published_date: "2024-01-25"
-categories: [wordpress]
+categories: [wordpress, security]
 ---
 
-We're thrilled to announce the availability of WP-CLI v2.9.0 on the Pantheon platform.
-
-WP-CLI is easily accessible for any WordPress site on Pantheon through our CLI, [Terminus](https://docs.pantheon.io/terminus). Manage your WordPress installations efficiently with the power of WP-CLI at your fingertips.
+The latest version of WordPress, 6.4.2, became available on Pantheon as of December 6, 2023.
 
 **Highlights**
-* **Enhanced PHP 8.2 support:**
-This release is dedicated to refining support for [PHP 8.2](https://docs.pantheon.io/guides/php), the recommended version on Pantheon.
-* **Optimized compatibility with WordPress 6.4:**
-We've worked to guarantee seamless compatibility, providing you with the best performance and features available.
-* **Introducing "wp config is-true" command:**
-Our Pantheon engineers have introduced the new "wp config is-true" command. Specifically designed for shell scripting, this command improves WP-CLI functionality and is already integrated into some of our automation processes.
-* **Bug fixes:**
-Although primarily a compact release, WP-CLI v2.9.0 brings a significant impact with crucial bug fixes to enhance usability.
+* **Security updates:**
 
-For those who love diving into the details, we encourage you to explore the [detailed WP-CLI changelog](https://make.wordpress.org/cli/2023/10/25/wp-cli-v2-9-0-release-notes/#changelog).
+Addressed a Remote Code Execution vulnerability. While not directly exploitable in core, its potential severity was recognized, especially when combined with certain plugins, particularly in multisite installations.
+* **[7 bug fixes](https://core.trac.wordpress.org/query?status=closed&milestone=6.4.2&groupdesc=1&group=resolution&col=id&col=summary&col=status&col=milestone&col=owner&col=type&col=priority&col=keywords&order=priority) in Core**
+
+Resolved an issue causing inconsistencies in stylesheet and theme directories.
+
+Upgrade to WordPress 6.4.2 right from your Pantheon dashboard or Terminus for added security. 
