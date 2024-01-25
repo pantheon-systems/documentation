@@ -44,7 +44,7 @@ const HeaderBody = ({
 
         {subtitle && <h1>{subtitle}</h1>}
 
-        <p className="pds-lead-text pds-lead-text--small pds-spacing-mar-block-end-xl">
+        <p className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xl">
           {description}
         </p>
 

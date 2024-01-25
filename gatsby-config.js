@@ -65,6 +65,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/source/releasenotescategories`,
+        name: `releasenotescategories`,
+      },
+    },
+    {
       // Converts Markdown into HTML
       resolve: `gatsby-transformer-remark`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
       options: {
@@ -95,6 +102,14 @@ module.exports = {
       options: {
         path: `${__dirname}/source/changelogs`,
         name: `changelogs`,
+      },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/source/releasenotes`,
+        name: `releasenotes`,
       },
     },
     {

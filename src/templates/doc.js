@@ -112,7 +112,7 @@ class DocTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container
             width={containerWidth}
             className="pds-spacing-pad-block-end-4xl"

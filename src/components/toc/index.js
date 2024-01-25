@@ -31,7 +31,7 @@ const TOC = ({ title }) => {
   return (
     <nav aria-labelledby="toc-nav" className="toc-container">
       <div id="toc" className="tocbot">
-        <h2 id="toc-nav" className="pds-visually-hidden">
+        <h2 id="toc-nav" className="visually-hidden">
           {title || "Table of Contents"}
         </h2>
         <div className="toc-placeholder" />

@@ -35,7 +35,7 @@ class Index extends React.Component {
               linkText={homeYaml.call_to_action.linkText}
             />
 
-            <h2 className="pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-2xl">
+            <h2 className="pds-spacing-mar-block-xl">
               {homeYaml.topics.title}
             </h2>
             <TopicsGrid topics={homeYaml.topics.tiles} />

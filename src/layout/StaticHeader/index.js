@@ -10,7 +10,10 @@ const StaticHeader = ({ page }) => (
     <Container className="docs-static-header__container">
       <div className="docs-static-header__logo">
         <PantheonLogo
-          isLink={{ url: "https://pantheon.io", ariaLabel: "Pantheon Home" }}
+          isLink={{
+            ariaLabel: "Pantheon Home",
+            link: <a href="https://pantheon.io" target="_blank"></a>,
+          }}
         />
       </div>
       <div className="docs-static-header__link">

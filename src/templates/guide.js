@@ -135,7 +135,7 @@ class GuideTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main slot="content" id="docs-main" tabindex="-1">
+          <main slot="content" id="docs-main" tabIndex="-1">
             <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
               <HeaderBody
                 title={node.frontmatter.title}

@@ -190,7 +190,7 @@ class TerminusTemplate extends React.Component {
           <main
             slot="content"
             id="docs-main"
-            tabindex="-1"
+            tabIndex="-1"
             className="terminus"
           >
             <article className="doc guide-doc-body pds-spacing-pad-block-end-xl">
