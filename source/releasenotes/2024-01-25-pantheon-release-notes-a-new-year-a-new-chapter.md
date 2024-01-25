@@ -7,6 +7,7 @@ categories: [documentation, user-interface]
 As we embark on a new year, we're excited to unveil a transformation. This January marks the introduction of **Pantheon release notes**, a rebranding of our changelog. Our aim is to elevate your platform experience by providing even more valuable insights into product updates.
 
 <h3>What's new?</h3>
+
 * **Enhanced visibility:** Discover our improved interface with added tags to each release note, indicating their category and whether action is required. This feature ensures quick insights at a glance, making your navigation smoother.
 * **Filter functionality:** Explore the convenience of our newly integrated filter functionality, allowing you to tailor your release note view based on specific tags. This feature ensures you get information that's most relevant to you.
 
