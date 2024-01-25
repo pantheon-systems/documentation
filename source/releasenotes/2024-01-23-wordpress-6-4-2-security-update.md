@@ -1,6 +1,6 @@
 ---
 title: WordPress 6.4.2 security updates
-published_date: "2024-01-25"
+published_date: "2024-01-23"
 categories: [wordpress, security]
 ---
 
