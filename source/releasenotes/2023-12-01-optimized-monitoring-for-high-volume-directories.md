@@ -1,5 +1,5 @@
 ---
-title: Optimized Monitoring for High-Volume Directories
+title: Optimized monitoring for high-volume directories
 published_date: "2023-12-01"
 categories: [new-feature, user-interface, performance]
 ---
