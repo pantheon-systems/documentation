@@ -1,5 +1,5 @@
 ---
-title: We've launched Pantheon release notes, your new destination for product updates
+title: We've launched Pantheon release notes
 changelog: true
 reviewed: "2023-12-01"
 ---
