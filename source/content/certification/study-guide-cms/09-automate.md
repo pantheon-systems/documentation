@@ -166,8 +166,9 @@ To activate Autopilot on a site, locate the Autopilot tab on the left menu bar o
 Autopilot’s Configuration form provides you with several options for configuring Autopilot. You will set the initial configuration of Autopilot upon activating the tool for your site, but the configuration options can be tweaked at any time should you wish to adjust the settings.
 
 #### Autopilot provides the following configuration options:
-* Scope: You can toggle three options for types of updates to import and apply:
-Upstream updates the core of your Drupal or WordPress application
+
+**Scope:** You can toggle three options for types of updates to import and apply:
+* Upstream updates the core of your Drupal or WordPress application
 * Modules (or Plugins) applies available updates to community-contributed modules and plugins for your Drupal or WordPress site
 * Themes applies available update to community-contributed themes for your Drupal or WordPress site
 
