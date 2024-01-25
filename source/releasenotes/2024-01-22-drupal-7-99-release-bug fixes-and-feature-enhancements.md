@@ -6,7 +6,7 @@ categories: [drupal]
 
 Pantheon has seamlessly integrated the Drupal 7.99 release, packed with bug fixes and exciting feature enhancements. 
 
-**Highlights**
+ <h3>Highlights</h3>
 
 * **Menu link enhancement:** "Parent link" in new custom menu creation is now limited to the current menu, simplifying the process. Editing still allows access to links from other menus, enabling easy relocation.
 
