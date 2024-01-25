@@ -1,10 +1,14 @@
 ---
-title: So long changelog, long live release notes!
+title: We've launched Pantheon release notes, your new destination for product updates
 changelog: true
 reviewed: "2023-12-01"
 ---
 <Alert title="We're moving!" type="danger" >
 
-Soon this section of our site will be removed and redirected to our new release notes resource. Check it out over at https://docs.pantheon.io/release-notes
+We're thrilled to announce the launch of [Pantheon release notes](/release-notes/) - a rebrand of our beloved changelog! This upgraded platform brings you better navigation and the latest product announcements. 
+
+This changelog site is still accessible, and a redirection to the new site will be implemented shortly.
+
+Visit Pantheon release notes: https://docs.pantheon.io/release-notes/
 
 </Alert>
