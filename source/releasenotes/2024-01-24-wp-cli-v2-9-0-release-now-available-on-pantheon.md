@@ -1,6 +1,6 @@
 ---
 title: WP-CLI v2.9.0 release now available on Pantheon
-published_date: "2024-01-25"
+published_date: "2024-01-24"
 categories: [wordpress]
 ---
 
