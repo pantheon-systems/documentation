@@ -10,7 +10,7 @@ Pantheon has seamlessly integrated the Drupal 7.99 release, packed with bug fixe
 
 * **Menu link enhancement:** "Parent link" in new custom menu creation is now limited to the current menu, simplifying the process. Editing still allows access to links from other menus, enabling easy relocation.
 
-* **New Drupal 7 hook:** Introduced a new “hook_field_schema_alter()”, providing additional flexibility for schema alterations.
+* **New Drupal 7 hook:** Introduced a new “**hook_field_schema_alter()**”, providing additional flexibility for schema alterations.
 
 * **Security improvement for failed logins:** Error messages after a failed login now include a password reset link without disclosing the username, enhancing security by preventing unintended disclosure to third-party services.
 
