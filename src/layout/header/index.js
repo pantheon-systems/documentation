@@ -97,6 +97,13 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
+          <Link id="certification" to="/certification">
+            Certification Program
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
           <Link id="terminus" to="/terminus">
             Terminus Guide
           </Link>
