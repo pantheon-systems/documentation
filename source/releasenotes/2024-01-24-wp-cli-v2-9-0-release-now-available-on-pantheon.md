@@ -6,11 +6,11 @@ categories: [wordpress]
 
 We're thrilled to announce the availability of WP-CLI v2.9.0 on the Pantheon platform.
 
-WP-CLI is easily accessible for any WordPress site on Pantheon through our CLI, [Terminus](https://docs.pantheon.io/terminus). Manage your WordPress installations efficiently with the power of WP-CLI at your fingertips.
+WP-CLI is easily accessible for any WordPress site on Pantheon through our CLI, [Terminus](/terminus). Manage your WordPress installations efficiently with the power of WP-CLI at your fingertips.
 
 **Highlights**
 * **Enhanced PHP 8.2 support:**
-This release is dedicated to refining support for [PHP 8.2](https://docs.pantheon.io/guides/php), the recommended version on Pantheon.
+This release is dedicated to refining support for [PHP 8.2](/guides/php), the recommended version on Pantheon.
 * **Optimized compatibility with WordPress 6.4:**
 We've worked to guarantee seamless compatibility, providing you with the best performance and features available.
 * **Introducing "wp config is-true" command:**
