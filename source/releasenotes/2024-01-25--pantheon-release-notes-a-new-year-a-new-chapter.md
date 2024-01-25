@@ -1,7 +1,7 @@
 ---
 title: Pantheon release notes - A new year, a new chapter
 published_date: "2024-01-25"
-categories: [documentation]
+categories: [new-feature, user-interface]
 ---
 
 As we embark on a new year, we're excited to unveil a transformation. This January marks the introduction of **Pantheon release notes**, a rebranding of our changelog. Our aim is to elevate your platform experience by providing even more valuable insights into product updates.
