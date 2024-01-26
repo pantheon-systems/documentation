@@ -119,6 +119,16 @@ const items = [
     link: "/certification/study-guide/custom-upstreams",
     title: "Chapter 10: Custom Upstreams",
   },
+  {
+    id: "docs-certification-exam-topics",
+    link: "/certification/exam-topics",
+    title: "Exam Topics",
+  },
+  {
+    id: "docs-certification-exam-instructions",
+    link: "/certification/exam-instructions",
+    title: "Exam Instructions",
+  },
 ]
 
 class CertificationTemplate extends React.Component {
