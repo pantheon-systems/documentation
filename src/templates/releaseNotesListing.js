@@ -92,6 +92,9 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   const renderedReleaseNotes =
     releasenotes.length !== 0 ? renderedTeasers : noResultsMessage
 
+  // Preprocess intro text.
+  const introText = data.releasenotesYaml.introText
+
   return (
     <Layout containerWidth={containerWidth} excludeSearch footerBorder>
       <SEO
@@ -105,6 +108,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
           className="pds-spacing-mar-block-start-3xl"
         >
           <h1>Pantheon release notes</h1>
+          <div className="pds-lead-text pds-lead-text--sm">{introText}</div>
           <FlexContainer
             style={{
               borderBottom: "1px solid var(--pds-color-border-default)",
@@ -160,6 +164,9 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    releasenotesYaml {
+      introText
     }
   }
 `
