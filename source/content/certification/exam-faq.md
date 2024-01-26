@@ -40,6 +40,42 @@ You can find the directions for launching the exam here: [Exam Instructions](/ce
 <Accordion title="How do I use the ProctorFree virtual proctoring service for my exam?
 " id="" icon="wrench">
 
+
+Pantheon’s Certification Program utilizes [ProctorFree](https://www.proctorfree.com/), a software-only identity verification and exam recording solution. The following document describes the requirements for successfully enabling ProctorFree when taking a Pantheon Certification exam.
+
+
+
+Before you get started, please note the following:
+
+1. **You must unplug your machine from any external monitors.**
+
+ProctorFree checks for external monitors that are connected to the test taker’s laptop. This is to ensure that the test taker does not have access to answers or prohibited information while they are taking the test.
+
+The use of an external monitor will result in a system check failure:
+
+![1](../../images/certification/exam-instructions/exam-faq-1.png)
+
+An external monitor will also result in a failed exam result, as Pantheon does not permit the use of external information sources during the exam.
+
+2. **Your web camera and microphone must be enabled.**
+
+ProctorFree captures your exam session using a web camera, microphone, and screen capture. The proctoring software must have permission to access each of these three features. If any of these features are not accessible to ProctorFree, you will get a prompt instructing you on how to grant the proctoring service access to each feature.
+
+During the **microphone test**, you may be required to speak for a few seconds to allow the microphone to pick up the sound and confirm that it is working.
+
+To select a **web camera**, locate the dropdown menu (shown below) and select your camera of choice:
+
+![1](../../images/certification/exam-instructions/exam-faq-2.png)
+
+3. **Your machine must be running either Windows 10+ or macOS 10.12+ (Sierra).**
+
+If you are using a Linux machine, you will need to indicate this on the form when you sign up for the exam. In this case, or in any case where the local machine is incompatible with ProctorFree, we are able to accommodate the exam attempt in alternative ways. Typically, we will schedule a Zoom meeting for your exam session, with a live proctor from Pantheon validating the exam attempt by having you turn your web camera on and share your screen while you take the exam.
+
+4. **Tablets, Chromebooks, iPads, and mobile devices are not supported.**
+
+Remote exam sessions must be completed on a laptop or desktop computer that meets the minimum technical requirements.
+
+
 </Accordion>
 
 
