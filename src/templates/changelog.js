@@ -89,7 +89,7 @@ class ChangelogTemplate extends React.Component {
             <h1>{node.frontmatter.title}</h1>
             <div className="pds-spacing-mar-block-end-3xl">
               <p className="pds-lead-text pds-lead-text--sm">
-              We're transitioning away from Changelogs published in this area of our docs site in favor of <a href="/release-notes"> release notes</a>!
+              We're transitioning away from publishing product updates in this section of Pantheon Docs to the new <a href="/release-notes"> release notes</a> site.
               </p>
             </div>
             <hr />
