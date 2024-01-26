@@ -15,6 +15,7 @@ audience: []
 product: []
 integration: [--]
 previousurl: /certification/study-guide/automate
+nexturl: /certification/exam-topics
 ---
 
 <Alert title="By the end of this chapter, you will be able to:"  type="info" >
@@ -68,7 +69,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 
  </figure>
 
-As you can see in the diagram above, updates flow down from the top level repository, a Pantheon-managed core of Drupal (Latest or Drupal 7) or WordPress. When core updates are available, Pantheon applies the updates to the core upstream, and those updates are now available for the Custom Upstream to pull down. Any modifications to the common codebase are pushed up to the Custom Upstream repository, which lives in GitHub, Bitbucket, or GitLab. Any code pushes made to the Custom Upstream repository are then available to all of the Individual Site repositories. Each individual site can now apply the updates from the Custom Upstream, or override and customize the codebase for that individual site.  
+As you can see in the diagram above, updates flow down from the top level repository, a Pantheon-managed core of Drupal (Latest or Drupal 7) or WordPress. When core updates are available, Pantheon applies the updates to the core upstream, and those updates are now available for the Custom Upstream to pull down. Any modifications to the common codebase are pushed up to the Custom Upstream repository, which lives in GitHub, Bitbucket, or GitLab. Any code pushes made to the Custom Upstream repository are then available to all of the Individual Site repositories. Each individual site can now apply the updates from the Custom Upstream, or override and customize the codebase for that individual site.
 
 This inheritance workflow allows teams to scale the maintenance of all sites in the portfolio without having to also scale up the number of people on the team.
 
