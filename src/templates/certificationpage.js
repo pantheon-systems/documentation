@@ -129,6 +129,11 @@ const items = [
     link: "/certification/exam-instructions",
     title: "Exam Instructions",
   },
+  {
+    id: "docs-certification-exam-faq",
+    link: "/certification/exam-faq",
+    title: "Exam FAQ",
+  },
 ]
 
 class CertificationTemplate extends React.Component {
