@@ -96,6 +96,9 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
   const renderedReleaseNotes =
     releasenotes.length !== 0 ? renderedTeasers : noResultsMessage
 
+  // Preprocess intro text.
+  const introText = data.releasenotesYaml.introText
+
   return (
     <Layout containerWidth={containerWidth} excludeSearch footerBorder>
       <SEO
@@ -111,6 +114,7 @@ const ReleaseNotesListingByCategoryTemplate = ({ data, pageContext }) => {
           <h1>
             Pantheon release notes: <em>{categoryData["displayName"]}</em>
           </h1>
+          <div className="pds-lead-text pds-lead-text--sm">{introText}</div>
           <FlexContainer
             style={{
               borderBottom: "1px solid var(--pds-color-border-default)",
@@ -167,6 +171,9 @@ export const pageQuery = graphql`
           ...theReleaseNoteFields
         }
       }
+    }
+    releasenotesYaml {
+      introText
     }
   }
 `
