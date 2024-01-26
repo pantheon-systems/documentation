@@ -22,11 +22,7 @@ Here are some frequently asked questions about Pantheon's WebOps Certification P
 <Accordion title="Where Can I Find Materials to Study for the Pantheon WebOps Certification Exam?
 " id="study-guide" icon="wrench">
 
-### Where Can I Find Materials to Study for the Pantheon WebOps Certification Exam?
-
-<p>Currently, there are two places to access the information needed to pass the exam. The first place is the <a href="https://docs.pantheon.io/certification">Pantheon Certification Page</a> on our Documentation site.</p><p>We also have a PDF version of the guide (which differs slightly from the content on the documentation site). This PDF contains review questions as well as hands-on activities to try. You can download a copy of the PDF version of the guide here:</p>
-
-<span class="file file--mime-application-pdf file--application-pdf"> <a href="/sites/default/files/2023-11/webopscert_final_v1_1.pdf" type="application/pdf">webopscert_final_v1_1.pdf</a></span>
+In addition to [this guide within our documentation](/certification/study-guide) you can download a [PDF version that contains hands-on activities and review questions.](https://certification.pantheon.io/sites/default/files/2023-11/webopscert_final_v1_1.pdf).
 
 </Accordion>
 
@@ -59,17 +55,17 @@ In order to take the exam with our automated proctoring service, you will need a
 
 In order to maintain compatibility with our online proctoring service, we require that exam takers use machines that adhere to the following minimum technical specifications:
 
-*Computer:* We support most standard laptops and desktops that include the minimum hardware requirements listed below. Chromebooks, Linux, iPads, tablets, and mobile devices are not supported.
+**Computer:** We support most standard laptops and desktops that include the minimum hardware requirements listed below. Chromebooks, Linux, iPads, tablets, and mobile devices are not supported.
 
-*Operating System:* We support environments that use Windows 10 or greater, or macOS 10.12 (Sierra) or greater. Unfortunately, our online proctoring service does not support the use of Linux machines. If you are using a Linux machine, we are happy to accommodate by setting up a live proctored test that does not use the automated proctoring service. Windows S mode is not supported.
+**Operating System:** We support environments that use Windows 10 or greater, or macOS 10.12 (Sierra) or greater. Unfortunately, our online proctoring service does not support the use of Linux machines. If you are using a Linux machine, we are happy to accommodate by setting up a live proctored test that does not use the automated proctoring service. Windows S mode is not supported.
 
-*Hardware Requirements:* The following are required: at least 1 GB available disk space, minimum 2GB RAM, and Intel Quad-core 1.8GHz CPU (or better) or AMD Quad-core 2.0 GHz CPU (or better).
+**Hardware Requirements:** The following are required: at least 1 GB available disk space, minimum 2GB RAM, and Intel Quad-core 1.8GHz CPU (or better) or AMD Quad-core 2.0 GHz CPU (or better).
 
-*Web Browser:* We Support Chrome, Firefox, Safari, Microsoft Edge, and Internet Explorer 11+. Brave and Opera are not supported at this time, nor is Microsoft Edge for macOS.
+**Web Browser:** We Support Chrome, Firefox, Safari, Microsoft Edge, and Internet Explorer 11+. Brave and Opera are not supported at this time, nor is Microsoft Edge for macOS.
 
-*Internet Speed:* Minimum upload speed of 1 Mbps, and a minimum download speed of 2 Mbps. Tethering and hotspots are not supported. (**An active broadband internet connection is assumed since the examinations are done online).
+**Internet Speed:** Minimum upload speed of 1 Mbps, and a minimum download speed of 2 Mbps. Tethering and hotspots are not supported. (An active broadband internet connection is assumed since the examinations are done online).
 
-*Web Camera & Microphone:* An external or internal web camera and microphone are required. Camera and microphone drivers must have been updated or released within the last 5 years. 3D Webcams are not supported at this time.
+**Web Camera & Microphone:** An external or internal web camera and microphone are required. Camera and microphone drivers must have been updated or released within the last 5 years. 3D Webcams are not supported at this time.
 
 </Accordion>
 <Accordion title="How do I register for an exam?" id="" icon="wrench">
