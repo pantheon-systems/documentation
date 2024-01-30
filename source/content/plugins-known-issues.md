@@ -2,7 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish]
 contenttype: [doc]
 showtoc: true
 innav: [true]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2022-03-24"
+reviewed: "2023-01-30"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -725,7 +725,7 @@ ___
 
 ## Query Monitor
 
-**Issue:** The [Query Monitor](https://wordpress.org/plugins/query-monitor/) plugin creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
+**Issue:** The [Query Monitor](https://wordpress.org/plugins/query-monitor/) plugin creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments. Additionally, the plugin can create large amounts of logs which can cause performance and file system issues.
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
 
@@ -1511,6 +1511,16 @@ ___
 1. Create the `languages/wpml` directory inside `/files` for each environment.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+
+___
+
+## WP phpMyAdmin
+
+<ReviewDate date="2024-01-30" />
+
+The [WP phpMyAdmin](https://puvox.software/software/wordpress-plugins/?plugin=wp-phpmyadmin-extension) plugin is not supported on Pantheon and will not work correctly. 
+
+**Alternative:** Please see https://docs.pantheon.io/guides/mariadb-mysql/mysql-access for more information on accessing your database directly.
 
 ___
 
