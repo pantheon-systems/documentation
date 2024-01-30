@@ -1,5 +1,5 @@
 ---
-title: Security Enhancement: Outgoing UDP Traffic Blocked
+title: "Security Enhancement: Outgoing UDP Traffic Blocked"
 published_date: "2020-01-01"
 categories: []
 ---
