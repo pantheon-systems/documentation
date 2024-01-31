@@ -1,7 +1,7 @@
 ---
 title: Dashboard Optimization
 published_date: "2015-03-01"
-categories: []
+categories: [user-interface]
 ---
 - The People tab now shows gravatars for all users in an Organization  
 - Your framework (Drupal, WordPress) is displayed in the Site Dashboard header  
