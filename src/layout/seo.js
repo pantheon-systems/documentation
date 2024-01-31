@@ -22,6 +22,10 @@ function SEO({
   tags,
   reviewed,
   type,
+  audience,
+  product,
+  integration,
+  cms
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -74,6 +78,43 @@ function SEO({
   // Fix categories for og:article:section.
   // Spec says there should only be one value, or multiple tags. Limit to 1 for now.
   const category = (categories && categories.length > 0) ? categories[0][0].toUpperCase() + categories[0].slice(1) : "Other";
+
+  // Helper function for metadata.
+  function formatMetadata(field) {
+    return (Array.isArray(field) && field[0] !== "--" && field.length > 0) ? field.join(", ") : "";
+  }
+
+  // Add specific metadata for crawling the site to create a structured datastore.
+  const audienceFormatted = formatMetadata(audience);
+  const cmsFormatted = formatMetadata(cms);
+  const productFormatted = formatMetadata(product);
+  const integrationFormatted = formatMetadata(integration);
+
+  // Prepare data for custom datastore.
+  const crawlDatastore = {
+    title: title,
+    description: description,
+    categories: categories,
+    keywords: keywords,
+    image: metaImage,
+    type: type,
+    audience: audienceFormatted,
+    cms: cmsFormatted,
+    product: productFormatted,
+    integration: integrationFormatted
+  };
+
+  // Convert to array of objects with name and content
+  const datastore = Object.entries(crawlDatastore).map(([key, value]) => {
+    return {
+      name: `pantheon-${key}`,
+      content: value
+    };
+  });
+
+  // Merge with existing metadata.
+  meta = meta.concat(datastore);
+
   return (
     <Helmet
       htmlAttributes={{
