@@ -1,7 +1,7 @@
 ---
 title: Pantheon HUD Plugin
 published_date: "2016-01-01"
-categories: []
+categories: [new-feature]
 ---
 We released the [Pantheon HUD plugin](https://wordpress.org/plugins/pantheon-hud/). This plugin will:   
 - Remind you what environment you're in and let you jump to the others  
