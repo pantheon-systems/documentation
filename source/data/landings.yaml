@@ -1567,3 +1567,23 @@
               url: "/object-cache/cli"
             - text: "Safely Remove Object Cache"
               url: "/object-cache/remove"
+- title: "Pantheon WebOps Certification"
+  subtitle: "Learn about the benefits of certification, prepare using our study guide, and understand the exam."
+  path: "certification"
+  topics-groups:
+    - title: "Benefits of the program"
+      links:
+        - text: "Why become certified?"
+          url: "/certification/about"
+    - title: "Study for the exam"
+      links:
+        - text: "WebOps Certification Study Guide"
+          url: "/certification/study-guide"
+    - title: "What to expect"
+      links:
+        - text: "Exam Topics"
+          url: "/certification/exam-topics"
+        - text: "Exam Instructions"
+          url: "/certification/exam-instructions"
+        - text: "Exam FAQ"
+          url: "/certification/exam-faq"
