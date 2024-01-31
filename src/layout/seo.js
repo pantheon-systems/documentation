@@ -71,6 +71,9 @@ function SEO({
       }
     : {}
 
+  // Fix categories for og:article:section.
+  // Spec says there should only be one value, or multiple tags. Limit to 1 for now.
+  const category = (categories && categories.length > 0) ? categories[0][0].toUpperCase() + categories[0].slice(1) : "Other";
   return (
     <Helmet
       htmlAttributes={{
@@ -126,7 +129,7 @@ function SEO({
         },
         {
           property: `og:article:section`,
-          content: `${categories}`,
+          content: `${category}`,
         },
         { ...reviewtag },
         {
