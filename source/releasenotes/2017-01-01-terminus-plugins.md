@@ -1,7 +1,7 @@
 ---
 title: Terminus Plugins
 published_date: "2017-01-01"
-categories: []
+categories: [tools-apis]
 ---
 The open plugin architecture of Terminus allows developers to extend it’s functionality and [create new commands](/terminus/create). For a list of supported plugins, take a look at our new [Plugin Directory](/terminus/directory) in the docs.
 
