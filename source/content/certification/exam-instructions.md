@@ -1,21 +1,8 @@
 ---
-title: WebOps Certification
-subtitle: Exam Instructions
-certificationpage: true
-showtoc: true
-type: certificationpage
-layout: certificationpage
+title: "WebOps Certification: Exam Instructions"
 contributors: []
-contenttype: [guide]
-innav: [true]
-categories: []
-cms: [drupal, wordpress]
-integration: [--]
-tags: []
+showtoc: false
 permalink: docs/certification/exam-instructions
-previousurl: /certification/exam-topics
-nexturl: /certification/exam-faq
-
 ---
 
 The following directions and instructions were captured by a user on a MacOS device. However, most of the steps here should also be applicable for Windows users. If you run into any technical difficulties or have any questions, you can launch a support session with ProctorFree by clicking the Support Chat icon in the lower right-hand portion of the screen.
@@ -40,9 +27,3 @@ The following directions and instructions were captured by a user on a MacOS dev
 | ![15](../../images/certification/exam-instructions/exam-15.png)      | Next, select the web camera that you will use during the exam session. This is typically the default web camera for your device.  |
 | ![16](../../images/certification/exam-instructions/exam-16.png)      | Once the hardware compatibility check is complete, ProctorFree will authenticate you by snapping a quick screenshot of your face. This will take around 5 seconds, and you will need to keep relatively still.  <br /> <br/>This screenshot is used during the results validation process after you have taken the exam, allowing the validator to match the picture of your face with the video that is captured of you taking the exam.  |
 | ![17](../../images/certification/exam-instructions/exam-17.png)      | Now that you have completed the validation and registration process, you are ready to launch your exam. <br /> <br />Click the button labeled “Launch Proctored Session”  |
-
-
-
-
-
-

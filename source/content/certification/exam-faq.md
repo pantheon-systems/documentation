@@ -1,19 +1,9 @@
 ---
-title: WebOps Certification
-subtitle: Exam Topics
-certificationpage: true
-showtoc: true
-type: certificationpage
-layout: certificationpage
+title: "WebOps Certification: Exam Topics"
 contributors: []
+showtoc: false
 contenttype: [guide]
-innav: [true]
-categories: []
-cms: [drupal, wordpress]
-integration: [--]
-tags: []
 permalink: docs/certification/exam-faq
-previousurl: /certification/exam-instructions
 
 ---
 
@@ -124,6 +114,3 @@ When you have finished taking the exam, you will see a message on the screen ind
 
 
 </Accordion>
-
-
-
