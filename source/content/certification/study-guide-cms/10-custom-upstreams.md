@@ -15,7 +15,6 @@ audience: []
 product: []
 integration: [--]
 previousurl: /certification/study-guide/automate
-nexturl: /certification/exam-topics
 ---
 
 <Alert title="By the end of this chapter, you will be able to:"  type="info" >

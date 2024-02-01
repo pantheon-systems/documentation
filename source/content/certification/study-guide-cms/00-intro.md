@@ -14,7 +14,6 @@ cms: [drupal, wordpress]
 audience: []
 product: []
 integration: [--]
-previousurl: /certification
 nexturl: /certification/study-guide/webops
 ---
 

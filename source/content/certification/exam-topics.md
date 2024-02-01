@@ -1,21 +1,7 @@
 ---
-title: WebOps Certification
-subtitle: Exam Topics
-certificationpage: true
+title: "WebOps Certification: Exam Topics"
 showtoc: true
-type: certificationpage
-layout: certificationpage
-contributors: []
-contenttype: [guide]
-innav: [true]
-categories: []
-cms: [drupal, wordpress]
-integration: [--]
-tags: []
 permalink: docs/certification/exam-topics
-previousurl: /certification/study-guide/custom-upstreams
-nexturl: /certification/exam-instructions
-
 ---
 ### Autopilot
 
