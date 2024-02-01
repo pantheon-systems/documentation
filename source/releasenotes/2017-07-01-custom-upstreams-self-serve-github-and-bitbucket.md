@@ -1,7 +1,7 @@
 ---
 title: "Custom Upstreams: Self-serve GitHub and Bitbucket"
 published_date: "2017-07-01"
-categories: []
+categories: [infrastructure]
 ---
 Organizations using a [Custom Upstream](/guides/custom-upstream) can now add and manage their upstreams without engaging Pantheon Support.
 
