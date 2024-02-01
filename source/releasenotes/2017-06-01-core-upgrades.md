@@ -1,7 +1,7 @@
 ---
 title: Core Upgrades
 published_date: "2017-06-01"
-categories: []
+categories: [drupal]
 ---
 [Drupal 8.3.4](https://www.drupal.org/project/drupal/releases/8.3.4), [Drupal 7.56](https://www.drupal.org/project/drupal/releases/7.56), and [WordPress 4.8](https://wordpress.org/news/2017/06/evans/) have been pushed to all Site Dashboards.
 
