@@ -1,7 +1,7 @@
 ---
 title: Advanced Site Configurations Available
 published_date: "2016-08-01"
-categories: []
+categories: [infrastructure]
 ---
 Nested docroot: Serve sites from a `web` subdirectory, one-level beneath the root of your code repository. Among other use cases, this helps facilitate managing dependencies via Composer.
 Protected Web Paths: Specify files or directories that you don’t want to be publicly web-accessible.
