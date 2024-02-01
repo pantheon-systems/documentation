@@ -1,7 +1,7 @@
 ---
 title: Pantheon Moves to Google Cloud Platform
 published_date: "2018-01-01"
-categories: []
+categories: [infrastructure]
 ---
 ![GCP and Pantheon Logo](../images/gcp.png)
 
