@@ -1,7 +1,7 @@
 ---
 title: Drupal Core Upgrades
 published_date: "2018-04-01"
-categories: []
+categories: [drupal]
 ---
 [Drupal 8.5.3](https://www.drupal.org/project/drupal/releases/8.5.3) has been pushed to all Drupal 8 site dashboards. This release is classified as a security release and all users are urged to upgrade their sites as soon as possible.
 
