@@ -19,7 +19,7 @@ Advanced Global CDN is a Managed Service that takes Pantheon's content delivery 
 
 Each AGCDN service configuration is offered as an annual contract subscription. Customers can add multiple sites to their AGCDN configuration, or conditionally apply specific rules.
 
-AGCDN provides teams with with a way to:
+AGCDN provides teams with a way to:
 
 - Block Malicious traffic
 
