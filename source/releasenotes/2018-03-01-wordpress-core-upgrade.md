@@ -1,7 +1,7 @@
 ---
 title: WordPress Core Upgrade
 published_date: "2018-03-01"
-categories: []
+categories: [wordpress]
 ---
 [WordPress 4.9.5](https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/) has been pushed to all WordPress site dashboards.
 
