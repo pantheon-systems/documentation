@@ -1,7 +1,7 @@
 ---
 title: WordPress Core Upgrade
 published_date: "2018-04-01"
-categories: []
+categories: [wordpress]
 ---
 [WordPress 4.9.5.1](https://github.com/pantheon-systems/WordPress/issues/155) has been pushed to all site dashboards.
 
