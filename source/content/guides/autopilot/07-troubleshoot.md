@@ -377,7 +377,7 @@ A [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-compo
 
 ### Solution
 
-Ensure that your [Wordpress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
+Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
 
 </Accordion>
 
