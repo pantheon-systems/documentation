@@ -1,6 +1,6 @@
 ---
 title: HTTPS Provisioning Accelerated
 published_date: "2018-08-01"
-categories: []
+categories: [performance]
 ---
 An improvement to our queuing system has resulted in a 60% reduction in average HTTPS provisioning times!
