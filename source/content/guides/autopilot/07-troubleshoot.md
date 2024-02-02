@@ -367,6 +367,20 @@ Site is running a framework that is not supported. Supported frameworks are:
 
 </Accordion>
 
+## Composer configuration Not Supported
+
+<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="misconfigured-composer" icon="info-sign">
+
+### Diagnosis
+
+A [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site which is not using Composer is not supported by Autopilot.
+
+### Solution
+
+Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
+
+</Accordion>
+
 ## CLI Tool Failed
 
 <Accordion title="We ran into an issue with Autopilot because Drush or WP-CLI did not work as expected." id="failed-cli-tool" icon="info-sign">
