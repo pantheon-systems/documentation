@@ -23,6 +23,7 @@ You must have the following to enable Search and Replace:
 
 - A [WordPress Multisite](/guides/multisite).
 - A PHP version of 7.4 or later.
+- The site is *not* using [Integrated Composer](/guides/integrated-composer).
 
 <Alert title="Note"  type="info" >
 
