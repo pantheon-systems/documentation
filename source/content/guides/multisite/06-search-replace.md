@@ -179,8 +179,6 @@ Sites configured for subdomain conversion will _only_ run the conversion step fr
 
 * When using the default Subdirectory search and replace, creating a new multidev with database and files pulled from the live environment will only search and replace the platform domain, i.e. `live-{site}.pantheonsite.io`. To search and replace the correct domain on your live site, immediately follow multidev creation with a database clone either through the dashboard or with Terminus, and select the correct domain as the "from" URL. We are working on handling this seamlessly in the future.
 
-
-
 ## More Resources
 
 - [Pantheon YAML Configuration Files](/pantheon-yml)
