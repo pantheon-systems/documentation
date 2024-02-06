@@ -1,7 +1,7 @@
 ---
 title: Global CDN Network Expansion
 published_date: "2020-03-01"
-categories: [infrastructure]
+categories: [infrastructure, performance]
 ---
 New Points of Presence:
 

@@ -1,7 +1,7 @@
 ---
 title: Deprecation of Obsolete TLS 1.2 Cipher Suites
 published_date: "2023-07-01"
-categories: []
+categories: [deprecated, security]
 ---
 In Pantheon's continual efforts to stay up to date with modern web security standards, Pantheon is removing support for a certain set of cipher suites for TLS 1.2. By removing support for specific TLS 1.2 ciphers, Pantheon is enhancing overall platform security. This change ensures that the websites hosted on Pantheon will only use stronger and more secure encryption protocols, which helps protect sensitive information transmitted between users and the websites.
 
