@@ -6,8 +6,8 @@ import { MDXProvider } from "@mdx-js/react"
 import './styles.css';
 
 const ChangelogPreview = (props) => {
-	const { title, url, changelogs } = props;
-	const current = changelogs[0];
+	const { title, url, releasenotes } = props;
+	const current = releasenotes[0];
 	return (
 		<div className="row mb-70 changelog-preview">
 			<div className="col-md-8">
@@ -26,9 +26,9 @@ const ChangelogPreview = (props) => {
 			</div>
 			<div className="col-md-4 mt-70">
 				<ul className="changelog-sidebar">
-					{changelogs.map((changelog)=>(
-						<li key={changelog.node.id}>
-							<Link to={`/${changelog.node.fields.slug}`}>{changelog.node.frontmatter.title}</Link>
+					{releasenotes.map((releasenote)=>(
+						<li key={releasenote.node.id}>
+							<Link to={`/${releasenote.node.fields.slug}`}>{releasenote.node.frontmatter.title}</Link>
 						</li>
           ))}
 				</ul>
