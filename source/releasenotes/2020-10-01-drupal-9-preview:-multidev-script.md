@@ -1,7 +1,7 @@
 ---
 title: "Drupal 9 Preview: Multidev Script"
 published_date: "2020-10-01"
-categories: []
+categories: [drupal]
 ---
 [Drupal 9](/drupal) is available for early access testing with new or existing sites. Now we’ve made that even easier, with a new Terminus Drupal 9 Multidev script.
 
