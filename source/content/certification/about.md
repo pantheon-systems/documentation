@@ -1,5 +1,5 @@
 ---
-title: "WebOps Certification: About"
+title: "WebOps Certification: About the program"
 showtoc: true
 contributors: []
 permalink: docs/certification/about
@@ -32,3 +32,7 @@ Ultimately, investing in a WebOps certification on Pantheon can lead to the high
 * **Staying Cutting Edge** - A WebOps certification can ensure that projects ship with optimal website performance, security, and the best customer experiences possible, leveraging the latest best practices in website operations.
 * **Attracting & Retaining Talent** - Offering a path to certification in WebOps can attract passionate developers and keep them satisfied in their roles by working in ways that maximize their time and impact.
 * **Operational Excellence** - An investment in WebOps certification boosts the quality of a company’s digital experience, leading to better outcomes for lead generation, customer acquisition, and overall customer satisfaction
+
+## More Resources
+- [WebOps Certification: Study Guide](/certification/study-guide)
+- [WebOps Certification: Exam Overview](/certification/exam)

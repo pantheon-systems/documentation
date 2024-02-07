@@ -326,3 +326,7 @@ here before rolling out to other sites.
 
 * **Resolve Conflicts Immediately:** If a merge conflict does occur, resolve it as quickly as
 possible to prevent it from affecting other developers' work.
+
+## More Resources
+- [WebOps Certification: About the program](/certification/about)
+- [WebOps Certification: Exam Overview](/certification/exam)
