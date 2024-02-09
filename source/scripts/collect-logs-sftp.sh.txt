@@ -18,13 +18,13 @@ if [ $COLLECT_LOGS == true ]; then
 echo 'COLLECT_LOGS set to $COLLECT_LOGS. Beginning the process...'
 for app_server in $(dig +short -4 appserver.$ENV.$SITE_UUID.drush.in);
 do
-    echo "get -R logs \"app_server_$app_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$app_server"
+    echo "get -R logs \"app_server_$app_server\"" | sftp -o StrictHostKeyChecking=no -o Port=2222 "$ENV.$SITE_UUID@$app_server"
 done
 
 # Include MySQL logs
 for db_server in $(dig +short -4 dbserver.$ENV.$SITE_UUID.drush.in);
 do
-    echo "get -R logs \"db_server_$db_server\"" | sftp -o Port=2222 "$ENV.$SITE_UUID@$db_server"
+    echo "get -R logs \"db_server_$db_server\"" | sftp -o StrictHostKeyChecking=no -o Port=2222 "$ENV.$SITE_UUID@$db_server"
 done
 else
 echo 'skipping the collection of logs..'
