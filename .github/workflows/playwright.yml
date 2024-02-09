@@ -1,0 +1,57 @@
+name: Playwright Tests
+# todo, this GitHub Action should either be Triggered by Pantheon's build process
+# phoning back to GitHub Actions after the deployment completes
+# Or the GitHub Action will need to poll somehow that the deployment has completed.
+# The Gatsby Build Process could place a file that reports that Git Hash that it was
+# built from. Check that via polling.
+# consider this for polling. https://github.com/artiz/poll-endpoint
+# https://github.com/marketplace/actions/poll-endpoint
+on:
+  pull_request:
+    branches: [ main, master ]
+env:
+  GITHUB_PR_NUMBER: ${{ github.event.number }}
+  # @todo figure out how to make this work on main.
+  GIT_SHA:  ${{ github.event.pull_request.head.sha }}
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./tests
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Print Commit SHA
+      run:  echo $GIT_SHA
+    - name: Check githead
+      run:  curl https://pr-${GITHUB_PR_NUMBER}-documentation.appa.pantheon.site/githead.txt
+
+    # @todo, this is a hack to get the githead from the build process.
+    # - uses: artiz/poll-endpoint@1.0.2
+    #   with:
+    #     url: https://pr-${{ github.event.number }}-documentation.appa.pantheon.site/githead-${{ github.event.pull_request.head.sha }}.txt
+    #     method: GET
+    #     expectStatus: 200
+    #     expectBody: ${{ github.event.pull_request.head.sha }}
+    #     #expectBodyRegex: "git commit"
+    #     timeout: 600000
+    #     interval: 5000
+
+    - name: Install dependencies
+      run:  npm ci
+    - name: Install Playwright Browsers
+      run:  npx playwright install --with-deps
+
+    - name: Run Playwright tests
+      run: npx playwright test
+    - uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: playwright-report
+        path: tests/playwright-report/
+        retention-days: 30
