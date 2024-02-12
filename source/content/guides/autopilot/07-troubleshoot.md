@@ -289,7 +289,7 @@ If the issue is because of a PHP or CMS issue, resolve any issues causing `clear
 
 ### Diagnosis
 
-The most common reason for clone content to fail is that drush/wr-cli clear cache failed at the end of a workflow.
+The most common reason for clone content to fail is that drush/wp-cli clear cache failed at the end of a workflow.
 
 ### Solution
 
