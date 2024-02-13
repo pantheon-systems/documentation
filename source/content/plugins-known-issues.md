@@ -563,15 +563,15 @@ ___
 
 ___
 
-## iThemes Security
+## Solid Security (Previously: iThemes Security)
 
-<ReviewDate date="2020-02-10" />
+<ReviewDate date="2024-01-26" />
 
-**Issue 1:** The "File Change Detection" check in the [iThemes Security](https://wordpress.org/plugins/better-wp-security/) plugin, warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
+**Issue 1:** The "File Change Detection" check in the [Solid Security (Previously: iThemes Security)](https://wordpress.org/plugins/better-wp-security/) plugin, warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
 
 **Solution:** Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
 
-**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/guides/platform-considerations/platform-site-info#nginxconf) and code files on the Test and Live environments are not writable.
+**Issue 2:** Solid Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/guides/platform-considerations/platform-site-info#nginxconf) and code files on the Test and Live environments are not writable.
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 
