@@ -364,14 +364,14 @@ In order to maintain compatibility with our online proctoring service, we requir
 
 <Accordion title="How do I register for an exam?" id="register" icon="wrench">
 
-You can register for the [Pantheon WebOps Certification Exam with the form on this page](https://pantheon.io/certification). On the homepage of the site, there is a form for you to fill out. It will ask for your name, email address, organization (if applicable), and some technical information about the computer you will be using to take the exam. This is to help us ensure that your computer is technically compatible with our exam engine and proctoring service. You will then choose a date to take the exam. Once you submit this form, you will be redirected to a payment processor to complete your payment and secure your spot in our certification program.
+You can register for the [Pantheon WebOps Certification Exam with the form on this page](https://pantheon.io/certification). The form will ask for your name, email address, organization (if applicable), and some technical information about the computer you will be using to take the exam. This is to help us ensure that your computer is technically compatible with our exam engine and proctoring service. You will then choose a date to take the exam.
 
 </Accordion>
 
 
 <Accordion title="How do I get certificate and a badge?" id="badge" icon="wrench">
 
-When you have finished taking the exam, you will see a message on the screen indicating whether you have passed or not. Once you have passed the exam, we will go through the process of validating the results. This validation can take up to 48 hours, at which point you will receive an email with a link to your badge and certification. We will also display your name, certification date, and a link to your badge and digital certificate on our Certification Registry site.
+When you have finished taking the exam, you will see a message on the screen indicating whether you have passed or not. Once you have passed the exam, we will go through the process of validating the results. This validation can take up to 48 hours, at which point you will receive an email with a link to your badge and certification. We will also display your name, certification date, and a link to your badge and digital certificate on our [Certification Registry site](https://certification.pantheon.io/).
 
 </Accordion>
 
