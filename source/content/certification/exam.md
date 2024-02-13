@@ -364,7 +364,7 @@ In order to maintain compatibility with our online proctoring service, we requir
 
 <Accordion title="How do I register for an exam?" id="register" icon="wrench">
 
-You can register for the [Pantheon WebOps Certification Exam with the form on this page](https://pantheon.io/certification). The form will ask for your name, email address, organization (if applicable), and some technical information about the computer you will be using to take the exam. This is to help us ensure that your computer is technically compatible with our exam engine and proctoring service. You will then choose a date to take the exam. Once you submit this form, you will be redirected to a payment processor to complete your payment and secure your spot in our certification program.
+You can register for the [Pantheon WebOps Certification Exam with the form on this page](https://pantheon.io/certification). The form will ask for your name, email address, organization (if applicable), and some technical information about the computer you will be using to take the exam. This is to help us ensure that your computer is technically compatible with our exam engine and proctoring service. You will then choose a date to take the exam.
 
 </Accordion>
 
