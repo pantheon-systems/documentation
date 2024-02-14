@@ -16,7 +16,7 @@ permalink: docs/guides/wordpress-configurations/wordpress-font-library
 
 This section provides information on how to use the WordPress Font Library on Pantheon.
 
-[WordPress 6.5 (release name)](https://wordpress.org/news/2024/xx/xx/wordpress-6-5/) introduced a new [Font Library](https://wordpress.org/news/2024/xx/xx/wordpress-6-5/) feature. This feature allows you to upload fonts to your WordPress site or install any of the fonts available from Google's font library. In anticipation of this, Pantheon added a feature to our [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) to store those fonts in a writeable `wp-content/uploads/fonts/` directory, so that you can use the feature without any issues after updating your sites to 6.5. This changed the default WordPress core behavior of storing fonts in `wp-content/fonts` which would require committing fonts to your site repository and deploying them from dev to test to live.
+[WordPress 6.5 (release name)]() introduced a new [Font Library]() feature. This feature allows you to upload fonts to your WordPress site or install any of the fonts available from Google's font library. In anticipation of this, Pantheon added a feature to our [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) to store those fonts in a writeable `wp-content/uploads/fonts/` directory, so that you can use the feature without any issues after updating your sites to 6.5. This changed the default WordPress core behavior of storing fonts in `wp-content/fonts` which would require committing fonts to your site repository and deploying them from dev to test to live.
 
 ## Using the Filter
 
