@@ -34,7 +34,7 @@ Data-heavy sites, rejoice! Experience enterprise-grade database support for Word
 
 Managing domains just got easier, faster and more intuitive. 
 
-🚀 **PHP 8.3 support**
+🖥️ **PHP 8.3 support**
 
 We now support PHP 8.3. While PHP 8.2 is recommended for now, rest assured that we're ready to support your migration as core CMSes and plugins catch up.
 
