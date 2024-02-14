@@ -4,7 +4,7 @@ published_date: "2024-02-14"
 categories: [new-feature, front-end-sites, performance, wordpress, general]
 ---
 
-We hope this release note finds you in high spirits. We've got some fantastic news to share from our latest product announcement – new features, improvements, and one of our most requested changes ever.
+We hope this release note finds you in high spirits. We've got some fantastic news to share from our latest product announcement – new features, improvements, and some of our most requested changes ever.
 
 🚀 **WebOps Certification Program and free study guide**
 
