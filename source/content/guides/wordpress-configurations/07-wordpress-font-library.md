@@ -61,4 +61,4 @@ The distinction between the two approaches for handling fonts depends what works
 **If you consider fonts to be more like themes and plugins**, use the WordPress default behavior and the `pantheon_modify_fonts_dir` filter. This ensures that the fonts are installed across environments, but does not necessarily mean that fonts that are _physically installed_ on your lower environments (e.g. they exist in the `wp-content/fonts` directory) are recognized by WordPress. (They may still need to be added in the WordPress admin.)
 
 ## More Resources
-* [Link to fonts docs]()
+* [Font Library Gutenberg Tracking Ticket](https://github.com/WordPress/gutenberg/issues/55277)
