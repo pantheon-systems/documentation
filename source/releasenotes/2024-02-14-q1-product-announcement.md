@@ -4,15 +4,15 @@ published_date: "2024-02-14"
 categories: [new-feature, front-end-sites, performance, wordpress, general]
 ---
 
-Hope this release note finds you in high spirits. We've got some fantastic news to share from the Q1 product announcement – new features, improvements, and even some goodies for our beloved Pantheon community.
+We hope this release note finds you in high spirits. We've got some fantastic news to share from our latest product announcement – new features, improvements, and one of our most requested changes ever.
 
 🚀 **WebOps Certification Program and free study guide**
 
 Elevate your skills with our [certification program](https://pantheon.io/certification). Check out the [study guide](https://docs.pantheon.io/certification/study-guide) to get started.
 
-🌐 **NextJS open source starter kits**
+🌐 **Next.js open source starter kits**
 
-Dive into the world of NextJS with our open-source [starter kits](https://decoupledkit.pantheon.io/docs). Kickstart your projects with ease!
+Dive into the world of Next.js with our open-source [starter kits](https://decoupledkit.pantheon.io/docs). Kickstart your projects with ease!
 
 🔄 **Front-End Sites Multidev delete and preview feature**
 
