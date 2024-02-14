@@ -1587,3 +1587,7 @@
           url: "/certification/exam#exam-topics"
         - text: "Exam FAQs"
           url: "/certification/exam#exam-faqs"
+    - title: "See who's certified!"
+      links:
+        - text: "Pantheon WebOps Certification Registry"
+          url: "https://certification.pantheon.io"
