@@ -1,5 +1,5 @@
 ---
-title: "Exciting updates in Q1 - WebOps Certification, NextJS Starter Kits, and more!"
+title: "Q1 product announcement - WebOps Certification, NextJS Starter Kits, and more!"
 published_date: "2024-02-14"
 categories: [new-feature, front-end-sites, performance, wordpress, general]
 ---
