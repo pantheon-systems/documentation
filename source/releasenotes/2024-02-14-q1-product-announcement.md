@@ -46,7 +46,7 @@ We now support PHP 8.3. While PHP 8.2 is recommended for now, rest assured that 
 
 📅 **Pricing updates starting March 4**
 
-Get ready for preferred pricing, 4 months overage protection for qualifying non-profits, and a 40% traffic limit increase for our annual subscribers.
+Get ready for preferred pricing, four months overage protection for qualifying non-profits, and a 40% traffic limit increase for our annual subscribers.
 
 🔄 **New overage policy for improved predictability**
 
