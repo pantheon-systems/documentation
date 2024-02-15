@@ -60,11 +60,6 @@ const shortcodes = {
 // - To a GraphQL query order by frontmatter weight/order/index field.
 const items = [
   {
-    id: "docs-certification",
-    link: "/certification",
-    title: "Certification Program",
-  },
-  {
     id: "docs-certification-chapter-0",
     link: "/certification/study-guide",
     title: "Introduction",
