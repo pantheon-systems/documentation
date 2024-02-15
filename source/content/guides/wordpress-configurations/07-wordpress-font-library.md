@@ -66,7 +66,7 @@ The distinction between the two approaches for handling fonts depends what works
 
 ![No font faces were installed](../../../images/wordpress-configurations/07-no-font-faces-installed.png)
 
-There are two reasons you might receive an error message like the above that says that no fonts were installed and asks if the parent directory is writable by the server, both assume you have _disabled_ our modification to the directory where fonts are installed and are using the WordPress core handling (uploading to `wp-content/fonts/`).
+If you have disabled our modification and are using WordPress's default handling (uploading to `wp-content/fonts/`), there are two reasons you might receive an error message reporting that no fonts were installed and asks if the parent directory is writable by the server.
 
 1. The site environment is Dev and is in Git mode. If the Dev environment is set to Git mode, the filesystem is not writeable and you will not be able to install fonts.
 2. The site environment is Test or Live and you've set the `'pantheon_modify_fonts_dir'` filter value to `false`. In this case, you will not be able to install fonts on any environment other than Dev and you will need to commit them to your codebase.
