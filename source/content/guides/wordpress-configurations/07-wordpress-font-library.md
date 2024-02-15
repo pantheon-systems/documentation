@@ -60,5 +60,16 @@ The distinction between the two approaches for handling fonts depends what works
 
 **If you consider fonts to be more like themes and plugins**, use the WordPress default behavior and the `pantheon_modify_fonts_dir` filter. This ensures that the fonts are installed across environments, but does not necessarily mean that fonts that are _physically installed_ on your lower environments (e.g. they exist in the `wp-content/fonts` directory) are recognized by WordPress. (They may still need to be added in the WordPress admin.)
 
+## Troubleshooting
+
+### "No font faces were installed" error message
+
+![No font faces were installed]((../../../images/wordpress-configurations/07-no-font-faces-installed.png))
+
+There are two reasons you might receive an error message like the above that says that no fonts were installed and asks if the parent directory is writable by the server, both assume you have _disabled_ our modification to the directory where fonts are installed and are using the WordPress core handling (uploading to `wp-content/fonts/`).
+
+1. The site environment is Dev and is in Git mode. If the Dev environment is set to Git mode, the filesystem is not writeable and you will not be able to install fonts.
+2. The site environment is Test or Live and you've set the `'pantheon_modify_fonts_dir'` filter value to `false`. In this case, you will not be able to install fonts on any environment other than Dev and you will need to commit them to your codebase.
+
 ## More Resources
 * [Font Library Gutenberg Tracking Ticket](https://github.com/WordPress/gutenberg/issues/55277)
