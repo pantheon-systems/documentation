@@ -56,7 +56,7 @@ For more information, refer to [this Gutenberg issue](https://github.com/WordPre
 
 The distinction between the two approaches for handling fonts depends what works best for your workflow and whether you consider your fonts to be handled more like media files or more like themes and plugins.
 
-**If you consider fonts to be more like media files**, use the default Pantheon behavior added in our `mu-plugin`. This makes it easier to _install fonts onto production sites_ but perhaps more difficult to _synchronize_ those fonts on the lower environments (test and dev).
+**If you consider fonts to be more like media files**, use the default Pantheon behavior added in our `mu-plugin`. This makes it easier to _install fonts onto production sites_ but requires you to pull your database and files to the lower environments from Live. See [our documentation about database workflows](https://docs.pantheon.io/guides/mariadb-mysql/database-workflow-tools) for more information.
 
 **If you consider fonts to be more like themes and plugins**, use the WordPress default behavior and the `pantheon_modify_fonts_dir` filter. This ensures that the fonts are installed across environments, but does not necessarily mean that fonts that are _physically installed_ on your lower environments (e.g. they exist in the `wp-content/fonts` directory) are recognized by WordPress. (They may still need to be added in the WordPress admin.)
 
