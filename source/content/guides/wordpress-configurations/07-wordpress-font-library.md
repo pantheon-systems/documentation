@@ -79,5 +79,9 @@ If you've cloned your database and files from your live environment to Dev or Te
 
 ![Update Font](../../../images/wordpress-configurations/07-font-update.png)
 
+### I've uploaded fonts to my `/fonts` directory, but they aren't showing up in the Font Library
+
+Fonts need to be installed via the Font Library. This is because, in the backend, they are stored as a post type. Therefore, simply having a font in your `/fonts` directory does not necessarily mean it will be recognized by WordPress.
+
 ## More Resources
 * [Font Library Gutenberg Tracking Ticket](https://github.com/WordPress/gutenberg/issues/55277)
