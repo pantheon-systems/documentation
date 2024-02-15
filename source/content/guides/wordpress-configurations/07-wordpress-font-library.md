@@ -64,7 +64,7 @@ The distinction between the two approaches for handling fonts depends what works
 
 ### "No font faces were installed" error message
 
-![No font faces were installed]((../../../images/wordpress-configurations/07-no-font-faces-installed.png))
+![No font faces were installed](../../../images/wordpress-configurations/07-no-font-faces-installed.png)
 
 There are two reasons you might receive an error message like the above that says that no fonts were installed and asks if the parent directory is writable by the server, both assume you have _disabled_ our modification to the directory where fonts are installed and are using the WordPress core handling (uploading to `wp-content/fonts/`).
 
