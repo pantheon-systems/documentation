@@ -71,5 +71,13 @@ There are two reasons you might receive an error message like the above that say
 1. The site environment is Dev and is in Git mode. If the Dev environment is set to Git mode, the filesystem is not writeable and you will not be able to install fonts.
 2. The site environment is Test or Live and you've set the `'pantheon_modify_fonts_dir'` filter value to `false`. In this case, you will not be able to install fonts on any environment other than Dev and you will need to commit them to your codebase.
 
+### I've cloned my database from Live and my font is installed but not "active"
+
+![Font is installed but not active](../../../images/wordpress-configurations/07-font-installed-not-active.png)
+
+If you've cloned your database and files from your live environment to Dev or Test and the font appears in your Font Library but is not "active" (it displays a message like "0/1 variants active"), you can click into the font, select the variant you want, and click update. 
+
+![Update Font](../../../images/wordpress-configurations/07-font-update.png)
+
 ## More Resources
 * [Font Library Gutenberg Tracking Ticket](https://github.com/WordPress/gutenberg/issues/55277)
