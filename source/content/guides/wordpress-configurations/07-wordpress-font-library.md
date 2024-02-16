@@ -36,6 +36,8 @@ add_filter( 'font_dir', function( $defaults ) {
 } );
 ```
 
+The default priority for WordPress filters is `10`. We have set _our_ `font_dir` filter to priority `9` so it allows you to override our modification.
+
 <Alert title="Note" type="info">
 
 You cannot use the function `wp_get_upload_dir()` inside the `font_dir` filter because it will cause an infinite loop. Instead, if you want to use the `wp_get_upload_dir()` function, you can use a global variable as [we do in our mu-plugin](https://github.com/pantheon-systems/pantheon-mu-plugin/blob/main/inc/fonts.php) or [remove the filter and then re-add it](https://github.com/WordPress/wordcamp.org/pull/1245/files#diff-e441f1053cefcd468bd20fed91d1aac5e902871d7c564be909fc35590f9c3082R635-R637).
