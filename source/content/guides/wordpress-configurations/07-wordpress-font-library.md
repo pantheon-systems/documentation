@@ -50,7 +50,7 @@ For more information, refer to [this Gutenberg issue](https://github.com/WordPre
 
 WordPress handles fonts more like **media files** than **plugins or themes**. This means that when fonts are added to one Pantheon site environment, they will not necessarily exist in your other environments (e.g. installing a font on Dev does not mean it will push to Test when you deploy). In WordPress, fonts have two parts, there is a font post type (similar to the `attachment` post type for media files) and the font files themselves. Without the font post type existing in the database, WordPress has no way of knowing that a font is installed (in the same way that WordPress has no way that a particular image exists in the `/uploads` directory if it was not uploaded via the media library).
 
-If you intend to override the Pantheon behavior, care should be taken that you are not doing so with the assumption that committing font files to your repository will make them available automatically on your other environments.
+If you intend to override the Pantheon behavior, know that committing font files to your repository will not make them available automatically on your other environments.
 
 ## Troubleshooting
 
