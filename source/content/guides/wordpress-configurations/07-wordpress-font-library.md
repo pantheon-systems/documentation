@@ -72,7 +72,7 @@ Whether or not a font is "active" is similar to whether or not a plugin or theme
 
 ### I've uploaded fonts to my `/fonts` directory, but they aren't showing up in the Font Library
 
-Fonts need to be installed via the Font Library in the WordPress admin. This is because, in the backend, they are stored as a post type. Therefore, simply having a font in your `/fonts` directory does not necessarily mean it will be recognized by WordPress.
+Fonts need to be installed via the Font Library in the WordPress admin. This is because fonts contain data that is stored in a post type. Simply having a font in your `/fonts` directory does not mean it will be recognized by WordPress.
 
 ## More Resources
 * [Font Library Gutenberg Tracking Ticket](https://github.com/WordPress/gutenberg/issues/55277)
