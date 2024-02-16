@@ -16,19 +16,11 @@ permalink: docs/guides/wordpress-configurations/wordpress-font-library
 
 This section provides information on how to use the WordPress Font Library on Pantheon.
 
-[WordPress 6.5 (release name)]() introduced a new [Font Library]() feature. The Font Library allows you to upload fonts to your WordPress site or install any of the fonts available from Google's font library. In anticipation of this, Pantheon has added a feature to our [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) to store those fonts in a writeable (`wp-content/uploads/fonts/`) directory, so that you can use the feature without any issues after updating your sites to 6.5. This changes the default WordPress core behavior of storing fonts in `wp-content/fonts/` which requires committing fonts to your Pantheon site repository and deploying them from Dev to Test to Live.
+[WordPress 6.5 (release name)]() introduced a new [Font Library]() feature. The Font Library allows you to upload fonts to your WordPress site or install any of the fonts available from Google's font library. In anticipation of this, Pantheon has added a feature to our [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) to store those fonts in a writeable (`wp-content/uploads/fonts/`) directory, so that you can use the feature without any issues after updating your sites to 6.5. This changes the default WordPress core behavior of storing fonts in `wp-content/fonts/` to work on Pantheon.
 
-## Using the Filter
+## Using the `font_dir` Filter
 
-If you want to use the default WordPress behavior and store fonts in `wp-content/fonts` or customize the location of your installed fonts, you can use the following filter:
-
-```php
-add_filter( 'pantheon_modify_fonts_dir', '__return_false' );
-```
-
-Put this code somewhere in your site codebase as a plugin, in a theme `functions.php` file or in a [custom mu-plugin](https://docs.pantheon.io/guides/wordpress-configurations/wordpress-custom-code). This will restore the original behavior and commit fonts to your site repository.
-
-You can _change the directory_ where fonts are stored by using the WordPress core filter `font_dir` like this:
+You can change the directory where fonts are stored by using the WordPress core filter `font_dir` like this:
 
 ```php
 add_filter( 'font_dir', function( $defaults ) {
@@ -54,11 +46,9 @@ For more information, refer to [this Gutenberg issue](https://github.com/WordPre
 
 ## Considerations
 
-The distinction between the two approaches for handling fonts depends what works best for your workflow and whether you consider your fonts to be handled more like media files or more like themes and plugins.
+WordPress handles fonts more like **media files** than **plugins or themes**. This means that when fonts are added to one Pantheon site environment, they will not necessarily exist in your other WordPress environments (e.g. installing a font on Dev does not mean it will push to Test when you deploy). In WordPress, fonts have two parts, there is an underlying font post type (similar to the `attachment` post type for media files) and the physical font files themselves. Without the font post type existing in the database, WordPress has no way of knowing that a font is installed (in the same way that WordPress has no way that a particular image exists in the `/uploads` directory if it was not uploaded via the media library).
 
-**If you consider fonts to be more like media files**, use the default Pantheon behavior added in our `mu-plugin`. This makes it easier to _install fonts onto production sites_ but requires you to pull your database and files to the lower environments from Live. See [our documentation about database workflows](https://docs.pantheon.io/guides/mariadb-mysql/database-workflow-tools) for more information.
-
-**If you consider fonts to be more like themes and plugins**, use the WordPress default behavior and the `pantheon_modify_fonts_dir` filter. This ensures that the fonts are installed across environments, but does not necessarily mean that fonts that are _physically installed_ on your lower environments (e.g. they exist in the `wp-content/fonts` directory) are recognized by WordPress. (They may still need to be added in the WordPress admin.)
+If you intend to override the Pantheon behavior, care should be taken that you are not doing so with the assumption that committing font files to your repository will make them available automatically on your other environments.
 
 ## Troubleshooting
 
@@ -66,10 +56,7 @@ The distinction between the two approaches for handling fonts depends what works
 
 ![No font faces were installed](../../../images/wordpress-configurations/07-no-font-faces-installed.png)
 
-If you have disabled our modification and are using WordPress's default handling (uploading to `wp-content/fonts/`), there are two reasons you might receive an error message reporting that no fonts were installed and asks if the parent directory is writable by the server.
-
-1. The site environment is Dev and is in Git mode. If the Dev environment is set to Git mode, the filesystem is not writeable and you will not be able to install fonts.
-2. The site environment is Test or Live and you've set the `'pantheon_modify_fonts_dir'` filter value to `false`. In this case, you will not be able to install fonts on any environment other than Dev and you will need to commit them to your codebase.
+If you have disabled our modification or are uploading to a directory that is not writeable, you may see this error message. Ensure that if you are overriding our `font_dir` filter, that the directory you are using instead is writeable (e.g. in `wp-content/uploads/`).
 
 ### I've cloned my database from Live and my font is installed but not "active"
 
