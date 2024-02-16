@@ -68,6 +68,8 @@ If you've cloned your database and files from your live environment to Dev or Te
 
 ![Update Font](../../../images/wordpress-configurations/07-font-update.png)
 
+Whether or not a font is "active" is similar to whether or not a plugin or theme is active. If a font is not active, it means the font is installed and recognized by WordPress but it cannot be used on the site until you activate it.
+
 ### I've uploaded fonts to my `/fonts` directory, but they aren't showing up in the Font Library
 
 Fonts need to be installed via the Font Library in the WordPress admin. This is because, in the backend, they are stored as a post type. Therefore, simply having a font in your `/fonts` directory does not necessarily mean it will be recognized by WordPress.
