@@ -1,9 +1,8 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.3.0"
+        "version": "3.3.4"
     },
-
     "commands": [
         {
             "name": "aliases",
@@ -15906,7 +15905,7 @@
             "name": "workflow:list",
             "description": "Displays the list of the workflows for a site.",
             "usage": [
-                "workflow:list [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_id>",
+                "workflow:list [--all] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_id>",
                 "workflow:list <site> Displays the list of the workflows for <site>.",
                 "workflows"
             ],
@@ -15922,6 +15921,15 @@
                     }
                 },
                 "options": {
+                    "all": {
+                        "name": "--all",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Return all of the available workflows, not just the most recent 100",
+                        "default": false
+                    },
                     "format": {
                         "name": "--format",
                         "shortcut": "",
