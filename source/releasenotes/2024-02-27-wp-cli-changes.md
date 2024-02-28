@@ -4,7 +4,7 @@ published_date: "2024-02-27"
 categories: [wordpress,action-required]
 ---
 
-We've recently modified the Pantheon wrapper around the WP-CLI executable to solve a number of interrelated issues that customers may have previously been using workarounds to solve.
+We've recently modified the Pantheon wrapper around the WP-CLI executable to solve a number of interrelated issues that customers may have previously been experiencing and/or using workarounds to solve.
 
 <h3>The Problem</h3>
 
