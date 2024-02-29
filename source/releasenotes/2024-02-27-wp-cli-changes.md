@@ -8,7 +8,7 @@ We've recently modified the Pantheon wrapper around the WP-CLI executable to sol
 
 <h3>Problem</h3>
 
-* Our WP-CLI wrapper included a hard-coded `--url` flag for all `wp` commands run on the platform (via Terminus, e.g. `terminus remote:wp` or `terminus wp` or internal workflows that relied on WP-CLI like flushing cache or viewing the Status page in the dashboard).
+* Our WP-CLI wrapper included a hard-coded `--url` flag for all `wp` commands run on the platform (via Terminus, e.g. `terminus remote:wp` or `terminus wp`, or internal workflows that relied on WP-CLI like flushing cache or viewing the Status page in the dashboard).
 * For WordPress Multisites, the hard-coded `--url` flag pointed to the Pantheon platform domain (`*.pantheonsite.io`) instead of the actual domain of the site resulting in errors and the command failing unless executed manually (via Terminus with the correct `--url` flag attached).
 
 <h3>Solution</h3>
