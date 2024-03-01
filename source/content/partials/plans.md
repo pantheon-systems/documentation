@@ -4,13 +4,13 @@ The following tables provide both the list and preferred pricing for Pantheon Pl
 
 <Tab title="List Price" id="tab-1-anchor" active={true}>
 
-The List Price is the set price for new sites created after November 15, 2018 that aren’t purchased via a qualified agency partner.
+The List Price is the set price for new sites created after March 4, 2024 that aren’t purchased via a qualified agency partner.
 
 |                    | Basic         | Performance Small | Performance Medium | Performance Large | Performance XL       |
 |:------------------ |:------------- |:----------------- |:------------------ |:----------------- |:-------------------- |
-| Monthly Price      | $50           | $175              | $300               | $600              | $1,000               |
+| Monthly Price      | $55           | $200              | $350               | $700              | $1,150               |
 | Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
-| **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
+| **Annual Savings** | **$160**      | **$475**          | **$900**           | **$1800**         | **$2,800**           |
 
 </Tab>
 
@@ -21,9 +21,9 @@ The List Price is the set price for new sites created after November 15, 2018 th
 
 |                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
 |:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
-| Monthly Price      | $35     | $125              | $225               | $450              | $750            |
-| Annual Price       | $350    | $1,375            | $2,475             | $4,950            | $8,250          |
-| **Annual Savings** | **$70** | **$125**          | **$225**           | **$450**          | **$750**        |
+| Monthly Price      | $44.16  | $166.66           | $283.33            | $566.66           | $925            |
+| Annual Price       | $420    | $1,500            | $2700              | $5,400            | $9,000          |
+| **Annual Savings** | **$110**| **$500**          | **$700**           | **$1400**         | **$2100**       |
 
 </Tab>
 
@@ -33,7 +33,7 @@ The 2X Large plan is not available for purchase via the Dashboard, but can be ap
 
 | Payment Type      | Price            |
 |:----------------- |:---------------- |
-| List Monthly      |  $1,500          |
+| List Monthly      |  $1,725          |
 | List Annual       |  $16,500         |
 
 </Tab>
