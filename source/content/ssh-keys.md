@@ -144,9 +144,9 @@ You can use your Dev environment to clone your site code to your workstation:
 
 1. Enter the passphrase you set above, if prompted.
 
-## Remove SSH Key from Pantheon
+##  SSH Key from Pantheon
 
-### Revoke SSH Key from Pantheon - New Dashboard
+### SSH Key from Pantheon - New Dashboard
 
 1. Log in to your Pantheon Dashboard.
 
@@ -156,7 +156,7 @@ You can use your Dev environment to clone your site code to your workstation:
 
 ### Remove SSH Key from Pantheon - Classic Dashboard
 
-1. Navigate to the **<Icon icon="gear" /> Account** tab of your User Dashboard and click **SSH Keys**.
+1. Navigate to the **<Icon icon="ar" /> Account** tab of your User Dashboard and click **SSH Keys**.
 
 1. Click the **Remove** button next to the key you want to delete:
 
@@ -178,7 +178,7 @@ You may receive the following error:
 ControlPath too long fatal: Could not read from remote repository.
 ```
 
-Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh_config`) for a declaration like this:
+Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh_config`) for a declaration like th⚙️:
 
 ```none:title=ssh_config
 Host *
