@@ -1,4 +1,4 @@
----
+![CleanShot 2024-03-06 at 15 02 11@2x](https://github.com/pantheon-systems/documentation/assets/260253/cb95b35d-3dd4-4a24-89ad-c24316f79317)---
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 tags: [plugins, themes, code]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2023-01-30"
+reviewed: "2024-03-06"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -671,18 +671,18 @@ ___
 
 ## PolyLang
 
-<ReviewDate date="2023-11-15" />
+<ReviewDate date="2024-03-06 />
 
 **Issue:** The [PolyLang](https://wordpress.org/plugins/polylang/) plugin adds a cache-busting cookie (ex. `pll_language=en`) for each request.
 
-**Solution:** Define the constant `PLL_COOKIE` to false in `wp-config.php` to remove the cookie:
+**Solution:** Define the constant `PLL_COOKIE` to `STYXKEY_pll_language` in `wp-config.php` to make the cookie a cache-varying cookie.
 
 ```php:title=wp-config.php
-// Disable Polylang's feature to set a cookie that stores the visitor's selected language.
-define('PLL_COOKIE', false);
+// Set the polylang cache key to be edge cache compliant
+define('PLL_COOKIE', 'STYXKEY_pll_language');
 ```
 
-The value of `PLL_COOKIE` defaults to `pll_polylang`. This defines the name of the cookie used by Polylang to store the visitor's language. When `PLL_COOKIE` is set to false, Polylang does not set any cookie. Be aware that in this case some features of the plugin may not work completely. For example, the login page will not be translated.
+The value of `PLL_COOKIE` defaults to `pll_polylang`. This defines the name of the cookie used by Polylang to store the visitor's language. By changing `PLL_COOKIE` to `STYXKEY_pll_language` the cookie will become a [cache-varying cookie](https://docs.pantheon.io/cookies#cache-varying-cookies).
 
 See the [plugin documentation](https://polylang.pro/doc/php-constants/) for more information on its PHP constants.
 
