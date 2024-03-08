@@ -29,7 +29,7 @@ You can create a new fork in a Pantheon environment by using the code from the D
 
 1. Specify the name for the Multidev in the **Create Multidev Environment** modal:
 
-   - Multidev branch names must be all lowercase, less than 11 characters, and can contain a dash (`-`).
+   - Multidev branch names must be all lowercase, no more than 11 characters, and can contain a dash (`-`).
 
    - Environments cannot be created with the following reserved names:
 
