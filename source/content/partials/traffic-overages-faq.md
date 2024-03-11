@@ -10,7 +10,7 @@ reviewed: ""
 
 ### Will Pantheon warn me if my site has an overage?
 
-Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. If the change to traffic behavior exceeds your plan limit for any two months of traffic, your site will be moved to the next appropriate plan to help avoid further overages. These adjustments will be communicated in an email with a subject of "You've been right-sized".
+Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. if a site is over the monthly entitlement for unique visitors it may be subject to overages enforcement.  Pantheon's overages program only charges you for what you need and will never alter your choice of plan.  Find all the details [here](https://docs.google.com/document/d/1vaLJHXJJashwO9zsHFeywW-RQx_6uWOWH2Yr31sbQv4/edit?usp=sharing)
 
 ### Where can I manage my plan along with my site traffic?
 
@@ -24,7 +24,7 @@ We encourage all customers to take advantage of [Traffic Limits and Overages](/g
 
 ### What about legitimate traffic spikes?
 
-The internet can make any website famous overnight, and this may not be under your control. Pantheon's platform is designed to support such events, and it's one of the main reasons people choose us to run their sites. Luckily, traffic spikes are easily discernible and we take this into account when monitoring overages. Sustained traffic overages will continue to require an adjustment to your pricing plan as set out above.
+The internet can make any website famous overnight, and this may not be under your control. Pantheon's platform is designed to support such events, and it's one of the main reasons people choose us to run their sites. It is because of uncontrollable events likr this that all Performance & Elite plans on an annual agreement recieve at least one month of overage protection (qualified nonprofits recieve four months of protection) per calendar year.  Sustained traffic overages will be enforced and may require a change to your site plan should the traffic levels see a sustained increase.
 
 ### What about load tests or penetration tests?
 
