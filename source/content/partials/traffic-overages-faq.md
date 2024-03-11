@@ -10,7 +10,7 @@ reviewed: ""
 
 ### Will Pantheon warn me if my site has an overage?
 
-Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. if a site is over the monthly entitlement for unique visitors it may be subject to overages enforcement.  Pantheon's overages program only charges you for what you need and will never alter your choice of plan.  Find all the details [here](https://docs.google.com/document/d/1vaLJHXJJashwO9zsHFeywW-RQx_6uWOWH2Yr31sbQv4/edit?usp=sharing)
+Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email. If the change to traffic behavior exceeds your plan limit, your site may be subject to overages enforcement. Overages protection exists for Performance and Elite sites on an annual agreement. Refer to the [FAQ](https://docs.google.com/document/d/1vaLJHXJJashwO9zsHFeywW-RQx_6uWOWH2Yr31sbQv4/edit?usp=sharing) for more details on Overage Protection and what to expect should your site go over the plan limits.
 
 ### Where can I manage my plan along with my site traffic?
 
