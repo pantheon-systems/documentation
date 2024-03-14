@@ -41,7 +41,7 @@ Though optional, pre-provisioning Let's Encrypt SSL certificates ahead of a plan
 
 1. Enter the `TXT Name/Host` in the **Name** field and the `TXT Value` in the **Content** field.
 
-  You can find both values in the the Live environment of your Pantheon Site Dashboard under **Domains/HTTPS** for that domain.
+  You can find both values in the Live environment of your Pantheon Site Dashboard under **Domains/HTTPS** for that domain.
 
 1. Select your desired Time to Live (TTL) and then click **Save**.
 
