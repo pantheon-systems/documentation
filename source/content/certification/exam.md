@@ -36,7 +36,7 @@ The following directions and instructions were captured by a user on a MacOS dev
 *   Describe a use case where it would make sense to use CSS selectors to select web elements to exclude from a Visual Regression Test with Autopilot
 *   Describe the minimum feature requirements for a site to successfully run Autopilot on Pantheon.
 *   List the ways Autopilot can alert a user of a failed Visual Regression Test.
-*   Distinguish between the the types of sites that are compatible with Autopilot, and those that are not
+*   Distinguish between the types of sites that are compatible with Autopilot, and those that are not
 
 ### AGCDN
 
