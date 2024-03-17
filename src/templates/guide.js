@@ -126,6 +126,10 @@ class GuideTemplate extends React.Component {
           image={"/images/assets/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
+          product={node.frontmatter.product}
+          cms={node.frontmatter.cms}
+          audience={node.frontmatter.audience}
+          integration={node.frontmatter.integration}
         />
         <Navbar
           slot="guide-menu"
@@ -195,6 +199,9 @@ export const pageQuery = graphql`
         reviewed(formatString: "MMMM DD, YYYY")
         tags
         type
+        audience
+        product
+        integration
       }
       fileAbsolutePath
     }

@@ -111,6 +111,11 @@ class DocTemplate extends React.Component {
           keywords={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
+          audience={node.frontmatter.audience}
+          product={node.frontmatter.product}
+          integration={node.frontmatter.integration}
+          cms={node.frontmatter.cms}
+
         />
         <main id="docs-main" tabIndex="-1">
           <Container
@@ -184,6 +189,9 @@ export const pageQuery = graphql`
         showtoc
         tags
         type
+        audience
+        product
+        integration
       }
       fileAbsolutePath
     }
