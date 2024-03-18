@@ -24,6 +24,6 @@ If the change to traffic behavior exceeds your plan limit for a second month in 
 
 <Alert title="Note" type="info">
 
-Basic and Performance sites on a monthly plan do not have overage protection. If a site on a monthly plan exceeds the published visit cap in any given month, the site plan will be automatically be subject to a bill for the overage. The site owners will be notified of the ent and an invoice will follow later int he same month. 
+Basic and Performance sites on a monthly plan do not have overage protection. If a site on a monthly plan exceeds the published visit cap in any given month, the site plan will be automatically be subject to a bill for the overage. The site owners will be notified of the event and an invoice will follow later int he same month. 
 
 </Alert>
