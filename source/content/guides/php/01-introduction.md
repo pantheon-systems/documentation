@@ -19,6 +19,12 @@ PHP is a scripting language that facilitates server-side web development. The PH
 
 ## Supported PHP Versions
 
+<Alert title="Support for PHP < 7.2" type="info">
+
+<sup>1</sup>On May 15, 2024, PHP 5.6, 7.0, and 7.1 will reach "End of Sale" and removed from the supported PHP versions below. New sites will not support PHP versions older than 7.2. For more details, see [this release note](/release-notes/2024/03/PHP-7-1-EOS).
+
+</Alert>
+
 Pantheon supports the following PHP versions:
 
 Click the links below to display complete PHP information for each version, including details of supported PHP extensions.
