@@ -1,22 +1,11 @@
 ---
-title: WebOps Certification
-subtitle: Certification Program
-certificationpage: true
+title: "WebOps Certification: About the program"
 showtoc: true
-type: certificationpage
-layout: certificationpage
 contributors: []
-contenttype: [guide]
-innav: [true]
-categories: []
-cms: [drupal, wordpress]
-integration: [--]
-tags: []
-permalink: docs/certification
-nexturl: /certification/study-guide
+permalink: docs/certification/about
 ---
 
-Pantheon is introducing a certification program that validates knowledge of our core CMS Sites offering. This program is presently invite-only for [Pantheon Heroes](https://pantheon.io/developer-community/heroes) and developers at [Partners agencies](https://pantheon.io/partners/become-pantheon-partner). We expect to open it more widely in 2024.
+Pantheon is introducing a certification program that validates knowledge of our core CMS Sites offering. This program is open for anyone who would like to enroll, and you can [register for the WebOps Certification exam by submitting this form](https://pantheon.io/certification).
 
 ## Why Become Certified?
 
@@ -43,3 +32,7 @@ Ultimately, investing in a WebOps certification on Pantheon can lead to the high
 * **Staying Cutting Edge** - A WebOps certification can ensure that projects ship with optimal website performance, security, and the best customer experiences possible, leveraging the latest best practices in website operations.
 * **Attracting & Retaining Talent** - Offering a path to certification in WebOps can attract passionate developers and keep them satisfied in their roles by working in ways that maximize their time and impact.
 * **Operational Excellence** - An investment in WebOps certification boosts the quality of a company’s digital experience, leading to better outcomes for lead generation, customer acquisition, and overall customer satisfaction
+
+## More Resources
+- [WebOps Certification: Study Guide](/certification/study-guide)
+- [WebOps Certification: Exam Overview](/certification/exam)

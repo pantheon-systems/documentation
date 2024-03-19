@@ -87,7 +87,7 @@ Let's say I use [Composer](/guides/composer) to manage my WordPress site's plugi
 
 ### Connect Your GitHub Repository
 1. After creating a new DeployBot account or logging in to your existing DeployBot account, click **Connect a repository**.
-2. Select the desired repository using the the drop-down menu. If this is your first time connecting, you'll need to authorize access to your repositories.
+2. Select the desired repository using the drop-down menu. If this is your first time connecting, you'll need to authorize access to your repositories.
 3. Enter a title for this repository and apply a color label, then click **Connect**.
 
 ### Connect Your Pantheon Repository

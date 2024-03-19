@@ -107,6 +107,18 @@
       "displayName": "WordPress",
       "color": "color-9",
       "description": "Tailored for updates specific to the WordPress content management system, helping WordPress users stay informed about platform changes that directly impact their workflows"
+    },
+    {
+      "slug": "plugins",
+      "displayName": "Plugins",
+      "color": "color-7",
+      "description": "Keeps users informed about updates to WordPress plugins that we maintain."
+    },
+    {
+      "slug": "modules",
+      "displayName": "Modules",
+      "color": "color-7",
+      "description": "Keeps users informed about updates to Drupal modules that we maintain."
     }
   ]
 }
