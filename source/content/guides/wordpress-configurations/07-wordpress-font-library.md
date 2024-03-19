@@ -18,6 +18,8 @@ This section provides information on how to use the WordPress Font Library on Pa
 
 [WordPress 6.5 (release name)]() introduced a new [Font Library](https://make.wordpress.org/core/2024/03/14/new-feature-font-library/) feature. The Font Library allows you to upload fonts from your computer or add any of the fonts available on Google's font library to your WordPress site. In anticipation of this, Pantheon has added a feature to our [Pantheon MU Plugin](https://github.com/pantheon-systems/pantheon-mu-plugin) to store those fonts in a writeable directory (`wp-content/uploads/fonts/`), so that you can use the feature without any issues after updating your sites to 6.5. 
 
+By default, WordPress will install fonts into `wp-content/fonts/` if it is writeable. If `wp-content/fonts/` is not writeable, like on Pantheon environments, WordPress will install fonts into `wp-content/uploads/fonts/`. This can create inconsistency if WordPress is using its default behavior because your `wp-content/fonts/` is likely to be writeable on your local environment. In this instance, fonts installed _on Pantheon_ would be stored in `wp-content/uploads/fonts` but fonts installed _locally_ would be stored in `wp-content/fonts`, which is why we have altered the behavior in the mu-plugin.
+
 ## Using the `font_dir` Filter
 
 You can change the directory where fonts are stored by using the WordPress core filter `font_dir` like this:
