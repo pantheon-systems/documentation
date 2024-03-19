@@ -36,7 +36,7 @@ Click the links below to display complete PHP information for each version, incl
 | [7.0](https://v70-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 | [5.6](https://v56-php-info.pantheonsite.io/)     | <span style="color:green">✔</span>         | ❌           |
 
-Sites that run older PHP versions not listed above will continue to serve pages. However, new development cannot be done because the development environment behavior is undefined and no longer supported. You can [upgrade your PHP version](/guides/php/php-versions) in the development environment to resume development on your site.
+Sites that run older PHP versions not listed above will continue to serve pages. While older sites will still run unlisted and unsupported versions of PHP, new sites cannot change their PHP version to unsupported values. You can [upgrade your PHP version](/guides/php/php-versions) in the development environment to resume development on your site.
 
 <Alert title="PHP 8.3 New Relic compatibility" type="info">
 
