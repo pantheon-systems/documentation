@@ -52,7 +52,7 @@ If you intend to override the Pantheon behavior, know that committing font files
 
 ![No font faces were installed](../../../images/wordpress-configurations/07-no-font-faces-installed.png)
 
-If you have disabled our modification or are uploading to a directory that is not writeable, you may see this error message. Ensure that if you are overriding our `font_dir` filter, that the directory you are using instead is writeable (e.g. in `wp-content/uploads/`).
+If you have altered the `font_dir` path and are uploading to a directory that is not writeable, you may see this error message. Ensure that the directory you are using in your `font_dir` filter is writeable (e.g. in `wp-content/uploads/`).
 
 ### I've cloned my database from Live and my font is installed but not "active"
 
