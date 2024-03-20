@@ -38,7 +38,7 @@ Click the links below to display complete PHP information for each version, incl
 
 Sites that run older PHP versions not listed above will continue to serve pages. While older sites will still run unlisted and unsupported versions of PHP, new sites cannot change their PHP version to unsupported values. You can [upgrade your PHP version](/guides/php/php-versions) in the development environment to resume development on your site.
 
-<p><sup>1</sup> Currently, New Relic does not support PHP 8.3. As such, you will not be able to view your New Relic dashboard on any site that has been updated to PHP 8.3. We will be updating our platform to support New Relic on PHP 8.3 sites as soon as a compatible New Relic release is available to us.</p>
+<p><sup>1</sup> Currently, PHP 8.3 on Pantheon does not support New Relic. As such, you will not be able to view your New Relic dashboard on any site that has been updated to PHP 8.3. We will be updating our platform to support New Relic on PHP 8.3 sites soon.</p>
 
 <p><sup>2</sup> On May 15, 2024, PHP 5.6, 7.0, and 7.1 will reach "End of Sale" and be removed from the supported PHP versions. New sites will not support PHP versions older than 7.2. For more details, see <a href="/release-notes/2024/03/PHP-7-1-EOS">this release note</a>.</p>
 
