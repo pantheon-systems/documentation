@@ -41,7 +41,7 @@ Sites that run older PHP versions not listed above will continue to serve pages.
 <p><sup>1</sup> Currently, New Relic does not support PHP 8.3. As such, you will not be able to view your New Relic dashboard on any site that has been updated to PHP 8.3. We will be updating our platform to support New Relic on PHP 8.3 sites as soon as a compatible New Relic release is available to us.</p>
 
 
-<p><sup>2</sup> On May 15, 2024, PHP 5.6, 7.0, and 7.1 will reach "End of Sale" and be removed from the supported PHP versions below. New sites will not support PHP versions older than 7.2. For more details, see [this release note](/release-notes/2024/03/PHP-7-1-EOS).</p>
+<p><sup>2</sup> On May 15, 2024, PHP 5.6, 7.0, and 7.1 will reach "End of Sale" and be removed from the supported PHP versions below. New sites will not support PHP versions older than 7.2. For more details, see <a href="/release-notes/2024/03/PHP-7-1-EOS">this release note</a>.</p>
 
 ## Drush Compatibility
 
