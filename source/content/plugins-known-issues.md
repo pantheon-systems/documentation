@@ -38,6 +38,7 @@ The following is a list of plugins that assume write access, and the specific fi
 | [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
 | | wp-content/plugins/all-in-one-wp-migrations/storage |
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
+| [Big File Uploads](https://wordpress.org/plugins/tuxedo-big-file-uploads/) | wp-content/bfu-temp | See the [Big File Uploads](/plugins-known-issues#big-file-uploads) section below for solutions. |
 | [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) | wp-content/et-cache | Remember to repeat this process for each environment, including Multidevs. |
 | [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/) | wp-content/cache | Remember to repeat this process for each environment, including Multidevs. |
 | [Hummingbird](https://wordpress.org/plugins/hummingbird-performance/)  | wp-content/wphb-logs | The /wphb-logs folder logs API calls |
@@ -203,6 +204,38 @@ add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 ```
 
 **Solution 2:** Use an alternative Search and Replace plugin like [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
+
+___
+## Big File Uploads
+**Issue:** The [Big File Uploads](https://wordpress.org/plugins/tuxedo-big-file-uploads/) plugin has assumed write access for its temporary file storage.
+
+**Solution:**
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/connection-modes) in the dashboard or via Terminus.
+
+1. Use Git to clone your site's codebase locally if you haven't already. See [Clone your site codebase](/guides/git/git-config#clone-your-site-codebase)
+
+1. In your terminal, change your current directory to the location where the site's Git clone is stored.
+
+1. Navigate to `/wp-content` and check if the `/wp-content/bfu-temp` folder exists. If it does, remove it before you create the symlinks in the next steps:
+
+  ```bash{promptUser: user}
+  cd wp-content
+  rm -rf bfu-temp
+  ```
+
+1. Return to the root directory of the Git clone:
+
+  ```bash{promptUser: user}
+  cd ..
+  ```
+
+1. Create a symlinks:
+
+  ```bash{promptUser: user}
+  ln -s ../../files/private/bfu-temp ./wp-content/bfu-temp
+  ```
+
+1. Commit this change and push to your site, and ensure that a private/bfu-temp directory is created on each environment.
 
 ___
 
