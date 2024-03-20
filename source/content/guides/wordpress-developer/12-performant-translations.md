@@ -40,4 +40,4 @@ The example above does three things: 1) sets the environment to `SFTP` mode, 2) 
 ### Considerations
 
 * Running `i18n make-php` will generate `.l10n.php` files _based on the current_ `.mo` files. You might want to run this command after updating your language files to ensure the `.l10n.php` files are up-to-date first.
-* The existing [known issur relating to WordPress Language Packs](/wordpress-known-issues#language-packs) still apply. As noted above, language packs can only be installed and updated in SFTP mode and then committed to the filesystem via the dashboard or Terminus.
+* The existing [known issue relating to WordPress Language Packs](/wordpress-known-issues#language-packs) still apply. As noted above, language packs can only be installed and updated in SFTP mode and then committed to the filesystem via the dashboard or Terminus.
