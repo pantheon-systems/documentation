@@ -110,7 +110,7 @@ export const pageQuery = graphql`
 
     allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/changelogs/" }
+        fileAbsolutePath: { regex: "/releasenotes/" }
         frontmatter: { draft: { ne: true } }
       }
       sort: { fields: [fileAbsolutePath], order: DESC }
