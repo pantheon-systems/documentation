@@ -79,6 +79,47 @@ Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) 
 
 [Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn/global-cdn-caching#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
+Another solution to consider when debugging issues related to stale static assets is to load the file via a custom PHP script that sets a `no-cache` header value, for example: 
+
+```php
+<?php
+
+// Punch through the Pantheon edge cache.
+header("Cache-Control: no-cache, must-revalidate");
+
+// Set JSON header
+header('Content-Type: application/json');
+
+// Echo file content
+echo file_get_contents("/path/to/file.json");
+```
+
+`pantheon_clear_edge_paths` is a platform function that can be implemented in a [Quicksilver hook (like `deploy`)](https://pantheon.io/docs/quicksilver#hooks) to automatically purge a given static asset from cache, for example: 
+```
+<?php
+
+// Punch through the Pantheon edge cache.
+setcookie('NO_CACHE', '1');
+
+// Test clearing files-only path
+if (function_exists('pantheon_clear_edge_paths')) {
+    $paths = [
+      'sites/default/files/file.json'
+    ];
+
+    // Test path types.
+    foreach ($paths as $path) {
+        try {
+            pantheon_clear_edge_paths([$path]);
+        } catch (Exception $e) {
+            echo "<pre>";
+            print_r($e);
+            echo "</pre>";
+        }
+    }
+}
+```
+
 ## Using Your Own Session-Style Cookies
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, the Global CDN will not try to respond to the request from its cache or store the response.
