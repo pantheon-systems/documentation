@@ -112,7 +112,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
 <Tab title="Drupal 8/9/10+" id="d10" active={true}>
 
-    ```php
+  ```php
     /*
      * Environment Indicator module settings.
      * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
@@ -154,13 +154,13 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
           break;
       }
     }
-    ```
+  ```
 
 </Tab>
 
 <Tab title="Drupal 7" id="d7">
 
-    ```php
+  ```php
     /*
     * Environment Indicator module settings.
     * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
@@ -206,7 +206,8 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
               break;
           }
       }
-    ```
+  ```
+
 </Tab>
 
 </Tablist>
@@ -228,7 +229,6 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
   ```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
-
 
 ## More Resources
 
