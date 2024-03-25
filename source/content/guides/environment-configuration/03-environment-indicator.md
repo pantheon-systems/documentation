@@ -108,9 +108,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
 1. Add the following within `settings.php` for your version of Drupal:
 
-<Tablist>
-
-<Tab title="Drupal 8/9/10+" id="d10" active={true}>
+<Accordion title="Drupal 8/9/10+" id="d10" active={true} icon="wrench">
 
 ```php
   /*
@@ -156,9 +154,9 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
   }
 ```
 
-</Tab>
+</Accordion>
 
-<Tab title="Drupal 7" id="d7">
+<Accordion title="Drupal 7" id="d7" icon="wrench">
 
 ```php
   /*
@@ -208,9 +206,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
     }
 ```
 
-</Tab>
-
-</Tablist>
+</Accordion>
 
 1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
