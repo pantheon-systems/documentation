@@ -96,15 +96,15 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
 [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
- ```bash{promptUser: user}
- terminus connection:set $site.$env sftp
- ```
+```bash{promptUser: user}
+terminus connection:set $site.$env sftp
+```
 
 Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
 
- ```bash{promptUser: user}
- terminus drush $site.$env -- en environment_indicator -y
- ```
+```bash{promptUser: user}
+terminus drush $site.$env -- en environment_indicator -y
+```
 
 Add the following within `settings.php` for your version of Drupal:
 
@@ -214,19 +214,19 @@ Add the following within `settings.php` for your version of Drupal:
 
 Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
- ```bash{promptUser: user}
- terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
- terminus env:clear-cache <site>.test
- ```
+```bash{promptUser: user}
+terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
+terminus env:clear-cache <site>.test
+```
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
 
 Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
-  ```bash{promptUser: user}
-  terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
-  terminus env:clear-cache <site>.live
-  ```
+```bash{promptUser: user}
+terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
+terminus env:clear-cache <site>.live
+```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
 
