@@ -94,21 +94,23 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 
 The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal sites.
 
-1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+[Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```bash{promptUser: user}
  terminus connection:set $site.$env sftp
  ```
 
-1. Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
+Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
 
  ```bash{promptUser: user}
  terminus drush $site.$env -- en environment_indicator -y
  ```
 
-1. Add the following within `settings.php` for your version of Drupal:
+Add the following within `settings.php` for your version of Drupal:
 
-<Accordion title="Drupal 8/9/10+" id="d10" icon="wrench">
+<Tablist>
+
+<Tab title="Drupal 8/9/10+" id="d10" active={true}>
 
 ```php
   /*
@@ -154,9 +156,9 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
   }
 ```
 
-</Accordion>
+</Tab>
 
-<Accordion title="Drupal 7" id="d7" icon="wrench">
+<Tab title="Drupal 7" id="d7">
 
 ```php
   /*
@@ -206,9 +208,11 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
     }
 ```
 
-</Accordion>
+</Tab>
 
-1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
+</Tablist>
+
+Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
  ```bash{promptUser: user}
  terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
@@ -217,7 +221,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
 
-1. Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
+Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
   ```bash{promptUser: user}
   terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
