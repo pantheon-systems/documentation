@@ -106,7 +106,59 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
  terminus drush $site.$env -- en environment_indicator -y
  ```
 
-1. Add the following within `settings.php` for Drupal:
+1. Add the following within `settings.php` for your version of Drupal:
+
+<Tablist>
+
+<Tab title="Drupal 8/9/10+" id="d10" active={true}>
+
+    ```php
+    /*
+     * Environment Indicator module settings.
+     * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
+     */
+
+    if (!defined('PANTHEON_ENVIRONMENT')) {
+      $config['environment_indicator.indicator']['name'] = 'Local';
+      $config['environment_indicator.indicator']['bg_color'] = '#505050';
+      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+    }
+    // Pantheon Env Specific Configig
+    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+      switch ($_ENV['PANTHEON_ENVIRONMENT']) {
+        case 'lando': // Localdev or Lando environments
+          $config['environment_indicator.indicator']['name'] = 'Local Dev';
+          $config['environment_indicator.indicator']['bg_color'] = '#990055';
+          $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+          break;
+        case 'dev':
+          $config['environment_indicator.indicator']['name'] = 'Dev';
+          $config['environment_indicator.indicator']['bg_color'] = '#307b24';
+          $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+          break;
+        case 'test':
+          $config['environment_indicator.indicator']['name'] = 'Test';
+          $config['environment_indicator.indicator']['bg_color'] = '#b85c00';
+          $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+          break;
+        case 'live':
+          $config['environment_indicator.indicator']['name'] = 'Live!';
+          $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
+          $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+          break;
+        default:
+          //Multidev catchall
+          $config['environment_indicator.indicator']['name'] = 'Multidev';
+          $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
+          $config['environment_indicator.indicator']['fg_color'] = '#000000';
+          break;
+      }
+    }
+    ```
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7">
 
     ```php
     /*
@@ -127,9 +179,9 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
       if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
           switch ($_ENV['PANTHEON_ENVIRONMENT']) {
             case 'lando': // Localdev or Lando environments
-              $config['environment_indicator.indicator']['name'] = 'Local Dev';
-              $config['environment_indicator.indicator']['bg_color'] = '#990055';
-              $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+              $conf['environment_indicator_overwritten_name'] = 'Local Dev';
+              $conf['environment_indicator_overwritten_color'] = '#990055';
+              $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
               break;
             case 'dev':
               $conf['environment_indicator_overwritten_name'] = 'Dev';
@@ -155,6 +207,9 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
           }
       }
     ```
+</Tab>
+
+</Tablist>
 
 1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
