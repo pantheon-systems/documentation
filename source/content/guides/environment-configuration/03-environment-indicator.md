@@ -108,9 +108,7 @@ terminus drush $site.$env -- en environment_indicator -y
 
 Add the following within `settings.php` for your version of Drupal:
 
-<Tablist>
-
-<Tab title="Drupal 8/9/10+" id="d10" active={true}>
+<Accordion title="Drupal 8/9/10+" id="d10">
 
 ```php
   /*
@@ -156,9 +154,9 @@ Add the following within `settings.php` for your version of Drupal:
   }
 ```
 
-</Tab>
+</Accordion>
 
-<Tab title="Drupal 7" id="d7">
+<Accordion title="Drupal 7" id="d7">
 
 ```php
   /*
@@ -208,9 +206,7 @@ Add the following within `settings.php` for your version of Drupal:
     }
 ```
 
-</Tab>
-
-</Tablist>
+</Accordion>
 
 Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
 
