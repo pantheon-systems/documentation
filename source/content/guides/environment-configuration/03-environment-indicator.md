@@ -108,7 +108,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
 1. Add the following within `settings.php` for your version of Drupal:
 
-<Accordion title="Drupal 8/9/10+" id="d10" active={true} icon="wrench">
+<Accordion title="Drupal 8/9/10+" id="d10" icon="wrench">
 
 ```php
   /*
