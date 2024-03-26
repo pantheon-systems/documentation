@@ -7,6 +7,6 @@ We've updated our [Terminus GitHub Action](https://github.com/marketplace/action
 
 Some technical details:
 
-- Session is encrypted using OpenSSL with AES-256 and PBKDF2 before being cached.
+- The session data is encrypted using OpenSSL with AES-256 and PBKDF2 before being cached.
 
-- Session is scoped to workflow run, meaning re-running same workflow will use existing cache (in case of a failure, etc) while new workflows create new session.
+- The session information is scoped to a workflow run, meaning re-running the same workflow will use existing cache (in case of a failure, etc) while new workflows create a new session.
