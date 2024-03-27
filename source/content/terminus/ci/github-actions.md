@@ -89,7 +89,7 @@ jobs:
         env:
           TERMINUS_RELEASE: ${{ inputs.terminus-version || env.TERMINUS_RELEASE }}
       - name: Authenticate Terminus (with session cache)
-        uses: lullabot/terminus-auth-with-session-cache@v3
+        uses: pantheon-systems/terminus-github-actions@v1
         with:
           pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
       - name: Whoami
