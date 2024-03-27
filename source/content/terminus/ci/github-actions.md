@@ -121,7 +121,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-terminus-binary-
       - name: Authenticate Terminus (with session cache)
-        uses: lullabot/terminus-auth-with-session-cache@v3
+        uses: pantheon-systems/terminus-github-actions@v1
         with:
           pantheon-machine-token: ${{ secrets.TERMINUS_TOKEN }}
       - name: Whoami
