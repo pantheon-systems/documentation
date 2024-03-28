@@ -36,3 +36,4 @@ Ultimately, investing in a WebOps certification on Pantheon can lead to the high
 ## More Resources
 - [WebOps Certification: Study Guide](/certification/study-guide)
 - [WebOps Certification: Exam Overview](/certification/exam)
+- [Pantheon WebOps Certification Registry](https://certification.pantheon.io/)

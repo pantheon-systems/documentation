@@ -379,3 +379,4 @@ When you have finished taking the exam, you will see a message on the screen ind
 ## More Resources
 - [WebOps Certification: About the program](/certification/about)
 - [WebOps Certification: Study Guide](/certification/study-guide)
+- [Pantheon WebOps Certification Registry](https://certification.pantheon.io/)
