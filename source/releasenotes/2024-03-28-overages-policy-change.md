@@ -39,7 +39,7 @@ Because you exceeded the plan limits of 25,000 for two consecutive months, under
 #### Comparison of the new vs. old overage fee
 As you can see in this example, the new overage fee is a total of $80 vs. the cost for the upgraded plan under the prior policy would have increased your cost $1,035 –- the new policy saves you 92%!
 
-![Chat comparing price difference between the old policy and new policy](../images/overages-comparison-new-and-old.png)
+![Chart comparing price difference between the old policy and new policy](../images/overages-comparison-new-and-old.png)
 
 ### Updated Documentation
-We've updated our [Overage Policy documentation](/guides/account-mgmt/traffic/overages) to align with this the new policy and provide more specifics, such as additional benefits for new site launches and qualifying nonprofit organizations!
+We've updated our [Overage Policy documentation](/guides/account-mgmt/traffic/overages) to align with the new policy and provide more specifics, such as additional benefits for new site launches and qualifying nonprofit organizations!
