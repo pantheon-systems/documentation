@@ -48,7 +48,7 @@ Now you're going to copy files and folders from the Pantheon GitHub repository f
 
 1. Clone https://github.com/pantheon-upstreams/drupal-composer-managed into another folder.
 
-    In the code samples included below, [`drupal-composer-managed-path`] should be replaced with the location of the the cloned repository.  In addition, they assume the commands are being run from the folder created from the `create-project` command.
+    In the code samples included below, [`drupal-composer-managed-path`] should be replaced with the location of the cloned repository.  In addition, they assume the commands are being run from the folder created from the `create-project` command.
 
 1. Copy the `upstream-configuration` folder to your site:
 
