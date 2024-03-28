@@ -30,6 +30,17 @@ Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in
 
 ## Configure DNS Records on GoDaddy
 
+### Domain Verification
+
+![Example Domain Verification](../../images/godaddy-domain-verification.png)
+
+1. Click your GoDaddy profile in the top right menu bar and select **Manage My Domains**.
+2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Manage DNS**.
+3. Click the **Add** button and select **TXT** from the type dropdown menu.
+4. Enter the **Name / Host** value provided by Pantheon in the **Name** field. Remove your domain from the string. __acme-challenge.example234.com._ would become __acme-challenge_
+5. Enter the **Value** provided by Pantheon in the **Value** field. 
+6. Select desired Time to Live (TTL).
+
 ### A Record
 
 ![Example A record](../../images/godaddy-dns-a-record.png)
