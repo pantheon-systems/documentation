@@ -41,7 +41,7 @@ No, we pre-configured the CDN so you don’t have to hassle with configuration, 
 
 ### Do I get access to hit rates or other statistics?
 
-Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics).
+Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/guides/account-mgmt/traffic).
 
 ### Can I use my own Fastly account with the Pantheon Global CDN?
 
