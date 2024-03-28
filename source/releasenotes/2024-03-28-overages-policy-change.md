@@ -42,4 +42,4 @@ As you can see in this example, the new overage fee is a total of $80 vs. the co
 ![Chat comparing price difference between the old policy and new policy](../images/overages-comparison-new-and-old.png)
 
 ### Updated Documentation
-We've updated our [Overage Policy documentation](/guides/account-mgmt/traffic/overages) to align with this the new policy and provide more specifics, such as additional benefits for new customers and qualifying nonprofit organizations!
+We've updated our [Overage Policy documentation](/guides/account-mgmt/traffic/overages) to align with this the new policy and provide more specifics, such as additional benefits for new site launches and qualifying nonprofit organizations!
