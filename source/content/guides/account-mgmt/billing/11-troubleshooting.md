@@ -1,5 +1,5 @@
 ---
-title: "Billing"
+title: "Billing for Self-Serve Accounts"
 subtitle: Troubleshooting
 description: Learn how to troubleshoot payment issues.
 tags: [billing, troubleshooting]

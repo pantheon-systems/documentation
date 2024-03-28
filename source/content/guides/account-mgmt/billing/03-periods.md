@@ -1,5 +1,5 @@
 ---
-title: "Billing"
+title: "Billing for Self-Serve Accounts"
 subtitle: Billing Periods
 description: Learn about the billing periods available, and how to manage a subscription.
 contenttype: [guide]

@@ -22,6 +22,14 @@ The Enterprise Billing Center provides billing and site plan information for Ent
 
 You must have Admin privileges to access the Enterprise Billing Center within the Pantheon dashboard. The Site Owner can change a user's privileges to Admin or download invoices and Site Portfolio Reports and share them if a team member cannot access the link or dashboard.
 
+<Alert title="Note" type="info" >
+
+This guide provides information for Enterprise accounts.  If you are an Self-serve account, see our [Self-Serve Billing Guide](/guides/account-mgmt/billing).
+
+</Alert>
+
+
+
 ## Access the Enterprise Billing Center
 
 Follow the steps below to access the Enterprise Billing Center. Refer to [Access Invoices](/guides/enterprise-billing-center/invoices) and [Access Site Portfolio Reports](/guides/enterprise-billing-center/site-portfolio-report) for more detailed information information.
