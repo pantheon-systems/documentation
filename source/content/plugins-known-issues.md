@@ -35,7 +35,7 @@ The following is a list of plugins that assume write access, and the specific fi
 | Plugin | Assumed Write Path | Notes |
 | --- | --- | --- |
 | [AccessAlly WordPress LMS](https://accessally.com/) | wp-content/accessally-protected-content | PROTECTED\_CONTENT\_FOLDER variable within the plugin assumes access to PATH |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1wm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
 | | wp-content/plugins/all-in-one-wp-migrations/storage |
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
 | [Big File Uploads](https://wordpress.org/plugins/tuxedo-big-file-uploads/) | wp-content/bfu-temp | See the [Big File Uploads](/plugins-known-issues#big-file-uploads) section below for solutions. |
