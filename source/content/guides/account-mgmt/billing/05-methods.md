@@ -105,9 +105,9 @@ To add a payment method to a site:
 
 1. Go to the **Billing** tab and click **Add Card**.
 
-- If you already have payment methods defined in your Personal Workspace, you will see them listed.  To use a listed payment method, select it and click **Update Credit Card**.
+  - If you already have payment methods defined in your Personal Workspace, you will see them listed.  To use a listed payment method, select it and click **Update Credit Card**.
 
-- If you don’t want to use a listed card, click **Add New Card**, add the information, click **Add Card**, and then click **Update Credit Card**.
+  - If you don’t want to use a listed card, click **Add New Card**, add the information, click **Add Card**, and then click **Update Credit Card**.
 
 ### Change the Card Used to Bill This Site
 
