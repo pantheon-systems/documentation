@@ -20,7 +20,7 @@ integration: [--]
 ## Traffic Limits
 Pantheon optimizes the resources and performance of your site based on your choice of [pricing plan](https://pantheon.io/plans/pricing?docs). Your pricing plan determines the [backend resources](/guides/account-mgmt/plans/faq#plan-resources) Pantheon deploys to support site performance and to serve the corresponding traffic levels for each plan.
 
-Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using [Pantheon's Site Dashboard](/metrics).  
+Customers should choose the plan that suits their anticipated traffic and continually monitor that choice using [Pantheon's Site Dashboard](/guides/account-mgmt/traffic).  
 
 ## Overage Policy
 If your traffic is over your plan limit, the site may be subject to overage fees. Aligning your site plan with the current traffic demands is the best way to ensure there will not be additional charges. In the event your site is over the plan limits, the overages protection program is an easy-to-understand model based on actual site usage in the prior month.

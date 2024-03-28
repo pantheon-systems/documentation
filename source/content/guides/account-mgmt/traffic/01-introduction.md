@@ -168,10 +168,10 @@ Certain activities are generally excluded from the calculation of visits and pag
 - Bots and Crawlers
 
 ### What about redirects?
-Only requests with a 200-level status count as pages served, so 301 redirects will not be included in metrics. See [Traffic Limits and Overages](/guides/account-mgmt/traffic) for more information.
+Only requests with a 200-level status count as pages served, so 301 redirects will not be included in metrics.
 
 ### Are multiple user agents on the same originating IP address counted separately?
-Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor. See [Traffic Limits and Overages](/guides/account-mgmt/traffic) for more information.
+Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor.
 
 ### What about load tests or penetration tests?
 Load tests and other performance reviews of the Pantheon platform are generally prohibited by our [AUP](https://legal.pantheon.io). Although it may result in significant traffic spikes, Pantheon fully supports customers choosing to load test their site (excluding the platform). Contact [Pantheon Support](/guides/support/contact-support/) prior to performing such tests to make them aware there will be an extraordinary event that should be considered.
