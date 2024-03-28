@@ -45,7 +45,7 @@ To access these benefits, the nonprofit organization must be a qualifying 501(c)
 To access nonprofit preferred pricing, the organization will either need to 1) purchase their subscription plan through Pantheon’s sales team or through a Pantheon partner, and 2) meet the requirements noted above and provide the requested documentation.
 
 #### Additional Benefits for New Customers
-For new customers coming onto the platform for the first time there will be a three-month grace period starting with your service start date (the day a site is first  moved from a Sandbox to a commercial plan) where no overages will be incurred.  This allows you the time to get calibrated on the platform and focus on what is most important.
+For new sites coming onto the platform for the first time there will be a three-month grace period starting with your service start date (the day a site is first moved from a Sandbox to a commercial plan) where no overages will be incurred. This allows you the time to get calibrated on the platform and focus on what is most important.
 
 ### Overage Processing
 Overages will be processed on a monthly basis.  All customers subject to overages will be notified immediately. For customers paying monthly by credit card- you can expect to receive an invoice for any site in overage right away.  For customers on an annual contract, overages will be invoiced quarterly (processing in March, June, September and December).  
