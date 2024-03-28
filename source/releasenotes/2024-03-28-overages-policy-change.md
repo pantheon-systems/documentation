@@ -1,7 +1,7 @@
 ---
 title: "Overages Policy Change"
-published_date: "2024-03-20"
-categories: [policy, billing]
+published_date: "2024-03-28"
+categories: [policy, billing, documentation]
 ---
 ## What is changing?
 Great news! Pantheon is simplifying the way we calculate and apply site visit overages. This change will help reduce excess billing and unplanned costs should a site exceed its plan limits.
@@ -24,7 +24,7 @@ Assume you purchase an annual Performance Small plan that includes 25,000 unique
 
 During the holiday season, you have 40,000 unique site visits in November and 45,000 in December, before returning to less than 25,000 monthly unique site visits during the rest of your contract term (Jan-Sep).
 
-![Docs Design System](../images/example-scenario-plan-usage.png)
+![Dataset for example overage scenario](../images/example-scenario-plan-usage.png)
 
 #### Overage fee under the new policy
 Under the new policy, you will simply pay a one-time fee of:
@@ -39,7 +39,7 @@ Because you exceeded the plan limits of 25,000 for two consecutive months, under
 #### Comparison of the new vs. old overage fee
 As you can see in this example, the new overage fee is a total of $80 vs. the cost for the upgraded plan under the prior policy would have increased your cost $1,035 –- the new policy saves you 92%!
 
-![Docs Design System](../images/overages-comparison-new-and-old.png)
+![Chat comparing price difference between the old policy and new policy](../images/overages-comparison-new-and-old.png)
 
 ### Updated Documentation
 We've updated our [Overage Policy documentation](/guides/account-mgmt/traffic/overages) to align with this the new policy and provide more specifics, such as additional benefits for new customers and qualifying nonprofit organizations!

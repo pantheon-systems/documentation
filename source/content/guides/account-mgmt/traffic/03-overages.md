@@ -61,7 +61,9 @@ One benefit you’ll receive if you do upgrade to a new subscription, though, is
 
 ## FAQs
 ### What environments count towards traffic limits?
-Only traffic for the Live environment is counted towards a site plan's traffic limit. Traffic for non-live environments (Dev, Test, and Multidev environments) are not counted towards the plan's traffic limit.  
+Only traffic for the Live environment is counted towards a site plan's traffic limit. Traffic for non-live environments (Dev, Test, and Multidev environments) are not counted towards the plan's traffic limit.
+
+For more specific details on what does and doesn't count towards site plan traffic limits, refer to our documentation for [measuring site traffic](/guides/account-mgmt/traffic#how-do-you-know-if-a-visit-counts).
 
 ### Will Pantheon warn me if my site has an overage?
 Customers are responsible for monitoring their usage and overage risk using the Site Dashboard. Pantheon periodically reviews customer usage for overages across all plan levels and will contact you directly by email.
