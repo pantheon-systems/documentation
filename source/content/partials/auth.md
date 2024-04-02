@@ -20,9 +20,9 @@ You should load your public SSH key into your account to take full advantage of 
 
 Use your **Pantheon Dashboard** login password if you are prompted for a password when connecting to the platform.
 
-<Alert title="Note" type="info">
+<Alert title="Heads Up!" type="danger">
 
-If you login via social login (Connect with Google) or Single-Sign On (SSO) and you'd like to authenticate using a password, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password) to add a password to your account.
+Dashboard Credentials as an authentication method will be retired on Apr 30, 2024. Please refer to the steps above to authenticate SFTP via SSH keys.
 
 </Alert>
 
