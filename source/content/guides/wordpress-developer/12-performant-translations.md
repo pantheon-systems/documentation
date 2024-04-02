@@ -11,7 +11,7 @@ product: [--]
 integration: [--]
 tags: [files]
 contributors: [jazzsequence]
-reviewed: "2024-03-19"
+reviewed: "2024-04-02"
 showtoc: true
 permalink: docs/guides/wordpress-developer/performant-translations
 ---
