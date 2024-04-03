@@ -21,6 +21,6 @@ new_relic:
 
 The parameter above will take effect when the New Relic PHP agent is updated for your site.
 
-If your site currently reports Drupal Hooks information to New Relic, you will need to add the above line to your pantheon.yml file before the April 23 update to maintain this reporting moving forward. 
+If your site currently reports Drupal Hooks information to New Relic, you will need to add the above line to your `pantheon.yml` file before the April 23 update to maintain this reporting moving forward. 
 
 Our support team is happy to help if you have any questions or need assistance.
