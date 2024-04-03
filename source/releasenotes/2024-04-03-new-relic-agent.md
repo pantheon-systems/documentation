@@ -12,7 +12,7 @@ By staying up-to-date with the latest agent, you will benefit from improved perf
 
 ## Action Required: Default behavior of New Relic Drupal Hooks is changing
 
-After the release of this agent update, Pantheon will no longer support Drupal Hooks reporting by default. However, the functionality is still available. If this is crucial for troubleshooting your sites, please add these lines to your site’s pantheon.yml file to enable this reporting:
+After the release of this agent update, Pantheon will no longer support Drupal Hooks reporting by default. However, the functionality is still available. If this is crucial for troubleshooting your sites, please add these lines to your site’s `pantheon.yml` file to enable this reporting:
 
 ```
 new_relic:
