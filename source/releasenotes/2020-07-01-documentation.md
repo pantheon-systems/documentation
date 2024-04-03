@@ -7,9 +7,9 @@ categories: [documentation]
 
 Offers a concise reference for understanding site traffic and site plans.
 
-### [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
+### [Metrics in the Site Dashboard](/guides/account-mgmt/traffic)
 
-### [Traffic Limits and Overages](/guides/account-mgmt/traffic)
+### [Traffic Limits and Overages](/guides/account-mgmt/traffic/overages)
 
 Updates to both of these docs help clarify what Pantheon counts as site visits and pages served, and make Pantheon’s policies regarding overages more transparent.
 
