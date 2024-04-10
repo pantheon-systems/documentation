@@ -13,6 +13,8 @@ git pull -Xtheirs https://github.com/pantheon-upstreams/wordpress-composer-manag
 git push origin master
 ```
 
+For more help or assistance about managing potential merge conflicts, refer to our documentation on [auto-resolving via the dashboard](https://docs.pantheon.io/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) or [manually resolving via the command line](https://docs.pantheon.io/guides/git/resolve-merge-conflicts).
+
 ### Technical Details
 
 The `application.pantheon.php` file curently contains code to check for a defined `WP_HOME` value in the site's `.env` file. If the value is undefined or no `.env` file is being used, values for `WP_HOME` and `WP_SITEURL` are defined. This can be overridden by either adding values to the site's `.env` file or adding `putenv( 'WP_HOME=https://example.com' );` and `putenv( 'WP_SITEURL=https://example.com' );` to your `application.php` file.
