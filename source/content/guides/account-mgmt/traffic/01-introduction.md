@@ -77,7 +77,7 @@ A visit counts if it is one of the following:
 
 - Valid
 
-- Not a known bot
+- Not a surreptitious bot
 
 - Returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response that originates from PHP, or returns a [300-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) response of 303, 304, or 305.
 
