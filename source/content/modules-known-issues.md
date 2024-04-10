@@ -267,7 +267,13 @@ ___
 
 ## [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
 
-**Issue**:  This module requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below. But the easiset solution is to just not try to use this module.
+
+___
+
+## [Media Bulk Upload](https://www.drupal.org/project/media_bulk_upload)
+
+**Issue**:  This module requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below. But the easiset solution is to just not try to use this module.
 
 ___
 
