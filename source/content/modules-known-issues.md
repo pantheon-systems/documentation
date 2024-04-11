@@ -265,6 +265,16 @@ ___
 
 ___
 
+## [Ludwig]([https://www.drupal.org/project/live_css](https://www.drupal.org/project/ludwig))
+
+<ReviewDate date="2024-04-09" />
+
+**Issue**: Ludwig tries to load dependency requirements into module root directories which won't work in environments that aren't in SFTP mode.
+
+**Solution**: If your site is composer-managed, use only composer.
+
+___
+
 ## [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
 
 **Issue**:  This module requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
