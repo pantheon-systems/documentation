@@ -51,7 +51,6 @@ const HeaderBody = ({
         {!featured && <Contributors contributors={contributors} />}
         <div className="doc-content-header__actions">
           <div className="doc-content-header__discuss">
-            <Discourse pageTitle={title} path={slug} cms={cms} />
             <Slack />
           </div>
           <Github
