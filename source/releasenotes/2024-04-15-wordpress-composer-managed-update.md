@@ -1,6 +1,6 @@
 ---
 title: Updates to WordPress (Composer Managed) Upstream
-published_date: "2024-04-11"
+published_date: "2024-04-15"
 categories: [wordpress, action-required]
 ---
 
