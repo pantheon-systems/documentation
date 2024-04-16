@@ -43,7 +43,7 @@ To maintain organization within the consolidated Slack channel, we encourage the
 ### If My Question Goes Unanswered in Slack, Where Else Can I Seek Additional Support?
 We are committed to supporting you every step of the way! Join us for Office Hours every Wednesday at 2 pm ET / 11 am PT, where one of our Pantheon experts will be available to assist you with any questions you may have. If there's a particular topic you're eager to learn more about let us know, and we'll arrange a [Topic-specific Zoom Office Hours](https://pantheon.io/developer-community/office-hours) session.We believe that scheduling video calls for topics such as Terminus or Upstreams will enable us to share the expertise of power users more effectively. To request topic-specific office hours, simply email us at community@pantheon.io.
 
-[For urgent issues, please open a chat or submit a support ticket.](https://pantheon.io/support)
+[For urgent issues, please open a chat or submit a support ticket.](/guides/support/)
 
 ### How Will Conversations Cross-Link Between Slack and Other Places Like Github?
 While there are several automated tools we are considering, Pantheon staff will first proactively monitor discussions in the consolidated #general channel, and when appropriate, find or create relevant issues in GitHub repos or elsewhere and share those links in discussion threads. When the topic of discussion is a bug or a feature request related to an open source tool, our product and engineering team can more effectively respond to issues and tickets than they can to one or more Slack threads.
