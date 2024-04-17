@@ -8,4 +8,4 @@ Pantheon is updating our SFTP access control, requiring the use of SSH keys star
 
 You'll still access the web dashboard with your username/password or Single Sign-On, but SFTP access (e.g., via terminal or applications like Filezilla or Cyberduck) will need an [SSH key](/ssh-keys).
 
-We are making this change to maintain a secure and reliable platform. Learn how to configure your SFTP client with SSH keys in our [public documentation](/guides/sftp/sftp-connection-info#authenticating).
+We are making this change to maintain a secure and reliable platform. Learn how to configure your SFTP client with SSH keys in our [documentation](/guides/sftp/sftp-connection-info#authenticating).
