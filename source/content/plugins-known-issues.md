@@ -152,6 +152,15 @@ function is_mobile() {
   return $is_mobile;
 }
 ```
+___
+
+## Auth0
+
+<ReviewDate date="2024-04-27" />
+
+**Issue 1:** [Login by Auth0](https://github.com/auth0/wordpress) does not function properly out of the box on Pantheon because the Auth0 cookie is cached by the Global CDN and the value of the cookie is not passed back to the application server. In a previous version of this plugin (v4) there was a filter available to modify the cookie name, but in the latest version (v5) the filter has been removed.
+
+**Solution:** Some customers reported success using the PHP SDK to modify the cookie name to use the `STYXKEY_` prefix as a workaround. Please note that this solution is not perfect, as it can break sites when the suggested code is used without the plugin being activated or when certain plugin configurations are empty. See this [related GitHub issue](https://github.com/auth0/wordpress/issues/892) for the suggested workaround.
 
 ___
 
