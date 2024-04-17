@@ -1,6 +1,6 @@
 ---
 title: "SFTP access to require SSH keys starting April 30, 2024"
-published_date: "2024-04-04"
+published_date: "2024-04-17"
 categories: [action-required, deprecated]
 ---
 
