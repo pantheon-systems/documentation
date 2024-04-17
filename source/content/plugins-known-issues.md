@@ -1430,9 +1430,9 @@ ___
 
 ## WP All Import / Export
 
-<ReviewDate date="2020-06-15" />
+<ReviewDate date="2024-04-05" />
 
-**Issue 1:** With [WP All Import / Export](http://www.wpallimport.com/),large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/timeouts) for more information.
+**Issue 1:** With [WP All Import / Export](http://www.wpallimport.com/), large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/timeouts) for more information.
 
 **Solution:** To avoid hitting a timeout, you can try:
 
@@ -1468,6 +1468,19 @@ The optimal number of records to process at one time depends on how many post_me
 - Clean up temporary files
 - Lower the chunk size to less than 100
 
+**Issue 4:** "All Import" does not appear in WordPress admin menu.
+
+In Test and Live environments, or while in Git mode on Dev, certain WordPress capabilities such as `install_plugins` are automatically disabled to make the WordPress admin UI not show features that require writable environments.
+
+WP All Import checks if a user has the `install_plugins` capability to determine if its admin menu should be displayed. Since this capability is disabled in these Pantheon environments, the plugin's menu doesn't appear.
+
+**Solution:** To display the plugin's admin menu, add the following line to your `wp-config.php` files before the inclusion of wp-config-pantheon.php:
+
+```php:title=wp-config.php
+define('DISALLOW_FILE_MODS', false);
+```
+
+This will allow the plugin's admin menu to appear. However, while you'll see more UI options in WordPress, such as the ability to install or update plugins, these actions won't work due to the non-writable filesystem. They will be present but non-functional.
 ___
 
 ## WP-Ban
