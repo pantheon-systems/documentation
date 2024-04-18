@@ -67,6 +67,16 @@ Follow the steps below to configure the monitor service.
 
 1. Click **Save monitor**.
 
+## Enable Drupal Hooks & Modules Metrics
+
+As of April 23, 2024, Drupal hooks & modules metrics are not reported by default. To enable this reporting, add the following to your site or upstream `pantheon.yml` file:
+
+```yml:title=pantheon.yml
+new_relic:
+  drupal_hooks: true
+```
+
+
 ## Focus on Authenticated Users Only
 
 It can be useful to exclude anonymous users who are using your site's page cache if your site consists of mostly authenticated traffic. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic&reg; on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.
