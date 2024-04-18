@@ -265,13 +265,13 @@ ___
 
 ___
 
-## [Ludwig]([https://www.drupal.org/project/live_css](https://www.drupal.org/project/ludwig))
+## [Ludwig]([https://www.drupal.org/project/ludwig](https://www.drupal.org/project/ludwig))
 
-<ReviewDate date="2024-04-09" />
+<ReviewDate date="2024-04-18" />
 
-**Issue**: Ludwig tries to load dependency requirements into module root directories which won't work in environments that aren't in SFTP mode.
+**Issue**: Ludwig expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
-**Solution**: If your site is composer-managed, use only composer.
+**Solution**: As covered by the [module's project page](https://www.drupal.org/project/ludwig), Composer managed Drupal sites should not use Ludwig. See also, this discussion regarding [Ludwig EOL](https://www.drupal.org/project/ludwig/issues/3377094).
 
 ___
 
