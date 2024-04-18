@@ -205,6 +205,37 @@ Before you push the change to `pantheon.yml` to upgrade MariaDB to 10.4, modify 
 
 For more information on how to diagnose tables and troubleshoot potential issues, refer to the [official MariaDB documentation](https://mariadb.com/kb/en/troubleshooting-row-size-too-large-errors-with-innodb/).
 
+### Specify a Redis Version
+
+There are two available versions of Redis available for the [Object Cache](/object-cache): `2.8` and `6.2`.  The default version for the platform is `2.8` currently.
+
+#### Change the Redis Version
+1. Add the following block to your pantheon.yml file:
+
+  ```yaml:title=pantheon.yml
+  object_cache:
+    version: 6.2
+  ```
+1. Push the change.
+
+
+#### Rollback the Redis Version
+1. Change the value of `version` to `2.8` 
+1. Push the change.
+
+#### Test the Redis 6 Update
+We recommend that you push the Redis version change to a Multidev environment:
+1. Create a new Multidev environment. Refer to [Multidev Environment](/guides/multidev/01-introduction)for more information. 
+1. Push the `pantheon.yml` Redis change to the branch associated with the Multidev environment.
+1. Wait for the upgrade workflow to complete.
+1. Confirm the Redis version upgrade using [redis-cli](/object-cache/cli).
+
+   - Get the redis-cli connection string from the “Connection Info” button on the Pantheon Dashboard for your Multidev environment.
+
+1. Connect to the Redis container with redis-cli.
+1. Type `INFO Server` when you are connected and verify that the `redis_version`is correct.
+
+
 ### Specify a Solr Version
 
 Before you install the Drupal search module, you need to specify the Solr version or set a specific version to avoid incompatibilities. Specify Solr 8 as the search index for Drupal sites:
