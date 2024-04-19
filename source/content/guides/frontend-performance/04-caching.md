@@ -7,7 +7,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md
-reviewed: "2020-10-10"
+reviewed: "2024-04-19"
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]
