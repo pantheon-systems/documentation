@@ -6,3 +6,5 @@ categories: [wordpress, plugins]
 
 With the latest [1.4.0 release](https://github.com/pantheon-systems/pantheon-mu-plugin/releases) of the Pantheon MU Plugin, we have updated the default cache TTL to one week. Previously, the default value was `600` (10 minutes). This change is intended to improve the performance of your site by reducing the number of cache clears that are run automatically.
 
+You can modify this new default value using a filter built into the MU Plugin. For more information refer to our [WordPress Cache Plugin Configuration](/guides/wordpress-configurations/wordpress-cache-plugin#override-the-default-ttl).
+
