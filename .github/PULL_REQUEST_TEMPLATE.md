@@ -54,5 +54,3 @@ The following changes still need to be completed:
 
 - [ ] Redirect `/old-path/` => `/new-path/` (if applicable)
 - [ ] Include/exclude pages ^ respectively within docs search service provider (if applicable)
-- [ ] For Heroes - add a props post to the [discussion board](https://discuss.pantheon.io/c/pantheon-platform/documentation/17).
-- [ ] Remove from the [project board](https://github.com/pantheon-systems/documentation/projects/14)
