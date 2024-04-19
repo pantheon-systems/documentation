@@ -39,11 +39,21 @@ You can increase the default time to live value to improve the chances that a vi
 
 1. Modify the **Default Cache Time**.
 
-    You should strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 30 minutes (1800 seconds) or 1 hour (3600 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+    You should strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 1 hour (3600 seconds) or even 1 week (604800 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
 
 1. Click **Save Changes**.
 
 ![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
+
+### Override the default TTL
+
+Since the [1.4.0 update in the Pantheon Mu Plugin](/release-notes/2024/04/pantheon-page-cache-default-ttl), you can override the default TTL using a filter. This is useful if you want to set a different TTL for specific pages or post types, or if you want to set it to a specific value programmatically.
+
+```php
+add_filter( 'pantheon_cache_default_ttl', function() {
+    return 2 * WEEK_IN_SECONDS;
+} );
+```
 
 ### Maintenance Mode
 
