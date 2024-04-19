@@ -231,7 +231,7 @@ The [Pantheon Page Cache plugin](/guides/wordpress-configurations/wordpress-cach
 
 1. Review the Time to Live, which translates to `max-age`.
 
-1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
+1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 604800 seconds (one week):
 
   ![Pantheon Cache Plugin](../../../images/guides/front-end-performance/pantheon-page-cache.png)
 
