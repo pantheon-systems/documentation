@@ -39,7 +39,7 @@ You can increase the default time to live value to improve the chances that a vi
 
 1. Modify the **Default Cache Time**.
 
-    You should strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 1 hour (3600 seconds) or even 1 week (604800 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+    When [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) is active, your site content should always be fresh and served quickly from Pantheon's Edge Cache. This is why we recommend caching content for a minimum of 1 week. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
 
 1. Click **Save Changes**.
 
