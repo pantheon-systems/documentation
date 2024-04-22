@@ -47,7 +47,7 @@ You can increase the default time to live value to improve the chances that a vi
 
 ### Override the default TTL
 
-Since the [1.4.0 update in the Pantheon Mu Plugin](/release-notes/2024/04/pantheon-page-cache-default-ttl), you can override the default TTL using a filter. This is useful if you want to set a different TTL for specific pages or post types, or if you want to set it to a specific value programmatically.
+Since the [1.4.0 update in the Pantheon Mu Plugin](/release-notes/2024/04/pantheon-mu-plugin-1-4-0-update), you can override the default TTL using a filter. This is useful if you want to set a different TTL for specific pages or post types, or if you want to set it to a specific value programmatically.
 
 ```php
 add_filter( 'pantheon_cache_default_ttl', function() {
