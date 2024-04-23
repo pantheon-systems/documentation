@@ -42,7 +42,7 @@ The Test and Live environment codebases also cannot be written to, preventing au
 
 ### Pantheon Page Cache
 
-The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
+The [Pantheon Page Cache](https://github.com/pantheon-systems/pantheon-mu-plugin/blob/main/inc/pantheon-page-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
 
 1. Navigate to your WordPress dashboard > click **Settings** > **Pantheon Page Cache**.
 
