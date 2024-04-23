@@ -45,7 +45,7 @@
     "gatsby-remark-table-of-contents": "^2.0.0",
     "gatsby-source-filesystem": "^4.25.0",
     "gatsby-transformer-json": "^4.25.0",
-    "gatsby-transformer-remark": "^5.25.1",
+    "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^4.25.0",
     "gatsby-transformer-yaml": "^4.25.0",
     "highlight.js": "^11.7.0",
