@@ -77,6 +77,16 @@ Refer to [Log Files on Pantheon](/guides/logs-pantheon) for more information on 
 
 Pantheon provides New Relic Performance Monitoring for sites on [supported plans](/guides/new-relic#supported-site-plans). Certain components of New Relic fall outside this offering. Please [contact support](/guides/support/contact-support/) if you cannot access a New Relic feature that you should have access to.
 
+### Can I get New Relic&reg; Synthetics?
+
+Pantheon provides New Relic Synthetic Monitoring on a per request basis ([contact support](/guides/support/contact-support/ if you'd like to learn more). Pantheon allows up to 10K Synthetic checks per month per Pantheon workspace (these are shared across all Pantheon sites within a Pantheon workspace). 
+
+<Alert title="Note" type="info">
+  
+If a Pantheon workspace is using >10K checks per month, Pantheon will reduce the frequency of checks and number of locations in order to ensure Synthetics remains available to Pantheon customers.
+
+</Alert>
+
 ## More Resources
 
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)
