@@ -54,9 +54,19 @@ Moving forward, to open New Relic&reg; Performance Monitoring:
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) of the site you suspect is having problems with MySQL query performance.
 
-1. Select the environment: Dev, Test, or Live.
+2. Select the environment: Dev, Test, or Live.
 
-1. Click the **New Relic** tab, and then select **Go to New Relic**.
+3. Click the **New Relic** tab, and then select **Go to New Relic**.
+
+## New Relic&reg; Synthetics Monitoring
+
+Pantheon offers Synthetics monitoring on a case by case basis (this is limited to 10K Synthetics checks per month for each Pantheon workspace). [Contact support](/guides/support/contact-support/)  to learn more. 
+
+<Alert title="Note" type="info">
+
+When a Pantheon workspace has more than 10K Synthetics checks are running monthly Pantheon will adjust the frequency or number of locations a Synthetics check originates from the reduce the number of checks. This is required to allow Synthetic to continue to operate correctly under the overall New Relic quota for Pantheon.
+
+</Alert>
 
 ## More Resources
 
