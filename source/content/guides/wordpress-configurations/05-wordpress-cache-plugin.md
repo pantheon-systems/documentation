@@ -15,7 +15,7 @@ permalink: docs/guides/wordpress-configurations/wordpress-cache-plugin
 
 This section provides information on Pantheon's WordPress plugin.
 
-Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages expire from the Varnish Edge Cache after 10 minutes (600 seconds). The plugin sets a default HTTP header: `Cache-Control: public, max-age=600`
+Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages expire from the Varnish Edge Cache after 1 week. The plugin sets a default HTTP header: `Cache-Control: public, max-age=604800`
 
 ## Clear Site Cache
 
