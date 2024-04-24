@@ -39,14 +39,16 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 ### PHP Version Compatibility Matrix
 
-| PHP Version | Terminus 3.x |
-| ---------- | :-----------: |
-| 8.3 | <span style="color:green">✔</span>         |
-| 8.2 | <span style="color:green">✔</span>         |
-| 8.1 | <span style="color:green">✔</span>         |
-| 8.0 | <span style="color:green">✔</span>        |
-| 7.4 | <span style="color:green">✔</span>         |
-| 7.3 or earlier | ❌          |
+| PHP Version |            Terminus 3.x            |
+| ---------- |:----------------------------------:|
+| 8.3 | <span style="color:green">✔</span> |
+| 8.2 | <span style="color:green">✔</span> |
+| 8.1 | <span style="color:green">✔</span> |
+| 8.0 | <span style="color:green">✔</span> |
+| 7.4 | <span style="color:green">✔</span> |
+| 7.3 or earlier |                ❌*                  |
+
+* Important note: terminus runs locally and the version of PHP running your local version of terminus doesn't have to be the same version of PHP on your server.
 
 ## More Resources
 
