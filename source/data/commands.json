@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.3.5"
+        "version": "3.4.0"
     },
     "commands": [
         {
@@ -3583,7 +3583,7 @@
         },
         {
             "name": "env:clone-content",
-            "description": "Clones database\/files from one environment to another environment. WordPress sites will search the database for the default domain and replace it with the target environment's domain unless you specify a different search\/replace string with --search-for and --replace-with.",
+            "description": "Clones database\/files from one environment to another environment. WordPress sites will search the database for the default domain and replace it with the target environment's domain unless you specify a different search\/replace string with --from-url and --to-url.",
             "usage": [
                 "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--from-url [FROM-URL]] [--to-url [TO-URL]] [--] <site>.<env> <target_env>",
                 "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s",
@@ -7315,9 +7315,9 @@
             "description": "Creates a multidev environment. If there is an existing Git branch with the multidev name, then it will be used when the new environment is created.",
             "usage": [
                 "multidev:create [--no-db] [--no-files] [--] <site>.<env> <multidev>",
-                "multidev:create <site>.<env> <multidev> Creates the Multidev environment, <multidev>, within <site> with database and files from the <env> environment.",
-                "multidev:create <site>.<env> <multidev> --no-db Creates the <multidev> environment without database from the <env> environment.",
-                "multidev:create <site>.<env> <multidev> --no-files Creates the <multidev> environment without files from the <env> environment.",
+                "multidev:create <site>.<env> <multidev> Creates the Multidev environment,",
+                "multidev:create <site>.<env> <multidev> --no-db Creates the <multidev>",
+                "multidev:create <site>.<env> <multidev> --no-files Creates the <multidev>",
                 "env:create"
             ],
             "help": "Creates a multidev environment. If there is an existing Git branch with the multidev name, then it will be used when the new environment is created.",
