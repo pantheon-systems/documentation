@@ -139,7 +139,7 @@ exports.createPages = ({ graphql, actions }) => {
       allDocs: allMdx(
         filter: {
           fileAbsolutePath: {
-            regex: "/content(?!/(partials|changelog|guides|releasenotes)/)/"
+            regex: "/content(?!/(partials|changelog|guides|releasenotes|iframeembeds)/)/"
           }
           frontmatter: { draft: { ne: true } }
         }
