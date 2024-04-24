@@ -45,7 +45,7 @@ For more information on using New Relic&reg;'s features, we encourage you to rev
 
 - [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
-## Configure Ping Monitors for Availability
+## Configure Ping Monitors (Synthetics) for Availability
 
 New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring feature sends a request to designated URLs from configured locations. Requests are sent at configured intervals and alerts are sent via email when a response fails.
 

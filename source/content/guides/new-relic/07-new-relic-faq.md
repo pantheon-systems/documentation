@@ -79,13 +79,7 @@ Pantheon provides New Relic Performance Monitoring for sites on [supported plans
 
 ### Can I get New Relic&reg; Synthetics?
 
-Pantheon provides New Relic Synthetic Monitoring on a per request basis ([contact support](/guides/support/contact-support/ if you'd like to learn more). Pantheon allows up to 10K Synthetic checks per month per Pantheon workspace (these are shared across all Pantheon sites within a Pantheon workspace). 
-
-<Alert title="Note" type="info">
-  
-If a Pantheon workspace is using >10K checks per month, Pantheon will reduce the frequency of checks and number of locations in order to ensure Synthetics remains available to Pantheon customers.
-
-</Alert>
+Yes, for details see [Monitor and Improve Site Performance](/guides/new-relic/monitor-new-relic/#configure-ping-monitors-synthetics-for-availability).
 
 ## More Resources
 
