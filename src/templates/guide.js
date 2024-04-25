@@ -1,80 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
+
+
+import MdxWrapper from "../components/mdxWrapper"
+
+
 
 import GuideLayout from "../layout/GuideLayout"
 import HeaderBody from "../components/headerBody"
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
 import TOC from "../components/toc"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
 import SEO from "../layout/seo"
-import Releases from "../components/releases"
-import TerminusVersion from "../components/terminusVersion"
-import Commands from "../components/commands"
-import GetFeedback from "../components/getFeedback"
-import Enablement from "../components/enablement"
-import Color from "../components/color.js"
-import Download from "../components/download"
-import BuildTools from "../components/buildTools.js"
-import BuildToolsChangelog from "../components/buildToolsChangelog.js"
-import Partial from "../components/partial.js"
-import Image from "../layout/image"
-import ReviewDate from "../components/reviewDate"
-import Youtube from "../components/youtube"
-import ResourceSelector from "../components/resourceSelector"
-import DNSProviderDocs from "../components/dns-provider-docs.js"
-import Check from "../components/check.js"
-import LocaldevChangelog from "../components/localdevChangelog"
 import SearchBar from "../layout/SearchBar"
-import Wistia from "../components/wistia"
-
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 
+import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
-
-
-
-
-const shortcodes = {
-  Accordion,
-  Alert,
-  BuildTools,
-  BuildToolsChangelog,
-  Callout,
-  Card,
-  CardGroup,
-  Check,
-  Commands,
-  DNSProviderDocs,
-  Download,
-  Enablement,
-  ExternalLink,
-  Icon,
-  Image,
-  LocaldevChangelog,
-  Partial,
-  Popover,
-  Releases,
-  ResourceSelector,
-  ReviewDate,
-  Tab,
-  TabList,
-  TerminusVersion,
-  Wistia,
-  Youtube,
-};
 
 class GuideTemplate extends React.Component {
   componentDidMount() {
@@ -154,9 +96,13 @@ class GuideTemplate extends React.Component {
                 reviewDate={node.frontmatter.reviewed}
                 isoDate={isoDate.frontmatter.reviewed}
               />
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{node.body}</MDXRenderer>
-              </MDXProvider>
+
+
+
+
+              <MdxWrapper mdx={node.body} />
+
+
             </article>
           </main>
           <NavButtons

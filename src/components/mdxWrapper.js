@@ -4,6 +4,11 @@ import { MDXProvider } from "@mdx-js/react"
 import Callout from "./callout"
 import Alert from "./alert"
 import Accordion from "./accordion"
+import BuildTools from "./buildTools.js"
+import BuildToolsChangelog from "./buildToolsChangelog.js"
+import ResourceSelector from "./resourceSelector"
+import DNSProviderDocs from "./dns-provider-docs.js"
+import LocaldevChangelog from "./localdevChangelog"
 import ExternalLink from "./externalLink"
 import Popover from "./popover"
 import TabList from "./tabList"
@@ -33,6 +38,8 @@ import {
 const shortcodes = {
   Accordion,
   Alert,
+  BuildTools,
+  BuildToolsChangelog,
   Callout,
   Card,
   CardGroup,
@@ -40,11 +47,15 @@ const shortcodes = {
   Color,
   Commands,
   Download,
+  DNSProviderDocs,
   Enablement,
   ExternalLink,
   Icon,
+  Image,
+  LocaldevChangelog,
   Partial,
   Popover,
+  ResourceSelector,
   Releases,
   ReviewDate,
   Tab,
@@ -56,6 +67,7 @@ const shortcodes = {
   h2: headline3,
   h3: headline4,
 }
+
 
 
 
