@@ -2,9 +2,7 @@ import React from "react"
 
 import Contributors from "../contributors"
 import Github from "../github"
-import Twitter from "../twitter"
 import Slack from "../slack"
-import Discourse from "../discourse"
 import ContributorGuest from "../contributorGuest"
 
 import { Badge } from "@pantheon-systems/pds-toolkit-react"
@@ -19,9 +17,7 @@ const HeaderBody = ({
   contributors,
   featured,
   editPath,
-  reviewDate,
-  isoDate,
-  cms,
+  reviewDate
 }) => {
   const contributor = contributors ? contributors[0] : null
   const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null

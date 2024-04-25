@@ -1,10 +1,12 @@
 import React, { Components } from "react"
+import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
+import SearchBar from "../SearchBar"
 import Header from "../header"
 import Footer from "../footer"
 
-import SearchBar from "../SearchBar"
 
-import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
+
+
 
 import "./style.css"
 
