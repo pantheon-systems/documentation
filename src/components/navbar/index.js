@@ -28,11 +28,9 @@ const Navbar = ({ title, items, activePage }) => {
         aria-labelledby="guide-nav"
       >
         <ExpansionPanel
-          summary={title}
+          items={[{ label: title, content: menu }]}
           className="guide-nav__expansion-panel"
-        >
-          {menu}
-        </ExpansionPanel>
+        />
       </nav>
 
       {/* Desktop/default nav */}
