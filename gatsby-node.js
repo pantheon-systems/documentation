@@ -456,19 +456,9 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create iframeembed page
     const iframeEmbeds = result.data.allIframeEmbeds.edges;
-    console.log("iframeEmbeds", iframeEmbeds);
-
-
-
     iframeEmbeds.forEach((iframeEmbed) => {
-
-console.log("iframeEmbed.node.slug", iframeEmbed.node.slug);
-
       createPage({
-//        path: "iframeembed" + iframeEmbed.node.slug,
         path: `iframeembed/${iframeEmbed.node.slug}`,
-
-
         component: path.resolve(`./src/templates/iframeembed.js`),
         context: {
           slug: iframeEmbed.node.slug,
@@ -476,7 +466,6 @@ console.log("iframeEmbed.node.slug", iframeEmbed.node.slug);
         },
       })
     })
-
 
     // Create contributor pages.
     const contributors = result.data.allContributorYaml.edges
