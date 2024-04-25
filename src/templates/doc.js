@@ -1,13 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import MdxWrapper from "../components/mdxWrapper"
+
 import Layout from "../layout/layout"
+import SEO from "../layout/seo"
 import HeaderBody from "../components/headerBody"
 import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
-import SEO from "../layout/seo"
+
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
+import MdxWrapper from "../components/mdxWrapper"
 
 
 // Set container width for search and main content.

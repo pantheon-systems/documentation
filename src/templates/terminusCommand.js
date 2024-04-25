@@ -2,12 +2,14 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import GuideLayout from "../layout/GuideLayout"
+import SEO from "../layout/seo"
+import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
 import Navbar from "../components/navbar"
-import SEO from "../layout/seo"
+
 import Partial from "../components/partial"
-import SearchBar from "../layout/SearchBar"
+
 let commandsJson = require("../../source/data/commands.json")
 
 import { Container } from "@pantheon-systems/pds-toolkit-react"

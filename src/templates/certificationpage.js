@@ -1,16 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
-import MdxWrapper from "../components/mdxWrapper"
+import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import GuideLayout from "../layout/GuideLayout"
+import SEO from "../layout/seo"
+import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
 import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
-import SEO from "../layout/seo"
-import SearchBar from "../layout/SearchBar"
+import MdxWrapper from "../components/mdxWrapper"
 
-import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+
 
 
 // @TODO relocate this list
