@@ -458,7 +458,7 @@ exports.createPages = ({ graphql, actions }) => {
     const iframeEmbeds = result.data.allIframeEmbeds.edges;
     iframeEmbeds.forEach((iframeEmbed) => {
       createPage({
-        path: `iframeembed/${iframeEmbed.node.slug}`,
+        path: `${iframeEmbed.node.slug}`,
         component: path.resolve(`./src/templates/iframeembed.js`),
         context: {
           slug: iframeEmbed.node.slug,
