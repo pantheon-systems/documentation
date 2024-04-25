@@ -77,8 +77,6 @@ const shortcodes = {
 }
 
 
-
-
 const MdxWrapper = ({ mdx }) => {
   return (
     <MDXProvider components={shortcodes}>
