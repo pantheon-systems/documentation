@@ -48,7 +48,7 @@ The [Pantheon Page Cache](https://github.com/pantheon-systems/pantheon-mu-plugin
 
 1. Click **Clear Cache** to clear the cache for the entire site (this does not clear Varnish or Redis).
 
-1. Set **Default Time to Live (TTL)** to a new value (optional). The default is 604800 seconds (1 week).
+1. Set **Default Max Age** to a new value (optional). The default is 604800 seconds (1 week).
 
 ## Pantheon Advanced Page Cache
 
