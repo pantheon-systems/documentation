@@ -41,34 +41,40 @@ import Wistia from "../components/wistia"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
+
+
+
+
+
+
 const shortcodes = {
-  Callout,
-  Alert,
   Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Releases,
-  TerminusVersion,
-  Commands,
-  Enablement,
-  Download,
+  Alert,
   BuildTools,
   BuildToolsChangelog,
-  Partial,
-  Image,
-  ReviewDate,
-  Youtube,
-  ResourceSelector,
-  DNSProviderDocs,
+  Callout,
+  Card,
+  CardGroup,
   Check,
+  Commands,
+  DNSProviderDocs,
+  Download,
+  Enablement,
+  ExternalLink,
+  Icon,
+  Image,
   LocaldevChangelog,
+  Partial,
+  Popover,
+  Releases,
+  ResourceSelector,
+  ReviewDate,
+  Tab,
+  TabList,
+  TerminusVersion,
   Wistia,
-}
+  Youtube,
+};
 
 class GuideTemplate extends React.Component {
   componentDidMount() {
