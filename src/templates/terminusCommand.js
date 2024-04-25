@@ -1,56 +1,16 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
 
 import GuideLayout from "../layout/GuideLayout"
 import HeaderBody from "../components/headerBody"
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
-import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
-import NavButtons from "../components/navButtons"
 import SEO from "../layout/seo"
-import Releases from "../components/releases"
-import TerminusVersion from "../components/terminusVersion"
-import Download from "../components/download"
-import Commands from "../components/commands"
 import Partial from "../components/partial"
-import ReviewDate from "../components/reviewDate"
-import Check from "../components/check.js"
 import SearchBar from "../layout/SearchBar"
 let commandsJson = require("../../source/data/commands.json")
 
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
-
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Releases,
-  TerminusVersion,
-  Download,
-  Commands,
-  ReviewDate,
-  Check,
-  Partial,
-}
+import { Container } from "@pantheon-systems/pds-toolkit-react"
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
