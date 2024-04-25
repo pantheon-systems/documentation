@@ -1,6 +1,7 @@
 import React from "react"
-import MdxWrapper from "../components/mdxWrapper"
 import { Container  } from "@pantheon-systems/pds-toolkit-react"
+import MdxWrapper from "../components/mdxWrapper"
+
 
 // Set container width for search and main content.
 const containerWidth = "standard"

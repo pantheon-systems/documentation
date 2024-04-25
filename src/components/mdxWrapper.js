@@ -7,8 +7,10 @@ import Accordion from "./accordion"
 import BuildTools from "./buildTools.js"
 import BuildToolsChangelog from "./buildToolsChangelog.js"
 import ResourceSelector from "./resourceSelector"
+import DrushChangelog from "./drushChangelog"
 import DNSProviderDocs from "./dns-provider-docs.js"
 import LocaldevChangelog from "./localdevChangelog"
+import Example from "./styleExample"
 import ExternalLink from "./externalLink"
 import Popover from "./popover"
 import TabList from "./tabList"
@@ -25,6 +27,8 @@ import Commands from "./commands"
 import ReviewDate from "./reviewDate"
 import Check from "./check.js"
 import Partial from "./partial"
+import Product from "../components/product"
+import ProductGroup from "../components/productGroup"
 import Youtube from "./youtube"
 import Wistia from "./wistia"
 
@@ -46,15 +50,19 @@ const shortcodes = {
   Check,
   Color,
   Commands,
-  Download,
   DNSProviderDocs,
+  Download,
+  DrushChangelog,
   Enablement,
+  Example,
   ExternalLink,
   Icon,
   Image,
   LocaldevChangelog,
   Partial,
   Popover,
+  Product,
+  ProductGroup,
   ResourceSelector,
   Releases,
   ReviewDate,
