@@ -457,6 +457,14 @@ exports.createPages = ({ graphql, actions }) => {
     // Create iframeembed page
     const iframeEmbeds = result.data.allIframeEmbeds.edges;
     iframeEmbeds.forEach((iframeEmbed) => {
+
+      // There's an odd bug where the slug value is inconsistent, even for the same file
+      // across different gatsby builds. This is a workaround.
+      // if the slug does not contain "iframeembeds" the add it
+      if (!iframeEmbed.node.slug.includes("iframeembeds")) {
+        iframeEmbed.node.slug = `iframeembeds/${iframeEmbed.node.slug}`
+      }
+
       createPage({
         path: `${iframeEmbed.node.slug}`,
         component: path.resolve(`./src/templates/iframeembed.js`),
