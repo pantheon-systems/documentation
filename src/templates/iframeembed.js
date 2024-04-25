@@ -1,8 +1,6 @@
 import React from "react"
-import Layout from "../layout/layout"
-import SEO from "../layout/seo"
-import MdxWrapper from "../components/mdxWrapper.js"
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import MdxWithShortcodes from "../components/MdxWithShortcodes"
+import { Container  } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -21,16 +19,14 @@ class iFrameEmbedTemplate extends React.Component {
             <article className="pds-spacing-pad-block-end-xl">
               <div id="doc" className="doc changelog__content">
                 <div className="pds-spacing-mar-block-start-s pds-spacing-mar-block-end-2xl">
-                  <MdxWrapper mdx={data.body} />
+                <MdxWithShortcodes mdxContent={data.body} />
                 </div>
               </div>
             </article>
           </Container>
         </main>
-
     )
   }
 }
 
 export default iFrameEmbedTemplate
-
