@@ -68,7 +68,7 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` to a hardcoded URL. You will want to default to a dynamic URL (`$_SERVER['HTTP_HOST']`), however some environments on Pantheon (notably workflows that run containerized versions of WP-CLI like search and replace) will not have a `$_SERVER['HTTP_HOST]` value. For this reason, we recommend using the following configuration that provides fallbacks if `$_SERVER['HTTP_HOST']` is unavailable.
+1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` to a hardcoded URL. You will want to default to a dynamic URL (`$_SERVER['HTTP_HOST']`) for web requests, while providing a fallback for non-web requests (notably workflows like search and replace) that do not have a `$_SERVER['HTTP_HOST]` value. For this reason, we recommend using the following configuration that falls back to a hard-coded value if `$_SERVER['HTTP_HOST']` is unavailable.
   
   ```php:title=wp-config.php
   $hostname = 'www.yourdomain.com'; // The domain of the network. Use as a fallback if $_SERVER['HTTP_HOST'] is not available.
