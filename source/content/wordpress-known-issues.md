@@ -51,6 +51,18 @@ Pantheon supports designated use cases for [WordPress Multisite](/guides/multisi
 
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
+## `Undefined array key "HTTP_HOST"` PHP warnings
+
+If you are seeing an error like `PHP Warning:  Undefined array key "HTTP_HOST"` pointing to a WP-CLI file, this is likely because there is some code in your  configuration that is using `$_SERVER['HTTP_HOST']` without checking if it is set. This is a common issue with WP-CLI, as it does not have the same environment variables set as a web request. You can resolve this by checking if the key is set before using it:
+
+```php
+if (isset($_SERVER['HTTP_HOST'])) {
+    // Your code here
+}
+```
+
+The simplest solution is to search your codebase for `$_SERVER['HTTP_HOST']` and add a check for `isset()` before using it. It's generally a good idea to set a fallback value if the key is not set, to prevent unexpected behavior. There are some examples of this in our [WordPress Multisite documentation](/guides/multisite/config).
+
 ## Plugins with Known Issues
 See [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) for a list of WordPress plugins that are not supported and/or require workarounds.
 
