@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import {
-  Container,
-  InputText,
   Navbar,
   NavMenu,
 } from "@pantheon-systems/pds-toolkit-react"

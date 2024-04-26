@@ -1,10 +1,11 @@
 import React from "react"
+import "./styles/search.css"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 
 import { Container } from "@pantheon-systems/pds-toolkit-react"
 
-import "./styles/search.css"
+
 
 class Search extends React.Component {
   componentDidMount() {

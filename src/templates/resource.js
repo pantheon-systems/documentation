@@ -1,57 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
-
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
-import TOC from "../components/toc"
-import GetFeedback from "../components/getFeedback"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
-import Enablement from "../components/enablement"
-import Color from "../components/color.js"
-import Download from "../components/download"
-import Partial from "../components/partial"
-import Image from "../layout/image"
-import Example from "../components/styleExample"
-import LocaldevChangelog from "../components/localdevChangelog"
-import DrushChangelog from "../components/drushChangelog"
-import ReviewDate from "../components/reviewDate"
-import ResourceSelector from "../components/resourceSelector"
+import MdxWrapper from "../components/mdxWrapper"
 
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Enablement,
-  Color,
-  Download,
-  Partial,
-  Image,
-  Example,
-  LocaldevChangelog,
-  DrushChangelog,
-  ReviewDate,
-  ResourceSelector,
-}
 
 class ResourceTemplate extends React.Component {
   componentDidMount() {
@@ -112,9 +66,8 @@ class ResourceTemplate extends React.Component {
                 isoDate={isoDate.frontmatter.reviewed}
               />
               <article style={{ marginTop: "15px", marginBottom: "45px" }}>
-                <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{node.body}</MDXRenderer>
-                </MDXProvider>
+                <MdxWrapper mdx={node.body} />
+
               </article>
             </div>
             {/* <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} /> */}
