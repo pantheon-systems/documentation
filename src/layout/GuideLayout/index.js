@@ -2,10 +2,7 @@ import React, { Components } from "react"
 import "./style.css"
 import Header from "../header"
 import Footer from "../footer"
-
 import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
-
-
 
 const GuideLayout = ({ children, pageType = "default" }) => {
   // Establish slots for children.

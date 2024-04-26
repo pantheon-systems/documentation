@@ -1,13 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-
 import GuideLayout from "../layout/GuideLayout"
 import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
 import Navbar from "../components/navbar"
-
 import Partial from "../components/partial"
 
 let commandsJson = require("../../source/data/commands.json")
@@ -236,9 +234,7 @@ class CommandsTemplate extends React.Component {
                   </tbody>
                 </table>
               </div>
-
               <Partial file={`terminus/${slug}.md`} />
-
               <Link to="/terminus/commands">Back to all commands</Link>
             </article>
           </main>

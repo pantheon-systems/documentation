@@ -11,9 +11,6 @@ import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
 
-
-
-
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.

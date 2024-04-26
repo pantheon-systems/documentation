@@ -4,12 +4,9 @@ import GuideLayout from "../layout/GuideLayout"
 import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
-
 import Navbar from "../components/navbar"
 import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
-
-
 
 import MdxWrapper from "../components/mdxWrapper"
 import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
@@ -166,15 +163,11 @@ class TerminusTemplate extends React.Component {
                 reviewDate={ifCommandsDate}
                 isoDate={ifCommandsISO}
               />
-
               <MdxWrapper mdx={node.body} />
-
-
             </article>
           </main>
           {hasTOC && <TOC slot="sidebar" title="Contents" />}
         </ContentLayoutType>
-
         <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
       </GuideLayout>
     )

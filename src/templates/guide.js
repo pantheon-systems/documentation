@@ -1,20 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import GuideLayout from "../layout/GuideLayout"
 import SEO from "../layout/seo"
-
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
-
 import Navbar from "../components/navbar"
-
 import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
-
-
 
 class GuideTemplate extends React.Component {
   componentDidMount() {
@@ -94,13 +88,7 @@ class GuideTemplate extends React.Component {
                 reviewDate={node.frontmatter.reviewed}
                 isoDate={isoDate.frontmatter.reviewed}
               />
-
-
-
-
               <MdxWrapper mdx={node.body} />
-
-
             </article>
           </main>
           <NavButtons
