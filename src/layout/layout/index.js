@@ -5,12 +5,6 @@ import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
 import Footer from "../footer"
 import SearchBar from "../SearchBar"
 
-
-
-
-
-
-
 // Content for CTA
 const primaryCTA = {
   text: "Learn Pantheon",
