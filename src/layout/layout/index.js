@@ -1,14 +1,15 @@
 import React, { Components } from "react"
-import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
-import SearchBar from "../SearchBar"
-import Header from "../header"
-import Footer from "../footer"
-
-
-
-
-
 import "./style.css"
+import Header from "../header"
+import { Container, CTASlice } from "@pantheon-systems/pds-toolkit-react"
+import Footer from "../footer"
+import SearchBar from "../SearchBar"
+
+
+
+
+
+
 
 // Content for CTA
 const primaryCTA = {
