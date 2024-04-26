@@ -1,6 +1,6 @@
 ---
 title: Pantheon MU Plugin v1.4.0 update
-published_date: "2024-04-xx"
+published_date: "2024-04-25"
 categories: [wordpress, plugins]
 ---
 
