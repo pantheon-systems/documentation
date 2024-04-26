@@ -167,7 +167,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
     }
   }
   define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', <?php echo $subdomain_install ? 'true' : 'false'; ?> );
+  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
   define( 'DOMAIN_CURRENT_SITE', $hostname );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
