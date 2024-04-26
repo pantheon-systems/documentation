@@ -4,8 +4,7 @@ import Contributors from "../contributors"
 import Github from "../github"
 import Slack from "../slack"
 import ContributorGuest from "../contributorGuest"
-
-import { Badge } from "@pantheon-systems/pds-toolkit-react"
+import { StatusBadge } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
