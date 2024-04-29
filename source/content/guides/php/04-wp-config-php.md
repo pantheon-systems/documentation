@@ -107,6 +107,16 @@ The following example shows how to hard-code your WordPress debug configuration 
 
 <Partial file="wp-debugging.md" />
 
+### How can I override the default `PANTHEON_HOSTNAME` value?
+
+In your `wp-config.php`, above the line that requires `wp-config-pantheon.php`, you can set the `PANTHEON_HOSTNAME` constant to the desired value:
+
+```php:title=wp-config.php
+define( 'PANTHEON_HOSTNAME', 'example.com' );
+```
+
+Note that in most cases you shouldn't need to do this. The logic in the [`wp-config-pantheon.php`](https://github.com/pantheon-systems/WordPress/blob/default/wp-config-pantheon.php#L98) covers most instances where you might need a unique hostname. It's recommended that you only change this in very specific cases and your code has conditions to handle those.
+
 ### How can I read the Pantheon environment configuration, like database credentials?
 
 Refer to [Reading the Pantheon Environment Configuration](/guides/environment-configuration/read-environment-config).
