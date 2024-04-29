@@ -120,32 +120,9 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
 
   ```php:title=wp-config.php
-  $hostname = 'www.yourdomain.com'; // The domain of the network. Use as a fallback if $_SERVER['HTTP_HOST'] is not available.
-  if ( !empty( $_ENV['PANTHEON_ENVIRONMENT'] )) {
-    $site_name = $_ENV['PANTHEON_SITE_NAME'];
-    // Override $hostname value as needed.
-    switch ( $_ENV['PANTHEON_ENVIRONMENT'] ) {
-      case 'live':
-        // Fall back to the default $hostname if $_SERVER['HTTP_HOST'] is not available.
-        $hostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : $hostname;
-        break;
-      case 'test':
-        $hostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'test-' . $site_name . '.pantheonsite.io';
-        break;
-      case 'dev':
-        $hostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'dev-' . $site_name . '.pantheonsite.io';
-        break;
-      case 'lando':
-        $hostname = $site_name . '.lndo.site';
-        break;
-      default:
-        $hostname = $_ENV['PANTHEON_ENVIRONMENT'] . '-' . $site_name . '.pantheonsite.io';
-        break;
-    }
-  }
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
-  define( 'DOMAIN_CURRENT_SITE', $hostname );
+  define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
