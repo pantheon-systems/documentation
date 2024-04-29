@@ -80,9 +80,7 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
   define( 'BLOG_ID_CURRENT_SITE', 1 );
   ```
   
-  This automatically detects the URL in each environment and uses that value if it's available.
-
-  Refer to the [wp-config-php documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
+  Refer to the [`wp-config.php` documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's **Dev** environment.
 
