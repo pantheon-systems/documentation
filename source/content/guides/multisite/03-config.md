@@ -164,6 +164,16 @@ After these steps are complete, both sites on the WordPress Multisite should loa
 
 Explore the WordPress Network Dashboard to become familiar with the variety of additional settings. You can review the options that are available for each site you create, manage users across WordPress Multisite, and learn about the network settings. After you explore the WordPress Network Dashboard, learn how to use the WordPress Multisite with the Pantheon Workflow.
 
+## Troubleshooting
+
+### "Undefined index: HTTP_HOST" PHP Warnings
+
+If you see notices in your PHP logs similar to `PHP Warning: Undefined index: HTTP_HOST`, this is likely because there is some code in your configuration that is using `$_SERVER['HTTP_HOST']` without checking if it is set. This is a common issue with WP-CLI, as it does not have the same environment variables set as a web request. Instead of relying on `$_SERVER['HTTP_HOST']`, you can use the `PANTHEON_HOSTNAME` constant, which is set by Pantheon in `wp-config-pantheon.php` and is available in all environments.
+
+```php
+define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
+```
+
 ## More Resources
 
 - [Environment-Specific Configuration for WordPress Sites](/guides/environment-configuration/environment-specific-config)
