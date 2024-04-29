@@ -107,6 +107,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/source/content/iframeembeds`,
+        name: `iframeembeds`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/source/content`,
         name: `content`,
       },

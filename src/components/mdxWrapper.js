@@ -13,6 +13,7 @@ import CardGroup from "../components/cardGroup"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
+import Partial from "./partial"
 
 import {
   headline2,
@@ -31,6 +32,7 @@ const shortcodes = {
   Card,
   CardGroup,
   Enablement,
+  Partial,
   Color,
   Download,
   h1: headline2,
