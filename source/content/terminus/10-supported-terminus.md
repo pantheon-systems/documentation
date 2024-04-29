@@ -21,20 +21,20 @@ Each major and minor version of Terminus is fully supported for one year from th
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We recommend you update Terminus far in advance of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 
-| Version          | Release Date       | EOL Date                        |
-|------------------|--------------------|---------------------------------|
-| 3.4.0            | April 23, 2024     |                                 |
-| 3.3.5            | February 28, 2024  | April 23, 2025                  |
-| 3.3.4            | February 27, 2024  | February 28, 2025               |
-| 3.3.3            | January 11, 2024   | February 27, 2025               |
-| 3.3.2            | January 11, 2024   | January 11, 2025                |
-| 3.3.1            | November 30, 2023  | January 11, 2025                |
-| 3.3.0            | November 29, 2023  | November 30, 2024               |
-| 3.2.2            | September 28, 2023 | November 29, 2024               |
-| 3.2.1            | June 1, 2023       | September 28, 2024              |
-| 3.2.0            | May 22 , 2023      | June 1, 2024                    |
-| 3.1.5            | April 6, 2023      | May 22, 2024                    |
-| 3.1.4 or earlier | March 1, 2023      | unsupported as of April 6, 2024 |
+| Version          | Release Date       | EOL Date           |
+|------------------|--------------------|--------------------|
+| 3.4.0            | April 23, 2024     |                    |
+| 3.3.5            | February 28, 2024  | April 23, 2025     |
+| 3.3.4            | February 27, 2024  | February 28, 2025  |
+| 3.3.3            | January 11, 2024   | February 27, 2025  |
+| 3.3.2            | January 11, 2024   | January 11, 2025   |
+| 3.3.1            | November 30, 2023  | January 11, 2025   |
+| 3.3.0            | November 29, 2023  | November 30, 2024  |
+| 3.2.2            | September 28, 2023 | November 29, 2024  |
+| 3.2.1            | June 1, 2023       | September 28, 2024 |
+| 3.2.0            | May 22 , 2023      | June 1, 2024       |
+| 3.1.5            | April 6, 2023      | May 22, 2024       |
+| 3.1.4 or earlier | March 1, 2023      | April 6, 2024      |
 
 
 ### PHP Version Compatibility Matrix
@@ -46,9 +46,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 8.1 | <span style="color:green">✔</span> |
 | 8.0 | <span style="color:green">✔</span> |
 | 7.4 | <span style="color:green">✔</span> |
-| 7.3 or earlier |                ❌*                  |
-
-* Important note: terminus runs locally and the version of PHP running your local version of terminus doesn't have to be the same version of PHP on your server.
+| 7.3 or earlier |                 ❌                  |
 
 ## More Resources
 
