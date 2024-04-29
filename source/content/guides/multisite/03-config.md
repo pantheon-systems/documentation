@@ -71,6 +71,7 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` to a hardcoded URL. We have provided a constant in `wp-config-pantheon.php`, `PANTHEON_HOSTNAME` that defaults to a dynamic URL (`$_SERVER['HTTP_HOST']`, when available) for web requests, while providing a fallback for non-web requests (notably workflows like search and replace) that do not have a `$_SERVER['HTTP_HOST']` value.
   
   ```php:title=wp-config.php
+  define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomain installs.
   define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
@@ -120,6 +121,7 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
 
   ```php:title=wp-config.php
+  define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
   define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
