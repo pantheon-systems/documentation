@@ -61,7 +61,9 @@ if (isset($_SERVER['HTTP_HOST'])) {
 }
 ```
 
-The simplest solution is to search your codebase for `$_SERVER['HTTP_HOST']` and add a check for `isset()` before using it. It's generally a good idea to set a fallback value if the key is not set, to prevent unexpected behavior. There are some examples of this in our [WordPress Multisite documentation](/guides/multisite/config).
+The simplest solution is to search your codebase for `$_SERVER['HTTP_HOST']` and add a check for `isset()` before using it. It's generally a good idea to set a fallback value if the key is not set, to prevent unexpected behavior.
+
+If you are seeing this in a WordPress multisite environment, it might be because your `DOMAIN_CURRENT_SITE` value is set to `$_SERVER['HTTP_HOST']` in your `wp-config.php`. You can set this to the `PANTHEON_HOSTNAME` constant provided by Pantheon instead. See the [WordPress Multisite documentation](/guides/multisite/config) for more information.
 
 ## Plugins with Known Issues
 See [WordPress Plugins and Themes with Known Issues](/plugins-known-issues) for a list of WordPress plugins that are not supported and/or require workarounds.
