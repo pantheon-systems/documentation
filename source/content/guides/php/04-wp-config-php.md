@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wp-config]
-contributors: [masonjames]
+contributors: [masonjames, jazzsequence]
 showtoc: true
 permalink: docs/guides/php/wp-config-php
 ---
