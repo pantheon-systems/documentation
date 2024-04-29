@@ -68,35 +68,12 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` to a hardcoded URL. You will want to default to a dynamic URL (`$_SERVER['HTTP_HOST']`) for web requests, while providing a fallback for non-web requests (notably workflows like search and replace) that do not have a `$_SERVER['HTTP_HOST]` value. For this reason, we recommend using the following configuration that falls back to a hard-coded value if `$_SERVER['HTTP_HOST']` is unavailable.
+1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` to a hardcoded URL. We have provided a constant in `wp-config-pantheon.php`, `PANTHEON_HOSTNAME` that defaults to a dynamic URL (`$_SERVER['HTTP_HOST']`, when available) for web requests, while providing a fallback for non-web requests (notably workflows like search and replace) that do not have a `$_SERVER['HTTP_HOST']` value.
   
   ```php:title=wp-config.php
-  $hostname = 'www.yourdomain.com'; // The domain of the network. Use as a fallback if $_SERVER['HTTP_HOST'] is not available.
-  if ( !empty( $_ENV['PANTHEON_ENVIRONMENT'] )) {
-    $site_name = $_ENV['PANTHEON_SITE_NAME'];
-    // Override $hostname value as needed.
-    switch ( $_ENV['PANTHEON_ENVIRONMENT'] ) {
-      case 'live':
-        // Fall back to the default $hostname if $_SERVER['HTTP_HOST'] is not available.
-        $hostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : $hostname;
-        break;
-      case 'test':
-        $hostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'test-' . $site_name . '.pantheonsite.io';
-        break;
-      case 'dev':
-        $hostname = isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'dev-' . $site_name . '.pantheonsite.io';
-        break;
-      case 'lando':
-        $hostname = $site_name . '.lndo.site';
-        break;
-      default:
-        $hostname = $_ENV['PANTHEON_ENVIRONMENT'] . '-' . $site_name . '.pantheonsite.io';
-        break;
-    }
-  }
   define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', <?php echo $subdomain_install ? 'true' : 'false'; ?> );
-  define( 'DOMAIN_CURRENT_SITE', $hostname );
+  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomain installs.
+  define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
