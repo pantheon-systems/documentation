@@ -79,7 +79,7 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
   ```
-  
+
   Refer to the [`wp-config.php` documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's **Dev** environment.
