@@ -74,7 +74,8 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
   define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomain installs.
-  define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
+  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
@@ -122,7 +123,8 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
   define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
-  define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
+  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
