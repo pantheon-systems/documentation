@@ -57,8 +57,6 @@ If you have an overage during any particular calendar month, you will be require
 
 To avoid future overage fees, you can [upgrade your plan](/guides/account-mgmt/plans) to a plan that is more appropriate for your current traffic volumes to avoid additional overage fees going forward. This new subscription will apply prospectively and will not retroactively change past overages.
 
-One benefit you’ll receive if you do upgrade to a new subscription, though, is you will restart your Overage Protection. For example, if you upgrade you plan on October 1, you will receive 1 month of free overage protection through the end of the calendar year.
-
 ## FAQs
 ### What environments count towards traffic limits?
 Only traffic for the Live environment is counted towards a site plan's traffic limit. Traffic for non-live environments (Dev, Test, and Multidev environments) are not counted towards the plan's traffic limit.
