@@ -60,9 +60,9 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 
 1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
 
-1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
+1. Click **Connect with SFTP**.
 
-1. Click **Open SFTP client**, and enter your password when prompted.
+1. Click **Open SFTP client**.
 
   If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
@@ -109,9 +109,9 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
 1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
 
-1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
+1. Click **Connect with SFTP**.
 
-1. Click **Open SFTP client**, and enter your User Dashboard password when prompted.
+1. Click **Open SFTP client**.
 
   If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
