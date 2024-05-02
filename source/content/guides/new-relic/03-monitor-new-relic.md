@@ -49,7 +49,7 @@ For more information on using New Relic&reg;'s features, we encourage you to rev
 
 New Relic provides an availability monitoring service within their Synthetics tool suite which can be enabled by [contacting support](/guides/support/contact-support/). This basic monitoring feature sends a request to designated URLs from configured locations. Requests are sent at configured intervals and alerts are sent via email when a response fails.
 
-Pantheon can provide New Relic Synthetics ping monitoring as part of the service with a usage quota limited to 10K Synthetics checks per month for each Pantheon workspace.
+Pantheon provides unlimited New Relic Synthetics ping monitoring as part of the service. Still, there's a quota for all other monitor types (simple browser, scripted browser, and scripted API monitors). This quota is set at 10K Synthetics monthly checks for each Pantheon account, so it's crucial to manage it effectively.
 
 <Alert title="Note" type="info">
 
