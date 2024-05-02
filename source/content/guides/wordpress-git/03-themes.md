@@ -28,7 +28,7 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
   Click **Connect with SFTP** then select the link to **Open SFTP Client**:
 
-  ![Open in your default SFTP client](../../../images/guides/git-wordpress/sftp-connection-mode.png)
+  ![Open in your default SFTP client](../../../images/guides/git-wordpress/sftp-info.png)
 
   If you have already set up an SSH key, as recommended in the **Before You Begin** section of the [guide's introduction](/guides/wordpress-git/#before-you-begin), you should see a new window open for your SFTP client where you can see local files and remote files on Pantheon. In Transmit, local files are managed on the left and Pantheon's on the right:
 
