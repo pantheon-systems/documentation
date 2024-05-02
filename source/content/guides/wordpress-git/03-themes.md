@@ -46,7 +46,7 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
    1. Copy the value provided by Pantheon for **Host** and paste into Transmit's **Address** field. Do the same for **Port** and **Username**.
 
-   1. Click the key icon next to the **Password** field to add your private SSH key, or authenticate using your Pantheon Dashboard password.
+   1. Click the key icon next to the **Password** field to add your private SSH key.
 
    1. Click **Connect**:
 
