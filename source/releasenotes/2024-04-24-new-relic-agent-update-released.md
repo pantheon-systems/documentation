@@ -12,11 +12,11 @@ The New Relic PHP agent has been updated to the latest version (v10.19.0.9). Com
 
 See the [complete New Relic PHP agent changelog](https://docs.newrelic.com/docs/release-notes/agent-release-notes/php-release-notes/) for more details.
 
-[Learn More about New Relic](https://docs.pantheon.io/guides/new-relic), real-time performance monitoring for your Pantheon web applications. 
+[Learn More about New Relic](/guides/new-relic), real-time performance monitoring for your Pantheon web applications. 
 
-## Action Required: Default behavior of New Relic Drupal Hooks metrics has changed
+## Action Required: Default behavior of New Relic Drupal metrics has changed
 
-Pantheon no longer supports Drupal Hooks metrics in New Relic by default. However, the functionality is still available. If this is crucial for troubleshooting your sites, please add these lines to your site’s `pantheon.yml` file to enable this reporting:
+Pantheon no longer supports Drupal-specific metrics in New Relic by default. However, the functionality is still available. If this is crucial for troubleshooting your sites, please add these lines to your site’s `pantheon.yml` file to enable this reporting:
 
 ```
 new_relic:
