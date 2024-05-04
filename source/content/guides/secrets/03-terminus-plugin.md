@@ -2,9 +2,6 @@
 title: Pantheon Secrets Guide
 subtitle: Terminus Secrets Manager Plugin
 description: Terminus plugin for Pantheon Secrets
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 contributors: [stovak]
 contenttype: [guide]
 innav: [true]

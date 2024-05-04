@@ -2,9 +2,7 @@
 title: Pantheon Secrets Guide
 subtitle: Introduction
 description: Securely store secrets in the Pantheon Platform.
-terminuspage: true
 type: terminuspage
-layout: terminuspage
 contributors: [stovak]
 contenttype: [guide]
 innav: [true]

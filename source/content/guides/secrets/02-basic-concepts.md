@@ -2,9 +2,6 @@
 title: Pantheon Secrets Guide
 subtitle: Basic Concepts
 description: This section outlines some concepts that are worth knowing about Pantheon Secrets. Gaining familiarity with them will help you to make better use of this feature.
-terminuspage: true
-type: terminuspage
-layout: terminuspage
 contributors: [stovak]
 contenttype: [guide]
 innav: [true]
@@ -19,7 +16,8 @@ reviewed: "2024-05-01"
 ---
 <dl>  
 <dt>Secret</dt>
-<dd>A key-value pair that should not be exposed to the general public, typically something like a password, API key, or other sensitive information that you should probably not add to version control.</dd>
+<dd>
+A key-value pair that should not be exposed to the general public, typically something like a password, API key, or other sensitive information that you should probably not add to version control.</dd>
 
 <dt>Secret type [^1]</dt>
 <dd>
