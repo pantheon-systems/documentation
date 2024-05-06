@@ -38,7 +38,7 @@ Click the links below to display complete PHP information for each version, incl
 
 Sites that run older PHP versions not listed above will continue to serve pages. While older sites will still run unlisted and unsupported versions of PHP, new sites cannot change their PHP version to unsupported values. You can [upgrade your PHP version](/guides/php/php-versions) in the development environment to resume development on your site.
 
-<p><sup>1</sup> On May 15, 2024, PHP 5.6, 7.0, and 7.1 will reach "End of Sale" and be removed from the supported PHP versions. New sites will not support PHP versions older than 7.2. For more details, see <a href="/release-notes/2024/03/PHP-7-1-EOS">this release note</a>.</p>
+<p><sup>1</sup> On May 15, 2024, PHP 5.6, 7.0, and 7.1 will reach "End of Sale" and be removed from the supported PHP versions. After that date, newly created sites will be prevented from running PHP versions older than 7.2. For more details, see <a href="/release-notes/2024/03/PHP-7-1-EOS">this release note</a>.</p>
 
 ## Drush Compatibility
 
