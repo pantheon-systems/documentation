@@ -219,7 +219,7 @@ It might be necessary to reset the site's upstream via [Terminus](/terminus/exam
 
 ## Unsupported PHP Versions in a Custom Upstream
 
-As PHP versions are moved to "end-of-sale", existing sites will continue to run, but new sites will error during the creation step if the `php_version` value in `pantheon.upstream.yml` is no longer supported. In order to create new sites from your Custom Upstream,  update your upstream's PHP version to a supported version of PHP. For details on what PHP versions Pantheon currently supports and reccomended, see [the PHP documentation](/guides/php#supported-php-versions).
+As PHP versions are moved to "End of Sale", existing sites will continue to run, but new sites will error during the creation step if the `php_version` value in `pantheon.upstream.yml` is no longer supported. In order to create new sites from your Custom Upstream,  update your upstream's PHP version to a supported version of PHP. For details on what PHP versions Pantheon currently supports and reccomended, see [the PHP documentation](/guides/php#supported-php-versions).
 
 ## More Resources
 
