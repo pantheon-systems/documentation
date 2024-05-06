@@ -1,7 +1,7 @@
 ---
 title: New Relic PHP agent v10.19.0.9 now available with PHP 8.3 compatibility and other fixes
 published_date: "2024-05-07"
-categories: [tools-apis]
+categories: [tools-apis, action-required]
 ---
 
 The New Relic PHP agent has been updated to the latest version (v10.19.0.9). Compared with the previously available version on the platform (v10.10.0.1), some of the changes and fixes include:
