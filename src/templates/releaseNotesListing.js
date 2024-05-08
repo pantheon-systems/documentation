@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import debounce from "lodash.debounce"
 import Mark from "mark.js"
@@ -6,12 +6,16 @@ import Mark from "mark.js"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
-import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
+// import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
+import ReleaseNotePopoverCategorySelector from "../components/releaseNotePopoverCategorySelector.js"
+
+import { releaseNoteCategoryLoader } from "../data/releaseNoteCategories.js"
 
 import {
   Container,
   FlexContainer,
   Icon,
+  Tag,
 } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
@@ -23,58 +27,89 @@ const ReleaseNotesListingTemplate = ({ data }) => {
 
   // Set up state.
   const [filteredData, setFilteredData] = useState([])
-  const [query, setQuery] = useState(emptyQuery)
+  const [filters, setFilters] = useState({
+    query: '',
+    categories: []
+  })
 
-  // Handle search input.
-  const handleInputChange = (event) => {
-    const query = event.target.value
-
+  const filterData = () => {
     // Get all releasenotes.
     const releasenotes = data.allMdx.edges || []
 
-    // Filter releasenotes based on query.
-    const filteredData = releasenotes.filter((releasenote) => {
-      const title = releasenote.node.frontmatter.title
-      const rawBody = releasenote.node.rawBody
-      const publishedDate = releasenote.node.frontmatter.published_date
-      const dateOptions = { year: "numeric", month: "long", day: "numeric" }
-      const formattedDate = new Date(publishedDate).toLocaleDateString(
-        undefined,
-        dateOptions
-      )
-      return (
-        title.toLowerCase().includes(query.toLowerCase()) ||
-        rawBody.toLowerCase().includes(query.toLowerCase()) ||
-        formattedDate.toLowerCase().includes(query.toLowerCase())
-      )
-    })
+    // Filter releasenotes based on filters.
+    const filterReleaseNotes = (releasenotes) => {
+      let newFilteredData = [...releasenotes]
 
-    // Update state based on query.
-    setFilteredData(filteredData)
-    setQuery(query)
+      if(filters.query){
+        const newQuery = filters.query.toLowerCase()
+
+        newFilteredData = newFilteredData.filter(item => {
+          const publishedDate = item.node.frontmatter.published_date
+          const dateOptions = { year: "numeric", month: "long", day: "numeric" }
+          const formattedDate = new Date(publishedDate).toLocaleDateString(
+            undefined,
+            dateOptions
+          )
+
+          return (
+            item.node.frontmatter.title.toLowerCase().includes(newQuery) ||
+            item.node.rawBody.toLowerCase().includes(newQuery) ||
+            formattedDate.toLowerCase().includes(filters.query.toLowerCase())
+          )
+        })
+      }
+
+      if(filters.categories.length > 0){
+        newFilteredData = newFilteredData.filter(item => {
+          return item.node.frontmatter.categories.some(category => {
+            return filters.categories.some(filterCategory => filterCategory.slug === category)
+          })
+        })
+      }
+
+      if(filters.query.length===0 && filters.categories.length === 0){
+        console.log('no filters', releasenotes)
+        return releasenotes
+      }
+
+      console.log('newFilteredData', newFilteredData)
+      return newFilteredData
+    }
+
+    // Update state based on filters.
+    setFilteredData(filterReleaseNotes(releasenotes))
 
     // Mark releasenotes based on query.
     var context = document.querySelector(".docs-release-note-results")
     var markInstance = new Mark(context)
-
     setTimeout(function () {
       markInstance.unmark({
         done: function () {
-          markInstance.mark(query)
+          markInstance.mark(filters.query)
         },
       })
     }, 100)
   }
 
+  // Handle search input.
+  const handleInputChange = (event) => {
+    const newQuery = event.target.value
+    setFilters( prevState => ({ ...prevState, query: newQuery }))
+  }
+
+  const handleRemoveTag = (category) => {
+    setFilters(prevState => ({...prevState, categories:[...prevState.categories.filter(item => item !== category )]}))
+  }
+
+  useEffect(() => {
+    filterData()
+  },[filters])
+
   // Debounce search input.
   const debouncedHandleInputChange = debounce(handleInputChange, 300)
 
-  // If query is empty, show all releasenotes.
-  const hasSearchResults = filteredData && query !== emptyQuery
-  const releasenotes = hasSearchResults ? filteredData : allReleasenotes
-
   // Preprocess release notes teasers.
-  const renderedTeasers = releasenotes.map((releasenote, index) => (
+  const renderedTeasers = filteredData.map((releasenote, index) => (
     <ReleaseNoteTeaser
       key={index}
       ReleaseNoteData={releasenote.node}
@@ -90,7 +125,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     </p>
   )
   const renderedReleaseNotes =
-    releasenotes.length !== 0 ? renderedTeasers : noResultsMessage
+    filteredData.length !== 0 ? renderedTeasers : noResultsMessage
 
   // Preprocess intro text.
   const introText = data.releasenotesYaml.introText
@@ -109,7 +144,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
         >
           <h1>Pantheon release notes</h1>
           <div className="pds-lead-text pds-lead-text--sm">{introText}</div>
-          <FlexContainer
+          <div
             style={{
               borderBottom: "1px solid var(--pds-color-border-default)",
               paddingBlockEnd: "var(--pds-spacing-3xl)",
@@ -134,8 +169,22 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <ReleaseNoteCategorySelector />
-          </FlexContainer>
+            <FlexContainer>
+              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} />
+                {
+                  filters && filters.categories.map(item => {
+                    return (
+                      <Tag
+                        key={item.slug}
+                        tagLabel={item.displayName + ' x'}
+                        tagColor={releaseNoteCategoryLoader(item.slug).color}
+                        onClick={() => handleRemoveTag(item)}
+                      />
+                    )
+                  })
+                }
+            </FlexContainer>
+          </div>
           <div
             id="doc"
             className="docs-release-note-results pds-spacing-mar-block-start-2xl"
