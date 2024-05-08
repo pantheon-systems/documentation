@@ -45,11 +45,19 @@ For more information on using New Relic&reg;'s features, we encourage you to rev
 
 - [Troubleshooting WordPress Performance with New Relic&reg; Performance Monitoring](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
-## Configure Ping Monitors for Availability
+## Configure Ping Monitors (Synthetics) for Availability
 
-New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring feature sends a request to designated URLs from configured locations. Requests are sent at configured intervals and alerts are sent via email when a response fails.
+New Relic provides an availability monitoring service within their Synthetics tool suite which can be enabled by [contacting support](/guides/support/contact-support/). This basic monitoring feature sends a request to designated URLs from configured locations. Requests are sent at configured intervals and alerts are sent via email when a response fails.
 
-Pantheon can provide New Relic Ping monitoring for free as part of the service. However, more advanced monitoring, including full browser testing and scripted interactions, is only available to customers on an annual contract and requires an additional cost. Contact our [sales team](https://pantheon.io/contact-us) or your dedicated account manager for more information.
+Pantheon provides unlimited New Relic Synthetics ping monitoring as part of the service. Still, there's a quota for all other monitor types (simple browser, scripted browser, and scripted API monitors). This quota is set at 10K Synthetics monthly checks for each Pantheon account, so it's crucial to manage it effectively.
+
+<Alert title="Note" type="info">
+
+When a Pantheon workspace has more than 10K Synthetics checks are running monthly Pantheon will adjust the frequency or number of locations a Synthetics check originates from the reduce the number of checks. This is required to allow Synthetic to continue to operate correctly under the overall New Relic quota for Pantheon.
+
+</Alert>
+
+More advanced monitoring, including full browser testing and scripted interactions, is only available to customers on an annual contract and requires an additional cost. Contact our [sales team](https://pantheon.io/contact-us) or your dedicated account manager for more information.
 
 Follow the steps below to configure the monitor service.
 
