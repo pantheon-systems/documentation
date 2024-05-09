@@ -83,3 +83,6 @@ yarn-error.log
 /.env.production
 /.idea
 /.envrc
+
+# Backstop dependencies and artifacts
+/backstop_data/
