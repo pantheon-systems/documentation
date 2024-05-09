@@ -13,6 +13,7 @@
     "@pantheon-systems/pds-toolkit-react": "^1.0.0-dev.106",
     "algoliasearch": "^4.14.3",
     "babel-plugin-remove-graphql-queries": "^4.25.0",
+    "backstopjs": "^6.3.23",
     "bootstrap": "^3.4.1",
     "dotenv": "^10.0.0",
     "fs": "0.0.1-security",

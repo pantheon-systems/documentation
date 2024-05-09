@@ -1,0 +1,82 @@
+{
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Pantheon Docs Homepage",
+      "url": "http://localhost:8000",
+      "referenceUrl": "https://docs.pantheon.io",
+      "delay": 4000,
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Get Started - Landing Page",
+      "url": "http://localhost:8000/get-started/",
+      "referenceUrl": "https://docs.pantheon.io/get-started/",
+      "delay": 10000,
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Release Notes - Single Entry",
+      "url": "http://localhost:8000/release-notes/2024/05/new-relic-agent-update-released",
+      "referenceUrl": "https://docs.pantheon.io/release-notes/2024/05/new-relic-agent-update-released",
+      "delay": 15000,
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Terminus Manual - Single Page",
+      "url": "http://localhost:8000/terminus/install",
+      "referenceUrl": "https://docs.pantheon.io/terminus/install",
+      "delay": 4000,
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Certification - Landing Page",
+      "url": "http://localhost:8000/certification",
+      "referenceUrl": "https://docs.pantheon.io/certification",
+      "delay": 4000,
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Certification - Study Guide",
+      "url": "http://localhost:8000/certification/study-guide",
+      "referenceUrl": "https://docs.pantheon.io/certification/study-guide",
+      "delay": 4000,
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Guide Layout",
+      "url": "http://localhost:8000/guides/mariadb-mysql/kill-mysql-queries",
+      "referenceUrl": "https://docs.pantheon.io/guides/mariadb-mysql/kill-mysql-queries",
+      "delay": 4000,
+      "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Individual Doc Page",
+      "url": "http://localhost:8000/drupal-cron",
+      "referenceUrl": "https://docs.pantheon.io/drupal-cron",
+      "delay": 4000,
+      "misMatchThreshold" : 0.1
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineFlags": [],
+  "asyncCaptureLimit": 10,
+  "debug": false,
+  "debugWindow": false
+}
