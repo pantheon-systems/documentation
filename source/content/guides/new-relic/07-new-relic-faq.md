@@ -77,6 +77,10 @@ Refer to [Log Files on Pantheon](/guides/logs-pantheon) for more information on 
 
 Pantheon provides New Relic Performance Monitoring for sites on [supported plans](/guides/new-relic#supported-site-plans). Certain components of New Relic fall outside this offering. Please [contact support](/guides/support/contact-support/) if you cannot access a New Relic feature that you should have access to.
 
+### Can I get New Relic&reg; Synthetics?
+
+Yes, for details see [Monitor and Improve Site Performance](/guides/new-relic/monitor-new-relic/#configure-ping-monitors-synthetics-for-availability).
+
 ## More Resources
 
 - [MySQL Troubleshooting with New Relic&reg; Performance Monitoring](/guides/new-relic/debug-mysql-new-relic)

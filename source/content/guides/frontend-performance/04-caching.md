@@ -7,7 +7,7 @@ type: guide
 showtoc: true
 permalink: docs/guides/frontend-performance/caching
 editpath: frontend-performance/04-caching.md
-reviewed: "2020-10-10"
+reviewed: "2024-04-19"
 contenttype: [guide]
 innav: [false]
 categories: [cache, optimize]
@@ -229,9 +229,9 @@ The [Pantheon Page Cache plugin](/guides/wordpress-configurations/wordpress-cach
 
 1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
 
-1. Review the Time to Live, which translates to `max-age`.
+1. Review the Default Max Age, which translates to the `max-age` Cache Control header.
 
-1. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
+1. We recommend setting **Default Max Age** to a higher value, like 604800 seconds (one week):
 
   ![Pantheon Cache Plugin](../../../images/guides/front-end-performance/pantheon-page-cache.png)
 
