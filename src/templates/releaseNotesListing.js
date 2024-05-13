@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { graphql } from "gatsby"
 import debounce from "lodash.debounce"
 import Mark from "mark.js"
@@ -6,9 +6,9 @@ import Mark from "mark.js"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
 import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
-// import ReleaseNoteCategorySelector from "../components/releaseNoteCategorySelector.js"
 import ReleaseNotePopoverCategorySelector from "../components/releaseNotePopoverCategorySelector.js"
 
+import { activeReleaseNoteCategories } from "../data/releaseNoteCategories"
 import { releaseNoteCategoryLoader } from "../data/releaseNoteCategories.js"
 
 import {
@@ -25,12 +25,17 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   const allReleasenotes = data.allMdx.edges
   const emptyQuery = ""
 
+  // Get the active categories data.
+  const activeCategories = JSON.parse(activeReleaseNoteCategories())
+
   // Set up state.
   const [filteredData, setFilteredData] = useState([])
   const [filters, setFilters] = useState({
     query: '',
     categories: []
   })
+
+  let queryRef = useRef('')
 
   const filterData = () => {
     // Get all releasenotes.
@@ -105,6 +110,36 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     filterData()
   },[filters])
 
+  useEffect(() => {
+    const updateFilters = () => {
+      const searchParams = new URLSearchParams(window.location.search)
+      const query = searchParams.get('query')
+      const categorySlugs = searchParams.getAll('category')
+      const categories = categorySlugs.map(slug => ({slug}))
+
+      if( query !== filters.query ){
+        setFilters( prevState => (
+          {
+            query: query || '',
+            categories: prevState.categories || []
+          }
+        ))
+        queryRef.current.value = query
+      }
+
+      if( JSON.stringify(categories) !== JSON.stringify(filters.categories) ) {
+        setFilters( prevState => (
+          {
+            query: prevState.query || '',
+            categories: categories || []
+          }
+        ))
+      }
+    }
+
+    updateFilters()
+  },[])
+
   // Debounce search input.
   const debouncedHandleInputChange = debounce(handleInputChange, 300)
 
@@ -164,6 +199,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 type="search"
                 aria-label="Filter by text"
                 placeholder="Filter by text"
+                ref={queryRef}
                 id="release-note-filter"
                 className="pds-input-field__input"
                 onChange={debouncedHandleInputChange}
@@ -176,7 +212,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                   return (
                     <Tag
                       key={item.slug}
-                      tagLabel={item.displayName}
+                      tagLabel={releaseNoteCategoryLoader(item.slug).displayName}
                       tagColor={releaseNoteCategoryLoader(item.slug).color}
                       onRemove={() => handleRemoveTag(item)}
                       isRemovable={true}

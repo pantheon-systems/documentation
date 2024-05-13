@@ -26,7 +26,7 @@ const ReleaseNoteCategories = ({ categories, displayType, className }) => {
         {sortedCategories.map((categorySlug, index) => (
           <Tag
             key={index}
-            linkContent={<Link to={`/release-notes/${categorySlug}`} />}
+            //linkContent={<Link to={`/release-notes/${categorySlug}`} />}
             tagLabel={releaseNoteCategoryLoader(categorySlug).displayName}
             tagColor={releaseNoteCategoryLoader(categorySlug).color}
           />
