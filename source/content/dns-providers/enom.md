@@ -45,7 +45,7 @@ Create one A record and 2 AAAA records for the given subdomain (e.g., `www.examp
 
 ## Enom Docs
 
-[Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain](https://www.Enom.com/kb/kb/kb_0002_change-host-records.htm)
+[Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain](https://help.enom.com/hc/en-us/articles/115000474012-Managing-DNS-host-records)
 
 ## Next Steps
 

@@ -247,7 +247,7 @@ export const pageQuery = graphql`
   query DocsWithDefinitions {
     docsWithDFNs: allMdx(
       filter: {
-        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        frontmatter: { title: { ne: "Style Guide" } }
         rawBody: { regex: "/dfn/" }
       }
     ) {
@@ -265,7 +265,7 @@ export const pageQuery = graphql`
     }
     docsWithDefLists: allMdx(
       filter: {
-        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        frontmatter: { title: { ne: "Style Guide" } }
         rawBody: { regex: "/<dt/" }
       }
     ) {

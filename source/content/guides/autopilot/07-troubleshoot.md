@@ -289,7 +289,7 @@ If the issue is because of a PHP or CMS issue, resolve any issues causing `clear
 
 ### Diagnosis
 
-The most common reason for clone content to fail is that drush/wr-cli clear cache failed at the end of a workflow.
+The most common reason for clone content to fail is that drush/wp-cli clear cache failed at the end of a workflow.
 
 ### Solution
 
@@ -364,6 +364,20 @@ Site is running a framework that is not supported. Supported frameworks are:
 ### Solution
 
 [Contact support](/guides/support/contact-support/) for assistance.
+
+</Accordion>
+
+## Composer configuration Not Supported
+
+<Accordion title="We could not run Autopilot because the site is running an unsupported framework." id="misconfigured-composer" icon="info-sign">
+
+### Diagnosis
+
+A [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site which is not using Composer is not supported by Autopilot.
+
+### Solution
+
+Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
 
 </Accordion>
 

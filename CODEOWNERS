@@ -5,6 +5,10 @@
 
 # The Platform-Edge-Routing team is responsible for connecting custom domains to Pantheon
 source/content/guides/domains/ @pantheon-systems/platform-edge-routing
+# The Platform-Edge-Routing team is responsible for traffic limits
+source/content/guides/account-mgmt/traffic/ @pantheon-systems/platform-edge-routing
+# The Platform-Edge-Routing team is responsible for bots and indexing
+source/content/bots-and-indexing @pantheon-systems/platform-edge-routing
 # The FileSystem team is responsible for managing static files on Pantheon
 source/content/guides/filesystem/ @pantheon-systems/filesystem
 # The lifecycle-ops team is responsible for Integrated Composer
@@ -13,3 +17,5 @@ source/content/guides/integrated-composer/ @pantheon-systems/lifecycle-ops
 source/content/guides/multisite/ @pantheon-systems/cms-platform
 # The cms-platform team is responsible for External Libraries on Pantheon
 source/content/external-libraries @pantheon-systems/cms-platform
+# There is a team just for release note permissions
+source/releasenotes/ @pantheon-systems/release-note-authors

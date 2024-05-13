@@ -16,7 +16,7 @@ No, there is no downtime expected as part of the migration process. Performance 
 
 ### Why doesn't my site archive import correctly from Dropbox?
 
-Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly. See the Dropbox documentation: [How do I force a file or folder to download or render on dropbox.com?](https://www.dropbox.com/en/help/201)
+Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly. See the Dropbox documentation: [How do I force a file or folder to download or render on dropbox.com?](https://help.dropbox.com/share/force-download)
 
 ### Is the MySQL MyISAM engine supported?
 

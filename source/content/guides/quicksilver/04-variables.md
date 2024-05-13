@@ -34,7 +34,7 @@ Variables are made available through the `$_POST` global variable. You can use t
 |`user_role`|UUID of the user that initiated the task|All| |
 |`to_environment`|Target environment where the database is being cloned to|`clone_database`| |
 |`from_environment`|Source environment where the database is being cloned from|`clone_database`| |
-|`deploy_message`|Deploy message provided as part of a test of live deployment|`deploy`|This is only available if a deploy message is provided|
+|`deploy_message`|Deploy message provided as part of a test or live deployment|`deploy`|This is only available if a deploy message is provided|
 |`vrt_status`|Result of the visual regression test|`autopilot_vrt`| |
 |`vrt_result_url`|Page URL associated with an Autopilot VRT result|`autopilot_vrt`|[Autopilot](/guides/autopilot) is only available in the new Pantheon Dashboard|
 |`updates_info`|List of the plugins/modules/themes that were updated prior to the VRT|`autopilot_vrt`|Returns JSON data structure|

@@ -42,17 +42,17 @@ The Test and Live environment codebases also cannot be written to, preventing au
 
 ### Pantheon Page Cache
 
-The [Pantheon Page Cache](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
+The [Pantheon Page Cache](https://github.com/pantheon-systems/pantheon-mu-plugin/blob/main/inc/pantheon-page-cache.php) plugin facilitates communication between Pantheon's Edge Cache layer and WordPress, allowing you to clear the entire site cache and set the default cache age.
 
 1. Navigate to your WordPress dashboard > click **Settings** > **Pantheon Page Cache**.
 
 1. Click **Clear Cache** to clear the cache for the entire site (this does not clear Varnish or Redis).
 
-1. Set **Default Time to Live (TTL)** to 600 seconds (optional).
+1. Set **Default Max Age** to a new value (optional). The default is 604800 seconds (1 week).
 
 ## Pantheon Advanced Page Cache
 
-[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) automatically clears related pages from Pantheon's Edge when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
+[Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) automatically clears related pages from Pantheon's Edge when you update content. Without this plugin, pages expire from cache after 1 week by default. This plugin allows fresh content to be immediately served to anonymous visitors.
 
 ## Pantheon HUD
 

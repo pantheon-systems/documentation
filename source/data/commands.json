@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.3.0"
+        "version": "3.4.0"
     },
     "commands": [
         {
@@ -190,7 +190,6 @@
             "description": "Displays Pantheon ASCII artwork.",
             "usage": [
                 "art [<name>]",
-                "art Displays the list of available artwork.",
                 "art <artwork> Displays the <artwork> artwork."
             ],
             "help": "Displays Pantheon ASCII artwork.",
@@ -567,6 +566,129 @@
                         "is_multiple": false,
                         "description": "To skip describing commands' arguments",
                         "default": false
+                    },
+                    "help": {
+                        "name": "--help",
+                        "shortcut": "-h",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display help for the given command. When no command is given display help for the <info>list<\/info> command",
+                        "default": false
+                    },
+                    "quiet": {
+                        "name": "--quiet",
+                        "shortcut": "-q",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not output any message",
+                        "default": false
+                    },
+                    "verbose": {
+                        "name": "--verbose",
+                        "shortcut": "-v|-vv|-vvv",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Increase the verbosity of messages: 1 for normal output (-v), 2 for more verbose output (-vv), and 3 for debug (-vvv)",
+                        "default": false
+                    },
+                    "version": {
+                        "name": "--version",
+                        "shortcut": "-V",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Display this application version",
+                        "default": false
+                    },
+                    "ansi": {
+                        "name": "--ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Force (or disable --no-ansi) ANSI output",
+                        "default": null
+                    },
+                    "no-ansi": {
+                        "name": "--no-ansi",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Negate the \"--ansi\" option",
+                        "default": false
+                    },
+                    "no-interaction": {
+                        "name": "--no-interaction",
+                        "shortcut": "-n",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Do not ask any interactive question",
+                        "default": false
+                    },
+                    "define": {
+                        "name": "--define",
+                        "shortcut": "-D",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": true,
+                        "description": "Define a configuration item value.",
+                        "default": []
+                    },
+                    "yes": {
+                        "name": "--yes",
+                        "shortcut": "-y",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Answer all confirmations with \"yes\"",
+                        "default": false
+                    }
+                }
+            },
+            "hidden": false
+        },
+        {
+            "name": "art:list",
+            "description": "Lists available Pantheon ASCII artwork.",
+            "usage": [
+                "art:list [--format FORMAT] [--fields FIELDS] [--field FIELD]",
+                "art:list Displays the list of available artwork."
+            ],
+            "help": "Lists available Pantheon ASCII artwork.",
+            "definition": {
+                "arguments": [],
+                "options": {
+                    "format": {
+                        "name": "--format",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": false,
+                        "description": "Format the result data. Available formats: csv,json,list,null,php,print-r,sections,string,table,tsv,var_dump,var_export,xml,yaml",
+                        "default": "table"
+                    },
+                    "fields": {
+                        "name": "--fields",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": false,
+                        "description": "Available fields: Name (name), Description (description)",
+                        "default": "name,description"
+                    },
+                    "field": {
+                        "name": "--field",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": true,
+                        "is_multiple": false,
+                        "description": "Select just one field, and force format to *string*.",
+                        "default": ""
                     },
                     "help": {
                         "name": "--help",
@@ -3461,7 +3583,7 @@
         },
         {
             "name": "env:clone-content",
-            "description": "Clones database\/files from one environment to another environment. WordPress sites will search the database for the default domain and replace it with the target environment's domain unless you specify a different search\/replace string with --search-for and --replace-with.",
+            "description": "Clones database\/files from one environment to another environment. WordPress sites will search the database for the default domain and replace it with the target environment's domain unless you specify a different search\/replace string with --from-url and --to-url.",
             "usage": [
                 "env:clone-content [--cc] [--db-only] [--files-only] [--updatedb] [--from-url [FROM-URL]] [--to-url [TO-URL]] [--] <site>.<env> <target_env>",
                 "env:clone-content <site>.<env> <target_env> Clones database and files from <site>'s",
@@ -7193,9 +7315,9 @@
             "description": "Creates a multidev environment. If there is an existing Git branch with the multidev name, then it will be used when the new environment is created.",
             "usage": [
                 "multidev:create [--no-db] [--no-files] [--] <site>.<env> <multidev>",
-                "multidev:create <site>.<env> <multidev> Creates the Multidev environment, <multidev>, within <site> with database and files from the <env> environment.",
-                "multidev:create <site>.<env> <multidev> --no-db Creates the <multidev> environment without database from the <env> environment.",
-                "multidev:create <site>.<env> <multidev> --no-files Creates the <multidev> environment without files from the <env> environment.",
+                "multidev:create <site>.<env> <multidev> Creates the Multidev environment,",
+                "multidev:create <site>.<env> <multidev> --no-db Creates the <multidev>",
+                "multidev:create <site>.<env> <multidev> --no-files Creates the <multidev>",
                 "env:create"
             ],
             "help": "Creates a multidev environment. If there is an existing Git branch with the multidev name, then it will be used when the new environment is created.",
@@ -15905,7 +16027,7 @@
             "name": "workflow:list",
             "description": "Displays the list of the workflows for a site.",
             "usage": [
-                "workflow:list [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_id>",
+                "workflow:list [--all] [--format FORMAT] [--fields FIELDS] [--field FIELD] [--] <site_id>",
                 "workflow:list <site> Displays the list of the workflows for <site>.",
                 "workflows"
             ],
@@ -15921,6 +16043,15 @@
                     }
                 },
                 "options": {
+                    "all": {
+                        "name": "--all",
+                        "shortcut": "",
+                        "accept_value": false,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Return all of the available workflows, not just the most recent 100",
+                        "default": false
+                    },
                     "format": {
                         "name": "--format",
                         "shortcut": "",
@@ -16327,6 +16458,12 @@
                 "alpha:aliases",
                 "alpha:env:metrics",
                 "alpha:metrics"
+            ]
+        },
+        {
+            "id": "art",
+            "commands": [
+                "art:list"
             ]
         },
         {

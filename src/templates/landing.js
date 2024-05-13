@@ -9,6 +9,7 @@ import Youtube from "../components/youtube"
 import GuideItem from "../layout/guide-item"
 import IntegrationGuideItem from "../layout/integration-guide-item"
 import SEO from "../layout/seo"
+import Wistia from "../components/wistia"
 
 import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
 
@@ -19,7 +20,7 @@ import {
 } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 const twoColumnClasses =
   "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6"
@@ -45,18 +46,17 @@ class LandingTemplate extends Component {
         footerBorder={topic.footer_border}
       >
         <SEO title={topic.title} />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth} className="landing-page__header">
             <FlexContainer
               alignItems="center"
               flexDirection="column"
               mobileFlex="same"
-              spacing="narrow"
               className="landing-page-heading pds-spacing-pad-block-m"
             >
               <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
               {topic.subtitle && (
-                <div className="pds-lead-text pds-lead-text--small pds-spacing-mar-block-end-xs">
+                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xs">
                   {topic.subtitle}
                 </div>
               )}
