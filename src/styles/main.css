@@ -229,3 +229,20 @@ a.individual-changelog-link:hover {
 .mktoForm .mktoLogicalField.mktoInvalid {
   border: 1px solid var(--pds-color-input-border-critical);
 }
+
+
+/* New Styles for Release notes page */
+.popover-categories .pds-popover__container{
+  max-width: 100%;
+  padding: 40px;
+}
+
+.popover-categories .pds-popover__title{
+  font-size: 16px;
+  margin-bottom: 26px;
+}
+
+.popover-categories .pds-popover__close{
+  top: -20px;
+  right: -10px;
+}

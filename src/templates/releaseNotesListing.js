@@ -152,37 +152,38 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             }}
           >
             <div
-              className="pds-input-field__input-wrapper"
+              className="pds-input-field__input-wrapper pds-spacing-mar-block-end-xl"
               style={{
                 flexGrow: "2",
               }}
             >
               <div className="pds-input-field__decorators">
-                <Icon iconName="magnifyingGlass" />
+                <Icon iconName="barsFilter" />
               </div>
               <input
                 type="search"
-                aria-label="Search release notes"
-                placeholder="Search release notes"
+                aria-label="Filter by text"
+                placeholder="Filter by text"
                 id="release-note-filter"
                 className="pds-input-field__input"
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <FlexContainer>
+            <FlexContainer alignItems='center'>
               <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} />
-                {
-                  filters && filters.categories.map(item => {
-                    return (
-                      <Tag
-                        key={item.slug}
-                        tagLabel={item.displayName + ' x'}
-                        tagColor={releaseNoteCategoryLoader(item.slug).color}
-                        onClick={() => handleRemoveTag(item)}
-                      />
-                    )
-                  })
-                }
+              {
+                filters && filters.categories.map(item => {
+                  return (
+                    <Tag
+                      key={item.slug}
+                      tagLabel={item.displayName}
+                      tagColor={releaseNoteCategoryLoader(item.slug).color}
+                      onRemove={() => handleRemoveTag(item)}
+                      isRemovable={true}
+                    />
+                  )
+                })
+              }
             </FlexContainer>
           </div>
           <div
