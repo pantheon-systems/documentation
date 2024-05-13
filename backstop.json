@@ -6,8 +6,6 @@
       "height": 1080
     }
   ],
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
       "label": "Pantheon Docs Homepage",
@@ -20,14 +18,28 @@
       "label": "Get Started - Landing Page",
       "url": "http://localhost:8000/get-started/",
       "referenceUrl": "https://docs.pantheon.io/get-started/",
-      "delay": 10000,
+      "delay": 4000,
       "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Release Notes - category listing",
+      "url": "http://localhost:8000/release-notes/policy",
+      "referenceUrl": "https://docs.pantheon.io/release-notes/policy",
+      "delay": 4000,
+      "misMatchThreshold": 0.1
+    },
+    {
+      "label": "Style Guide",
+      "url": "http://localhost:8000/style-guide",
+      "referenceUrl": "https://docs.pantheon.io/style-guide",
+      "delay": 4000,
+      "misMatchThreshold": 0.1
     },
     {
       "label": "Release Notes - Single Entry",
       "url": "http://localhost:8000/release-notes/2024/05/new-relic-agent-update-released",
       "referenceUrl": "https://docs.pantheon.io/release-notes/2024/05/new-relic-agent-update-released",
-      "delay": 15000,
+      "delay": 4000,
       "misMatchThreshold" : 0.1
     },
     {
@@ -37,12 +49,27 @@
       "delay": 4000,
       "misMatchThreshold" : 0.1
     },
+
+    {
+      "label": "Terminus Manual - Single Command",
+      "url": "http://localhost:8000/terminus/commands/completion",
+      "referenceUrl": "https://docs.pantheon.io/terminus/commands/completion",
+      "delay": 4000,
+      "misMatchThreshold": 0.1
+    },
     {
       "label": "Certification - Landing Page",
       "url": "http://localhost:8000/certification",
       "referenceUrl": "https://docs.pantheon.io/certification",
       "delay": 4000,
       "misMatchThreshold" : 0.1
+    },
+    {
+      "label": "Certification - Another Landing Page",
+      "url": "http://localhost:8000/automate",
+      "referenceUrl": "https://docs.pantheon.io/automate",
+      "delay": 4000,
+      "misMatchThreshold": 0.1
     },
     {
       "label": "Certification - Study Guide",
@@ -64,7 +91,25 @@
       "referenceUrl": "https://docs.pantheon.io/drupal-cron",
       "delay": 4000,
       "misMatchThreshold" : 0.1
+    },
+
+
+
+
+    {
+      "label": "Glossary",
+      "url": "http://localhost:8000/glossary",
+      "referenceUrl": "https://docs.pantheon.io/glossary",
+      "delay": 4000,
+      "misMatchThreshold": 0.1
     }
+
+
+
+
+
+
+
   ],
   "paths": {
     "bitmaps_reference": "backstop_data/bitmaps_reference",
