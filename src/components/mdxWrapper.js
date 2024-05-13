@@ -33,13 +33,6 @@ import ProductGroup from "./productGroup"
 import Youtube from "./youtube"
 import Wistia from "./wistia"
 
-import {
-  headline2,
-  headline3,
-  headline4,
-} from "./releaseHeadlines"
-
-
 const shortcodes = {
   Accordion,
   Alert,
@@ -71,10 +64,7 @@ const shortcodes = {
   TabList,
   TerminusVersion,
   Wistia,
-  Youtube,
-  h1: headline2,
-  h2: headline3,
-  h3: headline4,
+  Youtube
 }
 
 const MdxWrapper = ({ mdx }) => {
