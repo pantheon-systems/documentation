@@ -116,18 +116,18 @@ We include several tools to test that new content doesn't break the documentatio
 
 
 ### Local VRT with BackstopJS
-VRT is not currently automated as part of our continuous integration pipeline, however this can be done locally and manually. The [BacktstopJS configuration file](<backstop.json>) defines 8 scenarios to cover the various template files used across the Pantheon Docs theme.
+VRT is not currently automated as part of our continuous integration pipeline, however this can be done locally and manually. The [BacktstopJS configuration file](<backstop.json>) defines multiple scenarios to cover the various template files used across the Pantheon Docs theme.
 
 Before you can run VRT locally, you must have the Pantheon Docs site running locally. Follow the [steps above](#get-the-code), you should be able to visit the local site at this URL: `localhost:8000`
 
 From the project root, run this command to create fresh reference screenshots from production:
 ```
-backstop reference
+npx backstop reference
 ```
 
 Then, run the tests locally:
 ```
-backstop test
+npx backstop test
 ```
 
 Maintainers for this project should generate fresh BackstopJS Reports whenever reviewing Pull Requests with site-wide implications.
