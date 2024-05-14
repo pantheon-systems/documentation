@@ -33,7 +33,7 @@ import ProductGroup from "./productGroup"
 import Youtube from "./youtube"
 import Wistia from "./wistia"
 
-const shortcodes = {
+const defaultShortcodes = {
   Accordion,
   Alert,
   BuildTools,
@@ -67,9 +67,12 @@ const shortcodes = {
   Youtube
 }
 
-const MdxWrapper = ({ mdx }) => {
+const MdxWrapper = ({ mdx, customShortcodes = {} }) => {
+  // Custom shortcodes can be passed in as a prop to allow for
+  // things like the changing of heading levels in ReleaseNoteTeaser
+  const mergedShortcodes = { ...defaultShortcodes, ...customShortcodes };
   return (
-    <MDXProvider components={shortcodes}>
+    <MDXProvider components={mergedShortcodes}>
       <MDXRenderer>{mdx}</MDXRenderer>
     </MDXProvider>
   )
