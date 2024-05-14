@@ -4,7 +4,6 @@ import { Button, FlexContainer, Popover } from "@pantheon-systems/pds-toolkit-re
 
 const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
   const [popoverTriggerIcon, setPopoverTriggerIcon] = useState('angleDown')
-  const myElementRef = useRef(null);
 
   // Get the active categories data.
   const activeCategories = JSON.parse(activeReleaseNoteCategories())
@@ -83,7 +82,6 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
   return (
     <>
       <Popover
-        ref={myElementRef}
         customTrigger={popoverTrigger}
         title={'Categories'}
         content={popoverContent}

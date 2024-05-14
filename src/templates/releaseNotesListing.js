@@ -73,11 +73,9 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       }
 
       if(filters.query.length===0 && filters.categories.length === 0){
-        console.log('no filters', releasenotes)
         return releasenotes
       }
 
-      console.log('newFilteredData', newFilteredData)
       return newFilteredData
     }
 
