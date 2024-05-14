@@ -1,10 +1,12 @@
 ---
-title: "Transactional Emails: Rest API emails now sent via SendGrid effective May 12, 2024"
+title: "Transactional Emails now sent via SendGrid API"
 published_date: "2024-05-10"
-categories: [new-feature] [WordPress] [Drupal]
+categories: [new-feature, wordpress, drupal]
 ---
+Beginning this week, Pantheon will begin cutting over individual WordPress and Drupal sites to use Sendgrid's API for the delivery of outgoing email initiated by these CMSes. We expect all sites to be cut over by May 31st. This change is happening at the platform level, not CMS code or configuration, and therefore requires no action by customers. This change should not be noticeable by most customers aside from increased reliability of emails initiated by WordPress and Drupal.
 
-Effective May 12th - We will begin rolling out SendGrid to send transactional emails.
-* Pantheon will begin using SendGrid to send customer transactional emails via rest API during the week of May 12th, 2024 (we expect the full cutover to be complete by the end of May).
-* You don't need to make any changes (Pantheon will manage the cutover).
-* All emails sent via SMTP forwarding will not be changed, and no impact should be expected.
+WordPress and Drupal core can trigger transactional emails for behaviors like the "Forgot Password" flow that allows someone to reset their password after receiving an email.
+
+![WordPress forgot password form](../images/wp-forgot-password-form.png)
+
+Historically Pantheon has relied on a local MTA (postfix) to send such these messages and it has been common for such emails to be categorized as spam or otherwise fail. For teams for whom the delivery of such transactional emails is crtical to operation, we have recommended relying on third party services and continue to do so even as we make our platform-level emails more reliable with this switch to Sendgrid.
