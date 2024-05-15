@@ -9,4 +9,4 @@ WordPress and Drupal core can trigger transactional emails for behaviors like th
 
 ![WordPress forgot password form](../images/wp-forgot-password-form.png)
 
-Historically Pantheon has relied on a local MTA (postfix) to send such these messages and it has been common for such emails to be categorized as spam or otherwise fail. For teams for whom the delivery of such transactional emails is crtical to operation, we have recommended relying on third party services and continue to do so even as we make our platform-level emails more reliable with this switch to Sendgrid.
+Historically Pantheon has relied on a local MTA (postfix) to send these messages and it has been common for such emails to be categorized as spam or otherwise fail. For teams for whom the delivery of such transactional emails is crtical to operation, we have recommended relying on third party services and continue to do so even as we make our platform-level emails more reliable with this switch to Sendgrid.
