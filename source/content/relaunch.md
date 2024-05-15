@@ -23,13 +23,13 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
 ### Expected Disruption
 
-During this procedure, there will be a very brief period of disruption where requests to the custom domain will serve a `404 Unknown Site` error.
+During this procedure, there will be a brief period of disruption where requests to the custom domain will serve a `404 Unknown Site` error.
 
-The `404 Unknown Site` error will be returned as soon as the custom domain is removed from the old site, and once connected to the new site dashboard requests will immediately start to return a `200 OK` status once again. Requests will start routing to the new site dashboard after the TTL for the DNS records expires.
+The `404 Unknown Site` error will be returned as soon as the custom domain is removed from the old site, and once connected to the new site dashboard with ownership verified, requests will immediately start to return a `200 OK` status once again. Requests will start routing to the new site dashboard after the TTL for the DNS records expires.
 
-Due to the very brief period of disruption when a `404 Unknown Site` error is returned to site visitors, we recommend planning a relaunch based on historical traffic patterns for the given site and scheduling the switch during off-peak hours.
+Due to the brief period of disruption when a `404 Unknown Site` error is returned to site visitors, we recommend planning a relaunch based on historical traffic patterns for the given site and scheduling the switch during off-peak hours.
 
-When following the below procedure for relaunch, the duration of the disruption should be very low, usually less than a few minutes.
+When following the below procedure for relaunch, the duration of the disruption should be low, usually less than a few minutes.
 
 ### Before You Begin:
 
@@ -104,6 +104,10 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Connect Domain**
 
+1. Complete domain validation by adding a new DNS TXT record or by uploading a file to a specific URL, the click **Verify Ownership**:
+
+  ![Domain validation prompt](../images/dashboard/verify-domain-with-remove-button.png)
+
 1. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
   <Partial file="standard-dns-config.md" />
@@ -126,13 +130,11 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 Custom domains can only be attached to a single site environment at any given time. For scenarios where you want to move a custom domain to a new site, you must first remove the custom domain before it may be re-connected elsewhere on Pantheon.
 
-This procedure temporarily uses the existing HTTPS certificate until the new one is generated and ready for use.
-
 ### Will my site experience downtime?
 
 If you follow the process outlined above, downtime will be minimal.
 
-Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus) to run the two commands in immediate succession.
+Once you complete step 2 above, the domain is unreachable until you complete the relaunch procedure. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus) to run the two commands in immediate succession.
 
 Set the TTL as low as possible (most DNS providers set a lower limit of 300 seconds, or 5 minutes). Having a long TTL on the changing DNS records increases how long you have to wait until you start getting routed to the new site dashboard.
 
@@ -147,8 +149,6 @@ Best practices during normal operation (e.g. not during a site relaunch) suggest
 ### When do I switch the site from the old site to the new one?
 As soon as the TTL expires after making the DNS changes (after step 5 above), visitors to your domain will start to see the new site. For some time afterwards, your visitors may still see the new site with the old site's HTTPS certificate, that will be spun down by the platform automatically once the new certification is provisioned and deployed.
 
-### How does the enforcement of Domain Verification impact the established relaunch procedure?
-The relaunch procedure is effectively exempt from Domain Verification, because there is already existing certificate data for that domain, we are able to skip the ownership verification process. This allows for a smoother experience with minimal interruption when moving a custom domain to a new site dashboard.
 
 ## More Resources
 
