@@ -104,9 +104,6 @@ Yes, a professional workspace can opt-out from domain verifications across all s
 
 Exemption is only available at the workspace level. For example, you cannot request exemption for just one site in your workspace, or an individual custom domain such as `example.com`.
 
-### How does the enforcement of Domain Verification impact the established relaunch procedure?
-For details, see [the relevant FAQ found in the Relaunch procedure](/relaunch#how-does-the-enforcement-of-domain-verification-impact-the-established-relaunch-procedure) documentation.
-
 ## More Resources
 
 - [DNS](/guides/domains/dns)
