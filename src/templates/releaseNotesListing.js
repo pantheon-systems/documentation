@@ -106,6 +106,26 @@ const ReleaseNotesListingTemplate = ({ data }) => {
 
   useEffect(() => {
     filterData()
+
+    const updateQueryStrings = () => {
+      // Build updated query string
+      const params = new URLSearchParams()
+      filters.categories.forEach(category => {
+        params.append('category', category.slug)
+      })
+
+      // Get current URL and add query string
+      const currentUrl = window.location.href.split('?')[0]
+
+      // Add '?' and params only if filters are selected
+      const newUrl = filters.categories.length > 0 ? currentUrl + '?' + params.toString() : currentUrl
+
+      // Update URL
+      window.history.replaceState({}, '', newUrl)
+    }
+
+    updateQueryStrings()
+
   },[filters])
 
   useEffect(() => {
@@ -203,7 +223,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <FlexContainer alignItems='center'>
+            <FlexContainer alignItems='center' flexWrap='wrap' >
               <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} />
               {
                 filters && filters.categories.map(item => {
