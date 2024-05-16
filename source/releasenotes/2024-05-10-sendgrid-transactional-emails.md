@@ -5,7 +5,7 @@ categories: [new-feature, wordpress, drupal]
 ---
 Beginning this week, Pantheon will start transitioning individual WordPress and Drupal sites to use Sendgrid's API for the delivery of outgoing email initiated by these CMSes. We expect all sites to be fully transitioned by May 31, 2024. This change is happening at the platform level, not within the CMS code or configuration, and therefore requires no action by customers. 
 
-<h3>Reason for transition</h3>
+## Reason for transition
 The transition aims to enhance the reliability and deliverability of transactional emails. Historically, Pantheon has relied on a local MTA (postfix) to send these messages, which has led to common issues such as emails being categorized as spam or failing to deliver. By switching to SendGrid's API, we aim to reduce these issues and enhance the overall email delivery experience for our customers.
 
 WordPress and Drupal core can trigger transactional emails for actions such as "Forgot Password", which allows users to reset their password after receiving an email.
