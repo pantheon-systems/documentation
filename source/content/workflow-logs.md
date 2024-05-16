@@ -35,7 +35,7 @@ Simply click on the tab to access.
 ### Status Indicators
 Each workflow's status is represented by a color code.
 
-![Workflow status idicators color codes](../images/dashboard/new-dashboard/workflow-logs/status-indicators.png)
+![Workflow status idicators color codes](../images/dashboard/new-dashboard/workflow-logs/status-indicator.png)
 
 Alongside the status, you'll find essential details such as the corresponding environment, start time, end time, and the team member who initiated the workflow. If a workflow spans multiple environments, the environment field may appear blank.
 
