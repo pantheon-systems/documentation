@@ -94,6 +94,8 @@ If you have any questions while using workflow logs, please don't hesitate to as
 * **Functionality Feedback**: We're eager to hear your thoughts on the usability, performance, and responsiveness of the feature documented in this guide.
 * **Documentation Input**: This early access guide serves as a precursor to the update on the Pantheon documentation that will cover this feature. If you have any feedback on the presented information or suggestions for additional details, please share them with us.
 
-Please join us in the Pantheon community Slack channel. If you don't already have an account, you can sign up for the [Pantheon Slack workspace here](https://slackin.pantheon.io/).
+## Request early access
+
+If you're interested in getting early access to Workflow Logs, we invite you to join our early access program. Simply fill out the [request form](https://docs.google.com/forms/d/e/1FAIpQLSfky2c4oEOv6Wyq9drp0oxh8hhP3Zkphb_e1GlV7RK_aHzvug/viewform) to apply. This will allow you to start using the feature and provide us with valuable feedback to help improve it further.
 
 Alternatively, you can email any feedback or questions directly to serena.xu@pantheon.io.
