@@ -104,7 +104,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   **<Icon icon="wavePulse" /> Live** > **<Icon icon="global" /> Domains / HTTPS** > **Connect Domain**
 
-1. Complete domain validation by adding a new DNS TXT record or by uploading a file to a specific URL, the click **Verify Ownership**:
+1. Complete domain validation by adding a new DNS TXT record or by uploading a file to a specific URL, then click **Verify Ownership**:
 
   ![Domain validation prompt](../images/dashboard/verify-domain-with-remove-button.png)
 
