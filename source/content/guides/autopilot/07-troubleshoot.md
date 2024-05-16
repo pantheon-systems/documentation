@@ -373,11 +373,11 @@ Site is running a framework that is not supported. Supported frameworks are:
 
 ### Diagnosis
 
-A [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site which is not using Composer is not supported by Autopilot.
+A [WordPress Composer Managed](/guides/wordpress-composer/wordpress-composer-managed) site which is not using Composer is not supported by Autopilot.
 
 ### Solution
 
-Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
+Ensure that your [WordPress Composer Managed](/guides/wordpress-composer/wordpress-composer-managed) site is properly configured. For additional help [contact Support](/guides/support/contact-support/) for assistance.
 
 </Accordion>
 

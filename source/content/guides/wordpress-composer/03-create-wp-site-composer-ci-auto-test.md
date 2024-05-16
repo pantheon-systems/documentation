@@ -19,7 +19,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 <Alert title="Note" type="info">
 
-Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA.
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA.
 
 </Alert >
 
