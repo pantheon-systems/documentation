@@ -16,4 +16,8 @@ We're announcing Workflow Logs, a powerful new feature for enhanced visibility a
 
 [View all features](/workflow-logs)
 
+## Request early access
+
+If you're interested in getting early access to Workflow Logs, we invite you to join our early access program. Simply fill out the [request form](https://docs.google.com/forms/d/e/1FAIpQLSfky2c4oEOv6Wyq9drp0oxh8hhP3Zkphb_e1GlV7RK_aHzvug/viewform) to apply. This will allow you to start using the feature and provide us with valuable feedback to help improve it further.
+
 Our team will continuously enhance Workflow Logs through a planned list of improvements as well as collected feedback throughout the early access program.
