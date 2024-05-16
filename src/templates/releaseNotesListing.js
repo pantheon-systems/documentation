@@ -20,11 +20,9 @@ import {
 
 // Set container width for search and main content.
 const containerWidth = "standard"
+let initialLoad = true
 
 const ReleaseNotesListingTemplate = ({ data }) => {
-  const allReleasenotes = data.allMdx.edges
-  const emptyQuery = ""
-
   // Get the active categories data.
   const activeCategories = JSON.parse(activeReleaseNoteCategories())
 
@@ -116,15 +114,14 @@ const ReleaseNotesListingTemplate = ({ data }) => {
 
       // Get current URL and add query string
       const currentUrl = window.location.href.split('?')[0]
-
-      // Add '?' and params only if filters are selected
       const newUrl = filters.categories.length > 0 ? currentUrl + '?' + params.toString() : currentUrl
 
       // Update URL
       window.history.replaceState({}, '', newUrl)
     }
-
-    updateQueryStrings()
+    if(!initialLoad){
+      updateQueryStrings()
+    }
 
   },[filters])
 
@@ -156,6 +153,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     }
 
     updateFilters()
+    initialLoad = false
   },[])
 
   // Debounce search input.
