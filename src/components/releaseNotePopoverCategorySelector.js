@@ -9,10 +9,16 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
   const activeCategories = JSON.parse(activeReleaseNoteCategories())
 
   const handleCheckbox = (cat) => {
-    const index = filters.categories.findIndex(category => category.slug === cat.slug);
+    const index = filters.categories.findIndex(category => category.slug === cat.slug)
+    let updatedCategories
+
     if (index !== -1){
-      setFilters(prevState => ({...prevState, categories: prevState.categories.filter(item => item.slug !== cat.slug)}))
+      // If category is selected, remove it
+      updatedCategories = filters.categories.filter(item => item.slug !== cat.slug)
+      setFilters(prevState => ({...prevState, categories: updatedCategories}))
     } else {
+      // If category is not selected, add it
+      updatedCategories = [...filters.categories, cat]
       setFilters( prevState => ({...prevState, categories: [...prevState.categories, cat]}))
     }
   }
@@ -32,13 +38,18 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
 
   const popoverContent = (
     <>
-      <div style={{ display: 'flex', gap: 74}} id='popoverContent'>
+      <div className='popover-content' id='popoverContent'>
         {Array.from({ length: totalColumns }, (_, columnIndex) => (
-          <div key={columnIndex} style={{ marginBottom: '10px' }}>
+          <div key={columnIndex} className="popover-content-inner">
             { activeCategories.slice(columnIndex * itemsPerColumn, (columnIndex + 1) * itemsPerColumn).map(item => {
               const isChecked = filters.categories.some(category => category.slug === item.slug)
               return (
-                <FlexContainer key={item.slug} style={{ gap: '8px' }} className='pds-spacing-pad-block-end-m'>
+                <FlexContainer
+                  key={item.slug}
+                  style={{ gap: '8px' }}
+                  className='pds-spacing-pad-block-end-m category-checkbox-group'
+                  mobileFlex='same'
+                >
                   <input
                     type='checkbox'
                     name={item.displayName}

@@ -232,6 +232,30 @@ a.individual-changelog-link:hover {
 
 
 /* New Styles for Release notes page */
+.popover-content{
+  gap: 74px;
+  display: flex;
+}
+
+.popover-content-inner{
+  margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+  .popover-content{
+    gap: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .popover-content-inner{
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+}
+
 .popover-categories .pds-popover__container{
   max-width: 100%;
   padding: 40px;
@@ -245,4 +269,8 @@ a.individual-changelog-link:hover {
 .popover-categories .pds-popover__close{
   top: -20px;
   right: -10px;
+}
+
+.popover-categories .pds-popover__trigger-text{
+  border-bottom: 0;
 }
