@@ -223,19 +223,21 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             </div>
             <FlexContainer alignItems='center' flexWrap='wrap' >
               <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} />
-              {
-                filters && filters.categories.map(item => {
-                  return (
-                    <Tag
-                      key={item.slug}
-                      tagLabel={releaseNoteCategoryLoader(item.slug).displayName}
-                      tagColor={releaseNoteCategoryLoader(item.slug).color}
-                      onRemove={() => handleRemoveTag(item)}
-                      isRemovable={true}
-                    />
-                  )
-                })
-              }
+              <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
+                {
+                  filters && filters.categories.map(item => {
+                    return (
+                      <Tag
+                        key={item.slug}
+                        tagLabel={releaseNoteCategoryLoader(item.slug).displayName}
+                        tagColor={releaseNoteCategoryLoader(item.slug).color}
+                        onRemove={() => handleRemoveTag(item)}
+                        isRemovable={true}
+                      />
+                    )
+                  })
+                }
+              </FlexContainer>
             </FlexContainer>
           </div>
           <div
