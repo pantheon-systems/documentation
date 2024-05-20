@@ -12,7 +12,7 @@ audience: [development]
 product: [secrets]
 integration: [--]
 tags: [reference, cli, local, terminus, workflow]
-permalink: docs/guides/secrets/introduction
+permalink: docs/guides/secrets
 reviewed: "2024-05-01"
 ---
 
