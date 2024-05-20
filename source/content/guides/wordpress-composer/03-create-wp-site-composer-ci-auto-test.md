@@ -1,6 +1,6 @@
 ---
-title: WordPress Composer
-subtitle: Create a CI, Composer-managed WordPress Site
+title: WordPress with Composer on Pantheon
+subtitle: Create a Composer-managed WordPress Site with Terminus Build Tools
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 contenttype: [guide]
 innav: [false]
