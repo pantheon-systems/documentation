@@ -14,4 +14,4 @@ This change enhances security by preventing a malicious actor from bringing traf
 * Validated domains are protected from hijacking.
 * Aligns with industry-standard DNS practices.
 
-For more information, refer to this [FAQ](/guides/domains/custom-domains#faq).
+Customers who find this protection overly burdensome can opt out of this requirement at the level of their Workspace by engaging with our support team to see if they qualify for an exemption. For more information, refer to this [FAQ](/guides/domains/custom-domains#faq).
