@@ -87,7 +87,6 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
       displayType='icon-end'
       onClick={handlePopoverTriggerIcon}
     />
-
   )
 
   return (
@@ -98,6 +97,7 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
         content={popoverContent}
         hasCloseButton={true}
         className={'popover-categories'}
+        placement="bottom-start"
       />
     </>
   )
