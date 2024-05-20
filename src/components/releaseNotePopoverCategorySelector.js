@@ -3,7 +3,7 @@ import { activeReleaseNoteCategories } from "../data/releaseNoteCategories"
 import { Button, FlexContainer, Popover } from "@pantheon-systems/pds-toolkit-react"
 
 const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
-  const [popoverTriggerIcon, setPopoverTriggerIcon] = useState('angleDown')
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false)
 
   // Get the active categories data.
   const activeCategories = JSON.parse(activeReleaseNoteCategories())
@@ -27,10 +27,10 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
     setFilters( prevState => ({...prevState, categories: []}))
   }
 
-  const handlePopoverTriggerIcon = () => {
-    const newIcon = popoverTriggerIcon === 'angleDown' ? 'angleUp' : 'angleDown'
-    setPopoverTriggerIcon(newIcon)
+  const handlePopoverClose = () => {
+    setIsPopoverOpen(false)
   }
+  let popoverTriggerIcon = isPopoverOpen ? 'angleUp' : 'angleDown'
 
   const itemsPerColumn = 6
   const totalItems = activeCategories.length
@@ -85,7 +85,7 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
       variant='secondary'
       iconName={popoverTriggerIcon}
       displayType='icon-end'
-      onClick={handlePopoverTriggerIcon}
+      onClick={() => setIsPopoverOpen(true)}
     />
   )
 
@@ -97,7 +97,8 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
         content={popoverContent}
         hasCloseButton={true}
         className={'popover-categories'}
-        placement="bottom-start"
+        placement='bottom-start'
+        onClose={handlePopoverClose}
       />
     </>
   )
