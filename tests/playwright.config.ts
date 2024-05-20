@@ -27,7 +27,7 @@ export default defineConfig({
     video: 'on',
     /* Base URL to use in actions like `await page.goto('/')`. */
     // TODO, update this url to handle building on the main branch.
-    baseURL: process.env.GITHUB_PR_NUMBER ? 'https://pr-' + process.env.GITHUB_PR_NUMBER + '-documentation.appa.pantheon.site' : 'http://localhost:8000',
+    baseURL: process.env.GITHUB_PR_NUMBER ? 'https://pr-' + process.env.GITHUB_PR_NUMBER + '-documentation.appa.pantheon.site' : 'https://docs.pantheon.io',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

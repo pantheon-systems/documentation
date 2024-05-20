@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('home page', async ({ page }) => {
   await page.goto('/');
   await page.getByText('Accept Cookies').click();
-  await expect(page).toHaveScreenshot('homepage.png');
+  await expect(page).toHaveScreenshot('homepage.png', { fullPage: true });
 });
 
 test('kill-mysql-queries', async ({ page }) => {
