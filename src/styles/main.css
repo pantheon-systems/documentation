@@ -241,7 +241,7 @@ a.individual-changelog-link:hover {
   margin-bottom: 10px;
 }
 
-@media (max-width:768px) {
+@media (max-width:640px) {
   .popover-content{
     gap: 0;
     flex-wrap: wrap;
@@ -259,6 +259,13 @@ a.individual-changelog-link:hover {
 .popover-categories .pds-popover__container{
   max-width: 100%;
   padding: 40px;
+}
+
+@media(max-width: 640px){
+  .popover-tigger-and-tags{
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
 
 .popover-categories .pds-popover__title{
