@@ -261,10 +261,14 @@ a.individual-changelog-link:hover {
   padding: 40px;
 }
 
+.popover-tigger-and-tags{
+  align-items: center;
+  justify-content: flex-start;
+}
+
 @media(max-width: 640px){
   .popover-tigger-and-tags{
     align-items: flex-start;
-    justify-content: center;
   }
 }
 
