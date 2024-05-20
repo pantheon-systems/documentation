@@ -8,10 +8,4 @@ As part of our continued effort to protect sites on our platform, Pantheon now r
 This verification is required before Pantheon will accept traffic on a domain name for a given site.
 This change enhances security by preventing a malicious actor from bringing traffic to a newly created site on Pantheon using a domain that pointed to a since-deleted site on Pantheon.
 
-<h3>Highlights</h3>
-
-* Easily validate domain ownership within the Pantheon dashboard.
-* Validated domains are protected from hijacking.
-* Aligns with industry-standard DNS practices.
-
 Customers who find this protection overly burdensome can opt out of this requirement at the level of their Workspace by engaging with our support team to see if they qualify for an exemption. For more information, refer to this [FAQ](/guides/domains/custom-domains#faq).
