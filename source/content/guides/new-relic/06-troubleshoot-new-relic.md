@@ -77,6 +77,10 @@ You must manually [remove a deleted Multidev environment in New Relic](https://d
 
 1. Navigate to the bottom of the page, click the **Delete application** button, then click the **Confirmation** button when prompted.
 
+## Enable Browser Monitoring for Drupal 10.2+
+
+With the release of Drupal 10.2, [a change to http headers in Drupal core](https://www.drupal.org/node/3298551) prevents automatic injection of New Relic Browser Monitoring code. To continue using this feature, manually insert the tracking script into your templates. [Visit the New Relic documentation for an example configuration](https://docs.newrelic.com/docs/apm/agents/php-agent/features/browser-monitoring-php-agent/#manual_drupal).
+
 ## Disable New Relic Browser Monitoring Agent
 
 You might encounter situations where New Relic's Browser agent interferes with other systems. For example, the JavaScript tag might cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve many errors by disabling New Relic's browser monitoring agent.
