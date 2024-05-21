@@ -19,7 +19,7 @@ integration: [drush]
 
 Drush is installed in two places on within the infrastructure of a modern Drupal site on Pantheon:
 * **The site-local** installation is the one that is managed by a site's Composer files (`composer.json` and `composer.lock`) in the root of the site's git repository. This installation is the one teams should focus on.
-* Secondarily, there is also a **global installation** of Drush that can be controlled by a site's `pantheon.yml` file.
+* Secondarily, there is also a **global** installation of Drush that can be controlled by a site's `pantheon.yml` file.
 
 Allowing for different versions of Drush between the global and site-local level is valuable when many sites are present within the same runtime environment.
 Pantheon's containerized infrastructure makes this distinction more academic than practical for interactions on the platform.
