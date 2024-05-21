@@ -131,6 +131,4 @@ Configure a newer version of Drush as [documented above](#configure-drush-versio
 ## More Resources
 
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
-- [TODO: this blog post didn't get migrated from D7 to D10                             Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
-- [Expand Your Use of Drush on Pantheon with More Commands (Blog)](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands)
 - [The `pantheon.yml` Configuration File](/pantheon-yml)
