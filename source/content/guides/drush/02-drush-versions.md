@@ -31,7 +31,7 @@ For modern Drupal sites the global Drush installation acts primarily as a wrappe
 **For most teams running a modern version of Drupal, the site-local version of Drush is only one to pay attention to.**
 The [`composer.json` file used by newly created Drupal 9 and 10 sites](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json) is set to allow Drush 11 or 12 as the site-local version.
 
-#### Changing the site-local Drush version
+#### Changing the Site-Local Drush Version
 
 To change the site-local version of Drush run a composer command to update the version of Drush in the `composer.json` file. For instance, to set the site-local version of Drush to 11, run the following command:
 
@@ -43,7 +43,7 @@ composer require drush/drush:^11
 
 For older versions of Drupal (7 and earlier), the global installation of Drush is the only one available.
 
-#### Changing the Global Drush version on Pantheon
+#### Changing the Global Drush Version on Pantheon
 
 To change the global Drush version (which will still invoke the site-local version of Drush when available), update the `drush_version` key in the `pantheon.yml` file. For instance, to set the global version of Drush to 11, add the following to the `pantheon.yml` file:
 
