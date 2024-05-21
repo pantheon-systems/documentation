@@ -16,7 +16,7 @@ integration: [drush]
 ---
 
 
-### Understanding Where Drush is Installed
+## Understanding Drush installation
 
 Drush is installed in two places on within the infrastructure of a modern Drupal site on Pantheon:
 
@@ -26,10 +26,32 @@ Drush is installed in two places on within the infrastructure of a modern Drupal
 For older versions of Drupal (7 and earlier), the global installation of Drush is the only one available.
 For Drupal 8 and later, global invocation of Drush will look for a site-local version within the directory structure of the site.
 Allowing for different versions of Drush between the global and site-local level is valuable when many sites are present within the same runtime environment.
-However, Pantheon's containerized infrastructure makes this distinction more academic than practical for interactions on the platform.
-It may be more relevant when working with local development environments or other platform providers.
 
-## Verify Current Drush Version
+Pantheon's containerized infrastructure makes this distinction more academic than practical for interactions on the platform.
+This separation between global and site-local installations relevant when working with local development environments or other platform providers.
+
+**For most teams running a modern version of Drupal, the site-local version of Drush is only one to pay attention to.**
+The [`composer.json` file used by newly created Drupal 9 and 10 sites](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json) is set to allow Drush 11 or 12 as the site-local version.
+
+### Changing the site-local Drush version
+
+To change the site-local version of Drush run a composer command to update the version of Drush in the `composer.json` file. For instance, to set the site-local version of Drush to 11, run the following command:
+
+```bash
+composer require drush/drush:^11
+```
+
+### Changing the global Drush version on Pantheon
+
+To change the global Drush version (which will still invoke the site-local version of Drush when available), update the `drush_version` key in the `pantheon.yml` file. For instance, to set the global version of Drush to 11, add the following to the `pantheon.yml` file:
+
+```yaml title=pantheon.yml
+api_version: 1
+
+drush_version: 11
+```
+
+## Verify Current Drush Version Interacting with Your Drupal Site
 
 You can use [Terminus](/terminus/) to verify the current version of Drush running on your Pantheon site:
 
@@ -37,24 +59,8 @@ You can use [Terminus](/terminus/) to verify the current version of Drush runnin
 terminus drush <site>.<env> -- status | grep "Drush version"
 ```
 
-The [`composer.json` file used by newly created Drupal 9 and 10 sites](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json) is set to allow Drush 11 or 12 as the site-local version.
+This command will return the version of Drush running on your site which will report the site-local version if it is present, otherwise it will report the global version.
 
-
-
-
-TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
-
-
-
-
-
-
-This section provides information on Drush versions and site-local usage.
-
-Pantheon runs Drush versions based on your Drupal version:
-
-- **Drupal (Latest Version)**: Drush 10 (for newly created sites)
-- **Drupal 7**: Drush 8 (for newly created sites)
 
 ## Available Drush Versions
 
@@ -66,27 +72,6 @@ Pantheon runs Drush versions based on your Drupal version:
 
 <Partial file="drush-compatibility.md" />
 
-## Configure Drush Version
-
-1. Refer to [Available Drush Versions](#available-drush-versions) and [Drush requirements](#compatibility-and-requirements) before you modify a site's Drush version. Remember that not all versions of Drush are compatible with all versions of Drupal.
-
-1. Change your site's Drush version in the [`pantheon.yml` file](/pantheon-yml/):
-
-    ```yaml:title=pantheon.yml
-    api_version: 1
-
-    drush_version: 8
-    ```
-
-Now your site’s Drush version is managed via `pantheon.yml`. This allows Drush to be version controlled and deployed along with the rest of your code.
-
-
-<Alert title="Note"  type="info" >
-
-Create the `pantheon.yml` file if it does not already exist. If a `pantheon.upstream.yml` file exists, do not edit it. It is used by the upstream updates repository and will cause a [merge conflict if modified](/core-updates#error-updating-conflict-modifydelete-pantheonupstreamyml-deleted-in-head-and-modified-in-upstreammaster-version-upstreammaster-of-pantheonupstreamyml-left-in-tree).
-
-</Alert>
-
 ## Troubleshoot Your Drush Version
 
 Occasionally, the correct version of Drush is not called even after updating the Drush version in `pantheon.yml`.
@@ -96,20 +81,6 @@ The Pantheon platform always prefers the site-local Drush or other local setting
 1. Check for an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory.
 
 1. Remove the file, or comment out its contents to resolve the issue.
-
-Executing Drush on the platform via a `terminus drush` command will use the version of Drush specified in `pantheon.yml`, unless a site-local version is present.
-
-### Site-local Drush Usage
-
-We recommend that you use the latest version of Drupal with Drush 11 installed as a site-local Drush if you manage your site with Composer.
-
-Our default Composer-managed upstream has a start state for this dependency that will also work with Drush 12 when it is released.
-
-```bash{promptUser: user}
-"drush/drush": "^11 || ^12"
-```
-
-Refer to [Pantheon's Drupal Composer-Managed upstream](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/composer.json#L23) for a complete example of the `composer.json` file.
 
 #### Permissions
 
