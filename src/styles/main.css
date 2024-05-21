@@ -259,6 +259,7 @@ a.individual-changelog-link:hover {
 .popover-categories .pds-popover__container{
   max-width: 100%;
   padding: 40px;
+  z-index: 10;
 }
 
 .popover-tigger-and-tags{
