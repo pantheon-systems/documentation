@@ -20,11 +20,12 @@ import {
 
 // Set container width for search and main content.
 const containerWidth = "standard"
-let initialLoad = true
 
 const ReleaseNotesListingTemplate = ({ data }) => {
   // Get the active categories data.
   const activeCategories = JSON.parse(activeReleaseNoteCategories())
+
+  const initialLoadRef = useRef(true);
 
   // Set up state.
   const [filteredData, setFilteredData] = useState([])
@@ -119,7 +120,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       // Update URL
       window.history.replaceState({}, '', newUrl)
     }
-    if(!initialLoad){
+    if(!initialLoadRef.current){
       updateQueryStrings()
     }
 
@@ -153,7 +154,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     }
 
     updateFilters()
-    initialLoad = false
+    initialLoadRef.current = false
   },[])
 
   // Debounce search input.
