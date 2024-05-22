@@ -373,7 +373,7 @@ Site is running a framework that is not supported. Supported frameworks are:
 
 ### Diagnosis
 
-A [WordPress Composer Managed](/guides/wordpress-composer/wordpress-composer-managed) site which is not using Composer is not supported by Autopilot.
+A Composer-based WordPress site built with [Build Tools](https://docs.pantheon.io/guides/build-tools/) is not supported by Autopilot.
 
 ### Solution
 
