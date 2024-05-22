@@ -45,7 +45,7 @@ For older versions of Drupal (7 and earlier), the global installation of Drush i
 
 #### Changing the Global Drush Version on Pantheon
 
-To change the global Drush version (which will still invoke the site-local version of Drush when available), update the `drush_version` key in the `pantheon.yml` file. For instance, to set the global version of Drush to 11, add the following to the `pantheon.yml` file:
+To change the global Drush version (which will still invoke the site-local version of Drush when available), update the `drush_version` key in the `pantheon.yml` file. For instance, to set the global version of Drush to 8, add the following to the `pantheon.yml` file:
 
 ```yaml:title=pantheon.yml
 api_version: 1
