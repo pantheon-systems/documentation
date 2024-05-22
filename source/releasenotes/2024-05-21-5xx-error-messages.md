@@ -1,7 +1,7 @@
 ---
 title: Unbranded 5xx error messages launched
 published_date: "2024-05-21"
-categories: [general, user-interface]
+categories: [general]
 ---
 
 We’ve replaced all 5xx error messages with plain HTML and removed Pantheon branding for sites hosted on Pantheon. 
@@ -14,3 +14,5 @@ Many of our customers, particularly those who are clients of our agency partners
 
 * Removal of Pantheon branding and Zeus graphic.
 * Updated HTML to support the new messages.
+
+![new 5xx unbranded error messages](../images/5xx-unbranded-error-messages.png)
