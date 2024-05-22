@@ -82,7 +82,7 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
   const popoverTrigger = (
     <Button
       label='Filter by category'
-      size='sm'
+      size='md'
       variant='secondary'
       iconName={popoverTriggerIcon}
       displayType='icon-end'
