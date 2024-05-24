@@ -3,13 +3,13 @@ import { graphql } from "gatsby"
 import debounce from "lodash.debounce"
 import Mark from "mark.js"
 
-import Layout from "../layout/layout"
-import SEO from "../layout/seo"
+import Layout from "../../layout/layout/index.js"
+import SEO from "../../layout/seo.js"
 
-import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
-import ReleaseNotePopoverCategorySelector from "../components/releaseNotePopoverCategorySelector.js"
+import ReleaseNoteTeaser from "../../components/ReleaseNoteTeaser/index.js"
+import ReleaseNotePopoverCategorySelector from "../../components/releaseNotePopoverCategorySelector.js"
 
-import { releaseNoteCategoryLoader } from "../data/releaseNoteCategories.js"
+import { releaseNoteCategoryLoader } from "../../data/releaseNoteCategories.js"
 
 import {
   Container,
@@ -17,6 +17,8 @@ import {
   Icon,
   Tag,
 } from "@pantheon-systems/pds-toolkit-react"
+
+import './style.css'
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -242,7 +244,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <FlexContainer flexWrap='wrap' className='popover-tigger-and-tags' >
+            <FlexContainer flexWrap='wrap' className='rn-popover-tigger-and-tags' >
               <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} />
               <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
                 {

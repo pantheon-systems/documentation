@@ -42,11 +42,11 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
 
   const popoverContent = (
     <>
-      <div className='popover-content' id='popoverContent'>
+      <div className='rn-popover-content' id='popoverContent'>
         {/* Create an array, with length defined in `totalColumns` */}
         {Array.from({ length: totalColumns }, (_, columnIndex) => (
           // Iterate over each column
-          <div key={columnIndex} className="popover-content-inner">
+          <div key={columnIndex} className="rn-popover-content-inner">
             {/* For each column, render items within the specified range based on `itemsPerColumn`
             and slice `activeCategories` to get the items for the current column. */}
             { activeCategories.slice(columnIndex * itemsPerColumn, (columnIndex + 1) * itemsPerColumn).map(item => {
@@ -107,7 +107,7 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
         title={'Categories'}
         content={popoverContent}
         hasCloseButton={true}
-        className={'popover-categories'}
+        className={'rn-popover-categories'}
         placement='bottom-start'
         onClose={handlePopoverClose}
         offsetValue= {18}

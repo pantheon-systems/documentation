@@ -410,7 +410,7 @@ exports.createPages = ({ graphql, actions }) => {
     // And can reused the code above.
     createPage({
       path: `/release-notes/`,
-      component: path.resolve("./src/templates/releaseNotesListing.js"),
+      component: path.resolve("./src/templates/releaseNotesListing/index.js"),
     })
 
     // Create Terminus Command pages
