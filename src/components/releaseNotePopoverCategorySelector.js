@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState } from "react"
 import { activeReleaseNoteCategories } from "../data/releaseNoteCategories"
 import { Button, FlexContainer, Popover } from "@pantheon-systems/pds-toolkit-react"
 
@@ -9,6 +9,7 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
   const activeCategories = JSON.parse(activeReleaseNoteCategories())
 
   const handleCheckbox = (cat) => {
+    // Find the index of the category in the filters.categories array by matching the slug
     const index = filters.categories.findIndex(category => category.slug === cat.slug)
     let updatedCategories
 
@@ -24,14 +25,17 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
   }
 
   const handleClearCategoriesFilters = () => {
-    setFilters( prevState => ({...prevState, categories: []}))
+    setFilters(prevState => ({...prevState, categories: []}))
   }
 
   const handlePopoverClose = () => {
     setIsPopoverOpen(false)
   }
+
+  // Set the icon based on the popover state: 'angleUp' if open, 'angleDown' if closed
   let popoverTriggerIcon = isPopoverOpen ? 'angleUp' : 'angleDown'
 
+  // Popover columns config
   const itemsPerColumn = 6
   const totalItems = activeCategories.length
   const totalColumns = totalItems / itemsPerColumn
@@ -39,11 +43,17 @@ const ReleaseNotePopoverCategorySelector = ({filters, setFilters}) => {
   const popoverContent = (
     <>
       <div className='popover-content' id='popoverContent'>
+        {/* Create an array, with length defined in `totalColumns` */}
         {Array.from({ length: totalColumns }, (_, columnIndex) => (
+          // Iterate over each column
           <div key={columnIndex} className="popover-content-inner">
+            {/* For each column, render items within the specified range based on `itemsPerColumn`
+            and slice `activeCategories` to get the items for the current column. */}
             { activeCategories.slice(columnIndex * itemsPerColumn, (columnIndex + 1) * itemsPerColumn).map(item => {
+              // Check in the state if the category/item is selected
               const isChecked = filters.categories.some(category => category.slug === item.slug)
               return (
+                // Render each category/item with a checkbox and label
                 <FlexContainer
                   key={item.slug}
                   style={{ gap: '8px' }}

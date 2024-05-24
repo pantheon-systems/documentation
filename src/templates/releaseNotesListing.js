@@ -5,10 +5,10 @@ import Mark from "mark.js"
 
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
+
 import ReleaseNoteTeaser from "../components/ReleaseNoteTeaser"
 import ReleaseNotePopoverCategorySelector from "../components/releaseNotePopoverCategorySelector.js"
 
-import { activeReleaseNoteCategories } from "../data/releaseNoteCategories"
 import { releaseNoteCategoryLoader } from "../data/releaseNoteCategories.js"
 
 import {
@@ -22,9 +22,7 @@ import {
 const containerWidth = "standard"
 
 const ReleaseNotesListingTemplate = ({ data }) => {
-  // Get the active categories data.
-  const activeCategories = JSON.parse(activeReleaseNoteCategories())
-
+  // Ref to track whether the component is loading for the first time
   const initialLoadRef = useRef(true);
 
   // Set up state.
@@ -34,8 +32,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     categories: []
   })
 
+  // Ref for storing reference to the search input element
   let queryRef = useRef('')
 
+  // Function to filter releaseNotes
   const filterData = () => {
     // Get all releasenotes.
     const releasenotes = data.allMdx.edges || []
@@ -44,9 +44,12 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     const filterReleaseNotes = (releasenotes) => {
       let newFilteredData = [...releasenotes]
 
+      // If there's a search query, filter the data based on it
       if(filters.query){
+        // Convert the search query to lowercase
         const newQuery = filters.query.toLowerCase()
 
+        // Filter the data to include only items that match the search query
         newFilteredData = newFilteredData.filter(item => {
           const publishedDate = item.node.frontmatter.published_date
           const dateOptions = { year: "numeric", month: "long", day: "numeric" }
@@ -55,6 +58,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             dateOptions
           )
 
+          // Filter the data to include items where the title, body, or formatted date includes the search query
           return (
             item.node.frontmatter.title.toLowerCase().includes(newQuery) ||
             item.node.rawBody.toLowerCase().includes(newQuery) ||
@@ -63,18 +67,22 @@ const ReleaseNotesListingTemplate = ({ data }) => {
         })
       }
 
+      // If there are selected categories, filter the data to include only items that belong to at least one of those categories
       if(filters.categories.length > 0){
         newFilteredData = newFilteredData.filter(item => {
+          // Check if any category of the current item matches any of the selected categories
           return item.node.frontmatter.categories.some(category => {
             return filters.categories.some(filterCategory => filterCategory.slug === category)
           })
         })
       }
 
-      if(filters.query.length===0 && filters.categories.length === 0){
+      // If there's no search query and no selected categories, return all release notes
+      if(filters.query.length === 0 && filters.categories.length === 0){
         return releasenotes
       }
 
+      // Return the filtered data
       return newFilteredData
     }
 
@@ -99,6 +107,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     setFilters( prevState => ({ ...prevState, query: newQuery }))
   }
 
+  // Function to remove a category from the filters state when its tag is removed
   const handleRemoveTag = (category) => {
     setFilters(prevState => ({...prevState, categories:[...prevState.categories.filter(item => item !== category )]}))
   }
@@ -106,6 +115,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   useEffect(() => {
     filterData()
 
+    // Function to update query strings based on filters
     const updateQueryStrings = () => {
       // Build updated query string
       const params = new URLSearchParams()
@@ -120,6 +130,8 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       // Update URL
       window.history.replaceState({}, '', newUrl)
     }
+
+    // Update query strings in the URL based on the current filters, but only if it's not the initial load
     if(!initialLoadRef.current){
       updateQueryStrings()
     }
@@ -127,12 +139,17 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   },[filters])
 
   useEffect(() => {
+    // Function to update filters based on URL parameters
     const updateFilters = () => {
+      // Get search parameters from the URL
       const searchParams = new URLSearchParams(window.location.search)
+      // Extract query and category slugs from search parameters
       const query = searchParams.get('query')
       const categorySlugs = searchParams.getAll('category')
+      // Map category slugs to category objects
       const categories = categorySlugs.map(slug => ({slug}))
 
+      // Update filters if the query in URL parameters differs from the current query in state
       if( query !== filters.query ){
         setFilters( prevState => (
           {
@@ -143,6 +160,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
         queryRef.current.value = query
       }
 
+      // Update filters if categories in URL parameters differ from the current categories in state
       if( JSON.stringify(categories) !== JSON.stringify(filters.categories) ) {
         setFilters( prevState => (
           {
@@ -154,6 +172,8 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     }
 
     updateFilters()
+
+    // Set initial load reference to false after the initial update
     initialLoadRef.current = false
   },[])
 
