@@ -1,6 +1,6 @@
 ---
 title: Pantheon Advanced Page Cache 2.0 update
-published_date: "2024-05-27"
+published_date: "2024-05-28"
 categories: [wordpress, plugins]
 ---
 
