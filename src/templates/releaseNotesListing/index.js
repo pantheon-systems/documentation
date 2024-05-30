@@ -33,6 +33,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     query: '',
     categories: []
   })
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const notesPerPage = 8
+  let totalPagesRef = useRef(0)
 
   // Ref for storing reference to the search input element
   let queryRef = useRef('')
@@ -88,8 +92,17 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       return newFilteredData
     }
 
-    // Update state based on filters.
-    setFilteredData(filterReleaseNotes(releasenotes))
+    // Get all filtered data
+    const allFilteredData = filterReleaseNotes(releasenotes)
+
+    // Filtered data sliced for pagination
+    const paginatedFilteredData = allFilteredData.slice((currentPage - 1) * notesPerPage, currentPage * notesPerPage)
+
+    // Update the total pages number based on the amount of releaseNotes
+    totalPagesRef.current = Math.ceil(allFilteredData.length / notesPerPage)
+
+    // Update state based on filters and pagination.
+    setFilteredData(paginatedFilteredData)
 
     // Mark releasenotes based on query.
     var context = document.querySelector(".docs-release-note-results")
@@ -107,11 +120,13 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   const handleInputChange = (event) => {
     const newQuery = event.target.value
     setFilters( prevState => ({ ...prevState, query: newQuery }))
+    setCurrentPage(1)
   }
 
   // Function to remove a category from the filters state when its tag is removed
   const handleRemoveTag = (category) => {
     setFilters(prevState => ({...prevState, categories:[...prevState.categories.filter(item => item !== category )]}))
+    setCurrentPage(1)
   }
 
   useEffect(() => {
@@ -138,7 +153,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       updateQueryStrings()
     }
 
-  },[filters])
+  },[filters, currentPage])
 
   useEffect(() => {
     // Function to update filters based on URL parameters
@@ -178,6 +193,91 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     // Set initial load reference to false after the initial update
     initialLoadRef.current = false
   },[])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage)
+    scrollToTop()
+  }
+
+  const PaginationControls = () => {
+    const createPageRange = (currentPage, totalPages, delta = 2) => {
+      const range = []
+      const sideDelta = 2
+
+      if (currentPage <= delta + 1) {
+        // Near the start
+        for (let i = 1; i <= Math.min(totalPages, delta * 2 + 1); i++) {
+          range.push(i)
+        }
+        if (totalPages > delta * 2 + 1) {
+          range.push('...')
+        }
+      } else if (currentPage >= totalPages - delta) {
+        // Near the end
+        range.push('...');
+        for (let i = Math.max(1, totalPages - delta * 2); i <= totalPages; i++) {
+          range.push(i)
+        }
+      } else {
+        // In the middle
+        range.push('...')
+        for (let i = currentPage - sideDelta; i <= currentPage + sideDelta; i++) {
+          range.push(i)
+        }
+        range.push('...')
+      }
+
+      if (range[range.length - 1] !== totalPages) {
+        range.push(totalPages);
+      }
+
+      return range;
+    }
+
+    // Generate the range of pages to display
+    const pages = createPageRange(currentPage, totalPagesRef.current, 2);
+
+    return (
+      <div className="rn-pagination-controls">
+        { currentPage > 1 &&
+          <button onClick={() => handlePageChange(1)} disabled={currentPage === 1}>First</button>
+        }
+        { totalPagesRef.current > 1 && currentPage > 1 &&
+          <button onClick={() => handlePageChange(currentPage - 1)} className='arrowIcon'>
+            <Icon iconName='arrowLeft' />
+          </button>
+        }
+        {
+          pages.map((page, index) => {
+            return (
+              <button
+                key={page === '...' ? `dots-${index}` : page}
+                onClick={() => page !== '...' && handlePageChange(page)}
+                className={currentPage === page ? 'active' : ''}
+              >
+                {page}
+              </button>
+            )
+          })
+        }
+        { totalPagesRef.current > 1 && currentPage < totalPagesRef.current &&
+          <button onClick={() => handlePageChange(currentPage + 1)} className='arrowIcon' disabled={totalPagesRef.current === 1 || currentPage === totalPagesRef.current}>
+            <Icon iconName='arrowRight' />
+          </button>
+        }
+        { currentPage !== totalPagesRef.current &&
+          <button onClick={() => handlePageChange(totalPagesRef.current)} disabled={currentPage === totalPagesRef.current}>Last</button>
+        }
+      </div>
+    )
+  }
 
   // Debounce search input.
   const debouncedHandleInputChange = debounce(handleInputChange, 300)
@@ -245,7 +345,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
               />
             </div>
             <FlexContainer flexWrap='wrap' className='rn-popover-tigger-and-tags' >
-              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} />
+              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} />
               <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
                 {
                   filters && filters.categories.map(item => {
@@ -269,6 +369,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
           >
             {renderedReleaseNotes}
           </div>
+          <PaginationControls />
         </Container>
       </main>
     </Layout>
