@@ -6,8 +6,9 @@ import Mark from "mark.js"
 import Layout from "../../layout/layout/index.js"
 import SEO from "../../layout/seo.js"
 
-import ReleaseNoteTeaser from "../../components/ReleaseNoteTeaser/index.js"
+import ReleaseNotesPager from "../../components/releaseNotesPager.js"
 import ReleaseNotePopoverCategorySelector from "../../components/releaseNotePopoverCategorySelector.js"
+import ReleaseNoteTeaser from "../../components/ReleaseNoteTeaser/index.js"
 
 import { releaseNoteCategoryLoader } from "../../data/releaseNoteCategories.js"
 
@@ -194,91 +195,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     initialLoadRef.current = false
   },[])
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
-
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage)
-    scrollToTop()
-  }
-
-  const PaginationControls = () => {
-    const createPageRange = (currentPage, totalPages, delta = 2) => {
-      const range = []
-      const sideDelta = 2
-
-      if (currentPage <= delta + 1) {
-        // Near the start
-        for (let i = 1; i <= Math.min(totalPages, delta * 2 + 1); i++) {
-          range.push(i)
-        }
-        if (totalPages > delta * 2 + 1) {
-          range.push('...')
-        }
-      } else if (currentPage >= totalPages - delta) {
-        // Near the end
-        range.push('...');
-        for (let i = Math.max(1, totalPages - delta * 2); i <= totalPages; i++) {
-          range.push(i)
-        }
-      } else {
-        // In the middle
-        range.push('...')
-        for (let i = currentPage - sideDelta; i <= currentPage + sideDelta; i++) {
-          range.push(i)
-        }
-        range.push('...')
-      }
-
-      if (range[range.length - 1] !== totalPages) {
-        range.push(totalPages);
-      }
-
-      return range;
-    }
-
-    // Generate the range of pages to display
-    const pages = createPageRange(currentPage, totalPagesRef.current, 2);
-
-    return (
-      <div className="rn-pagination-controls">
-        { currentPage > 1 &&
-          <button onClick={() => handlePageChange(1)} disabled={currentPage === 1}>First</button>
-        }
-        { totalPagesRef.current > 1 && currentPage > 1 &&
-          <button onClick={() => handlePageChange(currentPage - 1)} className='arrowIcon'>
-            <Icon iconName='arrowLeft' />
-          </button>
-        }
-        {
-          pages.map((page, index) => {
-            return (
-              <button
-                key={page === '...' ? `dots-${index}` : page}
-                onClick={() => page !== '...' && handlePageChange(page)}
-                className={currentPage === page ? 'active' : ''}
-              >
-                {page}
-              </button>
-            )
-          })
-        }
-        { totalPagesRef.current > 1 && currentPage < totalPagesRef.current &&
-          <button onClick={() => handlePageChange(currentPage + 1)} className='arrowIcon' disabled={totalPagesRef.current === 1 || currentPage === totalPagesRef.current}>
-            <Icon iconName='arrowRight' />
-          </button>
-        }
-        { currentPage !== totalPagesRef.current &&
-          <button onClick={() => handlePageChange(totalPagesRef.current)} disabled={currentPage === totalPagesRef.current}>Last</button>
-        }
-      </div>
-    )
-  }
-
+  
   // Debounce search input.
   const debouncedHandleInputChange = debounce(handleInputChange, 300)
 
@@ -369,7 +286,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
           >
             {renderedReleaseNotes}
           </div>
-          <PaginationControls />
+          <ReleaseNotesPager currentPage={currentPage} setCurrentPage={setCurrentPage} totalPagesRef={totalPagesRef} />
         </Container>
       </main>
     </Layout>

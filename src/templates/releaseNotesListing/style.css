@@ -61,6 +61,7 @@
 }
 
 .rn-pagination-controls button{
+  padding: 6px 11px;
   background-color: transparent;
   color: var(--pds-color-text-paragraph);
   border: 0;
@@ -69,10 +70,14 @@
 }
 
 .rn-pagination-controls button.active{
-  padding: 4px 10px;
   background-color: var(--pds-color-button-secondary-background-hover);
   color: var(--pds-color-brand-secondary-default);
   border-radius: 3px;
+}
+
+.rn-pagination-controls button.arrowIcon {
+  display: flex;
+  align-items: center;
 }
 
 .rn-pagination-controls button:disabled{
