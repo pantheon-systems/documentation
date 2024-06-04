@@ -30,6 +30,7 @@ const ReleaseNoteTeaser = ({ ReleaseNoteData, className }) => {
           </Link>
           <ReleaseNoteCategories
             categories={ReleaseNoteData.frontmatter.categories}
+            isLinkable={false}
           />
         </div>
         <PublishedDate
