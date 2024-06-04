@@ -64,7 +64,7 @@ You can learn more about WordPress configuration with Bedrock in the [Bedrock Co
 
 Bedrock installs WordPress as a required package so updates can be managed by Composer. As such, the contents of the `wp-content` directory have been moved outside the WordPress codebase so changes can be made safely to files within those directories without conflicts. Learn more about [Bedrock's folder structure here](https://docs.roots.io/bedrock/master/folder-structure/).
 
-* Theme are installed into `web/app/themes/`
+* Themes are installed into `web/app/themes/`
 * Plugins are installed into `web/app/plugins`
 * Must-use plugins are installed into `web/app/mu-plugins`
 * The WordPress admin dashboard is available at `https://example.com/wp/wp-admin/`
