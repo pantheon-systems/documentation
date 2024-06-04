@@ -31,7 +31,7 @@ There are different cases for using Composer to manage dependencies on a WordPre
 
 ## First Steps
 
-Complete the steps below before using this guide to create or manage updates on your Pantheon Composer-managed WordPress site.
+Review the steps below before using this guide to create or manage updates on your Pantheon Composer-managed WordPress site.
 
 <Alert title="Existing WordPress Composer Sites" type="info" >
 
@@ -45,10 +45,7 @@ Please reach out to our [Professional Services](https://pantheon.io/professional
 
 1. Review [Managing Core as Project Dependency](/guides/composer#managing-core-as-a-project-dependency).
 
-1. Review [Custom Upstream Workflow](/guides/composer#custom-upstream-workflow).
-
 ## More Resources
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
-
 - [Convert a Standard Drupal Site to a Composer-Managed Site](/guides/composer-convert)
