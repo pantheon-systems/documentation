@@ -67,6 +67,7 @@ Bedrock installs WordPress as a required package so updates can be managed by Co
 * Themes are installed into `web/app/themes/`
 * Plugins are installed into `web/app/plugins`
 * Must-use plugins are installed into `web/app/mu-plugins`
+* WordPress core is installed into `web/wp`
 * The WordPress admin dashboard is available at `https://example.com/wp/wp-admin/`
 
 ### Using Composer to manage plugins and themes
