@@ -15,7 +15,7 @@ showtoc: true
 permalink: docs/guides/wordpress-composer
 ---
 
-[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides a simplified method to manage the external (non-core) code used by a WordPress site.
+[Composer](https://getcomposer.org/) is a widely-used PHP dependency and package manager that provides a simplified method to manage packages (plugins, themes and -- with the [WordPress (Composer Managed) upstream](/wordpress-composer-managed), WordPress core itself) used by a WordPress site.
 
 At the most basic level, Composer requires:
 
@@ -25,11 +25,9 @@ At the most basic level, Composer requires:
 There are different cases for using Composer to manage dependencies on a WordPress site, including:
 
 - Manage dependencies for themes and plugins you’re currently developing
-
 - Manage the themes and plugins currently used on the site
-
+- Manage WordPress core updates
 - Total site dependency management, including custom code
-
 
 ## First Steps
 
