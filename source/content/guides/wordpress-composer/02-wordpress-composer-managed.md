@@ -30,7 +30,6 @@ WordPress does not natively support [Composer](https://getcomposer.org/), howeve
 ## Requirements
 
 - [PHP version](/guides/php/php-versions#verify-current-php-versions) 8.0 or greater
-
 - [Composer](https://getcomposer.org/)
 
 ## Create Your Site
@@ -57,7 +56,7 @@ Bedrock makes use of an `.env` file to store environment variables. Pantheon tak
 
 ### WordPress Config
 
-The `wp-config.php` file is located in the `web` directory. As with other WordPress sites on Pantheon, much of this is taken care of for you in `wp-config-pantheon.php`. Application-level configuration takes place in `config/application.php`. This can be referenced as a guide to understand how the constants are set up and how the `.env` files work, but modifying this file may result in merge conflicts and is not recommended. Any configuration changes should be made to your `wp-config.php` file directly.
+The `wp-config.php` file is located in the `web` directory. As with other WordPress sites on Pantheon, much of this is taken care of for you in `wp-config-pantheon.php`. Application-level configuration takes place in `config/application.php` while platform-specific updates are made in `config/application.pantheon.php`. This means that `config/application.php` can be modified for your WordPress configuration settings without fear of conflicts with the upstream. Any configuration changes should be made to your `config/appliction.php` **not** your `wp-config.php` file directly.
 
 You can learn more about WordPress configuration with Bedrock in the [Bedrock Configuration docs](https://docs.roots.io/bedrock/master/configuration/).
 
