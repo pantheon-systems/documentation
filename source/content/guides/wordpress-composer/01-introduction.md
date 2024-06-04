@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith,jazzs3quence]
 showtoc: true
 permalink: docs/guides/wordpress-composer
 ---
