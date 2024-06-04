@@ -26,7 +26,7 @@ const containerWidth = "standard"
 
 const ReleaseNotesListingTemplate = ({ data }) => {
   // Ref to track whether the component is loading for the first time
-  const initialLoadRef = useRef(true);
+  const initialLoadRef = useRef(true)
 
   // Set up state.
   const [filteredData, setFilteredData] = useState([])
@@ -130,24 +130,25 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     setCurrentPage(1)
   }
 
+  // Function to update query strings based on filters and page
+  const updateQueryStrings = () => {
+    // Build updated query string
+    const params = new URLSearchParams()
+    filters.categories.forEach(category => {
+      params.append('category', category.slug)
+    })
+    params.append('page', currentPage)
+
+    // Get current URL and add query string
+    const currentUrl = window.location.href.split('?')[0]
+    const newUrl = filters.categories.length > 0 || currentPage ? currentUrl + '?' + params.toString() : currentUrl
+
+    // Update URL
+    window.history.replaceState({}, '', newUrl)
+  }
+
   useEffect(() => {
     filterData()
-
-    // Function to update query strings based on filters
-    const updateQueryStrings = () => {
-      // Build updated query string
-      const params = new URLSearchParams()
-      filters.categories.forEach(category => {
-        params.append('category', category.slug)
-      })
-
-      // Get current URL and add query string
-      const currentUrl = window.location.href.split('?')[0]
-      const newUrl = filters.categories.length > 0 ? currentUrl + '?' + params.toString() : currentUrl
-
-      // Update URL
-      window.history.replaceState({}, '', newUrl)
-    }
 
     // Update query strings in the URL based on the current filters, but only if it's not the initial load
     if(!initialLoadRef.current){
@@ -163,6 +164,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       const searchParams = new URLSearchParams(window.location.search)
       // Extract query and category slugs from search parameters
       const query = searchParams.get('query')
+      const pageUrl = parseInt(searchParams.get('page'), 10) || 1
       const categorySlugs = searchParams.getAll('category')
       // Map category slugs to category objects
       const categories = categorySlugs.map(slug => ({slug}))
@@ -186,6 +188,15 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             categories: categories || []
           }
         ))
+      }
+
+      // Check if pageUrl is greater than totalPagesRef.current
+      // If it's greater, go to first page, otherwise go to pageUrl
+      if (pageUrl > totalPagesRef.current) {
+        setCurrentPage(1)
+      } else {
+        setCurrentPage(pageUrl)
+        updateQueryStrings()
       }
     }
 
