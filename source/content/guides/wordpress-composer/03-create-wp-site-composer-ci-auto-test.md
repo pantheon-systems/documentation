@@ -26,9 +26,7 @@ Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpre
 ## Requirements
 
 - [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
-
     - You must use the [Build Tools 3.x release](https://github.com/pantheon-systems/terminus-build-tools-plugin/tree/3.x) if you are using **Terminus 3**.
-
 - [PHP version](/guides/php/php-versions#verify-current-php-versions) 7.2 or greater
 
 ## Create Your Site
