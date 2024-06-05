@@ -245,6 +245,32 @@ if [ -z "$PANTHEON_ENVIRONMENT" ]; then
 fi
 ```
 
+### Removing files previously scaffolded by drupal-scaffold
+
+The way that Integrated Composer works in Pantheon is by starting with your latest build to optimize the build time; this leads to an issue where if you decide to not scaffold a file anymore; the file will stay there unless you actually remove it. A possible way to do this is to add a `pre-install-cmd` to remove the file. So, the full process to remove files will be like this:
+
+1. Stop the file from being scaffolded by adding lines like this to your composer.json file
+    ```
+    "extra": {
+      "drupal-scaffold": {
+        "file-mapping": {
+          "[web-root]/robots.txt": false
+        },
+        ...
+      }
+    ```
+1. Add a pre-install-hook to actually remove the file
+    ```
+    "scripts": {
+      "pre-install-cmd": [
+        "rm -f web/robots.txt"
+      ],
+      ...
+    },
+    ```
+1. Commit and push your changes to the platform
+1. Once Integrated Composer runs for this commit, the file should be deleted from your environment.
+
 ## More Resources
 
 - [Integrated Composer FAQ](/guides/integrated-composer/ic-faq)
