@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith,jazzsequence]
 showtoc: true
 permalink: docs/guides/wordpress-composer/create-wp-site-composer-ci-auto-test
 ---
@@ -19,7 +19,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 <Alert title="Note" type="info">
 
-Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA.
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA and **Terminus Build Tools** does not currently support the Bedrock-based WordPress (Composer Managed) upstream.
 
 </Alert >
 
