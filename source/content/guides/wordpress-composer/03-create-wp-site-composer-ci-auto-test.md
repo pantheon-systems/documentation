@@ -62,7 +62,7 @@ Your files may still be accessible from your version control project if it is pu
 
 ### /web/wp Directory
 
-Your directories and files within the `/web` directory are stored in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
+Your directories and files within the `/web` directory are stored in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://developer.wordpress.org/advanced-administration/server/wordpress-in-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
 
 1. Verify that the `WP_SITEURL` file is in the `/web/wp` directory to allow WordPress core functions to work correctly.
 
