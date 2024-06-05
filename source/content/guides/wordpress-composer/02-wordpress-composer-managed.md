@@ -125,8 +125,7 @@ Replace `vendor/package` with the package name you want to update. This will upd
 
 ## Known Issues
 
-- The WordPress Composer Managed upstream is not yet compatible with WordPress Multisite with subdirectories.
-- There is a bug with WordPress Multisite with subdomains when running the site locally with Lando and running WP-CLI commands. There is a [gist](https://gist.github.com/jazzsequence/8b68c35aa7668b77776fc1b9df216304) to fix this, which will eventually be incorporated into the upstream.
+- There is currently a known issue with WordPress Composer Managed not supporting WordPress Multisite with subdirectories. [Alternative implementations]() of WordPress with Composer may be used for this use case.
 
 ## Report an Issue
 
