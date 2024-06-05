@@ -49,6 +49,7 @@ Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpre
     ```
 
     - This site will be based on the Pantheon-maintained [WordPress Composer repository](https://github.com/pantheon-systems/example-wordpress-composer).
+        - This repository has a similar structure to the [Bedrock-based WordPress (Composer Managed) upstream](https://github.com/pantheon-upstreams/wordpress-composer-managed) but does not use Bedrock. This repository will be deprecated in the future in favor of integrating the Bedrock-based upstream into Build Tools.
 
 1. Review the sections below for important information about your site, including an explanation of the directory structure, Continuous Integration functions, and essential configuration actions.
 
