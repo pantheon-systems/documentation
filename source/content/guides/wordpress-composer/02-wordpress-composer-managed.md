@@ -125,7 +125,7 @@ Replace `vendor/package` with the package name you want to update. This will upd
 
 ## Known Issues
 
-- There is currently a known issue with WordPress Composer Managed not supporting WordPress Multisite with subdirectories. [Alternative implementations]() of WordPress with Composer may be used for this use case.
+- There is currently a known issue with WordPress Composer Managed not supporting WordPress Multisite with subdirectories. [Alternative implementations](/wordpress-ic) of WordPress with Composer may be used for this use case.
 
 ## Report an Issue
 
