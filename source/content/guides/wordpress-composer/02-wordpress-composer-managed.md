@@ -102,6 +102,27 @@ composer require wpackagist-theme/twentytwentytwo
 composer require wpackagist-plugin/advanced-custom-fields
 ```
 
+#### Check first
+It's generally a good idea when using either Packagist or WPackagist to check the repository before `require`ing the package. If you search Packagist for a WordPress plugin or theme and don't see it, you can be sure that if it exists in the WordPress plugin or theme repository, it will be available on WPackagist. Checking WPackagist for the package can be beneficial if you want to check what versions are available.
+
+### Updating dependencies
+
+To update all Composer dependencies, run:
+
+```bash{promptUser: user}
+composer update
+```
+
+This will update all Composer-managed packages according to the version constraints in your `composer.json` file. For more information on Composer version constraints, see the [Composer documentation](https://getcomposer.org/doc/articles/versions.md).
+
+To update a specific package, run:
+
+```bash{promptUser: user}
+composer update vendor/package
+```
+
+Replace `vendor/package` with the package name you want to update. This will update only the named package to the latest version that matches the version constraints in your `composer.json` file.
+
 ## Known Issues
 
 - The WordPress Composer Managed upstream is not yet compatible with WordPress Multisite with subdirectories.
