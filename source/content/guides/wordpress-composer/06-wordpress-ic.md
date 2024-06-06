@@ -19,7 +19,7 @@ permalink: docs/guides/wordpress-composer/wordpress-ic
 
 ## WordPress with Integrated Composer on Pantheon
 
-Pantheon maintains a [Composer-enabled WordPress Upstream](https://github.com/pantheon-upstreams/wordpress-project) repository. This is the recommended starting point for forking new upstreams that work with Pantheon's Integrated Composer build process.
+Pantheon maintains a [Composer-enabled WordPress Upstream](https://github.com/pantheon-upstreams/wordpress-composer-managed) repository. This is the recommended starting point for forking new upstreams that work with Pantheon's Integrated Composer build process.
 
 This repository is still under active development, and you should not create permanent/production sites from it. There is no guarantee of backwards compatibility.
 
