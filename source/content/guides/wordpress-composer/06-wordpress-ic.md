@@ -21,7 +21,7 @@ permalink: docs/guides/wordpress-composer/wordpress-ic
 
 Pantheon maintains a [Composer-enabled WordPress Upstream](https://github.com/pantheon-upstreams/wordpress-composer-managed) repository. This is the recommended starting point for forking new upstreams that work with Pantheon's Integrated Composer build process.
 
-This repository is still under active development, and you should not create permanent/production sites from it. There is no guarantee of backwards compatibility.
+This repository is still under active development. As with all custom upstreams, you are responsible for maintaining your custom upstream and making sure it is up-to-date with the source upstream. There is no guarantee of backwards compatibility.
 
 Pantheon upstreams influence the Composer packages that are included in downstream sites by including two `composer.json` files in this repository:
 
