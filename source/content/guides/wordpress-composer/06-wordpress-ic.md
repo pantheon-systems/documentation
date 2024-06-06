@@ -1,7 +1,7 @@
 ---
 title: WordPress with Composer on Pantheon
-subtitle: Create a Composer-managed WordPress Site with Integrated Composer
-description: Learn how to use Integrated Composer with WordPress on Pantheon.
+subtitle: Create a Composer-managed WordPress Site with Integrated Composer and Custom Upstreams
+description: Learn how to use Integrated Composer and Custom Upstreams with WordPress on Pantheon.
 contenttype: [guide]
 innav: [false]
 categories: [dependencies]
@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith,jazzsequence]
 showtoc: true
 permalink: docs/guides/wordpress-composer/wordpress-ic
 ---
