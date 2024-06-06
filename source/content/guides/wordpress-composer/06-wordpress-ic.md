@@ -33,7 +33,7 @@ Pantheon upstreams influence the Composer packages that are included in downstre
 
 Follow the steps in this section to create a new WordPress site using Integrated Composer and Upstream.
 
-1. Fork the [Pantheon-maintained WordPress Upstream repository](https://github.com/pantheon-upstreams/wordpress-project).
+1. Fork the [Pantheon-maintained WordPress Upstream repository](https://github.com/pantheon-upstreams/wordpress-composer-managed).
 
 1. [Connect your repository](/guides/custom-upstream/create-custom-upstream#connect-repository-to-pantheon) to Pantheon.
 
