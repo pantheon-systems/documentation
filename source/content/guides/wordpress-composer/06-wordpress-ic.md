@@ -25,7 +25,7 @@ This repository is still under active development. As with all custom upstreams,
 
 Pantheon upstreams influence the Composer packages that are included in downstream sites by including two `composer.json` files in this repository:
 
-- The root `/composer.json` file is owned by the downstream site. Upstream maintainers should avoid editing this file. This allows the downstream site maintainer to adjust the `/composer.json` file without creating potential conflicts when merging upstream updates.
+- The root `/composer.json` file is owned by the downstream site. Maintainers of _custom upstreams_ should avoid editing this file. This allows the downstream site maintainer to adjust the `/composer.json` file without creating potential conflicts when merging upstream updates.
 
 - The `upstream-config/composer.json` file is owned by the upstream maintainer. It is included by the root `composer.json` file, and allows upstreams to add or remove packages from downstream sites. Changes are automatically incorporated into the downstream site whenever upstream updates are applied.
 
