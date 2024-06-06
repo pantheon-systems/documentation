@@ -42,7 +42,6 @@ Follow the steps in this section to create a new WordPress site using Integrated
 ## Add and Remove Packages
 
 1. Use `composer require`in the `upstream-configuration` directory (or `composer upstream-require` if using `upstream-management`) to edit the upstream `composer.json` file.
-
     - The repository template places a theme in the upstream `composer.json` file. This works well for downstream sites that all use the same theme. You should remove themes from the upstream `composer.json` file if you do not intend to use the upstream to lock downstream sites into a particular theme. You cannot remove installed packages from downstream sites if the packages were included from the upstream site.
 
 ## Maintain Your Integrated Composer Fork
@@ -50,46 +49,32 @@ Follow the steps in this section to create a new WordPress site using Integrated
  There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
 
 1. Increase the version number listed in the `upstream-configuration/composer.json` file each time you make edits.
-
     - Composer checks the contents of the root `/composer.json` file for changes that should be pushed to your upstream configuration.
 
 1. Verify your changes to the `upstream-configuration/composer.json` file by running `composer install` or `composer update` in the `upstream-configuration` directory.
-
     - Be careful not to rely on ["root-only" properties of composer.json](https://getcomposer.org/doc/04-schema.md).
 
 ## Manage Your WordPress Integrated Composer Site
 
 1. Review the [Integrated Composer Guide](/guides/integrated-composer) for information on how to:
-
     - [Manage Core as a Project Dependency](/guides/composer#managing-core-as-a-project-dependency)
-
     - [Serve Sites from the Web Subdirectory](/nested-docroot)
-
     - [Add a Dependency to an Individual Site](/guides/integrated-composer#add-a-dependency-to-an-individual-site)
-
     - [Add a Package from a Private Repository](/guides/integrated-composer/private-repo-package)
-
     - [Apply One-click Updates](/guides/integrated-composer/one-click-updates)
-
     - [Add dependencies to your Upstream](/guides/integrated-composer/ic-upstreams)
-
+    
 1. Review the [Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) documentation to learn how to:
-
     - [Test and Release Pantheon Core Updates](/guides/custom-upstream/maintain-custom-upstream#test-and-release-pantheon-core-updates)
-
     - [Automatically Resolve Conflicts from the Command Line](/guides/custom-upstream/maintain-custom-upstream#automatically-resolve-from-the-command-line)
-
     - [Tips and Tricks for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream#delete-custom-upstream)
-
     - [Delete a Custom Upstream](/guides/custom-upstream/maintain-custom-upstream#delete-custom-upstream)
 
 1. Review the [Pantheon YAML Configuration Files](/pantheon-yml) documentation to learn about:
-
     - [Custom Upstream Configurations](/pantheon-yml#custom-upstream-configurations)
-
 
 ## More Resources
 
 - [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
-
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
+- [Create a Composer-managed WordPress Site with Bedrock](/guides/wordpress-composer/wordpress-composer-managed)
