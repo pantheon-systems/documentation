@@ -41,7 +41,7 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 ## Add and Remove Packages
 
-1. Use `composer require`in the `upstream-config` directory to edit the upstream `composer.json` file.
+1. Use `composer require`in the `upstream-configuration` directory to edit the upstream `composer.json` file.
 
     - The repository template places a theme in the upstream `composer.json` file. This works well for downstream sites that all use the same theme. You should remove themes from the upstream `composer.json` file if you do not intend to use the upstream to lock downstream sites into a particular theme. You cannot remove installed packages from downstream sites if the packages were included from the upstream site.
 
@@ -49,11 +49,11 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
  There are some special considerations to keep in mind if you intend to make modifications to your upstream based on this repository.
 
-1. Increase the version number listed in the `upstream-config/composer.json` file each time you make edits.
+1. Increase the version number listed in the `upstream-configuration/composer.json` file each time you make edits.
 
     - Composer checks the contents of the root `/composer.json` file for changes that should be pushed to your upstream configuration.
 
-1. Verify your changes to the `upstream-config/composer.json` file by running `composer install` or `composer update` in the `upstream-config` directory.
+1. Verify your changes to the `upstream-configuration/composer.json` file by running `composer install` or `composer update` in the `upstream-configuration` directory.
 
     - Be careful not to rely on ["root-only" properties of composer.json](https://getcomposer.org/doc/04-schema.md).
 
