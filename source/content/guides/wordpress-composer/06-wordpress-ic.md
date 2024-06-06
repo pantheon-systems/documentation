@@ -27,7 +27,7 @@ Pantheon upstreams influence the Composer packages that are included in downstre
 
 - The root `/composer.json` file is owned by the downstream site. Maintainers of _custom upstreams_ should avoid editing this file. This allows the downstream site maintainer to adjust the `/composer.json` file without creating potential conflicts when merging upstream updates.
 
-- The `upstream-config/composer.json` file is owned by the upstream maintainer. It is included by the root `composer.json` file, and allows upstreams to add or remove packages from downstream sites. Changes are automatically incorporated into the downstream site whenever upstream updates are applied.
+- The `upstream-configuration/composer.json` file is owned by the upstream maintainer. It is included by the root `composer.json` file, and allows upstreams to add or remove packages from downstream sites. Changes are automatically incorporated into the downstream site whenever upstream updates are applied. Pantheon has developed a tool to help you work with upstream configuration called [upstream-management](https://packagist.org/packages/pantheon-systems/upstream-management), which you can install by using `composer require pantheon-systems/upstream-management:^1`.
 
 ## Create Your WordPress Integrated Composer Site
 
