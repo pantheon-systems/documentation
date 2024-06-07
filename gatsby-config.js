@@ -247,5 +247,69 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                const url = new URL(edge.node.fields.slug, site.siteMetadata.siteUrl).toString()
+                const stripFrontmatter = (rawBody) => {
+                  // Remove the frontmatter
+                  const content = rawBody.replace(/^---[\s\S]+?---/, '').trim();
+                  // Extract the first sentence
+                  const firstSentence = content.split('. ')[0] + '.';
+                  return firstSentence.length > 160 ? firstSentence.slice(0, 160) + '...' : firstSentence;
+                }
+                const description = stripFrontmatter(edge.node.rawBody);
+
+                return {
+                  title: edge.node.frontmatter.title,
+                  description: description,
+                  date: edge.node.frontmatter.published_date,
+                  url: url,
+                  guid: edge.node.id,
+                  /* custom_elements: [{ "pubDate": new Date(edge.node.frontmatter.published_date).toUTCString() }], */
+                };
+              })
+            },
+            query: `
+              {
+                allMdx(
+                  filter: { fileAbsolutePath: { regex: "/releasenotes/" } }
+                  sort: { order: DESC, fields: [fileAbsolutePath] }
+                ) {
+                  edges {
+                    node {
+                      rawBody
+                      fields { slug }
+                      frontmatter {
+                        title
+                        published_date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/release-notes/rss.xml",
+            title: "Pantheon Docs Release Notes RSS Feed",
+          },
+        ],
+      },
+    },
   ],
 }
