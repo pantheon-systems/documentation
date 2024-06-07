@@ -1,6 +1,6 @@
 ---
-title: WordPress Composer
-subtitle: Create a CI, Composer-managed WordPress Site
+title: WordPress with Composer on Pantheon
+subtitle: Create a Composer-managed WordPress Site with Terminus Build Tools
 description: Learn how to create a WordPress Site that uses Composer, Continuous Integration, and Automated Testing on Pantheon
 contenttype: [guide]
 innav: [false]
@@ -19,7 +19,7 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 <Alert title="Note" type="info">
 
-Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA.
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA.
 
 </Alert >
 

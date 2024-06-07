@@ -4,7 +4,7 @@ published_date: "2024-04-15"
 categories: [wordpress, action-required]
 ---
 
-An update is now available for the [WordPress (Composer Managed)](/guides/wordpress-composer/pre-ga/wordpress-composer-managed) upstream to resolve a particular log message that started appearing after our [WP-CLI wrapper update](/release-notes/2024/02/wp-cli-changes) in February.
+An update is now available for the [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream to resolve a particular log message that started appearing after our [WP-CLI wrapper update](/release-notes/2024/02/wp-cli-changes) in February.
 
 This update adds a new file to the `/config` directory, `application.pantheon.php`. In order to accomodate this new file, a line has been added to `config/application.php` to load the `config/application.pantheon.php` file. If you have made modifications to your `config/application.php`, it's possible you may run into conflicts with this update. If this is the case, you can manually resolve by running the following command:
 
