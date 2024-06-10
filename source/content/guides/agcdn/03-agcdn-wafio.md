@@ -21,9 +21,7 @@ This section provides detailed information on AGCDN with WAF and IO features. AG
 
 Application-layer (OSI Layer 7) protection meets [OWASP guidelines](https://cheatsheetseries.owasp.org/cheatsheets/Denial_of_Service_Cheat_Sheet.html#general-categories-and-basic-controls). This protection simplifies event monitoring and mitigation without requiring changes that introduce latency.
 
-The AGCDN Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal.
-
-Support for XSS vulnerabilities.
+The AGCDN Web Application Firewall (**WAF**) inspects each packet in detail to block malicious traffic and is fine-tuned for WordPress and Drupal. It provide an additional layer of protection against some instances of common attack patterns like SQL Injection And Cross-Site Scripting (XSS). Teams should still follow [WordPress](https://learn.wordpress.org/tutorial/introduction-to-securely-developing-plugins/) and [Drupal security standards](https://www.drupal.org/docs/administering-a-drupal-site/security-in-drupal/writing-secure-code-for-drupal) to mitigate such threats at the application layer as well. 
 
 ## Efficient Image Optimization at the Edge
 
