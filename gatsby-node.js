@@ -410,22 +410,7 @@ exports.createPages = ({ graphql, actions }) => {
     // And can reused the code above.
     createPage({
       path: `/release-notes/`,
-      component: path.resolve("./src/templates/releaseNotesListing.js"),
-    })
-
-    // Create Terminus Command pages
-    const allReleaseNoteCategories =
-      result.data.releasenotescategoriesJson.categories
-    allReleaseNoteCategories.forEach((category) => {
-      createPage({
-        path: `/release-notes/${category.slug}`,
-        component: path.resolve(
-          "./src/templates/releaseNotesListingByCategory.js"
-        ),
-        context: {
-          category: category.slug,
-        },
-      })
+      component: path.resolve("./src/templates/releaseNotesListing/index.js"),
     })
 
     // terminusCommands.forEach(command => {
