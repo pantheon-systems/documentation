@@ -1,11 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 
-/* todo, decide whether or not to use dotenv */
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// require('dotenv').config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -27,7 +21,7 @@ export default defineConfig({
     video: 'on',
     /* Base URL to use in actions like `await page.goto('/')`. */
     // TODO, update this url to handle building on the main branch.
-    baseURL: process.env.GITHUB_PR_NUMBER ? 'https://pr-' + process.env.GITHUB_PR_NUMBER + '-documentation.appa.pantheon.site' : 'https://docs.pantheon.io',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || "https://docs.pantheon.io",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

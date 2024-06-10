@@ -10,9 +10,10 @@
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.10.5"
   },
-"scripts": {
-  "end-to-end:live": "GITHUB_PR_NUMBER='' npx playwright test --update-snapshots",
-  "end-to-end:pull-request-preview": "GITHUB_PR_NUMBER=9001 npx playwright test"
-}
-
+  "scripts": {
+    "end-to-end:update-live-snapshots": "npx playwright test --update-snapshots",
+    "end-to-end:pull-request-preview": "PLAYWRIGHT_BASE_URL='https://pr-'${GITHUB_PR_NUMBER}'-documentation.appa.pantheon.site' npx playwright test",
+    "end-to-end:local": "PLAYWRIGHT_BASE_URL='http://localhost:8000/' npx playwright test",
+    "end-to-end:compare-pr-and-live": "npm run end-to-end:update-live-snapshots && npm run end-to-end:pull-request-preview"
+  }
 }
