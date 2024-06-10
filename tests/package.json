@@ -14,6 +14,7 @@
     "end-to-end:update-live-snapshots": "npx playwright test --update-snapshots",
     "end-to-end:pull-request-preview": "PLAYWRIGHT_BASE_URL='https://pr-'${GITHUB_PR_NUMBER}'-documentation.appa.pantheon.site' npx playwright test",
     "end-to-end:local": "PLAYWRIGHT_BASE_URL='http://localhost:8000/' npx playwright test",
-    "end-to-end:compare-pr-and-live": "npm run end-to-end:update-live-snapshots && npm run end-to-end:pull-request-preview"
+    "end-to-end:compare-pr-to-live": "npm run end-to-end:update-live-snapshots && npm run end-to-end:pull-request-preview",
+    "end-to-end:compare-local-to-live": "npm run end-to-end:update-live-snapshots && npm run end-to-end:local"
   }
 }
