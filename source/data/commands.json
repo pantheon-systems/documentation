@@ -1,7 +1,7 @@
 {
     "application": {
         "name": "Terminus",
-        "version": "3.4.0"
+        "version": "3.5.0"
     },
     "commands": [
         {
@@ -2318,7 +2318,7 @@
                         "accept_value": true,
                         "is_value_required": true,
                         "is_multiple": false,
-                        "description": "Available fields: SFTP Command (sftp_command), SFTP Username (sftp_username), SFTP Host (sftp_host), SFTP Password (sftp_password), SFTP Port (sftp_port), SFTP URL (sftp_url), Git Command (git_command), Git Username (git_username), Git Host (git_host), Git Port (git_port), Git URL (git_url), MySQL Command (mysql_command), MySQL Username (mysql_username), MySQL Host (mysql_host), MySQL Password (mysql_password), MySQL URL (mysql_url), MySQL Port (mysql_port), MySQL Database (mysql_database), Redis Command (redis_command), Redis Port (redis_port), Redis URL (redis_url), Redis Password (redis_password)",
+                        "description": "Available fields: SFTP Command (sftp_command), SFTP Username (sftp_username), SFTP Host (sftp_host), SFTP Port (sftp_port), SFTP URL (sftp_url), Git Command (git_command), Git Username (git_username), Git Host (git_host), Git Port (git_port), Git URL (git_url), MySQL Command (mysql_command), MySQL Username (mysql_username), MySQL Host (mysql_host), MySQL Password (mysql_password), MySQL URL (mysql_url), MySQL Port (mysql_port), MySQL Database (mysql_database), Redis Command (redis_command), Redis Port (redis_port), Redis URL (redis_url), Redis Password (redis_password)",
                         "default": "*_command"
                     },
                     "field": {
@@ -7315,9 +7315,9 @@
             "description": "Creates a multidev environment. If there is an existing Git branch with the multidev name, then it will be used when the new environment is created.",
             "usage": [
                 "multidev:create [--no-db] [--no-files] [--] <site>.<env> <multidev>",
-                "multidev:create <site>.<env> <multidev> Creates the Multidev environment,",
-                "multidev:create <site>.<env> <multidev> --no-db Creates the <multidev>",
-                "multidev:create <site>.<env> <multidev> --no-files Creates the <multidev>",
+                "multidev:create <site>.<env> <multidev> Creates the Multidev environment, <multidev>, within <site> with database and files from the <env> environment.",
+                "multidev:create <site>.<env> <multidev> --no-db Creates the <multidev> environment without database from the <env> environment.",
+                "multidev:create <site>.<env> <multidev> --no-files Creates the <multidev> environment without files from the <env> environment.",
                 "env:create"
             ],
             "help": "Creates a multidev environment. If there is an existing Git branch with the multidev name, then it will be used when the new environment is created.",
@@ -10485,9 +10485,10 @@
             "name": "remote:drush",
             "description": "Runs a Drush command remotely on a site environment.",
             "usage": [
-                "remote:drush [--progress] [--] <site>.<env> [<command>...]",
+                "remote:drush [--progress] [--retry [RETRY]] [--] <site>.<env> [<command>...]",
                 "remote:drush <site>.<env> -- <command> Runs the Drush command <command> remotely on <site>'s <env> environment.",
                 "remote:drush <site>.<env> --progress -- <command> Runs a Drush command with a progress bar",
+                "remote:drush <site>.<env> --retry=3 -- <command> Runs a Drush command with up to 3 retries on failure",
                 "drush"
             ],
             "help": "Runs a Drush command remotely on a site environment.",
@@ -10517,6 +10518,15 @@
                         "is_multiple": false,
                         "description": "Allow progress bar to be used (tty mode only)",
                         "default": false
+                    },
+                    "retry": {
+                        "name": "--retry",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Number of retries on failure",
+                        "default": 0
                     },
                     "help": {
                         "name": "--help",
@@ -10607,9 +10617,10 @@
             "name": "remote:wp",
             "description": "Runs a WP-CLI command remotely on a site environment.",
             "usage": [
-                "remote:wp [--progress] [--] <site>.<env> [<command>...]",
+                "remote:wp [--progress] [--retry [RETRY]] [--] <site>.<env> [<command>...]",
                 "remote:wp <site>.<env> -- <command> Runs the WP-CLI command <command> remotely on <site>'s <env> environment.",
                 "remote:wp <site>.<env> --progress -- <command> Runs a WP-CLI command with a progress bar",
+                "remote:wp <site>.<env> --retry=3 -- <command> Runs a WP-CLI command with up to 3 retries on failure",
                 "wp"
             ],
             "help": "Runs a WP-CLI command remotely on a site environment.",
@@ -10639,6 +10650,15 @@
                         "is_multiple": false,
                         "description": "Allow progress bar to be used (tty mode only)",
                         "default": false
+                    },
+                    "retry": {
+                        "name": "--retry",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Number of retries on failure",
+                        "default": 0
                     },
                     "help": {
                         "name": "--help",
@@ -16168,7 +16188,7 @@
             "name": "workflow:wait",
             "description": "Wait for a workflow to complete. Usually this will be used to wait for code commits, since Terminus will already wait for workflows that it starts through the API.",
             "usage": [
-                "workflow:wait [--start [START]] [--max [MAX]] [--] <site_env_id> [<description>]"
+                "workflow:wait [--start [START]] [--commit [COMMIT]] [--max [MAX]] [--] <site_env_id> [<description>]"
             ],
             "help": "Wait for a workflow to complete. Usually this will be used to wait for code commits, since Terminus will already wait for workflows that it starts through the API.",
             "definition": {
@@ -16197,6 +16217,15 @@
                         "is_multiple": false,
                         "description": "Ignore any workflows started prior to the start time (epoch)",
                         "default": 0
+                    },
+                    "commit": {
+                        "name": "--commit",
+                        "shortcut": "",
+                        "accept_value": true,
+                        "is_value_required": false,
+                        "is_multiple": false,
+                        "description": "Commit sha to wait for",
+                        "default": ""
                     },
                     "max": {
                         "name": "--max",
