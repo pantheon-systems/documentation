@@ -114,24 +114,6 @@ You can view the local environment at `localhost:8000/`. Updates to docs are aut
 
 We include several tools to test that new content doesn't break the documentation. Most of these tests are performed automatically by our continuous integration service, but pull requests created from external contributors aren't included in CI tests. If you want to manually test your branch, you can execute the following tests within the Docker container.
 
-
-### Local VRT with BackstopJS
-VRT is not currently automated as part of our continuous integration pipeline, however this can be done locally and manually. The [BacktstopJS configuration file](<backstop.json>) defines multiple scenarios to cover the various template files used across the Pantheon Docs theme.
-
-Before you can run VRT locally, you must have the Pantheon Docs site running locally. Follow the [steps above](#get-the-code), you should be able to visit the local site at this URL: `localhost:8000`
-
-From the project root, run this command to create fresh reference screenshots from production:
-```
-npx backstop reference
-```
-
-Then, run the tests locally:
-```
-npx backstop test
-```
-
-Maintainers for this project should generate fresh BackstopJS Reports whenever reviewing Pull Requests with site-wide implications.
-
 ### Merge Conflicts
 
 To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`.
