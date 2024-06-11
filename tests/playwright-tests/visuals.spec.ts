@@ -15,7 +15,7 @@ test('Get Started - Landing Page', async ({ page }) => {
 
 
 test('Release Notes - Category Listing', async ({ page }) => {
-  await page.goto('/release-notes/policy');
+  await page.goto('/release-notes/?category=policy');
   await page.getByText('Accept Cookies').click();
   await expect(page).toHaveScreenshot('release-notes--category.png', { fullPage: true });
 });
