@@ -5,7 +5,7 @@ import { Tag } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
-const ReleaseNoteCategories = ({ categories, displayType, className }) => {
+const ReleaseNoteCategories = ({ categories, displayType, className, isLinkable= true }) => {
   if (!categories) {
     return null
   }
@@ -26,7 +26,9 @@ const ReleaseNoteCategories = ({ categories, displayType, className }) => {
         {sortedCategories.map((categorySlug, index) => (
           <Tag
             key={index}
-            linkContent={<Link to={`/release-notes/${categorySlug}`} />}
+            linkContent={
+              isLinkable && <Link to={`/release-notes?category=${categorySlug}`} />
+            }
             tagLabel={releaseNoteCategoryLoader(categorySlug).displayName}
             tagColor={releaseNoteCategoryLoader(categorySlug).color}
           />

@@ -39,7 +39,7 @@ const MarketoForm = ({ baseUrl, munchkinId, formId, formName }) => {
         })
         .catch(() => console.log("An error ocurred loading Marketo scripts..."))
     }
-  })
+  }, [])
 
   return !isSent ? (
     <form id={formName} name={formName} className="pds-form" />

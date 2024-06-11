@@ -225,7 +225,7 @@ Pantheon strips cookies for any file ending with the following extensions, even 
 
 ## 404s
 
-Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, the Global CDN will respect them. Depending on your use case, that may be the desired result.
+Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age` headers, the Global CDN will respect them. Depending on your use case, that may be the desired result.
 
 <TabList>
 
