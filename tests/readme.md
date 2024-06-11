@@ -1,13 +1,11 @@
 # Tests for Pantheon Documentation
 
-This directory presently contains only a small amount of Playwright tests meant for locally checking for visual regression.
-In the future we intend to expand this to include more comprehensive tests and to consolidate pre-existing stale tests like link checking.
+This directory presently contains only a small amount of Playwright tests meant for locally checking for visual regression. In the future we intend to expand this to include more comprehensive tests and to consolidate pre-existing stale tests like link checking.
 
 ## Checking for visual regression
 
-For any changes to the site framework (e.g., stylesheets, theme files, components, javascript, etc.) we want to ensure that the changes do not introduce visual regressions.
-We can do this by comparing screenshots of the live site to screenshots of a pull request preview or a local development site.
-Running this suite against a pull request preview depends on the environment variable `GITHUB_PR_NUMBER` being set to the URL of the preview.
+For any changes to the site framework (e.g., stylesheets, dependency updates, theme files, components, javascript, etc.) we want to ensure that the changes do not introduce **unwanted** visual regressions. We can do this by comparing screenshots of the live site to screenshots of a pull request preview or a local development site. Running this suite against a pull request preview depends on the environment variable `GITHUB_PR_NUMBER` being set to the URL of the preview.
+
 To set this variable for the current shell session, run `export GITHUB_PR_NUMBER=<PR_NUMBER>`, where `<PR_NUMBER>` is the number of the pull request.
 
 The following commands are available with `npm run`:
