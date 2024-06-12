@@ -131,18 +131,10 @@ class CertificationTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-
-        <div slot="guide-menu" >
-          <SidebarNav activePage={node.fields.slug}  />
-
-
-        <Navbar
-
-          title={node.frontmatter.title}
-          items={items}
-          activePage={node.fields.slug}
-        />
-        </div>
+          <SidebarNav
+          slot="guide-menu"
+          title="WebOps Certification"
+          activePage={node.fields.slug} />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
 

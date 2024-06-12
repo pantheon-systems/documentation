@@ -2,6 +2,7 @@
 title: "WebOps Certification: About the program"
 showtoc: true
 contributors: []
+layout: certificationpage
 permalink: docs/certification/about
 ---
 

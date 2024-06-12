@@ -2,6 +2,7 @@
 title: "WebOps Certification: Exam Overview"
 contributors: []
 showtoc: true
+layout: certificationpage
 permalink: docs/certification/exam
 ---
 ## Exam Instructions

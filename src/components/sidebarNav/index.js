@@ -2,7 +2,7 @@ import React from "react"
 
 import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
 
-const SidebarNav = ({ activePage }) => {
+const SidebarNav = ({ title, activePage }) => {
 
 // Infrastructure
 // Release Workflow
@@ -77,39 +77,21 @@ const SidebarNav = ({ activePage }) => {
   return (
     <div>
     <SideNavCompact
-      headingText={<a href="#">WebOps Certification</a>}
+      headingText={title}
       menuItems={[
-
-
-
-
-
-
-            {
-              linkContent: <a href="/certification/about">About the Certification Program</a>
-
-            },
+        {
+          linkContent: <a href="/certification/about">About the Certification Program</a>
+        },
         {
           linkContent: <a href="/certification/exam">Taking the Exam</a>
-
         },
-            {
-              linkContent: <a href="/test">Study Guide</a>,
-              links: CertificationStudyGuideLinks
-            },
-            {
-              linkContent: <a href="https://certification.pantheon.io/">Certification Directory</a>
-
-            }
-
-
-
-
-
-
-
-
-
+        {
+          linkContent: <a href="/certification/study-guide">Study Guide</a>,
+          links: CertificationStudyGuideLinks
+        },
+        {
+          linkContent: <a href="https://certification.pantheon.io/">↗ Certification Directory</a>
+        }
       ]}
     />
     </div>
