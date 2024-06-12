@@ -1,5 +1,5 @@
 ---
-title: "Billing"
+title: "Billing for Self-Serve Accounts"
 subtitle: Invoices and Subscriptions
 description: Manage and view invoices and subscriptions.
 contenttype: [guide]
