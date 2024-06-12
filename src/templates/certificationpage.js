@@ -6,6 +6,7 @@ import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
+import SidebarNav from "../components/sidebarNav"
 import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
@@ -130,12 +131,19 @@ class CertificationTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
+
+        <div slot="guide-menu" >
+
+          <SidebarNav />
+
+
         <Navbar
-          slot="guide-menu"
+
           title={node.frontmatter.title}
           items={items}
           activePage={node.fields.slug}
         />
+        </div>
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
 
