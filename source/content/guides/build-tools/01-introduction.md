@@ -3,7 +3,8 @@ title: Build Tools
 subtitle: Introduction
 description: A starter kit for teams that are looking to make the leap to more advanced workflows.
 tags: [collaborate, composer, continuous-integration, webops, workflow]
-contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton, fatimask, dgorton]
+contributors:
+  [greg-1-anderson, stevector, ataylorme, rachelwhitton, fatimask, dgorton]
 type: guide
 permalink: docs/guides/build-tools/
 editpath: build-tools/01-introduction.md
@@ -37,13 +38,13 @@ Build Tools helps you create new projects that:
 
 Build Tools currently supports the following combinations of Git and CI services:
 
-1. [<em class="fa fa-github" /> GitHub](https://github.com) and [CircleCI](https://circleci.com/)
+1. [<Icon icon="github"/> GitHub](https://github.com) and [CircleCI](https://circleci.com/)
 
-1. [<em class="fa fa-github" /> GitHub](https://github.com) and [Github Actions](https://github.com/features/actions)
+1. [<Icon icon="github"/> GitHub](https://github.com) and [Github Actions](https://github.com/features/actions)
 
-1. [<em class="fa fa-gitlab" /> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
+1. [<Icon icon="gitlab"/> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
 
-1. [<em class="fa fa-bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
+1. [<Icon icon="bitbucket"/> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
 
 ![Build Tools Providers Diagram](../../../images/pr-workflow/build-tools-provider-diagram.png)
 

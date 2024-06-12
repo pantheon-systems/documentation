@@ -22,6 +22,7 @@ const secondaryCTA = {
 const Layout = ({
   children,
   containerWidth,
+  excludeSearch,
   hasCta,
   footerBorder,
   pageType = "default",
@@ -29,9 +30,11 @@ const Layout = ({
   return (
     <div className="pantheon-docs">
       <Header page={pageType} />
-      <Container width={containerWidth}>
-        <SearchBar page={pageType} />
-      </Container>
+      {!excludeSearch && (
+        <Container width={containerWidth}>
+          <SearchBar page={pageType} />
+        </Container>
+      )}
       {children}
       {hasCta && (
         <CTASlice

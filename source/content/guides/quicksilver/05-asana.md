@@ -49,7 +49,7 @@ Be sure that you:
 
 Create a new machine user in Asana. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
-1. Select **<span class="glyphicon glyphicon-plus-sign"></span>** from the menu on the left, next to existing team members:
+1. Select <Icon icon="circlePlus"/> from the menu on the left, next to existing team members:
 
    ![Add a user](../../../images/integrations/asana/new-user.png)
 

@@ -39,7 +39,7 @@ Before you use this script:
 
 - Ensure that you have defined `TERMINUS_TOKEN` in Bitbucket Pipeline's Environment Variables.
 - Replace `${TERMINUS_TOKEN}` in the script below with the machine token provided by Terminus.
-- Add the the machine token provided by Terminus to your environment variables in the Bitbucket pipeline settings.
+- Add the machine token provided by Terminus to your environment variables in the Bitbucket pipeline settings.
 
 </Alert>
 

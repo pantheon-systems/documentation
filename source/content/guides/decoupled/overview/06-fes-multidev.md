@@ -174,6 +174,10 @@ Follow the steps below to observe the build and deployment process for a Multide
 
 Any commits pushed on this branch will now be built and deployed to the Multidev. This allows you and your team to review the branch as work progresses. Pull requests opened against this branch will also trigger a build.
 
+## Delete a Multidev Environment
+1. Open your Site Dashboard, navigate to the **Overview** page and scroll down to the **Multidev Branches** section.
+1. Use the **Actions** drop-down menu to delete the given Multidev.
+1. Type the Multidev name into the text field to complete the confirmation prompt and delete the environment.
 
 ## More Resources
 

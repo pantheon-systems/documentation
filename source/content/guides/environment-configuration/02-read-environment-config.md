@@ -123,13 +123,13 @@ array(63) {
     ["USER"]=>
     string(32) "non-static-binding-string-inserted-here"
     ["HOME"]=>
-    string(46) "/srv/bindings/non-static-binding-string-inserted-here"
+    string(46) "/"
     ["SCRIPT_NAME"]=>
     string(10) "/index.php"
     ["DOCUMENT_URI"]=>
     string(10) "/index.php"
     ["DOCUMENT_ROOT"]=>
-    string(51) "/srv/bindings/non-static-binding-string-inserted-here/code"
+    string(51) "/code"
     ["SERVER_PROTOCOL"]=>
     string(8) "HTTP/1.1"
     ["GATEWAY_INTERFACE"]=>
@@ -147,11 +147,11 @@ array(63) {
     ["REDIRECT_STATUS"]=>
     string(3) "200"
     ["PATH_TRANSLATED"]=>
-    string(51) "/srv/bindings/non-static-binding-string-inserted-here/code"
+    string(51) "/code"
     ["HTTPS"]=>
     string(3) "OFF"
     ["SCRIPT_FILENAME"]=>
-    string(62) "/srv/bindings/non-static-binding-string-inserted-here/code//index.php"
+    string(62) "/code//index.php"
     ["HTTP_HOST"]=>
     string(25) "example-wp-site.pantheonsite.io"
     ["HTTP_USER_AGENT"]=>

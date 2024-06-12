@@ -40,7 +40,7 @@ The information in this section uses WordPress with the plugins below installed:
 - [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
 
-The `GraphqlClientFactory` class from our `@pantheon-systems/wordpress-kit` npm package adds the `Fastly-Debug` header to each request and uses the GET method by default to take advantage of WPGraphQL Smart Cache network caching. Responses from WordPress will contain the `Surrogate-Key` header. You can use these keys to instruct your frontend to purge content from a cache when the content in WordPress changes.
+The `GraphqlClientFactory` class from our `@pantheon-systems/wordpress-kit` npm package adds the `Pantheon-SKey` header to each request and uses the GET method by default to take advantage of WPGraphQL Smart Cache network caching. Responses from WordPress will contain the `Surrogate-Key` header. You can use these keys to instruct your frontend to purge content from a cache when the content in WordPress changes.
 
 ## Cache-Control Headers
 
@@ -102,7 +102,7 @@ The Decoupled Kit [WordPress Backend Starter Project](/guides/decoupled/wp-backe
 
 1. Verify that the WordPress backend has the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) installed and configured.
 
-1. Review your route fetches data and confirm that it uses the `@pantheon-systems/wordpress-kit` Graphql client or requests to WordPress are made using the GET method and include the `Fastly-Debug: 1` header. You must use the `client.rawRequest()` method to see headers.
+1. Review your route fetches data and confirm that it uses the `@pantheon-systems/wordpress-kit` Graphql client or requests to WordPress are made using the GET method and include the `Pantheon-SKey: 1` header. You must use the `client.rawRequest()` method to see headers.
 
 1. Confirm that headers are added to the outgoing response from Next.js in
   `getServerSideProps` (refer to [`context.res`](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter)).

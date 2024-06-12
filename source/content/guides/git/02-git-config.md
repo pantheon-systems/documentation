@@ -58,7 +58,7 @@ You must create a local copy of your [codebase](/guides/git/collaborative-develo
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
-1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**.
+1. Click the **<Icon icon="wrench" /> Dev** tab > set the **Development Mode** to **Git** > click **Clone with Git**.
 
   ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
@@ -182,8 +182,6 @@ Pantheon instantly deploys the changes to your development server when the push 
 
 ![Image of the Dev tab syncing with a recently pushed git commit](../../../images/dashboard/sync-code.png)
 
-1. Navigate to your site's dashboard > click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab.
+1. Navigate to your site's dashboard > click the **<Icon icon="wrench" /> Dev** tab.
 
 1. Click **Visit Development Site** to see the changes made by your new code.
-
-

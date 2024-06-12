@@ -28,7 +28,7 @@ Object Cache provides an alternative caching backend that resides in memory rath
 
 ## Object Cache Requirements
 
-All plans, except for the Basic plan, can use Object Cache. Sandbox site plans can enable and use Object Cache for development purposes, but if the site plan is upgraded to Basic, the feature will be disabled. Object Cache Pro, the premium WordPress plugin, is not available for Sandbox sites, however you may enable Redis for Sandbox sites and use another reputable plugin to enable Redis for WordPress.
+All plans, except for the Basic plan, can use Object Cache. Sandbox site plans can enable and use Object Cache for development purposes, but if the site plan is upgraded to Basic the feature will be disabled. Object Cache Pro, the premium WordPress plugin, is not available for Sandbox sites, however you may enable Redis for Sandbox sites and use Pantheon's [wp-redis](https://github.com/pantheon-systems/wp-redis) plugin, or any other reputable Redis plugin for WordPress.
 
 | Plans         | Object Cache Support <Popover content="Available across all environments, including Multidevs."/> |
 | ------------- | -------------------------------------- |

@@ -28,6 +28,7 @@ import ReviewDate from "../components/reviewDate"
 import Check from "../components/check.js"
 import Partial from "../components/partial"
 import SearchBar from "../layout/SearchBar"
+import Wistia from "../components/wistia"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -49,6 +50,7 @@ const shortcodes = {
   Commands,
   ReviewDate,
   Check,
+  Wistia,
 }
 
 // @TODO relocate this list
@@ -188,7 +190,7 @@ class TerminusTemplate extends React.Component {
           <main
             slot="content"
             id="docs-main"
-            tabindex="-1"
+            tabIndex="-1"
             className="terminus"
           >
             <article className="doc guide-doc-body pds-spacing-pad-block-end-xl">

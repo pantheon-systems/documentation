@@ -108,7 +108,7 @@ While Custom Upstreams will help, adding automation and scripting will get you e
 
 Our [Terminus command line tool](/terminus/) allows you to manage everything you can do in our administrative interface by script. Pair it with [WP-0CLI](/guides/wp-cli/) and add in our [Quicksilver hooks](/guides/quicksilver) to trigger testing, and you're on your way.
 
-[Pixotech has a nice writeup](http://www.pixotech.com/automating-pluginmodule-updates-on-pantheon/) on their process that does this, and our own Andrew Taylor has a [fantastic script for doing all of this plus visual regression testing](https://pantheon.io/blog/automating-security-updates-scalewpio) on Pantheon.
+[Pixotech has a nice writeup](https://pantheon.io/blog/automating-pluginmodule-updates-pantheon) on their process that does this, and our own Andrew Taylor has a [fantastic script for doing all of this plus visual regression testing](https://pantheon.io/blog/automating-security-updates-scalewpio) on Pantheon.
 
 ## Top WordPress Security Plugins
 

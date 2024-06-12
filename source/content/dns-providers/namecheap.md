@@ -23,7 +23,7 @@ Ensure you have the following:
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
 
-1. Navigate to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+1. Navigate to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the target environment (typically <Icon icon="wavePulse" /> Live) then click **<Icon icon="global" /> Domains / HTTPS**.
 1. Click **Details**.
 
 Keep this page open and log in to your [Namecheap account](https://www.namecheap.com/myaccount/login.aspx) in a new tab before you continue.
@@ -32,8 +32,6 @@ Keep this page open and log in to your [Namecheap account](https://www.namecheap
 When entering the value for the Name/Host, the bare domain and trailing dot (".") must be removed from the value provided by Pantheon. For example, the value entered in the **Name/Host** field for the Namecheap Advanced DNS configuration should look like `_name-sample`, or in the case of a subdomain, like `_name-sample.subdomain` where the subdomain is replaced with a specific subdomain.
 
 After completing the fields on the page, click **Verify Ownership**.
-
-You can click **Skip without HTTPS** to skip verification. By skipping, vistors to your site will receive a browser warning until Pantheon automatically provisions HTTPS, which can take approximately one hour after going live.  
 
 ## Configure DNS Records on Namecheap
 

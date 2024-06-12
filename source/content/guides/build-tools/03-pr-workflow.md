@@ -32,7 +32,7 @@ Deployments to the `test` and `live` environments on Pantheon must still be done
 
 ## Create a Pull Request
 
-1. From your GitHub project page, click on the `config` directory. Select the file `system.site.yml` and click <span class="glyphicon glyphicon-pencil"></span> to open an editor:
+1. From your GitHub project page, click on the `config` directory. Select the file `system.site.yml` and click <Icon icon="pen" /> to open an editor:
 
   ![system.site.yml file open in GitHub](../../../images/pr-workflow/system-site-config.png)
 

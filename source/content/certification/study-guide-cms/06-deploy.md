@@ -172,7 +172,7 @@ You can take full advantage of Pantheon by loading your public SSH key into your
 Pantheon does not provide access to a shell environment over SSH. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
 </Alert>
 
-SSH keys provide a secure and convenient way for users to interact with a Pantheon site. SSH does not provide root access to the server. However, using an SSH key is more convenient than typing your dashboard password every time you issue a Git command on a Pantheon site.
+SSH keys provide a secure and convenient way for users to interact with a Pantheon site. SSH does not provide root access to the server.
 
 In this section, we will walk through the process of generating SSH keys and adding a public key to your Pantheon dashboard. First, you will generate a pair of keys on your local development machine.
 

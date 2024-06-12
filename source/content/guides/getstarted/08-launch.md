@@ -39,19 +39,19 @@ At this point, you have a live site with a Pantheon URL, like `http://my-site.pa
 
 After you've done that, connect your DNS:
 
-1. Go to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+1. Go to the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Select the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** tab.
+1. Select the **<Icon icon="global" /> Domains / HTTPS** tab.
 
 1. Enter the `www` domain (for example, `www.example.com`), then click **Connect Domain**.
 
 1. Verify ownership by adding a new DNS TXT value or by uploading a file to a specific URL. Select the method you prefer, and follow the instructions. Note that the values are randomized for security.
 
-1. Click **Verify Ownership** to confirm, or to skip HTTPS provisioning for now, click **Skip without HTTPS**. It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values.
+1. Click **Verify Ownership** to confirm. It can take 30 minutes or more for DNS records to propagate, depending on your DNS host and your domain's TTL values.
 
 1. Open a new tab or browser window, and copy the **Required Values** to your [DNS](/guides/domains/dns) provider. If you see a message like "Waiting for HTTPS, DNS records will be provided when HTTPS provisioning completes.", wait one minute, then refresh the page.
 
-1. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
+1. Click **<Icon icon="arrowLeft" /> Back to Domains/HTTPS**.
 
 1. Select **Connect Domain** and enter the bare domain (for example, `example.com`, and then click **Connect Domain**.
 
@@ -63,7 +63,7 @@ Then, configure your DNS:
 
 1. Copy the value provided in the Pantheon Site Dashboard for the required **A** record, then use it to create an **A** record wherever you manage DNS. Repeat this step for <i>both</i> of the AAAA records.
 
-1. Return to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page in the Pantheon Site Dashboard.
+1. Return to the **<Icon icon="global" /> Domains / HTTPS** page in the Pantheon Site Dashboard.
 
 1. Click **Details** next to the bare domain.
 

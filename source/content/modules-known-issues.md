@@ -82,7 +82,7 @@ ___
 
 ## [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
 
-<ReviewDate date="2018-04-22" />
+<ReviewDate date="2024-01-09" />
 
 **Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output. Since BigPipe provides no benefit on Pantheon sites, we recommend disabling it.
 
@@ -262,6 +262,16 @@ ___
 <ReviewDate date="2020-02-10" />
 
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
+
+___
+
+## [Ludwig]([https://www.drupal.org/project/ludwig](https://www.drupal.org/project/ludwig))
+
+<ReviewDate date="2024-04-18" />
+
+**Issue**: Ludwig expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
+
+**Solution**: As covered by the [module's project page](https://www.drupal.org/project/ludwig), Composer managed Drupal sites should not use Ludwig. See also, this discussion regarding [Ludwig EOL](https://www.drupal.org/project/ludwig/issues/3377094).
 
 ___
 

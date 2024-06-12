@@ -65,12 +65,6 @@ This response can also occur on Drupal 8 sites using the cacheability debug serv
 
 You can reduce the number of set-cookie headers in the response to resolve this error if you receive a 503 error and your cookie size is smaller than 10KB.
 
-### Pantheon 503 Target in Maintenance
-
-> The web site you were looking for is currently undergoing maintenance.
-
-This is **not** a web application (WordPress or Drupal) maintenance mode error. This is a manually toggled emergency message reserved for unusual circumstances when a site is known to be unavailable.
-
 ### Pantheon 503 Database not Responding
 
 > The web page you were looking for could not be delivered.
@@ -104,6 +98,12 @@ This error can be caused by sustained spikes in traffic (often caused by search 
 There are two possible causes for this error. Pantheon's routing and caching layer can only sustain open HTTP requests for a set time period. You may encounter this message if your application takes too long to respond. The other option is that there was an application problem, resulting in php-fpm or MySQL timing out. Refer to [Timeouts on Pantheon](/timeouts) for more information.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. However, there are ways to solve the problem. There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause. Refer to [Timeouts on Pantheon](/timeouts) for troubleshooting tips, and consider using [New Relic](/guides/new-relic) to monitor and improve your site performance.
+
+### Pantheon 504 Target in Maintenance
+
+> The web site you were looking for is currently undergoing maintenance.
+
+This is **not** a web application (WordPress or Drupal) maintenance mode error. This is a manually toggled emergency message reserved for unusual circumstances when a site is known to be unavailable.
 
 ### Error 561 No site Detected
 

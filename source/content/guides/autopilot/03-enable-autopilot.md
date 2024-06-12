@@ -2,7 +2,7 @@
 title: Pantheon Autopilot
 subtitle: Autopilot Setup and Configuration
 description: Enable and configure Autopilot visual regression testing (VRT) for your WordPress or Drupal site.
-tags: [iterate, autopilot, testing, webops, D8, D9, D10 ]
+tags: [iterate, autopilot, testing, webops, D8, D9, D10]
 type: guide
 showtoc: true
 permalink: docs/guides/autopilot/enable-autopilot/
@@ -21,13 +21,15 @@ integration: [--]
 
 Autopilot can be enabled for individual sites, or in bulk, within each eligible Workspace.
 
+<Wistia src="c15eoj3eca" />
+
 1. [Switch to the Workspace](/guides/new-dashboard/workspaces#switch-between-workspaces) for the site's Organization to work with Autopilot before you continue.
 
    ![Autopilot Overview page shows sites available for Autopilot](../../../images/autopilot/autopilot-sites-overview.png)
 
 1. [Commit any staged changes](/guides/sftp/sftp-development) that have not been committed before you continue if the site is in [SFTP mode](/guides/sftp).
 
-1. Click the <i className="fa fa-robot"></i>**Autopilot** icon in the Global Primary Navigation.
+1. Click the <Icon icon="robot"/> **Autopilot** icon in the Global Primary Navigation.
 
 1. View the list of sites for which Autopilot is available in the **Site** column of the **Other Sites** table.
 
@@ -39,7 +41,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 
 1. Select the deployment destination: Dev, Test, Live, or Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a>for more information." />
 
-   <Alert title="Note"  type="info" >
+   <Alert title="Note" type="info" >
 
    Autopilot will pre-select a few pages for visual regression testing and will set the frequency to weekly by default.
 
@@ -52,6 +54,7 @@ Autopilot can be enabled for individual sites, or in bulk, within each eligible 
 The Autopilot setup wizard automatically displays after you click **Customize** when you activate Autopilot for a single site. You must complete all items in the Configuration, Schedule, and Visual Review steps.
 
 ### Configuration
+<Wistia src="158bo3jnms" />
 
 1. Use the **On**/**Off** toggles to choose which features and elements should be tracked or excluded from updates.
 
@@ -67,26 +70,26 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
 1. Set the **Deployment Destination** to the desired environment:
 
-    - Dev
-    - Test
-    - Live
-    - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a> for more information." />
+   - Dev
+   - Test
+   - Live
+   - Do Not Deploy <Popover title="Do Not Deploy" content="Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Refer to <a class='external' href='https://docs.pantheon.io/guides/autopilot/enable-autopilot/#update-destination--frequency'>Update Destination & Frequency</a> for more information." />
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
-    - Never (Update Manually)
-    - Monthly
-    - Weekly
-    - Daily
-    - Custom
+   - Never (Update Manually)
+   - Monthly
+   - Weekly
+   - Daily
+   - Custom
 
-    <Alert title="Note"  type="info" >
+   <Alert title="Note"  type="info" >
 
-    Daily and Custom options are available to sites owned by Platinum and Diamond Workspaces.
+   Daily and Custom options are available to sites owned by Platinum and Diamond Workspaces.
 
-    </Alert>
+   </Alert>
 
-    <Partial file="autopilot/custom-scheduling.md" />
+   <Partial file="autopilot/custom-scheduling.md" />
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
@@ -102,21 +105,21 @@ The Autopilot setup wizard automatically displays after you click **Customize** 
 
    Autopilot automatically suggests up to ten URL paths during setup:
 
-  ![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
+![Autopilot Setup - Visual Review screen. Select which pages should be covered by visual regression testing.](../../../images/autopilot/autopilot-setup-visual-review.png)
 
 1. Click **Save** to initialize Autopilot on the Site.
 
 1. Click **Status** in the Autopilot sidebar for the current status of the testing. This process might take a while:
 
-  ![Autopilot Sidebar - The sidebar shows links to Status, Activity, and Configuration screens.](../../../images/autopilot/autopilot-sidebar.png)
+![Autopilot Sidebar - The sidebar shows links to Status, Activity, and Configuration screens.](../../../images/autopilot/autopilot-sidebar.png)
 
 ## Autopilot Configuration - Manage Autopilot Settings
 
 You can configure a single site or use the bulk feature to configure multiple sites at the same time.
 
-###  Configure a Single Site
+### Configure a Single Site
 
-1. Navigate to the **<i className="fa fa-robot"></i>Autopilot** page of the Workspace, click **Actions** <i className="fa fa-chevron-down fa-w-14"></i>, and then click **Manage Autopilot Settings**.
+1. Navigate to the **<Icon icon="robot"/> Autopilot** page of the Workspace, click **Actions** <Icon icon="angleDown" />, and then click **Manage Autopilot Settings**.
 
    The Autopilot Configuration page shows all the steps from the initial setup on one page.
 
@@ -126,7 +129,7 @@ You can configure a single site or use the bulk feature to configure multiple si
 
 ### Configure Sites in Bulk
 
-1. Navigate to the **<i className="fa fa-robot"></i> Autopilot** page of the Workspace.
+1. Navigate to the **<Icon icon="robot"/> Autopilot** page of the Workspace.
 
 1. Select the checkboxes for the sites you wish to activate in the **Site** column.
 
@@ -152,19 +155,19 @@ You can determine how often Autopilot runs and select where you want successful 
 
 1. Set the **Update Frequency** to schedule Autopilot to run:
 
-    - Never (Update Manually)
-    - Monthly
-    - Weekly
-    - Daily
-    - Custom
+   - Never (Update Manually)
+   - Monthly
+   - Weekly
+   - Daily
+   - Custom
 
-    <Alert title="Note"  type="info" >
+   <Alert title="Note"  type="info" >
 
-    Daily and Custom options are available to sites owned by Platinum and Diamond Workspaces.
+   Daily and Custom options are available to sites owned by Platinum and Diamond Workspaces.
 
-    </Alert>
+   </Alert>
 
-    <Partial file="autopilot/custom-scheduling.md" />
+   <Partial file="autopilot/custom-scheduling.md" />
 
 1. Select the **Sync Live Environment** checkbox to sync environments.
 
@@ -176,7 +179,7 @@ You can determine how often Autopilot runs and select where you want successful 
    - Test
    - Live
    - Do Not Deploy
-      - Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
+     - Your updates will be tested but not deployed to any environment if you select this option. This stops updates at the Autopilot Multidev. Your updates will appear under **Ready to Deploy** if the updates pass VRT. Your updates will appear under **Needs Review** if the updates fail VRT. The updates must be deployed manually from either location.
 
 1. Click **Save** to save the changes.
 
@@ -186,7 +189,7 @@ You can add pages to track for visual regression testing, along with a percent o
 
 ![Autopilot Configuration - Visual Test Screenshots](../../../images/autopilot/autopilot-configuration-visual-test-screenshots.png)
 
-1. Click **<i class="fa fa-plus-circle"></i> Add** to add more pages.
+1. Click **<Icon icon="circlePlus" /> Add** to add more pages.
 
 1. Click **Save** to save changes.
 
@@ -211,7 +214,7 @@ Autopilot checks for plugins, modules, and themes that are eligible for exclusio
 
 ![Autopilot Configuration screen - Exclude certain types of updates from Autopilot.](../../../images/autopilot/autopilot-configuration-excluded-updates.png)
 
-1. Click <i class="fa fa-sync-alt"></i>**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
+1. Click <Icon icon="rotate" />**Refresh Updates** to scan for available updates that can be excluded from Autopilot.
 
 1. Select updates that should be excluded and then click **Save**.
 
@@ -235,10 +238,10 @@ Before you begin:
 
 1. Ensure that the plugins or themes are compatible with Pantheon. Plugins and themes will not work on Pantheon if they:
 
-      - Require Apache
-      - Require customized `.htaccess` files
-      - Require modifications to Nginx configuration files
-      - Require PostgreSQL or other non-MySQL compatible databases
+   - Require Apache
+   - Require customized `.htaccess` files
+   - Require modifications to Nginx configuration files
+   - Require PostgreSQL or other non-MySQL compatible databases
 
 1. Review the [Install Plugins section](/guides/wordpress-git/plugins/) of the [Using Git with SFTP and WordPress](/guides/wordpress-git/) guide to ensure that you install your plugins correctly.
 
@@ -259,6 +262,7 @@ Some premium and paid plugins require the license to be explicitly activated on 
 1. Provide Autopilot with access if the plugin requires it (this varies by plugin) and/or configure the plugin as needed.
 
 ## Enable Autopilot Email Notifications
+<Wistia src="7o76jael2w" />
 
 Configure email notifications for Autopilot alerts and activity digests in your Personal Workspace settings:
 
@@ -266,7 +270,7 @@ Configure email notifications for Autopilot alerts and activity digests in your 
 
 ![Personal Workspace Settings include options for Autopilot email notifications](../../../images/autopilot/new-dashboard-personal-workspace-personal-settings-autopilot-notifications.jpg)
 
-1. Click the <i className="fa fa-user-circle"></i> Gravatar in the upper right corner and click <i className="fa fa-user-cog"></i> **User Settings**.
+1. Click the <Icon icon="user" /> avatar in the upper right corner and click <Icon icon="userGear" /> **Personal Settings**.
 
 1. Click **Notifications** and select your desired settings in the **Autopilot Email Notifications** section.
 
@@ -279,4 +283,3 @@ Configure email notifications for Autopilot alerts and activity digests in your 
 - [Autopilot for Custom Upstreams Guide](/guides/autopilot-custom-upstream)
 
 - [Deactivate Autopilot](/guides/autopilot/autopilot-deactivate)
-

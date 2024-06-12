@@ -65,6 +65,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/source/releasenotescategories`,
+        name: `releasenotescategories`,
+      },
+    },
+    {
       // Converts Markdown into HTML
       resolve: `gatsby-transformer-remark`, // https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/
       options: {
@@ -93,8 +100,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/source/changelogs`,
-        name: `changelogs`,
+        path: `${__dirname}/source/releasenotes`,
+        name: `releasenotes`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/source/content/iframeembeds`,
+        name: `iframeembeds`,
       },
     },
     {
@@ -233,6 +247,5 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
     },
-    `gatsby-plugin-fontawesome-css`,
   ],
 }

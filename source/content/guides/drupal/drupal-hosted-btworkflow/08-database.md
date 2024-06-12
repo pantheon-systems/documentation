@@ -1,7 +1,7 @@
 ---
 title: Upgrade a Drupal Site Created With the Pantheon Dashboard to the Latest Version of Drupal + Build Tools
 subtitle: Add Database
-description: 
+description:
 tags: [code, launch, migrate, site, updates]
 contributors: [wordsmither]
 permalink: docs/guides/drupal-hosted-btworkflow/database
@@ -20,7 +20,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 1. Navigate to your existing site's Dashboard.
 
-1. In the Live environment, select **<span class="fa fa-server"></span> Database / Files**.
+1. In the Live environment, select <Icon icon="server" /> **Database / Files**.
 
 1. Click **Export Database**.
 

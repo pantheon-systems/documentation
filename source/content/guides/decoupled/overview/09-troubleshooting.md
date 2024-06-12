@@ -87,3 +87,25 @@ Follow the steps below if your build works locally but won't build on Pantheon.
 Consult the Next.js docs on their image component. Set the IMAGE_DOMAIN environment variable if the images are coming from a domain that is different from your liked CMS.
 
 Make sure you are passing the `IMAGE_DOMAIN` as a prefix to the `src` prop if you are using the `next/image` component. Refer to [Next.js documentation](https://nextjs.org/docs/api-reference/next.config.js/basepath#images) for more information.
+
+### The Decoupled Drupal health check is failing with BackendNotSetError
+
+In order for your site to build successfully, your decoupled Front-End must point to a valid CMS endpoint. This is done through the use of the `BACKEND_URL` or `PANTHEON_CMS_ENDPOINT` environment variables. Only one of these environment variables is required to be set. 
+
+If used, the `BACKEND_URL` variable should be set to the URL of your CMS site. If you choose to use the `PANTHEON_CMS_ENDPOINT`variable, it should be set to the URL of your CMS site without protocol. For example:
+```js
+BACKEND_URL -> "https://dev-my-drupal-site.pantheonsite.io"
+PANTHEON_CMS_ENDPOINT -> "dev-my-drupal-site.pantheonsite.io"
+
+```
+
+In order to set an enviornment variable through the Pantheon Dashboard, navigate to your sites **Overview** > **Settings** > **Builds** page and scroll down to **Site Environment Variables**. Add the key of your environment variable and it's corresponding value.
+
+To mock a backend for local development, define it in your projects `.env.development.local` file: For example:
+```js
+BACKEND_URL="https://dev-my-drupal-site.pantheonsite.io"
+// Or
+PANTHEON_CMS_ENDPOINT="dev-my-drupal-site.pantheonsite.io"
+
+```
+

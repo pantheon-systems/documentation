@@ -26,7 +26,7 @@ New Relic&reg; is automatically enabled for all application containers added to 
 
 ## Configure New Relic&reg; Performance Monitoring Access
 
-1. Go to the <i className="fa fa-eye"></i> **New Relic** tab on your Site Dashboard, and click **Go to New Relic**.
+1. Go to the <Icon icon="eye" /> **New Relic** tab on your Site Dashboard, and click **Go to New Relic**.
 
   ![Screenshot showing the newly activated New Relic.](../../../images/integrations/newrelic/new-relic-activated.png)
 
@@ -54,9 +54,9 @@ Moving forward, to open New Relic&reg; Performance Monitoring:
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) of the site you suspect is having problems with MySQL query performance.
 
-1. Select the environment: Dev, Test, or Live.
+2. Select the environment: Dev, Test, or Live.
 
-1. Click the **New Relic** tab, and then select **Go to New Relic**.
+3. Click the **New Relic** tab, and then select **Go to New Relic**.
 
 ## More Resources
 

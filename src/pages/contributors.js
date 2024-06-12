@@ -6,7 +6,7 @@ import SEO from "../layout/seo"
 import { AvatarTileList, Container } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 class Contributors extends React.Component {
   render() {

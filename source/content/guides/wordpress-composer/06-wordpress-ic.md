@@ -1,6 +1,6 @@
 ---
-title: WordPress with Integrated Composer on Pantheon
-subtitle: Use Integrated Composer with WordPress 
+title: WordPress with Composer on Pantheon
+subtitle: Create a Composer-managed WordPress Site with Integrated Composer
 description: Learn how to use Integrated Composer with WordPress on Pantheon.
 contenttype: [guide]
 innav: [false]
@@ -17,11 +17,11 @@ permalink: docs/guides/wordpress-composer/wordpress-ic
 
 [Integrated Composer](/guides/integrated-composer) is a Pantheon platform feature. Integrated Composer extends Composer functionality to WordPress core files and treats them as a managed dependency. Integrated Composer lets you deploy your site on Pantheon with one-click updates for both upstream commits and Composer dependencies, while still receiving upstream updates.
 
-## WordPress with Integrated Composer on Pantheon 
+## WordPress with Integrated Composer on Pantheon
 
 Pantheon maintains a [Composer-enabled WordPress Upstream](https://github.com/pantheon-upstreams/wordpress-project) repository. This is the recommended starting point for forking new upstreams that work with Pantheon's Integrated Composer build process.
 
-This repository is still under active development, and you should not create permanent/production sites from it. There is no guarantee of backwards compatibility. 
+This repository is still under active development, and you should not create permanent/production sites from it. There is no guarantee of backwards compatibility.
 
 Pantheon upstreams influence the Composer packages that are included in downstream sites by including two `composer.json` files in this repository:
 
@@ -43,7 +43,7 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 1. Use `composer require`in the `upstream-config` directory to edit the upstream `composer.json` file.
 
-    - The repository template places a theme in the upstream `composer.json` file. This works well for downstream sites that all use the same theme. You should remove themes from the upstream `composer.json` file if you do not intend to use the upstream to lock downstream sites into a particular theme. You cannot remove installed packages from downstream sites if the packages were included from the upstream site. 
+    - The repository template places a theme in the upstream `composer.json` file. This works well for downstream sites that all use the same theme. You should remove themes from the upstream `composer.json` file if you do not intend to use the upstream to lock downstream sites into a particular theme. You cannot remove installed packages from downstream sites if the packages were included from the upstream site.
 
 ## Maintain Your Integrated Composer Fork
 
@@ -51,9 +51,9 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 1. Increase the version number listed in the `upstream-config/composer.json` file each time you make edits.
 
-    - Composer checks the contents of the root `/composer.json` file for changes that should be pushed to your upstream configuration. 
+    - Composer checks the contents of the root `/composer.json` file for changes that should be pushed to your upstream configuration.
 
-1. Verify your changes to the `upstream-config/composer.json` file by running `composer install` or `composer update` in the `upstream-config` directory. 
+1. Verify your changes to the `upstream-config/composer.json` file by running `composer install` or `composer update` in the `upstream-config` directory.
 
     - Be careful not to rely on ["root-only" properties of composer.json](https://getcomposer.org/doc/04-schema.md).
 
@@ -90,6 +90,6 @@ Follow the steps in this section to create a new WordPress site using Integrated
 
 ## More Resources
 
-- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream) 
+- [Best Practices for Maintaining Custom Upstreams](/guides/custom-upstream/maintain-custom-upstream)
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)

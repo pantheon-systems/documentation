@@ -21,9 +21,10 @@ This section provides information on how to manage verbose debugging options and
 The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev & Multidevs). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
 
 ## Enable Twig Debugging on Dev & Multidevs
-Pantheon handles the inclusion of service configuration files. The [default file provided](https://github.com/pantheon-upstreams/drupal-composer-managed/tree/default/web/sites/default) has everything you need, so enabling Twig debugging is simple:
 
-1. Clone the site's codebase using the [Git command string provided on the Site Dashboard](/guides/git/git-config#clone-your-site-codebase) or via [Terminus](/terminus) if you haven't done so already. 
+Pantheon handles the inclusion of service configuration files. The [default file provided](https://github.com/pantheon-upstreams/drupal-composer-managed/tree/main/web/sites/default) has everything you need, so enabling Twig debugging is simple:
+
+1. Clone the site's codebase using the [Git command string provided on the Site Dashboard](/guides/git/git-config#clone-your-site-codebase) or via [Terminus](/terminus) if you haven't done so already.
 
  ```bash{promptUser: user}
  terminus connection:info <site>.dev --fields='Git Command' --format=string
@@ -65,7 +66,7 @@ Pantheon handles the inclusion of service configuration files. The [default file
         <div class="section layout-container clearfix">
  ```
 
-Refer to [Creating a services.yml File for Drupal](/services-yml) for more information on Pantheon's service configuration files for Drupal. 
+Refer to [Creating a services.yml File for Drupal](/services-yml) for more information on Pantheon's service configuration files for Drupal.
 
 ## Enable Cacheability Debugging on Dev and Multidevs
 

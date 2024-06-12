@@ -43,18 +43,11 @@ The following components are required for your backend, especially if using the 
      - [Composer](https://getcomposer.org/) - Composer is a tool for dependency management in PHP. It allows you to declare libraries for your project and manages them for you.
      - [Terminus](/terminus) - The command-line interface which provides advanced interaction with Pantheon. Terminus is needed to update build tools for a Front-End Site.
 
-## Frontend Requirements
+## Front-End Requirements
 
-The following components are required for your frontend project to use Pantheon's Front-End Sites:
+As of the release of our [V1 build pipeline](/guides/decoupled/overview/v1-pipeline), Front-End Sites runs can run v16, v18, or v20 of Node.js [as specified in your `package.json` file](/guides/decoupled/overview/manage-settings#nodejs-version).
 
-- [Node.js](https://nodejs.org/en/)
-  - Supported Node.js versions for static sites (Gatsby): 14, 16, 18.
-  - Supported Node.js versions for dynamic sites (Next.js): 16.
-  - Installing [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/) using Homebrew is recommended for Mac users.
-
-## Frontend Frameworks
-
-Pantheon Front-End Sites Early Access (EA) program currently supports Gatsby and Next.js as frontend frameworks. Additional frameworks will be added to our official support list over the coming months.
+Pantheon Front-End Sites Early Access (EA) program currently supports Gatsby and Next.js as frameworks. Additional frameworks will be added to our official support list over the coming months.
 
 You can use frontend frameworks other than Gatsby and Next.js, however the process requires manual configuration. Refer to [Use a Non-official Framework](/guides/decoupled/no-starter-kit/any-framework) for specific instructions.
 

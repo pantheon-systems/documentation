@@ -18,11 +18,11 @@ This section provides information on how to enable backups, test your email plug
 
 ## Enable and Schedule Weekly Backups
 
-1. Click **<span class="glyphicons glyphicons-cloud-upload"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
+1. Click <Icon icon="cloud-upload" /> **Backups** on the <Icon icon="wrench" /> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
 
 1. Switch the toggle to **Enable** if needed, then pick the day on which you want to create weekly backups, and then click **Update Weekly Backup Schedule**.
 
-1. Repeat these steps for the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live** environments.
+1. Repeat these steps for the **<Icon icon="equalizer" /> Test** and **<Icon icon="wavePulse" /> Live** environments.
 
 Refer to [Backups Tool](/guides/backups) for more information on this feature.
 
@@ -40,9 +40,9 @@ Some email solution providers (like Sendgrid) may implement a waiting period bef
 
 Launch with confidence by taking advantage of Pantheon's static site analysis service for Drupal and WordPress.
 
-1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+1. Access the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Navigate to the **<span class="glyphicons glyphicons-info-sign"></span> Status** page.
+1. Navigate to the **<Icon icon="circleInfo" /> Status** page.
 
 The automated report will:
 

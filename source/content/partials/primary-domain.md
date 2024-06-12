@@ -16,7 +16,7 @@ With a Primary Domain set at the platform level, all other domains (except the [
 
 </Alert>
 
-1. Navigate to the environment you want to set a primary domain for (typically Test or Live), and then select **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+1. Navigate to the environment you want to set a primary domain for (typically Test or Live), and then select **<Icon icon="global" /> Domains / HTTPS**.
 
 1. Ensure that all domains have been added and are listed.
 

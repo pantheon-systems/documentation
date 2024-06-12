@@ -51,11 +51,11 @@ Create a new machine user in your Atlassian Cloud instance. This user is referre
 
 1. [Sign up for an Atlassian Cloud account](https://www.atlassian.com/software/jira/try) if you do not have one already.
 
-1. Login to your Atlassian Cloud instance, click <i class="fa fa-gear"></i> in the upper panel, and then select **User management**.
+1. Login to your Atlassian Cloud instance, click <Icon icon="gear" /> in the upper panel, and then select **User management**.
 
 1. Enter a name and email address for the machine user, which acts as the intermediary between Jira and the Pantheon Site Dashboard. Then click **Create users**.
 
-  We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Automation`. The email needs to be an account you have access to:
+We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Automation`. The email needs to be an account you have access to:
 
     ![Create an automation user](../../../images/integrations/jira-new-user.png)
 
@@ -75,17 +75,17 @@ In the commands below, replace `<site>` with your site name, `<example>` with yo
    terminus secrets:list <site>.dev
    ```
 
-  If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon:
+If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon:
 
-   ```none
-   $ echo '{}' > secrets.json
-   $ `terminus connection:info <site>.dev --field=sftp_command`
-   sftp> put ./files/private secrets.json
-   sftp> bye
-   $ rm secrets.json
-   ```
+```none
+$ echo '{}' > secrets.json
+$ `terminus connection:info <site>.dev --field=sftp_command`
+sftp> put ./files/private secrets.json
+sftp> bye
+$ rm secrets.json
+```
 
-  Otherwise, continue to the next step.
+Otherwise, continue to the next step.
 
 1. Use Terminus to write your Jira URL value in the private `secrets.json` file:
 
@@ -156,7 +156,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml). If you have an existing `pantheon.yml` with this line, don't add it again.
+   `api_version` should be set once in [`pantheon.yml`](/pantheon-yml). If you have an existing `pantheon.yml` with this line, don't add it again.
 
     </Alert>
 
@@ -176,15 +176,15 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 1. Push a code change that contains the Jira issue ID in the commit message. This workflow will trigger `jira_integration.php` script, which will search commits for possible issue IDs and comment in Jira when found.
 
-    You can also reference multiple issue IDs in a single commit:
+   You can also reference multiple issue IDs in a single commit:
 
-      ```bash{promptUser: user}
-      git commit -m "WEB-113: This commit also fixes WEB-29 and WEB-3"
-      ```
+   ```bash{promptUser: user}
+   git commit -m "WEB-113: This commit also fixes WEB-29 and WEB-3"
+   ```
 
 1. Return to the issue in Jira to see a message from our machine user:
 
-    ![Jira issue](../../../images/integrations/jira_log.png)
+   ![Jira issue](../../../images/integrations/jira_log.png)
 
 ## External Repositories
 

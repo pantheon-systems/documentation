@@ -66,7 +66,7 @@ Terminus does not work with the following platforms:
 
 ### Recommended Packages
 
-- [Drush](http://docs.drush.org/en/master/install/). This is useful if you need to run Drush commands that are incompatible with Terminus.
+- [Drush](https://www.drush.org/12.x/install/). This is useful if you need to run Drush commands that are incompatible with Terminus.
 - [WP-CLI](http://wp-cli.org/). This is useful if you need to run WP-CLI commands that are incompatible with Terminus.
 
 ## Install Terminus
@@ -89,7 +89,7 @@ The commands below will:
 
     ```bash{promptUser: user}
   mkdir -p ~/terminus && cd ~/terminus
-  curl -L https://github.com/pantheon-systems/terminus/releases/download/3.2.2/terminus.phar --output terminus
+  curl -L https://github.com/pantheon-systems/terminus/releases/download/3.5.0/terminus.phar --output terminus
   chmod +x terminus
   ./terminus self:update
   sudo ln -s ~/terminus/terminus /usr/local/bin/terminus

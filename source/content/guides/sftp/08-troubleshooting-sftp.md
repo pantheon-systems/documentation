@@ -31,10 +31,6 @@ If you **cannot** access that web page then your network or firewall is likely p
 
 If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related. Be sure to double-check or re-enter your [SFTP settings](/guides/sftp/sftp-connection-info), including SFTP mode and port `2222`. [Contact Pantheon Support](/guides/support/contact-support/) if you still have trouble.
 
-### I registered my Pantheon account via Google. How do I connect to SFTP?
-
-We recommend [adding an SSH Key](/ssh-keys) for extra security. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
-
 ### I can't write to my codebase on Test or Live.
 
 This is part of the [Pantheon WebOps workflow](/pantheon-workflow) that keeps code and content safe. Please see [Using the Pantheon Workflow](/pantheon-workflow#understanding-write-permissions-in-test-and-live) for more information.

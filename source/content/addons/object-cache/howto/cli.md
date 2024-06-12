@@ -79,7 +79,7 @@ Drupal deletes and regenerates cached entries during a cache rebuild or cache cl
 
 #### WordPress
 
-If [WP Redis](https://wordpress.org/plugins/wp-redis/) or [Object Cache Pro](/object-cache/wordpress/) are installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades, and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
+If [WP Redis](https://wordpress.org/plugins/wp-redis/) or [Object Cache Pro](/object-cache/wordpress/) are installed, any operation that calls the WordPress function `wp_cache_flush()` will also clear the entire Redis database cache. This happens during WordPress core upgrades and when clearing the cache via the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) plugin, the Pantheon dashboard, or Terminus.
 
 Refer to the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup method if necessary.
 
@@ -87,7 +87,7 @@ Refer to the Redis CLI section on [Clear All Keys](#clear-all-keys) as a backup 
 
 Use the `flushall` command to clear all keys from the cache.
 
-**Note:** If the [CMS cache clearing](#clearing-cached-data) is functioning as expected, this is generally not necessary. Be aware that in Drupal, it is possible that custom programming may rely on values stored here that are not meant to be temporary.
+**Note:** If the [CMS cache clearing](#clear-cached-data) is functioning as expected, this is generally not necessary. Be aware that in Drupal, it is possible that custom programming may rely on values stored here that are not meant to be temporary.
 
 ```bash
 redis> flushall

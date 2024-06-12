@@ -231,7 +231,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Where can I get a copy of a default.settings.php file?
 
-- **Drupal (Latest Version):** There is no `default.settings.php` file in the latest version of Drupal repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-upstreams/drupal-composer-managed/blob/default/web/sites/default/settings.php](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/default/web/sites/default/settings.php)
+- **Drupal (Latest Version):** There is no `default.settings.php` file in the latest version of Drupal repository on GitHub, but there is a `settings.php` file: [https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/web/sites/default/settings.php](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/web/sites/default/settings.php)
 
 - **Drupal 7:** [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 

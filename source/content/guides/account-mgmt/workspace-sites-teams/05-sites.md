@@ -42,7 +42,7 @@ The **Sites** tab shows all sites you own or are a team member of. You can quick
 
 Agency workspaces show "Site Owners" instead of "Users in Charge".
 
-A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/frozen-site).
+A <Icon icon="snowflake" /> icon in the site's status column indicates that a site is [frozen due to inactivity](/frozen-site).
 
 ### Associate a Site to a Workspace
 

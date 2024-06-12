@@ -29,6 +29,7 @@ import Check from "../components/check.js"
 import Partial from "../components/partial"
 import Youtube from "../components/youtube"
 import SearchBar from "../layout/SearchBar"
+import Wistia from "../components/wistia"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -51,17 +52,13 @@ const shortcodes = {
   ReviewDate,
   Check,
   Youtube,
+  Wistia,
 }
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
 const items = [
-  {
-    id: "docs-certification",
-    link: "/certification",
-    title: "Certification Program",
-  },
   {
     id: "docs-certification-chapter-0",
     link: "/certification/study-guide",
@@ -189,7 +186,7 @@ class CertificationTemplate extends React.Component {
           <main
             slot="content"
             id="docs-main"
-            tabindex="-1"
+            tabIndex="-1"
             className="certification terminus"
           >
             <article className="doc guide-doc-body">
