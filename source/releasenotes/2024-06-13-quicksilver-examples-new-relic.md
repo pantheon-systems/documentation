@@ -6,7 +6,6 @@ categories: [tools-apis, action-required]
 
 The internals of the integration between Pantheon and New Relic are changing due to some updates we should do on Pantheon's side to stay up-to-date with updates on New Relic side. These changes will be transparent for most of our users except:
 
-- Those who got an email warning you about changes in your New Relic account
 - Those who are using [quicksilver](https://docs.pantheon.io/guides/quicksilver) to interact with New Relic API.
 
 If you are using quicksilver, more specifically any of the 3 New Relic scripts in the [quicksilver-examples](https://github.com/pantheon-systems/quicksilver-examples) repository, then you should make some updates before [INSERT DATE HERE] for those scripts to keep working.
