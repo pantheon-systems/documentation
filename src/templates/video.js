@@ -1,55 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-
 import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
-
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
-import TOC from "../components/toc"
-import GetFeedback from "../components/getFeedback"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
-import Enablement from "../components/enablement"
-import Color from "../components/color.js"
-import Download from "../components/download"
-import Partial from "../components/partial"
-import Image from "../layout/image"
-import Example from "../components/styleExample"
-import Youtube from "../components/youtube"
-import Wistia from "../components/wistia"
-
 import { Container } from "@pantheon-systems/pds-toolkit-react"
+import MdxWrapper from "../components/mdxWrapper"
 
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Enablement,
-  Color,
-  Download,
-  Partial,
-  Image,
-  Example,
-  Youtube,
-  Wistia,
-}
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -104,9 +60,7 @@ class VideoTemplate extends React.Component {
               featured={node.frontmatter.featuredcontributor}
             />
             <article className="pds-spacing-mar-block-end-4xl">
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{node.body}</MDXRenderer>
-              </MDXProvider>
+              <MdxWrapper mdx={node.body} />
             </article>
           </Container>
         </main>

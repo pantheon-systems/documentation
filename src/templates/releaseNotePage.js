@@ -5,9 +5,18 @@ import SEO from "../layout/seo"
 import ReleaseNoteCategories from "../components/ReleaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
 import PublishedDate from "../components/PublishedDate"
-// This is used to get the fields from the MDX file.
-import { releaseNoteFragment } from "../fragments/releaseNote.js"
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
+import { Container } from "@pantheon-systems/pds-toolkit-react"
+import {
+  headline2,
+  headline3,
+  headline4,
+} from "../components/releaseHeadlines"
+
+const customShortcodes = {
+  h1: headline2,
+  h2: headline3,
+  h3: headline4,
+}
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -50,7 +59,7 @@ class ReleaseNoteTemplate extends React.Component {
                     dateString={node.frontmatter.published_date}
                     className="pds-spacing-mar-block-end-m"
                   />
-                  <MdxWrapper mdx={node.body} />
+                  <MdxWrapper mdx={node.body} customShortcodes={customShortcodes} />
                 </div>
               </div>
             </article>
