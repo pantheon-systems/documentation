@@ -75,70 +75,41 @@ const SidebarNav = ({ activePage }) => {
   })
 
   return (
-    <div>Compact?
+    <div>
     <SideNavCompact
-      headingText={<a href="#">Secondary menu</a>}
+      headingText={<a href="#">WebOps Certification</a>}
       menuItems={[
-        {
-          linkContent: <a href="#">Onboarding</a>
-        },
-        {
-          linkContent: <a href="/certification">Certification</a>,
 
-          links: [
+
+
+
+
+
+            {
+              linkContent: <a href="/certification/about">About the Certification Program</a>
+
+            },
+        {
+          linkContent: <a href="/certification/exam">Taking the Exam</a>
+
+        },
             {
               linkContent: <a href="/test">Study Guide</a>,
               links: CertificationStudyGuideLinks
             },
             {
-              linkContent: <a href="/test">Item 2b</a>
+              linkContent: <a href="https://certification.pantheon.io/">Certification Directory</a>
+
             }
-          ]
 
 
-        },
-        {
-          linkContent: <a href="#">Policies and benefits</a>,
-          links: [
-            {
-              linkContent: <a href="/test">Item 2a</a>
-            },
-            {
-              linkContent: <a href="/test">Item 2b</a>
-            }
-          ]
-        },
-        {
-          linkContent: <a href="/test">Tools directory</a>,
-          links: [
-            {
-              linkContent: <a href="/test">Item 3a</a>,
-              links: [
-                {
-                  linkContent: <a href="/test">Item 3ai</a>
-                },
-                {
-                  linkContent: <a href="/test">Item 3aii</a>
-                }
-              ]
-            },
-            {
-              linkContent: <a href="/test">Item 3b</a>
-            },
-            {
-              linkContent: <a href="/test">Item 3c</a>
-            }
-          ]
-        },
-        {
-          linkContent: <a href="/test">Learning resources</a>
-        },
-        {
-          linkContent: <a href="/test">Communications resources</a>
-        },
-        {
-          linkContent: <a href="/test">Engagement survey</a>
-        }
+
+
+
+
+
+
+
       ]}
     />
     </div>
