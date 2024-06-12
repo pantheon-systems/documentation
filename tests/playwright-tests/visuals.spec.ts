@@ -17,13 +17,13 @@ test('Get Started - Landing Page', async ({ page }) => {
 test('Release Notes - Category Listing', async ({ page }) => {
   await page.goto('/release-notes/?category=policy');
   await page.getByText('Accept Cookies').click();
+  await page.waitForLoadState('networkidle');
   await expect(page).toHaveScreenshot('release-notes--category.png', { fullPage: true });
 });
 
 test('Release Notes - Single Entry', async ({ page }) => {
   await page.goto('/release-notes/2024/05/new-relic-agent-update-released');
   await page.getByText('Accept Cookies').click();
-  await page.waitForLoadState('networkidle');
   await expect(page).toHaveScreenshot('release-notes--single-entry.png', { fullPage: true });
 });
 
