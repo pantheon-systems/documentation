@@ -7,6 +7,9 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
     steps:
       - uses: wow-actions/welcome@v1
         with:
@@ -18,5 +21,5 @@ jobs:
             Thanks for opening your first pull request! @pantheon-systems/docs-admins is excited to review this!
           FIRST_PR_MERGED: |
             🎉 @{{ author }}
-            Congrats on merging your first pull request! @pantheon-systems/docs-admins is appreciates your contribution!!
+            Congrats on merging your first pull request! @pantheon-systems/docs-admins appreciates your contribution!!
           STAR_MESSAGE: If you like this project, please ⭐star⭐ our repo.

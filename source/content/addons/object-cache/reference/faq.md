@@ -32,6 +32,11 @@ Object Cache follows the `maxmemory-policy` configuration directive when the spe
 
 On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, refer to the official [Redis documentation](https://redis.io/topics/lru-cache).
 
+### Which versions of Redis are available?
+
+There are two available versions of Redis available for the Object Cache: `2.8` and `6.2`.  The default version for the platform is `2.8` currently. You can [set your site's Redis version](/pantheon-yml#specify-a-redis-version).
+
+
 ### How is Redis Configured on the Platform?
 
 Your `redis.conf` file can be retrieved via SFTP similarly to how you can download Redis log files (refer to the example below), or you can review it here:

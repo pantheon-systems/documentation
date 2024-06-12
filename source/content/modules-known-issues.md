@@ -265,6 +265,16 @@ ___
 
 ___
 
+## [Ludwig]([https://www.drupal.org/project/ludwig](https://www.drupal.org/project/ludwig))
+
+<ReviewDate date="2024-04-18" />
+
+**Issue**: Ludwig expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
+
+**Solution**: As covered by the [module's project page](https://www.drupal.org/project/ludwig), Composer managed Drupal sites should not use Ludwig. See also, this discussion regarding [Ludwig EOL](https://www.drupal.org/project/ludwig/issues/3377094).
+
+___
+
 ## [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
 
 **Issue**:  This module requires the use of the `/tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.

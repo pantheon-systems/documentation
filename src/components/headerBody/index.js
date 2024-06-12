@@ -7,7 +7,7 @@ import Slack from "../slack"
 import Discourse from "../discourse"
 import ContributorGuest from "../contributorGuest"
 
-import { Badge } from "@pantheon-systems/pds-toolkit-react"
+import { StatusBadge } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
@@ -29,9 +29,10 @@ const HeaderBody = ({
     <>
       <header className="doc-content-header">
         {lastReviewed && (
-          <Badge
-            hasStatusType={false}
+          <StatusBadge
+            hasStatusIndicator={false}
             label={lastReviewed}
+            color="transparent"
             className="pds-spacing-mar-block-end-m"
           />
         )}
@@ -51,7 +52,6 @@ const HeaderBody = ({
         {!featured && <Contributors contributors={contributors} />}
         <div className="doc-content-header__actions">
           <div className="doc-content-header__discuss">
-            <Discourse pageTitle={title} path={slug} cms={cms} />
             <Slack />
           </div>
           <Github

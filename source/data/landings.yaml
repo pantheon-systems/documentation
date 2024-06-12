@@ -642,7 +642,7 @@
         - text: "Log Files on Pantheon"
           url: "/guides/logs-pantheon"
         - text: "Metrics in the Site Dashboard"
-          url: "/metrics"
+          url: "/guides/account-mgmt/traffic"
         - text: "Parsing nginx Access Logs with GoAccess"
           url: "/guides/logs-pantheon/nginx-access-logs"
         - text: "PHP Slow Log"
@@ -1240,8 +1240,8 @@
           url: '/guides/account-mgmt/traffic/remedy'
         - text: 'FAQ'
           url: '/guides/account-mgmt/traffic/faq'
-    - title: 'Billing - Enterprise Customers'
-      subtitle: ''
+    - title: "Billing - Enterprise Customers"
+      subtitle: ""
       links:
         - text: "Overview"
           url: "/guides/enterprise-billing-center"
@@ -1316,16 +1316,14 @@
     - title: "Traffic and Overages"
       subtitle: ""
       links:
-        - text: 'Overview'
-          url: '/guides/account-mgmt/traffic'
-        - text: 'Measuring Traffic'
-          url: '/guides/account-mgmt/traffic/measure'
-        - text: 'Investigate and Remedy Traffic Events'
-          url: '/guides/account-mgmt/traffic/remedy'
-        - text: 'FAQ'
-          url: '/guides/account-mgmt/traffic/faq'
-    - title: 'Billing - Enterprise Customers'
-      subtitle: ''
+        - text: "Measure Site Traffic"
+          url: "/guides/account-mgmt/traffic"
+        - text: "Overages Policy"
+          url: "/guides/account-mgmt/overages"
+        - text: "Troubleshooting Traffic Events"
+          url: "/guides/account-mgmt/traffic/remedy"
+    - title: "Site Portfolio Report"
+      subtitle: ""
       links:
         - text: 'Overview'
           url: '/guides/enterprise-billing-center'
@@ -1397,7 +1395,7 @@
         - text: "Site traffic and overages"
           url: "/guides/account-mgmt/traffic#traffic-limits-and-overages"
         - text: "Difference Between GA vs Pantheon Analytics"
-          url: "/guides/account-mgmt/traffic/faq#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics"
+          url: "/guides/account-mgmt/traffic/#why-doesnt-pantheons-traffic-metrics-match-my-other-analytics"
     - title: "Site Relaunch"
       subtitle: ""
       links:

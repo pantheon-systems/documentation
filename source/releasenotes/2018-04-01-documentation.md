@@ -11,7 +11,7 @@ Review considerations and recommendations on how to handle redirect logic via PH
 
 Learn how to use the Views Cache Tags module along with custom code to control the Pantheon Advanced Page Cache.
 
-### [Metrics in the Site Dashboard](/guides/legacy-dashboard/metrics)
+### [Metrics in the Site Dashboard](/guides/account-mgmt/traffic)
 
 Measure your site's traffic with the Metrics tool, found in the Live environment of the Site Dashboard.
 

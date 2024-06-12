@@ -109,7 +109,7 @@ To test whether or not a cookie is preventing the CDN from caching:
     ```
 1. Examine the headers output (Age, Max-Age, Cookie).
 
-    - You will notice a `max-age of 300`, and if you run the command again, the `Age` field will continue to increase until it reaches the TTL set by the max-age.
+    - You will notice a `max-age of 300`, and if you run the command again, the `Age` field will continue to increase until it reaches the value set by the max-age.
 
 1. Check if a cookie is being set (with the Set-Cookie header) if you see `Age:0` in your output after more than one request (see the example output below). Setting cookies will prevent the CDN from caching that page.
 

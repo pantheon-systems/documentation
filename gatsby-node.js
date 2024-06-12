@@ -139,7 +139,7 @@ exports.createPages = ({ graphql, actions }) => {
       allDocs: allMdx(
         filter: {
           fileAbsolutePath: {
-            regex: "/content(?!/(partials|changelog|guides|releasenotes)/)/"
+            regex: "/content(?!/(partials|changelog|guides|releasenotes|iframeembeds)/)/"
           }
           frontmatter: { draft: { ne: true } }
         }
@@ -194,6 +194,16 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+
+
+      allIframeEmbeds: allMdx(limit: 10, filter: {fileAbsolutePath: {regex: "/iframeembeds/"}}) {
+          edges {
+            node {
+              slug
+              body
+            }
+          }
+        }
 
       allReleaseNotes: allMdx(
         filter: { fileAbsolutePath: { regex: "/releasenotes/" } }
@@ -400,22 +410,7 @@ exports.createPages = ({ graphql, actions }) => {
     // And can reused the code above.
     createPage({
       path: `/release-notes/`,
-      component: path.resolve("./src/templates/releaseNotesListing.js"),
-    })
-
-    // Create Terminus Command pages
-    const allReleaseNoteCategories =
-      result.data.releasenotescategoriesJson.categories
-    allReleaseNoteCategories.forEach((category) => {
-      createPage({
-        path: `/release-notes/${category.slug}`,
-        component: path.resolve(
-          "./src/templates/releaseNotesListingByCategory.js"
-        ),
-        context: {
-          category: category.slug,
-        },
-      })
+      component: path.resolve("./src/templates/releaseNotesListing/index.js"),
     })
 
     // terminusCommands.forEach(command => {
@@ -440,6 +435,27 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/${template}.js`),
         context: {
           slug: releaseNote.node.fields.slug,
+        },
+      })
+    })
+
+    // Create iframeembed page
+    const iframeEmbeds = result.data.allIframeEmbeds.edges;
+    iframeEmbeds.forEach((iframeEmbed) => {
+
+      // There's an odd bug where the slug value is inconsistent, even for the same file
+      // across different gatsby builds. This is a workaround.
+      // if the slug does not contain "iframeembeds" the add it
+      if (!iframeEmbed.node.slug.includes("iframeembeds")) {
+        iframeEmbed.node.slug = `iframeembeds/${iframeEmbed.node.slug}`
+      }
+
+      createPage({
+        path: `${iframeEmbed.node.slug}`,
+        component: path.resolve(`./src/templates/iframeembed.js`),
+        context: {
+          slug: iframeEmbed.node.slug,
+          body: iframeEmbed.node.body,
         },
       })
     })

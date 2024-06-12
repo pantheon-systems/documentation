@@ -1,0 +1,6 @@
+node_modules/
+/test-results/
+/playwright-report/
+/playwright-tests/visuals.spec.ts-snapshots/
+/blob-report/
+/playwright/.cache/
