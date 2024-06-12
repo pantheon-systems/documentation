@@ -133,8 +133,7 @@ class CertificationTemplate extends React.Component {
         />
 
         <div slot="guide-menu" >
-
-          <SidebarNav />
+          <SidebarNav activePage={node.fields.slug}  />
 
 
         <Navbar
