@@ -1172,18 +1172,18 @@
     - title: ""
       type: "normal"
       links:
-        - text: "Accounts"
-          url: "/guides/account-mgmt/account"
-        - text: "Plans and Pricing"
-          url: "/guides/account-mgmt/plans"
-        - text: "Workspaces, Sites, and Teams"
-          url: "/guides/account-mgmt/workspace-sites-teams"
-        - text: "Billing"
-          url: "/guides/account-mgmt/billing"
-        - text: "Traffic and Overages"
-          url: "/guides/account-mgmt/traffic"
-        - text: "Enterprise Billing Center"
-          url: "/guides/enterprise-billing-center"
+        - text: 'Accounts'
+          url: '/guides/account-mgmt/account'
+        - text: 'Plans and Pricing'
+          url: '/guides/account-mgmt/plans'
+        - text: 'Workspaces, Sites, and Teams'
+          url: '/guides/account-mgmt/workspace-sites-teams'
+        - text: 'Billing - Self-Serve Customers'
+          url: '/guides/account-mgmt/billing'
+        - text: 'Traffic and Overages'
+          url: '/guides/account-mgmt/traffic'
+        - text: 'Billing - Enterprise Customers'
+          url: '/guides/enterprise-billing-center'
   topics-groups:
     - title: "Accounts"
       subtitle: ""
@@ -1208,16 +1208,16 @@
     - title: "Workspaces, Sites, and Teams"
       subtitle: ""
       links:
-        - text: "Understand How Workspaces, Sites and Teams Work Together"
-          url: "/guides/account-mgmt/workspace-sites-teams"
-        - text: "Professional Workspaces"
-          url: "/guides/account-mgmt/workspace-sites-teams/workspaces"
-        - text: "Sites"
-          url: "/guides/account-mgmt/workspace-sites-teams/sites"
-        - text: "Teams"
-          url: "/guides/account-mgmt/workspace-sites-teams/teams"
-    - title: "Billing"
-      subtitle: ""
+        - text: 'Understand How Workspaces, Sites and Teams Work Together'
+          url: '/guides/account-mgmt/workspace-sites-teams'
+        - text: 'Professional Workspaces'
+          url: '/guides/account-mgmt/workspace-sites-teams/workspaces'
+        - text: 'Sites'
+          url: '/guides/account-mgmt/workspace-sites-teams/sites'
+        - text: 'Teams'
+          url: '/guides/account-mgmt/workspace-sites-teams/teams'
+    - title: 'Billing - Self-Serve Customers'
+      subtitle: ''
       links:
         - text: "Billing Periods"
           url: "/guides/account-mgmt/billing/periods"
@@ -1232,13 +1232,15 @@
     - title: "Traffic and Overages"
       subtitle: ""
       links:
-        - text: "Measure Site Traffic"
-          url: "/guides/account-mgmt/traffic"
-        - text: "Overages Policy"
-          url: "/guides/account-mgmt/overages"
-        - text: "Troubleshooting Traffic Events"
-          url: "/guides/account-mgmt/traffic/remedy"
-    - title: "Enterprise Billing Center"
+        - text: 'Overview'
+          url: '/guides/account-mgmt/traffic'
+        - text: 'Measuring Traffic'
+          url: '/guides/account-mgmt/traffic/measure'
+        - text: 'Investigate and Remedy Traffic Events'
+          url: '/guides/account-mgmt/traffic/remedy'
+        - text: 'FAQ'
+          url: '/guides/account-mgmt/traffic/faq'
+    - title: "Billing - Enterprise Customers"
       subtitle: ""
       links:
         - text: "Overview"
@@ -1254,18 +1256,18 @@
     - title: ""
       type: "normal"
       links:
-        - text: "Accounts"
-          url: "/guides/account-mgmt/account"
-        - text: "Plans and Pricing"
-          url: "/guides/account-mgmt/plans"
-        - text: "Workspaces, Sites, and Teams"
-          url: "/guides/account-mgmt/workspace-sites-teams"
-        - text: "Billing"
-          url: "/guides/account-mgmt/billing"
-        - text: "Traffic and Overages"
-          url: "/guides/account-mgmt/traffic"
-        - text: "Enterprise Billing Center"
-          url: "/guides/enterprise-billing-center"
+        - text: 'Accounts'
+          url: '/guides/account-mgmt/account'
+        - text: 'Plans and Pricing'
+          url: '/guides/account-mgmt/plans'
+        - text: 'Workspaces, Sites, and Teams'
+          url: '/guides/account-mgmt/workspace-sites-teams'
+        - text: 'Billing - Self-Serve Customers'
+          url: '/guides/account-mgmt/billing'
+        - text: 'Traffic and Overages'
+          url: '/guides/account-mgmt/traffic'
+        - text: 'Billing - Enterprise Customers'
+          url: '/guides/enterprise-billing-center'
   topics-groups:
     - title: "Accounts"
       subtitle: ""
@@ -1290,16 +1292,16 @@
     - title: "Workspaces, Sites, and Teams"
       subtitle: ""
       links:
-        - text: "Understand How Workspaces, Sites and Teams Work Together"
-          url: "/guides/account-mgmt/workspace-sites-teams"
-        - text: "Professional Workspaces"
-          url: "/guides/account-mgmt/workspace-sites-teams/workspaces"
-        - text: "Sites"
-          url: "/guides/account-mgmt/workspace-sites-teams/sites"
-        - text: "Teams"
-          url: "/guides/account-mgmt/workspace-sites-teams/teams"
-    - title: "Billing"
-      subtitle: ""
+        - text: 'Understand How Workspaces, Sites and Teams Work Together'
+          url: '/guides/account-mgmt/workspace-sites-teams'
+        - text: 'Professional Workspaces'
+          url: '/guides/account-mgmt/workspace-sites-teams/workspaces'
+        - text: 'Sites'
+          url: '/guides/account-mgmt/workspace-sites-teams/sites'
+        - text: 'Teams'
+          url: '/guides/account-mgmt/workspace-sites-teams/teams'
+    - title: 'Billing - Self-Serve Customers'
+      subtitle: ''
       links:
         - text: "Billing Periods"
           url: "/guides/account-mgmt/billing/periods"
@@ -1320,18 +1322,18 @@
           url: "/guides/account-mgmt/overages"
         - text: "Troubleshooting Traffic Events"
           url: "/guides/account-mgmt/traffic/remedy"
-    - title: "Site Portfolio Report"
+    - title: "Billing - Enterprise Customers"
       subtitle: ""
       links:
-        - text: "Overview"
-          url: "/guides/enterprise-billing-center/site-portfolio-report"
-        - text: "Using the Report"
-          url: "/guides/enterprise-billing-center/interacting"
-        - text: "FAQ"
-          url: "/guides/enterprise-billing-center/faq"
-- title: "Billing Docs"
-  subtitle: ""
-  path: "billing"
+        - text: 'Overview'
+          url: '/guides/enterprise-billing-center'
+        - text: 'Invoices'
+          url: '/guides/enterprise-billing-center/invoices'
+        - text: 'Site Portfolio Report'
+          url: '/guides/enterprise-billing-center/site-portfolio-report'
+- title: 'Billing Docs'
+  subtitle: ''
+  path: 'billing'
   topics-groups:
     - title: "Site Owners"
       subtitle: ""
