@@ -84,7 +84,18 @@ const SidebarNav = ({ activePage }) => {
         },
         {
           linkContent: <a href="/certification">Certification</a>,
-          links: CertificationStudyGuideLinks
+
+          links: [
+            {
+              linkContent: <a href="/test">Study Guide</a>,
+              links: CertificationStudyGuideLinks
+            },
+            {
+              linkContent: <a href="/test">Item 2b</a>
+            }
+          ]
+
+
         },
         {
           linkContent: <a href="#">Policies and benefits</a>,
