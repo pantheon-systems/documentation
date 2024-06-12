@@ -109,7 +109,7 @@ Pantheon offers savings for sites purchased with annual billing. Refer to [Panth
 
 The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
 
-Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
+Invoices and transaction history related to this change can be found in **<Icon icon="gear" /> Account** > **Billing**.
 
 ## Enable Add-ons
 

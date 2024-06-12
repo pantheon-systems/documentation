@@ -16,6 +16,7 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Youtube src="_3d8ID01UhQ" title="Configuring Your Front End Site" />
 
 This section provides information on Settings. You can configure Front-End Site settings in the Pantheon dashboard, including:
 
@@ -31,13 +32,36 @@ You can change the Site Name, connect or disconnect your Git repository, and del
 
 ### Node.js Version
 
-Pantheon respects the setting in `.nvmrc` when selecting the Node.js version for runtime. Currently supported versions are:
+As of the release of our [V1 build pipeline](/guides/decoupled/overview/v1-pipeline), Front-End Sites runs can run v16, v18, or v20 of Node.js as specified in your `package.json` file.
+
+[Odd-numbered Node.js releases, such as v17, never enter "Active LTS" status](https://nodejs.org/en/about/previous-releases#previous-releases). They are not available on Pantheon.
+
+Pantheon inspects the engines field in `package.json` when selecting a specific Node.js version for the build (Gatsby.js and Next.js) and runtime (Next.js) of your Front-End Site. For example, to select Node.js 16 for a given deployment, you should do the following:
+
+```json:title=package.json
+"engines": {
+  "node": ">=16.0.0 <18.0.0"
+},
+```
+
+To break down that example, the `package.json` file for the project declares it expects something greater than or equal to 16.0.0 and less than 18.0.0. As of the writing of this documentation, this declaration would result in 16.20.2 being used.
+
+Note that if you select a range of major Node.js versions, Pantheon will select the most recent Node.js major version for that deployment. For example, the following configuration would result in Node.js 18.x being selected:
+
+```json
+"engines": {
+  "node": ">=16.0.0 <20.0.0"
+},
+```
+We recommend that when you need to change the version of Node.js for your Front-End Site, that you test the new version by pushing the updated `package.json` to a branch first and create a pull request. Pantheon will create an environment for your site specific to that pull request.
+
+Sites made prior to **November 13th, 2023** set the Node.js version via  `.nvmrc` and can select via:
 
 - Node.js 14
 - Node.js 16
 - Node.js 18
 
-If you need to change the version of Node.js for your Front-End Site, you can test the new version by pushing the updated `.nvmrc` to a branch first.
+We recommend switching to the [V1 build pipeline](/guides/decoupled/overview/v1-pipeline) to access higher versions of Node.js and get faster build times.
 
 ### Change Site Name
 
@@ -121,6 +145,43 @@ Adjustments to these settings might be required if you are not using a starter k
 1. Enter your desired settings and click **Save**.
 
 ![Build and Output Settings](../../../../images/fes-build-output-settings.png)
+
+## Build Cache
+
+The first build on [any environment](/guides/decoupled/overview/considerations#types-of-environments) runs without a cache. During the first build, Pantheon caches the following assets based on the framework you’ve selected:
+
+*  `.node_modules` (all sites)
+* `.next/cache` (when a site is build using Next.js)
+* `.cache` and `public/` (when a site is built using Gatsby)
+
+Subsequent builds on the same environment will use this cache, unless you have taken steps to bust or purge the cache.
+
+These assets are cached for 365 days or until they are purged.
+
+For sites using Gatsby as a framework, please note that when you publish or edit post, the cache from the previous build will be used, but new and edited content will be included in the final deployment.
+
+### Purging the Build Cache
+
+Pantheon caches assets during the build process based on the project framework. To see more about what is cached and how, please see the Build Cache reference.
+
+During the development and management of a project you might want to run a build with a clean cache. There are several ways to do this.
+
+### Purge the Build Cache in the UI
+
+Each environment in the Pantheon dashboard includes an option to clear cache and build again from the most recent commit. For the live environment:
+
+![Screenshot of trigger  menu](../../../../images/decoupled/cache--live-env-build-without-cache.png)
+
+For a Multidev and Pull Request environments, you can access the same option from the listing in the dashboard:
+
+![Screenshot of Multidev menu](../../../../images/decoupled/cache--multidev.png)
+
+### Bust the Build Cache through Code Changes
+
+In addition to clearing the cache in the Dashboard, the following changes to your project will invalidate the existing build cache for an environment:
+
+* Changes to your `package.json` file
+* Changes to the Node.js version (Which presently only happens through `package.json` changes too)
 
 ## Site Environment Variables
 

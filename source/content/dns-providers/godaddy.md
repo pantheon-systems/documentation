@@ -23,7 +23,7 @@ Be sure that you have a:
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
 
-1. Navigate to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+1. Navigate to the [Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the target environment (typically <Icon icon="wavePulse" /> Live) then click **<Icon icon="global" /> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
 Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in a new tab before you continue.
@@ -74,7 +74,7 @@ Create one A record and 2 AAAA records for the given subdomain (e.g., `www.examp
 ## Troubleshooting
 
 ### The specified record already exists
-If you receive an error message that says `The specified record already exists`, click **Cancel** and select **<span class="glyphicons glyphicons-pencil"></span>** next to the existing record. Replace the value in the **Points to** field with the record value provided by Pantheon, then click **Save**.
+If you receive an error message that says `The specified record already exists`, click **Cancel** and select **<Icon icon="pen" />** next to the existing record. Replace the value in the **Points to** field with the record value provided by Pantheon, then click **Save**.
 
 ## GoDaddy Docs
 

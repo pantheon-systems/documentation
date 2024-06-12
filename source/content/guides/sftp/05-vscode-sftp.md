@@ -50,7 +50,7 @@ The SFTP extension for VS Code allows you to upload code to the Pantheon Dev or 
   }
   ```
 
-1. Include the path to your [SSH Key](/ssh-keys) if you have one added to your Pantheon account. If you aren't using a key, you'll be prompted to enter a password when using SFTP. Refer [Dashboard Credentials](/sftp#dashboard-credentials) for more information.
+1. Include the path to your [SSH Key](/ssh-keys).
 
   ```json:title=sftp.json
   {

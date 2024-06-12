@@ -63,7 +63,7 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 1. Give the token a name, expiration, and description.
 1. Select your GitHub user as the resource owner.
 1. For repository access, select **Only select repositories** and select your fork of this repository.
-1. Under Repository permissions, choose **Access: Read-only** from the **Access** dropdown button.
+1. Under Repository permissions, choose **Access: Read-only** from the **Access** dropdown button for **Contents**.
 1. Click **Generate token**.
 
 #### GitHub Tokens (classic)

@@ -22,7 +22,7 @@ Downloading the Pantheon aliases to your local Drush aliases file allows you to 
 
 1. Use [Terminus](/terminus) to download your Drush aliases.
 
-1. Authenticate Terminus with [machine tokens](/machine-tokens) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
+1. Authenticate Terminus with [machine tokens](/machine-tokens), then update your local aliases file in a single step:
 
   ```bash{promptUser: user}
   terminus aliases
@@ -84,7 +84,7 @@ Note that these are both "wildcard" aliases. The same wildcard alias is used for
 
 ### Policy Files
 
-Pantheon uses policy files to validate aliases before they are used. Policy files are written by the `terminus aliases` command. 
+Pantheon uses policy files to validate aliases before they are used. Policy files are written by the `terminus aliases` command.
 
 - The Drush 8 policy file is written to `$HOME/.drush/pantheon/drush8/pantheon_policy.drush.inc`. Do not delete this file.
 

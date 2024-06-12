@@ -33,7 +33,7 @@ In this lesson, we'll add the Slack extension to PagerDuty so your team can ackn
 
     ![CSlack authorization](../../../images/pagerduty/pg-authorize-slack.png)
 
-5. Go to **Configuration** > **Services**, and click the **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span>** icon next to your existing service then click **+ New Incident**:
+5. Go to **Configuration** > **Services**, and click the **<Icon icon="gear" />** icon next to your existing service then click **+ New Incident**:
 
   ![Configure existing service](../../../images/pagerduty/pg-configure-service.png)
 

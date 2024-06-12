@@ -36,7 +36,7 @@ The Front-End Sites starter kits use Next.js 13 and the Pages Router. The instru
 The recommended caching configurations are automatically enabled if you created your Drupal site using the [Drupal + Next.js frontend starter project](/guides/decoupled/drupal-nextjs-frontend-starters/create).
 
 The `PantheonDrupalState` class from the `@pantheon-systems/drupal-kit` npm
-package includes an adapted fetch method that adds the `Fastly-Debug` header
+package includes an adapted fetch method that adds the `Pantheon-SKey` header
 to each request sent to Drupal. Responses from Drupal contain the
 `Surrogate-Key` header. You can use these keys to instruct your frontend to purge content from a cache when the content in Drupal changes.
 

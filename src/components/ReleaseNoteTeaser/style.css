@@ -1,0 +1,27 @@
+.docs-release-note-teaser__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--pds-spacing-s);
+  margin-block-end: var(--pds-spacing-l);
+  justify-content: space-between;
+}
+
+@media (min-width: 1025px) {
+  .docs-release-note-teaser__header {
+    display: flex;
+    column-gap: var(--pds-spacing-xl);
+    margin-block-end: var(--pds-spacing-l);
+    flex-direction: row;
+  }
+}
+
+.docs-release-note-teaser__header {
+  .docs-release-notes-tags {
+    padding-block-start: var(--pds-spacing-4xs);
+  }
+}
+
+.individual-changelog-link h2 {
+  padding: 0;
+  margin: 0;
+}

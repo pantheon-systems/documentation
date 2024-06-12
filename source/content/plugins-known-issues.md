@@ -2,7 +2,7 @@
 title: WordPress Plugins and Themes with Known Issues
 description: A list of WordPress plugins, themes, and functions that are not supported and/or require workarounds.
 tags: [plugins, themes, code]
-contributors: [aleksandrkorolyov, jocastaneda, carl-alberto]
+contributors: [aleksandrkorolyov, jocastaneda, carl-alberto, jkudish]
 contenttype: [doc]
 showtoc: true
 innav: [true]
@@ -11,7 +11,7 @@ cms: [wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2022-03-24"
+reviewed: "2023-01-30"
 ---
 
 This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/guides/support/contact-support/).
@@ -35,9 +35,10 @@ The following is a list of plugins that assume write access, and the specific fi
 | Plugin | Assumed Write Path | Notes |
 | --- | --- | --- |
 | [AccessAlly WordPress LMS](https://accessally.com/) | wp-content/accessally-protected-content | PROTECTED\_CONTENT\_FOLDER variable within the plugin assumes access to PATH |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1vm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/) | wp-content/ai1wm-backups | The platform is not designed for large backup files, and this plugin can cause your deployment workflows to break. You can download full backups [from the Site Dashboard](/guides/backups). See [below](/plugins-known-issues#all-in-one-wp-migration) for additional information. |
 | | wp-content/plugins/all-in-one-wp-migrations/storage |
 | [Autoptimize](https://wordpress.org/plugins/autoptimize/) | wp-content/resources | See the [Autoptimize](/plugins-known-issues#autoptimize) section below for other solutions. |
+| [Big File Uploads](https://wordpress.org/plugins/tuxedo-big-file-uploads/) | wp-content/bfu-temp | See the [Big File Uploads](/plugins-known-issues#big-file-uploads) section below for solutions. |
 | [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) | wp-content/et-cache | Remember to repeat this process for each environment, including Multidevs. |
 | [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/) | wp-content/cache | Remember to repeat this process for each environment, including Multidevs. |
 | [Hummingbird](https://wordpress.org/plugins/hummingbird-performance/)  | wp-content/wphb-logs | The /wphb-logs folder logs API calls |
@@ -151,6 +152,15 @@ function is_mobile() {
   return $is_mobile;
 }
 ```
+___
+
+## Auth0
+
+<ReviewDate date="2024-04-27" />
+
+**Issue 1:** [Login by Auth0](https://github.com/auth0/wordpress) does not function properly out of the box on Pantheon because the Auth0 cookie is cached by the Global CDN and the value of the cookie is not passed back to the application server. In a previous version of this plugin (v4) there was a filter available to modify the cookie name, but in the latest version (v5) the filter has been removed.
+
+**Solution:** Some customers reported success using the PHP SDK to modify the cookie name to use the `STYXKEY_` prefix as a workaround. Please note that this solution is not perfect, as it can break sites when the suggested code is used without the plugin being activated or when certain plugin configurations are empty. See this [related GitHub issue](https://github.com/auth0/wordpress/issues/892) for the suggested workaround.
 
 ___
 
@@ -203,6 +213,38 @@ add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 ```
 
 **Solution 2:** Use an alternative Search and Replace plugin like [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
+
+___
+## Big File Uploads
+**Issue:** The [Big File Uploads](https://wordpress.org/plugins/tuxedo-big-file-uploads/) plugin has assumed write access for its temporary file storage.
+
+**Solution:**
+1. Set your Dev (or [Multidev](/guides/multidev)) environment to [Git connection mode](/connection-modes) in the dashboard or via Terminus.
+
+1. Use Git to clone your site's codebase locally if you haven't already. See [Clone your site codebase](/guides/git/git-config#clone-your-site-codebase)
+
+1. In your terminal, change your current directory to the location where the site's Git clone is stored.
+
+1. Navigate to `/wp-content` and check if the `/wp-content/bfu-temp` folder exists. If it does, remove it before you create the symlinks in the next steps:
+
+  ```bash{promptUser: user}
+  cd wp-content
+  rm -rf bfu-temp
+  ```
+
+1. Return to the root directory of the Git clone:
+
+  ```bash{promptUser: user}
+  cd ..
+  ```
+
+1. Create a symlinks:
+
+  ```bash{promptUser: user}
+  ln -s ../../files/private/bfu-temp ./wp-content/bfu-temp
+  ```
+
+1. Commit this change and push to your site, and ensure that a private/bfu-temp directory is created on each environment.
 
 ___
 
@@ -563,15 +605,15 @@ ___
 
 ___
 
-## iThemes Security
+## Solid Security (Previously: iThemes Security)
 
-<ReviewDate date="2020-02-10" />
+<ReviewDate date="2024-01-26" />
 
-**Issue 1:** The "File Change Detection" check in the [iThemes Security](https://wordpress.org/plugins/better-wp-security/) plugin, warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
+**Issue 1:** The "File Change Detection" check in the [Solid Security (Previously: iThemes Security)](https://wordpress.org/plugins/better-wp-security/) plugin, warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
 
 **Solution:** Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
 
-**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/guides/platform-considerations/platform-site-info#nginxconf) and code files on the Test and Live environments are not writable.
+**Issue 2:** Solid Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/guides/platform-considerations/platform-site-info#nginxconf) and code files on the Test and Live environments are not writable.
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 
@@ -671,19 +713,33 @@ ___
 
 ## PolyLang
 
-<ReviewDate date="2019-12-19" />
+<ReviewDate date="2023-11-15" />
 
 **Issue:** The [PolyLang](https://wordpress.org/plugins/polylang/) plugin adds a cache-busting cookie (ex. `pll_language=en`) for each request.
 
 **Solution:** Define the constant `PLL_COOKIE` to false in `wp-config.php` to remove the cookie:
 
 ```php:title=wp-config.php
-define('PLL_COOKIE', false)
+// Disable Polylang's feature to set a cookie that stores the visitor's selected language.
+define('PLL_COOKIE', false);
 ```
 
 The value of `PLL_COOKIE` defaults to `pll_polylang`. This defines the name of the cookie used by Polylang to store the visitor's language. When `PLL_COOKIE` is set to false, Polylang does not set any cookie. Be aware that in this case some features of the plugin may not work completely. For example, the login page will not be translated.
 
 See the [plugin documentation](https://polylang.pro/doc/php-constants/) for more information on its PHP constants.
+
+**Issue:** The [PolyLang](https://wordpress.org/plugins/polylang/) plugin caches the home url for each language. If your site is served from multiple domains, then only one of those domains' home url will be served and the others will redirect to that one.
+
+There is also a chance that your site will cache the insecure `http` protocol for the home url of different languages. This can happen if the cached data gets generated by a server-side cron event or WP-CLI command. In this case, you'll get a redirct loop of `https://domain.com/langcode/` &rarr; `http://domain.com/langcode/` &rarr; `https://domain.com/langcode/`.
+
+**Solution:** Define the constant `PLL_CACHE_HOME_URL` to false in `wp-config.php` to force Polylang to calculate the language's home url on each request:
+
+```php:title=wp-config.php
+// Force Polylang to recalculate language home and search urls on each request.
+define('PLL_CACHE_HOME_URL', false);
+```
+
+See the [plugin documentation](https://polylang.pro/doc/php-constants/#PLL_CACHE_HOME_URL) for more information on this PHP constant.
 
 ___
 
@@ -711,7 +767,7 @@ ___
 
 ## Query Monitor
 
-**Issue:** The [Query Monitor](https://wordpress.org/plugins/query-monitor/) plugin creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
+**Issue:** The [Query Monitor](https://wordpress.org/plugins/query-monitor/) plugin creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments. Additionally, the plugin can create large amounts of logs which can cause performance and file system issues.
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
 
@@ -852,7 +908,7 @@ ___
 
 ## Timthumb
 
-**Issue:** [Timthumb](https://code.google.com/p/timthumb/) is no longer supported or maintained.
+**Issue:** [Timthumb](https://code.google.com/archive/p/timthumb/) is no longer supported or maintained.
 
 ___
 
@@ -1383,9 +1439,9 @@ ___
 
 ## WP All Import / Export
 
-<ReviewDate date="2020-06-15" />
+<ReviewDate date="2024-04-05" />
 
-**Issue 1:** With [WP All Import / Export](http://www.wpallimport.com/),large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/timeouts) for more information.
+**Issue 1:** With [WP All Import / Export](http://www.wpallimport.com/), large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/timeouts) for more information.
 
 **Solution:** To avoid hitting a timeout, you can try:
 
@@ -1421,13 +1477,26 @@ The optimal number of records to process at one time depends on how many post_me
 - Clean up temporary files
 - Lower the chunk size to less than 100
 
+**Issue 4:** "All Import" does not appear in WordPress admin menu.
+
+In Test and Live environments, or while in Git mode on Dev, certain WordPress capabilities such as `install_plugins` are automatically disabled to make the WordPress admin UI not show features that require writable environments.
+
+WP All Import checks if a user has the `install_plugins` capability to determine if its admin menu should be displayed. Since this capability is disabled in these Pantheon environments, the plugin's menu doesn't appear.
+
+**Solution:** To display the plugin's admin menu, add the following line to your `wp-config.php` files before the inclusion of wp-config-pantheon.php:
+
+```php:title=wp-config.php
+define('DISALLOW_FILE_MODS', false);
+```
+
+This will allow the plugin's admin menu to appear. However, while you'll see more UI options in WordPress, such as the ability to install or update plugins, these actions won't work due to the non-writable filesystem. They will be present but non-functional.
 ___
 
 ## WP-Ban
 
 <ReviewDate date="2021-02-23" />
 
-**Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](/guides/legacy-dashboard/metrics#available-metrics) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/guides/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
+**Issue:**  [WP-Ban](https://wordpress.org/plugins/wp-ban/) returns a [200-level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success) response code to banned IPs. These responses are cached and count towards Site Visits. In addition, the Pantheon [Global CDN](/guides/global-cdn) may cache the result as successful, leading future visitors to think they've also been banned.
 
 **Solution:** See the doc on how to [Investigate and Remedy Traffic Events](/guides/account-mgmt/traffic/remedy) for alternative methods.
 
@@ -1497,6 +1566,16 @@ ___
 1. Create the `languages/wpml` directory inside `/files` for each environment.
 
 1. Define the [FS_METHOD in the wp-config](#define-fs_method).
+
+___
+
+## WP phpMyAdmin
+
+<ReviewDate date="2024-01-30" />
+
+The [WP phpMyAdmin](https://puvox.software/software/wordpress-plugins/?plugin=wp-phpmyadmin-extension) plugin is not supported on Pantheon and will not work correctly.
+
+**Alternative:** Please see https://docs.pantheon.io/guides/mariadb-mysql/mysql-access for more information on accessing your database directly.
 
 ___
 

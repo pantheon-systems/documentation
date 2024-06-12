@@ -1,4 +1,5 @@
 /* For local styles not coming from PDS. */
+
 html,
 body {
   overflow-x: hidden;
@@ -18,6 +19,11 @@ table {
 
 .pds-callout table {
   margin-block-end: var(--pds-spacing-m) !important;
+}
+
+/* Highlighted text */
+mark {
+  background-color: #fff1a9;
 }
 
 /* Landing pages */
@@ -148,7 +154,7 @@ a.individual-changelog-link:hover {
   color: var(--pds-color-button-primary-foreground-default) !important;
   font-family: var(--pds-typography-font-default) !important;
   font-size: 1rem !important;
-  font-weight: var(--pds-typography-font-weight-bold) !important;
+  font-weight: var(--pds-typography-font-weight-semibold) !important;
   height: 2.25rem;
   letter-spacing: var(--pds-typography-letter-spacing-m);
   transition: var(--pds-animation-button-transition);

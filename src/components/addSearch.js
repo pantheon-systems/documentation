@@ -13,7 +13,7 @@ class AddSearch extends React.Component {
         "display_meta_description": true,
         "display_result_image": false,
         "link_target": "_blank",
-        "hide_logo": false,
+        "hide_logo": true,
         "direction": "ltr",
         "api_throttle_time": 2000,
         "automatic_filter_results_by_site_language": false,

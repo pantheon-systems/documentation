@@ -53,7 +53,7 @@ Make sure that you have a:
  | [Cyberduck](https://cyberduck.io/)          |        [Sublime](https://www.sublimetext.com/)       |
  | [WinSCP](https://winscp.net/eng/index.php)  | [Atom](https://atom.io/)              |
 
-Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/ssh-keys). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon account password to sign in, when prompted.
+Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/ssh-keys). Creating a key takes a few minutes and handles the server authentication for you.
 
 Visit our guide to [Configure Visual Studio Code](/guides/local-development/visual-studio-code) to edit and sync code from within the text editor.
 
@@ -61,10 +61,10 @@ Visit our guide to [Configure Visual Studio Code](/guides/local-development/visu
 
 >Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours. -- You, probably.
 
-*Hold it right there*. Sites on Pantheon each include **<span class="glyphicons glyphicons-wrench"></span> Dev**, **<span class="glyphicons glyphicons-equalizer"></span> Test**, and **<span class="glyphicons glyphicons-cardio"></span> Live** environments -- and as the name implies, **<span class="glyphicons glyphicons-wrench"></span> Dev** is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
+*Hold it right there*. Sites on Pantheon each include **<Icon icon="wrench" /> Dev**, **<Icon icon="equalizer" /> Test**, and **<Icon icon="wavePulse" /> Live** environments -- and as the name implies, **<Icon icon="wrench" /> Dev** is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
 
-Using the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment means you can:
+Using the **<Icon icon="wrench" /> Dev** environment means you can:
 
-* Build in a known state with fewer surprises, since **<span class="glyphicons glyphicons-wrench"></span> Dev** is the same as **<span class="glyphicons glyphicons-cardio"></span> Live**.
+* Build in a known state with fewer surprises, since **<Icon icon="wrench" /> Dev** is the same as **<Icon icon="wavePulse" /> Live**.
 * Share work in progress with a web accessible URL (e.g., `example-dev.pantheonsite.io`)
 * Stop Cowboy Coding <Popover title="Cowboy Coding" content="Developing directly on the production environment, a poor practice." />

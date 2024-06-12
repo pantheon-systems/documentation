@@ -99,7 +99,7 @@ Make sure your site is in [SFTP mode](/guides/sftp) before uploading code via SF
   }
   ```
 
-1. If you have an [SSH Key](/ssh-keys) added to your Pantheon account, include the path to it:
+1. Include the path to your [SSH Key](/ssh-keys):
 
   ```json:title=sftp.json
   {
@@ -115,7 +115,7 @@ Make sure your site is in [SFTP mode](/guides/sftp) before uploading code via SF
   }
   ```
 
-  If you aren't using a key, you'll be prompted to enter a password when using SFTP. See [Dashboard Credentials](/guides/sftp) for more information.
+  An SSH Key is required when connecting via SFTP. See [SFTP Access and Authentication](/guides/sftp/sftp-connection-info) for more information.
 
   <Alert title="Warning" type="danger">
 

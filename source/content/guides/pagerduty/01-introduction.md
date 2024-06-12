@@ -26,9 +26,9 @@ Welcome! This guide will help you configure uptime monitors on a Pantheon Site w
 ## Before You Begin
 To get started, you need to activate [New Relic&reg; Performance Monitoring](/guides/new-relic) on Pantheon:
 
-1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic**.
+1. Navigate to the **<Icon icon="wrench" /> Live** environment in your Site Dashboard, and click **<Icon icon="eye" /> New Relic**.
 2. Click the **Activate New Relic Pro** button.
-3. Use the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Live Site** and browse your site for a few minutes to generate data in New Relic&reg;:
+3. Use the **<Icon icon="externalLink" /> Visit Live Site** and browse your site for a few minutes to generate data in New Relic&reg;:
 
   ![New Relic Enable and Generate Data](../../../images/pagerduty/new-relic-generate-data.png)
 

@@ -2,7 +2,7 @@
 title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [wordsmither]
-reviewed: "2023-06-15"
+reviewed: "2023-11-29"
 contenttype: [doc]
 showtoc: true
 categories: [overview, help]
@@ -601,11 +601,35 @@ Use relative paths when linking to other pages of the docs site.
 
 ## Icons
 
+[List of available icons](https://live-pds-toolkit-react.appa.pantheon.site/?path=/docs/components-icon--docs)
+<Accordion title="Legacy icons" id="legacy-icons">
+These additional icons will be deprecated but are currently available to represent icons in the site dashboard.
+
+- <Icon icon="charts" /> <code>charts</code>
+- <Icon icon="cleaning" /> <code>cleaning</code>
+- <Icon icon="cloud-upload" /> <code>cloud-upload</code>
+- <Icon icon="equalizer" /> <code>equalizer</code>
+- <Icon icon="global" /> <code>global</code>
+- <Icon icon="server" /> <code>server</code>
+
+</Accordion>
+
+<Example>
+
+<br/>
+
+<Icon icon="userPlus" text="Add user"/>
+
+<hr className="source-code" /> <br/>
+
 ```
-<Icon icon={"more-windows"} text={"Sites:"}/>
+<Icon icon="userPlus" text="Add user" />
 ```
 
-[Font Awesome Web Application Icons](https://www.w3schools.com/icons/fontawesome_icons_webapp.asp)
+
+</Example>
+
+
 
 ## Italics
 
@@ -1077,6 +1101,42 @@ export env=dev
 ````
 
 </Example>
+
+## Videos
+Use the Wistia and YouTube components to embed videos across the docs site.
+
+[Landing pages](https://github.com/pantheon-systems/documentation/blob/main/source/data/landings.yaml#L4) (e.g., [Get Started](/get-started), [Develop](/develop), [Go Live](/go-live), etc.) can set a `video_id` attribute to embed a YouTube sourced video to the top of the page. Embedding Wistia videos is not supported on landing pages at this time, however Wistia videos can be embedded elsewhere across the docs using the Wistia component as described below.
+
+### YouTube
+Use the YouTube component to embed YouTube videos. Set both `title` and `src`, for example:
+
+<Example>
+
+<Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
+
+<hr className="source-code" /> <br />
+
+```markdown
+<Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
+```
+
+</Example>
+
+### Wistia
+Use the Wistia component to embed Wistia videos. Set only the `src` without `title`, for example:
+
+<Example>
+
+<Wistia src="7gn1g3ljz6" />
+
+<hr className="source-code" /> <br />
+
+```markdown
+<Wistia src="7gn1g3ljz6" />
+```
+
+</Example>
+
 
 ## Voice, Style, and Flow
 

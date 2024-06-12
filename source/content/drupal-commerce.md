@@ -31,7 +31,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 1. Follow the [Before You Begin](/guides/build-tools/create-project/#prerequisites) section of the Build Tools guide to install Terminus and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use) and [CircleCI](https://circleci.com/account/api). Export the tokens to your current terminal session, as described below.
 
-1. Export the variables in your local terminal session copy and paste commands without needing to change the variable. 
+1. Export the variables in your local terminal session copy and paste commands without needing to change the variable.
 
   ```bash{promptUser: user}
   export SITENAME=yoursitenamehere
@@ -45,7 +45,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 ## Create a New Drupal Site
 
-1. Use the Terminus Build Tools plugin to create a new Drupal site from the Pantheon [Drupal Recommended](https://github.com/pantheon-systems/drupal-composer-managed) repository on GitHub:
+1. Use the Terminus Build Tools plugin to create a new Drupal site from the Pantheon [Drupal Recommended](https://github.com/pantheon-upstreams/drupal-composer-managed) repository on GitHub:
 
  ```bash{promptUser: user}
  terminus build:project:create d9 $SITENAME
@@ -90,7 +90,7 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 
 1. Open your [CircleCI Dashboard](https://circleci.com/dashboard) to see that tests are running on your new commit. After they pass, CircleCI will push the changes to your Site Dashboard.
 
-1. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span> **Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span> **Code**, then **install later**. 
+1. Go to your newly created Site Dashboard. Under the <Icon icon="wrench" /> **Dev** tab, click on <Icon icon="code" /> **Code**, then **install later**.
 
   You should now see your commit history. After CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
 

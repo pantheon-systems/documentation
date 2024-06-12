@@ -148,7 +148,7 @@ A site may need to deliver different content to different users without them log
 
 ### Using Modernizr
 
-[Modernizr](https://modernizr.com/) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in the Global CDN and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362).
+Modernizr is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in the Global CDN and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362).
 
 ### Device Detection
 
@@ -170,12 +170,12 @@ More information on mobile site best practices can be found in Google's official
 - [What are the top three things I should know when building a site for mobile devices?](https://developers.google.com/search/mobile-sites/get-started#key)
 - [What are the top three mistakes beginners want to avoid?](https://developers.google.com/search/mobile-sites/get-started#mistakes)
 
-A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com):
+A full list of the devices and their support for HTML5 is available on [https://html5test.co](https://html5test.co):
 
-- [Desktop browsers](https://html5test.com/results/desktop.html)
-- [Tablet browsers](https://html5test.com/results/tablet.html)
-- [Mobile browsers](https://html5test.com/results/mobile.html)
-- [Other browsers](https://html5test.com/results/other.html)
+- [Desktop browsers](https://html5test.co/results/desktop.html)
+- [Tablet browsers](https://html5test.co/results/tablet.html)
+- [Mobile browsers](https://html5test.co/results/mobile.html)
+- [Other browsers](https://html5test.co/results/other.html)
 
 ### Using STYXKEY
 
@@ -225,7 +225,7 @@ Pantheon strips cookies for any file ending with the following extensions, even 
 
 ## 404s
 
-Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, the Global CDN will respect them. Depending on your use case, that may be the desired result.
+Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age` headers, the Global CDN will respect them. Depending on your use case, that may be the desired result.
 
 <TabList>
 

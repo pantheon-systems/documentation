@@ -37,6 +37,7 @@ import DNSProviderDocs from "../components/dns-provider-docs.js"
 import Check from "../components/check.js"
 import LocaldevChangelog from "../components/localdevChangelog"
 import SearchBar from "../layout/SearchBar"
+import Wistia from "../components/wistia"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -66,6 +67,7 @@ const shortcodes = {
   DNSProviderDocs,
   Check,
   LocaldevChangelog,
+  Wistia,
 }
 
 class GuideTemplate extends React.Component {
@@ -133,7 +135,7 @@ class GuideTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main slot="content" id="docs-main" tabindex="-1">
+          <main slot="content" id="docs-main" tabIndex="-1">
             <article className="doc guide-doc-body pds-spacing-pad-block-end-2xl">
               <HeaderBody
                 title={node.frontmatter.title}

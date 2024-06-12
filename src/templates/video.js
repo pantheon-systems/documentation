@@ -26,6 +26,7 @@ import Partial from "../components/partial"
 import Image from "../layout/image"
 import Example from "../components/styleExample"
 import Youtube from "../components/youtube"
+import Wistia from "../components/wistia"
 
 import { Container } from "@pantheon-systems/pds-toolkit-react"
 
@@ -47,10 +48,11 @@ const shortcodes = {
   Image,
   Example,
   Youtube,
+  Wistia,
 }
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 class VideoTemplate extends React.Component {
   componentDidMount() {
@@ -91,7 +93,7 @@ class VideoTemplate extends React.Component {
           image={"/images/assets/default-thumb-doc.png"}
           type={node.frontmatter.type}
         />
-        <main id="docs-main" tabindex="-1">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth} className="docs-video">
             <HeaderBody
               title={node.frontmatter.title}

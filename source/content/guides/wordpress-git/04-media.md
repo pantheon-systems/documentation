@@ -22,13 +22,13 @@ In this lesson, we'll demonstrate how media files are handled on Pantheon. Media
 
   ![New Logo](../../../images/guides/git-wordpress/logo-wp-git-demo.png)
 
-1. Within the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's WordPress Dashboard, navigate to **Appearance** > **Customize** > **Site Identity** then upload a new logo.
+1. Within the **<Icon icon="wrench" /> Dev** environment's WordPress Dashboard, navigate to **Appearance** > **Customize** > **Site Identity** then upload a new logo.
 
 1. Click **Save and Publish**:
 
   ![Uploaded Logo](../../../images/guides/git-wordpress/logo-upload.png)
 
-1. Refresh the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's site URL and you should see your changes reflected.
+1. Refresh the **<Icon icon="wrench" /> Dev** environment's site URL and you should see your changes reflected.
 
   If you expected this change to show up as a pending change, ready to be committed - that's not how this kind of content works. It's not code; there won't be any changes in the Pantheon Site Dashboard to submit to version control since media is ignored by Git.
 

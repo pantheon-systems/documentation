@@ -26,9 +26,9 @@ If your site is already live and serving HTTPS traffic, and will require HTTPS o
  
 You can validate that HTTPS configuration for the domain is ready on Pantheon by testing locally before you update your DNS. 
 
-1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+1. Access the **<Icon icon="wavePulse" /> Live** environment in your Pantheon Site Dashboard.
 
-1. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
+1. Navigate to the **<Icon icon="global" /> Domains / HTTPS** page.
 
 1. Select **Details** next to the bare domain.
 
@@ -71,4 +71,3 @@ Click [here](/guides/domains/dns/#frequently-asked-questions) to learn more abou
 - [Pantheon YAML Configuration Files](/pantheon-yml)
 
 - [Platform and Custom Domains](/guides/domains)
-

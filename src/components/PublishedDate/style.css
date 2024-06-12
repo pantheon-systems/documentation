@@ -1,0 +1,5 @@
+.docs-published-date {
+  font-size: var(--pds-typography-size-m);
+  font-weight: var(--pds-typography-font-weight-semibold);
+  color: var(--pds-color-text-default-secondary);
+}

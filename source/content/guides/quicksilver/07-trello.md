@@ -41,7 +41,7 @@ Be sure that you:
 
 Create a new machine user in your Trello instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
-1. Login to your Trello instance, click <i class="fa fa-plus"></i> in the upper panel, and then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create** to create a team if you haven't done so already.
+1. Login to your Trello instance, click <Icon icon="plus" /> in the upper panel, and then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create** to create a team if you haven't done so already.
 
     ![Create a team](../../../images/integrations/trello/new-team.png)
 

@@ -83,8 +83,8 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
-          <Link id="changelogs" to="/changelog">
-            Changelog
+          <Link id="release-notes" to="/release-notes">
+            Release Notes (Changelog)
           </Link>
         ),
       },
@@ -92,6 +92,13 @@ const mainNavigationLinks = [
         linkContent: (
           <Link id="Glossary" to="/glossary">
             Glossary
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="certification" to="/certification">
+            Certification Program
           </Link>
         ),
       },

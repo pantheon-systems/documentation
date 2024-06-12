@@ -69,11 +69,11 @@ For development environments (Dev and Multidevs), the **Restore** button is only
 
 ### Restore Database and Files
 
-Follow the steps below to restore Database and Files. 
+Follow the steps below to restore Database and Files.
 
-1. Navigate to the target environment and click the **Workflow** tab. 
+1. Navigate to the target environment and click the **Workflow** tab.
 
-1. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. 
+1. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup.
 
 1. Click **Import** for each backup part to restore.
 
@@ -100,7 +100,7 @@ This method is recommended for distributed teams working collaboratively. To und
 
 1. Deploy the change from Dev up to Test and Live.
 
-Refer to [git-revert](https://git-scm.com/docs/git-revert) for more information. 
+Refer to [git-revert](https://git-scm.com/docs/git-revert) for more information.
 
 #### Reset Commits and Overwrite History
 
@@ -119,7 +119,7 @@ This is a destructive process. If you're not comfortable with this technique, us
 
 1. Deploy the change from Dev up to Test and Live.
 
-Refer to [git reset](https://git-scm.com/docs/git-reset) for more information. 
+Refer to [git reset](https://git-scm.com/docs/git-reset) for more information.
 
 ## Restore the Live Environment
 
@@ -160,7 +160,7 @@ export ENV=dev # or different environment name
 
 </Alert>
 
-1. Download the **Files** backups using the link provided in the Site Dashboard <span class="glyphicons glyphicons-download-alt"></span> **Backups** Tab:
+1. Download the **Files** backups using the link provided in the Site Dashboard <Icon icon="download" /> **Backups** Tab:
 
   ```bash{promptUser:user}
   wget https://storage.googleapis.com/gcs-pantheon-backups/... -O file-backup.tar.gz
@@ -179,7 +179,7 @@ export ENV=dev # or different environment name
   tar -xzvf file-backup.tar.gz
   ```
 
-    - This creates a `files_env` directory. 
+    - This creates a `files_env` directory.
 
 1. `cd` to the `files_env` directory and use rsync to copy your content back to the environment you're restoring. For example:
 
