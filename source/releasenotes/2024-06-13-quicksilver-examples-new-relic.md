@@ -15,10 +15,10 @@ If you are using quicksilver, particularly any of the three New Relic scripts in
 The necessary updates are described in the README.md file for each script. The steps are:
 
 1) Log in to New Relic from your site dashboard.
-1) Get a user key.
-1) Store the user key using [Terminus Secrets Manager plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
-1) Update the script to the new version (don't forget to change the secret name as needed!).
-1) Push your changes to your repo.
-1) Test your scripts when you have a chance to ensure they are still working.
+2) Get a user key.
+3) Store the user key using [Terminus Secrets Manager plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
+4) Update the script to the new version (don't forget to change the secret name as needed!).
+5) Push your changes to your repo.
+6) Test your scripts when you have a chance to ensure they are still working.
 
 Our Support team is happy to help if you have any questions or need assistance.
