@@ -18,7 +18,7 @@ const SidebarNav = ({ title, activePage }) => {
     graphql`
       {
 
-          allMdx(
+        sd: allMdx(
       filter: {
         fileAbsolutePath: { ne: null }
         fields: { guide_directory: { eq: "guides/secure-development" } }
@@ -46,7 +46,7 @@ const SidebarNav = ({ title, activePage }) => {
 console.log("SecureDev");
 console.log(SecureDev);
 
-    const SecureDevLinks = SecureDev.allMdx.edges.map((page, i) => {
+    const SecureDevLinks = SecureDev.sd.edges.map((page, i) => {
 
             return {
  isActive: page.node.fields.slug === activePage,
