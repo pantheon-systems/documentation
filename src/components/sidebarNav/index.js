@@ -67,6 +67,10 @@ console.log(SecureDev);
     },
     {
       link: "/certification/study-guide",
+      title: "Study Guide",
+      children: [
+    {
+      link: "/certification/study-guide",
       title: "Introduction",
     },
     {
@@ -108,20 +112,11 @@ console.log(SecureDev);
     {
       link: "/certification/study-guide/custom-upstreams",
       title: "Chapter 10: Custom Upstreams",
-      children: [
-        {
-          link: "/certification/study-guide/custom-upstreams",
-          title: "Introduction",
-        },
-        {
-          link: "/certification/study-guide/custom-upstreams/creating",
-          title: "Creating a Custom Upstream",
-        },
-        {
-          link: "/certification/study-guide/custom-upstreams/using",
-          title: "Using a Custom Upstream",
-        }
-      ]
+    },
+  ]},
+    {
+      link: "https://certification.pantheon.io/",
+      title: "↗ Certification Directory",
     },
   ]
 
@@ -135,38 +130,15 @@ function turnItemIntoLink(item, activePage) {
   }
 }
 
-
-
-
   const CertificationLinks = CertificationItems.map((item) => {
     return turnItemIntoLink(item, activePage);
   })
 
-
-
-
   return (
-    <div>
     <SideNavCompact
       headingText={title}
-      menuItems={[
-        // {
-        //   linkContent: <a href="/certification/study-guide">Secure Dev</a>,
-        //   links: SecureDevLinks
-
-        // },
-
-
-        {
-          linkContent: <a href="/certification/study-guide">Study Guide</a>,
-          links: CertificationLinks
-        },
-        {
-          linkContent: <a href="https://certification.pantheon.io/">↗ Certification Directory</a>
-        }
-      ]}
+      menuItems={CertificationLinks}
     />
-    </div>
   )
 }
 
