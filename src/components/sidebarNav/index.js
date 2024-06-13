@@ -1,4 +1,5 @@
 import React from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
 
@@ -8,6 +9,30 @@ const SidebarNav = ({ title, activePage }) => {
 // Release Workflow
 // Account Governance
 // Certification
+
+  const pages = useStaticQuery(
+    graphql`
+      {
+        allMdx(
+          filter: {
+            fileInfo: { absolutePath: { regex: "/.dns-providers/./" } }
+            frontmatter: { draft: { ne: true } }
+          }
+          sort: { fields: frontmatter___title, order: ASC }
+        ) {
+          nodes {
+            fields {
+              slug
+            }
+            frontmatter {
+              provider
+            }
+          }
+        }
+      }
+    `
+  )
+
 
 
   const CertificationStudyGuideItems = [
@@ -70,9 +95,24 @@ const SidebarNav = ({ title, activePage }) => {
   const CertificationStudyGuideLinks = CertificationStudyGuideItems.map((item) => {
     return {
       isActive: item.link === activePage,
-      linkContent: <a href={item.link}>{item.title}</a>
+      linkContent: <Link to={item.link}>
+        {item.title}
+      </Link>
     }
   })
+/*
+  {
+    pages.allMdx.nodes.map((page, i) => {
+      return {
+
+          <Link to={page.fields.slug} title={page.frontmatter.provider}>
+            {page.frontmatter.provider}
+          </Link>
+      }
+      )
+    })
+  }
+*/
 
   return (
     <div>
@@ -82,6 +122,13 @@ const SidebarNav = ({ title, activePage }) => {
         {
           linkContent: <a href="/certification/about">About the Certification Program</a>
         },
+
+        {
+          linkContent: <Link to="/certification/about">
+            About again
+          </Link>
+        },
+
         {
           linkContent: <a href="/certification/exam">Taking the Exam</a>
         },
