@@ -22,7 +22,7 @@ const turnItemsIntoLinks = (items, activePage) => {
 }
 
 
-const SidebarNav = ({ title, activePage }) => {
+const SidebarNav = ({ links, title, activePage }) => {
 
 // Infrastructure
 // Release Workflow
@@ -151,7 +151,7 @@ console.log(SecureDev);
   return (
     <SideNavCompact
       headingText={title}
-      menuItems={CertificationLinks}
+      menuItems={links}
     />
   )
 }
