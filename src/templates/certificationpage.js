@@ -7,7 +7,8 @@ import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
 import SidebarNav from "../components/sidebarNav"
-import Navbar from "../components/navbar"
+import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
+
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
@@ -111,6 +112,12 @@ class CertificationTemplate extends React.Component {
       node.fields.slug == "/terminus/commands"
         ? this.props.data.jsonISO.published_at
         : isoDate.frontmatter.reviewed
+
+
+
+
+
+
 
     // Preprocess content region layout if has TOC or not.
     const hasTOC = node.frontmatter.showtoc

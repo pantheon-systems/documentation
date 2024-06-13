@@ -120,6 +120,9 @@ console.log(SecureDev);
     },
   ]
 
+
+
+
 function turnItemIntoLink(item, activePage) {
   return {
     isActive: item.link === activePage,
@@ -130,9 +133,15 @@ function turnItemIntoLink(item, activePage) {
   }
 }
 
-  const CertificationLinks = CertificationItems.map((item) => {
-    return turnItemIntoLink(item, activePage);
-  })
+  const turnItemsIntoLinks = (items, activePage) => {
+    return items.map((item) => {
+      return turnItemIntoLink(item, activePage);
+    })
+  }
+
+  const CertificationLinks = turnItemsIntoLinks(CertificationItems, activePage);
+
+
 
   return (
     <SideNavCompact
