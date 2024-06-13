@@ -248,7 +248,7 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: 'gatsby-plugin-feed',
       options: {
         query: `
           {
@@ -266,25 +266,16 @@ module.exports = {
           {
             serialize: ({ query: { site, allMdx } }) => {
               return allMdx.edges.map(edge => {
-                const url = new URL(edge.node.fields.slug, site.siteMetadata.siteUrl).toString()
-                const stripFrontmatter = (rawBody) => {
-                  // Remove the frontmatter
-                  const content = rawBody.replace(/^---[\s\S]+?---/, '').trim();
-                  // Extract the first sentence
-                  const firstSentence = content.split('. ')[0] + '.';
-                  return firstSentence.length > 160 ? firstSentence.slice(0, 160) + '...' : firstSentence;
-                }
-                const description = stripFrontmatter(edge.node.rawBody);
+                const url = new URL(edge.node.fields.slug, site.siteMetadata.siteUrl).toString();
 
                 return {
                   title: edge.node.frontmatter.title,
-                  description: description,
+                  description: edge.node.excerpt,
                   date: edge.node.frontmatter.published_date,
                   url: url,
                   guid: edge.node.id,
-                  /* custom_elements: [{ "pubDate": new Date(edge.node.frontmatter.published_date).toUTCString() }], */
                 };
-              })
+              });
             },
             query: `
               {
@@ -295,6 +286,8 @@ module.exports = {
                   edges {
                     node {
                       rawBody
+                      excerpt
+                      id
                       fields { slug }
                       frontmatter {
                         title
