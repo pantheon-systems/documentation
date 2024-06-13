@@ -10,30 +10,51 @@ const SidebarNav = ({ title, activePage }) => {
 // Account Governance
 // Certification
 
-  const pages = useStaticQuery(
+
+
+
+
+  const SecureDev = useStaticQuery(
     graphql`
       {
-        allMdx(
-          filter: {
-            fileInfo: { absolutePath: { regex: "/.dns-providers/./" } }
-            frontmatter: { draft: { ne: true } }
+
+          allMdx(
+      filter: {
+        fileAbsolutePath: { ne: null }
+        fields: { guide_directory: { eq: "guides/secure-development" } }
+        frontmatter: { draft: { ne: true } }
+      }
+      sort: { fields: [fileAbsolutePath], order: ASC }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+            guide_directory
           }
-          sort: { fields: frontmatter___title, order: ASC }
-        ) {
-          nodes {
-            fields {
-              slug
-            }
-            frontmatter {
-              provider
-            }
+          frontmatter {
+            subtitle
           }
         }
       }
+    }
+
+      }
     `
   )
+console.log("SecureDev");
+console.log(SecureDev);
 
+    const SecureDevLinks = SecureDev.allMdx.edges.map((page, i) => {
 
+            return {
+ isActive: page.node.fields.slug === activePage,
+              linkContent: <Link to={page.node.fields.slug}>
+                  {page.node.frontmatter.subtitle}
+                </Link>
+              }
+        })
 
   const CertificationStudyGuideItems = [
     {
@@ -102,17 +123,7 @@ const SidebarNav = ({ title, activePage }) => {
   })
 
 
-  const DNSPages = pages.allMdx.nodes.map((page, i) => {
 
-      return {
-        isActive: page.fields.slug === activePage,
-        linkContent: <Link to={page.fields.slug}>
-          {page.frontmatter.provider}
-        </Link>
-      }
-
-
-    })
 
 
   return (
@@ -121,8 +132,9 @@ const SidebarNav = ({ title, activePage }) => {
       headingText={title}
       menuItems={[
         {
-          linkContent: <a href="/certification/study-guide">DNS Pages</a>,
-          links: DNSPages
+          linkContent: <a href="/certification/study-guide">Secure Dev</a>,
+          links: SecureDevLinks
+
         },
 
         {

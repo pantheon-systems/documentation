@@ -38,6 +38,8 @@ class GuideTemplate extends React.Component {
   }
 
   render() {
+
+    console.log(this.props);
     const node = this.props.data.mdx
     const isoDate = this.props.data.date
     const items = this.props.data.allMdx.edges.map((item) => {
