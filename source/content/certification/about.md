@@ -1,5 +1,6 @@
 ---
 title: "WebOps Certification: About the program"
+subtitle: "Learn about the Pantheon WebOps Certification program"
 showtoc: true
 contributors: []
 layout: certificationpage
