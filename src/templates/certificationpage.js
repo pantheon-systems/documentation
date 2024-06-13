@@ -7,8 +7,6 @@ import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
 import {SidebarNav, turnItemsIntoLinks} from "../components/sidebarNav"
-import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
-
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
