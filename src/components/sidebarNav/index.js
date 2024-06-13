@@ -100,25 +100,31 @@ const SidebarNav = ({ title, activePage }) => {
       </Link>
     }
   })
-/*
-  {
-    pages.allMdx.nodes.map((page, i) => {
-      return {
 
-          <Link to={page.fields.slug} title={page.frontmatter.provider}>
-            {page.frontmatter.provider}
-          </Link>
+
+  const DNSPages = pages.allMdx.nodes.map((page, i) => {
+
+      return {
+        isActive: page.fields.slug === activePage,
+        linkContent: <Link to={page.fields.slug}>
+          {page.frontmatter.provider}
+        </Link>
       }
-      )
+
+
     })
-  }
-*/
+
 
   return (
     <div>
     <SideNavCompact
       headingText={title}
       menuItems={[
+        {
+          linkContent: <a href="/certification/study-guide">DNS Pages</a>,
+          links: DNSPages
+        },
+
         {
           linkContent: <a href="/certification/about">About the Certification Program</a>
         },
