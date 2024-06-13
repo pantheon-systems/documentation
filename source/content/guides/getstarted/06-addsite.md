@@ -39,6 +39,12 @@ To create a CMS site:
 
    ![Enter site information](../../../images/create-new-site-info.png)
 
+   <Alert title="Note" type="info">
+
+   Site names are limited to 51 characters.
+
+   </Alert>
+
    <Alert title="Note" type="info" >
 
    You can navigate away from this page during this process, but later, you'll have to go to the **Sites** tab to access your site.  If possible, stay on this tab to simplify accessing the site when the creation is complete.
