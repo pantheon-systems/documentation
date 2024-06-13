@@ -6,7 +6,7 @@ import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
-import SidebarNav from "../components/sidebarNav"
+import {SidebarNav, turnItemsIntoLinks} from "../components/sidebarNav"
 import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
 
 import NavButtons from "../components/navButtons"
