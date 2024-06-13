@@ -148,7 +148,6 @@ class CertificationTemplate extends React.Component {
           <SidebarNav
           slot="guide-menu"
           title="WebOps Certification"
-          activePage={node.fields.slug}
           links={CertificationLinks} />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
