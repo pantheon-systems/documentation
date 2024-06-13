@@ -102,7 +102,6 @@ class CertificationTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
-    const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
     const ifCommandsDate =
       node.fields.slug == "/terminus/commands"

@@ -13,7 +13,7 @@ const SidebarNav = ({ title, activePage }) => {
 
 
 
-
+/*
   const SecureDev = useStaticQuery(
     graphql`
       {
@@ -55,73 +55,92 @@ console.log(SecureDev);
                 </Link>
               }
         })
-
-  const CertificationStudyGuideItems = [
+*/
+  const CertificationItems = [
     {
-      id: "docs-certification-chapter-0",
+      link: "/certification/about",
+      title: "About the Certification Program",
+    },
+    {
+      link: "/certification/exam",
+      title: "Taking the Exam",
+    },
+    {
       link: "/certification/study-guide",
       title: "Introduction",
     },
     {
-      id: "docs-certification-chapter-1",
       link: "/certification/study-guide/webops",
       title: "Chapter 1: WebOps",
     },
     {
-      id: "docs-certification-chapter-2",
       link: "/certification/study-guide/platform",
       title: "Chapter 2: Pantheon Platform",
     },
     {
-      id: "docs-certification-chapter-3",
       link: "/certification/study-guide/create",
       title: "Chapter 3: Site Creation",
     },
     {
-      id: "docs-certification-chapter-4",
       link: "/certification/study-guide/cdn",
       title: "Chapter 4: Content Delivery Network",
     },
     {
-      id: "docs-certification-chapter-5",
       link: "/certification/study-guide/cms",
       title: "Chapter 5: CMS Infrastructure",
     },
     {
-      id: "docs-certification-chapter-6",
       link: "/certification/study-guide/deploy",
       title: "Chapter 6: The Deployment Pipeline",
     },
     {
-      id: "docs-certification-chapter-7",
       link: "/certification/study-guide/people",
       title: "Chapter 7: Connecting People",
     },
     {
-      id: "docs-certification-chapter-8",
       link: "/certification/study-guide/extend",
       title: "Chapter 8: Extend with CLI and Hooks",
     },
     {
-      id: "docs-certification-chapter-9",
       link: "/certification/study-guide/automate",
       title: "Chapter 9: Additional Automation",
     },
     {
-      id: "docs-certification-chapter-10",
       link: "/certification/study-guide/custom-upstreams",
       title: "Chapter 10: Custom Upstreams",
+      children: [
+        {
+          link: "/certification/study-guide/custom-upstreams",
+          title: "Introduction",
+        },
+        {
+          link: "/certification/study-guide/custom-upstreams/creating",
+          title: "Creating a Custom Upstream",
+        },
+        {
+          link: "/certification/study-guide/custom-upstreams/using",
+          title: "Using a Custom Upstream",
+        }
+      ]
     },
   ]
-  const CertificationStudyGuideLinks = CertificationStudyGuideItems.map((item) => {
-    return {
-      isActive: item.link === activePage,
-      linkContent: <Link to={item.link}>
-        {item.title}
-      </Link>
-    }
-  })
 
+function turnItemIntoLink(item, activePage) {
+  return {
+    isActive: item.link === activePage,
+    links: item.children ? item.children.map((child) => turnItemIntoLink(child, activePage)) : false,
+    linkContent: <Link to={item.link}>
+      {item.title}
+    </Link>
+  }
+}
+
+
+
+
+  const CertificationLinks = CertificationItems.map((item) => {
+    return turnItemIntoLink(item, activePage);
+  })
 
 
 
@@ -131,28 +150,16 @@ console.log(SecureDev);
     <SideNavCompact
       headingText={title}
       menuItems={[
-        {
-          linkContent: <a href="/certification/study-guide">Secure Dev</a>,
-          links: SecureDevLinks
+        // {
+        //   linkContent: <a href="/certification/study-guide">Secure Dev</a>,
+        //   links: SecureDevLinks
 
-        },
+        // },
 
-        {
-          linkContent: <a href="/certification/about">About the Certification Program</a>
-        },
 
-        {
-          linkContent: <Link to="/certification/about">
-            About again
-          </Link>
-        },
-
-        {
-          linkContent: <a href="/certification/exam">Taking the Exam</a>
-        },
         {
           linkContent: <a href="/certification/study-guide">Study Guide</a>,
-          links: CertificationStudyGuideLinks
+          links: CertificationLinks
         },
         {
           linkContent: <a href="https://certification.pantheon.io/">↗ Certification Directory</a>
