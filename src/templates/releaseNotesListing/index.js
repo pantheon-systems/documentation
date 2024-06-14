@@ -146,7 +146,11 @@ const ReleaseNotesListingTemplate = ({ data }) => {
 
     const newQueryStrings = params.toString()
     setQueryStrings(newQueryStrings)
-    navigate(`/release-notes/${currentPage}/?${newQueryStrings}`)
+    if(newQueryStrings){
+      navigate(`/release-notes/${currentPage}/?${newQueryStrings}`)
+    } else {
+      navigate(`/release-notes/${currentPage}/`)
+    }
   }
 
   useEffect(() => {
