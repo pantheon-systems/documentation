@@ -218,6 +218,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
         >
           <h1>Pantheon release notes</h1>
           <div className="pds-lead-text pds-lead-text--sm">{introText}</div>
+          <a href="/release-notes/rss.xml" target="_blank" className="rss-feed-link">
+            <Icon className="rss-feed-link-icon" iconName='rss' iconSize='lg' />
+            <span>Subscribe to RSS feed</span>
+          </a>
           <div
             style={{
               borderBottom: "1px solid var(--pds-color-border-default)",

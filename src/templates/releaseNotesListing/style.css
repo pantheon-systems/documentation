@@ -52,3 +52,14 @@
 .rn-popover-categories .pds-popover__trigger-text{
   border-bottom: 0;
 }
+
+.rss-feed-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.rss-feed-link-icon{
+  color: var(--pds-color-social-rss);
+}
