@@ -3,8 +3,20 @@ import { Link } from "gatsby"
 import ReleaseNoteCategories from "../ReleaseNoteCategories/index.js"
 import MdxWrapper from "../mdxWrapper.js"
 import PublishedDate from "../PublishedDate/index.js"
+import {
+  headline2,
+  headline3,
+  headline4,
+} from "../releaseHeadlines"
 
 import "./style.css"
+
+// Change the heading levels when release notes are displayed as a list so that the the headings don't conflict with the release note headings.
+const customShortcodes = {
+  h1: headline2,
+  h2: headline3,
+  h3: headline4,
+}
 
 const ReleaseNoteTeaser = ({ ReleaseNoteData, className }) => {
   if (!ReleaseNoteData) {
@@ -37,7 +49,7 @@ const ReleaseNoteTeaser = ({ ReleaseNoteData, className }) => {
           dateString={ReleaseNoteData.frontmatter.published_date}
           className="pds-spacing-mar-block-end-m"
         />
-        <MdxWrapper mdx={ReleaseNoteData.body} />
+        <MdxWrapper mdx={ReleaseNoteData.body} customShortcodes={customShortcodes} />
       </div>
     </React.Fragment>
   )
