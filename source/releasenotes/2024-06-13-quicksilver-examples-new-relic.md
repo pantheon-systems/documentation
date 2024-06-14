@@ -4,9 +4,7 @@ published_date: "2024-06-13"
 categories: [tools-apis, action-required]
 ---
 
-The integration between Pantheon and New Relic is being updated to ensure compatibility with the latest changes from New Relic. These updates will be seamless for most users, except for:
-
-- Those who are using [quicksilver](https://docs.pantheon.io/guides/quicksilver) to interact with New Relic API.
+The integration between Pantheon and New Relic is being updated to ensure compatibility with the latest changes from New Relic. These updates will be seamless for most users, except for those who are using [Quicksilver](https://docs.pantheon.io/guides/quicksilver) to interact with New Relic API.
 
 If you are using Quicksilver, particularly any of the three New Relic scripts in the [quicksilver-examples](https://github.com/pantheon-systems/quicksilver-examples) repository, please update your scripts by **June 20, 2024**, to ensure continued functionality.
 
