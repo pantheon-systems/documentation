@@ -171,6 +171,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       const searchParams = new URLSearchParams(window.location.search)
       // Extract query and category slugs from search parameters
       const query = searchParams.get('query')
+      const pageUrl = parseInt(searchParams.get('page'), 10) || 1
       const categorySlugs = searchParams.getAll('category')
       // Map category slugs to category objects
       const categories = categorySlugs.map(slug => ({slug}))
