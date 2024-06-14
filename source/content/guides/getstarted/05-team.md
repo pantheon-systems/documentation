@@ -17,6 +17,8 @@ permalink: docs/guides/getstarted/team
 editpath: getstarted/05-team.md
 ---
 
+<Wistia src="jdhn2naeu2" />
+
 <Alert title="Note" type="info" >
 
 If you are a one-person shop, and will only ever be a one-person shop, you could skip this section.  However, you may want to consider planning for growth, and perform all the steps on this page.

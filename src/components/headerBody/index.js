@@ -2,12 +2,9 @@ import React from "react"
 
 import Contributors from "../contributors"
 import Github from "../github"
-import Twitter from "../twitter"
 import Slack from "../slack"
-import Discourse from "../discourse"
 import ContributorGuest from "../contributorGuest"
-
-import { Badge } from "@pantheon-systems/pds-toolkit-react"
+import { StatusBadge } from "@pantheon-systems/pds-toolkit-react"
 
 import "./style.css"
 
@@ -19,9 +16,7 @@ const HeaderBody = ({
   contributors,
   featured,
   editPath,
-  reviewDate,
-  isoDate,
-  cms,
+  reviewDate
 }) => {
   const contributor = contributors ? contributors[0] : null
   const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null
@@ -29,9 +24,10 @@ const HeaderBody = ({
     <>
       <header className="doc-content-header">
         {lastReviewed && (
-          <Badge
-            hasStatusType={false}
+          <StatusBadge
+            hasStatusIndicator={false}
             label={lastReviewed}
+            color="transparent"
             className="pds-spacing-mar-block-end-m"
           />
         )}
@@ -40,22 +36,17 @@ const HeaderBody = ({
             {lastReviewed}
           </time>
         </p> */}
-        {!subtitle && (
-          <h1 className="docs-title" id="docs-main">
-            {title}
-          </h1>
-        )}
+        {!subtitle && <h1 className="docs-title">{title}</h1>}
 
         {subtitle && <h1>{subtitle}</h1>}
 
-        <p className="pds-lead-text pds-lead-text--small pds-spacing-mar-block-end-xl">
+        <p className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xl">
           {description}
         </p>
 
         {!featured && <Contributors contributors={contributors} />}
         <div className="doc-content-header__actions">
           <div className="doc-content-header__discuss">
-            <Discourse pageTitle={title} path={slug} cms={cms} />
             <Slack />
           </div>
           <Github

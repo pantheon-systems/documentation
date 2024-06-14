@@ -218,7 +218,7 @@ This process lets you manually resolve the conflict using the command line and a
   <Tab title="Drupal (Latest Version)" id="d9-1conflict" active={true}>
 
   ```bash{promptUser: user}
-  git remote add pantheon-drupal https://github.com/pantheon-systems/drupal-composer-managed
+  git remote add pantheon-drupal https://github.com/pantheon-upstreams/drupal-composer-managed
   ```
 
   </Tab>
@@ -396,9 +396,9 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="Drupal (Latest Version)" id="d9-2conflict-merge" active={true}>
 
-  GITHUB-EMBED https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
+  GITHUB-EMBED https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/pantheon.upstream.yml yaml:title=pantheon.yml GITHUB-EMBED
 
- [View on GitHub](https://github.com/pantheon-systems/drupal-composer-managed/blob/default/pantheon.upstream.yml)
+ [View on GitHub](https://github.com/pantheon-upstreams/drupal-composer-managed/blob/main/pantheon.upstream.yml)
 
  </Tab>
 

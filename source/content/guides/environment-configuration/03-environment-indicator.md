@@ -3,7 +3,7 @@ title: Environment Configuration
 subtitle: Configuring Environment Indicators
 description: Learn how to implement an environment indicator for Drupal and WordPress sites running on Pantheon.
 tags: [site, terminus, workflow, webops]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith, jazzs3quence]
 showtoc: true
 permalink: docs/guides/environment-configuration/environment-indicator
 contenttype: [guide]
@@ -94,86 +94,137 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 
 The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal sites.
 
-1. [Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+[Set the connection mode to SFTP](/guides/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
- ```bash{promptUser: user}
- terminus connection:set $site.$env sftp
- ```
+```bash{promptUser: user}
+terminus connection:set $site.$env sftp
+```
 
-1. Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
+Install and enable the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with Terminus:
 
- ```bash{promptUser: user}
- terminus drush $site.$env -- en environment_indicator -y
- ```
+```bash{promptUser: user}
+terminus drush $site.$env -- en environment_indicator -y
+```
 
-1. Add the following within `settings.php` for Drupal:
+Add the following within `settings.php` for your version of Drupal:
 
-    ```php
-    /*
+<Accordion title="Drupal 8/9/10+" id="d10">
+
+```php
+  /*
     * Environment Indicator module settings.
     * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
     */
 
-    $conf['environment_indicator_overwrite'] = TRUE;
-      $conf['environment_indicator_overwritten_position'] = 'top';
-      $conf['environment_indicator_overwritten_fixed'] = FALSE;
+  if (!defined('PANTHEON_ENVIRONMENT')) {
+    $config['environment_indicator.indicator']['name'] = 'Local';
+    $config['environment_indicator.indicator']['bg_color'] = '#505050';
+    $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+  }
+  // Pantheon Env Specific Configig
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    switch ($_ENV['PANTHEON_ENVIRONMENT']) {
+      case 'lando': // Localdev or Lando environments
+        $config['environment_indicator.indicator']['name'] = 'Local Dev';
+        $config['environment_indicator.indicator']['bg_color'] = '#990055';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+        break;
+      case 'dev':
+        $config['environment_indicator.indicator']['name'] = 'Dev';
+        $config['environment_indicator.indicator']['bg_color'] = '#307b24';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+        break;
+      case 'test':
+        $config['environment_indicator.indicator']['name'] = 'Test';
+        $config['environment_indicator.indicator']['bg_color'] = '#b85c00';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+        break;
+      case 'live':
+        $config['environment_indicator.indicator']['name'] = 'Live!';
+        $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
+        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+        break;
+      default:
+        //Multidev catchall
+        $config['environment_indicator.indicator']['name'] = 'Multidev';
+        $config['environment_indicator.indicator']['bg_color'] = '#e7131a';
+        $config['environment_indicator.indicator']['fg_color'] = '#000000';
+        break;
+    }
+  }
+```
 
-      if (!defined('PANTHEON_ENVIRONMENT')) {
-          $conf['environment_indicator_overwritten_name'] = 'Local';
-          $conf['environment_indicator_overwritten_color'] = '#505050';
-          $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-      }
-      // Pantheon Env Specific Config
-      if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-          switch ($_ENV['PANTHEON_ENVIRONMENT']) {
-            case 'lando': // Localdev or Lando environments
-              $config['environment_indicator.indicator']['name'] = 'Local Dev';
-              $config['environment_indicator.indicator']['bg_color'] = '#990055';
-              $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
-              break;
-            case 'dev':
-              $conf['environment_indicator_overwritten_name'] = 'Dev';
-              $conf['environment_indicator_overwritten_color'] = '#307b24';
-              $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-              break;
-            case 'test':
-              $conf['environment_indicator_overwritten_name'] = 'Test';
-              $conf['environment_indicator_overwritten_color'] = '#b85c00';
-              $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-              break;
-            case 'live':
-              $conf['environment_indicator_overwritten_name'] = 'Live!';
-              $conf['environment_indicator_overwritten_color'] = '#e7131a';
-              $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
-              break;
-            default:
-              //Multidev catchall
-              $conf['environment_indicator_overwritten_name'] = 'Multidev';
-              $conf['environment_indicator_overwritten_color'] = '#e7131a';
-              $conf['environment_indicator_overwritten_text_color'] = '#000000';
-              break;
-          }
-      }
-    ```
+</Accordion>
 
-1. Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
+<Accordion title="Drupal 7" id="d7">
 
- ```bash{promptUser: user}
- terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
- terminus env:clear-cache <site>.test
- ```
+```php
+  /*
+  * Environment Indicator module settings.
+  * see: https://docs.pantheon.io/guides/environment-configuration/environment-indicator
+  */
+
+  $conf['environment_indicator_overwrite'] = TRUE;
+    $conf['environment_indicator_overwritten_position'] = 'top';
+    $conf['environment_indicator_overwritten_fixed'] = FALSE;
+
+    if (!defined('PANTHEON_ENVIRONMENT')) {
+        $conf['environment_indicator_overwritten_name'] = 'Local';
+        $conf['environment_indicator_overwritten_color'] = '#505050';
+        $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+    }
+    // Pantheon Env Specific Config
+    if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+        switch ($_ENV['PANTHEON_ENVIRONMENT']) {
+          case 'lando': // Localdev or Lando environments
+            $conf['environment_indicator_overwritten_name'] = 'Local Dev';
+            $conf['environment_indicator_overwritten_color'] = '#990055';
+            $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+            break;
+          case 'dev':
+            $conf['environment_indicator_overwritten_name'] = 'Dev';
+            $conf['environment_indicator_overwritten_color'] = '#307b24';
+            $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+            break;
+          case 'test':
+            $conf['environment_indicator_overwritten_name'] = 'Test';
+            $conf['environment_indicator_overwritten_color'] = '#b85c00';
+            $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+            break;
+          case 'live':
+            $conf['environment_indicator_overwritten_name'] = 'Live!';
+            $conf['environment_indicator_overwritten_color'] = '#e7131a';
+            $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
+            break;
+          default:
+            //Multidev catchall
+            $conf['environment_indicator_overwritten_name'] = 'Multidev';
+            $conf['environment_indicator_overwritten_color'] = '#e7131a';
+            $conf['environment_indicator_overwritten_text_color'] = '#000000';
+            break;
+        }
+    }
+```
+
+</Accordion>
+
+Deploy the module to the Test environment within the Site Dashboard or with Terminus, and clear the site cache:
+
+```bash{promptUser: user}
+terminus env:deploy $site.test --sync-content --updatedb --note="Install and configure Environment Indicator"
+terminus env:clear-cache <site>.test
+```
 
   If you're working from a Multidev environment, merge to Dev first. Remember that the module will need to be activated again for each new environment.
 
-1. Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
+Deploy the module to the Live environment within the Site Dashboard or with Terminus, and clear the site cache:
 
-  ```bash{promptUser: user}
-  terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
-  terminus env:clear-cache <site>.live
-  ```
+```bash{promptUser: user}
+terminus env:deploy $site.live --updatedb --note="Install and configure Environment Indicator"
+terminus env:clear-cache <site>.live
+```
 
 All environments will now show a color-coded environment indicator, as defined within the above `settings.php` snippet.
-
 
 ## More Resources
 

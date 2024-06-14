@@ -7,7 +7,7 @@ contributors: [wordsmither]
 showtoc: true
 permalink: docs/guides/account-mgmt/traffic/remedy
 editpath: docs/guides/account-mgmt/traffic/05-remedy.md
-reviewed: "2022-09-19"
+reviewed: "2024-03-28"
 contenttype: [guide]
 innav: [false]
 categories: [plans]
@@ -236,7 +236,7 @@ foreach ($user_agents_deny_list as $agent) {
 
 ## Block autodiscover.xml Requests
 
-To stop `autodiscover.xml` requests that cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`. 
+To stop `autodiscover.xml` requests that cause 404 errors, you can configure `pantheon.yml` to block requests to `autodiscover.xml`.
 
 Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#protected-web-paths) directive in `pantheon.yml`. This lets you block requests at NGINX web server and will return a 403 Forbidden client error status response code.
 
@@ -244,3 +244,8 @@ Add the `autodiscover.xml` path to the [`protected_web_paths`](/pantheon-yml#pro
 ## Advanced Protection and Performance With Advanced Global CDN
 
 [Advanced Global CDN](/guides/agcdn) (AGCDN) is a custom-configured upgrade to [Pantheon Global CDN](/guides/global-cdn), available through [Pantheon Professional Services](https://pantheon.io/professional-services). AGCDN provides an additional layer of protection against DoS attempts. [AGCDN with WAF / IO](/guides/agcdn/agcdn-wafio) provides Web Application Firewall (WAF), Image Optimization (IO), and Rate Limiting.
+
+## FAQs
+
+### How Does Traffic Affect Performance?
+Each site is provisioned for optimal performance based on the traffic load it is expected to handle. Storage, domains, application memory, application containers and [many other features](/guides/account-mgmt/plans/faq#plan-resources) are set up to handle the traffic expected in each site type. Depending on the type of traffic your site experiences, or if you expect a heavier load of traffic, you may need to [upgrade your plan](/guides/account-mgmt/plans) so that you can continue to expect a site that runs smoothly.

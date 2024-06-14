@@ -1,5 +1,5 @@
 ---
-title: "Billing"
+title: "Billing for Self-Serve Accounts"
 subtitle: Transfer Ownership and Billing
 description: Learn how to change who is responsible for managing billing.
 contenttype: [guide]
@@ -17,7 +17,7 @@ editpath: docs/guides/account-mgmt/billing/09-transfer.md
 reviewed: "2022-09-19"
 ---
 
-The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to billing as described on this page.
+The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<Icon icon="users" />Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to billing as described on this page.
 
 ## Transfer Ownership
 

@@ -44,7 +44,7 @@ Use [New Relic&reg; Performance Monitoring](/guides/new-relic) to identify perfo
 
 ### Upgrade Your Plan
 
-Consider [upgrading your plan](https://www.pantheon.io/pricing) for more resources after all the errors have been resolved and the views, batches, and tasks have been optimized. Select the most appropriate plan for the resource usage of your site.
+Consider [upgrading your plan](https://pantheon.io/plans/pricing) for more resources after all the errors have been resolved and the views, batches, and tasks have been optimized. Select the most appropriate plan for the resource usage of your site.
 
 ### Unexpected Timeouts
 

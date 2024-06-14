@@ -39,11 +39,11 @@ Check your logs for:
 
 - Known exploit and excess traffic paths.
 
-## Adjust TTL to Determine Fresh vs. Stale Content
+## Adjust Max Age to Determine Fresh vs. Stale Content
 
 Your site’s CMS page-level caching must be correctly configured to take advantage of Experience Protection.
 
-You can adjust the length of time before the site's cached content is considered stale by adjusting the time-to-live (TTL). Set the cache TTL to a value equal to or higher than 3700 seconds for best results:
+You can adjust the length of time before the site's cached content is considered stale by adjusting the max age. Set the cache max age to a value equal to or higher than 3700 seconds for best results:
 
 - [Drupal](/drupal-cache#drupal-8-performance-configuration) steps to change your your CDN edge settings to serve stale content for a specific amount of time.
 

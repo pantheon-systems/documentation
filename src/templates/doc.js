@@ -1,67 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
+import SEO from "../layout/seo"
 import HeaderBody from "../components/headerBody"
-
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
 import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
-import Product from "../components/product"
-import ProductGroup from "../components/productGroup"
-import SEO from "../layout/seo"
-import Enablement from "../components/enablement"
-import Color from "../components/color.js"
-import Download from "../components/download"
-import Partial from "../components/partial"
-import Image from "../layout/image"
-import Example from "../components/styleExample"
-import DrushChangelog from "../components/drushChangelog"
-import ReviewDate from "../components/reviewDate"
-import Youtube from "../components/youtube"
-import ResourceSelector from "../components/resourceSelector"
-import DNSProviderDocs from "../components/dns-provider-docs.js"
-import Check from "../components/check.js"
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Product,
-  ProductGroup,
-  Enablement,
-  Color,
-  Download,
-  Partial,
-  Image,
-  Example,
-  DrushChangelog,
-  ReviewDate,
-  Youtube,
-  ResourceSelector,
-  DNSProviderDocs,
-  Check,
-}
+import MdxWrapper from "../components/mdxWrapper"
+
 
 // Set container width for search and main content.
 const containerWidth = "standard"
@@ -99,7 +48,7 @@ class DocTemplate extends React.Component {
     const isoDate = this.props.data.date
 
     return (
-      <Layout>
+      <Layout footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
@@ -110,7 +59,7 @@ class DocTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <main id="doc">
+        <main id="docs-main" tabIndex="-1">
           <Container
             width={containerWidth}
             className="pds-spacing-pad-block-end-4xl"
@@ -130,9 +79,8 @@ class DocTemplate extends React.Component {
                   cms={node.frontmatter.cms}
                 />
                 <div style={{ marginTop: "15px", marginBottom: "45px" }}>
-                  <MDXProvider components={shortcodes}>
-                    <MDXRenderer>{node.body}</MDXRenderer>
-                  </MDXProvider>
+                  <MdxWrapper mdx={node.body} />
+
                 </div>
               </article>
               <TOC slot="sidebar" title="Contents" />

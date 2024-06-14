@@ -58,30 +58,30 @@ Make sure [Terminus](/terminus) is installed and [authenticated](/terminus/insta
 
       The `wp core multisite-install` command that you ran modified the `wp-config.php` file. The modification sets the `DOMAIN_CURRENT_SITE` constant that assigns a specific URL to your WordPress Multisite which must be updated to work on Pantheon.
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
 
-1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
+1. Click **Connect with SFTP**.
 
-1. Click **Open SFTP client**, and enter your password when prompted.
+1. Click **Open SFTP client**.
 
   If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
 1. Open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
-1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` from a hardcoded URL to a dynamic URL `$_SERVER['HTTP_HOST']`. This automatically detects the URL in each environment. You must replace this variable. For example:
-
+1. Locate the configuration added by WP-CLI, and *modify* the line that sets `DOMAIN_CURRENT_SITE` to a hardcoded URL. We have provided a constant in `wp-config-pantheon.php`, `PANTHEON_HOSTNAME` that defaults to a dynamic URL for web requests (`$_SERVER['HTTP_HOST']`, when available), while providing a fallback for non-web requests (notably workflows like search and replace) that do not have a `$_SERVER['HTTP_HOST']` value.
+  
   ```php:title=wp-config.php
   define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
-  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
-  $base = '/';
-  define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
+  define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomain installs.
+  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
   ```
 
-    Refer to the [wp-config-php documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
+  Refer to the [`wp-config.php` documentation](/guides/php/wp-config-php#write-logic-based-on-the-pantheon-server-environment) if you have an environment specific configuration.
 
 1. Save your changes and upload the `wp-config.php` file to Pantheon's **Dev** environment.
 
@@ -107,11 +107,11 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 
   ![Network setup last step](../../../images/wp-network-config-last.png)
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard.
 
-1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
+1. Click **Connect with SFTP**.
 
-1. Click **Open SFTP client**, and enter your User Dashboard password when prompted.
+1. Click **Open SFTP client**.
 
   If you run into issues, please refer to Pantheon's [SFTP documentation](/guides/sftp/sftp-connection-info).
 
@@ -120,9 +120,11 @@ Complete the steps below after spinning up a new WPMS site from the correct Cust
 1. Locate the `/* That's all, stop editing! Happy Pressing. */` line, and add the following code above this line to enable the WPMS configuration.
 
   ```php:title=wp-config.php
+  define( 'WP_ALLOW_MULTISITE', true );
   define( 'MULTISITE', true );
   define( 'SUBDOMAIN_INSTALL', false ); // Set this to TRUE for Subdomains
-  define( 'DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST'] );
+  // Use PANTHEON_HOSTNAME if in a Pantheon environment, otherwise use HTTP_HOST.
+  define( 'DOMAIN_CURRENT_SITE', defined( 'PANTHEON_HOSTNAME' ) ? PANTHEON_HOSTNAME : $_SERVER['HTTP_HOST'] );
   define( 'PATH_CURRENT_SITE', '/' );
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
@@ -163,6 +165,16 @@ After these steps are complete, both sites on the WordPress Multisite should loa
 </Accordion>
 
 Explore the WordPress Network Dashboard to become familiar with the variety of additional settings. You can review the options that are available for each site you create, manage users across WordPress Multisite, and learn about the network settings. After you explore the WordPress Network Dashboard, learn how to use the WordPress Multisite with the Pantheon Workflow.
+
+## Troubleshooting
+
+### "Undefined index: HTTP_HOST" PHP Warnings
+
+If you see notices in your PHP logs similar to `PHP Warning: Undefined index: HTTP_HOST`, this is likely because there is some code in your configuration that is using `$_SERVER['HTTP_HOST']` without checking if it is set. This is a common issue with WP-CLI, as it does not have the same environment variables set as a web request. Instead of relying on `$_SERVER['HTTP_HOST']`, you can use the `PANTHEON_HOSTNAME` constant, which is set by Pantheon in `wp-config-pantheon.php` and is available in all environments.
+
+```php
+define( 'DOMAIN_CURRENT_SITE', PANTHEON_HOSTNAME );
+```
 
 ## More Resources
 

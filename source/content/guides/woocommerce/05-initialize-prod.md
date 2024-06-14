@@ -14,9 +14,9 @@ type: guide
 permalink: docs/guides/woocommerce/initialize-prod/
 editpath: woocommerce/05-initialize-prod.md
 ---
-Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site is configured and backed up, let's initialize our production environments (**<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live**) so we can launch our store.
+Now that our **<Icon icon="equalizer" /> Dev** site is configured and backed up, let's initialize our production environments (**<Icon icon="equalizer" /> Test** and **<Icon icon="wavePulse" /> Live**) so we can launch our store.
 
-1. In your site settings in Pantheon go to the **<span class="glyphicons glyphicons-equalizer"></span> Test** tab and click **Initialize Test Environment**:
+1. In your site settings in Pantheon go to the **<Icon icon="equalizer" /> Test** tab and click **Initialize Test Environment**:
 
     ![Initializing the test environment](../../../images/guides/woocommerce/17-Pantheon-dashboard-initialize-test-environment.png)
 
@@ -26,7 +26,7 @@ Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site 
 
     Now we can move the test site to live mode.
 
-2. We can repeat the process for Live by clicking on the **<span class="glyphicons glyphicons-cardio"></span> Live** tab, then **Initialize Live Environment**:
+2. We can repeat the process for Live by clicking on the **<Icon icon="wavePulse" /> Live** tab, then **Initialize Live Environment**:
 
     ![Initializing the live environment](../../../images/guides/woocommerce/19-Pantheon-dashboard-initialize-live-environment.png)
 
@@ -40,7 +40,7 @@ Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site 
 
 ## Create a Test Order
 
-Our site is looking good and loading really fast! Now to show you the power of multiple environments with version control, we're going to make an order on our **<span class="glyphicons glyphicons-cardio"></span> Live** environment and pull that information back down into our **<span class="glyphicons glyphicons-equalizer"></span> Test** environment.
+Our site is looking good and loading really fast! Now to show you the power of multiple environments with version control, we're going to make an order on our **<Icon icon="wavePulse" /> Live** environment and pull that information back down into our **<Icon icon="equalizer" /> Test** environment.
 
 1. When you install Storefront it prompts you to add demo products. If you don't have any demo products you can manually create products:
 
@@ -64,7 +64,7 @@ Our site is looking good and loading really fast! Now to show you the power of m
 
 Now let's bring these changes back to our test site:
 
-1. In our site settings in Pantheon go to either your **<span class="glyphicons glyphicons-equalizer"></span> Test** or **<span class="glyphicons glyphicons-wrench"></span> Dev** environment. Then click the **<span class="glyphicons glyphicons-server"></span> Database / Files** tab.
+1. In our site settings in Pantheon go to either your **<Icon icon="equalizer" /> Test** or **<Icon icon="wrench" /> Dev** environment. Then click the **<Icon icon="server" /> Database / Files** tab.
 
 2. Select **Live** in the dropdown for **From this environment**.
 
@@ -74,6 +74,6 @@ Now let's bring these changes back to our test site:
 
   ![Cloning database and files on the Pantheon dashboard](../../../images/guides/woocommerce/25-Pantheon-dashboard-clone-database-files.png)
 
-  If you login to WordPress you'll see the order in the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment:
+  If you login to WordPress you'll see the order in the **<Icon icon="equalizer" /> Test** environment:
 
   ![A test order in the WooCommerce dashboard](../../../images/guides/woocommerce/26-WooCommerce-dashboard-test-order.png)

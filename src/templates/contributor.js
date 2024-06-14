@@ -34,7 +34,7 @@ const links = [
 ]
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 class ContributorTemplate extends React.Component {
   render() {
@@ -47,10 +47,10 @@ class ContributorTemplate extends React.Component {
     console.log(contributor)
 
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO title={contributor.name} />
         <title>{contributor.name}</title>
-        <main id="docs-main">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth} className="docs-contributor">
             <div className="article">
               <TwoItemLayout layoutVariant="one-third-start">

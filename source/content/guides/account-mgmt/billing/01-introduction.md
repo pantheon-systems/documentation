@@ -1,5 +1,5 @@
 ---
-title: "Billing"
+title: "Billing for Self-Serve Accounts"
 subtitle: Introduction
 description: Add a new credit card, remove the current card, or transfer billing to a new site owner.
 contenttype: [guide]
@@ -17,6 +17,12 @@ reviewed: "2022-09-19"
 ---
 
 This guide covers billing periods, payment methods, managing invoices, and more.
+
+<Alert title="Note" type="info" >
+
+This guide provides information for Self-serve accounts.  If you are an Enterprise account, see [Enterprise Billing Center](/guides/enterprise-billing-center).
+
+</Alert>
 
 The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard or Professional Workspace. Other roles do not have access to the billing information described on this page.
 

@@ -101,7 +101,7 @@ Additionally, the use of an `MX` or `TXT` record prevents the use of a `CNAME`, 
 
 ### Why does my domain say "Update Recommended?"
 
-The **Status** in **Domains / HTTPS** will show as <span class="glyphicons glyphicons-alert text-warning"></span> **Update Recommended** when the Platform detects a CNAME record pointed to Pantheon, or when A/AAAA records are not detected.
+The **Status** in **Domains / HTTPS** will show as <Icon icon="triangleExclamation" /> **Update Recommended** when the Platform detects a CNAME record pointed to Pantheon, or when A/AAAA records are not detected.
 
 Click **Details** to find the values required for A and AAAA records to add, or to find the CNAME detected on the line with `Remove this detected record` in the status.
 

@@ -26,7 +26,7 @@ class Index extends React.Component {
           description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
           image={"/images/assets/default-thumb-doc.png"}
         />
-        <main id="docs-main">
+        <main id="docs-main" tabindex="-1">
           <Container width={containerWidth}>
             <HeroCTA
               title={homeYaml.title}
@@ -35,7 +35,7 @@ class Index extends React.Component {
               linkText={homeYaml.call_to_action.linkText}
             />
 
-            <h2 className="pds-spacing-mar-block-start-xl pds-spacing-mar-block-end-2xl">
+            <h2 className="pds-spacing-mar-block-xl">
               {homeYaml.topics.title}
             </h2>
             <TopicsGrid topics={homeYaml.topics.tiles} />
@@ -110,7 +110,7 @@ export const pageQuery = graphql`
 
     allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/changelogs/" }
+        fileAbsolutePath: { regex: "/releasenotes/" }
         frontmatter: { draft: { ne: true } }
       }
       sort: { fields: [fileAbsolutePath], order: DESC }

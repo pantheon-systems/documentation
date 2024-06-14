@@ -19,7 +19,7 @@ class NotFoundPage extends React.Component {
             description="Zoinks! You've hit a URL that doesn't exist. Let's try a search:"
           />
           <div style={{ textAlign: "center" }}>
-            <main id="docs-main">
+            <main id="docs-main" tabindex="-1">
               <div>
                 <h1 className="pds-spacing-mar-block-end-3xl">
                   Sorry, there's no page at that URL.

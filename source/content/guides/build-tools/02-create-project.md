@@ -46,7 +46,7 @@ Ensure you have the latest versions of Terminus and the Terminus Build Tools plu
     Terminus 3.0.1
     ```
 
-1. [Add an SSH key](/ssh-keys) in your Personal Workspace to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+1. [Add an SSH key](/ssh-keys) in your Personal Workspace.
 
 1. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus.
 
@@ -63,9 +63,9 @@ The Build Tools plugin will prompt you to create access tokens for the services 
 - [GitHub](https://github.com/settings/tokens): The GitHub token checks for the following scopes:
 
   - `repo` (required)
-  
+
   - `delete-repo` (optional)
-  
+
   - `workflow` (required if using Github Actions)
 
 - [CircleCI](https://circleci.com/account/api): No scopes are configurable for this token.
@@ -78,7 +78,7 @@ The Build Tools plugin will prompt you to create access tokens for the services 
 
   - `write_repository`
 
-- [Bitbucket](https://bitbucket.org/account/settings/app-passwords/): A Bitbucket app password requires the following scopes: 
+- [Bitbucket](https://bitbucket.org/account/settings/app-passwords/): A Bitbucket app password requires the following scopes:
 
   - `Projects` (read)
 

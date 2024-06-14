@@ -24,7 +24,7 @@ Add your payment method to upgrade and pay for the site now:
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), and click **Upgrade** next to the site's name.
 
-1. Click the **Select** button under the [plan you choose](https://pantheon.io/pricing/).
+1. Click the **Select** button under the [plan you choose](https://pantheon.io/plans/pricing/).
 
 1. Continue to the **Choose Billing** step, and then select the billing frequency: [**Pay Annually**](/guides/account-mgmt/plans/pricing) or **Pay Monthly**.
 
@@ -45,5 +45,3 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 - [Transfer Ownership and Billing for This Site](/guides/legacy-dashboard/site-billing#transfer-ownership-and-billing-for-this-site)
 
 - [Troubleshooting a Declined Credit Card](https://stripe.com/docs/declines/codes)
-
-

@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import {
-  Container,
-  InputText,
   Navbar,
   NavMenu,
 } from "@pantheon-systems/pds-toolkit-react"
@@ -83,8 +81,8 @@ const mainNavigationLinks = [
       },
       {
         linkContent: (
-          <Link id="changelogs" to="/changelog">
-            Changelog
+          <Link id="release-notes" to="/release-notes">
+            Release Notes (Changelog)
           </Link>
         ),
       },
@@ -92,6 +90,13 @@ const mainNavigationLinks = [
         linkContent: (
           <Link id="Glossary" to="/glossary">
             Glossary
+          </Link>
+        ),
+      },
+      {
+        linkContent: (
+          <Link id="certification" to="/certification">
+            Certification Program
           </Link>
         ),
       },
@@ -116,30 +121,36 @@ const mainNavigationLinks = [
 const mobileMenuBreakpoint = 900
 
 const Header = ({ page }) => (
-  <Navbar mobileMenuMaxWidth={mobileMenuBreakpoint}>
-    <NavMenu
-      slot="items-left"
-      ariaLabel="Main Navigation"
-      menuItems={mainNavigationLinks}
-      mobileMenuMaxWidth={mobileMenuBreakpoint}
-    />
-    <div slot="items-right" className="pds-button-group">
-      <a
-        className="pds-button pds-button--brand-secondary"
-        href="https://dashboard.pantheon.io"
-        target="_blank"
-      >
-        Log in
-      </a>
-      <a
-        className="pds-button pds-button--brand"
-        href="https://pantheon.io/register"
-        target="_blank"
-      >
-        Get free account
-      </a>
-    </div>
-  </Navbar>
+  <>
+    <a id="skip-to-main" className="pds-skiplink" href="#docs-main">
+      Skip to main content
+    </a>
+
+    <Navbar mobileMenuMaxWidth={mobileMenuBreakpoint}>
+      <NavMenu
+        slot="items-left"
+        ariaLabel="Main Navigation"
+        menuItems={mainNavigationLinks}
+        mobileMenuMaxWidth={mobileMenuBreakpoint}
+      />
+      <div slot="items-right" className="pds-button-group">
+        <a
+          className="pds-button pds-button--brand-secondary"
+          href="https://dashboard.pantheon.io"
+          target="_blank"
+        >
+          Log in
+        </a>
+        <a
+          className="pds-button pds-button--brand"
+          href="https://pantheon.io/register"
+          target="_blank"
+        >
+          Get free account
+        </a>
+      </div>
+    </Navbar>
+  </>
 )
 
 export default Header

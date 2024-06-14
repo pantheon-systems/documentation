@@ -10,7 +10,7 @@ reviewed: ""
 
 One-click core updates can be made through the Dashboard:
 
-1. Navigate to **<span class="fa fa-code"></span> Code** in the **<span class="fa fa-wrench"></span> Dev** tab of your Site Dashboard.
+1. Navigate to<Icon icon="code" />**Code** in the <Icon icon="wrench" /> **Dev** tab of your Site Dashboard.
 
 1. Click **Check Now**.
 

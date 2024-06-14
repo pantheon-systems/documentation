@@ -84,7 +84,7 @@ There are several different tools you can use to analyze a MySQL Slow Log:
 
   Recommended. This toolkit is actively maintained and includes a number of database utilities, including a Slow Query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html).
 
-- [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/)
+- [MySQL Slow Query Log Filter](https://code.google.com/archive/p/mysql-log-filter/)
 
   This filter has not been updated since 2007. Although still useful, using this filter will throw warnings with newer versions of PHP.
 
@@ -92,7 +92,7 @@ These tools provide summaries of the most commonly called, poor performing, SQL 
 
 ### Percona Toolkit's pt-query-digest
 
-The example commands below generate a report using `pt-query-digest` from a MySQL Slow Log file. In this example, one query meets the threshold for reporting as slow: a `SELECT COUNT` query on the node table that returns a total of results from a nested `SELECT` query on the node table. 
+The example commands below generate a report using `pt-query-digest` from a MySQL Slow Log file. In this example, one query meets the threshold for reporting as slow: a `SELECT COUNT` query on the node table that returns a total of results from a nested `SELECT` query on the node table.
 
 ```bash{promptUser: user}
 pt-query-digest mysqld-slow-query.log
@@ -207,7 +207,7 @@ Here are the contents of `site_name_slow-1s_noDupes.txt`:
 # User@Host: pantheon[pantheon] @  [10.223.192.139]  
 # User@Host: pantheon[pantheon] @  [10.223.192.68]  
 # User@Host: pantheon[pantheon] @  [10.223.192.87]  
-SET timestamp=1418627746;SELECT node.title AS node_title, node.nid AS nid, node_counter.totalcount AS node_counter_totalcount, ga_stats_count_pageviews_today.count AS ga_stats_count_pageviews_today_countFROM node nodeLEFT JOIN node_counter node_counter ON node.nid = node_counter.nidLEFT OUTER JOIN ga_stats_count ga_stats_count_pageviews_today ON node.nid = ga_stats_count_pageviews_today.nid AND (ga_stats_count_pageviews_today.metric='pageviews' AND ga_stats_count_pageviews_today.timeframe='today') WHERE (( (node.status = '1') AND (node.type IN  ('story')) )) ORDER BY ga_stats_count_pageviews_today_count DESC LIMIT 5 OFFSET 0; 
+SET timestamp=1418627746;SELECT node.title AS node_title, node.nid AS nid, node_counter.totalcount AS node_counter_totalcount, ga_stats_count_pageviews_today.count AS ga_stats_count_pageviews_today_countFROM node nodeLEFT JOIN node_counter node_counter ON node.nid = node_counter.nidLEFT OUTER JOIN ga_stats_count ga_stats_count_pageviews_today ON node.nid = ga_stats_count_pageviews_today.nid AND (ga_stats_count_pageviews_today.metric='pageviews' AND ga_stats_count_pageviews_today.timeframe='today') WHERE (( (node.status = '1') AND (node.type IN  ('story')) )) ORDER BY ga_stats_count_pageviews_today_count DESC LIMIT 5 OFFSET 0;
 ```
 
 This particular query is examining 132,363 records to return 5, while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer queries to execute in milliseconds.

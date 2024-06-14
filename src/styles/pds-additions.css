@@ -1,0 +1,19 @@
+/* Temporary global styles that should be incorporated back into PDS */
+
+/* Set explicit image width/height for tile images. */
+.pds-tile__image img {
+  width: 5rem;
+  height: 5rem;
+}
+
+strong {
+  font-weight: var(--pds-typography-font-weight-semibold);
+}
+
+.pds-tag {
+  white-space: nowrap;
+}
+
+.pds-input-field__decorators {
+  padding-inline: var(--pds-spacing-5xs);
+}

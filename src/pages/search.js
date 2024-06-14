@@ -1,10 +1,8 @@
 import React from "react"
+import "./styles/search.css"
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
-
 import { Container } from "@pantheon-systems/pds-toolkit-react"
-
-import "./styles/search.css"
 
 class Search extends React.Component {
   componentDidMount() {
@@ -65,9 +63,9 @@ class Search extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout footerBorder>
         <SEO image={"/images/assets/default-thumb-doc.png"} title="Search" />
-        <main id="docs-main">
+        <main id="docs-main" tabindex="-1">
           <Container width="standard" className="search-results">
             <div className="search-results__heading">
               <h1>Search Results</h1>

@@ -1,0 +1,37 @@
+<!-- This file lists all links/regex to be ignored by lychee in the PR Links workflow -->
+https://admin.google.com*
+https://wp-stateless.github.io/docs/manual-setup/
+<!-- Ignore videos from YouTube component (False Positive) -->
+file:///home/runner/work/documentation/documentation/source/content/partials/migrate/ksg1XkH1da8
+file:///home/runner/work/documentation/documentation/source/content/ktesh9SiHfc
+file:///home/runner/work/documentation/documentation/source/content/SM3QlNGgyBo
+file:///home/runner/work/documentation/documentation/source/content/U8sfuvrjroY
+file:///home/runner/work/documentation/documentation/source/content/guides/custom-upstream/b1lNrZL0xxM
+file:///home/runner/work/documentation/documentation/source/content/wAL4LQwy8Ow
+file:///home/runner/work/documentation/documentation/source/content/njN2-z2pDFI
+file:///home/runner/work/documentation/documentation/source/content/ecjZhtu41hs
+file:///home/runner/work/documentation/documentation/source/content/PTVqXxwOJ4Q
+file:///home/runner/work/documentation/documentation/source/content/D-4gu1zPCMg
+file:///home/runner/work/documentation/documentation/source/content/certification/study-guide-cms/qL3KNmRPI3Y
+file:///home/runner/work/documentation/documentation/source/content/ksg1XkH1da8
+file:///home/runner/work/documentation/documentation/source/content/guides/git/LG7_wWQHtS4
+<!-- Ignore a few images (False Positive) -->
+file:///home/runner/work/documentation/documentation/source/images/site-governance-multisite2.png
+file:///home/runner/work/documentation/documentation/source/images/multisite-governance-example2.png
+<!-- Ignore videos from Wistia component (False Positive) -->
+file:///home/runner/work/documentation/documentation/source/content/kprkgaikos
+file:///home/runner/work/documentation/documentation/source/content/guides/autopilot/67b5343pz4
+file:///home/runner/work/documentation/documentation/source/content/guides/multidev/d3vw8r3ooi
+file:///home/runner/work/documentation/documentation/source/content/guides/multidev/qh7j9p5vv0
+file:///home/runner/work/documentation/documentation/source/content/guides/autopilot/g6syd1p6ed
+file:///home/runner/work/documentation/documentation/source/content/guides/multidev/2lyxgxgkfw
+file:///home/runner/work/documentation/documentation/source/content/guides/decoupled/overview/_3d8ID01UhQ
+file:///home/runner/work/documentation/documentation/source/content/b0zcwncjx6
+file:///home/runner/work/documentation/documentation/source/content/guides/autopilot/7o76jael2w
+file:///home/runner/work/documentation/documentation/source/content/guides/autopilot/c15eoj3eca
+file:///home/runner/work/documentation/documentation/source/content/guides/autopilot/158bo3jnms
+file:///home/runner/work/documentation/documentation/source/content/guides/getstarted/jdhn2naeu2
+file:///home/runner/work/documentation/documentation/source/content/guides/decoupled/drupal-backend-starters/AcL-v1j_XX0
+file:///home/runner/work/documentation/documentation/source/content/AcL-v1j_XX0
+file:///home/runner/work/documentation/documentation/source/content/7gn1g3ljz6
+file:///home/runner/work/documentation/documentation/source/content/guides/multidev/5fncfu9ygh

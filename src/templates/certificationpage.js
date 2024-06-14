@@ -1,67 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-
+import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import GuideLayout from "../layout/GuideLayout"
+import SEO from "../layout/seo"
+import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
-import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
-import SEO from "../layout/seo"
-import Releases from "../components/releases"
-import TerminusVersion from "../components/terminusVersion"
-import Download from "../components/download"
-import Commands from "../components/commands"
-import ReviewDate from "../components/reviewDate"
-import Check from "../components/check.js"
-import Partial from "../components/partial"
-import Youtube from "../components/youtube"
-import SearchBar from "../layout/SearchBar"
-
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
-
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Releases,
-  TerminusVersion,
-  Download,
-  Partial,
-  Commands,
-  ReviewDate,
-  Check,
-  Youtube,
-}
+import TOC from "../components/toc"
+import MdxWrapper from "../components/mdxWrapper"
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
 // - To a GraphQL query order by frontmatter weight/order/index field.
 const items = [
-  {
-    id: "docs-certification",
-    link: "/certification",
-    title: "Certification Program",
-  },
   {
     id: "docs-certification-chapter-0",
     link: "/certification/study-guide",
@@ -185,7 +138,13 @@ class CertificationTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main slot="content" id="doc" className="certification terminus">
+
+          <main
+            slot="content"
+            id="docs-main"
+            tabIndex="-1"
+            className="certification terminus"
+          >
             <article className="doc guide-doc-body">
               <HeaderBody
                 title={node.frontmatter.title}
@@ -198,9 +157,9 @@ class CertificationTemplate extends React.Component {
                 reviewDate={ifCommandsDate}
                 isoDate={ifCommandsISO}
               />
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{node.body}</MDXRenderer>
-              </MDXProvider>
+
+              <MdxWrapper mdx={node.body} />
+
               <NavButtons
                 prev={node.frontmatter.previousurl}
                 next={node.frontmatter.nexturl}

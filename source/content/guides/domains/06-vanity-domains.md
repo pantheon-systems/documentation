@@ -79,7 +79,7 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 - **Environment URLs are permanent.** If an Workspace is removed as the Supporting Workspace, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URLs after launch and disassociation of the site with the Workspace.
 
-- **Do not configure DNS for custom domains using Vanity domain values.** Even after configuring a vanity domain, your custom domain records should *always* be `A`/`AAAA` records pointing to the platform IP addresses, as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page. Vanity domains are designed to be viewed by end users, not added into records for other domains.
+- **Do not configure DNS for custom domains using Vanity domain values.** Even after configuring a vanity domain, your custom domain records should *always* be `A`/`AAAA` records pointing to the platform IP addresses, as recommended within the **<Icon icon="global" /> Domains / HTTPS** page. Vanity domains are designed to be viewed by end users, not added into records for other domains.
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 

@@ -32,7 +32,7 @@ To create a site using a Custom Upstream:
 
    <Alert title="Note" type="info" >
 
-   You can navigate away from this page during this process, but later, you'll have to go to the **Sites** tab to access your site.  If possible, stay on this tab to simplify accessing the site when the creation is complete.
+   You can navigate away from this page during this process, but later, you'll have to go to the **Sites** tab to access your site. If possible, stay on this tab to simplify accessing the site when the creation is complete.
 
    </Alert>
 
@@ -44,7 +44,7 @@ You've now created the core portion of your Dev environment; now you have to ins
 
 <Partial file="cms-dev.md" />
 
-You have successfully finished adding a site in its Dev environment.  Click **Visit Dev Site** to view your site.
+You have successfully finished adding a site in its Dev environment. Click **Visit Dev Site** to view your site.
 
 ## Initialize the Test environment
 
@@ -54,11 +54,11 @@ You have successfully finished adding a site in its Dev environment.  Click **Vi
 
 <Partial file="test-initialize.md" />
 
-You have successfully finished adding a site in its Test environment.  Click **Visit Test Site** to view your site.
+You have successfully finished adding a site in its Test environment. Click **Visit Test Site** to view your site.
 
 ## Create the Live environment
 
-After you [purchase a plan](/guides/getstarted/purchase), you can deploy your site live.  But first, you have to create the Live environment.
+After you [purchase a plan](/guides/getstarted/purchase), you can deploy your site live. But first, you have to create the Live environment.
 
 <Alert title="Warning" type="danger" >
 
@@ -68,7 +68,6 @@ When you complete this step, your site will be live for anyone to see, at the Pa
 
 <Partial file="live-initialize.md" />
 
-You have successfully finished adding a site in its Live environment.  Click **Visit Live Site** to view your site.
+You have successfully finished adding a site in its Live environment. Click **Visit Live Site** to view your site.
 
-At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider.  Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.
-
+At this point, you have a live site with a Pantheon URL, like `http://my-site.pantheonsite.io/`. To change that to a more friendly URL, you'll need to purchase a domain from a DNS provider. Refer to our [Domains on Pantheon Guide](/guides/domains) for more information.

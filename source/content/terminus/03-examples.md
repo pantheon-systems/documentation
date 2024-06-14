@@ -260,7 +260,7 @@ You can use Terminus to test a new set of changes by deploying code from develop
 1. Test the changes, and then use Terminus to deploy code from Test up to Live:
 
   ```bash{promptUser: user}
-  terminus env:deploy my-site.live --note="Deploy core and contrib updates" 
+  terminus env:deploy my-site.live --note="Deploy core and contrib updates"
   ```
 
 1. Clear the site after each deployment:

@@ -124,7 +124,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 1. Click your username in the top right, then select **My Dashboard**.
 
-1. Open the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab in your User Dashboard.
+1. Open the **<Icon icon="gear" /> Account** tab in your User Dashboard.
 
 1. Click **SSH Keys**.
 
@@ -140,7 +140,7 @@ Pantheon supports ECDSA and RSA SSH keys. Currently, we do not support `ed25519`
 
 You can use your Dev environment to clone your site code to your workstation:
 
-1. Use Terminal to copy the **SSH clone URL** from the site's **Connection Info**. 
+1. Use Terminal to copy the **SSH clone URL** from the site's **Connection Info**.
 
 1. Enter the passphrase you set above, if prompted.
 
@@ -151,20 +151,19 @@ You can use your Dev environment to clone your site code to your workstation:
 1. Log in to your Pantheon Dashboard.
 
 1. [Go to your Personal Settings](/personal-settings), then go to the **[SSH Keys](https://dashboard.pantheon.io/personal-settings/ssh-keys)** tab.
- 
+
 1. Click the **Revoke** button next to the key you want to remove:
 
 ### Remove SSH Key from Pantheon - Classic Dashboard
 
-1. Navigate to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**.
- 
+1. Navigate to the **<Icon icon="gear" /> Account** tab of your User Dashboard and click **SSH Keys**.
+
 1. Click the **Remove** button next to the key you want to delete:
 
 ![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
 
 ### Site Access After Removing Keys
-
-You can still access the sites if you have active sites and no keys remaining. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
+After removing SSH Keys from your user account, you will not be able to interact with the application and codeservers directly through command line interfaces like Git, SFTP, WP-CLI, and Drush. However removing SSH keys is separate from revoking the machine tokens used by Terminus to perform actions (e.g., creating Multidev environments) that can otherwise be done in the Pantheon Site Dashboard.
 
 ## Troubleshooting
 
@@ -229,6 +228,6 @@ Host *.drush.in
 
 <Alert title="Note"  type="info" >
 
- Pantheon does not have access to keys that only exist on the host machine. You must ensure that your keys and, if applicable, your key agent are made available to the application running in the container, if you're using Lando, Docksal, or DDEV. 
+ Pantheon does not have access to keys that only exist on the host machine. You must ensure that your keys and, if applicable, your key agent are made available to the application running in the container, if you're using Lando, Docksal, or DDEV.
 
 </Alert>

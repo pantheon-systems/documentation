@@ -9,6 +9,7 @@ import Youtube from "../components/youtube"
 import GuideItem from "../layout/guide-item"
 import IntegrationGuideItem from "../layout/integration-guide-item"
 import SEO from "../layout/seo"
+import Wistia from "../components/wistia"
 
 import TwoColumnLinks from "../pds-middleware/TwoColumnLinks"
 
@@ -19,7 +20,7 @@ import {
 } from "@pantheon-systems/pds-toolkit-react"
 
 // Set container width for search and main content.
-const containerWidth = "narrow"
+const containerWidth = "standard"
 
 const twoColumnClasses =
   "pds-grid-item pds-grid-item--sm-4 pds-grid-item--md-6 pds-grid-item--lg-6"
@@ -40,20 +41,22 @@ class LandingTemplate extends Component {
       groupLength === 2 || groupLength === 4 ? "two" : "three"
 
     return !topic ? null : (
-      <Layout containerWidth={containerWidth}>
+      <Layout
+        containerWidth={containerWidth}
+        footerBorder={topic.footer_border}
+      >
         <SEO title={topic.title} />
-        <main id="docs-main">
+        <main id="docs-main" tabIndex="-1">
           <Container width={containerWidth} className="landing-page__header">
             <FlexContainer
               alignItems="center"
               flexDirection="column"
               mobileFlex="same"
-              spacing="narrow"
               className="landing-page-heading pds-spacing-pad-block-m"
             >
               <h1 className="pds-spacing-mar-block-end-xs">{topic.title}</h1>
               {topic.subtitle && (
-                <div className="pds-lead-text pds-lead-text--small pds-spacing-mar-block-end-xs">
+                <div className="pds-lead-text pds-lead-text--sm pds-spacing-mar-block-end-xs">
                   {topic.subtitle}
                 </div>
               )}
@@ -111,28 +114,25 @@ class LandingTemplate extends Component {
               flexDirection="column"
               mobileFlex="same"
               spacing="wide"
-              className="pds-spacing-pad-block-5xl"
+              className="pds-spacing-pad-block-start-5xl"
             >
               {topic.subtopics &&
                 topic.subtopics.map((subtopic) => (
-                  <Container
-                    width={containerWidth}
-                    className="landing-page__subtopics"
-                  >
+                  <div className="landing-page__subtopics">
                     <SubTopicGroup
                       key={subtopic.title}
                       title={subtopic.title}
                       subTitle={subtopic.subtitle}
                       topics={subtopic.subtopic_lists}
                     />
-                  </Container>
+                  </div>
                 ))}
             </FlexContainer>
           )}
 
           {/* Topic groups */}
           {topic.topics_groups && (
-            <div className="pds-background-default-secondary pds-spacing-pad-block-5xl">
+            <div className="pds-spacing-pad-block-5xl">
               <Container
                 width={containerWidth}
                 className="landing-page__topics pds-grid"
@@ -159,31 +159,32 @@ class LandingTemplate extends Component {
 
           {/* Related resources */}
           {(topic.cta || topic.cta_alt) && (
-            <Container
-              width={containerWidth}
-              className="landing-page__related pds-spacing-pad-block-end-5xl"
-            >
-              <h2>Related Resources</h2>
-              <FlexContainer spacing="wide">
-                {topic.cta && (
-                  <CallToAction
-                    title={topic.cta.title}
-                    type={topic.cta.type}
-                    subTitle={topic.cta.subtitle}
-                    url={topic.cta.url}
-                  />
-                )}
-                {topic.cta_alt && (
-                  <CallToAction
-                    title={topic.cta_alt.title}
-                    type={topic.cta_alt.type}
-                    subTitle={topic.cta_alt.subtitle}
-                    url={topic.cta_alt.url}
-                    dark
-                  />
-                )}
-              </FlexContainer>
-            </Container>
+            <div className="landing-page__related pds-background-default-secondary pds-spacing-pad-block-start-4xl pds-spacing-pad-block-end-5xl">
+              <Container width={containerWidth}>
+                <h2 className="landing-page__section-heading">
+                  Related Resources
+                </h2>
+                <FlexContainer spacing="wide">
+                  {topic.cta && (
+                    <CallToAction
+                      title={topic.cta.title}
+                      type={topic.cta.type}
+                      subTitle={topic.cta.subtitle}
+                      url={topic.cta.url}
+                    />
+                  )}
+                  {topic.cta_alt && (
+                    <CallToAction
+                      title={topic.cta_alt.title}
+                      type={topic.cta_alt.type}
+                      subTitle={topic.cta_alt.subtitle}
+                      url={topic.cta_alt.url}
+                      dark
+                    />
+                  )}
+                </FlexContainer>
+              </Container>
+            </div>
           )}
         </main>
       </Layout>
@@ -201,6 +202,7 @@ export const pageQuery = graphql`
       id
       title
       subtitle
+      footer_border
       video_id
       path
       cta {

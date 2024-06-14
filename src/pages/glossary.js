@@ -1,8 +1,8 @@
 import { Link, graphql } from "gatsby"
 
-import HeaderBody from "../components/headerBody"
 import Layout from "../layout/layout"
-import Popover from "../components/popover"
+import HeaderBody from "../components/headerBody"
+
 import React from "react"
 import SEO from "../layout/seo"
 import TOC from "../components/toc"
@@ -135,12 +135,12 @@ class Glossary extends React.Component {
     ]
 
     return (
-      <Layout containerWidth={containerWidth}>
+      <Layout containerWidth={containerWidth} footerBorder>
         <SEO
           title="Glossary"
           description="A collection of terms and definitions through Pantheon's Documentation"
         />
-        <main id="doc">
+        <main id="docs-main" tabindex="-1">
           <Container
             width={containerWidth}
             className="pds-spacing-pad-block-end-4xl"
@@ -247,7 +247,7 @@ export const pageQuery = graphql`
   query DocsWithDefinitions {
     docsWithDFNs: allMdx(
       filter: {
-        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        frontmatter: { title: { ne: "Style Guide" } }
         rawBody: { regex: "/dfn/" }
       }
     ) {
@@ -265,7 +265,7 @@ export const pageQuery = graphql`
     }
     docsWithDefLists: allMdx(
       filter: {
-        frontmatter: { changelog: { ne: true }, title: { ne: "Style Guide" } }
+        frontmatter: { title: { ne: "Style Guide" } }
         rawBody: { regex: "/<dt/" }
       }
     ) {

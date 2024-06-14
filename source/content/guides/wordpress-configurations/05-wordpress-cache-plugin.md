@@ -15,7 +15,7 @@ permalink: docs/guides/wordpress-configurations/wordpress-cache-plugin
 
 This section provides information on Pantheon's WordPress plugin.
 
-Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages expire from the Varnish Edge Cache after 10 minutes (600 seconds). The plugin sets a default HTTP header: `Cache-Control: public, max-age=600`
+Pantheon maintains an [optimized version of WordPress](https://github.com/pantheon-systems/WordPress) that includes a plugin to control cache expiration. By default, pages expire from the Varnish Edge Cache after 1 week. The plugin sets a default HTTP header: `Cache-Control: public, max-age=604800`
 
 ## Clear Site Cache
 
@@ -39,11 +39,21 @@ You can increase the default time to live value to improve the chances that a vi
 
 1. Modify the **Default Cache Time**.
 
-    You should strike a balance between freshness of content and speed. We recommend a minimum of 600 seconds. If you can increase the setting to 30 minutes (1800 seconds) or 1 hour (3600 seconds), many more requests will hit the Edge Cache. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
+    When [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache) is active, your site content should always be fresh and served quickly from Pantheon's Edge Cache. This is why we recommend caching content for a minimum of 1 week. Every page served from the Edge Cache won't hit your application container's PHP workers or MySQL database, which means faster page load times and a better user experience for site visitors.
 
 1. Click **Save Changes**.
 
 ![WordPress Pantheon Cache Plugin settings](../../../images/WordPress_Pantheon-Cache-Settings.png)
+
+### Override the default max age
+
+Since the [1.4.0 update in the Pantheon Mu Plugin](/release-notes/2024/04/pantheon-mu-plugin-1-4-0-update), you can override the default `max-age` using a filter. This is useful if you want to set a different max age for specific pages or post types, or if you want to set it to a specific value programmatically.
+
+```php
+add_filter( 'pantheon_cache_default_max_age', function() {
+    return 2 * WEEK_IN_SECONDS;
+} );
+```
 
 ### Maintenance Mode
 

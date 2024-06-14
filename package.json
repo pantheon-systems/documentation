@@ -8,13 +8,9 @@
     "url": "https://github.com/pantheon-systems/documentation/issues"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.19",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@pantheon-systems/pds-toolkit-react": "^1.0.0-dev.44",
+    "@pantheon-systems/pds-toolkit-react": "^1.0.0-dev.115",
     "algoliasearch": "^4.14.3",
     "babel-plugin-remove-graphql-queries": "^4.25.0",
     "bootstrap": "^3.4.1",
@@ -25,7 +21,6 @@
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-algolia": "^1.0.3",
     "gatsby-plugin-feed": "^4.25.0",
-    "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-google-tagmanager": "^4.25.0",
     "gatsby-plugin-image": "^2.25.0",
     "gatsby-plugin-manifest": "^4.25.0",
@@ -39,7 +34,6 @@
     "gatsby-remark-autolink-headers": "^5.25.0",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^5.25.0",
-    "gatsby-remark-embed-markdown": "0.0.4",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-github": "^2.0.0",
     "gatsby-remark-grid-tables": "^0.1.0",
@@ -57,7 +51,6 @@
     "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.7.2",
     "new-github-issue-url": "^0.2.1",
-    "node-font-awesome": "^1.0.2",
     "postcss": "^8.4.21",
     "prismjs": "^1.29.0",
     "react": "^17.0.2",
@@ -73,6 +66,7 @@
   "devDependencies": {
     "@octokit/rest": "^16.43.2",
     "date-fns": "^2.29.3",
+    "mark.js": "^8.11.1",
     "prettier": "^2.8.3",
     "react-date-range": "^1.4.0"
   },
@@ -85,6 +79,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pantheon-systems/documentation.git"
+  },
+  "engines": {
+    "node": ">=18.0.0 <20.0.0"
   },
   "scripts": {
     "build": "gatsby build --prefix-paths --log-pages",

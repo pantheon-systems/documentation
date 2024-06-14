@@ -17,6 +17,8 @@ permalink: docs/guides/multidev
 
 <dfn id="multidev">Multidevs</dfn> are development environments for teams. A Multidev environment allows a developer to fork the entire stack (code and content), work independently, and then merge the code changes back into the main `master` site. Each forked branch has its own separate development environment, including database and files. Each branch environment can be independently set to use either SFTP or Git mode for code changes.
 
+<Wistia src="qh7j9p5vv0" />
+
 Each site has a limit of 10 Multidev environments. Elite sites can request additional Multidev environments [from support](/guides/support/contact-support/) as needed.
 
 Multidev is available for the following accounts:
@@ -31,7 +33,7 @@ Multidev is available for the following accounts:
 
 ![Dev Test and Live icon](../../../images/multidev-flow.png)
 
-Check out our [pricing page](https://pantheon.io/pricing?docs) and contact [Sales](https://pantheon.io/contact-sales) to discuss which plan is best for your needs.
+Check out our [pricing page](https://pantheon.io/plans/pricing?docs) and contact [Sales](https://pantheon.io/contact-sales) to discuss which plan is best for your needs.
 
 ### Multidev Access for Team Members and Supporting Agencies
 

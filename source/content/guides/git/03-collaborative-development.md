@@ -38,7 +38,7 @@ The sections below will show you the basics for collaborating with others if you
 
     ![Copy Git Clone Command](../../../images/dashboard/git-string.png)
 
-1. Click the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab, set the **Development Mode** to **Git**, and then click **Clone with Git**:
+1. Click the **<Icon icon="wrench" /> Dev** tab, set the **Development Mode** to **Git**, and then click **Clone with Git**:
 
     Your local copy will now track the Pantheon repository as the origin.
 

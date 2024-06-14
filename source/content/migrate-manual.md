@@ -114,9 +114,9 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
  - [Drupal 7](https://github.com/pantheon-systems/drops-7)
- - [Drupal 8](https://github.com/pantheon-systems/drops-8)
+ - [Drupal 9+](https://github.com/pantheon-upstreams/drupal-composer-managed)
  - [WordPress](https://github.com/pantheon-systems/wordpress)
-  
+
   <Alert title="Note" type="info">
 
   If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/) or [Cyberduck](https://cyberduck.io/).
@@ -125,7 +125,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
 
 ### SFTP Client
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm that Development Mode is set to **SFTP**.
+1. Navigate to **<Icon icon="code" /> Code** in the **<Icon icon="wrench" /> Dev** tab of your Site Dashboard. Confirm that Development Mode is set to **SFTP**.
 
 1. Click **Connect with SFTP** to access the credentials for connecting to your preferred SFTP client.
 
@@ -193,7 +193,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
     git commit -m "initial commit"
     ```
 
-1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
+1. From the **<Icon icon="wrench" /> Dev** environment of the Site Dashboard, set the site's Development Mode to Git:
 
   ![Git connection mode](../images/dashboard/connection-mode-git.png)
 
@@ -240,7 +240,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
   Automatic merge went well; stopped before committing as requested
   ```
 
-  If you haven't already configured [SSH Keys](/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
+  If you are prompted for authentication, configure an [SSH Keys](/ssh-keys).
 
 1. Review your current index using `git status`, then commit all changes.
 
@@ -277,7 +277,7 @@ The codebase for each CMS upstream offered by Pantheon can be found on GitHub:
   git push pantheon master
   ```
 
-1. Go to the **<span class="glyphicons glyphicons-embed-close"></span> Code** tab of your **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Site Dashboard. You should see your site's pre-existing commit history and the most recent commit adding Pantheon's core files.
+1. Go to the **<Icon icon="code" /> Code** tab of your **<Icon icon="wrench" /> Dev** environment on the Site Dashboard. You should see your site's pre-existing commit history and the most recent commit adding Pantheon's core files.
 
 ## Add Your Database
 
@@ -349,7 +349,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 #### Pantheon Dashboard
 
-1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment, select **<span class="glyphicons glyphicons-server"></span> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
+1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard), select the **<Icon icon="wrench" /> Dev** environment, select **<Icon icon="server" /> Database / Files**, and click **Import** to add your archive accordingly (based on file size):
 
 <Partial file="drupal/migrate-add-files-part3.md" />
 

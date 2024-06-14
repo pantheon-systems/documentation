@@ -39,7 +39,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 <Tab title="WordPress" id="wp-1" active={true}>
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the desired environment.
-2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
+2. Click the <Icon icon="externalLink" /> **Visit Site** button and login.
 3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
 
   ![WordPress Clear Caches](../images/wp-cc.png)
@@ -49,7 +49,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 <Tab title="Drupal" id="d7-3">
 
 1. [Go to the Site Dashboard](/guides/account-mgmt/workspace-sites-teams/sites#site-dashboard) and select the desired environment.
-2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
+2. Click the <Icon icon="externalLink" /> **Visit Site** button and login.
 3. Ensure the [Pantheon Platform API](/modules#pantheon-module-drupal-7) module is enabled:
 
   ![Pantheon Platform API module](../images/pantheon-platform-api-enabled.png)
@@ -82,9 +82,9 @@ Some good troubleshooting first steps include:
  - Commenting out redirections in `settings.php`, `wp-config.php`, or elsewhere.
 
  - Resolve any fatal PHP errors.
- 
+
  - Isolate which plugin or module may be causing the issue by turning them all off, then turning on one by one.
- 
+
  - Check if the issue is theme related by using an unmodified default theme like [Bartik](https://www.drupal.org/project/bartik) or [Twenty Nineteen](https://wordpress.org/themes/twentynineteen/).
 
 ### Cache Is Cleared from Dashboard and Application but New Changes Are Not Visible

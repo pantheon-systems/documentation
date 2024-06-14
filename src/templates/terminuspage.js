@@ -1,55 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-
 import GuideLayout from "../layout/GuideLayout"
+import SEO from "../layout/seo"
+import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
-import Callout from "../components/callout"
-import Alert from "../components/alert"
-import Accordion from "../components/accordion"
-import ExternalLink from "../components/externalLink"
-import Icon from "../components/icon"
-import Popover from "../components/popover"
-import TabList from "../components/tabList"
-import Tab from "../components/tab"
+import Navbar from "../components/navbar"
 import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
-import Card from "../components/card"
-import CardGroup from "../components/cardGroup"
-import Navbar from "../components/navbar"
-import NavButtons from "../components/navButtons"
-import SEO from "../layout/seo"
-import Releases from "../components/releases"
-import TerminusVersion from "../components/terminusVersion"
-import Download from "../components/download"
-import Commands from "../components/commands"
-import ReviewDate from "../components/reviewDate"
-import Check from "../components/check.js"
-import Partial from "../components/partial"
-import SearchBar from "../layout/SearchBar"
 
-import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
-
-const shortcodes = {
-  Callout,
-  Alert,
-  Accordion,
-  ExternalLink,
-  Icon,
-  Popover,
-  TabList,
-  Tab,
-  Card,
-  CardGroup,
-  Releases,
-  TerminusVersion,
-  Download,
-  Partial,
-  Commands,
-  ReviewDate,
-  Check,
-}
+import MdxWrapper from "../components/mdxWrapper"
+import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 // @TODO relocate this list
 // - To a YAML file and use GraphQL to pull data.
@@ -185,7 +145,12 @@ class TerminusTemplate extends React.Component {
         />
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
-          <main slot="content" id="doc" className="terminus">
+          <main
+            slot="content"
+            id="docs-main"
+            tabIndex="-1"
+            className="terminus"
+          >
             <article className="doc guide-doc-body pds-spacing-pad-block-end-xl">
               <HeaderBody
                 title={node.frontmatter.title}
@@ -198,14 +163,11 @@ class TerminusTemplate extends React.Component {
                 reviewDate={ifCommandsDate}
                 isoDate={ifCommandsISO}
               />
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{node.body}</MDXRenderer>
-              </MDXProvider>
+              <MdxWrapper mdx={node.body} />
             </article>
           </main>
           {hasTOC && <TOC slot="sidebar" title="Contents" />}
         </ContentLayoutType>
-
         <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
       </GuideLayout>
     )

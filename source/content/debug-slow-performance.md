@@ -1,6 +1,6 @@
 ---
 title: Debugging Slow Performance
-description: Identify common problems with Drupal or WordPress performance speeds and deploy solutions.
+description: Identify and address common performance issues in Drupal or WordPress.
 tags: [cache, code, logs, measure]
 permalink: docs/debug-slow-performance
 contenttype: [doc]
@@ -10,127 +10,113 @@ cms: [drupal, wordpress]
 audience: [development]
 product: [--]
 integration: [--]
-reviewed: "2022-12-07"
+reviewed: "2024-06-12"
+showtoc: true
+contributors: [jms-pantheon]
 ---
+
 This article covers the most common causes for performance problems, demonstrates how to diagnose bottlenecks, and provides actionable solutions for developers.
+___
+## Cache Hit Ratio
+A low Cache Hit Ratio <Popover title="Cache Hit Ratio" content="Serving requests from cache rather than by the CMS allows visitors to experience a faster response and removes load from the site's server resources. <a href='/metrics#cache-hit-ratio'> Read more</a>." />  from the Global CDN level is often a primary cause of slow site performance.
 
-## PHP Errors Slow Execution
+**How to Check:**
+- From the Site Dashboard, Navigate to Live > Metrics to view Cache Hit Ratio.
+- Or view Cache Hit Ratio from the command-line with Terminus:
+  ```bash{promptUser: user}
+  terminus env:metrics <site>.<env>
+  ```
 
-An often ignored cause of bad performance is [PHP errors within site code](/guides/php/php-errors), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
+**Recommended Solutions:**
+- Increase caching TTL in [WordPress](/guides/wordpress-configurations/wordpress-cache-plugin#pantheon-page-cache-plugin-configuration) or [Drupal](/drupal-cache#caching).
+- Inspect [cache related headers](/debug-cache/#cache-related-headers) for cache busting culprits either from the [command-line with curl](/debug-cache#debug-caching-issues) or [in the browser](/guides/global-cdn/test-global-cdn-caching/#test-global-cdn-with-browser-headers).
 
-Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
+**See Also**
+- [Debug Caching Issues](/debug-cache)
+- [Metrics in the Site Dashboard](/metrics#cache-hit-ratio)
+___
 
-![Benchmark example using Drupal's Generate Errors](../images/benchmark-example-generate-errors.png)
+## Redis Object Caching
+On performance plans and above, Redis reads and writes cache data incredibly quickly and takes load off the primary database.
 
-Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
+**How to Check:**
+- Make sure Redis has been activated from Settings > Addons in the Pantheon Site Dashboard.
+- Navigate to the Status tab of a given environment and click "run the checks now" and review results for Redis to make sure "Redis is enabled and serving data".
 
-|               | 1 time | 25 times | 50 times | 100 times | 1,000 times | 10,000 times |
-|:------------- |:------ |:-------- |:-------- |:--------- |:----------- |:-------------|
-| **none**      | 0.00s  | 0.08s    | 0.17s    | 0.30s     | 3.04s       | 32.81s       |
-| **E_NOTICE**  | 0.01s  | 0.16s    | 0.34s    | 0.71s     | 7.10s       | 79.52s       |
-| **E_WARNING** | 0.01s  | 0.16s    | 0.33s    | 0.70s     | 7.67s       | 134.68       |
+**Recommended Solutions:**
+- Use recommended configurations for [WordPress](/object-cache/wordpress) or [Drupal](/object-cache/drupal)  
+- Review Redis usage in [New Relic](/guides/new-relic) or connect directly to [Redis via the command-line](/object-cache/cli).
 
-Turning off error reporting suppresses the symptom, not the problem, and **PHP execution will still be slow as long as there are errors**.
+**See Also**
+- [Object Cache Overview](/object-cache)
+___
 
-PHP errors are not always obvious at first glance, so don't ignore error messages in your development environment. Do what it takes to fix them, including the notices.
+## Error Logging
+PHP errors can indicate issues affecting site performance and can slow down the site by constantly writing to application log files (e.g., `php-error.log`). Drupal sites also log PHP notices and warnings to the database by default via the Database Logging module (Watchdog).
 
-## Drupal Note Regarding Watchdog
-Compounding the issue, writing those errors to watchdog takes time and is a blocking operation - other queries can’t happen until the write is done. The bigger the table, the longer the write will take.
+**How to Check:**
+- Download [Application log files](/guides/logs-pantheon/access-logs#application-log-files) and review for recurring entries.
+- For Drupal sites, regularly check the status of Watchdog at `/admin/reports/dblog`
 
-Don’t shoot the messenger—disabling dblog will not fix bad code.
+**Recommended Solutions:**
+- Solve any recurring log entries observed in `php-error.log`
+- Solve any recurring notices and warnings logged by Watchdog (Drupal Sites).
 
-As an example, if your slowest database operation is an INSERT to watchdog, then you should fix the PHP errors that are causing the writes. Notice that watchdog INSERTS is taking 70.6% of the execution time.
+**See Also**
+- [PHP Errors and Exceptions](/guides/php/php-errors)
+- [Log Files on Pantheon](/guides/logs-pantheon)
+___
 
-![Example of INSERT consuming execution time](../images/example-insert-consuming-execution-time.png)
+## New Relic Analysis
+On all plans except basic, New Relic offers insights into performance bottlenecks and external calls that might be causing slowdowns.
 
-Learn more about [Log Files on Pantheon](/guides/logs-pantheon).
+**How to Check:**
+- Make sure New Relic has been activated in the Pantheon Site Dashboard.
+- Review slow [transaction traces](https://docs.newrelic.com/docs/apm/transactions/transaction-traces/introduction-transaction-traces/), which are logged for responses that exceed your configured Apdex threshold (.5s by default).
 
-## Too Many Database Queries
-The next cause of poor performance is an excessive number of database queries per request. You can see that in the [New Relic&reg; Performance Monitoring dashboard](/guides/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
+**Recommended Solutions:**
+- Address and optimize slow transactions.
+  - Prioritize efforts on the most time consuming overall (repeat offenders). Fixing a slow transaction that only occurs once every 12 hours for example, is not as impactful as fixing bottlenecks that occur on every page load.
 
-![New Relic map tab](../images/new-relic-map.png)<br />
+**See Also**
+- [New Relic Performance Monitoring on Pantheon](/guides/new-relic)
+___
+## Database Performance
+Site performance can be affected by slow database queries.
 
-Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high. In the upper-right, the average query duration is shown and is actually very respectable.
+**How to Check:**
+- Download and review the MySQL slow log (`mysqld-slow-query.log`).
+- Use `pt-query-digest` for an efficient breakdown of the MySQL slow log.
+- Log into New Relic and [review slow queries](https://docs.newrelic.com/docs/apm/apm-ui-pages/monitoring/view-slow-query-details/) from the Database page.
 
-Therefore, with an average of 110 queries taking 1.19 milliseconds means on average, each request spends .132 seconds in the database. A second example with the same query duration, but with 239 queries per request, means .28 seconds in the database. A final example with 421 queries per request averaging 2.66 milliseconds equals **1.1** seconds per request in the database—monstrously slow.
+**Recommended Solutions:**
+- Address and optimize slow queries.
+  - Prioritize efforts on the most time consuming overall (repeat offenders). Optimizing a query that runs nightly for example, is not as impactful as fixing slow queries that occur on every page load.
 
-Query count matters, so keep it low through caching and avoiding queries in loops.
+**See Also**
+- [MySQL Slow Log](/guides/mariadb-mysql/mysql-slow-log)
+- [New Relic Performance Monitoring on Pantheon](/guides/new-relic)
 
-## Not Caching
+___
 
-Non-optimized caching also is a huge problem. If you're not caching anonymous pages, anonymous traffic performance will be bad. Varnish respects the Cache-Control headers the site is sending it, which won't be set if anonymous page caching is turned off.
+## Bots & Traffic Patterns
+Performance can degrade due to unusual or malicious traffic.
 
-If the cache lifetime is set to something that doesn't make sense for your traffic pattern (e.g. it only gets one hit per hour yet it's set to have a 5 minute cache), that's not enough to help.
+**How to Check:**
+- Download and inspect `nginx-access.log` files using SFTP.
+- Use the `goaccess` tool to analyze log files.
 
-### Drupal Note
-See our [guidelines on Drupal's performance settings](/drupal-cache) for more details.
+**Recommended Solutions:**
+- Address suspicious traffic patterns.
+- Block or manage bots causing high loads.
 
-Other caching systems that aren't on by default that should be enabled include [Object Cache](/object-cache/drupal) and [caching for view results](/drupal-caching-views).
+**See Also**
+- [Parse Nginx Access Logs with GoAccess](/guides/logs-pantheon/nginx-access-logs)
+- [Troubleshooting Traffic Events](/guides/account-mgmt/traffic/remedy)
+___
 
-### Using the Database to Cache in Drupal
-By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
 
-![New Relic most time consuming queries](../images/new-relic-most-time-consuming-queries.png)<br />
 
-Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.
+## Conclusion
 
-One of the services Pantheon offers is Redis as an [Object Cache backend](/object-cache/drupal), which is a key-value store and is optimized for this type of work.​
-
-### WordPress Caching Note
-There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-page-cache plugin](https://github.com/pantheon-systems/WordPress/blob/default/wp-content/mu-plugins/pantheon-mu-plugin/inc/pantheon-page-cache.php) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
-
-## Not Enough Traffic
-The next problem is when a site doesn't have enough traffic, which may seem paradoxical.
-
-Cache misses are by nature slow - if something needs to be cached it's performed and the cache is populated, which is slower than just returning the value from cache.
-
-There are a large number of caches involved in every single request, including:
-
-- [Pantheon Global CDN](/guides/global-cdn/global-cdn-caching) - Spread out across multiple servers, and the cache is not shared between servers.
-- [APCu](/apcu) - PHP has its own user-level cache, which is not shared between application containers.
-- [Drupal](https://drupal.org/node/326504) and [Object Cache](/object-cache/drupal) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
-
-## Too Much Traffic
-Of course, too much site traffic can be a problem if you just don't have enough resources.
-
-If your site is already optimized to the best of your knowledge, including eliminating PHP errors, leveraging caching like Redis and caching things like blocks and views, and your database response time is responding quickly to a reasonable amount of queries, then you might be a victim of your own success.
-
-If you've reached this point, it's probably time to consider [upgrading your site's plan](/guides/legacy-dashboard/site-plan). We have a number of self-service options for scaling to your needs, but if you've already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
-
-## Running Cron Over Web Traffic
-
-Both Drupal and WordPress rely on running regular maintenance tasks via a cron system that usually gets executed at the end of a request. The user is thus forced to wait for the cron to finish before they can actually see the page. Depending on what the cron is doing, this can be a short or extremely long wait (e.g. if the cron is calling external services to import content). As you can imagine, this is not desirable.
-
-For Drupal sites, Pantheon executes the cron every hour via Drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/drupal-cron).
-
-This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/guides/wordpress-developer/wordpress-cron).
-
-## External Call Timeouts
-
-Calling external services during regular requests can be a performance problem. The time it takes to initiate the request then send and receive data is time spent waiting by visitors. Since PHP executes instructions sequentially, no other operation can be executed while the external connection is active. Also, if the external service goes down, your site will go down along with it.
-
-Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation here is to avoid making external calls during regular requests as much as possible. As an alternative, you can make these calls via cron and store them in the database. The data can be refreshed with the desired frequency. The advantage is that even if the external service is slow or goes down your site won't be affected.
-
-## Memory Errors
-An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](https://pantheon.io/plans/pricing-comparison), so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will cancel the process, resulting in a failed request from the user's perspective.
-
-In general, Drupal's Queue Workers should be used for any process involving large numbers of nodes and use the [Queue UI](https://www.drupal.org/project/queue_ui) module to monitor queue operations.
-
-Debugging memory issues can be challenging. Here are some things to consider when addressing memory issues:
-
-- Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
-- Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/) or [XHProf](http://php.net/manual/en/book.xhprof.php)) or to help refactor code that could be leaking memory
-- Enabling [Object Cache](/object-cache) could boost site performance by providing an in-memory backend caching
-- [Update PHP version](/guides/php/php-versions)
-- In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
-
-Please note that memory issues caused by custom code fall outside our [scope of support](/guides/support).
-
-### Drupal
-Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler) module can help troubleshoot issues by logging peak memory usage.
-
-GD Image library and UI modules such as Views UI, Feeds UI, etc are known causes for high memory usage. All versions of PHP on pantheon's platform
-support ImageMagick for offloading of resource-intensive image tasks and Redis for caching of data.
-
-### WordPress
-Refer to [Debugging in WordPress](https://codex.wordpress.org/Debugging_in_WordPress) from the WordPress.org Codex for information on debugging common issues.
+Always validate any changes against real-world performance, either through user experiences or performance testing tools. If these steps don't lead to a resolution, consider consulting Pantheon support or opting for a deeper performance analysis. Regular monitoring and optimization ensure the best user experience on the Pantheon platform.

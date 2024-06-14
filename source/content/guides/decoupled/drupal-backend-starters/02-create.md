@@ -16,6 +16,7 @@ audience: [development]
 product: [decoupled]
 integration: [--]
 ---
+<Youtube src="AcL-v1j_XX0" title="Installing Drupal with demo content for Front-End Sites" />
 
 This section provides information on how to use the Drupal Backend Starter for Front-End Sites.
 
@@ -72,9 +73,13 @@ Use **Build Tools** if:
 
 1. Click the **Visit Development Site** button to install Drupal.
 
-1. Select either the `Pantheon Decoupled Profile`, or the `Pantheon Decoupled Umami Demo` profile. The same can be done via [`terminus remote:drush`](/terminus/commands/remote-drush).
+1. Select the `Pantheon Decoupled Profile` install profile. The same can be done via [`terminus remote:drush`](/terminus/commands/remote-drush).
 
-    - The Umami Demo contains additional demo data, and is not intended for use in a production site build.
+<Alert title="Note"  type="info" >
+
+To instead install Drupal using a demo data set, select the `Demo: Umami Food Magazine` install profile. After installing, enable the Pantheon Decoupled module.
+
+</Alert>
 
 Your backend starter is ready to develop!
 
@@ -145,10 +150,6 @@ terminus self:plugin:uninstall terminus-power-tools
 ```
 
 ### Additional Options
-
-#### Install with Umami Demo Data
-
-The Build Tools installation process will create a backend with limited example content. To create a site with Drupal's Umami demo data set instead, change the profile flag to `--profile="pantheon_decoupled_umami_demo"` in the `terminus build:project:create` command.
 
 #### Use Other Git Hosts or CI Services
 
