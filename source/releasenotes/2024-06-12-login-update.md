@@ -4,4 +4,5 @@ published_date: "2024-06-12"
 categories: [general, security]
 ---
 
+
 Pantheon is enhancing the new user account creation and management process to offer a more stable, modern, and secure first experience. We are moving the registration and login experience to utilize Auth0's Universal Login feature.
