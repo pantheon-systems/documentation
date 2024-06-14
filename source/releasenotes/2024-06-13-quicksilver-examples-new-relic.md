@@ -8,7 +8,7 @@ The integration between Pantheon and New Relic is being updated to ensure compat
 
 - Those who are using [quicksilver](https://docs.pantheon.io/guides/quicksilver) to interact with New Relic API.
 
-If you are using quicksilver, particularly any of the three New Relic scripts in the [quicksilver-examples](https://github.com/pantheon-systems/quicksilver-examples) repository, please update your scripts by **June 20, 2024**, to ensure continued functionality.
+If you are using Quicksilver, particularly any of the three New Relic scripts in the [quicksilver-examples](https://github.com/pantheon-systems/quicksilver-examples) repository, please update your scripts by **June 20, 2024**, to ensure continued functionality.
 
 ## Action required: Get and store your user API key and update your scripts
 
