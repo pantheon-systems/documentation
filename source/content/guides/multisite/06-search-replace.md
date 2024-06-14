@@ -64,11 +64,11 @@ search_replace: false
 ```
 
 ## Subdomain WordPress Multisite Search and Replace Configuration
-Search and Replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 25 sites that can be configured for Search and Replace via domain mapping.
+Search and Replace runs on the platform as part of creating an environment, deploying to Test or Live, and when cloning content between environments. There is currently a limit of 75 sites that can be configured for Search and Replace via domain mapping.
 
 <Alert title="We are collecting feedback"  type="info" >
 
-We are collecting feedback about use cases that require more than 25 URLs to be replaced. Please [fill out this form](https://forms.gle/TYvuHYSNrVmptVBW9) if this is the case. Alternatively, check out the [Subdomain to Subdirectory Multisite Conversion](#subdomain-to-subdirectory-multisite-conversion) option below which does not have any limits.
+We are collecting feedback about use cases that require more than 75 URLs to be replaced. Please [fill out this form](https://forms.gle/TYvuHYSNrVmptVBW9) if this is the case. Alternatively, check out the [Subdomain to Subdirectory Multisite Conversion](#subdomain-to-subdirectory-multisite-conversion) option below which does not have any limits.
 
 </Alert>
 
