@@ -37,13 +37,13 @@ To create a CMS site:
 
 1. Enter the name and select a region for this site. If this site is to be part of a Professional Workspace, select a Workspace from **Choose a Workspace for the Site**. Click **Continue**. It can take several minutes to create a new site on Pantheon.
 
-   ![Enter site information](../../../images/create-new-site-info.png)
-
    <Alert title="Note" type="info">
 
-   Site names are limited to 51 characters.
+   Site names are limited to 51 characters and can contain only numbers, letters, and dashes. Site names cannot start or end with a dash.
 
    </Alert>
+
+   ![Enter site information](../../../images/create-new-site-info.png)
 
    <Alert title="Note" type="info" >
 
