@@ -48,5 +48,4 @@ Please reach out to our [Professional Services](https://pantheon.io/professional
 ## More Resources
 
 - [Composer Fundamentals and WebOps Workflows](/guides/composer)
-- [Convert a Standard Drupal Site to a Composer-Managed Site](/guides/composer-convert)
 - [Roots Bedrock](https://roots.io/bedrock/)
