@@ -20,7 +20,7 @@ New Relic&reg; Performance Monitoring is a powerful tool for monitoring the perf
 This integration becomes more useful when code changes (signified by deployments) are labeled in New Relic&reg; to track performance changes over time.
 Such tracking can be done using [Quicksilver hooks](/guides/quicksilver/hooks) and [Terminus](/terminus). This creates a traceable connection between performance changes and code deployments, allowing developers to determine whether a code change positively or negatively impacted performance.
 
-To add these labels automatically on code pushes or deployments, follow the steps outlined in the [script documentation](https://github.com/pantheon-systems/quicksilver-examples/blob/main/new_relic_deploy/README.md).
+To add these labels automatically on code pushes or deployments, follow the steps outlined in the [script documentation](https://github.com/pantheon-systems/quicksilver-examples/blob/main/new_relic_deploy).
 
 ## More Quicksilver Examples
 
