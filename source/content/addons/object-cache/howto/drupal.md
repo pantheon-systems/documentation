@@ -119,6 +119,26 @@ contributors: [cityofoaksdesign, carolynshannon, jms-pantheon, whitneymeredith]
 
    </Alert>
 
+ ```
+### Database Cleanup (Recommended)
+
+After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
+
+1. [Connect directly to MySQL](/guides/mariadb-mysql/mysql-access) and run the command below to view the cache:
+
+  ```sql
+  SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
+  ```
+
+ This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
+
+1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
+
+  ```sql
+  TRUNCATE TABLE `<tablename>`;
+  ```
+
+
 ## Drupal 7
 
 <Alert title="Note" type="info">
@@ -168,26 +188,11 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 
 1. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
 
-<Accordion title="Database Cleanup (optional)" id="database-cleanup-d7" icon="lightbulb">
+<Alert title="Note" type="info">
 
-After enabling Redis, there are cache tables in the database that are no longer being used. Even when the Drupal cache is cleared, these tables will not be emptied. For sites that were live for awhile before Redis was enabled, there could be significant amounts of data in these tables. Removing this data could increase the speed of cloning, exporting, and backing up the database.
+Review the [Database Cleanup](#database-cleanup) section should be reviewed and implemented accordingly for Drupal 7 sites.
 
-1. [Connect directly to MySQL](/guides/mariadb-mysql/mysql-access) and run the command below to view the cache:
-
-  ```sql
-  SELECT table_name FROM information_schema.tables WHERE table_name LIKE 'cache%' AND table_name != 'cache_form';
-  ```
-
- This returns a list of all the cache tables in the database. These are safe to empty, but don't remove the tables themselves in case Redis is disabled in the future.
-
-1. Run the command below on each table, replacing `<tablename>` with the name of the cache table, to empty the cache:
-
-  ```sql
-  TRUNCATE TABLE `<tablename>`;
-  ```
-
-</Accordion>
-
+</Alert>
 
 ## More Resources
 - [Performance Addons](/addons)
