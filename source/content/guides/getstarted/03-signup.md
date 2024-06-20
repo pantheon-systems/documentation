@@ -1,5 +1,5 @@
 ---
-title: Get Started with Pantheon
+title: Get Started with Pantheon 
 subtitle: Sign Up
 description: Create your Pantheon account.
 contenttype: [guide]
