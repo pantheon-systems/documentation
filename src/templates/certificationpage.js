@@ -7,6 +7,7 @@ import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
 import {SidebarNav, turnItemsIntoLinks} from "../components/sidebarNav"
+import OmniSidebarNav from "../components/omniSidebarNav"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
@@ -143,10 +144,9 @@ class CertificationTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-          <SidebarNav
+          <OmniSidebarNav
           slot="guide-menu"
-          title="WebOps Certification"
-          links={CertificationLinks} />
+          activePage={node.fields.slug}/>
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
 
