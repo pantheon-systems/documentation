@@ -3,7 +3,7 @@ import React from "react"
 import { SidebarNav, turnItemsIntoLinks } from "../sidebarNav"
 
 
-const OmniSidebarNav = ({activePage}) => {
+const OmniSidebarNav = ({activePage, maximumParent}) => {
 
 
   const CertificationItems = [
@@ -71,10 +71,6 @@ const OmniSidebarNav = ({activePage}) => {
     },
   ]
 
-
-  const CertificationLinks = turnItemsIntoLinks(CertificationItems, activePage);
-
-
   const OmniItems = [
 
     {
@@ -90,7 +86,24 @@ const OmniSidebarNav = ({activePage}) => {
 
 
 
-const OmniLinks = turnItemsIntoLinks(OmniItems, activePage);
+  function findSubMenuItemsToUse(maximumParent, NestedItems) {
+    for (let item of NestedItems) {
+      if (item.link === maximumParent) {
+        return item;
+      } else if (item.subItems && item.subItems.length > 0) {
+        const found = findSubMenuItemsToUse(maximumParent, item.subItems);
+        if (found) return found;
+      }
+    }
+    return undefined;
+  }
+
+  const activeParent = [findSubMenuItemsToUse(maximumParent, OmniItems)];
+
+
+  console.log(activeParent);
+
+  const OmniLinks = turnItemsIntoLinks(activeParent, activePage);
 
 
   return (

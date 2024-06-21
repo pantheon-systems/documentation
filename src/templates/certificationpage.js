@@ -146,7 +146,8 @@ class CertificationTemplate extends React.Component {
         />
           <OmniSidebarNav
           slot="guide-menu"
-          activePage={node.fields.slug}/>
+          activePage={node.fields.slug}
+          maximumParent="/certification"/>
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
 
