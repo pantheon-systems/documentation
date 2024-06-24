@@ -271,6 +271,15 @@ ___
 
 ___
 
+## [Media Bulk Upload](https://www.drupal.org/project/media_bulk_upload)
+<ReviewDate date="2024-06-24" />
+
+**Issue**: The default configuration for this module has been known to cause issues related to the "Upload location" setting, which out of the box uses the `/tmp` directory.
+
+**Solution**: Configure the "Upload location" to `public://sites/default/files/private` You must include the `public://` protocol for this solution to work.
+
+___
+
 ## [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 
 **Issue**:  This module requires the use of the `tmp` directory. Refer to the [Using the tmp Directory](#using-the-tmp-directory) section below.
