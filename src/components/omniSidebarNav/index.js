@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import { SidebarNav, turnItemsIntoLinks } from "../sidebarNav"
 import CertificationItems from "./submenus/certification";
 
@@ -25,6 +25,7 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
             guide_directory
           }
           frontmatter {
+            title
             subtitle
           }
         }
@@ -34,10 +35,7 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
     `
   );
 
-  console.log(AllGuides);
-
   const getChildrenForGuideDirectory = (AllTheGuides, guideDirectory) => {
-
     const ChildItems = [];
     for (let item of AllTheGuides) {
       console.log(item.node.fields.guide_directory);
@@ -47,27 +45,27 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
           title: item.node.frontmatter.subtitle,
         });
       }
-
     }
-
     return ChildItems;
-
   }
 
+  const getTitleForGuideDirectory = (AllTheGuides, guideDirectory) => {
 
-
-  const guideToGet = "guides/decoupled/wp-nextjs-frontend-starters"
-  const AllGuideItems = [];
-  for (let item of AllGuides.allGuides.edges) {
-    console.log(item.node.fields.guide_directory);
-    if (item.node.fields.guide_directory === guideToGet) {
-      AllGuideItems.push({
-        link: item.node.fields.slug,
-        title: item.node.frontmatter.subtitle,
-      });
+    for (let item of AllTheGuides) {
+      if (item.node.fields.slug === "/" + guideDirectory) {
+        return item.node.frontmatter.title;
+      }
     }
-
   }
+
+  const getAGuide = (AllTheGuides, guideDirectory) => {
+    return {
+      link: guideDirectory,
+      title: getTitleForGuideDirectory(AllTheGuides, guideDirectory),
+      children: getChildrenForGuideDirectory(AllTheGuides, guideDirectory)
+    }
+  }
+
 
   const OmniItems = [
     {
@@ -80,19 +78,13 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
       title: "Get Started",
     },
         {
-          link: "/guides/decoupled/wp-nextjs-frontend-starters",
-          title: "WordPress + Next.js Frontend Starter for Front-End Sites",
-          children: AllGuideItems
-        },
-
-
-
-        {
           link: "/guides/decoupled/wp-backend-starters",
           title: "WordPress Backend Starters",
           children: getChildrenForGuideDirectory(AllGuides.allGuides.edges, "guides/decoupled/wp-backend-starters")
         },
+        getAGuide(AllGuides.allGuides.edges, "guides/decoupled/wp-nextjs-frontend-starters"),
 
+        // guides/decoupled/wp-nextjs-frontend-starters
 
 
         //
@@ -112,7 +104,6 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
   ];
 
   // merge the guide items with the OmniItems
-
 
   function findSubMenuItemsToUse(maximumParent, NestedItems) {
     for (let item of NestedItems) {
@@ -140,5 +131,3 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
 
 
 export default OmniSidebarNav;
-
-
