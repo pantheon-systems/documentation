@@ -36,15 +36,26 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
 
   console.log(AllGuides);
 
-  // loop over all guides and create a list of links
+  const getChildrenForGuideDirectory = (AllTheGuides, guideDirectory) => {
 
-  const GuideItems = AllGuides.allGuides.edges.map(({ node }) => {
-    return {
-      link: node.fields.slug,
-      title: node.frontmatter.subtitle,
+    const ChildItems = [];
+    for (let item of AllTheGuides) {
+      console.log(item.node.fields.guide_directory);
+      if (item.node.fields.guide_directory === guideDirectory) {
+        ChildItems.push({
+          link: item.node.fields.slug,
+          title: item.node.frontmatter.subtitle,
+        });
+      }
+
     }
+
+    return ChildItems;
+
   }
-  );
+
+
+
   const guideToGet = "guides/decoupled/wp-nextjs-frontend-starters"
   const AllGuideItems = [];
   for (let item of AllGuides.allGuides.edges) {
@@ -73,11 +84,20 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
           title: "WordPress + Next.js Frontend Starter for Front-End Sites",
           children: AllGuideItems
         },
-    {
-      link: "/guides",
-      title: "Guides",
-      children: GuideItems
-    },
+
+
+
+        {
+          link: "/guides/decoupled/wp-backend-starters",
+          title: "WordPress Backend Starters",
+          children: getChildrenForGuideDirectory(AllGuides.allGuides.edges, "guides/decoupled/wp-backend-starters")
+        },
+
+
+
+        //
+
+
     {
       link: "/certification",
       title: "WebOps Certification",
