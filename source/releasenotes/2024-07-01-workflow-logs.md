@@ -14,4 +14,6 @@ We’re excited to announce the launch of Workflow Logs, a powerful new feature 
 
 <!-- TODO: Add image from gdoc draft -->
 
+[View all features](/workflow-logs)
+
 Our team will continuously enhance Workflow Logs through a planned list of improvements and ongoing feedback collection.
