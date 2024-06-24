@@ -60,7 +60,7 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
 
   const getAGuide = (AllTheGuides, guideDirectory) => {
     return {
-      link: guideDirectory,
+      link: "/" + guideDirectory,
       title: getTitleForGuideDirectory(AllTheGuides, guideDirectory),
       children: getChildrenForGuideDirectory(AllTheGuides, guideDirectory)
     }
@@ -78,17 +78,13 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
       title: "Get Started",
     },
         {
-          link: "/guides/decoupled/wp-backend-starters",
-          title: "WordPress Backend Starters",
-          children: getChildrenForGuideDirectory(AllGuides.allGuides.edges, "guides/decoupled/wp-backend-starters")
+          link: "/decoupled",
+          title: "Front-End Sites",
+          children: [
+            getAGuide(AllGuides.allGuides.edges, "guides/decoupled/wp-nextjs-frontend-starters"),
+            getAGuide(AllGuides.allGuides.edges, "guides/decoupled/wp-backend-starters"),
+          ]
         },
-        getAGuide(AllGuides.allGuides.edges, "guides/decoupled/wp-nextjs-frontend-starters"),
-
-        // guides/decoupled/wp-nextjs-frontend-starters
-
-
-        //
-
 
     {
       link: "/certification",
