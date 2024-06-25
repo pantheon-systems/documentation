@@ -73,7 +73,7 @@ class CertificationTemplate extends React.Component {
           <OmniSidebarNav
           slot="guide-menu"
           activePage={node.fields.slug}
-          maximumParent="/certification"/>
+          maximumParent="/"/>
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
 

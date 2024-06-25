@@ -7,10 +7,10 @@ import getGuideDirectory from "./getGuideDirectory";
 const OmniSidebarNav = ({activePage, maximumParent}) => {
 
   const OmniItems = [
-    {
-      link: "/",
-      title: "Pantheon Docs",
-      children: [
+    // {
+    //   link: "/",
+    //   title: "Pantheon Docs",
+    //   children: [
 
     {
       link: "/get-started",
@@ -34,22 +34,45 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
       title: "about",
     },
       ]
-    },
-  ];
+   // },
+  //]
+  ;
 
   function findSubMenuItemsToUse(maximumParent, NestedItems) {
     for (let item of NestedItems) {
       if (item.link === maximumParent) {
         return item;
-      } else if (item.subItems && item.subItems.length > 0) {
-        const found = findSubMenuItemsToUse(maximumParent, item.subItems);
-        if (found) return found;
       }
     }
     return undefined;
   }
 
-  const activeParent = [findSubMenuItemsToUse(maximumParent, OmniItems)];
+  function findParentWithActiveLink(NestedItems, activePage) {
+    // This function will return the top-level array of items that contains the active page
+    // no matter how deeply nested it is.
+    for (let item of NestedItems) {
+      if (containsActiveLink(item, activePage)) {
+        return item;
+      }
+    }
+  }
+
+  function containsActiveLink(item, activePage) {
+    if (item.link === activePage) {
+      return true;
+    } else if (item.children && item.children.length > 0) {
+      for (let child of item.children) {
+        if (containsActiveLink(child, activePage)) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+
+ // const activeParent = [findSubMenuItemsToUse(maximumParent, OmniItems)];
+  const activeParent = [findParentWithActiveLink(OmniItems, activePage)];
 
   const OmniLinks = turnItemsIntoLinks(activeParent, activePage);
 

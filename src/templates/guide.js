@@ -9,6 +9,7 @@ import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
+import OmniSidebarNav from "../components/omniSidebarNav"
 
 class GuideTemplate extends React.Component {
   componentDidMount() {
@@ -68,12 +69,25 @@ class GuideTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
+        <div slot="guide-menu">
+LOGIC NEEDED here for whether the the guide is in the omni
+</div>
         <Navbar
           slot="guide-menu"
           title={node.frontmatter.title}
           activePage={node.fields.slug}
           items={items}
         />
+
+
+
+        <OmniSidebarNav
+          slot="guide-menu"
+          activePage={node.fields.slug}
+          maximumParent="/" />
+
+
+
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
           <main slot="content" id="docs-main" tabIndex="-1">

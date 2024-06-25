@@ -52,7 +52,6 @@ const getChildrenForGuideDirectory = (AllTheGuides, guideDirectory) => {
 }
 
 const getTitleForGuideDirectory = (AllTheGuides, guideDirectory) => {
-
   for (let item of AllTheGuides) {
     if (item.node.fields.slug === "/" + guideDirectory) {
       return item.node.frontmatter.title;
@@ -61,7 +60,6 @@ const getTitleForGuideDirectory = (AllTheGuides, guideDirectory) => {
 }
 
 const getGuideDirectory = (guideDirectory) => {
-
   const AllGuides = getAllGuidePages();
   return {
     link: "/" + guideDirectory,
@@ -69,9 +67,5 @@ const getGuideDirectory = (guideDirectory) => {
     children: getChildrenForGuideDirectory(AllGuides.allGuides.edges, guideDirectory)
   }
 }
-
-
-
-
 
 export default getGuideDirectory;
