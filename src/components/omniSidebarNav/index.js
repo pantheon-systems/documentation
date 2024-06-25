@@ -1,44 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { SidebarNav, turnItemsIntoLinks } from "../sidebarNav"
 import CertificationItems from "./submenus/certification";
-import TheGuides from "./allGuides";
+import getGuideDirectory from "./getGuideDirectory";
 
 
 const OmniSidebarNav = ({activePage, maximumParent}) => {
-
-  const AllGuides = TheGuides();
-
-  const getChildrenForGuideDirectory = (AllTheGuides, guideDirectory) => {
-    const ChildItems = [];
-    for (let item of AllTheGuides) {
-      if (item.node.fields.guide_directory === guideDirectory) {
-        ChildItems.push({
-          link: item.node.fields.slug,
-          title: item.node.frontmatter.subtitle,
-        });
-      }
-    }
-    return ChildItems;
-  }
-
-  const getTitleForGuideDirectory = (AllTheGuides, guideDirectory) => {
-
-    for (let item of AllTheGuides) {
-      if (item.node.fields.slug === "/" + guideDirectory) {
-        return item.node.frontmatter.title;
-      }
-    }
-  }
-
-  const getAGuide = (AllTheGuides, guideDirectory) => {
-    return {
-      link: "/" + guideDirectory,
-      title: getTitleForGuideDirectory(AllTheGuides, guideDirectory),
-      children: getChildrenForGuideDirectory(AllTheGuides, guideDirectory)
-    }
-  }
-
 
   const OmniItems = [
     {
@@ -50,15 +16,14 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
       link: "/get-started",
       title: "Get Started",
     },
-        {
-          link: "/decoupled",
-          title: "Front-End Sites",
-          children: [
-            getAGuide(AllGuides.allGuides.edges, "guides/decoupled/wp-nextjs-frontend-starters"),
-            getAGuide(AllGuides.allGuides.edges, "guides/decoupled/wp-backend-starters"),
-          ]
-        },
-
+    {
+      link: "/decoupled",
+      title: "Front-End Sites",
+      children: [
+        getGuideDirectory("guides/decoupled/wp-nextjs-frontend-starters"),
+        getGuideDirectory("guides/decoupled/wp-backend-starters"),
+      ]
+    },
     {
       link: "/certification",
       title: "WebOps Certification",
@@ -71,8 +36,6 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
       ]
     },
   ];
-
-  // merge the guide items with the OmniItems
 
   function findSubMenuItemsToUse(maximumParent, NestedItems) {
     for (let item of NestedItems) {
