@@ -4,13 +4,13 @@ import GuideLayout from "../layout/GuideLayout"
 import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
-import Navbar from "../components/navbar"
 import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
 import OmniSidebarNav from "../components/omniSidebarNav"
 import getOmniSidebarActiveSection from "../components/omniSidebarNav/getOmniSidebarActiveSection.js";
+import OmniSidebarNavWithFallback from "../components/omniSidebarNav/OmniSidebarNavWithFallback.js";
 
 
 class GuideTemplate extends React.Component {
@@ -73,28 +73,13 @@ class GuideTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <div slot="guide-menu">
-LOGIC NEEDED here for whether the the guide is in the omni
 
-
-
-
-</div>
-        <Navbar
-          slot="guide-menu"
-          title={node.frontmatter.title}
-          activePage={node.fields.slug}
-          items={items}
-        />
-
-
-
-        <OmniSidebarNav
-          slot="guide-menu"
-          activePage={node.fields.slug}
-          maximumParent="/" />
-
-
+          <OmniSidebarNavWithFallback
+            slot="guide-menu"
+            activePage={node.fields.slug}
+            fallbackTitle={node.frontmatter.title}
+            fallbackItems={items}
+          />
 
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
