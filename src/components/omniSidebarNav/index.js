@@ -1,6 +1,7 @@
 import React from "react"
 import { SidebarNav, turnItemsIntoLinks } from "../sidebarNav"
 import getOmniItems from "./getOmniItems";
+import getOmniSidebarActiveSection from "./getOmniSidebarActiveSection.js";
 
 
 
@@ -42,14 +43,6 @@ function containsActiveLink(item, activePage) {
 
 
 
-
-
-const getOmniSidebarActiveSection = ({activePage}) => {
-
-  console.log(activePage);
-}
-
-
 const OmniSidebarNav = ({activePage, maximumParent}) => {
 
   const OmniItems = getOmniItems();
@@ -76,7 +69,9 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
 
 
  // const activeParent = [findSubMenuItemsToUse(maximumParent, OmniItems)];
-  const activeParent = [findParentWithActiveLink(OmniItems, activePage)];
+//  const activeParent = [findParentWithActiveLink(OmniItems, activePage)];
+
+    const activeParent = getOmniSidebarActiveSection({OmniItems, activePage});
 
   const OmniLinks = turnItemsIntoLinks(activeParent, activePage);
 

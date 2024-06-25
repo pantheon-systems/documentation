@@ -1,7 +1,5 @@
-import React from "react"
 import CertificationItems from "./submenus/certification";
 import getGuideDirectory from "./getGuideDirectory";
-
 
 const getOmniItems = () => {
 
