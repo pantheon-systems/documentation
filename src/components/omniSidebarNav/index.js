@@ -4,10 +4,6 @@ import getOmniItems from "./getOmniItems";
 import getOmniSidebarActiveSection from "./getOmniSidebarActiveSection.js";
 
 
-
-
-
-
 function findSubMenuItemsToUse(maximumParent, NestedItems) {
   for (let item of NestedItems) {
     if (item.link === maximumParent) {
@@ -16,30 +12,6 @@ function findSubMenuItemsToUse(maximumParent, NestedItems) {
   }
   return undefined;
 }
-
-function findParentWithActiveLink(NestedItems, activePage) {
-  // This function will return the top-level array of items that contains the active page
-  // no matter how deeply nested it is.
-  for (let item of NestedItems) {
-    if (containsActiveLink(item, activePage)) {
-      return item;
-    }
-  }
-}
-
-function containsActiveLink(item, activePage) {
-  if (item.link === activePage) {
-    return true;
-  } else if (item.children && item.children.length > 0) {
-    for (let child of item.children) {
-      if (containsActiveLink(child, activePage)) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
 
 
 
@@ -66,10 +38,6 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
   //   const activeParent.push(activer);
   // }
 
-
-
- // const activeParent = [findSubMenuItemsToUse(maximumParent, OmniItems)];
-//  const activeParent = [findParentWithActiveLink(OmniItems, activePage)];
 
     const activeParent = getOmniSidebarActiveSection({OmniItems, activePage});
 
