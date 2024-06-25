@@ -1,13 +1,6 @@
-import React from "react"
-
 import getOmniItems from "./getOmniItems";
 
-
-
-
-
 const getOmniSidebarActiveSection = ({activePage}) => {
-
 
   function findParentWithActiveLink(NestedItems, activePage) {
     // This function will return the top-level array of items that contains the active page
@@ -32,20 +25,13 @@ const getOmniSidebarActiveSection = ({activePage}) => {
     return false;
   }
 
-
   const OmniItems = getOmniItems();
   if (OmniItems) {
-
-  return [findParentWithActiveLink(OmniItems, activePage)];
+    return [findParentWithActiveLink(OmniItems, activePage)];
   }
   else {
     return undefined;
-
   }
 }
 
-
-
-
 export default getOmniSidebarActiveSection;
-
