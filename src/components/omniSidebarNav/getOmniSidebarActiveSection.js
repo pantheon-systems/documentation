@@ -33,15 +33,15 @@ const getOmniSidebarActiveSection = ({activePage}) => {
   }
 
 
-  const TheOmniItems = getOmniItems();
-  console.log(TheOmniItems);
+  const OmniItems = getOmniItems();
+  if (OmniItems) {
 
+  return [findParentWithActiveLink(OmniItems, activePage)];
+  }
+  else {
+    return undefined;
 
-
-
-  console.log(activePage);
- // const OmniItems = getOmniItems();
-  return [findParentWithActiveLink(TheOmniItems, activePage)];
+  }
 }
 
 
