@@ -2,43 +2,16 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { SidebarNav, turnItemsIntoLinks } from "../sidebarNav"
 import CertificationItems from "./submenus/certification";
+import TheGuides from "./allGuides";
 
 
 const OmniSidebarNav = ({activePage, maximumParent}) => {
 
-  const AllGuides = useStaticQuery(
-    graphql`
-      {
-        allGuides: allMdx(
-      filter: {
-        fileAbsolutePath: { ne: null }
-        fields: {guide_directory: {regex: "/^(?=guides\/).*$/i" }},
-        frontmatter: { draft: { ne: true } }
-      }
-      sort: { fields: [fileAbsolutePath], order: ASC }
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-            guide_directory
-          }
-          frontmatter {
-            title
-            subtitle
-          }
-        }
-      }
-    }
-      }
-    `
-  );
+  const AllGuides = TheGuides();
 
   const getChildrenForGuideDirectory = (AllTheGuides, guideDirectory) => {
     const ChildItems = [];
     for (let item of AllTheGuides) {
-      console.log(item.node.fields.guide_directory);
       if (item.node.fields.guide_directory === guideDirectory) {
         ChildItems.push({
           link: item.node.fields.slug,
@@ -124,6 +97,5 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
       links={OmniLinks[0].links} />
   )
 }
-
 
 export default OmniSidebarNav;
