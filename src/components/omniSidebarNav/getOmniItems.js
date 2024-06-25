@@ -31,7 +31,7 @@ const getOmniItems = () => {
       },
         {
           link: "/get-staasdfrted",
-          title: "Get Started Masdfasdfaore",
+          title: "Get Started More",
         },
     ]
     },

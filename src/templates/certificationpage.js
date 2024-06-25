@@ -6,7 +6,6 @@ import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
-import OmniSidebarNav from "../components/omniSidebarNav"
 import OmniSidebarNavWithFallback from "../components/omniSidebarNav/OmniSidebarNavWithFallback.js";
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
