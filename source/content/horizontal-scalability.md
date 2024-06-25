@@ -48,15 +48,11 @@ When preparing for traffic spikes manually (not on Pantheon), you need to decide
 
 Pantheon customers don't need to worry about these systems, as the platform is build to scale as needed out of the box.
 
-### Basic Plans
+### Billing Impact
 
-Basic Sites do not have overage protection. If a Basic Site exceeds the 25,000 visit cap in any given month, the site plan will be automatically upgraded to the [Performance plan](https://pantheon.io/plans/performance-pricing) whose visit limit accommodates the site's traffic.
+If your site traffic is over your [plan limit](https://pantheon.io/plans/pricing?docs), the site may be subject to overage fees.
 
-For more information, see [Traffic Limits and Overages](/guides/account-mgmt/traffic).
-
-### Performance Plans
-
-On Pantheon, all Performance plans include Overage Protection to prevent one-time traffic spikes from causing billing issues. If the change to traffic behavior is sustained, the site will eventually be moved to the appropriate Performance plan. This provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate.
+Please refer to our documented [Overages Policy](/guides/account-mgmt/traffic/overages) to understand the billing impact for traffic spikes and learn more about our overages protection program.
 
 ### Elite or Contract Plans
 
