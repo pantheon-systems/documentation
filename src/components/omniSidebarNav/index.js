@@ -17,8 +17,8 @@ function findSubMenuItemsToUse(maximumParent, NestedItems) {
 
 const OmniSidebarNav = ({activePage, maximumParent}) => {
 
-  const OmniItems = getOmniItems();
-
+  //const OmniItems = getOmniItems();
+  const OmniItems = [];
 
 
 
@@ -39,7 +39,7 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
   // }
 
 
-    const activeParent = getOmniSidebarActiveSection({OmniItems, activePage});
+    const activeParent = getOmniSidebarActiveSection({activePage});
 
   const OmniLinks = turnItemsIntoLinks(activeParent, activePage);
 

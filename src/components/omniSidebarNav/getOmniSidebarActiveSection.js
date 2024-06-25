@@ -1,13 +1,12 @@
 import React from "react"
 
-//import getOmniItems from "./getOmniItems";
+import getOmniItems from "./getOmniItems";
 
 
 
 
 
-const getOmniSidebarActiveSection = ({OmniItems, activePage}) => {
-
+const getOmniSidebarActiveSection = ({activePage}) => {
 
 
   function findParentWithActiveLink(NestedItems, activePage) {
@@ -34,14 +33,15 @@ const getOmniSidebarActiveSection = ({OmniItems, activePage}) => {
   }
 
 
-
+  const TheOmniItems = getOmniItems();
+  console.log(TheOmniItems);
 
 
 
 
   console.log(activePage);
  // const OmniItems = getOmniItems();
-  return [findParentWithActiveLink(OmniItems, activePage)];
+  return [findParentWithActiveLink(TheOmniItems, activePage)];
 }
 
 
