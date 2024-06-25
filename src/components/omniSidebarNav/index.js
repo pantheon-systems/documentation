@@ -1,69 +1,78 @@
 import React from "react"
 import { SidebarNav, turnItemsIntoLinks } from "../sidebarNav"
-import CertificationItems from "./submenus/certification";
-import getGuideDirectory from "./getGuideDirectory";
+import getOmniItems from "./getOmniItems";
+
+
+
+
+
+
+function findSubMenuItemsToUse(maximumParent, NestedItems) {
+  for (let item of NestedItems) {
+    if (item.link === maximumParent) {
+      return item;
+    }
+  }
+  return undefined;
+}
+
+function findParentWithActiveLink(NestedItems, activePage) {
+  // This function will return the top-level array of items that contains the active page
+  // no matter how deeply nested it is.
+  for (let item of NestedItems) {
+    if (containsActiveLink(item, activePage)) {
+      return item;
+    }
+  }
+}
+
+function containsActiveLink(item, activePage) {
+  if (item.link === activePage) {
+    return true;
+  } else if (item.children && item.children.length > 0) {
+    for (let child of item.children) {
+      if (containsActiveLink(child, activePage)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+
+
+
+
+
+const getOmniSidebarActiveSection = ({activePage}) => {
+
+  console.log(activePage);
+}
 
 
 const OmniSidebarNav = ({activePage, maximumParent}) => {
 
-  const OmniItems = [
+  const OmniItems = getOmniItems();
 
-    {
-      link: "/get-started",
-      title: "Get Started",
-    },
-    {
-      link: "/decoupled",
-      title: "Front-End Sites",
-      children: [
-        getGuideDirectory("guides/decoupled/wp-nextjs-frontend-starters"),
-        getGuideDirectory("guides/decoupled/wp-backend-starters"),
-      ]
-    },
-    {
-      link: "/certification",
-      title: "WebOps Certification",
-      children: CertificationItems
-    },
-        {
-      link: "/get-started",
-      title: "about",
-    },
-      ]
 
-  ;
 
-  function findSubMenuItemsToUse(maximumParent, NestedItems) {
-    for (let item of NestedItems) {
-      if (item.link === maximumParent) {
-        return item;
-      }
-    }
-    return undefined;
-  }
 
-  function findParentWithActiveLink(NestedItems, activePage) {
-    // This function will return the top-level array of items that contains the active page
-    // no matter how deeply nested it is.
-    for (let item of NestedItems) {
-      if (containsActiveLink(item, activePage)) {
-        return item;
-      }
-    }
-  }
+  // const activeParent = [];
+  // if (!maximumParent) {
+  //   // merge all the top-level items into one array
+  //   const sub = [findSubMenuItemsToUse(maximumParent, OmniItems)]
 
-  function containsActiveLink(item, activePage) {
-    if (item.link === activePage) {
-      return true;
-    } else if (item.children && item.children.length > 0) {
-      for (let child of item.children) {
-        if (containsActiveLink(child, activePage)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
+  //   // merge sub into activeParent
+  //   activeParent.push(sub);
+
+
+  // } else {
+
+
+  //   const activer = [findParentWithActiveLink(OmniItems, activePage)];
+  //   const activeParent.push(activer);
+  // }
+
 
 
  // const activeParent = [findSubMenuItemsToUse(maximumParent, OmniItems)];
@@ -80,3 +89,4 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
 }
 
 export default OmniSidebarNav;
+
