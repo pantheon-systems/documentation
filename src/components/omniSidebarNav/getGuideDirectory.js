@@ -1,7 +1,4 @@
-import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
-
 
 const getAllGuidePages = () => {
 
@@ -33,7 +30,6 @@ const getAllGuidePages = () => {
       }
     `
   );
-
 
   return AllTheGuides;
 }

@@ -7,10 +7,6 @@ import getGuideDirectory from "./getGuideDirectory";
 const OmniSidebarNav = ({activePage, maximumParent}) => {
 
   const OmniItems = [
-    // {
-    //   link: "/",
-    //   title: "Pantheon Docs",
-    //   children: [
 
     {
       link: "/get-started",
@@ -34,8 +30,7 @@ const OmniSidebarNav = ({activePage, maximumParent}) => {
       title: "about",
     },
       ]
-   // },
-  //]
+
   ;
 
   function findSubMenuItemsToUse(maximumParent, NestedItems) {
