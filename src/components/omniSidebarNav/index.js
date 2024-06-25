@@ -3,14 +3,7 @@ import { SidebarNav, turnItemsIntoLinks } from "../sidebarNav"
 import getOmniSidebarActiveSection from "./getOmniSidebarActiveSection.js";
 
 
-function findSubMenuItemsToUse(maximumParent, NestedItems) {
-  for (let item of NestedItems) {
-    if (item.link === maximumParent) {
-      return item;
-    }
-  }
-  return undefined;
-}
+
 
 
 

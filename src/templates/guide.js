@@ -8,8 +8,6 @@ import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
-import OmniSidebarNav from "../components/omniSidebarNav"
-import getOmniSidebarActiveSection from "../components/omniSidebarNav/getOmniSidebarActiveSection.js";
 import OmniSidebarNavWithFallback from "../components/omniSidebarNav/OmniSidebarNavWithFallback.js";
 
 

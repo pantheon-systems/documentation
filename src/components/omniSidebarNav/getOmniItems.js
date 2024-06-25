@@ -6,7 +6,7 @@ const getOmniItems = () => {
   const OmniItems = [
 
     {
-      link: "/get-started",
+      link: "/get-startedasdf",
       title: "Get Started",
     },
     {
@@ -24,7 +24,16 @@ const getOmniItems = () => {
     },
         {
       link: "/get-started",
-      title: "about",
+      title: "Get Started",
+      children: [{
+        link: "/get-startasdfasdfed",
+        title: "Get Started More",
+      },
+        {
+          link: "/get-staasdfrted",
+          title: "Get Started Masdfasdfaore",
+        },
+    ]
     },
       ]
   ;
