@@ -6,7 +6,8 @@ import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
-import OmniSidebarNavWithFallback from "../components/omniSidebarNav/OmniSidebarNavWithFallback.js";
+
+import OmniSidebarNav from "../components/omniSidebarNav";
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
@@ -70,7 +71,7 @@ class CertificationTemplate extends React.Component {
           reviewed={ifCommandsISO}
           type={node.frontmatter.type}
         />
-          <OmniSidebarNavWithFallback
+          <OmniSidebarNav
           slot="guide-menu"
           activePage={node.fields.slug}
           submenuPathToUse="/certification"/>

@@ -8,7 +8,7 @@ import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
-import OmniSidebarNavWithFallback from "../components/omniSidebarNav/OmniSidebarNavWithFallback.js";
+import OmniSidebarNav from "../components/omniSidebarNav";
 
 
 class GuideTemplate extends React.Component {
@@ -72,7 +72,7 @@ class GuideTemplate extends React.Component {
           type={node.frontmatter.type}
         />
 
-          <OmniSidebarNavWithFallback
+          <OmniSidebarNav
             slot="guide-menu"
             activePage={node.fields.slug}
             fallbackTitle={node.frontmatter.title}
