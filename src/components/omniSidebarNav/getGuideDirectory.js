@@ -34,7 +34,7 @@ const getAllGuidePages = () => {
   return AllTheGuides;
 }
 
-const getChildrenForGuideDirectory = (AllTheGuides, guideDirectory) => {
+ function getChildrenForGuideDirectory (AllTheGuides, guideDirectory) {
   const ChildItems = [];
   for (let item of AllTheGuides) {
     if (item.node.fields.guide_directory === guideDirectory) {
@@ -47,7 +47,7 @@ const getChildrenForGuideDirectory = (AllTheGuides, guideDirectory) => {
   return ChildItems;
 }
 
-const getTitleForGuideDirectory = (AllTheGuides, guideDirectory) => {
+function getTitleForGuideDirectory (AllTheGuides, guideDirectory) {
   for (let item of AllTheGuides) {
     if (item.node.fields.slug === "/" + guideDirectory) {
       return item.node.frontmatter.title;
