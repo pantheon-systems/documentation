@@ -32,7 +32,7 @@ Community submitted bugs and feature requests can be found in the plugin, SDK or
 
 ## Contribute to Pantheon Secrets
 
-The plugin, sdk or Drupal module are open source. You can view the projects and contribute, file issues and submit feature requests.
+The plugin, SDK or Drupal module are open source. You can view the projects and contribute, file issues and submit feature requests.
 
 ## More Resources
 

@@ -70,6 +70,7 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 1. Organization values are resolved first. They form the base value for the key-pair's value resolution.
 2. Site values are resolved second and secret values set on the site level will override secret values set for the organization. To return the secret to it's organization value, simply delete the site value.
 3. Environmental overrides are resolved finally and if the override exists, it will become the value provided to the calling function.
+4. Each secret's value can be no larger than 16k (16384 Bytes)
 
 </dd>
 
