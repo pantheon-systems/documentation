@@ -41,7 +41,7 @@ A key-value pair that should not be exposed to the general public, typically som
 <dt>Secret Scope</dt>
 
 <dd>
-A secret's scope is the answer to the question "Where is the secret's value available?"
+A secret's scope is the answer to the question "Where is the secret's value available?". Once, set a secret's scope cannot be changed. The secret must be deleted and recreated.
 
   * `runtime`: this secret will be used to retrieve it in application runtime using API calls to the secret service. This is the recommended type to set if you want your secret to be exposed to the application runtime.
 
