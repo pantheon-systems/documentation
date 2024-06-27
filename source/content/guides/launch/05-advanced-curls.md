@@ -50,7 +50,7 @@ This command shows line-by-line differences between the two sites while only res
 You can use the cURL `-I -H` option with Pantheon's Debug header to get additional information about a request.
 
  ```bash
- curl -I -H “Pantheon-Debug” https://myexamplesite.com
+ curl -I -H “Pantheon-Debug:1” https://myexamplesite.com
  ```
 
 This command shows the following header information:
@@ -81,6 +81,7 @@ This command shows the following header information:
  pcontext-pdocclustering: on
  pcontext-enforce-https: full
  pcontext-request-restarts: 1
+ pcontext-backend: agcdn
  vary: Accept-Encoding, Cookie, Cookie, Cookie
  age: 1959
  accept-ranges: bytes
