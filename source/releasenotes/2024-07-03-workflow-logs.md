@@ -1,6 +1,6 @@
 ---
 title: "Introducing Workflow Logs: General availability "
-published_date: "2024-07-01"
+published_date: "2024-07-03"
 categories: [new-feature, user-interface]
 ---
 
