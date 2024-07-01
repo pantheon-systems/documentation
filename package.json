@@ -64,8 +64,12 @@
     "tocbot": "^4.20.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.6.0",
     "@octokit/rest": "^16.43.2",
     "date-fns": "^2.29.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "globals": "^15.7.0",
     "mark.js": "^8.11.1",
     "prettier": "^2.8.3",
     "react-date-range": "^1.4.0"
