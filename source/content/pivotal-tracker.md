@@ -28,10 +28,10 @@ Be sure to:
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
   ```
 
-- Install the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin):
+- Install the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin):
 
   ```bash{promptUser: user}
-  curl https://github.com/pantheon-systems/terminus-secrets-plugin/archive/1.x.tar.gz -L | tar -C ~/.terminus/plugins -xvz
+  terminus plugin:install terminus-secrets-manager-plugin
   ```
 
 ## Create a Machine User in Pivotal Tracker
@@ -52,45 +52,11 @@ As a best practice, start by creating a new machine user in Tracker. This user i
 
 ## Prepare your site: Securely Store User Credentials on Pantheon
 
-Next, we need to provide Pantheon with the credentials for our new machine user in Pivotal Tracker. We'll securely store these values in the [private path](/guides/secure-development/private-paths#private-path-for-files) of Pantheon's filesystem.
-
-We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
-
-1. First, let's check for existing secrets using Terminus (replace `<site>`):
-
-  ```bash{promptUser: user}
-  SITE=<site>
-  terminus secrets:list $SITE.dev
-  ```
-
-  If no existing keys are found, run the following to create a new `secrets.json` file and upload it to Pantheon:
-
-  ```bash{outputLines: 2}
-  echo '{}' > secrets.json
-  `terminus connection:info $SITE.dev --field=sftp_command`
-  ```
-
-  If the `files/private` directory doesn't exist, create it:
-
-  ```bash{promptUser: user}
-  mkdir files/private
-  ```
-
-  Put the secrets file into the `private` directory:
-
-  ```bash{outputLines: 1-3}
-  sftp> cd files/private
-  sftp> put secrets.json
-  sftp> bye
-  rm secrets.json
-  ```
-
-  Otherwise, continue to the next step.
 
 2. Use Terminus to write your Pivotal Tracker URL value in the private `secrets.json` file (replace `<token value>`):
 
   ```bash{promptUser: user}
-  terminus secrets:set $SITE.dev tracker_token <token value>
+  terminus secrets:site:set $SITE.dev tracker_token <token value>
   ```
 
 <Alert title="Note" type="info">

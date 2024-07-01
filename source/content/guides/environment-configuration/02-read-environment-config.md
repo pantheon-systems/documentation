@@ -168,9 +168,9 @@ array(63) {
 
 It is not possible to set environment variables on Pantheon. However, there are three common solutions you can use instead.
 
-### Terminus Secrets Plugin
+### Terminus Secrets Manager Plugin
 
-You can use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below. This example will help you get started, however, you must modify the third line for the key you want to configure. You can also modify the `secrets.json` file name, although we recommend you provide the file with a name you will recognize for secrets management.
+You can use the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) to write the secrets to a JSON file in the private file system. Your PHP will look similar to the code example below. This example will help you get started, however, you must modify the third line for the key you want to configure. You can also modify the `secrets.json` file name, although we recommend you provide the file with a name you will recognize for secrets management.
 
 <TabList>
 
