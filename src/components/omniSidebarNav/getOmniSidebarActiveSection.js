@@ -1,4 +1,4 @@
-import getOmniItems from "./getOmniItems";
+import getOmniItems from './getOmniItems';
 
 function findParentWithActiveLink(NestedItems, activePage) {
   // This function will return the top-level array of items that contains the active page
@@ -23,14 +23,13 @@ function containsActiveLink(item, activePage) {
   return false;
 }
 
-const getOmniSidebarActiveSection = ({activePage}) => {
+const getOmniSidebarActiveSection = ({ activePage }) => {
   const OmniItems = getOmniItems();
   if (OmniItems) {
     return [findParentWithActiveLink(OmniItems, activePage)];
-  }
-  else {
+  } else {
     return undefined;
   }
-}
+};
 
 export default getOmniSidebarActiveSection;
