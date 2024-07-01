@@ -15,7 +15,7 @@ permalink: docs/guides/secrets/terminus-plugin
 reviewed: "2024-05-01"
 ---
 
-**IMPORTANT: when Pantheon Secrets goes into GA, it will be part of terminus core. Until then, this plugin invormation covers [THIS REPOSITORY]( https://github.com/pantheon-systems/terminus-secrets-manager-plugin).**
+**IMPORTANT: when Pantheon Secrets goes into GA, it will be part of terminus core. Until then, this plugin information covers [THIS REPOSITORY]( https://github.com/pantheon-systems/terminus-secrets-manager-plugin).**
 
 # Terminus Secrets Manager Plugin
 
@@ -25,9 +25,15 @@ reviewed: "2024-05-01"
 terminus self:plugin:install terminus-secrets-manager-plugin
 ```
 
-To Uninstall:
+### To Uninstall:
 
 ```
 terminus self:plugin:uninstall terminus-secrets-manager-plugin
+```
+
+### To Update:
+
+```
+terminus self:plugin:update terminus-secrets-manager-plugin
 ```
 
