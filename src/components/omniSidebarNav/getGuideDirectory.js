@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 const getAllGuidePages = () => {
 
@@ -8,7 +8,11 @@ const getAllGuidePages = () => {
         allGuides: allMdx(
       filter: {
         fileAbsolutePath: { ne: null }
-        fields: {guide_directory: {regex: "/^(?=guides\/).*$/i" }},
+        fields: {
+          guide_directory: {
+            regex: "/^(?=guides\/).*$/i"
+          }
+        },
         frontmatter: { draft: { ne: true } }
       }
       sort: { fields: [fileAbsolutePath], order: ASC }
