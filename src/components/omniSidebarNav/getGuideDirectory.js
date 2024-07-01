@@ -34,7 +34,7 @@ const getAllGuidePages = () => {
   return AllTheGuides;
 }
 
- function getChildrenForGuideDirectory (AllTheGuides, guideDirectory) {
+function getChildrenForGuideDirectory(AllTheGuides, guideDirectory) {
   const ChildItems = [];
   for (let item of AllTheGuides) {
     if (item.node.fields.guide_directory === guideDirectory) {
@@ -47,9 +47,9 @@ const getAllGuidePages = () => {
   return ChildItems;
 }
 
-function getTitleForGuideDirectory (AllTheGuides, guideDirectory) {
+function getTitleForGuideDirectory(AllTheGuides, guideDirectory) {
   for (let item of AllTheGuides) {
-    if (item.node.fields.slug === "/" + guideDirectory) {
+    if (item.node.fields.slug === '/' + guideDirectory) {
       return item.node.frontmatter.title;
     }
   }
@@ -58,10 +58,13 @@ function getTitleForGuideDirectory (AllTheGuides, guideDirectory) {
 const getGuideDirectory = (guideDirectory) => {
   const AllGuides = getAllGuidePages();
   return {
-    link: "/" + guideDirectory,
+    link: '/' + guideDirectory,
     title: getTitleForGuideDirectory(AllGuides.allGuides.edges, guideDirectory),
-    children: getChildrenForGuideDirectory(AllGuides.allGuides.edges, guideDirectory)
-  }
-}
+    children: getChildrenForGuideDirectory(
+      AllGuides.allGuides.edges,
+      guideDirectory,
+    ),
+  };
+};
 
 export default getGuideDirectory;
