@@ -299,7 +299,7 @@ module.exports = {
               }
             `,
             output: "/release-notes/rss.xml",
-            title: "Pantheon release notes RSS Feed",
+            title: "Pantheon release notes RSS feed",
             description: 'Stay updated with the latest releases and enhancements.',
             site_url: 'docs.pantheon.io/release-notes'
           },
