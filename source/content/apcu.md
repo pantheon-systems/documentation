@@ -24,7 +24,7 @@ Yes, APCu can be used as a cache backend or a "key-value store"; however, this i
 
 Search for `shm_size` in [phpinfo](/guides/secure-development/phpinfo).
 
-As this is not a runtime configuration, the `shm_size` cannot be changed. If a greater `shm_size` is needed, then the two options available are to optimize the codebase to operate within the service level, or to [upgrade the site account](https://www.pantheon.io/plans/pricing?docs "Pantheon Pricing") for a larger `shm_size` allocation.
+As this is not a runtime configuration, the `shm_size` cannot be changed across site environments and is determined by the site plan tier. Currently, Sandbox sites and Basic site plans are given a `shm_size` or 128 MB. Performance site plans and higher have a larger `shm_size` entitlement of 256 MB. 
 
 ## Does "Clear Caches" Affect ACPu
 
