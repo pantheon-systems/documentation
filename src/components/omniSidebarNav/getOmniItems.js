@@ -10,9 +10,10 @@ const getOmniItems = () => {
       title: "Get Started",
     },
     {
-      link: "/decoupled",
+      link: "/guides/decoupled",
       title: "Front-End Sites",
       children: [
+
         getGuideDirectory("guides/decoupled/wp-nextjs-frontend-starters"),
         getGuideDirectory("guides/decoupled/wp-backend-starters"),
       ]
