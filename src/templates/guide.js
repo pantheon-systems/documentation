@@ -4,11 +4,12 @@ import GuideLayout from "../layout/GuideLayout"
 import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
-import Navbar from "../components/navbar"
 import { SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
+import OmniSidebarNav from "../components/omniSidebarNav";
+
 
 class GuideTemplate extends React.Component {
   componentDidMount() {
@@ -38,7 +39,9 @@ class GuideTemplate extends React.Component {
   }
 
   render() {
+
     const node = this.props.data.mdx
+
     const isoDate = this.props.data.date
     const items = this.props.data.allMdx.edges.map((item) => {
       return {
@@ -54,6 +57,7 @@ class GuideTemplate extends React.Component {
       <div className="content-wrapper">{children}</div>
     )
     const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
+    //const menuItems = getOmniSidebarActiveSection({ activePage: "guides/decoupled/wp-nextjs-frontend-starters/caching/" });
 
     return (
       <GuideLayout>
@@ -67,12 +71,14 @@ class GuideTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
-        <Navbar
-          slot="guide-menu"
-          title={node.frontmatter.title}
-          activePage={node.fields.slug}
-          items={items}
-        />
+
+          <OmniSidebarNav
+            slot="guide-menu"
+            activePage={node.fields.slug}
+            fallbackTitle={node.frontmatter.title}
+            fallbackItems={items}
+          />
+
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
           <main slot="content" id="docs-main" tabIndex="-1">
