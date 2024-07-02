@@ -7,7 +7,7 @@ const getAllGuidePages = () => {
         allGuides: allMdx(
           filter: {
             fileAbsolutePath: { ne: null }
-            fields: { guide_directory: { regex: "/^(?=guides\/).*$/i" } }
+            fields: { guide_directory: { ne: null } }
             frontmatter: { draft: { ne: true } }
           }
           sort: { fields: [fileAbsolutePath], order: ASC }
