@@ -2,12 +2,15 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const getAllGuidePages = () => {
   const AllTheGuides = useStaticQuery(
+    // // prettier-ignore
+    // Prettier is disabled for this query because it doesn't handle the
+    // regex in the filter well.
     graphql`
       {
         allGuides: allMdx(
           filter: {
             fileAbsolutePath: { ne: null }
-            fields: { guide_directory: { regex: "/^guides\//" } }
+            fields: { guide_directory: { regex: "/^guides\/" } }
             frontmatter: { draft: { ne: true } }
           }
           sort: { fields: [fileAbsolutePath], order: ASC }
