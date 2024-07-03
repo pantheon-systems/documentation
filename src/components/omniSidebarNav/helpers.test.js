@@ -17,15 +17,8 @@ const sampleItems = [
 ]
 
 test('finds sub menu to use', () => {
-  const maximumParent = 'test'
-  expect(findSubMenuItemsToUse(maximumParent, sampleItems)).toEqual({ link: 'test' })
+  const parentPath = 'test'
+  expect(findSubMenuItemsToUse(parentPath, sampleItems)).toEqual({ link: 'test' })
   expect(sum(1, 2)).toBe(3)
 })
-
-
-// test('finds sub menu items to use', () => {
-// //   const maximumParent = 'test'
-// //   const NestedItems = [{link: 'test'}]
-// //   expect(findSubMenuItemsToUse(maximumParent, NestedItems)).toEqual({link: 'test'})
-//  }
 

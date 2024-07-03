@@ -14,7 +14,6 @@ const getAllGuidePages = () => {
         ) {
           edges {
             node {
-              id
               fields {
                 slug
                 guide_directory

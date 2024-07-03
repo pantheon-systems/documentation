@@ -3,15 +3,7 @@ import { SidebarNav, turnItemsIntoLinks } from '../sidebarNav';
 import getOmniSidebarActiveSection from './getOmniSidebarActiveSection.js';
 import Navbar from '../navbar';
 import getOmniItems from './getOmniItems';
-
-function findSubMenuItemsToUse(maximumParent, NestedItems) {
-  for (let item of NestedItems) {
-    if (item.link === maximumParent) {
-      return item;
-    }
-  }
-  return undefined;
-}
+import { findSubMenuItemsToUse } from './helpers.js';
 
 const OmniSidebarNav = ({
   activePage,
