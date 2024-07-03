@@ -50,7 +50,7 @@ This command shows line-by-line differences between the two sites while only res
 You can use the cURL `-I -H` option with Pantheon's Debug header to get additional information about a request.
 
  ```bash
- curl -I -H “Pantheon-Debug:1” https://myexamplesite.com
+ curl -I -H "Pantheon-Debug:1" https://myexamplesite.com
  ```
 
 This command shows the following header information:
