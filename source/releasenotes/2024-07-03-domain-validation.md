@@ -1,7 +1,7 @@
 ---
 title: "Domain validation required for all sites "
-published_date: "2024-05-06"
-categories: [security, infrastructure, action-required]
+published_date: "2024-07-03"
+categories: [security, infrastructure]
 ---
 
 As part of our continued effort to protect sites on our platform, Pantheon now requires all sites on the platform to prove domain ownership via TXT records.
