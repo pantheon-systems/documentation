@@ -1,6 +1,6 @@
 ---
 title: "Platform robots.txt file now supports Pope Tech crawling"
-published_date: "2024-06-26"
+published_date: "2024-07-03"
 categories: [infrastructure]
 ---
 
