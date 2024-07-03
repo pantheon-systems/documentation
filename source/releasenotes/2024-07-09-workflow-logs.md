@@ -12,7 +12,7 @@ We’re excited to announce the launch of Workflow Logs, a powerful new feature 
 * **Filtering**: The workflows displayed comprise a curated list of user-relevant workflows. Further narrow your focus by utilizing filters to quickly find specific workflows by environment or completion status.
 * **Archiving**: Export all visible workflows to a CSV file for archival purposes with the 'Download to CSV' button.
 
-<!-- TODO: Add image from gdoc draft -->
+![Workflow logs - key features](../images/release-notes/2024/workflow-logs-key-features.jpg)
 
 [View all features](/workflow-logs)
 
