@@ -1,5 +1,5 @@
 import CertificationItems from './submenus/certification';
-import getGuideDirectory from './getGuideDirectory';
+import { getGuideDirectory } from './helpers';
 
 const getOmniItems = () => {
   const OmniItems = [

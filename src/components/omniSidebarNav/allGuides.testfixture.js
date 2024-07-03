@@ -6163,4 +6163,4 @@ const AllGuides = {
   }
 }
 
-export default AllGuides
+export default AllGuides;
