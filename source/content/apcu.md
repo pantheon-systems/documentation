@@ -22,7 +22,6 @@ Yes, APCu can be used as a cache backend or a "key-value store"; however, this i
 
 ### How can I determine what my current APCu settings are?
 
-Search for `shm_size` in [phpinfo](/guides/secure-development/phpinfo).
 
 As this is not a runtime configuration, the `shm_size` cannot be changed across site environments and is determined by the site plan tier. Currently, Sandbox sites and Basic site plans are given a `shm_size` or 128 MB. Performance site plans and higher have a larger `shm_size` entitlement of 256 MB. 
 
