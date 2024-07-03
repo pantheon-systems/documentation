@@ -143,19 +143,19 @@ Now that you've made a site, let's look at an architectural overview of what you
 
 ### The Infrastructure that Serves a CMS Site
 
-  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-full.png)
+  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/architecture_diagram_01.png)
 
 **Pantheon’s container-base platform** runs an integrated set of tools across a distributed and redundant infrastructure. This architecture provides everything needed to build, launch, and manage websites that achieve unmatched performance and reliability. The platform comprises three layers, which include Pantheon’s Global Edge, Runtime Matrix, and Application Services.
 
 ### The Edge Layer
 
-  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-cache-hit.png)
+  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/architecture_diagram_02.png)
 
 **Pantheon’s Global Edge** is the exterior layer of the platform, meaning it is the first point of contact for traffic. The Edge Layer has a built-in HTTPS accelerator that serves cached data from virtual memory, allowing responses to be returned without going through the application containers. This keeps resource consumption low, so dynamic requests can be generated with ease during traffic spikes. If cached content is not found, the edge layer will automatically load balance and route requests to the next layer of the platform, our the application containers. On its way back out, the response will be cached for optimal performance. 
 
 ### Application Containers
 
-  ![The load balancer passing requests to PHP Application Containers](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-load-balancer.png)
+  ![The load balancer passing requests to PHP Application Containers](../../../images/certification/study-guide-cms/architecture-diagrams/architecture_diagram_04.png)
 
 **The PHP Application Containers Layer** is where Nginx and PHP workers are fired off in millions of isolated Linux containers. Our robots do all the work by provisioning at the speed of software and at the click of a button, allowing you to go from hundreds of page views to hundreds of millions, without downtime or architectural changes.
 
@@ -163,7 +163,7 @@ Pantheon can also detect failures in the event that an application container is 
 
 ### Application Services
 
-  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/ArchitectureDiagrams-application-services.png)
+  ![The infrastructure that serves a CMS Site](../../../images/certification/study-guide-cms/architecture-diagrams/architecture_diagram_03.png)
 
 **Application Services Layer:** Similar to our application containers, our **database service** is based on a grid model and facilitates horizontal scalability using replication topology. This allows you to spread requests across multiple databases to improve site performance and load times.
 
