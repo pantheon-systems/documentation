@@ -1,8 +1,8 @@
 import React from 'react';
-import { SidebarNav, turnItemsIntoLinks } from '../sidebarNav';
 import Navbar from '../navbar';
+import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
 import getOmniItems from './getOmniItems';
-import { findSubMenuItemsToUse, getOmniSidebarActiveSection } from './helpers.js';
+import { findSubMenuItemsToUse, getOmniSidebarActiveSection, turnItemsIntoLinks } from './helpers.js';
 
 const OmniSidebarNav = ({
   activePage,
@@ -18,19 +18,20 @@ const OmniSidebarNav = ({
     const submenuItems = [findSubMenuItemsToUse(submenuPathToUse, OmniItems)];
     const submenuLinks = turnItemsIntoLinks(submenuItems, activePage);
     return (
-      <SidebarNav
-        title={submenuLinks[0].linkContent}
-        links={submenuLinks[0].links}
+      <SideNavCompact
+        headingText={submenuLinks[0].linkContent}
+        menuItems={submenuLinks[0].links}
       />
     );
   }
   // @todo, checking the 0 property is a hack, need to fix this.
   else if (menuItems[0]) {
     const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
-    console.log('menuItems', menuItems);
-    console.log('OmniLinks', OmniLinks);
     return (
-      <SidebarNav title={OmniLinks[0].linkContent} links={OmniLinks[0].links} />
+      <SideNavCompact
+        headingText={OmniLinks[0].linkContent}
+        menuItems={OmniLinks[0].links}
+      />
     );
   } else if (fallbackItems && fallbackItems.length > 0) {
     return (

@@ -1,6 +1,22 @@
 
 import allGuides from './allGuidesQuery';
 import getOmniItems from './getOmniItems';
+import React from "react"
+import { Link } from "gatsby"
+
+function turnItemIntoLink(item, activePage) {
+  return {
+    isActive: item.link === activePage,
+    links: item.children ? item.children.map((child) => turnItemIntoLink(child, activePage)) : false,
+    linkContent: React.createElement(Link, { to: item.link }, item.title)
+  }
+}
+
+const turnItemsIntoLinks = (items, activePage) => {
+  return items.map((item) => {
+    return turnItemIntoLink(item, activePage);
+  })
+}
 
 function containsActiveLink(item, activePage) {
   if (item.link === activePage) {
@@ -69,4 +85,4 @@ const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
   };
 };
 
-export { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection };
+export { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection, turnItemsIntoLinks };

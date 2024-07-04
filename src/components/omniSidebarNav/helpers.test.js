@@ -1,5 +1,4 @@
 import { expect, test } from 'vitest';
-import { sum } from './sum';
 import { findSubMenuItemsToUse, getGuideDirectory } from './helpers';
 import AllGuides from './allGuides.testfixture';
 import guideDirectoryItems from './testfixtures/guideDirectoryItems';
