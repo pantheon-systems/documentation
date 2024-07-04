@@ -4,25 +4,13 @@ import getOmniItems from './getOmniItems';
 import React from "react"
 import { Link } from "gatsby"
 
-function turnItemIntoLink(item, activePage) {
+// @todo, rename function and add a test for this.
+const simplerTurnItemsIntoLinks = (item, activePage) => {
   return {
     isActive: item.link === activePage,
-    links: item.children ? item.children.map((child) => turnItemIntoLink(child, activePage)) : false,
+    links: item.children ? item.children.map((child) => simplerTurnItemsIntoLinks(child, activePage)) : false,
     linkContent: React.createElement(Link, { to: item.link }, item.title)
   }
-}
-
-const turnItemsIntoLinks = (items, activePage) => {
-  const returning = items.map((item) => {
-    return turnItemIntoLink(item, activePage);
-  })
-  console.log(returning);
-  return returning;
-}
-
-const simplerTurnItemsIntoLinks = (item, activePage) => {
-
-  return turnItemIntoLink(item, activePage)
 }
 
 function containsActiveLink(item, activePage) {
@@ -92,4 +80,4 @@ const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
   };
 };
 
-export { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection, turnItemsIntoLinks, simplerTurnItemsIntoLinks };
+export { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection, simplerTurnItemsIntoLinks };
