@@ -13,43 +13,32 @@ const findSubMenuItemsToUse = function (maximumParent, NestedItems) {
   return undefined;
 }
 
-function getChildrenForGuideDirectory(AllTheGuides, guideDirectory) {
-  const ChildItems = [];
-  for (let item of AllTheGuides) {
-    if (item.node.fields.guide_directory === guideDirectory) {
-      ChildItems.push({
-        link: item.node.fields.slug,
-        title: item.node.frontmatter.subtitle,
-      });
-    }
-  }
-  return ChildItems;
-}
-
-// Find the title of a guide directory by the directory name.
-const getTitleForGuideDirectory = function (guideDirectory, AllTheGuides) {
-  for (let item of AllTheGuides) {
-    if (item.node.fields.slug === '/' + guideDirectory) {
-      return item.node.frontmatter.title;
-    }
-  }
-}
-
 // return an item list for a guide directory.
 // guideDirectory is the directory name of the guide.
 // AllGuides is the result of the allGuides query.
 // For testing purposes, AllGuides can be directly set with the fixture
 // allGuides.testfixtures.js
 const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
+
+  const ChildItems = [];
+  var guideTitle = '';
+  for (let item of AllGuides.allGuides.edges) {
+    if (item.node.fields.guide_directory === guideDirectory) {
+      ChildItems.push({
+        link: item.node.fields.slug,
+        title: item.node.frontmatter.subtitle,
+      });
+    }
+    if (item.node.fields.slug === '/' + guideDirectory) {
+      guideTitle = item.node.frontmatter.title;
+    }
+  }
+
   return {
     link: '/' + guideDirectory,
-    title: getTitleForGuideDirectory(guideDirectory, AllGuides.allGuides.edges),
-    children: getChildrenForGuideDirectory(
-      AllGuides.allGuides.edges,
-      guideDirectory,
-    ),
+    title: guideTitle,
+    children: ChildItems,
   };
 };
 
-
-export { findSubMenuItemsToUse, getGuideDirectory, getTitleForGuideDirectory };
+export { findSubMenuItemsToUse, getGuideDirectory };
