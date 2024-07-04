@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../navbar';
 import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
 import getOmniItems from './getOmniItems';
-import { findSubMenuItemsToUse, getOmniSidebarActiveSection, turnItemsIntoLinks } from './helpers.js';
+import { findSubMenuItemsToUse, getOmniSidebarActiveSection, turnItemsIntoLinks, simplerTurnItemsIntoLinks } from './helpers.js';
 
 const OmniSidebarNav = ({
   activePage,
@@ -26,11 +26,11 @@ const OmniSidebarNav = ({
   }
   // @todo, checking the 0 property is a hack, need to fix this.
   else if (menuItems[0]) {
-    const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
+    const OmniLinks = simplerTurnItemsIntoLinks(menuItems[0], activePage);
     return (
       <SideNavCompact
-        headingText={OmniLinks[0].linkContent}
-        menuItems={OmniLinks[0].links}
+        headingText={OmniLinks.linkContent}
+        menuItems={OmniLinks.links}
       />
     );
   } else if (fallbackItems && fallbackItems.length > 0) {

@@ -13,9 +13,16 @@ function turnItemIntoLink(item, activePage) {
 }
 
 const turnItemsIntoLinks = (items, activePage) => {
-  return items.map((item) => {
+  const returning = items.map((item) => {
     return turnItemIntoLink(item, activePage);
   })
+  console.log(returning);
+  return returning;
+}
+
+const simplerTurnItemsIntoLinks = (item, activePage) => {
+
+  return turnItemIntoLink(item, activePage)
 }
 
 function containsActiveLink(item, activePage) {
@@ -85,4 +92,4 @@ const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
   };
 };
 
-export { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection, turnItemsIntoLinks };
+export { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection, turnItemsIntoLinks, simplerTurnItemsIntoLinks };
