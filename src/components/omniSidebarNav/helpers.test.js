@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 import { findSubMenuItemsToUse, getGuideDirectory } from './helpers';
-import AllGuides from './allGuides.testfixture';
+import AllGuides from './testfixtures/allGuides.testfixture';
 import guideDirectoryItems from './testfixtures/guideDirectoryItems';
 
 test('finds sub menu to use', () => {
