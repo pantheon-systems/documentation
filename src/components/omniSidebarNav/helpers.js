@@ -26,8 +26,7 @@ function getChildrenForGuideDirectory(AllTheGuides, guideDirectory) {
   return ChildItems;
 }
 
-
-// @todo, flip these arguments right.
+// Find the title of a guide directory by the directory name.
 const getTitleForGuideDirectory = function (guideDirectory, AllTheGuides) {
   for (let item of AllTheGuides) {
     if (item.node.fields.slug === '/' + guideDirectory) {
@@ -42,7 +41,7 @@ const getTitleForGuideDirectory = function (guideDirectory, AllTheGuides) {
 // For testing purposes, AllGuides can be directly set with the fixture
 // allGuides.testfixtures.js
 const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
-  return {
+  const returning = {
     link: '/' + guideDirectory,
     title: getTitleForGuideDirectory(guideDirectory, AllGuides.allGuides.edges),
     children: getChildrenForGuideDirectory(

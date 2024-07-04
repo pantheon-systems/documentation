@@ -1,5 +1,8 @@
 import getOmniItems from './getOmniItems';
 
+// @todo, move the functions below to a helper file.
+
+
 function findParentWithActiveLink(NestedItems, activePage) {
   // This function will return the top-level array of items that contains the active page
   // no matter how deeply nested it is.
