@@ -1,9 +1,8 @@
 import React from 'react';
 import { SidebarNav, turnItemsIntoLinks } from '../sidebarNav';
-import getOmniSidebarActiveSection from './getOmniSidebarActiveSection.js';
 import Navbar from '../navbar';
 import getOmniItems from './getOmniItems';
-import { findSubMenuItemsToUse } from './helpers.js';
+import { findSubMenuItemsToUse, getOmniSidebarActiveSection } from './helpers.js';
 
 const OmniSidebarNav = ({
   activePage,
