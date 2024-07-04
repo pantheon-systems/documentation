@@ -30,7 +30,7 @@ function containsActiveLink(item, activePage) {
 const getOmniSidebarActiveSection = ({ activePage }) => {
   const OmniItems = getOmniItems();
   if (OmniItems) {
-    return [findParentWithActiveLink(OmniItems, activePage)];
+    return findParentWithActiveLink(OmniItems, activePage);
   } else {
     return undefined;
   }
