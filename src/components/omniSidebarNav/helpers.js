@@ -2,18 +2,6 @@
 import allGuides from './allGuidesQuery';
 import getOmniItems from './getOmniItems';
 
-
-
-function findParentWithActiveLink(NestedItems, activePage) {
-  // This function will return the top-level array of items that contains the active page
-  // no matter how deeply nested it is.
-  for (let item of NestedItems) {
-    if (containsActiveLink(item, activePage)) {
-      return item;
-    }
-  }
-}
-
 function containsActiveLink(item, activePage) {
   if (item.link === activePage) {
     return true;
@@ -27,18 +15,19 @@ function containsActiveLink(item, activePage) {
   return false;
 }
 
+
+// @todo, add a test for this.
 const getOmniSidebarActiveSection = ({ activePage }) => {
   const OmniItems = getOmniItems();
   if (OmniItems) {
-    return findParentWithActiveLink(OmniItems, activePage);
-  } else {
-    return undefined;
+    for (let item of OmniItems) {
+      if (containsActiveLink(item, activePage)) {
+        return item;
+      }
+    }
   }
+  return undefined;
 };
-
-
-
-
 
 // Searches through the top level items find the subdata structure that
 // matches the parent path requested.
