@@ -41,7 +41,7 @@ const getTitleForGuideDirectory = function (guideDirectory, AllTheGuides) {
 // For testing purposes, AllGuides can be directly set with the fixture
 // allGuides.testfixtures.js
 const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
-  const returning = {
+  return {
     link: '/' + guideDirectory,
     title: getTitleForGuideDirectory(guideDirectory, AllGuides.allGuides.edges),
     children: getChildrenForGuideDirectory(
