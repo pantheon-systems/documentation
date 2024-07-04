@@ -32,5 +32,4 @@ const allGuides = () => {
   return AllTheGuides;
 };
 
-
 export default allGuides;

@@ -1,8 +1,12 @@
 import React from 'react';
 import Navbar from '../navbar';
-import { SideNavCompact } from "@pantheon-systems/pds-toolkit-react"
+import { SideNavCompact } from '@pantheon-systems/pds-toolkit-react';
 import getOmniItems from './getOmniItems';
-import { findSubMenuItemsToUse, getOmniSidebarActiveSection, simplerTurnItemsIntoLinks } from './helpers.js';
+import {
+  findSubMenuItemsToUse,
+  getOmniSidebarActiveSection,
+  simplerTurnItemsIntoLinks,
+} from './helpers.js';
 
 const OmniSidebarNav = ({
   activePage,
@@ -23,8 +27,7 @@ const OmniSidebarNav = ({
         menuItems={submenuLinks.links}
       />
     );
-  }
-  else if (menuItems) {
+  } else if (menuItems) {
     const OmniLinks = simplerTurnItemsIntoLinks(menuItems, activePage);
     return (
       <SideNavCompact

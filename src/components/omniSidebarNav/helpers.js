@@ -1,17 +1,20 @@
-
 import allGuides from './allGuidesQuery';
 import getOmniItems from './getOmniItems';
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
 // @todo, rename function and add a test for this.
 const simplerTurnItemsIntoLinks = (item, activePage) => {
   return {
     isActive: item.link === activePage,
-    links: item.children ? item.children.map((child) => simplerTurnItemsIntoLinks(child, activePage)) : false,
-    linkContent: React.createElement(Link, { to: item.link }, item.title)
-  }
-}
+    links: item.children
+      ? item.children.map((child) =>
+          simplerTurnItemsIntoLinks(child, activePage),
+        )
+      : false,
+    linkContent: React.createElement(Link, { to: item.link }, item.title),
+  };
+};
 
 function containsActiveLink(item, activePage) {
   if (item.link === activePage) {
@@ -25,7 +28,6 @@ function containsActiveLink(item, activePage) {
   }
   return false;
 }
-
 
 // @todo, add a test for this.
 const getOmniSidebarActiveSection = ({ activePage }) => {
@@ -50,7 +52,7 @@ const findSubMenuItemsToUse = function (maximumParent, NestedItems) {
     }
   }
   return undefined;
-}
+};
 
 // return an item list for a guide directory.
 // guideDirectory is the directory name of the guide.
@@ -58,7 +60,6 @@ const findSubMenuItemsToUse = function (maximumParent, NestedItems) {
 // For testing purposes, AllGuides can be directly set with the fixture
 // allGuides.testfixtures.js
 const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
-
   const ChildItems = [];
   var guideTitle = '';
   for (let item of AllGuides.allGuides.edges) {
@@ -80,4 +81,9 @@ const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
   };
 };
 
-export { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection, simplerTurnItemsIntoLinks };
+export {
+  findSubMenuItemsToUse,
+  getGuideDirectory,
+  getOmniSidebarActiveSection,
+  simplerTurnItemsIntoLinks,
+};
