@@ -10,7 +10,7 @@ audience: [development]
 product: [--]
 integration: [--]
 tags: [wordpress]
-contributors: [whitneymeredith]
+contributors: [whitneymeredith,jazzsequence]
 showtoc: true
 permalink: docs/guides/wordpress-composer/create-wp-site-composer-ci-auto-test
 ---
@@ -19,16 +19,14 @@ This section provides steps to create a new Pantheon WordPress site that will us
 
 <Alert title="Note" type="info">
 
-Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA.
+Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpress-composer-managed) upstream. You can use this upstream to create a Composer-managed WordPress site with **Bedrock**. This upstream is currently in EA and **Terminus Build Tools** does not currently support the Bedrock-based WordPress (Composer Managed) upstream.
 
 </Alert >
 
 ## Requirements
 
 - [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin)
-
     - You must use the [Build Tools 3.x release](https://github.com/pantheon-systems/terminus-build-tools-plugin/tree/3.x) if you are using **Terminus 3**.
-
 - [PHP version](/guides/php/php-versions#verify-current-php-versions) 7.2 or greater
 
 ## Create Your Site
@@ -49,27 +47,28 @@ Pantheon has a [WordPress (Composer Managed)](/guides/wordpress-composer/wordpre
     ```
 
     - This site will be based on the Pantheon-maintained [WordPress Composer repository](https://github.com/pantheon-systems/example-wordpress-composer).
+        - This repository has a similar structure to the [Bedrock-based WordPress (Composer Managed) upstream](https://github.com/pantheon-upstreams/wordpress-composer-managed) but does not use Bedrock. This repository will be deprecated in the future in favor of integrating the Bedrock-based upstream into Build Tools.
 
 1. Review the sections below for important information about your site, including an explanation of the directory structure, Continuous Integration functions, and essential configuration actions.
 
 ## Review Important Directories and Update File Paths
 
-### /web Directory
+### `/web` Directory
 
 Your site is stored and served from the `/web` subdirectory located next to the `pantheon.yml` file. You must store your website in this subdirectory for a Composer-based workflow. Placing your website in the subdirectory also allows you  to store tests, scripts, and other files related to your project in your repo without affecting your web document root. It also provides additional security by preventing web access to files outside of the document root through Pantheon.
 Your files may still be accessible from your version control project if it is public. See the [`pantheon.yml` documentation](/pantheon-yml#nested-docroot) for details.
 
 1. Verify that your website is stored in the `/web` subdirectory.
 
-### /web/wp Directory
+### `/web/wp` Directory
 
-Your directories and files within the `/web` directory are stored in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
+Your directories and files within the `/web` directory are stored in different locations compared to a default WordPress installation. [WordPress allows installing WordPress core in its own directory](https://developer.wordpress.org/advanced-administration/server/wordpress-in-directory/), which is necessary when installing WordPress with Composer. The overall layout of directories in the repo is similar to [Bedrock](https://github.com/roots/bedrock).
 
 1. Verify that the `WP_SITEURL` file is in the `/web/wp` directory to allow WordPress core functions to work correctly.
 
 1. Review the `/web/wp-config.php` file for key settings and move other files to the to the `/web/wp` directory as necessary.
 
-### composer.json File
+### `composer.json` File
 
 This project uses Composer to manage third-party PHP dependencies. Some files, such as `web/wp`, may not be visible in the repository. This is because WordPress core and its plugins are installed via Composer and ignored in the `.gitignore` file.
 
@@ -101,7 +100,7 @@ The scripts are organized into subdirectories according to their function:
 
 - `.ci/build/php` installs PHP dependencies with Composer.
 
-### Build Scripts .ci/deploy
+### Build Scripts `.ci/deploy`
 
 All scripts stored in the `.ci/deploy` directory facilitate code deployment to Pantheon.
 
@@ -109,7 +108,7 @@ All scripts stored in the `.ci/deploy` directory facilitate code deployment to P
 
 - `.ci/deploy/pantheon/dev-multidev` deploys the built artifact to either the Pantheon Dev or a Multidev environment, depending on the Git branch.
 
-## Automated Test Scripts .ci/tests
+## Automated Test Scripts `.ci/tests`
 
 The `.ci/tests` scripts run automated tests. You can add or remove scripts depending on your testing needs.
 

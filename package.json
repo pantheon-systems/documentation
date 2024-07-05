@@ -34,7 +34,6 @@
     "gatsby-remark-autolink-headers": "^5.25.0",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^5.25.0",
-    "gatsby-remark-embed-markdown": "0.0.4",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-github": "^2.0.0",
     "gatsby-remark-grid-tables": "^0.1.0",

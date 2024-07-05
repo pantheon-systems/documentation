@@ -6,8 +6,9 @@ import Mark from "mark.js"
 import Layout from "../../layout/layout/index.js"
 import SEO from "../../layout/seo.js"
 
-import ReleaseNoteTeaser from "../../components/ReleaseNoteTeaser/index.js"
+import ReleaseNotesPager from "../../components/releaseNotesPager.js"
 import ReleaseNotePopoverCategorySelector from "../../components/releaseNotePopoverCategorySelector.js"
+import ReleaseNoteTeaser from "../../components/ReleaseNoteTeaser/index.js"
 
 import { releaseNoteCategoryLoader } from "../../data/releaseNoteCategories.js"
 
@@ -25,7 +26,7 @@ const containerWidth = "standard"
 
 const ReleaseNotesListingTemplate = ({ data }) => {
   // Ref to track whether the component is loading for the first time
-  const initialLoadRef = useRef(true);
+  const initialLoadRef = useRef(true)
 
   // Set up state.
   const [filteredData, setFilteredData] = useState([])
@@ -33,6 +34,10 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     query: '',
     categories: []
   })
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const notesPerPage = 8
+  let totalPagesRef = useRef(0)
 
   // Ref for storing reference to the search input element
   let queryRef = useRef('')
@@ -88,8 +93,17 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       return newFilteredData
     }
 
-    // Update state based on filters.
-    setFilteredData(filterReleaseNotes(releasenotes))
+    // Get all filtered data
+    const allFilteredData = filterReleaseNotes(releasenotes)
+
+    // Filtered data sliced for pagination
+    const paginatedFilteredData = allFilteredData.slice((currentPage - 1) * notesPerPage, currentPage * notesPerPage)
+
+    // Update the total pages number based on the amount of releaseNotes
+    totalPagesRef.current = Math.ceil(allFilteredData.length / notesPerPage)
+
+    // Update state based on filters and pagination.
+    setFilteredData(paginatedFilteredData)
 
     // Mark releasenotes based on query.
     var context = document.querySelector(".docs-release-note-results")
@@ -107,38 +121,41 @@ const ReleaseNotesListingTemplate = ({ data }) => {
   const handleInputChange = (event) => {
     const newQuery = event.target.value
     setFilters( prevState => ({ ...prevState, query: newQuery }))
+    setCurrentPage(1)
   }
 
   // Function to remove a category from the filters state when its tag is removed
   const handleRemoveTag = (category) => {
     setFilters(prevState => ({...prevState, categories:[...prevState.categories.filter(item => item !== category )]}))
+    setCurrentPage(1)
+  }
+
+  // Function to update query strings based on filters and page
+  const updateQueryStrings = () => {
+    // Build updated query string
+    const params = new URLSearchParams()
+    filters.categories.forEach(category => {
+      params.append('category', category.slug)
+    })
+    params.append('page', currentPage)
+
+    // Get current URL and add query string
+    const currentUrl = window.location.href.split('?')[0]
+    const newUrl = filters.categories.length > 0 || currentPage ? currentUrl + '?' + params.toString() : currentUrl
+
+    // Update URL
+    window.history.replaceState({}, '', newUrl)
   }
 
   useEffect(() => {
     filterData()
-
-    // Function to update query strings based on filters
-    const updateQueryStrings = () => {
-      // Build updated query string
-      const params = new URLSearchParams()
-      filters.categories.forEach(category => {
-        params.append('category', category.slug)
-      })
-
-      // Get current URL and add query string
-      const currentUrl = window.location.href.split('?')[0]
-      const newUrl = filters.categories.length > 0 ? currentUrl + '?' + params.toString() : currentUrl
-
-      // Update URL
-      window.history.replaceState({}, '', newUrl)
-    }
 
     // Update query strings in the URL based on the current filters, but only if it's not the initial load
     if(!initialLoadRef.current){
       updateQueryStrings()
     }
 
-  },[filters])
+  },[filters, currentPage])
 
   useEffect(() => {
     // Function to update filters based on URL parameters
@@ -147,6 +164,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
       const searchParams = new URLSearchParams(window.location.search)
       // Extract query and category slugs from search parameters
       const query = searchParams.get('query')
+      const pageUrl = parseInt(searchParams.get('page'), 10) || 1
       const categorySlugs = searchParams.getAll('category')
       // Map category slugs to category objects
       const categories = categorySlugs.map(slug => ({slug}))
@@ -171,6 +189,15 @@ const ReleaseNotesListingTemplate = ({ data }) => {
           }
         ))
       }
+
+      // Check if pageUrl is greater than totalPagesRef.current
+      // If it's greater, go to first page, otherwise go to pageUrl
+      if (pageUrl > totalPagesRef.current) {
+        setCurrentPage(1)
+      } else {
+        setCurrentPage(pageUrl)
+        updateQueryStrings()
+      }
     }
 
     updateFilters()
@@ -179,6 +206,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     initialLoadRef.current = false
   },[])
 
+  
   // Debounce search input.
   const debouncedHandleInputChange = debounce(handleInputChange, 300)
 
@@ -249,7 +277,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
               />
             </div>
             <FlexContainer flexWrap='wrap' className='rn-popover-tigger-and-tags' >
-              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} />
+              <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} />
               <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
                 {
                   filters && filters.categories.map(item => {
@@ -273,6 +301,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
           >
             {renderedReleaseNotes}
           </div>
+          <ReleaseNotesPager currentPage={currentPage} setCurrentPage={setCurrentPage} totalPagesRef={totalPagesRef} />
         </Container>
       </main>
     </Layout>

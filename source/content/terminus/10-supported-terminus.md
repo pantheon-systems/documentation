@@ -23,7 +23,9 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 | Version          | Release Date       | EOL Date           |
 |------------------|--------------------|--------------------|
-| 3.4.0            | April 23, 2024     |                    |
+| 3.5.1            | June 13, 2024      |                    |
+| 3.5.0            | June 6, 2024       | June 13, 2025      |
+| 3.4.0            | April 23, 2024     | June 6, 2025       |
 | 3.3.5            | February 28, 2024  | April 23, 2025     |
 | 3.3.4            | February 27, 2024  | February 28, 2025  |
 | 3.3.3            | January 11, 2024   | February 27, 2025  |
@@ -32,9 +34,7 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 | 3.3.0            | November 29, 2023  | November 30, 2024  |
 | 3.2.2            | September 28, 2023 | November 29, 2024  |
 | 3.2.1            | June 1, 2023       | September 28, 2024 |
-| 3.2.0            | May 22 , 2023      | June 1, 2024       |
-| 3.1.5            | April 6, 2023      | May 22, 2024       |
-| 3.1.4 or earlier | March 1, 2023      | April 6, 2024      |
+| 3.2.0 or earlier | May 22 , 2023      | June 1, 2024       |
 
 
 ### PHP Version Compatibility Matrix
