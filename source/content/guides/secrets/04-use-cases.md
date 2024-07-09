@@ -236,7 +236,7 @@ In this guide we will go over an end to end example on how to setup secrets for 
 
 ### Introduction
 
-Note: Only GET has been implemented so far in the SDK. You should handle your secrets through terminus using [Terminus Secrets Manager](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
+Note: Only GET has been implemented so fDK. You should handle your secrets through terminus using [Terminus Secrets Manager](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
 
 Also: [https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#restrictions](https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#restrictions)
 

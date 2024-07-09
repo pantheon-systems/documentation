@@ -53,12 +53,12 @@ Some possible causes for this error:
 
 <dt>
 
-Problem: Site may be running on a PHP version below 7.4. If this is the case, there will be a message in the job output: “Skipping setting up secrets as it is not supported in PHP below 7.4”
+**Problem**: Site may be running on a PHP version below 7.4. If this is the case, there will be a message in the job output: “Skipping setting up secrets as it is not supported in PHP below 7.4”
 
 </dt>
 <dd>
 
-Solution: Upgrade the client to PHP version 8.1 or greater (but it should work with version 7.4+)
+**Solution**: Upgrade the client to PHP version 8.1 or greater (but it should work with version 7.4+)
 
 </dd>
 

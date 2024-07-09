@@ -17,7 +17,7 @@ reviewed: "2024-05-01"
 ---
 ## Local Environment Usage
 
-The [Pantheon Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk) includes a `CustomerSecretsFakeClient` implementation that is used when the SDK runs outside of Pantheon infrastructure. This client uses a secrets json file to build the secrets information emulating what happens on the platform using the Secrets service.
+The [Pantheon Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk) includes a `CustomerSecretsFakeClient` implementation that is used when the SDK runs outside of Pantheon infrastructure. This client uses a secrets JSON file to build the secrets information emulating what happens on the platform using the Secrets service.
 
 To get this file, you should use the [plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin/) `secret:site:local-generate` command and then set an environment variable into your local environment (or docker container if you are running a docker-ized environment) with name `CUSTOMER_SECRETS_FAKE_FILE` and use the absolute path to the file as the value.
 
