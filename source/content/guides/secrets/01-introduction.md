@@ -39,6 +39,10 @@ Previous to the release of the [SECRETS MANAGER PLUGIN](https://github.com/panth
 
 The plugin, SDK or Drupal module are open source. You can view the projects and contribute, file issues and submit feature requests.
 
+* [SECRETS MANAGER PLUGIN](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+* [Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk)
+* [pantheon_secrets (Drupal module)](https://github.com/pantheon-systems/pantheon_secrets)
+
 ## More Resources
 
 * [Terminus Plugin GitHub Repository](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
