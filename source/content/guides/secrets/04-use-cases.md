@@ -224,7 +224,7 @@ In this guide we will go over an end to end example on how to setup secrets for 
 
     ![Screenshot of Sendgrid API Configuration page in Drupal UI](../../../images/sendgrid-config.png)
 
-1) Make sure your site "Email Address" (/admin/config/system/site-information) matches a verified Sender Identity in Sendgrid
+1) Make sure your site "Email Address" (`/admin/config/system/site-information`) matches a verified Sender Identity in Sendgrid
 
 1) Go to the Sendgrid email test page (`/admin/config/services/sendgrid/test`) and test your Sendgrid integration by sending a test email
 
