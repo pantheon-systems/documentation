@@ -16,7 +16,7 @@ permalink: docs/guides/secrets/use-cases
 reviewed: "2024-05-01"
 ---
 
-# Using secrets with Integrated Composer
+# ☞ Using secrets with Integrated Composer
 
 ## Mechanism 1: Oauth composer authentication (recommended)
 
