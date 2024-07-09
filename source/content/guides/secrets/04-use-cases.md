@@ -24,7 +24,7 @@ reviewed: "2024-05-01"
 
 1. [Generate a Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). The Github token must have all "repo" permissions selected.
 
-    NOTE: Check the repo box that selects all child boxes. **Do not** check all child boxes individually as this does not set the correct permissions.
+    **Note:** Check the repo box that selects all child boxes. **Do not** check all child boxes individually as this does not set the correct permissions.
 
     ![image](https://user-images.githubusercontent.com/87093053/191616923-67732035-08aa-41c3-9a69-4d954ca02560.png) 
 
