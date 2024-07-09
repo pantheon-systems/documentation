@@ -1,7 +1,7 @@
 ---
 title: Pantheon Secrets Guide
 subtitle: Basic Concepts
-description: This section outlines some concepts that are worth knowing about Pantheon Secrets. Gaining familiarity with them will help you to make better use of this feature.
+description: Gaining familiarity with some concepts about Pantheon Secrets will help you make the most of this feature.
 contributors: [stovak]
 contenttype: [guide]
 innav: [true]
