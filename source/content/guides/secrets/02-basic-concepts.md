@@ -20,7 +20,7 @@ reviewed: "2024-05-01"
 
 <dd>
 
-A key-value pair that should not be exposed to the general public, typically something like a password, API key, or other sensitive information that you should probably not add to version control.
+A key-value pair that should not be exposed to the general public, typically something like a password, API key, or other sensitive information that should not be added to version control.
 
 </dd>
 
