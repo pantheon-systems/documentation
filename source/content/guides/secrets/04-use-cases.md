@@ -28,10 +28,14 @@ reviewed: "2024-05-01"
 
     ![image](https://user-images.githubusercontent.com/87093053/191616923-67732035-08aa-41c3-9a69-4d954ca02560.png) 
 
-1. Set the secret value to the token via terminus: `terminus secret:site:set <site> github-oauth.github.com <github_token> --type=composer --scope=user,ic`
-
+1. Set the secret value to the token via terminus:
+      
+   ```bash
+   terminus secret:site:set <site> github-oauth.github.com <github_token> --type=composer --scope=user,ic`
+   ```
+   
 1. Add your private repository to the `repositories` section of `composer.json`:
-
+   
     ```json
     {
         "type": "vcs",
@@ -53,7 +57,11 @@ reviewed: "2024-05-01"
 
 1. [Generate a GitLab token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). Ensure that `read_repository` scope is selected for the token.
 
-1. Set the secret value to the token via Terminus: `terminus secret:site:set <site> gitlab-oauth.gitlab.com <gitlab_token> --type=composer --scope=user,ic`
+1. Set the secret value to the token via Terminus: 
+
+   ```bash
+   terminus secret:site:set <site> gitlab-oauth.gitlab.com <gitlab_token> --type=composer --scope=user,ic`
+   ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
 
@@ -78,7 +86,10 @@ reviewed: "2024-05-01"
 
 1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Also, set the consumer as private and put a (dummy) callback URL.
 
-1. Set the secret value to the consumer info via Terminus: `terminus secret:site:set <site> bitbucket-oauth.bitbucket.org "<consumer_key> <consumer_secret>" --type=composer --scope=user,ic`
+1. Set the secret value to the consumer info via Terminus: 
+   ```bash
+   terminus secret:site:set <site> bitbucket-oauth.bitbucket.org "<consumer_key> <consumer_secret>" --type=composer --scope=user,ic`
+   ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
 
@@ -128,7 +139,9 @@ read -e COMPOSER_AUTH_JSON <<< {
 }
 EOF
 
-`terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=user,ic`
+
+terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=user,ic
+
 ```
 
 # ☞ Using secrets with Drupal Key module
