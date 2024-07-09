@@ -30,6 +30,10 @@ Support Community submitted bugs and feature requests can be found in the plugin
 
 [Contact Support](https://dashboard.pantheon.io/#support/support/all) if you have questions or need help with Terminus.
 
+## Disambiguation
+
+Previous to the release of the [SECRETS MANAGER PLUGIN](https://github.com/pantheon-systems/terminus-secrets-manager-plugin), Pantheon offered the [SECRETS PLUGIN](https://github.com/pantheon-systems/terminus-secrets-plugin). The SECRETS PLUGIN and the method for storing secrets it uses is deprecated and should not be used.
+
 ## Contribute to Pantheon Secrets
 
 The plugin, SDK or Drupal module are open source. You can view the projects and contribute, file issues and submit feature requests.
