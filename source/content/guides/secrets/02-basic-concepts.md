@@ -24,7 +24,7 @@ A key-value pair that should not be exposed to the general public, typically som
 
 </dd>
 
-<dt>Secret type [^1]</dt>
+<dt>Secret type <sup>1</sup></dt>
 
 <dd>
 
