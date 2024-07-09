@@ -57,7 +57,7 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
 * **Organization-owned secrets** -  Organization-owned secrets are available to every site and environment that are associated with the owning organization. A common use-cases is for a CI system and infrastructure that's shared among all sites in an organization.
 
-* **Site-owned secrets** -  Site-owned secrets are available to the site and all of it's environments. A common use-case is Github tokens that a site's composer build can use to access private repos referenced in the composer file.
+* **Site-owned secrets** -  Site-owned secrets are available to the site and all of its environments. A common use-case is Github tokens that a site's composer build can use to access private repos referenced in the composer file.
 
 * **Environment override**[^d]  - Environment overrides provide overrides to a secret value for a specific environment. A common use case for this are API keys that are different in production and non-production environments.
 
