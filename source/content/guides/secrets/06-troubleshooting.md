@@ -30,7 +30,7 @@ Some possible causes for this error:
 <dl>
 <dt>
 
-**Problem:** Secrets are not correctly set for the site. Secrets for IC should be of scope ic and type composer. See instructions in the plugin README: [https://github.com/pantheon-systems/terminus-secrets-manager-plugin#mechanism-1-oauth-composer-authentication](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#mechanism-1-oauth-composer-authentication)
+**Problem:** Secrets are not correctly set for the site. Secrets for IC should be of scope ic and type composer. See instructions in the [Basic Concepts](/guides/secrets/02-basic-concepts) documentation.
 
 </dt>
 <dd>
@@ -53,12 +53,12 @@ Some possible causes for this error:
 
 <dt>
 
-Problem: Site may be running on a PHP version < 8. If this is the case, there will be a message in the job output: “Skipping setting up secrets as it is not supported in PHP < 8”
+Problem: Site may be running on a PHP version below 7.4. If this is the case, there will be a message in the job output: “Skipping setting up secrets as it is not supported in PHP below 7.4”
 
 </dt>
 <dd>
 
-Solution: ask the client to upgrade to PHP 8.1 or greater
+Solution: Upgrade the client to PHP version 8.1 or greater (but it should work with version 7.4+)
 
 </dd>
 
@@ -113,8 +113,4 @@ An example error message associated to this error is:
 
 ## Still having issues?
 
-Contact support
-
-What about open source projects? I (Kevin) still think it's better to go through support but unsure…
-
-**
+[Contact support](https://docs.pantheon.io/guides/support/contact-support/)
