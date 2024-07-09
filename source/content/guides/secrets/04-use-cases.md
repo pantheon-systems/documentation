@@ -21,6 +21,7 @@ reviewed: "2024-05-01"
 ## Mechanism 1: Oauth composer authentication (recommended)
 
 <TabList>
+
 <Tab id="Github" id="github" active={true}>
 
 #### GitHub Repository
@@ -57,6 +58,7 @@ reviewed: "2024-05-01"
 1. Commit your changes and push to Pantheon.
 
 </Tab>
+
 <Tab title="Gitlab" id="gitlab">
 
 #### GitLab Repository
@@ -89,6 +91,7 @@ reviewed: "2024-05-01"
 1. Commit your changes and push to Pantheon.
 
  </Tab>
+ 
   <Tab title="Bitbucket" id="bitbucket">
 
 #### Bitbucket Repository
@@ -120,6 +123,7 @@ reviewed: "2024-05-01"
 1. Commit your changes and push to Pantheon.
 
 </Tab>
+
 </TabList>
 
 ## Mechanism 2: HTTP Basic Authentication 
@@ -195,7 +199,7 @@ In this guide we will go over an end to end example on how to setup secrets for 
     terminus secret:site:set <site> sendgrid_api <api_key> --scope=web --type=runtime
     ```
 
-    You can optionally add a [secret environment override](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#environment-override) to change the API key for a given environment (e.g. you want to use different Sendgrid accounts for live and dev environments)
+    As a best practice, the non-production environments should be the default and then override that value with a [secret environment override](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#environment-override) to change the API key for the live environment (e.g. you want to use different Sendgrid accounts for live and dev environments)
 
 1) Add the Key entity in one of the different available ways:
 
@@ -232,7 +236,7 @@ In this guide we will go over an end to end example on how to setup secrets for 
 
 ### Introduction
 
-Include this note: "Note: Only get has been implemented so far. You should handle your secrets through terminus using [Terminus Secrets Manager](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)." Do not present this as something we "may" do in the future!
+Note: Only GET has been implemented so far in the SDK. You should handle your secrets through terminus using [Terminus Secrets Manager](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
 
 Also: [https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#restrictions](https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#restrictions)
 
