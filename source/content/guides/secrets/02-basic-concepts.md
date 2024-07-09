@@ -55,7 +55,7 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
 <dd>
 
-* **Organization-owned secrets** -  Organization-owned secrets are available to every site and environment that are associated with the owning organization. A common use-cases is for a CI system and infrastructure that's shared among all sites in an organization.
+* **Organization-owned secrets** -  Organization-owned secrets are available to every site and environment that are associated with the owning organization. A common use-cases is for a CI system and infrastructure that's shared among all sites in an organization. Secrets from "Supporting" Organizations are explicitly **NOT SHARED** with the sites they support. Sites receive secret key/value pairs from their Primary Organization only.
 
 * **Site-owned secrets** -  Site-owned secrets are available to the site and all of its environments. A common use-case is Github tokens that a site's composer build can use to access private repos referenced in the composer file.
 
