@@ -23,7 +23,7 @@ Features:
 
 * Secure: secrets are encrypted at rest.
 * Easy to use: create and update secrets via Terminus.
-* Governability: secrets could be set at organization level and shared to all the sites owned by that organization.
+* Governable: secrets could be set at organization level and shared to all the sites owned by that organization.
 * Overridable: secrets could be overridden at environment level when needed.
   
 
