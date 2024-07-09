@@ -20,6 +20,9 @@ reviewed: "2024-05-01"
 
 ## Mechanism 1: Oauth composer authentication (recommended)
 
+<TabList>
+<Tab id="Github" id="github" active={true}>
+
 #### GitHub Repository
 
 1. [Generate a Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). The Github token must have all "repo" permissions selected.
@@ -53,6 +56,9 @@ reviewed: "2024-05-01"
 
 1. Commit your changes and push to Pantheon.
 
+</Tab>
+<Tab title="Gitlab" id="gitlab">
+
 #### GitLab Repository
 
 1. [Generate a GitLab token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). Ensure that `read_repository` scope is selected for the token.
@@ -82,6 +88,9 @@ reviewed: "2024-05-01"
 
 1. Commit your changes and push to Pantheon.
 
+ </Tab>
+  <Tab title="Bitbucket" id="bitbucket">
+
 #### Bitbucket Repository
 
 1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Also, set the consumer as private and put a (dummy) callback URL.
@@ -109,6 +118,9 @@ reviewed: "2024-05-01"
     ```
 
 1. Commit your changes and push to Pantheon.
+
+</Tab>
+</TabList>
 
 ## Mechanism 2: HTTP Basic Authentication 
 
