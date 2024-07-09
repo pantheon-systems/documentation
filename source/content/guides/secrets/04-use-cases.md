@@ -16,7 +16,7 @@ permalink: docs/guides/secrets/use-cases
 reviewed: "2024-05-01"
 ---
 
-# Use Case: Using secrets with Integrated Composer
+# Using secrets with Integrated Composer
 
 ## Mechanism 1: Oauth composer authentication (recommended)
 
@@ -131,7 +131,7 @@ EOF
 `terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=user,ic`
 ```
 
-# Use Case: Using secrets with Drupal Key module
+# ☞ Using secrets with Drupal Key module
 If you want to use Pantheon Secrets in your Drupal application through the [Key module](https://www.drupal.org/project/key), you should use the [Pantheon Secrets](https://www.drupal.org/project/pantheon_secrets) module.
 
 # Pantheon Secrets detailed example
@@ -203,7 +203,7 @@ In this guide we will go over an end to end example on how to setup secrets for 
 
 1) The email should get to your inbox. Enjoy!
 
-# Use Case: Accessing secrets from your codebase
+# ☞ Accessing secrets from your codebase
 
 ### Introduction
 
