@@ -18,7 +18,8 @@ reviewed: "2024-05-01"
 
 Pantheon Secrets is key to maintaining industry best practices for secure builds and application implementation. This feature provides a convenient mechanism for you to manage your secrets and API keys directly on the Pantheon platform.
 This guide covers features and use cases of the Pantheon Secrets feature; it could also be referred as Secrets Manager because that is the Terminus plugin name.
-Features
+
+Features:
 
 * Secure: secrets are encrypted at rest.
 * Easy to use: create and update secrets via Terminus.
