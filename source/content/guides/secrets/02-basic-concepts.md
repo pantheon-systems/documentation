@@ -43,11 +43,11 @@ A key-value pair that should not be exposed to the general public, typically som
 <dd>
 A secret's scope is the answer to the question "Where is the secret's value available?". Once, set a secret's scope cannot be changed. The secret must be deleted and recreated.
 
-  * `runtime`: this secret will be used to retrieve it in application runtime using API calls to the secret service. This is the recommended type to set if you want your secret to be exposed to the application runtime.
+  * `ic`: This secret will be readable by the Integrated Composer runtime. You should use this scope to get access to your private repositories.
 
-  * `env`: this secret will be used to set environment variables in the application runtime. This type is currently only supported for Integrated Composer builds and not being exposed as environment variables to the application runtime.
+  * `web`: this secret will be readable by the application runtime.
 
-  * `composer`: this secret type is used for composer  authentication to private packages and it is the recommended method for doing so.
+  * `user`: this secret will be readable by the user. This scope should be set if you need to retrieve the secret value at a later stage.
 
 </dd>
 
