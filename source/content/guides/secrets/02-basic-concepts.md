@@ -102,4 +102,5 @@ SiteSecretOverrideExampleLive: overridden()
 
 </dl>
 
-\[^1\]: Note that you can only set one type per secret and this cannot be changed later (unless you delete and recreate the secret).
+**Notes**
+<sup>1</sup>: Note that you can only set one type per secret and this cannot be changed later (unless you delete and recreate the secret).
