@@ -1,7 +1,9 @@
 import { expect, test } from 'vitest';
-import { findSubMenuItemsToUse, getGuideDirectory } from './helpers';
+import { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection } from './helpers';
 import AllGuides from './testfixtures/allGuides.testfixture';
 import guideDirectoryItems from './testfixtures/guideDirectoryItems.textfixture';
+import omniItems from './testfixtures/omniItems.textfixture';
+import activeSection from './testfixtures/activeSection.testfixture';
 
 test('finds sub menu to use', () => {
   const sampleItems = [
@@ -25,3 +27,11 @@ test('Check that the items for a specific guide directory path are correct', () 
     guideDirectoryItems,
   );
 });
+
+test('Check that the active menu can be found', () => {
+  const activePage = '/guides/decoupled/wp-backend-starters/create';
+  expect(getOmniSidebarActiveSection(activePage, omniItems)).toEqual(
+    activeSection,
+  );
+});
+

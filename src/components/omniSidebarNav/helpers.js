@@ -9,7 +9,6 @@ import { Link } from 'gatsby';
  * @param {string} activePage - The active page link.
  * @returns {Object} - The converted item with link properties.
  */
-// @todo add tests for this function.
 const turnItemsIntoLinks = (item, activePage) => {
   return {
     isActive: item.link === activePage,
@@ -42,7 +41,13 @@ function containsActiveLink(item, activePage) {
   return false;
 }
 
-// @todo, add a test for this.
+/**
+ * Returns the active section from the Omni sidebar navigation based on the active page.
+ *
+ * @param {string} activePage - The active page.
+ * @param {Array} OmniItems - The array of Omni sidebar items.
+ * @returns {Object|undefined} - The active section object or undefined if not found.
+ */
 const getOmniSidebarActiveSection = (activePage, OmniItems) => {
   if (OmniItems) {
     for (let item of OmniItems) {
@@ -54,23 +59,29 @@ const getOmniSidebarActiveSection = (activePage, OmniItems) => {
   return undefined;
 };
 
-// Searches through the top level items find the subdata structure that
-// matches the parent path requested.
-// todo, rename "maximumParent" to something better.
-const findSubMenuItemsToUse = function (maximumParent, NestedItems) {
+/**
+ * Finds the sub-menu items to use based on the provided top level parent path.
+ *
+ * @param {string} topLevelParentPath - The top level parent path to search for.
+ * @param {Array} NestedItems - The array of nested items to search within.
+ * @returns {Object|undefined} - The sub-menu item that matches the top level parent path, or undefined if not found.
+ */
+const findSubMenuItemsToUse = function (topLevelParentPath, NestedItems) {
   for (let item of NestedItems) {
-    if (item.link === maximumParent) {
+    if (item.link === topLevelParentPath) {
       return item;
     }
   }
   return undefined;
 };
 
-// return an item list for a guide directory.
-// guideDirectory is the directory name of the guide.
-// AllGuides is the result of the allGuides query.
-// For testing purposes, AllGuides can be directly set with the fixture
-// allGuides.testfixtures.js
+/**
+ * Retrieve menu items based on a given directory path from all guides.
+ *
+ * @param {string} guideDirectory - The directory of the guide.
+ * @param {Object} [AllGuides=allGuides()] - The object containing all the guides.
+ * @returns {Object} - The guide directory object with its title, link, and children.
+ */
 const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
   const ChildItems = [];
   var guideTitle = '';
