@@ -1,5 +1,4 @@
 import allGuides from './allGuidesQuery';
-import getOmniItems from './getOmniItems';
 import React from 'react';
 import { Link } from 'gatsby';
 

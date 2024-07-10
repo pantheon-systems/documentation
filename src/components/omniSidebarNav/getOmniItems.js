@@ -1,6 +1,10 @@
 import CertificationItems from './submenus/certification';
 import { getGuideDirectory } from './helpers';
 
+/**
+ * Retrieves the all the menu items for the sidebar navigation.
+ * @returns {Array} An array of Omni items.
+ */
 const getOmniItems = () => {
   const OmniItems = [
     {
@@ -9,7 +13,7 @@ const getOmniItems = () => {
       children: [
         getGuideDirectory('guides/decoupled/wp-nextjs-frontend-starters'),
         getGuideDirectory('guides/decoupled/wp-backend-starters'),
-        // @todo, add the rest of the front end guides
+        // @todo, add the rest of the front-end guides
       ],
     },
     {
