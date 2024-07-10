@@ -9,11 +9,15 @@ const getOmniItems = () => {
   const OmniItems = [
     {
       link: '/guides/decoupled',
-      title: 'Front-End Sites',
+      title: 'Front-End Sites and Starter Kits',
       children: [
+        getGuideDirectory('guides/decoupled/overview'),
         getGuideDirectory('guides/decoupled/wp-nextjs-frontend-starters'),
         getGuideDirectory('guides/decoupled/wp-backend-starters'),
-        // @todo, add the rest of the front-end guides
+        getGuideDirectory('guides/decoupled/wp-gatsby-frontend-starters'),
+        getGuideDirectory('guides/decoupled/drupal-backend-starters'),
+        getGuideDirectory('guides/decoupled/drupal-nextjs-frontend-starters'),
+        getGuideDirectory('guides/decoupled/no-starter-kit'),
       ],
     },
     {
