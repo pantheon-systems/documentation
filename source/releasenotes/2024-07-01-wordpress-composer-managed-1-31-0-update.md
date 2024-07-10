@@ -28,4 +28,4 @@ git push origin master
 For assistance with managing merge conflicts, refer to our documentation on [auto-resolving via the dashboard](https://docs.pantheon.io/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) or [manually resolving via the command line](https://docs.pantheon.io/guides/git/resolve-merge-conflicts).
 
 #### Additional notes
-This release of WordPress (composer managed) is indicated by an [office release on GitHub](https://github.com/pantheon-systems/wordpress-composer-managed/releases). The changelog has been updated to include version numbers for better tracking of upstream iterations.
+This release of WordPress (composer managed) is indicated by an [official release on GitHub](https://github.com/pantheon-systems/wordpress-composer-managed/releases). The changelog has been updated to include version numbers for better tracking of upstream iterations.
