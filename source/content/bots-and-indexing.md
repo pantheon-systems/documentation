@@ -65,6 +65,8 @@ User-agent: PowerMapper
 User-agent: Swiftbot
 User-agent: lyticsbot
 User-agent: Dubbotbot
+User-agent: PopeTech-CrawlBot
+User-agent: PopeTech-ScanBot
 Allow: /
 ```
 
