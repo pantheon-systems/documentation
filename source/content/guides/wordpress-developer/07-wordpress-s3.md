@@ -75,12 +75,13 @@ You must configure the service within your [AWS Management Console](https://cons
      "Version": "2012-10-17",
      "Statement": [
        {
-         "Sid": "ObjectLevel",
+         "Sid": "VisualEditor0",
          "Effect": "Allow",
          "Action": [
-           "s3:PutObject",
-           "s3:GetObject",
-           "s3:DeleteObject"
+				"s3:PutObject",
+				"s3:GetObject",
+				"s3:DeleteObject",
+				"s3:PutObjectAcl"
          ],
          "Resource": "arn:aws:s3:::bucketname/*"
        },
@@ -88,10 +89,11 @@ You must configure the service within your [AWS Management Console](https://cons
          "Sid": "BucketLevel",
          "Effect": "Allow",
          "Action": [
-           "s3:GetBucketPublicAccessBlock",
-           "s3:GetBucketOwnershipControls",
-           "s3:ListBucket",
-           "s3:GetBucketLocation"
+				"s3:GetBucketPublicAccessBlock",
+				"s3:PutBucketPublicAccessBlock",
+				"s3:PutBucketOwnershipControls",
+				"s3:GetBucketOwnershipControls",
+				"s3:GetBucketLocation"
          ],
          "Resource": "arn:aws:s3:::bucketname"
        }
@@ -99,7 +101,7 @@ You must configure the service within your [AWS Management Console](https://cons
    }
    ```
 
-   ![Create AWS S3 access step 2](../../../images/guides/s3-access2.png)
+   ![Create AWS S3 access step 2](../../../images/guides/s3-access2-updated.png)
 
 1. Enter your policy name in the **Policy name** field (for example, Pantheons3Access) and then click **Create Policy**.
 
@@ -117,7 +119,7 @@ You must configure the service within your [AWS Management Console](https://cons
 
    <Alert title="Note" type="info">
 
-   Steps 1-3 create a custom AWS User policy with read and write permissions to the specific bucket assigned to your site. You can select the **AmazonS3FullAccess** policy to replace the custom policy that you created if you require higher permissions.
+   Steps 1-3 create a custom AWS User policy with read and write permissions to the specific bucket assigned to your site. You can select the **AmazonS3FullAccess** policy to replace the custom policy that you created if you require higher permissions (example: listing buckets in the WP Offload Media plugin).
 
    </Alert>
 
