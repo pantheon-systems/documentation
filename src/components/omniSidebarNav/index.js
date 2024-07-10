@@ -14,8 +14,9 @@ const OmniSidebarNav = ({
   fallbackTitle = '',
   submenuPathToUse = '',
 }) => {
-  const menuItems = getOmniSidebarActiveSection({ activePage });
   const OmniItems = getOmniItems();
+  const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
+
 
   // If the caller is asking for a specific submenu, use that directly.
   if (submenuPathToUse.length > 0) {

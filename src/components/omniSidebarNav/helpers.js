@@ -3,7 +3,14 @@ import getOmniItems from './getOmniItems';
 import React from 'react';
 import { Link } from 'gatsby';
 
-// @todo, rename function and add a test for this.
+/**
+ * Converts items into links recursively.
+ *
+ * @param {Object} item - The item to convert into a link.
+ * @param {string} activePage - The active page link.
+ * @returns {Object} - The converted item with link properties.
+ */
+// @todo add tests for this function.
 const turnItemsIntoLinks = (item, activePage) => {
   return {
     isActive: item.link === activePage,
@@ -16,6 +23,13 @@ const turnItemsIntoLinks = (item, activePage) => {
   };
 };
 
+/**
+ * Checks if an item or any of its children have a link that matches the active page.
+ *
+ * @param {Object} item - The item to check.
+ * @param {string} activePage - The active page link.
+ * @returns {boolean} - True if the item or any of its children have a link that matches the active page, false otherwise.
+ */
 function containsActiveLink(item, activePage) {
   if (item.link === activePage) {
     return true;
@@ -30,8 +44,7 @@ function containsActiveLink(item, activePage) {
 }
 
 // @todo, add a test for this.
-const getOmniSidebarActiveSection = ({ activePage }) => {
-  const OmniItems = getOmniItems();
+const getOmniSidebarActiveSection = (activePage, OmniItems) => {
   if (OmniItems) {
     for (let item of OmniItems) {
       if (containsActiveLink(item, activePage)) {
