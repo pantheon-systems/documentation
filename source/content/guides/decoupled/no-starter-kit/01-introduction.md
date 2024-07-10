@@ -32,12 +32,6 @@ Available frontend starters:
 - [WordPress + Next.js Frontend Starter](/guides/decoupled/wp-nextjs-frontend-starters)
 - [WordPress + Gatsby Frontend Starter](/guides/decoupled/wp-gatsby-frontend-starters)
 
-<Alert title="Not what you're looking for?" type="success" icon="leaf">
-
-Check out the [Front-End Sites landing page](/guides/decoupled/) to access all documentation for Front-End Sites.
-
-</Alert>
-
 ## Requirements and Considerations
 
 Review [requirements and considerations](/guides/decoupled/overview/considerations) for Front-End Sites on Pantheon before you begin your project.
