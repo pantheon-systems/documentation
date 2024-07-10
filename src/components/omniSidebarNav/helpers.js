@@ -4,12 +4,12 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 // @todo, rename function and add a test for this.
-const simplerTurnItemsIntoLinks = (item, activePage) => {
+const turnItemsIntoLinks = (item, activePage) => {
   return {
     isActive: item.link === activePage,
     links: item.children
       ? item.children.map((child) =>
-          simplerTurnItemsIntoLinks(child, activePage),
+          turnItemsIntoLinks(child, activePage),
         )
       : false,
     linkContent: React.createElement(Link, { to: item.link }, item.title),
@@ -85,5 +85,5 @@ export {
   findSubMenuItemsToUse,
   getGuideDirectory,
   getOmniSidebarActiveSection,
-  simplerTurnItemsIntoLinks,
+  turnItemsIntoLinks,
 };

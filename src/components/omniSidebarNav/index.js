@@ -5,7 +5,7 @@ import getOmniItems from './getOmniItems';
 import {
   findSubMenuItemsToUse,
   getOmniSidebarActiveSection,
-  simplerTurnItemsIntoLinks,
+  turnItemsIntoLinks,
 } from './helpers.js';
 
 const OmniSidebarNav = ({
@@ -20,7 +20,7 @@ const OmniSidebarNav = ({
   // If the caller is asking for a specific submenu, use that directly.
   if (submenuPathToUse.length > 0) {
     const submenuItems = findSubMenuItemsToUse(submenuPathToUse, OmniItems);
-    const submenuLinks = simplerTurnItemsIntoLinks(submenuItems, activePage);
+    const submenuLinks = turnItemsIntoLinks(submenuItems, activePage);
     return (
       <SideNavCompact
         headingText={submenuLinks.linkContent}
@@ -28,7 +28,7 @@ const OmniSidebarNav = ({
       />
     );
   } else if (menuItems) {
-    const OmniLinks = simplerTurnItemsIntoLinks(menuItems, activePage);
+    const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
     return (
       <SideNavCompact
         headingText={OmniLinks.linkContent}
