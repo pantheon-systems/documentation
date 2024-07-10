@@ -24,7 +24,7 @@ const getOmniItems = () => {
       link: '/certification',
       title: 'WebOps Certification',
       children: CertificationItems,
-    }
+    },
   ];
   return OmniItems;
 };

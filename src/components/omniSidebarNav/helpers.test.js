@@ -1,5 +1,9 @@
 import { expect, test } from 'vitest';
-import { findSubMenuItemsToUse, getGuideDirectory, getOmniSidebarActiveSection } from './helpers';
+import {
+  findSubMenuItemsToUse,
+  getGuideDirectory,
+  getOmniSidebarActiveSection,
+} from './helpers';
 import AllGuides from './testfixtures/allGuides.testfixture';
 import guideDirectoryItems from './testfixtures/guideDirectoryItems.textfixture';
 import omniItems from './testfixtures/omniItems.textfixture';
@@ -34,4 +38,3 @@ test('Check that the active menu can be found', () => {
     activeSection,
   );
 });
-

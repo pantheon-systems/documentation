@@ -13,9 +13,7 @@ const turnItemsIntoLinks = (item, activePage) => {
   return {
     isActive: item.link === activePage,
     links: item.children
-      ? item.children.map((child) =>
-          turnItemsIntoLinks(child, activePage),
-        )
+      ? item.children.map((child) => turnItemsIntoLinks(child, activePage))
       : false,
     linkContent: React.createElement(Link, { to: item.link }, item.title),
   };
