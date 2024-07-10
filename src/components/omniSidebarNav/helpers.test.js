@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest';
 import { findSubMenuItemsToUse, getGuideDirectory } from './helpers';
 import AllGuides from './testfixtures/allGuides.testfixture';
-import guideDirectoryItems from './testfixtures/guideDirectoryItems';
+import guideDirectoryItems from './testfixtures/guideDirectoryItems.textfixture';
 
 test('finds sub menu to use', () => {
   const sampleItems = [

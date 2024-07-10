@@ -8,6 +8,8 @@ import {
   turnItemsIntoLinks,
 } from './helpers.js';
 
+// @todo, run prettier one more time on this directory before removing it from the PR.
+
 const OmniSidebarNav = ({
   activePage,
   fallbackItems = null,
@@ -16,7 +18,6 @@ const OmniSidebarNav = ({
 }) => {
   const OmniItems = getOmniItems();
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
-
 
   // If the caller is asking for a specific submenu, use that directly.
   if (submenuPathToUse.length > 0) {

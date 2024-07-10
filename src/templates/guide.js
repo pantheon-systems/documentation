@@ -39,9 +39,7 @@ class GuideTemplate extends React.Component {
   }
 
   render() {
-
     const node = this.props.data.mdx
-
     const isoDate = this.props.data.date
     const items = this.props.data.allMdx.edges.map((item) => {
       return {
@@ -57,7 +55,6 @@ class GuideTemplate extends React.Component {
       <div className="content-wrapper">{children}</div>
     )
     const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
-    //const menuItems = getOmniSidebarActiveSection({ activePage: "guides/decoupled/wp-nextjs-frontend-starters/caching/" });
 
     return (
       <GuideLayout>

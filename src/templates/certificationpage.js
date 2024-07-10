@@ -6,13 +6,10 @@ import SEO from "../layout/seo"
 import SearchBar from "../layout/SearchBar"
 import HeaderBody from "../components/headerBody"
 import GetFeedback from "../components/getFeedback"
-
 import OmniSidebarNav from "../components/omniSidebarNav";
 import NavButtons from "../components/navButtons"
 import TOC from "../components/toc"
 import MdxWrapper from "../components/mdxWrapper"
-
-
 
 class CertificationTemplate extends React.Component {
   componentDidMount() {
@@ -76,8 +73,6 @@ class CertificationTemplate extends React.Component {
           activePage={node.fields.slug}
           submenuPathToUse="/certification"/>
 
-
-
         <ContentLayoutType slot="guide-content">
           <SearchBar slot="content" page="default" />
 
@@ -101,7 +96,6 @@ class CertificationTemplate extends React.Component {
               />
 
               <MdxWrapper mdx={node.body} />
-
               <NavButtons
                 prev={node.frontmatter.previousurl}
                 next={node.frontmatter.nexturl}
