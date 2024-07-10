@@ -12,7 +12,8 @@ The update is now available for the [WordPress (composer managed)](/guides/wordp
 * Filter to drop a `/wp` path appended to WordPress-generated home URLs on single sites and main sites of multisites, both set at priority `9` for easy override in composer-managed sites.
 * Un-ignored managed WordPress core files in the WordPress root directory. (Props [@araphiel](https://github.com/araphiel) for the PR.)
 * Updated default PHP version to 8.2 and default database version to 10.6. 
-* Updated `application.php` and `composer.json` files to align with [`roots/bedrock`](https://github.com/roots/bedrock) v1.24.x. 
+* Updated `application.php` and `composer.json` files to align with [`roots/bedrock`](https://github.com/roots/bedrock) v1.24.x.
+* Deprecates `wp-config-pantheon.php` in favor of `config/application.pantheon.php`. 
 
 For more details, refer to the [WordPress (Composer Managed) changelog](https://github.com/pantheon-systems/wordpress-composer-managed/blob/default/CHANGELOG.md).
 
