@@ -25,7 +25,7 @@
 .rn-popover-categories .pds-popover__container{
   max-width: 100%;
   padding: 40px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .rn-popover-tigger-and-tags{
