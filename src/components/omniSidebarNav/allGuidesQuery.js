@@ -1,5 +1,9 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
+/**
+ * Retrieves all content from the /source/content/guides directory.
+ * @returns {Object} The result of the GraphQL query containing all the guides.
+ */
 const allGuides = () => {
   const AllTheGuides = useStaticQuery(
     graphql`

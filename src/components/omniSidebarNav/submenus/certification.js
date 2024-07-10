@@ -1,3 +1,7 @@
+/**
+ * Array of of links specific to the Certification section of the sidebar.
+ * @type {Array<Object>}
+ */
 const CertificationItems = [
   {
     link: '/certification/about',

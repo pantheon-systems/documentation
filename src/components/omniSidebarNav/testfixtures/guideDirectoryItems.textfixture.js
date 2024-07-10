@@ -1,3 +1,6 @@
+/**
+ * A data fixture for used to test getGuideDirectory().
+ */
 const guideDirectoryItems = {
   link: '/guides/decoupled/wp-backend-starters',
   title: 'WordPress Backend Starter for Front-End Sites',

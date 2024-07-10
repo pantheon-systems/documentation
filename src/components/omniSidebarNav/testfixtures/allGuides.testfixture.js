@@ -1,5 +1,9 @@
-// A dump of the data from the GraphQL query used in the OmniSidebarNav component.
-// This is kept in the repo for reference and as a fixture for unit tests.
+/**
+ * A dump of the data from the GraphQL query used in the OmniSidebarNav component.
+ *
+ * @typedef {Object} AllGuides
+ * @property {Array} allGuides - An array of guide objects.
+ */
 const AllGuides = {
   allGuides: {
     edges: [
