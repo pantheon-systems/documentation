@@ -7,31 +7,16 @@ import { expect, test } from 'vitest';
 // import AllGuides from './testfixtures/allGuides.testfixture';
 // import guideDirectoryItems from './testfixtures/guideDirectoryItems.textfixture';
 import omniItems from './testfixtures/omniItems.textfixture';
+import { flattenOmniItems } from './reporting';
 import allPaths from './testfixtures/allPaths.testfixture';
 // import activeSection from './testfixtures/activeSection.testfixture';
 
 const exceptions = ['https://certification.pantheon.io/', '/404.html'];
 
 
-function flattenOmniItems(menuItems) {
-  // loop over the omniItems and make a flattened array of all the links
-  // this function should be recursive.
-  // return the array
-  let flattened = [];
-  for (let item of menuItems) {
-    flattened.push(item.link);
-    if (item.children) {
-       flattened = flattened.concat(flattenOmniItems(item.children));
-    }
-  }
-
-  // return flattened with duplicates removed
-  return [...new Set(flattened)];
-}
 
 
 test('Check that the deep array/object of onmiItems can be flattened and contains no duplicates', () => {
-
    const flattened = flattenOmniItems(omniItems);
   // It just so happens that the testfixtures/omniItems.textfixture.js has 28 unique links.
   expect(flattened.length).toEqual(28);
