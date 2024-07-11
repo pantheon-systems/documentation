@@ -1,5 +1,4 @@
 
-
 const flattenOmniItems = (menuItems) => {
   // loop over the omniItems and make a flattened array of all the links
   // this function should be recursive.

@@ -1,11 +1,4 @@
 import { expect, test } from 'vitest';
-// import {
-//   findSubMenuItemsToUse,
-//   getGuideDirectory,
-//   getOmniSidebarActiveSection,
-// } from './helpers';
-// import AllGuides from './testfixtures/allGuides.testfixture';
-// import guideDirectoryItems from './testfixtures/guideDirectoryItems.textfixture';
 import omniItems from './testfixtures/omniItems.textfixture';
 import { flattenOmniItems, calculateNumberOfPathsInMenu } from './reporting';
 import allPaths from './testfixtures/allPaths.testfixture';
