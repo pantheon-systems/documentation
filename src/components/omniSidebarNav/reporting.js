@@ -14,18 +14,46 @@ const flattenOmniItems = (menuItems) => {
   return [...new Set(flattened)];
 }
 
-const InWrittenPathOrExceptions = (linkPath, flattened, allowedExceptions = []) => {
+const InWrittenPathOrExceptions = (linkPath, flattened = [], allowedExceptions = []) => {
 
 
+  // check any of the exceptions are present in the linkPath
+  // if they are, return true
+  for (let exception of allowedExceptions) {
+    if (linkPath.includes(exception)) {
+      return true;
+    }
+  }
 
-
-  if (flattened.includes(linkPath) || allowedExceptions.includes(linkPath)) {
+  if (flattened.includes(linkPath)) {
     return true;
   }
   else {
     return false;
   }
 }
+
+const InMenuOrExceptions = (linkPath, flattened = [], allowedExceptions = []) => {
+
+
+  // check any of the exceptions are present in the linkPath
+  // if they are, return true
+  for (let exception of allowedExceptions) {
+    if (linkPath.includes(exception)) {
+      return true;
+    }
+  }
+
+  if (flattened.includes(linkPath)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+
 
 
 const calculateNumberOfPathsInMenu = (ArrayOfPaths, omniItems, allowedExceptions = []) => {
@@ -52,4 +80,4 @@ const calculateNumberOfPathsInMenu = (ArrayOfPaths, omniItems, allowedExceptions
   }
 }
 
-export { flattenOmniItems, calculateNumberOfPathsInMenu }
+export { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions }
