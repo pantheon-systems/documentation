@@ -10,7 +10,7 @@ import omniItems from './testfixtures/omniItems.textfixture';
 import allPaths from './testfixtures/allPaths.testfixture';
 // import activeSection from './testfixtures/activeSection.testfixture';
 
-const exceptions = ['https://certification.pantheon.io/'];
+const exceptions = ['https://certification.pantheon.io/', '/404.html'];
 
 
 function flattenOmniItems(menuItems) {
@@ -49,12 +49,12 @@ test('Check that all items in the flattened menu list are present in the list of
   }
 });
 
-function InWrittenPathOrExceptions(linkPath) {
+function InWrittenPathOrExceptions(linkPath, allowedExceptions = []) {
 
 
   const flattened = flattenOmniItems(omniItems);
 
-  if (flattened.includes(linkPath) || exceptions.includes(linkPath)) {
+  if (flattened.includes(linkPath) || allowedExceptions.includes(linkPath)) {
     return true;
   }
   else {
@@ -62,25 +62,36 @@ function InWrittenPathOrExceptions(linkPath) {
   }
 }
 
+function calculateNumberOfPathsInMenu(ArrayOfPaths, allowedExceptions = []) {
 
-test('Calculate the percentage of written paths that are not in the menu or exceptions', () => {
-  // merge allWrittenPaths and exceptions
-
-  const pathsInMenu = [];
-  const pathsNotInMenu = [];
+  const pathsInMenuOrExceptions = [];
+  const pathsNotInMenuOrExceptions = [];
   // Loop over flattened and check that each item is in allWrittenPaths
-  for (let linkPath of allPaths) {
+  for (let linkPath of ArrayOfPaths) {
 
-    if (InWrittenPathOrExceptions(linkPath)) {
-      pathsInMenu.push(linkPath);
-      console.log('in menu', linkPath);
+    if (InWrittenPathOrExceptions(linkPath, allowedExceptions)) {
+      pathsInMenuOrExceptions.push(linkPath);
     } else {
-      pathsNotInMenu.push(linkPath);
-      console.log('not in menu', linkPath);
+      pathsNotInMenuOrExceptions.push(linkPath);
+    }
+  }
+    const percentageNotInMenu = (pathsNotInMenuOrExceptions.length / allPaths.length) * 100;
+    return {
+      'pathsInMenuOrExceptions': pathsInMenuOrExceptions,
+      'pathsNotInMenuOrExceptions': pathsNotInMenuOrExceptions,
+      'percentageNotInMenu': percentageNotInMenu,
+      // Round up to the nearest whole number
+      'percentageNotInMenuRoundedUp': Math.ceil(percentageNotInMenu),
     }
   }
 
-  expect(pathsInMenu.length).toEqual(27);
-  expect(pathsNotInMenu.length).toEqual(62);
+test('Calculate the percentage of written paths that are not in the menu or exceptions', () => {
+  // merge allWrittenPaths and exceptions
+  const results = calculateNumberOfPathsInMenu(allPaths, exceptions);
+  console.log(results.percentageNotInMenu);
+  expect(results.pathsInMenuOrExceptions.length).toEqual(28);
+  expect(results.pathsNotInMenuOrExceptions.length).toEqual(55);
+  expect(results.percentageNotInMenuRoundedUp).toEqual(67);
+
 });
 

@@ -638,6 +638,8 @@ exports.onPostBuild = async ({ graphql, getNodes }) => {
 
   //console.log('pages', pages);
   //loop over pages and log the path
+  const pagePaths = pages.map(page => page.path);
+console.log('pagePaths', pagePaths);
   pages.forEach(page => {
     console.log('path', page.path);
   });
