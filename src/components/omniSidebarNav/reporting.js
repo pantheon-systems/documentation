@@ -62,7 +62,7 @@ const  eliminateExceptions = (allPaths, exceptions, RegExExceptions = []) =>  {
       }
     }
     for (let RegExException of RegExExceptions) {
-      console.log(RegExException);
+      //console.log(RegExException);
       if (path.match(RegExException)) {
         return false;
       }

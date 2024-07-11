@@ -9,7 +9,7 @@ import {
 } from './helpers.js';
 import allWrittenPaths from './all-written-paths.js';
 
-import { flattenOmniItems, calculateNumberOfPathsInMenu } from './reporting';
+import { flattenOmniItems, CalculateFilteredPathsInMenu, eliminateExceptions } from './reporting';
 
 // @todo, run prettier one more time on this directory before removing it from the PR.
 
@@ -25,12 +25,25 @@ const OmniSidebarNav = ({
 
 
 
-
   const exceptions = ['https://certification.pantheon.io/', '/404.html'];
+  const RegExExceptions = [
+    // a regular expression that matches all paths that contain the '/contributors/' with the preceding and following slashes as well as more characters after the slash
+    /.*\/contributors\/.*/,
+    /.*\/release-notes\/.*/,
+    /.*\/terminus\/commands\/.*/,
+  ];
 
-  const results = calculateNumberOfPathsInMenu(allWrittenPaths, OmniItems, exceptions);
+  const filteredWrittenPaths = eliminateExceptions(allWrittenPaths, exceptions, RegExExceptions);
+  const flattenedOmniItems = flattenOmniItems(OmniItems);
+  const results = CalculateFilteredPathsInMenu(filteredWrittenPaths, flattenedOmniItems);
+
+
+
+  // const results = calculateNumberOfPathsInMenu(allWrittenPaths, OmniItems, exceptions);
 
   console.log(results);
+
+
 
 
 
