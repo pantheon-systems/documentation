@@ -27,12 +27,6 @@ const getOmniItems = () => {
     },
   ];
 
-  fs.writeFile('OmniItems.txt', JSON.stringify(OmniItems, null, 2), (err) => {
-    if (err) throw err;
-    console.log('The file has been saved!');
-  });
-
-
   return OmniItems;
 };
 

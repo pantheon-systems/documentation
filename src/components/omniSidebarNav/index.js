@@ -7,6 +7,9 @@ import {
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
 } from './helpers.js';
+import allWrittenPaths from './all-written-paths.js';
+
+import { flattenOmniItems, calculateNumberOfPathsInMenu } from './reporting';
 
 // @todo, run prettier one more time on this directory before removing it from the PR.
 
@@ -17,6 +20,25 @@ const OmniSidebarNav = ({
   submenuPathToUse = '',
 }) => {
   const OmniItems = getOmniItems();
+
+
+
+
+
+
+  const exceptions = ['https://certification.pantheon.io/', '/404.html'];
+
+  const results = calculateNumberOfPathsInMenu(allWrittenPaths, OmniItems, exceptions);
+
+  console.log(results);
+
+
+
+
+
+
+
+
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
   // If the caller is asking for a specific submenu, use that directly.

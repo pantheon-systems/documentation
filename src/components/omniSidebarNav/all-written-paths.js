@@ -1,4 +1,5 @@
-[
+
+const allWrittenPaths = [
   "/",
   "/1-and-1",
   "/404.html",
@@ -1489,4 +1490,6 @@
   "/wordpress-known-issues",
   "/workflow-logs",
   "/workshops"
-]
+];
+
+export default allWrittenPaths;

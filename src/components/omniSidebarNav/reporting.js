@@ -52,4 +52,4 @@ const calculateNumberOfPathsInMenu = (ArrayOfPaths, omniItems, allowedExceptions
   }
 }
 
-export { flattenOmniItems, exceptions, calculateNumberOfPathsInMenu }
+export { flattenOmniItems, calculateNumberOfPathsInMenu }
