@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 import omniItems from './testfixtures/omniItems.textfixture';
-import { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions, eliminateExceptions } from './reporting';
+import { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions, eliminateExceptions, CalculateFilteredPathsInMenu } from './reporting';
 import allPaths from './testfixtures/allPaths.testfixture';
 import { Link } from 'gatsby';
 
@@ -27,32 +27,7 @@ test('Check that exceptions can be removed from the list of all paths', () => {
   expect(filteredWrittenPaths.length).toEqual(83);
 });
 
-function CalculateFilteredPathsInMenu(filteredWrittenPaths, flattenedOmniItems) {
 
-
-  // loop over all the filtered paths and check if they are in the menu
-  const pathsNotInMenu = [];
-  const pathsInMenu = [];
-  for (let linkPath of filteredWrittenPaths) {
-    if (!flattenedOmniItems.includes(linkPath)) {
-      pathsNotInMenu.push(linkPath);
-    }
-    else {
-      pathsInMenu.push(linkPath);
-    }
-  }
-
-  const percentageInMenu = (pathsInMenu.length / filteredWrittenPaths.length) * 100;
-
-  return {
-    'pathsInMenu': pathsInMenu,
-    'pathsNotInMenu': pathsNotInMenu,
-    'percentageInMenu': percentageInMenu,
-    // Round up to the nearest whole number
-    'percentageInMenuRoundedUp': Math.ceil(percentageInMenu),
-  }
-
-}
 
 
 // check that the percentage of unexceptioned paths not in the menu can be calculated
@@ -66,7 +41,6 @@ test('Check that the percentage of unexceptioned paths not in the menu can be ca
   // 83 - 28 +1 = 56
   expect(results.pathsNotInMenu.length).toEqual(56);
   expect(results.pathsInMenu.length).toEqual(27);
-//  expect(pathsNotInMenu.length).toEqual(56);
 
   expect(results.percentageInMenuRoundedUp).toEqual(33);
 });

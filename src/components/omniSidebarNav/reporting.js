@@ -98,4 +98,46 @@ const calculateNumberOfPathsInMenu = (ArrayOfPaths, omniItems, allowedExceptions
   }
 }
 
-export { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions, eliminateExceptions }
+
+
+
+
+
+
+
+
+const CalculateFilteredPathsInMenu = (filteredWrittenPaths, flattenedOmniItems) => {
+
+
+  // loop over all the filtered paths and check if they are in the menu
+  const pathsNotInMenu = [];
+  const pathsInMenu = [];
+  for (let linkPath of filteredWrittenPaths) {
+    if (!flattenedOmniItems.includes(linkPath)) {
+      pathsNotInMenu.push(linkPath);
+    }
+    else {
+      pathsInMenu.push(linkPath);
+    }
+  }
+
+  const percentageInMenu = (pathsInMenu.length / filteredWrittenPaths.length) * 100;
+
+  return {
+    'pathsInMenu': pathsInMenu,
+    'pathsNotInMenu': pathsNotInMenu,
+    'percentageInMenu': percentageInMenu,
+    // Round up to the nearest whole number
+    'percentageInMenuRoundedUp': Math.ceil(percentageInMenu),
+  }
+
+}
+
+
+
+
+
+
+
+
+export { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions, eliminateExceptions, CalculateFilteredPathsInMenu}
