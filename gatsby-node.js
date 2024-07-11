@@ -644,6 +644,15 @@ console.log('pagePaths', pagePaths);
     console.log('path', page.path);
   });
 
+  // const exceptions = ['https://certification.pantheon.io/', '/404.html'];
+  // const OmniItems = getOmniItems();
+  // const menuReport = calculateNumberOfPathsInMenu(pagePaths, OmniItems, exceptions);
+  // console.log('menuReport', menuReport);
+
+  fs.writeFile('all-written-paths.txt', JSON.stringify(pagePaths, null, 2), (err) => {
+    if (err) throw err;
+    console.log('The file has been saved!');
+  });
 
 
   // // Read the menu links from your menu file (assuming it's a JSON file)

@@ -15,4 +15,42 @@ const flattenOmniItems = (menuItems) => {
   return [...new Set(flattened)];
 }
 
-export { flattenOmniItems }
+const InWrittenPathOrExceptions = (linkPath, flattened, allowedExceptions = []) => {
+
+
+
+
+  if (flattened.includes(linkPath) || allowedExceptions.includes(linkPath)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+
+const calculateNumberOfPathsInMenu = (ArrayOfPaths, omniItems, allowedExceptions = []) => {
+
+  const pathsInMenuOrExceptions = [];
+  const pathsNotInMenuOrExceptions = [];
+  const flattened = flattenOmniItems(omniItems);
+  // Loop over flattened and check that each item is in allWrittenPaths
+  for (let linkPath of ArrayOfPaths) {
+
+    if (InWrittenPathOrExceptions(linkPath, flattened, allowedExceptions)) {
+      pathsInMenuOrExceptions.push(linkPath);
+    } else {
+      pathsNotInMenuOrExceptions.push(linkPath);
+    }
+  }
+  const percentageNotInMenu = (pathsNotInMenuOrExceptions.length / ArrayOfPaths.length) * 100;
+  return {
+    'pathsInMenuOrExceptions': pathsInMenuOrExceptions,
+    'pathsNotInMenuOrExceptions': pathsNotInMenuOrExceptions,
+    'percentageNotInMenu': percentageNotInMenu,
+    // Round up to the nearest whole number
+    'percentageNotInMenuRoundedUp': Math.ceil(percentageNotInMenu),
+  }
+}
+
+export { flattenOmniItems, exceptions, calculateNumberOfPathsInMenu }
