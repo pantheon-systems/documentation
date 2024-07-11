@@ -206,7 +206,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
     initialLoadRef.current = false
   },[])
 
-  
+
   // Debounce search input.
   const debouncedHandleInputChange = debounce(handleInputChange, 300)
 
@@ -258,7 +258,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
             }}
           >
             <div
-              className="pds-input-field__input-wrapper pds-spacing-mar-block-end-xl"
+              className="pds-input-field pds-input-field--text pds-spacing-mar-block-end-xl"
               style={{
                 flexGrow: "2",
               }}
