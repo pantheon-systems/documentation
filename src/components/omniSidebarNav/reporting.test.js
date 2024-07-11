@@ -33,8 +33,8 @@ test('Calculate the percentage of written paths that are not in the menu or exce
   const results = calculateNumberOfPathsInMenu(allPaths, omniItems, exceptions);
   console.log(results.percentageNotInMenu);
   expect(results.pathsInMenuOrExceptions.length).toEqual(28);
-  expect(results.pathsNotInMenuOrExceptions.length).toEqual(55);
-  expect(results.percentageNotInMenuRoundedUp).toEqual(67);
+  expect(results.pathsNotInMenuOrExceptions.length).toEqual(65);
+  expect(results.percentageNotInMenuRoundedUp).toEqual(70);
 
 });
 
