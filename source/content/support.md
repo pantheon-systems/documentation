@@ -34,9 +34,9 @@ Pantheon offers multiple options to help you in building the best sites possible
 
   </Product>
 
-  <Product title={"Pantheon Community"} link={"https://discuss.pantheon.io"}>
+  <Product title={"Pantheon Community"} link={"https://pantheon.io/developer-community"}>
 
-  Share best practices with other experienced and active users of Pantheon's platform.
+  Share best practices with other experienced and active users of Pantheon's platform in Slack and on Zoom.
 
   </Product>
 
