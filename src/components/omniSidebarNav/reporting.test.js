@@ -27,12 +27,10 @@ test('Check that exceptions can be removed from the list of all paths', () => {
   expect(filteredWrittenPaths.length).toEqual(83);
 });
 
-// check that the percentage of unexceptioned paths not in the menu can be calculated
-test('Check that the percentage of unexceptioned paths not in the menu can be calculated', () => {
-  const filteredWrittenPaths = eliminateExceptions(allPaths, exceptions, RegExExceptions);
-  const flattenedOmniItems = flattenOmniItems(omniItems);
+function CalculateFilteredPathsInMenu(filteredWrittenPaths, flattenedOmniItems) {
 
-// loop over all the filtered paths and check if they are in the menu
+
+  // loop over all the filtered paths and check if they are in the menu
   const pathsNotInMenu = [];
   const pathsInMenu = [];
   for (let linkPath of filteredWrittenPaths) {
@@ -43,14 +41,34 @@ test('Check that the percentage of unexceptioned paths not in the menu can be ca
       pathsInMenu.push(linkPath);
     }
   }
-  // 83 filtered paths - 28 paths in the menu + 1 path that is in the menu but exteral to the site
-  // 83 - 28 +1 = 56
-  expect(pathsNotInMenu.length).toEqual(56);
-  expect(pathsInMenu.length).toEqual(27);
-//  expect(pathsNotInMenu.length).toEqual(56);
 
   const percentageInMenu = (pathsInMenu.length / filteredWrittenPaths.length) * 100;
-  expect(Math.ceil(percentageInMenu)).toEqual(33);
+
+  return {
+    'pathsInMenu': pathsInMenu,
+    'pathsNotInMenu': pathsNotInMenu,
+    'percentageInMenu': percentageInMenu,
+    // Round up to the nearest whole number
+    'percentageInMenuRoundedUp': Math.ceil(percentageInMenu),
+  }
+
+}
+
+
+// check that the percentage of unexceptioned paths not in the menu can be calculated
+test('Check that the percentage of unexceptioned paths not in the menu can be calculated', () => {
+
+  const filteredWrittenPaths = eliminateExceptions(allPaths, exceptions, RegExExceptions);
+  const flattenedOmniItems = flattenOmniItems(omniItems);
+  const results = CalculateFilteredPathsInMenu(filteredWrittenPaths, flattenedOmniItems);
+
+  // 83 filtered paths - 28 paths in the menu + 1 path that is in the menu but exteral to the site
+  // 83 - 28 +1 = 56
+  expect(results.pathsNotInMenu.length).toEqual(56);
+  expect(results.pathsInMenu.length).toEqual(27);
+//  expect(pathsNotInMenu.length).toEqual(56);
+
+  expect(results.percentageInMenuRoundedUp).toEqual(33);
 });
 
 
