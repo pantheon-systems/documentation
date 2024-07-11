@@ -1,18 +1,72 @@
 import { expect, test } from 'vitest';
 import omniItems from './testfixtures/omniItems.textfixture';
-import { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions } from './reporting';
+import { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions, eliminateExceptions } from './reporting';
 import allPaths from './testfixtures/allPaths.testfixture';
-// import activeSection from './testfixtures/activeSection.testfixture';
+import { Link } from 'gatsby';
+
 
 
 const exceptions = ['https://certification.pantheon.io/', '/404.html'];
-
+const RegExExceptions = [
+  // a regular expression that matches all paths that contain the '/contributors/' with the preceding and following slashes as well as more characters after the slash
+  /.*\/contributors\/.*/,
+];
 
 test('Check that the deep array/object of onmiItems can be flattened and contains no duplicates', () => {
    const flattened = flattenOmniItems(omniItems);
   // It just so happens that the testfixtures/omniItems.textfixture.js has 28 unique links.
   expect(flattened.length).toEqual(28);
 });
+
+// Check that exceptions can be removed from the list of all paths
+test('Check that exceptions can be removed from the list of all paths', () => {
+  const filteredWrittenPaths = eliminateExceptions(allPaths, exceptions, RegExExceptions);
+  expect(filteredWrittenPaths).not.toContain('/404.html');
+  expect(filteredWrittenPaths).not.toContain('/contributors/alexfornuto');
+  expect(filteredWrittenPaths).not.toContain('/contributors/');
+  expect(filteredWrittenPaths.length).toEqual(83);
+});
+
+// check that the percentage of unexceptioned paths not in the menu can be calculated
+test('Check that the percentage of unexceptioned paths not in the menu can be calculated', () => {
+  const filteredWrittenPaths = eliminateExceptions(allPaths, exceptions, RegExExceptions);
+  const flattenedOmniItems = flattenOmniItems(omniItems);
+
+// loop over all the filtered paths and check if they are in the menu
+  const pathsNotInMenu = [];
+  const pathsInMenu = [];
+  for (let linkPath of filteredWrittenPaths) {
+    if (!flattenedOmniItems.includes(linkPath)) {
+      pathsNotInMenu.push(linkPath);
+    }
+    else {
+      pathsInMenu.push(linkPath);
+    }
+  }
+  // 83 filtered paths - 28 paths in the menu + 1 path that is in the menu but exteral to the site
+  // 83 - 28 +1 = 56
+  expect(pathsNotInMenu.length).toEqual(56);
+  expect(pathsInMenu.length).toEqual(27);
+//  expect(pathsNotInMenu.length).toEqual(56);
+
+  const percentageInMenu = (pathsInMenu.length / filteredWrittenPaths.length) * 100;
+  expect(Math.ceil(percentageInMenu)).toEqual(33);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 test('check that the exceptions to menu checking are processed correctly', () => {
   const flattened = flattenOmniItems(omniItems);
@@ -21,67 +75,17 @@ test('check that the exceptions to menu checking are processed correctly', () =>
 
   // A random path that is not present. Especially when the the other args are empty.
   expect(InMenuOrExceptions('/asdfasdfasdf')).toEqual(false);
-
-  //
   expect(InMenuOrExceptions('/certification', flattened, exceptions)).toEqual(true);
   expect(InMenuOrExceptions('/certification', flattened, exceptions)).toEqual(true);
 });
 
 
-const RegExExceptions = [
 
-  //'*contibutors*'
-
-  // a regular expression that matches all paths that contain the '/contributors/' with the preceding and following slashes as well as more characters after the slash
-  /.*\/contributors\/.*/,
-];
 
 // I want the percentage of written paths (that are not exceptions) that are in the menu.
 
-function eliminateExceptions(allPaths, exceptions, RegExExceptions = []) {
-  return allPaths.filter(path => {
-    for (let exception of exceptions) {
-      if (path.includes(exception)) {
-        return false;
-      }
-    }
-    for (let RegExException of RegExExceptions) {
-      console.log(RegExException);
-      if (path.match(RegExException)) {
-        return false;
-      }
-    }
-    return true;
-  });
-}
 
 
-test('test the set of all paths can be reduced by eliminating exceptions', () => {
-  // It just so happens that the testfixtures/omniItems.textfixture.js has 28 unique links.
-  const filteredWrittenPaths = eliminateExceptions(allPaths, exceptions, RegExExceptions);
-
-  console.log(filteredWrittenPaths);
-
-  expect(filteredWrittenPaths).not.toContain('/contributors/alexfornuto');
-  expect(filteredWrittenPaths).not.toContain('/contributors/');
-
-
-  expect(filteredWrittenPaths.length).toEqual(83);
-
-});
-
-test('asdfasdfasfd', () => {
-  // It just so happens that the testfixtures/omniItems.textfixture.js has 28 unique links.
-
-  const flattened = flattenOmniItems(omniItems);
-
-  // A random path that is not present. Especially when the the other args are empty.
-  expect(InMenuOrExceptions('/asdfasdfasdf')).toEqual(false);
-
-  //
-  expect(InMenuOrExceptions('/certification', flattened, exceptions)).toEqual(true);
-  expect(InMenuOrExceptions('/certification', flattened, exceptions)).toEqual(true);
-});
 
 
 

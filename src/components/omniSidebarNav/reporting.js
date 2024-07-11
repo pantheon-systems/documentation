@@ -54,6 +54,24 @@ const InMenuOrExceptions = (linkPath, flattened = [], allowedExceptions = []) =>
 
 
 
+const  eliminateExceptions = (allPaths, exceptions, RegExExceptions = []) =>  {
+  return allPaths.filter(path => {
+    for (let exception of exceptions) {
+      if (path.includes(exception)) {
+        return false;
+      }
+    }
+    for (let RegExException of RegExExceptions) {
+      console.log(RegExException);
+      if (path.match(RegExException)) {
+        return false;
+      }
+    }
+    return true;
+  });
+}
+
+
 
 
 const calculateNumberOfPathsInMenu = (ArrayOfPaths, omniItems, allowedExceptions = []) => {
@@ -80,4 +98,4 @@ const calculateNumberOfPathsInMenu = (ArrayOfPaths, omniItems, allowedExceptions
   }
 }
 
-export { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions }
+export { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions, eliminateExceptions }
