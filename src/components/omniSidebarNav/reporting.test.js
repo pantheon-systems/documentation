@@ -33,7 +33,7 @@ function flattenOmniItems(menuItems) {
 test('Check that the deep array/object of onmiItems can be flattened and contains no duplicates', () => {
 
    const flattened = flattenOmniItems(omniItems);
-  // It just so happens that the testfixtures/omniItems.textfixture.js has 31 links.
+  // It just so happens that the testfixtures/omniItems.textfixture.js has 28 unique links.
   expect(flattened.length).toEqual(28);
 });
 
@@ -49,13 +49,38 @@ test('Check that all items in the flattened menu list are present in the list of
   }
 });
 
-test('Calculate the percentage of written paths that are not in the menu or exceptions', () => {
+function InWrittenPathOrExceptions(linkPath) {
+
+
   const flattened = flattenOmniItems(omniItems);
-  // merge allWrittenPaths and exceptions
-  const allWrittenPathsAndExceptions = allPaths.concat(exceptions);
-  // Loop over flattened and check that each item is in allWrittenPaths
-  for (let item of flattened) {
-    expect(allWrittenPathsAndExceptions).toContain(item);
+
+  if (flattened.includes(linkPath) || exceptions.includes(linkPath)) {
+    return true;
   }
+  else {
+    return false;
+  }
+}
+
+
+test('Calculate the percentage of written paths that are not in the menu or exceptions', () => {
+  // merge allWrittenPaths and exceptions
+
+  const pathsInMenu = [];
+  const pathsNotInMenu = [];
+  // Loop over flattened and check that each item is in allWrittenPaths
+  for (let linkPath of allPaths) {
+
+    if (InWrittenPathOrExceptions(linkPath)) {
+      pathsInMenu.push(linkPath);
+      console.log('in menu', linkPath);
+    } else {
+      pathsNotInMenu.push(linkPath);
+      console.log('not in menu', linkPath);
+    }
+  }
+
+  expect(pathsInMenu.length).toEqual(27);
+  expect(pathsNotInMenu.length).toEqual(62);
 });
 

@@ -42,8 +42,7 @@ const allPaths = [
   '/cloudflare',
   '/code-of-conduct',
   '/composer',
-
-  '/guides/decoupled/drupal-backend-starters',
+'/guides/decoupled/drupal-backend-starters',
 '/guides/decoupled/drupal-backend-starters/manage-settings',
 '/guides/decoupled/drupal-backend-starters/build-hooks',
 '/guides/decoupled/drupal-backend-starters/caching',
