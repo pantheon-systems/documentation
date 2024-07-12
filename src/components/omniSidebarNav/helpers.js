@@ -81,6 +81,10 @@ const findSubMenuItemsToUse = function (topLevelParentPath, NestedItems) {
  * @returns {Object} - The guide directory object with its title, link, and children.
  */
 const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
+
+
+  console.log(guideDirectory)
+  //console.log(AllGuides.allGuides.edges);
   const ChildItems = [];
   var guideTitle = '';
   for (let item of AllGuides.allGuides.edges) {
