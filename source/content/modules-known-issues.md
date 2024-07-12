@@ -401,7 +401,7 @@ ___
 
 **Solution**: Apply the following patches (which have been tested and validated by Pantheon), based on your site's PHP version, to solve for this issue:
 * [Oauth Permission Patch - Required to resolve Pantheon known issues (PHP 8.0+)](https://patch-diff.githubusercontent.com/raw/pantheon-systems/oauth2-server/pull/1.patch)
-* [Oauth Permission Patch - Required to resolve Pantheon known issues (PHP 7.4)](https://patch-diff.githubusercontent.com/raw/lcatlett/oauth2-server/pull/2.patch)
+* [Oauth Permission Patch - Required to resolve Pantheon known issues (PHP 7.4)](https://patch-diff.githubusercontent.com/raw/pantheon-systems/oauth2-server/pull/2.patch)
 
 ___
 
