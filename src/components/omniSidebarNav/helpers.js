@@ -100,7 +100,8 @@ const getGuideDirectory = (guideDirectory, overrideGuideTitle = '', AllGuides = 
   }
 
   return {
-    link: '/' + guideDirectory,
+    link: ChildItems.length > 0 ? ChildItems[0].link : '/' + guideDirectory,
+    // link: '/' + guideDirectory,
     // If there is an overrideGuideTitle, use that instead of the guideTitle
     title: overrideGuideTitle || guideTitle,
     children: ChildItems,

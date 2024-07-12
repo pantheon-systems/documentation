@@ -63,7 +63,7 @@ guided                   manual-d8-composer-to-d8 platformsh               wpeng
         getGuideDirectory('guides/drupal/drupal-hosted-createempty-md', 'drupal-hosted-createempty-md'),
         getGuideDirectory('guides/drupal/drupal-hosted-md', 'drupal-hosted-md'),
         getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
-        getGuideDirectory('guides/drupal-unhosted-composer', 'unhosted-composer'),
+        getGuideDirectory('guides/drupal/drupal-unhosted-composer', 'unhosted-composer'),
         getGuideDirectory('guides/drupal/drupal-hosted', 'drupal-hosted'),
         getGuideDirectory('guides/integrated-composer'),
 
