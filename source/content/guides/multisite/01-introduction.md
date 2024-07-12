@@ -35,12 +35,18 @@ We do not support uses of WordPress Multisite that run functionally-different or
 
 - Software as a service (SAAS) products
 - Agencies using one WordPress installation to support several customers
-- [WordPress Multi-Network](https://wordpress.org/plugins/wp-multi-network/) installations where multiple domains can be added aside from subdomains and subdirectories.
+- A network of one or more multisites on a single instance, commonly achieved via plugins like [WordPress Multi-Network](https://wordpress.org/plugins/wp-multi-network/).
+  - The supported alternative for this use case is to maintain a Custom Upstream that is based on Pantheon's WordPress Multisite framework, see the following section.
 
 ## Request a WordPress Multisite
-WordPress Multisite requires a special configuration that is only available to select customers. Access to WordPress Multisite requires a Gold, Platinum, or Diamond level [Workspace plan](https://pantheon.io/plans/pricing). A Pantheon employee must create a custom WordPress Multisite upstream in your Workspace for you to be able to create Multisites. Existing WordPress sites cannot be converted to a multisite, however they can be [migrated](/migrate-wordpress-multisite).
+WordPress Multisite requires a special configuration that is only available to select customers. Access to WordPress Multisite requires a Gold, Platinum, or Diamond level [Workspace plan](https://pantheon.io/plans/pricing).
 
-Reach out to your account manager to request that a new WordPress Multisite upstream be created for you. Once an employee of Pantheon has created the upstream, you will be able to use it create Multisites in your org. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
+By default, Pantheon employees must create new Multisites on your behalf. Reach out to your account manager to request site creation for a new WordPress Multisite.
+
+If you want to create new WordPress Multisites self-serve and on-demand in the Pantheon Dashboard, reach out to your account manager and request a [Custom Upstream](/guides/custom-upstream) for your workspace based on Pantheon's WordPress Multisite framework.
+
+If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
+
 
  ## More Resources
 
