@@ -33,13 +33,30 @@ const getOmniItems = () => {
 
     {
       link: '/asdf',
-      title: 'competitors',
+      title: 'Migrating and upgrading',
       children: [
-        // getGuideDirectory('guides/pagely'),
-        // getGuideDirectory('guides/platformsh'),
-        // getGuideDirectory('guides/kinsta'),
-        // getGuideDirectory('guides/wpengine'),
-        // getGuideDirectory('guides/wordpressvip'),
+        getGuideDirectory('guides/pagely'),
+        getGuideDirectory('guides/platformsh'),
+        getGuideDirectory('guides/kinsta'),
+        getGuideDirectory('guides/wpengine'),
+        getGuideDirectory('guides/wordpressvip'),
+        // Needs a title override
+        getGuideDirectory('guides/drupal-hosted-createcustom'),
+
+        // needs a title override
+        getGuideDirectory('guides/drupal-hosted-btworkflow'),
+
+        getGuideDirectory('guides/drupal-hosted-createbt'),
+
+        getGuideDirectory('guides/drupal-hosted-createdashboard-set8'),
+        getGuideDirectory('guides/drupal-hosted-createempty-md'),
+        getGuideDirectory('guides/drupal-hosted-md'),
+        getGuideDirectory('guides/drupal-unhosted'),
+        getGuideDirectory('guides/guided'),
+        getGuideDirectory('guides/integrated-composer'),
+        getGuideDirectory('guides/manual-d8-composer-to-d8'),
+
+
       ],
     },
 
@@ -49,15 +66,15 @@ const getOmniItems = () => {
       title: 'Ops Platform',
       children: [
         getGuideDirectory('guides/php'),
-        getGuideDirectory('guides/logs-pantheon'),
-        getGuideDirectory('guides/filesystem'),
-        getGuideDirectory('guides/global-cdn'),
+        getGuideDirectory('guides/logs-pantheon', 'Log files'),
+        getGuideDirectory('guides/filesystem', 'Filesystem'),
+        getGuideDirectory('guides/global-cdn', 'Global CDN'),
         getGuideDirectory('guides/agcdn'),
         // delete this guide?
         getGuideDirectory('guides/fastly-pantheon'),
         getGuideDirectory('guides/backups'),
-        getGuideDirectory('guides/disaster-recovery'),
-        getGuideDirectory('guides/edge-integrations'),
+        getGuideDirectory('guides/disaster-recovery', 'Disaster Recovery Playbook'),
+        getGuideDirectory('guides/edge-integrations', 'Edge Integrations'),
         getGuideDirectory('guides/errors-and-server-responses'),
         getGuideDirectory('guides/environment-configuration'),
         getGuideDirectory('guides/drupal'),
@@ -68,8 +85,8 @@ const getOmniItems = () => {
         getGuideDirectory('guides/mariadb-mysql'),
         getGuideDirectory('guides/platform-considerations'),
         getGuideDirectory('guides/frontend-performance'),
-        getGuideDirectory('guides/woocommerce'),
-        getGuideDirectory('guides/multisite'),
+        getGuideDirectory('guides/woocommerce', "WooCommerce"),
+        getGuideDirectory('guides/multisite', "WordPress Multisite"),
 
       ],
     },
@@ -79,20 +96,28 @@ const getOmniItems = () => {
       link: '/develop',
       title: 'Development workflows',
       children: [
-        getGuideDirectory('guides/git'),
+        getGuideDirectory('guides/git', "Git"),
         getGuideDirectory('guides/multidev'),
-        getGuideDirectory('guides/new-relic'),
-        getGuideDirectory('guides/wordpress-composer'),
-        getGuideDirectory('guides/sftp'),
-        getGuideDirectory('guides/wp-cli'),
-        getGuideDirectory('guides/drush'),
-        getGuideDirectory('guides/quicksilver'),
-        getGuideDirectory('guides/local-development'),
+        getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
+        getGuideDirectory('guides/wordpress-composer', 'WordPress and Composer'),
+        getGuideDirectory('guides/sftp', 'SFTP'),
+        getGuideDirectory('guides/wp-cli', 'WP-CLI'),
+        getGuideDirectory('guides/drush', 'Drush (the Drupal CLI)'),
+        getGuideDirectory('guides/quicksilver', 'Quicksilver Workflow Hooks'),
+        getGuideDirectory('guides/local-development', 'Local Development'),
         // maybe move this to a "tutorial" section
-        getGuideDirectory('guides/wordpress-git'),
+        getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
+
+
+
+        //
+
         //getGuideDirectory('integrated-composer'),
       ],
     },
+
+
+
 
 
      {

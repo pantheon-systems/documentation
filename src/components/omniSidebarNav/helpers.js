@@ -80,7 +80,7 @@ const findSubMenuItemsToUse = function (topLevelParentPath, NestedItems) {
  * @param {Object} [AllGuides=allGuides()] - The object containing all the guides.
  * @returns {Object} - The guide directory object with its title, link, and children.
  */
-const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
+const getGuideDirectory = (guideDirectory, overrideGuideTitle = '', AllGuides = allGuides()) => {
 
 
   console.log(guideDirectory)
@@ -101,7 +101,8 @@ const getGuideDirectory = (guideDirectory, AllGuides = allGuides()) => {
 
   return {
     link: '/' + guideDirectory,
-    title: guideTitle,
+    // If there is an overrideGuideTitle, use that instead of the guideTitle
+    title: overrideGuideTitle || guideTitle,
     children: ChildItems,
   };
 };
