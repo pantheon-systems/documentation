@@ -35,26 +35,37 @@ const getOmniItems = () => {
       link: '/asdf',
       title: 'Migrating and upgrading',
       children: [
-        getGuideDirectory('guides/pagely'),
-        getGuideDirectory('guides/platformsh'),
-        getGuideDirectory('guides/kinsta'),
-        getGuideDirectory('guides/wpengine'),
-        getGuideDirectory('guides/wordpressvip'),
+
+        /*
+
+acquia                   kinsta                   pagely                   wordpressvip
+guided                   manual-d8-composer-to-d8 platformsh               wpengine
+        */
+
+        getGuideDirectory('guides/migrate/acquia', 'Acquia'),
+        getGuideDirectory('guides/migrate/kinsta', 'Kinsta'),
+        getGuideDirectory('guides/migrate/pagely', 'Pagely'),
+        getGuideDirectory('guides/migrate/wordpressvip', 'WordPress VIP'),
+        getGuideDirectory('guides/migrate/guided', 'Guided Migration'),
+        getGuideDirectory('guides/migrate/manual-d8-composer-to-d8', 'Manual d8 to d8'),
+        getGuideDirectory('guides/migrate/platformsh', 'Platform.sh'),
+        getGuideDirectory('guides/migrate/wpengine', 'WP Engine'),
+
         // Needs a title override
-        getGuideDirectory('guides/drupal-hosted-createcustom'),
+        getGuideDirectory('guides/drupal/drupal-hosted-createcustom', 'drupal-hosted-createcustom'),
 
         // needs a title override
-        getGuideDirectory('guides/drupal-hosted-btworkflow'),
+        getGuideDirectory('guides/drupal/drupal-hosted-btworkflow', 'drupal-hosted-btworkflow'),
 
-        getGuideDirectory('guides/drupal-hosted-createbt'),
+        getGuideDirectory('guides/drupal/drupal-hosted-createbt', 'drupal-hosted-createbt'),
 
-        getGuideDirectory('guides/drupal-hosted-createdashboard-set8'),
-        getGuideDirectory('guides/drupal-hosted-createempty-md'),
-        getGuideDirectory('guides/drupal-hosted-md'),
-        getGuideDirectory('guides/drupal-unhosted'),
-        getGuideDirectory('guides/guided'),
+        getGuideDirectory('guides/drupal/drupal-hosted-createdashboard-set8', 'drupal-hosted-createdashboard-set8'),
+        getGuideDirectory('guides/drupal/drupal-hosted-createempty-md', 'drupal-hosted-createempty-md'),
+        getGuideDirectory('guides/drupal/drupal-hosted-md', 'drupal-hosted-md'),
+        getGuideDirectory('guides/drupal/drupal-unhosted', 'unhosted???'),
+        getGuideDirectory('guides/drupal-unhosted-composer', 'unhosted-composer'),
+        getGuideDirectory('guides/drupal/drupal-hosted', 'drupal-hosted'),
         getGuideDirectory('guides/integrated-composer'),
-        getGuideDirectory('guides/manual-d8-composer-to-d8'),
 
 
       ],
@@ -97,6 +108,7 @@ const getOmniItems = () => {
       title: 'Development workflows',
       children: [
         getGuideDirectory('guides/git', "Git"),
+
         getGuideDirectory('guides/multidev'),
         getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
         getGuideDirectory('guides/wordpress-composer', 'WordPress and Composer'),
@@ -107,7 +119,7 @@ const getOmniItems = () => {
         getGuideDirectory('guides/local-development', 'Local Development'),
         // maybe move this to a "tutorial" section
         getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
-
+        getGuideDirectory('guides/build-tools', "build tools"),
 
 
         //
@@ -122,7 +134,7 @@ const getOmniItems = () => {
 
      {
        link: '/manage',
-       title: 'account-management',
+       title: 'Account Management',
        children: [
      getGuideDirectory('guides/account-mgmt/account'),
          getGuideDirectory('guides/account-mgmt/billing'),
@@ -131,14 +143,16 @@ const getOmniItems = () => {
          getGuideDirectory('guides/account-mgmt/workspace-sites-teams'),
         getGuideDirectory('guides/enterprise-billing-center'),
     getGuideDirectory('guides/sso'),
-         getGuideDirectory('guides/wordpress-google-sso'),
-    getGuideDirectory('guides/support'),
+         getGuideDirectory('guides/wordpress-google-sso', 'WP SAML Auth'),
+    getGuideDirectory('guides/support', 'Support'),
         getGuideDirectory('guides/professional-services'),
-        getGuideDirectory('guides/filesystem'),
+
          getGuideDirectory('guides/domains'),
          getGuideDirectory('guides/custom-upstream'),
          getGuideDirectory('guides/secure-development'),
          getGuideDirectory('guides/autopilot'),
+         getGuideDirectory('guides/autopilot-custom-upstream'),
+
 
        ],
      },
