@@ -25,7 +25,10 @@ const OmniSidebarNav = ({
 
 
 
-  const exceptions = ['https://certification.pantheon.io/', '/404.html'];
+  const exceptions = ['https://certification.pantheon.io/',
+    '/404.html',
+  '/404/',
+  ];
   const RegExExceptions = [
     // a regular expression that matches all paths that contain the '/contributors/' with the preceding and following slashes as well as more characters after the slash
     /.*\/contributors\/.*/,

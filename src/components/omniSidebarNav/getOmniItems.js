@@ -7,6 +7,51 @@ import { getGuideDirectory } from './helpers';
  */
 const getOmniItems = () => {
   const OmniItems = [
+   // about docs
+   // /contribute
+
+// site serving infrastructure
+// /guides/filesystem
+// /guides/global-cdn
+// /guides/php
+
+
+
+
+
+  // Extending Pantheon
+  // /guides/quicksilver
+    // /guides/build-tools
+    // /guides/terminus
+    // /guides/wp-cli
+
+
+// DNS providers  dns-providers
+// 1-and-1
+
+    {
+      link: '/platform',
+      title: 'Ops Platform',
+      children: [
+        getGuideDirectory('guides/php'),
+        getGuideDirectory('guides/filesystem'),
+
+      ],
+    },
+
+
+    {
+      link: '/develop',
+      title: 'Development workflows',
+      children: [
+        getGuideDirectory('guides/git'),
+        getGuideDirectory('guides/multidev'),
+        getGuideDirectory('guides/new-relic'),
+        getGuideDirectory('guides/sftp'),
+        getGuideDirectory('guides/wp-cli'),
+      ],
+    },
+
     {
       link: '/guides/decoupled',
       title: 'Front-End Sites and Starter Kits',
