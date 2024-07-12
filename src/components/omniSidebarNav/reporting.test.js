@@ -1,8 +1,7 @@
 import { expect, test } from 'vitest';
 import omniItems from './testfixtures/omniItems.textfixture';
-import { flattenOmniItems, calculateNumberOfPathsInMenu, InMenuOrExceptions, eliminateExceptions, CalculateFilteredPathsInMenu } from './reporting';
+import { flattenOmniItems, InMenuOrExceptions, eliminateExceptions, CalculateFilteredPathsInMenu } from './reporting';
 import allPaths from './testfixtures/allPaths.testfixture';
-import { Link } from 'gatsby';
 
 
 
@@ -28,8 +27,6 @@ test('Check that exceptions can be removed from the list of all paths', () => {
 });
 
 
-
-
 // check that the percentage of unexceptioned paths not in the menu can be calculated
 test('Check that the percentage of unexceptioned paths not in the menu can be calculated', () => {
 
@@ -46,41 +43,15 @@ test('Check that the percentage of unexceptioned paths not in the menu can be ca
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 test('check that the exceptions to menu checking are processed correctly', () => {
   const flattened = flattenOmniItems(omniItems);
   // It just so happens that the testfixtures/omniItems.textfixture.js has 28 unique links.
-
 
   // A random path that is not present. Especially when the the other args are empty.
   expect(InMenuOrExceptions('/asdfasdfasdf')).toEqual(false);
   expect(InMenuOrExceptions('/certification', flattened, exceptions)).toEqual(true);
   expect(InMenuOrExceptions('/certification', flattened, exceptions)).toEqual(true);
 });
-
-
-
-
-// I want the percentage of written paths (that are not exceptions) that are in the menu.
-
-
-
-
-
-
 
 test('Check that all items in the flattened menu list are present in the list of all written paths', () => {
   const flattened = flattenOmniItems(omniItems);
@@ -92,23 +63,3 @@ test('Check that all items in the flattened menu list are present in the list of
     expect(allWrittenPathsAndExceptions).toContain(item);
   }
 });
-
-
-
-const results = calculateNumberOfPathsInMenu(allPaths, omniItems, exceptions);
-
-test('Calculate the percentage of written paths that are not in the menu or exceptions', () => {
-  // merge allWrittenPaths and exceptions
-  console.log(results.percentageNotInMenu);
-  expect(results.pathsInMenuOrExceptions.length).toEqual(28);
-  expect(results.pathsNotInMenuOrExceptions.length).toEqual(65);
-  expect(results.percentageNotInMenuRoundedUp).toEqual(70);
-});
-
-// test('Check that specific contributors are filtered out based on matching', () => {
-//   // merge allWrittenPaths and exceptions
-//   console.log(results.pathsNotInMenuOrExceptions);
-
-//   expect(results.pathsNotInMenuOrExceptions).not.toContain('/contributors/alexfornuto');
-// });
-
