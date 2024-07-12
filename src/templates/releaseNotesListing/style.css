@@ -25,7 +25,7 @@
 .rn-popover-categories .pds-popover__container{
   max-width: 100%;
   padding: 40px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .rn-popover-tigger-and-tags{
@@ -83,4 +83,15 @@
 .rn-pagination-controls button:disabled{
   opacity: .5;
   cursor: default;
+}
+
+.rss-feed-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.rss-feed-link-icon{
+  color: var(--pds-color-social-rss);
 }
