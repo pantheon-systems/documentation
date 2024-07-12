@@ -45,6 +45,8 @@ By default, Pantheon employees must create new Multisites on your behalf. Reach 
 
 If you want to create new WordPress Multisites self-serve and on-demand in the Pantheon Dashboard, reach out to your account manager and request a [Custom Upstream](/guides/custom-upstream) for your workspace based on Pantheon's WordPress Multisite framework.
 
+Existing WordPress sites cannot be converted to a multisite, however they can be [migrated](/migrate-wordpress-multisite).
+
 If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).
 
 
