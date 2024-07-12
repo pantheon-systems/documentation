@@ -35,6 +35,22 @@ const getOmniItems = () => {
       children: [
         getGuideDirectory('guides/php'),
         getGuideDirectory('guides/filesystem'),
+        getGuideDirectory('guides/agcdn'),
+        getGuideDirectory('guides/backups'),
+        getGuideDirectory('guides/disaster-recovery'),
+        getGuideDirectory('guides/edge-integrations'),
+        getGuideDirectory('guides/environment-configuration'),
+
+      ],
+    },
+
+    {
+      link: '/manage',
+      title: 'account-management',
+      children: [
+        getGuideDirectory('guides/account-mgmt'),
+        getGuideDirectory('guides/enterprise-billing-center'),
+        //getGuideDirectory('guides/filesystem'),
 
       ],
     },
