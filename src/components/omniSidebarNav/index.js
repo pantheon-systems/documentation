@@ -33,6 +33,7 @@ const OmniSidebarNav = ({
     // a regular expression that matches all paths that contain the '/contributors/' with the preceding and following slashes as well as more characters after the slash
     /.*\/contributors\/.*/,
     /.*\/release-notes\/.*/,
+    /.*\/iframeembeds\/.*/,
     /.*\/terminus\/commands\/.*/,
   ];
 
