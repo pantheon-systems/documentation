@@ -79,6 +79,7 @@ class DocTemplate extends React.Component {
                   cms={node.frontmatter.cms}
                 />
                 <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+
                   <MdxWrapper mdx={node.body} />
 
                 </div>

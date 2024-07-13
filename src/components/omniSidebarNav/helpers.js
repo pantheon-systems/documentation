@@ -82,9 +82,6 @@ const findSubMenuItemsToUse = function (topLevelParentPath, NestedItems) {
  */
 const getGuideDirectory = (guideDirectory, overrideGuideTitle = '', AllGuides = allGuides()) => {
 
-
-  console.log(guideDirectory)
-  //console.log(AllGuides.allGuides.edges);
   const ChildItems = [];
   var guideTitle = '';
   for (let item of AllGuides.allGuides.edges) {

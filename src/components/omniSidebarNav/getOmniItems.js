@@ -35,21 +35,23 @@ const getOmniItems = () => {
       link: '/asdf',
       title: 'Migrating and upgrading',
       children: [
-
-        /*
-
-acquia                   kinsta                   pagely                   wordpressvip
-guided                   manual-d8-composer-to-d8 platformsh               wpengine
-        */
+        {
+          link:  '/migrate-wordpress',
+          title: 'migrate-wordpress',
+          children: [
+            getGuideDirectory('guides/migrate/kinsta', 'Kinsta'),
+            getGuideDirectory('guides/migrate/pagely', 'Pagely'),
+            getGuideDirectory('guides/migrate/wordpressvip', 'WordPress VIP'),
+            getGuideDirectory('guides/migrate/wpengine', 'WP Engine'),
+          ],
+        },
 
         getGuideDirectory('guides/migrate/acquia', 'Acquia'),
-        getGuideDirectory('guides/migrate/kinsta', 'Kinsta'),
-        getGuideDirectory('guides/migrate/pagely', 'Pagely'),
-        getGuideDirectory('guides/migrate/wordpressvip', 'WordPress VIP'),
+
         getGuideDirectory('guides/migrate/guided', 'Guided Migration'),
         getGuideDirectory('guides/migrate/manual-d8-composer-to-d8', 'Manual d8 to d8'),
         getGuideDirectory('guides/migrate/platformsh', 'Platform.sh'),
-        getGuideDirectory('guides/migrate/wpengine', 'WP Engine'),
+
 
         // Needs a title override
         getGuideDirectory('guides/drupal/drupal-hosted-createcustom', 'drupal-hosted-createcustom'),
@@ -121,10 +123,6 @@ guided                   manual-d8-composer-to-d8 platformsh               wpeng
         getGuideDirectory('guides/wordpress-git', 'WordPress and Git'),
         getGuideDirectory('guides/build-tools', "build tools"),
 
-
-        //
-
-        //getGuideDirectory('integrated-composer'),
       ],
     },
 
@@ -189,7 +187,6 @@ guided                   manual-d8-composer-to-d8 platformsh               wpeng
       children: CertificationItems,
     },
   ];
-  console.log(OmniItems);
   return OmniItems;
 };
 

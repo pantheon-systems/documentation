@@ -5,6 +5,7 @@ import HeaderBody from "../components/headerBody"
 import SEO from "../layout/seo"
 import { Container } from "@pantheon-systems/pds-toolkit-react"
 import MdxWrapper from "../components/mdxWrapper"
+import OmniSidebarNav from "../components/omniSidebarNav";
 
 
 // Set container width for search and main content.
@@ -59,6 +60,10 @@ class VideoTemplate extends React.Component {
               contributors={node.frontmatter.contributors}
               featured={node.frontmatter.featuredcontributor}
             />
+
+            <OmniSidebarNav
+              activePage={node.fields.slug}
+             />
             <article className="pds-spacing-mar-block-end-4xl">
               <MdxWrapper mdx={node.body} />
             </article>
