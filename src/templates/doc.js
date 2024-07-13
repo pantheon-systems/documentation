@@ -10,6 +10,7 @@ import GetFeedback from "../components/getFeedback"
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
 import MdxWrapper from "../components/mdxWrapper"
+import OmniSidebarNav from "../components/omniSidebarNav";
 
 
 // Set container width for search and main content.
@@ -79,6 +80,12 @@ class DocTemplate extends React.Component {
                   cms={node.frontmatter.cms}
                 />
                 <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+
+
+                  <OmniSidebarNav
+                    activePage={node.fields.slug}
+                  />
+
 
                   <MdxWrapper mdx={node.body} />
 

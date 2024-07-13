@@ -1,6 +1,20 @@
 import CertificationItems from './submenus/certification';
 import { getGuideDirectory } from './helpers';
 
+function simpleLink(link, title= '', children = []) {
+
+  const returning = {
+    link: link,
+    title: title || link,
+  };
+
+  if (children.length > 0) {
+    returning.children = children;
+  }
+  return returning;
+
+}
+
 /**
  * Retrieves the all the menu items for the sidebar navigation.
  * @returns {Array} An array of Omni items.
@@ -76,8 +90,26 @@ const getOmniItems = () => {
 
     {
       link: '/platform',
-      title: 'Ops Platform',
+      title: 'Web Infrastructure',
       children: [
+
+
+        simpleLink('/object-cache', 'Object Cache', [
+
+          simpleLink('/object-cache/cli', 'CLI'),
+          simpleLink('/object-cache/drupal', 'Drupal'),
+          simpleLink('/object-cache/errors', 'Errors'),
+          simpleLink('/object-cache/faq', 'FAQ'),
+          simpleLink('/object-cache/remove', 'remove'),
+          simpleLink('/object-cache/wordpress', 'WordPress'),
+          simpleLink('/object-cache/wordpress-deprecated', 'WordPress deprecated'),
+
+        ]),
+
+
+
+
+
         getGuideDirectory('guides/php'),
         getGuideDirectory('guides/logs-pantheon', 'Log files'),
         getGuideDirectory('guides/filesystem', 'Filesystem'),
@@ -100,6 +132,7 @@ const getOmniItems = () => {
         getGuideDirectory('guides/frontend-performance'),
         getGuideDirectory('guides/woocommerce', "WooCommerce"),
         getGuideDirectory('guides/multisite', "WordPress Multisite"),
+
 
       ],
     },
