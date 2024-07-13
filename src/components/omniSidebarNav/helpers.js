@@ -27,7 +27,7 @@ const turnItemsIntoLinks = (item, activePage) => {
  * @returns {boolean} - True if the item or any of its children have a link that matches the active page, false otherwise.
  */
 function containsActiveLink(item, activePage) {
-  if (item.link === activePage) {
+  if (item.link === "/" + activePage || item.link === activePage) {
     return true;
   } else if (item.children && item.children.length > 0) {
     for (let child of item.children) {
