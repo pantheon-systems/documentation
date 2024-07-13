@@ -46,6 +46,34 @@ const getOmniItems = () => {
 
 
     {
+      link: '/dns-providers',
+      title: 'DNS Providers',
+      children: [
+/*
+        1 & 1
+    Amazon Route 53
+    Cloudflare
+    DNS Made Easy
+    DreamHost
+    Dyn
+    Enom
+    Gandi
+    GoDaddy
+    Google
+    Namecheap
+    Network Solutions
+*/
+    simpleLink('/1-and-1', '1 & 1'),
+    simpleLink('/route53', 'Amazon Route 53'),
+simpleLink('/cloudflare', 'Cloudflare'),
+simpleLink('/dns-made-easy', 'DNS Made Easy'),
+
+
+      ],
+    },
+
+
+    {
       link: '/asdf',
       title: 'Migrating and upgrading',
       children: [
@@ -181,7 +209,8 @@ const getOmniItems = () => {
          getGuideDirectory('guides/domains'),
          getGuideDirectory('guides/custom-upstream'),
          getGuideDirectory('guides/secure-development'),
-         getGuideDirectory('guides/autopilot'),
+         simpleLink('/autopilot', 'Autopilot Overview'),
+         getGuideDirectory('guides/autopilot', 'Autopilot Guide'),
          getGuideDirectory('guides/autopilot-custom-upstream'),
 
 
