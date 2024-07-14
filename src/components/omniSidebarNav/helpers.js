@@ -105,9 +105,32 @@ const getGuideDirectory = (guideDirectory, overrideGuideTitle = '', AllGuides = 
   };
 };
 
+
+
+
+
+const simpleLink = (link, title = '', children = []) => {
+
+  const returning = {
+    link: link,
+    title: title || link,
+  };
+
+  if (children.length > 0) {
+    returning.children = children;
+  }
+  return returning;
+
+}
+
+
+
+
+
 export {
   findSubMenuItemsToUse,
   getGuideDirectory,
   getOmniSidebarActiveSection,
   turnItemsIntoLinks,
+  simpleLink
 };

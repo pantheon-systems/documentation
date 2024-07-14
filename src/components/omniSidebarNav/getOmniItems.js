@@ -1,19 +1,6 @@
 import CertificationItems from './submenus/certification';
-import { getGuideDirectory } from './helpers';
+import { getGuideDirectory, simpleLink } from './helpers';
 
-function simpleLink(link, title= '', children = []) {
-
-  const returning = {
-    link: link,
-    title: title || link,
-  };
-
-  if (children.length > 0) {
-    returning.children = children;
-  }
-  return returning;
-
-}
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
