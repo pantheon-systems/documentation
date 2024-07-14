@@ -1,6 +1,7 @@
 import CertificationItems from './submenus/certification';
 import { getGuideDirectory, simpleLink } from './helpers';
 
+import getStarted from './submenus/getStarted';
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -210,24 +211,7 @@ const getOmniItems = () => {
 
 
 
-
-
-    {
-      link: '/get-started',
-      title: 'Get Started',
-      children: [
-        getGuideDirectory('guides/getstarted'),
-        getGuideDirectory('guides/launch'),
-        getGuideDirectory('guides/migrate'),
-        getGuideDirectory('guides/wordpress-pantheon'),
-
-
-
-
-
-      ],
-    },
-
+getStarted(),
 
 
     {
