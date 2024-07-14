@@ -11,7 +11,7 @@ import { Link } from 'gatsby';
  */
 const turnItemsIntoLinks = (item, activePage) => {
   return {
-    isActive: item.link === activePage,
+    isActive: item.link === activePage || item.link === "/" + activePage,
     links: item.children
       ? item.children.map((child) => turnItemsIntoLinks(child, activePage))
       : false,
