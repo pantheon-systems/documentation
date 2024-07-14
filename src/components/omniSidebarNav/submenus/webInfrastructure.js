@@ -10,6 +10,10 @@ const webInfrastructure = () => {
           simpleLink('/cache-control'),
           simpleLink('/caching-advanced-topics'),
 
+          simpleLink('/basic-troubleshooting'),
+
+          simpleLink('/bots-and-indexing'),
+
           simpleLink('/object-cache', 'Object Cache', [
 
             simpleLink('/object-cache/cli', 'CLI'),

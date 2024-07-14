@@ -5,19 +5,10 @@ const unassignedPages = () => {
     link: '/asdfasdfasdf',
     title: 'Unassigned',
     children: [
-      simpleLink('/addons'),
-      simpleLink('/'),
-
-
-      simpleLink('/add-site'),
-
-      simpleLink('/add-site-custom-upstream'),
-      simpleLink('/add-site-dashboard'),
-
 
       simpleLink('/automate'),
-      simpleLink('/basic-troubleshooting'),
-      simpleLink('/bots-and-indexing'),
+
+
       simpleLink('/certificate-bundles'),
       simpleLink('/clamav'),
       simpleLink('/clear-caches'),
@@ -155,6 +146,17 @@ const unassignedPages = () => {
       simpleLink('/wordpress'),
       simpleLink('/wordpress-known-issues'),
       simpleLink('/workflow-logs'),
+
+
+      simpleLink('/addons'),
+      simpleLink('/'),
+      simpleLink('/add-site'),
+      simpleLink('/add-site-custom-upstream'),
+      simpleLink('/add-site-dashboard'),
+
+
+
+
 
     ],
   }
