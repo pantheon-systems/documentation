@@ -2,6 +2,8 @@ import CertificationItems from './submenus/certification';
 import { getGuideDirectory, simpleLink } from './helpers';
 
 import getStarted from './submenus/getStarted';
+import dnsProviders from './submenus/dnsProviders';
+import pagesToDelete from './submenus/pagesToDelete';
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -12,23 +14,7 @@ const getOmniItems = () => {
    // about docs
    // /contribute
 
-
-
-
-// DNS providers  dns-providers
-// 1-and-1
-
-
-
-
-    {
-      link: '/asdfasdf',
-      title: 'Pages to Delete',
-      children: [
-        simpleLink('/workshops'),
-
-      ]
-    },
+    pagesToDelete(),
 
 
 
@@ -39,7 +25,6 @@ const getOmniItems = () => {
       link: '/asdfasdfasdf',
       title: 'Unassigned',
       children: [
-
         simpleLink('/'),
         simpleLink('/add-site'),
         simpleLink('/add-site-clone'),
@@ -47,12 +32,8 @@ const getOmniItems = () => {
         simpleLink('/add-site-dashboard'),
         simpleLink('/addons'),
         simpleLink('/agency-tips'),
-
-
         simpleLink('/automate'),
         simpleLink('/basic-troubleshooting'),
-
-
         simpleLink('/bots-and-indexing'),
         simpleLink('/cache'),
         simpleLink('/cache-control'),
@@ -123,9 +104,7 @@ const getOmniItems = () => {
         simpleLink('/guides/account-mgmt'),
         simpleLink('/guides/security'),
         simpleLink('/guides/wordpress-composer/pre-ga'),
-
         simpleLink('/horizontal-scalability'),
-
         simpleLink('/http-to-https'),
         simpleLink('/inclusive-language'),
         simpleLink('/integrations'),
@@ -180,23 +159,19 @@ const getOmniItems = () => {
         simpleLink('/single-application-sites'),
         simpleLink('/site-dashboard'),
         simpleLink('/solr'),
-
         simpleLink('/start-state'),
         simpleLink('/static-site-empty-upstream'),
         simpleLink('/static-site-empty-upstream-demo'),
         simpleLink('/style-guide'),
-
         simpleLink('/supported-drupal'),
         simpleLink('/supported-wp'),
         simpleLink('/switch-drupal-recommended-upstream'),
         simpleLink('/symlinks-assumed-write-access'),
         simpleLink('/tax-exempt-status'),
-
         simpleLink('/trainers'),
         simpleLink('/troubleshoot'),
         simpleLink('/unwind-drupal-multisite'),
         simpleLink('/upgrade-drupal-with-ic-to-latest'),
-
         simpleLink('/wordpress'),
         simpleLink('/wordpress-known-issues'),
         simpleLink('/workflow-logs'),
@@ -212,35 +187,7 @@ const getOmniItems = () => {
 
 
 getStarted(),
-
-
-    {
-      link: '/dns-providers',
-      title: 'DNS Providers',
-      children: [
-/*
-        1 & 1
-    Amazon Route 53
-    Cloudflare
-    DNS Made Easy
-    DreamHost
-    Dyn
-    Enom
-    Gandi
-    GoDaddy
-    Google
-    Namecheap
-    Network Solutions
-*/
-    simpleLink('/1-and-1', '1 & 1'),
-    simpleLink('/route53', 'Amazon Route 53'),
-simpleLink('/cloudflare', 'Cloudflare'),
-simpleLink('/dns-made-easy', 'DNS Made Easy'),
-
-
-      ],
-    },
-
+dnsProviders(),
 
     {
       link: '/asdf',

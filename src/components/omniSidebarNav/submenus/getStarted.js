@@ -11,7 +11,6 @@ const getStarted = () => {
       // Move to Infra?
       getGuideDirectory('guides/wordpress-pantheon', 'WordPress on Pantheon'),
     ],
-
   }
 };
 
