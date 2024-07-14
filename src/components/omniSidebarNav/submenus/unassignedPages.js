@@ -10,11 +10,19 @@ const unassignedPages = () => {
 
 
       simpleLink('/certificate-bundles'),
+
+      // drupal
       simpleLink('/clamav'),
+
       simpleLink('/clear-caches'),
+      simpleLink('/cookies'),
       simpleLink('/client-ip'),
+
+      // @todo, this page is not loading??
       simpleLink('/cloud-optimization'),
-      simpleLink('/code-of-conduct'),
+
+
+
       simpleLink('/composer'),
       simpleLink('/composer-convert'),
       simpleLink('/composer-convert-from-empty'),
@@ -22,8 +30,8 @@ const unassignedPages = () => {
       simpleLink('/connection-modes'),
       simpleLink('/content-staging'),
       simpleLink('/continuous-integration'),
-      simpleLink('/contribute'),
-      simpleLink('/cookies'),
+
+
       simpleLink('/core-updates'),
       simpleLink('/crisis-response-upstream'),
       simpleLink('/custom-certificates'),
@@ -39,7 +47,7 @@ const unassignedPages = () => {
       simpleLink('/develop-drupal'),
       simpleLink('/develop-wordpress'),
       simpleLink('/doc-template'),
-      simpleLink('/dreamhost'),
+
       simpleLink('/drupal'),
       simpleLink('/drupal-10'),
       simpleLink('/drupal-advanced-page-cache'),
@@ -60,17 +68,17 @@ const unassignedPages = () => {
       simpleLink('/drupal-to-build-tools'),
       simpleLink('/drupal-updates'),
       simpleLink('/drush'),
-      simpleLink('/dyn'),
+
       simpleLink('/email'),
-      simpleLink('/enom'),
+
       simpleLink('/enterprise-billing-center'),
       simpleLink('/external-libraries'),
       simpleLink('/faq'),
-      simpleLink('/gandi'),
+
       simpleLink('/glossary/'),
       simpleLink('/go-live'),
-      simpleLink('/godaddy'),
-      simpleLink('/google'),
+
+
       simpleLink('/guides'),
       simpleLink('/guides/account-mgmt'),
       simpleLink('/guides/security'),
@@ -93,9 +101,9 @@ const unassignedPages = () => {
       simpleLink('/modules-known-issues'),
       simpleLink('/modules-plugins-known-issues'),
       simpleLink('/multizone-failover'),
-      simpleLink('/namecheap'),
+
       simpleLink('/nested-docroot'),
-      simpleLink('/network-solutions'),
+
       simpleLink('/newrelic'),
       simpleLink('/opensolr'),
       simpleLink('/optimize-wp-options-table-autoloaded-data'),
@@ -146,6 +154,10 @@ const unassignedPages = () => {
       simpleLink('/wordpress'),
       simpleLink('/wordpress-known-issues'),
       simpleLink('/workflow-logs'),
+
+      // about docs
+      simpleLink('/code-of-conduct'),
+      simpleLink('/contribute'),
 
 
       simpleLink('/addons'),

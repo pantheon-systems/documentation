@@ -5,26 +5,18 @@ const dnsProviders = () => {
     link: '/dns-providers',
       title: 'DNS Providers',
         children: [
-          /*
-                  1 & 1
-              Amazon Route 53
-              Cloudflare
-              DNS Made Easy
-              DreamHost
-              Dyn
-              Enom
-              Gandi
-              GoDaddy
-              Google
-              Namecheap
-              Network Solutions
-          */
           simpleLink('/1-and-1', '1 & 1'),
           simpleLink('/route53', 'Amazon Route 53'),
           simpleLink('/cloudflare', 'Cloudflare'),
           simpleLink('/dns-made-easy', 'DNS Made Easy'),
-
-
+          simpleLink('/dreamhost'),
+          simpleLink('/dyn'),
+          simpleLink('/enom'),
+          simpleLink('/gandi'),
+          simpleLink('/godaddy'),
+          simpleLink('/google'),
+          simpleLink('/namecheap'),
+          simpleLink('/network-solutions'),
         ],
     }
 
