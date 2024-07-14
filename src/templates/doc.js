@@ -2,10 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../layout/layout"
+import GuideLayout from "../layout/GuideLayout"
+
 import SEO from "../layout/seo"
 import HeaderBody from "../components/headerBody"
 import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
+
+
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -48,8 +52,16 @@ class DocTemplate extends React.Component {
     const node = this.props.data.doc
     const isoDate = this.props.data.date
 
+    // Preprocess content region layout if has TOC or not.
+    const hasTOC = node.frontmatter.showtoc
+    const ContainerDiv = ({ children }) => (
+      <div className="content-wrapper">{children}</div>
+    )
+    const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
+
+
     return (
-      <Layout footerBorder>
+      <GuideLayout footerBorder>
         <SEO
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
@@ -60,6 +72,13 @@ class DocTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
           type={node.frontmatter.type}
         />
+
+        <OmniSidebarNav
+          slot="guide-menu"
+          activePage={node.fields.slug}
+        />
+
+        <ContentLayoutType slot="guide-content">
         <main id="docs-main" tabIndex="-1">
           <Container
             width={containerWidth}
@@ -81,12 +100,6 @@ class DocTemplate extends React.Component {
                 />
                 <div style={{ marginTop: "15px", marginBottom: "45px" }}>
 
-
-                  <OmniSidebarNav
-                    activePage={node.fields.slug}
-                  />
-
-
                   <MdxWrapper mdx={node.body} />
 
                 </div>
@@ -104,7 +117,8 @@ class DocTemplate extends React.Component {
             </SidebarLayout>
           </Container>
         </main>
-      </Layout>
+        </ContentLayoutType>
+      </GuideLayout>
     )
   }
 }
