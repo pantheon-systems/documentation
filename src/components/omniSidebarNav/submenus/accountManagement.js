@@ -9,6 +9,7 @@ const accountManagement = () => {
       getGuideDirectory('guides/account-mgmt/billing'),
       getGuideDirectory('guides/account-mgmt/plans'),
       getGuideDirectory('guides/account-mgmt/traffic'),
+      simpleLink('/agency-tips'),
       getGuideDirectory('guides/account-mgmt/workspace-sites-teams'),
       getGuideDirectory('guides/enterprise-billing-center'),
       getGuideDirectory('guides/sso'),

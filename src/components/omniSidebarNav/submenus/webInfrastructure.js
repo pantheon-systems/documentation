@@ -6,6 +6,9 @@ const webInfrastructure = () => {
       title: 'Web Infrastructure',
         children: [
 
+          simpleLink('/cache'),
+          simpleLink('/cache-control'),
+          simpleLink('/caching-advanced-topics'),
 
           simpleLink('/object-cache', 'Object Cache', [
 

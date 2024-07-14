@@ -7,6 +7,10 @@ const dnsProviders = () => {
     children: [
       simpleLink('/workshops'),
 
+
+      // This is a really small page.
+      simpleLink('/add-site-clone'),
+
     ]
   }
 
