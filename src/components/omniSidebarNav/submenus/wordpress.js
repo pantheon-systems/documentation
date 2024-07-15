@@ -7,6 +7,7 @@ const wordpress = () => {
     title: 'WordPress',
     children: [
 
+      simpleLink('/develop-wordpress'),
 
       getGuideDirectory('guides/wordpress-developer'),
       getGuideDirectory('guides/wordpress-configurations'),

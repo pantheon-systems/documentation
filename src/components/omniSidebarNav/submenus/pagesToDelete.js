@@ -11,6 +11,8 @@ const dnsProviders = () => {
       // This is a really small page.
       simpleLink('/add-site-clone'),
       simpleLink('/supported-wp'),
+      simpleLink('/cygwin-windows'),
+
 
     ]
   }

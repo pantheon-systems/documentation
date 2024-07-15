@@ -5,6 +5,8 @@ const dnsProviders = () => {
     link: '/dns-providers',
       title: 'DNS Providers',
         children: [
+          simpleLink('/go-live'),
+
           // This page doesn't have a title???
           simpleLink('/configure-dns'),
 

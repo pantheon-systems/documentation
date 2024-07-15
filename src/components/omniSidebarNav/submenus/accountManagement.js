@@ -11,6 +11,14 @@ const accountManagement = () => {
       getGuideDirectory('guides/account-mgmt/traffic'),
       simpleLink('/agency-tips'),
 
+      simpleLink('/enterprise-billing-center'),
+
+
+
+      // empty page?
+      simpleLink('/platform-notifications'),
+
+
 
       getGuideDirectory('guides/account-mgmt/workspace-sites-teams'),
       getGuideDirectory('guides/enterprise-billing-center'),

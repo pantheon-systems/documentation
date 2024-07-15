@@ -38,6 +38,10 @@ const webInfrastructure = () => {
           simpleLink('/mime-types'),
 
           simpleLink('/timeouts'),
+
+          // @todo, should this page be an article?
+          simpleLink('/horizontal-scalability'),
+
           simpleLink('/application-containers'),
           simpleLink('/apcu'),
           getGuideDirectory('guides/php'),
@@ -45,6 +49,13 @@ const webInfrastructure = () => {
           getGuideDirectory('guides/filesystem', 'Filesystem'),
           getGuideDirectory('guides/global-cdn', 'Global CDN'),
           getGuideDirectory('guides/agcdn'),
+          simpleLink('/custom-certificates'),
+
+          simpleLink('/outgoing-ips'),
+
+          simpleLink('/multizone-failover'),
+
+
           // delete this guide?
           getGuideDirectory('guides/fastly-pantheon'),
           // This page could use a refresh
@@ -57,6 +68,9 @@ const webInfrastructure = () => {
 
           // this is a landing page that could hold others.
           simpleLink('/troubleshoot'),
+          simpleLink('/debug-connections'),
+
+
 
 
           simpleLink('/nested-docroot'),

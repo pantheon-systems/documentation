@@ -5,6 +5,8 @@ const drupal = () => {
     link: '/drupal',
     title: 'Drupal',
     children: [
+      simpleLink('/develop-drupal'),
+
       simpleLink('/drupal-10'),
       simpleLink('/drupal-advanced-page-cache'),
       simpleLink('/drupal-broken-links'),
@@ -25,6 +27,7 @@ const drupal = () => {
       simpleLink('/drupal-updates'),
       simpleLink('/unwind-drupal-multisite'),
       simpleLink('/upgrade-drupal-with-ic-to-latest'),
+      simpleLink('/modules-plugins-known-issues'),
 
 
       simpleLink('/switch-drupal-recommended-upstream'),

@@ -32,46 +32,35 @@ const unassignedPages = () => {
 
 
       simpleLink('/crisis-response-upstream'),
-      simpleLink('/custom-certificates'),
-      simpleLink('/customer-scheduled-cron-jobs'),
-      simpleLink('/cygwin-windows'),
       simpleLink('/dashboard'),
-      simpleLink('/debug-connections'),
+      simpleLink('/site-dashboard'),
 
 
-      simpleLink('/develop-drupal'),
-      simpleLink('/develop-wordpress'),
+
+
       simpleLink('/doc-template'),
 
-      simpleLink('/email'),
 
-      simpleLink('/enterprise-billing-center'),
       simpleLink('/external-libraries'),
 
-      simpleLink('/go-live'),
 
 
       simpleLink('/guides'),
       simpleLink('/guides/account-mgmt'),
       simpleLink('/guides/security'),
       simpleLink('/guides/wordpress-composer/pre-ga'),
-      simpleLink('/horizontal-scalability'),
       simpleLink('/integrations'),
       simpleLink('/jenkins'),
       simpleLink('/load-and-performance-testing'),
       simpleLink('/load-testing-with-blazemeter'),
-      simpleLink('/lockr'),
 
 
 
-      simpleLink('/modules-plugins-known-issues'),
-      simpleLink('/multizone-failover'),
 
 
 
       simpleLink('/optimize-wp-options-table-autoloaded-data'),
       simpleLink('/oss-support-levels'),
-      simpleLink('/outgoing-ips'),
       simpleLink('/overview'),
 
 
@@ -80,7 +69,7 @@ const unassignedPages = () => {
       simpleLink('/personal-settings'),
       simpleLink('/pingdom-uptime-check'),
       simpleLink('/pivotal-tracker'),
-      simpleLink('/platform-notifications'),
+
       simpleLink('/platform-upgrade'),
       simpleLink('/plugins-known-issues'),
       simpleLink('/products'),
@@ -92,7 +81,6 @@ const unassignedPages = () => {
       simpleLink('/server_name-and-server_port'),
       simpleLink('/sign-up'),
       simpleLink('/single-application-sites'),
-      simpleLink('/site-dashboard'),
       simpleLink('/start-state'),
       simpleLink('/static-site-empty-upstream'),
       simpleLink('/static-site-empty-upstream-demo'),

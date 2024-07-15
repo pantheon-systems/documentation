@@ -9,6 +9,9 @@ const integrations = () => {
       getGuideDirectory('guides/pagerduty', 'PagerDuty'),
       getGuideDirectory('guides/accessibility'),
       simpleLink('/deploybot'),
+      simpleLink('/email'),
+
+      simpleLink('/lockr'),
 
 
     ],

@@ -14,6 +14,10 @@ const workflows = () => {
       simpleLink('/pantheon-workflow'),
 
 
+      simpleLink('/customer-scheduled-cron-jobs'),
+
+
+
       // This page is empty
       simpleLink('/connection-modes'),
 
