@@ -25,6 +25,7 @@ const terminus = () => {
       simpleLink('/terminus/supported-terminus'),
       simpleLink('/terminus/terminus-3-0'),
       simpleLink('/terminus/updates'),
+      simpleLink('/machine-tokens'),
     ]
   }
 

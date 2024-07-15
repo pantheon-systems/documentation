@@ -10,8 +10,11 @@ const accountManagement = () => {
       getGuideDirectory('guides/account-mgmt/plans'),
       getGuideDirectory('guides/account-mgmt/traffic'),
       simpleLink('/agency-tips'),
+
+
       getGuideDirectory('guides/account-mgmt/workspace-sites-teams'),
       getGuideDirectory('guides/enterprise-billing-center'),
+      simpleLink('/ldap-and-ldaps'),
       getGuideDirectory('guides/sso'),
       getGuideDirectory('guides/wordpress-google-sso', 'WP SAML Auth'),
       // @todo, this page is oddly short.
@@ -20,6 +23,9 @@ const accountManagement = () => {
       getGuideDirectory('guides/professional-services'),
 
       getGuideDirectory('guides/domains'),
+      // @todo, TOC doesn't work on this page
+      simpleLink('/custom-upstreams'),
+
       getGuideDirectory('guides/custom-upstream'),
       getGuideDirectory('guides/secure-development'),
       simpleLink('/autopilot', 'Autopilot Overview'),

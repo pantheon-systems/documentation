@@ -8,6 +8,8 @@ const integrations = () => {
     children: [
       getGuideDirectory('guides/pagerduty', 'PagerDuty'),
       getGuideDirectory('guides/accessibility'),
+      simpleLink('/deploybot'),
+
 
     ],
   }

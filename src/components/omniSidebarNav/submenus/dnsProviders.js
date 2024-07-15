@@ -5,6 +5,9 @@ const dnsProviders = () => {
     link: '/dns-providers',
       title: 'DNS Providers',
         children: [
+          // This page doesn't have a title???
+          simpleLink('/configure-dns'),
+
           simpleLink('/1-and-1', '1 & 1'),
           simpleLink('/route53', 'Amazon Route 53'),
           simpleLink('/cloudflare', 'Cloudflare'),

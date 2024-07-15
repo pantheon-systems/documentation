@@ -8,6 +8,12 @@ const workflows = () => {
       getGuideDirectory('guides/git', "Git"),
       simpleLink('/hotfixes'),
       getGuideDirectory('guides/multidev'),
+      simpleLink('/sftp'),
+      simpleLink('/core-updates'),
+
+      // This page is empty
+      simpleLink('/connection-modes'),
+
       getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
       getGuideDirectory('guides/wordpress-composer', 'WordPress and Composer'),
       getGuideDirectory('guides/sftp', 'SFTP'),
