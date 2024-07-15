@@ -13,6 +13,7 @@ import accountManagement from './submenus/accountManagement';
 import integrations from './submenus/integrations';
 import frontEndSites from './submenus/frontEndSites';
 import terminus from './submenus/terminus';
+import about from './submenus/about';
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -35,6 +36,7 @@ const getOmniItems = () => {
     integrations(),
     frontEndSites(),
     terminus(),
+    about(),
 
     {
       link: '/certification',

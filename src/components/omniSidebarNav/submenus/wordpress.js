@@ -17,6 +17,8 @@ const wordpress = () => {
       getGuideDirectory('guides/woocommerce', "WooCommerce"),
       getGuideDirectory('guides/multisite', "WordPress Multisite"),
       simpleLink('/wordpress-known-issues'),
+      simpleLink('/plugins-known-issues'),
+
     ]
   }
 

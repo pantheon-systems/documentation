@@ -52,8 +52,14 @@ const webInfrastructure = () => {
           simpleLink('/custom-certificates'),
 
           simpleLink('/outgoing-ips'),
+          simpleLink('/server_name-and-server_port'),
 
           simpleLink('/multizone-failover'),
+
+
+
+          simpleLink('/performance'),
+
 
 
           // delete this guide?

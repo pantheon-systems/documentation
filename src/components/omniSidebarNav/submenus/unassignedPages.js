@@ -38,9 +38,9 @@ const unassignedPages = () => {
 
 
 
-      simpleLink('/doc-template'),
 
 
+      // remove PhantomJS stuff?
       simpleLink('/external-libraries'),
 
 
@@ -50,7 +50,6 @@ const unassignedPages = () => {
       simpleLink('/guides/security'),
       simpleLink('/guides/wordpress-composer/pre-ga'),
       simpleLink('/integrations'),
-      simpleLink('/jenkins'),
       simpleLink('/load-and-performance-testing'),
       simpleLink('/load-testing-with-blazemeter'),
 
@@ -65,20 +64,16 @@ const unassignedPages = () => {
 
 
       simpleLink('/partial-composer'),
-      simpleLink('/performance'),
       simpleLink('/personal-settings'),
-      simpleLink('/pingdom-uptime-check'),
       simpleLink('/pivotal-tracker'),
 
       simpleLink('/platform-upgrade'),
-      simpleLink('/plugins-known-issues'),
       simpleLink('/products'),
       simpleLink('/relaunch'),
       simpleLink('/required-reading'),
       simpleLink('/rerouting-outbound-email'),
       simpleLink('/resetting-passwords'),
       simpleLink('/sendgrid'),
-      simpleLink('/server_name-and-server_port'),
       simpleLink('/sign-up'),
       simpleLink('/single-application-sites'),
       simpleLink('/start-state'),
@@ -91,17 +86,6 @@ const unassignedPages = () => {
 
 
       simpleLink('/workflow-logs'),
-
-      // about docs
-      simpleLink('/code-of-conduct'),
-      simpleLink('/contribute'),
-      simpleLink('/pantheon-community'),
-      simpleLink('/trainers'),
-      simpleLink('/style-guide'),
-      simpleLink('/faq'),
-      simpleLink('/glossary/'),
-      simpleLink('/search/'),
-      simpleLink('/inclusive-language'),
 
 
 

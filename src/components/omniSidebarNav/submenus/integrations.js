@@ -12,6 +12,8 @@ const integrations = () => {
       simpleLink('/email'),
 
       simpleLink('/lockr'),
+      simpleLink('/pingdom-uptime-check'),
+      simpleLink('/jenkins'),
 
 
     ],
