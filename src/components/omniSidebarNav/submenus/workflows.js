@@ -14,8 +14,23 @@ const workflows = () => {
       simpleLink('/pantheon-workflow'),
 
 
+
+      simpleLink('/continuous-integration'),
+
+
+
+      simpleLink('/composer'),
+      simpleLink('/composer-convert'),
+      simpleLink('/composer-convert-from-empty'),
+      simpleLink('/partial-composer'),
+
+
+
+
+
       simpleLink('/customer-scheduled-cron-jobs'),
 
+      simpleLink('/content-staging'),
 
 
       // This page is empty
@@ -27,6 +42,10 @@ const workflows = () => {
       getGuideDirectory('guides/sftp', 'SFTP'),
       getGuideDirectory('guides/wp-cli', 'WP-CLI'),
       getGuideDirectory('guides/drush', 'Drush (the Drupal CLI)'),
+
+      simpleLink('/workflow-logs'),
+
+
       getGuideDirectory('guides/quicksilver', 'Quicksilver Workflow Hooks'),
       getGuideDirectory('guides/local-development', 'Local Development'),
       // maybe move this to a "tutorial" section

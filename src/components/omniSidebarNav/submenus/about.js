@@ -15,6 +15,8 @@ const about = () => {
         simpleLink('/doc-template', 'Template Docs Page'),
       ]),
 
+      simpleLink('/oss-support-levels'),
+      simpleLink('/'),
 
       simpleLink('/faq'),
       simpleLink('/glossary/'),

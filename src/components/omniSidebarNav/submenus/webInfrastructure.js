@@ -59,7 +59,24 @@ const webInfrastructure = () => {
 
 
           simpleLink('/performance'),
+          simpleLink('/load-and-performance-testing'),
+          simpleLink('/load-testing-with-blazemeter'),
 
+
+          // remove PhantomJS stuff?
+          simpleLink('/external-libraries'),
+
+
+
+          simpleLink('/resetting-passwords'),
+
+
+          // drupal
+          simpleLink('/clamav'),
+
+          simpleLink('/clear-caches'),
+          simpleLink('/cookies'),
+          simpleLink('/client-ip'),
 
 
           // delete this guide?
@@ -94,13 +111,10 @@ const webInfrastructure = () => {
           getGuideDirectory('guides/frontend-performance'),
 
 
-          simpleLink('/supported-drupal'),
-          simpleLink('/services-yml'),
-          simpleLink('/modules'),
-          simpleLink('/modules-known-issues'),
 
 
-          simpleLink('/drush'),
+
+          simpleLink('/single-application-sites'),
 
 
 

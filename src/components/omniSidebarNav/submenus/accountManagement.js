@@ -5,6 +5,7 @@ const accountManagement = () => {
     link: '/manage',
     title: 'Account Management',
     children: [
+      simpleLink('/guides/account-mgmt'),
       getGuideDirectory('guides/account-mgmt/account'),
       getGuideDirectory('guides/account-mgmt/billing'),
       getGuideDirectory('guides/account-mgmt/plans'),
@@ -13,6 +14,7 @@ const accountManagement = () => {
 
       simpleLink('/enterprise-billing-center'),
 
+      simpleLink('/tax-exempt-status'),
 
 
       // empty page?

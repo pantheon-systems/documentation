@@ -5,7 +5,9 @@ const dnsProviders = () => {
     link: '/dns-providers',
       title: 'DNS Providers',
         children: [
+          // Should these be the parent, and DNS the child?
           simpleLink('/go-live'),
+          simpleLink('/relaunch'),
 
           // This page doesn't have a title???
           simpleLink('/configure-dns'),

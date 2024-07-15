@@ -33,6 +33,15 @@ const drupal = () => {
       simpleLink('/switch-drupal-recommended-upstream'),
 
 
+      simpleLink('/supported-drupal'),
+      simpleLink('/services-yml'),
+      simpleLink('/modules'),
+      simpleLink('/modules-known-issues'),
+
+      simpleLink('/drush'),
+
+
+
     ]
   }
 
