@@ -6,6 +6,8 @@ import dnsProviders from './submenus/dnsProviders';
 import pagesToDelete from './submenus/pagesToDelete';
 import unassignedPages from './submenus/unassignedPages';
 import migrateAndUpgrade from './submenus/migrateAndUpgrade';
+import drupal from './submenus/drupal';
+import wordpress from './submenus/wordpress';
 import webInfrastructure from './submenus/webInfrastructure';
 import accountManagement from './submenus/accountManagement';
 import integrations from './submenus/integrations';
@@ -24,6 +26,8 @@ const getOmniItems = () => {
     pagesToDelete(),
     unassignedPages(),
     getStarted(),
+    wordpress(),
+    drupal(),
     dnsProviders(),
     migrateAndUpgrade(),
     webInfrastructure(),

@@ -23,6 +23,13 @@ const migrateAndUpgrade = () => {
       getGuideDirectory('guides/migrate/platformsh', 'Platform.sh'),
 
 
+      simpleLink('/migrate-cpanel'),
+      simpleLink('/migrate-manual'),
+      simpleLink('/migrate-wordpress-multisite'),
+
+
+
+
       // Needs a title override
       getGuideDirectory('guides/drupal/drupal-hosted-createcustom', 'drupal-hosted-createcustom'),
 

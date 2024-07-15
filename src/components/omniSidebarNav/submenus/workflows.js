@@ -11,9 +11,13 @@ const workflows = () => {
       simpleLink('/sftp'),
       simpleLink('/core-updates'),
 
+      simpleLink('/pantheon-workflow'),
+
+
       // This page is empty
       simpleLink('/connection-modes'),
 
+      simpleLink('/newrelic'),
       getGuideDirectory('guides/new-relic', 'New Relic Performance Monitoring'),
       getGuideDirectory('guides/wordpress-composer', 'WordPress and Composer'),
       getGuideDirectory('guides/sftp', 'SFTP'),
