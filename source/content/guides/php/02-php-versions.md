@@ -16,7 +16,7 @@ permalink: docs/guides/php/php-versions
 reviewed: "2022-12-13"
 ---
 
-This section provides information on how to upgrade to [a supported version of PHP](/guides/php##supported-php-versions).
+This section provides information on how to upgrade your PHP version.
 
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. Refer to our blog post for an [example of 62% performance gains after upgrading PHP](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
