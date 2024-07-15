@@ -23,7 +23,6 @@ const drupal = () => {
       simpleLink('/drupal-phpstorm'),
       simpleLink('/drupal-s3'),
       simpleLink('/drupal-security-patches'),
-      simpleLink('/drupal-to-build-tools'),
       simpleLink('/drupal-updates'),
       simpleLink('/unwind-drupal-multisite'),
       simpleLink('/upgrade-drupal-with-ic-to-latest'),

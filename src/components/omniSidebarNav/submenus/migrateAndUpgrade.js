@@ -28,6 +28,7 @@ const migrateAndUpgrade = () => {
       simpleLink('/migrate-wordpress-multisite'),
 
 
+      simpleLink('/drupal-to-build-tools'),
 
 
       // Needs a title override
