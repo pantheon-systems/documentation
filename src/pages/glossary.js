@@ -194,7 +194,7 @@ class Glossary extends React.Component {
                                   .replace(/ +/g, "-")}`}
                                 className="glossary__term-link"
                               >
-                                <h3
+                                <b
                                   key={`${title.replace(/ +/g, "-")}-header`}
                                   id={title.toLowerCase().replace(/ +/g, "-")}
                                   name={title.toLowerCase().replace(/ +/g, "-")}
@@ -202,7 +202,7 @@ class Glossary extends React.Component {
                                 >
                                   {title.charAt(0).toUpperCase() +
                                     title.slice(1)}
-                                </h3>
+                                </b>
                               </Link>
                               <div
                                 dangerouslySetInnerHTML={{
