@@ -87,17 +87,9 @@ class ContributorTemplate extends React.Component {
                   <h2>Contributions</h2>
                   <ul className="docs-contributor__list">
                     {docs.map(({ node }) => {
-
-                      var linkPath = '';
-                      if (node.frontmatter.permalink) {
-                        linkPath = "/" + node.frontmatter.permalink;
-                      }else {
-                        linkPath = "/" + node.id;
-                      }
-
                       return (
                         <li key={node.id}>
-                          <Link to={linkPath}>
+                          <Link to={`/${node.publicURL}`}>
                             {node.frontmatter.title}
                           </Link>
                         </li>
@@ -145,7 +137,6 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            permalink
           }
           fileAbsolutePath
         }
