@@ -1,6 +1,6 @@
 ---
 title: New Relic PHP agent v10.22.0.12 now available
-published_date: "2024-07-08"
+published_date: "2024-07-16"
 categories: [tools-apis]
 ---
 
