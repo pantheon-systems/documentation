@@ -8,8 +8,11 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+
+
+
 // Gatsby Configuration, Options, and Plugins
-module.exports = {
+const allConfig = {
   // Puts build artifacts in a subdirectory, and updates all local links
   pathPrefix: `/`,
   // Reusable global information
@@ -37,18 +40,7 @@ module.exports = {
         defaultDataLayer: {},
       },
     },
-    {
-      // Handles inserting the Segment js blob into the site
-      resolve: "gatsby-plugin-segment-js",
-      options: {
-        prodKey: "lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA",
-        devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
-        trackPage: false,
-        trackPageOnlyIfReady: true,
-        customSnippet:
-          '!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="${writeKey}";;analytics.SNIPPET_VERSION="4.15.3";analytics.load("${writeKey}");analytics.ready(function() {window.dataLayer.push({"event": "segment_analytics_loaded"});});analytics.page();}}();',
-      },
-    },
+
     // Each instance of `gatsby-source-filesystem` tells Gatsby to look in a different directory for source files.
     {
       resolve: `gatsby-source-filesystem`,
@@ -308,3 +300,21 @@ module.exports = {
     },
   ],
 }
+
+if (process.env.NODE_ENV !== "development") {
+// add segment plugin
+  allConfig.plugins.push({
+    // Handles inserting the Segment js blob into the site
+    resolve: "gatsby-plugin-segment-js",
+    options: {
+      prodKey: "lEIpoQHx3G5Jqsy3GmjcPS357D4AlwlA",
+      devKey: "kDdX1dpmsAWuUn8zb1QDJR8YGbWJjKoj",
+      trackPage: false,
+      trackPageOnlyIfReady: true,
+      customSnippet:
+        '!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="${writeKey}";;analytics.SNIPPET_VERSION="4.15.3";analytics.load("${writeKey}");analytics.ready(function() {window.dataLayer.push({"event": "segment_analytics_loaded"});});analytics.page();}}();',
+    },
+  });
+}
+
+module.exports = allConfig;
