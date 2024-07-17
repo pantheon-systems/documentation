@@ -82,7 +82,7 @@ Install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) 
 [Clear the site cache](/clear-caches) after deleting static files. [Clear the Global CDN cache](/guides/global-cdn/global-cdn-caching#cache-clearing), if deleted static files are still visible in the live environment after clearing your site cache.
 
 
-<Alert title="Note: No caching of static assets on Dev and Multidev environments" type="info">
+<Alert title="Note" type="info">
 
 Dev and Multidev environments always set an HTTP header to `cache-control: no-cache, must-revalidate` so that changes to CSS and other assets are always reloaded as developers update them.
 
