@@ -14,7 +14,7 @@ tags: [reference, cli, local, terminus, workflow]
 permalink: docs/guides/secrets/basic-concepts
 reviewed: "2024-05-01"
 ---
-<dl>  
+<dl>
 
 <dt>Secret</dt>
 
@@ -27,8 +27,7 @@ A key-value pair that should not be exposed to the general public, typically som
 <dt>Secret type <sup>1</sup></dt>
 
 <dd>
-
-  This is a field on the secret record. It defines the usage for this secret and how it is consumed. Current types are:
+This is a field on the secret record. It defines the usage for this secret and how it is consumed. Current types are:
 
   * `runtime`: this secret will be used to retrieve it in application runtime using API calls to the secret service. This is the recommended type to set if you want your secret to be exposed to the application runtime.
 
@@ -63,11 +62,11 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
 ```mermaid
 classDiagram
-OrganizationSecretAPIPassword --> SiteSecretAPIPassword 
+OrganizationSecretAPIPassword --> SiteSecretAPIPassword
 SiteSecretAPIPassword  --> IntegratedComposerAPIPassword : no overrides
 OrganizationSecretAPIPassword : string name apipassword
 OrganizationSecretAPIPassword : string value ball00n
-SiteSecretAPIPassword : Inherits value from Org 
+SiteSecretAPIPassword : Inherits value from Org
 SiteSecretAPIPassword : No Overrides
 IntegratedComposerAPIPassword: value ball00n
 
@@ -77,7 +76,7 @@ SiteSecretOverrideExample --> SiteSecretOverrideExampleTest : env override value
 SiteSecretOverrideExample --> SiteSecretOverrideExampleLive : env override value
 OrganizationSecretOverrideExample : string name apipassword
 OrganizationSecretOverrideExample : string value ball00n
-SiteSecretOverrideExample : Inherits value from Org 
+SiteSecretOverrideExample : Inherits value from Org
 SiteSecretOverrideExample : No Site Overrides
 SiteSecretOverrideExampleDev: value ball00n
 SiteSecretOverrideExampleDev: defaultValue()
@@ -94,11 +93,11 @@ SiteSecretOverrideExampleLive: overridden()
 <dd>
 
 1. Organization values are resolved first. They form the base value for the key-pair's value resolution.
-   
+
 3. Site values are resolved second and secret values set on the site level will override secret values set for the organization. To return the secret to it's organization value, simply delete the site value.
-   
+
 4. Environmental overrides are resolved finally and if the override exists, it will become the value provided to the calling function.
-   
+
 5. Each secret's value can be no larger than 16k (16384 Bytes)
 
 </dd>
