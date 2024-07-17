@@ -95,7 +95,8 @@ const webInfrastructure = () => {
 
 
 
-
+          // This page might fit better in migrate and Upgrade
+          // since it is about reformatting a codebase.
           simpleLink('/nested-docroot'),
 
 
