@@ -23,7 +23,7 @@ AGCDN only works with custom domains. This means that `.pantheonsite.io` domains
 <Partial file="_redirects.md" />
 
 ## Redirect Platform Domains (`.pantheonsite.io`)
-We do not recommend redirecting [platform domains](/guides/domains/platform-domains), especially on Live production environments, as it restricts our ability to provide support for scenarios where 3rd party services are utilized prior to the domain resolving to Pantheon (e.g., you're stacking your own custom CDN service on top of Pantheon's infrastructure). 
+We do not recommend redirecting away from [platform domains](/guides/domains/platform-domains), especially on Live production environments, as it restricts our ability to provide support for scenarios where 3rd party services are utilized prior to the domain resolving to Pantheon (e.g., you're stacking your own custom CDN service on top of Pantheon's infrastructure). 
 
 ## Convert Multiple `.htaccess` Redirects and Rewrites to PHP
 If you need to convert a large number of `.htaccess` redirects or rewrites to PHP, feel free to utilize our [free script](https://github.com/Pantheon-SE/pantheon-htaccess-rewrites) for both WordPress and Drupal. You can also do more [advanced redirects with PHP](/guides/redirect/advanced).
