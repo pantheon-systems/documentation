@@ -24,11 +24,7 @@ The following table indicates availability of the specified Drupal version, as w
 
 ## Drush Version Support
 
-<Partial file="drush-supported.md" />
-
-### Considerations
-
-<Partial file="drush-compatibility.md" />
+Refer to [Manage Drush Versions on Pantheon](/guides/drush/drush-versions/) for information on Drush versions that are compatible with each Drupal version.
 
 ## Modules Support
 

@@ -5,7 +5,7 @@ import SEO from "../layout/seo"
 import ReleaseNoteCategories from "../components/ReleaseNoteCategories"
 import MdxWrapper from "../components/mdxWrapper.js"
 import PublishedDate from "../components/PublishedDate"
-import { Container } from "@pantheon-systems/pds-toolkit-react"
+import { Container, Icon } from "@pantheon-systems/pds-toolkit-react"
 import {
   headline2,
   headline3,
@@ -61,6 +61,13 @@ class ReleaseNoteTemplate extends React.Component {
                   />
                   <MdxWrapper mdx={node.body} customShortcodes={customShortcodes} />
                 </div>
+              </div>
+
+              <div className="pds-spacing-mar-block-4xl">
+                <a href="/release-notes/rss.xml" target="_blank" className="rss-feed-link">
+                  <Icon className="rss-feed-link-icon" iconName='rss' iconSize='lg' />
+                  <span>Subscribe to RSS feed</span>
+                </a>
               </div>
             </article>
           </Container>
