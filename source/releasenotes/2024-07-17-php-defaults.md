@@ -3,10 +3,10 @@ title: New default PHP version 8.2 for Pantheon upstreams
 published_date: "2024-07-19"
 categories: [infrastructure, wordpress, drupal, action-required]
 ---
-Pantheon has pushed an update to the WordPress, Drupal 7, and Drupal Composer Managed upstreams which sets the default PHP version to 8.2 (previously PHP 8.1).
+Pantheon has updated the default PHP version for WordPress, Drupal 7, and Drupal Composer Managed upstreams to PHP 8.2, replacing the previous default of PHP 8.1.
 
-PHP 8.1 currently only receives security support, and will reach End of Life in December 2025.
+Please note that PHP 8.1 is now only receiving security support and will reach its End of Life in December 2025.
 
 If you maintain a [custom upstream](/guides/custom-upstream), this change will not be reflected in `pantheon.upstream.yml` unless you [update your fork from Pantheon's upstream](https://docs.pantheon.io/guides/custom-upstream/create-custom-upstream#pull-in-core-from-pantheons-upstream).
 
-Please test this core update thoroughly before deploying to the Live environment. If your site requires an older version of PHP, or if you'd like to upgrade to PHP 8.3, see [Pantheon’s documentation on how to manage PHP versions via the pantheon.yml configuration file](/guides/php/php-versions).
+We recommend thoroughly testing this core update before deploying it to the Live environment. If your site requires an older version of PHP or if you wish to upgrade to PHP 8.3, please refer to [Pantheon’s documentation on how to manage PHP versions via the pantheon.yml configuration file](/guides/php/php-versions).
