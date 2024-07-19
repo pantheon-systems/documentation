@@ -1,5 +1,5 @@
 ---
-title: Log Files on Pantheon
+title: Environment Log Files on Pantheon
 subtitle: Frequently Asked Questions
 description: Get answers to your log questions.
 contenttype: [guide]
