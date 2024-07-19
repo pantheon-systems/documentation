@@ -1,6 +1,6 @@
 ---
-title: New PHP Defaults
-published_date: "2024-07-17"
+title: New default PHP version 8.2 for Pantheon upstreams
+published_date: "2024-07-19"
 categories: [infrastructure, wordpress, drupal, action-required]
 ---
 Pantheon has pushed an update to the WordPress, Drupal 7, and Drupal Composer Managed upstreams which sets the default PHP version to 8.2 (previously PHP 8.1).
