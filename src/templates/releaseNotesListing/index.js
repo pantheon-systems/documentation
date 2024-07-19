@@ -276,7 +276,7 @@ const ReleaseNotesListingTemplate = ({ data }) => {
                 onChange={debouncedHandleInputChange}
               />
             </div>
-            <FlexContainer flexWrap='wrap' className='rn-popover-tigger-and-tags' >
+            <FlexContainer flexWrap='wrap' className='rn-popover-trigger-and-tags' >
               <ReleaseNotePopoverCategorySelector filters={filters} setFilters={setFilters} setCurrentPage={setCurrentPage} />
               <FlexContainer mobileFlex='same' spacing='narrow' flexWrap='wrap' >
                 {
