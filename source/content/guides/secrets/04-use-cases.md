@@ -242,13 +242,13 @@ In this guide we will go over an end to end example on how to setup secrets for 
 
     1. Add a new key through the Key module UI. Select Pantheon Secret as the key provider and your secret name from the dropdown (make sure you select "Sendgrid" as the Key type and "Pantheon" as the Key provider)
 
-        ![Screenshot of creating a new Key entity with type "Sendgrid" and provider "Pantheon"](add-key.png)
+        ![Screenshot of creating a new Key entity with type "Sendgrid" and provider "Pantheon"](../../../images/guides/secrets/add-key.png)
 
-    1. Go to /admin/config/system/keys/pantheon and click on the "Sync Keys" button to get all of the available secrets into Key entities.
+    1. Go to `/admin/config/system/keys/pantheon` and click on the "Sync Keys" button to get all of the available secrets into Key entities.
 
-        ![Screenshot of Sync Pantheon Secrets page in Drupal UI](../../../images/sync-keys.png)
+        ![Screenshot of Sync Pantheon Secrets page in Drupal UI](../../../images/guides/secrets/sync-keys.png)
 
-        Then, edit the sendgrid_api Key and change the type to "Sendgrid"
+        Then, edit the `sendgrid_api` Key and change the type to "Sendgrid"
 
     1. Use the provided drush command to sync all of your secrets into Key entities:
         ```
@@ -257,15 +257,15 @@ In this guide we will go over an end to end example on how to setup secrets for 
 
         Then, edit the sendgrid_api Key and change the type to "Sendgrid"
 
-1. Go to the Sendgrid API Configuration page (/admin/config/services/sendgrid) and select your Key item
+1. Go to the Sendgrid API Configuration page (`/admin/config/services/sendgrid`) and select your Key item
 
-    ![Screenshot of Sendgrid API Configuration page in Drupal UI](../../../images/sendgrid-config.png)
+    ![Screenshot of Sendgrid API Configuration page in Drupal UI](../../../images/guides/secrets/sendgrid-config.png)
 
 1. Make sure your site "Email Address" (`/admin/config/system/site-information`) matches a verified Sender Identity in Sendgrid
 
 1. Go to the Sendgrid email test page (`/admin/config/services/sendgrid/test`) and test your Sendgrid integration by sending a test email
 
-    ![Screenshot of Sendgrid email test page in Drupal UI](../../../images/sendgrid-email-test.png)
+    ![Screenshot of Sendgrid email test page in Drupal UI](../../../images/guides/secrets/sendgrid-email-test.png)
 
 1. The email should get to your inbox. Enjoy!
 
