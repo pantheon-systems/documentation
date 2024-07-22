@@ -24,16 +24,18 @@ A key-value pair that should not be exposed to the general public, typically som
 
 </dd>
 
-<dt>Secret type <sup>1</sup></dt>
+<dt>Secret type<sup>1</sup></dt>
 
 <dd>
-This is a field on the secret record. It defines the usage for this secret and how it is consumed. Current types are:
+This represents how the secret is used.  A secret can only have one type.
 
-  * `runtime`: this secret will be used to retrieve it in application runtime using API calls to the secret service. This is the recommended type to set if you want your secret to be exposed to the application runtime.
+Current types are:
 
-  * `env`: this secret will be used to set environment variables in the application runtime. This type is currently only supported for Integrated Composer builds and the use case of an environment variable in the application runtime is not supported.
+  * `runtime`: This secret type can be retreived directly from your application code.  This is the recommended type if you want your application to be able to use the secret while it's operating.
 
-  * `composer`: this secret type is used for composer authentication to private packages and it is the recommended method for doing so.
+  * `env`: This type is used to set environment variables. Environment variables are currently only supported for Integrated Composer builds; setting environment variables on the application server is unsupported.
+
+  * `composer`: This secret type is specifically used for authentication when pulling Composer packages from private repositories.  This is the recommended method for installing private composer packages.
 
 </dd>
 

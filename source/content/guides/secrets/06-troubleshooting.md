@@ -30,7 +30,7 @@ Some possible causes for this error:
 <dl>
 <dt>
 
-**Problem:** Secrets are not correctly set for the site. Secrets for IC should be of scope ic and type composer. See instructions in the [Basic Concepts](/guides/secrets/02-basic-concepts) documentation.
+**Problem:** Secrets are not correctly set for the site. Secrets for Integrated Composer to use need to be type `composer` and have scope `ic`. Secret types and scopes are covered in the [Basic Concepts](/guides/secrets/02-basic-concepts) documentation.
 
 </dt>
 <dd>
@@ -58,7 +58,7 @@ Some possible causes for this error:
 </dt>
 <dd>
 
-**Solution**: Upgrade the client to PHP version 8.1 or greater (but it should work with version 7.4+)
+**Solution**: Upgrade the client to a supported PHP version.
 
 </dd>
 
