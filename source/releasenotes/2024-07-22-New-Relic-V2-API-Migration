@@ -1,0 +1,8 @@
+---
+title: "New Relic V2 API Migration"
+published_date: "2024-07-22"
+categories: 
+---
+On July 2nd, 2024, Pantheon completed the migration of our customer's New Relic accounts to begin using the New Relic V2 APIs:
+* This allows Pantheon to leverage New Relic's latest account management features to manage its New Relic accounts. 
+* We don't expect any customer impacts from this change other than better support of their Pantheon-managed New Relic accounts.
