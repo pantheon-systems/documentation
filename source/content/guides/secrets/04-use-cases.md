@@ -30,16 +30,16 @@ reviewed: "2024-05-01"
 
     **Note:** Check the repo box that selects all child boxes. **Do not** check all child boxes individually as this does not set the correct permissions.
 
-    ![image](https://user-images.githubusercontent.com/87093053/191616923-67732035-08aa-41c3-9a69-4d954ca02560.png) 
+    ![image](https://user-images.githubusercontent.com/87093053/191616923-67732035-08aa-41c3-9a69-4d954ca02560.png)
 
 1. Set the secret value to the token via terminus:
-      
+
    ```bash
-   terminus secret:site:set <site> github-oauth.github.com <github_token> --type=composer --scope=user,ic`
+   terminus secret:site:set <site> github-oauth.github.com <github_token> --type=composer --scope=ic`
    ```
-   
+
 1. Add your private repository to the `repositories` section of `composer.json`:
-   
+
     ```json
     {
         "type": "vcs",
@@ -65,10 +65,10 @@ reviewed: "2024-05-01"
 
 1. [Generate a GitLab token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). Ensure that `read_repository` scope is selected for the token.
 
-1. Set the secret value to the token via Terminus: 
+1. Set the secret value to the token via Terminus:
 
    ```bash
-   terminus secret:site:set <site> gitlab-oauth.gitlab.com <gitlab_token> --type=composer --scope=user,ic`
+   terminus secret:site:set <site> gitlab-oauth.gitlab.com <gitlab_token> --type=composer --scope=ic`
    ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
@@ -91,16 +91,16 @@ reviewed: "2024-05-01"
 1. Commit your changes and push to Pantheon.
 
  </Tab>
- 
+
   <Tab title="Bitbucket" id="bitbucket">
 
 #### Bitbucket Repository
 
 1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Also, set the consumer as private and put a (dummy) callback URL.
 
-1. Set the secret value to the consumer info via Terminus: 
+1. Set the secret value to the consumer info via Terminus:
    ```bash
-   terminus secret:site:set <site> bitbucket-oauth.bitbucket.org "<consumer_key> <consumer_secret>" --type=composer --scope=user,ic`
+   terminus secret:site:set <site> bitbucket-oauth.bitbucket.org "<consumer_key> <consumer_secret>" --type=composer --scope=ic`
    ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
@@ -126,11 +126,11 @@ reviewed: "2024-05-01"
 
 </TabList>
 
-## Mechanism 2: HTTP Basic Authentication 
+## Mechanism 2: HTTP Basic Authentication
 
 You may create a `COMPOSER_AUTH json` and make it available via the `COMPOSER_AUTH` environment variable if you have multiple private repositories on multiple private domains.
 
-Composer has the ability to read private repository access information from the environment variable: `COMPOSER_AUTH`. The `COMPOSER_AUTH` variables must be in a [specific JSON format](https://getcomposer.org/doc/articles/authentication-for-private-packages.md#http-basic). 
+Composer has the ability to read private repository access information from the environment variable: `COMPOSER_AUTH`. The `COMPOSER_AUTH` variables must be in a [specific JSON format](https://getcomposer.org/doc/articles/authentication-for-private-packages.md#http-basic).
 
 Format example:
 
@@ -156,7 +156,7 @@ read -e COMPOSER_AUTH_JSON <<< {
 EOF
 
 
-terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=user,ic
+terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=ic
 
 ```
 
