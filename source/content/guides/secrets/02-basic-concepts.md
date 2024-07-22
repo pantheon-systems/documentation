@@ -54,37 +54,13 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
 <dd>
 
-* **Organization-owned secrets** -  Organization-owned secrets are available to every site and environment that are associated with the owning organization. A common use-cases is for a CI system and infrastructure that's shared among all sites in an organization. Secrets from "Supporting" Organizations are explicitly **NOT SHARED** with the sites they support. Sites receive secret key/value pairs from their Primary Organization only.
+* **Organization-owned secrets** -  Organization-owned secrets are available to every site and environment that are associated with the owning organization. A common use-cases is for a CI system and infrastructure that's shared among all sites in an organization. Note that secrets from "Supporting" Organizations are explicitly ***not shared*** with the sites they support. Sites receive secret key/value pairs from their Primary Organization only.
 
 * **Site-owned secrets** -  Site-owned secrets are available to the site and all of its environments. A common use-case is Github tokens that a site's composer build can use to access private repos referenced in the composer file.
 
 * **Environment override**  - Environment overrides provide overrides to a secret value for a specific environment. A common use case for this are API keys that are different in production and non-production environments.
 
-```mermaid
-classDiagram
-OrganizationSecretAPIPassword --> SiteSecretAPIPassword
-SiteSecretAPIPassword  --> IntegratedComposerAPIPassword : no overrides
-OrganizationSecretAPIPassword : string name apipassword
-OrganizationSecretAPIPassword : string value ball00n
-SiteSecretAPIPassword : Inherits value from Org
-SiteSecretAPIPassword : No Overrides
-IntegratedComposerAPIPassword: value ball00n
-
-OrganizationSecretOverrideExample --> SiteSecretOverrideExample
-SiteSecretOverrideExample --> SiteSecretOverrideExampleDev : default value
-SiteSecretOverrideExample --> SiteSecretOverrideExampleTest : env override value
-SiteSecretOverrideExample --> SiteSecretOverrideExampleLive : env override value
-OrganizationSecretOverrideExample : string name apipassword
-OrganizationSecretOverrideExample : string value ball00n
-SiteSecretOverrideExample : Inherits value from Org
-SiteSecretOverrideExample : No Site Overrides
-SiteSecretOverrideExampleDev: value ball00n
-SiteSecretOverrideExampleDev: defaultValue()
-SiteSecretOverrideExampleTest: value ball00n2
-SiteSecretOverrideExampleTest: overridden()
-SiteSecretOverrideExampleLive: value ball00n3
-SiteSecretOverrideExampleLive: overridden()
-```
+![Secrets Relationships](../../../images/guides/secrets-relationships.png)
 
 </dd>
 
