@@ -22,9 +22,7 @@ reviewed: "2024-05-01"
 
 <TabList>
 
-<Tab id="Github" id="github" active={true}>
-
-#### GitHub Repository
+<Tab title="GitHub" id="github-setup" active={true}>
 
 1. [Generate a Github token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). The Github token must have all "repo" permissions selected.
 
@@ -59,9 +57,7 @@ reviewed: "2024-05-01"
 
 </Tab>
 
-<Tab title="Gitlab" id="gitlab">
-
-#### GitLab Repository
+<Tab title="GitLab" id="gitlab-setup">
 
 1. [Generate a GitLab token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html). Ensure that `read_repository` scope is selected for the token.
 
@@ -90,17 +86,15 @@ reviewed: "2024-05-01"
 
 1. Commit your changes and push to Pantheon.
 
- </Tab>
+</Tab>
 
-  <Tab title="Bitbucket" id="bitbucket">
-
-#### Bitbucket Repository
+<Tab title="Bitbucket" id="Bitbucket-setup">
 
 1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Also, set the consumer as private and put a (dummy) callback URL.
 
 1. Set the secret value to the consumer info via Terminus:
    ```bash
-   terminus secret:site:set <site> bitbucket-oauth.bitbucket.org "<consumer_key> <consumer_secret>" --type=composer --scope=ic`
+   terminus secret:site:set <site> bitbucket-oauth.bitbucket.org "<consumer_key> <consumer_secret>" --type=composer --scope=ic
    ```
 
 1. Add your private repository to the `repositories` section of `composer.json`:
@@ -155,29 +149,72 @@ read -e COMPOSER_AUTH_JSON <<< {
 }
 EOF
 
-
 terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=ic
+```
+
+
+# ☞ Accessing secrets from your codebase
+
+## Introduction
+
+Note: Only GET has been implemented.  Secrets are created and modified via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).  Modifying secrets from within the application itself is not supported.
+
+This SDK will only read secrets with scope web. Secrets get cached in the server for 15 minutes so you should wait (at most) that time if you modified your site secrets.
+
+Note: this also applies to quicksilver scripts
+
+## Mechanism 1: SDK (composer package)
+
+This PHP library is the recommended approach for accessing secrets from the Secrets Service.
+
+Use composer to install it:
 
 ```
+composer require pantheon-systems/customer-secrets-php-sdk
+```
+
+### Usage
+
+In your PHP code, do the following:
+
+```
+use PantheonSystems\CustomerSecrets\CustomerSecrets;
+
+$client = CustomerSecrets::create()->getClient();
+$secret = $client->getSecret('foo');
+$secret_value = $secret->getValue();
+
+// You could also get all of your secrets like this:
+$secrets = $client->getSecrets();
+```
+
+See the included classes and internal documentation for more examples and use cases.
+[https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage](https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage)
+
+## Mechanism 2: get_pantheon_secrets
+
+A `pantheon_get_secrets()` function is provided for sites that aren't built with Composer.
+
+
 
 # ☞ Using secrets with Drupal Key module
 If you want to use Pantheon Secrets in your Drupal application through the [Key module](https://www.drupal.org/project/key), you should use the [Pantheon Secrets](https://www.drupal.org/project/pantheon_secrets) module.
 
-# Pantheon Secrets detailed example
-
-Please look at the [module documentation](../README.md) if you have not done so yet.
+## Pantheon Secrets detailed example
 
 In this guide we will go over an end to end example on how to setup secrets for a given site and how to use those secrets on a module that integrates with the Key module. For this example, we will use the [Sendgrid API](https://www.drupal.org/project/sendgrid_api) and [Sendgrid Mailer](https://www.drupal.org/project/sendgrid_mailer) modules.
 
-## Prerequisites
+### Prerequisites
 
-1) Make sure you have access to a Drupal >= 9.4 site running PHP >= 8.0 hosted on Pantheon.
+- Make sure you have access to a Drupal >= 9.4 site running PHP >= 8.0 hosted on Pantheon.
 
-1) Make sure you have [terminus installed](https://docs.pantheon.io/terminus/install#install-terminus) in your machine
+- Make sure you have [terminus installed](https://docs.pantheon.io/terminus/install#install-terminus) in your machine
 
-1) Install the [Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation)
+- Install the [Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#installation)
 
-1) Install the required modules in your Drupal site and push the changes to Pantheon:
+### Steps
+
+1. Install the required modules in your Drupal site and push the changes to Pantheon:
     ```
     composer require drupal/pantheon_secrets drupal/sendgrid_api drupal/sendgrid_mailer
     git add composer.json composer.lock
@@ -185,70 +222,55 @@ In this guide we will go over an end to end example on how to setup secrets for 
     git push
     ```
 
-1) Enable the modules:
+1. Enable the modules:
     ```
     terminus drush <site>.<env> -- en -y pantheon_secrets sendgrid_api sendgrid_mailer
     ```
 
-1) Make sure your Sendgrid account is correctly configured and allows sending email.
+1. Make sure your Sendgrid account is correctly configured and allows sending email.
 
-1) Create a Sendgrid API key by following [Sendgrid instructions](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key)
+1. Create a Sendgrid API key by following [Sendgrid instructions](https://docs.sendgrid.com/ui/account-and-settings/api-keys#creating-an-api-key)
 
-1) Store the API key as a site secret:
+1. Store the API key as a site secret:
     ```
     terminus secret:site:set <site> sendgrid_api <api_key> --scope=web --type=runtime
     ```
 
     As a best practice, the non-production environments should be the default and then override that value with a [secret environment override](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#environment-override) to change the API key for the live environment (e.g. you want to use different Sendgrid accounts for live and dev environments)
 
-1) Add the Key entity in one of the different available ways:
+1. Add the Key entity in one of the different available ways:
 
-    1) Add a new key through the Key module UI. Select Pantheon Secret as the key provider and your secret name from the dropdown (make sure you select "Sendgrid" as the Key type and "Pantheon" as the Key provider)
+    1. Add a new key through the Key module UI. Select Pantheon Secret as the key provider and your secret name from the dropdown (make sure you select "Sendgrid" as the Key type and "Pantheon" as the Key provider)
 
         ![Screenshot of creating a new Key entity with type "Sendgrid" and provider "Pantheon"](add-key.png)
 
-    1) Go to /admin/config/system/keys/pantheon and click on the "Sync Keys" button to get all of the available secrets into Key entities.
+    1. Go to /admin/config/system/keys/pantheon and click on the "Sync Keys" button to get all of the available secrets into Key entities.
 
         ![Screenshot of Sync Pantheon Secrets page in Drupal UI](../../../images/sync-keys.png)
 
         Then, edit the sendgrid_api Key and change the type to "Sendgrid"
 
-    1) Use the provided drush command to sync all of your secrets into Key entities:
+    1. Use the provided drush command to sync all of your secrets into Key entities:
         ```
         terminus drush <site>.<env> -- pantheon-secrets:sync
         ```
 
         Then, edit the sendgrid_api Key and change the type to "Sendgrid"
 
-1) Go to the Sendgrid API Configuration page (/admin/config/services/sendgrid) and select your Key item
+1. Go to the Sendgrid API Configuration page (/admin/config/services/sendgrid) and select your Key item
 
     ![Screenshot of Sendgrid API Configuration page in Drupal UI](../../../images/sendgrid-config.png)
 
-1) Make sure your site "Email Address" (`/admin/config/system/site-information`) matches a verified Sender Identity in Sendgrid
+1. Make sure your site "Email Address" (`/admin/config/system/site-information`) matches a verified Sender Identity in Sendgrid
 
-1) Go to the Sendgrid email test page (`/admin/config/services/sendgrid/test`) and test your Sendgrid integration by sending a test email
+1. Go to the Sendgrid email test page (`/admin/config/services/sendgrid/test`) and test your Sendgrid integration by sending a test email
 
     ![Screenshot of Sendgrid email test page in Drupal UI](../../../images/sendgrid-email-test.png)
 
-1) The email should get to your inbox. Enjoy!
+1. The email should get to your inbox. Enjoy!
 
-# ☞ Accessing secrets from your codebase
 
-### Introduction
-
-Note: Only GET has been implemented so fDK. You should handle your secrets through terminus using [Terminus Secrets Manager](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).
-
-Also: [https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#restrictions](https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#restrictions)
-
-Note: this also applies to quicksilver scripts
-
-## Mechanism 1: get_pantheon_secrets
-
-## Mechanism 2: OOP (get a better name here!!!)
-
-[https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage](https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage)
-
-## Resources
+# Resources
 
 See our detailed [Drupal](https://github.com/pantheon-systems/customer-secrets-php-sdk/blob/main/docs/drupal-example.md) or [WordPress](https://github.com/pantheon-systems/customer-secrets-php-sdk/blob/main/docs/wordpress-example.md) examples for more detailed end to end examples.
 

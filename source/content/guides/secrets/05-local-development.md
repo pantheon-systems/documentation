@@ -32,12 +32,12 @@ To get this file, you should use the [plugin](https://github.com/pantheon-system
           environment:
               CUSTOMER_SECRETS_FAKE_FILE: /app/secrets.json
     ```
-    
-2. Generate the secrets file like this:    
+
+2. Generate the secrets file like this:
     ```bash
     terminus secret:site:local-generate --filepath=./secrets.json
     ```
-    
+
 3. And rebuild lando application:
     ```bash
     lando rebuild -y
@@ -55,7 +55,7 @@ Now, you will be able to use your secrets through the SDK.
     web_environment:
     - CUSTOMER_SECRETS_FAKE_FILE=./secrets.json
     ```
-    
+
 3. Generate the secrets file
     ```bash
     terminus secret:site:local-generate --filepath=./secrets.json
@@ -65,6 +65,6 @@ Now, you will be able to use your secrets through the SDK.
     ```bash
     ddev restart
     ```
-    
+
 ## Restrictions
 This SDK will only read secrets with scope `web`. Secrets get cached in the server for 15 minutes so you should wait (at most) that time if you modified your site secrets.

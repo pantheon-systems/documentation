@@ -25,7 +25,7 @@ Features:
 * **Easy to use**: create and update secrets via Terminus.
 * **Governable**: secrets could be set at organization level and shared to all the sites owned by that organization.
 * **Overridable**: secrets could be overridden at environment level when needed.
-  
+
 
 Support Community-submitted bugs and feature requests can be found in the plugin, SDK or Drupal module issue queues. You can create an issue in the corresponding component if you don't see your bug or feedback listed.
 
