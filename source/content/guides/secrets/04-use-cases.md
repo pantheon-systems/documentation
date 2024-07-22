@@ -152,7 +152,6 @@ EOF
 terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type=env --scope=ic
 ```
 
-
 # ☞ Accessing secrets from your codebase
 
 ## Introduction
