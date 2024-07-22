@@ -90,7 +90,7 @@ reviewed: "2024-05-01"
 
 <Tab title="Bitbucket" id="Bitbucket-setup">
 
-1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Also, set the consumer as private and put a (dummy) callback URL.
+1. [Generate a Bitbucket oauth consumer](https://support.atlassian.com/bitbucket-cloud/docs/use-oauth-on-bitbucket-cloud/). Ensure that Read repositories permission is selected for the consumer. Set the consumer as private and put a (dummy) callback URL.
 
 1. Set the secret value to the consumer info via Terminus:
    ```bash
