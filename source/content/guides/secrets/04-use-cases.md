@@ -254,7 +254,7 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
         terminus drush <site>.<env> -- pantheon-secrets:sync
         ```
 
-        Then, edit the sendgrid_api Key and change the type to "Sendgrid"
+        Then, edit the `sendgrid_api` Key and change the type to "Sendgrid"
 
 1. Go to the Sendgrid API Configuration page (`/admin/config/services/sendgrid`) and select your Key item
 
