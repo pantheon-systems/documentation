@@ -27,13 +27,13 @@ This guide covers features and use cases of the Pantheon Secrets feature; it cou
 * **Overridable**: secrets could be overridden at environment level when needed.
 
 ### Support
-The plugin, SDK or Drupal module are open source. You can view the projects, file issues and feaature requests, and contribute in their respective repositories on GitHub.
+The [Terminus plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin), [PHP Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk), and [Pantheon Secrets](https://github.com/pantheon-systems/pantheon_secrets) Drupal module are open source. You can view the projects, file issues and feaature requests, and contribute in their respective repositories on GitHub.
 
 * [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
 * [Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk)
 * Pantheon Secrets Drupal module
-  * [github repo](https://github.com/pantheon-systems/pantheon_secrets)
-  * [drupal.org](https://www.drupal.org/project/pantheon_secrets)
+  * [github repo](https://github.com/pantheon-systems/pantheon_secrets) for issues & PRs
+  * [drupal.org](https://www.drupal.org/project/pantheon_secrets) for releases
 
 [Contact Support](https://dashboard.pantheon.io/#support/support/all) if you have questions or need help with Terminus.
 
