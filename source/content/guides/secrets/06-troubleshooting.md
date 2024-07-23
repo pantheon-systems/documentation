@@ -38,7 +38,7 @@ Some possible causes for this error:
 
   **Solution:** ask the client to set the secret again to an updated value
 
-- **Problem**: Site may be running on a PHP version below 7.4. If this is the case, there will be a message in the job output: “Skipping setting up secrets as it is not supported in PHP below 7.4”
+- **Problem**: Site may be running on a PHP version below 8.0. If this is the case, there will be a message in the job output: “Skipping setting up secrets as it is not supported in PHP below 8.0”
 
   **Solution**: Upgrade the client to a supported PHP version.
 
