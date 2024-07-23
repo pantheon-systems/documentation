@@ -26,7 +26,6 @@ This guide covers features and use cases of the Pantheon Secrets feature; it cou
 * **Governable**: secrets could be set at organization level and shared to all the sites owned by that organization.
 * **Overridable**: secrets could be overridden at environment level when needed.
 
-
 ### Support
 Community-submitted bugs and feature requests can be found in their respective repositories on GitHub.
 
@@ -38,7 +37,12 @@ Community-submitted bugs and feature requests can be found in their respective r
 
 ### Disambiguation
 
-The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) should not be confused with the older [secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The former stores secrets in an encrypted backend service while the former just stores them in `/files/private/secrets.json` file.  When the Pantheon Secrets service reaches general availability, the terminus-secrets-plugin will be discontinued.
+The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) should not be confused with the older [terminus-secrets-plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The key differences are:
+
+- The Terminus Secrets Manager Plugin stores secrets in an encrypted backend service.
+- The older secrets plugin simply stores them in a /files/private/secrets.json file.
+
+Once the Pantheon Secrets service becomes generally available, the older terminus-secrets-plugin will be discontinued.
 
 ### Contribute to Pantheon Secrets
 

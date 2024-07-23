@@ -40,3 +40,4 @@ terminus self:plugin:update terminus-secrets-manager-plugin
 ## Secrets Commands
 
 #### See the [README.md](https://github.com/pantheon-systems/terminus-secrets-manager-plugin#site-secrets-commands) in the plugin's repository
+

@@ -68,3 +68,4 @@ Now, you will be able to use your secrets through the SDK.
 
 ## Restrictions
 This SDK will only read secrets with scope `web`. Secrets get cached in the server for 15 minutes so you should wait (at most) that time if you modified your site secrets.
+

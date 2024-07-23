@@ -272,4 +272,3 @@ In this guide we will go over an end-to-end example on how to setup secrets for 
 # Resources
 
 See our detailed [Drupal](https://github.com/pantheon-systems/customer-secrets-php-sdk/blob/main/docs/drupal-example.md) or [WordPress](https://github.com/pantheon-systems/customer-secrets-php-sdk/blob/main/docs/wordpress-example.md) examples for more detailed end to end examples.
-
