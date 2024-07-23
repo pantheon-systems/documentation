@@ -28,7 +28,11 @@ This guide covers features and use cases of the Pantheon Secrets feature; it cou
 
 
 ### Support
-Community-submitted bugs and feature requests can be found in the plugin, SDK or Drupal module issue queues. You can create an issue in the corresponding component if you don't see your bug or feedback listed.
+Community-submitted bugs and feature requests can be found in their respective repositories on GitHub.
+
+* [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+* [Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk)
+* [pantheon_secrets (Drupal module)](https://github.com/pantheon-systems/pantheon_secrets)
 
 [Contact Support](https://dashboard.pantheon.io/#support/support/all) if you have questions or need help with Terminus.
 
