@@ -74,7 +74,7 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
 3. Site values will replace the organization values when present. To return the secret to it's organization value, simply delete the site value.
 
-4. Environmental overrides are resolved finally and if the override exists, it will become the value provided to the calling function.
+4. Environmental overrides have the highest priority. If the override exists, it will become the value provided to the calling function.
 
 5. Each secret's value can be no larger than 16k (16384 Bytes)
 
