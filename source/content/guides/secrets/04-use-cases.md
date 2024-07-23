@@ -158,7 +158,7 @@ terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type
 
 It is only possible to read secrets from the Drupal or WordPress site. Secrets are created and modified via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).  Modifying secrets from within the application itself is not supported.
 
-This SDK will only read secrets with scope web. Secrets get cached in the server for 15 minutes so you should wait (at most) that time if you modified your site secrets.
+Secrets must have the scope `web` to be visible from your application. Secrets are cached in the server for 15 minutes, so you must wait for a while after modifying secret values before they will be available for use. This cache is also encrypted at rest.
 
 Note: this also applies to quicksilver scripts
 
