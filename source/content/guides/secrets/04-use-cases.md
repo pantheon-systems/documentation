@@ -126,7 +126,7 @@ You may create a `COMPOSER_AUTH json` and make it available via the `COMPOSER_AU
 
 Composer has the ability to read private repository access information from the environment variable: `COMPOSER_AUTH`. The `COMPOSER_AUTH` variables must be in a [specific JSON format](https://getcomposer.org/doc/articles/authentication-for-private-packages.md#http-basic).
 
-Format example:
+**Format example:**
 
 ```bash
 #!/bin/bash
