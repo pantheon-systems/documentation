@@ -53,7 +53,7 @@ As a best practice, start by creating a new machine user in Tracker. This user i
 ## Prepare your site: Securely Store User Credentials on Pantheon
 
 
-2. Use Terminus to write your Pivotal Tracker URL value in the private `secrets.json` file (replace `<token value>`):
+2. Use Terminus to store your Pivotal Tracker URL value in Pantheon Secrets (replace `<token value>`):
 
   ```bash{promptUser: user}
   terminus secrets:site:set $SITE.dev tracker_token <token value>
