@@ -27,34 +27,28 @@ This guide covers features and use cases of the Pantheon Secrets feature; it cou
 * **Overridable**: secrets could be overridden at environment level when needed.
 
 ### Support
-Community-submitted bugs and feature requests can be found in their respective repositories on GitHub.
+The plugin, SDK or Drupal module are open source. You can view the projects, file issues and feaature requests, and contribute in their respective repositories on GitHub.
 
 * [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
 * [Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk)
-* [pantheon_secrets (Drupal module)](https://github.com/pantheon-systems/pantheon_secrets)
+* Pantheon Secrets Drupal module
+  * [github repo](https://github.com/pantheon-systems/pantheon_secrets)
+  * [drupal.org](https://www.drupal.org/project/pantheon_secrets)
 
 [Contact Support](https://dashboard.pantheon.io/#support/support/all) if you have questions or need help with Terminus.
 
 ### Disambiguation
 
-The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) should not be confused with the older [terminus-secrets-plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The key differences are:
+The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) replaces the older [terminus-secrets-plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The key differences are:
 
 - The Terminus Secrets Manager Plugin stores secrets in an encrypted backend service.
 - The older secrets plugin simply writes unencrypted values in a json file in `/files/private`.
 
 Once the Pantheon Secrets service becomes generally available, the older terminus-secrets-plugin will be discontinued.
 
-### Contribute to Pantheon Secrets
-
-The plugin, SDK or Drupal module are open source. You can view the projects and contribute, file issues and submit feature requests.
-
-* [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
-* [Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk)
-* [pantheon_secrets (Drupal module)](https://github.com/pantheon-systems/pantheon_secrets)
-
 ### More Resources
 
 * [Terminus Plugin GitHub Repository](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
 * [PHP SDK GitHub repository](https://github.com/pantheon-systems/customer-secrets-php-sdk)
 * [Drupal module GitHub repository](https://github.com/pantheon-systems/pantheon_secrets)
-* [Drupal module](https://www.drupal.org/project/pantheon_secrets)
+
