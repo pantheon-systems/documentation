@@ -15,9 +15,7 @@ permalink: docs/guides/secrets/terminus-plugin
 reviewed: "2024-05-01"
 ---
 
-**IMPORTANT: when Pantheon Secrets goes into "General Availability," it will be part of terminus core. Until then, this plugin information covers [Terminus Secrets Manager Plugin]( https://github.com/pantheon-systems/terminus-secrets-manager-plugin).**
-
-# Terminus Secrets Manager Plugin
+**IMPORTANT: When Pantheon Secrets goes into "General Availability," [Terminus Secrets Manager Plugin]( https://github.com/pantheon-systems/terminus-secrets-manager-plugin) will be merged into Terminus core.**
 
 ## Plugin Management
 

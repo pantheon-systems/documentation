@@ -19,7 +19,7 @@ reviewed: "2024-05-01"
 Pantheon Secrets is key to maintaining industry best practices for secure builds and application implementation. This feature provides a convenient mechanism for you to manage your secrets and API keys directly on the Pantheon platform.
 This guide covers features and use cases of the Pantheon Secrets feature; it could also be referred as Secrets Manager because that is the Terminus plugin name.
 
-Features:
+### Features:
 
 * **Secure**: secrets are encrypted at rest.
 * **Easy to use**: create and update secrets via Terminus.
@@ -27,23 +27,24 @@ Features:
 * **Overridable**: secrets could be overridden at environment level when needed.
 
 
-Support Community-submitted bugs and feature requests can be found in the plugin, SDK or Drupal module issue queues. You can create an issue in the corresponding component if you don't see your bug or feedback listed.
+### Support
+Community-submitted bugs and feature requests can be found in the plugin, SDK or Drupal module issue queues. You can create an issue in the corresponding component if you don't see your bug or feedback listed.
 
 [Contact Support](https://dashboard.pantheon.io/#support/support/all) if you have questions or need help with Terminus.
 
-## Disambiguation
+### Disambiguation
 
-Previous to the release of the [SECRETS MANAGER PLUGIN](https://github.com/pantheon-systems/terminus-secrets-manager-plugin), Pantheon offered the [SECRETS PLUGIN](https://github.com/pantheon-systems/terminus-secrets-plugin). The SECRETS PLUGIN and the method for storing secrets it uses is deprecated and should not be used.
+The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) should not be confused with the older [secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The former stores secrets in an encrypted backend service while the former just stores them in `/files/private/secrets.json` file.  When the Pantheon Secrets service reaches general availability, the terminus-secrets-plugin will be discontinued.
 
-## Contribute to Pantheon Secrets
+### Contribute to Pantheon Secrets
 
 The plugin, SDK or Drupal module are open source. You can view the projects and contribute, file issues and submit feature requests.
 
-* [SECRETS MANAGER PLUGIN](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
+* [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
 * [Secrets SDK](https://github.com/pantheon-systems/customer-secrets-php-sdk)
 * [pantheon_secrets (Drupal module)](https://github.com/pantheon-systems/pantheon_secrets)
 
-## More Resources
+### More Resources
 
 * [Terminus Plugin GitHub Repository](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
 * [PHP SDK GitHub repository](https://github.com/pantheon-systems/customer-secrets-php-sdk)
