@@ -190,11 +190,13 @@ $secrets = $client->getSecrets();
 See the included classes and internal documentation for more examples and use cases.
 [https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage](https://github.com/pantheon-systems/customer-secrets-php-sdk?tab=readme-ov-file#usage)
 
-## Mechanism 2: get_pantheon_secrets
+## Mechanism 2: get_pantheon_secret
 
-A `pantheon_get_secrets()` function is provided for sites that aren't built with Composer.
+A `pantheon_get_secret()` function is provided for sites that aren't built with Composer:
 
-
+```php
+$secret_value = pantheon_get_secret("SECRET_NAME");
+```
 
 # ☞ Using secrets with Drupal Key module
 If you want to use Pantheon Secrets in your Drupal application through the [Key module](https://www.drupal.org/project/key), you should use the [Pantheon Secrets](https://www.drupal.org/project/pantheon_secrets) module.
