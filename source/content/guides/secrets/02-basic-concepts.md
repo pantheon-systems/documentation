@@ -70,7 +70,7 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
 <dd>
 
-1. Organization values are resolved first. They form the base value for the key-pair's value resolution.
+1. Organization values have the lowest priority. They form the base value that is used when there is no more specific value provided for the site or environment.
 
 3. Site values are resolved second and secret values set on the site level will override secret values set for the organization. To return the secret to it's organization value, simply delete the site value.
 
