@@ -48,7 +48,7 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
   * `web`: this secret will be readable by the application runtime.
 
-  * `user`: this secret will be readable by the user. This scope should be set if you need to retrieve the secret value at a later stage.
+  * `user`: this secret will be readable by the user. This scope should be set if you want to see the value of your secret displayed when listing site secrets with Terminus. The value for secrets without the the user scope is redacted in the Terminus secrets list.
 
 </dd>
 
