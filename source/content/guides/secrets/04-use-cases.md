@@ -192,7 +192,7 @@ See the included classes and internal documentation for more examples and use ca
 
 ## Mechanism 2: get_pantheon_secret
 
-A `pantheon_get_secret()` function is provided for sites that aren't built with Composer:
+For sites that do not use Composer, the function `pantheon_get_secret()` may be used to fetch the value of a single secret.
 
 ```php
 $secret_value = pantheon_get_secret("SECRET_NAME");
