@@ -72,7 +72,7 @@ A secret's scope is the answer to the question "Where is the secret's value avai
 
 1. Organization values have the lowest priority. They form the base value that is used when there is no more specific value provided for the site or environment.
 
-3. Site values are resolved second and secret values set on the site level will override secret values set for the organization. To return the secret to it's organization value, simply delete the site value.
+3. Site values will replace the organization values when present. To return the secret to it's organization value, simply delete the site value.
 
 4. Environmental overrides are resolved finally and if the override exists, it will become the value provided to the calling function.
 
