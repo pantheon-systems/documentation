@@ -46,9 +46,3 @@ The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/termin
 
 Once the Pantheon Secrets service becomes generally available, the older terminus-secrets-plugin will be discontinued.
 
-### More Resources
-
-* [Terminus Plugin GitHub Repository](https://github.com/pantheon-systems/terminus-secrets-manager-plugin)
-* [PHP SDK GitHub repository](https://github.com/pantheon-systems/customer-secrets-php-sdk)
-* [Drupal module GitHub repository](https://github.com/pantheon-systems/pantheon_secrets)
-
