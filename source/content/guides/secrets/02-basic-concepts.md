@@ -31,7 +31,7 @@ This represents how the secret is used.  A secret can only have one type.
 
 Current types are:
 
-  * `runtime`: This secret type can be retreived directly from your application code.  This is the recommended type if you want your application to be able to use the secret while it's operating.
+  * `runtime`: This secret type can be retreived directly from your application code using the `pantheon_get_secret()` function.  This is the recommended type if you want your application to be able to use the secret while it's operating.
 
   * `env`: This type is used to set environment variables. Environment variables are currently only supported for Integrated Composer builds; setting environment variables on the application server is unsupported.
 
