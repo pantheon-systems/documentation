@@ -5,4 +5,4 @@ categories:
 ---
 On July 2, 2024, Pantheon completed the migration of our customer's New Relic accounts to begin using the New Relic v2 APIs:
 * This allows Pantheon to leverage New Relic's latest account management features to manage its New Relic accounts. 
-* We don't expect any customer impacts from this change other than better support of their Pantheon-managed New Relic accounts.
+* Pantheon customers using Quicksilver scripts to add New Relic deployment markers will need to use the [latest version of the New Relic deployments](https://github.com/pantheon-systems/quicksilver-examples/blob/main/new_relic_deploy/README.md) Quicksilver script to add deployment markers in New Relic moving forward.
