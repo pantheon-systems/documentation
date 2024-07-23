@@ -156,7 +156,7 @@ terminus secret:site:set ${SITE_NAME} COMPOSER_AUTH ${COMPOSER_AUTH_JSON} --type
 
 ## Introduction
 
-Note: Only GET has been implemented.  Secrets are created and modified via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).  Modifying secrets from within the application itself is not supported.
+It is only possible to read secrets from the Drupal or WordPress site. Secrets are created and modified via the [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin).  Modifying secrets from within the application itself is not supported.
 
 This SDK will only read secrets with scope web. Secrets get cached in the server for 15 minutes so you should wait (at most) that time if you modified your site secrets.
 
