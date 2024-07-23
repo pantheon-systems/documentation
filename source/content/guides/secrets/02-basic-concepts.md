@@ -44,7 +44,7 @@ Current types are:
 <dd>
 A secret's scope is the answer to the question "Where is the secret's value available?". Once set, a secret's scope cannot be changed. The secret must be deleted and recreated to change its scope.
 
-  * `ic`: This secret will be readable by the Integrated Composer runtime. You should use this scope to get access to your private repositories.
+  * `ic`: This secret will be readable during Integrated Composer builds. You should use this scope to get access to your private repositories.
 
   * `web`: this secret will be readable by the application runtime.
 
