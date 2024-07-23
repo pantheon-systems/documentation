@@ -40,7 +40,7 @@ Community-submitted bugs and feature requests can be found in their respective r
 The [Terminus Secrets Manager Plugin](https://github.com/pantheon-systems/terminus-secrets-manager-plugin) should not be confused with the older [terminus-secrets-plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).  The key differences are:
 
 - The Terminus Secrets Manager Plugin stores secrets in an encrypted backend service.
-- The older secrets plugin simply stores them in a /files/private/secrets.json file.
+- The older secrets plugin simply writes unencrypted values in a json file in `/files/private`.
 
 Once the Pantheon Secrets service becomes generally available, the older terminus-secrets-plugin will be discontinued.
 
