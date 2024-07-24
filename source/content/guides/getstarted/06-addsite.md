@@ -41,7 +41,7 @@ To create a CMS site:
 
    Site names are limited to 51 characters and can contain only numbers, letters, and dashes. Site names cannot start or end with a dash.
 
-Site names cannot be changed after site creation.
+   Site names cannot be changed after site creation.
 
    </Alert>
 
