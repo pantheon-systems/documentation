@@ -22,9 +22,6 @@ const OmniSidebarNav = ({
   const OmniItems = getOmniItems();
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
-  console.log(fallbackItems);
-  console.log(menuItems);
-
   // If the caller is asking for a specific submenu, use that directly.
   if (submenuPathToUse.length > 0) {
     const submenuItems = findSubMenuItemsToUse(submenuPathToUse, OmniItems);
