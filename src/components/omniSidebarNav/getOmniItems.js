@@ -14,6 +14,7 @@ import integrations from './submenus/integrations';
 import frontEndSites from './submenus/frontEndSites';
 import terminus from './submenus/terminus';
 import about from './submenus/about';
+import workflows from './submenus/workflows';
 
 /**
  * Retrieves the all the menu items for the sidebar navigation.
@@ -37,6 +38,7 @@ const getOmniItems = () => {
     frontEndSites(),
     terminus(),
     about(),
+    workflows(),
 
     {
       link: '/certification',
