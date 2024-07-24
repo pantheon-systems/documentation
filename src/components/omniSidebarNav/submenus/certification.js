@@ -63,7 +63,7 @@ const CertificationItems = [
   },
   {
     link: 'https://certification.pantheon.io/',
-    title: '↗ Certification Directory',
+    title: 'Certification Directory',
   },
 ];
 

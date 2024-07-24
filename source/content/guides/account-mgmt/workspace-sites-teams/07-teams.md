@@ -227,7 +227,7 @@ To remove a user:
 
 1. [Enterprise customers](/guides/account-mgmt/workspace-sites-teams#enterprise-customers-aka-contract-customers) with the Administrator role will instead be provided additional options to remove the user's access from associated sites. You will need to select one of the following and then click **Remove Access**:
 
-   - **Everything**: removes a member from all workspaces and associated sites.
+   - **Everything**: removes the Pantheon user from the workspace and any site teams across all sites associated with the given workspace on Pantheon. This does not impact WordPress and Drupal user accounts, which need to be revoked separately by blocking or deleting the user account inside the CMS. 
 
    - **Workspace Only**: removes a member from this workspace only. Associated sites will not be impacted.
 

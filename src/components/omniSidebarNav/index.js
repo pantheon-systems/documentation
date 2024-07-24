@@ -11,6 +11,9 @@ import allWrittenPaths from './all-written-paths.js';
 
 import { flattenOmniItems, CalculateFilteredPathsInMenu, eliminateExceptions } from './reporting';
 
+import "./style.css"
+
+
 // @todo, run prettier one more time on this directory before removing it from the PR.
 
 const OmniSidebarNav = ({
@@ -20,9 +23,6 @@ const OmniSidebarNav = ({
   submenuPathToUse = '',
 }) => {
   const OmniItems = getOmniItems();
-
-
-
 
 
   const exceptions = ['https://certification.pantheon.io/',
@@ -49,13 +49,6 @@ const OmniSidebarNav = ({
 
 
 
-
-
-
-
-
-
-
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
   // If the caller is asking for a specific submenu, use that directly.
@@ -63,7 +56,7 @@ const OmniSidebarNav = ({
     const submenuItems = findSubMenuItemsToUse(submenuPathToUse, OmniItems);
     const submenuLinks = turnItemsIntoLinks(submenuItems, activePage);
     return (
-      <SideNavCompact
+      <SideNavCompact className="sidenav-compact"
         headingText={submenuLinks.linkContent}
         menuItems={submenuLinks.links}
       />
@@ -71,7 +64,7 @@ const OmniSidebarNav = ({
   } else if (menuItems) {
     const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
     return (
-      <SideNavCompact
+      <SideNavCompact className="sidenav-compact"
         headingText={OmniLinks.linkContent}
         menuItems={OmniLinks.links}
       />
