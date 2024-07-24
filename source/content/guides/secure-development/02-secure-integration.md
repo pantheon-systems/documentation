@@ -124,7 +124,7 @@ Secure Integration connects to the same external resource from all environments.
 
 ### Why does Secure Integration use 127.0.0.1 or loopback IP address?
 
-Secure Integration uses the loopback IP address 127.0.0.1 with the PHP constant (i.e. 127.0.0.1:PANTHEON_SOIP_YOURSERVICENAME) to establish communication between the Pantheon-hosted site and the external resource/service
+Secure Integration uses the loopback IP address 127.0.0.1 with the PHP constant (i.e. 127.0.0.1:PANTHEON_SOIP_YOURSERVICENAME) to establish communication between the Pantheon-hosted site and the external resource/service.
 
 ### Is Secure Integration a replacement for authentication?
 
