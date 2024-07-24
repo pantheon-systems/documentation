@@ -22,12 +22,15 @@ const OmniSidebarNav = ({
   const OmniItems = getOmniItems();
   const menuItems = getOmniSidebarActiveSection(activePage, OmniItems);
 
+  console.log(fallbackItems);
+  console.log(menuItems);
+
   // If the caller is asking for a specific submenu, use that directly.
   if (submenuPathToUse.length > 0) {
     const submenuItems = findSubMenuItemsToUse(submenuPathToUse, OmniItems);
     const submenuLinks = turnItemsIntoLinks(submenuItems, activePage);
     return (
-      <SideNavCompact class="sidenav-compact"
+      <SideNavCompact className="sidenav-compact"
         headingText={submenuLinks.linkContent}
         menuItems={submenuLinks.links}
       />
@@ -35,7 +38,7 @@ const OmniSidebarNav = ({
   } else if (menuItems) {
     const OmniLinks = turnItemsIntoLinks(menuItems, activePage);
     return (
-      <SideNavCompact class="sidenav-compact"
+      <SideNavCompact className="sidenav-compact"
         headingText={OmniLinks.linkContent}
         menuItems={OmniLinks.links}
       />
