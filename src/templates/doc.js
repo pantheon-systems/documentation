@@ -1,15 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import Layout from "../layout/layout"
 import GuideLayout from "../layout/GuideLayout"
 
 import SEO from "../layout/seo"
 import HeaderBody from "../components/headerBody"
 import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
-
-
 
 import { Container, SidebarLayout } from "@pantheon-systems/pds-toolkit-react"
 
@@ -57,8 +53,7 @@ class DocTemplate extends React.Component {
     const ContainerDiv = ({ children }) => (
       <div className="content-wrapper">{children}</div>
     )
-    const ContentLayoutType = hasTOC ? SidebarLayout : ContainerDiv
-
+    const ContentLayoutType = ContainerDiv
 
     return (
       <GuideLayout footerBorder>
