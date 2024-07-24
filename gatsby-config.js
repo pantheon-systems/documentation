@@ -247,5 +247,64 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
     },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
+                const url = new URL(edge.node.fields.slug, site.siteMetadata.siteUrl).toString();
+
+                return {
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.published_date,
+                  url: url,
+                  guid: edge.node.id,
+                };
+              });
+            },
+            query: `
+              {
+                allMdx(
+                  filter: { fileAbsolutePath: { regex: "/releasenotes/" } }
+                  sort: { order: DESC, fields: [fileAbsolutePath] }
+                ) {
+                  edges {
+                    node {
+                      rawBody
+                      excerpt
+                      id
+                      fields { slug }
+                      frontmatter {
+                        title
+                        published_date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/release-notes/rss.xml",
+            title: "Pantheon release notes RSS feed",
+            description: 'Stay updated with the latest releases and enhancements.',
+            site_url: 'docs.pantheon.io/release-notes'
+          },
+        ],
+      },
+    },
   ],
 }
